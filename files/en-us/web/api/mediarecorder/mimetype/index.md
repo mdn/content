@@ -25,7 +25,7 @@ This string _may_ include the [`codecs` parameter,](/en-US/docs/Web/Media/Guides
 
 The media type strings are standardized by the Internet Assigned Numbers Authority (IANA).
 For their official list of defined media type strings, see the article [Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml) on the IANA site.
-See also [media types](/en-US/docs/Web/HTTP/MIME_types) to learn more about media types and how they're used in web content and by web browsers.
+See also [media types](/en-US/docs/Web/HTTP/Guides/MIME_types) to learn more about media types and how they're used in web content and by web browsers.
 
 ## Examples
 

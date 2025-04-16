@@ -70,7 +70,8 @@ const colors = [
   "blue",
   "brown",
   "chocolate",
-  "coral" /* … */,
+  "coral",
+  // …
 ];
 const grammar = `#JSGF V1.0; grammar colors; public <color> = ${colors.join(
   " | ",
@@ -293,7 +294,8 @@ inputForm.onsubmit = (event) => {
   event.preventDefault();
 
   const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
+  const selectedOption =
+    voiceSelect.selectedOptions[0].getAttribute("data-name");
   for (const voice of voices) {
     if (voice.name === selectedOption) {
       utterThis.voice = voice;
@@ -302,25 +304,19 @@ inputForm.onsubmit = (event) => {
   utterThis.pitch = pitch.value;
   utterThis.rate = rate.value;
   synth.speak(utterThis);
+  utterThis.onpause = (event) => {
+    const char = event.utterance.text.charAt(event.charIndex);
+    console.log(
+      `Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`,
+    );
+  };
+  inputTxt.blur();
+};
 ```
 
 In the final part of the handler, we include a {{domxref("SpeechSynthesisUtterance.pause_event", "pause")}} event to demonstrate how {{domxref("SpeechSynthesisEvent")}} can be put to good use. When {{domxref("SpeechSynthesis.pause()")}} is invoked, this returns a message reporting the character number and name that the speech was paused at.
 
-```js
-utterThis.onpause = (event) => {
-  const char = event.utterance.text.charAt(event.charIndex);
-  console.log(
-    `Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`,
-  );
-};
-```
-
-Finally, we call [blur()](/en-US/docs/Web/API/HTMLElement/blur) on the text input. This is mainly to hide the keyboard on Firefox OS.
-
-```js
-  inputTxt.blur();
-}
-```
+Finally, we call [`blur()`](/en-US/docs/Web/API/HTMLElement/blur) on the text input. This is mainly to hide the keyboard on Firefox OS.
 
 #### Updating the displayed pitch and rate values
 

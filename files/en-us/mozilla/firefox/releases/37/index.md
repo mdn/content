@@ -87,7 +87,7 @@ _No change._
 ## Security
 
 - The usage of weak protocols or ciphers, like SSL 3.0 and RC4, are now logged in the console, to warn sites that are using it ([Firefox bug 1092835](https://bugzil.la/1092835)).
-- The [CSP](/en-US/docs/Web/HTTP/CSP) 1.1 `referrer` [directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) is now supported ([Firefox bug 965727](https://bugzil.la/965727)).
+- The [CSP](/en-US/docs/Web/HTTP/Guides/CSP) 1.1 `referrer` [directive](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) is now supported ([Firefox bug 965727](https://bugzil.la/965727)).
 
 ## Changes for add-on and Mozilla developers
 

@@ -103,7 +103,7 @@ Read our [Origin private file system](/en-US/docs/Web/API/File_System_API/Origin
 - {{domxref("Window.showSaveFilePicker()")}}
   - : Shows a file picker that allows a user to save a file.
 - {{domxref("DataTransferItem.getAsFileSystemHandle()")}}
-  - : Returns a {{domxref('FileSystemFileHandle')}} if the dragged item is a file, or a {{domxref('FileSystemDirectoryHandle')}} if the dragged item is a directory.
+  - : Returns a {{jsxref('Promise')}} that fulfills with a {{domxref('FileSystemFileHandle')}} if the dragged item is a file, or fulfills with a {{domxref('FileSystemDirectoryHandle')}} if the dragged item is a directory.
 - {{domxref("StorageManager.getDirectory()")}}
   - : Used to obtain a reference to a {{domxref("FileSystemDirectoryHandle")}} object allowing access to a directory and its contents, stored in the [origin private file system](/en-US/docs/Web/API/File_System_API/Origin_private_file_system). Returns a {{jsxref('Promise')}} that fulfills with a {{domxref("FileSystemDirectoryHandle")}} object.
 

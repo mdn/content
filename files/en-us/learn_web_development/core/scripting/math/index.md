@@ -1,10 +1,10 @@
 ---
 title: Basic math in JavaScript — numbers and operators
+short-title: Numbers and operators
 slug: Learn_web_development/Core/Scripting/Math
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting")}}
 
@@ -43,7 +43,7 @@ This article discusses only the basic parts that you need to know now.
 
 In programming, even the humble decimal number system that we all know so well is more complicated than you might think. We use different terms to describe different types of decimal numbers, for example:
 
-- **Integers** are numbers without a fractional part. They can either be positive or negative, e.g. 10, 400, or -5.
+- **Integers** are numbers without a fractional part. They can either be positive or negative, e.g., 10, 400, or -5.
 - **Floating point numbers** (floats) have decimal points and decimal places, for example 12.5, and 56.7786543.
 
 We even have different types of number systems! Decimal is base 10 (meaning it uses 0–9 in each digit), but we also have things like:
@@ -97,7 +97,7 @@ twoDecimalPlaces;
 
 ### Converting to number data types
 
-Sometimes you might end up with a number that is stored as a string type, which makes it difficult to perform calculations with it. This most commonly happens when data is entered into a [form](/en-US/docs/Learn_web_development/Extensions/Forms) input, and the [input type is text](/en-US/docs/Web/HTML/Element/input/text). There is a way to solve this problem — passing the string value into the [`Number()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) constructor to return a number version of the same value.
+Sometimes you might end up with a number that is stored as a string type, which makes it difficult to perform calculations with it. This most commonly happens when data is entered into a [form](/en-US/docs/Learn_web_development/Extensions/Forms) input, and the [input type is text](/en-US/docs/Web/HTML/Reference/Elements/input/text). There is a way to solve this problem — passing the string value into the [`Number()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) constructor to return a number version of the same value.
 
 For example, try typing these lines into your console:
 
@@ -379,12 +379,13 @@ In this exercise, you will manipulate some numbers and operators to change the s
 
 In the editable code box above, there are two lines marked with a comment that we'd like you to update to make the box grow/shrink to certain sizes, using certain operators and/or values in each case. Let's try the following:
 
-- Change the line that calculates x so the box is still 50px wide, but the 50 is calculated using the numbers 43 and 7 and an arithmetic operator.
-- Change the line that calculates y so the box is 75px high, but the 75 is calculated using the numbers 25 and 3 and an arithmetic operator.
-- Change the line that calculates x so the box is 250px wide, but the 250 is calculated using two numbers and the remainder (modulo) operator.
-- Change the line that calculates y so the box is 150px high, but the 150 is calculated using three numbers and the subtraction and division operators.
-- Change the line that calculates x so the box is 200px wide, but the 200 is calculated using the number 4 and an assignment operator.
-- Change the line that calculates y so the box is 200px high, but the 200 is calculated using the numbers 50 and 3, the multiplication operator, and the addition assignment operator.
+- Change the line that calculates `x` so the box is still 50px wide, but the 50 is calculated using the numbers 43 and 7 and an arithmetic operator.
+- Change the line that calculates `y` so the box is 75px high, but the 75 is calculated using the numbers 25 and 3 and an arithmetic operator.
+- Change the line that calculates `x` so the box is 250px wide, but the 250 is calculated using two numbers and the remainder (modulo) operator.
+- Change the line that calculates `y` so the box is 150px high, but the 150 is calculated using three numbers and the subtraction and division operators.
+- Change the line that calculates `x` so the box is 200px wide, but the 200 is calculated using the number 4 and an assignment operator.
+- Change the line that calculates `y` so the box is 200px high, but the 200 is calculated using the numbers 50 and 3, the multiplication operator, and the addition assignment operator.
+  Don't forget to first assign a default value to `y` (in a separate line), so the addition works as expected.
 
 Don't worry if you totally mess the code up. You can always press the Reset button to get things working again. After you've answered all the above questions correctly, feel free to play with the code some more or create your own challenges.
 
@@ -446,7 +447,7 @@ You can see the equality operator being used just inside the `updateBtn()` funct
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Math](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Math).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Math](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Math).
 
 ## Summary
 

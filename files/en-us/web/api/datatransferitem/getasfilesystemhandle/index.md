@@ -10,10 +10,7 @@ browser-compat: api.DataTransferItem.getAsFileSystemHandle
 
 {{securecontext_header}}{{APIRef("File System API")}}{{SeeCompatTable}}
 
-The **`getAsFileSystemHandle()`** method of the
-{{domxref("DataTransferItem")}} interface returns a {{domxref('FileSystemFileHandle')}}
-if the dragged item is a file, or a {{domxref('FileSystemDirectoryHandle')}} if the
-dragged item is a directory.
+The **`getAsFileSystemHandle()`** method of the {{domxref("DataTransferItem")}} interface returns a {{jsxref('Promise')}} that fulfills with a {{domxref('FileSystemFileHandle')}} if the dragged item is a file, or fulfills with a {{domxref('FileSystemDirectoryHandle')}} if the dragged item is a directory.
 
 ## Syntax
 

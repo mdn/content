@@ -1,10 +1,10 @@
 ---
 title: Accessibility tooling and assistive technology
+short-title: Accessibility tools
 slug: Learn_web_development/Core/Accessibility/Tooling
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/What_is_Accessibility","Learn_web_development/Core/Accessibility/HTML", "Learn_web_development/Core/Accessibility")}}
 
@@ -69,7 +69,7 @@ Other auditing tools that are worth checking out:
 
 - [Firefox Accessibility Inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html)
 - [ANDI bookmarklet](https://www.ssa.gov/accessibility/andi/help/install.html)
-- [Google Lighthouse accessibility audits](https://developer.chrome.com/docs/lighthouse/accessibility/)
+- [Google Lighthouse accessibility audits](https://developer.chrome.com/docs/lighthouse/accessibility/scoring)
 
 > [!NOTE]
 > Such tools aren't good enough to solve all your accessibility problems on their own. You'll need a combination of these, knowledge and experience, user testing, etc. to get a full picture.
@@ -288,7 +288,7 @@ NVDA has many keyboard commands, and we won't list them all here. The basic ones
     <tr>
       <td>Shift + D and D</td>
       <td>
-        Move to previous/next document landmark (e.g. <code>&#x3C;nav></code>)
+        Move to previous/next document landmark (e.g., <code>&#x3C;nav></code>)
         and read it.
       </td>
     </tr>
@@ -381,7 +381,7 @@ The following list provides a checklist for you to follow to make sure you've ca
 
 1. Make sure your HTML is as semantically correct as possible. [Validating it](/en-US/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML#html_validation) is a good start, as is using an [auditing tool](#auditing_tools).
 2. Check that your content makes sense when the CSS is turned off.
-3. Make sure your functionality is keyboard accessible (see [UI controls](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#ui_controls) for more details). Test using Tab, Return/Enter, etc.
+3. Make sure your functionality is keyboard accessible (see [Use semantic UI controls where possible](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#use_semantic_ui_controls_where_possible) for more details). Test using Tab, Return/Enter, etc.
 4. Make sure your non-text content has [text alternatives](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#text_alternatives). An [auditing tool](#auditing_tools) is good for catching such problems.
 5. Make sure your site's [color contrast](/en-US/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#color_and_color_contrast) is acceptable, using a suitable checking tool.
 6. Make sure [hidden content](/en-US/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#hiding_things) is visible by screen readers.

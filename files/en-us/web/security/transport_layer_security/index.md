@@ -99,4 +99,4 @@ If the TLS handshake starts to become slow or unresponsive for some reason, the 
 - The Mozilla Operations Security (OpSec) team maintains a wiki page with [reference TLS configurations](https://wiki.mozilla.org/Security/Server_Side_TLS).
 - Use [HTTP Observatory](/en-US/observatory) and [SSL Labs](https://www.ssllabs.com/ssltest/) to test how secure a site's HTTP/TLS configuration is.
 - [Secure Contexts](/en-US/docs/Web/Security/Secure_Contexts)
-- [Strict-Transport-Security](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security) HTTP header
+- [Strict-Transport-Security](/en-US/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security) HTTP header

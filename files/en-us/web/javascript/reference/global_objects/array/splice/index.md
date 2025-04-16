@@ -12,7 +12,7 @@ removing or replacing existing elements and/or adding new elements [in place](ht
 
 To create a new array with a segment removed and/or replaced without mutating the original array, use {{jsxref("Array/toSpliced", "toSpliced()")}}. To access part of an array without modifying it, see {{jsxref("Array/slice", "slice()")}}.
 
-{{InteractiveExample("JavaScript Demo: Array.splice()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.splice()")}}
 
 ```js interactive-example
 const months = ["Jan", "March", "April", "June"];

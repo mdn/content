@@ -44,7 +44,7 @@ The key here is that text can be converted to other forms that people with disab
       <td>
         <p>
           A text description may work, or an accessible data table (see
-          <a href="Learn_web_development/Core/Structuring_content/Table_accessibility"
+          <a href="/en-US/docs/Learn_web_development/Core/Structuring_content/Table_accessibility"
             >HTML table accessibility</a
           >). See W3C's
           <a href="https://www.w3.org/TR/html-longdesc/">Image Description Extension (longdesc)</a>
@@ -83,8 +83,8 @@ The key here is that text can be converted to other forms that people with disab
         function of the button (e.g., <code
           >&#x3C;button>Upload image&#x3C;/button></code
         >). For more information on other UI controls, see
-        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#ui_controls"
-          >UI controls</a
+        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#use_semantic_ui_controls_where_possible"
+          >Use semantic UI controls where possible</a
         >.
       </td>
     </tr>
@@ -232,8 +232,8 @@ This guideline refers to the ability of content to be consumed by users in multi
           <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#good_semantics"
             >Good semantics</a
           >,
-          <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#ui_controls"
-            >UI controls</a
+          <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#use_semantic_ui_controls_where_possible"
+            >Use semantic UI controls where possible</a
           >, and
           <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#text_alternatives"
             >Text alternatives</a

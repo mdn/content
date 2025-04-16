@@ -8,7 +8,7 @@ browser-compat: api.HTMLFormElement.noValidate
 
 {{APIRef("HTML DOM")}}
 
-The **`noValidate`** property of the {{domxref("HTMLFormElement")}} interface is a boolean value indicating if the {{htmlelement("form")}} will bypass [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) when submitted. It reflects the `<form>` element's [`novalidate`](/en-US/docs/Web/HTML/Element/form#novalidate) attribute; if the attribute present, the value is `true`.
+The **`noValidate`** property of the {{domxref("HTMLFormElement")}} interface is a boolean value indicating if the {{htmlelement("form")}} will bypass [constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation) when submitted. It reflects the `<form>` element's [`novalidate`](/en-US/docs/Web/HTML/Reference/Elements/form#novalidate) attribute; if the attribute present, the value is `true`.
 
 If this attribute is not set or the value is set to `false`, the form is validated. This can be overridden by setting the {{domxref("HTMLInputElement.formNoValidate")}} or {{domxref("HTMLButtonElement.formNoValidate")}} property to `true`, either via JavaScript or the HTML `formnovalidate` attribute, for the control used to submit the form.
 
@@ -43,4 +43,4 @@ console.log(element.noValidate);
 - {{domxref("HTMLFormElement.target")}}
 - {{HTMLElement("form")}}
 - [Learn: Client-side form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
-- [Guide: Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
+- [Guide: Constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation)

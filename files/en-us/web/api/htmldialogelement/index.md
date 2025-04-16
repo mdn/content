@@ -19,7 +19,7 @@ The **`HTMLDialogElement`** interface provides methods to manipulate {{HTMLEleme
 _Also inherits properties from its parent interface, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLDialogElement.open")}}
-  - : A boolean value reflecting the [`open`](/en-US/docs/Web/HTML/Element/dialog#open) HTML attribute, indicating whether the dialog is available for interaction.
+  - : A boolean value reflecting the [`open`](/en-US/docs/Web/HTML/Reference/Elements/dialog#open) HTML attribute, indicating whether the dialog is available for interaction.
 - {{domxref("HTMLDialogElement.returnValue")}}
   - : A string that sets or returns the return value for the dialog.
 
@@ -29,10 +29,10 @@ _Also inherits methods from its parent interface, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLDialogElement.close()")}}
   - : Closes the dialog. An optional string may be passed as an argument, updating the `returnValue` of the dialog.
-- {{domxref("HTMLDialogElement.requestClose()")}} {{experimental_inline}}
+- {{domxref("HTMLDialogElement.requestClose()")}}
   - : Requests to close the dialog. An optional string may be passed as an argument, updating the `returnValue` of the dialog.
 - {{domxref("HTMLDialogElement.show()")}}
-  - : Displays the dialog modelessly, i.e. still allowing interaction with content outside of the dialog.
+  - : Displays the dialog modelessly, i.e., still allowing interaction with content outside of the dialog.
 - {{domxref("HTMLDialogElement.showModal()")}}
   - : Displays the dialog as a modal, over the top of any other dialogs that might be present. Everything outside the dialog are [inert](/en-US/docs/Web/API/HTMLElement/inert) with interactions outside the dialog being blocked.
 
@@ -45,7 +45,7 @@ Listen to these events using {{DOMxRef("EventTarget.addEventListener", "addEvent
 - {{domxref("HTMLDialogElement/cancel_event", "cancel")}}
   - : Fired when the dialog is requested to close, whether with the escape key, or via the `HTMLDialogElement.requestClose()` method.
 - {{domxref("HTMLDialogElement/close_event", "close")}}
-  - : Fired when the dialog is closed, whether with the escape key, the `HTMLDialogElement.close()` method, or via submitting a form within the dialog with [`method="dialog"`](/en-US/docs/Web/HTML/Element/form#method).
+  - : Fired when the dialog is closed, whether with the escape key, the `HTMLDialogElement.close()` method, or via submitting a form within the dialog with [`method="dialog"`](/en-US/docs/Web/HTML/Reference/Elements/form#method).
 
 ## Examples
 

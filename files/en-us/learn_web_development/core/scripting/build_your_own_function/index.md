@@ -2,9 +2,8 @@
 title: Build your own function
 slug: Learn_web_development/Core/Scripting/Build_your_own_function
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Functions","Learn_web_development/Core/Scripting/Return_values", "Learn_web_development/Core/Scripting")}}
 
@@ -54,9 +53,9 @@ To begin with, let's put together a basic function.
 1. Start by accessing the [function-start.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-start.html) file and making a local copy. You'll see that the HTML is simple — the body contains just a single button. We've also provided some basic CSS to style the custom message box, and an empty {{htmlelement("script")}} element to put our JavaScript in.
 2. Next, add the following inside the `<script>` element:
 
-   ```js-nolint
+   ```js
    function displayMessage() {
-     ...
+     // …
    }
    ```
 
@@ -293,7 +292,7 @@ On to the next parameter. This one is going to involve slightly more work — we
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Functions](/en-US/docs/Learn_web_development/Core/Scripting/Building_blocks/Test_your_skills:_Functions). These tests require skills that are covered in the next article, so you might want to read that first before trying the test.
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Functions](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Functions). These tests require skills that are covered in the next article, so you might want to read that first before trying the test.
 
 ## Summary
 

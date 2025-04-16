@@ -14,7 +14,7 @@ To cancel or redirect the request, first include `"blocking"` in the `extraInfoS
 - to cancel the request, include a property `cancel` with the value `true`.
 - to redirect the request, include a property `redirectUrl` with the value set to the URL to which you want to redirect.
 
-If an extension wants to redirect a public (e.g. HTTPS) URL to an [extension page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages), the extension's manifest.json file must contain a [web_accessible_resources](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) key that lists the URL for the extension page.
+If an extension wants to redirect a public (e.g., HTTPS) URL to an [extension page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages), the extension's manifest.json file must contain a [web_accessible_resources](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) key that lists the URL for the extension page.
 
 When multiple blocking handlers modify a request, only one set of modifications take effect. Redirects and cancellations have the same precedence. So if you canceled a request, you might see another request with the same `requestId` again if another blocking handler redirected the request.
 
@@ -52,7 +52,7 @@ Events have three functions:
   - : The function called when this event occurs. The function is passed this argument:
 
     - `details`
-      - : `object`. Details about the request. See the [details](#details_2) section for more information.
+      - : `object`. Details about the request. See the [details](#details) section for more information.
 
     Returns: {{WebExtAPIRef('webRequest.BlockingResponse')}}. If `"blocking"` is specified in the `extraInfoSpec` parameter, the event listener should return a `BlockingResponse` object, and can set either its `cancel` or its `redirectUrl` properties. From Firefox 52 onwards, instead of returning `BlockingResponse`, the listener can return a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) which is resolved with a `BlockingResponse`. This enables the listener to process the request asynchronously.
 
@@ -135,7 +135,7 @@ Events have three functions:
         It is a dictionary in which each key contains the list of all values for that key. For example: `{'key': ['value1', 'value2']}`. If the data is of another media type, or if it is malformed, the object is not present.
 
     - `raw` {{optional_inline}}
-      - : `array` of `{{WebExtAPIRef('webRequest.UploadData')}}`. If the request method is PUT or POST, and the body is not already parsed in `formData`, then this array contains the unparsed request body elements.
+      - : `array` of {{WebExtAPIRef('webRequest.UploadData')}}. If the request method is PUT or POST, and the body is not already parsed in `formData`, then this array contains the unparsed request body elements.
 
 - `requestId`
   - : `string`. The ID of the request. Request IDs are unique within a browser session, so you can use them to relate different events associated with the same request.
@@ -154,9 +154,9 @@ Events have three functions:
   - : `object`. The type of tracking associated with the request, if the request is classified by [Firefox Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop). This is an object with these properties:
 
     - `firstParty`
-      - : `array` of `strings`. Classification flags for the request's first party.
+      - : `array` of `string`. Classification flags for the request's first party.
     - `thirdParty`
-      - : `array` of `strings`. Classification flags for the request or its window hierarchy's third parties.
+      - : `array` of `string`. Classification flags for the request or its window hierarchy's third parties.
 
     The classification flags include:
 

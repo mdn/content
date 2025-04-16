@@ -12,7 +12,7 @@ page-type: firefox-release-notes
 
 ### Developer Tools
 
-- [User-agent spoofing](/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent) from the [Responsive mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html)
+- [User-agent spoofing](/en-US/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent) from the [Responsive mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html)
 - [Retaining paths panel](https://firefox-source-docs.mozilla.org/devtools-user/memory/dominators_view/index.html#retaining-paths-panel) in memory tool
 - [Service workers](/en-US/docs/Web/API/ServiceWorker) and [Push API](/en-US/docs/Web/API/Push_API) debugging
 

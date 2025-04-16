@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.String.toLocaleLowerCase
 
 The **`toLocaleLowerCase()`** method of {{jsxref("String")}} values returns this string converted to lower case, according to any locale-specific case mappings.
 
-{{InteractiveExample("JavaScript Demo: String.toLocaleLowerCase()")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.toLocaleLowerCase()")}}
 
 ```js interactive-example
 const dotted = "İstanbul";

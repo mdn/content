@@ -10,7 +10,7 @@ browser-compat: javascript.builtins.Intl.ListFormat.format
 The **`format()`** method of {{jsxref("Intl.ListFormat")}} instances returns a string with a
 language-specific representation of the list.
 
-{{InteractiveExample("JavaScript Demo: Intl.ListFormat", "taller")}}
+{{InteractiveExample("JavaScript Demo: Intl.ListFormat.prototype.format()", "taller")}}
 
 ```js interactive-example
 const vehicles = ["Motorcycle", "Bus", "Car"];

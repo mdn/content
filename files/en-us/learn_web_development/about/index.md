@@ -2,9 +2,8 @@
 title: About Learn web development
 slug: Learn_web_development/About
 page-type: landing-page
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 MDN Learn web development aims to teach the fundamental skills and knowledge that a front-end web developer should have for employability and longevity in today's web industry. It embodies the values we think the web should have — accessibility, sustainability, usability, performance, and community. We would love educators, developers, and students to use this resource and champion these values in their work, in their teachings, and in the products they build.
 
@@ -79,7 +78,7 @@ The topics presented are covered in differing levels of detail.
 There are also several areas that we explicitly don't cover in this curriculum, namely:
 
 - Exhaustive coverage of back-end languages/platforms. We do provide a brief introduction in [Node.js (Express)](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs) and [Python (Django)](/en-US/docs/Learn_web_development/Extensions/Server-side/Django) as it is useful to every web developer to understand how HTTP and server-side technologies work. However, we don't provide exhaustive coverage across multiple platforms; that would be out of scope for MDN.
-- In-depth coverage of traditional relational databases (for example, [MySQL](https://dev.mysql.com/doc/) or [Postgres](https://www.postgresql.org/)) and other server-side datastores (for example, cloud databases such as [MongoDB](https://www.mongodb.com/) or [Google Cloud Datastore](https://cloud.google.com/datastore/)). We provide a brief introduction to such technologies in our [Server-side website programming](/en-US/docs/Learn_web_development/Extensions/Server-side) modules.
+- In-depth coverage of traditional relational databases (for example, [MySQL](https://dev.mysql.com/doc/) or [Postgres](https://www.postgresql.org/)) and other server-side datastores (for example, cloud databases such as [MongoDB](https://www.mongodb.com/) or [Google Cloud Datastore](https://cloud.google.com/products/datastore)). We provide a brief introduction to such technologies in our [Server-side website programming](/en-US/docs/Learn_web_development/Extensions/Server-side) modules.
 - Deep-dive DevOps topics such as cloud platforms for provisioning and automation (for example, [Amazon AWS](https://aws.amazon.com/), [Google Cloud Platform](https://console.cloud.google.com/), and [Microsoft Azure](https://azure.microsoft.com/)) and containerization tools (for example, [Kubernetes](https://kubernetes.io/) and [Docker](https://www.docker.com/)). We lightly touch upon some tools that are considered to be in the DevOps space — like GitHub and automated testing tools — but these have distinct crossover into the front-end developer space.
 - Graphic design beyond the basic knowledge outlined in [Design for developers](/en-US/docs/Learn_web_development/Core/Design_for_developers).
 - Skills related to roles such as product and program management (for example, organization, research, and planning).
@@ -116,7 +115,7 @@ We intend to do this in Q2 each year, to give educators time over Q2/Q3 to imple
 
 #### How does MDN know Scrimba's courses are high quality and follow best practices?
 
-Scrimba already had a great reputation before we started talking to them about a partnership. However, we didn't just take the community's word for it. We did an extensive review of Scrimba's [Frontend Developer Career Path](https://v2.scrimba.com/the-frontend-developer-career-path-c0j:details?via=mdn) (FDCP) and provided them with feedback on possible improvements, focusing on increasing coverage of best practices and conformance to our [Core modules](/en-US/docs/Learn_web_development/Core). Scrimba implemented all of our feedback, and the FDCP is even better than it was before. Now that it conforms to our Curriculum Core, we are confident it aligns with MDN standards.
+Scrimba already had a great reputation before we started talking to them about a partnership. However, we didn't just take the community's word for it. We did an extensive review of Scrimba's [Frontend Developer Career Path](https://scrimba.com/the-frontend-developer-career-path-c0j:details?via=mdn) (FDCP) and provided them with feedback on possible improvements, focusing on increasing coverage of best practices and conformance to our [Core modules](/en-US/docs/Learn_web_development/Core). Scrimba implemented all of our feedback, and the FDCP is even better than it was before. Now that it conforms to our Curriculum Core, we are confident it aligns with MDN standards.
 
 #### Is MDN sharing user data with Scrimba?
 

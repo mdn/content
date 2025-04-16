@@ -18,7 +18,7 @@ Such custom navigation handling is initiated via {{domxref("Window.launchQueue")
 ## Instance properties
 
 - {{domxref("LaunchParams.files")}} {{ReadOnlyInline}}{{Experimental_Inline}}
-  - : Returns a read-only array of {{domxref("FileSystemHandle")}} objects representing any files passed along with the launch navigation via the [`POST`](/en-US/docs/Web/HTTP/Methods/POST) method.
+  - : Returns a read-only array of {{domxref("FileSystemHandle")}} objects representing any files passed along with the launch navigation via the [`POST`](/en-US/docs/Web/HTTP/Reference/Methods/POST) method.
 - {{domxref("LaunchParams.targetURL")}} {{ReadOnlyInline}}{{Experimental_Inline}}
   - : Returns the target URL of the launch.
 

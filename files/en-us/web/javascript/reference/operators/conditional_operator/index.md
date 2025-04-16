@@ -11,7 +11,7 @@ The **conditional (ternary) operator** is the only JavaScript operator that take
 a condition followed by a question mark (`?`), then an expression to execute if the condition is {{Glossary("truthy")}} followed by a colon (`:`), and finally the expression to execute if the condition is {{Glossary("falsy")}}.
 This operator is frequently used as an alternative to an [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statement.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Conditional operator")}}
+{{InteractiveExample("JavaScript Demo: Conditional operator")}}
 
 ```js interactive-example
 function getFee(isMember) {

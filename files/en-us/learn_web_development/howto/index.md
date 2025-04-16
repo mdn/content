@@ -2,9 +2,8 @@
 title: How to solve common problems
 slug: Learn_web_development/Howto
 page-type: landing-page
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 This section provides solutions to common front-end problems and answers to common questions.
 

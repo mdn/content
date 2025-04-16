@@ -10,7 +10,33 @@ browser-compat: css.types.transform-function.scaleX
 The **`scaleX()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a transformation that resizes an element along the
 x-axis (horizontally). Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-{{EmbedInteractiveExample("pages/css/function-scaleX.html")}}
+{{InteractiveExample("CSS Demo: scaleX()")}}
+
+```css interactive-example-choice
+transform: scaleX(1);
+```
+
+```css interactive-example-choice
+transform: scaleX(0.7);
+```
+
+```css interactive-example-choice
+transform: scaleX(1.3);
+```
+
+```css interactive-example-choice
+transform: scaleX(-0.5);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 It modifies the abscissa (horizontal, x-coordinate) of each element point by a constant factor, except when the scale factor is 1, in which case
 the function is the identity transform. The scaling is not isotropic, and the angles of the element are generally not conserved, except for multiples of 90 degrees.

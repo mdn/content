@@ -9,7 +9,46 @@ browser-compat: css.properties.border-image-width
 
 The **`border-image-width`** [CSS](/en-US/docs/Web/CSS) property sets the width of an element's [border image](/en-US/docs/Web/CSS/border-image).
 
-{{EmbedInteractiveExample("pages/css/border-image-width.html")}}
+{{InteractiveExample("CSS Demo: border-image-width")}}
+
+```css interactive-example-choice
+border-image-width: 30px;
+```
+
+```css interactive-example-choice
+border-image-width: 15px 40px;
+```
+
+```css interactive-example-choice
+border-image-width: 2.6rem;
+```
+
+```css interactive-example-choice
+border-image-width: 20% 8%;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">This is a box with a border around it.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background: #fff3d4;
+  color: #000;
+  border: 30px solid;
+  border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
+    round;
+  font-size: 1.2em;
+}
+```
 
 If this property's value is greater than the element's {{cssxref("border-width")}}, the border image will extend beyond the padding (and/or content) edge.
 

@@ -102,7 +102,7 @@ When designing reusable HTML components, you may also use [container queries](/e
 
   - : Tips and techniques for helping improve web content printer output.
 
-- [Responsive images](/en-US/docs/Web/HTML/Responsive_images)
+- [Responsive images](/en-US/docs/Web/HTML/Guides/Responsive_images)
 
   - : Learn how to use media queries with `sizes` to implement responsive image solutions on websites.
 
@@ -128,10 +128,10 @@ When designing reusable HTML components, you may also use [container queries](/e
 - [Device Posture API](/en-US/docs/Web/API/Device_Posture_API)
   - {{cssxref("@media/device-posture", "device-posture")}} descriptor
 - HTML
-  - `sizes` attribute for [`<img>`](/en-US/docs/Web/HTML/Element/img#sizes), [`<link>`](/en-US/docs/Web/HTML/Element/link#sizes), and [`<source>`](/en-US/docs/Web/HTML/Element/source#sizes) for {{HTMLElement("picture")}}
-  - `media` attribute for [`<link>`](/en-US/docs/Web/HTML/Element/link#media), [`<source>`](/en-US/docs/Web/HTML/Element/source#media), and [`<style>`](/en-US/docs/Web/HTML/Element/style#media) [HTML](/en-US/docs/Web/HTML)
-  - [Viewport `<meta>` tag](/en-US/docs/Web/HTML/Viewport_meta_tag)
-- SVG [`media`](/en-US/docs/Web/SVG/Attribute/media) attribute
+  - `sizes` attribute for [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes), [`<link>`](/en-US/docs/Web/HTML/Reference/Elements/link#sizes), and [`<source>`](/en-US/docs/Web/HTML/Reference/Elements/source#sizes) for {{HTMLElement("picture")}}
+  - `media` attribute for [`<link>`](/en-US/docs/Web/HTML/Reference/Elements/link#media), [`<source>`](/en-US/docs/Web/HTML/Reference/Elements/source#media), and [`<style>`](/en-US/docs/Web/HTML/Reference/Elements/style#media) [HTML](/en-US/docs/Web/HTML)
+  - [Viewport `<meta>` tag](/en-US/docs/Web/HTML/Guides/Viewport_meta_element)
+- SVG [`media`](/en-US/docs/Web/SVG/Reference/Attribute/media) attribute
 
 ## Specifications
 
@@ -140,6 +140,6 @@ When designing reusable HTML components, you may also use [container queries](/e
 ## See also
 
 - [Container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries)
-- [Using the `srcset` and `sizes` attributes](/en-US/docs/Web/HTML/Element/img#using_the_srcset_and_sizes_attributes)
+- [Using the `srcset` and `sizes` attributes](/en-US/docs/Web/HTML/Reference/Elements/img#using_the_srcset_and_sizes_attributes)
 - [CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media)
 - Use {{cssxref("@supports")}} to apply styles that depend on browser support for various CSS technologies.

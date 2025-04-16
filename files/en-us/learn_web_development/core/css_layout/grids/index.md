@@ -2,9 +2,8 @@
 title: CSS grid layout
 slug: Learn_web_development/Core/CSS_layout/Grids
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout/Responsive_design", "Learn_web_development/Core/CSS_layout")}}
 
@@ -71,7 +70,7 @@ Let's try out grid layouts, here is an example with a container, which has some 
 
 ```css live-sample___simple-grid_0
 body {
-  font: sans-serif;
+  font-family: sans-serif;
 }
 .container > div {
   border-radius: 5px;
@@ -99,7 +98,7 @@ Similar to how you define flexbox, you define a grid layout by setting the value
 
 ```css hidden live-sample___simple-grid_1
 body {
-  font: sans-serif;
+  font-family: sans-serif;
 }
 .container > div {
   border-radius: 5px;
@@ -135,7 +134,7 @@ To see something that looks more grid-like, we'll need to add some columns to th
 
 ```css hidden live-sample___simple-grid_2
 body {
-  font: sans-serif;
+  font-family: sans-serif;
 }
 .container > div {
   border-radius: 5px;
@@ -174,7 +173,7 @@ In addition to creating grids using lengths and percentages, we can use [`fr`](/
 
 ```css hidden live-sample___grid-fr-unit_0
 body {
-  font: sans-serif;
+  font-family: sans-serif;
 }
 .container > div {
   border-radius: 5px;
@@ -195,7 +194,9 @@ Here we change the track listing to the following definition, creating three `1f
 
 {{EmbedLiveSample('grid-fr-unit_0', '100%', "130") }}
 
-You now have flexible tracks. The `fr` unit distributes space proportionally. You can specify different positive values for your tracks like so:
+You now have flexible tracks.
+The `fr` unit distributes space proportionally, so you can specify different positive values for your tracks.
+Change your track listing to the following definition, creating one `2fr` track and two `1fr` tracks:
 
 ```html hidden live-sample___grid-fr-unit_1
 <div class="container">
@@ -211,7 +212,7 @@ You now have flexible tracks. The `fr` unit distributes space proportionally. Yo
 
 ```css hidden live-sample___grid-fr-unit_1
 body {
-  font: sans-serif;
+  font-family: sans-serif;
 }
 .container > div {
   border-radius: 5px;
@@ -220,8 +221,6 @@ body {
   border: 2px solid rgb(79 185 227);
 }
 ```
-
-Now change your track listing to the following definition, creating one `2fr` two `1fr` tracks:
 
 ```css live-sample___grid-fr-unit_1
 .container {
@@ -259,7 +258,7 @@ To create gaps between tracks, we use the properties:
 
 ```css hidden live-sample___grid-gap
 body {
-  font: sans-serif;
+  font-family: sans-serif;
 }
 .container > div {
   border-radius: 5px;
@@ -269,7 +268,7 @@ body {
 }
 ```
 
-Here we add the `gap` property to create gaps between the tracks with a value of `20px:
+Here we add the `gap` property to create gaps between the tracks with a value of `20px`:
 
 ```css live-sample___grid-gap
 .container {
@@ -302,7 +301,7 @@ Here we change the track listing to the following:
 
 ```css hidden live-sample___grid-repeat
 body {
-  font: sans-serif;
+  font-family: sans-serif;
 }
 .container > div {
   border-radius: 5px;
@@ -348,7 +347,7 @@ By default, tracks created in the implicit grid are `auto` sized, which in gener
 
 ```css hidden live-sample___grid-auto
 body {
-  font: sans-serif;
+  font-family: sans-serif;
 }
 .container > div {
   border-radius: 5px;
@@ -389,7 +388,7 @@ The {{cssxref("minmax", "minmax()")}} function lets us set a minimum and maximum
 
 ```css hidden live-sample___grid-minmax_0
 body {
-  font: sans-serif;
+  font-family: sans-serif;
 }
 .container > div {
   border-radius: 5px;
@@ -430,7 +429,7 @@ We can combine some of the lessons we've learned about track listing, repeat not
 
 ```css hidden live-sample___grid-minmax_1
 body {
-  font: sans-serif;
+  font-family: sans-serif;
 }
 .container > div {
   border-radius: 5px;
@@ -862,7 +861,7 @@ If you use the [Firefox grid inspector](https://firefox-source-docs.mozilla.org/
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Grid](/en-US/docs/Learn_web_development/Core/CSS_layout/Grid_skills).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Grid](/en-US/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Grid).
 
 ## Summary
 

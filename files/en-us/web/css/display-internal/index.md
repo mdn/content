@@ -58,7 +58,7 @@ Valid `<display-internal>` values:
 
 ### CSS tables example
 
-The following example demonstrates laying out a simple form using CSS table layout.
+The following example demonstrates laying out a form using CSS table layout.
 
 #### HTML
 

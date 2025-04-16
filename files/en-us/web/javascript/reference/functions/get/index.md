@@ -9,7 +9,7 @@ browser-compat: javascript.functions.get
 
 The **`get`** syntax binds an object property to a function that will be called when that property is looked up. It can also be used in [classes](/en-US/docs/Web/JavaScript/Reference/Classes).
 
-{{InteractiveExample("JavaScript Demo: Functions Getter")}}
+{{InteractiveExample("JavaScript Demo: Getter declaration")}}
 
 ```js interactive-example
 const obj = {

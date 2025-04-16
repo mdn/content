@@ -1,10 +1,10 @@
 ---
 title: Command line crash course
+short-title: Command line
 slug: Learn_web_development/Getting_started/Environment_setup/Command_line
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Dealing_with_files", "Learn_web_development/Getting_started/Your_first_website", "Learn_web_development/Getting_started/Environment_setup")}}
 
@@ -71,7 +71,7 @@ And below, you can see the macOS terminal application.
 
 ### How do you access the terminal?
 
-Many developers today are using Unix-based tools (e.g. the terminal, and the tools you can access through it). Many tutorials and tools that exist on the web today support (and sadly assume) Unix-based systems, but not to worry — they are available on most systems. In this section, we'll look at how to get access to the terminal on your chosen system.
+Many developers today are using Unix-based tools (e.g., the terminal, and the tools you can access through it). Many tutorials and tools that exist on the web today support (and sadly assume) Unix-based systems, but not to worry — they are available on most systems. In this section, we'll look at how to get access to the terminal on your chosen system.
 
 #### Linux/Unix
 
@@ -177,7 +177,7 @@ cd Desktop/project/src
 Note that including a leading slash on your path makes the path absolute, for example `/Users/your-user-name/Desktop`. Omitting the leading slash as we've done above makes the path relative to your present working directory. This is exactly the same as you would see with URLs in your web browser. A leading slash means "at the root of the website", whereas omitting the slash means "the URL is relative to my current page".
 
 > [!NOTE]
-> On windows, you use backslashes instead of forward slashes, e.g. `cd Desktop\project\src` — this may seem really odd, but if you are interested in why, [watch this YouTube clip](https://www.youtube.com/watch?v=5T3IJfBfBmI) featuring an explanation by one of Microsoft's Principal engineers.
+> On windows, you use backslashes instead of forward slashes, e.g., `cd Desktop\project\src` — this may seem really odd, but if you are interested in why, [watch this YouTube clip](https://www.youtube.com/watch?v=5T3IJfBfBmI) featuring an explanation by one of Microsoft's Principal engineers.
 
 ### Listing directory contents
 
@@ -376,7 +376,7 @@ Prettier can:
 - Be installed on any operating system and even as a direct part of project tooling, ensuring that colleagues and friends who work on your code use the code style you're using.
 - Be configured to run upon save, as you type, or even before publishing your code (with additional tooling that we'll see later on in the module).
 
-For this article, we will install Prettier locally, as suggested in the [Prettier installation guide](https://prettier.io/docs/en/install.html).
+For this article, we will install Prettier locally, as suggested in the [Prettier installation guide](https://prettier.io/docs/install.html).
 
 Once you've installed node, open up the terminal and run the following command to install Prettier (we will explain what `--save-dev` does in the next article):
 
@@ -477,7 +477,7 @@ With Prettier there's a number of ways automation can be achieved and though the
 - Whenever you hit "save" in your code editor, be it [VS Code](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode), or [Sublime Text](https://packagecontrol.io/packages/JsPrettier).
 - As part of continuous integration checks using tools like [GitHub Actions](https://github.com/features/actions).
 
-Our personal preference is the second one — while using say VS Code, Prettier kicks in and cleans up any formatting it needs to do every time we hit save. You can find a lot more information about using Prettier in different ways in the [Prettier docs](https://prettier.io/docs/en/).
+Our personal preference is the second one — while using say VS Code, Prettier kicks in and cleans up any formatting it needs to do every time we hit save. You can find a lot more information about using Prettier in different ways in the [Prettier docs](https://prettier.io/docs/).
 
 ## Other tools to play with
 

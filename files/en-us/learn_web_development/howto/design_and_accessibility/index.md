@@ -2,9 +2,8 @@
 title: Design and accessibility
 slug: Learn_web_development/Howto/Design_and_accessibility
 page-type: landing-page
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 This section lists questions related to aesthetics, page structure, accessibility techniques, etc.
 

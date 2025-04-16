@@ -9,7 +9,57 @@ browser-compat: css.properties.left
 
 The **`left`** [CSS](/en-US/docs/Web/CSS) property participates in specifying the horizontal position of a [positioned element](/en-US/docs/Web/CSS/position). This {{glossary("inset properties", "inset property")}} has no effect on non-positioned elements.
 
-{{EmbedInteractiveExample("pages/css/left.html")}}
+{{InteractiveExample("CSS Demo: left")}}
+
+```css interactive-example-choice
+left: 0;
+```
+
+```css interactive-example-choice
+left: 4em;
+```
+
+```css interactive-example-choice
+left: 10%;
+```
+
+```css interactive-example-choice
+left: 20px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container">
+    <div id="example-element">I am absolutely positioned.</div>
+    <p>
+      As much mud in the streets as if the waters had but newly retired from the
+      face of the earth, and it would not be wonderful to meet a Megalosaurus,
+      forty feet long or so, waddling like an elephantine lizard up Holborn
+      Hill.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 0.75em solid;
+  padding: 0.75em;
+  text-align: left;
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+}
+
+#example-element {
+  background-color: #264653;
+  border: 4px solid #ffb500;
+  color: white;
+  position: absolute;
+  width: 140px;
+  height: 60px;
+}
+```
 
 ## Syntax
 

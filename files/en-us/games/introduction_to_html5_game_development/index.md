@@ -92,7 +92,7 @@ page-type: guide
   - : Use gamepads or other game controllers.
 - [HTML](/en-US/docs/Web/HTML) and [CSS](/en-US/docs/Web/CSS)
   - : Build, style, and lay out your game's user interface.
-- [HTML audio](/en-US/docs/Web/HTML/Element/audio)
+- [HTML audio](/en-US/docs/Web/HTML/Reference/Elements/audio)
   - : Easily play simple sound effects and music.
 - [IndexedDB](/en-US/docs/Web/API/IndexedDB_API)
   - : Store user data on their own computer or device.

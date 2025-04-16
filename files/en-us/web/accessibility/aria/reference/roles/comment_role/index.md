@@ -81,10 +81,8 @@ It's possible to nest comments inside one another, like so:
 
 ## Accessibility concerns
 
-None
+None.
 
 ## Specifications
 
 Will be part of WAI-ARIA 1.3, which is still being drafted.
-
-## See also

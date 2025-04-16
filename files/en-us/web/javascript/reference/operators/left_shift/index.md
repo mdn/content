@@ -9,7 +9,7 @@ browser-compat: javascript.operators.left_shift
 
 The **left shift (`<<`)** operator returns a number or BigInt whose binary representation is the first operand shifted by the specified number of bits to the left. Excess bits shifted off to the left are discarded, and zero bits are shifted in from the right.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Left shift operator", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Left shift (<<) operator", "shorter")}}
 
 ```js interactive-example
 const a = 5; // 00000000000000000000000000000101

@@ -8,7 +8,7 @@ browser-compat: api.SVGAngle.value
 
 {{APIRef("SVG")}}
 
-The `value` property of the {{domxref("SVGAngle")}} interface represents the floating point value of the [`<angle>`](/en-US/docs/Web/SVG/Content_type#angle) in degrees.
+The `value` property of the {{domxref("SVGAngle")}} interface represents the floating point value of the [`<angle>`](/en-US/docs/Web/SVG/Guides/Content_type#angle) in degrees.
 
 Setting this attribute will cause {{domxref("SVGAngle.valueInSpecifiedUnits", "valueInSpecifiedUnits")}} and {{domxref("SVGAngle.valueAsString", "valueAsString")}} to be updated automatically to reflect this setting.
 

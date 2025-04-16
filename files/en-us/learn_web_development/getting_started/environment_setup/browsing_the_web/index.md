@@ -2,9 +2,8 @@
 title: Browsing the web
 slug: Learn_web_development/Getting_started/Environment_setup/Browsing_the_web
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Installing_software", "Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup")}}
 
@@ -156,7 +155,7 @@ As a web developer, you will spend a lot of time searching for information, from
 
 If you are looking for general information about a specific web technology feature, you should type the name of the feature into the MDN search box. For example, try typing `box model`, `fetch()` or `video element` into the search box and see what comes up. If you don't find the information you need, try expanding your search — try your search term in a search engine.
 
-If you are looking for a solution to a specific problem, such as `how to print out the fibonacci sequence with JavaScript` or `how to calculate whether a number is a prime number with JavaScript`, it is a good idea to search on a website such as [StackOverflow](https://stackoverflow.com), which is a community dedicated to answering programming problems. Again, try using a general search engine if a specific site doesn't give you a helpful answer.
+If you are looking for a solution to a specific problem, such as `how to print out the fibonacci sequence with JavaScript` or `how to calculate whether a number is a prime number with JavaScript`, it is a good idea to search on a website such as [StackOverflow](https://stackoverflow.com/), which is a community dedicated to answering programming problems. Again, try using a general search engine if a specific site doesn't give you a helpful answer.
 
 > [!CALLOUT]
 >
@@ -170,7 +169,7 @@ If you are looking for a solution to a specific problem, such as `how to print o
 
 ### Using AI
 
-AI-generated search results are a very popular way of receiving information. They basically provide a superpowered search: they do a lot of searching in the background, before compiling the results into a single, easily-digestible answer. Common choices are [ChatGPT](https://chatgpt.com), [Google Gemini](https://gemini.google.com/app), and [Microsoft Copilot](https://copilot.microsoft.com), accessed either directly in a chat format, or via AI-powered in-app help or automation systems.
+AI-generated search results are a very popular way of receiving information. They basically provide a superpowered search: they do a lot of searching in the background, before compiling the results into a single, easily-digestible answer. Common choices are [ChatGPT](https://chatgpt.com/), [Google Gemini](https://gemini.google.com/app), and [Microsoft Copilot](https://copilot.microsoft.com/), accessed either directly in a chat format, or via AI-powered in-app help or automation systems.
 
 When learning to code, AI chat prompts can be useful in a variety of ways:
 
@@ -205,7 +204,7 @@ As a result, you need to be careful to check the answers they give you, and not 
 - You should include the language you are using in the search term, as shown in the examples above. If you just typed in `how to print out the fibonacci sequence`, you would likely end up with several solutions in Python, C++, Java, Ruby, or other languages — not quite as helpful when you are trying to learn JavaScript!
 - When you find a useful answer, bookmark or make a copy of it somewhere so you can find it again later. You'll be amazed how many times you run into the same problem.
 - If your code is returning a specific error message, try entering the error into a search engine or AI prompt. Other people will probably have already tackled the same error in the past and recorded solutions publicly somewhere.
-- If possible, stick with recommended sites like MDN and [StackOverflow](https://stackoverflow.com).
+- If possible, stick with recommended sites like MDN and [StackOverflow](https://stackoverflow.com/).
 - There are many advanced search techniques you can use in search engines that will give you better results than just typing a plain search term. Typing in a plain search term such as `ant fish cheese` will return results that contain any combination of those words. However, most search engines support variations of the following formats:
 
   - Typing in `"ant fish cheese"` (with the quotes) will only return results that contain that exact phrase.

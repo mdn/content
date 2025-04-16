@@ -38,7 +38,7 @@ Events have three functions:
   - : The function called when this event occurs. The function is passed this argument:
 
     - `details`
-      - : `object`. Details about the navigation event. See the [details](#details_2) section for more information.
+      - : `object`. Details about the navigation event. See the [details](#details) section for more information.
 
 - `filter` {{optional_inline}}
   - : `object`. An object containing a single property `url`, which is an `Array` of {{WebExtAPIRef("events.UrlFilter")}} objects. If you include this parameter, then the event fires only for transitions to URLs which match at least one `UrlFilter` in the array. If you omit this parameter, the event fires for all transitions.
@@ -58,7 +58,7 @@ Events have three functions:
 - `timeStamp`
   - : `number`. The time that the fragment identifier for the page was changed, in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
 - `transitionType`
-  - : `{{WebExtAPIRef("webNavigation.transitionType", "transitionType")}}`. The reason for the navigation: for example, `"link"` if the user clicked a link.
+  - : {{WebExtAPIRef("webNavigation.transitionType", "transitionType")}}. The reason for the navigation: for example, `"link"` if the user clicked a link.
 - `transitionQualifiers`
   - : `Array` of {{WebExtAPIRef("webNavigation.transitionQualifier", "transitionQualifier")}}. Extra information about the navigation: for example, whether there was a server or client redirect.
 

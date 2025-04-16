@@ -43,7 +43,7 @@ getDisplayMedia(options)
         > You cannot set `monitorTypeSurfaces: "exclude"` at the same time as [`displaySurface: "monitor"`](/en-US/docs/Web/API/MediaTrackConstraints/displaySurface) as the two settings are contradictory. Trying to do so will result in the `getDisplayMedia()` call failing with a `TypeError`.
 
     - `preferCurrentTab` {{non-standard_inline}} {{Experimental_Inline}} {{optional_inline}}
-      - : A boolean; a value of `true` instructs the browser to offer the current tab as the most prominent capture source, i.e. as a separate "This Tab" option in the "Choose what to share" options presented to the user. This is useful as many app types generally just want to share the current tab. For example, a slide deck app might want to let the user stream the current tab containing the presentation to a virtual conference. A default value is not mandated by the spec; see the [Browser compatibility](#browser_compatibility) section for browser-specific defaults.
+      - : A boolean; a value of `true` instructs the browser to offer the current tab as the most prominent capture source, i.e., as a separate "This Tab" option in the "Choose what to share" options presented to the user. This is useful as many app types generally just want to share the current tab. For example, a slide deck app might want to let the user stream the current tab containing the presentation to a virtual conference. A default value is not mandated by the spec; see the [Browser compatibility](#browser_compatibility) section for browser-specific defaults.
     - `selfBrowserSurface` {{Experimental_Inline}} {{optional_inline}}
       - : An enumerated value specifying whether the browser should allow the user to select the current tab for capture. This helps to avoid the "infinite hall of mirrors" effect experienced when a video conferencing app inadvertently shares its own display. Possible values are `include`, which hints that the browser should include the current tab in the choices offered for capture, and `exclude`, which hints that it should be excluded. A default value is not mandated by the spec; see the [Browser compatibility](#browser_compatibility) section for browser-specific defaults.
     - `surfaceSwitching` {{Experimental_Inline}} {{optional_inline}}
@@ -73,7 +73,7 @@ audio track.
     not fully active or does not focused. Or if the `controller` options has been already used in creating
     another {{domxref("MediaStream")}}.
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Thrown if the permission to access a screen area was denied by the user, or the current browsing instance is not permitted access to screen sharing (for example by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy)).
+  - : Thrown if the permission to access a screen area was denied by the user, or the current browsing instance is not permitted access to screen sharing (for example by a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy)).
 - `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if no sources of screen video are available for capture.
 - `NotReadableError` {{domxref("DOMException")}}

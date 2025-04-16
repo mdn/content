@@ -9,7 +9,7 @@ browser-compat: javascript.operators.bitwise_or
 
 The **bitwise OR (`|`)** operator returns a number or BigInt whose binary representation has a `1` in each bit position for which the corresponding bits of either or both operands are `1`.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Bitwise OR", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Bitwise OR (|) operator", "shorter")}}
 
 ```js interactive-example
 const a = 5; // 00000000000000000000000000000101

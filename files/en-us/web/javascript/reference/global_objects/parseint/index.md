@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.parseInt
 
 The **`parseInt()`** function parses a string argument and returns an integer of the specified [radix](https://en.wikipedia.org/wiki/Radix) (the base in mathematical numeral systems).
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - parseInt()")}}
+{{InteractiveExample("JavaScript Demo: parseInt()")}}
 
 ```js interactive-example
 console.log(parseInt("123"));
@@ -83,7 +83,7 @@ If the first character cannot be converted to a number with the radix in use, `p
 
 For arithmetic purposes, the `NaN` value is not a number in any radix. You can call the [`Number.isNaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN) function to determine if the result of `parseInt` is `NaN`. If `NaN` is passed on to arithmetic operations, the operation result will also be `NaN`.
 
-Because large numbers use the `e` character in their string representation (e.g. `6.022e23` for 6.022 × 10<sup>23</sup>), using `parseInt` to truncate numbers will produce unexpected results when used on very large or very small numbers. `parseInt` should _not_ be used as a substitute for {{jsxref("Math.trunc()")}}.
+Because large numbers use the `e` character in their string representation (e.g., `6.022e23` for 6.022 × 10<sup>23</sup>), using `parseInt` to truncate numbers will produce unexpected results when used on very large or very small numbers. `parseInt` should _not_ be used as a substitute for {{jsxref("Math.trunc()")}}.
 
 To convert a number to its string literal in a particular radix, use [`thatNumber.toString(radix)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString).
 

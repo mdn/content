@@ -12,7 +12,7 @@ When a URL points at a specific piece of a document using a [URL fragment identi
 
 The [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) {{cssxref(":target")}} is used to style the target element of the document identified using the URL fragment identifier. For example, the URL `https://developer.mozilla.org/en-US/docs/Web/CSS#reference` contains the fragment identifier `#reference`. In HTML, identifiers are found as the values of either `id` or `name` attributes, since the two share the same namespace. Thus, the example URL would point to the element that has the id `reference` in that document.
 
-Suppose you wish to style any `h2` element that is the target of a URL, but do not want any other kind of element to get a target style. This is simple enough:
+To style any `h2` element that is the target of a URL, while not effecting any other kind of element to get a target style, use the `:target` pseudo-class with the [type selector](/en-US/docs/Web/CSS/Type_selectors):
 
 ```css
 h2:target {

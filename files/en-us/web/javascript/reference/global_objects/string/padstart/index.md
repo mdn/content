@@ -10,7 +10,7 @@ browser-compat: javascript.builtins.String.padStart
 The **`padStart()`** method of {{jsxref("String")}} values pads this string with another string (multiple times, if needed) until the resulting
 string reaches the given length. The padding is applied from the start of this string.
 
-{{InteractiveExample("JavaScript Demo: String.padStart()")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.padStart()")}}
 
 ```js interactive-example
 const str1 = "5";

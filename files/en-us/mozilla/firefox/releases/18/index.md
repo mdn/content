@@ -12,9 +12,9 @@ Firefox 18 was released on January 8, 2013. This article lists key changes that 
 
 ### HTML
 
-- The [`reversed`](/en-US/docs/Web/HTML/Element/ol#reversed) attribute of the {{HTMLElement("ol")}} element is now supported ([Firefox bug 601912](https://bugzil.la/601912)).
-- The [`crossorigin`](/en-US/docs/Web/HTML/Element/link#crossorigin) attribute of the {{HTMLElement("link")}} element is now supported ([Firefox bug 786564](https://bugzil.la/786564)).
-- The [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#allowfullscreen) attribute of the {{HTMLElement("iframe")}} has been implemented and it's prefixed predecessor [`mozallowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#mozallowfullscreen) is now deprecated.
+- The [`reversed`](/en-US/docs/Web/HTML/Reference/Elements/ol#reversed) attribute of the {{HTMLElement("ol")}} element is now supported ([Firefox bug 601912](https://bugzil.la/601912)).
+- The [`crossorigin`](/en-US/docs/Web/HTML/Reference/Elements/link#crossorigin) attribute of the {{HTMLElement("link")}} element is now supported ([Firefox bug 786564](https://bugzil.la/786564)).
+- The [`allowfullscreen`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen) attribute of the {{HTMLElement("iframe")}} has been implemented and it's prefixed predecessor [`mozallowfullscreen`](/en-US/docs/Web/HTML/Reference/Elements/iframe#mozallowfullscreen) is now deprecated.
 
 ### CSS
 
@@ -52,8 +52,8 @@ Firefox 18 was released on January 8, 2013. This article lists key changes that 
 
 ### Network
 
-- Quality factors ("q-values") are now clamped to 2 digits (e.g. in HTTP {{HTTPHeader("Accept-Language")}} headers) ([Firefox bug 672448](https://bugzil.la/672448)).
-- The `ALLOW-FROM` syntax of the [`X-FRAME-OPTIONS`](/en-US/docs/Web/HTTP/Headers/X-Frame-Options) HTTP Response header is now supported ([Firefox bug 690168](https://bugzil.la/690168)).
+- Quality factors ("q-values") are now clamped to 2 digits (e.g., in HTTP {{HTTPHeader("Accept-Language")}} headers) ([Firefox bug 672448](https://bugzil.la/672448)).
+- The `ALLOW-FROM` syntax of the [`X-FRAME-OPTIONS`](/en-US/docs/Web/HTTP/Reference/Headers/X-Frame-Options) HTTP Response header is now supported ([Firefox bug 690168](https://bugzil.la/690168)).
 
 ### Developer tools
 

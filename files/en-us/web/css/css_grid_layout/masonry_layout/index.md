@@ -231,6 +231,10 @@ body {
 
 In browsers [that do not support masonry](#browser_compatibility), regular grid auto-placement will be used instead.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

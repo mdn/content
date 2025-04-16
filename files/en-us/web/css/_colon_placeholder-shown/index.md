@@ -7,7 +7,7 @@ browser-compat: css.selectors.placeholder-shown
 
 {{CSSRef}}
 
-The **`:placeholder-shown`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element that is currently displaying [placeholder text](/en-US/docs/Web/HTML/Element/input#placeholder).
+The **`:placeholder-shown`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element that is currently displaying [placeholder text](/en-US/docs/Web/HTML/Reference/Elements/input#placeholder).
 
 {{InteractiveExample("CSS Demo: :placeholder-shown", "tabbed-shorter")}}
 

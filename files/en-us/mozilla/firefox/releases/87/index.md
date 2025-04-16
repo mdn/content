@@ -58,9 +58,9 @@ _No changes._
 
 ### HTTP
 
-- Some enterprise authentication services require that TLS client certificates be [sent in CORS preflight requests](/en-US/docs/Web/HTTP/CORS#preflight_requests_and_credentials). Users of these services can enable this (non-specification compliant) behavior using the `network.cors_preflight.allow_client_cert` preference ([Firefox bug 1511151](https://bugzil.la/1511151)).
-- The default [`Referrer-Policy`](/en-US/docs/Web/HTTP/Headers/Referrer-Policy) has been changed to [`strict-origin-when-cross-origin`](/en-US/docs/Web/HTTP/Headers/Referrer-Policy#strict-origin-when-cross-origin) (from `no-referrer-when-downgrade`), reducing the risk of leaking referrer information in cross-origin requests ([Firefox bug 1589074](https://bugzil.la/1589074)).
-- [`Content-Length`](/en-US/docs/Web/HTTP/Headers/Content-Length) has been added to the list of [CORS-safelisted response headers](/en-US/docs/Glossary/CORS-safelisted_response_header) ([Firefox bug 1460299](https://bugzil.la/1460299)).
+- Some enterprise authentication services require that TLS client certificates be [sent in CORS preflight requests](/en-US/docs/Web/HTTP/Guides/CORS#preflight_requests_and_credentials). Users of these services can enable this (non-specification compliant) behavior using the `network.cors_preflight.allow_client_cert` preference ([Firefox bug 1511151](https://bugzil.la/1511151)).
+- The default [`Referrer-Policy`](/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy) has been changed to [`strict-origin-when-cross-origin`](/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy#strict-origin-when-cross-origin) (from `no-referrer-when-downgrade`), reducing the risk of leaking referrer information in cross-origin requests ([Firefox bug 1589074](https://bugzil.la/1589074)).
+- [`Content-Length`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Length) has been added to the list of [CORS-safelisted response headers](/en-US/docs/Glossary/CORS-safelisted_response_header) ([Firefox bug 1460299](https://bugzil.la/1460299)).
 
 ### Security
 
@@ -70,7 +70,7 @@ _No changes._
 
 #### DOM
 
-- The {{domxref("Element.beforeinput_event", "beforeinput")}} event and {{domxref('InputEvent.getTargetRanges()', 'getTargetRanges()')}} method are now enabled by default. They allow web apps to override text edit behavior before the browser modifies the DOM tree, and provide more control over input events to improve performance. The global `beforeinput` event is sent to an {{HTMLElement("input")}} element — or any element whose [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute is set to `true` — immediately before the element's value changes. The `getTargetRanges()` method of the {{domxref("InputEvent")}} interface returns an array of static ranges that will be affected by a change to the DOM if the input event is not canceled.
+- The {{domxref("Element.beforeinput_event", "beforeinput")}} event and {{domxref('InputEvent.getTargetRanges()', 'getTargetRanges()')}} method are now enabled by default. They allow web apps to override text edit behavior before the browser modifies the DOM tree, and provide more control over input events to improve performance. The global `beforeinput` event is sent to an {{HTMLElement("input")}} element — or any element whose [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) attribute is set to `true` — immediately before the element's value changes. The `getTargetRanges()` method of the {{domxref("InputEvent")}} interface returns an array of static ranges that will be affected by a change to the DOM if the input event is not canceled.
 
 ### WebDriver conformance (Marionette)
 

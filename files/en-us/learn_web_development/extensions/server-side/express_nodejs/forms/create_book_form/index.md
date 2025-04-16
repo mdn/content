@@ -2,9 +2,8 @@
 title: Create Book form
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_book_form
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 This subarticle shows how to define a page/form to create `Book` objects. This is a little more complicated than the equivalent `Author` or `Genre` pages because we need to get and display available `Author` and `Genre` records in our `Book` form.
 
@@ -215,7 +214,7 @@ The main differences are in how we implement the selection-type fields: `Author`
 
 - The set of genres are displayed as checkboxes, and use the `checked` value we set in the controller to determine whether or not the box should be selected.
 - The set of authors are displayed as a single-selection alphabetically ordered drop-down list (the list passed to the template is already sorted, so we don't need to do that in the template).
-  If the user has previously selected a book author (i.e. when fixing invalid field values after initial form submission, or when updating book details) the author will be re-selected when the form is displayed. Here we determine what author to select by comparing the id of the current author option with the value previously entered by the user (passed in via the `book` variable).
+  If the user has previously selected a book author (i.e., when fixing invalid field values after initial form submission, or when updating book details) the author will be re-selected when the form is displayed. Here we determine what author to select by comparing the id of the current author option with the value previously entered by the user (passed in via the `book` variable).
 
 > [!NOTE]
 > If there is an error in the submitted form, then, when the form is to be re-rendered, the new book author's id and the existing books's authors ids are of type `Schema.Types.ObjectId`. So to compare them we must convert them to strings first.

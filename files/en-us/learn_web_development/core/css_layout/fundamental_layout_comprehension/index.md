@@ -1,10 +1,10 @@
 ---
 title: "Challenge: Fundamental layout comprehension"
+short-title: "Challenge: Fundamental layout"
 slug: Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/Scripting", "Learn_web_development/Core/CSS_layout")}}
 

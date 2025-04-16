@@ -9,7 +9,56 @@ browser-compat: css.types.basic-shape
 
 The **`<basic-shape>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a shape used in the {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}, and {{cssxref("offset-path")}} properties.
 
-{{EmbedInteractiveExample("pages/css/type-basic-shape.html")}}
+{{InteractiveExample("CSS Demo: &amp;lt;basic-shape&amp;gt;")}}
+
+```css interactive-example-choice
+clip-path: inset(22% 12% 15px 35px);
+```
+
+```css interactive-example-choice
+clip-path: circle(6rem at 12rem 8rem);
+```
+
+```css interactive-example-choice
+clip-path: ellipse(115px 55px at 50% 40%);
+```
+
+```css interactive-example-choice
+clip-path: polygon(
+  50% 2.4%,
+  34.5% 33.8%,
+  0% 38.8%,
+  25% 63.1%,
+  19.1% 97.6%,
+  50% 81.3%,
+  80.9% 97.6%,
+  75% 63.1%,
+  100% 38.8%,
+  65.5% 33.8%
+);
+```
+
+```css interactive-example-choice
+clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: #fe9;
+}
+
+#example-element {
+  background: linear-gradient(to bottom right, #f52, #05f);
+  width: 100%;
+  height: 100%;
+}
+```
 
 ## Syntax
 
@@ -101,13 +150,13 @@ The function takes a list of comma-separated coordinate pairs, each consisting o
 
 ### Syntax for paths
 
-The {{cssxref("basic-shape/path","path()")}} function defines a shape using an SVG {{SVGAttr("fill-rule")}} and an SVG [path definition](/en-US/docs/Web/SVG/Attribute/d).
+The {{cssxref("basic-shape/path","path()")}} function defines a shape using an SVG {{SVGAttr("fill-rule")}} and an SVG [path definition](/en-US/docs/Web/SVG/Reference/Attribute/d).
 
 ```plain
 path( <'fill-rule'>? , <string> )
 ```
 
-The required `<string>` is an [SVG path](/en-US/docs/Web/SVG/Attribute/d) as a quoted string. The `path()` function is not a valid {{cssxref("shape-outside")}} property value.
+The required `<string>` is an [SVG path](/en-US/docs/Web/SVG/Reference/Attribute/d) as a quoted string. The `path()` function is not a valid {{cssxref("shape-outside")}} property value.
 
 ### Syntax for shapes
 
@@ -117,7 +166,7 @@ The {{cssxref("basic-shape/shape","shape()")}} function defines a shape using an
 shape( <'fill-rule'>? from <coordinate-pair> , <shape-command># )
 ```
 
-The `from <coordinate-pair>` parameter represents the starting point for the first shape command, and `<shape-command>` defines one or more shape commands, which are similar to the [SVG path commands](/en-US/docs/Web/SVG/Attribute/d#path_commands). The `shape()` function is not a valid {{cssxref("shape-outside")}} property value.
+The `from <coordinate-pair>` parameter represents the starting point for the first shape command, and `<shape-command>` defines one or more shape commands, which are similar to the [SVG path commands](/en-US/docs/Web/SVG/Reference/Attribute/d#path_commands). The `shape()` function is not a valid {{cssxref("shape-outside")}} property value.
 
 ## Description
 
@@ -148,7 +197,7 @@ Each value in the lists of the two `<basic-shape>` functions is interpolated bas
 
 - **Both shapes are of type `polygon()`**: Interpolation is applied between each corresponding value if they use the same `<fill-rule>` and have the same number of comma-separated coordinate pairs.
 
-- **Both shapes are of type `path()`**: Interpolation is applied to each parameter as a {{cssxref("&lt;number&gt;")}} if the path strings in both the shapes match the number, type, and sequence of [path data commands](/en-US/docs/Web/SVG/Attribute/d#path_commands).
+- **Both shapes are of type `path()`**: Interpolation is applied to each parameter as a {{cssxref("&lt;number&gt;")}} if the path strings in both the shapes match the number, type, and sequence of [path data commands](/en-US/docs/Web/SVG/Reference/Attribute/d#path_commands).
 
 - **Both shapes are of type `shape()`**: Interpolation is applied between each corresponding value if they have the identical command keyword and use the same `<by-to>` keyword. If `shape()` is used in the {{cssxref("clip-path")}} property, the two shapes interpolate if they also have the same `<fill-rule>`.
 

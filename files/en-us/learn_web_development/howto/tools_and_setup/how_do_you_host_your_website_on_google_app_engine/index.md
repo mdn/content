@@ -6,7 +6,7 @@ page-type: learn-faq
 
 {{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
-[Google App Engine](https://cloud.google.com/appengine/) is a powerful platform that lets you build and run applications on Google's infrastructure — whether you need to build a multi-tiered web application from scratch or host a static website. Here's a step-by-step guide to hosting your website on Google App Engine.
+[Google App Engine](https://cloud.google.com/appengine) is a powerful platform that lets you build and run applications on Google's infrastructure — whether you need to build a multi-tiered web application from scratch or host a static website. Here's a step-by-step guide to hosting your website on Google App Engine.
 
 ## Creating a Google Cloud Platform project
 
@@ -49,7 +49,7 @@ Now that we've got our project made and sample app files collected together, let
    cd sample-app
    ```
 
-5. You are now ready to deploy your application, i.e. upload your app to App Engine:
+5. You are now ready to deploy your application, i.e., upload your app to App Engine:
 
    ```bash
    gcloud app deploy

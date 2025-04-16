@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Intl.DateTimeFormat.DateTimeFormat
 
 The **`Intl.DateTimeFormat()`** constructor creates {{jsxref("Intl.DateTimeFormat")}} objects.
 
-{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat", "taller")}}
+{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat() constructor", "taller")}}
 
 ```js interactive-example
 const date = new Date(Date.UTC(2020, 11, 20, 3, 23, 16, 738));
@@ -93,7 +93,7 @@ Intl.DateTimeFormat(locales, options)
     - `"short"`
       - : E.g., `Thu`
     - `"narrow"`
-      - : E.g., `T`. Two weekdays may have the same narrow style for some locales (e.g. `Tuesday`'s narrow style is also `T`).
+      - : E.g., `T`. Two weekdays may have the same narrow style for some locales (e.g., `Tuesday`'s narrow style is also `T`).
 - `era`
   - : The representation of the era. Possible values are:
     - `"long"`
@@ -115,7 +115,7 @@ Intl.DateTimeFormat(locales, options)
     - `"short"`
       - : E.g., `Mar`
     - `"narrow"`
-      - : E.g., `M`). Two months may have the same narrow style for some locales (e.g. `May`'s narrow style is also `M`).
+      - : E.g., `M`). Two months may have the same narrow style for some locales (e.g., `May`'s narrow style is also `M`).
 - `day`
   - : The representation of the day. Possible values are `"numeric"` and `"2-digit"`.
 - `dayPeriod`
@@ -188,7 +188,7 @@ The date-time component styles requested might not directly correspond to a vali
 - `timeStyle`
   - : The [time formatting style](https://cldr.unicode.org/translation/date-time/date-time-patterns#h.588vo3awdscu) to use. Possible values are `"full"`, `"long"`, `"medium"`, and `"short"`. It expands to styles for `hour`, `minute`, `second`, and `timeZoneName`, with the exact combination of values depending on the locale.
 
-> **Note:** `dateStyle` and `timeStyle` can be used with each other, but not with other date-time component options (e.g. `weekday`, `hour`, `month`, etc.).
+> **Note:** `dateStyle` and `timeStyle` can be used with each other, but not with other date-time component options (e.g., `weekday`, `hour`, `month`, etc.).
 
 You can format different object types depending on which of the style shortcut options you include:
 
@@ -222,7 +222,7 @@ console.log(Object.getOwnPropertyDescriptors(formatter));
 // }
 ```
 
-Note that there's only one actual `Intl.DateTimeFormat` instance here: the one hidden in `[Symbol(IntlLegacyConstructedSymbol)]`. Calling the [`format()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format) and [`resolvedOptions()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions) methods on `formatter` would correctly use the options stored in that instance, but calling all other methods (e.g. [`formatRange()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRange)) would fail: "TypeError: formatRange method called on incompatible Object", because those methods don't consult the hidden instance's options.
+Note that there's only one actual `Intl.DateTimeFormat` instance here: the one hidden in `[Symbol(IntlLegacyConstructedSymbol)]`. Calling the [`format()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format) and [`resolvedOptions()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions) methods on `formatter` would correctly use the options stored in that instance, but calling all other methods (e.g., [`formatRange()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRange)) would fail: "TypeError: formatRange method called on incompatible Object", because those methods don't consult the hidden instance's options.
 
 This behavior, called `ChainDateTimeFormat`, does not happen when `Intl.DateTimeFormat()` is called without `new` but with `this` set to anything else that's not an `instanceof Intl.DateTimeFormat`. If you call it directly as `Intl.DateTimeFormat()`, the `this` value is [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl), and a new `Intl.DateTimeFormat` instance is created normally.
 

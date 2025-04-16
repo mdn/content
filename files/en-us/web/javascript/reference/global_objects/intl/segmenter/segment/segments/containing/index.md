@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Intl.Segments.containing
 
 The **`containing()`** method of [`Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) instances returns an object describing the segment in the string that includes the code unit at the specified index.
 
-{{InteractiveExample("JavaScript Demo: Segments.prototype.containing")}}
+{{InteractiveExample("JavaScript Demo: Segments.prototype.containing()")}}
 
 ```js interactive-example
 const segmenterFr = new Intl.Segmenter("fr", { granularity: "word" });

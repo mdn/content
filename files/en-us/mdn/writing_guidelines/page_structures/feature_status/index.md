@@ -5,16 +5,17 @@ page-type: mdn-writing-guide
 sidebar: mdnsidebar
 ---
 
-> [!WARNING]
-> Do not manually update the feature statuses in `mdn/content` repository.
-> The documentation source is [automatically updated](#how_feature_statuses_are_added_or_updated) from information in the GitHub `mdn/browser-compat-data` repository
-
 A feature status broadly indicates the cross-browser implementation and standardization state of a particular web platform feature, such as a Web API method or CSS property.
+
 It is one of the following:
 
 - [`deprecated`](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#setting-deprecated)
 - [`experimental`](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#setting-experimental)
 - [`non-standard`](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md#status-information)
+
+> [!WARNING]
+> Do not manually update the feature statuses in the `mdn/content` repository.
+> The documentation source is [automatically updated](#how_feature_statuses_are_added_or_updated) from information in the GitHub `mdn/browser-compat-data` repository.
 
 If none of the above statuses apply, the feature is considered _stable and standard feature_.
 For more information on these terms, see the ["Experimental, deprecated, and obsolete"](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete) page.
@@ -28,7 +29,7 @@ The feature statuses of all the features documented on MDN are tracked in its ac
 The automation uses [`browser-compat`](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables#using_bcd_data_in_mdn_pages) key in the front-matter. The key stores BCD query required to locate the feature in the compatibility data. If the `browser-compat` key has multiple values then the automation uses only the first value to render status macros.
 
 > [!NOTE]
-> To update a feature's status in the MDN content, you need to [submit a pull request](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md#updating-the-compat-data) in the BCD repository. After your changes are approved and merged in BCD, an [automated pull request](https://github.com/search?q=repo%3Amdn%2Fcontent+Synchronize+with+BCD&type=pullrequests) updates the statuses in the `mdn/content` repository.
+> To update a feature's status in the MDN content, you need to [submit a pull request](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md#updating-the-compat-data) in the BCD repository. After your changes are approved and merged in BCD, it goes into a weekly release, and an automated pull request updates the statuses in the `mdn/content` repository for every release.
 
 ## How are feature statuses specified in content?
 
@@ -36,9 +37,9 @@ The following sections document the mechanisms that are used to insert and rende
 
 ### Feature status icons in sidebars
 
-The `status` property in page [front-matter](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_function_page_template#sect1) is used to generate status icons for features when they are displayed in sidebars.
+The `status` property in page front matter is used to generate status icons for features when they are displayed in sidebars.
 
-```yml
+```yaml
 ---
 title: Feature name
 status:

@@ -9,7 +9,38 @@ browser-compat: css.types.gradient.repeating-linear-gradient
 
 The **`repeating-linear-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) creates an image consisting of repeating linear gradients. It is similar to {{cssxref("gradient/linear-gradient", "linear-gradient()")}} and takes the same arguments, but it repeats the color stops infinitely in all directions so as to cover its entire container. The function's result is an object of the {{cssxref("&lt;gradient&gt;")}} data type, which is a special kind of {{cssxref("&lt;image&gt;")}}.
 
-{{EmbedInteractiveExample("pages/css/function-repeating-linear-gradient.html")}}
+{{InteractiveExample("CSS Demo: repeating-linear-gradient()")}}
+
+```css interactive-example-choice
+background: repeating-linear-gradient(
+  #e66465,
+  #e66465 20px,
+  #9198e5 20px,
+  #9198e5 25px
+);
+```
+
+```css interactive-example-choice
+background: repeating-linear-gradient(45deg, #3f87a6, #ebf8e1 15%, #f69d3c 20%);
+```
+
+```css interactive-example-choice
+background:
+  repeating-linear-gradient(transparent, #4d9f0c 40px),
+  repeating-linear-gradient(0.25turn, transparent, #3f87a6 20px);
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-height: 100%;
+}
+```
 
 The length of the gradient that repeats is the distance between the first and last color stop. If the first color does not have a color-stop-length, the color-stop-length defaults to 0. With each repetition, the positions of the color stops are shifted by a multiple of the length of the basic linear gradient. Thus, the position of each ending color stop coincides with a starting color stop; if the color values are different, this will result in a sharp visual transition. This can be altered with repeating the first color again as the last color.
 

@@ -1,10 +1,10 @@
 ---
 title: Looping code
+short-title: Loops
 slug: Learn_web_development/Core/Scripting/Loops
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals","Learn_web_development/Core/Scripting/Functions", "Learn_web_development/Core/Scripting")}}
 
@@ -996,7 +996,7 @@ do {
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Loops](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Loops).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Loops](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Loops).
 
 ## Summary
 

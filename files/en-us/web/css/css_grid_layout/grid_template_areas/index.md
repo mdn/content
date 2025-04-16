@@ -29,7 +29,7 @@ We can also define an area by giving it a name and then specify the location of 
 - a sidebar
 - the main content
 
-![An image showing a simple two column layout with header and footer](4_layout.png)
+![An image showing a two column layout with header and footer](4_layout.png)
 
 With the {{cssxref("grid-area")}} property we can assign each of these areas a name. By itself, this does not create any layout. Rather, it provides named areas to use in a layout.
 
@@ -237,7 +237,7 @@ As our layout is now contained in one part of the CSS, this makes it very easy t
 
 When doing this, define the names for your areas outside of any media queries. That way the content area would always be called `main` no matter where on the grid it is placed.
 
-For our layout above, we might like to have a very simple layout at narrow widths, defining a single column grid and stacking our four items into four rows.
+For our layout above, we might like to have a very basic layout at narrow widths, defining a single column grid and stacking our four items into four rows.
 
 ```css hidden
 * {
@@ -325,7 +325,7 @@ Many of the grid examples you will find online make the assumption that you will
 
 ### Media object example
 
-As a very simple example we can create a "[media object](/en-US/docs/Web/CSS/Layout_cookbook/Media_objects)". This is a component with space for an image or other media on one side and content on the other. The image might be displayed on the right or left of the box.
+As an example, we can create a "[media object](/en-US/docs/Web/CSS/Layout_cookbook/Media_objects)". This is a component with space for an image or other media on one side and content on the other. The image might be displayed on the right or left of the box.
 
 ![Images showing an example media object design](4_media_objects.png)
 

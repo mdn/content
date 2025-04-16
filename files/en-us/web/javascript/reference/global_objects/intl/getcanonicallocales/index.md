@@ -11,7 +11,7 @@ The **`Intl.getCanonicalLocales()`** static method returns an array
 containing the canonical locale names. Duplicates will be omitted and elements will be
 validated as structurally valid language tags.
 
-{{InteractiveExample("JavaScript Demo: Intl.GetCanonicalLocales")}}
+{{InteractiveExample("JavaScript Demo: Intl.getCanonicalLocales()")}}
 
 ```js interactive-example
 console.log(Intl.getCanonicalLocales("EN-US"));

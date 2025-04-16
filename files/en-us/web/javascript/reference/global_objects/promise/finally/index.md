@@ -11,7 +11,7 @@ The **`finally()`** method of {{jsxref("Promise")}} instances schedules a functi
 
 This lets you avoid duplicating code in both the promise's {{jsxref("Promise/then", "then()")}} and {{jsxref("Promise/catch", "catch()")}} handlers.
 
-{{InteractiveExample("JavaScript Demo: Promise.finally()", "taller")}}
+{{InteractiveExample("JavaScript Demo: Promise.prototype.finally()", "taller")}}
 
 ```js interactive-example
 function checkMail() {

@@ -8,9 +8,9 @@ browser-compat: api.HTMLElement.togglePopover
 
 {{APIRef("Popover API")}}
 
-The **`togglePopover()`** method of the {{domxref("HTMLElement")}} interface toggles a {{domxref("Popover_API", "popover", "", "nocode")}} element (i.e. one that has a valid [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute) between the hidden and showing states.
+The **`togglePopover()`** method of the {{domxref("HTMLElement")}} interface toggles a {{domxref("Popover_API", "popover", "", "nocode")}} element (i.e., one that has a valid [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) attribute) between the hidden and showing states.
 
-When `togglePopover()` is called on an element with the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute:
+When `togglePopover()` is called on an element with the [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) attribute:
 
 1. A {{domxref("HTMLElement/beforetoggle_event", "beforetoggle")}} event is fired.
 2. The popover toggles between hidden and showing:
@@ -72,7 +72,7 @@ This first element defines instructions on how to invoke the popup, which we nee
 ```
 
 We then define a `<div>` element which is the popup.
-The actual content doesn't matter, but note that we need the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute to make the `<div>` into a popover so that it is hidden by default (or we could set this element in the JavaScript).
+The actual content doesn't matter, but note that we need the [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) attribute to make the `<div>` into a popover so that it is hidden by default (or we could set this element in the JavaScript).
 
 ```html
 <div id="mypopover" popover>
@@ -134,5 +134,5 @@ You can test this out using the live example below.
 
 ## See also
 
-- [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) HTML global attribute
+- [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) HTML global attribute
 - [Popover API](/en-US/docs/Web/API/Popover_API)

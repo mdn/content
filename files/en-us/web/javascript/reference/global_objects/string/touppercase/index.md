@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.String.toUpperCase
 
 The **`toUpperCase()`** method of {{jsxref("String")}} values returns this string converted to uppercase.
 
-{{InteractiveExample("JavaScript Demo: String.toUpperCase()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.toUpperCase()", "shorter")}}
 
 ```js interactive-example
 const sentence = "The quick brown fox jumps over the lazy dog.";

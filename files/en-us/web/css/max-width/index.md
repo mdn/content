@@ -7,9 +7,44 @@ browser-compat: css.properties.max-width
 
 {{CSSRef}}
 
-The **`max-width`** [CSS](/en-US/docs/Web/CSS) property sets the maximum width of an element. It prevents the [used value](/en-US/docs/Web/CSS/CSS_cascade/used_value) of the {{cssxref("width")}} property from becoming larger than the value specified by `max-width`.
+The **`max-width`** [CSS](/en-US/docs/Web/CSS) property sets the maximum width of an element. It prevents the [used value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value) of the {{cssxref("width")}} property from becoming larger than the value specified by `max-width`.
 
-{{EmbedInteractiveExample("pages/css/max-width.html")}}
+{{InteractiveExample("CSS Demo: max-width")}}
+
+```css interactive-example-choice
+max-width: 150px;
+```
+
+```css interactive-example-choice
+max-width: 20em;
+```
+
+```css interactive-example-choice
+max-width: 75%;
+```
+
+```css interactive-example-choice
+max-width: 20ch;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    Change the maximum width.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  height: 80%;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 `max-width` overrides {{cssxref("width")}}, but {{cssxref("min-width")}} overrides `max-width`.
 
@@ -53,9 +88,9 @@ max-width: unset;
 - `min-content`
   - : The intrinsic minimum `max-width`.
 - `fit-content`
-  - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e. `min(max-content, max(min-content, stretch))`.
+  - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e., `min(max-content, max(min-content, stretch))`.
 - `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
-  - : Uses the `fit-content` formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, argument))`.
+  - : Uses the `fit-content` formula with the available space replaced by the specified argument, i.e., `min(max-content, max(min-content, argument))`.
 - `stretch`
 
   - : Limits the maximum width of the element's [margin box](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#parts_of_a_box) to the width of its [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block#identifying_the_containing_block). It attempts to make the margin box fill the available space in the containing block, so in a way behaving similar to `100%` but applying the resulting size to the margin box rather than the box determined by [box-sizing](/en-US/docs/Web/CSS/box-sizing).

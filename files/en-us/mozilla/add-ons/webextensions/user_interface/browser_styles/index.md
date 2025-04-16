@@ -47,7 +47,7 @@ Most styles are automatically applied, but some elements require you to add the 
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTML/Element/button">&#x3C;button></a></code
+          ><a href="/en-US/docs/Web/HTML/Reference/Elements/button">&#x3C;button></a></code
         >
       </td>
       <td>
@@ -60,7 +60,7 @@ Most styles are automatically applied, but some elements require you to add the 
       <td>
         <p>
           <code
-            ><a href="/en-US/docs/Web/HTML/Element/select"
+            ><a href="/en-US/docs/Web/HTML/Reference/Elements/select"
               >&#x3C;select></a
             ></code
           >
@@ -79,7 +79,7 @@ Most styles are automatically applied, but some elements require you to add the 
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTML/Element/textarea"
+          ><a href="/en-US/docs/Web/HTML/Reference/Elements/textarea"
             >&#x3C;textarea></a
           ></code
         >
@@ -94,7 +94,7 @@ Most styles are automatically applied, but some elements require you to add the 
       <td>
         Parent of an
         <code
-          ><a href="/en-US/docs/Web/HTML/Element/input">&#x3C;input></a></code
+          ><a href="/en-US/docs/Web/HTML/Reference/Elements/input">&#x3C;input></a></code
         >
       </td>
       <td>

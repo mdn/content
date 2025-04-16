@@ -9,7 +9,7 @@ This article explains what third-party cookies are, describes the issues associa
 
 ## What are third-party cookies?
 
-A [cookie](/en-US/docs/Web/HTTP/Cookies) is associated with a particular domain and scheme (usually `https`), and may also be associated with subdomains if the {{HTTPHeader("Set-Cookie")}} `Domain` attribute is set.
+A [cookie](/en-US/docs/Web/HTTP/Guides/Cookies) is associated with a particular domain and scheme (usually `https`), and may also be associated with subdomains if the {{HTTPHeader("Set-Cookie")}} `Domain` attribute is set.
 
 - If the cookie domain and scheme match the current page the user is looking at (the URL shown in the browser's address bar), the cookie is considered to be from the same site as the page, and is referred to as a _first-party cookie_.
 - If the domain and scheme are different, the cookie is not considered to be from the same site, and is referred to as a _third-party cookie_.
@@ -82,7 +82,7 @@ Cookie blocking can cause some third-party components (such as social media widg
 
 ### Enabling third-party cookies with `SameSite`
 
-The [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) attribute lets servers specify whether/when third-party cookies are sent. If you don't specify `SameSite` in your `Set-Cookie` headers, the default value, `Lax`, is used. This instructs the browser to not send third-party cookies except when the user navigates to the cookie's origin site from a different site. This is useful when you want to send cookies straight away as soon as a user navigates to your site from another site, to for example personalize the experience as soon as they get there.
+The [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) attribute lets servers specify whether/when third-party cookies are sent. If you don't specify `SameSite` in your `Set-Cookie` headers, the default value, `Lax`, is used. This instructs the browser to not send third-party cookies except when the user navigates to the cookie's origin site from a different site. This is useful when you want to send cookies straight away as soon as a user navigates to your site from another site, to for example personalize the experience as soon as they get there.
 
 However, it is no good if you want to embed cross-site content across multiple sites inside `<iframe>`s and rely on third-party cookies for functionality, for example in the case of the sign-in example we looked at above. In such cases, you need to explicitly set `SameSite=None` to allow the browser to pass those cookies around:
 
@@ -90,16 +90,16 @@ However, it is no good if you want to embed cross-site content across multiple s
 Set-Cookie: widget_session=7yjgj57e4n3d; SameSite=None; Secure; HttpOnly
 ```
 
-Note that if `SameSite=None` is set then the `Secure` attribute must also be set — `SameSite=None` requires a _secure context_. In the above example we have also set the `HttpOnly` attribute, to disable JavaScript access to the cookie (e.g. via {{domxref("Document.cookie")}}). Cookies that persist sensitive information should always have the `HttpOnly` attribute set — it would be really insecure to make them available to JavaScript. This precaution helps mitigate cross-site scripting ([XSS](/en-US/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss)) attacks.
+Note that if `SameSite=None` is set then the `Secure` attribute must also be set — `SameSite=None` requires a _secure context_. In the above example we have also set the `HttpOnly` attribute, to disable JavaScript access to the cookie (e.g., via {{domxref("Document.cookie")}}). Cookies that persist sensitive information should always have the `HttpOnly` attribute set — it would be really insecure to make them available to JavaScript. This precaution helps mitigate cross-site scripting ([XSS](/en-US/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss)) attacks.
 
 > [!NOTE]
-> Cookies that are used for sensitive information should also have a short [lifetime](/en-US/docs/Web/HTTP/Cookies#removal_defining_the_lifetime_of_a_cookie).
+> Cookies that are used for sensitive information should also have a short [lifetime](/en-US/docs/Web/HTTP/Guides/Cookies#removal_defining_the_lifetime_of_a_cookie).
 
 ### Transitioning from third-party cookies
 
 There are multiple strategies to help sites minimize breakage in browsers where third-party cookies are blocked:
 
-1. Audit your third-party cookie usage. Cookies must have the `SameSite=None` attribute set to be used in a cross-site context. You can therefore identify third-party cookies by searching for `SameSite=None` in your code, or checking for stored `SameSite=None` cookies in your browser DevTools, for example in the [Firefox Storage Inspector](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/). Chrome's [Issues panel](https://developer.chrome.com/docs/devtools/issues/) also [reports issues with third-party cookie blocking](https://developers.google.com/privacy-sandbox/cookies/prepare/audit-cookies#chrome-dev-tools) along with a list of affected cookies.
+1. Audit your third-party cookie usage. Cookies must have the `SameSite=None` attribute set to be used in a cross-site context. You can therefore identify third-party cookies by searching for `SameSite=None` in your code, or checking for stored `SameSite=None` cookies in your browser DevTools, for example in the [Firefox Storage Inspector](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/). Chrome's [Issues panel](https://developer.chrome.com/docs/devtools/issues/) also [reports issues with third-party cookie blocking](https://privacysandbox.google.com/cookies/prepare/audit-cookies#chrome-dev-tools) along with a list of affected cookies.
 2. Test your functionality with third-party cookies blocked, to see what breaks. You might find that some cookies are no longer needed.
 3. Initially, at least, you could make your code more resilient so that it provides a less personalized experience when third-party cookie data is not available rather than breaking it altogether. Follow the principles of [graceful degradation](/en-US/docs/Glossary/Graceful_degradation).
 4. Gather data via alternative means such as user surveys or quizzes, or look at data you already have to infer trends (for example, product order histories).
@@ -116,12 +116,12 @@ Several features are available to developers who wish to stop using third-party 
 You can start to explore the different features available in Google's [Privacy Sandbox](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox) project to see if they fit your use case (these are currently experimental, and Chromium-only):
 
 - [Federated Credential Management](/en-US/docs/Web/API/FedCM_API) (FedCM) API: Enables federated identity services allowing users to sign in to multiple sites and services.
-- [Private State Tokens](https://developers.google.com/privacy-sandbox/protections/private-state-tokens): Enables anti-fraud and anti-spam by exchanging limited, non-identifying information across sites.
+- [Private State Tokens](https://privacysandbox.google.com/protections/private-state-tokens): Enables anti-fraud and anti-spam by exchanging limited, non-identifying information across sites.
 - [Topics API](/en-US/docs/Web/API/Topics_API): Enables interest-based advertising and content personalization.
-- [Protected Audience API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience): Use data from one app or site to help select an ad when the user is visiting another app or site.
-- [Attribution Reporting API](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting): Enables measurement of ad impressions and conversions.
+- [Protected Audience API](https://privacysandbox.google.com/private-advertising/protected-audience): Use data from one app or site to help select an ad when the user is visiting another app or site.
+- [Attribution Reporting API](https://privacysandbox.google.com/private-advertising/attribution-reporting): Enables measurement of ad impressions and conversions.
 
 ## See also
 
-- [HTTP cookies](/en-US/docs/Web/HTTP/Cookies)
+- [HTTP cookies](/en-US/docs/Web/HTTP/Guides/Cookies)
 - [Privacy on the web](/en-US/docs/Web/Privacy)

@@ -11,7 +11,7 @@ The **`function`** keyword can be used to define a function inside an expression
 
 You can also define functions using the [`function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function) or the [arrow syntax](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
-{{InteractiveExample("JavaScript Demo: Expressions - function expression", "shorter")}}
+{{InteractiveExample("JavaScript Demo: function expression", "shorter")}}
 
 ```js interactive-example
 const getRectArea = function (width, height) {
@@ -149,7 +149,6 @@ button.addEventListener("click", function (event) {
   console.log(a + b);
 })(1, 2); // logs 3
 
-
 // IIFE being used to initialize a variable
 const value = (() => {
   const randomValue = Math.random();
@@ -158,7 +157,7 @@ const value = (() => {
   } else {
     return "tails";
   }
-}());
+})();
 ```
 
 Here, we introduce several use cases with examples.

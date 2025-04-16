@@ -9,7 +9,60 @@ browser-compat: css.properties.order
 
 The **`order`** [CSS](/en-US/docs/Web/CSS) property sets the order to lay out an item in a flex or grid container. Items in a container are sorted by ascending `order` value and then by their source code order. Items not given an explicit `order` value are assigned the default value of `0`.
 
-{{EmbedInteractiveExample("pages/css/order.html")}}
+{{InteractiveExample("CSS Demo: order")}}
+
+```css interactive-example-choice
+order: 0;
+```
+
+```css interactive-example-choice
+order: 3;
+```
+
+```css interactive-example-choice
+order: -1;
+```
+
+```css interactive-example-choice
+order: 2;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">Box 1:</div>
+  <div style="order: 1">Box 2: <code>order: 1;</code></div>
+  <div style="order: 2">Box 3: <code>order: 2;</code></div>
+  <div style="order: 2">Box 4: <code>order: 2;</code></div>
+  <div style="order: 3">Box 5: <code>order: 3;</code></div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  max-height: 300px;
+  display: flex;
+  flex-flow: column;
+}
+
+.default-example > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  flex: 1;
+}
+
+#example-element {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid rebeccapurple;
+}
+
+#example-element::after {
+  content: attr(style);
+  outline: 2px dashed;
+  font-family: monospace;
+}
+```
 
 In the above demo, select the options on the left-hand side to change the value of the pink box's `order` property. The light blue boxes have been given fixed `order` values.
 
@@ -30,7 +83,7 @@ order: revert-layer;
 order: unset;
 ```
 
-Since `order` is only meant to affect the _visual order_ of elements and not their logical or tab order, it must not be used on non-visual media such as [speech](/en-US/docs/Web/CSS/@media#speech).
+Since `order` is only meant to affect the _visual order_ of elements and not their logical or tab order, it must not be used on non-visual media such as [speech](https://www.w3.org/TR/css-speech-1/).
 
 Defined in the [CSS display](/en-US/docs/Web/CSS/CSS_display) module, this property impacts only grid and flex items. When `order` is set on an element whose parent's {{cssxref("display")}} property is not creating a flex or grid container, it has no effect.
 

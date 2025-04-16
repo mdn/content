@@ -2,8 +2,7 @@
 title: Reporting API
 slug: Web/API/Reporting_API
 page-type: web-api-overview
-status:
-  - experimental
+browser-compat: http.headers.Reporting-Endpoints
 spec-urls:
   - https://w3c.github.io/reporting/#intro
   - https://w3c.github.io/webappsec-csp/#cspviolationreportbody
@@ -11,16 +10,16 @@ spec-urls:
   - https://wicg.github.io/intervention-reporting/#intervention-report
 ---
 
-{{SeeCompatTable}}{{DefaultAPISidebar("Reporting API")}}{{AvailableInWorkers}}
+{{DefaultAPISidebar("Reporting API")}}{{AvailableInWorkers}}
 
-The Reporting API provides a generic reporting mechanism for web applications to use to make reports available based on various platform features (for example [Content Security Policy](/en-US/docs/Web/HTTP/CSP), [Permissions-Policy](/en-US/docs/Web/HTTP/Headers/Permissions-Policy), or feature deprecation reports) in a consistent manner.
+The Reporting API provides a generic reporting mechanism for web applications to use to make reports available based on various platform features (for example [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP), [Permissions-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy), or feature deprecation reports) in a consistent manner.
 
 ## Concepts and usage
 
 There are several different features and problems on the web platform that generate information useful to web developers when they are trying to fix bugs or improve their websites in other ways. Such information can include:
 
-- [Content Security Policy](/en-US/docs/Web/HTTP/CSP) violations.
-- [Permissions-Policy](/en-US/docs/Web/HTTP/Headers/Permissions-Policy) violations.
+- [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) violations.
+- [Permissions-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy) violations.
 - Deprecated feature usage (when you are using something that will stop working soon in browsers).
 - Occurrence of crashes.
 - Occurrence of user-agent interventions (when the browser blocks something your code is trying to do because it is deemed a security risk for example, or just plain annoying, like auto-playing audio).
@@ -79,7 +78,7 @@ The Reporting API spec also defines a Generate Test Report [WebDriver](/en-US/do
 - {{domxref("DeprecationReportBody")}}
   - : Contains details of deprecated web platform features that a website is using.
 - {{domxref("InterventionReportBody")}}
-  - : Contains details of an intervention report, which is generated when a request made by the website has been denied by the browser; e.g. for security reasons.
+  - : Contains details of an intervention report, which is generated when a request made by the website has been denied by the browser; e.g., for security reasons.
 - {{domxref("Report")}}
   - : An object representing a single report.
 - {{domxref("ReportingObserver")}}
@@ -87,7 +86,7 @@ The Reporting API spec also defines a Generate Test Report [WebDriver](/en-US/do
 
 ### Related interfaces
 
-These interfaces are defined as part of the HTTP [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) specifications:
+These interfaces are defined as part of the HTTP [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) specifications:
 
 - {{domxref("CSPViolationReportBody")}}
   - : Contains details of a CSP violation.
@@ -102,7 +101,7 @@ These HTTP response headers define the endpoints where reports are sent.
   - : Sets the name and URL of reporting endpoints.
     These endpoints can be used in the `report-to` directive, which may be used with a number of HTTP headers including {{httpheader("Content-Security-Policy")}} and or {{HTTPHeader("Content-Security-Policy-Report-Only")}}.
 - {{HTTPHeader("Report-To")}} {{deprecated_inline}}
-  - : Sets the name and URL of reporting endpoint groups, which may be used with a number of HTTP headers including `Content-Security-Policy`.
+  - : No longer part of the Reporting API but still supported by some browsers. This sets the name and URL of reporting endpoint groups, which may be used with a number of HTTP headers especially for [Network Error Logging](/en-US/docs/Web/HTTP/Guides/Network_Error_Logging) that has not yet been updated to support `Reporting-Endpoints`. Other Reporting API reports should use `Reporting-Endpoints` instead for better future support.
 
 Report endpoints can be set for the following reports using the `report-to` directive on the corresponding headers:
 
@@ -156,11 +155,9 @@ This causes a deprecation report to be generated; because of the event handler w
 
 ## Browser compatibility
 
-The API is supported by Chromium browsers, and by Firefox behind a preference (`dom.reporting.enabled`).
-
-See the specific interfaces for more detailed support information.
+{{Compat}}
 
 ## See also
 
-- [Content Security Policy](/en-US/docs/Web/HTTP/CSP)
-- [`Permissions-Policy`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy)
+- [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP)
+- [`Permissions-Policy`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy)

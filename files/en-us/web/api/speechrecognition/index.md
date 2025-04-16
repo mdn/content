@@ -26,11 +26,11 @@ _`SpeechRecognition` also inherits properties from its parent interface, {{domxr
 - {{domxref("SpeechRecognition.grammars")}}
   - : Returns and sets a collection of {{domxref("SpeechGrammar")}} objects that represent the grammars that will be understood by the current `SpeechRecognition`.
 - {{domxref("SpeechRecognition.lang")}}
-  - : Returns and sets the language of the current `SpeechRecognition`. If not specified, this defaults to the HTML [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attribute value, or the user agent's language setting if that isn't set either.
+  - : Returns and sets the language of the current `SpeechRecognition`. If not specified, this defaults to the HTML [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute value, or the user agent's language setting if that isn't set either.
 - {{domxref("SpeechRecognition.continuous")}}
   - : Controls whether continuous results are returned for each recognition, or only a single result. Defaults to single (`false`.)
 - {{domxref("SpeechRecognition.interimResults")}}
-  - : Controls whether interim results should be returned (`true`) or not (`false`.) Interim results are results that are not yet final (e.g. the {{domxref("SpeechRecognitionResult.isFinal")}} property is `false`.)
+  - : Controls whether interim results should be returned (`true`) or not (`false`.) Interim results are results that are not yet final (e.g., the {{domxref("SpeechRecognitionResult.isFinal")}} property is `false`.)
 - {{domxref("SpeechRecognition.maxAlternatives")}}
   - : Sets the maximum number of {{domxref("SpeechRecognitionAlternative")}}s provided per result. The default value is 1.
 

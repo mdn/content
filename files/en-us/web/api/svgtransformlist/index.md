@@ -7,349 +7,39 @@ browser-compat: api.SVGTransformList
 
 {{APIRef("SVG")}}
 
-## SVG transform list interface
-
-The `SVGTransformList` defines a list of {{ domxref("SVGTransform") }} objects.
+The **`SVGTransformList`** interface defines a list of {{ domxref("SVGTransform") }} objects.
 
 An `SVGTransformList` object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.
 
 An `SVGTransformList` is indexable and can be accessed like an array.
 
-### Interface overview
-
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="row">Also implement</th>
-      <td><em>None</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Methods</th>
-      <td>
-        <ul>
-          <li><code>void clear()</code></li>
-          <li>
-            {{ domxref("SVGTransform") }}
-            <code
-              >initialize(in {{ domxref("SVGTransform") }}
-              <em>newItem</em>)</code
-            >
-          </li>
-          <li>
-            {{ domxref("SVGTransform") }}
-            <code>getItem(in unsigned long <em>index</em>)</code>
-          </li>
-          <li>
-            {{ domxref("SVGTransform") }}
-            <code
-              >insertItemBefore(in {{ domxref("SVGTransform") }}
-              <em>newItem</em>, in unsigned long <em>index</em>)</code
-            >
-          </li>
-          <li>
-            {{ domxref("SVGTransform") }}
-            <code
-              >replaceItem(in {{ domxref("SVGTransform") }}
-              <em>newItem</em>, in unsigned long <em>index</em>)</code
-            >
-          </li>
-          <li>
-            {{ domxref("SVGTransform") }}
-            <code>removeItem(in unsigned long <em>index</em>)</code>
-          </li>
-          <li>
-            {{ domxref("SVGTransform") }}
-            <code
-              >appendItem(in {{ domxref("SVGTransform") }}
-              <em>newItem</em>)</code
-            >
-          </li>
-          <li>
-            {{ domxref("SVGTransform") }}
-            <code
-              >createSVGTransformFromMatrix(in
-              {{ domxref("DOMMatrix") }})</code
-            >
-          </li>
-          <li>
-            {{ domxref("SVGTransform") }} <code>consolidate()</code>
-          </li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Properties</th>
-      <td>
-        <ul>
-          <li>readonly unsigned long <code>numberOfItems</code></li>
-          <li>
-            readonly unsigned long
-            <code>length</code>
-          </li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Normative document</th>
-      <td>
-        <a
-          href="https://www.w3.org/TR/SVG/coords.html#InterfaceSVGTransformList"
-          >SVG 1.1 (2nd Edition)</a
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## Instance properties
 
-| Name                                                           | Type          | Description                      |
-| -------------------------------------------------------------- | ------------- | -------------------------------- |
-| {{domxref("SVGTransformList.numberOfItems", "numberOfItems")}} | unsigned long | The number of items in the list. |
-| {{domxref("SVGTransformList.length", "length")}}               | unsigned long | The number of items in the list. |
+- {{domxref("SVGTransformList.numberOfItems", "numberOfItems")}}
+  - : The number of items in the list.
+- {{domxref("SVGTransformList.length", "length")}}
+  - : The number of items in the list.
 
 ## Instance methods
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th>Name &#x26; Arguments</th>
-      <th>Return</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <code><strong>{{domxref("SVGTransformList.clear", "clear")}}</strong>()</code>
-      </td>
-      <td><code>void</code></td>
-      <td>
-        <p>
-          Clears all existing current items from the list, with the result being
-          an empty list.
-        </p>
-        <p><strong>Exceptions:</strong></p>
-        <ul>
-          <li>
-            a {{ domxref("DOMException") }} with code
-            <code>NO_MODIFICATION_ALLOWED_ERR</code> is raised when the list
-            corresponds to a read only attribute or when the object itself is
-            read only.
-          </li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          ><strong>{{domxref("SVGTransformList.initialize", "initialize")}}</strong>(in
-          {{ domxref("SVGTransform") }} <em>newItem</em>)</code
-        >
-      </td>
-      <td>{{ domxref("SVGTransform") }}</td>
-      <td>
-        <p>
-          Clears all existing current items from the list and re-initializes the
-          list to hold the single item specified by the parameter. If the
-          inserted item is already in a list, it is removed from its previous
-          list before it is inserted into this list. The inserted item is the
-          item itself and not a copy. The return value is the item inserted into
-          the list.
-        </p>
-        <p><strong>Exceptions:</strong></p>
-        <ul>
-          <li>
-            a {{ domxref("DOMException") }} with code
-            <code>NO_MODIFICATION_ALLOWED_ERR</code> is raised when the list
-            corresponds to a read only attribute or when the object itself is
-            read only.
-          </li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code><strong>{{domxref("SVGTransformList.getItem", "getItem")}}</strong>(in unsigned long <em>index</em>)</code>
-      </td>
-      <td>{{ domxref("SVGTransform") }}</td>
-      <td>
-        <p>
-          Returns the specified item from the list. The returned item is the
-          item itself and not a copy. Any changes made to the item are
-          immediately reflected in the list. The first item is number 0.
-        </p>
-        <p><strong>Exceptions:</strong></p>
-        <ul>
-          <li>
-            a {{ domxref("DOMException") }} with code
-            <code>NO_MODIFICATION_ALLOWED_ERR</code> is raised when the list
-            corresponds to a read only attribute or when the object itself is
-            read only.
-          </li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          ><strong>{{domxref("SVGTransformList.insertItemBefore", "insertItemBefore")}}</strong>(in
-          {{ domxref("SVGTransform") }} <em>newItem</em>, in unsigned
-          long <em>index</em>)</code
-        >
-      </td>
-      <td>{{ domxref("SVGTransform") }}</td>
-      <td>
-        <p>
-          Inserts a new item into the list at the specified position. The first
-          item is number 0. If <code>newItem</code> is already in a list, it is
-          removed from its previous list before it is inserted into this list.
-          The inserted item is the item itself and not a copy. If the item is
-          already in this list, note that the index of the item to insert before
-          is before the removal of the item. If the <code>index</code> is equal
-          to 0, then the new item is inserted at the front of the list. If the
-          index is greater than or equal to <code>numberOfItems</code>, then the
-          new item is appended to the end of the list.
-        </p>
-        <p><strong>Exceptions:</strong></p>
-        <ul>
-          <li>
-            a {{ domxref("DOMException") }} with code
-            <code>NO_MODIFICATION_ALLOWED_ERR</code> is raised when the list
-            corresponds to a read only attribute or when the object itself is
-            read only.
-          </li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          ><strong>{{domxref("SVGTransformList.replaceItem", "replaceItem")}}</strong>(in
-          {{ domxref("SVGTransform") }} <em>newItem</em>, in unsigned
-          long <em>index</em>)</code
-        >
-      </td>
-      <td>{{ domxref("SVGTransform") }}</td>
-      <td>
-        <p>
-          Replaces an existing item in the list with a new item. If
-          <code>newItem</code> is already in a list, it is removed from its
-          previous list before it is inserted into this list. The inserted item
-          is the item itself and not a copy. If the item is already in this
-          list, note that the index of the item to replace is before the removal
-          of the item.
-        </p>
-        <p><strong>Exceptions:</strong></p>
-        <ul>
-          <li>
-            a {{ domxref("DOMException") }} with code
-            <code>NO_MODIFICATION_ALLOWED_ERR</code> is raised when the list
-            corresponds to a read only attribute or when the object itself is
-            read only.
-          </li>
-          <li>
-            a {{ domxref("DOMException") }} with code
-            <code>INDEX_SIZE_ERR</code> is raised if the index number is greater
-            than or equal to <code>numberOfItems</code>.
-          </li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          ><strong>{{domxref("SVGTransformList.removeItem", "removeItem")}}</strong>(in unsigned long <em>index</em>)</code
-        >
-      </td>
-      <td>{{ domxref("SVGTransform") }}</td>
-      <td>
-        <p>Removes an existing item from the list.</p>
-        <p><strong>Exceptions:</strong></p>
-        <ul>
-          <li>
-            a {{ domxref("DOMException") }} with code
-            <code>NO_MODIFICATION_ALLOWED_ERR</code> is raised when the list
-            corresponds to a read only attribute or when the object itself is
-            read only.
-          </li>
-          <li>
-            a {{ domxref("DOMException") }} with code
-            <code>INDEX_SIZE_ERR</code> is raised if the index number is greater
-            than or equal to <code>numberOfItems</code>.
-          </li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          ><strong>{{domxref("SVGTransformList.appendItem", "appendItem")}}</strong>(in
-          {{ domxref("SVGTransform") }} <em>newItem</em>)</code
-        >
-      </td>
-      <td>{{ domxref("SVGTransform") }}</td>
-      <td>
-        <p>
-          Inserts a new item at the end of the list. If <code>newItem</code> is
-          already in a list, it is removed from its previous list before it is
-          inserted into this list. The inserted item is the item itself and not
-          a copy.
-        </p>
-        <p><strong>Exceptions:</strong></p>
-        <ul>
-          <li>
-            a {{ domxref("DOMException") }} with code
-            <code>NO_MODIFICATION_ALLOWED_ERR</code> is raised when the list
-            corresponds to a read only attribute or when the object itself is
-            read only.
-          </li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          ><strong>{{domxref("SVGTransformList.createSVGTransformFromMatrix", "createSVGTransformFromMatrix")}}</strong>(in
-          {{ domxref("DOMMatrix") }})</code
-        >
-      </td>
-      <td>{{ domxref("SVGTransform") }}</td>
-      <td>
-        Creates an <code>SVGTransform</code> object which is initialized to
-        transform of type <code>SVG_TRANSFORM_MATRIX</code> and whose values are
-        the given matrix. The values from the parameter matrix are copied, the
-        matrix parameter is not adopted as <code>SVGTransform::matrix</code>.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code><strong>{{domxref("SVGTransformList.consolidate", "consolidate")}}</strong>()</code>
-      </td>
-      <td>{{ domxref("SVGTransform") }}</td>
-      <td>
-        <p>
-          Consolidates the list of separate <code>SVGTransform</code> objects by
-          multiplying the equivalent transformation matrices together to result
-          in a list consisting of a single <code>SVGTransform</code> object of
-          type <code>SVG_TRANSFORM_MATRIX</code>. The consolidation operation
-          creates new <code>SVGTransform</code> object as the first and only
-          item in the list. The returned item is the item itself and not a copy.
-          Any changes made to the item are immediately reflected in the list.
-        </p>
-        <p><strong>Exceptions:</strong></p>
-        <ul>
-          <li>
-            a {{ domxref("DOMException") }} with code
-            <code>NO_MODIFICATION_ALLOWED_ERR</code> is raised when the list
-            corresponds to a read only attribute or when the object itself is
-            read only.
-          </li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+- {{domxref("SVGTransformList.clear", "clear()")}}
+  - : Clears all existing current items from the list, with the result being an empty list.
+- {{domxref("SVGTransformList.initialize", "initialize()")}}
+  - : Clears all existing current items from the list and re-initializes the list to hold the single item specified by the parameter. If the inserted item is already in a list, it is removed from its previous list before it is inserted into this list. The inserted item is the item itself and not a copy. The return value is the item inserted into the list.
+- {{domxref("SVGTransformList.getItem", "getItem()")}}
+  - : Returns the specified item from the list. The returned item is the item itself and not a copy. Any changes made to the item are immediately reflected in the list. The first item is number `0`.
+- {{domxref("SVGTransformList.insertItemBefore", "insertItemBefore()")}}
+  - : Inserts a new item into the list at the specified position. The first item is number `0`. If `newItem` is already in a list, it is removed from its previous list before it is inserted into this list. The inserted item is the item itself and not a copy. If the item is already in this list, note that the index of the item to insert before is before the removal of the item. If the `index` is equal to 0, then the new item is inserted at the front of the list. If the index is greater than or equal to `numberOfItems`, then the new item is appended to the end of the list.
+- {{domxref("SVGTransformList.replaceItem", "replaceItem()")}}
+  - : Replaces an existing item in the list with a new item. If `newItem` is already in a list, it is removed from its previous list before it is inserted into this list. The inserted item is the item itself and not a copy. If the item is already in this list, note that the index of the item to replace is before the removal of the item.
+- {{domxref("SVGTransformList.removeItem", "removeItem()")}}
+  - : Removes an existing item from the list.
+- {{domxref("SVGTransformList.appendItem", "appendItem()")}}
+  - : Inserts a new item at the end of the list. If `newItem` is already in a list it is removed from its previous list before it is inserted into this list. The inserted item is the item itself and not a copy.
+- {{domxref("SVGTransformList.createSVGTransformFromMatrix", "createSVGTransformFromMatrix()")}}
+  - : Creates an `SVGTransform` object which is initialized to transform of type `SVG_TRANSFORM_MATRIX` and whose values are the given matrix. The values from the parameter matrix are copied, the matrix parameter is not adopted as `SVGTransform::matrix`.
+- {{domxref("SVGTransformList.consolidate", "consolidate()")}}
+  - : Consolidates the list of separate `SVGTransform` objects by multiplying the equivalent transformation matrices together to result in a list consisting of a single `SVGTransform` object of type `SVG_TRANSFORM_MATRIX`. The consolidation operation creates new `SVGTransform` object as the first and only item in the list. The returned item is the item itself and not a copy. Any changes made to the item are immediately reflected in the list.
 
 ## Examples
 

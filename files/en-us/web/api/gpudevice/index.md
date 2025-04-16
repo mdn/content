@@ -19,6 +19,10 @@ A `GPUDevice` object is requested using the {{domxref("GPUAdapter.requestDevice(
 
 _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 
+- {{domxref("GPUDevice.adapterInfo", "adapterInfo")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+
+  - : A {{domxref("GPUAdapterInfo")}} object containing identifying information about the device's originating adapter.
+
 - {{domxref("GPUDevice.features", "features")}} {{Experimental_Inline}} {{ReadOnlyInline}}
 
   - : A {{domxref("GPUSupportedFeatures")}} object that describes additional functionality supported by the device.

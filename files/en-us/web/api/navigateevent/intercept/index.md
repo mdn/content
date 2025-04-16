@@ -29,7 +29,7 @@ intercept(options)
     - `focusReset` {{optional_inline}}
       - : Defines the navigation's focus behavior. This may take one of the following values:
         - `after-transition`
-          - : Once the promise returned by your handler function resolves, the browser will focus the first element with the [`autofocus`](/en-US/docs/Web/HTML/Global_attributes/autofocus) attribute, or the {{htmlelement("body")}} element if no element has `autofocus` set. This is the default value.
+          - : Once the promise returned by your handler function resolves, the browser will focus the first element with the [`autofocus`](/en-US/docs/Web/HTML/Reference/Global_attributes/autofocus) attribute, or the {{htmlelement("body")}} element if no element has `autofocus` set. This is the default value.
         - `manual`
           - : Disable the default behavior.
     - `scroll` {{optional_inline}}
@@ -48,7 +48,7 @@ None (`undefined`).
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the current {{domxref("Document")}} is not yet active, or if the navigation has been cancelled.
 - `SecurityError` {{domxref("DOMException")}}
-  - : Thrown if the event was dispatched by a {{domxref("EventTarget.dispatchEvent", "dispatchEvent()")}} call, rather than the user agent, or if the navigation cannot be intercepted (i.e. {{domxref("NavigateEvent.canIntercept")}} is `false`).
+  - : Thrown if the event was dispatched by a {{domxref("EventTarget.dispatchEvent", "dispatchEvent()")}} call, rather than the user agent, or if the navigation cannot be intercepted (i.e., {{domxref("NavigateEvent.canIntercept")}} is `false`).
 
 ## Examples
 

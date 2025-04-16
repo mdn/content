@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Number.toPrecision
 
 The **`toPrecision()`** method of {{jsxref("Number")}} values returns a string representing this number to the specified number of significant digits.
 
-{{InteractiveExample("JavaScript Demo: Number.toPrecision()")}}
+{{InteractiveExample("JavaScript Demo: Number.prototype.toPrecision()")}}
 
 ```js interactive-example
 function precise(x) {

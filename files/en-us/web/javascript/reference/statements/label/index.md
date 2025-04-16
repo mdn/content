@@ -9,7 +9,7 @@ browser-compat: javascript.statements.label
 
 A **labeled statement** is any [statement](/en-US/docs/Web/JavaScript/Reference/Statements) that is prefixed with an identifier. You can jump to this label using a {{jsxref("Statements/break", "break")}} or {{jsxref("Statements/continue", "continue")}} statement nested within the labeled statement.
 
-{{InteractiveExample("JavaScript Demo: Statement - Label")}}
+{{InteractiveExample("JavaScript Demo: Labeled statement")}}
 
 ```js interactive-example
 let str = "";

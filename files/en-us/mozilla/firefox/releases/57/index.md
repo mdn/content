@@ -25,7 +25,7 @@ _No changes._
 
 ### HTML
 
-- The [date](/en-US/docs/Web/HTML/Element/input/date) and [time](/en-US/docs/Web/HTML/Element/input/time) {{htmlelement("input")}} types are now enabled in all builds ([Firefox bug 1399036](https://bugzil.la/1399036)).
+- The [date](/en-US/docs/Web/HTML/Reference/Elements/input/date) and [time](/en-US/docs/Web/HTML/Reference/Elements/input/time) {{htmlelement("input")}} types are now enabled in all builds ([Firefox bug 1399036](https://bugzil.la/1399036)).
 
 ### CSS
 
@@ -38,15 +38,15 @@ _No changes._
 Following bugs have been fixed in Quantum:
 
 - Radial gradient values like `radial-gradient(circle gold,red)` will work in the old Gecko style system, even though they shouldn't because of the missing comma between `circle` and `gold` ([Firefox bug 1383323](https://bugzil.la/1383323)).
-- When you animate an offscreen element onscreen but specify a delay, Gecko does not repaint on some platforms, e.g. Windows ([Firefox bug 1383239](https://bugzil.la/1383239)).
+- When you animate an offscreen element onscreen but specify a delay, Gecko does not repaint on some platforms, e.g., Windows ([Firefox bug 1383239](https://bugzil.la/1383239)).
 - In Gecko, {{htmlelement("details")}} elements can't be made open by default using the `open` attribute if they have an {{CSSxRef("animation")}} active on them ([Firefox bug 1382124](https://bugzil.la/1382124)).
 - In Gecko, {{CSSxRef("transition", "transitions")}} will not work when transitioning from a {{CSSxRef("text-shadow")}} with a color specified to a `text-shadow` without a color specified ([Firefox bug 726550](https://bugzil.la/726550)).
-- In Gecko, cancelling a filling animation (e.g. with `animation-fill-mode: forwards` set) can trigger a transition set on the same element, although only once (see [Firefox bug 1192592](https://bugzil.la/1192592) and [these test cases](https://bug1192592.bmoattachments.org/attachment.cgi?id=8843824) for more information). In general declarative animations should not trigger transitions.
+- In Gecko, cancelling a filling animation (e.g., with `animation-fill-mode: forwards` set) can trigger a transition set on the same element, although only once (see [Firefox bug 1192592](https://bugzil.la/1192592) and [these test cases](https://bug1192592.bmoattachments.org/attachment.cgi?id=8843824) for more information). In general declarative animations should not trigger transitions.
 - Animations using em units are not affected by changes to the {{CSSxRef("font-size")}} on the animated element's parent in Gecko, whereas they should be ([Firefox bug 1254424](https://bugzil.la/1254424)).
 - Gecko also deals with `font-size` inheritance differently from Quantum CSS, meaning that for some language settings inherited font sizes end up being smaller than expected (see [Firefox bug 1391341](https://bugzil.la/1391341)).
 - Gecko reuses the same mechanism used when parsing a url-token when parsing the `domain()` or `url-prefix()` URL matching functions for a {{CSSxRef("@document", "@-moz-document")}} rule. Quantum CSS does not use the same mechanism and it does not consider tokens invalid when they contain brackets or quotes ([Firefox bug 1362333](https://bugzil.la/1362333)).
-- In Gecko, when you set a system font as the value of a canvas 2D context's {{DOMxRef("CanvasRenderingContext2D.font", "font")}} (e.g. `menu`), getting the font value fails to return the expected font (it returns nothing). This has been fixed in Quantum. ([Firefox bug 1374885](https://bugzil.la/1374885)).
-- In Gecko, when you create a detached subtree (e.g. a {{htmlelement("div")}} created using {{DOMxRef("Document.createElement","createElement()")}} that is not yet inserted into the DOM), the subtree's root element is set as a block-level element. In Quantum CSS this is set as inline, as per spec ([Firefox bug 1374994](https://bugzil.la/1374994)).
+- In Gecko, when you set a system font as the value of a canvas 2D context's {{DOMxRef("CanvasRenderingContext2D.font", "font")}} (e.g., `menu`), getting the font value fails to return the expected font (it returns nothing). This has been fixed in Quantum. ([Firefox bug 1374885](https://bugzil.la/1374885)).
+- In Gecko, when you create a detached subtree (e.g., a {{htmlelement("div")}} created using {{DOMxRef("Document.createElement","createElement()")}} that is not yet inserted into the DOM), the subtree's root element is set as a block-level element. In Quantum CSS this is set as inline, as per spec ([Firefox bug 1374994](https://bugzil.la/1374994)).
 - In Gecko, {{CSSxRef("calc", "calc()")}} expressions are rejected — causing the value to be invalid — when used as the radius component of a {{CSSxRef("gradient/radial-gradient")}} function ([Firefox bug 1376019](https://bugzil.la/1376019)).
 - In Gecko, `calc(1*2*3)` is not parsed successfully; Quantum CSS fixes this ([Firefox bug 1379467](https://bugzil.la/1379467)).
 - In Quantum CSS, [`calc()` is supported everywhere that the spec explains it should be](https://drafts.csswg.org/css-values-3/#calc-notation) ([Firefox bug 1350857](https://bugzil.la/1350857)). In Gecko it is not.
@@ -115,7 +115,7 @@ _No changes._
 
 ### HTML
 
-- `<link rel="preload">` (see [Preloading content with rel="preload"](/en-US/docs/Web/HTML/Attributes/rel/preload)) has been disabled in Firefox 57 because of various web compatibility issues (e.g. [Firefox bug 1405761](https://bugzil.la/1405761)). An improved version that works for non-cacheable resources is expected to land in Firefox 58.
+- `<link rel="preload">` (see [Preloading content with rel="preload"](/en-US/docs/Web/HTML/Reference/Attributes/rel/preload)) has been disabled in Firefox 57 because of various web compatibility issues (e.g., [Firefox bug 1405761](https://bugzil.la/1405761)). An improved version that works for non-cacheable resources is expected to land in Firefox 58.
 
 ### APIs
 

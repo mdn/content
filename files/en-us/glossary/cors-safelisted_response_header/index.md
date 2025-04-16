@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-A **CORS-safelisted response header** (also known as "simple response header") is an [HTTP header](/en-US/docs/Web/HTTP/Headers) in a [CORS](/en-US/docs/Web/HTTP/CORS) response that it is considered _safe_ to expose to client scripts. Only safelisted response headers are made available to web pages.
+A **CORS-safelisted response header** (also known as "simple response header") is an [HTTP header](/en-US/docs/Web/HTTP/Reference/Headers) in a [CORS](/en-US/docs/Web/HTTP/Guides/CORS) response that it is considered _safe_ to expose to client scripts. Only safelisted response headers are made available to web pages.
 
 By default, the safelist includes the following response headers:
 
@@ -19,8 +19,6 @@ By default, the safelist includes the following response headers:
 - {{HTTPHeader("Pragma")}}
 
 Additional headers can be added to the safelist using {{HTTPHeader("Access-Control-Expose-Headers")}}.
-
-> **Note:** {{HTTPHeader("Content-Length")}} was not part of the original set of safelisted response headers \[[ref](https://github.com/whatwg/fetch/pull/626)]
 
 ## Examples
 
@@ -35,7 +33,7 @@ Access-Control-Expose-Headers: X-Custom-Header, Content-Encoding
 ## See also
 
 - [HTTP](/en-US/docs/Web/HTTP)
-- [HTTP headers](/en-US/docs/Web/HTTP/Headers)
+- [HTTP headers](/en-US/docs/Web/HTTP/Reference/Headers)
 - {{HTTPHeader("Access-Control-Expose-Headers")}}
 - Related glossary terms:
   - {{Glossary("CORS")}}

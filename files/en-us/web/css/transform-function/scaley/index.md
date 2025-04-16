@@ -10,7 +10,33 @@ browser-compat: css.types.transform-function.scaleY
 The **`scaleY()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a transformation that resizes an element along the
 y-axis (vertically). Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-{{EmbedInteractiveExample("pages/css/function-scaleY.html")}}
+{{InteractiveExample("CSS Demo: scaleY()")}}
+
+```css interactive-example-choice
+transform: scaleY(1);
+```
+
+```css interactive-example-choice
+transform: scaleY(0.7);
+```
+
+```css interactive-example-choice
+transform: scaleY(1.3);
+```
+
+```css interactive-example-choice
+transform: scaleY(-0.5);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 It modifies the ordinate (vertical, y-coordinate) of each element point by a constant factor, except when the scale factor is 1, in which case
 the function is the identity transform. The scaling is not isotropic, and the angles of the element are not conserved.

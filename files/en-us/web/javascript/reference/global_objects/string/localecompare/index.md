@@ -11,7 +11,7 @@ The **`localeCompare()`** method of {{jsxref("String")}} values returns a number
 
 When comparing large numbers of strings, such as in sorting large arrays, it is better to create an {{jsxref("Intl.Collator")}} object and use the function provided by its {{jsxref("Intl/Collator/compare", "compare()")}} method.
 
-{{InteractiveExample("JavaScript Demo: String.localeCompare()")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.localeCompare()")}}
 
 ```js interactive-example
 const a = "réservé"; // With accents, lowercase

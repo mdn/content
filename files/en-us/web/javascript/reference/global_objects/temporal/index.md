@@ -345,7 +345,7 @@ The `Temporal` objects will refuse to construct an instance representing a date/
 - {{jsxref("Temporal.Duration")}} {{experimental_inline}}
   - : Represents a difference between two time points, which can be used in date/time arithmetic. It is fundamentally represented as a combination of years, months, weeks, days, hours, minutes, seconds, milliseconds, microseconds, and nanoseconds values.
 - {{jsxref("Temporal.Instant")}} {{experimental_inline}}
-  - : Represents a unique point in history, with nanosecond precision. It is fundamentally represented as the number of nanoseconds since the Unix epoch (midnight at the beginning of January 1, 1970, UTC), without any time zone or calendar system.
+  - : Represents a unique point in time, with nanosecond precision. It is fundamentally represented as the number of nanoseconds since the Unix epoch (midnight at the beginning of January 1, 1970, UTC), without any time zone or calendar system.
 - {{jsxref("Temporal.Now")}} {{experimental_inline}}
   - : Provides methods for getting the current time in various formats.
 - {{jsxref("Temporal.PlainDate")}} {{experimental_inline}}

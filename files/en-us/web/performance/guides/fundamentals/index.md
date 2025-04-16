@@ -54,7 +54,7 @@ This section provides a brief overview of how Firefox/Gecko contributes to perfo
 
 ### Web technologies
 
-The Web platform provides many tools, some better suited for particular jobs than others. All application logic is written in JavaScript. To display graphics, developers can use HTML or CSS (i.e. high-level declarative languages), or use low-level imperative interfaces offered by the {{ htmlelement("canvas") }} element (which includes [WebGL](/en-US/docs/Web/API/WebGL_API)). Somewhere "in between" HTML/CSS and Canvas is [SVG](/en-US/docs/Web/SVG), which offers some benefits of both.
+The Web platform provides many tools, some better suited for particular jobs than others. All application logic is written in JavaScript. To display graphics, developers can use HTML or CSS (i.e., high-level declarative languages), or use low-level imperative interfaces offered by the {{ htmlelement("canvas") }} element (which includes [WebGL](/en-US/docs/Web/API/WebGL_API)). Somewhere "in between" HTML/CSS and Canvas is [SVG](/en-US/docs/Web/SVG), which offers some benefits of both.
 
 HTML and CSS greatly increase productivity, sometimes at the expense of frame rate or pixel-level control over rendering. Text and images reflow automatically, UI elements automatically receive the system theme, and the system provides "built-in" support for some use cases developers may not think of initially, like different-resolution displays or right-to-left languages.
 

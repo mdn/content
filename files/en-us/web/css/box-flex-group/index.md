@@ -40,14 +40,11 @@ The `box-flex-group` property is specified as any positive {{CSSxRef("&lt;intege
 
 ## Formal syntax
 
-```plain
-box-flex-group =
-  <integer>
-```
+{{CSSSyntaxRaw(`box-flex-group = <integer>`)}}
 
 ## Examples
 
-### Simple usage example
+### Basic usage example
 
 In the original flexbox spec, `box-flex-group` could be used to assign flex children to different groups to distribute flexible space between:
 

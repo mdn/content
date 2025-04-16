@@ -223,7 +223,7 @@ Only the `<p>` element with `class="fancy"` will get styled `red`.
 One common use case is to take existing code snippets already shown on MDN and turning them into live samples.
 The first step is to either add code snippets or ensure that existing ones are ready to be used as live samples, in terms of the content and in terms of their markup. The code snippets, taken together, must comprise a complete, runnable example. For example, if the existing snippet shows only CSS, you might need to add a snippet of HTML for the CSS to operate on.
 
-Each piece of code must be in a code block, with a separate block for each language, properly marked as to which language it is. Most of the time, this has already been done, but it's always worth double-checking to be sure each piece of code is configured with the correct syntax. This is done with a language identifier on the code block of `language-type`, where _language-type_ is the type of language the block contains, e.g. `html`, `css`, or `js`.
+Each piece of code must be in a code block, with a separate block for each language, properly marked as to which language it is. Most of the time, this has already been done, but it's always worth double-checking to be sure each piece of code is configured with the correct syntax. This is done with a language identifier on the code block of `language-type`, where _language-type_ is the type of language the block contains, e.g., `html`, `css`, or `js`.
 
 > [!NOTE]
 > You may have more than one block for each language; they are all concatenated together. This lets you have a chunk of code, followed by an explanation of how it works, then another chunk, and so forth. This makes it even easier to produce tutorials and the like that utilize live samples interspersed with explanatory text.
@@ -358,7 +358,7 @@ Result of `\{{EmbedLiveSample("iframe_size", "", "120")}}`:
 
 ### Allowing features
 
-The `allow` parameter can be used to specify the features that are allowed in the `<iframe>` element that contains the live sample output. The available values come from the [permission policy syntax for frames](/en-US/docs/Web/HTTP/Permissions_Policy#embedded_frame_syntax).
+The `allow` parameter can be used to specify the features that are allowed in the `<iframe>` element that contains the live sample output. The available values come from the [permission policy syntax for frames](/en-US/docs/Web/HTTP/Guides/Permissions_Policy#embedded_frame_syntax).
 
 ```html
 <div id="fullscreen-content">
@@ -594,6 +594,6 @@ Reset the example by pressing the "Reset" button.
 - Orders of code blocks
   - : When adding a live sample, the code blocks should be sorted so that the first one corresponds to the main language for this sample (if there is one). For example, when adding a live sample for the HTML Reference, the first block should be HTML, when adding a live sample for the CSS Reference, it should be CSS and so on.
 - Naming of headings
-  - : When there is no ambiguity (e.g. the sample is under a "Examples" section), headings should be straightforward with the sole name of the corresponding language: HTML, CSS, JavaScript, SVG, etc. (see above). Headings like "HTML Content" or "JavaScript Content" should not be used. However if such a short heading makes content unclear, one can use a more thoughtful title.
+  - : When there is no ambiguity (e.g., the sample is under a "Examples" section), headings should be straightforward with the sole name of the corresponding language: HTML, CSS, JavaScript, SVG, etc. (see above). Headings like "HTML Content" or "JavaScript Content" should not be used. However if such a short heading makes content unclear, one can use a more thoughtful title.
 - Using a "Result" block
-  - : After the different code blocks, please use a last "Result" block before using the `EmbedLiveSample` macro (see above). This way, the semantic of the example is made clearer for both the reader and any tools that would parse the page (e.g. screen reader, web crawler).
+  - : After the different code blocks, please use a last "Result" block before using the `EmbedLiveSample` macro (see above). This way, the semantic of the example is made clearer for both the reader and any tools that would parse the page (e.g., screen reader, web crawler).

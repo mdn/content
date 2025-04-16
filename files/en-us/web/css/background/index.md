@@ -9,7 +9,45 @@ browser-compat: css.properties.background
 
 The **`background`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all background style properties at once, such as color, image, origin and size, or repeat method. Component properties not set in the `background` shorthand property value declaration are set to their default values.
 
-{{EmbedInteractiveExample("pages/css/background.html")}}
+{{InteractiveExample("CSS Demo: background")}}
+
+```css interactive-example-choice
+background: green;
+```
+
+```css interactive-example-choice
+background: content-box radial-gradient(crimson, skyblue);
+```
+
+```css interactive-example-choice
+background: no-repeat url("/shared-assets/images/examples/lizard.png");
+```
+
+```css interactive-example-choice
+background: left 5% / 15% 60% repeat-x
+  url("/shared-assets/images/examples/star.png");
+```
+
+```css interactive-example-choice
+background:
+  center / contain no-repeat
+    url("/shared-assets/images/examples/firefox-logo.svg"),
+  #eee 35% url("/shared-assets/images/examples/lizard.png");
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-width: 100%;
+  min-height: 100%;
+  padding: 10%;
+}
+```
 
 ## Constituent properties
 

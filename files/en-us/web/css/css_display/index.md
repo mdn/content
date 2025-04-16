@@ -32,12 +32,8 @@ The **CSS display** module defines how the CSS formatting box tree is generated 
 - [Block formatting context (BFC)](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
 - {{glossary("Block-level content")}}
 - [Containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block)
-- {{glossary("Flex")}}
 - [Flow layout](/en-US/docs/Web/CSS/CSS_display/Flow_layout)
-- {{glossary("Grid")}}
-- [Inline formatting context](/en-US/docs/Web/CSS/Inline_formatting_context)
-- {{glossary("Inline-level content")}}
-- [Replaced element](/en-US/docs/Web/CSS/Replaced_element)
+- {{glossary("Replaced elements")}}
 - {{glossary("Ruby")}}
 
 ## Guides
@@ -59,8 +55,15 @@ The **CSS display** module defines how the CSS formatting box tree is generated 
 
 ### Properties
 
-- {{cssxref("transition-behavior")}}
 - {{cssxref("overflow")}}
+- {{cssxref("transition-behavior")}}
+
+### Glossary and terms
+
+- {{glossary("Flex")}}
+- {{glossary("Grid")}}
+- [Inline formatting context](/en-US/docs/Web/CSS/CSS_inline_layout/Inline_formatting_context)
+- {{glossary("Inline-level content")}}
 
 ### Guides
 
@@ -95,4 +98,4 @@ The **CSS display** module defines how the CSS formatting box tree is generated 
 - [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
 - [CSS ruby layout](/en-US/docs/Web/CSS/CSS_ruby_layout) module
 - [CSS table](/en-US/docs/Web/CSS/CSS_table) module
-- [Visual formatting model](/en-US/docs/Web/CSS/Visual_formatting_model)
+- [Visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)

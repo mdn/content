@@ -12,7 +12,7 @@ This article provides practical advice on how to write your web content so that 
 
 ## Guideline 2.1 — Keyboard Accessible: Make all functionality available from a keyboard
 
-This guideline covers the necessity of making core website functionality available via a keyboard in addition to other means (e.g. mouse), so that users that rely on keyboard controls can access them.
+This guideline covers the necessity of making core website functionality available via a keyboard in addition to other means (e.g., mouse), so that users that rely on keyboard controls can access them.
 
 <table class="standard-table">
   <thead>
@@ -27,15 +27,15 @@ This guideline covers the necessity of making core website functionality availab
       <td>2.1.1 Keyboard (A)</td>
       <td>
         All functionality should be accessible using keyboard controls, unless
-        it cannot be done using the keyboard (e.g. freehand drawing). Built-in
-        controls should be used where possible (e.g. tabbing through form
+        it cannot be done using the keyboard (e.g., freehand drawing). Built-in
+        controls should be used where possible (e.g., tabbing through form
         controls), and you should only build in custom functionality where
         needed.
       </td>
       <td>
         See
-        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#ui_controls"
-          >UI controls</a
+        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#use_semantic_ui_controls_where_possible"
+          >Use semantic UI controls where possible</a
         >
         and
         <a
@@ -71,8 +71,8 @@ This guideline covers the necessity of making core website functionality availab
       </td>
       <td>
         See
-        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#ui_controls"
-          >UI controls</a
+        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#use_semantic_ui_controls_where_possible"
+          >Use semantic UI controls where possible</a
         >
         and
         <a
@@ -126,13 +126,13 @@ This guideline covers situations in which functionality may have a time limit. F
       <td>2.2.1 Timing is adjustable (A)</td>
       <td>
         <p>
-          For functionality with time limits (e.g. completing a hotel or flight
+          For functionality with time limits (e.g., completing a hotel or flight
           booking often has a time limit), the user should be given controls to
           allow them to adjust, extend or turn off the time limit.
         </p>
         <p>
           Exceptions to this are activities with time limits longer than 20
-          hours, real time events (e.g. live multiplayer games), and any other
+          hours, real time events (e.g., live multiplayer games), and any other
           activity that requires a time limit and would be invalidated if it
           were turned off.
         </p>
@@ -296,14 +296,14 @@ The conformance criteria under this guideline relate to ways in which users can 
     <tr>
       <td>2.4.3 Logical focus order (A)</td>
       <td>
-        The "tabbing order" of focusable page features (e.g. links, buttons,
+        The "tabbing order" of focusable page features (e.g., links, buttons,
         form inputs) makes logical sense, meaning that the page is still usable
         by non-sighted/keyboard users.
       </td>
       <td>
         See
-        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#ui_controls"
-          >UI controls</a
+        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#use_semantic_ui_controls_where_possible"
+          >Use semantic UI controls where possible</a
         >
         for general advice on tabbing to controls. If you need to place elements
         in an unusual layout, it is better to make sure the source order is
@@ -316,7 +316,7 @@ The conformance criteria under this guideline relate to ways in which users can 
       <td>2.4.4 Link purpose (in context) (A)</td>
       <td>
         The purpose/destination of a link can be determined from the link text,
-        or from its surroundings (e.g. the surrounding text). Exceptions are
+        or from its surroundings (e.g., the surrounding text). Exceptions are
         where the link purpose is ambiguous to <em>all</em> users (see
         <a href="https://www.w3.org/TR/WCAG20/#ambiguouslinkdef"
           >ambiguous to users in general</a
@@ -325,8 +325,8 @@ The conformance criteria under this guideline relate to ways in which users can 
       </td>
       <td>
         See
-        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#meaningful_text_labels"
-          >Meaningful text labels</a
+        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#use_meaningful_text_labels"
+          >Use meaningful text labels</a
         >. Also note that you should minimize instances where multiple copies of
         the same text are linked to different places. This can cause problems
         for screen reader users, who will often bring up a list of the links out
@@ -348,7 +348,7 @@ The conformance criteria under this guideline relate to ways in which users can 
         </p>
       </td>
       <td>
-        Most of these mechanisms can be created using simple HTML features, for
+        Most of these mechanisms can be created using fully supported HTML features, for
         example see
         <a
           href="/en-US/docs/Learn_web_development/Extensions/Forms/HTML5_input_types#search_field"
@@ -367,18 +367,18 @@ The conformance criteria under this guideline relate to ways in which users can 
     <tr>
       <td>2.4.6 Headings and labels (AA)</td>
       <td>
-        Heading (e.g. {{htmlelement("Heading_Elements", "&lt;h2&gt;")}}) and
+        Heading (e.g., {{htmlelement("Heading_Elements", "&lt;h2&gt;")}}) and
         {{htmlelement("label")}} elements clearly describe the purpose
         of the content and form elements they are supposed to be describing.
       </td>
       <td>
         <p>
           See
-          <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#ui_controls"
-            >UI controls</a
+          <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#use_semantic_ui_controls_where_possible"
+            >Use semantic UI controls where possible</a
           >,
-          <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#meaningful_text_labels"
-            >Meaningful text labels</a
+          <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#use_meaningful_text_labels"
+            >Use meaningful text labels</a
           >,
           <a
             href="/en-US/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
@@ -408,8 +408,8 @@ The conformance criteria under this guideline relate to ways in which users can 
       <td>
         See
         <a
-          href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#ui_controls"
-          >UI controls</a
+          href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#use_semantic_ui_controls_where_possible"
+          >Use semantic UI controls where possible</a
         >.
       </td>
     </tr>
@@ -431,8 +431,8 @@ The conformance criteria under this guideline relate to ways in which users can 
       </td>
       <td>
         See
-        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#meaningful_text_labels"
-          >Meaningful text labels</a
+        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#use_meaningful_text_labels"
+          >Use meaningful text labels</a
         >. Also note that you should minimize instances where multiple copies of
         the same text are linked to different places. This can cause problems
         for screen reader users, who will often bring up a list of the links out
@@ -449,7 +449,7 @@ The conformance criteria under this guideline relate to ways in which users can 
         </p>
         <p>
           Note that this criterion refers to headings and titles in general web
-          content (e.g. headings within text content). Headings and titles for
+          content (e.g., headings within text content). Headings and titles for
           user interfaces are a special case covered in criterion 4.1.2.
         </p>
       </td>

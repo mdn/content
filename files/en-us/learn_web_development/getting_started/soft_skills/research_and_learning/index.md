@@ -2,9 +2,8 @@
 title: Research and learning
 slug: Learn_web_development/Getting_started/Soft_skills/Research_and_learning
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork", "Learn_web_development/Getting_started/Soft_skills")}}
 
@@ -48,7 +47,7 @@ You should make sure that the resources you choose for research are high quality
 - [Scrimba](https://scrimba.com/?via=mdn) <sup>Course partner</sup>
 - [YouTube](https://www.youtube.com/)
 - [freeCodeCamp](https://www.freecodecamp.org/)
-- [Codecademy](https://www.codecademy.com)
+- [Codecademy](https://www.codecademy.com/)
 - [Dev.to](https://dev.to/)
 
 ### Learn what resources to use and when
@@ -77,7 +76,7 @@ If you can't find a solution to your problem on your favorite sites, you'll need
 - Check the dates on the resources you find. Are they recently maintained, or not updated for some time and, therefore, possibly out-of-date? Reputable sites tend to include publication and "last-updated" dates on them, precisely so you can easily check this. Ideally, an article from a reputable site covering a modern technology or technique shouldn't be left unmaintained for longer than a few years (say 2–3). It is perfectly possible that older documentation covering a mature technology (for example, fundamental HTML or CSS features) can still be accurate, but you should keep this in mind.
 - As a follow-on from the previous point, even newly-published resources can contain out-of-date information. For example, does an article on CSS page layout talk about modern approaches like grid and flexbox, or does it still present obsolete techniques like using floats to create multi-column layouts?
 - Don't just rely on one single source of truth. Cross-reference different sources, especially if you are not sure whether a source is trustworthy or not.
-- You can also try using AI to help with coding issues (for example [ChatGPT](https://openai.com/blog/chatgpt) or [GitHub Copilot](https://resources.github.com/copilot-for-business/)). You should use AI tools with caution (especially as a beginner), and familiarize yourself with their strengths and weaknesses:
+- You can also try using AI to help with coding issues (for example [ChatGPT](https://openai.com/index/chatgpt) or [GitHub Copilot](https://github.com/features/copilot/copilot-business)). You should use AI tools with caution (especially as a beginner), and familiarize yourself with their strengths and weaknesses:
   - On the plus side, they can speed up research/searches enormously, and help with structuring code and copy.
   - On the other hand, AI tools have no reasoning skills and frequently provide answers that are misleading or just plain wrong. You shouldn't just assume that AI answers are correct — test them, and verify them with other sources.
 
@@ -95,7 +94,7 @@ The advice here is that if you are going to use a solution from somewhere else, 
 
 We've talked enough about websites, so now we'll talk about people. And websites.
 
-Building a network of folks to collaborate with is an essential part of being a web developer. We'll talk about this in greater detail in [Collaboration and teamwork](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork), but for now, let's concentrate specifically on using your network to help with research.
+Building a network of folks to collaborate with is an essential part of being a web developer. We'll also talk about this in [Collaboration and teamwork](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork#join_a_community_network); here we'll concentrate specifically on using your network to help with research.
 
 An effective research network consists of several groups of people with different levels of knowledge and proximity to you:
 
@@ -109,7 +108,7 @@ An effective research network consists of several groups of people with differen
   - Ask them how they would prefer to communicate with you about the problem, to make the interaction as comfortable for them as possible.
   - If arranging a meeting, don't book more of their time than you need. If you are not sure how long you will need, timebox the session to say 30 minutes. You can always ask them for more help in the future.
 
-- Wider community network: This could consist of a dedicated online community such as forums or chat groups (for example the [The MDN Web Docs discord](/discord) or the [freeCodeCamp forums](https://forum.freecodecamp.org/)), or a physical meetup such as a conference or skillshare event (you can look events up using sites like [Meetup.com](https://www.meetup.com/) or [Eventbrite](https://www.eventbrite.co.uk)).
+- Wider community network: This could consist of a dedicated online community such as forums or chat groups (for example the [The MDN Web Docs discord](/discord) or the [freeCodeCamp forums](https://forum.freecodecamp.org/)), or a physical meetup such as a conference or skillshare event.
 - Global network: Sometimes you might be out of options, in which case you could try asking your question on a general global community like a social media network. Sometimes helpful answers can come from unexpected places.
 
 > [!NOTE]
@@ -194,7 +193,7 @@ We also recommend taking a proper 15-minute break every hour to 90 minutes.
 
 While you are on your break, try discussing your issue with a colleague, friend, or family member. Even if they can't provide you with the answer, the chances are that you'll find a solution on your own by reasoning the problem in your own head. It even works when you explain the problem out loud, to yourself or to an inanimate object.
 
-This technique is known as [rubber duck debugging](https://rubberduckdebugging.com/) (or [rubber ducking](https://wikipedia.org/wiki/Rubber_duck_debugging)), named because traditionally the idea was that you explain your coding problem to a rubber duck.
+This technique is known as [rubber duck debugging](https://rubberduckdebugging.com/) (or [rubber ducking](https://en.wikipedia.org/wiki/Rubber_duck_debugging)), named because traditionally the idea was that you explain your coding problem to a rubber duck.
 
 ## Effective problem-solving
 

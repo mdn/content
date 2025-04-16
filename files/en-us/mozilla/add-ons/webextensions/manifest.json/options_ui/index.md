@@ -24,7 +24,7 @@ browser-compat: webextensions.manifest.options_ui
     <tr>
       <th scope="row">Example</th>
       <td>
-        <pre class="brush: json;">
+        <pre class="brush: json">
 "options_ui": {
   "page": "options/options.html"
 }</pre

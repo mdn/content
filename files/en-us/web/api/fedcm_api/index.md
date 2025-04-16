@@ -37,7 +37,7 @@ There are two parts to using the FedCM API, which are covered in the linked guid
 
 ## Permissions Policy integration and `<iframe>` support
 
-The {{httpheader("Permissions-Policy/identity-credentials-get", "identity-credentials-get")}} [Permissions-Policy](/en-US/docs/Web/HTTP/Permissions_Policy) can be used to control permission to use FedCM, more specifically usage of the {{domxref("CredentialsContainer.get", "get()")}} method.
+The {{httpheader("Permissions-Policy/identity-credentials-get", "identity-credentials-get")}} [Permissions-Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) can be used to control permission to use FedCM, more specifically usage of the {{domxref("CredentialsContainer.get", "get()")}} method.
 
 Developers can explicitly grant permission for an {{htmlelement("iframe")}} to use FedCM via the `allow` attribute:
 
@@ -90,4 +90,4 @@ The availability of FedCM within `<iframe>`s enables a couple of use cases:
 
 ## See also
 
-- [Federated Credential Management API](https://developers.google.com/privacy-sandbox/cookies/fedcm)
+- [Federated Credential Management API](https://privacysandbox.google.com/cookies/fedcm)

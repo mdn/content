@@ -11,7 +11,41 @@ The **`aspect-ratio`** [CSS](/en-US/docs/Web/CSS) property allows you to define 
 
 At least one of the box's sizes needs to be automatic in order for `aspect-ratio` to have any effect. If neither the width nor height is an automatic size, then the provided aspect ratio has no effect on the box's preferred sizes.
 
-{{EmbedInteractiveExample("pages/css/aspect-ratio.html")}}
+{{InteractiveExample("CSS Demo: aspect-ratio")}}
+
+```css interactive-example-choice
+aspect-ratio: auto;
+```
+
+```css interactive-example-choice
+aspect-ratio: 1 / 1;
+```
+
+```css interactive-example-choice
+aspect-ratio: 16 / 9;
+```
+
+```css interactive-example-choice
+aspect-ratio: 0.5;
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    height="640"
+    id="example-element"
+    src="/shared-assets/images/examples/plumeria.jpg"
+    width="466" />
+</section>
+```
+
+```css interactive-example
+#example-element {
+  height: 100%;
+  width: auto;
+}
+```
 
 ## Syntax
 
@@ -31,7 +65,7 @@ aspect-ratio: revert-layer;
 aspect-ratio: unset;
 ```
 
-This property is specified as one or both of the keyword auto or a `<ratio>`. If both are given, and the element is a [replaced element](/en-US/docs/Web/CSS/Replaced_element), such as [`<img>`](/en-US/docs/Web/HTML/Element/img), then the given ratio is used until the content is loaded. After the content is loaded, the `auto` value is applied, so the intrinsic aspect ratio of the loaded content is used.
+This property is specified as one or both of the keyword auto or a `<ratio>`. If both are given, and the element is a {{ glossary("replaced elements", "replaced element")}}, such as [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img), then the given ratio is used until the content is loaded. After the content is loaded, the `auto` value is applied, so the intrinsic aspect ratio of the loaded content is used.
 
 If the element is not a replaced element, then the given `ratio` is used.
 
@@ -39,7 +73,7 @@ If the element is not a replaced element, then the given `ratio` is used.
 
 - `auto`
 
-  - : [Replaced elements](/en-US/docs/Web/CSS/Replaced_element) with an intrinsic aspect ratio use _that_ aspect ratio, otherwise the box has no preferred aspect ratio. Size calculations involving intrinsic aspect ratio always work with the content box dimensions.
+  - : {{glossary("Replaced elements")}} with an intrinsic aspect ratio use _that_ aspect ratio, otherwise the box has no preferred aspect ratio. Size calculations involving intrinsic aspect ratio always work with the content box dimensions.
 
 - {{cssxref("&lt;ratio&gt;")}}
 

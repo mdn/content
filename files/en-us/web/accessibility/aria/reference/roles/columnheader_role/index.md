@@ -55,7 +55,7 @@ JavaScript is only required if the `aria-sort` attribute is used.
 </table>
 ```
 
-## Best Practices
+## Best practices
 
 Column headers should contain a title or header information for the column.
 
@@ -78,7 +78,7 @@ Columnheader has the same semantics `<th scope="col">`.
 - [`treegrid` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
 - [`row` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
 - [`rowgroup` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role)
-- [The `<th>` element](/en-US/docs/Web/HTML/Element/th)
-- [The `<table>` element](/en-US/docs/Web/HTML/Element/table)
-- [The `<tr>` element](/en-US/docs/Web/HTML/Element/tr)
-- [The `<td>` element](/en-US/docs/Web/HTML/Element/td)
+- [The `<th>` element](/en-US/docs/Web/HTML/Reference/Elements/th)
+- [The `<table>` element](/en-US/docs/Web/HTML/Reference/Elements/table)
+- [The `<tr>` element](/en-US/docs/Web/HTML/Reference/Elements/tr)
+- [The `<td>` element](/en-US/docs/Web/HTML/Reference/Elements/td)

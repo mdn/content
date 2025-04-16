@@ -9,7 +9,47 @@ browser-compat: css.properties.border-end-end-radius
 
 The **`border-end-end-radius`** [CSS](/en-US/docs/Web/CSS) property defines a logical border radius on an element, which maps to a physical border radius that depends on the element's {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}. This is useful when building styles to work regardless of the [text orientation](/en-US/docs/Web/CSS/text-orientation) and [writing mode](/en-US/docs/Web/CSS/CSS_writing_modes).
 
-{{EmbedInteractiveExample("pages/css/border-end-end-radius.html")}}
+{{InteractiveExample("CSS Demo: border-end-end-radius")}}
+
+```css interactive-example-choice
+border-end-end-radius: 80px 80px;
+```
+
+```css interactive-example-choice
+border-end-end-radius: 250px 100px;
+direction: rtl;
+```
+
+```css interactive-example-choice
+border-end-end-radius: 50%;
+writing-mode: vertical-lr;
+```
+
+```css interactive-example-choice
+border-end-end-radius: 50%;
+writing-mode: vertical-rl;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a bottom right rounded corner.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  color: white;
+  padding: 10px;
+}
+```
 
 This property affects the corner between the block-end and the inline-end sides of the element. For instance, in a `horizontal-tb` writing mode with `ltr` direction, it corresponds to the {{CSSxRef("border-bottom-right-radius")}} property.
 

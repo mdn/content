@@ -7,9 +7,56 @@ browser-compat: css.properties.text-emphasis-position
 
 {{CSSRef}}
 
-The **`text-emphasis-position`** [CSS](/en-US/docs/Web/CSS) property sets where emphasis marks are drawn. Similar to the text rendered by the [`<ruby>`](/en-US/docs/Web/HTML/Element/ruby) HTML element, if there isn't enough room for emphasis marks, the line height is increased.
+The **`text-emphasis-position`** [CSS](/en-US/docs/Web/CSS) property sets where emphasis marks are drawn. Similar to the text rendered by the [`<ruby>`](/en-US/docs/Web/HTML/Reference/Elements/ruby) HTML element, if there isn't enough room for emphasis marks, the line height is increased.
 
-{{EmbedInteractiveExample("pages/css/text-emphasis-position.html")}}
+{{InteractiveExample("CSS Demo: text-emphasis-position")}}
+
+```css interactive-example-choice
+text-emphasis-position: auto;
+```
+
+```css interactive-example-choice
+text-emphasis-position: over right;
+```
+
+```css interactive-example-choice
+text-emphasis-position: under right;
+```
+
+```css interactive-example-choice
+text-emphasis-position: auto;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+text-emphasis-position: over left;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+text-emphasis-position: over right;
+writing-mode: vertical-rl;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    I'd far rather be
+    <span class="transition-all" id="example-element">happy than right</span>
+    any day.
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+}
+
+#example-element {
+  text-emphasis: filled double-circle #ffb703;
+}
+```
 
 ## Syntax
 
@@ -44,7 +91,7 @@ text-emphasis-position: unset;
 The property accepts one or two values:
 
 - If only one value is provided, it can be `auto`, `over`, or `under`. When only `over` or `under` is used, `right` is assumed as the default position.
-- If two values are provided, they must include one of `over` or `under`and one of `right` or `left`. Their order does not matter.
+- If two values are provided, they must include one of `over` or `under` and one of `right` or `left`. Their order does not matter.
 
 The values include:
 
@@ -139,8 +186,10 @@ Use the drop down menu to change the position of the emphasis marks. This will c
 #### HTML
 
 ```html hidden
-<p class="unsupported">The <code>auto</code> value is not supported in your browser.</p>
-<label for="position">Emphasis position:</position>
+<p class="unsupported">
+  The <code>auto</code> value is not supported in your browser.
+</p>
+<label for="position">Emphasis position:</label>
 <select id="position">
   <option value="auto">auto</option>
   <option value="over-right">over right</option>

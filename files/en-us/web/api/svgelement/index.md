@@ -17,14 +17,12 @@ _Also inherits properties from the {{DOMxRef("Element")}} interface._
 
 - {{DOMxRef("SVGElement.attributeStyleMap")}} {{ReadOnlyInline}}
   - : A {{DOMxRef("StylePropertyMap")}} representing the declarations of the element's {{SVGAttr("style")}} attribute.
-- {{DOMxRef("SVGElement.dataset")}} {{ReadOnlyInline}}
-  - : A {{DOMxRef("DOMStringMap")}} object which provides a list of key/value pairs of named data attributes which correspond to [custom data attributes](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes) attached to the element. These can also be defined in SVG using attributes of the form {{SVGAttr("data-*")}}, where `*` is the key name for the pair. This works just like HTML's {{DOMxRef("HTMLElement.dataset")}} property and HTML's [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*) global attribute.
+- {{DOMxRef("SVGElement.autofocus")}}
+  - : Whether the control should be focused when the page loads, or when a {{htmlelement("dialog")}} or [popover](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) become shown.
 - {{DOMxRef("SVGElement.className")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : An {{DOMxRef("SVGAnimatedString")}} that reflects the value of the {{SVGAttr("class")}} attribute on the given element, or the empty string if `class` is not present. This attribute is deprecated and may be removed in a future version of this specification. Authors are advised to use {{DOMxRef("Element.classList")}} instead.
-- {{DOMxRef("SVGElement.blur")}}
-  - : Removes keyboard focus from the currently focused element.
-- {{DOMxRef("SVGElement.focus")}}
-  - : Makes the element the current keyboard focus.
+- {{DOMxRef("SVGElement.dataset")}} {{ReadOnlyInline}}
+  - : A {{DOMxRef("DOMStringMap")}} object which provides a list of key/value pairs of named data attributes which correspond to [custom data attributes](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes) attached to the element. These can also be defined in SVG using attributes of the form {{SVGAttr("data-*")}}, where `*` is the key name for the pair. This works just like HTML's {{DOMxRef("HTMLElement.dataset")}} property and HTML's [`data-*`](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*) global attribute.
 - {{DOMxRef("SVGElement.nonce")}}
   - : Returns the cryptographic number used once that is used by Content Security Policy to determine whether a given fetch will be allowed to proceed.
 - {{DOMxRef("SVGElement.ownerSVGElement")}} {{ReadOnlyInline}}
@@ -38,7 +36,12 @@ _Also inherits properties from the {{DOMxRef("Element")}} interface._
 
 ## Instance methods
 
-_This interface has no methods, but inherits methods from {{DOMxRef("Element")}}._
+_This interface also inherits methods from {{DOMxRef("Element")}}._
+
+- {{DOMxRef("SVGElement.blur()")}}
+  - : Removes keyboard focus from the currently focused element.
+- {{DOMxRef("SVGElement.focus()")}}
+  - : Makes the element the current keyboard focus.
 
 ## Events
 
@@ -67,6 +70,6 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 ## See also
 
-- HTML [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*) attribute
+- HTML [`data-*`](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*) attribute
 - SVG {{SVGAttr("data-*")}} attribute
 - [Using custom data attributes in HTML](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)

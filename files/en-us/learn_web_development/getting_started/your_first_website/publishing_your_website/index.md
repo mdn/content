@@ -1,10 +1,10 @@
 ---
 title: Publishing your website
+short-title: Publishing
 slug: Learn_web_development/Getting_started/Your_first_website/Publishing_your_website
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Web_standards", "Learn_web_development/Getting_started/Your_first_website")}}
 
@@ -67,7 +67,7 @@ Companies use various mechanisms to transfer files to their web servers. Many wi
 Some tools let you publish your website online:
 
 - [GitHub](https://github.com/) is a "social coding" site. It allows you to upload code repositories for storage in the [Git](https://git-scm.com/) **version control system.** You can then collaborate on code projects, and the system is open-source by default, meaning that anyone in the world can find your GitHub code, use it, learn from it, and improve on it. GitHub has a very useful feature called [GitHub Pages](https://pages.github.com/), which allows you to expose website code live on the web.
-- [Google App Engine](https://cloud.google.com/appengine/) is a powerful platform that lets you build and run applications on Google's infrastructure — whether you need to build a multi-tiered web application from scratch or host a static website. See [How do you host your website on Google App Engine?](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine) for more information.
+- [Google App Engine](https://cloud.google.com/appengine) is a powerful platform that lets you build and run applications on Google's infrastructure — whether you need to build a multi-tiered web application from scratch or host a static website. See [How do you host your website on Google App Engine?](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine) for more information.
 
 These options are generally free, with a limited feature-set.
 
@@ -77,6 +77,7 @@ There are a number of web apps that emulate a website development environment, a
 
 Try playing with some of these examples to find out which one works best for you:
 
+- [Scrimba](https://scrimba.com/new?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
 - [JSFiddle](https://jsfiddle.net/)
 - [Glitch](https://glitch.com/)
 - [JS Bin](https://jsbin.com/)

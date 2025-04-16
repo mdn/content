@@ -36,5 +36,4 @@ console.log(filterName.baseVal); // the filter's assigned name
 
 ## See also
 
-- {{domxref("SVGFETurbulenceElement.in1")}}
 - {{cssxref("custom-ident")}} data type

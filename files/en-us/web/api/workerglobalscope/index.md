@@ -59,7 +59,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
 - {{domxref("WorkerGlobalScope.createImageBitmap()")}}
   - : Accepts a variety of different image sources, and returns a {{jsxref("Promise")}} which resolves to an {{domxref("ImageBitmap")}}. Optionally the source is cropped to the rectangle of pixels originating at _(sx, sy)_ with width sw, and height sh.
 - {{domxref("WorkerGlobalScope.dump()")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : Allows you to write a message to stdout — i.e. in your terminal. This is the same as Firefox's {{domxref("window.dump")}}, but for workers.
+  - : Allows you to write a message to stdout — i.e., in your terminal. This is the same as Firefox's {{domxref("window.dump")}}, but for workers.
 - {{domxref("WorkerGlobalScope.fetch()")}}
   - : Starts the process of fetching a resource from the network.
 - {{domxref("WorkerGlobalScope.importScripts()")}}
@@ -88,7 +88,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
 - {{domxref("WorkerGlobalScope/rejectionhandled_event", "rejectionhandled")}}
   - : Fired on handled {{jsxref("Promise")}} rejection events.
 - {{domxref("WorkerGlobalScope/securitypolicyviolation_event", "securitypolicyviolation")}}
-  - : Fired when a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) is violated.
+  - : Fired when a [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) is violated.
 - {{domxref("WorkerGlobalScope/unhandledrejection_event", "unhandledrejection")}}
   - : Fired on unhandled {{jsxref("Promise")}} rejection events.
 

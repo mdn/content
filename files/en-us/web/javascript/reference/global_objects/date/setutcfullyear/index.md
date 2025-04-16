@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Date.setUTCFullYear
 
 The **`setUTCFullYear()`** method of {{jsxref("Date")}} instances changes the year for this date according to universal time.
 
-{{InteractiveExample("JavaScript Demo: Date.setUTCFullYear()")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.setUTCFullYear()")}}
 
 ```js interactive-example
 const event = new Date("December 31, 1975 23:15:30 GMT-3:00");

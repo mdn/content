@@ -26,7 +26,7 @@ If you do not already have one, go ahead and [sign up](https://github.com/signup
 If you are new to GitHub, we encourage you to take the following free, self-paced courses and reading material offered by GitHub. With this knowledge, you can focus on your contributions without the burden of learning a new tool at the same time.
 
 - [Introduction to GitHub](https://github.com/skills/introduction-to-github)
-- [Setting up Git](https://docs.github.com/en/get-started/getting-started-with-git/set-up-git)
+- [Setting up Git](https://docs.github.com/en/get-started/git-basics/set-up-git)
 - [GitHub workflow](https://docs.github.com/en/get-started/using-github/github-flow)
 - [Using Markdown](https://github.com/skills/communicate-using-markdown)
 

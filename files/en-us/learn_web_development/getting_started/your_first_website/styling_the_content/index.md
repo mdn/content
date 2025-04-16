@@ -1,10 +1,10 @@
 ---
 title: "CSS: Styling the content"
+short-title: Styling the content
 slug: Learn_web_development/Getting_started/Your_first_website/Styling_the_content
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Your_first_website")}}
 
@@ -94,6 +94,9 @@ p {
 }
 ```
 
+> [!NOTE]
+> Scrimba's [Write your first lines of CSS!](https://v2.scrimba.com/the-frontend-developer-career-path-c0j/~015?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> provides a useful interactive introduction to CSS syntax.
+
 ### Selecting multiple elements
 
 You can also select multiple elements and apply a single ruleset to all of them. Separate multiple selectors by commas. For example:
@@ -176,7 +179,7 @@ There are many more selectors to discover. To learn more, see our selectors tuto
 
 Now that we've explored some CSS fundamentals, let's improve the appearance of the example by adding more rules and information to the `style.css` file.
 
-1. First, find the [output from Google Fonts](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like#font) that you previously saved from [What will your website look like?](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like). Add the {{htmlelement("link")}} element somewhere inside your `index.html`'s head (anywhere between the {{HTMLElement("head")}} and `</head>` tags). It looks something like this:
+1. First, find the [output from Google Fonts](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like#choosing_a_font) that you previously saved from [What will your website look like?](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like). Add the {{htmlelement("link")}} element somewhere inside your `index.html`'s head (anywhere between the {{HTMLElement("head")}} and `</head>` tags). It looks something like this:
 
    ```html
    <link
@@ -187,7 +190,7 @@ Now that we've explored some CSS fundamentals, let's improve the appearance of t
    This code links your page to a style sheet that loads the Open Sans font family with your webpage.
 
 2. Next, delete the existing rule you have in your `style.css` file. It was a good test, but let's not continue with lots of red text.
-3. Add the following lines (shown below), replacing the `font-family` assignment with your `font-family` selection from [What will your website look like?](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like#font). The property `font-family` refers to the font(s) you want to use for text. This rule defines a global base font and font size for the whole page. Since {{HTMLElement("html")}} is the parent element of the whole page, all elements inside it inherit the same `font-size` and `font-family`.
+3. Add the following lines (shown below), replacing the `font-family` assignment with your `font-family` selection from [What will your website look like?](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like#choosing_a_font). The property `font-family` refers to the font(s) you want to use for text. This rule defines a global base font and font size for the whole page. Since {{HTMLElement("html")}} is the parent element of the whole page, all elements inside it inherit the same `font-size` and `font-family`.
 
    ```css
    html {
@@ -254,7 +257,7 @@ html {
 }
 ```
 
-This rule sets a background color for the entire page. Change the color code to [the color you chose in What will my website look like?](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like#theme_color).
+This rule sets a background color for the entire page. Change the color code to [the color you chose in What will my website look like?](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like#choosing_a_theme_color).
 
 ### Styling the body
 
@@ -330,5 +333,10 @@ If you followed all the instructions in this article, you should have a page tha
 (You can [view our version here](https://mdn.github.io/beginner-html-site-styled/).) If you get stuck, you can always compare your work with our [finished example code on GitHub](https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css).
 
 In this article, we have just scratched the surface of CSS. Our [Core modules](/en-US/docs/Learn_web_development/Core), starting with the [CSS styling basics module](/en-US/docs/Learn_web_development/Core/Styling_basics), will cover it in a lot more detail.
+
+## See also
+
+- [Learn HTML and CSS](https://v2.scrimba.com/learn-html-and-css-c0p?via=mdn), Scrimba <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
+  - : [Scrimba's](https://scrimba.com?via=mdn) _Learn HTML and CSS_ course teaches you HTML and CSS through building and deploying five awesome projects, with fun interactive lessons and challenges taught by knowledgeable teachers.
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Your_first_website")}}

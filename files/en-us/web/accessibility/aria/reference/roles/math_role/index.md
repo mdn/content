@@ -45,5 +45,5 @@ Had an image been used, the `alt` attribute would be used along with the `math` 
 
 ## See also
 
-- [MathML on MDN](/en-US/docs/Web/MathML) and the [`<math>`](/en-US/docs/Web/MathML/Element/math) element (not HTML)
+- [MathML on MDN](/en-US/docs/Web/MathML) and the [`<math>`](/en-US/docs/Web/MathML/Reference/Element/math) element (not HTML)
 - [The MathML specification](https://www.w3.org/TR/MathML3/)

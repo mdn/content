@@ -59,7 +59,7 @@ Used in roles:
 - [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role) role
 - [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role) role
 - [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role) role
-- {{HTMLElement('datalist')}} element and the [`<input> list` attribute](/en-US/docs/Web/HTML/Element/input#list)
+- {{HTMLElement('datalist')}} element and the [`<input> list` attribute](/en-US/docs/Web/HTML/Reference/Elements/input#list)
 - [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) attribute
 - [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup) attribute
 - [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant) attribute

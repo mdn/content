@@ -29,7 +29,7 @@ In the next section we'll start with a basic Screen Capture API demo to illustra
 
 ## Screen Capture API demo
 
-This demo uses the Screen Capture API to capture a window, screen, or tab, and broadcast the stream via a {{htmlelement("video")}} element on the same page. You can see it running live at [Screen Capture API example](https://mdn.github.io/dom-examples/screen-capture-api/basic-screen-capture) (also see the [source code](https://github.com/mdn/dom-examples/tree/main/screen-capture-api/basic-screen-capture)).
+This demo uses the Screen Capture API to capture a window, screen, or tab, and broadcast the stream via a {{htmlelement("video")}} element on the same page. You can see it running live at [Screen Capture API example](https://mdn.github.io/dom-examples/screen-capture-api/basic-screen-capture/) (also see the [source code](https://github.com/mdn/dom-examples/tree/main/screen-capture-api/basic-screen-capture)).
 
 ### HTML
 
@@ -111,7 +111,7 @@ video,
 }
 ```
 
-Finally, we give the `<video>` element a {{cssxref("max-width")}} of `50%` and a fixed {{cssxref("aspect-ratio")}} of `4/3`. This is to keep the video at a consistent size and avoid too much layout upheaval when the screen capture starts to be broadcast. If we didn't do this, the `<video>` element would grow to the same width as the entire captured area (window or screen), which would affect the layout. It is a [replaced element](/en-US/docs/Web/CSS/Replaced_element), after all, so its [intrinsic size](/en-US/docs/Glossary/Intrinsic_Size) depends on that of its content.
+Finally, we give the `<video>` element a {{cssxref("max-width")}} of `50%` and a fixed {{cssxref("aspect-ratio")}} of `4/3`. This is to keep the video at a consistent size and avoid too much layout upheaval when the screen capture starts to be broadcast. If we didn't do this, the `<video>` element would grow to the same width as the entire captured area (window or screen), which would affect the layout. It is a {{ glossary("replaced elements", "replaced element")}}, after all, so its [intrinsic size](/en-US/docs/Glossary/Intrinsic_Size) depends on that of its content.
 
 ```css
 video {
@@ -162,9 +162,9 @@ This obviously isn't ideal, and would cause issues in any kind of conferencing a
 
 ## The Element Capture API
 
-The Element Capture API restricts the captured region to a specified rendered DOM tree (a selected element and its descendants). In this section we will explore a second demo that is identical to the one presented above, except that it uses Element Capture on top of basic Screen Capture. See this demo running live at [Element Capture API example](https://mdn.github.io/dom-examples/screen-capture-api/element-capture) (also see the [source code](https://github.com/mdn/dom-examples/tree/main/screen-capture-api/element-capture)).
+The Element Capture API restricts the captured region to a specified rendered DOM tree (a selected element and its descendants). In this section we will explore a second demo that is identical to the one presented above, except that it uses Element Capture on top of basic Screen Capture. See this demo running live at [Element Capture API example](https://mdn.github.io/dom-examples/screen-capture-api/element-capture/) (also see the [source code](https://github.com/mdn/dom-examples/tree/main/screen-capture-api/element-capture)).
 
-The HTML is identical to the previous example, and the CSS is _nearly_ identical. We'll explain the differences in the JavaScript now, then look at the CSS differences later on, in the [Issues with the Element Capture API](#issues-with-the-element-capture-api) section.
+The HTML is identical to the previous example, and the CSS is _nearly_ identical. We'll explain the differences in the JavaScript now, then look at the CSS differences later on, in the [Restrictions on the Element Capture API](#restrictions_on_the_element_capture_api) section.
 
 To use the Element Capture API, we additionally grab a reference to a DOM element that we will later use as a **restriction target** — the screen area shown in the stream will be restricted to just that rendered element and its descendants:
 
@@ -195,7 +195,7 @@ async function startCapture() {
 4. We apply the restriction target to the track by calling {{domxref("BrowserCaptureMediaStreamTrack.restrictTo()")}} on it, passing it the `restrictionTarget` object.
 5. Once all the above is done, we then set the `<video>` element's `srcObject` property value to the stream, to start broadcasting it.
 
-Try running the [Element Capture API example](https://mdn.github.io/dom-examples/screen-capture-api/element-capture) in a [supporting browser](/en-US/docs/Web/API/RestrictionTarget#browser_compatibility) now. You should see that only the demo placeholder is included in the stream, thereby fixing the "hall of mirrors" problem.
+Try running the [Element Capture API example](https://mdn.github.io/dom-examples/screen-capture-api/element-capture/) in a [supporting browser](/en-US/docs/Web/API/RestrictionTarget#browser_compatibility) now. You should see that only the demo placeholder is included in the stream, thereby fixing the "hall of mirrors" problem.
 
 > [!NOTE]
 > You can stop the restriction by calling `restrictTo()` again on the same track, passing an argument of `null` to it:
@@ -229,7 +229,7 @@ For the full list of restrictions on the elements that can be used as restrictio
 
 The Region Capture API has a very similar effect to the Element Capture API, except that rather than restricting the captured region to a specific rendered DOM tree, it crops the stream to the area of the current browser tab defined by the bounding box of the target element. Let's look at a demo and then explore the differences between the two in more detail later on.
 
-In this section we will explore a third demo that is identical to the others, except that it uses Region Capture on top of basic Screen Capture. See this demo running live at [Region Capture API example](https://mdn.github.io/dom-examples/screen-capture-api/region-capture) (also see the [source code](https://github.com/mdn/dom-examples/tree/main/screen-capture-api/region-capture)).
+In this section we will explore a third demo that is identical to the others, except that it uses Region Capture on top of basic Screen Capture. See this demo running live at [Region Capture API example](https://mdn.github.io/dom-examples/screen-capture-api/region-capture/) (also see the [source code](https://github.com/mdn/dom-examples/tree/main/screen-capture-api/region-capture)).
 
 The HTML and CSS are identical to the previous examples. The JavaScript is nearly the same as the Element Capture JavaScript, with a few notable differences that we'll now explain.
 
@@ -261,7 +261,7 @@ async function startCapture() {
 3. We apply the crop target to the track by calling {{domxref("BrowserCaptureMediaStreamTrack.cropTo()")}} on it, passing it the `cropTarget` object.
 4. Once all the above is done, we then set the `<video>` element's `srcObject` property value to the stream, to start broadcasting it.
 
-Try running the [Region Capture API example](https://mdn.github.io/dom-examples/screen-capture-api/region-capture) in a [supporting browser](/en-US/docs/Web/API/CropTarget#browser_compatibility) now. You should see that only the demo placeholder is included in the stream, which also fixes the "hall of mirrors" problem.
+Try running the [Region Capture API example](https://mdn.github.io/dom-examples/screen-capture-api/region-capture/) in a [supporting browser](/en-US/docs/Web/API/CropTarget#browser_compatibility) now. You should see that only the demo placeholder is included in the stream, which also fixes the "hall of mirrors" problem.
 
 > [!NOTE]
 > You can stop the cropping by calling `cropTo()` again on the same track, passing an argument of `null` to it:

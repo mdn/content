@@ -1,10 +1,10 @@
 ---
 title: Solve common HTML problems
+short-title: Common HTML problems
 slug: Learn_web_development/Howto/Solve_HTML_problems
 page-type: landing-page
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 The following links point to solutions to common everyday problems you'll need to solve with HTML.
 
@@ -77,12 +77,12 @@ Some information, called tabular data, needs to be organized into tables with co
 
 ### Advanced text semantics
 
-- [How to take control of HTML line breaking](/en-US/docs/Web/HTML/Element/br)
+- [How to take control of HTML line breaking](/en-US/docs/Web/HTML/Reference/Elements/br)
 - How to mark changes (added and removed text) — see the {{htmlelement("ins")}} and {{htmlelement("del")}} elements.
 
 ### Advanced images & multimedia
 
-- [How to add a responsive image to a webpage](/en-US/docs/Web/HTML/Responsive_images)
+- [How to add a responsive image to a webpage](/en-US/docs/Web/HTML/Guides/Responsive_images)
 - [How to add vector image to a webpage](/en-US/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)
 - [How to add a hit map on top of an image](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image)
 

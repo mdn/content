@@ -12,7 +12,7 @@ Firefox 8 was released on November 8, 2011. This article provides information bo
 
 ### HTML
 
-- The {{ domxref("HTMLImageElement") }} `crossOrigin` property has been added and the [`crossorigin`](/en-US/docs/Web/HTML/Element/img#crossorigin) attribute has been added to the {{ HTMLElement("img") }} element. (see [Firefox bug 664299](https://bugzil.la/664299))
+- The {{ domxref("HTMLImageElement") }} `crossOrigin` property has been added and the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Elements/img#crossorigin) attribute has been added to the {{ HTMLElement("img") }} element. (see [Firefox bug 664299](https://bugzil.la/664299))
 - The {{ domxref("HTMLSelectElement","","add()") }} method now supports either an item or index of an item that the new item should be inserted before. Previously it only supported an item. (see [Firefox bug 666200](https://bugzil.la/666200))
 - The `HTMLIsIndexElement` constructor has been removed. No elements have implemented this interface since before Firefox 4.
 - The HTML5 "context menu" feature (`contextmenu` attribute), which lets you add custom element specific items to native context menu, is now supported (the implementation is still experimental awaiting changes in the specification; see [Firefox bug 617528](https://bugzil.la/617528)).
@@ -34,8 +34,8 @@ Firefox 8 was released on November 8, 2011. This article provides information bo
 - {{ domxref("Document.getSelection()") }} now returns the same `Selection` object as {{ domxref("window.getSelection()") }}, instead of _stringifying_ it.
 - The HTML5 `selectionDirection` property makes it possible to define the direction of the selection in an editable text.
 - {{ domxref("HTMLMediaElement") }} now have a `seekable` property that return a {{ domxref("TimeRanges") }} object.
-- The {{ domxref("HTMLMediaElement") }}`.preload` attribute now correctly reflects as an _enumerated value_.
-- [`crossOrigin` property](/en-US/docs/Web/HTML/Attributes/crossorigin) defaults to "Anonymous" when an invalid value is used.
+- The {{ domxref("HTMLMediaElement.preload") }} attribute now correctly reflects as an _enumerated value_.
+- [`crossOrigin` property](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) defaults to "Anonymous" when an invalid value is used.
 - {{ domxref("navigator.cookieEnabled") }} now returns correct information when the default cookie setting is overridden on a per-site basis.
 
 ### JavaScript

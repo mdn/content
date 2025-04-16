@@ -12,7 +12,7 @@ The **`constructor`** method is a special method of a [class](/en-US/docs/Web/Ja
 > [!NOTE]
 > This page introduces the `constructor` syntax. For the `constructor` property present on all objects, see {{jsxref("Object.prototype.constructor")}}.
 
-{{InteractiveExample("JavaScript Demo: Classes Constructor")}}
+{{InteractiveExample("JavaScript Demo: Class constructor")}}
 
 ```js interactive-example
 class Polygon {

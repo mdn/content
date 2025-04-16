@@ -19,10 +19,10 @@ A boolean that is `true` if a custom error message has been set to a non-empty s
 ### Detecting a custom error
 
 In this example, {{domxref("HTMLInputElement.setCustomValidity", "setCustomValidity()")}} sets a custom error message when a form submission contains user input that's considered invalid.
-The "Validate input" button calls {{domxref("HTMLInputElement.reportValidity", "reportValidity()")}}, which displays a validation message under the element if a user enters values that do not match the [form's constraints](/en-US/docs/Web/HTML/Constraint_validation#constraint_validation_process).
+The "Validate input" button calls {{domxref("HTMLInputElement.reportValidity", "reportValidity()")}}, which displays a validation message under the element if a user enters values that do not match the [form's constraints](/en-US/docs/Web/HTML/Guides/Constraint_validation#constraint_validation_process).
 
 If you enter the text "good" or "fine" and try to validate the input, the field is marked invalid until the custom error message is cleared (set to an empty string).
-For comparison, there is a [`minlength`](/en-US/docs/Web/HTML/Attributes/minlength) attribute on the input element that allows us to demonstrate the [`tooShort` validity state](/en-US/docs/Web/API/ValidityState/tooShort) when the user enters less than two characters.
+For comparison, there is a [`minlength`](/en-US/docs/Web/HTML/Reference/Attributes/minlength) attribute on the input element that allows us to demonstrate the [`tooShort` validity state](/en-US/docs/Web/API/ValidityState/tooShort) when the user enters less than two characters.
 When the value in the form control is invalid, even if there is no custom error, the input will have a red outline.
 
 #### HTML
@@ -110,5 +110,5 @@ checkButton.addEventListener("click", validateInput);
 ## See also
 
 - ValidityState [badInput](/en-US/docs/Web/API/ValidityState/badInput), [valid](/en-US/docs/Web/API/ValidityState/valid) properties.
-- [Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
+- [Constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation)
 - [Forms: Data form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)

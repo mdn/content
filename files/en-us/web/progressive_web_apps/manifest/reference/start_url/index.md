@@ -2,7 +2,7 @@
 title: start_url
 slug: Web/Progressive_web_apps/Manifest/Reference/start_url
 page-type: web-manifest-member
-browser-compat: html.manifest.start_url
+browser-compat: manifests.webapp.start_url
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
@@ -33,6 +33,10 @@ The `start_url` manifest member is used to specify the URL that should be opened
     If the value is relative, it is resolved against the manifest file's URL.
 
     If `start_url` is unspecified or the value is invalid (i.e., not a string, not a valid URL, or not {{glossary("origin", "same-origin")}} as the page that links to the manifest), the URL of the page that links to the manifest is used.
+
+    > [!NOTE]
+    > On some browsers the `start_url` _must_ be specified for a [PWA to be installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#installability) (see the compatibility section below).
+    > You can set `"start_url": "./"` to use the default behavior on all browsers.
 
     > [!NOTE]
     > If [`scope`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/scope) is not specified in the manifest it will be inferred from the `start_url` (or effective `start_url` if the value is undefined or invalid).

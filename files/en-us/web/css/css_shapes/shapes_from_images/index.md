@@ -82,7 +82,7 @@ img {
 
 ## CORS compatibility
 
-Something that you will run into when creating shapes from an image is that the image you use must be [CORS compatible](/en-US/docs/Web/HTTP/CORS). An image hosted on the same domain as your site should work, however, if your images are hosted on a different domain such as on a CDN you should ensure that they are sending the correct headers to enable them to be used for Shapes. Due to this requirement for CORS-compatible images, if you are previewing your file locally without using a local web server, your shape will not work.
+Something that you will run into when creating shapes from an image is that the image you use must be [CORS compatible](/en-US/docs/Web/HTTP/Guides/CORS). An image hosted on the same domain as your site should work, however, if your images are hosted on a different domain such as on a CDN you should ensure that they are sending the correct headers to enable them to be used for Shapes. Due to this requirement for CORS-compatible images, if you are previewing your file locally without using a local web server, your shape will not work.
 
 ### Is it a CORS issue?
 

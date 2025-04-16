@@ -23,7 +23,7 @@ The `@namespace` rule is used for declaring a default namespace and for binding 
 
 ## Guides
 
-- [Namespaces crash course](/en-US/docs/Web/SVG/Namespaces_Crash_Course)
+- [Namespaces crash course](/en-US/docs/Web/SVG/Guides/Namespaces_crash_course)
 
   - : Deep dive into what a namespace is and how they are used in XML and XML-based markup languages.
 
@@ -61,7 +61,7 @@ The `@namespace` rule is used for declaring a default namespace and for binding 
 
 ## See also
 
-- [`<a>`](/en-US/docs/Web/SVG/Element/a#example) SVG element
+- [`<a>`](/en-US/docs/Web/SVG/Reference/Element/a#example) SVG element
 - [CSS `<url>` type](/en-US/docs/Web/CSS/url_value)
 - [CSS at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule)
 - [CSS at-rule functions](/en-US/docs/Web/CSS/CSS_syntax/At-rule_functions)

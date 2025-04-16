@@ -28,9 +28,9 @@ Firefox 11 shipped on March 13, 2012. This article provides information about th
 - Support for the [`defaultMuted`](/en-US/docs/Web/API/HTMLMediaElement), [`loop`](/en-US/docs/Web/API/HTMLMediaElement) and [`muted`](/en-US/docs/Web/API/HTMLMediaElement) properties on [`HTMLMediaElement`](/en-US/docs/Web/API/HTMLMediaElement) has been added.
 - Calling {{domxref("Document/exitFullscreen")}} now restores the previously fullscreen element if some other element was in fullscreen mode when the current element's {{domxref("Element/requestFullScreen")}} method was called.
 - The {{domxref("window.requestAnimationFrame", "window.mozRequestAnimationFrame()")}} method no longer supports a no-argument form. This form was not used much and is unlikely to become part of the standard.
-- SVG-as-an-image can now be drawn into a canvas without [tainting the canvas](/en-US/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f).
+- SVG-as-an-image can now be drawn into a canvas without [tainting the canvas](/en-US/docs/Web/HTML/How_to/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f).
 - The non-standard `countryCode` property of the `GeoPositionAddress` interface has been removed; see `nsIDOMGeoPositionAddress`.
-- [Server-sent events](/en-US/docs/Web/API/Server-sent_events) now support [CORS](/en-US/docs/Web/HTTP/CORS).
+- [Server-sent events](/en-US/docs/Web/API/Server-sent_events) now support [CORS](/en-US/docs/Web/HTTP/Guides/CORS).
 - In the past, when the user followed a link, the values set on the {{domxref("window.navigator")}} object were retained by the new page. Now a new `navigator` object is created for the new page. This makes Firefox behave like all other browsers.
 
 ### CSS
@@ -73,7 +73,7 @@ _No change._
 - It is now possible to create a multi-entry index (see [`IDBObjectStore.createIndex` parameters](/en-US/docs/Web/API/IDBObjectStore/createIndex#parameters).)
 - The {{domxref("IDBTransaction/abort_event", "abort")}} event now bubbles; in addition, an `onabort` handler has been added.
 - IndexedDB can now be used to store files/blobs.
-- IndexedDB now supports complex key paths, e.g. `foo.bar` to access property `bar` of property `foo`.
+- IndexedDB now supports complex key paths, e.g., `foo.bar` to access property `bar` of property `foo`.
 - IndexedDB can now accept an array as a `keyPath` when creating an [object store](/en-US/docs/Web/API/IDBDatabase/createObjectStore) or an [index](/en-US/docs/Web/API/IDBObjectStore/createIndex) ([Firefox bug 694138](https://bugzil.la/694138).)
 
 ### Network

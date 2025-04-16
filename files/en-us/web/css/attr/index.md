@@ -46,7 +46,7 @@ attr(href)
 /* With type */
 attr(data-width px)
 attr(data-size rem)
-attr(data-name string)
+attr(data-name raw-string)
 attr(id type(<custom-ident>))
 attr(data-count type(<number>))
 attr(data-size type(<length> | <percentage>))
@@ -71,13 +71,16 @@ The parameters are:
   - : The attribute name whose value should be retrieved from the selected HTML element(s).
 - `<attr-type>`
 
-  - : Specifies how the attribute value is parsed into a CSS value. This can be the `string` keyword, a `type()` function, or a CSS dimension unit. When omitted, it defaults to `string`.
+  - : Specifies how the attribute value is parsed into a CSS value. This can be the `raw-string` keyword, a `type()` function, or a CSS dimension unit (specified using an `<attr-unit>` identifier). When omitted, it defaults to `raw-string`.
 
-    - The `string` keyword parses the value into a CSS string.
+    - The `raw-string` keyword causes the attribute's literal value to be treated as the value of a CSS string, with no CSS parsing performed (including CSS escapes, whitespace removal, comments, etc). The `<fallback-value>` is only used if the attribute is omitted; specifying an empty value doesn't trigger the fallback.
 
       ```css
-      attr(data-name string, "stranger")
+      attr(data-name raw-string, "stranger")
       ```
+
+      > [!NOTE]
+      > This keyword was originally named and supported in Chromium browsers as `string`. Both keywords will be supported briefly, for backwards compatibility purposes.
 
     - The `type()` function takes a `<syntax>` as its argument that specifies what [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) to parse the value into. The `<syntax>` can be {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;color&gt;")}}, {{CSSxRef("&lt;custom-ident&gt;")}}, {{CSSxRef("&lt;image&gt;")}}, {{CSSxRef("&lt;integer&gt;")}}, {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;length-percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;resolution&gt;")}}, {{CSSxRef("&lt;string&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;transform-function&gt;")}}, or a combination thereof.
 
@@ -92,7 +95,14 @@ The parameters are:
       attr(data-size type(<length> | <percentage>), 0px)
       ```
 
-      For [security reasons](#limitations_and_security) {{CSSxRef("url_value", "&lt;url&gt;")}} is not allowed as a `<syntax>`.
+      > [!NOTE]
+      > For [security reasons](#limitations_and_security) {{CSSxRef("url_value", "&lt;url&gt;")}} is not allowed as a `<syntax>`.
+
+      To accept any data type, use `*` as the type. This still triggers CSS parsing but with no requirements placed on it beyond that it parses validly and substitutes the result of that parsing directly as tokens, rather than as a `<string>` value.
+
+      ```css
+      attr(data-content type(*))
+      ```
 
     - The `<attr-unit>` identifier specifies the unit a numeric value should have (if any). It can be the `%` character (percentage) or a [CSS distance unit](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#distance_units) such as `px`, `rem`, `deg`, `s`, etc.
 
@@ -117,7 +127,7 @@ If no `<fallback-value>` is set, the return value will default to an empty strin
 
 ### Limitations and security
 
-The `attr()` function can reference attributes that were never intended by the page author to be used for styling, and might contain sensitive information (for example, a security token used by scripts on the page). In general, this is fine, but it can become a security threat when used in URLs. You therefore can't use `attr()` to dynamically construct URLs.
+The `attr()` function can reference attributes that were never intended by the page author to be used for styling and might contain sensitive information (for example, a security token used by scripts on the page). In general, this is fine, but it can become a security threat when used in URLs. Therefore, you can't use `attr()` to dynamically construct URLs.
 
 ```html
 <!-- This won't work! -->
@@ -129,11 +139,11 @@ The `attr()` function can reference attributes that were never intended by the p
 </style>
 ```
 
-Values that use `attr()` get marked as _"`attr()`-tainted"_. Using an `attr()`-tainted value as or in a `<url>` makes a declaration become ["invalid at computed value time" or IACVT for short](https://brm.us/iacvt)
+Values that use `attr()` get marked as _`attr()`-tainted_. Using an `attr()`-tainted value as or in a `<url>` makes a declaration become ["invalid at computed value time" or IACVT for short](https://www.bram.us/2024/02/26/css-what-is-iacvt/).
 
 ### Backwards compatibility
 
-Generally speaking, the modern `attr()` syntax is backwards-compatible because the old way of using it — without specifying an `<attr-type>` — behaves the same as before. Having `attr(data-attr)` in your code is the same as writing `attr(data-attr type(<string>))` or the simpler `attr(data-attr string))`.
+Generally speaking, the modern `attr()` syntax is backward-compatible because the old way of using it — without specifying an `<attr-type>` — behaves the same as before. Having `attr(data-attr)` in your code is the same as writing `attr(data-attr type(<string>))` or the simpler `attr(data-attr string))`.
 
 However, there are two edge cases where the modern `attr()` syntax behaves differently from the old syntax.
 
@@ -152,7 +162,7 @@ div::before {
 }
 ```
 
-In browsers with support for the modern syntax, the output will be … nothing. Those browsers will successfully parse the second declaration but, because it is invalid content for the `content` property, the declaration becomes ["invalid at computed value time" or IACVT for short](https://brm.us/iacvt).
+In browsers with support for the modern syntax, the output will be … nothing. Those browsers will successfully parse the second declaration, but because it is invalid content for the `content` property, the declaration becomes ["invalid at computed value time" or IACVT for short](https://www.bram.us/2024/02/26/css-what-is-iacvt/).
 
 To prevent this kind of situation, [feature detection](#feature_detection) is recommended.
 
@@ -173,7 +183,7 @@ A second edge case is the following:
 
 Browsers without support for modern syntax display the text `"foo"`. In browsers with modern `attr()` support there is no output.
 
-This is because `attr()` — similar to custom properties that use the `var()` function — get substituted at [computed value time](https://brm.us/iacvt/#custom-properties). With the modern behavior, `--x` first tries to read the `data-attr` attribute from the `#parent` element, which results in an empty string because there is no such attribute on `#parent`. That empty string then gets inherited by the `#child` element, resulting in a `content: ;` declaration being set.
+This is because `attr()` — similar to custom properties that use the `var()` function — get substituted at [computed value time](https://www.bram.us/2024/02/26/css-what-is-iacvt/#custom-properties). With the modern behavior, `--x` first tries to read the `data-attr` attribute from the `#parent` element, which results in an empty string because there is no such attribute on `#parent`. That empty string then gets inherited by the `#child` element, resulting in a `content: ;` declaration being set.
 
 To prevent this sort of situation, don't pass inherited `attr()` values onto children unless you explicitly want to.
 
@@ -213,7 +223,7 @@ if (!CSS.supports("x: attr(x type(*))")) {
 
 ### content property
 
-In this example, we prepend the value of the `data-foo` [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*) [global attribute](/en-US/docs/Web/HTML/Global_attributes) to the contents of the {{HTMLElement("p")}} element.
+In this example, we prepend the value of the `data-foo` [`data-*`](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*) [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) to the contents of the {{HTMLElement("p")}} element.
 
 #### HTML
 
@@ -237,7 +247,7 @@ In this example, we prepend the value of the `data-foo` [`data-*`](/en-US/docs/W
 
 {{SeeCompatTable}}
 
-In this example, we append the value of `data-browser` [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*) [global attribute](/en-US/docs/Web/HTML/Global_attributes) to the {{HTMLElement("p")}} element. If the `data-browser` attribute is missing from the {{HTMLElement("p")}} element, we append the _fallback_ value of "**Unknown**".
+In this example, we append the value of `data-browser` [`data-*`](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*) [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) to the {{HTMLElement("p")}} element. If the `data-browser` attribute is missing from the {{HTMLElement("p")}} element, we append the _fallback_ value of "**Unknown**".
 
 #### HTML
 
@@ -263,7 +273,7 @@ p::after {
 
 {{SeeCompatTable}}
 
-In this example, we set the CSS value of {{CSSXRef("background-color")}} to the value of the `data-background` [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*) [global attribute](/en-US/docs/Web/HTML/Global_attributes) assigned to the {{HTMLElement("div")}} element.
+In this example, we set the CSS value of {{CSSXRef("background-color")}} to the value of the `data-background` [`data-*`](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*) [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) assigned to the {{HTMLElement("div")}} element.
 
 #### HTML
 
@@ -493,5 +503,5 @@ document.querySelector("button").addEventListener("click", (e) => {
 ## See also
 
 - [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors)
-- [HTML `data-*` attributes](/en-US/docs/Web/HTML/Global_attributes/data-*)
-- [SVG `data-*` attributes](/en-US/docs/Web/SVG/Attribute/data-*)
+- [HTML `data-*` attributes](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*)
+- [SVG `data-*` attributes](/en-US/docs/Web/SVG/Reference/Attribute/data-*)

@@ -15,10 +15,8 @@ The **CSS view transitions** module defines the behavior of the [View Transition
 
 ### Properties
 
-- {{cssxref("view-transition-name")}} {{experimental_inline}}
-
-> [!NOTE]
-> This module also defines the `view-transition-class` property, but it is currently not supported in any browser.
+- {{cssxref("view-transition-class")}}
+- {{cssxref("view-transition-name")}}
 
 ### At-rules and descriptors
 
@@ -27,14 +25,13 @@ The **CSS view transitions** module defines the behavior of the [View Transition
 
 ### Selectors and pseudo-elements
 
-- {{cssxref("::view-transition")}} {{experimental_inline}}
-- {{cssxref("::view-transition-image-pair()")}} {{experimental_inline}}
-- {{cssxref("::view-transition-group()")}} {{experimental_inline}}
-- {{cssxref("::view-transition-new()")}} {{experimental_inline}}
-- {{cssxref("::view-transition-old()")}} {{experimental_inline}}
-
-> [!NOTE]
-> This module also defines the `:active-view-transition` and `:active-view-transition-type()` pseudo-classes, but they are currently not supported in any browser.
+- {{cssxref(":active-view-transition")}}
+- {{cssxref(":active-view-transition-type()")}}
+- {{cssxref("::view-transition")}}
+- {{cssxref("::view-transition-image-pair()")}}
+- {{cssxref("::view-transition-group()")}}
+- {{cssxref("::view-transition-new()")}}
+- {{cssxref("::view-transition-old()")}}
 
 ### Interfaces
 

@@ -1,10 +1,10 @@
 ---
 title: "Challenge: Styling a biography page"
+short-title: "Challenge: Biography page"
 slug: Learn_web_development/Core/Styling_basics/Styling_a_bio_page
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics")}}
 

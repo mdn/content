@@ -16,9 +16,9 @@ Gecko now uses the [HTML5](/en-US/docs/Glossary/HTML5) parser, which fixes bugs,
 
 - [Web forms](/en-US/docs/Learn_web_development/Extensions/Forms)
   - : A look at improvements to web forms. Among these changes are added input types in the {{HTMLElement("input")}} element, data validation, and more.
-- [HTML5 Sections](/en-US/docs/Web/HTML/Element/Heading_Elements)
+- [HTML5 Sections](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements)
   - : Gecko now supports the new HTML5 elements related to sections in a document: {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("nav")}}, {{HTMLElement("aside")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}} and {{HTMLElement("footer")}}.
-- [HTML5 hidden attribute](/en-US/docs/Web/HTML/Global_attributes/hidden)
+- [HTML5 hidden attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden)
   - : This attribute, common to all elements, is used to hide content in a webpage that is not currently relevant to the user.
 - Other HTML5 elements
   - : Gecko now also supports the following new HTML5 elements: {{HTMLElement("mark")}}, {{HTMLElement("figure")}}, and {{HTMLElement("figcaption")}}.
@@ -62,7 +62,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
   - : Support for touch properties is added. Details, and real article names, to come later.
 - [Using arbitrary elements as CSS backgrounds](/en-US/docs/Web/CSS/element)
   - : You can use the `-moz-element` CSS function and the {{domxref("document.mozSetImageElement()")}} DOM function to use arbitrary HTML elements as backgrounds.
-- [Privacy and the :visited selector](/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector)
+- [Privacy and the :visited selector](/en-US/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector)
   - : Changes have been made to what information can be obtained about the style of visited links using CSS selectors. This may affect some web applications.
 
 #### New CSS properties
@@ -232,7 +232,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
   - : Tips and tricks for getting the most out of graphics and video performance in Firefox 4.
 - [Support for WebM video](/en-US/docs/Web/Media/Guides/Formats#webm)
   - : The new open [WebM](https://www.webmproject.org/) video format is supported by Gecko 2.0.
-- [SVG animation with SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL)
+- [SVG animation with SMIL](/en-US/docs/Web/SVG/Guides/SVG_animation_with_SMIL)
   - : Support for SMIL animation of SVG is now available.
 - Using SVG as images and as CSS backgrounds
   - : You can now use SVG with the {{htmlelement("img")}} element, as well as a CSS {{cssxref("background-image")}}.
@@ -284,7 +284,7 @@ Several HTML elements have had their DOM interfaces changed to the ones required
 - The {{domxref("Document.createElement()")}} method no longer accepts `<` and `>` around the tag name in quirks mode.
 - The {{domxref("Element.setCapture()")}} and {{domxref("Document.releaseCapture()")}} methods have been added, allowing elements to continue tracking mouse events even while the mouse is outside their normal tracking area after a `mousedown` event has occurred.
 - The `window.mozPaintCount` property has been added; it lets you determine how many times a document has been painted. This can be useful when testing performance of your web application.
-- The language token has been removed from {{domxref("Navigator.appVersion")}} and {{domxref("Navigator.userAgent")}}. Use {{domxref("Navigator.language")}} or the [`Accept-Language`](/en-US/docs/Web/HTTP/Content_negotiation) header instead. [Firefox bug 572656](https://bugzil.la/572656)
+- The language token has been removed from {{domxref("Navigator.appVersion")}} and {{domxref("Navigator.userAgent")}}. Use {{domxref("Navigator.language")}} or the [`Accept-Language`](/en-US/docs/Web/HTTP/Guides/Content_negotiation) header instead. [Firefox bug 572656](https://bugzil.la/572656)
 - The {{domxref("XMLHttpRequest")}} object now exposes the response as a JavaScript typed array as well as a string, using the Gecko-specific `mozResponseArrayBuffer` property.
 - [Mouse events](/en-US/docs/Web/API/MouseEvent) now include a `mozPressure` property indicating the amount of pressure on supported pressure-sensitive input devices.
 - The {{domxref("URL/createObjectURL_static", "URL.createObjectURL()")}} and {{domxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} methods let you create object URLs which reference local files.
@@ -299,13 +299,13 @@ Several HTML elements have had their DOM interfaces changed to the ones required
 
 ### Security
 
-- [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP)
+- [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP)
   - : Content Security Policy (CSP) is a Mozilla proposal designed to help web designers and server administrators specify how content on their websites interacts. The goal is to help detect and mitigate attacks including cross-site scripting and data injection attacks.
-- [HTTP Strict Transport Security](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security)
+- [HTTP Strict Transport Security](/en-US/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security)
   - : HTTP Strict Transport Security is a security feature that lets a website tell browsers that it should only be communicated with using HTTPS, instead of using HTTP.
-- [The X-FRAME-OPTIONS response header](/en-US/docs/Web/HTTP/Headers/X-Frame-Options)
+- [The X-FRAME-OPTIONS response header](/en-US/docs/Web/HTTP/Reference/Headers/X-Frame-Options)
   - : The X-FRAME-OPTIONS HTTP response header introduced in Internet Explorer 8 is now supported by Firefox. This allows sites to indicate whether or not their pages can be used in frames, and if so, whether or not to restrict that to the same origin.
-- [User Agent string](/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox) changes
+- [User Agent string](/en-US/docs/Web/HTTP/Reference/Headers/User-Agent/Firefox) changes
   - : As a means to reduce the amount of data and entropy sent out in HTTP requests (see [Firefox bug 572650](https://bugzil.la/572650)), the crypto strength and language tokens have been removed from the user agent string.
 
 ### JavaScript

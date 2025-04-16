@@ -1,12 +1,18 @@
 ---
 title: Setting up a Node development environment
+short-title: Dev environment setup
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 Now that you know what [Express](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction#introducing_express) is for, we'll show you how to set up and test a Node/Express development environment on Windows, or Linux (Ubuntu), or macOS. For any of those operating systems, this article provides what you need to start developing Express apps.
+
+> [!WARNING]
+> The Express tutorial is written for Express version 4, while the latest version is Express 5.
+> We plan to update the documentation to support Express 5 in the second half of 2025. Until then, we have updated the installation commands so they install Express 4 rather than the latest version, to avoid any potential compatibility problems.
 
 <table>
   <tbody>
@@ -42,7 +48,7 @@ There are other peripheral tools that are part of a typical development environm
 
 ### What operating systems are supported?
 
-_Node_ can be run on Windows, macOS, many flavors of Linux, Docker, etc. There is a full list on the Node.js [Downloads](https://nodejs.org/en/download/package-manager) page. Almost any personal computer should have the necessary performance to run Node during development. _Express_ is run in a _Node_ environment, and hence can run on any platform that runs _Node_.
+_Node_ can be run on Windows, macOS, many flavors of Linux, Docker, etc. There is a full list on the Node.js [Downloads](https://nodejs.org/en/download) page. Almost any personal computer should have the necessary performance to run Node during development. _Express_ is run in a _Node_ environment, and hence can run on any platform that runs _Node_.
 
 In this article we provide setup instructions for Windows, macOS, and Ubuntu Linux.
 
@@ -64,7 +70,7 @@ In order to use _Express_ you will have to install _Nodejs_ and the [Node Packag
 To make this easier we'll first install a node version manager, and then we'll use it to install the latest Long Term Supported (LTS) versions of node and npm.
 
 > [!NOTE]
-> You can also install nodejs and npm with installers provide on <https://nodejs.org/en/> (select the button to download the LTS build that is "Recommended for most users"), or you can [install using the package manager for your OS](https://nodejs.org/en/download/package-manager) (nodejs.org).
+> You can also install nodejs and npm with installers provide on <https://nodejs.org/en/> (select the button to download the LTS build that is "Recommended for most users"), or you can [install using the package manager for your OS](https://nodejs.org/en/download) (nodejs.org).
 > We highly recommend using a node version manager as these make it easier to install, upgrade, and switch between any particular version of node and npm.
 
 ### Windows
@@ -223,7 +229,7 @@ The following steps show how you can use npm to download a package, save it into
 3. Now install Express in the `myapp` directory and save it in the dependencies list of your **package.json** file:
 
    ```bash
-    npm install express
+   npm install express@^4.21.2
    ```
 
    The dependencies section of your **package.json** will now appear at the end of the **package.json** file and will include _Express_.
@@ -240,7 +246,7 @@ The following steps show how you can use npm to download a package, save it into
      "author": "",
      "license": "ISC",
      "dependencies": {
-       "express": "^4.17.1"
+       "express": "^4.21.2"
      }
    }
    ```
@@ -434,7 +440,7 @@ In the next article we start working through a tutorial to build a complete web 
 
 ## See also
 
-- [Downloads](https://nodejs.org/en/download/package-manager) page (nodejs.org)
+- [Downloads](https://nodejs.org/en/download) page (nodejs.org)
 - [Installing Express](https://expressjs.com/en/starter/installing.html) (expressjs.com)
 - [Express Application Generator](https://expressjs.com/en/starter/generator.html) (expressjs.com)
 - [Using Node.js with Windows subsystem for Linux](https://learn.microsoft.com/en-us/windows/dev-environment/javascript/) (docs.microsoft.com)

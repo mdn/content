@@ -5,6 +5,9 @@ page-type: guide
 browser-compat:
   - api.CredentialsContainer.create.publicKey_option.extensions
   - api.CredentialsContainer.get.publicKey_option.extensions
+spec-urls:
+  - https://w3c.github.io/webauthn/#sctn-defined-extensions
+  - https://fidoalliance.org/specs/fido-v2.1-ps-20210615/fido-client-to-authenticator-protocol-v2.1-ps-20210615.html#sctn-defined-extensions
 ---
 
 {{DefaultAPISidebar("Web Authentication API")}}
@@ -24,22 +27,22 @@ For example, in a `publicKey` object for a `create()` call, we might want to req
 
 ```js
 const publicKey = {
-  challenge: new Uint8Array([117, 61, 252, 231, 191, 241, ...]),
+  challenge: new Uint8Array([117, 61, 252, 231, 191, 241 /* … */]),
   rp: { id: "acme.com", name: "ACME Corporation" },
   user: {
     id: new Uint8Array([79, 252, 83, 72, 214, 7, 89, 26]),
     name: "jamiedoe",
-    displayName: "Jamie Doe"
+    displayName: "Jamie Doe",
   },
-  pubKeyCredParams: [ {type: "public-key", alg: -7} ],
+  pubKeyCredParams: [{ type: "public-key", alg: -7 }],
   authenticatorSelection: {
-    residentKey: "preferred"
+    residentKey: "preferred",
   },
   extensions: {
     credProps: true,
-    minPinLength: true
-  }
-}
+    minPinLength: true,
+  },
+};
 ```
 
 We can then pass the `publicKey` object into a `create()` call to initiate the credential creation flow:
@@ -99,21 +102,25 @@ Allows a relying party to request an assertion for a credential previously regis
 The `publicKey`'s `extensions` property must contain an `appid` property, the value of which is the application identifier used in the legacy API. For example:
 
 ```js
-extensions: {
-  appid: "https://accounts.example.com";
-}
+({
+  extensions: {
+    appid: "https://accounts.example.com",
+  },
+});
 ```
 
 You must also list the FIDO U2F credential IDs in the `publicKey`'s `allowCredentials` property, for example:
 
 ```js
-allowCredentials: {
-  [
-    id: arrayBuffer, // needs to contain decoded binary form of id
-    transports: ["nfc", "usb"]
-    type: "public-key"
-  ]
-}
+({
+  allowCredentials: [
+    {
+      id: arrayBuffer, // needs to contain decoded binary form of id
+      transports: ["nfc", "usb"],
+      type: "public-key",
+    },
+  ],
+});
 ```
 
 #### Output
@@ -133,21 +140,25 @@ Allows a relying party to exclude authenticators containing specified credential
 The `publicKey`'s `extensions` property must contain an `appidExclude` property, the value of which is the identifier of the relying party requesting to exclude authenticators by legacy FIDO U2F credentials. For example:
 
 ```js
-extensions: {
-  appidExclude: "https://accounts.example.com";
-}
+({
+  extensions: {
+    appidExclude: "https://accounts.example.com",
+  },
+});
 ```
 
 You can then list FIDO U2F credentials in the `publicKey`'s `excludeCredentials` property, for example:
 
 ```js
-excludeCredentials: {
-  [
-    id: arrayBuffer, // needs to contain decoded binary form of id
-    transports: ["nfc", "usb"]
-    type: "public-key"
-  ]
-}
+({
+  excludeCredentials: [
+    {
+      id: arrayBuffer, // needs to contain decoded binary form of id
+      transports: ["nfc", "usb"],
+      type: "public-key",
+    },
+  ],
+});
 ```
 
 #### Output
@@ -167,17 +178,21 @@ Allows a relying party to request additional information/properties about the cr
 The `publicKey`'s `extensions` property must contain a `credProps` property with a value of `true`:
 
 ```js
-extensions: {
-  credProps: true;
-}
+({
+  extensions: {
+    credProps: true,
+  },
+});
 ```
 
 You must also set `authenticatorSelection.requireResidentKey` to `true`, which indicates that a resident key is required.
 
 ```js
-authenticatorSelection: {
-  requireResidentKey: true;
-}
+({
+  authenticatorSelection: {
+    requireResidentKey: true,
+  },
+});
 ```
 
 #### Output
@@ -185,9 +200,11 @@ authenticatorSelection: {
 Outputs the following if the registered {{domxref("PublicKeyCredential")}} is a client-side discoverable credential:
 
 ```js
-credProps: {
-  rk: true;
-}
+({
+  credProps: {
+    rk: true,
+  },
+});
 ```
 
 If `rk` is set to `false` in the output, the credential is a server-side credential. If `rk` is not present in the output, then it is not known whether the credential is client-side discoverable or server-side.
@@ -205,10 +222,12 @@ Allows a relying party to specify a minimum credential protection policy when cr
 The `publicKey`'s `extensions` property must contain a `credentialProtectionPolicy` property specifying the protection level of the credential to be created, and a boolean `enforceCredentialProtectionPolicy` property specifying whether the `create()` call should fail rather than creating a credential that does not conform to the specified policy:
 
 ```js
-extensions: {
-  credentialProtectionPolicy: "userVerificationOptional",
-  enforceCredentialProtectionPolicy: true
-}
+({
+  extensions: {
+    credentialProtectionPolicy: "userVerificationOptional",
+    enforceCredentialProtectionPolicy: true,
+  },
+});
 ```
 
 The available `credentialProtectionPolicy` values are as follows:
@@ -234,7 +253,7 @@ The available `credentialProtectionPolicy` values are as follows:
 If the `create()` call is successful, the authenticator data will contain a representation of the `credProtect` value representing the set policy in the following form:
 
 ```js
-{ "credProtect": 0x01 }
+({ credProtect: 0x01 });
 ```
 
 ### `largeBlob`
@@ -250,11 +269,13 @@ Allows a relying party to store blobs associated with a credential on the authen
 During a `create()` call, the `publicKey`'s `extensions` property must contain a `largeBlob` property with the following object structure:
 
 ```js
-extensions: {
-  largeBlob: {
-    support: "required";
-  }
-}
+({
+  extensions: {
+    largeBlob: {
+      support: "required",
+    },
+  },
+});
 ```
 
 The `support` property's value is a string, which can be one of the following:
@@ -267,21 +288,25 @@ During a `get()` call, the `publicKey`'s `extensions` property must contain a `l
 The `read` property is a boolean. A value of `true` indicates that the relying party would like to fetch a previously-written blob associated with the asserted credential:
 
 ```js
-extensions: {
-  largeBlob: {
-    read: true;
-  }
-}
+({
+  extensions: {
+    largeBlob: {
+      read: true,
+    },
+  },
+});
 ```
 
 The `write` property takes as a value an {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, or {{jsxref("DataView")}} representing a blob that the relying party wants to store alongside an existing credential:
 
 ```js
-extensions: {
-  largeBlob: {
-    write: arrayBuffer;
-  }
-}
+({
+  extensions: {
+    largeBlob: {
+      write: arrayBuffer,
+    },
+  },
+});
 ```
 
 > [!NOTE]
@@ -292,17 +317,21 @@ extensions: {
 A successful `create()` call provides the following extension output if the registered credential is capable of storing blobs:
 
 ```js
-largeBlob: {
-  supported: true; // false if it cannot store blobs
-}
+({
+  largeBlob: {
+    supported: true, // false if it cannot store blobs
+  },
+});
 ```
 
 A `get()` read call makes the blob available as an {{jsxref("ArrayBuffer")}} in the extension output if successful:
 
 ```js
-largeBlob: {
-  blob: arrayBuffer;
-}
+({
+  largeBlob: {
+    blob: arrayBuffer,
+  },
+});
 ```
 
 > [!NOTE]
@@ -311,9 +340,11 @@ largeBlob: {
 A `get()` write call indicates whether the write operation was successful with a `written` boolean value in the extension output. A `true` value means it was written successfully to the associated authenticator, and `false` means it was unsuccessful.
 
 ```js
-largeBlob: {
-  written: true;
-}
+({
+  largeBlob: {
+    written: true,
+  },
+});
 ```
 
 ### `minPinLength`
@@ -329,9 +360,11 @@ Allows relying parties to request the authenticator's minimum PIN length.
 The `publicKey`'s `extensions` property must contain a `minPinLength` property with a value of `true`:
 
 ```js
-extensions: {
-  minPinLength: true;
-}
+({
+  extensions: {
+    minPinLength: true,
+  },
+});
 ```
 
 #### Output
@@ -339,7 +372,7 @@ extensions: {
 If the relying party is authorized to receive the `minPinLength` value (if its `rpId` is present on the authenticator's authorized relying party list), the authenticator data will contain a representation of it in the following form:
 
 ```js
-{"minPinLength": uint}
+({ minPinLength: uint });
 ```
 
 If the relying party is not authorized, the extension is ignored, and no `"minPinLength"` output value is provided.
@@ -379,10 +412,7 @@ None
 
 There are a number of places that WebAuthn extensions are specified. IANA's [WebAuthn Extension Identifiers](https://www.iana.org/assignments/webauthn/webauthn.xhtml#webauthn-extension-ids) provides a registry of all extensions, but bear in mind that some may be deprecated.
 
-Places where extensions are specified:
-
-- [Web Authentication Level 3, Section 10: Defined extensions](https://w3c.github.io/webauthn/#sctn-defined-extensions)
-- [Client to Authenticator Protocol (CTAP) 2, Section 12: Defined Extensions](https://fidoalliance.org/specs/fido-v2.1-ps-20210615/fido-client-to-authenticator-protocol-v2.1-ps-20210615.html#sctn-defined-extensions)
+{{Specifications}}
 
 ## Browser compatibility
 

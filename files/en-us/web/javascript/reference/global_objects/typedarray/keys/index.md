@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.TypedArray.keys
 
 The **`keys()`** method of {{jsxref("TypedArray")}} instances returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the keys for each index in the typed array. This method has the same algorithm as {{jsxref("Array.prototype.keys()")}}.
 
-{{InteractiveExample("JavaScript Demo: TypedArray.keys()")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.prototype.keys()")}}
 
 ```js interactive-example
 const uint8 = new Uint8Array([10, 20, 30, 40, 50]);

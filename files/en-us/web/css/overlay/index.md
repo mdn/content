@@ -14,7 +14,7 @@ The **`overlay`** [CSS](/en-US/docs/Web/CSS) property specifies whether an eleme
 It is important to note that `overlay` can _only_ be set by the browser — author styles cannot change the `overlay` value of any element. You can, however, add `overlay` to the [list of transition properties](/en-US/docs/Web/CSS/transition-property) set on an element. This causes its removal from the top layer to be deferred so it can be animated instead of disappearing immediately.
 
 > [!NOTE]
-> When transitioning `overlay`, you need to set [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) on the transition so that it will animate. `overlay` animations differ from normal [discrete animations](/en-US/docs/Web/CSS/CSS_animated_properties#discrete) in that the visible (i.e. `auto`) state will always be shown for the full duration of the transition, regardless of whether it is the start or end state.
+> When transitioning `overlay`, you need to set [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) on the transition so that it will animate. `overlay` animations differ from normal [discrete animations](/en-US/docs/Web/CSS/CSS_animated_properties#discrete) in that the visible (i.e., `auto`) state will always be shown for the full duration of the transition, regardless of whether it is the start or end state.
 
 ## Syntax
 
@@ -54,7 +54,7 @@ In this example, a [popover](/en-US/docs/Web/API/Popover_API) is animated as it 
 
 #### HTML
 
-The HTML contains a {{htmlelement("div")}} element declared as a popover using the [popover](/en-US/docs/Web/HTML/Global_attributes/popover) attribute, and a {{htmlelement("button")}} element designated as the popover's display control using its [popovertarget](/en-US/docs/Web/HTML/Element/button#popovertarget) attribute.
+The HTML contains a {{htmlelement("div")}} element declared as a popover using the [popover](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) attribute, and a {{htmlelement("button")}} element designated as the popover's display control using its [popovertarget](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget) attribute.
 
 ```html
 <button popovertarget="mypopover">Show the popover</button>
@@ -129,7 +129,7 @@ html {
 
 The two properties we want to animate are [`opacity`](/en-US/docs/Web/CSS/opacity) and [`transform`](/en-US/docs/Web/CSS/transform)): we want the popover to fade in and out while growing and shrinking in the horizontal direction. We set a starting state for these properties on the default hidden state of the popover element (selected via `[popover]`), and an end state on the open state of the popover (selected via the [`:popover-open`](/en-US/docs/Web/CSS/:popover-open) pseudo-class). We then set a [`transition`](/en-US/docs/Web/CSS/transition) property to animate between the two.
 
-Because the animated element is being promoted to the [top layer](/en-US/docs/Glossary/Top_layer) when shown and removed from the top layer when hidden, `overlay` is added to the list of transitioned elements. This ensures that the removal of the element from the top layer is deferred until the animation has ended. This doesn't make a huge difference for simple animations such as this one, but in more complex cases not doing this can result in the element being removed from the overlay too quickly, meaning the animation is not smooth or effective. Note that the [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) value is also set in the shorthand to enable discrete transitions.
+Because the animated element is being promoted to the [top layer](/en-US/docs/Glossary/Top_layer) when shown and removed from the top layer when hidden, `overlay` is added to the list of transitioned elements. This ensures that the removal of the element from the top layer is deferred until the animation has ended. This doesn't make a huge difference for basic animations such as this one, but in more complex cases not doing this can result in the element being removed from the overlay too quickly, meaning the animation is not smooth or effective. Note that the [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) value is also set in the shorthand to enable discrete transitions.
 
 The following steps are also required to get the animation working in both directions:
 

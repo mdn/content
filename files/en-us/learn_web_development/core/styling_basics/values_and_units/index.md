@@ -1,10 +1,10 @@
 ---
 title: CSS values and units
+short-title: Values and units
 slug: Learn_web_development/Core/Styling_basics/Values_and_units
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics")}}
 
@@ -158,7 +158,7 @@ In this section we'll explore some of the most common relative units.
 
 In the example below, you can see how some relative and absolute length units behave. The first box has a {{cssxref("width")}} set in pixels. As an absolute unit, this width will remain the same no matter what else changes.
 
-The second box has a width set in `vw` (viewport width) units. This value is relative to the viewport width, and so 10vw is 10 percent of the width of the viewport. If you change the width of your browser window, the size of the box should change. However this example is embedded into the page using an [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe), so this won't work. To see this in action you'll have to [try the example after opening it in its own browser tab](https://mdn.github.io/css-examples/learn/values-units/length.html).
+The second box has a width set in `vw` (viewport width) units. This value is relative to the viewport width, and so 10vw is 10 percent of the width of the viewport. If you change the width of your browser window, the size of the box should change. However this example is embedded into the page using an [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe), so this won't work. To see this in action you'll have to [try the example after opening it in its own browser tab](https://mdn.github.io/css-examples/learn/values-units/length.html).
 
 The third box uses `em` units. These are relative to the element's font size. I've set a font size of `1em` on the containing {{htmlelement("div")}}, which has a class of `.wrapper`. Change this value to `1.5em` and you will see that the font size of all the elements increases, but only the last item will get wider, as its width is relative to that font size.
 
@@ -444,7 +444,7 @@ You can mix and match color models, but it's usually best if your entire project
 
 ### Color keywords
 
-You will see the color keywords (or 'named colors') used in many MDN code examples. As the [`<named-color>`s](/en-US/docs/Web/CSS/named-color) data type contains a very finite number of color values, these are not commonly used on production websites. As the keyword represents the color as a human-readable text value, named colors are used in code examples to clearly tell the user what color is expected so the learner can focus on the content being taught.
+You will see the color keywords (or "named colors") used in many MDN code examples. Because the [`<named-color>`](/en-US/docs/Web/CSS/named-color) data type contains a very finite number of color values, they are not commonly used on production websites with a sophisticated design language. On the other hand, named colors are used in code examples to clearly tell the user what color is expected so the learner can focus on the content being taught.
 
 Try playing with different color values in the live examples below, to get more of an idea how they work:
 
@@ -845,7 +845,7 @@ Knowing about CSS functions is useful so you recognize them when you see them. Y
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_tasks).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Values).
 
 ## Summary
 

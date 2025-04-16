@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Function.length
 
 The **`length`** data property of a {{jsxref("Function")}} instance indicates the number of parameters expected by the function.
 
-{{InteractiveExample("JavaScript Demo: Function.length")}}
+{{InteractiveExample("JavaScript Demo: Function: length")}}
 
 ```js interactive-example
 function func1() {}
@@ -31,7 +31,7 @@ A number.
 
 ## Description
 
-A {{jsxref("Function")}} object's `length` property indicates how many arguments the function expects, i.e. the number of formal parameters:
+A {{jsxref("Function")}} object's `length` property indicates how many arguments the function expects, i.e., the number of formal parameters:
 
 - Only parameters before the first one with a [default value](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) are counted.
 - A [destructuring pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) counts as a single parameter.

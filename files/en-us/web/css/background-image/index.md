@@ -9,7 +9,43 @@ browser-compat: css.properties.background-image
 
 The **`background-image`** [CSS](/en-US/docs/Web/CSS) property sets one or more background images on an element.
 
-{{EmbedInteractiveExample("pages/css/background-image.html")}}
+{{InteractiveExample("CSS Demo: background-image")}}
+
+```css interactive-example-choice
+background-image: url("/shared-assets/images/examples/lizard.png");
+```
+
+```css interactive-example-choice
+background-image:
+  url("/shared-assets/images/examples/lizard.png"),
+  url("/shared-assets/images/examples/star.png");
+```
+
+```css interactive-example-choice
+background-image:
+  url("/shared-assets/images/examples/star.png"),
+  url("/shared-assets/images/examples/lizard.png");
+```
+
+```css interactive-example-choice
+background-image:
+  linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
+  url("/shared-assets/images/examples/lizard.png");
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-width: 100%;
+  min-height: 100%;
+  padding: 10%;
+}
+```
 
 The background images are drawn on stacking context layers on top of each other. The first layer specified is drawn as if it is closest to the user.
 

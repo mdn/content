@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.String.length
 
 The **`length`** data property of a {{jsxref("String")}} value contains the length of the string in UTF-16 code units.
 
-{{InteractiveExample("JavaScript Demo: String.length", "shorter")}}
+{{InteractiveExample("JavaScript Demo: String: length", "shorter")}}
 
 ```js interactive-example
 const str = "Life, the universe and everything. Answer:";

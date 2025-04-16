@@ -12,7 +12,7 @@ This article explains how [Attribution Reporting API](/en-US/docs/Web/API/Attrib
 
 ## Basic process
 
-When a match occurs between a trigger and a source, the browser generates a report and sends it via an uncredentialed [`POST`](/en-US/docs/Web/HTTP/Methods/POST) request to a specific endpoint on the reporting origin:
+When a match occurs between a trigger and a source, the browser generates a report and sends it via an uncredentialed [`POST`](/en-US/docs/Web/HTTP/Reference/Methods/POST) request to a specific endpoint on the reporting origin:
 
 - For event-level reports, this is `<reporting-origin>/.well-known/attribution-reporting/report-event-attribution`.
 - For summary reports, this is `<reporting-origin>/.well-known/attribution-reporting/report-aggregate-attribution`.
@@ -23,14 +23,14 @@ The report data is contained in a JSON structure.
 
 ## Event-level reports
 
-Event-level reports are generated and scheduled to be sent at the end of their containing **report window**. The length of the report window is determined by the values set in the [`"event_report_window"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#event_report_window) or [`"event_report_windows"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#event_report_windows) field set in the source's {{httpheader("Attribution-Reporting-Register-Source")}} header.
+Event-level reports are generated and scheduled to be sent at the end of their containing **report window**. The length of the report window is determined by the values set in the [`"event_report_window"`](/en-US/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#event_report_window) or [`"event_report_windows"`](/en-US/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#event_report_windows) field set in the source's {{httpheader("Attribution-Reporting-Register-Source")}} header.
 
 If neither of these fields are specified, the report window falls back to the following defaults:
 
-- For [event-based sources](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#event-based_attribution_sources), the default report window ends at the source's expiry, which is set in the `Attribution-Reporting-Register-Source` [`"expiry"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#expiry) field. This defaults to 30 days after registration if not explicitly set.
+- For [event-based sources](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#event-based_attribution_sources), the default report window ends at the source's expiry, which is set in the `Attribution-Reporting-Register-Source` [`"expiry"`](/en-US/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#expiry) field. This defaults to 30 days after registration if not explicitly set.
 - For [navigation-based sources](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources), the default report windows are 2 days, 7 days, and the source's `"expiry"`.
 
-See [Custom report windows](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/custom-report-windows) for more details.
+See [Custom report windows](https://privacysandbox.google.com/private-advertising/attribution-reporting/custom-report-windows) for more details.
 
 Once an event-level report is received at the appropriate endpoint, how the data is processed, stored, and displayed is completely up to the developer. A typical event-level report might look like this:
 
@@ -51,11 +51,11 @@ Once an event-level report is received at the appropriate endpoint, how the data
 The properties are as follows:
 
 - `"attribution_destination"`
-  - : A string, or an array of 2–3 strings, depending on whether the source was registered with multiple destinations or not. These strings represent the attribution [`"destination"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#destination) site(s) set in the source registration via the associated {{httpheader("Attribution-Reporting-Register-Source")}} response header.
+  - : A string, or an array of 2–3 strings, depending on whether the source was registered with multiple destinations or not. These strings represent the attribution [`"destination"`](/en-US/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#destination) site(s) set in the source registration via the associated {{httpheader("Attribution-Reporting-Register-Source")}} response header.
 - `"source_event_id"`
-  - : A string representing the attribution source ID. This is equal to the [`"source_event_id"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#source_event_id) set in the source registration (via the associated {{httpheader("Attribution-Reporting-Register-Source")}} response header).
+  - : A string representing the attribution source ID. This is equal to the [`"source_event_id"`](/en-US/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#source_event_id) set in the source registration (via the associated {{httpheader("Attribution-Reporting-Register-Source")}} response header).
 - `"trigger_data"`
-  - : A string representing data originating from the attribution trigger, set in the trigger registration (the [`"trigger_data"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Trigger#trigger_data) set via the associated {{httpheader("Attribution-Reporting-Register-Trigger")}} response header).
+  - : A string representing data originating from the attribution trigger, set in the trigger registration (the [`"trigger_data"`](/en-US/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Trigger#trigger_data) set via the associated {{httpheader("Attribution-Reporting-Register-Trigger")}} response header).
 - `"report_id"`
   - : A string representing a [Universally Unique Identifier (UUID)](/en-US/docs/Glossary/UUID) for this report, which can be used to prevent duplicate counting.
 - `"source_type"`
@@ -65,17 +65,17 @@ The properties are as follows:
 - `"scheduled_report_time"`
   - : A string representing the number of seconds from the Unix Epoch until the browser initially scheduled the report to be sent (to avoid inaccuracies as a result of offline devices reporting late).
 - `"source_debug_key"` {{optional_inline}}
-  - : A 64 bit unsigned integer representing the debugging key for the attribution source. This mirrors the value set in the associated {{httpheader("Attribution-Reporting-Register-Source")}} header's [`"debug_key"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#debug_key) field. See [Debug reports](#debug_reports) for more information.
+  - : A 64 bit unsigned integer representing the debugging key for the attribution source. This mirrors the value set in the associated {{httpheader("Attribution-Reporting-Register-Source")}} header's [`"debug_key"`](/en-US/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#debug_key) field. See [Debug reports](#debug_reports) for more information.
 - `"trigger_debug_key"` {{optional_inline}}
   - : A 64 bit unsigned integer representing the debugging key for the attribution trigger. This mirrors the value set in the associated {{httpheader("Attribution-Reporting-Register-Trigger")}} header's `"debug_key"` field. See [Debug reports](#debug_reports) for more information.
 
 ## Summary reports
 
-A summary report is created from several aggregatable reports received at the appropriate endpoint and then [batched](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/summary-reports-intro#batching) to prepare them to be processed by an [aggregation service](https://developers.google.com/privacy-sandbox/private-advertising/aggregation-service). When this has occurred, how the data is processed, stored, and displayed is completely up to the developer.
+A summary report is created from several aggregatable reports received at the appropriate endpoint and then [batched](https://privacysandbox.google.com/private-advertising/attribution-reporting/summary-reports-intro#batching) to prepare them to be processed by an [aggregation service](https://privacysandbox.google.com/private-advertising/aggregation-service). When this has occurred, how the data is processed, stored, and displayed is completely up to the developer.
 
 An aggregatable report by default is generated and scheduled to be sent after a trigger is interacted with, with a random delay to help fuzz the timings and improve privacy. For a given registered attribution source, attribution source events will be recorded from registration up until the source expires - this is referred to as the **report window**.
 
-The expiry time is defined by the `expiry` value set in the associated {{httpheader("Attribution-Reporting-Register-Source")}} header, which defaults to 30 days after registration if not explicitly set. Bear in mind that the length of the report window can be further modified by setting an `aggregatable_report_window` value in the `Attribution-Reporting-Register-Source` header. See [Custom report windows](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/custom-report-windows) for more details.
+The expiry time is defined by the `expiry` value set in the associated {{httpheader("Attribution-Reporting-Register-Source")}} header, which defaults to 30 days after registration if not explicitly set. Bear in mind that the length of the report window can be further modified by setting an `aggregatable_report_window` value in the `Attribution-Reporting-Register-Source` header. See [Custom report windows](https://privacysandbox.google.com/private-advertising/attribution-reporting/custom-report-windows) for more details.
 
 > [!NOTE]
 > To further protect user privacy, the summary report values associated with each attribution source have a finite total value — this is called the **contribution budget**. This value may very across different implementations of the API; in Chrome it is 65,536. Any conversions that would generate reports adding values over that limit are not recorded. Make sure you keep track of the budget and share it between the different metrics you are trying to measure.
@@ -105,7 +105,7 @@ The properties are as follows:
     - `"api"`
       - : A enumerated value representing the API that triggered the report generation. Currently this will always be equal to `"attribution-reporting"`, but it may be extended with additional values to support other APIs in the future.
     - `"attribution_destination"`
-      - : A string representing the attribution [`"destination"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#destination) URL set in the source registration (via the associated {{httpheader("Attribution-Reporting-Register-Source")}} response header).
+      - : A string representing the attribution [`"destination"`](/en-US/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#destination) URL set in the source registration (via the associated {{httpheader("Attribution-Reporting-Register-Source")}} response header).
     - `"report_id"`
       - : A string representing a [Universally Unique Identifier (UUID)](/en-US/docs/Glossary/UUID) for this report, which can be used to prevent duplicate counting.
     - `"reporting_origin"`
@@ -122,17 +122,22 @@ The properties are as follows:
 
     - `"payload"`
 
-      - : A [CBOR](https://cbor.io/) map encrypted via [HPKE](https://datatracker.ietf.org/doc/rfc9180/) and then [base64](/en-US/docs/Glossary/Base64)-encoded, with the following structure:
+      - : A [CBOR](https://cbor.io/) map encrypted via [HPKE](https://datatracker.ietf.org/doc/rfc9180/) and then [base64](/en-US/docs/Glossary/Base64)-encoded, with the following structure (using JSON for notation only):
 
-        ```js
+        ```json
         {
-          "operation": "histogram",  // Allows for the service to support other operations in the future
-          "data": [{
-            "bucket": <bucket, encoded as a 16-byte (i.e. 128-bit) big-endian bytestring>,
-            "value": <value, encoded as a 4-byte (i.e. 32-bit) big-endian bytestring>
-          }, ...]
+          "operation": "histogram",
+          "data": [
+            {
+              "bucket": "<Encoded as a 16-byte (i.e. 128-bit) big-endian bytestring>",
+              "value": "<Encoded as a 4-byte (i.e. 32-bit) big-endian bytestring>"
+            }
+            // …
+          ]
         }
         ```
+
+        The `operation` is always `"histogram"`; it allows for the service to support other operations in the future.
 
     - `"key_id"`
       - : A string identifying the public key used to encrypt the payload.
@@ -142,7 +147,7 @@ The properties are as follows:
 - `"aggregation_coordinator_origin"`
   - : The deployment option for the aggregation service.
 - `"source_debug_key"` {{optional_inline}}
-  - : A 64 bit unsigned integer representing the debugging key for the attribution source. This mirrors the value set in the associated {{httpheader("Attribution-Reporting-Register-Source")}} header's [`"debug_key"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#debug_key) field. See [Debug reports](#debug_reports) for more information.
+  - : A 64 bit unsigned integer representing the debugging key for the attribution source. This mirrors the value set in the associated {{httpheader("Attribution-Reporting-Register-Source")}} header's [`"debug_key"`](/en-US/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#debug_key) field. See [Debug reports](#debug_reports) for more information.
 - `"trigger_debug_key"` {{optional_inline}}
   - : A 64 bit unsigned integer representing the debugging key for the attribution trigger. This mirrors the value set in the associated {{httpheader("Attribution-Reporting-Register-Trigger")}} header's `"debug_key"` field. See [Debug reports](#debug_reports) for more information.
 
@@ -154,7 +159,7 @@ THIS INFORMATION IS NOT COMPLETE; WE HAVE PARKED IT FOR NOW SO THAT WE CAN GET T
 In the case of event-level reports, this is done using a randomized response algorithm, which works like so:
 
 1. When an attribution source is stored, the browser generates a list of all possible sets of reports that could originate from the source's configuration (including the set consisting of no reports).
-2. In a small percentage of cases, the browser prevents the source from being attributed and instead picks a random member of that list to use as the source's reports. The probability of this happening is based on the size of that list, the browser's implementation-specific privacy parameters, and the source's chosen [`"event_level_epsilon"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#event_level_epsilon).
+2. In a small percentage of cases, the browser prevents the source from being attributed and instead picks a random member of that list to use as the source's reports. The probability of this happening is based on the size of that list, the browser's implementation-specific privacy parameters, and the source's chosen [`"event_level_epsilon"`](/en-US/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#event_level_epsilon).
 
 Typical settings in the {{httpheader("Attribution-Reporting-Register-Source")}} header might look like so:
 
@@ -191,9 +196,9 @@ Noise is added to reports in order to obscure the output associated with a parti
 
 For information on how noise works in attribution reporting, see:
 
-- [Understanding noise in summary reports](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/understanding-noise).
+- [Understanding noise in summary reports](https://privacysandbox.google.com/private-advertising/attribution-reporting/understanding-noise).
 - [Data limits and noise](https://github.com/WICG/attribution-reporting-api/blob/main/EVENT.md#data-limits-and-noise)
-- [Working with noise](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/working-with-noise)
+- [Working with noise](https://privacysandbox.google.com/private-advertising/attribution-reporting/working-with-noise)
 
 ## Report priorities and limits
 
@@ -207,7 +212,7 @@ Different source types have different default limits:
 - [Event-based attribution sources](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#event-based_attribution_sources) have a one-report limit by default.
 
 > [!NOTE]
-> The report limit can be adjusted by setting a different number of `"end_times"` in the [`"event_report_windows"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#event_report_windows) fields of the associated `Attribution-Reporting-Register-Source` header.
+> The report limit can be adjusted by setting a different number of `"end_times"` in the [`"event_report_windows"`](/en-US/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#event_report_windows) fields of the associated `Attribution-Reporting-Register-Source` header.
 
 When an attribution is triggered for a given source event, if the maximum number of attributions (three for clicks, one for images/scripts) has been reached for this source the browser will:
 
@@ -343,6 +348,6 @@ Generated success debug reports are identical to attribution reports, and contai
 
 For further information and examples, see:
 
-- [Introduction to debug reports](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/attribution-reporting-debugging/) on developers.google.com (2023)
-- [Set up debug reports](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/attribution-reporting-debugging/part-2/) on developers.google.com (2023)
-- [Debugging cookbook](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/attribution-reporting-debugging/part-3/) on developers.google.com (2023)
+- [Introduction to debug reports](https://privacysandbox.google.com/private-advertising/attribution-reporting/attribution-reporting-debugging/) on privacysandbox.google.com (2023)
+- [Set up debug reports](https://privacysandbox.google.com/private-advertising/attribution-reporting/attribution-reporting-debugging/part-2/) on privacysandbox.google.com (2023)
+- [Debugging cookbook](https://privacysandbox.google.com/private-advertising/attribution-reporting/attribution-reporting-debugging/part-3/) on privacysandbox.google.com (2023)

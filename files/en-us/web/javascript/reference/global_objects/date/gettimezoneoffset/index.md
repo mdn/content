@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Date.getTimezoneOffset
 
 The **`getTimezoneOffset()`** method of {{jsxref("Date")}} instances returns the difference, in minutes, between this date as evaluated in the UTC time zone, and the same date as evaluated in the local time zone.
 
-{{InteractiveExample("JavaScript Demo: Date.getTimezoneOffset()")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.getTimezoneOffset()")}}
 
 ```js interactive-example
 const date1 = new Date("August 19, 1975 23:15:30 GMT+07:00");

@@ -20,7 +20,6 @@ ol {
   color: darkblue;
 }
 
-/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
 :is(ol, ul, menu:unsupported) :is(ol, ul) {
   color: green;
 }
@@ -165,7 +164,7 @@ You can replace it with:
 
 ### Simplifying section selectors
 
-The `:is()` pseudo-class is particularly useful when dealing with HTML [sections and headings](/en-US/docs/Web/HTML/Element/Heading_Elements). Since {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, and {{HTMLElement("nav")}} are commonly nested together, without `:is()`, styling them to match one another can be tricky.
+The `:is()` pseudo-class is particularly useful when dealing with HTML [sections and headings](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements). Since {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, and {{HTMLElement("nav")}} are commonly nested together, without `:is()`, styling them to match one another can be tricky.
 
 For example, without `:is()`, styling all the {{HTMLElement("Heading_Elements", "h1")}} elements at different depths could be very complicated:
 

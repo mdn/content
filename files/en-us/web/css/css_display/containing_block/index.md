@@ -35,9 +35,9 @@ The process for identifying the containing block depends entirely on the value o
 4. If the `position` property is **`absolute`** or **`fixed`**, the containing block may also be formed by the edge of the _padding box_ of the nearest ancestor element that has any of the following:
 
    - A {{cssxref("filter")}}, {{cssxref("backdrop-filter")}}, {{cssxref("transform")}}, or {{cssxref("perspective")}} value other than `none`.
-   - A {{cssxref("contain")}} value of `layout`, `paint`, `strict` or `content` (e.g. `contain: paint;`).
+   - A {{cssxref("contain")}} value of `layout`, `paint`, `strict` or `content` (e.g., `contain: paint;`).
    - A {{cssxref("container-type")}} value other than `normal`.
-   - A {{cssxref("will-change")}} value containing a property for which a non-initial value would form a containing block (e.g. `filter` or `transform`).
+   - A {{cssxref("will-change")}} value containing a property for which a non-initial value would form a containing block (e.g., `filter` or `transform`).
    - A {{cssxref("content-visibility")}} value of `auto`.
 
 > [!NOTE]
@@ -260,11 +260,11 @@ p {
 - [Learn: sizing items in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Sizing)
 - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module
-- [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
-- [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
+- [Layout modes](/en-US/docs/Glossary/Layout_mode)
+- [Visual formatting models](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
 - [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
 - [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
 - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-- [Initial](/en-US/docs/Web/CSS/CSS_cascade/initial_value), [computed](/en-US/docs/Web/CSS/CSS_cascade/computed_value), [used](/en-US/docs/Web/CSS/CSS_cascade/used_value), and [actual](/en-US/docs/Web/CSS/CSS_cascade/actual_value) values
-- [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+- [Initial](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value), [computed](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value), [used](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value), and [actual](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value) values
+- {{glossary("Replaced elements")}}
 - {{glossary("Intrinsic size")}}

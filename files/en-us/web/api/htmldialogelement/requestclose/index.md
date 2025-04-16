@@ -3,12 +3,10 @@ title: "HTMLDialogElement: requestClose() method"
 short-title: requestClose()
 slug: Web/API/HTMLDialogElement/requestClose
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.HTMLDialogElement.requestClose
 ---
 
-{{ APIRef("HTML DOM") }}{{SeeCompatTable}}
+{{ APIRef("HTML DOM") }}
 
 The **`requestClose()`** method of the {{domxref("HTMLDialogElement")}} interface requests to close the {{htmlelement("dialog")}}.
 An optional string may be passed as an argument, updating the `returnValue` of the dialog.
@@ -93,7 +91,7 @@ From there you can click the _X_ button to request to close the dialog (via the 
 ```
 
 If the "X" button was of `type="submit"`, the dialog would have closed without requiring JavaScript.
-A form submission closes the `<dialog>` it is nested within if the [form's method is `dialog`](/en-US/docs/Web/HTML/Element/form#method), so no "close" button is required.
+A form submission closes the `<dialog>` it is nested within if the [form's method is `dialog`](/en-US/docs/Web/HTML/Reference/Elements/form#method), so no "close" button is required.
 
 ### Result
 

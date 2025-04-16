@@ -25,7 +25,7 @@ There are currently four values: in addition to `true` and `false` we have `gram
 
 HTML has native form validation. When a user submits a form with a control containing errors, the first form control with an invalid value displays an error message, natively.
 
-If there is a [`required`](/en-US/docs/Web/HTML/Attributes/required) attribute on a form control that isn't filled out, the form will not submit, and an error message appears reading "Please fill out this field" or something similar. The messaging for native validation varies depending on the browser, and cannot be styled.
+If there is a [`required`](/en-US/docs/Web/HTML/Reference/Attributes/required) attribute on a form control that isn't filled out, the form will not submit, and an error message appears reading "Please fill out this field" or something similar. The messaging for native validation varies depending on the browser, and cannot be styled.
 
 ```html
 <input type="number" step="2" min="0" max="100" required />
@@ -79,7 +79,7 @@ The following snippet shows a simplified version of two form fields with a valid
 
 Note that it is not necessary to validate the fields immediately on blur; the application could wait until the form is submitted (though this is not necessarily recommended).
 
-The snippet below shows a very simple validation function, which only checks for the presence of a particular character (in the real world, validation will likely be more sophisticated):
+The snippet below shows a validation function, which only checks for the presence of a particular character (in the real world, validation will likely be more sophisticated):
 
 ```js
 function checkValidity(id, searchTerm, msg) {

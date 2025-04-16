@@ -2,11 +2,10 @@
 title: Getting started modules
 slug: Learn_web_development/Getting_started
 page-type: landing-page
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}
-
-Welcome to **Getting started**! If you are a complete beginner (i.e. you've not installed a code editor or written any code yet), then this is the place to be. The Getting started modules take you through installing the software you need, familiarity with your development environment, taking your first stab at building a simple website, and understanding some of the essential concepts surrounding web development.
+Welcome to **Getting started**! If you are a complete beginner (i.e., you've not installed a code editor or written any code yet), then this is the place to be. The Getting started modules take you through installing the software you need, familiarity with your development environment, taking your first stab at building a simple website, and understanding some of the essential concepts surrounding web development.
 
 ## Prerequisites
 
@@ -24,3 +23,6 @@ There is no prerequisite knowledge for starting this course. Also note that we d
   - : This module provides recommendations of soft skills you can aim to get better at while learning web development, and which constitute good traits to have when entering the industry. They will help immensely in developing the right attitudes for learning, researching, and collaborating, and increase the chances of getting hired.
 
 ## See also
+
+- [The Frontend Developer Career Path](https://v2.scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
+  - : [Scrimba's](https://scrimba.com?via=mdn) _Frontend Developer Career Path_ teaches all you need to know to be a competent front-end web developer, with fun interactive lessons and challenges, knowledgeable teachers, and a supportive community. Go from zero to landing your first front-end job! Many of the course components are available as standalone free versions.

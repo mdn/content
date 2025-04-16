@@ -7,11 +7,46 @@ browser-compat: css.types.basic-shape.path
 
 {{CSSRef}}
 
-The **`path()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) accepts an [SVG path](/en-US/docs/Web/SVG/Element/path) string, and is used in the [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) and [CSS motion path](/en-US/docs/Web/CSS/CSS_motion_path) modules to enable a shape to be drawn. The `path()` function is a {{cssxref("&lt;basic-shape&gt;")}} data type value. It can be used in the CSS [`offset-path`](/en-US/docs/Web/CSS/offset-path) and [`clip-path`](/en-US/docs/Web/CSS/clip-path) properties and in the SVG [`d`](/en-US/docs/Web/SVG/Attribute/d) attribute.
+The **`path()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) accepts an [SVG path](/en-US/docs/Web/SVG/Reference/Element/path) string, and is used in the [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) and [CSS motion path](/en-US/docs/Web/CSS/CSS_motion_path) modules to enable a shape to be drawn. The `path()` function is a {{cssxref("&lt;basic-shape&gt;")}} data type value. It can be used in the CSS [`offset-path`](/en-US/docs/Web/CSS/offset-path) and [`clip-path`](/en-US/docs/Web/CSS/clip-path) properties and in the SVG [`d`](/en-US/docs/Web/SVG/Reference/Attribute/d) attribute.
 
 There are some limitations to using the `path()` function. The path has to be defined as a single string, so a custom path can't be created using variables ([`var()`](/en-US/docs/Web/CSS/var) functions). Also, all the lengths in the path are implicitly defined in [pixel](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#absolute_length_units) (`px`) units; other units can't be used. The [`shape()`](/en-US/docs/Web/CSS/basic-shape/shape) function offers more flexibility than the `path()` function.
 
-{{EmbedInteractiveExample("pages/css/function-path.html")}}
+{{InteractiveExample("CSS Demo: path()")}}
+
+```css interactive-example-choice
+clip-path: path(
+  "M  20  240 \
+ L  20  80 L 160  80 \
+ L 160  20 L 280 100 \
+ L 160 180 L 160 120 \
+ L  60 120 L  60 240 Z"
+);
+```
+
+```css interactive-example-choice
+clip-path: path(
+  "M 20 240 \
+ C 20 0 300 0 300 240 Z"
+);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: #fe9;
+}
+
+#example-element {
+  background: linear-gradient(to bottom right, #f52, #05f);
+  width: 100%;
+  height: 100%;
+}
+```
 
 ## Syntax
 
@@ -29,7 +64,7 @@ path( [<fill-rule>,]? <string> )
 
 ### Parameters
 
-- [`<fill-rule>`](/en-US/docs/Web/SVG/Attribute/fill-rule) {{optional_inline}}
+- [`<fill-rule>`](/en-US/docs/Web/SVG/Reference/Attribute/fill-rule) {{optional_inline}}
 
   - : Defines what parts of the path are inside the shape. The possible values include:
 
@@ -40,7 +75,7 @@ path( [<fill-rule>,]? <string> )
     > **Warning:** `<fill-rule>` is not supported in {{cssxref("offset-path")}} and using it invalidates the property.
 
 - {{cssxref("string")}}
-  - : A [data string](/en-US/docs/Web/SVG/Attribute/d), contained in quotes, which defines an [SVG path](/en-US/docs/Web/SVG/Element/path). The SVG path data string contains [path commands](/en-US/docs/Web/SVG/Attribute/d#path_commands) that implicitly use pixel units. An empty path is considered invalid.
+  - : A [data string](/en-US/docs/Web/SVG/Reference/Attribute/d), contained in quotes, which defines an [SVG path](/en-US/docs/Web/SVG/Reference/Element/path). The SVG path data string contains [path commands](/en-US/docs/Web/SVG/Reference/Attribute/d#path_commands) that implicitly use pixel units. An empty path is considered invalid.
 
 ### Return value
 
@@ -116,7 +151,7 @@ btn.addEventListener("click", () => {
 
 ### Modify the value of the SVG path d attribute
 
-The `path()` can be used to modify the value of the SVG [`d` attribute](/en-US/docs/Web/SVG/Attribute/d), which can also be set to `none` in your CSS.
+The `path()` can be used to modify the value of the SVG [`d` attribute](/en-US/docs/Web/SVG/Reference/Attribute/d), which can also be set to `none` in your CSS.
 
 The "V" symbol will flip vertically when you hover over it, if `d` is supported as a CSS property.
 

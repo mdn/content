@@ -1,10 +1,10 @@
 ---
 title: Pseudo-classes and pseudo-elements
+short-title: Pseudo-classes and elements
 slug: Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics")}}
 
@@ -18,7 +18,7 @@ The next set of selectors we will look at are referred to as **pseudo-classes** 
         HTML basics (study
         <a href="/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >Basic HTML syntax</a
-        >), <a href="/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors">Basic CSS selectors<a>.
+        >), <a href="/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors">Basic CSS selectors</a>.
       </td>
     </tr>
     <tr>
@@ -37,7 +37,7 @@ The next set of selectors we will look at are referred to as **pseudo-classes** 
 
 ## What is a pseudo-class?
 
-A pseudo-class is a selector that selects elements that are in a specific state, e.g. they are the first element of their type, or they are being hovered over by the mouse pointer. They tend to act as if you had applied a class to some part of your document, often helping you cut down on excess classes in your markup, and giving you more flexible, maintainable code.
+A pseudo-class is a selector that selects elements that are in a specific state, e.g., they are the first element of their type, or they are being hovered over by the mouse pointer. They tend to act as if you had applied a class to some part of your document, often helping you cut down on excess classes in your markup, and giving you more flexible, maintainable code.
 
 Pseudo-classes are keywords that start with a colon. For example, `:hover` is a pseudo-class.
 
