@@ -7514,8 +7514,8 @@
 /en-US/docs/Tools:Validators	https://firefox-source-docs.mozilla.org/devtools-user/validators/index.html
 /en-US/docs/Tools_Toolbox	https://firefox-source-docs.mozilla.org/devtools-user/tools_toolbox/index.html
 /en-US/docs/Transforming_XML_with_XSLT	/en-US/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
-/en-US/docs/Transforming_XML_with_XSLT/An_Overview	/en-US/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/An_Overview
-/en-US/docs/Transforming_XML_with_XSLT/For_Further_Reading	/en-US/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading
+/en-US/docs/Transforming_XML_with_XSLT/An_Overview	/en-US/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
+/en-US/docs/Transforming_XML_with_XSLT/For_Further_Reading	/en-US/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
 /en-US/docs/Transforming_XML_with_XSLT/Mozilla_XSLT_XPath_Reference	/en-US/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
 /en-US/docs/Transforming_XML_with_XSLT/Mozilla_XSLT_XPath_Reference/Axes	/en-US/docs/Web/XML/XPath/Reference/Axes
 /en-US/docs/Transforming_XML_with_XSLT/Mozilla_XSLT_XPath_Reference/Axes/ancestor	/en-US/docs/Web/XML/XPath/Reference/Axes#ancestor
@@ -7587,8 +7587,8 @@
 /en-US/docs/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference/Elements/xsl/decimal-format	/en-US/docs/Web/XML/XSLT/Reference/Element/decimal-format
 /en-US/docs/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference/Elements/xsl/element	/en-US/docs/Web/XML/XSLT/Reference/Element/element
 /en-US/docs/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference/Functions	/en-US/docs/Web/XML/XPath/Reference/Functions
-/en-US/docs/Transforming_XML_with_XSLT:An_Overview	/en-US/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/An_Overview
-/en-US/docs/Transforming_XML_with_XSLT:For_Further_Reading	/en-US/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading
+/en-US/docs/Transforming_XML_with_XSLT:An_Overview	/en-US/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
+/en-US/docs/Transforming_XML_with_XSLT:For_Further_Reading	/en-US/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
 /en-US/docs/Transforming_XML_with_XSLT:Mozilla_XSLT/XPath_Reference	/en-US/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
 /en-US/docs/Transforming_XML_with_XSLT:Mozilla_XSLT/XPath_Reference:Axes	/en-US/docs/Web/XML/XPath/Reference/Axes
 /en-US/docs/Transforming_XML_with_XSLT:Mozilla_XSLT/XPath_Reference:Axes:ancestor	/en-US/docs/Web/XML/XPath/Reference/Axes#ancestor
@@ -15039,6 +15039,8 @@
 /en-US/docs/Web/XML/Index	/en-US/docs/Web/XML
 /en-US/docs/Web/XML/Parsing_and_serializing_XML	/en-US/docs/Web/XML/Guides/Parsing_and_serializing_XML
 /en-US/docs/Web/XML/XML_introduction	/en-US/docs/Web/XML/Guides/XML_introduction
+/en-US/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/An_Overview	/en-US/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
+/en-US/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading	/en-US/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
 /en-US/docs/Web/XML/xml:base	/en-US/docs/Web/API/Node/baseURI
 /en-US/docs/Web/XPath	/en-US/docs/Web/XML/XPath
 /en-US/docs/Web/XPath/Axes	/en-US/docs/Web/XML/XPath/Reference/Axes
@@ -15186,8 +15188,8 @@
 /en-US/docs/Web/XSLT/Guides/Common_errors	/en-US/docs/Web/XML/XSLT/Guides/Common_errors
 /en-US/docs/Web/XSLT/Guides/PI_Parameters	/en-US/docs/Web/XML/XSLT/Guides/PI_Parameters
 /en-US/docs/Web/XSLT/Guides/Transforming_XML_with_XSLT	/en-US/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
-/en-US/docs/Web/XSLT/Guides/Transforming_XML_with_XSLT/An_Overview	/en-US/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/An_Overview
-/en-US/docs/Web/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading	/en-US/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading
+/en-US/docs/Web/XSLT/Guides/Transforming_XML_with_XSLT/An_Overview	/en-US/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
+/en-US/docs/Web/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading	/en-US/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
 /en-US/docs/Web/XSLT/Index	/en-US/docs/Web/XML/XSLT
 /en-US/docs/Web/XSLT/PI_Parameters	/en-US/docs/Web/XML/XSLT/Guides/PI_Parameters
 /en-US/docs/Web/XSLT/Reference	/en-US/docs/Web/XML/XSLT/Reference
@@ -15228,8 +15230,8 @@
 /en-US/docs/Web/XSLT/Reference/Element/when	/en-US/docs/Web/XML/XSLT/Reference/Element/when
 /en-US/docs/Web/XSLT/Reference/Element/with-param	/en-US/docs/Web/XML/XSLT/Reference/Element/with-param
 /en-US/docs/Web/XSLT/Transforming_XML_with_XSLT	/en-US/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
-/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/An_Overview	/en-US/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/An_Overview
-/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading	/en-US/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading
+/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/An_Overview	/en-US/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
+/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading	/en-US/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
 /en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/Mozilla_XSLT_XPath_Reference	/en-US/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
 /en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/Mozilla_XSLT_XPath_Reference/Axes	/en-US/docs/Web/XML/XPath/Reference/Axes
 /en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/Mozilla_XSLT_XPath_Reference/Axes/ancestor	/en-US/docs/Web/XML/XPath/Reference/Axes#ancestor
