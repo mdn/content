@@ -20,6 +20,10 @@ This interface is only available in {{domxref("Worker","dedicated workers")}}.
 
 ## Instance properties
 
+- {{domxref("VideoTrackGenerator.muted")}} {{Experimental_Inline}}
+
+  - : A Boolean property to temporarily halt or resume the generation of video frames in the output track.
+
 - {{domxref("VideoTrackGenerator.track")}} {{Experimental_Inline}}
 
   - : The output {{domxref("MediaStreamTrack")}}.
