@@ -119,9 +119,9 @@ To start you off with writing some JavaScript, we'll walk you through adding a _
 
 ### What happened?
 
-We have used JavaScript to change the heading text to _Hello world!_. We did this by using a function called {{domxref("Document.querySelector", "querySelector()")}} to grab a reference to your heading, and then store it in a [variable](/en-US/docs/Learn_web_development/Core/Scripting/Variables) called `myHeading` (a container that stores a value). This is similar to what we did using CSS selectors. When you want to do something to an element, you need to select it first.
+We have used JavaScript to change the heading text to _Hello world!_. We grabbed a reference to the heading and stored it in a variable called `myHeading` (a container that stores a value). This is similar to what we did using CSS selectors. When you want to do something to an element, you need to select it first.
 
-Following that, the code set the value of the `myHeading` variable's {{domxref("Node.textContent", "textContent")}} property (which represents the content of the heading) to _Hello world!_.
+Following that, we set the value of the `myHeading` variable's text content to _Hello world!_.
 
 > [!NOTE]
 > The lines that start with `//` are JavaScript comments. In the same way as HTML and CSS comments, the browser ignores these, providing a way for you to add notes about your code to help explain how it works.
@@ -132,7 +132,7 @@ Let's move on and add some new features to our example site.
 
 Before going any further, delete the "Hello world!" code from your `main.js` file. If you don't, the existing code will clash with the new code you are about to add.
 
-### Adding an image changer
+## Adding an image changer
 
 In this section, you will to use JavaScript and [DOM API](/en-US/docs/Web/API/HTML_DOM_API) features to alternate the display between two images. This change will happen as a user clicks the displayed image.
 
@@ -171,7 +171,7 @@ In the above code, you stored a reference to your {{htmlelement("img")}} element
 > - [Functions](/en-US/docs/Learn_web_development/Core/Scripting/Functions): A way of packaging code that you wish to reuse. You can define your code inside a function and execute it when you call the function name in your code, avoiding having to repeatedly write the same code over and over again.
 > - [Conditionals](/en-US/docs/Learn_web_development/Core/Scripting/Conditionals): Code structures used to test if an expression returns `true` or `false` and run different code in response to each result. A very common form of conditionals is the `if...else` statement.
 
-### Adding a personalized welcome message
+## Adding a personalized welcome message
 
 Next, let's change the page heading to a personalized welcome message when the user first visits the site. This welcome message will be saved in the browser via the [Web Storage API](/en-US/docs/Web/API/Web_Storage_API), meaning that if the user leaves the site and returns later, their personalized data will still be there. We will also include the ability to change the message.
 
