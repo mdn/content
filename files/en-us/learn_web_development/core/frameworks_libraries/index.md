@@ -2,9 +2,8 @@
 title: JavaScript frameworks and libraries
 slug: Learn_web_development/Core/Frameworks_libraries
 page-type: learn-module
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Frameworks_libraries/Introduction", "Learn_web_development/Core")}}
 

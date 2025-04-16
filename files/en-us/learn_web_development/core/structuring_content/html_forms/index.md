@@ -3,9 +3,8 @@ title: Forms and buttons in HTML
 short-title: Forms and buttons
 slug: Learn_web_development/Core/Structuring_content/HTML_forms
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Planet_data_table", "Learn_web_development/Core/Structuring_content/Debugging_HTML", "Learn_web_development/Core/Structuring_content")}}
 
@@ -277,36 +276,42 @@ There are many other control types you can use to collect data in a form. Let's 
 ```html live-sample___form-other-controls
 <form action="./payment_page" method="get">
   <h2>Register for the meetup</h2>
-  <p>
-    <fieldset>
-      <legend>Choose hotel room type (required):</legend>
-      <div>
-        <input type="radio" id="hotelChoice1" name="hotel" value="economy" checked />
-        <label for="hotelChoice1">Economy (+$0)</label>
+  <fieldset>
+    <legend>Choose hotel room type (required):</legend>
+    <div>
+      <input
+        type="radio"
+        id="hotelChoice1"
+        name="hotel"
+        value="economy"
+        checked />
+      <label for="hotelChoice1">Economy (+$0)</label>
 
-        <input type="radio" id="hotelChoice2" name="hotel" value="superior" />
-        <label for="hotelChoice2">Superior (+$50)</label>
+      <input type="radio" id="hotelChoice2" name="hotel" value="superior" />
+      <label for="hotelChoice2">Superior (+$50)</label>
 
-        <input type="radio" id="hotelChoice3" name="hotel" value="penthouse" disabled />
-        <label for="hotelChoice3">Penthouse (+$150)</label>
-      </div>
-    </fieldset>
-  </p>
-  <p>
-    <fieldset>
-      <legend>Choose classes to attend:</legend>
-      <div>
-        <input type="checkbox" id="yoga" name="yoga" />
-        <label for="yoga">Yoga (+$10)</label>
+      <input
+        type="radio"
+        id="hotelChoice3"
+        name="hotel"
+        value="penthouse"
+        disabled />
+      <label for="hotelChoice3">Penthouse (+$150)</label>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>Choose classes to attend:</legend>
+    <div>
+      <input type="checkbox" id="yoga" name="yoga" />
+      <label for="yoga">Yoga (+$10)</label>
 
-        <input type="checkbox" id="coffee" name="coffee" />
-        <label for="coffee">Coffee roasting (+$20)</label>
+      <input type="checkbox" id="coffee" name="coffee" />
+      <label for="coffee">Coffee roasting (+$20)</label>
 
-        <input type="checkbox" id="balloon" name="balloon" />
-        <label for="balloon">Balloon animal art (+$5)</label>
-      </div>
-    </fieldset>
-  </p>
+      <input type="checkbox" id="balloon" name="balloon" />
+      <label for="balloon">Balloon animal art (+$5)</label>
+    </div>
+  </fieldset>
   <p>
     <label for="transport">How are you getting here:</label>
     <select name="transport" id="transport">
@@ -347,17 +352,27 @@ The "Choose hotel room type" buttons are implemented using [`<input type="radio"
 
 Our example code look looks like this:
 
-```html-nolint
+```html
 <fieldset>
   <legend>Choose hotel room type (required):</legend>
   <div>
-    <input type="radio" id="hotelChoice1" name="hotel" value="economy" checked />
+    <input
+      type="radio"
+      id="hotelChoice1"
+      name="hotel"
+      value="economy"
+      checked />
     <label for="hotelChoice1">Economy (+$0)</label>
 
     <input type="radio" id="hotelChoice2" name="hotel" value="superior" />
     <label for="hotelChoice2">Superior (+$50)</label>
 
-    <input type="radio" id="hotelChoice3" name="hotel" value="penthouse" disabled />
+    <input
+      type="radio"
+      id="hotelChoice3"
+      name="hotel"
+      value="penthouse"
+      disabled />
     <label for="hotelChoice3">Penthouse (+$150)</label>
   </div>
 </fieldset>
@@ -396,7 +411,7 @@ You can set the `disabled` attribute on any form control, including `<button>` e
 
 Our "classes to attend" selectors are implemented using [`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) controls. these render as a set of on/off state checkboxes. Unlike radio buttons, you can select more than one at once.
 
-```html-nolint
+```html
 <fieldset>
   <legend>Choose classes to attend:</legend>
   <div>
@@ -423,7 +438,7 @@ The main difference (apart from the `type` value!) is that each checkbox has a d
 
 Drop-down menus, for example the "How are you getting here" selection control in our example, are implemented not with an `<input>` type, but with the {{htmlelement("select")}} and {{htmlelement("option")}} elements:
 
-```html-nolint
+```html
 <label for="transport">How are you getting here:</label>
 <select name="transport" id="transport">
   <option value="">--Please choose an option--</option>
@@ -447,7 +462,7 @@ Each possible value for the data item is represented by an `<option>` element, n
 
 Multi-line text input fields are created using {{htmlelement("textarea")}} elements:
 
-```html-nolint
+```html
 <label for="comments">Any other comments:</label>
 <textarea id="comments" name="comments" rows="5" cols="33"></textarea>
 ```

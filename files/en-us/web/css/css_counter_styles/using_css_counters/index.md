@@ -76,6 +76,10 @@ The value of a counter can be displayed using either the {{cssxref("counter", "c
 For example, the following declaration uses `counter()` to prefix each `h3` heading with the text `Section <number>:`, where `<number>` is the value of the count in decimal (the default display style):
 
 ```css
+body {
+  counter-reset: section; /* Set a counter named 'section', and its initial value is 0. */
+}
+
 h3::before {
   counter-increment: section; /* Increment the value of section counter by 1 */
   content: "Section " counter(section) ": "; /* Display counter value in default style (decimal) */

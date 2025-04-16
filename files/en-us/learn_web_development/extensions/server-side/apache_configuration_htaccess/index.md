@@ -2,9 +2,8 @@
 title: "Apache Configuration: .htaccess"
 slug: Learn_web_development/Extensions/Server-side/Apache_Configuration_htaccess
 page-type: guide
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 Apache .htaccess files allow users to configure directories of the web server they control without modifying the main configuration file.
 

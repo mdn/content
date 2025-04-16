@@ -5,9 +5,10 @@ page-type: mdn-writing-guide
 sidebar: mdnsidebar
 ---
 
-MDN pages all include sidebars. Most of them are created using a standard system that defines data structures in YAML files, and includes sidebars on pages using macro calls.
+All MDN pages should have sidebars.
+Most of them are created using a system that defines data structures in YAML files, and includes sidebars on pages via front matter or a macro.
 
-In this guide, you will learn how these sidebars work so you can edit existing sidebars and create new ones as required. We'll also detail those that don't yet use the standard system.
+In this guide, you will learn how these sidebars work so you can edit existing sidebars and create new ones as required.
 
 > [!NOTE]
 > If you're editing sidebars, you can use `yarn tool` commands for formatting and syncing with redirects.
@@ -17,54 +18,24 @@ In this guide, you will learn how these sidebars work so you can edit existing s
 
 Each sidebar has a corresponding YAML file contained inside the MDN `content` repo's [`files/sidebars`](https://github.com/mdn/content/tree/main/files/sidebars) directory. This defines the hierarchical structure of the sidebar links, the URLs each link should point to, and optional custom heading/link text, which can be localized into different languages as required.
 
-If we take as an example the page you are currently looking at, the sidebar structure is defined in the [`mdnsidebar.yaml`](https://github.com/mdn/content/blob/main/files/sidebars/mdnsidebar.yaml) file.
+The page you are currently reading has a sidebar defined in the [`mdnsidebar.yaml`](https://github.com/mdn/content/blob/main/files/sidebars/mdnsidebar.yaml) file.
 
-The sidebar is rendered on the current page (and all others in the same document tree) by including a corresponding macro call — `\{{MDNSidebar}}` — just below the frontmatter in the [document source](https://raw.githubusercontent.com/mdn/content/refs/heads/main/files/en-us/mdn/writing_guidelines/page_structures/sidebars/index.md):
+The sidebar is rendered on the current page (and all others in the same document tree) by including a `sidebar` front matter entry in the [document source](https://raw.githubusercontent.com/mdn/content/refs/heads/main/files/en-us/mdn/writing_guidelines/page_structures/sidebars/index.md):
 
 ```md
 ---
 title: Sidebars
 slug: MDN/Writing_guidelines/Page_structures/Sidebars
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
 
-\{{MDNSidebar}}
+All MDN pages should have sidebars.
 ```
 
-The frontmatter is the content between the dashes. Including the `\{{MDNSidebar}}` macro call in the source causes the system to look for a YAML file with the same name inside the `files/sidebars` directory. If it finds one, it automatically takes care of rendering the sidebar and placing it on the page as one or more ordered lists ({{htmlelement("ol")}} elements).
+The front matter is the content between the dashes. Including `sidebar: mdnsidebar` in the front matter causes the system to look for a YAML file with the same name inside the `files/sidebars` directory. If it finds one, it automatically takes care of rendering the sidebar and placing it on the page as one or more ordered lists ({{htmlelement("ol")}} elements).
 
 Try navigating around the sidebar, before returning to this page. You'll notice that generally when navigating to a page, the link list for the section you are currently in will be expanded, whereas the others will be collapsed, and the page you are on is highlighted.
-
-## Standard sidebar examples
-
-Some of the other standard sidebars that you will commonly encounter are as follows:
-
-- `\{{CSSRef}}`
-
-  - : Present on every [CSS](/en-US/docs/Web/CSS) page.
-
-- `\{{GlossarySidebar}}`
-
-  - : Present on every [glossary](/en-US/docs/Glossary) page.
-
-- `\{{LearnSidebar}}`
-
-  - : Present on every page within the [Learn web development section](/en-US/docs/Learn_web_development).
-
-- `\{{HTMLSidebar}}`
-
-  - : Generates the sidebar for [HTML](/en-US/docs/Web/HTML) documentation.
-
-- `\{{HTTPSidebar}}`
-
-  - : Generates the sidebar for [HTTP documentation](/en-US/docs/Web/HTTP).
-
-- `\{{PWASidebar}}`
-
-  - : Generates the sidebar for [progressive web app (PWA)](/en-US/docs/Web/Progressive_web_apps) documentation.
-
-> [!NOTE]
-> The appropriate macro to use depends on the [page type](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types). The [template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types#page_templates) for each page type includes the appropriate macro for that page type.
 
 ## Sidebar YAML syntax explained
 
@@ -79,9 +50,9 @@ sidebar:
   # sidebar definition goes here
 ```
 
-### Basic single links
+### Single links
 
-To create a basic single link in a sidebar, you include a YAML list item containing a relative URL:
+To create a single link in a sidebar, you include a YAML list item containing a relative URL:
 
 ```yaml
 sidebar:
@@ -89,8 +60,9 @@ sidebar:
 ```
 
 The URL is relative to the `docs` directory in the MDN URL structure, so for example, `/MDN/Changelog` would generate a link to https://developer.mozilla.org/en-US/docs/MDN/Changelog. The system automatically uses the linked page's document title as the link text.
+If the page has a `short-title` key in the front matter, that will be used for the sidebar link display text instead.
 
-If you want to use custom link text, you need to include two keys inside the list item — `title`, which contains the custom link text, and `link`, which contains the relative URL as before. The following example would create a link to the MDN Web Docs changelog as before, but with custom link text of "Our changelog":
+If you want to use custom link text that's not a document's `title` or `short-title`, you need to include two keys inside the list item — `title`, which contains the custom link text, and `link`, which contains the relative URL as before. The following example would create a link to the MDN Web Docs changelog as before, but with custom link text of "Our changelog":
 
 ```yaml
 sidebar:
@@ -142,16 +114,11 @@ sidebar:
         children:
           - /MDN/Community
           - /MDN/Community/Getting_started
-          - /MDN/Community/Our_repositories
-          - /MDN/Community/Translated_content
           - /MDN/Community/Security_vulnerability_response
       - /MDN/Community/Open_source_etiquette
       - /MDN/Community/Communication_channels
       - /MDN/Community/Discussions
-      - /MDN/Community/Learn_forum
-      - /MDN/Community/Issues
-      - /MDN/Community/Pull_requests
-      - /MDN/Community/Roles_teams
+# etc.
 ```
 
 Note also the `details` key — this controls whether a list item's list of children is rendered closed or open when the page first loads. Possible values are as follows:
@@ -249,36 +216,7 @@ If you have several different page types inside the same directory (as specified
   title: Selectors
   tags: css-selector
   details: closed
-- type: listSubPages
-  path: /Web/CSS
-  title: Combinators
-  tags: css-combinator
-  details: closed
-- type: listSubPages
-  path: /Web/CSS
-  title: Pseudo-classes
-  tags: css-pseudo-class
-  details: closed
-- type: listSubPages
-  path: /Web/CSS
-  title: Pseudo-elements
-  tags: css-pseudo-element
-  details: closed
-- type: listSubPages
-  path: /Web/CSS
-  title: At-rules
-  tags: css-at-rule
-  details: closed
-- type: listSubPages
-  path: /Web/CSS
-  title: Functions
-  tags: css-function
-  details: closed
-- type: listSubPages
-  path: /Web/CSS
-  title: Types
-  tags: css-type
-  details: closed
+# etc.
 ```
 
 ### Localizing text strings

@@ -3,9 +3,8 @@ title: "Challenge: Marking up a letter"
 short-title: "Challenge: Letter markup"
 slug: Learn_web_development/Core/Structuring_content/Marking_up_a_letter
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "Learn_web_development/Core/Structuring_content")}}
 

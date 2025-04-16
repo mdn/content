@@ -116,7 +116,7 @@ svg {
     <tr>
       <th scope="row">Value</th>
       <td>
-        <code>arcs</code> | <code>bevel</code> |<code>miter</code> |
+        <code>arcs</code> | <code>bevel</code> | <code>miter</code> |
         <code>miter-clip</code> | <code>round</code>
       </td>
     </tr>

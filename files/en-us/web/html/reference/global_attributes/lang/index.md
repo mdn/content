@@ -144,7 +144,7 @@ For example, the language menu on this site (MDN) includes a **`lang`** attribut
     </li>
     <li>
       <a
-        href="/en-US/docs/Web/HTML/Global_attributes/lang$locales"
+        href="/en-US/docs/Web/HTML/Reference/Global_attributes/lang$locales"
         rel="nofollow"
         id="translations-add">
         Add a translation
