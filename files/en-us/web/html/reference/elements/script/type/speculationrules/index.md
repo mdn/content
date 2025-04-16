@@ -173,7 +173,7 @@ Each object can contain the following properties:
 
 - `"tag"` {{experimental_inline}}
 
-  - : A string used to identify the ruleset. This will be included in the {{HTTPHeader("Sec-Speculation-Tags")}} request header for any speculations covered by that rule.
+  - : A string used to identify a rule or ruleset. This will be included in the {{HTTPHeader("Sec-Speculation-Tags")}} request header for any speculations covered by that rule.
 
 > [!NOTE]
 > As speculation rules use a `<script>` element, they need to be explicitly allowed in the [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) [`script-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) directive if the site includes it. This is done by adding the `"inline-speculation-rules"` value along with a hash- or nonce-source.
@@ -519,7 +519,7 @@ Here we are hinting that:
 
 ### `tag` example
 
-A `tag` can be at the overall rule level:
+A `tag` can be included at the top level, to identify the overall ruleset:
 
 ```html
 <script type="speculationrules">
@@ -535,17 +535,17 @@ A `tag` can be at the overall rule level:
 </script>
 ```
 
-Or in individual rules:
+Or to identify individual rules:
 
 ```html
 <script type="speculationrules">
   {
     "prefetch": [
-      "tag": "my-prefetch-rules",
+      "tag": "my-prefetch-rule",
       "urls": ["next.html"]
     ],
     "prerender": [
-      "tag": "my-prefetch-rules",
+      "tag": "my-prerender-rule",
       "urls": ["next2.html"]
     ],
   }

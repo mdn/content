@@ -9,9 +9,9 @@ browser-compat: http.headers.Sec-Speculation-Tags
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-The HTTP **`Sec-Speculation-Tags`** {{Glossary("request header")}} provides one or `tag` values from the [speculation rules](/en-US/docs/Web/API/Speculation_Rules_API) which would have resulted in the speculation. This allows a server to identify which rule(s) covered the speculation and potentially block the speculations.
+The HTTP **`Sec-Speculation-Tags`** {{Glossary("request header")}} contains one or more `tag` values from the [speculation rules](/en-US/docs/Web/API/Speculation_Rules_API) that resulted in the speculation. This allows a server to identify which rule(s) caused a speculation and potentially block them.
 
-For example, a CDN may automatically insert speculation rules, but to avoid unintended consequences block speculations for resources that are not cached in the CDN. The `Sec-Speculation-Tags` allows the CDN to differentiate between the rules it has inserted (which should be blocked in this case), and speculation rules added by the site owner (which should not be blocked).
+For example, a CDN may automatically insert speculation rules, but block speculations for resources not cached in the CDN to avoid unintended consequences. The `Sec-Speculation-Tags` header allows the CDN to differentiate between the rules it has inserted (which should be blocked in this case) and speculation rules added by the site owner (which should not be blocked).
 
 <table class="properties">
   <tbody>
@@ -53,7 +53,7 @@ Speculation-Rules: <tag-list>
 </script>
 ```
 
-If a speculation happens from speculation rule with no tag then `null` is sent in the `Speculation-Rules` header.
+If a speculation happens due to a speculation rule with no tag, then `null` is sent in the `Speculation-Rules` header.
 
 ```http
 Speculation-Rules: null
@@ -66,7 +66,7 @@ Speculation-Rules: null
   {
     "prefetch": [
       {
-        "tag": "my-rules",
+        "tag": "my-rule",
         "urls": ["next.html", "next2.html"]
       }
     ]
@@ -74,10 +74,10 @@ Speculation-Rules: null
 </script>
 ```
 
-If a speculation happens from speculation rule with a tag then the tag name is sent in the `Speculation-Rules` header.
+If a speculation happens due to a speculation rule with a tag, then the tag name is sent in the `Speculation-Rules` header.
 
 ```http
-Speculation-Rules: "my-rules"
+Speculation-Rules: "my-rule"
 ```
 
 ### Speculation from multiple rules
@@ -87,7 +87,7 @@ Speculation-Rules: "my-rules"
   {
     "prefetch": [
       {
-        "tag": "my-rules",
+        "tag": "my-rule",
         "urls": ["next.html", "next2.html"],
         "eagerness": "moderate"
       }
@@ -98,7 +98,7 @@ Speculation-Rules: "my-rules"
   {
     "prefetch": [
       {
-        "tag": "cdn-rules",
+        "tag": "cdn-rule",
         "urls": ["next.html", "next.html"],
         "eagerness": "conservative"
       }
@@ -107,19 +107,19 @@ Speculation-Rules: "my-rules"
 </script>
 ```
 
-If a speculation is triggered by multiple speculation rules then all tags will be included. For example if the speculation is initiated with the by hovering over the link (`"eagerness": "moderate"`), then only the `my-rules` tag will be sent:
+In this example, if the speculation is initiated by the user hovering over the link for 200 milliseconds (`"eagerness": "moderate"`), then only the `my-rule` tag will be sent in the header:
 
 ```http
-Speculation-Rules: "my-rules"
+Speculation-Rules: "my-rule"
 ```
 
-But if the link is clicked immeadiately, without waiting for the 200 milliseconds hover, then both rules would have triggered a speculation so both tags will be includes in the header:
+However, if the link is clicked immediately, without waiting for the 200 milliseconds hover, then both rules would have triggered a speculation, so both tags will be included in the header:
 
 ```http
-Speculation-Rules: "my-rules" "cdn-rules"
+Speculation-Rules: "my-rule" "cdn-rule"
 ```
 
-### Speculation from multiple rules wiht and without tags
+### Speculation from multiple rules with and without tags
 
 ```html
 <script type="speculationrules">
@@ -136,7 +136,7 @@ Speculation-Rules: "my-rules" "cdn-rules"
   {
     "prefetch": [
       {
-        "tag": "cdn-rules",
+        "tag": "cdn-rule",
         "urls": ["next.html", "next.html"],
         "eagerness": "conservative"
       }
@@ -145,10 +145,10 @@ Speculation-Rules: "my-rules" "cdn-rules"
 </script>
 ```
 
-Similar to the previous example, if the link is clicked immeadiately, without waiting for the 200 milliseconds hover, then both rules would have triggered a speculation so both tags will be includes in the header and `null` will be sent for any rules without a tag:
+Similar to the previous example, if the link is clicked immediately without waiting for the 200 milliseconds hover, both rules would have triggered a speculation, so both tags will be included in the header. However, because the first rule does not include a `tag` field, it is represented in the header with a `null` value:
 
 ```http
-Speculation-Rules: null "cdn-rules"
+Speculation-Rules: null "cdn-rule"
 ```
 
 ## Specifications
