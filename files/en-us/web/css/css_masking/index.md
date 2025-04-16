@@ -23,7 +23,7 @@ While masking provides more control and options, clipping can perform better if 
 
 ### Properties
 
-- {{cssxref("clip")}}
+- {{cssxref("clip")}} {{deprecated_inline}}
 - {{cssxref("clip-path")}}
 - {{cssxref("clip-rule")}}
 - {{cssxref("mask")}} shorthand
