@@ -133,7 +133,7 @@ l10n:
     Compiling_Rust_to_Wasm: Rust zu WebAssembly kompilieren
     JavaScript_API: WebAssembly-JavaScript-API verwenden
     Text_format: WebAssembly-Textformat verstehen
-    Text_format_to_Wasm: Converting text format to binary
+    Text_format_to_Wasm: Converting WebAssembly text format
     Loading_and_running: WebAssembly-Code laden und ausführen
     Exported_functions: Exportierte WebAssembly-Funktionen
     JavaScript_builtins: JavaScript-Standardobjekte
@@ -146,7 +146,7 @@ l10n:
     Compiling_Rust_to_Wasm: Compiling from Rust to WebAssembly
     JavaScript_API: Using the WebAssembly JavaScript API
     Text_format: Understanding WebAssembly text format
-    Text_format_to_Wasm: Converting text format to binary
+    Text_format_to_Wasm: Converting WebAssembly text format
     Loading_and_running: Loading and running WebAssembly code
     Exported_functions: Exported WebAssembly functions
     JavaScript_builtins: JavaScript builtins
@@ -159,7 +159,7 @@ l10n:
     Compiling_Rust_to_Wasm: Compiler du Rust en WebAssembly
     JavaScript_API: Utiliser l'API JavaScript WebAssembly
     Text_format: Comprendre le format texte WebAssembly
-    Text_format_to_Wasm: Converting text format to binary
+    Text_format_to_Wasm: Converting WebAssembly text format
     Loading_and_running: Chargement et exécution de code WebAssembly
     Exported_functions: Fonctions WebAssembly exportées
     JavaScript_interface: JavaScript interface
@@ -170,7 +170,7 @@ l10n:
     Compiling_Rust_to_Wasm: Rust를 웹어셈블리로 컴파일하기
     JavaScript_API: 웹어셈블리 JavaScript API 사용하기
     Text_format: 웹어셈블리 텍스트 형식 이해하기
-    Text_format_to_Wasm: Converting text format to binary
+    Text_format_to_Wasm: Converting WebAssembly text format
     Loading_and_running: 웹어셈블리 코드 로딩하고 실행하기
     Exported_functions: 내보낸 웹어셈블리(Exported WebAssembly) 함수
     JavaScript_interface: JavaScript 인터페이스
@@ -181,7 +181,7 @@ l10n:
     Compiling_Rust_to_Wasm: Компиляция Rust в WebAssembly
     JavaScript_API: Использование WebAssembly JavaScript API
     Text_format: Описание текстового формата WebAssembly
-    Text_format_to_Wasm: Converting text format to binary
+    Text_format_to_Wasm: Converting WebAssembly text format
     Loading_and_running: Загрузка и запуск кода WebAssembly
     Exported_functions: Экспортируемые функции WebAssembly
     JavaScript_interface: JavaScript interface
@@ -192,7 +192,7 @@ l10n:
     Compiling_Rust_to_Wasm: 将 Rust 编译为 WebAssembly
     JavaScript_API: 使用 WebAssembly JavaScript API
     Text_format: 理解 WebAssembly 文本格式
-    Text_format_to_Wasm: Converting text format to binary
+    Text_format_to_Wasm: Converting WebAssembly text format
     Loading_and_running: 加载和运行 WebAssembly 代码
     Exported_functions: 导出的 WebAssembly 函数
     JavaScript_interface: JavaScript 接口
