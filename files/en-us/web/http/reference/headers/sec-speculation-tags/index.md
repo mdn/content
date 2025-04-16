@@ -104,7 +104,6 @@ All matching tags are sent in the `Sec-Speculation-Tags` header so in this case 
 Sec-Speculation-Tags: "my-ruleset", "my-rule"
 ```
 
-
 ### Speculation from multiple rules
 
 ```html
