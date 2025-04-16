@@ -61,6 +61,10 @@ blurButton.addEventListener("click", () => {
 });
 ```
 
+### Result
+
+{{EmbedLiveSample("blur",100,100)}}
+
 ## Specifications
 
 {{Specifications}}
