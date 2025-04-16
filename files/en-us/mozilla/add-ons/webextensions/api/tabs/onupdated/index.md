@@ -63,6 +63,7 @@ Events have three functions:
         - "audible"
         - "discarded"
         - "favIconUrl"
+        - "groupId"
         - "hidden"
         - "isArticle"
         - "mutedInfo"
