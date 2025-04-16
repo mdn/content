@@ -56,7 +56,7 @@ While masking provides more control and options, clipping can perform better wit
 
 - {{domxref("SVGClipPathElement")}}
 - {{domxref("SVGMaskElement")}}
-    - {{domxref("SVGMaskElement.maskContentUnits")}}
+  - {{domxref("SVGMaskElement.maskContentUnits")}}
 
 ## Related concepts
 
@@ -67,23 +67,23 @@ While masking provides more control and options, clipping can perform better wit
 
 - [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module
 
-    - {{cssxref("background")}} shorthand
-    - {{cssxref("background-origin")}}
-    - {{cssxref("background-position")}}
-    - {{cssxref("background-repeat")}}
-    - {{cssxref("background-size")}}
-    - {{cssxref("border-image")}} shorthand
-    - {{cssxref("border-image-repeat")}}
-    - {{cssxref("border-image-slice")}}
-    - {{cssxref("border-image-source")}}
-    - {{cssxref("border-image-width")}}
-    - [`<repeat-style>`](/en-US/docs/Web/CSS/background-repeat#values) data type
+  - {{cssxref("background")}} shorthand
+  - {{cssxref("background-origin")}}
+  - {{cssxref("background-position")}}
+  - {{cssxref("background-repeat")}}
+  - {{cssxref("background-size")}}
+  - {{cssxref("border-image")}} shorthand
+  - {{cssxref("border-image-repeat")}}
+  - {{cssxref("border-image-slice")}}
+  - {{cssxref("border-image-source")}}
+  - {{cssxref("border-image-width")}}
+  - [`<repeat-style>`](/en-US/docs/Web/CSS/background-repeat#values) data type
 
 - [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) module
 
-    - {{cssxref("&lt;basic-shape&gt;")}} data type
-    - {{cssxref("basic-shape/polygon","polygon()")}} function
-    - [`<shape-box>`](/en-US/docs/Web/CSS/shape-outside#shape-box) data type
+  - {{cssxref("&lt;basic-shape&gt;")}} data type
+  - {{cssxref("basic-shape/polygon","polygon()")}} function
+  - [`<shape-box>`](/en-US/docs/Web/CSS/shape-outside#shape-box) data type
 
 ## Specifications
 
