@@ -25,6 +25,7 @@ let grouping = browser.tabs.group(
 ### Parameters
 
 - `options`
+
   - : An object containing details about the tab grouping.
     - `createProperties` {{optional_inline}}
       - : `object`. Configuration details for a new group. Cannot be used if `groupId` is specified.
@@ -46,7 +47,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 Add a tab to an existing group, for example, the group of the current tab:
 
 ```js
-let [ oldTab ] = await browser.tabs.query({
+let [oldTab] = await browser.tabs.query({
   active: true,
   lastFocusedWindow: true,
 });
