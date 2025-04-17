@@ -149,7 +149,7 @@ In this example we have a button that normally gets its contrast using the {{css
 
 ### Check system colors in this browser
 
-In this example, you'll find a table that use the system colors, so you can check how they look. Depending on your settings, the background colors may change. You can also check the result in different browsers or operating systems to see how they look.
+In this example, you'll find a table that use the system colors, so you can check how they look. Depending on your settings, the background colors may change. You can also check the result in different browsers or operating systems to check the differences.
 
 <table>
   <thead>
@@ -230,6 +230,98 @@ In this example, you'll find a table that use the system colors, so you can chec
     <tr>
       <td><code>VisitedText</code></td>
       <td style="background-color: VisitedText; color: ButtonFace;">VisitedText</td>
+    </tr>
+    <tr>
+      <td><code>ActiveBorder {{Deprecated_Inline}}</code></td>
+      <td style="background-color: AppWorkspace; color: CanvasText;">ActiveBorder</td>
+    </tr>
+    <tr>
+      <td><code>ActiveCaption {{Deprecated_Inline}}</code></td>
+      <td style="background-color: ActiveCaption; color: CaptionText;">ActiveCaption</td>
+    </tr>
+    <tr>
+      <td><code>AppWorkspace {{Deprecated_Inline}}</code></td>
+      <td style="background-color: AppWorkspace; color: CanvasText;">AppWorkspace</td>
+    </tr>
+    <tr>
+      <td><code>Background {{Deprecated_Inline}}</code></td>
+      <td style="background-color: Background; color: CanvasText;">Background</td>
+    </tr>
+    <tr>
+      <td><code>ButtonHighlight {{Deprecated_Inline}}</code></td>
+      <td style="background-color: ButtonHighlight; color: ButtonText;">ButtonHighlight</td>
+    </tr>
+    <tr>
+      <td><code>ButtonShadow {{Deprecated_Inline}}</code></td>
+      <td style="background-color: ButtonShadow; color: ButtonText;">ButtonShadow</td>
+    </tr>
+    <tr>
+      <td><code>CaptionText {{Deprecated_Inline}}</code></td>
+      <td style="background-color: CaptionText; color: ActiveCaption;">CaptionText</td>
+    </tr>
+    <tr>
+      <td><code>InactiveBorder {{Deprecated_Inline}}</code></td>
+      <td style="background-color: InactiveBorder; color: ButtonText;">InactiveBorder</td>
+    </tr>
+    <tr>
+      <td><code>InactiveCaption {{Deprecated_Inline}}</code></td>
+      <td style="background-color: InactiveCaption; color: InactiveCaptionText;">InactiveCaption</td>
+    </tr>
+    <tr>
+      <td><code>InactiveCaptionText {{Deprecated_Inline}}</code></td>
+      <td style="background-color: InactiveCaptionText; color: InactiveCaption;">InactiveCaptionText</td>
+    </tr>
+    <tr>
+      <td><code>InfoBackground {{Deprecated_Inline}}</code></td>
+      <td style="background-color: InfoBackground; color: InfoText;">InfoBackground</td>
+    </tr>
+    <tr>
+      <td><code>InfoText {{Deprecated_Inline}}</code></td>
+      <td style="background-color: InfoText; color: InfoBackground;">InfoText</td>
+    </tr>
+    <tr>
+      <td><code>Menu {{Deprecated_Inline}}</code></td>
+      <td style="background-color: Menu; color: MenuText;">Menu</td>
+    </tr>
+    <tr>
+      <td><code>MenuText {{Deprecated_Inline}}</code></td>
+      <td style="background-color: MenuText; color: Menu;">MenuText</td>
+    </tr>
+    <tr>
+      <td><code>Scrollbar {{Deprecated_Inline}}</code></td>
+      <td style="background-color: Scrollbar; color: CanvasText;">Scrollbar</td>
+    </tr>
+    <tr>
+      <td><code>ThreeDDarkShadow {{Deprecated_Inline}}</code></td>
+      <td style="background-color: ThreeDDarkShadow; color: ButtonText;">ThreeDDarkShadow</td>
+    </tr>
+    <tr>
+      <td><code>ThreeDFace {{Deprecated_Inline}}</code></td>
+      <td style="background-color: ThreeDFace; color: ButtonText;">ThreeDFace</td>
+    </tr>
+    <tr>
+      <td><code>ThreeDHighlight {{Deprecated_Inline}}</code></td>
+      <td style="background-color: ThreeDHighlight; color: ButtonText;">ThreeDHighlight</td>
+    </tr>
+    <tr>
+      <td><code>ThreeDLightShadow {{Deprecated_Inline}}</code></td>
+      <td style="background-color: ThreeDLightShadow; color: ButtonText;">ThreeDLightShadow</td>
+    </tr>
+    <tr>
+      <td><code>ThreeDShadow {{Deprecated_Inline}}</code></td>
+      <td style="background-color: ThreeDShadow; color: ButtonText;">ThreeDShadow</td>
+    </tr>
+    <tr>
+      <td><code>Window {{Deprecated_Inline}}</code></td>
+      <td style="background-color: Window; color: WindowText;">Window</td>
+    </tr>
+    <tr>
+      <td><code>WindowFrame {{Deprecated_Inline}}</code></td>
+      <td style="background-color: WindowFrame; color: ButtonText;">WindowFrame</td>
+    </tr>
+    <tr>
+      <td><code>WindowText {{Deprecated_Inline}}</code></td>
+      <td style="background-color: WindowText; color: Window;">WindowText</td>
     </tr>
   </tbody>
 </table>
