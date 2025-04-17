@@ -160,168 +160,168 @@ In this example, you'll find a table that use the system colors, so you can chec
   </thead>
   <tbody>
     <tr>
-      <td><code>AccentColor</code></td>
-      <td style="background-color: AccentColor; color: AccentColorText;">AccentColor</td>
+      <td><a href="#accentcolor"><code>AccentColor</code></a></td>
+      <td style="background-color: AccentColor;"></td>
     </tr>
     <tr>
-      <td><code>ActiveText</code></td>
-      <td style="background-color: ActiveText; color: ButtonFace;">ActiveText</td>
+      <td><a href="#activetext"><code>ActiveText</code></a></td>
+      <td style="background-color: ActiveText;"></td>
     </tr>
     <tr>
-      <td><code>ButtonBorder</code></td>
-      <td style="background-color: ButtonBorder; color: ButtonText;">ButtonBorder</td>
+      <td><a href="#buttonborder"><code>ButtonBorder</code></a></td>
+      <td style="background-color: ButtonBorder;"></td>
     </tr>
     <tr>
-      <td><code>ButtonFace</code></td>
-      <td style="background-color: ButtonFace; color: ButtonText;">ButtonFace</td>
+      <td><a href="#buttonface"><code>ButtonFace</code></a></td>
+      <td style="background-color: ButtonFace;"></td>
     </tr>
     <tr>
-      <td><code>ButtonText</code></td>
-      <td style="background-color: ButtonText; color: ButtonFace;">ButtonText</td>
+      <td><a href="#buttontext"><code>ButtonText</code></a></td>
+      <td style="background-color: ButtonText;"></td>
     </tr>
     <tr>
-      <td><code>Canvas</code></td>
-      <td style="background-color: Canvas; color: CanvasText;">Canvas</td>
+      <td><a href="#canvas"><code>Canvas</code></a></td>
+      <td style="background-color: Canvas;"></td>
     </tr>
     <tr>
-      <td><code>CanvasText</code></td>
-      <td style="background-color: CanvasText; color: Canvas;">CanvasText</td>
+      <td><a href="#canvastext"><code>CanvasText</code></a></td>
+      <td style="background-color: CanvasText;"></td>
     </tr>
     <tr>
-      <td><code>Field</code></td>
-      <td style="background-color: Field; color: FieldText;">Field</td>
+      <td><a href="#field"><code>Field</code></a></td>
+      <td style="background-color: Field;"></td>
     </tr>
     <tr>
-      <td><code>FieldText</code></td>
-      <td style="background-color: FieldText; color: Field;">FieldText</td>
+      <td><a href="#fieldtext"><code>FieldText</code></a></td>
+      <td style="background-color: FieldText;"></td>
     </tr>
     <tr>
-      <td><code>GrayText</code></td>
-      <td style="background-color: GrayText; color: ButtonFace;">GrayText</td>
+      <td><a href="#graytext"><code>GrayText</code></a></td>
+      <td style="background-color: GrayText;"></td>
     </tr>
     <tr>
-      <td><code>Highlight</code></td>
-      <td style="background-color: Highlight; color: HighlightText;">Highlight</td>
+      <td><a href="#highlight"><code>Highlight</code></a></td>
+      <td style="background-color: Highlight;"></td>
     </tr>
     <tr>
-      <td><code>HighlightText</code></td>
-      <td style="background-color: HighlightText; color: Highlight;">HighlightText</td>
+      <td><a href="#highlighttext"><code>HighlightText</code></a></td>
+      <td style="background-color: HighlightText;"></td>
     </tr>
     <tr>
-      <td><code>LinkText</code></td>
-      <td style="background-color: LinkText; color: ButtonFace;">LinkText</td>
+      <td><a href="#linktext"><code>LinkText</code></a></td>
+      <td style="background-color: LinkText;"></td>
     </tr>
     <tr>
-      <td><code>Mark</code></td>
-      <td style="background-color: Mark; color: MarkText;">Mark</td>
+      <td><a href="#mark"><code>Mark</code></a></td>
+      <td style="background-color: Mark;"></td>
     </tr>
     <tr>
-      <td><code>MarkText</code></td>
-      <td style="background-color: MarkText; color: Mark;">MarkText</td>
+      <td><a href="#marktext"><code>MarkText</code></a></td>
+      <td style="background-color: MarkText;"></td>
     </tr>
     <tr>
-      <td><code>SelectedItem</code></td>
-      <td style="background-color: SelectedItem; color: SelectedItemText;">SelectedItem</td>
+      <td><a href="#selecteditem"><code>SelectedItem</code></a></td>
+      <td style="background-color: SelectedItem;"></td>
     </tr>
     <tr>
-      <td><code>SelectedItemText</code></td>
-      <td style="background-color: SelectedItemText; color: SelectedItem;">SelectedItemText</td>
+      <td><a href="#selecteditemtext"><code>SelectedItemText</code></a></td>
+      <td style="background-color: SelectedItemText;"></td>
     </tr>
     <tr>
-      <td><code>VisitedText</code></td>
-      <td style="background-color: VisitedText; color: ButtonFace;">VisitedText</td>
+      <td><a href="#visitedtext"><code>VisitedText</code></a></td>
+      <td style="background-color: VisitedText;"></td>
     </tr>
     <tr>
-      <td><code>ActiveBorder {{Deprecated_Inline}}</code></td>
-      <td style="background-color: AppWorkspace; color: CanvasText;">ActiveBorder</td>
+      <td><a href="#activeborder"><code>ActiveBorder</code>{{Deprecated_Inline}}</a></td>
+      <td style="background-color: AppWorkspace; color: CanvasText;"></td>
     </tr>
     <tr>
-      <td><code>ActiveCaption {{Deprecated_Inline}}</code></td>
-      <td style="background-color: ActiveCaption; color: CaptionText;">ActiveCaption</td>
+      <td><a href="#activecaption"><code>ActiveCaption</code>{{Deprecated_Inline}}</a></td>
+      <td style="background-color: ActiveCaption;"></td>
     </tr>
     <tr>
-      <td><code>AppWorkspace {{Deprecated_Inline}}</code></td>
-      <td style="background-color: AppWorkspace; color: CanvasText;">AppWorkspace</td>
+      <td><a href="#appworkspace"><code>AppWorkspace</code>{{Deprecated_Inline}}</a></td>
+      <td style="background-color: AppWorkspace;"></td>
     </tr>
     <tr>
-      <td><code>Background {{Deprecated_Inline}}</code></td>
-      <td style="background-color: Background; color: CanvasText;">Background</td>
+      <td><a href="#background"><code>Background</code>{{Deprecated_Inline}}</a></td>
+      <td style="background-color: Background;"></td>
     </tr>
     <tr>
-      <td><code>ButtonHighlight {{Deprecated_Inline}}</code></td>
-      <td style="background-color: ButtonHighlight; color: ButtonText;">ButtonHighlight</td>
+      <td><a href="#buttonhighlight"><code>ButtonHighlight</code>{{Deprecated_Inline}}</a></td>
+      <td style="background-color: ButtonHighlight;"></td>
     </tr>
     <tr>
-      <td><code>ButtonShadow {{Deprecated_Inline}}</code></td>
-      <td style="background-color: ButtonShadow; color: ButtonText;">ButtonShadow</td>
+      <td><a href="#buttonshadow"><code>ButtonShadow</code>{{Deprecated_Inline}}</a></td>
+      <td style="background-color: ButtonShadow;"></td>
     </tr>
     <tr>
-      <td><code>CaptionText {{Deprecated_Inline}}</code></td>
-      <td style="background-color: CaptionText; color: ActiveCaption;">CaptionText</td>
+      <td><a href="#captiontext"><code>CaptionText</code>{{Deprecated_Inline}}</a></td>
+      <td style="background-color: CaptionText;"></td>
     </tr>
     <tr>
-      <td><code>InactiveBorder {{Deprecated_Inline}}</code></td>
-      <td style="background-color: InactiveBorder; color: ButtonText;">InactiveBorder</td>
+      <td><a href="#inactiveborder"><code>InactiveBorder</code>{{Deprecated_Inline}}</a></td>
+      <td style="background-color: InactiveBorder;"></td>
     </tr>
     <tr>
-      <td><code>InactiveCaption {{Deprecated_Inline}}</code></td>
-      <td style="background-color: InactiveCaption; color: InactiveCaptionText;">InactiveCaption</td>
+      <td><a href="#inactivecaption"><code>InactiveCaption</code>{{Deprecated_Inline}}</a></td>
+      <td style="background-color: InactiveCaption;"></td>
     </tr>
     <tr>
-      <td><code>InactiveCaptionText {{Deprecated_Inline}}</code></td>
-      <td style="background-color: InactiveCaptionText; color: InactiveCaption;">InactiveCaptionText</td>
+      <td><a href="#inactivecaptiontext"><code>InactiveCaptionText</code>{{Deprecated_Inline}}</a></td>
+      <td style="background-color: InactiveCaptionText;"></td>
     </tr>
     <tr>
-      <td><code>InfoBackground {{Deprecated_Inline}}</code></td>
-      <td style="background-color: InfoBackground; color: InfoText;">InfoBackground</td>
+      <td><a href="#infobackground"><code>InfoBackground</code>{{Deprecated_Inline}}</a></td>
+      <td style="background-color: InfoBackground;"></td>
     </tr>
     <tr>
-      <td><code>InfoText {{Deprecated_Inline}}</code></td>
-      <td style="background-color: InfoText; color: InfoBackground;">InfoText</td>
+      <td><a href="#infotext"><code>InfoText</code>{{Deprecated_Inline}}</a></td>
+      <td style="background-color: InfoText;"></td>
     </tr>
     <tr>
-      <td><code>Menu {{Deprecated_Inline}}</code></td>
-      <td style="background-color: Menu; color: MenuText;">Menu</td>
+      <td><a href="#menu"><code>Menu</code>{{Deprecated_Inline}}</a></td>
+      <td style="background-color: Menu;"></td>
     </tr>
     <tr>
-      <td><code>MenuText {{Deprecated_Inline}}</code></td>
-      <td style="background-color: MenuText; color: Menu;">MenuText</td>
+      <td><a href="#menutext"><code>MenuText</code>{{Deprecated_Inline}}</a></td>
+      <td style="background-color: MenuText;"></td>
     </tr>
     <tr>
-      <td><code>Scrollbar {{Deprecated_Inline}}</code></td>
-      <td style="background-color: Scrollbar; color: CanvasText;">Scrollbar</td>
+      <td><a href="#scrollbar"><code>Scrollbar</code>{{Deprecated_Inline}}</a></td>
+      <td style="background-color: Scrollbar;"></td>
     </tr>
     <tr>
-      <td><code>ThreeDDarkShadow {{Deprecated_Inline}}</code></td>
-      <td style="background-color: ThreeDDarkShadow; color: ButtonText;">ThreeDDarkShadow</td>
+      <td><a href="#threeddarkshadow"><code>ThreeDDarkShadow</code>{{Deprecated_Inline}}</a></td>
+      <td style="background-color: ThreeDDarkShadow;"></td>
     </tr>
     <tr>
-      <td><code>ThreeDFace {{Deprecated_Inline}}</code></td>
-      <td style="background-color: ThreeDFace; color: ButtonText;">ThreeDFace</td>
+      <td><a href="#threedface"><code>ThreeDFace</code>{{Deprecated_Inline}}</a></td>
+      <td style="background-color: ThreeDFace;"></td>
     </tr>
     <tr>
-      <td><code>ThreeDHighlight {{Deprecated_Inline}}</code></td>
-      <td style="background-color: ThreeDHighlight; color: ButtonText;">ThreeDHighlight</td>
+      <td><a href="#threedhighlight"><code>ThreeDHighlight</code>{{Deprecated_Inline}}</a></td>
+      <td style="background-color: ThreeDHighlight;"></td>
     </tr>
     <tr>
-      <td><code>ThreeDLightShadow {{Deprecated_Inline}}</code></td>
-      <td style="background-color: ThreeDLightShadow; color: ButtonText;">ThreeDLightShadow</td>
+      <td><a href="#threedlightshadow"><code>ThreeDLightShadow</code>{{Deprecated_Inline}}</a></td>
+      <td style="background-color: ThreeDLightShadow;"></td>
     </tr>
     <tr>
-      <td><code>ThreeDShadow {{Deprecated_Inline}}</code></td>
-      <td style="background-color: ThreeDShadow; color: ButtonText;">ThreeDShadow</td>
+      <td><a href="#threedshadow"><code>ThreeDShadow</code>{{Deprecated_Inline}}</a></td>
+      <td style="background-color: ThreeDShadow;"></td>
     </tr>
     <tr>
-      <td><code>Window {{Deprecated_Inline}}</code></td>
-      <td style="background-color: Window; color: WindowText;">Window</td>
+      <td><a href="#window"><code>Window</code>{{Deprecated_Inline}}</a></td>
+      <td style="background-color: Window;"></td>
     </tr>
     <tr>
-      <td><code>WindowFrame {{Deprecated_Inline}}</code></td>
-      <td style="background-color: WindowFrame; color: ButtonText;">WindowFrame</td>
+      <td><a href="#windowframe"><code>WindowFrame</code>{{Deprecated_Inline}}</a></td>
+      <td style="background-color: WindowFrame;"></td>
     </tr>
     <tr>
-      <td><code>WindowText {{Deprecated_Inline}}</code></td>
-      <td style="background-color: WindowText; color: Window;">WindowText</td>
+      <td><a href="#windowtext"><code>WindowText</code>{{Deprecated_Inline}}</a></td>
+      <td style="background-color: WindowText;"></td>
     </tr>
   </tbody>
 </table>
