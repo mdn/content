@@ -74,7 +74,7 @@ Sec-Speculation-Tags: null
 </script>
 ```
 
-If a speculation happens due to a speculation rule with a tag, then the tag name is sent in the `Sec-Speculation-Tags` header.
+If a speculation happens due to a speculation rule with a tag, the tag name is sent in the `Sec-Speculation-Tags` header.
 
 ```http
 Sec-Speculation-Tags: "my-rule"
@@ -98,7 +98,7 @@ The `tag` can be set at multiple levels:
 </script>
 ```
 
-All matching tags are sent in the `Sec-Speculation-Tags` header so in this case both `"my-ruleset"` and `"my-rule"` would be sent:
+All matching tags are sent in the `Sec-Speculation-Tags` header, so in this case, both `"my-ruleset"` and `"my-rule"` would be sent:
 
 ```http
 Sec-Speculation-Tags: "my-ruleset", "my-rule"
@@ -137,7 +137,7 @@ In this example, if the speculation is initiated by the user hovering over the l
 Sec-Speculation-Tags: "my-rule"
 ```
 
-However, if the link is clicked immediately, without waiting for the 200 milliseconds hover, then both rules would have triggered a speculation, so both tags will be included in the header:
+However, if the link is clicked immediately, without waiting for the 200 millisecond hover, then both rules would have triggered a speculation, therefore both tags will be included in the header:
 
 ```http
 Sec-Speculation-Tags: "my-rule", "cdn-rule"
@@ -169,7 +169,7 @@ Sec-Speculation-Tags: "my-rule", "cdn-rule"
 </script>
 ```
 
-Similar to the previous example, if the link is clicked immediately without waiting for the 200 milliseconds hover, both rules would have triggered a speculation, so both tags will be included in the header. However, because the first rule does not include a `tag` field, it is represented in the header with a `null` value:
+Similar to the previous example, if the link is clicked immediately without waiting for the 200 millisecond hover, both rules would have triggered a speculation, therefore both tags will be included in the header. However, because the first rule does not include a `tag` field, it is represented in the header with a `null` value:
 
 ```http
 Sec-Speculation-Tags: null, "cdn-rule"
