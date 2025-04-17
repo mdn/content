@@ -177,7 +177,7 @@ The `clip-path` property is specified as one or a combination of the values list
 
 ### Shapes and geometry boxes
 
-In this example, a triangle is created by defining a `polygon()` as the clip path on an element with a solid colored background with large {{cssxref("border")}}. The second element has a `<>:
+In this example, two triangles are created by defining a `polygon()` as the clip path on {{htmlelement("div")}} elements. Each one has a solid colored background and a thick {{cssxref("border")}}. The second `<div>` element has its reference box set to `content-box`:
 
 #### HTML
 
@@ -216,13 +216,13 @@ div:last-of-type {
 
 {{EmbedLiveSample("shapes1", "", "230")}}
 
-For the first triangle, we didn't specify a reference box, defaulting to `border-box` being used as the reference box, with the 0% and 100% being the outside edge of the border. In the second example, we set the `<geometry-box>` to `content-box`, meaning the reference box for the basic shape is the outer edge of the content area, which is inside the padding box. In our padding-less example, this is the inner edge of the border.
+For the first triangle, we didn't specify a reference box; it therefore defaults to `border-box`, with the 0% and 100% positions located on the outside edge of the border. In the second example, we set the `<geometry-box>` to `content-box`, meaning the reference box for the basic shape is the outer edge of the content area, which is inside the padding box. Because our example has no `padding`, this is the inner edge of the border.
 
-### Shape() versus path() functions
+### `shape()` versus `path()` functions
 
-Expanding on the previous example, we create the same shape with different `<basic-shape>` values, demonstrate how the {{cssxref("basic-shape/shape","shape()")}}`and {{cssxref("basic-shape/path","path()")}} functions can also be used to create clipping paths, with`shape()` being a more flexible solution.
+Expanding on the previous example, we create the same triangle with different `<basic-shape>` values, demonstrating how the {{cssxref("basic-shape/shape", "shape()")}} and {{cssxref("basic-shape/path", "path()")}} functions can also be used to create clipping paths, with `shape()` being a more flexible solution.
 
-We use `path()` to define the first element's clipping path, and `shape()` for the second to create a triangle, both using the default `border-box` as their references box:
+We use `path()` to define the first element's clipping path, and `shape()` for the second, both using the default `border-box` as their reference box:
 
 ```css live-sample___shapes2 live-sample___shapes3
 div {
@@ -234,11 +234,13 @@ div:last-of-type {
 }
 ```
 
+As a result, the path defined with the shape() function grows with the element, whereas the path() version does not:
+
 {{EmbedLiveSample("shapes2", "", "230")}}
 
 Because the `shape()` function allows using {{cssxref("percentage")}} values (and {{cssxref("--*", "custom properties")}} too), it is more robust.
 
-Expanding on the previous result, the only change we make here is an increase the size of the underlying element:
+We'll demonstrate this by increasing the size of the underlying element:
 
 ```css live-sample___shapes3
 div {
@@ -249,7 +251,7 @@ div {
 
 {{EmbedLiveSample("shapes3", "", "280")}}
 
-The path defined with the `shape()` function grew with the element. You'll note by the visibility or at least partial visibility of the four border sides in the clip path example defined by the `shape()` function; by using percentages, the path grew with the element. In the `path()` version, the top and left borders being partially visible while the right and bottom borders are clipped out.
+The visibility, or at least partial visibility, of the four border sides in the clip path example defined by the `shape()` function exists because the percentage values have allowed the path to grow with the element. In the `path()` version, the element grew but not the shape. As a result, the top and left borders are partially visible while the right and bottom borders are clipped out.
 
 ### SVG as clip source
 
@@ -257,7 +259,7 @@ In this example, we define SVG {{svgElement("clipPath")}} elements to use as a `
 
 #### HTML
 
-We include two {{htmlElement("div")}} elements that we will style along with an SVG element with two `<clipPath>` elements; one containing four {{svgElement("rect")}} elements that together define window panes, leaving a cross of blank space in the middle, and the other containing two crossing `<rect>` elements.
+We include two {{htmlElement("div")}} elements and an `<svg>` element containing two `<clipPath>` elements. One `<clipPath>` contains four {{svgElement("rect")}} elements that together define window panes, leaving a cross of blank space in the middle, and the other contains two crossing `<rect>` elements.
 
 ```html
 <svg height="0" width="0">
@@ -281,7 +283,7 @@ We include two {{htmlElement("div")}} elements that we will style along with an 
 
 #### CSS
 
-We use flexible layout to allow our elements to sit side-by-side with a gap between if they fit. We define a {{cssxref("gradient/conic-gradient", "conic-gradient()")}} background image on both `<div>` elements, providing an interesting visual to clip, along with a border.
+We use [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) to allow our elements to sit side-by-side with a gap between them, if there is space available. We define a {{cssxref("gradient/conic-gradient", "conic-gradient()")}} background image on both `<div>` elements, providing an interesting visual to clip, along with a {{cssxref("border")}}.
 
 ```css
 body {
@@ -307,7 +309,7 @@ div {
 }
 ```
 
-We then set the `id` of the `<clipPath>` as the `<clip-source>`. We included a {{cssxref("align-content")}} on the `cross` example, centering the text vertically, as otherwise the text would be clipped, as is happening in the `window` example.
+We then set the `id` of the `<clipPath>` as the `<clip-source>`. We center the text in the `cross` example vertically using {{cssxref("align-content")}}, as otherwise the text would be clipped, as is happening in the `window` example.
 
 ```css
 .window {
@@ -324,7 +326,7 @@ We then set the `id` of the `<clipPath>` as the `<clip-source>`. We included a {
 
 {{EmbedLiveSample("SVG as clip source", "", "230")}}
 
-The element, including the border and text, is clipped, with only the parts overlapping the `<clipPath>` being drawn to the page.
+The elements, including their border and text, are clipped, with only the parts overlapping the `<clipPath>` elements being drawn to the page.
 
 ### The various value types
 
@@ -332,7 +334,7 @@ This example demonstrates the various values of the `clip-path` property clippin
 
 #### HTML
 
-The HTML includes an image and a `<clipPath>` in the shape of a star. We also included a {{htmlelement("select")}} element which provides various optional values for the `clip-path` property.
+The HTML includes an `<img>` that will be clipped, a star-shaped `<clipPath>`, and a {{htmlelement("select")}} element to choose a `clip-path` property value from.
 
 The HTML includes an `<img>` that will be clipped, a star-shaped `<clipPath>`, and a {{htmlelement("select")}} element to choose a `clip-path` property value from.
 
@@ -343,7 +345,7 @@ The HTML includes an `<img>` that will be clipped, a star-shaped `<clipPath>`, a
 <svg height="0" width="0">
   <defs>
     <clipPath id="star">
-      <path d="M50,0 21,90 98,35 2,35 79,90z">
+      <path d="M100,0 42,180 196,70 4,70 158,180z">
     </clipPath>
   </defs>
 </svg>
@@ -378,14 +380,14 @@ The initial rendering includes the star as the `clip-path` source.
 
 #### JavaScript
 
-When you select a new option, an event handler updates the value of the `clip-path`.
+When you select a new option from the `<select>` menu, an event handler updates the value of the `clip-path` set on the `<img>`.
 
 ```js
 const clipPathSelect = document.getElementById("clipPath");
 clipPathSelect.addEventListener("change", (evt) => {
-  const x = evt.target.value;
-  document.getElementById("clipped").style.clipPath = x;
-  log(`clip-path: ${x};`);
+  const path = evt.target.value;
+  document.getElementById("clipped").style.clipPath = path;
+  log(`clip-path: ${path};`);
 });
 ```
 
@@ -407,7 +409,7 @@ function log(text) {
 
 #### Result
 
-{{EmbedLiveSample("Complete_example", 230, 280)}}
+{{EmbedLiveSample("Complete_example", 230, 300)}}
 
 Select different options to change the `clip-path` value. To clip a background to text, use the {{cssxref("background-clip")}} property.
 
