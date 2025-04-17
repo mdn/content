@@ -7,11 +7,12 @@ browser-compat: webextensions.api.tabs.ungroup
 
 {{AddonSidebar}}
 
-Removes one or more tabs from their respective tab groups. If any groups become empty, the empty tab groups are deleted.
+Removes one or more tabs from their respective tab groups. If any groups become empty, they are deleted.
 
-If a tab is between other tabs of the same tab group before ungrouping, the tab may be moved to ensure that the remaining tabs of the group stay adjacent to each other.
+If a tab is between other tabs in a tab group before ungrouping, the remaining tabs are moved so they stay adjacent.
 
-Note: the `tabs.ungroup()` method is not the only way to ungroup tabs; a tab may also be ungrouped when it is moved by calling {{WebExtAPIRef("tabs.move")}} with an `index` away from the tab group.
+> [!NOTE]
+> The `tabs.ungroup()` method is not the only way to ungroup tabs. A tab is ungrouped when it's moved by calling {{WebExtAPIRef("tabs.move")}} with an `index` that is outside the tab group.
 
 ## Syntax
 
@@ -34,7 +35,7 @@ If any of the `tabIds` are invalid, the promise is rejected without modifying th
 
 ## Examples
 
-Remove a tab from their tab group, if any:
+Remove the current tab from its tab group, if any:
 
 ```js
 let tabs = await browser.tabs.query({

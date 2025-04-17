@@ -7,15 +7,12 @@ browser-compat: webextensions.api.tabs.group
 
 {{AddonSidebar}}
 
-Adds one or more tabs to a group or, if no group is specified, adds the tabs to a new group.
+Adds one or more tabs to a group or, if no group is specified, adds the tabs to a new group. Any pinned tabs are unpinned before grouping. Tabs are moved so that tabs in a group are adjacent.
 
-As part of grouping, tabs may be moved to ensure that the tabs in the new group are adjacent to each other.
+If a call moves tabs out of tab groups and any of those tab groups become empty, the empty tab groups are removed.
 
-If tabs were part of a tab group before re-grouping, and that previous tab group becomes empty, that previous tab is removed.
-
-If any of the tabs are pinned, they are unpinned before grouping.
-
-Note: the `tabs.group()` method is not the only way to group tabs; a tab may join an existing tab group by calling {{WebExtAPIRef("tabs.move")}} with an `index` between tabs that are part of an existing tab group.
+> [!NOTE]
+> The `tabs.group()` method is not the only way to group tabs. A tab joins a tab group when {{WebExtAPIRef("tabs.move")}} places it between tabs that are part of a tab group.
 
 ## Syntax
 
@@ -27,40 +24,27 @@ let grouping = browser.tabs.group(
 
 ### Parameters
 
-- `createProperties`
 
-  - : `object`. Configuration details for a new group. Cannot be used if `groupId` is specified.
+- `options`
+  - : An object containing details about the tab grouping.
+    - `createProperties`
+      - : `object`. Configuration details for a new group. Cannot be used if `groupId` is specified.
 
-    - `windowId`
-      - : `integer`. The window of the new group. Defaults to the [current window](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/getCurrent).
+        - `windowId`
+          - : `integer`. The window of the new group. Defaults to the [current window](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/getCurrent).
 
-- `groupId`
-  - : `integer`. The ID of the group to add the tabs to. If not specified, a new group is created.
-- `tabIds`
-  - : `integer` or `array` of `integer`. The tab ID or list of tab IDs to add to the group. Must contain at least one tab ID.
+    - `groupId`
+      - : `integer`. The ID of the group to add the tabs to. If not specified, a new group is created.
+    - `tabIds`
+      - : `integer` or `array` of `integer`. The tab ID or list of tab IDs to add to the group. Must contain at least one tab ID.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with an integer containing the `groupId` of the tab group the tabs were added to. If the `groupId` is not found, any of the `tabIds` is invalid, the `windowId` is invalid, or some other error occurs, the promise is rejected with an error message. When a validation error occurs, the tabs are not modified.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with an integer containing the `groupId` of the tab group the tabs were added to. If the `groupId` is not found, any of the `tabIds` are invalid, the `windowId` is invalid, or some other error occurs, the promise is rejected with an error message. When a validation error occurs, the tabs are not modified.
 
 ## Examples
 
-Add two tab to a new tab group:
-
-```js
-function onAdded(groupInfo) {
-  console.log(`New group ID: ${groupInfo.groupId}`);
-}
-
-function onError(error) {
-  console.log(`Error: ${error}`);
-}
-
-let adding = browser.tabs.group( { tabIds: [2, 13] } );
-adding.then(onAdded, onError);
-```
-
-Add a tab to an existing group, for example the group of the current tab:
+Add a tab to an existing group, for example, the group of the current tab:
 
 ```js
 let [ oldTab ] = await browser.tabs.query({
