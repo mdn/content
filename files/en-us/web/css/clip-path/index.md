@@ -220,7 +220,9 @@ For the first triangle, we didn't specify a reference box, defaulting to `border
 
 ### Shape() versus path() functions
 
-The previous example can also be created with the {{cssxref("basic-shape/shape","shape()")}}` and {{cssxref("basic-shape/path","path()")}} functions.
+Expanding on the previous example, we create the same shape with different `<basic-shape>` values, demonstrate how the {{cssxref("basic-shape/shape","shape()")}}`and {{cssxref("basic-shape/path","path()")}} functions can also be used to create clipping paths, with`shape()` being a more flexible solution.
+
+We use `path()` to define the first element's clipping path, and `shape()` for the second to create a triangle, both using the default `border-box` as their references box:
 
 ```css live-sample___shapes2 live-sample___shapes3
 div {
@@ -234,7 +236,9 @@ div:last-of-type {
 
 {{EmbedLiveSample("shapes2", "", "230")}}
 
-Because the `shape()` function allows using {{cssxref("percentage")}} values, and even {{cssxref("--*", "custom properties")}}, it is more robust. Here we change the size of the underlying element. The path defined with the `shape()` function grows with the element.
+Because the `shape()` function allows using {{cssxref("percentage")}} values (and {{cssxref("--*", "custom properties")}} too), it is more robust.
+
+Expanding on the previous result, the only change we make here is an increase the size of the underlying element:
 
 ```css live-sample___shapes3
 div {
@@ -245,7 +249,7 @@ div {
 
 {{EmbedLiveSample("shapes3", "", "280")}}
 
-You'll note by the visibility or at least partial visibility of the border's four sides in the clip path example defined by the `shape()` example, as the path has grown with the element. The `path()` version is clipped at 200px, with only the top and left borders being partially visible; the right and bottom borders are clipped out.
+The path defined with the `shape()` function grew with the element. You'll note by the visibility or at least partial visibility of the four border sides in the clip path example defined by the `shape()` function; by using percentages, the path grew with the element. In the `path()` version, the top and left borders being partially visible while the right and bottom borders are clipped out.
 
 ### SVG as clip source
 
@@ -411,5 +415,6 @@ Select different options to change the `clip-path` value. To clip a background t
 - {{CSSxRef("mask")}}
 - {{CSSxRef("filter")}}
 - {{cssxref("background-clip")}}
+- [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
 - SVG {{SVGAttr("clip-path")}} attribute
 - [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
