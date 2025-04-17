@@ -32,7 +32,7 @@ let grouping = browser.tabs.group(
 
       - : `object`. Configuration details for a new group. Cannot be used if `groupId` is specified.
 
-        - `windowId`
+        - `windowId` {{optional_inline}}
           - : `integer`. The window of the new group. Defaults to the [current window](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/getCurrent).
 
     - `groupId` {{optional_inline}}
