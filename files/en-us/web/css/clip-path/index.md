@@ -257,7 +257,7 @@ In this example, we define SVG {{svgElement("clipPath")}} elements to use as a `
 
 #### HTML
 
-We include two {{htmlElement("div")}} elements and an `<svg> element containing two `<clipPath>` elements. One `<clipPath>` contains four {{svgElement("rect")}} elements that together define window panes, leaving a cross of blank space in the middle, and the other contains two crossing `<rect>` elements.
+We include two {{htmlElement("div")}} elements and an `<svg>` element containing two `<clipPath>` elements. One `<clipPath>` contains four {{svgElement("rect")}} elements that together define window panes, leaving a cross of blank space in the middle, and the other contains two crossing `<rect>` elements.
 
 ```html
 <svg height="0" width="0">
