@@ -44,7 +44,7 @@ getComposedRanges(options)
         Otherwise, if the selection crosses a shadow boundary and the corresponding `ShadowRoot` is not provided, the returned range will be adjusted to include the entire host element for the shadow root.
 
 > [!NOTE]
-> Some browsers may still support the legacy syntax with individual ShadowRoot parameters: `getComposedRanges(shadowRoot1, shadowRoot2, ..., shadowRootN)`
+> In the original specification, shadow roots were specified as a set of [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters). Some browsers may still support this legacy syntax.
 
 ### Return value
 
