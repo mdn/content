@@ -36,7 +36,7 @@ getComposedRanges(options)
 
 - `options` {{optional_inline}}
 
-  - : The following optional properties may also be specified:
+  - : An object with the following properties, all optional:
 
     - `shadowRoots` {{optional_inline}} :
       An array of {{domxref("ShadowRoot")}} objects.
