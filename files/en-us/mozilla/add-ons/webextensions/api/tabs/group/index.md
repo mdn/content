@@ -45,6 +45,26 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ## Examples
 
+Create two new tabs and put them in a new group.
+
+```js
+const tab1 = await browser.tabs.create({});
+const tab2 = await browser.tabs.create({});
+const groupId = await browser.tabs.group({
+  tabIds: [tab1.id, tab2.id],
+});
+```
+
+Create a new tab and add it to an existing group.
+
+```js
+const tab3 = await browser.tabs.create({});
+await browser.tabs.group({
+  tabIds: tab3.id,
+  groupId: groupId,
+});
+```
+
 Create a tab and match its grouping to that of the current tab.
 
 ```js
@@ -61,8 +81,10 @@ let newTab = await browser.tabs.create({
 // All tabs are ungrouped if the API does not exist.
 if (browser.tabs.group) {
   if (oldTab.groupId !== -1) {
+    // oldTab is in a group, add newTab to the same group
     await browser.tabs.group({ groupId: oldTab.groupId, tabIds: [newTab.id] });
   } else {
+    // oldTab isn't in a group
     // Although a new tab positioned next to an ungrouped tab is
     // already ungrouped, we call ungroup() in case this example is 
     // adopted for use with tabs that aren't adjacent. When oldTab
