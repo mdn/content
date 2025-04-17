@@ -954,7 +954,11 @@
     "Insertable Streams for MediaStreamTrack API": {
       "overview": ["Insertable Streams for MediaStreamTrack API"],
       "guides": [],
-      "interfaces": ["MediaStreamTrackGenerator", "MediaStreamTrackProcessor"],
+      "interfaces": [
+        "MediaStreamTrackGenerator",
+        "MediaStreamTrackProcessor",
+        "VideoTrackGenerator"
+      ],
       "methods": [],
       "properties": [],
       "events": []
