@@ -7,17 +7,17 @@ spec-urls: https://drafts.fxtf.org/css-masking/
 
 {{CSSRef}}
 
-The **CSS masking** module defines masking and clipping, two different graphical operations that are used to partially or fully hide portions of visual elements.
+The **CSS masking** module defines masking and clipping; two different graphical operations that can be used to partially or fully hide portions of visual elements.
 
-**Clipping** involves defining a closed vector path, shape, or polygon as a **clipping path**. Everything inside the clipping path region remains visible while everything outside is hidden, or "clipped out". The {{cssxref("clip-path")}} property specifies a {{cssxref("&lt;basic-shape&gt;")}} or references an SVG {{SVGElement("clipPath")}} element to be used as a clipping path.
+In CSS, **clipping** is done by defining a closed vector path, shape or polygon as a **clipping path**. Everything inside the clipping path region remains visible while everything outside is hidden, or "clipped out". The {{cssxref("clip-path")}} property can be used to specify a {{cssxref("&lt;basic-shape&gt;")}} as a clipping path or reference an SVG {{SVGElement("clipPath")}} element to be used as clipping path.
 
-CSS **masking** properties are used to apply a mask to an element or its border. A graphical object is then painted onto the background or border, completely or partially masking out parts of the element or its border, depending on the opacity or luminance of the mask.
+With **masking**, properties can be used to apply a mask to an element or its border. The effect being that a graphical object is painted onto the background or border through a mask, thus completely or partially masking out parts of the element or its border depending on the opacity or luminance of the mask.
 
-The image used as the mask is specified by the {{cssxref("mask-image")}} or {{cssxref("mask-border-source")}} properties. The specified mask can be an {{cssxref("image")}}, a {{cssxref("gradient")}}, or an SVG {{SVGElement("mask")}} element. The mask can be sized and positioned similarly to [background and border images](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders).
+The image used as the mask is defined by the {{cssxref("mask-image")}} or {{cssxref("mask-border-source")}} properties, which can reference an SVG {{SVGElement("mask")}} element. This mask can be sized and positioned similar to a [background and border images](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders).
 
-Clipping and masking in CSS behaves the same way as it does with SVG: First, the element is styled without filter effects, masking, clipping, and opacity. Then, any effects are applied to the element in the following order: [filter effects](/en-US/docs/Web/CSS/CSS_filter_effects), clipping, masking, and opacity.
+Clipping and masking in CSS behaves as it does with SVG: First the element is styled under absence of filter effects, masking, clipping and opacity. Then any effects are applied to the element in the following order: [filter effects](/en-US/docs/Web/CSS/CSS_filter_effects), clipping, masking and opacity.
 
-While masking provides more control and options, clipping can perform better if a basic shape is all that's required — they are easier to interpolate.
+While masking provides more control and options, clipping can perform better with basic shapes being easier to interpolate.
 
 ## Reference
 
@@ -47,6 +47,7 @@ While masking provides more control and options, clipping can perform better if 
 ### Data types
 
 - [`<geometry-box>`](/en-US/docs/Web/CSS/clip-path#geometry-box)
+- [`<mask-layer>`](/en-US/docs/Web/CSS/mask/#mask-layer)
 
 ### Functions
 
@@ -57,6 +58,12 @@ While masking provides more control and options, clipping can perform better if 
 - {{domxref("SVGClipPathElement")}}
 - {{domxref("SVGMaskElement")}}
   - {{domxref("SVGMaskElement.maskContentUnits")}}
+
+## Guides
+
+- [Introduction to CSS clipping](/en-US/docs/Web/CSS/CSS_masking/CSS_clipping)
+
+  - : Introduction to clipping in CSS, including the `clip-path` property with examples.
 
 ## Related concepts
 

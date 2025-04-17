@@ -59,22 +59,26 @@ mask:
 
 ### Values
 
-- `<mask-reference>`
-  - : Sets the mask image source. See {{cssxref("mask-image")}}.
-- `<masking-mode>`
-  - : Sets the masking mode of the mask image. See {{cssxref("mask-mode")}}.
-- `<position>`
-  - : Sets the position of the mask image. See {{cssxref("mask-position")}}.
-- `<bg-size>`
-  - : Sets the size of the mask image. See {{cssxref("mask-size")}}.
-- `<repeat-style>`
-  - : Sets the repetition of the mask image. See {{cssxref("mask-repeat")}}.
-- `<geometry-box>`
-  - : If only one `<geometry-box>` value is given, it sets both {{cssxref("mask-origin")}} and {{cssxref("mask-clip")}}. If two `<geometry-box>` values are present, then the first sets {{cssxref("mask-origin")}} and the second sets {{cssxref("mask-clip")}}.
-- `<geometry-box> | no-clip`
-  - : Sets the area that is affected by the mask image. See {{cssxref("mask-clip")}}.
-- `<compositing-operator>`
-  - : Sets the compositing operation used on the current mask layer. See {{cssxref("mask-composite")}}.
+- `<mask-layer>`
+
+  - : One or more comma separated mask layers, consisting of the following components:
+
+    - `<mask-reference>`
+      - : Sets the mask image source. See {{cssxref("mask-image")}}.
+    - `<masking-mode>`
+      - : Sets the masking mode of the mask image. See {{cssxref("mask-mode")}}.
+    - `<position>`
+      - : Sets the position of the mask image. See {{cssxref("mask-position")}}.
+    - `<bg-size>`
+      - : Sets the size of the mask image. See {{cssxref("mask-size")}}.
+    - `<repeat-style>`
+      - : Sets the repetition of the mask image. See {{cssxref("mask-repeat")}}.
+    - `<geometry-box>`
+      - : If only one `<geometry-box>` value is given, it sets both {{cssxref("mask-origin")}} and {{cssxref("mask-clip")}}. If two `<geometry-box>` values are present, then the first sets {{cssxref("mask-origin")}} and the second sets {{cssxref("mask-clip")}}.
+    - `<geometry-box> | no-clip`
+      - : Sets the area that is affected by the mask image. See {{cssxref("mask-clip")}}.
+    - `<compositing-operator>`
+      - : Sets the compositing operation used on the current mask layer. See {{cssxref("mask-composite")}}.
 
 ## Formal definition
 
@@ -110,6 +114,6 @@ mask:
 
 - {{CSSxRef("clip-path")}}
 - {{CSSxRef("filter")}}
+- [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
 - SVG {{SVGAttr("mask")}} attribute
-- [CSS Shapes, clipping and masking – and how to use them](https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/)
 - [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
