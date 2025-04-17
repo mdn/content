@@ -7,12 +7,12 @@ browser-compat: webextensions.api.tabs.group
 
 {{AddonSidebar}}
 
-Adds one or more tabs to a group or, if no group is specified, adds the tabs to a new group. Any pinned tabs are unpinned before grouping. Tabs are moved so that tabs in a group are adjacent.
+Adds one or more tabs to a group or, if no group is specified, adds the tabs to a new group. All tabs in a tab group must be adjacent, and tabs are moved if needed. Any pinned tabs are unpinned before grouping.
 
 If a call moves tabs out of tab groups and any of those tab groups become empty, the empty tab groups are removed.
 
 > [!NOTE]
-> The `tabs.group()` method is not the only way to group tabs. A tab joins a tab group when {{WebExtAPIRef("tabs.move")}} places it between tabs that are part of a tab group.
+> The `tabs.group()` method is not the only way to group tabs. A tab also joins a tab group when {{WebExtAPIRef("tabs.move")}} places it between tabs that are part of a tab group.
 
 ## Syntax
 
@@ -27,6 +27,7 @@ let grouping = browser.tabs.group(
 - `options`
 
   - : An object containing details about the tab grouping.
+
     - `createProperties` {{optional_inline}}
       - : `object`. Configuration details for a new group. Cannot be used if `groupId` is specified.
 
@@ -44,7 +45,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ## Examples
 
-Add a tab to an existing group, for example, the group of the current tab:
+Create a tab and match its grouping to that of the current tab.
 
 ```js
 let [oldTab] = await browser.tabs.query({
@@ -56,10 +57,17 @@ let newTab = await browser.tabs.create({
   url: "https://example.com/",
   index: oldTab.index + 1,
 });
+// Feature detection: tab grouping is a relatively new feature.
+// All tabs are ungrouped if the API does not exist.
 if (browser.tabs.group) {
   if (oldTab.groupId !== -1) {
     await browser.tabs.group({ groupId: oldTab.groupId, tabIds: [newTab.id] });
   } else {
+    // Although a new tab positioned next to an ungrouped tab is
+    // already ungrouped, we call ungroup() in case this example is 
+    // adopted for use with tabs that aren't adjacent. When oldTab
+    // is not in a tab group, the only way to ensure that newTab isn't
+    // in a tab group is by using ungroup().
     await browser.tabs.ungroup(newTab.id);
   }
 }

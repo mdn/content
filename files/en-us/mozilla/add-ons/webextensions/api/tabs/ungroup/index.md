@@ -9,10 +9,10 @@ browser-compat: webextensions.api.tabs.ungroup
 
 Removes one or more tabs from their respective tab groups. If any groups become empty, they are deleted.
 
-If a tab is between other tabs in a tab group before ungrouping, the remaining tabs are moved so they stay adjacent.
+All tabs in a tab group must be adjacent. If necessary, an ungrouped tab is moved before or after the tab group to maintain this requirement.
 
 > [!NOTE]
-> The `tabs.ungroup()` method is not the only way to ungroup tabs. A tab is ungrouped when it's moved by calling {{WebExtAPIRef("tabs.move")}} with an `index` that is outside the tab group.
+> The `tabs.ungroup()` method is not the only way to ungroup tabs. A tab is also ungrouped when it's moved by calling {{WebExtAPIRef("tabs.move")}} with an `index` that is outside a tab group.
 
 ## Syntax
 

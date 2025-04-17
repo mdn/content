@@ -97,8 +97,8 @@ Lists the changes to the state of the tab that is updated. To learn more about t
   - : `boolean`. Whether the tab is discarded. A discarded tab is one whose content has been unloaded from memory but is visible in the tab strip. Its content gets reloaded the next time it's activated.
 - `favIconUrl` {{optional_inline}}
   - : `string`. The tab's new favicon URL. Not included when a tab loses its favicon (navigating from a page with a favicon to a page without one). Check `favIconUrl` in [tab](#tab) instead.
-  - `groupId` {{optional_inline}}
-    - : `integer`. The ID of the group the tabs are in or `-1` for ungrouped tabs.
+- `groupId` {{optional_inline}}
+  - : `integer`. The ID of the group the tabs are in or `-1` for ungrouped tabs.
 - `hidden` {{optional_inline}}
   - : `boolean`. True if the tab is {{WebExtAPIRef("tabs.hide()", "hidden")}}.
 - `isArticle` {{optional_inline}}
