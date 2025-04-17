@@ -38,10 +38,10 @@ getComposedRanges(options)
 
   - : An object with the following properties, all optional:
 
-    - `shadowRoots` {{optional_inline}} :
-      An array of {{domxref("ShadowRoot")}} objects.
-      If a selection endpoint is within one of the provided shadow roots, the range will be able to return nodes within its corresponding Shadow DOM tree.
-      Otherwise, if the selection crosses a shadow boundary and the corresponding `ShadowRoot` is not provided, the returned range will be adjusted to include the entire host element for the shadow root.
+    - `shadowRoots` {{optional_inline}}
+      - : An array of {{domxref("ShadowRoot")}} objects.
+        If a selection endpoint is within one of the provided shadow roots, the range will be able to return nodes within its corresponding Shadow DOM tree.
+        Otherwise, if the selection crosses a shadow boundary and the corresponding `ShadowRoot` is not provided, the returned range will be adjusted to include the entire host element for the shadow root.
 
 > [!NOTE]
 > Some browsers may still support the legacy syntax with individual ShadowRoot parameters: `getComposedRanges(shadowRoot1, shadowRoot2, ..., shadowRootN)`
