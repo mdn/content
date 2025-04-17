@@ -29,6 +29,7 @@ let grouping = browser.tabs.group(
   - : An object containing details about the tab grouping.
 
     - `createProperties` {{optional_inline}}
+
       - : `object`. Configuration details for a new group. Cannot be used if `groupId` is specified.
 
         - `windowId`
@@ -86,7 +87,7 @@ if (browser.tabs.group) {
   } else {
     // oldTab isn't in a group
     // Although a new tab positioned next to an ungrouped tab is
-    // already ungrouped, we call ungroup() in case this example is 
+    // already ungrouped, we call ungroup() in case this example is
     // adopted for use with tabs that aren't adjacent. When oldTab
     // is not in a tab group, the only way to ensure that newTab isn't
     // in a tab group is by using ungroup().
