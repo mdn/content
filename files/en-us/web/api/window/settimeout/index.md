@@ -330,14 +330,14 @@ The specifics of this are browser-dependent:
   - **Minimal throttling**: Applies to timers when the page is visible, has made sound recently, or is otherwise considered active by Chrome. Timers run close to the requested interval.
 
   - **Throttling**: Applies to timers when minimal throttle conditions are not met and any of these conditions are true:
-    - Chain count (timer invocations) is lower than 5.
+    - Nesting count (i.e., number of chained timer calls) is lower than 5.
     - Page has been invisible for less than 5 minutes.
     - WebRTC is active.
 
   Timers in this state are checked once per second, which may be batched together with other timers that have similar timeouts.
 
   - **Intensive throttling**: Introduced in Chrome 88 (January 2021). Applies to timers when neither minimal throttling nor throttling conditions are met, and all of the following conditions are met:
-    - Chain count (timer invocations) is 5 or higher.
+    - Nesting count is 5 or higher.
     - Page has been invisible for more than 5 minutes.
     - Page has been silent for more than 30 seconds.
     - WebRTC is inactive.
