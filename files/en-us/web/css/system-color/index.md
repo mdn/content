@@ -149,107 +149,90 @@ In this example we have a button that normally gets its contrast using the {{css
 
 ### Check system colors in this browser
 
-In this example, you'll find a series of divs that use the system colors, so you can check how they look. Depending on your settings, the background colors may change. You can also check the result in different browsers or operating systems to see how they look.
+In this example, you'll find a table that use the system colors, so you can check how they look. Depending on your settings, the background colors may change. You can also check the result in different browsers or operating systems to see how they look.
 
-#### HTML
-
-```html
-<div class="system-color AccentColor">AccentColor</div>
-<div class="system-color AccentColorText">AccentColorText</div>
-<div class="system-color ActiveText">ActiveText</div>
-<div class="system-color ButtonBorder">ButtonBorder</div>
-<div class="system-color ButtonFace">ButtonFace</div>
-<div class="system-color ButtonText">ButtonText</div>
-<div class="system-color Canvas">Canvas</div>
-<div class="system-color CanvasText">CanvasText</div>
-<div class="system-color Field">Field</div>
-<div class="system-color FieldText">FieldText</div>
-<div class="system-color GrayText">GrayText</div>
-<div class="system-color Highlight">Highlight</div>
-<div class="system-color HighlightText">HighlightText</div>
-<div class="system-color LinkText">LinkText</div>
-<div class="system-color Mark">Mark</div>
-<div class="system-color MarkText">MarkText</div>
-<div class="system-color SelectedItem">SelectedItem</div>
-<div class="system-color SelectedItemText">SelectedItemText</div>
-<div class="system-color VisitedText">VisitedText</div>
-```
-
-#### CSS
-
-```css
-.system-color {
-  padding: 10px;
-  margin: 5px;
-  font-family: sans-serif;
-  border: 3px solid;
-}
-/* The system colors */
-.AccentColor {
-  border-color: AccentColor;
-}
-.AccentColorText {
-  border-color: AccentColorText;
-}
-.ActiveText {
-  border-color: ActiveText;
-}
-.ButtonBorder {
-  border-color: ButtonBorder;
-}
-.ButtonFace {
-  border-color: ButtonFace;
-}
-.ButtonText {
-  border-color: ButtonText;
-}
-.ButtonHighlight {
-  border-color: ButtonHighlight;
-}
-.Canvas {
-  border-color: Canvas;
-}
-.CanvasText {
-  border-color: CanvasText;
-}
-.Field {
-  border-color: Field;
-}
-.FieldText {
-  border-color: FieldText;
-}
-.GrayText {
-  border-color: GrayText;
-}
-.Highlight {
-  border-color: Highlight;
-}
-.HighlightText {
-  border-color: HighlightText;
-}
-.LinkText {
-  border-color: LinkText;
-}
-.Mark {
-  border-color: Mark;
-}
-.MarkText {
-  border-color: MarkText;
-}
-.SelectedItem {
-  border-color: SelectedItem;
-}
-.SelectedItemText {
-  border-color: SelectedItemText;
-}
-.VisitedText {
-  border-color: VisitedText;
-}
-```
-
-#### Result
-
-{{EmbedLiveSample("Check system colors in this browser")}}
+<table>
+  <thead>
+    <tr>
+      <th>System color</th>
+      <th>Sample</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>AccentColor</code></td>
+      <td style="background-color: AccentColor; color: AccentColorText;">AccentColor</td>
+    </tr>
+    <tr>
+      <td><code>ActiveText</code></td>
+      <td style="background-color: ActiveText; color: ButtonFace;">ActiveText</td>
+    </tr>
+    <tr>
+      <td><code>ButtonBorder</code></td>
+      <td style="background-color: ButtonBorder; color: ButtonText;">ButtonBorder</td>
+    </tr>
+    <tr>
+      <td><code>ButtonFace</code></td>
+      <td style="background-color: ButtonFace; color: ButtonText;">ButtonFace</td>
+    </tr>
+    <tr>
+      <td><code>ButtonText</code></td>
+      <td style="background-color: ButtonText; color: ButtonFace;">ButtonText</td>
+    </tr>
+    <tr>
+      <td><code>Canvas</code></td>
+      <td style="background-color: Canvas; color: CanvasText;">Canvas</td>
+    </tr>
+    <tr>
+      <td><code>CanvasText</code></td>
+      <td style="background-color: CanvasText; color: Canvas;">CanvasText</td>
+    </tr>
+    <tr>
+      <td><code>Field</code></td>
+      <td style="background-color: Field; color: FieldText;">Field</td>
+    </tr>
+    <tr>
+      <td><code>FieldText</code></td>
+      <td style="background-color: FieldText; color: Field;">FieldText</td>
+    </tr>
+    <tr>
+      <td><code>GrayText</code></td>
+      <td style="background-color: GrayText; color: ButtonFace;">GrayText</td>
+    </tr>
+    <tr>
+      <td><code>Highlight</code></td>
+      <td style="background-color: Highlight; color: HighlightText;">Highlight</td>
+    </tr>
+    <tr>
+      <td><code>HighlightText</code></td>
+      <td style="background-color: HighlightText; color: Highlight;">HighlightText</td>
+    </tr>
+    <tr>
+      <td><code>LinkText</code></td>
+      <td style="background-color: LinkText; color: ButtonFace;">LinkText</td>
+    </tr>
+    <tr>
+      <td><code>Mark</code></td>
+      <td style="background-color: Mark; color: MarkText;">Mark</td>
+    </tr>
+    <tr>
+      <td><code>MarkText</code></td>
+      <td style="background-color: MarkText; color: Mark;">MarkText</td>
+    </tr>
+    <tr>
+      <td><code>SelectedItem</code></td>
+      <td style="background-color: SelectedItem; color: SelectedItemText;">SelectedItem</td>
+    </tr>
+    <tr>
+      <td><code>SelectedItemText</code></td>
+      <td style="background-color: SelectedItemText; color: SelectedItem;">SelectedItemText</td>
+    </tr>
+    <tr>
+      <td><code>VisitedText</code></td>
+      <td style="background-color: VisitedText; color: ButtonFace;">VisitedText</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 
