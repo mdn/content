@@ -253,6 +253,35 @@ div {
 
 The visibility, or at least partial visibility, of the four border sides in the clip path example defined by the `shape()` function is due to the percentage values allowing the path to grow with the element. In the `path()` version, the element grew, but not the shape. As a result, the top and left borders are partially visible while the right and bottom borders are clipped out.
 
+### Shape() versus path() functions
+
+The previous example can also be created with the `shape()` and `path()` functions.
+
+```css live-sample___shapes2 live-sample___shapes3
+div {
+  clip-path: path("M100 0 L200 200 L0 200 Z");
+}
+
+div:last-of-type {
+  clip-path: shape(from 50% 0, line to 100% 100%, line to 0 100%, close);
+}
+```
+
+{{EmbedLiveSample("shapes2", "", "230")}}
+
+Because the `shape()` function allows using {{cssxref("percentage")}} values, and even {{cssxref("--*", "custom properties")}}, it is more robust. Here we change the size of the underlying element. The path defined with the `shape()` function grows with the element.
+
+```css live-sample___shapes3
+div {
+  width: 250px;
+  height: 250px;
+}
+```
+
+{{EmbedLiveSample("shapes3", "", "280")}}
+
+You'll note by the visibility of the border in the three corners that the clip path defined by the `shape()` has grown with the element. The `path()` version is clipped at 200px, so only the top and left borders are partially visible; the right and bottom borders are outside of the path and therefore clipped out.
+
 ### SVG as clip source
 
 In this example, we define SVG {{svgElement("clipPath")}} elements to use as a `clip-path` source.
@@ -405,6 +434,8 @@ Select different options to change the `clip-path` value.
 
 > [!NOTE]
 > While it is possible to define a path of text, if you want to clip a background image to text rather than a shape, see the {{cssxref("background-clip")}} property.
+
+### Shape path() and shape() functions
 
 ## Specifications
 
