@@ -24,16 +24,15 @@ let grouping = browser.tabs.group(
 
 ### Parameters
 
-
 - `options`
   - : An object containing details about the tab grouping.
-    - `createProperties`
+    - `createProperties` {{optional_inline}}
       - : `object`. Configuration details for a new group. Cannot be used if `groupId` is specified.
 
         - `windowId`
           - : `integer`. The window of the new group. Defaults to the [current window](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/getCurrent).
 
-    - `groupId`
+    - `groupId` {{optional_inline}}
       - : `integer`. The ID of the group to add the tabs to. If not specified, a new group is created.
     - `tabIds`
       - : `integer` or `array` of `integer`. The tab ID or list of tab IDs to add to the group. Must contain at least one tab ID.
