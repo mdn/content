@@ -234,6 +234,8 @@ div:last-of-type {
 }
 ```
 
+As a result, the path defined with the shape() function grows with the element, whereas the path() version does not:
+
 {{EmbedLiveSample("shapes2", "", "230")}}
 
 Because the `shape()` function allows using {{cssxref("percentage")}} values (and {{cssxref("--*", "custom properties")}} too), it is more robust.
@@ -249,7 +251,7 @@ div {
 
 {{EmbedLiveSample("shapes3", "", "280")}}
 
-The path defined with the `shape()` function grew with the element. You'll note by the visibility or at least partial visibility of the four border sides in the clip path example defined by the `shape()` function; by using percentages, the path grew with the element. In the `path()` version, the top and left borders being partially visible while the right and bottom borders are clipped out.
+The visibility, or at least partial visibility, of the four border sides in the clip path example defined by the `shape()` function exists because the percentage values have allowed the path to grow with the element. In the `path()` version, the element grew but not the shape. As a result, the top and left borders are partially visible while the right and bottom borders are clipped out.
 
 ### SVG as clip source
 
@@ -335,11 +337,13 @@ This example demonstrates the various values of the `clip-path` property clippin
 The HTML includes an `<img>` that will be clipped, a star-shaped `<clipPath>`, and a {{htmlelement("select")}} element to choose a `clip-path` property value from.
 
 ```html
-<img id="clipped" src="mdn.svg" alt="MDN logo" />
+<img id="clipped"
+  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+  alt="Pride flag" />
 <svg height="0" width="0">
   <defs>
     <clipPath id="star">
-      <path d="M50,0 21,90 98,35 2,35 79,90z">
+      <path d="M100,0 42,180 196,70 4,70 158,180z">
     </clipPath>
   </defs>
 </svg>
@@ -379,9 +383,9 @@ When you select a new option from the `<select>` menu, an event handler updates 
 ```js
 const clipPathSelect = document.getElementById("clipPath");
 clipPathSelect.addEventListener("change", (evt) => {
-  const x = evt.target.value;
-  document.getElementById("clipped").style.clipPath = x;
-  log(`clip-path: ${x};`);
+  const path = evt.target.value;
+  document.getElementById("clipped").style.clipPath = path;
+  log(`clip-path: ${path};`);
 });
 ```
 
