@@ -30,9 +30,11 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `HierarchyRequestError` {{jsxref("TypeError")}}
-  - : Thrown in either of the following situations:
+  - : Thrown in any of the following situations:
     - The specified `movedNode` is not part of the DOM, and you are trying to move it inside a node that is part of the DOM, or vice versa.
+    - The specified `movedNode` is an ancestor of the Element `moveBefore()` is being called on.
     - You are trying to move `movedNode` between two different documents.
+    - The specified `movedNode` is not an {{domxref("Element")}} or {{domxref("CharacterData")}} node.
 - `NotFoundError` {{jsxref("TypeError")}}
   - : The specified `referenceNode` is not a child of the node you are calling `moveBefore()` on, that is, the node you are trying to move `movedNode` inside.
 - `TypeError` {{jsxref("TypeError")}}
@@ -62,13 +64,13 @@ There are some constraints to be aware of when using `moveBefore()`:
 
 In such cases, `moveBefore()` will fail with a `HierarchyRequestError` exception. If the above constraints are requirements for your particular use case, you should use {{domxref("Node.insertBefore()")}} instead, or use [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) to handle the errors that arise from such cases.
 
-### Moving custom elements
+### Moving custom elements while preserving state
 
-Each time a [custom element's](/en-US/docs/Web/API/Web_components/Using_custom_elements) position in the DOM is updated via `Element.moveBefore()`, or similar methods such as {{domxref("Node.insertBefore()")}}, its `disconnectedCallback()` and `connectedCallback()` lifecycle callbacks are fired. This might be your intended behavior. However, if you use the callbacks to run initialization and cleanup code, it might cause problems with the state of the moved element.
+Each time a [custom element's](/en-US/docs/Web/API/Web_components/Using_custom_elements) position in the DOM is updated via `Element.moveBefore()`, or similar methods such as {{domxref("Node.insertBefore()")}}, its `disconnectedCallback()` and `connectedCallback()` lifecycle callbacks are fired. Since these callbacks are typically used to implement any required initialization or cleanup code to run at the start or end of the element's lifecycle, running them when the element is moved (rather than removed or inserted) may cause problems with its state.
 
-Custom elements can be opted in to state-preserving moves via `moveBefore()` and the `connectedMoveCallback()` lifecycle callback. If defined in the constructor, `connectedMoveCallback()` will run instead of `connectedCallback()` and `disconnectedCallback()` when an element instance is moved via `moveBefore()`.
+You can use the `connectedMoveCallback()` callback to preserve a custom element's state. When using `moveBefore()` to move a custom element, `connectedMoveCallback()` is run instead of `connectedCallback()` and `disconnectedCallback()`.
 
-See [Moving custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements#moving_custom_elements_lifecycle_side-effects) for further information.
+See [Moving custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements#lifecycle_callbacks_and_state-preserving_moves) for further information.
 
 ## Examples
 
