@@ -255,7 +255,7 @@ The visibility, or at least partial visibility, of the four border sides in the 
 
 ### Shape() versus path() functions
 
-The previous example can also be created with the `shape()` and `path()` functions.
+The previous example can also be created with the {{cssxref("basic-shape/shape","shape()")}}` and {{cssxref("basic-shape/path","path()")}} functions.
 
 ```css live-sample___shapes2 live-sample___shapes3
 div {
@@ -280,7 +280,7 @@ div {
 
 {{EmbedLiveSample("shapes3", "", "280")}}
 
-You'll note by the visibility of the border in the three corners that the clip path defined by the `shape()` has grown with the element. The `path()` version is clipped at 200px, so only the top and left borders are partially visible; the right and bottom borders are outside of the path and therefore clipped out.
+You'll note by the visibility or at least partial visibility of the border's four sides in the clip path example defined by the `shape()` example, as the path has grown with the element. The `path()` version is clipped at 200px, with only the top and left borders being partially visible; the right and bottom borders are clipped out.
 
 ### SVG as clip source
 
