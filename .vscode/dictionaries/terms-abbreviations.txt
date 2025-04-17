@@ -320,6 +320,7 @@ JSON-ifiable
 jsonifier
 jumpless
 JXON
+KACST
 Kbit
 Kbps
 keysyms

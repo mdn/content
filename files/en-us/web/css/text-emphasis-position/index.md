@@ -186,8 +186,10 @@ Use the drop down menu to change the position of the emphasis marks. This will c
 #### HTML
 
 ```html hidden
-<p class="unsupported">The <code>auto</code> value is not supported in your browser.</p>
-<label for="position">Emphasis position:</position>
+<p class="unsupported">
+  The <code>auto</code> value is not supported in your browser.
+</p>
+<label for="position">Emphasis position:</label>
 <select id="position">
   <option value="auto">auto</option>
   <option value="over-right">over right</option>

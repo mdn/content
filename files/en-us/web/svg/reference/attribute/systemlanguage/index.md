@@ -16,7 +16,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("animateTransform")}}
 - {{SVGElement("circle")}}
 - {{SVGElement("clipPath")}}
-- {{SVGElement("cursor")}}
 - {{SVGElement("defs")}}
 - {{SVGElement("ellipse")}}
 - {{SVGElement("foreignObject")}}
@@ -34,7 +33,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("switch")}}
 - {{SVGElement("text")}}
 - {{SVGElement("textPath")}}
-- {{SVGElement("tref")}}
 - {{SVGElement("tspan")}}
 - {{SVGElement("use")}}
 

@@ -18,7 +18,7 @@ selector {
 }
 ```
 
-The `!important` comes after the value of the property value pair declaration, preceded by at least one space. The important flag must be the last token in the declaration. In other words, there can be white space and comments between the flag and the declaration's ending semicolon, but nothing else.
+The `!important` comes after the value of the property value pair declaration, preceded by zero or more spaces. The important flag must be the last token in the declaration. In other words, there can be white space and comments between the flag and the declaration's ending semicolon, but nothing else.
 
 ## Impact on the cascade
 

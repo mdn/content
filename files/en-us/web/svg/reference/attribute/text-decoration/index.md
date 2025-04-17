@@ -19,7 +19,6 @@ You can use this attribute with the following SVG elements:
 
 - {{SVGElement("text")}}
 - {{SVGElement("textPath")}}
-- {{SVGElement("tref")}}
 - {{SVGElement("tspan")}}
 
 ## Example
