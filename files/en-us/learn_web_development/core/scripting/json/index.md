@@ -3,9 +3,8 @@ title: Working with JSON
 short-title: JSON
 slug: Learn_web_development/Core/Scripting/JSON
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Network_requests","Learn_web_development/Core/Scripting/Debugging_JavaScript", "Learn_web_development/Core/Scripting")}}
 
@@ -155,7 +154,7 @@ As mentioned earlier, any JSON is a valid JavaScript literal (object, array, num
 
 Even a single misplaced comma or colon can make a JSON file invalid and cause it to fail.
 You should be careful to validate any data you are attempting to use (although computer-generated JSON is less likely to include errors, as long as the generator program is working correctly).
-You can validate JSON using an application like [JSONLint](https://jsonlint.com/).
+You can validate JSON using an application like [JSONLint](https://jsonlint.com/) or [JSON-validate](https://json-validate.com)
 
 ## Active learning: Working through a JSON example
 
@@ -205,7 +204,7 @@ async function populate() {
 ```
 
 To obtain the JSON, we use an API called [Fetch](/en-US/docs/Web/API/Fetch_API).
-This API allows us to make network requests to retrieve resources from a server via JavaScript (e.g. images, text, JSON, even HTML snippets), meaning that we can update small sections of content without having to reload the entire page.
+This API allows us to make network requests to retrieve resources from a server via JavaScript (e.g., images, text, JSON, even HTML snippets), meaning that we can update small sections of content without having to reload the entire page.
 
 In our function, the first four lines use the Fetch API to fetch the JSON from the server:
 
@@ -348,7 +347,7 @@ Here we're creating a JavaScript object, then checking what it contains, then co
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: JSON](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_JSON).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: JSON](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/JSON).
 
 ## Summary
 

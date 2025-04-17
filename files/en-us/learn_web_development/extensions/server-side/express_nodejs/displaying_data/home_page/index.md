@@ -2,9 +2,8 @@
 title: Home page
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Home_page
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 The first page we'll create will be the website home page, which is accessible from either the site (`/`) or catalog (`catalog/`) root. This will display some static text describing the site, along with dynamically calculated "counts" of different record types in the database.
 
@@ -136,7 +135,7 @@ Under the _Dynamic content_ heading we list the number of copies of each model.
 Note that the template values for the data are the keys that were specified when `render()` was called in the route handler function.
 
 > [!NOTE]
-> We didn't escape the count values (i.e. we used the `!{}` syntax) because the count values are calculated. If the information was supplied by end-users then we'd escape the variable for display.
+> We didn't escape the count values (i.e., we used the `!{}` syntax) because the count values are calculated. If the information was supplied by end-users then we'd escape the variable for display.
 
 ## What does it look like?
 

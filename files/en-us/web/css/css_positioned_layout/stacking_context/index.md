@@ -209,7 +209,7 @@ Root
   └── SECTION #6
 ```
 
-The three `<section>` elements are children of ARTICLE #3. Therefore, the stacking of the section elements is completely resolved within ARTICLE #3. Once stacking and rendering within SECTION #3 is completed, the whole SECTION #3 element is passed for stacking in the root element with respect to its sibling `<article>` elements.
+The three `<section>` elements are children of ARTICLE #3. Therefore, the stacking of the section elements is completely resolved within ARTICLE #3. Once stacking and rendering within ARTICLE #3 is completed, the whole ARTICLE #3 element is passed for stacking in the root element with respect to its sibling `<article>` elements.
 
 By comparing the `z-index` as "version numbers", we can see how an element with a `z-index` of `1` (SECTION #5) is stacked above an element with a `z-index` of `2` (ARTICLE #2), and how an element with a `z-index` of `6` (SECTION #4) is stacked below an element with a `z-index` of `5` (ARTICLE #1).
 SECTION #4 is rendered under ARTICLE #1 because ARTICLE #1's z-index (`5`) is valid within the stacking context of the root element, while SECTION #4's z-index (`6`) is valid within the stacking context of ARTICLE #3 (`z-index: 4`). So SECTION #4 is under ARTICLE #1 because SECTION #4 belongs to ARTICLE #3, which has a lower z-index value (`4-6` is less than `5-0`).

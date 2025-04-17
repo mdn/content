@@ -33,6 +33,8 @@ _This interface also inherits methods from its parent, {{domxref("SVGGeometryEle
   - : Returns the user agent's computed value for the total length of the path in user units.
 - {{domxref("SVGPathElement.setPathData()")}} {{experimental_inline}}
   - : Sets the sequence of path segments as the new path data.
+- {{domxref("SVGPathElement.getPathSegmentAtLength()")}} {{experimental_inline}}
+  - : Returns the segment at a given distance along the path.
 
 ### Deprecated methods
 

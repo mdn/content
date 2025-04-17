@@ -2,9 +2,8 @@
 title: "Test your skills: Advanced styling"
 slug: Learn_web_development/Extensions/Forms/Test_your_skills:_Advanced_styling
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{learnsidebar}}
 
 The aim of this skill test is to assess whether you've understood our [Advanced form styling](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling) and [UI pseudo-classes](/en-US/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes) articles.
 

@@ -55,5 +55,5 @@ Firefox's console displays messages in its console when requests fail due to COR
 - Glossary: {{Glossary("CORS")}}
 - [CORS introduction](/en-US/docs/Web/HTTP/Guides/CORS)
 - [Server-side CORS settings](/en-US/docs/Web/HTTP/Guides/CORS)
-- [CORS enabled image](/en-US/docs/Web/HTML/CORS_enabled_image)
-- [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin)
+- [CORS enabled image](/en-US/docs/Web/HTML/How_to/CORS_enabled_image)
+- [CORS settings attributes](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin)

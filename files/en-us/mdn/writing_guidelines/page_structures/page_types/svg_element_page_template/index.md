@@ -17,7 +17,7 @@ sidebar: mdnsidebar
 > ```md
 > ---
 > title: <NameOfTheElement>
-> slug: Web/SVG/Element/NameOfTheElement
+> slug: Web/SVG/Reference/Element/NameOfTheElement
 > page-type: svg-element
 > status:
 >   - deprecated
@@ -33,7 +33,7 @@ sidebar: mdnsidebar
 >     For example, the "[g](/en-US/docs/Web/SVG/Reference/Element/g)" element has a _title_ of `<g>`.
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`.
->     This will be formatted like `Web/SVG/Element/NameOfTheElement`.
+>     This will be formatted like `Web/SVG/Reference/Element/NameOfTheElement`.
 > - **page-type**
 >   - : Always `svg-element`.
 > - **status**

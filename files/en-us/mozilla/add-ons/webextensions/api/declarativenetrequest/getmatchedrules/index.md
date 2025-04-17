@@ -36,7 +36,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 - `tabId`
   - : `number` The `tabId` of the tab the request originated from if the tab is still active. Otherwise, `-1`.
 - `timeStamp`
-  - : `number` The time the rule was matched. Timestamps correspond to the JavaScript convention for times, i.e. the number of milliseconds since the epoch.
+  - : `number` The time the rule was matched. Timestamps correspond to the JavaScript convention for times, i.e., the number of milliseconds since the epoch.
 
 If no rules are matched, the object is empty. If the request fail, the promise is rejected with an error message
 

@@ -49,7 +49,7 @@ body {
 
 ### Values
 
-If `<U>` is an unsigned [integer](/en-US/docs/Web/CSS/integer) (i.e. with prefix sign symbol removed) then the accepted values are:
+If `<U>` is an unsigned [integer](/en-US/docs/Web/CSS/integer) (i.e., with prefix sign symbol removed) then the accepted values are:
 
 - `<U>`
   - : Sets the `math-depth` to value `<U>`. This will set `font-size` of the element to the same value as the one of elements at the specified depth.

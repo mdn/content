@@ -107,7 +107,7 @@ Once connected, your screen should look something like this (we've connected to 
 
 Let's examine what you're seeing:
 
-- On the center left pane, you see your local files. Navigate into the directory where you store your website (e.g. `mdn`).
+- On the center left pane, you see your local files. Navigate into the directory where you store your website (e.g., `mdn`).
 - On the center right pane, you see remote files. We are logged into our distant FTP root (in this case, `users/demozilla`)
 - You can ignore the bottom and top panes for now. Respectively, these are a log of messages showing the connection status between your computer and the SFTP server, and a live log of every interaction between your SFTP client and the server.
 
@@ -119,7 +119,7 @@ Once you've found the correct remote directory to put your files in, to upload y
 
 ### Are they really online?
 
-So far, so good, but are the files really online? You can double-check by going back to your website (e.g. `http://demozilla.examplehostingprovider.net/`) in your browser:
+So far, so good, but are the files really online? You can double-check by going back to your website (e.g., `http://demozilla.examplehostingprovider.net/`) in your browser:
 
 ![Here we go: our website is live!](here-we-go.png)
 

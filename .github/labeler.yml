@@ -6,7 +6,6 @@ system:
           - package.json
           - yarn.lock
           - .github/**
-          - .husky/**
           - .vscode/**
           - .*
           - scripts/**

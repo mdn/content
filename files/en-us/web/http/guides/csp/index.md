@@ -22,7 +22,7 @@ Finally we'll describe [strategies for deploying a CSP](#testing_your_policy) an
 
 A CSP should be delivered to the browser in the {{httpheader("Content-Security-Policy")}} response header. It should be set on all responses to all requests, not just the main document.
 
-You can also specify it using the [`http-equiv`](/en-US/docs/Web/HTML/Element/meta#http-equiv) attribute of your document's {{htmlelement("meta")}} element, and this is a useful option for some use cases, such as a client-side-rendered {{glossary("SPA", "single page app")}} which has only static resources, because you can then avoid relying on any server infrastructure. However, this option does not support all CSP features.
+You can also specify it using the [`http-equiv`](/en-US/docs/Web/HTML/Reference/Elements/meta#http-equiv) attribute of your document's {{htmlelement("meta")}} element, and this is a useful option for some use cases, such as a client-side-rendered {{glossary("SPA", "single page app")}} which has only static resources, because you can then avoid relying on any server infrastructure. However, this option does not support all CSP features.
 
 The policy is specified as a series of _directives_, separated by semi-colons. Each directive controls a different aspect of the security policy. Each directive has a name, followed by a space, followed by a value. Different directives can have different syntaxes.
 
@@ -202,7 +202,7 @@ Note that nonces can only be used for elements that have a `nonce` attribute: th
 
 Fetch directives can also use a hash of the script to guarantee its integrity. With this method, the server:
 
-1. calculates a hash of the script contents using a {{glossary("cryptographic hash function")}} (one of SHA-256, SHA-384, or SHA-512)
+1. calculates a hash of the script contents using a {{glossary("hash function")}} (one of SHA-256, SHA-384, or SHA-512)
 2. creates a {{glossary("Base64")}} encoding of the result
 3. appends a prefix identifying the hash algorithm used (one of `sha256-`, `sha384-`, or `sha512-`).
 
@@ -214,7 +214,7 @@ Content-Security-Policy: script-src 'sha256-cd9827ad...'
 
 When the browser receives the document, it hashes the script, compares the result with the value from the header, and loads the script only if they match.
 
-External scripts must also include the [`integrity`](/en-US/docs/Web/HTML/Element/script#integrity) attribute for this method to work.
+External scripts must also include the [`integrity`](/en-US/docs/Web/HTML/Reference/Elements/script#integrity) attribute for this method to work.
 
 Here's a snippet of Express code, to demonstrate:
 

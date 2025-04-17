@@ -13,13 +13,13 @@ The **`FileSystemEntry`** interface of the File and Directory Entries API repres
 
 You don't create `FileSystemEntry` objects directly. Instead, you will receive an object based on this interface through other APIs. This interface serves as a base class for the {{domxref("FileSystemFileEntry")}} and {{domxref("FileSystemDirectoryEntry")}} interfaces, which provide features specific to file system entries representing files and directories, respectively.
 
-The `FileSystemEntry` interface includes methods that you would expect for manipulating files and directories, but it also includes a convenient method for obtaining the URL of the entry: [`toURL()`](#tourl). It also introduces a new URL scheme: `filesystem:`.
+The `FileSystemEntry` interface includes methods that you would expect for manipulating files and directories, but it also includes a convenient method for obtaining the URL of the entry: [`toURL()`](/en-US/docs/Web/API/FileSystemEntry/toURL). It also introduces a new URL scheme: `filesystem:`.
 
 You can use the `filesystem:` scheme on Google Chrome to see all the files and folders that are stored in the origin of your app. Just use `filesystem:` scheme for the root directory of the origin of the app. For example, if your app is in [`http://www.example.com`](https://www.example.com/), open `filesystem:http://www.example.com/temporary/` in a tab. Chrome shows a read-only list of all the files and folders stored the origin of your app.
 
 ### Example
 
-To see an example of how `toURL()` works, see the [method description](#tourl). The snippet below shows you how you can remove a file by name.
+To see an example of how `toURL()` works, see the [method description](/en-US/docs/Web/API/FileSystemEntry/toURL). The snippet below shows you how you can remove a file by name.
 
 ```js
 // Taking care of the browser-specific prefixes.

@@ -79,9 +79,9 @@ The point that the field of vision is an important consideration arises in the a
 
 This pixel area ratio calculates for relative size, but distance also matters.
 
-Distance matters because it affects the total field of vision. When viewers wear ocular masks for gaming, the field of vision is likely enveloped in its entirety by the screen. [WebVR](https://webvr.info/) is an open specification that makes it possible to experience VR in your browser, which can be experienced on phone, computer or headset. The concern about flashing images in an ocular mask is a growing one, since the mask is so close to the eyes.
+Distance matters because it affects the total field of vision. When viewers wear ocular masks for gaming, the field of vision is likely enveloped in its entirety by the screen. [WebXR](/en-US/docs/Web/API/WebXR_Device_API) is an open specification that makes it possible to experience VR in your browser, which can be experienced on phone, computer or headset. The concern about flashing images in an ocular mask is a growing one, since the mask is so close to the eyes.
 
-[The Epilepsy Society (UK)](https://epilepsysociety.org.uk/), in their article, ["3d Films and Virtual Reality"](https://epilepsysociety.org.uk/3d-films-and-virtual-reality#.XQlC5ohKiUk), noted: _"With VR the images flash very quickly and generally this is too quickly to trigger a seizure in people with photosensitive epilepsy. However, the field of view is large and so more of the eye is stimulated. This means that more of the brain may be affected and this may trigger a photosensitive seizure."_
+Research generally indicates that VR usage may actually be safer than normal screen consumption, due to higher refresh rates. As [Fisher et al. 2022](https://onlinelibrary.wiley.com/doi/full/10.1111/epi.17175) summarizes, _"The limited data so far available raise no special seizure concerns in terms of VR technology, although this view may change with more experience. Certain types of VR content, including bright flashes, provocative patterns, or color changes would be expected to provoke seizures, just as they do in the real world."_
 
 (Note that some users will not be able to see with blinking cursors, and may get migraines, motion sickness, and disorientation, although blinking cursors occupy a much smaller area of the screen.)
 
@@ -126,7 +126,7 @@ The "cd/m<sup>2</sup>" refers to candela per square meter. So for the web develo
 
 The candela is a SI unit (International System of units) of luminous intensity. It's a photometric term, and photometry deals with the measurement of visible light as perceived by human eyes. Wikipedia's article on ["Candela per square metre"](https://en.wikipedia.org/wiki/Candela_per_square_metre) puts it in terms of what we are familiar with as developers: on a display device, and in the RGB space. This is helpful, because there's a specific standard assumed to be used on monitors, printers, and the Internet, and it is the **sRGB** (standard Red Green Blue).
 
-> As a measure of light emitted per unit area, this unit is frequently used to specify the brightness of a display device. The [sRGB](https://en.wikipedia.org/wiki/SRGB) spec for monitors targets 80 cd/m<sup>2</sup>.[<sup>\[3\]</sup>](https://en.wikipedia.org/wiki/Candela_per_square_metre#cite_note-3) Typically, calibrated monitors should have a brightness of 120 cd/m<sup>2</sup>. Most consumer desktop [liquid crystal displays](https://en.wikipedia.org/wiki/Liquid_crystal_display) have luminances of 200 to 300 cd/m<sup>2</sup>.[<sup>\[4\]</sup>](https://en.wikipedia.org/wiki/Candela_per_square_metre#cite_note-4) [High-definition televisions](https://en.wikipedia.org/wiki/High-definition_television) range from 450 to about 1500 cd/m<sup>2</sup>.
+> As a measure of light emitted per unit area, this unit is frequently used to specify the brightness of a display device. The [sRGB](https://en.wikipedia.org/wiki/SRGB) spec for monitors targets 80 cd/m<sup>2</sup>. Typically, calibrated monitors should have a brightness of 120 cd/m<sup>2</sup>. Most consumer desktop [liquid crystal displays](https://en.wikipedia.org/wiki/Liquid_crystal_display) have luminances of 200 to 300 cd/m<sup>2</sup>. [High-definition televisions](https://en.wikipedia.org/wiki/High-definition_television) range from 450 to about 1500 cd/m<sup>2</sup>.
 
 The takeaway is that the **sRGB** color space is a common touch point between research, assessment tools, and developers, since it is easily converted from the commonly used Hex code.
 
@@ -203,11 +203,6 @@ All image types are potentially dangerous, however, animated GIFs deserve specia
 - Zakirt provides a gist for [animated-gif-detect.js](https://gist.github.com/zakirt/faa4a58cec5a7505b10e3686a226f285)
 
 With animated GIFs, ensure animation is inactive until the user chooses to activate it. For example, the user must push a button or check a box in order to start the animation.
-
-**Resources for detecting and controlling animated GIFs include:**
-
-- [RunKit Animated GIF Detector](https://npm.runkit.com/animated-gif-detector)
-- [gifplayer](https://github.com/rubentd/gifplayer), a jQuery plugin that will help you play and stop animated GIFs on your website
 
 ### Videos
 
@@ -298,7 +293,7 @@ The methods for sniffing them out is not a casual exercise. You may be intereste
 - **Bitmap**: Animation
 - **Canvas**: MDN's tutorial on Canvas has a great section on [basic animations](/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations). `setInterval()` is a mainstay in Canvas animation, but it is also interesting to see how it interacts with screen refresh. See the article, ["Controlling fps with requestAnimationFrame?"](https://stackoverflow.com/questions/19764018/controlling-fps-with-requestanimationframe) in which they discuss the nuts and bolts of implementing `requestAnimationFrame` against the backdrop of screen refresh.
 - **GIFs (Raster)**: Tough to crack because control for their animation resides within the gif files themselves. For information about controlling the speed of GIFs see W3C's ["G152: Setting animated gif images to stop blinking after n cycles (within 5 seconds)"](https://www.w3.org/TR/WCAG20-TECHS/G152.html). A great Stack Overflow article on the subject is, ["Can you control GIF animation with JavaScript?"](https://stackoverflow.com/questions/2385203/can-you-control-gif-animation-with-javascript)
-- **GIFV (Raster)**: Considered a variant, video version of GIF. The format is not standardized, and must reference a "real" video file (e.g. a .webm file) which must exist elsewhere.
+- **GIFV (Raster)**: Considered a variant, video version of GIF. The format is not standardized, and must reference a "real" video file (e.g., a .webm file) which must exist elsewhere.
 - **JPG (Raster)**
 - **MNG (Raster)**: Multiple-image Network Graphics is a graphics file format for animated images. Also considered by some to be a video format.
 - **PNG, APNG (Raster)**: Portable Network Graphics and Animated Portable Network Graphics may both be animated.

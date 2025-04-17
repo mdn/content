@@ -3,9 +3,8 @@ title: Introduction to CSS layout
 short-title: Introduction
 slug: Learn_web_development/Core/CSS_layout/Introduction
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout")}}
 

@@ -3,9 +3,10 @@ title: Setting up a Django development environment
 short-title: Dev environment setup
 slug: Learn_web_development/Extensions/Server-side/Django/development_environment
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Introduction", "Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Introduction", "Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Now that you know what Django is for, we'll show you how to set up and test a Django development environment on Windows, Linux (Ubuntu), and macOS — whatever common operating system you are using, this article should give you what you need to be able to start developing Django apps.
 
@@ -34,7 +35,7 @@ Django makes it very easy to set up your own computer so that you can start deve
 
 The development environment is an installation of Django on your local computer that you can use for developing and testing Django apps prior to deploying them to a production environment.
 
-The main tools that Django itself provides are a set of Python scripts for creating and working with Django projects, along with a simple _development web server_ that you can use to test local (i.e. on your computer, not on an external web server) Django web applications on your computer's web browser.
+The main tools that Django itself provides are a set of Python scripts for creating and working with Django projects, along with a simple _development web server_ that you can use to test local (i.e., on your computer, not on an external web server) Django web applications on your computer's web browser.
 
 There are other peripheral tools, that often form part of the development environment, that we won't be covering here. These include things like a [text editor](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors) or IDE for editing code, linters for auto formatting, and so on. We are assuming that you've already got a text editor installed.
 
@@ -90,7 +91,7 @@ For this article (and most of this module) we will be using the _SQLite_ databas
 When you install Python3 you get a single global environment that is shared by all Python3 code. While you can install whatever Python packages you like in the environment, you can only install one particular version of each package at a time.
 
 > [!NOTE]
-> Python applications installed into the global environment can potentially conflict with each other (i.e. if they depend on different versions of the same package).
+> Python applications installed into the global environment can potentially conflict with each other (i.e., if they depend on different versions of the same package).
 
 If you install Django into the default/global environment then you will only be able to target one version of Django on the computer. This can be a problem if you want to create new websites (using the latest version of Django) while still maintaining websites that rely on older versions.
 

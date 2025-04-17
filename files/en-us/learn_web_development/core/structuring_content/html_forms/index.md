@@ -3,9 +3,8 @@ title: Forms and buttons in HTML
 short-title: Forms and buttons
 slug: Learn_web_development/Core/Structuring_content/HTML_forms
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Planet_data_table", "Learn_web_development/Core/Structuring_content/Debugging_HTML", "Learn_web_development/Core/Structuring_content")}}
 
@@ -162,11 +161,11 @@ As we said earlier, the {{htmlelement("form")}} element acts as the outer wrappe
 
 You can include any HTML elements you like inside a `<form>` element to structure the form elements themselves and provide containers to target with CSS for styling, etc.
 
-In our example, we've included a [heading element](/en-US/docs/Web/HTML/Element/Heading_Elements) (`<h2>`) to describe the purpose of the form.
+In our example, we've included a [heading element](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) (`<h2>`) to describe the purpose of the form.
 
 We've also put each input/label pair and the submit button inside a separate {{htmlelement("p")}}, so that each will appear on a separate line. These elements are all inline by default, meaning that if we didn't do this, they would all sit on the same line.
 
-This is a common pattern for form structuring. Some people use `<p>` elements to separate out their form elements, some use {{htmlelement("div")}}, {{htmlelement("section")}}, or even {{htmlelement("li")}} elements. It doesn't matter a great deal, as long as the elements used make semantic sense. For example, it makes sense to divide form element groups up into separate paragraphs or sections of content, or even items in a list. It would make less sense to represent them as [blockquotes](/en-US/docs/Web/HTML/Element/blockquote), [asides](/en-US/docs/Web/HTML/Element/aside), or [addresses](/en-US/docs/Web/HTML/Element/address).
+This is a common pattern for form structuring. Some people use `<p>` elements to separate out their form elements, some use {{htmlelement("div")}}, {{htmlelement("section")}}, or even {{htmlelement("li")}} elements. It doesn't matter a great deal, as long as the elements used make semantic sense. For example, it makes sense to divide form element groups up into separate paragraphs or sections of content, or even items in a list. It would make less sense to represent them as [blockquotes](/en-US/docs/Web/HTML/Reference/Elements/blockquote), [asides](/en-US/docs/Web/HTML/Reference/Elements/aside), or [addresses](/en-US/docs/Web/HTML/Reference/Elements/address).
 
 There is a specialized element for grouping form elements together called {{htmlelement("fieldset")}}. This is useful in certain circumstances, such as in complex forms, and when grouping together multiple checkboxes and radio buttons. We'll look at a couple of `<fieldset>` examples later on.
 
@@ -185,7 +184,7 @@ The attributes are as follows:
 - `id`: Specifies an ID that can be used to identify the element. In this case, it is used to associate the form control with its `<label>`.
 - `required`: Specifies that a value has to be entered into the form element before the form can be submitted. This should only be set on inputs that you require, not on optional fields.
 
-You should be aware that some input types usually don't get their values from text entered into a field. For example, [`<input type="color">`](/en-US/docs/Web/HTML/Element/input/color) renders a color picker widget that you choose a color from, whereas [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio) renders a radio button control that can be selected, or not.
+You should be aware that some input types usually don't get their values from text entered into a field. For example, [`<input type="color">`](/en-US/docs/Web/HTML/Reference/Elements/input/color) renders a color picker widget that you choose a color from, whereas [`<input type="radio">`](/en-US/docs/Web/HTML/Reference/Elements/input/radio) renders a radio button control that can be selected, or not.
 
 In the case of radio buttons, you generally need to provide the value that would be submitted if it is selected inside a specific `value` attribute. Note that you _can_ specify a `value` attribute on input types like `text` and `color` — the effect is that the value is pre-filled into the form field when it is first rendered.
 
@@ -199,13 +198,13 @@ In the case of radio buttons, you generally need to provide the value that would
 
 #### Specialized text field inputs
 
-The second exercise above raises an interesting point. The second input field specifically expects an email address, and validates entered values as such. If you look at the form code again, you'll see why — the second `<input>` has a `type` of `email`. There are several specialized text field input types designed to handle specific types of data — [`<input type="number">`](/en-US/docs/Web/HTML/Element/input/number), [`<input type="password">`](/en-US/docs/Web/HTML/Element/input/password), [`<input type="tel">`](/en-US/docs/Web/HTML/Element/input/tel), etc.
+The second exercise above raises an interesting point. The second input field specifically expects an email address, and validates entered values as such. If you look at the form code again, you'll see why — the second `<input>` has a `type` of `email`. There are several specialized text field input types designed to handle specific types of data — [`<input type="number">`](/en-US/docs/Web/HTML/Reference/Elements/input/number), [`<input type="password">`](/en-US/docs/Web/HTML/Reference/Elements/input/password), [`<input type="tel">`](/en-US/docs/Web/HTML/Reference/Elements/input/tel), etc.
 
 > [!CALLOUT]
 >
 > **Try it out**
 >
-> Follow some of the links above to find out what these input types are used for. Have a look around our [`<input>`](/en-US/docs/Web/HTML/Element/input) reference and see if you can find any more specialized text field input types.
+> Follow some of the links above to find out what these input types are used for. Have a look around our [`<input>`](/en-US/docs/Web/HTML/Reference/Elements/input) reference and see if you can find any more specialized text field input types.
 
 ### `<label>` elements
 
@@ -251,7 +250,7 @@ There are other button behaviors that can be specified via the `<button>` elemen
 - `<button type="button">` creates a button with the same behavior as buttons specified outside of `<form>` elements. As we saw earlier, they do absolutely nothing by default, and JavaScript is needed to give them functionality.
 
 > [!NOTE]
-> You can also create the above button types using an `<input>` element with the same `type` values specified — [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit), [`<input type="reset">`](/en-US/docs/Web/HTML/Element/input/reset), and [`<input type="button">`](/en-US/docs/Web/HTML/Element/input/button). However, these have many disadvantages compared to their `<button>` counterparts. You should use `<button>` instead.
+> You can also create the above button types using an `<input>` element with the same `type` values specified — [`<input type="submit">`](/en-US/docs/Web/HTML/Reference/Elements/input/submit), [`<input type="reset">`](/en-US/docs/Web/HTML/Reference/Elements/input/reset), and [`<input type="button">`](/en-US/docs/Web/HTML/Reference/Elements/input/button). However, these have many disadvantages compared to their `<button>` counterparts. You should use `<button>` instead.
 
 ## An aside on accessibility
 
@@ -277,36 +276,42 @@ There are many other control types you can use to collect data in a form. Let's 
 ```html live-sample___form-other-controls
 <form action="./payment_page" method="get">
   <h2>Register for the meetup</h2>
-  <p>
-    <fieldset>
-      <legend>Choose hotel room type (required):</legend>
-      <div>
-        <input type="radio" id="hotelChoice1" name="hotel" value="economy" checked />
-        <label for="hotelChoice1">Economy (+$0)</label>
+  <fieldset>
+    <legend>Choose hotel room type (required):</legend>
+    <div>
+      <input
+        type="radio"
+        id="hotelChoice1"
+        name="hotel"
+        value="economy"
+        checked />
+      <label for="hotelChoice1">Economy (+$0)</label>
 
-        <input type="radio" id="hotelChoice2" name="hotel" value="superior" />
-        <label for="hotelChoice2">Superior (+$50)</label>
+      <input type="radio" id="hotelChoice2" name="hotel" value="superior" />
+      <label for="hotelChoice2">Superior (+$50)</label>
 
-        <input type="radio" id="hotelChoice3" name="hotel" value="penthouse" disabled />
-        <label for="hotelChoice3">Penthouse (+$150)</label>
-      </div>
-    </fieldset>
-  </p>
-  <p>
-    <fieldset>
-      <legend>Choose classes to attend:</legend>
-      <div>
-        <input type="checkbox" id="yoga" name="yoga" />
-        <label for="yoga">Yoga (+$10)</label>
+      <input
+        type="radio"
+        id="hotelChoice3"
+        name="hotel"
+        value="penthouse"
+        disabled />
+      <label for="hotelChoice3">Penthouse (+$150)</label>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>Choose classes to attend:</legend>
+    <div>
+      <input type="checkbox" id="yoga" name="yoga" />
+      <label for="yoga">Yoga (+$10)</label>
 
-        <input type="checkbox" id="coffee" name="coffee" />
-        <label for="coffee">Coffee roasting (+$20)</label>
+      <input type="checkbox" id="coffee" name="coffee" />
+      <label for="coffee">Coffee roasting (+$20)</label>
 
-        <input type="checkbox" id="balloon" name="balloon" />
-        <label for="balloon">Balloon animal art (+$5)</label>
-      </div>
-    </fieldset>
-  </p>
+      <input type="checkbox" id="balloon" name="balloon" />
+      <label for="balloon">Balloon animal art (+$5)</label>
+    </div>
+  </fieldset>
   <p>
     <label for="transport">How are you getting here:</label>
     <select name="transport" id="transport">
@@ -343,21 +348,31 @@ We'd recommend that you open this example in a separate browser tab as you work 
 
 ### Radio buttons
 
-The "Choose hotel room type" buttons are implemented using [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio) controls. These render as a set of push button controls where only one of the set can be selected at any one time — you can't select more than one at once. They are named after the buttons found on old-fashioned radios, where you press one button and the previously-selected one pops out again.
+The "Choose hotel room type" buttons are implemented using [`<input type="radio">`](/en-US/docs/Web/HTML/Reference/Elements/input/radio) controls. These render as a set of push button controls where only one of the set can be selected at any one time — you can't select more than one at once. They are named after the buttons found on old-fashioned radios, where you press one button and the previously-selected one pops out again.
 
 Our example code look looks like this:
 
-```html-nolint
+```html
 <fieldset>
   <legend>Choose hotel room type (required):</legend>
   <div>
-    <input type="radio" id="hotelChoice1" name="hotel" value="economy" checked />
+    <input
+      type="radio"
+      id="hotelChoice1"
+      name="hotel"
+      value="economy"
+      checked />
     <label for="hotelChoice1">Economy (+$0)</label>
 
     <input type="radio" id="hotelChoice2" name="hotel" value="superior" />
     <label for="hotelChoice2">Superior (+$50)</label>
 
-    <input type="radio" id="hotelChoice3" name="hotel" value="penthouse" disabled />
+    <input
+      type="radio"
+      id="hotelChoice3"
+      name="hotel"
+      value="penthouse"
+      disabled />
     <label for="hotelChoice3">Penthouse (+$150)</label>
   </div>
 </fieldset>
@@ -394,9 +409,9 @@ You can set the `disabled` attribute on any form control, including `<button>` e
 
 ### Checkboxes
 
-Our "classes to attend" selectors are implemented using [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox) controls. these render as a set of on/off state checkboxes. Unlike radio buttons, you can select more than one at once.
+Our "classes to attend" selectors are implemented using [`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) controls. these render as a set of on/off state checkboxes. Unlike radio buttons, you can select more than one at once.
 
-```html-nolint
+```html
 <fieldset>
   <legend>Choose classes to attend:</legend>
   <div>
@@ -423,7 +438,7 @@ The main difference (apart from the `type` value!) is that each checkbox has a d
 
 Drop-down menus, for example the "How are you getting here" selection control in our example, are implemented not with an `<input>` type, but with the {{htmlelement("select")}} and {{htmlelement("option")}} elements:
 
-```html-nolint
+```html
 <label for="transport">How are you getting here:</label>
 <select name="transport" id="transport">
   <option value="">--Please choose an option--</option>
@@ -447,7 +462,7 @@ Each possible value for the data item is represented by an `<option>` element, n
 
 Multi-line text input fields are created using {{htmlelement("textarea")}} elements:
 
-```html-nolint
+```html
 <label for="comments">Any other comments:</label>
 <textarea id="comments" name="comments" rows="5" cols="33"></textarea>
 ```

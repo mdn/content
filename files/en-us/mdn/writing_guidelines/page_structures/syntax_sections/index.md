@@ -5,7 +5,7 @@ page-type: mdn-writing-guide
 sidebar: mdnsidebar
 ---
 
-The syntax section of an MDN reference page contains a syntax box defining the exact syntax that a feature has (e.g. what parameters can it accept, which ones are optional?) This article explains how to write syntax boxes for reference articles.
+The syntax section of an MDN reference page contains a syntax box defining the exact syntax that a feature has (e.g., what parameters can it accept, which ones are optional?) This article explains how to write syntax boxes for reference articles.
 
 ## API reference syntax
 
@@ -201,7 +201,7 @@ None (\\{{jsxref("undefined")}}).
 
 #### Exceptions section
 
-Finally, include an "Exceptions" subsection, which explains what exceptions can be thrown if a problem is encountered when invoking the constructor/method. This could be because a parameter name has been misspelled or it has been given a value of the wrong datatype, because there is a problem with the environment it is being invoked in (e.g. trying to run a secure context-only feature in a non-secure context), or some other reason.
+Finally, include an "Exceptions" subsection, which explains what exceptions can be thrown if a problem is encountered when invoking the constructor/method. This could be because a parameter name has been misspelled or it has been given a value of the wrong datatype, because there is a problem with the environment it is being invoked in (e.g., trying to run a secure context-only feature in a non-secure context), or some other reason.
 
 Determining what exceptions are thrown by a method can require a good perusal of the specification. Looking through the spec's step-by-step explanation of how a feature operates will generally provide a solid list of the exceptions and the situations that cause them to be thrown.
 
@@ -222,7 +222,7 @@ If accessing the property can throw an exception, include an "Exceptions" subsec
 
 ## JavaScript reference syntax
 
-JavaScript built-in object reference pages follow the same basic rules as API reference pages; e.g. for methods and properties. There are a few differences that you might observe:
+JavaScript built-in object reference pages follow the same basic rules as API reference pages; e.g., for methods and properties. There are a few differences that you might observe:
 
 - For built-in objects with a single constructor, the constructor syntax is often included on the object landing page. See {{JSxRef("Date")}} for example. You'll notice that static methods (those that exist on the `Date` object itself) are listed under "Methods", whereas instance methods are listed under "Date.prototype methods".
 - You'll also notice that methods that have no parameters/exceptions are more likely to have those subsections not included at all on JavaScript reference pages. See {{JSxRef("Date.getDate()")}} and {{JSxRef("Date.now()")}} for examples.
@@ -255,7 +255,7 @@ The last section, "Formal syntax", is automatically generated using the `\{{CSSS
 
 ### Selectors
 
-The "Syntax" section of selector reference pages is much simpler than that of property pages. It contains one block styled using the "Syntax Box" style, which shows the basic syntax of the selector, whether it is just a simple keyword (e.g. {{CSSxRef(":hover")}}), or a more complex function value that takes a parameter (e.g. {{CSSxRef(":not", ":not()")}}). Sometimes the parameter is explained in a further entry inside the syntax block (see {{CSSxRef(":nth-last-of-type", ":nth-last-of-type()")}} for an example).
+The "Syntax" section of selector reference pages is much simpler than that of property pages. It contains one block styled using the "Syntax Box" style, which shows the basic syntax of the selector, whether it is just a simple keyword (e.g., {{CSSxRef(":hover")}}), or a more complex function value that takes a parameter (e.g., {{CSSxRef(":not", ":not()")}}). Sometimes the parameter is explained in a further entry inside the syntax block (see {{CSSxRef(":nth-last-of-type", ":nth-last-of-type()")}} for an example).
 
 This block is automatically generated from the data included in the [MDN data repo](https://github.com/mdn/data)'s CSS directory. You just need to include a `CSSSyntax` macro call below the title, and it will take care of the rest.
 

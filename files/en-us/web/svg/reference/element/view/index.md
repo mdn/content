@@ -6,7 +6,7 @@ browser-compat: svg.elements.view
 sidebar: svgref
 ---
 
-The **`<view>`** [SVG](/en-US/docs/Web/SVG) element defines a particular view of an SVG document. A specific view can be displayed by referencing the `<view>` element's [`id`](/en-US/docs/Web/HTML/Global_attributes/id) as the target fragment of a URL.
+The **`<view>`** [SVG](/en-US/docs/Web/SVG) element defines a particular view of an SVG document. A specific view can be displayed by referencing the `<view>` element's [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) as the target fragment of a URL.
 
 ## Usage context
 
@@ -16,13 +16,13 @@ The **`<view>`** [SVG](/en-US/docs/Web/SVG) element defines a particular view of
 
 - {{SVGAttr("preserveAspectRatio")}}
   - : This attribute defines how the SVG fragment must be deformed if it is embedded in a container with a different {{glossary("aspect ratio")}}.
-    _Value type_: (`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ; _Default value_: `xMidYMid meet`; _Animatable_: **yes**
+    _Value type_: (`none` | `xMinYMin` | `xMidYMin` | `xMaxYMin` | `xMinYMid` | `xMidYMid` | `xMaxYMid` | `xMinYMax` | `xMidYMax` | `xMaxYMax`) (`meet` | `slice`)?; _Default value_: `xMidYMid meet`; _Animatable_: **yes**
 - {{SVGAttr("viewBox")}}
   - : This attribute defines the bound of the SVG viewport for the pattern fragment.
-    _Value type_: **[\<list-of-numbers>](/en-US/docs/Web/SVG/Guides/Content_type#list-of-ts)** ; _Default value_: none; _Animatable_: **yes**
+    _Value type_: **[\<list-of-numbers>](/en-US/docs/Web/SVG/Guides/Content_type#list-of-ts)**; _Default value_: none; _Animatable_: **yes**
 - {{SVGAttr("zoomAndPan")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : This attribute specifies whether the SVG document can be magnified and panned.
-    _Value type_: **disable | magnify** ; _Default value_: magnify; _Animatable_: **no**
+    _Value type_: **disable | magnify**; _Default value_: magnify; _Animatable_: **no**
 
 ## Example
 

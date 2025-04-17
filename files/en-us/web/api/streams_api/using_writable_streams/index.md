@@ -48,7 +48,7 @@ The constructor takes two objects as parameters. The first object is required, a
 
 The first object can contain up to four members, all of which are optional:
 
-1. `start(controller)` — A method that is called once, immediately after the {{domxref("WritableStream")}} is constructed. Inside this method, you should include code that sets up the stream functionality, e.g. getting access to the underlying sink.
+1. `start(controller)` — A method that is called once, immediately after the {{domxref("WritableStream")}} is constructed. Inside this method, you should include code that sets up the stream functionality, e.g., getting access to the underlying sink.
 2. `write(chunk,controller)` — A method that is called repeatedly every time a new chunk is ready to be written to the underlying sink (specified in the `chunk` parameter).
 3. `close(controller)` — A method that is called if the app signals that it has finished writing chunks to the stream. It should do whatever is necessary to finalize writes to the underlying sink, and release access to it.
 4. `abort(reason)` — A method that will be called if the app signals that it wishes to abruptly close the stream and put it in an errored state.
@@ -107,7 +107,7 @@ function sendMessage(message, writableStream) {
   // defaultWriter is of type WritableStreamDefaultWriter
   const defaultWriter = writableStream.getWriter();
   const encoder = new TextEncoder();
-  const encoded = encoder.encode(message, { stream: true });
+  const encoded = encoder.encode(message);
   encoded.forEach((chunk) => {
     defaultWriter.ready
       .then(() => defaultWriter.write(chunk))
@@ -127,7 +127,7 @@ So here we create a writer to write the chunks to the stream using {{domxref("Wr
 
 We also create a new {{domxref("TextEncoder")}} instance using the relevant constructor to encode the message into chunks to be put into the stream.
 
-With the chunks encoded, we then call [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) on the resulting array. Inside this block we use {{domxref("WritableStreamDefaultWriter.ready")}} to check whether the writer is ready to have another chunk written to it. `ready` returns a promise that fulfills when this is the case, inside of which we call {{domxref("WritableStreamDefaultWriter.write()")}} to actually write the chunk to the stream. This also triggers the `write()` method specified inside the `WritableStream()` constructor, as discussed above.
+With the chunks encoded, we then call [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/forEach) on the resulting array. Inside this block we use {{domxref("WritableStreamDefaultWriter.ready")}} to check whether the writer is ready to have another chunk written to it. `ready` returns a promise that fulfills when this is the case, inside of which we call {{domxref("WritableStreamDefaultWriter.write()")}} to actually write the chunk to the stream. This also triggers the `write()` method specified inside the `WritableStream()` constructor, as discussed above.
 
 After the chunks have all been written, we then perform the `ready` check once more, to check that the last chunk has finished being written and all the work is done. When this `ready` check fulfills, we invoke {{domxref("WritableStreamDefaultWriter.close()")}} to close the stream. This also triggers the `close()` method specified inside the `WritableStream()` constructor, as discussed above.
 

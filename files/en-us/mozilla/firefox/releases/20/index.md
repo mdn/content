@@ -12,9 +12,9 @@ Firefox 20 was released on April, 2nd 2013. This article provides information ab
 
 ### HTML
 
-- Support for the [`download`](/en-US/docs/Web/HTML/Element/a#download) attribute on the {{HTMLElement("a")}} and {{HTMLElement("area")}} element has been added ([Firefox bug 676619](https://bugzil.la/676619)).
-- The value `auto` for the [global attribute](/en-US/docs/Web/HTML/Global_attributes) [`dir`](/en-US/docs/Web/HTML/Global_attributes/dir) has been implemented ([Firefox bug 548206](https://bugzil.la/548206)).
-- The [global attribute](/en-US/docs/Web/HTML/Global_attributes) `contextmenu` now works on Firefox for Android ([Firefox bug 736321](https://bugzil.la/736321)).
+- Support for the [`download`](/en-US/docs/Web/HTML/Reference/Elements/a#download) attribute on the {{HTMLElement("a")}} and {{HTMLElement("area")}} element has been added ([Firefox bug 676619](https://bugzil.la/676619)).
+- The value `auto` for the [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) [`dir`](/en-US/docs/Web/HTML/Reference/Global_attributes/dir) has been implemented ([Firefox bug 548206](https://bugzil.la/548206)).
+- The [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) `contextmenu` now works on Firefox for Android ([Firefox bug 736321](https://bugzil.la/736321)).
 
 ### JavaScript
 
@@ -56,7 +56,7 @@ Firefox 20 was released on April, 2nd 2013. This article provides information ab
 ### MathML
 
 - To help MathML authors debugging "invalid-markup" errors in their documents, MathML parsing errors (such as having too many / too few child elements) and warnings about deprecated attributes or wrong attribute values are now reported to the error console.
-- The `scriptminsize` attribute now accepts unitless values and percent values. They are interpreted as multiples of the default value ("`8pt`").
+- The `scriptminsize` attribute now accepts unitless values and percent values. They are interpreted as multiples of the default value (`8pt`).
 - Unitless values are now also allowed for the `mathsize` and `fontsize` attributes; they multiply the default value.
 
 ## Changes for add-on and Mozilla developers

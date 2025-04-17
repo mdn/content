@@ -2,9 +2,8 @@
 title: "Test your skills: Basic controls"
 slug: Learn_web_development/Extensions/Forms/Test_your_skills:_Basic_controls
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{learnsidebar}}
 
 The aim of this skill test is to assess whether you've understood our [Basic native form controls](/en-US/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls) article.
 
