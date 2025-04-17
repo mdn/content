@@ -22,7 +22,7 @@ The initiating element can be:
 
 ## Value
 
-An {{domxref("Element")}} object representing the element that iniated the navigation, or `null` if the navigation was not initiated by an element.
+An {{domxref("Element")}} object representing the element that initiated the navigation, or `null` if the navigation was not initiated by an element.
 
 ## Examples
 
