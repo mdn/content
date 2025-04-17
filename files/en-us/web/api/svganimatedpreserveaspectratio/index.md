@@ -7,42 +7,7 @@ browser-compat: api.SVGAnimatedPreserveAspectRatio
 
 {{APIRef("SVG")}}
 
-## SVG animated preserveAspectRatio interface
-
-The `SVGAnimatedPreserveAspectRatio` interface is used for attributes of type {{ domxref("SVGPreserveAspectRatio") }} which can be animated.
-
-### Interface overview
-
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="row">Also implement</th>
-      <td><em>None</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Methods</th>
-      <td><em>None</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Properties</th>
-      <td>
-        <ul>
-          <li>readonly float <code>baseVal</code></li>
-          <li>readonly float <code>animVal</code></li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Normative document</th>
-      <td>
-        <a
-          href="https://www.w3.org/TR/SVG11/coords.html#InterfaceSVGAnimatedPreserveAspectRatio"
-          >SVG 1.1 (2nd Edition)</a
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+The **`SVGAnimatedPreserveAspectRatio`** interface represents attributes of type {{ domxref("SVGPreserveAspectRatio") }} which can be animated.
 
 ## Instance properties
 

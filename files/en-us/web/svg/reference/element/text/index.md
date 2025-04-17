@@ -86,10 +86,7 @@ svg {
 
 {{Compat}}
 
-## Related
-
-- Other SVG text related elements: **{{SVGElement("tspan")}}**, {{SVGElement("tref")}}
-
 ## See also
 
 - {{CSSXRef("white-space", "", "#multiple_lines_in_svg_text_element")}}
+- {{SVGElement("tspan")}}
