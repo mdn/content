@@ -399,8 +399,6 @@ function log(text) {
 
 Select different options to change the `clip-path` value. To clip a background to text, use the {{cssxref("background-clip")}} property.
 
-### Shape path() and shape() functions
-
 ## Specifications
 
 {{Specifications}}
