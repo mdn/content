@@ -401,7 +401,10 @@ function log(text) {
 
 {{EmbedLiveSample("Complete_example", 230, 300)}}
 
-Select different options to change the `clip-path` value. To clip a background to text, use the {{cssxref("background-clip")}} property.
+Select different options to change the `clip-path` value. 
+
+> [!NOTE]
+> While it is possible to define a path of text, if you want to clip a background image to text rather than a shape, see the {{cssxref("background-clip")}} property.
 
 ## Specifications
 
