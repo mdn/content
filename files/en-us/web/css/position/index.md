@@ -23,8 +23,8 @@ left: 40px;
 
 ```css interactive-example-choice
 position: absolute;
-top: 40px;
-left: 40px;
+inset-inline-start: 40px;
+inset-block-start: 40px;
 ```
 
 ```css interactive-example-choice
@@ -288,8 +288,8 @@ span {
 .positioned {
   position: absolute;
   background: yellow;
-  top: 30px;
-  left: 30px;
+  inset-block-start: 30px;
+  inset-inline-start: 30px;
 }
 ```
 
