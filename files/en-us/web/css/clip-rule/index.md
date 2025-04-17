@@ -105,6 +105,81 @@ svg {
 
 {{EmbedLiveSample("Value comparison", "", "130")}}
 
+### Within basic shape definitions
+
+This example demonstrates that, while the `clip-rule` does not have any effect on CSS {{cssxref("basic-shape")}}s, it can have an effect on the `<clipPath>` used as the source of the shape.
+
+#### HTML
+
+We include an SVG with two `<clipPath>` elements that are identical other than their `id` attribute values. We also include two `<div>` elements that contain our star effects.
+
+```html
+<svg height="0" width="0">
+  <defs>
+    <clipPath id="star1">
+      <path d="M100,0 42,180 196,70 4,70 158,180z">
+    </clipPath>
+    <clipPath id="star2">
+      <path d="M100,0 42,180 196,70 4,70 158,180z">
+    </clipPath>
+  </defs>
+</svg>
+
+<div></div>
+<div></div>
+```
+
+#### CSS
+
+We provide the `<div>` elements with a set {{cssxref("width")}} and {{cssxref("height")}}, adding a {{cssxref("")}} as their {{cssxref("background-image")}}:
+
+```css hidden
+body {
+  display: flex;
+  gap: 20px;
+}
+```
+
+```css
+div {
+  height: 200px;
+  width: 200px;
+  background-image: conic-gradient(
+    at center,
+    rebeccapurple,
+    green,
+    lightblue,
+    rebeccapurple
+  );
+}
+```
+
+We use the {{cssxref("clip-path")}} property to set the different `<clipPath>` elements as the clipping path for each `<div>`:
+
+```css
+div:first-of-type {
+  clip-path: url(#star1);
+}
+div:last-of-type {
+  clip-path: url(#star2);
+}
+```
+
+Finally, we set the different `clip-rule` values for each of the `<clipPath>` element's `<path>`s:
+
+```css
+#star1 path {
+  clip-rule: evenodd;
+}
+#star2 path {
+  clip-rule: nonzero;
+}
+```
+
+#### Results
+
+{{EmbedLiveSample("Within basic shape definitions", "", "200")}}
+
 ### Choosing between rules for a path with all clockwise paths
 
 In this SVG image, we have two rectangles that are clipped, once with each clipping rule. There are two {{SVGElement("clipPath")}} elements, so that one can be set to use the non-zero clipping rule and the other uses the even-odd rule. Both paths are drawn in a clockwise direction for both its inner and outer parts.
@@ -206,6 +281,7 @@ In this case, because the outer part of the path moves in a clockwise (left-to-r
 ## See also
 
 - {{cssxref("fill-rule")}}
+- {{cssxref("clip-path")}}
 - SVG {{SVGAttr("clip-rule")}} attribute
 - SVG {{SVGElement("clipPath")}} element
 - SVG {{SVGAttr("fill-rule")}} attribute
