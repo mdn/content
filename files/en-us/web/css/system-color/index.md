@@ -147,6 +147,110 @@ In this example we have a button that normally gets its contrast using the {{css
 
 {{EmbedLiveSample("Using system colors")}}
 
+### Check system colors in this browser
+
+In this example, you'll find a series of divs that use the system colors, so you can check how they look. Depending on your settings, the background colors may change. You can also check the result in different browsers or operating systems to see how they look.
+
+#### HTML
+
+```html
+<div class="system-color AccentColor">AccentColor</div>
+<div class="system-color AccentColorText">AccentColorText</div>
+<div class="system-color ActiveText">ActiveText</div>
+<div class="system-color ButtonBorder">ButtonBorder</div>
+<div class="system-color ButtonFace">ButtonFace</div>
+<div class="system-color ButtonText">ButtonText</div>
+<div class="system-color Canvas">Canvas</div>
+<div class="system-color CanvasText">CanvasText</div>
+<div class="system-color Field">Field</div>
+<div class="system-color FieldText">FieldText</div>
+<div class="system-color GrayText">GrayText</div>
+<div class="system-color Highlight">Highlight</div>
+<div class="system-color HighlightText">HighlightText</div>
+<div class="system-color LinkText">LinkText</div>
+<div class="system-color Mark">Mark</div>
+<div class="system-color MarkText">MarkText</div>
+<div class="system-color SelectedItem">SelectedItem</div>
+<div class="system-color SelectedItemText">SelectedItemText</div>
+<div class="system-color VisitedText">VisitedText</div>
+```
+
+#### CSS
+
+```css
+.system-color {
+  padding: 10px;
+  margin: 5px;
+  font-family: sans-serif;
+  border: 3px solid;
+}
+/* The system colors */
+.AccentColor {
+  border-color: AccentColor;
+}
+.AccentColorText {
+  border-color: AccentColorText;
+}
+.ActiveText {
+  border-color: ActiveText;
+}
+.ButtonBorder {
+  border-color: ButtonBorder;
+}
+.ButtonFace {
+  border-color: ButtonFace;
+}
+.ButtonText {
+  border-color: ButtonText;
+}
+.ButtonHighlight {
+  border-color: ButtonHighlight;
+}
+.Canvas {
+  border-color: Canvas;
+}
+.CanvasText {
+  border-color: CanvasText;
+}
+.Field {
+  border-color: Field;
+}
+.FieldText {
+  border-color: FieldText;
+}
+.GrayText {
+  border-color: GrayText;
+}
+.Highlight {
+  border-color: Highlight;
+}
+.HighlightText {
+  border-color: HighlightText;
+}
+.LinkText {
+  border-color: LinkText;
+}
+.Mark {
+  border-color: Mark;
+}
+.MarkText {
+  border-color: MarkText;
+}
+.SelectedItem {
+  border-color: SelectedItem;
+}
+.SelectedItemText {
+  border-color: SelectedItemText;
+}
+.VisitedText {
+  border-color: VisitedText;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("Check system colors in this browser")}}
+
 ## Specifications
 
 {{Specifications}}
