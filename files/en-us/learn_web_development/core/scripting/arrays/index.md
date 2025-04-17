@@ -686,7 +686,6 @@ After reading through this article, we are sure you will agree that arrays seem 
 
 In the next article we're giving you a challenge to test your understanding of the articles that came before it.
 
-
 ## See also
 
 - {{jsxref("Array")}}
