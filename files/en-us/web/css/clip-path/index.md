@@ -99,6 +99,7 @@ clip-path: path(
   "M0.5,1 C0.5,1,0,0.7,0,0.3 A0.25,0.25,1,1,1,0.5,0.3 A0.25,0.25,1,1,1,1,0.3 C1,0.7,0.5,1,0.5,1 Z"
 );
 clip-path: rect(5px 5px 160px 145px round 20%);
+clip-path: shape(from 0% 0%, line to 100% 0%, line to 50% 100%, close);
 clip-path: xywh(0 5px 100% 75% round 15% 0);
 
 /* Box and shape values combined */
@@ -180,14 +181,14 @@ In this example, a triangle is created by defining a `polygon()` as the clip pat
 
 #### HTML
 
-```html
+```html live-sample___shapes1 live-sample___shapes2 live-sample___shapes3
 <div></div>
 <div></div>
 ```
 
 #### CSS
 
-```css hidden
+```css hidden live-sample___shapes1 live-sample___shapes2 live-sample___shapes3
 body {
   display: flex;
   gap: 20px;
@@ -195,12 +196,13 @@ body {
 }
 ```
 
-```css
+```css live-sample___shapes1 live-sample___shapes2 live-sample___shapes3
 div {
   height: 200px;
   width: 200px;
+  box-sizing: border-box;
   background-color: rebeccapurple;
-  border: 20px solid;
+  border: 20px solid magenta;
 
   clip-path: polygon(50% 0, 100% 100%, 0 100%);
 }
@@ -212,9 +214,38 @@ div:last-of-type {
 
 #### Results
 
-{{EmbedLiveSample("Basic1", "", "230")}}
+{{EmbedLiveSample("shapes1", "", "230")}}
 
 For the first triangle, we didn't specify a reference box, defaulting to `border-box` being used as the reference box, with the 0% and 100% being the outside edge of the border. In the second example, we set the `<geometry-box>` to `content-box`, meaning the reference box for the basic shape is the outer edge of the content area, which is inside the padding box. In our padding-less example, this is the inner edge of the border.
+
+### Shape() versus path() functions
+
+The previous example can also be created with the {{cssxref("basic-shape/shape","shape()")}}` and {{cssxref("basic-shape/path","path()")}} functions.
+
+```css live-sample___shapes2 live-sample___shapes3
+div {
+  clip-path: path("M100 0 L200 200 L0 200 Z");
+}
+
+div:last-of-type {
+  clip-path: shape(from 50% 0, line to 100% 100%, line to 0 100%, close);
+}
+```
+
+{{EmbedLiveSample("shapes2", "", "230")}}
+
+Because the `shape()` function allows using {{cssxref("percentage")}} values, and even {{cssxref("--*", "custom properties")}}, it is more robust. Here we change the size of the underlying element. The path defined with the `shape()` function grows with the element.
+
+```css live-sample___shapes3
+div {
+  width: 250px;
+  height: 250px;
+}
+```
+
+{{EmbedLiveSample("shapes3", "", "280")}}
+
+You'll note by the visibility or at least partial visibility of the border's four sides in the clip path example defined by the `shape()` example, as the path has grown with the element. The `path()` version is clipped at 200px, with only the top and left borders being partially visible; the right and bottom borders are clipped out.
 
 ### SVG as clip source
 
@@ -293,7 +324,7 @@ The element, including the border and text, is clipped, with only the parts over
 
 ### The various value types
 
-This example demonstrates the various values of the `clip-path` property.
+This example demonstrates the various values of the `clip-path` property clipping an HTML {{htmlelement("img")}}.
 
 #### HTML
 
@@ -363,6 +394,8 @@ function log(text) {
 {{EmbedLiveSample("Complete_example", 230, 280)}}
 
 Select different options to change the `clip-path` value. To clip a background to text, use the {{cssxref("background-clip")}} property.
+
+### Shape path() and shape() functions
 
 ## Specifications
 
