@@ -155,7 +155,7 @@ In this section, you will use JavaScript and [DOM API](/en-US/docs/Web/API/HTML_
 
 4. Save all files and load `index.html` in the browser. Now when you click the image, it should change to the other one.
 
-In the above code, you stored a reference to your {{htmlelement("img")}} element in `myImage`. Next, you gave it a `click` event handler function. Every time the `<img>` is clicked, the function:
+In this code, you stored a reference to your {{htmlelement("img")}} element in the `myImage` variable. Then you assigned it a `click` event handler function. Every time the `<img>` is clicked, the function does the following:
 
 1. Retrieves the value of the image's `src` attribute.
 2. Uses a conditional (`if ... else` structure) to check if the `src` value is equal to the path of the original image:
