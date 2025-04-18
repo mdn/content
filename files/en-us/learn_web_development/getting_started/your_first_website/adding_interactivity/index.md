@@ -164,7 +164,7 @@ In this code, you stored a reference to your {{htmlelement("img")}} element in t
    - If it isn't (meaning the image has already been changed), the `src` value swaps back to the original image path.
 
 > [!NOTE]
-> This section contains several items of important terminology. The key terms are:
+> This section introduces several important terms. Key concepts include:
 >
 > - [API](/en-US/docs/Glossary/API): A set of functionality that allows a developer to interact with a programming environment. WebAPIs (such as the DOM API features we used above) are built on top of the JavaScript language and allow you to manipulate various parts of the browser.
 > - [Events](/en-US/docs/Learn_web_development/Core/Scripting/Events): Real interactivity on a website requires events — things that happen in the browser. You can run code in response to events using **event handler functions**, code structures that run code in response to an event happening. The most obvious example is the [click event](/en-US/docs/Web/API/Element/click_event), which is fired by the browser when you click on something with your mouse.
