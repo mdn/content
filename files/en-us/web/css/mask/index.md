@@ -9,9 +9,6 @@ browser-compat: css.properties.mask
 
 The **`mask`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) hides an element (partially or fully) by masking or clipping the image at specific points. It is a shorthand for all the [`mask-*`](#constituent-properties) properties. The property accepts one or more comma-separated values, where each value corresponds to a [`<mask-layer>`](#mask-layer).
 
-> [!NOTE]
-> As well as the properties listed below, the `mask` shorthand also resets {{cssxref("mask-border")}} to its initial value. It is therefore recommended to use the `mask` shorthand rather than other shorthands or the individual properties to override any mask settings earlier in the cascade. This will ensure that `mask-border` has also been reset to allow the new styles to take effect.
-
 ## Constituent properties
 
 This property is a shorthand for the following CSS properties:
@@ -24,6 +21,9 @@ This property is a shorthand for the following CSS properties:
 - {{cssxref("mask-position")}}
 - {{cssxref("mask-repeat")}}
 - {{cssxref("mask-size")}}
+
+> [!NOTE]
+> As the `mask` shorthand resets all the component properties as well as the {{cssxref("mask-border")}} properties to their initial values, the specification authors recommend using the `mask` shorthand rather than the individual component properties to override any mask settings earlier in the cascade. This ensures that `mask-border` is also reset, allowing the new styles to take effect.
 
 ## Description
 
@@ -42,7 +42,7 @@ mask-clip: border-box;
 mask-composite: add;
 ```
 
-Within each `<mask-layer>`, the `mask-size` component must go after the `mask-position` value, with a forward slash (`/`) separating the two.
+The order of some properties matter. Within each `<mask-layer>`, the `mask-size` component must go after the `mask-position` value, with a forward slash (`/`) separating the two. If one `<geometry-box>` value and the `no-clip` keyword are present, the `<geometry-box>` is the value of the `mask-origin` property as the `no-clip` is only valid for the `mask-clip` property. In this case, the order of the two values doesn't matter. If only one `<geometry-box>` value is present (with no `no-clip` keyterm), this value is used for both the `mask-origin` and `mask-clip` properties. Where order is important is if there are two `<geometry-box>` values present; in this case, the first is the `mask-origin` value while the second is the `mask-clip` value.
 
 As the `mask` shorthand resets all the `mask-border-*` properties to their `initial` value, declare these properties, or the {{cssxref("mask-border")}} shorthand after any `mask` declarations. Using `mask` behaves as if you also set the following in your declaration block:
 
@@ -139,35 +139,48 @@ We include an {{htmlelement("img")}} and an empty {{htmlelement("div")}} element
 
 #### CSS
 
-We apply a mask. The `mask-image` is generated using a {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}} function. We define it to be a `100px` by `100px` gradient starting which repeats starting from the center of the image. The gradient goes from transparent to solid black. We apply the same values to the `<div>` using the {{cssxref("background")}} shorthand, adding a background color.
-
-```css hidden
-body {
-  display: flex;
-  gap: 22px;
-}
-```
+We set the same {{cssxref("border")}}, {{cssxref("padding")}}, and sizing on both the `<img>` and `<div>`.
 
 ```css
-img {
-  mask: repeating-radial-gradient(circle, transparent 0 5px, black 15px 20px)
-    50% 50% / 100px 100px repeat;
-}
+img,
 div {
-  background: repeating-radial-gradient(
-      circle,
-      transparent 0 5px,
-      black 15px 20px
-    )
-    50% 50% / 100px 100px repeat magenta;
+  border: 20px dashed rebeccapurple;
+  box-sizing: content-box;
+  padding: 20px;
   height: 220px;
   width: 220px;
 }
 ```
 
+We then apply a mask to the `<img>`. The `mask-image` is generated using a {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}} function. We define it to be a `100px` by `100px` gradient which repeats starting at the top and left corner of the image's `content-box`. We include two `<geometry-box>` values; the first sets `mask-origin` and the second defines the `mask-clip` property value. The gradient goes from transparent to solid `lightgreen`. We used `lightgreen` to demonstrate that it isn't the color of the mask that is important, but rather it's transparency.
+
+```css
+img {
+  mask: repeating-radial-gradient(
+      circle,
+      transparent 0 5px,
+      lightgreen 15px 20px
+    )
+    content-box border-box 0% 0% / 100px 100px repeat;
+}
+```
+
+Finally, we use the same value for the `<div>`'s {{cssxref("background")}} shorthand, property as we used fpr the `mask`.
+
+```css
+div {
+  background: repeating-radial-gradient(
+      circle,
+      transparent 0 5px,
+      lightgreen 15px 20px
+    )
+    content-box border-box 0% 0% / 100px 100px repeat;
+}
+```
+
 #### Results
 
-{{EmbedLiveSample("Masking an image", "", "240")}}
+{{EmbedLiveSample("Masking an image", "", "630")}}
 
 ## Specifications
 
