@@ -158,10 +158,10 @@ In this section, you will use JavaScript and [DOM API](/en-US/docs/Web/API/HTML_
 In this code, you stored a reference to your {{htmlelement("img")}} element in the `myImage` variable. Then you assigned it a `click` event handler function. Every time the `<img>` is clicked, the function does the following:
 
 - Retrieves the value of the image's `src` attribute.
-2. Uses a conditional (`if ... else` structure) to check if the `src` value is equal to the path of the original image:
+- Uses a conditional (`if ... else` structure) to check if the `src` value is equal to the path of the original image:
 
-   1. If it is, the code changes the `src` value to the path of the second image, forcing the other image to be loaded inside the {{htmlelement("img")}} element.
-   2. If it isn't (meaning it must already have changed), the `src` value swaps back to the original image path.
+   - If it is, the code changes the `src` value to the path of the second image, forcing the other image to be loaded inside the `<img>` element.
+   - If it isn't (meaning the image has already been changed), the `src` value swaps back to the original image path.
 
 > [!NOTE]
 > This section contains several items of important terminology. The key terms are:
