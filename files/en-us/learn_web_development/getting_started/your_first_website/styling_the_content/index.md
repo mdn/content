@@ -196,9 +196,9 @@ Let's return to our example and use CSS to improve the appearance of the text. W
    > [!NOTE]
    > Try adjusting the `px` values until you end up with font sizes that you like for your heading and body text.
 
-## CSS: all about boxes
+## CSS is all about boxes
 
-Something you'll notice about CSS as you use it more is that a lot of it is about boxes. Most HTML elements on your page can be thought of as boxes sitting on top of (or alongside) other boxes, which you will then set values on for sizing, colors, positioning information, etc. This is referred to as [**the box model**](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model).
+Something you'll notice about CSS as you use it more is that a lot of it is about boxes. Most HTML elements on a page can be thought of as boxes that sit on top of (or alongside) other boxes. You can set values on these boxes for size, color, positioning, etc. This is referred to as [**the box model**](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model).
 
 ![Three boxes sat inside one another. From outside to in they are labelled margin, border and padding](box-model.png)
 
