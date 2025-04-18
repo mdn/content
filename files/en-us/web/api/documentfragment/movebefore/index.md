@@ -19,7 +19,7 @@ moveBefore(movedNode, referenceNode)
 ### Parameters
 
 - `movedNode`
-  - : A {{domxref("Node")}} representing the node to be moved.
+  - : A {{domxref("Node")}} representing the node to be moved. Note that this must be an {{domxref("Element")}} or a {{domxref("CharacterData")}} node.
 - `referenceNode`
   - : A {{domxref("Node")}} that `movedNode` will be moved before, or `null`. If the value is `null`, `movedNode` is inserted at the end of the invoking `DocumentFragment`'s child nodes.
 
