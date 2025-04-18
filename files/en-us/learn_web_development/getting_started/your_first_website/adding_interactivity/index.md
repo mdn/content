@@ -211,7 +211,7 @@ Next, let's change the page heading to show a personalized welcome message when 
    }
    ```
 
-   The first line of this block uses the negation operator (logical NOT, represented by the `!` character) to check whether the `name` data item is _not_ already stored in `localStorage`. If not, the `setUserName()` function runs to create it. If it exists (that is, the user set a username during a previous visit), we retrieve the stored name using {{domxref("Storage.getItem", "localStorage.getItem()")}} and set the `textContent` of the heading to a string, plus the user's name, as we did inside `setUserName()`.
+   The first line of this block uses the negation operator (logical NOT, represented by the `!` character) to check whether the `name` data item is _not_ already stored in `localStorage`. If not, the `setUserName()` function runs to create it. If it exists (that is, the user set a username during a previous visit), we retrieve the stored name using {{domxref("Storage.getItem", "localStorage.getItem()")}} and set the `textContent` of the heading to a string, plus the user's name – just like we did inside `setUserName()`.
 
 5. Add a `click` event handler function to the button. When clicked, `setUserName()` runs. This allows the user to store a different name if wished.
 
