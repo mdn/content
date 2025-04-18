@@ -1,5 +1,5 @@
 ---
-title: rel=me
+title: rel="me"
 slug: Web/HTML/Reference/Attributes/rel/me
 page-type: html-attribute-value
 browser-compat: html.elements.link.rel.me
