@@ -36,9 +36,9 @@ JavaScript is a programming language that adds interactivity to websites. You ca
 
 JavaScript, when used on web pages (though it can also be used in other places), generally works by:
 
-- Getting references to one or more values — such as numbers, or references to elements on the page.
+- Getting references to one or more values such as numbers or to elements on the page.
 - Doing something with those values, such as adding the numbers together.
-- Returning a result that can be used to do something else later on. For example, you might to display the sum of those numbers on the page.
+- Returning a result that can be used to do something else later on. For example, you might want to display the sum of those numbers on the page.
 
 Let's look at an example — we'll return to the basic list we saw in the last couple of articles:
 
