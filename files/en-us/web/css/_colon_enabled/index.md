@@ -43,8 +43,10 @@ label {
 
 ## Syntax
 
-```plain
-:enabled
+```css
+:enabled {
+  /* ... */
+}
 ```
 
 ## Examples

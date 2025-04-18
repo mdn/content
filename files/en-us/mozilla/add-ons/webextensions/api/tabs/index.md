@@ -86,6 +86,8 @@ Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a s
   - : Go forward to the next page, if one is available.
 - {{WebExtAPIRef("tabs.goBack()")}}
   - : Go back to the previous page, if one is available.
+- {{WebExtAPIRef("tabs.group()")}}
+  - : Adds tabs to a tab group.
 - {{WebExtAPIRef("tabs.hide()")}} {{experimental_inline}}
   - : Hides one or more tabs.
 - {{WebExtAPIRef("tabs.highlight()")}}
@@ -122,6 +124,8 @@ Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a s
   - : Shows one or more tabs that have been {{WebExtAPIRef("tabs.hide()", "hidden")}}.
 - {{WebExtAPIRef("tabs.toggleReaderMode()")}}
   - : Toggles Reader mode for the specified tab.
+- {{WebExtAPIRef("tabs.ungroup()")}}
+  - : Removes tabs from tab groups.
 - {{WebExtAPIRef("tabs.update()")}}
   - : Navigate the tab to a new URL, or modify other properties of the tab.
 - {{WebExtAPIRef("tabs.warmup()")}}
