@@ -117,7 +117,7 @@ To start you off with writing some JavaScript, we'll walk you through adding a _
 
 ![Heading "hello world" above a firefox logo](hello-world.png)
 
-### What happened?
+Let's break down how this example works.
 
 We have used JavaScript to change the heading text to _Hello world!_. We grabbed a reference to the heading and stored it in a variable called `myHeading` (a container that stores a value). This is similar to what we did using CSS selectors. When you want to do something to an element, you need to select it first.
 
