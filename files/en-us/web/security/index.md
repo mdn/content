@@ -158,7 +158,7 @@ In a [clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) attack, a use
 The following features can help guard against clickjacking:
 
 - [HTTP X-Frame-Options](/en-US/docs/Web/HTTP/Reference/Headers/X-Frame-Options)
-  - : The **`X-Frame-Options`** [HTTP](/en-US/docs/Web/HTTP) response header can be used to indicate whether a browser should be allowed to render a page in a [`<frame>`](/en-US/docs/Web/HTML/Element/frame), [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe), [`<embed>`](/en-US/docs/Web/HTML/Element/embed) or [`<object>`](/en-US/docs/Web/HTML/Element/object). Sites can use this to avoid clickjacking attacks, by ensuring that their content is not embedded into other sites.
+  - : The **`X-Frame-Options`** [HTTP](/en-US/docs/Web/HTTP) response header can be used to indicate whether a browser should be allowed to render a page in a [`<frame>`](/en-US/docs/Web/HTML/Reference/Elements/frame), [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe), [`<embed>`](/en-US/docs/Web/HTML/Reference/Elements/embed) or [`<object>`](/en-US/docs/Web/HTML/Reference/Elements/object). Sites can use this to avoid clickjacking attacks, by ensuring that their content is not embedded into other sites.
 - [CSP: frame-ancestors](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors)
   - : The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`frame-ancestors`** directive specifies valid parents that may embed a page using {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, or {{HTMLElement("embed")}}.
 

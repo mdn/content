@@ -14,7 +14,7 @@ The HTTP **`Speculation-Rules`** {{Glossary("response header")}} provides one or
 The resource file containing the speculation rules JSON can have any valid name and extension, but it must be served with an `application/speculationrules+json` MIME type.
 
 > [!NOTE]
-> This mechanism provides an alternative to specifying the JSON definition inside an inline [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Element/script/type/speculationrules) element. Specifying an HTTP header is useful in cases where developers are not able to directly modify the document itself.
+> This mechanism provides an alternative to specifying the JSON definition inside an inline [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules) element. Specifying an HTTP header is useful in cases where developers are not able to directly modify the document itself.
 
 <table class="properties">
   <tbody>
@@ -38,7 +38,7 @@ Speculation-Rules: <url-list>
 ## Directives
 
 - `<url-list>`
-  - : A comma-separated list of URLs pointing to text resources containing speculation rule JSON definitions. The JSON contained in the text files must follow the same rules as that contained inside inline `<script type="speculationrules">` elements. See [Speculation rules JSON representation](/en-US/docs/Web/HTML/Element/script/type/speculationrules#speculation_rules_json_representation) for the syntax reference.
+  - : A comma-separated list of URLs pointing to text resources containing speculation rule JSON definitions. The JSON contained in the text files must follow the same rules as that contained inside inline `<script type="speculationrules">` elements. See [Speculation rules JSON representation](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules#speculation_rules_json_representation) for the syntax reference.
 
 ## Examples
 
@@ -72,4 +72,4 @@ Speculation-Rules: "/rules/prefetch.json","/rules/prerender.json"
 ## See also
 
 - [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API)
-- [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Element/script/type/speculationrules)
+- [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules)

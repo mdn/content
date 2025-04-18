@@ -7,48 +7,7 @@ browser-compat: api.SVGAnimatedNumberList
 
 {{APIRef("SVG")}}
 
-## SVG animated number list interface
-
-The `SVGAnimatedNumber` interface is used for attributes which take a list of numbers and which can be animated.
-
-### Interface overview
-
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="row">Also implement</th>
-      <td><em>None</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Methods</th>
-      <td><em>None</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Properties</th>
-      <td>
-        <ul>
-          <li>
-            readonly {{ domxref("SVGNumberList") }}
-            <code>baseVal</code>
-          </li>
-          <li>
-            readonly {{ domxref("SVGNumberList") }}
-            <code>animVal</code>
-          </li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Normative document</th>
-      <td>
-        <a
-          href="https://www.w3.org/TR/SVG11/types.html#InterfaceSVGAnimatedAngle"
-          >SVG 1.1 (2nd Edition)</a
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+The **`SVGAnimatedNumberList`** interface represents a list of attributes of type [\<number>](/en-US/docs/Web/SVG/Guides/Content_type#number) which can be animated.
 
 ## Instance properties
 

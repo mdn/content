@@ -78,7 +78,7 @@ In a guide or tutorial, the introductory paragraph(s) should inform the reader a
   >
   > You can call the **`fillText()`** method to draw a string's characters as filled with color instead of only drawing the outlines of the characters.
 
-- **Example of an appropriate introduction**: Here we see a much better overview for the `strokeText()` method.
+- **Example of an appropriate introduction**: The following section provides a much better overview for the `strokeText()` method.
 
   > The {{domxref("CanvasRenderingContext2D")}} method **`strokeText()`**, part of the [Canvas 2D API](/en-US/docs/Web/API/Canvas_API), strokes (draws the outlines of) the characters of a specified string, anchored at the position indicated by the given X and Y coordinates.
   > The text is drawn using the context's current {{domxref("CanvasRenderingContext2D.font", "font")}}, and is justified and aligned according to the {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, and {{domxref("CanvasRenderingContext2D.direction", "direction")}} properties.
@@ -125,6 +125,31 @@ This last example of dealing with the problem is arguably better.
 Not only is it grammatically more correct, but removes some of the complexity associated with dealing with genders across different languages that may have wildly different gender rules.
 This solution can make translation easier for both readers and translators.
 
+### Use accessible language
+
+Avoid using spatial and directional words, such as "above", "below", "left", "right", or "here". These terms assume a specific visual layout, which may not apply to all users. They can also be unclear or misleading–especially for users relying on screen readers or those reading translated content, where directional language can be ambiguous or difficult to translate accurately. In responsive layouts, where the position of content can change depending on screen size, such directional references may become inaccurate. This kind of language can hinder accessibility and make it harder for all users to navigate or understand content.
+
+Instead, use descriptive phrases that clearly identify the section, concept, or element being referenced. Refer to sections by their titles or headings, and refer to examples or code snippets by what they demonstrate or contain.
+
+For example:
+
+- **Correct**: "Refer to the [Accessibility](/en-US/docs/Web/CSS/gradient/repeating-conic-gradient#accessibility) section later on this page."
+- **Incorrect**: "Refer to the Accessibility section below."
+
+- **Correct**: "In the following code example, we animate a circle using CSS transitions."
+- **Incorrect**: "In the code example below, we animate a circle using CSS transitions."
+
+- **Correct**: "This concept is explained in the earlier section titled Creating a media query."
+- **Incorrect**: "This concept is explained in the section above."
+
+Additionally, avoid using vague link text like "Click here" or "Read this article". Descriptive link text provides better context for all readers and improves the experience for users of assistive technologies.
+
+- **Correct**: "Learn more about [how to order flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)."
+- **Incorrect**: "Click [here](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items) to learn more."
+- **Incorrect**: "Read [this article](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items) to learn more."
+
+By following these guidelines, you help make MDN documentation accessible, clear, and usable by everyone, regardless of how they access the page.
+
 ### Write with SEO in mind
 
 While the primary goal of any writing on MDN Web Docs should always be to explain and inform about open web technology so developers can quickly learn to do what they want or to find the little details they need to know in order to perfect their code, it's important that they be able to _find_ the material we write. We can achieve this by keeping Search Engine Optimization ({{Glossary("SEO")}}) in mind while writing.
@@ -136,7 +161,7 @@ The following checklist is good to keep in mind while writing and reviewing cont
 - **Ensure that pages aren't too similar**: If the content on different pages is similar textually, search engines will assume that the pages are about the same thing even if they aren't.
   For example, if an interface has the properties `width` and `height`, it's easy for the text to be surprisingly similar on the two pages documenting these two properties, with just a few words swapped out and using the same example. This makes it hard for search engines to know which is which, and they wind up sharing page rank, resulting in both being harder to find than they ought to be.
 
-  It's important, then, to ensure that every page has its own content. Here are some suggestions to help you accomplish that:
+  It's important, then, to ensure that every page has its own content. The following suggestions can help you accomplish that:
 
   - **Explain more unique concepts**: Consider use cases where there might be more differences than one would think. For instance, in the case of documenting `width` and `height` properties, perhaps write about the ways horizontal space and vertical space are used differently, and provide a discussion about the appropriate concepts. Perhaps you can mention the use of `width` in terms of making room for a sidebar, while using `height` to handle vertical scrolling or footers. Including information about accessibility issues is a useful and important idea as well.
   - **Use different examples**: Examples in these situations are often even more similar than the body text because the examples may use both (or all) of the similar methods or properties to begin with, thereby requiring no real changes when reused. So throw out the example and write a new one, or at least provide multiple examples, with at least some of them different.
@@ -146,7 +171,7 @@ The following checklist is good to keep in mind while writing and reviewing cont
 
 - **Ensure that pages aren't too short**: If the content on a page is too little (called "thin pages" in SEO parlance), search engines will not catalog such pages accurately (or at all). Overly-short content pages are hard to find. As a guiding principle, ensure that pages on MDN Web Docs are not shorter than around 300 words or so. Don't artificially inflate a page, but treat this guideline as a minimum target length when possible.
 
-  Here are some basic guidelines to help you create pages that have enough content to be properly searchable without resorting to cluttering them up with unnecessary text:
+  These basic guidelines can help you create pages that have enough content to be properly searchable without resorting to cluttering them up with unnecessary text:
 
   - **Avoid stubs**: Obviously, if the article is a stub or is missing content, add it. We try to avoid outright "stub" pages on MDN web Docs, although they do exist, but there are plenty of pages that are missing large portions of their content.
   - **Review page structure**: Review the page to ensure that it's structured properly for its [page type](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types) it is. Check to make sure that all sections are present and have appropriate content.
@@ -154,7 +179,7 @@ The following checklist is good to keep in mind while writing and reviewing cont
   - **Ensure all concepts are fully fleshed-out**: It's easy to give a quick explanation of something, but make sure that all the nuances are covered. Are there special cases? Are there any known restrictions that the reader might need to know about?
   - **Add examples**: There should be examples covering all parameters or at least the parameters (or properties, or attributes) that users from the beginner-through-intermediate range are likely to use, as well as any advanced ones that require extra explanation. Each example should be preceded with an overview of what the example will do, what additional knowledge might be needed to understand it, and so forth. After the example (or interspersed among pieces of the example) should be text explaining how the code works. Don't skimp on the details or the handling of errors in examples. Keep in mind that users _will_ copy and paste your example to use in their own projects, and your code _will_ wind up used on production sites! See our [code example guidelines](/en-US/docs/MDN/Writing_guidelines/Code_style_guide) for more useful information.
   - **Explain use cases**: If there are particularly common use cases for the feature being described, talk about them! Instead of assuming that a user will figure out that the method being documented can be used to solve a common development problem, actually add a section about that use case with an example and text explaining how the example works.
-  - **Add image information**: Include proper [`alt`](/en-US/docs/Web/HTML/Element/img#alt) text on all images and diagrams. This text, as well as captions on tables and other figures, counts because spiders can't crawl images, and so `alt` text tells search engine crawlers what content the embedded media contains.
+  - **Add image information**: Include proper [`alt`](/en-US/docs/Web/HTML/Reference/Elements/img#alt) text on all images and diagrams. This text, as well as captions on tables and other figures, counts because spiders can't crawl images, and so `alt` text tells search engine crawlers what content the embedded media contains.
     > [!NOTE]
     > It is not recommended to include too many keywords or keywords not related to the feature in an attempt to manipulate search engine rankings; this type of behavior is easy to spot and tends to be penalized.
     > Likewise, **do not** add repetitive, unhelpful material or blobs of keywords within the actual page, in an attempt to improve the page's size and search ranking. This does more harm than good, both to content readability and to our search results.
@@ -212,24 +237,24 @@ An abbreviation is a shortened version of a longer word, while an acronym is a n
 
   The following table summarizes the meanings and English equivalents of Latin abbreviations:
 
-<!-- markdownlint-disable search-replace -->
+  <!-- markdownlint-disable search-replace -->
 
-| Abbrev | Latin            | English                 |
-| ------ | ---------------- | ----------------------- |
-| cf.    | _confer_         | compare                 |
-| e.g.   | _exempli gratia_ | for example             |
-| et al. | _et alii_        | and others              |
-| etc.   | _et cetera_      | and so forth, and so on |
-| i.e.   | _id est_         | that is, in other words |
-| N.B.   | _nota bene_      | note well               |
-| P.S.   | _post scriptum_  | postscript              |
+  | Abbrev | Latin            | English                 |
+  | ------ | ---------------- | ----------------------- |
+  | cf.    | _confer_         | compare                 |
+  | e.g.   | _exempli gratia_ | for example             |
+  | et al. | _et alii_        | and others              |
+  | etc.   | _et cetera_      | and so forth, and so on |
+  | i.e.   | _id est_         | that is, in other words |
+  | N.B.   | _nota bene_      | note well               |
+  | P.S.   | _post scriptum_  | postscript              |
 
-<!-- markdownlint-enable search-replace -->
+  <!-- markdownlint-enable search-replace -->
 
-> [!NOTE]
-> Always consider whether it's truly beneficial to use a Latin abbreviation. Some of these are used so rarely that many readers will either confuse or fail to understand their meanings.
->
-> Also, be sure that _you_ use them correctly if you choose to do so. For example, be careful not to confuse "e.g." with "i.e.", which is a common error.
+  > [!NOTE]
+  > Always consider whether it's truly beneficial to use a Latin abbreviation. Some of these are used so rarely that many readers will either confuse or fail to understand their meanings.
+  >
+  > Also, be sure that _you_ use them correctly if you choose to do so. For example, be careful not to confuse "e.g." with "i.e.", which is a common error.
 
 - **Plurals of abbreviations and acronyms**: For plurals of abbreviations and acronyms, add _s_. Don't use an apostrophe. Ever. Please.
 
@@ -308,16 +333,16 @@ Do not use "curly" quotes and quotation marks. On MDN Web Docs, we only use stra
 
 ### Commas
 
-The list below describes some of the common situations where we need to be aware of the comma usage rules:
+The following list describes some of the common situations where we need to be aware of the comma usage rules:
 
 - **After introductory clauses**: An introductory clause is a dependent clause, usually found at the beginning of a sentence. Use a comma after an introductory clause to separate it from the following independent clause.
 
   - Example 1:
-    - **Correct**: "In this example, you will see how to use a comma."
-    - **Incorrect**: "In this example you will see how to use a comma."
+    - **Correct**: "In this example, you will learn how to use a comma."
+    - **Incorrect**: "In this example you will learn how to use a comma."
   - Example 2:
-    - **Correct**: "If you are looking for guidelines, you have come to the right place."
-    - **Incorrect**: "If you are looking for guidelines you have come to the right place."
+    - **Correct**: "If you are looking for guidelines, refer to our writing style guide."
+    - **Incorrect**: "If you are looking for guidelines refer to our writing style guide."
   - Example 3:
     - **Correct**: "On mobile platforms, you tend to get a numeric keypad for entering data."
     - **Incorrect**: "On mobile platforms you tend to get a numeric keypad for entering data."
@@ -356,7 +381,7 @@ The list below describes some of the common situations where we need to be aware
   - **Correct**: "The Array object has methods for manipulating arrays in various ways, such as joining, reversing, and sorting them."
   - **Incorrect**: "The Array object has methods for manipulating arrays in various ways such as joining, reversing, and sorting them."
 
-  The example below shows when not to use comma with "such as". Here the clause containing "such as" is essential for the meaning of the sentence.
+  The following example shows when not to use a comma with "such as". In this case, the clause containing "such as" is essential for the meaning of the sentence.
 
   - **Correct**: "Web applications are becoming more powerful by adding features such as audio and video manipulation and allowing access to raw data using WebSockets."
   - **Incorrect**: "Web applications are becoming more powerful by adding features, such as audio and video manipulation, and allowing access to raw data using WebSockets."
@@ -437,34 +462,29 @@ A page on MDN Web Docs can contain more than one code example. The following lis
 
 - Each piece of example code should include:
   - **Heading**: A short `###` (`<h3>`) heading to describe the scenario being demonstrated through the code example. For example, "Using offset printing" and "Reverting to style in previous layer".
-  - **Description**: A short description preceding the example code that states the specifics of the example to which you want to draw the reader's attention. For example, "In the example below, two cascade layers are defined in the CSS, `base` and `special`."
+  - **Description**: A short description preceding the example code that states the specifics of the example to which you want to draw the reader's attention. For example, "In the following example, two cascade layers are defined in the CSS, `base` and `special`."
   - **Result explanation**: An explanation after the example code that describes the result and how the code works.
 - In general, the code example should not only demonstrate the syntax of the feature and how it is used, but also highlight the purpose and situations in which a web developer might want or need to use the feature.
 - If you are working with a large piece of example code, it may make sense to break it up into smaller logical parts so that they can be described individually.
 - When adding [live samples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples), it's helpful to be aware that all of the sample's code blocks that have the same type (HTML, CSS, and JavaScript) are concatenated together before running the example. This lets you break the code into multiple segments, each optionally with its own descriptions, headings, and so forth. This makes documenting code incredibly powerful and flexible.
 
-To learn about how to style or format code examples for MDN Web Docs, see [Guidelines for styling code examples](/en-US/docs/MDN/Writing_guidelines/Code_style_guide).
+To learn about how to style or format code examples for MDN Web Docs, see our [Guidelines for styling code examples](/en-US/docs/MDN/Writing_guidelines/Code_style_guide).
 
 ### Cross-references (linking)
 
 When referencing another page or the section of a page on MDN by its title, follow sentence casing in the link text (match the page or section title). Use sentence casing in the link text even if it is different from the linked page title or section title (it might be that the case used in the page or section title is incorrect). Don't use quotation marks around the link text. To refer to a page on MDN by its title, use the following style:
 
-- **Correct**: "See the [Ordering flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items) guide."
-- **Incorrect**: "See the "[Ordering flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)" guide."
+- **Correct**: "Refer to the [Ordering flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items) guide."
+- **Incorrect**: "Refer to the "[Ordering flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)" guide."
 
-Follow similar style when linking to a section on a page, as shown below:
+Follow a consistent style when linking to sections within a page:
 
-- **Correct**: "For more information, see the [Allocation in JavaScript](/en-US/docs/Web/JavaScript/Guide/Memory_management#allocation_in_javascript) section on the _Memory management_ page."
+- **Correct**: "For more information, refer to the [Allocation in JavaScript](/en-US/docs/Web/JavaScript/Guide/Memory_management#allocation_in_javascript) section in the _Memory management_ guide."
 
-If the section you're linking to is on the same page, you can hint at the location of the section using the words "above" or "below".
+If the section you're linking to is on the same page, you can hint at the location of the section using descriptive phrases.
 
-- **Correct**: "This concept is described in more detail in the [Accessibility](/en-US/docs/Web/CSS/gradient/repeating-conic-gradient#accessibility) section below."
-
-You can link part of a sentence to an article or the section of an article. Be mindful to use descriptive phrases as link texts to provide enough context for the page being linked.
-
-- **Correct**: "Learn more about [how to order flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)."
-- **Incorrect**: "Click [here](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items) to learn more."
-- **Incorrect**: "Read [this article](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items) to learn more."
+- **Correct**: "This concept is described in more detail in the [Accessibility](/en-US/docs/Web/CSS/gradient/repeating-conic-gradient#accessibility) section of this document."
+- **Incorrect**: "This concept is described in more detail in the [Accessibility](/en-US/docs/Web/CSS/gradient/repeating-conic-gradient#accessibility) section below."
 
 On MDN, another way to link to a reference page is by using a macro. These macros are described on the [Commonly-used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references) page. For example, to link to the reference page of an HTML element, use the `HTMLElement` macro, and to link to the reference page of a CSS property, use the `CSSxRef` macro.
 
@@ -472,9 +492,9 @@ We follow similar cross-referencing guidelines in the [See also](#see_also) sect
 
 ### External links
 
-External links are allowed on MDN Web Docs in specific situations. Use the guidelines described in this section to decide whether or not it is okay to include an external link on MDN Web Docs. Your pull request to add an external link will be rejected if it does not meet the guidelines described here.
+External links are allowed on MDN Web Docs in specific situations. Use the guidelines described in this section to decide whether or not it is okay to include an external link on MDN Web Docs. Pull requests that add external links will be rejected if they don't follow these guidelines.
 
-If you are considering adding an external link to MDN [Learn web development](/en-US/docs/Learn_web_development) content, please also read [Learn web development writing guidelines > External links and embeds](/en-US/docs/MDN/Writing_guidelines/Learning_content#external_links_and_embeds).
+If you are considering adding an external link to MDN's [Learn web development](/en-US/docs/Learn_web_development) content, please also read [Learn web development writing guidelines > Partner links and embeds](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds).
 
 In general, if you're considering adding an external link, you need to ensure that there is minimal risk of the following:
 
@@ -519,10 +539,10 @@ On the other hand, first-party shorteners that are maintained by the organizatio
 ### Heading levels
 
 When a new paragraph starts a new section, a header should be added.
-Use these markdown heading levels in decreasing order without skipping levels: `##`, then `###`, and then `####`; these translate to the [HTML heading tags](/en-US/docs/Web/HTML/Element/Heading_Elements) `<h2>`, `<h3>`, and `<h4>` tags, respectively.
+Use these markdown heading levels in decreasing order without skipping levels: `##`, then `###`, and then `####`; these translate to the [HTML heading tags](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) `<h2>`, `<h3>`, and `<h4>` tags, respectively.
 
 `##` is the highest level allowed because `#` is reserved for the page title.
-We recommend to not add more than three levels of headers. If you feel the need for adding the fourth header level, consider breaking up the article into several smaller articles with a landing page. Alternatively, see if you can present the information in bulleted points to avoid adding level four header.
+We recommend to not add more than three levels of headers. If you feel the need for adding the fourth header level, consider breaking up the article into several smaller articles with a landing page. Alternatively, consider presenting the information as bulleted points to avoid using a level-four header.
 
 Keep the following dos and don'ts in mind while creating headings for subsections:
 
@@ -545,7 +565,7 @@ If you include images or other media on a page, follow these guidelines:
 
 Lists should be formatted and structured consistently across all pages.
 Individual list items should be written with suitable punctuation, regardless of the list format.
-However, depending on the type of list you are creating, you will want to adjust your writing as described in the sections below. In both cases, include a lead-in sentence that describes the information in the list.
+However, depending on the type of list you are creating, you will want to adjust your writing as described in the sections that follow. In both cases, include a lead-in sentence that describes the information in the list.
 
 - **Bulleted lists**: Bulleted lists should be used to group related pieces of concise information. Each item in the list should follow a similar sentence structure. Sentences and phrases (i.e., sentence fragments missing a verb or a subject or both) in bulleted lists should include standard punctuation — sentences end with periods, phrases don't.
 
@@ -577,7 +597,7 @@ However, depending on the type of list you are creating, you will want to adjust
   >    Your instructions may be quite extensive, so it is important to write clearly and use correct punctuation.
   > 3. After you have finished your instructions, follow the numbered list with a brief closing summary or explanation about the expected outcome upon completion.
 
-  The following is an example of writing a closing explanation for the above list:
+  The following is an example of writing a closing explanation for the preceding list:
 
   > We have created a short numbered list that provides instructive steps to produce a numbered list with the correct formatting.
 
@@ -595,8 +615,8 @@ To maintain consistency across MDN Web Docs, keep the following guidelines in mi
 
 - The link text should be the same as the title of the page or the section being linked to. For example, the link text to this [ARIA](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes) page with the page title "ARIA states and properties" will be:
   - **Correct**: [ARIA states and properties](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes)
-- Use sentence casing in the link text even if it is different from the linked page title or section title. It might be that the case used in the page or section title is incorrect. For example, the link text to the [Quirks Mode](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode) page in correct sentence case will be:
-  - **Correct**: [Quirks mode](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)
+- Use sentence casing in the link text even if it is different from the linked page title or section title. It might be that the case used in the page or section title is incorrect. For example, the link text to the [Quirks Mode](/en-US/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode) page in correct sentence case will be:
+  - **Correct**: [Quirks mode](/en-US/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode)
 - For external links as well, use sentence casing even if the casing on the target article page is different. This is to ensure consistency across MDN Web Docs. Exceptions include names of books.
 - On MDN, you can optionally use a macro to link to a page, as is explained in the [Linking to pages in references](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references) section on the _Commonly used macros_ page. The use of macro will add code formatting to the keyword in the link text, as shown in the next example.
 - No article ("A", "An", "The") is needed at the beginning of the link list item. No punctuation is required at the end of the list item because it will invariably be a term or a phrase.
@@ -604,7 +624,7 @@ To maintain consistency across MDN Web Docs, keep the following guidelines in mi
   - **Incorrect**: The [`revert-layer`](/en-US/docs/Web/CSS/revert-layer) keyword.
   - **Correct**: [HTML DOM API](/en-US/docs/Web/API/HTML_DOM_API)
   - **Incorrect**: The [HTML DOM API](/en-US/docs/Web/API/HTML_DOM_API)
-- As shown in the above examples, add code formatting using backticks (\`) to keywords and literals in the link text, even though the formatting is not used in page and section titles. For example, for the page title "Array() constructor", the link text will be [`Array()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Array).
+- As shown in the previous examples, add code formatting using backticks (\`) to keywords and literals in the link text, even though the formatting is not used in page and section titles. For example, for the page title "Array() constructor", the link text will be [`Array()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Array).
 
 #### Descriptive text
 
@@ -614,7 +634,7 @@ To maintain consistency across MDN Web Docs, keep the following guidelines in mi
   - **Correct**: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("color")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}: Other color-related properties
 - For external links, aim to specify the source website and the year of publication or last update (in parentheses) whenever feasible and appropriate. Providing this information upfront gives readers a clear idea of the destination they'll reach upon clicking the link. The date of publication or last update guides readers in assessing the relevance of the linked article and also helps MDN maintainers to review links to articles that have not been updated in a long time. If you provide a link to an article on Wikipedia, for example, you can ignore the publish/update date. The following list item is an example of adding a link to the [Top-level await](https://v8.dev/features/top-level-await) external article in the See also section, along with the source and year information:
   - **Correct**: [Top-level await](https://v8.dev/features/top-level-await) on v8.dev (2019)
-- For external links to books, you can also provide author names. You can see a few examples for this in the [Further reading](#language_grammar_and_spelling) section below. Refrain from adding author names for blog posts or GitHub repositories you might link to.
+- For external links to books, you can also provide author names. A few examples are listed in the [Further reading](#language_grammar_and_spelling) section. Refrain from adding author names for blog posts or GitHub repositories you might link to.
 
 #### Order of links
 
@@ -684,7 +704,7 @@ Keep the following guidelines in mind when writing titles:
 
 ### Other style guides
 
-If you have questions about usage and style not covered here, we recommend referring to the [Microsoft Writing Style Guide](https://learn.microsoft.com/en-us/style-guide/welcome/) or the [Chicago Manual of Style](https://www.chicagomanualofstyle.org/).
+If you have questions about usage and style not covered in this guide, we recommend referring to the [Microsoft Writing Style Guide](https://learn.microsoft.com/en-us/style-guide/welcome/) or the [Chicago Manual of Style](https://www.chicagomanualofstyle.org/).
 
 ### Language, grammar, and spelling
 

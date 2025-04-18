@@ -2,9 +2,10 @@
 title: "Adding a new todo form: Vue events, methods, and models"
 slug: Learn_web_development/Core/Frameworks_libraries/Vue_methods_events_models
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_rendering_lists","Learn_web_development/Core/Frameworks_libraries/Vue_styling", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_rendering_lists","Learn_web_development/Core/Frameworks_libraries/Vue_styling", "Learn_web_development/Core/Frameworks_libraries")}}
 
 We now have sample data in place, and a loop that takes each bit of data and renders it inside a `ToDoItem` in our app. What we really need next is the ability to allow our users to enter their own todo items into the app, and for that we'll need a text `<input>`, an event to fire when the data is submitted, a method to fire upon submission to add the data and rerender the list, and a model to control the data. This is what we'll cover in this article.
 
@@ -57,7 +58,7 @@ We now have an app that displays a list of to-do items. However, we can't update
    </script>
    ```
 
-3. Let's add in an HTML form that lets you enter a new todo item and submit it into the app. We need a [`<form>`](/en-US/docs/Web/HTML/Element/form) with a [`<label>`](/en-US/docs/Web/HTML/Element/label), an [`<input>`](/en-US/docs/Web/HTML/Element/input), and a [`<button>`](/en-US/docs/Web/HTML/Element/button). Update your template as follows:
+3. Let's add in an HTML form that lets you enter a new todo item and submit it into the app. We need a [`<form>`](/en-US/docs/Web/HTML/Reference/Elements/form) with a [`<label>`](/en-US/docs/Web/HTML/Reference/Elements/label), an [`<input>`](/en-US/docs/Web/HTML/Reference/Elements/input), and a [`<button>`](/en-US/docs/Web/HTML/Reference/Elements/button). Update your template as follows:
 
    ```vue
    <template>

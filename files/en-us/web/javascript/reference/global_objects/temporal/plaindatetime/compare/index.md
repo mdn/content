@@ -49,7 +49,7 @@ const dt2 = Temporal.PlainDateTime.from({
   year: 2021,
   month: 8,
   day: 1,
-  calendar: "islamic",
+  calendar: "islamic-umalqura",
 });
 const dt3 = Temporal.PlainDateTime.from({
   year: 2021,
@@ -58,7 +58,7 @@ const dt3 = Temporal.PlainDateTime.from({
   calendar: "hebrew",
 });
 console.log(dt1.toString()); // "2021-08-01T00:00:00"
-console.log(dt2.toString()); // "2582-12-17T00:00:00[u-ca=islamic]"
+console.log(dt2.toString()); // "2582-12-17T00:00:00[u-ca=islamic-umalqura]"
 console.log(dt3.toString()); // "-001739-04-06T00:00:00[u-ca=hebrew]"
 console.log(Temporal.PlainDateTime.compare(dt1, dt2)); // -1
 console.log(Temporal.PlainDateTime.compare(dt1, dt3)); // 1

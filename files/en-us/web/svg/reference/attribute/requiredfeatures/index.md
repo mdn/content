@@ -24,7 +24,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("animateTransform")}}
 - {{SVGElement("circle")}}
 - {{SVGElement("clipPath")}}
-- {{SVGElement("cursor")}}
 - {{SVGElement("defs")}}
 - {{SVGElement("ellipse")}}
 - {{SVGElement("foreignObject")}}
@@ -42,7 +41,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("switch")}}
 - {{SVGElement("text")}}
 - {{SVGElement("textPath")}}
-- {{SVGElement("tref")}}
 - {{SVGElement("tspan")}}
 - {{SVGElement("use")}}
 
@@ -181,7 +179,7 @@ The following are the feature strings for the `requiredFeatures` attribute. Thes
 - `http://www.w3.org/TR/SVG11/feature#BasicStructure`
   - : The browser supports {{SVGElement("svg")}}, {{SVGElement("g")}}, {{SVGElement("defs")}}, {{SVGElement("desc")}}, {{SVGElement("title")}}, {{SVGElement("metadata")}} and {{SVGElement("use")}} elements.
 - `http://www.w3.org/TR/SVG11/feature#ContainerAttribute`
-  - : The browser supports the {{SVGAttr("enable-background")}} attribute
+  - : The browser supports the `enable-background` attribute
 - `http://www.w3.org/TR/SVG11/feature#ConditionalProcessing`
   - : The browser supports the {{SVGElement("switch")}} element, and the `requiredFeatures`, {{SVGAttr("requiredExtensions")}}, {{SVGAttr("systemLanguage")}} attributes
 - `http://www.w3.org/TR/SVG11/feature#Image`
@@ -193,7 +191,7 @@ The following are the feature strings for the `requiredFeatures` attribute. Thes
 - `http://www.w3.org/TR/SVG11/feature#Shape`
   - : The browser supports the {{SVGElement("rect")}}, {{SVGElement("circle")}}, {{SVGElement("line")}}, {{SVGElement("polyline")}}, {{SVGElement("polygon")}}, {{SVGElement("ellipse")}} and {{SVGElement("path")}} elements.
 - `http://www.w3.org/TR/SVG11/feature#Text`
-  - : The browser supports the {{SVGElement("text")}}, {{SVGElement("tspan")}}, {{SVGElement("tref")}}, {{SVGElement("textPath")}}, and {{SVGElement("glyphRef")}} elements.
+  - : The browser supports the {{SVGElement("text")}}, {{SVGElement("tspan")}}, `<tref>`, {{SVGElement("textPath")}}, and `<glyphRef>` elements.
 - `http://www.w3.org/TR/SVG11/feature#BasicText`
   - : The browser supports the {{SVGElement("text")}} element
 - `http://www.w3.org/TR/SVG11/feature#PaintAttribute`
@@ -229,7 +227,7 @@ The following are the feature strings for the `requiredFeatures` attribute. Thes
 - `http://www.w3.org/TR/SVG11/feature#AnimationEventsAttribute`
   - : The browser supports the `onbegin`, `onend`, `onrepeat` and `onload` [event attributes](/en-US/docs/Web/SVG/Reference/Attribute#event_attributes)
 - `http://www.w3.org/TR/SVG11/feature#Cursor`
-  - : The browser supports the {{SVGElement("cursor")}} element
+  - : The browser supports the `<cursor>` element
 - `http://www.w3.org/TR/SVG11/feature#Hyperlinking`
   - : The browser supports the {{SVGElement("a")}} element
 - `http://www.w3.org/TR/SVG11/feature#XlinkAttribute`
@@ -241,9 +239,9 @@ The following are the feature strings for the `requiredFeatures` attribute. Thes
 - `http://www.w3.org/TR/SVG11/feature#Animation`
   - : The browser supports the {{SVGElement("animate")}}, {{SVGElement("set")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, and {{SVGElement("mpath")}} elements
 - `http://www.w3.org/TR/SVG11/feature#Font`
-  - : The browser supports the {{SVGElement("font")}}, {{SVGElement("font-face")}}, {{SVGElement("glyph")}}, {{SVGElement("missing-glyph")}}, {{SVGElement("hkern")}}, {{SVGElement("vkern")}}, {{SVGElement("font-face-src")}}, {{SVGElement("font-face-uri")}}, {{SVGElement("font-face-format")}} and {{SVGElement("font-face-name")}} elements
+  - : The browser supports the `<font>`, `<font-face>`, `<glyph>`, `<missing-glyph>`, `<hkern>`, `<vkern>`, `<font-face-src>`, `<font-face-uri>`, `<font-face-format>` and `<font-face-name>` elements
 - `http://www.w3.org/TR/SVG11/feature#BasicFont`
-  - : The browser supports the {{SVGElement("font")}}, {{SVGElement("font-face")}}, {{SVGElement("glyph")}}, {{SVGElement("missing-glyph")}}, {{SVGElement("hkern")}}, {{SVGElement("font-face-src")}} and {{SVGElement("font-face-name")}} elements
+  - : The browser supports the `<font>`, `<font-face>`, `<glyph>`, `<missing-glyph>`, `<hkern>`, `<font-face-src>` and `<font-face-name>` elements
 - `http://www.w3.org/TR/SVG11/feature#Extensibility`
   - : The browser supports the {{SVGElement("foreignObject")}} element
 

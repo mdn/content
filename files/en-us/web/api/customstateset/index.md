@@ -302,7 +302,7 @@ class QuestionBox extends HTMLElement {
 The content of the shadow root is set using [`innerHTML`](/en-US/docs/Web/API/ShadowRoot/innerHTML).
 This defines a {{HTMLElement("slot")}} element that contains the default prompt text "Question" for the element.
 We then define a `<labeled-checkbox>` custom element with the default text `"Yes"`.
-This checkbox is exposed as a shadow part of the question box with the name `checkbox` using the [`part`](/en-US/docs/Web/HTML/Global_attributes/part) attribute.
+This checkbox is exposed as a shadow part of the question box with the name `checkbox` using the [`part`](/en-US/docs/Web/HTML/Reference/Global_attributes/part) attribute.
 
 Note that the code and styling for the `<labeled-checkbox>` element are exactly the same as in the [previous example](#matching_the_custom_state_of_a_custom_checkbox_element), and are therefore not repeated here.
 

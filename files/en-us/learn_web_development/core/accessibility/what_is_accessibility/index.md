@@ -2,9 +2,8 @@
 title: What is accessibility?
 slug: Learn_web_development/Core/Accessibility/What_is_accessibility
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Accessibility/Tooling", "Learn_web_development/Core/Accessibility")}}
 

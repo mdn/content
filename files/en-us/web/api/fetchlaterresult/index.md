@@ -7,7 +7,7 @@ status:
 browser-compat: api.FetchLaterResult
 ---
 
-{{DefaultAPISidebar("fetchLater API")}}{{SeeCompatTable}}
+{{APIRef("fetchLater API")}}{{SeeCompatTable}}
 
 The **`FetchLaterResult`** interface of the [`fetchLater()` API](/en-US/docs/Web/API/fetchLater_API) is returned by the {{domxref("Window.FetchLater()")}} method after a deferred fetch has been created.
 
@@ -46,5 +46,5 @@ function check_if_fetched() {
 
 ## See also
 
-- {{domxref("fetchLater() API")}}
+- [`fetchLater()` API](/en-US/docs/Web/API/fetchLater_API)
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)

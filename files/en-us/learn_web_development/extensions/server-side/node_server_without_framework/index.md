@@ -2,9 +2,8 @@
 title: Node.js server without a framework
 slug: Learn_web_development/Extensions/Server-side/Node_server_without_framework
 page-type: guide
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 This article shows a static file server built in [Node.js](https://nodejs.org/en/) without using any frameworks.
 The current state of Node.js is such that almost everything we need for the static file server is provided by built-in APIs and a few lines of code.

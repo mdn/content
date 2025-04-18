@@ -8,7 +8,7 @@ browser-compat: api.HTMLInputElement.placeholder
 
 {{ APIRef("HTML DOM") }}
 
-The **`placeholder`** property of the {{DOMxRef("HTMLInputElement")}} interface represents a hint to the user of what can be entered in the control. It reflects the {{htmlelement("input")}} element's [`placeholder`](/en-US/docs/Web/HTML/Element/input#placeholder) attribute.
+The **`placeholder`** property of the {{DOMxRef("HTMLInputElement")}} interface represents a hint to the user of what can be entered in the control. It reflects the {{htmlelement("input")}} element's [`placeholder`](/en-US/docs/Web/HTML/Reference/Elements/input#placeholder) attribute.
 
 ## Value
 

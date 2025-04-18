@@ -8,9 +8,9 @@ browser-compat: api.HTMLInputElement.alt
 
 {{APIRef("HTML DOM")}}
 
-The **`alt`** property of the {{DOMxRef("HTMLInputElement")}} interface defines the textual label for the button for users and user agents who cannot use the image. It reflects the {{htmlelement("input")}} element's [`alt`](/en-US/docs/Web/HTML/Element/input#alt) attribute.
+The **`alt`** property of the {{DOMxRef("HTMLInputElement")}} interface defines the textual label for the button for users and user agents who cannot use the image. It reflects the {{htmlelement("input")}} element's [`alt`](/en-US/docs/Web/HTML/Reference/Elements/input#alt) attribute.
 
-The `alt` property is valid for the [`image`](/en-US/docs/Web/HTML/Element/input/image) type only. It should be a non-empty string giving the label that would be appropriate for an equivalent button if the image was unavailable.
+The `alt` property is valid for the [`image`](/en-US/docs/Web/HTML/Reference/Elements/input/image) type only. It should be a non-empty string giving the label that would be appropriate for an equivalent button if the image was unavailable.
 
 ## Value
 

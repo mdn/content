@@ -44,7 +44,7 @@ The image file formats that are most commonly used on the web are listed below.
         <p>
           Good choice for both images and animated images due to high performance and royalty free image format.
           It offers much better compression than PNG or JPEG with support for higher color depths, animated frames, transparency, etc.
-          Note that when using AVIF, you should include fallbacks to formats with better browser support (i.e., using the <code><a href="/en-US/docs/Web/HTML/Element/picture">&#x3C;picture></a></code> element).<br />
+          Note that when using AVIF, you should include fallbacks to formats with better browser support (i.e., using the <code><a href="/en-US/docs/Web/HTML/Reference/Elements/picture">&#x3C;picture></a></code> element).<br />
           <strong>Support:</strong> Chrome, Edge, Firefox, Opera, Safari.
         </p>
       </td>
@@ -299,7 +299,7 @@ This often has little impact on real-world user experience because AVIF files ar
 For larger file size the impact can become significant, and you should consider using a format that supports progressive rendering.
 
 AVIF is supported in Chrome, Edge, Opera, Safari and Firefox.
-As support is not yet comprehensive (and has little historical depth) you should provide a fallback in [WebP](#webp_image), [JPEG](#jpeg_joint_photographic_experts_group_image) or [PNG](#png_portable_network_graphics) format using [the `<picture>` element](/en-US/docs/Web/HTML/Element/picture) (or some other approach).
+As support is not yet comprehensive (and has little historical depth) you should provide a fallback in [WebP](#webp_image), [JPEG](#jpeg_joint_photographic_experts_group_image) or [PNG](#png_portable_network_graphics) format using [the `<picture>` element](/en-US/docs/Web/HTML/Reference/Elements/picture) (or some other approach).
 
 <table class="standard-table">
   <tbody>
@@ -605,7 +605,7 @@ If you use ICO files, you should use the BMP format, as support for PNG inside I
 
 > [!WARNING]
 > ICO files _should not_ be used in web content.
-> Additionally, their use for favicons has subsided in favor of using a PNG file and the {{HTMLElement("link")}} element, as described in [Providing icons for different usage contexts](/en-US/docs/Web/HTML/Element/link#providing_icons_for_different_usage_contexts).
+> Additionally, their use for favicons has subsided in favor of using a PNG file and the {{HTMLElement("link")}} element, as described in [Providing icons for different usage contexts](/en-US/docs/Web/HTML/Reference/Elements/link#providing_icons_for_different_usage_contexts).
 
 <table class="standard-table">
   <tbody>
@@ -936,7 +936,7 @@ PNG is widely supported, with all major browsers offering full support for its f
 
 ### SVG (Scalable Vector Graphics)
 
-SVG is an [XML](/en-US/docs/Glossary/XML)-based [vector graphics](https://en.wikipedia.org/wiki/Vector_graphics) format that specifies the contents of an image as a set of drawing commands that create shapes, lines, apply colors, filters, and so forth.
+[SVG](/en-US/docs/Web/SVG) is an [XML](/en-US/docs/Glossary/XML)-based [vector graphics](https://en.wikipedia.org/wiki/Vector_graphics) format that specifies the contents of an image as a set of drawing commands that create shapes, lines, apply colors, filters, and so forth.
 SVG files are ideal for diagrams, icons, and other images which can be accurately drawn at any size.
 As such, SVG is popular for user interface elements in modern Web design.
 
@@ -949,10 +949,11 @@ For instance, this example defines an drawing area with initial size 100 by 100 
 </svg>
 ```
 
-SVG can be used in web content in two ways:
+SVG can be used in web content in three ways:
 
-1. You can directly write the {{SVGElement("svg")}} element within the HTML, containing [SVG elements](/en-US/docs/Web/SVG/Reference/Element) to draw the image.
-2. You can display an SVG image anywhere you can use any of the other image types, including with the {{HTMLElement("img")}} and {{HTMLElement("picture")}} elements, the {{cssxref("background-image")}} CSS property, and so forth.
+1. An {{SVGElement("svg")}} element can appear directly within the HTML. It can contain [SVG elements](/en-US/docs/Web/SVG/Reference/Element) to draw the image.
+2. An SVG image can be embedded in HTML using elements such as {{HTMLElement("iframe")}}, {{HTMLElement("object")}} and {{HTMLElement("embed")}}.
+3. It is possible to use SVG images anywhere where other image types can be used, including with the {{HTMLElement("img")}} element, the {{cssxref("background-image")}} CSS property, and so forth. However, there are [additional restrictions](/en-US/docs/Web/SVG/Guides/SVG_as_an_image) when SVG is used in this way.
 
 SVG is an ideal choice for images which can be represented using a series of drawing commands, especially if the size at which the image will be rendered is unknown or may vary, since SVG will smoothly scale to the desired size.
 It's not generally useful for strictly bitmap or photographic images, although it is possible to include bitmap images within an SVG.
@@ -1146,7 +1147,7 @@ Lossless WebP holds the `ANIM` chunk, which describes the animation, and the `AN
 Looping is supported.
 
 WebP now has broad support in the latest versions of major web browsers, although it does not have deep historical support.
-Provide a fallback in either [JPEG](#jpeg_joint_photographic_experts_group_image) or [PNG](#png_portable_network_graphics) format, such as with [the `<picture>` element](/en-US/docs/Web/HTML/Element/picture).
+Provide a fallback in either [JPEG](#jpeg_joint_photographic_experts_group_image) or [PNG](#png_portable_network_graphics) format, such as with [the `<picture>` element](/en-US/docs/Web/HTML/Reference/Elements/picture).
 
 <table class="standard-table">
   <tbody>

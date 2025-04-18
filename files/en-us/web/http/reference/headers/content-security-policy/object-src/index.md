@@ -70,7 +70,7 @@ Content-Security-Policy: object-src https://example.com/
 The following {{HTMLElement("object")}} and {{HTMLElement("embed")}} elements are blocked and won't load:
 
 ```html
-<embed src="https://not-example.com/flash"></embed>
+<embed src="https://not-example.com/flash" />
 <object data="https://not-example.com/plugin"></object>
 ```
 

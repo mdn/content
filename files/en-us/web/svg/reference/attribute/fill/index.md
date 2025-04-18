@@ -31,7 +31,6 @@ The SVG presentational `fill` attribute and the CSS {{cssxref("fill")}} property
 - {{SVGElement('rect')}}
 - {{SVGElement('text')}}
 - {{SVGElement('textPath')}}
-- {{SVGElement('tref')}}
 - {{SVGElement('tspan')}}
 
 The SVG `fill` attribute can be used to define the final animation state with the following SVG elements:
@@ -403,34 +402,6 @@ For {{SVGElement('text')}}, `fill` is a presentation attribute that defines the 
 ## textPath
 
 For {{SVGElement('textPath')}}, `fill` is a presentation attribute that defines the color of the text.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td>
-        <strong
-          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#paint">&#x3C;paint></a></strong
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><code>black</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
-
-## tref
-
-> [!WARNING]
-> As of SVG2 {{SVGElement('tref')}} is deprecated and shouldn't be used.
-
-For {{SVGElement('tref')}}, `fill` is a presentation attribute that defines the color of the text.
 
 <table class="properties">
   <tbody>

@@ -2,9 +2,8 @@
 title: "Test your skills: Form structure"
 slug: Learn_web_development/Extensions/Forms/Test_your_skills:_Form_structure
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{learnsidebar}}
 
 The aim of this skill test is to assess whether you've understood our [How to structure a web form](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form) article.
 

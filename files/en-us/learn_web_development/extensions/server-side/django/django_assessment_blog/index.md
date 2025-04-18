@@ -3,9 +3,10 @@ title: "Challenge: DIY Django mini blog"
 short-title: "Challenge: Django blog"
 slug: Learn_web_development/Extensions/Server-side/Django/django_assessment_blog
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Server-side/Django/web_application_security", "Learn_web_development/Extensions/Server-side/Django")}}
+{{PreviousMenu("Learn_web_development/Extensions/Server-side/Django/web_application_security", "Learn_web_development/Extensions/Server-side/Django")}}
 
 In this challenge, you'll use the Django knowledge you've picked up in the [Django Web Framework (Python)](/en-US/docs/Learn_web_development/Extensions/Server-side/Django) module to create a very basic blog.
 

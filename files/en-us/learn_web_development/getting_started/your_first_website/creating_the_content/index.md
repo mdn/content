@@ -3,9 +3,8 @@ title: "HTML: Creating the content"
 short-title: Creating the content
 slug: Learn_web_development/Getting_started/Your_first_website/Creating_the_content
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website")}}
 
@@ -107,7 +106,7 @@ Let's turn our attention to the {{htmlelement("img")}} element:
 
 This embeds an image into our page in the position it appears. It does this via the `src` (source) attribute, which contains the path to the image file we want to embed.
 
-We have also included an `alt` (alternative) attribute. In the [`alt` attribute](/en-US/docs/Web/HTML/Element/img#authoring_meaningful_alternate_descriptions), you specify descriptive text for users who cannot see the image, possibly because of the following reasons:
+We have also included an `alt` (alternative) attribute. In the [`alt` attribute](/en-US/docs/Web/HTML/Reference/Elements/img#authoring_meaningful_alternate_descriptions), you specify descriptive text for users who cannot see the image, possibly because of the following reasons:
 
 1. They are visually impaired. Users with significant visual impairments often use tools called screen readers to read out the alt text to them.
 2. Something has gone wrong, causing the image not to display. If the `src` attribute does not contain a valid path to an image, the alt text will be displayed instead:
@@ -134,6 +133,9 @@ If the image is really large and therefore doesn't fit on the screen, don't worr
 ## Marking up text
 
 This section will cover some essential HTML elements you'll use for marking up text.
+
+> [!NOTE]
+> Scrimba's [The basics of semantic HTML](https://scrimba.com/the-frontend-developer-career-path-c0j/~0xid?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> is an interactive lesson providing a useful description of HTML, with particular emphasis on why the _semantic_ aspect of it is important.
 
 ### Headings
 
@@ -236,5 +238,10 @@ If you have followed all the instructions in this article, you should end up wit
 If you get stuck, you can always compare your work with our [finished example code](https://github.com/mdn/beginner-html-site/blob/main/index.html) on GitHub.
 
 Here, we have only really scratched the surface of HTML. You'll learn a lot more in our [Structuring content with HTML](/en-US/docs/Learn_web_development/Core/Structuring_content) Core module later on in the course.
+
+## See also
+
+- [Learn HTML and CSS](https://scrimba.com/learn-html-and-css-c0p?via=mdn), Scrimba <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
+  - : [Scrimba's](https://scrimba.com?via=mdn) _Learn HTML and CSS_ course teaches you HTML and CSS through building and deploying five awesome projects, with fun interactive lessons and challenges taught by knowledgeable teachers.
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website")}}

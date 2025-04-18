@@ -2,9 +2,8 @@
 title: Deployment and next steps
 slug: Learn_web_development/Core/Frameworks_libraries/Svelte_deployment_next
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenu("Learn_web_development/Core/Frameworks_libraries/Svelte_TypeScript", "Learn_web_development/Core/Frameworks_libraries")}}
 
@@ -318,7 +317,7 @@ To understand the motivations behind Svelte, you should read [Rich Harris](https
 There are other projects related to Svelte that are worth checking out:
 
 - [Sapper](https://sapper.svelte.dev/): An application framework powered by Svelte that provides server-side rendering (SSR), code splitting, file-based routing and offline support, and more. Think of it as [Next.js](https://nextjs.org/) for Svelte. If you are planning to develop a fairly complex web application you should definitely have a look at this project.
-- [Svelte Native](https://svelte-native.technology/): A mobile application framework powered by Svelte. Think of it as [React Native](https://reactnative.dev/) for Svelte.
+- [Svelte Native](https://svelte.nativescript.org/): A mobile application framework powered by Svelte. Think of it as [React Native](https://reactnative.dev/) for Svelte.
 - [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode): The officially supported VS Code plugin for working with `.svelte` files, which we looked at in our [TypeScript article](/en-US/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_TypeScript).
 
 ### Other learning resources

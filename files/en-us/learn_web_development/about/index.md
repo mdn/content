@@ -2,9 +2,8 @@
 title: About Learn web development
 slug: Learn_web_development/About
 page-type: landing-page
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 MDN Learn web development aims to teach the fundamental skills and knowledge that a front-end web developer should have for employability and longevity in today's web industry. It embodies the values we think the web should have — accessibility, sustainability, usability, performance, and community. We would love educators, developers, and students to use this resource and champion these values in their work, in their teachings, and in the products they build.
 

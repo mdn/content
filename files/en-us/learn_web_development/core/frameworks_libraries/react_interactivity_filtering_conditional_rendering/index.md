@@ -3,9 +3,8 @@ title: "React interactivity: Editing, filtering, conditional rendering"
 short-title: React editing, filtering, conditional UI
 slug: Learn_web_development/Core/Frameworks_libraries/React_interactivity_filtering_conditional_rendering
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_interactivity_events_state","Learn_web_development/Core/Frameworks_libraries/React_accessibility", "Learn_web_development/Core/Frameworks_libraries")}}
 

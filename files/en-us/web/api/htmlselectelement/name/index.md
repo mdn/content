@@ -8,7 +8,7 @@ browser-compat: api.HTMLSelectElement.name
 
 {{ApiRef("HTML DOM")}}
 
-The **`name`** property of the {{domxref("HTMLSelectElement")}} interface indicates the name of the {{HTMLElement("select")}} element. It reflects the element's [`name`](/en-US/docs/Web/HTML/Element/select#name) attribute.
+The **`name`** property of the {{domxref("HTMLSelectElement")}} interface indicates the name of the {{HTMLElement("select")}} element. It reflects the element's [`name`](/en-US/docs/Web/HTML/Reference/Elements/select#name) attribute.
 
 ## Value
 

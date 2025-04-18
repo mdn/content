@@ -266,8 +266,8 @@ This example combines a counter sandwiched between two `<string>`s prepended to 
       <li>Ducks</li>
       <li>Flightless</li>
     </ol>
-  <li>Marsupials</li>
   </li>
+  <li>Marsupials</li>
 </ol>
 ```
 
@@ -461,6 +461,9 @@ div {
 - {{Cssxref("::after")}}
 - {{Cssxref("::before")}}
 - {{Cssxref("::marker")}}
+- {{cssxref("::scroll-button()")}}
+- {{cssxref("::scroll-marker")}}
+- {{cssxref(":target-current")}}
 - {{Cssxref("contain")}}
 - {{Cssxref("quotes")}}
 - {{cssxref("gradient", "&lt;gradient&gt;")}}

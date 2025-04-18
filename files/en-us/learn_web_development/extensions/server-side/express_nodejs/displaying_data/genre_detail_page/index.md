@@ -2,9 +2,8 @@
 title: Genre detail page
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 The genre _detail_ page needs to display the information for a particular genre instance, using its automatically generated `_id` field value as the identifier.
 The ID of the required genre record is encoded at the end of the URL and extracted automatically based on the route definition (**/genre/:id**).

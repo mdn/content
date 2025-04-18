@@ -2,9 +2,8 @@
 title: User input methods and controls
 slug: Learn_web_development/Extensions/Forms/User_input_methods
 page-type: guide
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 Web forms require user input. When designing web forms, or really any web content, it's important to consider how users interact with their devices and browsers. Web user input goes beyond simple mouse and keyboard: think of touchscreens for example.
 
@@ -20,7 +19,7 @@ You should always be mindful of keyboard accessibility — many web users only u
 
 - To support touch screen displays, [touch events](/en-US/docs/Web/API/Touch_events) interpret finger activity on touch-based user interfaces from mobile devices, to refrigerator panels, to museum kiosk displays.
 - The [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) allows you to display your content in fullscreen mode, which is needed if your form is being served on a refrigerator or museum kiosk.
-- When you need to create a custom form control, like a rich-text editor, the [`contentEditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute enables creating editable controls from normally non-editable HTML elements.
+- When you need to create a custom form control, like a rich-text editor, the [`contentEditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) attribute enables creating editable controls from normally non-editable HTML elements.
 - The [Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) allows users to drag elements around a page and drop them in different locations. This can help improve the user experience when it comes to selecting files for upload or reordering content modules within a page.
 - When screen orientation matters for your layout, you can use [CSS media queries](/en-US/docs/Web/CSS/@media/orientation) to style your forms based on the browser orientation, or even use the [Screen Orientation API](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation) to read the screen orientation state and perform other actions.
 
@@ -122,7 +121,7 @@ Here is an example that allows a section of content to be dragged.
 
 in which we:
 
-- Set the [`draggable`](/en-US/docs/Web/HTML/Global_attributes/draggable) attribute to `true` on the element that you wish to make draggable.
+- Set the [`draggable`](/en-US/docs/Web/HTML/Reference/Global_attributes/draggable) attribute to `true` on the element that you wish to make draggable.
 - Add a listener for the [`dragstart`](/en-US/docs/Web/API/HTMLElement/dragstart_event) event and set the drag data within this listener.
 
 > [!NOTE]
@@ -132,7 +131,7 @@ in which we:
 
 Generally, you should use a {{HTMLElement("textarea")}} or an appropriate {{HTMLElement("input")}} type within a {{HTMLElement("form")}} to collect data from users, along with a descriptive {{HTMLElement("label")}}. But these elements may not meet your needs. For example, rich text editors capture italic, bold, and normal text, but no native form control captures rich text. This use case requires you to create a custom control that is stylable _and_ editable. There's an attribute for that!
 
-Any DOM element can be made directly editable using the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute.
+Any DOM element can be made directly editable using the [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) attribute.
 
 ```css hidden
 div {
@@ -146,7 +145,7 @@ div {
 <div contenteditable="true">This text can be edited by the user.</div>
 ```
 
-The `contenteditable` attribute automatically adds the element to the document's default tabbing order, meaning the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute does not need to be added. However, when using non-semantic elements for data entry when [creating your own form controls](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls), you will need to add JavaScript and [ARIA](/en-US/docs/Web/Accessibility/ARIA) to retrofit the element with form control functionality for everything else.
+The `contenteditable` attribute automatically adds the element to the document's default tabbing order, meaning the [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) attribute does not need to be added. However, when using non-semantic elements for data entry when [creating your own form controls](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls), you will need to add JavaScript and [ARIA](/en-US/docs/Web/Accessibility/ARIA) to retrofit the element with form control functionality for everything else.
 
 To provide a good user experience, any custom form control you create must be accessible and function like native form controls:
 
@@ -157,7 +156,7 @@ To provide a good user experience, any custom form control you create must be ac
 {{EmbedLiveSample("contentEditable")}}
 
 > [!NOTE]
-> Examples and other resources can be found in the [Content Editable guide](/en-US/docs/Web/HTML/Global_attributes/contenteditable).
+> Examples and other resources can be found in the [Content Editable guide](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable).
 
 ## Tutorials
 
@@ -177,4 +176,4 @@ To provide a good user experience, any custom form control you create must be ac
 - [Screen Orientation](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation) API
 - [Fullscreen](/en-US/docs/Web/API/Fullscreen_API) API
 - [Drag & Drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) API
-- HTML [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute
+- HTML [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) attribute
