@@ -34,7 +34,7 @@ JavaScript is a programming language that adds interactivity to websites. You ca
 
 {{Glossary("JavaScript")}} is a full-fledged programming language — it contains all the classic programming features you may have seen in other programming languages (or at least heard about), such as **variables**, **loops**, and **functions**.
 
-JavaScript (when used on webpages, at least; it can also be used in other places) generally works by:
+JavaScript, when used on web pages (though it can also be used in other places), generally works by:
 
 - Getting references to one or more values — such as numbers, or references to elements on the page.
 - Doing something with those values, such as adding the numbers together.
