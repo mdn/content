@@ -256,7 +256,7 @@ If you have followed all the instructions in this article, you should end up wit
 
 If you get stuck, you can compare your work with our [finished example code on GitHub](https://github.com/mdn/beginner-html-site-scripted/blob/main/scripts/main.js).
 
-Here, we have only really scratched the surface of JavaScript. You'll learn a lot more in our [Dynamic scripting with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting) Core module later on in the course.
+We've only really scratched the surface of JavaScript in this article. You'll learn a lot more in our [Dynamic scripting with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting) Core module later on in the course.
 
 ## See also
 
