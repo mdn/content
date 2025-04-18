@@ -498,7 +498,7 @@ Now that you've finished creating your website, the next step is to get it onlin
 
 ## See also
 
-- [Scrimba: Learn JavaScript](https://v2.scrimba.com/learn-javascript-c0v?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
+- [Scrimba: Learn JavaScript](https://scrimba.com/learn-javascript-c0v?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
   - : [Scrimba's](https://scrimba.com?via=mdn) _Learn JavaScript_ course teaches you JavaScript through solving 140+ interactive coding challenges, building projects including a game, a browser extension, and even a mobile app. Scrimba features fun interactive lessons taught by knowledgeable teachers.
 - [Learn JavaScript](https://learnjavascript.online/)
   - : This is an excellent resource for aspiring web developers! Learn JavaScript in an interactive environment, with short lessons and interactive tests, guided by an automated assessment. The first 40 lessons are free. The complete course is available for a small one-time payment.

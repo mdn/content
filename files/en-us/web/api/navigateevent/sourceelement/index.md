@@ -17,7 +17,7 @@ The initiating element can be:
 
 - An HTML {{htmlelement("a")}} element (or SVG [`<a>`](/en-US/docs/Web/SVG/Reference/Element/a) element).
 - An {{htmlelement("area")}} element.
-- A submit button ([`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit) or [`<button type="submit">`](/en-US/docs/Web/HTML/Element/button)).
+- A submit button ([`<input type="submit">`](/en-US/docs/Web/HTML/Reference/Elements/input/submit) or [`<button type="submit">`](/en-US/docs/Web/HTML/Reference/Elements/button)).
 - A submitted {{htmlelement("form")}} element.
 
 ## Value
