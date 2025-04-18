@@ -8,7 +8,7 @@ sidebar: learnsidebar
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website/Publishing_your_website", "Learn_web_development/Getting_started/Your_first_website")}}
 
-JavaScript is a programming language that can be used to add interactivity to websites. It can be used to control just about anything and everything — game logic, button functionality, form data validation, dynamic styling and animation updates, and much more. This article gets you started with JavaScript, and walks you through adding some fun features to your first website.
+JavaScript is a programming language that adds interactivity to websites. You can use it to control just about anything — form data validation, button functionality, game logic, dynamic styling, animation updates, and much more. This article gets you started with JavaScript and walks you through adding some fun features to your first website.
 
 <table>
   <tbody>
