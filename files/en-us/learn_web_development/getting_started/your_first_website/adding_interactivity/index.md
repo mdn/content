@@ -134,7 +134,7 @@ Before going any further, delete the "Hello world!" code from your `main.js` fil
 
 ## Adding an image changer
 
-In this section, you will to use JavaScript and [DOM API](/en-US/docs/Web/API/HTML_DOM_API) features to alternate the display between two images. This change will happen as a user clicks the displayed image.
+In this section, you will use JavaScript and [DOM API](/en-US/docs/Web/API/HTML_DOM_API) features to alternate the display between two images. This change will happen when a user clicks the displayed image.
 
 1. Choose another image to feature on your example site. Ideally, the image will be the same size as the image you added previously, or as close as possible.
 2. Save this image in your `images` folder.
