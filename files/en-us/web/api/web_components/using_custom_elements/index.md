@@ -99,7 +99,7 @@ customElements.define("my-custom-element", MyCustomElement);
 
 #### Lifecycle callbacks and state-preserving moves
 
-The position of a custom element in the DOM can be manipulated just like any regular HTML element, but there are [lifecycle](/en-US/docs/Web/API/Web_components/Using_custom_elements#custom_element_lifecycle_callbacks) side-effects to consider.
+The position of a custom element in the DOM can be manipulated just like any regular HTML element, but there are lifecycle side-effects to consider.
 
 Each time a custom element is moved (via methods such as {{domxref("Element.moveBefore()")}} or {{domxref("Node.insertBefore()")}}), the `disconnectedCallback()` and `connectedCallback()` lifecycle callbacks are fired, because the element is disconnected from and reconnected to the DOM.
 
