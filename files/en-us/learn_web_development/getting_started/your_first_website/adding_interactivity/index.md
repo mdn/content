@@ -173,7 +173,7 @@ In this code, you stored a reference to your {{htmlelement("img")}} element in t
 
 ## Adding a personalized welcome message
 
-Next, let's change the page heading to a personalized welcome message when the user first visits the site. This welcome message will be saved in the browser via the [Web Storage API](/en-US/docs/Web/API/Web_Storage_API), meaning that if the user leaves the site and returns later, their personalized data will still be there. We will also include the ability to change the message.
+Next, let's change the page heading to show a personalized welcome message when the user first visits the site. This welcome message will be saved in the browser using the [Web Storage API](/en-US/docs/Web/API/Web_Storage_API), so if the user leaves the site and returns later, their personalized data will still be there. We'll also include a way for the user to change the message.
 
 1. In `index.html`, add the following line just before the closing `</body>` tag:
 
