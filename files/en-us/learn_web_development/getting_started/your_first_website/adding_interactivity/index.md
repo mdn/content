@@ -89,7 +89,7 @@ Don't worry if you don't understand the above JavaScript now. Getting comfortabl
 
 ## A "Hello world!" walkthrough
 
-To start you off with writing some JavaScript, we'll walk you through adding a _Hello world!_ example to your website example. (_Hello world!_ is [the standard for introductory programming examples](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program).)
+To start you off with writing some JavaScript, we'll walk you through adding a _Hello world!_ example to your sample website. ([_Hello world!_](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program) is the standard introductory programming example.)
 
 > [!WARNING]
 > If you haven't been following along with the rest of our course, [download this example code](https://codeload.github.com/mdn/beginner-html-site-styled/zip/refs/heads/gh-pages) and use it as a starting point.
