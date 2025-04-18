@@ -39,6 +39,8 @@ let querying = browser.tabs.query(queryInfo)
       - : `boolean`. Whether the tabs are in the current window.
     - `discarded` {{optional_inline}}
       - : `boolean`. Whether the tabs are discarded. A discarded tab is one whose content has been unloaded from memory, but is still visible in the tab strip. Its content gets reloaded the next time it's activated.
+    - `groupId` {{optional_inline}}
+      - : `integer`. The ID of the tab group the tabs are in or `-1` for ungrouped tabs.
     - `hidden` {{optional_inline}}
       - : `boolean`. Whether the tabs are hidden.
     - `highlighted` {{optional_inline}}

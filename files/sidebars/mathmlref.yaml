@@ -29,11 +29,13 @@ sidebar:
     title: Reference
   - type: listSubPages
     path: /Web/MathML/Reference/Element
+    link: /Web/MathML/Reference/Element
     title: Elements
     details: closed
     code: true
   - type: listSubPages
     path: /Web/MathML/Reference/Global_attributes
+    link: /Web/MathML/Reference/Global_attributes
     title: Global attributes
     details: closed
     code: true

@@ -160,18 +160,9 @@ To check if a font technology is supported by a browser within CSS, use the {{cs
 
 ## Formal syntax
 
-```plain
-<url> [ format( <font-format> ) ]? [ tech( <font-tech># ) ]?  |
-local( <family-name> )
+{{CSSSyntax}}
 
-<font-format> = [ <string> | collection | embedded-opentype | opentype | svg | truetype | woff | woff2 ]
-
-<font-tech> = [ <font-features-tech> | <color-font-tech> | variations | palettes | incremental-patch | incremental-range | incremental-auto ]
-
-<font-features-tech> = [ features-opentype | features-aat | features-graphite ]
-
-<color-font-tech> = [ color-COLRv0 | color-COLRv1 | color-SVG | color-sbix | color-CBDT ]
-```
+{{CSSSyntaxRaw(`<font-src>`)}}
 
 ## Examples
 

@@ -266,8 +266,8 @@ This example combines a counter sandwiched between two `<string>`s prepended to 
       <li>Ducks</li>
       <li>Flightless</li>
     </ol>
-  <li>Marsupials</li>
   </li>
+  <li>Marsupials</li>
 </ol>
 ```
 

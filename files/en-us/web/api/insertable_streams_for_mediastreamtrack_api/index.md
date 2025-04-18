@@ -4,42 +4,47 @@ slug: Web/API/Insertable_Streams_for_MediaStreamTrack_API
 page-type: web-api-overview
 ---
 
-{{DefaultAPISidebar("Insertable Streams for MediaStreamTrack API")}}
+{{DefaultAPISidebar("Insertable Streams for MediaStreamTrack API")}}{{SeeCompatTable}}
 
-The **Insertable Streams for MediaStreamTrack API** provides a method of adding new components to a {{domxref("MediaStreamTrack")}}.
+The **Insertable Streams for MediaStreamTrack API** provides a way to process the video frames of a {{domxref("MediaStreamTrack")}} as they are consumed.
 
 ## Concepts and Usage
 
-When processing video or audio, you sometimes want to insert additional elements or otherwise process the stream. For example, an application might include two tracks that need to be combined, such as a weather map and video of a presenter explaining the map. Or, you may want to do processing on a track to blur backgrounds, remove background noise, or introduce other elements (such as adding funny hats to people, and so on). This API provides a method to do this by giving direct access to the stream, thus allowing it to be manipulated.
+When processing real-time video, you sometimes want to insert visual elements or otherwise process the stream of video frames. For example, an application might include two tracks that need to be combined, such as a weather map and video of a presenter explaining the map. Or, you may want to do processing on a track to blur backgrounds, or introduce other elements (such as adding funny hats to people, and so on). The APIs described here provide direct access to the video stream, allowing you to manipulate it in real time.
+
+To ensure optimal performance, the APIs are only available in {{domxref("Worker","dedicated workers")}} (unless otherwise stated).
 
 ## Interfaces
 
-- {{domxref("MediaStreamTrackGenerator")}}
-  - : Creates a {{domxref("WritableStream")}} that acts as a {{domxref("MediaStreamTrack")}} source.
-- {{domxref("MediaStreamTrackProcessor")}}
-  - : Consumes a {{domxref("MediaStreamTrack")}} object's source and generates a stream of media frames.
+- {{domxref("MediaStreamTrackProcessor")}} {{Experimental_Inline}}
+  - : Consumes a {{domxref("MediaStreamTrack")}} object's source and produces a stream of video frames.
+- {{domxref("VideoTrackGenerator")}} {{Experimental_Inline}}
+  - : Creates a {{domxref("WritableStream")}} that acts as a {{domxref("MediaStreamTrack")}} video source.
+- {{domxref("MediaStreamTrackGenerator")}} {{Experimental_Inline}} {{Non-standard_Inline}}
+  - : Creates a {{domxref("WritableStream")}} that acts as a {{domxref("MediaStreamTrack")}} source for either video or audio. Only available on the {{Glossary("main thread")}}.
 
 ## Examples
 
-The following example is from the article [Insertable streams for MediaStreamTrack](https://developer.chrome.com/docs/capabilities/web-apis/mediastreamtrack-insertable-media-processing), and demonstrates a barcode scanner application that highlights a barcode in a video stream. This transforms the stream accessed via {{domxref("MediaStreamTrackProcessor.readable")}}.
+The following example is from the article [Unbundling MediaStreamTrackProcessor and VideoTrackGenerator](https://blog.mozilla.org/webrtc/unbundling-mediastreamtrackprocessor-and-videotrackgenerator/). It [transfers](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) a camera {{domxref("MediaStreamTrack")}} to a worker for processing. The worker creates a pipeline that applies a sepia tone filter to the video frames and mirrors them. The pipeline culminates in a {{domxref("VideoTrackGenerator")}} whose {{domxref("MediaStreamTrack")}} is transferred back and played. The media now flows in real time through the transform off the {{Glossary("main thread")}}.
 
 ```js
-const stream = await getUserMedia({ video: true });
-const videoTrack = stream.getVideoTracks()[0];
+const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+const [track] = stream.getVideoTracks();
+const worker = new Worker("worker.js");
+worker.postMessage({ track }, [track]);
+const { data } = await new Promise((r) => (worker.onmessage = r));
+video.srcObject = new MediaStream([data.track]);
+```
 
-const trackProcessor = new MediaStreamTrackProcessor({ track: videoTrack });
-const trackGenerator = new MediaStreamTrackGenerator({ kind: "video" });
+worker.js:
 
-const transformer = new TransformStream({
-  async transform(videoFrame, controller) {
-    const barcodes = await detectBarcodes(videoFrame);
-    const newFrame = highlightBarcodes(videoFrame, barcodes);
-    videoFrame.close();
-    controller.enqueue(newFrame);
-  },
-});
-
-trackProcessor.readable
-  .pipeThrough(transformer)
-  .pipeTo(trackGenerator.writable);
+```js
+onmessage = async ({ data: { track } }) => {
+  const vtg = new VideoTrackGenerator();
+  self.postMessage({ track: vtg.track }, [vtg.track]);
+  const { readable } = new MediaStreamTrackProcessor({ track });
+  await readable
+    .pipeThrough(new TransformStream({ transform }))
+    .pipeTo(vtg.writable);
+};
 ```

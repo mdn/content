@@ -14,14 +14,10 @@ Below is a list of all of the attributes available in SVG along with links to re
 
 ### A
 
-- {{SVGAttr("accent-height")}}
 - {{SVGAttr("accumulate")}}
 - {{SVGAttr("additive")}}
 - {{SVGAttr("alignment-baseline")}}
-- {{SVGAttr("alphabetic")}}
 - {{SVGAttr("amplitude")}}
-- {{SVGAttr("arabic-form")}}
-- {{SVGAttr("ascent")}}
 - {{SVGAttr("attributeName")}}
 - {{SVGAttr("attributeType")}}
 - {{SVGAttr("azimuth")}}
@@ -31,7 +27,6 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("baseFrequency")}}
 - {{SVGAttr("baseline-shift")}}
 - {{SVGAttr("baseProfile")}}
-- {{SVGAttr("bbox")}}
 - {{SVGAttr("begin")}}
 - {{SVGAttr("bias")}}
 - {{SVGAttr("by")}}
@@ -39,7 +34,6 @@ Below is a list of all of the attributes available in SVG along with links to re
 ### C
 
 - {{SVGAttr("calcMode")}}
-- {{SVGAttr("cap-height")}}
 - {{SVGAttr("class")}}
 - {{SVGAttr("clip")}}
 - {{SVGAttr("clipPathUnits")}}
@@ -58,7 +52,6 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("d")}}
 - {{SVGAttr("data-*")}}
 - {{SVGAttr("decoding")}}
-- {{SVGAttr("descent")}}
 - {{SVGAttr("diffuseConstant")}}
 - {{SVGAttr("direction")}}
 - {{SVGAttr("display")}}
@@ -98,9 +91,6 @@ Below is a list of all of the attributes available in SVG along with links to re
 
 ### G
 
-- {{SVGAttr("g1")}}
-- {{SVGAttr("g2")}}
-- {{SVGAttr("glyph-name")}}
 - {{SVGAttr("glyph-orientation-horizontal")}}
 - {{SVGAttr("glyph-orientation-vertical")}}
 - {{SVGAttr("gradientTransform")}}
@@ -108,18 +98,13 @@ Below is a list of all of the attributes available in SVG along with links to re
 
 ### H
 
-- {{SVGAttr("hanging")}}
 - {{SVGAttr("height")}}
-- {{SVGAttr("horiz-adv-x")}}
-- {{SVGAttr("horiz-origin-x")}}
-- {{SVGAttr("horiz-origin-y")}}
 - {{SVGAttr("href")}}
 - {{SVGAttr("hreflang")}}
 
 ### I
 
 - {{SVGAttr("id")}}
-- {{SVGAttr("ideographic")}}
 - {{SVGAttr("image-rendering")}}
 - {{SVGAttr("in")}}
 - {{SVGAttr("in2")}}
@@ -127,7 +112,6 @@ Below is a list of all of the attributes available in SVG along with links to re
 
 ### K
 
-- {{SVGAttr("k")}}
 - {{SVGAttr("k1")}}
 - {{SVGAttr("k2")}}
 - {{SVGAttr("k3")}}
@@ -158,7 +142,6 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("mask")}}
 - {{SVGAttr("maskContentUnits")}}
 - {{SVGAttr("maskUnits")}}
-- {{SVGAttr("mathematical")}}
 - {{SVGAttr("max")}}
 - {{SVGAttr("media")}}
 - {{SVGAttr("method")}}
@@ -167,7 +150,6 @@ Below is a list of all of the attributes available in SVG along with links to re
 
 ### N
 
-- {{SVGAttr("name")}}
 - {{SVGAttr("numOctaves")}}
 
 ### O
@@ -177,16 +159,12 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("operator")}}
 - {{SVGAttr("order")}}
 - {{SVGAttr("orient")}}
-- {{SVGAttr("orientation")}}
 - {{SVGAttr("origin")}}
 - {{SVGAttr("overflow")}}
-- {{SVGAttr("overline-position")}}
-- {{SVGAttr("overline-thickness")}}
 
 ### P
 
 - {{SVGAttr("paint-order")}}
-- {{SVGAttr("panose-1")}}
 - {{SVGAttr("path")}}
 - {{SVGAttr("pathLength")}}
 - {{SVGAttr("patternContentUnits")}}
@@ -235,14 +213,9 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("spreadMethod")}}
 - {{SVGAttr("startOffset")}}
 - {{SVGAttr("stdDeviation")}}
-- {{SVGAttr("stemh")}}
-- {{SVGAttr("stemv")}}
 - {{SVGAttr("stitchTiles")}}
 - {{SVGAttr("stop-color")}}
 - {{SVGAttr("stop-opacity")}}
-- {{SVGAttr("strikethrough-position")}}
-- {{SVGAttr("strikethrough-thickness")}}
-- {{SVGAttr("string")}}
 - {{SVGAttr("stroke")}}
 - {{SVGAttr("stroke-dasharray")}}
 - {{SVGAttr("stroke-dashoffset")}}
@@ -273,41 +246,25 @@ Below is a list of all of the attributes available in SVG along with links to re
 
 ### U
 
-- {{SVGAttr("u1")}}
-- {{SVGAttr("u2")}}
-- {{SVGAttr("underline-position")}}
-- {{SVGAttr("underline-thickness")}}
-- {{SVGAttr("unicode")}}
 - {{SVGAttr("unicode-bidi")}}
-- {{SVGAttr("unicode-range")}}
-- {{SVGAttr("units-per-em")}}
 
 ### V
 
-- {{SVGAttr("v-alphabetic")}}
-- {{SVGAttr("v-hanging")}}
-- {{SVGAttr("v-ideographic")}}
-- {{SVGAttr("v-mathematical")}}
 - {{SVGAttr("values")}}
 - {{SVGAttr("vector-effect")}}
 - {{SVGAttr("version")}}
-- {{SVGAttr("vert-adv-y")}}
-- {{SVGAttr("vert-origin-x")}}
-- {{SVGAttr("vert-origin-y")}}
 - {{SVGAttr("viewBox")}}
 - {{SVGAttr("visibility")}}
 
 ### W
 
 - {{SVGAttr("width")}}
-- {{SVGAttr("widths")}}
 - {{SVGAttr("word-spacing")}}
 - {{SVGAttr("writing-mode")}}
 
 ### X
 
 - {{SVGAttr("x")}}
-- {{SVGAttr("x-height")}}
 - {{SVGAttr("x1")}}
 - {{SVGAttr("x2")}}
 - {{SVGAttr("xChannelSelector")}}

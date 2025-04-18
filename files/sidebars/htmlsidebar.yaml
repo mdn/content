@@ -22,11 +22,6 @@ sidebar:
     details: closed
     code: true
   - type: listSubPages
-    path: /Web/HTML/Reference/Elements/input
-    title: Input_types
-    details: closed
-    code: true
-  - type: listSubPages
     path: /Web/HTML/Reference/Attributes
     link: /Web/HTML/Reference/Attributes
     title: Attributes
@@ -38,10 +33,39 @@ sidebar:
     title: Global_attributes
     details: closed
     code: true
+  - title: Attributes_element
+    details: closed
+    children:
+      - type: listSubPages
+        path: /Web/HTML/Reference/Elements/input
+        tags: html-attribute-value
+        title: Input_types
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Web/HTML/Reference/Elements/script/type
+        tags: html-attribute-value
+        title: Script_types
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Web/HTML/Reference/Elements/meta/name
+        tags: html-attribute-value
+        title: Meta_names
+        details: closed
+        code: true
+  - title: Attribute_values
+    details: closed
+    children:
+      - type: listSubPages
+        path: /Web/HTML/Reference/Attributes/rel
+        title: Rel_keywords
+        details: closed
+        code: true
 l10n:
   de:
     Reference: Referenzen
-    HTML_Elements: HTML-Elemente
+    HTML_Elements: Elemente
     Global_attributes: Globale Attribute
     Attributes: Attribute
     Input_types: <code>&lt;input&gt;</code>-Typen
@@ -51,39 +75,44 @@ l10n:
     HTML_Elements: Elements
     Global_attributes: Global attributes
     Attributes: Attributes
+    Attributes_element: Attributes by element
+    Attribute_values: Attribute values
     Input_types: <code>&lt;input&gt;</code> types
+    Script_types: <code>&lt;script&gt;</code> types
+    Meta_names: <code>&lt;meta&gt;</code> names
+    Rel_keywords: <code>rel</code> keywords
     Guides: Guides
   fr:
     Reference: Références
-    HTML_Elements: Éléments HTML
+    HTML_Elements: Éléments
     Global_attributes: Attributs universels
     Attributes: Attributs
     Input_types: Types <code>&lt;input&gt;</code>
     Guides: Guides
   ja:
     Reference: リファレンス
-    HTML_Elements: HTML 要素
+    HTML_Elements: 要素
     Global_attributes: グローバル属性
     Attributes: 属性
     Input_types: <code>&lt;input&gt;</code> 型
     Guides: ガイド
   ko:
     Reference: "참고서:"
-    HTML_Elements: HTML 요소
+    HTML_Elements: 요소
     Global_attributes: 전역 속성
     Attributes: 속성
     Input_types: <code>&lt;input&gt;</code> types
     Guides: "안내서:"
   pt-BR:
     Reference: Referências
-    HTML_Elements: Elementos HTML
+    HTML_Elements: Elementos
     Global_attributes: Atributos globais
     Attributes: Atributos
     Input_types: Tipos de <code>&lt;input&gt;</code>
     Guides: Guides
   ru:
     Reference: Справочники
-    HTML_Elements: HTML элементы
+    HTML_Elements: элементы
     Global_attributes: Глобальные атрибуты
     Attributes: Aтрибуты
     Input_types: Типы <code>&lt;input&gt;</code>

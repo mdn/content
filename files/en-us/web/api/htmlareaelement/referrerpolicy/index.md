@@ -52,7 +52,7 @@ A string; one of the following:
 
 ```html
 <img usemap="#mapAround" width="100" height="100" src="/img/logo@2x.png" />
-<map id="myMap" name="mapAround" />>
+<map id="myMap" name="mapAround"></map>
 ```
 
 ```js

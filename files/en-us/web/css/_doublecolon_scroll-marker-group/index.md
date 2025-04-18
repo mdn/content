@@ -2,10 +2,12 @@
 title: ::scroll-marker-group
 slug: Web/CSS/::scroll-marker-group
 page-type: css-pseudo-element
+status:
+  - experimental
 browser-compat: css.selectors.scroll-marker-group
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`::scroll-marker-group`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is generated inside a {{glossary("scroll container")}} and contains any {{cssxref("::scroll-marker")}} pseudo-elements generated on descendants of the scroll container.
 
