@@ -136,7 +136,7 @@ Before going any further, delete the "Hello world!" code from your `main.js` fil
 
 In this section, you will use JavaScript and [DOM API](/en-US/docs/Web/API/HTML_DOM_API) features to alternate the display between two images. This change will happen when a user clicks the displayed image.
 
-1. Choose another image to feature on your example site. Ideally, the image will be the same size as the image you added previously, or as close as possible.
+1. Choose another image to feature on your example site. Ideally, the image should be the same size as the one you added previously, or as close as possible.
 2. Save this image in your `images` folder.
 3. Add the following JavaScript code to your `main.js` file, making sure to replace `firefox2.png` and both instances of `firefox-icon.png` with your second and first image names, respectively.
 
