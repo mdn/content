@@ -149,7 +149,7 @@ In this example we have a button that normally gets its contrast using the {{css
 
 ### Value
 
-You'll find below a table below showing this browser's system colors. Depending on your settings, the colors may change. You can also check the result in different browsers or operating systems to check the differences.
+You'll find below a table showing this browser's system colors. Depending on your settings, the colors may change. You can also check the result in different browsers or operating systems to check the differences.
 
 <table>
   <thead>
