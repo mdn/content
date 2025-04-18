@@ -102,7 +102,7 @@ To start you off with writing some JavaScript, we'll walk you through adding a _
    <script async src="scripts/main.js"></script>
    ```
 
-   This does the same job as the {{htmlelement("link")}} element for CSS. It applies the JavaScript to the page, so it can have an effect on the HTML (along with the CSS, and anything else on the page).
+   This does the same job as the {{htmlelement("link")}} element for CSS – it applies the JavaScript to the page so it can affect the HTML (along with the CSS and anything else on the page).
 
 4. Add this code to your `scripts/main.js` file:
 
