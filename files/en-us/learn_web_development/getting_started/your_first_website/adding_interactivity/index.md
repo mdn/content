@@ -40,7 +40,7 @@ JavaScript, when used on web pages (though it can also be used in other places),
 - Doing something with those values, such as adding the numbers together.
 - Returning a result that can be used to do something else later on. For example, you might want to display the sum of those numbers on the page.
 
-Let's look at an example — we'll return to the basic list we saw in the last couple of articles:
+Let's look at an example. We'll use the same basic list we saw in the last couple of articles:
 
 ```html live-sample___basic-js
 <p>Instructions for life:</p>
