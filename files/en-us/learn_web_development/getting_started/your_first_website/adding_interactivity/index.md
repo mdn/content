@@ -32,7 +32,7 @@ JavaScript is a programming language that adds interactivity to websites. You ca
 
 ## What is JavaScript?
 
-{{Glossary("JavaScript")}} is a fully-fledged programming language — it contains all the classic programming features you may have seen in other programming languages (or at least heard about), such as **variables**, **loops**, and **functions**.
+{{Glossary("JavaScript")}} is a full-fledged programming language — it contains all the classic programming features you may have seen in other programming languages (or at least heard about), such as **variables**, **loops**, and **functions**.
 
 JavaScript (when used on webpages, at least; it can also be used in other places) generally works by:
 
