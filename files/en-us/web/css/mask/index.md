@@ -34,9 +34,9 @@ While not all constituent properties need to be declared, any values that are om
 ```css
 mask-image: none;
 mask-mode: match-source;
-mask-position: center;
+mask-position: 0% 0%;
 mask-size: auto;
-mask-repeat: repeat-x;
+mask-repeat: repeat;
 mask-origin: border-box;
 mask-clip: border-box;
 mask-composite: add;
@@ -124,15 +124,50 @@ mask: unset;
 
 ### Masking an image
 
-```css
-.target {
-  mask: url(#c1) luminance;
-}
+In this example, an image is masked using a CSS generated repeating conic gradient as a mask source. We'll also show the gradient as a background image for comparison.
 
-.another-target {
-  mask: url(resources.svg#c1) 50px 30px/10px 10px repeat-x exclude;
+#### HTML
+
+We include an {{htmlelement("img")}} and an empty {{htmlelement("div")}} element.
+
+```html
+<img
+  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+  alt="Pride flag" />
+<div></div>
+```
+
+#### CSS
+
+We apply a mask. The `mask-image` is generated using a {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}} function. We define it to be a `100px` by `100px` gradient starting which repeats starting from the center of the image. The gradient goes from transparent to solid black. We apply the same values to the `<div>` using the {{cssxref("background")}} shorthand, adding a background color.
+
+```css hidden
+body {
+  display: flex;
+  gap: 22px;
 }
 ```
+
+```css
+img {
+  mask: repeating-radial-gradient(circle, transparent 0 5px, black 15px 20px)
+    50% 50% / 100px 100px repeat;
+}
+div {
+  background: repeating-radial-gradient(
+      circle,
+      transparent 0 5px,
+      black 15px 20px
+    )
+    50% 50% / 100px 100px repeat magenta;
+  height: 220px;
+  width: 220px;
+}
+```
+
+#### Results
+
+{{EmbedLiveSample("Masking an image", "", "240")}}
 
 ## Specifications
 
