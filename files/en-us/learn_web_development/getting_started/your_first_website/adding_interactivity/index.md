@@ -232,7 +232,7 @@ When you run the example and get the dialog box that prompts you to enter your n
 
 Also, try clicking _OK_ without entering a name. You should end up with a title that reads _Mozilla is cool,_ because you've set `myName` to an empty string.
 
-To avoid these problems, you could check that the user hasn't entered a blank name using another conditional. Update your `setUserName()` function to this:
+To avoid these problems, you can add another conditional to check that the user hasn't entered a blank name. Update your `setUserName()` function to the following:
 
 ```js
 function setUserName() {
