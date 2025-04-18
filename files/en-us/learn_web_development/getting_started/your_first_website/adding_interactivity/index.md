@@ -224,7 +224,7 @@ Next, let's change the page heading to show a personalized welcome message when 
 6. Save all files and load `index.html` in the browser. You should immediately be asked to enter your name. After you do so, it will appear inside the `<h1>` as part of the personalized greeting. Notice how the personalization persists even after you reload the page. You can click the "Change user" button to enter a new name.
 
 > [!NOTE]
-> The term [operator](/en-US/docs/Learn_web_development/Core/Scripting/Math) is a general term referring to a JavaScript language character that carries out an operation on a value or values. Examples include `+` (adds two values together), `-` (subtracts one value from another), and `!` (negates a value — you met this above).
+> The term [operator](/en-US/docs/Learn_web_development/Core/Scripting/Math) refers to a JavaScript language character that carries out an operation on one or more values. Examples include `+` (adds values), `-` (subtracts one value from another), and `!` (negates a value — as you saw earlier).
 
 ### A user name of null?
 
