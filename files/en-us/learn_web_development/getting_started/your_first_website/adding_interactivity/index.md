@@ -160,8 +160,8 @@ In this code, you stored a reference to your {{htmlelement("img")}} element in t
 - Retrieves the value of the image's `src` attribute.
 - Uses a conditional (`if ... else` structure) to check if the `src` value is equal to the path of the original image:
 
-   - If it is, the code changes the `src` value to the path of the second image, forcing the other image to be loaded inside the `<img>` element.
-   - If it isn't (meaning the image has already been changed), the `src` value swaps back to the original image path.
+  - If it is, the code changes the `src` value to the path of the second image, forcing the other image to be loaded inside the `<img>` element.
+  - If it isn't (meaning the image has already been changed), the `src` value swaps back to the original image path.
 
 > [!NOTE]
 > This section introduces several important terms. Key concepts include:
