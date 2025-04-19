@@ -128,7 +128,7 @@ Each 3D element with z>0 becomes larger; each 3D-element with z<0 becomes smalle
 Large values of `perspective` cause a small transformation;
 small values of `perspective` cause a large transformation.
 
-The parts of the 3D elements that are behind the user — i.e. their z-axis coordinates are greater than the value of the `perspective` CSS property — are not drawn.
+The parts of the 3D elements that are behind the user — i.e., their z-axis coordinates are greater than the value of the `perspective` CSS property — are not drawn.
 
 The _vanishing point_ is by default placed at the center of the element, but its position can be changed using the {{cssxref("perspective-origin")}} property.
 

@@ -12,9 +12,9 @@ browser-compat: javascript.statements.import.import_attributes
 
 The **import attributes** feature instructs the runtime about how a module should be loaded, including the behavior of module resolution, fetching, parsing, and evaluation. It's supported in [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declarations, [`export...from`](/en-US/docs/Web/JavaScript/Reference/Statements/export#re-exporting_aggregating) declarations, and dynamic [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import).
 
-## Syntax
+Attributes can be attached to any kind of `import`/`export from` statement, including default import, namespace import, etc. They follow the module specifier string and start with the `with` keyword. When used with `import()`, the attributes are specified in the `options` parameter as the `with` property.
 
-Attributes can be attached to any kind of `import`/`export from` statement, including default import, namespace import, etc. They follow the module specifier string and are prefixed by the `with` keyword.
+## Syntax
 
 ```js-nolint
 import { names } from "module-name" with {};
@@ -54,7 +54,7 @@ Content-Type: application/json; charset=utf-8
 {"name":"John"}
 ```
 
-Modules are identified and parsed only according to their served [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types) — the file extension in the URL cannot be used to identify a file's type. In this case, the MIME type is `application/json`, which tells the browser that the file is JSON and must be parsed as JSON. If, for some reason (e.g. the server is hijacked or bogus), the MIME type in the server response is set to `text/javascript` (for JavaScript source), then the file would be parsed and executed as code. If the "JSON" file actually contains malicious code, the `import` declaration would unintentionally execute external code, posing a serious security threat.
+Modules are identified and parsed only according to their served [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types) — the file extension in the URL cannot be used to identify a file's type. In this case, the MIME type is `application/json`, which tells the browser that the file is JSON and must be parsed as JSON. If, for some reason (e.g., the server is hijacked or bogus), the MIME type in the server response is set to `text/javascript` (for JavaScript source), then the file would be parsed and executed as code. If the "JSON" file actually contains malicious code, the `import` declaration would unintentionally execute external code, posing a serious security threat.
 
 Import attributes fix this problem by allowing the author to explicitly specify how a module should be validated. For example, the import statement above, which lacks an attribute, would actually fail:
 

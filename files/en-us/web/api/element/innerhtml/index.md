@@ -17,7 +17,7 @@ To insert the HTML into the document rather than replace the contents of an elem
 The serialization of the DOM tree read from the property does not include {{glossary("shadow tree", "shadow roots")}} — if you want to get a HTML string that includes shadow roots, you must instead use the {{domxref("Element.getHTML()")}} or {{domxref("ShadowRoot.getHTML()")}} methods.
 Similarly, when setting element content using `innerHTML`, the HTML string is parsed into DOM elements that do not contain shadow roots.
 
-So for example [`<template>`](/en-US/docs/Web/HTML/Element/template) is parsed into as {{domxref("HTMLTemplateElement")}}, whether or not the [`shadowrootmode`](/en-US/docs/Web/HTML/Element/template#shadowrootmode) attribute is specified
+So for example [`<template>`](/en-US/docs/Web/HTML/Reference/Elements/template) is parsed into as {{domxref("HTMLTemplateElement")}}, whether or not the [`shadowrootmode`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootmode) attribute is specified
 In order to set an element's contents from an HTML string that includes declarative shadow roots, you must use either {{domxref("Element.setHTMLUnsafe()")}} or {{domxref("ShadowRoot.setHTMLUnsafe()")}}.
 
 ## Value
@@ -109,7 +109,7 @@ const list = document.getElementById("list");
 list.innerHTML += `<li><a href="#">Item ${list.children.length + 1}</a></li>`;
 ```
 
-Please note that using `innerHTML` to append HTML elements (e.g. `el.innerHTML += "<a href='…'>link</a>"`) will result in the removal of any previously set event listeners.
+Please note that using `innerHTML` to append HTML elements (e.g., `el.innerHTML += "<a href='…'>link</a>"`) will result in the removal of any previously set event listeners.
 That is, after you append any HTML element that way you won't be able to listen to the previously set event listeners.
 
 ### Security considerations

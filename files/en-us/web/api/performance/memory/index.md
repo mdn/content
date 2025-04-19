@@ -34,11 +34,11 @@ Returns an object with the following properties:
 
 Calling `performance.memory` returns an object like this:
 
-```js
+```json
 {
-  totalJSHeapSize: 39973671,
-  usedJSHeapSize: 39127515,
-  jsHeapSizeLimit: 4294705152
+  "totalJSHeapSize": 39973671,
+  "usedJSHeapSize": 39127515,
+  "jsHeapSizeLimit": 4294705152
 }
 ```
 

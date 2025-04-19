@@ -320,6 +320,7 @@ JSON-ifiable
 jsonifier
 jumpless
 JXON
+KACST
 Kbit
 Kbps
 keysyms
@@ -554,6 +555,7 @@ renderable
 renderbuffers
 reparsed
 replayability
+reportee
 repost
 reposted
 reposts

@@ -2,9 +2,8 @@
 title: CSS layout
 slug: Learn_web_development/Core/CSS_layout
 page-type: learn-module
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core")}}
 
@@ -43,7 +42,7 @@ These tutorials are not part of the learning pathway, but they are interesting n
 - [Multiple-column layout](/en-US/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
   - : The multiple-column layout specification provides you with a method for laying content out in columns, as you might see in a newspaper. This article explains how to use this feature.
 - [Legacy layout methods](/en-US/docs/Learn_web_development/Core/CSS_layout/Legacy_Layout_Methods)
-  - : Grid systems are a very common feature used in CSS layouts, and before CSS grid layout they tended to be implemented using floats or other layout features. You imagine your layout as a set number of columns (e.g. 4, 6, or 12), and then fit your content columns inside these imaginary columns. In this article we'll explore how these older methods work, in order that you understand how they were used if you work on an older project.
+  - : Grid systems are a very common feature used in CSS layouts, and before CSS grid layout they tended to be implemented using floats or other layout features. You imagine your layout as a set number of columns (e.g., 4, 6, or 12), and then fit your content columns inside these imaginary columns. In this article we'll explore how these older methods work, in order that you understand how they were used if you work on an older project.
 - [Supporting older browsers](/en-US/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers)
   - : Visitors to your website may include users who either use older browsers or use browsers that do not support the CSS features you've implemented. This is a common scenario on the web, where new features are continuously being added to CSS. Browsers differ in their support for these features because different browsers tend to prioritize implementing different features. This article explains how you as a web developer can use modern web techniques to ensure that your website remains accessible to users with older technology.
 

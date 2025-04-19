@@ -14,4 +14,4 @@ There are only two script-supporting elements: {{HTMLElement("script")}} and {{H
 
 ## See also
 
-[Script-supporting elements](/en-US/docs/Web/HTML/Content_categories#script-supporting_elements)
+[Script-supporting elements](/en-US/docs/Web/HTML/Guides/Content_categories#script-supporting_elements)

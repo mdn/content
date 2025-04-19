@@ -12,7 +12,7 @@ The **`RTCPeerConnectionStats`** dictionary of the [WebRTC API](/en-US/docs/Web/
 In particular, it provides the number of unique data channels that have been opened, and the number of opened channels that have been closed.
 This allows the current number of open channels to be calculated.
 
-These statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} returned by {{domxref("RTCPeerConnection.getStats()")}} until you find a report with the [`type`](#type) of `peer-connection`.
+These statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} returned by {{domxref("RTCPeerConnection.getStats()")}} until you find a report with the [`type`](/en-US/docs/Web/API/RTCPeerConnectionStats/type) of `peer-connection`.
 
 ## Instance properties
 

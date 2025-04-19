@@ -3,9 +3,8 @@ title: "Challenge: Accessibility troubleshooting"
 short-title: "Challenge: A11y debugging"
 slug: Learn_web_development/Core/Accessibility/Accessibility_troubleshooting
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/Mobile","Learn_web_development/Core/Design_for_developers", "Learn_web_development/Core/Accessibility")}}
 

@@ -8,7 +8,7 @@ browser-compat: api.HTMLTrackElement.default
 
 {{ApiRef("HTML DOM")}}
 
-The **`default`** property of the {{domxref("HTMLTrackElement")}} interface represents whether the track will be enabled if the user's preferences do not indicate that another track would be more appropriate. It reflects the {{htmlelement("track")}} element's boolean [`default`](/en-US/docs/Web/HTML/Element/track#default) attribute, returning `true` if present and `false` otherwise.
+The **`default`** property of the {{domxref("HTMLTrackElement")}} interface represents whether the track will be enabled if the user's preferences do not indicate that another track would be more appropriate. It reflects the {{htmlelement("track")}} element's boolean [`default`](/en-US/docs/Web/HTML/Reference/Elements/track#default) attribute, returning `true` if present and `false` otherwise.
 
 ## Value
 

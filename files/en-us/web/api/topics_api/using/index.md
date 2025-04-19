@@ -28,8 +28,8 @@ If the `<iframe>` content from `ad-tech1.example` implements a [feature that ena
 
 1. Infer **topics of interest** from the site URL. The topics are taken from a [standard taxonomy](/en-US/docs/Web/API/Topics_API#what_topics_are_there); for the above URL examples, they would be "Fitness", "Fibre & textile arts", and "Soccer".
 2. **Mark the topics as observed**, which involves recording a **topics history entry** for each one in a private topics history storage. Each topics history entry includes the following information:
-   - A document id (i.e. an identifier for the current page).
-   - Topics calculation input data (i.e. the page hostname).
+   - A document id (i.e., an identifier for the current page).
+   - Topics calculation input data (i.e., the page hostname).
    - The time (since the Unix epoch) when the page was first observed.
    - The domain(s) where the topic was observed (known as **topic caller domains**).
 
@@ -85,7 +85,7 @@ When the request associated with one of the above features is sent:
 3. An {{httpheader("Observe-Browsing-Topics")}} header should be set on the response to the request — this has the effect of causing the browser to record the current page visit as observed by the calling ad tech provider, so the associated topic(s) will be recorded in a topics history entry, and subsequently be used in [topic selection](#selecting_topics_of_interest_to_influence_ad_choice).
 
    > [!NOTE]
-   > It is important to clarify that this doesn't record the top topics sent in the `Sec-Browsing-Topics` header as observed. It records the topics inferred from the calling site's URL (i.e. the site where the ad tech `<iframe>` is embedded) as observed.
+   > It is important to clarify that this doesn't record the top topics sent in the `Sec-Browsing-Topics` header as observed. It records the topics inferred from the calling site's URL (i.e., the site where the ad tech `<iframe>` is embedded) as observed.
 
 ### The `browsingTopics()` method
 
@@ -171,4 +171,4 @@ You can also test your Topics API code locally without [enrollment](/en-US/docs/
 
 ## See also
 
-- [Topics API](https://developers.google.com/privacy-sandbox/private-advertising/topics) on developers.google.com (2023)
+- [Topics API](https://privacysandbox.google.com/private-advertising/topics) on privacysandbox.google.com (2023)

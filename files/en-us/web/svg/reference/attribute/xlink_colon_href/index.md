@@ -13,7 +13,7 @@ sidebar: svgref
 The **`xlink:href`** attribute defines a reference to a resource as a reference [IRI](/en-US/docs/Web/SVG/Guides/Content_type#iri). The exact meaning of that link depends on the context of each element using it.
 
 > [!NOTE]
-> SVG 2 removed the need for the `xlink` namespace, so instead of `xlink:href` you should use {{SVGAttr("href")}}. If you need to support earlier browser versions, the deprecated `xlink:href` attribute can be used as a fallback in addition to the `href` attribute, e.g. `<use href="some-id" xlink:href="some-id" x="5" y="5" />`.
+> SVG 2 removed the need for the `xlink` namespace, so instead of `xlink:href` you should use {{SVGAttr("href")}}. If you need to support earlier browser versions, the deprecated `xlink:href` attribute can be used as a fallback in addition to the `href` attribute, e.g., `<use href="some-id" xlink:href="some-id" x="5" y="5" />`.
 
 You can use this attribute with the following SVG elements:
 
@@ -21,11 +21,8 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("animate")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
-- {{SVGElement("cursor")}}
 - {{SVGElement("feImage")}}
 - {{SVGElement("filter")}}
-- {{SVGElement("font-face-uri")}}
-- {{SVGElement("glyphRef")}}
 - {{SVGElement("image")}}
 - {{SVGElement("linearGradient")}}
 - {{SVGElement("mpath")}}
@@ -34,7 +31,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("script")}}
 - {{SVGElement("set")}}
 - {{SVGElement("textPath")}}
-- {{SVGElement("tref")}}
 - {{SVGElement("use")}}
 
 ## Example
@@ -115,33 +111,6 @@ Refer to the descriptions of the individual animation elements for any restricti
   </tbody>
 </table>
 
-## cursor
-
-For {{SVGElement("cursor")}}, `xlink:href` defines the reference to the file or element which provides the image of the cursor.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#funciri"
-            >&#x3C;FuncIRI></a
-          ></code
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><em>None</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
-
 ## feImage
 
 For {{SVGElement("feImage")}}, `xlink:href` defines the reference to the image source.
@@ -188,56 +157,6 @@ For {{SVGElement("filter")}}, `xlink:href` defines the reference to another `<fi
     <tr>
       <th scope="row">Animatable</th>
       <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
-
-## font-face-uri
-
-For {{SVGElement("font-face-uri")}}, `xlink:href` defines the location of the referenced font.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><em>None</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>No</td>
-    </tr>
-  </tbody>
-</table>
-
-## glyphRef
-
-For {{SVGElement("glyphRef")}}, `xlink:href` defines to a {{SVGElement("glyph")}} element in an SVG document fragment. The referenced `<glyph>` is rendered as an alternate glyph.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><em>None</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -420,31 +339,6 @@ For {{SVGElement("textPath")}}, `xlink:href` defines a reference to the {{SVGEle
 ## use
 
 For {{SVGElement("use")}}, `xlink:href` defines the location of the referenced object.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><em>None</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
-
-## tref
-
-For {{SVGElement("tref")}}, `xlink:href` defines a reference to an element whose character data content shall be used as character data for this `<tref>` element.
 
 <table class="properties">
   <tbody>

@@ -2,9 +2,8 @@
 title: Update Book form
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Update_Book_form
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 This final subarticle shows how to define a page to update `Book` objects. Form handling when updating a book is much like that for creating a book, except that you must populate the form in the `GET` route with values from the database.
 

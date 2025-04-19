@@ -113,7 +113,7 @@ Providing more than one way to navigate your site can help people find informati
 
 ### Ability to bypass blocks of content
 
-Providing a mechanism, such as a [skip link](/en-US/docs/Web/HTML/Element/a#skip_links), to bypass blocks of content that are repeated on multiple web pages.
+Providing a mechanism, such as a [skip link](/en-US/docs/Web/HTML/Reference/Elements/a#skip_links), to bypass blocks of content that are repeated on multiple web pages.
 
 ### Focus order makes sense
 
@@ -145,7 +145,7 @@ For these users, the ability to read and understand may depend on the availabili
 
 ### Declare the language of the page and any content not in that main language
 
-The language of every page must be declared by using the [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attribute on the {{HTMLElement('html')}} element. Include the `lang` attribute again on text that is in a language other than the main language of the document.
+The language of every page must be declared by using the [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute on the {{HTMLElement('html')}} element. Include the `lang` attribute again on text that is in a language other than the main language of the document.
 
 Proper use of `lang` allows some screen readers to announce the text properly when converting it into synthetic speech. It also helps people who use text-to-speech software.
 
@@ -162,7 +162,7 @@ Abbreviations can be confusing for people who:
 - Have difficulty using context to aid understanding.
 - Rely on screen magnifiers (which often reduce contextual cues).
 
-Provide an expanded form of the abbreviation the first time it is used, followed by the abbreviation placed within an {{HTMLElement('abbr')}} element. If an abbreviation has no expanded form, or is an abbreviation for a word that is not in the document's main language (such as Latin), explain its meaning. Also, consider using [ruby text](/en-US/docs/Web/HTML/Element/ruby) for initialism (pronunciation of acronyms).
+Provide an expanded form of the abbreviation the first time it is used, followed by the abbreviation placed within an {{HTMLElement('abbr')}} element. If an abbreviation has no expanded form, or is an abbreviation for a word that is not in the document's main language (such as Latin), explain its meaning. Also, consider using [ruby text](/en-US/docs/Web/HTML/Reference/Elements/ruby) for initialism (pronunciation of acronyms).
 
 ### Reading level
 
@@ -278,4 +278,4 @@ The above are good design practices. They will benefit everyone.
 - [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/), including [cognitive accessibility guidelines](#wcag_guidelines)
 - [The W3C's Cognitive and Learning Disabilities Accessibility Task Force](https://www.w3.org/WAI/GL/task-forces/coga/)
 - [WebAIM Cognitive information](https://webaim.org/articles/cognitive/)
-- [CDC information on disabilities](https://www.cdc.gov/ncbddd/disabilityandhealth/)
+- [CDC information on disabilities](https://www.cdc.gov/disability-and-health/)

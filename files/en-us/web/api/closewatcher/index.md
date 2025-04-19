@@ -59,7 +59,7 @@ In addition, the first close watcher does not necessarily have to be a `CloseWat
 
 ### Processing close requests
 
-In this example, you have your own UI component (a picker) and you want to support both, the platform's default close method (e.g. the <kbd>Esc</kbd> key) and your custom close method (a close button).
+In this example, you have your own UI component (a picker) and you want to support both, the platform's default close method (e.g., the <kbd>Esc</kbd> key) and your custom close method (a close button).
 
 You create a `CloseWatcher` to handle all `close` events.
 

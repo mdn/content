@@ -14,7 +14,6 @@ You can use this attribute with the following SVG elements:
 
 - {{SVGElement("text")}}
 - {{SVGElement("textPath")}}
-- {{SVGElement("tref")}}
 - {{SVGElement("tspan")}}
 
 ## Example
@@ -65,7 +64,7 @@ svg {
 
 ## Interactive example
 
-This example presents text you can resize using an {{HTMLElement("input")}} element of type [`"range"`](/en-US/docs/Web/HTML/Element/input/range).
+This example presents text you can resize using an {{HTMLElement("input")}} element of type [`"range"`](/en-US/docs/Web/HTML/Reference/Elements/input/range).
 
 ### CSS
 

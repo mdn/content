@@ -2,9 +2,8 @@
 title: Getting started with Ember
 slug: Learn_web_development/Core/Frameworks_libraries/Ember_getting_started
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Frameworks_libraries/Ember_structure_componentization", "Learn_web_development/Core/Frameworks_libraries")}}
 

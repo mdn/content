@@ -2,9 +2,8 @@
 title: Design for developers
 slug: Learn_web_development/Core/Design_for_developers
 page-type: learn-module
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Version_control", "Learn_web_development/Core")}}
 
@@ -71,11 +70,11 @@ Learning outcomes:
 
 - Speaking design language, to communicate with designers.
 - Interpreting design brief requirements to produce an implementation.
-- Typical tools designers use to get their message across to developers (e.g. Figma).
+- Typical tools designers use to get their message across to developers (e.g., Figma).
 
 ## See also
 
-- [Learn UI Design Fundamentals](https://scrimba.com/learn/design?via=mdn), Scrimba <sup>Course Partner</sup>
+- [Learn UI Design Fundamentals](https://scrimba.com/intro-to-ui-design-fundamentals-c0q?via=mdn), Scrimba <sup>Course Partner</sup>
 - [The Shape of Design](https://shapeofdesignbook.com/chapters/00-introduction/), Frank Chimero
 - [Designing for the Web](https://designingfortheweb.co.uk/), Mark Boulton
 - [Design for web](https://designforweb.org/), Prisca Schmarsow + other contributors

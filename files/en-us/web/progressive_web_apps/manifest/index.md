@@ -60,7 +60,7 @@ Web app manifests are deployed in your HTML pages using a {{HTMLElement("link")}
 
 The `.webmanifest` extension is specified in the [Media type registration](https://w3c.github.io/manifest/#media-type-registration) section of the specification (the response of the manifest file should return `Content-Type: application/manifest+json`). Browsers generally support manifests with other appropriate extensions like `.json` (`Content-Type: application/json`).
 
-If the manifest requires credentials to fetch, the [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute must be set to `use-credentials`, even if the manifest file is in the same origin as the current page.
+If the manifest requires credentials to fetch, the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) attribute must be set to `use-credentials`, even if the manifest file is in the same origin as the current page.
 
 ```html
 <link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials" />

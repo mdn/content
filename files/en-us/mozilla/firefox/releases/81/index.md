@@ -19,11 +19,11 @@ This article provides information about the changes in Firefox 81 that will affe
 
 ### HTML
 
-- Automatic downloads are now blocked in a sandboxed [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) element ([Firefox bug 1558394](https://bugzil.la/1558394)).
+- Automatic downloads are now blocked in a sandboxed [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe) element ([Firefox bug 1558394](https://bugzil.la/1558394)).
 
 #### Removals
 
-- Support for the non-standard `mozallowfullscreen` attribute has been removed from [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe). Consider using `allow="fullscreen"` instead ([Firefox bug 1657599](https://bugzil.la/1657599)).
+- Support for the non-standard `mozallowfullscreen` attribute has been removed from [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe). Consider using `allow="fullscreen"` instead ([Firefox bug 1657599](https://bugzil.la/1657599)).
 
 ### CSS
 
@@ -51,7 +51,7 @@ _No changes._
 
 #### Workers/Service workers
 
-- Strict MIME type checks are now enforced on worker and shared worker scripts, i.e. scripts targeted by the {{domxref("Worker.Worker()", "Worker()")}} and {{domxref("SharedWorker.SharedWorker()", "SharedWorker()")}} constructors must now be served with `text/javascript` ([Firefox bug 1569123](https://bugzil.la/1569123)).
+- Strict MIME type checks are now enforced on worker and shared worker scripts, i.e., scripts targeted by the {{domxref("Worker.Worker()", "Worker()")}} and {{domxref("SharedWorker.SharedWorker()", "SharedWorker()")}} constructors must now be served with `text/javascript` ([Firefox bug 1569123](https://bugzil.la/1569123)).
 
 ### WebDriver conformance (Marionette)
 

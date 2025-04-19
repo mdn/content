@@ -16,7 +16,7 @@ Optionally, you can specify the direction in which selection should be considere
 
 This method updates the {{domxref("HTMLInputElement.selectionStart")}}, {{domxref("HTMLInputElement.selectionEnd")}}, and {{domxref("HTMLInputElement.selectionDirection")}} properties in one call.
 
-The element must be of one of the following input types: [`password`](/en-US/docs/Web/HTML/Element/input/password), [`search`](/en-US/docs/Web/HTML/Element/input/search), [`tel`](/en-US/docs/Web/HTML/Element/input/tel), [`text`](/en-US/docs/Web/HTML/Element/input/text), or [`url`](/en-US/docs/Web/HTML/Element/input/url). Otherwise the browser throws an `InvalidStateError` exception.
+The element must be of one of the following input types: [`password`](/en-US/docs/Web/HTML/Reference/Elements/input/password), [`search`](/en-US/docs/Web/HTML/Reference/Elements/input/search), [`tel`](/en-US/docs/Web/HTML/Reference/Elements/input/tel), [`text`](/en-US/docs/Web/HTML/Reference/Elements/input/text), or [`url`](/en-US/docs/Web/HTML/Reference/Elements/input/url). Otherwise the browser throws an `InvalidStateError` exception.
 
 If you wish to select **all** text of an input element, you can use the [HTMLInputElement.select()](/en-US/docs/Web/API/HTMLInputElement/select) method instead.
 
@@ -54,7 +54,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the element is not one of the following input types: [`password`](/en-US/docs/Web/HTML/Element/input/password), [`search`](/en-US/docs/Web/HTML/Element/input/search), [`tel`](/en-US/docs/Web/HTML/Element/input/tel), [`text`](/en-US/docs/Web/HTML/Element/input/text), or [`url`](/en-US/docs/Web/HTML/Element/input/url).
+  - : Thrown if the element is not one of the following input types: [`password`](/en-US/docs/Web/HTML/Reference/Elements/input/password), [`search`](/en-US/docs/Web/HTML/Reference/Elements/input/search), [`tel`](/en-US/docs/Web/HTML/Reference/Elements/input/tel), [`text`](/en-US/docs/Web/HTML/Reference/Elements/input/text), or [`url`](/en-US/docs/Web/HTML/Reference/Elements/input/url).
 
 ## Examples
 

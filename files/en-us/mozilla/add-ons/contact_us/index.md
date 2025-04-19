@@ -12,10 +12,6 @@ Use the links below to get help, to keep up to date with add-ons news, and to gi
 
 Use the [Add-ons Discourse forum](https://discourse.mozilla.org/c/add-ons/35) to discuss all aspects of add-on development and to request help.
 
-### Mailing lists
-
-The **dev-addons mailing list** was retired on December 1, 2020. You can view the [dev-addons archives](https://mail.mozilla.org/pipermail/dev-addons/) to see past discussions about the WebExtensions API and addons.mozilla.org.
-
 ### Chat
 
 [Matrix](https://matrix.org/) is an open, lightweight protocol for decentralized, real-time communications. For information on how to join Mozilla's Matrix instance, refer to the [Matrix page on MozillaWiki](https://wiki.mozilla.org/Matrix).

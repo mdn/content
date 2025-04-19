@@ -97,17 +97,19 @@ jobs:
         if: steps.check.outputs.HAS_ARTIFACT
         env:
           BUILD_OUT_ROOT: ${{ github.workspace }}/build
+          PREFIX: ${{ steps.check.outputs.PREFIX }}
+          PR_NUMBER: ${{ steps.check.outputs.PR_NUMBER }}
         working-directory: content
         run: |
           echo "Pull request:"
-          echo "https://github.com/mdn/content/pull/${{ steps.check.outputs.PR_NUMBER }}"
+          echo "https://github.com/mdn/content/pull/$PR_NUMBER"
 
           node scripts/analyze-pr-build.js \
-            --prefix="${{ steps.check.outputs.PREFIX }}" \
+            --prefix="$PREFIX" \
             --analyze-flaws \
             --analyze-dangerous-content \
             --github-token="${{ secrets.GITHUB_TOKEN }}" \
             --repo=$GITHUB_REPOSITORY \
-            --pr-number="${{ steps.check.outputs.PR_NUMBER }}" \
+            --pr-number="$PR_NUMBER" \
             --diff-file=$BUILD_OUT_ROOT/DIFF \
             $BUILD_OUT_ROOT

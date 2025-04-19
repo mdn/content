@@ -2,9 +2,9 @@
 title: TypeScript support in Svelte
 slug: Learn_web_development/Core/Frameworks_libraries/Svelte_TypeScript
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_stores","Learn_web_development/Core/Frameworks_libraries/Svelte_deployment_next", "Learn_web_development/Core/Frameworks_libraries")}}
 
 In the last article we learned about Svelte stores and even implemented our own custom store to persist the app's information to Web Storage. We also had a look at using the transition directive to implement animations on DOM elements in Svelte.
@@ -345,14 +345,19 @@ Let's start with our `Alert.svelte` component.
 2. You can fix these by specifying the corresponding types, like so:
 
    ```ts
-   export let ms = 3000
+   export let ms = 3000;
 
-     let visible: boolean
-     let timeout: number
+   let visible: boolean;
+   let timeout: number;
 
-     const onMessageChange = (message: string, ms: number) => {
-       clearTimeout(timeout)
-       if (!message) {               // hide Alert if message is empty
+   const onMessageChange = (message: string, ms: number) => {
+     clearTimeout(timeout);
+     if (!message) {
+       // hide Alert if message is empty
+       // …
+     }
+     // …
+   };
    ```
 
    > [!NOTE]
@@ -934,7 +939,9 @@ export const alert = writable<string>("Welcome to the To-Do list app!");
 Now we'll make our `localStore` store support generics. Remember that we defined the `JsonValue` type to prevent the usage of our `localStore` store with values that cannot be persisted using `JSON.stringify()`. Now we want the consumers of `localStore` to be able to specify the type of data to persist, but instead of working with any type, they should comply with the `JsonValue` type. We'll specify that with a Generic constraint, like this:
 
 ```ts
-export const localStore = <T extends JsonValue>(key: string, initial: T)
+export const localStore = <T extends JsonValue>(key: string, initial: T) => {
+  // …
+};
 ```
 
 We define a generic type `T` and specify that it must be compatible with the `JsonValue` type. Then we'll use the `T` type appropriately.

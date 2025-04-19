@@ -558,7 +558,7 @@ While Ogg has been around for a long time, it has never gained the wide support 
 You are typically better off using WebM, though there are times when Ogg is useful to offer, such as when you wish to support older versions of Firefox and Chrome which don't yet support WebM.
 For example, Firefox 3.5 and 3.6 support Ogg, but not WebM.
 
-You can get more information about Ogg and its codecs in the [Theora Cookbook](https://en.flossmanuals.net/ogg-theora/_full/).
+You can get more information about Ogg and its codecs in the [Theora Cookbook](https://archive.flossmanuals.net/ogg-theora/).
 
 | Audio       | Video       |
 | ----------- | ----------- |
@@ -1147,7 +1147,7 @@ To optimize compatibility, it's worth considering providing more than one versio
 For example, you can offer an Ogg or WebM video as the first choice, with a fallback in MP4 format.
 You could even choose to offer a retro-like QuickTime or AVI fallback for good measure.
 
-To do this, you create a `<video>` (or `<audio>`) element with no [`src`](/en-US/docs/Web/HTML/Element/video#src) attribute.
+To do this, you create a `<video>` (or `<audio>`) element with no [`src`](/en-US/docs/Web/HTML/Reference/Elements/video#src) attribute.
 Then add child {{HTMLElement("source")}} elements within the `<video>` element, one for each version of the video you offer.
 This can be used to offer various versions of a video that can be selected depending on bandwidth availability, but in our case, we'll use it to offer format options.
 
@@ -1167,7 +1167,7 @@ In the example shown here, a video is offered to the browser in two formats: Web
 </video>
 ```
 
-The video is offered first in WebM format (with the [`type`](/en-US/docs/Web/HTML/Element/source#type) attribute set to `video/webm`).
+The video is offered first in WebM format (with the [`type`](/en-US/docs/Web/HTML/Reference/Elements/source#type) attribute set to `video/webm`).
 If the {{Glossary("user agent")}} can't play that, it moves on to the next option, whose `type` is specified as `video/mp4`.
 If neither of those can be played, the text "This browser does not support the HTML video element." is presented.
 

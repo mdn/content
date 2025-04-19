@@ -2,9 +2,10 @@
 title: Styling Vue components with CSS
 slug: Learn_web_development/Core/Frameworks_libraries/Vue_styling
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_methods_events_models","Learn_web_development/Core/Frameworks_libraries/Vue_computed_properties", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_methods_events_models","Learn_web_development/Core/Frameworks_libraries/Vue_computed_properties", "Learn_web_development/Core/Frameworks_libraries")}}
 
 The time has finally come to make our app look a bit nicer. In this article we'll explore the different ways of styling Vue components with CSS.
 

@@ -49,38 +49,38 @@ A {{jsxref("Promise")}} that resolves to an object containing the following prop
 
 An example return value looks like this:
 
-```js
+```json
 {
-  bytes: 1500000,
-  breakdown: [
+  "bytes": 1500000,
+  "breakdown": [
     {
-      bytes: 1000000,
-      attribution: [
+      "bytes": 1000000,
+      "attribution": [
         {
-          url: "https://example.com",
-          scope: "Window",
+          "url": "https://example.com",
+          "scope": "Window",
         },
       ],
-      types: ["DOM", "JS"],
+      "types": ["DOM", "JS"],
     },
     {
-      bytes: 0,
-      attribution: [],
-      types: [],
+      "bytes": 0,
+      "attribution": [],
+      "types": [],
     },
     {
-      bytes: 500000,
-      attribution: [
+      "bytes": 500000,
+      "attribution": [
         {
-          url: "https://example.com/iframe.html"
-          container: {
-            id: "example-id",
-            src: "redirect.html?target=iframe.html",
+          "url": "https://example.com/iframe.html"
+          "container": {
+            "id": "example-id",
+            "src": "redirect.html?target=iframe.html",
           },
-          scope: "Window",
+          "scope": "Window",
         }
       ],
-      types: ["JS", "DOM"],
+      "types": ["JS", "DOM"],
     },
   ],
 }

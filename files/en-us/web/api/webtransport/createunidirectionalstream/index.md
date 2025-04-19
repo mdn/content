@@ -84,8 +84,8 @@ const writer = stream.getWriter();
 
 // ...
 
-writer.write(...);
-writer.write(...);
+writer.write(data1);
+writer.write(data2);
 await writer.abort();
 // Not all the data may have been written.
 ```

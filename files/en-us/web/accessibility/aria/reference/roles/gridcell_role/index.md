@@ -66,7 +66,7 @@ This sample code demonstrates a table-style grouping of information where the th
 
 ### Describing the position of gridcells when the overall structure is unknown
 
-In situations where the table-style grouping of content does not provide information about the columns and rows, gridcells must have their positions programmatically described by using [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby). The [`id`](/en-US/docs/Web/HTML/Global_attributes/id)s provided for `aria-describedby` should correspond to parent elements intended to be the rows and columns.
+In situations where the table-style grouping of content does not provide information about the columns and rows, gridcells must have their positions programmatically described by using [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby). The [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id)s provided for `aria-describedby` should correspond to parent elements intended to be the rows and columns.
 
 By referencing the parent elements with roles of [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role) or [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role) applied to them via `aria-describedby`, it allows assistive technology to understand the position and relationship of the `gridcell` element to the rest of the table-style grouping of content.
 
@@ -74,7 +74,7 @@ By referencing the parent elements with roles of [`rowheader`](/en-US/docs/Web/A
 
 #### Editable cells
 
-Both `<td>` elements and elements with a role of `gridcell` applied to them can be made editable, mimicking functionality similar to editing a spreadsheet. This is done by applying the HTML [`contenteditable` attribute](/en-US/docs/Web/HTML/Global_attributes/contenteditable).
+Both `<td>` elements and elements with a role of `gridcell` applied to them can be made editable, mimicking functionality similar to editing a spreadsheet. This is done by applying the HTML [`contenteditable` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable).
 
 ```html
 <td contenteditable="true">Notes</td>
@@ -142,26 +142,19 @@ The following example creates a table-style grouping of information:
 
 ## Accessibility concerns
 
-Support for `gridcell` and certain `gridcell` related ARIA roles and properties have poor support with assistive technologies. If at all possible, use [HTML table markup](/en-US/docs/Web/HTML/Element/table) in their place.
+Support for `gridcell` and certain `gridcell` related ARIA roles and properties have poor support with assistive technologies. If at all possible, use [HTML table markup](/en-US/docs/Web/HTML/Reference/Elements/table) in their place.
 
 ## Best practices
 
-The first rule of ARIA is: if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding an ARIA role, state or property to make it accessible. As such, it is recommended to use [native HTML table markup](/en-US/docs/Web/HTML/Element/table) instead of recreating a table's form and functionality with ARIA and JavaScript.
+The first rule of ARIA is: if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding an ARIA role, state or property to make it accessible. As such, it is recommended to use [native HTML table markup](/en-US/docs/Web/HTML/Reference/Elements/table) instead of recreating a table's form and functionality with ARIA and JavaScript.
 
 ## See also
 
-- [The Table element](/en-US/docs/Web/HTML/Element/table)
+- [The Table element](/en-US/docs/Web/HTML/Reference/Elements/table)
 - [ARIA: Grid role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role)
-- [Grid Role - Maxability](https://www.maxability.co.in/wai-aria-overview/grid-role/)
-- [The Table row element](/en-US/docs/Web/HTML/Element/tr)
+- [The Table row element](/en-US/docs/Web/HTML/Reference/Elements/tr)
 - [ARIA: row role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
-- [Row Role - Maxability](https://www.maxability.co.in/wai-aria-overview/row-role/)
-- [aria-rowcount - Maxability](https://www.maxability.co.in/2018/09/07/aria-rowcount-property/)
 - [ARIA: rowgroup role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role)
-- [Rowgroup Role - Maxability](https://www.maxability.co.in/wai-aria-overview/rowgroup-role/)
-- [The Table header element](/en-US/docs/Web/HTML/Element/th)
-- [Columnheader - Maxability](https://www.maxability.co.in/wai-aria-overview/columnheader-role/)
-- [aria-colcount - Maxability](https://www.maxability.co.in/2017/07/26/aria-colcount-property/)
-- [The Table Data Cell element](/en-US/docs/Web/HTML/Element/td)
+- [The Table header element](/en-US/docs/Web/HTML/Reference/Elements/th)
+- [The Table Data Cell element](/en-US/docs/Web/HTML/Reference/Elements/td)
 - [gridcell: Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria-1.1/#gridcell)
-- [Gridcell Role - Maxability](https://www.maxability.co.in/wai-aria-overview/gridcell-role/)

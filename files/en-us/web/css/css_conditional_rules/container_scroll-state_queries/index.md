@@ -6,7 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-**Container scroll-state queries** are a type of [container query](/en-US/docs/Web/CSS/@container). Rather than selectively applying styles to descendant elements based on the container's size, scroll-state queries allow you to selectively apply styles to descendent elements based on the container's scroll state. This can include whether the container is partially scrolled, snapped to a [scroll snap container](/en-US/docs/Glossary/Scroll_snap#scroll_snap_container) ancestor, or positioned via [`position: sticky`](/en-US/docs/Web/CSS/position) and stuck to a boundary of a {{glossary("scroll container")}} ancestor.
+**Container scroll-state queries** are a type of [container query](/en-US/docs/Web/CSS/@container). Rather than selectively applying styles to descendant elements based on the container's size, scroll-state queries allow you to selectively apply styles to descendant elements based on the container's scroll state. This can include whether the container is partially scrolled, snapped to a [scroll snap container](/en-US/docs/Glossary/Scroll_snap#scroll_snap_container) ancestor, or positioned via [`position: sticky`](/en-US/docs/Web/CSS/position) and stuck to a boundary of a {{glossary("scroll container")}} ancestor.
 
 This article explains how to use container scroll-state queries, walking through an example of each type. It assumes that you know the basics of container queries. If you are new to container queries, read [CSS container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries) before continuing.
 
@@ -58,7 +58,7 @@ Let's look at an example in which we have a scrolling container full of content,
 
 ### HTML
 
-In the HTML we have an {{htmlelement("article")}} element containing enough content to cause the document to scroll, preceded by a [back-to-top link](/en-US/docs/Web/HTML/Element/a#result_8):
+In the HTML we have an {{htmlelement("article")}} element containing enough content to cause the document to scroll, preceded by a [back-to-top link](/en-US/docs/Web/HTML/Reference/Elements/a#result_8):
 
 ```html
 <a class="back-to-top" href="#" aria-label="Top of page">↑</a>
@@ -346,7 +346,7 @@ In this example, we'll look at a scroll snap container with children that snap t
 
 ### HTML
 
-The HTML consists of a {{htmlelement("main")}} element that will be a scroll snap container. Inside are several {{htmlelement("section")}} elements that will be snap targets. Each `<section>` contains a wrapper {{htmlelement("div")}} and an `<h2>` [heading](/en-US/docs/Web/HTML/Element/Heading_Elements). The wrappers are included to create a style target as container queries enable styling a container's descendants, not the container itself.
+The HTML consists of a {{htmlelement("main")}} element that will be a scroll snap container. Inside are several {{htmlelement("section")}} elements that will be snap targets. Each `<section>` contains a wrapper {{htmlelement("div")}} and an `<h2>` [heading](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements). The wrappers are included to create a style target as container queries enable styling a container's descendants, not the container itself.
 
 ```html
 <main>
