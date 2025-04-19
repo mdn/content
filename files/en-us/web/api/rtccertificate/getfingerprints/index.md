@@ -41,22 +41,32 @@ Each fingerprint is represented by an object with the following properties:
 
 This example shows how you might get certificate fingerprints and compare them to fingerprints from a server.
 
-First we create a connection and get the fingerprints.
+First we create a connection and get certificates and their fingerprints.
 We also get the fingerprints from the server using "some mechanism".
 
 ```js
-const rtcPeerConnection = new RTCPeerConnection();
 
 // Get the certificate fingerprints from the client.
-const fingerprintsFromClient = rtcPeerConnection.certificate.getFingerprints();
+const rtcPeerConnection = new RTCPeerConnection();
+const configuration = rtcPeerConnection.getConfiguration();
+const certificates = configuration.certificates;
+let fingerprintsFromClient;
 
-// Get the certificate fingerprints from the server (pseudo code)
+if (certificates && certificates.length > 0) {
+  certificates.forEach((cert) => {
+    // For purpose of demonstration, just get first certificate
+    fingerprintsFromClient = cert.getFingerprints();
+    break;
+  });
+}
+
+// Get the certificate fingerprints from the server for particular certificate (pseudo code)
 const fingerprintsFromServer = [
   /* … */
 ];
 ```
 
-There are numerous ways to compare the fingerprint arrays.
+There are numerous ways to compare the fingerprint arrays for a particular certificate.
 Here we convert the arrays to dictionary objects where the algorithm name is the property and then compare them.
 This works because only one fingerprint value can exist for each algorithm.
 (There are many other ways to sort and compare the two arrays).
