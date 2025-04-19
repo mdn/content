@@ -30,7 +30,7 @@ This is the simplest case we'll look at, whereby you get emscripten to generate 
 
 1. First we need an example to compile. Take a copy of the following simple C example, and save it in a file called `hello.c` in a new directory on your local drive:
 
-   ```cpp
+   ```c
    #include <stdio.h>
 
    int main() {
@@ -71,7 +71,7 @@ Sometimes you will want to use a custom HTML template. Let's look at how we can 
 
 1. First of all, save the following C code in a file called `hello2.c`, in a new directory:
 
-   ```cpp
+   ```c
    #include <stdio.h>
 
    int main() {
@@ -106,7 +106,7 @@ If you want to call a function defined in your C code from JavaScript, you can u
 
 1. To start with, save the following code as `hello3.c` in a new directory:
 
-   ```cpp
+   ```c
    #include <stdio.h>
    #include <emscripten/emscripten.h>
 

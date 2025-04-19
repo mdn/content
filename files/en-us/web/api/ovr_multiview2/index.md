@@ -85,7 +85,7 @@ gl.drawElements(/* … */); // draw will be broadcasted to the layers of colorTe
 
 Shader code
 
-```cpp
+```glsl
 #version 300 es
 #extension GL_OVR_multiview2 : require
 precision mediump float;

@@ -45,7 +45,7 @@ session.switch_to.window(original_window)
 
 C#:
 
-```cpp
+```cs
 using OpenQA.Selenium.Firefox;
 
 namespace MDNWebDriverExamples

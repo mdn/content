@@ -248,11 +248,11 @@ By combining a single buffer with multiple views of different types, starting at
 
 Consider this C structure:
 
-```cpp
+```c
 struct someStruct {
-  unsigned long id;
-  char username[16];
-  float amountDue;
+    unsigned long id;
+    char username[16];
+    float amountDue;
 };
 ```
 

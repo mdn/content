@@ -26,7 +26,7 @@ This extension exposes one new constant, which can be used in the {{domxref("Web
 
 The following new functions can be used in GLSL shader code, if this extension is enabled:
 
-```cpp
+```c
 genType dFdx(genType p)
 genType dFdy(genType p)
 genType fwidth(genType p)

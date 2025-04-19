@@ -46,8 +46,7 @@ gl.vertexAttribPointer(vColor, 4, gl.FLOAT, false, 0, 0);
 gl.enableVertexAttribArray(vColor);
 ```
 
-```cpp
-//glsl
+```glsl
 attribute  vec4 vColor;
 
 void main()
