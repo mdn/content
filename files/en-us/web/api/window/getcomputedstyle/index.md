@@ -13,7 +13,7 @@ The
 containing the values of all CSS properties of an element, after applying active
 stylesheets and resolving any basic computation those values may contain.
 
-Individual CSS property values are accessed through APIs provided by the returned {{DOMxRef("CSSStyleDeclaration")}} object, or by indexing with CSS property names. The values returned by `getComputedStyle` are [resolved values](/en-US/docs/Web/CSS/Value_processing#resolved_value). See the linked article for more information.
+Individual CSS property values are accessed through APIs provided by the returned {{DOMxRef("CSSStyleDeclaration")}} object, or by indexing with CSS property names. The values returned by `getComputedStyle` are [resolved values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#resolved_value).
 
 ## Syntax
 
@@ -25,7 +25,7 @@ getComputedStyle(element, pseudoElt)
 ### Parameters
 
 - `element`
-  - : The {{DOMxRef("Element")}} for which to get the computed style. Non-elements, like a {{DOMxRef("Text")}} node, will throw an error.
+  - : The {{DOMxRef("Element")}} for which to get the computed style.
 - `pseudoElt` {{optional_inline}}
   - : A string specifying the pseudo-element to match. Omitted (or `null`) for
     real elements.
