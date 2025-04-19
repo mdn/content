@@ -1,5 +1,5 @@
 ---
-title: HTMLLinkElement:imageSizes property
+title: "HTMLLinkElement: imageSizes property"
 short-title: imageSizes
 slug: Web/API/HTMLLinkElement/imageSizes
 page-type: web-api-instance-property

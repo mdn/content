@@ -81,6 +81,11 @@ Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-
 - The `contextualIdentities` permission is now not recognized on Firefox for Android. Previously, it enabled a broken version of the "containers" feature. ([Firefox bug 1659500](https://bugzil.la/1659500))
 - The new Manifest V3 version of the {{WebExtAPIRef("userScripts")}} API is now available on Firefox for Android. ([Firefox bug 1949955](https://bugzil.la/1949955))
 - The {{WebExtAPIRef("alarms.create")}} API now returns a Promise instead of undefined. ([Firefox bug 1869171](https://bugzil.la/1869171))
+- Support added to enable the manipulation of tabs within tab groups, including the addition of:
+  - {{WebExtAPIRef("tabs.group()")}} and {{WebExtAPIRef("tabs.ungroup()")}}. ([Firefox bug 1959714](https://bugzil.la/1959714))
+  - `groupId` to {{WebExtAPIRef("tabs.Tab")}}. ([Firefox bug 1959713](https://bugzil.la/1959713))
+  - `groupId` to {{WebExtAPIRef("tabs.query")}}. ([Firefox bug 1959715](https://bugzil.la/1959715))
+  - `groupId` to {{WebExtAPIRef("tabs.onUpdated")}}. ([Firefox bug 1959716](https://bugzil.la/1959716)
 
 ### Removals
 

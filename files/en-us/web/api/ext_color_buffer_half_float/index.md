@@ -32,7 +32,7 @@ WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExt
 
 This extension extends {{domxref("WebGLRenderingContext.renderbufferStorage()")}}:
 
-- The `internalformat` parameter now accepts `ext.RGBA16F_EXT` and `ext.RGBA16F_EXT`.
+- The `internalformat` parameter now accepts `ext.RGBA16F_EXT` and `ext.RGB16F_EXT`.
 
 ## Examples
 
