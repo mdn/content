@@ -499,3 +499,5 @@ svg text.em {
 {{EmbedLiveSample("Comparison_of_HTML_and_SVG", "100%", "800px")}}
 
 ## See also
+
+- [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
