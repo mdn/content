@@ -22,7 +22,14 @@ A string which contains a number.
 In this example the value of `ariaValueMax` is set to "20".
 
 ```js
-this.internals_.ariaValueMax = "20";
+class CustomControl extends HTMLElement {
+  constructor() {
+    super();
+    this.internals_ = this.attachInternals();
+    this.internals_.ariaValueMax = "20";
+  }
+  // …
+}
 ```
 
 ## Specifications

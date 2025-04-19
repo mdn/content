@@ -21,7 +21,14 @@ A string.
 In this example the value of `ariaRowIndexText` is set to "Heading row".
 
 ```js
-this.internals_.ariaRowIndexText = "Heading row";
+class CustomEl extends HTMLElement {
+  constructor() {
+    super();
+    this.internals_ = this.attachInternals();
+    this.internals_.ariaRowIndexText = "Heading row";
+  }
+  // …
+}
 ```
 
 ## Specifications

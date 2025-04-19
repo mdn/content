@@ -22,7 +22,14 @@ A string.
 In this example the value of `ariaRoleDescription` is set to "My custom widget".
 
 ```js
-this.internals_.ariaRoleDescription = "My custom widget";
+class CustomEl extends HTMLElement {
+  constructor() {
+    super();
+    this.internals_ = this.attachInternals();
+    this.internals_.ariaRoleDescription = "My custom widget";
+  }
+  // …
+}
 ```
 
 ## Specifications

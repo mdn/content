@@ -37,7 +37,14 @@ A string with one of the following values:
 In this example the value of `ariaCurrent` is set to "page".
 
 ```js
-this.internals_.ariaCurrent = "page";
+class CustomControl extends HTMLElement {
+  constructor() {
+    super();
+    this.internals_ = this.attachInternals();
+    this.internals_.ariaCurrent = "page";
+  }
+  // …
+}
 ```
 
 ## Specifications

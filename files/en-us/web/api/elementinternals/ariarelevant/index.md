@@ -33,7 +33,14 @@ A string containing one or more of the following values, space separated:
 In this example the value of `ariaRelevant` is set to "all".
 
 ```js
-this.internals_.ariaRelevant = "all";
+class CustomEl extends HTMLElement {
+  constructor() {
+    super();
+    this.internals_ = this.attachInternals();
+    this.internals_.ariaRelevant = "all";
+  }
+  // …
+}
 ```
 
 ## Browser compatibility

@@ -29,7 +29,14 @@ A string with one of the following values:
 In this example the value of `ariaExpanded` is set to "true".
 
 ```js
-this.internals_.ariaExpanded = "true";
+class CustomControl extends HTMLElement {
+  constructor() {
+    super();
+    this.internals_ = this.attachInternals();
+    this.internals_.ariaInvalid = "true";
+  }
+  // …
+}
 ```
 
 ## Specifications

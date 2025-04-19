@@ -27,7 +27,14 @@ A string with one of the following values:
 In this example the value of `ariaMultiLine` is set to "true".
 
 ```js
-this.internals_.ariaMultiLine = "true";
+class CustomControl extends HTMLElement {
+  constructor() {
+    super();
+    this.internals_ = this.attachInternals();
+    this.internals_.ariaMultiLine = "true";
+  }
+  // …
+}
 ```
 
 ## Specifications
