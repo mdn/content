@@ -8,14 +8,9 @@ browser-compat: api.Element.clientWidth
 
 {{APIRef("DOM")}}
 
-The **`Element.clientWidth`** property is zero for inline
-elements and elements with no CSS; otherwise, it's the inner width of an element in
-pixels. It includes padding but excludes borders, margins, and vertical scrollbars (if
-present).
+The **`clientWidth`** read-only property of the {{domxref("Element")}} interface is zero for inline elements and elements with no CSS; otherwise, it's the inner width of an element in pixels. It includes padding but excludes borders, margins, and vertical scrollbars (if present).
 
-When `clientWidth` is used on the root element (the
-`<html>` element), (or on `<body>` if the document is
-in quirks mode), the viewport's width (excluding any scrollbar) is returned.
+When `clientWidth` is used on the root element (the `<html>` element), (or on `<body>` if the document is in quirks mode), the viewport's width (excluding any scrollbar) is returned.
 
 ## Value
 

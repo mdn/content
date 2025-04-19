@@ -8,18 +8,9 @@ browser-compat: api.Element.scrollWidth
 
 {{APIRef("DOM")}}
 
-The **`Element.scrollWidth`** read-only property is a
-measurement of the width of an element's content, including content not visible on the
-screen due to overflow.
+The **`scrollWidth`** read-only property of the {{domxref("Element")}} interface is a measurement of the width of an element's content, including content not visible on the screen due to overflow.
 
-The `scrollWidth` value is equal to the minimum width the element would
-require in order to fit all the content in the viewport without using a horizontal
-scrollbar. The width is measured in the same way as {{domxref("Element.clientWidth", "clientWidth")}}:
-it includes the element's padding, but not its border, margin or
-vertical scrollbar (if present). It can also include the width of pseudo-elements such
-as {{cssxref("::before")}} or {{cssxref("::after")}}. If the element's content can fit
-without a need for horizontal scrollbar, its `scrollWidth` is equal to
-{{domxref("Element.clientWidth", "clientWidth")}}.
+The `scrollWidth` value is equal to the minimum width the element would require in order to fit all the content in the viewport without using a horizontal scrollbar. The width is measured in the same way as {{domxref("Element.clientWidth", "clientWidth")}}: it includes the element's padding, but not its border, margin or vertical scrollbar (if present). It can also include the width of pseudo-elements such as {{cssxref("::before")}} or {{cssxref("::after")}}. If the element's content can fit without a need for horizontal scrollbar, its `scrollWidth` is equal to {{domxref("Element.clientWidth", "clientWidth")}}.
 
 ## Value
 

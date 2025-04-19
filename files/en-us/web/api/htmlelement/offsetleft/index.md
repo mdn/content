@@ -8,11 +8,11 @@ browser-compat: api.HTMLElement.offsetLeft
 
 {{ APIRef("HTML DOM") }}
 
-The **`HTMLElement.offsetLeft`** read-only property returns the number of pixels that the _upper left corner_ of the current element is offset to the left within the {{domxref("HTMLElement.offsetParent")}} node.
+The **`offsetLeft`** read-only property of the {{domxref("HTMLElement")}} interface returns the number of pixels that the _upper left corner_ of the current element is offset to the left within the {{domxref("HTMLElement.offsetParent")}} node.
 
 For block-level elements, `offsetTop`, `offsetLeft`, `offsetWidth`, and `offsetHeight` describe the border box of an element relative to the `offsetParent`.
 
-However, for inline-level elements (such as **span**) that can wrap from one line to the next, `offsetTop` and `offsetLeft` describe the positions of the _first_ border box (use {{domxref("Element.getClientRects()")}} to get its width and height), while `offsetWidth` and `offsetHeight` describe the dimensions of the _bounding_ border box (use {{domxref("Element.getBoundingClientRect()")}} to get its position). Therefore, a box with the left, top, width and height of `offsetLeft`, `offsetTop`, `offsetWidth` and `offsetHeight` will not be a bounding box for a span with wrapped text.
+However, for inline-level elements (such as `<span>`) that can wrap from one line to the next, `offsetTop` and `offsetLeft` describe the positions of the _first_ border box (use {{domxref("Element.getClientRects()")}} to get its width and height), while `offsetWidth` and `offsetHeight` describe the dimensions of the _bounding_ border box (use {{domxref("Element.getBoundingClientRect()")}} to get its position). Therefore, a box with the left, top, width and height of `offsetLeft`, `offsetTop`, `offsetWidth` and `offsetHeight` will not be a bounding box for a span with wrapped text.
 
 ## Value
 
