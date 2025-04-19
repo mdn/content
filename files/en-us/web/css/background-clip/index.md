@@ -26,6 +26,7 @@ background-clip: content-box;
 ```css interactive-example-choice
 background-clip: text;
 color: transparent;
+text-shadow: none;
 ```
 
 ```html interactive-example
@@ -37,7 +38,7 @@ color: transparent;
 ```css interactive-example
 #example-element {
   background-image: url("/shared-assets/images/examples/leopard.jpg");
-  color: #d73611;
+  color: white;
   text-shadow: 2px 2px black;
   padding: 20px;
   border: 10px dashed #333;
