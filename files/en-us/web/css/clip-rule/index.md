@@ -7,7 +7,7 @@ browser-compat: css.properties.clip-rule
 
 {{CSSRef}}
 
-The **`clip-rule`** [CSS](/en-US/docs/Web/CSS) property defines how, when parts of the path overlap other parts, which pixels in a mask's box are inside the clipping shape defined by a [clip path](/en-US/docs/Web/CSS/clip-path) and which are outside.
+The **`clip-rule`** [CSS](/en-US/docs/Web/CSS) property determines, when parts of the path overlap other parts, which pixels in a mask's box are inside the clipping shape defined by a [clip path](/en-US/docs/Web/CSS/clip-path) and which are outside.
 
 The `clip-rule` property only applies to SVG elements that are contained within a {{SVGElement("clipPath")}} element, overriding the element's {{SVGAttr("clip-rule")}} attribute value if present. The `clip-rule` property basically works as the {{cssxref("fill-rule")}} property, except that it applies to `<clipPath>` definitions. It does not have any effect on CSS {{cssxref("basic-shape")}}s.
 
@@ -48,7 +48,7 @@ In this example, we will apply different CSS `clip-rule` values to similar SVG {
 
 #### HTML
 
-The stars are created with overlapping lines. Other than the `id`, the markup of the two first SVG elements are identical. The third SVG includes just the `<path>` element, showing the way the lines of the path that created the star overlaps.
+The markup has multiple `<svg>` containers, each containing a `<clipPath>` element that defines a star shape, and a `<rect>` element to draw the star inside. The stars are created with overlapping lines. Other than the `id`, the markup of the first two SVG elements is identical. The third SVG includes just the `<path>` element, showing how the lines of the path that created the star overlap.
 
 ```html
 <svg>
@@ -72,7 +72,7 @@ The stars are created with overlapping lines. Other than the `id`, the markup of
 
 #### CSS
 
-The `clip-rule` for the `<path>` in the first SVG is set to `evenodd`. The second to `nonzero`. For the path-only SVG, we removed the default {{cssxref("fill")}} and defined both a {{cssxref("stroke")}} color and {{cssxref("stroke-width")}} making the overlapping path lines visible:
+The `clip-rule` for the `<path>` in the first SVG is set to `evenodd`; `nonzero` in the second SVG. For the path-only SVG, we removed the default {{cssxref("fill")}} and defined both a {{cssxref("stroke")}} color and {{cssxref("stroke-width")}} to make the overlapping path lines visible:
 
 ```css hidden
 body {
@@ -107,11 +107,11 @@ svg {
 
 ### Within basic shape definitions
 
-This example demonstrates that, while the `clip-rule` does not have any effect on CSS {{cssxref("basic-shape")}}s, it can have an effect on the `<clipPath>` used as the source of the shape.
+This example demonstrates that, while the `clip-rule` does not have any effect on CSS {{cssxref("basic-shape")}}s, it can affect a `<clipPath>` used as the source of a shape.
 
 #### HTML
 
-We include an SVG with two `<clipPath>` elements that are identical other than their `id` attribute values. We also include two `<div>` elements that contain our star effects.
+We include an SVG with two `<clipPath>` elements that define star shapes, which are identical except for their `id` attribute values. We also include two `<div>` elements that will contain our star shapes.
 
 ```html
 <svg height="0" width="0">
@@ -131,7 +131,7 @@ We include an SVG with two `<clipPath>` elements that are identical other than t
 
 #### CSS
 
-We provide the `<div>` elements with a set {{cssxref("width")}} and {{cssxref("height")}}, adding a {{cssxref("")}} as their {{cssxref("background-image")}}:
+We provide the `<div>` elements with a set {{cssxref("width")}} and {{cssxref("height")}}, adding a [`conic-gradient()`](/en-US/docs/Web/CSS/gradient/conic-gradient) for their {{cssxref("background-image")}} value:
 
 ```css hidden
 body {
