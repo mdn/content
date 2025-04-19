@@ -127,7 +127,6 @@ Here are the DOM APIs for data types used in the definitions of SVG properties a
 
 ### SMIL-related interfaces
 
-- {{DOMxRef("ElementTimeControl")}}
 - {{DOMxRef("TimeEvent")}}
 
 ### Other SVG interfaces
