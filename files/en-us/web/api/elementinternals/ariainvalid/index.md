@@ -34,16 +34,16 @@ In this example, we define and create a `<custom-text>` element, and then retrie
 class CustomControl extends HTMLElement {
   constructor() {
     super();
-    this.internals_ = this.attachInternals();
-    this.internals_.ariaInvalid = "false";
+    this._internals = this.attachInternals();
+    this._internals.ariaInvalid = "false";
   }
   // …
 }
 
 window.customElements.define("custom-text", CustomControl);
 
-let element = document.querySelector("custom-text");
-console.log(element.internals_.ariaInvalid);
+const element = document.querySelector("custom-text");
+console.log(element._internals.ariaInvalid);
 ```
 
 ## Specifications

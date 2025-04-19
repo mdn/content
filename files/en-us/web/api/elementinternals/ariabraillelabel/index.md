@@ -88,4 +88,3 @@ log(el._internals.ariaBrailleLabel);
 ## See also
 
 - {{domxref("ElementInternals.ariaBrailleRoleDescription")}}
-- {{domxref("ElementInternals.ariaBrailleRole")}}

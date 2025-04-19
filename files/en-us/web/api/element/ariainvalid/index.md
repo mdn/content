@@ -47,13 +47,13 @@ function log(text) {
 ```
 
 ```js
-let el = document.getElementById("quote");
+const el = document.getElementById("quote");
 log(`Initial value: ${el.ariaInvalid}`);
 el.ariaInvalid = "grammar";
 log(`Updated value: ${el.ariaInvalid}`);
 ```
 
-{{EmbedLiveSample('Examples',"","100")}}
+{{EmbedLiveSample("Examples", "", "100")}}
 
 ## Specifications
 
@@ -68,4 +68,4 @@ log(`Updated value: ${el.ariaInvalid}`);
 - {{domxref("Element.ariaRequired")}}
 - [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required)
 - [`aria-errormessage`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage)
-<!-- - {{domxref("Element.ariaErrorMessageElements")}} -->
+- {{domxref("Element.ariaErrorMessageElements")}}
