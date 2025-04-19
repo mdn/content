@@ -251,7 +251,7 @@ div {
 
 {{EmbedLiveSample("shapes3", "", "280")}}
 
-The visibility, or at least partial visibility, of the four border sides in the clip path example defined by the `shape()` function exists because the percentage values have allowed the path to grow with the element. In the `path()` version, the element grew but not the shape. As a result, the top and left borders are partially visible while the right and bottom borders are clipped out.
+The visibility, or at least partial visibility, of the four border sides in the clip path example defined by the `shape()` function is due to the percentage values allowing the path to grow with the element. In the `path()` version, the element grew, but not the shape. As a result, the top and left borders are partially visible while the right and bottom borders are clipped out.
 
 ### SVG as clip source
 
