@@ -13,7 +13,7 @@ The **`HTMLHeadElement`** interface contains the descriptive information, or met
 
 ## Instance properties
 
-_Inherits properties from its parent, {{domxref("HTMLElement")}}._
+_No specific properties; inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 ## Instance methods
 

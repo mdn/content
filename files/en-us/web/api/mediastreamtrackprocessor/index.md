@@ -18,6 +18,8 @@ The **`MediaStreamTrackProcessor`** interface of the [Insertable Streams for Med
 
 - {{domxref("MediaStreamTrackProcessor.MediaStreamTrackProcessor", "MediaStreamTrackProcessor()")}} {{Experimental_Inline}}
   - : Creates a new `MediaStreamTrackProcessor` object.
+- {{domxref("MediaStreamTrackProcessor.MediaStreamTrackProcessor", "window.MediaStreamTrackProcessor()")}} {{Experimental_Inline}} {{Non-standard_Inline}}
+  - : Creates a new `MediaStreamTrackProcessor` object on the {{Glossary("main thread")}} that can process both video and audio.
 
 ## Instance properties
 
