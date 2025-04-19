@@ -28,7 +28,7 @@ Values of this type are objects. They contain the following properties:
   - : `Boolean`. `true` if the certificate is one of the trust roots installed in the browser, `false` otherwise.
 - `issuer`
 
-  - : `String`. Name of the organization that issued this certificate, represented as a Distinguished Name and formatted as a comma-separated list of Relative Distinguished Names, each of the form "type=value".
+  - : `String`. The Distinguished Name of the entity that issued the certificate, formatted as a comma-separated list of Relative Distinguished Names, each of the form "type=value".
 
     For example: "CN=DigiCert SHA2 Secure Server CA,O=DigiCert Inc,C=US".
 
@@ -38,7 +38,7 @@ Values of this type are objects. They contain the following properties:
   - : `String`. The certificate's [serial number](https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.2).
 - `subject`
 
-  - : `String`. Name of the organization that issued this certificate, represented as a Distinguished Name and formatted as a comma-separated list of Relative Distinguished Names, each of the form "type=value".
+  - : `String`. The Distinguished Name of the entity to which the certificate was issued, formatted as a comma-separated list of Relative Distinguished Names, each of the form "type=value".
 
     For example: "CN=\*.cdn.mozilla.net,O=Mozilla Corporation,L=Mountain View,ST=California,C=US".
 
