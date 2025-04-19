@@ -21,15 +21,11 @@ it includes the element's padding, but not its border, margin or
 horizontal scrollbar (if present). It can also include the height of pseudo-elements
 such as {{cssxref("::before")}} or {{cssxref("::after")}}. If the element's content can
 fit without a need for vertical scrollbar, its `scrollHeight` is equal to
-{{domxref("Element.clientHeight", "clientHeight")}}
-
-> [!NOTE]
-> This property will round the value to an integer. If you need a fractional value, use
-> {{domxref("Element.getBoundingClientRect()")}}.
+{{domxref("Element.clientHeight", "clientHeight")}}.
 
 ## Value
 
-An integer corresponding to the scrollHeight pixel value of the element.
+An integer.
 
 ## Problems and solutions
 
@@ -216,6 +212,11 @@ toNextStep.addEventListener("click", () => {
 
 ## See also
 
-- {{domxref("Element.clientHeight")}}
-- {{domxref("HTMLElement.offsetHeight")}}
 - [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- {{domxref("HTMLElement.offsetHeight")}}
+- {{domxref("Element.clientHeight")}}
+- {{domxref("Element.scrollWidth")}}
+- {{domxref("Element.scrollLeft")}}
+- {{domxref("Element.scrollTop")}}
+- {{domxref("Element.getBoundingClientRect()")}}
+- {{domxref("Element.scrollTo()")}}

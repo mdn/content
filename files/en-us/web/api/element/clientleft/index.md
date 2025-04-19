@@ -15,17 +15,13 @@ is an overflow causing a left vertical scrollbar to be rendered.
 `clientLeft` is read-only.
 
 > [!NOTE]
-> This property will round the value to an integer. If you
-> need a fractional value, use {{ domxref("element.getBoundingClientRect()") }}.
-
-> [!NOTE]
 > When an element has
 > `display: inline`, `clientLeft` returns `0`
 > regardless of the element's border.
 
 ## Value
 
-A number.
+An integer.
 
 ## Examples
 
@@ -75,3 +71,13 @@ In the following example, the client area has a white background and a 24px blac
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- {{domxref("HTMLElement.offsetLeft")}}
+- {{domxref("Element.scrollLeft")}}
+- {{domxref("Element.clientHeight")}}
+- {{domxref("Element.clientWidth")}}
+- {{domxref("Element.clientTop")}}
+- {{domxref("Element.getBoundingClientRect()")}}

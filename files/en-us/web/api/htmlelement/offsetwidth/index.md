@@ -22,11 +22,7 @@ returned.
 
 ## Value
 
-An integer corresponding to the `offsetWidth` pixel value of the element. The `offsetWidth` property is a read-only.
-
-> [!NOTE]
-> This property will round the value to an integer. If you need a fractional value, use
-> {{ domxref("element.getBoundingClientRect()") }}.
+An integer.
 
 ## Examples
 
@@ -42,6 +38,10 @@ An integer corresponding to the `offsetWidth` pixel value of the element. The `o
 
 ## See also
 
+- [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
 - {{domxref("Element.clientWidth")}}
 - {{domxref("Element.scrollWidth")}}
-- [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- {{domxref("HTMLElement.offsetHeight")}}
+- {{domxref("HTMLElement.offsetLeft")}}
+- {{domxref("HTMLElement.offsetTop")}}
+- {{domxref("Element.getBoundingClientRect()")}}

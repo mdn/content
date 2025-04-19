@@ -64,4 +64,10 @@ This example shows a 'long' sentence that wraps within a div with a blue border,
 
 ## See also
 
-- {{domxref("HTMLElement.offsetParent")}}, {{domxref("HTMLElement.offsetTop")}}, {{domxref("HTMLElement.offsetWidth")}}, {{domxref("HTMLElement.offsetHeight")}}
+- [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- {{domxref("Element.clientLeft")}}
+- {{domxref("Element.scrollLeft")}}
+- {{domxref("HTMLElement.offsetHeight")}}
+- {{domxref("HTMLElement.offsetWidth")}}
+- {{domxref("HTMLElement.offsetTop")}}
+- {{domxref("Element.getBoundingClientRect()")}}

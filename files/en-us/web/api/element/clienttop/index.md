@@ -20,13 +20,9 @@ starts immediately below the border, (client area includes padding.) Therefore, 
 Math.round(parseFloat()).) For example, if the computed "border-top-width" is zero,
 then **`clientTop`** is also zero.
 
-> [!NOTE]
-> This property will round the value to an integer. If you
-> need a fractional value, use {{ domxref("element.getBoundingClientRect()") }}.
-
 ## Value
 
-A number.
+An integer.
 
 ## Examples
 
@@ -80,3 +76,13 @@ In the following example, the client area has a white background and a 24px blac
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- {{domxref("HTMLElement.offsetTop")}}
+- {{domxref("Element.scrollTop")}}
+- {{domxref("Element.clientHeight")}}
+- {{domxref("Element.clientWidth")}}
+- {{domxref("Element.clientLeft")}}
+- {{domxref("Element.getBoundingClientRect()")}}

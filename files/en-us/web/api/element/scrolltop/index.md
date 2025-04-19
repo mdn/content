@@ -83,5 +83,11 @@ container.addEventListener("scroll", (event) => {
 
 ## See also
 
+- [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- {{domxref("HTMLElement.offsetTop")}}
+- {{domxref("Element.clientTop")}}
+- {{domxref("Element.scrollHeight")}}
+- {{domxref("Element.scrollWidth")}}
 - {{domxref("Element.scrollLeft")}}
+- {{domxref("Element.getBoundingClientRect()")}}
 - {{domxref("Element.scrollTo()")}}

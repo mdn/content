@@ -35,3 +35,13 @@ if (topPos > 10) {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- {{domxref("Element.clientTop")}}
+- {{domxref("Element.scrollTop")}}
+- {{domxref("HTMLElement.offsetHeight")}}
+- {{domxref("HTMLElement.offsetWidth")}}
+- {{domxref("HTMLElement.offsetLeft")}}
+- {{domxref("Element.getBoundingClientRect()")}}

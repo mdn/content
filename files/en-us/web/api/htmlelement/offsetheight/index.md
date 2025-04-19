@@ -22,13 +22,9 @@ If the element is hidden (for example, by setting `style.display` on the
 element or one of its ancestors to `"none"`), then `0` is
 returned.
 
-> [!NOTE]
-> This property will round the value to an integer. If you need a fractional value, use
-> {{ domxref("element.getBoundingClientRect()") }}.
-
 ## Value
 
-A number.
+An integer.
 
 ## Examples
 
@@ -51,7 +47,10 @@ scrollable container.
 
 ## See also
 
+- [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
 - {{domxref("Element.clientHeight")}}
 - {{domxref("Element.scrollHeight")}}
 - {{domxref("HTMLElement.offsetWidth")}}
-- [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- {{domxref("HTMLElement.offsetLeft")}}
+- {{domxref("HTMLElement.offsetTop")}}
+- {{domxref("Element.getBoundingClientRect()")}}

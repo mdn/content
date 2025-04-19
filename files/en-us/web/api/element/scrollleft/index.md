@@ -72,5 +72,11 @@ button.onclick = () => {
 
 ## See also
 
+- [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- {{domxref("HTMLElement.offsetLeft")}}
+- {{domxref("Element.clientLeft")}}
+- {{domxref("Element.scrollHeight")}}
+- {{domxref("Element.scrollWidth")}}
 - {{domxref("Element.scrollTop")}}
+- {{domxref("Element.getBoundingClientRect()")}}
 - {{domxref("Element.scrollTo()")}}

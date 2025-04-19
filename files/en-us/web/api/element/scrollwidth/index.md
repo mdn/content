@@ -119,6 +119,11 @@ Click the buttons to check if the content is overflowing the containers.
 
 ## See also
 
-- {{domxref("Element.clientWidth")}}
-- {{domxref("Element.getBoundingClientRect()")}}
 - [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- {{domxref("HTMLElement.offsetWidth")}}
+- {{domxref("Element.clientWidth")}}
+- {{domxref("Element.scrollHeight")}}
+- {{domxref("Element.scrollLeft")}}
+- {{domxref("Element.scrollTop")}}
+- {{domxref("Element.getBoundingClientRect()")}}
+- {{domxref("Element.scrollTo()")}}
