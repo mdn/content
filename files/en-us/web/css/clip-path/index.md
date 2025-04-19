@@ -175,61 +175,122 @@ The `clip-path` property is specified as one or a combination of the values list
 
 ## Examples
 
-### Basic example
+### Shapes and geometry boxes
 
-In this example, a triangle is created by defining a `polygon()` as the clip path on an element with a solid colored background:
+In this example, a triangle is created by defining a `polygon()` as the clip path on an element with a solid colored background with large {{cssxref("border")}}. The second element has a `<>:
 
 #### HTML
 
 ```html
 <div></div>
+<div></div>
 ```
 
 #### CSS
+
+```css hidden
+body {
+  display: flex;
+  gap: 20px;
+  flex-flow: row wrap;
+}
+```
 
 ```css
 div {
   height: 200px;
   width: 200px;
   background-color: rebeccapurple;
+  border: 20px solid;
+
   clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+div:last-of-type {
+  clip-path: content-box polygon(50% 0, 100% 100%, 0 100%);
 }
 ```
 
 #### Results
 
-{{EmbedLiveSample("Basic example", "", "230")}}
+{{EmbedLiveSample("Basic1", "", "230")}}
+
+For the first triangle, we didn't specify a reference box, defaulting to `border-box` being used as the reference box, with the 0% and 100% being the outside edge of the border. In the second example, we set the `<geometry-box>` to `content-box`, meaning the reference box for the basic shape is the outer edge of the content area, which is inside the padding box. In our padding-less example, this is the inner edge of the border.
 
 ### SVG as clip source
 
-In this example, we define an SVG {{svgElement("clipPath")}} element to use as a `clip-path` source.
+In this example, we define SVG {{svgElement("clipPath")}} elements to use as a `clip-path` source.
 
 #### HTML
 
-We include a {{htmlElement("div")}} element that we will style along with an SVG element with a `<clipPath>` element containing four {{svgElement("rect")}} elements that together define a cross.
+We include two {{htmlElement("div")}} elements that we will style along with an SVG element with two `<clipPath>` elements; one containing four {{svgElement("rect")}} elements that together define window panes, leaving a cross of blank space in the middle, and the other containing two crossing `<rect>` elements.
 
 ```html
 <svg height="0" width="0">
   <defs>
-    <clipPath id="cross">
+    <clipPath id="window">
       <rect y="0" x="0" width="80" height="80" />
       <rect y="0" x="120" width="80" height="80" />
       <rect y="120" x="0" width="80" height="80" />
       <rect y="120" x="120" width="80" height="80" />
     </clipPath>
+    <clipPath id="cross">
+      <rect y="0" x="80" width="40" height="200" />
+      <rect y="80" x="0" width="200" height="40" />
+    </clipPath>
   </defs>
 </svg>
 
-<div></div>
+<div class="window">Window</div>
+<div class="cross">Cross</div>
 ```
 
 #### CSS
 
-```css
+We use flexible layout to allow our elements to sit side-by-side with a gap between if they fit. We define a {{cssxref("gradient/conic-gradient", "conic-gradient()")}} background image on both `<div>` elements, providing an interesting visual to clip, along with a border.
 
+```css
+body {
+  display: flex;
+  gap: 20px;
+  flex-flow: row wrap;
+  font: 2em sans-serif;
+}
+
+div {
+  width: 200px;
+  height: 200px;
+  background-image: conic-gradient(
+    at center,
+    rebeccapurple,
+    green,
+    lightblue,
+    rebeccapurple
+  );
+
+  border: 5px solid;
+  box-sizing: border-box;
+}
+```
+
+We then set the `id` of the `<clipPath>` as the `<clip-source>`. We included a {{cssxref("align-content")}} on the `cross` example, centering the text vertically, as otherwise the text would be clipped, as is happening in the `window` example.
+
+```css
+.window {
+  clip-path: url(#window);
+}
+
+.cross {
+  clip-path: url(#cross);
+  align-content: center;
+}
 ```
 
 #### Results
+
+{{EmbedLiveSample("SVG as clip source", "", "230")}}
+
+The element, including the border and text, is clipped, with only the parts overlapping the `<clipPath>` being drawn to the page.
 
 ### The various value types
 
@@ -313,6 +374,8 @@ function log(text) {
 #### Result
 
 {{EmbedLiveSample("Complete_example", 230, 280)}}
+
+Select different options to change the `clip-path` value. To clip a background to text, use the {{cssxref("background-clip")}} property.
 
 ## Specifications
 
