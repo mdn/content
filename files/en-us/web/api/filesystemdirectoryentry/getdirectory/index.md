@@ -63,7 +63,7 @@ The table below describes the result of each possible combination of these flags
 | `false`         | _Ignored_          | Path exists but is a file      | The `errorCallback` is called with an appropriate error code (if the callback was provided).                                                        |
 | `true`          | `false`            | Path exists                    | The existing directory is removed and replaced with a new one, then the `successCallback` is called with a {{domxref("FileSystemDirectoryEntry")}}. |
 | `true`          | `false`            | Path doesn't exist             | The directory is created, then a {{domxref("FileSystemDirectoryEntry")}} is passed to the `successCallback`.                                        |
-| `true`          | `true`             | Path exists                    | The `errorCallback` is called with an appropriate error, such as `FileError.PATH_EXISTS_ERR`.                                                       |
+| `true`          | `true`             | Path exists                    | The `errorCallback` is called with an appropriate error, such as `DOMError.PATH_EXISTS_ERR`.                                                        |
 | `true`          | `true`             | Path doesn't exist             | The directory is created, then a {{domxref("FileSystemDirectoryEntry")}} is passed to the `successCallback`.                                        |
 
 ### Return value

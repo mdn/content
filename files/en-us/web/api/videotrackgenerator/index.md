@@ -7,11 +7,9 @@ status:
 browser-compat: api.VideoTrackGenerator
 ---
 
-{{APIRef("Insertable Streams for MediaStreamTrack API")}}{{SeeCompatTable}}
+{{APIRef("Insertable Streams for MediaStreamTrack API")}}{{SeeCompatTable}}{{AvailableInWorkers("dedicated")}}
 
 The **`VideoTrackGenerator`** interface of the [Insertable Streams for MediaStreamTrack API](/en-US/docs/Web/API/Insertable_Streams_for_MediaStreamTrack_API) has a {{domxref("WritableStream")}} property that acts as a {{domxref("MediaStreamTrack")}} source, by consuming a stream of {{domxref("VideoFrame")}}s as input.
-
-This interface is only available in {{domxref("Worker","dedicated workers")}}.
 
 ## Constructor
 
@@ -21,19 +19,15 @@ This interface is only available in {{domxref("Worker","dedicated workers")}}.
 ## Instance properties
 
 - {{domxref("VideoTrackGenerator.muted")}} {{Experimental_Inline}}
-
   - : A Boolean property to temporarily halt or resume the generation of video frames in the output track.
-
 - {{domxref("VideoTrackGenerator.track")}} {{Experimental_Inline}}
-
   - : The output {{domxref("MediaStreamTrack")}}.
-
 - {{domxref("VideoTrackGenerator.writable")}} {{Experimental_Inline}}
   - : The input {{domxref("WritableStream")}}.
 
 ## Examples
 
-The following example is from the article [Unbundling MediaStreamTrackProcessor and VideoTrackGenerator](https://blog.mozilla.org/webrtc/unbundling-mediastreamtrackprocessor-and-videotrackgenerator/). It [transfers](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) a camera {{domxref("MediaStreamTrack")}} to a worker for processing. The worker creates a pipeline that applies a sepia tone filter to the video frames and mirrors them. The pipeline culminates in a {{domxref("VideoTrackGenerator")}} whose {{domxref("MediaStreamTrack")}} is transferred back and played. The media now flows in real time through the transform off the {{Glossary("main thread")}}.
+The following example is from the article [Unbundling MediaStreamTrackProcessor and VideoTrackGenerator](https://blog.mozilla.org/webrtc/unbundling-mediastreamtrackprocessor-and-videotrackgenerator/). It [transfers](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) a camera {{domxref("MediaStreamTrack")}} to a worker for processing. The worker creates a pipeline that applies a sepia tone filter to the video frames and mirrors them. The pipeline culminates in a `VideoTrackGenerator` whose {{domxref("MediaStreamTrack")}} is transferred back and played. The media now flows in real time through the transform off the {{Glossary("main thread")}}.
 
 ```js
 const stream = await navigator.mediaDevices.getUserMedia({ video: true });
@@ -57,10 +51,6 @@ onmessage = async ({ data: { track } }) => {
 };
 ```
 
-## See also
-
-- {{domxref("MediaStreamTrackProcessor")}}
-
 ## Specifications
 
 {{Specifications}}
@@ -68,3 +58,7 @@ onmessage = async ({ data: { track } }) => {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("MediaStreamTrackProcessor")}}
