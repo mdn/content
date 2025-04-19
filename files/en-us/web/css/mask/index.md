@@ -74,7 +74,9 @@ mask-clip: border-box;
 mask-composite: add;
 ```
 
-The order of some properties matters. Within each `<mask-layer>`, the `mask-size` component must go after the `mask-position` value, with a forward slash (`/`) separating the two. If one `<geometry-box>` value and the `no-clip` keyword are present, the `<geometry-box>` is the value of the `mask-origin` property, as the `no-clip` is only valid for the `mask-clip` property. In this case, the order of the two values doesn't matter. If only one `<geometry-box>` value is present (with no `no-clip` keyterm specified), this value is used for both the `mask-origin` and `mask-clip` properties. The order is important if there are two `<geometry-box>` values present; in this case, the first is the `mask-origin` value while the second is the `mask-clip` value.
+Within each `<mask-layer>`, the `mask-size` component must go after the `mask-position` value, with a forward slash (`/`) separating the two.
+
+If there are two `<geometry-box>` values present, the first is the `mask-origin` value, while the second is the `mask-clip` value. If one `<geometry-box>` value and the `no-clip` keyword are present, the `<geometry-box>` is the value of the `mask-origin` property, as the `no-clip` is only valid for the `mask-clip` property. In this case, the order of the two values doesn't matter. If only one `<geometry-box>` value is present (with no `no-clip` keyterm specified), this value is used for both the `mask-origin` and `mask-clip` properties.
 
 As the `mask` shorthand resets all the `mask-border-*` properties to their `initial` value, you should declare these properties — or the {{cssxref("mask-border")}} shorthand — after any `mask` declarations. When setting `mask` in your declaration block, you also implicitly set the following:
 
