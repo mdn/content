@@ -35,5 +35,5 @@ JavascriptException: ReferenceError: foo is not defined
 - [List of WebDriver errors](/en-US/docs/Web/WebDriver/Reference/Errors)
 - Associated commands:
 
-  - [Execute Script](/en-US/docs/Web/WebDriver/Commands/ExecuteScript)
-  - [Execute Async Script](/en-US/docs/Web/WebDriver/Commands/ExecuteAsyncScript)
+  - [Execute Script](/en-US/docs/Web/WebDriver/Reference/Commands/ExecuteScript)
+  - [Execute Async Script](/en-US/docs/Web/WebDriver/Reference/Commands/ExecuteAsyncScript)
