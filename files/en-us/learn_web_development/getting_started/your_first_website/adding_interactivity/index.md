@@ -52,7 +52,7 @@ Let's look at an example. We'll use the same basic list we saw in the last coupl
 </ul>
 ```
 
-We'll also define a CSS class that styles the element it is applied to to look like it is done, with a green text color and a strikethrough:
+We'll also define a CSS class that styles any element it is applied to (below we'll apply it to our `<li>` elements via JavaScript) to make it look like a completed task, with a green text color and a strikethrough:
 
 ```css live-sample___basic-js
 .done {
@@ -61,7 +61,7 @@ We'll also define a CSS class that styles the element it is applied to to look l
 }
 ```
 
-Now on to the JavaScript. Here, we first store a reference to the `<li>` elements inside a variable called `listItems`. We then define a function called `toggleDone()` that adds a `class` of `done` to an element if it desn't have a class, and removes its class if it already has one. Finally, we loop through the list items (using `forEach()`) and add an event listener to each one so that when the list items are clicked, the `done` class is applied to them, which sets the CSS declared above on them.
+Now on to the JavaScript. Here, we first store references to the `<li>` elements inside a variable called `listItems`. We then define a function called `toggleDone()` that adds the `done` class to a list item if it doesn't already have it, and removes the class if it does. Finally, we loop through the list items (using `forEach()`) and add an event listener (using `addEventListener()`) to each list item so that when it is clicked, the `done` class is toggled, applying the CSS we defined earlier.
 
 ```js live-sample___basic-js
 const listItems = document.querySelectorAll("li");
@@ -79,13 +79,13 @@ listItems.forEach((item) => {
 });
 ```
 
+Don't worry if you don't understand the above JavaScript now. Getting comfortable with JavaScript is more challenging than getting comfortable with HTML and CSS, but things will become clearer later on in the course.
+
 This example will render as follows in a web browser:
 
 {{EmbedLiveSample("basic-js", "100%", "140px")}}
 
 Try clicking the list items a few times and note how the "done" styles are toggled on and off as a result. Not that bad for 11 lines of JavaScript.
-
-Don't worry if you don't understand the above JavaScript now. Getting comfortable with JavaScript is more challenging than getting comfortable with HTML and CSS, but things will become clearer later on in the course.
 
 ## A "Hello world!" walkthrough
 
@@ -119,18 +119,16 @@ To start you off with writing some JavaScript, we'll walk you through adding a _
 
 Let's break down how this example works.
 
-We have used JavaScript to change the heading text to _Hello world!_. We grabbed a reference to the heading and stored it in a variable called `myHeading` (a container that stores a value). This is similar to what we did using CSS selectors. When you want to do something to an element, you need to select it first.
+We used JavaScript to change the heading text to `Hello world!`. We grabbed a reference to the heading and stored it in a variable called `myHeading` (a container that stores a value). This is similar to how you apply CSS to elements, selecting the elements to affect via a CSS selector before manipulating their properties. In both cases, when you want to do something to an element, you need to select it first.
 
-Following that, we set the value of the `myHeading` variable's text content to _Hello world!_.
+Following that, we set the value of the `myHeading` variable's `textContent` property (which represents the `<h1>` element's text content) to _Hello world!_.
 
-> [!NOTE]
-> The lines that start with `//` are JavaScript comments. In the same way as HTML and CSS comments, the browser ignores these, providing a way for you to add notes about your code to help explain how it works.
-
-## Supercharging our example website
+The lines that start with `//` are JavaScript comments. In the same way as HTML and CSS comments, the browser ignores these, providing a way for you to add notes about your code to help explain how it works.
 
 Let's move on and add some new features to our example site.
 
-Before going any further, delete the "Hello world!" code from your `main.js` file. If you don't, the existing code will clash with the new code you are about to add.
+> [!WARNING]
+> Before going any further, delete the "Hello world!" code from your `main.js` file. If you don't, the existing code will clash with the new code you are about to add.
 
 ## Adding an image changer
 
@@ -166,9 +164,9 @@ In this code, you stored a reference to your {{htmlelement("img")}} element in t
 > [!NOTE]
 > This section introduces several important terms. Key concepts include:
 >
-> - [API](/en-US/docs/Glossary/API): A set of functionality that allows a developer to interact with a programming environment. WebAPIs (such as the DOM API features we used above) are built on top of the JavaScript language and allow you to manipulate various parts of the browser.
+> - [API](/en-US/docs/Glossary/API): A set of features that allows a developer to interact with a programming environment. Web APIs (such as the DOM API features we used above) are built on top of the JavaScript language and allow you to manipulate various parts of the browser and the webpages it is displaying.
 > - [Events](/en-US/docs/Learn_web_development/Core/Scripting/Events): Things that happen in the browser. They're key to making websites interactive. You can run code in response to events using **event handler functions** – these are code blocks that run when an event occurs. The most common example is the [click event](/en-US/docs/Web/API/Element/click_event), which is fired by the browser when a user clicks on something.
-> - [Functions](/en-US/docs/Learn_web_development/Core/Scripting/Functions): A way of packaging code that you wish to reuse. You can define your code inside a function and execute it when you call the function name in your code, avoiding having to repeatedly write the same code over and over again.
+> - [Functions](/en-US/docs/Learn_web_development/Core/Scripting/Functions): A way of packaging code that you wish to reuse. You can define your code once inside a function and then run it as many times as you like, which helps you avoid writing the same code over and over. In the above code we defined a `click` event handler function, which is run every time a user clicks the image.
 > - [Conditionals](/en-US/docs/Learn_web_development/Core/Scripting/Conditionals): Code structures used to test if an expression returns `true` or `false` and run different code in response to each result. A very common form of conditionals is the `if...else` statement.
 
 ## Adding a personalized welcome message
@@ -198,9 +196,13 @@ Next, let's change the page heading to show a personalized welcome message when 
    }
    ```
 
-   The `setUserName()` function contains a [`prompt()`](/en-US/docs/Web/API/Window/prompt) function, which displays a dialog box, similar to `alert()`. This `prompt()` function does more than `alert()`, asking the user to enter data, and storing it in a variable after the user clicks _OK_. In this case, we are asking the user to enter a name. Next, the code calls on the `localStorage` API, which allows us to store data in the browser and retrieve it later. We use the {{domxref("Storage.setItem", "localStorage.setItem()")}} function to create and store a data item called `"name"`, setting its value to the `myName` variable, which contains the user's entry for the name. Finally, we set the `textContent` of the heading to a string with the user's newly-stored name added to the end of it.
+   The `setUserName()` function contains a [`prompt()`](/en-US/docs/Web/API/Window/prompt) function, which asks the user to enter data and stores it in a variable after they click _OK_. In this example, we're asking the user to enter a name and storing it in `myName`.<br /><br />
 
-4. Add the following condition block after the function declaration. This is our _initialization code_: it runs the functionality when the page first loads:
+   Next, the code uses the [Web Storage API](/en-US/docs/Web/API/Web_Storage_API), which allows us to store data in the browser and retrieve it later. We use the {{domxref("Storage.setItem", "localStorage.setItem()")}} function to create and store a data item called `"name"`, setting its value to the `myName` variable, which contains the user's input.<br /><br />
+
+   Finally, we set the `textContent` of the heading to a string that includes the user's stored name.
+
+4. Add the following conditional block after the function declaration. This is our _initialization code_ — it runs when the page first loads to start the program off:
 
    ```js
    if (!localStorage.getItem("name")) {
@@ -226,7 +228,7 @@ Next, let's change the page heading to show a personalized welcome message when 
 > [!NOTE]
 > The term [operator](/en-US/docs/Learn_web_development/Core/Scripting/Math) refers to a JavaScript language character that carries out an operation on one or more values. Examples include `+` (adds values), `-` (subtracts one value from another), and `!` (negates a value — as you saw earlier).
 
-### A user name of null?
+## A user name of null?
 
 When you run the example and get the dialog box that prompts you to enter your name, try pressing the _Cancel_ button. You should end up with a title that reads _Mozilla is cool, null_. This happens because the value is set to [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) when you cancel the prompt. In JavaScript, _null_ is a special value that represents the absence of a value.
 
