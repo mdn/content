@@ -1775,7 +1775,7 @@
     },
     "URL Fragment Text Directives": {
       "overview": ["URL Fragment Text Directives"],
-      "guides": ["/en-US/docs/Web/URI/Fragment/Text_fragments"],
+      "guides": ["/en-US/docs/Web/URI/Reference/Fragment/Text_fragments"],
       "interfaces": ["FragmentDirective"],
       "methods": [],
       "properties": ["Document.fragmentDirective"]

@@ -6,9 +6,9 @@ browser-compat: webdriver.classic.GetWindowRect
 sidebar: webdriver
 ---
 
-The _Get Window Rect_ [command](/en-US/docs/Web/WebDriver/Reference/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API returns the size and position of the given [`WebElement`](/en-US/docs/Web/WebDriver/WebElement). Many [WebDriver clients](/en-US/docs/Web/WebDriver/Clients) present separate API methods for getting an element's location and dimensions, but as an optimization they both use this primitive.
+The _Get Window Rect_ [command](/en-US/docs/Web/WebDriver/Reference/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API returns the size and position of the given [`WebElement`](/en-US/docs/Web/WebDriver/Reference/WebElement). Many [WebDriver clients](/en-US/docs/Web/WebDriver/Reference/Clients) present separate API methods for getting an element's location and dimensions, but as an optimization they both use this primitive.
 
-The command operates on the currently selected window, and returns size and position of the operating system window. The returned [`WindowRect`](/en-US/docs/Web/WebDriver/WindowRect) can be used as input for the [Set Window Rect](/en-US/docs/Web/WebDriver/SetWindowRect) command, which is for manipulating a window's position and dimensions.
+The command operates on the currently selected window, and returns size and position of the operating system window. The returned [`WindowRect`](/en-US/docs/Web/WebDriver/Reference/WindowRect) can be used as input for the [Set Window Rect](/en-US/docs/Web/WebDriver/Reference/SetWindowRect) command, which is for manipulating a window's position and dimensions.
 
 ## Syntax
 
@@ -23,7 +23,7 @@ The command operates on the currently selected window, and returns size and posi
 
 ### Response
 
-The response payload is a [`WindowRect`](/en-US/docs/Web/WebDriver/WebWindow):
+The response payload is a [`WindowRect`](/en-US/docs/Web/WebDriver/Reference/WebWindow):
 
 - `x`
   - : Horizontal position of the operating system window associated with [`window`](/en-US/docs/Web/API/Window), equivalent to [`Window.screenX`](/en-US/docs/Web/API/Window/screenX).
@@ -38,7 +38,7 @@ The response payload is a [`WindowRect`](/en-US/docs/Web/WebDriver/WebWindow):
 
 - [Invalid session ID](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidSessionID)
   - : Session does not exist.
-- [Unexpected alert open](/en-US/docs/Web/WebDriver/Errors/UnexpectedAlertOpen)
+- [Unexpected alert open](/en-US/docs/Web/WebDriver/Reference/Errors/UnexpectedAlertOpen)
   - : A user prompt, such as [`window.alert`](/en-US/docs/Web/API/Window/alert), blocks execution of command until it is dealt with.
 
 ## Specifications
@@ -55,6 +55,6 @@ The response payload is a [`WindowRect`](/en-US/docs/Web/WebDriver/WebWindow):
 - Associated commands:
 
   - [Set Window Rect](/en-US/docs/Web/WebDriver/Reference/Commands/SetWindowRect)
-  - [Get Window Handle](/en-US/docs/Web/WebDriver/Commands/GetWindowHandle)
+  - [Get Window Handle](/en-US/docs/Web/WebDriver/Reference/Commands/GetWindowHandle)
   - [Get Window Handles](/en-US/docs/Web/WebDriver/Reference/Commands/GetWindowHandles)
   - [Close Window](/en-US/docs/Web/WebDriver/Reference/Commands/CloseWindow)
