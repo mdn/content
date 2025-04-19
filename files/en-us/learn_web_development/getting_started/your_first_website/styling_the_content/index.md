@@ -131,7 +131,7 @@ p,
 In this CSS rule, we've included an **element** (or **type**) selector, which selects a specific HTML element. We've also included two other selector types, which aren't relevant to the rest of this tutorial. If you're curious about what they do, check out our [Basic selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) guide.
 
 > [!NOTE]
-> Scrimba's [Write your first lines of CSS!](https://v2.scrimba.com/the-frontend-developer-career-path-c0j/~015?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> provides a useful interactive introduction to CSS syntax.
+> Scrimba's [Write your first lines of CSS!](https://scrimba.com/the-frontend-developer-career-path-c0j/~015?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> provides a useful interactive introduction to CSS syntax.
 
 ## Improving the text
 
