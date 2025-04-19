@@ -33,7 +33,7 @@ removeRecursively(successCallback, errorCallback)
     has no parameters.
 - `errorCallback` {{optional_inline}}
   - : A function to be called if an error occurs while attempting to remove the directory
-    subtree. Receives a {{domxref("DOMError")}} describing the error which occurred as
+    subtree. Receives a {{domxref("DOMException")}} describing the error which occurred as
     input.
 
 ### Return value
@@ -43,20 +43,20 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 If an error occurs and an `errorCallback` was specified, it gets called with
-a single parameter: a {{domxref("DOMError")}} object describing the error. The
-{{domxref("DOMError.code")}} specifies what type of error occurred, as follows:
+a single parameter: a {{domxref("DOMException")}} object describing the error. The
+{{domxref("DOMException.code")}} specifies what type of error occurred, as follows:
 
-- `DOMError.INVALID_MODIFICATION_ERR`
+- `DOMException.INVALID_MODIFICATION_ERR`
   - : An attempt was made to remove the root directory; this is not permitted.
-- `DOMError.NO_MODIFICATION_ALLOWED_ERR`
+- `DOMException.NO_MODIFICATION_ALLOWED_ERR`
   - : The file system's state doesn't permit modification.
-- `DOMError.NOT_FOUND_ERR`
+- `DOMException.NOT_FOUND_ERR`
   - : The directory represented by the {{domxref("FileSystemDirectoryEntry")}} no longer
     exists.
-- `DOMError.NOT_READABLE_ERR`
+- `DOMException.NOT_READABLE_ERR`
   - : The directory is not accessible; perhaps it's in use by another application or is
     locked at the operating system level.
-- `DOMError.SECURITY_ERR`
+- `DOMException.SECURITY_ERR`
 
   - : The directory could not be removed for security reasons. Possible reasons include:
 
