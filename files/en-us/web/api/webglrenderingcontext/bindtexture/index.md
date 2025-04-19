@@ -33,6 +33,7 @@ bindTexture(target, texture)
 
 - `texture`
   - : A {{domxref("WebGLTexture")}} object to bind.
+    If `null` is passed, the currently bound texture for the specified target is unbound.
 
 ### Return value
 
@@ -54,6 +55,13 @@ const gl = canvas.getContext("webgl");
 const texture = gl.createTexture();
 
 gl.bindTexture(gl.TEXTURE_2D, texture);
+```
+
+### Unbinding a texture
+
+```js
+// Unbind any texture currently bound to TEXTURE_2D
+gl.bindTexture(gl.TEXTURE_2D, null);
 ```
 
 ### Getting current bindings
