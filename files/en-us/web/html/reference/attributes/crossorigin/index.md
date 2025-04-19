@@ -91,5 +91,3 @@ The `use-credentials` value must be used when fetching a [manifest](/en-US/docs/
 
 - [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTML attribute: `rel`](/en-US/docs/Web/HTML/Reference/Attributes/rel)
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/HTML/")}}

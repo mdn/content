@@ -90690,27 +90690,6 @@
       "omercier67"
     ]
   },
-  "Web/HTML/Attributes/rel/Alternate_stylesheet": {
-    "modified": "2020-10-15T21:15:55.661Z",
-    "contributors": [
-      "wbamberg",
-      "mfuji09",
-      "sideshowbarker",
-      "chrisdavidmills",
-      "mfluehr",
-      "Nickolay",
-      "r-o-b",
-      "Sebastianz",
-      "teoli",
-      "Sheppy",
-      "justinpotts",
-      "minitech",
-      "Mgjbot",
-      "Kohei",
-      "Sevenspade",
-      "DBaron"
-    ]
-  },
   "Web/HTML/Guides/Cheatsheet": {
     "modified": "2020-07-16T22:22:43.887Z",
     "contributors": [
@@ -98171,20 +98150,6 @@
       "DarrenLester",
       "fscholz",
       "groovecoder"
-    ]
-  },
-  "Web/HTTP/Permissions_Policy/Using_Feature_Policy": {
-    "modified": "2020-10-01T23:00:16.945Z",
-    "contributors": [
-      "hamishwillee",
-      "Malvoz",
-      "Sheppy",
-      "chrisdavidmills",
-      "clelland",
-      "jpchase",
-      "fscholz",
-      "mfuji09",
-      "jpmedley"
     ]
   },
   "Web/HTTP/Reference/Headers": {
