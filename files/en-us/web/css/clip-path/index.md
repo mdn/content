@@ -233,7 +233,11 @@ We include a {{htmlElement("div")}} element that we will style along with an SVG
 
 ### The various value types
 
-This example includes a picker wherein you can select the different
+This example demonstrates the various values of the `clip-path` property.
+
+#### HTML
+
+The HTML includes an image and a `<clipPath>` in the shape of a star. We also included a {{htmlelement("select")}} element which provides various optional values for the `clip-path` property.
 
 The HTML includes an `<img>` that will be clipped, a star-shaped `<clipPath>`, and a {{htmlelement("select")}} element to choose a `clip-path` property value from.
 
@@ -252,7 +256,7 @@ The HTML includes an `<img>` that will be clipped, a star-shaped `<clipPath>`, a
 <select id="clipPath">
   <option value="none">none</option>
   <option value="circle(100px at 110px 100px)">circle</option>
-  <option value="url(#star)" selected>cross</option>
+  <option value="url(#star)" selected>star</option>
   <option value="inset(20px round 20px)">inset</option>
   <option value="rect(20px 150px 200px 20px round 10%)">rect</option>
   <option value="xywh(0 20% 90% 67% round 0 0 5% 5px)">xywh</option>
@@ -279,7 +283,7 @@ The initial rendering includes the star as the `clip-path` source.
 
 #### JavaScript
 
-When you select a new option from the `<select>` menu, an event handler updates the value of the `clip-path` set on the `<img>`.
+When you select a new option, an event handler updates the value of the `clip-path`.
 
 ```js
 const clipPathSelect = document.getElementById("clipPath");
@@ -288,7 +292,9 @@ clipPathSelect.addEventListener("change", (evt) => {
   document.getElementById("clipped").style.clipPath = x;
   log(`clip-path: ${x};`);
 });
+```
 
+```js hidden
 function log(text) {
   const logElement = document.querySelector("#log");
   logElement.innerText = `${text}`;
@@ -318,7 +324,6 @@ function log(text) {
 
 ## See also
 
-- [Introduction to CSS clipping](/en-US/docs/Web/CSS/CSS_masking/CSS_clipping)
 - {{CSSxRef("clip-rule")}}
 - {{CSSxRef("mask")}}
 - {{CSSxRef("filter")}}
