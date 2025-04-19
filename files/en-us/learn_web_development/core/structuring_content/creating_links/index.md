@@ -2,9 +2,8 @@
 title: Creating links
 slug: Learn_web_development/Core/Structuring_content/Creating_links
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content")}}
 
@@ -249,15 +248,15 @@ Let's look at a specific example:
 **Good** link text: [Download Firefox](https://www.mozilla.org/en-US/firefox/new/?redirect_source=firefox-com)
 
 ```html example-good
-<p><a href="https://www.mozilla.org/en-US/firefox/">Download Firefox</a></p>
+<p><a href="https://www.mozilla.org/en-US/firefox/new/">Download Firefox</a></p>
 ```
 
-**Bad** link text: [Click here](https://www.mozilla.org/en-US/firefox/) to download Firefox
+**Bad** link text: [Click here](https://www.mozilla.org/en-US/firefox/new/) to download Firefox
 
 ```html example-bad
 <p>
-  <a href="https://www.mozilla.org/en-US/firefox/">Click here</a> to download
-  Firefox
+  <a href="https://www.mozilla.org/en-US/firefox/new/">Click here</a> to
+  download Firefox
 </p>
 ```
 
@@ -396,7 +395,7 @@ Here are a few other sample `mailto` URLs:
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Links](/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_Links).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Links](/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Links).
 
 ## Summary
 

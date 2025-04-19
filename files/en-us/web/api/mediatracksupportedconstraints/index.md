@@ -45,6 +45,8 @@ Some combination—but not necessarily all—of the following properties will ex
   - : A Boolean value whose value is `true` if the [`latency`](/en-US/docs/Web/API/MediaTrackConstraints/latency) constraint is supported in the current environment.
 - {{domxref("MediaTrackSupportedConstraints.noiseSuppression", "noiseSuppression")}}
   - : A Boolean whose value is `true` if the [`noiseSuppression`](/en-US/docs/Web/API/MediaTrackConstraints/noiseSuppression) constraint is supported in the current environment.
+- {{domxref("MediaTrackSupportedConstraints.suppressLocalAudioPlayback", "suppressLocalAudioPlayback")}}
+  - : A Boolean whose value is `true` if the [`suppressLocalAudioPlayback`](/en-US/docs/Web/API/MediaTrackConstraints/suppressLocalAudioPlayback) constraint is supported in the current environment.
 - {{domxref("MediaTrackSupportedConstraints.channelCount", "channelCount")}}
   - : A Boolean value whose value is `true` if the [`channelCount`](/en-US/docs/Web/API/MediaTrackConstraints/channelCount) constraint is supported in the current environment.
 - {{domxref("MediaTrackSupportedConstraints.deviceId", "deviceId")}}

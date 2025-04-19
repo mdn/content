@@ -75,7 +75,7 @@ Keep the following aspects in mind while working with the function:
 
 ### Return value
 
-`clamp(MIN, VAL, MAX)` is resolved as `{{CSSxRef("max", "max")}}(MIN, {{CSSxRef("min", "min")}}(VAL, MAX))`.
+`clamp(MIN, VAL, MAX)` is resolved as `max(MIN, min(VAL, MAX))`.
 
 Based on the provided parameters, the function returns {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, or {{CSSxRef("&lt;integer&gt;")}}.
 

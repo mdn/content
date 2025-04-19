@@ -92,7 +92,7 @@ Most macros will also take a second argument allowing you to change the display 
         <a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/svgattr.rs">SVGAttr</a>
       </td>
       <td>
-        <a href="/en-US/docs/Web/SVG/Reference/Attribute">SVG attribute reference</a> (/Web/SVG/Attribute).
+        <a href="/en-US/docs/Web/SVG/Reference/Attribute">SVG attribute reference</a> (/Web/SVG/Reference/Attribute).
       </td>
       <td>
         <code>\{{SVGAttr("d")}}</code> results in {{SVGAttr("d")}}
@@ -104,7 +104,7 @@ Most macros will also take a second argument allowing you to change the display 
           href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/svgxref.rs">SVGElement</a>
       </td>
       <td>
-        <a href="/en-US/docs/Web/SVG/Reference/Attribute">SVG Element reference</a> (/Web/SVG/Element).
+        <a href="/en-US/docs/Web/SVG/Reference/Element">SVG Element reference</a> (/Web/SVG/Reference/Element).
       </td>
       <td>
         <code>\{{SVGElement("view")}}</code> results in {{SVGElement("view")}}
@@ -256,12 +256,10 @@ You can also pass some arguments to indicate that a feature works in specified w
 
 The following macros are included on all reference pages, but are also supported by all page types:
 
-- `\{{Compat}}` / `\{{Compat(&lt;feature>)}}` / `\{{Compat(&lt;feature>, &lt;depth>)}}`
-
-  - : Generates a [compatibility table](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) for the feature passed as the parameter. If no parameter is included, it defaults to the features defined by `browser-compat` in the frontmatter. An optional depth parameter sets how deep sub features should be added to the table. The depth, if omitted, defaults to 1, meaning only the first level of sub feature data from BCD will be included.
-
-- `\{{Specifications}}` / `\{{Specifications(&lt;feature>)}}`
-  - : Includes the specification for the feature specified in the parameter. If no parameter is passed, the specification listed is defined by the value for `spec-urls` in the frontmatter, if present, or from the specification listed in browser compatibility data defined by `browser-compat` in the frontmatter. The specification is rendered as an external link.
+- `\{{Compat}}`
+  - : Generates a [compatibility table](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) for the feature(s) defined by `browser-compat` in the frontmatter.
+- `\{{Specifications}}`
+  - : Includes a [specification table](/en-US/docs/MDN/Writing_guidelines/Page_structures/Specification_tables) for the feature(s) defined by `spec-urls` in the frontmatter, if present, or from the specification listed in browser compatibility data defined by `browser-compat` in the frontmatter.
 
 ## See also
 

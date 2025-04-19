@@ -8,7 +8,7 @@ status:
 browser-compat: api.FetchLaterResult.activated
 ---
 
-{{DefaultAPISidebar("fetchLater API")}}{{SeeCompatTable}}
+{{APIRef("fetchLater API")}}{{SeeCompatTable}}
 
 The **`activated`** read-only property of the {{domxref("FetchLaterResult")}} interface returns a boolean specifying whether the deferred fetch has been sent.
 

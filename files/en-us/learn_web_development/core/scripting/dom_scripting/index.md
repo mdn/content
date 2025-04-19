@@ -3,9 +3,8 @@ title: DOM scripting introduction
 short-title: DOM scripting
 slug: Learn_web_development/Core/Scripting/DOM_scripting
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Object_basics","Learn_web_development/Core/Scripting/Network_requests", "Learn_web_development/Core/Scripting")}}
 

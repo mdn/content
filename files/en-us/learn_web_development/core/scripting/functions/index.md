@@ -3,9 +3,8 @@ title: Functions — reusable blocks of code
 short-title: Functions
 slug: Learn_web_development/Core/Scripting/Functions
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Loops","Learn_web_development/Core/Scripting/Build_your_own_function", "Learn_web_development/Core/Scripting")}}
 
@@ -482,6 +481,6 @@ This article has explored the fundamental concepts behind functions, paving the 
 
 - [Functions detailed guide](/en-US/docs/Web/JavaScript/Guide/Functions) — covers some advanced features not included here.
 - [Functions reference](/en-US/docs/Web/JavaScript/Reference/Functions)
-- [Using functions to write less code](https://scrimba.com/the-frontend-developer-career-path-c0j/~04g?via=mdn), Scrimba <sup>_MDN learning partner_</sup> - An interactive lesson providing a useful functions introduction.
+- [Using functions to write less code](https://scrimba.com/the-frontend-developer-career-path-c0j/~04g?via=mdn), Scrimba <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> - An interactive lesson providing a useful functions introduction.
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Loops","Learn_web_development/Core/Scripting/Build_your_own_function", "Learn_web_development/Core/Scripting")}}

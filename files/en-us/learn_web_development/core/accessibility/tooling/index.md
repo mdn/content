@@ -3,9 +3,8 @@ title: Accessibility tooling and assistive technology
 short-title: Accessibility tools
 slug: Learn_web_development/Core/Accessibility/Tooling
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/What_is_Accessibility","Learn_web_development/Core/Accessibility/HTML", "Learn_web_development/Core/Accessibility")}}
 

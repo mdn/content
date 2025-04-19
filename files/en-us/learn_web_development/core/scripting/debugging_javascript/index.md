@@ -3,9 +3,8 @@ title: JavaScript debugging and error handling
 short-title: Debugging and error handling
 slug: Learn_web_development/Core/Scripting/Debugging_JavaScript
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/JSON","Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Scripting")}}
 

@@ -15,9 +15,7 @@ You can use this attribute with the following SVG elements:
 
 - {{SVGElement('feDropShadow')}}
 - {{SVGElement('feOffset')}}
-- {{SVGElement('glyphRef')}}
 - {{SVGElement('text')}}
-- {{SVGElement('tref')}}
 - {{SVGElement('tspan')}}
 
 ## Example
@@ -83,34 +81,6 @@ For {{SVGElement('feDropShadow')}}, `dx` defines the x offset of the dropped sha
 ## feOffset
 
 For {{SVGElement('feOffset')}}, `dx` defines the x offset of the filter input graphic. The unit used to resolve the value of the attribute is set by the {{SVGAttr('primitiveUnits')}} attribute of the {{SVGElement('filter')}} element.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td>
-        <strong
-          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number">&#x3C;number></a></strong
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
-
-## glyphRef
-
-> [!WARNING]
-> As of SVG2 {{SVGElement('glyphRef')}} is deprecated and shouldn't be used.
-
-For {{SVGElement('glyphRef')}}, `dx` defines the x offset of the glyph, in the font metric system.
 
 <table class="properties">
   <tbody>
@@ -206,44 +176,6 @@ line {
 ```
 
 {{EmbedLiveSample('text', '100%', 100)}}
-
-## tref
-
-> [!WARNING]
-> As of SVG2 {{SVGElement('tref')}} is deprecated and shouldn't be used.
-
-For {{SVGElement('tref')}}, if it contains a single value, `dx` defines a shift along the x-axis for all glyphs.
-
-If there are multiple values, `dx` defines a shift along the x-axis for each individual glyph relative to the preceding glyph. If there are less values than glyphs, the remaining glyphs use a value of `0`. If there are more values than glyphs, extra values are ignored.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td>
-        List of (<strong
-          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
-        >
-        |
-        <strong
-          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
-        >)
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><em>none</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
 
 ## tspan
 

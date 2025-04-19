@@ -13,7 +13,7 @@ creates and returns a new {{domxref("DOMQuad")}} object, given the values for so
 all of its properties.
 
 You can also create a `DOMQuad` by calling the
-{{domxref("DOMQuad.fromRect()")}} or {{domxref("DOMQuad.fromQuad()")}} static function. That function accepts any object with the required parameters, including a `DOMQuad`, {{domxref("DOMPoint")}} or
+{{domxref("DOMQuad.fromRect_static", "DOMQuad.fromRect()")}} or {{domxref("DOMQuad.fromQuad_static", "DOMQuad.fromQuad()")}} static function. That function accepts any object with the required parameters, including a `DOMQuad`, {{domxref("DOMPoint")}} or
 {{domxref("DOMPointReadOnly")}}.
 
 ## Syntax

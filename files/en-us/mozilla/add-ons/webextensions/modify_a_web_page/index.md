@@ -135,7 +135,7 @@ Content scripts and background scripts can't directly access each other's state.
       <td>
         <code
           ><a
-            href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime#sendmessage()"
+            href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage"
             >browser.runtime.sendMessage()</a
           ></code
         >
@@ -162,7 +162,7 @@ Content scripts and background scripts can't directly access each other's state.
       <td>
         <code
           ><a
-            href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime#onmessage"
+            href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage"
             >browser.runtime.onMessage</a
           ></code
         >

@@ -3,9 +3,8 @@ title: What's in the head? Web page metadata
 short-title: Web page metadata
 slug: Learn_web_development/Core/Structuring_content/Webpage_metadata
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Basic_HTML_syntax", "Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "Learn_web_development/Core/Structuring_content")}}
 

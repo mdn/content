@@ -3,9 +3,8 @@ title: Basic math in JavaScript — numbers and operators
 short-title: Numbers and operators
 slug: Learn_web_development/Core/Scripting/Math
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting")}}
 
