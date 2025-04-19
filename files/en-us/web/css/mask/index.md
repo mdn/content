@@ -25,38 +25,6 @@ This property is a shorthand for the following CSS properties:
 > [!NOTE]
 > As the `mask` shorthand resets all the component properties as well as the {{cssxref("mask-border")}} properties to their initial values, the specification authors recommend using the `mask` shorthand rather than the individual component properties to override any mask values set earlier in the cascade. This ensures that `mask-border` is also reset, allowing the new styles to take effect.
 
-## Description
-
-The `mask` property hides part or all of the element it is applied to. Which parts are hidden, visible, or partially rendered depends on the opacity of the mask at that pixel. The sections masked by opaque parts of the mask are completely hidden, whereas transparent sections of the mask render the element visible.
-
-While not all constituent mask properties need to be declared, any values that are omitted default to their initial values, which are:
-
-```css
-mask-image: none;
-mask-mode: match-source;
-mask-position: 0% 0%;
-mask-size: auto;
-mask-repeat: repeat;
-mask-origin: border-box;
-mask-clip: border-box;
-mask-composite: add;
-```
-
-The order of some properties matters. Within each `<mask-layer>`, the `mask-size` component must go after the `mask-position` value, with a forward slash (`/`) separating the two. If one `<geometry-box>` value and the `no-clip` keyword are present, the `<geometry-box>` is the value of the `mask-origin` property, as the `no-clip` is only valid for the `mask-clip` property. In this case, the order of the two values doesn't matter. If only one `<geometry-box>` value is present (with no `no-clip` keyterm specified), this value is used for both the `mask-origin` and `mask-clip` properties. The order is important if there are two `<geometry-box>` values present; in this case, the first is the `mask-origin` value while the second is the `mask-clip` value.
-
-As the `mask` shorthand resets all the `mask-border-*` properties to their `initial` value, you should declare these properties — or the {{cssxref("mask-border")}} shorthand — after any `mask` declarations. When setting `mask` in your declaration block, you also implicitly set the following:
-
-```css
-mask-border-source: none;
-mask-border-mode: alpha;
-mask-border-outset: 0;
-mask-border-repeat: stretch;
-mask-border-slice: 0;
-mask-border-width: auto;
-```
-
-For this reason, the specification recommends using the `mask` shorthand rather than the individual component properties to override any masks set earlier in the cascade. This ensures that `mask-border` has also been reset.
-
 ## Syntax
 
 ```css
@@ -88,6 +56,38 @@ mask: revert;
 mask: revert-layer;
 mask: unset;
 ```
+
+## Description
+
+The `mask` property hides part or all of the element it is applied to. Which parts are hidden, visible, or partially rendered depends on the opacity of the mask at that pixel. The sections masked by opaque parts of the mask are completely hidden, whereas transparent sections of the mask render the element visible.
+
+While not all constituent mask properties need to be declared, any values that are omitted default to their initial values, which are:
+
+```css
+mask-image: none;
+mask-mode: match-source;
+mask-position: 0% 0%;
+mask-size: auto;
+mask-repeat: repeat;
+mask-origin: border-box;
+mask-clip: border-box;
+mask-composite: add;
+```
+
+The order of some properties matters. Within each `<mask-layer>`, the `mask-size` component must go after the `mask-position` value, with a forward slash (`/`) separating the two. If one `<geometry-box>` value and the `no-clip` keyword are present, the `<geometry-box>` is the value of the `mask-origin` property, as the `no-clip` is only valid for the `mask-clip` property. In this case, the order of the two values doesn't matter. If only one `<geometry-box>` value is present (with no `no-clip` keyterm specified), this value is used for both the `mask-origin` and `mask-clip` properties. The order is important if there are two `<geometry-box>` values present; in this case, the first is the `mask-origin` value while the second is the `mask-clip` value.
+
+As the `mask` shorthand resets all the `mask-border-*` properties to their `initial` value, you should declare these properties — or the {{cssxref("mask-border")}} shorthand — after any `mask` declarations. When setting `mask` in your declaration block, you also implicitly set the following:
+
+```css
+mask-border-source: none;
+mask-border-mode: alpha;
+mask-border-outset: 0;
+mask-border-repeat: stretch;
+mask-border-slice: 0;
+mask-border-width: auto;
+```
+
+For this reason, the specification recommends using the `mask` shorthand rather than the individual component properties to override any masks set earlier in the cascade. This ensures that `mask-border` has also been reset.
 
 ### Values
 
