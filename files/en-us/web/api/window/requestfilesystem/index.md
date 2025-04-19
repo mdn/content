@@ -44,7 +44,7 @@ requestFileSystem(type, size, successCallback, errorCallback)
   - : An optional parameter specifying a function which is called if an error occurs while
     attempting to obtain the file system, or if the user denies permission to create or
     access the file system. The callback receives as input a single parameter: a
-    `FileError` object describing the error.
+    `DOMError` object describing the error.
 
 ### Return value
 

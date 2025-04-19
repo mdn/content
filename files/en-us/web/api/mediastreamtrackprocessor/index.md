@@ -7,21 +7,17 @@ status:
 browser-compat: api.MediaStreamTrackProcessor
 ---
 
-{{APIRef("Insertable Streams for MediaStreamTrack API")}}{{SeeCompatTable}}
+{{APIRef("Insertable Streams for MediaStreamTrack API")}}{{SeeCompatTable}}{{AvailableInWorkers("dedicated")}}
 
 > [!WARNING]
 > Browsers differ on which global context they expose this interface in (e.g., only window in some browsers and only dedicated worker in others), making them incompatible. Keep this in mind when comparing support.
 
-The **`MediaStreamTrackProcessor`** interface of the [Insertable Streams for MediaStreamTrack API](/en-US/docs/Web/API/Insertable_Streams_for_MediaStreamTrack_API) consumes a video {{domxref("MediaStreamTrack")}} object's source and generates a stream of {{domxref("VideoFrame")}}s.
-
-This interface is only available in {{domxref("Worker","dedicated workers")}} (except as noted).
+The **`MediaStreamTrackProcessor`** interface of the [Insertable Streams for MediaStreamTrack API](/en-US/docs/Web/API/Insertable_Streams_for_MediaStreamTrack_API) consumes a video {{domxref("MediaStreamTrack")}} object's source and generates a stream of {{domxref("VideoFrame")}} objects.
 
 ## Constructor
 
 - {{domxref("MediaStreamTrackProcessor.MediaStreamTrackProcessor", "MediaStreamTrackProcessor()")}} {{Experimental_Inline}}
-
   - : Creates a new `MediaStreamTrackProcessor` object.
-
 - {{domxref("MediaStreamTrackProcessor.MediaStreamTrackProcessor", "window.MediaStreamTrackProcessor()")}} {{Experimental_Inline}} {{Non-standard_Inline}}
   - : Creates a new `MediaStreamTrackProcessor` object on the {{Glossary("main thread")}} that can process both video and audio.
 
@@ -56,11 +52,6 @@ onmessage = async ({ data: { track } }) => {
 };
 ```
 
-## See also
-
-- {{domxref("VideoTrackGenerator")}}
-- The older article [Insertable streams for MediaStreamTrack](https://developer.chrome.com/docs/capabilities/web-apis/mediastreamtrack-insertable-media-processing) was written before the API was restricted to workers and video (beware its use of the non-standard version of {{domxref("MediaStreamTrackProcessor")}} which blocks on the {{Glossary("main thread")}})
-
 ## Specifications
 
 {{Specifications}}
@@ -68,3 +59,10 @@ onmessage = async ({ data: { track } }) => {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("VideoTrackGenerator")}}
+- [Insertable streams for MediaStreamTrack](https://developer.chrome.com/docs/capabilities/web-apis/mediastreamtrack-insertable-media-processing) on developer.chrome.com
+  > [!NOTE]
+  > This article was written before the API was restricted to workers and video. Beware its use of the non-standard version of `MediaStreamTrackProcessor` which blocks on the {{Glossary("main thread")}}.

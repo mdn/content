@@ -4,7 +4,7 @@ slug: Web/API/Insertable_Streams_for_MediaStreamTrack_API
 page-type: web-api-overview
 ---
 
-{{DefaultAPISidebar("Insertable Streams for MediaStreamTrack API")}}{{SeeCompatTable}}
+{{DefaultAPISidebar("Insertable Streams for MediaStreamTrack API")}}{{SeeCompatTable}}{{AvailableInWorkers("dedicated")}}
 
 The **Insertable Streams for MediaStreamTrack API** provides a way to process the video frames of a {{domxref("MediaStreamTrack")}} as they are consumed.
 
@@ -12,7 +12,7 @@ The **Insertable Streams for MediaStreamTrack API** provides a way to process th
 
 When processing real-time video, you sometimes want to insert visual elements or otherwise process the stream of video frames. For example, an application might include two tracks that need to be combined, such as a weather map and video of a presenter explaining the map. Or, you may want to do processing on a track to blur backgrounds, or introduce other elements (such as adding funny hats to people, and so on). The APIs described here provide direct access to the video stream, allowing you to manipulate it in real time.
 
-To ensure optimal performance, the APIs are only available in {{domxref("Worker","dedicated workers")}} (unless otherwise stated).
+To ensure optimal performance, the APIs are only available in [dedicated workers](/en-US/docs/Web/API/DedicatedWorkerGlobalScope) (unless otherwise stated).
 
 ## Interfaces
 
