@@ -47,23 +47,19 @@ The truth table for the NOT operation is:
 ~9 (base 10) = 11111111111111111111111111110110 (base 2) = -10 (base 10)
 ```
 
-### Numbers
+Bitwise NOTing any 32-bit integer `x` yields `-(x + 1)`. For example, `~-5` yields `4`.
 
-Bitwise NOTing any number representable as a 32-bit signed integer `x` yields `-(x + 1)`. For example, `~-5` yields `4`.
+Numbers with more than 32 bits get their most significant bits discarded. For example, the following integer with more than 32 bits will be converted to a 32-bit integer:
 
-Numbers with more than 32 bits as a signed integer get their most significant bits discarded before the bitwise operation is performed. For example:
+```plain
+Before: 11100110111110100000000000000110000000000001
+After:              10100000000000000110000000000001
+```
 
-|                                                                                          Binary |                               Decimal |
-| ----------------------------------------------------------------------------------------------: | ------------------------------------: |
-| `11100110111110100000000000000110000000000001`<br>Truncated: `10100000000000000110000000000001` |          15872588537857<br>2684379137 |
-|             `11111111111111111111111111111111`<br>Truncated: `11111111111111111111111111111111` |                              -1<br>-1 |
-|            `011111111111111111111111111111111`<br>Truncated: `11111111111111111111111111111111` | 4294967295 (2<sup>32</sup> - 1)<br>-1 |
+> [!WARNING]
+> You may see people using `~~` to truncate numbers to integers. Bitwise NOTing any number `x` twice returns `x` converted to a 32-bit integer, which does not perform simple integer truncation for numbers greater than 2<sup>31</sup>. Use [`Math.trunc()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc#using_bitwise_no-ops_to_truncate_numbers) instead.
 
-Likewise, any non-integer part is also discarded. As a result, bitwise NOTing any number `x` twice returns `x` converted to a 32-bit integer, so `~~x` is occasionally used as a way of truncating arbitrary numbers to integers. However, [`Math.trunc()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc#using_bitwise_no-ops_to_truncate_numbers) is a better general-purpose method of truncating numbers, as it doesn't suffer from 32-bit integer overflow, and typically has near-identical performance in modern JavaScript engines.
-
-### BigInts
-
-For BigInts, no truncation takes place. Conceptually, positive BigInts have an infinite number of leading `0` bits, and negative BigInts have an infinite number of leading `1` bits.
+For BigInts, there's no truncation. Conceptually, understand positive BigInts as having an infinite number of leading `0` bits, and negative BigInts having an infinite number of leading `1` bits.
 
 ## Examples
 
