@@ -173,7 +173,7 @@ Let's return to our example and use CSS to improve the appearance of the text. W
 
    The `font-family` property sets the font(s) you want to apply to your HTML. This rule defines a global base font and font size for the whole page. All elements inside the {{HTMLElement("html")}} element will inherit the same `font-size` and `font-family`.
 
-6. Now let's set some font and text styles on our [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements), {{htmlelement("li")}}, and {{htmlelement("p")}} elements. We'll set new {{cssxref("font-size")}} values for each element. We'll also center the heading using {{cssxref("text-align")}} and increase the {{cssxref("line-height")}} and {{cssxref("letter-spacing")}} of the paragraphs and list items to make the body content more readable.
+6. Now let's set some font and text styles on our [`<h1>`](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements), {{htmlelement("li")}}, and {{htmlelement("p")}} elements. We'll set new {{cssxref("font-size")}} values for each element. We'll also center the heading using {{cssxref("text-align")}} and increase the {{cssxref("line-height")}} and {{cssxref("letter-spacing")}} of the paragraphs and list items to make the body content more readable.
 
    ```css
    h1 {
