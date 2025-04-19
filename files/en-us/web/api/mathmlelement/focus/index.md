@@ -8,9 +8,9 @@ browser-compat: api.MathMLElement.focus
 
 {{APIRef("MathML")}}
 
-The **`MathMLElement.focus()`** method sets focus on the specified MathML element, if it can be focused. The focused element is the element that will receive keyboard and similar events by default.
+The **`focus()`** method of the {{domxref("MathMLElement")}} interface sets focus on the specified MathML element, if it can be focused. The focused element is the element that will receive keyboard and similar events by default.
 
-By default the browser will scroll the element into view after focusing it, and it may also provide visible indication of the focused element (typically by displaying a "focus ring" around the element). Parameter options are provided to disable the default scrolling and force visible indication on elements. If you call `MathMLElement.focus()` from a mousedown event handler, you must call `event.preventDefault()` to keep the focus from leaving the `MathMLElement`
+By default the browser will scroll the element into view after focusing it, and it may also provide visible indication of the focused element (typically by displaying a "focus ring" around the element). Parameter options are provided to disable the default scrolling and force visible indication on elements. If you call `focus()` from a `mousedown` event handler, you must call `event.preventDefault()` to keep the focus from leaving the `MathMLElement`.
 
 ## Syntax
 

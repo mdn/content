@@ -23,7 +23,7 @@ An integer.
 
 ## Examples
 
-### Setting the `tabIndex` property
+### Using the tabIndex property
 
 ```html
 <math id="math1" tabindex="2">

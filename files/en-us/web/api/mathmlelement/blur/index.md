@@ -8,7 +8,7 @@ browser-compat: api.MathMLElement.blur
 
 {{APIRef("MathML")}}
 
-The **`MathMLElement.blur()`** method removes keyboard focus from the current MathML element.
+The **`blur()`** method of the {{domxref("MathMLElement")}} interface removes keyboard focus from the current MathML element.
 
 ## Syntax
 
