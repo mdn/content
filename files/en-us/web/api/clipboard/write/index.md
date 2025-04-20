@@ -140,20 +140,16 @@ canvas.addEventListener("click", copyCanvasContentsToClipboard);
 const target = document.getElementById("target");
 
 async function copyCanvasContentsToClipboard() {
-  if (ClipboardItem.supports?.("image/png")) {
-    // Copy canvas to blob
-    try {
-      const blob = await getBlobFromCanvas(canvas);
-      // Create ClipboardItem with blob and it's type, and add to an array
-      const data = [new ClipboardItem({ [blob.type]: blob })];
-      // Write the data to the clipboard
-      await navigator.clipboard.write(data);
-      log("Copied");
-    } catch (error) {
-      log(error);
-    }
-  } else {
-    log("image/png is not supported");
+  // Copy canvas to blob
+  try {
+    const blob = await getBlobFromCanvas(canvas);
+    // Create ClipboardItem with blob and it's type, and add to an array
+    const data = [new ClipboardItem({ [blob.type]: blob })];
+    // Write the data to the clipboard
+    await navigator.clipboard.write(data);
+    log("Copied");
+  } catch (error) {
+    log(error);
   }
 }
 ```
