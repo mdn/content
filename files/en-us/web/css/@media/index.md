@@ -16,12 +16,12 @@ The **`@media`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_sy
 
 ```css interactive-example
 abbr {
-  color: chocolate;
+  color: #FFB957; /* vibrant orange */
 }
 
 @media (hover: hover) {
   abbr:hover {
-    color: limegreen;
+    color: #001CA8; /* dark blue */
     transition-duration: 1s;
   }
 }
