@@ -140,7 +140,7 @@ canvas.addEventListener("click", copyCanvasContentsToClipboard);
 const target = document.getElementById("target");
 
 async function copyCanvasContentsToClipboard() {
-  if (ClipboardItem.supports("image/png")) {
+  if (ClipboardItem.supports && ClipboardItem.supports("image/png")) {
     // Copy canvas to blob
     try {
       const blob = await getBlobFromCanvas(canvas);
