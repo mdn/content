@@ -6,7 +6,8 @@ page-type: guide
 sidebar: privacy
 ---
 
-To access certain privacy sandbox features, browsers require developers to complete an **enrollment** process.
+To access certain privacy sandbox features, Google Chrome requires developers to complete an **enrollment** process.
+These features are currently still experimental and only available in Chrome and Chromium-based browsers and may or may not make it into other browsers.
 
 Enrollment provides a mechanism to verify the entities that call privacy sandbox features, and to gather the developer-specific data needed to properly configure and use them. The enrollment process adds an additional layer of protections on top of the structural restrictions enforced within each feature by adding transparency to who is collecting data, and mitigating attempts to misuse features to gather more data than intended.
 
@@ -24,9 +25,7 @@ The following features require enrollment to be usable:
 
 The documentation of each feature includes more details on exactly which sub-features will fail if enrollment is not completed, and how.
 
-## Browser enrollment information
-
-### Chrome
+## Enrollment information
 
 - **Instructions**: [Enroll for the Privacy Sandbox](https://github.com/privacysandbox/attestation/blob/main/how-to-enroll.md).
 - **Testing**: You do not need to enroll to test privacy sandbox features locally. To allow local testing, enable the `chrome://flags/#privacy-sandbox-enrollment-overrides` developer flag.
