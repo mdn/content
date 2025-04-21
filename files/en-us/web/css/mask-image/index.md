@@ -244,9 +244,7 @@ We apply a different `<mask>` to each `<img>`. No part of the last image will be
 #alphaMode {
   mask-image: url(#black);
 }
-```
 
-```css hidden
 body:has(:checked) img {
   mask-type: alpha;
 }
@@ -256,7 +254,7 @@ body:has(:checked) img {
 
 {{EmbedLiveSample("SVG elements as masks", "100%", 500)}}
 
-Toggle the checkbox to toggle the value of last image's `mask-type` between `alpha` (checked) and the default `luminance` (unchecked). When `alpha` is used, the color of the mask doesn't matter. All that matters is the alpha-transparency.
+Toggle the checkbox to toggle the value of last image's `mask-type` between `alpha` (checked) and the initial value which defaults to `luminance` (unchecked). When `alpha` is used, the color of the mask doesn't matter. All that matters is the alpha-transparency.
 
 ## Specifications
 
