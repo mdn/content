@@ -28,11 +28,10 @@ browser-compat: webextensions.manifest.author
   </tbody>
 </table>
 
-The extension's author, intended for display in the browser's user interface. If the [developer](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer) key is supplied and it contains the "name" property, it overrides the author key. There's no way to specify multiple authors.
-
-From Manifest V3, Chrome prefers this key to be an object, but the Chrome Web Store continues to accept a string value. When publishing to the Chrome Web Store, this key (if specified) must match the email address of the account used to publish the extension. If this item is specified as an object, Firefox ignores it. In this case, you can define the author to Firefox using the [developer](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer) key.
-
-This is a [localizable property](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
+The extension's author, intended for display in the browser's user interface. The type and meaning of this key vary depending on the browser and [manifest_version](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version). The string held by value is a [localizable property](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
+Chrome expects this key to represent the email address of the extension’s author. In Manifest V2, the value must be a string. From Manifest V3, Chrome prefers the value to be an object with an `email` property and a string value. When publishing to the Chrome Web Store, either data structure is accepted, but the string value must match the email address of the account used to publish the extension. 
+Firefox expects this key to represent the name of the person or entity that developed the extension. Firefox expects a string; if it is declared as an object, Firefox ignores it. If the [developer](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer) key is also specified as an object with a `name` property, the value of name overrides the `author` key.
+When targeting Chrome and Firefox, use the `author` key to identify the author in Chrome and the `developer` key to identify the author in Firefox.
 
 ## Example
 
