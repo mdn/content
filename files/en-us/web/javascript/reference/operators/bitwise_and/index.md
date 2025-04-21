@@ -55,7 +55,7 @@ After:              10100000000000000110000000000001
 ```
 
 > [!WARNING]
-> You may see people using `& -1` to truncate numbers to integers. Bitwise ANDing any number `x` with `-1` returns `x` converted to a 32-bit integer, which does not perform simple integer truncation for numbers greater than 2<sup>31</sup>. Use [`Math.trunc()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc#using_bitwise_no-ops_to_truncate_numbers) instead.
+> You may see people using `& -1` to truncate numbers to integers. Bitwise ANDing any number `x` with `-1` returns `x` converted to a 32-bit integer, which additionally removes leading bits for numbers greater than 2<sup>31</sup>. Use [`Math.trunc()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc#using_bitwise_no-ops_to_truncate_numbers) instead.
 
 For BigInts, there's no truncation. Conceptually, understand positive BigInts as having an infinite number of leading `0` bits, and negative BigInts having an infinite number of leading `1` bits.
 
