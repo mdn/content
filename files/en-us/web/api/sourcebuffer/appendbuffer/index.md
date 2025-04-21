@@ -82,13 +82,15 @@ sourceBuffer.addEventListener("error", function (e) {
 try {
   sourceBuffer.appendBuffer(invalidData); // invalidData is not a BufferSource
 } catch (e) {
-    if (e instanceof InvalidStateError) {
-        console.error("InvalidStateError: The SourceBuffer is in an invalid state.");
-    } else if (e instanceof QuotaExceededError) {
-        console.error("QuotaExceededError: The buffer is full.");
-    } else {
-        console.error("An unexpected error occurred:", e);
-    }
+  if (e instanceof InvalidStateError) {
+    console.error(
+      "InvalidStateError: The SourceBuffer is in an invalid state.",
+    );
+  } else if (e instanceof QuotaExceededError) {
+    console.error("QuotaExceededError: The buffer is full.");
+  } else {
+    console.error("An unexpected error occurred:", e);
+  }
 }
 ```
 
