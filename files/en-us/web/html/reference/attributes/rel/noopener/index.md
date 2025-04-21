@@ -1,5 +1,5 @@
 ---
-title: rel=noopener
+title: rel="noopener"
 slug: Web/HTML/Reference/Attributes/rel/noopener
 page-type: html-attribute-value
 browser-compat:

@@ -20,11 +20,8 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("animate")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
-- {{SVGElement("cursor")}}
 - {{SVGElement("feImage")}}
 - {{SVGElement("filter")}}
-- {{SVGElement("font-face-uri")}}
-- {{SVGElement("glyphRef")}}
 - {{SVGElement("image")}}
 - {{SVGElement("linearGradient")}}
 - {{SVGElement("mpath")}}
@@ -33,7 +30,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("script")}}
 - {{SVGElement("set")}}
 - {{SVGElement("textPath")}}
-- {{SVGElement("tref")}}
 - {{SVGElement("use")}}
 
 ## Usage notes

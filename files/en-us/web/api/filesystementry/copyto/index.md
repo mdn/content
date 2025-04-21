@@ -46,7 +46,7 @@ copyTo(newParent, newName, successCallback, errorCallback)
     providing the copied item's new details.
 - `errorCallback` {{optional_inline}}
   - : An optional callback which is executed if an error occurs while copying the items.
-    There's a single parameter: a {{domxref("FileError")}} describing what went wrong.
+    There's a single parameter: a {{domxref("DOMException")}} describing what went wrong.
 
 ### Return value
 
@@ -54,11 +54,11 @@ None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- `FileError.INVALID_MODIFICATION_ERR`
+- `DOMException.INVALID_MODIFICATION_ERR`
   - : The requested operation involves an impossible change, such as moving a directory
     inside itself or one of its own child directories, or copying an item within the same
     directory without renaming it.
-- `FileError.QUOTA_EXCEEDED_ERR`
+- `DOMException.QUOTA_EXCEEDED_ERR`
   - : The operation exceeded the user's storage quota, or there isn't enough storage space
     left to complete the operation.
 

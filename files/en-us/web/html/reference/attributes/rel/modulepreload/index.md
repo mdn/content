@@ -1,5 +1,5 @@
 ---
-title: rel=modulepreload
+title: rel="modulepreload"
 slug: Web/HTML/Reference/Attributes/rel/modulepreload
 page-type: html-attribute-value
 browser-compat: html.elements.link.rel.modulepreload

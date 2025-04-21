@@ -90,8 +90,4 @@ This code shows how we might apply the custom "My Font" to the `<text>` element.
 Note that this is similar to applying style to an HTML element.
 While there are cases where it can be useful, generally it is better to use CSS and CSS selectors.
 
-> [!NOTE]
-> The older SVG font format using {{ SVGElement("font") }} and {{ SVGElement("font-face") }} elements is deprecated and should not be used.
-> Using CSS provides better performance and compatibility.
-
 {{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Filter_effects", "Web/SVG/Tutorials/SVG_from_scratch/Image_element") }}
