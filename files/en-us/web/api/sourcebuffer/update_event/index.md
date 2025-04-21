@@ -28,9 +28,9 @@ The `update` event is fired by a `SourceBuffer` object to signal the successful 
 
 ## Event handler
 
-| Property | Type         | Description                                      |
-|----------|--------------|--------------------------------------------------|
-| `onupdate`  | `EventHandler` | The function to be called when the `update` event occurs. |
+| Property   | Type           | Description                                               |
+| ---------- | -------------- | --------------------------------------------------------- |
+| `onupdate` | `EventHandler` | The function to be called when the `update` event occurs. |
 
 ### Event handler syntax
 
