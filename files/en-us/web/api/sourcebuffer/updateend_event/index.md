@@ -28,9 +28,9 @@ The `updateend` event is fired by a `SourceBuffer` object to signal the completi
 
 ## Event handler
 
-| Property | Type         | Description                                      |
-|----------|--------------|--------------------------------------------------|
-| `onupdateend`  | `EventHandler` | The function to be called when the `updateend` event occurs. |
+| Property      | Type           | Description                                                  |
+| ------------- | -------------- | ------------------------------------------------------------ |
+| `onupdateend` | `EventHandler` | The function to be called when the `updateend` event occurs. |
 
 ### Event handler syntax
 
