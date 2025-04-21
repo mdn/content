@@ -62,6 +62,6 @@ The [`stack` example](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exc
 
 ## See also
 
-- [WebAssembly](/en-US/docs/WebAssembly) overview
+- [WebAssembly](/en-US/docs/WebAssembly) overview page
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Guides/Concepts)
 - [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Guides/Using_the_JavaScript_API)

@@ -50,6 +50,6 @@ const tag = new WebAssembly.Tag({ parameters: ["i32", "i64"] });
 
 ## See also
 
-- [WebAssembly](/en-US/docs/WebAssembly) overview
+- [WebAssembly](/en-US/docs/WebAssembly) overview page
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Guides/Concepts)
 - [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Guides/Using_the_JavaScript_API)

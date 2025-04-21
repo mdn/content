@@ -77,6 +77,6 @@ If the tag was used to throw an exception that propagated to JavaScript, we coul
 
 ## See also
 
-- [WebAssembly](/en-US/docs/WebAssembly) overview
+- [WebAssembly](/en-US/docs/WebAssembly) overview page
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Guides/Concepts)
 - [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Guides/Using_the_JavaScript_API)
