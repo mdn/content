@@ -47,7 +47,7 @@ This example demonstrates adding video data to a video element for playback. The
 
 ```js
 const mediaSource = new MediaSource();
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 video.src = URL.createObjectURL(mediaSource);
 
 mediaSource.addEventListener('sourceopen', function () {
