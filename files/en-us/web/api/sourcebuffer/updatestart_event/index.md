@@ -46,10 +46,7 @@ sourceBuffer.onupdatestart = (event) => {
 
 This example demonstrates how to handle the `updatestart` event before an `appendBuffer()` operation.
 
-```html-nolint
-<video id="myVideo"></video>
-
-<script>
+```js-nolint
 const video = document.getElementById("myVideo");
 const mediaSource = new MediaSource();
 
@@ -73,7 +70,6 @@ mediaSource.addEventListener("sourceopen", () => {
 mediaSource.addEventListener("sourceended", () => {
   URL.revokeObjectURL(video.src);
 });
-</script>
 ```
 
 ## Specifications

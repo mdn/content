@@ -46,10 +46,7 @@ sourceBuffer.onerror = (event) => {
 
 This example demonstrates how to handle errors that occur during the `appendBuffer()` operation.
 
-```html-nolint
-<video id="myVideo"></video>
-
-<script>
+```js-nolint
 const video = document.getElementById("myVideo");
 const mediaSource = new MediaSource();
 
@@ -76,7 +73,6 @@ mediaSource.addEventListener("sourceopen", () => {
 mediaSource.addEventListener("sourceended", () => {
   URL.revokeObjectURL(video.src);
 });
-</script>
 ```
 
 ## Specifications
