@@ -1,5 +1,6 @@
 ---
-title: SourceBuffer: error event
+title: "SourceBuffer: error event"
+short-title: error
 slug: Web/API/SourceBuffer/error_event
 page-type: web-api-event
 browser-compat: api.SourceBuffer.error_event
@@ -19,11 +20,11 @@ sourceBuffer.addEventListener("error", (event) => {
 
 ## Event type
 
-{{domxref("Event")}
+{{domxref("Event")}}
 
 ## Description
 
-The `error` event is fired by a {{domxref("SourceBuffer")}} object to signal that an error occurred while attempting to add or remove media data. This may happen, for example, if the data being appended is not in the expected format, the `SourceBuffer` is in an invalid state, or the user agent is unable to process the data. The updating attribute transitions from true to false.
+The `error` event is fired by a {{domxref("SourceBuffer")}} object to signal that an error occurred while attempting to add or remove media data. This may happen, for example, if the data being appended is not in the expected format, the `SourceBuffer` is in an invalid state, or the user agent is unable to process the data. The `updating` attribute transitions from true to false.
 
 ## Event handler
 
@@ -77,3 +78,11 @@ mediaSource.addEventListener("sourceended", () => {
 });
 </script>
 ```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
