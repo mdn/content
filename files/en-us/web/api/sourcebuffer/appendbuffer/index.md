@@ -31,13 +31,13 @@ None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-{{domxref("DOMException")}}
-
-- `QuotaExceededError`: The buffer is full, and no more data can be appended. This might occur if the `SourceBuffer` has reached a browser-defined limit on the amount of buffered data.
-- `InvalidStateError`:
-  - The `SourceBuffer` object's `updating` attribute is `true`. You must wait for any previous append, update, or remove operations to complete (indicated by the `updateend` event) before calling `appendBuffer()` again.
-  - The `SourceBuffer` has been removed from the `sourceBuffers` attribute of the parent media source.
-  - The `HTMLMediaElement`'s `error` attribute is not null
+- {{domxref("DOMException")}} `QuotaExceededError`
+  - : The buffer is full, and no more data can be appended. This might occur if the `SourceBuffer` has reached a browser-defined limit on the amount of buffered data.
+- {{domxref("DOMException")}} `InvalidStateError`
+  - : Thrown in one of the following cases:
+    - The `SourceBuffer` object's `updating` attribute is `true`. You must wait for any previous append, update, or remove operations to complete (indicated by the `updateend` event) before calling `appendBuffer()` again.
+    - The `SourceBuffer` has been removed from the `sourceBuffers` attribute of the parent media source.
+    - The `HTMLMediaElement`'s `error` attribute is not null.
 
 ## Examples
 
@@ -50,7 +50,7 @@ const mediaSource = new MediaSource();
 const video = document.querySelector("video");
 video.src = URL.createObjectURL(mediaSource);
 
-mediaSource.addEventListener("sourceopen", function () {
+mediaSource.addEventListener("sourceopen", () => {
   const sourceBuffer = mediaSource.addSourceBuffer(
     'video/mp4; codecs="avc1.42E01E, mp4a.40.2"',
   );
@@ -59,7 +59,7 @@ mediaSource.addEventListener("sourceopen", function () {
     .then((response) => response.arrayBuffer())
     .then((buffer) => {
       sourceBuffer.appendBuffer(buffer);
-      sourceBuffer.addEventListener("updateend", function () {
+      sourceBuffer.addEventListener("updateend", () => {
         if (mediaSource.readyState === "open") {
           mediaSource.endOfStream();
         }
@@ -70,10 +70,10 @@ mediaSource.addEventListener("sourceopen", function () {
 
 ### Handling errors
 
-This example demonstrates how to handle errors that may occur when calling `appendBuffer()`. The `SourceBuffer`'s `error` event is listened to for error reporting. A `try-catch` block attempts to append invalid data to the `SourceBuffer`, which will cause an error to be thrown. The code handles `InvalidStateError` and `QuotaExceededError` and logs a generic error for any other error.
+This example demonstrates how to handle errors that may occur when calling `appendBuffer()`. The `SourceBuffer`'s `error` event is listened to for error reporting. A `try...catch` block attempts to append invalid data to the `SourceBuffer`, which will cause an error to be thrown. The code handles `InvalidStateError` and `QuotaExceededError` and logs a generic error for any other error.
 
 ```js
-sourceBuffer.addEventListener("error", function (e) {
+sourceBuffer.addEventListener("error", (e) => {
   console.error("Error appending buffer:", e);
   // Handle the error appropriately, e.g., show a message to the user,
   // try a different source, or stop playback.
