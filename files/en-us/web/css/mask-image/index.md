@@ -7,7 +7,7 @@ browser-compat: css.properties.mask-image
 
 {{CSSRef}}
 
-The **`mask-image`** [CSS](/en-US/docs/Web/CSS) property sets the image that is used as mask layer for an element, hiding sections of the element on which the masking image is set based on the alpha channel of the mask image and, depending on the {{cssxref("mask-mode")}} property value, the luminance of the mask image's colors.
+The **`mask-image`** [CSS](/en-US/docs/Web/CSS) property sets the image that is used as mask layer for an element, hiding sections of the element on which the masking image is set based on the alpha channel of the mask image and, depending on the {{cssxref("mask-mode")}} and {{cssxref("mask-type")}} property values, the luminance of the mask image's colors.
 
 ## Syntax
 
@@ -48,7 +48,7 @@ mask-image: unset;
 
 ## Description
 
-The `mask-image` provides the mask that hides part of the element on which it is applied. Because the default value of the {{cssxref("mask-mode")}} property is `match-source`, whether the alpha channels alone or also the luminance of the mask is used by default depends on the source. In all cases, the alpha-transparency of the mask matters; element areas masked by opaque sections of the `mask-image` will be rendered, while areas masked by transparent image sections will not be visible. In `alpha` cases, the colors of the opaque and semi opaque areas don't matter. However, if the {{cssxref("mask-mode")}} property is set to `luminance` or defaults to `luminance` because that is the mode of the source, such as is the case for SVG {{svgelement("mask")}} elements, the masking values is the luminance value of each color multiplied by it's alpha value.
+The `mask-image` provides the mask that hides part of the element on which it is applied. Because the default value of the {{cssxref("mask-mode")}} property is `match-source`, whether the alpha channels alone or also the luminance of the mask is used by default depends on the source. In all cases, the alpha-transparency of the mask matters; element areas masked by opaque sections of the `mask-image` will be rendered, while areas masked by transparent image sections are not made visible. In `alpha` cases, the colors of the opaque and semi opaque areas don't matter. However, if the {{cssxref("mask-mode")}} property is set to `luminance` or defaults to `luminance` because that is the default or set `mask-type` of the SVG mask source, the masking values is the luminance value of each color multiplied by it's alpha value.
 
 A mask will be counted as a transparent black image layer, not revealing anything, in the following cases:
 
@@ -166,7 +166,7 @@ img {
 
 ### Masking with SVG `<mask>`
 
-This example demonstrates using SVG {{svgelement("mask")}} elements as masks. In this case, the color of the mask matters as {{cssxref("mask-mode")}} defaults to `match-source`, which in the case of SVG masks resolves to `luminance` .
+This example demonstrates using SVG {{svgelement("mask")}} elements as masks. In this case, the color of the mask matters as {{cssxref("mask-type")}} for SVG masks defaults to `luminance` .
 
 #### HTML
 
@@ -220,16 +220,16 @@ We included an `id` for each of our four images, and an SVG that contains and eq
 
 ```html hidden
 <p>
-  <label
-    ><input type="checkbox" /> Use <code>luminance</code> on the last
-    image.</label
-  >
+  <label>
+    <input type="checkbox" />
+    Set the <code>mask-type</code> to <code>alpha</code>.
+  </label>
 </p>
 ```
 
 #### CSS
 
-We apply a different `<mask>` to each `<img>`. No part of the last image will be visible by default because, in this case, while all colors used in this example are fully opaque, the `mask-mode` resolves to `luminance.
+We apply a different `<mask>` to each `<img>`. No part of the last image will be visible by default because, in this case, while all colors used in this example are fully opaque, the `mask-type` defaults to `luminance`.
 
 ```css
 #green {
@@ -248,7 +248,7 @@ We apply a different `<mask>` to each `<img>`. No part of the last image will be
 
 ```css hidden
 body:has(:checked) img {
-  mask-mode: alpha;
+  mask-type: alpha;
 }
 ```
 
@@ -256,7 +256,7 @@ body:has(:checked) img {
 
 {{EmbedLiveSample("SVG elements as masks", "100%", 500)}}
 
-Toggle the checkbox to toggle the value of last image's `mask-mode` between `alpha` (checked) and `luminance` (unchecked). When `alpha` is used, the color of the mask doesn't matter. All that matters is the alpha-transparency.
+Toggle the checkbox to toggle the value of last image's `mask-type` between `alpha` (checked) and the default `luminance` (unchecked). When `alpha` is used, the color of the mask doesn't matter. All that matters is the alpha-transparency.
 
 ## Specifications
 
