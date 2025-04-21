@@ -57,6 +57,29 @@ mask: revert-layer;
 mask: unset;
 ```
 
+### Values
+
+- `<mask-layer>`
+
+  - : One or more comma-separated mask layers, consisting of the following components:
+
+    - `<mask-reference>`
+      - : Sets the mask image source. See {{cssxref("mask-image")}}.
+    - `<masking-mode>`
+      - : Sets the masking mode of the mask image. See {{cssxref("mask-mode")}}.
+    - `<position>`
+      - : Sets the position of the mask image. See {{cssxref("mask-position")}}.
+    - `<bg-size>`
+      - : Sets the size of the mask image. See {{cssxref("mask-size")}}.
+    - `<repeat-style>`
+      - : Sets the repetition of the mask image. See {{cssxref("mask-repeat")}}.
+    - `<geometry-box>`
+      - : If only one `<geometry-box>` value is given, it sets both {{cssxref("mask-origin")}} and {{cssxref("mask-clip")}}. If two `<geometry-box>` values are present, then the first sets {{cssxref("mask-origin")}} and the second sets {{cssxref("mask-clip")}}.
+    - `<geometry-box> | no-clip`
+      - : Sets the area affected by the mask image. See {{cssxref("mask-clip")}}.
+    - `<compositing-operator>`
+      - : Sets the compositing operation used on the current mask layer. See {{cssxref("mask-composite")}}.
+
 ## Description
 
 The `mask` property hides part or all of the element it is applied to. Which parts are hidden, visible, or partially rendered depends on the opacity of the mask at that pixel. The sections masked by opaque parts of the mask are completely hidden, whereas transparent sections of the mask render the element visible.
@@ -90,29 +113,6 @@ mask-border-width: auto;
 ```
 
 For this reason, the specification recommends using the `mask` shorthand rather than the individual component properties to override any masks set earlier in the cascade. This ensures that `mask-border` has also been reset.
-
-### Values
-
-- `<mask-layer>`
-
-  - : One or more comma-separated mask layers, consisting of the following components:
-
-    - `<mask-reference>`
-      - : Sets the mask image source. See {{cssxref("mask-image")}}.
-    - `<masking-mode>`
-      - : Sets the masking mode of the mask image. See {{cssxref("mask-mode")}}.
-    - `<position>`
-      - : Sets the position of the mask image. See {{cssxref("mask-position")}}.
-    - `<bg-size>`
-      - : Sets the size of the mask image. See {{cssxref("mask-size")}}.
-    - `<repeat-style>`
-      - : Sets the repetition of the mask image. See {{cssxref("mask-repeat")}}.
-    - `<geometry-box>`
-      - : If only one `<geometry-box>` value is given, it sets both {{cssxref("mask-origin")}} and {{cssxref("mask-clip")}}. If two `<geometry-box>` values are present, then the first sets {{cssxref("mask-origin")}} and the second sets {{cssxref("mask-clip")}}.
-    - `<geometry-box> | no-clip`
-      - : Sets the area affected by the mask image. See {{cssxref("mask-clip")}}.
-    - `<compositing-operator>`
-      - : Sets the compositing operation used on the current mask layer. See {{cssxref("mask-composite")}}.
 
 ## Formal definition
 
