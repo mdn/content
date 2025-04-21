@@ -9,7 +9,7 @@ browser-compat: webextensions.api.browserSettings.overrideContentColorScheme
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object whose underlying value is a string.
 
-Firefox enables users to choose a theme for the browser UI. These themes apply either a light or dark theme to webpages. Using the `layout.css.prefers-color-scheme.content-override` preference, users can override the theme and choose to render webpages in a light or dark theme or follow the chosen theme. This browser setting exposes that preference.
+Firefox enables users to choose a theme for the browser UI. These themes apply either a light or dark theme to webpages. Using the `layout.css.prefers-color-scheme.content-override` preference, users can override the theme and choose to render webpages in a light or dark theme. This browser setting exposes that preference.
 
 This object takes these values:
 
