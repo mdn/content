@@ -73,10 +73,10 @@ mediaSource.addEventListener("sourceopen", function () {
 This example demonstrates how to handle errors that may occur when calling `appendBuffer()`. The `SourceBuffer`'s `error` event is listened to for error reporting. A `try-catch` block attempts to append invalid data to the `SourceBuffer`, which will cause an error to be thrown. The code handles `InvalidStateError` and `QuotaExceededError` and logs a generic error for any other error.
 
 ```js
-sourceBuffer.addEventListener('error', function (e) {
-    console.error('Error appending buffer:', e);
-    // Handle the error appropriately, e.g., show a message to the user,
-    // try a different source, or stop playback.
+sourceBuffer.addEventListener("error", function (e) {
+  console.error("Error appending buffer:", e);
+  // Handle the error appropriately, e.g., show a message to the user,
+  // try a different source, or stop playback.
 });
 
 try {
