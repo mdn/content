@@ -28,9 +28,9 @@ The `updatestart` event is fired by a `SourceBuffer` object to signal the begini
 
 ## Event handler
 
-| Property | Type         | Description                                      |
-|----------|--------------|--------------------------------------------------|
-| `onupdatestart`  | `EventHandler` | The function to be called when the `updatestart` event occurs. |
+| Property        | Type           | Description                                                    |
+| --------------- | -------------- | -------------------------------------------------------------- |
+| `onupdatestart` | `EventHandler` | The function to be called when the `updatestart` event occurs. |
 
 ### Event handler syntax
 
