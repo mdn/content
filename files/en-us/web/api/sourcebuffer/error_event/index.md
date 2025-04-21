@@ -28,9 +28,9 @@ The `error` event is fired by a {{domxref("SourceBuffer")}} object to signal tha
 
 ## Event handler
 
-| Property | Type         | Description                                      |
-|----------|--------------|--------------------------------------------------|
-| `onerror`  | `EventHandler` | The function to be called when the `error` event occurs. |
+| Property  | Type           | Description                                              |
+| --------- | -------------- | -------------------------------------------------------- |
+| `onerror` | `EventHandler` | The function to be called when the `error` event occurs. |
 
 ### Event handler syntax
 
