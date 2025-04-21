@@ -50,19 +50,21 @@ const mediaSource = new MediaSource();
 const video = document.querySelector("video");
 video.src = URL.createObjectURL(mediaSource);
 
-mediaSource.addEventListener('sourceopen', function () {
-    const sourceBuffer = mediaSource.addSourceBuffer('video/mp4; codecs="avc1.42E01E, mp4a.40.2"');
+mediaSource.addEventListener("sourceopen", function () {
+  const sourceBuffer = mediaSource.addSourceBuffer(
+    'video/mp4; codecs="avc1.42E01E, mp4a.40.2"',
+  );
 
-    fetch('/my-video-segment.mp4')
-        .then(response => response.arrayBuffer())
-        .then(buffer => {
-            sourceBuffer.appendBuffer(buffer);
-            sourceBuffer.addEventListener('updateend', function () {
-                if (mediaSource.readyState === 'open') {
-                    mediaSource.endOfStream();
-                }
-            });
-        });
+  fetch("/my-video-segment.mp4")
+    .then((response) => response.arrayBuffer())
+    .then((buffer) => {
+      sourceBuffer.appendBuffer(buffer);
+      sourceBuffer.addEventListener("updateend", function () {
+        if (mediaSource.readyState === "open") {
+          mediaSource.endOfStream();
+        }
+      });
+    });
 });
 ```
 
