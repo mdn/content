@@ -33,8 +33,8 @@ None ({{jsxref("undefined")}}).
 
 {{domxref("DOMException")}}
 
-* `QuotaExceededError`: The buffer is full, and no more data can be appended. This might occur if the `SourceBuffer` has reached a browser-defined limit on the amount of buffered data.
-* `InvalidStateError`:
+- `QuotaExceededError`: The buffer is full, and no more data can be appended. This might occur if the `SourceBuffer` has reached a browser-defined limit on the amount of buffered data.
+- `InvalidStateError`:
   - The `SourceBuffer` object's `updating` attribute is `true`. You must wait for any previous append, update, or remove operations to complete (indicated by the `updateend` event) before calling `appendBuffer()` again.
   - The `SourceBuffer` has been removed from the `sourceBuffers` attribute of the parent media source.
   - The `HTMLMediaElement`'s `error` attribute is not null
