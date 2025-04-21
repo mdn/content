@@ -24,7 +24,7 @@ sourceBuffer.addEventListener('abort', (event) => {
 
 ## Description
 
-The `abort` event is fired when the {{domxref("SourceBuffer.abort()")}} method is called on a {{domxref("SourceBuffer")}} object. This typically occurs when an ongoing append operation is terminated. When an abort event is fired, the `SourceBuffer`'s `updating` attribute is also set to false.
+The `abort` event is fired when the {{domxref("SourceBuffer.abort()")}} method is called on a {{domxref("SourceBuffer")}} object. This typically occurs when an ongoing append operation is terminated. When an abort event is fired, the `SourceBuffer`'s `updating` attribute is also set to `false`.
 
 ## Event handler
 

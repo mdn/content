@@ -24,13 +24,13 @@ sourceBuffer.addEventListener('update', (event) => {
 
 ## Description
 
-The `update` event is fired by a `SourceBuffer` object to signal the successful completion of an {{domxref("SourceBuffer.appendBuffer()")}} or {{domxref("SourceBuffer.remove()")}} operation. The `updating` attribute transitions from true to false when this event is fired. This event is fired before the `updateend` event.
+The `update` event is fired by a `SourceBuffer` object to signal the successful completion of an {{domxref("SourceBuffer.appendBuffer()")}} or {{domxref("SourceBuffer.remove()")}} operation. The `updating` attribute transitions from `true` to `false`. This event is fired before the `updateend` event.
 
 ## Event handler
 
 | Property | Type         | Description                                      |
 |----------|--------------|--------------------------------------------------|
-| `onupdate`  | `EventHandler` | The function to be called when the `updae` event occurs. |
+| `onupdate`  | `EventHandler` | The function to be called when the `update` event occurs. |
 
 ### Event handler syntax
 
