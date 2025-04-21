@@ -253,39 +253,6 @@ div {
 
 The visibility, or at least partial visibility, of the four border sides in the clip path example defined by the `shape()` function is due to the percentage values allowing the path to grow with the element. In the `path()` version, the element grew, but not the shape. As a result, the top and left borders are partially visible while the right and bottom borders are clipped out.
 
-### Shape() versus path() functions
-
-Expanding on the previous example, we create the same shape with different `<basic-shape>` values, demonstrate how the {{cssxref("basic-shape/shape","shape()")}}`and {{cssxref("basic-shape/path","path()")}} functions can also be used to create clipping paths, with`shape()` being a more flexible solution.
-
-We use `path()` to define the first element's clipping path, and `shape()` for the second to create a triangle, both using the default `border-box` as their references box:
-
-```css live-sample___shapes2 live-sample___shapes3
-div {
-  clip-path: path("M100 0 L200 200 L0 200 Z");
-}
-
-div:last-of-type {
-  clip-path: shape(from 50% 0, line to 100% 100%, line to 0 100%, close);
-}
-```
-
-{{EmbedLiveSample("shapes2", "", "230")}}
-
-Because the `shape()` function allows using {{cssxref("percentage")}} values (and {{cssxref("--*", "custom properties")}} too), it is more robust.
-
-Expanding on the previous result, the only change we make here is an increase the size of the underlying element:
-
-```css live-sample___shapes3
-div {
-  width: 250px;
-  height: 250px;
-}
-```
-
-{{EmbedLiveSample("shapes3", "", "280")}}
-
-The path defined with the `shape()` function grew with the element. You'll note by the visibility or at least partial visibility of the four border sides in the clip path example defined by the `shape()` function; by using percentages, the path grew with the element. In the `path()` version, the top and left borders being partially visible while the right and bottom borders are clipped out.
-
 ### SVG as clip source
 
 In this example, we define SVG {{svgElement("clipPath")}} elements to use as a `clip-path` source.
