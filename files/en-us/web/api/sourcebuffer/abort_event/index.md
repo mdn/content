@@ -28,9 +28,9 @@ The `abort` event is fired when the {{domxref("SourceBuffer.abort()")}} method i
 
 ## Event handler
 
-| Property | Type         | Description                                      |
-|----------|--------------|--------------------------------------------------|
-| `onabort`  | `EventHandler` | The function to be called when the `abort` event occurs. |
+| Property  | Type           | Description                                              |
+| --------- | -------------- | -------------------------------------------------------- |
+| `onabort` | `EventHandler` | The function to be called when the `abort` event occurs. |
 
 ### Event handler syntax
 
