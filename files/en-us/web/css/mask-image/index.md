@@ -7,8 +7,7 @@ browser-compat: css.properties.mask-image
 
 {{CSSRef}}
 
-The **`mask-image`** [CSS](/en-US/docs/Web/CSS) property sets the image that is used as mask layer for an element.
-By default this means the alpha channel of the mask image will be multiplied with the alpha channel of the element. This can be controlled with the {{cssxref("mask-mode")}} property.
+The **`mask-image`** [CSS](/en-US/docs/Web/CSS) property sets the image that is used as mask layer for an element, hiding sections of the element on which the masking image is set based on the alpha channel of the mask image and, depending on the {{cssxref("mask-mode")}} property value, the luminance of the mask image's colors.
 
 ## Syntax
 
@@ -24,8 +23,7 @@ mask-image: linear-gradient(rgb(0 0 0 / 100%), transparent);
 mask-image: image(url(mask.png), skyblue);
 
 /* Multiple values */
-mask-image:
-  image(url(mask.png), skyblue), linear-gradient(rgb(0 0 0 / 100%), transparent);
+mask-image: url(mask.png), linear-gradient(black 25%, transparent 35%);
 
 /* Global values */
 mask-image: inherit;
@@ -50,9 +48,9 @@ mask-image: unset;
 
 ## Description
 
-The `mask-image` provides the mask that hides part of the element on which it is applied. Because the default value of the {{cssxref("mask-mode")}} property is `match-source`, whether the alphatransparecy or luminance of the mask is used depends on the source. In all cases, the alpha-transparency of the mask matters; element areas masked by opaque sections of the `mask-image` will be rendered, while areas masked by transparent image sections will not be visible. In many cases, the color of the opaque and semi opaque areas doesn't matter. However, if the {{cssxref("mask-mode")}} property is set to `luminance` or defaults to `luminance` because that is the mode of the source, such as is the case for SVG mask, the mask value is the luminance value of each color multiplied by it's alpha value.
+The `mask-image` provides the mask that hides part of the element on which it is applied. Because the default value of the {{cssxref("mask-mode")}} property is `match-source`, whether the alpha channels alone or also the luminance of the mask is used by default depends on the source. In all cases, the alpha-transparency of the mask matters; element areas masked by opaque sections of the `mask-image` will be rendered, while areas masked by transparent image sections will not be visible. In `alpha` cases, the colors of the opaque and semi opaque areas don't matter. However, if the {{cssxref("mask-mode")}} property is set to `luminance` or defaults to `luminance` because that is the mode of the source, such as is the case for SVG {{svgelement("mask")}} elements, the masking values is the luminance value of each color multiplied by it's alpha value.
 
-A mask will be counted as a transparent black image layer, not "masking" anything, in the following cases:
+A mask will be counted as a transparent black image layer, not revealing anything, in the following cases:
 
 - the mask image is empty (zero width or zero height)
 - the mask image fails to download
@@ -168,15 +166,15 @@ img {
 
 ### Masking with SVG `<mask>`
 
-This example demonstrates using SVG {{svgelement("mask")}} elements as masks. In this case, the color of the mask matters as the {{cssxref("mask-mode")}} default of `match-source` resolves to `luminance`.
+This example demonstrates using SVG {{svgelement("mask")}} elements as masks. In this case, the color of the mask matters as {{cssxref("mask-mode")}} defaults to `match-source`, which in the case of SVG masks resolves to `luminance` .
 
 #### HTML
 
-We included an `id` for each of our three images, and an SVG that contains and equal number of `<mask>` elements.
+We included an `id` for each of our four images, and an SVG that contains and equal number of `<mask>` elements.
 
 ```html
 <img
-  id="white"
+  id="green"
   src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
   alt="Pride flag" />
 <img
@@ -187,12 +185,16 @@ We included an `id` for each of our three images, and an SVG that contains and e
   id="both"
   src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
   alt="Pride flag" />
+<img
+  id="alphaMode"
+  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+  alt="Pride flag" />
 
 <svg height="0" width="0">
-  <mask id="whiteMask">
+  <mask id="greenMask">
     <path
       d="M20,70 A40,40,0,0,1,100,70 A40,40,0,0,1,180,70 Q180,130,100,190 Q20,130,20,70 Z"
-      fill="white" />
+      fill="green" />
   </mask>
   <mask id="strokeMask">
     <path
@@ -208,16 +210,30 @@ We included an `id` for each of our three images, and an SVG that contains and e
       stroke="white"
       stroke-width="20" />
   </mask>
+  <mask id="black">
+    <path
+      d="M20,70 A40,40,0,0,1,100,70 A40,40,0,0,1,180,70 Q180,130,100,190 Q20,130,20,70 Z"
+      fill="black" />
+  </mask>
 </svg>
+```
+
+```html hidden
+<p>
+  <label
+    ><input type="checkbox" /> Use <code>luminance</code> on the last
+    image.</label
+  >
+</p>
 ```
 
 #### CSS
 
-We apply a different `<mask>` to each `<img>`:
+We apply a different `<mask>` to each `<img>`. No part of the last image will be visible by default because, in this case, while all colors used in this example are fully opaque, the `mask-mode` resolves to `luminance.
 
 ```css
-#white {
-  mask-image: url(#whiteMask);
+#green {
+  mask-image: url(#greenMask);
 }
 #stroke {
   mask-image: url(#strokeMask);
@@ -225,11 +241,22 @@ We apply a different `<mask>` to each `<img>`:
 #both {
   mask-image: url(#bothMask);
 }
+#alphaMode {
+  mask-image: url(#black);
+}
+```
+
+```css hidden
+body:has(:checked) img {
+  mask-mode: alpha;
+}
 ```
 
 #### Results
 
-{{EmbedLiveSample("SVG elements as masks", "100%", 250)}}
+{{EmbedLiveSample("SVG elements as masks", "100%", 500)}}
+
+Toggle the checkbox to toggle the value of last image's `mask-mode` between `alpha` (checked) and `luminance` (unchecked). When `alpha` is used, the color of the mask doesn't matter. All that matters is the alpha-transparency.
 
 ## Specifications
 
