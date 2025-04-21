@@ -43,7 +43,7 @@ None ({{jsxref("undefined")}}).
 
 ### Basic usage
 
-This example demonstrates adding video data to a video element for playback.  The `MediaSource` provides the video data, and the `SourceBuffer` adds that data.  The example fetches video segment data, appends it to the `SourceBuffer`, and ends the stream when finished.
+This example demonstrates adding video data to a video element for playback. The `MediaSource` provides the video data, and the `SourceBuffer` adds that data. The example fetches video segment data, appends it to the `SourceBuffer`, and ends the stream when finished.
 
 ```js
 const mediaSource = new MediaSource();
