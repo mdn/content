@@ -140,4 +140,5 @@ para.textContent =
 
 - {{DOMxRef("window.getDefaultComputedStyle()")}}
 - {{DOMxRef("CSSStyleDeclaration.getPropertyValue", "getPropertyValue()")}}
+- {{domxref("Element.computedStyleMap()")}}
 - [Resolved value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#resolved_value)
