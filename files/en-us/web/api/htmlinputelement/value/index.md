@@ -14,7 +14,7 @@ This property can also be set directly, for example to set a default value based
 
 ## Value
 
-A string containing the value of the {{htmlelement("input")}} element, or the empty string if the input element has no value set, unless the input element has a type of `checkbox` or `radio`, in which case it will be the string `"on"` if it has no value set (although the value can still be manually set to the empty string).
+A string specifying the default value of the {{htmlelement("input")}} element.
 
 ## Examples
 
