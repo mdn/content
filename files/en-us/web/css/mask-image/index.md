@@ -48,7 +48,13 @@ mask-image: unset;
 
 ## Description
 
-The `mask-image` provides the mask that hides part of the element on which it is applied. Because the default value of the {{cssxref("mask-mode")}} property is `match-source`, whether the alpha channels alone or also the luminance of the mask is used by default depends on the source. In all cases, the alpha-transparency of the mask matters; element areas masked by opaque sections of the `mask-image` will be rendered, while areas masked by transparent image sections are not made visible. In `alpha` cases, the colors of the opaque and semi opaque areas don't matter. However, if the {{cssxref("mask-mode")}} property is set to `luminance` or defaults to `luminance` because that is the default or set `mask-type` of the SVG mask source, the masking values is the luminance value of each color multiplied by it's alpha value.
+The `mask-image` property provides a mask that hides part of the element to which it is applied.
+
+The default value of the {{cssxref("mask-mode")}} property is `match-source`; therefore, whether the alpha transparency of the mask depends on the image source's alpha channel values alone or a combination of those and the mask's luminance depends on the source:
+
+- In all cases, the alpha transparency of the mask matters; element areas masked by opaque sections of the `mask-image` will be rendered, while areas masked by transparent image sections are hidden.
+- In `alpha` cases, the colors of the opaque and the semi-opaque regions don't matter.
+- If the {{cssxref("mask-mode")}} property is set to `luminance` or defaults to `luminance` because that is the default or set `mask-type` of the SVG mask source, the masking value is the luminance value of each color multiplied by its alpha value.
 
 A mask will be counted as a transparent black image layer, not revealing anything, in the following cases:
 
@@ -72,7 +78,7 @@ Only image sources served over HTTP and HTTPS protocols are accepted as `<image>
 
 ### Gradient as a mask image
 
-In this example, we use an `<image>` value as a mask, defining a CSS radial gradient as our mask image to create a round image with a soft edge.
+In this example, we use an `<image>` value as a mask, defining a CSS [radial gradient](/en-US/docs/Web/CSS/gradient/radial-gradient) as our mask image to create a round image with a soft edge.
 
 #### HTML
 
@@ -120,7 +126,7 @@ We include the same image as the previous example. We've also included the image
 
 #### CSS
 
-We use the `mask-star.svg` as our mask image on our first image only:
+We use `mask-star.svg` as a mask image on our first image:
 
 ```css
 img:first-of-type {
@@ -147,7 +153,7 @@ This example demonstrates applying multiple masks.
 
 #### CSS
 
-We apply the same semi-transparent SVG as in the previous example, and add a {{CSSxRef("gradient/repeating-radial-gradient")}}. We control the size of the masks using the {{cssxref("mask-size")}} property. Because our first mask is not 100%, we make sure our masks are centered and don't repeat with the {{cssxref("mask-position")}} and {{cssxref("mask-repeat")}} properties, respectively.
+We apply two masks — the same semi-transparent SVG as in the previous example, and a {{CSSxRef("gradient/repeating-radial-gradient")}}. We control the size of the masks using the {{cssxref("mask-size")}} property. Because our first mask is not 100%, we make sure our masks are centered and don't repeat with the {{cssxref("mask-position")}} and {{cssxref("mask-repeat")}} properties, respectively.
 
 ```css
 img {
@@ -166,11 +172,11 @@ img {
 
 ### Masking with SVG `<mask>`
 
-This example demonstrates using SVG {{svgelement("mask")}} elements as masks. In this case, the color of the mask matters as {{cssxref("mask-type")}} for SVG masks defaults to `luminance` .
+This example demonstrates using SVG {{svgelement("mask")}} elements as masks. In this case, the color of the mask matters as the {{cssxref("mask-type")}} value for SVG masks defaults to `luminance`.
 
 #### HTML
 
-We included an `id` for each of our four images, and an SVG that contains and equal number of `<mask>` elements.
+We've included an `id` for each of our four images, and an SVG that contains an equal number of `<mask>` elements.
 
 ```html
 <img
@@ -229,7 +235,7 @@ We included an `id` for each of our four images, and an SVG that contains and eq
 
 #### CSS
 
-We apply a different `<mask>` to each `<img>`. No part of the last image will be visible by default because, in this case, while all colors used in this example are fully opaque, the `mask-mode` defaults to `match-type` which resolves to `luminance` in this case.
+We apply a different `<mask>` to each `<img>`. No part of the last image will be visible by default because, in this case, while all colors used in this example are fully opaque, the `mask-mode` defaults to `match-type`, which resolves to `luminance` in this case.
 
 ```css
 #green {
