@@ -1,7 +1,7 @@
 ---
-title: HTMLLinkElement:imageSrcset property
+title: "HTMLLinkElement: imageSrcset property"
 short-title: imageSrcset
-slug: Web/API/HTMLLinkElement/imagesrcset
+slug: Web/API/HTMLLinkElement/imageSrcset
 page-type: web-api-instance-property
 browser-compat: api.HTMLLinkElement.imageSrcset
 ---

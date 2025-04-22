@@ -116,6 +116,13 @@ function updateAlert(msg) {
 
 Note that the alert has the ARIA role attribute set to [`alert`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role).
 
+## Associated interfaces
+
+- {{domxref("Element.ariaInvalid")}}
+  - : The [`ariaInvalid`](/en-US/docs/Web/API/Element/ariaInvalid) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-invalid` attribute, which indicates whether the element is exposed to an accessibility API.
+- {{domxref("ElementInternals.ariaInvalid")}}
+  - : The [`ariaInvalid`](/en-US/docs/Web/API/ElementInternals/ariaInvalid) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-invalid` attribute.
+
 ## Associated roles
 
 Used in roles:

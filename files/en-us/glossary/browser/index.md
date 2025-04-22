@@ -21,7 +21,7 @@ Common browsers include:
 - [Web browser](https://en.wikipedia.org/wiki/Web_browser) on Wikipedia
 - {{HTTPHeader("User-agent")}} (HTTP Header)
 - Download a browser
-  - [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/)
+  - [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/)
   - [Google Chrome](https://www.google.com/chrome/)
   - [Microsoft Edge](https://www.microsoft.com/en-us/edge)
   - [Opera Browser](https://www.opera.com/)

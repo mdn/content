@@ -29,7 +29,6 @@ The SVG API is a set of interfaces that have been categorized into the following
 - {{DOMxRef("SVGCircleElement")}}
 - {{DOMxRef("SVGClipPathElement")}}
 - {{DOMxRef("SVGComponentTransferFunctionElement")}}
-- {{DOMxRef("SVGCursorElement")}}
 - {{DOMxRef("SVGDefsElement")}}
 - {{DOMxRef("SVGDescElement")}}
 - {{DOMxRef("SVGDiscardElement")}}
@@ -128,7 +127,6 @@ Here are the DOM APIs for data types used in the definitions of SVG properties a
 
 ### SMIL-related interfaces
 
-- {{DOMxRef("ElementTimeControl")}}
 - {{DOMxRef("TimeEvent")}}
 
 ### Other SVG interfaces

@@ -7,7 +7,7 @@ sidebar: learnsidebar
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting")}}
 
-In this lesson we'll look at arrays — a neat way of storing a list of data items under a single variable name. Here we look at why this is useful, then explore how to create an array, retrieve, add, and remove items stored in an array, and more besides.
+In this lesson we'll look at arrays — a neat way of storing a list of data items under a single variable name. Here we look at why this is useful, then explore how to create an [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array), retrieve, add, and remove items stored in an array, and more besides.
 
 <table>
   <tbody>
@@ -39,7 +39,7 @@ If we didn't have arrays, we'd have to store every item in a separate variable, 
 As in previous articles, let's learn about the real basics of arrays by entering some examples into [browser developer console](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools).
 
 > [!NOTE]
-> Scrimba's [Aside: Intro to arrays](https://v2.scrimba.com/the-frontend-developer-career-path-c0j/~06e?via=mdn) scrim <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> provides a useful interactive introduction to arrays with example walkthroughs and a challenge to test your knowledge.
+> Scrimba's [Aside: Intro to arrays](https://scrimba.com/the-frontend-developer-career-path-c0j/~06e?via=mdn) scrim <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> provides a useful interactive introduction to arrays with example walkthroughs and a challenge to test your knowledge.
 
 ## Creating arrays
 
@@ -72,7 +72,7 @@ console.log(shopping.length); // 5
 
 ## Accessing and modifying array items
 
-Items in an array are numbered, starting from zero. This number is called the item's _index_. So the first item has index 0, the second has index 1, and so on. You can access individual items in the array using bracket notation and supplying the item's index, in the same way that you [accessed the letters in a string](/en-US/docs/Learn_web_development/Core/Scripting/Useful_string_methods#retrieving_a_specific_string_character).
+Arrays are [indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections). Items in an array are numbered, starting from zero. This number is called the item's _index_. So the first item has index 0, the second has index 1, and so on. You can access individual items in the array using bracket notation and supplying the item's index, in the same way that you [accessed the letters in a string](/en-US/docs/Learn_web_development/Core/Scripting/Useful_string_methods#retrieving_a_specific_string_character).
 
 1. Enter the following into your console:
 
@@ -689,6 +689,6 @@ In the next article we're giving you a challenge to test your understanding of t
 ## See also
 
 - {{jsxref("Array")}}
-  - : The `Array` object reference page — for a detailed reference guide to the features discussed in this page, and many more.
+  - : The `Array` object reference page provides a detailed reference guide to the features discussed in this page, and many other `Array` features.
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting")}}
