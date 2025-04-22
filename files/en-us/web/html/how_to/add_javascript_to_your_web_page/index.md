@@ -1,5 +1,6 @@
 ---
 title: Add JavaScript to your web page
+short-title: Add JavaScript
 slug: Web/HTML/How_to/Add_JavaScript_to_your_web_page
 page-type: how-to
 ---
