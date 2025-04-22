@@ -292,15 +292,18 @@ With all other operators, JavaScript does _not_ convert numeric values to string
 ### Converting strings to numbers
 
 In the case that a value representing a number is in memory as a string, there are methods for conversion.
-
+- {{jsxref("Number()")}}
 - {{jsxref("parseInt()")}}
 - {{jsxref("parseFloat()")}}
+
+  While both `parseInt` and `Number` can be used to convert strings to numbers, `Number` is more efficient.
 
 `parseInt` only returns whole numbers, so its use is diminished for decimals.
 
 > [!NOTE]
 > Additionally, a best practice for `parseInt` is to always include the _radix_ parameter. The radix parameter is used to specify which numerical system is to be used.
 
+W
 ```js
 parseInt("101", 2); // 5
 ```
