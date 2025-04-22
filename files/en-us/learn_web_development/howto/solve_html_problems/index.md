@@ -73,7 +73,7 @@ Some information, called tabular data, needs to be organized into tables with co
 ### Data representation
 
 - How to represent numeric and code values with HTML — see [Superscript and Subscript](/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#superscript_and_subscript), and [Representing computer code](/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#representing_computer_code).
-- [How to use data attributes](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)
+- [How to use data attributes](/en-US/docs/Web/HTML/How_to/Use_data_attributes)
 
 ### Advanced text semantics
 

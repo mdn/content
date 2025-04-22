@@ -10830,41 +10830,6 @@
       "Jeremie"
     ]
   },
-  "Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes": {
-    "modified": "2020-07-16T22:22:34.241Z",
-    "contributors": [
-      "vnctdj",
-      "LoVo666",
-      "jmstfv",
-      "mfuji09",
-      "kenny-evitt",
-      "Enrico_Polanski",
-      "ryanve",
-      "calebmosher",
-      "chrisdavidmills",
-      "rnacken",
-      "Sheppy",
-      "prusse-martin",
-      "torazaburo",
-      "jacksonrayhamilton",
-      "drj11",
-      "Manojkr",
-      "Speich",
-      "sam_eaton",
-      "bcruddy",
-      "teckno101",
-      "lieuwex",
-      "robinpokorny",
-      "rvighne",
-      "andrew.carpenter",
-      "Jeremie",
-      "magnetikonline",
-      "jswisher",
-      "kscarfone",
-      "teoli",
-      "groovecoder"
-    ]
-  },
   "Learn_web_development/Howto/Solve_JavaScript_problems": {
     "modified": "2020-07-16T22:33:08.616Z",
     "contributors": [
@@ -91026,6 +90991,41 @@
       "Sheppy",
       "MohammedAdam",
       "hbloomer"
+    ]
+  },
+  "Web/HTML/How_to/Use_data_attributes": {
+    "modified": "2020-07-16T22:22:34.241Z",
+    "contributors": [
+      "vnctdj",
+      "LoVo666",
+      "jmstfv",
+      "mfuji09",
+      "kenny-evitt",
+      "Enrico_Polanski",
+      "ryanve",
+      "calebmosher",
+      "chrisdavidmills",
+      "rnacken",
+      "Sheppy",
+      "prusse-martin",
+      "torazaburo",
+      "jacksonrayhamilton",
+      "drj11",
+      "Manojkr",
+      "Speich",
+      "sam_eaton",
+      "bcruddy",
+      "teckno101",
+      "lieuwex",
+      "robinpokorny",
+      "rvighne",
+      "andrew.carpenter",
+      "Jeremie",
+      "magnetikonline",
+      "jswisher",
+      "kscarfone",
+      "teoli",
+      "groovecoder"
     ]
   },
   "Web/HTML/Reference": {

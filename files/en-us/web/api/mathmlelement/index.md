@@ -20,7 +20,7 @@ _Also inherits properties from its parent, {{DOMxRef("Element")}}_.
 - {{DOMxRef("MathMLElement.autofocus")}}
   - : Whether the control should be focused when the page loads, or when a {{htmlelement("dialog")}} or [popover](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) become shown.
 - {{DOMxRef("MathMLElement.dataset")}} {{ReadOnlyInline}}
-  - : A {{DOMxRef("DOMStringMap")}} object which provides a list of key/value pairs of named data attributes which correspond to [custom data attributes](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes) attached to the element. This works just like HTML's {{DOMxRef("HTMLElement.dataset")}} property and HTML's [`data-*`](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*) global attribute.
+  - : A {{DOMxRef("DOMStringMap")}} object which provides a list of key/value pairs of named data attributes which correspond to [custom data attributes](/en-US/docs/Web/HTML/How_to/Use_data_attributes) attached to the element. This works just like HTML's {{DOMxRef("HTMLElement.dataset")}} property and HTML's [`data-*`](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*) global attribute.
 - {{DOMxRef("MathMLElement.style")}}
   - : A {{DOMxRef("CSSStyleDeclaration")}} representing the declarations of the element's `style` attribute.
 - {{DOMxRef("MathMLElement.tabIndex")}}
