@@ -108,7 +108,7 @@ Now you'll need to generate the required code (and font formats). For each font,
 1. Make sure you have satisfied any licensing requirement if you are going to use this in a commercial and/or Web project.
 2. Go to the Transfonter [Webfont Generator](https://transfonter.org/).
 3. Upload your two font files using the _Add fonts_ button.
-4. Click _Covert_.
+4. Click _Convert_.
 5. Click _Download_.
 
 After the ZIP file is downloaded. Unzip it and move it in the same directory as your HTML and CSS.
