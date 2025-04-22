@@ -93,8 +93,9 @@ Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-
 
 ## Experimental web features
 
-These features are newly shipped in Firefox 138 but are disabled by default.
-To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
+These features are newly shipped in Firefox 138 and are considered experimental.
+They may be disabled by default or enabled by default but available only in the Nightly build.
+For features disabled by default, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 
 - **UA styles for `<h1>` nested into sectioning elements:** `layout.css.h1-in-section-ua-styles.enabled`.
