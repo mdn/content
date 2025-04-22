@@ -3905,7 +3905,7 @@
 /en-US/docs/HTML/Optimizing_Your_Pages_for_Speculative_Parsing	/en-US/docs/Glossary/Speculative_parsing
 /en-US/docs/HTML/Supported_media_formats	/en-US/docs/Web/Media/Guides/Formats
 /en-US/docs/HTML/The_Importance_of_Correct_Commenting	/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#HTML_comments
-/en-US/docs/HTML/Tips_for_authoring_fast-loading_HTML_pages	/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages
+/en-US/docs/HTML/Tips_for_authoring_fast-loading_HTML_pages	/en-US/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages
 /en-US/docs/HTML/Using_HTML5_audio_and_video	/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio
 /en-US/docs/HTML/WebVTT	/en-US/docs/Web/API/WebVTT_API
 /en-US/docs/HTML/aside	/en-US/docs/Web/HTML/Reference/Elements/aside
@@ -5436,7 +5436,7 @@
 /en-US/docs/Learn/HTML/Howto/Add_responsive_image_to_a_webpage	/en-US/docs/Web/HTML/Guides/Responsive_images
 /en-US/docs/Learn/HTML/Howto/Add_vector_image_to_a_webpage	/en-US/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML
 /en-US/docs/Learn/HTML/Howto/Annotate_images_and_graphics	/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images#Annotating_images_with_figures_and_figure_captions
-/en-US/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages	/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages
+/en-US/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages	/en-US/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages
 /en-US/docs/Learn/HTML/Howto/Create_a_basic_HTML_document	/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax
 /en-US/docs/Learn/HTML/Howto/Create_a_hyperlink	/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links
 /en-US/docs/Learn/HTML/Howto/Create_list_of_items_with_HTML	/en-US/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#Lists
@@ -5819,6 +5819,7 @@
 /en-US/docs/Learn_web_development/Getting_started/Your_first_website/JavaScript_basics	/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity
 /en-US/docs/Learn_web_development/Getting_started/Your_first_website/The_web_and_web_standards	/en-US/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model
 /en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image	/en-US/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image
+/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages	/en-US/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages
 /en-US/docs/Liberty!_Equality!_Validity!	/en-US/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML
 /en-US/docs/Link_prefetching_FAQ	/en-US/docs/Glossary/Prefetch
 /en-US/docs/Localization	/en-US/docs/Glossary/Localization
@@ -7310,7 +7311,7 @@
 /en-US/docs/Thunderbird/Autoconfiguration	https://www.bucksch.org/1/projects/thunderbird/autoconfiguration/
 /en-US/docs/Thunderbird/Autoconfiguration/FileFormat/Definition	https://www.bucksch.org/1/projects/thunderbird/autoconfiguration/config-file-format.html
 /en-US/docs/Thunderbird/Autoconfiguration/FileFormat/HowTo	https://www.bucksch.org/1/projects/thunderbird/autoconfiguration/how-to-create-your-own
-/en-US/docs/Tips_for_Authoring_Fast-loading_HTML_Pages	/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages
+/en-US/docs/Tips_for_Authoring_Fast-loading_HTML_Pages	/en-US/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages
 /en-US/docs/Toolbox	https://firefox-source-docs.mozilla.org/devtools-user/tools_toolbox/index.html
 /en-US/docs/Tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /en-US/docs/Tools/3D_View	https://firefox-source-docs.mozilla.org/devtools-user/3d_view/index.html
@@ -12905,7 +12906,7 @@
 /en-US/docs/Web/Guide/HTML/Obsolete_things_to_avoid	/en-US/docs/Learn_web_development/Core/Structuring_content
 /en-US/docs/Web/Guide/HTML/Recommended_Drag_Types	/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types
 /en-US/docs/Web/Guide/HTML/The_Importance_of_Correct_HTML_Commenting	/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#HTML_comments
-/en-US/docs/Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages	/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages
+/en-US/docs/Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages	/en-US/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages
 /en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video	/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio
 /en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines	/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements
 /en-US/docs/Web/Guide/HTML/Using_data_attributes	/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes

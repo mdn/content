@@ -95,7 +95,7 @@ HTML is not monolingual. It provides tools to handle common internationalization
 
 ### Performance
 
-- [How to author fast-loading HTML pages](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages)
+- [How to author fast-loading HTML pages](/en-US/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages)
 
 ## See also
 
