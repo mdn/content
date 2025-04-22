@@ -99,4 +99,4 @@ HTML is not monolingual. It provides tools to handle common internationalization
 
 ## See also
 
-- [HTML Cheatsheet](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Cheatsheet)
+- [HTML Cheatsheet](/en-US/docs/Web/HTML/Guides/Cheatsheet)

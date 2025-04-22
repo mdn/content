@@ -5396,7 +5396,7 @@
 /en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like	/en-US/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like
 /en-US/docs/Learn/GitHub	/en-US/docs/Learn_web_development/Core/Version_control
 /en-US/docs/Learn/HTML	/en-US/docs/Learn_web_development/Core/Structuring_content
-/en-US/docs/Learn/HTML/Cheatsheet	/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Cheatsheet
+/en-US/docs/Learn/HTML/Cheatsheet	/en-US/docs/Web/HTML/Guides/Cheatsheet
 /en-US/docs/Learn/HTML/Element	/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems
 /en-US/docs/Learn/HTML/Element/abbr	/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#Abbreviations
 /en-US/docs/Learn/HTML/Forms	/en-US/docs/Learn_web_development/Extensions/Forms
@@ -5820,6 +5820,7 @@
 /en-US/docs/Learn_web_development/Getting_started/Your_first_website/The_web_and_web_standards	/en-US/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model
 /en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image	/en-US/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image
 /en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages	/en-US/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages
+/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Cheatsheet	/en-US/docs/Web/HTML/Guides/Cheatsheet
 /en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Define_terms_with_HTML	/en-US/docs/Web/HTML/How_to/Define_terms_with_HTML
 /en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_JavaScript_within_a_webpage	/en-US/docs/Web/HTML/How_to/Add_JavaScript_to_your_web_page
 /en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes	/en-US/docs/Web/HTML/How_to/Use_data_attributes
