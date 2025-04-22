@@ -84,25 +84,29 @@ In this example, we use an `<image>` value as a mask, defining a CSS [radial gra
 
 We include an HTML {{htmlelement("img")}} element, which will also be used in all other examples.
 
-```html
+```html live-sample___example-image live-sample___first-example
 <img
   src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
   alt="Pride flag" />
 ```
 
+{{EmbedLiveSample("example-image", "100%", 250)}}
+
 #### CSS
 
-We use the CSS {{CSSxRef("gradient/radial-gradient")}} function to create a mask.
+We use the CSS {{CSSxRef("gradient/radial-gradient")}} function to create a mask that has a black circle with a radius that is half the width of the mask, before transition to being transparent over 10%.
 
-```css
+```css live-sample___first-example
 img {
-  mask-image: radial-gradient(black 50%, transparent 55%);
+  mask-image: radial-gradient(black 50%, transparent 60%);
 }
 ```
 
 #### Results
 
-{{EmbedLiveSample("Gradient as a mask image", "100%", 250)}}
+{{EmbedLiveSample("first-example", "100%", 250)}}
+
+The part of the original element that is masked by the black circle is fully opaque, fading to transparent as the mask fades to transparent.
 
 ### Image resource as a mask image
 
@@ -110,15 +114,13 @@ In this example, the `<mask-source>` used as our mask image is an external SVG.
 
 #### HTML
 
-We include the same image as the previous example. We've also included the image we will be using as the mask.
+We include the same image as the previous example. We've also included the image we will be using as the mask; a star whose {{cssxref("fill-opacity")}} is `0.5`, or 50% opaque.
 
-```html hidden
+```html
 <img
   src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
   alt="Pride flag" />
-```
 
-```html
 <img
   src="https://mdn.github.io/shared-assets/images/examples/mask-star.svg"
   alt="A star" />
@@ -138,7 +140,7 @@ img:first-of-type {
 
 {{EmbedLiveSample("Image resource as a mask image", "100%", 250)}}
 
-The mask is semi-opaque, which is why the colors are not as vibrant as the previous example.
+The mask is semi-opaque, which is why the colors are not as vibrant as the previous example. The part of the image that is visible is 50% opaque; the opacity of the mask applied.
 The mask is smaller than the image, so repeats by default. We could have used {{cssxref("mask-repeat")}} to control the repeating or {{cssxref("mask-size")}} to change the size of the mask, which we do in the next example.
 
 ### Multiple masks
@@ -172,7 +174,7 @@ img {
 
 ### Masking with SVG `<mask>`
 
-This example demonstrates using SVG {{svgelement("mask")}} elements as masks. In this case, the color of the mask matters as the {{cssxref("mask-type")}} value for SVG masks defaults to `luminance`.
+This example demonstrates using SVG {{svgelement("mask")}} elements as masks. In this case, the color of the mask matters as the {{cssxref("mask-type")}} value for SVG masks defaults to `luminance`, which means white opaque areas (100% luminance) will be masked and visible, transparent and black areas (0% luminance) will be clipped, and anything in between will be partially masked.
 
 #### HTML
 
@@ -212,7 +214,7 @@ We've included an `id` for each of our four images, and an SVG that contains an 
   <mask id="bothMask">
     <path
       d="M20,70 A40,40,0,0,1,100,70 A40,40,0,0,1,180,70 Q180,130,100,190 Q20,130,20,70 Z"
-      fill="grey"
+      fill="green"
       stroke="white"
       stroke-width="20" />
   </mask>
@@ -235,7 +237,7 @@ We've included an `id` for each of our four images, and an SVG that contains an 
 
 #### CSS
 
-We apply a different `<mask>` to each `<img>`. No part of the last image will be visible by default because, in this case, while all colors used in this example are fully opaque, the `mask-mode` defaults to `match-type`, which resolves to `luminance` in this case.
+We apply a different `<mask>` to each `<img>`. No part of the last image, with the `black` fill, will be visible by default because, in this case, while all colors used in this example are fully opaque, the `mask-mode` defaults to `match-type`, which resolves to `luminance` in this case.
 
 ```css
 #green {
@@ -256,11 +258,13 @@ body:has(:checked) img {
 }
 ```
 
+The luminance value of `black` is `0`, white is `100`, and [`green` is `46.228`](https://www.colorhexa.com/008000). This means the areas where the mask is white wll be visible, where the mask is black or fully transparent will be clipped (not visible), and where the mask is green will be visible but lighter; green areas will be masked the equivalent of having a white mask that is 46.228% opaque set.
+
 #### Results
 
-{{EmbedLiveSample("SVG elements as masks", "100%", 500)}}
+{{EmbedLiveSample("SVG elements as masks", "100%", 540)}}
 
-Toggle the checkbox to toggle the value of last image's `mask-mode` between `alpha` (checked) and the initial value which resolves to `luminance` (unchecked). When `alpha` is used, the color of the mask doesn't matter; all that matters is the alpha-transparency.
+Toggle the checkbox to toggle the value of last image's `mask-mode` between `alpha` (checked) and the initial value which resolves to `luminance` (unchecked). When `alpha` is used, the color of the mask doesn't matter; all that matters is the alpha-transparency. When the value resolves to `luminance`, `white` areas are visible, `black` areas are not, and `green` areas are visible but at an opacity that matches the luminance of the color `green`.
 
 ## Specifications
 
