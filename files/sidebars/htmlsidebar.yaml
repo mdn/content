@@ -6,12 +6,24 @@ sidebar:
   - type: section
     link: /Web/HTML/Guides
     title: Guides
-  - type: listSubPages
-    path: /Web/HTML/Guides
+  - /Web/HTML/Guides/Content_categories
+  - /Web/HTML/Guides/Comments
+  - /Web/HTML/Guides/Date_and_time_formats
+  - /Web/HTML/Guides/Constraint_validation
+  - /Web/HTML/Guides/Viewport_meta_element
+  - /Web/HTML/Guides/Responsive_images
+  - /Web/HTML/Guides/Microdata
+  - /Web/HTML/Guides/Microformats
+  - /Web/HTML/Guides/Quirks_mode_and_standards_mode
+  - /Web/HTML/Guides/Cheatsheet
   - type: section
     link: /Web/HTML/How_to
-  - type: listSubPages
-    path: /Web/HTML/How_to
+  - /Web/HTML/How_to/Define_terms_with_HTML
+  - /Web/HTML/How_to/Use_data_attributes
+  - /Web/HTML/How_to/CORS_enabled_image
+  - /Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image
+  - /Web/HTML/How_to/Author_fast-loading_HTML_pages
+  - /Web/HTML/How_to/Add_JavaScript_to_your_web_page
   - type: section
     link: /Web/HTML/Reference
     title: Reference
