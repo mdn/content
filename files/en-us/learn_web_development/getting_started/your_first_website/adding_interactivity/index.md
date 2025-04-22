@@ -119,7 +119,7 @@ To start you off with writing some JavaScript, we'll walk you through adding a _
 
 Let's break down how this example works.
 
-We used JavaScript to change the heading text to `Hello world!`. We grabbed a reference to the heading and stored it in a variable called `myHeading` (a container that stores a value). This is similar to how you apply CSS to elements, selecting the elements to affect via a CSS selector before manipulating their properties. In both cases, when you want to do something to an element, you need to select it first.
+We used JavaScript to change the heading text to `Hello world!`. We grabbed a reference to the heading and stored it in a variable called `myHeading` (a container that stores a value). This is similar to how you apply CSS to elements – you first select the elements you want to affect using a CSS selector, and then define the styles you want for those elements. In both cases, when you want to do something to an element, you need to select it first.
 
 Following that, we set the value of the `myHeading` variable's `textContent` property (which represents the `<h1>` element's text content) to _Hello world!_.
 
