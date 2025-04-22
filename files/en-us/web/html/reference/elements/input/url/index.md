@@ -270,25 +270,27 @@ If you need the entered URL to be restricted further than just "any string that 
 
 ### URL validation
 
-In this example we want to make sure that the URL is filled in using the [`required`](/en-US/docs/Web/HTML/Reference/Elements/input#required) attribute and that the URL is something on `https://developer.mozilla.org` using the [`pattern`](/en-US/docs/Web/HTML/Reference/Elements/input#pattern) attribute.
+In this example, we make sure that a URL is filled in using the [`required`](/en-US/docs/Web/HTML/Reference/Elements/input#required) attribute and that the URL is something on `mozilla.org` using the [`pattern`](/en-US/docs/Web/HTML/Reference/Elements/input#pattern) attribute for illustration.
 
 #### HTML
 
-In the `url` input, we set `pattern` to `".*\.mozilla\..*"`. This regular expression requests a string that has any number of characters, followed by a dot, followed by "mozilla", followed by a dot, followed by any number of characters. Because the browser runs both the standard URL filter _and_ our custom pattern against the specified text, we wind up with a validation that says "make sure this is a valid URL, and also in a mozilla domain."
+In the `url` input, we set `pattern` to `".*\.mozilla\.org.*"`. This regular expression validates a string that has any number of characters, followed by ".mozilla.org", followed by any number of characters. Because the browser runs both the standard URL filter _and_ our custom pattern against the specified text, we wind up with a validation that says "make sure this is a valid URL, and also contains `.mozilla.org`."
+
+Note that a strict pattern like `https://developer\.mozilla\.org.*` would be more robust, but that would make the `type="url"` attribute redundant in this case.
 
 The [`title`](/en-US/docs/Web/HTML/Reference/Global_attributes/title) attribute also describes the `pattern` for users with assistive technologies.
 
 ```html live-sample___url-validation
 <form>
-  <label for="myURL"
-    >Enter a url from this site:
+  <label for="myURL">
+    Enter a url from this site:
     <input
       id="myURL"
       name="myURL"
       type="url"
       required
-      pattern="https://developer\.mozilla\.org.*"
-      title="URL should be in a mozilla domain" />
+      pattern=".*\.mozilla\.org.*"
+      title="URL should include mozilla.org" />
     <span class="validity"></span>
   </label>
   <button>Submit</button>
@@ -325,11 +327,11 @@ input:valid + span:after {
 
 #### Result
 
-Copy this page's url and paste it in the input field and you will see a green outline and green tick. Enter any other URL that doesn't contain **mozilla** or an invalid URL and you will see a red outline and red cross.
+Copy this page's url and paste it in the input field and you will see a green outline and green tick. Enter any other URL that doesn't contain **mozilla.org** or an invalid URL and you will see a red outline and red cross.
 
 {{EmbedLiveSample("url-validation", "40px", , , , , "allow-forms")}}
 
-There's not much else to say about `url` type inputs; check the [Pattern validation](#pattern_validation) and [Using URL inputs](#using_url_inputs) sections for numerous examples.
+Check the [Pattern validation](#pattern_validation) and [Using URL inputs](#using_url_inputs) sections for other examples.
 
 ## Technical summary
 
