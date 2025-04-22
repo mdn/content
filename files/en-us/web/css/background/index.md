@@ -71,7 +71,7 @@ background: green;
 /* Using a <bg-image> and <repeat-style> */
 background: url("test.jpg") repeat-y;
 
-/* Using a <box> and <background-color> */
+/* Using a <visual-box> and <'background-color'> */
 background: border-box red;
 
 /* A single image, centered and scaled */
@@ -93,25 +93,25 @@ The syntax of each layer is as follows:
 
   - `<attachment>`
   - `<bg-image>`
-  - `<position>`
+  - `<bg-position>`
   - `<bg-size>`
   - `<repeat-style>`
 
-- The `<bg-size>` value may only be included immediately after `<position>`, separated with the '/' character, like this: `center/80%`.
-- The `<box>` value may be included zero, one, or two times. If included once, it sets both {{cssxref("background-origin")}} and {{cssxref("background-clip")}}. If it is included twice, the first occurrence sets {{cssxref("background-origin")}}, and the second sets {{cssxref("background-clip")}}.
-- The `<background-color>` value may only be included in the last layer specified.
+- The `<bg-size>` value may only be included immediately after `<bg-position>`, separated with the '/' character, like this: `center/80%`.
+- The `<visual-box>` value may be included zero, one, or two times. If included once, it sets both {{cssxref("background-origin")}} and {{cssxref("background-clip")}}. If it is included twice, the first occurrence sets {{cssxref("background-origin")}}, and the second sets {{cssxref("background-clip")}}.
+- The `<'background-color'>` value may only be included in the last layer specified.
 
 ### Values
 
 - `<attachment>`
   - : See {{cssxref("background-attachment")}}. Default: `scroll`.
-- `<box>`
+- `<visual-box>`
   - : See {{cssxref("background-clip")}} and {{cssxref("background-origin")}}. Default: `border-box` and `padding-box` respectively.
-- `<background-color>`
+- `<'background-color'>`
   - : See {{cssxref("background-color")}}. Default: `transparent`.
 - `<bg-image>`
   - : See {{Cssxref("background-image")}}. Default: `none`.
-- `<position>`
+- `<bg-position>`
   - : See {{cssxref("background-position")}}. Default: 0% 0%.
 - `<repeat-style>`
   - : See {{cssxref("background-repeat")}}. Default: `repeat`.

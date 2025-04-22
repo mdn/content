@@ -1210,7 +1210,7 @@ Each image consists of 2 to 4 `#define` directives, providing the width and heig
 The image must be a multiple of 8 pixels wide.
 For example, the following code represents an XBM image which is 8 pixels by 8 pixels, with those pixels in a black-and-white checkerboard pattern:
 
-```cpp
+```c
 #define square8_width 8
 #define square8_height 8
 static unsigned char square8_bits[] = {
