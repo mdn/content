@@ -43,7 +43,7 @@ The input value is automatically validated to ensure that it's either empty or a
 
 ## Value
 
-The {{HTMLElement("input")}} element's [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute contains a string that is automatically validated as conforming to URL syntax. More specifically, there are two possible value formats that will pass validation:
+The {{HTMLElement("input")}} element's [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) attribute contains a string that is automatically validated as conforming to URL syntax. More specifically, there are two possible value formats that will pass validation:
 
 1. An empty string ("") indicates the user did not enter a value or that the value was removed.
 2. A single properly-formed absolute URL. This doesn't necessarily mean the URL address exists, but it is at least formatted correctly. An entry matching `urlscheme://rest-of-url` can be valid, even if the `urlscheme` entered doesn't exist.
@@ -52,14 +52,14 @@ See [Validation](#validation) for details on how URLs are validated to ensure th
 
 ## Additional attributes
 
-In addition to the [global attributes](/en-US/docs/Web/HTML/Global_attributes), and the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, `url` inputs support the following attributes.
+In addition to the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes), and the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, `url` inputs support the following attributes.
 
 > [!NOTE]
-> The [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) global attribute can be added to url inputs, but the stored state is always `off`.
+> The [`autocorrect`](/en-US/docs/Web/HTML/Reference/Global_attributes/autocorrect) global attribute can be added to url inputs, but the stored state is always `off`.
 
 ### list
 
-The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the [`type`](/en-US/docs/Web/HTML/Element/input#type) are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.
+The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.
 
 ### maxlength
 
@@ -75,12 +75,12 @@ The input will fail [constraint validation](/en-US/docs/Web/HTML/Constraint_vali
 
 ### pattern
 
-The `pattern` attribute, when specified, is a regular expression that the input's [`value`](/en-US/docs/Web/HTML/Element/input#value) must match for the value to pass [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions); the `'u'` flag is specified when compiling the regular expression so that the pattern is treated as a sequence of Unicode code points, instead of as {{Glossary("ASCII")}}. No forward slashes should be specified around the pattern text.
+The `pattern` attribute, when specified, is a regular expression that the input's [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) must match for the value to pass [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions); the `'u'` flag is specified when compiling the regular expression so that the pattern is treated as a sequence of Unicode code points, instead of as {{Glossary("ASCII")}}. No forward slashes should be specified around the pattern text.
 
 If the specified pattern is not specified or is invalid, no regular expression is applied and this attribute is ignored completely.
 
 > [!NOTE]
-> Use the [`title`](/en-US/docs/Web/HTML/Element/input#title) attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You should also include other explanatory text nearby.
+> Use the [`title`](/en-US/docs/Web/HTML/Reference/Elements/input#title) attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You should also include other explanatory text nearby.
 
 See the section [Pattern validation](#pattern_validation) for details and an example.
 
@@ -91,7 +91,7 @@ The `placeholder` attribute is a string that provides a brief hint to the user a
 If the control's content has one directionality ({{Glossary("LTR")}} or {{Glossary("RTL")}}) but needs to present the placeholder in the opposite directionality, you can use Unicode bidirectional algorithm formatting characters to override directionality within the placeholder; see [How to use Unicode controls for bidi text](https://www.w3.org/International/questions/qa-bidi-unicode-controls) for more information.
 
 > [!NOTE]
-> Avoid using the `placeholder` attribute if you can. It is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See [`<input>` labels](/en-US/docs/Web/HTML/Element/input#labels) for more information.
+> Avoid using the `placeholder` attribute if you can. It is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See [`<input>` labels](/en-US/docs/Web/HTML/Reference/Elements/input#labels) for more information.
 
 ### readonly
 
@@ -108,7 +108,7 @@ This does _not_ set a limit on how many characters the user can enter into the f
 
 ### spellcheck
 
-The [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes/spellcheck) global attribute is used to indicate whether to enable spell-checking for an element. It can be used on any editable content, but here we consider specifics related to the use of `spellcheck` on {{HTMLElement("input")}} elements. The permitted values for `spellcheck` are:
+The [`spellcheck`](/en-US/docs/Web/HTML/Reference/Global_attributes/spellcheck) global attribute is used to indicate whether to enable spell-checking for an element. It can be used on any editable content, but here we consider specifics related to the use of `spellcheck` on {{HTMLElement("input")}} elements. The permitted values for `spellcheck` are:
 
 - `false`
   - : Disable spell-checking for this element.
@@ -140,7 +140,7 @@ This element is implemented as a standard text input field with basic validation
 
 {{ EmbedLiveSample('A_basic_URL_input', 600, 40) }}
 
-Notice that it's considered valid when empty and when a single validly-formatted URL address is entered, but is otherwise not considered valid. By adding the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute, only properly-formed URLs are allowed; the input is no longer considered valid when empty.
+Notice that it's considered valid when empty and when a single validly-formatted URL address is entered, but is otherwise not considered valid. By adding the [`required`](/en-US/docs/Web/HTML/Reference/Elements/input#required) attribute, only properly-formed URLs are allowed; the input is no longer considered valid when empty.
 
 There is nothing magical going on here. Submitting this form would cause the following data to be sent to the server: `myURL=http%3A%2F%2Fwww.example.com`. Note how characters are escaped as necessary.
 
@@ -166,7 +166,7 @@ You can control both the physical length of the input box and the minimum and ma
 
 #### Physical input element size
 
-The physical size of the input box can be controlled using the [`size`](/en-US/docs/Web/HTML/Element/input#size) attribute. With it, you can specify the number of characters the input box can display at a time. In this example, for instance, the `url` edit box is 30 characters wide:
+The physical size of the input box can be controlled using the [`size`](/en-US/docs/Web/HTML/Reference/Elements/input#size) attribute. With it, you can specify the number of characters the input box can display at a time. In this example, for instance, the `url` edit box is 30 characters wide:
 
 ```html
 <input id="myURL" name="myURL" type="url" size="30" />
@@ -176,7 +176,7 @@ The physical size of the input box can be controlled using the [`size`](/en-US/d
 
 #### Element value length
 
-The `size` is separate from the length limitation on the entered URL itself. You can specify a minimum length, in characters, for the entered URL using the [`minlength`](/en-US/docs/Web/HTML/Element/input#minlength) attribute; similarly, use [`maxlength`](/en-US/docs/Web/HTML/Element/input#maxlength) to set the maximum length of the entered URL. If `maxLength` exceeds `size`, the input box's contents will scroll as needed to show the current selection or insertion point as the content is manipulated.
+The `size` is separate from the length limitation on the entered URL itself. You can specify a minimum length, in characters, for the entered URL using the [`minlength`](/en-US/docs/Web/HTML/Reference/Elements/input#minlength) attribute; similarly, use [`maxlength`](/en-US/docs/Web/HTML/Reference/Elements/input#maxlength) to set the maximum length of the entered URL. If `maxLength` exceeds `size`, the input box's contents will scroll as needed to show the current selection or insertion point as the content is manipulated.
 
 The example below creates a 30-character wide URL address entry box, requiring that the contents be no shorter than 10 characters and no longer than 80 characters.
 
@@ -199,7 +199,7 @@ The example below creates a 30-character wide URL address entry box, requiring t
 
 #### Providing a single default using the value attribute
 
-As always, you can provide a default value for a `url` input box by setting its [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute:
+As always, you can provide a default value for a `url` input box by setting its [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) attribute:
 
 ```html
 <input id="myURL" name="myURL" type="url" value="http://www.example.com" />
@@ -209,7 +209,7 @@ As always, you can provide a default value for a `url` input box by setting its 
 
 #### Offering suggested values
 
-Taking it a step further, you can provide a list of default options from which the user can select by specifying the [`list`](/en-US/docs/Web/HTML/Element/input#list) attribute. This doesn't limit the user to those options, but does allow them to select commonly-used URLs more quickly. This also offers hints to [`autocomplete`](/en-US/docs/Web/HTML/Element/input#autocomplete). The `list` attribute specifies the ID of a {{HTMLElement("datalist")}}, which in turn contains one {{HTMLElement("option")}} element per suggested value; each `option`'s `value` is the corresponding suggested value for the URL entry box.
+Taking it a step further, you can provide a list of default options from which the user can select by specifying the [`list`](/en-US/docs/Web/HTML/Reference/Elements/input#list) attribute. This doesn't limit the user to those options, but does allow them to select commonly-used URLs more quickly. This also offers hints to [`autocomplete`](/en-US/docs/Web/HTML/Reference/Elements/input#autocomplete). The `list` attribute specifies the ID of a {{HTMLElement("datalist")}}, which in turn contains one {{HTMLElement("option")}} element per suggested value; each `option`'s `value` is the corresponding suggested value for the URL entry box.
 
 ```html
 <input id="myURL" name="myURL" type="url" list="defaultURLs" />
@@ -229,7 +229,7 @@ With the {{HTMLElement("datalist")}} element and its {{HTMLElement("option")}}s 
 
 #### Using labels for suggested values
 
-You can opt to include the [`label`](/en-US/docs/Web/HTML/Element/option#label) attribute on one or all of your `<option>` elements to provide textual labels. Some browsers may display only the labels, while others may display both the label and the URL.
+You can opt to include the [`label`](/en-US/docs/Web/HTML/Reference/Elements/option#label) attribute on one or all of your `<option>` elements to provide textual labels. Some browsers may display only the labels, while others may display both the label and the URL.
 
 ```html
 <input id="myURL" name="myURL" type="url" list="defaultURLs" />
@@ -260,23 +260,23 @@ The syntax of a URL is fairly intricate. It's defined by WHATWG's [URL Living St
 
 ### Making a URL required
 
-As mentioned earlier, to make a URL entry required before the form can be submitted (you can't leave the field blank), you just need to include the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute on the input.
+As mentioned earlier, to make a URL entry required before the form can be submitted (you can't leave the field blank), you just need to include the [`required`](/en-US/docs/Web/HTML/Reference/Elements/input#required) attribute on the input.
 
 ### Pattern validation
 
-If you need the entered URL to be restricted further than just "any string that looks like a URL," you can use the [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern) attribute to specify a {{Glossary("regular expression")}} the value must match for the value to be valid.
+If you need the entered URL to be restricted further than just "any string that looks like a URL," you can use the [`pattern`](/en-US/docs/Web/HTML/Reference/Elements/input#pattern) attribute to specify a {{Glossary("regular expression")}} the value must match for the value to be valid.
 
 ## Examples
 
 ### URL validation
 
-In this example we want to make sure that the URL is filled in using the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute and that the URL is something on `https://developer.mozilla.org` using the [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern) attribute.
+In this example we want to make sure that the URL is filled in using the [`required`](/en-US/docs/Web/HTML/Reference/Elements/input#required) attribute and that the URL is something on `https://developer.mozilla.org` using the [`pattern`](/en-US/docs/Web/HTML/Reference/Elements/input#pattern) attribute.
 
 #### HTML
 
 In the `url` input, we set `pattern` to `".*\.mozilla\..*"`. This regular expression requests a string that has any number of characters, followed by a dot, followed by "mozilla", followed by a dot, followed by any number of characters. Because the browser runs both the standard URL filter _and_ our custom pattern against the specified text, we wind up with a validation that says "make sure this is a valid URL, and also in a mozilla domain."
 
-The [`title`](/en-US/docs/Web/HTML/Global_attributes/title) attribute also describes the `pattern` for users with assistive technologies.
+The [`title`](/en-US/docs/Web/HTML/Reference/Global_attributes/title) attribute also describes the `pattern` for users with assistive technologies.
 
 ```html live-sample___url-validation
 <form>
@@ -349,15 +349,15 @@ There's not much else to say about `url` type inputs; check the [Pattern validat
     <tr>
       <td><strong>Supported Common Attributes</strong></td>
       <td>
-        <a href="/en-US/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#required"><code>required</code></a> and
-        <a href="/en-US/docs/Web/HTML/Element/input#size"><code>size</code></a>
+        <a href="/en-US/docs/Web/HTML/Reference/Elements/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/en-US/docs/Web/HTML/Reference/Elements/input#list"><code>list</code></a>,
+        <a href="/en-US/docs/Web/HTML/Reference/Elements/input#maxlength"><code>maxlength</code></a>,
+        <a href="/en-US/docs/Web/HTML/Reference/Elements/input#minlength"><code>minlength</code></a>,
+        <a href="/en-US/docs/Web/HTML/Reference/Elements/input#pattern"><code>pattern</code></a>,
+        <a href="/en-US/docs/Web/HTML/Reference/Elements/input#placeholder"><code>placeholder</code></a>,
+        <a href="/en-US/docs/Web/HTML/Reference/Elements/input#readonly"><code>readonly</code></a>,
+        <a href="/en-US/docs/Web/HTML/Reference/Elements/input#required"><code>required</code></a> and
+        <a href="/en-US/docs/Web/HTML/Reference/Elements/input#size"><code>size</code></a>
       </td>
     </tr>
     <tr>
@@ -401,5 +401,5 @@ There's not much else to say about `url` type inputs; check the [Pattern validat
 
 - [HTML forms guide](/en-US/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}}
-- [`<input type="tel">`](/en-US/docs/Web/HTML/Element/input/tel)
-- [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email)
+- [`<input type="tel">`](/en-US/docs/Web/HTML/Reference/Elements/input/tel)
+- [`<input type="email">`](/en-US/docs/Web/HTML/Reference/Elements/input/email)
