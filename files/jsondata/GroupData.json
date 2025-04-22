@@ -1115,6 +1115,14 @@
       "properties": ["Navigator.connection", "WorkerNavigator.connection"],
       "events": []
     },
+    "Observable API": {
+      "overview": ["Observable API"],
+      "guides": ["/docs/Web/API/Observable_API/Using"],
+      "interfaces": ["Observable", "Subscriber"],
+      "methods": ["EventTarget.when()"],
+      "properties": [],
+      "events": []
+    },
     "Page Visibility API": {
       "overview": ["Page Visibility API"],
       "interfaces": [],
