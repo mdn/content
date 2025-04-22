@@ -10808,10 +10808,6 @@
       "Andrew_Pfeiffer"
     ]
   },
-  "Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image": {
-    "modified": "2020-07-16T22:22:42.758Z",
-    "contributors": ["ezrinjaz", "hbloomer", "Andrew_Pfeiffer"]
-  },
   "Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages": {
     "modified": "2020-07-16T22:22:31.788Z",
     "contributors": [
@@ -91001,6 +90997,10 @@
       "hbloomer",
       "Andrew_Pfeiffer"
     ]
+  },
+  "Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image": {
+    "modified": "2020-07-16T22:22:42.758Z",
+    "contributors": ["ezrinjaz", "hbloomer", "Andrew_Pfeiffer"]
   },
   "Web/HTML/How_to/CORS_enabled_image": {
     "modified": "2020-11-03T13:26:20.578Z",

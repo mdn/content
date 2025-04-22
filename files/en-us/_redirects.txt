@@ -5429,7 +5429,7 @@
 /en-US/docs/Learn/HTML/HTML_tags	/en-US/docs/Learn_web_development/Core/Structuring_content
 /en-US/docs/Learn/HTML/Howto	/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems
 /en-US/docs/Learn/HTML/Howto/Add_Flash_content_within_a_webpage	/en-US/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies#The_<embed>_and_<object>_elements
-/en-US/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image	/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image
+/en-US/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image	/en-US/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image
 /en-US/docs/Learn/HTML/Howto/Add_audio_or_video_content_to_a_webpage	/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio
 /en-US/docs/Learn/HTML/Howto/Add_citations_to_webpages	/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#Quotations
 /en-US/docs/Learn/HTML/Howto/Add_images_to_a_webpage	/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images#How_do_we_put_an_image_on_a_webpage
@@ -5818,6 +5818,7 @@
 /en-US/docs/Learn_web_development/Getting_started/Your_first_website/How_the_Web_works	/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works
 /en-US/docs/Learn_web_development/Getting_started/Your_first_website/JavaScript_basics	/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity
 /en-US/docs/Learn_web_development/Getting_started/Your_first_website/The_web_and_web_standards	/en-US/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model
+/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image	/en-US/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image
 /en-US/docs/Liberty!_Equality!_Validity!	/en-US/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML
 /en-US/docs/Link_prefetching_FAQ	/en-US/docs/Glossary/Prefetch
 /en-US/docs/Localization	/en-US/docs/Glossary/Localization
