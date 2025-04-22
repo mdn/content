@@ -12,7 +12,7 @@ To address this need, Firefox includes a feature known as contextual identities,
 
 For more background on this feature, see:
 
-- [Put your multiple online personalities in Firefox Multi-Account Containers](https://blog.mozilla.org/en/products/firefox/introducing-firefox-multi-account-containers/)
+- [Put your multiple online personalities in Firefox Multi-Account Containers](https://blog.mozilla.org/en/firefox/introducing-firefox-multi-account-containers/)
 - [Security/Contextual Identity Project/Containers](https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers)
 - [Firefox support article on containers](https://support.mozilla.org/en-US/kb/containers?redirectlocale=en-US&as=u&redirectslug=containers-experiment&utm_source=inproduct)
 

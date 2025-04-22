@@ -1,5 +1,5 @@
 ---
-title: rel=noreferrer
+title: rel="noreferrer"
 slug: Web/HTML/Reference/Attributes/rel/noreferrer
 page-type: html-attribute-value
 browser-compat:

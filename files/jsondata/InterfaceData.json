@@ -3152,6 +3152,14 @@
       "inh": "Event",
       "impl": []
     },
+    "SpeechRecognitionPhrase": {
+      "inh": "",
+      "impl": []
+    },
+    "SpeechRecognitionPhraseList": {
+      "inh": "",
+      "impl": []
+    },
     "SpeechRecognitionResult": {
       "inh": "",
       "impl": []

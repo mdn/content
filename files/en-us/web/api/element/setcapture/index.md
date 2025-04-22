@@ -16,7 +16,7 @@ to this element until the mouse button is released or {{domxref("document.releas
 
 > [!WARNING]
 > This interface never had much cross-browser
-> support and you probably looking for {{domxref("element.setPointerCapture")}} instead,
+> support and you are probably looking for {{domxref("element.setPointerCapture")}} instead,
 > from the Pointer Events API.
 
 ## Syntax

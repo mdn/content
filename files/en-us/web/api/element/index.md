@@ -239,6 +239,8 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Inserts a given text node at a given position relative to the element it is invoked upon.
 - {{DOMxRef("Element.matches()")}}
   - : Returns a boolean value indicating whether or not the element would be selected by the specified selector string.
+- {{DOMxRef("Element.moveBefore()")}} {{Experimental_Inline}}
+  - : Moves a given {{domxref("Node")}} inside the invoking node as a direct child, before a given reference node, without removing and then inserting the node.
 - {{DOMxRef("Element.prepend()")}}
   - : Inserts a set of {{domxref("Node")}} objects or strings before the first child of the element.
 - {{DOMxRef("Element.querySelector()")}}

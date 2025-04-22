@@ -57,13 +57,13 @@ Click the circle to change colors.
     _Value type_: [**[ anonymous | use-credentials ]?**](/en-US/docs/Web/CSS/string); _Default value_: `?`; _Animatable_: **yes**
 - {{SVGAttr("href")}}
   - : The {{Glossary("URL")}} to the script to load.
-    _Value type_: **[\<URL>](/en-US/docs/Web/SVG/Guides/Content_type#url)** ; _Default value_: _none_; _Animatable_: **no**
+    _Value type_: **[\<URL>](/en-US/docs/Web/SVG/Guides/Content_type#url)**; _Default value_: _none_; _Animatable_: **no**
 - {{SVGAttr("type")}}
   - : This attribute defines type of the script language to use.
     _Value type_: [**`<media-type>`**](/en-US/docs/Glossary/MIME_type); _Default value_: `application/ecmascript`; _Animatable_: **no**
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}
   - : The {{Glossary("URL")}} to the script to load.
-    _Value type_: **[\<URL>](/en-US/docs/Web/SVG/Guides/Content_type#url)** ; _Default value_: _none_; _Animatable_: **no**
+    _Value type_: **[\<URL>](/en-US/docs/Web/SVG/Guides/Content_type#url)**; _Default value_: _none_; _Animatable_: **no**
 
 ## Usage context
 

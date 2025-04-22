@@ -3,7 +3,7 @@ title: "RTCIceCandidatePairStats: selected property"
 short-title: selected
 slug: Web/API/RTCIceCandidatePairStats/selected
 page-type: web-api-instance-property
-browser-compat: api.RTCIceCandidatePairStats.selected
+browser-compat: api.RTCStatsReport.type_candidate-pair.selected
 ---
 
 {{APIRef("WebRTC")}}{{non-standard_header}}
