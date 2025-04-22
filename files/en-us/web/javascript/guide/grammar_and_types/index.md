@@ -305,6 +305,7 @@ In the case that a value representing a number is in memory as a string, there a
 > Additionally, a best practice for `parseInt` is to always include the _radix_ parameter. The radix parameter is used to specify which numerical system is to be used.
 
 W
+
 ```js
 parseInt("101", 2); // 5
 ```
