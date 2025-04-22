@@ -72,9 +72,18 @@ Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-
 
 #### General
 
+- All remote protocols now force the preferences required to properly pipe logs to stdout ([Firefox bug 1947740](https://bugzilla.mozilla.org/show_bug.cgi?id=1947740)).
+- A new Firefox argument, `--remote-enable-system-access`, was added to enable sensitive features, such as interacting with Browsing Contexts in the parent process (e.g., Browser UI) or using privileged APIs in content processes ([Firefox bug 1944565](https://bugzilla.mozilla.org/show_bug.cgi?id=1944565)).
+
 #### WebDriver BiDi
 
+- The `webExtension.install` command now installs web extensions as temporary extensions by default. This allows the command to be used with unsigned extensions. A new Firefox-specific parameter, `moz:permanent`, has been added to force installation as a regular extension instead ([Firefox bug 1947678](https://bugzilla.mozilla.org/show_bug.cgi?id=1947678)).
+- The `browsingContext.setViewport` command now supports a `userContexts` parameter, which must be an array of user context (Firefox container) ids. When provided, the viewport configuration will be applied to all Browsing Contexts belonging to those user contexts, as well as any future contexts created within them. This parameter cannot be used together with the existing `context` parameter ([Firefox bug 1940952](https://bugzilla.mozilla.org/show_bug.cgi?id=1940952)).
+- The `browsingContext.Info` now includes a `clientWindow` property corresponding to the ID of the window owning the Browsing Context. This type is typically returned by `browsingContext.getTree` or included in the payload of events such as `browsingContext.contextCreated` ([Firefox bug 1920952](https://bugzilla.mozilla.org/show_bug.cgi?id=1920952)).
+
 #### Marionette
+
+- Switching to the `chrome` (parent process) context with Marionette now requires using the `--remote-enable-system-access` command-line flag when starting Firefox ([Firefox bug 1710425](https://bugzilla.mozilla.org/show_bug.cgi?id=1710425)).
 
 ## Changes for add-on developers
 
