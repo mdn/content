@@ -179,7 +179,7 @@ body {
   margin: 20px;
 }
 
-@supports not (offset-path: shape(from 0 0, move to 0 0)) {
+@supports not (offset-path: shape(from 0 0, move 10 10)) {
   .container {
     display: none;
   }
