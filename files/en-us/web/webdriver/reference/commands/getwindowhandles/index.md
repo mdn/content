@@ -30,7 +30,7 @@ In order to determine whether or not a particular interaction with the browser o
 
 C#:
 
-```cpp
+```cs
 using System.Collections.ObjectModel;
 using OpenQA.Selenium.Firefox;
 
