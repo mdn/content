@@ -52,7 +52,7 @@ Let's look at an example. We'll use the same basic list we saw in the last coupl
 </ul>
 ```
 
-We'll also define a CSS class that styles any element it is applied to (below we'll apply it to our `<li>` elements via JavaScript) to make it look like a completed task, with a green text color and a strikethrough:
+We'll also define a CSS class called `.done` that will style any element it's applied to, making it look like a completed task with green text color and a strikethrough. We'll apply it to our `<li>` elements using JavaScript in the next step.
 
 ```css live-sample___basic-js
 .done {
