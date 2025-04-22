@@ -7,7 +7,7 @@ browser-compat: css.properties.mask-image
 
 {{CSSRef}}
 
-The **`mask-image`** [CSS](/en-US/docs/Web/CSS) property sets the image that is used as mask layer for an element, hiding sections of the element on which the masking image is set based on the alpha channel of the mask image and, depending on the {{cssxref("mask-mode")}} and {{cssxref("mask-type")}} property values, the luminance of the mask image's colors.
+The **`mask-image`** [CSS](/en-US/docs/Web/CSS) property sets the image that is used as the mask layer for an element, hiding sections of the element on which the masking image is set based on the alpha channel of the mask image and, depending on the {{cssxref("mask-mode")}} property value, the luminance of the mask image's colors.
 
 ## Syntax
 
@@ -222,14 +222,14 @@ We included an `id` for each of our four images, and an SVG that contains and eq
 <p>
   <label>
     <input type="checkbox" />
-    Set the <code>mask-type</code> to <code>alpha</code>.
+    Set the <code>mask-mode</code> to <code>alpha</code>.
   </label>
 </p>
 ```
 
 #### CSS
 
-We apply a different `<mask>` to each `<img>`. No part of the last image will be visible by default because, in this case, while all colors used in this example are fully opaque, the `mask-type` defaults to `luminance`.
+We apply a different `<mask>` to each `<img>`. No part of the last image will be visible by default because, in this case, while all colors used in this example are fully opaque, the `mask-mode` defaults to `match-type` which resolves to `luminance` in this case.
 
 ```css
 #green {
@@ -246,7 +246,7 @@ We apply a different `<mask>` to each `<img>`. No part of the last image will be
 }
 
 body:has(:checked) img {
-  mask-type: alpha;
+  mask-mode: alpha;
 }
 ```
 
@@ -254,7 +254,7 @@ body:has(:checked) img {
 
 {{EmbedLiveSample("SVG elements as masks", "100%", 500)}}
 
-Toggle the checkbox to toggle the value of last image's `mask-type` between `alpha` (checked) and the initial value which defaults to `luminance` (unchecked). When `alpha` is used, the color of the mask doesn't matter. All that matters is the alpha-transparency.
+Toggle the checkbox to toggle the value of last image's `mask-mode` between `alpha` (checked) and the initial value which resolves to `luminance` (unchecked). When `alpha` is used, the color of the mask doesn't matter; all that matters is the alpha-transparency.
 
 ## Specifications
 
