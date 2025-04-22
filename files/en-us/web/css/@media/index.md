@@ -16,7 +16,7 @@ The **`@media`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_sy
 
 ```css interactive-example
 abbr {
-  color: #ffb957; /* vibrant orange */
+  color: #864304; /* drown */
 }
 
 @media (hover: hover) {
