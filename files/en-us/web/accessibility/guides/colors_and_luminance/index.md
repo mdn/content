@@ -87,12 +87,12 @@ color: lab(60 93.56 -60.5);
 color: lab(60 93.56 -60.5 / 1);
 
 /* representation in the CIELAB color spaces */
-oklch(0.7 0.32 328.37);
-oklch(0.7 0.32 328.37 / 1);
+color: oklch(0.7 0.32 328.37);
+color: oklch(0.7 0.32 328.37 / 1);
 
 /* color() function in the XYZ color space */
-color(xyz-d65 0.59 0.28 0.96);
-color(xyz-d65 0.59 0.28 0.96 / 1);
+color: color(xyz-d65 0.59 0.28 0.96);
+color: color(xyz-d65 0.59 0.28 0.96 / 1);
 ```
 
 The first example uses one of the defined [named colors](/en-US/docs/Web/CSS/named-color).

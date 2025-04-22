@@ -103,7 +103,7 @@ For the tech folks, let's dig into the APIs the Web brings to the table that cat
   - : If you want your users to be able to use gamepads or other game controllers to work your game, you'll need this API.
 - [HTML](/en-US/docs/Web/HTML) and [CSS](/en-US/docs/Web/CSS)
   - : Together, these two technologies let you build, style, and lay out your game's user interface. Part of HTML is the {{HTMLElement("canvas")}} element, which provides one way to do 2D graphics.
-- [HTML audio](/en-US/docs/Web/HTML/Element/audio)
+- [HTML audio](/en-US/docs/Web/HTML/Reference/Elements/audio)
   - : The {{HTMLElement("audio")}} element lets you easily play simple sound effects and music. If your needs are more involved, check out the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) for real audio processing power!
 - [IndexedDB](/en-US/docs/Web/API/IndexedDB_API)
   - : A powerful data storage API for maintaining user data on their own computer or device. A great way to save game state and other information locally so it doesn't have to be downloaded every time it's needed. Also useful to help make your game playable even when the user isn't connected to the Web (such as when they're stuck on an airplane for hours on end).

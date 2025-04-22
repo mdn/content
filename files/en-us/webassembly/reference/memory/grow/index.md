@@ -43,7 +43,7 @@ await WebAssembly.instantiateStreaming(fetch(url), { console });
 
 Grow default memory
 
-```wasm
+```wat
 ;; Grow default memory by a number of pages indicated by the top value on the stack
 i32.const 3  ;; Number of pages to grow the memory (3)
 memory.grow  ;; Grow the memory (by 3 pages)
@@ -55,7 +55,7 @@ memory.grow  ;; Grow the memory (by 3 pages)
 
 Grow specified memory (if multi-memory supported)
 
-```wasm
+```wat
 ;; Grow memory with index 1
 i32.const 1 ;; Number of pages to grow specified memory (1)
 memory.grow (memory 1) ;; Grow memory index 1
@@ -84,7 +84,7 @@ We can grow this memory by first adding a variable specifying the amount to grow
 
 The code below shows a WAT file that demonstrates this:
 
-```wasm
+```wat
 (module
   (import "console" "log" (func $log (param i32)))
   (memory 1 2) ;; default memory with one page and max of 2 pages
@@ -134,7 +134,7 @@ If you don't specify a particular memory the default memory with index 0 is used
 
 The module below shows how you might directly reference a memory by index.
 
-```wasm
+```wat
 (module
   (import "console" "log" (func $log (param i32)))
   (memory 1 2)  ;; Default memory with one page and max of 2 pages
@@ -151,7 +151,7 @@ The module below shows how you might directly reference a memory by index.
 
 The body of the `$main` function could also have been written using any of the following options:
 
-```wasm
+```wat
 i32.const 1
 memory.grow (memory $memory1)  ;; referencing memory by name
 
@@ -163,7 +163,7 @@ memory.grow (memory $memory1)  ;; referencing memory by name
 We didn't use the default memory in the example.
 But you can also choose to specify this index if you want:
 
-```wasm
+```wat
 i32.const 1
 memory.grow (memory 0)  ;; referencing memory by index
 
@@ -180,7 +180,7 @@ The WAT files could be loaded using the same JavaScript code as the first exampl
 
 ## Browser compatibility
 
-> **Note:** `grow` support in Wasm modules matches the grow support in the JavaScript [`Memory.grow()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory/grow) API.
-> The [multiMemory](#webassembly.multimemory) key indicates versions in which `grow` can be used with a specified memory.
-
 {{Compat}}
+
+> [!NOTE]
+> The `multiMemory` compatibility table indicates versions in which `grow` can be used with a specified memory.

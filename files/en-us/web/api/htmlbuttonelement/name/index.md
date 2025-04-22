@@ -8,7 +8,7 @@ browser-compat: api.HTMLButtonElement.name
 
 {{ApiRef("HTML DOM")}}
 
-The **`name`** property of the {{domxref("HTMLButtonElement")}} interface indicates the name of the {{HTMLElement("button")}} element or the empty string if the element has no name. It reflects the element's [`name`](/en-US/docs/Web/HTML/Element/button#name) attribute.
+The **`name`** property of the {{domxref("HTMLButtonElement")}} interface indicates the name of the {{HTMLElement("button")}} element or the empty string if the element has no name. It reflects the element's [`name`](/en-US/docs/Web/HTML/Reference/Elements/button#name) attribute.
 
 ## Value
 

@@ -14,11 +14,11 @@ This article provides information about the changes in Firefox 119 that affect d
 
 #### Removals
 
-- The {{HTMLElement('input')}} element no longer supports the non-standard `mozactionhint` attribute. Use [`enterkeyhint`](/en-US/docs/Web/HTML/Global_attributes/enterkeyhint) instead. (See [Firefox bug 1735980](https://bugzil.la/1735980) for more details.)
+- The {{HTMLElement('input')}} element no longer supports the non-standard `mozactionhint` attribute. Use [`enterkeyhint`](/en-US/docs/Web/HTML/Reference/Global_attributes/enterkeyhint) instead. (See [Firefox bug 1735980](https://bugzil.la/1735980) for more details.)
 
 ### CSS
 
-- The {{cssxref("attr")}} CSS function fallback value is now supported. This allows the setting of a fallback value to be used if the [global attribute](/en-US/docs/Web/HTML/Global_attributes) is missing ([Firefox bug 1448248](https://bugzil.la/1448248)).
+- The {{cssxref("attr")}} CSS function fallback value is now supported. This allows the setting of a fallback value to be used if the [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) is missing ([Firefox bug 1448248](https://bugzil.la/1448248)).
 
 ### JavaScript
 

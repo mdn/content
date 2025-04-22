@@ -2,9 +2,8 @@
 title: "Test your skills: HTML5 controls"
 slug: Learn_web_development/Extensions/Forms/Test_your_skills:_HTML5_controls
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{learnsidebar}}
 
 The aim of this skill test is to assess whether you've understood our [The HTML5 input types](/en-US/docs/Learn_web_development/Extensions/Forms/HTML5_input_types) article.
 

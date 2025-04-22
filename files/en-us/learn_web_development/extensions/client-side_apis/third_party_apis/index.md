@@ -2,9 +2,8 @@
 title: Third-party APIs
 slug: Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenu("Learn_web_development/Extensions/Client-side_APIs/Client-side_storage", "Learn_web_development/Extensions/Client-side_APIs")}}
 
