@@ -35,6 +35,7 @@ Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-
 
 ### HTTP
 
+- The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Reference/Headers/Clear-Site-Data) header can be used with the [`cache`](/en-US/docs/Web/HTTP/Reference/Headers/Clear-Site-Data#cache) (and `*`) directive to clear the browser network cache. This gives websites more control over data stored for their users, allowing them to, for example, mitigate the risk of privacy leaks by clearing the cache during logout. ([Firefox bug 1942272](https://bugzil.la/1930500)).
 - The HTTP {{httpheader("Origin-Agent-Cluster")}} response header can now be used by a site to hint that the associated document should be placed in an origin-keyed [agent cluster](/en-US/docs/Web/JavaScript/Reference/Execution_model#agent_clusters_and_memory_sharing).
   When in such a cluster, the operating system process and/or other OS resources used by the document are only shared with other documents from the same [origin](/en-US/docs/Glossary/Origin).
   This makes it less likely that a resource-intensive document will degrade the performance of documents from other origins.
@@ -120,6 +121,10 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **`Notification.actions`** (Nightly): `dom.webnotifications.actions.enabled`
 
   The {{domxref("Notification.actions")}} property can get the actions associated with a `Notification`, as set using {{domxref("ServiceWorkerRegistration.showNotification()")}}. ([Firefox bug 1225110](https://bugzil.la/1225110)).
+
+- **`PerformanceEventTiming.interactionId`**: `dom.performance.event_timing.enable_interactionid`
+
+  {{domxref("PerformanceEventTiming.interactionId")}} can be used to measure latency timing for events triggered by a particular user interaction. ([Firefox bug 1934683](https://bugzil.la/1934683)).
 
 - **Import attribute for JSON modules** (Nightly): `javascript.options.experimental.import_attributes`
 
