@@ -292,6 +292,7 @@ With all other operators, JavaScript does _not_ convert numeric values to string
 ### Converting strings to numbers
 
 In the case that a value representing a number is in memory as a string, there are methods for conversion.
+
 - {{jsxref("Number()")}}
 - {{jsxref("parseInt()")}}
 - {{jsxref("parseFloat()")}}
