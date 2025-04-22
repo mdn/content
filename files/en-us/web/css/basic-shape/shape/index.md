@@ -179,7 +179,7 @@ body {
   margin: 20px;
 }
 
-@supports not (offset-path: shape(from 0 0, move 10 10)) {
+@supports not (offset-path: shape(from 0% 0%, line to 100% 0%)) {
   .container {
     display: none;
   }
@@ -203,9 +203,9 @@ body {
 .shape1 {
   offset-path: shape(
     from 30% 60px,
-    curve to 180px 180px via 90px 190px,
+    curve to 180px 180px with 90px 190px,
     close,
-    move by 0px 150px,
+    move 180px 330px,
     hline by 40%
   );
 }
