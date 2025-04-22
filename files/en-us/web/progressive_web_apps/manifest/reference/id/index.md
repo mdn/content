@@ -84,17 +84,17 @@ Consider a scenario where you deploy a web app with the following manifest:
 {
   "name": "My Weather Application",
   "id": "https://example.com/weatherapp/",
-  "start_url": "https://old-domain.com/app"
+  "start_url": "https://example.com/old-app"
 }
 ```
 
-However, you later decide to move the app to a different domain. You would then update the manifest as follows:
+However, you later decide to move the app to a different path. You would then update the manifest as follows:
 
 ```json
 {
   "name": "My Weather Application",
   "id": "https://example.com/weatherapp/",
-  "start_url": "https://new-domain.com/app"
+  "start_url": "https://example.com/new-app"
 }
 ```
 
