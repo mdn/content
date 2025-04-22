@@ -10830,18 +10830,6 @@
       "Jeremie"
     ]
   },
-  "Learn_web_development/Howto/Solve_HTML_problems/Define_terms_with_HTML": {
-    "modified": "2020-07-16T22:22:41.646Z",
-    "contributors": [
-      "AlexK89",
-      "jnegara",
-      "Jeremie",
-      "Andrew_Pfeiffer",
-      "Sheppy",
-      "MohammedAdam",
-      "hbloomer"
-    ]
-  },
   "Learn_web_development/Howto/Solve_HTML_problems/Use_JavaScript_within_a_webpage": {
     "modified": "2020-07-16T22:22:39.990Z",
     "contributors": ["RomainLanz", "Jeremie", "Andrew_Pfeiffer"]
@@ -91026,6 +91014,18 @@
       "myakura",
       "Sephr",
       "louisremi"
+    ]
+  },
+  "Web/HTML/How_to/Define_terms_with_HTML": {
+    "modified": "2020-07-16T22:22:41.646Z",
+    "contributors": [
+      "AlexK89",
+      "jnegara",
+      "Jeremie",
+      "Andrew_Pfeiffer",
+      "Sheppy",
+      "MohammedAdam",
+      "hbloomer"
     ]
   },
   "Web/HTML/Reference": {

@@ -5440,7 +5440,7 @@
 /en-US/docs/Learn/HTML/Howto/Create_a_basic_HTML_document	/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax
 /en-US/docs/Learn/HTML/Howto/Create_a_hyperlink	/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links
 /en-US/docs/Learn/HTML/Howto/Create_list_of_items_with_HTML	/en-US/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#Lists
-/en-US/docs/Learn/HTML/Howto/Define_terms_with_HTML	/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Define_terms_with_HTML
+/en-US/docs/Learn/HTML/Howto/Define_terms_with_HTML	/en-US/docs/Web/HTML/How_to/Define_terms_with_HTML
 /en-US/docs/Learn/HTML/Howto/Display_computer_code_with_HTML	/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#Representing_computer_code
 /en-US/docs/Learn/HTML/Howto/Divide_a_webpage_into_logical_sections	/en-US/docs/Learn_web_development/Core/Structuring_content/Structuring_documents
 /en-US/docs/Learn/HTML/Howto/Embed_a_webpage_within_another_webpage	/en-US/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies
@@ -5820,6 +5820,7 @@
 /en-US/docs/Learn_web_development/Getting_started/Your_first_website/The_web_and_web_standards	/en-US/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model
 /en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image	/en-US/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image
 /en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages	/en-US/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages
+/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Define_terms_with_HTML	/en-US/docs/Web/HTML/How_to/Define_terms_with_HTML
 /en-US/docs/Liberty!_Equality!_Validity!	/en-US/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML
 /en-US/docs/Link_prefetching_FAQ	/en-US/docs/Glossary/Prefetch
 /en-US/docs/Localization	/en-US/docs/Glossary/Localization

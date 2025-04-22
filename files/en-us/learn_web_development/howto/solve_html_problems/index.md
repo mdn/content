@@ -27,7 +27,7 @@ HTML specializes in providing semantic information for a document, so HTML answe
 - [How to annotate images and graphics](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images#annotating_images_with_figures_and_figure_captions)
 - [How to mark abbreviations and make them understandable](/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#abbreviations)
 - [How to add quotations and citations to web pages](/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#quotations)
-- [How to define terms with HTML](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Define_terms_with_HTML)
+- [How to define terms with HTML](/en-US/docs/Web/HTML/How_to/Define_terms_with_HTML)
 
 ### Hyperlinks
 
