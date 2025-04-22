@@ -108,6 +108,6 @@ Without this, the stack would be `undefined`.
 
 ## See also
 
-- [WebAssembly](/en-US/docs/WebAssembly) overview page
+- [WebAssembly](/en-US/docs/WebAssembly) overview
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Guides/Concepts)
 - [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Guides/Using_the_JavaScript_API)

@@ -41,6 +41,6 @@ console.log(table.length); // 3
 
 ## See also
 
-- [WebAssembly](/en-US/docs/WebAssembly) overview page
+- [WebAssembly](/en-US/docs/WebAssembly) overview
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Guides/Concepts)
 - [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Guides/Using_the_JavaScript_API)
