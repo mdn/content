@@ -5447,7 +5447,7 @@
 /en-US/docs/Learn/HTML/Howto/Emphasize_content_or_indicate_that_text_is_important	/en-US/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#Emphasis_and_importance
 /en-US/docs/Learn/HTML/Howto/Mark_abbreviations_and_make_them_understandable	/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#Abbreviations
 /en-US/docs/Learn/HTML/Howto/Set_up_a_proper_title_hierarchy	/en-US/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs
-/en-US/docs/Learn/HTML/Howto/Use_JavaScript_within_a_webpage	/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_JavaScript_within_a_webpage
+/en-US/docs/Learn/HTML/Howto/Use_JavaScript_within_a_webpage	/en-US/docs/Web/HTML/How_to/Add_JavaScript_to_your_web_page
 /en-US/docs/Learn/HTML/Howto/Use_data_attributes	/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes
 /en-US/docs/Learn/HTML/Howto/abbr	/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#Abbreviations
 /en-US/docs/Learn/HTML/Introduction_to_HTML	/en-US/docs/Learn_web_development/Core/Structuring_content
@@ -5821,6 +5821,7 @@
 /en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image	/en-US/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image
 /en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages	/en-US/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages
 /en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Define_terms_with_HTML	/en-US/docs/Web/HTML/How_to/Define_terms_with_HTML
+/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_JavaScript_within_a_webpage	/en-US/docs/Web/HTML/How_to/Add_JavaScript_to_your_web_page
 /en-US/docs/Liberty!_Equality!_Validity!	/en-US/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML
 /en-US/docs/Link_prefetching_FAQ	/en-US/docs/Glossary/Prefetch
 /en-US/docs/Localization	/en-US/docs/Glossary/Localization

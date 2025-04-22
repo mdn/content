@@ -10830,10 +10830,6 @@
       "Jeremie"
     ]
   },
-  "Learn_web_development/Howto/Solve_HTML_problems/Use_JavaScript_within_a_webpage": {
-    "modified": "2020-07-16T22:22:39.990Z",
-    "contributors": ["RomainLanz", "Jeremie", "Andrew_Pfeiffer"]
-  },
   "Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes": {
     "modified": "2020-07-16T22:22:34.241Z",
     "contributors": [
@@ -90933,6 +90929,10 @@
       "hbloomer",
       "Andrew_Pfeiffer"
     ]
+  },
+  "Web/HTML/How_to/Add_JavaScript_to_your_web_page": {
+    "modified": "2020-07-16T22:22:39.990Z",
+    "contributors": ["RomainLanz", "Jeremie", "Andrew_Pfeiffer"]
   },
   "Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image": {
     "modified": "2020-07-16T22:22:42.758Z",
