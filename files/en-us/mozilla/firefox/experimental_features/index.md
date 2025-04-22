@@ -1065,6 +1065,46 @@ This subset of the API has been implemented:
   </tbody>
 </table>
 
+### PerformanceEventTiming.interactionId
+
+{{domxref("PerformanceEventTiming.interactionId")}} can be used to measure latency timing for events triggered by a particular user interaction. ([Firefox bug 1934683](https://bugzil.la/1934683)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.performance.event_timing.enable_interactionid</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ### Notification.actions
 
 The {{domxref("Notification.actions","actions")}} read-only property of the {{domxref("Notification")}} interface is supported in Nightly.
@@ -1083,7 +1123,6 @@ This contains notification actions set with {{domxref("ServiceWorkerRegistration
     <tr>
       <th>Nightly</th>
       <td>138</td>
-      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
