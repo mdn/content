@@ -83,11 +83,11 @@ aXe is also installable using `npm`, and can be integrated with task runners lik
 
 ## Screen readers
 
-One of the most common types of assistive technology (AT) that disabled people use to consume web content — and one of the most common ones you'll use to test the accessibility of your webpages — is **screen readers**. These are pieces of software that read out webpage content — and content from other apps installed on the user's operating system — so that they can still use it content if they cannot see it.
+One of the most common types of assistive technology (AT) that disabled people use — and one of the most common ones you'll use to test the accessibility of your webpages — is **screen readers**. These are pieces of software that read out webpage content or content from other apps installed on someone's operating system. Screen readers enable people to use computers without having to see any visual content.
 
 Web browsers expose information about the page's content for screen readers (and other AT) to communicate to the user through a representation called the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree). This provides semantic information such as names and descriptions of elements, what their purpose or role is (is it a button, or an input field?), and whether they are in a particular state (for example, is a dialog box open or closed?).
 
-This information is pretty trivial in the case of a paragraph of text, which sounds pretty much how it is written, but it becomes really important when describing complex widgets to a visually impaired user, such as a drop-down menu or a video player. This is also why it is very important to use semantic HTML elements correctly, which you'll look at in detail in the next article in this module. If you mark up content using the wrong element, it can really confuse screen reader users.
+This information might be trivial in the case of a paragraph of text, which sounds pretty much how it is written, but it can get complicated when it comes to user interface features such as a drop-down menu or a video player. This is why it's very important to use semantic HTML correctly, which you'll look at in detail in the next article in this module. If you mark up content using the wrong element, it can confuse screen reader users.
 
 Make sure you have a screen reader or two installed on your development machine, and try using your favorite websites via a screen reader, as discussed below. Understanding how visually impaired people use the web is key to designing products that work better for everyone.
 
