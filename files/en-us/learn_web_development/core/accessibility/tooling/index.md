@@ -48,7 +48,7 @@ To test source order, you can turn off a site's CSS and see how understandable i
 
 When choosing a color scheme for your website, you should make sure that the text (foreground) color contrasts well with the background color. Your design might look cool, but it is no good if people can't read your content. Use a tool like WebAIM's [Color Contrast Checker](https://webaim.org/resources/contrastchecker/) to check whether your scheme is contrasting enough.
 
-Another tip is to not rely on color alone for signposts/information, as this will be no good for those with visual impairments like color blindness. Instead of marking required form fields in red, for example, mark them with an asterisk and in red.
+Another tip is to avoid using only color for signposts or highlighting important information, as this might be missed by people with visual impairments like color blindness. Instead of marking required form fields in red, for example, mark them with an asterisk and in red.
 
 > [!NOTE]
 > A high contrast ratio will also allow anyone using a smartphone or tablet with a glossy screen to better read pages when in a bright environment, such as sunlight.
