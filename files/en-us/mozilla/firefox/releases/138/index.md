@@ -14,6 +14,8 @@ Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-
 
 ### HTML
 
+- The [`importmap`](/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap) value of the [`type`](/en-US/docs/Web/HTML/Reference/Elements/script/type) attribute of the [`<script>`](/en-US/docs/Web/HTML/Reference/Elements/script) element now supports the [`integrity`](/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap#integrity) key. This allows the ES module URLs referenced in the import maps to be matched against their integrity metadata. As a result, these modules are now compatible with [CSP](/en-US/docs/Web/HTTP/Guides/CSP) directives that require Subresource Integrity ([SRI](/en-US/docs/Web/Security/Practical_implementation_guides/SRI)). ([Firefox bug 1945540](https://bugzil.la/1945540)).
+
 #### Removals
 
 ### CSS
@@ -33,6 +35,7 @@ Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-
 
 ### HTTP
 
+- The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Reference/Headers/Clear-Site-Data) header can be used with the [`cache`](/en-US/docs/Web/HTTP/Reference/Headers/Clear-Site-Data#cache) (and `*`) directive to clear the browser network cache. This gives websites more control over data stored for their users, allowing them to, for example, mitigate the risk of privacy leaks by clearing the cache during logout. ([Firefox bug 1942272](https://bugzil.la/1930500)).
 - The HTTP {{httpheader("Origin-Agent-Cluster")}} response header can now be used by a site to hint that the associated document should be placed in an origin-keyed [agent cluster](/en-US/docs/Web/JavaScript/Reference/Execution_model#agent_clusters_and_memory_sharing).
   When in such a cluster, the operating system process and/or other OS resources used by the document are only shared with other documents from the same [origin](/en-US/docs/Glossary/Origin).
   This makes it less likely that a resource-intensive document will degrade the performance of documents from other origins.
@@ -81,6 +84,11 @@ Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-
 - The `contextualIdentities` permission is now not recognized on Firefox for Android. Previously, it enabled a broken version of the "containers" feature. ([Firefox bug 1659500](https://bugzil.la/1659500))
 - The new Manifest V3 version of the {{WebExtAPIRef("userScripts")}} API is now available on Firefox for Android. ([Firefox bug 1949955](https://bugzil.la/1949955))
 - The {{WebExtAPIRef("alarms.create")}} API now returns a Promise instead of undefined. ([Firefox bug 1869171](https://bugzil.la/1869171))
+- Support added to enable the manipulation of tabs within tab groups, including the addition of:
+  - {{WebExtAPIRef("tabs.group()")}} and {{WebExtAPIRef("tabs.ungroup()")}}. ([Firefox bug 1959714](https://bugzil.la/1959714))
+  - `groupId` to {{WebExtAPIRef("tabs.Tab")}}. ([Firefox bug 1959713](https://bugzil.la/1959713))
+  - `groupId` to {{WebExtAPIRef("tabs.query")}}. ([Firefox bug 1959715](https://bugzil.la/1959715))
+  - `groupId` to {{WebExtAPIRef("tabs.onUpdated")}}. ([Firefox bug 1959716](https://bugzil.la/1959716)
 
 ### Removals
 
@@ -88,14 +96,39 @@ Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-
 
 ## Experimental web features
 
-These features are newly shipped in Firefox 138 but are disabled by default.
-To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
+These features are newly shipped in Firefox 138 and are considered experimental.
+They may be disabled by default or enabled by default but available only in the Nightly build.
+For features disabled by default, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 
+- **UA styles for `<h1>` nested into sectioning elements:** `layout.css.h1-in-section-ua-styles.enabled`.
+
+  The `<h1>` heading doesn't decrease in font size now when nested within [sectioning elements](/en-US/docs/Web/HTML/Guides/Content_categories#sectioning_content) `<article>`, `<aside>`, `<nav>`, and `<section>`. The UA styles for `<h1>` nested within sectioning elements are no longer relevant since the outline algorithm [has been removed](https://github.com/whatwg/html/pull/7829) from the HTML specification. ([Firefox bug 1883896](https://bugzil.la/1883896)).
+
+  As part of a staged rollout of this removal 5% of users of Firefox 138 and 50% of users of Firefox Beta 138 will have the value of `layout.css.h1-in-section-ua-styles.enabled` set to `false` ([Intent to unship: UA styles for h1 in article, aside, nav, section](https://groups.google.com/a/mozilla.org/g/dev-platform/c/CzG_pVa7pws/m/Ab3Bwsg2BQAJ)).
+
+  > [!NOTE]
+  > The preference for this feature works in reverse: it's set to `false` in the Nightly build, which removes the UA styling for headings nested in sectioning elements. It's set to `true` in all other channels, which retains the existing UA styling for the nested headings.
+
 - **::details-content CSS pseudo-element:** `layout.css.details-content.enabled`.
+
   The CSS {{cssxref("::details-content")}} pseudo-element enables you to style the content of the {{htmlElement("details")}} element ([Firefox bug 1901037](https://bugzil.la/1901037)).
-- **`MutationEvent` on path to removal**: {{domxref("MutationEvent")}} and its associated events (`DOMSubtreeModified`, `DOMNodeInserted`, `DOMNodeRemoved`, `DOMCharacterDataModified`,`DOMAttrModified`) are now disabled on Firefox Nightly by default. ([Firefox bug 1951772](https://bugzil.la/1951772)).
-- **`Notification.actions`:** (Nightly release): The {{domxref("Notification.actions")}} property can get the actions associated with a `Notification`, as set using {{domxref("ServiceWorkerRegistration.showNotification()")}}. ([Firefox bug 1225110](https://bugzil.la/1225110)).
+
+- **`MutationEvent` on path to removal**: `dom.mutation_events.enabled`
+
+  {{domxref("MutationEvent")}} and its associated events (`DOMSubtreeModified`, `DOMNodeInserted`, `DOMNodeRemoved`, `DOMCharacterDataModified`,`DOMAttrModified`) are now disabled on Firefox Nightly by default. ([Firefox bug 1951772](https://bugzil.la/1951772)).
+
+- **`Notification.actions`** (Nightly): `dom.webnotifications.actions.enabled`
+
+  The {{domxref("Notification.actions")}} property can get the actions associated with a `Notification`, as set using {{domxref("ServiceWorkerRegistration.showNotification()")}}. ([Firefox bug 1225110](https://bugzil.la/1225110)).
+
+- **`PerformanceEventTiming.interactionId`**: `dom.performance.event_timing.enable_interactionid`
+
+  {{domxref("PerformanceEventTiming.interactionId")}} can be used to measure latency timing for events triggered by a particular user interaction. ([Firefox bug 1934683](https://bugzil.la/1934683)).
+
+- **Import attribute for JSON modules** (Nightly): `javascript.options.experimental.import_attributes`
+
+  The [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declaration now supports importing JSON modules using the [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) attribute.
 
 ## Older versions
 

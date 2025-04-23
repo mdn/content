@@ -3,9 +3,8 @@ title: "Test your skills: Math"
 short-title: Math
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Math
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{learnsidebar}}
 
 The aim of the tests on this page is to assess whether you've understood the [Basic math in JavaScript — numbers and operators](/en-US/docs/Learn_web_development/Core/Scripting/Math) article.
 

@@ -1,5 +1,5 @@
 ---
-title: Converting WebAssembly text format to Wasm
+title: Converting WebAssembly text format to binary
 slug: WebAssembly/Guides/Text_format_to_Wasm
 page-type: guide
 sidebar: webassemblysidebar

@@ -1,5 +1,5 @@
 ---
-title: rel=manifest
+title: rel="manifest"
 slug: Web/HTML/Reference/Attributes/rel/manifest
 page-type: html-attribute-value
 browser-compat: html.elements.link.rel.manifest

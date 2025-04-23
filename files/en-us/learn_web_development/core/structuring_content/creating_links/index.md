@@ -2,9 +2,8 @@
 title: Creating links
 slug: Learn_web_development/Core/Structuring_content/Creating_links
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content")}}
 
@@ -249,15 +248,15 @@ Let's look at a specific example:
 **Good** link text: [Download Firefox](https://www.mozilla.org/en-US/firefox/new/?redirect_source=firefox-com)
 
 ```html example-good
-<p><a href="https://www.mozilla.org/en-US/firefox/">Download Firefox</a></p>
+<p><a href="https://www.mozilla.org/en-US/firefox/new/">Download Firefox</a></p>
 ```
 
-**Bad** link text: [Click here](https://www.mozilla.org/en-US/firefox/) to download Firefox
+**Bad** link text: [Click here](https://www.mozilla.org/en-US/firefox/new/) to download Firefox
 
 ```html example-bad
 <p>
-  <a href="https://www.mozilla.org/en-US/firefox/">Click here</a> to download
-  Firefox
+  <a href="https://www.mozilla.org/en-US/firefox/new/">Click here</a> to
+  download Firefox
 </p>
 ```
 

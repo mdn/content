@@ -2,9 +2,8 @@
 title: Getting started with Svelte
 slug: Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Frameworks_libraries/Svelte_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
 

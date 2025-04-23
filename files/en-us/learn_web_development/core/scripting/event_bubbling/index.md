@@ -2,9 +2,8 @@
 title: Event bubbling
 slug: Learn_web_development/Core/Scripting/Event_bubbling
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Events","Learn_web_development/Core/Scripting/Image_gallery", "Learn_web_development/Core/Scripting")}}
 

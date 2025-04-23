@@ -125,8 +125,7 @@ async function getBlobFromCanvas(canvas) {
 
 Next we set up our canvas and add an event listener for the `click` event.
 
-When you click the blue rectangle the code first checks if the clipboard supports data of type `"image/png"`.
-If so, the canvas displaying the rectangle is copied into a blob, and then the blob is added to a `ClipboardItem` and then written to the clipboard.
+When you click the blue rectangle, the canvas displaying the rectangle is copied into a blob, and then the blob is added to a `ClipboardItem` and then written to the clipboard.
 
 ```js
 const canvas = document.getElementById("canvas");
@@ -140,26 +139,21 @@ canvas.addEventListener("click", copyCanvasContentsToClipboard);
 const target = document.getElementById("target");
 
 async function copyCanvasContentsToClipboard() {
-  if (ClipboardItem.supports("image/png")) {
-    // Copy canvas to blob
-    try {
-      const blob = await getBlobFromCanvas(canvas);
-      // Create ClipboardItem with blob and it's type, and add to an array
-      const data = [new ClipboardItem({ [blob.type]: blob })];
-      // Write the data to the clipboard
-      await navigator.clipboard.write(data);
-      log("Copied");
-    } catch (error) {
-      log(error);
-    }
-  } else {
-    log("image/png is not supported");
+  // Copy canvas to blob
+  try {
+    const blob = await getBlobFromCanvas(canvas);
+    // Create ClipboardItem with blob and it's type, and add to an array
+    const data = [new ClipboardItem({ [blob.type]: blob })];
+    // Write the data to the clipboard
+    await navigator.clipboard.write(data);
+    log("Copied");
+  } catch (error) {
+    log(error);
   }
 }
 ```
 
-Note that clipboard support for PNG files is a mandatory part of the specification, so we don't actually need the check using {{domxref("ClipboardItem.supports_static", "ClipboardItem.supports()")}} above (it always returns `true`).
-The check would be more useful in cases where we're fetching an optional file type, or a resource where we don't know the type in advance.
+Note that if you are fetching a less-common file type or a resource that you don't know the type in advance, you may want to use {{domxref("ClipboardItem.supports_static", "ClipboardItem.supports()")}} to check if the file type is supported, and provide a good error message to the user in case it isn't.
 
 We then define an event listener for [`paste` events](/en-US/docs/Web/API/Element/paste_event) on then element where we want to display the clipboard contents as an image.
 The [FileReader API](/en-US/docs/Web/API/FileReader) allows us to read the blob using the [`readAsDataUrl`](/en-US/docs/Web/API/FileReader/readAsDataURL) method and create an `<img>` element with the canvas contents:

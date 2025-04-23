@@ -15,6 +15,10 @@ The **`HTMLButtonElement`** interface provides properties and methods (beyond th
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
+- {{domxref("HTMLButtonElement.command")}}
+  - : A string value indicating the action to be performed on an element being controlled by this button.
+- {{domxref("HTMLButtonElement.commandForElement")}}
+  - : A reference to an existing {{domxref("Element")}} that the button controls.
 - {{domxref("HTMLButtonElement.disabled")}}
   - : A boolean value indicating whether or not the control is disabled, meaning that it does not accept any clicks.
 - {{domxref("HTMLButtonElement.form")}} {{ReadOnlyInline}}
@@ -64,6 +68,8 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}_.
   - : Returns `true` if the element's value has no validity problems; otherwise, returns `false`.
 - {{domxref("HTMLButtonElement.reportValidity()")}}
   - : Performs the same action as `checkValidity()`, but also reports the result to the user if the `invalid` event was not canceled.
+- {{domxref("HTMLButtonElement.setCustomValidity()")}}
+  - : Sets the custom validity message for the element. Use the empty string to indicate that the element does _not_ have a custom validity error.
 
 ## Specifications
 

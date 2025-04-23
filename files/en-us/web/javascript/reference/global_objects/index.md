@@ -88,6 +88,7 @@ These objects represent strings and support manipulating them.
 These objects represent collections of data which are ordered by an index value. This includes (typed) arrays and array-like constructs.
 
 - {{jsxref("Array")}}
+- {{jsxref("TypedArray")}}
 - {{jsxref("Int8Array")}}
 - {{jsxref("Uint8Array")}}
 - {{jsxref("Uint8ClampedArray")}}

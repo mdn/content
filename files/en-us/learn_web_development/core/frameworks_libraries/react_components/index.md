@@ -3,9 +3,8 @@ title: Componentizing our React app
 short-title: React components
 slug: Learn_web_development/Core/Frameworks_libraries/React_components
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/React_interactivity_events_state", "Learn_web_development/Core/Frameworks_libraries")}}
 

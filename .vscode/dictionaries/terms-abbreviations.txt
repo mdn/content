@@ -320,6 +320,7 @@ JSON-ifiable
 jsonifier
 jumpless
 JXON
+KACST
 Kbit
 Kbps
 keysyms
@@ -793,6 +794,7 @@ UAAG
 ufrag
 unabbreviate
 unbookmark
+unbundling
 uncacheable
 uncategorized
 unclickable
@@ -890,7 +892,6 @@ workgroups
 worklets
 workstreams
 writemasks
-WYSIYWG
 XMLHTTP
 XPCOM
 xrayed

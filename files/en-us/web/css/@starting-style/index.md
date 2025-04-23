@@ -17,18 +17,19 @@ The `@starting-style` at rule can be used in two ways:
 
    ```css
    @starting-style {
-     rulesets
+     /* rulesets */
    }
    ```
 
 2. Nested within an existing ruleset, in which case it contains one or more declarations defining starting property values for the elements already selected by that ruleset:
 
    ```css
-   selector { /* existing ruleset */
+   selector {
+     /* existing ruleset */
      /* ... */
 
      @starting-style {
-       declarations
+       /* declarations */
      }
    }
    ```
@@ -88,7 +89,7 @@ In effect, there are three style states to manage in these situations — starti
 
 ## Formal syntax
 
-{{csssyntax}}
+{{CSSSyntaxRaw(`@starting-style = @starting-style { <rule-list> }`)}}
 
 ## Examples
 

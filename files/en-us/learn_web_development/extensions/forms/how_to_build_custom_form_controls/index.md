@@ -2,9 +2,8 @@
 title: How to build custom form controls
 slug: Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 There are some cases where the available native HTML form controls may seem like they are not enough. For example, if you need to [perform advanced styling](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling) on some controls such as the {{HTMLElement("select")}} element, or if you want to provide custom behaviors, you may consider building your own controls.
 
