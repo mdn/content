@@ -94,7 +94,7 @@ We include an HTML {{htmlelement("img")}} element, which will also be used in al
 
 #### CSS
 
-We use the CSS {{CSSxRef("gradient/radial-gradient")}} function to create a mask that has a black circle with a radius that is half the width of the mask, before transition to being transparent over 10%.
+We use the CSS {{CSSxRef("gradient/radial-gradient")}} function to create a mask that has a black circle with a radius that is half the width of the mask, before transitioning to being transparent over 10%.
 
 ```css live-sample___first-example
 img {
