@@ -7,9 +7,7 @@ browser-compat: css.properties.mask-type
 
 {{CSSRef}}
 
-The **`mask-type`** [CSS](/en-US/docs/Web/CSS) property sets whether an SVG {{svgElement("mask")}} element is used as a _luminance_ or an _alpha_ mask. It applies to the `<mask>` element itself.
-
-This property may be overridden by the {{cssxref("mask-mode")}} property, which has the same effect but applies to the element where the mask is used. Alpha masks will generally be faster to render.
+The **`mask-type`** [CSS](/en-US/docs/Web/CSS) property sets whether an SVG {{svgElement("mask")}} element's _luminance_ or _alpha_ channels are used when the element on which the mask is applied has it's {{cssxref("mask-mode")}} property value explicitly set to or defaults to `match-mode`.
 
 ## Syntax
 
@@ -26,16 +24,20 @@ mask-type: revert-layer;
 mask-type: unset;
 ```
 
-The `mask-type` property is specified as one of the keyword values listed below.
-
 ### Values
 
-- `luminance`
-  - : Is a keyword indicating that the associated mask image is a luminance mask, i.e., that its [relative luminance](https://en.wikipedia.org/wiki/Luminance_%28relative%29) values must be used when applying it.
-- `alpha`
-  - : Is a keyword indicating that the associated mask image is an alpha mask, i.e., that its [alpha channel](https://en.wikipedia.org/wiki/Alpha_compositing) values must be used when applying it.
+The `mask-type` property accepts a comma-separated list of keyword values, including:
 
-## Formal definition
+- `luminance`
+  - : Indicates that the luminance values of the `<mask>` should be used.
+- `alpha`
+  - : Indicates that the alpha values of the `<mask>` should be used.
+
+## Description
+
+The `mask-type` property is only relevant to mask layers when the mask image is a `<mask>` element. The property defines whether the resolved value of the {{cssxref("mask-mode")}} property value if the `mask-mode` property is explicitly set to or defaults to `match-mode`. If `mask-mode` is set to any other `<masking-mode>` value, that value overrides the `mask-type` value. If the mask image source is not an SVG `<mask>`, this property has no effect.
+
+by the mask defined by a `<mask>` element being used as an element's `mask-image`, i.e., the `<mask>`'s [relative luminance](https://en.wikipedia.org/wiki/Luminance_%28relative%29) values should be used when masking is applied.
 
 {{cssinfo}}
 
