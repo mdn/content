@@ -87,7 +87,7 @@ By adding `data-*` attributes, even ordinary HTML elements can become rather com
   onclick="spaceships[this.dataset.shipId].blasted()" />
 ```
 
-For a more in-depth tutorial about using HTML data attributes, see [Using data attributes](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes).
+For a more in-depth tutorial about using HTML data attributes, see [Using data attributes](/en-US/docs/Web/HTML/How_to/Use_data_attributes).
 
 ## Specifications
 
@@ -101,4 +101,4 @@ For a more in-depth tutorial about using HTML data attributes, see [Using data a
 
 - All [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 - The {{domxref("HTMLElement.dataset")}} property that allows to access and modify these values.
-- [Using data attributes](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)
+- [Using data attributes](/en-US/docs/Web/HTML/How_to/Use_data_attributes)

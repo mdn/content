@@ -34,7 +34,7 @@ These tutorials are created by forward-thinking companies and web developers who
 
 - [Web forms](/en-US/docs/Learn_web_development/Extensions/Forms)
   - : Forms are a very important part of the Web — these provide much of the functionality you need for interacting with websites, such as registering and logging in, sending feedback, buying products, and more. This module gets you started with creating the client-side parts of forms.
-- [Tips for authoring fast-loading HTML pages](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages)
+- [Tips for authoring fast-loading HTML pages](/en-US/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages)
   - : Optimize web pages to provide a more responsive site for visitors and reduce the load on your web server and Internet connection.
 
 ## CSS tutorials

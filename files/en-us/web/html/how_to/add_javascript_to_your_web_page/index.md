@@ -1,10 +1,11 @@
 ---
-title: Use JavaScript within a webpage
-slug: Learn_web_development/Howto/Solve_HTML_problems/Use_JavaScript_within_a_webpage
-page-type: learn-faq
+title: Add JavaScript to your web page
+short-title: Add JavaScript
+slug: Web/HTML/How_to/Add_JavaScript_to_your_web_page
+page-type: how-to
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems")}}
+{{HTMLSidebar}}
 
 Take your webpages to the next level by harnessing JavaScript. Learn in this article how to trigger JavaScript right from your HTML documents.
 

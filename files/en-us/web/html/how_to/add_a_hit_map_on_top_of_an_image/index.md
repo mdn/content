@@ -1,10 +1,10 @@
 ---
 title: Add a hitmap on top of an image
-slug: Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image
-page-type: learn-faq
+slug: Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image
+page-type: how-to
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems")}}
+{{HTMLSidebar}}
 
 Here we go over how to set up an image map, and some downsides to consider first.
 

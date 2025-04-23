@@ -892,7 +892,6 @@ workgroups
 worklets
 workstreams
 writemasks
-WYSIYWG
 XMLHTTP
 XPCOM
 xrayed
