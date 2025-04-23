@@ -393,7 +393,7 @@ Software and hardware screen magnifiers are available:
 
 Voice (or speech) recognition software allows you to speak commands to control your device and/or speak the text of emails or documents and have the computer write the text for you. This is very useful for people who are unable to use a keyboard or other control mechanisms.
 
-Modern operating systems have features built in to enable this (for example Dictation on mac, or Voice Access on Windows), and there are third party apps available too, from desktop apps to browser extensions.
+Modern operating systems have features built in to enable this (for example Dictation on mac, or Voice Access on Windows), and there are third-party apps available too, from desktop apps to browser extensions.
 
 ### Switch controls
 
