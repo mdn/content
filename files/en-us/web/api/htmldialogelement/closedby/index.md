@@ -15,20 +15,28 @@ The **`closedBy`** property of the
 
 A string; possible values are:
 
-- `none`
+- `any`
 
-  - : No user actions can be used to close the `<dialog>` element, only developer-specified mechanisms such as a close {{htmlelement("button")}} (for example with a [`click`](/en-US/docs/Web/API/Element/click_event) handler that invokes {{domxref("HTMLDialogElement.close()")}}) or a {{htmlelement("form")}} submission.
+  - : The `<dialog>` element can be closed by:
+
+    - Clicking or tapping outside the `<dialog>`.
+    - Relevant platform-specific user actions such as pressing the <kbd>Esc</kbd> key on desktop platforms, or a "back" or "dismiss" gesture on mobile platforms.
+    - Developer-specified mechanisms such as a {{htmlelement("button")}} with a [`click`](/en-US/docs/Web/API/Element/click_event) handler that invokes {{domxref("HTMLDialogElement.close()")}} or a {{htmlelement("form")}} submission.
+
+    This is equivalent to the ["light dismiss" behavior of "auto" state popovers](/en-US/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss).
 
 - `closerequest`
 
-  - : The `<dialog>` element can be closed via relevant platform-specific user actions, such as pressing the <kbd>Esc</kbd> key on desktop platforms, or a "back" or "dismiss" gesture on mobile platforms.
+  - : The `<dialog>` element can be closed via relevant platform-specific user actions or developer-specified mechanisms.
 
-- `any`
+- `none`
 
-  - : The `<dialog>` element can be closed via relevant platform-specific user actions, or by clicking or tapping outside the `<dialog>`. This is equivalent to the ["light dismiss" behavior of "auto" state popovers](/en-US/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss).
+  - : The `<dialog>` element can only be closed via developer-specified mechanisms.
 
-> [!NOTE]
-> If the `<dialog>` element does not have a `closedby` value specified, or it is specified with an invalid value, it behaves as if the value was `"closerequest"` if the `<dialog>` was shown via {{domxref("HTMLDialogElement.showModal()", "showModal()")}}, or `"none"` if it was not.
+If the `<dialog>` element does not have a valid `closedby` value specified, then
+
+- if it was opened using {{domxref("HTMLDialogElement.showModal()", "showModal()")}}, it behaves as if the value was `"closerequest"`
+- otherwise, it behaves as if the value was `"none"`.
 
 ## Examples
 
