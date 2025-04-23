@@ -89,7 +89,7 @@ Web browsers expose information about the page's content for screen readers (and
 
 This information is pretty trivial in the case of a paragraph of text, which sounds pretty much how it is written, but it becomes really important when describing complex widgets to a visually impaired user, such as a drop-down menu or a video player. This is also why it is very important to use semantic HTML elements correctly, which you'll look at in detail in the next article in this module. If you mark up content using the wrong element, it can really confuse screen reader users.
 
-It is definitely worth making sure you have a screen reader or two installed on your development machine, and try using your favourite websites via a screenreader, as discussed below. Understanding how severely visually impaired people use the web is key to designing products that work better for them.
+Make sure you have a screen reader or two installed on your development machine, and try using your favorite websites via a screen reader, as discussed below. Understanding how visually impaired people use the web is key to designing products that work better for everyone.
 
 ### What screenreaders are available?
 
