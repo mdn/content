@@ -237,7 +237,7 @@ We've included an `id` for each of our four images, and an SVG that contains an 
 
 #### CSS
 
-We apply a different `<mask>` to each `<img>`. No part of the last image, with the `black` fill, will be visible by default because, in this case, while all colors used in this example are fully opaque, the `mask-mode` defaults to `match-type`, which resolves to `luminance` in this case.
+We apply a different `<mask>` to each `<img>`. No part of the last image, with the `black` fill, will be visible by default. In this case, while all colors used in this example are fully opaque, the `mask-mode` defaults to `match-type`, which resolves to `luminance` in this case.
 
 ```css
 #green {
