@@ -160,7 +160,7 @@ The above will put a semi-transparent black mask over the Firefox logo backgroun
 
 ## Browser compatibility
 
-There is no browser implementing this feature.
+{{Compat}}
 
 ## See also
 
