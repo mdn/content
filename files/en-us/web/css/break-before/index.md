@@ -57,9 +57,6 @@ break-before: page;
 
 ```js interactive-example
 const btn = document.getElementById("print-btn");
-const editorContainer = document.getElementsByClassName(
-  "css-editor-container",
-)[0];
 const exampleHTMLElement = document.getElementById("default-example");
 
 const printableSection = document.createElement("div");
@@ -70,7 +67,7 @@ document.body.appendChild(printableSection);
 btn.addEventListener("click", () => {
   const exampleContent = exampleHTMLElement.innerHTML;
 
-  editorContainer.classList.add("hide-element");
+  exampleHTMLElement.classList.add("hide-element");
   printableSection.innerHTML = exampleContent;
   printableSection.classList.remove("hide-element");
 
@@ -78,7 +75,7 @@ btn.addEventListener("click", () => {
 
   printableSection.classList.add("hide-element");
   printableSection.innerHTML = "";
-  editorContainer.classList.remove("hide-element");
+  exampleHTMLElement.classList.remove("hide-element");
 });
 ```
 
