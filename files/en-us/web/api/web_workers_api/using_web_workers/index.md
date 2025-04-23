@@ -452,7 +452,7 @@ Here are the full implementation:
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>MDN Example - Queryable worker</title>
-    <script type="text/javascript">
+    <script>
       // QueryableWorker instances methods:
       //   * sendQuery(queryable function name, argument to pass 1, argument to pass 2, etc. etc.): calls a Worker's queryable function
       //   * postMessage(string or JSON Data): see Worker.prototype.postMessage()

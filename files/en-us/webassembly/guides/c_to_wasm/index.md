@@ -140,7 +140,7 @@ If you want to call a function defined in your C code from JavaScript, you can u
 
 4. If you load the example in your browser again, you'll see the same thing as before!
 5. Now we need to run our new `myFunction()` function from JavaScript. First of all, open up your hello3.html file in a text editor.
-6. Add a {{HTMLElement("button")}} element as shown below, just above the first opening `<script type='text/javascript'>` tag.
+6. Add a {{HTMLElement("button")}} element as shown below, just above the first opening `<script type="text/javascript">` tag.
 
    ```html
    <button id="my-button">Run myFunction</button>

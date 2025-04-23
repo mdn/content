@@ -130,7 +130,7 @@ To begin, let's take a look at an example that draws two intersecting rectangles
   </head>
   <body>
     <canvas id="canvas" width="150" height="150"></canvas>
-    <script type="application/javascript">
+    <script>
       function draw() {
         const canvas = document.getElementById("canvas");
         if (canvas.getContext) {
