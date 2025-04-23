@@ -23,6 +23,7 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 - `~` ([Subsequent sibling combinator](/en-US/docs/Web/CSS/Subsequent-sibling_combinator))
 - " " ([Descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator))
 - `|` ([Namespace separator](/en-US/docs/Web/CSS/Namespace_separator))
+- `,` ([Selector list](/en-US/docs/Web/CSS/Selector_list))
 
 ### Selectors
 
@@ -33,7 +34,6 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 - {{CSSXref(":buffering")}}
 - {{CSSXref(":checked")}}
 - {{CSSXref(":current")}}
-- {{CSSXref(":current", ":current()")}}
 - {{CSSXref(":default")}}
 - {{CSSXref(":defined")}}
 - {{CSSXref(":dir", ":dir()")}}
@@ -49,8 +49,8 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 - {{CSSXref(":future")}}
 - {{CSSXref(":has", ":has()")}}
 - {{CSSXref(":hover")}}
-- {{CSSXref(":indeterminate")}}
 - {{CSSXref(":in-range")}}
+- {{CSSXref(":indeterminate")}}
 - {{CSSXref(":invalid")}}
 - {{CSSXref(":is", ":is()")}}
 - {{CSSXref(":lang", ":lang()")}}
@@ -68,6 +68,7 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 - {{CSSXref(":nth-last-of-type", ":nth-last-of-type()")}}
 - {{CSSXref(":only-child")}}
 - {{CSSXref(":only-of-type")}}
+- {{CSSXref(":open")}}
 - {{CSSXref(":optional")}}
 - {{CSSXref(":out-of-range")}}
 - {{CSSXref(":past")}}
@@ -75,6 +76,7 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 - {{CSSXref(":picture-in-picture")}}
 - {{CSSXref(":placeholder-shown")}}
 - {{CSSXref(":playing")}}
+- {{CSSXref(":popover-open")}}
 - {{CSSXref(":read-only")}}
 - {{CSSXref(":read-write")}}
 - {{CSSXref(":required")}}
@@ -106,7 +108,6 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 - [Compound selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector)
 - [Complex selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#complex_selector)
 - [Relative selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#relative_selector)
-- [Selector list](/en-US/docs/Web/CSS/Selector_list)
 - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
 
 ## Guides
@@ -123,13 +124,17 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 
   - : Lists the pseudo-classes, selectors that allow the selection of elements based on state information that is not contained in the document tree, defined in the various CSS modules and HTML.
 
-- [Learn: CSS selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
-
-  - : Part of CSS building blocks, includes tutorials on [Type, class, and ID selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors), [Attribute selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors), [Pseudo-classes and pseudo-elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements), [Combinators](/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators), [Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts), and [Cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers).
-
 - [Using the `:target` pseudo-class in selectors](/en-US/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors)
 
   - : Learn how to use the {{CSSXref(":target")}} pseudo-class to style the target element a URL's fragment identifier.
+
+- [Privacy and the `:visited` selector](/en-US/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector)
+
+  - : Explores the style limitations set on the `:visited` class for user privacy.
+
+- [CSS building blocks: CSS selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
+
+  - : Introduction to basic CSS selectors, including tutorials on [Type, class, and ID selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors), [Attribute selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors), [Pseudo-classes and pseudo-elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements), and [Combinators](/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators).
 
 - [Learn: UI pseudo-classes](/en-US/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes)
 
@@ -141,7 +146,6 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 
 ## Related concepts
 
-- {{CSSXref(":popover-open")}} pseudo-class
 - {{CSSXref(":state","state()")}} pseudo-class
 - [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting) module
   - [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector)
@@ -149,8 +153,27 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 
   - {{CSSXref(":host")}} pseudo-class
   - {{CSSXref(":host_function", ":host()")}} pseudo-class
-  - {{cssxref(":host-context", ":host-context()")}} pseudo-class
+  - {{CSSXref(":host-context", ":host-context()")}} pseudo-class
+  - {{CSSXref(":has-slotted")}} pseudo-class
   - {{CSSXref("::slotted")}} pseudo-element
+
+- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
+
+  - {{cssxref("::scroll-button()")}}
+  - {{cssxref("::scroll-marker")}}
+  - {{cssxref("::scroll-marker-group")}}
+  - {{cssxref(":target-current")}}
+
+- [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout) module
+
+  - {{cssxref("::column")}}
+
+- [CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media) module
+
+  - {{CSSXref(":left")}} pseudo-class
+  - {{CSSXref(":right")}} pseudo-class
+  - {{CSSXref(":first")}} pseudo-class
+  - `:blank` pseudo-class
 
 - [CSS pseudo-element module](/en-US/docs/Web/CSS/CSS_pseudo-elements) (representing entities not included in HTML)
 

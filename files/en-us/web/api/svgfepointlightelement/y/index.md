@@ -10,7 +10,7 @@ browser-compat: api.SVGFEPointLightElement.y
 
 The **`y`** read-only property of the {{domxref("SVGFEPointLightElement")}} interface describes the vertical coordinate of the position of an SVG filter primitive as a {{domxref("SVGAnimatedNumber")}}.
 
-It reflects the {{SVGAttr("y")}} attribute of the {{SVGElement("fePointLight")}} element, which can be used to define the light source in a point light effect. The attribute is a [`<number>`](/en-US/docs/Web/SVG/Content_type#number). The default value is `0`.
+It reflects the {{SVGAttr("y")}} attribute of the {{SVGElement("fePointLight")}} element, which can be used to define the light source in a point light effect. The attribute is a [`<number>`](/en-US/docs/Web/SVG/Guides/Content_type#number). The default value is `0`.
 
 ## Value
 

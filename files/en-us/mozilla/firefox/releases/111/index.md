@@ -12,8 +12,8 @@ This article provides information about the changes in Firefox 111 that affect d
 
 ### HTML
 
-- The [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes/autocapitalize) global attribute is now supported by default. The default value for the attribute is `none`, so no capitalization occurs ([Firefox bug 1692007](https://bugzil.la/1692007)).
-- The [`translate`](/en-US/docs/Web/HTML/Global_attributes/translate) global attribute is now supported ([Firefox bug 1418449](https://bugzil.la/1418449)).
+- The [`autocapitalize`](/en-US/docs/Web/HTML/Reference/Global_attributes/autocapitalize) global attribute is now supported by default. The default value for the attribute is `none`, so no capitalization occurs ([Firefox bug 1692007](https://bugzil.la/1692007)).
+- The [`translate`](/en-US/docs/Web/HTML/Reference/Global_attributes/translate) global attribute is now supported ([Firefox bug 1418449](https://bugzil.la/1418449)).
 
 ### CSS
 
@@ -28,7 +28,7 @@ No notable changes.
 ### SVG
 
 - The `context-stroke` and `context-fill` values are now supported inside `<marker>` elements.
-  For more information on using these values with `fill` and `stroke` properties, see the [`<marker>`](/en-US/docs/Web/SVG/Element/marker) documentation ([Firefox bug 752638](https://bugzil.la/752638)).
+  For more information on using these values with `fill` and `stroke` properties, see the [`<marker>`](/en-US/docs/Web/SVG/Reference/Element/marker) documentation ([Firefox bug 752638](https://bugzil.la/752638)).
 
 ### HTTP
 

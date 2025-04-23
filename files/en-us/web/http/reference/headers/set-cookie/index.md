@@ -131,43 +131,41 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     - the request paths `/docs`, `/docs/`, `/docs/Web/`, and `/docs/Web/HTTP` will all match.
     - the request paths `/`, `/docsets`, `/fr/docs` will not match.
 
+    > [!NOTE]
+    > The `path` attribute lets you control what cookies the browser sends based on the different parts of a site.
+    > It is not intended as a security measure, and [does not protect](/en-US/docs/Web/API/Document/cookie#security) against unauthorized reading of the cookie from a different path.
+
 - `SameSite=<samesite-value>` {{optional_inline}}
 
-  - : Controls whether or not a cookie is sent with cross-site requests,
-    providing some protection against cross-site request forgery attacks ({{Glossary("CSRF")}}).
+  - : Controls whether or not a cookie is sent with cross-site requests: that is, requests originating from a different {{glossary("site")}}, including the scheme, from the site that set the cookie. This provides some protection against certain cross-site attacks, including {{Glossary("CSRF", "cross-site request forgery (CSRF)")}} attacks.
 
     The possible attribute values are:
 
     - `Strict`
 
-      - : Means that the browser sends the cookie only for same-site requests, that is, requests originating from the same site that set the cookie.
-        If a request originates from a different domain or scheme (even with the same domain), no cookies with the `SameSite=Strict` attribute are sent.
+      - : Send the cookie only for requests originating from the same {{glossary("site")}} that set the cookie.
 
     - `Lax`
 
-      - : Means that the cookie is not sent on cross-site requests, such as on requests to load images or frames, but is sent when a user is navigating to the origin site from an external site (for example, when following a link).
-        This is the default behavior if the `SameSite` attribute is not specified.
+      - : Send the cookie only for requests originating from the same {{glossary("site")}} that set the cookie, and for cross-site requests that meet both of the following criteria:
 
-        > [!WARNING]
-        > Not all browsers set `SameSite=Lax` by default.
-        > See [Browser compatibility](#browser_compatibility) for details.
+        - The request is a top-level navigation: this essentially means that the request causes the URL shown in the browser's address bar to change.
+
+          - This would exclude, for example, requests made using the {{domxref("Window.fetch()", "fetch()")}} API, or requests for subresources from {{htmlelement("img")}} or {{htmlelement("script")}} elements, or navigations inside {{htmlelement("iframe")}} elements.
+
+          - It would include requests made when the user clicks a link in the top-level browsing context from one site to another, or an assignment to {{domxref("Document.location", "document.location")}}, or a {{htmlelement("form")}} submission.
+
+        - The request uses a {{glossary("Safe/HTTP", "safe")}} method: in particular, this excludes {{httpmethod("POST")}}, {{httpmethod("PUT")}}, and {{httpmethod("DELETE")}}.
+
+        Some browsers use `Lax` as the default value if `SameSite` is not specified: see [Browser compatibility](#browser_compatibility) for details.
+
+        > [!NOTE]
+        > When `Lax` is applied as a default, a more permissive version is used. In this more permissive version, cookies are also included in {{httpmethod("POST")}} requests, as long as they were set no more than two minutes before the request was made.
 
     - `None`
 
-      - : Means that the browser sends the cookie with both cross-site and same-site requests.
-        The `Secure` attribute must also be set when setting this value, like so `SameSite=None; Secure`. If `Secure` is missing an error will be logged:
-
-        ```plain
-        Cookie "myCookie" rejected because it has the "SameSite=None" attribute but is missing the "secure" attribute.
-
-        This Set-Cookie was blocked because it had the "SameSite=None" attribute but did not have the "Secure" attribute, which is required in order to use "SameSite=None".
-        ```
-
-        > [!NOTE]
-        > A [`Secure`](#secure) cookie is only sent to the server with an encrypted request over the HTTPS protocol. Note that insecure sites (`http:`) can't set cookies with the `Secure` directive, and therefore can't use `SameSite=None`.
-
-        > [!WARNING]
-        > Cookies with the `SameSite=None; Secure` that do not also have the [`Partitioned`](#partitioned) attribute may be blocked in cross-site contexts on future browser versions. This behavior protects user data from cross-site tracking. See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies) and [Third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies).
+      - : Send the cookie with both cross-site and same-site requests.
+        The `Secure` attribute must also be set when using this value.
 
 - `Secure` {{optional_inline}}
 

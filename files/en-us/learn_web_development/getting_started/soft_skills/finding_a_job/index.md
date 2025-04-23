@@ -2,9 +2,8 @@
 title: Finding a job
 slug: Learn_web_development/Getting_started/Soft_skills/Finding_a_job
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes", "Learn_web_development/Core", "Learn_web_development/Getting_started/Soft_skills")}}
 
@@ -89,9 +88,9 @@ To summarize, hiring managers will look for:
 
 Think about whether these statements describe you, or not. This could be a useful way to identify some of your weaknesses, meaning that you can take steps to improve them. For example, if you are not good at communication or problem solving, look up some guides or classes to help you improve those skills. Even something informal such as talking to your friends about your work and describing your projects will help you become better at communicating.
 
-### Create a CV/resumé
+### Create a CV/résumé
 
-You should create a CV/resumé, which communicates your worth to an employer. There are lots of guides on how to write one on the web, but in brief, they should generally contain the following:
+You should create a CV/résumé, which communicates your worth to an employer. There are lots of guides on how to write one on the web, but in brief, they should generally contain the following:
 
 - Your contact details: Include your name, postal address, phone number, email, and any maybe one more contact method that is important to you and suitable for professional communication. A [LinkedIn profile](#create_a_linkedin_profile) is recommended.
 - A summary/personal statement, which describes you in a single sentence. This can be really hard to write — it needs to sound confident but not arrogant, positive but realistic. A good strategy here is to keep it really short and focus on some facts, what you believe in, and what kind of level you are at. For example, a good personal statement for a junior web developer might read some something like this: "Bob Smith is a web developer with 2 years' experience and a great passion for semantics, accessibility, and inclusive design".
@@ -105,25 +104,25 @@ You should create a CV/resumé, which communicates your worth to an employer. Th
   - Descriptions of any other relevant experience that doesn't fit into the above sections.
   - Personal interests — most employers like their employees to be well-rounded and have a life outside work rather than just being corporate robots — whether that's playing music, watching movies, or volunteering at an animal sanctuary. It also helps to create talking points during job interviews.
 
-Here are some general tips for CV/resumé writing:
+Here are some general tips for CV/résumé writing:
 
 - Make it short and concise: Ideally you want it to fit on 2 sides of A4/letter paper. Hiring managers won't bother to read a long essay describing your skill set.
 - Use professional language: Don't use conversational language or slang terms — you need to sound like you are serious about your application.
-- Check your writing carefully for spelling and grammatical mistakes: Run it through a service such as [Grammarly](https://www.grammarly.com/) to make sure you don't miss any mistakes and get hints for further improvements. Hiring managers will often discard a CV/resumé that contains a typo — it shows a lack of professionalism and attention to detail.
-- Don't necessarily include all of your work experience on your CV/resumé: If you have a lot of experience, just include the most important or significant recent entries. You want to keep it short, but you also don't want to make it look like there are any suspicious gaps in your work history, which hiring managers might question you about. Put your full experience listing on your LinkedIn profile and only include a summary on your CV/resumé.
-- Include soft skills: As mentioned in the [Develop qualities for that employers look for](#develop_qualities_for_that_employers_look_for) section, soft skills are important, and they are worth including on your CV/resumé. You should think about which ones are relevant — employers won't be interested in pages of description of how nice you are, but they will be interested to know that you are a good team player, calm under pressure, and have problem solving skills.
-- References on request: Employers always require references so they can get a second opinion of you and your skills from someone else. This should ideally be someone you worked with and have a good relationship with, like a previous manager or teacher. If you are not sure who your references are right now, just write "References available on request." at the bottom of your CV/resumé.
-- Keep your CV/resumé up-to-date: Check it every year to see if anything new needs to be added, or if you want to remove anything.
+- Check your writing carefully for spelling and grammatical mistakes: Run it through a service such as [Grammarly](https://www.grammarly.com/) to make sure you don't miss any mistakes and get hints for further improvements. Hiring managers will often discard a CV/résumé that contains a typo — it shows a lack of professionalism and attention to detail.
+- Don't necessarily include all of your work experience on your CV/résumé: If you have a lot of experience, just include the most important or significant recent entries. You want to keep it short, but you also don't want to make it look like there are any suspicious gaps in your work history, which hiring managers might question you about. Put your full experience listing on your LinkedIn profile and only include a summary on your CV/résumé.
+- Include soft skills: As mentioned in the [Develop qualities for that employers look for](#develop_qualities_for_that_employers_look_for) section, soft skills are important, and they are worth including on your CV/résumé. You should think about which ones are relevant — employers won't be interested in pages of description of how nice you are, but they will be interested to know that you are a good team player, calm under pressure, and have problem solving skills.
+- References on request: Employers always require references so they can get a second opinion of you and your skills from someone else. This should ideally be someone you worked with and have a good relationship with, like a previous manager or teacher. If you are not sure who your references are right now, just write "References available on request." at the bottom of your CV/résumé.
+- Keep your CV/résumé up-to-date: Check it every year to see if anything new needs to be added, or if you want to remove anything.
 
 > [!NOTE]
-> You should think of your CV/resumé as a general document, and then customize it for individual jobs you go for, in terms of the most suitable work experience and skills for each job.
+> You should think of your CV/résumé as a general document, and then customize it for individual jobs you go for, in terms of the most suitable work experience and skills for each job.
 
 ### Get some experience
 
 When you start searching for jobs, you will find yourself in a vicious circle — _you need experience to get a job, but you also need to get a job to get experience._ Don't despair — there are other ways to get experience. Here are some ideas:
 
 - Contact local business, charities, churches, schools, etc., to see if they want a website, or help updating their existing website. If you are just starting out, you could offer to do it for free, just to get the experience.
-- Following on from the previous item, move on to doing some small bits of freelance work, once you feel that you are experienced enough to start charging for your work. You could ask around at local businesses, or find work through dedicated services such as [UpWork](https://www.upwork.com).
+- Following on from the previous item, move on to doing some small bits of freelance work, once you feel that you are experienced enough to start charging for your work. You could ask around at local businesses, or find work through dedicated services such as [UpWork](https://www.upwork.com/).
 - Build your own hobby projects, for example, your own website to showcase your work, some fun demos and games, or a web app related to a company that you want to work at.
   - You could even identify an existing issue on a company's website, fix it, and send them a link to a deployed version of the fix.
 - Hang around on forums and help others with their coding problems. (See [Help others, ask questions](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork#help_others_ask_questions).)
@@ -131,7 +130,7 @@ When you start searching for jobs, you will find yourself in a vicious circle �
 
 ### Create a portfolio
 
-Once you've got some relevant experience worth talking about, the next step is to put together a portfolio that you can include on your CV/resumé, and show to employers. The whole idea here is _don't tell me what you can do — show me what you can do_.
+Once you've got some relevant experience worth talking about, the next step is to put together a portfolio that you can include on your CV/résumé, and show to employers. The whole idea here is _don't tell me what you can do — show me what you can do_.
 
 This should include:
 
@@ -151,9 +150,9 @@ In terms of how to actually publish your portfolio:
 
 ### Create a LinkedIn profile
 
-[LinkedIn](https://www.linkedin.com/) is one of the most popular sites in the world for people to find jobs, and for employers to find employees. It is a great place to host an online account of your work experience and skills, which is similar to your CV/resumé, but also different.
+[LinkedIn](https://www.linkedin.com/) is one of the most popular sites in the world for people to find jobs, and for employers to find employees. It is a great place to host an online account of your work experience and skills, which is similar to your CV/résumé, but also different.
 
-LinkedIn has many useful advantages that allow your profile to work well alongside your CV/resumé. You can:
+LinkedIn has many useful advantages that allow your profile to work well alongside your CV/résumé. You can:
 
 - List your full set of experience and skills on there without making your profile look too long.
 - Get people to post recommendations.
@@ -191,7 +190,7 @@ Before you start applying for a job, there are some useful steps you can take to
 - Do some other research on the company — read their websites/blogs, find out about their history and what their goals are. Spend some time using their products and becoming familiar with how they work — for example install their software and use it to build a demo app, or write a website that uses their APIs to do something.
   > [!NOTE]
   > For bonus points, try to identify a problem they are currently trying to solve or a bug in their product, and suggest a fix for it along with a demo or code snippets.
-- Customize your CV/resumé to suit this particular job. Look at the job description and make sure to amplify your most relevant skills and work experience, while minimizing or even removing items that don't seem relevant. Also make sure the demos/examples most relevant to this job are highlighted on your portfolio in some way, for example put at the top of the list.
+- Customize your CV/résumé to suit this particular job. Look at the job description and make sure to amplify your most relevant skills and work experience, while minimizing or even removing items that don't seem relevant. Also make sure the demos/examples most relevant to this job are highlighted on your portfolio in some way, for example put at the top of the list.
 
 ### Applying for the job
 
@@ -205,7 +204,7 @@ Above all:
 Not all job applications require the same things; you'll probably have to:
 
 - Fill out some details on an online form. Make sure you type out your answers locally (for example, in VSCode) or in an online document (for example, a Google doc) before entering them into the form fields, in case something (for example, a browser crash) causes you to lose your work. This can save hours of frustration, and text is also easier to review and get feedback on if you put it somewhere else first.
-- Upload your CV/resumé.
+- Upload your CV/résumé.
 - Write and upload a covering letter. There are many guides to writing effective covering letters elsewhere online, but in general, such a letter should provide a description of why you:
   - Want to work for the company.
   - Would be a good culture fit.
@@ -320,7 +319,7 @@ Be patient. Even the best candidates will get rejections from multiple job appli
 
 ## See also
 
-- [Getting hired](https://v2.scrimba.com/the-frontend-developer-career-path-c0j/~0156?via=mdn), Scrimba <sup>Course Partner</sup>
+- [Getting hired](https://scrimba.com/the-frontend-developer-career-path-c0j/~0156?via=mdn), Scrimba <sup>Course Partner</sup>
 - [Technical Interviewing 101: Ultimate Guide to Acing Your Tech Interview](https://learntocodewith.me/posts/technical-interview/), learntocodewith.me (2022)
 - [30 Technical Interview Questions and Tips for Answering](https://www.coursera.org/articles/technical-interview-questions), Coursera (2023)
 - [How to land your first developer job](/en-US/blog/how-to-land-your-first-developer-job), MDN Blog, 2024

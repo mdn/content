@@ -12,19 +12,19 @@ The **`animation`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_proper
 {{InteractiveExample("CSS Demo: animation")}}
 
 ```css interactive-example-choice
-animation: 3s ease-in 1s infinite reverse both running slidein;
+animation: 3s ease-in 1s infinite reverse both running slide-in;
 ```
 
 ```css interactive-example-choice
-animation: 3s linear 1s infinite running slidein;
+animation: 3s linear 1s infinite running slide-in;
 ```
 
 ```css interactive-example-choice
-animation: 3s linear 1s infinite alternate slidein;
+animation: 3s linear 1s infinite alternate slide-in;
 ```
 
 ```css interactive-example-choice
-animation: 0.5s linear 1s infinite alternate slidein;
+animation: 0.5s linear 1s infinite alternate slide-in;
 ```
 
 ```html interactive-example
@@ -43,7 +43,7 @@ animation: 0.5s linear 1s infinite alternate slidein;
   border-radius: 50%;
 }
 
-@keyframes slidein {
+@keyframes slide-in {
   from {
     margin-left: -20%;
   }

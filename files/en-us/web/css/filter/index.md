@@ -103,7 +103,7 @@ With a function, use the following:
 filter: <filter-function> [<filter-function>]* | none;
 ```
 
-You can use `url()` to reference an [SVG filter element](/en-US/docs/Web/SVG/Element/filter). For a reference to an SVG {{SVGElement("filter")}} element, use the following syntax:
+You can use `url()` to reference an [SVG filter element](/en-US/docs/Web/SVG/Reference/Element/filter). For a reference to an SVG {{SVGElement("filter")}} element, use the following syntax:
 
 ```css
 filter: url(file.svg#filter-element-id);
@@ -289,4 +289,4 @@ The filters are applied in order. This is why the drop shadows are not the same 
 - SVG {{SVGAttr("filter")}} attribute
 - CSS [compositing and blending](/en-US/docs/Web/CSS/CSS_compositing_and_blending) module, including the CSS {{cssxref("background-blend-mode")}} and {{cssxref("mix-blend-mode")}} properties.
 - [SVG](/en-US/docs/Web/SVG), including the SVG {{SVGElement("filter")}} element and SVG {{SVGAttr("filter")}} attribute.
-- [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)

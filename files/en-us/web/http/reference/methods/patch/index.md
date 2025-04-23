@@ -130,3 +130,4 @@ Developers can set this request method using [`fetch()`](/en-US/docs/Web/API/Win
 - {{HTTPStatus("204")}}
 - {{HTTPHeader("Allow")}}, {{HTTPHeader("Access-Control-Allow-Methods")}} headers
 - {{HTTPHeader("Accept-Patch")}} – specifies the patch document formats accepted by the server
+- [JSON Patch Generator](https://jsoning.com/jsonpatch/)

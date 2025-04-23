@@ -1,10 +1,10 @@
 ---
 title: "Challenge: A cool-looking box"
+short-title: "Challenge: Fancy box styles"
 slug: Learn_web_development/Core/Styling_basics/Cool-looking_box
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper", "Learn_web_development/Core/Text_styling", "Learn_web_development/Core/Styling_basics")}}
 

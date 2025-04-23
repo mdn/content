@@ -1,10 +1,10 @@
 ---
-title: Video and Audio APIs
+title: Video and audio APIs
+short-title: Video and audio
 slug: Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Introduction", "Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics", "Learn_web_development/Extensions/Client-side_APIs")}}
 
@@ -50,7 +50,7 @@ This creates a video player inside the browser like so:
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html", '100%', 380)}}
 
-You can review what all the HTML features do in the article linked above; for our purposes here, the most interesting attribute is [`controls`](/en-US/docs/Web/HTML/Element/video#controls), which enables the default set of playback controls. If you don't specify this, you get no playback controls:
+You can review what all the HTML features do in the article linked above; for our purposes here, the most interesting attribute is [`controls`](/en-US/docs/Web/HTML/Reference/Elements/video#controls), which enables the default set of playback controls. If you don't specify this, you get no playback controls:
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats-no-controls.html", '100%', 380)}}
 
@@ -164,7 +164,7 @@ First of all, at the top of the CSS we use a {{cssxref("@font-face")}} block to 
 Next, we use generated content to display an icon on each button:
 
 - We use the {{cssxref("::before")}} selector to display the content before each {{htmlelement("button")}} element.
-- We use the {{cssxref("content")}} property to set the content to be displayed in each case to be equal to the contents of the [`data-icon`](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes) attribute. In the case of our play button, `data-icon` contains a capital "P".
+- We use the {{cssxref("content")}} property to set the content to be displayed in each case to be equal to the contents of the [`data-icon`](/en-US/docs/Web/HTML/How_to/Use_data_attributes) attribute. In the case of our play button, `data-icon` contains a capital "P".
 - We apply the custom web font to our buttons using {{cssxref("font-family")}}. In this font, "P" is actually a "play" icon, so therefore the play button has a "play" icon displayed on it.
 
 Icon fonts are very cool for many reasons — cutting down on HTTP requests because you don't need to download those icons as image files, great scalability, and the fact that you can use text properties to style them — like {{cssxref("color")}} and {{cssxref("text-shadow")}}.
@@ -457,7 +457,7 @@ Here are some suggestions for ways you could enhance the existing example we've 
 - {{domxref("HTMLMediaElement")}}
 - [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio) — simple guide to `<video>` and `<audio>` HTML.
 - [Audio and video delivery](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery) — detailed guide to delivering media inside the browser, with many tips, tricks, and links to further more advanced tutorials.
-- [Audio and video manipulation](/en-US/docs/Web/Media/Guides/Audio_and_video_manipulation) — detailed guide to manipulating audio and video, e.g. with [Canvas API](/en-US/docs/Web/API/Canvas_API), [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), and more.
+- [Audio and video manipulation](/en-US/docs/Web/Media/Guides/Audio_and_video_manipulation) — detailed guide to manipulating audio and video, e.g., with [Canvas API](/en-US/docs/Web/API/Canvas_API), [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), and more.
 - {{htmlelement("video")}} and {{htmlelement("audio")}} reference pages.
 - [Guide to media types and formats on the web](/en-US/docs/Web/Media/Guides/Formats)
 

@@ -13,7 +13,7 @@ The **`WebAssembly.Memory`** object is a resizable {{jsxref("ArrayBuffer")}} or 
 Both WebAssembly and JavaScript can create `Memory` objects.
 If you want to access the memory created in JS from WebAssembly, or vice versa, you can export the memory from the module to JavaScript or import memory from JavaScript to the module when it is [instantiated](/en-US/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static).
 
-Originally you could only perform memory operations on a single memory in the Wasm module, so while multiple `Memory` objects could be created, there wasn't any point doing so.
+Originally you could only perform memory operations on a single memory in the Wasm module, so while multiple `Memory` objects could be created, there wasn't any point in doing so.
 More recent implementations allow WebAssembly [memory instructions](/en-US/docs/WebAssembly/Reference/Memory) to operate on a specified memory.
 For more information see [Multiple memories](/en-US/docs/WebAssembly/Guides/Understanding_the_text_format#multiple_memories) in _Understanding WebAssembly text format_.
 
@@ -101,6 +101,6 @@ This memory's `buffer` property will return a {{jsxref("SharedArrayBuffer")}}.
 
 ## See also
 
-- [WebAssembly](/en-US/docs/WebAssembly) overview page
+- [WebAssembly](/en-US/docs/WebAssembly) overview
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Guides/Concepts)
 - [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Guides/Using_the_JavaScript_API)

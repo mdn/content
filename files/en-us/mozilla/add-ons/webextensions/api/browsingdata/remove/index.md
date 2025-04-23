@@ -29,7 +29,7 @@ let removing = browser.browsingData.remove(
 - `removalOptions`
   - : `object`. A {{WebExtAPIRef("browsingData.RemovalOptions")}} object, which may be used to control how far back in time to remove data, and whether to remove data from hosted web apps and extensions, or just normal web pages.
 - `dataTypes`
-  - : `object`. A {{WebExtAPIRef("browsingData.DataTypeSet")}} object, describing the types of data to remove (e.g. history, downloads, …).
+  - : `object`. A {{WebExtAPIRef("browsingData.DataTypeSet")}} object, describing the types of data to remove (e.g., history, downloads, …).
 
 ### Return value
 

@@ -15,10 +15,10 @@ In CSS specifications, values that can be defined by the web developer — such 
 When both quoted and unquoted user-defined text values are permitted, the specification will list `<custom-ident> | <string>`, meaning quotes are optional, such as is the case with [keyframe animation names]:
 
 ```css
-@keyframe validIdent {
+@keyframes validIdent {
   /* keyframes go here */
 }
-@keyframe 'validString' {
+@keyframes 'validString' {
   /* keyframes go here */
 }
 ```
@@ -59,7 +59,7 @@ Such values are used without quotes:
 }
 ```
 
-## CSS-wide values
+## CSS-wide keywords
 
 In addition to the pre-defined keywords that are part of the specification for a property, all CSS properties accept the CSS-wide, or "global", property values {{cssxref("initial")}}, {{cssxref("inherit")}}, {{cssxref("unset")}}, {{cssxref("revert")}}, and {{cssxref("revert-layer")}}, which explicitly specify defaulting behaviors.
 

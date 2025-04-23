@@ -1,10 +1,12 @@
 ---
 title: "Django Tutorial Part 5: Creating our home page"
+short-title: "5: Home page"
 slug: Learn_web_development/Extensions/Server-side/Django/Home_page
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django/Generic_views", "Learn_web_development/Extensions/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django/Generic_views", "Learn_web_development/Extensions/Server-side/Django")}}
 
 We're now ready to add the code that displays our first complete page — a home page for the [LocalLibrary](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) website. The home page will show the number of records we have for each model type and provide sidebar navigation links to our other pages. Along the way we'll gain practical experience in writing basic URL maps and views, getting records from the database, and using templates.
 
@@ -97,7 +99,7 @@ The `path()` function defines the following:
 - A URL pattern, which is an empty string: `''`. We'll discuss URL patterns in detail when working on the other views.
 - A view function that will be called if the URL pattern is detected: `views.index`, which is the function named `index()` in the **views.py** file.
 
-The `path()` function also specifies a `name` parameter, which is a unique identifier for _this_ particular URL mapping. You can use the name to "reverse" the mapper, i.e. to dynamically create a URL that points to the resource that the mapper is designed to handle.
+The `path()` function also specifies a `name` parameter, which is a unique identifier for _this_ particular URL mapping. You can use the name to "reverse" the mapper, i.e., to dynamically create a URL that points to the resource that the mapper is designed to handle.
 For example, we can use the name parameter to link to our home page from any other page by adding the following link in a template:
 
 ```django

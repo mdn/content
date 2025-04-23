@@ -126,7 +126,7 @@ In this example we provide a user interface that allows you to choose the `text-
 In our HTML, we include three main items:
 
 - Three {{htmlelement("select")}} elements allowing you to set which edges of the paragraph should be trimmed (the `text-box-trim` value) and how much space to trim from the block-start and block-end edges of the paragraph (the {{cssxref("text-box-edge")}} value).
-- A {{htmlelement("p")}} element containing text, which the `text-box-*` values are applied to. This paragraph has [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) set on it so you can edit the text.
+- A {{htmlelement("p")}} element containing text, which the `text-box-*` values are applied to. This paragraph has [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) set on it so you can edit the text.
 - An {{htmlelement("output")}} element that displays the `text-box-*` declarations applied to the paragraph. This is updated when a selection is made.
 
 We also import a font from the Google Fonts service to apply to our demo's text.
@@ -266,7 +266,7 @@ function setEdgeTrim() {
 }
 ```
 
-In the last part of the JavaScript we run the `setEdgeTrim()` function once to set an initial state for the UI. We then then apply [`change`](/en-US/docs/Web/API/HTMLElement/change_event) event listeners to all of the `<select>` elements (via [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener)) so that `setEdgeTrim()` is run whenever one of the `<select>` values changes to update the UI accordingly:
+In the last part of the JavaScript we run the `setEdgeTrim()` function once to set an initial state for the UI. We then apply [`change`](/en-US/docs/Web/API/HTMLElement/change_event) event listeners to all of the `<select>` elements (via [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener)) so that `setEdgeTrim()` is run whenever one of the `<select>` values changes to update the UI accordingly:
 
 ```js
 setEdgeTrim();

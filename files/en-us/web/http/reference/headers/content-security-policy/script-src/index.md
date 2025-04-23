@@ -81,7 +81,7 @@ Allowing trusted domains, as shown in the section above, is a broad-brushed appr
 This is a pragmatic approach, in particular when your site uses many resources and you have confidence that the trusted site will not be compromised.
 
 An alternative method is to specify allowed scripts using file hashes.
-Using this approach an external file in a `<script>` element can only be loaded and executed if all the valid hash values in its [`integrity`](/en-US/docs/Web/HTML/Element/script#integrity) attribute match the allowed values in the CSP header.
+Using this approach an external file in a `<script>` element can only be loaded and executed if all the valid hash values in its [`integrity`](/en-US/docs/Web/HTML/Reference/Elements/script#integrity) attribute match the allowed values in the CSP header.
 The [Subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity) feature additionally checks that the downloaded file has the indicated hash value, and therefore has not been modified.
 This is safer than trusting a domain, because files will only be used if they are unmodified, even if loaded from a compromised site.
 It is however more granular, and requires that hash values are updated in CSP and script elements whenever the associated scripts are changed.
@@ -263,7 +263,7 @@ will act like `'unsafe-inline' https:` in browsers that support CSP1, `https: 'n
 
 ### Allowing speculation rules
 
-To include [speculation rules](/en-US/docs/Web/API/Speculation_Rules_API) in a script element (see also [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Element/script/type/speculationrules)), you need to use the `script-src` directive with one of the `'inline-speculation-rules'` source, a hash-source, or nonce-source. For example:
+To include [speculation rules](/en-US/docs/Web/API/Speculation_Rules_API) in a script element (see also [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules)), you need to use the `script-src` directive with one of the `'inline-speculation-rules'` source, a hash-source, or nonce-source. For example:
 
 ```http
 Content-Security-Policy: script-src 'inline-speculation-rules'
@@ -280,7 +280,6 @@ Content-Security-Policy: script-src 'inline-speculation-rules'
 ## See also
 
 - {{HTTPHeader("Content-Security-Policy")}}
-- {{CSP("Sources")}}
 - {{HTMLElement("script")}}
 - {{CSP("script-src-elem")}}
 - {{CSP("script-src-attr")}}

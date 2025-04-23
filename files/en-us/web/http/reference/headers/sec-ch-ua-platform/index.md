@@ -9,7 +9,7 @@ browser-compat: http.headers.Sec-CH-UA-Platform
 
 {{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The HTTP **`Sec-CH-UA-Platform`** {{Glossary("request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user-agent_client_hints) which provides the platform or operating system on which the user agent is running.
+The HTTP **`Sec-CH-UA-Platform`** {{Glossary("request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client_hints) which provides the platform or operating system on which the user agent is running.
 For example: "Windows" or "Android".
 
 `Sec-CH-UA-Platform` is a [low entropy hint](/en-US/docs/Web/HTTP/Guides/Client_hints#low_entropy_hints).

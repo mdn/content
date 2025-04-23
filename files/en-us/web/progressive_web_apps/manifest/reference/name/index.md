@@ -2,7 +2,7 @@
 title: name
 slug: Web/Progressive_web_apps/Manifest/Reference/name
 page-type: web-manifest-member
-browser-compat: html.manifest.name
+browser-compat: manifests.webapp.name
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}

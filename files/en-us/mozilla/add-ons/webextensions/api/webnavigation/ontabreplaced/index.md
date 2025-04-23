@@ -38,7 +38,7 @@ Events have three functions:
   - : The function called when this event occurs. The function is passed this argument:
 
     - `details`
-      - : `object`. See the [details](#details_2) section for more information.
+      - : `object`. See the [details](#details) section for more information.
 
 ## Additional objects
 

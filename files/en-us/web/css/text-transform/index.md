@@ -70,7 +70,7 @@ The `text-transform` property takes into account language-specific case mapping 
 - In Greek (`el`), the lowercase sigma character has two forms: `σ` and `ς`. `ς` is used only when sigma terminates a word. When applying `text-transform: lowercase` to an uppercase sigma (`Σ`), the browser needs to choose the right lowercase form based on context.
 - in Irish (`ga`), certain prefixed letters remain in lowercase when the base initial is capitalized, so for example `text-transform: uppercase` will change `ar aon tslí` to `AR AON tSLÍ` and not, as one might expect, `AR AON TSLÍ` (Firefox only). In some cases, a hyphen is also removed upon uppercasing: `an t-uisce` transforms to `AN tUISCE` (and the hyphen is correctly reinserted by `text-transform: lowercase`).
 
-The language is defined by the [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) HTML attribute or the [`xml:lang`](/en-US/docs/Web/SVG/Attribute/xml:lang) XML attribute.
+The language is defined by the [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) HTML attribute or the [`xml:lang`](/en-US/docs/Web/SVG/Reference/Attribute/xml:lang) XML attribute.
 
 > [!NOTE]
 > Support for language-specific cases varies between browsers, so check the [browser compatibility table](#browser_compatibility).

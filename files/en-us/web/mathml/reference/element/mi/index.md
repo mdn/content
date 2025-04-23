@@ -29,39 +29,39 @@ In order to use a particular form of a character such as bold/italic, serif, san
     Deprecated legacy values are:
 
     - `bold` {{deprecated_inline}}
-      - : Try and use bold characters e.g. "𝐀".
+      - : Try and use bold characters e.g., "𝐀".
     - `italic` {{deprecated_inline}}
-      - : Try and use italic characters e.g. "𝐴".
+      - : Try and use italic characters e.g., "𝐴".
     - `bold-italic` {{deprecated_inline}}
-      - : Try and use bold-italic characters e.g. "𝑨".
+      - : Try and use bold-italic characters e.g., "𝑨".
     - `double-struck` {{deprecated_inline}}
-      - : Try and use double-struck characters e.g. "𝔸".
+      - : Try and use double-struck characters e.g., "𝔸".
     - `bold-fraktur` {{deprecated_inline}}
-      - : Try and use bold-fraktur characters e.g. "𝕬".
+      - : Try and use bold-fraktur characters e.g., "𝕬".
     - `script` {{deprecated_inline}}
-      - : Try and use script characters e.g. "𝒜".
+      - : Try and use script characters e.g., "𝒜".
     - `bold-script` {{deprecated_inline}}
-      - : Try and use bold-script characters e.g. "𝓐".
+      - : Try and use bold-script characters e.g., "𝓐".
     - `fraktur` {{deprecated_inline}}
-      - : Try and use fraktur characters e.g. "𝔄".
+      - : Try and use fraktur characters e.g., "𝔄".
     - `sans-serif` {{deprecated_inline}}
-      - : Try and use sans-serif characters e.g. "𝖠".
+      - : Try and use sans-serif characters e.g., "𝖠".
     - `bold-sans-serif` {{deprecated_inline}}
-      - : Try and use bold-sans-serif characters e.g. "𝗔".
+      - : Try and use bold-sans-serif characters e.g., "𝗔".
     - `sans-serif-italic` {{deprecated_inline}}
-      - : Try and use sans-serif-italic characters e.g. "𝘈".
+      - : Try and use sans-serif-italic characters e.g., "𝘈".
     - `sans-serif-bold-italic` {{deprecated_inline}}
-      - : Try and use sans-serif-bold-italic characters e.g. "𝘼".
+      - : Try and use sans-serif-bold-italic characters e.g., "𝘼".
     - `monospace` {{deprecated_inline}}
-      - : Try and use monospace characters e.g. "𝙰".
+      - : Try and use monospace characters e.g., "𝙰".
     - `initial` {{deprecated_inline}}
-      - : Try and use initial characters e.g. "𞸢".
+      - : Try and use initial characters e.g., "𞸢".
     - `tailed` {{deprecated_inline}}
-      - : Try and use tailed characters e.g. "𞹂".
+      - : Try and use tailed characters e.g., "𞹂".
     - `looped` {{deprecated_inline}}
-      - : Try and use looped characters e.g. "𞺂".
+      - : Try and use looped characters e.g., "𞺂".
     - `stretched` {{deprecated_inline}}
-      - : Try and use stretched characters e.g. "𞹢".
+      - : Try and use stretched characters e.g., "𞹢".
 
 This element also accepts the [global MathML attributes](/en-US/docs/Web/MathML/Reference/Global_attributes).
 

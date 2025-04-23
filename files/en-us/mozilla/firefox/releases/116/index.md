@@ -12,7 +12,7 @@ This article provides information about the changes in Firefox 116 that affect d
 
 ### HTML
 
-- The [`dirname`](/en-US/docs/Web/HTML/Element/input#dirname) attribute is now supported on [`input`](/en-US/docs/Web/HTML/Element/input#dirname) and [`textarea`](/en-US/docs/Web/HTML/Element/textarea#dirname) elements.
+- The [`dirname`](/en-US/docs/Web/HTML/Reference/Elements/input#dirname) attribute is now supported on [`input`](/en-US/docs/Web/HTML/Reference/Elements/input#dirname) and [`textarea`](/en-US/docs/Web/HTML/Reference/Elements/textarea#dirname) elements.
   This attribute allows for passing text directionality information (`ltr` or `rtl`) to the server during form submission ([Firefox bug 675943](https://bugzil.la/675943)).
 
 ### CSS
@@ -34,7 +34,7 @@ This article provides information about the changes in Firefox 116 that affect d
 
 ### SVG
 
-- The `q` [length unit](/en-US/docs/Web/SVG/Content_type#length) (`1q = 1/40th of 1cm`) is now supported ([Firefox bug 1836995](https://bugzil.la/1836995)).
+- The `q` [length unit](/en-US/docs/Web/SVG/Guides/Content_type#length) (`1q = 1/40th of 1cm`) is now supported ([Firefox bug 1836995](https://bugzil.la/1836995)).
 
 ### HTTP
 

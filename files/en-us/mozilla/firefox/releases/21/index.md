@@ -12,7 +12,7 @@ Firefox 21 was released on May 14, 2013. This article lists key changes that are
 
 ### HTML
 
-- The [`scoped`](/en-US/docs/Web/HTML/Element/style#scoped) attribute has been added to the {{HTMLElement("style")}} element. It allows to include styles that are isolated from the rest of the document. Such styles can be selected using the {{cssxref(":scope")}} CSS pseudo-element introduced in Firefox 20. ([Firefox bug 508725](https://bugzil.la/508725)).
+- The [`scoped`](/en-US/docs/Web/HTML/Reference/Elements/style#scoped) attribute has been added to the {{HTMLElement("style")}} element. It allows to include styles that are isolated from the rest of the document. Such styles can be selected using the {{cssxref(":scope")}} CSS pseudo-element introduced in Firefox 20. ([Firefox bug 508725](https://bugzil.la/508725)).
 - The new HTML {{HTMLElement("main")}} element has been implemented ([Firefox bug 820508](https://bugzil.la/820508)).
 
 ### JavaScript
@@ -44,7 +44,7 @@ Firefox 21 was released on May 14, 2013. This article lists key changes that are
 
 ### SVG
 
-- The [paint-order](/en-US/docs/Web/SVG/Attribute/paint-order) attribute has been implemented ([Firefox bug 828805](https://bugzil.la/828805)).
+- The [paint-order](/en-US/docs/Web/SVG/Reference/Attribute/paint-order) attribute has been implemented ([Firefox bug 828805](https://bugzil.la/828805)).
 - The `svg.smil.enabled` preference has been removed. SMIL is always on. ([Firefox bug 835030](https://bugzil.la/835030))
 
 ### Networking

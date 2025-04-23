@@ -11,7 +11,7 @@ By modifying the coordinate space, **CSS transforms** change the shape and posit
 CSS transforms are implemented using a set of CSS properties that let you apply affine linear transformations to HTML elements. These transformations include rotation, skewing, scaling, and translation both in the plane and in the 3D space.
 
 > [!WARNING]
-> Only transformable elements can be `transform`ed; that is, all elements whose layout is governed by the CSS [box model](/en-US/docs/Web/CSS/CSS_box_model) except for: [non-replaced inline boxes](/en-US/docs/Web/CSS/Visual_formatting_model#inline-level_and_block-level_boxes), [table-column boxes](/en-US/docs/Web/HTML/Element/col), and [table-column-group boxes](/en-US/docs/Web/HTML/Element/colgroup).
+> Only transformable elements can be `transform`ed; that is, all elements whose layout is governed by the CSS [box model](/en-US/docs/Web/CSS/CSS_box_model) except for: [non-replaced inline boxes](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model#inline-level_and_block-level_boxes), [table-column boxes](/en-US/docs/Web/HTML/Reference/Elements/col), and [table-column-group boxes](/en-US/docs/Web/HTML/Reference/Elements/colgroup).
 
 ## CSS transforms properties
 

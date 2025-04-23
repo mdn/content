@@ -1,15 +1,12 @@
 ---
-title: Debugging JavaScript and handling errors
+title: JavaScript debugging and error handling
+short-title: Debugging and error handling
 slug: Learn_web_development/Core/Scripting/Debugging_JavaScript
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/JSON","Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Scripting")}}
-
-> [!NOTE]
-> The content in this article is currently incomplete, sorry about that! We are working hard to improve the MDN Learn Web Development section, and we will have places marked as incomplete ("TODO") finished soon.
 
 In this lesson, we will return to the subject of debugging JavaScript (which we first looked at in [What went wrong?](/en-US/docs/Learn_web_development/Core/Scripting/What_went_wrong)). Here we will delve deeper into techniques for tracking down errors, but also look at how to code defensively and handle errors in your code, avoiding problems in the first place.
 
@@ -25,8 +22,8 @@ In this lesson, we will return to the subject of debugging JavaScript (which we 
         <ul>
           <li>Using browser developer tools to inspect the JavaScript running on your page and see what errors it is generating.</li>
           <li>Using <code>console.log()</code> and <code>console.error()</code> for debugging.</li>
+          <li>Advanced JavaScript debugging with browser devtools.</li>
           <li>Error handling with <code>conditionals</code>, <code>try...catch</code>, and <code>throw</code>.</li>
-          <li>Advanced JavaScript debugging with breakpoints, watchers, etc.</li>
         </ul>
       </td>
     </tr>
@@ -108,9 +105,8 @@ const requestURL =
 
 const response = fetch(requestURL);
 console.log(`Response value: ${response}`);
-const superHeroes = response;
-populateHeader(superHeroes);
-showHeroes(superHeroes);
+populateHeader(response);
+showHeroes(response);
 ```
 
 Refresh the page in the browser. This time, before the error message, you'll see a new message logged to the console:
@@ -121,7 +117,34 @@ Response value: [object Promise]
 
 The `console.log()` output shows that the return value of `fetch()` is not the JSON data, it's a {{jsxref("Promise")}}. The `fetch()` function is asynchronous: it returns a `Promise` that is fulfilled only when the actual response has been received from the network. Before we can use the response, we have to wait for the `Promise` to be fulfilled.
 
-We can do this by putting the code that uses the response inside the {{jsxref("Promise.prototype.then()", "then()")}} method of the returned `Promise`, like this:
+### `console.error()` and call stacks
+
+As a brief digression, lets try using a different console method to report the error — {{domxref("console.error()")}}. In your code, replace
+
+```js
+console.log(`Response value: ${response}`);
+```
+
+with
+
+```js
+console.error(`Response value: ${response}`);
+```
+
+Save your code and refresh the browser and you'll now see the message reported as an error, with the same color and icon as the uncaught error below it. In addition, there will now be a expand/collapse arrow next to the message. If you press this, you'll see a single line telling you the line in the JavaScript file the error originated from. In fact, the uncaught error line _also_ has this, but it has two lines:
+
+```plain
+showHeroes http://localhost:7800/js-debug-test/index.js:25
+<anonymous> http://localhost:7800/js-debug-test/index.js:10
+```
+
+This means that the error is coming from the `showHeroes()` function, line 25, as we noted earlier. If you look at your code, you'll see that the anonymous call on line 10 is the line that is calling `showHeroes()`. These lines are referred to as a **call stack**, and can be really useful when trying to track down the source of an error involving lots of different locations in your code.
+
+The `console.error()` call isn't all that useful in this case, but it can be useful for generating a call stack if one is not already available.
+
+### Fixing the error
+
+Anyway, let's get back to trying to fix our error. We can access the response from the fulfilled `Promise` by chaining the {{jsxref("Promise.prototype.then()", "then()")}} method onto the end of the `fetch()` call. We can then pass the resulting response value into the functions that accept it, like this:
 
 ```js
 fetch(requestURL).then((response) => {
@@ -130,11 +153,14 @@ fetch(requestURL).then((response) => {
 });
 ```
 
-To summarize, anytime something is not working and a value does not appear to be what it is meant to be at some point in your code, you can use `console.log()` to print it out and see what is happening.
+Save and refresh, and see if your code is working. Spoiler alert — the above change has not fixed the problem. Unfortunately, we **still have the same error**!
+
+> [!NOTE]
+> To summarize, any time something is not working and a value does not appear to be what it is meant to be at some point in your code, you can use `console.log()`, `console.error()`, or another similar function to print out the value and see what is happening.
 
 ## Using the JavaScript debugger
 
-Unfortunately, we still have the same error — the problem has not gone away. Let's investigate this now, using a more sophisticated feature of browser developer tools: the [JavaScript debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) as it is called in Firefox.
+Let's investigate this problem further using a more sophisticated feature of browser developer tools: the [JavaScript debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) as it is called in Firefox.
 
 > [!NOTE]
 > Similar tools are available in other browsers; the [Sources tab](https://developer.chrome.com/docs/devtools/#sources) in Chrome, Debugger in Safari (see [Safari Web Development Tools](https://developer.apple.com/safari/tools/)), etc.
@@ -149,15 +175,18 @@ In Firefox, the Debugger tab looks like this:
 
 The main feature of such tools is the ability to add breakpoints to code — these are points where the execution of the code stops, and at that point you can examine the environment in its current state and see what is going on.
 
-Let's get to work. The error is now being thrown at line 26. Click on line number 26 in the center panel to add a breakpoint to it (you'll see a blue arrow appear over the top of it). Now refresh the page (Cmd/Ctrl + R) — the browser will pause execution of the code at line 26. At this point, the right-hand side will update to show some very useful information.
+Let's explore using breakpoints:
+
+1. The error is being thrown at the same line as before — `for (const hero of heroes) {` — line 26 in the screenshot below. Click on this line in the center panel to add a breakpoint to it (you'll see a blue arrow appear over the top of it).
+2. Now refresh the page (<kbd>Cmd</kbd>/<kbd>Ctrl</kbd> + <kbd>R</kbd>) — the browser will pause execution of the code on that line. At this point, the right-hand side will update to show the following:
 
 ![Firefox debugger with a breakpoint](breakpoint.png)
 
-- Under _Breakpoints_, you'll see the details of the break-point you have set.
-- Under _Call Stack_, you'll see a few entries — this is basically a list of the series of functions that were invoked to cause the current function to be invoked. At the top, we have `showHeroes()` the function we are currently in, and second we have `onload`, which stores the event handler function containing the call to `showHeroes()`.
+- Under _Breakpoints_, you'll see the details of the breakpoint you have set.
+- Under _Call Stack_, you'll see a few entries — this is basically the same as the callstack we looked at earlier in the `console.error()` section. _Call Stack_ shows a list of the functions that were invoked to cause the current function to be invoked. At the top, we have `showHeroes()`, the function we are currently in, and second we have `onload`, which stores the event handler function containing the call to `showHeroes()`.
 - Under _Scopes_, you'll see the currently active scope for the function we are looking at. We only have three — `showHeroes`, `block`, and `Window` (the global scope). Each scope can be expanded to show the values of variables inside the scope when execution of the code was stopped.
 
-We can find out some very useful information in here.
+We can find out some very useful information in here:
 
 1. Expand the `showHeroes` scope — you can see from this that the heroes variable is `undefined`, indicating that accessing the `members` property of `jsonObj` (first line of the function) didn't work.
 2. You can also see that the `jsonObj` variable is storing a {{domxref("Response")}} object, not a JSON object.
@@ -171,25 +200,141 @@ We'd like you to try fixing this problem yourself. To get you started, see the d
 
 ## Handling JavaScript errors in your code
 
-HTML and CSS are permissive — errors and unrecognized features can often be handled due to the nature of the languages. For example, CSS will ignore unrecognized properties, and the rest of the code will often just work. JavaScript is not as permissive as HTML and CSS however — if the JavaScript engine encounters mistakes or unrecognized syntax, more often than not it will throw errors.
+HTML and CSS are permissive — errors and unrecognized features can often be handled due to the nature of the languages. For example, CSS will ignore unrecognized properties, and the rest of the code will often just work. JavaScript is not as permissive as HTML and CSS however — if the JavaScript engine encounters mistakes or unrecognized syntax, it will often throw errors.
 
-There are a few strategies for handling JavaScript errors in your code; let's explore the most common ones.
+Let's explore a common strategy for handling JavaScript errors in your code. The following sections are designed to be followed by making a copy of the below template file as `handling-errors.html` on your local machine, adding the code snippets in between the opening and closing `<script>` and `</script>` tags, then opening the file in a browser and looking at the output in the devtools JavaScript console.
+
+```html-nolint
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Handling JS errors</title>
+  </head>
+  <body>
+    <script>
+      // Code goes below this line
+
+    </script>
+  </body>
+</html>
+```
 
 ### Conditionals
 
-TODO
+A common use of [JavaScript conditionals](/en-US/docs/Learn_web_development/Core/Scripting/Conditionals) is to handle errors. Conditionals allow you to run different code depending on the value of a variable. Often you will want to use this defensively, to avoid throwing an error if the value does not exist or is of the wrong type, or to capture an error if the value would cause an incorrect result to be returned, which could cause problems later on.
+
+Let's look at an example. Say we have a function that takes as an argument equal to the user's height in inches and returns their height in meters, to 2 decimal places. This could look like so:
+
+```js
+function inchesToMeters(num) {
+  const mVal = (num * 2.54) / 100;
+  const m2dp = mVal.toFixed(2);
+  return m2dp;
+}
+```
+
+1. In your example file's `<script>` element, declare a `const` called `height` and assign it a value of `70`:
+
+   ```js
+   const height = 70;
+   ```
+
+2. Copy the above function below the previous line.
+
+3. Call the function, passing it the `height` constant as its argument, and log the return value to the console:
+
+   ```js
+   console.log(inchesToMeters(height));
+   ```
+
+4. Load the example in a browser and look at the devtools JavaScript console. You should see a value of `1.78` logged to it.
+
+5. So this works fine in isolation. But what happens if the provided data is missing or not correct? Try out these scenarios:
+
+   - If you change the `height` value to `"70"` (that is, `70` expressed as a string), the example should ... still work fine. This is because the calculation on the first line of the string coerces the value into a number data type. This is OK in a simple case like this, but in more complex code the wrong data can lead to all kind of bugs, some of them subtle and hard to detect!
+   - If you change `height` to a value that can't be coerced to a number, like `"70 inches"` or `["Bob", 70]`, or {{jsxref("NaN")}}, the example should return the result as `NaN`. This could cause all kind of problems, for example if you want to include the user's height somewhere in the website user interface.
+   - If you remove the `height` value altogether (comment it out by adding `//` at the start of the line), the console will show an error along the lines of "Uncaught ReferenceError: height is not defined", the likes of which could bring your application grinding to a halt.
+
+   Obviously, none of these outcomes are great. How do we defend against bad data?
+
+6. Let's add a conditional inside our function to test whether the data is good before we try to do the calculation. Try replacing your current function with the following:
+
+   ```js
+   function inchesToMeters(num) {
+     if (typeof num === "number" && !isNaN(num)) {
+       const mVal = (num * 2.54) / 100;
+       const m2dp = mVal.toFixed(2);
+       return m2dp;
+     } else {
+       console.log("A number was not provided. Please correct the input.");
+     }
+   }
+   ```
+
+7. Now if you try the first two scenarios again, you'll see our slightly more useful message returned, to give you an idea of what needs to be done to fix the problem. You could put anything in there that you like, including trying to run code to correct the value of `num`, but this is not advised — this function has one simple purpose, and you should handle correcting the value somewhere else in the system.
+
+   > [!NOTE]
+   > In the `if()` statement, we first test whether the data type of `num` is `"number"` using the [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) operator, but we also test whether {{jsxref("isNaN()", "!isNaN(num)")}} returns `false`. We have to do this to defend against the specific case of `num` being set to `NaN`, as weirdly, `typeof NaN` returns `"number"`!
+
+8. However, if you try the third scenario again, you will still get the "Uncaught ReferenceError: height is not defined" error thrown at you. You can't fix the fact that a value is not available from inside a function that is trying to use the value.
+
+How do we handle this? Well, it's probably better to get our function to return a custom error when it doesn't receive the correct data. We'll look at how to do that first, then we'll handle all the errors together.
+
+### Throwing custom errors
+
+You can throw a custom error at any point in your code using the [`throw`](/en-US/docs/Web/JavaScript/Reference/Statements/throw) statement, coupled with the {{jsxref("Error.Error", "Error()")}} constructor. Let's see this in action.
+
+1. In your function, replace the `console.log()` line inside the `else` block of your function with the following line:
+
+   ```js
+   throw new Error("A number was not provided. Please correct the input.");
+   ```
+
+2. Run your example again, but make sure `num` is set to a bad (that is, non-number) value. This time, you should see your custom error thrown, along with a useful call stack to help you locate the source of the error (although note that the message still tells us that the error is "uncaught", or "unhandled"). OK, so errors are annoying, but this is way more useful than running the function successfully and returning a non-number value that could cause problems later on.
+
+So, how do we handle all those errors then?
 
 ### try...catch
 
-TODO
+The [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) statement is specially designed to handle errors. It has the following structure:
 
-### Throwing errors
+```js
+try {
+  // Run some code
+} catch (error) {
+  // Handle any errors
+}
+```
 
-TODO
+Inside the `try` block, you try running some code. If this code runs without an error being thrown, all is well, and the `catch` block is ignored. However, if an error is thrown the `catch` block is run, which provides access to the {{jsxref("Error")}} object representing the error, and allows you to run code to handle it.
+
+Let's use `try...catch` in our code.
+
+1. Replace the `console.log()` line that calls the `inchesToMeters()` function at the end of your script with the following block. We are now running our `console.log()` line inside a `try` block, and handling any errors that it returns inside a corresponding `catch` block.
+
+   ```js
+   try {
+     console.log(inchesToMeters(height));
+   } catch (error) {
+     console.error(error);
+     console.log("Insert code to handle the error");
+   }
+   ```
+
+2. Save and refresh, and you should now see two things:
+
+   - The error message and call stack as before, but this time, without a label of "uncaught", or "unhandled".
+   - The logged message "Insert code to handle the error".
+
+3. Now try updating `num` to a good (number) value, and you'll see the result of the calculation logged, with no error message.
+
+This is significant — any thrown errors are no longer unhandled, so they won't bring the application crashing to a halt. You can run whatever code you like to handle the error. Above we are just logging a message, but for example you could call whatever function was run earlier to ask the user to enter their height, this time asking them to correct the input error. You could even use an `if...else` statement to run different error handling code depending on what type of error is returned.
 
 ### Feature detection
 
-Feature detection is useful when you are planning to use new JavaScript features that might not be supported in all browsers. Test for the feature, and then conditionally run code to provide an acceptable experience both in browsers that do and don't support the feature. As a quick example, the [Geolocation API](/en-US/docs/Web/API/Geolocation_API) (which exposes available location data for the device the web browser is running on) has a main entry point for its use — a `geolocation` property available on the global [Navigator](/en-US/docs/Web/API/Navigator) object. Therefore, you can detect whether the browser supports geolocation or not by using something like the following:
+Feature detection is useful when you are planning to use new JavaScript features that might not be supported in all browsers. Test for the feature, and then conditionally run code to provide an acceptable experience both in browsers that do and don't support the feature. As a quick example, the [Geolocation API](/en-US/docs/Web/API/Geolocation_API) (which exposes available location data for the device the web browser is running on) has a main entry point for its use — a `geolocation` property available on the global [Navigator](/en-US/docs/Web/API/Navigator) object. Therefore, you can detect whether the browser supports geolocation or not by using a similar `if()` structure to what we saw earlier:
 
 ```js
 if ("geolocation" in navigator) {
@@ -200,6 +345,8 @@ if ("geolocation" in navigator) {
   // Give the user a choice of static maps instead
 }
 ```
+
+You can find some more feature detection examples in [Alternatives to UA sniffing](/en-US/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent#alternatives_to_ua_sniffing).
 
 ## Finding help
 

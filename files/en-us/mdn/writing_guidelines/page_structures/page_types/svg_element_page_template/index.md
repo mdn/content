@@ -17,7 +17,7 @@ sidebar: mdnsidebar
 > ```md
 > ---
 > title: <NameOfTheElement>
-> slug: Web/SVG/Element/NameOfTheElement
+> slug: Web/SVG/Reference/Element/NameOfTheElement
 > page-type: svg-element
 > status:
 >   - deprecated
@@ -30,10 +30,10 @@ sidebar: mdnsidebar
 > - **title**
 >   - : Title heading displayed at the top of the page.
 >     Format as **<**_NameOfTheElement_**>**.
->     For example, the "[g](/en-US/docs/Web/SVG/Element/g)" element has a _title_ of `<g>`.
+>     For example, the "[g](/en-US/docs/Web/SVG/Reference/Element/g)" element has a _title_ of `<g>`.
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`.
->     This will be formatted like `Web/SVG/Element/NameOfTheElement`.
+>     This will be formatted like `Web/SVG/Reference/Element/NameOfTheElement`.
 > - **page-type**
 >   - : Always `svg-element`.
 > - **status**
@@ -90,9 +90,9 @@ _To use this macro, remove the backticks and backslash in the markdown file._
 
 ### Global attributes
 
-- [Generic attributes](/en-US/docs/Web/SVG/Attribute#generic_attributes)
-- [Event attributes](/en-US/docs/Web/SVG/Attribute#event_attributes)
-- [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
+- [Generic attributes](/en-US/docs/Web/SVG/Reference/Attribute#generic_attributes)
+- [Event attributes](/en-US/docs/Web/SVG/Reference/Attribute#event_attributes)
+- [Presentation attributes](/en-US/docs/Web/SVG/Reference/Attribute#presentation_attributes)
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("transform")}}

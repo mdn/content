@@ -32,6 +32,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Run scripts
+        id: check
         run: |
           echo Running spelling check...
           output=$(yarn --silent lint:typos-group-by-file || exit 0)
@@ -39,15 +40,15 @@ jobs:
             output=$(node scripts/linkify-logs.js "${output}")
             output=$(echo "$output" | sed 's/^/- /')
             echo "$output"
-            echo "OUTPUT<<EOF" >> $GITHUB_ENV
-            echo "$output" >> $GITHUB_ENV
-            echo "EOF" >> $GITHUB_ENV
+            echo "OUTPUT<<EOF" >> "$GITHUB_OUTPUT"
+            echo "$output" >> "$GITHUB_OUTPUT"
+            echo "EOF" >> "$GITHUB_OUTPUT"
           else
             echo "No typos found! 🎉"
           fi
 
       - name: Report spellcheck errors
-        if: env.OUTPUT != ''
+        if: steps.check.outputs.OUTPUT != ''
         run: |
           issue=$(gh issue create --title "$TITLE" --label "$LABELS" --body "$BODY")
           echo Issue URL ${issue}
@@ -58,7 +59,7 @@ jobs:
           BODY: |
             Typos and unknown words:
 
-            ${{ env.OUTPUT }}
+            ${{ steps.check.outputs.OUTPUT }}
 
             > [!TIP]
             > If the word is actually valid or it is required to be ignored, consider adding it to one of the dictionaries under [`.vscode/dictionaries`](https://github.com/mdn/content/tree/main/.vscode/dictionaries).

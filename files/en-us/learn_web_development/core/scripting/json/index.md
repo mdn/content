@@ -1,10 +1,10 @@
 ---
 title: Working with JSON
+short-title: JSON
 slug: Learn_web_development/Core/Scripting/JSON
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Network_requests","Learn_web_development/Core/Scripting/Debugging_JavaScript", "Learn_web_development/Core/Scripting")}}
 
@@ -33,12 +33,10 @@ JavaScript Object Notation (JSON) is a standard text-based format for representi
 
 ## No, really, what is JSON?
 
-{{glossary("JSON")}} is a text-based data format following JavaScript object syntax, which was popularized by [Douglas Crockford](https://en.wikipedia.org/wiki/Douglas_Crockford).
-Even though it closely resembles JavaScript object literal syntax, it can be used independently from JavaScript, and many programming environments feature the ability to read (parse) and generate JSON.
-
-JSON exists as a string — useful when you want to transmit data across a network.
-It needs to be converted to a native JavaScript object when you want to access the data.
-This is not a big issue — JavaScript provides a global [JSON](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) object that has methods available for converting between the two.
+{{glossary("JSON")}} is a text-based data format following JavaScript object syntax.
+It represents structured data as a string, which is useful when you want to transmit data across a network.
+Even though it closely resembles JavaScript object literal syntax, it can be used independently from JavaScript. Many programming environments feature the ability to read (parse) and generate JSON.
+In JavaScript, the methods for parsing and generating JSON are provided by the [`JSON`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) object.
 
 > [!NOTE]
 > Converting a string to a native object is called _deserialization_, while converting a native object to a string so it can be transmitted across the network is called _serialization_.
@@ -48,8 +46,8 @@ A JSON string can be stored in its own file, which is basically just a text file
 ### JSON structure
 
 As described above, JSON is a string whose format very much resembles JavaScript object literal format.
-You can include the same basic data types inside JSON as you can in a standard JavaScript object — strings, numbers, arrays, booleans, and other object literals.
-This allows you to construct a data hierarchy, like so:
+The following is a valid JSON string representing an object.
+Note how it is also a valid JavaScript object literal — just with some more [syntax restrictions](#json_syntax_restrictions).
 
 ```json
 {
@@ -91,25 +89,21 @@ This allows you to construct a data hierarchy, like so:
 }
 ```
 
-If we loaded this string into a JavaScript program and parsed it into a variable called `superHeroes` for example, we could then access the data inside it using the same dot/bracket notation we looked at in the [JavaScript object basics](/en-US/docs/Learn_web_development/Core/Scripting/Object_basics) article.
+If you load this JSON in your JavaScript program as a string, you can parse it into a normal object and then access the data inside it using the same dot/bracket notation we looked at in the [JavaScript object basics](/en-US/docs/Learn_web_development/Core/Scripting/Object_basics) article.
 For example:
 
 ```js
 superHeroes.homeTown;
-superHeroes["active"];
-```
-
-To access data further down the hierarchy, you have to chain the required property names and array indexes together. For example, to access the third superpower of the second hero listed in the members list, you'd do this:
-
-```js
-superHeroes["members"][1]["powers"][2];
+superHeroes.members[1].powers[2];
 ```
 
 1. First, we have the variable name — `superHeroes`.
-2. Inside that, we want to access the `members` property, so we use `["members"]`.
+2. Inside that, we want to access the `members` property, so we use `.members`.
 3. `members` contains an array populated by objects. We want to access the second object inside the array, so we use `[1]`.
-4. Inside this object, we want to access the `powers` property, so we use `["powers"]`.
+4. Inside this object, we want to access the `powers` property, so we use `.powers`.
 5. Inside the `powers` property is an array containing the selected hero's superpowers. We want the third one, so we use `[2]`.
+
+The key takeaway is that there's really nothing special about working with JSON; after you've parsed it into a JavaScript object, you work with it just like you would with an object declared using the same object literal syntax.
 
 > [!NOTE]
 > We've made the JSON seen above available inside a variable in our [JSONTest.html](https://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) example (see the [source code](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/JSONTest.html)).
@@ -141,19 +135,26 @@ We can also convert arrays to/from JSON. The below example is perfectly valid JS
 ]
 ```
 
-You have to access array items (in its parsed version) by starting with an array index, for example `[0]["powers"][0]`.
+You have to access array items (in its parsed version) by starting with an array index, for example `superHeroes[0].powers[0]`.
 
-### Other notes
+The JSON can also contain a single primitive. For example, `29`, `"Dan Jukes"`, or `true` are all valid JSON.
 
-- JSON is purely a string with a specified data format — it contains only properties, no methods.
-- JSON requires double quotes to be used around strings and property names.
-  Single quotes are not valid other than surrounding the entire JSON string.
-- Even a single misplaced comma or colon can cause a JSON file to go wrong, and not work.
-  You should be careful to validate any data you are attempting to use (although computer-generated JSON is less likely to include errors, as long as the generator program is working correctly).
-  You can validate JSON using an application like [JSONLint](https://jsonlint.com/).
-- JSON can actually take the form of any data type that is valid for inclusion inside JSON, not just arrays or objects.
-  So for example, a single string or number would be valid JSON.
-- Unlike in JavaScript code in which object properties may be unquoted, in JSON only quoted strings may be used as properties.
+### JSON syntax restrictions
+
+As mentioned earlier, any JSON is a valid JavaScript literal (object, array, number, etc.). The converse is not true, though—not all JavaScript object literals are valid JSON.
+
+- JSON can only contain _serializable_ data types. This means:
+  - For primitives, JSON can contain string literals, number literals, `true`, `false`, and `null`. Notably, it cannot contain `undefined`, `NaN`, or `Infinity`.
+  - For non-primitives, JSON can contain object literals and arrays, but not functions or any other object types, such as `Date`, `Set`, and `Map`. The objects and arrays inside JSON need to further contain valid JSON data types.
+- Strings must be enclosed in double quotes, not single quotes.
+- Numbers must be written in decimal notation.
+- Each property of an object must be in the form of `"key": value`. Property names must be string literals enclosed in double quotes. Special JavaScript syntax, such as methods, is not allowed because methods are functions, and functions are not valid JSON data types.
+- Objects and arrays cannot contain [trailing commas](/en-US/docs/Web/JavaScript/Reference/Trailing_commas).
+- Comments are not allowed in JSON.
+
+Even a single misplaced comma or colon can make a JSON file invalid and cause it to fail.
+You should be careful to validate any data you are attempting to use (although computer-generated JSON is less likely to include errors, as long as the generator program is working correctly).
+You can validate JSON using an application like [JSONLint](https://jsonlint.com/) or [JSON-validate](https://json-validate.com)
 
 ## Active learning: Working through a JSON example
 
@@ -203,7 +204,7 @@ async function populate() {
 ```
 
 To obtain the JSON, we use an API called [Fetch](/en-US/docs/Web/API/Fetch_API).
-This API allows us to make network requests to retrieve resources from a server via JavaScript (e.g. images, text, JSON, even HTML snippets), meaning that we can update small sections of content without having to reload the entire page.
+This API allows us to make network requests to retrieve resources from a server via JavaScript (e.g., images, text, JSON, even HTML snippets), meaning that we can update small sections of content without having to reload the entire page.
 
 In our function, the first four lines use the Fetch API to fetch the JSON from the server:
 
@@ -346,7 +347,7 @@ Here we're creating a JavaScript object, then checking what it contains, then co
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: JSON](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_JSON).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: JSON](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/JSON).
 
 ## Summary
 

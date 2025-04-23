@@ -2,9 +2,8 @@
 title: Tools and setup
 slug: Learn_web_development/Howto/Tools_and_setup
 page-type: landing-page
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 This section lists questions related to the tools/software you can use to build websites.
 

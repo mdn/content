@@ -1,10 +1,10 @@
 ---
 title: Sizing items in CSS
+short-title: Sizing
 slug: Learn_web_development/Core/Styling_basics/Sizing
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics")}}
 
@@ -295,7 +295,7 @@ Sizing things according to the viewport can be useful in your designs. For examp
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Sizing](/en-US/docs/Learn_web_development/Core/Styling_basics/Sizing_tasks).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Sizing](/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Sizing).
 
 ## Summary
 

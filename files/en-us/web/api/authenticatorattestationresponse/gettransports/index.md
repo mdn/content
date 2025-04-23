@@ -27,7 +27,7 @@ None.
 An {{jsxref("Array")}} of strings representing the different transports supported by the authenticator, in lexicographical order.
 Values may include:
 
-- `ble`
+- `"ble"`
   - : The authenticator may be used over [BLE (Bluetooth Low Energy)](https://en.wikipedia.org/wiki/Bluetooth_Low_Energy).
 - `"hybrid"`
   - : The authenticator can be used over a combination of (often separate) data transport and proximity mechanisms. This supports, for example, authentication on a desktop computer using a smartphone.
@@ -40,7 +40,7 @@ Values may include:
 
 ## Examples
 
-See [Creating a public key credential using the WebAuthn API](/en-US/docs/Web/API/CredentialsContainer/create#creating_a_public_key_credential_using_the_webauthn_api) for a detailed example.
+See [Creating a public key credential](/en-US/docs/Web/API/CredentialsContainer/create#creating_a_public_key_credential) for a detailed example.
 
 ## Specifications
 

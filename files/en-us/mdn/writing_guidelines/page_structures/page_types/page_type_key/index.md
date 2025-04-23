@@ -82,9 +82,9 @@ This section lists `page-type` values for pages under [Glossary](/en-US/docs/Glo
 
 This section lists `page-type` values for pages under [Web/HTML](/en-US/docs/Web/HTML). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
-- `html-attribute`: an HTML attribute, like [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete).
-- `html-attribute-value`: a single value for an HTML attribute, like [`dns-prefetch`](/en-US/docs/Web/HTML/Attributes/rel/dns-prefetch).
-- `html-element`: an HTML element, like [`<button>`](/en-US/docs/Web/HTML/Element/button).
+- `html-attribute`: an HTML attribute, like [`autocomplete`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete).
+- `html-attribute-value`: a single value for an HTML attribute, like [`dns-prefetch`](/en-US/docs/Web/HTML/Reference/Attributes/rel/dns-prefetch).
+- `html-element`: an HTML element, like [`<button>`](/en-US/docs/Web/HTML/Reference/Elements/button).
 
 ### HTTP page types
 
@@ -128,8 +128,8 @@ This section lists `page-type` values for pages under [Web/MathML](/en-US/docs/W
 
 This section lists `page-type` values for pages under [Web/SVG](/en-US/docs/Web/SVG). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
-- `svg-attribute`: an SVG attribute, like [`crossorigin`](/en-US/docs/Web/SVG/Attribute/crossorigin).
-- `svg-element`: an SVG element, like [`<circle>`](/en-US/docs/Web/SVG/Element/circle).
+- `svg-attribute`: an SVG attribute, like [`crossorigin`](/en-US/docs/Web/SVG/Reference/Attribute/crossorigin).
+- `svg-element`: an SVG element, like [`<circle>`](/en-US/docs/Web/SVG/Reference/Element/circle).
 
 ### Web API page types
 

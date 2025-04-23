@@ -25,7 +25,7 @@ This article explains how to create a new reference page for an HTTP header.
 
 ## Step 3 – Create the HTTP header page
 
-- All header pages live under this tree: [`files/en-us/web/http/headers`](https://github.com/mdn/content/tree/main/files/en-us/web/http/headers)
+- All header pages live under this tree: [`files/en-us/web/http/reference/headers`](https://github.com/mdn/content/tree/main/files/en-us/web/http/reference/headers)
 - To create a new page, see the instructions in our [how to create a page](/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting) guide.
 
 ## Step 4 – Write the content

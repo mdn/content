@@ -1,10 +1,10 @@
 ---
 title: Componentizing our React app
+short-title: React components
 slug: Learn_web_development/Core/Frameworks_libraries/React_components
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/React_interactivity_events_state", "Learn_web_development/Core/Frameworks_libraries")}}
 
@@ -59,7 +59,7 @@ function Todo() {}
 export default Todo;
 ```
 
-This is OK so far, but our component should return something useful! Go back to `src/App.jsx`, copy the first [`<li>`](/en-US/docs/Web/HTML/Element/li) from inside the unordered list, and paste it into `Todo.jsx` so that it reads like this:
+This is OK so far, but our component should return something useful! Go back to `src/App.jsx`, copy the first [`<li>`](/en-US/docs/Web/HTML/Reference/Elements/li) from inside the unordered list, and paste it into `Todo.jsx` so that it reads like this:
 
 ```jsx
 function Todo() {
@@ -190,8 +190,8 @@ If you change each `<Todo />` component's `completed` prop, your browser will ch
 
 We have still _another_ problem: our `<Todo />` component gives every task an `id` attribute of `todo-0`. This is bad for a couple of reasons:
 
-- [`id` attributes](/en-US/docs/Web/HTML/Global_attributes/id) must be unique (they are used as unique identifiers for document fragments, by CSS, JavaScript, etc.).
-- When `id`s are not unique, the functionality of [label elements](/en-US/docs/Web/HTML/Element/label) can break.
+- [`id` attributes](/en-US/docs/Web/HTML/Reference/Global_attributes/id) must be unique (they are used as unique identifiers for document fragments, by CSS, JavaScript, etc.).
+- When `id`s are not unique, the functionality of [label elements](/en-US/docs/Web/HTML/Reference/Elements/label) can break.
 
 The second problem is affecting our app right now. If you click on the word "Sleep" next to the second checkbox, you'll notice the "Eat" checkbox toggles instead of the "Sleep" checkbox. This is because every checkbox's `<label>` element has an `htmlFor` attribute of `todo-0`. The `<label>`s only acknowledge the first element with a given `id` attribute, which causes the problem you see when clicking on the other labels.
 

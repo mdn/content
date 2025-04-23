@@ -1,10 +1,10 @@
 ---
 title: Images, media, and form elements
+short-title: Images, media, forms
 slug: Learn_web_development/Core/Styling_basics/Images_media_forms
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics")}}
 
@@ -91,7 +91,7 @@ img {
 
 So what can we do about the overflowing issue?
 
-As we learned in [Sizing items in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Sizing), a common technique is to make the {{cssxref("max-width")}} of an image 100%. This will enable the image to become smaller in size than the box but not larger. This technique will also work with other replaced elements such as [`<video>`](/en-US/docs/Web/HTML/Element/video)s, or [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe)s.
+As we learned in [Sizing items in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Sizing), a common technique is to make the {{cssxref("max-width")}} of an image 100%. This will enable the image to become smaller in size than the box but not larger. This technique will also work with other replaced elements such as [`<video>`](/en-US/docs/Web/HTML/Reference/Elements/video)s, or [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe)s.
 
 Try adding `max-width: 100%` to the `<img>` element rule in the example above. You will see that the smaller image remains unchanged, but the larger one becomes smaller to fit into the box.
 
@@ -191,7 +191,7 @@ You won't study layout until a later module. For now, just keep in mind that rep
 
 Form elements can be a tricky issue when it comes to styling with CSS. The [Web Forms extensions module](/en-US/docs/Learn_web_development/Extensions/Forms) covers the trickier aspects of styling certain form input types, which we will not go into here. There are, however, a few key basics worth highlighting in this section.
 
-Many form controls are added to your page by way of the [`<input>`](/en-US/docs/Web/HTML/Element/input) element — this defines simple form fields such as text inputs, through to more complex fields such as color and date pickers. There are some additional elements, such as [`<textarea>`](/en-US/docs/Web/HTML/Element/textarea) for multiline text input, and also elements used to contain and label parts of forms such as [`<fieldset>`](/en-US/docs/Web/HTML/Element/fieldset) and [`<legend>`](/en-US/docs/Web/HTML/Element/legend).
+Many form controls are added to your page by way of the [`<input>`](/en-US/docs/Web/HTML/Reference/Elements/input) element — this defines simple form fields such as text inputs, through to more complex fields such as color and date pickers. There are some additional elements, such as [`<textarea>`](/en-US/docs/Web/HTML/Reference/Elements/textarea) for multiline text input, and also elements used to contain and label parts of forms such as [`<fieldset>`](/en-US/docs/Web/HTML/Reference/Elements/fieldset) and [`<legend>`](/en-US/docs/Web/HTML/Reference/Elements/legend).
 
 HTML also contains attributes that enable web developers to indicate which fields are required, and even the type of content that needs to be entered. If the user enters something unexpected, or leaves a required field blank, the browser can show an error message. Different browsers vary with one another in how much styling and customization they allow for such items.
 
@@ -329,7 +329,7 @@ textarea {
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Images and form elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Images_tasks).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Images and form elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Images).
 
 ## Summary
 

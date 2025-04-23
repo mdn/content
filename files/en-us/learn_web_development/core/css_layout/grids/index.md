@@ -2,9 +2,8 @@
 title: CSS grid layout
 slug: Learn_web_development/Core/CSS_layout/Grids
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout/Responsive_design", "Learn_web_development/Core/CSS_layout")}}
 
@@ -195,7 +194,9 @@ Here we change the track listing to the following definition, creating three `1f
 
 {{EmbedLiveSample('grid-fr-unit_0', '100%', "130") }}
 
-You now have flexible tracks. The `fr` unit distributes space proportionally. You can specify different positive values for your tracks like so:
+You now have flexible tracks.
+The `fr` unit distributes space proportionally, so you can specify different positive values for your tracks.
+Change your track listing to the following definition, creating one `2fr` track and two `1fr` tracks:
 
 ```html hidden live-sample___grid-fr-unit_1
 <div class="container">
@@ -220,8 +221,6 @@ body {
   border: 2px solid rgb(79 185 227);
 }
 ```
-
-Now change your track listing to the following definition, creating one `2fr` two `1fr` tracks:
 
 ```css live-sample___grid-fr-unit_1
 .container {
@@ -269,7 +268,7 @@ body {
 }
 ```
 
-Here we add the `gap` property to create gaps between the tracks with a value of `20px:
+Here we add the `gap` property to create gaps between the tracks with a value of `20px`:
 
 ```css live-sample___grid-gap
 .container {
@@ -862,7 +861,7 @@ If you use the [Firefox grid inspector](https://firefox-source-docs.mozilla.org/
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Grid](/en-US/docs/Learn_web_development/Core/CSS_layout/Grid_skills).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Grid](/en-US/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Grid).
 
 ## Summary
 

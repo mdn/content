@@ -46,7 +46,7 @@ It tells the browser that the internal layout of the element is completely separ
 
 By setting `contain: content` on each `<article>` we have indicated this; we have told the browser that each article is independent. The browser can then use this information to make decisions about how to render each `<article>` of content. For example, it might not render articles that are outside the viewable area.
 
-When additional articles are appended at the end of the page, the browser does not need to recalculate layout or repaint the preceding content; it also doesn't need to touch any area outside of the containing element's subtree. If box model properties are dependent, however, the browser will need to recalculate layout and repaint. For example, if the `<article>` is styled such that its size depends on its contents (e.g. with `height: auto`), then the browser will need to account for its size changing.
+When additional articles are appended at the end of the page, the browser does not need to recalculate layout or repaint the preceding content; it also doesn't need to touch any area outside of the containing element's subtree. If box model properties are dependent, however, the browser will need to recalculate layout and repaint. For example, if the `<article>` is styled such that its size depends on its contents (e.g., with `height: auto`), then the browser will need to account for its size changing.
 
 ## Key concepts and terminology
 
@@ -82,7 +82,7 @@ article {
 }
 ```
 
-Paint containment essentially clips the box to the padding edge of the [principal box](/en-US/docs/Web/CSS/Visual_formatting_model#the_principal_box). There can be no visible overflow. The same additional notes are true for `paint` containment as `layout` containment (see above).
+Paint containment essentially clips the box to the padding edge of the [principal box](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model#the_principal_box). There can be no visible overflow. The same additional notes are true for `paint` containment as `layout` containment (see above).
 
 Another advantage is that if the element with containment applied is offscreen, the browser does not need to paint its child elements — these are also offscreen as they are contained completely by that box.
 

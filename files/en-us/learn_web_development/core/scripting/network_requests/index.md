@@ -1,10 +1,10 @@
 ---
 title: Making network requests with JavaScript
+short-title: Network requests
 slug: Learn_web_development/Core/Scripting/Network_requests
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/DOM_scripting","Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Core/Scripting")}}
 
