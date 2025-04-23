@@ -54,7 +54,7 @@ The default value of the {{cssxref("mask-mode")}} property is `match-source`; th
 
 - In all cases, the alpha transparency of the mask matters; element areas masked by opaque sections of the `mask-image` will be rendered, while areas masked by transparent image sections are hidden.
 - In `alpha` cases, the colors of the opaque and the semi-opaque regions don't matter.
-- If the {{cssxref("mask-mode")}} property is set to `luminance` or defaults to `luminance` because that is the default or set `mask-type` of the SVG mask source, the masking value is the luminance value of each color multiplied by its alpha value.
+- If the `mask-mode` property is set to `luminance` or defaults to `luminance` because that is the default or set `mask-type` of the SVG mask source, the masking value is the luminance value of each color multiplied by its alpha value.
 
 A mask will be counted as a transparent black image layer, not revealing anything, in the following cases:
 
