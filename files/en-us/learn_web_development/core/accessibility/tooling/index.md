@@ -36,7 +36,7 @@ Let's have a look at the tools and techniques you can use for testing website ac
 
 ### Testing source order
 
-Your content should make logical sense in its source order — you can always place it where you want using CSS later on, but you should get the source order right to begin with. This is because assistive technologies tend to read out website content in source order, and disabled users often modify or turn off parts of the CSS to make the content more legible (common examples are increasing font size and applying high contrast color schemes).
+Your content should make logical sense in its source order — you can always display it differently with CSS later on, but you should get the underlying structure correct to begin with. This is because assistive technologies read website content based on the order of the source, and disabled people often modify or turn off parts of the CSS to make content more legible (common examples are increasing font size and applying high contrast color schemes).
 
 To test source order, you can turn off a site's CSS and see how understandable it is without it. You could do this manually by just removing the CSS from your code, but the easiest way is to use browser features, for example:
 
