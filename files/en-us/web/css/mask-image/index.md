@@ -155,7 +155,7 @@ This example demonstrates applying multiple masks.
 
 #### CSS
 
-We apply two masks — the same semi-transparent SVG as in the previous example, and a {{CSSxRef("gradient/repeating-radial-gradient")}}. We control the size of the masks using the {{cssxref("mask-size")}} property. Because our first mask is not 100%, we make sure our masks are centered and don't repeat with the {{cssxref("mask-position")}} and {{cssxref("mask-repeat")}} properties, respectively.
+We apply two masks — the same semi-transparent SVG as in the previous example, and a {{CSSxRef("gradient/repeating-radial-gradient")}}. We control the size of the masks using the {{cssxref("mask-size")}} property. Because our first mask is not sized at 100%, we make sure our masks are centered and don't repeat with the {{cssxref("mask-position")}} and {{cssxref("mask-repeat")}} properties, respectively.
 
 ```css
 img {
