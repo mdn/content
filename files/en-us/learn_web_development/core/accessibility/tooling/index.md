@@ -91,7 +91,7 @@ This information is pretty trivial in the case of a paragraph of text, which sou
 
 Make sure you have a screen reader or two installed on your development machine, and try using your favorite websites via a screen reader, as discussed below. Understanding how visually impaired people use the web is key to designing products that work better for everyone.
 
-### What screenreaders are available?
+### What screen readers are available?
 
 There are several screen readers available:
 
