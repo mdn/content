@@ -258,7 +258,7 @@ body:has(:checked) img {
 }
 ```
 
-The luminance value of `black` is `0`, white is `100`, and [`green` is `46.228`](https://www.colorhexa.com/008000). This means the areas where the mask is white wll be visible, where the mask is black or fully transparent will be clipped (not visible), and where the mask is green will be visible but lighter; green areas will be masked the equivalent of having a white mask that is 46.228% opaque set.
+The luminance values of `black`, `white`, and `green` are `0`, `100`, and [`46.228`](https://www.colorhexa.com/008000), respectively. This means the areas where the mask is white will be visible, whereas areas where the mask is black or fully transparent will be clipped (not visible). Areas where the mask is green will be visible but lighter, equivalent to having a white mask that is 46.228% opaque.
 
 #### Results
 
