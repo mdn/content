@@ -58,11 +58,11 @@ The default value of the {{cssxref("mask-mode")}} property is `match-source`; th
 
 A mask will be counted as a transparent black image layer, not revealing anything, in the following cases:
 
-- the mask image is empty (zero width or zero height)
-- the mask image fails to download
-- the mask image format is not supported by the browser
-- the mask image doesn't exist
-- the mask value doesn't point to a mask image
+- The mask image is empty (zero width or zero height).
+- The mask image fails to download.
+- The browser does not support the mask image format.
+- The mask image doesn't exist.
+- The mask value doesn't point to a mask image.
 
 Only image sources served over HTTP and HTTPS protocols are accepted as `<image>` values due to the [CORS](/en-US/docs/Glossary/CORS) policy. Images served locally, including relative or absolute `file://` protocols, are not accepted, and will render as transparent black. To test URL image sources locally, [set up a local server](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection#localhost).
 
