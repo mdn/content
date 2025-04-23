@@ -386,7 +386,7 @@ Screen magnifiers provide partially-sighted users with a magnified view of their
 
 Software and hardware screen magnifiers are available:
 
-- Most modern operating systems have a built-in app for magnifying all or part of the screen, for example Zoom on mac or Magnifier on Windows. They also tend to provide options for univerally increasing the text size, mouse cursor size, etc. Third-party options are available as well.
+- Most modern operating systems have a built-in app for magnifying all or part of the screen, for example Zoom on mac or Magnifier on Windows. They also tend to provide options for universally increasing the text size, mouse cursor size, etc. Third-party options are available as well.
 - Hardware screen magnifiers tend to consist of a separate screen that sits next to or in front of your device's screen and projects a larger version of it, or a zoomed version of part of it.
 
 ### Voice recognition software
