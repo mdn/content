@@ -74,7 +74,8 @@ navigator.mediaDevices.getUserMedia({ audio: true, video: true })
     console.log("Media stream started:", stream);
 
     // Enumerate media devices
-    navigator.mediaDevices.enumerateDevices()
+    navigator.mediaDevices
+      .enumerateDevices()
       .then((devices) => {
         devices.forEach((device) => {
           if (typeof device.getCapabilities === "function") {
