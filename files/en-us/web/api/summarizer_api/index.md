@@ -20,7 +20,7 @@ Writing a summary of a larger body of text is a common writing task, and one tha
 - Summarizing a meeting transcript so those joining the meeting late can get up to speed with what they've missed.
 - Summarizing a set of product reviews to quickly communicate overall sentiment.
 
-The Summarizer API provides an asynchronous ({{jsxref("Promise")}}-based) mechanism for a web site to feed a body of text into the browser's own internal language model and request that it returns a summary of the text based on specified options.
+The Summarizer API provides an asynchronous ({{jsxref("Promise")}}-based) mechanism for a website to feed a body of text into the browser's own internal language model and request that it returns a summary of the text based on specified options.
 
 This is done using the functionality made available by the {{domxref("Summarizer")}} interface, in a two-step process:
 
