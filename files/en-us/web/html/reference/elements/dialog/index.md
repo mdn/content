@@ -26,7 +26,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
     - A _light dismiss user action_, in which the `<dialog>` is closed when the user clicks or taps outside it. This is equivalent to the ["light dismiss" behavior of "auto" state popovers](/en-US/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss).
     - A _platform-specific user action_, such as pressing the <kbd>Esc</kbd> key on desktop platforms, or a "back" or "dismiss" gesture on mobile platforms.
-    - A developer-specified mechanism such as a {{htmlelement("button")}} with a [`click`](/en-US/docs/Web/API/Element/click_event) handler that invokes {{domxref("HTMLDialogElement.close()")}} or a {{htmlelement("form")}} submission
+    - A developer-specified mechanism such as a {{htmlelement("button")}} with a [`click`](/en-US/docs/Web/API/Element/click_event) handler that invokes {{domxref("HTMLDialogElement.close()")}} or a {{htmlelement("form")}} submission.
 
     Possible values are:
 
