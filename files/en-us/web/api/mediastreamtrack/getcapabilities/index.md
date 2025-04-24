@@ -37,7 +37,7 @@ A `MediaTrackCapabilities` object which specifies the accepted value or range of
   - : A boolean or an array of booleans. If the device supports script-controlled toggling, you may see both `true` and `false`.
 - `channelCount` (audio track only)
   - : A range object describing the supported number of channels. For example:
-`{ min: 1, max: 2 }`
+    `{ min: 1, max: 2 }`
 - `echoCancellation` (audio track only)
   - : A boolean or an array of booleans indicating if echo cancellation is supported.
 - `latency` (audio track only)
