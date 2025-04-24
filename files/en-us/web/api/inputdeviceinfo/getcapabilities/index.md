@@ -69,7 +69,8 @@ If `device` is an `InputDeviceInfo` object, then `getCapabilities()` will return
 
 ```js
 // Get permission to access audio or video devices
-navigator.mediaDevices.getUserMedia({ audio: true, video: true })
+navigator.mediaDevices
+  .getUserMedia({ audio: true, video: true })
   .then((stream) => {
     console.log("Media stream started:", stream);
 
