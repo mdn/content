@@ -224,9 +224,7 @@ The CSS includes the `[open]` [attribute selector](/en-US/docs/Web/CSS/Attribute
   <tbody>
      <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Guides/Content_categories"
-          >Content categories</a
-        >
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories">Content categories</a>
       </th>
       <td>
         none
@@ -235,12 +233,8 @@ The CSS includes the `[open]` [attribute selector](/en-US/docs/Web/CSS/Attribute
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content"
-          >Phrasing content</a
-        >, optionally intermixed with
-        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#heading_content"
-          >Heading content</a
-        >
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content">Phrasing content</a>, optionally intermixed with
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#heading_content">Heading content</a>
       </td>
     </tr>
     <tr>
@@ -253,7 +247,7 @@ The CSS includes the `[open]` [attribute selector](/en-US/docs/Web/CSS/Attribute
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
-      <td> <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a></td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
