@@ -56,7 +56,7 @@ A `MediaTrackCapabilities` object which specifies the accepted value or range of
 - `frameRate` (video track only)
   - : A number (if fixed) or a range object giving the supported frames per second.
 - `height` (video track only)
-  - : A numeric value or range object (with pixel dimensions) representing the video track’s height.
+  - : A numeric value or range object (with pixel dimensions) representing the video track's height.
 - `width` (video track only)
   - : A numeric value or range object (with pixel dimensions) representing the video track’s width in pixels.
 - `resizeMode` (video track only)
