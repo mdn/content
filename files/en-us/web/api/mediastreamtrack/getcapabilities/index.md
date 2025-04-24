@@ -44,7 +44,7 @@ For audio tracks only:
   - : A range object describing the supported number of channels. For example: `{ min: 1, max: 2 }`
 - `echoCancellation`
   - : A boolean or an array of booleans indicating if echo cancellation is supported.
-- `latency` (audio track only)
+- `latency`
   - : Either a fixed numeric value or a range object (with `min`, `max`, and optionally `step`) representing the latency in seconds. This value could be an integer or, in some cases, a floating-point number depending on measurement precision
 - `noiseSuppression`
   - : A boolean or an array indicating whether noise suppression is available. If the feature can be controlled by a script the source will report both `true` and `false` as possible values.
