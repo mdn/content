@@ -3,9 +3,8 @@ title: "Test your skills: Arrays"
 short-title: Arrays
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Arrays
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{learnsidebar}}
 
 The aim of this skill test is to assess whether you've understood our [Arrays](/en-US/docs/Learn_web_development/Core/Scripting/Arrays) article.
 

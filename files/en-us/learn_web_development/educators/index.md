@@ -2,9 +2,8 @@
 title: Resources for educators
 slug: Learn_web_development/Educators
 page-type: landing-page
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 Educators can use MDN's "Learn web development" section as a guide when creating programs, units, and assessment specifications for a web-related university degree, college course, coding school course, or similar. Each article includes a "Learning outcomes" section at the top detailing the topics taught in that article.
 

@@ -2,9 +2,8 @@
 title: Version control
 slug: Learn_web_development/Core/Version_control
 page-type: learn-module
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenu("Learn_web_development/Core/Design_for_developers", "Learn_web_development/Core")}}
 

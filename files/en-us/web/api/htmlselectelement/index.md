@@ -15,6 +15,8 @@ The **`HTMLSelectElement`** interface represents a {{HTMLElement("select")}} HTM
 
 _This interface inherits the properties of {{domxref("HTMLElement")}}, and of {{domxref("Element")}} and {{domxref("Node")}}._
 
+- {{domxref("HTMLSelectElement.autocomplete")}}
+  - : A string value reflecting the [`autocomplete`](/en-US/docs/Web/HTML/Reference/Elements/select#autocomplete), which indicates whether the value of the control can be automatically completed by the browser.
 - {{domxref("HTMLSelectElement.disabled")}}
   - : A boolean value reflecting the [`disabled`](/en-US/docs/Web/HTML/Reference/Elements/select#disabled) HTML attribute, which indicates whether the control is disabled. If it is disabled, it does not accept clicks.
 - {{domxref("HTMLSelectElement.form")}} {{ReadOnlyInline}}

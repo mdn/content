@@ -10808,135 +10808,6 @@
       "Andrew_Pfeiffer"
     ]
   },
-  "Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image": {
-    "modified": "2020-07-16T22:22:42.758Z",
-    "contributors": ["ezrinjaz", "hbloomer", "Andrew_Pfeiffer"]
-  },
-  "Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages": {
-    "modified": "2020-07-16T22:22:31.788Z",
-    "contributors": [
-      "Sheppy",
-      "estelle",
-      "sideshowbarker",
-      "karimos129",
-      "spencercorwin",
-      "SphinxKnight",
-      "chrisdavidmills",
-      "ziyadElon",
-      "Harinderpreet",
-      "stuartharvie",
-      "RafeyIqbalRahman",
-      "ishan123456789",
-      "abt8601",
-      "xfq",
-      "andygongea",
-      "rfc791",
-      "fscholz",
-      "Jeremie",
-      "kscarfone",
-      "dbs",
-      "gmerencio",
-      "gbrown",
-      "haboqueferus",
-      "brunoais",
-      "teoli",
-      "ethertank",
-      "tolbon",
-      "leo89",
-      "tw2113",
-      "inma_610",
-      "xaky",
-      "Shz",
-      "JaredWBurt",
-      "alicethomas222",
-      "peterson.victor222",
-      "Mgjbot",
-      "Carrie zhxj",
-      "Ptak82",
-      "Satyr-wayfarer",
-      "NickolayBot",
-      "Dria",
-      "Yworfg",
-      "cbiesinger",
-      "Nerf",
-      "Grauw",
-      "CitizenK",
-      "Jens.B"
-    ]
-  },
-  "Learn_web_development/Howto/Solve_HTML_problems/Cheatsheet": {
-    "modified": "2020-07-16T22:22:43.887Z",
-    "contributors": [
-      "Yel-Martinez-Consultor-Seo",
-      "sideshowbarker",
-      "verde79",
-      "sksankarraj",
-      "Quantzilla",
-      "Johanancuriel",
-      "SethClydesdale",
-      "arkanciscan",
-      "khalid32",
-      "jswisher",
-      "fachrulrazy",
-      "Andrew_Pfeiffer",
-      "SphinxKnight",
-      "dvincent",
-      "hbloomer",
-      "chadsansing",
-      "Jeremie"
-    ]
-  },
-  "Learn_web_development/Howto/Solve_HTML_problems/Define_terms_with_HTML": {
-    "modified": "2020-07-16T22:22:41.646Z",
-    "contributors": [
-      "AlexK89",
-      "jnegara",
-      "Jeremie",
-      "Andrew_Pfeiffer",
-      "Sheppy",
-      "MohammedAdam",
-      "hbloomer"
-    ]
-  },
-  "Learn_web_development/Howto/Solve_HTML_problems/Use_JavaScript_within_a_webpage": {
-    "modified": "2020-07-16T22:22:39.990Z",
-    "contributors": ["RomainLanz", "Jeremie", "Andrew_Pfeiffer"]
-  },
-  "Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes": {
-    "modified": "2020-07-16T22:22:34.241Z",
-    "contributors": [
-      "vnctdj",
-      "LoVo666",
-      "jmstfv",
-      "mfuji09",
-      "kenny-evitt",
-      "Enrico_Polanski",
-      "ryanve",
-      "calebmosher",
-      "chrisdavidmills",
-      "rnacken",
-      "Sheppy",
-      "prusse-martin",
-      "torazaburo",
-      "jacksonrayhamilton",
-      "drj11",
-      "Manojkr",
-      "Speich",
-      "sam_eaton",
-      "bcruddy",
-      "teckno101",
-      "lieuwex",
-      "robinpokorny",
-      "rvighne",
-      "andrew.carpenter",
-      "Jeremie",
-      "magnetikonline",
-      "jswisher",
-      "kscarfone",
-      "teoli",
-      "groovecoder"
-    ]
-  },
   "Learn_web_development/Howto/Solve_JavaScript_problems": {
     "modified": "2020-07-16T22:33:08.616Z",
     "contributors": [
@@ -56143,18 +56014,6 @@
     "modified": "2020-10-15T21:53:51.528Z",
     "contributors": ["fscholz", "Sebastianz"]
   },
-  "Web/API/SVGCursorElement": {
-    "modified": "2020-10-15T21:08:58.922Z",
-    "contributors": [
-      "krosylight",
-      "fscholz",
-      "jpmedley",
-      "Sebastianz",
-      "kscarfone",
-      "Sheppy",
-      "Jeremie"
-    ]
-  },
   "Web/API/SVGDefsElement": {
     "modified": "2020-10-15T21:10:22.009Z",
     "contributors": [
@@ -56339,37 +56198,6 @@
       "Jeremie"
     ]
   },
-  "Web/API/SVGFontElement": {
-    "modified": "2020-10-15T21:10:05.890Z",
-    "contributors": [
-      "fscholz",
-      "Sebastianz",
-      "kscarfone",
-      "Sheppy",
-      "ethertank",
-      "Jeremie"
-    ]
-  },
-  "Web/API/SVGFontFaceElement": {
-    "modified": "2020-10-15T21:10:09.511Z",
-    "contributors": ["fscholz", "Sebastianz", "kscarfone", "Sheppy", "Jeremie"]
-  },
-  "Web/API/SVGFontFaceFormatElement": {
-    "modified": "2020-10-15T21:10:11.216Z",
-    "contributors": ["fscholz", "Sebastianz", "kscarfone", "Sheppy", "Jeremie"]
-  },
-  "Web/API/SVGFontFaceNameElement": {
-    "modified": "2020-10-15T21:10:11.254Z",
-    "contributors": ["fscholz", "Sebastianz", "kscarfone", "Sheppy", "Jeremie"]
-  },
-  "Web/API/SVGFontFaceSrcElement": {
-    "modified": "2020-10-15T21:10:07.275Z",
-    "contributors": ["fscholz", "Sebastianz", "kscarfone", "Sheppy", "Jeremie"]
-  },
-  "Web/API/SVGFontFaceUriElement": {
-    "modified": "2020-10-15T21:10:06.547Z",
-    "contributors": ["fscholz", "Sebastianz", "kscarfone", "Sheppy", "Jeremie"]
-  },
   "Web/API/SVGForeignObjectElement": {
     "modified": "2020-10-15T21:10:09.694Z",
     "contributors": [
@@ -56416,14 +56244,6 @@
     "modified": "2020-10-15T21:51:18.963Z",
     "contributors": ["fscholz", "jpmedley", "Sebastianz"]
   },
-  "Web/API/SVGGlyphElement": {
-    "modified": "2020-10-15T21:10:10.039Z",
-    "contributors": ["fscholz", "Sebastianz", "kscarfone", "Sheppy", "Jeremie"]
-  },
-  "Web/API/SVGGlyphRefElement": {
-    "modified": "2020-10-15T21:53:39.561Z",
-    "contributors": ["fscholz", "Sebastianz"]
-  },
   "Web/API/SVGGradientElement": {
     "modified": "2020-10-15T21:09:23.191Z",
     "contributors": [
@@ -56455,10 +56275,6 @@
   "Web/API/SVGGraphicsElement/paste_event": {
     "modified": "2020-10-15T22:23:54.359Z",
     "contributors": ["Sebastianz"]
-  },
-  "Web/API/SVGHKernElement": {
-    "modified": "2020-10-15T21:10:07.953Z",
-    "contributors": ["fscholz", "Sebastianz", "kscarfone", "Sheppy", "Jeremie"]
   },
   "Web/API/SVGImageElement": {
     "modified": "2020-10-15T21:09:22.741Z",
@@ -56567,10 +56383,6 @@
   "Web/API/SVGMetadataElement": {
     "modified": "2020-10-15T21:53:39.187Z",
     "contributors": ["sideshowbarker", "fscholz", "Sebastianz"]
-  },
-  "Web/API/SVGMissingGlyphElement": {
-    "modified": "2020-10-15T21:10:07.770Z",
-    "contributors": ["fscholz", "Sebastianz", "kscarfone", "Sheppy", "Jeremie"]
   },
   "Web/API/SVGNumber": {
     "modified": "2020-10-15T21:10:49.852Z",
@@ -56799,10 +56611,6 @@
       "Jeremie"
     ]
   },
-  "Web/API/SVGTRefElement": {
-    "modified": "2020-10-15T21:10:10.455Z",
-    "contributors": ["fscholz", "Sebastianz", "kscarfone", "Sheppy", "Jeremie"]
-  },
   "Web/API/SVGTSpanElement": {
     "modified": "2020-10-15T21:10:08.952Z",
     "contributors": [
@@ -56901,10 +56709,6 @@
       "Sheppy",
       "Jeremie"
     ]
-  },
-  "Web/API/SVGVKernElement": {
-    "modified": "2020-10-15T21:10:07.746Z",
-    "contributors": ["fscholz", "Sebastianz", "kscarfone", "Sheppy", "Jeremie"]
   },
   "Web/API/SVGViewElement": {
     "modified": "2020-10-15T21:11:01.118Z",
@@ -68599,30 +68403,6 @@
   "Web/API/Window/showDirectoryPicker": {
     "modified": "2020-12-12T15:32:04.243Z",
     "contributors": ["Rumyra"]
-  },
-  "Web/API/Window/showModalDialog": {
-    "modified": "2020-10-15T21:10:51.525Z",
-    "contributors": [
-      "mfuji09",
-      "Tigt",
-      "SphinxKnight",
-      "lucian95",
-      "chrisdavidmills",
-      "teoli",
-      "cvrebert",
-      "jpmedley",
-      "fscholz",
-      "dhodder",
-      "jain.arpit.r",
-      "Rugby",
-      "kohei.yoshino",
-      "iamanupmenon",
-      "ethertank",
-      "Sheppy",
-      "Neil",
-      "George3",
-      "Mgjbot"
-    ]
   },
   "Web/API/Window/showOpenFilePicker": {
     "modified": "2020-12-12T15:22:58.168Z",
@@ -90931,6 +90711,28 @@
       "DBaron"
     ]
   },
+  "Web/HTML/Guides/Cheatsheet": {
+    "modified": "2020-07-16T22:22:43.887Z",
+    "contributors": [
+      "Yel-Martinez-Consultor-Seo",
+      "sideshowbarker",
+      "verde79",
+      "sksankarraj",
+      "Quantzilla",
+      "Johanancuriel",
+      "SethClydesdale",
+      "arkanciscan",
+      "khalid32",
+      "jswisher",
+      "fachrulrazy",
+      "Andrew_Pfeiffer",
+      "SphinxKnight",
+      "dvincent",
+      "hbloomer",
+      "chadsansing",
+      "Jeremie"
+    ]
+  },
   "Web/HTML/Guides/Content_categories": {
     "modified": "2020-10-18T10:42:38.994Z",
     "contributors": [
@@ -91093,6 +90895,66 @@
       "Andrew_Pfeiffer"
     ]
   },
+  "Web/HTML/How_to/Add_JavaScript_to_your_web_page": {
+    "modified": "2020-07-16T22:22:39.990Z",
+    "contributors": ["RomainLanz", "Jeremie", "Andrew_Pfeiffer"]
+  },
+  "Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image": {
+    "modified": "2020-07-16T22:22:42.758Z",
+    "contributors": ["ezrinjaz", "hbloomer", "Andrew_Pfeiffer"]
+  },
+  "Web/HTML/How_to/Author_fast-loading_HTML_pages": {
+    "modified": "2020-07-16T22:22:31.788Z",
+    "contributors": [
+      "Sheppy",
+      "estelle",
+      "sideshowbarker",
+      "karimos129",
+      "spencercorwin",
+      "SphinxKnight",
+      "chrisdavidmills",
+      "ziyadElon",
+      "Harinderpreet",
+      "stuartharvie",
+      "RafeyIqbalRahman",
+      "ishan123456789",
+      "abt8601",
+      "xfq",
+      "andygongea",
+      "rfc791",
+      "fscholz",
+      "Jeremie",
+      "kscarfone",
+      "dbs",
+      "gmerencio",
+      "gbrown",
+      "haboqueferus",
+      "brunoais",
+      "teoli",
+      "ethertank",
+      "tolbon",
+      "leo89",
+      "tw2113",
+      "inma_610",
+      "xaky",
+      "Shz",
+      "JaredWBurt",
+      "alicethomas222",
+      "peterson.victor222",
+      "Mgjbot",
+      "Carrie zhxj",
+      "Ptak82",
+      "Satyr-wayfarer",
+      "NickolayBot",
+      "Dria",
+      "Yworfg",
+      "cbiesinger",
+      "Nerf",
+      "Grauw",
+      "CitizenK",
+      "Jens.B"
+    ]
+  },
   "Web/HTML/How_to/CORS_enabled_image": {
     "modified": "2020-11-03T13:26:20.578Z",
     "contributors": [
@@ -91117,6 +90979,53 @@
       "myakura",
       "Sephr",
       "louisremi"
+    ]
+  },
+  "Web/HTML/How_to/Define_terms_with_HTML": {
+    "modified": "2020-07-16T22:22:41.646Z",
+    "contributors": [
+      "AlexK89",
+      "jnegara",
+      "Jeremie",
+      "Andrew_Pfeiffer",
+      "Sheppy",
+      "MohammedAdam",
+      "hbloomer"
+    ]
+  },
+  "Web/HTML/How_to/Use_data_attributes": {
+    "modified": "2020-07-16T22:22:34.241Z",
+    "contributors": [
+      "vnctdj",
+      "LoVo666",
+      "jmstfv",
+      "mfuji09",
+      "kenny-evitt",
+      "Enrico_Polanski",
+      "ryanve",
+      "calebmosher",
+      "chrisdavidmills",
+      "rnacken",
+      "Sheppy",
+      "prusse-martin",
+      "torazaburo",
+      "jacksonrayhamilton",
+      "drj11",
+      "Manojkr",
+      "Speich",
+      "sam_eaton",
+      "bcruddy",
+      "teckno101",
+      "lieuwex",
+      "robinpokorny",
+      "rvighne",
+      "andrew.carpenter",
+      "Jeremie",
+      "magnetikonline",
+      "jswisher",
+      "kscarfone",
+      "teoli",
+      "groovecoder"
     ]
   },
   "Web/HTML/Reference": {
@@ -122255,10 +122164,6 @@
       "sebmozilla"
     ]
   },
-  "Web/SVG/Reference/Attribute/accent-height": {
-    "modified": "2020-10-15T21:08:31.444Z",
-    "contributors": ["Sebastianz", "SphinxKnight", "Jeremie", "lmorchard"]
-  },
   "Web/SVG/Reference/Attribute/accumulate": {
     "modified": "2019-04-20T11:26:46.650Z",
     "contributors": ["Sebastianz", "Jeremie"]
@@ -122280,21 +122185,9 @@
       "Jeremie"
     ]
   },
-  "Web/SVG/Reference/Attribute/alphabetic": {
-    "modified": "2020-10-15T22:17:46.501Z",
-    "contributors": ["Sebastianz"]
-  },
   "Web/SVG/Reference/Attribute/amplitude": {
     "modified": "2019-04-20T17:09:45.401Z",
     "contributors": ["Sebastianz"]
-  },
-  "Web/SVG/Reference/Attribute/arabic-form": {
-    "modified": "2020-10-15T22:20:57.813Z",
-    "contributors": ["Sebastianz"]
-  },
-  "Web/SVG/Reference/Attribute/ascent": {
-    "modified": "2020-10-15T21:08:32.115Z",
-    "contributors": ["Sebastianz", "Jeremie"]
   },
   "Web/SVG/Reference/Attribute/attributeName": {
     "modified": "2019-05-12T18:11:03.779Z",
@@ -122338,10 +122231,6 @@
       "Jeremie"
     ]
   },
-  "Web/SVG/Reference/Attribute/bbox": {
-    "modified": "2020-10-15T22:17:46.809Z",
-    "contributors": ["Sebastianz"]
-  },
   "Web/SVG/Reference/Attribute/begin": {
     "modified": "2020-04-27T02:09:36.601Z",
     "contributors": [
@@ -122365,10 +122254,6 @@
   "Web/SVG/Reference/Attribute/calcMode": {
     "modified": "2019-05-12T18:34:57.256Z",
     "contributors": ["Sebastianz", "Jeremie"]
-  },
-  "Web/SVG/Reference/Attribute/cap-height": {
-    "modified": "2020-10-15T22:18:48.442Z",
-    "contributors": ["Sebastianz"]
   },
   "Web/SVG/Reference/Attribute/class": {
     "modified": "2020-10-15T21:09:24.628Z",
@@ -122521,10 +122406,6 @@
   "Web/SVG/Reference/Attribute/data-*": {
     "modified": "2020-10-15T21:50:24.662Z",
     "contributors": ["fscholz", "Tigt", "hasalex", "Sheppy"]
-  },
-  "Web/SVG/Reference/Attribute/descent": {
-    "modified": "2020-10-15T22:18:45.731Z",
-    "contributors": ["Sebastianz"]
   },
   "Web/SVG/Reference/Attribute/diffuseConstant": {
     "modified": "2020-10-15T21:20:13.552Z",
@@ -122736,18 +122617,6 @@
     "modified": "2020-10-15T21:33:03.760Z",
     "contributors": ["Sebastianz", "jhpratt", "kscarfone", "neotam"]
   },
-  "Web/SVG/Reference/Attribute/g1": {
-    "modified": "2020-10-15T22:21:13.671Z",
-    "contributors": ["Sebastianz"]
-  },
-  "Web/SVG/Reference/Attribute/g2": {
-    "modified": "2020-10-15T22:21:11.999Z",
-    "contributors": ["Sebastianz"]
-  },
-  "Web/SVG/Reference/Attribute/glyph-name": {
-    "modified": "2020-10-15T22:20:57.826Z",
-    "contributors": ["Sebastianz"]
-  },
   "Web/SVG/Reference/Attribute/glyph-orientation-horizontal": {
     "modified": "2020-10-15T22:21:17.738Z",
     "contributors": ["Sebastianz"]
@@ -122764,10 +122633,6 @@
     "modified": "2019-07-05T17:32:46.527Z",
     "contributors": ["Sebastianz", "Jeremie"]
   },
-  "Web/SVG/Reference/Attribute/hanging": {
-    "modified": "2020-10-15T22:21:23.200Z",
-    "contributors": ["Sebastianz"]
-  },
   "Web/SVG/Reference/Attribute/height": {
     "modified": "2020-06-04T09:13:03.919Z",
     "contributors": [
@@ -122780,18 +122645,6 @@
       "Delapouite"
     ]
   },
-  "Web/SVG/Reference/Attribute/horiz-adv-x": {
-    "modified": "2020-10-15T22:21:40.757Z",
-    "contributors": ["Sebastianz"]
-  },
-  "Web/SVG/Reference/Attribute/horiz-origin-x": {
-    "modified": "2020-10-15T22:21:39.620Z",
-    "contributors": ["Sebastianz"]
-  },
-  "Web/SVG/Reference/Attribute/horiz-origin-y": {
-    "modified": "2020-10-15T22:21:38.891Z",
-    "contributors": ["Sebastianz"]
-  },
   "Web/SVG/Reference/Attribute/href": {
     "modified": "2020-10-15T21:49:17.049Z",
     "contributors": ["estelle", "Sebastianz", "fscholz", "Longsonr"]
@@ -122799,10 +122652,6 @@
   "Web/SVG/Reference/Attribute/id": {
     "modified": "2020-10-15T22:17:46.125Z",
     "contributors": ["LMLB", "Sebastianz"]
-  },
-  "Web/SVG/Reference/Attribute/ideographic": {
-    "modified": "2020-10-15T22:21:50.983Z",
-    "contributors": ["Sebastianz"]
   },
   "Web/SVG/Reference/Attribute/image-rendering": {
     "modified": "2020-10-15T21:02:23.777Z",
@@ -122827,10 +122676,6 @@
   },
   "Web/SVG/Reference/Attribute/intercept": {
     "modified": "2019-06-29T19:05:07.875Z",
-    "contributors": ["Sebastianz"]
-  },
-  "Web/SVG/Reference/Attribute/k": {
-    "modified": "2020-10-15T22:21:17.478Z",
     "contributors": ["Sebastianz"]
   },
   "Web/SVG/Reference/Attribute/k1": {
@@ -122971,10 +122816,6 @@
       "Sheppy"
     ]
   },
-  "Web/SVG/Reference/Attribute/mathematical": {
-    "modified": "2020-10-15T22:21:20.913Z",
-    "contributors": ["Sebastianz"]
-  },
   "Web/SVG/Reference/Attribute/max": {
     "modified": "2020-10-15T21:13:04.122Z",
     "contributors": ["Sebastianz", "Jeremie"]
@@ -122994,10 +122835,6 @@
   "Web/SVG/Reference/Attribute/mode": {
     "modified": "2020-10-15T21:20:11.850Z",
     "contributors": ["Sebastianz", "Jeremie", "jswisher"]
-  },
-  "Web/SVG/Reference/Attribute/name": {
-    "modified": "2019-07-28T17:38:43.814Z",
-    "contributors": ["Sebastianz"]
   },
   "Web/SVG/Reference/Attribute/numOctaves": {
     "modified": "2020-10-15T21:20:48.485Z",
@@ -123025,10 +122862,6 @@
     "modified": "2020-10-15T22:23:29.247Z",
     "contributors": ["Sebastianz"]
   },
-  "Web/SVG/Reference/Attribute/orientation": {
-    "modified": "2020-10-15T22:21:18.103Z",
-    "contributors": ["Sebastianz"]
-  },
   "Web/SVG/Reference/Attribute/origin": {
     "modified": "2019-09-07T19:58:52.648Z",
     "contributors": ["Sebastianz"]
@@ -123042,14 +122875,6 @@
       "Tigt",
       "Jeremie"
     ]
-  },
-  "Web/SVG/Reference/Attribute/overline-position": {
-    "modified": "2019-03-23T23:07:04.588Z",
-    "contributors": ["kscarfone", "alicebeckett"]
-  },
-  "Web/SVG/Reference/Attribute/overline-thickness": {
-    "modified": "2019-03-23T23:07:16.090Z",
-    "contributors": ["kscarfone", "alicebeckett"]
   },
   "Web/SVG/Reference/Attribute/paint-order": {
     "modified": "2020-10-31T11:08:40.540Z",
@@ -123066,10 +122891,6 @@
       "Jeremie",
       "Heycam"
     ]
-  },
-  "Web/SVG/Reference/Attribute/panose-1": {
-    "modified": "2020-10-15T22:21:41.324Z",
-    "contributors": ["Sebastianz"]
   },
   "Web/SVG/Reference/Attribute/path": {
     "modified": "2019-07-03T17:35:54.651Z",
@@ -123255,14 +123076,6 @@
     "modified": "2020-10-15T21:20:07.672Z",
     "contributors": ["Sebastianz", "Jeremie"]
   },
-  "Web/SVG/Reference/Attribute/stemh": {
-    "modified": "2020-10-15T22:21:39.157Z",
-    "contributors": ["Sebastianz"]
-  },
-  "Web/SVG/Reference/Attribute/stemv": {
-    "modified": "2020-10-15T22:21:37.701Z",
-    "contributors": ["Sebastianz"]
-  },
   "Web/SVG/Reference/Attribute/stitchTiles": {
     "modified": "2020-10-15T21:20:54.449Z",
     "contributors": ["Sebastianz", "kscarfone", "Jeremie"]
@@ -123281,18 +123094,6 @@
   "Web/SVG/Reference/Attribute/stop-opacity": {
     "modified": "2020-10-15T21:09:43.425Z",
     "contributors": ["Sebastianz", "connorshea", "Jeremie", "ratcliffe_mike"]
-  },
-  "Web/SVG/Reference/Attribute/strikethrough-position": {
-    "modified": "2019-03-23T23:07:09.400Z",
-    "contributors": ["kscarfone", "alicebeckett"]
-  },
-  "Web/SVG/Reference/Attribute/strikethrough-thickness": {
-    "modified": "2019-03-23T23:07:04.781Z",
-    "contributors": ["kscarfone", "alicebeckett"]
-  },
-  "Web/SVG/Reference/Attribute/string": {
-    "modified": "2020-10-15T22:21:49.130Z",
-    "contributors": ["Sebastianz"]
   },
   "Web/SVG/Reference/Attribute/stroke": {
     "modified": "2020-10-15T21:13:00.419Z",
@@ -123513,52 +123314,8 @@
     "modified": "2019-04-21T20:43:05.752Z",
     "contributors": ["Sebastianz", "ExE-Boss", "Jeremie", "jswisher"]
   },
-  "Web/SVG/Reference/Attribute/u1": {
-    "modified": "2020-10-15T22:21:14.510Z",
-    "contributors": ["Sebastianz"]
-  },
-  "Web/SVG/Reference/Attribute/u2": {
-    "modified": "2020-10-15T22:21:14.994Z",
-    "contributors": ["Sebastianz"]
-  },
-  "Web/SVG/Reference/Attribute/underline-position": {
-    "modified": "2019-03-23T23:07:15.452Z",
-    "contributors": ["kscarfone", "alicebeckett"]
-  },
-  "Web/SVG/Reference/Attribute/underline-thickness": {
-    "modified": "2019-03-23T23:07:13.677Z",
-    "contributors": ["kscarfone", "alicebeckett"]
-  },
-  "Web/SVG/Reference/Attribute/unicode": {
-    "modified": "2020-10-15T22:21:17.410Z",
-    "contributors": ["Sebastianz"]
-  },
   "Web/SVG/Reference/Attribute/unicode-bidi": {
     "modified": "2020-10-15T22:22:52.773Z",
-    "contributors": ["Sebastianz"]
-  },
-  "Web/SVG/Reference/Attribute/unicode-range": {
-    "modified": "2020-10-15T22:21:22.976Z",
-    "contributors": ["Sebastianz"]
-  },
-  "Web/SVG/Reference/Attribute/units-per-em": {
-    "modified": "2020-10-15T22:21:36.026Z",
-    "contributors": ["Sebastianz"]
-  },
-  "Web/SVG/Reference/Attribute/v-alphabetic": {
-    "modified": "2020-10-15T22:21:20.995Z",
-    "contributors": ["Sebastianz"]
-  },
-  "Web/SVG/Reference/Attribute/v-hanging": {
-    "modified": "2020-10-15T22:21:22.617Z",
-    "contributors": ["Sebastianz"]
-  },
-  "Web/SVG/Reference/Attribute/v-ideographic": {
-    "modified": "2020-10-15T22:21:35.010Z",
-    "contributors": ["Sebastianz"]
-  },
-  "Web/SVG/Reference/Attribute/v-mathematical": {
-    "modified": "2020-10-15T22:21:36.125Z",
     "contributors": ["Sebastianz"]
   },
   "Web/SVG/Reference/Attribute/values": {
@@ -123578,18 +123335,6 @@
   "Web/SVG/Reference/Attribute/version": {
     "modified": "2020-10-15T21:40:14.125Z",
     "contributors": ["Sebastianz", "PushpitaPikuDey", "Tigt"]
-  },
-  "Web/SVG/Reference/Attribute/vert-adv-y": {
-    "modified": "2020-10-15T22:21:41.073Z",
-    "contributors": ["Sebastianz"]
-  },
-  "Web/SVG/Reference/Attribute/vert-origin-x": {
-    "modified": "2020-10-15T22:21:40.880Z",
-    "contributors": ["Sebastianz"]
-  },
-  "Web/SVG/Reference/Attribute/vert-origin-y": {
-    "modified": "2020-10-15T22:21:40.078Z",
-    "contributors": ["Sebastianz"]
   },
   "Web/SVG/Reference/Attribute/viewBox": {
     "modified": "2020-08-19T15:01:12.990Z",
@@ -123634,10 +123379,6 @@
       "Bzbarsky"
     ]
   },
-  "Web/SVG/Reference/Attribute/widths": {
-    "modified": "2020-10-15T22:21:37.858Z",
-    "contributors": ["Sebastianz"]
-  },
   "Web/SVG/Reference/Attribute/word-spacing": {
     "modified": "2020-10-15T21:06:32.843Z",
     "contributors": [
@@ -123669,10 +123410,6 @@
       "essymo",
       "Marinolinderhof"
     ]
-  },
-  "Web/SVG/Reference/Attribute/x-height": {
-    "modified": "2020-10-15T22:21:19.327Z",
-    "contributors": ["Sebastianz"]
   },
   "Web/SVG/Reference/Attribute/x1": {
     "modified": "2019-03-24T00:08:16.559Z",
@@ -123871,18 +123608,6 @@
       "Sebastianz",
       "trevorh",
       "kscarfone",
-      "Manuel_Strehl"
-    ]
-  },
-  "Web/SVG/Reference/Element/cursor": {
-    "modified": "2020-10-15T21:09:15.177Z",
-    "contributors": [
-      "ExE-Boss",
-      "fscholz",
-      "Sebastianz",
-      "kscarfone",
-      "Jeremie",
-      "trevorh",
       "Manuel_Strehl"
     ]
   },
@@ -124271,62 +123996,6 @@
       "Manuel_Strehl"
     ]
   },
-  "Web/SVG/Reference/Element/font": {
-    "modified": "2020-10-15T21:12:03.138Z",
-    "contributors": [
-      "HTMLValidator",
-      "fscholz",
-      "Sebastianz",
-      "iwarui",
-      "kscarfone",
-      "Jeremie",
-      "Manuel_Strehl"
-    ]
-  },
-  "Web/SVG/Reference/Element/font-face": {
-    "modified": "2020-10-15T21:12:06.840Z",
-    "contributors": ["Jeremie", "Sebastianz", "kscarfone", "Manuel_Strehl"]
-  },
-  "Web/SVG/Reference/Element/font-face-format": {
-    "modified": "2020-10-15T21:12:02.053Z",
-    "contributors": [
-      "fscholz",
-      "Sebastianz",
-      "kscarfone",
-      "Jeremie",
-      "Manuel_Strehl"
-    ]
-  },
-  "Web/SVG/Reference/Element/font-face-name": {
-    "modified": "2020-10-15T21:12:06.607Z",
-    "contributors": [
-      "fscholz",
-      "Sebastianz",
-      "kscarfone",
-      "Jeremie",
-      "Manuel_Strehl"
-    ]
-  },
-  "Web/SVG/Reference/Element/font-face-src": {
-    "modified": "2020-10-15T21:12:08.877Z",
-    "contributors": [
-      "fscholz",
-      "Sebastianz",
-      "kscarfone",
-      "Jeremie",
-      "Manuel_Strehl"
-    ]
-  },
-  "Web/SVG/Reference/Element/font-face-uri": {
-    "modified": "2020-10-15T21:12:10.715Z",
-    "contributors": [
-      "fscholz",
-      "Sebastianz",
-      "kscarfone",
-      "Jeremie",
-      "Manuel_Strehl"
-    ]
-  },
   "Web/SVG/Reference/Element/foreignObject": {
     "modified": "2020-10-15T21:09:05.974Z",
     "contributors": [
@@ -124357,39 +124026,6 @@
       "rshetty",
       "Manuel_Strehl",
       "Wjjohnst"
-    ]
-  },
-  "Web/SVG/Reference/Element/glyph": {
-    "modified": "2020-10-15T21:12:02.815Z",
-    "contributors": [
-      "fscholz",
-      "Longsonr",
-      "Sebastianz",
-      "kscarfone",
-      "Jeremie",
-      "jiangr",
-      "Manuel_Strehl"
-    ]
-  },
-  "Web/SVG/Reference/Element/glyphRef": {
-    "modified": "2020-10-15T21:10:58.881Z",
-    "contributors": [
-      "fscholz",
-      "Sebastianz",
-      "Jeremie",
-      "kscarfone",
-      "Manuel_Strehl"
-    ]
-  },
-  "Web/SVG/Reference/Element/hkern": {
-    "modified": "2020-10-15T21:11:23.391Z",
-    "contributors": [
-      "fscholz",
-      "Sebastianz",
-      "kscarfone",
-      "Jeremie",
-      "syssgx",
-      "Manuel_Strehl"
     ]
   },
   "Web/SVG/Reference/Element/image": {
@@ -124484,16 +124120,6 @@
       "a-mt",
       "fscholz",
       "mattwojo",
-      "Sebastianz",
-      "kscarfone",
-      "Jeremie",
-      "Manuel_Strehl"
-    ]
-  },
-  "Web/SVG/Reference/Element/missing-glyph": {
-    "modified": "2020-10-15T21:12:06.314Z",
-    "contributors": [
-      "fscholz",
       "Sebastianz",
       "kscarfone",
       "Jeremie",
@@ -124752,17 +124378,6 @@
       "Manuel_Strehl"
     ]
   },
-  "Web/SVG/Reference/Element/tref": {
-    "modified": "2020-10-15T21:13:00.689Z",
-    "contributors": [
-      "fscholz",
-      "Sebastianz",
-      "KyleDavidE",
-      "kscarfone",
-      "Dholbert",
-      "Jeremie"
-    ]
-  },
   "Web/SVG/Reference/Element/tspan": {
     "modified": "2020-12-06T04:00:31.571Z",
     "contributors": [
@@ -124819,16 +124434,6 @@
       "mattwojo",
       "Sebastianz",
       "s-light",
-      "kscarfone",
-      "Jeremie",
-      "Manuel_Strehl"
-    ]
-  },
-  "Web/SVG/Reference/Element/vkern": {
-    "modified": "2020-10-15T21:11:32.787Z",
-    "contributors": [
-      "fscholz",
-      "Sebastianz",
       "kscarfone",
       "Jeremie",
       "Manuel_Strehl"
@@ -126761,33 +126366,6 @@
       "alecananian",
       "Dria",
       "Nickolay",
-      "CitizenK"
-    ]
-  },
-  "Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/An_Overview": {
-    "modified": "2019-03-23T23:43:18.530Z",
-    "contributors": [
-      "SphinxKnight",
-      "chrisdavidmills",
-      "Fredchat",
-      "jswisher",
-      "trevorh",
-      "Dria",
-      "CitizenK"
-    ]
-  },
-  "Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading": {
-    "modified": "2019-03-23T23:43:15.921Z",
-    "contributors": [
-      "SphinxKnight",
-      "chrisdavidmills",
-      "ethertank",
-      "jswisher",
-      "Fredchat",
-      "Major Small",
-      "Nickolay",
-      "Ptak82",
-      "Dria",
       "CitizenK"
     ]
   },

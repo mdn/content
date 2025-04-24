@@ -2,15 +2,13 @@
 title: Invoker Commands API
 slug: Web/API/Invoker_Commands_API
 page-type: web-api-overview
-status:
-  - experimental
 browser-compat:
   - api.CommandEvent
   - api.HTMLButtonElement.commandForElement
   - api.HTMLButtonElement.command
 ---
 
-{{DefaultAPISidebar("Invoker Commands API")}}{{SeeCompatTable}}
+{{DefaultAPISidebar("Invoker Commands API")}}
 
 The **Invoker Commands API** provides a way to declaratively assign behaviors to buttons, allowing control of interactive elements when the button is enacted (clicked or invoked via a keypress, such as the spacebar or return key).
 
@@ -22,14 +20,14 @@ Historically creating these kinds of controls has required JavaScript event list
 
 ## HTML attributes
 
-- [`commandfor`](/en-US/docs/Web/HTML/Reference/Elements/button#commandfor) {{experimental_inline}}
+- [`commandfor`](/en-US/docs/Web/HTML/Reference/Elements/button#commandfor)
   - : Turns a {{htmlelement("button")}} element into a button, controlling the given interactive element; takes the ID of the element to control as its value.
-- [`command`](/en-US/docs/Web/HTML/Reference/Elements/button#command) {{experimental_inline}}
+- [`command`](/en-US/docs/Web/HTML/Reference/Elements/button#command)
   - : Specifies the action to be performed on an element being controlled by a control `<button>`, specified via the `commandfor` attribute.
 
 ## Interfaces
 
-- {{domxref("CommandEvent")}} {{experimental_inline}}
+- {{domxref("CommandEvent")}}
   - : Represents an event notifying the user that a command has been issued. It is the event object for the {{domxref("HTMLElement/command_event", "command")}} event. The event fires on element referenced by {{domxref("HTMLButtonElement.commandForElement", "commandForElement")}}.
 
 ## Extensions to other interfaces

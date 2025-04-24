@@ -3,9 +3,8 @@ title: "Test your skills: The box model"
 short-title: Box model
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Box_model
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 The aim of this skill test is to assess whether you understand the [CSS box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model).
 

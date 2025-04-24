@@ -3,7 +3,7 @@ title: "RTCInboundRtpStreamStats: sliCount property"
 short-title: sliCount
 slug: Web/API/RTCInboundRtpStreamStats/sliCount
 page-type: web-api-instance-property
-browser-compat: api.RTCInboundRtpStreamStats.sliCount
+browser-compat: api.RTCStatsReport.type_inbound-rtp.sliCount
 ---
 
 {{APIRef("WebRTC")}}

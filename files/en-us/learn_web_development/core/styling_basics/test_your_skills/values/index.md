@@ -3,9 +3,8 @@ title: "Test your skills: Values and units"
 short-title: Values and units
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Values
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 The aim of this skill test is to assess whether you understand different types of [values and units used in CSS properties](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units).
 

@@ -14,6 +14,8 @@ Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-
 
 ### HTML
 
+- The [`importmap`](/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap) value of the [`type`](/en-US/docs/Web/HTML/Reference/Elements/script/type) attribute of the [`<script>`](/en-US/docs/Web/HTML/Reference/Elements/script) element now supports the [`integrity`](/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap#integrity) key. This allows the ES module URLs referenced in the import maps to be matched against their integrity metadata. As a result, these modules are now compatible with [CSP](/en-US/docs/Web/HTTP/Guides/CSP) directives that require Subresource Integrity ([SRI](/en-US/docs/Web/Security/Practical_implementation_guides/SRI)). ([Firefox bug 1945540](https://bugzil.la/1945540)).
+
 #### Removals
 
 ### CSS
@@ -33,6 +35,7 @@ Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-
 
 ### HTTP
 
+- The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Reference/Headers/Clear-Site-Data) header can be used with the [`cache`](/en-US/docs/Web/HTTP/Reference/Headers/Clear-Site-Data#cache) (and `*`) directive to clear the browser network cache. This gives websites more control over data stored for their users, allowing them to, for example, mitigate the risk of privacy leaks by clearing the cache during logout. ([Firefox bug 1942272](https://bugzil.la/1930500)).
 - The HTTP {{httpheader("Origin-Agent-Cluster")}} response header can now be used by a site to hint that the associated document should be placed in an origin-keyed [agent cluster](/en-US/docs/Web/JavaScript/Reference/Execution_model#agent_clusters_and_memory_sharing).
   When in such a cluster, the operating system process and/or other OS resources used by the document are only shared with other documents from the same [origin](/en-US/docs/Glossary/Origin).
   This makes it less likely that a resource-intensive document will degrade the performance of documents from other origins.
@@ -50,6 +53,8 @@ Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-
 - The [Login Status API](/en-US/docs/Web/API/FedCM_API/IDP_integration#update_login_status_using_the_login_status_api) is now supported when using the [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API). It can be used to set and check whether a browser user is logged in to an identity provider.
   This includes support for the {{domxref("NavigatorLogin")}} interface, the {{domxref("navigator.login")}} property, and the {{httpheader("Set-Login")}} HTTP response header.
   ([Firefox bug 1945576](https://bugzil.la/1945576) and [Firefox bug 1945573](https://bugzil.la/1945573)).
+- The [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) now supports bidirectional messaging on an {{domxref("AudioWorklet.port")}} and an {{domxref("AudioWorkletGlobalScope.port")}}.
+  This allows for custom, asynchronous communication between code in the main thread and the global scope of an audio worklet, such as receiving control data or global settings. ([Firefox bug 1951240](https://bugzil.la/1951240))
 
 #### DOM
 
@@ -70,9 +75,18 @@ Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-
 
 #### General
 
+- All remote protocols now enable the preferences required to properly pipe logs to stdout ([Firefox bug 1947740](https://bugzilla.mozilla.org/show_bug.cgi?id=1947740)).
+- A new Firefox argument, `--remote-enable-system-access`, was added to enable sensitive features, such as interacting with Browsing Contexts in the parent process (e.g., Browser UI) or using privileged APIs in content processes. This will be used for WebDriver BiDi features in the next releases, and can already be used with Marionette (see the Marionette section below) ([Firefox bug 1944565](https://bugzilla.mozilla.org/show_bug.cgi?id=1944565)).
+
 #### WebDriver BiDi
 
+- The `webExtension.install` command now installs web extensions temporarily by default, allowing it to be used with unsigned extensions - either as an XPI file or as an unpacked folder. A new Firefox-specific parameter, `moz:permanent`, has been added to force installation as a regular extension instead ([Firefox bug 1947678](https://bugzilla.mozilla.org/show_bug.cgi?id=1947678)).
+- The `browsingContext.setViewport` command now supports a `userContexts` parameter, which must be an array of user context (Firefox container) ids. When provided, the viewport configuration will be applied to all Browsing Contexts belonging to those user contexts, as well as any future contexts created within them. This parameter cannot be used together with the existing `context` parameter ([Firefox bug 1940952](https://bugzilla.mozilla.org/show_bug.cgi?id=1940952)).
+- The `browsingContext.Info` type now includes a `clientWindow` property corresponding to the ID of the window owning the Browsing Context. It is typically returned by `browsingContext.getTree` or included in the payload of events such as `browsingContext.contextCreated` ([Firefox bug 1920952](https://bugzilla.mozilla.org/show_bug.cgi?id=1920952)).
+
 #### Marionette
+
+- Switching to the `chrome` (parent process) context with Marionette now requires using the `--remote-enable-system-access` command-line flag when starting Firefox ([Firefox bug 1710425](https://bugzilla.mozilla.org/show_bug.cgi?id=1710425)).
 
 ## Changes for add-on developers
 
@@ -81,6 +95,11 @@ Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-
 - The `contextualIdentities` permission is now not recognized on Firefox for Android. Previously, it enabled a broken version of the "containers" feature. ([Firefox bug 1659500](https://bugzil.la/1659500))
 - The new Manifest V3 version of the {{WebExtAPIRef("userScripts")}} API is now available on Firefox for Android. ([Firefox bug 1949955](https://bugzil.la/1949955))
 - The {{WebExtAPIRef("alarms.create")}} API now returns a Promise instead of undefined. ([Firefox bug 1869171](https://bugzil.la/1869171))
+- Support added to enable the manipulation of tabs within tab groups, including the addition of:
+  - {{WebExtAPIRef("tabs.group()")}} and {{WebExtAPIRef("tabs.ungroup()")}}. ([Firefox bug 1959714](https://bugzil.la/1959714))
+  - `groupId` to {{WebExtAPIRef("tabs.Tab")}}. ([Firefox bug 1959713](https://bugzil.la/1959713))
+  - `groupId` to {{WebExtAPIRef("tabs.query")}}. ([Firefox bug 1959715](https://bugzil.la/1959715))
+  - `groupId` to {{WebExtAPIRef("tabs.onUpdated")}}. ([Firefox bug 1959716](https://bugzil.la/1959716)
 
 ### Removals
 
@@ -88,14 +107,39 @@ Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-
 
 ## Experimental web features
 
-These features are newly shipped in Firefox 138 but are disabled by default.
-To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
+These features are newly shipped in Firefox 138 and are considered experimental.
+They may be disabled by default or enabled by default but available only in the Nightly build.
+For features disabled by default, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 
+- **UA styles for `<h1>` nested into sectioning elements:** `layout.css.h1-in-section-ua-styles.enabled`.
+
+  The `<h1>` heading doesn't decrease in font size now when nested within [sectioning elements](/en-US/docs/Web/HTML/Guides/Content_categories#sectioning_content) `<article>`, `<aside>`, `<nav>`, and `<section>`. The UA styles for `<h1>` nested within sectioning elements are no longer relevant since the outline algorithm [has been removed](https://github.com/whatwg/html/pull/7829) from the HTML specification. ([Firefox bug 1883896](https://bugzil.la/1883896)).
+
+  As part of a staged rollout of this removal 5% of users of Firefox 138 and 50% of users of Firefox Beta 138 will have the value of `layout.css.h1-in-section-ua-styles.enabled` set to `false` ([Intent to unship: UA styles for h1 in article, aside, nav, section](https://groups.google.com/a/mozilla.org/g/dev-platform/c/CzG_pVa7pws/m/Ab3Bwsg2BQAJ)).
+
+  > [!NOTE]
+  > The preference for this feature works in reverse: it's set to `false` in the Nightly build, which removes the UA styling for headings nested in sectioning elements. It's set to `true` in all other channels, which retains the existing UA styling for the nested headings.
+
 - **::details-content CSS pseudo-element:** `layout.css.details-content.enabled`.
+
   The CSS {{cssxref("::details-content")}} pseudo-element enables you to style the content of the {{htmlElement("details")}} element ([Firefox bug 1901037](https://bugzil.la/1901037)).
-- **`MutationEvent` on path to removal**: {{domxref("MutationEvent")}} and its associated events (`DOMSubtreeModified`, `DOMNodeInserted`, `DOMNodeRemoved`, `DOMCharacterDataModified`,`DOMAttrModified`) are now disabled on Firefox Nightly by default. ([Firefox bug 1951772](https://bugzil.la/1951772)).
-- **`Notification.actions`:** (Nightly release): The {{domxref("Notification.actions")}} property can get the actions associated with a `Notification`, as set using {{domxref("ServiceWorkerRegistration.showNotification()")}}. ([Firefox bug 1225110](https://bugzil.la/1225110)).
+
+- **`MutationEvent` on path to removal**: `dom.mutation_events.enabled`
+
+  {{domxref("MutationEvent")}} and its associated events (`DOMSubtreeModified`, `DOMNodeInserted`, `DOMNodeRemoved`, `DOMCharacterDataModified`,`DOMAttrModified`) are now disabled on Firefox Nightly by default. ([Firefox bug 1951772](https://bugzil.la/1951772)).
+
+- **`Notification.actions`** (Nightly): `dom.webnotifications.actions.enabled`
+
+  The {{domxref("Notification.actions")}} property can get the actions associated with a `Notification`, as set using {{domxref("ServiceWorkerRegistration.showNotification()")}}. ([Firefox bug 1225110](https://bugzil.la/1225110)).
+
+- **`PerformanceEventTiming.interactionId`**: `dom.performance.event_timing.enable_interactionid`
+
+  {{domxref("PerformanceEventTiming.interactionId")}} can be used to measure latency timing for events triggered by a particular user interaction. ([Firefox bug 1934683](https://bugzil.la/1934683)).
+
+- **Import attribute for JSON modules** (Nightly): `javascript.options.experimental.import_attributes`
+
+  The [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declaration now supports importing JSON modules using the [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) attribute.
 
 ## Older versions
 

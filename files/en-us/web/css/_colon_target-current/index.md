@@ -2,10 +2,12 @@
 title: :target-current
 slug: Web/CSS/:target-current
 page-type: css-pseudo-class
+status:
+  - experimental
 browser-compat: css.selectors.target-current
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`:target-current`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selects the **active** scroll marker — the {{cssxref("::scroll-marker")}} pseudo-element of a {{cssxref("scroll-marker-group")}} that is currently scrolled to. This [selector](/en-US/docs/Web/CSS/CSS_selectors) can be used to style the active navigation position within a [scroll marker group](/en-US/docs/Web/CSS/::scroll-marker-group#description).
 

@@ -3,9 +3,8 @@ title: "Test your skills: Overflow"
 short-title: Overflow
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Overflow
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 The aim of this skill test is to assess whether you understand [overflow in CSS and how to manage it](/en-US/docs/Learn_web_development/Core/Styling_basics/Overflow).
 

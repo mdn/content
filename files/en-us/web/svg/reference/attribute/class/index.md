@@ -104,17 +104,13 @@ The following elements can use the `class` attribute:
 - {{ SVGElement("feTile") }}
 - {{ SVGElement("feTurbulence") }}
 - {{ SVGElement("filter") }}
-- {{ SVGElement("font") }}
 - {{ SVGElement("foreignObject") }}
 - {{ SVGElement("g") }}
-- {{ SVGElement("glyph") }}
-- {{ SVGElement("glyphRef") }}
 - {{ SVGElement("image") }}
 - {{ SVGElement("line") }}
 - {{ SVGElement("linearGradient") }}
 - {{ SVGElement("marker") }}
 - {{ SVGElement("mask") }}
-- {{ SVGElement("missing-glyph") }}
 - {{ SVGElement("path") }}
 - {{ SVGElement("pattern") }}
 - {{ SVGElement("polygon") }}
@@ -128,7 +124,6 @@ The following elements can use the `class` attribute:
 - {{ SVGElement("text") }}
 - {{ SVGElement("textPath") }}
 - {{ SVGElement("title") }}
-- {{ SVGElement("tref") }}
 - {{ SVGElement("tspan") }}
 - {{ SVGElement("use") }}
 

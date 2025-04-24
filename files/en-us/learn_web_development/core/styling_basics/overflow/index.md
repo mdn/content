@@ -3,9 +3,8 @@ title: Overflowing content
 short-title: Overflow
 slug: Learn_web_development/Core/Styling_basics/Overflow
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics")}}
 
