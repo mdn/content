@@ -22,7 +22,7 @@ abbr {
 @media (hover: hover) {
   abbr:hover {
     color: #001ca8; /* dark blue */
-    transition-duration: 1s;
+    transition-duration: 0.5s;
   }
 }
 
