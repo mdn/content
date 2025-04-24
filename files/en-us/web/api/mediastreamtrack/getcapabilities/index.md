@@ -58,7 +58,7 @@ A `MediaTrackCapabilities` object which specifies the accepted value or range of
 - `height` (video track only)
   - : A numeric value or range object (with pixel dimensions) representing the video track's height.
 - `width` (video track only)
-  - : A numeric value or range object (with pixel dimensions) representing the video track’s width in pixels.
+  - : A numeric value or range object (with pixel dimensions) representing the video track's width in pixels.
 - `resizeMode` (video track only)
   - : A string or an array of strings that indicates how the user agent may derive the desired resolution (for example, modes like "none" or "crop-and-scale").
 
