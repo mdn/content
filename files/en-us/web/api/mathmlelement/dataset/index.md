@@ -56,4 +56,4 @@ console.log(el.dataset.equation); // "euler"
 
 - {{domxref("HTMLElement.dataset")}}
 - [`data-*`](/en-US/docs/Web/MathML/Reference/Global_attributes/data-*)
-- [Using data attributes](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)
+- [Using data attributes](/en-US/docs/Web/HTML/How_to/Use_data_attributes)

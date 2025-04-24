@@ -16,4 +16,4 @@ This section provides solutions to common front-end problems and answers to comm
 
 ## See also
 
-- [HTML Cheatsheet](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Cheatsheet)
+- [HTML Cheatsheet](/en-US/docs/Web/HTML/Guides/Cheatsheet)
