@@ -22,25 +22,20 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
 - `closedby`
 
-  - : Specifies the types of user actions that can be used to close the `<dialog>` element. Possible values are:
+  - : Specifies the types of user actions that can be used to close the `<dialog>` element. This attribute distinguishes three methods by which a dialog might be closed:
+
+    - A _light dismiss user action_, in which the `<dialog>` is closed when the user clicks or taps outside it. This is equivalent to the ["light dismiss" behavior of "auto" state popovers](/en-US/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss).
+    - A _platform-specific user action_, such as pressing the <kbd>Esc</kbd> key on desktop platforms, or a "back" or "dismiss" gesture on mobile platforms.
+    - A developer-specified mechanism such as a {{htmlelement("button")}} with a [`click`](/en-US/docs/Web/API/Element/click_event) handler that invokes {{domxref("HTMLDialogElement.close()")}} or a {{htmlelement("form")}} submission
+
+    Possible values are:
 
     - `any`
-
-      - : The `<dialog>` element can be closed by:
-
-        - Clicking or tapping outside the `<dialog>`.
-        - Relevant platform-specific user actions such as pressing the <kbd>Esc</kbd> key on desktop platforms, or a "back" or "dismiss" gesture on mobile platforms.
-        - Developer-specified mechanisms such as a {{htmlelement("button")}} with a [`click`](/en-US/docs/Web/API/Element/click_event) handler that invokes {{domxref("HTMLDialogElement.close()")}} or a {{htmlelement("form")}} submission.
-
-        This is equivalent to the ["light dismiss" behavior of "auto" state popovers](/en-US/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss).
-
+      - : The dialog can be dismissed using any of the three methods.
     - `closerequest`
-
-      - : The `<dialog>` element can be closed via relevant platform-specific user actions or developer-specified mechanisms.
-
+      - : The dialog can be dismissed with a platform-specific user action or a developer-specified mechanism.
     - `none`
-
-      - : The `<dialog>` element can only be closed via developer-specified mechanisms.
+      - : The dialog can only be dismissed with a developer-specified mechanism.
 
     If the `<dialog>` element does not have a valid `closedby` value specified, then
 
