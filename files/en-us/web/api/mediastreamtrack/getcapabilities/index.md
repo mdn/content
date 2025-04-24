@@ -29,37 +29,43 @@ None.
 
 A `MediaTrackCapabilities` object which specifies the accepted value or range of values supported for each of the user agent's constrainable properties. Note that not every property appears on every track, the available members depend on whether the track is audio or video. This can contain the following members:
 
-- `deviceId` (audio and video tracks)
+For both audio and video tracks:
+
+- `deviceId`
   - : A string that identifies the capture device.
-- `groupId` (audio and video tracks)
+- `groupId`
   - : A string that groups related devices.
-- `autoGainControl` (audio track only)
+
+For audio tracks only:
+
+- `autoGainControl`
   - : A boolean or an array of booleans. If the device supports script-controlled toggling, you may see both `true` and `false`.
-- `channelCount` (audio track only)
-  - : A range object describing the supported number of channels. For example:
-    `{ min: 1, max: 2 }`
-- `echoCancellation` (audio track only)
+- `channelCount`
+  - : A range object describing the supported number of channels. For example: `{ min: 1, max: 2 }`
+- `echoCancellation`
   - : A boolean or an array of booleans indicating if echo cancellation is supported.
 - `latency` (audio track only)
-  - : Either a fixed numeric value or a range object (with `{ min, max [, step] }`) representing the latency in seconds. This value could be an integer or, in some cases, a floating-point number depending on measurement precision
-- `noiseSuppression` (audio track only)
-  - : A boolean or an array indicating whether noise suppression is available.
-    If the feature can be controlled by a script the source will report both `true` and `false` as possible values.
-- `sampleRate` (audio track only)
+  - : Either a fixed numeric value or a range object (with `min`, `max`, and optionally `step`) representing the latency in seconds. This value could be an integer or, in some cases, a floating-point number depending on measurement precision
+- `noiseSuppression`
+  - : A boolean or an array indicating whether noise suppression is available. If the feature can be controlled by a script the source will report both `true` and `false` as possible values.
+- `sampleRate`
   - : A range object indicating the supported audio sample rates (for example: `{ min: 22050, max: 48000 }`).
-- `sampleSize` (audio track only)
+- `sampleSize`
   - : A range object describing the supported audio sample sizes in bits.
-- `aspectRatio` (video track only)
+
+For video tracks only:
+
+- `aspectRatio`
   - : Either a single number or a range object that represents the ratio (width divided by height) the video device can output.
-- `facingMode` (video track only)
+- `facingMode`
   - : A string or an array of strings (such as "user", "environment", or even "left"/"right") which indicate the camera orientation. On some devices, more than one facing mode may be reported.
-- `frameRate` (video track only)
+- `frameRate`
   - : A number (if fixed) or a range object giving the supported frames per second.
-- `height` (video track only)
+- `height`
   - : A numeric value or range object (with pixel dimensions) representing the video track's height.
-- `width` (video track only)
+- `width`
   - : A numeric value or range object (with pixel dimensions) representing the video track's width in pixels.
-- `resizeMode` (video track only)
+- `resizeMode`
   - : A string or an array of strings that indicates how the user agent may derive the desired resolution (for example, modes like "none" or "crop-and-scale").
 
 ## Examples
