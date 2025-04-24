@@ -193,6 +193,10 @@ sidebar:
       - /Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript
       - /Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice
       - /Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features
+      - type: listSubPages
+        path: /Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills
+        link: /Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills
+        details: closed
   - link: /Learn_web_development/Extensions/Client-side_APIs
     title: Client-side_web_APIs
     details: closed
@@ -226,6 +230,10 @@ sidebar:
       - /Learn_web_development/Extensions/Forms/UI_pseudo-classes
       - /Learn_web_development/Extensions/Forms/Form_validation
       - /Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data
+      - type: listSubPages
+        path: /Learn_web_development/Extensions/Forms/Test_your_skills
+        link: /Learn_web_development/Extensions/Forms/Test_your_skills
+        details: closed
   - link: /Learn_web_development/Extensions/Client-side_tools
     title: Understanding_client-side_tools
     details: closed

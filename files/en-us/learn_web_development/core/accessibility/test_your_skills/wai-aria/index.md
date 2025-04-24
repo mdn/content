@@ -1,6 +1,7 @@
 ---
 title: "Test your skills: WAI-ARIA"
-slug: Learn_web_development/Core/Accessibility/WAI-ARIA_basics/Test_your_skills:_WAI-ARIA
+short-title: WAI-ARIA
+slug: Learn_web_development/Core/Accessibility/Test_your_skills/WAI-ARIA
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
