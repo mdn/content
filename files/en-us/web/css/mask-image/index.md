@@ -50,9 +50,9 @@ mask-image: unset;
 
 The `mask-image` property provides a mask that hides part of the element to which it is applied. The value is a comma-separated list of mask references. Each mask reference is an `<image>`, a `<mask-source>`, or the keyword `none`.
 
-The `<image>` can be any type of image, including generated images such as CSS [gradients](/en-US/docs/Web/CSS/gradient).
+An `<image>` can be any type of image, including generated images such as [CSS gradients](/en-US/docs/Web/CSS/gradient).
 
-The `none` keyword can be included at any point in a list of value. If there is only one value, and that value is `none`, no masking effect will be apparent. In a list of values, a `none` value may have no visual effect, but it means any other `mask-*` values in the same list-position will apply to a transparent black mask layer and have no visual effect.
+If only one value is specified in the `mask-image` property value, and that value is `none`, no masking effect will be apparent. If multiple values are specified, a `none` value included in the list may have no direct effect, however, other `mask-*` values in the same list position will apply to a transparent black mask layer and have no visual effect.
 
 Only image sources served over HTTP and HTTPS protocols are accepted as `<image>` values due to the [CORS](/en-US/docs/Glossary/CORS) policy. Images served locally, including relative or absolute `file://` protocols, are not accepted, and will render as transparent black. To test URL image sources locally, [set up a local server](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection#localhost).
 
@@ -64,11 +64,13 @@ A mask will be counted as a transparent black image layer, not revealing anythin
 - The mask image doesn't exist.
 - The mask value doesn't point to a mask image.
 
-The default value of the {{cssxref("mask-mode")}} property is `match-source`. This means the mode is defined by the mode of the mask image itself. The mode is generally `alpha` except if the mask source is an SVG {{svgelement("mask")}} element, in which case the mode is `luminance` unless the mode is changed to `alpha` via the CSS {{cssxref("mask-type")}} property or SVG {{svgattribute("mask-type")}} attribute. The `mask-mode` is relevant, because it determines whether the masking effect depends on the image source's alpha channel values alone or a combination of those and the mask's luminance, or lightness / darkness of the colors that make up the `mask-image`:
+The default value of the {{cssxref("mask-mode")}} property is `match-source`, which means the mode is defined by the mode of the mask image itself. The mask image's mode is generally `alpha` except when the mask source is an SVG {{svgelement("mask")}} element, in which case the mode is `luminance` unless the mode is changed to `alpha` via the CSS {{cssxref("mask-type")}} property or SVG {{svgattribute("mask-type")}} attribute.
+
+The `mask-mode` value is significant, because it determines whether the masking effect depends on the image source's alpha channel values alone or a combination of those and the mask's luminance (the lightness/darkness of the colors that make up the `mask-image`):
 
 - In all cases, the alpha transparency of the mask matters; element areas masked by opaque sections of the `mask-image` will be rendered, while areas masked by transparent image sections are hidden.
 - When the `mask-mode` value is set or resolves to `alpha`, only the alpha-channel of the colors matter; the hue, lightness, etc., don't matter.
-- If the {{cssxref("mask-mode")}} property is set or defaults to `luminance`, the masking value is the luminance value of each color multiplied by its alpha value. The `mask-mode` will resolve to `luminance` if explicitly set to that value, or if the property is set to `match-source` and the `mask-image` source is an SVG {{svgelement("mask")}} that does not have its {{cssxref("mask-type")}} property or{{svgattribute("mask-type")}} attribute explicitly set to `alpha`.
+- If the `mask-mode` property is set or defaults to `luminance`, the masking value is the luminance value of each color multiplied by its alpha value. The `mask-mode` will resolve to `luminance` if explicitly set to that value, or if the property is set to `match-source` and the `mask-image` source is an SVG {{svgelement("mask")}} that does not have its {{cssxref("mask-type")}} property or {{svgattribute("mask-type")}} attribute explicitly set to `alpha`.
 
 ## Formal definition
 
@@ -268,7 +270,7 @@ The luminance values of `black`, `white`, and `green` are `0`, `100`, and [`46.2
 
 {{EmbedLiveSample("SVG elements as masks", "100%", 540)}}
 
-Toggle the checkbox to toggle the value of the `mask-mode` between `alpha` (checked) and the initial value, which resolves to `luminance` (unchecked). When `alpha` is used, the color of the mask doesn't matter; all that matters is the alpha-transparency. When the value resolves to `luminance`, `white` areas are visible, `black` areas are not, and `green` areas are visible but at an opacity that matches the luminance of the color `green`. When set to `alpha`, `white`, `black`, and `green` are equivalent as they are all fully opaque color values.
+Toggle the checkbox to toggle the value of the `mask-mode` between `alpha` (checked) and the initial value, which resolves to `luminance` (unchecked). When `alpha` is used, the color of the mask doesn't matter; all that matters is the alpha-transparency. When the value resolves to `luminance`, `white` areas are visible, `black` areas are not, and `green` areas are visible but at an opacity that matches the luminance of the color `green`. When `mask-mode` is set to `alpha`, the colors are equivalent as they are all fully opaque.
 
 ## Specifications
 
