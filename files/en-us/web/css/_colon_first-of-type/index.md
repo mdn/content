@@ -7,7 +7,7 @@ browser-compat: css.selectors.first-of-type
 
 {{CSSRef}}
 
-The **`:first-of-type`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents the first element of its type among a group of sibling elements.
+The **`:first-of-type`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents the first element of its type (tag name) among a group of sibling elements.
 
 {{InteractiveExample("CSS Demo: :first-of-type", "tabbed-shorter")}}
 
