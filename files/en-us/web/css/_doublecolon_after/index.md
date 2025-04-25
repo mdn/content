@@ -135,7 +135,7 @@ We can style text or images in the {{CSSxRef("content")}} property almost any wa
 
 ### Tooltips
 
-This example uses `::after`, in conjunction with the [`attr()`](/en-US/docs/Web/CSS/attr) CSS expression and a `data-descr` [custom data attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*), to create tooltips. No JavaScript is required!
+This example uses `::after`, in conjunction with the [`attr()`](/en-US/docs/Web/CSS/attr) CSS expression and a `data-description` [custom data attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*), to create tooltips. No JavaScript is required!
 
 We can also support keyboard users with this technique, by adding a `tabindex` of `0` to make each `span` keyboard focusable, and using a CSS `:focus` selector. This shows how flexible `::before` and `::after` can be, though for the most accessible experience a semantic disclosure widget created in some other way (such as with [details and summary](/en-US/docs/Web/HTML/Reference/Elements/details) elements) is likely to be more appropriate.
 
@@ -144,11 +144,11 @@ We can also support keyboard users with this technique, by adding a `tabindex` o
 ```html
 <p>
   Here we have some
-  <span tabindex="0" data-descr="collection of words and punctuation">
+  <span tabindex="0" data-description="collection of words and punctuation">
     text
   </span>
   with a few
-  <span tabindex="0" data-descr="small popups that appear when hovering">
+  <span tabindex="0" data-description="small popups that appear when hovering">
     tooltips</span
   >.
 </p>
@@ -157,16 +157,16 @@ We can also support keyboard users with this technique, by adding a `tabindex` o
 #### CSS
 
 ```css
-span[data-descr] {
+span[data-description] {
   position: relative;
   text-decoration: underline;
   color: #00f;
   cursor: help;
 }
 
-span[data-descr]:hover::after,
-span[data-descr]:focus::after {
-  content: attr(data-descr);
+span[data-description]:hover::after,
+span[data-description]:focus::after {
+  content: attr(data-description);
   position: absolute;
   left: 0;
   top: 24px;

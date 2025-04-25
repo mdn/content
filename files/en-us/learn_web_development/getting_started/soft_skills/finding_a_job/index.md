@@ -144,7 +144,7 @@ Keep your portfolio as highlights of your best work. You want it to be easy to a
 
 In terms of how to actually publish your portfolio:
 
-- You should [publish your work](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork#publish_your_work) in publicly-viewable places, such as a GitHub organization for source code, and a blogging platform such as medium (or your own website) for blogposts.
+- You should [publish your work](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork#publish_your_work) in publicly-viewable places, such as a GitHub organization for source code, and a blogging platform such as medium (or your own website) for blog posts.
 - For source code that is demos or snippets rather than full websites, publish live versions of the code, so that people can easily check out the live result. See [Publishing your website](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website) for tips on how to do this.
 - In terms of the actual portfolio landing page, you could create a GitHub repo and provide your list of links in a `README.md` file, but this doesn't look particularly great. Much better would be to create a dedicated website to contain your portfolio, with a dedicated [domain name](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name). If you are not great at design work, ask a colleague or friend for some help, perhaps in exchange for doing some coding work for them.
 
@@ -217,7 +217,7 @@ A key point is that your job search should be a constant process where you do a 
 
 You should follow up with any promising leads you meet, for example on community networks or LinkedIn. Also, keep an inventory of the people you meet and the companies you apply to, along with contact details and descriptions of each. Periodically follow up with companies you'd like to work for to see what jobs they have available. If you get rejected for one job, they might have something else more suitable for you, either now or in the future.
 
-If you haven't had a response from a company after applying for one of their jobs, wait a little while and then followup with their recruiter to see if they have any feedback for you, or any other jobs coming up. Even if a company you want to work for doesn't have any suitable full-time jobs advertised at the moment, contact them any way and see if they are looking for someone with your skillset. It might lead to some useful experience, such as a freelance contract.
+If you haven't had a response from a company after applying for one of their jobs, wait a little while and then followup with their recruiter to see if they have any feedback for you, or any other jobs coming up. Even if a company you want to work for doesn't have any suitable full-time jobs advertised at the moment, contact them any way and see if they are looking for someone with your skill set. It might lead to some useful experience, such as a freelance contract.
 
 Keep looking for more jobs via your chosen job sites or community networks, and chat to people about what is available. New opportunities will come up all the time.
 
