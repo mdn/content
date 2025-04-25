@@ -106,13 +106,13 @@ But not:
 
 Separating two or more components by a _double bar_, `||`, means that all entities are options: **at least one must be present, and they may appear in any order**. Typically this is used to define the different values of a [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties).
 
-{{CSSSyntaxRaw(`example = <'border-width'> || <'border-style'> || <'border-color'>`)}}
+{{CSSSyntaxRaw(`example = <number> || <length> || <color>`)}}
 
 This example matches the following values:
 
-- `1em solid blue`
+- `1em 1 blue`
 - `blue 1em`
-- `solid 1px yellow`
+- `1 1px yellow`
 
 But not:
 
