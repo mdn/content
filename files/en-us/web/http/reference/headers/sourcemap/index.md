@@ -44,7 +44,7 @@ The following response contains an absolute path in the `SourceMap` header.
 
 ```http
 HTTP/1.1 200 OK
-Content-Type: application/javascript
+Content-Type: text/javascript
 SourceMap: /path/to/file.js.map
 
 <optimized-javascript>

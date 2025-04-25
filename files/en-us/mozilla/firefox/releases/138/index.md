@@ -26,6 +26,7 @@ Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-
 
 - The {{jsxref("Error.captureStackTrace()")}} static method is now supported. This installs stack trace information on a provided object as the {{jsxref("Error.stack")}} property. Its main use case is to install a stack trace on a custom error object that does not derive from the {{jsxref("Error")}} interface. ([Firefox bug 1950508](https://bugzil.la/1950508)).
 - The {{jsxref("Error.isError()")}} static method can now be used to check whether or not an object is an instance of an {{jsxref("Error")}} or a {{domxref("DOMException")}}. This is more reliable than using `instanceof` for the same purpose. ([Firefox bug 1952249](https://bugzil.la/1952249)).
+- The [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declaration now supports importing JSON modules using the [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) attribute.
 
 #### Removals
 
@@ -53,6 +54,8 @@ Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-
 - The [Login Status API](/en-US/docs/Web/API/FedCM_API/IDP_integration#update_login_status_using_the_login_status_api) is now supported when using the [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API). It can be used to set and check whether a browser user is logged in to an identity provider.
   This includes support for the {{domxref("NavigatorLogin")}} interface, the {{domxref("navigator.login")}} property, and the {{httpheader("Set-Login")}} HTTP response header.
   ([Firefox bug 1945576](https://bugzil.la/1945576) and [Firefox bug 1945573](https://bugzil.la/1945573)).
+- The [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) now supports bidirectional messaging on an {{domxref("AudioWorklet.port")}} and an {{domxref("AudioWorkletGlobalScope.port")}}.
+  This allows for custom, asynchronous communication between code in the main thread and the global scope of an audio worklet, such as receiving control data or global settings. ([Firefox bug 1951240](https://bugzil.la/1951240))
 
 #### DOM
 
@@ -134,10 +137,6 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **`PerformanceEventTiming.interactionId`**: `dom.performance.event_timing.enable_interactionid`
 
   {{domxref("PerformanceEventTiming.interactionId")}} can be used to measure latency timing for events triggered by a particular user interaction. ([Firefox bug 1934683](https://bugzil.la/1934683)).
-
-- **Import attribute for JSON modules** (Nightly): `javascript.options.experimental.import_attributes`
-
-  The [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declaration now supports importing JSON modules using the [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) attribute.
 
 ## Older versions
 
