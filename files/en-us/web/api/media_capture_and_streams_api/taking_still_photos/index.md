@@ -447,27 +447,27 @@ In order for the video filters to be applied to the photo the takePicture functi
 
 ```js
 function takePicture() {
- const context = canvas.getContext("2d");
- if (width && height) {
-   canvas.width = width;
-   canvas.height = height;
-    
-   // Get the computed CSS filter from the video element.
-   // For example, it might return "grayscale(100%)"
-   const videoStyles = window.getComputedStyle(video);
-   const filterValue = videoStyles.getPropertyValue("filter");
+  const context = canvas.getContext("2d");
+  if (width && height) {
+    canvas.width = width;
+    canvas.height = height;
 
-   // Apply the filter to the canvas drawing context.
-   // If there's no filter (i.e., it returns "none"), default to "none".
-   context.filter = filterValue !== "none" ? filterValue : "none";
+    // Get the computed CSS filter from the video element.
+    // For example, it might return "grayscale(100%)"
+    const videoStyles = window.getComputedStyle(video);
+    const filterValue = videoStyles.getPropertyValue("filter");
 
-   context.drawImage(video, 0, 0, width, height);
+    // Apply the filter to the canvas drawing context.
+    // If there's no filter (i.e., it returns "none"), default to "none".
+    context.filter = filterValue !== "none" ? filterValue : "none";
 
-   const dataUrl = canvas.toDataURL("image/png");
-   photo.setAttribute("src", dataUrl);
- } else {
-   clearPhoto();
- }
+    context.drawImage(video, 0, 0, width, height);
+
+    const dataUrl = canvas.toDataURL("image/png");
+    photo.setAttribute("src", dataUrl);
+  } else {
+    clearPhoto();
+  }
 }
 ```
 
