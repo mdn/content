@@ -682,7 +682,6 @@ function takePicture() {
 
 {{EmbedLiveSample('photo-capture-with-filters', '100%', '30', , , , , 'allow-popups')}}
 
-
 You can play with this effect using, for example, the Firefox developer tools' [style editor](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html); see [Edit CSS filters](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_filters/index.html) for details on how to do so.
 
 ## Using specific devices
