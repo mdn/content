@@ -1562,7 +1562,7 @@
     "Summarizer API": {
       "overview": ["Summarizer API"],
       "guides": ["/docs/Web/API/Summarizer_API/Using"],
-      "interfaces": ["Summarizer"],
+      "interfaces": ["Summarizer", "CreateMonitor"],
       "methods": [],
       "properties": [],
       "events": []

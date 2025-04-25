@@ -43,13 +43,11 @@ Before creating a `Summarizer`, you can check whether your desired configuration
 
 ```js
 const availability = await Summarizer.availability({
-  sharedContext:
-    "A general summary to help a user decide if the text is worth reading",
   type: "tl;dr",
   length: "short",
   format: "markdown",
   expectedInputLanguages: ["en-US"],
-  outputLanguage: "fr",
+  outputLanguage: "en-US",
 });
 ```
 
@@ -271,7 +269,7 @@ async function handleSubmission() {
 }
 ```
 
-The very final step is to call the `updateInputCount()` function at the top level of the script, to ensure that the first `<output>` element containing the input count always displays the correct value on page load.
+The final step is to call the `updateInputCount()` function at the top level of the script, to ensure that the first `<output>` element containing the input count always displays the correct value on page load.
 
 ```js live-sample___summarizer-example
 updateInputCount();
