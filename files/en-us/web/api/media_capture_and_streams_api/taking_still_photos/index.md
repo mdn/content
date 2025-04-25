@@ -260,6 +260,7 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
   box-shadow: 2px 2px 3px black;
   width: 320px;
   height: 240px;
+  filter: grayscale(100%)
 }
 
 #photo {
