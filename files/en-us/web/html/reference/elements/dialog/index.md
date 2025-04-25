@@ -20,6 +20,28 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 > [!WARNING]
 > The `tabindex` attribute must not be used on the `<dialog>` element. See [usage notes](#usage_notes).
 
+- `closedby`
+
+  - : Specifies the types of user actions that can be used to close the `<dialog>` element. This attribute distinguishes three methods by which a dialog might be closed:
+
+    - A _light dismiss user action_, in which the `<dialog>` is closed when the user clicks or taps outside it. This is equivalent to the ["light dismiss" behavior of "auto" state popovers](/en-US/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss).
+    - A _platform-specific user action_, such as pressing the <kbd>Esc</kbd> key on desktop platforms, or a "back" or "dismiss" gesture on mobile platforms.
+    - A developer-specified mechanism such as a {{htmlelement("button")}} with a [`click`](/en-US/docs/Web/API/Element/click_event) handler that invokes {{domxref("HTMLDialogElement.close()")}} or a {{htmlelement("form")}} submission.
+
+    Possible values are:
+
+    - `any`
+      - : The dialog can be dismissed using any of the three methods.
+    - `closerequest`
+      - : The dialog can be dismissed with a platform-specific user action or a developer-specified mechanism.
+    - `none`
+      - : The dialog can only be dismissed with a developer-specified mechanism.
+
+    If the `<dialog>` element does not have a valid `closedby` value specified, then
+
+    - if it was opened using {{domxref("HTMLDialogElement.showModal()", "showModal()")}}, it behaves as if the value was `"closerequest"`
+    - otherwise, it behaves as if the value was `"none"`.
+
 - `open`
 
   - : Indicates that the dialog box is active and is available for interaction. If the `open` attribute is not set, the dialog box will not be visible to the user.
@@ -271,6 +293,116 @@ jsCloseBtn.addEventListener("click", (e) => {
 {{EmbedLiveSample("Closing a dialog with a required form input", "100%", 300)}}
 
 From the output, we see it is impossible to close the dialog using the _Normal close_ button. But the dialog can be closed if we bypass the form validation using the `formnovalidate` attribute on the _Cancel_ button. Programmatically, `dialog.close()` will also close such dialog.
+
+### Comparison of different closedby behaviors
+
+This example demonstrates the difference in behavior between different values of the [`closedby`](#closedby) attribute.
+
+#### HTML
+
+We provide three {{htmlelement("button")}} elements and three `<dialog>` elements. Each button will be programmed to open a different dialog that demonstrates the behavior of one of the three values of the `closedby` attribute — `none`, `closerequest`, and `any`. Note that each `<dialog>` element contains a `<button>` element that will be used to close it.
+
+```html live-sample___closedbyvalues
+<p>Choose a <code>&lt;dialog&gt;</code> type to show:</p>
+<div id="controls">
+  <button id="none-btn"><code>closedby="none"</code></button>
+  <button id="closerequest-btn">
+    <code>closedby="closerequest"</code>
+  </button>
+  <button id="any-btn"><code>closedby="any"</code></button>
+</div>
+
+<dialog closedby="none">
+  <h2><code>closedby="none"</code></h2>
+  <p>
+    Only closable using a specific provided mechanism, which in this case is
+    pressing the "Close" button below.
+  </p>
+  <button class="close">Close</button>
+</dialog>
+
+<dialog closedby="closerequest">
+  <h2><code>closedby="closerequest"</code></h2>
+  <p>Closable using the "Close" button or the Esc key.</p>
+  <button class="close">Close</button>
+</dialog>
+
+<dialog closedby="any">
+  <h2><code>closedby="any"</code></h2>
+  <p>
+    Closable using the "Close" button, the Esc key, or by clicking outside the
+    dialog. "Light dismiss" behavior.
+  </p>
+  <button class="close">Close</button>
+</dialog>
+```
+
+```css hidden live-sample___closedbyvalues
+body {
+  font-family: sans-serif;
+}
+
+#controls {
+  display: flex;
+  justify-content: space-around;
+}
+
+dialog {
+  width: 480px;
+  border-radius: 5px;
+  border-color: rgb(0 0 0 / 0.3);
+}
+
+dialog h2 {
+  margin: 0;
+}
+
+dialog p {
+  line-height: 1.4;
+}
+```
+
+#### JavaScript
+
+Here we assign different variables to reference the main control `<button>` elements, the `<dialog>` elements, and the "Close" `<button>` elements inside the dialogs. First we assign a [`click`](/en-US/docs/Web/API/Element/click_event) event listener to each control button using [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener), the event handler function of which opens the associated `<dialog>` element via [`showModal()`](/en-US/docs/Web/API/HTMLDialogElement/showModal). We then loop through the "Close" `<button>` references, assigning each one a `click` event handler function that closes its `<dialog>` element via [`close()`](/en-US/docs/Web/API/HTMLDialogElement/close).
+
+```js live-sample___closedbyvalues
+const noneBtn = document.getElementById("none-btn");
+const closerequestBtn = document.getElementById("closerequest-btn");
+const anyBtn = document.getElementById("any-btn");
+
+const noneDialog = document.querySelector("[closedby='none']");
+const closerequestDialog = document.querySelector("[closedby='closerequest']");
+const anyDialog = document.querySelector("[closedby='any']");
+
+const closeBtns = document.querySelectorAll(".close");
+
+noneBtn.addEventListener("click", () => {
+  noneDialog.showModal();
+});
+
+closerequestBtn.addEventListener("click", () => {
+  closerequestDialog.showModal();
+});
+
+anyBtn.addEventListener("click", () => {
+  anyDialog.showModal();
+});
+
+closeBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    btn.parentElement.close();
+  });
+});
+```
+
+#### Result
+
+The rendered result is as follows:
+
+{{EmbedLiveSample("closedby-values", "100%", 300)}}
+
+Try clicking each button to open a dialog. The first one can only be closed by clicking its "Close" button. The second one can also be closed via a device-specific user action such as pressing the <kbd>Esc</kbd> key. The third one has full ["light-dismiss" behavior](/en-US/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss), so it can also be closed by clicking or tapping outside the dialog.
 
 ### Animating dialogs
 
