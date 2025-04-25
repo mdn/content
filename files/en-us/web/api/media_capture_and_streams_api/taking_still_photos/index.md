@@ -442,7 +442,245 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
 
 ## Fun with filters
 
-Since we're capturing images from the user's webcam by grabbing frames from a {{HTMLElement("video")}} element, we can very easily apply filters and fun effects to the video. As it turns out, any CSS filters you apply to the element using the {{cssxref("filter")}} property affect the captured photo. These filters can range from the simple (making the image black and white) to the extreme (gaussian blurs and hue rotation).
+Since we're capturing images from the user's webcam by grabbing frames from a {{HTMLElement("video")}} element, we can very easily apply filters and fun effects to the video. While CSS {{cssxref("filter")}}'s applied to the video element affect its display, they do not automatically apply to the captured photo unless handled in the canvas drawing process. These filters can range from the simple (making the image black and white) to the complex (gaussian blurs and hue rotation).
+In order for the video filters to be applied to the photo the takePicture function needs the following changes:
+
+```js
+function takePicture() {
+ const context = canvas.getContext("2d");
+ if (width && height) {
+   canvas.width = width;
+   canvas.height = height;
+    
+   // Get the computed CSS filter from the video element.
+   // For example, it might return "grayscale(100%)"
+   const videoStyles = window.getComputedStyle(video);
+   const filterValue = videoStyles.getPropertyValue("filter");
+
+   // Apply the filter to the canvas drawing context.
+   // If there's no filter (i.e., it returns "none"), default to "none".
+   context.filter = filterValue !== "none" ? filterValue : "none";
+
+   context.drawImage(video, 0, 0, width, height);
+
+   const dataUrl = canvas.toDataURL("image/png");
+   photo.setAttribute("src", dataUrl);
+ } else {
+   clearPhoto();
+ }
+}
+```
+
+```html hidden live-sample___photo-capture-with-filters
+<div class="content-area">
+  <h1>MDN - navigator.mediaDevices.getUserMedia(): Still photo capture demo</h1>
+  <p>
+    This example demonstrates how to set up a media stream using your built-in
+    webcam, fetch an image from that stream, and create a PNG using that image.
+  </p>
+  <div class="camera">
+    <video id="video">Video stream not available.</video>
+    <button id="start-button">Take photo</button>
+  </div>
+  <canvas id="canvas"> </canvas>
+  <div class="output">
+    <img id="photo" alt="The screen capture will appear in this box." />
+  </div>
+  <p>
+    Visit our article
+    <a
+      href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos">
+      Taking still photos with WebRTC
+    </a>
+    to learn more about the technologies used here.
+  </p>
+</div>
+```
+
+```css hidden live-sample___photo-capture-with-filters
+#video {
+  border: 1px solid black;
+  box-shadow: 2px 2px 3px black;
+  width: 320px;
+  height: 240px;
+}
+
+#photo {
+  border: 1px solid black;
+  box-shadow: 2px 2px 3px black;
+  width: 320px;
+  height: 240px;
+}
+
+#canvas {
+  display: none;
+}
+
+.camera {
+  width: 340px;
+  display: inline-block;
+}
+
+.output {
+  width: 340px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+#start-button {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 32px;
+  background-color: rgb(0 150 0 / 50%);
+  border: 1px solid rgb(255 255 255 / 70%);
+  box-shadow: 0px 0px 1px 2px rgb(0 0 0 / 20%);
+  font-size: 14px;
+  font-family: "Lucida Grande", "Arial", sans-serif;
+  color: rgb(255 255 255 / 100%);
+}
+
+.content-area {
+  font:
+    1.2rem "Lucida Grande",
+    "Arial",
+    sans-serif;
+  width: 760px;
+  padding: 2rem;
+}
+```
+
+```js hidden live-sample___photo-capture-with-filters
+(() => {
+  // The width and height of the captured photo. We will set the
+  // width to the value defined here, but the height will be
+  // calculated based on the aspect ratio of the input stream.
+  const width = 320; // We will scale the photo width to this
+  let height = 0; // This will be computed based on the input stream
+
+  // |streaming| indicates whether or not we're currently streaming
+  // video from the camera. Obviously, we start at false.
+  let streaming = false;
+
+  // The various HTML elements we need to configure or control. These
+  // will be set by the startup() function.
+  let video = null;
+  let canvas = null;
+  let photo = null;
+  let startButton = null;
+
+  function showViewLiveResultButton() {
+    if (window.self !== window.top) {
+      // Ensure that if our document is in a frame, we get the user
+      // to first open it in its own tab or window. Otherwise, it
+      // won't be able to request permission for camera access.
+      document.querySelector(".content-area").remove();
+      const button = document.createElement("button");
+      button.textContent = "Open example in new window";
+      document.body.append(button);
+      button.addEventListener("click", () =>
+        window.open(
+          location.href,
+          "MDN",
+          "width=850,height=700,left=150,top=150",
+        ),
+      );
+      return true;
+    }
+    return false;
+  }
+
+  function startup() {
+    if (showViewLiveResultButton()) {
+      return;
+    }
+    video = document.getElementById("video");
+    canvas = document.getElementById("canvas");
+    photo = document.getElementById("photo");
+    startButton = document.getElementById("start-button");
+
+    navigator.mediaDevices
+      .getUserMedia({ video: true, audio: false })
+      .then((stream) => {
+        video.srcObject = stream;
+        video.play();
+      })
+      .catch((err) => {
+        console.error(`An error occurred: ${err}`);
+      });
+
+    video.addEventListener(
+      "canplay",
+      (ev) => {
+        if (!streaming) {
+          height = video.videoHeight / (video.videoWidth / width);
+
+          // Firefox currently has a bug where the height can't be read from
+          // the video, so we will make assumptions if this happens.
+          if (isNaN(height)) {
+            height = width / (4 / 3);
+          }
+
+          video.setAttribute("width", width);
+          video.setAttribute("height", height);
+          canvas.setAttribute("width", width);
+          canvas.setAttribute("height", height);
+          streaming = true;
+        }
+      },
+      false,
+    );
+
+    startButton.addEventListener(
+      "click",
+      (ev) => {
+        takePicture();
+        ev.preventDefault();
+      },
+      false,
+    );
+
+    clearPhoto();
+  }
+
+  // Fill the photo with an indication that none has been captured.
+  function clearPhoto() {
+    const context = canvas.getContext("2d");
+    context.fillStyle = "#AAA";
+    context.fillRect(0, 0, canvas.width, canvas.height);
+
+    const data = canvas.toDataURL("image/png");
+    photo.setAttribute("src", data);
+  }
+
+  // Capture a photo by fetching the current contents of the video
+  // and drawing it into a canvas, then converting that to a PNG
+  // format data URL. By drawing it on an offscreen canvas and then
+  // drawing that to the screen, we can change its size and/or apply
+  // other changes before drawing it.
+  function takePicture() {
+    const context = canvas.getContext("2d");
+    if (width && height) {
+      canvas.width = width;
+      canvas.height = height;
+      context.drawImage(video, 0, 0, width, height);
+
+      const data = canvas.toDataURL("image/png");
+      photo.setAttribute("src", data);
+    } else {
+      clearPhoto();
+    }
+  }
+
+  // Set up our event listener to run the startup process
+  // once loading is complete.
+  window.addEventListener("load", startup, false);
+})();
+```
+
+{{EmbedLiveSample('photo-capture-with-filters', '100%', '30', , , , , 'allow-popups')}}
+
 
 You can play with this effect using, for example, the Firefox developer tools' [style editor](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html); see [Edit CSS filters](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_filters/index.html) for details on how to do so.
 
