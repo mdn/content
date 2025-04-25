@@ -80,11 +80,11 @@ This example contains an error. The parser ignores the error (and the comments),
 
 ```css-nolint example-bad
 p {
-/* Invalid syntax due to  missing semi-colon */
+  /* Invalid syntax due to missing semi-colon */
   border-color: red
   background-color: green;
 
-/* Valid syntax but likely a logic error */
+  /* Valid syntax but likely a logic error */
   border-width: 100vh;
 }
 ```
