@@ -68,7 +68,7 @@ This {{HTMLElement("iframe")}} and worker are blocked and won't load:
 <iframe src="https://not-example.com"></iframe>
 
 <script>
-  const blockedWorker = new Worker("data:application/javascript,…");
+  const blockedWorker = new Worker("data:text/javascript,…");
 </script>
 ```
 
