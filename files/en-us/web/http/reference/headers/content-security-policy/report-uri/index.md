@@ -176,7 +176,9 @@ Content-Security-Policy: default-src https:; report-uri /csp-violation-report-en
 
 `/csp-violation-report-endpoint/` could for example run a PHP script like the following that logs the JSON detailing the violation and, if the violation is the first one added to the log file, sends an email to an administrator:
 
-```js
+```php
+<?php
+
 // Start configure
 $log_file = dirname(__FILE__) . "/csp-violations.log";
 $log_file_size_limit = 1000000; // bytes - once exceeded no further entries are added

@@ -183,7 +183,7 @@ In contrast, if the above page did not listen for the `pageshow` event and handl
         sec +
         ":" +
         mil;
-      document.getElementById("time0field").value = displayTime;
+      document.getElementById("time-field").value = displayTime;
     }
 
     function loadOnlyFirst() {
