@@ -503,7 +503,7 @@ function takePicture() {
   box-shadow: 2px 2px 3px black;
   width: 320px;
   height: 240px;
-  filter: grayscale(100%)
+  filter: grayscale(100%);
 }
 
 #photo {
