@@ -668,6 +668,7 @@ function takePicture() {
 
       const videoStyles = window.getComputedStyle(video);
       const filterValue = videoStyles.getPropertyValue("filter");
+      context.filter = filterValue !== "none" ? filterValue : "none";
       context.drawImage(video, 0, 0, width, height);
 
       const data = canvas.toDataURL("image/png");
