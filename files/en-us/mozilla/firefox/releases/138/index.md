@@ -53,6 +53,8 @@ Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-
 - The [Login Status API](/en-US/docs/Web/API/FedCM_API/IDP_integration#update_login_status_using_the_login_status_api) is now supported when using the [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API). It can be used to set and check whether a browser user is logged in to an identity provider.
   This includes support for the {{domxref("NavigatorLogin")}} interface, the {{domxref("navigator.login")}} property, and the {{httpheader("Set-Login")}} HTTP response header.
   ([Firefox bug 1945576](https://bugzil.la/1945576) and [Firefox bug 1945573](https://bugzil.la/1945573)).
+- The [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) now supports bidirectional messaging on an {{domxref("AudioWorklet.port")}} and an {{domxref("AudioWorkletGlobalScope.port")}}.
+  This allows for custom, asynchronous communication between code in the main thread and the global scope of an audio worklet, such as receiving control data or global settings. ([Firefox bug 1951240](https://bugzil.la/1951240))
 
 #### DOM
 
@@ -73,9 +75,18 @@ Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-
 
 #### General
 
+- All remote protocols now enable the preferences required to properly pipe logs to stdout ([Firefox bug 1947740](https://bugzilla.mozilla.org/show_bug.cgi?id=1947740)).
+- A new Firefox argument, `--remote-enable-system-access`, was added to enable sensitive features, such as interacting with Browsing Contexts in the parent process (e.g., Browser UI) or using privileged APIs in content processes. This will be used for WebDriver BiDi features in the next releases, and can already be used with Marionette (see the Marionette section below) ([Firefox bug 1944565](https://bugzilla.mozilla.org/show_bug.cgi?id=1944565)).
+
 #### WebDriver BiDi
 
+- The `webExtension.install` command now installs web extensions temporarily by default, allowing it to be used with unsigned extensions - either as an XPI file or as an unpacked folder. A new Firefox-specific parameter, `moz:permanent`, has been added to force installation as a regular extension instead ([Firefox bug 1947678](https://bugzilla.mozilla.org/show_bug.cgi?id=1947678)).
+- The `browsingContext.setViewport` command now supports a `userContexts` parameter, which must be an array of user context (Firefox container) ids. When provided, the viewport configuration will be applied to all Browsing Contexts belonging to those user contexts, as well as any future contexts created within them. This parameter cannot be used together with the existing `context` parameter ([Firefox bug 1940952](https://bugzilla.mozilla.org/show_bug.cgi?id=1940952)).
+- The `browsingContext.Info` type now includes a `clientWindow` property corresponding to the ID of the window owning the Browsing Context. It is typically returned by `browsingContext.getTree` or included in the payload of events such as `browsingContext.contextCreated` ([Firefox bug 1920952](https://bugzilla.mozilla.org/show_bug.cgi?id=1920952)).
+
 #### Marionette
+
+- Switching to the `chrome` (parent process) context with Marionette now requires using the `--remote-enable-system-access` command-line flag when starting Firefox ([Firefox bug 1710425](https://bugzilla.mozilla.org/show_bug.cgi?id=1710425)).
 
 ## Changes for add-on developers
 

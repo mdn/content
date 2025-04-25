@@ -57,7 +57,7 @@ In this example we create a function that will apply three different transformat
     Example showing how to transform svg elements that using SVGTransform
     objects
   </desc>
-  <script type="application/ecmascript">
+  <script>
     <![CDATA[
       function transformMe(evt) {
         // svg root element to access the createSVGTransform() function

@@ -42,7 +42,7 @@ The **CSSOM view** module lets you manipulate the visual view of a document, inc
 - {{domxref("CaretPosition")}}
 - {{domxref("VisualViewport")}}
 
-### Inteface extensions
+### Interface extensions
 
 This module adds properties and methods to interfaces defined in other specifications.
 

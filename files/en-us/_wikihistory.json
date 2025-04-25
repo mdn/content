@@ -10808,135 +10808,6 @@
       "Andrew_Pfeiffer"
     ]
   },
-  "Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image": {
-    "modified": "2020-07-16T22:22:42.758Z",
-    "contributors": ["ezrinjaz", "hbloomer", "Andrew_Pfeiffer"]
-  },
-  "Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages": {
-    "modified": "2020-07-16T22:22:31.788Z",
-    "contributors": [
-      "Sheppy",
-      "estelle",
-      "sideshowbarker",
-      "karimos129",
-      "spencercorwin",
-      "SphinxKnight",
-      "chrisdavidmills",
-      "ziyadElon",
-      "Harinderpreet",
-      "stuartharvie",
-      "RafeyIqbalRahman",
-      "ishan123456789",
-      "abt8601",
-      "xfq",
-      "andygongea",
-      "rfc791",
-      "fscholz",
-      "Jeremie",
-      "kscarfone",
-      "dbs",
-      "gmerencio",
-      "gbrown",
-      "haboqueferus",
-      "brunoais",
-      "teoli",
-      "ethertank",
-      "tolbon",
-      "leo89",
-      "tw2113",
-      "inma_610",
-      "xaky",
-      "Shz",
-      "JaredWBurt",
-      "alicethomas222",
-      "peterson.victor222",
-      "Mgjbot",
-      "Carrie zhxj",
-      "Ptak82",
-      "Satyr-wayfarer",
-      "NickolayBot",
-      "Dria",
-      "Yworfg",
-      "cbiesinger",
-      "Nerf",
-      "Grauw",
-      "CitizenK",
-      "Jens.B"
-    ]
-  },
-  "Learn_web_development/Howto/Solve_HTML_problems/Cheatsheet": {
-    "modified": "2020-07-16T22:22:43.887Z",
-    "contributors": [
-      "Yel-Martinez-Consultor-Seo",
-      "sideshowbarker",
-      "verde79",
-      "sksankarraj",
-      "Quantzilla",
-      "Johanancuriel",
-      "SethClydesdale",
-      "arkanciscan",
-      "khalid32",
-      "jswisher",
-      "fachrulrazy",
-      "Andrew_Pfeiffer",
-      "SphinxKnight",
-      "dvincent",
-      "hbloomer",
-      "chadsansing",
-      "Jeremie"
-    ]
-  },
-  "Learn_web_development/Howto/Solve_HTML_problems/Define_terms_with_HTML": {
-    "modified": "2020-07-16T22:22:41.646Z",
-    "contributors": [
-      "AlexK89",
-      "jnegara",
-      "Jeremie",
-      "Andrew_Pfeiffer",
-      "Sheppy",
-      "MohammedAdam",
-      "hbloomer"
-    ]
-  },
-  "Learn_web_development/Howto/Solve_HTML_problems/Use_JavaScript_within_a_webpage": {
-    "modified": "2020-07-16T22:22:39.990Z",
-    "contributors": ["RomainLanz", "Jeremie", "Andrew_Pfeiffer"]
-  },
-  "Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes": {
-    "modified": "2020-07-16T22:22:34.241Z",
-    "contributors": [
-      "vnctdj",
-      "LoVo666",
-      "jmstfv",
-      "mfuji09",
-      "kenny-evitt",
-      "Enrico_Polanski",
-      "ryanve",
-      "calebmosher",
-      "chrisdavidmills",
-      "rnacken",
-      "Sheppy",
-      "prusse-martin",
-      "torazaburo",
-      "jacksonrayhamilton",
-      "drj11",
-      "Manojkr",
-      "Speich",
-      "sam_eaton",
-      "bcruddy",
-      "teckno101",
-      "lieuwex",
-      "robinpokorny",
-      "rvighne",
-      "andrew.carpenter",
-      "Jeremie",
-      "magnetikonline",
-      "jswisher",
-      "kscarfone",
-      "teoli",
-      "groovecoder"
-    ]
-  },
   "Learn_web_development/Howto/Solve_JavaScript_problems": {
     "modified": "2020-07-16T22:33:08.616Z",
     "contributors": [
@@ -90840,6 +90711,28 @@
       "DBaron"
     ]
   },
+  "Web/HTML/Guides/Cheatsheet": {
+    "modified": "2020-07-16T22:22:43.887Z",
+    "contributors": [
+      "Yel-Martinez-Consultor-Seo",
+      "sideshowbarker",
+      "verde79",
+      "sksankarraj",
+      "Quantzilla",
+      "Johanancuriel",
+      "SethClydesdale",
+      "arkanciscan",
+      "khalid32",
+      "jswisher",
+      "fachrulrazy",
+      "Andrew_Pfeiffer",
+      "SphinxKnight",
+      "dvincent",
+      "hbloomer",
+      "chadsansing",
+      "Jeremie"
+    ]
+  },
   "Web/HTML/Guides/Content_categories": {
     "modified": "2020-10-18T10:42:38.994Z",
     "contributors": [
@@ -91002,6 +90895,66 @@
       "Andrew_Pfeiffer"
     ]
   },
+  "Web/HTML/How_to/Add_JavaScript_to_your_web_page": {
+    "modified": "2020-07-16T22:22:39.990Z",
+    "contributors": ["RomainLanz", "Jeremie", "Andrew_Pfeiffer"]
+  },
+  "Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image": {
+    "modified": "2020-07-16T22:22:42.758Z",
+    "contributors": ["ezrinjaz", "hbloomer", "Andrew_Pfeiffer"]
+  },
+  "Web/HTML/How_to/Author_fast-loading_HTML_pages": {
+    "modified": "2020-07-16T22:22:31.788Z",
+    "contributors": [
+      "Sheppy",
+      "estelle",
+      "sideshowbarker",
+      "karimos129",
+      "spencercorwin",
+      "SphinxKnight",
+      "chrisdavidmills",
+      "ziyadElon",
+      "Harinderpreet",
+      "stuartharvie",
+      "RafeyIqbalRahman",
+      "ishan123456789",
+      "abt8601",
+      "xfq",
+      "andygongea",
+      "rfc791",
+      "fscholz",
+      "Jeremie",
+      "kscarfone",
+      "dbs",
+      "gmerencio",
+      "gbrown",
+      "haboqueferus",
+      "brunoais",
+      "teoli",
+      "ethertank",
+      "tolbon",
+      "leo89",
+      "tw2113",
+      "inma_610",
+      "xaky",
+      "Shz",
+      "JaredWBurt",
+      "alicethomas222",
+      "peterson.victor222",
+      "Mgjbot",
+      "Carrie zhxj",
+      "Ptak82",
+      "Satyr-wayfarer",
+      "NickolayBot",
+      "Dria",
+      "Yworfg",
+      "cbiesinger",
+      "Nerf",
+      "Grauw",
+      "CitizenK",
+      "Jens.B"
+    ]
+  },
   "Web/HTML/How_to/CORS_enabled_image": {
     "modified": "2020-11-03T13:26:20.578Z",
     "contributors": [
@@ -91026,6 +90979,53 @@
       "myakura",
       "Sephr",
       "louisremi"
+    ]
+  },
+  "Web/HTML/How_to/Define_terms_with_HTML": {
+    "modified": "2020-07-16T22:22:41.646Z",
+    "contributors": [
+      "AlexK89",
+      "jnegara",
+      "Jeremie",
+      "Andrew_Pfeiffer",
+      "Sheppy",
+      "MohammedAdam",
+      "hbloomer"
+    ]
+  },
+  "Web/HTML/How_to/Use_data_attributes": {
+    "modified": "2020-07-16T22:22:34.241Z",
+    "contributors": [
+      "vnctdj",
+      "LoVo666",
+      "jmstfv",
+      "mfuji09",
+      "kenny-evitt",
+      "Enrico_Polanski",
+      "ryanve",
+      "calebmosher",
+      "chrisdavidmills",
+      "rnacken",
+      "Sheppy",
+      "prusse-martin",
+      "torazaburo",
+      "jacksonrayhamilton",
+      "drj11",
+      "Manojkr",
+      "Speich",
+      "sam_eaton",
+      "bcruddy",
+      "teckno101",
+      "lieuwex",
+      "robinpokorny",
+      "rvighne",
+      "andrew.carpenter",
+      "Jeremie",
+      "magnetikonline",
+      "jswisher",
+      "kscarfone",
+      "teoli",
+      "groovecoder"
     ]
   },
   "Web/HTML/Reference": {
