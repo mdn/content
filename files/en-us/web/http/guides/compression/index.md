@@ -76,6 +76,12 @@ As compression brings significant performance improvements, it is recommended to
 
 Apache supports compression and uses [mod_deflate](https://httpd.apache.org/docs/current/mod/mod_deflate.html); for Nginx there is [ngx_http_gzip_module](https://nginx.org/en/docs/http/ngx_http_gzip_module.html); for IIS, the [`<httpCompression>`](https://learn.microsoft.com/en-us/iis/configuration/system.webServer/httpCompression/) element.
 
+## Compression dictionary transport
+
+Modern compression formats such as {{glossary("Brotli compression")}} and {{glossary("Zstandard compression")}} can use dictionaries of frequently used data to further increase compression over just referencing those from within the file being compressed. Typically, for HTTP responses, this uses the predefined static dictionary included in that format (for example [the Brotli static dictionary is available in the source code](https://github.com/google/brotli/blob/master/csharp/org/brotli/dec/Dictionary.cs)).
+
+[Compression Dictionary Transport](/en-US/docs/Web/HTTP/Guides/Compression_dictionary_transport) enables a developer to specify a resource which can be used as a dictionary for future requests. This can either be a specific dictionary file, or an existing resource (for example, using `app.v1.js` as a dictionary when downloading `app.v2.js`). This typically improves compression and therefore load time. In the `app.vX.js` example, most of the download would consist of only the delta between the two versions, and the common bytes could be referenced from the original `app.v1.js` file that is already downloaded.
+
 ## Hop-by-hop compression
 
 Hop-by-hop compression, though similar to end-to-end compression, differs by one fundamental element: the compression doesn't happen on the resource in the server, creating a specific representation that is then transmitted, but on the body of the message between any two nodes on the path between the client and the server. Connections between successive intermediate nodes may apply a _different_ compression.
@@ -139,9 +145,11 @@ Note that using {{HTTPHeader("Transfer-Encoding")}} and compression at the hop l
 
 ## See also
 
+- [Compression Dictionary Transport guide](/en-US/docs/Web/HTTP/Guides/Compression_dictionary_transport)
 - Glossary terms:
-  - {{glossary("Brotli compression")}}
+  - {{Glossary("Brotli compression")}}
   - {{Glossary("Gzip compression")}}
-  - {{glossary("Lossless compression")}}
-  - {{glossary("Lossy compression")}}
+  - {{Glossary("Lossless compression")}}
+  - {{Glossary("Lossy compression")}}
   - {{Glossary("Zstandard compression")}}
+  - {{Glossary("Compression Dictionary Transport")}}

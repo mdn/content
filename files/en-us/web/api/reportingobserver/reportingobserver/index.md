@@ -23,7 +23,7 @@ new ReportingObserver(callback, options)
 
 - `callback`
 
-  - : A callback function that runs when the observer starts to collect reports (i.e. via
+  - : A callback function that runs when the observer starts to collect reports (i.e., via
     {{domxref("ReportingObserver.observe()")}}). The callback function is given two
     parameters:
 

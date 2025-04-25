@@ -44,7 +44,7 @@ No notable changes.
 
 ### WebDriver conformance (Marionette)
 
-- Added support for user prompts (e.g. `alert`) on Android ([Firefox bug 1708105](https://bugzil.la/1708105)).
+- Added support for user prompts (e.g., `alert`) on Android ([Firefox bug 1708105](https://bugzil.la/1708105)).
 
 ## Changes for add-on developers
 

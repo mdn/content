@@ -2,9 +2,8 @@
 title: How to build custom form controls
 slug: Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 There are some cases where the available native HTML form controls may seem like they are not enough. For example, if you need to [perform advanced styling](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling) on some controls such as the {{HTMLElement("select")}} element, or if you want to provide custom behaviors, you may consider building your own controls.
 
@@ -29,7 +28,7 @@ In terms of behavior, we are recreating a native HTML element. Therefore it shou
 
 - the page loads.
 - the control was active and the user clicks anywhere outside it.
-- the control was active and the user moves the focus to another control using the keyboard (e.g. the <kbd>Tab</kbd> key).
+- the control was active and the user moves the focus to another control using the keyboard (e.g., the <kbd>Tab</kbd> key).
 
 **The control is in its active state when:**
 

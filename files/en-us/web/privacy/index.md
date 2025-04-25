@@ -158,7 +158,7 @@ Earlier on, we mentioned giving users a way to see what data of theirs you have 
 Allowing the user to choose when significant portions of data get deleted is very empowering, and builds trust, but there may be some bits of data that you will want to handle deletion of yourself. For example, some data might only be used for a few hours or minutes and then deleted, like data that is used during the administration of a user's session while they are logged in.
 
 > [!NOTE]
-> The {{httpheader("Clear-Site-Data")}} HTTP response header is very useful for clearing short-lived user data — it instructs the browser to clear out its cache and/or cookies and/or storage (e.g. [Web Storage](/en-US/docs/Web/API/Web_Storage_API) or [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) data). For example, you might get your server to send it along with a "logged out confirmation" page so that once the user is logged out, their data is safely removed.
+> The {{httpheader("Clear-Site-Data")}} HTTP response header is very useful for clearing short-lived user data — it instructs the browser to clear out its cache and/or cookies and/or storage (e.g., [Web Storage](/en-US/docs/Web/API/Web_Storage_API) or [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) data). For example, you might get your server to send it along with a "logged out confirmation" page so that once the user is logged out, their data is safely removed.
 
 ## Cut down on tracking
 
@@ -189,7 +189,7 @@ Once you have audited your third-party resources and understand what they are do
 The following list provides some tips on how to mitigate privacy risks inherent with using third-party resources:
 
 - When embedding third-party resources, consider if there is a way to achieve the same or a similar effect with less privacy impact. For example, it might be fun to have a social media post viewer embedded on your site, but is it really necessary? Wouldn't a link to your social media page be sufficient? Also, some third-party services have privacy-enhancing options. See, for example, YouTube's [Embed videos & playlists > Turn on privacy-enhanced mode](https://support.google.com/youtube/answer/171780).
-- Where possible, you should block third parties from receiving a {{httpheader("Referer")}} header when you make requests to them. This can be done in a pretty granular way, for example by including [rel="noreferrer"](/en-US/docs/Web/HTML/Attributes/rel/noreferrer) on external links. Or, you could set this more globally for the page or site, for example by using the {{httpheader("Referrer-Policy")}} header.
+- Where possible, you should block third parties from receiving a {{httpheader("Referer")}} header when you make requests to them. This can be done in a pretty granular way, for example by including [rel="noreferrer"](/en-US/docs/Web/HTML/Reference/Attributes/rel/noreferrer) on external links. Or, you could set this more globally for the page or site, for example by using the {{httpheader("Referrer-Policy")}} header.
 
   > [!NOTE]
   > See also [Referer header: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns).
@@ -220,5 +220,5 @@ The below tips offer some guidance on protecting your user's data:
 
 - [Web security](/en-US/docs/Web/Security)
 - [Learn Privacy](https://web.dev/learn/privacy/) on web.dev
-- [The Privacy Sandbox](https://developers.google.com/privacy-sandbox) on developers.google.com
+- [The Privacy Sandbox](https://privacysandbox.google.com/) on privacysandbox.google.com
 - [Lean Data Practices](https://www.mozilla.org/en-US/about/policy/lean-data/) on mozilla.org

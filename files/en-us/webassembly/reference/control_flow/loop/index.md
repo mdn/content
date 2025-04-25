@@ -52,7 +52,7 @@ await WebAssembly.instantiateStreaming(fetch(url), { console });
 
 ## Syntax
 
-```wasm
+```wat
 ;; label the loop so that it can be branched to
 (loop $my_loop
 

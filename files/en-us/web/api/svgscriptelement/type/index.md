@@ -20,7 +20,7 @@ An string.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
-  <script id="myScript" href="script.js" type="application/javascript"></script>
+  <script id="myScript" href="script.js" type="text/javascript"></script>
 </svg>
 ```
 
@@ -28,7 +28,7 @@ An string.
 const scriptElement = document.getElementById("myScript");
 
 // Access the type property
-console.log(scriptElement.type); // Output: "application/javascript"
+console.log(scriptElement.type); // Output: "text/javascript"
 ```
 
 ## Specifications

@@ -9,7 +9,7 @@ browser-compat: css.properties.text-anchor
 
 The **`text-anchor`** [CSS](/en-US/docs/Web/CSS) property aligns a box containing a string of text where the wrapping area is determined from the {{cssxref("inline-size")}} property, and the text is then placed relative to the anchor point of the element, which is defined using the {{SVGAttr('x')}} and {{SVGAttr('y')}} (or {{SVGAttr('dx')}} and {{SVGAttr('dy')}}) attributes. If present, the value of the CSS property overrides any value of the element's {{SVGAttr("text-anchor")}} attribute.
 
-Each individual text fragment within an element is aligned independently; thus, a multi-line {{SVGElement("text")}} element will have each line of text aligned as per the value of `text-anchor`. `text-anchor` values only have an effect on the {{SVGElement("text")}}, {{SVGElement("textPath")}}, {{SVGElement("tref")}}, and {{SVGElement("tspan")}} SVG elements. `text-anchor` does not apply to automatically wrapped text; for that, see {{cssxref('text-align')}}.
+Each individual text fragment within an element is aligned independently; thus, a multi-line {{SVGElement("text")}} element will have each line of text aligned as per the value of `text-anchor`. `text-anchor` values only have an effect on the {{SVGElement("text")}}, {{SVGElement("textPath")}}, and {{SVGElement("tspan")}} SVG elements. `text-anchor` does not apply to automatically wrapped text; for that, see {{cssxref('text-align')}}.
 
 ## Syntax
 

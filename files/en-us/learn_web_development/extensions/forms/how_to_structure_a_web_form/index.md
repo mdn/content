@@ -2,9 +2,10 @@
 title: How to structure a web form
 slug: Learn_web_development/Extensions/Forms/How_to_structure_a_web_form
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms")}}
 
 With the basics out of the way, we'll now look in more detail at the elements used to provide structure and meaning to the different parts of a form.
 
@@ -36,7 +37,7 @@ We already met this in the previous article.
 > [!WARNING]
 > It's strictly forbidden to nest a form inside another form. Nesting can cause forms to behave unpredictably, so it is a bad idea.
 
-It's always possible to use a form control outside of a {{HTMLElement("form")}} element. If you do so, by default that control has nothing to do with any form unless you associate it with a form using its [`form`](/en-US/docs/Web/HTML/Element/input#form) attribute. This was introduced to let you explicitly bind a control with a form even if it is not nested inside it.
+It's always possible to use a form control outside of a {{HTMLElement("form")}} element. If you do so, by default that control has nothing to do with any form unless you associate it with a form using its [`form`](/en-US/docs/Web/HTML/Reference/Elements/input#form) attribute. This was introduced to let you explicitly bind a control with a form even if it is not nested inside it.
 
 Let's move forward and cover the structural elements you'll find nested in a form.
 
@@ -175,7 +176,7 @@ Beyond the structures specific to web forms, it's good to remember that form mar
 
 As you can see in the examples, it's common practice to wrap a label and its widget with a {{HTMLElement("li")}} element within a {{HTMLElement("ul")}} or {{HTMLElement("ol")}} list. {{HTMLElement("p")}} and {{HTMLElement("div")}} elements are also commonly used. Lists are recommended for structuring multiple checkboxes or radio buttons.
 
-In addition to the {{HTMLElement("fieldset")}} element, it's also common practice to use HTML titles (e.g. {{htmlelement("Heading_Elements", "h1")}}, {{htmlelement("Heading_Elements", "h2")}}) and sectioning (e.g. {{htmlelement("section")}}) to structure complex forms.
+In addition to the {{HTMLElement("fieldset")}} element, it's also common practice to use HTML titles (e.g., {{htmlelement("Heading_Elements", "h1")}}, {{htmlelement("Heading_Elements", "h2")}}) and sectioning (e.g., {{htmlelement("section")}}) to structure complex forms.
 
 Above all, it is up to you to find a comfortable coding style that results in accessible, usable forms. Each separate section of functionality should be contained in a separate {{htmlelement("section")}} element, with {{htmlelement("fieldset")}} elements to contain radio buttons.
 

@@ -61,7 +61,7 @@ No notable changes.
 
 ##### Removals
 
-- The [`<marquee>` HTML element](/en-US/docs/Web/HTML/Element/marquee) events [`bounce`](/en-US/docs/Web/API/HTMLMarqueeElement#bounce), [`finish`](/en-US/docs/Web/API/HTMLMarqueeElement#finish), and [`start`](/en-US/docs/Web/API/HTMLMarqueeElement#start) have been removed from [`HTMLMarqueeElement`](/en-US/docs/Web/API/HTMLMarqueeElement), along with the corresponding [event handler attributes](/en-US/docs/Web/API/HTMLMarqueeElement#events) ([Firefox bug 1689705](https://bugzil.la/1689705)).
+- The [`<marquee>` HTML element](/en-US/docs/Web/HTML/Reference/Elements/marquee) events [`bounce`](/en-US/docs/Web/API/HTMLMarqueeElement#bounce), [`finish`](/en-US/docs/Web/API/HTMLMarqueeElement#finish), and [`start`](/en-US/docs/Web/API/HTMLMarqueeElement#start) have been removed from [`HTMLMarqueeElement`](/en-US/docs/Web/API/HTMLMarqueeElement), along with the corresponding [event handler attributes](/en-US/docs/Web/API/HTMLMarqueeElement#events) ([Firefox bug 1689705](https://bugzil.la/1689705)).
 - The [Theora](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#theora) codec was disabled by default, and will be removed in a future release ([Firefox bug 1860492](https://bugzil.la/1860492)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)

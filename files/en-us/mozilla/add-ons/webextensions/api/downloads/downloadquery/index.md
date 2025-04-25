@@ -56,7 +56,7 @@ Values of this type are objects. They contain the following properties:
 - `state` {{optional_inline}}
   - : A `string` representing a download {{WebExtAPIRef('downloads.State')}} (`in_progress`, `interrupted`, or `complete`). Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} with this `state` value.
 - `paused` {{optional_inline}}
-  - : A `boolean` that indicates whether a download is paused — i.e. has stopped reading data from the host, but kept the connection open (`true`), or not (`false`). Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} with this `paused` value.
+  - : A `boolean` that indicates whether a download is paused — i.e., has stopped reading data from the host, but kept the connection open (`true`), or not (`false`). Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} with this `paused` value.
 - `error` {{optional_inline}}
   - : A string representing an {{WebExtAPIRef('downloads.InterruptReason')}} — a reason why a download was interrupted. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} with this `error` value.
 - `bytesReceived` {{optional_inline}}

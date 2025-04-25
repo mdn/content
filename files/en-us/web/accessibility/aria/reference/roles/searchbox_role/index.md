@@ -10,7 +10,7 @@ The `searchbox` role indicates an element is a type of `textbox` intended for sp
 
 ## Description
 
-The `searchbox` can be used instead of [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role) when the text box is within an element with role [`search`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/search_role). A `searchbox` is the semantic equivalent is HTML's {{HTMLElement('input')}} of type `search`, [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search), which should be used instead if possible.
+The `searchbox` can be used instead of [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role) when the text box is within an element with role [`search`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/search_role). A `searchbox` is the semantic equivalent is HTML's {{HTMLElement('input')}} of type `search`, [`<input type="search">`](/en-US/docs/Web/HTML/Reference/Elements/input/search), which should be used instead if possible.
 
 The `searchbox` must have an accessible name. If the `searchbox` role is applied to an HTML {{HTMLElement('input')}} element, an associated {{HTMLElement('label')}} should be used.
 Otherwise, use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) if a visible label is present, or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) if a visible label is not present.
@@ -64,6 +64,6 @@ Including `role="searchbox"` when the form is a `search` and the label indicates
 
 ## See also
 
-- [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search)
+- [`<input type="search">`](/en-US/docs/Web/HTML/Reference/Elements/input/search)
 - [ARIA: `search` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/search_role)
 - [ARIA: `textbox` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)

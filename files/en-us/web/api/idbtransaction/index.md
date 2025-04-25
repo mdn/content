@@ -7,7 +7,7 @@ browser-compat: api.IDBTransaction
 
 {{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
-The **`IDBTransaction`** interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) provides a static, asynchronous transaction on a database using event handler attributes. All reading and writing of data is done within transactions. You use {{domxref("IDBDatabase")}} to start transactions, `IDBTransaction` to set the mode of the transaction (e.g. is it `readonly` or `readwrite`), and you access an {{domxref("IDBObjectStore")}} to make a request. You can also use an `IDBTransaction` object to abort transactions.
+The **`IDBTransaction`** interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) provides a static, asynchronous transaction on a database using event handler attributes. All reading and writing of data is done within transactions. You use {{domxref("IDBDatabase")}} to start transactions, `IDBTransaction` to set the mode of the transaction (e.g., is it `readonly` or `readwrite`), and you access an {{domxref("IDBObjectStore")}} to make a request. You can also use an `IDBTransaction` object to abort transactions.
 
 {{InheritanceDiagram}}
 
@@ -30,10 +30,10 @@ A transaction alternates between _active_ and _inactive_ states between event lo
 
 Transactions can fail for a fixed number of reasons, all of which (except the user agent crash) will trigger an abort callback:
 
-- Abort due to bad requests, e.g. trying to `add()` the same key twice, or `put()` with the same index key with a uniqueness constraint. This causes an error on the request, which can bubble up to an error on the transaction, which aborts the transaction. This can be prevented by using `preventDefault()` on the error event on the request.
+- Abort due to bad requests, e.g., trying to `add()` the same key twice, or `put()` with the same index key with a uniqueness constraint. This causes an error on the request, which can bubble up to an error on the transaction, which aborts the transaction. This can be prevented by using `preventDefault()` on the error event on the request.
 - An explicit `abort()` call from script.
 - An uncaught exception in the request's `success`/`error` handler.
-- An I/O error (e.g. an actual failure to write to disk, or other OS/hardware failure).
+- An I/O error (e.g., an actual failure to write to disk, or other OS/hardware failure).
 - Quota exceeded.
 - A user agent crash.
 
@@ -41,7 +41,7 @@ Transactions can fail for a fixed number of reasons, all of which (except the us
 
 Note that as of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase performance (see [Firefox bug 1112702](https://bugzil.la/1112702).) Previously in a `readwrite` transaction, a {{domxref("IDBTransaction.complete_event","complete")}} event was fired only when all data was guaranteed to have been flushed to disk. In Firefox 40+ the `complete` event is fired after the OS has been told to write the data but potentially before that data has actually been flushed to disk. The `complete` event may thus be delivered quicker than before, however, there exists a small chance that the entire transaction will be lost if the OS crashes or there is a loss of system power before the data is flushed to disk. Since such catastrophic events are rare, most consumers should not need to concern themselves further.
 
-If you must ensure durability for some reason (e.g. you're storing critical data that cannot be recomputed later) you can force a transaction to flush to disk before delivering the `complete` event by creating a transaction using the experimental (non-standard) `readwriteflush` mode (see {{domxref("IDBDatabase.transaction")}}.
+If you must ensure durability for some reason (e.g., you're storing critical data that cannot be recomputed later) you can force a transaction to flush to disk before delivering the `complete` event by creating a transaction using the experimental (non-standard) `readwriteflush` mode (see {{domxref("IDBDatabase.transaction")}}.
 
 ## Instance properties
 

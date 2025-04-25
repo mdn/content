@@ -24,7 +24,7 @@ A string representing the local part of the element's qualified name.
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:svg="http://www.w3.org/2000/svg">
 <head>
-  <script type="application/javascript"><![CDATA[
+  <script><![CDATA[
   function test() {
     const text = document.getElementById('text');
     const circle = document.getElementById('circle');

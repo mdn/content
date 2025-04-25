@@ -15,7 +15,7 @@ WebAuthn uses [asymmetric (public-key) cryptography](https://en.wikipedia.org/wi
 
 - **Protection against phishing:** An attacker who creates a fake login website can't login as the user because the signature changes with the [origin](/en-US/docs/Glossary/Origin) of the website.
 - **Reduced impact of data breaches:** Developers don't need to hash the public key, and if an attacker gets access to the public key used to verify the authentication, it can't authenticate because it needs the private key.
-- **Invulnerable to password attacks:** Some users might reuse passwords, and an attacker may obtain the user's password for another website (e.g. via a data breach). Also, text passwords are much easier to brute-force than a digital signature.
+- **Invulnerable to password attacks:** Some users might reuse passwords, and an attacker may obtain the user's password for another website (e.g., via a data breach). Also, text passwords are much easier to brute-force than a digital signature.
 
 Many websites already have pages that allow users to register new accounts or log into an existing account, and WebAuthn acts as a replacement or enhancement for the authentication part of the system. It extends the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API), abstracting communication between the user agent and an authenticator and providing the following new functionality:
 
@@ -47,15 +47,15 @@ To illustrate how the credential creation process works, let's describe the typi
    ```js
    let credential = await navigator.credentials.create({
      publicKey: {
-       challenge: new Uint8Array([117, 61, 252, 231, 191, 241, ...]),
+       challenge: new Uint8Array([117, 61, 252, 231, 191, 241 /* … */]),
        rp: { id: "acme.com", name: "ACME Corporation" },
        user: {
          id: new Uint8Array([79, 252, 83, 72, 214, 7, 89, 26]),
          name: "jamiedoe",
-         displayName: "Jamie Doe"
+         displayName: "Jamie Doe",
        },
-       pubKeyCredParams: [ {type: "public-key", alg: -7} ]
-     }
+       pubKeyCredParams: [{ type: "public-key", alg: -7 }],
+     },
    });
    ```
 
@@ -92,14 +92,16 @@ A typical authentication flow is as follows:
    ```js
    let credential = await navigator.credentials.get({
      publicKey: {
-       challenge: new Uint8Array([139, 66, 181, 87, 7, 203, ...]),
+       challenge: new Uint8Array([139, 66, 181, 87, 7, 203 /* … */]),
        rpId: "acme.com",
-       allowCredentials: [{
-         type: "public-key",
-         id: new Uint8Array([64, 66, 25, 78, 168, 226, 174, ...])
-       }],
+       allowCredentials: [
+         {
+           type: "public-key",
+           id: new Uint8Array([64, 66, 25, 78, 168, 226, 174 /* … */]),
+         },
+       ],
        userVerification: "required",
-     }
+     },
    });
    ```
 
@@ -125,7 +127,7 @@ A discoverable credential is created via a [`create()`](/en-US/docs/Web/API/Cred
 
 In order to authenticate, the RP server calls [`get()`](/en-US/docs/Web/API/CredentialsContainer/get) with **conditional mediation** specified, that is [`mediation`](/en-US/docs/Web/API/CredentialsContainer/get#mediation) set to `conditional`, an empty [`allowCredentials`](/en-US/docs/Web/API/PublicKeyCredentialRequestOptions#allowcredentials) list (meaning only discoverable credentials can be shown), and a challenge.
 
-Conditional mediation results in discoverable credentials found in the authenticator being presented to the user in a non-modal UI along with an indication of the origin requesting credentials, rather than a modal dialog. In practice, this means autofilling available credentials in your login forms. The metadata stored in discoverable credentials can be displayed to help users choose a credential when logging in. To display discoverable credentials in your login forms, you also need to include [`autocomplete="webauthn"`](/en-US/docs/Web/HTML/Attributes/autocomplete#webauthn) on your form fields.
+Conditional mediation results in discoverable credentials found in the authenticator being presented to the user in a non-modal UI along with an indication of the origin requesting credentials, rather than a modal dialog. In practice, this means autofilling available credentials in your login forms. The metadata stored in discoverable credentials can be displayed to help users choose a credential when logging in. To display discoverable credentials in your login forms, you also need to include [`autocomplete="webauthn"`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete#webauthn) on your form fields.
 
 To reiterate, the relying party doesn't tell the authenticator what credentials to offer to the user — instead, the authenticator supplies the list it has available. Once the user selects a credential, the authenticator uses it to sign the challenge with the associated private key, and the browser returns the signed challenge and its `credentialId` to the RP server.
 
@@ -191,7 +193,7 @@ The availability of WebAuthn can be controlled using a [Permissions Policy](/en-
 
 Both directives have a default allowlist value of `"self"`, meaning that by default these methods can be used in top-level document contexts.
 In addition, `get()` can be used in nested browsing contexts loaded from the same origin as the top-most document.
-`get()` and `create()` can be used in nested browsing contexts loaded from the different origins to the top-most document (i.e. in cross-origin `<iframes>`), if allowed by the [`publickey-credentials-get`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/publickey-credentials-get) and [`publickey-credentials-create`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/publickey-credentials-create) `Permission-Policy` directives, respectively.
+`get()` and `create()` can be used in nested browsing contexts loaded from the different origins to the top-most document (i.e., in cross-origin `<iframes>`), if allowed by the [`publickey-credentials-get`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/publickey-credentials-get) and [`publickey-credentials-create`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/publickey-credentials-create) `Permission-Policy` directives, respectively.
 For cross-origin `create()` calls, where the permission was granted by [`allow=` on an iframe](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy#iframes), the frame must also have {{glossary("Transient activation")}}.
 
 > [!NOTE]

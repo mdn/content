@@ -19,7 +19,7 @@ It serves as a getter and setter for the actual values of the cookies.
 allCookies = document.cookie;
 ```
 
-In the code above `allCookies` is a string containing a semicolon-separated list of all cookies (i.e. `key=value` pairs).
+In the code above `allCookies` is a string containing a semicolon-separated list of all cookies (i.e., `key=value` pairs).
 Note that each _key_ and _value_ may be surrounded by whitespace (space and tab characters): in fact, {{RFC(6265)}} mandates a single space after each semicolon, but some user agents may not abide by this.
 
 ### Write a new cookie

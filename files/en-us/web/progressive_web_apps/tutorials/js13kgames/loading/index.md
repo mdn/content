@@ -125,7 +125,7 @@ This problem can be solved by loading the images only when needed: this is calle
 
 ### The loading attribute on \<img>
 
-The easiest way to tell the browser to load lazily doesn't involve JavaScript. You add the [`loading`](/en-US/docs/Web/HTML/Element/img#loading) attribute to an {{HTMLElement("img")}} element with the value `lazy`, and the browser will know to load this image only when needed.
+The easiest way to tell the browser to load lazily doesn't involve JavaScript. You add the [`loading`](/en-US/docs/Web/HTML/Reference/Elements/img#loading) attribute to an {{HTMLElement("img")}} element with the value `lazy`, and the browser will know to load this image only when needed.
 
 ```html
 <img
@@ -161,7 +161,7 @@ if ("IntersectionObserver" in window) {
 }
 ```
 
-If the {{domxref("IntersectionObserver")}} object is supported, the app creates a new instance of it. The function passed as a parameter is handling the case when one or more items are intersecting with the observer (i.e. is appearing inside the viewport). We can iterate over each case and react accordingly — when an image is visible, we load the correct image and stop observing it as we no longer need to observe it.
+If the {{domxref("IntersectionObserver")}} object is supported, the app creates a new instance of it. The function passed as a parameter is handling the case when one or more items are intersecting with the observer (i.e., is appearing inside the viewport). We can iterate over each case and react accordingly — when an image is visible, we load the correct image and stop observing it as we no longer need to observe it.
 
 Let's reiterate our earlier mention of progressive enhancement — the code is written so that the app will work whether Intersection Observer is supported or not. If it's not, we just load the images using the more basic approach covered earlier.
 

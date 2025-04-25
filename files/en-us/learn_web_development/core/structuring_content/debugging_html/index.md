@@ -2,9 +2,8 @@
 title: Debugging HTML
 slug: Learn_web_development/Core/Structuring_content/Debugging_HTML
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_forms", "Learn_web_development/Core/Styling_basics", "Learn_web_development/Core/Structuring_content")}}
 
@@ -120,7 +119,7 @@ It's time to study some HTML code using the DOM inspector, and see how the brows
        <p>What causes errors in HTML?
        <ul>
          <li>Unclosed elements: If an element is <strong>not closed properly,then its effect can spread to areas you didn't intend
-         <li>Badly nested elements: Nesting elements properly is also very important for code behaving correctly. <strong>strong <em>strong emphasised?</strong> what is this?</em>
+         <li>Badly nested elements: Nesting elements properly is also very important for code behaving correctly. <strong>strong <em>strong emphasized?</strong> what is this?</em>
          <li>Unclosed attributes: Another common source of HTML problems. Let's look at an example: <a href="https://www.mozilla.org/>link to Mozilla homepage</a>
        </ul>
      </body>
@@ -154,7 +153,7 @@ It's time to study some HTML code using the DOM inspector, and see how the brows
    - The {{htmlelement("p","paragraph")}} and {{htmlelement("li","list item")}} elements have no closing tags. Looking at the image above, this doesn't seem to have affected the markup rendering too badly, as it is easy to infer where one element should end and another should begin.
    - The first {{htmlelement("strong")}} element has no closing tag. This is a bit more problematic, as it isn't easy to tell where the element is supposed to end. In fact, the whole of the rest of the text has been rendered in bold.
    - This section is badly nested: `<strong>strong <em>strong emphasized?</strong> what is this?</em>`. It is not easy to tell how this has been interpreted because of the previous problem.
-   - The [`href`](/en-US/docs/Web/HTML/Element/a#href) attribute value is missing a closing double quote. This seems to have caused the biggest problem — the link has not been rendered at all.
+   - The [`href`](/en-US/docs/Web/HTML/Reference/Elements/a#href) attribute value is missing a closing double quote. This seems to have caused the biggest problem — the link has not been rendered at all.
 
 5. Now let's examine the rendered DOM, as opposed to the source code. To do this, open your browser's DOM inspector. You will see a representation of the rendered markup: ![The HTML inspector in Firefox, with our example's paragraph highlighted, showing the text "What causes errors in HTML?" Here you can see that the paragraph element has been closed by the browser.](html-inspector.png)
 6. Look at how the browser has tried to fix our HTML errors (we did the review in Firefox; other modern browsers _should_ give the same result):

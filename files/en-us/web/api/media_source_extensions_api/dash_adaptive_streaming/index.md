@@ -2,8 +2,9 @@
 title: DASH Adaptive Streaming for HTML video
 slug: Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming
 page-type: guide
-sidebar: mediasidebar
 ---
+
+{{DefaultAPISidebar("Media Source Extensions")}}
 
 Dynamic Adaptive Streaming over HTTP (DASH) is an adaptive streaming protocol. This means that it allows for a video stream to switch between bit rates on the basis of network performance, in order to keep a video playing.
 

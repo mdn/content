@@ -75,7 +75,7 @@ Attribution-Reporting-Register-Trigger: <json-string>
         - `"priority"` {{optional_inline}}
           - : A string representing a priority value for the attribution trigger. By default, triggers are attributed to the most recent matching source. For both event-level and summary reports you set a higher priority number to make the trigger match older sources. For example, a value of `2` takes priority over the default value of `1`. See [Report priorities and limits](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#report_priorities_and_limits) for more information.
         - `"deduplication_key"` {{optional_inline}}
-          - : A string representing a unique key that can be used to prevent attributions from being duplicated — for example if a user were to add the same item to a shopping cart multiple times. See [Prevent duplication in reports](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/prevent-duplication) for more information.
+          - : A string representing a unique key that can be used to prevent attributions from being duplicated — for example if a user were to add the same item to a shopping cart multiple times. See [Prevent duplication in reports](https://privacysandbox.google.com/private-advertising/attribution-reporting/prevent-duplication) for more information.
         - `"filters"` {{optional_inline}}
           - : An object containing filters that perform selective filtering to set `"trigger_data"`, `"priority"`, and `"deduplication_key"` based on the `filter_data` set in a corresponding {{HTTPHeader("Attribution-Reporting-Register-Source")}} header. See [Filters](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#filters) for more information.
 
@@ -89,15 +89,15 @@ A Node.js server might set the `Attribution-Reporting-Register-Trigger` response
 res.set(
   "Attribution-Reporting-Register-Trigger",
   JSON.stringify({
-    "event_trigger_data": [
+    event_trigger_data: [
       {
-        "trigger_data": "4",
-        "priority": "1000000000000",
-        "deduplication_key": "2345698765",
+        trigger_data: "4",
+        priority: "1000000000000",
+        deduplication_key: "2345698765",
       },
     ],
-    "debug_key": "1115698977",
-  });
+    debug_key: "1115698977",
+  }),
 );
 ```
 
@@ -109,22 +109,22 @@ When registering a trigger intended to match with a summary report attribution s
 res.set(
   "Attribution-Reporting-Register-Trigger",
   JSON.stringify({
-    "aggregatable_trigger_data": [
+    aggregatable_trigger_data: [
       {
-        "key_piece": "0x400",
-        "source_keys": ["campaignCounts"]
+        key_piece: "0x400",
+        source_keys: ["campaignCounts"],
       },
       {
-        "key_piece": "0xA80",
-        "source_keys": ["geoValue", "nonMatchingKeyIdsAreIgnored"]
-      }
+        key_piece: "0xA80",
+        source_keys: ["geoValue", "nonMatchingKeyIdsAreIgnored"],
+      },
     ],
-    "aggregatable_values": {
-      "campaignCounts": 32768,
-      "geoValue": 1664
+    aggregatable_values: {
+      campaignCounts: 32768,
+      geoValue: 1664,
     },
-    "debug_key": "1115698977"
-  });
+    debug_key: "1115698977",
+  }),
 );
 ```
 

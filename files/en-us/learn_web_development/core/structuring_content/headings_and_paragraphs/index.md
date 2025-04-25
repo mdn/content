@@ -2,9 +2,8 @@
 title: Headings and paragraphs
 slug: Learn_web_development/Core/Structuring_content/Headings_and_paragraphs
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content/Emphasis_and_importance", "Learn_web_development/Core/Structuring_content")}}
 
@@ -27,7 +26,7 @@ One of HTML's main jobs is to give text structure so that a browser can display 
         <ul>
           <li>How to create a good document structure with headings and content beneath those headings.</li>
           <li>Using semantic HTML rather than presentational HTML, and why this is important.</li>
-          <li>The need for heading levels to be used logically, i.e. no skipping levels or using them arbitrarily because you want to achieve a certain font size (that's a job for CSS).</li>
+          <li>The need for heading levels to be used logically, i.e., no skipping levels or using them arbitrarily because you want to achieve a certain font size (that's a job for CSS).</li>
           <li>SEO benefits: for example, keywords are boosted in headings.</li>
           <li>Accessibility benefits: Assistive technology (AT) such as screen readers use headings (and other landmarks) as signposts to navigate content. HTML documents are very difficult for AT users to use without headings.</li>
         </ul>

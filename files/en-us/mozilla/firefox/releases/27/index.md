@@ -27,7 +27,7 @@ More details in [this post](https://hacks.mozilla.org/2013/11/firefox-developer-
 
 - The `-moz-grab` and `-moz-grabbing` keywords on the CSS {{cssxref("cursor")}} property have been unprefixed to `grab` and `grabbing` ([Firefox bug 880672](https://bugzil.la/880672)).
 - Support for the `-moz-hsla()` and `-moz-rgba()` functional notations has been dropped. Only the unprefixed versions, `hsla()` and `rgba()` are supported from now on ([Firefox bug 893319](https://bugzil.la/893319)).
-- The "`true`" value for {{cssxref("text-align")}} has been added ([Firefox bug 929991](https://bugzil.la/929991)).
+- The `true` value for {{cssxref("text-align")}} has been added ([Firefox bug 929991](https://bugzil.la/929991)).
 - Experimental support of `position:sticky` is now active by default on non-release builds ([Firefox bug 902992](https://bugzil.la/902992)). For releases builds, the `layout.css.sticky.enabled` preference still needs to be set to `true`.
 - The {{cssxref("all")}} shorthand property has been added ([Firefox bug 842329](https://bugzil.la/842329)).
 - The {{cssxref("unset")}} global value has been added; it allows to reset any CSS property ([Firefox bug 921731](https://bugzil.la/921731)).
@@ -36,8 +36,8 @@ More details in [this post](https://hacks.mozilla.org/2013/11/firefox-developer-
 
 ### HTML
 
-- The `color` value of the {{HTMLElement("input")}} [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute has been implemented on desktop platforms. It was already available on mobile ones.
-- The `allow-popups` directive is now supported with the [`sandbox`](/en-US/docs/Web/HTML/Element/iframe#sandbox) attribute of the {{HTMLElement("iframe")}} element ([Firefox bug 766282](https://bugzil.la/766282)).
+- The `color` value of the {{HTMLElement("input")}} [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute has been implemented on desktop platforms. It was already available on mobile ones.
+- The `allow-popups` directive is now supported with the [`sandbox`](/en-US/docs/Web/HTML/Reference/Elements/iframe#sandbox) attribute of the {{HTMLElement("iframe")}} element ([Firefox bug 766282](https://bugzil.la/766282)).
 - Blending of HTML elements using the {{cssxref("mix-blend-mode")}} property has been implemented. The `layout.css.mix-blend-mode.enabled` preference must be set to `true` ([Firefox bug 902525](https://bugzil.la/902525)).
 - The `typeMustMatch` property of the {{HTMLElement("object")}} element is now supported ([Firefox bug 827160](https://bugzil.la/827160)).
 

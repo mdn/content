@@ -3,7 +3,9 @@ title: "size: Wasm text instruction"
 short-title: size
 slug: WebAssembly/Reference/Memory/Size
 page-type: webassembly-instruction
-browser-compat: webassembly.multiMemory
+browser-compat:
+  - webassembly.api.Memory
+  - webassembly.multiMemory
 spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-memory
 sidebar: webassemblysidebar
 ---
@@ -38,7 +40,7 @@ await WebAssembly.instantiateStreaming(fetch(url), { console });
 
 Get size of default memory
 
-```wasm
+```wat
 ;; Get the number of pages in the default memory
 memory.size
 ;; The number of pages is now added at top of stack
@@ -46,7 +48,7 @@ memory.size
 
 Get size of specified memory (if multi-memory supported)
 
-```wasm
+```wat
 ;; Size of memory with index 1
 memory.size (memory 1)
 
@@ -69,7 +71,7 @@ We can get the number of pages in this memory by calling `memory.size`.
 
 The code below shows a WAT file that demonstrates this:
 
-```wasm
+```wat
 (module
   (import "console" "log" (func $log (param i32)))
   (memory 1 2) ;; default memory with one page and max of 2 pages
@@ -93,7 +95,7 @@ The code below shows a WAT file that demonstrates this:
 
 Above we didn't need to specify the memory index in the `memory.size` instruction, but we could have done so using the memory index (0) of the default memory:
 
-```wasm
+```wat
 memory.size (memory 0)
 ```
 
@@ -125,7 +127,7 @@ If you don't specify a particular memory the default memory with index 0 is used
 
 The module below shows how you might directly reference a memory by index and by name.
 
-```wasm
+```wat
 (module
   (import "console" "log" (func $log (param i32)))
   (memory 1 2)  ;; Default memory with one page and max of 2 pages
@@ -151,8 +153,7 @@ The WAT files could be loaded using the same JavaScript code as the first exampl
 
 ## Browser compatibility
 
-> [!NOTE]
-> Memory support in Wasm modules matches the [`WebAssembly.Memory`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory) JavaScript API.
-> The [multiMemory](#webassembly.multimemory) key indicates versions in which `size` can be used with a specified memory.
-
 {{Compat}}
+
+> [!NOTE]
+> The `multiMemory` compatibility table indicates versions in which `size` can be used with a specified memory.

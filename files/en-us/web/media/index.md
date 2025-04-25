@@ -62,7 +62,7 @@ These articles describe the HTML elements used for including media:
 Related topics which may be of interest, since they can be used in tandem with media APIs in interesting ways.
 
 - [Accessible multimedia](/en-US/docs/Learn_web_development/Core/Accessibility/Multimedia)
-  - : In this guide, we cover ways web designers and developers can create content that is accessible to people with different capabilities. This ranges from using the [`alt`](/en-US/docs/Web/HTML/Element/img#alt) attribute on {{HTMLElement("img")}} elements to captions to tagging media for screen readers.
+  - : In this guide, we cover ways web designers and developers can create content that is accessible to people with different capabilities. This ranges from using the [`alt`](/en-US/docs/Web/HTML/Reference/Elements/img#alt) attribute on {{HTMLElement("img")}} elements to captions to tagging media for screen readers.
 - [Canvas API](/en-US/docs/Web/API/Canvas_API)
   - : The Canvas API lets you draw into an {{HTMLElement("canvas")}}, manipulating and changing the contents of an image. This can be used with media in many ways, including by setting a `<canvas>` element as the destination for video playback or camera capture so that you can capture and manipulate video frames.
 - [WebGL](/en-US/docs/Web/API/WebGL_API)

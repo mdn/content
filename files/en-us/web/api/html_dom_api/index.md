@@ -41,7 +41,7 @@ Among the things added to `Document` by the HTML standard are:
 
 - Support for accessing various information provided by the {{Glossary("HTTP")}} headers when loading the page, such as the {{DOMxRef("Document/location", "location", "", "1")}} from which the document was loaded, {{DOMxRef("Document/cookie", "cookies", "", "1")}}, {{DOMxRef("Document/lastModified", "modification date", "", "1")}}, {{DOMxRef("Document/referrer", "referring site", "", "1")}}, and so forth.
 - Access to lists of elements in the document's {{HTMLElement("head")}} block and {{DOMxRef("Document/body", "body", "", "1")}}, as well as lists of the {{DOMxRef("Document/images", "images", "", "1")}}, {{DOMxRef("Document/links", "links", "", "1")}}, {{DOMxRef("Document/scripts", "scripts", "", "1")}}, etc. contained in the document.
-- Support for interacting with the user by examining {{DOMxRef("Document/hasFocus", "focus", "", "1")}} and by executing commands on [editable content](/en-US/docs/Web/HTML/Global_attributes/contenteditable).
+- Support for interacting with the user by examining {{DOMxRef("Document/hasFocus", "focus", "", "1")}} and by executing commands on [editable content](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable).
 - Event handlers for document events defined by the HTML standard to allow access to {{DOMxRef("MouseEvent", "mouse", "", "1")}} and {{DOMxRef("KeyboardEvent", "keyboard", "", "1")}} events, {{DOMxRef("HTML_Drag_and_Drop_API", "drag and drop", "", "1")}}, {{DOMxRef("HTMLMediaElement", "media control", "", "1")}}, and more.
 - Event handlers for events that can be delivered to both elements and documents; these presently include only {{DOMxRef("HTMLElement/copy_event", "copy", "", "1")}}, {{DOMxRef("HTMLElement/cut_event", "cut", "", "1")}}, and {{DOMxRef("HTMLElement/paste_event", "paste", "", "1")}} actions.
 
@@ -364,8 +364,8 @@ The HTML for the form looks like this:
 
 ### References
 
-- [HTML elements reference](/en-US/docs/Web/HTML/Element)
-- [HTML attribute reference](/en-US/docs/Web/HTML/Attributes)
+- [HTML elements reference](/en-US/docs/Web/HTML/Reference/Elements)
+- [HTML attribute reference](/en-US/docs/Web/HTML/Reference/Attributes)
 - {{DOMxRef("Document_Object_Model", "Document Object Model (DOM)", "", "1")}} reference
 
 ### Guides

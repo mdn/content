@@ -46,21 +46,7 @@ writeTexture(destination, data, dataLayout, size)
 
       - : An object or array specifying the origin of the copy — the minimum corner of the texture region to write the data to. Together with `size`, this defines the full extent of the region to copy to. The `x`, `y`, and `z` values default to 0 if any of all of `origin` is omitted.
 
-        What follows is a sample array:
-
-        ```js
-        origin: [0, 0, 0];
-        ```
-
-        The object equivalent would look like this:
-
-        ```js
-        origin: {
-          x: 0,
-          y: 0,
-          z: 0
-        }
-        ```
+        For example, you can pass an array like `[0, 0, 0]`, or its equivalent object `{ x: 0, y: 0, z: 0 }`.
 
     - `texture`
       - : A {{domxref("GPUTexture")}} object representing the texture to write the data to.
@@ -72,7 +58,7 @@ writeTexture(destination, data, dataLayout, size)
     - `offset` {{optional_inline}}
       - : The offset, in bytes, from the beginning of `data` to the start of the image data to be copied. If omitted, `offset` defaults to 0.
     - `bytesPerRow` {{optional_inline}}
-      - : A number representing the stride, in bytes, between the start of each block row (i.e. a row of complete texel blocks) and the subsequent block row. This is required if there are multiple block rows (i.e. the copy height or depth is more than one block).
+      - : A number representing the stride, in bytes, between the start of each block row (i.e., a row of complete texel blocks) and the subsequent block row. This is required if there are multiple block rows (i.e., the copy height or depth is more than one block).
     - `rowsPerImage` {{optional_inline}}
       - : The number of block rows per single image of the texture. `bytesPerRow` &times; `rowsPerImage` will give you the stride, in bytes, between the start of each complete image. This is required if there are multiple images to copy.
 - `size`

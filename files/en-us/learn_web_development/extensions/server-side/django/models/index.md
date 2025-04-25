@@ -3,9 +3,10 @@ title: "Django Tutorial Part 3: Using models"
 short-title: "3: Models"
 slug: Learn_web_development/Extensions/Server-side/Django/Models
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django")}}
 
 This article shows how to define models for the LocalLibrary website. It explains what a model is, how it is declared, and some of the main field types. It also briefly shows a few of the main ways you can access model data.
 
@@ -42,7 +43,7 @@ We know that we need to store information about books (title, summary, author, w
 
 When designing your models, it makes sense to have separate models for every "object" (a group of related information). In this case, the obvious objects are books, book instances, and authors.
 
-You might also want to use models to represent selection-list options (e.g. like a drop down list of choices), rather than hard coding the choices into the website itself — this is recommended when all the options aren't known up front or may change. Obvious candidates for models, in this case, include the book genre (e.g. Science Fiction, French Poetry, etc.) and language (English, French, Japanese).
+You might also want to use models to represent selection-list options (e.g., like a drop down list of choices), rather than hard coding the choices into the website itself — this is recommended when all the options aren't known up front or may change. Obvious candidates for models, in this case, include the book genre (e.g., Science Fiction, French Poetry, etc.) and language (English, French, Japanese).
 
 Once we've decided on our models and field, we need to think about the relationships. Django allows you to define relationships that are one to one (`OneToOneField`), one to many (`ForeignKey`) and many to many (`ManyToManyField`).
 
@@ -100,7 +101,7 @@ A model can have an arbitrary number of fields, of any type — each one represe
 my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')
 ```
 
-Our above example has a single field called `my_field_name`, of type `models.CharField` — which means that this field will contain strings of alphanumeric characters. The field types are assigned using specific classes, which determine the type of record that is used to store the data in the database, along with validation criteria to be used when values are received from an HTML form (i.e. what constitutes a valid value). The field types can also take arguments that further specify how the field is stored or can be used. In this case we are giving our field two arguments:
+Our above example has a single field called `my_field_name`, of type `models.CharField` — which means that this field will contain strings of alphanumeric characters. The field types are assigned using specific classes, which determine the type of record that is used to store the data in the database, along with validation criteria to be used when values are received from an HTML form (i.e., what constitutes a valid value). The field types can also take arguments that further specify how the field is stored or can be used. In this case we are giving our field two arguments:
 
 - `max_length=20` — States that the maximum length of a value in this field is 20 characters.
 - `help_text='Enter field documentation'` — helpful text that may be displayed in a form to help users understand how the field is used.
@@ -109,13 +110,13 @@ The field name is used to refer to it in queries and templates.
 Fields also have a label, which is specified using the `verbose_name` argument (with a default value of `None`).
 If `verbose_name` is not set, the label is created from the field name by replacing any underscores with a space, and capitalizing the first letter (for example, the field `my_field_name` would have a default label of _My field name_ when used in forms).
 
-The order that fields are declared will affect their default order if a model is rendered in a form (e.g. in the Admin site), though this may be overridden.
+The order that fields are declared will affect their default order if a model is rendered in a form (e.g., in the Admin site), though this may be overridden.
 
 ##### Common field arguments
 
 The following common arguments can be used when declaring many/most of the different field types:
 
-- [help_text](https://docs.djangoproject.com/en/5.0/ref/models/fields/#help-text): Provides a text label for HTML forms (e.g. in the admin site), as described above.
+- [help_text](https://docs.djangoproject.com/en/5.0/ref/models/fields/#help-text): Provides a text label for HTML forms (e.g., in the admin site), as described above.
 - [verbose_name](https://docs.djangoproject.com/en/5.0/ref/models/fields/#verbose-name): A human-readable name for the field used in field labels. If not specified, Django will infer the default verbose name from the field name.
 - [default](https://docs.djangoproject.com/en/5.0/ref/models/fields/#default): The default value for the field. This can be a value or a callable object, in which case the object will be called every time a new record is created.
 - [null](https://docs.djangoproject.com/en/5.0/ref/models/fields/#null): If `True`, Django will store blank values as `NULL` in the database for fields where this is appropriate (a `CharField` will instead store an empty string). The default is `False`.
@@ -134,7 +135,7 @@ The following common arguments can be used when declaring many/most of the diffe
   > Apps created using **manage.py** set the type of the primary key to a [BigAutoField](https://docs.djangoproject.com/en/5.0/ref/models/fields/#bigautofield).
   > You can see this in the local library **catalog/apps.py** file:
   >
-  > ```py
+  > ```python
   > class CatalogConfig(AppConfig):
   >   default_auto_field = 'django.db.models.BigAutoField'
   > ```
@@ -152,8 +153,8 @@ The following list describes some of the more commonly used types of fields.
 - [EmailField](https://docs.djangoproject.com/en/5.0/ref/models/fields/#emailfield) is used to store and validate email addresses.
 - [FileField](https://docs.djangoproject.com/en/5.0/ref/models/fields/#filefield) and [ImageField](https://docs.djangoproject.com/en/5.0/ref/models/fields/#imagefield) are used to upload files and images respectively (the `ImageField` adds additional validation that the uploaded file is an image). These have parameters to define how and where the uploaded files are stored.
 - [AutoField](https://docs.djangoproject.com/en/5.0/ref/models/fields/#autofield) is a special type of `IntegerField` that automatically increments. A primary key of this type is automatically added to your model if you don't explicitly specify one.
-- [ForeignKey](https://docs.djangoproject.com/en/5.0/ref/models/fields/#foreignkey) is used to specify a one-to-many relationship to another database model (e.g. a car has one manufacturer, but a manufacturer can make many cars). The "one" side of the relationship is the model that contains the "key" (models containing a "foreign key" referring to that "key", are on the "many" side of such a relationship).
-- [ManyToManyField](https://docs.djangoproject.com/en/5.0/ref/models/fields/#manytomanyfield) is used to specify a many-to-many relationship (e.g. a book can have several genres, and each genre can contain several books). In our library app we will use these very similarly to `ForeignKeys`, but they can be used in more complicated ways to describe the relationships between groups. These have the parameter `on_delete` to define what happens when the associated record is deleted (e.g. a value of `models.SET_NULL` would set the value to `NULL`).
+- [ForeignKey](https://docs.djangoproject.com/en/5.0/ref/models/fields/#foreignkey) is used to specify a one-to-many relationship to another database model (e.g., a car has one manufacturer, but a manufacturer can make many cars). The "one" side of the relationship is the model that contains the "key" (models containing a "foreign key" referring to that "key", are on the "many" side of such a relationship).
+- [ManyToManyField](https://docs.djangoproject.com/en/5.0/ref/models/fields/#manytomanyfield) is used to specify a many-to-many relationship (e.g., a book can have several genres, and each genre can contain several books). In our library app we will use these very similarly to `ForeignKeys`, but they can be used in more complicated ways to describe the relationships between groups. These have the parameter `on_delete` to define what happens when the associated record is deleted (e.g., a value of `models.SET_NULL` would set the value to `NULL`).
 
 There are many other types of fields, including fields for different types of numbers (big integers, small integers, floats), booleans, URLs, slugs, unique ids, and other "time-related" information (duration, time, etc.). You can view the [full list here](https://docs.djangoproject.com/en/5.0/ref/models/fields/#field-types).
 
@@ -267,7 +268,7 @@ number_wild_books = wild_books.count()
 
 The fields to match and the type of match are defined in the filter parameter name, using the format: `field_name__match_type` (note the _double underscore_ between `title` and `contains` above). Above we're filtering `title` with a case-sensitive match. There are many other types of matches you can do: `icontains` (case insensitive), `iexact` (case-insensitive exact match), `exact` (case-sensitive exact match) and `in`, `gt` (greater than), `startswith`, etc. The [full list is here](https://docs.djangoproject.com/en/5.0/ref/models/querysets/#field-lookups).
 
-In some cases, you'll need to filter on a field that defines a one-to-many relationship to another model (e.g. a `ForeignKey`). In this case, you can "index" to fields within the related model with additional double underscores.
+In some cases, you'll need to filter on a field that defines a one-to-many relationship to another model (e.g., a `ForeignKey`). In this case, you can "index" to fields within the related model with additional double underscores.
 So for example to filter for books with a specific genre pattern, you will have to index to the `name` through the `genre` field, as shown below:
 
 ```python
@@ -443,7 +444,7 @@ The method `__str__()` represents the `BookInstance` object using a combination 
 > A little Python:
 >
 > - Starting with Python 3.6, you can use the string interpolation syntax (also known as f-strings): `f'{self.id} ({self.book.title})'`.
-> - In older versions of this tutorial, we were using a [formatted string](https://peps.python.org/pep-3101/) syntax, which is also a valid way of formatting strings in Python (e.g. `'{0} ({1})'.format(self.id,self.book.title)`).
+> - In older versions of this tutorial, we were using a [formatted string](https://peps.python.org/pep-3101/) syntax, which is also a valid way of formatting strings in Python (e.g., `'{0} ({1})'.format(self.id,self.book.title)`).
 
 ### Author model
 

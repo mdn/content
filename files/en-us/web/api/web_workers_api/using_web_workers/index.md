@@ -13,7 +13,7 @@ This article provides a detailed introduction to using web workers.
 
 ## Web Workers API
 
-A worker is an object created using a constructor (e.g. {{domxref("Worker.Worker", "Worker()")}}) that runs a named JavaScript file — this file contains the code that will run in the worker thread; workers run in another global context that is different from the current {{domxref("window")}}. Thus, using the {{domxref("window")}} shortcut to get the current global scope (instead of {{domxref("window.self","self")}}) within a {{domxref("Worker")}} will return an error.
+A worker is an object created using a constructor (e.g., {{domxref("Worker.Worker", "Worker()")}}) that runs a named JavaScript file — this file contains the code that will run in the worker thread; workers run in another global context that is different from the current {{domxref("window")}}. Thus, using the {{domxref("window")}} shortcut to get the current global scope (instead of {{domxref("window.self","self")}}) within a {{domxref("Worker")}} will return an error.
 
 The worker context is represented by a {{domxref("DedicatedWorkerGlobalScope")}} object in the case of dedicated workers (standard workers that are utilized by a single script; shared workers use {{domxref("SharedWorkerGlobalScope")}}). A dedicated worker is only accessible from the script that first spawned it, whereas shared workers can be accessed from multiple scripts.
 
@@ -204,7 +204,7 @@ onconnect = (e) => {
 };
 ```
 
-First, we use an `onconnect` handler to fire code when a connection to the port happens (i.e. when the `onmessage` event handler in the parent thread is set up, or when the `start()` method is explicitly called in the parent thread).
+First, we use an `onconnect` handler to fire code when a connection to the port happens (i.e., when the `onmessage` event handler in the parent thread is set up, or when the `start()` method is explicitly called in the parent thread).
 
 We use the `ports` attribute of this event object to grab the port and store it in a variable.
 
@@ -452,7 +452,7 @@ Here are the full implementation:
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>MDN Example - Queryable worker</title>
-    <script type="text/javascript">
+    <script>
       // QueryableWorker instances methods:
       //   * sendQuery(queryable function name, argument to pass 1, argument to pass 2, etc. etc.): calls a Worker's queryable function
       //   * postMessage(string or JSON Data): see Worker.prototype.postMessage()
@@ -816,6 +816,14 @@ To learn how to debug web workers, see the documentation for each browser's Java
 
 - [Chrome Sources panel](https://developer.chrome.com/docs/devtools/sources)
 - [Firefox JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/)
+
+To open devtools for web workers, you can use the following URLs:
+
+- Edge: `edge://inspect/`
+- Chrome: `chrome://inspect/`
+- Firefox: `about:debugging#/runtime/this-firefox`
+
+These pages show an overview over all service workers. You need to find the relevant one by the URL and then click _inspect_ to access devtools such as the console and debugger for that worker.
 
 ## Functions and interfaces available in workers
 

@@ -31,7 +31,7 @@ getMetadata(successCallback, errorCallback)
     about the file.
 - `errorCallback` {{optional_inline}}
   - : An optional callback which is executed if an error occurs while looking up the
-    metadata. There's a single parameter: a {{domxref("FileError")}} describing what went
+    metadata. There's a single parameter: a {{domxref("DOMException")}} describing what went
     wrong.
 
 ### Return value
@@ -40,9 +40,9 @@ None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- `FileError.NOT_FOUND_ERR`
+- `DOMException.NOT_FOUND_ERR`
   - : The {{domxref("FileSystemEntry")}} refers to an item which doesn't exist.
-- `FileError.SECURITY_ERR`
+- `DOMException.SECURITY_ERR`
   - : Security restrictions prohibit obtaining the requested metadata.
 
 ## Examples

@@ -19,7 +19,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement('rect')}}
 - {{SVGElement('text')}}
 - {{SVGElement('textPath')}}
-- {{SVGElement('tref')}}
 - {{SVGElement('tspan')}}
 
 ## Example
@@ -116,7 +115,7 @@ svg {
     <tr>
       <th scope="row">Value</th>
       <td>
-        <code>arcs</code> | <code>bevel</code> |<code>miter</code> |
+        <code>arcs</code> | <code>bevel</code> | <code>miter</code> |
         <code>miter-clip</code> | <code>round</code>
       </td>
     </tr>
