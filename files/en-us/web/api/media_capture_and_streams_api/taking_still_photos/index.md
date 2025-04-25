@@ -665,6 +665,9 @@ function takePicture() {
     if (width && height) {
       canvas.width = width;
       canvas.height = height;
+
+      const videoStyles = window.getComputedStyle(video);
+      const filterValue = videoStyles.getPropertyValue("filter");
       context.drawImage(video, 0, 0, width, height);
 
       const data = canvas.toDataURL("image/png");
