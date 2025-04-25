@@ -77,7 +77,7 @@ the Stop button is pressed.
 <div id="my_box">
   <h3>Hello World</h3>
 </div>
-<button id="start">Start</button>
+<button id="go">Start</button>
 <button id="stop">Stop</button>
 ```
 
