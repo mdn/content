@@ -35,7 +35,7 @@ HTML attributes fall into two categories: `element-specific attributes`, which a
 >     For example, the [class](/en-US/docs/Web/HTML/Reference/Global_attributes/class) attribute has a _title_ of `class`.
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`.
->     This will be formatted like `Web/HTML/Reference/Global_attributes/NameOfTheAttribute`, where the attributes name is in _lower case_. Ensure the slug follow the convention when working with element-specific attributes (e.g., `Web/HTML/Reference/Attributes//NameOfTheAttribute`).
+>     This will be formatted like `Web/HTML/Reference/Global_attributes/NameOfTheAttribute`, where the attributes name is in _lower case_. Ensure the slug follows the convention when working with element-specific attributes (e.g., `Web/HTML/Reference/Attributes/NameOfTheAttribute`).
 >     For example, the [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class) element has a _slug_ of `Web/HTML/Reference/Global_attributes/class`.
 > - **page-type**
 >   - : Always `html-attribute`.
@@ -44,11 +44,11 @@ HTML attributes fall into two categories: `element-specific attributes`, which a
 > - **browser-compat**
 >
 >   - : Replace the placeholder value `html.global_attributes.NameOfTheAttribute` with the query string for the global attribute in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
-Ensure the query follow the convention when working with element-specific attributes (e.g., `html.elements.NameOfTheElement.NameOfTheAttribute`).
+>     Ensure the query follows the convention when working with element-specific attributes (e.g., `html.elements.NameOfTheElement.NameOfTheAttribute`).
 >     The toolchain automatically uses the key to populate the compatibility and specification sections (replacing the `\{{Compat}}` and `\{{Specifications}}` macros).
 >
->     Note that you may first need to create/update an entry for the attribute in our [Browser compat data repo](https://github.com/mdn/browser-compat-data), and the entry will need to include specification information.
->     See our [guide on how to do this](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
+>      Note that you may first need to create/update an entry for the attribute in our [Browser compat data repo](https://github.com/mdn/browser-compat-data), and the entry will need to include specification information.
+>         See our [guide on how to do this](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
 >
 > ---
 >
@@ -79,8 +79,8 @@ Ensure the query follow the convention when working with element-specific attrib
 
 {{HTMLSidebar}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-Start by introducing the reader to the attribute, and it's usage.
-For Example: The **`<insert_the_attribute_name>`** attribute is used in [HTML](/en-US/docs/Web/HTML) to describe or manipulate <insert_usage_description>, assisting browsers understand how to handel the element it's applied to.
+Start by introducing the reader to the attribute, and its usage.
+For Example: The **`<insert_the_attribute_name>`** attribute is used in [HTML](/en-US/docs/Web/HTML) to describe or manipulate <insert_usage_description>, assisting browsers in understanding how to handle the element it's applied to.
 
 ## Try it
 
@@ -99,6 +99,7 @@ Warn of any potential accessibility concerns that may exist with using this attr
 Provide a list of possible values for the attribute if any (remove if not applicable). Include the default value if there is one, and a brief description for each value.
 
 - `value 1`:
+
   - : Description of value 1. This is the Default value.
 
   - `value 2`:
