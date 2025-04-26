@@ -53,6 +53,8 @@ _The `WorkerNavigator` interface doesn't inherit any property._
   - : Returns a {{domxref("ServiceWorkerContainer")}} object, which provides access to registration, removal, upgrade, and communication with the {{domxref("ServiceWorker")}} objects for the [associated document](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window).
 - {{DOMxRef("WorkerNavigator.storage")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a {{DOMxRef('StorageManager')}} interface for managing persistence permissions and estimating available storage.
+- {{DOMxRef("WorkerNavigator.storageBuckets")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
+  - : ......
 - {{domxref("WorkerNavigator.usb")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a {{domxref("USB")}} object for the current document, providing access to [WebUSB API](/en-US/docs/Web/API/WebUSB_API) functionality.
 - {{DOMxRef("WorkerNavigator.userAgent")}} {{ReadOnlyInline}}

@@ -77,6 +77,8 @@ _Doesn't inherit any properties._
   - : Returns a {{domxref("ServiceWorkerContainer")}} object, which provides access to registration, removal, upgrade, and communication with the {{domxref("ServiceWorker")}} objects for the [associated document](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window).
 - {{domxref("Navigator.storage")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns the singleton {{domxref('StorageManager')}} object used for managing persistence permissions and estimating available storage on a site-by-site/app-by-app basis.
+- {{domxref("Navigator.storageBuckets")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
+  - : ......
 - {{domxref("Navigator.usb")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a {{domxref("USB")}} object for the current document, providing access to [WebUSB API](/en-US/docs/Web/API/WebUSB_API) functionality.
 - {{domxref("Navigator.userActivation")}} {{ReadOnlyInline}}
