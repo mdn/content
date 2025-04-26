@@ -17,7 +17,6 @@ mask-type: luminance;
 mask-type: alpha;
 
 /* Global values */
-mask-type: inherit;
 mask-type: initial;
 mask-type: revert;
 mask-type: revert-layer;
@@ -35,7 +34,7 @@ The `mask-type` property accepts a comma-separated list of keyword values, inclu
 
 ## Description
 
-The `mask-type` property is only relevant to mask layers when the mask image is a `<mask>` element. The property defines whether the resolved value of the {{cssxref("mask-mode")}} property value if the `mask-mode` property is explicitly set to or defaults to `match-mode`. If `mask-mode` is set to any other `<masking-mode>` value, that value overrides the `mask-type` value. If the mask image source is not an SVG `<mask>`, this property has no effect.
+The `mask-type` property is only relevant when applied to the `<mask>` elements. The property defines whether the resolved value of the {{cssxref("mask-mode")}} property value if the `mask-mode` property is explicitly set to or defaults to `match-mode`. If `mask-mode` is set to any other `<masking-mode>` value, that value overrides the `mask-type` value. If the mask image source is not an SVG `<mask>`, this property has no effect.
 
 by the mask defined by a `<mask>` element being used as an element's `mask-image`, i.e., the `<mask>`'s [relative luminance](https://en.wikipedia.org/wiki/Luminance_%28relative%29) values should be used when masking is applied.
 

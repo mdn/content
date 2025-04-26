@@ -7,7 +7,7 @@ browser-compat: css.properties.mask-mode
 
 {{CSSRef}}
 
-The **`mask-mode`** [CSS](/en-US/docs/Web/CSS) property sets whether the mask reference defined by {{cssxref("mask-image")}} is treated as a luminance or alpha mask.
+The **`mask-mode`** [CSS](/en-US/docs/Web/CSS) property sets whether the mask reference defined as the {{cssxref("mask-image")}} is treated as a luminance or alpha mask.
 
 ## Syntax
 
@@ -41,13 +41,20 @@ The `mask-mode` property is a comma-separated list of `<masking-mode>` keyword v
   - : Indicates that the luminance values of the mask layer image should be used as the mask values.
 
 - `match-source`
-  - : If the {{cssxref("mask-image")}} property values is a reference to an SVG {{svgelement("mask")}}, the `<mask>` element's {{cssxref("mask-type")}} property value is used, or it's {{svgattribute("mask-type")}} attribute, if present. If neither is explicitly set, this value defaults to `luminance`. Otherwise, if the mask image source is an {{cssxref("image")}}, rather than an SVG `<mask>`, the `alpha` values of the mask layer image should is used.
+  - : If the {{cssxref("mask-image")}} property values is a reference to an SVG {{svgelement("mask")}}, the `<mask>` element's {{cssxref("mask-type")}} property value is used, or it's {{svgattribute("mask-type")}} attribute, if present. If neither is explicitly set, in the case of the `<mask>` element as the mask source, this value defaults to `luminance`. Otherwise, if the mask image source is an {{cssxref("image")}}, rather than an SVG `<mask>`, the `alpha` values of the mask layer image is used.
 
 ### Description
 
-If it is of type {{cssxref("&lt;image&gt;")}}, the alpha values of the mask layer image should be used as the mask values.
+A mask transfers its transparency and, depending on the mask type, it's luminescence, to the element it is masking.
+If the mask is of type {{cssxref("&lt;image&gt;")}}, by default the alpha values of the mask layer image is used as the mask values; where the mask is opaque, the pixels of the masked object are opaque. Where the mask is translucent, the element is as well, with those areas of the element being hidden. This is what happens with `<image>` masks, when the `mask-mode` property is set or defaults to `match-source`, and in all cases when the `mask-mode` is explicitly set to `alpha`.
 
-`luminance`, which means white opaque areas (100% luminance) will be masked and visible, transparent and black areas (0% luminance) will be clipped, and anything in between will be partially masked.
+In the case of `luminance` masks, whether the areas masked by an opaque mask are opaque themselves depends partially on the lightness of the color of the opaque areas. White opaque areas (100% luminance) will be masked and visible, transparent and black areas (0% luminance) will be clipped, and anything in between will be partially masked, reflecting the luminance and alpha-transparency of each color making up the mask.
+
+The opacity of a `luminance` mask is determined by the `R`, `G`, `B`, and `A` values of an `rgb()` color. The equation is `((0.2125 * R) + (0.7154 * G) + (0.0721 * B)) * A`. In a `luminance` mask, the color `green` being `#008000`, or `rgb(0% 50% 0% / 1)`, any area masked by a solid `green` mask will be `35.77%` opaque. If the `mask-mode` for this mask is set to `alpha`, as `green` is a fully opaque color, the masked area will be `100%` opaque.
+
+Each `mask-mode` value in the comma-separated list of values. When multiple values are present, each value will match up to the image in the same position in the {{cssxref("mask-image")}} value. The value defines whether the associated mask image is treated as a `luminance` or `alpha` mask.
+
+In the case of `match-source`, whether `luminance` or `alpha` is used depends on the mask mode of the mask source. If the `mask-image` property values is a reference to an SVG {{svgelement("mask")}} element, the `<mask>` element's {{cssxref("mask-type")}} property value is used. If there is no CSS `mask-type` property set on the `<mask>` element, the value of the `<mask>` element's {{svgattribute("mask-type")}} attribute is used, if present and supported. If neither is explicitly set, this value defaults to `luminance`; but only in the case of the `<mask>` element as the mask source. Otherwise, as noted before, if the mask image source is an {{cssxref("image")}}, rather than an SVG `<mask>`, the `alpha` values of the mask layer image is used.
 
 ## Formal definition
 
@@ -59,172 +66,61 @@ If it is of type {{cssxref("&lt;image&gt;")}}, the alpha values of the mask laye
 
 ## Examples
 
-### Using alpha mask mode
+### Using `mask-mode`
 
-```html live-sample___mask-mode-example
-<div class="masked"></div>
-```
-
-```css live-sample___mask-mode-example
-.masked {
-  width: 227px;
-  height: 200px;
-  background: blue linear-gradient(red, blue);
-
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mdn.svg);
-  mask-mode: alpha;
-}
-```
-
-{{EmbedLiveSample("mask-mode-example", "", "250px")}}
-
-### Masking with SVG `<mask>`
-
-This example demonstrates using SVG {{svgelement("mask")}} elements as masks. The `mask-type` value defaults to `match-mode`, which for SVG masks resolves to the `<mask>` element's {{cssxref("mask-type")}} property value or {{svgattribute("mask-type")}} attribute. If neither is explicitly set, defaulting to `luminance`.
+This example demonstrates the basic usage and different values of the `mask-mode` property.
 
 #### HTML
 
-We've include four {{htmlelements("img")}} elements and an SVG defining the masks. The SVG contains three `<mask>` elements defining identical paths creating a heart shape in opaque colors and a semi-opaque black and white circle. Two include the `mask-type` attribute, the third doesn't have the attribute set.
+We include three `<div>` elements, so we can demonstrate the three enumerated `mask-mode` keyword values.
 
 ```html
-<p><code>mask-type: match-source</code> set</p>
-<img
-  class="matchSourceMaskType noMaskMode"
-  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-  alt="Pride flag" />
-<img
-  class="matchSourceMaskType alphaMaskMode"
-  id="stroke"
-  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-  alt="Pride flag" />
-<img
-  class="matchSourceMaskType luminanceaMaskMode"
-  id="both"
-  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-  alt="Pride flag" />
-
-<p><code>mask-type: alpha</code> set</p>
-<img
-  class="alphaMaskType noMaskMode"
-  id="alphaMode"
-  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-  alt="Pride flag" />
-<img
-  class="alphaMaskType alphaMaskMode"
-  id="alphaMode"
-  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-  alt="Pride flag" />
-<img
-  class="alphaMaskType luminanceaMaskMode"
-  id="alphaMode"
-  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-  alt="Pride flag" />
-
-<p><code>mask-type: luminance</code> set</p>
-<img
-  class="luminanceMaskType noMaskMode"
-  id="alphaMode"
-  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-  alt="Pride flag" />
-<img
-  class="luminanceMaskType alphaMaskMode"
-  id="alphaMode"
-  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-  alt="Pride flag" />
-<img
-  class="luminanceMaskType luminanceaMaskMode"
-  id="alphaMode"
-  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-  alt="Pride flag" />
-
-<svg height="0" width="0">
-  <mask id="mtAlpha">
-    <path
-      d="M20,70 A40,40,0,0,1,100,70 A40,40,0,0,1,180,70 Q180,130,100,190 Q20,130,20,70 Z"
-      fill="green"
-      stroke="white"
-      stroke-width="20" />
-    <circle
-      cx="130"
-      cy="130"
-      r="50"
-      fill="rgb(0 0 0 / 0.5)"
-      stroke="rgb(255 255 255 / 0.5)"
-      stroke-width="20" />
-  </mask>
-  <mask id="mtLumminance">
-    <path
-      d="M20,70 A40,40,0,0,1,100,70 A40,40,0,0,1,180,70 Q180,130,100,190 Q20,130,20,70 Z"
-      fill="green"
-      stroke="white"
-      stroke-width="20" />
-    <circle
-      cx="130"
-      cy="130"
-      r="50"
-      fill="rgb(0 0 0 / 0.5)"
-      stroke="rgb(255 255 255 / 0.5)"
-      stroke-width="20" />
-  </mask>
-  <mask id="mtOmitted">
-    <path
-      d="M20,70 A40,40,0,0,1,100,70 A40,40,0,0,1,180,70 Q180,130,100,190 Q20,130,20,70 Z"
-      fill="green"
-      stroke="white"
-      stroke-width="20" />
-    <circle
-      cx="130"
-      cy="130"
-      r="50"
-      fill="rgb(0 0 0 / 0.5)"
-      stroke="rgb(255 255 255 / 0.5)"
-      stroke-width="20" />
-  </mask>
-</svg>
+<div class="alpha">ALPHA</div>
+<div class="luminance">LUMINANCE</div>
+<div class="matchSource">MATCH-SOURCE</div>
 ```
 
 #### CSS
 
-We apply one of the three `<mask>` elements along with one three `mask-mode` values to each of the images, creating nine combinations.
-
-```css
-.matchSourceMaskType {
-  mask-image: url(#mtOmitted);
-}
-.alphaMaskType {
-  mask-image: url(#mtAlpha);
-}
-.luminanceMaskType {
-  mask-image: url(#mtLumminance);
-}
-.luminanceaMaskMode {
-  mask-mode: luminance;
-}
-.alphaMaskMode {
-  mask-mode: alpha;
-}
-.noMaskMode {
-  mask-mode: initial;
-}
-```
+Each `<div>` is provided with the same background and masking image. The only difference between each `<div>` is the value of the `mask-mode` property:
 
 ```css hidden
-img,
-svg {
-  width: 30vw;
-  mask-size: contain;
+div {
+  float: left;
+  text-align: center;
+  line-height: 65px;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  font-family: sans-serif;
 }
 ```
 
-No part of the last image, with the `black` fill, will be visible by default because, in this case, while all colors used in this example are fully opaque, the `mask-mode` defaults to `match-type`, which resolves to `luminance` in this case.
+```css
+div {
+  width: 227px;
+  height: 200px;
+  background: blue linear-gradient(red, blue);
+  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mdn.svg);
+}
 
-The luminance value of `black` is `0`, white is `100`, and [`green` is `46.228`](https://www.colorhexa.com/008000). This means the areas where the mask is white wll be visible, where the mask is black or fully transparent will be clipped (not visible), and where the mask is green will be visible but lighter; green areas will be masked the equivalent of having a white mask that is 46.228% opaque set.
+.alpha {
+  mask-mode: alpha;
+}
+
+.luminance {
+  mask-mode: luminance;
+}
+
+.matchSource {
+  mask-mode: match-source;
+}
+```
 
 #### Results
 
-{{EmbedLiveSample("SVG elements as masks", "100%", 540)}}
+{{EmbedLiveSample("Using mask-mode", "", "250px")}}
 
-When `alpha` is used, the color of the mask doesn't matter; all that matters is the alpha-transparency. When the value resolves to `luminance`, `white` areas are visible, `black` areas are not, and `green` areas are visible but at an opacity that matches the luminance of the color `green`.
+Because the mask source is an `<image>`, and not a `<mask>`, the `match-source` value resolves to `alpha`.
 
 ## Specifications
 
@@ -236,12 +132,7 @@ When `alpha` is used, the color of the mask doesn't matter; all that matters is 
 
 ## See also
 
-- {{cssxref("mask")}} shorthand
+- {{cssxref("mask-type")}}
 - {{cssxref("mask-image")}}
-- {{cssxref("mask-origin")}}
-- {{cssxref("mask-position")}}
-- {{cssxref("mask-repeat")}}
-- {{cssxref("mask-size")}}
-- {{cssxref("mask-border")}}
+- {{cssxref("mask")}} shorthand
 - [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
--
