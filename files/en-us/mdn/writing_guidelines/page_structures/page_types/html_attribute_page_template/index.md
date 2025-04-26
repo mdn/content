@@ -4,6 +4,9 @@ slug: MDN/Writing_guidelines/Page_structures/Page_types/HTML_attribute_page_temp
 page-type: mdn-writing-guide
 sidebar: mdnsidebar
 ---
+
+HTML attributes fall into two categories: `element-specific attributes`, which apply only to certain elements (e.g., the `accept` attribute on `<input type="file">`), and `global attributes` which can be used for any HTML element (e.g., `class`, `id`). This reference provides documentation for both types.
+
 > **Note:** _Remove this whole explanatory note before publishing_
 >
 > ---
@@ -16,13 +19,13 @@ sidebar: mdnsidebar
 > ```md
 > ---
 > title: "<NameOfTheAttribute>: The NameOfTheAttribute attribute"
-> slug: Web/HTML/Attribute/NameOfTheAttribute
+> slug: Web/HTML/Reference/Global_attributes/NameOfTheAttribute
 > page-type: html-attribute
 > status:
 >   - deprecated
 >   - experimental
 >   - non-standard
-> browser-compat: html.attributes.NameOfTheAttribute
+> browser-compat: html.global_attributes.NameOfTheAttribute
 > ---
 > ```
 >
@@ -32,7 +35,7 @@ sidebar: mdnsidebar
 >     For example, the [class](/en-US/docs/Web/HTML/Reference/Global_attributes/class) attribute has a _title_ of `class`.
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`.
->     This will be formatted like `Web/HTML/Reference/Global_attributes/NameOfTheAttribute`, where the attributes name is in _lower case_.
+>     This will be formatted like `Web/HTML/Reference/Global_attributes/NameOfTheAttribute`, where the attributes name is in _lower case_. Ensure the slug follow the convention when working with element-specific attributes (e.g., `Web/HTML/Reference/Attributes//NameOfTheAttribute`).
 >     For example, the [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class) element has a _slug_ of `Web/HTML/Reference/Global_attributes/class`.
 > - **page-type**
 >   - : Always `html-attribute`.
@@ -40,7 +43,8 @@ sidebar: mdnsidebar
 >   - : Flags describing the status of this feature. An array which may contain one or more of the following: `experimental`, `deprecated`, `non-standard`. This key should not be set manually: it is set automatically based on values in the browser compatibility data for the feature. See ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
 > - **browser-compat**
 >
->   - : Replace the placeholder value `html.global_attributes.NameOfTheAttribute` with the query string for the attribute in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
+>   - : Replace the placeholder value `html.global_attributes.NameOfTheAttribute` with the query string for the global attribute in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
+Ensure the query follow the convention when working with element-specific attributes (e.g., `html.elements.NameOfTheElement.NameOfTheAttribute`).
 >     The toolchain automatically uses the key to populate the compatibility and specification sections (replacing the `\{{Compat}}` and `\{{Specifications}}` macros).
 >
 >     Note that you may first need to create/update an entry for the attribute in our [Browser compat data repo](https://github.com/mdn/browser-compat-data), and the entry will need to include specification information.
