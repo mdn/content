@@ -164,7 +164,7 @@ First of all, at the top of the CSS we use a {{cssxref("@font-face")}} block to 
 Next, we use generated content to display an icon on each button:
 
 - We use the {{cssxref("::before")}} selector to display the content before each {{htmlelement("button")}} element.
-- We use the {{cssxref("content")}} property to set the content to be displayed in each case to be equal to the contents of the [`data-icon`](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes) attribute. In the case of our play button, `data-icon` contains a capital "P".
+- We use the {{cssxref("content")}} property to set the content to be displayed in each case to be equal to the contents of the [`data-icon`](/en-US/docs/Web/HTML/How_to/Use_data_attributes) attribute. In the case of our play button, `data-icon` contains a capital "P".
 - We apply the custom web font to our buttons using {{cssxref("font-family")}}. In this font, "P" is actually a "play" icon, so therefore the play button has a "play" icon displayed on it.
 
 Icon fonts are very cool for many reasons — cutting down on HTTP requests because you don't need to download those icons as image files, great scalability, and the fact that you can use text properties to style them — like {{cssxref("color")}} and {{cssxref("text-shadow")}}.

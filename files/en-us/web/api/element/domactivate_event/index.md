@@ -43,10 +43,10 @@ A {{domxref("MouseEvent")}}. Inherits from {{domxref("UIEvent")}} and {{domxref(
   width="6cm"
   height="5cm"
   viewBox="0 0 600 500">
-  <desc>Example: invoke an ECMAScript function from a DOMActivate event</desc>
+  <desc>Example: invoke an JavaScript function from a DOMActivate event</desc>
 
-  <!-- ECMAScript to change the radius -->
-  <script type="application/ecmascript">
+  <!-- JavaScript to change the radius -->
+  <script>
     <![CDATA[ function change(evt) { const circle = evt.target; const
     currentRadius = circle.getFloatTrait("r"); if (currentRadius === 100) {
     circle.setFloatTrait("r", currentRadius * 2); } else {
@@ -55,7 +55,7 @@ A {{domxref("MouseEvent")}}. Inherits from {{domxref("UIEvent")}} and {{domxref(
 
   <!-- Act on each DOMActivate event -->
   <circle cx="300" cy="225" r="100" fill="red">
-    <handler type="application/ecmascript" ev:event="DOMActivate">
+    <handler type="text/javascript" ev:event="DOMActivate">
       change(evt);
     </handler>
   </circle>

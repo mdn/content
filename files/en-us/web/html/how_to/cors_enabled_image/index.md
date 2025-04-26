@@ -1,6 +1,6 @@
 ---
-title: How to use <img> with cross-origin images and <canvas>
-short-title: How to use cross-origin images
+title: Use <img> with cross-origin images and <canvas>
+short-title: Use cross-origin images
 slug: Web/HTML/How_to/CORS_enabled_image
 page-type: how-to
 ---
