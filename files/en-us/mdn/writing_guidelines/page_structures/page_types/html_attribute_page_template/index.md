@@ -28,6 +28,7 @@ Note that most attributes don't need standalone articles; the attribute list in 
 >   - experimental
 >   - non-standard
 > browser-compat: html.global_attributes.name-of-the-attribute
+> sidebar: htmlsidebar
 > ---
 > ```
 >
@@ -45,7 +46,7 @@ Note that most attributes don't need standalone articles; the attribute list in 
 >   - : Flags describing the status of this feature. An array which may contain one or more of the following: `experimental`, `deprecated`, `non-standard`. This key should not be set manually: it is set automatically based on values in the browser compatibility data for the feature. See ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
 > - **browser-compat**
 >   - : Replace the placeholder value `html.global_attributes.name-of-the-attribute` with the query string for the global attribute in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
->     Ensure the query follows the convention when working with element-specific attributes (e.g., `html.elements.name-of-the-element.name-of-the-attribute`).
+>     For element-specific attributes, use the format `html.elements.name-of-the-element.name-of-the-attribute`.
 >     The toolchain automatically uses the key to populate the compatibility and specification sections (replacing the `\{{Compat}}` and `\{{Specifications}}` macros).
 >     Note that you may first need to create/update an entry for the attribute in our [Browser compat data repo](https://github.com/mdn/browser-compat-data), and the entry will need to include specification information.
 >     See our [guide on how to do this](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
