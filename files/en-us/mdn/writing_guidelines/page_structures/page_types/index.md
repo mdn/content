@@ -139,7 +139,7 @@ An **HTML reference page** lists all the attributes that are available on an HTM
 
 ### HTML attribute reference page
 
-An HTML attribute page list all the values that exist on an HTML attribute, explains the attribute purpose and use cases, providing examples, browser compatibility information, and other important data.
+An HTML attribute page lists all values for an HTML attribute, explains the attribute's purpose and use cases, providing examples, browser compatibility information, and other important data.
 
 #### Example
 
