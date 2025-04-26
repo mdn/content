@@ -74,30 +74,30 @@ We also include an SVG with two `<mask>` elements. Other than their id values, t
   alt="Pride flag" />
 
 <svg height="0" width="0">
-  <mask id="mtAlpha">
+  <mask id="alphaMask">
     <path
       d="M20,70 A40,40,0,0,1,100,70 A40,40,0,0,1,180,70 Q180,130,100,190 Q20,130,20,70 Z"
       fill="green"
       stroke="white"
       stroke-width="20" />
     <circle
-      cx="130"
-      cy="130"
-      r="50"
+      cx="170"
+      cy="170"
+      r="40"
       fill="rgb(0 0 0 / 0.5)"
       stroke="rgb(255 255 255 / 0.5)"
       stroke-width="20" />
   </mask>
-  <mask id="mtLumminance">
+  <mask id="luminanceMask">
     <path
       d="M20,70 A40,40,0,0,1,100,70 A40,40,0,0,1,180,70 Q180,130,100,190 Q20,130,20,70 Z"
       fill="green"
       stroke="white"
       stroke-width="20" />
     <circle
-      cx="130"
-      cy="130"
-      r="50"
+      cx="170"
+      cy="170"
+      r="40"
       fill="rgb(0 0 0 / 0.5)"
       stroke="rgb(255 255 255 / 0.5)"
       stroke-width="20" />
