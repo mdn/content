@@ -5,7 +5,9 @@ page-type: mdn-writing-guide
 sidebar: mdnsidebar
 ---
 
-HTML attributes fall into two categories: `element-specific attributes`, which apply only to certain elements (e.g., the `accept` attribute on `<input type="file">`), and `global attributes` which can be used for any HTML element (e.g., `class`, `id`). This reference provides documentation for both types.
+HTML attributes fall into two categories: **element-specific attributes**, which apply only to certain elements (e.g., the `accept` attribute on `<input type="file">`), and **global attributes** which can be used for any HTML element (e.g., `class`, `id`). The former should be put under `HTML/Reference/Attributes`, while the latter should be put under `HTML/Reference/Global_attributes`.
+
+Note that most attributes don't need standalone articles; the attribute list in the element reference is sufficient to describe its behavior. Only add an article if the attribute has enough nuance to deserve its own examples, or it is a global atribute.
 
 > **Note:** _Remove this whole explanatory note before publishing_
 >
@@ -18,37 +20,38 @@ HTML attributes fall into two categories: `element-specific attributes`, which a
 >
 > ```md
 > ---
-> title: "<NameOfTheAttribute>: The NameOfTheAttribute attribute"
-> slug: Web/HTML/Reference/Global_attributes/NameOfTheAttribute
+> title: name-of-the-attribute
+> slug: Web/HTML/Reference/Global_attributes/name-of-the-attribute
 > page-type: html-attribute
 > status:
 >   - deprecated
 >   - experimental
 >   - non-standard
-> browser-compat: html.global_attributes.NameOfTheAttribute
+> browser-compat: html.global_attributes.name-of-the-attribute
 > ---
 > ```
 >
 > - **title**
 >   - : Title heading displayed at the top of the page.
->     Format as `'<NameOfTheAttributes>: Description of attribute's usage'`.
->     For example, the [class](/en-US/docs/Web/HTML/Reference/Global_attributes/class) attribute has a _title_ of `class`.
+>     Format as `name-of-the-attribute` (just the attribute name itself).
+>     For example, the [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class) attribute has a _title_ of `class`.
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`.
->     This will be formatted like `Web/HTML/Reference/Global_attributes/NameOfTheAttribute`, where the attributes name is in _lower case_. Ensure the slug follows the convention when working with element-specific attributes (e.g., `Web/HTML/Reference/Attributes/NameOfTheAttribute`).
->     For example, the [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class) element has a _slug_ of `Web/HTML/Reference/Global_attributes/class`.
+>     This will be formatted like `Web/HTML/Reference/Global_attributes/name-of-the-attribute` or `Web/HTML/Reference/Attributes/name-of-the-attribute`, where the attributes name is in _lower case_.
+>     For example, the [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class) attribute has a _slug_ of `Web/HTML/Reference/Global_attributes/class`.
 > - **page-type**
 >   - : Always `html-attribute`.
 > - **status**
 >   - : Flags describing the status of this feature. An array which may contain one or more of the following: `experimental`, `deprecated`, `non-standard`. This key should not be set manually: it is set automatically based on values in the browser compatibility data for the feature. See ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
 > - **browser-compat**
->
->   - : Replace the placeholder value `html.global_attributes.NameOfTheAttribute` with the query string for the global attribute in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
->     Ensure the query follows the convention when working with element-specific attributes (e.g., `html.elements.NameOfTheElement.NameOfTheAttribute`).
+>   - : Replace the placeholder value `html.global_attributes.name-of-the-attribute` with the query string for the global attribute in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
+>     Ensure the query follows the convention when working with element-specific attributes (e.g., `html.elements.name-of-the-element.name-of-the-attribute`).
 >     The toolchain automatically uses the key to populate the compatibility and specification sections (replacing the `\{{Compat}}` and `\{{Specifications}}` macros).
->
 >     Note that you may first need to create/update an entry for the attribute in our [Browser compat data repo](https://github.com/mdn/browser-compat-data), and the entry will need to include specification information.
 >     See our [guide on how to do this](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
+> - **sidebar**
+>   - : This is always `htmlsidebar`.
+>     See [Page structures: Sidebars](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars) for details.
 >
 > ---
 >
@@ -62,25 +65,16 @@ HTML attributes fall into two categories: `element-specific attributes`, which a
 > - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
 > - `\{{Non-standard_Header}}` — this generates a **Non-standard** banner that indicates that the feature is not part of any specification.
 >
-> You should update or delete the following macros according to the advice below:
->
-> - `\{{SecureContext_Header}}` — this generates a **Secure context** banner that indicates the technology is only available in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
->   If it isn't, then you can remove the macro call.
->   If it is, then you should also fill in an entry for it in the [Features restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts) page.
-> - `\{{HTMLSidebar}}` — this generates the left-hand-side reference sidebar for the element.
->   The content of the sidebar depends on the tags in the page metadata.
-> - Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
->
 > Do not provide status header macros manually. Refer to the section ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated) to add these statuses to the page.
 >
 > Samples of the **Experimental**, **Deprecated**, and **Non-standard** banners are shown right after this note block.
 >
 > _Remember to remove this whole explanatory note before publishing_
 
-{{HTMLSidebar}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 Start by introducing the reader to the attribute, and its usage.
-For Example: The **`<insert_the_attribute_name>`** attribute is used in [HTML](/en-US/docs/Web/HTML) to describe or manipulate <insert_usage_description>, assisting browsers in understanding how to handle the element it's applied to.
+For example: The **`name-of-the-attribute`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) describes or manipulates [insert usage description].
 
 ## Try it
 
@@ -90,25 +84,20 @@ See the [Interactive examples](/en-US/docs/MDN/Writing_guidelines/Page_structure
 
 If included, follow it with 1-2 brief paragraphs explaining the behavior implemented, and optionally highlighting any interaction with JavaScript, CSS, or other attributes. Keep it concise and avoid duplicating full docs — link out what needed. Again, see the `class` attribute page.
 
-## Accessibility
-
-Warn of any potential accessibility concerns that may exist with using this attribute, and how to work around them. Remove this section if there are none to list.
-
 ## Values
 
 Provide a list of possible values for the attribute if any (remove if not applicable). Include the default value if there is one, and a brief description for each value.
 
-- `value 1`:
-
+- `value 1`
   - : Description of value 1. This is the Default value.
-
-- `value 2`:
-
+- `value 2`
   - : Description of value 2
-
-- `value 3`:
-
+- `value 3`
   - : Description of value 3
+
+## Accessibility concerns
+
+Warn of any potential accessibility concerns that may exist with using this attribute, and how to work around them. Remove this section if there are none to list.
 
 ## Examples
 
