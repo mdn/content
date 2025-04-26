@@ -102,10 +102,10 @@ Provide a list of possible values for the attribute if any (remove if not applic
 
   - : Description of value 1. This is the Default value.
 
-  - `value 2`:
+- `value 2`:
   - : Description of value 2
 
-  - `value 3`:
+- `value 3`:
   - : Description of value 3
 
 ## Examples
