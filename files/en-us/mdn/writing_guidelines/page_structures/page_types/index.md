@@ -62,7 +62,7 @@ Below are examples of the various pages you'll find on MDN along with templates 
 - [CSS module landing page](#css_module_landing_page)
 - [Glossary entry](#glossary_page)
 - [HTML element](#html_element_reference_page)
-- [HTML attribute](#html_attribute_page_template)
+- [HTML attribute](#html_attribute_reference_page)
 - [HTTP header](#http_header_reference_page)
 - [Landing page](#landing_page)
 - [SVG element](#svg_element_reference_page)
