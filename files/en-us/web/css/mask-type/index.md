@@ -129,7 +129,7 @@ img.luminanceMaskType {
 
 #### Result
 
-{{EmbedLiveSample("The mask-type property", "", "150px")}}
+{{EmbedLiveSample("Examples", "", "250")}}
 
 As the default value for the `mask-mode` property is `match-source`, the first mask uses the alpha channels only to define the mask: the white and green are fully opaque, and the 50% white and black colors are 50% opaque because only the alpha value of the colors matters. The second example uses the luminance of the colors to determine the opacity of the mask, with white being brighter than green, and semi-transparent white being brighter than semi-transparent black.
 
