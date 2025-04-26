@@ -125,7 +125,7 @@ img.alphaMaskType {
 img.luminanceMaskType {
   mask-image: url(#luminanceMask);
 }
-```. T
+```
 
 #### Result
 
