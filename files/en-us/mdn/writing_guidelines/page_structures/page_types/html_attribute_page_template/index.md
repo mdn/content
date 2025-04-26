@@ -99,6 +99,7 @@ Warn of any potential accessibility concerns that may exist with using this attr
 Provide a list of possible values for the attribute if any (remove if not applicable). Include the default value if there is one, and a brief description for each value.
 
 - `value 1`:
+
   - : Description of value 1. This is the Default value.
 
   - `value 2`:
