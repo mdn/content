@@ -54,7 +54,7 @@ _The `WorkerNavigator` interface doesn't inherit any property._
 - {{DOMxRef("WorkerNavigator.storage")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a {{DOMxRef('StorageManager')}} interface for managing persistence permissions and estimating available storage.
 - {{DOMxRef("WorkerNavigator.storageBuckets")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
-  - : ......
+  - : Represents the singleton {{domxref('StorageBucketManager')}} object used for managing storage buckets.
 - {{domxref("WorkerNavigator.usb")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a {{domxref("USB")}} object for the current document, providing access to [WebUSB API](/en-US/docs/Web/API/WebUSB_API) functionality.
 - {{DOMxRef("WorkerNavigator.userAgent")}} {{ReadOnlyInline}}

@@ -10,15 +10,19 @@ browser-compat: api.WorkerNavigator.storageBuckets
 
 {{APIRef("Storage Buckets API")}}{{SecureContext_Header}}{{AvailableInWorkers("worker")}}{{SeeCompatTable}}
 
-The **`storageBuckets`** read-only property of the {{DOMxRef("WorkerNavigator")}} interface representing ......
+The **`storageBuckets`** read-only property of the {{DOMxRef("WorkerNavigator")}} interface represents the singleton {{domxref('StorageBucketManager')}} object used for managing storage buckets.
 
 ## Value
 
-A {{DOMxRef("StorageBucketManager")}} object instance representing ......
+A {{DOMxRef("StorageBucketManager")}} object instance.
 
 ## Examples
 
-......
+The following code creates a storage bucket with the name "example-storage-bucket".
+
+```js
+const bucket = await navigator.storageBuckets.open('example-storage-bucket');
+```
 
 ## Specifications
 
