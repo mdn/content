@@ -7,7 +7,7 @@ browser-compat: api.NodeList
 
 {{APIRef("DOM")}}
 
-**`NodeList`** objects are collections of [nodes](/en-US/docs/Web/API/Node), usually returned by properties such as {{domxref("Node.childNodes")}} and methods such as {{domxref("document.querySelectorAll()")}}. only {{domxref("document.querySelectorAll()")}} returns a static NodeList, others APIs returns a live NodeList.
+**`NodeList`** objects are collections of [nodes](/en-US/docs/Web/API/Node), usually returned by properties such as {{domxref("Node.childNodes")}} and methods such as {{domxref("document.querySelectorAll()")}}.
 
 This interface was an [attempt to create an unmodifiable list](https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156) and only continues to be supported to not break code that's already using it. Modern APIs represent list structures using types based on JavaScript [arrays](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array), thus making many array methods available, and at the same time imposing additional semantics on their usage (such as making their items read-only).
 
@@ -19,9 +19,7 @@ Although `NodeList` is not an `Array`, it is possible to iterate over it with `f
 
 Although they are both considered `NodeList` objects, there are 2 varieties of NodeList: _live_ and _static_.
 
-### Live NodeLists
-
-In some cases, the `NodeList` is _live_, which means that changes in the DOM automatically update the collection.
+In most cases, the `NodeList` is _live_, which means that changes in the DOM automatically update the collection.
 
 For example, {{domxref("Node.childNodes")}} is live:
 
@@ -33,9 +31,7 @@ parent.appendChild(document.createElement("div"));
 console.log(childNodes.length); // outputs "3"
 ```
 
-### Static NodeLists
-
-In other cases, the `NodeList` is _static,_ where any changes in the DOM do not affect the content of the collection. The ubiquitous {{domxref("document.querySelectorAll()")}} method returns a _static_ `NodeList`.
+In other cases, the `NodeList` is _static,_ where any changes in the DOM do not affect the content of the collection. The ubiquitous {{domxref("document.querySelectorAll()")}} method is the only API that returns a _static_ `NodeList`.
 
 It's good to keep this distinction in mind when you choose how to iterate over the items in the `NodeList`, and whether you should cache the list's `length`.
 
