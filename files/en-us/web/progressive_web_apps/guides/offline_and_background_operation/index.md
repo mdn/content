@@ -216,7 +216,7 @@ async function requestBackgroundFetch(movieData) {
       downloadTotal: 60 * 1024 * 1024,
     },
   );
-  //...
+  // ...
 }
 ```
 

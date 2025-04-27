@@ -141,7 +141,7 @@ async function init() {
     code: shaders,
   });
 
-  //...
+  // …
 }
 ```
 

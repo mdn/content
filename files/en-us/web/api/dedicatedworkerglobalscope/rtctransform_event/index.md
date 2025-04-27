@@ -52,7 +52,7 @@ addEventListener("rtctransform", (event) => {
     transform = createReceiverTransform(); // A TransformStream
   else return;
 
-  //Pipe frames from the readable to writeable through TransformStream
+  // Pipe frames from the readable to writeable through TransformStream
   event.transformer.readable
     .pipeThrough(transform)
     .pipeTo(event.transformer.writable);

@@ -100,7 +100,7 @@ In this example:
       }
 
       function onPageShow() {
-        //calculate current time
+        // Calculate current time
         var currentTime = new Date();
         var year = currentTime.getFullYear();
         var month = currentTime.getMonth() + 1;
@@ -160,7 +160,7 @@ In contrast, if the above page did not listen for the `pageshow` event and handl
     function onLoad() {
       loadOnlyFirst();
 
-      //calculate current time
+      // Calculate current time
       var currentTime = new Date();
       var year = currentTime.getFullYear();
       var month = currentTime.getMonth() + 1;

@@ -33,8 +33,8 @@ The stylesheet includes a namespace as the only rule. Therefore the first {{domx
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0]); //a CSSNamespaceRule
+const myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0]); // A CSSNamespaceRule
 ```
 
 ## Specifications

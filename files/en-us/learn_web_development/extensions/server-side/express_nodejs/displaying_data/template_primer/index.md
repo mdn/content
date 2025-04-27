@@ -30,7 +30,7 @@ If you look in the views directory you will see the .pug files for the project's
 These include the view for the home page (**index.pug**) and base template (**layout.pug**) that we will need to replace with our own content.
 
 ```plain
-/express-locallibrary-tutorial  //the project root
+/express-locallibrary-tutorial  # the project root
   /views
     error.pug
     index.pug

@@ -62,10 +62,10 @@ This is because in 2016 February had 29 days.
 const theBigDay = new Date();
 theBigDay.setMonth(6);
 
-//Watch out for end of month transitions
+// Watch out for end of month transitions
 const endOfMonth = new Date(2016, 7, 31);
 endOfMonth.setMonth(1);
-console.log(endOfMonth); //Wed Mar 02 2016 00:00:00
+console.log(endOfMonth); // Wed Mar 02 2016 00:00:00
 ```
 
 ## Specifications
