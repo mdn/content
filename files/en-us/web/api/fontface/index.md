@@ -56,7 +56,7 @@ The code below defines a font face using data at the URL "my-font.woff" with a f
 Just to show how it works, we then define the `stretch` descriptor using a property.
 
 ```js
-//Define a FontFace
+// Define a FontFace
 const font = new FontFace("my-font", "url(my-font.woff)", {
   style: "italic",
   weight: "400",
@@ -68,7 +68,7 @@ font.stretch = "condensed";
 Next we load the font using {{domxref("FontFace.load()")}} and use the returned promise to track completion or report an error.
 
 ```js
-//Load the font
+// Load the font
 font.load().then(
   () => {
     // Resolved - add font to document.fonts

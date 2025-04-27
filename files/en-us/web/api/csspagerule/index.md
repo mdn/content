@@ -80,7 +80,7 @@ for (
   for (let i = 0; i < myRules.length; i++) {
     log(`rule: ${myRules[i]}`);
     if (myRules[i] instanceof CSSPageRule) {
-      //... Do something with CSSPageRule
+      // Do something with CSSPageRule
     }
   }
 }

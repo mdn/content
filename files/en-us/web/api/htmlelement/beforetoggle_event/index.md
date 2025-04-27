@@ -188,7 +188,7 @@ For example:
 
 ```js
 popover.addEventListener("beforetoggle", () => {
-  //...
+  // …
 });
 
 popover.showPopover();
