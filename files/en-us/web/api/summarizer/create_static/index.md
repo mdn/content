@@ -54,6 +54,8 @@ A {{jsxref("Promise")}} that fulfills with a `Summarizer` object instance.
 
 ### Exceptions
 
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if usage of the Summarizer API is blocked by a {{httpheader('Permissions-Policy/summarizer','summarizer')}} {{httpheader("Permissions-Policy")}}.
 - `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if any of the language tags specified in `expectedContextLanguages`, `expectedInputLanguages`, or `outputLanguage` are invalid, or not supported.
 - `OperationError` {{domxref("DOMException")}}

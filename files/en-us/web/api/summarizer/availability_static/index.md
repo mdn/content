@@ -55,6 +55,15 @@ Possible values include:
 
 EDITORIAL: I am guessing at how language model updates are identified and downloaded. Is this something that is done programmatically, or does the app need to instruct the user to do so? I'm assuming how this is handled will be implementation-dependant, but we ought to given an example of how Chrome does it. I probably need to give some more details on "best fit" languages, as per the example mentioned in the spec. More research needed.
 
+### Exceptions
+
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if usage of the Summarizer API is blocked by a {{httpheader('Permissions-Policy/summarizer','summarizer')}} {{httpheader("Permissions-Policy")}}.
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Thrown if the provided `context` is not in language the `Summarizer` supports.
+- `UnknownError` {{domxref("DOMException")}}
+  - : Thrown if the `measureInputUsage()` call failed for any other reason, or a reason the user agent did not wish to disclose.
+
 ## Examples
 
 ### Basic `availability()` usage

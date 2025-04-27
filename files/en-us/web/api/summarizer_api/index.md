@@ -38,6 +38,11 @@ See [Using the Summarizer API](/en-US/docs/Web/API/Summarizer_API/Using) for a w
 - {{domxref("Summarizer")}} {{Experimental_Inline}}
   - : Contains all the functionality for the Summarizer API, including checking AI model availability, creating a new `Summarizer` instance, using it to generate a new summary, and more.
 
+## HTTP headers
+
+- {{httpheader("Permissions-Policy")}}; the {{httpheader('Permissions-Policy/summarizer','summarizer')}} directive
+  - : Controls access to the Summarizer API. Where a policy specifically disallows the use of the Summarizer API, any attempts to call the API's methods will fail with a `NotAllowedError` {{domxref("DOMException")}}.
+
 ## Examples
 
 For a full example, see [Using the Summarizer API](/en-US/docs/Web/API/Summarizer_API/Using)

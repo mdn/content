@@ -44,7 +44,7 @@ The **`Summarizer`** interface of the {{domxref("Summarizer API", "Summarizer AP
 - {{domxref("Summarizer.destroy", "destroy()")}} {{Experimental_Inline}}
   - : Destroys the `Summarizer` instance it is called on.
 - {{domxref("Summarizer.measureInputUsage", "measureInputUsage()")}} {{Experimental_Inline}}
-  - : Reports how much input quota is used by a given summarize operation.
+  - : Reports how much input quota would be used by a summarize operation for a given text input.
 - {{domxref("Summarizer.summarize", "summarize()")}} {{Experimental_Inline}}
   - : Generates a new summary string.
 - {{domxref("Summarizer.summarizeStreaming", "summarizeStreaming()")}} {{Experimental_Inline}}
