@@ -102,6 +102,10 @@ new WebAssembly.Exception(tag, [param], { traceStack: true });
 Passing in `{traceStack: true}` tells the WebAssembly virtual machine that it should attach a stack trace to the returned `WebAssembly.Exception`.
 Without this, the stack would be `undefined`.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}
