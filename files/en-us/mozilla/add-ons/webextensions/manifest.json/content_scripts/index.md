@@ -100,7 +100,7 @@ This table details all the keys you can include.
       <td>
         <p>
           An array of paths, relative to <code>manifest.json</code>, referencing
-          CSS files to inject into matching pages. For information on the order 
+          CSS files to inject into matching pages. For information on the order
           in which files are injected, see a <a href="#load_order">Load order</a>.
         </p>
         </p>
@@ -153,7 +153,7 @@ This table details all the keys you can include.
       <td>
         <p>
           An array of paths, relative to <code>manifest.json</code>, referencing
-          JavaScript files to inject into matching pages. For information on the 
+          JavaScript files to inject into matching pages. For information on the
           order in which files are injected, see a <a href="#load_order">Load order</a>.
         </p>
       </td>
