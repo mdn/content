@@ -227,7 +227,7 @@ Let's look at an example to show what this looks like. In the [HTML](/en-US/docs
 
 ```yaml
 - type: listSubPages
-  path: /Web/HTML/Element/input
+  path: /Web/HTML/Reference/Elements/input
   title: Input_types
   details: closed
   code: true

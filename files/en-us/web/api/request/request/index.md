@@ -92,7 +92,7 @@ const options = {
 const req = new Request("flowers.jpg", options);
 
 fetch(req).then((response) => {
-  // ...
+  // …
 });
 ```
 
@@ -100,7 +100,7 @@ Note that you could also pass `options` into the `fetch` call to get the same ef
 
 ```js
 fetch(req, options).then((response) => {
-  // ...
+  // …
 });
 ```
 

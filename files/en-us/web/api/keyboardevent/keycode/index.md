@@ -2524,7 +2524,7 @@ Gecko defines a lot of `keyCode` values in `KeyboardEvent` for making the mappin
     <tr>
       <td><code>DOM_VK_AT</code></td>
       <td>0x40 (64)</td>
-      <td>Atmark ("@") key.</td>
+      <td>At sign ("@") key.</td>
     </tr>
     <tr>
       <td><code>DOM_VK_A</code></td>

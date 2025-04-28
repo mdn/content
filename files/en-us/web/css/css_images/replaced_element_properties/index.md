@@ -100,7 +100,7 @@ img:nth-of-type(6) {
 
 {{EmbedLiveSample('example1','100%','650')}}
 
-Check the box to swith the height and width values. Note that only the `fill` value (the default) distorts the original image. With all other values, the intrinsic aspect ratio of the image is maintained.
+Check the box to set the height and width values. Note that only the `fill` value (the default) distorts the original image. With all other values, the intrinsic aspect ratio of the image is maintained.
 
 ### The `object-position` property
 

@@ -196,7 +196,7 @@ You can also replace `./index.html` with any other file or folder to format them
 
 ```json
 "scripts": {
-  // ...
+  // …
   "format": "prettier --write ."
 },
 ```

@@ -33,7 +33,7 @@ The following snippet:
 - Creates a `GPUPipelineLayout` based on the {{domxref("GPUBindGroupLayout")}}.
 
 ```js
-// ...
+// …
 
 const bindGroupLayout = device.createBindGroupLayout({
   entries: [
@@ -59,7 +59,7 @@ const pipelineLayout = device.createPipelineLayout({
   bindGroupLayouts: [bindGroupLayout],
 });
 
-// ...
+// …
 ```
 
 ## Specifications

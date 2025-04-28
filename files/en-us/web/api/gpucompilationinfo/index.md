@@ -53,7 +53,7 @@ When we compile the shader module, we use `getCompilationInfo()` to grab some in
 
 ```js
 async function init() {
-  // ...
+  // …
 
   const shaderModule = device.createShaderModule({
     code: shaders,
@@ -65,7 +65,7 @@ async function init() {
   console.log(firstMessage.lineNum); // 9
   console.log(firstMessage.message); // "expected ')' for function declaration"
   console.log(firstMessage.type); // "error"
-  // ...
+  // …
 }
 ```
 

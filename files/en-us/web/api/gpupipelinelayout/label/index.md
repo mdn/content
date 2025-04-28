@@ -24,7 +24,7 @@ A string. If this has not been previously set as described above, it will be an 
 Setting and getting a label via `GPUPipelineLayout.label`:
 
 ```js
-// ...
+// …
 
 const pipelineLayout = device.createPipelineLayout({
   bindGroupLayouts: [bindGroupLayout],
@@ -38,7 +38,7 @@ console.log(pipelineLayout.label); // "my_pipeline_layout"
 Setting a label via the originating {{domxref("GPUDevice.createPipelineLayout()")}} call, and then getting it via `GPUPipelineLayout.label`:
 
 ```js
-// ...
+// …
 
 const pipelineLayout = device.createPipelineLayout({
   bindGroupLayouts: [bindGroupLayout],

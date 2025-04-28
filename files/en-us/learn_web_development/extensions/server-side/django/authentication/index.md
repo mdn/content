@@ -269,7 +269,7 @@ Create a new HTML file called /**django-locallibrary-tutorial/templates/registra
     <input type="hidden" name="next" value="\{{ next }}">
   </form>
 
-  {# Assumes you set up the password_reset view in your URLconf #}
+  {# Assumes you set up the password_reset view in your URLConf #}
   <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
 
 {% endblock %}

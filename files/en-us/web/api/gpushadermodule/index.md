@@ -64,16 +64,16 @@ async function init() {
     throw Error("Couldn't request WebGPU adapter.");
   }
 
-  let device = await adapter.requestDevice();
+  const device = await adapter.requestDevice();
 
-  // ...
+  // …
   // later on
 
   const shaderModule = device.createShaderModule({
     code: shaders,
   });
 
-  // ...
+  // …
 }
 ```
 

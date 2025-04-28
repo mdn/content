@@ -82,7 +82,7 @@ The HTML below creates four copies of the same box, with the perspective set at 
     <tr>
       <td>
         <div class="container">
-          <div class="cube pers250">
+          <div class="cube perspective-250">
             <div class="face front">1</div>
             <div class="face back">2</div>
             <div class="face right">3</div>
@@ -94,7 +94,7 @@ The HTML below creates four copies of the same box, with the perspective set at 
       </td>
       <td>
         <div class="container">
-          <div class="cube pers350">
+          <div class="cube perspective-350">
             <div class="face front">1</div>
             <div class="face back">2</div>
             <div class="face right">3</div>
@@ -112,7 +112,7 @@ The HTML below creates four copies of the same box, with the perspective set at 
     <tr>
       <td>
         <div class="container">
-          <div class="cube pers500">
+          <div class="cube perspective-500">
             <div class="face front">1</div>
             <div class="face back">2</div>
             <div class="face right">3</div>
@@ -124,7 +124,7 @@ The HTML below creates four copies of the same box, with the perspective set at 
       </td>
       <td>
         <div class="container">
-          <div class="cube pers650">
+          <div class="cube perspective-650">
             <div class="face front">1</div>
             <div class="face back">2</div>
             <div class="face right">3</div>
@@ -145,19 +145,19 @@ The CSS establishes classes that can be used to set the perspective to different
 
 ```css
 /* Shorthand classes for different perspective values */
-.pers250 {
+.perspective-250 {
   perspective: 250px;
 }
 
-.pers350 {
+.perspective-350 {
   perspective: 350px;
 }
 
-.pers500 {
+.perspective-500 {
   perspective: 500px;
 }
 
-.pers650 {
+.perspective-650 {
   perspective: 650px;
 }
 

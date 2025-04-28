@@ -123,7 +123,7 @@ In this example:
           sec +
           ":" +
           mil;
-        document.getElementById("timefield").value = displayTime;
+        document.getElementById("time-field").value = displayTime;
       }
 
       function loadOnlyFirst() {
@@ -138,8 +138,8 @@ In this example:
       name="zipForm"
       action="http://www.example.com/formresult.html"
       method="get">
-      <label for="timefield">Date and time:</label>
-      <input type="text" id="timefield" /><br />
+      <label for="time-field">Date and time:</label>
+      <input type="text" id="time-field" /><br />
       <label for="name">Name:</label>
       <input type="text" id="name" /><br />
       <label for="address">Email address:</label>
@@ -183,7 +183,7 @@ In contrast, if the above page did not listen for the `pageshow` event and handl
         sec +
         ":" +
         mil;
-      document.getElementById("timefield").value = displayTime;
+      document.getElementById("time-field").value = displayTime;
     }
 
     function loadOnlyFirst() {

@@ -371,7 +371,7 @@ video::cue(v[voice="Bob"]) {
 
 #### Result
 
-The example should the cues with colour coding that matches the styling above (if the text is not colored, then `::cue` is not supported on your browser).
+The example should the cues with color coding that matches the styling above (if the text is not colored, then `::cue` is not supported on your browser).
 
 {{EmbedLiveSample('More cue styling examples','400','330')}}
 
