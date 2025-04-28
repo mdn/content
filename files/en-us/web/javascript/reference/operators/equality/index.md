@@ -129,7 +129,7 @@ console.log(string4 == string4); // true
 ```js
 const d = new Date("1995-12-17T03:24:00");
 const s = d.toString(); // for example: "Sun Dec 17 1995 03:24:00 GMT-0800 (Pacific Standard Time)"
-console.log(d == s); //true
+console.log(d == s); // true
 ```
 
 ### Comparing arrays and strings

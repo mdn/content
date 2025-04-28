@@ -560,9 +560,9 @@ const importObject = {
 
 WebAssembly.instantiateStreaming(fetch("multi-memory.wasm"), importObject).then(
   (obj) => {
-    //Get exported memory
+    // Get exported memory
     memory2 = obj.instance.exports.memory2;
-    //Log memory
+    // Log memory
     obj.instance.exports.logAllMemory();
   },
 );

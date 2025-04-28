@@ -1,6 +1,7 @@
 ---
 title: "Test your skills: Object-oriented JavaScript"
-slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills:_Object-oriented_JavaScript
+short-title: Object-oriented JavaScript
+slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills/Object-oriented_JavaScript
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---

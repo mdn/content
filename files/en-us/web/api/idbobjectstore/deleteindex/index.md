@@ -76,7 +76,7 @@ DBOpenRequest.onsuccess = (event) => {
 // This event handles the event whereby a new version of the database needs to be created
 // Either one has not been created before, or a new version number has been submitted via the
 // window.indexedDB.open line above
-//it is only implemented in recent browsers
+// it is only implemented in recent browsers
 DBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 

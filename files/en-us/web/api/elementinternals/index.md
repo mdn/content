@@ -174,6 +174,5 @@ console.log(element.internals_.form);
 
 ## See also
 
-- [More capable form controls](https://web.dev/articles/more-capable-form-controls)
-- [Creating custom form controls with ElementInternals](https://css-tricks.com/creating-custom-form-controls-with-elementinternals/)
-- [ElementInternals polyfill](https://www.npmjs.com/package/element-internals-polyfill)
+- [More capable form controls](https://web.dev/articles/more-capable-form-controls) via web.dev (2019)
+- [Creating custom form controls with ElementInternals](https://css-tricks.com/creating-custom-form-controls-with-elementinternals/) via CSS-tricks (2021)

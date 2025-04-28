@@ -969,46 +969,6 @@ This includes:
   </tbody>
 </table>
 
-### Import attribute for JSON modules
-
-The [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declaration now supports importing JSON modules using the [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) attribute.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>138</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>138</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>138</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>138</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>javascript.options.experimental.import_attributes</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ## APIs
 
 ### CloseWatcher Interface

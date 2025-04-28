@@ -22,7 +22,14 @@ A string.
 In this example the value of `ariaValueText` is set to "Sunday".
 
 ```js
-this.internals_.ariaValueText = "Sunday";
+class CustomControl extends HTMLElement {
+  constructor() {
+    super();
+    this.internals_ = this.attachInternals();
+    this.internals_.ariaValueText = "Sunday";
+  }
+  // …
+}
 ```
 
 ## Specifications

@@ -650,7 +650,7 @@ function noneOnceHandler(event) {
   log("outer, none-once, default\n");
 }
 function captureHandler(event) {
-  //event.stopImmediatePropagation();
+  // event.stopImmediatePropagation();
   log("middle, capture");
 }
 function noneCaptureHandler(event) {
@@ -663,7 +663,7 @@ function passiveHandler(event) {
 }
 function nonePassiveHandler(event) {
   event.preventDefault();
-  //event.stopPropagation();
+  // event.stopPropagation();
   log("inner2, none-passive, default, not open new page");
 }
 ```

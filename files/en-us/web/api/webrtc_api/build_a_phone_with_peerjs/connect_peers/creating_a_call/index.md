@@ -26,10 +26,10 @@ Exciting times — now you're going to give your users the ability to create cal
 
      call.on("stream", (stream) => {
        // B
-       window.remoteAudio.srcObject = stream; // C
-       window.remoteAudio.autoplay = true; // D
-       window.peerStream = stream; //E
-       showConnectedContent(); //F    });
+       window.remoteAudio.srcObject = stream;
+       window.remoteAudio.autoplay = true;
+       window.peerStream = stream;
+       showConnectedContent();
      });
    });
    ```
