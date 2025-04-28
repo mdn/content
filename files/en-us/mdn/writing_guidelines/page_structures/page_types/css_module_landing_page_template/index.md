@@ -46,7 +46,7 @@ sidebar: mdnsidebar
 >     ```
 >
 > - **sidebar**
->   - : This is always `cssref`.
+>   - : This is `cssref` for all CSS guide and reference pages.
 >     See [Page structures: Sidebars](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars) for details.
 >
 > ---

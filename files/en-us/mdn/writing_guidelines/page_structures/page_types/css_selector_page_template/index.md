@@ -47,15 +47,15 @@ sidebar: mdnsidebar
 >     See our [guide on how to do this](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
 >
 > - **sidebar**
->   - : This is always `cssref`.
+>   - : This is `cssref` for all CSS guide and reference pages.
 >     See [Page structures: Sidebars](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars) for details.
 >
 > ---
 >
 > **Top-of-page macros**
 >
-> A number of macro calls appear at the top of the content section (immediately below the page frontmatter).
-> These macros are automatically added by the toolchain (there is no need to add/remove):
+> A number of macros appear at the top of the content section immediately after the page front matter.
+> These macros are automatically added by tooling, so avoid adding or removing them:
 >
 > - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
 >   If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
