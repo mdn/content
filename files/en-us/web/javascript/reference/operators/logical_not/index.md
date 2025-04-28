@@ -71,7 +71,7 @@ The same conversion can be done through the {{jsxref("Boolean/Boolean", "Boolean
 
 ```js
 !!true; // !!truthy returns true
-!!{}; // !!truthy returns true: any object is truthy...
+!!{}; // !!truthy returns true: any object is truthy…
 !!new Boolean(false); // … even Boolean objects with a false .valueOf()!
 !!false; // !!falsy returns false
 !!""; // !!falsy returns false
