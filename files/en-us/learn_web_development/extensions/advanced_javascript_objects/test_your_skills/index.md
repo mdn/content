@@ -6,9 +6,9 @@ page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
-This page lists Advanced JavaScript objects so you can verify you've understood the content in this module.
+This page lists tests to help you assess your understanding of Advanced JavaScript objects.
 
-## Test your Advanced JavaScript objects skills by topic
+## Test your skills in advanced JavaScript objects by topic
 
 {{SubpagesWithSummaries}}
 
