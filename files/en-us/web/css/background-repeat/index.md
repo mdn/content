@@ -76,7 +76,7 @@ background-repeat: unset;
 
 ## Description
 
-The property accepts a comma-separated list of values, with each value in the list being two [`<repeat-style>`](#values) keyterms, or one keyterm as a shorthand for the two values. When two values are provided, the first value defines the horizontal repetition behavior and the second value defines the vertical behavior.
+The property accepts a comma-separated list of two [`<repeat-style>`](#values) keyterms, or one keyterm as a shorthand for the two values. When two values are provided, the first value defines the horizontal repetition behavior and the second value defines the vertical behavior.
 Property values can be used to repeat only horizontally, vertically, or not at all.
 
 The default value is `repeat repeat`. With this value, the background image maintains its intrinsic {{glossary("aspect ratio")}}, repeating both horizontally and vertically to cover the entire background paint area, with edge images being clipped to the size of the element. Which edges clipped depends on the value of the corresponding {{cssxref("background-position")}} value. How many times they are repeated and how much the images on the edges are clipped depends on the size of the background painting area and the corresponding {{cssxref("background-size")}} value.
@@ -87,7 +87,7 @@ Alternatively, the repeated background image can be stretched to cover the entir
 
 ## Values
 
-The property accepts a comma-seperated list of values. Each value includes up to two `<repeat-style>` keyterms. The first value is the horizontal repetition. The second value is the vertical behavior. If only a single value is set to a value other than `repeat-x` or `repeat-y`, that value is applied the both vertices. The values include:
+The property accepts a comma-seperated list of two `<repeat-style>` keyterms or one keyterm as a shorthand for the two values. The first value is the horizontal repetition. The second value is the vertical behavior. If only a single value is set to a value other than `repeat-x` or `repeat-y`, that value is applied the both vertices. The values include:
 
 - `repeat`
 
