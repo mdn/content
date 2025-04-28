@@ -72,7 +72,7 @@ You could also set up the event handler using the `onaudioprocess` property:
 
 ```js
 scriptNode.onaudioprocess = (audioProcessingEvent) => {
-  // ...
+  // …
 };
 ```
 

@@ -261,7 +261,7 @@ You can access a buffer containing data in this format like this:
 ```js
 const buffer = new ArrayBuffer(24);
 
-// ... read the data into the buffer ...
+// … read the data into the buffer ...
 
 const idView = new Uint32Array(buffer, 0, 1);
 const usernameView = new Uint8Array(buffer, 4, 16);

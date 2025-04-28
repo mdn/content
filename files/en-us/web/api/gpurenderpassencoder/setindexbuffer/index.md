@@ -53,7 +53,7 @@ The following criteria must be met when calling **`setIndexBuffer()`**, otherwis
 In the WebGPU Samples [Shadow Mapping](https://webgpu.github.io/webgpu-samples/samples/shadowMapping/) example, `setIndexBuffer()` is used in two separate render passes in each animation frame, one to draw the main model and one to draw its shadow. Study the example code listing for the full context.
 
 ```js
-// ...
+// …
 
 const commandEncoder = device.createCommandEncoder();
 {
@@ -79,7 +79,7 @@ const commandEncoder = device.createCommandEncoder();
   renderPass.end();
 }
 
-// ...
+// …
 ```
 
 ## Specifications

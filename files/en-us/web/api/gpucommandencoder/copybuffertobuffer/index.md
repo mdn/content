@@ -52,7 +52,7 @@ The following criteria must be met when calling **`copyBufferToBuffer()`**, othe
 In our [basic compute demo](https://mdn.github.io/dom-examples/webgpu-compute-demo/), we use `copyBufferToBuffer()` to copy the contents of our `output` buffer to the `stagingBuffer`.
 
 ```js
-// ...
+// …
 
 // Create an output buffer to read GPU calculations to, and a staging buffer to be mapped for JavaScript access
 
@@ -66,12 +66,12 @@ const stagingBuffer = device.createBuffer({
   usage: GPUBufferUsage.MAP_READ | GPUBufferUsage.COPY_DST,
 });
 
-// ...
+// …
 
 // Create GPUCommandEncoder to encode commands to issue to the GPU
 const commandEncoder = device.createCommandEncoder();
 
-// ...
+// …
 
 // Copy output buffer to staging buffer
 commandEncoder.copyBufferToBuffer(
@@ -82,7 +82,7 @@ commandEncoder.copyBufferToBuffer(
   BUFFER_SIZE,
 );
 
-// ...
+// …
 ```
 
 ## Specifications

@@ -49,7 +49,7 @@ async function init() {
     requiredFeatures,
   });
 
-  // ...
+  // …
 }
 ```
 

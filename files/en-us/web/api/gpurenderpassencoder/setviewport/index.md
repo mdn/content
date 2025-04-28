@@ -71,7 +71,7 @@ In the WebGPU Samples [reversedZ example](https://webgpu.github.io/webgpu-sample
 For example:
 
 ```js
-// ...
+// …
 
 colorPass.setViewport(
   (canvas.width * m) / 2,
@@ -82,7 +82,7 @@ colorPass.setViewport(
   1,
 );
 
-// ...
+// …
 ```
 
 ## Specifications

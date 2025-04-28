@@ -169,7 +169,7 @@ When this updates to v2, we can then add all of our files (including our new fil
 ```js
 contentToCache.push("/pwa-examples/js13kpwa/icons/icon-32.png");
 
-// ...
+// …
 
 self.addEventListener("install", (e) => {
   e.waitUntil(

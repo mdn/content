@@ -117,7 +117,7 @@ const api = {
 const image = await loadImage("./image.jpg");
 const p = api.create_buffer(image.width, image.height);
 Module.HEAP8.set(image.data, p);
-// ... call encoder ...
+// … call encoder ...
 api.destroy_buffer(p);
 ```
 

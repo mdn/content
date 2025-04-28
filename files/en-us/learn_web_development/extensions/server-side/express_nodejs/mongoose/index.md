@@ -132,17 +132,17 @@ The code in the `catch` block runs if an error is thrown in the asynchronous fun
 
 ```js
 async function myFunction() {
-  // ...
+  // …
   await someObject.methodThatReturnsPromise();
-  // ...
+  // …
   await aFunctionThatReturnsPromise();
-  // ...
+  // …
 }
 
 try {
-  // ...
+  // …
   myFunction();
-  // ...
+  // …
 } catch (e) {
   // error handling code
 }
@@ -163,12 +163,12 @@ You would call the `myFunction()` in a `try...catch` block to catch any errors.
 
 ```js
 async function myFunction() {
-  // ...
+  // …
   const [resultFunction1, resultFunction2] = await Promise.all([
     functionThatReturnsPromise1(),
     functionThatReturnsPromise2(),
   ]);
-  // ...
+  // …
   await anotherFunctionThatReturnsPromise(resultFunction1);
 }
 ```
@@ -708,7 +708,7 @@ We will define a separate module for each model, as [discussed above](#one_schem
 Start by creating a folder for our models in the project root (**/models**) and then create separate files for each of the models:
 
 ```plain
-/express-locallibrary-tutorial  // the project root
+/express-locallibrary-tutorial  # the project root
   /models
     author.js
     book.js

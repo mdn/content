@@ -42,7 +42,7 @@ size.
 
 ```js
 const resizeObserver = new ResizeObserver((entries) => {
-  for (let entry of entries) {
+  for (const entry of entries) {
     if (entry.contentBoxSize) {
       // The standard makes contentBoxSize an array...
       if (entry.contentBoxSize[0]) {
@@ -53,7 +53,7 @@ const resizeObserver = new ResizeObserver((entries) => {
               entry.contentBoxSize[0].blockSize / 10,
           ) + "px";
       } else {
-        // ...but old versions of Firefox treat it as a single item
+        // … but old versions of Firefox treat it as a single item
         entry.target.style.borderRadius =
           Math.min(
             100,
