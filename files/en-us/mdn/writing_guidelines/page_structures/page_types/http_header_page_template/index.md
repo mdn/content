@@ -117,8 +117,7 @@ NameOfTheHeader: <directive1>, <directive2>, …
 If the header has a lot of available directives, feel free to include multiple syntax boxes, subsections and explanations as appropriate:
 
 ```http
-NameOfTheHeader: <directive3>,
-                 <directiveN>
+NameOfTheHeader: <directive3>, …, <directiveN>
 ```
 
 The directives are case-insensitive and have an optional argument, that can use both token and quoted-string syntax.
