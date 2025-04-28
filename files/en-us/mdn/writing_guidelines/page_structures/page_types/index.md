@@ -139,7 +139,10 @@ An **HTML reference page** lists all the attributes that are available on an HTM
 
 ### HTML attribute reference page
 
-An HTML attribute page lists all values for an HTML attribute, explains the attribute's purpose and use cases, providing examples, browser compatibility information, and other important data.
+An HTML attribute page lists all the values that exist on an HTML attribute, explains the attribute's purpose and use cases, providing examples, browser compatibility information, and other important data.
+
+> [!NOTE]
+> Element-specific attributes (e.g., `placeholder` for `<input>`) don't require a separate page. These attributes should be covered within the parent element's reference page (e.g., the `placeholder` attribute should be covered on the `<input>` element's page, not as a standalone page).
 
 #### Example
 
