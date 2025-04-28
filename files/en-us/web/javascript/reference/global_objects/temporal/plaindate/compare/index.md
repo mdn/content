@@ -26,7 +26,7 @@ Temporal.PlainDate.compare(date1, date2)
 
 ### Return value
 
-Returns `-1` if `date1` comes before `date2`, `0` if they are the same, and `1` if `date2` comes after. They are compared by their underlying date values, ignoring their calendars.
+Returns `-1` if `date1` comes before `date2`, `0` if they are the same, and `1` if `date1` comes after `date2`. They are compared by their underlying date values, ignoring their calendars.
 
 ## Examples
 

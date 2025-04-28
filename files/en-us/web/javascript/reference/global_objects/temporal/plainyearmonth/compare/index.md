@@ -28,7 +28,7 @@ Temporal.PlainYearMonth.compare(yearMonth1, yearMonth2)
 
 ### Return value
 
-Returns `-1` if `yearMonth1` comes before `yearMonth2`, `0` if they are the same, and `1` if `yearMonth2` comes after. They are compared by their underlying date values (usually the first day of the month), ignoring their calendars.
+Returns `-1` if `yearMonth1` comes before `yearMonth2`, `0` if they are the same, and `1` if `yearMonth1` comes after `yearMonth2`. They are compared by their underlying date values (usually the first day of the month), ignoring their calendars.
 
 ## Examples
 
