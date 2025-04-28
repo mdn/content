@@ -202,6 +202,7 @@ setPropertyButton.addEventListener("click", () => {
 
 The log below shows the output of the above code.
 Note that the value can be set using either the attribute or the property, and the result read via either approach is the same.
+The example doesn't do anything with text entered into the `<input>`.
 
 {{EmbedLiveSample("Getting and setting reflected attributes","100%","350px")}}
 
@@ -300,6 +301,8 @@ The log below shows the output of the above code:
   The property no longer reflects the attribute, and contains one element (label 3) that doesn't even have an `id`.
 - Line [3] demonstrates that setting the attribute "restores" the reflection.
   Note that the referenced element `label_4` does not exist, so there is no corresponding element in the property.
+
+Note that the example doesn't do anything with text entered into the `<input>`.
 
 {{EmbedLiveSample("Setting and getting reflected element references","100%","350px")}}
 
@@ -421,5 +424,7 @@ The log below shows the output of the above code:
 - Line [1] demonstrates that the property reflects the references set in the HTML attribute.
   This should show that `label_3` has no corresponding element reflected in the property, as it is out of scope.
 - As you toggle the button the `label_1` element should be added and removed from the property as it is moved in and out of scope.
+
+Note that the example doesn't do anything with text entered into the `<input>`.
 
 {{EmbedLiveSample("Reflected element reference DOM scope","100%","400px")}}

@@ -99,6 +99,7 @@ if ("ariaLabelledByElements" in Element.prototype) {
 #### Result
 
 The log below shows the original element references, the associated/returned elements, and the accessible name.
+Note that the example doesn't do anything with text entered into the street name `<input>`.
 
 {{EmbedLiveSample("Get the accessible name","100%","150px")}}
 
