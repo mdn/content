@@ -87,7 +87,7 @@ Alternatively, the repeated background image can be stretched to cover the entir
 
 ## Values
 
-The property accepts a comma-seperated list of two `<repeat-style>` keyterms or one keyterm as a shorthand for the two values. The first value is the horizontal repetition. The second value is the vertical behavior. If only a single value is set to a value other than `repeat-x` or `repeat-y`, that value is applied the both vertices. The values include:
+The property accepts a comma-separated list of two `<repeat-style>` keyterms or one keyterm as a shorthand for the two values. The first value is the horizontal repetition. The second value is the vertical behavior. If only a single value is set to a value other than `repeat-x` or `repeat-y`, that value is applied the both vertices. The values include:
 
 - `repeat`
 
