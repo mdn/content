@@ -62,10 +62,14 @@ sidebar:
       - /Learn_web_development/Core/Structuring_content/Planet_data_table
       - /Learn_web_development/Core/Structuring_content/HTML_forms
       - /Learn_web_development/Core/Structuring_content/Debugging_HTML
-      - type: listSubPages
-        path: /Learn_web_development/Core/Structuring_content/Test_your_skills
-        link: /Learn_web_development/Core/Structuring_content/Test_your_skills
+      - link: /Learn_web_development/Core/Structuring_content/Test_your_skills
         details: closed
+        children:
+          - /Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics
+          - /Learn_web_development/Core/Structuring_content/Test_your_skills/Links
+          - /Learn_web_development/Core/Structuring_content/Test_your_skills/Images
+          - /Learn_web_development/Core/Structuring_content/Test_your_skills/Multimedia_and_embedding
+          - /Learn_web_development/Core/Structuring_content/Test_your_skills/Advanced_HTML_text
   - link: /Learn_web_development/Core/Styling_basics
     title: CSS_styling_basics
     details: closed
@@ -230,10 +234,16 @@ sidebar:
       - /Learn_web_development/Extensions/Forms/UI_pseudo-classes
       - /Learn_web_development/Extensions/Forms/Form_validation
       - /Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data
-      - type: listSubPages
-        path: /Learn_web_development/Extensions/Forms/Test_your_skills
-        link: /Learn_web_development/Extensions/Forms/Test_your_skills
+      - link: /Learn_web_development/Extensions/Forms/Test_your_skills
         details: closed
+        children:
+          - /Learn_web_development/Extensions/Forms/Test_your_skills/Basic_controls
+          - /Learn_web_development/Extensions/Forms/Test_your_skills/Styling_basics
+          - /Learn_web_development/Extensions/Forms/Test_your_skills/Form_structure
+          - /Learn_web_development/Extensions/Forms/Test_your_skills/Input_types
+          - /Learn_web_development/Extensions/Forms/Test_your_skills/Form_validation
+          - /Learn_web_development/Extensions/Forms/Test_your_skills/Other_controls
+          - /Learn_web_development/Extensions/Forms/Test_your_skills/Advanced_styling
   - link: /Learn_web_development/Extensions/Client-side_tools
     title: Understanding_client-side_tools
     details: closed

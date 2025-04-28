@@ -42,7 +42,7 @@ Try updating the live code below to recreate the finished example:
 
 ## WAI-ARIA 3
 
-For this final WAI-ARIA task, we return to an example we previously saw in the [CSS and JavaScript skill test](/en-US/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript/Test_your_skills:_CSS_and_JavaScript_accessibility).
+For this final WAI-ARIA task, we return to an example we previously saw in the [CSS and JavaScript skill test](/en-US/docs/Learn_web_development/Core/Accessibility/Test_your_skills/CSS_and_JavaScript).
 As before, we have an app that presents a list of animal names. Clicking one of the animal names causes a further description of that animal to appear in a box below the list. Here, we are starting with a mouse- and keyboard-accessible version.
 
 The problem we have now is that when the DOM changes to show a new description, screen readers cannot see what has changed. Can you update it so that description changes are announced by the screen reader?
