@@ -25,7 +25,7 @@ async function inkInit() {
   let presenter = await ink.requestPresenter({ presentationArea: canvas });
   console.log(presenter.expectedImprovement);
 
-  //...
+  // ...
 }
 ```
 

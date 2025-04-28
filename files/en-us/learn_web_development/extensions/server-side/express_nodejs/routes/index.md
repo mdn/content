@@ -187,7 +187,7 @@ router.get("/about", (req, res, next) => {
     if (err) {
       return next(err);
     }
-    //Successful, so render
+    // Successful, so render
     res.render("about_view", { title: "About", list: queryResults });
   });
 });
@@ -262,7 +262,7 @@ Before we define our routes, we'll first create all the dummy/skeleton callback 
 Start by creating a folder for our controllers in the project root (**/controllers**) and then create separate controller files/modules for handling each of the models:
 
 ```plain
-/express-locallibrary-tutorial  //the project root
+/express-locallibrary-tutorial  # the project root
   /controllers
     authorController.js
     bookController.js
@@ -496,7 +496,7 @@ The skeleton already has a **./routes** folder containing routes for the _index_
 Create another route file — **catalog.js** — inside this folder, as shown.
 
 ```plain
-/express-locallibrary-tutorial //the project root
+/express-locallibrary-tutorial # the project root
   /routes
     index.js
     users.js
@@ -575,7 +575,7 @@ router.get("/authors", author_controller.author_list);
 // GET request for creating a Genre. NOTE This must come before route that displays Genre (uses id).
 router.get("/genre/create", genre_controller.genre_create_get);
 
-//POST request for creating Genre.
+// POST request for creating Genre.
 router.post("/genre/create", genre_controller.genre_create_post);
 
 // GET request to delete Genre.
@@ -674,9 +674,9 @@ We do this in `app.js`.
 Open **app.js** and require the catalog route below the other routes (add the third line shown below, underneath the other two that should be already present in the file):
 
 ```js
-var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/users");
-const catalogRouter = require("./routes/catalog"); //Import routes for "catalog" area of site
+const indexRouter = require("./routes/index");
+const usersRouter = require("./routes/users");
+const catalogRouter = require("./routes/catalog"); // Import routes for "catalog" area of site
 ```
 
 Next, add the catalog route to the middleware stack below the other routes (add the third line shown below, underneath the other two that should be already present in the file):

@@ -49,14 +49,14 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 Create two tabs and put them in a new group, then create another tab and add it to the group.
 
 ```js
-//Create two tabs and put them in a new group.
+// Create two tabs and put them in a new group.
 const tab1 = await browser.tabs.create({});
 const tab2 = await browser.tabs.create({});
 const groupId = await browser.tabs.group({
   tabIds: [tab1.id, tab2.id],
 });
 
-//Create another tab and add it to the group.
+// Create another tab and add it to the group.
 const tab3 = await browser.tabs.create({});
 await browser.tabs.group({
   tabIds: tab3.id,

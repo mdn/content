@@ -275,7 +275,7 @@ The `loadstart` event tells us that load process has started and the browser is 
 
 ```js
 audio.addEventListener("loadstart", () => {
-  //grabbing the file
+  // Grabbing the file
 });
 ```
 
@@ -285,7 +285,7 @@ If you just want to know as soon as the duration of your media is established, t
 
 ```js
 audio.addEventListener("durationchange", () => {
-  //you can display the duration now
+  // You can display the duration now
 });
 ```
 
@@ -295,7 +295,7 @@ Metadata can consist of more than just duration — if you want to wait for all 
 
 ```js
 audio.addEventListener("loadedmetadata", () => {
-  //you can display the duration now
+  // You can display the duration now
 });
 ```
 
@@ -305,7 +305,7 @@ The `loadeddata` event is fired when the first bit of media arrives. The playhea
 
 ```js
 audio.addEventListener("loadeddata", () => {
-  //you could display the playhead now
+  // You could display the playhead now
 });
 ```
 
@@ -325,7 +325,7 @@ audio.addEventListener("progress", () => {
 
 ```js
 audio.addEventListener("canplay", () => {
-  //audio is ready to play
+  // Audio is ready to play
 });
 ```
 
@@ -335,7 +335,7 @@ audio.addEventListener("canplay", () => {
 
 ```js
 audio.addEventListener("canplaythrough", () => {
-  //audio is ready to play all the way through
+  // Audio is ready to play all the way through
 });
 ```
 
@@ -370,7 +370,7 @@ The `timeupdate` event is triggered every time the `currentTime` property change
 
 ```js
 audio.addEventListener("timeupdate", () => {
-  //update something related to playback progress
+  // Update something related to playback progress
 });
 ```
 
@@ -396,7 +396,7 @@ The `ended` event is initiated when the end of the media is reached.
 
 ```js
 audio.addEventListener("ended", () => {
-  //do something once audio track has finished playing
+  // Do something once audio track has finished playing
 });
 ```
 

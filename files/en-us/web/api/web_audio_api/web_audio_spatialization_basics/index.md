@@ -267,16 +267,16 @@ The rotation is a circle and we need [`Math.sin`](/en-US/docs/Web/JavaScript/Ref
 Let's set up a rotation rate, which we'll convert into a radian range value for use in `Math.sin` and `Math.cos` later, when we want to figure out the new coordinates when we're rotating our boombox:
 
 ```js
-// set up rotation constants
-const rotationRate = 60; // bigger number equals slower sound rotation
+// Set up rotation constants
+const rotationRate = 60; // Bigger number equals slower sound rotation
 
-const q = Math.PI / rotationRate; //rotation increment in radians
+const q = Math.PI / rotationRate; // Rotation increment in radians
 ```
 
 We can also use this to work out degrees rotated, which will help with the CSS transforms we will have to create (note we need both an x and y-axis for the CSS transforms):
 
 ```js
-// get degrees for CSS
+// Get degrees for CSS
 const degreesX = (q * 180) / Math.PI;
 const degreesY = (q * 180) / Math.PI;
 ```

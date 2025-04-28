@@ -224,7 +224,7 @@ function log(text) {
 ```
 
 ```js
-//Create media configuration to be tested
+// Create media configuration to be tested
 const audioConfig = {
   type: "file", // or 'media-source' or 'webrtc'
   audio: {

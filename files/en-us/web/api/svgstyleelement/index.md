@@ -158,7 +158,7 @@ This is called after initialization, whenever the frame resizes, and if the butt
 const log = document.getElementById("log");
 
 function setLogText() {
-  //Log current values of properties
+  // Log current values of properties
   log.value = `style.media: ${style.media} (frame width: ${window.innerWidth})\n`; // 'all' by default
   log.value += `style.title: ${style.title}\n`; // no default value
   log.value += `style.disabled: ${style.disabled}\n`; // 'false' by default
