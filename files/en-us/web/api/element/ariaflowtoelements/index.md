@@ -18,6 +18,9 @@ The [`aria-flowto`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria
 
 An array of subclasses of {{domxref("HTMLElement")}}.
 
+When read, the returned array is a static and read-only.
+When written, the assigned array is copied: subsequent changes to the array do not affect the value of the property.
+
 ## Description
 
 The property is a flexible alternative to using the [`aria-flowto`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-flowto) attribute to set an alternative reading order.

@@ -21,6 +21,9 @@ The [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/
 An array of elements.
 The inner text of these elements can be joined with spaces to get the accessible name.
 
+When read, the returned array is a static and read-only.
+When written, the assigned array is copied: subsequent changes to the array do not affect the value of the property.
+
 ## Description
 
 The property is a flexible alternative to using the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attribute to set the accessible name.

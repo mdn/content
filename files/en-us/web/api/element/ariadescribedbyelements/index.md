@@ -18,6 +18,9 @@ The [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes
 An array of subclasses of {{domxref("HTMLElement")}}.
 The inner text of these elements can be joined with spaces to get the accessible description.
 
+When read, the returned array is a static and read-only.
+When written, the assigned array is copied: subsequent changes to the array do not affect the value of the property.
+
 ## Description
 
 The property is a flexible alternative to using the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) attribute to set the accessible description.
