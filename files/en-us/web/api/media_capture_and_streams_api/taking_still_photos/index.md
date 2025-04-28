@@ -442,8 +442,9 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
 
 ## Fun with filters
 
-Since we're capturing images from the user's webcam by grabbing frames from a {{HTMLElement("video")}} element, we can very easily apply filters and fun effects to the video. While CSS {{cssxref("filter")}}'s applied to the video element affect its display, they do not automatically apply to the captured photo unless handled in the canvas drawing process. These filters can range from the simple (making the image black and white) to the complex (gaussian blurs and hue rotation).
-In order for the video filters to be applied to the photo the `takePicture()` function needs the following changes:
+Since we're capturing images from the user's webcam by grabbing frames from a {{HTMLElement("video")}} element, we can apply fun effects to the video with filters. These filters range from basic (making the image black and white) to complex (gaussian blurs and hue rotation).
+
+For the video filters to be applied to the photo, the `takePicture()` function needs the following changes. Note that, while CSS {{cssxref("filter")}}s applied to the video element affect its display, they do not automatically apply to the captured photo unless handled in the canvas drawing process.
 
 ```js
 function takePicture() {
