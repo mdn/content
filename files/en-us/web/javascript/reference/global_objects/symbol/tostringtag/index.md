@@ -41,7 +41,7 @@ Object.prototype.toString.call(3); // "[object Number]"
 Object.prototype.toString.call(true); // "[object Boolean]"
 Object.prototype.toString.call(undefined); // "[object Undefined]"
 Object.prototype.toString.call(null); // "[object Null]"
-// ... and more
+// … and more
 ```
 
 ### Built-in toStringTag symbols
@@ -54,7 +54,7 @@ For constructor objects like {{jsxref("Promise")}}, the property is installed on
 Object.prototype.toString.call(new Map()); // "[object Map]"
 Object.prototype.toString.call(function* () {}); // "[object GeneratorFunction]"
 Object.prototype.toString.call(Promise.resolve()); // "[object Promise]"
-// ... and more
+// … and more
 ```
 
 ### Custom tag with toStringTag

@@ -3,7 +3,7 @@ title: "AudioWorkletGlobalScope: port"
 short-title: port
 slug: Web/API/AudioWorkletGlobalScope/port
 page-type: web-api-instance-property
-spec-urls: https://webaudio.github.io/web-audio-api/#AudioWorkletGlobalScope
+browser-compat: api.AudioWorkletGlobalScope.port
 ---
 
 {{APIRef("Web Audio API")}}

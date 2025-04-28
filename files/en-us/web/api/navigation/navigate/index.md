@@ -112,7 +112,7 @@ async function navigateHandler() {
   }).finished;
 
   // Update application state
-  // ...
+  // …
 }
 ```
 

@@ -35,7 +35,7 @@ This example shows how to use `cancelVideoFrameCallback()` to cancel a previousl
 const updateCanvas = (now, metadata) => {
   // Do something with the frame
 
-  // ...
+  // …
 
   // Re-register the callback to run on the next frame
   // It's important to update the videoCallbackId on each iteration
@@ -46,7 +46,7 @@ const updateCanvas = (now, metadata) => {
 // Initial registration of the callback to run on the first frame
 let videoCallbackId = video.requestVideoFrameCallback(updateCanvas);
 
-// ...
+// …
 
 // Cancel video frame callback using the latest videoCallbackId
 video.cancelVideoFrameCallback(videoCallbackId);

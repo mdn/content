@@ -73,7 +73,7 @@ if (PublicKeyCredential.signalAllAcceptedCredentials) {
     allAcceptedCredentialIds: [
       // A list of base64url-encoded credential IDs
       "vI0qOggiE3OT01ZRWBYz5l4MEgU0c7PmAA",
-      // ...
+      // …
     ],
   });
 }

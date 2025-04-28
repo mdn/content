@@ -36,7 +36,7 @@ The following criteria must be met when calling **`endOcclusionQuery()`**, other
 ## Examples
 
 ```js
-// ...
+// …
 
 // Create a query set to hold the occlusion queries
 const querySet = device.createQuerySet({
@@ -71,7 +71,7 @@ passEncoder.draw(3);
 // End the occlusion query
 passEncoder.endOcclusionQuery();
 
-// ...
+// …
 ```
 
 ## Specifications

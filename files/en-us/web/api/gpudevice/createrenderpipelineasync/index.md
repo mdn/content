@@ -66,7 +66,7 @@ The following example shows a basic example of the construction of a valid rende
 
 ```js
 async function init() {
-  // ...
+  // …
 
   const vertexBuffers = [
     {
@@ -111,7 +111,7 @@ async function init() {
   const renderPipeline =
     await device.createRenderPipelineAsync(pipelineDescriptor);
 
-  // ...
+  // …
 }
 ```
 

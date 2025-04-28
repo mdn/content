@@ -36,7 +36,7 @@ None ({{jsxref("Undefined")}}).
 ## Examples
 
 ```js
-// ...
+// …
 
 const bundleEncoder = device.createRenderBundleEncoder(renderBundleDescriptor);
 
@@ -48,7 +48,7 @@ bundleEncoder.draw(3);
 
 bundleEncoder.popDebugGroup();
 
-// ...
+// …
 ```
 
 ## Specifications

@@ -57,7 +57,7 @@ async function handleReload() {
   }).finished;
 
   // Update application state
-  // ...
+  // …
 }
 ```
 
@@ -70,7 +70,7 @@ async function handleReload() {
   }).finished;
 
   // Update application state
-  // ...
+  // …
 }
 ```
 

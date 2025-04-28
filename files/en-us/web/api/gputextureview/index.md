@@ -65,12 +65,12 @@ const renderPassDescriptor: GPURenderPassDescriptor = {
   },
 };
 
-// ...
+// …
 
 const commandEncoder = device.createCommandEncoder();
 const passEncoder = commandEncoder.beginRenderPass(renderPassDescriptor);
 
-// ...
+// …
 ```
 
 ## Specifications
