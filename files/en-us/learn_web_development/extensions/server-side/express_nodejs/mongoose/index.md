@@ -401,7 +401,7 @@ You can access the fields in this new record using the dot syntax, and change th
 
 ```js
 // Access model field values using dot notation
-console.log(awesome_instance.name); //should log 'also_awesome'
+console.log(awesome_instance.name); // should log 'also_awesome'
 
 // Change record by modifying the fields, then calling save().
 awesome_instance.name = "New cool name";

@@ -1,6 +1,7 @@
 ---
 title: "Test your skills: CSS and JavaScript accessibility"
-slug: Learn_web_development/Core/Accessibility/CSS_and_JavaScript/Test_your_skills:_CSS_and_JavaScript_accessibility
+short-title: CSS and JavaScript
+slug: Learn_web_development/Core/Accessibility/Test_your_skills/CSS_and_JavaScript
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---

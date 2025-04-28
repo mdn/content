@@ -20,7 +20,7 @@ The following example demonstrates how to return a `ReadableStream` from a `Text
 
 ```js
 const stream = new TextEncoderStream();
-console.log(stream.readable); //a ReadableStream
+console.log(stream.readable); // A ReadableStream
 ```
 
 ## Specifications

@@ -94,7 +94,7 @@ Console.WriteLine("A client connected.");
 
 NetworkStream stream = client.GetStream();
 
-//enter to an infinite cycle to be able to handle every change in stream
+// Enter to an infinite cycle to be able to handle every change in stream
 while (true) {
     while (!stream.DataAvailable);
 
@@ -123,7 +123,7 @@ byte[] bytes = new byte[client.Available];
 
 stream.Read(bytes, 0, bytes.Length);
 
-//translate bytes of request to string
+// Translate bytes of request to string
 String data = Encoding.UTF8.GetString(bytes);
 
 if (Regex.IsMatch(data, "^GET")) {

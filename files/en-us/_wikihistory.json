@@ -5763,10 +5763,6 @@
       "unused"
     ]
   },
-  "Learn_web_development/Core/Accessibility/CSS_and_JavaScript/Test_your_skills:_CSS_and_JavaScript_accessibility": {
-    "modified": "2020-07-16T22:40:20.219Z",
-    "contributors": ["chrisdavidmills"]
-  },
   "Learn_web_development/Core/Accessibility/HTML": {
     "modified": "2020-11-20T01:54:13.621Z",
     "contributors": [
@@ -5832,9 +5828,17 @@
       "qdirks"
     ]
   },
+  "Learn_web_development/Core/Accessibility/Test_your_skills/CSS_and_JavaScript": {
+    "modified": "2020-07-16T22:40:20.219Z",
+    "contributors": ["chrisdavidmills"]
+  },
   "Learn_web_development/Core/Accessibility/Test_your_skills/HTML": {
     "modified": "2020-07-16T22:40:37.539Z",
     "contributors": ["chrisdavidmills"]
+  },
+  "Learn_web_development/Core/Accessibility/Test_your_skills/WAI-ARIA": {
+    "modified": "2020-11-13T16:57:24.326Z",
+    "contributors": ["BassOfBass", "chrisdavidmills"]
   },
   "Learn_web_development/Core/Accessibility/Tooling": {
     "modified": "2020-11-20T02:03:56.749Z",
@@ -5874,10 +5878,6 @@
       "donysukardi",
       "joshbader"
     ]
-  },
-  "Learn_web_development/Core/Accessibility/WAI-ARIA_basics/Test_your_skills:_WAI-ARIA": {
-    "modified": "2020-11-13T16:57:24.326Z",
-    "contributors": ["BassOfBass", "chrisdavidmills"]
   },
   "Learn_web_development/Core/Accessibility/What_is_accessibility": {
     "modified": "2020-10-04T01:37:18.886Z",
@@ -7295,10 +7295,6 @@
       "richardzacur"
     ]
   },
-  "Learn_web_development/Core/Structuring_content/HTML_images/Test_your_skills:_HTML_images": {
-    "modified": "2020-10-18T19:47:17.929Z",
-    "contributors": ["gdsimoes", "chrisdavidmills"]
-  },
   "Learn_web_development/Core/Structuring_content/HTML_table_basics": {
     "modified": "2020-07-16T22:25:17.858Z",
     "contributors": [
@@ -7363,10 +7359,6 @@
       "goto.prototype",
       "richardzacur"
     ]
-  },
-  "Learn_web_development/Core/Structuring_content/HTML_video_and_audio/Test_your_skills:_Multimedia_and_embedding": {
-    "modified": "2020-11-20T14:20:14.413Z",
-    "contributors": ["philou", "gdsimoes", "chrisdavidmills"]
   },
   "Learn_web_development/Core/Structuring_content/Headings_and_paragraphs": {
     "modified": "2020-10-29T23:24:18.960Z",
@@ -7539,9 +7531,17 @@
     "modified": "2020-08-27T05:38:52.761Z",
     "contributors": ["SnakeWhisperer", "chrisdavidmills"]
   },
+  "Learn_web_development/Core/Structuring_content/Test_your_skills/Images": {
+    "modified": "2020-10-18T19:47:17.929Z",
+    "contributors": ["gdsimoes", "chrisdavidmills"]
+  },
   "Learn_web_development/Core/Structuring_content/Test_your_skills/Links": {
     "modified": "2020-08-28T04:26:18.208Z",
     "contributors": ["SnakeWhisperer", "chrisdavidmills", "onurbasturk"]
+  },
+  "Learn_web_development/Core/Structuring_content/Test_your_skills/Multimedia_and_embedding": {
+    "modified": "2020-11-20T14:20:14.413Z",
+    "contributors": ["philou", "gdsimoes", "chrisdavidmills"]
   },
   "Learn_web_development/Core/Structuring_content/Webpage_metadata": {
     "modified": "2020-09-28T22:06:13.983Z",
@@ -8143,7 +8143,7 @@
       "ZeroUnderscoreOu"
     ]
   },
-  "Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills:_Object-oriented_JavaScript": {
+  "Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills/Object-oriented_JavaScript": {
     "modified": "2020-08-12T12:48:24.778Z",
     "contributors": ["A.Faturechi", "abinashLin", "chrisdavidmills"]
   },
@@ -8763,31 +8763,31 @@
       "notabene"
     ]
   },
-  "Learn_web_development/Extensions/Forms/Test_your_skills:_Advanced_styling": {
+  "Learn_web_development/Extensions/Forms/Test_your_skills/Advanced_styling": {
     "modified": "2020-07-16T22:22:12.770Z",
     "contributors": ["chrisdavidmills"]
   },
-  "Learn_web_development/Extensions/Forms/Test_your_skills:_Basic_controls": {
+  "Learn_web_development/Extensions/Forms/Test_your_skills/Basic_controls": {
     "modified": "2020-07-16T22:22:10.786Z",
     "contributors": ["chrisdavidmills"]
   },
-  "Learn_web_development/Extensions/Forms/Test_your_skills:_Form_structure": {
+  "Learn_web_development/Extensions/Forms/Test_your_skills/Form_structure": {
     "modified": "2020-07-16T22:22:10.470Z",
     "contributors": ["chrisdavidmills"]
   },
-  "Learn_web_development/Extensions/Forms/Test_your_skills:_Form_validation": {
+  "Learn_web_development/Extensions/Forms/Test_your_skills/Form_validation": {
     "modified": "2020-07-16T22:22:13.092Z",
     "contributors": ["chrisdavidmills"]
   },
-  "Learn_web_development/Extensions/Forms/Test_your_skills:_HTML5_controls": {
+  "Learn_web_development/Extensions/Forms/Test_your_skills/Input_types": {
     "modified": "2020-07-16T22:22:11.117Z",
     "contributors": ["chrisdavidmills"]
   },
-  "Learn_web_development/Extensions/Forms/Test_your_skills:_Other_controls": {
+  "Learn_web_development/Extensions/Forms/Test_your_skills/Other_controls": {
     "modified": "2020-07-16T22:22:11.804Z",
     "contributors": ["chrisdavidmills"]
   },
-  "Learn_web_development/Extensions/Forms/Test_your_skills:_Styling_basics": {
+  "Learn_web_development/Extensions/Forms/Test_your_skills/Styling_basics": {
     "modified": "2020-07-16T22:22:12.453Z",
     "contributors": ["chrisdavidmills"]
   },

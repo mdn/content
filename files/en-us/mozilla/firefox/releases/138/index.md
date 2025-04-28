@@ -26,6 +26,7 @@ Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-
 
 - The {{jsxref("Error.captureStackTrace()")}} static method is now supported. This installs stack trace information on a provided object as the {{jsxref("Error.stack")}} property. Its main use case is to install a stack trace on a custom error object that does not derive from the {{jsxref("Error")}} interface. ([Firefox bug 1950508](https://bugzil.la/1950508)).
 - The {{jsxref("Error.isError()")}} static method can now be used to check whether or not an object is an instance of an {{jsxref("Error")}} or a {{domxref("DOMException")}}. This is more reliable than using `instanceof` for the same purpose. ([Firefox bug 1952249](https://bugzil.la/1952249)).
+- The [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declaration now supports importing JSON modules using the [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) attribute.
 
 #### Removals
 
@@ -94,6 +95,7 @@ Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-
 - The {{WebExtAPIRef("contextualIdentities")}} API is no longer defined in Firefox for Android. Previously, it was defined but defective. ([Firefox bug 1659500](https://bugzil.la/1659500))
 - The `contextualIdentities` permission is now not recognized on Firefox for Android. Previously, it enabled a broken version of the "containers" feature. ([Firefox bug 1659500](https://bugzil.la/1659500))
 - The new Manifest V3 version of the {{WebExtAPIRef("userScripts")}} API is now available on Firefox for Android. ([Firefox bug 1949955](https://bugzil.la/1949955))
+- Implements the {{WebExtAPIRef("webRequest.handlerBehaviorChanged")}} API. In previous versions this method was exposed but did nothing. ([Firefox bug 1657575](https://bugzil.la/1657575))
 - The {{WebExtAPIRef("alarms.create")}} API now returns a Promise instead of undefined. ([Firefox bug 1869171](https://bugzil.la/1869171))
 - Support added to enable the manipulation of tabs within tab groups, including the addition of:
   - {{WebExtAPIRef("tabs.group()")}} and {{WebExtAPIRef("tabs.ungroup()")}}. ([Firefox bug 1959714](https://bugzil.la/1959714))
@@ -136,10 +138,6 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **`PerformanceEventTiming.interactionId`**: `dom.performance.event_timing.enable_interactionid`
 
   {{domxref("PerformanceEventTiming.interactionId")}} can be used to measure latency timing for events triggered by a particular user interaction. ([Firefox bug 1934683](https://bugzil.la/1934683)).
-
-- **Import attribute for JSON modules** (Nightly): `javascript.options.experimental.import_attributes`
-
-  The [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declaration now supports importing JSON modules using the [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) attribute.
 
 ## Older versions
 

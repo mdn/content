@@ -1,6 +1,7 @@
 ---
 title: "Test your skills: Styling basics"
-slug: Learn_web_development/Extensions/Forms/Test_your_skills:_Styling_basics
+short-title: Basic styling
+slug: Learn_web_development/Extensions/Forms/Test_your_skills/Styling_basics
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---

@@ -89,7 +89,7 @@ const scaleY = window.innerHeight / canvas.height;
 const scaleToFit = Math.min(scaleX, scaleY);
 const scaleToCover = Math.max(scaleX, scaleY);
 
-stage.style.transformOrigin = "0 0"; //scale from top left
+stage.style.transformOrigin = "0 0"; // Scale from top left
 stage.style.transform = `scale(${scaleToFit})`;
 ```
 

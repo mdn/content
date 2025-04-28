@@ -45,7 +45,7 @@ const vertexShaderSource =
   "  gl_Position = position;\n" +
   "}\n";
 
-//Use the createShader function from the example above
+// Use the createShader function from the example above
 const vertexShader = createShader(gl, vertexShaderSource, gl.VERTEX_SHADER);
 ```
 
@@ -55,7 +55,7 @@ const vertexShader = createShader(gl, vertexShaderSource, gl.VERTEX_SHADER);
 const fragmentShaderSource =
   "void main() {\n" + "  gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);\n" + "}\n";
 
-//Use the createShader function from the example above
+// Use the createShader function from the example above
 const fragmentShader = createShader(
   gl,
   fragmentShaderSource,

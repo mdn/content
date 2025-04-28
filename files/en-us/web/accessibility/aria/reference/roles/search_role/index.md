@@ -18,7 +18,7 @@ The `search` role is used to identify the search functionality; the section of t
 
 ## Description
 
-The `search` role is [a landmark](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles#3._landmark_roles) role that can be added to the container element that encompasses all of the elements that combined to form the search feature of the document or application, including a descendant [(`<input type="search">`)](/en-US/docs/Web/HTML/Reference/Elements/input/search). If a document includes more than one search, each should have a unique label, unless they are the same search repeated, then use the same name. There is a [`input` of type `search`)](/en-US/docs/Web/HTML/Reference/Elements/input/search), though this does not define a search landmark by itself. Using {{HTMLElement('search')}} is an alternative way to define a search landmark.
+The `search` role is [a landmark](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles#3._landmark_roles) role that can be added to the container element that encompasses all of the elements that combined to form the search feature of the document or application, including a descendant [`<input type="search">`](/en-US/docs/Web/HTML/Reference/Elements/input/search). If a document includes more than one search, each should have a unique label, unless they are the same search repeated, then use the same name. There is an [`input` of type `search`](/en-US/docs/Web/HTML/Reference/Elements/input/search), though this does not define a search landmark by itself. Using {{HTMLElement('search')}} is an alternative way to define a search landmark.
 
 ## Examples
 

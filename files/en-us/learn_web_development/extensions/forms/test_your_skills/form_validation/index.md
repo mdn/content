@@ -1,6 +1,7 @@
 ---
 title: "Test your skills: Form validation"
-slug: Learn_web_development/Extensions/Forms/Test_your_skills:_Form_validation
+short-title: Form validation
+slug: Learn_web_development/Extensions/Forms/Test_your_skills/Form_validation
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---

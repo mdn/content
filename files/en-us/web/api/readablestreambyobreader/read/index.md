@@ -156,7 +156,7 @@ class MockHypotheticalSocket {
 
     return new Promise((resolve /*, reject*/) => {
       if (this.data_read >= this.max_data) {
-        //out of data
+        // Out of data
         resolve(resultObj);
         return;
       }
@@ -374,7 +374,7 @@ function readStream(reader) {
         offset += value.byteLength;
         bytesReceived += value.byteLength;
 
-        //logConsumer(`Read ${bytesReceived} bytes: ${value}`);
+        // logConsumer(`Read ${bytesReceived} bytes: ${value}`);
         logConsumer(`Read ${value.byteLength} bytes (total: ${bytesReceived})`);
         result += value;
 
