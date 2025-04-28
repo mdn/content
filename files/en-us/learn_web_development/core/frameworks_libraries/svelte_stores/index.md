@@ -632,7 +632,7 @@ Svelte stores provide a very simple and lightweight, but extremely powerful, way
 
 Let's change the subject now and do something fun and different: add an animation to our alerts. Svelte provides a whole module to define [transitions](https://learn.svelte.dev/tutorial/transition) and [animations](https://learn.svelte.dev/tutorial/animate) so we can make our user interfaces more appealing.
 
-A transition is applied with the [transition:fn](https://svelte.dev/docs/element-directives#transition-fn) directive, and is triggered by an element entering or leaving the DOM as a result of a state change. The `svelte/transition` module exports seven functions: `fade`, `blur`, `fly`, `slide`, `scale`, `draw`, and `crossfade`.
+A transition is applied with the [transition:fn](https://svelte.dev/docs/element-directives#transition-fn) directive, and is triggered by an element entering or leaving the DOM as a result of a state change.
 
 Let's give our `Alert` component a fly `transition`. We'll open the `Alert.svelte` file and import the `fly` function from the `svelte/transition` module.
 

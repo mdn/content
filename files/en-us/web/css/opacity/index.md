@@ -87,7 +87,7 @@ Opacity alone should not be used to provide information to screen readers. Use t
 
 ### Transitioning opacity
 
-When [transitioning](/en-US/docs/Web/CSS/CSS_transitions) the opacity of elements as you add them to the page when content was formerly hidden with [`visibility: hidden`](/en-US/docs/Web/CSS/visibility#hidden), [`display: none`](/en-US/docs/Web/CSS/display#none), or [`content-visibility: hidden`](/en-US/docs/Web/CSS/content-visibility#hidden), you need to include both a [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) and [`transition-behaviour: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior#allow-discrete):
+When [transitioning](/en-US/docs/Web/CSS/CSS_transitions) the opacity of elements as you add them to the page when content was formerly hidden with [`visibility: hidden`](/en-US/docs/Web/CSS/visibility#hidden), [`display: none`](/en-US/docs/Web/CSS/display#none), or [`content-visibility: hidden`](/en-US/docs/Web/CSS/content-visibility#hidden), you need to include both a [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) and [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior#allow-discrete):
 
 ```css
 .card {

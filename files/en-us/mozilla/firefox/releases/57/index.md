@@ -91,7 +91,7 @@ _No changes._
 - Support for messages of arbitrary size (up to 1GiB, although 256kiB is more interoperable) is now supported on {{DOMxRef("RTCDataChannel")}} through use of the end-of-record (EOR) flag on SCTP messages. See [Understanding message size limits](/en-US/docs/Web/API/WebRTC_API/Using_data_channels#understanding_message_size_limits) for more information ([Firefox bug 979417](https://bugzil.la/979417)).
 
   > [!NOTE]
-  > Because Firefox doesn't yet support the SCTP ndata protocol that provides the ability to interleave SCTP messages from multiple sources, sending large data objects can cause significant delays on all other SCTP traffic. See [Firefox bug 1381145](https://bugzil.la/1381145) to track progress on implementing and deploying ndata support in Firefox.
+  > Because Firefox doesn't yet support the SCTP Stream Schedulers and User Message Interleaving protocol that provides the ability to interleave SCTP messages from multiple sources, sending large data objects can cause significant delays on all other SCTP traffic. See [Firefox bug 1381145](https://bugzil.la/1381145) to track progress on implementing and deploying stream schedulers support in Firefox.
 
 - The {{DOMxRef("RTCDataChannel.send()")}} method can now throw a `TypeError` exception if the size of the message you're trying to send is not compatible with the receiving {{Glossary("user agent")}} (this is implemented as part of [Firefox bug 979417](https://bugzil.la/979417)).
 - The [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API) has been updated so that {{domxref("MediaRecorder/error_event", "error")}} events sent to report problems that occur while recording are now of type {{DOMxRef("MediaRecorderErrorEvent")}} rather than being generic events.

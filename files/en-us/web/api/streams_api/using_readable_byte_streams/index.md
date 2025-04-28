@@ -574,7 +574,7 @@ function makeReadableByteFileStream(filename) {
   return new ReadableStream({
     type: "bytes", // An underlying byte stream!
     start(controller) {
-      // Called to initialise the underlying source.
+      // Called to initialize the underlying source.
       // For a file source open a file handle (here we just create the mocked object).
       fileHandle = new MockUnderlyingFileHandle();
       logSource(
@@ -825,7 +825,7 @@ function makeReadableByteFileStream(filename) {
   return new ReadableStream({
     type: "bytes", // An underlying byte stream!
     start(controller) {
-      // Called to initialise the underlying source.
+      // Called to initialize the underlying source.
       // For a file source open a file handle (here we just create the mocked object).
       fileHandle = new MockUnderlyingFileHandle();
       logSource(
@@ -1065,7 +1065,7 @@ function makeReadableByteFileStream(filename) {
   return new ReadableStream({
     type: "bytes", // An underlying byte stream!
     start(controller) {
-      // Called to initialise the underlying source.
+      // Called to initialize the underlying source.
       // For a file source open a file handle (here we just create the mocked object).
       fileHandle = new MockUnderlyingFileHandle();
       logSource(

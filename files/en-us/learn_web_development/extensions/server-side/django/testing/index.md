@@ -347,7 +347,7 @@ class AuthorModelTest(TestCase):
 
     def test_get_absolute_url(self):
         author = Author.objects.get(id=1)
-        # This will also fail if the urlconf is not defined.
+        # This will also fail if the URLConf is not defined.
         self.assertEqual(author.get_absolute_url(), '/catalog/author/1')
 ```
 
@@ -382,7 +382,7 @@ def test_object_name_is_last_name_comma_first_name(self):
 
 def test_get_absolute_url(self):
     author = Author.objects.get(id=1)
-    # This will also fail if the urlconf is not defined.
+    # This will also fail if the URLConf is not defined.
     self.assertEqual(author.get_absolute_url(), '/catalog/author/1')
 ```
 
