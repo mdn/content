@@ -83,6 +83,7 @@ Only add an article if the attribute has enough nuance to deserve its own exampl
 > Samples of the **Experimental**, **Deprecated**, and **Non-standard** banners are shown right after this note block.
 >
 > _Remember to remove this whole explanatory note before publishing_
+>
 > {{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 >
 > Start by introducing the reader to the attribute, and its usage.
