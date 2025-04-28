@@ -45,8 +45,12 @@ The `aria-describedby` property is appropriate when the associated content conta
 
 ## Associated interfaces
 
-- {{domxref("Element.ariaDescribedByElements")}} and {{domxref("ElementInternals.ariaDescribedByElements")}}
-  - : The `ariaDescribedByElements` property is part of each element's interface. Its value is an array of {{domxref("Element")}}s corresponding to the ID values specified in the `aria-describedby` attribute (for cases where those ID values reference valid and in-scope elements).
+- {{domxref("Element.ariaDescribedByElements")}}
+  - : The `ariaDescribedByElements` property is part of each element's interface.
+    Its value is an array of subclasses of {{domxref("Element")}} that reflect the `id` references in the `aria-describedby` attribute ([with some caveats](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references)).
+- {{domxref("ElementInternals.ariaDescribedByElements")}}
+  - : The `ariaDescribedByElements` property is part of each custom element's interface.
+    Its value is an array of subclasses of {{domxref("Element")}} that reflect the `id` references in the `aria-describedby` attribute ([with some caveats](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references)).
 
 ## Associated roles
 

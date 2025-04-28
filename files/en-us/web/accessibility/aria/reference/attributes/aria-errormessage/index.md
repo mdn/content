@@ -68,8 +68,12 @@ When we went from valid to invalid, the only JavaScript change for this example 
 
 ## Associated interfaces
 
-- {{domxref("Element.ariaErrorMessageElements")}} and {{domxref("ElementInternals.ariaErrorMessageElements")}}
-  - : The `ariaErrorMessageElements` property is part of each element's interface. Its value is an array of {{domxref("Element")}}s corresponding to the ID values specified in the `aria-errormessage` attribute (for cases where those ID values reference valid and in-scope elements).
+- {{domxref("Element.ariaErrorMessageElements")}}
+  - : The `ariaErrorMessageElements` property is part of each element's interface.
+    Its value is an array of subclasses of {{domxref("Element")}} that reflect the `id` references in the `aria-errormessage` attribute ([with some caveats](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references)).
+- {{domxref("ElementInternals.ariaErrorMessageElements")}}
+  - : The `ariaErrorMessageElements` property is part of each custom element's interface.
+    Its value is an array of subclasses of {{domxref("Element")}} that reflect the `id` references in the `aria-errormessage` attribute ([with some caveats](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references)).
 
 ## Associated roles
 

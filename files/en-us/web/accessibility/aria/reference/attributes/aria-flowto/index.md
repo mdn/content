@@ -35,7 +35,6 @@ When `aria-flowto` has a single [id](/en-US/docs/Web/HTML/Reference/Global_attri
   - : The `ariaFlowToElements` property is part of each custom element's interface.
     Its value is an array of instances of subclasses of {{domxref("Element")}} that reflect the `id` references in the `aria-flowto` attribute ([with some caveats](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references)).
 
-
 ## Associated roles
 
 Used in **ALL** roles.

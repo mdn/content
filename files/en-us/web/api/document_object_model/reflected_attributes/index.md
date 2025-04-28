@@ -26,7 +26,7 @@ Consider the following HTML:
 <input placeholder="Original placeholder" />
 ```
 
-To get and set the [`placeholder`](/en-US/docs/Web/HTML/Attributes/placeholder) attribute:
+To get and set the [`placeholder`](/en-US/docs/Web/HTML/Reference/Attributes/placeholder) attribute:
 
 ```js
 const input = document.querySelector("input");
@@ -125,7 +125,7 @@ This example shows how you can get and set attributes and their reflected proper
 
 #### HTML
 
-The HTML defines an {{htmlelement("input")}} element where the [`placeholder`](/en-US/docs/Web/HTML/Attributes/placeholder) attribute has been set with the text "Original placeholder".
+The HTML defines an {{htmlelement("input")}} element where the [`placeholder`](/en-US/docs/Web/HTML/Reference/Attributes/placeholder) attribute has been set with the text "Original placeholder".
 We also define two {{htmlelement("button")}} elements for replacing the `placeholder` attribute.
 
 ```html
@@ -166,7 +166,7 @@ const inputElement = document.querySelector("input");
 log(
   `(Original) attr: "${inputElement.getAttribute("placeholder")}", prop: "${
     inputElement.placeholder
-  }"`
+  }"`,
 );
 ```
 
@@ -182,8 +182,8 @@ setAttributeButton.addEventListener("click", () => {
   inputElement.setAttribute("placeholder", "Set from attribute");
   log(
     `(Set attribute) attr: "${inputElement.getAttribute(
-      "placeholder"
-    )}", prop: "${inputElement.placeholder}"`
+      "placeholder",
+    )}", prop: "${inputElement.placeholder}"`,
   );
 });
 
@@ -192,8 +192,8 @@ setPropertyButton.addEventListener("click", () => {
   inputElement.placeholder = "Set from property";
   log(
     `(Set property) attr: "${inputElement.getAttribute(
-      "placeholder"
-    )}", prop: "${inputElement.placeholder}"`
+      "placeholder",
+    )}", prop: "${inputElement.placeholder}"`,
   );
 });
 ```
