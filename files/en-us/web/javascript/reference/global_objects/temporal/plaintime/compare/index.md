@@ -26,7 +26,7 @@ Temporal.PlainTime.compare(time1, time2)
 
 ### Return value
 
-Returns `-1` if `time1` comes before `time2`, `0` if they are the same, and `1` if `time2` comes after.
+Returns `-1` if `time1` comes before `time2`, `0` if they are the same, and `1` if `time1` comes after `time2`.
 
 ## Examples
 
