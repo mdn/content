@@ -7,7 +7,8 @@ sidebar: mdnsidebar
 
 HTML attributes fall into two categories: **element-specific attributes**, which apply only to certain elements (e.g., the `accept` attribute on `<input type="file">`), and **global attributes** which can be used for any HTML element (e.g., `class`, `id`). The former should be put under `HTML/Reference/Attributes`, while the latter should be put under `HTML/Reference/Global_attributes`.
 
-Note that most element-specific attributes don't need standalone articles; the attribute list in the element reference is sufficient to describe its behavior. Only add an article if the attribute has enough nuance to deserve its own examples, or it is a global attribute.
+Note that most element-specific attributes don't need standalone articles if the attribute list in the element reference is sufficient to describe its behavior.
+Only add an article if the attribute has enough nuance to deserve its own examples, or it is a global attribute.
 
 > **Note:** _Remove this whole explanatory note before publishing_
 >
@@ -83,6 +84,7 @@ Note that most element-specific attributes don't need standalone articles; the a
 >
 > _Remember to remove this whole explanatory note before publishing_
 > {{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+>
 > Start by introducing the reader to the attribute, and its usage.
 > For example: The **`name-of-the-attribute`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) describes or manipulates [insert usage description].
 
