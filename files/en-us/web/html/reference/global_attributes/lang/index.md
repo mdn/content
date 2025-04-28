@@ -112,7 +112,7 @@ For example, the language menu on this site (MDN) includes a **`lang`** attribut
       </a>
     </li>
     <li lang="ko" role="menuitem">
-      <a href="/ko/docs/Web/HTML/Reference/Global_attributes/lang title="Korean">
+      <a href="/ko/docs/Web/HTML/Reference/Global_attributes/lang" title="Korean">
         <bdi>한국어</bdi>
       </a>
     </li>
