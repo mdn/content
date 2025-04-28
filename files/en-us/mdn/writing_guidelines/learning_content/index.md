@@ -3,9 +3,8 @@ title: Learn web development writing guidelines
 short-title: Learning content
 slug: MDN/Writing_guidelines/Learning_content
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 The [Learn web development](/en-US/docs/Learn_web_development) section of MDN is aimed specifically at folks learning the basic fundamentals of web development, and as such, requires a different approach to the rest of MDN's content. This articles provides guidelines for writing learning content.
 
