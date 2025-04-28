@@ -1,6 +1,7 @@
 ---
-title: "Test your skills: HTML5 controls"
-slug: Learn_web_development/Extensions/Forms/Test_your_skills:_HTML5_controls
+title: "Test your skills: Input types"
+short-title: Input types
+slug: Learn_web_development/Extensions/Forms/Test_your_skills/Input_types
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---

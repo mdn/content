@@ -228,7 +228,7 @@ In addition, you can use such substitutions to specify parts of the string that 
 Locales can be specified using a language code, such as `fr` or `en` or qualified with a script and region code, such as `en-US` or `zh-Hans-CN`. When your extension asks the i18n system for a string, it selects a string using this algorithm:
 
 1. Return the string if there is a `messages.json` file for the user's set browser locale containing the string. For example, if the user has set their browser to `en-US` and the extension provides the `_locales/en_US/messages.json` file.
-2. Otherwise, if the browser locale is qualified with a script or region (e.g., `en-US` or `zh-Hans-CN`) and there is a `messages.json` file for the regionless version and failing that the scriptless version of that locale and that file contains the string, return it. For example, if the user has set their browser to `zh-Hans-CN`(and there is no `_locales/zh_Hans_CN/messages.json` file) the i18n system looks for a string in `zh-Hans`, and if that isn't available, `zh.`
+2. Otherwise, if the browser locale is qualified with a script or region (e.g., `en-US` or `zh-Hans-CN`) and there is a `messages.json` file for the regionless version and failing that the scriptless version of that locale and that file contains the string, return it. For example, if the user has set their browser to `zh-Hans-CN` (and there is no `_locales/zh_Hans_CN/messages.json` file) the i18n system looks for a string in `zh-Hans`, and if that isn't available, `zh.`
 3. Otherwise, if there is a `messages.json` file for the `default_locale` defined in the `manifest.json`, and it contains the string, return it.
 4. Otherwise return an empty string.
 

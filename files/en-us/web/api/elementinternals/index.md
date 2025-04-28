@@ -70,6 +70,8 @@ The `ElementInternals` interface also includes the following properties.
   - : A string reflecting the [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup) attribute, which indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an ElementInternals.
 - {{domxref("ElementInternals.ariaHidden")}}
   - : A string reflecting the [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden) attribute, which indicates whether the element is exposed to an accessibility API.
+- {{domxref("ElementInternals.ariaInvalid")}}
+  - : A string reflecting the [`aria-invalid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid) attribute, which indicates the entered value does not conform to the format expected by the application.
 - {{domxref("ElementInternals.ariaKeyShortcuts")}}
   - : A string reflecting the [`aria-keyshortcuts`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-keyshortcuts) attribute, which indicates keyboard shortcuts that an author has implemented to activate or give focus to an ElementInternals.
 - {{domxref("ElementInternals.ariaLabel")}}
@@ -174,6 +176,5 @@ console.log(element.internals_.form);
 
 ## See also
 
-- [More capable form controls](https://web.dev/articles/more-capable-form-controls)
-- [Creating custom form controls with ElementInternals](https://css-tricks.com/creating-custom-form-controls-with-elementinternals/)
-- [ElementInternals polyfill](https://www.npmjs.com/package/element-internals-polyfill)
+- [More capable form controls](https://web.dev/articles/more-capable-form-controls) via web.dev (2019)
+- [Creating custom form controls with ElementInternals](https://css-tricks.com/creating-custom-form-controls-with-elementinternals/) via CSS-tricks (2021)

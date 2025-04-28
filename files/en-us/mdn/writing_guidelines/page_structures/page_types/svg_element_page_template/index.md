@@ -24,6 +24,7 @@ sidebar: mdnsidebar
 >   - experimental
 >   - non-standard
 > browser-compat: svg.elements.NameOfTheElement
+> sidebar: svgref
 > ---
 > ```
 >
@@ -46,34 +47,29 @@ sidebar: mdnsidebar
 >     Note that you may first need to create/update an entry for the element in our [Browser compat data repo](https://github.com/mdn/browser-compat-data), and the entry will need to include specification information.
 >     See our [guide on how to do this](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
 >
+> - **sidebar**
+>   - : This is `svgref` for all SVG guide and reference pages.
+>     See [Page structures: Sidebars](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars) for details.
+>
 > ---
 >
 > **Top-of-page macros**
 >
-> A number of macro calls appear at the top of the content section (immediately below the page frontmatter).
-> These macros are automatically added by the toolchain (there is no need to add/remove):
+> A number of macros appear at the top of the content section immediately after the page front matter.
+> These macros are automatically added by tooling, so avoid adding or removing them:
 >
 > - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
 >   If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 > - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
 > - `\{{Non-standard_Header}}` — this generates a **Non-standard** banner that indicates that the feature is not part of any specification.
 >
-> You should update or delete the following macros according to the advice below:
+> See ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated) for information.
 >
-> - `\{{SecureContext_Header}}` — this generates a **Secure context** banner that indicates the technology is only available in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
->   If it isn't, then you can remove the macro call.
->   If it is, then you should also fill in an entry for it in the [Features restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts) page.
-> - `\{{SVGRef}}` — this generates the left-hand-side reference sidebar for the element.
->   The content of the sidebar depends on the tags in the page metadata.
-> - Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
->
-> Do not provide status header macros manually. Refer to the section ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated) to add these statuses to the page.
->
-> Samples of the **Experimental**, **Deprecated**, and **Non-standard** banners are shown right after this note block.
+> Examples of the **Experimental**, **Deprecated**, and **Non-standard** banners are shown after this note block.
 >
 > _Remember to remove this whole explanatory note before publishing_
 
-{{SVGRef}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 Begin the content on the page with an introductory paragraph — start by naming the element and saying what it does.
 This should ideally be one or two short sentences.

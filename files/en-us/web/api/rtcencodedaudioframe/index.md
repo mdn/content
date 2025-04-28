@@ -42,7 +42,7 @@ addEventListener("rtctransform", (event) => {
       const newData = new ArrayBuffer(encodedFrame.data.byteLength);
       const newView = new DataView(newData);
 
-      //Encrypt frame bytes using the encryptFunction() method (not shown)
+      // Encrypt frame bytes using the encryptFunction() method (not shown)
       for (let i = 0; i < encodedFrame.data.byteLength; ++i) {
         const encryptedByte = encryptFunction(~view.getInt8(i));
         newView.setInt8(i, encryptedByte);

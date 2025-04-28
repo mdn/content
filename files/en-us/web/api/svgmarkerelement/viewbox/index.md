@@ -38,7 +38,7 @@ This example demonstrates how to return the value of the `width` set for the {{S
 
 ```js
 let marker = document.getElementById("arrow");
-console.log(marker.viewBox.baseVal.width); //10
+console.log(marker.viewBox.baseVal.width); / 10
 ```
 
 ## Specifications

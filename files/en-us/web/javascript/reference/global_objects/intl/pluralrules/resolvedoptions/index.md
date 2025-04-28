@@ -78,9 +78,9 @@ console.log(usedOptions.pluralCategories); // Array ["one", "other"]
 console.log(usedOptions.type); // "cardinal"
 console.log(usedOptions.minimumIntegerDigits); // 1
 console.log(usedOptions.minimumFractionDigits); // undefined (maximumSignificantDigits is set)
-console.log(usedOptions.maximumFractionDigits); //undefined (maximumSignificantDigits is set)
+console.log(usedOptions.maximumFractionDigits); // undefined (maximumSignificantDigits is set)
 console.log(usedOptions.minimumSignificantDigits); // 1
-console.log(usedOptions.maximumSignificantDigits); //2
+console.log(usedOptions.maximumSignificantDigits); // 2
 console.log(usedOptions.roundingIncrement); // 1
 console.log(usedOptions.roundingMode); // "halfExpand"
 console.log(usedOptions.roundingPriority); // "auto"

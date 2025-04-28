@@ -93,12 +93,12 @@ To understand this syntax better, let's consider a real example. Imagine a child
 
 ```js
 let shoppingDone = false;
-let childsAllowance;
+let childAllowance;
 
 if (shoppingDone === true) {
-  childsAllowance = 10;
+  childAllowance = 10;
 } else {
-  childsAllowance = 5;
+  childAllowance = 5;
 }
 ```
 
@@ -187,13 +187,13 @@ And, returning to our previous example about the child doing a chore for their p
 
 ```js
 let shoppingDone = false;
-let childsAllowance;
+let childAllowance;
 
 // We don't need to explicitly specify 'shoppingDone === true'
 if (shoppingDone) {
-  childsAllowance = 10;
+  childAllowance = 10;
 } else {
-  childsAllowance = 5;
+  childAllowance = 5;
 }
 ```
 

@@ -43,13 +43,13 @@ can be expected but no object is relevant.
 
 ```js
 // foo does not exist. It is not defined and has never been initialized:
-foo; //ReferenceError: foo is not defined
+foo; // ReferenceError: foo is not defined
 ```
 
 ```js
 // foo is known to exist now but it has no type or value:
 const foo = null;
-foo; //null
+foo; // null
 ```
 
 ## Examples

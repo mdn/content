@@ -112,7 +112,7 @@ async function init() {
     console.log(value);
   });
 
-  //...
+  // …
 }
 ```
 

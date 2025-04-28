@@ -19,9 +19,9 @@ console.log("starting timer...");
 // Expected output: "starting timer..."
 
 setTimeout(() => {
-  const millis = Date.now() - start;
+  const ms = Date.now() - start;
 
-  console.log(`seconds elapsed = ${Math.floor(millis / 1000)}`);
+  console.log(`seconds elapsed = ${Math.floor(ms / 1000)}`);
   // Expected output: "seconds elapsed = 2"
 }, 2000);
 ```

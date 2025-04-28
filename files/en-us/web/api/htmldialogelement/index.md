@@ -137,7 +137,7 @@ The handlers call {{domxref("HTMLDialogElement.close()")}} with the selection va
 // Confirm button closes dialog if there is a selection.
 confirmButton.addEventListener("click", () => {
   if (selectElement.value) {
-    //Set dialog.returnValue to selected value
+    // Set dialog.returnValue to selected value
     dialog.close(selectElement.value);
   }
 });
@@ -167,7 +167,7 @@ Here we just treat the cancel as a "close" operation, and reset the {{domxref("H
 ```js
 dialog.addEventListener("cancel", (event) => {
   log(`cancel_event: (dialog.returnValue: "${dialog.returnValue}")`);
-  dialog.returnValue = ""; //Reset value
+  dialog.returnValue = ""; // Reset value
 });
 ```
 
@@ -197,7 +197,7 @@ In this case we just log the old and new state.
 ```js
 dialog.addEventListener("beforetoggle", (event) => {
   log(
-    `beforetoggle event: oldstate: ${event.oldState}, newState: ${event.newState}`,
+    `beforetoggle event: oldState: ${event.oldState}, newState: ${event.newState}`,
   );
 
   // Call event.preventDefault() to prevent a dialog opening

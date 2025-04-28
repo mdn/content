@@ -63,7 +63,7 @@ We then create a {{domxref("ShadowRoot")}} and pass the sheet object to the {{do
 const node = document.createElement("div");
 const shadow = node.attachShadow({ mode: "open" });
 
-//Adopt the sheet into the shadow DOM
+// Adopt the sheet into the shadow DOM
 shadow.adoptedStyleSheets = [sheet];
 ```
 

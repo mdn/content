@@ -19,6 +19,7 @@ sidebar: mdnsidebar
 > title: Term being defined
 > slug: Glossary/Term_being_defined
 > page-type: glossary-definition OR glossary-disambiguation
+> sidebar: glossarysidebar
 > ---
 > ```
 >
@@ -30,6 +31,9 @@ sidebar: mdnsidebar
 >     This will be formatted as snake case of the title: `Glossary/Term_being_defined`.
 > - **page-type**
 >   - : `glossary-definition` for a definition page or `glossary-disambiguation` for a disambiguation page.
+> - **sidebar**
+>   - : This is always `glossarysidebar`.
+>     See [Page structures: Sidebars](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars) for details.
 >
 > ---
 >
