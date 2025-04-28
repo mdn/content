@@ -62,7 +62,7 @@ Note that most element-specific attributes don't need standalone articles; the a
 >   See our [guide on how to do this](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
 >
 > - **sidebar**
->   - : This is always `htmlsidebar`.
+>   - : Keep as `htmlsidebar` (all pages under `/web/html/` use this sidebar).
 >     See [Page structures: Sidebars](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars) for details.
 >
 > ---
