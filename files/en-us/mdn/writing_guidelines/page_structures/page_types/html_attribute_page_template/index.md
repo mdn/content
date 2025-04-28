@@ -7,7 +7,7 @@ sidebar: mdnsidebar
 
 HTML attributes fall into two categories: **element-specific attributes**, which apply only to certain elements (e.g., the `accept` attribute on `<input type="file">`), and **global attributes** which can be used for any HTML element (e.g., `class`, `id`). The former should be put under `HTML/Reference/Attributes`, while the latter should be put under `HTML/Reference/Global_attributes`.
 
-Note that most attributes don't need standalone articles; the attribute list in the element reference is sufficient to describe its behavior. Only add an article if the attribute has enough nuance to deserve its own examples, or it is a global atribute.
+Note that most element-specific attributes don't need standalone articles; the attribute list in the element reference is sufficient to describe its behavior. Only add an article if the attribute has enough nuance to deserve its own examples, or it is a global atribute.
 
 > **Note:** _Remove this whole explanatory note before publishing_
 >
@@ -46,7 +46,12 @@ Note that most attributes don't need standalone articles; the attribute list in 
 >   - : Flags describing the status of this feature. An array which may contain one or more of the following: `experimental`, `deprecated`, `non-standard`. This key should not be set manually: it is set automatically based on values in the browser compatibility data for the feature. See ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
 > - **browser-compat**
 >   - : Replace the placeholder value `html.global_attributes.name-of-the-attribute` with the query string for the global attribute in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
->     For element-specific attributes, use the format `html.elements.name-of-the-element.name-of-the-attribute`.
+>     For element-specific attributes, use the format `html.elements.name-of-the-element.name-of-the-attribute`, with each query string on its own line, preceded by a dash. For example:
+browser-compat:
+  - html.elements.form.autocomplete
+  - html.elements.input.autocomplete
+  - html.elements.select.autocomplete
+  - html.elements.textarea.autocomplete
 >     The toolchain automatically uses the key to populate the compatibility and specification sections (replacing the `\{{Compat}}` and `\{{Specifications}}` macros).
 >     Note that you may first need to create/update an entry for the attribute in our [Browser compat data repo](https://github.com/mdn/browser-compat-data), and the entry will need to include specification information.
 >     See our [guide on how to do this](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
@@ -96,7 +101,7 @@ Provide a list of possible values for the attribute if any (remove if not applic
 - `value 3`
   - : Description of value 3
 
-## Accessibility concerns
+## Accessibility
 
 Warn of any potential accessibility concerns that may exist with using this attribute, and how to work around them. Remove this section if there are none to list.
 
