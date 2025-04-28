@@ -132,6 +132,8 @@ chromeos
 chws
 clipboardchange
 clon
+closedby
+closerequest
 cnonce
 colindextext
 collectstatic
