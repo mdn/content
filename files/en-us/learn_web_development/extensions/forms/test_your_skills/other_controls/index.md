@@ -1,6 +1,7 @@
 ---
 title: "Test your skills: Other controls"
-slug: Learn_web_development/Extensions/Forms/Test_your_skills:_Other_controls
+short-title: Other controls
+slug: Learn_web_development/Extensions/Forms/Test_your_skills/Other_controls
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---

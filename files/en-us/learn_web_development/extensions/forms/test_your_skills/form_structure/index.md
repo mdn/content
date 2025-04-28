@@ -1,6 +1,7 @@
 ---
 title: "Test your skills: Form structure"
-slug: Learn_web_development/Extensions/Forms/Test_your_skills:_Form_structure
+short-title: Form structure
+slug: Learn_web_development/Extensions/Forms/Test_your_skills/Form_structure
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
