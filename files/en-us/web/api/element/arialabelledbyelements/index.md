@@ -88,12 +88,9 @@ if ("ariaLabelledByElements" in Element.prototype) {
   const labelElements = inputElement.ariaLabelledByElements;
   log(`ariaLabelledByElements: ${labelElements}`);
 
-  // Accessible name from ariaLabelledByElements
-  let accessibleName = "";
-  labelElements.forEach((labelElement) => {
-    accessibleName += labelElement.textContent.trim() + " ";
-  });
-  log(`Accessible name: ${accessibleName.trim()}`);
+  // Log inner text of elements to get accessible name
+  const text = labelElements.map((e) => e.textContent.trim()).join(" ");
+  log(`Accessible name: ${text.trim()}`);
 } else {
   log("element.ariaLabelledByElements: not supported by browser");
 }

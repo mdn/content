@@ -96,11 +96,8 @@ if ("ariaDescribedByElements" in Element.prototype) {
   log(`ariaDescribedByElements: ${buttonElements}`);
 
   // Accessible description from the elements
-  let ariaDescription = "";
-  buttonElements.forEach((descElement) => {
-    ariaDescription += descElement.textContent.trim() + " ";
-  });
-  log(`Accessible description: ${ariaDescription.trim()}`);
+  const text = buttonElements.map((e) => e.textContent.trim()).join(" ");
+  log(`Accessible description: ${text.trim()}`);
 } else {
   log("element.ariaDescribedByElements: not supported by browser");
 }

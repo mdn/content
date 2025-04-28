@@ -51,7 +51,7 @@ An alternative flow is defined in sections 1 and 3 using the `aria-flowto` attri
 
 ```css hidden
 #log {
-  height: 180px;
+  height: 200px;
   overflow: scroll;
   padding: 0.5rem;
   margin: 5px;
@@ -116,7 +116,7 @@ if ("ariaFlowToElements" in Element.prototype) {
 The log below shows each of the sections (identified by `id`) and the corresponding flow-to element ids that might be selected by accessibility tools.
 We note here that the attribute and property identify the same flow-to elements.
 
-{{EmbedLiveSample("Get the flow-to element","100%","450px")}}
+{{EmbedLiveSample("Get the flow-to element","100%","570px")}}
 
 ## Specifications
 

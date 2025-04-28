@@ -109,7 +109,7 @@ toggleButton.addEventListener("click", () => {
 
 Next the example gets the value of the `aria-controls` attribute with {{domxref("Element.getAttribute()")}} (a string listing the `id` values of the referenced elements).
 It then checks whether the `ariaControlsElements` property is supported, and if so, logs its value.
-Finally it returns and logs the inner text of each of the controlled elements.
+Finally it returns and logs the inner text for each of the controlled elements.
 
 ```js
 log(`aria-controls: ${toggleButton.getAttribute("aria-controls")}`);
@@ -120,11 +120,9 @@ if ("ariaControlsElements" in Element.prototype) {
   log(`ariaControlsElements: ${controlledElements}`);
 
   // List innerText for each of the ariaControlsElements
-  let textOfControllingElements = "";
   controlledElements.forEach((controlled) => {
-    textOfControllingElements += `"${controlled.textContent.trim()}" `;
+    log(` Controlled element text: ${controlled.textContent.trim()}`);
   });
-  log(`Controlled element text: ${textOfControllingElements.trim()}`);
 } else {
   log("element.ariaControlsElements: not supported by browser");
 }

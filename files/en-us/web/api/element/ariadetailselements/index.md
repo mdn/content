@@ -56,7 +56,7 @@ The HTML defines two {{htmlelement("span")}} elements and references their ids i
 ```css hidden
 #log {
   height: 70px;
-  overflow: scroll;
+  overflow-x: scroll;
   padding: 0.5rem;
   border: 1px solid black;
 }
@@ -86,11 +86,8 @@ if ("ariaDetailsElements" in Element.prototype) {
   log(`ariaDetailsElements: ${buttonElements}`);
 
   // Accessible details from ariaDetailsElements
-  let ariaDetails = "";
-  buttonElements.forEach((descElement) => {
-    ariaDetails += descElement.textContent.trim() + " ";
-  });
-  log(`Accessible details: ${ariaDetails.trim()}`);
+  const text = buttonElements.map((e) => e.textContent.trim()).join(" ");
+  log(`Accessible details: ${text.trim()}`);
 } else {
   log("element.ariaDetailsElements: not supported by browser");
 }

@@ -117,11 +117,8 @@ if ("ariaErrorMessageElements" in Element.prototype) {
   log(`ariaErrorMessageElements: ${propElements}`);
 
   // Accessible text from element inner text
-  let innerText = "";
-  propElements.forEach((elem) => {
-    innerText += elem.textContent.trim() + " ";
-  });
-  log(`Error message details: ${innerText.trim()}`);
+  const text = propElements.map((e) => e.textContent.trim).join(" ");
+  log(`Error message details: ${text.trim()}`);
 } else {
   log("element.ariaErrorMessageElements: not supported by browser");
 }
@@ -132,7 +129,7 @@ if ("ariaErrorMessageElements" in Element.prototype) {
 As you enter an email address, the error text will be displayed until the email address is valid.
 Note that the log shows the error message reference read from the attribute, the element from `ariaErrorMessageElements`, and the inner text of the element, which is its error message.
 
-{{EmbedLiveSample("Email input with error message","100%","150px")}}
+{{EmbedLiveSample("Email input with error message","100%","180px")}}
 
 ## Specifications
 

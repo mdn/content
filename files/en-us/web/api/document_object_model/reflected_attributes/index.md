@@ -248,15 +248,10 @@ The code first defines a logging function to list the ids from the `aria-labelle
 ```js
 function logAccessibleInfo(element) {
   const refids = element.getAttribute("aria-labelledby");
+  const accessElements = element.ariaLabelledByElements;
+  const text = accessElements.map((e) => e.textContent).join(" ");
 
-  let text = "";
-  accessElements = element.ariaLabelledByElements;
-  accessElements.forEach((el) => {
-    text += el.textContent.trim() + " ";
-  });
-  text = text.trim();
-
-  log(` refs: "${refids}", el: ${accessElements}, label: ${text} `);
+  log(` ref ids: "${refids}", el: ${accessElements}, label: ${text} `);
 }
 ```
 
@@ -373,15 +368,10 @@ The code first defines a logging function to list the ids from the `aria-labelle
 ```js
 function logAccessibleInfo(element) {
   const refids = element.getAttribute("aria-labelledby");
+  const accessElements = element.ariaLabelledByElements;
+  const text = accessElements.map((e) => e.textContent).join(" ");
 
-  let text = "";
-  accessElements = element.ariaLabelledByElements;
-  accessElements.forEach((el) => {
-    text += el.textContent.trim() + " ";
-  });
-  text = text.trim();
-
-  log(` refs: "${refids}", elLen: ${accessElements.length}, label: ${text} `);
+  log(` ref ids: "${refids}", el: ${accessElements}, label: ${text} `);
 }
 ```
 
@@ -432,4 +422,4 @@ The log below shows the output of the above code:
   This should show that `label_3` has no corresponding element reflected in the property, as it is out of scope.
 - As you toggle the button the `label_1` element should be added and removed from the property as it is moved in and out of scope.
 
-{{EmbedLiveSample("Reflected element reference DOM scope","100%","350px")}}
+{{EmbedLiveSample("Reflected element reference DOM scope","100%","400px")}}
