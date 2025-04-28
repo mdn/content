@@ -45,6 +45,7 @@ Note that most element-specific attributes don't need standalone articles; the a
 > - **status**
 >   - : Flags describing the status of this feature. An array which may contain one or more of the following: `experimental`, `deprecated`, `non-standard`. This key should not be set manually: it is set automatically based on values in the browser compatibility data for the feature. See ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
 > - **browser-compat**
+>
 >   - : Replace the placeholder value `html.global_attributes.name-of-the-attribute` with the query string for the global attribute in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
 >     For element-specific attributes, use the format `html.elements.name-of-the-element.name-of-the-attribute`, with each query string on its own line, preceded by a dash. For example:
 >
@@ -56,9 +57,10 @@ Note that most element-specific attributes don't need standalone articles; the a
 >     - html.elements.textarea.autocomplete
 >   ```
 >
->     The toolchain automatically uses the key to populate the compatibility and specification sections (replacing the `\{{Compat}}` and `\{{Specifications}}` macros).
->     Note that you may first need to create/update an entry for the attribute in our [Browser compat data repo](https://github.com/mdn/browser-compat-data), and the entry will need to include specification information.
->     See our [guide on how to do this](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
+>   The toolchain automatically uses the key to populate the compatibility and specification sections (replacing the `\{{Compat}}` and `\{{Specifications}}` macros).
+>   Note that you may first need to create/update an entry for the attribute in our [Browser compat data repo](https://github.com/mdn/browser-compat-data), and the entry will need to include specification information.
+>   See our [guide on how to do this](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
+>
 > - **sidebar**
 >   - : This is always `htmlsidebar`.
 >     See [Page structures: Sidebars](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars) for details.
@@ -80,9 +82,9 @@ Note that most element-specific attributes don't need standalone articles; the a
 > Samples of the **Experimental**, **Deprecated**, and **Non-standard** banners are shown right after this note block.
 >
 > _Remember to remove this whole explanatory note before publishing_
-{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
-Start by introducing the reader to the attribute, and its usage.
-For example: The **`name-of-the-attribute`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) describes or manipulates [insert usage description].
+> {{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+> Start by introducing the reader to the attribute, and its usage.
+> For example: The **`name-of-the-attribute`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) describes or manipulates [insert usage description].
 
 ## Try it
 
@@ -120,6 +122,7 @@ Note that we use the plural "Examples" even if the page only contains one exampl
 
 Each example must have an H3 heading (`###`) highlighting the example. The heading should be descriptive of what the example is doing. For example, "A simple example" does not say anything about the example and therefore, not a good heading. The heading should be concise. For a longer description, use the paragraph after the heading.
 See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples) for more information.
+
 > [!NOTE]
 > Sometimes you will want to link to examples given on another page.
 >
