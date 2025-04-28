@@ -21,7 +21,7 @@ svg {
 ```html
 <svg viewBox="-10 -10 120 120">
   <rect x="-10" y="-10" width="120" height="120" fill="blue" />
-  <mask id="myMask">
+  <mask id="myMask" mask-type="luminance">
     <!-- Everything under a white pixel will be visible -->
     <rect x="0" y="0" width="100" height="100" fill="white" />
 
@@ -45,6 +45,8 @@ svg {
 - {{SVGAttr("height")}}
   - : This attribute defines the height of the masking area.
     _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length); _Default value_: `120%`; _Animatable_: **yes**
+- {{SVGAttr("height")}}
+- : This attribute defines the mask mode for the contents for the contents of the `<mask>`.
 - {{SVGAttr("maskContentUnits")}}
   - : This attribute defines the coordinate system for the contents of the `<mask>`.
     _Value type_: `userSpaceOnUse` | `objectBoundingBox`; _Default value_: `userSpaceOnUse`; _Animatable_: **yes**
@@ -75,5 +77,6 @@ svg {
 
 ## See also
 
+- CSS {{cssxref("mask-type")}} property
 - Other clipping and masking SVG elements: {{SVGElement("clipPath")}}
-- Clipping and masking CSS properties: {{cssxref("mask")}}, {{cssxref("mask-image")}}, {{cssxref("mask-mode")}}, {{cssxref("mask-repeat")}}, {{cssxref("mask-position")}}, {{cssxref("mask-clip")}}, {{cssxref("mask-origin")}}, {{cssxref("mask-composite")}}, {{cssxref("mask-size")}}, {{cssxref("pointer-events")}}
+- Clipping and masking CSS properties: {{cssxref("mask")}}, {{cssxref("mask-image")}}, {{cssxref("mask-mode")}}, {{cssxref("mask-repeat")}}, {{cssxref("mask-position")}}, {{cssxref("mask-clip")}}, {{cssxref("mask-origin")}}, {{cssxref("mask-composite")}}, {{cssxref("mask-size")}}

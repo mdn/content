@@ -6,7 +6,7 @@ browser-compat: svg.elements.mask.mask-type
 sidebar: svgref
 ---
 
-The **`mask-type`** attribute indicates which mask mode to use for the contents of the {{ SVGElement("mask") }} element.
+The **`mask-type`** attribute indicates which mask mode, _alpha_ or _luminance_, to use for the contents of the {{ SVGElement("mask") }} element when masking.
 
 You can use this attribute with the following SVG elements:
 
