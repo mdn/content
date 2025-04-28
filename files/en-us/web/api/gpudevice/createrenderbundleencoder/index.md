@@ -81,7 +81,7 @@ const renderBundle = renderBundleEncoder.finish();
 {{domxref("GPURenderPassEncoder.executeBundles()")}} is then used to reuse the work across multiple render passes to improve performance. Study the example code listing for the full context.
 
 ```js
-// ...
+// …
 
 return function doDraw(timestamp) {
   if (startTime === undefined) {
@@ -107,7 +107,7 @@ return function doDraw(timestamp) {
   device.queue.submit([commandEncoder.finish()]);
 };
 
-// ...
+// …
 ```
 
 ## Specifications

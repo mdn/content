@@ -97,7 +97,7 @@ The worker can then get the port from the `rtctransform` event fired at the glob
 let messagePort;
 addEventListener("rtctransform", (event) => {
   messagePort = event.transformer.options.port;
-  // ... other transformer code
+  // … other transformer code
 });
 ```
 
@@ -115,7 +115,7 @@ The worker would listen for the `message` event to get the key:
 ```js
 messagePort.addEventListener("message", (event) => {
   const encryptionKeyBuffer = event.data;
-  // ... Use the encryptionKeyBuffer for encryption or any other purpose
+  // … Use the encryptionKeyBuffer for encryption or any other purpose
 });
 ```
 

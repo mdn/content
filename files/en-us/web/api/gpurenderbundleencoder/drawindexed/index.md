@@ -46,7 +46,7 @@ None ({{jsxref("Undefined")}}).
 ## Examples
 
 ```js
-// ...
+// …
 
 const bundleEncoder = device.createRenderBundleEncoder(descriptor);
 
@@ -59,7 +59,7 @@ bundleEncoder.drawIndexed(indexCount);
 
 const renderBundle = bundleEncoder.finish();
 
-// ...
+// …
 ```
 
 ## Specifications

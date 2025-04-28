@@ -400,13 +400,13 @@ This will be the supported configuration that was found last, which because of t
 let keys = null;
 if (bestConfig) {
   keys = await bestConfig.keySystemAccess.createMediaKeys();
-  // ... use keys to decode media using best config
+  // … use keys to decode media using best config
 } else if (nonSmoothConfig) {
   console.log(
     "No smooth configs found. Using lowest resolution configuration!",
   );
   keys = await nonSmoothConfig.keySystemAccess.createMediaKeys();
-  // ... use keys to decode media using lowest framerate config
+  // … use keys to decode media using lowest framerate config
 } else {
   console.log("No supported configs!");
   // Fail!
