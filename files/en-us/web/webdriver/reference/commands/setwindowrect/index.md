@@ -8,7 +8,7 @@ sidebar: webdriver
 
 The _Set Window Rect_ [command](/en-US/docs/Web/WebDriver/Reference/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API alters the size and position of the operating system window associated with the current [`window`](/en-US/docs/Web/API/Window). The command acts as the setter of [Get Window Rect](/en-US/docs/Web/WebDriver/Reference/Commands/GetWindowRect), which return object you can pass directly as this command's payload.
 
-Certain subsets of devices do not support setting the window dimensions or its position. On these configurations the command will return an [unsupported operating](/en-US/docs/Web/WebDriver/Errors/UnsupportedOperation) error. To avoid running into situations where calling this might error it is possible to call it conditionally on whether the [`setWindowRect` capability](/en-US/docs/Web/WebDriver/Capabilities/setWindowRect) is set to true for the session.
+Certain subsets of devices do not support setting the window dimensions or its position. On these configurations the command will return an [unsupported operating](/en-US/docs/Web/WebDriver/Reference/Errors/UnsupportedOperation) error. To avoid running into situations where calling this might error it is possible to call it conditionally on whether the [`setWindowRect` capability](/en-US/docs/Web/WebDriver/Reference/Capabilities/setWindowRect) is set to true for the session.
 
 Setting the window rect takes `x`, `y`, `width`, and `height` as input. All the fields are optional, e.g., the command may be called with an empty object, and in this case it will act as a no-op. To set the position both of `x` and `y` are required, and correspondingly both `width` and `height` are required for altering the window's dimensions.
 
@@ -31,7 +31,7 @@ The Set Window Rect command is blocking.
 
 ### Payload
 
-The input is a [`WindowRect`](/en-US/docs/Web/WebDriver/WindowRect) object:
+The input is a [`WindowRect`](/en-US/docs/Web/WebDriver/Reference/WindowRect) object:
 
 - `x`
 
@@ -46,7 +46,7 @@ The input is a [`WindowRect`](/en-US/docs/Web/WebDriver/WindowRect) object:
 
 ### Response
 
-The response payload is a [`WindowRect`](/en-US/docs/Web/WebDriver/WebWindow):
+The response payload is a [`WindowRect`](/en-US/docs/Web/WebDriver/Reference/WebWindow):
 
 - `x`
   - : Horizontal position of the operating system window associated with [`window`](/en-US/docs/Web/API/Window), equivalent to [`Window.screenX`](/en-US/docs/Web/API/Window/screenX).
@@ -60,18 +60,18 @@ The response payload is a [`WindowRect`](/en-US/docs/Web/WebDriver/WebWindow):
 ### Errors
 
 - Invalid argument
-  - : If any of the fields in the [`WindowRect`](/en-US/docs/Web/WebDriver/WindowRect) payload object do not meet the type or bounds constraints, or if only one of the `x`/`y` pair or `width`/`height` pair fields are specified.
+  - : If any of the fields in the [`WindowRect`](/en-US/docs/Web/WebDriver/Reference/WindowRect) payload object do not meet the type or bounds constraints, or if only one of the `x`/`y` pair or `width`/`height` pair fields are specified.
 - [Invalid session ID](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidSessionID)
   - : Session does not exist.
-- [No such window](/en-US/docs/Web/WebDriver/Errors/NoSuchWindow)
+- [No such window](/en-US/docs/Web/WebDriver/Reference/Errors/NoSuchWindow)
   - : If the [`window`](/en-US/docs/Web/API/Window) has been closed.
-- [Unexpected alert open](/en-US/docs/Web/WebDriver/Errors/UnexpectedAlertOpen)
+- [Unexpected alert open](/en-US/docs/Web/WebDriver/Reference/Errors/UnexpectedAlertOpen)
   - : A user prompt, such as [`window.alert`](/en-US/docs/Web/API/Window/alert), blocks execution of command until it is dealt with.
-- [Unsupported operation](/en-US/docs/Web/WebDriver/Errors/UnsupportedOperation)
+- [Unsupported operation](/en-US/docs/Web/WebDriver/Reference/Errors/UnsupportedOperation)
 
   - : If the driver does not support altering the window's size or position. This is usually the case on mobile devices, where the browser has a set dimension and cannot be moved around on the screen.
 
-    You can inspect the [`setWindowRect` capability](/en-US/docs/Web/WebDriver/Capabilities/setWindowRect) to tell if the device supports this command.
+    You can inspect the [`setWindowRect` capability](/en-US/docs/Web/WebDriver/Reference/Capabilities/setWindowRect) to tell if the device supports this command.
 
 ## Specifications
 
@@ -83,10 +83,10 @@ The response payload is a [`WindowRect`](/en-US/docs/Web/WebDriver/WebWindow):
 
 ## See also
 
-- [`WebWindow`](/en-US/docs/Web/WebDriver/WebWindow) object
+- [`WebWindow`](/en-US/docs/Web/WebDriver/Reference/WebWindow) object
 - Associated commands:
 
   - [Get Window Rect](/en-US/docs/Web/WebDriver/Reference/Commands/GetWindowRect)
-  - [Get Window Handle](/en-US/docs/Web/WebDriver/Commands/GetWindowHandle)
+  - [Get Window Handle](/en-US/docs/Web/WebDriver/Reference/Commands/GetWindowHandle)
   - [Get Window Handles](/en-US/docs/Web/WebDriver/Reference/Commands/GetWindowHandles)
   - [Close Window](/en-US/docs/Web/WebDriver/Reference/Commands/CloseWindow)
