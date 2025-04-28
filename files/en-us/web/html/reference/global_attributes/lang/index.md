@@ -87,32 +87,44 @@ For example, the language menu on this site (MDN) includes a **`lang`** attribut
     aria-expanded="true"
     role="menu">
     <li lang="ca" role="menuitem">
-      <a href="/ca/docs/Web/HTML/Reference/Global_attributes/lang" title="Catalan">
+      <a
+        href="/ca/docs/Web/HTML/Reference/Global_attributes/lang"
+        title="Catalan">
         <bdi>Català</bdi>
       </a>
     </li>
     <li lang="de" role="menuitem">
-      <a href="/de/docs/Web/HTML/Reference/Global_attributes/lang" title="German">
+      <a
+        href="/de/docs/Web/HTML/Reference/Global_attributes/lang"
+        title="German">
         <bdi>Deutsch</bdi>
       </a>
     </li>
     <li lang="es" role="menuitem">
-      <a href="/es/docs/Web/HTML/Reference/Global_attributes/lang" title="Spanish">
+      <a
+        href="/es/docs/Web/HTML/Reference/Global_attributes/lang"
+        title="Spanish">
         <bdi>Español</bdi>
       </a>
     </li>
     <li lang="fr" role="menuitem">
-      <a href="/fr/docs/Web/HTML/Reference/Global_attributes/lang" title="French">
+      <a
+        href="/fr/docs/Web/HTML/Reference/Global_attributes/lang"
+        title="French">
         <bdi>Français</bdi>
       </a>
     </li>
     <li lang="ja" role="menuitem">
-      <a href="/ja/docs/Web/HTML/Reference/Global_attributes/lang" title="Japanese">
+      <a
+        href="/ja/docs/Web/HTML/Reference/Global_attributes/lang"
+        title="Japanese">
         <bdi>日本語</bdi>
       </a>
     </li>
     <li lang="ko" role="menuitem">
-      <a href="/ko/docs/Web/HTML/Reference/Global_attributes/lang" title="Korean">
+      <a
+        href="/ko/docs/Web/HTML/Reference/Global_attributes/lang"
+        title="Korean">
         <bdi>한국어</bdi>
       </a>
     </li>
@@ -124,7 +136,9 @@ For example, the language menu on this site (MDN) includes a **`lang`** attribut
       </a>
     </li>
     <li lang="ru" role="menuitem">
-      <a href="/ru/docs/Web/HTML/Reference/Global_attributes/lang" title="Russian">
+      <a
+        href="/ru/docs/Web/HTML/Reference/Global_attributes/lang"
+        title="Russian">
         <bdi>Русский</bdi>
       </a>
     </li>
