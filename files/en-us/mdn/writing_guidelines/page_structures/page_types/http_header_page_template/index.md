@@ -199,7 +199,7 @@ Developers can set and get HTTP headers using `fetch()` in order to provide appl
 
 Include links to reference pages and guides related to the current HTTP header.
 For more guidelines, see the [See also section](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) in the _Writing style guide_.
-You can link to relevant response statuses like `\{{HTTPStatus("123", "123 (Reason)")}}` and headers like `\{{HTTPHeader("Header-Name")}}`.
+You can link to relevant response statuses like `\{{HTTPStatus("123", "123 Reason")}}` and headers like `\{{HTTPHeader("Header-Name")}}`.
 You may group related statuses and headers in a single list item for brevity.
 
 - link1
