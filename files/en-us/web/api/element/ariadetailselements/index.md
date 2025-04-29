@@ -32,8 +32,6 @@ For more information about reflected element references and scope see [Reflected
 
 ## Examples
 
-The [Reflected element reference examples](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#setting_and_getting_reflected_element_references) in the _Attribute reflection_ guide are also relevant.
-
 ### Get the accessible details
 
 This example shows how `ariaDetailsElements` can be used to get the information defined using the `aria-details` attribute in HTML.

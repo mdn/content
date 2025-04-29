@@ -32,8 +32,6 @@ For more information about reflected element references and scope see [Reflected
 
 ## Examples
 
-The [Reflected element reference examples](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#setting_and_getting_reflected_element_references) in the _Attribute reflection_ guide are also relevant.
-
 ### Get the flow-to element
 
 This example demonstrates the normal flow through three elements `section1`, `section2`, `section3` in order, and an alternative order that jumps from `section1` to `section3`, and back again.

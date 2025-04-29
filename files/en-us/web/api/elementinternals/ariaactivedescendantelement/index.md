@@ -25,14 +25,6 @@ The property reflects the element's [`aria-activedescendant`](/en-US/docs/Web/Ac
 If the property is set, then the corresponding attribute is cleared.
 For more information about reflected element references and scope see [Reflected element references](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references) in the _Reflected attributes_ guide.
 
-## Examples
-
-The examples in the following documents are relevant:
-
-- {{domxref("Element.ariaActiveDescendantElement")}} is the DOM equivalent of this property.
-  It is used in the same way, but within the DOM instead of a shadow DOM and/or custom element.
-- [Reflected element reference examples](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#setting_and_getting_reflected_element_references) in the _Attribute reflection_ guide demonstrates the mapping between references in the attribute and elements properties.
-
 ## Specifications
 
 {{Specifications}}

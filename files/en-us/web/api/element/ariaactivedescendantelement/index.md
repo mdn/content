@@ -27,8 +27,6 @@ For more information about reflected element references and scope see [Reflected
 
 ## Examples
 
-The [Reflected element reference examples](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#setting_and_getting_reflected_element_references) in the _Attribute reflection_ guide are also relevant.
-
 ### Get the active descendant
 
 This example shows how `ariaActiveDescendantElement` can be used to get the current active descendant.

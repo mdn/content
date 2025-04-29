@@ -31,8 +31,6 @@ For more information about reflected element references and scope see [Reflected
 
 ## Examples
 
-The [Reflected element reference examples](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#setting_and_getting_reflected_element_references) in the _Attribute reflection_ guide are also relevant.
-
 ### Email input with error message
 
 This example shows how we use the `aria-errormessage` to set the error message for reporting entry of an invalid email address, and demonstrates how we can get and set the message using `ariaErrorMessageElements`.

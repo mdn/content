@@ -35,8 +35,6 @@ For more information about reflected element references and scope see [Reflected
 
 ## Examples
 
-The [Reflected element reference examples](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#setting_and_getting_reflected_element_references) in the _Attribute reflection_ guide are also relevant.
-
 ### Get the accessible name
 
 This example shows how `ariaLabelledByElements` can be used to programmatically get a label defined using `aria-labelledby` within the shadow root.
