@@ -69,7 +69,7 @@ A {{jsxref("Promise")}} that fulfills with a {{domxref("Window")}} object instan
 ```js
 const videoPlayer = document.getElementById("player");
 
-// ...
+// …
 
 // Open a Picture-in-Picture window with all options set
 const pipWindow = await window.documentPictureInPicture.requestWindow({
@@ -79,7 +79,7 @@ const pipWindow = await window.documentPictureInPicture.requestWindow({
   preferInitialWindowPlacement: true,
 });
 
-// ...
+// …
 ```
 
 ## Specifications

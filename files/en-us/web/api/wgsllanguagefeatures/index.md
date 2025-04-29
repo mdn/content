@@ -94,7 +94,7 @@ for (const value of valueIterator) {
   console.log(value);
 }
 
-// ...
+// …
 ```
 
 ## Specifications

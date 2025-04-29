@@ -59,7 +59,7 @@ Each of those parts provides specific information about the whole domain name.
 
     TLDs can contain special as well as latin characters. A TLD's maximum length is 63 characters, although most are around 2–3.
 
-    The full list of TLDs is [maintained by ICANN](https://www.icann.org/resources/pages/tlds-2012-02-25-en).
+    The full list of TLDs is [maintained by ICANN](https://www.icann.org/en/contracted-parties/registry-operators/resources/list-of-top-level-domains).
 
 - Label (or component)
 

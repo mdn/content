@@ -110,7 +110,7 @@ To use this prop, we must change the signature of the `Form()` function in `Form
 
 ```jsx
 function Form(props) {
-  // ...
+  // …
 }
 ```
 

@@ -38,7 +38,7 @@ The following criteria must be met when calling **`popDebugGroup()`**, otherwise
 ## Examples
 
 ```js
-// ...
+// …
 
 const passEncoder = commandEncoder.beginRenderPass(renderPassDescriptor);
 
@@ -50,7 +50,7 @@ passEncoder.draw(3);
 
 passEncoder.popDebugGroup();
 
-// ...
+// …
 ```
 
 ## Specifications

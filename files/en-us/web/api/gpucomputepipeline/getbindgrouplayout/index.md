@@ -43,7 +43,7 @@ The following criteria must be met when calling **`getBindGroupLayout()`**, othe
 > You can see complete working examples with `getBindGroupLayout()` in action in the [WebGPU samples](https://webgpu.github.io/webgpu-samples/).
 
 ```js
-// ...
+// …
 
 // Create a compute pipeline using layout: "auto" to automatically generate
 // appropriate bind group layouts
@@ -66,7 +66,7 @@ const computeBindGroup = device.createBindGroup({
   ],
 });
 
-// ...
+// …
 ```
 
 ## Specifications

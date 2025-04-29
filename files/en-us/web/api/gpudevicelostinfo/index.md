@@ -45,7 +45,7 @@ async function init() {
       init();
     }
   });
-  // ...
+  // …
 }
 ```
 

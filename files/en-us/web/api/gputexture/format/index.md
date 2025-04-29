@@ -22,7 +22,7 @@ An enumerated value. See the [Texture formats](https://gpuweb.github.io/gpuweb/#
 ## Examples
 
 ```js
-// ...
+// …
 
 const depthTexture = device.createTexture({
   size: [canvas.width, canvas.height],

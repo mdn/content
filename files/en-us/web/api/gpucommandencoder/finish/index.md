@@ -43,12 +43,12 @@ The following criteria must be met when calling **`finish()`**, otherwise a {{do
 ## Examples
 
 ```js
-// ...
+// …
 
 const commandBuffer = commandEncoder.finish();
 device.queue.submit([commandBuffer]);
 
-// ...
+// …
 ```
 
 ## Specifications

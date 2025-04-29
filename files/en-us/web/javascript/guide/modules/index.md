@@ -395,7 +395,7 @@ You can only use `import` and `export` statements inside modules, not regular sc
 ```html example-bad
 <script>
   import _ from "lodash"; // SyntaxError: import declarations may only appear at top level of a module
-  // ...
+  // …
 </script>
 <script src="a-module-using-import-statements.js"></script>
 <!-- SyntaxError: import declarations may only appear at top level of a module -->

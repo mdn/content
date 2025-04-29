@@ -41,7 +41,7 @@ Note that the code covers three different compatibility cases:
 
 ```js
 const resizeObserver = new ResizeObserver((entries) => {
-  for (let entry of entries) {
+  for (const entry of entries) {
     if (entry.contentBoxSize) {
       // The standard makes contentBoxSize an array...
       if (entry.contentBoxSize[0]) {
@@ -50,7 +50,7 @@ const resizeObserver = new ResizeObserver((entries) => {
         pElem.style.fontSize =
           Math.max(1, entry.contentBoxSize[0].inlineSize / 600) + "rem";
       } else {
-        // ...but old versions of Firefox treat it as a single item
+        // … but old versions of Firefox treat it as a single item
         h1Elem.style.fontSize =
           Math.max(1.5, entry.contentBoxSize.inlineSize / 200) + "rem";
         pElem.style.fontSize =

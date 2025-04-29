@@ -75,7 +75,7 @@ function showHeroes(jsonObj) {
   const heroes = jsonObj["members"];
 
   for (const hero of heroes) {
-    // ...
+    // …
   }
 }
 ```
