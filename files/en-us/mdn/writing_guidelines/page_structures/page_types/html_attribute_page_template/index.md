@@ -50,17 +50,17 @@ Only add an article if the attribute has enough nuance to deserve its own exampl
 >   - : Replace the placeholder value `html.global_attributes.name-of-the-attribute` with the query string for the global attribute in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
 >     For element-specific attributes, use the format `html.elements.name-of-the-element.name-of-the-attribute`, with each query string on its own line, preceded by a dash. For example:
 >
->   ```yaml
->   browser-compat:
->     - html.elements.form.autocomplete
->     - html.elements.input.autocomplete
->     - html.elements.select.autocomplete
->     - html.elements.textarea.autocomplete
->   ```
+>     ```yaml
+>     browser-compat:
+>       - html.elements.form.autocomplete
+>       - html.elements.input.autocomplete
+>       - html.elements.select.autocomplete
+>       - html.elements.textarea.autocomplete
+>     ```
 >
->   The toolchain automatically uses the key to populate the compatibility and specification sections (replacing the `\{{Compat}}` and `\{{Specifications}}` macros).
->   Note that you may first need to create/update an entry for the attribute in our [Browser compat data repo](https://github.com/mdn/browser-compat-data), and the entry will need to include specification information.
->   See our [guide on how to do this](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
+>     The toolchain automatically uses the key to populate the compatibility and specification sections (replacing the `\{{Compat}}` and `\{{Specifications}}` macros).
+>     Note that you may first need to create/update an entry for the attribute in our [Browser compat data repo](https://github.com/mdn/browser-compat-data), and the entry will need to include specification information.
+>     See our [guide on how to do this](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
 >
 > - **sidebar**
 >   - : Keep as `htmlsidebar` (all pages under `/web/html/` use this sidebar).
@@ -100,11 +100,11 @@ If included, follow it with 1-2 brief paragraphs explaining the behavior impleme
 
 Provide a list of possible values for the attribute if any (remove if not applicable). Include the default value if there is one, and a brief description for each value.
 
-- `value 1`
-  - : Description of value 1. This is the Default value.
-- `value 2`
+- `"value1"`
+  - : Description of value 1. This is the default value.
+- `"value2"`
   - : Description of value 2.
-- `value 3`
+- `"value3"`
   - : Description of value 3.
 
 ## Accessibility
