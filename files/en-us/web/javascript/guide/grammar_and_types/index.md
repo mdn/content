@@ -293,24 +293,20 @@ With all other operators, JavaScript does _not_ convert numeric values to string
 
 In the case that a value representing a number is in memory as a string, there are methods for conversion.
 
-- {{jsxref("Number()")}}
 - {{jsxref("parseInt()")}}
 - {{jsxref("parseFloat()")}}
-
-  While both `parseInt` and `Number` can be used to convert strings to numbers, `Number` is more efficient.
+- {{jsxref("Number()")}}
 
 `parseInt` only returns whole numbers, so its use is diminished for decimals.
 
 > [!NOTE]
 > Additionally, a best practice for `parseInt` is to always include the _radix_ parameter. The radix parameter is used to specify which numerical system is to be used.
 
-W
-
 ```js
 parseInt("101", 2); // 5
 ```
 
-An alternative method of retrieving a number from a string is with the `+` (unary plus) operator:
+An alternative method of retrieving a number from a string is with the `+` (unary plus) operator. This implicitly performs [number conversion](en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), which is the same process as the {{jsxref("Number()")}} function.
 
 ```js-nolint
 "1.1" + "1.1"; // '1.11.1'
