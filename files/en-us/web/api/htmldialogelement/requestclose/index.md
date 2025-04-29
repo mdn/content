@@ -34,10 +34,12 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-### Dialog with
+### Using requestClose()
 
 The following example shows a simple button that, when clicked, opens a {{htmlelement("dialog")}} containing a form, via the `showModal()` method.
-From there you can click the **X** button to request to close the dialog (via the `HTMLDialogElement.requestClose()` method), or submit the form via the **Confirm** button.
+Once open you can click the **X** button to request to close the dialog (via the `HTMLDialogElement.requestClose()` method), or submit the form via the **Confirm** button.
+
+#### HTML
 
 ```html
 <!-- Simple pop-up dialog box, containing a form -->
@@ -66,6 +68,8 @@ From there you can click the **X** button to request to close the dialog (via th
   <button id="updateDetails">Update details</button>
 </menu>
 ```
+
+#### JavaScript
 
 ```js
 const updateButton = document.getElementById("updateDetails");
@@ -100,7 +104,7 @@ dialog.addEventListener("cancel", (event) => {
 If the "X" button was of `type="submit"`, the dialog would have closed without requiring JavaScript.
 A form submission closes the `<dialog>` it is nested within if the [form's method is `dialog`](/en-US/docs/Web/HTML/Reference/Elements/form#method), so no "close" button is required.
 
-### Result
+#### Result
 
 {{ EmbedLiveSample('Examples', '100%', '200px') }}
 
