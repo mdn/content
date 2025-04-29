@@ -139,6 +139,10 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   {{domxref("PerformanceEventTiming.interactionId")}} can be used to measure latency timing for events triggered by a particular user interaction. ([Firefox bug 1934683](https://bugzil.la/1934683)).
 
+- **HTML Sanitizer API**: `dom.security.sanitizer.enabled`
+
+  The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document's DOM. ([Firefox bug 1950605](https://bugzil.la/1950605)), ([Firefox bug 1952250](https://bugzil.la/1952250)).
+
 ## Older versions
 
 {{Firefox_for_developers}}
