@@ -16,7 +16,7 @@ A string.
 
 ## Examples
 
-```
+```js
 const inputElement = document.getElementById("phone");
 console.log(input.placeholder);
 ```
