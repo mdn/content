@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.contentScriptGlobalScope.cloneInto
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 This function provides a safe way to take an object defined in a privileged scope and create a [structured clone](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) of it in a less-privileged scope. It returns a reference to the clone:
 
