@@ -55,10 +55,14 @@ The preferred way to target content to a device form factor is to use CSS Media 
 
 Windows user agents have the following variations, where _x.y_ is the Windows NT version (for instance, Windows NT 6.1).
 
-| Windows version                  | Gecko user agent string                                                           |
-| -------------------------------- | --------------------------------------------------------------------------------- |
-| Windows NT on x86 or aarch64 CPU | Mozilla/5.0 (Windows NT _x_._y_; rv:10.0) Gecko/20100101 Firefox/10.0             |
-| Windows NT on x64 CPU            | Mozilla/5.0 (Windows NT _x_._y_; Win64; x64; rv:10.0) Gecko/20100101 Firefox/10.0 |
+| Windows version       | Gecko user agent string                                                           |
+| --------------------- | --------------------------------------------------------------------------------- |
+| Windows NT on x86 CPU | Mozilla/5.0 (Windows NT _x_._y_; rv:10.0) Gecko/20100101 Firefox/10.0             |
+| Windows NT on x64 CPU | Mozilla/5.0 (Windows NT _x_._y_; Win64; x64; rv:10.0) Gecko/20100101 Firefox/10.0 |
+
+> [!NOTE]
+> For aarch64 CPU, It reported as x86 on Windows 10 (since it doesn't support x64 emulation), and reported as x86_64 on Windows 11.
+> See [Bugzilla #1763310](https://bugzil.la/show_bug.cgi?id=1763310)
 
 ## macOS
 
@@ -77,6 +81,10 @@ Linux is a more diverse platform. Your distribution of Linux might include an ex
 | --------------------------- | -------------------------------------------------------------------- |
 | Linux desktop on i686 CPU   | Mozilla/5.0 (X11; Linux i686; rv:10.0) Gecko/20100101 Firefox/10.0   |
 | Linux desktop on x86_64 CPU | Mozilla/5.0 (X11; Linux x86_64; rv:10.0) Gecko/20100101 Firefox/10.0 |
+
+> [!NOTE]
+> In Firefox 127.0 and later, 32-bit x86 will now be reported as x86_64 in Firefox's User-Agent string and `navigator.platform` and `navigator.oscpu` Web APIs
+> See [Firefox 127.0 Release Notes](https://www.mozilla.org/en-US/firefox/127.0/releasenotes/)
 
 ## Firefox for Android
 
