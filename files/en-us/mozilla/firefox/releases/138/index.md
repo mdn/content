@@ -57,8 +57,7 @@ Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-
 - The [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) now supports bidirectional messaging on an {{domxref("AudioWorklet.port")}} and an {{domxref("AudioWorkletGlobalScope.port")}}.
   This allows for custom, asynchronous communication between code in the main thread and the global scope of an audio worklet, such as receiving control data or global settings. ([Firefox bug 1951240](https://bugzil.la/1951240))
 - The {{domxref("RTCCertificate.getFingerprints()","getFingerprints()")}} method of the {{domxref("RTCCertificate")}} interface is now supported.
-  The fingerprints are a {{glossary("hash function","hash")}} of the certificate created using the various algorithms supported by the browser.
-  These can be shared with the remote peer out of band, during the signalling phase, and used by the remote peer to confirm the identity of this peer during DTLS handshake.
+  An application can use this to get fingerprints for a certificate, which might be shared out-of-band in order to identify a particular user or browser across WebRTC sessions.
   ([Firefox bug 1525241](https://bugzil.la/1525241)).
 
 #### DOM
