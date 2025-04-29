@@ -45,7 +45,7 @@ Once open you can click the **X** button to request to close the dialog (via the
 <!-- Simple pop-up dialog box, containing a form -->
 <dialog id="favDialog">
   <form method="dialog">
-    <button id="close" aria-label="close" formnovalidate>X</button>
+    <button type="button" id="close" aria-label="close" formnovalidate>X</button>
     <section>
       <p>
         <label for="favAnimal">Favorite animal:</label>
