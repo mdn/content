@@ -34,6 +34,8 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
+### Dialog with
+
 The following example shows a simple button that, when clicked, opens a {{htmlelement("dialog")}} containing a form, via the `showModal()` method.
 From there you can click the **X** button to request to close the dialog (via the `HTMLDialogElement.requestClose()` method), or submit the form via the **Confirm** button.
 
@@ -81,12 +83,15 @@ closeButton.addEventListener("click", () => {
 });
 
 function dialogShouldNotClose() {
-  // Add logic to decide whether to prevent the dialog from closing
+  // Add logic to decide whether to allow the dialog to close.
+  // Closing prevented by default
+  return true;
 }
 
 dialog.addEventListener("cancel", (event) => {
   if (!event.cancelable) return;
   if (dialogShouldNotClose()) {
+    console.log("Closing prevented");
     event.preventDefault();
   }
 });
