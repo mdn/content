@@ -41220,6 +41220,10 @@
       "Enn"
     ]
   },
+  "Web/API/HTML_Sanitizer_API": {
+    "modified": "2020-12-13T12:18:13.088Z",
+    "contributors": ["Rumyra"]
+  },
   "Web/API/HashChangeEvent": {
     "modified": "2020-10-15T21:29:11.207Z",
     "contributors": [
@@ -56617,6 +56621,18 @@
       "Sheppy",
       "Jeremie"
     ]
+  },
+  "Web/API/Sanitizer": {
+    "modified": "2020-12-13T12:17:05.573Z",
+    "contributors": ["Rumyra"]
+  },
+  "Web/API/Sanitizer/Sanitizer": {
+    "modified": "2020-12-13T12:21:15.482Z",
+    "contributors": ["Rumyra"]
+  },
+  "Web/API/Sanitizer/sanitize": {
+    "modified": "2020-12-13T12:25:31.511Z",
+    "contributors": ["Rumyra"]
   },
   "Web/API/Screen": {
     "modified": "2020-10-15T21:29:41.001Z",
