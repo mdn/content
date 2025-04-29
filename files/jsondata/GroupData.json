@@ -898,6 +898,13 @@
         "HTMLElement: drop"
       ]
     },
+    "HTML Sanitizer API": {
+      "overview": ["HTML Sanitizer API"],
+      "interfaces": ["Sanitizer"],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Idle Detection API": {
       "overview": ["Idle Detection API"],
       "interfaces": ["IdleDetector"],
