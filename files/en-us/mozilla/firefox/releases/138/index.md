@@ -5,34 +5,24 @@ page-type: firefox-release-notes
 sidebar: firefoxsidebar
 ---
 
-This article provides information about the changes in Firefox 138 that affect developers.
-Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [April 29, 2025](https://whattrainisitnow.com/release/?version=138).
+This article provides information about the changes in Firefox 137 that affect developers.
+Firefox 137 was released on [April 29, 2025](https://whattrainisitnow.com/release/?version=138).
 
 ## Changes for web developers
-
-### Developer Tools
 
 ### HTML
 
 - The [`importmap`](/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap) value of the [`type`](/en-US/docs/Web/HTML/Reference/Elements/script/type) attribute of the [`<script>`](/en-US/docs/Web/HTML/Reference/Elements/script) element now supports the [`integrity`](/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap#integrity) key. This allows the ES module URLs referenced in the import maps to be matched against their integrity metadata. As a result, these modules are now compatible with [CSP](/en-US/docs/Web/HTTP/Guides/CSP) directives that require Subresource Integrity ([SRI](/en-US/docs/Web/Security/Practical_implementation_guides/SRI)). ([Firefox bug 1945540](https://bugzil.la/1945540)).
 
-#### Removals
-
 ### CSS
 
-#### Removals
+No notable changes
 
 ### JavaScript
 
 - The {{jsxref("Error.captureStackTrace()")}} static method is now supported. This installs stack trace information on a provided object as the {{jsxref("Error.stack")}} property. Its main use case is to install a stack trace on a custom error object that does not derive from the {{jsxref("Error")}} interface. ([Firefox bug 1950508](https://bugzil.la/1950508)).
 - The {{jsxref("Error.isError()")}} static method can now be used to check whether or not an object is an instance of an {{jsxref("Error")}} or a {{domxref("DOMException")}}. This is more reliable than using `instanceof` for the same purpose. ([Firefox bug 1952249](https://bugzil.la/1952249)).
 - The [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declaration now supports importing JSON modules using the [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) attribute.
-
-#### Removals
-
-### SVG
-
-#### Removals
 
 ### HTTP
 
@@ -42,12 +32,6 @@ Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-
   This makes it less likely that a resource-intensive document will degrade the performance of documents from other origins.
   Developers can test whether the browser has put the document in an origin-keyed agent cluster using the {{domxref("window.originAgentCluster")}} property.
   ([Firefox bug 1665474](https://bugzil.la/1665474))
-
-#### Removals
-
-### Security
-
-#### Removals
 
 ### APIs
 
@@ -68,12 +52,6 @@ Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-
   The value is set using the [`degradationPreference`](/en-US/docs/Web/API/RTCRtpSender/setParameters#degradationpreference) property in the parameter object passed to the [`setParameters()`](/en-US/docs/Web/API/RTCRtpSender/setParameters#degradationpreference) method of the `RTCRtpSender` interface.
   It can also be read from the object returned by the [`getParameters()`](/en-US/docs/Web/API/RTCRtpSender/getParameters#degradationpreference) method.
   ([Firefox bug 1329847](https://bugzil.la/1329847)).
-
-#### Removals
-
-### WebAssembly
-
-#### Removals
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -105,10 +83,6 @@ Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-
   - `groupId` to {{WebExtAPIRef("tabs.Tab")}}. ([Firefox bug 1959713](https://bugzil.la/1959713))
   - `groupId` to {{WebExtAPIRef("tabs.query")}}. ([Firefox bug 1959715](https://bugzil.la/1959715))
   - `groupId` to {{WebExtAPIRef("tabs.onUpdated")}}. ([Firefox bug 1959716](https://bugzil.la/1959716)
-
-### Removals
-
-### Other
 
 ## Experimental web features
 
