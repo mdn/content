@@ -2,9 +2,8 @@
 title: What is a Domain Name?
 slug: Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name
 page-type: learn-faq
+sidebar: learn-how-to
 ---
-
-{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 <table>
   <tbody>
