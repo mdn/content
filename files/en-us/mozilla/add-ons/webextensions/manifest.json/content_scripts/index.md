@@ -308,9 +308,9 @@ This table details all the keys you can include.
 
 ## Load order
 
-When a webpage load loads, matching key objects are processed in this order:
+Files declared in `content_scripts` are injected into web pages in a defined order. When a webpage loads, matching key objects are processed in this order:
 
-- in accordance with the `run_at` directive (`"document_start"` then `"document_end"` then `"document_idle"`). For each object with the same directive:
+- in accordance with the `run_at` directive, then for each object with the same directive:
   - in the order of each object in the key array, then for each object:
     - CSS in the order items are specified in the object's `css` property, then,
     - JavaScript in the order items are specified in the object's `js` property.
