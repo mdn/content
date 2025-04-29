@@ -2,7 +2,7 @@
 title: Create fancy boxes
 slug: Learn_web_development/Howto/Solve_CSS_problems/Create_fancy_boxes
 page-type: learn-faq
-sidebar: learnsidebar
+sidebar: learn-how-to
 ---
 
 CSS boxes are the building blocks of any web page styled with CSS. Making them nice looking is both fun and challenging. It's fun because it's all about turning a design idea into working code; it's challenging because of the constraints of CSS. Let's do some fancy boxes.

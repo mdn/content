@@ -2,9 +2,8 @@
 title: How do you upload your files to a web server?
 slug: Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server
 page-type: learn-faq
+sidebar: learn-how-to
 ---
-
-{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 This article shows you how to publish your site online using file transfer tools.
 

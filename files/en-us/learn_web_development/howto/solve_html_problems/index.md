@@ -3,7 +3,7 @@ title: Solve common HTML problems
 short-title: Common HTML problems
 slug: Learn_web_development/Howto/Solve_HTML_problems
 page-type: landing-page
-sidebar: learnsidebar
+sidebar: learn-how-to
 ---
 
 The following links point to solutions to common everyday problems you'll need to solve with HTML.

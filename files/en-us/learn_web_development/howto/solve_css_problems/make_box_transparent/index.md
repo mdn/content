@@ -1,8 +1,9 @@
 ---
 title: How to make a box semi-transparent
+short-title: Make a box semi-transparent
 slug: Learn_web_development/Howto/Solve_CSS_problems/Make_box_transparent
 page-type: learn-faq
-sidebar: learnsidebar
+sidebar: learn-how-to
 ---
 
 This guide will help you to understand the ways to make a box semi-transparent using CSS.

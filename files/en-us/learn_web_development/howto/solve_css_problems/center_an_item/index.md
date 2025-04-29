@@ -1,8 +1,9 @@
 ---
 title: How to center an item
+short-title: Center an item
 slug: Learn_web_development/Howto/Solve_CSS_problems/Center_an_item
 page-type: learn-faq
-sidebar: learnsidebar
+sidebar: learn-how-to
 ---
 
 In this guide you can find out how to center an item inside another element, both horizontally and vertically.

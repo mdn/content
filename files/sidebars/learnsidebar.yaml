@@ -324,16 +324,11 @@ sidebar:
     title: Security_and_privacy
   - type: section
     title: Further_resources
-  - link: /Learn_web_development/Howto
+  - type: listSubPages
+    path: /Learn_web_development/Howto
+    link: /Learn_web_development/Howto
     title: How_to_solve_common_problems
     details: closed
-    children:
-      - /Learn_web_development/Howto/Solve_HTML_problems
-      - /Learn_web_development/Howto/Solve_CSS_problems
-      - /Learn_web_development/Howto/Solve_JavaScript_problems
-      - /Learn_web_development/Howto/Web_mechanics
-      - /Learn_web_development/Howto/Tools_and_setup
-      - /Learn_web_development/Howto/Design_and_accessibility
   - link: /Learn_web_development/About
     title: About
   - link: /Learn_web_development/Educators
