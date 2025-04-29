@@ -5,8 +5,8 @@ page-type: firefox-release-notes
 sidebar: firefoxsidebar
 ---
 
-This article provides information about the changes in Firefox 137 that affect developers.
-Firefox 137 was released on [April 29, 2025](https://whattrainisitnow.com/release/?version=138).
+This article provides information about the changes in Firefox 138 that affect developers.
+Firefox 138 was released on [April 29, 2025](https://whattrainisitnow.com/release/?version=138).
 
 ## Changes for web developers
 
