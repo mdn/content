@@ -1,5 +1,6 @@
 ---
-title: Using CSS generated content
+title: Use CSS generated content
+short-title: Use generated content
 slug: Learn_web_development/Howto/Solve_CSS_problems/Generated_content
 page-type: learn-faq
 sidebar: learn-how-to

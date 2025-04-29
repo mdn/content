@@ -1,5 +1,6 @@
 ---
 title: CSS FAQ
+short-title: FAQ
 slug: Learn_web_development/Howto/Solve_CSS_problems/CSS_FAQ
 page-type: learn-faq
 sidebar: learn-how-to
