@@ -32,7 +32,7 @@ A {{domxref("CommandEvent")}}. Inherits from {{domxref("Event")}}.
 ```js
 const popover = document.getElementById("mypopover");
 
-// ...
+// …
 
 popover.addEventListener("command", (event) => {
   if (event.action === "show-popover") {

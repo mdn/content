@@ -295,7 +295,7 @@ For an added bonus, you could try researching text tracks, and work out how to a
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Multimedia and embedding](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio/Test_your_skills:_Multimedia_and_embedding).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Multimedia and embedding](/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Multimedia_and_embedding).
 
 ## Summary
 

@@ -409,7 +409,7 @@ Many of the elements used to define form controls have some of their own specifi
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Basic controls](/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Basic_controls).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Basic controls](/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Basic_controls).
 
 ## Summary
 

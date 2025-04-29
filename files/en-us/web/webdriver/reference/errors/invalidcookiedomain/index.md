@@ -15,7 +15,7 @@ This error will also happen if the document is _cookie-averse_, that is if the d
 
 ### Other domains
 
-If the current domain were to be `example.com`, it would not be possible to [add a cookie](/en-US/docs/Web/WebDriver/Commands/AddCookie) for the domain `example.org`:
+If the current domain were to be `example.com`, it would not be possible to [add a cookie](/en-US/docs/Web/WebDriver/Reference/Commands/AddCookie) for the domain `example.org`:
 
 ```python
 from selenium import webdriver
@@ -66,8 +66,8 @@ InvalidCookieDomainException: Document is cookie-averse
 - [List of WebDriver errors](/en-US/docs/Web/WebDriver/Reference/Errors)
 - Relevant WebDriver commands:
 
-  - [Add Cookie](/en-US/docs/Web/WebDriver/Commands/AddCookie)
-  - [Delete Cookie](/en-US/docs/Web/WebDriver/Commands/DeleteCookie)
-  - [Delete All Cookies](/en-US/docs/Web/WebDriver/Commands/DeleteAllCookies)
-  - [Get All Cookies](/en-US/docs/Web/WebDriver/Commands/GetAllCookies)
-  - [Get Named Cookie](/en-US/docs/Web/WebDriver/Commands/GetNamedCookie)
+  - [Add Cookie](/en-US/docs/Web/WebDriver/Reference/Commands/AddCookie)
+  - [Delete Cookie](/en-US/docs/Web/WebDriver/Reference/Commands/DeleteCookie)
+  - [Delete All Cookies](/en-US/docs/Web/WebDriver/Reference/Commands/DeleteAllCookies)
+  - [Get All Cookies](/en-US/docs/Web/WebDriver/Reference/Commands/GetAllCookies)
+  - [Get Named Cookie](/en-US/docs/Web/WebDriver/Reference/Commands/GetNamedCookie)

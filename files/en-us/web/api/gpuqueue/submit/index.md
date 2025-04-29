@@ -42,7 +42,7 @@ The following criteria must be met when calling **`submit()`**, otherwise a {{do
 In our [basic render demo](https://mdn.github.io/dom-examples/webgpu-render-demo/), a number of commands are recorded via a {{domxref("GPUCommandEncoder")}}:
 
 ```js
-// ...
+// …
 
 // Create GPUCommandEncoder
 const commandEncoder = device.createCommandEncoder();
@@ -72,7 +72,7 @@ passEncoder.draw(3);
 
 passEncoder.end();
 
-// ...
+// …
 ```
 
 The commands encoded by the {{domxref("GPUCommandEncoder")}} are recoded into a {{domxref("GPUCommandBuffer")}} using the {{domxref("GPUCommandEncoder.finish()")}} method. The command buffer is then passed into the queue via a `submit()` call, ready to be processed by the GPU.

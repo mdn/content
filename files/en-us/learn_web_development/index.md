@@ -5,7 +5,7 @@ page-type: landing-page
 sidebar: learnsidebar
 ---
 
-## The essential skillset for new front-end developers
+## The essential skill set for new front-end developers
 
 Welcome to MDN **Learning Web Development** (also known as **Learn**). This resource provides a structured set of tutorials teaching the essential skills and practices for being a successful front-end developer, along with challenges and further recommended resources.
 

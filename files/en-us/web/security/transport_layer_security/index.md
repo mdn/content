@@ -73,7 +73,7 @@ The major changes in TLS 1.3 are:
 - TLS 1.3 supports forward-secure modes only, unless the connection is resumed or it uses a pre-shared key.
 - TLS 1.3 defines a new set of cipher suites that are exclusive to TLS 1.3. These cipher suites all use modern Authenticated Encryption with Associated Data (AEAD) algorithms.
 - The TLS 1.3 handshake is encrypted, except for the messages that are necessary to establish a shared secret. In particular, this means that server and client certificates are encrypted. Note however that the server identity (the server_name or SNI extension) that a client sends to the server is not encrypted.
-- Numerous mechanisms have been disabled: renegotiation, generic data compression, [Digital Signature Algorithm](https://en.wikipedia.org/wiki/Digital_Signature_Algorithm) (DSA) certificates, static RSA key exchange, and key exchange with custom Diffie-Hellman (DH) groups.
+- Numerous mechanisms have been disabled: renegotiation, generic data compression, [Digital Signature Algorithm](https://en.wikipedia.org/wiki/Digital_Signature_Algorithm) (DSA) certificates, static RSA key exchange, and key exchange with custom Diffie–Hellman (DH) groups.
 
 Implementations of draft versions of TLS 1.3 are available. TLS 1.3 is enabled in some browsers, including the 0-RTT mode. Web servers that enable TLS 1.3 might need to adjust configuration to allow TLS 1.3 to operate successfully.
 

@@ -174,7 +174,7 @@ AI-generated search results are a very popular way of receiving information. The
 When learning to code, AI chat prompts can be useful in a variety of ways:
 
 - Doing conventional searches, like the examples above.
-- Figuring out bugs in a block of code. If you are getting frustrated because your code is not working, you can paste your code into an AI chat prompt, preceeded by a question such as `Where is the mistake in this code?`
+- Figuring out bugs in a block of code. If you are getting frustrated because your code is not working, you can paste your code into an AI chat prompt, preceded by a question such as `Where is the mistake in this code?`
 - Generating an optimized version of a specific block of code. This can be useful when you've written a block of code that works, but you want to find out how it could be done more efficiently, or in a more robust way that solves more use cases.
 - Providing advice on how to do something. For example, if you don't just want to know where the bug is in a block of code, but instead you want advice on what strategy to use to debug it.
 

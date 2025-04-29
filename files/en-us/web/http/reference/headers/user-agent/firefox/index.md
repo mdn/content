@@ -28,10 +28,10 @@ The UA string of Firefox itself is broken down into four components:
 
 For other products based on Gecko, the string can take one of two forms, where the tokens have the same meaning except those noted below:
 
-`Mozilla/5.0 (platform; rv:gecko-version) Gecko/gecko-trail appname/appversion`
-`Mozilla/5.0 (platform; rv:gecko-version) Gecko/gecko-trail Firefox/firefox-version appname/appversion`
+`Mozilla/5.0 (platform; rv:gecko-version) Gecko/gecko-trail app-name/app-version`
+`Mozilla/5.0 (platform; rv:gecko-version) Gecko/gecko-trail Firefox/firefox-version app-name/app-version`
 
-- `appname/appversion` indicates the application name and version. For instance, this could be `Camino/2.1.1`, or `SeaMonkey/2.7.1`.
+- `app-name/app-version` indicates the application name and version. For instance, this could be `Camino/2.1.1`, or `SeaMonkey/2.7.1`.
 - `Firefox/firefox-version` is an optional compatibility token that some Gecko-based browsers may choose to incorporate, to achieve maximum compatibility with websites that expect Firefox. `firefox-version` will generally represent the equivalent Firefox release corresponding to the given Gecko version. Some Gecko-based browsers may not opt into using this token; for this reason, sniffers should be looking for Gecko — not Firefox!
 
 ## Mobile and Tablet indicators

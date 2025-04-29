@@ -290,6 +290,13 @@
         "replace": "e.g., ",
         "searchScope": "text",
       },
+      {
+        "name": "short-link",
+        "message": "Use shortened links for bug links",
+        "searchPattern": "/https:\\/\\/bugzilla\\.mozilla\\.org\\/show_bug\\.cgi\\?id=/g",
+        "replace": "https://bugzil.la/",
+        "searchScope": "all",
+      },
     ],
   },
 }

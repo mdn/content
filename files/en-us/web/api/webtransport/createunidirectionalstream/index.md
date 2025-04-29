@@ -77,12 +77,12 @@ async function writeData() {
 You can also use {{domxref("WritableStreamDefaultWriter.abort()")}} to abruptly terminate the stream. When using `abort()`, the browser may discard any pending data that hasn't yet been sent.
 
 ```js
-// ...
+// …
 
 const stream = await transport.createUnidirectionalStream();
 const writer = stream.getWriter();
 
-// ...
+// …
 
 writer.write(data1);
 writer.write(data2);

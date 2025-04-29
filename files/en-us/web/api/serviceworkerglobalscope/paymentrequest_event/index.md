@@ -46,7 +46,7 @@ self.addEventListener("paymentrequest", async (e) => {
   // Preserve the event for future use
   payment_request_event = e;
 
-  // ...
+  // …
 });
 ```
 

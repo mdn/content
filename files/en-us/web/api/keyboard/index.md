@@ -26,7 +26,7 @@ _Also inherits methods from its parent interface, {{DOMxRef("EventTarget")}}._
 - {{domxref('Keyboard.getLayoutMap()')}} {{experimental_inline}}
   - : Returns a {{jsxref('Promise')}} that resolves with an instance of {{domxref('KeyboardLayoutMap')}} which is a map-like object with functions for retrieving the strings associated with specific physical keys.
 - {{domxref('Keyboard.lock()')}} {{experimental_inline}}
-  - : Returns a {{jsxref('Promise')}} that resolves after enabling the capture of keypresses for any or all of the keys on the physical keyboard.
+  - : Returns a {{jsxref('Promise')}} that resolves after enabling the capture of key presses for any or all of the keys on the physical keyboard.
 - {{domxref('Keyboard.unlock()')}} {{experimental_inline}}
   - : Unlocks all keys captured by the `lock()` method and returns synchronously.
 

@@ -39,7 +39,7 @@ createComputePipeline(descriptor)
 
             ```js
             ({
-              // ...
+              // …
               constants: {
                 0: false,
                 1200: 3.0,
@@ -94,7 +94,7 @@ Our [basic compute demo](https://mdn.github.io/dom-examples/webgpu-compute-demo/
 - Using that value immediately in a `createComputePipeline()` call to create a {{domxref("GPUComputePipeline")}}.
 
 ```js
-// ...
+// …
 
 const bindGroupLayout = device.createBindGroupLayout({
   entries: [
@@ -118,7 +118,7 @@ const computePipeline = device.createComputePipeline({
   },
 });
 
-// ...
+// …
 ```
 
 ## Specifications
