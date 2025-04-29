@@ -121,7 +121,7 @@ In the WebGPU samples [Textured Cube sample](https://webgpu.github.io/webgpu-sam
 - Copying the image bitmap into the texture using {{domxref("GPUQueue.copyExternalImageToTexture()")}}.
 
 ```js
-//...
+// …
 
 let cubeTexture;
 
@@ -149,7 +149,7 @@ let cubeTexture;
   );
 }
 
-//...
+// …
 ```
 
 ## Specifications

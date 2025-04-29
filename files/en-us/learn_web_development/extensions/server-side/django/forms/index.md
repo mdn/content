@@ -458,13 +458,13 @@ Perhaps unsurprisingly, when used as shown this provides the default rendering o
 > [!NOTE]
 > It is perhaps not obvious because we only have one field, but, by default, every field is defined in its own table row. This same rendering is provided if you reference the template variable `\{{ form.as_table }}`.
 
-If you were to enter an invalid date, you'd additionally get a list of the errors rendered on the page (see `errorlist` below).
+If you were to enter an invalid date, you'd additionally get a list of the errors rendered on the page (see `error-list` below).
 
 ```html
 <tr>
   <th><label for="id_renewal_date">Renewal date:</label></th>
   <td>
-    <ul class="errorlist">
+    <ul class="error-list">
       <li>Invalid date - renewal in past</li>
     </ul>
     <input

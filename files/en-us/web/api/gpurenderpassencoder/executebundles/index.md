@@ -46,7 +46,7 @@ For each {{domxref("GPURenderBundle")}}:
 In the WebGPU Samples [Animometer example](https://webgpu.github.io/webgpu-samples/samples/animometer/), a lot of like operations are done on many different objects simultaneously. `executeBundles()` is used to reuse the work on multiple render passes to improve performance. Study the example code listing for the full context.
 
 ```js
-// ...
+// …
 
 return function doDraw(timestamp) {
   if (startTime === undefined) {
@@ -72,7 +72,7 @@ return function doDraw(timestamp) {
   device.queue.submit([commandEncoder.finish()]);
 };
 
-// ...
+// …
 ```
 
 ## Specifications

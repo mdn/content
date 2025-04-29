@@ -71,7 +71,7 @@ The following snippet shows how it can be used inside Media Session code (the ab
 
 ```js
 function updateMetadata() {
-  let track = playlist[index];
+  const track = playlist[index];
 
   log("Playing " + track.title + " track...");
   navigator.mediaSession.metadata = new MediaMetadata({
@@ -81,7 +81,7 @@ function updateMetadata() {
     chapterInfo: track.chapterInfo,
   });
 
-  // ...
+  // …
 }
 ```
 

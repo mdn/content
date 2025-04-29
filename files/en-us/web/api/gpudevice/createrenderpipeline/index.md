@@ -127,7 +127,7 @@ The `fragment` object contains an array of objects, each of which can contain th
 
     ```js
     ({
-      // ...
+      // …
       constants: {
         0: false,
         1200: 3.0,
@@ -313,7 +313,7 @@ The `vertex` object can contain the following properties:
 
     ```js
     ({
-      // ...
+      // …
       constants: {
         0: false,
         1200: 3.0,
@@ -390,7 +390,7 @@ The following criteria must be met when calling **`createRenderPipeline()`**, ot
 Our [basic render demo](https://mdn.github.io/dom-examples/webgpu-render-demo/) provides an example of the construction of a valid render pipeline descriptor object, which is then used to create a {{domxref("GPURenderPipeline")}} via a `createRenderPipeline()` call.
 
 ```js
-// ...
+// …
 
 const vertexBuffers = [
   {
@@ -434,7 +434,7 @@ const pipelineDescriptor = {
 
 const renderPipeline = device.createRenderPipeline(pipelineDescriptor);
 
-// ...
+// …
 ```
 
 ## Specifications

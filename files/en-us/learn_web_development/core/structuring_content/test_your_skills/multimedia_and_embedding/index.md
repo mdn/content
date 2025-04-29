@@ -1,6 +1,7 @@
 ---
 title: "Test your skills: Multimedia and embedding"
-slug: Learn_web_development/Core/Structuring_content/HTML_video_and_audio/Test_your_skills:_Multimedia_and_embedding
+short-title: Audio and video
+slug: Learn_web_development/Core/Structuring_content/Test_your_skills/Multimedia_and_embedding
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---

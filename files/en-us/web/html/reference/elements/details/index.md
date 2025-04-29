@@ -133,14 +133,14 @@ To start the `<details>` box in its open state, add the Boolean `open` attribute
 We include several `<details>` boxes, all with the same name so only one can be open at a time:
 
 ```html
-<details name="reqs">
+<details name="requirements">
   <summary>Graduation Requirements</summary>
   <p>
     Requires 40 credits, including a passing grade in health, geography,
     history, economics, and wood shop.
   </p>
 </details>
-<details name="reqs">
+<details name="requirements">
   <summary>System Requirements</summary>
   <p>
     Requires a computer running an operating system. The computer must have some
@@ -148,7 +148,7 @@ We include several `<details>` boxes, all with the same name so only one can be 
     as some form of output device is recommended.
   </p>
 </details>
-<details name="reqs">
+<details name="requirements">
   <summary>Job Requirements</summary>
   <p>
     Requires knowledge of HTML, CSS, JavaScript, accessibility, web performance,

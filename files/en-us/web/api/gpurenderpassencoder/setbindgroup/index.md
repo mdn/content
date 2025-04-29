@@ -68,7 +68,7 @@ The following criteria must be met when calling **`setBindGroup()`**, otherwise 
 In the WebGPU Samples [Textured Cube example](https://webgpu.github.io/webgpu-samples/samples/texturedCube/), `setBindGroup()` is used to bind the `uniformBindGroup` to index position 0. Check out the example for the full context.
 
 ```js
-// ...
+// …
 
 const commandEncoder = device.createCommandEncoder();
 const passEncoder = commandEncoder.beginRenderPass(renderPassDescriptor);
@@ -79,7 +79,7 @@ passEncoder.draw(cubeVertexCount, 1, 0, 0);
 passEncoder.end();
 device.queue.submit([commandEncoder.finish()]);
 
-// ...
+// …
 ```
 
 > [!NOTE]

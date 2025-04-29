@@ -1,6 +1,7 @@
 ---
 title: "Test your skills: Basic controls"
-slug: Learn_web_development/Extensions/Forms/Test_your_skills:_Basic_controls
+short-title: Basic controls
+slug: Learn_web_development/Extensions/Forms/Test_your_skills/Basic_controls
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---

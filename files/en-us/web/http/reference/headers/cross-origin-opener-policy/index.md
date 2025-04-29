@@ -15,7 +15,7 @@ This ensures that potential attackers can't open your documents with {{domxref("
 It also means that any object opened by your document in a new BCG can't access it using [`window.opener`](/en-US/docs/Web/API/Window/opener).
 This allows you to have more control over references to a window than [`rel=noopener`](/en-US/docs/Web/HTML/Reference/Attributes/rel/noopener), which affects outgoing navigations but not documents opened with {{domxref("Window.open()")}}.
 
-The behaviour depends on the policies of both the new document and its opener, and whether the new document is opened following a navigation or using {{domxref("Window.open()")}}.
+The behavior depends on the policies of both the new document and its opener, and whether the new document is opened following a navigation or using {{domxref("Window.open()")}}.
 
 <table class="properties">
   <tbody>

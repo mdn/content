@@ -32,7 +32,7 @@ _Inherits properties from its parent, {{domxref("Event")}}._
 You could use something like the following as a global mechanism to pick up any errors that aren't handled by error scopes and capture them.
 
 ```js
-// ...
+// …
 
 device.addEventListener("uncapturederror", (event) => {
   // Re-surface the error
@@ -43,7 +43,7 @@ device.addEventListener("uncapturederror", (event) => {
   });
 });
 
-// ...
+// …
 ```
 
 ## Specifications

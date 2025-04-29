@@ -27,7 +27,7 @@ The above example creates a focusable button, but requires JavaScript and CSS to
 ```
 
 > [!NOTE]
-> If using `role="button"` instead of the semantic `<button>` or `<input type="button">` elements, you will need to make the element focusable and define event handlers for {{domxref("Element/click_event", "click")}} and {{domxref("Element/keydown_event", "keydown")}} events. This includes handling the <kbd>Enter</kbd> and <kbd>Space</kbd> keypresses in order to process all forms of user input. See [the official WAI-ARIA example code](https://www.w3.org/WAI/ARIA/apg/patterns/button/examples/button/).
+> If using `role="button"` instead of the semantic `<button>` or `<input type="button">` elements, you will need to make the element focusable and define event handlers for {{domxref("Element/click_event", "click")}} and {{domxref("Element/keydown_event", "keydown")}} events. This includes handling the <kbd>Enter</kbd> and <kbd>Space</kbd> key presses in order to process all forms of user input. See [the official WAI-ARIA example code](https://www.w3.org/WAI/ARIA/apg/patterns/button/examples/button/).
 
 In addition to the ordinary button widget, `role="button"` should be included when creating a toggle button or menu button using a non-button element.
 
@@ -152,7 +152,7 @@ function handleCommand(event) {
   // Handles both mouse clicks and keyboard
   // activate with Enter or Space
 
-  // Keypresses other than Enter and Space should not trigger a command
+  // Key presses other than Enter and Space should not trigger a command
   if (
     event instanceof KeyboardEvent &&
     event.key !== "Enter" &&

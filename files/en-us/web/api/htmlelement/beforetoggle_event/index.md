@@ -17,7 +17,7 @@ This event is [cancelable](/en-US/docs/Web/API/Event/cancelable) when an element
 Among other things, this event can be used to:
 
 - prevent an element from being shown.
-- add or remove classes or properties from the element or associated elements, for example to control the animation behaviour of a dialog as it is opened and closed.
+- add or remove classes or properties from the element or associated elements, for example to control the animation behavior of a dialog as it is opened and closed.
 - clear the state of the element before it is opened or after it is hidden, for example to reset a dialog form and return value to an empty state, or hide any nested manual popovers when reopening a popup.
 
 ## Syntax
@@ -188,7 +188,7 @@ For example:
 
 ```js
 popover.addEventListener("beforetoggle", () => {
-  //...
+  // …
 });
 
 popover.showPopover();

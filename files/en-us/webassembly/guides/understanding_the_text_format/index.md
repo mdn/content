@@ -307,7 +307,7 @@ The method will only fail if it cannot allocate the _initial_ size.
 > You can now have [multiple_memories](#multiple_memories) when supported by the browser.
 > Code that doesn't use multiple memories does not need to change!
 
-To demonstrate some of this behaviour, let's consider the case where we want to work with a string in our WebAssembly code.
+To demonstrate some of this behavior, let's consider the case where we want to work with a string in our WebAssembly code.
 A string is just a sequence of bytes somewhere inside this linear memory.
 Assuming we've written a suitable string of bytes to WebAssembly memory, we can pass that string to JavaScript by sharing the memory, the offset of the string within the memory, and some way of indicating the length.
 
@@ -560,9 +560,9 @@ const importObject = {
 
 WebAssembly.instantiateStreaming(fetch("multi-memory.wasm"), importObject).then(
   (obj) => {
-    //Get exported memory
+    // Get exported memory
     memory2 = obj.instance.exports.memory2;
-    //Log memory
+    // Log memory
     obj.instance.exports.logAllMemory();
   },
 );

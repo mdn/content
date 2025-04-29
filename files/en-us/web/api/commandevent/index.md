@@ -43,7 +43,7 @@ _This interface inherits properties from its parent, {{DOMxRef("Event")}}._
 ```js
 const popover = document.getElementById("mypopover");
 
-// ...
+// …
 
 popover.addEventListener("command", (event) => {
   if (event.command === "show-popover") {

@@ -1,6 +1,7 @@
 ---
 title: "Test your skills: Advanced styling"
-slug: Learn_web_development/Extensions/Forms/Test_your_skills:_Advanced_styling
+short-title: Advanced styling
+slug: Learn_web_development/Extensions/Forms/Test_your_skills/Advanced_styling
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---

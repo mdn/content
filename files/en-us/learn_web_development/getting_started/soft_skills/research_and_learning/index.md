@@ -108,7 +108,7 @@ An effective research network consists of several groups of people with differen
   - Ask them how they would prefer to communicate with you about the problem, to make the interaction as comfortable for them as possible.
   - If arranging a meeting, don't book more of their time than you need. If you are not sure how long you will need, timebox the session to say 30 minutes. You can always ask them for more help in the future.
 
-- Wider community network: This could consist of a dedicated online community such as forums or chat groups (for example the [The MDN Web Docs discord](/discord) or the [freeCodeCamp forums](https://forum.freecodecamp.org/)), or a physical meetup such as a conference or skillshare event.
+- Wider community network: This could consist of a dedicated online community such as forums or chat groups (for example the [The MDN Web Docs discord](/discord) or the [freeCodeCamp forums](https://forum.freecodecamp.org/)), or a physical meetup such as a conference or skill-share event.
 - Global network: Sometimes you might be out of options, in which case you could try asking your question on a general global community like a social media network. Sometimes helpful answers can come from unexpected places.
 
 > [!NOTE]

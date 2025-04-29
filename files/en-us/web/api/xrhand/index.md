@@ -18,7 +18,7 @@ The **`XRHand`** interface is pair iterator (an ordered map) with the key being 
 
 ## Instance methods
 
-The `XRhand` object is a pair iterator. It can directly be used in a {{jsxref("Statements/for...of", "for...of")}} structure. `for (const joint of myHand)` is equivalent to `for (const joint of myHand.entries())`.
+The `XRHand` object is a pair iterator. It can directly be used in a {{jsxref("Statements/for...of", "for...of")}} structure. `for (const joint of myHand)` is equivalent to `for (const joint of myHand.entries())`.
 However, it's not a map-like object, so you don't have the `clear()`, `delete()`, `has()`, and `set()` methods.
 
 - `entries()` {{Experimental_Inline}}
