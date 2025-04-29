@@ -4,9 +4,8 @@ short-title: Manifest
 slug: Web/Progressive_web_apps/Manifest
 page-type: landing-page
 browser-compat: manifests.webapp
+sidebar: pwasidebar
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 A **web application manifest**, defined in the [Web Application Manifest](https://w3c.github.io/manifest/) specification, is a {{Glossary("JSON")}} text file that provides information about a web application.
 

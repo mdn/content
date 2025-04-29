@@ -4,6 +4,14 @@ sidebar:
   - type: section
     link: /Web/Progressive_web_apps
   - type: section
+    link: /Web/Progressive_web_apps/Reference
+  - type: listSubPages
+    path: /Web/Progressive_web_apps/Manifest/Reference
+    link: /Web/Progressive_web_apps/Manifest/Reference
+    title: Manifest members
+    details: closed
+    code: true
+  - type: section
     link: /Web/Progressive_web_apps/Guides
   - /Web/Progressive_web_apps/Guides/What_is_a_progressive_web_app
   - /Web/Progressive_web_apps/Guides/Installing
@@ -41,5 +49,3 @@ sidebar:
   - /Web/Progressive_web_apps/How_to/Expose_common_actions_as_shortcuts
   - /Web/Progressive_web_apps/How_to/Share_data_between_apps
   - /Web/Progressive_web_apps/How_to/Associate_files_with_your_PWA
-  - type: section
-    link: /Web/Progressive_web_apps/Reference
