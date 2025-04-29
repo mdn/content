@@ -115,11 +115,14 @@ The third way is to create an unnamed layer using a `@layer` block at-rule witho
 
 This creates an _anonymous cascade layer_. This layer functions in the same way as named layers; however, rules cannot be assigned to it later. The order of precedence for anonymous layers is the order in which layers are declared, named or not, and lower than the styles declared outside of a layer.
 
-Another way to create a cascade layer is by using {{cssxref("@import")}}. In this case, the rules would be in the imported stylesheet. Remember that the `@import` at-rule must precede all other types of rules, except `@charset` and `@layer` rules.
+Another way to create a cascade layer is by using {{cssxref("@import")}}. In this case, the rules would be in the imported stylesheet. Remember that the `@import` at-rule must precede all other types of rules, except `@charset` and `@layer` rules. 
 
 ```css
 @import "theme.css" layer(utilities);
 ```
+
+> [!IMPORTANT]
+> Using `@layer` to declare the layers order while using layered `@import`s in a same file could result an unexpected bahaviour. `@import` runs sooner and sets its layer before the `@layer` statement and makes its set order ineffective. As the result, the imported layer has the least order among other defined layers in the `@layer` statement. It is a good practice to keep them separated. 
 
 ### Nesting layers
 
