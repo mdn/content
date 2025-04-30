@@ -364,4 +364,7 @@ th {
 
 ## See also
 
-- [Clipping and Masking in CSS](https://css-tricks.com/clipping-masking-css/)
+- {{cssxref("mask")}} shorthand
+- {{cssxref("mask-type")}}
+- {{cssxref("mask-mode")}}
+- [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
