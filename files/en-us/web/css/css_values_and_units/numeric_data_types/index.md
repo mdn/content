@@ -40,7 +40,7 @@ There are two types of relative lengths: font-relative lengths and viewport-perc
 
 #### Local font-relative lengths
 
-Local font-relative lengths are relative to the "local" font size or line height, specifying a length in relation to a computed size of a feature of the [element](/en-US/docs/Web/HTML/Element) itself, or relative to the element's inherited value in the case of a circular reference, such as the `em` value for a {{cssxref("font-size")}} property or a `lh` value for a {{cssxref("line-height")}} property.
+Local font-relative lengths are relative to the "local" font size or line height, specifying a length in relation to a computed size of a feature of the [element](/en-US/docs/Web/HTML/Reference/Elements) itself, or relative to the element's inherited value in the case of a circular reference, such as the `em` value for a {{cssxref("font-size")}} property or a `lh` value for a {{cssxref("line-height")}} property.
 For example, `em` is relative to the font size on the element and `ex` is relative to the x-height of the element's font.
 
 | Unit  | Relative to                                                                                                                            |

@@ -2,7 +2,7 @@
 title: CSS namespaces
 slug: Web/CSS/CSS_namespaces
 page-type: css-module
-browser-compat: css.at-rules.namespace
+spec-urls: https://drafts.csswg.org/css-namespaces/
 ---
 
 {{CSSRef}}
@@ -54,10 +54,6 @@ The `@namespace` rule is used for declaring a default namespace and for binding 
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

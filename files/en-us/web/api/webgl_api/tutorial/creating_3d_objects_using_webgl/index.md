@@ -14,8 +14,7 @@ Consider: each face requires four vertices to define it, but each vertex is shar
 
 First, let's build the cube's vertex position buffer by updating the code in `initBuffers()`. This is pretty much the same as it was for the square plane, but somewhat longer since there are 24 vertices (4 per side).
 
-> [!NOTE]
-> In the `initPositionBuffer()` function of your "init-buffers.js" module, replace the `positions` declaration with this code:
+In the `initPositionBuffer()` function of your "init-buffers.js" module, replace the `positions` declaration with this code:
 
 ```js
 const positions = [
@@ -41,8 +40,7 @@ const positions = [
 
 Since we've added a z-component to our vertices, we need to update the `numComponents` of our `vertexPosition` attribute to 3.
 
-> [!NOTE]
-> In the `setPositionAttribute()` function of your "draw-scene.js" module, change the `numComponents` constant from `2` to `3`:
+In the `setPositionAttribute()` function of your "draw-scene.js" module, change the `numComponents` constant from `2` to `3`:
 
 ```js
 const numComponents = 3;
@@ -52,8 +50,7 @@ const numComponents = 3;
 
 We also need to build an array of colors for each of the 24 vertices. This code starts by defining a color for each face, then uses a loop to assemble an array of all the colors for each of the vertices.
 
-> [!NOTE]
-> In the `initColorBuffer()` function of your "init-buffers.js" module, replace the `colors` declaration with this code:
+In the `initColorBuffer()` function of your "init-buffers.js" module, replace the `colors` declaration with this code:
 
 ```js
 const faceColors = [
@@ -67,7 +64,7 @@ const faceColors = [
 
 // Convert the array of colors into a table for all the vertices.
 
-const colors = [];
+let colors = [];
 
 for (let j = 0; j < faceColors.length; ++j) {
   const c = faceColors[j];
@@ -80,8 +77,7 @@ for (let j = 0; j < faceColors.length; ++j) {
 
 Once the vertex arrays are generated, we need to build the element array.
 
-> [!NOTE]
-> In your "init-buffer.js" module, add the following function:
+In your "init-buffer.js" module, add the following function:
 
 ```js
 function initIndexBuffer(gl) {
@@ -118,8 +114,7 @@ The `indices` array defines each face like a pair of triangles, specifying each 
 
 Next, you need to call this new function from `initBuffers()`, and return the buffer it creates.
 
-> [!NOTE]
-> At the end of the `initBuffers()` function of your "init-buffers.js" module, add the following code, replacing the existing `return` statement:
+At the end of the `initBuffers()` function of your "init-buffers.js" module, add the following code, replacing the existing `return` statement:
 
 ```js
 function initBuffers(gl) {
@@ -139,16 +134,14 @@ function initBuffers(gl) {
 
 Next we need to add code to our `drawScene()` function to draw using the cube's index buffer, adding new {{domxref("WebGLRenderingContext.bindBuffer()", "gl.bindBuffer()")}} and {{domxref("WebGLRenderingContext.drawElements()", "gl.drawElements()")}} calls.
 
-> [!NOTE]
-> In your `drawScene()` function, add the following code just before the `gl.useProgram` line:
+In your `drawScene()` function, add the following code just before the `gl.useProgram` line:
 
 ```js
 // Tell WebGL which indices to use to index the vertices
 gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, buffers.indices);
 ```
 
-> [!NOTE]
-> In the `drawScene()` function of your "draw-scene.js" module, replace the block just after the two `gl.uniformMatrix4fv` calls, that contains the `gl.drawArrays()` line, with the following block:
+In the `drawScene()` function of your "draw-scene.js" module, replace the block just after the two `gl.uniformMatrix4fv` calls, that contains the `gl.drawArrays()` line, with the following block:
 
 ```js
 {
@@ -163,22 +156,21 @@ Since each face of our cube is comprised of two triangles, there are 6 vertices 
 
 Finally, let's replace our variable `squareRotation` by `cubeRotation` and add a second rotation around the x axis.
 
-> [!NOTE]
-> At the start of your "webgl-demo.js" file, replace the `squareRotation` declaration with this line:
+At the start of your "webgl-demo.js" file, replace the `squareRotation` declaration with this line:
 
 ```js
 let cubeRotation = 0.0;
 ```
 
-> [!NOTE]
-> In your `drawScene()` function declaration, replace the `squareRotation` with `cubeRotation`:
+In your `drawScene()` function declaration, replace the `squareRotation` with `cubeRotation`:
 
-```js-nolint
+```js
 function drawScene(gl, programInfo, buffers, cubeRotation) {
+  // …
+}
 ```
 
-> [!NOTE]
-> In your `drawScene()` function, replace the `mat4.rotate` call with the following code:
+In your `drawScene()` function, replace the `mat4.rotate` call with the following code:
 
 ```js
 mat4.rotate(
@@ -201,8 +193,7 @@ mat4.rotate(
 ); // axis to rotate around (X)
 ```
 
-> [!NOTE]
-> In your `main()` function, replace the code that calls `drawScene()` and updates `squareRotation` to pass in and update `cubeRotation` instead:
+In your `main()` function, replace the code that calls `drawScene()` and updates `squareRotation` to pass in and update `cubeRotation` instead:
 
 ```js
 drawScene(gl, programInfo, buffers, cubeRotation);

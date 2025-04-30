@@ -16,13 +16,13 @@ See the [Compression Dictionary Transport guide](/en-US/docs/Web/HTTP/Guides/Com
 ## Syntax
 
 ```http
-Use-As-Dictionary: match="<urlpattern>"
+Use-As-Dictionary: match="<url-pattern>"
 Use-As-Dictionary: match-dest=("<destination1>" "<destination2>", …)
 Use-As-Dictionary: id="<string-identifier>"
 Use-As-Dictionary: type="raw"
 
 // Multiple, in any order
-Content-Encoding: match="<urlpattern>", match-dest=("<destination1>")
+Content-Encoding: match="<url-pattern>", match-dest=("<destination1>")
 ```
 
 ## Directives
@@ -60,7 +60,7 @@ This uses a wildcard to match multiple versions of a file.
 Use-As-Dictionary: match="/product/*", match-dest=("document")
 ```
 
-This uses`match-dest` to ensure the dictionary is only used for `document` requests so `<script src="/product/js/app.js">` resource requests for example would not match.
+This uses `match-dest` to ensure the dictionary is only used for `document` requests so `<script src="/product/js/app.js">` resource requests for example would not match.
 
 ```http
 Use-As-Dictionary: match="/product/*", match-dest=("document" "frame")
@@ -81,6 +81,8 @@ Accept-Encoding: gzip, br, zstd, dcb, dcz
 Available-Dictionary: :pZGm1Av0IEBKARczz7exkNYsZb8LzaMrV7J32a2fFG4=:
 Dictionary-ID: "dictionary-12345"
 ```
+
+The server must still check the hash from the `Available-Dictionary` header — the `Dictionary-ID` is additional information for the server to identify the dictionary but does not replace the need for the `Available-Dictionary` header.
 
 ### Type
 

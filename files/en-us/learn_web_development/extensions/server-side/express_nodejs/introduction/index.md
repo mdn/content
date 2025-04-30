@@ -2,11 +2,16 @@
 title: Express/Node introduction
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
+{{NextMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 In this first Express article we answer the questions "What is Node?" and "What is Express?", and give you an overview of what makes the Express web framework special. We'll outline the main features, and show you some of the main building blocks of an Express application (although at this point you won't yet have a development environment in which to test it).
+
+> [!WARNING]
+> The Express tutorial is written for Express version 4, while the latest version is Express 5.
+> We plan to update the documentation in the second half of 2025.
 
 <table>
   <tbody>
@@ -107,7 +112,7 @@ While _Express_ itself is fairly minimalist, developers have created compatible 
 
 Node was initially released, for Linux only, in 2009. The npm package manager was released in 2010, and native Windows support was added in 2012. Delve into [Wikipedia](https://en.wikipedia.org/wiki/Node.js#History) if you want to know more.
 
-Express was initially released in November 2010 and is currently on major version 4 of the API. You can check out the [changelog](https://expressjs.com/en/changelog/4x.html) for information about changes in the current release, and [GitHub](https://github.com/expressjs/express/blob/master/History.md) for more detailed historical release notes.
+Express was initially released in November 2010 and is currently on major version 5 of the API. You can check out the [changelog](https://expressjs.com/en/changelog/#5.x) for information about changes in the current release, and [GitHub](https://github.com/expressjs/express/blob/master/History.md) for more detailed historical release notes.
 
 ## How popular are Node and Express?
 

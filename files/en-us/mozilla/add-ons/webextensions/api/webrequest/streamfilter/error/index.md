@@ -25,7 +25,7 @@ function listener(details) {
     console.log(`Error: ${filter.error}`);
   };
 
-  //return {}; // not needed
+  // return {}; // not needed
 }
 
 browser.webRequest.onBeforeRequest.addListener(

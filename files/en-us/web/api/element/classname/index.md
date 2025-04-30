@@ -9,7 +9,7 @@ browser-compat: api.Element.className
 {{APIRef("DOM")}}
 
 The **`className`** property of the
-{{domxref("Element")}} interface gets and sets the value of the [`class` attribute](/en-US/docs/Web/HTML/Global_attributes/class)
+{{domxref("Element")}} interface gets and sets the value of the [`class` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/class)
 of the specified element.
 
 ## Value
@@ -35,7 +35,7 @@ the `element` is an {{domxref("SVGElement")}}. It is easier to get/set the
 {{domxref("Element.setAttribute")}} if you are dealing with SVG elements. However, take
 into account that {{domxref("Element.getAttribute")}} returns
 [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
-instead of `""` if the `element` has an empty [`class` attribute](/en-US/docs/Web/HTML/Global_attributes/class).
+instead of `""` if the `element` has an empty [`class` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/class).
 
 ```js
 elm.setAttribute("class", "my-class");

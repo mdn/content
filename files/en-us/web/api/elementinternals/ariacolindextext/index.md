@@ -21,7 +21,14 @@ A string.
 In this example the value of `ariaColIndexText` is set to "Column name".
 
 ```js
-this.internals_.ariaColIndexText = "Column name";
+class CustomEl extends HTMLElement {
+  constructor() {
+    super();
+    this.internals_ = this.attachInternals();
+    this.internals_.ariaColIndexText = "Column name";
+  }
+  // …
+}
 ```
 
 ## Specifications

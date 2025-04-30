@@ -62,7 +62,7 @@ Layout for `input type="search"` has been updated. This causes a search field to
 
 ### Toggle password display
 
-HTML password input elements ([`<input type="password">`](/en-US/docs/Web/HTML/Element/input/password)) include an "eye" icon that can be toggled to display or obscure the password text ([Firefox bug 502258](https://bugzil.la/502258)).
+HTML password input elements ([`<input type="password">`](/en-US/docs/Web/HTML/Reference/Elements/input/password)) include an "eye" icon that can be toggled to display or obscure the password text ([Firefox bug 502258](https://bugzil.la/502258)).
 
 <table>
   <thead>
@@ -574,7 +574,7 @@ Specifically, this preference will disable the following prefixed properties:
 
 ### UA styles for `<h1>` nested in sectioning elements
 
-The `<h1>` heading doesn't decrease in font size now when nested within [sectioning elements](/en-US/docs/Web/HTML/Content_categories#sectioning_content) `<article>`, `<aside>`, `<nav>`, and `<section>`. The UA styles for `<h1>` nested within sectioning elements are no longer relevant since the outline algorithm [has been removed](https://github.com/whatwg/html/pull/7829) from the HTML specification. ([Firefox bug 1883896](https://bugzil.la/1883896)).
+The `<h1>` heading doesn't decrease in font size now when nested within [sectioning elements](/en-US/docs/Web/HTML/Guides/Content_categories#sectioning_content) `<article>`, `<aside>`, `<nav>`, and `<section>`. The UA styles for `<h1>` nested within sectioning elements are no longer relevant since the outline algorithm [has been removed](https://github.com/whatwg/html/pull/7829) from the HTML specification. ([Firefox bug 1883896](https://bugzil.la/1883896)).
 
 > [!NOTE]
 > The preference for this feature works in reverse: it's set to `false` in the Nightly build, which removes the UA styling for headings nested in sectioning elements. It's set to `true` in all other channels, which retains the existing UA styling for the nested headings.
@@ -784,6 +784,90 @@ The parts that have been implemented include:
   </tbody>
 </table>
 
+### `::details-content` pseudo-element
+
+The CSS {{cssxref("::details-content")}} pseudo-element enables you to style the content of the {{htmlElement("details")}} element ([Firefox bug 1901037](https://bugzil.la/1901037)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.details-content.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### Allow pseudo-elements after element-backed pseudo-elements
+
+Work has started on allowing [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) such as {{cssxref("::first-letter")}} and {{cssxref("::before")}} to be appended to [element-backed pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements#element-backed_pseudo-elements) such as {{cssxref("::details-content")}} and {{cssxref("::file-selector-button")}}.
+
+This will allow users to, for , example, style the first letter of the {{htmlElement("details")}} element by using the CSS selector `::details-content::first-letter` or add content before a {{HTMLElement("input") }} of [`type="file"`](/en-US/docs/Web/HTML/Reference/Elements/input/file) using the CSS selector `::file-selector-button::before`.
+
+Currently only support for `::details-content::first-letter` can be parsed, using `@supports(::details-content::first-letter)` and the preference for [::details-content pseudo-element](#details-content_pseudo-element) needs enabling for this to be tested. The `::file-selector-button` pseudo-element is not yet marked as an element-based pseudo-element so there is no current way of testing this. ([Firefox bug 1953557](https://bugzil.la/1953557)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.details-content.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ## SVG
 
 ### `<discard>` element for SVG animations
@@ -865,64 +949,22 @@ This includes:
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>—</td>
-      <td>—</td>
+      <td>137</td>
+      <td>No</td>
     </tr>
     <tr>
       <th>Beta</th>
-      <td>—</td>
-      <td>—</td>
+      <td>137</td>
+      <td>No</td>
     </tr>
     <tr>
       <th>Release</th>
-      <td>—</td>
-      <td>—</td>
+      <td>137</td>
+      <td>No</td>
     </tr>
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>javascript.options.experimental.temporal</code></td>
-    </tr>
-  </tbody>
-</table>
-
-### Error.captureStackTrace
-
-The {{jsxref("Error.captureStackTrace()")}} static method installs stack trace information on a provided object as the {{jsxref("Error.stack")}} property.
-Its main use case is to install a stack trace on a custom error object that does not derive from the {{jsxref("Error")}} interface.
-([Firefox bug 1886820](https://bugzil.la/1886820)).
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>136</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>136</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>136</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>136</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>javascript.options.experimental.error_capture_stack_trace</code></td>
     </tr>
   </tbody>
 </table>
@@ -1022,6 +1064,168 @@ This subset of the API has been implemented:
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>dom.security.trusted_types.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### HTML Sanitizer API
+
+The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document's DOM.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.security.sanitizer.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### Removal of MutationEvent
+
+{{domxref("MutationEvent")}} and its associated events (`DOMSubtreeModified`, `DOMNodeInserted`, `DOMNodeRemoved`, `DOMCharacterDataModified`, `DOMAttrModified`) are on the path for removal, and have been disabled on nightly.
+([Firefox bug 1951772](https://bugzil.la/1951772)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>138</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>138</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>138</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.mutation_events.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### PerformanceEventTiming.interactionId
+
+{{domxref("PerformanceEventTiming.interactionId")}} can be used to measure latency timing for events triggered by a particular user interaction. ([Firefox bug 1934683](https://bugzil.la/1934683)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.performance.event_timing.enable_interactionid</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### Notification.actions
+
+The {{domxref("Notification.actions","actions")}} read-only property of the {{domxref("Notification")}} interface is supported in Nightly.
+This contains notification actions set with {{domxref("ServiceWorkerRegistration.showNotification()")}}.
+([Firefox bug 1225110](https://bugzil.la/1225110)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>138</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.webnotifications.actions.enabled</code></td>
     </tr>
   </tbody>
 </table>
@@ -1816,7 +2020,7 @@ The two `security.insecure_connection_text_*` preferences add a "Not secure" tex
 [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) allows web developers to selectively enable, disable, and modify the behavior of certain features and APIs in the browser. It is similar to CSP but controls features instead of security behavior.
 This is implemented in Firefox as **Feature Policy**, the name used in an earlier version of the specification.
 
-Note that supported policies can be set through the [`allow`](/en-US/docs/Web/HTML/Element/iframe#allow) attribute on `<iframe>` elements even if the user preference is not set.
+Note that supported policies can be set through the [`allow`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allow) attribute on `<iframe>` elements even if the user preference is not set.
 
 <table>
   <thead>
@@ -2025,47 +2229,6 @@ For more details see [Firefox bug 1687364](https://bugzil.la/1687364).
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>network.cors_preflight.authorization_covered_by_wildcard</code></td>
-    </tr>
-  </tbody>
-</table>
-
-### Clear-Site-Data: cache can clear the browser cache
-
-The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Reference/Headers/Clear-Site-Data) can be used with the [`cache`](/en-US/docs/Web/HTTP/Reference/Headers/Clear-Site-Data#cache) or `*` directives to clear the local browser cache.
-For more details see [Firefox bug 1942272](https://bugzil.la/1942272).
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>136</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>136</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>136</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>136</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>privacy.clearSiteDataHeader.cache.enabled</code></td>
     </tr>
   </tbody>
 </table>

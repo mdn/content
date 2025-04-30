@@ -533,9 +533,9 @@ The lexical grammar is very lenient: not all regular expression literals that ge
 
 See also {{jsxref("RegExp")}} for more information.
 
-```js-nolint
-/ab+c/g
-/[/]/
+```js
+/ab+c/g;
+/[/]/;
 ```
 
 A regular expression literal cannot start with two forward slashes (`//`), because that would be a line comment. To specify an empty regular expression, use `/(?:)/`.
@@ -546,15 +546,15 @@ One template literal consists of several tokens: `` `xxx${ `` (template head), `
 
 See also [template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals) for more information.
 
-```js-nolint
-`string text`
+```js
+`string text`;
 
 `string text line 1
- string text line 2`
+ string text line 2`;
 
-`string text ${expression} string text`
+`string text ${expression} string text`;
 
-tag`string text ${expression} string text`
+tag`string text ${expression} string text`;
 ```
 
 ## Automatic semicolon insertion
@@ -590,7 +590,7 @@ The ending ")" of [`do...while`](/en-US/docs/Web/JavaScript/Reference/Statements
 
 ```js-nolint
 do {
-  // ...
+  // …
 } while (condition) /* ; */ // ASI here
 const a = 1
 ```
@@ -779,7 +779,7 @@ There are the following rules-of-thumb for dealing with ASI, if you want to enfo
   ```js-nolint example-bad
   // The () may be merged with the previous line as a function call
   (() => {
-    // ...
+    // …
   })()
 
   // The [ may be merged with the previous line as a property access
@@ -800,7 +800,7 @@ There are the following rules-of-thumb for dealing with ASI, if you want to enfo
 
   ```js-nolint example-good
   ;(() => {
-    // ...
+    // …
   })()
   ;[1, 2, 3].forEach(console.log)
   ;`string text ${data}`.match(pattern).forEach(console.log)

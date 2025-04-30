@@ -2,9 +2,8 @@
 title: Styling tables
 slug: Learn_web_development/Core/Styling_basics/Tables
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics")}}
 
@@ -84,7 +83,7 @@ Let's start by looking at a typical HTML table. Well, I say typical — most HTM
 </table>
 ```
 
-The table is nicely marked up, easily stylable, and accessible, thanks to features such as [`scope`](/en-US/docs/Web/HTML/Element/th#scope), {{htmlelement("caption")}}, {{htmlelement("thead")}}, {{htmlelement("tbody")}}, etc. Unfortunately, it doesn't look good when rendered on the screen (see it live at [punk-bands-unstyled.html](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html)):
+The table is nicely marked up, easily stylable, and accessible, thanks to features such as [`scope`](/en-US/docs/Web/HTML/Reference/Elements/th#scope), {{htmlelement("caption")}}, {{htmlelement("thead")}}, {{htmlelement("tbody")}}, etc. Unfortunately, it doesn't look good when rendered on the screen (see it live at [punk-bands-unstyled.html](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html)):
 
 ![an unstyled table showing a summary of Uk's famous punk bands](table-unstyled.png)
 
@@ -308,7 +307,7 @@ Before moving on, we thought we'd provide you with a quick list of the most usef
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Tables](/en-US/docs/Learn_web_development/Core/Styling_basics/Tables_tasks).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Tables](/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Tables).
 
 ## Summary
 

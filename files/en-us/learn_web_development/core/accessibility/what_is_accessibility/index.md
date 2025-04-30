@@ -2,9 +2,8 @@
 title: What is accessibility?
 slug: Learn_web_development/Core/Accessibility/What_is_accessibility
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Accessibility/Tooling", "Learn_web_development/Core/Accessibility")}}
 
@@ -81,7 +80,7 @@ These people have disabilities concerning movement, which might involve purely p
 
 This kind of disability can also be a result of old age, rather than any specific trauma or condition, and it could also result from hardware limitations — some users might not have a mouse.
 
-The way this usually affects web development work is the requirement that controls be accessible by the keyboard — we'll discuss keyboard accessibility in later articles in the module, but it is a good idea to try out some websites using just the keyboard to see how you get on. Can you use the Tab key to move between the different controls of a web form, for example? You can find more details about keyboard controls in our [UI controls](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#ui_controls) section.
+The way this usually affects web development work is the requirement that controls be accessible by the keyboard — we'll discuss keyboard accessibility in later articles in the module, but it is a good idea to try out some websites using just the keyboard to see how you get on. Can you use the Tab key to move between the different controls of a web form, for example? You can find more details about keyboard controls in our [Use semantic UI controls where possible](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#use_semantic_ui_controls_where_possible) section.
 
 In terms of statistics, a significant number of people have mobility impairments. The US Centers for Disease Control and Prevention [Disability and Functioning (Non-institutionalized Adults 18 Years and Over)](https://www.cdc.gov/nchs/fastats/disability.htm) reports the USA "Percent of adults with any physical functioning difficulty: 16.1%".
 
@@ -120,7 +119,7 @@ A common accessibility myth is that accessibility is an expensive "added extra" 
 
 If however, you consider accessibility from the start of a project, the cost of making most content accessible should be fairly minimal.
 
-When planning your project, factor accessibility testing into your testing regime, just like testing for any other important target audience segment (e.g., target desktop or mobile browsers). Test early and often, ideally running automated tests to pick up on programmatically detectable missing features (such as missing image [alternative text](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#text_alternatives) or bad link text — see [Meaningful text labels](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#meaningful_text_labels)) and doing some testing with disabled user groups to see how well more complex site features work for them. For example:
+When planning your project, factor accessibility testing into your testing regime, just like testing for any other important target audience segment (e.g., target desktop or mobile browsers). Test early and often, ideally running automated tests to pick up on programmatically detectable missing features (such as missing image [alternative text](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#text_alternatives) or bad link text — see [Use meaningful text labels](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#use_meaningful_text_labels)) and doing some testing with disabled user groups to see how well more complex site features work for them. For example:
 
 - Is my date picker widget usable by people using screen readers?
 - If content updates dynamically, do visually impaired people know about it?

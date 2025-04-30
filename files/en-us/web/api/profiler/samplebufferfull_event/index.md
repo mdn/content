@@ -8,7 +8,7 @@ browser-compat: api.Profiler.samplebufferfull_event
 
 {{APIRef("JS Self-Profiling API")}}
 
-The **`samplebufferfull`** event of the {{domxref("Profiler")}} interface is fired when the number of samples the profiler has recorded matches the [`maxbuffersize`](/en-US/docs/Web/API/Profiler/Profiler#maxbuffersize) value passed to the profiler's constructor.
+The **`samplebufferfull`** event of the {{domxref("Profiler")}} interface is fired when the number of samples the profiler has recorded matches the [`maxBufferSize`](/en-US/docs/Web/API/Profiler/Profiler#maxbuffersize) value passed to the profiler's constructor.
 
 After this event fires, the profiler will not record any more samples.
 

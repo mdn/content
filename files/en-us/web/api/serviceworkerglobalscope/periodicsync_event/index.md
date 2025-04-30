@@ -53,7 +53,7 @@ You can also set up the event handler using the `onperiodicsync` property:
 
 ```js
 self.onperiodicsync = (event) => {
-  // ...
+  // …
 };
 ```
 

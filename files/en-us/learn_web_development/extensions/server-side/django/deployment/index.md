@@ -3,9 +3,10 @@ title: "Django Tutorial Part 11: Deploying Django to production"
 short-title: "11: Deploying"
 slug: Learn_web_development/Extensions/Server-side/Django/Deployment
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Testing", "Learn_web_development/Extensions/Server-side/Django/web_application_security", "Learn_web_development/Extensions/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Testing", "Learn_web_development/Extensions/Server-side/Django/web_application_security", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Now you've created (and tested) an awesome [LocalLibrary](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) website, you're going to want to install it on a public web server so that it can be accessed by library staff and members over the internet. This article provides an overview of how you might go about finding a host to deploy your website, and what you need to do in order to get your site ready for production.
 
@@ -121,7 +122,7 @@ pip3 install python-dotenv
 
 Then open **/locallibrary/settings.py** and insert the following code after `BASE_DIR` is defined, but before the security warning: `# SECURITY WARNING: keep the secret key used in production secret!`
 
-```py
+```python
 # Support env variables from .env file if defined
 import os
 from dotenv import load_dotenv
@@ -560,7 +561,7 @@ After getting the local library sources and installing the dependencies in a vir
 
    Replace the content in the file with the following text (first updating "hamishwillee" with your own username), and then select the **Save** button.
 
-   ```py
+   ```python
    import os
    import sys
 

@@ -2,9 +2,8 @@
 title: Create Author form
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_author_form
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 This subarticle shows how to define a page for creating `Author` objects.
 

@@ -25,7 +25,7 @@ A `GPUSampler` object instance is created using the {{domxref("GPUDevice.createS
 The following snippet creates a `GPUSampler` that does trilinear filtering and repeats texture coordinates:
 
 ```js
-// ...
+// …
 const sampler = device.createSampler({
   addressModeU: "repeat",
   addressModeV: "repeat",

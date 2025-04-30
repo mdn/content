@@ -41,7 +41,7 @@ Consider the following WebAssembly code, which is assumed to be compiled to a fi
 This imports a tag, which it refers to as `$tagname` internally, and imports a function that it refers to as `$throwExnWithStack`.
 It exports the method `run` that can be called by external code to call `$throwExnWithStack` (and hence the JavaScript function).
 
-```wasm
+```wat
 (module
   ;; import tag that will be referred to here as $tagname
   (import "extmod" "exttag" (tag $tagname (param i32)))
@@ -87,7 +87,7 @@ WebAssembly.instantiateStreaming(fetch("example.wasm"), importObject)
     console.log(`stack: ${e.stack}`);
   });
 
-//Log output (something like):
+// Log output (something like):
 // stack: throwExceptionWithStack@http://<url>/main.js:76:9
 // @http://<url>/example.wasm:wasm-function[3]:0x73
 // @http://<url>/main.js:82:38

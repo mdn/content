@@ -13,7 +13,7 @@ The **`Object.keys()`** static method returns an array of a given object's own e
 
 ```js interactive-example
 const object1 = {
-  a: "somestring",
+  a: "some string",
   b: 42,
   c: false,
 };

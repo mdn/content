@@ -58,7 +58,7 @@ Let's look at an example in which we have a scrolling container full of content,
 
 ### HTML
 
-In the HTML we have an {{htmlelement("article")}} element containing enough content to cause the document to scroll, preceded by a [back-to-top link](/en-US/docs/Web/HTML/Element/a#result_8):
+In the HTML we have an {{htmlelement("article")}} element containing enough content to cause the document to scroll, preceded by a [back-to-top link](/en-US/docs/Web/HTML/Reference/Elements/a#result_8):
 
 ```html
 <a class="back-to-top" href="#" aria-label="Top of page">↑</a>
@@ -346,7 +346,7 @@ In this example, we'll look at a scroll snap container with children that snap t
 
 ### HTML
 
-The HTML consists of a {{htmlelement("main")}} element that will be a scroll snap container. Inside are several {{htmlelement("section")}} elements that will be snap targets. Each `<section>` contains a wrapper {{htmlelement("div")}} and an `<h2>` [heading](/en-US/docs/Web/HTML/Element/Heading_Elements). The wrappers are included to create a style target as container queries enable styling a container's descendants, not the container itself.
+The HTML consists of a {{htmlelement("main")}} element that will be a scroll snap container. Inside are several {{htmlelement("section")}} elements that will be snap targets. Each `<section>` contains a wrapper {{htmlelement("div")}} and an `<h2>` [heading](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements). The wrappers are included to create a style target as container queries enable styling a container's descendants, not the container itself.
 
 ```html
 <main>

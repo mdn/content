@@ -44,7 +44,7 @@ context.configure({
   alphaMode: "premultiplied",
 });
 
-//...
+// …
 // Later on
 const commandEncoder = device.createCommandEncoder();
 

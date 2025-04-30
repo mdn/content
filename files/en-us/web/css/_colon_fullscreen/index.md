@@ -89,4 +89,4 @@ document.querySelector(".toggle").addEventListener("click", function (event) {
 - [Guide to the Fullscreen API](/en-US/docs/Web/API/Fullscreen_API/Guide)
 - {{cssxref("::backdrop")}}
 - DOM API: {{ domxref("Element.requestFullscreen()") }}, {{ domxref("Document.exitFullscreen()") }}, {{ domxref("Document.fullscreenElement") }}
-- [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#allowfullscreen) attribute
+- [`allowfullscreen`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen) attribute

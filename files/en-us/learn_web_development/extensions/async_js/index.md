@@ -2,9 +2,8 @@
 title: Asynchronous JavaScript
 slug: Learn_web_development/Extensions/Async_JS
 page-type: learn-module
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Extensions/Async_JS/Introducing", "Learn_web_development/Extensions")}}
 

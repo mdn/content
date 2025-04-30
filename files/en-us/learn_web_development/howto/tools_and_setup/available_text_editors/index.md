@@ -2,9 +2,8 @@
 title: What text editors are available?
 slug: Learn_web_development/Howto/Tools_and_setup/Available_text_editors
 page-type: learn-faq
+sidebar: learn-how-to
 ---
-
-{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 In this article we highlight some things to think about when installing a text editor for web development.
 

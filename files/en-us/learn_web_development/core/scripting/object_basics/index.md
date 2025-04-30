@@ -3,9 +3,8 @@ title: JavaScript object basics
 short-title: Objects
 slug: Learn_web_development/Core/Scripting/Object_basics
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Image_gallery","Learn_web_development/Core/Scripting/DOM_scripting", "Learn_web_development/Core/Scripting")}}
 
@@ -279,9 +278,12 @@ Adding a property to an object using the method above isn't possible with dot no
 You may have noticed something slightly strange in our methods. Look at this one for example:
 
 ```js
-introduceSelf() {
-  console.log(`Hi! I'm ${this.name[0]}.`);
-}
+const person = {
+  // …
+  introduceSelf() {
+    console.log(`Hi! I'm ${this.name[0]}.`);
+  },
+};
 ```
 
 You are probably wondering what "this" is. The `this` keyword typically refers to the current object the code is being executed in. In the context of an object method, `this` refers to the object that the method was called on.
@@ -407,7 +409,7 @@ const myNotification = new Notification("Hello!");
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Object basics](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Object_basics).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Object basics](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Object_basics).
 
 ## Summary
 

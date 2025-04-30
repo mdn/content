@@ -134,8 +134,8 @@ In the following example, the regular expression is defined in `replace()` and i
 
 ```js
 const str = "Twas the night before Xmas...";
-const newstr = str.replace(/xmas/i, "Christmas");
-console.log(newstr); // Twas the night before Christmas...
+const newStr = str.replace(/xmas/i, "Christmas");
+console.log(newStr); // Twas the night before Christmas...
 ```
 
 This logs `'Twas the night before Christmas...'`.
@@ -150,8 +150,8 @@ Global replace can only be done with a regular expression. In the following exam
 ```js
 const re = /apples/gi;
 const str = "Apples are round, and apples are juicy.";
-const newstr = str.replace(re, "oranges");
-console.log(newstr); // oranges are round, and oranges are juicy.
+const newStr = str.replace(re, "oranges");
+console.log(newStr); // oranges are round, and oranges are juicy.
 ```
 
 This logs `'oranges are round, and oranges are juicy'`.
@@ -163,8 +163,8 @@ The following script switches the words in the string. For the replacement text,
 ```js
 const re = /(\w+)\s(\w+)/;
 const str = "Maria Cruz";
-const newstr = str.replace(re, "$2, $1");
-console.log(newstr); // Cruz, Maria
+const newStr = str.replace(re, "$2, $1");
+console.log(newStr); // Cruz, Maria
 ```
 
 This logs `'Cruz, Maria'`.

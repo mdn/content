@@ -3,20 +3,18 @@ title: "HTMLButtonElement: command property"
 short-title: command
 slug: Web/API/HTMLButtonElement/command
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.HTMLButtonElement.command
 ---
 
-{{APIRef("Invoker Commands API")}}{{SeeCompatTable}}
+{{APIRef("Invoker Commands API")}}
 
-The **`command`** property of the {{domxref("HTMLButtonElement")}} interface gets and sets the action to be performed on an element being controlled by this button. For this to have an effect, [`commandfor`](/en-US/docs/Web/HTML/Element/button#commandfor) must be set.
+The **`command`** property of the {{domxref("HTMLButtonElement")}} interface gets and sets the action to be performed on an element being controlled by this button. For this to have an effect, [`commandfor`](/en-US/docs/Web/HTML/Reference/Elements/button#commandfor) must be set.
 
-It reflects the [`command`](/en-US/docs/Web/HTML/Element/button#command) HTML attribute.
+It reflects the [`command`](/en-US/docs/Web/HTML/Reference/Elements/button#command) HTML attribute.
 
 ## Value
 
-A string. See the [`command`](/en-US/docs/Web/HTML/Element/button#command) attribute for valid values.
+A string. See the [`command`](/en-US/docs/Web/HTML/Reference/Elements/button#command) attribute for valid values.
 
 ## Examples
 

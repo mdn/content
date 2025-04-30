@@ -44,7 +44,7 @@ An agent on the web can be one of the following:
 
 In other words, each worker creates its own agent, while one or more windows may be within the same agent—usually a main document and its similar-origin iframes. In Node.js, a similar concept called [worker threads](https://nodejs.org/api/worker_threads.html) is available.
 
-The diagram below illustrates th execution model of agents:
+The diagram below illustrates the execution model of agents:
 
 ![A diagram consisting of two agents: one HTML page and one worker. Each has its own stack containing execution contexts, heap containing objects, and queue containing jobs.](runtime-environment-diagram.svg)
 

@@ -42,7 +42,7 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
 - {{DOMxRef("Element.currentCSSZoom")}} {{ReadOnlyInline}}
   - : A number indicating the effective zoom size of the element, or 1.0 if the element is not rendered.
 - {{DOMxRef("Element.elementTiming")}} {{Experimental_Inline}}
-  - : A string reflecting the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute which marks an element for observation in the {{domxref("PerformanceElementTiming")}} API.
+  - : A string reflecting the [`elementtiming`](/en-US/docs/Web/HTML/Reference/Attributes/elementtiming) attribute which marks an element for observation in the {{domxref("PerformanceElementTiming")}} API.
 - {{domxref("Element.firstElementChild")}} {{ReadOnlyInline}}
   - : Returns the first child element of this element.
 - {{DOMxRef("Element.id")}}
@@ -120,6 +120,8 @@ _The `Element` interface also includes the following properties._
   - : A string reflecting the [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup) attribute, which indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
 - {{domxref("Element.ariaHidden")}}
   - : A string reflecting the [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden) attribute, which indicates whether the element is exposed to an accessibility API.
+- {{domxref("Element.ariaInvalid")}}
+  - : A string reflecting the [`aria-invalid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid) attribute, which indicates the entered value does not conform to the format expected by the application.
 - {{domxref("Element.ariaKeyShortcuts")}}
   - : A string reflecting the [`aria-keyshortcuts`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-keyshortcuts) attribute, which indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
 - {{domxref("Element.ariaLabel")}}
@@ -239,6 +241,8 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Inserts a given text node at a given position relative to the element it is invoked upon.
 - {{DOMxRef("Element.matches()")}}
   - : Returns a boolean value indicating whether or not the element would be selected by the specified selector string.
+- {{DOMxRef("Element.moveBefore()")}} {{Experimental_Inline}}
+  - : Moves a given {{domxref("Node")}} inside the invoking node as a direct child, before a given reference node, without removing and then inserting the node.
 - {{DOMxRef("Element.prepend()")}}
   - : Inserts a set of {{domxref("Node")}} objects or strings before the first child of the element.
 - {{DOMxRef("Element.querySelector()")}}
@@ -299,7 +303,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{domxref("Element/beforeinput_event", "beforeinput")}}
   - : Fired when the value of an input element is about to be modified.
 - {{domxref("Element/beforematch_event", "beforematch")}} {{Experimental_Inline}}
-  - : Fires on an element that is in the [_hidden until found_](/en-US/docs/Web/HTML/Global_attributes/hidden) state, when the browser is about to reveal its content because the user has found the content through the "find in page" feature or through fragment navigation.
+  - : Fires on an element that is in the [_hidden until found_](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden) state, when the browser is about to reveal its content because the user has found the content through the "find in page" feature or through fragment navigation.
 - {{domxref("Element/beforescriptexecute_event","beforescriptexecute")}} {{Non-standard_Inline}} {{deprecated_inline}}
   - : Fired when a script is about to be executed.
 - {{domxref("Element/beforexrselect_event", "beforexrselect")}} {{Experimental_Inline}}

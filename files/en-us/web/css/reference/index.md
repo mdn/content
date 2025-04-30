@@ -12,7 +12,7 @@ Use this **CSS reference** to browse an [alphabetical index](#index) of all of t
 
 ### Style rule syntax
 
-```css
+```plain
 style-rule ::=
     selectors-list {
       properties-list
@@ -21,7 +21,7 @@ style-rule ::=
 
 Where:
 
-```css
+```plain
 selectors-list ::=
     selector[:pseudo-class] [::pseudo-element]
     [, selectors-list]
