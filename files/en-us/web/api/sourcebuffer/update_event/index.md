@@ -8,37 +8,21 @@ browser-compat: api.SourceBuffer.update_event
 
 {{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
-The **`update`** event is fired when the {{domxref("SourceBuffer")}}'s append or remove operation has successfully completed.
+The **`update`** event signals the successful completion of an {{domxref("SourceBuffer.appendBuffer()")}} or {{domxref("SourceBuffer.remove()")}} operation. The {{domxref("SourceBuffer.updating", "updating")}} attribute transitions from `true` to `false`. This event is fired before the {{domxref("SourceBuffer.updateend_event", "updateend")}} event.
 
 ## Syntax
 
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
 ```js-nolint
-sourceBuffer.addEventListener('update', (event) => {
-  // Handle the update event
-});
+addEventListener("update", (event) => { })
+
+onupdate = (event) => { }
 ```
 
 ## Event type
 
-{{domxref("Event")}}
-
-## Description
-
-The `update` event is fired by a `SourceBuffer` object to signal the successful completion of an {{domxref("SourceBuffer.appendBuffer()")}} or {{domxref("SourceBuffer.remove()")}} operation. The `updating` attribute transitions from `true` to `false`. This event is fired before the `updateend` event.
-
-## Event handler
-
-| Property   | Type           | Description                                               |
-| ---------- | -------------- | --------------------------------------------------------- |
-| `onupdate` | `EventHandler` | The function to be called when the `update` event occurs. |
-
-### Event handler syntax
-
-```js-nolint
-sourceBuffer.onupdate = (event) => {
-  // Handle the update event
-};
-```
+A generic {{domxref("Event")}}.
 
 ## Examples
 
@@ -46,14 +30,16 @@ sourceBuffer.onupdate = (event) => {
 
 This example demonstrates how to handle the `update` event after a successful `appendBuffer()` operation.
 
-```js-nolint
+```js
 const video = document.getElementById("myVideo");
 const mediaSource = new MediaSource();
 
 video.src = URL.createObjectURL(mediaSource);
 
 mediaSource.addEventListener("sourceopen", () => {
-  const sourceBuffer = mediaSource.addSourceBuffer('video/mp4; codecs="avc1.42E01E"');
+  const sourceBuffer = mediaSource.addSourceBuffer(
+    'video/mp4; codecs="avc1.42E01E"',
+  );
 
   sourceBuffer.addEventListener("update", (event) => {
     console.log("SourceBuffer update:", event);
@@ -79,3 +65,8 @@ mediaSource.addEventListener("sourceended", () => {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("SourceBuffer.appendBuffer()")}}
+- {{domxref("SourceBuffer.remove()")}}

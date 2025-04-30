@@ -8,37 +8,21 @@ browser-compat: api.SourceBuffer.abort_event
 
 {{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
-The **`abort`** event is fired when the {{domxref("SourceBuffer.abort()")}} method is called on a {{domxref("SourceBuffer")}} object.
+The **`abort`** event is fired when the buffer is aborted, such as when the {{domxref("SourceBuffer.abort()")}} method is called. The {{domxref("SourceBuffer.updating", "updating")}} attribute is set to `false`.
 
 ## Syntax
 
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
 ```js-nolint
-sourceBuffer.addEventListener('abort', (event) => {
-  // Handle the abort event
-});
+addEventListener("abort", (event) => { })
+
+onabort = (event) => { }
 ```
 
 ## Event type
 
-{{domxref("Event")}}
-
-## Description
-
-The `abort` event is fired when the {{domxref("SourceBuffer.abort()")}} method is called on a {{domxref("SourceBuffer")}} object. This typically occurs when an ongoing append operation is terminated. When an abort event is fired, the `SourceBuffer`'s `updating` attribute is also set to `false`.
-
-## Event handler
-
-| Property  | Type           | Description                                              |
-| --------- | -------------- | -------------------------------------------------------- |
-| `onabort` | `EventHandler` | The function to be called when the `abort` event occurs. |
-
-### Event handler syntax
-
-```js-nolint
-sourceBuffer.onabort = (event) => {
-  // Handle the abort event
-};
-```
+A generic {{domxref("Event")}}.
 
 ## Examples
 
@@ -46,14 +30,16 @@ sourceBuffer.onabort = (event) => {
 
 This example demonstrates how to abort an append operation and handle the `abort` event.
 
-```js-nolint
+```js
 const video = document.getElementById("myVideo");
 const mediaSource = new MediaSource();
 
 video.src = URL.createObjectURL(mediaSource);
 
 mediaSource.addEventListener("sourceopen", () => {
-  const sourceBuffer = mediaSource.addSourceBuffer('video/mp4; codecs="avc1.42E01E"');
+  const sourceBuffer = mediaSource.addSourceBuffer(
+    'video/mp4; codecs="avc1.42E01E"',
+  );
   let fetchingData = true;
 
   sourceBuffer.addEventListener("abort", (event) => {
@@ -91,3 +77,7 @@ mediaSource.addEventListener("sourceended", () => {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("SourceBuffer.abort()")}}

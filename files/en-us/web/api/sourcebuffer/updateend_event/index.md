@@ -8,37 +8,21 @@ browser-compat: api.SourceBuffer.updateend_event
 
 {{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
-The **`updateend`** event is fired when the {{domxref("SourceBuffer")}}'s append or remove operation has completed.
+The **`updateend`** event signals the (not necessarily successful) completion of an {{domxref("SourceBuffer.appendBuffer()")}} or {{domxref("SourceBuffer.remove()")}} operation. The {{domxref("SourceBuffer.updating", "updating")}} attribute transitions from `true` to `false`. This event is fired after the {{domxref("SourceBuffer.update_event", "update")}}, {{domxref("SourceBuffer.error_event", "error")}}, or {{domxref("SourceBuffer.abort_event", "abort")}} events.
 
 ## Syntax
 
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
 ```js-nolint
-sourceBuffer.addEventListener('updateend', (event) => {
-  // Handle the updateend event
-});
+addEventListener("updateend", (event) => { })
+
+onupdateend = (event) => { }
 ```
 
 ## Event type
 
-{{domxref("Event")}}
-
-## Description
-
-The `updateend` event is fired by a `SourceBuffer` object to signal the completion of an {{domxref("SourceBuffer.appendBuffer()")}} or {{domxref("SourceBuffer.remove()")}} operation. The `updating` attribute transitions from `true` to `false`. This event is fired after the `update` event.
-
-## Event handler
-
-| Property      | Type           | Description                                                  |
-| ------------- | -------------- | ------------------------------------------------------------ |
-| `onupdateend` | `EventHandler` | The function to be called when the `updateend` event occurs. |
-
-### Event handler syntax
-
-```js-nolint
-sourceBuffer.onupdateend = (event) => {
-  // Handle the updateend event
-};
-```
+A generic {{domxref("Event")}}.
 
 ## Examples
 
@@ -46,14 +30,16 @@ sourceBuffer.onupdateend = (event) => {
 
 This example demonstrates how to handle the `updateend` event after a successful `appendBuffer()` operation.
 
-```js-nolint
+```js
 const video = document.getElementById("myVideo");
 const mediaSource = new MediaSource();
 
 video.src = URL.createObjectURL(mediaSource);
 
 mediaSource.addEventListener("sourceopen", () => {
-  const sourceBuffer = mediaSource.addSourceBuffer('video/mp4; codecs="avc1.42E01E"');
+  const sourceBuffer = mediaSource.addSourceBuffer(
+    'video/mp4; codecs="avc1.42E01E"',
+  );
 
   sourceBuffer.addEventListener("updateend", (event) => {
     console.log("SourceBuffer updateend:", event);
@@ -79,3 +65,8 @@ mediaSource.addEventListener("sourceended", () => {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("SourceBuffer.appendBuffer()")}}
+- {{domxref("SourceBuffer.remove()")}}
