@@ -121,8 +121,8 @@ Another way to create a cascade layer is by using {{cssxref("@import")}}. In thi
 @import "theme.css" layer(utilities);
 ```
 
-> [!IMPORTANT]
-> Using `@layer` to declare the layers order while using layered `@import`s in a same file could result an unexpected bahaviour. `@import` runs sooner and sets its layer before the `@layer` statement and makes its set order ineffective. As the result, the imported layer has the least order among other defined layers in the `@layer` statement. It is a good practice to keep them separated. 
+> [!NOTE]
+> Using `@layer` to declare the layers order while using layered `@import` rules in the same file could result in unexpected behavior. `@import` runs sooner and sets its layer before the `@layer` statement, making the latter's set order ineffective. As a result, the imported layer has the least order among other defined layers in the `@layer` statement. It is a good practice to keep them separated.
 
 ### Nesting layers
 
