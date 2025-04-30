@@ -6,33 +6,23 @@ sidebar: firefoxsidebar
 ---
 
 This article provides information about the changes in Firefox 138 that affect developers.
-Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [April 29, 2025](https://whattrainisitnow.com/release/?version=138).
+Firefox 138 was released on [April 29, 2025](https://whattrainisitnow.com/release/?version=138).
 
 ## Changes for web developers
-
-### Developer Tools
 
 ### HTML
 
 - The [`importmap`](/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap) value of the [`type`](/en-US/docs/Web/HTML/Reference/Elements/script/type) attribute of the [`<script>`](/en-US/docs/Web/HTML/Reference/Elements/script) element now supports the [`integrity`](/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap#integrity) key. This allows the ES module URLs referenced in the import maps to be matched against their integrity metadata. As a result, these modules are now compatible with [CSP](/en-US/docs/Web/HTTP/Guides/CSP) directives that require Subresource Integrity ([SRI](/en-US/docs/Web/Security/Practical_implementation_guides/SRI)). ([Firefox bug 1945540](https://bugzil.la/1945540)).
 
-#### Removals
-
 ### CSS
 
-#### Removals
+No notable changes
 
 ### JavaScript
 
 - The {{jsxref("Error.captureStackTrace()")}} static method is now supported. This installs stack trace information on a provided object as the {{jsxref("Error.stack")}} property. Its main use case is to install a stack trace on a custom error object that does not derive from the {{jsxref("Error")}} interface. ([Firefox bug 1950508](https://bugzil.la/1950508)).
 - The {{jsxref("Error.isError()")}} static method can now be used to check whether or not an object is an instance of an {{jsxref("Error")}} or a {{domxref("DOMException")}}. This is more reliable than using `instanceof` for the same purpose. ([Firefox bug 1952249](https://bugzil.la/1952249)).
 - The [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declaration now supports importing JSON modules using the [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) attribute.
-
-#### Removals
-
-### SVG
-
-#### Removals
 
 ### HTTP
 
@@ -43,12 +33,6 @@ Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-
   Developers can test whether the browser has put the document in an origin-keyed agent cluster using the {{domxref("window.originAgentCluster")}} property.
   ([Firefox bug 1665474](https://bugzil.la/1665474))
 
-#### Removals
-
-### Security
-
-#### Removals
-
 ### APIs
 
 - The [Login Status API](/en-US/docs/Web/API/FedCM_API/IDP_integration#update_login_status_using_the_login_status_api) is now supported when using the [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API). It can be used to set and check whether a browser user is logged in to an identity provider.
@@ -56,6 +40,9 @@ Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-
   ([Firefox bug 1945576](https://bugzil.la/1945576) and [Firefox bug 1945573](https://bugzil.la/1945573)).
 - The [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) now supports bidirectional messaging on an {{domxref("AudioWorklet.port")}} and an {{domxref("AudioWorkletGlobalScope.port")}}.
   This allows for custom, asynchronous communication between code in the main thread and the global scope of an audio worklet, such as receiving control data or global settings. ([Firefox bug 1951240](https://bugzil.la/1951240))
+- The {{domxref("RTCCertificate.getFingerprints()","getFingerprints()")}} method of the {{domxref("RTCCertificate")}} interface is now supported.
+  An application can use this to get fingerprints for a certificate, which might be shared out-of-band in order to identify a particular user or browser across WebRTC sessions.
+  ([Firefox bug 1525241](https://bugzil.la/1525241)).
 
 #### DOM
 
@@ -65,12 +52,6 @@ Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-
   The value is set using the [`degradationPreference`](/en-US/docs/Web/API/RTCRtpSender/setParameters#degradationpreference) property in the parameter object passed to the [`setParameters()`](/en-US/docs/Web/API/RTCRtpSender/setParameters#degradationpreference) method of the `RTCRtpSender` interface.
   It can also be read from the object returned by the [`getParameters()`](/en-US/docs/Web/API/RTCRtpSender/getParameters#degradationpreference) method.
   ([Firefox bug 1329847](https://bugzil.la/1329847)).
-
-#### Removals
-
-### WebAssembly
-
-#### Removals
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -103,10 +84,6 @@ Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-
   - `groupId` to {{WebExtAPIRef("tabs.query")}}. ([Firefox bug 1959715](https://bugzil.la/1959715))
   - `groupId` to {{WebExtAPIRef("tabs.onUpdated")}}. ([Firefox bug 1959716](https://bugzil.la/1959716)
 
-### Removals
-
-### Other
-
 ## Experimental web features
 
 These features are newly shipped in Firefox 138 and are considered experimental.
@@ -127,9 +104,16 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   The CSS {{cssxref("::details-content")}} pseudo-element enables you to style the content of the {{htmlElement("details")}} element ([Firefox bug 1901037](https://bugzil.la/1901037)).
 
+- **Allow pseudo-elements after element-backed pseudo-elements**
+
+  Work has begun on allowing [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) such as {{cssxref("::first-letter")}} and {{cssxref("::before")}} to be appended to [element-backed pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements#element-backed_pseudo-elements) such as {{cssxref("::details-content")}} and {{cssxref("::file-selector-button")}}. ([Firefox bug 1953557](https://bugzil.la/1953557)).
+
+  > [!NOTE]
+  > The preference for this feature depends upon the element-backed pseudo-element being targeted, for example: [`::details-content`](/en-US/docs/Mozilla/Firefox/Experimental_features#details-content_pseudo-element).
+
 - **`MutationEvent` on path to removal**: `dom.mutation_events.enabled`
 
-  {{domxref("MutationEvent")}} and its associated events (`DOMSubtreeModified`, `DOMNodeInserted`, `DOMNodeRemoved`, `DOMCharacterDataModified`,`DOMAttrModified`) are now disabled on Firefox Nightly by default. ([Firefox bug 1951772](https://bugzil.la/1951772)).
+  {{domxref("MutationEvent")}} and its associated events (`DOMSubtreeModified`, `DOMNodeInserted`, `DOMNodeRemoved`, `DOMCharacterDataModified`, `DOMAttrModified`) are now disabled on Firefox Nightly by default. ([Firefox bug 1951772](https://bugzil.la/1951772)).
 
 - **`Notification.actions`** (Nightly): `dom.webnotifications.actions.enabled`
 
@@ -138,6 +122,10 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **`PerformanceEventTiming.interactionId`**: `dom.performance.event_timing.enable_interactionid`
 
   {{domxref("PerformanceEventTiming.interactionId")}} can be used to measure latency timing for events triggered by a particular user interaction. ([Firefox bug 1934683](https://bugzil.la/1934683)).
+
+- **HTML Sanitizer API**: `dom.security.sanitizer.enabled`
+
+  The [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document's DOM. ([Firefox bug 1950605](https://bugzil.la/1950605)), ([Firefox bug 1952250](https://bugzil.la/1952250)).
 
 ## Older versions
 

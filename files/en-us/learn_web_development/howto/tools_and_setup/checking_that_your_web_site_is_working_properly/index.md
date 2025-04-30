@@ -2,9 +2,8 @@
 title: How do you make sure your website works properly?
 slug: Learn_web_development/Howto/Tools_and_setup/Checking_that_your_web_site_is_working_properly
 page-type: learn-faq
+sidebar: learn-how-to
 ---
-
-{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 In this article, we go over various troubleshooting steps for a website and some basic actions to take in order to solve these issues.
 

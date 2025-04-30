@@ -8,7 +8,7 @@ browser-compat: http.headers.Content-Security-Policy.manifest-src
 {{HTTPSidebar}}
 
 The HTTP
-{{HTTPHeader("Content-Security-Policy")}}`: manifest-src`
+{{HTTPHeader("Content-Security-Policy")}} **`manifest-src`**
 directive specifies which [manifest](/en-US/docs/Web/Progressive_web_apps/Manifest) can be applied
 to the resource.
 

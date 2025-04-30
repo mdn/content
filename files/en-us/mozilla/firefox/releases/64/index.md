@@ -60,7 +60,7 @@ _No changes._
 ### JavaScript
 
 - The TC39 [Well-formed JSON.stringify](https://github.com/tc39/proposal-well-formed-stringify) proposal has been implemented, to prevent {{jsxref("JSON.stringify")}} from returning ill-formed Unicode strings ([Firefox bug 1469021](https://bugzil.la/1469021)).
-- Proxied functions can now be passed to {{jsxref("Function.prototype.toString")}}`.call()` ([Firefox bug 1440468](https://bugzil.la/1440468)).
+- Proxied functions can now be used with {{jsxref("Function.prototype.toString")}} ([Firefox bug 1440468](https://bugzil.la/1440468)).
 - In the [`WebAssembly.Global()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Global) constructor, if no value is specified a typed 0 value is used. This is specified by the [`DefaultValue` algorithm](https://webassembly.github.io/spec/js-api/#defaultvalue) ([Firefox bug 1490286](https://bugzil.la/1490286)).
 
 ### APIs

@@ -661,7 +661,7 @@ The following are also interesting, but as yet not well-supported in browsers:
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Advanced styling](/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Advanced_styling).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Advanced styling](/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Advanced_styling).
 
 ## Summary
 

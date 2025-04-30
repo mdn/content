@@ -55,7 +55,7 @@ page-type: firefox-release-notes
 - Our experimental [CSS Grids](/en-US/docs/Web/CSS/CSS_grid_layout) implementation has been improved:
 
   - Implemented {{cssxref("&lt;percentage&gt;")}} for the `grid-gap`, `grid-row-gap`, and `grid-column-gap` properties ([Firefox bug 1266268](https://bugzil.la/1266268)).
-  - Implemented grid layout support for {{cssxref("align")}}, {{cssxref("justify-self")}}`:baseline` and `last-baseline` (aka "baseline self-alignment") ([Firefox bug 1221525](https://bugzil.la/1221525)).
+  - Implemented grid layout support for {{cssxref("align-self")}}, {{cssxref("justify-self")}} values `baseline` and `last-baseline` (aka "baseline self-alignment") ([Firefox bug 1221525](https://bugzil.la/1221525)).
   - Implemented grid item baseline content alignment ([Firefox bug 1256429](https://bugzil.la/1256429)).
 
 - Our experimental [CSS Masks](/en-US/docs/Web/CSS/CSS_masking) implementation has been improved:
@@ -70,7 +70,7 @@ page-type: firefox-release-notes
 
 - The ES2015 {{jsxref("Global_Objects/Proxy/Proxy/getPrototypeOf", "getPrototypeOf()")}} and {{jsxref("Global_Objects/Proxy/Proxy/setPrototypeOf", "setPrototypeOf()")}} {{jsxref("Proxy")}} traps have been implemented ([Firefox bug 888969](https://bugzil.la/888969)).
 - The ES2015 [`RegExp.prototype[Symbol.match]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match), [`RegExp.prototype[Symbol.replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace), [`RegExp.prototype[Symbol.search]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search), and [`RegExp.prototype[Symbol.split]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split) methods, and [`RegExp[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.species) getter have been implemented ([Firefox bug 887016](https://bugzil.la/887016)).
-- The deprecated, non-standard `flags` argument of `String.prototype.`{{jsxref("String.prototype.match", "match")}}/{{jsxref("String.prototype.search", "search")}}/{{jsxref("String.prototype.replace", "replace")}} has been removed ([Firefox bug 1108382](https://bugzil.la/1108382)).
+- The deprecated, non-standard `flags` argument of {{jsxref("String.prototype.match")}}/{{jsxref("String.prototype.search", "search")}}/{{jsxref("String.prototype.replace", "replace")}} has been removed ([Firefox bug 1108382](https://bugzil.la/1108382)).
 - The behavior of the {{jsxref("Date.parse()")}} method when parsing 2-digit years has been changed to be more interoperable with the Google Chrome browser ([Firefox bug 1265136](https://bugzil.la/1265136)).
 
 ### Interfaces/APIs/DOM
