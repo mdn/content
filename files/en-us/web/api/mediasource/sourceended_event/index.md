@@ -45,7 +45,7 @@ mediaSource.addEventListener("sourceopen", (event) => {
     .then((response) => response.arrayBuffer())
     .then((data) => {
       sourceBuffer.appendBuffer(data);
-       sourceBuffer.addEventListener("updateend", () => {
+      sourceBuffer.addEventListener("updateend", () => {
         mediaSource.endOfStream();
       });
     });
