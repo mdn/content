@@ -15,7 +15,7 @@ The **`sourceended`** event is fired when a {{domxref("MediaSource")}} object's 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js-nolint
-mediaSource.addEventListener("sourceended", (event) => {})
+addEventListener("sourceended", (event) => {})
 
 onsourceended = (event) => {}
 ```
