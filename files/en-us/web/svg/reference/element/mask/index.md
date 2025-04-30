@@ -46,7 +46,7 @@ svg {
   - : This attribute defines the height of the masking area.
     _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length); _Default value_: `120%`; _Animatable_: **yes**
 - {{SVGAttr("mask-type")}}
-- : This attribute defines the mask mode for the contents for the contents of the `<mask>`.
+  - : This attribute defines the mask mode for the contents for the contents of the `<mask>`.
 - {{SVGAttr("maskContentUnits")}}
   - : This attribute defines the coordinate system for the contents of the `<mask>`.
     _Value type_: `userSpaceOnUse` | `objectBoundingBox`; _Default value_: `userSpaceOnUse`; _Animatable_: **yes**
