@@ -104,7 +104,7 @@ This example demonstrates the `mask-composite` property's four `<compositing-ope
 
 #### HTML
 
-```html
+```html hidden
 <table>
   <tbody>
     <tr>
@@ -117,10 +117,21 @@ This example demonstrates the `mask-composite` property's four `<compositing-ope
       <th>mask-composite: exclude</th>
     </tr>
     <tr class="initMaskType">
-      <td>
-        <img
-          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-          alt="Pride flag" />
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+```
+
+We have a {{htmltable("table")}} that contain twelve images.
+
+```html
+<img
+  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+  alt="Pride flag" />
+```
+
+```html hidden
       </td>
       <td>
         <img
@@ -207,48 +218,20 @@ This example demonstrates the `mask-composite` property's four `<compositing-ope
     </tr>
   </tbody>
 </table>
+```
 
+We include six masks icluding three hearts and three circles.
+
+```html
 <svg height="0" width="0">
-  <mask id="mtAlpha" class="alpha">
+  <mask id="heartAlpha" class="alpha">
     <path
       d="M20,70 A40,40,0,0,1,100,70 A40,40,0,0,1,180,70 Q180,130,100,190 Q20,130,20,70 Z"
       fill="green"
       stroke="white"
       stroke-width="20" />
   </mask>
-  <mask id="mtAlpha2" class="alpha">
-    <circle
-      cx="130"
-      cy="130"
-      r="50"
-      fill="rgb(0 0 0 / 0.5)"
-      stroke="rgb(255 255 255 / 0.5)"
-      stroke-width="20" />
-  </mask>
-  <mask id="mtLuminance" class="luminance">
-    <path
-      d="M20,70 A40,40,0,0,1,100,70 A40,40,0,0,1,180,70 Q180,130,100,190 Q20,130,20,70 Z"
-      fill="green"
-      stroke="white"
-      stroke-width="20" />
-  </mask>
-  <mask id="mtLuminance2" class="luminance">
-    <circle
-      cx="130"
-      cy="130"
-      r="50"
-      fill="rgb(0 0 0 / 0.5)"
-      stroke="rgb(255 255 255 / 0.5)"
-      stroke-width="20" />
-  </mask>
-  <mask id="mtOmitted" class="default">
-    <path
-      d="M20,70 A40,40,0,0,1,100,70 A40,40,0,0,1,180,70 Q180,130,100,190 Q20,130,20,70 Z"
-      fill="green"
-      stroke="white"
-      stroke-width="20" />
-  </mask>
-  <mask id="mtOmitted2" class="default">
+  <mask id="circleAlpha" class="alpha">
     <circle
       cx="130"
       cy="130"
@@ -260,47 +243,78 @@ This example demonstrates the `mask-composite` property's four `<compositing-ope
 </svg>
 ```
 
+For the sake of brevity, as the `<mask>` elements only differ in `id` and `class` name, we've hidded the luminance and default set. We've hidden the 11 other `<img>` elements and the table structure.
+
+```html hidden
+<mask id="heartLuminance" class="luminance">
+  <path
+    d="M20,70 A40,40,0,0,1,100,70 A40,40,0,0,1,180,70 Q180,130,100,190 Q20,130,20,70 Z"
+    fill="green"
+    stroke="white"
+    stroke-width="20" />
+</mask>
+<mask id="circleLuminance" class="luminance">
+  <circle
+    cx="130"
+    cy="130"
+    r="50"
+    fill="rgb(0 0 0 / 0.5)"
+    stroke="rgb(255 255 255 / 0.5)"
+    stroke-width="20" />
+</mask>
+<mask id="heartInitial" class="init">
+  <path
+    d="M20,70 A40,40,0,0,1,100,70 A40,40,0,0,1,180,70 Q180,130,100,190 Q20,130,20,70 Z"
+    fill="green"
+    stroke="white"
+    stroke-width="20" />
+</mask>
+<mask id="circleInitial" class="init">
+  <circle
+    cx="130"
+    cy="130"
+    r="50"
+    fill="rgb(0 0 0 / 0.5)"
+    stroke="rgb(255 255 255 / 0.5)"
+    stroke-width="20" />
+</mask>
+</svg>
+```
+
 #### CSS
+
+First we style the `<mask>` elements, providing each mask with a {{cssxref("mask-type")}} property value of either `alpha`, `luminance`, or `initial`, which for the `<mask>` element as a mask-source, has a default value of `luminance`.
+
+```css
+mask.luminance {
+  mask-type: luminance;
+}
+mask.alpha {
+  mask-type: alpha;
+}
+mask.init {
+  mask-type: initial;
+}
+```
+
+We then apply two masks — a heart and circle — as the {{cssxref("mask-image")}} property value to each {{htmlelement("img")}} element, with all the images in a row getting the same masks.
 
 ```css
 /* apply the mask images */
-.initMaskType img {
-  mask-image: url(#mtOmitted), url(#mtOmitted2);
+tr.initMaskType img {
+  mask-image: url(#heartInitial), url(#circleInitial);
 }
-.alphaMaskType img {
-  mask-image: url(#mtAlpha), url(#mtAlpha2);
+tr.alphaMaskType img {
+  mask-image: url(#heartAlpha), url(#circleAlpha);
 }
-.luminanceMaskType img {
-  mask-image: url(#mtLuminance), url(#mtLuminance2);
+tr.luminanceMaskType img {
+  mask-image: url(#heartLuminance), url(#circleLuminance);
 }
+```
 
-/* applied to the <mask> */
-mask {
-  height: 50%;
-}
-.luminance {
-  mask-type: luminance;
-}
-.alpha {
-  mask-type: alpha;
-}
-.default {
-  mask-type: initial;
-}
+Finally, we compose the masks using the `mask-composite` property, applying the four different enumerated `mask-composite` values by table column.
 
-/* page layout */
-table,
-td,
-th {
-  border: 1px solid;
-}
-th {
-  font-family: monospace;
-}
-th {
-  color: green;
-}
-
+```css
 /* property we're testing */
 td:nth-of-type(1) img {
   mask-composite: add;
@@ -316,9 +330,29 @@ td:nth-of-type(4) img {
 }
 ```
 
+The table styles have been hidden for the sake of brevity.
+
+```css hidden
+mask {
+  height: 50%;
+}
+
+table,
+td,
+th {
+  border: 1px solid;
+}
+th {
+  font-family: monospace;
+}
+th {
+  color: green;
+}
+```
+
 #### Results
 
-{{EmbedLiveSample("value comparison", "", "150px")}}
+{{EmbedLiveSample("value comparison", "", "550px")}}
 
 ## Specifications
 
