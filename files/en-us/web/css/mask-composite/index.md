@@ -280,3 +280,91 @@ For the sake of brevity, as the `<mask>` elements only differ in `id` and `class
 </mask>
 </svg>
 ```
+
+#### CSS
+
+First we style the `<mask>` elements, providing each mask with a {{cssxref("mask-type")}} property value of either `alpha`, `luminance`, or `initial`, which for the `<mask>` element as a mask-source, has a default value of `luminance`.
+
+```css
+mask.luminance {
+  mask-type: luminance;
+}
+mask.alpha {
+  mask-type: alpha;
+}
+mask.init {
+  mask-type: initial;
+}
+```
+
+We then apply two masks — a heart and circle — as the {{cssxref("mask-image")}} property value to each {{htmlelement("img")}} element, with all the images in a row getting the same masks.
+
+```css
+/* apply the mask images */
+tr.initMaskType img {
+  mask-image: url(#heartInitial), url(#circleInitial);
+}
+tr.alphaMaskType img {
+  mask-image: url(#heartAlpha), url(#circleAlpha);
+}
+tr.luminanceMaskType img {
+  mask-image: url(#heartLuminance), url(#circleLuminance);
+}
+```
+
+Finally, we compose the masks using the `mask-composite` property, applying the four different enumerated `mask-composite` values by table column.
+
+```css
+/* property we're testing */
+td:nth-of-type(1) img {
+  mask-composite: add;
+}
+td:nth-of-type(2) img {
+  mask-composite: subtract;
+}
+td:nth-of-type(3) img {
+  mask-composite: intersect;
+}
+td:nth-of-type(4) img {
+  mask-composite: exclude;
+}
+```
+
+The table styles have been hidden for the sake of brevity.
+
+```css hidden
+mask {
+  height: 50%;
+}
+
+table,
+td,
+th {
+  border: 1px solid;
+}
+th {
+  font-family: monospace;
+}
+th {
+  color: green;
+}
+```
+
+#### Results
+
+{{EmbedLiveSample("value comparison", "", "550px")}}
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- {{cssxref("mask")}} shorthand
+- {{cssxref("mask-type")}}
+- {{cssxref("mask-mode")}}
+- [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
