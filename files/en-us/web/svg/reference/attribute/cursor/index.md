@@ -22,8 +22,8 @@ The `cursor` attribute specifies the mouse cursor displayed when the mouse point
     <tr>
       <th scope="row">Value</th>
       <td>
-        [[<a href="/en-US/docs/Web/SVG/Guides/Content_type#funciri">&#x3C;FuncIRI></a
-        >,]* [ <strong>auto</strong> | crosshair | default | pointer | move |
+        [ [ <a href="/en-US/docs/Web/SVG/Guides/Content_type#funciri">&#x3C;FuncIRI></a
+        >, ]* [ <strong>auto</strong> | crosshair | default | pointer | move |
         e-resize | ne-resize | nw-resize | n-resize | se-resize | sw-resize |
         s-resize | w-resize| text | wait | help ]] | inherit
       </td>
