@@ -41,7 +41,7 @@ mediaSource.addEventListener("sourceopen", (event) => {
   console.log("MediaSource sourceopen:", event);
   // Add source buffers and begin adding media data.
   const sourceBuffer = mediaSource.addSourceBuffer(
-    'video/mp4; codecs="avc1.42E01E"'
+    'video/mp4; codecs="avc1.42E01E"',
   );
   fetch("video-data.mp4")
     .then((response) => response.arrayBuffer())
