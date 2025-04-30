@@ -6,7 +6,7 @@ browser-compat: svg.elements.mask
 sidebar: svgref
 ---
 
-The **`<mask>`** [SVG](/en-US/docs/Web/SVG) element defines an alpha mask for compositing the current object into the background. A mask is used/referenced using the {{SVGAttr("mask")}} property.
+The **`<mask>`** [SVG](/en-US/docs/Web/SVG) element defines a mask for compositing the current object into the background. A mask is used/referenced using the {{SVGAttr("mask")}} property and CSS {{cssxref("mask-image")}} property.
 
 ## Example
 
