@@ -127,7 +127,7 @@ div::before {
 }
 ```
 
-```css hidden  live-sample___mask-clip-example
+```css hidden live-sample___mask-clip-example
 body {
   display: flex;
   flex-flow: row wrap;
