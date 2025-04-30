@@ -32,8 +32,6 @@ mask-origin: revert-layer;
 mask-origin: unset;
 ```
 
-One or more of the keyword values listed below, separated by commas.
-
 ### Values
 
 The `mask-origin` property is a comma-separated list of `<coord-box>` keyword values, including:
@@ -63,7 +61,9 @@ For SVG elements without associated CSS layout box, the values `content-box`, `p
 
 For elements with associated CSS layout box, the values `fill-box`, `stroke-box` and `view-box` compute to `border-box`, which is the default value of `mask-origin`.
 
-If the {{cssxref("mask-clip")}} property is set to `padding-box`, the `mask-origin` is set to `border-box`, the {{cssxref("mask-position")}} is set to an edge, or defaults to the `top left` edge, and the element has a border, then the the mask layer image will be clipped at that edge.
+An element can have multiple mask layers applied. The number of layers is determined by the number of comma-separated values in the `mask-image` property value (even if a value is `none`). Each `mask-origin` value in the comma-separated list of values is matched up with the `mask-image` values, in order. If the number of values in the two properties differs, and excess values of `mask-origin` are not used, or, if `mask-origin` has fewer values than `mask-image`, the `mask-origin` values are repeated.
+
+The `mask-origin` can cause the mask layer image to be clipped. For example, if the {{cssxref("mask-clip")}} property is set to `padding-box`, the `mask-origin` is set to `border-box`, the {{cssxref("mask-position")}} is set or defaults to the `top left` edge, and the element has a border, then the the mask layer image will be clipped at the top left edge.
 
 ## Formal definition
 
