@@ -55,9 +55,15 @@ There are three non-standard values that are shortcuts for standard `<coord-box>
 
 ## Description
 
-For elements rendered as a single box, this property specifies the mask positioning area. In other words, this property specifies the origin position of an image specified by the {{cssxref("mask-image")}} CSS property. For elements rendered as multiple boxes, such as inline boxes that span more than one line, it specifies which boxes {{cssxref("box-decoration-break")}} operates upon to determine the mask positioning area.
+For elements rendered as a single box, this property specifies the mask positioning area, or the origin position, of the associated image specified by the {{cssxref("mask-image")}} CSS property. Each `mask-origin` value in the comma-separated list of values. When multiple values are present, each value will match up to the image in the same position in the {{cssxref("mask-image")}} value. The value defines where the associated mask image originates.
 
-Each `mask-origin` value in the comma-separated list of values. When multiple values are present, each value will match up to the image in the same position in the {{cssxref("mask-image")}} value. The value defines where the associated mask image originates.
+For elements rendered as multiple boxes, such as inline boxes that span more than one line, the `mask-origin` property specifies which boxes the {{cssxref("box-decoration-break")}} property operates upon to determine the mask positioning area.
+
+For SVG elements without associated CSS layout box, the values `content-box`, `padding-box` and `border-box` compute to `fill-box`.
+
+For elements with associated CSS layout box, the values `fill-box`, `stroke-box` and `view-box` compute to `border-box`, which is the default value of `mask-origin`.
+
+If the {{cssxref("mask-clip")}} property is set to `padding-box`, the `mask-origin` is set to `border-box`, the {{cssxref("mask-position")}} is set to an edge, or defaults to the `top left` edge, and the element has a border, then the the mask layer image will be clipped at that edge.
 
 ## Formal definition
 
