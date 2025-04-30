@@ -55,7 +55,7 @@ There are three non-standard values that are shortcuts for standard `<coord-box>
 
 The `mask-origin` property is very similar to the {{cssxref("background-origin")}} property, but it has a different set of values, and a different initial value.
 
-An element can have multiple mask layers applied. The number of layers is determined by the number of comma-separated values in the `mask-image` property value (even if a value is `none`). Each `mask-origin` value in the comma-separated list of values is matched up with the `mask-image` values, in order. If the number of values in the two properties differs, and excess values of `mask-origin` are not used, or, if `mask-origin` has fewer values than `mask-image`, the `mask-origin` values are repeated.
+An element can have multiple mask layers applied. The number of layers is determined by the number of comma-separated values in the `mask-image` property value (even if a value is `none`). Each `mask-origin` value in the comma-separated list of values is matched up with the comma-separated list of `mask-image` values, in order. If the number of values in the two properties differs, any excess values of `mask-origin` are not used, or, if `mask-origin` has fewer values than `mask-image`, the `mask-origin` values are repeated.
 
 For elements rendered as a single box, this property specifies the mask positioning area, or the origin position, of the associated image specified by the {{cssxref("mask-image")}} CSS property. Each `mask-origin` value in the comma-separated list of values. When multiple values are present, each value will match up to the image in the same position in the {{cssxref("mask-image")}} value. The value defines where the associated mask image originates.
 
