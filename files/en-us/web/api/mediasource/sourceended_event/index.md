@@ -78,4 +78,3 @@ mediaSource.addEventListener("sourceended", (event) => {
 ## See also
 
 {{domxref("MediaSource.endOfStream()")}}
-
