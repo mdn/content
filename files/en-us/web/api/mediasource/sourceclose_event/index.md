@@ -56,7 +56,9 @@ mediaSource.addEventListener("sourceclose", (event) => {
 });
 
 // Call detachMediaSource() when appropriate, e.g., on a button click
-document.getElementById('detachButton').addEventListener('click', detachMediaSource);
+document
+  .getElementById("detachButton")
+  .addEventListener("click", detachMediaSource);
 ```
 
 ## Specifications
