@@ -9,7 +9,7 @@ browser-compat:
 
 {{AddonSidebar}}
 
-The response header to match for the request, declared in the {{WebExtAPIRef("declarativeNetRequest.RuleCondition", "rule.condition")}}`.excludedResponseHeaders` array or {{WebExtAPIRef("declarativeNetRequest.RuleCondition", "rule.condition")}}`.responseHeaders` array. If specified, the array must be non-empty.
+The response header to match for the request, declared in the [`rule.condition.excludedResponseHeaders`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/RuleCondition#excludedresponseheaders) array or [`rule.condition.responseHeaders`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/RuleCondition#responseheaders) array. If specified, the array must be non-empty.
 
 When used in the condition responseHeaders, the rule matches if the request matches this response header condition. When used in the condition excludedResponseHeaders, the rule does not match if the request matches this response header condition.
 

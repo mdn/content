@@ -113,7 +113,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **`MutationEvent` on path to removal**: `dom.mutation_events.enabled`
 
-  {{domxref("MutationEvent")}} and its associated events (`DOMSubtreeModified`, `DOMNodeInserted`, `DOMNodeRemoved`, `DOMCharacterDataModified`,`DOMAttrModified`) are now disabled on Firefox Nightly by default. ([Firefox bug 1951772](https://bugzil.la/1951772)).
+  {{domxref("MutationEvent")}} and its associated events (`DOMSubtreeModified`, `DOMNodeInserted`, `DOMNodeRemoved`, `DOMCharacterDataModified`, `DOMAttrModified`) are now disabled on Firefox Nightly by default. ([Firefox bug 1951772](https://bugzil.la/1951772)).
 
 - **`Notification.actions`** (Nightly): `dom.webnotifications.actions.enabled`
 

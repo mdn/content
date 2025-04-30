@@ -36,7 +36,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 - Added support for subpixel antialiasing in CSS {{cssxref("mask")}} / {{cssxref("clip-path")}} ([Firefox bug 1305259](https://bugzil.la/1305259)).
 - Implemented CSS Text 3 segment break transformation rules ([Firefox bug 1081858](https://bugzil.la/1081858)).
 - Basic shape clipping (as applied via the {{cssxref("clip-path")}} property) can now be applied to SVG content ([Firefox bug 1246741](https://bugzil.la/1246741)).
-- Implemented Flexbox layout for {{cssxref("align-self")}}|{{cssxref("justify-self")}}: \[ first | last ]? baseline ([Firefox bug 1221524](https://bugzil.la/1221524)).
+- Implemented Flexbox layout for {{cssxref("align-self")}} and {{cssxref("justify-self")}} ([Firefox bug 1221524](https://bugzil.la/1221524)).
 - The {{cssxref("touch-action")}} property is now enabled by default on all platforms. (For the full story, see [intent to ship mail #1](https://groups.google.com/forum/#!topic/mozilla.dev.platform/6CGjsm1XpD4) and [intent to ship mail #2](https://groups.google.com/forum/#!topic/mozilla.dev.platform/SYEzvXJKw9M).)
 - Flexbox {{cssxref("align-content")}} handling & single-line-sizing should depend on {{cssxref("flex-wrap")}}, not number of lines ([Firefox bug 1090031](https://bugzil.la/1090031)).
 - [CSS Animations](/en-US/docs/Web/CSS/CSS_animations) can now be used to animate non-interpolated properties (see [Firefox bug 1064937](https://bugzil.la/1064937)).
