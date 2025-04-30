@@ -61,7 +61,7 @@ mediaSource.addEventListener("sourceended", (event) => {
   mediaSource.removeEventListener("sourceopen", () => {});
 
   // Notify user (e.g., display a "Playback finished" message)
-  const messageElement = document.createElement('p');
+  const messageElement = document.createElement("p");
   messageElement.textContent = "Playback finished.";
   document.body.appendChild(messageElement);
 });
