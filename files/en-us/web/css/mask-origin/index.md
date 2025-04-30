@@ -7,7 +7,7 @@ browser-compat: css.properties.mask-origin
 
 {{CSSRef}}
 
-The **`mask-origin`** [CSS](/en-US/docs/Web/CSS) property sets the origin of a mask, from the border start, inside the border, or inside the padding, or from the fill, stroke, or view box in the case of SVG.
+The **`mask-origin`** [CSS](/en-US/docs/Web/CSS) property sets the origin of a mask, from the border start, inside the border, or inside the padding, or from the fill, stroke, or view box in the case of SVG which doesn't have associated CSS layout box.
 
 ## Syntax
 
@@ -53,6 +53,10 @@ There are three non-standard values that are shortcuts for standard `<coord-box>
 
 ## Description
 
+The `mask-origin` property is very similar to the {{cssxref("background-origin")}} property, but it has a different set of values, and a different initial value.
+
+An element can have multiple mask layers applied. The number of layers is determined by the number of comma-separated values in the `mask-image` property value (even if a value is `none`). Each `mask-origin` value in the comma-separated list of values is matched up with the `mask-image` values, in order. If the number of values in the two properties differs, and excess values of `mask-origin` are not used, or, if `mask-origin` has fewer values than `mask-image`, the `mask-origin` values are repeated.
+
 For elements rendered as a single box, this property specifies the mask positioning area, or the origin position, of the associated image specified by the {{cssxref("mask-image")}} CSS property. Each `mask-origin` value in the comma-separated list of values. When multiple values are present, each value will match up to the image in the same position in the {{cssxref("mask-image")}} value. The value defines where the associated mask image originates.
 
 For elements rendered as multiple boxes, such as inline boxes that span more than one line, the `mask-origin` property specifies which boxes the {{cssxref("box-decoration-break")}} property operates upon to determine the mask positioning area.
@@ -60,8 +64,6 @@ For elements rendered as multiple boxes, such as inline boxes that span more tha
 For SVG elements without associated CSS layout box, the values `content-box`, `padding-box` and `border-box` compute to `fill-box`.
 
 For elements with associated CSS layout box, the values `fill-box`, `stroke-box` and `view-box` compute to `border-box`, which is the default value of `mask-origin`.
-
-An element can have multiple mask layers applied. The number of layers is determined by the number of comma-separated values in the `mask-image` property value (even if a value is `none`). Each `mask-origin` value in the comma-separated list of values is matched up with the `mask-image` values, in order. If the number of values in the two properties differs, and excess values of `mask-origin` are not used, or, if `mask-origin` has fewer values than `mask-image`, the `mask-origin` values are repeated.
 
 The `mask-origin` can cause the mask layer image to be clipped. For example, if the {{cssxref("mask-clip")}} property is set to `padding-box`, the `mask-origin` is set to `border-box`, the {{cssxref("mask-position")}} is set or defaults to the `top left` edge, and the element has a border, then the the mask layer image will be clipped at the top left edge.
 
@@ -149,6 +151,54 @@ body {
 {{EmbedLiveSample("Comparing content padding and border", "", "200")}}
 
 Notice the difference between the three values, with the mask originating from outside edge of the border, from the inner border edge which is the outer edge of the padding box, and at the inside padding edge which is the outer edge of the content box.
+
+### Multiple values
+
+This example demonstrates using different `mask-origin` values for different `mask-image`s applied to a single element.
+
+#### HTML
+
+We include a single `<div>`, and an SVG that defines two {{svgElem("mask")}} elements we'll use as a masking source.
+
+```html
+<div></div>
+<svg height="0" width="0">
+  <mask id="star">
+    <path
+      d="M50 2.447l15.45 31.307 34.55 5.02-25 24.37 5.902 34.409L50 81.307 19.098 97.553 25 63.143 0 38.774l34.55-5.02z" />
+  </mask>
+  <mask id="heart">
+    <path
+      d="M20,70 A40,40,0,0,1,100,70 A40,40,0,0,1,180,70 Q180,130,100,190 Q20,130,20,70 Z" />
+  </mask>
+  <mask id="circle">
+    <circle cx="130" cy="130" r="50" />
+  </mask>
+</svg>
+```
+
+#### CSS
+
+We use the same CSS as in the previous example, with three mask images applied instead of one.
+
+```css
+div {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border: 10px solid blue;
+  background-color: #8cffa0;
+  padding: 10px;
+  mask-image: url(#star), url(#circle), url(#heart);
+  mask-origin: content-box, padding-box;
+}
+```
+
+#### Results
+
+{{EmbedLiveSample("Multiple values", "", "200")}}
+
+We have three `mask-image` values, but only two `mask-origin` values. This means the `mask-origin` values are repeated, as if we had set `mask-origin: content-box, padding-box, contnet-box`;
 
 ## Specifications
 
