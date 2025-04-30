@@ -28,7 +28,7 @@ A generic {{domxref("Event")}}.
 
 ### Handling the sourceopen event
 
-This example demonstrates setting up a video element for playback and handling the `sourceended` event for proper resource management.  The code sets up a {{domxref("MediaSource")}}, initiates playback by fetching and buffering video data, and then uses the `sourceended` event to perform cleanup tasks like removing event listeners and notifying the user when playback is complete.
+This example demonstrates setting up a video element for playback and handling the `sourceended` event for proper resource management. The code sets up a {{domxref("MediaSource")}}, initiates playback by fetching and buffering video data, and then uses the `sourceended` event to perform cleanup tasks like removing event listeners and notifying the user when playback is complete.
 
 ```js
 const video = document.getElementById("myVideo");
