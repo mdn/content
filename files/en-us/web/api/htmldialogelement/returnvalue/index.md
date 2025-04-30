@@ -75,7 +75,7 @@ dialog.addEventListener("close", () => {
 
 Try clicking "Review ToS", then choosing the "Accept" or "Decline" buttons in the dialog, or dismissing the dialog by pressing the <kbd>Esc</kbd> key, and observe the different status updates.
 
-{{ EmbedLiveSample('Examples', '100%', '200px') }}
+{{ EmbedLiveSample('Checking the return value', '100%', '200px') }}
 
 ## Specifications
 
