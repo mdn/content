@@ -7,9 +7,7 @@ browser-compat: css.properties.mask-origin
 
 {{CSSRef}}
 
-The **`mask-origin`** [CSS](/en-US/docs/Web/CSS) property sets the origin of a mask.
-
-For elements rendered as a single box, this property specifies the mask positioning area. In other words, this property specifies the origin position of an image specified by the {{cssxref("mask-image")}} CSS property. For elements rendered as multiple boxes, such as inline boxes on several lines or boxes on several pages, it specifies which boxes {{cssxref("box-decoration-break")}} operates upon to determine the mask positioning area.
+The **`mask-origin`** [CSS](/en-US/docs/Web/CSS) property sets the origin of a mask, from the border start, inside the border, or inside the padding, or from the fill, stroke, or view box in the case of SVG.
 
 ## Syntax
 
@@ -26,11 +24,6 @@ mask-origin: view-box;
 mask-origin: padding-box, content-box;
 mask-origin: view-box, fill-box, border-box;
 
-/* Non-standard keyword values */
--webkit-mask-origin: content;
--webkit-mask-origin: padding;
--webkit-mask-origin: border;
-
 /* Global values */
 mask-origin: inherit;
 mask-origin: initial;
@@ -42,6 +35,8 @@ mask-origin: unset;
 One or more of the keyword values listed below, separated by commas.
 
 ### Values
+
+The `mask-origin` property is a comma-separated list of `<coord-box>` keyword values, including:
 
 - `content-box`
   - : The position is relative to the content box.
@@ -55,12 +50,14 @@ One or more of the keyword values listed below, separated by commas.
   - : The position is relative to the stroke bounding box.
 - `view-box`
   - : Uses the nearest SVG viewport as reference box. If a {{svgattr("viewBox")}} attribute is specified for the element creating the SVG viewport, the reference box is positioned at the origin of the coordinate system established by the `viewBox` attribute and the dimension of the reference box is set to the width and height values of the `viewBox` attribute.
-- `content`
-  - : Same as `content-box`.
-- `padding`
-  - : Same as `padding-box`.
-- `border`
-  - : Same as `border-box`.
+
+There are three non-standard values that are shortcuts for standard `<coord-box>` values: `content` being an alias for `content-box`, `padding` an alias for `padding-box`, and `border` an alias for `border-box`.
+
+## Description
+
+For elements rendered as a single box, this property specifies the mask positioning area. In other words, this property specifies the origin position of an image specified by the {{cssxref("mask-image")}} CSS property. For elements rendered as multiple boxes, such as inline boxes that span more than one line, it specifies which boxes {{cssxref("box-decoration-break")}} operates upon to determine the mask positioning area.
+
+Each `mask-origin` value in the comma-separated list of values. When multiple values are present, each value will match up to the image in the same position in the {{cssxref("mask-image")}} value. The value defines where the associated mask image originates.
 
 ## Formal definition
 
@@ -72,29 +69,80 @@ One or more of the keyword values listed below, separated by commas.
 
 ## Examples
 
-### Setting mask origin to border-box
+### Comparing content, padding, and border
 
-Click "Play" in the live sample to open the code in the MDN Playground and try some of the other possible `mask-origin` values.
+This example demonstrates basic usage while comparing three value of the `mask-origin` property.
 
-```html live-sample___mask-origin-example
-<div class="masked"></div>
+#### HTML
+
+We include three {{htmlelement("section")}} elements, each containing one {{htmlelement("div")}} element.
+
+```html
+<section class="content">
+  <div></div>
+</section>
+<section class="padding">
+  <div></div>
+</section>
+<section class="border">
+  <div></div>
+</section>
 ```
 
-```css live-sample___mask-origin-example
-.masked {
+#### CSS
+
+We apply {{cssxref("border")}}, {{cssxref("padding")}}, and {{cssxref("margin")}} to every `<div>`. These create the reference points for the origin points for the mask images. The `border` shorthand includes a {{cssxref("border-color")}}. We also include a {{cssxref("background-color")}}. These provide something visual - a green background and a blue border - to mask. Lastly, all our `<div>` elements are provided with a {{cssxref("mask-image")}}.
+
+```css
+div {
   width: 100px;
   height: 100px;
   margin: 10px;
   border: 10px solid blue;
   background-color: #8cffa0;
   padding: 10px;
-
   mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+}
+```
+
+We give each `<div>` a different `mask-origin` value.
+
+```css
+.content div {
+  mask-origin: content-box;
+}
+
+.padding div {
+  mask-origin: padding-box;
+}
+
+.border div {
   mask-origin: border-box;
 }
 ```
 
-{{EmbedLiveSample("mask-origin-example", "", "200px")}}
+We also generated some text in each section, so you can see the origin value about each example in our demo.
+
+```css
+section::before {
+  content: attr(class);
+  display: block;
+  text-align: center;
+}
+```
+
+```css hidden
+body {
+  display: flex;
+  flex-flow: row wrap;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("Comparing content padding and border", "", "200")}}
+
+Notice the difference between the three values, with the mask originating from outside edge of the border, from the inner border edge which is the outer edge of the padding box, and at the inside padding edge which is the outer edge of the content box.
 
 ## Specifications
 
@@ -106,4 +154,9 @@ Click "Play" in the live sample to open the code in the MDN Playground and try s
 
 ## See also
 
-- [Clipping and Masking in CSS](https://css-tricks.com/clipping-masking-css/)
+- {{cssxref("mask-image")}}
+- {{cssxref("mask-position")}}
+- {{cssxref("mask-repeat")}}
+- {{cssxref("mask-size")}}
+- {{cssxref("mask")}} shorthand
+- [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
