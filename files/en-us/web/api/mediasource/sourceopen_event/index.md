@@ -16,7 +16,7 @@ This indicates that the `MediaSource` is ready to receive data from {{domxref("S
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener("sourceopen", (event) => {})
+addEventListener("sourceopen", (event) => {});
 
 onsourceopen = (event) => {}
 ```
