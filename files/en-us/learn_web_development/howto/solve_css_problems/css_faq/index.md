@@ -1,8 +1,9 @@
 ---
 title: CSS FAQ
+short-title: FAQ
 slug: Learn_web_development/Howto/Solve_CSS_problems/CSS_FAQ
 page-type: learn-faq
-sidebar: learnsidebar
+sidebar: learn-how-to
 ---
 
 In this article, you'll find some frequently-asked questions (FAQs) about CSS, along with answers that may help you on your quest to become a web developer.

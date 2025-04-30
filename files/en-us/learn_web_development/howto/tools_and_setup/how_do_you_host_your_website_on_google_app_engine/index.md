@@ -2,9 +2,8 @@
 title: How do you host your website on Google App Engine?
 slug: Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine
 page-type: learn-faq
+sidebar: learn-how-to
 ---
-
-{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 [Google App Engine](https://cloud.google.com/appengine) is a powerful platform that lets you build and run applications on Google's infrastructure — whether you need to build a multi-tiered web application from scratch or host a static website. Here's a step-by-step guide to hosting your website on Google App Engine.
 

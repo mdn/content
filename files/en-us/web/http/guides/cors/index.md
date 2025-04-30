@@ -298,7 +298,7 @@ const fetchPromise = fetch(request);
 fetchPromise.then((response) => console.log(response));
 ```
 
-This code creates a {{domxref("Request")}} object, setting the `credentials` option to `"include"` in the constructor, then passes this request into `fetch()`. Since this is a simple `GET` request, it is not preflighted but the browser will **reject** any response that does not have the {{HTTPHeader("Access-Control-Allow-Credentials")}}`: true` header, and **not** make the response available to the invoking web content.
+This code creates a {{domxref("Request")}} object, setting the `credentials` option to `"include"` in the constructor, then passes this request into `fetch()`. Since this is a simple `GET` request, it is not preflighted but the browser will **reject** any response that does not have the {{HTTPHeader("Access-Control-Allow-Credentials")}} header set to `true`, and **not** make the response available to the invoking web content.
 
 ![Diagram of a GET request with Access-Control-Allow-Credentials](https://mdn.github.io/shared-assets/images/diagrams/http/cors/include-credentials.svg)
 
