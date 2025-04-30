@@ -8,64 +8,55 @@ browser-compat: api.MediaSource.sourceclose_event
 
 {{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
-The **`sourceclose``** event is fired when a {{domxref("MediaSource")}} object's `readyState` changes to `open`.
+The **`sourceclose`** event is fired when a {{domxref("MediaSource")}} object's {{domxref("MediaSource.readyState", "readyState")}} changes to `"closed"`. This indicates that the `MediaSource` has been detached from the media element.
 
 ## Syntax
 
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
 ```js-nolint
-mediaSource.addEventListener('sourceclose', (event) => {
-  // Handle the sourceclose event
-});
+addEventListener("sourceclose", (event) => { })
+
+onsourceclose = (event) => { }
 ```
 
 ## Event type
 
-{{domxref("Event")}}
-
-## Description
-
-The `sourceclose` event is fired when the `readyState` attribute of a {{domxref("MediaSource")}} object transitions to the `"open"` state. This indicates that the `MediaSource` is ready to receive data from {{domxref("SourceBuffer")}} objects. This can occur either when the `MediaSource` object is first attached to a media element or when the `readyState` changes from `"ended"` back to `"open"`.
-
-## Event handler
-
-| Property  | Type           | Description                                              |
-| --------- | -------------- | -------------------------------------------------------- |
-| `onsourceclose` | `EventHandler` | The function to be called when the `sourceclose` event occurs. |
-
-### Event handler syntax
-
-```js-nolint
-mediaSource.onsourceclose = (event) => {
-  // Handle the sourceclose event
-};
-```
+A generic {{domxref("Event")}}.
 
 ## Examples
 
 ### Handling the sourceclose event
 
-This example sets up a {{domxref("MediaSource")}}, connects it to a video element, and listens for the `sourceclose` event. When the event fires, it adds a {{domxref("SourceBuffer")}} to handle the video data, fetches the data, appends it to the buffer, and finally revokes the object URL when the source ends.
+This example demonstrates detaching a media element from a `MediaSource` and handling the `sourceclose` event for proper resource management. The code sets up a {{domxref("MediaSource")}}, attaches it to a video element, and listens for the `sourceclose event`. When the event fires, it performs cleanup tasks.
 
-```js-nolint
+```js
 const video = document.getElementById("myVideo");
 const mediaSource = new MediaSource();
 
 video.src = URL.createObjectURL(mediaSource);
 
-mediaSource.addEventListener("sourceclose", (event) => {
-  console.log("MediaSource sourceclose:", event);
-  // Add source buffers and begin adding media data.
+mediaSource.addEventListener("sourceopen", (event) => {
   const sourceBuffer = mediaSource.addSourceBuffer('video/mp4; codecs="avc1.42E01E"');
-   fetch("video-data.mp4")
+  fetch("video-data.mp4")
     .then((response) => response.arrayBuffer())
     .then((data) => {
       sourceBuffer.appendBuffer(data);
     });
 });
 
-mediaSource.addEventListener("sourceended", () => {
-  URL.revokeObjectURL(video.src);
+function detachMediaSource() {
+  video.src = null; // Detach the MediaSource
+}
+
+mediaSource.addEventListener("sourceclose", (event) => {
+  console.log("MediaSource sourceclose:", event);
+  // Perform cleanup tasks here, e.g., release resources, update UI
+  URL.revokeObjectURL(video.src); // Clean up the object URL
 });
+
+// Call detachMediaSource() when appropriate, e.g., on a button click
+document.getElementById('detachButton').addEventListener('click', detachMediaSource);
 ```
 
 ## Specifications

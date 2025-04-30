@@ -8,7 +8,7 @@ browser-compat: api.MediaSource.sourceended_event
 
 {{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
-The **`sourceended``** is fired when a {{domxref("MediaSource")}} object's {{domxref("MediaSource.readyState", "readyState")}} changes to `"ended"`. This indicates that the application has finished sending data to the `MediaSource`. When an application has finished appending all media data to the {{domxref("SourceBuffer")}} objects associated with a `MediaSource`, it calls the {{domxref("MeidaSource.endOfStream()")}}  method on the `MediaSource`. This causes the {{domxref("MediaSource.readyState", "readyState")}} to transition to `"ended"` and triggers the `sourceended` event.
+The **`sourceended`** event is fired when a {{domxref("MediaSource")}} object's {{domxref("MediaSource.readyState", "readyState")}} changes to `"ended"`. This indicates that the application has finished sending data to the `MediaSource`. When an application has finished appending all media data to the {{domxref("SourceBuffer")}} objects associated with a `MediaSource`, it calls the {{domxref("MediaSource.endOfStream()")}}  method on the `MediaSource`. This causes the {{domxref("MediaSource.readyState", "readyState")}} to transition to `"ended"` and triggers the `sourceended` event.
 
 ## Syntax
 
@@ -77,5 +77,5 @@ mediaSource.addEventListener("sourceended", (event) => {
 
 ## See also
 
-{{domxref("MeidaSource.endOfStream()")}}
+{{domxref("MediaSource.endOfStream()")}}
 

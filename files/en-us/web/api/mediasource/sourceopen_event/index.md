@@ -8,7 +8,7 @@ browser-compat: api.MediaSource.sourceopen_event
 
 {{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
-The **`sourceopen``** event is fired when a {{domxref("MediaSource")}} object's {{domxref("MediaSource.readyState", "readyState")}} changes to `"open"`.
+The **`sourceopen`** event is fired when a {{domxref("MediaSource")}} object's {{domxref("MediaSource.readyState", "readyState")}} changes to `"open"`.
 This indicates that the `MediaSource` is ready to receive data from {{domxref("SourceBuffer")}} objects. This can occur either when the `MediaSource` object is first attached to a media element or when the {{domxref("MediaSource.readyState", "readyState")}} changes from `"ended"` back to `"open"`.
 
 ## Syntax
