@@ -37,7 +37,9 @@ const mediaSource = new MediaSource();
 video.src = URL.createObjectURL(mediaSource);
 
 mediaSource.addEventListener("sourceopen", (event) => {
-  const sourceBuffer = mediaSource.addSourceBuffer('video/mp4; codecs="avc1.42E01E"');
+  const sourceBuffer = mediaSource.addSourceBuffer(
+    'video/mp4; codecs="avc1.42E01E"',
+  );
   fetch("video-data.mp4")
     .then((response) => response.arrayBuffer())
     .then((data) => {
