@@ -8,63 +8,62 @@ browser-compat: api.MediaSource.sourceended_event
 
 {{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
-The **`sourceended``** event is fired when a {{domxref("MediaSource")}} object's `readyState` changes to `open`.
+The **`sourceended``** is fired when a {{domxref("MediaSource")}} object's {{domxref("MediaSource.readyState", "readyState")}} changes to `"ended"`. This indicates that the application has finished sending data to the `MediaSource`. When an application has finished appending all media data to the {{domxref("SourceBuffer")}} objects associated with a `MediaSource`, it calls the {{domxref("MeidaSource.endOfStream()")}}  method on the `MediaSource`. This causes the {{domxref("MediaSource.readyState", "readyState")}} to transition to `"ended"` and triggers the `sourceended` event.
 
 ## Syntax
 
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
 ```js-nolint
-mediaSource.addEventListener('sourceended', (event) => {
-  // Handle the sourceended event
-});
+mediaSource.addEventListener("sourceended", (event) => {})
+
+onsourceended = (event) => {}
 ```
 
 ## Event type
 
-{{domxref("Event")}}
-
-## Description
-
-The `sourceopen` event is fired when the `readyState` attribute of a {{domxref("MediaSource")}} object transitions to the `"open"` state. This indicates that the `MediaSource` is ready to receive data from {{domxref("SourceBuffer")}} objects. This can occur either when the `MediaSource` object is first attached to a media element or when the `readyState` changes from `"ended"` back to `"open"`.
-
-## Event handler
-
-| Property  | Type           | Description                                              |
-| --------- | -------------- | -------------------------------------------------------- |
-| `onsourceended` | `EventHandler` | The function to be called when the `sourceended` event occurs. |
-
-### Event handler syntax
-
-```js-nolint
-mediaSource.onsourceended = (event) => {
-  // Handle the sourceended event
-};
-```
+A generic {{domxref("Event")}}.
 
 ## Examples
 
 ### Handling the sourceopen event
 
-This example sets up a {{domxref("MediaSource")}}, connects it to a video element, and listens for the `sourceopen` event. When the event fires, it adds a {{domxref("SourceBuffer")}} to handle the video data, fetches the data, appends it to the buffer, and finally revokes the object URL when the source ends.
+This example demonstrates setting up a video element for playback and handling the `sourceended` event for proper resource management.  The code sets up a {{domxref("MediaSource")}}, initiates playback by fetching and buffering video data, and then uses the `sourceended` event to perform cleanup tasks like removing event listeners and notifying the user when playback is complete.
 
-```js-nolint
+```js
 const video = document.getElementById("myVideo");
 const mediaSource = new MediaSource();
 
 video.src = URL.createObjectURL(mediaSource);
 
 mediaSource.addEventListener("sourceopen", (event) => {
-  console.log("MediaSource sourceopen:", event);
-  // Add source buffers and begin adding media data.
-  const sourceBuffer = mediaSource.addSourceBuffer('video/mp4; codecs="avc1.42E01E"');
-   fetch("video-data.mp4")
+  const sourceBuffer = mediaSource.addSourceBuffer(
+    'video/mp4; codecs="avc1.42E01E"'
+  );
+
+  fetch("video-data.mp4")
     .then((response) => response.arrayBuffer())
     .then((data) => {
       sourceBuffer.appendBuffer(data);
+       sourceBuffer.addEventListener("updateend", () => {
+        mediaSource.endOfStream();
+      });
     });
 });
 
-mediaSource.addEventListener("sourceended", () => {
+mediaSource.addEventListener("sourceended", (event) => {
+  console.log("MediaSource sourceended:", event);
   URL.revokeObjectURL(video.src);
+  // Perform cleanup
+
+  // Remove event listeners from SourceBuffer and MediaSource
+  sourceBuffer.removeEventListener("updateend", () => { });
+  mediaSource.removeEventListener("sourceopen", () => {});
+
+  // Notify user (e.g., display a "Playback finished" message)
+  const messageElement = document.createElement('p');
+  messageElement.textContent = "Playback finished.";
+  document.body.appendChild(messageElement);
 });
 ```
 
@@ -75,3 +74,8 @@ mediaSource.addEventListener("sourceended", () => {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+{{domxref("MeidaSource.endOfStream()")}}
+
