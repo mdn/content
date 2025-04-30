@@ -1,10 +1,10 @@
 ---
 title: Practical security implementation guides
+short-title: Practical implementation guides
 slug: Web/Security/Practical_implementation_guides
 page-type: guide
+sidebar: security
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
 Users frequently input sensitive data on websites, such as names, addresses, passwords, and banking details. As a web developer, it's crucial to protect this information from bad actors who use a wide range of exploits to steal such information and use it for personal gain. The focus of [web security](/en-US/docs/Web/Security) is to help you protect your website against these exploits and secure your users' sensitive data.
 

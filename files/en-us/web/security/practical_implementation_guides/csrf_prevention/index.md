@@ -1,10 +1,10 @@
 ---
 title: Cross-site request forgery (CSRF) prevention
+short-title: Cross-site request forgery (CSRF)
 slug: Web/Security/Practical_implementation_guides/CSRF_prevention
 page-type: guide
+sidebar: security
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
 Cross-site request forgeries ([CSRF](/en-US/docs/Glossary/CSRF)) can be protected against via `SameSite` cookies and anti-CSRF tokens.
 

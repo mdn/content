@@ -2,9 +2,8 @@
 title: Transport Layer Security
 slug: Web/Security/Transport_Layer_Security
 page-type: guide
+sidebar: security
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
 The security of any connection using Transport Layer Security (TLS) is heavily dependent upon the cipher suites and security parameters selected. This article's goal is to help you make these decisions to ensure the confidentiality and integrity of communication between client and server. The Mozilla Operations Security (OpSec) team [maintains a wiki entry](https://wiki.mozilla.org/Security/Server_Side_TLS) with reference configurations for servers.
 

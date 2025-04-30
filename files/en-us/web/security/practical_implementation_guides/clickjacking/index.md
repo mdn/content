@@ -2,9 +2,8 @@
 title: Clickjacking prevention
 slug: Web/Security/Practical_implementation_guides/Clickjacking
 page-type: guide
+sidebar: security
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
 The [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) [`frame-ancestors`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors) directive and the [`X-Frame-Options`](/en-US/docs/Web/HTTP/Reference/Headers/X-Frame-Options) header provide control over how your site may be embedded within an {{htmlelement("iframe")}} on another site. These features help prevent clickjacking.
 
