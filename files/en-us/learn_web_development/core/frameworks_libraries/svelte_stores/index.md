@@ -2,9 +2,9 @@
 title: Working with Svelte stores
 slug: Learn_web_development/Core/Frameworks_libraries/Svelte_stores
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_reactivity_lifecycle_accessibility","Learn_web_development/Core/Frameworks_libraries/Svelte_TypeScript", "Learn_web_development/Core/Frameworks_libraries")}}
 
 In the last article we completed the development of our app, finished organizing it into components, and discussed some advanced techniques for dealing with reactivity, working with DOM nodes, and exposing component functionality. In this article we will show another way to handle state management in Svelte: [Stores](https://learn.svelte.dev/tutorial/writable-stores). Stores are global data repositories that hold values. Components can subscribe to stores and receive notifications when their values change.
@@ -386,7 +386,7 @@ We also added an SVG icon above the alert paragraph, to make it look a bit nicer
 
 ## Making our Alert component accessible
 
-Our `Alert` component is working fine, but it's not very friendly to assistive technologies. The problem is elements that are dynamically added and removed from the page. While visually evident to users who can see the page, they may not be so obvious to users of assistive technologies, like screen readers. To handle those situations, we can take advantage of [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions), which provide a way to programmatically expose dynamic content changes so that they can be detected and announced by assistive technologies.
+Our `Alert` component is working fine, but it's not very friendly to assistive technologies. The problem is elements that are dynamically added and removed from the page. While visually evident to users who can see the page, they may not be so obvious to users of assistive technologies, like screen readers. To handle those situations, we can take advantage of [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions), which provide a way to programmatically expose dynamic content changes so that they can be detected and announced by assistive technologies.
 
 We can declare a region that contains dynamic content that should be announced by assistive technologies with the `aria-live` property followed by the politeness setting, which is used to set the priority with which screen readers should handle updates to that regions. The possible settings are `off`, `polite`, or `assertive`.
 
@@ -632,7 +632,7 @@ Svelte stores provide a very simple and lightweight, but extremely powerful, way
 
 Let's change the subject now and do something fun and different: add an animation to our alerts. Svelte provides a whole module to define [transitions](https://learn.svelte.dev/tutorial/transition) and [animations](https://learn.svelte.dev/tutorial/animate) so we can make our user interfaces more appealing.
 
-A transition is applied with the [transition:fn](https://svelte.dev/docs/element-directives#transition-fn) directive, and is triggered by an element entering or leaving the DOM as a result of a state change. The `svelte/transition` module exports seven functions: `fade`, `blur`, `fly`, `slide`, `scale`, `draw`, and `crossfade`.
+A transition is applied with the [transition:fn](https://svelte.dev/docs/element-directives#transition-fn) directive, and is triggered by an element entering or leaving the DOM as a result of a state change.
 
 Let's give our `Alert` component a fly `transition`. We'll open the `Alert.svelte` file and import the `fly` function from the `svelte/transition` module.
 

@@ -6,7 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-[CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) is designed to work alongside other parts of CSS, as part of a complete system for doing the layout. This guide explains grid layout fits together with other techniques.
+[CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) is designed to work alongside other parts of CSS, as part of a complete system for doing the layout. This guide explains how grid layout fits together with other techniques.
 
 ## Grid and flexbox
 
@@ -127,7 +127,7 @@ If you are using flexbox and find yourself disabling some of the flexibility, yo
 
 Most grid alignment features were originally defined is the [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout). These features provided proper alignment control for the first time and made it easy to center a box on the page. Flex items can stretch to the height of the flex container, meaning that equal height columns were possible. These properties are now defined in the [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module, and are used in multiple layout modes, including grid layout.
 
-We will be taking a proper look at [Aligning items in CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout) later. For now, here is a comparison between simple examples of flexbox and grid.
+We will be taking a proper look at [Aligning items in CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout) later. For now, here is a comparison between examples of flexbox and grid.
 
 In the first example, which uses flexbox, we have a container with three items inside. The container's {{cssxref("min-height")}} is set, so it defines the height of the flex container. We have set {{cssxref("align-items")}} on the flex container to `flex-end` so the items will line up at the end of the flex container. We have also set the {{cssxref("align-self")}} property on `box1` so it will override the default and stretch to the height of the container and on `box2` so it aligns to the start of the flex container.
 

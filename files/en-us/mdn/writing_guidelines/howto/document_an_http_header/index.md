@@ -6,26 +6,26 @@ page-type: mdn-writing-guide
 sidebar: mdnsidebar
 ---
 
-The [HTTP headers reference](/en-US/docs/Web/HTTP/Headers) documents the header section of request and response messages in the Hypertext Transfer Protocol ([HTTP](/en-US/docs/Web/HTTP)).
+The [HTTP headers reference](/en-US/docs/Web/HTTP/Reference/Headers) documents the header section of request and response messages in the Hypertext Transfer Protocol ([HTTP](/en-US/docs/Web/HTTP)).
 This article explains how to create a new reference page for an HTTP header.
 
 ## Step 1 – Determine the HTTP header to document
 
 - There are many HTTP headers defined in various IETF standards.
 - IANA maintains a [registry of HTTP header fields](https://www.iana.org/assignments/http-fields/http-fields.xhtml) and Wikipedia lists the [known header fields](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields), but not all are relevant to web developers or are part of an official standard.
-- If there are any **red links** on the current [HTTP headers reference overview page](/en-US/docs/Web/HTTP/Headers), these headers are a good choice to document.
+- If there are any **red links** on the current [HTTP headers reference overview page](/en-US/docs/Web/HTTP/Reference/Headers), these headers are a good choice to document.
 - If in doubt, [ask the MDN Web Docs team](/en-US/docs/MDN/Community/Communication_channels) whether or not it makes sense to write about the header you have chosen.
 
 ## Step 2 – Check the existing HTTP header pages
 
-- Existing HTTP headers are documented [here](/en-US/docs/Web/HTTP/Headers).
+- Existing HTTP headers are documented [here](/en-US/docs/Web/HTTP/Reference/Headers).
 - There are different header categories: {{Glossary("Request header")}}, {{Glossary("Response header")}}, and {{Glossary("Representation header")}}.
 - Find the category of the header you are about to document (note that some headers can be both request and response headers, depending on the context).
 - Go to an existing header reference page that has the same category.
 
 ## Step 3 – Create the HTTP header page
 
-- All header pages live under this tree: [`files/en-us/web/http/headers`](https://github.com/mdn/content/tree/main/files/en-us/web/http/headers)
+- All header pages live under this tree: [`files/en-us/web/http/reference/headers`](https://github.com/mdn/content/tree/main/files/en-us/web/http/reference/headers)
 - To create a new page, see the instructions in our [how to create a page](/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting) guide.
 
 ## Step 4 – Write the content
@@ -49,7 +49,7 @@ This article explains how to create a new reference page for an HTTP header.
 
 ## Step 6 – Update the HTTP headers list
 
-Make sure your header is listed in an appropriate category on the [HTTP headers reference overview page](/en-US/docs/Web/HTTP/Headers).
+Make sure your header is listed in an appropriate category on the [HTTP headers reference overview page](/en-US/docs/Web/HTTP/Reference/Headers).
 
 ## Step 7 – Get the content reviewed
 

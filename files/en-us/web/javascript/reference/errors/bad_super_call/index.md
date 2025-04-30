@@ -85,7 +85,7 @@ class Derived extends Base {
   }
 
   init() {
-    // ...
+    // …
   }
 }
 ```

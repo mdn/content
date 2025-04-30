@@ -1,10 +1,12 @@
 ---
 title: "Express Tutorial Part 7: Deploying to production"
+short-title: "7: Deploying"
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/forms", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
+{{PreviousMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/forms", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 Now you've created (and tested) an awesome [LocalLibrary](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website) website, you're going to want to install it on a public web server so that it can be accessed by library staff and members over the Internet. This article provides an overview of how you might go about finding a host to deploy your website, and what you need to do in order to get your site ready for production.
 
@@ -35,19 +37,19 @@ Up to now, you've been working in a [development environment](/en-US/docs/Learn_
 - Make a few changes to your project settings.
 - Set up a production-level infrastructure for serving your website.
 
-This tutorial provides some guidance on your options for choosing a hosting site, a brief overview of what you need to do in order to get your Express app ready for production, and a working example of how to install the LocalLibrary website onto the [Railway](https://railway.app/) cloud hosting service.
+This tutorial provides some guidance on your options for choosing a hosting site, a brief overview of what you need to do in order to get your Express app ready for production, and a working example of how to install the LocalLibrary website onto the [Railway](https://railway.com/) cloud hosting service.
 
 ## What is a production environment?
 
 The production environment is the environment provided by the server computer where you will run your website for external consumption. The environment includes:
 
 - Computer hardware on which the website runs.
-- Operating system (e.g. Linux or Windows).
+- Operating system (e.g., Linux or Windows).
 - Programming language runtime and framework libraries on top of which your website is written.
 - Web server infrastructure, possibly including a web server, reverse proxy, load balancer, etc.
 - Databases on which your website is dependent.
 
-The server computer could be located on your premises and connected to the Internet by a fast link, but it is far more common to use a computer that is hosted "in the cloud". What this actually means is that your code is run on some remote computer (or possibly a "virtual" computer) in your hosting company's data center(s). The remote server will usually offer some guaranteed level of computing resources (e.g. CPU, RAM, storage memory, etc.) and Internet connectivity for a certain price.
+The server computer could be located on your premises and connected to the Internet by a fast link, but it is far more common to use a computer that is hosted "in the cloud". What this actually means is that your code is run on some remote computer (or possibly a "virtual" computer) in your hosting company's data center(s). The remote server will usually offer some guaranteed level of computing resources (e.g., CPU, RAM, storage memory, etc.) and Internet connectivity for a certain price.
 
 This sort of remotely accessible computing/networking hardware is referred to as _Infrastructure as a Service (IaaS)_. Many IaaS vendors provide options to preinstall a particular operating system, onto which you must install the other components of your production environment. Other vendors allow you to select more fully-featured environments, perhaps including a complete Node setup.
 
@@ -74,9 +76,9 @@ Some of the things to consider when choosing a host:
 - Level of support for scaling horizontally (adding more machines) and vertically (upgrading to more powerful machines) and the costs of doing so.
 - The locations where the supplier has data centers, and hence where access is likely to be fastest.
 - The host's historical uptime and downtime performance.
-- Tools provided for managing the site — are they easy to use and are they secure (e.g. SFTP vs. FTP).
+- Tools provided for managing the site — are they easy to use and are they secure (e.g., SFTP vs. FTP).
 - Inbuilt frameworks for monitoring your server.
-- Known limitations. Some hosts will deliberately block certain services (e.g. email). Others offer only a certain number of hours of "live time" in some price tiers, or only offer a small amount of storage.
+- Known limitations. Some hosts will deliberately block certain services (e.g., email). Others offer only a certain number of hours of "live time" in some price tiers, or only offer a small amount of storage.
 - Additional benefits. Some providers will offer free domain names and support for TLS certificates that you would otherwise have to pay for.
 - Whether the "free" tier you're relying on expires over time, and whether the cost of migrating to a more expensive tier means you would have been better off using some other service in the first place!
 
@@ -86,7 +88,7 @@ They are however great for testing low-traffic sites in a hosted environment, an
 Popular choices in this category include [Glitch](https://glitch.com/), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/app-service/linux/), etc.
 
 Most providers also offer a "basic" or "hobby" tier that is intended for small production sites, and which provide more useful levels of computing power and fewer limitations.
-[Railway](https://railway.app/), [Heroku](https://www.heroku.com/), [DigitalOcean](https://www.digitalocean.com/) and [Python Anywhere](https://www.pythonanywhere.com/) are examples of popular hosting providers that have a relatively inexpensive basic computing tier (in the $5 to $10 USD per month range).
+[Railway](https://railway.com/), [Heroku](https://www.heroku.com/), [DigitalOcean](https://www.digitalocean.com/) and [Python Anywhere](https://www.pythonanywhere.com/) are examples of popular hosting providers that have a relatively inexpensive basic computing tier (in the $5 to $10 USD per month range).
 
 > [!NOTE]
 > Remember that price is not the only selection criterion.
@@ -152,7 +154,7 @@ This change can be made either by using `export`, an environment file, or the OS
 
 ### Log appropriately
 
-Logging calls can have an impact on a high-traffic website. In a production environment, you may need to log website activity (e.g. tracking traffic or logging API calls) but you should attempt to minimize the amount of logging added for debugging purposes.
+Logging calls can have an impact on a high-traffic website. In a production environment, you may need to log website activity (e.g., tracking traffic or logging API calls) but you should attempt to minimize the amount of logging added for debugging purposes.
 
 One way to minimize "debug" logging in production is to use a module like [debug](https://www.npmjs.com/package/debug) that allows you to control what logging is performed by setting an environment variable.
 For example, the code fragment below shows how you might set up "author" logging.
@@ -262,7 +264,7 @@ app.use(
 
 We normally might have just inserted `app.use(helmet());` to add the _subset_ of the security-related headers that make sense for most sites.
 However in the [LocalLibrary base template](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template) we include some bootstrap and jQuery scripts.
-These violate the helmet's _default_ [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP), which does not allow loading of cross-site scripts.
+These violate the helmet's _default_ [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP), which does not allow loading of cross-site scripts.
 To allow these scripts to be loaded we modify the helmet configuration so that it sets CSP directives to allow script loading from the indicated domains.
 For your own server you can add/disable specific headers as needed by following the [instructions for using helmet here](https://www.npmjs.com/package/helmet).
 
@@ -359,7 +361,7 @@ The steps are:
 2. Once you are logged in, click the **+** link in the top toolbar and select **New repository**.
 3. Fill in all the fields on this form. While these are not compulsory, they are strongly recommended.
 
-   - Enter a new repository name (e.g. _express-locallibrary-tutorial_), and description (e.g. "Local Library website written in Express (Node)".
+   - Enter a new repository name (e.g., _express-locallibrary-tutorial_), and description (e.g., "Local Library website written in Express (Node)".
    - Choose **Node** in the _Add .gitignore_ selection list.
    - Choose your preferred license in the _Add license_ selection list.
    - Check **Initialize this repository with a README**.
@@ -476,7 +478,7 @@ We are choosing to use Glitch for several reasons:
   - The starter plan environment has a limited amount of container RAM and storage space.
     There is more than enough for the tutorial, in particular because our database is hosted elsewhere.
   - Custom domains are not well supported (at time of writing).
-  - Other limitations can be found in the [Glitch technical restrictions page](https://help.glitch.com/hc/en-us/articles/16287495313293-Technical-Restrictions).
+  - Other limitations can be found in the [Glitch technical restrictions page](https://help.glitch.com/s/article/Technical-Restrictions).
 
 While Glitch is appropriate for hosting this demonstration, you should take the time to determine if it is [suitable for your own website](#choosing_a_hosting_provider).
 
@@ -486,9 +488,9 @@ Glitch provides a web-based interface in which you can create projects from star
 As you make changes, the project is built and run in its own isolated and independent virtualized container.
 
 How this all works "under the hood" is a mystery — Glitch doesn't say.
-What is clear is that as long as you create a fairly standard nodejs web application (for example, using `package.json` for your dependencies), and don't consume more resources than listed in the [technical restrictions](https://help.glitch.com/hc/en-us/articles/16287495313293-Technical-Restrictions), your application should "just work".
+What is clear is that as long as you create a fairly standard nodejs web application (for example, using `package.json` for your dependencies), and don't consume more resources than listed in the [technical restrictions](https://help.glitch.com/s/article/Technical-Restrictions), your application should "just work".
 
-Once the application is running, it can be configured for production using [private data](https://help.glitch.com/hc/en-us/articles/16287550167437-Adding-Private-Data) supplied in a `.env` file.
+Once the application is running, it can be configured for production using [private data](https://help.glitch.com/s/article/Adding-Private-Data) supplied in a `.env` file.
 The values in the secret data are read by the application as environment variables, which, as you will recall from a previous section, is how we configured our application to get its database URL.
 Note that the variables are _secret_: the `.env` should not be included in your GitHub repository.
 
@@ -576,7 +578,7 @@ The site updates as you enter values into the editor.
 
 > [!NOTE]
 > We didn't create this file.
-> It is intended for [private data](https://help.glitch.com/hc/en-us/articles/16287550167437-Adding-Private-Data) and was created automatically on import to Glitch.
+> It is intended for [private data](https://help.glitch.com/s/article/Adding-Private-Data) and was created automatically on import to Glitch.
 > It is never exported or copied.
 
 ### Other configuration variables
@@ -604,7 +606,7 @@ Some of the things you can do are:
 
 ## Example: Hosting on Railway
 
-This section provides a practical demonstration of how to install _LocalLibrary_ on [Railway](https://railway.app/).
+This section provides a practical demonstration of how to install _LocalLibrary_ on [Railway](https://railway.com/).
 
 ### Why Railway?
 
@@ -616,10 +618,10 @@ Railway is an attractive hosting option for several reasons:
 
 - Railway takes care of most of the infrastructure so you don't have to.
   Not having to worry about servers, load balancers, reverse proxies, and so on, makes it much easier to get started.
-- Railway has a [focus on developer experience for development and deployment](https://docs.railway.app/maturity/compare-to-heroku), which leads to a faster and softer learning curve than many other alternatives.
+- Railway has a [focus on developer experience for development and deployment](https://docs.railway.com/maturity/compare-to-heroku), which leads to a faster and softer learning curve than many other alternatives.
 - The skills and concepts you will learn when using Railway are transferrable.
   While Railway has some excellent new features, other popular hosting services use many of the same ideas and approaches.
-- [Railway documentation](https://docs.railway.app/) is clear and complete.
+- [Railway documentation](https://docs.railway.com/) is clear and complete.
 - The service appears to be very reliable, and if you end up loving it, the pricing is predictable, and scaling your app is very easy.
 
 You should take the time to determine if Railway is [suitable for your own website](#choosing_a_hosting_provider).
@@ -638,11 +640,11 @@ Having installed all the dependencies, Railway will look for scripts named "buil
 > Railway uses [Nixpacks](https://nixpacks.com/docs) to recognize various web application frameworks written in different programming languages.
 > You don't need to know anything else for this tutorial, but you can find out more about options for deploying node applications in [Nixpacks Node](https://nixpacks.com/docs/providers/node).
 
-Once the application is running it can configure itself using information provided in [environment variables](https://docs.railway.app/guides/variables).
+Once the application is running it can configure itself using information provided in [environment variables](https://docs.railway.com/guides/variables).
 For example, an application that uses a database must get the address using a variable.
 The database service itself may be hosted by Railway or some other provider.
 
-Developers interact with Railway through the Railway site, and using a special [Command Line Interface (CLI)](https://docs.railway.app/guides/cli) tool.
+Developers interact with Railway through the Railway site, and using a special [Command Line Interface (CLI)](https://docs.railway.com/guides/cli) tool.
 The CLI allows you to associate a local GitHub repository with a railway project, upload the repository from the local branch to the live site, inspect the logs of the running process, set and get configuration variables and much more.
 One of the most useful features is that you can use the CLI to run your local project with the same environment variables as the live project.
 
@@ -653,10 +655,10 @@ Next we will set up a Railway account, install our website and a database, and t
 
 To start using Railway you will first need to create an account:
 
-- Go to [railway.app](https://railway.app/) and click the **Login** link in the top toolbar.
+- Go to [railway.com](https://railway.com/) and click the **Login** link in the top toolbar.
 - Select GitHub in the popup to login using your GitHub credentials
 - You may then need to go to your email and verify your account.
-- You'll then be logged in to the Railway.app dashboard: <https://railway.app/dashboard>.
+- You'll then be logged in to the Railway.com dashboard: <https://railway.com/dashboard>.
 
 ### Deploy on Railway from GitHub
 
@@ -759,7 +761,7 @@ You can add data through the website interface and it should work in the same wa
 
 ### Install the client
 
-Download and install the Railway client for your local operating system by following the [instructions here](https://docs.railway.app/guides/cli).
+Download and install the Railway client for your local operating system by following the [instructions here](https://docs.railway.com/guides/cli).
 
 After the client is installed you will be able run commands.
 Some of the more important operations include deploying the current directory of your computer to an associated Railway project (without having to upload to GitHub), and running your project locally using the same settings as you have on the production server.
@@ -788,7 +790,7 @@ That's the end of this tutorial on setting up Express apps in production, and al
 - [Production Best Practices: Security](https://expressjs.com/en/advanced/best-practice-security.html) (Express docs)
 - Railway Docs
 
-  - [CLI](https://docs.railway.app/guides/cli)
+  - [CLI](https://docs.railway.com/guides/cli)
 
 - DigitalOcean
 

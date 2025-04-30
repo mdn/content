@@ -12,7 +12,7 @@ Firefox 8 was released on November 8, 2011. This article provides information bo
 
 ### HTML
 
-- The {{ domxref("HTMLImageElement") }} `crossOrigin` property has been added and the [`crossorigin`](/en-US/docs/Web/HTML/Element/img#crossorigin) attribute has been added to the {{ HTMLElement("img") }} element. (see [Firefox bug 664299](https://bugzil.la/664299))
+- The {{ domxref("HTMLImageElement") }} `crossOrigin` property has been added and the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Elements/img#crossorigin) attribute has been added to the {{ HTMLElement("img") }} element. (see [Firefox bug 664299](https://bugzil.la/664299))
 - The {{ domxref("HTMLSelectElement","","add()") }} method now supports either an item or index of an item that the new item should be inserted before. Previously it only supported an item. (see [Firefox bug 666200](https://bugzil.la/666200))
 - The `HTMLIsIndexElement` constructor has been removed. No elements have implemented this interface since before Firefox 4.
 - The HTML5 "context menu" feature (`contextmenu` attribute), which lets you add custom element specific items to native context menu, is now supported (the implementation is still experimental awaiting changes in the specification; see [Firefox bug 617528](https://bugzil.la/617528)).
@@ -34,8 +34,8 @@ Firefox 8 was released on November 8, 2011. This article provides information bo
 - {{ domxref("Document.getSelection()") }} now returns the same `Selection` object as {{ domxref("window.getSelection()") }}, instead of _stringifying_ it.
 - The HTML5 `selectionDirection` property makes it possible to define the direction of the selection in an editable text.
 - {{ domxref("HTMLMediaElement") }} now have a `seekable` property that return a {{ domxref("TimeRanges") }} object.
-- The {{ domxref("HTMLMediaElement") }}`.preload` attribute now correctly reflects as an _enumerated value_.
-- [`crossOrigin` property](/en-US/docs/Web/HTML/Attributes/crossorigin) defaults to "Anonymous" when an invalid value is used.
+- The {{ domxref("HTMLMediaElement.preload") }} attribute now correctly reflects as an _enumerated value_.
+- [`crossOrigin` property](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) defaults to "Anonymous" when an invalid value is used.
 - {{ domxref("navigator.cookieEnabled") }} now returns correct information when the default cookie setting is overridden on a per-site basis.
 
 ### JavaScript
@@ -51,7 +51,7 @@ Firefox 8 was released on November 8, 2011. This article provides information bo
 - Handling of {{ cssxref("background-size") }} has been revised to more closely match the specification.
 - In the past, {{ cssxref("text-decoration") }} in quirks mode had line thickness and position adjusted on descendant text to match the descendant. Now standards mode and quirks mode rendering are more similar.
 - Horizontal positioning for elements has been brought more in line with the specification in many cases. Documentation for this is forthcoming, but for now, see [Firefox bug 682780](https://bugzil.la/682780), comment 23 for details.
-- [SVG images are now scaled properly](/en-US/docs/Web/CSS/Scaling_of_SVG_backgrounds) when used as background images.
+- [SVG images are now scaled properly](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds) when used as background images.
 
 ### Network
 
@@ -157,7 +157,9 @@ The `nsIWorkerFactory` interface has been removed as well. Workers can still be 
 - When a window is minimized, un-minimized, or switches between full screen and windowed mode, it receives a `sizemodechange` event.
 - You can now [use the `extensions.autoDisableScopes` preference](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/#preventing_automatic_install_from_specific_locations) to disable automatic installation of add-ons from specific add-on install locations.
 - The new `mozSyntheticDocument` property on {{ domxref("Document") }} objects lets you determine whether a document is synthetic (that is, something like a standalone image, video, or audio file) rather than a full, standard DOM document. This can be useful, for example, if you want to present different user interface in this situation (such as adding contextual items differently depending on this case).
-- You can now specify a filter when opening `about:config`; for example, "about:config?filter=sessionstore" will show only session storage related preferences.
+- You can now specify a filter when opening `about:config`; for example, `about:config?filter=sessionstore` will show only session storage related preferences.
+
+<!-- cSpell:ignore sessionstore -->
 
 ## See also
 

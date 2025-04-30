@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Date.setUTCDate
 
 The **`setUTCDate()`** method of {{jsxref("Date")}} instances changes the day of the month for this date according to universal time.
 
-{{InteractiveExample("JavaScript Demo: Date.setUTCDate()")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.setUTCDate()")}}
 
 ```js interactive-example
 const event = new Date("August 19, 1975 23:15:30 GMT-3:00");

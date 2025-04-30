@@ -144,3 +144,4 @@ Or, if the behavior of iterating by code points is intended, you can use {{jsxre
 ## See also
 
 - [Polyfill of `Iterator.prototype.flatMap` in `core-js`](https://github.com/zloirock/core-js#iterator-helpers)
+- [es-shims polyfill of `Iterator.prototype.flatMap`](https://www.npmjs.com/package/es-iterator-helpers)

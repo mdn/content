@@ -120,7 +120,7 @@ It is an error to assign values to unmodifiable properties or to properties of a
 
 ### Destructuring
 
-For more complex assignments, the [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) syntax is a JavaScript expression that makes it possible to extract data from arrays or objects using a syntax that mirrors the construction of array and
+For more complex assignments, the [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) syntax is a JavaScript expression that makes it possible to extract data from arrays or objects using a syntax that mirrors the construction of array and
 object literals.
 
 Without destructuring, it takes multiple statements to extract values from arrays and objects:
@@ -367,7 +367,7 @@ const var2 = 4;
       <td>
         Returns <code>true</code> if the operands are equal and of the same
         type. See also {{jsxref("Object.is")}} and
-        <a href="/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness">sameness in JS</a>.
+        <a href="/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness">sameness in JS</a>.
       </td>
       <td><code>3 === var1</code></td>
     </tr>
@@ -754,7 +754,7 @@ const n3 = false ?? 3; // false
 const n4 = 0 ?? 4; // 0
 ```
 
-Note how `??` works like `||`, but it only returns the second expression when the first one is "[nullish](/en-US/docs/Glossary/Nullish)", i.e. [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined). `??` is a better alternative than `||` for setting defaults for values that might be `null` or `undefined`, in particular when values like `''` or `0` are valid values and the default should not apply.
+Note how `??` works like `||`, but it only returns the second expression when the first one is "[nullish](/en-US/docs/Glossary/Nullish)", i.e., [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined). `??` is a better alternative than `||` for setting defaults for values that might be `null` or `undefined`, in particular when values like `''` or `0` are valid values and the default should not apply.
 
 The following code shows examples of the `!` (logical NOT) operator.
 

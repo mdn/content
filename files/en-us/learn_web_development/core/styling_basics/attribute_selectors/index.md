@@ -2,9 +2,8 @@
 title: Attribute selectors
 slug: Learn_web_development/Core/Styling_basics/Attribute_selectors
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements", "Learn_web_development/Core/Styling_basics")}}
 
@@ -18,7 +17,7 @@ As you know from your study of HTML, elements can have attributes that give furt
         HTML basics (study
         <a href="/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >Basic HTML syntax</a
-        >), <a href="/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors">Basic CSS selectors<a>.
+        >), <a href="/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors">Basic CSS selectors</a>.
       </td>
     </tr>
     <tr>
@@ -38,12 +37,12 @@ As you know from your study of HTML, elements can have attributes that give furt
 
 These selectors enable the selection of an element based on the presence of an attribute alone (for example `href`), or on various different matches against the value of the attribute.
 
-| Selector             | Example                         | Description                                                                                                                            |
-| -------------------- | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `[*attr*]`           | `a[title]`                      | Matches elements with an _attr_ attribute (whose name is the value in square brackets).                                                |
-| `[*attr*=*value*]`   | `a[href="https://example.com"]` | Matches elements with an _attr_ attribute whose value is exactly _value_ — the string inside the quotes.                               |
-| `[*attr*~=*value*]`  | `p[class~="special"]`           | Matches elements with an _attr_ attribute whose value is exactly _value_, or contains _value_ in its (space-separated) list of values. |
-| `[*attr*\|=*value*]` | `div[lang\|="zh"]`              | Matches elements with an _attr_ attribute whose value is exactly _value_ or begins with _value_ immediately followed by a hyphen.      |
+| Selector         | Example                         | Description                                                                                                                            |
+| ---------------- | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `[attr]`         | `a[title]`                      | Matches elements with an _attr_ attribute (whose name is the value in square brackets).                                                |
+| `[attr=value]`   | `a[href="https://example.com"]` | Matches elements with an _attr_ attribute whose value is exactly _value_ — the string inside the quotes.                               |
+| `[attr~=value]`  | `p[class~="special"]`           | Matches elements with an _attr_ attribute whose value is exactly _value_, or contains _value_ in its (space-separated) list of values. |
+| `[attr\|=value]` | `div[lang\|="zh"]`              | Matches elements with an _attr_ attribute whose value is exactly _value_ or begins with _value_ immediately followed by a hyphen.      |
 
 In the example below you can see these selectors being used.
 

@@ -8,7 +8,7 @@ browser-compat: api.SecurityPolicyViolationEvent.documentURI
 
 {{APIRef("Reporting API")}}{{AvailableInWorkers}}
 
-The **`documentURI`** read-only property of the {{domxref("SecurityPolicyViolationEvent")}} interface is a string representing the URI of the document or worker in which the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) violation occurred.
+The **`documentURI`** read-only property of the {{domxref("SecurityPolicyViolationEvent")}} interface is a string representing the URI of the document or worker in which the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) violation occurred.
 
 ## Value
 

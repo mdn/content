@@ -7,7 +7,7 @@ browser-compat: webextensions.api.i18n.getAcceptLanguages
 
 {{AddonSidebar}}
 
-Gets the [accept-languages](/en-US/docs/Web/HTTP/Content_negotiation#the_accept-language_header) of the browser. This is different from the locale used by the browser. To get the locale, use {{WebExtAPIRef('i18n.getUILanguage')}}.
+Gets the [accept-languages](/en-US/docs/Web/HTTP/Guides/Content_negotiation#the_accept-language_header) of the browser. This is different from the locale used by the browser. To get the locale, use {{WebExtAPIRef('i18n.getUILanguage')}}.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
@@ -25,7 +25,7 @@ None.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an `array` of `{{WebExtAPIRef('i18n.LanguageCode')}}` objects.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an `array` of {{WebExtAPIRef('i18n.LanguageCode')}} objects.
 
 ## Browser compatibility
 
@@ -36,7 +36,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 ```js
 function onGot(languages) {
   console.log(languages);
-  //e.g. Array [ "en-US", "en" ]
+  // e.g. Array [ "en-US", "en" ]
 }
 
 let gettingAcceptLanguages = browser.i18n.getAcceptLanguages();

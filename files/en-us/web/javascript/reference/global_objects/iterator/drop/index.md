@@ -134,5 +134,6 @@ new Set([1, 2, 3]).values().drop(4).next(); // { value: undefined, done: true }
 ## See also
 
 - [Polyfill of `Iterator.prototype.drop` in `core-js`](https://github.com/zloirock/core-js#iterator-helpers)
+- [es-shims polyfill of `Iterator.prototype.drop`](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Iterator.prototype.take()")}}

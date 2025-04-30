@@ -23,7 +23,7 @@ A `GPUComputePipeline` object instance can be created using the {{domxref("GPUDe
 ## Instance methods
 
 - {{domxref("GPUComputePipeline.getBindGroupLayout", "getBindGroupLayout()")}} {{Experimental_Inline}}
-  - : Returns the pipeline's {{domxref("GPUBindGroupLayout")}} object with the given index (i.e. included in the originating {{domxref("GPUDevice.createComputePipeline()")}} or {{domxref("GPUDevice.createComputePipelineAsync()")}} call's pipeline layout).
+  - : Returns the pipeline's {{domxref("GPUBindGroupLayout")}} object with the given index (i.e., included in the originating {{domxref("GPUDevice.createComputePipeline()")}} or {{domxref("GPUDevice.createComputePipelineAsync()")}} call's pipeline layout).
 
 ## Examples
 
@@ -39,7 +39,7 @@ Our [basic compute demo](https://mdn.github.io/dom-examples/webgpu-compute-demo/
 - Using that value immediately in a `createComputePipeline()` call to create a `GPUComputePipeline`.
 
 ```js
-// ...
+// …
 
 const bindGroupLayout = device.createBindGroupLayout({
   entries: [
@@ -63,7 +63,7 @@ const computePipeline = device.createComputePipeline({
   },
 });
 
-// ...
+// …
 ```
 
 ## Specifications

@@ -2,7 +2,7 @@
 title: display
 slug: Web/Progressive_web_apps/Manifest/Reference/display
 page-type: web-manifest-member
-browser-compat: html.manifest.display
+browser-compat: manifests.webapp.display
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}

@@ -23,7 +23,7 @@ This API allows applications to provide this same functionality from within a we
 
 Even if allowed by a permission policy, access to a particular audio output device still requires explicit user permission, as the user may be in a location where playing audio through some output devices is not appropriate.
 
-The API provides the {{domxref("MediaDevices.selectAudioOutput()")}} method that allows users to select their desired audio output from those that are allowed by the [`speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) directive of the {{httpheader("Permissions-Policy")}} HTTP header for the document.
+The API provides the {{domxref("MediaDevices.selectAudioOutput()")}} method that allows users to select their desired audio output from those that are allowed by the [`speaker-selection`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/speaker-selection) directive of the {{httpheader("Permissions-Policy")}} HTTP header for the document.
 The selected device then has user permission, allowing it to be enumerated with {{domxref("MediaDevices.enumerateDevices()")}} and set as the audio output device using {{domxref("HTMLMediaElement.setSinkId()")}}.
 
 Audio devices may arbitrarily connect and disconnect.
@@ -57,13 +57,13 @@ Access to the API is subject to the following constraints:
 
 - {{domxref("MediaDevices.selectAudioOutput()")}} grants user permission for a selected device to be used as the audio output sink:
 
-  - Access may be gated by the [`speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) HTTP [Permission Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+  - Access may be gated by the [`speaker-selection`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/speaker-selection) HTTP [Permission Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
   - [Transient user activation](/en-US/docs/Web/Security/User_activation) is required.
     The user has to interact with the page or a UI element for the method to be called.
 
 - {{domxref("HTMLMediaElement.setSinkId()")}} sets a permitted ID as the audio output:
 
-  - Access may be gated by the [`speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) HTTP [Permission Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+  - Access may be gated by the [`speaker-selection`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/speaker-selection) HTTP [Permission Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
   - User permission is required to set a non-default device ID.
     - This can come from selection in the prompt launched by `MediaDevices.selectAudioOutput()`
     - User permission to set the output device is also implicitly granted if the user has already granted permission to use a media input device in the same group with {{domxref("MediaDevices.getUserMedia()")}}.

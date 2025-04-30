@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Array.at
 
 The **`at()`** method of {{jsxref("Array")}} instances takes an integer value and returns the item at that index, allowing for positive and negative integers. Negative integers count back from the last item in the array.
 
-{{InteractiveExample("JavaScript Demo: Array.at()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.at()")}}
 
 ```js interactive-example
 const array1 = [5, 12, 8, 130, 44];
@@ -122,6 +122,7 @@ console.log(Array.prototype.at.call(arrayLike, 2)); // undefined
 ## See also
 
 - [Polyfill of `Array.prototype.at` in `core-js`](https://github.com/zloirock/core-js#relative-indexing-method)
+- [es-shims polyfill of `Array.prototype.at`](https://www.npmjs.com/package/array.prototype.at)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.findIndex()")}}

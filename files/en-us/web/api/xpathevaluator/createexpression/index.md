@@ -35,7 +35,7 @@ expression.
 #### INVALID_EXPRESSION_ERR
 
 If the expression is not legal according to the rules of the
-`XPathEvaluator`, an {{domxref("XPathException")}} of type
+`XPathEvaluator`, a {{domxref("DOMException")}} of type
 `INVALID_EXPRESSION_ERR` is raised.
 
 #### NAMESPACE_ERR

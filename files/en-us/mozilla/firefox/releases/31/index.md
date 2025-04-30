@@ -64,7 +64,7 @@ New ECMAScript 2015 features implemented:
 
 ### MathML
 
-- Partial implementation of the [OpenType MATH table](https://mpeg.chiariglione.org/standards/mpeg-4/open-font-format/text-isoiec-cd-14496-22-3rd-edition), section 6.3.6 ([Firefox bug 407059](https://bugzil.la/407059)). For details, try the [MathML torture test](/en-US/docs/Mozilla/MathML_Project/MathML_Torture_Test).
+- Partial implementation of the [OpenType MATH table](https://learn.microsoft.com/en-us/typography/opentype/spec/math), section 6.3.6 ([Firefox bug 407059](https://bugzil.la/407059)). For details, try the [MathML torture test](/en-US/docs/Mozilla/MathML_Project/MathML_Torture_Test).
 - The `::-moz-math-stretchy` pseudo-element has been removed ([Firefox bug 1000879](https://bugzil.la/1000879)).
 - When available, the Unicode Mathematical alphanumeric characters are used for bold, italic and bold-italic math variants ([Firefox bug 930504](https://bugzil.la/930504)).
 
@@ -82,7 +82,7 @@ _No change._
 
 ## Changes for add-on and Mozilla developers
 
-- The "`align`" attribute on the `urlbar-wrapper` (formerly on the `urlbar-container`) which was set to "`center`" since time immemorial, has been removed. This is known to affect third-party themes. You should look carefully at what the right fix is for your theme, but for maintaining the equivalent effect, you can add the following CSS rule to your theme:
+- The `align` attribute on the `urlbar-wrapper` (formerly on the `urlbar-container`) which was set to `center` since time immemorial, has been removed. This is known to affect third-party themes. You should look carefully at what the right fix is for your theme, but for maintaining the equivalent effect, you can add the following CSS rule to your theme:
 
   ```css
   #urlbar-wrapper {

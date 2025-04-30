@@ -8,7 +8,7 @@ page-type: glossary-definition
 
 A **signature**, or _digital signature_, is a {{glossary("protocol")}} showing that a message is authentic.
 
-From the {{glossary("hash")}} of a given message, the **signing process** first generates a digital signature linked to the signing entity, using the entity's private {{glossary("key")}}.
+From the {{glossary("hash function", "hash")}} of a given message, the **signing process** first generates a digital signature linked to the signing entity, using the entity's private {{glossary("key")}}.
 
 On receiving the message, the **verification process**
 
@@ -23,5 +23,5 @@ Digital signatures rely on asymmetric cryptography, also known as [public-key cr
 
 - [Digital signature](https://en.wikipedia.org/wiki/Digital_signature) on Wikipedia
 - Related glossary terms:
-  - {{glossary("digest")}}
-  - {{glossary("encryption")}}
+  - {{glossary("Hash function")}}
+  - {{glossary("Encryption")}}

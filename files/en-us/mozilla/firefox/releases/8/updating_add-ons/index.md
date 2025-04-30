@@ -52,7 +52,7 @@ Similarly, a new global, `ChromeWorker`, was introduced to support allowing Work
 
 ## Security changes
 
-Support for SSL 2.0 has been removed. This shouldn't affect any current add-ons. However, for reference, some very old code was removed, as well as support for the preferences `security.enable_ssl2` (which is false by default), and all preferences starting with "`security.ssl2.`"
+Support for SSL 2.0 has been removed. This shouldn't affect any current add-ons. However, for reference, some very old code was removed, as well as support for the preferences `security.enable_ssl2` (which is false by default), and all preferences starting with `security.ssl2.`
 
 ## See also
 

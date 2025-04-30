@@ -11,7 +11,7 @@ The **`super`** keyword is used to access properties on an object literal or cla
 
 The `super.prop` and `super[expr]` expressions are valid in any [method definition](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) in both [classes](/en-US/docs/Web/JavaScript/Reference/Classes) and [object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer). The `super(...args)` expression is valid in class constructors.
 
-{{InteractiveExample("JavaScript Demo: Expressions - super", "taller")}}
+{{InteractiveExample("JavaScript Demo: super expression", "taller")}}
 
 ```js interactive-example
 class Foo {

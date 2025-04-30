@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Date.setMilliseconds
 
 The **`setMilliseconds()`** method of {{jsxref("Date")}} instances changes the milliseconds for this date according to local time.
 
-{{InteractiveExample("JavaScript Demo: Date.setMilliseconds()")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.setMilliseconds()")}}
 
 ```js interactive-example
 const event = new Date("August 19, 1975 23:15:30");

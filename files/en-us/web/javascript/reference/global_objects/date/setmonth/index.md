@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Date.setMonth
 
 The **`setMonth()`** method of {{jsxref("Date")}} instances changes the month and/or day of the month for this date according to local time.
 
-{{InteractiveExample("JavaScript Demo: Date.setMonth()")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.setMonth()")}}
 
 ```js interactive-example
 const event = new Date("August 19, 1975 23:15:30");
@@ -62,10 +62,10 @@ This is because in 2016 February had 29 days.
 const theBigDay = new Date();
 theBigDay.setMonth(6);
 
-//Watch out for end of month transitions
+// Watch out for end of month transitions
 const endOfMonth = new Date(2016, 7, 31);
 endOfMonth.setMonth(1);
-console.log(endOfMonth); //Wed Mar 02 2016 00:00:00
+console.log(endOfMonth); // Wed Mar 02 2016 00:00:00
 ```
 
 ## Specifications

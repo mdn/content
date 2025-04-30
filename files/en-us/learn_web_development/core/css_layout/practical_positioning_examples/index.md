@@ -2,9 +2,8 @@
 title: Practical positioning examples
 slug: Learn_web_development/Core/CSS_layout/Practical_positioning_examples
 page-type: guide
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 This article shows how to build some real-world examples to illustrate what kinds of things you can do with positioning.
 
@@ -184,7 +183,7 @@ Next, we'll set the `:focus` and `:hover` states of the tabs to look different w
 }
 ```
 
-Then we'll set a rule that highlights one of the tabs when [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) property is set to `true` on it. We will set this using JavaScript when a tab is clicked on. Place the following CSS below your other styles:
+Then we'll set a rule that highlights one of the tabs when [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected) property is set to `true` on it. We will set this using JavaScript when a tab is clicked on. Place the following CSS below your other styles:
 
 ```css
 .info-box [role="tab"][aria-selected="true"] {
@@ -231,7 +230,7 @@ The second rule we'll add here makes it so that a panel with a class of `is-hidd
 
 ### JavaScript
 
-The final part that makes this feature work is the JavaScript code. The `tabs-manual.js` file has been included using the [`<script>`](/en-US/docs/Web/HTML/Element/script) tag:
+The final part that makes this feature work is the JavaScript code. The `tabs-manual.js` file has been included using the [`<script>`](/en-US/docs/Web/HTML/Reference/Elements/script) tag:
 
 ```html
 <script src="tabs-manual.js"></script>
@@ -363,7 +362,7 @@ As a starting point, make a local copy of [hidden-info-panel-start.html](https:/
 </aside>
 ```
 
-To start with here we've got a {{htmlelement("button")}} element with a special question mark character as the button text. The button will be pressed to show/hide the [`aside`](/en-US/docs/Web/HTML/Element/aside) info panel. In the below sections we'll explain how this all works.
+To start with here we've got a {{htmlelement("button")}} element with a special question mark character as the button text. The button will be pressed to show/hide the [`aside`](/en-US/docs/Web/HTML/Reference/Elements/aside) info panel. In the below sections we'll explain how this all works.
 
 ### Styling the button
 
@@ -445,7 +444,7 @@ button.addEventListener("click", () => {
 ```
 
 The code adds a click event handler to the button. The click handler toggles the `open` class on the info-box panel which slides the panel in or out of the view.
-The event handler also sets [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) property on the button to improve accessibility.
+The event handler also sets [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) property on the button to improve accessibility.
 
 So there you have it — the easiest way to create a toggling info panel effect.
 

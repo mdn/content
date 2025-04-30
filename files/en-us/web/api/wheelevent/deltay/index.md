@@ -12,6 +12,8 @@ The **`WheelEvent.deltaY`** read-only property is a
 `double` representing the vertical scroll amount in the
 {{domxref("WheelEvent.deltaMode")}} unit.
 
+You must check the `deltaMode` property to determine the unit of the `deltaY` value. Do not assume that the `deltaY` value is specified in pixels. Some browsers, for compatibility reasons, may return different units for the `deltaY` value depending on whether `deltaMode` has been accessed, to accommodate for websites not explicitly checking the `deltaMode` property.
+
 ## Value
 
 A number.

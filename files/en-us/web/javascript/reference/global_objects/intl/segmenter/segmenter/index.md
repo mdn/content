@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Intl.Segmenter.Segmenter
 
 The **`Intl.Segmenter()`** constructor creates {{jsxref("Intl.Segmenter")}} objects.
 
-{{InteractiveExample("JavaScript Demo: Intl.Segmenter")}}
+{{InteractiveExample("JavaScript Demo: Intl.Segmenter() constructor")}}
 
 ```js interactive-example
 const segmenterFr = new Intl.Segmenter("fr", { granularity: "word" });

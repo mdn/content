@@ -2,9 +2,8 @@
 title: Node.js server without a framework
 slug: Learn_web_development/Extensions/Server-side/Node_server_without_framework
 page-type: guide
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 This article shows a static file server built in [Node.js](https://nodejs.org/en/) without using any frameworks.
 The current state of Node.js is such that almost everything we need for the static file server is provided by built-in APIs and a few lines of code.
@@ -23,7 +22,7 @@ const PORT = 8000;
 const MIME_TYPES = {
   default: "application/octet-stream",
   html: "text/html; charset=UTF-8",
-  js: "application/javascript",
+  js: "text/javascript",
   css: "text/css",
   png: "image/png",
   jpg: "image/jpeg",
@@ -90,7 +89,7 @@ If the file can be served (the server process has access and no path-traversal v
 Note that other status codes can be found in `http.STATUS_CODES`.
 With `404` status we will return content of `'/404.html'` file.
 
-The extension of the file being requested will be parsed and lower-cased. After that we will search `MIME_TYPES` collection for the right [MIME types](/en-US/docs/Web/HTTP/MIME_types). If no matches are found, we use the `application/octet-stream` as the default type.
+The extension of the file being requested will be parsed and lower-cased. After that we will search `MIME_TYPES` collection for the right [MIME types](/en-US/docs/Web/HTTP/Guides/MIME_types). If no matches are found, we use the `application/octet-stream` as the default type.
 
 Finally, if there are no errors, we send the requested file. The `file.stream` will contain a `Readable` stream that will be piped into `res` (an instance of the `Writable` stream).
 

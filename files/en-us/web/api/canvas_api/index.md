@@ -75,7 +75,7 @@ ctx.fillRect(10, 10, 150, 100);
 The Canvas API is extremely powerful, but not always simple to use. The libraries listed below can make the creation of canvas-based projects faster and easier.
 
 - [EaselJS](https://createjs.com/easeljs) is an open-source canvas library that makes creating games, generative art, and other highly graphical experiences easy.
-- [Fabric.js](http://fabricjs.com/) is an open-source canvas library with SVG parsing capabilities.
+- [Fabric.js](https://fabricjs.com/) is an open-source canvas library with SVG parsing capabilities.
 - [heatmap.js](https://www.patrick-wied.at/static/heatmapjs/) is an open-source library for creating canvas-based data heat maps.
 - [JavaScript InfoVis Toolkit](https://philogb.github.io/jit/) creates interactive data visualizations.
 - [Konva.js](https://konvajs.org/) is a 2D canvas library for desktop and mobile applications.

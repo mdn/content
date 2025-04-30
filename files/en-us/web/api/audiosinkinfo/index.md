@@ -27,7 +27,7 @@ audioCtx = new window.AudioContext({
   sinkId: { type: "none" },
 });
 
-// ...
+// …
 
 audioCtx.sinkId;
 ```

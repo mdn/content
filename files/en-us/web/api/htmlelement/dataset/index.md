@@ -9,7 +9,7 @@ browser-compat: api.HTMLElement.dataset
 {{APIRef("HTML DOM")}}
 
 The **`dataset`** read-only property
-of the {{DOMxRef("HTMLElement")}} interface provides read/write access to [custom data attributes](/en-US/docs/Web/HTML/Global_attributes/data-*)
+of the {{DOMxRef("HTMLElement")}} interface provides read/write access to [custom data attributes](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*)
 (`data-*`) on elements. It exposes a map of strings
 ({{domxref("DOMStringMap")}}) with an entry for each `data-*` attribute.
 
@@ -35,7 +35,7 @@ they are read or written:
 Details and examples of converting between the HTML and JavaScript forms is described in more detail in the next section.
 
 In addition to the information below, you'll find a how-to guide for using HTML data
-attributes in our article [_Using data attributes_](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes).
+attributes in our article [_Using data attributes_](/en-US/docs/Web/HTML/How_to/Use_data_attributes).
 
 ### Name conversion
 
@@ -74,7 +74,7 @@ For example, a `data-abc-def` attribute corresponds to
 - Attributes can also be set and read using bracket syntax:
   `element.dataset['keyname']`.
 - The [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in) can check if a given attribute exists:
-  `'keyname' in element.dataset`. Note that this will walk the [prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) of `dataset` and may be unsafe if you have external code that may pollute the prototype chain. Several alternatives exist, such as {{jsxref("Object/hasOwn", "Object.hasOwn(element.dataset, 'keyname')")}}, or just checking if `element.dataset.keyname !== undefined`.
+  `'keyname' in element.dataset`. Note that this will walk the [prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) of `dataset` and may be unsafe if you have external code that may pollute the prototype chain. Several alternatives exist, such as {{jsxref("Object/hasOwn", "Object.hasOwn(element.dataset, 'keyname')")}}, or just checking if `element.dataset.keyname !== undefined`.
 
 ### Setting values
 
@@ -130,7 +130,7 @@ if (el.dataset.someDataAttr === undefined) {
 
 ## See also
 
-- The HTML [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*) class
+- The HTML [`data-*`](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*) class
   of global attributes
-- [Using data attributes](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)
+- [Using data attributes](/en-US/docs/Web/HTML/How_to/Use_data_attributes)
 - {{DOMxRef("Element.getAttribute()")}} and {{DOMxRef("Element.setAttribute()")}}

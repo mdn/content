@@ -39,15 +39,14 @@ A string containing the value of `attributeName` if the attribute exists, otherw
 ```
 
 ```js
-// in a console
 const div1 = document.getElementById("div1");
-//=> <div id="div1">Hi Champ!</div>
+// <div id="div1">Hi Champ!</div>
 
 const exampleAttr = div1.getAttribute("id");
-//=> "div1"
+// "div1"
 
 const align = div1.getAttribute("align");
-//=> null
+// null
 ```
 
 ## Description
@@ -59,7 +58,7 @@ When called on an HTML element in a DOM flagged as an HTML document,
 
 ### Retrieving nonce values
 
-For security reasons, [CSP](/en-US/docs/Web/HTTP/CSP) nonces from non-script
+For security reasons, [CSP](/en-US/docs/Web/HTTP/Guides/CSP) nonces from non-script
 sources, such as CSS selectors, and `.getAttribute("nonce")` calls are
 hidden.
 

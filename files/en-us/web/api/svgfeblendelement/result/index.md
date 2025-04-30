@@ -11,7 +11,7 @@ browser-compat: api.SVGFEBlendElement.result
 The **`result`** read-only property of the {{domxref("SVGFEBlendElement")}} interface describes the assigned name of an SVG filter primitive as a {{domxref("SVGAnimatedString")}}.
 
 It reflects the {{SVGElement("feBlend")}} element's {{SVGAttr("result")}} attribute.
-The `<feBlend>` SVG filter blends two input images together using commonly used imaging software {{cssxref("blend-mode", "blending modes")}}.
+The `<feBlend>` SVG filter blends two input images together using commonly used imaging software [blending modes](/en-US/docs/Web/CSS/blend-mode).
 
 The attribute value is a {{cssxref("custom-ident")}}. If supplied, then graphics that result from processing this filter primitive can be referenced by an {{SVGAttr("in")}} attribute on a subsequent filter primitive within the same {{SVGElement("filter")}} element.
 

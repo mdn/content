@@ -2,9 +2,8 @@
 title: Book list page
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_list_page
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 Next we'll implement our book list page. This page needs to display a list of all books in the database along with their author, with each book title being a hyperlink to its associated book detail page.
 
@@ -48,7 +47,7 @@ block content
     ul
       each book in book_list
         li
-          a(href=book.url) #{book.title}
+          a(href=book.url) !{book.title}
           |  (#{book.author.name})
 
   else

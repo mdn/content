@@ -11,7 +11,7 @@ The **`pop()`** method of {{jsxref("Array")}} instances removes the **last**
 element from an array and returns that element. This method changes the length of the
 array.
 
-{{InteractiveExample("JavaScript Demo: Array.pop()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.pop()")}}
 
 ```js interactive-example
 const plants = ["broccoli", "cauliflower", "cabbage", "kale", "tomato"];

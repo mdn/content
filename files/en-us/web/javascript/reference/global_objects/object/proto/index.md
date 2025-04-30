@@ -15,7 +15,7 @@ browser-compat: javascript.builtins.Object.proto
 > [!NOTE]
 > The use of `__proto__` is controversial and discouraged. Its existence and exact behavior have only been standardized as a legacy feature to ensure web compatibility, while it presents several security issues and footguns. For better support, prefer {{jsxref("Object.getPrototypeOf()")}}/{{jsxref("Reflect.getPrototypeOf()")}} and {{jsxref("Object.setPrototypeOf()")}}/{{jsxref("Reflect.setPrototypeOf()")}} instead.
 
-The **`__proto__`** accessor property of {{jsxref("Object")}} instances exposes the [`[[Prototype]]`](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) (either an object or {{jsxref("Operators/null", "null")}}) of this object.
+The **`__proto__`** accessor property of {{jsxref("Object")}} instances exposes the [`[[Prototype]]`](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) (either an object or {{jsxref("Operators/null", "null")}}) of this object.
 
 The `__proto__` property can also be used in an object literal definition to set the object `[[Prototype]]` on creation, as an alternative to {{jsxref("Object.create()")}}. See: [object initializer / literal syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer). That syntax is standard and optimized for in implementations, and quite different from `Object.prototype.__proto__`.
 
@@ -36,7 +36,7 @@ If used as a getter, returns the object's `[[Prototype]]`.
 
 ## Description
 
-The `__proto__` getter function exposes the value of the internal `[[Prototype]]` of an object. For objects created using an object literal (unless you use the [prototype setter](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#prototype_setter) syntax), this value is `Object.prototype`. For objects created using array literals, this value is [`Array.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array). For functions, this value is {{jsxref("Function.prototype")}}. You can read more about the prototype chain in [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+The `__proto__` getter function exposes the value of the internal `[[Prototype]]` of an object. For objects created using an object literal (unless you use the [prototype setter](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#prototype_setter) syntax), this value is `Object.prototype`. For objects created using array literals, this value is [`Array.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array). For functions, this value is {{jsxref("Function.prototype")}}. You can read more about the prototype chain in [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
 
 The `__proto__` setter allows the `[[Prototype]]` of an object to be mutated. The value provided must be an object or {{jsxref("Operators/null", "null")}}. Providing any other value will do nothing.
 

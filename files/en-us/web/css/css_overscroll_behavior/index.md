@@ -39,7 +39,7 @@ This module defines the overscroll behavior, enabling you to specify the actions
 
 ## Related concepts
 
-- [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role) ARIA role
+- [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role) ARIA role
 - [Containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) concept
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module:
   - {{cssxref("overflow")}} shorthand property
@@ -60,7 +60,7 @@ This module defines the overscroll behavior, enabling you to specify the actions
   - {{cssxref("scroll-snap-stop")}} property
   - {{cssxref("scroll-snap-align")}} property
 
-- [CSSOM view](/en-US/docs/Web/CSS/CSSOM_View) module:
+- [CSSOM view](/en-US/docs/Web/CSS/CSSOM_view) module:
   - {{domxref("Element.getBoundingClientRect()")}} method
   - {{domxref("Element.scroll()")}} method
   - {{domxref("Element.scrollBy()")}} method
@@ -74,7 +74,7 @@ This module defines the overscroll behavior, enabling you to specify the actions
 
 ## See also
 
+- [CSS scroll anchoring](/en-US/docs/Web/CSS/CSS_scroll_anchoring) module
+- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module
 - [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module
 - [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module
-- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module
-- [Take control of your scroll - customizing pull-to-refresh and overflow effects](https://developer.chrome.com/blog/overscroll-behavior) on developer.chrome.com (2017)

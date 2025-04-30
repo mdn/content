@@ -17,11 +17,11 @@ CSRF are a class of attack where unauthorized commands are transmitted to a webs
 <img src="https://accounts.example.org/management/delete?confirm=true" />
 ```
 
-When a user visits a page containing the above HTML, the browser will attempt to make a [`GET`](/en-US/docs/Web/HTTP/Methods/GET) request to the source URL. If the user is logged in, the browser will provide their session cookies and the account deletion attempt will be successful.
+When a user visits a page containing the above HTML, the browser will attempt to make a [`GET`](/en-US/docs/Web/HTTP/Reference/Methods/GET) request to the source URL. If the user is logged in, the browser will provide their session cookies and the account deletion attempt will be successful.
 
 ## Solution
 
-There are a variety of CSRF mitigation strategies available. The most common and transparent methods of CSRF mitigation are [`SameSite`](/en-US/docs/Web/HTTP/Cookies#controlling_third-party_cookies_with_samesite) cookies and anti-CSRF tokens.
+There are a variety of CSRF mitigation strategies available. The most common and transparent methods of CSRF mitigation are [`SameSite`](/en-US/docs/Web/HTTP/Guides/Cookies#controlling_third-party_cookies_with_samesite) cookies and anti-CSRF tokens.
 
 > [!NOTE]
 > A Cross-Site Scripting ({{Glossary("Cross-site_scripting", "XSS")}}) vulnerability could overcome any CSRF mitigation techniques you put in place. Make sure to harden your site against both types of attack in tandem. XSS can be guarded against using features such as [Content Security Policy](/en-US/docs/Web/Security/Practical_implementation_guides/CSP) (CSP).

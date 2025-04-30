@@ -73,4 +73,5 @@ Math.imul(0xfffffffe, 5); // -10
 ## See also
 
 - [Polyfill of `Math.imul` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [es-shims polyfill of `Math.imul`](https://www.npmjs.com/package/math.imul)
 - [Emscripten](https://en.wikipedia.org/wiki/Emscripten) on Wikipedia

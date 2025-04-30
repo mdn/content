@@ -2,9 +2,8 @@
 title: The web standards model
 slug: Learn_web_development/Getting_started/Web_standards/The_web_standards_model
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Web_standards/How_the_web_works", "Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites", "Learn_web_development/Getting_started/Web_standards")}}
 
@@ -104,7 +103,7 @@ Let's look at each of these in a little more detail.
 
 ### "Open" standards
 
-One of the key aspects of web standards, which TimBL and the W3C agreed on from the start, is that the web (and web technologies) should be **open**. This means they free to both contribute to and use, and not encumbered by patents/licensing. This is important — if a web technology relies on patented/licensed technologies to function, the patent/owner can then charge implementing browser vendors potentially large amounts of of money, and those costs would then be passed onto the browser users.
+One of the key aspects of web standards, which TimBL and the W3C agreed on from the start, is that the web (and web technologies) should be **open**. This means they are free to both contribute to and use, and not encumbered by patents/licensing. This is important — if a web technology relies on patented/licensed technologies to function, the patent/owner can then charge implementing browser vendors potentially large amounts of money, and those costs would then be passed on to the browser users.
 
 In addition, because web technologies are created openly, in collaboration between many different companies, it means that no one company gets to control them, which is a really good thing. You wouldn't want a single company suddenly deciding to put the entire web behind a paywall, or releasing a new version of HTML that everyone has to buy to continue making websites, or worse still, deciding they aren't interested any more and just turning it off.
 
@@ -177,7 +176,7 @@ pElem.textContent = "We changed the text!";
 
 You'll also hear the term **APIs** along with JavaScript. API stands for **Application Programming Interface**. In general terms, an API is a bit of code that allows you to control other more complex bits of code or other functionality on your computer (such as hardware devices like your webcam or microphone) in a manageable way.
 
-For example, writing your own interface to communicate with your webcam and capture a video stream from it, but the JavaScript [`getUserMedia()`](/en-US/docs/Web/API/MediaDevices/getUserMedia#examples) API method allows you to do this fairly easily. It does all the hard work for you, behind the scenes, so you don't need to reinvent the wheel each time.
+For example, writing your own interface to communicate with your webcam and capture a video stream from it would be quite difficult, but the JavaScript [`getUserMedia()`](/en-US/docs/Web/API/MediaDevices/getUserMedia#examples) API method allows you to do this fairly easily. It does all the hard work for you, behind the scenes, so you don't need to reinvent the wheel each time.
 
 The simple code snippet above also uses an API. [`querySelector()`](/en-US/docs/Web/API/Document/querySelector) and [`textContent`](/en-US/docs/Web/API/Node/textContent) are both parts of the [Document Object Model (DOM)](/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting) family of APIs, which allow you to use JavaScript to manipulate web documents.
 

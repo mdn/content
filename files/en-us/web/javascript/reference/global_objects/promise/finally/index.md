@@ -11,7 +11,7 @@ The **`finally()`** method of {{jsxref("Promise")}} instances schedules a functi
 
 This lets you avoid duplicating code in both the promise's {{jsxref("Promise/then", "then()")}} and {{jsxref("Promise/catch", "catch()")}} handlers.
 
-{{InteractiveExample("JavaScript Demo: Promise.finally()", "taller")}}
+{{InteractiveExample("JavaScript Demo: Promise.prototype.finally()", "taller")}}
 
 ```js interactive-example
 function checkMail() {
@@ -120,6 +120,7 @@ fetch(myRequest)
 ## See also
 
 - [Polyfill of `Promise.prototype.finally` in `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
+- [es-shims polyfill of `Promise.prototype.finally`](https://www.npmjs.com/package/promise.prototype.finally)
 - {{jsxref("Promise")}}
 - {{jsxref("Promise.prototype.then()")}}
 - {{jsxref("Promise.prototype.catch()")}}

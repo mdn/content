@@ -2,9 +2,8 @@
 title: Emphasis and importance
 slug: Learn_web_development/Core/Structuring_content/Emphasis_and_importance
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "Learn_web_development/Core/Structuring_content/Lists", "Learn_web_development/Core/Structuring_content")}}
 
@@ -26,8 +25,8 @@ The previous article looked at why semantics are important in HTML, and focused 
       <td>
         <ul>
           <li>The meaning of emphasis and importance, and the basic elements that apply them in HTML, such as <code>&lt;em&gt;</code> and <code>&lt;strong&gt;</code>.</li>
-          <li>Identify presentational markup that should no longer be used at all (e.g. <code>&lt;big&gt;</code> and <code>&lt;font&gt;</code>); it is deprecated.</li>
-          <li>Identify presentational markup that has been repurposed to have new semantic meaning (e.g. <code>&lt;i&gt;</code> and <code>&lt;b&gt;</code>).</li>
+          <li>Identify presentational markup that should no longer be used at all (e.g., <code>&lt;big&gt;</code> and <code>&lt;font&gt;</code>); it is deprecated.</li>
+          <li>Identify presentational markup that has been repurposed to have new semantic meaning (e.g., <code>&lt;i&gt;</code> and <code>&lt;b&gt;</code>).</li>
         </ul>
       </td>
     </tr>

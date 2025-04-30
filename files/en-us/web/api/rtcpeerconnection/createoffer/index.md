@@ -33,7 +33,7 @@ createOffer(successCallback, failureCallback, options) // deprecated
         This will cause the returned offer to have different credentials than those already in place.
         If you then apply the returned offer, ICE will restart.
         Specify `false` to keep the same credentials and therefore not restart ICE.
-        **The default is `false`**.
+        **The default is `false`**. Instead of using this option, consider calling {{domxref("RTCPeerConnection.restartIce()")}}, which will automatically set this flag the next time `createOffer()` is called.
     - `offerToReceiveAudio` {{optional_inline}} {{deprecated_inline}}
       - : Provides additional control over the directionality of audio. For example, it can be used to ensure that audio can be received, regardless if audio is sent or not.
     - `offerToReceiveVideo` {{optional_inline}} {{deprecated_inline}}

@@ -109,14 +109,14 @@ while (true) {
 
 The code above generates an event every second, with the event type "ping". Each event's data is a JSON object containing the ISO 8601 timestamp corresponding to the time at which the event was generated. At random intervals, a simple message (with no event type) is sent.
 The loop will keep running independent of the connection status, so a check is included
-to break the loop if the connection has been closed (e.g. client closes the page).
+to break the loop if the connection has been closed (e.g., client closes the page).
 
 > [!NOTE]
 > You can find a full example that uses the code shown in this article on GitHub — see [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/main/server-sent-events).
 
 ## Error handling
 
-When problems occur (such as a network timeout or issues pertaining to [access control](/en-US/docs/Web/HTTP/CORS)), an error event is generated. You can take action on this programmatically by implementing the `onerror` callback on the `EventSource` object:
+When problems occur (such as a network timeout or issues pertaining to [access control](/en-US/docs/Web/HTTP/Guides/CORS)), an error event is generated. You can take action on this programmatically by implementing the `onerror` callback on the `EventSource` object:
 
 ```js
 evtSource.onerror = (err) => {

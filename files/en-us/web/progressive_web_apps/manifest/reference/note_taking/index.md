@@ -4,7 +4,7 @@ slug: Web/Progressive_web_apps/Manifest/Reference/note_taking
 page-type: web-manifest-member
 status:
   - experimental
-browser-compat: html.manifest.note_taking
+browser-compat: manifests.webapp.note_taking
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}{{SeeCompatTable}}

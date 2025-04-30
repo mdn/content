@@ -10,7 +10,7 @@ browser-compat: api.HTMLElement.translate
 
 The **`translate`** property of the {{domxref("HTMLElement")}} interface indicates whether an element's attribute values and the values of its {{domxref("Text")}} node children are to be translated when the page is localized, or whether to leave them unchanged.
 
-It reflects the value of the [`translate`](/en-US/docs/Web/HTML/Global_attributes/translate) HTML global attribute.
+It reflects the value of the [`translate`](/en-US/docs/Web/HTML/Reference/Global_attributes/translate) HTML global attribute.
 
 ## Value
 
@@ -23,11 +23,13 @@ The following example shows how to enable or disable translation via script:
 ```html
 <div>
   <span>The content may always be translated: </span>
-  <span translate="yes">El contenido será traducido</div>
+  <span translate="yes">El contenido será traducido</span>
 </div>
 <div>
   <span id="translate-label">The content may be translated:</span>
-  <span id="translate-element" translate="no">El contenido puede ser traducido.</div>
+  <span id="translate-element" translate="no">
+    El contenido puede ser traducido.
+  </span>
 </div>
 <input id="translate-controller" type="checkbox" /> Enable translation
 ```
@@ -60,4 +62,4 @@ controller.addEventListener("change", (e) => {
 
 ## See also
 
-- [`translate`](/en-US/docs/Web/HTML/Global_attributes/translate) HTML global attribute
+- [`translate`](/en-US/docs/Web/HTML/Reference/Global_attributes/translate) HTML global attribute

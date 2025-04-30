@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.String.replaceAll
 
 The **`replaceAll()`** method of {{jsxref("String")}} values returns a new string with all matches of a `pattern` replaced by a `replacement`. The `pattern` can be a string or a {{jsxref("RegExp")}}, and the `replacement` can be a string or a function to be called for each match. The original string is left unchanged.
 
-{{InteractiveExample("JavaScript Demo: String.replaceAll()")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.replaceAll()")}}
 
 ```js interactive-example
 const paragraph = "I think Ruth's dog is cuter than your dog!";
@@ -116,6 +116,7 @@ This will work:
 ## See also
 
 - [Polyfill of `String.prototype.replaceAll` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims polyfill of `String.prototype.replaceAll`](https://www.npmjs.com/package/string.prototype.replaceall)
 - [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) guide
 - {{jsxref("String.prototype.replace()")}}
 - {{jsxref("String.prototype.match()")}}

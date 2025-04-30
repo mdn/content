@@ -20,7 +20,7 @@ A typical user agent string looks like this: `"Mozilla/5.0 (Windows NT 10.0; Win
 
 - [User agent](https://en.wikipedia.org/wiki/User_agent) on Wikipedia
 - {{domxref("navigator.userAgent")}}
-- [Browser detection using the user agent](/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent)
+- [Browser detection using the user agent](/en-US/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent)
 - {{RFC(2616, "", "14.43")}}: The `User-Agent` header
 - Related glossary terms:
   - {{Glossary("Browser")}}

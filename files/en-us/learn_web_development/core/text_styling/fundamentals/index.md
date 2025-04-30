@@ -1,10 +1,10 @@
 ---
 title: Fundamental text and font styling
+short-title: Text and font fundamentals
 slug: Learn_web_development/Core/Text_styling/Fundamentals
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling")}}
 
@@ -112,6 +112,9 @@ p {
 ```
 
 This would make all paragraphs on a page adopt the arial font, which is found on any computer.
+
+> [!NOTE]
+> Scrimba's [Web-safe fonts](https://scrimba.com/learn-html-and-css-c0p/~01r?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> scrim provides an interactive guide to why fonts are important, web-safe fonts, and how to specify fonts in CSS — along with a challenge to test your knowledge.
 
 #### Web safe fonts
 
@@ -334,7 +337,7 @@ In our previous module's [CSS values and units](/en-US/docs/Learn_web_developmen
 
 - `px` (pixels): The number of pixels high you want the text to be. This is an absolute unit — it results in the same final computed value for the font on the page in pretty much any situation.
 - `em`s: 1 `em` is equal to the font size set on the parent element of the current element we are styling (more specifically, the width of a capital letter M contained inside the parent element). This can become tricky to work out if you have a lot of nested elements with different font sizes set, but it is doable, as you'll see below. Why bother? It is quite natural once you get used to it, and you can use `em` to size everything, not just text. You can have an entire website sized using `em`, which makes maintenance easy.
-- `rem`s: These work just like `em`, except that 1 `rem` is equal to the font size set on the root element of the document (i.e. {{htmlelement("html")}}), not the parent element. This makes doing the maths to work out your font sizes much easier.
+- `rem`s: These work just like `em`, except that 1 `rem` is equal to the font size set on the root element of the document (i.e., {{htmlelement("html")}}), not the parent element. This makes doing the maths to work out your font sizes much easier.
 
 The `font-size` of an element is inherited from that element's parent element. This all starts with the root element of the entire document — {{htmlelement("html")}} — the standard `font-size` of which is set to `16px` across browsers. Any paragraph (or another element that doesn't have a different size set by the browser) inside the root element will have a final size of `16px`. Other elements may have different default sizes. For example, an {{htmlelement("Heading_Elements", "h1")}} element has a size of `2em` set by default, so it will have a final size of `32px`.
 
@@ -438,7 +441,7 @@ The four properties are as follows:
 1. The horizontal offset of the shadow from the original text — this can take most available CSS [length and size units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#lengths), but you'll most commonly use `px`; positive values move the shadow right, and negative values left. This value has to be included.
 2. The vertical offset of the shadow from the original text. This behaves similarly to the horizontal offset, except that it moves the shadow up/down, not left/right. This value has to be included.
 3. The blur radius: a higher value means the shadow is dispersed more widely. If this value is not included, it defaults to 0, which means no blur. This can take most available CSS [length and size units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#lengths).
-4. The base color of the shadow, which can take any [CSS color unit](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#color). If not included, it defaults to [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword), i.e. the shadow's color is taken from the element's [`color`](/en-US/docs/Web/CSS/color) property.
+4. The base color of the shadow, which can take any [CSS color unit](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#color). If not included, it defaults to [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword), i.e., the shadow's color is taken from the element's [`color`](/en-US/docs/Web/CSS/color) property.
 
 #### Multiple shadows
 
@@ -793,6 +796,6 @@ We hope you enjoyed playing with text in this article! The next article will pro
 ## See also
 
 - [All about the CSS font-family property](https://explainers.dev/font-family/), explainers.dev
-- [Web-safe fonts](https://v2.scrimba.com/the-frontend-developer-career-path-c0j/~02b?via=mdn), Scrimba <sup>_MDN learning partner_</sup>
+- [Web-safe fonts](https://scrimba.com/the-frontend-developer-career-path-c0j/~02b?via=mdn), Scrimba <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
 
 {{NextMenu("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling")}}

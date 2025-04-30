@@ -74,6 +74,7 @@ Math.asinh(Infinity); // Infinity
 ## See also
 
 - [Polyfill of `Math.asinh` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [es-shims polyfill of `Math.asinh`](https://www.npmjs.com/package/math.asinh)
 - {{jsxref("Math.acosh()")}}
 - {{jsxref("Math.atanh()")}}
 - {{jsxref("Math.cosh()")}}

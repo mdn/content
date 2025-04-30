@@ -36,8 +36,8 @@ See also [Firefox 79: The safe return of shared memory, new tooling, and platfor
 
 ### HTML
 
-- The [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) element's `sandbox` attribute now supports the `allow-top-navigation-by-user-activation` token ([Firefox bug 1359867](https://bugzil.la/1359867)).
-- Setting `target="_blank"` on [`<a>`](/en-US/docs/Web/HTML/Element/a) and [`<area>`](/en-US/docs/Web/HTML/Element/area) elements implicitly provides the same behavior as also setting `rel="noopener"` ([Firefox bug 1522083](https://bugzil.la/1522083)).
+- The [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe) element's `sandbox` attribute now supports the `allow-top-navigation-by-user-activation` token ([Firefox bug 1359867](https://bugzil.la/1359867)).
+- Setting `target="_blank"` on [`<a>`](/en-US/docs/Web/HTML/Reference/Elements/a) and [`<area>`](/en-US/docs/Web/HTML/Reference/Elements/area) elements implicitly provides the same behavior as also setting `rel="noopener"` ([Firefox bug 1522083](https://bugzil.la/1522083)).
 
 ### CSS
 

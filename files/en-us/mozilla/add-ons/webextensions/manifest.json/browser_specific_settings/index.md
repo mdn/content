@@ -33,7 +33,7 @@ browser-compat: webextensions.manifest.browser_specific_settings
     <tr>
       <th scope="row">Example</th>
       <td>
-        <pre class="brush: json;">
+        <pre class="brush: json">
 "browser_specific_settings": {
   "gecko": {
     "id": "addon@example.com",
@@ -58,7 +58,7 @@ Firefox stores browser-specific settings in these properties:
 - `gecko` for the desktop version of Firefox.
 - `gecko_android` for the Android version of Firefox.
 
-The `gecko` subkey supports these properties:
+The `gecko` sub-key supports these properties:
 
 - `id`
 
@@ -88,7 +88,7 @@ The `gecko` subkey supports these properties:
 - `update_url`
   - : A link to an [extension update manifest](https://extensionworkshop.com/documentation/manage/updating-your-extension/). Note that the link must begin with "https". This key is for managing extension updates yourself (i.e., not through AMO).
 
-The `gecko_android` subkey supports these properties:
+The `gecko_android` sub-key supports these properties:
 
 - `strict_min_version`
   - : Minimum version of Gecko to support on Android. If the Firefox for Android version on which the extension is being installed or run is below this version, the extension is not installed or not run. If not provided, defaults to the version determined by `gecko.strict_min_version`. "\*" is not valid in this field.
@@ -101,7 +101,7 @@ To support Firefox for Android without specifying a version range, the `gecko_an
 
 ### Safari properties
 
-Safari stores its browser-specific settings in the `safari` subkey, which has these properties:
+Safari stores its browser-specific settings in the `safari` sub-key, which has these properties:
 
 - `strict_min_version`
   - : Minimum version of Safari to support.

@@ -468,7 +468,7 @@
         "CharacterBoundsUpdateEvent"
       ],
       "methods": [],
-      "properties": [],
+      "properties": ["HTMLElement.editContext"],
       "events": []
     },
     "Encoding API": {
@@ -529,6 +529,14 @@
       "guides": ["/docs/Web/API/Fetch_API/Using_Fetch"],
       "interfaces": ["Headers", "Request", "RequestInit", "Response"],
       "methods": ["Window.fetch()", "WorkerGlobalScope.fetch()"],
+      "properties": [],
+      "events": []
+    },
+    "fetchLater API": {
+      "overview": ["fetchLater API"],
+      "guides": ["/docs/Web/API/fetchLater_API/fetchLater_quotas"],
+      "interfaces": ["DeferredRequestInit", "FetchLaterResult"],
+      "methods": ["Window.fetchLater()"],
       "properties": [],
       "events": []
     },
@@ -710,6 +718,10 @@
     },
     "HTML DOM": {
       "overview": ["HTML DOM API"],
+      "guides": [
+        "/docs/Web/API/HTML_DOM_API/Microtask_guide",
+        "/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth"
+      ],
       "interfaces": [
         "BeforeUnloadEvent",
         "DOMStringMap",
@@ -815,7 +827,6 @@
         "Element: DOMActivate",
         "Element: focus",
         "Element: select",
-        "Element: show",
         "HTMLDialogElement: cancel",
         "HTMLDialogElement: close",
         "HTMLElement: input",
@@ -943,7 +954,11 @@
     "Insertable Streams for MediaStreamTrack API": {
       "overview": ["Insertable Streams for MediaStreamTrack API"],
       "guides": [],
-      "interfaces": ["MediaStreamTrackGenerator", "MediaStreamTrackProcessor"],
+      "interfaces": [
+        "MediaStreamTrackGenerator",
+        "MediaStreamTrackProcessor",
+        "VideoTrackGenerator"
+      ],
       "methods": [],
       "properties": [],
       "events": []
@@ -968,6 +983,13 @@
         "HTMLButtonElement.command"
       ],
       "events": ["HTMLElement: command"]
+    },
+    "JS Self-Profiling API": {
+      "overview": ["JS Self-Profiling API"],
+      "guides": [
+        "/docs/Web/API/JS_Self-Profiling_API/Profile_content_and_format"
+      ],
+      "interfaces": ["Profiler"]
     },
     "Keyboard API": {
       "overview": ["Keyboard API"],
@@ -1037,6 +1059,10 @@
     },
     "Media Source Extensions": {
       "overview": ["Media Source Extensions API"],
+      "guides": [
+        "/docs/Web/API/Media_Source_Extensions_API/Transcoding_assets_for_MSE",
+        "/docs/Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming"
+      ],
       "interfaces": [
         "MediaSource",
         "MediaSourceHandle",
@@ -1559,9 +1585,9 @@
         "SVGCircleElement",
         "SVGClipPathElement",
         "SVGComponentTransferFunctionElement",
-        "SVGCursorElement",
         "SVGDefsElement",
         "SVGDescElement",
+        "SVGDiscardElement",
         "SVGElement",
         "SVGEllipseElement",
         "SVGFEBlendElement",
@@ -1590,19 +1616,11 @@
         "SVGFETileElement",
         "SVGFETurbulenceElement",
         "SVGFilterElement",
-        "SVGFontElement",
-        "SVGFontFaceElement",
-        "SVGFontFaceFormatElement",
-        "SVGFontFaceNameElement",
-        "SVGFontFaceSrcElement",
-        "SVGFontFaceUriElement",
         "SVGForeignObjectElement",
         "SVGGElement",
-        "SVGGlyphElement",
         "SVGGradientElement",
         "SVGGraphicsElement",
         "SVGMarkerElement",
-        "SVGHKernElement",
         "SVGImageElement",
         "SVGLength",
         "SVGLengthList",
@@ -1610,7 +1628,6 @@
         "SVGLineElement",
         "SVGMaskElement",
         "SVGMetadataElement",
-        "SVGMissingGlyphElement",
         "SVGMPathElement",
         "SVGNumber",
         "SVGNumberList",
@@ -1639,12 +1656,10 @@
         "SVGTitleElement",
         "SVGTransform",
         "SVGTransformList",
-        "SVGTRefElement",
         "SVGTSpanElement",
         "SVGUnitTypes",
         "SVGUseElement",
         "SVGViewElement",
-        "SVGVKernElement",
         "TimeEvent"
       ],
       "methods": [],
@@ -1760,7 +1775,7 @@
     },
     "URL Fragment Text Directives": {
       "overview": ["URL Fragment Text Directives"],
-      "guides": ["/en-US/docs/Web/URI/Fragment/Text_fragments"],
+      "guides": ["/en-US/docs/Web/URI/Reference/Fragment/Text_fragments"],
       "interfaces": ["FragmentDirective"],
       "methods": [],
       "properties": ["Document.fragmentDirective"]
@@ -1791,7 +1806,7 @@
     },
     "View Transition API": {
       "overview": ["View Transition API"],
-      "guides": ["/docs/Web/API/View_Transitions_API/Using"],
+      "guides": ["/docs/Web/API/View_Transition_API/Using"],
       "interfaces": ["ViewTransition"],
       "methods": ["Document.startViewTransition()"],
       "properties": [],
@@ -1819,7 +1834,8 @@
       "guides": [
         "/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API",
         "/docs/Web/API/Web_Animations_API/Web_Animations_API_Concepts",
-        "/docs/Web/API/Web_Animations_API/Keyframe_Formats"
+        "/docs/Web/API/Web_Animations_API/Keyframe_Formats",
+        "/docs/Web/API/Web_Animations_API/Tips"
       ],
       "interfaces": [
         "Animation",
@@ -2245,9 +2261,7 @@
         "RTCPeerConnection: connectionstatechange",
         "RTCPeerConnection: datachannel",
         "RTCDataChannel: error",
-        "RTCIceTransport: error",
         "RTCDtlsTransport: error",
-        "RTCSctpTransport: error",
         "RTCIceTransport: gatheringstatechange",
         "RTCPeerConnection: icecandidate",
         "RTCPeerConnection: icecandidateerror",
@@ -2416,8 +2430,8 @@
       "methods": ["Navigator.getVRDisplays()"],
       "properties": ["Gamepad.displayId", "Navigator.activeVRDisplays"],
       "events": [
-        "Window: vrdisplayconnected",
-        "Window: vrdisplaydisconnected",
+        "Window: vrdisplayconnect",
+        "Window: vrdisplaydisconnect",
         "Window: vrdisplayactivate",
         "Window: vrdisplaydeactivate",
         "Window: vrdisplayblur",

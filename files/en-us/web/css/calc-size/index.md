@@ -221,7 +221,7 @@ p {
 }
 ```
 
-In the CSS, we use [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) to center the child elements inside the `<section>`, and set the`width` and `height` of the `<section>` to `calc-size()` functions. The `width` is set equal to `fit-content` plus `6rem`. The `height` is set to `auto` multiplied by two.
+In the CSS, we use [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) to center the child elements inside the `<section>`, and set the `width` and `height` of the `<section>` to `calc-size()` functions. The `width` is set equal to `fit-content` plus `6rem`. The `height` is set to `auto` multiplied by two.
 
 ```css
 section {
@@ -249,7 +249,7 @@ This example demonstrates how to use `calc-size()` to animate between a specific
 
 #### HTML
 
-The HTML contains a single {{htmlelement("section")}} element with [`tabindex="0"`](/en-US/docs/Web/HTML/Global_attributes/tabindex) set on it so it can receive keyboard focus. The `<section>` contains {{htmlelement("header")}} and {{htmlelement("main")}} elements, each with their own child content.
+The HTML contains a single {{htmlelement("section")}} element with [`tabindex="0"`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) set on it so it can receive keyboard focus. The `<section>` contains {{htmlelement("header")}} and {{htmlelement("main")}} elements, each with their own child content.
 
 ```html
 <section tabindex="0">
@@ -472,7 +472,7 @@ As mentioned earlier, it is possible to use another function inside `calc-size()
 
 #### HTML
 
-The HTML contains a {{htmlelement("form")}} element containing three textual `<input>` types. Each `<input>` has a {{htmlelement("label")}} associated with it to make the form accessible, and a [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength) applied to stop entered values getting long enough to break the form layout.
+The HTML contains a {{htmlelement("form")}} element containing three textual `<input>` types. Each `<input>` has a {{htmlelement("label")}} associated with it to make the form accessible, and a [`maxlength`](/en-US/docs/Web/HTML/Reference/Attributes/maxlength) applied to stop entered values getting long enough to break the form layout.
 
 ```html
 <form>

@@ -98,7 +98,7 @@ obj.quaxxor = "the friendly duck";
 delete obj.foo;
 // silently doesn't delete the property
 
-// ...and in strict mode such attempts
+// … and in strict mode such attempts
 // will throw TypeErrors.
 function fail() {
   "use strict";

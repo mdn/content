@@ -66,16 +66,16 @@ DOM Cache:
 
 Browser caches:
 
-- The [HTTP cache](/en-US/docs/Web/HTTP/Caching), the Image cache, and the [Alternative Services (Alt-Svc) cache](/en-US/docs/Web/HTTP/Headers/Alt-Svc) are all partitioned for tracking resources, such that each top-level origin will have a separate partition and tracking resources on different top-level origins will be cached separate from each other.
+- The [HTTP cache](/en-US/docs/Web/HTTP/Guides/Caching), the Image cache, and the [Alternative Services (Alt-Svc) cache](/en-US/docs/Web/HTTP/Reference/Headers/Alt-Svc) are all partitioned for tracking resources, such that each top-level origin will have a separate partition and tracking resources on different top-level origins will be cached separate from each other.
 
 Network connections:
 
 - [TLS sessions](https://wiki.mozilla.org/Security/Server_Side_TLS#Session_Resumption) will not be resumed using a session ticket when an HTTPS connection is made to an embedded third-party resource that is classified as a tracker.
-- [HTTP connection reuse](/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x#persistent_connections) by domains classified as trackers is limited to requests that occur under the same top-level origin. For example, a request for content from `tracker.example` on `news.example` will not reuse an HTTP connection with a request for content from `tracker.example` on `shopping.example` or with requests that occur when `tracker.example` is visited directly (i.e., as a first party).
+- [HTTP connection reuse](/en-US/docs/Web/HTTP/Guides/Connection_management_in_HTTP_1.x#persistent_connections) by domains classified as trackers is limited to requests that occur under the same top-level origin. For example, a request for content from `tracker.example` on `news.example` will not reuse an HTTP connection with a request for content from `tracker.example` on `shopping.example` or with requests that occur when `tracker.example` is visited directly (i.e., as a first party).
 
 HTTP Referrers
 
-- The default [Referrer Policy](/en-US/docs/Web/HTTP/Headers/Referrer-Policy) for third-party resources classified as trackers is set to `strict-origin-when-cross-origin`.
+- The default [Referrer Policy](/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy) for third-party resources classified as trackers is set to `strict-origin-when-cross-origin`.
 
 ### What is not blocked by the policy?
 
@@ -103,7 +103,7 @@ Third-party storage access may be granted to resources that have been classified
 
 When storage access is granted, it is scoped to the site of the opener document or subdomains of that origin. Access that is granted on the subdomain of an origin does extend to the top-level origin. As an example, if a resource from `tracker.example` is granted storage access on `foo.example.com`, then `tracker.example` will be able to access its cookies on `bar.foo.example.com` and on `example.com`.
 
-When storage access is granted to `tracker.example` on `example.com`, all resources loaded from `tracker.example` on any top-level document loaded from `example.com` are immediately given storage access. This includes all resources loaded in the main context of the page, embedded `<iframe>`s, and resources loaded within embedded `<iframe>`s. Storage access is not extended to other resources loaded on `example.com` (e.g. `other-tracker.example`), nor to other first parties on which `tracker.example` is embedded (e.g. `example.org`).
+When storage access is granted to `tracker.example` on `example.com`, all resources loaded from `tracker.example` on any top-level document loaded from `example.com` are immediately given storage access. This includes all resources loaded in the main context of the page, embedded `<iframe>`s, and resources loaded within embedded `<iframe>`s. Storage access is not extended to other resources loaded on `example.com` (e.g., `other-tracker.example`), nor to other first parties on which `tracker.example` is embedded (e.g., `example.org`).
 
 Storage access grants extend into the first level of nested contexts, but no further. This means that `<iframe>`s embedded in the main context of the page and loaded from a domain classified as a tracker will have full access to all storage locations accessible through JavaScript. Similarly, requests for resources loaded in `<iframe>`s embedded in the main context of the page will have access to HTTP cookies. However, further nested contexts, including but not limited to those from the origin classified as a tracker, will not be granted storage access.
 

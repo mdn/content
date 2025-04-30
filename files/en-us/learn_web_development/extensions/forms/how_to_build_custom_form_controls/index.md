@@ -2,9 +2,8 @@
 title: How to build custom form controls
 slug: Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 There are some cases where the available native HTML form controls may seem like they are not enough. For example, if you need to [perform advanced styling](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling) on some controls such as the {{HTMLElement("select")}} element, or if you want to provide custom behaviors, you may consider building your own controls.
 
@@ -29,7 +28,7 @@ In terms of behavior, we are recreating a native HTML element. Therefore it shou
 
 - the page loads.
 - the control was active and the user clicks anywhere outside it.
-- the control was active and the user moves the focus to another control using the keyboard (e.g. the <kbd>Tab</kbd> key).
+- the control was active and the user moves the focus to another control using the keyboard (e.g., the <kbd>Tab</kbd> key).
 
 **The control is in its active state when:**
 
@@ -1663,11 +1662,11 @@ Fortunately, there is a solution and it's called [ARIA](/en-US/docs/Web/Accessib
 
 ### The `role` attribute
 
-The key attribute used by [ARIA](/en-US/docs/Web/Accessibility/ARIA) is the [`role`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques) attribute. The [`role`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques) attribute accepts a value that defines what an element is used for. Each role defines its own requirements and behaviors. In our example, we will use the [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role) role. It's a "composite role", which means elements with that role expect to have children, each with a specific role (in this case, at least one child with the `option` role).
+The key attribute used by [ARIA](/en-US/docs/Web/Accessibility/ARIA) is the [`role`](/en-US/docs/Web/Accessibility/ARIA/Guides/Techniques) attribute. The [`role`](/en-US/docs/Web/Accessibility/ARIA/Guides/Techniques) attribute accepts a value that defines what an element is used for. Each role defines its own requirements and behaviors. In our example, we will use the [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role) role. It's a "composite role", which means elements with that role expect to have children, each with a specific role (in this case, at least one child with the `option` role).
 
 It's also worth noting that ARIA defines roles that are applied by default to standard HTML markup. For example, the {{HTMLElement("table")}} element matches the role `grid`, and the {{HTMLElement("ul")}} element matches the role `list`. Because we use a {{HTMLElement("ul")}} element, we want to make sure the `listbox` role of our control will supersede the `list` role of the {{HTMLElement("ul")}} element. To that end, we will use the role `presentation`. This role is designed to let us indicate that an element has no special meaning, and is used solely to present information. We will apply it to our {{HTMLElement("ul")}} element.
 
-To support the [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role) role, we just have to update our HTML like this:
+To support the [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role) role, we just have to update our HTML like this:
 
 ```html
 <!-- We add the role="listbox" attribute to our top element -->
@@ -1690,7 +1689,7 @@ To support the [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role
 
 ### The `aria-selected` attribute
 
-Using the [`role`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques) attribute is not enough. [ARIA](/en-US/docs/Web/Accessibility/ARIA) also provides many states and property attributes. The more and better you use them, the better your control will be understood by assistive technologies. In our case, we will limit our usage to one attribute: `aria-selected`.
+Using the [`role`](/en-US/docs/Web/Accessibility/ARIA/Guides/Techniques) attribute is not enough. [ARIA](/en-US/docs/Web/Accessibility/ARIA) also provides many states and property attributes. The more and better you use them, the better your control will be understood by assistive technologies. In our case, we will limit our usage to one attribute: `aria-selected`.
 
 The `aria-selected` attribute is used to mark which option is currently selected; this lets assistive technologies inform the user what the current selection is. We will use it dynamically with JavaScript to mark the selected option each time the user chooses one. To that end, we need to revise our `updateValue()` function:
 
@@ -2095,24 +2094,3 @@ Here are a few libraries you should consider before coding your own:
 - [msDropDown](https://github.com/marghoobsuleman/ms-Dropdown)
 
 If you do create alternative controls via radio buttons, your own JavaScript, or with a 3rd party library, ensure it is accessible and feature-proof; that is, it needs to be able to work better with a variety of browsers whose compatibility with the Web standards they use vary. Have fun!
-
-## See also
-
-### Learning path
-
-- [Your first HTML form](/en-US/docs/Learn_web_development/Extensions/Forms/Your_first_form)
-- [How to structure an HTML form](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)
-- [The native form controls](/en-US/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)
-- [HTML5 input types](/en-US/docs/Learn_web_development/Extensions/Forms/HTML5_input_types)
-- [Additional form controls](/en-US/docs/Learn_web_development/Extensions/Forms/Other_form_controls)
-- [UI pseudo-classes](/en-US/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes)
-- [Styling HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
-- [Form data validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
-- [Sending form data](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)
-
-### Advanced Topics
-
-- [Sending forms through JavaScript](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)
-- **How to build custom form controls**
-- [HTML forms in legacy browsers](/en-US/docs/Learn_web_development/Extensions/Forms/HTML_forms_in_legacy_browsers)
-- [Advanced styling for HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)

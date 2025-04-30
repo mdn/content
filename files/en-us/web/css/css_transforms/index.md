@@ -713,7 +713,7 @@ The cube in the above example is comprised of six `<div>` elements, all of which
 
 - [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
   - : Step-by-step tutorial about how to transform elements styled with CSS.
-- [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_View/Coordinate_Systems)
+- [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems)
   - : Describes the way pixel locations are defined in the CSS object model.
 - [Performance fundamentals: Use CSS transforms](/en-US/docs/Web/Performance/Guides/Fundamentals#use_css_transforms)
   - : An overview of web performance fundamentals, including how CSS transforms can improve performance.
@@ -749,10 +749,10 @@ The cube in the above example is comprised of six `<div>` elements, all of which
   - [Interpolation](/en-US/docs/Glossary/Interpolation)
   - [Stacking context](/en-US/docs/Glossary/Stacking_context)
 - [SVG](/en-US/docs/Web/SVG) concepts:
-  - [`<animate>`](/en-US/docs/Web/SVG/Element/animate) element
-  - [`<animateTransform>`](/en-US/docs/Web/SVG/Element/animateTransform) element
-  - [`<set>`](/en-US/docs/Web/SVG/Element/set) element
-  - [`transform`](/en-US/docs/Web/SVG/Attribute/transform) element
+  - [`<animate>`](/en-US/docs/Web/SVG/Reference/Element/animate) element
+  - [`<animateTransform>`](/en-US/docs/Web/SVG/Reference/Element/animateTransform) element
+  - [`<set>`](/en-US/docs/Web/SVG/Reference/Element/set) element
+  - [`transform`](/en-US/docs/Web/SVG/Reference/Attribute/transform) element
 
 ## Specifications
 
@@ -760,6 +760,6 @@ The cube in the above example is comprised of six `<div>` elements, all of which
 
 ## See also
 
-- [Basic SVG transformations](/en-US/docs/Web/SVG/Tutorial/Basic_Transformations) tutorial
+- [Basic SVG transformations](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations) tutorial
 - [CSS animations](/en-US/docs/Web/CSS/CSS_animations) module
 - [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) module

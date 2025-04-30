@@ -76,7 +76,7 @@ See the {{cssxref("hex-color")}} data type for more information on hexadecimal s
 
 #### HTML color input type
 
-There are many situations in which your website may need to let the user select a color. Perhaps you have a customizable user interface, or you're implementing a drawing app. Maybe you have editable text and need to let the user choose the text color. Or perhaps your app lets the user assign colors to folders or items. For such use cases, the {{HTMLElement("input")}} element has a `"color"` [`type`](/en-US/docs/Web/HTML/Element/input#type), which renders a color picker control.
+There are many situations in which your website may need to let the user select a color. Perhaps you have a customizable user interface, or you're implementing a drawing app. Maybe you have editable text and need to let the user choose the text color. Or perhaps your app lets the user assign colors to folders or items. For such use cases, the {{HTMLElement("input")}} element has a `"color"` [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type), which renders a color picker control.
 
 This example allows you to choose a color. Once a choice is made, the {{cssxref("border-color")}} is set to that color, and the value is displayed.
 
@@ -106,7 +106,7 @@ The HTML creates a box containing a color picker control (with a label created u
 }
 ```
 
-The following JavaScript updates the border's color to match the color picker's initial value, then adds two event handlers to the [`<input type="color">`](/en-US/docs/Web/HTML/Element/input/color) element to respond to changes made to its value.
+The following JavaScript updates the border's color to match the color picker's initial value, then adds two event handlers to the [`<input type="color">`](/en-US/docs/Web/HTML/Reference/Elements/input/color) element to respond to changes made to its value.
 
 ```js
 const colorPicker = document.querySelector("#colorPicker");
@@ -691,6 +691,6 @@ The {{cssxref("color_value/light-dark", "light-dark()")}} function lets you spec
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)
 - [Using color wisely](/en-US/docs/Web/CSS/CSS_colors/Using_color_wisely)
 - [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
-- [Understanding color and luminance](/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
-- [WCAG 1.4.1: Color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)
+- [Understanding color and luminance](/en-US/docs/Web/Accessibility/Guides/Colors_and_Luminance)
+- [WCAG 1.4.1: Color contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)
 - [CSS color module](/en-US/docs/Web/CSS/CSS_colors)

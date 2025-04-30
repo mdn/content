@@ -1,10 +1,12 @@
 ---
 title: Introducing a complete toolchain
+short-title: Sample toolchain
 slug: Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_tools/Package_management","Learn_web_development/Extensions/Client-side_tools/Deployment", "Learn_web_development/Extensions/Client-side_tools")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_tools/Package_management","Learn_web_development/Extensions/Client-side_tools/Deployment", "Learn_web_development/Extensions/Client-side_tools")}}
 
 In the final couple of articles in the series, we will solidify your tooling knowledge by walking you through the process of building up a sample case study toolchain. We'll go all the way from setting up a sensible development environment and putting transformation tools in place to actually deploying your app. In this article, we'll introduce the case study, set up our development environment, and set up our code transformation tools.
 
@@ -107,7 +109,7 @@ As we talked about in [Chapter 1](/en-US/docs/Learn_web_development/Extensions/C
 
 - **Development environment**: The tools that are most fundamental to running your code. This part is already set up in the previous chapter.
 - **Safety net**: Making the software development experience stable and more efficient. We might also refer to this as our development environment.
-- **Transformation**: Tooling that allows us to use the latest features of a language (e.g. JavaScript) or another language entirely (e.g. JSX or TypeScript) in our development process, and then transforms our code so that the production version still runs on a wide variety of browsers, modern and older.
+- **Transformation**: Tooling that allows us to use the latest features of a language (e.g., JavaScript) or another language entirely (e.g., JSX or TypeScript) in our development process, and then transforms our code so that the production version still runs on a wide variety of browsers, modern and older.
 - **Post development**: Tooling that comes into play after you are done with the body of development to ensure that your software makes it to the web and continues to run. In this case study we'll look at adding tests to your code, and deploying your app using GitHub Pages so it is available for all the web to see.
 
 Let's start working on these, beginning with our development environment. We will follow the same steps as how a real project would be set up, so in the future, if you are setting up a new project, you can refer back to this chapter and follow the steps again.
@@ -162,7 +164,7 @@ npm install --save-dev prettier
 
 Note again that we are using `--save-dev` to add it as a dev dependency, because we only use it during development.
 
-Like many tools made more recently Prettier comes with "sensible defaults". That means that you'll be able to use Prettier without having to configure anything (if you are happy with the [defaults](https://prettier.io/docs/en/configuration.html)). This lets you get on with what's important: the creative work. For demonstration, we'll add a config file. Create a file in the root of your `npm-experiment` directory called `.prettierrc.json`. Add the following contents:
+Like many tools made more recently Prettier comes with "sensible defaults". That means that you'll be able to use Prettier without having to configure anything (if you are happy with the [defaults](https://prettier.io/docs/configuration.html)). This lets you get on with what's important: the creative work. For demonstration, we'll add a config file. Create a file in the root of your `npm-experiment` directory called `.prettierrc.json`. Add the following contents:
 
 ```json
 {
@@ -170,7 +172,7 @@ Like many tools made more recently Prettier comes with "sensible defaults". That
 }
 ```
 
-With this setting, Prettier will print the `>` of a multi-line HTML (HTML, JSX, Vue, Angular) opening tag at the end of the last line instead of being alone on the next line. This is the format the MDN itself uses. You can find more about [configuring Prettier](https://prettier.io/docs/en/configuration.html) in its documentation.
+With this setting, Prettier will print the `>` of a multi-line HTML (HTML, JSX, Vue, Angular) opening tag at the end of the last line instead of being alone on the next line. This is the format the MDN itself uses. You can find more about [configuring Prettier](https://prettier.io/docs/configuration.html) in its documentation.
 
 By default, Prettier formats all files that you specify. However, again, we don't need to format generated files, or there may be certain legacy code that we don't want to touch. We can tell Prettier to always ignore these files by creating a `.prettierignore` file in the root of the project directory. Add the following contents to the file:
 
@@ -188,13 +190,13 @@ npx prettier --write ./index.html
 ```
 
 > [!NOTE]
-> In the command above, we use Prettier with the `--write` flag. Prettier understands this to mean "if there's any problem in my code format, go ahead and fix them, then save my file". This is fine for our development process, but we can also use `prettier` without the flag and it will only check the file. Checking the file (and not saving it) is useful for purposes like checks that run before a release - i.e. "don't release any code that's not been properly formatted."
+> In the command above, we use Prettier with the `--write` flag. Prettier understands this to mean "if there's any problem in my code format, go ahead and fix them, then save my file". This is fine for our development process, but we can also use `prettier` without the flag and it will only check the file. Checking the file (and not saving it) is useful for purposes like checks that run before a release - i.e., "don't release any code that's not been properly formatted."
 
 You can also replace `./index.html` with any other file or folder to format them. For example, `.` will format everything in the current directory. In case you may forget the syntax, you can add it as a custom script in your package.json too:
 
 ```json
 "scripts": {
-  // ...
+  // …
   "format": "prettier --write ."
 },
 ```

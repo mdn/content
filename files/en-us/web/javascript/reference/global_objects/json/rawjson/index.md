@@ -36,7 +36,7 @@ Furthermore, it has a [private property](/en-US/docs/Web/JavaScript/Reference/Cl
 
 ## Description
 
-A raw JSON object can be seen as an immutable, atomic data structure like any kind of [primitive](/en-US/docs/Web/JavaScript/Data_structures#primitive_values). It is not a regular object and it contains no data other than the raw JSON text. It is used to "pre-serialize" data to formats that `JSON.stringify` itself cannot produce for various reasons. The most typical use case is the floating point number loss of precision problem. For example:
+A raw JSON object can be seen as an immutable, atomic data structure like any kind of [primitive](/en-US/docs/Web/JavaScript/Guide/Data_structures#primitive_values). It is not a regular object and it contains no data other than the raw JSON text. It is used to "pre-serialize" data to formats that `JSON.stringify` itself cannot produce for various reasons. The most typical use case is the floating point number loss of precision problem. For example:
 
 ```js
 JSON.stringify({ value: 12345678901234567890 });

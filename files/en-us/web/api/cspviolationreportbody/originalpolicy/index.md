@@ -8,9 +8,9 @@ browser-compat: api.CSPViolationReportBody.originalPolicy
 
 {{APIRef("Reporting API")}}
 
-The **`originalPolicy`** read-only property of the {{domxref("CSPViolationReportBody")}} interface is a string that represents the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) whose enforcement uncovered the violation.
+The **`originalPolicy`** read-only property of the {{domxref("CSPViolationReportBody")}} interface is a string that represents the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) whose enforcement uncovered the violation.
 
-This is the string in the {{HTTPHeader("Content-Security-Policy")}} HTTP response header that contains the list of [directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#directives) and their values that make the CSP policy.
+This is the string in the {{HTTPHeader("Content-Security-Policy")}} HTTP response header that contains the list of [directives](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#directives) and their values that make the CSP policy.
 Note that differs from the {{domxref("CSPViolationReportBody.effectiveDirective","effectiveDirective")}}, which is the specific directive that is effectively being violated (and which might not be explicitly listed in the policy if `default-src` is used).
 
 ## Value
@@ -26,7 +26,7 @@ In particular, it logs the `effectiveDirective` and the `originalPolicy`, making
 
 #### HTML
 
-The HTML file below uses the [`<meta>`](/en-US/docs/Web/HTML/Element/meta) element to set the {{httpheader('Content-Security-Policy')}} `default-src` to `self`, which allows scripts and other resources to be loaded from the same domain, but does not allow inline scripts to be executed.
+The HTML file below uses the [`<meta>`](/en-US/docs/Web/HTML/Reference/Elements/meta) element to set the {{httpheader('Content-Security-Policy')}} `default-src` to `self`, which allows scripts and other resources to be loaded from the same domain, but does not allow inline scripts to be executed.
 The document also includes an inline script, which should trigger a CSP violation.
 
 ```html

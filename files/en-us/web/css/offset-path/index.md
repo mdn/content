@@ -11,7 +11,74 @@ The **`offset-path`** [CSS](/en-US/docs/Web/CSS) property specifies a path for a
 
 The `offset-path` property is used in combination with the {{cssxref("offset-distance")}}, {{cssxref("offset-rotate")}}, and {{cssxref("offset-anchor")}} properties to control the position and orientation of the element along a path.
 
-{{EmbedInteractiveExample("pages/css/offset-path.html")}}
+{{InteractiveExample("CSS Demo: offset-path")}}
+
+```css interactive-example-choice
+offset-path: path("M-70,-40 C-70,70 70,70 70,-40");
+```
+
+```css interactive-example-choice
+offset-path: path("M0,0 L60,70 L-60,30z");
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+  <button id="playback" type="button">Play</button>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 24px;
+  height: 24px;
+  background: #2bc4a2;
+  animation: distance 8000ms infinite linear;
+  animation-play-state: paused;
+  clip-path: polygon(0% 0%, 70% 0%, 100% 50%, 70% 100%, 0% 100%, 30% 50%);
+}
+
+#example-element.running {
+  animation-play-state: running;
+}
+
+#playback {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1em;
+}
+
+@keyframes distance {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+#default-example {
+  position: relative;
+}
+```
+
+```js interactive-example
+window.addEventListener("load", () => {
+  const example = document.getElementById("example-element");
+  const button = document.getElementById("playback");
+
+  button.addEventListener("click", () => {
+    if (example.classList.contains("running")) {
+      example.classList.remove("running");
+      button.textContent = "Play";
+    } else {
+      example.classList.add("running");
+      button.textContent = "Pause";
+    }
+  });
+});
+```
 
 ## Syntax
 
@@ -70,7 +137,7 @@ The `offset-path` property takes as its value an `<offset-path>` value, a [`<coo
 
     - {{cssxref("url_value", "&lt;url&gt;")}}
 
-      - : Specifies the ID of an [SVG shape element](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes). The path is the shape of the SVG {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, or {{SVGElement("rect")}} element referenced by its `id` in the `url()` function. If the URL does not reference a shape element or is otherwise invalid, the resolved value for the offset path is `path("M0,0")` (which is a valid `<basic-shape>` value).
+      - : Specifies the ID of an [SVG shape element](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes). The path is the shape of the SVG {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, or {{SVGElement("rect")}} element referenced by its `id` in the `url()` function. If the URL does not reference a shape element or is otherwise invalid, the resolved value for the offset path is `path("M0,0")` (which is a valid `<basic-shape>` value).
 
     - {{cssxref("basic-shape")}}
 
@@ -241,10 +308,9 @@ The SVG rectangle that defines the path shape is shown here only to visually dem
 <div class="outer">
   <div class="target"></div>
 </div>
-  <svg width="400" height="200" xmlns="http://www.w3.org/2000/svg" >
-    <rect id="svgRect" x="50" y="50" width="200" height="100" />
-  </svg>
-</div>
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect id="svgRect" x="50" y="50" width="200" height="100" />
+</svg>
 ```
 
 ```css hidden live-sample___offset_path_url
@@ -295,7 +361,7 @@ The SVG rectangle that defines the path shape is shown here only to visually dem
 - {{cssxref("offset")}}
 - {{cssxref("offset-distance")}}
 - {{cssxref("offset-rotate")}}
-- [SVG \<path>](/en-US/docs/Web/SVG/Tutorial/Paths)
+- [SVG \<path>](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths)
 - {{cssxref("basic-shape/path","path()")}}
 - Other demos:
   - [Examples using various shapes values](https://codepen.io/team/css-tricks/pen/WZdKMq) on CodePen by CSS-Tricks

@@ -28,7 +28,7 @@ A new {{jsxref("Iterator")}} object.
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : When [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) is the `Iterator` function itself, i.e. when the `Iterator` constructor itself is constructed.
+  - : When [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) is the `Iterator` function itself, i.e., when the `Iterator` constructor itself is constructed.
 
 ## Description
 
@@ -141,5 +141,6 @@ The subclassing pattern is useful if you want to create many custom iterators. I
 ## See also
 
 - [Polyfill of `Iterator` in `core-js`](https://github.com/zloirock/core-js#iterator-helpers)
+- [es-shims polyfill of `Iterator` and associated helpers](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Iterator.from()")}}

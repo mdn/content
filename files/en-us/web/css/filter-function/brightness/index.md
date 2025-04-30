@@ -9,7 +9,33 @@ browser-compat: css.types.filter-function.brightness
 
 The **`brightness()`** [CSS](/en-US/docs/Web/CSS) {{cssxref("&lt;filter-function&gt;")}} applies a linear multiplier value on an element or an input image, making the image appear brighter or darker.
 
-{{EmbedInteractiveExample("pages/css/function-brightness.html")}}
+{{InteractiveExample("CSS Demo: brightness()")}}
+
+```css interactive-example-choice
+filter: brightness(1);
+```
+
+```css interactive-example-choice
+filter: brightness(1.75);
+```
+
+```css interactive-example-choice
+filter: brightness(50%);
+```
+
+```css interactive-example-choice
+filter: brightness(0);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 ## Syntax
 
@@ -127,7 +153,7 @@ p {
 
 ### Applying brightness using the url() SVG brightness filter
 
-The SVG {{SVGElement("filter")}} element is used to define custom filter effects that can then be referenced by [`id`](/en-US/docs/Web/HTML/Global_attributes/id). The `<filter>` element's {{SVGElement("feComponentTransfer")}} primitive enables pixel-level color remapping.
+The SVG {{SVGElement("filter")}} element is used to define custom filter effects that can then be referenced by [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id). The `<filter>` element's {{SVGElement("feComponentTransfer")}} primitive enables pixel-level color remapping.
 
 In this example, to create a filter that darkens the content on which it is applied by 25% (i.e., 75% of the original brightness), the `slope` attribute is set to `0.75`. We can then reference the filter by `id`.
 

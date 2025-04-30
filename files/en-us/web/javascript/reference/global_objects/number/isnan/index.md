@@ -105,5 +105,6 @@ isNaN(" "); // false, this is coerced to 0
 ## See also
 
 - [Polyfill of `Number.isNaN` in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
+- [es-shims polyfill of `Number.isNaN`](https://www.npmjs.com/package/number.isnan)
 - {{jsxref("Number")}}
 - {{jsxref("isNaN()")}}

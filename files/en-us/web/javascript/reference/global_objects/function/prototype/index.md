@@ -30,7 +30,7 @@ const inst = new Ctor();
 console.log(Object.getPrototypeOf(inst) === Ctor.prototype); // true
 ```
 
-You can read [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#constructors) for more information about the interactions between a constructor function's `prototype` property and the resulting object's prototype.
+You can read [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#constructors) for more information about the interactions between a constructor function's `prototype` property and the resulting object's prototype.
 
 A function having a `prototype` property is not sufficient for it to be eligible as a constructor. [Generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*) have a `prototype` property, but cannot be called with `new`:
 
@@ -125,4 +125,4 @@ console.log(new Dog("Jack").species); // "dog"
 ## See also
 
 - {{jsxref("Function")}}
-- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#constructors)
+- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#constructors)

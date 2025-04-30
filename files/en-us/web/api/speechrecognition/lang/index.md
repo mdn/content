@@ -10,7 +10,7 @@ browser-compat: api.SpeechRecognition.lang
 
 The **`lang`** property of the {{domxref("SpeechRecognition")}}
 interface returns and sets the language of the current `SpeechRecognition`.
-If not specified, this defaults to the HTML [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attribute
+If not specified, this defaults to the HTML [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute
 value, or the user agent's language setting if that isn't set either.
 
 ## Value
@@ -28,12 +28,12 @@ const recognition = new SpeechRecognition();
 const speechRecognitionList = new SpeechGrammarList();
 speechRecognitionList.addFromString(grammar, 1);
 recognition.grammars = speechRecognitionList;
-//recognition.continuous = false;
+// recognition.continuous = false;
 recognition.lang = "en-US";
 recognition.interimResults = false;
 recognition.maxAlternatives = 1;
 
-// ...
+// …
 ```
 
 ## Specifications

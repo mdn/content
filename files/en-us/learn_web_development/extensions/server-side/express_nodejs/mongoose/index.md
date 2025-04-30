@@ -1,10 +1,12 @@
 ---
 title: "Express Tutorial Part 3: Using a Database (with Mongoose)"
+short-title: "3: Using databases with Mongoose"
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs/routes", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs/routes", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 This article briefly introduces databases, and how to use them with Node/Express apps. It then goes on to show how we can use [Mongoose](https://mongoosejs.com/) to provide database access for the [LocalLibrary](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website) website. It explains how object schema and models are declared, the main field types, and basic validation. It also briefly shows a few of the main ways in which you can access model data.
 
@@ -86,7 +88,7 @@ We know that we need to store information about books (title, summary, author, g
 
 When designing your models it makes sense to have separate models for every "object" (a group of related information). In this case some obvious candidates for these models are books, book instances, and authors.
 
-You might also want to use models to represent selection-list options (e.g. like a drop-down list of choices), rather than hard-coding the choices into the website itself — this is recommended when all the options aren't known up front or may change. A good example is a genre (e.g. fantasy, science fiction, etc.).
+You might also want to use models to represent selection-list options (e.g., like a drop-down list of choices), rather than hard-coding the choices into the website itself — this is recommended when all the options aren't known up front or may change. A good example is a genre (e.g., fantasy, science fiction, etc.).
 
 Once we've decided on our models and fields, we need to think about the relationships between them.
 
@@ -129,20 +131,20 @@ When `myFunction()` is run, code execution is paused at `methodThatReturnsPromis
 The code in the `catch` block runs if an error is thrown in the asynchronous function, and this will happen if the promise returned by either of the methods is rejected.
 
 ```js
-async function myFunction {
-  // ...
+async function myFunction() {
+  // …
   await someObject.methodThatReturnsPromise();
-  // ...
+  // …
   await aFunctionThatReturnsPromise();
-  // ...
+  // …
 }
 
 try {
-  // ...
+  // …
   myFunction();
-  // ...
+  // …
 } catch (e) {
- // error handling code
+  // error handling code
 }
 ```
 
@@ -160,13 +162,13 @@ the function then continues to the next `await`, and waits until the promise ret
 You would call the `myFunction()` in a `try...catch` block to catch any errors.
 
 ```js
-async function myFunction {
-  // ...
+async function myFunction() {
+  // …
   const [resultFunction1, resultFunction2] = await Promise.all([
-     functionThatReturnsPromise1(),
-     functionThatReturnsPromise2()
+    functionThatReturnsPromise1(),
+    functionThatReturnsPromise2(),
   ]);
-  // ...
+  // …
   await anotherFunctionThatReturnsPromise(resultFunction1);
 }
 ```
@@ -305,13 +307,13 @@ Most of the [SchemaTypes](https://mongoosejs.com/docs/schematypes.html) (the des
 
 The code also shows both ways of declaring a field:
 
-- Field _name_ and _type_ as a key-value pair (i.e. as done with fields `name`, `binary` and `living`).
+- Field _name_ and _type_ as a key-value pair (i.e., as done with fields `name`, `binary` and `living`).
 - Field _name_ followed by an object defining the `type`, and any other _options_ for the field. Options include things like:
 
   - default values.
-  - built-in validators (e.g. max/min values) and custom validation functions.
+  - built-in validators (e.g., max/min values) and custom validation functions.
   - Whether the field is required
-  - Whether `String` fields should automatically be set to lowercase, uppercase, or trimmed (e.g. `{ type: String, lowercase: true, trim: true }`)
+  - Whether `String` fields should automatically be set to lowercase, uppercase, or trimmed (e.g., `{ type: String, lowercase: true, trim: true }`)
 
 For more information about options see [SchemaTypes](https://mongoosejs.com/docs/schematypes.html) (Mongoose docs).
 
@@ -369,7 +371,7 @@ We provide a brief overview below. For more information see: [Models](https://mo
 
 > [!NOTE]
 > Creation, update, deletion and querying of records are asynchronous operations that return a [promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
-> The examples below show just the use of the relevant methods and `await` (i.e. the essential code for using the methods).
+> The examples below show just the use of the relevant methods and `await` (i.e., the essential code for using the methods).
 > The surrounding `async function` and `try...catch` block to catch errors are omitted for clarity.
 > For more information on using `await/async` see [Database APIs are asynchronous](#database_apis_are_asynchronous) above.
 
@@ -399,7 +401,7 @@ You can access the fields in this new record using the dot syntax, and change th
 
 ```js
 // Access model field values using dot notation
-console.log(awesome_instance.name); //should log 'also_awesome'
+console.log(awesome_instance.name); // should log 'also_awesome'
 
 // Change record by modifying the fields, then calling save().
 awesome_instance.name = "New cool name";
@@ -582,7 +584,7 @@ For this tutorial, we're going to use the [MongoDB Atlas](https://www.mongodb.co
 
 > [!NOTE]
 > If you prefer, you can set up a MongoDB database locally by downloading and installing the [appropriate binaries for your system](https://www.mongodb.com/try/download/community-edition/releases). The rest of the instructions in this article would be similar, except for the database URL you would specify when connecting.
-> In the [Express Tutorial Part 7: Deploying to Production](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment) tutorial we host both the application and database on [Railway](https://railway.app/), but we could equally well have used a database on [MongoDB Atlas](https://www.mongodb.com/products/platform/atlas-database).
+> In the [Express Tutorial Part 7: Deploying to Production](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment) tutorial we host both the application and database on [Railway](https://railway.com/), but we could equally well have used a database on [MongoDB Atlas](https://www.mongodb.com/products/platform/atlas-database).
 
 You will first need to [create an account](https://www.mongodb.com/cloud/atlas/register) with MongoDB Atlas (this is free, and just requires that you enter basic contact details and acknowledge their terms of service).
 
@@ -680,7 +682,7 @@ npm install mongoose
 ## Connect to MongoDB
 
 Open **/app.js** (in the root of your project) and copy the following text below where you declare the _Express application object_ (after the line `const app = express();`).
-Replace the database URL string ('_insert_your_database_url_here_') with the location URL representing your own database (i.e. using the information from _MongoDB Atlas_).
+Replace the database URL string ('_insert_your_database_url_here_') with the location URL representing your own database (i.e., using the information from _MongoDB Atlas_).
 
 ```js
 // Set up mongoose connection
@@ -706,7 +708,7 @@ We will define a separate module for each model, as [discussed above](#one_schem
 Start by creating a folder for our models in the project root (**/models**) and then create separate files for each of the models:
 
 ```plain
-/express-locallibrary-tutorial  // the project root
+/express-locallibrary-tutorial  # the project root
   /models
     author.js
     book.js
@@ -836,7 +838,7 @@ Everything else should be familiar from our previous schema.
 
 ### Genre model - challenge
 
-Open your **./models/genre.js** file and create a schema for storing genres (the category of book, e.g. whether it is fiction or non-fiction, romance or military history, etc.).
+Open your **./models/genre.js** file and create a schema for storing genres (the category of book, e.g., whether it is fiction or non-fiction, romance or military history, etc.).
 
 The definition will be very similar to the other models:
 

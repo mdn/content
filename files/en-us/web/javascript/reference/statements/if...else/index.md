@@ -9,7 +9,7 @@ browser-compat: javascript.statements.if_else
 
 The **`if...else`** statement executes a statement if a specified condition is {{Glossary("truthy")}}. If the condition is {{Glossary("falsy")}}, another statement in the optional `else` clause will be executed.
 
-{{InteractiveExample("JavaScript Demo: Statement - If...Else")}}
+{{InteractiveExample("JavaScript Demo: if...else statement")}}
 
 ```js interactive-example
 function testNum(a) {

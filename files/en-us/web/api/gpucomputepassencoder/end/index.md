@@ -31,7 +31,7 @@ None ({{jsxref("Undefined")}}).
 
 The following criteria must be met when calling **`end()`**, otherwise a {{domxref("GPUValidationError")}} is generated and the {{domxref("GPUComputePassEncoder")}} becomes invalid:
 
-- The {{domxref("GPUComputePassEncoder")}} is open (i.e. not already ended via an `end()` call).
+- The {{domxref("GPUComputePassEncoder")}} is open (i.e., not already ended via an `end()` call).
 - any {{domxref("GPUComputePassEncoder.pushDebugGroup", "pushDebugGroup()")}} calls made on this encoder have a corresponding {{domxref("GPUComputePassEncoder.popDebugGroup", "popDebugGroup()")}} call before `end()` is called.
 
 ## Examples
@@ -41,7 +41,7 @@ In our [basic compute demo](https://mdn.github.io/dom-examples/webgpu-compute-de
 ```js
 const BUFFER_SIZE = 1000;
 
-// ...
+// …
 
 // Create GPUCommandEncoder to encode commands to issue to the GPU
 const commandEncoder = device.createCommandEncoder();
@@ -69,7 +69,7 @@ commandEncoder.copyBufferToBuffer(
 // End frame by passing array of command buffers to command queue for execution
 device.queue.submit([commandEncoder.finish()]);
 
-// ...
+// …
 ```
 
 ## Specifications

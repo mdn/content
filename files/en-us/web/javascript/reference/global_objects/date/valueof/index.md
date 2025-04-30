@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Date.valueOf
 
 The **`valueOf()`** method of {{jsxref("Date")}} instances returns the number of milliseconds for this date since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date), which is defined as the midnight at the beginning of January 1, 1970, UTC.
 
-{{InteractiveExample("JavaScript Demo: Date.valueOf()")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.valueOf()")}}
 
 ```js interactive-example
 const date1 = new Date(Date.UTC(96, 1, 2, 3, 4, 5));
@@ -39,7 +39,7 @@ A number representing the [timestamp](/en-US/docs/Web/JavaScript/Reference/Globa
 
 ## Description
 
-The `valueOf()` method is part of the [type coercion protocol](/en-US/docs/Web/JavaScript/Data_structures#type_coercion). Because `Date` has a [`[Symbol.toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive) method, that method always takes priority over `valueOf()` when a `Date` object is implicitly [coerced to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion). However, `Date.prototype[Symbol.toPrimitive]()` still calls `this.valueOf()` internally.
+The `valueOf()` method is part of the [type coercion protocol](/en-US/docs/Web/JavaScript/Guide/Data_structures#type_coercion). Because `Date` has a [`[Symbol.toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive) method, that method always takes priority over `valueOf()` when a `Date` object is implicitly [coerced to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion). However, `Date.prototype[Symbol.toPrimitive]()` still calls `this.valueOf()` internally.
 
 The {{jsxref("Date")}} object overrides the {{jsxref("Object/valueOf", "valueOf()")}} method of {{jsxref("Object")}}. `Date.prototype.valueOf()` returns the timestamp of the date, which is functionally equivalent to the {{jsxref("Date.prototype.getTime()")}} method.
 

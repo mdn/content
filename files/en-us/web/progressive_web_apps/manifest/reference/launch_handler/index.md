@@ -4,7 +4,7 @@ slug: Web/Progressive_web_apps/Manifest/Reference/launch_handler
 page-type: web-manifest-member
 status:
   - experimental
-browser-compat: html.manifest.launch_handler
+browser-compat: manifests.webapp.launch_handler
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}{{SeeCompatTable}}

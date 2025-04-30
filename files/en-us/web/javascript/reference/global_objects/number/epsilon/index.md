@@ -39,7 +39,7 @@ Because `EPSILON` is a static property of {{jsxref("Number")}}, you always use i
 
 ### Testing equality
 
-Any number encoding system occupying a finite number of bits, of whatever base you choose (e.g. decimal or binary), will _necessarily_ be unable to represent all numbers exactly, because you are trying to represent an infinite number of points on the number line using a finite amount of memory. For example, a base-10 (decimal) system cannot represent 1/3 exactly, and a base-2 (binary) system cannot represent `0.1` exactly. Thus, for example, `0.1 + 0.2` is not exactly equal to `0.3`:
+Any number encoding system occupying a finite number of bits, of whatever base you choose (e.g., decimal or binary), will _necessarily_ be unable to represent all numbers exactly, because you are trying to represent an infinite number of points on the number line using a finite amount of memory. For example, a base-10 (decimal) system cannot represent 1/3 exactly, and a base-2 (binary) system cannot represent `0.1` exactly. Thus, for example, `0.1 + 0.2` is not exactly equal to `0.3`:
 
 ```js
 console.log(0.1 + 0.2); // 0.30000000000000004
@@ -86,7 +86,7 @@ const z = 2000.3;
 console.log(equal(x + y, z, 2000 * Number.EPSILON)); // true
 ```
 
-In addition to magnitude, it is important to consider the _accuracy_ of your input. For example, if the numbers are collected from a form input and the input value can only be adjusted by steps of `0.1` (i.e. [`<input type="number" step="0.1">`](/en-US/docs/Web/HTML/Attributes/step)), it usually makes sense to allow a much larger tolerance, such as `0.01`, since the data only has a precision of `0.1`.
+In addition to magnitude, it is important to consider the _accuracy_ of your input. For example, if the numbers are collected from a form input and the input value can only be adjusted by steps of `0.1` (i.e., [`<input type="number" step="0.1">`](/en-US/docs/Web/HTML/Reference/Attributes/step)), it usually makes sense to allow a much larger tolerance, such as `0.01`, since the data only has a precision of `0.1`.
 
 > [!NOTE]
 > Important takeaway: do not simply use `Number.EPSILON` as a threshold for equality testing. Use a threshold that is appropriate for the magnitude and accuracy of the numbers you are comparing.
@@ -102,4 +102,5 @@ In addition to magnitude, it is important to consider the _accuracy_ of your inp
 ## See also
 
 - [Polyfill of `Number.EPSILON` in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
+- [es-shims polyfill of `Number.EPSILON`](https://www.npmjs.com/package/es-constants)
 - {{jsxref("Number")}}

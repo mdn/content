@@ -23,7 +23,7 @@ The markup is a container with elements inside for a header, footer, main conten
   box-sizing: border-box;
 }
 .wrapper {
-  max-inline-size: 1024px;
+  max-width: 1024px;
   margin: 0 auto;
   font:
     1.2em Helvetica,
@@ -112,7 +112,7 @@ This does not create a layout. Rather, the items now have names we can use to do
 With our mobile layout in place, we can now proceed to add a {{cssxref("@media")}} query to adapt this layout for bigger screens with enough real estate to display two columns.
 
 ```css
-@media (min-inline-size: 500px) {
+@media (min-width: 500px) {
   .wrapper {
     grid-template-columns: 1fr 3fr;
     grid-template-areas:
@@ -133,7 +133,7 @@ You can see the layout taking shape in the value of {{cssxref("grid-template-are
 We can now add a final breakpoint for wider screens able to display a three-column layout.
 
 ```css
-@media (min-inline-size: 700px) {
+@media (min-width: 700px) {
   .wrapper {
     grid-template-columns: 1fr 4fr 1fr;
     grid-template-areas:
@@ -162,7 +162,7 @@ CSS frameworks and grid systems commonly use 12- or 16-column flexible grids. We
 
 ```css hidden
 .wrapper {
-  max-inline-size: 1024px;
+  max-width: 1024px;
   margin: 0 auto;
   font:
     1.2em Helvetica,
@@ -239,7 +239,7 @@ To see how this layout method works in practice, we can create the same layout w
   box-sizing: border-box;
 }
 .wrapper {
-  max-inline-size: 1024px;
+  max-width: 1024px;
   margin: 0 auto;
   font:
     1.2em Helvetica,
@@ -311,7 +311,7 @@ At the next breakpoint, we want a two-column layout. Our header and navigation s
 The `ad` panel is below the sidebar, starting at grid row line 4. Then we have the content and footer starting at col-start 4 and spanning nine tracks, taking both to the end of the grid.
 
 ```css
-@media (min-inline-size: 500px) {
+@media (min-width: 500px) {
   .side {
     grid-column: col-start / span 3;
     grid-row: 3;
@@ -334,7 +334,7 @@ The `ad` panel is below the sidebar, starting at grid row line 4. Then we have t
 Finally, for screens larger than our largest breakpoint, we define a three-column version of this layout. The header continues to span right across the grid, but now the navigation moves down to become the first sidebar, with the content and then the sidebar next to it. The footer now also spans across the full layout.
 
 ```css
-@media (min-inline-size: 700px) {
+@media (min-width: 700px) {
   .main-nav {
     grid-column: col-start / span 2;
     grid-row: 2 / 4;
@@ -434,7 +434,7 @@ The markup for the listing is an unordered list of items. Each item contains a h
   box-sizing: border-box;
 }
 img {
-  max-inline-size: 100%;
+  max-width: 100%;
   display: block;
 }
 body {

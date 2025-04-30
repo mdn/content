@@ -9,7 +9,31 @@ browser-compat: css.properties.user-select
 
 The **`user-select`** [CSS](/en-US/docs/Web/CSS) property controls whether the user can select text. This doesn't have any effect on content loaded as part of a browser's user interface (its {{Glossary("Chrome", "chrome")}}), except in textboxes.
 
-{{EmbedInteractiveExample("pages/css/user-select.html")}}
+{{InteractiveExample("CSS Demo: user-select")}}
+
+```css interactive-example-choice
+user-select: none;
+```
+
+```css interactive-example-choice
+user-select: text;
+```
+
+```css interactive-example-choice
+user-select: all;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">Try to select this text</p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  font-size: 1.5rem;
+}
+```
 
 ## Syntax
 

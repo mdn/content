@@ -9,7 +9,7 @@ browser-compat: javascript.operators.nullish_coalescing_assignment
 
 The **nullish coalescing assignment (`??=`)** operator, also known as the **logical nullish assignment** operator, only evaluates the right operand and assigns to the left if the left operand is {{Glossary("nullish")}} (`null` or `undefined`).
 
-{{InteractiveExample("JavaScript Demo: Expressions - Nullish coalescing assignment")}}
+{{InteractiveExample("JavaScript Demo: Nullish coalescing assignment (??=) operator")}}
 
 ```js interactive-example
 const a = { duration: 50 };
@@ -67,7 +67,7 @@ x ??= console.log("y evaluated");
 
 ### Using nullish coalescing assignment
 
-You can use the nullish coalescing assignment operator to apply default values to object properties. Compared to using destructuring and [default values](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#default_value), `??=` also applies the default value if the property has value `null`.
+You can use the nullish coalescing assignment operator to apply default values to object properties. Compared to using destructuring and [default values](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring#default_value), `??=` also applies the default value if the property has value `null`.
 
 ```js
 function config(options) {

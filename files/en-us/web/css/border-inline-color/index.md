@@ -9,7 +9,43 @@ browser-compat: css.properties.border-inline-color
 
 The **`border-inline-color`** [CSS](/en-US/docs/Web/CSS) property defines the color of the logical inline borders of an element, which maps to a physical border color depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top-color")}} and {{cssxref("border-bottom-color")}}, or {{cssxref("border-right-color")}} and {{cssxref("border-left-color")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
 
-{{EmbedInteractiveExample("pages/css/border-inline-color.html")}}
+{{InteractiveExample("CSS Demo: border-inline-color")}}
+
+```css interactive-example-choice
+border-inline-color: red;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-inline-color: #32a1ce;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+border-inline-color: rgb(170, 50, 220, 0.6);
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+  unicode-bidi: bidi-override;
+}
+```
 
 The border color in the other dimension can be set with {{cssxref("border-block-color")}} which sets {{cssxref("border-block-start-color")}}, and {{cssxref("border-block-end-color")}}.
 

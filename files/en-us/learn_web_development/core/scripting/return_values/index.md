@@ -2,9 +2,8 @@
 title: Function return values
 slug: Learn_web_development/Core/Scripting/Return_values
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Build_your_own_function","Learn_web_development/Core/Scripting/Events", "Learn_web_development/Core/Scripting")}}
 
@@ -22,7 +21,7 @@ There's one last essential concept about functions for us to discuss — return 
         <ul>
           <li>What returns values are.</li>
           <li>How to use the return values of existing functions.</li>
-          <li>Adding return values to your own fuctions.</li>
+          <li>Adding return values to your own functions.</li>
         </ul>
       </td>
     </tr>
@@ -176,7 +175,7 @@ Some extra function-related tips:
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Functions](/en-US/docs/Learn_web_development/Core/Scripting/Building_blocks/Test_your_skills:_Functions).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Functions](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Functions).
 
 ## Conclusion
 

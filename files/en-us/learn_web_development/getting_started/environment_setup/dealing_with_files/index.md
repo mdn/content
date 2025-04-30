@@ -2,9 +2,8 @@
 title: Dealing with files
 slug: Learn_web_development/Getting_started/Environment_setup/Dealing_with_files
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup/Command_line", "Learn_web_development/Getting_started/Environment_setup")}}
 
@@ -99,7 +98,7 @@ You should see your `web-projects` folder open in the VS Code _EXPLORER_ pane, a
 
 #### An aside on keyboard navigation in VS Code
 
-VS Code, while not perfect by any means, has an extensive set of keyboard shortcuts. Throughout this article we've tried to include useful ones where possible, but you can find more comprehensive lists at the VS Code [Keyboard Shortcuts Reference](https://code.visualstudio.com/docs/getstarted/keybindings#_keyboard-shortcuts-reference).
+VS Code, while not perfect by any means, has an extensive set of keyboard shortcuts. Throughout this article we've tried to include useful ones where possible, but you can find more comprehensive lists at the VS Code [Keyboard Shortcuts Reference](https://code.visualstudio.com/docs/configure/keybindings).
 
 In general, if you want to navigate VS Code via the keyboard, you can press the <kbd>Tab</kbd> key to move around different areas of the UI (<kbd>Shift</kbd> + <kbd>Tab</kbd> will move you to a previous tab focus position). If there are multiple buttons in a tab focus position, you can use the cursor keys to move between them.
 
@@ -177,6 +176,8 @@ On Windows computers, you might have trouble seeing the extensions of some files
 
 As you follow this course, you'll notice that we always ask you to name folders and files completely in lowercase with no spaces. There are many ways in which using spaces in file and folder names creates issues — some of the more common ones are as follows:
 
+<!-- cSpell:ignore myimage -->
+
 1. Many computer systems, including most web servers, are case-sensitive. So for example, if you put an image on your website at `test-site/images/MyImage.jpg` and then in a different file you try to reference the image with `test-site/images/myimage.jpg`, it may not work.
 2. When you invoke commands on the command line, you have to put quotes around file names with spaces in them, otherwise they will be interpreted as two separate items.
 3. Some programming languages (for example, Python) do not work well with spaces in file names in certain circumstances (for example, if these files are modules to be imported).
@@ -233,6 +234,6 @@ You should see a basic webpage displaying your image!
 - You can combine these as much as you like, for example `../subfolder/another-subfolder/my-image.jpg`.
 
 > [!NOTE]
-> The Windows file system tends to use backslashes, not forward slashes, e.g. `C:\Windows`. This doesn't matter in HTML — even if you are developing your website on Windows, you should still use forward slashes in your code.
+> The Windows file system tends to use backslashes, not forward slashes, e.g., `C:\Windows`. This doesn't matter in HTML — even if you are developing your website on Windows, you should still use forward slashes in your code.
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup/Command_line", "Learn_web_development/Getting_started/Environment_setup")}}

@@ -4,7 +4,7 @@ slug: Web/API/Web_Animations_API/Tips
 page-type: guide
 ---
 
-{{CSSRef}}
+{{DefaultAPISidebar("Web Animations")}}
 
 CSS animations make it possible to do incredible things with the elements that make up your documents and apps. There are things you might want to do that aren't obvious and many clever ways to do things that may not be immediately apparent. This article is a collection of tips and tricks we've found that will hopefully make your work easier, including how to re-run a completed animation.
 

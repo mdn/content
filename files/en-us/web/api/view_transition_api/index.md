@@ -24,7 +24,7 @@ However, creating view transitions on the web has historically been difficult:
   - Stop accidental user interactions with the old content from causing problems.
   - Remove the old content once the transition is complete.
     Accessibility issues like loss of reading position, focus confusion, and strange live region announcement behavior can also result from having the new and old content both present in the DOM at once.
-- Cross-document view transitions (i.e. across navigations between different pages in MPAs) have historically been impossible.
+- Cross-document view transitions (i.e., across navigations between different pages in MPAs) have historically been impossible.
 
 The View Transition API provides an easy way of handling the required view changes and transition animations for both the above use cases.
 
@@ -35,7 +35,7 @@ See [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Usin
 ## Interfaces
 
 - {{domxref("ViewTransition")}}
-  - : Represents a view transition, and provides functionality to react to the transition reaching different states (e.g. ready to run the animation, or animation finished) or skip the transition altogether.
+  - : Represents a view transition, and provides functionality to react to the transition reaching different states (e.g., ready to run the animation, or animation finished) or skip the transition altogether.
 
 ## Extensions to other interfaces
 
@@ -52,7 +52,7 @@ See [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Usin
 
 ## HTML additions
 
-- [`<link rel="expect">`](/en-US/docs/Web/HTML/Attributes/rel#expect)
+- [`<link rel="expect">`](/en-US/docs/Web/HTML/Reference/Attributes/rel#expect)
   - : Identifies the most critical content in the associated document for the user's initial view of the page. Document rendering will be blocked until the critical content has been parsed, ensuring a consistent first paint — and therefore, view transition — across all supporting browsers.
 
 ## CSS additions
@@ -99,4 +99,4 @@ See [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Usin
 
 - [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/) on developer.chrome.com (2024)
 - [View Transition API: Creating Smooth Page Transitions](https://stackdiary.com/view-transitions-api/) on stackdiary.com (2023)
-- [View Transitions API: Single Page Apps Without a Framework](https://www.debugbear.com/blog/view-transitions-spa-without-framework) on www.debugbear.com (2024)
+- [View Transitions API: Single Page Apps Without a Framework](https://www.debugbear.com/blog/view-transitions-spa-without-framework) on DebugBear (2024)

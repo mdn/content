@@ -75,7 +75,7 @@ Container queries are similar to dimension [media queries](/en-US/docs/Web/CSS/C
   - {{CSSxRef("aspect-ratio")}} property
   - {{cssxref("contain-intrinsic-size")}} shorthand property
   - {{CSSxRef("contain-intrinsic-inline-size")}} property
-  - {{CSSxRef("contain-intrinsic-size")}} property
+  - {{CSSxRef("contain-intrinsic-block-size")}} property
   - {{CSSxRef("contain-intrinsic-width")}} property
   - {{CSSxRef("contain-intrinsic-height")}} property
 

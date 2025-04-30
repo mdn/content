@@ -56,31 +56,13 @@ createTexture(descriptor)
 
       - : An object or array specifying the width, height, and depth/array layer count of the texture. The width value must always be specified, while the height and depth/array layer count values are optional and will default to 1 if omitted.
 
-        What follows is a sample `size` array:
-
-        ```js
-        size: [16, 16, 2];
-        ```
-
-        The object equivalent would look like this:
-
-        ```js
-        size: {
-          width: 16,
-          height: 16,
-          depthOrArrayLayers: 2
-        }
-        ```
+        For example, you can pass an array like `[16, 16, 2]`, or its equivalent object `{ width: 16, height: 16, depthOrArrayLayers: 2 }`.
 
     - `usage`
 
       - : The {{glossary("Bitwise_flags", "bitwise flags")}} representing the allowed usages for the `GPUTexture`. The possible values are in the [`GPUTexture.usage` value table](/en-US/docs/Web/API/GPUTexture/usage#value).
 
-        Note that multiple possible usages can be specified by separating values with pipe symbols, for example:
-
-        ```js
-        usage: GPUTextureUsage.COPY_DST | GPUTextureUsage.RENDER_ATTACHMENT;
-        ```
+        Note that multiple possible usages can be specified by separating values with [bitwise OR](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR), for example: `GPUTextureUsage.COPY_DST | GPUTextureUsage.RENDER_ATTACHMENT`.
 
         > [!NOTE]
         >
@@ -139,7 +121,7 @@ In the WebGPU samples [Textured Cube sample](https://webgpu.github.io/webgpu-sam
 - Copying the image bitmap into the texture using {{domxref("GPUQueue.copyExternalImageToTexture()")}}.
 
 ```js
-//...
+// …
 
 let cubeTexture;
 
@@ -167,7 +149,7 @@ let cubeTexture;
   );
 }
 
-//...
+// …
 ```
 
 ## Specifications

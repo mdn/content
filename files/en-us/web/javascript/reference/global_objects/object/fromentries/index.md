@@ -110,6 +110,7 @@ console.log(object2);
 ## See also
 
 - [Polyfill of `Object.fromEntries` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [es-shims polyfill of `Object.fromEntries`](https://www.npmjs.com/package/object.fromentries)
 - {{jsxref("Object.entries()")}}
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.values()")}}

@@ -13,7 +13,7 @@ This article explains how imported global string constants work.
 
 Let's start by exploring how string imports have traditionally worked in WebAssembly. In a Wasm module, you could import a couple of strings from a namespace called `"string_constants"` with the following snippet:
 
-```wasm
+```wat
 (global (import "string_constants" "string_constant_1") externref)
 (global (import "string_constants" "string_constant_2") externref)
 ```
@@ -22,11 +22,11 @@ In your JavaScript, you would then provide the strings to import in an `importOb
 
 ```js
 importObject = {
-  ...,
+  // …
   string_constants: {
     string_constant_1: "hello ",
     string_constant_2: "world!",
-    ...
+    // …
   },
 };
 ```
@@ -47,7 +47,7 @@ This is sub-optimal for several reasons:
 
 Import names can be any unicode string you like, so developers often set the entire string as the import name for convenience (for example, when debugging). This would result in our above Wasm snippet being rewritten like so:
 
-```wasm
+```wat
 (global (import "string_constants" "hello ") externref)
 (global (import "string_constants" "world!") externref)
 ```
@@ -56,11 +56,11 @@ And the accompanying `importObject` like this:
 
 ```js
 importObject = {
-  ...,
+  // …
   string_constants: {
     "hello ": "hello ",
     "world!": "world!",
-    ...
+    // …
   },
 };
 ```
@@ -96,7 +96,7 @@ The `compileOptions` object is available to the following functions:
 
 Over in your WebAssembly module, you can now import string literals, specifying the same namespace you specified in `importedStringConstants` over in the JavaScript:
 
-```wasm
+```wat
 (global $h (import "string_constants" "hello ") externref)
 (global $w (import "string_constants" "world!") externref)
 ```
@@ -109,7 +109,7 @@ The above example uses `"string_constants"` as the imported global string namesp
 
 If you are already using the `""` namespace for some other purpose, you should consider using a single-character namespace for your strings such as `"s"`, `"'"`, or `"#"`.
 
-The namespace choice is generally made by the authors of the toolchain that will generate the Wasm modules. Once you have a `.wasm` file and want to embed it in your JavaScript, you can't freely choose this namespace any more; you have to use what the `.wasm` file expects.
+The namespace choice is generally made by the authors of the toolchain that will generate the Wasm modules. Once you have a `.wasm` file and want to embed it in your JavaScript, you can't freely choose this namespace anymore; you have to use what the `.wasm` file expects.
 
 ## Imported global string example
 
@@ -138,7 +138,7 @@ fetch("log-concat.wasm")
 
 The text representation of our WebAssembly module code looks like this — notice how it imports two strings in the specified namespace, which are later used in the `$concat` function:
 
-```wasm
+```wat
 (module
   (global $h (import "string_constants" "hello ") externref)
   (global $w (import "string_constants" "world!") externref)

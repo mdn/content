@@ -9,7 +9,7 @@ browser-compat: javascript.operators.addition_assignment
 
 The **addition assignment (`+=`)** operator performs [addition](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) (which is either numeric addition or string concatenation) on the two operands and assigns the result to the left operand.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Addition assignment operator")}}
+{{InteractiveExample("JavaScript Demo: Addition assignment (+=) operator")}}
 
 ```js interactive-example
 let a = 2;

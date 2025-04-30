@@ -90,7 +90,7 @@ You can declare a variable in two ways:
 - With the keyword {{jsxref("Statements/var", "var")}}. For example, `var x = 42`. This syntax can be used to declare both **local** and **global** variables, depending on the _execution context_.
 - With the keyword {{jsxref("Statements/const", "const")}} or {{jsxref("Statements/let", "let")}}. For example, `let y = 13`. This syntax can be used to declare a block-scope local variable. (See [Variable scope](#variable_scope) below.)
 
-You can declare variables to unpack values using the [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) syntax. For example, `const { bar } = foo`. This will create a variable named `bar` and assign to it the value corresponding to the key of the same name from our object `foo`.
+You can declare variables to unpack values using the [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) syntax. For example, `const { bar } = foo`. This will create a variable named `bar` and assign to it the value corresponding to the key of the same name from our object `foo`.
 
 Variables should always be declared before they are used. JavaScript used to allow assigning to undeclared variables, which creates an **[undeclared global](/en-US/docs/Web/JavaScript/Reference/Statements/var#description)** variable. This is an error in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode#assigning_to_undeclared_variables) and should be avoided altogether.
 
@@ -295,6 +295,7 @@ In the case that a value representing a number is in memory as a string, there a
 
 - {{jsxref("parseInt()")}}
 - {{jsxref("parseFloat()")}}
+- {{jsxref("Number()")}}
 
 `parseInt` only returns whole numbers, so its use is diminished for decimals.
 
@@ -305,7 +306,7 @@ In the case that a value representing a number is in memory as a string, there a
 parseInt("101", 2); // 5
 ```
 
-An alternative method of retrieving a number from a string is with the `+` (unary plus) operator:
+An alternative method of retrieving a number from a string is with the `+` (unary plus) operator. This implicitly performs [number conversion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), which is the same process as the {{jsxref("Number()")}} function.
 
 ```js-nolint
 "1.1" + "1.1"; // '1.11.1'
@@ -358,7 +359,7 @@ Note that the second item is "empty", which is not exactly the same as the actua
 
 If you include a trailing comma at the end of the list of elements, the comma is ignored.
 
-In the following example, the `length` of the array is three. There is no `myList[3]`. All other commas in the list indicate a new element.
+In the following example, the `length` of the array is three. There is no `myList[3]` and `myList[1]` is empty. All other commas in the list indicate a new element.
 
 ```js
 const myList = ["home", , "school"];
@@ -494,11 +495,11 @@ Property names that are not valid identifiers cannot be accessed as a dot (`.`) 
 
 ```js-nolint example-bad
 const unusualPropertyNames = {
-  '': 'An empty string',
-  '!': 'Bang!'
-}
-console.log(unusualPropertyNames.'');   // SyntaxError: Unexpected string
-console.log(unusualPropertyNames.!);    // SyntaxError: Unexpected token !
+  "": "An empty string",
+  "!": "Bang!",
+};
+console.log(unusualPropertyNames.""); // SyntaxError: Unexpected string
+console.log(unusualPropertyNames.!); // SyntaxError: Unexpected token !
 ```
 
 Instead, they must be accessed with the bracket notation (`[]`).

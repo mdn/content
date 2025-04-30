@@ -131,10 +131,10 @@ function Rectangle() {
   // size and position. For each we use a different number,
   // because we want horizontal size, vertical size and
   // position to be determined independently.
-  const randNums = getRandomVector();
-  rect.size = [5 + 120 * randNums[0], 5 + 120 * randNums[1]];
+  const randVec = getRandomVector();
+  rect.size = [5 + 120 * randVec[0], 5 + 120 * randVec[1]];
   rect.position = [
-    randNums[2] * (gl.drawingBufferWidth - rect.size[0]),
+    randVec[2] * (gl.drawingBufferWidth - rect.size[0]),
     gl.drawingBufferHeight,
   ];
   rect.velocity = 1.0 + 6.0 * Math.random();

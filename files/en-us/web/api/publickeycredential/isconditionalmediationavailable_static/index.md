@@ -24,6 +24,13 @@ None.
 
 A {{jsxref("Promise")}} which resolves to a boolean value indicating whether or not conditional mediation is available.
 
+### Exceptions
+
+The returned {{jsxref("Promise")}} may be rejected with the following values:
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : The RP domain is not valid.
+
 ## Examples
 
 Before invoking a conditional WebAuthn API call, check if:
@@ -43,7 +50,7 @@ if (
     // Call WebAuthn authentication
     const publicKeyCredentialRequestOptions = {
       // Server generated challenge
-      challenge: ****,
+      challenge: challengeFromServer,
       // The same RP ID as used during registration
       rpId: "example.com",
     };

@@ -75,6 +75,10 @@ To stop receiving notifications about changes to the value of your media query, 
 mediaQueryList.removeEventListener("change", handleOrientationChange);
 ```
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

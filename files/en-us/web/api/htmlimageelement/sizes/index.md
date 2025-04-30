@@ -10,7 +10,7 @@ browser-compat: api.HTMLImageElement.sizes
 
 The {{domxref("HTMLImageElement")}} property
 **`sizes`** allows you to specify the layout width of the
-[image](/en-US/docs/Web/HTML/Element/img) for each of a list of media conditions. This provides the ability to
+[image](/en-US/docs/Web/HTML/Reference/Elements/img) for each of a list of media conditions. This provides the ability to
 automatically select among different images—even images of different orientations or
 aspect ratios—as the document state changes to match different media
 conditions.
@@ -24,7 +24,7 @@ A string containing a comma-separated list of source size descriptors
 followed by an optional fallback size. Each source size descriptor is
 comprised of a media condition, then at least one whitespace character, then the
 source size value to use for the image when the media condition
-evaluates to `true`. For more information about the syntax of the `sizes` attribute, see [`<img>`](/en-US/docs/Web/HTML/Element/img#sizes).
+evaluates to `true`. For more information about the syntax of the `sizes` attribute, see [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes).
 
 ## Examples
 
@@ -142,5 +142,5 @@ The page is best {{LiveSampleLink('Selecting an image to fit window width', 'vie
 - [Media queries](/en-US/docs/Web/CSS/CSS_media_queries)
 - [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [HTML images](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images)
-- [Responsive images](/en-US/docs/Web/HTML/Responsive_images)
-- [Using the `srcset` and `sizes` attributes](/en-US/docs/Web/HTML/Element/img#using_the_srcset_and_sizes_attributes)
+- [Responsive images](/en-US/docs/Web/HTML/Guides/Responsive_images)
+- [Using the `srcset` and `sizes` attributes](/en-US/docs/Web/HTML/Reference/Elements/img#using_the_srcset_and_sizes_attributes)

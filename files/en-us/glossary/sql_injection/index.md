@@ -56,10 +56,10 @@ The password is not 'anything', hence password=anything results in FALSE, but '1
 
 Before executing the queries for the user credentials, make some changes like the following:
 
-```sql
-$id = $_GET['id']
+```php
+$id = $_GET["id"]
 
-(1) $id = Stripslashes($id)
+(1) $id = stripslashes($id)
 
 (2) $id = mysql_real_escape_String($id)
 ```

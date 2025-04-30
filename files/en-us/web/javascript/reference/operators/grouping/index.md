@@ -9,7 +9,7 @@ browser-compat: javascript.operators.grouping
 
 The **grouping `( )`** operator controls the precedence of evaluation in expressions. It also acts as a container for arbitrary expressions in certain syntactic constructs, where ambiguity or syntax errors would otherwise occur.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Grouping operator")}}
+{{InteractiveExample("JavaScript Demo: Grouping operator")}}
 
 ```js interactive-example
 console.log(1 + 2 * 3); // 1 + 6
@@ -140,7 +140,7 @@ This code would be parsed as:
 const a = 1(1).toString();
 ```
 
-Which throws "TypeError: 1 is not a function". If your coding style does not use semicolons, remember that when a line starts with a left parenthesis, _prefix_ it with a semicolon. This practice is recommended by several formatters and/or style guides, including [Prettier](https://prettier.io/docs/en/rationale.html#semicolons) and [standard](https://standardjs.com/rules.html#semicolons).
+Which throws "TypeError: 1 is not a function". If your coding style does not use semicolons, remember that when a line starts with a left parenthesis, _prefix_ it with a semicolon. This practice is recommended by several formatters and/or style guides, including [Prettier](https://prettier.io/docs/rationale.html#semicolons) and [standard](https://standardjs.com/rules.html#semicolons).
 
 ```js-nolint example-good
 const a = 1

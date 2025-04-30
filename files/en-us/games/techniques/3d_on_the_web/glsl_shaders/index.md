@@ -1,5 +1,5 @@
 ---
-title: GLSL Shaders
+title: GLSL shaders
 slug: Games/Techniques/3D_on_the_web/GLSL_Shaders
 page-type: guide
 ---

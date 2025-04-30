@@ -14,7 +14,7 @@ In JavaScript, numbers are implemented in [double-precision 64-bit binary format
 
 In addition to being able to represent floating-point numbers, the number type has three symbolic values: {{jsxref("Infinity")}}, `-Infinity`, and {{jsxref("NaN")}} (not-a-number).
 
-See also [JavaScript data types and structures](/en-US/docs/Web/JavaScript/Data_structures) for context with other primitive types in JavaScript.
+See also [JavaScript data types and structures](/en-US/docs/Web/JavaScript/Guide/Data_structures) for context with other primitive types in JavaScript.
 
 You can use four types of number literals: decimal, binary, octal, and hexadecimal.
 

@@ -39,6 +39,8 @@ let querying = browser.tabs.query(queryInfo)
       - : `boolean`. Whether the tabs are in the current window.
     - `discarded` {{optional_inline}}
       - : `boolean`. Whether the tabs are discarded. A discarded tab is one whose content has been unloaded from memory, but is still visible in the tab strip. Its content gets reloaded the next time it's activated.
+    - `groupId` {{optional_inline}}
+      - : `integer`. The ID of the tab group the tabs are in or `-1` for ungrouped tabs.
     - `hidden` {{optional_inline}}
       - : `boolean`. Whether the tabs are hidden.
     - `highlighted` {{optional_inline}}
@@ -64,7 +66,7 @@ let querying = browser.tabs.query(queryInfo)
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an `array` of `{{WebExtAPIRef('tabs.Tab')}}` objects, containing information about each matching tab.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an `array` of {{WebExtAPIRef('tabs.Tab')}} objects, containing information about each matching tab.
 
 If any error occurs, the promise will be rejected with an error message.
 

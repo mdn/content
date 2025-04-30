@@ -9,7 +9,50 @@ browser-compat: css.properties.font-optical-sizing
 
 The **`font-optical-sizing`** [CSS](/en-US/docs/Web/CSS) property sets whether text rendering is optimized for viewing at different sizes.
 
-{{EmbedInteractiveExample("pages/css/font-optical-sizing.html")}}
+{{InteractiveExample("CSS Demo: font-optical-sizing")}}
+
+```css interactive-example-choice
+font-optical-sizing: auto;
+```
+
+```css interactive-example-choice
+font-optical-sizing: none;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element" style="font-optical-sizing: auto">
+    <h2>Chapter 3</h2>
+    <p>
+      On this particular Thursday, something was moving quietly through the
+      ionosphere many miles above the surface of the planet; several somethings
+      in fact, several dozen huge yellow chunky slablike somethings, huge as
+      office blocks, silent as birds.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
+  font-family: Amstelvar;
+  font-style: normal;
+}
+
+#example-element {
+  font-family: Amstelvar;
+  text-align: left;
+}
+
+#example-element h2 {
+  font-size: 36px;
+}
+
+#example-element p {
+  font-size: 12px;
+}
+```
 
 ## Syntax
 

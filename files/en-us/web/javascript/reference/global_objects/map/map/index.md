@@ -50,6 +50,7 @@ const myMap = new Map([
 ## See also
 
 - [Polyfill for `Map` in `core-js`](https://github.com/zloirock/core-js#map)
+- [es-shims polyfill of `Map`](https://www.npmjs.com/package/es-map)
 - {{jsxref("Set")}}
 - {{jsxref("WeakMap")}}
 - {{jsxref("WeakSet")}}

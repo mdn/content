@@ -12,7 +12,7 @@ Firefox 21 was released on May 14, 2013. This article lists key changes that are
 
 ### HTML
 
-- The [`scoped`](/en-US/docs/Web/HTML/Element/style#scoped) attribute has been added to the {{HTMLElement("style")}} element. It allows to include styles that are isolated from the rest of the document. Such styles can be selected using the {{cssxref(":scope")}} CSS pseudo-element introduced in Firefox 20. ([Firefox bug 508725](https://bugzil.la/508725)).
+- The [`scoped`](/en-US/docs/Web/HTML/Reference/Elements/style#scoped) attribute has been added to the {{HTMLElement("style")}} element. It allows to include styles that are isolated from the rest of the document. Such styles can be selected using the {{cssxref(":scope")}} CSS pseudo-element introduced in Firefox 20. ([Firefox bug 508725](https://bugzil.la/508725)).
 - The new HTML {{HTMLElement("main")}} element has been implemented ([Firefox bug 820508](https://bugzil.la/820508)).
 
 ### JavaScript
@@ -38,13 +38,13 @@ Firefox 21 was released on May 14, 2013. This article lists key changes that are
 - Various keyCode values for OEM specific keys on Windows are now supported again ([Firefox bug 833719](https://bugzil.la/833719)).
 - The function [`window.crypto.getRandomValues`](/en-US/docs/Web/API/Crypto/getRandomValues) has been implemented ([Firefox bug 440046](https://bugzil.la/440046)).
 - The non-standard methods `NodeIterator.expandEntityReferences()` and `TreeWalker.expandEntityReferences()` have been removed ([Firefox bug 672190](https://bugzil.la/672190)).
-- CSSOM: the method {{domxref("CSSKeyframesRule")}}`.insertRule` has been removed to {{domxref("CSSKeyframesRule")}}`.appendRule` to match a spec change ([Firefox bug 841896](https://bugzil.la/841896)).
+- CSSOM: the method `CSSKeyframesRule.insertRule()` has been removed to {{domxref("CSSKeyframesRule.appendRule()")}} to match a spec change ([Firefox bug 841896](https://bugzil.la/841896)).
 - CSSOM If the given parameter given to {{domxref("CSSStyleSheet.insertRule")}} contains more than one rule, a {{domxref("DOMException")}} with a `SYNTAX_ERR` is now thrown ([Firefox bug 765599](https://bugzil.la/765599)).
 - Until now, when the same headers were repeatedly set with [`XMLHttpRequest.setRequestHeader`](/en-US/docs/Web/API/XMLHttpRequest#setrequestheader), the last-specified value was used. This behavior has been changed to comply with the spec, so those values will be properly combined ([Firefox bug 819051](https://bugzil.la/819051)).
 
 ### SVG
 
-- The [paint-order](/en-US/docs/Web/SVG/Attribute/paint-order) attribute has been implemented ([Firefox bug 828805](https://bugzil.la/828805)).
+- The [paint-order](/en-US/docs/Web/SVG/Reference/Attribute/paint-order) attribute has been implemented ([Firefox bug 828805](https://bugzil.la/828805)).
 - The `svg.smil.enabled` preference has been removed. SMIL is always on. ([Firefox bug 835030](https://bugzil.la/835030))
 
 ### Networking

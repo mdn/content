@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.decodeURIComponent
 
 The **`decodeURIComponent()`** function decodes a Uniform Resource Identifier (URI) component previously created by {{jsxref("encodeURIComponent()")}} or by a similar routine.
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - decodeURIComponent()")}}
+{{InteractiveExample("JavaScript Demo: decodeURIComponent()")}}
 
 ```js interactive-example
 function containsEncodedComponents(x) {

@@ -96,7 +96,7 @@ This memory's `buffer` property will return a {{jsxref("SharedArrayBuffer")}}.
 
 ## Specifications
 
-The `shared` attribute is only documented in [the Threading proposal for WebAssembly](https://github.com/WebAssembly/threads/blob/master/proposals/threads/Overview.md#javascript-api-changes) and not part of the official specs.
+The `shared` attribute is only documented in [the Threading proposal for WebAssembly](https://github.com/WebAssembly/threads/blob/main/proposals/threads/Overview.md#javascript-api-changes) and not part of the official specs.
 
 {{Specifications}}
 
@@ -106,6 +106,6 @@ The `shared` attribute is only documented in [the Threading proposal for WebAsse
 
 ## See also
 
-- [WebAssembly](/en-US/docs/WebAssembly) overview page
+- [WebAssembly](/en-US/docs/WebAssembly) overview
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Guides/Concepts)
 - [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Guides/Using_the_JavaScript_API)

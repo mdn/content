@@ -9,7 +9,57 @@ browser-compat: css.properties.text-transform
 
 The **`text-transform`** [CSS](/en-US/docs/Web/CSS) property specifies how to capitalize an element's text. It can be used to make text appear in all-uppercase or all-lowercase, or with each word capitalized. It also can help improve legibility for ruby.
 
-{{EmbedInteractiveExample("pages/css/text-transform.html")}}
+{{InteractiveExample("CSS Demo: text-transform")}}
+
+```css interactive-example-choice
+text-transform: capitalize;
+```
+
+```css interactive-example-choice
+text-transform: uppercase;
+```
+
+```css interactive-example-choice
+text-transform: lowercase;
+```
+
+```css interactive-example-choice
+text-transform: none;
+```
+
+```css interactive-example-choice
+text-transform: full-width;
+```
+
+```css interactive-example-choice
+text-transform: full-size-kana;
+```
+
+```css interactive-example-choice
+text-transform: math-auto;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    <p>
+      LONDON. Michaelmas term lately over, and the Lord Chancellor sitting in
+      Lincoln's Inn Hall.
+    </p>
+    <p lang="el">
+      Σ is a Greek letter and appears in ΟΔΥΣΣΕΥΣ. Θα πάμε στο "Θεϊκό φαΐ" ή στη
+      "Νεράιδα"
+    </p>
+    <p lang="ja">ァィゥェ ォヵㇰヶ</p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  font-size: 1.2em;
+}
+```
 
 The `text-transform` property takes into account language-specific case mapping rules such as the following:
 
@@ -20,7 +70,7 @@ The `text-transform` property takes into account language-specific case mapping 
 - In Greek (`el`), the lowercase sigma character has two forms: `σ` and `ς`. `ς` is used only when sigma terminates a word. When applying `text-transform: lowercase` to an uppercase sigma (`Σ`), the browser needs to choose the right lowercase form based on context.
 - in Irish (`ga`), certain prefixed letters remain in lowercase when the base initial is capitalized, so for example `text-transform: uppercase` will change `ar aon tslí` to `AR AON tSLÍ` and not, as one might expect, `AR AON TSLÍ` (Firefox only). In some cases, a hyphen is also removed upon uppercasing: `an t-uisce` transforms to `AN tUISCE` (and the hyphen is correctly reinserted by `text-transform: lowercase`).
 
-The language is defined by the [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) HTML attribute or the [`xml:lang`](/en-US/docs/Web/SVG/Attribute/xml:lang) XML attribute.
+The language is defined by the [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) HTML attribute or the [`xml:lang`](/en-US/docs/Web/SVG/Reference/Attribute/xml:lang) XML attribute.
 
 > [!NOTE]
 > Support for language-specific cases varies between browsers, so check the [browser compatibility table](#browser_compatibility).
@@ -73,7 +123,7 @@ text-transform: unset;
 
 Large sections of text set with a `text-transform` value of `uppercase` may be difficult for people with cognitive concerns such as Dyslexia to read.
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [W3C Understanding WCAG 2.1](https://www.w3.org/TR/WCAG21/#visual-presentation)
 
 ## Formal definition

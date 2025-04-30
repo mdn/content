@@ -81,6 +81,7 @@ const year = xmas.getYear(); // returns 95
 ## See also
 
 - [Polyfill of `Date.prototype.getYear` in `core-js`](https://github.com/zloirock/core-js#ecmascript-date)
+- [es-shims polyfill of `Date.prototype.getYear`](https://www.npmjs.com/package/date.prototype.getyear)
 - {{jsxref("Date.prototype.getFullYear()")}}
 - {{jsxref("Date.prototype.getUTCFullYear()")}}
 - {{jsxref("Date.prototype.setYear()")}}

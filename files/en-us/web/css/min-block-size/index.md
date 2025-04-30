@@ -11,7 +11,47 @@ The **`min-block-size`** [CSS](/en-US/docs/Web/CSS) property defines the minimum
 
 If the writing mode is vertically oriented, the value of `min-block-size` relates to the minimum width of the element; otherwise, it relates to the minimum height of the element. A related property is {{cssxref("min-inline-size")}}, which defines the other dimension of the element.
 
-{{EmbedInteractiveExample("pages/css/min-block-size.html")}}
+{{InteractiveExample("CSS Demo: min-block-size")}}
+
+```css interactive-example-choice
+min-block-size: 150px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+min-block-size: 150px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+min-block-size: 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+min-block-size: 15em;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the minimum block size. <br />If there is
+    more content than the minimum the box will grow in the block dimension as
+    needed by the content.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 ## Syntax
 

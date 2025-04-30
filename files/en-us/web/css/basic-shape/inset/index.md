@@ -9,7 +9,41 @@ browser-compat: css.types.basic-shape.inset
 
 The **`inset()`** [CSS](/en-US/docs/Web/CSS) function defines a rectangle at the specified inset distances from each side of the reference box. It is a basic shape function used to define one of the {{cssxref("&lt;basic-shape&gt;")}} [data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types).
 
-{{EmbedInteractiveExample("pages/css/function-inset.html")}}
+{{InteractiveExample("CSS Demo: inset()")}}
+
+```css interactive-example-choice
+clip-path: inset(30px);
+```
+
+```css interactive-example-choice
+clip-path: inset(1rem 2rem 3rem 4rem);
+```
+
+```css interactive-example-choice
+clip-path: inset(20% 30% round 20px);
+```
+
+```css interactive-example-choice
+clip-path: inset(4rem 20% round 1rem 2rem 3rem 4rem);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: #fe9;
+}
+
+#example-element {
+  background: linear-gradient(to bottom right, #f52, #05f);
+  width: 100%;
+  height: 100%;
+}
+```
 
 ## Syntax
 

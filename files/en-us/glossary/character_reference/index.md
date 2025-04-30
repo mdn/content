@@ -24,7 +24,7 @@ There are three types of character references:
   - : These references start with `&#`, followed by one or more ASCII digits representing the base-ten integer that corresponds to the character's {{glossary("Unicode")}} {{glossary("code point")}}, and ending with `;`.
     For example, the decimal character reference for `<` is `&#60;`, because the Unicode code point for the symbol is `U+0003C`, and `3C` hexadecimal is 60 in decimal.
 
-- **Hexadecimal numeric character reference**
+- **Hexadecimal numeric character references**
   - : These references start with `&#x` or `&#X`, followed by one or more ASCII hex digits, representing the hexadecimal integer that corresponds to the character's Unicode code point, and ending with `;`.
     For example, the hexadecimal character reference for `<` is `&#x3C;` or `&#X3C;`, because the Unicode code point for the symbol is `U+0003C`.
 

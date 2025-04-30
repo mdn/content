@@ -1,10 +1,10 @@
 ---
 title: "React interactivity: Events and state"
+short-title: React events and state
 slug: Learn_web_development/Core/Frameworks_libraries/React_interactivity_events_state
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_components","Learn_web_development/Core/Frameworks_libraries/React_interactivity_filtering_conditional_rendering", "Learn_web_development/Core/Frameworks_libraries")}}
 
@@ -76,7 +76,7 @@ function handleSubmit(event) {
 }
 ```
 
-To use this function, add an `onSubmit` attribute to the [`<form>`](/en-US/docs/Web/HTML/Element/form) element, and set its value to the `handleSubmit` function:
+To use this function, add an `onSubmit` attribute to the [`<form>`](/en-US/docs/Web/HTML/Reference/Elements/form) element, and set its value to the `handleSubmit` function:
 
 ```jsx
 <form onSubmit={handleSubmit}>
@@ -110,7 +110,7 @@ To use this prop, we must change the signature of the `Form()` function in `Form
 
 ```jsx
 function Form(props) {
-  // ...
+  // …
 }
 ```
 
@@ -182,7 +182,7 @@ Several things are happening in this line of code:
 
 - We are defining a `name` constant with the value `"Learn React"`.
 - We are defining a function whose job it is to modify `name`, called `setName()`.
-- `useState()` returns these two things in an array, so we are using [array destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) to capture them both in separate variables.
+- `useState()` returns these two things in an array, so we are using [array destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) to capture them both in separate variables.
 
 ### Reading state
 
@@ -215,7 +215,7 @@ function handleChange() {
   console.log("Typing!");
 }
 
-...
+// …
 
 // Down in the return statement
 <input

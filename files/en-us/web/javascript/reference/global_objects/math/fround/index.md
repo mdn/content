@@ -84,4 +84,5 @@ Math.fround(2 ** 150); // Infinity
 ## See also
 
 - [Polyfill of `Math.fround` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [es-shims polyfill of `Math.fround`](https://www.npmjs.com/package/math.fround)
 - {{jsxref("Math.round()")}}

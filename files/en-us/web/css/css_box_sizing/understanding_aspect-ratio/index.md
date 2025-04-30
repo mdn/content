@@ -590,6 +590,10 @@ For the content of a grid item to not grow beyond the preferred height set by th
 
 {{EmbedLiveSample("making_grid_cells_square", "100", "380")}}
 
+## Specifications
+
+{{Specifications}}
+
 ## See also
 
 - [CSS box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) module

@@ -2,6 +2,7 @@
 title: Challenge solutions
 slug: Learn_web_development/Core/Challenges
 page-type: guide
+sidebar: learnsidebar
 ---
 
 This page provides solutions to the challenges posed in the [CSS Styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics) module. These are not the only possible solutions. The sections below correspond to the titles of the tutorial sections.

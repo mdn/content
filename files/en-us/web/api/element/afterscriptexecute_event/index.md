@@ -4,11 +4,12 @@ short-title: afterscriptexecute
 slug: Web/API/Element/afterscriptexecute_event
 page-type: web-api-event
 status:
+  - deprecated
   - non-standard
 browser-compat: api.Element.afterscriptexecute_event
 ---
 
-{{APIRef}}{{Non-standard_header}}
+{{APIRef}}{{Non-standard_header}}{{deprecated_header}}
 
 > [!WARNING]
 > This event was a proposal in an early version of the specification. Do not rely on it.

@@ -12,7 +12,7 @@ browser-compat: api.FeaturePolicy.allowsFeature
 
 The **`allowsFeature()`** method of
 the {{DOMxRef("FeaturePolicy")}} interface enables introspection of individual
-directives of the [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) it is run on. It returns a {{JSxRef("Boolean")}}
+directives of the [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) it is run on. It returns a {{JSxRef("Boolean")}}
 that is `true` if and only if the specified feature is allowed in the
 specified context (or the default context if no context is specified).
 

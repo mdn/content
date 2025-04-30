@@ -8,7 +8,7 @@ browser-compat: api.HTMLTrackElement.label
 
 {{ApiRef("HTML DOM")}}
 
-The **`label`** property of the {{domxref("HTMLTrackElement")}} represents the user-readable title displayed when listing subtitle, caption, and audio descriptions for a track. It reflects the {{htmlelement("track")}} element's [`label`](/en-US/docs/Web/HTML/Element/track#label) attribute.
+The **`label`** property of the {{domxref("HTMLTrackElement")}} represents the user-readable title displayed when listing subtitle, caption, and audio descriptions for a track. It reflects the {{htmlelement("track")}} element's [`label`](/en-US/docs/Web/HTML/Reference/Elements/track#label) attribute.
 
 ## Value
 

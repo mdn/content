@@ -91,6 +91,7 @@ Promise.allSettled([
 ## See also
 
 - [Polyfill of `Promise.allSettled` in `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
+- [es-shims polyfill of `Promise.allSettled`](https://www.npmjs.com/package/promise.allsettled)
 - [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) guide
 - [Graceful asynchronous programming with promises](/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises)
 - {{jsxref("Promise")}}

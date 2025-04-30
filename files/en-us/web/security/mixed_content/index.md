@@ -107,7 +107,7 @@ Support for loading local content can be checked in the [Browser compatibility](
 A mixed download is a resource download from a secure context over an insecure connection.
 They are problematic for the same reasons as mixed content — content may be intercepted and/or modified by an attacker, and it is not obvious to users that this might happen on a secure site.
 
-For example, the following code defines an [`<a>`](/en-US/docs/Web/HTML/Element/a#download) element that could be used to download the page at the insecure origin `http://example.com/`.
+For example, the following code defines an [`<a>`](/en-US/docs/Web/HTML/Reference/Elements/a#download) element that could be used to download the page at the insecure origin `http://example.com/`.
 If this code is in a page that is served over HTTPS, saving the link results in a mixed download.
 
 ```html
@@ -162,4 +162,4 @@ There are a number of ways to verify that your site is free of mixed content inc
 
 ## See also
 
-- [CSP: `upgrade-insecure-requests`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests) upgrades all requests to HTTPS, including blockable mixed content
+- [CSP: `upgrade-insecure-requests`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/upgrade-insecure-requests) upgrades all requests to HTTPS, including blockable mixed content

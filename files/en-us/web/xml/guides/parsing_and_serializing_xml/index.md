@@ -81,7 +81,7 @@ const xmlStr = serializer.serializeToString(doc);
 
 ### Serializing HTML documents
 
-If the DOM you have is an HTML document, you can serialize using `serializeToString()`, but there is a simpler option: just use the {{domxref("Element.innerHTML")}} property (if you want just the descendants of the specified node) or the {{domxref("Element.outerHTML")}} property if you want the node and all its descendants.
+If the DOM you have is an HTML document, you can serialize using `serializeToString()`, but there is another option that many find simpler: use the {{domxref("Element.innerHTML")}} property (if you want just the descendants of the specified node) or the {{domxref("Element.outerHTML")}} property if you want the node and all its descendants.
 
 ```js
 const docInnerHtml = document.documentElement.innerHTML;

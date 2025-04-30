@@ -318,4 +318,6 @@ The following example applies the CSS style if the browser supports the `woff2` 
 ## See also
 
 - [Using feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
-- The CSSOM class {{DOMxRef("CSSSupportsRule")}}, and the {{DOMxref("CSS.supports_static", "CSS.supports()")}} method that allows the same check to be performed via JavaScript.
+- [CSS at-rule functions](/en-US/docs/Web/CSS/CSS_syntax/At-rule_functions)
+- {{DOMxRef("CSSSupportsRule")}}
+- {{DOMxref("CSS.supports_static", "CSS.supports()")}} method

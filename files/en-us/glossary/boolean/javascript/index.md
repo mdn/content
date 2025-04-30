@@ -13,4 +13,4 @@ A {{jsxref("Boolean")}} object is a {{Glossary("wrapper")}} around a Boolean pri
 ## See also
 
 - [The JavaScript global object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
-- [JavaScript data types and data structures](/en-US/docs/Web/JavaScript/Data_structures)
+- [JavaScript data types and data structures](/en-US/docs/Web/JavaScript/Guide/Data_structures)

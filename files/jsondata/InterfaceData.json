@@ -116,14 +116,6 @@
       "inh": "Event",
       "impl": []
     },
-    "AudioRenderCapacity": {
-      "inh": "EventTarget",
-      "impl": []
-    },
-    "AudioRenderCapacityEvent": {
-      "inh": "Event",
-      "impl": []
-    },
     "AudioScheduledSourceNode": {
       "inh": "AudioNode",
       "impl": []
@@ -3160,6 +3152,14 @@
       "inh": "Event",
       "impl": []
     },
+    "SpeechRecognitionPhrase": {
+      "inh": "",
+      "impl": []
+    },
+    "SpeechRecognitionPhraseList": {
+      "inh": "",
+      "impl": []
+    },
     "SpeechRecognitionResult": {
       "inh": "",
       "impl": []
@@ -3522,6 +3522,10 @@
     },
     "SVGPathElement": {
       "inh": "SVGGeometryElement",
+      "impl": []
+    },
+    "SVGPathSegment": {
+      "inh": "",
       "impl": []
     },
     "SVGPatternElement": {
@@ -4118,6 +4122,10 @@
     },
     "WebTransportDatagramDuplexStream": {
       "inh": "",
+      "impl": []
+    },
+    "WebTransportDatagramsWritable": {
+      "inh": "WritableStream",
       "impl": []
     },
     "WebTransportError": {

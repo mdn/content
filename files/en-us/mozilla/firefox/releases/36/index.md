@@ -32,7 +32,7 @@ Highlights:
 - The {{cssxref("text-decoration")}} property is turned into shorthand property ([Firefox bug 1039488](https://bugzil.la/1039488)).
 - The properties {{cssxref("object-fit")}} and {{cssxref("object-position")}} are now supported ([Firefox bug 624647](https://bugzil.la/624647))
 - The `contents` value of the {{cssxref("display")}} property has been experimentally implemented. It is preffed off by default ([Firefox bug 907396](https://bugzil.la/907396)).
-- In [Quirks mode](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode), the [`:active` and `:hover` quiver quirk](/en-US/docs/Mozilla_Quirks_Mode_Behavior#Miscellaneous_.26_Style) has been altered to be applied less often: it is now used only on links, only if there are no pseudo-element or other pseudo-class in the element and if it isn't part of a pseudo-class element ([Firefox bug 783213](https://bugzil.la/783213)).
+- In [Quirks mode](/en-US/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode), the [`:active` and `:hover` quiver quirk](/en-US/docs/Mozilla_Quirks_Mode_Behavior#Miscellaneous_.26_Style) has been altered to be applied less often: it is now used only on links, only if there are no pseudo-element or other pseudo-class in the element and if it isn't part of a pseudo-class element ([Firefox bug 783213](https://bugzil.la/783213)).
 - The {{cssxref("isolation")}} property has been implemented ([Firefox bug 1077872](https://bugzil.la/1077872)).
 - CSS {{cssxref("&lt;gradient&gt;")}} now applies on the premultiplied colors, matching the spec and other browsers, and getting rid of unexpected gray colors appearing in them ([Firefox bug 591600](https://bugzil.la/591600)).
 - Interpolation hint syntax has been added to {{cssxref("&lt;gradient&gt;")}} ([Firefox bug 1074056](https://bugzil.la/1074056)).
@@ -40,8 +40,8 @@ Highlights:
 
 ### HTML
 
-- Support for [`<meta name="referrer">`](/en-US/docs/Web/HTML/Element/meta) has been added ([Firefox bug 704320](https://bugzil.la/704320)).
-- In Firefox, {{HTMLElement("input")}} filters specified in the [`accept`](/en-US/docs/Web/HTML/Element/input#accept) attribute will always be selected by default, unless there is an unknown value, that is an unknown mime type or badly formatted value in the [`accept`](/en-US/docs/Web/HTML/Element/input#accept) attribute. Previously specified filters were only selected by default for `image/*`, `video/*` and `audio/*` values ([Firefox bug 826185](https://bugzil.la/826185)).
+- Support for [`<meta name="referrer">`](/en-US/docs/Web/HTML/Reference/Elements/meta) has been added ([Firefox bug 704320](https://bugzil.la/704320)).
+- In Firefox, {{HTMLElement("input")}} filters specified in the [`accept`](/en-US/docs/Web/HTML/Reference/Elements/input#accept) attribute will always be selected by default, unless there is an unknown value, that is an unknown mime type or badly formatted value in the [`accept`](/en-US/docs/Web/HTML/Reference/Elements/input#accept) attribute. Previously specified filters were only selected by default for `image/*`, `video/*` and `audio/*` values ([Firefox bug 826185](https://bugzil.la/826185)).
 
 ### JavaScript
 
@@ -61,7 +61,7 @@ Highlights:
 - The [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) declaration is now block-scoped and requires an initializer ([Firefox bug 611388](https://bugzil.la/611388)). It also can not be redeclared anymore ([Firefox bug 1095439](https://bugzil.la/1095439)).
 
   - `{const a=1}; a;` now throws a {{jsxref("ReferenceError")}} and does not return `1` anymore due to block-scoping.
-  - `const a;` now throws a {{jsxref("SyntaxError")}} ("missing = in const declaration`"`): An initializer is required.
+  - `const a;` now throws a {{jsxref("SyntaxError")}} ("missing = in const declaration"): An initializer is required.
   - `const a = 1; a = 2;` now also throws a {{jsxref("SyntaxError")}} ("invalid assignment to const a").
 
 - The ES2016 method {{jsxref("Array.prototype.includes")}} has been implemented, but for now, it is only enabled in Nightly builds ([Firefox bug 1069063](https://bugzil.la/1069063)).
@@ -111,8 +111,8 @@ _No change._
 
 - RC4 is now considered as insecure and all UI indicators will react as such; SSLv3 has been disabled by default in Firefox 34, but the UI has been changed to help the user better understand what is happening ([Firefox bug 1093595](https://bugzil.la/1093595)).
 - Also, RC4 is no longer offered in the initial handshake of TLS ([Firefox bug 1088915](https://bugzil.la/1088915)).
-- The [`form-action`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#form-action) directive of CSP 1.1 is now supported ([Firefox bug 529697](https://bugzil.la/529697)).
-- In the preferences of Firefox, The [Do not track](/en-US/docs/Web/HTTP/Headers/DNT) selection widget is again an on/off switch ([Firefox bug 1071747](https://bugzil.la/1071747)).
+- The [`form-action`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/form-action) directive of CSP 1.1 is now supported ([Firefox bug 529697](https://bugzil.la/529697)).
+- In the preferences of Firefox, The [Do not track](/en-US/docs/Web/HTTP/Reference/Headers/DNT) selection widget is again an on/off switch ([Firefox bug 1071747](https://bugzil.la/1071747)).
 
 ## Changes for add-on and Mozilla developers
 
@@ -149,7 +149,7 @@ New constants have been added to `nsIContentPolicy` to allow Gecko internals and
 - `TYPE_FETCH`
   - : Indicates a content load request initiated by the {{domxref("Window/fetch", "fetch()")}} method.
 - `TYPE_IMAGESET`
-  - : Indicates a request to load an {{HTMLElement("img")}} (with the [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute or {{HTMLElement("picture")}} element.
+  - : Indicates a request to load an {{HTMLElement("img")}} (with the [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset) attribute or {{HTMLElement("picture")}} element.
 
 ### XUL
 

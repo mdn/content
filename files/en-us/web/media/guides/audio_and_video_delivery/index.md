@@ -15,7 +15,7 @@ To deliver video and audio, the general workflow is usually something like this:
 
 1. Check what format the browser supports via feature detection (usually a choice of two, as stated above).
 2. If the browser doesn't support playback of any of the provided formats natively, either present a still image or use a fallback technology to present the video.
-3. Identify how you want to play/instantiate the media (e.g. a {{ htmlelement("video") }} element, or `document.createElement('video')` perhaps?)
+3. Identify how you want to play/instantiate the media (e.g., a {{ htmlelement("video") }} element, or `document.createElement('video')` perhaps?)
 4. Deliver the media file to the player.
 
 ### HTML Audio
@@ -72,7 +72,7 @@ The code above creates a video player of dimensions 640x480 pixels, displaying a
 > [!NOTE]
 > The `autoplay` attribute may be ignored by some mobile browsers. Also, the autoplay feature can be controversial when misused. It's strongly recommended that you read the [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Guides/Autoplay) to learn how to use autoplay wisely.
 
-For further info see [\<video> element](/en-US/docs/Web/HTML/Element/video) and [Creating a cross-browser video player](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player).
+For further info see [\<video> element](/en-US/docs/Web/HTML/Reference/Elements/video) and [Creating a cross-browser video player](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player).
 
 ### JavaScript Audio
 
@@ -233,7 +233,7 @@ See [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API) f
 
 [Encrypted Media Extensions](https://w3c.github.io/encrypted-media/) is a W3C proposal to extend `HTMLMediaElement`, providing APIs to control playback of protected content.
 
-The API supports use cases ranging from simple clear key decryption to high value video (given an appropriate user agent implementation). License/key exchange is controlled by the application, facilitating the development of robust playback applications supporting a range of content decryption and protection technologies.
+The API supports use cases ranging from basic clear key decryption to high value video (given an appropriate user agent implementation). License/key exchange is controlled by the application, facilitating the development of robust playback applications supporting a range of content decryption and protection technologies.
 
 One of the principal uses of EME is to allow browsers to implement DRM ([Digital Rights Management](https://en.wikipedia.org/wiki/Digital_rights_management)), which helps to prevent web-based content (especially video) from being copied.
 
@@ -246,7 +246,7 @@ The main formats used for adaptive streaming are [HLS](/en-US/docs/Web/Media/Gui
 > [!NOTE]
 > Currently Safari does not support DASH although dash.js will work on newer versions of Safari scheduled for release with OSX Yosemite.
 
-DASH also provides a number of profiles including simple onDemand profiles that require no preprocessing and splitting up of media files. There are also a number of cloud based services that will convert your media to both HLS and DASH.
+DASH also provides a number of profiles including onDemand profiles that require no preprocessing and splitting up of media files. There are also a number of cloud based services that will convert your media to both HLS and DASH.
 
 For further information see [Live streaming web audio and video](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Live_streaming_web_audio_and_video).
 
@@ -468,7 +468,7 @@ lastSource.addEventListener(
 
 ## Audio/Video JavaScript libraries
 
-A number of audio and video JavaScript libraries exist. The most popular libraries allow you to choose a consistent player design over all browsers and provide a fallback for browsers that don't support audio and video natively. Fallbacks have historically used now-obsolete plugins such as Adobe Flash or Microsoft Silverlight plugins to provide a media player in non-supporting browsers, although these are no longer supported on modern computers. Other functionality such as the [`<track>`](/en-US/docs/Web/HTML/Element/track) element for subtitles can also be provided through media libraries.
+A number of audio and video JavaScript libraries exist. The most popular libraries allow you to choose a consistent player design over all browsers and provide a fallback for browsers that don't support audio and video natively. Fallbacks have historically used now-obsolete plugins such as Adobe Flash or Microsoft Silverlight plugins to provide a media player in non-supporting browsers, although these are no longer supported on modern computers. Other functionality such as the [`<track>`](/en-US/docs/Web/HTML/Reference/Elements/track) element for subtitles can also be provided through media libraries.
 
 ### Audio only
 
@@ -513,7 +513,7 @@ A number of audio and video JavaScript libraries exist. The most popular librari
   - : Live streaming technology is often employed to relay live events such as sports, concerts and more generally TV and Radio programmes that are output live. Often shortened to just streaming, live streaming is the process of transmitting media 'live' to computers and devices. This is a fairly complex and nascent subject with a lot of variables, so in this article we'll introduce you to the subject and let you know how you can get started.
 - [Setting up adaptive streaming media sources](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources)
   - : Let's say you want to set up an adaptive streaming media source on a server, to be consumed inside an HTML media element. How would you do that? This article explains how, looking at two of the most common formats: MPEG-DASH and HLS (HTTP Live Streaming.)
-- [DASH Adaptive Streaming for HTML 5 Video](/en-US/docs/Web/Media/Guides/DASH_Adaptive_Streaming_for_HTML_5_Video)
+- [DASH Adaptive Streaming for HTML 5 Video](/en-US/docs/Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming)
   - : Details how to set up adaptive streaming using DASH and WebM.
 
 ### Advanced topics
@@ -527,7 +527,7 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 
 ## Reference
 
-- [The video element](/en-US/docs/Web/HTML/Element/video)
+- [The video element](/en-US/docs/Web/HTML/Reference/Elements/video)
 - [HTMLVideoElement API](/en-US/docs/Web/API/HTMLVideoElement)
 - [MediaSource API](/en-US/docs/Web/API/MediaSource)
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)

@@ -31,7 +31,7 @@ This is the same mechanism used by {{jsxref("Array.isArray()")}}, which is in tu
 
 It is a more robust alternative to [`instanceof Error`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) because it avoids false positives and false negatives:
 
-- `Error.isError()` rejects values that aren't actual `Error` instances, even if they have `Error.prototype` their prototype chain — `instanceof Error` would accept these as it does check the prototype chain.
+- `Error.isError()` rejects values that aren't actual `Error` instances, even if they have `Error.prototype` in their prototype chain — `instanceof Error` would accept these as it does check the prototype chain.
 - `Error.isError()` accepts `Error` objects constructed in another realm — `instanceof Error` returns `false` for these because the identity of the `Error` constructor is different across realms.
 
 `Error.isError()` returns `true` for {{domxref("DOMException")}} instances. This is because, although `DOMException` is not specified as a real subclass of `Error` (the `Error` constructor is not the prototype of the `DOMException` constructor), `DOMException` still behaves like `Error` for all branded checking purposes.
@@ -76,7 +76,7 @@ const xError = window.frames[window.frames.length - 1].Error;
 const error = new xError();
 
 // Correctly checking for Error
-Error.isERror(error); // true
+Error.isError(error); // true
 // The prototype of error is xError.prototype, which is a
 // different object from Error.prototype
 error instanceof Error; // false
@@ -108,4 +108,5 @@ try {
 ## See also
 
 - [Polyfill of `Error.isError` in `core-js`](https://github.com/zloirock/core-js#erroriserror)
+- [es-shims polyfill of `Error.isError`](https://www.npmjs.com/package/error.iserror)
 - {{jsxref("Error")}}

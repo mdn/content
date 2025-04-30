@@ -1,5 +1,6 @@
 ---
 title: Crisp pixel art look with image-rendering
+short-title: Image rendering for pixel art
 slug: Games/Techniques/Crisp_pixel_art_look
 page-type: guide
 ---
@@ -88,4 +89,4 @@ This code used together produces the following result:
 {{ EmbedLiveSample('An_example', '100%', 520) }}
 
 > [!NOTE]
-> Canvas content is not accessible to screen readers. Include descriptive text as the value of the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute directly on the canvas element itself or include fallback content placed within the opening and closing canvas tag. Canvas content is not part of the DOM, but nested fallback content is.
+> Canvas content is not accessible to screen readers. Include descriptive text as the value of the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) attribute directly on the canvas element itself or include fallback content placed within the opening and closing canvas tag. Canvas content is not part of the DOM, but nested fallback content is.

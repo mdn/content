@@ -11,7 +11,48 @@ browser-compat:
 
 The **`fit-content()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) clamps a given size to an available size according to the formula `min(maximum size, max(minimum size, argument))`.
 
-{{EmbedInteractiveExample("pages/css/function-fit-content.html")}}
+{{InteractiveExample("CSS Demo: fit-content()")}}
+
+```css interactive-example-choice
+grid-template-columns: fit-content(8ch) fit-content(8ch) 1fr;
+```
+
+```css interactive-example-choice
+grid-template-columns: fit-content(100px) fit-content(100px) 1fr;
+```
+
+```css interactive-example-choice
+grid-template-columns: fit-content(40%) fit-content(40%) 1fr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One. This column has more text in it.</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-gap: 10px;
+  width: 250px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  text-align: left;
+}
+```
 
 The function can be used as a track size in [CSS grid](/en-US/docs/Web/CSS/CSS_grid_layout) properties, where the maximum size is defined by `max-content` and the minimum size by `auto`, which is calculated similar to `auto` (i.e., [`minmax(auto, max-content)`](/en-US/docs/Web/CSS/minmax)), except that the track size is clamped at _argument_ if it is greater than the `auto` minimum.
 

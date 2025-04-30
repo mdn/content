@@ -2,9 +2,8 @@
 title: Design for developers
 slug: Learn_web_development/Core/Design_for_developers
 page-type: learn-module
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Version_control", "Learn_web_development/Core")}}
 
@@ -71,19 +70,17 @@ Learning outcomes:
 
 - Speaking design language, to communicate with designers.
 - Interpreting design brief requirements to produce an implementation.
-- Typical tools designers use to get their message across to developers (e.g. Figma).
+- Typical tools designers use to get their message across to developers (e.g., Figma).
 
 ## See also
 
-- [Learn UI Design Fundamentals](https://scrimba.com/learn/design?via=mdn), Scrimba <sup>Course Partner</sup>
+- [Learn UI Design Fundamentals](https://scrimba.com/intro-to-ui-design-fundamentals-c0q?via=mdn), Scrimba <sup>Course Partner</sup>
 - [The Shape of Design](https://shapeofdesignbook.com/chapters/00-introduction/), Frank Chimero
 - [Designing for the Web](https://designingfortheweb.co.uk/), Mark Boulton
-- [Design for web](https://designforweb.org/), Prisca Schmarsow + other contributors. Highlights include:
-  - [Design trampoline: Learn design theory basics](https://designforweb.org/vis/chapter1-design-principles/designTrampoline-by-AnnaRiazhskikh/), Anna Riazhskikh
-  - [Web typography made simple](https://designforweb.org/vis/chapter2-typography/typelab-by-HannahBoom/), Hannah Boom
+- [Design for web](https://designforweb.org/), Prisca Schmarsow + other contributors
 - [Practical Typography](https://practicaltypography.com/), Matthew Butterick
 - [Web Style Guide](https://webstyleguide.com/), Patrick J. Lynch and Sarah Horton
 - [Visual design rules you can safely follow every time](https://anthonyhobday.com/sideprojects/saferules/), Anthony Hobday
-- [16 little UI design rules that make a big impact](https://www.adhamdannaway.com/blog/ui-design/16-ui-design-rules), Adham Dannaway
+- [16 little UI design rules that make a big impact](https://www.adhamdannaway.com/blog/ui-design/ui-design-tips), Adham Dannaway
 
 {{NextMenu("Learn_web_development/Core/Version_control", "Learn_web_development/Core")}}
