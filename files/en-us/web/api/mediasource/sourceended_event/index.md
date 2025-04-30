@@ -57,7 +57,7 @@ mediaSource.addEventListener("sourceended", (event) => {
   // Perform cleanup
 
   // Remove event listeners from SourceBuffer and MediaSource
-  sourceBuffer.removeEventListener("updateend", () => { });
+  sourceBuffer.removeEventListener("updateend", () => {});
   mediaSource.removeEventListener("sourceopen", () => {});
 
   // Notify user (e.g., display a "Playback finished" message)
