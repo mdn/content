@@ -9,8 +9,6 @@ browser-compat: css.properties.mask-repeat
 
 The **`mask-repeat`** [CSS](/en-US/docs/Web/CSS) property sets how mask images are repeated. A mask image can be repeated along the horizontal axis, the vertical axis, both axes, or not repeated at all.
 
-By default, the repeated images are clipped to the size of the element, but they can be scaled to fit (using `round`) or evenly distributed from end to end (using `space`).
-
 ## Syntax
 
 ```css
@@ -45,9 +43,9 @@ mask-repeat: revert-layer;
 mask-repeat: unset;
 ```
 
-One or more `<repeat-style>` values, separated by commas.
-
 ### Values
+
+The `mask-repeat` property is a comma-separated list of one or two `<repeat-style>` keyword values, including:
 
 - `<repeat-style>`
 
@@ -133,6 +131,12 @@ One or more `<repeat-style>` values, separated by commas.
         </tr>
       </tbody>
     </table>
+
+## Description
+
+An element can have multiple mask layers applied. The number of layers is determined by the number of comma-separated values in the `mask-image` property value (even if a value is `none`). Each `mask-repeat` value or pair of values in the comma-separated list of values is matched up with the `mask-image` values, in order. If the number of values in the two properties differs, any excess values of `mask-repeat` are not used, or, if `mask-repeat` has fewer values than `mask-image`, the `mask-repeat` values are repeated.
+
+By default, the repeated images are clipped to the size of the element, but they can be scaled to fit (using `round`) or evenly distributed from end to end (using `space`).
 
 ## Formal definition
 
