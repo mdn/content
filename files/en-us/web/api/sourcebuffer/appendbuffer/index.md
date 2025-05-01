@@ -39,7 +39,7 @@ None ({{jsxref("undefined")}}).
     - The `SourceBuffer` has been removed from the `sourceBuffers` attribute of the parent media source.
     - The `HTMLMediaElement`'s `error` attribute is not null.
 
-Additionally, errors can occur after the `updatestart` has been fired and the `appendBuffer()` method has returned: for example, because the buffer contained bytes that were incorrectly formatted. In this situation the `error` event will be fired on this `SourceBuffer` instance. 
+Additionally, errors can occur after the `updatestart` has been fired and the `appendBuffer()` method has returned: for example, because the buffer contained bytes that were incorrectly formatted. In this situation the `error` event will be fired on this `SourceBuffer` instance.
 
 ## Examples
 
