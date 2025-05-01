@@ -36,7 +36,7 @@ A {{jsxref('Promise')}}.
 - {{domxref("DOMException")}} `QuotaExceededError`
   - : Raised if the operation fails due to a lack of resources on the user agent or CDM.
 - {{domxref("DOMException")}} `InvalidStateError`
-  - : Raised if the `MediaKeySession` object is in a `closing` or `closed` state, or if it has already been initialized. 
+  - : Raised if the `MediaKeySession` object is in a `closing` or `closed` state, or if it has already been initialized.
 
 ## Specifications
 
