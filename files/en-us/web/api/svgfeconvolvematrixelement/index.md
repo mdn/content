@@ -11,42 +11,6 @@ The **`SVGFEConvolveMatrixElement`** interface corresponds to the {{SVGElement("
 
 {{InheritanceDiagram}}
 
-## Constants
-
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th>Name</th>
-      <th>Value</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td><code>SVG_EDGEMODE_UNKNOWN</code></td>
-      <td>0</td>
-      <td>
-        The type is not one of predefined types. It is invalid to attempt to
-        define a new value of this type or to attempt to switch an existing
-        value to this type.
-      </td>
-    </tr>
-    <tr>
-      <td><code>SVG_EDGEMODE_DUPLICATE</code></td>
-      <td>1</td>
-      <td>Corresponds to the <code>duplicate</code> value.</td>
-    </tr>
-    <tr>
-      <td><code>SVG_EDGEMODE_WRAP</code></td>
-      <td>2</td>
-      <td>Corresponds to the <code>wrap</code> value.</td>
-    </tr>
-    <tr>
-      <td><code>SVG_EDGEMODE_NONE</code></td>
-      <td>3</td>
-      <td>Corresponds to <code>none</code> value.</td>
-    </tr>
-  </tbody>
-</table>
-
 ## Instance properties
 
 _This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
@@ -85,6 +49,40 @@ _This interface also inherits properties from its parent interface, {{domxref("S
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("x")}} attribute of the given element.
 - {{domxref("SVGFEConvolveMatrixElement.y")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y")}} attribute of the given element.
+
+<table class="no-markdown">
+  <tbody>
+    <tr>
+      <th>Name</th>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><code>SVG_EDGEMODE_UNKNOWN</code></td>
+      <td>0</td>
+      <td>
+        The type is not one of predefined types. It is invalid to attempt to
+        define a new value of this type or to attempt to switch an existing
+        value to this type.
+      </td>
+    </tr>
+    <tr>
+      <td><code>SVG_EDGEMODE_DUPLICATE</code></td>
+      <td>1</td>
+      <td>Corresponds to the <code>duplicate</code> value.</td>
+    </tr>
+    <tr>
+      <td><code>SVG_EDGEMODE_WRAP</code></td>
+      <td>2</td>
+      <td>Corresponds to the <code>wrap</code> value.</td>
+    </tr>
+    <tr>
+      <td><code>SVG_EDGEMODE_NONE</code></td>
+      <td>3</td>
+      <td>Corresponds to <code>none</code> value.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Instance methods
 
