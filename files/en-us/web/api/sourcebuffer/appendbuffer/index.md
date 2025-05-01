@@ -82,7 +82,7 @@ sourceBuffer.addEventListener("error", (e) => {
 });
 
 try {
-  sourceBuffer.appendBuffer(invalidData); // invalidData is not a BufferSource
+  sourceBuffer.appendBuffer(data);
 } catch (e) {
   if (e instanceof InvalidStateError) {
     console.error(
