@@ -7,7 +7,7 @@ browser-compat: api.SVGAnimatedRect
 
 {{APIRef("SVG")}}
 
-The **`SVGAnimatedRect`** interface correspond to the {{ domxref("SVGRect") }} basic attribute which can be animated.
+The **`SVGAnimatedRect`** interface represents an {{domxref("SVGRect")}} attribute that can be animated.
 
 ## Instance properties
 
