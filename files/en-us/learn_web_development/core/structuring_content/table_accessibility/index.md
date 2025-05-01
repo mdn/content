@@ -261,7 +261,7 @@ An alternative to using the `scope` attribute is to use [`id`](/en-US/docs/Web/H
 
 A `<th>` element can provide a heading for either a data cell (`<td>`) or, in more complex tables, for another header cell (`<th>`). This allows you to create layered or grouped headers, where one header describes several others.
 
-The `headers` attribute is used to link a cell, `<td>` or `<th>`, to one or more header cells. It takes a space-separated list of {{Glossary("string", "strings")}}; the order of strings does not matter. Each string must match the unique `id` of a `<th>` element that the cell is associated with. 
+The `headers` attribute is used to link a cell, `<td>` or `<th>`, to one or more header cells. It takes a space-separated list of {{Glossary("string", "strings")}}; the order of strings does not matter. Each string must match the unique `id` of a `<th>` element that the cell is associated with.
 
 This method gives your HTML table a more explicit definition of the position of each cell, based on the headers for the column and the row it belongs to, kind of like a spreadsheet. For this to work well, your table should include both column and row headers.
 
@@ -302,11 +302,12 @@ Let's look at a portion of the "Items Sold August 2016" example to see how to us
   </tr>
 </tbody>
 ```
+
 In this example:
+
 - The `<th>` for `"Belgium"` uses `rowspan="2"` to span both `"Antwerp"` and `"Ghent"`.
 - The city header cells (`"Antwerp"` and `"Ghent"`) use the `headers` attribute to reference `"belgium"` to show they belong to the Belgium group.
 - Each `<td>` includes a `headers` for country (`belgium`), city (`antwerp` or `ghent`), group (`clothes`), and the specific clothing item (`trousers`, `skirts`, or `dresses`).
-
 
 > [!NOTE]
 > This method creates very precise associations between headers and data cells but it uses **a lot** more markup and does not leave any room for errors. The `scope` approach is usually sufficient for most tables.
