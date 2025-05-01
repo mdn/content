@@ -5,10 +5,7 @@ page-type: learn-module
 sidebar: learnsidebar
 ---
 
-{{NextMenu("Learn_web_development/Core/Version_control", "Learn_web_development/Core")}}
-
-> [!NOTE]
-> As you'll see below, this module is currently only a curriculum outline/syllabus. We are intending to convert this into a full course in the future, as time allows.
+{{NextMenu("Learn_web_development/Core/Design_for_developers/Basic_design_theory", "Learn_web_development/Core")}}
 
 The idea of this module is to (re-)introduce developers to design thinking. They may not want to work as designers, but having some basic user experience and design theory is good for everyone involved in building websites, no matter what their role. At the very least, even the most technical, "non-designer" developer should understand design briefs, why things are designed as they are, and be able to get into the mindset of the user. And it'll help them make their portfolios look better.
 
@@ -21,56 +18,14 @@ Before starting this module, you should be familiar with [HTML](/en-US/docs/Lear
 > [!NOTE]
 > If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
 
-## Lessons
+## Tutorials and challenges
 
-## Basic design theory
-
-Learning outcomes:
-
-- UI design fundamentals:
-  - Contrast.
-  - Typography.
-  - Visual Hierarchy.
-  - Scale.
-  - Alignment.
-  - Use of whitespace.
-- Color theory.
-- Use of images.
-
-Resources:
-
-- [Fundamental text and font styling](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals)
-
-## User-centered design
-
-Learning outcomes:
-
-- Understand that everything we do is for the user.
-- Intro to user research/testing, and user requirements.
-- Design for accessibility — consider the target audience and what additional needs they may have. Design for those from the very start.
-- Understand what design patterns are, and the common patterns used on the web, for example:
-  - Dark mode.
-  - Breadcrumbs.
-  - Cards.
-  - Deferred/Lazy registration.
-  - Infinite scroll.
-  - Modal dialogs.
-  - Progressive disclosure.
-  - Progress indication on forms/registration/setup.
-  - Shopping cart.
-
-Resources:
-
-- [Accessibility overview](/en-US/docs/Learn_web_development/Core/Accessibility)
-- [Inclusive design principles](https://inclusivedesignprinciples.info/)
-
-## Design briefs
-
-Learning outcomes:
-
-- Speaking design language, to communicate with designers.
-- Interpreting design brief requirements to produce an implementation.
-- Typical tools designers use to get their message across to developers (e.g., Figma).
+- [Basic design theory](/en-US/docs/Learn_web_development/Core/Design_for_developers/Basic_design_theory)
+  - : This article helps you make a start on the fundamental design theory that it's useful to know when design web interfaces. You don't have to be a master design to make a difference — with a little bit of knowledge, you can create a much improved user experience through careful use of fonts, color, whitespace, alignment, images, etc.
+- [User-centered design](/en-US/docs/Learn_web_development/Core/Design_for_developers/User-centered_design)
+  - : The overarching theory of **User-centered design** (UCD) is that everything we do as designers (and developers!) is for the user — understanding their needs, solving their problems, making their experience on the web better. This article provides an introduction to UCD, the kind of research you can do to better understand your user's needs, how UCD intersects with accessibility, and the common design patterns you'll encounter on the web.
+- [Design briefs](/en-US/docs/Learn_web_development/Core/Design_for_developers/Design_briefs)
+  - : As a developer, understanding design language and communicating with designers can lead to much better end results. This article looks at the mechanisms product designers use to communicate with developers — such as **design briefs**, **wireframes**, and **prototypes** — and how to interpret the information they contain to implement a feature.
 
 ## See also
 
@@ -83,4 +38,4 @@ Learning outcomes:
 - [Visual design rules you can safely follow every time](https://anthonyhobday.com/sideprojects/saferules/), Anthony Hobday
 - [16 little UI design rules that make a big impact](https://www.adhamdannaway.com/blog/ui-design/ui-design-tips), Adham Dannaway
 
-{{NextMenu("Learn_web_development/Core/Version_control", "Learn_web_development/Core")}}
+{{NextMenu("Learn_web_development/Core/Design_for_developers/Basic_design_theory", "Learn_web_development/Core")}}
