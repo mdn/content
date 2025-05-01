@@ -11,7 +11,18 @@ The **`SVGGradient`** interface is a base interface used by {{domxref("SVGLinear
 
 {{InheritanceDiagram}}
 
-## Constants
+## Instance properties
+
+_This interface also inherits properties from its parent, {{domxref("SVGElement")}}._
+
+- {{domxref("SVGGradientElement.href")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute of the given element.
+- {{domxref("SVGGradientElement.gradientUnits")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("gradientUnits")}} attribute on the given element. This property takes one of the constants defined in {{domxref("SVGUnitTypes")}}.
+- {{domxref("SVGGradientElement.gradientTransform")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedTransformList")}} corresponding to the {{SVGAttr("gradientTransform")}} attribute on the given element.
+- {{domxref("SVGGradientElement.spreadMethod")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("spreadMethod")}} attribute on the given element. One of the spread method types defined on this interface.
 
 <table class="no-markdown">
   <tbody>
@@ -46,19 +57,6 @@ The **`SVGGradient`** interface is a base interface used by {{domxref("SVGLinear
     </tr>
   </tbody>
 </table>
-
-## Instance properties
-
-_This interface also inherits properties from its parent, {{domxref("SVGElement")}}._
-
-- {{domxref("SVGGradientElement.href")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute of the given element.
-- {{domxref("SVGGradientElement.gradientUnits")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("gradientUnits")}} attribute on the given element. This property takes one of the constants defined in {{domxref("SVGUnitTypes")}}.
-- {{domxref("SVGGradientElement.gradientTransform")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedTransformList")}} corresponding to the {{SVGAttr("gradientTransform")}} attribute on the given element.
-- {{domxref("SVGGradientElement.spreadMethod")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("spreadMethod")}} attribute on the given element. One of the spread method types defined on this interface.
 
 ## Instance methods
 
