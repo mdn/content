@@ -11,7 +11,26 @@ The **`SVGFEBlendElement`** interface corresponds to the {{SVGElement("feBlend")
 
 {{InheritanceDiagram}}
 
-## Constants
+## Instance properties
+
+_This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
+
+- {{domxref("SVGFEBlendElement.height")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("height")}} attribute of the given element.
+- {{domxref("SVGFEBlendElement.in1")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("in")}} attribute of the given element.
+- {{domxref("SVGFEBlendElement.in2")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("in2")}} attribute of the given element.
+- {{domxref("SVGFEBlendElement.mode")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("mode")}} attribute of the given element. It takes one of the `SVG_FEBLEND_MODE_*` constants defined on this interface.
+- {{domxref("SVGFEBlendElement.result")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("result")}} attribute of the given element.
+- {{domxref("SVGFEBlendElement.width")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("width")}} attribute of the given element.
+- {{domxref("SVGFEBlendElement.x")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("x")}} attribute of the given element.
+- {{domxref("SVGFEBlendElement.y")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y")}} attribute of the given element.
 
 <table class="no-markdown">
   <tbody>
@@ -56,27 +75,6 @@ The **`SVGFEBlendElement`** interface corresponds to the {{SVGElement("feBlend")
     </tr>
   </tbody>
 </table>
-
-## Instance properties
-
-_This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
-
-- {{domxref("SVGFEBlendElement.height")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("height")}} attribute of the given element.
-- {{domxref("SVGFEBlendElement.in1")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("in")}} attribute of the given element.
-- {{domxref("SVGFEBlendElement.in2")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("in2")}} attribute of the given element.
-- {{domxref("SVGFEBlendElement.mode")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("mode")}} attribute of the given element. It takes one of the `SVG_FEBLEND_MODE_*` constants defined on this interface.
-- {{domxref("SVGFEBlendElement.result")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("result")}} attribute of the given element.
-- {{domxref("SVGFEBlendElement.width")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("width")}} attribute of the given element.
-- {{domxref("SVGFEBlendElement.x")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("x")}} attribute of the given element.
-- {{domxref("SVGFEBlendElement.y")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y")}} attribute of the given element.
 
 ## Instance methods
 
