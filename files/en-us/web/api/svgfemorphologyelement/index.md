@@ -11,7 +11,28 @@ The **`SVGFEMorphologyElement`** interface corresponds to the {{SVGElement("feMo
 
 {{InheritanceDiagram}}
 
-## Constants
+## Instance properties
+
+_This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
+
+- {{domxref("SVGFEMorphologyElement.height")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("height")}} attribute of the given element.
+- {{domxref("SVGFEMorphologyElement.in1")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("in")}} attribute of the given element.
+- {{domxref("SVGFEMorphologyElement.operator")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("operator")}} attribute of the given element. It takes one of the `SVG_MORPHOLOGY_OPERATOR_*` constants defined on this interface.
+- {{domxref("SVGFEMorphologyElement.radiusX")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the X component of the {{SVGAttr("radius")}} attribute of the given element.
+- {{domxref("SVGFEMorphologyElement.radiusY")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the Y component of the {{SVGAttr("radius")}} attribute of the given element.
+- {{domxref("SVGFEMorphologyElement.result")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("result")}} attribute of the given element.
+- {{domxref("SVGFEMorphologyElement.width")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("width")}} attribute of the given element.
+- {{domxref("SVGFEMorphologyElement.x")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("x")}} attribute of the given element.
+- {{domxref("SVGFEMorphologyElement.y")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y")}} attribute of the given element.
 
 <table class="no-markdown">
   <tbody>
@@ -41,29 +62,6 @@ The **`SVGFEMorphologyElement`** interface corresponds to the {{SVGElement("feMo
     </tr>
   </tbody>
 </table>
-
-## Instance properties
-
-_This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
-
-- {{domxref("SVGFEMorphologyElement.height")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("height")}} attribute of the given element.
-- {{domxref("SVGFEMorphologyElement.in1")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("in")}} attribute of the given element.
-- {{domxref("SVGFEMorphologyElement.operator")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("operator")}} attribute of the given element. It takes one of the `SVG_MORPHOLOGY_OPERATOR_*` constants defined on this interface.
-- {{domxref("SVGFEMorphologyElement.radiusX")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the X component of the {{SVGAttr("radius")}} attribute of the given element.
-- {{domxref("SVGFEMorphologyElement.radiusY")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the Y component of the {{SVGAttr("radius")}} attribute of the given element.
-- {{domxref("SVGFEMorphologyElement.result")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("result")}} attribute of the given element.
-- {{domxref("SVGFEMorphologyElement.width")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("width")}} attribute of the given element.
-- {{domxref("SVGFEMorphologyElement.x")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("x")}} attribute of the given element.
-- {{domxref("SVGFEMorphologyElement.y")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y")}} attribute of the given element.
 
 ## Instance methods
 
