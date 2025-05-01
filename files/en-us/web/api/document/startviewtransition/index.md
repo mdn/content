@@ -27,7 +27,7 @@ startViewTransition(options)
 - `options` {{optional_inline}}
   - : An object containing options to configure the view transition. It can include the following properties:
     - `update`: {{optional_inline}}. The same `updateCallback` function described above. Defaults to `null`.
-    - `types`: {{optional_inline}}. An array of strings. These strings act as class names or identifiers for the transition, allowing you to selectively apply CSS styles or run different JavaScript logic based on the type of transition occurring. For example, you could use CSS selectors like `:root:active-view-transition-type(your-type-name)` to style transitions differently based on the types provided here. Defaults to an empty sequence.
+    - `types`: {{optional_inline}}. An array of strings. These strings act as class names or identifiers for the transition, allowing you to selectively apply CSS styles or run different JavaScript logic based on the type of transition occurring. Defaults to an empty sequence.
 
 ### Return value
 
