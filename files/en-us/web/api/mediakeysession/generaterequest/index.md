@@ -19,7 +19,10 @@ generateRequest(initDataType, initData)
 ### Parameters
 
 - `initDataType`
-  - : A `string` that specifies the type of the `initData`. This parameter is mandatory and cannot be an empty string.
+  - : A string that specifies the format of the `initData` parameter. This must be one of the following values:
+    - `"cenc"`: The `initData` parameter uses the [`"cenc"`](https://www.w3.org/TR/eme-initdata-cenc/) format.
+    - `"keyids"`: The `initData` parameter uses the [`"keyids"`](https://www.w3.org/TR/eme-initdata-keyids/) format.
+    - `"webm"`: The `initData` parameter uses the [`"webm"`](https://www.w3.org/TR/eme-initdata-webm/) format.
 - `initData`
   - : A `BufferSource` (e.g, {{jsxref("ArrayBuffer")}} , {{jsxref("TypedArray")}} or {{jsxref("DataView")}}) that contains the initialization data. This parameter is mandatory and cannot be an empty array.
 
