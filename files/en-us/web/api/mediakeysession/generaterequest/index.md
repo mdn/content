@@ -24,6 +24,7 @@ generateRequest(initDataType, initData)
     - `"keyids"`: The `initData` parameter uses the [`"keyids"`](https://www.w3.org/TR/eme-initdata-keyids/) format.
     - `"webm"`: The `initData` parameter uses the [`"webm"`](https://www.w3.org/TR/eme-initdata-webm/) format.
 - `initData`
+
   - : Initialization data for the request, in the format specified by `initDataType`. It is an instance of any of the following types:
 
     - {{jsxref("ArrayBuffer")}}
