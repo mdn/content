@@ -8,7 +8,7 @@ browser-compat: api.MediaKeySession.generateRequest
 
 {{APIRef("Encrypted Media Extensions")}}{{SecureContext_Header}}
 
-The `generateRequest()` method of the {{domxref('MediaKeySession')}} interface returns a {{jsxref('Promise')}} after generating a licence request based on initialization data.
+The `generateRequest()` method of the {{domxref('MediaKeySession')}} interface returns a {{jsxref('Promise')}} after generating a license request based on initialization data.
 
 ## Syntax
 
