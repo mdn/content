@@ -11,7 +11,18 @@ The **`SVGTextPathElement`** interface corresponds to the {{SVGElement("textPath
 
 {{InheritanceDiagram}}
 
-## Constants
+## Instance properties
+
+_This interface also inherits properties from its parent interface, {{domxref("SVGTextContentElement")}}._
+
+- {{domxref("SVGTextPathElement.href")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute of the given element.
+- {{domxref("SVGTextPathElement.startOffset")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the X component of the {{SVGAttr("startOffset")}} attribute of the given element.
+- {{domxref("SVGTextPathElement.method")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("method")}} attribute of the given element. It takes one of the `TEXTPATH_METHODTYPE_*` constants defined on this interface.
+- {{domxref("SVGTextPathElement.spacing")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("spacing")}} attribute of the given element. It takes one of the `TEXTPATH_SPACINGTYPE_*` constants defined on this interface.
 
 ### Method types
 
@@ -74,19 +85,6 @@ The **`SVGTextPathElement`** interface corresponds to the {{SVGElement("textPath
     </tr>
   </tbody>
 </table>
-
-## Instance properties
-
-_This interface also inherits properties from its parent interface, {{domxref("SVGTextContentElement")}}._
-
-- {{domxref("SVGTextPathElement.href")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute of the given element.
-- {{domxref("SVGTextPathElement.startOffset")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedLength")}} corresponding to the X component of the {{SVGAttr("startOffset")}} attribute of the given element.
-- {{domxref("SVGTextPathElement.method")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("method")}} attribute of the given element. It takes one of the `TEXTPATH_METHODTYPE_*` constants defined on this interface.
-- {{domxref("SVGTextPathElement.spacing")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("spacing")}} attribute of the given element. It takes one of the `TEXTPATH_SPACINGTYPE_*` constants defined on this interface.
 
 ## Instance methods
 
