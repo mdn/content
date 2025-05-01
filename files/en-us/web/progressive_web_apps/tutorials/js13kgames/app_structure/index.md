@@ -1,5 +1,6 @@
 ---
-title: Progressive web app structure
+title: "js13kGames: Progressive web app structure"
+short-title: PWA structure
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
 page-type: guide
 sidebar: pwasidebar

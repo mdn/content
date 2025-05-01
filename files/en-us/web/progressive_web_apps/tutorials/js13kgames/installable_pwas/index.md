@@ -1,5 +1,6 @@
 ---
-title: How to make PWAs installable
+title: "js13kGames: How to make PWAs installable"
+short-title: Making PWAs installable
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
 page-type: guide
 sidebar: pwasidebar

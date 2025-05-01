@@ -1,5 +1,6 @@
 ---
-title: Progressive loading
+title: "js13kGames: Progressive loading"
+short-title: Progressive loading
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Loading
 page-type: guide
 sidebar: pwasidebar

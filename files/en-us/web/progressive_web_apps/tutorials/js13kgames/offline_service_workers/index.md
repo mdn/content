@@ -1,5 +1,6 @@
 ---
-title: Making PWAs work offline with Service workers
+title: "js13kGames: Making a PWA work offline with service workers"
+short-title: Offline support using service workers
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers
 page-type: guide
 sidebar: pwasidebar
@@ -7,11 +8,11 @@ sidebar: pwasidebar
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/App_structure", "Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
 
-Now that we've seen what the structure of js13kPWA looks like and have seen the basic shell up and running, let's look at how the offline capabilities using Service Worker are implemented. In this article, we look at how it is used in our [js13kPWA example](https://mdn.github.io/pwa-examples/js13kpwa/) ([see the source code also](https://github.com/mdn/pwa-examples/tree/main/js13kpwa)). We examine how to add offline functionality.
+Now that we've seen what the structure of js13kPWA looks like and have seen the basic shell up and running, let's look at how the offline capabilities using service workers are implemented. In this article, we look at how it is used in our [js13kPWA example](https://mdn.github.io/pwa-examples/js13kpwa/) ([see the source code also](https://github.com/mdn/pwa-examples/tree/main/js13kpwa)). We examine how to add offline functionality.
 
 ## Service workers explained
 
-Service Workers are a virtual proxy between the browser and the network. They make it possible to properly cache the assets of a website and make them available when the user's device is offline.
+Service workers are a virtual proxy between the browser and the network. They make it possible to properly cache the assets of a website and make them available when the user's device is offline.
 
 They run on a separate thread from the main JavaScript code of our page, and don't have any access to the DOM structure. This introduces a different approach from traditional web programming — the API is non-blocking, and can send and receive communication between different contexts. You are able to give a Service Worker something to work on, and receive the result whenever it is ready using a [Promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)-based approach.
 
@@ -33,11 +34,11 @@ if ("serviceWorker" in navigator) {
 }
 ```
 
-If the service worker API is supported in the browser, it is registered against the site using the {{domxref("ServiceWorkerContainer.register()")}} method. Its contents reside in the sw\.js file, and can be executed after the registration is successful. It's the only piece of Service Worker code that sits inside the app.js file; everything else that is Service Worker-specific is written in the sw\.js file itself.
+If the service worker API is supported in the browser, it is registered against the site using the {{domxref("ServiceWorkerContainer.register()")}} method. Its contents reside in the sw.js file, and can be executed after the registration is successful. It's the only piece of Service Worker code that sits inside the app.js file; everything else that is Service Worker-specific is written in the sw.js file itself.
 
 ### Lifecycle of a Service Worker
 
-When registration is complete, the sw\.js file is automatically downloaded, then installed, and finally activated.
+When registration is complete, the sw.js file is automatically downloaded, then installed, and finally activated.
 
 #### Installation
 

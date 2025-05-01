@@ -1,5 +1,6 @@
 ---
-title: js13kGames
+title: js13kGames PWA tutorial
+short-title: js13kGames
 slug: Web/Progressive_web_apps/Tutorials/js13kGames
 page-type: landing-page
 sidebar: pwasidebar

@@ -1,5 +1,6 @@
 ---
-title: CycleTracker
+title: CycleTracker PWA tutorial
+short-title: CycleTracker
 slug: Web/Progressive_web_apps/Tutorials/CycleTracker
 page-type: tutorial
 sidebar: pwasidebar

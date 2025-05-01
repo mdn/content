@@ -1,5 +1,6 @@
 ---
-title: How to make PWAs re-engageable using Notifications and Push
+title: "js13kGames: Make PWAs re-engageable using Notifications and Push APIs"
+short-title: Using Push and Notifications APIs
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push
 page-type: guide
 sidebar: pwasidebar

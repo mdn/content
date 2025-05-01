@@ -1,6 +1,6 @@
 ---
-title: Web app manifests
-short-title: Manifest
+title: Web application manifest
+short-title: Web app manifest
 slug: Web/Progressive_web_apps/Manifest
 page-type: landing-page
 browser-compat: manifests.webapp
