@@ -31,8 +31,8 @@ first item in the list of CSS rules will be a `CSSImportRule`. The
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].styleSheet); //returns a CSSStyleSheet object
+const myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0].styleSheet); // A CSSStyleSheet
 ```
 
 ## Specifications

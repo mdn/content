@@ -94,7 +94,7 @@ The `compileOptions` object is available to the following functions:
 
 Over in your WebAssembly module, you can now import builtins as specified in the `compileOptions` object from the `wasm:` namespace (in this case, the [`concat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat) function; see also the [equivalent built-in definition](https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md#wasmjs-string-concat)):
 
-```wasm
+```wat
 (func $concat (import "wasm:js-string" "concat")
     (param externref externref) (result (ref extern)))
 ```
@@ -105,7 +105,7 @@ When using builtins, type checks will be stricter than when they are not present
 
 Therefore, to write feature detection code for builtins you can define a module that's _invalid_ with the feature present, and _valid_ without it. You then return `true` when validation fails, to indicate support. A basic module that will achieve this is as follows:
 
-```wasm
+```wat
 (module
   (function (import "wasm:js-string" "cast")))
 ```
@@ -185,7 +185,7 @@ The JavaScript:
 
 The text representation of our WebAssembly module code looks like this:
 
-```wasm
+```wat
 (module
   (global $h (import "string_constants" "hello ") externref)
   (global $w (import "string_constants" "world!") externref)

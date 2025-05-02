@@ -78,13 +78,13 @@ When it comes to CSS properties and values within a declaration block, if either
 
 This example contains an error. The parser ignores the error (and the comments), seeks forward until it encounters a semi-colon, then restarts parsing:
 
-```css-nolint bad
+```css-nolint example-bad
 p {
-/* Invalid syntax due to  missing semi-colon */
+  /* Invalid syntax due to missing semi-colon */
   border-color: red
   background-color: green;
 
-/* Valid syntax but likely a logic error */
+  /* Valid syntax but likely a logic error */
   border-width: 100vh;
 }
 ```
@@ -128,7 +128,7 @@ In this example, the last declaration in each block is valid in all browsers —
 If a stylesheet ends while a rule, declaration, function, string, or comment is still open, the parser will automatically close everything that was left unclosed.
 
 > [!NOTE]
-> This is true of external style sheets, selector blocks within an HTML {{HTMLElement("style")}} element, and inline rules within a [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute.
+> This is true of external style sheets, selector blocks within an HTML {{HTMLElement("style")}} element, and inline rules within a [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute.
 
 If the content between the last semi-colon and the end of the stylesheet is valid, even if incomplete, the CSS will be parsed normally. For example, if you fail to close out a `@keyframes` declaration before closing your {{htmlelement("style")}}, the animation is still valid.
 
@@ -167,7 +167,7 @@ Each CSS property accepts specific data types. For example, the {{cssxref("backg
 
 ### Invalid custom properties
 
-Custom properties are generally considered valid when declared, but may create invalid CSS when accessed, i.e. they may be used as a value (via the {{cssxref("var")}} function) for a property that does not accept that value type. The browser parses each custom property when encountered without regard to where the property is consumed.
+Custom properties are generally considered valid when declared, but may create invalid CSS when accessed, i.e., they may be used as a value (via the {{cssxref("var")}} function) for a property that does not accept that value type. The browser parses each custom property when encountered without regard to where the property is consumed.
 
 Generally, when a property value is invalid, the declaration is ignored and the property falls back to the last valid value. Invalid computed custom property values, however, work slightly differently.
 

@@ -2,9 +2,8 @@
 title: Object building practice
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
@@ -107,11 +106,14 @@ This handles the properties, but what about the methods? We want to get our ball
 First add the following `draw()` method to the `Ball` class:
 
 ```js
-draw() {
-  ctx.beginPath();
-  ctx.fillStyle = this.color;
-  ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
-  ctx.fill();
+class Ball {
+  // …
+  draw() {
+    ctx.beginPath();
+    ctx.fillStyle = this.color;
+    ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+    ctx.fill();
+  }
 }
 ```
 
@@ -153,25 +155,28 @@ You can start testing your object out already.
 We can draw the ball in position, but to actually move the ball, we need an update function of some kind. Add the following code inside the class definition for `Ball`:
 
 ```js
-update() {
-  if ((this.x + this.size) >= width) {
-    this.velX = -(this.velX);
-  }
+class Ball {
+  // …
+  update() {
+    if (this.x + this.size >= width) {
+      this.velX = -this.velX;
+    }
 
-  if ((this.x - this.size) <= 0) {
-    this.velX = -(this.velX);
-  }
+    if (this.x - this.size <= 0) {
+      this.velX = -this.velX;
+    }
 
-  if ((this.y + this.size) >= height) {
-    this.velY = -(this.velY);
-  }
+    if (this.y + this.size >= height) {
+      this.velY = -this.velY;
+    }
 
-  if ((this.y - this.size) <= 0) {
-    this.velY = -(this.velY);
-  }
+    if (this.y - this.size <= 0) {
+      this.velY = -this.velY;
+    }
 
-  this.x += this.velX;
-  this.y += this.velY;
+    this.x += this.velX;
+    this.y += this.velY;
+  }
 }
 ```
 
@@ -255,15 +260,18 @@ Now for a bit of fun, let's add some collision detection to our program, so our 
 First, add the following method definition to your `Ball` class.
 
 ```js
-collisionDetect() {
-  for (const ball of balls) {
-    if (this !== ball) {
-      const dx = this.x - ball.x;
-      const dy = this.y - ball.y;
-      const distance = Math.sqrt(dx * dx + dy * dy);
+class Ball {
+  // …
+  collisionDetect() {
+    for (const ball of balls) {
+      if (this !== ball) {
+        const dx = this.x - ball.x;
+        const dy = this.y - ball.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
 
-      if (distance < this.size + ball.size) {
-        ball.color = this.color = randomRGB();
+        if (distance < this.size + ball.size) {
+          ball.color = this.color = randomRGB();
+        }
       }
     }
   }

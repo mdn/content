@@ -13,12 +13,12 @@ constructor creates a new {{domxref("AudioWorkletProcessor")}} object, which
 represents an underlying audio processing mechanism of an
 {{domxref("AudioWorkletNode")}}.
 
-## Syntax
-
 > [!NOTE]
 > The `AudioWorkletProcessor` and classes that derive from it
 > cannot be instantiated directly from a user-supplied code. Instead, they are created
-> only internally by the creation of an associated {{domxref("AudioWorkletNode")}}s.
+> only internally by the creation of an associated {{domxref("AudioWorkletNode")}}.
+
+## Syntax
 
 ```js-nolint
 new AudioWorkletProcessor(options)

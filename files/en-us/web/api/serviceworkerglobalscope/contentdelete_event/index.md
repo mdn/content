@@ -59,7 +59,7 @@ You can also set up the event handler using the `oncontentdelete` property:
 
 ```js
 self.oncontentdelete = (event) => {
-  // ...
+  // …
 };
 ```
 

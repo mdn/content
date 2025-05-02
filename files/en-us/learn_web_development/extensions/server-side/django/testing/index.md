@@ -3,9 +3,10 @@ title: "Django Tutorial Part 10: Testing a Django web application"
 short-title: "10: Testing"
 slug: Learn_web_development/Extensions/Server-side/Django/Testing
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Forms", "Learn_web_development/Extensions/Server-side/Django/Deployment", "Learn_web_development/Extensions/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Forms", "Learn_web_development/Extensions/Server-side/Django/Deployment", "Learn_web_development/Extensions/Server-side/Django")}}
 
 As websites grow they become harder to test manually. Not only is there more to test, but, as interactions between components become more complex, a small change in one area can impact other areas, so more changes will be required to ensure everything keeps working and errors are not introduced as more changes are made. One way to mitigate these problems is to write automated tests, which can easily and reliably be run every time you make a change. This tutorial shows how to automate _unit testing_ of your website using Django's test framework.
 
@@ -30,7 +31,7 @@ The [Local Library](/en-US/docs/Learn_web_development/Extensions/Server-side/Dja
 
 Automated tests can really help with this problem! The obvious benefits are that they can be run much faster than manual tests, can test to a much lower level of detail, and test exactly the same functionality every time (human testers are nowhere near as reliable!) Because they are fast, automated tests can be executed more regularly, and if a test fails, they point to exactly where code is not performing as expected.
 
-In addition, automated tests can act as the first real-world "user" of your code, forcing you to be rigorous about defining and documenting how your website should behave. Often they are the basis for your code examples and documentation. For these reasons, some software development processes start with test definition and implementation, after which the code is written to match the required behavior (e.g. [test-driven](https://en.wikipedia.org/wiki/Test-driven_development) and [behavior-driven](https://en.wikipedia.org/wiki/Behavior-driven_development) development).
+In addition, automated tests can act as the first real-world "user" of your code, forcing you to be rigorous about defining and documenting how your website should behave. Often they are the basis for your code examples and documentation. For these reasons, some software development processes start with test definition and implementation, after which the code is written to match the required behavior (e.g., [test-driven](https://en.wikipedia.org/wiki/Test-driven_development) and [behavior-driven](https://en.wikipedia.org/wiki/Behavior-driven_development) development).
 
 This tutorial shows how to write automated tests for Django, by adding a number of tests to the _LocalLibrary_ website.
 
@@ -346,7 +347,7 @@ class AuthorModelTest(TestCase):
 
     def test_get_absolute_url(self):
         author = Author.objects.get(id=1)
-        # This will also fail if the urlconf is not defined.
+        # This will also fail if the URLConf is not defined.
         self.assertEqual(author.get_absolute_url(), '/catalog/author/1')
 ```
 
@@ -381,7 +382,7 @@ def test_object_name_is_last_name_comma_first_name(self):
 
 def test_get_absolute_url(self):
     author = Author.objects.get(id=1)
-    # This will also fail if the urlconf is not defined.
+    # This will also fail if the URLConf is not defined.
     self.assertEqual(author.get_absolute_url(), '/catalog/author/1')
 ```
 
@@ -412,7 +413,7 @@ The patterns for testing the other models are similar so we won't continue to di
 
 The philosophy for testing your forms is the same as for testing your models; you need to test anything that you've coded or your design specifies, but not the behavior of the underlying framework and other third party libraries.
 
-Generally this means that you should test that the forms have the fields that you want, and that these are displayed with appropriate labels and help text. You don't need to verify that Django validates the field type correctly (unless you created your own custom field and validation) — i.e. you don't need to test that an email field only accepts emails. However you would need to test any additional validation that you expect to be performed on the fields and any messages that your code will generate for errors.
+Generally this means that you should test that the forms have the fields that you want, and that these are displayed with appropriate labels and help text. You don't need to verify that Django validates the field type correctly (unless you created your own custom field and validation) — i.e., you don't need to test that an email field only accepts emails. However you would need to test any additional validation that you expect to be performed on the fields and any messages that your code will generate for errors.
 
 Consider our form for renewing books. This has just one field for the renewal date, which will have a label and help text that we will need to verify.
 
@@ -476,7 +477,7 @@ class RenewBookFormTest(TestCase):
         self.assertTrue(form.is_valid())
 ```
 
-The first two functions test that the field's `label` and `help_text` are as expected. We have to access the field using the fields dictionary (e.g. `form.fields['renewal_date']`). Note here that we also have to test whether the label value is `None`, because even though Django will render the correct label it returns `None` if the value is not _explicitly_ set.
+The first two functions test that the field's `label` and `help_text` are as expected. We have to access the field using the fields dictionary (e.g., `form.fields['renewal_date']`). Note here that we also have to test whether the label value is `None`, because even though Django will render the correct label it returns `None` if the value is not _explicitly_ set.
 
 The rest of the functions test that the form is valid for renewal dates just inside the acceptable range and invalid for values outside the range. Note how we construct test date values around our current date (`datetime.date.today()`) using `datetime.timedelta()` (in this case specifying a number of days or weeks). We then just create the form, passing in our data, and test if it is valid.
 

@@ -11,7 +11,7 @@ browser-compat: api.AudioContext.baseLatency
 The **`baseLatency`** read-only property of the
 {{domxref("AudioContext")}} interface returns a double that represents the number of
 seconds of processing latency incurred by the `AudioContext` passing an audio
-buffer from the {{domxref("AudioDestinationNode")}} — i.e. the end of the audio graph —
+buffer from the {{domxref("AudioDestinationNode")}} — i.e., the end of the audio graph —
 into the host system's audio subsystem ready for playing.
 
 > [!NOTE]

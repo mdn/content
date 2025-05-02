@@ -17,7 +17,11 @@ Access the audio context's instance of `AudioWorklet` through the {{domxref("Bas
 
 ## Instance properties
 
-_The `AudioWorklet` interface does not define any properties of its own, but does inherit properties of {{domxref("Worklet")}}._
+_This interface also inherits properties defined on its parent interface, {{domxref("Worklet")}}._
+
+- {{domxref("AudioWorklet.port", "port")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("MessagePort")}} for custom, asynchronous communication between code in the main thread and the global scope of an audio worklet.
+    This allows for custom messages, such as sending and receiving control data or global settings.
 
 ## Instance methods
 

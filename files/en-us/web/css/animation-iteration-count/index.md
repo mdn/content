@@ -25,7 +25,7 @@ animation-iteration-count: 1.5;
 
 ```html interactive-example
 <section class="flex-column" id="default-example">
-  <div>Animation <span id="playstatus"></span></div>
+  <div>Animation <span id="play-status"></span></div>
   <div id="example-element">Select a count to start!</div>
 </section>
 ```
@@ -46,7 +46,7 @@ animation-iteration-count: 1.5;
   width: 150px;
 }
 
-#playstatus {
+#play-status {
   font-weight: bold;
 }
 
@@ -75,7 +75,7 @@ animation-iteration-count: 1.5;
 
 window.addEventListener("load", () => {
   const el = document.getElementById("example-element");
-  const status = document.getElementById("playstatus");
+  const status = document.getElementById("play-status");
 
   function update() {
     status.textContent = "delaying";

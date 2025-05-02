@@ -100,7 +100,7 @@ To reiterate, when a relative color is defined, the channel values of the origin
 rgb(from red r g b)
 ```
 
-However, when specifying the output values, you don't need to use the origin color channel values at all. You need to provide the output channel values in the right order (e.g. red, then green, then blue in the case of `rgb()`), but they can be any values you wish provided they are valid values for those channels. This gives relative CSS colors a high degree of flexibility.
+However, when specifying the output values, you don't need to use the origin color channel values at all. You need to provide the output channel values in the right order (e.g., red, then green, then blue in the case of `rgb()`), but they can be any values you wish provided they are valid values for those channels. This gives relative CSS colors a high degree of flexibility.
 
 For example, if you wanted to, you could specify absolute values like those shown below, transforming `red` into `blue`:
 
@@ -318,9 +318,9 @@ This example allows you to choose a base color and a color palette type. The bro
 
 The full HTML is included below for reference. The most interesting parts are as follows:
 
-- The `--base-color` custom property is stored as an inline [`style`](/en-US/docs/Web/HTML/Global_attributes/style) on the {{htmlelement("div")}} element with the ID of `container`. We've placed it there so it is easy to update the value using JavaScript. We've provided an initial value of `#ff0000` (`red`) to show a color palette based on that value when the example loads. Note that normally we'd probably set this on the {{htmlelement("html")}} element, but the MDN live sample was removing it when rendering.
-- The base color picker is created using an [`<input type="color">`](/en-US/docs/Web/HTML/Element/input/color) control. When a new value is set in this control, the `--base-color` custom property is set to this value using JavaScript, which in turn generates a new color palette. All the displayed colors are relative colors based on `--base-color`.
-- The set of [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio) controls enables choosing a color palette type to generate. When a new value is chosen here, JavaScript is used to set a new class on the `container` `<div>` to represent the chosen palette. In the CSS, descendant selectors are used to target the child `<div>`s (e.g. `.comp :nth-child(1)`) so they can have the correct colors applied to them and hide the unused `<div>` nodes.
+- The `--base-color` custom property is stored as an inline [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) on the {{htmlelement("div")}} element with the ID of `container`. We've placed it there so it is easy to update the value using JavaScript. We've provided an initial value of `#ff0000` (`red`) to show a color palette based on that value when the example loads. Note that normally we'd probably set this on the {{htmlelement("html")}} element, but the MDN live sample was removing it when rendering.
+- The base color picker is created using an [`<input type="color">`](/en-US/docs/Web/HTML/Reference/Elements/input/color) control. When a new value is set in this control, the `--base-color` custom property is set to this value using JavaScript, which in turn generates a new color palette. All the displayed colors are relative colors based on `--base-color`.
+- The set of [`<input type="radio">`](/en-US/docs/Web/HTML/Reference/Elements/input/radio) controls enables choosing a color palette type to generate. When a new value is chosen here, JavaScript is used to set a new class on the `container` `<div>` to represent the chosen palette. In the CSS, descendant selectors are used to target the child `<div>`s (e.g., `.comp :nth-child(1)`) so they can have the correct colors applied to them and hide the unused `<div>` nodes.
 - The `container` `<div>` containing the child `<div>`s that display the colors of the generated palette. Note that an initial class of `comp` is set on it, so that the page will display a complementary color scheme when first loaded.
 
 ```html
@@ -605,7 +605,7 @@ The output is as follows. This starts to show the power of relative CSS colors �
 
 ### Live UI color scheme updater
 
-This example shows a card containing a heading and text, but with a twist — below the card is a slider ([`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range)) control. When its value is changed, JavaScript is used to set a `--hue` custom property value to the new slider value.
+This example shows a card containing a heading and text, but with a twist — below the card is a slider ([`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range)) control. When its value is changed, JavaScript is used to set a `--hue` custom property value to the new slider value.
 
 This in turn adjusts the color scheme for the entire UI:
 
@@ -617,8 +617,8 @@ This in turn adjusts the color scheme for the entire UI:
 The HTML for the example is shown below.
 
 - The {{htmlelement("main")}} element acts as an outer wrapper to contain the rest of the content, allowing the card and form to be centered vertically and horizontally inside `<main>` as one unit.
-- The {{htmlelement("section")}} element contains the [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) and {{htmlelement("p")}} elements that define the card's content.
-- The {{htmlelement("form")}} element contains the ([`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range)) control and its {{htmlelement("label")}}.
+- The {{htmlelement("section")}} element contains the [`<h1>`](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) and {{htmlelement("p")}} elements that define the card's content.
+- The {{htmlelement("form")}} element contains the ([`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range)) control and its {{htmlelement("label")}}.
 
 ```html
 <main>

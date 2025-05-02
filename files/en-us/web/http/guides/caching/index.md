@@ -281,7 +281,7 @@ Content-Type: text/html
 Content-Length: 1024
 Date: Tue, 22 Feb 2022 22:22:22 GMT
 Last-Modified: Tue, 22 Feb 2022 22:00:00 GMT
-ETag: deadbeef
+ETag: "deadbeef"
 Cache-Control: no-cache
 
 <!doctype html>
@@ -598,7 +598,7 @@ The `ETag` value here may be a hash of the file.
 ```http
 # response for bundle.v123.js
 Last-Modified: Tue, 22 Feb 2022 20:20:20 GMT
-ETag: YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
+ETag: "YsAIAAAA-QG4G6kCMAMBAAAAAAAoK"
 ```
 
 In addition, `immutable` can be added to prevent validation on reload.
@@ -608,11 +608,11 @@ The combined result is shown below.
 ```http
 # bundle.v123.js
 HTTP/1.1 200 OK
-Content-Type: application/javascript
+Content-Type: text/javascript
 Content-Length: 1024
 Cache-Control: public, max-age=31536000, immutable
 Last-Modified: Tue, 22 Feb 2022 20:20:20 GMT
-ETag: YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
+ETag: "YsAIAAAA-QG4G6kCMAMBAAAAAAAoK"
 ```
 
 **Cache busting** is a technique to make a response cacheable over a long period by changing the URL when the content changes. The technique can be applied to all subresources, such as images.
@@ -651,7 +651,7 @@ Content-Type: text/html
 Content-Length: 1024
 Cache-Control: no-cache
 Last-Modified: Tue, 22 Feb 2022 20:20:20 GMT
-ETag: AAPuIbAOdvAGEETbgAAAAAAABAAE
+ETag: "AAPuIbAOdvAGEETbgAAAAAAABAAE"
 ```
 
 That setting is appropriate for non-personalized HTML, but for a response that gets personalized using cookies — for example, after a login — don't forget to also specify `private`:
@@ -662,7 +662,7 @@ Content-Type: text/html
 Content-Length: 1024
 Cache-Control: no-cache, private
 Last-Modified: Tue, 22 Feb 2022 20:20:20 GMT
-ETag: AAPuIbAOdvAGEETbgAAAAAAABAAE
+ETag: "AAPuIbAOdvAGEETbgAAAAAAABAAE"
 Set-Cookie: __Host-SID=AHNtAyt3fvJrUL5g5tnGwER; Secure; Path=/; HttpOnly
 ```
 

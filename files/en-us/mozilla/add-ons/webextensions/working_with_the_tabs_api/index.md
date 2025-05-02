@@ -154,13 +154,13 @@ To start with:
 
 ```js
 function listTabs() {
- getCurrentWindowTabs().then((tabs) => {
-    const tabsList = document.getElementById('tabs-list');
+  getCurrentWindowTabs().then((tabs) => {
+    const tabsList = document.getElementById("tabs-list");
     const currentTabs = document.createDocumentFragment();
     const limit = 5;
     let counter = 0;
 
-    tabsList.textContent = '';
+    tabsList.textContent = "";
 ```
 
 Next, we'll create the links for each tab:
@@ -204,7 +204,7 @@ else if (e.target.id === "tabs-alert-info") {
   callOnActiveTab((tab) => {
     let props = "";
     for (const item in tab) {
-      props += `${ item } = ${ tab[item] } \n`;
+      props += `${item} = ${tab[item]} \n`;
     }
     alert(props);
   });
@@ -224,7 +224,7 @@ document.addEventListener("click", (e) => {
       }
     });
   }
-}
+});
 ```
 
 ## Creating, duplicating, moving, updating, reloading, and removing tabs
@@ -399,13 +399,13 @@ Let's take a look at how the zoom in is implemented.
       else if (e.target.id === "tabs-add-zoom") {
         callOnActiveTab((tab) => {
           browser.tabs.getZoom(tab.id).then((zoomFactor) => {
-            //the maximum zoomFactor is 5, it can't go higher
+            // The maximum zoomFactor is 5, it can't go higher
             if (zoomFactor >= MAX_ZOOM) {
               alert("Tab zoom factor is already at max!");
             } else {
               let newZoomFactor = zoomFactor + ZOOM_INCREMENT;
-              //if the newZoomFactor is set to higher than the max accepted
-              //it won't change, and will never alert that it's at maximum
+              // If the newZoomFactor is set to higher than the max accepted
+              // it won't change, and will never alert that it's at maximum
               newZoomFactor = newZoomFactor > MAX_ZOOM ? MAX_ZOOM : newZoomFactor;
               browser.tabs.setZoom(tab.id, newZoomFactor);
             }

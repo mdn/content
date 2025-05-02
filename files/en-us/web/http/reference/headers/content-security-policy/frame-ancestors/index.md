@@ -9,7 +9,7 @@ browser-compat: http.headers.Content-Security-Policy.frame-ancestors
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`frame-ancestors`** directive specifies valid parents that may embed a page using {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, or {{HTMLElement("embed")}}.
 
-Setting this directive to `'none'` is similar to {{HTTPHeader("X-Frame-Options")}}`: deny` (which is also supported in older browsers).
+Setting this directive to `'none'` is similar to {{HTTPHeader("X-Frame-Options", "X-Frame-Options: deny")}} (which is also supported in older browsers).
 
 > **Note:** **`frame-ancestors`** allows you to specify what parent source may embed a page.
 > This differs from **`frame-src`**, which allows you to specify where iframes in a page may be loaded from.

@@ -36,7 +36,7 @@ const stagingBuffer = device.createBuffer({
 
 console.log(stagingBuffer.mapState); // "unmapped"
 
-// ...
+// …
 
 await stagingBuffer.mapAsync(
   GPUMapMode.READ,

@@ -8,7 +8,7 @@ status:
 browser-compat: api.Navigator.devicePosture
 ---
 
-{{APIRef("WebdevicePosture API")}}{{SeeCompatTable}}
+{{APIRef("Device Posture API")}}{{SeeCompatTable}}
 
 The **`Navigator.devicePosture`** read-only property returns the browser's {{domxref("DevicePosture")}} object, which allows developers to query the device's current posture (that is, whether the viewport is in a flat or folded state) and run code in response to posture changes.
 

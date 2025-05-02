@@ -13,9 +13,6 @@
     "ignore-list",
     "bash",
     "css",
-    "cpp",
-    "django",
-    "filetypes",
     "fonts",
     "fullstack",
     "html",
@@ -26,7 +23,6 @@
     "npm",
     "python",
     "softwareTerms",
-    "svelte",
     "typescript"
   ],
   "ignorePaths": [
@@ -41,6 +37,7 @@
     "{{\\s*EmbedLiveSample\\(.*\\)\\s*}}",
     "{{\\s*EmbedYouTube\\(.*\\)\\s*}}",
     "{{\\s*EmbedGHLiveSample\\(.*\\)\\s*}}",
+    "live-sample___[\\w-]+",
     // Markdown links
     "\\]\\(\\S*\\)",
     // Website references

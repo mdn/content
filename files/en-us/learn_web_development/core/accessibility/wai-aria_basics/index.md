@@ -3,9 +3,8 @@ title: WAI-ARIA basics
 short-title: WAI-ARIA
 slug: Learn_web_development/Core/Accessibility/WAI-ARIA_basics
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/CSS_and_JavaScript","Learn_web_development/Core/Accessibility/Multimedia", "Learn_web_development/Core/Accessibility")}}
 
@@ -40,7 +39,7 @@ Let's start by looking at what WAI-ARIA is, and what it can do for us.
 
 As web apps started to get more complex and dynamic, a new set of accessibility features and problems started to appear.
 
-For example, HTML introduced a number of semantic elements to define common page features ({{htmlelement("nav")}}, {{htmlelement("footer")}}, etc.). Before these were available, developers would use {{htmlelement("div")}}s with IDs or classes, e.g. `<div class="nav">`, but these were problematic, as there was no easy way to easily find a specific page feature such as the main navigation programmatically.
+For example, HTML introduced a number of semantic elements to define common page features ({{htmlelement("nav")}}, {{htmlelement("footer")}}, etc.). Before these were available, developers would use {{htmlelement("div")}}s with IDs or classes, e.g., `<div class="nav">`, but these were problematic, as there was no easy way to easily find a specific page feature such as the main navigation programmatically.
 
 The initial solution was to add one or more hidden links at the top of the page to link to the navigation (or whatever else), for example:
 
@@ -826,7 +825,7 @@ However, sometimes you will end up having to write code that either uses non-sem
 In terms of making non-focusable code focusable, WAI-ARIA extends the `tabindex` attribute with some new values:
 
 - `tabindex="0"` — as indicated above, this value allows elements that are not normally tabbable to become tabbable. This is the most useful value of `tabindex`.
-- `tabindex="-1"` — this allows not normally tabbable elements to receive focus programmatically, e.g. via JavaScript, or as the target of links.
+- `tabindex="-1"` — this allows not normally tabbable elements to receive focus programmatically, e.g., via JavaScript, or as the target of links.
 
 We discussed this in more detail and showed a typical implementation back in our HTML accessibility article — see [Building keyboard accessibility back in](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#building_keyboard_accessibility_back_in).
 
@@ -917,7 +916,7 @@ function toggleMusician(bool) {
 
 #### Describing non-semantic buttons as buttons
 
-A few times in this course already, we've mentioned the native accessibility of (and the accessibility issues behind using other elements to fake) buttons, links, or form elements (see [UI controls](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#ui_controls) in the HTML accessibility article, and [Enhancing keyboard accessibility](#enhancing_keyboard_accessibility), above). Basically, you can add keyboard accessibility back in without too much trouble in many cases, using `tabindex` and a bit of JavaScript.
+A few times in this course already, we've mentioned the native accessibility of (and the accessibility issues behind using other elements to fake) buttons, links, or form elements (see [Use semantic UI controls where possible](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#use_semantic_ui_controls_where_possible) in the HTML accessibility article, and [Enhancing keyboard accessibility](#enhancing_keyboard_accessibility), above). Basically, you can add keyboard accessibility back in without too much trouble in many cases, using `tabindex` and a bit of JavaScript.
 
 But what about screen readers? They still won't see the elements as buttons. If we test our [`fake-div-buttons.html`](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) example in a screen reader, our fake buttons will be reported using phrases like "Click me!, group", which is obviously confusing.
 
@@ -1225,11 +1224,11 @@ ARIA features used include:
 
 We could have used `aria-hidden` to hide the content of the tabpanels from assistive technologies but if that content contained focusable content, such as links, the user would still be able to tab to that content even when aria-hidden=true is set for the non-active panels. In this example we have applied `class="is-hidden"` to tabpanels that correspond to the tabs with `aria-selected="false"` and using CSS to `display: none;` which prevents the hidden content from being tabbed to.
 
-In our tests, this new structure did serve to improve things overall. The `<button>`s are now recognized as tabs (e.g. "tab" is spoken by the screen reader), the selected tab is indicated by "selected" being read out with the tab name and any content that is not shown can not be tabbed to. The user can also navigate the tabs with keyboard or mouse.
+In our tests, this new structure did serve to improve things overall. The `<button>`s are now recognized as tabs (e.g., "tab" is spoken by the screen reader), the selected tab is indicated by "selected" being read out with the tab name and any content that is not shown can not be tabbed to. The user can also navigate the tabs with keyboard or mouse.
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: WAI-ARIA](/en-US/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics/Test_your_skills:_WAI-ARIA).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: WAI-ARIA](/en-US/docs/Learn_web_development/Core/Accessibility/Test_your_skills/WAI-ARIA).
 
 ## Summary
 

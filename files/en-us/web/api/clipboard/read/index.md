@@ -199,7 +199,7 @@ const destinationDiv = document.querySelector("#destination");
 destinationDiv.addEventListener("click", pasteData);
 
 async function pasteData() {
-  destinationDiv.innerText = ""; //Clear inner text
+  destinationDiv.innerText = ""; // Clear inner text
   try {
     const clipboardContents = await navigator.clipboard.read();
     for (const item of clipboardContents) {

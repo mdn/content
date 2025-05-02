@@ -16,7 +16,7 @@ There are other HTML and WAI-ARIA properties that have similar purposes. The HTM
 
 The `aria-details` attribute serves a similar purpose as HTML's never fully-supported `longdesc` attribute － a URL of a long description to a replaced element's content － which was deprecated due to lack of support and misuse.
 
-The `aria-details` attribute takes the [`id`](/en-US/docs/Web/HTML/Global_attributes/id), or space separated list of `id`s of the elements to get more detailed information as its values. When `aria-details` is included on an element, assistive technologies inform users of the availability of extended information, enabling the user to navigate to the referenced content.
+The `aria-details` attribute takes the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id), or space separated list of `id`s of the elements to get more detailed information as its values. When `aria-details` is included on an element, assistive technologies inform users of the availability of extended information, enabling the user to navigate to the referenced content.
 
 Elements referenced by `aria-details` are intended to contain more information than would normally be provided via [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby).
 
@@ -60,6 +60,15 @@ When it comes to definition and term roles, the `aria-details` would be included
 - ID reference list
   - : An `id` or space separated list of ids of elements that provide or link to additional related information.
 
+## Associated interfaces
+
+- {{domxref("Element.ariaDetailsElements")}}
+  - : The `ariaDetailsElements` property is part of each element's interface.
+    Its value is an array of subclasses of {{domxref("Element")}} that reflect the `id` references in the `aria-details` attribute ([with some caveats](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references)).
+- {{domxref("ElementInternals.ariaDetailsElements")}}
+  - : The `ariaDetailsElements` property is part of each custom element's interface.
+    Its value is an array of subclasses of {{domxref("Element")}} that reflect the `id` references in the `aria-details` attribute ([with some caveats](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references)).
+
 ## Associated roles
 
 Used in **ALL** roles.
@@ -70,9 +79,9 @@ Used in **ALL** roles.
 
 ## See also
 
-- HTML [id](/en-US/docs/Web/HTML/Global_attributes/id) attribute
+- HTML [id](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attribute
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
 - [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
 - [`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-description)
 - [The image `alt` attribute](/en-US/docs/Web/API/HTMLImageElement/alt)
-- HTML [title](/en-US/docs/Web/HTML/Global_attributes/title) attribute
+- HTML [title](/en-US/docs/Web/HTML/Reference/Global_attributes/title) attribute

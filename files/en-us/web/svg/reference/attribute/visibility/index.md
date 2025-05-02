@@ -35,7 +35,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("rect")}}
 - {{SVGElement("text")}}
 - {{SVGElement("textPath")}}
-- {{SVGElement("tref")}}
 - {{SVGElement("tspan")}}
 - `<video>`
 
@@ -63,7 +62,7 @@ You can use this attribute with the following SVG elements:
 - `visible`
   - : This value indicates that the element will be painted.
 - `hidden`
-  - : This value indicates that the element will not be painted. Though it is still part of the rendering tree, i.e. it may receive pointer events depending on the {{SVGAttr("pointer-events")}} attribute, may receive focus depending on the {{SVGAttr("tabindex")}} attribute, contributes to bounding box calculations and clipping paths, and does affect text layout.
+  - : This value indicates that the element will not be painted. Though it is still part of the rendering tree, i.e., it may receive pointer events depending on the {{SVGAttr("pointer-events")}} attribute, may receive focus depending on the {{SVGAttr("tabindex")}} attribute, contributes to bounding box calculations and clipping paths, and does affect text layout.
 - `collapse`
   - : This value is equal to `hidden`.
 

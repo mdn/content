@@ -2,9 +2,21 @@
 title: Compression Dictionary Transport
 slug: Web/HTTP/Guides/Compression_dictionary_transport
 page-type: guide
+status:
+  - experimental
+browser-compat:
+  - html.elements.link.rel.compression-dictionary
+  - http.headers.Accept-Encoding.dcb
+  - http.headers.Accept-Encoding.dcz
+  - http.headers.Available-Dictionary
+  - http.headers.Content-Encoding.dcb
+  - http.headers.Content-Encoding.dcz
+  - http.headers.Dictionary-ID
+  - http.headers.Use-As-Dictionary
+spec-urls: https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-compression-dictionary
 ---
 
-{{HTTPSidebar}}
+{{HTTPSidebar}}{{SeeCompatTable}}
 
 **Compression Dictionary Transport** is a way of using a shared compression dictionary to dramatically reduce the transport size of HTTP responses.
 
@@ -17,7 +29,7 @@ Compression algorithms are used in HTTP to reduce the size of resources download
 
 For example, take this JavaScript:
 
-```javascript
+```js
 function a() {
   console.log("Hello World!");
 }
@@ -64,7 +76,7 @@ Compression Dictionary Transport can achieve an order of magnitude more compress
 
 ## Dictionary format
 
-A compression dictionary is a "raw" file that does not follow any specific format, nor have a specific {{Glossary("MIME type")}}. They are regular files that can be used to compress other files with similar content and so can be text files or even binary. For example, [WASM](/docs/WebAssembly) binary files are large resources that can also benefit from delta compression.
+A compression dictionary is a "raw" file that does not follow any specific format, nor have a specific {{Glossary("MIME type")}}. They are regular files that can be used to compress other files with similar content and so can be text files or even binary. For example, [WASM](/en-US/docs/WebAssembly) binary files are large resources that can also benefit from delta compression.
 
 ## Existing resource as a dictionary
 
@@ -95,7 +107,7 @@ If the response is cacheable, it must include a {{HTTPHeader("Vary")}} header to
 Vary: accept-encoding, available-dictionary
 ```
 
-An optional `id` can also be provided in the {{HTTPHeader("Use-As-Dictionary")}} header:
+An optional `id` can also be provided in the {{HTTPHeader("Use-As-Dictionary")}} header, to allow the server to more easily find the dictionary file if they do not store the diction by the hash:
 
 ```http
 Use-As-Dictionary: match="/js/app.*.js", id="dictionary-12345"
@@ -109,11 +121,13 @@ Available-Dictionary: :pZGm1Av0IEBKARczz7exkNYsZb8LzaMrV7J32a2fFG4=:
 Dictionary-ID: "dictionary-12345"
 ```
 
+The server must still check the hash from the `Available-Dictionary` header — the `Dictionary-ID` is additional information for the server to identify the dictionary but does not replace the need for the `Available-Dictionary` header.
+
 ## Separate dictionary
 
 An HTML document can also provide a compression dictionary to the browser which isn't a resource that the browser is downloading anyway via an element such as a {{htmlelement("script")}} tag. There are two methods to do this:
 
-- Include a {{HTMLElement("link")}} element whose [`rel`](/en-US/docs/Web/HTML/Attributes/rel) attribute is set to `compression-dictionary`:
+- Include a {{HTMLElement("link")}} element whose [`rel`](/en-US/docs/Web/HTML/Reference/Attributes/rel) attribute is set to `compression-dictionary`:
 
   ```html
   <link rel="compression-dictionary" href="/dictionary.dat" />
@@ -135,7 +149,7 @@ From here the process is similar to the previous example when a matching resourc
 
 ## Creating dictionary-compressed responses
 
-Dictionary-compressed responses can use either the Brotli or ZStandard algothms, with two extra requirements: they must also include a magic header and embedded dictionary hash.
+Dictionary-compressed responses can use either the Brotli or ZStandard algorithms, with two extra requirements: they must also include a magic header and embedded dictionary hash.
 
 Dictionary-compressed resources can be created dynamically, but for static resources it can be better to create these in advance at build time. When using prior versions as dictionaries, this will require deciding how many delta-compressed versions to create — for the last version only, or for the last X versions for some value of X.
 
@@ -163,17 +177,25 @@ Note that you will need {{glossary("OpenSSL")}} installed locally as well as Bro
 Compression algorithms are at risk of security attacks, so there are a number of restrictions for Compression Dictionary Transport, including:
 
 - Dictionaries must same-origin with the resource using the dictionary.
-- Dictionary-compressed resources must be same-origin with the document origin, or follow the [CORS](/docs/Web/HTTP/Guides/CORS) rules, and so be requested with the [`crossorigin`](/docs/Web/HTML/Attributes/crossorigin) attribute and served with an appropriate {{HTTPHeader("Access-Control-Allow-Origin")}} header.
+- Dictionary-compressed resources must be same-origin with the document origin, or follow the [CORS](/en-US/docs/Web/HTTP/Guides/CORS) rules, and so be requested with the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) attribute and served with an appropriate {{HTTPHeader("Access-Control-Allow-Origin")}} header.
 - Dictionaries are bound by the usual HTTP Cache partitioning and so cannot be shared between origins even if they download the same resources. The dictionary will need to be downloaded again for each origin.
 
 Additionally, dictionaries could themselves become tracking vectors so browsers may restrict this feature when cookies are disabled or when other extra privacy protections are enabled.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 
 - Glossary terms:
   - {{Glossary("Brotli compression")}}
   - {{Glossary("Zstandard compression")}}
-- [&lt;link rel=&quot;compression-dictionary&quot;&gt;](/en-US/docs/Web/HTML/Attributes/rel/compression-dictionary)
+- [&lt;link rel=&quot;compression-dictionary&quot;&gt;](/en-US/docs/Web/HTML/Reference/Attributes/rel/compression-dictionary)
 - {{HTTPHeader("Accept-encoding")}}
 - {{HTTPHeader("Content-encoding")}}
 - {{HTTPHeader("Available-Dictionary")}}

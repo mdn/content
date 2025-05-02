@@ -23,7 +23,7 @@ If `browser.zoom.siteSpecific` is set false, zoom operations apply to the active
 
 When Firefox is installed, `browser.zoom.siteSpecific` is true.
 
-If [`privacy.websites`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites)`.resistFingerprinting` is true, this setting has no effect and zoom is set on a per-tab basis.
+If [`privacy.websites.resistFingerprinting`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites#resistfingerprinting) is true, this setting has no effect and zoom is set on a per-tab basis.
 
 ## Browser compatibility
 

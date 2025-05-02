@@ -15,7 +15,7 @@ The **`snapTargetInline`** read-only property of the
 
 Specifically:
 
-- In the case of the {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} event, this refers to a pending inline-direction snap target (i.e. it will be selected when the current scroll gesture ends).
+- In the case of the {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} event, this refers to a pending inline-direction snap target (i.e., it will be selected when the current scroll gesture ends).
 - In the case of the {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} event, this refers to a newly-selected inline-direction snap target.
 
 The property values available on `SnapEvent` correspond directly to the value of the {{cssxref("scroll-snap-type")}} CSS property set on the scroll container. `snapTargetInline` only returns an element reference if the snap axis is specified as `inline` (or a physical axis value that equates to `inline` in the current writing mode) or `both`.

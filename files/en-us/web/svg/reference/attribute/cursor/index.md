@@ -11,8 +11,6 @@ The `cursor` attribute specifies the mouse cursor displayed when the mouse point
 > [!NOTE]
 > As a presentation attribute, `cursor` also has a CSS property counterpart: {{cssxref("cursor")}}. When both are specified, the CSS property takes priority.
 
-This attribute behaves exactly like the CSS {{cssxref("cursor")}} property except that if the browser supports the {{ SVGElement("cursor") }} element, you should be able to use it with the [\<FuncIRI>](/en-US/docs/Web/SVG/Guides/Content_type#funciri) notation.
-
 ## Usage context
 
 <table class="properties">
@@ -24,8 +22,8 @@ This attribute behaves exactly like the CSS {{cssxref("cursor")}} property excep
     <tr>
       <th scope="row">Value</th>
       <td>
-        [[<a href="/en-US/docs/Web/SVG/Guides/Content_type#funciri">&#x3C;FuncIRI></a
-        >,]* [ <strong>auto</strong> | crosshair | default | pointer | move |
+        [ [ <a href="/en-US/docs/Web/SVG/Guides/Content_type#funciri">&#x3C;FuncIRI></a
+        >, ]* [ <strong>auto</strong> | crosshair | default | pointer | move |
         e-resize | ne-resize | nw-resize | n-resize | se-resize | sw-resize |
         s-resize | w-resize| text | wait | help ]] | inherit
       </td>

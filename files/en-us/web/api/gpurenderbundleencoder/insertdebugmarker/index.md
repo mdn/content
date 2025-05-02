@@ -36,11 +36,11 @@ None ({{jsxref("Undefined")}}).
 ## Examples
 
 ```js
-// ...
+// …
 
 bundleEncoder.insertDebugMarker("my_marker");
 
-// ...
+// …
 ```
 
 ## Specifications

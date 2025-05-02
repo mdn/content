@@ -34,13 +34,13 @@ mapAsync(mode, offset, size)
 
       - : The `GPUBuffer` is mapped for reading. Values can be read, but any changes made to the {{jsxref("ArrayBuffer")}} returned by {{domxref("GPUBuffer.getMappedRange()")}} will be discarded once {{domxref("GPUBuffer.unmap()")}} is called.
 
-        Read-mode mapping can only be used on `GPUBuffer`s that have a usage of `GPUBufferUsage.MAP_READ` set on them (i.e. when created with {{domxref("GPUDevice.createBuffer()")}}).
+        Read-mode mapping can only be used on `GPUBuffer`s that have a usage of `GPUBufferUsage.MAP_READ` set on them (i.e., when created with {{domxref("GPUDevice.createBuffer()")}}).
 
     - `GPUMapMode.WRITE`
 
       - : The `GPUBuffer` is mapped for writing. Values can be read and updated — any changes made to the {{jsxref("ArrayBuffer")}} returned by {{domxref("GPUBuffer.getMappedRange()")}} will be saved to the `GPUBuffer` once {{domxref("GPUBuffer.unmap()")}} is called.
 
-        Write-mode mapping can only be used on `GPUBuffer`s that have a usage of `GPUBufferUsage.MAP_WRITE` set on them (i.e. when created with {{domxref("GPUDevice.createBuffer()")}}).
+        Write-mode mapping can only be used on `GPUBuffer`s that have a usage of `GPUBufferUsage.MAP_WRITE` set on them (i.e., when created with {{domxref("GPUDevice.createBuffer()")}}).
 
 - `offset` {{optional_inline}}
   - : A number representing the offset, in bytes, from the start of the buffer to the start of the range to be mapped. If `offset` is omitted, it defaults to 0.

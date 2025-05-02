@@ -2,9 +2,8 @@
 title: Design for developers
 slug: Learn_web_development/Core/Design_for_developers
 page-type: learn-module
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Version_control", "Learn_web_development/Core")}}
 
@@ -71,7 +70,7 @@ Learning outcomes:
 
 - Speaking design language, to communicate with designers.
 - Interpreting design brief requirements to produce an implementation.
-- Typical tools designers use to get their message across to developers (e.g. Figma).
+- Typical tools designers use to get their message across to developers (e.g., Figma).
 
 ## See also
 

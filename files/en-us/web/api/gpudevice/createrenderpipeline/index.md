@@ -126,8 +126,8 @@ The `fragment` object contains an array of objects, each of which can contain th
     A code snippet providing override values for several overridable constants might look like this:
 
     ```js
-    {
-      // ...
+    ({
+      // …
       constants: {
         0: false,
         1200: 3.0,
@@ -135,8 +135,8 @@ The `fragment` object contains an array of objects, each of which can contain th
         width: 20,
         depth: -1,
         height: 15,
-      }
-    }
+      },
+    });
     ```
 
 - `entryPoint` {{optional_inline}}
@@ -226,11 +226,7 @@ The `fragment` object contains an array of objects, each of which can contain th
 
         If omitted, `writeMask` defaults to `GPUColorWrite.ALL`.
 
-        Note that multiple flags can be specified by separating values with pipe symbols, for example:
-
-        ```js
-        writeMask: GPUColorWrite.RED | GPUColorWrite.ALPHA;
-        ```
+        Note that multiple flags can be specified by separating values with [bitwise OR](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR), for example: `GPUColorWrite.RED | GPUColorWrite.ALPHA`.
 
 ### `multisample` object structure
 
@@ -316,8 +312,8 @@ The `vertex` object can contain the following properties:
     A code snippet providing override values for several overridable constants might look like this:
 
     ```js
-    {
-      // ...
+    ({
+      // …
       constants: {
         0: false,
         1200: 3.0,
@@ -325,8 +321,8 @@ The `vertex` object can contain the following properties:
         width: 20,
         depth: -1,
         height: 15,
-      }
-    }
+      },
+    });
     ```
 
 - `entryPoint` {{optional_inline}}
@@ -342,7 +338,7 @@ The `vertex` object can contain the following properties:
   - : An array of objects, each representing the expected layout of a vertex buffer used in the pipeline. Each object can contain the following properties:
 
     - `arrayStride`
-      - : A number representing the stride, in bytes, between the different structures (e.g. vertices) inside the buffer.
+      - : A number representing the stride, in bytes, between the different structures (e.g., vertices) inside the buffer.
     - `attributes`
       - : An array of objects defining the layout of the vertex attributes within each structure. Each object has the following properties:
         - `format`
@@ -394,7 +390,7 @@ The following criteria must be met when calling **`createRenderPipeline()`**, ot
 Our [basic render demo](https://mdn.github.io/dom-examples/webgpu-render-demo/) provides an example of the construction of a valid render pipeline descriptor object, which is then used to create a {{domxref("GPURenderPipeline")}} via a `createRenderPipeline()` call.
 
 ```js
-// ...
+// …
 
 const vertexBuffers = [
   {
@@ -438,7 +434,7 @@ const pipelineDescriptor = {
 
 const renderPipeline = device.createRenderPipeline(pipelineDescriptor);
 
-// ...
+// …
 ```
 
 ## Specifications

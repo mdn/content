@@ -24,7 +24,7 @@ A string. If this has not been previously set as described above, it will be an 
 Setting and getting a label via `GPUExternalTexture.label`:
 
 ```js
-// ...
+// …
 
 const externalTexture = device.importExternalTexture({
   source: video,
@@ -38,7 +38,7 @@ console.log(externalTexture.label); // "my_ext_texture"
 Setting a label via the originating {{domxref("GPUDevice.importExternalTexture()")}} call, and then getting it via `GPUExternalTexture.label`:
 
 ```js
-// ...
+// …
 
 const externalTexture = device.importExternalTexture({
   source: video,

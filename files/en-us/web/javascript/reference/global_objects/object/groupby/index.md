@@ -25,8 +25,6 @@ const inventory = [
   { name: "fish", type: "meat", quantity: 22 },
 ];
 
-const restock = { restock: true };
-const sufficient = { restock: false };
 const result = Object.groupBy(inventory, ({ quantity }) =>
   quantity < 6 ? "restock" : "sufficient",
 );

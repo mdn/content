@@ -110,7 +110,7 @@ Once you have created an object, you might want to read or change them. Object p
 object.foo; // "bar"
 object["age"]; // 42
 object.baz; // {myProp: 12}
-object.baz.myProp; //12
+object.baz.myProp; // 12
 ```
 
 ### Property definitions

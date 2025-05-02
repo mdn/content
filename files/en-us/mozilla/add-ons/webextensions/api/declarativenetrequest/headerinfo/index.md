@@ -9,13 +9,14 @@ browser-compat:
 
 {{AddonSidebar}}
 
-The response header to match for the request, declared in the {{WebExtAPIRef("declarativeNetRequest.RuleCondition", "rule.condition")}}`.excludedResponseHeaders` array or {{WebExtAPIRef("declarativeNetRequest.RuleCondition", "rule.condition")}}`.responseHeaders` array. If specified, the array must be non-empty.
+The response header to match for the request, declared in the [`rule.condition.excludedResponseHeaders`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/RuleCondition#excludedresponseheaders) array or [`rule.condition.responseHeaders`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/RuleCondition#responseheaders) array. If specified, the array must be non-empty.
 
 When used in the condition responseHeaders, the rule matches if the request matches this response header condition. When used in the condition excludedResponseHeaders, the rule does not match if the request matches this response header condition.
 
 Each object describes one header to match or exclude. To check multiple headers, multiple objects can be specified in these arrays, or across multiple rules.
 
-> [!NOTE] Matching by headers is a relatively new feature. Make sure to feature-detect its availability before relying on it. While some browsers ignore the complete rule when an unrecognized condition is present, Chrome 121 until 127 applied the whole rule while ignoring the `responseHeaders` condition. This could result in matching more requests than intended, see [Chromium issue 347186592](https://crbug.com/347186592).
+> [!NOTE]
+> Matching by headers is a relatively new feature. Make sure to feature-detect its availability before relying on it. While some browsers ignore the complete rule when an unrecognized condition is present, Chrome 121 until 127 applied the whole rule while ignoring the `responseHeaders` condition. This could result in matching more requests than intended, see [Chromium issue 347186592](https://crbug.com/347186592).
 
 ## Type
 
@@ -27,7 +28,7 @@ Values of this type are objects. They contain these properties:
   - : An array of `string`. If specified, this condition matches if the header's value matches at least one pattern in this list. This supports case-insensitive header value matching plus the following constructs:
     - `'*'` : Matches any number of characters.
     - `'?'` : Matches zero or one character(s).
-    - `'*'` and `'?'` can be escaped with a backslash, e.g. `'\*'` and `'\?'`.
+    - `'*'` and `'?'` can be escaped with a backslash, e.g., `'\*'` and `'\?'`.
 - `excludedValues` {{optional_inline}}
   - : An array of `string`. If specified, this condition is not matched if the header exists but its value contains at least one element in this list. This uses the same glob pattern syntax as `values`. If `values` and `excludedValues` are both matched, then `excludedValues` takes precedence.
 

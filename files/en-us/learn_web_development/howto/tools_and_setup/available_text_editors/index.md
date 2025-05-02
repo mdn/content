@@ -2,9 +2,8 @@
 title: What text editors are available?
 slug: Learn_web_development/Howto/Tools_and_setup/Available_text_editors
 page-type: learn-faq
+sidebar: learn-how-to
 ---
-
-{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 In this article we highlight some things to think about when installing a text editor for web development.
 
@@ -347,7 +346,7 @@ Here are some popular editors:
 
 ## Active Learning
 
-In this active learning section, we would like you to try using and/or installing a text editor of your choice. Your computer may already be installed with one of the editors suggested above (e.g. Gedit if you use GNOME desktop, Kate if you use KDE etc.), if not then you should try installing one or more text editors of your choosing.
+In this active learning section, we would like you to try using and/or installing a text editor of your choice. Your computer may already be installed with one of the editors suggested above (e.g., Gedit if you use GNOME desktop, Kate if you use KDE etc.), if not then you should try installing one or more text editors of your choosing.
 
 Try digging through the settings of your editor and read the manual or documentation to see what its capabilities are. In particular (if possible in your editor), try to:
 

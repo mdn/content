@@ -308,10 +308,9 @@ The SVG rectangle that defines the path shape is shown here only to visually dem
 <div class="outer">
   <div class="target"></div>
 </div>
-  <svg width="400" height="200" xmlns="http://www.w3.org/2000/svg" >
-    <rect id="svgRect" x="50" y="50" width="200" height="100" />
-  </svg>
-</div>
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect id="svgRect" x="50" y="50" width="200" height="100" />
+</svg>
 ```
 
 ```css hidden live-sample___offset_path_url

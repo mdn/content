@@ -22,12 +22,12 @@ The **`:open`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Ps
 The `:open` pseudo-class selects any element currently in the open state, which includes the following elements:
 
 - {{htmlelement("details")}} and {{htmlelement("dialog")}} elements that are in an open state, that is, they have the `open` attribute set.
-- {{htmlelement("input")}} elements that display a picker interface for the user to choose a value from (for example [`<input type="color">`](/en-US/docs/Web/HTML/Element/input/color)), when the picker is displayed.
+- {{htmlelement("input")}} elements that display a picker interface for the user to choose a value from (for example [`<input type="color">`](/en-US/docs/Web/HTML/Reference/Elements/input/color)), when the picker is displayed.
 - {{htmlelement("select")}} elements that display a drop-down picker for the user to choose a value from, when the picker is displayed. Note that when implementing [customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select), the picker itself can be selected using the {{cssxref("::picker()", "::picker(select)")}} pseudo-element.
 
 Note that the open and closed states are semantic states, and don't necessary correlate with the visibility of the element in question. For example, a `<details>` element that is expanded to show its content is open, and will be selected by the `details:open` selector, even if it is hidden with a {{cssxref("visibility")}} value of `hidden`.
 
-{{domxref("Popover API", "Popover", "", "nocode")}} elements (that is, elements with the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute set on them) have distinct semantic states representing popovers that are showing or hidden, which can coexist alongside open and closed states. To target a popover element in an showing state, use the {{cssxref(":popover-open")}} pseudo-class instead.
+{{domxref("Popover API", "Popover", "", "nocode")}} elements (that is, elements with the [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) attribute set on them) have distinct semantic states representing popovers that are showing or hidden, which can coexist alongside open and closed states. To target a popover element in an showing state, use the {{cssxref(":popover-open")}} pseudo-class instead.
 
 ## Examples
 
@@ -119,7 +119,7 @@ There is nothing special about our fruit selector.
 ```
 
 > [!NOTE]
-> We are not using a multi-line `<select>` (that is, one with the [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple) attribute set) — those tend to render as a scrolling list box rather than a drop down menu, so don't have an open state.
+> We are not using a multi-line `<select>` (that is, one with the [`multiple`](/en-US/docs/Web/HTML/Reference/Attributes/multiple) attribute set) — those tend to render as a scrolling list box rather than a drop down menu, so don't have an open state.
 
 #### CSS
 
@@ -137,7 +137,7 @@ select {
   padding: 5px;
   border: 1px solid black;
   background-color: white;
-  background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewbox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='5,5 15,5 10,15'/%3E%3C/svg%3E")
+  background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='5,5 15,5 10,15'/%3E%3C/svg%3E")
     no-repeat right 3px center / 1em 1em;
 }
 
@@ -155,7 +155,7 @@ When the `<select>` is opened, we use the `:open` pseudo-class to set a differen
 ```css
 select:open {
   background-color: #f8f2dc;
-  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewbox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='5,15 10,5 15,15'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='5,15 10,5 15,15'/%3E%3C/svg%3E");
 }
 
 label:has(select:open) {

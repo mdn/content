@@ -60,7 +60,7 @@ The following example shows a process of:
 
 ```js
 async function init() {
-  // ...
+  // …
 
   const bindGroupLayout = device.createBindGroupLayout({
     entries: [
@@ -84,7 +84,7 @@ async function init() {
     },
   });
 
-  // ...
+  // …
 }
 ```
 

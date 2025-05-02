@@ -15,7 +15,7 @@ The tag uniquely defines the _type_ of an exception, including the order of its 
 The same tag that was used to create the `Exception` is required to access the arguments of a thrown exception.
 Methods are provided to test whether an exception matches a particular tag, and also to get a particular value by index (if the exception matches specified tag).
 
-JavaScript and other client code can only access WebAssembly exception values, and visa versa, when the associated tag is shared (you can't just use another tag that happens to define the same data types).
+JavaScript and other client code can only access WebAssembly exception values, and vice versa, when the associated tag is shared (you can't just use another tag that happens to define the same data types).
 Without the matching tag, exceptions can be caught and re-thrown, but they can't be inspected.
 
 In order to make exception-throwing faster, exceptions thrown from WebAssembly generally do not include a stack trace.
@@ -52,7 +52,7 @@ Consider the following WebAssembly code, which is assumed to be compiled to a fi
 - The `$throwException` function throws an exception using the `throw` instruction, taking the `$tagname` and the parameter argument.
 - The module exports the function `run()` that throws an exception with the value "42".
 
-```wasm
+```wat
 (module
   ;; import tag that will be referred to here as $tagname
   (import "extmod" "exttag" (tag $tagname (param i32)))
