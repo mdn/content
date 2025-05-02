@@ -18,34 +18,18 @@ A reference to {{DOMxRef("Presentation")}} object.
 
 ## Examples
 
-The following example demonstrates how to use the [Presentation API](/en-US/docs/Web/API/Presentation_API) to start a presentation session in a supporting browser.
+Currently, the `navigator.presentation` property is most useful for feature checking, and, for the receiving user agent, to access the {{domxref("PresentationReceiver")}}.
 
 ```js
 // Check if the Presentation API is available in the current browser
 if ("presentation" in navigator) {
-  // Access the Presentation object
-  const presentationObj = navigator.presentation;
-  console.log("Presentation object:", presentationObj);
-  // Create a PresentationRequest
-  const presentationUrls = ["https://example.com/presentation.html"];
-  const presentationRequest = new PresentationRequest(presentationUrls);
-  console.log("Created a PresentationRequest:", presentationRequest);
-  // Start a presentation session
-  presentationRequest
-    .start()
-    .then((session) => {
-      console.log("Presentation session started:", session);
-    })
-    .catch((error) => {
-      console.error("Error starting presentation session:", error);
-    });
+  footer.textContent = navigator.presentation.receiver
+    ? "Receiving presentation"
+    : "(idle)";
 } else {
-  // Notify if the API is unavailable
   console.error("Presentation API is not available in this browser.");
 }
 ```
-
-The code first checks if the [Presentation API](/en-US/docs/Web/API/Presentation_API) is supported by testing for the existence of `navigator.presentation`. If supported, it creates a new `PresentationRequest` object with a URL to the presentation content. It then attempts to start a presentation session using the `start()` method, which returns a Promise that resolves with a `PresentationConnection` object on success or rejects with an error if the session cannot be started.
 
 ## Specifications
 
