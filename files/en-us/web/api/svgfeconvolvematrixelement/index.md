@@ -50,7 +50,9 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 - {{domxref("SVGFEConvolveMatrixElement.y")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y")}} attribute of the given element.
 
-<table class="no-markdown">
+### Constants
+
+<table>
   <tbody>
     <tr>
       <th>Name</th>
