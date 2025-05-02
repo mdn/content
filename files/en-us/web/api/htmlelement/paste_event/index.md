@@ -14,10 +14,10 @@ The **`paste`** event fires when the user initiates a paste action through the b
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("paste", (event) => {});
+```js-nolint
+addEventListener("paste", (event) => { })
 
-onpaste = (event) => {};
+onpaste = (event) => { }
 ```
 
 ## Event type

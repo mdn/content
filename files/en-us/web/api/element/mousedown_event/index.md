@@ -18,10 +18,10 @@ This behavior is different from {{domxref("Element/pointerdown_event", "pointerd
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("mousedown", (event) => {});
+```js-nolint
+addEventListener("mousedown", (event) => { })
 
-onmousedown = (event) => {};
+onmousedown = (event) => { }
 ```
 
 ## Event type
