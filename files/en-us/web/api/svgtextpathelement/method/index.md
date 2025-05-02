@@ -8,7 +8,7 @@ browser-compat: api.SVGTextPathElement.method
 
 {{APIRef("SVG")}}
 
-The **`method`** read-only property of the {{domxref("SVGTextPathElement")}} interface reflects the {{SVGAttr("method")}} attribute of the given {{SVGElement("textPath")}} element. It takes one of the [`TEXTPATH_METHODTYPE_*` constants](/en-US/docs/Web/API/SVGTextPathElement#method_types) defined on this interface.
+The **`method`** read-only property of the {{domxref("SVGTextPathElement")}} interface reflects the {{SVGAttr("method")}} attribute of the given {{SVGElement("textPath")}} element. It takes one of the [`TEXTPATH_METHODTYPE_*` constants](/en-US/docs/Web/API/SVGTextPathElement#constants) defined on this interface.
 
 ## Value
 
@@ -49,4 +49,4 @@ console.log(textPath.method.baseVal); // Output: 1 (TEXTPATH_METHODTYPE_ALIGN)
 ## See also
 
 - {{domxref("SVGTextPathElement.spacing")}}
-- [`SVGTextPathElement` method types](/en-US/docs/Web/API/SVGTextPathElement#method_types)
+- [`SVGTextPathElement` method types](/en-US/docs/Web/API/SVGTextPathElement#constants)
