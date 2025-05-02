@@ -39,7 +39,7 @@ This article provides information about the changes in Firefox 139 that affect d
 
 #### DOM
 
-- The {{domxref("HTMLDialogElement/requestClose", "requestClose()")}} method of the {{domxref("HTMLDialogElement")}} interface is supported.
+- The {{domxref("HTMLDialogElement/requestClose", "requestClose()")}} method of the {{domxref("HTMLDialogElement")}} interface is now supported.
   This allows developers to conditionally prevent a dialog from closing by providing a [`cancel` event](/en-US/docs/Web/API/HTMLDialogElement/cancel_event) handler.
   ([Firefox bug 1960556](https://bugzil.la/1960556)).
 
