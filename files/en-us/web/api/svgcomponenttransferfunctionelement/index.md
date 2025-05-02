@@ -30,9 +30,9 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 - {{domxref("SVGComponentTransferFunctionElement.offset")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("offset")}} attribute of the given element.
 
-## Constants
+### Constants
 
-<table class="no-markdown">
+<table>
   <tbody>
     <tr>
       <th>Name</th>
