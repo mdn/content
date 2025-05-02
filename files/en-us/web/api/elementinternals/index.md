@@ -125,7 +125,7 @@ The `ElementInternals` interface also includes the following properties.
 - {{domxref("ElementInternals.ariaValueText")}}
   - : A string reflecting the [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext) attribute, which defines the human-readable text alternative of aria-valuenow for a range widget.
 
-#### Instance properties reflected from aria element references
+#### Instance properties reflected from ARIA element references
 
 The properties reflect the elements specified by `id` reference in the corresponding attributes, but with some caveats. See [Reflected element references](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references) in the _Reflected attributes_ guide for more information.
 

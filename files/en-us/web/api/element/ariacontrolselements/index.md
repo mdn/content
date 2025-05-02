@@ -17,7 +17,7 @@ The [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/ar
 
 An array of subclasses of {{domxref("HTMLElement")}}, representing the elements that are controlled by this element.
 
-When read, the returned array is a static and read-only.
+When read, the returned array is static and read-only.
 When written, the assigned array is copied: subsequent changes to the array do not affect the value of the property.
 
 ## Description

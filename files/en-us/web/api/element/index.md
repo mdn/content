@@ -175,7 +175,7 @@ _The `Element` interface also includes the following properties._
 - {{domxref("Element.role")}}
   - : A string reflecting the explicitly set [`role`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) attribute, which provides the semantic role of the element.
 
-#### Instance properties reflected from aria element references
+#### Instance properties reflected from ARIA element references
 
 The properties reflect the elements specified by `id` reference in the corresponding attributes, but with some caveats. See [Reflected element references](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references) in the _Reflected attributes_ guide for more information.
 

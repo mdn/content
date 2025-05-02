@@ -37,7 +37,7 @@ For more information about reflected element references and scope see [Reflected
 
 ### Get the accessible name
 
-This example shows how `ariaLabelledByElements` can be used to get an aria label defined using `aria-labelledby`.
+This example shows how `ariaLabelledByElements` can be used to get an ARIA label defined using `aria-labelledby`.
 
 #### HTML
 
