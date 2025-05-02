@@ -17,6 +17,7 @@ mask-type: luminance;
 mask-type: alpha;
 
 /* Global values */
+mask-type: inherit;
 mask-type: initial;
 mask-type: revert;
 mask-type: revert-layer;
