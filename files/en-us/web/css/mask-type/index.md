@@ -7,7 +7,7 @@ browser-compat: css.properties.mask-type
 
 {{CSSRef}}
 
-The **`mask-type`** [CSS](/en-US/docs/Web/CSS) property defines whether the content of an SVG {{svgElement("mask")}} element's _luminance_ or _alpha_ channels are used by default when the `<mask>` element is set another element's {{cssxref("mask-image")}}.
+The **`mask-type`** [CSS](/en-US/docs/Web/CSS) property applies to the SVG {{svgElement("mask")}} element. It defines whether to use the _luminance_ (brightness) or _alpha_ (transparency) content of the mask. This property may be overridden by the {{cssxref("mask-mode")}} property. `mask-type` has no effect on image or gradient masks.
 
 ## Syntax
 
@@ -25,25 +25,41 @@ mask-type: unset;
 
 ### Values
 
-The `mask-type` property value is either `alpha` or `luminance`:
 
 - `alpha`
-  - : Indicates that the alpha values of the `<mask>` should be used.
+  - : Indicates that the alpha (transparency) values of the `<mask>` should be used.
 - `luminance`
-  - : Indicates that the luminance values of the `<mask>` should be used.
+  - : Indicates that the luminance (brightness) values of the `<mask>` should be used.
 
 ## Description
 
-The `mask-type` property is only relevant when applied to the `<mask>` element. The property defines the resolved value of the {{cssxref("mask-mode")}} property value if the `mask-mode` property is explicitly set to, or defaults to, `match-source`. If `mask-mode` is set to any `<masking-mode>` value other than `match-source`, that value takes precedence, overriding the `mask-type` value of the applied mask.
+The `mask-type` property is only relevant for the SVG `<mask>` element. If you set `mask-type: luminance`, the mask will use how bright each part of the mask is; if you set `mask-type: alpha`, it will use how transparent or opaque each part is.
 
-The `<mask>` element's default `mask-type` is `luminance`. This means the color of the mask matters in addition to the transparency of those colors. Whether the mask is opaque partially depends on the lightness of the color of the opaque areas. White opaque areas (100% luminance) will be masked and visible, transparent and black areas (0% luminance) will be clipped, and anything in between will be partially masked, reflecting the luminance and alpha-transparency of each color making up the mask.
+### Default behavior
 
-The opacity of a `luminance` mask is determined by the `R`, `G`, `B`, and `A` values of an `rgb()` color. The equation is `((0.2125 * R) + (0.7154 * G) + (0.0721 * B)) * A`. In a `luminance` mask, the color `green`, being `#008000` or `rgb(0% 50% 0% / 1)`, any area masked by a solid `green` mask will be `35.77%` opaque. If set to `alpha`, as `green` is a fully opaque color meaning the mask is `100%` opaque.
+By default, the `<mask>` element uses `mask-type: luminance`. This means both the color and the transparency of the mask content affect masking. Whether the mask is opaque partially depends on the lightness of the color of the opaque areas:
+- White and fully opaque areas (100% luminance) will be masked and visible.
+- Black or fully ransparent areas (0% luminance) will be clipped.
+- Areas with intermediate luminance values will be partially masked, reflecting both the luminance and alpha transparency of each color making up the mask.
+
+###
+
+The opacity of a `luminance` mask is determined by the `R`, `G`, `B`, and `A` values of an `rgb()` color using the following formula:
+
+`((0.2125 * R) + (0.7154 * G) + (0.0721 * B)) * A`
+
+For example, the color `green` (`#008000` or `rgb(0% 50% 0% / 1)`) has a luminance value of `35.77%`. Any area masked by a solid `green` luminance mask will be `35.77%` visible.
+
+If the `mask-type` is set to `alpha`, the same fully opaque `green` color will make the masked area `100%` visible.
 
 If the `<mask>` is defined as the mask image's source, and the `mask-mode` is set or defaults to `match-source`, the `mask-mode` will resolve to the `<mask>` element's `mask-type` value; `luminance` or `alpha`. If not explicitly set, the value defaults to `luminance`.
 
 If the mask image source is not an SVG `<mask>`, this property has no effect.
+### Effect of `mask-mode` on `mask-type`
 
+While the `mask-type` property is set on the SVG `<mask>` element, the {{cssxref("mask-mode")}} property is set on the element being masked (the element you're applying the mask to).
+
+The default value of `mask-mode` is `match-source`, which means the browser uses the `mask-type` value from the `<mask>` element to determine how to interpret it. If `mask-mode` is set to a value other than `match-source`, that value takes precedence and overrides the `mask-type` value of the applied mask.
 ## Formal definition
 
 {{cssinfo}}
@@ -54,14 +70,14 @@ If the mask image source is not an SVG `<mask>`, this property has no effect.
 
 ## Examples
 
-### The `mask-type` property
+### Using the `mask-type` property
 
-This examples demonstrates basic usage of the `mask-type` property, along with the effect of the different values
+This example demonstrates how to use the `mask-type` property and the effect of its different values.
 
 #### HTML
 
-We include two images that will be masked. Other than their class names, the two images are identical.
-We also include an SVG with two `<mask>` elements. Other than their id values, the two masks are also identical; each with a green and white heart and a semi-transparent white and black filled circle.
+We've included two images that will be masked. Other than their class names, the two images are identical.
+We've also included an SVG with two `<mask>` elements. Other than their `id` values, the two masks are also identical; each with a green and white heart shape and a semi-transparent white and black filled circle.
 
 ```html
 <img
