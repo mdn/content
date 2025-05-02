@@ -36,7 +36,9 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 - {{domxref("SVGFEDisplacementMapElement.yChannelSelector")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("yChannelSelector")}} attribute of the given element. It takes one of the `SVG_CHANNEL_*` constants defined on this interface.
 
-<table class="no-markdown">
+### Constants
+
+<table>
   <tbody>
     <tr>
       <th>Name</th>
