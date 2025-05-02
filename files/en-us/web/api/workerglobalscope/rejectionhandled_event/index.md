@@ -17,9 +17,9 @@ This can be used in debugging and for general application resiliency, in tandem 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js-nolint
-self.addEventListener("rejectionhandled", (event) => { })
+addEventListener("rejectionhandled", (event) => { })
 
-self.onrejectionhandled = (event) => { }
+onrejectionhandled = (event) => { }
 ```
 
 ## Event type

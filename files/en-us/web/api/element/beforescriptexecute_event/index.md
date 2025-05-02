@@ -23,9 +23,9 @@ It is a proprietary event specific to Gecko (Firefox).
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js-nolint
-addEventListener("NameOfTheEvent", (event) => { })
+addEventListener("beforescriptexecute", (event) => { })
 
-onNameOfTheEvent = (event) => { }
+onbeforescriptexecute = (event) => { }
 ```
 
 ## Event type

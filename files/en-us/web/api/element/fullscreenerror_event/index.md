@@ -21,9 +21,9 @@ This event is not cancelable.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js-nolint
-addEventListener("fullscreenchange", (event) => { })
+addEventListener("fullscreenerror", (event) => { })
 
-onfullscreenchange = (event) => { }
+onfullscreenerror = (event) => { }
 ```
 
 ## Event type

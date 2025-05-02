@@ -17,7 +17,7 @@ Use the event name in methods like {{domxref("EventTarget.addEventListener", "ad
 ```js-nolint
 addEventListener("error", (event) => { })
 
-onerror = (message, filename, lineno, colno, error) => {}
+onerror = (message, filename, lineno, colno, error) => { }
 ```
 
 > [!NOTE]

@@ -17,9 +17,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js-nolint
-addEventListener("event", (event) => { })
+addEventListener("error", (event) => { })
 
-onevent = (event) => { }
+onerror = (event) => { }
 ```
 
 ## Event type
