@@ -15,7 +15,7 @@ The **`abort`** event of the {{domxref("AbortSignal")}} is fired when the associ
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js-nolint
-addEventListener('abort', (event) => { })
+addEventListener("abort", (event) => { })
 
 onabort = (event) => { }
 ```

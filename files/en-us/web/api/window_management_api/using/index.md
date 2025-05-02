@@ -49,9 +49,9 @@ You'll still need to use {{domxref("Window.open()")}} to open and manage windows
 
 ```js
 // Array to hold references to the currently open windows
-let windowRefs = [];
+const windowRefs = [];
 
-// ...
+// …
 
 function openWindow(left, top, width, height, url) {
   const windowFeatures = `left=${left},top=${top},width=${width},height=${height}`;
@@ -94,7 +94,7 @@ openWindow(
   sites[1].url,
 );
 
-// ...
+// …
 ```
 
 ### Closing all windows
@@ -140,7 +140,7 @@ In modern browsers, a separate user gesture event is required for each `Window.o
 In our demo application, we have gone for the third option. Our `openWindow()` function contains the following section:
 
 ```js
-// ...
+// …
 
 if (windowRef === null) {
   // If the browser is blocking new windows, close any windows that were
@@ -152,7 +152,7 @@ if (windowRef === null) {
   windowRefs.push(windowRef);
 }
 
-// ...
+// …
 ```
 
 If the browser blocks a new window, the resulting `windowRef` will be `null`. In this case we run our `closeAllWindows()` function to close any windows that _did_ manage to open before the blocking started, and show a [popover element](/en-US/docs/Web/API/Popover_API) that explains how to disable the popup blocker.

@@ -19,8 +19,8 @@ A {{domxref("ReadableStream")}}.
 This example shows how to return a {{domxref("ReadableStream")}} from a `TextDecoderStream`.
 
 ```js
-stream = new TextDecoderStream();
-console.log(stream.readable); //a ReadableStream
+const stream = new TextDecoderStream();
+console.log(stream.readable); // A ReadableStream
 ```
 
 ## Specifications

@@ -42,7 +42,7 @@ async function initTransport(url) {
   } else {
     // Use connection with either reliable or unreliable transports.
   }
-  // ...
+  // …
 }
 ```
 

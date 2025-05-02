@@ -154,7 +154,7 @@ As mentioned earlier, any JSON is a valid JavaScript literal (object, array, num
 
 Even a single misplaced comma or colon can make a JSON file invalid and cause it to fail.
 You should be careful to validate any data you are attempting to use (although computer-generated JSON is less likely to include errors, as long as the generator program is working correctly).
-You can validate JSON using an application like [JSONLint](https://jsonlint.com/) or [JSON-validate](https://json-validate.com)
+You can validate JSON using an application like [JSONLint](https://jsonlint.com/) or [JSON-validate](https://www.json-validate.com/)
 
 ## Active learning: Working through a JSON example
 

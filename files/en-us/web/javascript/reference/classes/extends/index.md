@@ -391,7 +391,7 @@ class ReadOnlyMap {
 }
 ```
 
-In this case, the `ReadOnlyMap` class is not a subclass of `Map`, but it still implements most of the same methods. This means more code duplication, but it also means that the `ReadOnlyMap` class is not strongly coupled to the `Map` class, and does not easily break if the `Map` class is changed, avoiding the [semantic issues of built-in subclassing](#subclassing_built-ins). For example, if the `Map` class adds an [`emplace()`](https://github.com/tc39/proposal-upsert) method that does not call `set()`, it would cause the `ReadOnlyMap` class to no longer be read-only unless the latter is updated accordingly to override `emplace()` as well. Moreover, `ReadOnlyMap` objects do not have the `set` method at all, which is more accurate than throwing an error at runtime.
+In this case, the `ReadOnlyMap` class is not a subclass of `Map`, but it still implements most of the same methods. This means more code duplication, but it also means that the `ReadOnlyMap` class is not strongly coupled to the `Map` class, and does not easily break if the `Map` class is changed, avoiding the [semantic issues of built-in subclassing](#subclassing_built-ins). For example, if the `Map` class adds a new utility method (such as [`getOrInsert()`](https://github.com/tc39/proposal-upsert)) that does not call `set()`, it would cause the `ReadOnlyMap` class to no longer be read-only unless the latter is updated accordingly to override `getOrInsert()` as well. Moreover, `ReadOnlyMap` objects do not have the `set` method at all, which is more accurate than throwing an error at runtime.
 
 ## Specifications
 

@@ -164,7 +164,7 @@ function openSidebar() {
     sidebar.classList.add("open");
     mainContent.classList.add("open");
 
-    //Add new CloseWatcher
+    // Add new CloseWatcher
     const watcher = new CloseWatcher();
 
     sidebarClose.addEventListener("click", () => watcher.close());

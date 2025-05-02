@@ -22,10 +22,10 @@ The event target might change between different key events. For example, the `ke
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("keydown", (event) => {});
+```js-nolint
+addEventListener("keydown", (event) => { })
 
-onkeydown = (event) => {};
+onkeydown = (event) => { }
 ```
 
 ## Event type

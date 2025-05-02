@@ -8,7 +8,7 @@ sidebar: mathmlref
 
 The **`<mi>`** [MathML](/en-US/docs/Web/MathML) element indicates that the content should be rendered as an **identifier**, such as a function name, variable or symbolic constant.
 
-By default `<mi>` elements that contain multiple characters are a rendered as normal text, while single character characters are rendered as italic: the same formatting behaviour as the [CSS `text-transform`](/en-US/docs/Web/CSS/text-transform) property with a value of `math-auto`.
+By default `<mi>` elements that contain multiple characters are a rendered as normal text, while single character characters are rendered as italic: the same formatting behavior as the [CSS `text-transform`](/en-US/docs/Web/CSS/text-transform) property with a value of `math-auto`.
 The `mathvariant` attribute with a value of `normal` can be used to reset a single character to the normal font.
 
 In order to use a particular form of a character such as bold/italic, serif, sans-serif, script/calligraphy, monospaced, double-struck, and so on, you should use the appropriate [Mathematical Alphanumeric Symbols](https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols).

@@ -28,8 +28,8 @@ This stylesheet contains a single {{cssxref("@property")}} rule. The first {{dom
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].initialValue); //the string "#c0ffee"
+const myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0].initialValue); // "#c0ffee"
 ```
 
 ## Specifications

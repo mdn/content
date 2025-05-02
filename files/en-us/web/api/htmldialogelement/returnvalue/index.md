@@ -66,7 +66,6 @@ Closing the dialog with the <kbd>Esc</kbd> key does not set the `returnValue`.
   }
 
   dialog.addEventListener("close", () => {
-    openCheck(dialog);
     handleUserInput(dialog.returnValue);
   });
 </script>

@@ -244,7 +244,7 @@ const games = [
     website: "github.com/Platane",
     github: "github.com/Platane/js13k-2017",
   },
-  // ...
+  // …
   {
     slug: "emma-3d",
     name: "Emma-3D",

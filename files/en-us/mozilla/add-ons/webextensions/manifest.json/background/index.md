@@ -186,8 +186,7 @@ Support for the `scripts`, `page`, and `service_worker` properties varies betwee
   - `background.service_worker` is not supported (see [Firefox bug 1573659](https://bugzil.la/1573659)).
   - supports `background.scripts` (or `background.page`) if `service_worker` is not specified or the service worker feature is disabled. Before Firefox 120, Firefox did not start the background page if `service_worker` was present (see [Firefox bug 1860304](https://bugzil.la/1860304)). From Firefox 121, the background page starts as expected, regardless of the presence of `service_worker`.
 - Safari:
-  - supports `background.service_worker`.
-  - supports `background.scripts` (or `background.page`) if `service_worker` is not specified.
+  - supports `background.scripts` (or `background.page`) and `background.service_worker`. If both are specified, uses `background.scripts` (or `background.page`), unless `preferred_environment` is set to `service_worker`.
 
 To illustrate, this is an example of a cross-browser extension that supports `scripts` and `service_worker`. The example has this manifest.json file:
 

@@ -10,12 +10,22 @@ browser-compat: api.ScriptProcessorNode.audioprocess_event
 
 {{APIRef("Web Audio API")}}{{Deprecated_Header}}
 
-The `audioprocess` event of the {{domxref("ScriptProcessorNode")}} interface is fired when an input buffer of a script processor is ready to be processed.
+The **`audioprocess`** event of the {{domxref("ScriptProcessorNode")}} interface is fired when an input buffer of a script processor is ready to be processed.
 
 > [!NOTE]
 > This feature was replaced by [AudioWorklets](/en-US/docs/Web/API/AudioWorklet) and the {{domxref("AudioWorkletNode")}} interface.
 
 This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js-nolint
+addEventListener("audioprocess", (event) => { })
+
+onaudioprocess = (event) => { }
+```
 
 ## Event type
 
@@ -72,7 +82,7 @@ You could also set up the event handler using the `onaudioprocess` property:
 
 ```js
 scriptNode.onaudioprocess = (audioProcessingEvent) => {
-  // ...
+  // …
 };
 ```
 

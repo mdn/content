@@ -24,7 +24,7 @@ A string. If this has not been previously set as described above, it will be an 
 Setting and getting a label via `GPURenderPipeline.label`:
 
 ```js
-// ...
+// …
 
 const pipelineDescriptor = {
   vertex: {
@@ -57,7 +57,7 @@ console.log(renderPipeline.label); // "my_render_pipeline"
 Setting a label via a {{domxref("GPUDevice.createRenderPipeline()")}} call, and then getting it via `GPURenderPipeline.label`:
 
 ```js
-// ...
+// …
 
 const pipelineDescriptor = {
   vertex: {

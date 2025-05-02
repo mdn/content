@@ -75,7 +75,7 @@ const registration_url = "https://example.com/registration";
 const apiRegOptsResp = await fetch(registration_url, {
   method: "POST",
   headers: { "Content-Type": "application/json" },
-  body: JSON.stringify(newCredentialInfo), //Calls newCredentialInfo.toJSON
+  body: JSON.stringify(newCredentialInfo), // Calls newCredentialInfo.toJSON
 });
 ```
 

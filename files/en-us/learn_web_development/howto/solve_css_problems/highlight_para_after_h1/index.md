@@ -1,8 +1,9 @@
 ---
 title: How to highlight a paragraph that comes after a heading
+short-title: Highlight a paragraph after a heading
 slug: Learn_web_development/Howto/Solve_CSS_problems/Highlight_para_after_h1
 page-type: learn-faq
-sidebar: learnsidebar
+sidebar: learn-how-to
 ---
 
 In this guide you can find out how to highlight a paragraph that comes directly after a heading.

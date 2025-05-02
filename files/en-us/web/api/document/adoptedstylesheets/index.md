@@ -80,7 +80,7 @@ We can share a stylesheet to a shadow root in a similar way.
 const node = document.createElement("div");
 const shadow = node.attachShadow({ mode: "open" });
 
-//Adopt the same sheet into the shadow DOM
+// Adopt the same sheet into the shadow DOM
 shadow.adoptedStyleSheets = [sheet];
 ```
 
