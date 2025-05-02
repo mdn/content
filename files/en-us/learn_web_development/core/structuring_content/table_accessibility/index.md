@@ -190,7 +190,7 @@ Your finished table should look something like the following:
 {{ EmbedGHLiveSample('learning-area/html/tables/advanced/spending-record-finished.html', '100%', 400) }}
 
 > [!NOTE]
-> You can also find it on GitHub as [spending-record-finished.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/spending-record-finished.html) ([see it live also](https://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html)).
+> You can also find it on GitHub as [spending-record-finished.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/spending-record-finished.html) ([see it live here](https://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html)).
 
 ## The `scope` attribute
 
