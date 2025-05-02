@@ -59,7 +59,7 @@ sidebar:
   - /MDN/Changelog
 ```
 
-The URL is relative to the `docs` directory in the MDN URL structure, so for example, `/MDN/Changelog` would generate a link to https://developer.mozilla.org/en-US/docs/MDN/Changelog. The system automatically uses the linked page's document title as the link text.
+The URL is relative to the `docs` directory in the MDN URL structure, so for example, `/MDN/Changelog` would generate a link to https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Changelog. The system automatically uses the linked page's document title as the link text.
 If the page has a `short-title` key in the front matter, that will be used for the sidebar link display text instead.
 
 If you want to use custom link text that's not a document's `title` or `short-title`, you need to include two keys inside the list item — `title`, which contains the custom link text, and `link`, which contains the relative URL as before. The following example would create a link to the MDN Web Docs changelog as before, but with custom link text of "Our changelog":
