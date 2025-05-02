@@ -34,38 +34,18 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 - {{domxref("SVGFEMorphologyElement.y")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y")}} attribute of the given element.
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th>Name</th>
-      <th>Value</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td><code>SVG_MORPHOLOGY_OPERATOR_UNKNOWN</code></td>
-      <td>0</td>
-      <td>
-        The type is not one of predefined types. It is invalid to attempt to
-        define a new value of this type or to attempt to switch an existing
-        value to this type.
-      </td>
-    </tr>
-    <tr>
-      <td><code>SVG_MORPHOLOGY_OPERATOR_ERODE</code></td>
-      <td>1</td>
-      <td>Corresponds to the <code>erode</code> value.</td>
-    </tr>
-    <tr>
-      <td><code>SVG_MORPHOLOGY_OPERATOR_DILATE</code></td>
-      <td>2</td>
-      <td>Corresponds to <code>dilate</code> value.</td>
-    </tr>
-  </tbody>
-</table>
-
 ## Instance methods
 
 _This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}._
+
+## Static properties
+
+- `SVG_MORPHOLOGY_OPERATOR_UNKNOWN` (0)
+  - : The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.
+- `SVG_MORPHOLOGY_OPERATOR_ERODE` (1)
+  - : Corresponds to the value `erode`.
+- `SVG_MORPHOLOGY_OPERATOR_DILATE` (2)
+  - : Corresponds to the value `dilate`.
 
 ## Specifications
 

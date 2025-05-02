@@ -44,60 +44,26 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 - {{domxref("SVGFECompositeElement.y")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y")}} attribute of the given element.
 
-### Constants
-
-<table>
-  <tbody>
-    <tr>
-      <th>Name</th>
-      <th>Value</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td><code>SVG_FECOMPOSITE_OPERATOR_UNKNOWN</code></td>
-      <td>0</td>
-      <td>
-        The type is not one of predefined types. It is invalid to attempt to
-        define a new value of this type or to attempt to switch an existing
-        value to this type.
-      </td>
-    </tr>
-    <tr>
-      <td><code>SVG_FECOMPOSITE_OPERATOR_OVER</code></td>
-      <td>1</td>
-      <td>Corresponds to the <code>over</code> value.</td>
-    </tr>
-    <tr>
-      <td><code>SVG_FECOMPOSITE_OPERATOR_IN</code></td>
-      <td>2</td>
-      <td>Corresponds to the <code>in</code> value.</td>
-    </tr>
-    <tr>
-      <td><code>SVG_FECOMPOSITE_OPERATOR_OUT</code></td>
-      <td>3</td>
-      <td>Corresponds to <code>out</code> value.</td>
-    </tr>
-    <tr>
-      <td><code>SVG_FECOMPOSITE_OPERATOR_ATOP</code></td>
-      <td>4</td>
-      <td>Corresponds to <code>atop</code> value.</td>
-    </tr>
-    <tr>
-      <td><code>SVG_FECOMPOSITE_OPERATOR_XOR</code></td>
-      <td>5</td>
-      <td>Corresponds to <code>xor</code> value.</td>
-    </tr>
-    <tr>
-      <td><code>SVG_FECOMPOSITE_OPERATOR_ARITHMETIC</code></td>
-      <td>6</td>
-      <td>Corresponds to <code>arithmetic</code> value.</td>
-    </tr>
-  </tbody>
-</table>
-
 ## Instance methods
 
 _This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}._
+
+## Static properties
+
+- `SVG_FECOMPOSITE_OPERATOR_UNKNOWN` (0)
+  - : The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.
+- `SVG_FECOMPOSITE_OPERATOR_OVER` (1)
+  - : Corresponds to the value `over`.
+- `SVG_FECOMPOSITE_OPERATOR_IN` (2)
+  - : Corresponds to the value `in`.
+- `SVG_FECOMPOSITE_OPERATOR_OUT` (3)
+  - : Corresponds to the value `out`.
+- `SVG_FECOMPOSITE_OPERATOR_ATOP` (4)
+  - : Corresponds to the value `atop`.
+- `SVG_FECOMPOSITE_OPERATOR_XOR` (5)
+  - : Corresponds to the value `xor`.
+- `SVG_FECOMPOSITE_OPERATOR_ARITHMETIC` (6)
+  - : Corresponds to the value `arithmetic`.
 
 ## Specifications
 

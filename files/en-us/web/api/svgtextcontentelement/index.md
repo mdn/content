@@ -18,34 +18,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
 - {{domxref("SVGTextContentElement.textLength")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} reflecting the {{SVGAttr("textLength")}} attribute of the given element.
 - {{domxref("SVGTextContentElement.lengthAdjust")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedEnumeration")}} reflecting the {{SVGAttr("lengthAdjust")}} attribute of the given element. The numeric type values represent one of the constant values above.
-
-### Constants
-
-<table>
-  <tbody>
-    <tr>
-      <td>Constant</td>
-      <td>Value</td>
-      <td>Description</td>
-    </tr>
-    <tr>
-      <td>LENGTHADJUST_UNKNOWN</td>
-      <td>0</td>
-      <td>Some other value.</td>
-    </tr>
-    <tr>
-      <td>LENGTHADJUST_SPACING</td>
-      <td>1</td>
-      <td>The <code>spacing</code> keyword.</td>
-    </tr>
-    <tr>
-      <td>LENGTHADJUST_SPACINGANDGLYPHS</td>
-      <td>2</td>
-      <td>The <code>spacingAndGlyphs</code> keyword.</td>
-    </tr>
-  </tbody>
-</table>
+  - : An {{domxref("SVGAnimatedEnumeration")}} reflecting the {{SVGAttr("lengthAdjust")}} attribute of the given element. The numeric type values represent one of the `LENGTHADJUST_*` constant values.
 
 ## Instance methods
 
@@ -79,6 +52,15 @@ _This interface also inherits methods from its parent, {{domxref("SVGGraphicsEle
   - : Returns a long representing the character which caused a text glyph to be rendered at a given position in the coordinate system. Because the relationship between characters and glyphs is not one-to-one, only the first character of the relevant typographic character is returned.
 - {{domxref("SVGTextContentElement.selectSubString()")}} {{deprecated_inline}}
   - : Selects text within the element.
+
+## Static properties
+
+- `LENGTHADJUST_UNKNOWN` (0)
+  - : The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.
+- `LENGTHADJUST_SPACING` (1)
+  - : Corresponds to the value `spacing`.
+- `LENGTHADJUST_SPACINGANDGLYPHS` (2)
+  - : Corresponds to the value `spacingAndGlyphs`.
 
 ## Specifications
 
