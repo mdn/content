@@ -16,7 +16,7 @@ The **`SVGTextPathElement`** interface corresponds to the {{SVGElement("textPath
 _This interface also inherits properties from its parent interface, {{domxref("SVGTextContentElement")}}._
 
 - {{domxref("SVGTextPathElement.href")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute of the given element.
+  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} attribute of the given element.
 - {{domxref("SVGTextPathElement.startOffset")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the X component of the {{SVGAttr("startOffset")}} attribute of the given element.
 - {{domxref("SVGTextPathElement.method")}} {{ReadOnlyInline}}
@@ -24,9 +24,9 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 - {{domxref("SVGTextPathElement.spacing")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("spacing")}} attribute of the given element. It takes one of the `TEXTPATH_SPACINGTYPE_*` constants defined on this interface.
 
-### Method types
+### Constants
 
-<table class="no-markdown">
+<table>
   <tbody>
     <tr>
       <th>Name</th>
@@ -52,13 +52,6 @@ _This interface also inherits properties from its parent interface, {{domxref("S
       <td>2</td>
       <td>Corresponds to the value <code>stretch</code>.</td>
     </tr>
-  </tbody>
-</table>
-
-### Spacing types
-
-<table class="no-markdown">
-  <tbody>
     <tr>
       <th>Name</th>
       <th>Value</th>
