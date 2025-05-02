@@ -12,11 +12,9 @@ The **`SVGAnimatedTransformList`** interface represents attributes which take a 
 ## Instance properties
 
 - {{domxref("SVGAnimatedTransformList.baseVal", "baseVal")}} {{ReadOnlyInline}}
-
   - : The base value of the given attribute before applying any animations.
-
 - {{domxref("SVGAnimatedTransformList.animVal", "animVal")}} {{ReadOnlyInline}}
-  - : The current animated value of the given attribute as read only {{ domxref("SVGTransformList") }}. If the given attribute is not currently being animated, then the {{ domxref("SVGTransformList") }} will have the same contents as `baseVal`. The object referenced by `animVal` will always be distinct from the one referenced by `baseVal`, even when the attribute is not animated.
+  - : The current animated value of the given attribute as read only {{domxref("SVGTransformList")}}. If the given attribute is not currently being animated, then the {{domxref("SVGTransformList")}} will have the same contents as `baseVal`. The object referenced by `animVal` will always be distinct from the one referenced by `baseVal`, even when the attribute is not animated.
 
 ## Instance methods
 
