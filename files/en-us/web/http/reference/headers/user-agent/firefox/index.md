@@ -61,7 +61,7 @@ Windows user agents have the following variations, where _x.y_ is the Windows NT
 | Windows NT on x64 CPU | Mozilla/5.0 (Windows NT _x_._y_; Win64; x64; rv:10.0) Gecko/20100101 Firefox/10.0 |
 
 > [!NOTE]
-> For aarch64 CPU, It reported as x86 on Windows 10 (since it doesn't support x64 emulation), and reported as x86_64 on Windows 11.
+> An aarch64 CPU is reported as x86_64 on Windows 11 and x86 on Windows 10 (since it doesn't support x64 emulation).
 > See [Bugzilla #1763310](https://bugzil.la/1763310)
 
 ## macOS
