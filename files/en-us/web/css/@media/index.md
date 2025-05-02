@@ -18,6 +18,7 @@ The **`@media`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_sy
 abbr {
   color: #860304;
   font-weight: bold;
+  transition: color 0.5s ease;
 }
 
 @media (hover: hover) {
