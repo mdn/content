@@ -11,11 +11,22 @@ The **`SVGTextPathElement`** interface corresponds to the {{SVGElement("textPath
 
 {{InheritanceDiagram}}
 
-## Constants
+## Instance properties
 
-### Method types
+_This interface also inherits properties from its parent interface, {{domxref("SVGTextContentElement")}}._
 
-<table class="no-markdown">
+- {{domxref("SVGTextPathElement.href")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} attribute of the given element.
+- {{domxref("SVGTextPathElement.startOffset")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the X component of the {{SVGAttr("startOffset")}} attribute of the given element.
+- {{domxref("SVGTextPathElement.method")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("method")}} attribute of the given element. It takes one of the `TEXTPATH_METHODTYPE_*` constants defined on this interface.
+- {{domxref("SVGTextPathElement.spacing")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("spacing")}} attribute of the given element. It takes one of the `TEXTPATH_SPACINGTYPE_*` constants defined on this interface.
+
+### Constants
+
+<table>
   <tbody>
     <tr>
       <th>Name</th>
@@ -41,18 +52,6 @@ The **`SVGTextPathElement`** interface corresponds to the {{SVGElement("textPath
       <td>2</td>
       <td>Corresponds to the value <code>stretch</code>.</td>
     </tr>
-  </tbody>
-</table>
-
-### Spacing types
-
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th>Name</th>
-      <th>Value</th>
-      <th>Description</th>
-    </tr>
     <tr>
       <td><code>TEXTPATH_SPACINGTYPE_UNKNOWN</code></td>
       <td>0</td>
@@ -74,19 +73,6 @@ The **`SVGTextPathElement`** interface corresponds to the {{SVGElement("textPath
     </tr>
   </tbody>
 </table>
-
-## Instance properties
-
-_This interface also inherits properties from its parent interface, {{domxref("SVGTextContentElement")}}._
-
-- {{domxref("SVGTextPathElement.href")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute of the given element.
-- {{domxref("SVGTextPathElement.startOffset")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedLength")}} corresponding to the X component of the {{SVGAttr("startOffset")}} attribute of the given element.
-- {{domxref("SVGTextPathElement.method")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("method")}} attribute of the given element. It takes one of the `TEXTPATH_METHODTYPE_*` constants defined on this interface.
-- {{domxref("SVGTextPathElement.spacing")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("spacing")}} attribute of the given element. It takes one of the `TEXTPATH_SPACINGTYPE_*` constants defined on this interface.
 
 ## Instance methods
 

@@ -7,13 +7,32 @@ browser-compat: api.SVGComponentTransferFunctionElement
 
 {{APIRef("SVG")}}
 
-The **`SVGComponentTransferFunctionElement`** interface defines a base interface used by the component transfer function interfaces.
+The **`SVGComponentTransferFunctionElement`** interface represents a base interface used by the component transfer function interfaces.
 
 {{InheritanceDiagram}}
 
-## Constants
+## Instance properties
 
-<table class="no-markdown">
+_This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
+
+- {{domxref("SVGComponentTransferFunctionElement.type")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("type")}} attribute of the given element. It takes one of the `SVG_FECOMPONENTTRANSFER_TYPE_*` constants defined on this interface.
+- {{domxref("SVGComponentTransferFunctionElement.tableValues")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedNumberList")}} corresponding to the {{SVGAttr("tableValues")}} attribute of the given element.
+- {{domxref("SVGComponentTransferFunctionElement.slope")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("slope")}} attribute of the given element.
+- {{domxref("SVGComponentTransferFunctionElement.intercept")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("intercept")}} attribute of the given element.
+- {{domxref("SVGComponentTransferFunctionElement.amplitude")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("amplitude")}} attribute of the given element.
+- {{domxref("SVGComponentTransferFunctionElement.exponent")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("exponent")}} attribute of the given element.
+- {{domxref("SVGComponentTransferFunctionElement.offset")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("offset")}} attribute of the given element.
+
+### Constants
+
+<table>
   <tbody>
     <tr>
       <th>Name</th>
@@ -56,25 +75,6 @@ The **`SVGComponentTransferFunctionElement`** interface defines a base interface
     </tr>
   </tbody>
 </table>
-
-## Instance properties
-
-_This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
-
-- {{domxref("SVGComponentTransferFunctionElement.type")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("type")}} attribute of the given element. It takes one of the `SVG_FECOMPONENTTRANSFER_TYPE_*` constants defined on this interface.
-- {{domxref("SVGComponentTransferFunctionElement.tableValues")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedNumberList")}} corresponding to the {{SVGAttr("tableValues")}} attribute of the given element.
-- {{domxref("SVGComponentTransferFunctionElement.slope")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("slope")}} attribute of the given element.
-- {{domxref("SVGComponentTransferFunctionElement.intercept")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("intercept")}} attribute of the given element.
-- {{domxref("SVGComponentTransferFunctionElement.amplitude")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("amplitude")}} attribute of the given element.
-- {{domxref("SVGComponentTransferFunctionElement.exponent")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("exponent")}} attribute of the given element.
-- {{domxref("SVGComponentTransferFunctionElement.offset")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("offset")}} attribute of the given element.
 
 ## Instance methods
 
