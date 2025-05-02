@@ -18,159 +18,40 @@ An `SVGPreserveAspectRatio` object can be designated as read only, which means t
 - {{domxref("SVGPreserveAspectRatio.meetOrSlice", "meetOrSlice")}}
   - : The type of the meet-or-slice value as specified by one of the `SVG_MEETORSLICE_*` constants defined on this interface.
 
-### Constants
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Value</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <code>SVG_PRESERVEASPECTRATIO_UNKNOWN</code>
-      </td>
-      <td>0</td>
-      <td>
-        The enumeration was set to a value that is not one of predefined types.
-        It is invalid to attempt to define a new value of this type or to
-        attempt to switch an existing value to this type.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>SVG_PRESERVEASPECTRATIO_NONE</code>
-      </td>
-      <td>1</td>
-      <td>
-        Corresponds to value <code>none</code> for attribute
-        {{ SVGAttr("preserveAspectRatio") }}.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>SVG_PRESERVEASPECTRATIO_XMINYMIN</code>
-      </td>
-      <td>2</td>
-      <td>
-        Corresponds to value <code>xMinYMin</code> for attribute
-        {{ SVGAttr("preserveAspectRatio") }}.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>SVG_PRESERVEASPECTRATIO_XMIDYMIN</code>
-      </td>
-      <td>3</td>
-      <td>
-        Corresponds to value <code>xMidYMin</code> for attribute
-        {{ SVGAttr("preserveAspectRatio") }}.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>SVG_PRESERVEASPECTRATIO_XMAXYMIN</code>
-      </td>
-      <td>4</td>
-      <td>
-        Corresponds to value <code>xMaxYMin</code> for attribute
-        {{ SVGAttr("preserveAspectRatio") }}.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>SVG_PRESERVEASPECTRATIO_XMINYMID</code>
-      </td>
-      <td>5</td>
-      <td>
-        Corresponds to value <code>xMinYMid</code> for attribute
-        {{ SVGAttr("preserveAspectRatio") }}.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>SVG_PRESERVEASPECTRATIO_XMIDYMID</code>
-      </td>
-      <td>6</td>
-      <td>
-        Corresponds to value <code>xMidYMid</code> for attribute
-        {{ SVGAttr("preserveAspectRatio") }}.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>SVG_PRESERVEASPECTRATIO_XMAXYMID</code>
-      </td>
-      <td>7</td>
-      <td>
-        Corresponds to value <code>xMaxYMid</code> for attribute
-        {{ SVGAttr("preserveAspectRatio") }}.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>SVG_PRESERVEASPECTRATIO_XMINYMAX</code>
-      </td>
-      <td>8</td>
-      <td>
-        Corresponds to value <code>xMinYMax</code> for attribute
-        {{ SVGAttr("preserveAspectRatio") }}.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>SVG_PRESERVEASPECTRATIO_XMIDYMAX</code>
-      </td>
-      <td>9</td>
-      <td>
-        Corresponds to value <code>xMidYMax</code> for attribute
-        {{ SVGAttr("preserveAspectRatio") }}.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>SVG_PRESERVEASPECTRATIO_XMAXYMAX</code>
-      </td>
-      <td>10</td>
-      <td>
-        Corresponds to value <code>xMaxYMax</code> for attribute
-        {{ SVGAttr("preserveAspectRatio") }}.
-      </td>
-    </tr>
-    <tr>
-      <td><code>SVG_MEETORSLICE_UNKNOWN</code></td>
-      <td>0</td>
-      <td>
-        The enumeration was set to a value that is not one of predefined types.
-        It is invalid to attempt to define a new value of this type or to
-        attempt to switch an existing value to this type.
-      </td>
-    </tr>
-    <tr>
-      <td><code>SVG_MEETORSLICE_MEET</code></td>
-      <td>1</td>
-      <td>
-        Corresponds to value <code>meet</code> for attribute
-        {{ SVGAttr("preserveAspectRatio") }}.
-      </td>
-    </tr>
-    <tr>
-      <td><code>SVG_MEETORSLICE_SLICE</code></td>
-      <td>2</td>
-      <td>
-        Corresponds to value <code>slice</code> for attribute
-        {{ SVGAttr("preserveAspectRatio") }}.
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## Instance methods
 
 _The `SVGPreserveAspectRatio` interface do not provide any specific methods._
+
+## Static properties
+
+- `SVG_PRESERVEASPECTRATIO_UNKNOWN` (0)
+  - : The enumeration was set to a value that is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.
+- `SVG_PRESERVEASPECTRATIO_NONE` (1)
+  - : Corresponds to value `none` for attribute {{SVGAttr("preserveAspectRatio")}}.
+- `SVG_PRESERVEASPECTRATIO_XMINYMIN` (2)
+  - : Corresponds to value `xMinYMin` for attribute {{SVGAttr("preserveAspectRatio")}}.
+- `SVG_PRESERVEASPECTRATIO_XMIDYMIN` (3)
+  - : Corresponds to value `xMidYMin` for attribute {{SVGAttr("preserveAspectRatio")}}.
+- `SVG_PRESERVEASPECTRATIO_XMAXYMIN` (4)
+  - : Corresponds to value `xMaxYMin` for attribute {{SVGAttr("preserveAspectRatio")}}.
+- `SVG_PRESERVEASPECTRATIO_XMINYMID` (5)
+  - : Corresponds to value `xMinYMid` for attribute {{SVGAttr("preserveAspectRatio")}}.
+- `SVG_PRESERVEASPECTRATIO_XMIDYMID` (6)
+  - : Corresponds to value `xMidYMid` for attribute {{SVGAttr("preserveAspectRatio")}}.
+- `SVG_PRESERVEASPECTRATIO_XMAXYMID` (7)
+  - : Corresponds to value `xMaxYMid` for attribute {{SVGAttr("preserveAspectRatio")}}.
+- `SVG_PRESERVEASPECTRATIO_XMINYMAX` (8)
+  - : Corresponds to value `xMinYMax` for attribute {{SVGAttr("preserveAspectRatio")}}.
+- `SVG_PRESERVEASPECTRATIO_XMIDYMAX` (9)
+  - : Corresponds to value `xMidYMax` for attribute {{SVGAttr("preserveAspectRatio")}}.
+- `SVG_PRESERVEASPECTRATIO_XMAXYMAX` (10)
+  - : Corresponds to value `xMaxYMax` for attribute {{SVGAttr("preserveAspectRatio")}}.
+- `SVG_MEETORSLICE_UNKNOWN` (0)
+  - : The enumeration was set to a value that is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.
+- `SVG_MEETORSLICE_MEET` (1)
+  - : Corresponds to value `meet` for attribute {{SVGAttr("preserveAspectRatio")}}.
+- `SVG_MEETORSLICE_SLICE` (2)
+  - : Corresponds to value `slice` for attribute {{SVGAttr("preserveAspectRatio")}}.
 
 ## Specifications
 
