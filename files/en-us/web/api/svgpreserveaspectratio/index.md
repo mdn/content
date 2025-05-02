@@ -7,20 +7,20 @@ browser-compat: api.SVGPreserveAspectRatio
 
 {{APIRef("SVG")}}
 
-The **`SVGPreserveAspectRatio`** interface corresponds to the {{ SVGAttr("preserveAspectRatio") }} attribute, which is available for some of SVG's elements.
+The **`SVGPreserveAspectRatio`** interface corresponds to the {{SVGAttr("preserveAspectRatio")}} attribute.
 
 An `SVGPreserveAspectRatio` object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.
 
 ## Instance properties
 
 - {{domxref("SVGPreserveAspectRatio.align", "align")}}
-
   - : The type of the alignment value as specified by one of the `SVG_PRESERVEASPECTRATIO_*` constants defined on this interface.
-
 - {{domxref("SVGPreserveAspectRatio.meetOrSlice", "meetOrSlice")}}
   - : The type of the meet-or-slice value as specified by one of the `SVG_MEETORSLICE_*` constants defined on this interface.
 
-<table class="no-markdown">
+### Constants
+
+<table>
   <thead>
     <tr>
       <th>Name</th>
