@@ -53,11 +53,6 @@ _This interface also inherits properties from its parent interface, {{domxref("S
       <td>Corresponds to the value <code>stretch</code>.</td>
     </tr>
     <tr>
-      <th>Name</th>
-      <th>Value</th>
-      <th>Description</th>
-    </tr>
-    <tr>
       <td><code>TEXTPATH_SPACINGTYPE_UNKNOWN</code></td>
       <td>0</td>
       <td>
