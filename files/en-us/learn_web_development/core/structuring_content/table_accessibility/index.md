@@ -307,7 +307,7 @@ In this example:
 
 - The `<th>` for `"Belgium"` uses `rowspan="2"` to span both `"Antwerp"` and `"Ghent"`.
 - The city header cells (`"Antwerp"` and `"Ghent"`) use the `headers` attribute to reference `"belgium"` to show they belong to the Belgium group.
-- Each `<td>` includes a `headers` for country (`belgium`), city (`antwerp` or `ghent`), group (`clothes`), and the specific clothing item (`trousers`, `skirts`, or `dresses`).
+- Each `<td>` includes a `headers` attribute for country (`belgium`), city (`antwerp` or `ghent`), group (`clothes`), and the specific clothing item (`trousers`, `skirts`, or `dresses`).
 
 > [!NOTE]
 > This method creates very precise associations between headers and data cells but it uses **a lot** more markup and does not leave any room for errors. The `scope` approach is usually sufficient for most tables.
