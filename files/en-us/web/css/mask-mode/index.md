@@ -74,7 +74,7 @@ In the case of `match-source`, whether `luminance` or `alpha` is used depends on
 
 ## Examples
 
-### Using `mask-mode`
+### Usage and values
 
 This example demonstrates the basic usage and different values of the `mask-mode` property.
 
@@ -92,21 +92,8 @@ We include three `<div>` elements, so we can demonstrate the three enumerated `m
 
 Each `<div>` is provided with the same background and masking image. The only difference between each `<div>` is the value of the `mask-mode` property:
 
-```css hidden
-div {
-  float: left;
-  text-align: center;
-  line-height: 65px;
-  color: white;
-  text-shadow: 1px 1px 2px black;
-  font-family: sans-serif;
-}
-```
-
 ```css
 div {
-  width: 227px;
-  height: 200px;
   background: blue linear-gradient(red, blue);
   mask-image: url(https://mdn.github.io/shared-assets/images/examples/mdn.svg);
 }
@@ -124,9 +111,22 @@ div {
 }
 ```
 
+```css hidden
+div {
+  width: 227px;
+  height: 200px;
+  float: left;
+  text-align: center;
+  line-height: 65px;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  font-family: sans-serif;
+}
+```
+
 #### Results
 
-{{EmbedLiveSample("Using mask-mode", "", "250px")}}
+{{EmbedLiveSample("Usage and values", "", "250px")}}
 
 Because the mask source is an `<image>` and not an SVG `<mask>`, the `match-source` value resolves to `alpha`.
 
