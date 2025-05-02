@@ -62,7 +62,7 @@ Windows user agents have the following variations, where _x.y_ is the Windows NT
 
 > [!NOTE]
 > For aarch64 CPU, It reported as x86 on Windows 10 (since it doesn't support x64 emulation), and reported as x86_64 on Windows 11.
-> See [Bugzilla #1763310](https://bugzil.la/show_bug.cgi?id=1763310)
+> See [Bugzilla #1763310](https://bugzil.la/1763310)
 
 ## macOS
 
