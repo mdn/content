@@ -95,6 +95,9 @@ We include three {{htmlelement("section")}} elements, each containing one {{html
 <section class="border">
   <div></div>
 </section>
+<section class="comparison">
+  <div></div>
+</section>
 ```
 
 #### CSS
@@ -110,6 +113,9 @@ div {
   background-color: #8cffa0;
   padding: 10px;
   mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+}
+section {
+  border: 1px solid black;
 }
 ```
 
@@ -127,6 +133,10 @@ We give each `<div>` a different `mask-origin` value.
 .border div {
   mask-origin: border-box;
 }
+
+.comparison div {
+  mask-image: none;
+}
 ```
 
 We also generated some text in each section, so you can see the origin value about each example in our demo.
@@ -143,6 +153,7 @@ section::before {
 body {
   display: flex;
   flex-flow: row wrap;
+  gap: 10px;
 }
 ```
 
@@ -158,39 +169,34 @@ This example demonstrates using different `mask-origin` values for different `ma
 
 #### HTML
 
-We include a single `<div>`, and an SVG that defines two {{svgElem("mask")}} elements we'll use as a masking source.
+We include a single `<div>`.
 
 ```html
 <div></div>
-<svg height="0" width="0">
-  <mask id="star">
-    <path
-      d="M50 2.447l15.45 31.307 34.55 5.02-25 24.37 5.902 34.409L50 81.307 19.098 97.553 25 63.143 0 38.774l34.55-5.02z" />
-  </mask>
-  <mask id="heart">
-    <path
-      d="M20,70 A40,40,0,0,1,100,70 A40,40,0,0,1,180,70 Q180,130,100,190 Q20,130,20,70 Z" />
-  </mask>
-  <mask id="circle">
-    <circle cx="130" cy="130" r="50" />
-  </mask>
-</svg>
 ```
 
 #### CSS
 
-We use the same CSS as in the previous example, with three mask images applied instead of one.
+We apply three mask images instead of one; each with different {{cssxref("mask-position")}}. We also set the mask images to not repeat.
 
 ```css
 div {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   margin: 10px;
   border: 10px solid blue;
   background-color: #8cffa0;
   padding: 10px;
-  mask-image: url(#star), url(#circle), url(#heart);
-  mask-origin: content-box, padding-box;
+  mask-image:
+    url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg),
+    url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg),
+    url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-position:
+    top left,
+    top right,
+    bottom center;
+  mask-repeat: no-repeat;
+  mask-origin: content-box, border-box;
 }
 ```
 
@@ -198,7 +204,7 @@ div {
 
 {{EmbedLiveSample("Multiple values", "", "200")}}
 
-We have three `mask-image` values, but only two `mask-origin` values. This means the `mask-origin` values are repeated, as if we had set `mask-origin: content-box, padding-box, contnet-box`;
+We have three `mask-image` values, but only two `mask-origin` values. This means the `mask-origin` values are repeated, as if we had set `mask-origin: content-box, padding-box, content-box;`. The `border-box` star, the only mask overlapping the border, is the top-right star.
 
 ## Specifications
 
