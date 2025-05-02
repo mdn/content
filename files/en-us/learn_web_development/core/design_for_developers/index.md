@@ -24,8 +24,8 @@ Before starting this module, you should be familiar with [HTML](/en-US/docs/Lear
   - : This article helps you make a start on the fundamental design theory that it's useful to know when design web interfaces. You don't have to be a master design to make a difference — with a little bit of knowledge, you can create a much improved user experience through careful use of fonts, color, whitespace, alignment, images, etc.
 - [User-centered design](/en-US/docs/Learn_web_development/Core/Design_for_developers/User-centered_design)
   - : The overarching theory of **User-centered design** (UCD) is that everything we do as designers (and developers!) is for the user — understanding their needs, solving their problems, making their experience on the web better. This article provides an introduction to UCD, the kind of research you can do to better understand your user's needs, how UCD intersects with accessibility, and the common design patterns you'll encounter on the web.
-- [Design briefs](/en-US/docs/Learn_web_development/Core/Design_for_developers/Design_briefs)
-  - : As a developer, understanding design language and communicating with designers can lead to much better end results. This article looks at the mechanisms product designers use to communicate with developers — such as **design briefs**, **wireframes**, and **prototypes** — and how to interpret the information they contain to implement a feature.
+- [Interface designs](/en-US/docs/Learn_web_development/Core/Design_for_developers/Interface_designs)
+  - : As a developer, understanding design language and how to communicate with designers can lead to much better end results. This article looks at the interface designs product designers use to communicate with developers and how to interpret the information they contain to implement a feature.
 
 ## See also
 

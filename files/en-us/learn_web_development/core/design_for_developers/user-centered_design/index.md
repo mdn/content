@@ -5,7 +5,7 @@ page-type: tutorial-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Design_for_developers/Basic_design_theory", "Learn_web_development/Core/Design_for_developers/Design_briefs", "Learn_web_development/Core/Design_for_developers")}}
+{{PreviousMenuNext("Learn_web_development/Core/Design_for_developers/Basic_design_theory", "Learn_web_development/Core/Design_for_developers/Interface_designs", "Learn_web_development/Core/Design_for_developers")}}
 
 The overarching theory of **User-centered design** (UCD) is that everything we do as designers (and developers!) is for the user — understanding their needs, solving their problems, making their experience on the web better. This article provides an introduction to UCD, the kind of research you can do to better understand your user's needs, how UCD intersects with accessibility, and the common design patterns you'll encounter on the web.
 
@@ -149,7 +149,7 @@ When you are first starting out with web development, you might think the above 
 At this point, it is worth adding some user research steps into your projects, even if they are personal ones that you are doing just for fun:
 
 1. At the start of a project, write a project brief. This can just be a single page for now, but it should describe the project, the main features it will have, the main use cases/functionality it has, and who its target audience are.
-2. Write a rough implementation plan describing how you will design and implement your project. Include a rough design (we cover [design briefs](/en-US/docs/Learn_web_development/Core/Design_for_developers/Design_briefs) in more detail next), a list of technology features you will use to implement it, and a list of accessibility requirements to make your proposed featureset inclusive.
+2. Write a rough implementation plan describing how you will design and implement your project. Include a rough design (we cover [interface designs](/en-US/docs/Learn_web_development/Core/Design_for_developers/Interface_designs) in more detail next), a list of technology features you will use to implement it, and a list of accessibility requirements to make your proposed featureset inclusive.
 3. Create a rough prototype of the new site or feature, or at least something that gives an idea of how the main functionality will work, if the project is on the large side.
 4. Write a user research script to use when conducting user testing on your prototype.
 5. Find a couple of colleagues or friends to run through the script with, and do some user testing.
@@ -161,4 +161,4 @@ At this point, it is worth adding some user research steps into your projects, e
 
 This page has provided a summary of common user-centered design practices. By this point, you won't be a UCD expert, but you should have an idea of what it involves, why it is important, and what UCD techniques you can use to improve your work even at this stage.
 
-{{PreviousMenuNext("Learn_web_development/Core/Design_for_developers/Basic_design_theory", "Learn_web_development/Core/Design_for_developers/Design_briefs", "Learn_web_development/Core/Design_for_developers")}}
+{{PreviousMenuNext("Learn_web_development/Core/Design_for_developers/Basic_design_theory", "Learn_web_development/Core/Design_for_developers/Interface_designs", "Learn_web_development/Core/Design_for_developers")}}
