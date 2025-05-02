@@ -20,7 +20,9 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
 - {{domxref("SVGTextContentElement.lengthAdjust")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedEnumeration")}} reflecting the {{SVGAttr("lengthAdjust")}} attribute of the given element. The numeric type values represent one of the constant values above.
 
-<table class="standard-table">
+### Constants
+
+<table>
   <tbody>
     <tr>
       <td>Constant</td>
