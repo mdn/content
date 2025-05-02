@@ -30,7 +30,7 @@ mask-mode: unset;
 
 ### Values
 
-The `mask-mode` property can take multiple `<masking-mode>` keyword values, separated by commas:
+The `mask-mode` property can take multiple comma-separated `<masking-mode>` keyword values, including:
 
 - `alpha`
 
@@ -41,7 +41,9 @@ The `mask-mode` property can take multiple `<masking-mode>` keyword values, sepa
   - : Indicates that the [luminance (brightness)](#understanding-luminance) values of the mask image should be used.
 
 - `match-source`
-  - : Indicates that the type of mask is determined by the source: if the {{cssxref("mask-image")}} references an SVG {{svgelement("mask")}}, its {{cssxref("mask-type")}} property value is used, or it's {{svgattribute("mask-type")}} attribute, if present. If neither is explicitly set, this value defaults to `luminance`. If the mask image source is an {{cssxref("image")}} or a {{cssxref("gradient")}}, the `alpha` values of the mask image are used. `match-source` is the default property value.
+  - : Indicates that the type of mask is determined by the source. The default property value.
+    - If the {{cssxref("mask-image")}} references an SVG {{svgelement("mask")}}, its {{cssxref("mask-type")}} property value is used, or it's {{svgattr("mask-type")}} attribute, if present. If neither is explicitly set, this value defaults to `luminance`.
+    - If the mask image source is an {{cssxref("image")}} or a {{cssxref("gradient")}}, the `alpha` values of the mask image are used.
 
 ## Description
 
