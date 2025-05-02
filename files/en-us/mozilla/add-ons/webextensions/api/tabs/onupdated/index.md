@@ -98,7 +98,7 @@ Lists the changes to the state of the tab that is updated. To learn more about t
 - `favIconUrl` {{optional_inline}}
   - : `string`. The tab's new favicon URL. Not included when a tab loses its favicon (navigating from a page with a favicon to a page without one). Check `favIconUrl` in [tab](#tab) instead.
 - `groupId` {{optional_inline}}
-  - : `integer`. The ID of the group the tabs are in or `-1` for ungrouped tabs.
+  - : `integer`. The ID of the group the tabs are in or {{WebExtAPIRef("tabGroups.TAB_GROUP_ID_NONE")}} for ungrouped tabs.
 - `hidden` {{optional_inline}}
   - : `boolean`. True if the tab is {{WebExtAPIRef("tabs.hide()", "hidden")}}.
 - `isArticle` {{optional_inline}}
