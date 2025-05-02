@@ -136,8 +136,8 @@ It then loops through all the buttons assigning them their image and creating an
 
 ```js
 for (let i = 0; i < bgBtns.length; i++) {
-  let imgName = bgBtns[i].getAttribute('class');
-  let bgImg = 'url(\'images/' + imgName + '.png\')';
+  let imgName = bgBtns[i].getAttribute("class");
+  let bgImg = "url('images/" + imgName + ".png')";
   bgBtns[i].style.backgroundImage = bgImg;
 
   bgBtns[i].onclick = (e) => {
@@ -157,11 +157,12 @@ browser.cookies.set({
 The color setting is handled in a similar way, triggered by a listener on the color input field. When a color is entered the active tab is discovered and the color selection details sent, using a message, to the page's content script to be applied to the web page background. Then the color selection is added to the cookie:
 
 ```js
-    cookieVal.color = currColor;
-    browser.cookies.set({
-    url: tabs[0].url,
-    name: "bgpicker",
-    value: JSON.stringify(cookieVal)
+cookieVal.color = currColor;
+browser.cookies.set({
+  url: tabs[0].url,
+  name: "bgpicker",
+  value: JSON.stringify(cookieVal),
+});
 ```
 
 When the user clicks the reset button, which has been assigned to the variable reset:
@@ -173,11 +174,11 @@ let reset = document.querySelector(".color-reset button");
 `reset.onclick` first finds the active tab. Then, using the tab's ID it passes a message to the page's content script ([updatebg.js](https://github.com/mdn/webextensions-examples/blob/main/cookie-bg-picker/content_scripts/updatebg.js)) to get it to remove the icon and color from the page. The function then clears the cookie values (so the old values aren't carried forward and written onto a cookie created for a new icon or color selection on the same page) before removing the cookie:
 
 ```js
-    cookieVal = { image : '',
-                  color : '' };
-    browser.cookies.remove({
-    url: tabs[0].url,
-    name: "bgpicker"
+cookieVal = { image: "", color: "" };
+browser.cookies.remove({
+  url: tabs[0].url,
+  name: "bgpicker",
+});
 ```
 
 Also, so you can see what is going on with the cookies, the script reports on all changes to cookies in the console:

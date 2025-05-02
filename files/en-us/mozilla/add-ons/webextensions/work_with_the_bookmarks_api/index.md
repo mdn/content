@@ -145,7 +145,7 @@ function isSupportedProtocol(urlString) {
 If the protocol is one supported by bookmarks, the extension determines if the tab's URL is already bookmarked and if it is, calls `updateIcon()`:
 
 ```js
-      let searching = browser.bookmarks.search({url: currentTab.url});
+      let searching = browser.bookmarks.search({ url: currentTab.url });
       searching.then((bookmarks) => {
         currentBookmark = bookmarks[0];
         updateIcon();

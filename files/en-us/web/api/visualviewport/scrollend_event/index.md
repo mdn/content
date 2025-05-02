@@ -14,10 +14,10 @@ The **`scrollend`** event of the {{domxref("VisualViewport")}} interface is fire
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("scrollend", (event) => {});
+```js-nolint
+addEventListener("scrollend", (event) => { })
 
-onscrollend = (event) => {};
+onscrollend = (event) => { }
 ```
 
 ## Event type

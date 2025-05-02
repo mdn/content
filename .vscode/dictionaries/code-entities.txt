@@ -577,6 +577,7 @@ onsinkchange
 ontextformatupdate
 ontextupdate
 onuncapturederror
+onwebkitmouseforcewillbegin
 opendocument
 openidconnect
 openpgp4fpr

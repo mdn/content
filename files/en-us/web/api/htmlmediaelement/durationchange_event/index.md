@@ -14,10 +14,10 @@ The `durationchange` event is fired when the `duration` attribute has been updat
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("durationchange", (event) => {});
+```js-nolint
+addEventListener("durationchange", (event) => { })
 
-ondurationchange = (event) => {};
+ondurationchange = (event) => { }
 ```
 
 ## Event type
