@@ -138,7 +138,8 @@ function listener(details) {
   };
 
   filter.onstop = (event) => {
-    str += decoder.decode();
+    str += decoder.decode(); // end-of-stream
+
     str = str.replaceAll("Example", "WebExtension $&");
     filter.write(encoder.encode(str));
     filter.close();
