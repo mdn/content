@@ -50,7 +50,7 @@ function listener(details) {
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  { urls: ["https://example.com/*"], types: ["main_frame"] },
+  { urls: ["https://example.com/"], types: ["main_frame"] },
   ["blocking"],
 );
 ```
@@ -132,15 +132,13 @@ function listener(details) {
   const decoder = new TextDecoder("utf-8");
   const encoder = new TextEncoder();
 
-  const data = [];
+  let str = "";
   filter.ondata = (event) => {
-    data.push(decoder.decode(event.data, { stream: true }));
+    str += decoder.decode(event.data, { stream: true });
   };
 
   filter.onstop = (event) => {
-    data.push(decoder.decode());
-
-    let str = data.join("");
+    str += decoder.decode();
     str = str.replaceAll("Example", "WebExtension $&");
     filter.write(encoder.encode(str));
     filter.close();
