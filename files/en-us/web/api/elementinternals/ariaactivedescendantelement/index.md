@@ -3,7 +3,7 @@ title: "Element: ariaActiveDescendantElement property"
 short-title: ariaActiveDescendantElement
 slug: Web/API/ElementInternals/ariaActiveDescendantElement
 page-type: web-api-instance-property
-browser-compat: api.Element.ariaActiveDescendantElement
+browser-compat: api.ElementInternals.ariaActiveDescendantElement
 ---
 
 {{APIRef("DOM")}}
