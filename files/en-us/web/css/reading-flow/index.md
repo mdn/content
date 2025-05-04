@@ -160,7 +160,7 @@ In this example, there are three flex items displayed as a row, with `reading-fl
 {{EmbedLiveSample('Flex_flow', '', '50px')}}
 
 > [!NOTE]
-> The source document should express the underlying logical order of elements. The `reading-flow` property exists for cases where a given document can have multiple reading orders depending on layout changes, e.g. in response to [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries). In such cases, the most common or most fundamental reading order should be encoded in the source order so that the document is sensical without CSS.
+> The source document should express the underlying logical order of elements. The `reading-flow` property exists for cases where a given document can have multiple reading orders depending on layout changes, e.g., in response to [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries). In such cases, the most common or most fundamental reading order should be encoded in the source order so that the document is sensical without CSS.
 
 ## Specifications
 
