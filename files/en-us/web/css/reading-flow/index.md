@@ -40,7 +40,7 @@ The `reading-flow` property takes one of the following keywords as its value:
 
 - `grid-rows`
 
-  - : Follows the visual order of grid items by row, taking the writing mode into account. Only affects {{glossary("Grid Container", "grid containers")}}. 
+  - : Follows the visual order of grid items by row, taking the writing mode into account. Only affects {{glossary("Grid Container", "grid containers")}}.
 
 - `grid-columns`
 
