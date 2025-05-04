@@ -44,7 +44,7 @@ The `reading-flow` property takes one of the following keywords as its value:
 
 - `grid-columns`
 
-  - : Only takes effect on grid containers. Follows the visual order of grid items by column, taking the writing mode into account.
+  - : Follows the visual order of grid items by column, taking the writing mode into account. Only affects grid containers. 
 
 - `grid-order`
   - : Only takes effect on grid containers. Follows the order-modified document order. Therefore, as normal unless the [order](/en-US/docs/Web/CSS/order) property has been used to change the order of items.
