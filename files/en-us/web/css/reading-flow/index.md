@@ -22,7 +22,7 @@ reading-flow: grid-columns;
 reading-flow: grid-order;
 ```
 
-### Values
+### Value
 
 The `reading-flow` property takes one of the following keywords as its value:
 
