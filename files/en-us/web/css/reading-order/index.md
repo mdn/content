@@ -104,4 +104,5 @@ In this example there are five direct block-level children of a block container 
 
 ## See also
 
-- [Learn CSS: reading-flow](/en-US/docs/Web/CSS/reading-flow)
+- {{cssxref("reading-flow")}}
+- [CSS `reading-flow` examples](https://chrome.dev/reading-flow-examples/) via chrome.dev
