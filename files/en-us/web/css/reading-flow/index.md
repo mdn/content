@@ -172,4 +172,5 @@ In this example, there are three flex items displayed as a row, with `reading-fl
 
 ## See also
 
-- [Learn CSS: reading-order](/en-US/docs/Web/CSS/reading-order)
+- {{cssxref("reading-order")}}
+- [CSS `reading-flow` examples](https://chrome.dev/reading-flow-examples/) via chrome.dev
