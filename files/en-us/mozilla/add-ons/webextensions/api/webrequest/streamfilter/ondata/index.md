@@ -315,6 +315,58 @@ browser.webRequest.onBeforeRequest.addListener(
 );
 ```
 
+This example shows, how to handle a non-UTF-8 page:
+
+```js
+// This example uses https://github.com/t-kouyama/fast-sjis-encoder
+function listener(details) {
+  if (details.statusCode != 200) {
+    return;
+  }
+
+  const filter = browser.webRequest.filterResponseData(details.requestId);
+  let decoder = new TextDecoder();
+
+  const data = [];
+  filter.ondata = (event) => {
+    data.push(new Uint8Array(event.data));
+  };
+
+  filter.onstop = (event) => {
+    const combinedLength = data.reduce((acc, buffer) => acc + buffer.length, 0);
+    const combinedArray = new Uint8Array(combinedLength);
+    let writeOffset = 0;
+    for (const buffer of data) {
+      combinedArray.set(buffer, writeOffset);
+      writeOffset += buffer.length;
+    }
+    // Get the charset from the page meta tag
+    const part = decoder.decode(combinedArray.slice(0, 1000));
+    const charset = part.match(/<meta charset="(.+?)">/)[1];
+    // Creates a new TextDecoder object with the label "shift_jis" 
+    decoder = new TextDecoder(charset);
+
+    let str = decoder.decode(combinedArray);
+    // Translated with Google Translate
+    str = str.replace("ノートパソコン", "laptop");
+    str = str.replace("タブレット", "tablet");
+    str = str.replace("ハードディスク", "hard disk");
+    str = str.replace("PCパーツ", "PC parts");
+    str = str.replace("周辺機器", "Peripheral equipment");
+
+    // Need to use an external library because TextEncoder.encode() only supports "utf-8"
+    filter.write(sjis(str));
+    filter.close();
+  };
+}
+
+browser.webRequest.onHeadersReceived.addListener(
+  listener,
+  { urls: ["https://kakaku.com/"], types: ["main_frame"] },
+  ["blocking"],
+);
+```
+
 {{WebExtExamples}}
 
 ## Browser compatibility
