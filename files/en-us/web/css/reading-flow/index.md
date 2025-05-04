@@ -28,7 +28,7 @@ The `reading-flow` property takes one of the following keywords as its value:
 
 - `normal`
 
-  - : Follow the order of elements in the `DOM`.
+  - : Follows the order of elements in the DOM. This is the default value if `reading-flow` is not explicitly set.
 
 - `flex-visual`
 
