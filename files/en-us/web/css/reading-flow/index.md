@@ -24,7 +24,7 @@ reading-flow: grid-order;
 
 ### Values
 
-It takes one keyword value. Values are defined as follows:
+The `reading-flow` property takes one of the following keywords as its value:
 
 - `normal`
 
