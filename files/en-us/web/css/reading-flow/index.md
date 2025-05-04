@@ -36,7 +36,7 @@ The `reading-flow` property takes one of the following keywords as its value:
 
 - `flex-flow`
 
-  - : Follows the [flex-flow](/en-US/docs/Web/CSS/flex-flow) direction. Only affects flex containers. 
+  - : Follows the [flex-flow](/en-US/docs/Web/CSS/flex-flow) direction. Only affects flex containers.
 
 - `grid-rows`
 
