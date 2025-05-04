@@ -44,7 +44,7 @@ The `reading-flow` property takes one of the following keywords as its value:
 
 - `grid-columns`
 
-  - : Follows the visual order of grid items by column, taking the writing mode into account. Only affects grid containers. 
+  - : Follows the visual order of grid items by column, taking the writing mode into account. Only affects grid containers.
 
 - `grid-order`
   - : Follows the order-modified document order resulting from using the {{cssxref("order")}} property to change the order of items. Behaves as `normal` if no `order` was set.
