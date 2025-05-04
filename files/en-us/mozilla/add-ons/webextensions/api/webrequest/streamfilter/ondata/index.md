@@ -343,7 +343,7 @@ function listener(details) {
     // Get the charset from the page meta tag
     const part = decoder.decode(combinedArray.slice(0, 1000));
     const charset = part.match(/<meta charset="(.+?)">/)[1];
-    // Creates a new TextDecoder object with the label "shift_jis" 
+    // Creates a new TextDecoder object with the label "shift_jis"
     decoder = new TextDecoder(charset);
 
     let str = decoder.decode(combinedArray);
@@ -354,7 +354,7 @@ function listener(details) {
     str = str.replace("PCパーツ", "PC parts");
     str = str.replace("周辺機器", "Peripheral equipment");
 
-    // Need to use an external library because TextEncoder.encode() only supports "utf-8"
+    // Need to use an external library because TextEncoder only supports "UTF-8"
     filter.write(sjis(str));
     filter.close();
   };
