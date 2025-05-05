@@ -53567,10 +53567,6 @@
     "modified": "2020-10-15T22:13:26.613Z",
     "contributors": ["Sheppy"]
   },
-  "Web/API/RTCIceCandidateStats/deleted": {
-    "modified": "2020-10-15T22:15:50.914Z",
-    "contributors": ["Sheppy"]
-  },
   "Web/API/RTCIceCandidateStats/port": {
     "modified": "2020-10-15T22:15:52.213Z",
     "contributors": ["Sheppy"]
@@ -53583,17 +53579,9 @@
     "modified": "2020-10-15T22:12:42.943Z",
     "contributors": ["Sheppy"]
   },
-  "Web/API/RTCIceCandidateStats/relayProtocol": {
-    "modified": "2020-10-15T22:12:42.881Z",
-    "contributors": ["Sheppy"]
-  },
   "Web/API/RTCIceCandidateStats/transportId": {
     "modified": "2020-10-15T22:15:52.263Z",
     "contributors": ["sideshowbarker", "Sheppy"]
-  },
-  "Web/API/RTCIceCandidateStats/url": {
-    "modified": "2020-10-15T22:15:52.214Z",
-    "contributors": ["guo-sun", "Sheppy"]
   },
   "Web/API/RTCIceParameters": {
     "modified": "2020-10-15T22:06:42.205Z",
