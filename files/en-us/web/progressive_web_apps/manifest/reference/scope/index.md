@@ -3,9 +3,8 @@ title: scope
 slug: Web/Progressive_web_apps/Manifest/Reference/scope
 page-type: web-manifest-member
 browser-compat: manifests.webapp.scope
+sidebar: pwasidebar
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 The `scope` manifest member is used to specify the top-level URL path that contains your web application's pages and subdirectories.
 When users install and use your web app, pages _within scope_ provide an app-like interface.
