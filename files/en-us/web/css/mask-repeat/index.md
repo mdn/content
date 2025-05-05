@@ -61,7 +61,7 @@ The `<repeat-style>` values include:
 
 - `round`
 
-  - : The mask image is repeated as many times as possible in its original dimensions. If the size of the mask origin box is not an exact multiple of the mask image's size, all mask images will be rescaled, shrinking or stretching to ensure no repetitions are clipped.
+  - : The mask image is repeated as many times as possible in its original dimensions. If the size of the mask origin box is not an exact multiple of the mask image's size, all mask images will be rescaled, [shrinking or stretching](#rounded-repetitions) to ensure no repetitions are clipped.
 
 - `no-repeat`
 
