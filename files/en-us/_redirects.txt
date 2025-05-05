@@ -9934,11 +9934,8 @@
 /en-US/docs/Web/API/RTCIceCandidateInit/sdpMid	/en-US/docs/Web/API/RTCIceCandidate/sdpMid
 /en-US/docs/Web/API/RTCIceCandidateInit/usernameFragment	/en-US/docs/Web/API/RTCIceCandidate/usernameFragment
 /en-US/docs/Web/API/RTCIceCandidatePairStats/bytesReceieved	/en-US/docs/Web/API/RTCIceCandidatePairStats/bytesReceived
-/en-US/docs/Web/API/RTCIceCandidateStats/deleted	/en-US/docs/Web/API/RTCIceCandidateStats
 /en-US/docs/Web/API/RTCIceCandidateStats/ip	/en-US/docs/Web/API/RTCIceCandidateStats/address
 /en-US/docs/Web/API/RTCIceCandidateStats/mozLocalTransport	/en-US/docs/Web/API/RTCIceCandidateStats
-/en-US/docs/Web/API/RTCIceCandidateStats/relayProtocol	/en-US/docs/Web/API/RTCIceCandidateStats
-/en-US/docs/Web/API/RTCIceCandidateStats/url	/en-US/docs/Web/API/RTCIceCandidateStats
 /en-US/docs/Web/API/RTCIceCandidateType	/en-US/docs/Web/API/RTCIceCandidate/type
 /en-US/docs/Web/API/RTCIceComponent	/en-US/docs/Web/API/RTCIceCandidate/component
 /en-US/docs/Web/API/RTCIceConnectionState	/en-US/docs/Web/API/RTCPeerConnection/iceConnectionState
