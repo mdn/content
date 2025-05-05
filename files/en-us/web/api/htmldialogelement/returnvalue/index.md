@@ -18,62 +18,64 @@ Defaults to an empty string (`""`).
 
 ## Examples
 
-The following example displays a button to open a dialog containing a Terms of Service prompt via the `showModal()` method.
-The script handles the user's input by assigning the `returnValue` when the Accept or Decline button is clicked.
-The "Decline" button sets the `returnValue` to "declined", while the "Accept" button sets it to "accepted". Additionally, closing the dialog (e.g., using the close event) updates the status text with the dialog's `returnValue`.
-Closing the dialog with the <kbd>Esc</kbd> key does not set the `returnValue`.
+### Checking the return value
+
+The following example displays a button to open a dialog. The dialog asks the user if they want to accept a Terms of Service prompt.
+
+The dialog contains "Accept" or "Decline" buttons: when the user clicks one of the buttons, the button's click handler closes the dialog, passing their choice into the {{domxref("HTMLDialogElement.close()", "close()")}} function. This assigns the choice to the dialog's `returnValue` property.
+
+In the dialog's {{domxref("HTMLDialogElement.close_event", "close")}} event handler, the example updates the main page's status text to record the `returnValue`.
+
+If the user dismisses the dialog without clicking a button (for example, by pressing the <kbd>Esc</kbd> key), then the return value is not set.
+
+#### HTML
 
 ```html
-<!-- Simple pop-up dialog box -->
 <dialog id="termsDialog">
-  <p>Do you agree to the Terms of Service(link)?</p>
+  <p>Do you agree to the Terms of Service (link)?</p>
   <button id="declineButton" value="declined">Decline</button>
   <button id="acceptButton" value="accepted">Accept</button>
 </dialog>
 <p>
-  <button id="openDialog">Review ToS</button>
+  <button id="openDialogButton">Review ToS</button>
 </p>
 <p id="statusText"></p>
-
-<script>
-  const dialog = document.getElementById("termsDialog");
-  const openDialog = document.getElementById("openDialog");
-  const statusText = document.getElementById("statusText");
-  const declineButton = document.getElementById("declineButton");
-  const acceptButton = document.getElementById("acceptButton");
-
-  function handleUserInput(returnValue) {
-    if (returnValue === "") {
-      statusText.innerText = "There was no return value";
-    } else {
-      statusText.innerText = "Return value: " + returnValue;
-    }
-  }
-
-  openDialog.addEventListener("click", () => {
-    dialog.showModal();
-    handleUserInput(dialog.returnValue);
-  });
-
-  declineButton.addEventListener("click", closeDialog);
-  acceptButton.addEventListener("click", closeDialog);
-
-  function closeDialog(event) {
-    const button = event.target;
-    const returnValue = button.value;
-    dialog.close(returnValue);
-    handleUserInput(dialog.returnValue);
-  }
-
-  dialog.addEventListener("close", () => {
-    handleUserInput(dialog.returnValue);
-  });
-</script>
 ```
 
-### Result
+#### JavaScript
 
-{{ EmbedLiveSample('Examples', '100%', '200px') }}
+```js
+const dialog = document.getElementById("termsDialog");
+const statusText = document.getElementById("statusText");
+
+const openDialogButton = document.getElementById("openDialogButton");
+const declineButton = document.getElementById("declineButton");
+const acceptButton = document.getElementById("acceptButton");
+
+openDialogButton.addEventListener("click", () => {
+  dialog.showModal();
+});
+
+declineButton.addEventListener("click", closeDialog);
+acceptButton.addEventListener("click", closeDialog);
+
+function closeDialog(event) {
+  const button = event.target;
+  dialog.close(button.value);
+}
+
+dialog.addEventListener("close", () => {
+  statusText.innerText = dialog.returnValue
+    ? `Return value: ${dialog.returnValue}`
+    : "There was no return value";
+});
+```
+
+#### Result
+
+Try clicking "Review ToS", then choosing the "Accept" or "Decline" buttons in the dialog, or dismissing the dialog by pressing the <kbd>Esc</kbd> key, and observe the different status updates.
+
+{{ EmbedLiveSample('Checking the return value', '100%', '200px') }}
 
 ## Specifications
 
