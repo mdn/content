@@ -61,7 +61,7 @@ The `<repeat-style>` values include:
 
 - `round`
 
-  - : The mask image is repeated as many times as possible. If the size of the mask origin box is not an exact multiple of the mask image's size, all the mask images will be rescale, shrinking or stretching as necessary to ensure no repetitions are clipped, until there is room for another mask image to be added.
+  - : The mask image is repeated as many times as possible in its original dimensions. If the size of the mask origin box is not an exact multiple of the mask image's size, all mask images will be rescaled, shrinking or stretching to ensure no repetitions are clipped.
 
 - `no-repeat`
 
@@ -130,7 +130,7 @@ The `mask-repeat` property value defines how mask images are tiled after they ha
 
 ### Clipping
 
-Mask images will not repeat but will be clipped if the mask image's size is larger than the origin box, except in the case of `round`, where is single mask will be scaled down to fit the origin box.
+Mask images will not repeat but will be clipped if the mask image's size is larger than the origin box, except in the case of `round`, where a single mask will be scaled down to fit the origin box.
 
 With `repeat` values, mask images may be clipped at the edge of the origin box if the dimension (width or height) of the box is not an exact multiple of the mask's.
 
@@ -138,7 +138,7 @@ With `repeat` values, mask images may be clipped at the edge of the origin box i
 
 By default, mask images maintain the aspect ratio set by the {{cssxref("mask-size")}} property or their default aspect ratio if the `mask-size` defaults to or is explicitly set to `auto`. Only in the case of `round` value in both directions might the mask aspect ratio be distorted.
 
-If `round` is set in both directions, the resulting repeated mask images will match the aspect ratio of the origin box, As the mask images are scaled to fit, they may be distorted, ensuring the mask images are not clipped. If `round` is set in only one dimension, the aspect ratio of the mask size is respected.
+If `round` is set in both directions, the resulting repeated mask images will match the aspect ratio of the origin box. As the mask images are scaled to fit, they may be distorted, ensuring the mask images are not clipped. If `round` is set in only one dimension, the aspect ratio of the mask size is respected.
 
 ### Rounded repetitions
 
@@ -191,7 +191,7 @@ div {
 
 {{EmbedLiveSample("basic usage", "", "300px")}}
 
-With `space` and `round` on a mask image that is smaller than the origin box, the mask is not clipped. Rather, the `round` value distorts the star to prevent clipping and allowing for not white space, while `space` maintains the starts aspect ratio, but adds space as needed between masks.
+With `space` and `round` on a mask image that is smaller than the origin box, the mask is not clipped. Rather, the `round` value distorts the star to prevent clipping and preventing white space, while `space` maintains the star's aspect ratio, but adds space as needed between masks.
 
 ### Round iterations
 
@@ -240,7 +240,7 @@ The mask is defined as `100px` wide. There is a single star when the origin box 
 
 ### Comparing values
 
-This examples demonstrates all the values
+This examples demonstrates all `mask-repeat` values.
 
 #### HTML
 
@@ -269,7 +269,7 @@ We include several {{htmlelement("section")}} elements each containing a `<div>`
 
 #### CSS
 
-We give every `<div>` the same CSS, except for the `mask-repeat` value, which we match to their parent's class name. We define a mask size, setting the initial mask-image at the bottom right, meaning any clipping will occur on the top-most and left-most masks, on their top and left sides.
+We give every `<div>` the same CSS, except for the `mask-repeat` value, which we match to their parent's class name. We define a mask size, setting the initial `mask-image` at the bottom right, meaning any clipping will occur on the top-most and left-most masks, on their top and left sides.
 
 ```css
 div {
@@ -329,7 +329,7 @@ section {
 
 {{EmbedLiveSample("Comparing values", "", "300px")}}
 
-The first (and, in the case of `no-repeat`, only) mask star is [sized](/en-US/docs/Web/CSS/mask-size) to be 50px by 50px, and [positioned](/en-US/docs/Web/CSS/mask-position) at the bottom-right of the painting area, with repeated stars placed above and/or to the left of it with any clipping occuring on the top and left of the top-most and left-most stars. Note that all the stars are the same size and shape, except for `round`, where all the masks shrank to 45px x 45px to fit four complete masks in each direction. Had the container been 174px, there would have been three stars in each direction, instead of four, with each star would have been stretched.
+The first (and, in the case of `no-repeat`, only) mask star is [sized](/en-US/docs/Web/CSS/mask-size) to be 50px by 50px, and [positioned](/en-US/docs/Web/CSS/mask-position) at the bottom-right of the painting area, with repeated stars placed above and/or to the left of it with any clipping occurring on the top and left of the top-most and left-most stars. Note that all the stars are the same size and shape, except for `round`, where all the masks shrank to 45px x 45px to fit four complete masks in each direction. Had the container been 174px, there would have been three stars in each direction, instead of four, and each star would have been stretched.
 
 ### Multiple mask images and repeats
 
@@ -352,7 +352,7 @@ Each image is matched with the corresponding repeat style. As there are more `ma
 }
 ```
 
-Again, each image is matched with the corresponding repeat style. As there are more `mask-image` values than `mask-repeat` values, the `mask-repeat` is repeated until every `mask-image` has an associated `mask-repeat` values. Here, the odd numbered masks will repeat along the x-axis, while the even numbered masks will repeat along the y-axis.
+Each image is matched with a corresponding repeat style. As there are more `mask-image` values than `mask-repeat` values, the `mask-repeat` is repeated until every `mask-image` has an associated `mask-repeat` value. Here, odd numbered masks repeat along the x-axis, while the even numbered masks repeat along the y-axis.
 
 ## Specifications
 
