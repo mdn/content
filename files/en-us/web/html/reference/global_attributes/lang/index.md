@@ -86,74 +86,74 @@ For example, the language menu on this site (MDN) includes a **`lang`** attribut
     class="dropdown-menu-items right show"
     aria-expanded="true"
     role="menu">
-    <li lang="ca" role="menuitem">
+    <li role="menuitem">
       <a
         href="/ca/docs/Web/HTML/Reference/Global_attributes/lang"
         title="Catalan">
-        <bdi>Català</bdi>
+        <bdi lang="ca">Català</bdi>
       </a>
     </li>
-    <li lang="de" role="menuitem">
+    <li role="menuitem">
       <a
         href="/de/docs/Web/HTML/Reference/Global_attributes/lang"
         title="German">
-        <bdi>Deutsch</bdi>
+        <bdi lang="de">Deutsch</bdi>
       </a>
     </li>
-    <li lang="es" role="menuitem">
+    <li role="menuitem">
       <a
         href="/es/docs/Web/HTML/Reference/Global_attributes/lang"
         title="Spanish">
-        <bdi>Español</bdi>
+        <bdi lang="es">Español</bdi>
       </a>
     </li>
-    <li lang="fr" role="menuitem">
+    <li role="menuitem">
       <a
         href="/fr/docs/Web/HTML/Reference/Global_attributes/lang"
         title="French">
-        <bdi>Français</bdi>
+        <bdi lang="fr">Français</bdi>
       </a>
     </li>
-    <li lang="ja" role="menuitem">
+    <li role="menuitem">
       <a
         href="/ja/docs/Web/HTML/Reference/Global_attributes/lang"
         title="Japanese">
-        <bdi>日本語</bdi>
+        <bdi lang="ja">日本語</bdi>
       </a>
     </li>
-    <li lang="ko" role="menuitem">
+    <li role="menuitem">
       <a
         href="/ko/docs/Web/HTML/Reference/Global_attributes/lang"
         title="Korean">
-        <bdi>한국어</bdi>
+        <bdi lang="ko">한국어</bdi>
       </a>
     </li>
-    <li lang="pt-BR" role="menuitem">
+    <li role="menuitem">
       <a
         href="/pt-BR/docs/Web/HTML/Reference/Global_attributes/lang"
         title="Portuguese (Brazilian)">
-        <bdi>Português (do&nbsp;Brasil)</bdi>
+        <bdi lang="pt-BR">Português (do&nbsp;Brasil)</bdi>
       </a>
     </li>
-    <li lang="ru" role="menuitem">
+    <li role="menuitem">
       <a
         href="/ru/docs/Web/HTML/Reference/Global_attributes/lang"
         title="Russian">
-        <bdi>Русский</bdi>
+        <bdi lang="ru">Русский</bdi>
       </a>
     </li>
-    <li lang="uk" role="menuitem">
+    <li role="menuitem">
       <a
         href="/uk/docs/Web/HTML/Reference/Global_attributes/lang"
         title="Ukrainian">
-        <bdi>Українська</bdi>
+        <bdi lang="uk">Українська</bdi>
       </a>
     </li>
-    <li lang="zh-Hans" role="menuitem">
+    <li role="menuitem">
       <a
         href="/zh-CN/docs/Web/HTML/Reference/Global_attributes/lang"
         title="Chinese (Simplified)">
-        <bdi>中文 (简体)</bdi>
+        <bdi lang="zh-Hans">中文 (简体)</bdi>
       </a>
     </li>
     <li>
