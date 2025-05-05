@@ -399,13 +399,11 @@ The {{HTTPHeader("Access-Control-Expose-Headers")}} header adds the specified he
 Access-Control-Expose-Headers: <header-name>[, <header-name>]*
 ```
 
-For example, the following:
+For example, the following would allow the `X-My-Custom-Header` and `X-Another-Custom-Header` headers to be exposed to the browser:
 
 ```http
 Access-Control-Expose-Headers: X-My-Custom-Header, X-Another-Custom-Header
 ```
-
-…would allow the `X-My-Custom-Header` and `X-Another-Custom-Header` headers to be exposed to the browser.
 
 ### Access-Control-Max-Age
 
