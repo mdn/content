@@ -88,10 +88,10 @@ First, we grab references to the major elements we need to be able to access.
 
 ```js
   function startup() {
-    video = document.getElementById('video');
-    canvas = document.getElementById('canvas');
-    photo = document.getElementById('photo');
-    startButton = document.getElementById('start-button');
+    video = document.getElementById("video");
+    canvas = document.getElementById("canvas");
+    photo = document.getElementById("photo");
+    startButton = document.getElementById("start-button");
 ```
 
 #### Get the media stream

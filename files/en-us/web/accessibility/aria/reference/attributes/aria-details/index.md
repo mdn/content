@@ -60,6 +60,15 @@ When it comes to definition and term roles, the `aria-details` would be included
 - ID reference list
   - : An `id` or space separated list of ids of elements that provide or link to additional related information.
 
+## Associated interfaces
+
+- {{domxref("Element.ariaDetailsElements")}}
+  - : The `ariaDetailsElements` property is part of each element's interface.
+    Its value is an array of subclasses of {{domxref("Element")}} that reflect the `id` references in the `aria-details` attribute ([with some caveats](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references)).
+- {{domxref("ElementInternals.ariaDetailsElements")}}
+  - : The `ariaDetailsElements` property is part of each custom element's interface.
+    Its value is an array of subclasses of {{domxref("Element")}} that reflect the `id` references in the `aria-details` attribute ([with some caveats](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references)).
+
 ## Associated roles
 
 Used in **ALL** roles.

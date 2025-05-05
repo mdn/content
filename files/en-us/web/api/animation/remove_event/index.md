@@ -15,7 +15,8 @@ The **`remove`** event of the {{domxref("Animation")}} interface fires when the 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js-nolint
-addEventListener('remove', (event) => { })
+addEventListener("remove", (event) => { })
+
 onremove = (event) => { }
 ```
 
