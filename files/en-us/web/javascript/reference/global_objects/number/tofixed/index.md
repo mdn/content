@@ -89,7 +89,7 @@ numObj.toFixed(6); // '12345.678900'; additional zeros
 // it rounds up as it's less than Number.EPSILON away from 2.45.
 // This literal actually encodes the same number value as 2.45
 
-(6.02 * 10 ** 23).toFixed(50); // 6.019999999999999e+23; large numbers still use exponential notation
+(6.02 * 10 ** 23).toFixed(50); // '6.019999999999999e+23'; large numbers still use exponential notation
 ```
 
 ### Using toFixed() with negative numbers
