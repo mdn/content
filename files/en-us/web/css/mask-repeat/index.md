@@ -45,7 +45,8 @@ mask-repeat: unset;
 
 ### Values
 
-The `mask-repeat` property is a comma-separated list two `<repeat-style>` values or one keyword value that is a shorthand for two `<repeat-style>` values.
+The `mask-repeat` property is a comma-separated list of two `<repeat-style>` values,
+with the first `<repeat-style>` value being the horizontal repetition value and the second value the vertical repetition value, or one keyword value that is a shorthand for two `<repeat-style>` values.
 
 #### `<repeat-style>` values
 
@@ -57,7 +58,8 @@ The `<repeat-style>` values include:
 
 - `space`
 
-  - : The mask image is repeated as many times as possible without clipping. The first and last images abut the edges of the mask origin container, with whitespace distributed evenly between the images if the the mask origin box is not an exact multiple of the mask image's size. The {{cssxref("mask-position")}} property is ignored unless only one mask image can be displayed without clipping. The mask image will only be clipped if the mask image is larger than the mask origin box (so the mask image is to large to fit even once).
+  - : The mask image is repeated as many times as possible without clipping. If the element's origin size is at least twice the size as the mask image's size in the associated dimension, the {{cssxref("mask-position")}} property is ignored and the first and last images are positioned at the edges of the mask origin container. If the the mask origin box is not an exact multiple of the mask image's size, whitespace is distributed evenly between the repeated mask images.
+  - : If the origin box size is less than twice the mask image's size in the given dimension, only one mask image can be displayed. In this case, the image is positioned as defined by the `mask-position` property, which defaults to `0% 0%`. The mask image will only be clipped if the mask image is larger than the mask origin box.
 
 - `round`
 
@@ -66,8 +68,6 @@ The `<repeat-style>` values include:
 - `no-repeat`
 
   - : The mask image is not repeated (and hence the mask painting area will not necessarily be entirely covered). The position of the non-repeated mask image is defined by the {{cssxref("mask-position")}} CSS property.
-
-The first `<repeat-style>` value is the horizontal repetition value. The second value is the vertical repetition value.
 
 #### Shorthand values
 
@@ -238,7 +238,7 @@ range.addEventListener("change", () => {
 
 The mask is defined as `100px` wide. There is a single star when the origin box is from `1px` to `149px` wide, two stars from `150px` to `249px`, three stars from `250px` to `349px`, and so on.
 
-### Shorthand values
+### The shorthand values
 
 This examples demonstrates all `mask-repeat` shorthand (single-keyword) values.
 
@@ -327,7 +327,7 @@ section {
 
 #### Results
 
-{{EmbedLiveSample("Shorthand values", "", "300px")}}
+{{EmbedLiveSample("The shorthand values", "", "450px")}}
 
 The first (and, in the case of `no-repeat`, only) mask star is [sized](/en-US/docs/Web/CSS/mask-size) to be 50px by 50px, and [positioned](/en-US/docs/Web/CSS/mask-position) at the bottom-right of the painting area, with repeated stars placed above and/or to the left of it with any clipping occurring on the top and left of the top-most and left-most stars. Note that all the stars are the same size and shape, except for `round`, where all the masks shrank to 45px x 45px to fit four complete masks in each direction. Had the container been 174px, there would have been three stars in each direction, instead of four, and each star would have been stretched.
 
