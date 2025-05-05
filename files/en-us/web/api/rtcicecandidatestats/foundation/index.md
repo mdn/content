@@ -8,7 +8,7 @@ browser-compat: api.RTCStatsReport.type_local-candidate.foundation
 
 {{APIRef("WebRTC")}}
 
-The **`foundation`** property of the {{domxref("RTCIceCandidateStats")}} interface is a string that uniquely identifies the candidate across multiple transports.
+The **`foundation`** property of the {{domxref("RTCIceCandidateStats")}} interface is a string that allows correlation of candidates from a common network path on multiple {{domxref("RTCIceTransport")}} objects.
 
 It is the same for two candidates that are of the same type, are using the same transport protocol, originate from the same IP address, use ports that fall within the same range, and come from the same STUN server.
 
