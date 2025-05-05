@@ -42,10 +42,10 @@ The parameters are:
 
 - `<anchor-name>` {{optional_inline}}
 
-  - : The [`anchor-name`](/en-US/docs/Web/CSS/anchor-name) property value of an anchor element you want to position the element's side relative to. This is a `<dashed-ident>` value. If omitted, the element's **default anchor**, referenced in its [`position-anchor`](/en-US/docs/Web/CSS/position-anchor) property, or associated with the element via the [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) HTML attribute, is used.
+  - : The [`anchor-name`](/en-US/docs/Web/CSS/anchor-name) property value of an anchor element you want to position the element's side relative to. This is a `<dashed-ident>` value. If omitted, the element's **default anchor**, referenced in its [`position-anchor`](/en-US/docs/Web/CSS/position-anchor) property, or associated with the element via the [`anchor`](/en-US/docs/Web/HTML/Reference/Global_attributes/anchor) HTML attribute, is used.
 
     > [!NOTE]
-    > Specifying an `<anchor-name>` inside an `anchor()` function does not associate an element with an anchor; it only positions the element relative to that anchor. The [`position-anchor`](/en-US/docs/Web/CSS/position-anchor) CSS property or the [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) HTML attribute is still needed to create the association.
+    > Specifying an `<anchor-name>` inside an `anchor()` function does not associate an element with an anchor; it only positions the element relative to that anchor. The [`position-anchor`](/en-US/docs/Web/CSS/position-anchor) CSS property or the [`anchor`](/en-US/docs/Web/HTML/Reference/Global_attributes/anchor) HTML attribute is still needed to create the association.
 
 - `<anchor-side>`
 
@@ -87,7 +87,7 @@ The `anchor()` function enables positioning an element relative to the edges of 
 
 It returns a `<length>` value specifying the distance between the anchor-positioned element side specified by the inset value, and the side of the anchor element specified by the chosen `<anchor-side>` value. As it returns a `<length>`, it can be used within [other CSS functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) that accept length values, including {{cssxref("calc()")}}, {{cssxref("clamp()")}}, etc.
 
-If no anchor with the name specified by the `<anchor-name>` exists, or if the positioned element does not have an anchor associated with it (i.e. via the {{cssxref("position-anchor")}} property), the first parameter is considered invalid and the fallback `<length-percentage>` value is used if one is available. For example, if `top: anchor(bottom, 50px)` were specified on the positioned element but no anchor was associated with it, the fallback value would be used, so `top` would get a computed value of `50px`.
+If no anchor with the name specified by the `<anchor-name>` exists, or if the positioned element does not have an anchor associated with it (i.e., via the {{cssxref("position-anchor")}} property), the first parameter is considered invalid and the fallback `<length-percentage>` value is used if one is available. For example, if `top: anchor(bottom, 50px)` were specified on the positioned element but no anchor was associated with it, the fallback value would be used, so `top` would get a computed value of `50px`.
 
 For detailed information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide.
 
@@ -160,7 +160,7 @@ This example positions the positioned element's logical block end edge `10px` fr
 
 You can position an element relative to multiple anchors by specifying different `<anchor-name>` values inside the `anchor()` function of different inset properties on the same element (see [Element positioned relative to multiple anchors](#element_positioned_relative_to_multiple_anchors) below). This can be used to create useful functionality such as drag handles at the corners of a positioned element that can be used to resize it.
 
-While a positioned element can be positioned relative to more than one anchor element, it is only ever associated with the single anchor defined via its [`position-anchor`](/en-US/docs/Web/CSS/position-anchor) property (or the [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) HTML attribute). This is the anchor the element will scroll with when the page scrolls; it can also be used to control when the element is [conditionally hidden](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding#conditionally_hiding_anchor-positioned_elements).
+While a positioned element can be positioned relative to more than one anchor element, it is only ever associated with the single anchor defined via its [`position-anchor`](/en-US/docs/Web/CSS/position-anchor) property (or the [`anchor`](/en-US/docs/Web/HTML/Reference/Global_attributes/anchor) HTML attribute). This is the anchor the element will scroll with when the page scrolls; it can also be used to control when the element is [conditionally hidden](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding#conditionally_hiding_anchor-positioned_elements).
 
 ## Formal syntax
 
@@ -384,7 +384,7 @@ This example positions an element relative to two different anchors, which are u
 
 #### HTML
 
-We specify three {{htmlelement("div")}} elements in total. The first two have a class of `anchor` and will be defined as anchors; each one has an individual `id` that will be used to provide them with different positioning information. The last `<div>` has a class of `infobox` and will be defined as the positioned element. We include the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute to enable them to receive keyboard focus.
+We specify three {{htmlelement("div")}} elements in total. The first two have a class of `anchor` and will be defined as anchors; each one has an individual `id` that will be used to provide them with different positioning information. The last `<div>` has a class of `infobox` and will be defined as the positioned element. We include the [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) attribute to enable them to receive keyboard focus.
 
 ```html
 <div id="anchor1" class="anchor" tabindex="0">⚓︎1</div>

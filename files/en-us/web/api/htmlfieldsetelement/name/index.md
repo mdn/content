@@ -8,7 +8,7 @@ browser-compat: api.HTMLFieldSetElement.name
 
 {{ApiRef("HTML DOM")}}
 
-The **`name`** property of the {{domxref("HTMLFieldSetElement")}} interface indicates the name of the {{HTMLElement("fieldset")}} element. It reflects the element's [`name`](/en-US/docs/Web/HTML/Element/fieldset#name) attribute.
+The **`name`** property of the {{domxref("HTMLFieldSetElement")}} interface indicates the name of the {{HTMLElement("fieldset")}} element. It reflects the element's [`name`](/en-US/docs/Web/HTML/Reference/Elements/fieldset#name) attribute.
 
 ## Value
 

@@ -35,7 +35,6 @@ const enableRotation = true;
 const allowMouseRotation = true;
 const allowKeyboardMotion = true;
 const enableForcePolyfill = false;
-//const SESSION_TYPE = "immersive-vr";
 const SESSION_TYPE = "inline";
 const MOUSE_SPEED = 0.003;
 ```

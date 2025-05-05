@@ -45,7 +45,7 @@ The following criteria must be met when calling **`clearBuffer()`**, otherwise a
 ## Examples
 
 ```js
-// ...
+// …
 
 const buffer = device.createBuffer({
   size: 1000,
@@ -57,7 +57,7 @@ const buffer = device.createBuffer({
 const commandBuffer = device.createCommandEncoder();
 commandEncoder.clearBuffer(buffer);
 
-// ...
+// …
 ```
 
 ## Specifications

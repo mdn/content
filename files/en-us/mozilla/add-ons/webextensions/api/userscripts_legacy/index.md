@@ -21,7 +21,7 @@ This API offers similar capabilities to {{WebExtAPIRef("contentScripts")}} but w
 > [!WARNING]
 > This API requires the presence of the [`user_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts) key in the manifest.json, even if no API script is specified. For example. `user_scripts: {}`.
 
-To use the API, call `{{WebExtAPIRef("userScripts_legacy.register","register()")}}` passing in an object defining the scripts to register. The method returns a Promise that is resolved with a `{{WebExtAPIRef("userScripts_legacy.RegisteredUserScript","RegisteredUserScript")}}` object.
+To use the API, call {{WebExtAPIRef("userScripts_legacy.register","register()")}} passing in an object defining the scripts to register. The method returns a Promise that is resolved with a {{WebExtAPIRef("userScripts_legacy.RegisteredUserScript","RegisteredUserScript")}} object.
 
 > [!NOTE]
 > User scripts are unregistered when the related extension page (from which the user scripts were registered) is unloaded, so you should register a user script from an extension page that persists at least as long as you want the user scripts to stay registered.

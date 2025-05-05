@@ -8,7 +8,7 @@ browser-compat: api.HTMLIFrameElement.loading
 
 {{APIRef("HTML DOM")}}
 
-The **`loading`** property of the {{domxref("HTMLIFrameElement")}} interface is a string that provides a hint to the {{Glossary("user agent")}} indicating whether the [iframe](/en-US/docs/Web/HTML/Element/iframe) should be loaded immediately on page load, or only when it is needed.
+The **`loading`** property of the {{domxref("HTMLIFrameElement")}} interface is a string that provides a hint to the {{Glossary("user agent")}} indicating whether the [iframe](/en-US/docs/Web/HTML/Reference/Elements/iframe) should be loaded immediately on page load, or only when it is needed.
 
 This can be used to optimize the loading of the document's contents.
 Iframes that are visible when the page loads can be downloaded immediately (eagerly), while iframes that are likely to be offscreen on initial page load can be downloaded lazily — just before they will appear in the window's {{Glossary("visual viewport")}}.

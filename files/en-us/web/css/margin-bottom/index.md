@@ -63,7 +63,7 @@ margin-bottom: 0;
 
 ![The effect of the CSS margin-bottom property on the element box](margin-bottom.svg)
 
-This property has no effect on _non-[replaced](/en-US/docs/glossary/Replaced_elements)_ inline elements, such as {{HTMLElement("span")}} or {{HTMLElement("code")}}.
+This property has no effect on _non-[replaced](/en-US/docs/Glossary/Replaced_elements)_ inline elements, such as {{HTMLElement("span")}} or {{HTMLElement("code")}}.
 
 ## Syntax
 

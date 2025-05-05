@@ -79,11 +79,11 @@ The {{domxref("PointerEvent")}} interface extends the {{domxref("MouseEvent")}} 
 - {{ domxref('PointerEvent.tangentialPressure','tangentialPressure')}} {{ReadOnlyInline}}
   - : The normalized tangential pressure of the pointer input (also known as barrel pressure or cylinder stress) in the range `-1` to `1`, where `0` is the neutral position of the control.
 - {{ domxref('PointerEvent.tiltX','tiltX')}} {{ReadOnlyInline}}
-  - : The plane angle (in degrees, in the range of `-90` to `90`) between the Y–Z plane and the plane containing both the pointer (e.g. pen stylus) axis and the Y axis.
+  - : The plane angle (in degrees, in the range of `-90` to `90`) between the Y–Z plane and the plane containing both the pointer (e.g., pen stylus) axis and the Y axis.
 - {{ domxref('PointerEvent.tiltY','tiltY')}} {{ReadOnlyInline}}
-  - : the plane angle (in degrees, in the range of `-90` to `90`) between the X–Z plane and the plane containing both the pointer (e.g. pen stylus) axis and the X axis.
+  - : the plane angle (in degrees, in the range of `-90` to `90`) between the X–Z plane and the plane containing both the pointer (e.g., pen stylus) axis and the X axis.
 - {{ domxref('PointerEvent.twist','twist')}} {{ReadOnlyInline}}
-  - : The clockwise rotation of the pointer (e.g. pen stylus) around its major axis in degrees, with a value in the range `0` to `359`.
+  - : The clockwise rotation of the pointer (e.g., pen stylus) around its major axis in degrees, with a value in the range `0` to `359`.
 - {{ domxref('PointerEvent.pointerType','pointerType')}} {{ReadOnlyInline}}
   - : Indicates the device type that caused the event (mouse, pen, touch, etc.).
 - {{ domxref('PointerEvent.isPrimary','isPrimary')}} {{ReadOnlyInline}}
@@ -250,7 +250,7 @@ A mouse has only one pointer, so it will always be the primary pointer. For touc
 
 ## Determining button states
 
-Some pointer devices (such as mouse and pen) support multiple buttons, and the button presses can be _chorded_ (i.e. pressing an additional button while another button on the pointer device is already pressed).
+Some pointer devices (such as mouse and pen) support multiple buttons, and the button presses can be _chorded_ (i.e., pressing an additional button while another button on the pointer device is already pressed).
 
 To determine the state of button presses, pointer events uses the {{domxref("MouseEvent.button","button")}} and {{domxref("MouseEvent.buttons","buttons")}} properties of the {{domxref("MouseEvent")}} interface (that {{domxref("PointerEvent")}} inherits from).
 
@@ -369,7 +369,7 @@ Although the pointer event interfaces enable applications to create enhanced use
 The browser _may map generic pointer input to mouse events for compatibility with mouse-based content_. This mapping of events is called _compatibility mouse events_. Authors can prevent the production of certain compatibility mouse events by canceling the pointerdown event but note that:
 
 - Mouse events can only be prevented when the pointer is down.
-- Hovering pointers (e.g. a mouse with no buttons pressed) cannot have their mouse events prevented.
+- Hovering pointers (e.g., a mouse with no buttons pressed) cannot have their mouse events prevented.
 - The `mouseover`, `mouseout`, `mouseenter`, and `mouseleave` events are never prevented (even if the pointer is down).
 
 ## Best practices

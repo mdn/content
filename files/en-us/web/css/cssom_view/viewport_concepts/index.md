@@ -38,7 +38,7 @@ window.outerHeight; /* 900 */
 
 There are several DOM properties that can help you query viewport size, and other similar lengths:
 
-- The document element's {{DOMxRef("Element.clientWidth")}} is the inner width of a document in [CSS pixels](/en-US/docs/Web/HTML/Viewport_meta_tag#screen_density), including padding (but not borders, margins, or vertical scrollbars, if present). **This is the viewport width**.
+- The document element's {{DOMxRef("Element.clientWidth")}} is the inner width of a document in [CSS pixels](/en-US/docs/Web/HTML/Guides/Viewport_meta_element#screen_density), including padding (but not borders, margins, or vertical scrollbars, if present). **This is the viewport width**.
 - The {{DOMxRef("Window.innerWidth")}} is the width, in CSS pixels, of the browser window viewport including, if rendered, the vertical scrollbar.
 - The {{DOMxRef("Window.outerWidth")}} is the width of the outside of the browser window including all the window {{glossary("chrome")}}.
 
@@ -119,7 +119,7 @@ If the above CSS is included in the iframe, the paragraphs will become red when 
 
 #### SVG
 
-In an [SVG](/en-US/docs/Web/SVG) document, the viewport is the visible area of the SVG image. You can set any height and width on an {{htmlelement("SVG")}}, but the whole image might not be visible. The area that is visible is called the viewport. The size of the viewport can be defined using the width and height attributes of the {{SVGElement("svg")}} element.
+In an [SVG](/en-US/docs/Web/SVG) document, the viewport is the visible area of the SVG image. You can set any height and width on an {{SVGElement("svg")}}, but the whole image might not be visible. The area that is visible is called the viewport. The size of the viewport can be defined using the width and height attributes of the `<svg>` element.
 
 ```html
 <svg height="300" width="400"></svg>
@@ -158,4 +158,4 @@ The `width` property controls the size of the viewport. It should preferably be 
 - [CSSOM view](/en-US/docs/Web/CSS/CSSOM_view) module
 - [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API)
 - {{HTMLElement("meta")}}, specifically `<meta name="viewport">`
-- [Using the viewport meta tag to control layout on mobile browsers](/en-US/docs/Web/HTML/Viewport_meta_tag)
+- [Using the viewport meta tag to control layout on mobile browsers](/en-US/docs/Web/HTML/Guides/Viewport_meta_element)

@@ -61,15 +61,15 @@ const date = Temporal.PlainDate.from({
   year: 2021,
   month: 8,
   day: 1,
-  calendar: "islamic",
+  calendar: "islamic-umalqura",
 });
 console.log(isoDate.toString({ calendarName: "auto" })); // '2021-08-01'
-console.log(date.toString({ calendarName: "auto" })); // '2582-12-18[u-ca=islamic]'
+console.log(date.toString({ calendarName: "auto" })); // '2582-12-17[u-ca=islamic-umalqura]'
 console.log(isoDate.toString({ calendarName: "always" })); // '2021-08-01[u-ca=iso8601]'
-console.log(date.toString({ calendarName: "always" })); // '2582-12-18[u-ca=islamic]'
-console.log(date.toString({ calendarName: "never" })); // '2582-12-18'
+console.log(date.toString({ calendarName: "always" })); // '2582-12-17[u-ca=islamic-umalqura]'
+console.log(date.toString({ calendarName: "never" })); // '2582-12-17'
 console.log(isoDate.toString({ calendarName: "critical" })); // '2021-08-01[!u-ca=iso8601]'
-console.log(date.toString({ calendarName: "critical" })); // '2582-12-18[!u-ca=islamic]'
+console.log(date.toString({ calendarName: "critical" })); // '2582-12-17[!u-ca=islamic-umalqura]'
 ```
 
 ## Specifications

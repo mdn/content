@@ -85,7 +85,7 @@ if (user_info.length > 0) {
   const picture = user_info[0].picture;
   const email = user_info[0].email;
 
-  // ...
+  // …
 
   // Render the personalized sign-in button using the information above
 }
@@ -101,4 +101,4 @@ if (user_info.length > 0) {
 
 ## See also
 
-- [Federated Credential Management API](https://developers.google.com/privacy-sandbox/cookies/fedcm) on developers.google.com (2023)
+- [Federated Credential Management API](https://privacysandbox.google.com/cookies/fedcm) on privacysandbox.google.com (2023)

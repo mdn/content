@@ -31,7 +31,7 @@ let settingIcon = browser.pageAction.setIcon(
 
     - `imageData` {{optional_inline}}
 
-      - : `{{WebExtAPIRef('pageAction.ImageDataType')}}` or `object`. This is either a single `ImageData` object or a dictionary object.
+      - : {{WebExtAPIRef('pageAction.ImageDataType')}} or `object`. This is either a single `ImageData` object or a dictionary object.
 
         Use a dictionary object to specify multiple `ImageData` objects in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If `imageData` is a dictionary, the value of each property is an `ImageData` object, and its name is its size, like this:
 

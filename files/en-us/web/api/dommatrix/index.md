@@ -43,7 +43,7 @@ _This interface inherits properties from {{domxref("DOMMatrixReadOnly")}}, thoug
 _This interface includes the following methods, as well as the methods it inherits from {{domxref("DOMMatrixReadOnly")}}._
 
 - {{domxref("DOMMatrix.invertSelf()")}}
-  - : Modifies the matrix by inverting it. If the matrix can't be inverted, its components are all set to `NaN`, and [`is2D`](/en-US/docs/Web/API/DOMMatrixReadOnly#is2d) returns `false`.
+  - : Modifies the matrix by inverting it. If the matrix can't be inverted, its components are all set to `NaN`, and [`is2D`](/en-US/docs/Web/API/DOMMatrixReadOnly/is2D) returns `false`.
 - {{domxref("DOMMatrix.multiplySelf()")}}
   - : Modifies the matrix by post-multiplying it with the specified `DOMMatrix`. This is equivalent to the dot product `A⋅B`, where matrix `A` is the source matrix and `B` is the matrix given as an input to the method. Returns itself.
 - {{domxref("DOMMatrix.preMultiplySelf()")}}
@@ -71,11 +71,11 @@ _This interface includes the following methods, as well as the methods it inheri
 
 _This interface inherits methods from {{domxref("DOMMatrixReadOnly")}}._
 
-- {{domxref("DOMMatrix.fromFloat32Array", "fromFloat32Array()")}}
+- {{domxref("DOMMatrix.fromFloat32Array_static", "fromFloat32Array()")}}
   - : Creates a new mutable `DOMMatrix` object given an array of single-precision (32-bit) floating-point values. If the array has six values, the result is a 2D matrix; if the array has 16 values, the result is a 3D matrix. Otherwise, a {{jsxref("TypeError")}} exception is thrown.
-- {{domxref("DOMMatrix.fromFloat64Array", "fromFloat64Array()")}}
+- {{domxref("DOMMatrix.fromFloat64Array_static", "fromFloat64Array()")}}
   - : Creates a new mutable `DOMMatrix` object given an array of double-precision (64-bit) floating-point values. If the array has six values, the result is a 2D matrix; if the array has 16 values, the result is a 3D matrix. Otherwise, a {{jsxref("TypeError")}} exception is thrown.
-- {{domxref("DOMMatrix.fromMatrix", "fromMatrix()")}}
+- {{domxref("DOMMatrix.fromMatrix_static", "fromMatrix()")}}
   - : Creates a new mutable `DOMMatrix` object given an existing matrix or an object which provides the values for its properties.
 
 ## Usage notes

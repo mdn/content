@@ -67,7 +67,7 @@ A user may make a selection from left to right (in document order) or right to l
 - {{DOMxRef("Selection.setPosition()")}}
   - : Collapses the current selection to a single point.
 - {{DOMxRef("Selection.toString()")}}
-  - : Returns a string currently being represented by the selection object, i.e. the currently selected text.
+  - : Returns a string currently being represented by the selection object, i.e., the currently selected text.
 
 ## Notes
 
@@ -144,7 +144,7 @@ Other key terms used in this section.
 - anchor
   - : The anchor of a selection is the beginning point of the selection. When making a selection with a mouse, the anchor is where in the document the mouse button is initially pressed. As the user changes the selection using the mouse or the keyboard, the anchor does not move.
 - editing host
-  - : An editable element (e.g., an HTML element with [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) set, or the HTML child of a document that has {{DOMxRef("Document.designMode", "designMode")}} enabled).
+  - : An editable element (e.g., an HTML element with [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) set, or the HTML child of a document that has {{DOMxRef("Document.designMode", "designMode")}} enabled).
 - focus of a selection
 
   - : The _focus_ of a selection is the end point of the selection. When making a selection with a mouse, the focus is where in the document the mouse button is released. As the user changes the selection using the mouse or the keyboard, the focus is the end of the selection that moves.

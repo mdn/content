@@ -22,7 +22,7 @@ This example executes in a service worker. It listens for the {{domxref("Service
 
 ```js
 self.addEventListener("request", (event) => {
-  // ...
+  // …
 
   if (event.request.isHistoryNavigation) {
     event.respondWith(
@@ -31,7 +31,7 @@ self.addEventListener("request", (event) => {
           return response;
         } else {
           return fetch(event.request).then((response) => {
-            let responseClone = response.clone();
+            const responseClone = response.clone();
 
             caches.open("v1").then((cache) => {
               cache.put(event.request, responseClone);
@@ -44,7 +44,7 @@ self.addEventListener("request", (event) => {
     );
   }
 
-  // ...
+  // …
 });
 ```
 

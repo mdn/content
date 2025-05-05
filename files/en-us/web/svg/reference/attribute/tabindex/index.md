@@ -23,10 +23,10 @@ svg {
 ```html
 <?xml version="1.0"?>
 <svg viewBox="0 0 260 260" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="60" cy="60" r="15" tabindex="0" />
-  <circle cx="60" cy="160" r="30" tabindex="0" />
-  <circle cx="160" cy="60" r="30" tabindex="0" />
-  <circle cx="160" cy="160" r="60" tabindex="0" />
+  <circle r="10" tabindex="0" fill="green" cx="60" cy="60" />
+  <circle r="40" tabindex="0" fill="red" cx="60" cy="160" />
+  <circle r="60" tabindex="0" fill="blue" cx="160" cy="60" />
+  <circle r="20" tabindex="0" fill="black" cx="160" cy="160" />
 </svg>
 ```
 
@@ -66,4 +66,4 @@ svg {
 
 ## See also
 
-- [HTML `tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex)
+- [HTML `tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex)

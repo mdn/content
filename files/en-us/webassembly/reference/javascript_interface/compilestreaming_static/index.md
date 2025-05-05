@@ -40,7 +40,7 @@ A `Promise` that resolves to a [`WebAssembly.Module`](/en-US/docs/WebAssembly/Re
 - If `source` is not a [`Response`](/en-US/docs/Web/API/Response) or `Promise` resolving to a `Response`, the promise rejects with a {{jsxref("TypeError")}}.
 - If compilation fails, the promise rejects with a [`WebAssembly.CompileError`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/CompileError).
 - If the `source` is a `Promise` that rejects, the promise rejects with the error.
-- If the `source`'s `Result` has an error (e.g. bad MIME type), the promise rejects with an error.
+- If the `source`'s `Result` has an error (e.g., bad MIME type), the promise rejects with an error.
 
 ## Examples
 
@@ -93,6 +93,6 @@ WebAssembly.compileStreaming(fetch("log-concat.wasm"), compileOptions)
 
 ## See also
 
-- [WebAssembly](/en-US/docs/WebAssembly) overview page
+- [WebAssembly](/en-US/docs/WebAssembly) overview
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Guides/Concepts)
 - [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Guides/Using_the_JavaScript_API)

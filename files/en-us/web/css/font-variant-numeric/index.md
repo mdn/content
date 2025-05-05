@@ -35,10 +35,10 @@ font-variant-numeric: oldstyle-nums;
         <td><span class="tabular">0</span></td>
       </tr>
       <tr>
-        <td><span class="tabular">3.14</span></td>
+        <td><span class="tabular">3.54</span></td>
       </tr>
       <tr>
-        <td><span class="tabular">2.71</span></td>
+        <td><span class="tabular">1.71</span></td>
       </tr>
     </table>
   </div>

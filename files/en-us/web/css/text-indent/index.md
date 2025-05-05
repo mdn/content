@@ -143,7 +143,7 @@ p {
 
 ### Skipping indentation on the first paragraph
 
-A common typographic practice when paragraph indentation is present is to skip the indentation for the first paragraph. As the _The Chicago Manual of Style_ puts it, "the first line of text following a subhead may begin flush left or be indented by the usual paragraph indention."
+A common typographic practice when paragraph indentation is present is to skip the indentation for the first paragraph. As _The Chicago Manual of Style_ puts it, "the first line of text following a subhead may begin flush left or be indented by the usual paragraph indention."
 
 Treating first paragraphs differently from subsequent paragraphs can be done using the [next-sibling combinator](/en-US/docs/Web/CSS/Next-sibling_combinator), as in the following example:
 

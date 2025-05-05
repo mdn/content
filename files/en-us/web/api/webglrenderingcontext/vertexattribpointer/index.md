@@ -84,7 +84,7 @@ None ({{jsxref("undefined")}}).
   the ARRAY_BUFFER target.
 - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, a
   `gl.INVALID_OPERATION` error is thrown if this vertex attribute is defined
-  as an integer in the vertex shader (e.g. `uvec4` or `ivec4`,
+  as an integer in the vertex shader (e.g., `uvec4` or `ivec4`,
   instead of `vec4`).
 
 ## Description
@@ -136,7 +136,7 @@ they are stored in the array buffer. You have two options:
 While the `ArrayBuffer` can be filled with both integers and floats, the
 attributes will always be converted to a float when they are sent to the vertex shader.
 If you need to use integers in your vertex shader code, you can either cast the float
-back to an integer in the vertex shader (e.g. `(int) floatNumber`), or use
+back to an integer in the vertex shader (e.g., `(int) floatNumber`), or use
 {{domxref("WebGL2RenderingContext.vertexAttribIPointer()", "gl.vertexAttribIPointer()")}} from WebGL2.
 
 ### Default attribute values
@@ -149,7 +149,7 @@ to tell WebGL to use the default value, while calling
 {{domxref("WebGLRenderingContext.enableVertexAttribArray()", "gl.enableVertexAttribArray()")}}
 will read the values from the array buffer as specified with `gl.vertexAttribPointer()`.
 
-Similarly, if our vertex shader expects e.g. a 4-component attribute with
+Similarly, if our vertex shader expects e.g., a 4-component attribute with
 `vec4` but in our `gl.vertexAttribPointer()` call we set the
 `size` to `2`, then WebGL will set the first two components based
 on the array buffer, while the third and fourth components are taken from the default
@@ -169,7 +169,7 @@ color.
 
 You can call {{domxref("WebGLRenderingContext.getVertexAttrib()", "gl.getVertexAttrib()")}} and
 {{domxref("WebGLRenderingContext.getVertexAttribOffset()", "gl.getVertexAttribOffset()")}} to
-get the current parameters for an attribute, e.g. the
+get the current parameters for an attribute, e.g., the
 data type or whether the attribute should be normalized. Keep in mind that these WebGL
 functions have a slow performance and it is better to store the state inside your
 JavaScript application. However, these functions are great for debugging a WebGL context
@@ -235,7 +235,7 @@ vertices.forEach((vertex, i) => {
 ```
 
 For higher performance, we could also do the previous JSON to ArrayBuffer conversion on
-the server-side, e.g. with Node.js. Then we could load the binary file and interpret it
+the server-side, e.g., with Node.js. Then we could load the binary file and interpret it
 as an array buffer:
 
 ```js
@@ -248,7 +248,7 @@ const buffer = await response.arrayBuffer();
 First, we create a new Vertex Buffer Object (VBO) and supply it with our array buffer:
 
 ```js
-//Bind array buffer to a Vertex Buffer Object
+// Bind array buffer to a Vertex Buffer Object
 const vbo = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, vbo);
 gl.bufferData(gl.ARRAY_BUFFER, buffer, gl.STATIC_DRAW);
@@ -258,23 +258,23 @@ Then, we specify the memory layout of the array buffer, either by setting the in
 ourselves:
 
 ```js
-//Describe the layout of the buffer:
-//1. position, not normalized
+// Describe the layout of the buffer:
+// 1. position, not normalized
 gl.vertexAttribPointer(0, 3, gl.FLOAT, false, 20, 0);
 gl.enableVertexAttribArray(0);
-//2. normal vector, normalized to [-1, 1]
+// 2. normal vector, normalized to [-1, 1]
 gl.vertexAttribPointer(1, 4, gl.BYTE, true, 20, 12);
 gl.enableVertexAttribArray(1);
-//3. texture coordinates, normalized to [0, 1]
+// 3. texture coordinates, normalized to [0, 1]
 gl.vertexAttribPointer(2, 2, gl.UNSIGNED_SHORT, true, 20, 16);
 gl.enableVertexAttribArray(2);
 
-//Set the attributes in the vertex shader to the same indices
+// Set the attributes in the vertex shader to the same indices
 gl.bindAttribLocation(shaderProgram, 0, "position");
 gl.bindAttribLocation(shaderProgram, 1, "normal");
 gl.bindAttribLocation(shaderProgram, 2, "texUV");
-//Since the attribute indices have changed, we must re-link the shader
-//Note that this will reset all uniforms that were previously set.
+// Since the attribute indices have changed, we must re-link the shader
+// Note that this will reset all uniforms that were previously set.
 gl.linkProgram(shaderProgram);
 ```
 

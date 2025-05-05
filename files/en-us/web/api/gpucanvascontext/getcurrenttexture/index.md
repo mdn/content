@@ -30,7 +30,7 @@ A {{domxref("GPUTexture")}} object instance.
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if `getCurrentTexture()` is called on the canvas context before it is configured (i.e. before {{domxref("GPUCanvasContext.configure()")}} has been called).
+  - : Thrown if `getCurrentTexture()` is called on the canvas context before it is configured (i.e., before {{domxref("GPUCanvasContext.configure()")}} has been called).
 
 ## Examples
 
@@ -44,7 +44,7 @@ context.configure({
   alphaMode: "premultiplied",
 });
 
-//...
+// …
 // Later on
 const commandEncoder = device.createCommandEncoder();
 

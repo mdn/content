@@ -53,7 +53,7 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
     <div>
     (C) 2006 <a id='email-me' href='#'>Nick Johnson</a>
 
-    <script type='text/javascript'>
+    <script>
     <![CDATA[
       // foil spam bots
       let email = '@riovia.net';
@@ -85,7 +85,7 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
       </p>
     </form>
 
-  <script type='text/javascript'>
+  <script>
   <![CDATA[
 
     // Array of motes

@@ -26,7 +26,7 @@ Temporal.PlainDate.compare(date1, date2)
 
 ### Return value
 
-Returns `-1` if `date1` comes before `date2`, `0` if they are the same, and `1` if `date2` comes after. They are compared by their underlying date values, ignoring their calendars.
+Returns `-1` if `date1` comes before `date2`, `0` if they are the same, and `1` if `date1` comes after `date2`. They are compared by their underlying date values, ignoring their calendars.
 
 ## Examples
 
@@ -49,7 +49,7 @@ const date2 = Temporal.PlainDate.from({
   year: 2021,
   month: 8,
   day: 1,
-  calendar: "islamic",
+  calendar: "islamic-umalqura",
 });
 const date3 = Temporal.PlainDate.from({
   year: 2021,
@@ -58,7 +58,7 @@ const date3 = Temporal.PlainDate.from({
   calendar: "hebrew",
 });
 console.log(date1.toString()); // "2021-08-01"
-console.log(date2.toString()); // "2582-12-18[u-ca=islamic]"
+console.log(date2.toString()); // "2582-12-17[u-ca=islamic-umalqura]"
 console.log(date3.toString()); // "-001739-04-06[u-ca=hebrew]"
 console.log(Temporal.PlainDate.compare(date1, date2)); // -1
 console.log(Temporal.PlainDate.compare(date1, date3)); // 1
@@ -75,14 +75,14 @@ const dates = [
     year: 2021,
     month: 8,
     day: 1,
-    calendar: "islamic",
+    calendar: "islamic-umalqura",
   }),
   Temporal.PlainDate.from({ year: 2021, month: 8, day: 1, calendar: "hebrew" }),
 ];
 
 dates.sort(Temporal.PlainDate.compare);
 console.log(dates.map((d) => d.toString()));
-// [ "-001739-04-06[u-ca=hebrew]", "2021-08-01", "2582-12-18[u-ca=islamic]" ]
+// [ "-001739-04-06[u-ca=hebrew]", "2021-08-01", "2582-12-17[u-ca=islamic-umalqura]" ]
 ```
 
 ## Specifications

@@ -2,14 +2,12 @@
 title: "CSP: trusted-types"
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/trusted-types
 page-type: http-csp-directive
-status:
-  - experimental
 browser-compat: http.headers.Content-Security-Policy.trusted-types
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{HTTPSidebar}}
 
-The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`trusted-types`** {{experimental_inline}} directive instructs user agents to restrict the creation of Trusted Types policies - functions that build non-spoofable, typed values intended to be passed to DOM XSS sinks in place of strings.
+The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`trusted-types`** directive instructs user agents to restrict the creation of Trusted Types policies - functions that build non-spoofable, typed values intended to be passed to DOM XSS sinks in place of strings.
 
 Together with **[`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for)** directive, this allows authors to define rules guarding writing values to the DOM and thus reducing the DOM XSS attack surface to small, isolated parts of the web application codebase, facilitating their monitoring and code review. This directive declares an allowlist of trusted type policy names created with `trustedTypes.createPolicy` from Trusted Types API.
 

@@ -78,26 +78,17 @@ navigator.mediaDevices
 
 An example capabilities object looks like this:
 
-```js
+```json
 {
-  "autoGainControl": [
-    true,
-    false
-  ],
+  "autoGainControl": [true, false],
   "channelCount": {
     "max": 1,
     "min": 1
   },
   "deviceId": "jjxEMqxIhGdryqbTjDrXPWrkjy55Vte70kWpMe3Lge8=",
-  "echoCancellation": [
-    true,
-    false
-  ],
+  "echoCancellation": [true, false],
   "groupId": "o2tZiEj4MwOdG/LW3HwkjpLm1D8URat4C5kt742xrVQ=",
-  "noiseSuppression": [
-    true,
-    false
-  ]
+  "noiseSuppression": [true, false]
 }
 ```
 

@@ -90,7 +90,7 @@ The different types of keywords that can be used include:
 - [Coordinate grid keywords](#coordinate_grid_keywords)
 
 > [!NOTE]
-> Generally, you can't mix different types in one value, e.g. physical and logical. To do so results in invalid values. For example, `position-area: bottom inline-end` is not a valid value because it mixes physical and logical keywords.
+> Generally, you can't mix different types in one value, e.g., physical and logical. To do so results in invalid values. For example, `position-area: bottom inline-end` is not a valid value because it mixes physical and logical keywords.
 
 ## Physical grid keywords
 

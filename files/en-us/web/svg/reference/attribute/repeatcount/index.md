@@ -72,7 +72,7 @@ svg {
 - `<number>`
   - : This value specifies the number of iterations. It can include partial iterations expressed as fraction values. A fractional value describes a portion of the simple duration. Values must be greater than `0`.
 - `indefinite`
-  - : This value indicates that the animation will be repeated indefinitely (i.e. until the document ends).
+  - : This value indicates that the animation will be repeated indefinitely (i.e., until the document ends).
 
 ## Specifications
 

@@ -3,9 +3,8 @@ title: Including vector graphics in HTML
 short-title: Vector graphics
 slug: Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 Vector graphics are very useful in many circumstances — they have small file sizes and are highly scalable, so they don't pixelate when zoomed in or blown up to a large size. In this article we'll show you how to include one in your webpage.
 
@@ -121,7 +120,7 @@ To embed an SVG via an {{htmlelement("img")}} element, you just need to referenc
 
 ### Troubleshooting and cross-browser support
 
-For browsers that don't support SVG (IE 8 and below, Android 2.3 and below), you could reference a PNG or JPG from your `src` attribute and use a [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute (which only recent browsers recognize) to reference the SVG. This being the case, only supporting browsers will load the SVG — older browsers will load the PNG instead:
+For browsers that don't support SVG (IE 8 and below, Android 2.3 and below), you could reference a PNG or JPG from your `src` attribute and use a [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset) attribute (which only recent browsers recognize) to reference the SVG. This being the case, only supporting browsers will load the SVG — older browsers will load the PNG instead:
 
 ```html
 <img
@@ -140,7 +139,7 @@ background-size: contain;
 
 Like the `<img>` method described above, inserting SVGs using CSS background images means that the SVG can't be manipulated with JavaScript, and is also subject to the same CSS limitations.
 
-If your SVGs aren't showing up at all, it might be because your server isn't set up properly. If that's the problem, this [article will point you in the right direction](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started_#a_word_on_web_servers_for_.svgz_files).
+If your SVGs aren't showing up at all, it might be because your server isn't set up properly. If that's the problem, this [article will point you in the right direction](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started#a_word_on_web_servers_for_.svgz_files).
 
 ### How to include SVG code inside your HTML
 
@@ -332,7 +331,7 @@ This article has provided you with a quick tour of what vector graphics and SVG 
 
 ## See also
 
-- [SVG tutorial](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started_) on MDN
+- [SVG tutorial](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started) on MDN
 - [Sara Soueidan's tutorial on responsive SVG images](https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/)
 - [Accessibility benefits of SVG](https://www.w3.org/TR/SVG-access/)
 - [SVG Properties and CSS](https://css-tricks.com/svg-properties-and-css/)

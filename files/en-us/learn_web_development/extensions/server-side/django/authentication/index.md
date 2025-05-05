@@ -3,9 +3,10 @@ title: "Django Tutorial Part 8: User authentication and permissions"
 short-title: "8: Authentication and permissions"
 slug: Learn_web_development/Extensions/Server-side/Django/Authentication
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django/Forms", "Learn_web_development/Extensions/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django/Forms", "Learn_web_development/Extensions/Server-side/Django")}}
 
 In this tutorial, we'll show you how to allow users to log in to your site with their own accounts, and how to control what they can do and see based on whether or not they are logged in and their _permissions_. As part of this demonstration, we'll extend the [LocalLibrary](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) website, adding login and logout pages, and user- and staff-specific pages for viewing books that have been borrowed.
 
@@ -31,7 +32,7 @@ In this tutorial, we'll show you how to allow users to log in to your site with 
 Django provides an authentication and authorization ("permission") system, built on top of the session framework discussed in the [previous tutorial](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Sessions), that allows you to verify user credentials and define what actions each user is allowed to perform. The framework includes built-in models for `Users` and `Groups` (a generic way of applying permissions to more than one user at a time), permissions/flags that designate whether a user may perform a task, forms and views for logging in users, and view tools for restricting content.
 
 > [!NOTE]
-> According to Django the authentication system aims to be very generic, and so does not provide some features provided in other web authentication systems. Solutions for some common problems are available as third-party packages. For example, {{glossary("throttle", "throttling")}} of login attempts and authentication against third parties (e.g. OAuth).
+> According to Django the authentication system aims to be very generic, and so does not provide some features provided in other web authentication systems. Solutions for some common problems are available as third-party packages. For example, {{glossary("throttle", "throttling")}} of login attempts and authentication against third parties (e.g., OAuth).
 
 In this tutorial, we'll show you how to enable user authentication in the [LocalLibrary](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) website, create your own login and logout pages, add permissions to your models, and control access to pages. We'll use the authentication/permissions to display lists of books that have been borrowed for both users and librarians.
 
@@ -123,7 +124,7 @@ Now let's create a user:
 3. Enter an appropriate **Username** and **Password**/**Password confirmation** for your test user
 4. Press **SAVE** to create the user.
 
-   The admin site will create the new user and immediately take you to a _Change user_ screen where you can change your **username** and add information for the User model's optional fields. These fields include the first name, last name, email address, and the user's status and permissions (only the **Active** flag should be set). Further down you can specify the user's groups and permissions, and see important dates related to the user (e.g. their join date and last login date).
+   The admin site will create the new user and immediately take you to a _Change user_ screen where you can change your **username** and add information for the User model's optional fields. These fields include the first name, last name, email address, and the user's status and permissions (only the **Active** flag should be set). Further down you can specify the user's groups and permissions, and see important dates related to the user (e.g., their join date and last login date).
    ![Admin site - add user pt2](admin_authentication_add_user_prt2.png)
 
 5. In the _Groups_ section, select **Library Member** group from the list of _Available groups_, and then press the **right-arrow** between the boxes to move it into the _Chosen groups_ box.
@@ -268,7 +269,7 @@ Create a new HTML file called /**django-locallibrary-tutorial/templates/registra
     <input type="hidden" name="next" value="\{{ next }}">
   </form>
 
-  {# Assumes you set up the password_reset view in your URLconf #}
+  {# Assumes you set up the password_reset view in your URLConf #}
   <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
 
 {% endblock %}
@@ -726,7 +727,7 @@ Open the **catalog/models.py**, and add the permission as shown above. You will 
 
 ### Templates
 
-The current user's permissions are stored in a template variable called `\{{ perms }}`. You can check whether the current user has a particular permission using the specific variable name within the associated Django "app" — e.g. `\{{ perms.catalog.can_mark_returned }}` will be `True` if the user has this permission, and `False` otherwise. We typically test for the permission using the template `{% if %}` tag as shown:
+The current user's permissions are stored in a template variable called `\{{ perms }}`. You can check whether the current user has a particular permission using the specific variable name within the associated Django "app" — e.g., `\{{ perms.catalog.can_mark_returned }}` will be `True` if the user has this permission, and `False` otherwise. We typically test for the permission using the template `{% if %}` tag as shown:
 
 ```django
 {% if perms.catalog.can_mark_returned %}

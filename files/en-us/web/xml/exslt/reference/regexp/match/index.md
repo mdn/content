@@ -9,7 +9,7 @@ sidebar: xmlsidebar
 
 ## Syntax
 
-```js-nolint
+```plain
 regexp:match(targetString, regExpString[, flagsString])
 ```
 

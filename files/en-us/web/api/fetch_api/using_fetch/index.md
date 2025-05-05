@@ -47,7 +47,7 @@ To make a request, call `fetch()`, passing in:
 
 1. a definition of the resource to fetch. This can be any one of:
    - a string containing the URL
-   - an object, such an instance of {{domxref("URL")}}, which has a {{glossary("stringifier")}} that produces a string containing the URL
+   - an object, such as an instance of {{domxref("URL")}}, which has a {{glossary("stringifier")}} that produces a string containing the URL
    - a {{domxref("Request")}} instance
 2. optionally, an object containing options to configure the request.
 
@@ -60,7 +60,7 @@ By default, `fetch()` makes a {{httpmethod("GET")}} request, but you can use the
 ```js
 const response = await fetch("https://example.org/post", {
   method: "POST",
-  // ...
+  // …
 });
 ```
 
@@ -76,7 +76,7 @@ To set a request body, pass it as the `body` option:
 const response = await fetch("https://example.org/post", {
   method: "POST",
   body: JSON.stringify({ username: "example" }),
-  // ...
+  // …
 });
 ```
 
@@ -102,7 +102,7 @@ const response = await fetch("https://example.org/post", {
   },
   // Automatically converted to "username=example&password=password"
   body: new URLSearchParams({ username: "example", password: "password" }),
-  // ...
+  // …
 });
 ```
 
@@ -156,7 +156,7 @@ const response = await fetch("https://example.org/post", {
     "Content-Type": "application/json",
   },
   body: JSON.stringify({ username: "example" }),
-  // ...
+  // …
 });
 ```
 
@@ -170,7 +170,7 @@ const response = await fetch("https://example.org/post", {
   method: "POST",
   headers: myHeaders,
   body: JSON.stringify({ username: "example" }),
-  // ...
+  // …
 });
 ```
 
@@ -350,7 +350,7 @@ async function getData() {
     if (!response.ok) {
       throw new Error(`Response status: ${response.status}`);
     }
-    // ...
+    // …
   } catch (error) {
     console.error(error.message);
   }

@@ -9,7 +9,7 @@ browser-compat: api.ChapterInformation
 
 {{APIRef("Media Session API")}}{{SeeCompatTable}}
 
-The **`ChapterInformation`** interface of the {{domxref("Media Session API", "", "", "nocode")}} represents the metadata for an individual chapter of a media resource (i.e. a video or audio file).
+The **`ChapterInformation`** interface of the {{domxref("Media Session API", "", "", "nocode")}} represents the metadata for an individual chapter of a media resource (i.e., a video or audio file).
 
 The chapter information for a given media resource is set when it is first created, via the `chapterInfo` property of the {{domxref("MediaMetadata.MediaMetadata", "MediaMetadata()")}} constructor's initialization object. The property takes an array of `ChapterInformation` objects as its value.
 
@@ -71,7 +71,7 @@ The following snippet shows how it can be used inside Media Session code (the ab
 
 ```js
 function updateMetadata() {
-  let track = playlist[index];
+  const track = playlist[index];
 
   log("Playing " + track.title + " track...");
   navigator.mediaSession.metadata = new MediaMetadata({
@@ -81,7 +81,7 @@ function updateMetadata() {
     chapterInfo: track.chapterInfo,
   });
 
-  // ...
+  // …
 }
 ```
 

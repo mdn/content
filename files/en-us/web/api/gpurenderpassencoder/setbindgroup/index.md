@@ -29,7 +29,7 @@ setBindGroup(index, bindGroup, dynamicOffsets, dynamicOffsetsStart,
 - `bindGroup`
   - : The {{domxref("GPUBindGroup")}} to use for subsequent render commands, or `null`, in which case any previously-set bind group in the given slot is unset.
 - `dynamicOffsets` {{optional_inline}}
-  - : A value specifying the offset, in bytes, for each entry in `bindGroup` with `hasDynamicOffset: true` set (i.e. in the descriptor of the {{domxref("GPUDevice.createBindGroupLayout()")}} call that created the {{domxref("GPUBindGroupLayout")}} object that the `bindGroup` is based on). This value can be:
+  - : A value specifying the offset, in bytes, for each entry in `bindGroup` with `hasDynamicOffset: true` set (i.e., in the descriptor of the {{domxref("GPUDevice.createBindGroupLayout()")}} call that created the {{domxref("GPUBindGroupLayout")}} object that the `bindGroup` is based on). This value can be:
     - An array of numbers specifying the different offsets.
     - A {{jsxref("Uint32Array")}} containing numbers specifying the offsets.
 
@@ -68,7 +68,7 @@ The following criteria must be met when calling **`setBindGroup()`**, otherwise 
 In the WebGPU Samples [Textured Cube example](https://webgpu.github.io/webgpu-samples/samples/texturedCube/), `setBindGroup()` is used to bind the `uniformBindGroup` to index position 0. Check out the example for the full context.
 
 ```js
-// ...
+// …
 
 const commandEncoder = device.createCommandEncoder();
 const passEncoder = commandEncoder.beginRenderPass(renderPassDescriptor);
@@ -79,7 +79,7 @@ passEncoder.draw(cubeVertexCount, 1, 0, 0);
 passEncoder.end();
 device.queue.submit([commandEncoder.finish()]);
 
-// ...
+// …
 ```
 
 > [!NOTE]

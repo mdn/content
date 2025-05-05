@@ -39,7 +39,7 @@ async function init() {
   // Get a label
   console.log(device.label);
 
-  // ...
+  // …
 }
 ```
 

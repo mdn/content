@@ -30,7 +30,7 @@ By default, updates contain only the changes to the live region and these are an
 
   - : The `log` is required to have an accessible name. Use `aria-labelledby` if a visible label is present, otherwise use `aria-label`.
 
-## Best Practices
+## Best practices
 
 With an area that has scrolling text, such as a stock ticker, the [`marquee`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/marquee_role) role should be used instead.
 

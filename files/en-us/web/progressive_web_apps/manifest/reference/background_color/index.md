@@ -2,7 +2,7 @@
 title: background_color
 slug: Web/Progressive_web_apps/Manifest/Reference/background_color
 page-type: web-manifest-member
-browser-compat: html.manifest.background_color
+browser-compat: manifests.webapp.background_color
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}

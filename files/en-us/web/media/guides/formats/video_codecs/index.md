@@ -305,7 +305,7 @@ Aliasing is a general term for anything that upon being reconstructed from the e
         </p>
       </td>
       <td>
-        <a href="moire-pattern.jpg"><img alt="a brick wall showing swirling effect similar to waves due to the moire pattern" src="moire-pattern.jpg" /></a>
+        <img alt="a brick wall showing swirling effect similar to waves due to the moire pattern" src="moire-pattern.jpg" />
       </td>
     </tr>
     <tr>
@@ -320,11 +320,7 @@ Aliasing is a general term for anything that upon being reconstructed from the e
         </p>
       </td>
       <td>
-        <a href="staircase-effect.jpg"
-          ><img alt="
-          Photo of diagonal lines that look like a staircase due to aliasing causing a staircase effect
-          " src="staircase-effect.jpg"
-        /></a>
+        <img alt="Photo of diagonal lines that look like a staircase due to aliasing causing a staircase effect" src="staircase-effect.jpg" />
       </td>
     </tr>
     <tr>
@@ -345,9 +341,7 @@ Aliasing is a general term for anything that upon being reconstructed from the e
         </p>
       </td>
       <td>
-        <a href="stroboscopic-effect.gif"
-          ><img alt="Turning wheel due to aliasing causing a wagon wheel effect." src="stroboscopic-effect.gif"
-        /></a>
+        <img alt="Turning wheel due to aliasing causing a wagon wheel effect." src="stroboscopic-effect.gif" />
       </td>
     </tr>
   </tbody>
@@ -1509,7 +1503,7 @@ Theora was originally based upon the VC3 codec by On2 Technologies. The codec an
 
 One drawback to Theora is that it only supports 8 bits per color component, with no option to use 10 or more in order to avoid color banding. That said, 8 bits per component is still the most commonly-used color format in use today, so this is only a minor inconvenience in most cases. Also, Theora can only be used in an Ogg container. The biggest drawback of all, however, is that it is not supported by Safari, leaving Theora unavailable not only on macOS but on all those millions and millions of iPhones and iPads.
 
-The [Theora Cookbook](https://en.flossmanuals.net/ogg-theora/_full/) offers additional details about Theora as well as the Ogg container format it is used within.
+The [Theora Cookbook](https://archive.flossmanuals.net/ogg-theora/) offers additional details about Theora as well as the Ogg container format it is used within.
 
 <table class="standard-table">
   <tbody>
@@ -1911,7 +1905,7 @@ This is the case even though some of the lossy codecs have a lossless mode avail
 To prepare video for archival purposes from outside your website or app, use a utility that performs compression on the original uncompressed video data. For example, the free [x264](https://www.videolan.org/developers/x264.html) utility can be used to encode video in [AVC](#avc_h.264) format using a very high bit rate:
 
 ```bash
-x264 --crf 18 -preset ultrafast --output out-file.mp4 infile
+x264 --crf 18 -preset ultrafast --output out-file.mp4 in-file
 ```
 
 While other codecs may have better best-case quality levels when compressing the video by a significant margin, their encoders tend to be slow enough that the nearly-lossless encoding you get with this compression is vastly faster at about the same overall quality level.

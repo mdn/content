@@ -162,7 +162,7 @@ The method then lists the cookie names again.
 
 ```js
 async function cookieTest() {
-  //Create our test cookies
+  // Create our test cookies
   await setTestCookies();
 
   // Delete cookie1 specifying just the name
@@ -205,7 +205,7 @@ The cookie named "cookie1" is still present because it does not match the cookie
 Deleting a cookie that was created using {{domxref("document.cookie")}} has the same requirements as deleting a cookie created using {{domxref("CookieStore.set()")}}: the cookie either needs to match the passed `options`, or the `name` and the default options.
 
 > [!NOTE]
-> Cookies created with `set()` always have a [default path](/en-US/docs/Web/HTTP/Cookies#define_where_cookies_are_sent) of `/`, while cookies created with `document.cookie` have a default path equal to the path of the document they are created in.
+> Cookies created with `set()` always have a [default path](/en-US/docs/Web/HTTP/Guides/Cookies#define_where_cookies_are_sent) of `/`, while cookies created with `document.cookie` have a default path equal to the path of the document they are created in.
 > Therefore when deleting cookies created with `document.cookie`, you can't assume they have the path `/` (unless it was been explicitly set as such), and hence that it will match the default `delete()` options.
 
 The code below uses `document.cookie` to create cookies named "doc_cookie1" and "doc_cookie2", with the paths `/some_path` and `/` respectively, and then logs both cookies.

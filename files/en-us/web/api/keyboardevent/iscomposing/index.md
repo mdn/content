@@ -10,7 +10,7 @@ browser-compat: api.KeyboardEvent.isComposing
 
 The **`KeyboardEvent.isComposing`** read-only property returns
 a boolean value indicating if the event is fired within a composition
-session, i.e. after {{domxref("Element/compositionstart_event", "compositionstart")}}
+session, i.e., after {{domxref("Element/compositionstart_event", "compositionstart")}}
 and before {{domxref("Element/compositionend_event", "compositionend")}}.
 
 ## Value

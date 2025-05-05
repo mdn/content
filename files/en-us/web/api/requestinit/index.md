@@ -109,7 +109,7 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
   - : Any headers you want to add to your request, contained
     within a {{domxref("Headers")}} object or an object literal whose keys are the names of headers and whose values are the header values.
 
-    Many headers are set automatically by the browser and can't be set by a script: these are called {{glossary("Forbidden request headers", "Forbidden request headers")}}.
+    Many headers are set automatically by the browser and can't be set by a script: these are called {{glossary("Forbidden request header", "Forbidden request headers")}}.
 
     If the `mode` option is set to `no-cors`, you can only set {{glossary("CORS-safelisted request header", "CORS-safelisted request headers")}}.
 
@@ -120,7 +120,7 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
   - : Contains the [subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity)
     value of the request.
 
-    This will be checked when the resource is fetched, just as it would be when the [`integrity`](/en-US/docs/Web/HTML/Element/script#integrity) attribute is set on a {{htmlelement("script")}} element. The browser will compute the {{glossary("Cryptographic_hash_function", "hash")}} of the fetched resource using the specified algorithm, and if the result does not match the value specified, the browser will reject the fetch request with a network error.
+    This will be checked when the resource is fetched, just as it would be when the [`integrity`](/en-US/docs/Web/HTML/Reference/Elements/script#integrity) attribute is set on a {{htmlelement("script")}} element. The browser will compute the {{glossary("hash function", "hash")}} of the fetched resource using the specified algorithm, and if the result does not match the value specified, the browser will reject the fetch request with a network error.
 
     The format of this option is `<hash-algo>-<hash-source>` where:
 

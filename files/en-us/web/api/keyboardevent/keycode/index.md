@@ -847,7 +847,7 @@ Gecko sets `keyCode` values of punctuation keys as far as possible (when points 
       <td><code>0xBD (189)</code></td>
       <td colspan="3" rowspan="2"><code>0xAD (173)</code></td>
       <td rowspan="2"><code>0xAD (173)</code></td>
-      <td rowspan="2"><code>0xAD (173)</code>[1]</td>
+      <td rowspan="2"><code>0xAD (173)</code> [1]</td>
       <td rowspan="2"><code>0xAD (173)</code></td>
       <td colspan="3" rowspan="2"><code>0xAD (173)</code></td>
     </tr>
@@ -874,7 +874,7 @@ Gecko sets `keyCode` values of punctuation keys as far as possible (when points 
       <td><code>0x36 (54)</code>⚠️</td>
       <td rowspan="2"><code>0xBB (187)</code></td>
       <td><code>0xBB (187)</code></td>
-      <td><code>0xBB (187)</code>[1]</td>
+      <td><code>0xBB (187)</code> [1]</td>
       <td><code>0xBB (187)</code></td>
       <td rowspan="2"><code>0x3D (61)</code></td>
       <td rowspan="2"><code>0xA0 (160)</code>⚠️</td>
@@ -2524,7 +2524,7 @@ Gecko defines a lot of `keyCode` values in `KeyboardEvent` for making the mappin
     <tr>
       <td><code>DOM_VK_AT</code></td>
       <td>0x40 (64)</td>
-      <td>Atmark ("@") key.</td>
+      <td>At sign ("@") key.</td>
     </tr>
     <tr>
       <td><code>DOM_VK_A</code></td>

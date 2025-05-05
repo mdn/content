@@ -33,7 +33,7 @@ _Inherits methods from its parent, {{domxref("Event")}}._
 
 ## Examples
 
-The following example adds a `ProgressEvent` to a new {{domxref("XMLHTTPRequest")}} and uses it to display the status of the request.
+The following example adds a `ProgressEvent` to a new {{domxref("XMLHttpRequest")}} and uses it to display the status of the request.
 
 ```js
 const progressBar = document.getElementById("p"),

@@ -2,9 +2,8 @@
 title: CSS grid layout
 slug: Learn_web_development/Core/CSS_layout/Grids
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout/Responsive_design", "Learn_web_development/Core/CSS_layout")}}
 
@@ -505,7 +504,7 @@ aside {
 }
 ```
 
-With out the placement defined, you can see that _auto-placement_ is placing each item into its own cell in the grid. The {{htmlelement("header")}} is taking up `1fr` (one quarter) and the {{htmlelement("main")}} is taking up `3fr` (three quarters).
+Without the placement defined, you can see that _auto-placement_ is placing each item into its own cell in the grid. The {{htmlelement("header")}} is taking up `1fr` (one quarter) and the {{htmlelement("main")}} is taking up `3fr` (three quarters).
 
 {{EmbedLiveSample('grid-placement_0', '100%', "230") }}
 
@@ -862,7 +861,7 @@ If you use the [Firefox grid inspector](https://firefox-source-docs.mozilla.org/
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Grid](/en-US/docs/Learn_web_development/Core/CSS_layout/Grid_skills).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Grid](/en-US/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Grid).
 
 ## Summary
 

@@ -45,7 +45,7 @@ None ({{jsxref("Undefined")}}).
 In the WebGPU Samples [Shadow Mapping](https://webgpu.github.io/webgpu-samples/samples/shadowMapping/) example, `drawIndexed()` is used in two separate render passes in each animation frame, one to populate the shadow buffer and one to draw the primary view of the scene. Study the example code listing for the full context.
 
 ```js
-// ...
+// …
 
 const commandEncoder = device.createCommandEncoder();
 {
@@ -71,7 +71,7 @@ const commandEncoder = device.createCommandEncoder();
   renderPass.end();
 }
 
-// ...
+// …
 ```
 
 ## Specifications

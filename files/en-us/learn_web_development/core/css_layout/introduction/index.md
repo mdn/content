@@ -3,9 +3,8 @@ title: Introduction to CSS layout
 short-title: Introduction
 slug: Learn_web_development/Core/CSS_layout/Introduction
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout")}}
 
@@ -27,7 +26,7 @@ This lesson recaps some of the CSS layout features we've already touched upon in
       <th scope="row">Learning outcomes:</th>
       <td>
         <ul>
-          <li>Recognise the methods used to implement modern page layouts.</li>
+          <li>Recognize the methods used to implement modern page layouts.</li>
           <li>Understand that normal flow is the default way a browser lays out block and inline content.</li>
           <li>Know that properties such as <code>display</code>, <code>float</code>, and <code>position</code> are intended to change how the browser lays out content.</li>
         </ul>

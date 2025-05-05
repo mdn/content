@@ -7,7 +7,7 @@ browser-compat: css.properties.position
 
 {{CSSRef}}
 
-The **`position`** [CSS](/en-US/docs/Web/CSS) property sets how an element is positioned in a document. The {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, and {{Cssxref("left")}} properties determine the final location of positioned elements.
+The **`position`** [CSS](/en-US/docs/Web/CSS) property sets how an element is positioned in a document. The {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, and {{Cssxref("left")}} physical properties and the {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}} flow-relative logical properties can be used to determine the final location of positioned elements.
 
 {{InteractiveExample("CSS Demo: position")}}
 
@@ -23,8 +23,8 @@ left: 40px;
 
 ```css interactive-example-choice
 position: absolute;
-top: 40px;
-left: 40px;
+inset-inline-start: 40px;
+inset-block-start: 40px;
 ```
 
 ```css interactive-example-choice
@@ -155,12 +155,12 @@ position: unset;
 
 ### Types of positioning
 
-- A **positioned element** is an element whose [computed](/en-US/docs/Web/CSS/CSS_cascade/computed_value) `position` value is either `relative`, `absolute`, `fixed`, or `sticky`. (In other words, it's anything except `static`.)
-- A **relatively positioned element** is an element whose [computed](/en-US/docs/Web/CSS/CSS_cascade/computed_value) `position` value is `relative`. The {{Cssxref("top")}} and {{Cssxref("bottom")}} properties specify the vertical offset from its normal position; the {{Cssxref("left")}} and {{Cssxref("right")}} properties specify the horizontal offset.
-- An **absolutely positioned element** is an element whose [computed](/en-US/docs/Web/CSS/CSS_cascade/computed_value) `position` value is `absolute` or `fixed`. The {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, and {{Cssxref("left")}} properties specify offsets from the edges of the element's [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block). (The containing block is the ancestor relative to which the element is positioned.) If the element has margins, they are added to the offset. The element establishes a new [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) (BFC) for its contents.
-- A **stickily positioned element** is an element whose [computed](/en-US/docs/Web/CSS/CSS_cascade/computed_value) `position` value is `sticky`. It's treated as relatively positioned until its [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) crosses a specified threshold (such as setting {{Cssxref("top")}} to value other than auto) within its flow root (or the container it scrolls within), at which point it is treated as "stuck" until meeting the opposite edge of its [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block).
+- A **positioned element** is an element whose [computed](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value) `position` value is either `relative`, `absolute`, `fixed`, or `sticky`. (In other words, it's anything except `static`.)
+- A **relatively positioned element** is an element whose [computed](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value) `position` value is `relative`. The {{Cssxref("top")}} and {{Cssxref("bottom")}} properties specify the vertical offset from its normal position; the {{Cssxref("left")}} and {{Cssxref("right")}} properties specify the horizontal offset.
+- An **absolutely positioned element** is an element whose [computed](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value) `position` value is `absolute` or `fixed`. The {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, and {{Cssxref("left")}} properties specify offsets from the edges of the element's [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block). (The containing block is the ancestor relative to which the element is positioned.) If the element has margins, they are added to the offset. The element establishes a new [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) (BFC) for its contents.
+- A **stickily positioned element** is an element whose [computed](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value) `position` value is `sticky`. It's treated as relatively positioned until its [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) crosses a specified threshold (such as setting {{Cssxref("top")}} to value other than auto) within its flow root (or the container it scrolls within), at which point it is treated as "stuck" until meeting the opposite edge of its [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block).
 
-Most of the time, absolutely positioned elements that have {{Cssxref("height")}} and {{Cssxref("width")}} set to `auto` are sized so as to fit their contents. However, non-[replaced](/en-US/docs/glossary/Replaced_elements), absolutely positioned elements can be made to fill the available vertical space by specifying both {{Cssxref("top")}} and {{Cssxref("bottom")}} and leaving {{Cssxref("height")}} unspecified (that is, `auto`). They can likewise be made to fill the available horizontal space by specifying both {{Cssxref("left")}} and {{Cssxref("right")}} and leaving {{Cssxref("width")}} as `auto`.
+Most of the time, absolutely positioned elements that have {{Cssxref("height")}} and {{Cssxref("width")}} set to `auto` are sized so as to fit their contents. However, non-[replaced](/en-US/docs/Glossary/Replaced_elements), absolutely positioned elements can be made to fill the available vertical space by specifying both {{Cssxref("top")}} and {{Cssxref("bottom")}} and leaving {{Cssxref("height")}} unspecified (that is, `auto`). They can likewise be made to fill the available horizontal space by specifying both {{Cssxref("left")}} and {{Cssxref("right")}} and leaving {{Cssxref("width")}} as `auto`.
 
 Except for the case just described (of absolutely positioned elements filling the available space):
 
@@ -288,8 +288,8 @@ span {
 .positioned {
   position: absolute;
   background: yellow;
-  top: 30px;
-  left: 30px;
+  inset-block-start: 30px;
+  inset-inline-start: 30px;
 }
 ```
 
@@ -543,5 +543,7 @@ When you put both bulbs in their proper place, you'll notice that they are relat
 
 ## See also
 
+- {{glossary("Inset properties")}}
 - [Learn CSS: Positioning](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning)
-- [Using container scroll-state queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)
+- [Inset properties for positioned layout](/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning#example_inset_properties_for_positioned_layout)
+- [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) modules

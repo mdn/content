@@ -71,13 +71,13 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
       <td>Invalid header name.</td>
       <td>
         <!-- cSpell:ignore ontent -->
-        <pre>
+        <pre class="brush: js">
 // space in "C ontent-Type"
 const headers = {
-  'C ontent-Type': 'text/xml',
-  'Breaking-Bad': '<3',
+  "C ontent-Type": "text/xml",
+  "Breaking-Bad": "<3",
 };
-fetch('https://example.com/', { headers });
+fetch("https://example.com/", { headers });
         </pre>
       </td>
     </tr>
@@ -86,12 +86,12 @@ fetch('https://example.com/', { headers });
         Invalid header value. The header object must contain exactly two elements.
       </td>
       <td>
-        <pre>
+        <pre class="brush: js">
 const headers = [
-  ['Content-Type', 'text/html', 'extra'],
-  ['Accept'],
+  ["Content-Type", "text/html", "extra"],
+  ["Accept"],
 ];
-fetch('https://example.com/', { headers });
+fetch("https://example.com/", { headers });
         </pre>
       </td>
     </tr>
@@ -100,30 +100,30 @@ fetch('https://example.com/', { headers });
         Invalid URL or scheme, or using a scheme that fetch does not support, or using a scheme that is not supported for a particular request mode.
       </td>
       <td>
-        <pre>
-fetch('blob://example.com/', { mode: 'cors' });
+        <pre class="brush: js">
+fetch("blob://example.com/", { mode: "cors" });
         </pre>
       </td>
     </tr>
       <td>URL includes credentials.</td>
       <td>
-        <pre>
-fetch('https://user:password@example.com/');
+        <pre class="brush: js">
+fetch("https://user:password@example.com/");
         </pre>
       </td>
     <tr>
       <td>Invalid referrer URL.</td>
       <td>
-        <pre>
-fetch('https://example.com/', { referrer: './abc\u0000df' });
+        <pre class="brush: js">
+fetch("https://example.com/", { referrer: "./abc\u0000df" });
         </pre>
       </td>
     </tr>
     <tr>
       <td>Invalid modes (<code>navigate</code> and <code>websocket</code>).</td>
       <td>
-        <pre>
-fetch('https://example.com/', { mode: 'navigate' });
+        <pre class="brush: js">
+fetch("https://example.com/", { mode: "navigate" });
         </pre>
       </td>
     </tr>
@@ -132,10 +132,10 @@ fetch('https://example.com/', { mode: 'navigate' });
         If the request cache mode is "only-if-cached" and the request mode is other than "same-origin".
       </td>
       <td>
-        <pre>
-fetch('https://example.com/', {
-  cache: 'only-if-cached',
-  mode: 'no-cors',
+        <pre class="brush: js">
+fetch("https://example.com/", {
+  cache: "only-if-cached",
+  mode: "no-cors",
 });
         </pre>
       </td>
@@ -143,36 +143,36 @@ fetch('https://example.com/', {
     <tr>
       <td>
         If the request method is an invalid name token or one of the forbidden headers
-        (<code>'CONNECT'</code>, <code>'TRACE'</code> or <code>'TRACK'</code>).
+        (<code>CONNECT</code>, <code>TRACE</code> or <code>TRACK</code>).
       </td>
       <td>
-        <pre>
-fetch('https://example.com/', { method: 'CONNECT' });
+        <pre class="brush: js">
+fetch("https://example.com/", { method: "CONNECT" });
         </pre>
       </td>
     </tr>
     <tr>
       <td>
         If the request mode is "no-cors" and the request method is not a CORS-safe-listed method
-        (<code>'GET'</code>, <code>'HEAD'</code>, or <code>'POST'</code>).
+        (<code>GET</code>, <code>HEAD</code>, or <code>POST</code>).
       </td>
       <td>
-        <pre>
-fetch('https://example.com/', {
-  method: 'CONNECT',
-  mode: 'no-cors',
+        <pre class="brush: js">
+fetch("https://example.com/", {
+  method: "CONNECT",
+  mode: "no-cors",
 });
         </pre>
       </td>
     </tr>
     <tr>
       <td>
-        If the request method is <code>'GET'</code> or <code>'HEAD'</code> and the body is non-null or not undefined.
+        If the request method is <code>GET</code> or <code>HEAD</code> and the body is non-null or not undefined.
       </td>
       <td>
-        <pre>
-fetch('https://example.com/', {
-  method: 'GET',
+        <pre class="brush: js">
+fetch("https://example.com/", {
+  method: "GET",
   body: new FormData(),
 });
         </pre>
@@ -231,7 +231,7 @@ const options = {
 const req = new Request("flowers.jpg", options);
 
 fetch(req).then((response) => {
-  // ...
+  // …
 });
 ```
 

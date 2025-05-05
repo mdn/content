@@ -11,7 +11,9 @@ The **`CSSNestedDeclarations`** interface of the [CSS Rule API](/en-US/docs/Web/
 
 The interface allows the [CSS Object Model (CSSOM](/en-US/docs/Web/API/CSS_Object_Model) to mirror the structure of CSS documents with nested CSS rules, and ensure that rules are parsed and evaluated in the order that they are declared.
 
-> [!NOTE] > [Browser versions](#browser_compatibility) with implementations that do not support this interface may parse nested rules in the wrong order.
+> [!NOTE]
+> Implementations that do not support this interface may parse nested rules in the wrong order.
+> See [Browser compatibility](#browser_compatibility) for more information.
 
 {{InheritanceDiagram}}
 
@@ -56,7 +58,7 @@ This is represented by a number of JavaScript objects in the [CSS Object Model](
 
 ### CSSOM (CSS Object Model)
 
-```txt
+```plain
 ↳ CSSStyleRule
   .style
     - background-color: silver

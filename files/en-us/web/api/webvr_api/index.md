@@ -100,7 +100,7 @@ The WebVR API extends the following APIs, adding the listed features.
 #### Window events
 
 - {{DOMxRef("Window.vrdisplaypresentchange_event", "vrdisplaypresentchange")}}
-  - : Fired when the presenting state of a VR display changes — i.e. goes from presenting to not presenting or vice versa.
+  - : Fired when the presenting state of a VR display changes — i.e., goes from presenting to not presenting or vice versa.
 - {{DOMxRef("Window.vrdisplayconnect_event", "vrdisplayconnect")}}
   - : Fired when a compatible VR display has been connected to the computer.
 - {{DOMxRef("Window.vrdisplaydisconnect_event", "vrdisplaydisconnect")}}

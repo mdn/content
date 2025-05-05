@@ -100,13 +100,13 @@ img:nth-of-type(6) {
 
 {{EmbedLiveSample('example1','100%','650')}}
 
-Check the box to swith the height and width values. Note that only the `fill` value (the default) distorts the original image. With all other values, the intrinsic aspect ratio of the image is maintained.
+Check the box to set the height and width values. Note that only the `fill` value (the default) distorts the original image. With all other values, the intrinsic aspect ratio of the image is maintained.
 
 ### The `object-position` property
 
 The `object-position` property specifies the alignment of the replaced element's content object within the element's box.
 
-Often used in conjunction with the {{cssxref("object-fit")}} property, it takes as it's value a {{cssxref("position_value", "&lt;position&gt;")}} value, the same value type at used in for{{cssxref("background-position")}}.
+Often used in conjunction with the {{cssxref("object-fit")}} property, it takes as it's value a {{cssxref("position_value", "&lt;position&gt;")}} value, the same value type at used in for {{cssxref("background-position")}}.
 
 ```css live-sample___example2
 img {

@@ -31,7 +31,7 @@ Unless the user-agent stylesheet includes an [`!important`](/en-US/docs/Web/CSS/
 
 ### Author stylesheets
 
-**Author stylesheets** are the most common type of stylesheet; these are the styles written by web developers. These styles can reset user-agent styles, as noted above, and define the styles for the design of a given web page or application. The author, or web developer, defines the styles for the document using one or more linked or imported stylesheets, {{HTMLElement('style')}} blocks, and inline styles defined with the [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute. These author styles define the look and feel of the website — its theme.
+**Author stylesheets** are the most common type of stylesheet; these are the styles written by web developers. These styles can reset user-agent styles, as noted above, and define the styles for the design of a given web page or application. The author, or web developer, defines the styles for the document using one or more linked or imported stylesheets, {{HTMLElement('style')}} blocks, and inline styles defined with the [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute. These author styles define the look and feel of the website — its theme.
 
 ### User stylesheets
 
@@ -50,16 +50,16 @@ The cascading algorithm determines how to find the value to apply for each prope
 1. **Relevance**: It first filters all the rules from the different sources to keep only the rules that apply to a given element. That means rules whose selector matches the given element and which are part of an appropriate `media` at-rule.
 2. **Origin and importance**: Then it sorts these rules according to their importance, that is, whether or not they are followed by `!important`, and by their origin. Ignoring layers for the moment, the cascade order is as follows:
 
-   | Precedence Order (low to high) | Origin                   | Importance   |
-   | ------------------------------ | ------------------------ | ------------ |
-   | 1                              | user-agent (browser)     | normal       |
-   | 2                              | user                     | normal       |
-   | 3                              | author (developer)       | normal       |
-   | 4                              | CSS @keyframe animations |              |
-   | 5                              | author (developer)       | `!important` |
-   | 6                              | user                     | `!important` |
-   | 7                              | user-agent (browser)     | `!important` |
-   | 8                              | CSS transitions          |              |
+   | Precedence Order (low to high) | Origin                  | Importance   |
+   | ------------------------------ | ----------------------- | ------------ |
+   | 1                              | user-agent (browser)    | normal       |
+   | 2                              | user                    | normal       |
+   | 3                              | author (developer)      | normal       |
+   | 4                              | CSS keyframe animations |              |
+   | 5                              | author (developer)      | `!important` |
+   | 6                              | user                    | `!important` |
+   | 7                              | user-agent (browser)    | `!important` |
+   | 8                              | CSS transitions         |              |
 
 3. **Specificity**: In case of equality with an origin, the [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity) of a rule is considered to choose one value or another. The specificity of the selectors are compared, and the declaration with the highest specificity wins.
 4. **Scoping proximity**: When two selectors in the origin layer with precedence have the same specificity, the property value within scoped rules with the smallest number of hops up the DOM hierarchy to the scope root wins. See [How `@scope` conflicts are resolved](/en-US/docs/Web/CSS/@scope#how_scope_conflicts_are_resolved) for more details and an example.
@@ -352,7 +352,7 @@ Finally, {{cssxref("@charset")}} obeys specific algorithms and isn't affected by
 
 Presentational attributes are attributes in the source document that can affect styling. For example, when included, the deprecated `align` attribute sets the alignment on several HTML elements and the `fill` attribute defines the color used to paint SVG shapes and text and defines the final state for SVG animations. While they are author styles, presentational attributes do not participate in the cascade.
 
-If the HTML presentation attribute is supported by the user agent, valid presentational attributes included in HTML and SVG, such as the [`align`](/en-US/docs/Web/HTML/Element/img#align) or [`fill`](/en-US/docs/Web/SVG/Reference/Attribute/fill) attributes, are translated to the corresponding CSS rules (all SVG presentation attributes are supported as CSS properties) and inserted in the author stylesheet prior to any other styles with a specificity equal to `0`.
+If the HTML presentation attribute is supported by the user agent, valid presentational attributes included in HTML and SVG, such as the [`align`](/en-US/docs/Web/HTML/Reference/Elements/img#align) or [`fill`](/en-US/docs/Web/SVG/Reference/Attribute/fill) attributes, are translated to the corresponding CSS rules (all SVG presentation attributes are supported as CSS properties) and inserted in the author stylesheet prior to any other styles with a specificity equal to `0`.
 
 Presentational attributes cannot be declared `!important`.
 
@@ -421,4 +421,4 @@ After your content has finished altering styles, it may find itself in a situati
 - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
 - [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
 - [At-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule)
-- [Initial](/en-US/docs/Web/CSS/CSS_cascade/initial_value), [computed](/en-US/docs/Web/CSS/CSS_cascade/computed_value), [used](/en-US/docs/Web/CSS/CSS_cascade/used_value), and [actual](/en-US/docs/Web/CSS/CSS_cascade/actual_value) values
+- [Initial](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value), [computed](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value), [used](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value), and [actual](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value) values

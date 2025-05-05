@@ -2,9 +2,8 @@
 title: Finding a job
 slug: Learn_web_development/Getting_started/Soft_skills/Finding_a_job
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes", "Learn_web_development/Core", "Learn_web_development/Getting_started/Soft_skills")}}
 
@@ -123,7 +122,7 @@ Here are some general tips for CV/résumé writing:
 When you start searching for jobs, you will find yourself in a vicious circle — _you need experience to get a job, but you also need to get a job to get experience._ Don't despair — there are other ways to get experience. Here are some ideas:
 
 - Contact local business, charities, churches, schools, etc., to see if they want a website, or help updating their existing website. If you are just starting out, you could offer to do it for free, just to get the experience.
-- Following on from the previous item, move on to doing some small bits of freelance work, once you feel that you are experienced enough to start charging for your work. You could ask around at local businesses, or find work through dedicated services such as [UpWork](https://www.upwork.com).
+- Following on from the previous item, move on to doing some small bits of freelance work, once you feel that you are experienced enough to start charging for your work. You could ask around at local businesses, or find work through dedicated services such as [UpWork](https://www.upwork.com/).
 - Build your own hobby projects, for example, your own website to showcase your work, some fun demos and games, or a web app related to a company that you want to work at.
   - You could even identify an existing issue on a company's website, fix it, and send them a link to a deployed version of the fix.
 - Hang around on forums and help others with their coding problems. (See [Help others, ask questions](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork#help_others_ask_questions).)
@@ -145,7 +144,7 @@ Keep your portfolio as highlights of your best work. You want it to be easy to a
 
 In terms of how to actually publish your portfolio:
 
-- You should [publish your work](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork#publish_your_work) in publicly-viewable places, such as a GitHub organization for source code, and a blogging platform such as medium (or your own website) for blogposts.
+- You should [publish your work](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork#publish_your_work) in publicly-viewable places, such as a GitHub organization for source code, and a blogging platform such as medium (or your own website) for blog posts.
 - For source code that is demos or snippets rather than full websites, publish live versions of the code, so that people can easily check out the live result. See [Publishing your website](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website) for tips on how to do this.
 - In terms of the actual portfolio landing page, you could create a GitHub repo and provide your list of links in a `README.md` file, but this doesn't look particularly great. Much better would be to create a dedicated website to contain your portfolio, with a dedicated [domain name](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name). If you are not great at design work, ask a colleague or friend for some help, perhaps in exchange for doing some coding work for them.
 
@@ -218,7 +217,7 @@ A key point is that your job search should be a constant process where you do a 
 
 You should follow up with any promising leads you meet, for example on community networks or LinkedIn. Also, keep an inventory of the people you meet and the companies you apply to, along with contact details and descriptions of each. Periodically follow up with companies you'd like to work for to see what jobs they have available. If you get rejected for one job, they might have something else more suitable for you, either now or in the future.
 
-If you haven't had a response from a company after applying for one of their jobs, wait a little while and then followup with their recruiter to see if they have any feedback for you, or any other jobs coming up. Even if a company you want to work for doesn't have any suitable full-time jobs advertised at the moment, contact them any way and see if they are looking for someone with your skillset. It might lead to some useful experience, such as a freelance contract.
+If you haven't had a response from a company after applying for one of their jobs, wait a little while and then followup with their recruiter to see if they have any feedback for you, or any other jobs coming up. Even if a company you want to work for doesn't have any suitable full-time jobs advertised at the moment, contact them any way and see if they are looking for someone with your skill set. It might lead to some useful experience, such as a freelance contract.
 
 Keep looking for more jobs via your chosen job sites or community networks, and chat to people about what is available. New opportunities will come up all the time.
 
@@ -320,7 +319,7 @@ Be patient. Even the best candidates will get rejections from multiple job appli
 
 ## See also
 
-- [Getting hired](https://v2.scrimba.com/the-frontend-developer-career-path-c0j/~0156?via=mdn), Scrimba <sup>Course Partner</sup>
+- [Getting hired](https://scrimba.com/the-frontend-developer-career-path-c0j/~0156?via=mdn), Scrimba <sup>Course Partner</sup>
 - [Technical Interviewing 101: Ultimate Guide to Acing Your Tech Interview](https://learntocodewith.me/posts/technical-interview/), learntocodewith.me (2022)
 - [30 Technical Interview Questions and Tips for Answering](https://www.coursera.org/articles/technical-interview-questions), Coursera (2023)
 - [How to land your first developer job](/en-US/blog/how-to-land-your-first-developer-job), MDN Blog, 2024

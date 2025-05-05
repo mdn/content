@@ -9,7 +9,7 @@ browser-compat: http.headers.Sec-CH-UA-Full-Version-List
 
 {{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The HTTP **`Sec-CH-UA-Full-Version-List`** {{Glossary("request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user-agent_client_hints) which provides the user-agent's branding and full version information.
+The HTTP **`Sec-CH-UA-Full-Version-List`** {{Glossary("request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client_hints) which provides the user-agent's branding and full version information.
 
 The **`Sec-CH-UA-Full-Version-List`** header provides the brand and full version information for each brand associated with the browser, in a comma-separated list.
 
