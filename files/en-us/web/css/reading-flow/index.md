@@ -271,7 +271,7 @@ The demo renders like this:
 
 {{EmbedLiveSample('Reading flow adjustment on block containers', '', '100px')}}
 
-Try tabbing through the links: the tabbing order is "Item 2", "Item 3", "Item 4", then "Item 1" — the order of the elements in the DOM is followed, but Item 1 has ben put in a higher reading order ordinal group than the others (the default `reading-order` value is `0`), there it is tabbed to last.
+Try tabbing through the links: the tabbing order is "Item 2", "Item 3", "Item 4", then "Item 1" — the order of the elements in the DOM is followed, but Item 1 has been put in a higher reading order ordinal group than the others (the default `reading-order` value is `0`), therefore it is tabbed to last.
 
 ## Specifications
 

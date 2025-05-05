@@ -32,7 +32,7 @@ The `reading-order` property takes a single {{cssxref("integer")}} value specify
 
 The `reading-order` property lets the author change where in the reading order an element is read out or tabbed to. It enables authors to override the reading order set by the [reading-flow](/en-US/docs/Web/CSS/reading-flow) property on its parent.
 
-The default `reading-order` value is `0` for elements inside a block, flex, or grid container. This puts them all in the same ordinal group. Sibling elements are ordered starting from the lowest numbered ordinal group to the highest. Therefore, to cause an element to be read out after its siblings, you could set a `reading-order` value or 1 or more on it. To cause an element to be read out before its siblings, you could set a `reading-order` value or -1 or less on it.
+The default `reading-order` value is `0` for elements inside a block, flex, or grid container. This puts them all in the same ordinal group. Sibling elements are ordered starting from the lowest numbered ordinal group to the highest. Therefore, to cause an element to be read out after its siblings, you could set a `reading-order` value or `1` or more on it. To cause an element to be read out before its siblings, you could set a `reading-order` value or `-1` or less on it.
 
 ## Formal definition
 
@@ -61,7 +61,7 @@ The six `<a>` elements are contained inside a wrapper {{htmlelement("div")}}.
 
 #### CSS
 
-On the `<div>`, we set the [grid-auto-flow](/en-US/docs/Web/CSS/grid-auto-flow) property to `dense`, therefore items may display out of source order. The `reading-order` property on the `<a>` element with a class of [top](/en-US/docs/Web/CSS/top) is set to `-1`, therefore Item 4 will be the first item in reading flow. The remaining items will be visited in the order they display in rows, as the `<div>` element's {{cssxref("reading-flow")}} property is set to [grid-rows](/en-US/docs/Web/CSS/grid-row).
+On the `<div>`, we set the [grid-auto-flow](/en-US/docs/Web/CSS/grid-auto-flow) property to `dense`, therefore items may display out of source order. The `reading-order` property on the `<a>` element with a class of [top](/en-US/docs/Web/CSS/top) is set to `-1`, therefore "Item 4" will be the first item in reading flow. The remaining items will be visited in the order they display in rows, as the `<div>` element's {{cssxref("reading-flow")}} property is set to [grid-rows](/en-US/docs/Web/CSS/grid-row).
 
 ```css
 .wrapper {
