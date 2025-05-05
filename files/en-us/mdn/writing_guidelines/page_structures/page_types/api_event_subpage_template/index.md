@@ -98,10 +98,10 @@ You could copy most of this from the property's summary on the corresponding API
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("NameOfTheEvent", (event) => {});
+```js-nolint
+addEventListener("NameOfTheEvent", (event) => { })
 
-onNameOfTheEvent = (event) => {};
+onNameOfTheEvent = (event) => { }
 ```
 
 ## Event type

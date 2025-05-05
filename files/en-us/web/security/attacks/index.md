@@ -2,6 +2,7 @@
 title: Attacks
 slug: Web/Security/Attacks
 page-type: guide
+sidebar: security
 ---
 
 In web security, an attack is a specific method an attacker uses to achieve their goal. For example, if their goal is to steal a user's data, a cross-site scripting (XSS) attack is one method they might use. A given attack may be countered by one or more mitigations: for example, XSS might be countered by properly sanitizing data and implementing a [content security policy](/en-US/docs/Web/HTTP/Guides/CSP).
@@ -16,7 +17,3 @@ This page links to pages explaining how some common attacks work, and how they c
   - : Cross-site leaks (XS-leaks) are a class of attack which exploit the ways in which a target site can leak information to an attacker's site, either through web platform APIs or through {{glossary("side channels")}} such as timing attacks.
 - [Cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS)
   - : In a cross-site scripting (XSS) attack, a website accepts some input crafted by the attacker and mistakenly includes this input in the site's own pages in a way that makes the browser execute it as code. The malicious code can then do anything that the site's own front-end code could do.
-
-<section id="Quick_links">
-{{ListSubpages("/en-US/docs/Web/Security", "1", "0", "1")}}
-</section>

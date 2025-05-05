@@ -304,7 +304,7 @@ Compared to numbers, BigInt values yield higher precision when representing larg
 const bigintDiv = 5n / 2n; // 2n, because there's no 2.5 in BigInt
 ```
 
-`Math` functions cannot be used on BigInt values. There is [an open proposal](https://github.com/tc39/proposal-bigint-math) to overload certain `Math` functions like `Math.max()` to allow BigInt values.
+`Math` functions cannot be used on BigInt values; they only work with numbers.
 
 Choosing between BigInt and number depends on your use-case and your input's range. The precision of numbers should be able to accommodate most day-to-day tasks already, and BigInts are most suitable for handling binary data.
 

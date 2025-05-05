@@ -1070,7 +1070,7 @@ This subset of the API has been implemented:
 
 ### HTML Sanitizer API
 
-The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document's DOM.
+The [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document's DOM.
 
 <table>
   <thead>
@@ -1104,6 +1104,49 @@ The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>dom.security.sanitizer.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### Escape < and > in attributes when serializing HTML
+
+Firefox replaces the `<` and `>` characters with `&lt;` and `&gt;` (respectively) in attributes when serializing HTML.
+This prevents certain exploits where HTML is serialized and then injected back into the DOM.
+The affected methods and properties are: {{domxref("Element.innerHTML")}}, {{domxref("Element.outerHTML")}}, {{domxref("Element.getHTML()")}}, {{domxref("ShadowRoot.innerHTML")}}, and {{domxref("ShadowRoot.getHTML()")}}.
+([Firefox bug 1941347](https://bugzil.la/1941347)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>139</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>139</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>139</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>139</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.security.html_serialization_escape_lt_gt</code></td>
     </tr>
   </tbody>
 </table>

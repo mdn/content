@@ -154,13 +154,13 @@ To start with:
 
 ```js
 function listTabs() {
- getCurrentWindowTabs().then((tabs) => {
-    const tabsList = document.getElementById('tabs-list');
+  getCurrentWindowTabs().then((tabs) => {
+    const tabsList = document.getElementById("tabs-list");
     const currentTabs = document.createDocumentFragment();
     const limit = 5;
     let counter = 0;
 
-    tabsList.textContent = '';
+    tabsList.textContent = "";
 ```
 
 Next, we'll create the links for each tab:
@@ -204,7 +204,7 @@ else if (e.target.id === "tabs-alert-info") {
   callOnActiveTab((tab) => {
     let props = "";
     for (const item in tab) {
-      props += `${ item } = ${ tab[item] } \n`;
+      props += `${item} = ${tab[item]} \n`;
     }
     alert(props);
   });

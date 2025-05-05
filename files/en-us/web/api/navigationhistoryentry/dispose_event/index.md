@@ -22,10 +22,10 @@ Disposal occurs when:
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("dispose", (event) => {});
+```js-nolint
+addEventListener("dispose", (event) => { })
 
-ondispose = (event) => {};
+ondispose = (event) => { }
 ```
 
 ## Event type

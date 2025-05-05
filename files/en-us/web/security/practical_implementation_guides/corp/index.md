@@ -1,10 +1,10 @@
 ---
 title: Cross-Origin Resource Policy (CORP) implementation
+short-title: Cross-Origin Resource Policy (CORP)
 slug: Web/Security/Practical_implementation_guides/CORP
 page-type: guide
+sidebar: security
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
 Cross-Origin Resource Policy (CORP) is set by the {{httpheader("Cross-Origin-Resource-Policy")}} response header, which lets websites and applications opt-in to protection against vulnerabilities related to certain cross-origin requests (such as those made by the {{htmlelement("script")}} and {{htmlelement("img")}} elements).
 
