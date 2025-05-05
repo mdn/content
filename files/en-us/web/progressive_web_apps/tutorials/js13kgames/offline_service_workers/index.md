@@ -1,5 +1,5 @@
 ---
-title: "js13kGames: Making a PWA work offline with service workers"
+title: "js13kGames: Making the PWA work offline with service workers"
 short-title: Offline support using service workers
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers
 page-type: guide
