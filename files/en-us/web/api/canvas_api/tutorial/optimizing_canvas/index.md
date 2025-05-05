@@ -133,8 +133,4 @@ canvas.style.height = `${rect.height}px`;
 - With animations, use {{domxref("Window.requestAnimationFrame()")}} instead of {{domxref("Window.setInterval", "setInterval()")}}.
 - Be careful with heavy physics libraries.
 
-## See also
-
-- [Optimizing your JavaScript game for Firefox OS – Mozilla Hacks](https://hacks.mozilla.org/2013/05/optimizing-your-javascript-game-for-firefox-os/)
-
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas", "Web/API/Canvas_API/Tutorial/Finale")}}
