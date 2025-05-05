@@ -56,7 +56,7 @@ One possible solution is as follows:
 
 ```css
 #outer #inner a {
-  background-color: initial;
+  background-color: inherit;
 }
 ```
 
