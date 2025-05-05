@@ -238,9 +238,9 @@ range.addEventListener("change", () => {
 
 The mask is defined as `100px` wide. There is a single star when the origin box is from `1px` to `149px` wide, two stars from `150px` to `249px`, three stars from `250px` to `349px`, and so on.
 
-### Comparing values
+### Shorthand values
 
-This examples demonstrates all `mask-repeat` values.
+This examples demonstrates all `mask-repeat` shorthand (single-keyword) values.
 
 #### HTML
 
@@ -327,7 +327,7 @@ section {
 
 #### Results
 
-{{EmbedLiveSample("Comparing values", "", "300px")}}
+{{EmbedLiveSample("Shorthand values", "", "300px")}}
 
 The first (and, in the case of `no-repeat`, only) mask star is [sized](/en-US/docs/Web/CSS/mask-size) to be 50px by 50px, and [positioned](/en-US/docs/Web/CSS/mask-position) at the bottom-right of the painting area, with repeated stars placed above and/or to the left of it with any clipping occurring on the top and left of the top-most and left-most stars. Note that all the stars are the same size and shape, except for `round`, where all the masks shrank to 45px x 45px to fit four complete masks in each direction. Had the container been 174px, there would have been three stars in each direction, instead of four, and each star would have been stretched.
 
