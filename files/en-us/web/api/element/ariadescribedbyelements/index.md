@@ -24,7 +24,7 @@ When written, the assigned array is copied: subsequent changes to the array do n
 ## Description
 
 The property is a flexible alternative to using the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) attribute to set the accessible description.
-Unlike `aria-describedby`, the elements assigned to this property do not have to have an [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute.
+Unlike `aria-describedby`, the elements assigned to this property do not have to have an [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attribute.
 
 The property reflects the element's [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) attribute when it is defined, but only for listed reference `id` values that match valid in-scope elements.
 If the property is set, then the corresponding attribute is cleared.
