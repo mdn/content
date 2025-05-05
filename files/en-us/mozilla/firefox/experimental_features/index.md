@@ -1110,10 +1110,10 @@ The [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) allow developer
 
 ### Escape < and > in attributes when serializing HTML
 
-This replaces the `<` and `>` characters with `&lt;` and `&gt;` (respectively) in attributes when serializing HTML.
+Firefox replaces the `<` and `>` characters with `&lt;` and `&gt;` (respectively) in attributes when serializing HTML.
 This prevents certain exploits where HTML is serialized and then injected back into the DOM.
 The affected methods and properties are: {{domxref("Element.innerHTML")}}, {{domxref("Element.outerHTML")}}, {{domxref("Element.getHTML()")}}, {{domxref("ShadowRoot.innerHTML")}}, and {{domxref("ShadowRoot.getHTML()")}}.
-([Firefox bug 1941347](https://bugzil.la/1941347))
+([Firefox bug 1941347](https://bugzil.la/1941347)).
 
 <table>
   <thead>
