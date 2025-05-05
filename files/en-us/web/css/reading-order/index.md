@@ -7,15 +7,32 @@ browser-compat: css.properties.reading-order
 
 {{CSSRef}}
 
-The **`reading-order`** property lets the author change where in the reading flow an item is visited, overriding the position set by the [reading-flow](/en-US/docs/Web/CSS/reading-flow) property on its parent. It takes a single `<integer>` value, which specifies which ordinal group the item belongs to. Sibling elements are ordered starting from the lowest numbered ordinal group and going up.
-
-If the reading order of two items is equivalent, the [reading-flow](/en-US/docs/Web/CSS/reading-flow) property breaks the tie.
+The **`reading-order`** [CSS](/en-US/docs/Web/CSS) property sets a {{glossary("reading order")}} ordinal group value on elements within a [block](/en-US/docs/Glossary/Block/CSS), [flex](/en-US/docs/Web/CSS/CSS_flexible_box_layout), or [grid](/en-US/docs/Web/CSS/CSS_grid_layout) container, enabling authors to override the [reading flow](/en-US/docs/Glossary/Reading_order#reading_flow) set via the container's [reading-flow](/en-US/docs/Web/CSS/reading-flow) property value.
 
 ## Syntax
 
 ```css
-reading-flow: <integer>;
+/* <integer> values */
+reading-order: 1;
+reading-order: -1;
+
+/* Global values */
+reading-order: inherit;
+reading-order: initial;
+reading-order: revert;
+reading-order: revert-layer;
+reading-order: unset;
 ```
+
+### Value
+
+The `reading-order` property takes a single {{cssxref("integer")}} value specifying which ordinal group an element belongs to.
+
+## Description
+
+The `reading-order` property lets the author change where in the reading order an element is read out or tabbed to. It enables authors to override the reading order set by the [reading-flow](/en-US/docs/Web/CSS/reading-flow) property on its parent.
+
+The default `reading-order` value is `0` for elements inside a block, flex, or grid container. This puts them all in the same ordinal group. Sibling elements are ordered starting from the lowest numbered ordinal group to the highest. Therefore, to cause an element to be read out after its siblings, you could set a `reading-order` value or 1 or more on it. To cause an element to be read out before its siblings, you could set a `reading-order` value or -1 or less on it.
 
 ## Formal definition
 
@@ -23,11 +40,13 @@ reading-flow: <integer>;
 
 ## Examples
 
-### Grid Rows
+### Grid row order
 
-In this example there are six grid items, the [grid-auto-flow](/en-US/docs/Web/CSS/grid-auto-flow) property has a value of dense, therefore items may display out of source order. The `reading-order` property on the item with a class of [top](/en-US/docs/Web/CSS/top) is -1 Therefore Item 4 will be the first item in reading flow. The remaining items will be visited in the order they display in rows, as [reading-flow](/en-US/docs/Web/CSS/reading-flow) has a value of [grid-rows](/en-US/docs/Web/CSS/grid-row).
+In this example there are six {{htmlelement("a")}} elements, laid out on a grid. One of them has a lower `reading-order` value set, so will be read out before the others, regardless of source or display order.
 
 #### HTML
+
+The six `<a>` elements are contained inside a wrapper {{htmlelement("div")}}.
 
 ```html
 <div class="wrapper">
@@ -42,6 +61,8 @@ In this example there are six grid items, the [grid-auto-flow](/en-US/docs/Web/C
 
 #### CSS
 
+On the `<div>`, we set the [grid-auto-flow](/en-US/docs/Web/CSS/grid-auto-flow) property to `dense`, therefore items may display out of source order. The `reading-order` property on the `<a>` element with a class of [top](/en-US/docs/Web/CSS/top) is set to `-1`, therefore Item 4 will be the first item in reading flow. The remaining items will be visited in the order they display in rows, as the `<div>` element's {{cssxref("reading-flow")}} property is set to [grid-rows](/en-US/docs/Web/CSS/grid-row).
+
 ```css
 .wrapper {
   display: grid;
@@ -55,13 +76,21 @@ In this example there are six grid items, the [grid-auto-flow](/en-US/docs/Web/C
 }
 ```
 
-{{EmbedLiveSample('Grid_rows', '', '50px')}}
+#### Result
 
-### Source Order
+The above demo renders as follows:
 
-In this example there are five direct block-level children of a block container where [reading-flow](/en-US/docs/Web/CSS/reading-flow) has a value of `source-order`. The third item has a `reading-order` value of -1. The reading flow visits the third item first, then the rest in source order.
+{{EmbedLiveSample('Grid row order', '100%', '100px')}}
+
+Try tabbing through the links, and note how "Item 4" is tabbed to first because of its modified `reading-order` value. After that, the items are tabbed to in grid row order.
+
+### Source order override
+
+In this example there are five {{htmlelement("a")}} elements, displayed as block-level elements. One of them has a lower `reading-order` value set, so will be read out before the others, regardless of source or display order.
 
 #### HTML
+
+The five `<a>` elements are contained inside a wrapper {{htmlelement("div")}}.
 
 ```html
 <div class="wrapper">
@@ -74,6 +103,8 @@ In this example there are five direct block-level children of a block container 
 ```
 
 #### CSS
+
+The `<div>` element's `reading-flow` property is set to `source-order`, which allows `reading-order` to be used to override the default source reading order. The third `<a>` element has a `reading-order` value of `-1`, therefore it is read out first, regardless of source order.
 
 ```css
 .wrapper {
@@ -89,10 +120,13 @@ In this example there are five direct block-level children of a block container 
 }
 ```
 
-{{EmbedLiveSample('Source_order', '', '50px')}}
+#### Result
 
-> [!NOTE]
-> The source document should express the underlying logical order of elements. The [reading-flow](/en-US/docs/Web/CSS/reading-flow) and `reading-order` properties exist for cases where a given document can have multiple reading orders depending on layout changes, e.g., in response to [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries). In such cases, the most common or most fundamental reading order should be encoded in the source order so that the document is sensical without CSS.
+The above demo renders as follows:
+
+{{EmbedLiveSample('Source order override', '100%', '100px')}}
+
+Try tabbing through the links, and note how "Item 3" is tabbed to first because of its modified `reading-order` value. After that, the items are tabbed to in source order.
 
 ## Specifications
 
