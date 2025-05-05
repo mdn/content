@@ -122,7 +122,7 @@ One possible solution is as follows:
 @layer yellow, green, purple;
 ```
 
-There is one thing you need to do in this task: change the order of precedence so the declaration for the desired color is in the last declared layer, which is what his solution shows.
+There is one thing you need to do in this task: change the order of precedence so the declaration for the desired color is in the last declared layer, which is what this solution shows.
 
 You need to remember that unlayered normal styles take precedence over layered normal styles. But, if all styles are within layers — as in the case of this task — styles in later declared layers take precedence over styles declared in earlier layers. Moving the purple layer to the end means it has precedence over the green and yellow layers.
 
