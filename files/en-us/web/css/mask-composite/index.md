@@ -104,53 +104,11 @@ This example demonstrates the `mask-composite` property's four `<compositing-ope
 
 #### HTML
 
+We have a {{htmlelement("table")}} that contains eight images. The `<table>` has been hidden for brevity.
+
 ```html hidden
 <table>
   <tbody>
-    <tr>
-      <th colspan="4">mask-type: initial</th>
-    </tr>
-    <tr>
-      <th>mask-composite: add</th>
-      <th>mask-composite: subtract</th>
-      <th>mask-composite: intersect</th>
-      <th>mask-composite: exclude</th>
-    </tr>
-    <tr class="initMaskType">
-      <td></td>
-    </tr>
-  </tbody>
-</table>
-```
-
-We have a {{htmltable("table")}} that contain twelve images.
-
-```html
-<img
-  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-  alt="Pride flag" />
-```
-
-```html hidden
-      </td>
-      <td>
-        <img
-          id="stroke"
-          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-          alt="Pride flag" />
-      </td>
-      <td>
-        <img
-          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-          alt="Pride flag" />
-      </td>
-      <td>
-        <img
-          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-          alt="Pride flag" />
-      </td>
-    </tr>
-
     <tr>
       <th colspan="4">mask-type: alpha</th>
     </tr>
@@ -194,7 +152,7 @@ We have a {{htmltable("table")}} that contain twelve images.
       <th>mask-composite: intersect</th>
       <th>mask-composite: exclude</th>
     </tr>
-    <tr>
+    <tr class="luminanceMaskType">
       <td>
         <img
           src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
@@ -220,7 +178,11 @@ We have a {{htmltable("table")}} that contain twelve images.
 </table>
 ```
 
-We include six masks including three hearts and three circles.
+```html
+<img src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg" alt="Pride flag" />
+```
+
+And an SVG with 4 masks; an alpha heart and circle and a luminance heart and circle:
 
 ```html
 <svg height="0" width="0">
@@ -240,44 +202,22 @@ We include six masks including three hearts and three circles.
       stroke="rgb(255 255 255 / 0.5)"
       stroke-width="20" />
   </mask>
-</svg>
-```
-
-For the sake of brevity, as the `<mask>` elements only differ in `id` and `class` name, we've hidded the luminance and default set. We've hidden the 11 other `<img>` elements and the table structure.
-
-```html hidden
-<mask id="heartLuminance" class="luminance">
-  <path
-    d="M20,70 A40,40,0,0,1,100,70 A40,40,0,0,1,180,70 Q180,130,100,190 Q20,130,20,70 Z"
-    fill="green"
-    stroke="white"
-    stroke-width="20" />
-</mask>
-<mask id="circleLuminance" class="luminance">
-  <circle
-    cx="130"
-    cy="130"
-    r="50"
-    fill="rgb(0 0 0 / 0.5)"
-    stroke="rgb(255 255 255 / 0.5)"
-    stroke-width="20" />
-</mask>
-<mask id="heartInitial" class="init">
-  <path
-    d="M20,70 A40,40,0,0,1,100,70 A40,40,0,0,1,180,70 Q180,130,100,190 Q20,130,20,70 Z"
-    fill="green"
-    stroke="white"
-    stroke-width="20" />
-</mask>
-<mask id="circleInitial" class="init">
-  <circle
-    cx="130"
-    cy="130"
-    r="50"
-    fill="rgb(0 0 0 / 0.5)"
-    stroke="rgb(255 255 255 / 0.5)"
-    stroke-width="20" />
-</mask>
+  <mask id="heartLuminance" class="luminance">
+    <path
+      d="M20,70 A40,40,0,0,1,100,70 A40,40,0,0,1,180,70 Q180,130,100,190 Q20,130,20,70 Z"
+      fill="green"
+      stroke="white"
+      stroke-width="20" />
+  </mask>
+  <mask id="circleLuminance" class="luminance">
+    <circle
+      cx="130"
+      cy="130"
+      r="50"
+      fill="rgb(0 0 0 / 0.5)"
+      stroke="rgb(255 255 255 / 0.5)"
+      stroke-width="20" />
+  </mask>
 </svg>
 ```
 
@@ -348,11 +288,14 @@ th {
 th {
   color: green;
 }
+body > img {
+  display: none;
+}
 ```
 
 #### Results
 
-{{EmbedLiveSample("value comparison", "", "550px")}}
+{{EmbedLiveSample("value comparison", "", "600")}}
 
 ## Specifications
 
@@ -368,3 +311,4 @@ th {
 - {{cssxref("mask-type")}}
 - {{cssxref("mask-mode")}}
 - [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
+ule
