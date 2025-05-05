@@ -30,55 +30,24 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 - {{domxref("SVGComponentTransferFunctionElement.offset")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("offset")}} attribute of the given element.
 
-### Constants
-
-<table>
-  <tbody>
-    <tr>
-      <th>Name</th>
-      <th>Value</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td><code>SVG_FECOMPONENTTRANSFER_TYPE_UNKNOWN</code></td>
-      <td>0</td>
-      <td>
-        The type is not one of predefined types. It is invalid to attempt to
-        define a new value of this type or to attempt to switch an existing
-        value to this type.
-      </td>
-    </tr>
-    <tr>
-      <td><code>SVG_FECOMPONENTTRANSFER_TYPE_IDENTITY</code></td>
-      <td>1</td>
-      <td>Corresponds to the value <code>identity</code>.</td>
-    </tr>
-    <tr>
-      <td><code>SVG_FECOMPONENTTRANSFER_TYPE_TABLE</code></td>
-      <td>2</td>
-      <td>Corresponds to the value <code>table</code>.</td>
-    </tr>
-    <tr>
-      <td><code>SVG_FECOMPONENTTRANSFER_TYPE_DISCRETE</code></td>
-      <td>3</td>
-      <td>Corresponds to the value <code>discrete</code>.</td>
-    </tr>
-    <tr>
-      <td><code>SVG_FECOMPONENTTRANSFER_TYPE_LINEAR</code></td>
-      <td>4</td>
-      <td>Corresponds to the value <code>linear</code>.</td>
-    </tr>
-    <tr>
-      <td><code>SVG_FECOMPONENTTRANSFER_TYPE_GAMMA</code></td>
-      <td>5</td>
-      <td>Corresponds to the value <code>gamma</code>.</td>
-    </tr>
-  </tbody>
-</table>
-
 ## Instance methods
 
 _This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}._
+
+## Static properties
+
+- `SVG_FECOMPONENTTRANSFER_TYPE_UNKNOWN` (0)
+  - : The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.
+- `SVG_FECOMPONENTTRANSFER_TYPE_IDENTITY` (1)
+  - : Corresponds to the value `identity`.
+- `SVG_FECOMPONENTTRANSFER_TYPE_TABLE` (2)
+  - : Corresponds to the value `table`.
+- `SVG_FECOMPONENTTRANSFER_TYPE_DISCRETE` (3)
+  - : Corresponds to the value `discrete`.
+- `SVG_FECOMPONENTTRANSFER_TYPE_LINEAR` (4)
+  - : Corresponds to the value `linear`.
+- `SVG_FECOMPONENTTRANSFER_TYPE_GAMMA` (5)
+  - : Corresponds to the value `gamma`.
 
 ## Specifications
 
