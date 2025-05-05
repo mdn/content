@@ -1,5 +1,5 @@
 ---
-title: Types of attacks
+title: Attacks
 slug: Web/Security/Attacks
 page-type: guide
 sidebar: security
