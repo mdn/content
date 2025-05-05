@@ -24,7 +24,7 @@ let updatedTabGroup = await browser.tabGroups.update(
   - : `integer` The ID of the tab group to update.
 
 - `updateProperties` {{optional_inline}}
-  - : An object containing details of the property values to be matched in returned tab groups.
+  - : An object containing details of the property values to be matched in returned tab groups. Properties that aren't specified aren't modified.
     - `collapsed` {{optional_inline}}
       - : `boolean` Whether the tab group is collapsed or expanded in the tab strip.
     - `color` {{optional_inline}}

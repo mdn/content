@@ -7,7 +7,7 @@ browser-compat: webextensions.api.tabGroups.onRemoved
 
 {{AddonSidebar}}
 
-Fires when a tab group is removed.
+Fires when a tab group is removed. This can occur when a user closes a tab group or a tab group is closed automatically because another change means it no longer contained any tabs.
 
 ## Syntax
 
