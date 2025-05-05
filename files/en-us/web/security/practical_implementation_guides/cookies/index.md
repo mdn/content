@@ -2,9 +2,8 @@
 title: Secure cookie configuration
 slug: Web/Security/Practical_implementation_guides/Cookies
 page-type: guide
+sidebar: security
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
 Limit access to cookies as much as possible.
 
