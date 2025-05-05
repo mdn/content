@@ -14,10 +14,10 @@ The `touchstart` event is fired when one or more touch points are placed on the 
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("touchstart", (event) => {});
+```js-nolint
+addEventListener("touchstart", (event) => { })
 
-ontouchstart = (event) => {};
+ontouchstart = (event) => { }
 ```
 
 ## Event type

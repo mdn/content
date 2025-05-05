@@ -104,7 +104,7 @@ Dog.prototype.name = function (name) {
 };
 
 const myNewDog = new Dog();
-myNewDog.name("Cassidy"); //Uncaught TypeError: myNewDog.name is not a function
+myNewDog.name("Cassidy"); // TypeError: myNewDog.name is not a function
 ```
 
 Use a different property name instead:
@@ -113,7 +113,7 @@ Use a different property name instead:
 function Dog() {
   this.age = 11;
   this.color = "black";
-  this.dogName = "Ralph"; //Using this.dogName instead of .name
+  this.dogName = "Ralph"; // Using this.dogName instead of .name
   return this;
 }
 
@@ -123,7 +123,7 @@ Dog.prototype.name = function (name) {
 };
 
 const myNewDog = new Dog();
-myNewDog.name("Cassidy"); //Dog { age: 11, color: 'black', dogName: 'Cassidy' }
+myNewDog.name("Cassidy"); // Dog { age: 11, color: 'black', dogName: 'Cassidy' }
 ```
 
 ### Using parentheses for multiplication

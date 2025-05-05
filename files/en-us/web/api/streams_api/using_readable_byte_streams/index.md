@@ -104,7 +104,7 @@ class MockHypotheticalSocket {
 
     return new Promise((resolve /*, reject*/) => {
       if (this.data_read >= this.max_data) {
-        //out of data
+        // Out of data
         resolve(resultObj);
         return;
       }
@@ -347,7 +347,7 @@ function readStream(reader) {
         offset += value.byteLength;
         bytesReceived += value.byteLength;
 
-        //logConsumer(`Read ${bytesReceived} bytes: ${value}`);
+        // logConsumer(`Read ${bytesReceived} bytes: ${value}`);
         logConsumer(`Read ${bytesReceived} bytes`);
         result += value;
 
@@ -442,7 +442,7 @@ class MockUnderlyingFileHandle {
 
     return new Promise((resolve /*, reject*/) => {
       if (position >= this.maxdata) {
-        //out of data
+        // Out of data
         resolve(resultObj);
         return;
       }
@@ -574,7 +574,7 @@ function makeReadableByteFileStream(filename) {
   return new ReadableStream({
     type: "bytes", // An underlying byte stream!
     start(controller) {
-      // Called to initialise the underlying source.
+      // Called to initialize the underlying source.
       // For a file source open a file handle (here we just create the mocked object).
       fileHandle = new MockUnderlyingFileHandle();
       logSource(
@@ -703,7 +703,7 @@ class MockUnderlyingFileHandle {
 
     return new Promise((resolve /*, reject*/) => {
       if (position >= this.maxdata) {
-        //out of data
+        // Out of data
         resolve(resultObj);
         return;
       }
@@ -825,7 +825,7 @@ function makeReadableByteFileStream(filename) {
   return new ReadableStream({
     type: "bytes", // An underlying byte stream!
     start(controller) {
-      // Called to initialise the underlying source.
+      // Called to initialize the underlying source.
       // For a file source open a file handle (here we just create the mocked object).
       fileHandle = new MockUnderlyingFileHandle();
       logSource(
@@ -943,7 +943,7 @@ class MockUnderlyingFileHandle {
 
     return new Promise((resolve /*, reject*/) => {
       if (position >= this.maxdata) {
-        //out of data
+        // Out of data
         resolve(resultObj);
         return;
       }
@@ -1065,7 +1065,7 @@ function makeReadableByteFileStream(filename) {
   return new ReadableStream({
     type: "bytes", // An underlying byte stream!
     start(controller) {
-      // Called to initialise the underlying source.
+      // Called to initialize the underlying source.
       // For a file source open a file handle (here we just create the mocked object).
       fileHandle = new MockUnderlyingFileHandle();
       logSource(

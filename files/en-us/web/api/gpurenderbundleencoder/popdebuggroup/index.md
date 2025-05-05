@@ -41,7 +41,7 @@ The following criteria must be met when calling **`popDebugGroup()`**, otherwise
 ## Examples
 
 ```js
-// ...
+// …
 
 const bundleEncoder = device.createRenderBundleEncoder(renderBundleDescriptor);
 
@@ -53,7 +53,7 @@ bundleEncoder.draw(3);
 
 bundleEncoder.popDebugGroup();
 
-// ...
+// …
 ```
 
 ## Specifications

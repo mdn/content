@@ -53,25 +53,25 @@ For more complete applied examples/information, check out our [Voice-change-O-ma
   <script>
     const audioCtx = new AudioContext();
 
-    //Create audio source
-    //Here, we use an audio file, but this could also be e.g. microphone input
+    // Create audio source
+    // Here, we use an audio file, but this could also be e.g. microphone input
     const audioEle = new Audio();
-    audioEle.src = "my-audio.mp3"; //insert file name here
+    audioEle.src = "my-audio.mp3"; // Insert file name here
     audioEle.autoplay = true;
     audioEle.preload = "auto";
     const audioSourceNode = audioCtx.createMediaElementSource(audioEle);
 
-    //Create analyser node
+    // Create analyser node
     const analyserNode = audioCtx.createAnalyser();
     analyserNode.fftSize = 256;
     const bufferLength = analyserNode.frequencyBinCount;
     const dataArray = new Float32Array(bufferLength);
 
-    //Set up audio node network
+    // Set up audio node network
     audioSourceNode.connect(analyserNode);
     analyserNode.connect(audioCtx.destination);
 
-    //Create 2D canvas
+    // Create 2D canvas
     const canvas = document.createElement("canvas");
     canvas.style.position = "absolute";
     canvas.style.top = "0";
@@ -83,17 +83,17 @@ For more complete applied examples/information, check out our [Voice-change-O-ma
     canvasCtx.clearRect(0, 0, canvas.width, canvas.height);
 
     function draw() {
-      //Schedule next redraw
+      // Schedule next redraw
       requestAnimationFrame(draw);
 
-      //Get spectrum data
+      // Get spectrum data
       analyserNode.getFloatFrequencyData(dataArray);
 
-      //Draw black background
+      // Draw black background
       canvasCtx.fillStyle = "rgb(0 0 0)";
       canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
 
-      //Draw spectrum
+      // Draw spectrum
       const barWidth = (canvas.width / bufferLength) * 2.5;
       let posX = 0;
       for (let i = 0; i < bufferLength; i++) {

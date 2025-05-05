@@ -29,8 +29,8 @@ This example uses the CSS found as an example on the {{cssxref("@font-face")}} p
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].style); //a CSSStyleDeclaration
+const myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0].style); // A CSSStyleDeclaration
 ```
 
 ## Specifications

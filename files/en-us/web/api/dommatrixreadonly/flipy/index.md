@@ -24,7 +24,7 @@ A [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix).
 
 ### Inverting a triangle
 
-In this example, the SVG contains two identical [paths](/en-US/docs/Web/SVG/Reference/Attribute/d) in the shape of a triangle; they are both drawn to have the same size and position. The viewbox has a negative y value showing us content from both sides of the y-axis. This enables the flipped triangle to be withing the viewport after it is transformed.
+In this example, the SVG contains two identical [paths](/en-US/docs/Web/SVG/Reference/Attribute/d) in the shape of a triangle; they are both drawn to have the same size and position. The view box has a negative y value showing us content from both sides of the y-axis. This enables the flipped triangle to be withing the viewport after it is transformed.
 
 #### HTML
 

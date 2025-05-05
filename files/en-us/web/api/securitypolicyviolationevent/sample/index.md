@@ -13,7 +13,8 @@ The **`sample`** read-only property of the {{domxref("SecurityPolicyViolationEve
 This is only [`script-src*`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) and [`style-src*`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src) violations, when the corresponding `Content-Security-Policy` directive contains the [`'report-sample'`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#report-sample) keyword.
 In addition, this will only be populated if the resource is an inline script, event handler, or style — external resources causing a violation will not generate a sample.
 
-> [!NOTE] Violation reports should be considered attacker-controlled data.
+> [!NOTE]
+> Violation reports should be considered attacker-controlled data.
 > The content of this field should be sanitized before storing or rendering.
 
 ## Value

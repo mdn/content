@@ -393,7 +393,7 @@ We applied some extra CSS to the finished form below. If you'd like to make chan
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find a further test to verify that you've retained this information before you move on — see [Test your skills: Form structure](/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Form_structure).
+You've reached the end of this article, but can you remember the most important information? You can find a further test to verify that you've retained this information before you move on — see [Test your skills: Form structure](/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Form_structure).
 
 ## Summary
 

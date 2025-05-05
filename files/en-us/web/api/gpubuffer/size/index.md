@@ -25,7 +25,7 @@ A number.
 // Define global buffer size
 const BUFFER_SIZE = 1000;
 
-// ...
+// …
 
 const output = device.createBuffer({
   size: BUFFER_SIZE,

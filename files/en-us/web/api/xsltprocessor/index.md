@@ -61,7 +61,7 @@ async function init() {
   xsltProcessor.importStylesheet(xslStylesheet);
 
   // process the file
-  // ...
+  // …
 }
 ```
 

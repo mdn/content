@@ -22,7 +22,14 @@ A string.
 In this example the value of `ariaPlaceholder` is set to "12345".
 
 ```js
-this.internals_.ariaPlaceholder = "12345";
+class CustomControl extends HTMLElement {
+  constructor() {
+    super();
+    this.internals_ = this.attachInternals();
+    this.internals_.ariaPlaceholder = "12345";
+  }
+  // …
+}
 ```
 
 ## Specifications

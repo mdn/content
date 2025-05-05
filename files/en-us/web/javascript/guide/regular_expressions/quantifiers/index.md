@@ -188,6 +188,8 @@ console.table(sentence.match(longWord)); // ["multiplication"]
 
 In this example, we match words that either end with "our" or "or".
 
+<!-- cSpell:ignore neighbour -->
+
 ```js
 const britishText = "He asked his neighbour a favour.";
 const americanText = "He asked his neighbor a favor.";

@@ -19,6 +19,7 @@ Amstelvar
 Amélie
 Anand
 ANDI
+Andreas
 Andreessen
 Andrzej
 Anek
@@ -57,6 +58,7 @@ Birtles
 bitsies
 Bitsov
 Bixa
+Blackman
 Blackmoon
 Blankers
 Bloggs
@@ -95,6 +97,7 @@ Chakra
 Chamakh
 Chimero
 Chloé
+Choyce
 chrisdavidmills
 chrismills
 Chromecast
@@ -148,6 +151,7 @@ Desaulniers
 Desproges
 Devlin
 Dexie
+Diffie
 Digga
 Digianswer
 DigiNotar
@@ -164,6 +168,7 @@ Dragomir
 Drasner
 Dreamweaver
 Dutton
+Dwan
 Dwyane
 dynamis
 Dyno
@@ -186,6 +191,7 @@ Envato
 Ephesis
 Eplepsia
 Erba
+ERCIM
 Erdös
 ericwbailey
 Esben
@@ -242,6 +248,7 @@ Haml
 Haverbeke
 Hazael
 Headsight
+Hellman
 Hermina
 Heydings
 Heydon
@@ -321,6 +328,7 @@ Kerckhoffs
 Kersee
 Kesteren
 Kettner
+Khronos
 Kinlan
 Kinnon
 kirsty
@@ -513,6 +521,7 @@ Rauschmayer
 Realtek
 Recep
 Reeza
+Reis
 Rekapi
 Remy
 Resig
@@ -525,6 +534,7 @@ Rohini
 Ronaldo
 Roselli
 Rossi
+Rossum
 Roushan
 rsvg
 rubentd
@@ -635,6 +645,7 @@ Vanderheiden
 Vandermonde
 Vash
 Vegur
+Venkat
 Verou
 Vieno
 Vint
@@ -660,6 +671,7 @@ Willee
 Willigers
 Winamp
 Winchelsea
+Wireshark
 Wirfs
 wisedog
 Wolenetz

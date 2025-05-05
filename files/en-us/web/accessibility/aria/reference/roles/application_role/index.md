@@ -41,7 +41,7 @@ The `application` role is designed to provide a means for widgets that are not p
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
   - : Used to provide the name of the application or purpose of the widget that is being exposed.
 - [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
-  - : Used to indicate the idref of an element that contains additional instructions for navigating or operating this element.
+  - : Used to reference the ID of an element that contains additional instructions for navigating or operating this element.
 - [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-roledescription)
   - : Used to give the application a more descriptive role text for screen readers to speak. This should be localized.
 - [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled)

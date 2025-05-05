@@ -188,7 +188,7 @@ function logMediaCapabilities(kind) {
   log.textContent += "\nCodecs\n";
   capabilities.codecs.forEach((codec) => {
     log.textContent += ` mime type: ${codec.mimeType}\n`;
-    log.textContent += `   channels: ${codec.channels}\n`; //max channels - e.g. 2 is stereo
+    log.textContent += `   channels: ${codec.channels}\n`; // max channels - e.g. 2 is stereo
     log.textContent += `   clockRate: ${codec.clockRate}\n`; // clock rate in Hz
     log.textContent += `   sdpFmtpLine: ${codec.sdpFmtpLine}\n`; // mime media type and subtype
   });

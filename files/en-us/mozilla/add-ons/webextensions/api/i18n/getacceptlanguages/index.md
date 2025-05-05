@@ -36,7 +36,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 ```js
 function onGot(languages) {
   console.log(languages);
-  //e.g. Array [ "en-US", "en" ]
+  // e.g. Array [ "en-US", "en" ]
 }
 
 let gettingAcceptLanguages = browser.i18n.getAcceptLanguages();

@@ -30,7 +30,7 @@ class CustomSlide extends HTMLElement {
     this._internals.role = "slide";
   }
 
-  // ...
+  // …
 }
 
 customElements.define("custom-slide", CustomSlide);

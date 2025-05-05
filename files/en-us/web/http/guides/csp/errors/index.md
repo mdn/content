@@ -32,7 +32,7 @@ When you see any of the following messages logged in the browser devtools consol
 - Ignoring srcs for directive '%1$S'
 - Interpreting %1$S as a hostname, not a keyword. If you intended this to be a keyword, use '%2$S' (wrapped in single quotes).
 - Not supporting directive '%1$S'. Directive and values will be ignored.
-- Blocking insecure request '%1$S'.(/en-US/docs/Web/HTTP/CSP/Errors/blockAllMixedContent)
+- Blocking insecure request '%1$S'.(/en-US/docs/Web/HTTP/Guides/CSP/Errors/blockAllMixedContent)
 - Ignoring '%1$S' since it does not contain any parameters.
 - Ignoring sandbox directive when delivered in a report-only policy '%1$S'
 - Referrer Directive '%1$S' has been deprecated. Please use the Referrer-Policy header instead.

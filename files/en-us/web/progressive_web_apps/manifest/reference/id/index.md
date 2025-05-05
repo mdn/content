@@ -42,13 +42,29 @@ The `id` manifest member serves as a unique identifier for your web app. It allo
 
 The `id` can also be used by services that collect lists of web apps to uniquely identify applications.
 
+### Usage notes
+
 A few key points to remember while using the `id` member:
 
-- Use a leading `/` to specify that the `id` is a root-relative URL path.
+- As a recommended practice, use a leading `/` to specify that the `id` is a root-relative URL path.
 - Since `id` is resolved against `start_url`'s origin, `id` values such as `../foo`, `foo`, `/foo`, and `./foo` all resolve to the same identifier relative to the origin. For example, if `start_url` is `https://example.com/app/`, all these `id` values will resolve to `https://example.com/foo/`.
 - Standard URL encoding and decoding rules apply when resolving the `id` value.
 - Fragments in the `id` are removed during processing. For example, if `id` is set to `foo#bar`, it will be resolved as `foo`. Similarly, if `id` is undefined and the `start_url` is `https://example.com/app/#home`, `id` will resolve to `https://example.com/app/`.
 - Query parameters in the `id` are preserved and included in the final resolved identifier.
+
+### Understanding `id` resolution
+
+Assume that the `start_url` for your app is `https://example.com/my-app/home`. The following table demonstrates how different `id` values in the manifest will be resolved:
+
+| `id` in manifest              | Resolved `id`                      | Explanation                                                                         |
+| ----------------------------- | ---------------------------------- | ----------------------------------------------------------------------------------- |
+| undefined                     | `https://example.com/my-app/home`  | Defaults to `start_url`                                                             |
+| `""`                          | `https://example.com/my-app/home`  | Empty string resolves to `start_url`                                                |
+| `/`                           | `https://example.com/`             | Root-relative URL                                                                   |
+| `foo?x=y`                     | `https://example.com/foo?x=y`      | Relative path resolved against `start_url`'s origin with query parameters preserved |
+| `foo#heading`                 | `https://example.com/foo`          | Relative path resolved against `start_url`'s origin with fragment removed           |
+| `https://anothersite.com/foo` | `https://example.com/my-app/home`  | Cross-origin URL not allowed, falls back to `start_url`                             |
+| `😀`                          | `https://example.com/%F0%9F%98%80` | Non-ASCII character encoded in URL                                                  |
 
 ## Examples
 
@@ -84,35 +100,21 @@ Consider a scenario where you deploy a web app with the following manifest:
 {
   "name": "My Weather Application",
   "id": "https://example.com/weatherapp/",
-  "start_url": "https://old-domain.com/app"
+  "start_url": "https://example.com/old-app"
 }
 ```
 
-However, you later decide to move the app to a different domain. You would then update the manifest as follows:
+However, you later decide to move the app to a different path. You would then update the manifest as follows:
 
 ```json
 {
   "name": "My Weather Application",
   "id": "https://example.com/weatherapp/",
-  "start_url": "https://new-domain.com/app"
+  "start_url": "https://example.com/new-app"
 }
 ```
 
 Browsers will treat this new manifest as an update to the existing app because the `id` values match. In this case, users will receive an update to their existing app, rather than being prompted to install a new app.
-
-### Understanding `id` resolution
-
-Assume that the `start_url` for your app is `https://example.com/my-app/home`. The following table demonstrates how different `id` values in the manifest will be resolved:
-
-| `id` in manifest              | Resolved `id`                      | Explanation                                                                         |
-| ----------------------------- | ---------------------------------- | ----------------------------------------------------------------------------------- |
-| undefined                     | `https://example.com/my-app/home`  | Defaults to `start_url`                                                             |
-| `""`                          | `https://example.com/my-app/home`  | Empty string resolves to `start_url`                                                |
-| `/`                           | `https://example.com/`             | Root-relative URL                                                                   |
-| `foo?x=y`                     | `https://example.com/foo?x=y`      | Relative path resolved against `start_url`'s origin with query parameters preserved |
-| `foo#heading`                 | `https://example.com/foo`          | Relative path resolved against `start_url`'s origin with fragment removed           |
-| `https://anothersite.com/foo` | `https://example.com/my-app/home`  | Cross-origin URL not allowed, falls back to `start_url`                             |
-| `😀`                          | `https://example.com/%F0%9F%98%80` | Non-ASCII character encoded in URL                                                  |
 
 ## Specifications
 

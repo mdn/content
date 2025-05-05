@@ -19,7 +19,7 @@ page-type: firefox-release-notes
 - Added the [DOM Inspector](https://firefox-source-docs.mozilla.org/devtools-user/dom_property_viewer/index.html) ([Firefox bug 1201475](https://bugzil.la/1201475)).
 - [Font inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#fonts-view) has been enabled by default again ([Firefox bug 1280121](https://bugzil.la/1280121)).
 - [Improved suggestions](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#edit-rules) for CSS properties ([Firefox bug 1168246](https://bugzil.la/1168246)).
-- Cookies, localstorage and sessionstorage entries are editable via double-click ([Firefox bug 1231154](https://bugzil.la/1231154), [Firefox bug 1231179](https://bugzil.la/1231179), [Firefox bug 1231155](https://bugzil.la/1231155)).
+- Cookies, localStorage and sessionStorage entries are editable via double-click ([Firefox bug 1231154](https://bugzil.la/1231154), [Firefox bug 1231179](https://bugzil.la/1231179), [Firefox bug 1231155](https://bugzil.la/1231155)).
 
 ### HTML
 
@@ -119,7 +119,7 @@ page-type: firefox-release-notes
 - Support for UTF-16 has been removed from {{domxref("TextEncoder")}} ([Firefox bug 1257877](https://bugzil.la/1257877)).
 - {{domxref("RTCStatsReport")}} is now a true `maplike` interface: in addition to {{domxref("RTCStatsReport.forEach()", "forEach()")}}, {{domxref("RTCStatsReport.get()", "get()")}}, and {{domxref("RTCStatsReport.has()", "has()")}}, the methods {{domxref("RTCStatsReport.entries", "entries()")}}, {{domxref("RTCStatsReport.values", "values()")}}, {{domxref("RTCStatsReport.keys()", "keys()")}}, as well as the {{domxref("RTCStatsReport.size", "size")}} getter have been implemented ([Firefox bug 906986](https://bugzil.la/906986)).
 - The {{domxref("Request.cache")}} property has been added allowing to control the cache behavior ([Firefox bug 1120715](https://bugzil.la/1120715)).
-- Handling of dead keys on Mac OS X has been changed to work the same as other platforms; they no longer fire a {{domxref("Element/keypress_event", "keypress")}} event when no text is generated when the focused element isn't editable (when the focused element is editable, dead key causes composition events instead of keyboard events on Mac OS X). Also, like on other platforms, the value of {{domxref("KeyboardEvent.key")}} is now `"Dead"` for dead keypresses which don't generate text in other situations.
+- Handling of dead keys on Mac OS X has been changed to work the same as other platforms; they no longer fire a {{domxref("Element/keypress_event", "keypress")}} event when no text is generated when the focused element isn't editable (when the focused element is editable, dead key causes composition events instead of keyboard events on Mac OS X). Also, like on other platforms, the value of {{domxref("KeyboardEvent.key")}} is now `"Dead"` for dead key presses which don't generate text in other situations.
 
 ## HTTP
 

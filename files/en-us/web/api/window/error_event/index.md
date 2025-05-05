@@ -16,10 +16,10 @@ This event is only generated for script errors thrown synchronously, such as dur
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("error", (event) => {});
+```js-nolint
+addEventListener("error", (event) => { })
 
-onerror = (message, source, lineno, colno, error) => {};
+onerror = (message, source, lineno, colno, error) => { }
 ```
 
 > [!NOTE]
