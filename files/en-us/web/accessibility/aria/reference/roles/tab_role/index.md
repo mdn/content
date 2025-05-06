@@ -103,6 +103,7 @@ All of the `tabpanel` elements have `tabindex="0"` to make them tabbable, and al
       Third Tab
     </button>
   </div>
+  <div>
   <div id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
     <p>Content for the first panel</p>
   </div>
@@ -111,6 +112,7 @@ All of the `tabpanel` elements have `tabindex="0"` to make them tabbable, and al
   </div>
   <div id="panel-3" role="tabpanel" tabindex="0" aria-labelledby="tab-3" hidden>
     <p>Content for the third panel</p>
+  </div>
   </div>
 </div>
 ```
@@ -161,64 +163,77 @@ To handle changing the active `tab` and `tabpanel`, we have a function that take
 
 ```js
 window.addEventListener("DOMContentLoaded", () => {
-  // Only handle one particular tablist; if you have multiple tab
-  // lists (might even be nested), you have to apply this code for each one
-  const tabList = document.querySelector('[role="tablist"]');
-  const tabs = tabList.querySelectorAll(':scope > [role="tab"]');
+  // Works for groups of similar tablists
+  const tabLists = Array.from(document.querySelectorAll('[role="tablist"]'));
+  const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
 
-  // Add a click event handler to each tab
+  // Add navigation event handlers to each tab
   tabs.forEach((tab) => {
-    tab.addEventListener("click", changeTabs);
-  });
-
-  // Enable arrow navigation between tabs in the tab list
-  let tabFocus = 0;
-
-  tabList.addEventListener("keydown", (e) => {
-    // Move right
-    if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
-      tabs[tabFocus].setAttribute("tabindex", -1);
-      if (e.key === "ArrowRight") {
-        tabFocus++;
-        // If we're at the end, go to the start
-        if (tabFocus >= tabs.length) {
-          tabFocus = 0;
-        }
-        // Move left
-      } else if (e.key === "ArrowLeft") {
-        tabFocus--;
-        // If we're at the start, move to the end
-        if (tabFocus < 0) {
-          tabFocus = tabs.length - 1;
-        }
-      }
-
-      tabs[tabFocus].setAttribute("tabindex", 0);
-      tabs[tabFocus].focus();
-    }
+    tab.addEventListener('click', changeTabsMouse);
+    tab.addEventListener('keydown', changeTabsKey);
   });
 });
 
-function changeTabs(e) {
+function changeTabsMouse(e) {
   const targetTab = e.target;
-  const tabList = targetTab.parentNode;
-  const tabGroup = tabList.parentNode;
+  const tabParent = targetTab.parentNode;
+  const tabPanelGroup = tabParent.parentNode.children[1];
 
   // Remove all current selected tabs
-  tabList
+  tabParent
     .querySelectorAll(':scope > [aria-selected="true"]')
     .forEach((t) => t.setAttribute("aria-selected", false));
 
   // Set this tab as selected
+  for (const tab of tabParent.children) tab.setAttribute("tabindex", -1);
   targetTab.setAttribute("aria-selected", true);
+  targetTab.setAttribute("tabindex", 0);
+  targetTab.focus();
 
   // Hide all tab panels
-  tabGroup
+  tabPanelGroup
     .querySelectorAll(':scope > [role="tabpanel"]')
     .forEach((p) => p.setAttribute("hidden", true));
 
   // Show the selected panel
-  tabGroup
+  tabPanelGroup
+    .querySelector(`#${targetTab.getAttribute("aria-controls")}`)
+    .removeAttribute("hidden");
+}
+
+function changeTabsKey(e) {
+
+  let targetTab = e.target;
+  const tabParent = targetTab.parentNode;
+  const tabPanelGroup = tabParent.parentNode.children[1];
+
+switch (true) {
+  case (e.key == 'ArrowLeft') || (e.shiftKey && e.key == 'Tab'):
+    targetTab = targetTab.previousElementSibling || targetTab.parentNode.lastElementChild;
+    break;
+  case (e.key == 'ArrowRight') || (e.key == "Tab"):
+    targetTab = targetTab.nextElementSibling || targetTab.parentNode.firstElementChild;
+    break;
+}
+
+  // Remove all current selected tabs
+  tabParent
+    .querySelectorAll(':scope > [aria-selected="true"]')
+    .forEach((t) => t.setAttribute("aria-selected", false));
+
+  // Set this tab as selected
+  for (const tab of tabParent.children) tab.setAttribute("tabindex", -1);
+  targetTab.setAttribute("aria-selected", true);
+  targetTab.setAttribute("tabindex", 0);
+  targetTab.focus();
+
+  // Hide all tab panels
+  tabPanelGroup
+    .querySelectorAll(':scope > [role="tabpanel"]')
+    .forEach((p) => p.setAttribute("hidden", true));
+
+  // Show the selected panel
+  tabPanelGroup
     .querySelector(`#${targetTab.getAttribute("aria-controls")}`)
     .removeAttribute("hidden");
 }
