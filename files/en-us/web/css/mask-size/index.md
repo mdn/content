@@ -156,12 +156,18 @@ This example demonstrates the keyword values for `mask-size`.
 
 #### HTML
 
-We include three {{htmlelement("div")}} elements:
+We include three {{htmlelement("section")}} elements, each with a different class name, and each containing a `<div>`.
 
 ```html
-<div class="auto"></div>
-<div class="cover"></div>
-<div class="contain"></div>
+<section class="auto">
+  <div></div>
+</section>
+<section class="cover">
+  <div></div>
+</section>
+<section class="contain">
+  <div></div>
+</section>
 ```
 
 #### CSS
@@ -177,32 +183,113 @@ div {
 }
 ```
 
-We then set either the `mask-size` to one of the keyword values, with `auto` demonstrating the original intrinsic dimensions of the mask:
+We then set the `mask-size` to one of the property's keyword values, with `auto` demonstrating the original intrinsic dimensions of the mask:
 
 ```css
-.auto {
+.auto div {
   mask-size: auto;
 }
 
-.cover {
+.cover div {
   mask-size: cover;
 }
 
-.contain {
+.contain div {
   mask-size: contain;
+}
+```
+
+We show the value by displaying the class name using generated content.
+
+```css
+section::before {
+  content: "mask-size: " attr(class) ";";
+  display: block;
+  text-align: center;
+  border-bottom: 1px solid;
 }
 ```
 
 ```css hidden
 body {
   display: flex;
+  flex-flow: row wrap;
   gap: 10px;
+}
+section {
+  border: 1px solid;
 }
 ```
 
 #### Results
 
 {{EmbedLiveSample("Cover and contain", "", "430px")}}
+
+With `auto`, the star is displayed at it's origin 100px by 100px size; the intrinsic size. With `cover`, the star grows to be `400px` tall, covering the entire origin box. With contain, the star grows to be `200px` wide, growing until one dimension is equal to the size of and fully contained in the origin box.
+
+### When the mask is larger than the container
+
+Using the same HTML and CSS as above, with just a different origin box size, this example explores what happens when the origin box is smaller than the intrinsic dimensions of the mask.
+
+```html hidden
+<section class="auto">
+  <div></div>
+</section>
+<section class="cover">
+  <div></div>
+</section>
+<section class="contain">
+  <div></div>
+</section>
+```
+
+```css hidden
+div {
+  background: blue linear-gradient(red, blue);
+  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+}
+
+.auto div {
+  mask-size: auto;
+}
+
+.cover div {
+  mask-size: cover;
+}
+
+.contain div {
+  mask-size: contain;
+}
+
+section::before {
+  content: attr(class);
+  display: block;
+  text-align: center;
+  border-bottom: 1px solid;
+}
+
+body {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+}
+section {
+  border: 1px solid;
+}
+```
+
+The only difference is the size of the containing box (and the generated content):
+
+```css
+div {
+  width: 70px;
+  height: 70px;
+}
+```
+
+{{EmbedLiveSample("When the mask is larger than the container", "", "120px")}}
+
+The `contain` value means the mask is contained within the [origin box](/en-US/docs/Web/CSS/mask-origin). The `cover` value covers it. In both cases, the mask shrinks while maintaining the original aspect ratio. With `auto`, as the intrinsic dimensions are larger than the box dimensions, the mask is clipped.
 
 ## Specifications
 
@@ -214,4 +301,12 @@ body {
 
 ## See also
 
-- [Clipping and Masking in CSS](https://css-tricks.com/clipping-masking-css/)
+- {{cssxref("mask")}} shorthand
+- {{cssxref("mask-image")}}
+- {{cssxref("mask-origin")}}
+- {{cssxref("mask-position")}}
+- {{cssxref("mask-repeat")}}
+- {{cssxref("mask-image")}}
+- {{cssxref("mask-border")}}
+- {{cssxref("background-size")}}
+- [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
