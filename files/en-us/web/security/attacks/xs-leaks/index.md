@@ -2,6 +2,7 @@
 title: Cross-site leaks (XS-leaks)
 slug: Web/Security/Attacks/XS-leaks
 page-type: guide
+sidebar: security
 ---
 
 Cross-site leaks (also called XS-leaks) are a class of attack in which an attacker's site can derive information about the target site, or about the user's relationship with the target site, by using web platform APIs that enable sites to interact with one another. The information leaked could include, for example:
