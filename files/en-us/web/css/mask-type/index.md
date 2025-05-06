@@ -51,7 +51,7 @@ The opacity of a `luminance` mask is determined by the `R`, `G`, `B`, and `A` va
 
 For example, the color `green` (`#008000` or `rgb(0% 50% 0% / 1)`) has a luminance value of `35.77%`. Any area masked by a solid `green` luminance mask will be `35.77%` visible. If the `mask-type` is set to `alpha`, the same fully opaque `green` color will make the masked area `100%` visible.
 
-If the SVG `<mask>` element has `fill="rgb(0 0 0 / 0.5)"`, which is a 50% transparent black, the corresponding shape on the masked element will display at 50% opacity when `mask-type ` is set to `alpha` because the alpha values is `0.5` (50% opacity). But if the `mask-type` defaults to or is set as `luminance` the masked area will be fully clipped and invisible because its luminance is `0`.
+If the SVG `<mask>` element has `fill="rgb(0 0 0 / 0.5)"`, which is a 50% transparent black, the corresponding shape on the masked element will display at 50% opacity when `mask-type` is set to `alpha` because the alpha values is `0.5` (50% opacity). But if the `mask-type` defaults to or is set as `luminance` the masked area will be fully clipped and invisible because its luminance is `0`.
 
 ### Effect of `mask-mode` on `mask-type`
 
