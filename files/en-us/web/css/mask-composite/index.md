@@ -28,30 +28,24 @@ mask-composite: unset;
 
 ### Values
 
-The property accepts a comma-separated list of `<compositing-operator>` keyword values. In the following, the current mask layer is referred to source, all mask layers below it (with the corresponding compositing operators applied) are referred to destination.
+The property accepts a comma-separated list of `<compositing-operator>` keyword value, each representing a Porter-Duff compositing operator which defines the compositing operation used on the current mask layer with the mask layers below it, including:
 
 - `add`
-  - : The source is placed over the destination. This is the default value.
+  - : The associated mask image is placed over all mask layers below it (with the corresponding compositing operators applied). This is the default value.
 - `subtract`
-  - : The source is placed, where it falls outside of the destination.
+  - : The associated mask image is placed, where it falls outside of all mask layers below it (with the corresponding compositing operators applied).
 - `intersect`
-  - : The parts of source that overlap the destination, replace the destination.
+  - : The parts of the associated mask image that overlap all composited mask layers below it replace those previously composited layers.
 - `exclude`
-  - : The non-overlapping regions of source and destination are combined.
+  - : The non-overlapping regions of the associated mask image and the mask layers below it, with their corresponding compositing operators applied, are combined.
 
 ## Description
 
-An element can have multiple mask layers applied. The `mask-composite` property defines whether the associated mask layer image is added to, subtracted from, intersects with, or is excluded from, the destination layers. The _destination layers_ includes all the previous layers, composed in order of appearance within the comma-separated list of masks.
+When an element has multiple mask layers applied, the `mask-composite` property can be used to define how the multiple masks interact with each other, or are combined, in creating the final mask effect. The number of layers is determined by the number of comma-separated values in the `mask-image` property value (even if a value is `none`). Each `mask-composite` value in the comma-separated list of values is matched up with a `mask-image` value, in order. If the number of values in `mask-composite` are equal to or greater than the number of `mask-image` values.
 
-Mask layers are not composite with the element's content or the content behind the element. Rather, all the mask layers act as if they are rendered into an isolated group.
+Each current or associated mask layer image, the _source_ layer, can be added to, subtracted from, intersected with, or is excluded from, the _destination layers_. The destination layers are the mask layers below the source with their corresponding compositing operators applied; this includes all the previous layers, composed in order of appearance within the comma-separated list of masks. All mask layers below the current mask layer must be composited before applying the compositing operation for the current mask layer.
 
-All mask layers below the current mask layer must be composited before applying the compositing operation for the current mask layer.
-
-Each keyword represents a Porter-Duff compositing operator [COMPOSITING-1] which defines the compositing operation used on the current mask layer with the mask layers below it.
-
-The number of layers is determined by the number of comma-separated values in the `mask-image` property value (even if a value is `none`). Each `mask-composite` value in the comma-separated list of values is matched up with the `mask-image` values, in order. If the number of values in the two properties differs, and excess values of `mask-clip` are not used, or, if `mask-clip` has fewer values than `mask-image`, the `mask-clip` values are repeated.
-
-For the composition the current mask layer is referred to as _source_, while all layers below it are referred to as _destination_.
+The source mask layer is composited with other mask layers, not with the element's content or the content behind the element. The multiple mask layers applied to any element or pseudo-element act as if they are rendered into an isolated group.
 
 ## Formal definition
 
@@ -100,7 +94,7 @@ div {
 
 ### Value comparison
 
-This example demonstrates the `mask-composite` property's four `<compositing-operator>` keyword values
+This example demonstrates the `mask-composite` property's four `<compositing-operator>` keyword values, along with comparing the effects of [`alpha` and `luminance`](/en-US/Web/SVG/Reference/Attribute/mask-type#mask) mask modes.
 
 #### HTML
 
@@ -179,10 +173,12 @@ We have a {{htmlelement("table")}} that contains eight images. The `<table>` has
 ```
 
 ```html
-<img src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg" alt="Pride flag" />
+<img
+  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+  alt="Pride flag" />
 ```
 
-And an SVG with 4 masks; an alpha heart and circle and a luminance heart and circle:
+And an SVG with 4 masks; an alpha heart and circle and a luminance heart and circle. The heart masks are defined using solid colors. The circle masks are created using semi-transparent white and black {{SVGAttr("stroke")}} and {{SVGAttr("fill")}} colors.
 
 ```html
 <svg height="0" width="0">
@@ -223,30 +219,26 @@ And an SVG with 4 masks; an alpha heart and circle and a luminance heart and cir
 
 #### CSS
 
-First we style the `<mask>` elements, providing each mask with a {{cssxref("mask-type")}} property value of either `alpha`, `luminance`, or `initial`, which for the `<mask>` element as a mask-source, has a default value of `luminance`.
+First we style the `<mask>` elements, providing each mask with a {{cssxref("mask-type")}} property value of either `alpha` or `luminance`.
 
 ```css
 mask.luminance {
   mask-type: luminance;
 }
+
 mask.alpha {
   mask-type: alpha;
 }
-mask.init {
-  mask-type: initial;
-}
 ```
 
-We then apply two masks — a heart and circle — as the {{cssxref("mask-image")}} property value to each {{htmlelement("img")}} element, with all the images in a row getting the same masks.
+We then apply the heart and circle masks as the comma-separated {{cssxref("mask-image")}} property values . These are applied to each {{htmlelement("img")}} element, with all the images in a row getting the same masks.
 
 ```css
 /* apply the mask images */
-tr.initMaskType img {
-  mask-image: url(#heartInitial), url(#circleInitial);
-}
 tr.alphaMaskType img {
   mask-image: url(#heartAlpha), url(#circleAlpha);
 }
+
 tr.luminanceMaskType img {
   mask-image: url(#heartLuminance), url(#circleLuminance);
 }
@@ -311,4 +303,3 @@ body > img {
 - {{cssxref("mask-type")}}
 - {{cssxref("mask-mode")}}
 - [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
-ule
