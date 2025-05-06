@@ -1,25 +1,24 @@
 ---
-title: "Element: setHTML() method"
+title: "ShadowRoot: setHTML() method"
 short-title: setHTML()
-slug: Web/API/Element/setHTML
+slug: Web/API/ShadowRoot/setHTML
 page-type: web-api-instance-method
-browser-compat: api.Element.setHTML
+browser-compat: api.ShadowRoot.setHTML
 ---
 
 {{APIRef("HTML Sanitizer API")}}
 
-The **`setHTML()`** method of the {{domxref("Element")}} interface provides an XSS-safe method to parse and sanitize a string of HTML into a {{domxref("DocumentFragment")}}, and then insert it into the DOM as a subtree of the element.
+The **`setHTML()`** method of the {{domxref("ShadowRoot")}} interface provides an XSS-safe method to parse and sanitize a string of HTML into a {{domxref("DocumentFragment")}}, which then replaces the existing tree in the Shadow DOM.
 
-`setHTML()` drops any elements in the HTML input string that are invalid in the context of the current element, such as a {{htmlelement("col")}} element outside of a {{htmlelement("table")}}.
-It then removes any HTML entities that aren't allowed by the sanitizer configuration, and further removes any XSS-unsafe elements or attributes — whether or not they are allowed by the sanitizer configuration.
+`setHTML()` removes any HTML entities that aren't allowed by the sanitizer configuration, and further removes any XSS-unsafe elements or attributes — whether or not they are allowed by the sanitizer configuration.
 
 If no sanitizer configuration is specified in the `options.sanitizer` parameter, `setHTML()` is used with the default {{domxref("Sanitizer")}} configuration.
 This configuration allows all elements and attributes that are considered XSS-safe, thereby disallowing entities that are considered unsafe.
 A custom sanitizer or sanitizer configuration can be specified to choose which elements, attributes, and comments are allowed or removed.
 Note that even if unsafe options are allowed by the sanitizer configuration, they will still be removed when using this method (which implicitly calls {{domxref('Sanitizer.removeUnsafe()')}}).
 
-`setHTML()` should be used instead of {{domxref("Element.innerHTML")}} for inserting untrusted strings of HTML into an element.
-It should also be used instead of {{domxref("Element.setHTMLUnsafe()")}}, unless there is a specific need to allow unsafe elements and attributes.
+`setHTML()` should be used instead of {{domxref("ShadowRoot.innerHTML")}} for inserting untrusted strings of HTML into the shadow DOM.
+It should also be used instead of {{domxref("ShadowRoot.setHTMLUnsafe()")}}, unless there is a specific need to allow unsafe elements and attributes.
 
 Note that since this method always sanitizes input strings of XSS-unsafe entities, it is not secured or validated using the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API).
 
@@ -33,13 +32,13 @@ setHTML(input, options)
 ### Parameters
 
 - `input`
-  - : A string defining HTML to be sanitized and injected into the element.
+  - : A string defining HTML to be sanitized and injected into the shadow root.
 - `options` {{optional_inline}}
 
   - : An options object with the following optional parameters:
 
     - `sanitizer`
-      - : A {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} object which defines what elements of the input will be allowed or removed, or the string `"default"` for the default configuration.
+      - : A {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} object which defines what elements of the input will be allowed or removed, or the string `"default"` for the default sanitizer configuration.
         Note that generally a `"Sanitizer` is expected to be more efficient than a `SanitizerConfig` if the configuration is to reused.
         If not specified, the default sanitizer configuration is used.
 
@@ -63,23 +62,40 @@ None (`undefined`).
 
 This example shows some of the ways you can use `setHTML()` to sanitize and inject a string of HTML.
 
+First we will create the {{domxref("ShadowRoot")}} we want to target.
+This could be created programmatically using {{domxref("Element.attachShadow()")}} but for this example we'll create the root declaratively.
+
+```html
+<div id="host">
+  <template shadowrootmode="open">
+    <span>A span element in the shadow DOM</span>
+  </template>
+</div>
+```
+
+We can get a handle to the shadow root from the `#host` element like this:
+
+```js
+const shadow = document.querySelector("#host").shadowRoot;
+```
+
+The code below shows how we can call `setHTML()` with a string and different sanitizers in order to filter and inject the HTML into the shadow root.
+
 ```js
 // Define unsanitized string of HTML
 const unsanitizedString = "abc <script>alert(1)<" + "/script> def";
-// Get the target Element with id "target"
-const target = document.getElementById("target");
 
 // setHTML() with default sanitizer
-target.setHTML(unsanitizedString);
+shadow.setHTML(unsanitizedString);
 
 // Define custom Sanitizer and use in setHTML()
 // This allows only elements: div, p, span (script is unsafe and will be removed)
 const sanitizer1 = new Sanitizer({ elements: ["div", "p", "span", "script"] });
-target.setHTML(unsanitizedString, { sanitizer: sanitizer1 });
+shadow.setHTML(unsanitizedString, { sanitizer: sanitizer1 });
 
 // Define custom SanitizerConfig within setHTML()
 // This removes elements div, p, span, script, and any other unsafe elements/attributes
-target.setHTML(unsanitizedString, {
+shadow.setHTML(unsanitizedString, {
   sanitizer: { removeElements: ["div", "p", "span", "script"] },
 });
 ```
@@ -92,14 +108,18 @@ The original string and sanitized HTML are logged so you can inspect the results
 
 #### HTML
 
-The HTML defines two {{htmlelement("button")}} elements for applying different sanitizers, another button to reset the example, and a {{htmlelement("div")}} element to inject the string into.
+The HTML defines two {{htmlelement("button")}} elements for applying different sanitizers, another button to reset the example, and a {{htmlelement("div")}} that contains the declarative shadow root.
 
 ```html
 <button id="buttonDefault" type="button">Default</button>
 <button id="buttonAllowScript" type="button">allowScript</button>
-
 <button id="reload" type="button">Reload</button>
-<div id="target">Original Content of Target Element</div>
+
+<div id="host">
+  <template shadowrootmode="open">
+    <span>I am in the shadow DOM </span>
+  </template>
+</div>
 ```
 
 ```html hidden
@@ -127,26 +147,32 @@ function log(text) {
 
 ```js hidden
 if ("Sanitizer" in window) {
-  // Define unsafe string of HTML
 ```
 
-First we define the string to sanitize, which will be the same for all cases.
-This contains the {{htmlelement("script")}} element and the `onclick` handler, both of which are considered XSS-unsafe.
-We also define the handler for the reload button.
+First we define the handler for the reload button.
 
 ```js
-const unsanitizedString = `
-  <div>
-    <p>This is a paragraph. <span onclick="alert('You clicked the span!')">Click me</span></p>
-    <script src="path/to/amodule.js" type="module"><script>
-  </div>
-`;
-
 const reload = document.querySelector("#reload");
 reload.addEventListener("click", () => document.location.reload());
 ```
 
-Next we define the click handler for the button that sets the HTML with the default sanitizer.
+Then we define the string to sanitize, which will be the same for all cases.
+This contains the {{htmlelement("script")}} element and the `onclick` handler, both of which are considered XSS-unsafe.
+We also get variable `shadow`, which is our handle to the shadow root.
+
+```js
+// Define unsafe string of HTML
+const unsanitizedString = `
+  <div>
+    <p>Paragraph to inject into shadow DOM. <span onclick="alert('You clicked the span!')">Click me</span></p>
+    <script src="path/to/amodule.js" type="module"><script>
+  </div>
+`;
+
+const shadow = document.querySelector("#host").shadowRoot;
+```
+
+Next we define the click handler for the button that sets the shadow root with the default sanitizer.
 This should strip out all unsafe entities before inserting the string of HTML.
 Note that you can see exactly which elements are removed in the [`Sanitizer()` constructor examples](/en-US/docs/Web/API/Sanitizer/Sanitizer#creating_the_default_sanitizer).
 
@@ -154,13 +180,13 @@ Note that you can see exactly which elements are removed in the [`Sanitizer()` c
 const defaultSanitizerButton = document.querySelector("#buttonDefault");
 defaultSanitizerButton.addEventListener("click", () => {
   // Set the content of the element using the default sanitizer
-  target.setHTML(unsanitizedString);
+  shadow.setHTML(unsanitizedString);
 
   // Log HTML before sanitization and after being injected
   logElement.textContent =
     "Default sanitizer: remove script element and onclick attribute\n\n";
   log(`\nunsanitized: ${unsanitizedString}`);
-  log(`\nsanitized: ${target.innerHTML}`);
+  log(`\nsanitized: ${shadow.innerHTML}`);
 });
 ```
 
@@ -174,13 +200,13 @@ allowScriptButton.addEventListener("click", () => {
   const sanitizer1 = new Sanitizer({
     elements: ["div", "p", "script"],
   });
-  target.setHTML(unsanitizedString, { sanitizer: sanitizer1 });
+  shadow.setHTML(unsanitizedString, { sanitizer: sanitizer1 });
 
   // Log HTML before sanitization and after being injected
   logElement.textContent =
     "Sanitizer: {elements: ['div', 'p', 'script']}\n Script removed even though allowed\n";
   log(`\nunsanitized: ${unsanitizedString}`);
-  log(`\nsanitized: ${target.innerHTML}`);
+  log(`\nsanitized: ${shadow.innerHTML}`);
 });
 ```
 
@@ -208,7 +234,7 @@ Note that in both cases the `<script>` element and `onclick` handler are removed
 
 ## See also
 
-- {{domxref("Element.setHTMLUnsafe()")}}
-- {{domxref("ShadowRoot.setHTML()")}} and {{domxref("ShadowRoot.setHTMLUnsafe()")}}
+- {{domxref("ShadowRoot.setHTMLUnsafe()")}}
+- {{domxref("Element.setHTML()")}} and {{domxref("Element.setHTMLUnsafe()")}}
 - {{domxref("Document.parseHTML_static", "Document.parseHTML()")}} and {{domxref("Document.parseHTMLUnsafe_static", "Document.parseHTMLUnsafe()")}}
 - [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API)
