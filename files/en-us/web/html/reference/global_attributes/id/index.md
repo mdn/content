@@ -48,6 +48,20 @@ You could access the paragraph element in JavaScript using code like:
 const content = window.preamble.textContent;
 ```
 
+> [!WARNING]
+> While elements with `id` attributes are treated as global properties on the `window` object, depending on this behavior is dangerous and discouraged. It can lead to unexpected conflicts with some browser features or future APIs. Use `document.getElementById()` or `document.querySelector()` instead.
+>
+> For example, if we had an element with an `id="performance"`, the following code would've worked before the introduction of Performance in modern browsers:
+>
+> ```html
+> <h3 id="performance"></h3>
+>
+> <script>
+>     performance.innerHTML = "Well Done!";
+>     performance.style.backgroundColor = "green";
+> </script>
+> ```
+
 ### Syntax
 
 An ID attribute's value must not contain [ASCII whitespace](/en-US/docs/Glossary/Whitespace#in_html) characters. Browsers treat non-conforming IDs that contain whitespace as if the whitespace is part of the ID. In contrast to the [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class) attribute, which allows space-separated values, elements can only have one single ID value.
