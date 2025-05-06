@@ -98,7 +98,7 @@ Grid tracks are defined in the [explicit grid](#implicit_and_explicit_grids) by 
 
 ### Basic example
 
-We can add to our earlier example by adding the `grid-template-columns` property, then defining the size of the column tracks.
+We can add column tracks to our earlier example by adding the `grid-template-columns` property, then defining the size of the column tracks.
 
 We have now created a grid with three 200-pixel-wide column tracks. The child items will be laid out on this grid one in each grid cell.
 

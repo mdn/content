@@ -2,6 +2,7 @@
 title: Cross-site request forgery (CSRF)
 slug: Web/Security/Attacks/CSRF
 page-type: guide
+sidebar: security
 ---
 
 In a cross-site request forgery (CSRF) attack, an attacker tricks the user or the browser into making an HTTP request to the target site from a malicious site. The request includes the user's credentials and causes the server to carry out some harmful action, thinking that the user intended it.
@@ -187,7 +188,3 @@ We can summarize the defenses above as follows:
 ## See also
 
 - [Cross-Site Request Forgery Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html) at [owasp.org](https://owasp.org/)
-
-<section id="Quick_links">
-{{ListSubpages("/en-US/docs/Web/Security", "1", "0", "1")}}
-</section>
