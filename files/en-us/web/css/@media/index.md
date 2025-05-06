@@ -16,13 +16,15 @@ The **`@media`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_sy
 
 ```css interactive-example
 abbr {
-  color: chocolate;
+  color: #860304;
+  font-weight: bold;
+  transition: color 0.5s ease;
 }
 
 @media (hover: hover) {
   abbr:hover {
-    color: limegreen;
-    transition-duration: 1s;
+    color: #001ca8;
+    transition-duration: 0.5s;
   }
 }
 

@@ -6,15 +6,15 @@ spec-urls: https://w3c.github.io/aria/#aria-errormessage
 sidebar: accessibilitysidebar
 ---
 
-The `aria-errormessage` attribute on an object identifies the element that provides an error message for that object.
+The `aria-errormessage` attribute on an object identifies the element(s) that provides an error message for that object.
 
 ## Description
 
-When there is a user-created error, you want to let them know it exists and tell them how to fix it. There are two attributes you need to use: set [`aria-invalid="true"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid) to define the object as being in an error state, then add the `aria-errormessage` attribute with the value being the `id` of the element containing the error message text for that object.
+When there is a user-created error, you want to let the user know it exists and tell them how to fix it. There are two attributes you need to use: set [`aria-invalid="true"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid) to define the object as being in an error state, then add the `aria-errormessage` attribute with the value being the `id` of the element (or elements) containing the error message text for that object.
 
 The `aria-errormessage` attribute should only be used when the value of an object is not valid; when [`aria-invalid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid) is set to `true`. If the object is valid and you include the `aria-errormessage` attribute, make sure the element referenced is hidden, as the message it contains is not relevant.
 
-When `aria-errormessage` is relevant, the element it references must be visible so users can see or hear the error message.
+When `aria-errormessage` is relevant, the element(s) it references must be visible so users can see or hear the error message.
 
 Often times, you will want the element with the error message to be an [ARIA live region](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions), such as when an error message is displayed to users after they have provided an invalid value. The error message should describe what is wrong and inform the user what is required to make the object valid. Adding the error message as an ARIA live region informs assistive technologies that the user may benefit from the error message content even if the error message wouldn't otherwise be conveyed to the user.
 
@@ -63,8 +63,17 @@ When we went from valid to invalid, the only JavaScript change for this example 
 
 ## Values
 
-- `id` reference
-  - : The value of the `id` of the element containing the error message for the current element
+- ID reference list
+  - : The `id` or space-separated list of element `id`s that contain the error message for the current element.
+
+## Associated interfaces
+
+- {{domxref("Element.ariaErrorMessageElements")}}
+  - : The `ariaErrorMessageElements` property is part of each element's interface.
+    Its value is an array of subclasses of {{domxref("Element")}} that reflect the `id` references in the `aria-errormessage` attribute ([with some caveats](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references)).
+- {{domxref("ElementInternals.ariaErrorMessageElements")}}
+  - : The `ariaErrorMessageElements` property is part of each custom element's interface.
+    Its value is an array of subclasses of {{domxref("Element")}} that reflect the `id` references in the `aria-errormessage` attribute ([with some caveats](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references)).
 
 ## Associated roles
 

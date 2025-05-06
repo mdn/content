@@ -62,6 +62,7 @@ Below are examples of the various pages you'll find on MDN along with templates 
 - [CSS module landing page](#css_module_landing_page)
 - [Glossary entry](#glossary_page)
 - [HTML element](#html_element_reference_page)
+- [HTML attribute](#html_attribute_reference_page)
 - [HTTP header](#http_header_reference_page)
 - [Landing page](#landing_page)
 - [SVG element](#svg_element_reference_page)
@@ -135,6 +136,21 @@ An **HTML reference page** lists all the attributes that are available on an HTM
 #### Templates
 
 - [HTML element page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/HTML_element_page_template)
+
+### HTML attribute reference page
+
+An HTML attribute page lists all the values that exist on an HTML attribute, explains the attribute's purpose and use cases, providing examples, browser compatibility information, and other important data.
+
+> [!NOTE]
+> Element-specific attributes (e.g., `placeholder` for `<input>`) don't require a separate page if the attributes can be sufficiently covered within the parent element's reference page (e.g., the `placeholder` attribute should be covered on the `<input>` element's page, not as a standalone page).
+
+#### Example
+
+- [`class` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/class)
+
+#### Templates
+
+- [HTML attribute page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/HTML_attribute_page_template)
 
 ### SVG element reference page
 

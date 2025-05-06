@@ -14,10 +14,10 @@ The **`statechange`** event of the {{domxref("MIDIPort")}} interface is fired wh
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("statechange", (event) => {});
+```js-nolint
+addEventListener("statechange", (event) => { })
 
-onstatechange = (event) => {};
+onstatechange = (event) => { }
 ```
 
 ## Event type

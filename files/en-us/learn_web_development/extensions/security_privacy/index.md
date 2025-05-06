@@ -93,7 +93,7 @@ Learning outcomes:
 
 - Understand how to comply with such laws, in terms of practical implementation.
 
-> [!NOTE]:
+> [!NOTE]
 > Conforming to the above criteria does not require students to become legal experts in privacy laws, but they should understand the implications of these laws, and how that affects their work.
 
 ## Resources

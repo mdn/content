@@ -3,9 +3,8 @@ title: Progressive Web Apps reference
 short-title: Reference
 slug: Web/Progressive_web_apps/Reference
 page-type: landing-page
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 This reference describes the technologies, features, and APIs that [Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps) (PWAs) can use to offer a great user experience.
 
