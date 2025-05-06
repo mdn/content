@@ -56630,10 +56630,6 @@
     "modified": "2020-12-13T12:21:15.482Z",
     "contributors": ["Rumyra"]
   },
-  "Web/API/Sanitizer/sanitize": {
-    "modified": "2020-12-13T12:25:31.511Z",
-    "contributors": ["Rumyra"]
-  },
   "Web/API/Screen": {
     "modified": "2020-10-15T21:29:41.001Z",
     "contributors": [
