@@ -28,7 +28,7 @@ mask-composite: unset;
 
 ### Values
 
-The property accepts a comma-separated list of `<compositing-operator>` keyword value, each representing a Porter-Duff compositing operator which defines the compositing operation used on the current mask layer with the mask layers below it, including:
+The property accepts a comma-separated list of `<compositing-operator>` keyword values, each representing a Porter-Duff compositing operator which defines the compositing operation used on the current mask layer with the mask layers below it, including:
 
 - `add`
   - : The associated mask image is placed over all mask layers below it (with the corresponding compositing operators applied). This is the default value.
@@ -47,7 +47,7 @@ The number of layers is determined by the number of comma-separated values in th
 
 For processing, the _source layer_, which is current or associated mask layer image, is either added to (the default), subtracted from, intersected with, or is excluded from, the destination layers. The _destination layers_ are the mask layers below the source with their corresponding compositing operators applied; this includes all the previous layers, composed in order of appearance within the comma-separated list of masks. All mask layers below the current mask layer must be composited before applying the compositing operation for the current mask layer. Mask layer images are transformed to alpha masks for processing before being combined by the defined compositing value.
 
-The multiple mask layers applied to any element or pseudo-element act as if they are rendered into an isolated group.In other words, the mask layers are composited with other mask layers, not with the element's content or the content behind the element.
+The multiple mask layers applied to any element or pseudo-element act as if they are rendered into an isolated group. In other words, the mask layers are composited with other mask layers, not with the element's content or the content behind the element.
 
 ## Formal definition
 
@@ -233,7 +233,7 @@ mask.alpha {
 }
 ```
 
-We then apply the heart and circle masks as the comma-separated {{cssxref("mask-image")}} property values . These are applied to each {{htmlelement("img")}} element, with all the images in a row getting the same masks.
+We then apply the heart and circle masks as the comma-separated {{cssxref("mask-image")}} property values. These are applied to each {{htmlelement("img")}} element, with all the images in a row getting the same masks.
 
 ```css
 /* apply the mask images */
