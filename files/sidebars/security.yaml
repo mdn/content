@@ -1,0 +1,33 @@
+# Do not add comments to this file. They will be lost.
+
+sidebar:
+  - type: section
+    link: /Web/Security
+  - type: section
+    title: Guides
+  - /Web/Security/Types_of_attacks
+  - /Web/Security/Insecure_passwords
+  - /Web/Security/Transport_Layer_Security
+  - /Web/Security/Mixed_content
+  - /Web/Security/Same-origin_policy
+  - /Web/Security/Certificate_Transparency
+  - /Web/Security/Subdomain_takeovers
+  - /Web/Security/Subresource_Integrity
+  - /Web/Security/User_activation
+  - /Web/Security/IFrame_credentialless
+  - /Web/Security/Referer_header:_privacy_and_security_concerns
+  - /Web/Security/Weak_Signature_Algorithm
+  - /Web/Security/Firefox_Security_Guidelines
+  - type: listSubPages
+    path: /Web/Security/Attacks
+    link: /Web/Security/Attacks
+    details: closed
+  - type: listSubPages
+    path: /Web/Security/Practical_implementation_guides
+    link: /Web/Security/Practical_implementation_guides
+    title: Practical implementation guides
+    details: closed
+  - type: listSubPages
+    path: /Web/Security/Secure_Contexts
+    link: /Web/Security/Secure_Contexts
+    details: closed

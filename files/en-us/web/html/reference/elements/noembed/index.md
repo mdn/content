@@ -21,11 +21,14 @@ The message inside `<noembed>` tag will appear only when your browser does not s
 ### Show an alternative content
 
 ```html
-<embed type="vide/webm" src="/media/examples/flower.mp4" width="200" height="200">
-  <noembed>
-    <h1>Alternative content</h1>
-  </noembed>
-</embed>
+<embed
+  type="vide/webm"
+  src="/media/examples/flower.mp4"
+  width="200"
+  height="200" />
+<noembed>
+  <h1>Alternative content</h1>
+</noembed>
 ```
 
 ## Specifications

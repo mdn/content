@@ -6,7 +6,7 @@ browser-compat: webdriver.classic.GetElementProperty
 sidebar: webdriver
 ---
 
-The _Get Element Property_ [command](/en-US/docs/Web/WebDriver/Reference/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API returns the property of the referenced [web element](/en-US/docs/Web/WebDriver/WebElement). Given `<input value=foo>` where the user changes the value to `bar`, the returned property is `bar` rather than the initial value `foo`. This is equivalent to accessing the property on the element.
+The _Get Element Property_ [command](/en-US/docs/Web/WebDriver/Reference/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API returns the property of the referenced [web element](/en-US/docs/Web/WebDriver/Reference/WebElement). Given `<input value=foo>` where the user changes the value to `bar`, the returned property is `bar` rather than the initial value `foo`. This is equivalent to accessing the property on the element.
 
 ## Syntax
 
@@ -19,17 +19,17 @@ The _Get Element Property_ [command](/en-US/docs/Web/WebDriver/Reference/Command
 - `session id`
   - : Identifier of the session.
 - `element id`
-  - : Identifier of the [web element](/en-US/docs/Web/WebDriver/WebElement) to get the tag name of.
+  - : Identifier of the [web element](/en-US/docs/Web/WebDriver/Reference/WebElement) to get the tag name of.
 - `name`
-  - : Identifier of the property of [web element](/en-US/docs/Web/WebDriver/WebElement) to get.
+  - : Identifier of the property of [web element](/en-US/docs/Web/WebDriver/Reference/WebElement) to get.
 
 ### Errors
 
-- [Session not created](/en-US/docs/Web/WebDriver/Errors/SessionNotCreated)
+- [Session not created](/en-US/docs/Web/WebDriver/Reference/Errors/SessionNotCreated)
   - : Session does not exist.
-- [No such window](/en-US/docs/Web/WebDriver/Errors/NoSuchWindow)
+- [No such window](/en-US/docs/Web/WebDriver/Reference/Errors/NoSuchWindow)
   - : The [`window`](/en-US/docs/Web/API/Window) object has been discarded, indicating that the tab or window has been closed.
-- [Unexpected alert open](/en-US/docs/Web/WebDriver/Errors/UnexpectedAlertOpen)
+- [Unexpected alert open](/en-US/docs/Web/WebDriver/Reference/Errors/UnexpectedAlertOpen)
   - : A user prompt, such as [`window.alert`](/en-US/docs/Web/API/Window/alert), blocks execution of command until it is dealt with.
 
 ## Examples

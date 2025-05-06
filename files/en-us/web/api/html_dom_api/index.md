@@ -307,7 +307,7 @@ const sendButton = document.getElementById("sendButton");
 
 sendButton.disabled = true;
 // [note: this is disabled since it causes this article to always load with this example focused and scrolled into view]
-//nameField.focus();
+// nameField.focus();
 
 nameField.addEventListener("input", (event) => {
   const elem = event.target;

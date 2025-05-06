@@ -378,7 +378,7 @@ And voilà! Your form should now look like this:
 
 ## Test your skills
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Styling basics](/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Styling_basics).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Styling basics](/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Styling_basics).
 
 ## Summary
 

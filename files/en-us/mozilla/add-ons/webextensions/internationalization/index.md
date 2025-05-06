@@ -225,14 +225,14 @@ In addition, you can use such substitutions to specify parts of the string that 
 
 ## Localized string selection
 
-Locales can be specified using only a language code, like `fr` or `en`, or they may be further qualified with a region code, like `en_US` or `en_GB`, which describes a regional variant of the same basic language. When you ask the i18n system for a string, it will select a string using the following algorithm:
+Locales can be specified using a language code, such as `fr` or `en` or qualified with a script and region code, such as `en-US` or `zh-Hans-CN`. When your extension asks the i18n system for a string, it selects a string using this algorithm:
 
-1. if there is a `messages.json` file for the exact current locale, and it contains the string, return it.
-2. Otherwise, if the current locale is qualified with a region (e.g., `en_US`) and there is a `messages.json` file for the regionless version of that locale (e.g., `en`), and that file contains the string, return it.
+1. Return the string if there is a `messages.json` file for the user's set browser locale containing the string. For example, if the user has set their browser to `en-US` and the extension provides the `_locales/en_US/messages.json` file.
+2. Otherwise, if the browser locale is qualified with a script or region (e.g., `en-US` or `zh-Hans-CN`) and there is a `messages.json` file for the regionless version and failing that the scriptless version of that locale and that file contains the string, return it. For example, if the user has set their browser to `zh-Hans-CN` (and there is no `_locales/zh_Hans_CN/messages.json` file) the i18n system looks for a string in `zh-Hans`, and if that isn't available, `zh.`
 3. Otherwise, if there is a `messages.json` file for the `default_locale` defined in the `manifest.json`, and it contains the string, return it.
 4. Otherwise return an empty string.
 
-Take the following example:
+Take this example:
 
 - extension-root-directory/
 
@@ -256,10 +256,11 @@ Take the following example:
 
         - `{ "colorLocalized": { "message": "couleur", "description": "Color." }, /* … */}`
 
-Suppose the `default_locale` is set to `fr`, and the browser's current locale is `en_GB`:
+Suppose the `default_locale` is set to `fr`.
 
-- If the extension calls `getMessage("colorLocalized")`, it will return "colour".
-- If "colorLocalized" were not present in `en_GB`, then `getMessage("colorLocalized")`, would return "color", not "couleur".
+- If the browser's locale is `en-GB` when the extension calls `getMessage("colorLocalized")`, it is returned "colour" because `_locales/en_GB/messages.json` contains the `colorLocalized` message.
+- If the browser's locale is `en-US` when the extension calls `getMessage("colorLocalized")`, it is returned "color" because it falls back to the message present in `_locales/en/messages.json`.
+- If the browser's locale is `zh-Hans-CN` when the extension calls `getMessage("colorLocalized")`, it is returned "couleur" because there is no language, script, or region match to the `zh-Hans-CN` locale.
 
 ## Predefined messages
 

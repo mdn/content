@@ -36,7 +36,7 @@ A {{domxref("GPUCommandEncoder")}} object instance.
 In our [basic render demo](https://mdn.github.io/dom-examples/webgpu-render-demo/), several commands are recorded via a {{domxref("GPUCommandEncoder")}} created via `createCommandEncoder()`:
 
 ```js
-// ...
+// …
 
 // Create GPUCommandEncoder
 const commandEncoder = device.createCommandEncoder();
@@ -63,7 +63,7 @@ passEncoder.draw(3);
 // End the render pass
 passEncoder.end();
 
-// ...
+// …
 ```
 
 The commands encoded by the {{domxref("GPUCommandEncoder")}} are recoded into a {{domxref("GPUCommandBuffer")}} using the {{domxref("GPUCommandEncoder.finish()")}} method. The command buffer is then passed into the queue via a {{domxref("GPUQueue.submit", "submit()")}} call, ready to be processed by the GPU.

@@ -682,7 +682,7 @@ When you use `extends`, the static methods inherit from each other as well, so y
 
 ```js
 class ColorWithAlpha extends Color {
-  // ...
+  // …
   static isValid(r, g, b, a) {
     // Call the parent class's isValid() and build on the return value
     return super.isValid(r, g, b) && a >= 0 && a <= 1;
@@ -755,7 +755,7 @@ function isValidColor(color) {
     color.blue <= 255
   );
 }
-// ...
+// …
 ```
 
 But with classes, we can congregate them all under the `Color` namespace, which improves readability. In addition, the introduction of private fields allows us to hide certain data from downstream users, creating a clean API.

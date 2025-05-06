@@ -36,7 +36,7 @@ console.log(matrix.toString()); // no transform applied
 // "matrix(1, 0, 0, 1, 0, 0)"
 
 console.log(matrix.skewX(14).toString());
-//"matrix(1, 0, 0.25, 1, 0, 0)"
+// "matrix(1, 0, 0.25, 1, 0, 0)"
 
 console.log(matrix.toString()); // original is unchanged
 // "matrix(1, 0, 0, 1, 0, 0)"

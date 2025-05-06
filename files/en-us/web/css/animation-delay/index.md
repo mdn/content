@@ -25,7 +25,7 @@ animation-delay: -2s;
 
 ```html interactive-example
 <section class="flex-column" id="default-example">
-  <div>Animation <span id="playstatus"></span></div>
+  <div>Animation <span id="play-status"></span></div>
   <div id="example-element">Select a delay to start!</div>
 </section>
 ```
@@ -46,7 +46,7 @@ animation-delay: -2s;
   flex-direction: column;
 }
 
-#playstatus {
+#play-status {
   font-weight: bold;
 }
 
@@ -77,7 +77,7 @@ animation-delay: -2s;
 
 window.addEventListener("load", () => {
   const el = document.getElementById("example-element");
-  const status = document.getElementById("playstatus");
+  const status = document.getElementById("play-status");
 
   function update() {
     status.textContent = "delaying";

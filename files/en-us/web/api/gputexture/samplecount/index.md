@@ -25,7 +25,7 @@ A number. Possible values are:
 ## Examples
 
 ```js
-// ...
+// …
 
 const depthTexture = device.createTexture({
   size: [canvas.width, canvas.height],

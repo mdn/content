@@ -39,20 +39,8 @@ page-type: firefox-release-notes
   - : This newly-supported property lets content specify whether or not lines may be broken within words in order to prevent overflow when an otherwise unbreakable string is too long to fit on one line.
 - `white-space` property supports the `pre-line` value
   - : The {{ cssxref("white-space") }} property now accepts the `pre-line` value.
-- `-moz-box-shadow`
-
-  `-moz-border-image`
-
-  `-moz-column-rule`
-
-  `-moz-column-rule-width`
-
-  `-moz-column-rule-style`
-
-  `-moz-column-rule-color`
-
+- `-moz-box-shadow`, `-moz-border-image`, `-moz-column-rule`, `-moz-column-rule-width`, `-moz-column-rule-style`, `-moz-column-rule-color`
   - : Firefox 3.5 adds support for these Mozilla extensions to CSS.
-
 - The {{ cssxref("color_value#Mozilla_Extensions","-moz-nativehyperlinktext") }} color value
   - : This new color value represents the user's system's default hyperlink color.
 - The `-moz-window-shadow` property and the `:-moz-system-metric(mac-graphite-theme)` pseudo-class
@@ -61,20 +49,7 @@ page-type: firefox-release-notes
   - : The `-moz-win-glass` and `-moz-mac-unified-toolbar` values have been added to `-moz-appearance`.
 - [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
   - : Firefox 3.5 supports CSS transforms. See {{ cssxref("transform", "-moz-transform") }} and {{ cssxref("transform-origin", "-moz-transform-origin") }} for details.
-- {{ cssxref(":nth-child") }}
-
-  {{ cssxref(":nth-last-child") }}
-
-  {{ cssxref(":nth-of-type") }}
-
-  {{ cssxref(":nth-last-of-type") }}
-
-  {{ cssxref(":first-of-type") }}
-
-  {{ cssxref(":last-of-type") }}
-
-  {{ cssxref(":only-of-type") }}
-
+- {{ cssxref(":nth-child") }}, {{ cssxref(":nth-last-child") }}, {{ cssxref(":nth-of-type") }}, {{ cssxref(":nth-last-of-type") }}, {{ cssxref(":first-of-type") }}, {{ cssxref(":last-of-type") }}, {{ cssxref(":only-of-type") }}
   - : These selectors are all newly-supported in Firefox 3.5.
 
 #### New DOM features

@@ -25,6 +25,9 @@ _This interface also inherits properties defined on its parent interface, {{domx
   - : Returns a double that represents the ever-increasing context time of the audio block being processed. It is equal to the {{domxref("BaseAudioContext.currentTime", "currentTime")}} property of the {{domxref("BaseAudioContext")}} the worklet belongs to.
 - {{domxref("AudioWorkletGlobalScope.sampleRate", "sampleRate")}} {{ReadOnlyInline}}
   - : Returns a float that represents the sample rate of the associated {{domxref("BaseAudioContext")}}.
+- {{domxref("AudioWorkletGlobalScope.port", "port")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("MessagePort")}} for custom, asynchronous communication between code in the main thread and the global scope of an audio worklet.
+    This allows for custom messages, such as sending and receiving control data or global settings.
 
 ## Instance methods
 

@@ -52,7 +52,7 @@ In the WebGPU samples [Textured Cube sample](https://webgpu.github.io/webgpu-sam
 - Copying the image bitmap into the texture using {{domxref("GPUQueue.copyExternalImageToTexture()")}}.
 
 ```js
-//...
+// …
 let cubeTexture;
 {
   const img = document.createElement("img");
@@ -81,7 +81,7 @@ let cubeTexture;
     [imageBitmap.width, imageBitmap.height],
   );
 }
-//...
+// …
 ```
 
 ## Specifications

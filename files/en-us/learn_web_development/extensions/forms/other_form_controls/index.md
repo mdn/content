@@ -264,7 +264,7 @@ The content inside the {{HTMLElement("progress")}} element is a fallback for bro
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Other controls](/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Other_controls).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Other controls](/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Other_controls).
 
 ## Summary
 

@@ -27,10 +27,10 @@ However, the event is _not_ sent to the form when a script calls the {{domxref("
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("submit", (event) => {});
+```js-nolint
+addEventListener("submit", (event) => { })
 
-onsubmit = (event) => {};
+onsubmit = (event) => { }
 ```
 
 ## Event type

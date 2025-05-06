@@ -22,10 +22,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("vrdisplaydeactivate", (event) => {});
+```js-nolint
+addEventListener("vrdisplaydeactivate", (event) => { })
 
-onvrdisplaydeactivate = (event) => {};
+onvrdisplaydeactivate = (event) => { }
 ```
 
 ## Event type

@@ -42,6 +42,10 @@ The `ElementInternals` interface also includes the following properties.
   - : A string reflecting the [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic) attribute, which indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant) attribute.
 - {{domxref("ElementInternals.ariaAutoComplete")}}
   - : A string reflecting the [`aria-autocomplete`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete) attribute, which indicates whether inputting text could trigger display of one or more predictions of the user's intended value for a combobox, searchbox, or textbox and specifies how predictions would be presented if they were made.
+- {{domxref("ElementInternals.ariaBrailleLabel")}}
+  - : A string reflecting the [`aria-braillelabel`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-braillelabel) attribute, which defines the braille label of the element.
+- {{domxref("ElementInternals.ariaBrailleRoleDescription")}}
+  - : A string reflecting the [`aria-brailleroledescription`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-brailleroledescription) attribute, which defines the ARIA braille role description of the element.
 - {{domxref("ElementInternals.ariaBusy")}}
   - : A string reflecting the [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy) attribute, which indicates whether an element is being modified, as assistive technologies may want to wait until the modifications are complete before exposing them to the user.
 - {{domxref("ElementInternals.ariaChecked")}}
@@ -66,10 +70,12 @@ The `ElementInternals` interface also includes the following properties.
   - : A string reflecting the [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup) attribute, which indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an ElementInternals.
 - {{domxref("ElementInternals.ariaHidden")}}
   - : A string reflecting the [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden) attribute, which indicates whether the element is exposed to an accessibility API.
+- {{domxref("ElementInternals.ariaInvalid")}}
+  - : A string reflecting the [`aria-invalid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid) attribute, which indicates the entered value does not conform to the format expected by the application.
 - {{domxref("ElementInternals.ariaKeyShortcuts")}}
-  - : A string reflecting the [`aria-keyshortcuts`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-keyshortcuts) attribute, which indicates keyboard shortcuts that an author has implemented to activate or give focus to an ElementInternals.
+  - : A string reflecting the [`aria-keyshortcuts`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-keyshortcuts) attribute, which indicates keyboard shortcuts that an author has implemented to activate or give focus to an object.
 - {{domxref("ElementInternals.ariaLabel")}}
-  - : A string reflecting the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) attribute, which defines a string value that labels the current ElementInternals.
+  - : A string reflecting the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) attribute, which defines a string value that labels the current object.
 - {{domxref("ElementInternals.ariaLevel")}}
   - : A string reflecting the [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level) attribute, which defines the hierarchical level of an element within a structure.
 - {{domxref("ElementInternals.ariaLive")}}
@@ -121,6 +127,36 @@ The `ElementInternals` interface also includes the following properties.
 - {{domxref("ElementInternals.ariaValueText")}}
   - : A string reflecting the [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext) attribute, which defines the human-readable text alternative of aria-valuenow for a range widget.
 
+#### Instance properties reflected from ARIA element references
+
+The properties reflect the elements specified by `id` reference in the corresponding attributes, but with some caveats. See [Reflected element references](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references) in the _Reflected attributes_ guide for more information.
+
+- {{domxref("ElementInternals.ariaActiveDescendantElement")}}
+  - : An element that represents the current active element when focus is on a [`composite`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/composite_role) widget, [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role), [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role), [`group`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role), or [`application`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role).
+    Reflects the [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant) attribute.
+- {{domxref("ElementInternals.ariaControlsElements")}}
+  - : An array of elements whose contents or presence are controlled by the element it is applied to.
+    Reflects the [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) attribute.
+- {{domxref("ElementInternals.ariaDescribedByElements")}}
+  - : An array of elements that contain the accessible description for the element it is applied to.
+    Reflects the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) attribute.
+- {{domxref("ElementInternals.ariaDetailsElements")}}
+  - : An array of elements that provide accessible details for the element it is applied to.
+    Reflects the [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) attribute.
+- {{domxref("ElementInternals.ariaErrorMessageElements")}}
+  - : An array of elements that provide an error message for the element it is applied to.
+    Reflects the [`aria-errormessage`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage) attribute.
+- {{domxref("ElementInternals.ariaFlowToElements")}}
+  - : An array of elements that identify the next element (or elements) in an alternate reading order of content, overriding the general default reading order at the user's discretion.
+    Reflects the [`aria-flowto`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-flowto) attribute.
+- {{domxref("ElementInternals.ariaLabelledByElements")}}
+  - : An array of elements that provide the accessible name for the element it is applied to.
+    Reflects the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attribute.
+- {{domxref("ElementInternals.ariaOwnsElements")}}
+  - : An array of elements owned by the element this is applied to.
+    This is used to define a visual, functional, or contextual relationship between a parent and its child elements when the DOM hierarchy cannot be used to represent the relationship.
+    Reflects the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns) attribute.
+
 ## Instance methods
 
 - {{domxref("ElementInternals.setFormValue()")}}
@@ -170,6 +206,5 @@ console.log(element.internals_.form);
 
 ## See also
 
-- [More capable form controls](https://web.dev/articles/more-capable-form-controls)
-- [Creating custom form controls with ElementInternals](https://css-tricks.com/creating-custom-form-controls-with-elementinternals/)
-- [ElementInternals polyfill](https://www.npmjs.com/package/element-internals-polyfill)
+- [More capable form controls](https://web.dev/articles/more-capable-form-controls) via web.dev (2019)
+- [Creating custom form controls with ElementInternals](https://css-tricks.com/creating-custom-form-controls-with-elementinternals/) via CSS-tricks (2021)

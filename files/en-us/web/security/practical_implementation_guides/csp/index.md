@@ -1,10 +1,10 @@
 ---
 title: Content Security Policy (CSP) implementation
+short-title: Content Security Policy (CSP)
 slug: Web/Security/Practical_implementation_guides/CSP
 page-type: guide
+sidebar: security
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
 The [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) HTTP header provides fine-grained control over the code that can be loaded on a site, and what it is allowed to do.
 
