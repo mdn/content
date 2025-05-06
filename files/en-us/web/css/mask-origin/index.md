@@ -165,11 +165,11 @@ body {
 
 Notice the difference between the three values. In the first three boxes, respectively, the mask originates from:
 
- - The outside edge of the border.
- - The inside border edge, which is the outer edge of the padding box.
- - The inside padding edge, which is the outer edge of the content box.
- 
- The fourth box has no `mask-image` specified: it is a reference image, included to allow you to easily visualize the extent of the content and padding areas.
+- The outside edge of the border.
+- The inside border edge, which is the outer edge of the padding box.
+- The inside padding edge, which is the outer edge of the content box.
+
+The fourth box has no `mask-image` specified: it is a reference image, included to allow you to easily visualize the extent of the content and padding areas.
 
 ### Multiple values
 
