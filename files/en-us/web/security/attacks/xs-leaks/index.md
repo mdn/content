@@ -250,6 +250,3 @@ In this guide we've outlined a few defenses that help to isolate your site from 
 - [XS-Leaks Wiki](https://xsleaks.dev/) (xsleaks.dev)
 - [Cross-site leaks Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/XS_Leaks_Cheat_Sheet.html) (OWASP)
 
-<section id="Quick_links">
-{{ListSubpages("/en-US/docs/Web/Security", "1", "0", "1")}}
-</section>
