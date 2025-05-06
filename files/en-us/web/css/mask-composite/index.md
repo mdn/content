@@ -41,11 +41,13 @@ The property accepts a comma-separated list of `<compositing-operator>` keyword 
 
 ## Description
 
-When an element has multiple mask layers applied, the `mask-composite` property can be used to define how the multiple masks interact with each other, or are combined, in creating the final mask effect. The number of layers is determined by the number of comma-separated values in the `mask-image` property value (even if a value is `none`). Each `mask-composite` value in the comma-separated list of values is matched up with a `mask-image` value, in order. If the number of values in `mask-composite` are equal to or greater than the number of `mask-image` values.
+When an element has multiple mask layers applied, the `mask-composite` property can be used to define how the multiple masks interact with each other, or are combined, in creating the final mask effect.
 
-Each current or associated mask layer image, the _source_ layer, can be added to, subtracted from, intersected with, or is excluded from, the _destination layers_. The destination layers are the mask layers below the source with their corresponding compositing operators applied; this includes all the previous layers, composed in order of appearance within the comma-separated list of masks. All mask layers below the current mask layer must be composited before applying the compositing operation for the current mask layer.
+The number of layers is determined by the number of comma-separated values in the `mask-image` property value (even if a value is `none`). Each `mask-composite` value in the comma-separated list of values is matched up with a `mask-image` value, in order. If the number of values in `mask-composite` are equal to or greater than the number of `mask-image` values, the extra values are ignored. If the `mask-composite` property doesn't have enough comma-separated values to match the number of layers, the list of values are repeated until there are enough.
 
-The source mask layer is composited with other mask layers, not with the element's content or the content behind the element. The multiple mask layers applied to any element or pseudo-element act as if they are rendered into an isolated group.
+For processing, the _source layer_, which is current or associated mask layer image, is either added to (the default), subtracted from, intersected with, or is excluded from, the destination layers. The _destination layers_ are the mask layers below the source with their corresponding compositing operators applied; this includes all the previous layers, composed in order of appearance within the comma-separated list of masks. All mask layers below the current mask layer must be composited before applying the compositing operation for the current mask layer. Mask layer images are transformed to alpha masks for processing before being combined by the defined compositing value.
+
+The multiple mask layers applied to any element or pseudo-element act as if they are rendered into an isolated group.In other words, the mask layers are composited with other mask layers, not with the element's content or the content behind the element.
 
 ## Formal definition
 
