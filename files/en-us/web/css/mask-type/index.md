@@ -33,11 +33,11 @@ mask-type: unset;
 
 ## Description
 
-The `mask-type` property is only relevant for the SVG `<mask>` element. If you set `mask-type: luminance`, the mask will use how bright each part of the mask is; if you set `mask-type: alpha`, it will use how transparent or opaque each part is.
+The `mask-type` property is only relevant for the SVG `<mask>` element. If you set `mask-type: luminance`, the mask will use how bright each part of the mask is; if you set `mask-type: alpha`, it will use how transparent or opaque each part of the mask is.
 
 ### Default behavior
 
-By default, the `<mask>` element uses `mask-type: luminance`. This means both the color and the transparency of the mask content affect masking. Whether the mask is opaque partially depends on the lightness of the color of the opaque areas:
+By default, the SVG `<mask>` element uses `mask-type: luminance`. This means both the color and the transparency of the mask content affect masking. Whether the mask is opaque partially depends on the lightness of the color of the opaque areas:
 
 - Fully opaque white areas (100% luminance) will be masked and visible.
 - Black (0% luminance) or fully transparent areas will be clipped and invisible.
@@ -51,7 +51,7 @@ The opacity of a `luminance` mask is determined by the `R`, `G`, `B`, and `A` va
 
 For example, the color `green` (`#008000` or `rgb(0% 50% 0% / 1)`) has a luminance value of `35.77%`. Any area masked by a solid `green` luminance mask will be `35.77%` visible. If the `mask-type` is set to `alpha`, the same fully opaque `green` color will make the masked area `100%` visible.
 
-If the SVG `<mask>` element has `fill="rgb(0 0 0 / 0.5)"`, which is a 50% transparent black, the corresponding shape on the masked element will display at 50% opacity when using `alpha` as the value, as it is a color at 50% opacity, but if the `mask-type` defaults or is explicitly set to `luminance`, as the luminance is `0`, the masked area will be clipped and invisible.
+If the SVG `<mask>` element has `fill="rgb(0 0 0 / 0.5)"`, which is a 50% transparent black, the corresponding shape on the masked element will display at 50% opacity when `mask-type ` is set to `alpha` because the alpha values is `0.5` (50% opacity). But if the `mask-type` defaults to or is set as `luminance` the masked area will be fully clipped and invisible because its luminance is `0`.
 
 ### Effect of `mask-mode` on `mask-type`
 
@@ -60,7 +60,7 @@ If the mask image source is not an SVG `<mask>`, this property has no effect.
 
 The default value of `mask-mode` is `match-source`, which means the browser uses the `mask-type` value from the `<mask>` element to determine how to interpret it. If `mask-mode` is set to a value other than `match-source`, that value takes precedence and overrides the `mask-type` value of the applied mask.
 
-If the `<mask>` is defined as the mask image's source, and the `mask-mode` is set or defaults to `match-source`, the `mask-mode` will resolve to the `<mask>` element's `mask-type` value; `luminance` or `alpha`. If not explicitly set, the value defaults to `luminance`.
+If the `<mask>` is defined as the mask image's source, and the `mask-mode` is set as or defaults to `match-source`, the `mask-mode` will resolve to the `<mask>` element's `mask-type` value: `luminance` or `alpha`. If not explicitly set, the value defaults to `luminance`.
 
 ## Formal definition
 
@@ -79,7 +79,7 @@ This example demonstrates how to use the `mask-type` property and the effect of 
 #### HTML
 
 We've included two images that will be masked. Other than their class names, the two images are identical.
-We've also included an SVG with two `<mask>` elements. Other than their `id` values, the two masks are also identical; each with a green and white heart shape and a semi-transparent white and black filled circle.
+We've also included an SVG with two `<mask>` elements. Other than their `id` values, the two masks are also identical: each has a green and white heart shape and a semi-transparent white-and-black-filled circle.
 
 ```html
 <img

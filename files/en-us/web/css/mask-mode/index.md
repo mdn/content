@@ -41,7 +41,7 @@ The `mask-mode` property can take multiple comma-separated `<masking-mode>` keyw
   - : Indicates that the [luminance (brightness)](#understanding-luminance) values of the mask image should be used.
 
 - `match-source`
-  - : Indicates that the type of mask is determined by the source. The default property value.
+  - : Indicates that the type of mask is determined by the source. This is the default property value.
     - If the {{cssxref("mask-image")}} references an SVG {{svgelement("mask")}}, its {{cssxref("mask-type")}} property value is used, or it's {{SVGAttr("mask-type")}} attribute, if present. If neither is explicitly set, this value defaults to `luminance`.
     - If the mask image source is an {{cssxref("image")}} or a {{cssxref("gradient")}}, the `alpha` values of the mask image are used.
 
@@ -54,7 +54,11 @@ If the mask is of type {{cssxref("&lt;image&gt;")}}, by default the alpha values
 
 In the case of `luminance` masks, the visibility of the masked element depends on both the opacity of the mask and the lightness of the color of the opaque areas. White (100% luminance) opaque areas (alpha = 1) will be masked and visible, and black areas (0% luminance) transparent (alpha = 0) will be clipped. Areas with colors in between white and black and with partial opacity will be partially masked, reflecting the luminance and alpha transparency of each color making up the mask.
 
-The opacity of a `luminance` mask is determined by the `R`, `G`, `B`, and `A` values of an `rgb()` color. The equation is `((0.2125 * R) + (0.7154 * G) + (0.0721 * B)) * A`. In a `luminance` mask, the color `green` being `#008000`, or `rgb(0% 50% 0% / 1)`, any area masked by a solid `green` mask will be `35.77%` opaque. If the `mask-mode` for this mask is set to `alpha`, as `green` is a fully opaque color, the masked area will be `100%` opaque.
+The opacity of a `luminance` mask is determined by the `R`, `G`, `B`, and `A` values of an `rgb()` color using the formula:
+
+`((0.2125 * R) + (0.7154 * G) + (0.0721 * B)) * A`
+
+For example, the color `green` is `#008000` or `rgb(0% 50% 0% / 1)`. In a `luminance` mask, any area masked by a solid `green` mask will be `35.77%` opaque. If the `mask-mode` for this mask is set to `alpha`, since `green` is a fully opaque color, the masked area will be `100%` opaque.
 
 ### Multiple values
 
