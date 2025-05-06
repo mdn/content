@@ -73,7 +73,7 @@ This article provides information about the changes in Firefox 139 that affect d
 These features are newly shipped in Firefox 139 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 
 - **Prioritized Task Scheduling API** (Nightly release).
-  The [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) provides a standardized way to prioritize all tasks belonging to an application, whether they defined in a website developer's code, or in third party libraries and frameworks.
+  The [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) provides a standardized way to prioritize all tasks belonging to an application, whether they are defined in a website developer's code, or in third-party libraries and frameworks.
   This adds support for the {{domxref("scheduler.yield()")}} method and re-enables the whole API in the Nightly release.
   ([Firefox bug 1958943](https://bugzil.la/1958943), [Firefox bug 1920115](https://bugzil.la/1920115)).
 - **Support for escaping `<` and `>` in attributes when serializing HTML**: `dom.security.html_serialization_escape_lt_gt`.
