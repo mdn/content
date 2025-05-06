@@ -3479,8 +3479,9 @@
 /en-US/docs/Games/Anatomy_of_a_vIdeo_game	/en-US/docs/Games/Anatomy
 /en-US/docs/Games/Index	/en-US/docs/Games
 /en-US/docs/Games/Introduction/Introduction_3D	/en-US/docs/Games/Techniques/3D_on_the_web
-/en-US/docs/Games/Introduction_to_HTML5_Game_Development_(summary)	/en-US/docs/Games/Introduction_to_HTML5_Game_Development
-/en-US/docs/Games/Introduction_to_HTML5_Game_Gevelopment_(summary)	/en-US/docs/Games/Introduction_to_HTML5_Game_Development
+/en-US/docs/Games/Introduction_to_HTML5_Game_Development	/en-US/docs/Games/Tools
+/en-US/docs/Games/Introduction_to_HTML5_Game_Development_(summary)	/en-US/docs/Games/Tools
+/en-US/docs/Games/Introduction_to_HTML5_Game_Gevelopment_(summary)	/en-US/docs/Games/Tools
 /en-US/docs/Games/Techniques/3D_collision_detection/Bounding_boxes_with_THREE.js	/en-US/docs/Games/Techniques/3D_collision_detection/Bounding_volume_collision_detection_with_THREE.js
 /en-US/docs/Games/Techniques/3D_on_the_web/WebVR	/en-US/docs/Games/Techniques/3D_on_the_web/WebXR
 /en-US/docs/Games/Techniques/Crisp,_pixel_art_look_with_image-rendering	/en-US/docs/Games/Techniques/Crisp_pixel_art_look
