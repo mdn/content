@@ -3,9 +3,8 @@ title: icons
 slug: Web/Progressive_web_apps/Manifest/Reference/icons
 page-type: web-manifest-member
 browser-compat: manifests.webapp.icons
+sidebar: pwasidebar
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 The `icons` manifest member is used to specify one or more image files that define the icons to represent your web application.
 

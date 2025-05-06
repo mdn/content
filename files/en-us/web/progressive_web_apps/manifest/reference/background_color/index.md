@@ -3,9 +3,8 @@ title: background_color
 slug: Web/Progressive_web_apps/Manifest/Reference/background_color
 page-type: web-manifest-member
 browser-compat: manifests.webapp.background_color
+sidebar: pwasidebar
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 The `background_color` manifest member is used to specify an initial background color for your web application.
 This color appears in the application window before your application's stylesheets have loaded.

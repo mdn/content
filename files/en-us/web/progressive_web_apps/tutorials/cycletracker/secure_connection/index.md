@@ -3,11 +3,10 @@ title: "CycleTracker: Secure connection"
 short-title: Secure connection
 slug: Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection
 page-type: tutorial-chapter
+sidebar: pwasidebar
 ---
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS", "Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
-
-{{PWASidebar}}
 
 PWAs can only be installed using a manifest file when served with the `https://` protocol, or when served locally from `127.0.0.1` and `localhost` URLs with the `http://` protocol.
 They also commonly use APIs that are [restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts).

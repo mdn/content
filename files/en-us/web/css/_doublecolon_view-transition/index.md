@@ -14,7 +14,7 @@ During a view transition, `::view-transition` is included in the associated pseu
 `::view-transition` is given the following default styling in the UA stylesheet:
 
 ```css
-html::view-transition {
+:root::view-transition {
   position: fixed;
   inset: 0;
 }

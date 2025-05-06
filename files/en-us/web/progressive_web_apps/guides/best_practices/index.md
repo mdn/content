@@ -2,9 +2,8 @@
 title: Best practices for PWAs
 slug: Web/Progressive_web_apps/Guides/Best_practices
 page-type: guide
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 [Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps) (PWAs) can be installed on devices and used as traditional websites in web browsers. This means that PWAs need to be able to adapt to different environments and to different user expectations.
 
