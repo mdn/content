@@ -1889,7 +1889,7 @@ See [Firefox bug 1697647](https://bugzil.la/1697647) for more details.
 
 ### Prioritized Task Scheduling API
 
-The [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) provides a standardized way to prioritize all tasks belonging to an application, whether they defined in a website developer's code, or in third party libraries and frameworks.
+The [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) provides a standardized way to prioritize all tasks belonging to an application, whether they are defined in a website developer's code, or in third-party libraries and frameworks.
 Support for most of the API was added behind a preference in Firefox version 101.
 Firefox version 139 adds support for support for {{domxref("scheduler.yield()")}} and enables the API in the Nightly release.
 ([Firefox bug 1734997](https://bugzil.la/1734997) and [Firefox bug 1920115](https://bugzil.la/1920115)),
