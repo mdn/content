@@ -57,8 +57,8 @@ const content = window.preamble.textContent;
 > <h3 id="performance"></h3>
 >
 > <script>
->     performance.innerHTML = "Well Done!";
->     performance.style.backgroundColor = "green";
+>   performance.innerHTML = "Well Done!";
+>   performance.style.backgroundColor = "green";
 > </script>
 > ```
 
