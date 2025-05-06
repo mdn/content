@@ -7,7 +7,8 @@ browser-compat: css.properties.mask-origin
 
 {{CSSRef}}
 
-The **`mask-origin`** [CSS](/en-US/docs/Web/CSS) property sets the origin of a mask. HTML elements can have masks contained within their content border box, padding box, or content box, whereas SVG elements (which don't have the associated CSS layout boxes) can have masks contained inside their fill, stroke, or view box.
+The **`mask-origin`** [CSS](/en-US/docs/Web/CSS) property sets the origin of a mask. This property determines the mask positioning area: the area within which a mask image is positioned. HTML elements can have masks contained within their content border box, padding box, or content box, whereas SVG elements (which don't have the associated CSS layout boxes) can have masks contained inside their fill, stroke, or view box.
+For elements rendered as multiple boxes, such as a {{htmlelement("span")}} of text that spans more than one line, the `mask-origin` property specifies which boxes the {{cssxref("box-decoration-break")}} property operates on to determine the mask positioning area.
 
 ## Syntax
 
@@ -37,11 +38,11 @@ mask-origin: unset;
 The `mask-origin` property is a comma-separated list of `<coord-box>` keyword values, including:
 
 - `content-box`
-  - : The position is relative to the content box.
+  - : The position is relative to the [content box](/en-US/docs/Web/CSS/CSS_shapes/From_box_values#content-box).
 - `padding-box`
-  - : The position is relative to the padding box. For single boxes `0 0` is the upper left corner of the padding edge, `100% 100%` is the lower right corner.
+  - : The position is relative to the [padding box](/en-US/docs/Web/CSS/CSS_shapes/From_box_values#padding-box).
 - `border-box`
-  - : The position is relative to the border box.
+  - : The position is relative to the [border box](/en-US/docs/Web/CSS/CSS_shapes/From_box_values#border-box).
 - `fill-box`
   - : The position is relative to the object bounding box.
 - `stroke-box`
@@ -53,7 +54,9 @@ There are three non-standard values that are shortcuts for standard `<coord-box>
 
 ## Description
 
-The `mask-origin` property is very similar to the {{cssxref("background-origin")}} property, but it has a different set of values and a different initial value.
+The `mask-origin` property is very similar to the {{cssxref("background-origin")}} property, but it has a different set of values and a different initial value. The initial value depends on the if there is an associated CSS layout box; if yes, the default value is `border-box`. In comparison, the default for `background-origin` is `padding-box`.
+
+For SVG elements without an associated CSS layout box, the values `content-box`, `padding-box` and `border-box` compute to `fill-box`; so the default `border-box` computes to `fill-box`, in which case the position is relative to the object bounding box. For HTML elements, if a SVG-related value of `fill-box`, `stroke-box`, or `view-box` is set, the value computes to the default `border-box`.
 
 An element can have multiple mask layers applied. The number of layers is determined by the number of comma-separated values in the {{cssxref("mask-image")}} property value (even if one or more of those values is `none`). Each `mask-origin` value in the comma-separated list of values is matched with a comma-separated `mask-image` value, in the same order.
 
@@ -62,10 +65,6 @@ If the number of values in the two properties differs, any excess values of `mas
 For elements rendered as a single box, this property specifies the mask positioning area — or the origin position — of the image referenced by the `mask-image` property.
 
 For elements rendered as multiple boxes, such as inline boxes that span more than one line, the `mask-origin` property specifies which boxes the {{cssxref("box-decoration-break")}} property operates upon to determine the mask positioning area.
-
-For SVG elements without an associated CSS layout box, the values `content-box`, `padding-box`, and `border-box` compute to `fill-box`.
-
-For HTML elements, the values `fill-box`, `stroke-box`, and `view-box` compute to `border-box`, which is the default value of `mask-origin`.
 
 The `mask-origin` can cause the mask layer image to be clipped. For example, if the {{cssxref("mask-clip")}} property is set to `padding-box`, the `mask-origin` is set to `border-box`, the {{cssxref("mask-position")}} is set to the `top left` edge, and the element has a border, then the mask layer image will be clipped at the top-left edge.
 
