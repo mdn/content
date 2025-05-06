@@ -9,7 +9,7 @@ browser-compat: api.CreateMonitor
 
 {{APIRef("Summarizer API")}}{{SeeCompatTable}}
 
-The **`CreateMonitor`** interface of the Writing Assistance APIs ({{domxref("Summarizer API", "Summarizer API", "", "nocode")}} provides information on the progress of a summarizer download.
+The **`CreateMonitor`** interface of the Writing Assistance APIs ({{domxref("Summarizer API", "Summarizer API", "", "nocode")}} provides information on the progress of an AI model download, which will typilcally be an LLM (Gemini Nano, in the case of Google Chrome).
 
 {{InheritanceDiagram}}
 
@@ -18,7 +18,7 @@ The **`CreateMonitor`** interface of the Writing Assistance APIs ({{domxref("Sum
 _Inherits events from its parent, {{DOMxRef("EventTarget")}}._
 
 - {{domxref("CreateMonitor/downloadprogress_event", "downloadprogress")}} {{Experimental_Inline}}
-  - : Fired when progress is made on the summarizer download.
+  - : Fired when progress is made on the AI model download.
 
 ## Examples
 
@@ -35,8 +35,6 @@ const summarizer = await Summarizer.create({
 
 const summary = await summarizer.summarize(myText);
 ```
-
-EDITORIAL: I can get this to work, but I'm not really sure what exactly it is monitoring progress of. It would be good to get some more information on this.
 
 ## Specifications
 

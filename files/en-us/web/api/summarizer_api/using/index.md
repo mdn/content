@@ -35,7 +35,7 @@ If the browser's LLM does not support the specified input or output languages, a
 > [!NOTE]
 > See the {{domxref("Summarizer.create", "create()")}} reference page for the full list of available options.
 
-EDITORIAL: What languages are supported by a given browser? Is it possible to add more? Does each specific implementation of the API support only a certain subset of languages, with the aim of adding more in the future?
+Different implementations will likely support different languages.
 
 ## Checking configuration support
 

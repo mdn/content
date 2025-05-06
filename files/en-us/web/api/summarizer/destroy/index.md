@@ -38,6 +38,8 @@ const summarizer = await Summarizer.create({
   length: "short",
 });
 
+// ...
+
 summarizer.destroy();
 ```
 

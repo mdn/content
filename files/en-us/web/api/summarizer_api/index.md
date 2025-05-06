@@ -57,4 +57,5 @@ For a full example, see [Using the Summarizer API](/en-US/docs/Web/API/Summarize
 
 ## See also
 
+- [Summarize with built-in AI](https://developer.chrome.com/docs/ai/summarizer-api) on developer.chrome.com (2025)
 - [Web AI demos](https://chrome.dev/web-ai-demos/) on chrome.dev.

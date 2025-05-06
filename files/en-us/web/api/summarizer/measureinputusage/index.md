@@ -36,7 +36,7 @@ EDITORIAL: Aborting the call via an abort signal doesn't seem to work. Am I miss
 
 A {{jsxref("Promise")}} that fulfills with a number specifying the {{domxref("Summarizer.inputQuota", "inputQuota")}} usage of the given input text.
 
-EDITORIAL: As I said on the inputQuota page, I ought to include some information about input quota and how it is determined for each implenentation. Maybe just including all of that info on the inputQuota page and then linking to it from here would be enough? I should specify how accurate the value returned by measureInputUsage is, whether it an estimaate, etc.?
+EDITORIAL: As I said on the inputQuota page, I ought to include some information about input quota and how it is determined for each implenentation. Maybe just including all of that info on the inputQuota page and then linking to it from here would be enough? I should specify how accurate the value returned by measureInputUsage is, whether it is an estimaate, etc.?
 
 ### Exceptions
 

@@ -36,7 +36,7 @@ Summarizer.availability(options)
     - `type`
       - : An enumerated value specifying the {{domxref("Summarizer.type", "type")}} of summary you want this `Summarizer` to generate. defaults to `key-points`.
 
-EDITORIAL: I don't actually know what the language-related properties default to, or how the browser determines whether a language value is valid for particular browser or not. Needs to be researched.
+EDITORIAL: I don't know what the language-related properties default to, or how the browser determines whether a language value is valid for particular browser or not. Needs to be researched.
 
 ### Return value
 
@@ -45,15 +45,13 @@ A {{jsxref("Promise")}} that fulfills with an enumerated value indicating whethe
 Possible values include:
 
 - `available`
-  - : The browser supports the given configuration.
+  - : The browser supports the given configuration and can be used immediately.
 - `downloadable`
-  - : The browser does not support the given configuration, but it could do if an updated language model were downloaded.
+  - : The browser does support the given configuration, but it first needs to download an AI model (Gemini Nano, in Chrome's case), or some fune-tuning data for the model.
 - `downloading`
-  - : The browser does not support the given configuration, but it will do when a currently-downloading language model update finishes.
+  - : The browser does support the given configuration, but it has to finish an ongoing download before it can proceed.
 - `unavailable`
   - : The browser does not support the given configuration.
-
-EDITORIAL: I am guessing at how language model updates are identified and downloaded. Is this something that is done programmatically, or does the app need to instruct the user to do so? I'm assuming how this is handled will be implementation-dependant, but we ought to given an example of how Chrome does it. I probably need to give some more details on "best fit" languages, as per the example mentioned in the spec. More research needed.
 
 ### Exceptions
 
@@ -69,13 +67,28 @@ EDITORIAL: I am guessing at how language model updates are identified and downlo
 ### Basic `availability()` usage
 
 ```js
-const availability = await Summarizer.availability({
-  type: "tl;dr",
-  length: "short",
+const options = {
+  sharedContext: "This is a scientific article",
+  type: "key-points",
   format: "markdown",
-  expectedInputLanguages: ["en-US"],
-  outputLanguage: "en-US",
-});
+  length: "medium",
+};
+
+const availability = await Summarizer.availability();
+let summarizer;
+if (availability === "unavailable") {
+  // The Summarizer API isn't usable
+  return;
+} else if (availability === "available") {
+  // The Summarizer API can be used immediately
+  summarizer = await Summarizer.create(options);
+} else {
+  // The Summarizer API can be used after the model is downloaded
+  summarizer = await Summarizer.create(options);
+  summarizer.addEventListener("downloadprogress", (e) => {
+    console.log(`Downloaded ${e.loaded * 100}%`);
+  });
+}
 ```
 
 ### Detecting language support

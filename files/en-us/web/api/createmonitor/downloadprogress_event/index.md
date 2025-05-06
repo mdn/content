@@ -10,9 +10,7 @@ browser-compat: api.CreateMonitor.downloadprogress_event
 
 {{APIRef("Summarizer API")}}{{SeeCompatTable}}
 
-The **`downloadprogress`** event of the {{domxref("CreateMonitor")}} interface is fired when progress is made on the summarizer download.
-
-EDITORIAL: Again, I'm not really sure about exactly what this is showing the progress of.
+The **`downloadprogress`** event of the {{domxref("CreateMonitor")}} interface is fired when progress is made on the AI model download.
 
 ## Syntax
 
