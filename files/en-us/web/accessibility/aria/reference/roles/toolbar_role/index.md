@@ -1,6 +1,5 @@
 ---
 title: "ARIA: toolbar role"
-short-title: toolbar
 slug: Web/Accessibility/ARIA/Reference/Roles/toolbar_role
 page-type: aria-role
 spec-urls:

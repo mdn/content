@@ -1,6 +1,5 @@
 ---
 title: "ARIA: region role"
-short-title: region
 slug: Web/Accessibility/ARIA/Reference/Roles/region_role
 page-type: aria-role
 spec-urls:

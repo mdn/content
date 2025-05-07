@@ -1,6 +1,5 @@
 ---
 title: "ARIA: tabpanel role"
-short-title: tabpanel
 slug: Web/Accessibility/ARIA/Reference/Roles/tabpanel_role
 page-type: aria-role
 spec-urls:

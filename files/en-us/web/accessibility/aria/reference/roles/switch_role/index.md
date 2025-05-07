@@ -1,6 +1,5 @@
 ---
 title: "ARIA: switch role"
-short-title: switch
 slug: Web/Accessibility/ARIA/Reference/Roles/switch_role
 page-type: aria-role
 spec-urls:

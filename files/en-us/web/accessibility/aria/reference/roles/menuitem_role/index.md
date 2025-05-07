@@ -1,6 +1,5 @@
 ---
 title: "ARIA: menuitem role"
-short-title: menuitem
 slug: Web/Accessibility/ARIA/Reference/Roles/menuitem_role
 page-type: aria-role
 spec-urls:

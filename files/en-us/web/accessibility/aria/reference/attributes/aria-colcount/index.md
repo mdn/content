@@ -1,6 +1,5 @@
 ---
-title: "ARIA: aria-colcount attribute"
-short-title: aria-colcount
+title: aria-colcount
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-colcount
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-colcount

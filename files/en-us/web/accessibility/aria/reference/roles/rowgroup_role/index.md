@@ -1,6 +1,5 @@
 ---
 title: "ARIA: rowgroup role"
-short-title: rowgroup
 slug: Web/Accessibility/ARIA/Reference/Roles/rowgroup_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#rowgroup

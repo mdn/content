@@ -1,6 +1,5 @@
 ---
 title: "ARIA: searchbox role"
-short-title: searchbox
 slug: Web/Accessibility/ARIA/Reference/Roles/searchbox_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#searchbox

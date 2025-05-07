@@ -1,6 +1,5 @@
 ---
-title: "ARIA: aria-labelledby attribute"
-short-title: aria-labelledby
+title: aria-labelledby
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-labelledby

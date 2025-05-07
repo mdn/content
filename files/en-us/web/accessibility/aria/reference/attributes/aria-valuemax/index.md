@@ -1,6 +1,5 @@
 ---
-title: "ARIA: aria-valuemax attribute"
-short-title: aria-valuemax
+title: aria-valuemax
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-valuemax

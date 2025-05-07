@@ -1,6 +1,5 @@
 ---
-title: "ARIA: aria-orientation attribute"
-short-title: aria-orientation
+title: aria-orientation
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-orientation
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-orientation

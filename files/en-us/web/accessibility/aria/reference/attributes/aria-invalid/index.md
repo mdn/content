@@ -1,6 +1,5 @@
 ---
-title: "ARIA: aria-invalid attribute"
-short-title: aria-invalid
+title: aria-invalid
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-invalid
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-invalid

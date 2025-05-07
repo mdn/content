@@ -1,6 +1,5 @@
 ---
 title: "ARIA: rowheader role"
-short-title: rowheader
 slug: Web/Accessibility/ARIA/Reference/Roles/rowheader_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#rowheader

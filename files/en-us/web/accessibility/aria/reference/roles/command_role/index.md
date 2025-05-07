@@ -1,6 +1,5 @@
 ---
 title: "ARIA: command role"
-short-title: command
 slug: Web/Accessibility/ARIA/Reference/Roles/command_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#command

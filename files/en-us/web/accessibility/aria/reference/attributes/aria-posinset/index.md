@@ -1,6 +1,5 @@
 ---
-title: "ARIA: aria-posinset attribute"
-short-title: aria-posinset
+title: aria-posinset
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-posinset
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-posinset

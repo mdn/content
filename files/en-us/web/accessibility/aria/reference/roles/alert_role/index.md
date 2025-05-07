@@ -1,6 +1,5 @@
 ---
 title: "ARIA: alert role"
-short-title: alert
 slug: Web/Accessibility/ARIA/Reference/Roles/alert_role
 page-type: aria-role
 spec-urls:

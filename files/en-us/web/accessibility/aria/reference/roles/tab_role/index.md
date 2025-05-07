@@ -1,6 +1,5 @@
 ---
 title: "ARIA: tab role"
-short-title: tab
 slug: Web/Accessibility/ARIA/Reference/Roles/tab_role
 page-type: aria-role
 spec-urls:

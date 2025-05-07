@@ -1,6 +1,5 @@
 ---
-title: "ARIA: aria-disabled attribute"
-short-title: aria-disabled
+title: aria-disabled
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-disabled
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-disabled

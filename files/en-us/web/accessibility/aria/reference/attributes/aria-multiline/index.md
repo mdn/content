@@ -1,6 +1,5 @@
 ---
-title: "ARIA: aria-multiline attribute"
-short-title: aria-multiline
+title: aria-multiline
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-multiline
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-multiline

@@ -1,6 +1,5 @@
 ---
 title: "ARIA: cell role"
-short-title: cell
 slug: Web/Accessibility/ARIA/Reference/Roles/cell_role
 page-type: aria-role
 spec-urls:

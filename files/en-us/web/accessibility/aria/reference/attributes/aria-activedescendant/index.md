@@ -1,6 +1,5 @@
 ---
-title: "ARIA: aria-activedescendant attribute"
-short-title: aria-activedescendant
+title: aria-activedescendant
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant
 page-type: aria-attribute
 spec-urls:

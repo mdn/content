@@ -1,6 +1,5 @@
 ---
-title: "ARIA: aria-brailleroledescription attribute"
-short-title: aria-brailleroledescription
+title: aria-brailleroledescription
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-brailleroledescription
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-brailleroledescription

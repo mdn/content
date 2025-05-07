@@ -1,6 +1,5 @@
 ---
 title: "ARIA: suggestion role"
-short-title: suggestion
 slug: Web/Accessibility/ARIA/Reference/Roles/suggestion_role
 page-type: aria-role
 sidebar: accessibilitysidebar

@@ -1,6 +1,5 @@
 ---
-title: "ARIA: aria-describedby attribute"
-short-title: aria-describedby
+title: aria-describedby
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-describedby
 page-type: aria-attribute
 spec-urls:

@@ -1,6 +1,5 @@
 ---
 title: "ARIA: search role"
-short-title: search
 slug: Web/Accessibility/ARIA/Reference/Roles/search_role
 page-type: aria-role
 spec-urls:

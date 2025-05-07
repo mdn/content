@@ -1,6 +1,5 @@
 ---
-title: "ARIA: aria-flowto attribute"
-short-title: aria-flowto
+title: aria-flowto
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-flowto
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-flowto

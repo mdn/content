@@ -1,6 +1,5 @@
 ---
 title: "ARIA: separator role"
-short-title: separator
 slug: Web/Accessibility/ARIA/Reference/Roles/separator_role
 page-type: aria-role
 spec-urls:

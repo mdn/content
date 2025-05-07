@@ -1,6 +1,5 @@
 ---
-title: "ARIA: aria-selected attribute"
-short-title: aria-selected
+title: aria-selected
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-selected
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-selected

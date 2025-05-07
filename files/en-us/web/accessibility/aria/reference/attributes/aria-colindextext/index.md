@@ -1,6 +1,5 @@
 ---
-title: "ARIA: aria-colindextext attribute"
-short-title: aria-colindextext
+title: aria-colindextext
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-colindextext
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-colindextext

@@ -1,6 +1,5 @@
 ---
-title: "ARIA: aria-expanded attribute"
-short-title: aria-expanded
+title: aria-expanded
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-expanded
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-expanded

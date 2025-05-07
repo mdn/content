@@ -1,6 +1,5 @@
 ---
-title: "ARIA: aria-owns attribute"
-short-title: aria-owns
+title: aria-owns
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-owns
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-owns

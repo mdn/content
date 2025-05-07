@@ -1,6 +1,5 @@
 ---
-title: "ARIA: aria-relevant attribute"
-short-title: aria-relevant
+title: aria-relevant
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-relevant
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-relevant

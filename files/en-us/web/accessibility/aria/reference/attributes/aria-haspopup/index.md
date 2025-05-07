@@ -1,6 +1,5 @@
 ---
-title: "ARIA: aria-haspopup attribute"
-short-title: aria-haspopup
+title: aria-haspopup
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-haspopup

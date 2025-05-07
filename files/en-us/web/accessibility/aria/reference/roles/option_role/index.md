@@ -1,6 +1,5 @@
 ---
 title: "ARIA: option role"
-short-title: option
 slug: Web/Accessibility/ARIA/Reference/Roles/option_role
 page-type: aria-role
 spec-urls:

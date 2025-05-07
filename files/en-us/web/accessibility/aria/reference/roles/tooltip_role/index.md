@@ -1,6 +1,5 @@
 ---
 title: "ARIA: tooltip role"
-short-title: tooltip
 slug: Web/Accessibility/ARIA/Reference/Roles/tooltip_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#tooltip

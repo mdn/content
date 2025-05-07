@@ -1,6 +1,5 @@
 ---
 title: "ARIA: banner role"
-short-title: banner
 slug: Web/Accessibility/ARIA/Reference/Roles/banner_role
 page-type: aria-role
 spec-urls:

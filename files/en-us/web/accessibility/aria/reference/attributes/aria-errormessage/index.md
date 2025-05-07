@@ -1,6 +1,5 @@
 ---
-title: "ARIA: aria-errormessage attribute"
-short-title: aria-errormessage
+title: aria-errormessage
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-errormessage

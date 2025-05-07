@@ -1,6 +1,5 @@
 ---
 title: "ARIA: group role"
-short-title: group
 slug: Web/Accessibility/ARIA/Reference/Roles/group_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#group

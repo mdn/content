@@ -1,6 +1,5 @@
 ---
 title: "ARIA: treeitem role"
-short-title: treeitem
 slug: Web/Accessibility/ARIA/Reference/Roles/treeitem_role
 page-type: aria-role
 spec-urls:

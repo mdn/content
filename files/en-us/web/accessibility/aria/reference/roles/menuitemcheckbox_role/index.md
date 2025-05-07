@@ -1,6 +1,5 @@
 ---
 title: "ARIA: menuitemcheckbox role"
-short-title: menuitemcheckbox
 slug: Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role
 page-type: aria-role
 spec-urls:

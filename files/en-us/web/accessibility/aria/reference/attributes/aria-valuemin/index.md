@@ -1,6 +1,5 @@
 ---
-title: "ARIA: aria-valuemin attribute"
-short-title: aria-valuemin
+title: aria-valuemin
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-valuemin

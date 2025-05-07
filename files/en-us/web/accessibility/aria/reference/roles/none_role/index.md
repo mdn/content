@@ -1,6 +1,5 @@
 ---
 title: "ARIA: none role"
-short-title: none
 slug: Web/Accessibility/ARIA/Reference/Roles/none_role
 page-type: aria-role
 sidebar: accessibilitysidebar

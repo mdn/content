@@ -1,6 +1,5 @@
 ---
-title: "ARIA: aria-multiselectable attribute"
-short-title: aria-multiselectable
+title: aria-multiselectable
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-multiselectable
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-multiselectable

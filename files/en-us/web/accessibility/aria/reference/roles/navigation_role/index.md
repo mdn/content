@@ -1,6 +1,5 @@
 ---
 title: "ARIA: navigation role"
-short-title: navigation
 slug: Web/Accessibility/ARIA/Reference/Roles/navigation_role
 page-type: aria-role
 spec-urls:

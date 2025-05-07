@@ -1,6 +1,5 @@
 ---
 title: "ARIA: article role"
-short-title: article
 slug: Web/Accessibility/ARIA/Reference/Roles/article_role
 page-type: aria-role
 spec-urls:
