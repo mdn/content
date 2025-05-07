@@ -221,8 +221,8 @@ An **ARIA reference page** describes a [role](/en-US/docs/Web/Accessibility/ARIA
 
 #### Examples
 
-- [aria-busy attribute](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy)
-- [application role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)
+- [`aria-busy` attribute](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy)
+- [`application` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)
 
 #### Templates
 
