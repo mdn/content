@@ -178,7 +178,7 @@ In the following example opacity is changed on hover, so the striped background 
 ```html
 <div class="wrapper">
   <img
-    src="//interactive-examples.mdn.mozilla.net/media/dino.svg"
+    src="/shared-assets/images/examples/dino.svg"
     alt="MDN Dino"
     width="128"
     height="146"
