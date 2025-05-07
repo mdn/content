@@ -50,8 +50,7 @@ ctx.font = "16px sans-serif";
 ctx.textAlign = "center";
 
 const img = new Image();
-img.src =
-  "https://interactive-examples.mdn.mozilla.net/media/examples/star.png";
+img.src = "/shared-assets/images/examples/star.png";
 img.onload = () => {
   const w = img.width,
     h = img.height;
