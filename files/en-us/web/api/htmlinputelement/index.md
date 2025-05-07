@@ -279,7 +279,7 @@ Listen to these events using {{domxref("EventTarget.addEventListener", "addEvent
   - : Fired when a search is initiated on an {{HTMLElement("input")}} of `type="search"`.
 - {{domxref("HTMLInputElement/select_event", "select")}} event
   - : Fired when some text has been selected.
-- {{domxref("HTMLInputElement/selectionchange_event", "selectionchange")}} event {{Experimental_Inline}}
+- {{domxref("HTMLInputElement/selectionchange_event", "selectionchange")}} event
   - : Fires when the text selection in a {{HTMLElement("input")}} element has been changed.
 
 ## Specifications
