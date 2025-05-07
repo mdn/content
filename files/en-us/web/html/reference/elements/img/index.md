@@ -355,7 +355,7 @@ The value of the `title` attribute is usually presented to the user as a tooltip
 The following example embeds an image into the page and includes alternative text for accessibility.
 
 ```html
-<img src="favicon144.png" alt="MDN" />
+<img src="/shared-assets/images/examples/favicon144.png" alt="MDN" />
 ```
 
 {{ EmbedLiveSample('Alternative_text', '100%', '160') }}
@@ -366,7 +366,9 @@ This example builds upon the previous one, showing how to turn the image into a 
 
 ```html
 <a href="https://developer.mozilla.org">
-  <img src="favicon144.png" alt="Visit the MDN site" />
+  <img
+    src="/shared-assets/images/examples/favicon144.png"
+    alt="Visit the MDN site" />
 </a>
 ```
 
@@ -377,7 +379,10 @@ This example builds upon the previous one, showing how to turn the image into a 
 In this example we include a `srcset` attribute with a reference to a high-resolution version of the logo; this will be loaded instead of the `src` image on high-resolution devices. The image referenced in the `src` attribute is counted as a `1x` candidate in {{glossary("User agent", "user agents")}} that support `srcset`.
 
 ```html
-<img src="favicon72.png" alt="MDN" srcset="favicon144.png 2x" />
+<img
+  src="/shared-assets/images/examples/favicon72.png"
+  alt="MDN"
+  srcset="/shared-assets/images/examples/favicon144.png 2x" />
 ```
 
 {{EmbedLiveSample("Using_the_srcset_attribute", "100%", "160")}}
