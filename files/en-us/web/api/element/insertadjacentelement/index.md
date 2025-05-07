@@ -106,7 +106,7 @@ div {
   background-color: red;
 }
 
-.active {
+.selected {
   border-color: aqua;
 }
 ```
@@ -120,10 +120,10 @@ let selectedElem;
 function selectElement(newSelection) {
   if (selectedElem !== newSelection) {
     if (selectedElem) {
-      selectedElem.classList.remove("active");
+      selectedElem.classList.remove("selected");
     }
     selectedElem = newSelection;
-    newSelection.classList.add("active");
+    newSelection.classList.add("selected");
   }
 }
 
