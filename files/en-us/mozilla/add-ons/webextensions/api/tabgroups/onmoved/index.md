@@ -9,7 +9,7 @@ browser-compat: webextensions.api.tabGroups.onMoved
 
 Fires when a tab group is moved, within a window or to another window. {{WebExtAPIRef("tabs.onMoved")}} also fire for the tabs within the group.
 
-This event doesn't fire when a tab group is moved between windows; instead, the group is removed from one window and created in another (firing {{WebExtAPIRef("tabGroups.onRemoved")}} and {{WebExtAPIRef("tabGroups.onCreated")}}.
+In Chrome, this event doesn't fire when a tab group is moved between windows; instead, the group is removed from one window and created in another (firing {{WebExtAPIRef("tabGroups.onRemoved")}} and {{WebExtAPIRef("tabGroups.onCreated")}}.
 
 ## Syntax
 
