@@ -87,9 +87,7 @@ If the value is a {{cssxref("&lt;length&gt;")}} value, it represents the horizon
 
 If the value is a {{cssxref("&lt;percentage&gt;")}}, the value is also the horizontal position value relative to the width of the container, positioned relative to the left edge, but the offset is not from the edge of the mask to the edge of the box, but rather, the mask image dimension is [subtracted from the container's dimension](/en-US/docs/Web/CSS/background-position#regarding_percentages), and then a percentage of the resulting value is used as the direct offset from the box's left edge, which is the same as [percentage values for `background-position`](/en-US/docs/Web/CSS/background-position#regarding_percentages). The equation is:
 
-```md
-(container dimension - mask dimension) \* (position %) = (dimension offset value)
-```
+`(container dimension - mask dimension) \* (position %) = (dimension offset value)`
 
 Given a mask that is `100px` wide and and origin box is `1000px` wide, setting `mask-postion: 10%;`, the equivalent of `10% 50%`, means that the point 10% across and 50% down the mask is to be placed at the point 10% across and 50% down the box container. The mask is vertically centered at `90px` from the left edge (`(1000 - 100) * 10% = 90`). If the left offset had been `0%`, the left edge of mask would be on the left of the container (`(1000 - 100) * 0% = 0`). If the left offset had been `100%`, the right edge of mask would be on the right of the container because the left offset would be the mask-size width away from the right edge (`(1000 - 100) * 100% = 900`).
 
