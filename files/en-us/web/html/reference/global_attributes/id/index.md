@@ -49,7 +49,7 @@ const content = window.preamble.textContent;
 ```
 
 > [!WARNING]
-> While elements with `id` attributes are treated as global properties on the `window` object, depending on this behavior is dangerous and discouraged. It can lead to unexpected conflicts with some browser existing or future APIs. Use `document.getElementById()` or `document.querySelector()` instead.
+> Relying on this behavior is dangerous and discouraged. It can lead to unexpected conflicts with some existing or future APIs in the browser. For example, if browsers add a new global property called `preamble`, then the same code will no longer be able to access the HTML element. Use `document.getElementById()` or `document.querySelector()` instead.
 >
 > For example, if we had an element with an `id="performance"`, the following code would've worked before the introduction of Performance in modern browsers:
 >
