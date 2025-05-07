@@ -103,7 +103,7 @@ We include four {{htmlelement("section")}} elements, each containing one {{htmle
 
 #### CSS
 
-We apply {{cssxref("border")}}, {{cssxref("padding")}}, and {{cssxref("margin")}} to every `<div>`. These create the reference points for the mask image origin points. The `border` shorthand includes a {{cssxref("border-color")}}. We also include a {{cssxref("background-color")}}. These provide a green background and a blue border to mask. Lastly, all our `<div>` elements are provided with a {{cssxref("mask-image")}}.
+We apply {{cssxref("border")}}, {{cssxref("padding")}}, and {{cssxref("margin")}} to every `<div>`. These create the reference points for the mask image origin. The `border` shorthand includes a {{cssxref("border-color")}}. We also include a {{cssxref("background-color")}}. These provide a green background and a blue border to mask. Finally, all our `<div>` elements are provided with a {{cssxref("mask-image")}}.
 
 ```css
 div {
