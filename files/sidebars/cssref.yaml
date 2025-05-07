@@ -80,27 +80,32 @@ sidebar:
   - type: listSubPagesGrouped
     path: /Web/CSS
     tags: css-pseudo-class
+    link: /Web/CSS/Pseudo-classes
     title: Pseudo-classes
     details: closed
   - type: listSubPagesGrouped
     path: /Web/CSS
     tags: css-pseudo-element
+    link: /Web/CSS/Pseudo-elements
     title: Pseudo-elements
     details: closed
   - type: listSubPages
     path: /Web/CSS
     tags: css-at-rule
+    link: /Web/CSS/CSS_syntax/At-rule
     title: At-rules
     details: closed
   - type: listSubPages
     path: /Web/CSS
     tags: css-function
     depth: 2
+    link: /Web/CSS/CSS_Values_and_Units/CSS_Value_Functions
     title: Functions
     details: closed
   - type: listSubPages
     path: /Web/CSS
     tags: css-type
+    link: /Web/CSS/CSS_Values_and_Units/CSS_data_types
     title: Types
     details: closed
   - type: section
