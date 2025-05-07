@@ -7,10 +7,7 @@ browser-compat: css.properties.mask-size
 
 {{CSSRef}}
 
-The **`mask-size`** [CSS](/en-US/docs/Web/CSS) property specifies the sizes of the mask images. The size of the image can be fully or partially constrained in order to preserve its intrinsic ratio.
-
-> [!NOTE]
-> If the value of this property is not set in a {{cssxref("mask")}} shorthand property that is applied to the element after the `mask-size` CSS property, the value of this property is then reset to its initial value by the shorthand property.
+The **`mask-size`** [CSS](/en-US/docs/Web/CSS) property specifies the sizes of the mask images. The size of the mask image can be fully or partially constrained in order to preserve its {{glossary("aspect ratio", "intrinsic ratio")}}.
 
 ## Syntax
 
@@ -21,13 +18,13 @@ mask-size: contain;
 mask-size: auto;
 
 /* One-value syntax */
-/* Mask width (height set to 'auto') */
+/* Mask width. Sets height to 'auto'. */
 mask-size: 50%;
 mask-size: 3em;
 mask-size: 12px;
 
 /* Two-value syntax */
-/* First value: mask width, second value: mask height */
+/* First value: mask width. Second value: mask height */
 mask-size: 3em 25%;
 mask-size: auto 6px;
 mask-size: auto 50%;
@@ -37,7 +34,7 @@ mask-size: auto, contain;
 mask-size:
   50%,
   50% 25%,
-  25%;
+  auto 25%;
 mask-size: 6px, auto, contain;
 
 /* Global values */
@@ -80,12 +77,12 @@ An element can have multiple mask layers applied. The number of mask layers is d
 
 Each `mask-size` value in the comma-separated list of values is matched up with an associated mask layer as defined by the list of `mask-image` values, in order. If the number of values in the two properties differs:
 
-- Any excess values of `mask-size` are not used.
+- If `mask-size` has more values than `mask-image`, the excess values of `mask-size` are not used.
 - If `mask-size` has fewer values than `mask-image`, the `mask-size` values are repeated.
 
-Each `mask-size` value is a `<bg-size>` value. There are three ways to declare each `<bg-size>`: one keyword, two lengths or percentages, or one length or percentage:
+Each `mask-size` value is a `<bg-size>` value. There are three ways to declare each `<bg-size>`: one keyword, two lengths, percentages or the keyword `auto`, or one length, percentage, or `auto`:
 
-- The available keywords are `cover` and `contain`
+- The available keywords are `cover` and `contain`.
 - When two values are specified, the first defines the mask width and the second defines its height.
 - When one value is specified, it defines only the mask width, with the height set to `auto`.
 
@@ -98,6 +95,8 @@ The rendered size of the mask image is computed as follows:
 - If the `mask-size` is `auto` (which resolves to `auto auto`), it is rendered at the size at which the mask would be displayed if no CSS were applied to change the rendering; this is its {{glossary("intrinsic size")}}. If it has no intrinsic dimensions and no intrinsic proportion, as is the case with [CSS gradients](/en-US/docs/Web/CSS/gradient), it is rendered at the size of the mask positioning area, defined by the {{cssxref("mask-origin")}} (which defaults to `border-box`).
   If the mask source has no dimensions but has a proportion (aspect-ratio), a value of `auto` will render it as if `contain` had been specified instead. If the image has one intrinsic dimension and a proportion, it is rendered at the size determined by that one dimension and the proportion. If the image has one intrinsic dimension but no proportion, it's rendered using the intrinsic dimension and the corresponding dimension of the mask positioning area.
 - If `mask-size` has one `auto` component and one non-`auto` component, which applies to all single-value values, the aspect ratio is maintained if the mask source has an intrinsic proportion. If there are no intrinsic proportions, the `auto` value is assumed to be the dimension of the mask positioning area.
+
+Like with all longhand components of shorthand property, if the {{cssxref("mask")}} shorthand property is set and the value of the `mask-size` property is not defined within any mask layer, the `mask-size` value is reset to its initial value of `auto` for those mask layers.
 
 ## Formal definition
 
@@ -124,7 +123,7 @@ We include two {{htmlelement("div")}} elements:
 
 #### CSS
 
-We define the `<div>` elements to be twice as tall as they are wide and provide them with a gradient background and mask:
+The `<div>` elements are defined to be twice as tall as they are wide, with a gradient background and mask:
 
 ```css
 div {
@@ -135,7 +134,7 @@ div {
 }
 ```
 
-We then set the width of one `<div>` element's mask to `50%`, with the height defaulting to `auto`, and the height of the other `<div>` element's mask to `50%`, with the width set to `auto`:
+The width of one `<div>` element's mask is set to `50%`, with the height defaulting to `auto`. The mask's height for the second `<div>` element is set to `50%` with the width set to `auto`:
 
 ```css
 .width {
@@ -147,8 +146,8 @@ We then set the width of one `<div>` element's mask to `50%`, with the height de
 }
 ```
 
-In the `width` case, the mask is rendered 100px wide (50% of the 200px-wide element). The height defaults to `auto`, maintaining the mask's aspect ratio.
-In the `height` case, the mask is rendered 200px tall (50% of the 400px-high container). The width is explicitly set to `auto`, maintaining the mask's aspect ratio.
+In the `width` case, the mask is rendered `100px` wide (`50%` of the `200px`-wide element). The height defaults to `auto`, maintaining the mask's aspect ratio.
+In the `height` case, the mask is rendered `200px` tall (`50%` of the `400px`-high container). The width is explicitly set to `auto`, maintaining the mask's aspect ratio.
 
 ```css hidden
 body {
@@ -167,7 +166,7 @@ This example demonstrates the keyword values for `mask-size`.
 
 #### HTML
 
-We include three {{htmlelement("section")}} elements, each with a different class name, and each containing a `<div>`.
+Three {{htmlelement("section")}} elements are defined, each with a different class name, and each containing a `<div>`.
 
 ```html
 <section class="auto">
@@ -183,7 +182,7 @@ We include three {{htmlelement("section")}} elements, each with a different clas
 
 #### CSS
 
-We define the `<div>` elements to be twice as tall as they are wide and provide them with a gradient background and mask:
+The `<div>` elements are defined to be twice as tall as they are wide, with a gradient background and mask:
 
 ```css
 div {
@@ -194,7 +193,7 @@ div {
 }
 ```
 
-We then set the `mask-size` of two of the `<div>` elements to one of the property's keyword values; the third `<div>` is given a `mask-size` of `auto` to demonstrate the original intrinsic dimensions of the mask:
+The `mask-size` of two of the `<div>` elements is set to one of the property's keyword values. The third `<div>` has a `mask-size` of `auto` set demonstrating the original intrinsic dimensions of the mask:
 
 ```css
 .auto div {
@@ -210,7 +209,7 @@ We then set the `mask-size` of two of the `<div>` elements to one of the propert
 }
 ```
 
-We show the value by displaying the class name using generated content.
+The property values is displayed using [generated content](/en-US/docs/Web/CSS/CSS_generated_content).
 
 ```css
 section::before {
@@ -236,7 +235,7 @@ section {
 
 {{EmbedLiveSample("Cover and contain", "", "430px")}}
 
-With `auto`, the star is displayed at its intrinsic 100px by 100px size. With `cover`, the star grows to be `400px` tall, covering the entire origin box. With `contain`, the star grows until one dimension equals the same dimension of the [origin box](/en-US/docs/Web/CSS/mask-origin), meaning that the star is as large as it can be (`200px` wide) but still contained by it.
+With `auto`, the star is displayed at its intrinsic `100px` by `100px` size. With `cover`, the star grows to be `400px` tall, covering the entire origin box. With `contain`, the star grows until one dimension equals the same dimension of the [origin box](/en-US/docs/Web/CSS/mask-origin), meaning that the star is as large as it can be (`200px` wide) but still contained by it.
 
 ### When the mask is larger than the container
 
