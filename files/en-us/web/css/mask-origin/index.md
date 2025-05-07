@@ -56,7 +56,7 @@ There are three non-standard values that are shortcuts for standard `<coord-box>
 
 The `mask-origin` property is very similar to the {{cssxref("background-origin")}} property, but it has a different set of values and a different initial value. The initial value depends on the if there is an associated CSS layout box; if yes, the default value is `border-box`. In comparison, the default for `background-origin` is `padding-box`.
 
-For SVG elements without an associated CSS layout box, the values `content-box`, `padding-box` and `border-box` compute to `fill-box`; so the default `border-box` computes to `fill-box`, in which case the position is relative to the object bounding box. For HTML elements, if a SVG-related value of `fill-box`, `stroke-box`, or `view-box` is set, the value computes to the default `border-box`.
+For SVG elements without an associated CSS layout box, the values `content-box`, `padding-box`, and `border-box` (the default value) compute to `fill-box`, meaning the position is relative to the object bounding box. For HTML elements, if a SVG-related value of `fill-box`, `stroke-box`, or `view-box` is set, the value is computed to `border-box`.
 
 An element can have multiple mask layers applied. The number of layers is determined by the number of comma-separated values in the {{cssxref("mask-image")}} property value (even if one or more of those values is `none`). Each `mask-origin` value in the comma-separated list of values is matched with a comma-separated `mask-image` value, in the same order.
 
