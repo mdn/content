@@ -122,7 +122,7 @@ sidebar:
       - /Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
       - link: /Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
         title: Resizing_background_images
-      - Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds
+      - /Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds
   - title: Box alignment
     details: closed
     children:
