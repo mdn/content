@@ -202,7 +202,6 @@ function changeTabsMouse(e) {
 }
 
 function changeTabsKey(e) {
-
   let targetTab = e.target;
   const tabParent = targetTab.parentNode;
   const tabPanelGroup = tabParent.parentNode.children[1];
