@@ -12,7 +12,7 @@ The **`mask-position`** [CSS](/en-US/docs/Web/CSS) property sets the initial pos
 ## Syntax
 
 ```css
-/* Single keyword values */
+/* Single keyword value */
 /* Sets second value to 'center' */
 mask-position: left;
 mask-position: center;
@@ -25,7 +25,7 @@ mask-position: left center;
 mask-position: right top;
 
 /* One <position> value */
-/* Horizontal position. Vertical position set to 'center'. */
+/* Horizontal position. Vertical position set to 'center' */
 mask-position: 25%;
 mask-position: 0px;
 mask-position: 8em;
@@ -36,7 +36,7 @@ mask-position: 25% 75%;
 mask-position: 0px 0px;
 mask-position: 10% 8em;
 
-/* Edge offsets values */
+/* Four values: Edge offsets */
 mask-position: bottom 10px right 20px;
 mask-position: right 3em bottom 10px;
 mask-position: bottom 10px right 0;
@@ -62,51 +62,63 @@ mask-position: unset;
 One or more `<position>` values, separated by commas.
 
 - {{cssxref("&lt;position&gt;")}}
-  - : One to four values representing a 2D position regarding the edges of the element's box. Relative or absolute offsets can be given.
+  - : One, two, or four values representing a 2D position specifying the edges of the element's box. Relative or absolute offsets can be given.
 
 ## Description
 
-The `mask-position` property enables defining the position of each mask layer. An element can have multiple mask layers applied. The number of layers is determined by the number of comma-separated values in the `mask-image` property value (even if a value is `none`).
+The `mask-position` property defines the position of each mask layer. An element can have multiple mask layers applied. The number of layers is determined by the number of comma-separated values in the {{cssxref("mask-image")}} property value (even `none` values create a layer).
 
 Each `mask-position` value in the comma-separated list of values is matched up with an associated mask layer as defined by the list of `mask-image` values, in order. If the number of values in the two properties differs:
 
 - If `mask-position` has more values than mask-image, the excess values of `mask-position` are not used.
 - If `mask-position` has fewer values than mask-image, the `mask-position` values are repeated.
 
-Each `mask-position` defines the associated mask layer's position relative to the associated {{cssxref("mask-origin")}} value. The values of the `mask-origin` are similarly matched up with the `mask-image` values, in order, with excess values being unused or repeating the values if there is an under-count. This means each mask layer has both an associated `mask-origin` and `mask-position` value. If no `mask-origin` is set, the value defaults to `padding-box` meaning the origin of each `mask-position` is the element's [padding-box](/en-US/docs/Web/CSS/box-edge#padding-box).
+Each `mask-position` defines the associated mask layer's position relative to the associated {{cssxref("mask-origin")}} value. The `mask-origin` property values are similarly matched up with the `mask-image` values, in order, with excess `mask-position` values being unused or `mask-position` values being repeated if they are fewer in number than the `mask-origin` values. Each mask layer, therefore, has an associated `mask-origin` and `mask-position` value.
+
+If no `mask-origin` is set, the value defaults to `padding-box`, meaning the origin of each `mask-position` is the element's [padding-box](/en-US/docs/Web/CSS/box-edge#padding-box).
 
 ### One-value syntax
 
-If only one value is specified, the second value is assumed to be `center`. If the single value is a `<length>` or `<percentage>`, that value defines the position of the mask along the horizontal axis, with the mask being vertically centered within the origin box. For example, `mask-position: 0%;` is equal to `mask-position: 0% center`.
+If only one `mask-position` value is specified, the second value is assumed to be `center`. If the value is a `<length>` or `<percentage>`, it defines the position of the mask along the horizontal axis, with the mask being vertically centered within the origin box. For example, `mask-position: 0%;` is equal to `mask-position: 0% center`.
 
-If you are using a keyword for positioning, the axis of the single value doesn't matter as the other value will resolve to `center`. While the default of `mask-position` is `0% 0%` which equates to `mask-position: top left`, the declaration `mask-position: top;` is equal to `mask-position: top center;`, `mask-position: left;` is equal to `mask-position: center left`, and `mask-position: center;` is equal to `mask-position: center center`.
+If you use a single keyword for positioning, the other value will resolve to `center`. The default of `mask-position` is `0% 0%`, which equates to `mask-position: top left`. However:
 
-If the value is a {{cssxref("&lt;length&gt;")}} value, it represents the horizontal position as an offset from the left edge of the mask positioning. A positive value represent an offset inward from the left edge of the box container. The position can be set outside of the element's box as a negative value is an outward offset that places the item off from the left edge of the container.
+- `mask-position: top;` is equivalent to `mask-position: top center;`.
+- `mask-position: left;` is equivalent to `mask-position: center left`.
+- `mask-position: center;` is equal to `mask-position: center center`.
+
+If the value is a {{cssxref("&lt;length&gt;")}} value, it represents the horizontal position as an offset from the left edge of the mask positioning. A positive value represents an offset inward from the left edge of the box container. The position can be set outside of the element's box using a negative value — this creates an outward offset that places the item outside the container's left edge.
 
 #### Percentage values
 
-If the value is a {{cssxref("&lt;percentage&gt;")}}, the value is also the horizontal position value relative to the width of the container, positioned relative to the left edge, but the offset is not from the edge of the mask to the edge of the box, but rather, the mask image dimension is [subtracted from the container's dimension](/en-US/docs/Web/CSS/background-position#regarding_percentages), and then a percentage of the resulting value is used as the direct offset from the box's left edge, which is the same as [percentage values for `background-position`](/en-US/docs/Web/CSS/background-position#regarding_percentages). The equation is:
+A {{cssxref("&lt;percentage&gt;")}} value represents the mask's horizontal position value relative to the width of the container, positioned relative to the left edge. However, the offset is not from the mask edge to the box edge. Instead, the mask image dimension is [subtracted from the container's dimension](/en-US/docs/Web/CSS/background-position#regarding_percentages), and then a percentage of the resulting value is used as the direct offset from the box's left edge, which is the same as [percentage values for `background-position`](/en-US/docs/Web/CSS/background-position#regarding_percentages).
 
-`(container dimension - mask dimension) \* (position %) = (dimension offset value)`
+The equation is:
 
-Given a mask that is `100px` wide and and origin box is `1000px` wide, setting `mask-postion: 10%;`, the equivalent of `10% 50%`, means that the point 10% across and 50% down the mask is to be placed at the point 10% across and 50% down the box container. The mask is vertically centered at `90px` from the left edge (`(1000 - 100) * 10% = 90`). If the left offset had been `0%`, the left edge of mask would be on the left of the container (`(1000 - 100) * 0% = 0`). If the left offset had been `100%`, the right edge of mask would be on the right of the container because the left offset would be the mask-size width away from the right edge (`(1000 - 100) * 100% = 900`).
+`(container dimension - mask dimension) / position percentage = dimension offset value`
+
+Given a `100px`-wide mask and a `1000px`-wide origin box, setting `mask-postion: 10%;` (the equivalent of `10% 50%`) results in the mask being vertically centered at `90px` from the left edge (`(1000 - 100) * 10% = 90`). If the left offset had been `0%`, the mask's left edge would be flush to the left of the container (`(1000 - 100) * 0% = 0`). If the left offset had been `100%`, the mask's right edge would be flush to the right of the container (`(1000 - 100) * 100% = 900`).
 
 ### Two-value syntax
 
-The two value `<position>` specifies the position of the mask image inside its mask positioning area with length and percentage values defaulting to being offsets from the `left` and `top`. If the two values are {{cssxref("&lt;length&gt;")}} values, {{cssxref("&lt;percentage&gt;")}} values, or the keyword `center`, the first value represents the horizontal position as an offset from the left edge of the mask positioning area and the second value the vertical position as an offset from it's top edge, with [percentages being offset](#percentage-values) by the masks dimension. If {{cssxref("&lt;percentage&gt;")}} values are specified, the first value is also the horizontal position value relative to the left edge and the second value
+A two-value `<position>` specifies the position of the mask image inside its mask positioning area, with length and percentage values specifying offsets from the `left` and `top` of the area.
 
-A pair of axis-specific keywords can be reordered as can an axis-spedific keywork and a length or percentage, but two length or percentage values are not interchangeable.
+If the two values are {{cssxref("&lt;length&gt;")}} values, {{cssxref("&lt;percentage&gt;")}} values, or the keyword `center`, the first value represents the horizontal position as an offset from the left edge of the mask positioning area, and the second value represents the vertical position as an offset from it's top edge, with [percentages being offset](#percentage-values) by the mask's size in that dimension.
+
+In addition, if {{cssxref("&lt;percentage&gt;")}} values are specified, the first value is also the horizontal position value relative to the left edge, and the second value is also the vertical position value relative to the top edge.
+
+A pair of axis-specific keywords can be reordered, as can an axis-specific keyword and a length or percentage, but two length or percentage values are not interchangeable.
 If one of the two values is `top`, `right`, `bottom`, or `left`, the order of the two values doesn't matter. Any `center` or `<length-percentage>` value in the pair of values will be applied to the other dimension.
 
 ### Four-value syntax
 
-The four-value syntax is the same as the two value syntax, except the `<length>` and `<percentage>` values are offsets from the edge specified, not necessary the top or left edge. The four-value syntax allows changing the order and changing the offset edge.
+The four-value syntax is the same as the two-value syntax, except the `<length>` and `<percentage>` values are offsets from the edge specified, not necessarily the top or left edge. The four-value syntax allows changing the order and the offset edge.
 
 For example, while `mask-position: 1em 2em` is a `1em` horizontal offset from the left box edge and a `2em` vertical offset from the top edge, `mask-position: top 1em left 2em` changes the order, being a `2em` horizontal offset from the left edge and a `1em` vertical offset from the top edge.
 
-Usually the four-value syntax is used to offset from the bottom and/or right, with `mask-position:  bottom 10px right 20px` represents a `10px` vertical offset up from the bottom edge and a `20px` horizontal offset leftward from the right edge.
+Usually the four-value syntax is used to offset from the bottom and/or right. For example, `mask-position:  bottom 10px right 20px` creates a `10px` vertical offset up from the bottom edge and a `20px` horizontal offset leftward from the right edge.
 
-Unlike the `<bg-position>` data type values for {{cssxref("background-position")}}, the `<position>` values for `mask-position` do not allow for a 3-value syntax and do not allow offsetting from `center`. When offsetting the mask from the `bottom` or `right`, the `mask-position` requires all four values (`top` or `bottom`, `left` or `right`, and two length or percentage values) to be declared.
+Unlike the `<bg-position>` data type values for {{cssxref("background-position")}}, the `<position>` values for `mask-position` do not allow for a 3-value syntax and do not allow offsetting from `center`. When offsetting the mask from the `bottom` or `right`, the `mask-position` requires all four values (`top` or `bottom`, `left`, or `right`, and two length or percentage values) to be declared.
 
 ## Formal definition
 
