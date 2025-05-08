@@ -12,7 +12,7 @@ The **`mask-position`** [CSS](/en-US/docs/Web/CSS) property sets the initial pos
 ## Syntax
 
 ```css
-/* Single keyword value */
+/* Single <position> keyword value */
 /* Sets second value to 'center' */
 mask-position: left;
 mask-position: center;
@@ -20,28 +20,28 @@ mask-position: right;
 mask-position: top;
 mask-position: bottom;
 
-/* Two keyword values */
+/* Two <position> keyword values */
 mask-position: left center;
 mask-position: right top;
 
-/* One <position> value */
+/* One length or percentage <position> value */
 /* Horizontal position. Vertical position set to 'center' */
 mask-position: 25%;
 mask-position: 0px;
 mask-position: 8em;
 
-/* Two <position> values */
+/* Two length or percentage <position> values */
 /* First value: horizontal position. Second value: vertical position */
 mask-position: 25% 75%;
 mask-position: 0px 0px;
 mask-position: 10% 8em;
 
-/* Four values: Edge offsets */
+/* Edge offsets: Four <position> values */
 mask-position: bottom 10px right 20px;
 mask-position: right 3em bottom 10px;
 mask-position: bottom 10px right 0;
 
-/* Multiple values */
+/* Multiple <position> values */
 mask-position:
   top left,
   bottom 10px right 10px;
@@ -95,9 +95,11 @@ A {{cssxref("&lt;percentage&gt;")}} value represents the mask's horizontal posit
 
 The equation is:
 
-`(container dimension - mask dimension) / position percentage = dimension offset value`
+`(container dimension - mask dimension) * position percentage = dimension offset value`
 
-Given a `100px`-wide mask and a `1000px`-wide origin box, setting `mask-postion: 10%;` (the equivalent of `10% 50%`) results in the mask being vertically centered at `90px` from the left edge (`(1000 - 100) * 10% = 90`). If the left offset had been `0%`, the mask's left edge would be flush to the left of the container (`(1000 - 100) * 0% = 0`). If the left offset had been `100%`, the mask's right edge would be flush to the right of the container (`(1000 - 100) * 100% = 900`).
+Given a `100px`-wide mask and a `1000px`-wide origin box, setting `mask-postion: 10%;` (the equivalent of `10% 50%`) results in the mask being vertically centered at `90px` from the left edge. The equation is `(1000 - 100) * 10% = 90`. If the left offset had been `0%`, the mask's left edge would be flush to the left of the container (`(1000 - 100) * 0% = 0`).
+
+If the left offset had been `100%`, the mask's right edge would be flush to the right of the container as the left edge of the `100px` wide mask would be `900px` (`(1000 - 100) * 100% = 900`) from the left edge of the container (The `100px` width put `900px` from the left edge, means the right edge would be `1000px` from the left edge, which is the right edge of the container).
 
 ### Two-value syntax
 
@@ -112,13 +114,11 @@ If one of the two values is `top`, `right`, `bottom`, or `left`, the order of th
 
 ### Four-value syntax
 
-The four-value syntax is the same as the two-value syntax, except the `<length>` and `<percentage>` values are offsets from the edge specified, not necessarily the top or left edge. The four-value syntax allows changing the order and the offset edge.
+The four-value syntax is the similar to the two-value syntax. In the two-value syntax, the `<length>` and `<percentage>` values are offsets from the top or left edge. The four-value syntax allows defining the offset edge. For example, `mask-position: 1em 2em` is a `1em` horizontal offset from the left box edge and a `2em` vertical offset from the top edge. In the four-value syntax, this would be `mask-position: left 1em top 2em`. Because we're defining the offset edges when using the four-value syntax, the order isn't important: Setting `mask-position: top 2em left 1em` produces the same result; also a `2em` horizontal offset from the left edge and a `1em` vertical offset from the top edge.
 
-For example, while `mask-position: 1em 2em` is a `1em` horizontal offset from the left box edge and a `2em` vertical offset from the top edge, `mask-position: top 1em left 2em` changes the order, being a `2em` horizontal offset from the left edge and a `1em` vertical offset from the top edge.
+The real power of the four-value syntax is that it allows us the define the offset edge. For example, `mask-position:  bottom 10px right 20px` creates a `10px` vertical offset up from the bottom edge and a `20px` horizontal offset leftward from the right edge. Usually the four-value syntax is used to offset from the bottom and/or right. But this syntax is also helpful if you can't remember the offset edge order for the two-value syntax.
 
-Usually the four-value syntax is used to offset from the bottom and/or right. For example, `mask-position:  bottom 10px right 20px` creates a `10px` vertical offset up from the bottom edge and a `20px` horizontal offset leftward from the right edge.
-
-Unlike the `<bg-position>` data type values for {{cssxref("background-position")}}, the `<position>` values for `mask-position` do not allow for a 3-value syntax and do not allow offsetting from `center`. When offsetting the mask from the `bottom` or `right`, the `mask-position` requires all four values (`top` or `bottom`, `left`, or `right`, and two length or percentage values) to be declared.
+One thing to note is that, unlike the `<bg-position>` data type values for {{cssxref("background-position")}}, the `<position>` values for `mask-position` do not allow for a 3-value syntax and do not allow offsetting from `center`. When offsetting the mask from the `bottom` or `right`, the `mask-position` requires all four values (either `top` or `bottom` as the vertical offset edge along with the vertical length or percentage offset value and either `left` or `right`as the horizontal offset edge along with the horizontal length or percentage offset value) to be declared.
 
 ## Formal definition
 
