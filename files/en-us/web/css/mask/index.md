@@ -71,7 +71,7 @@ mask: unset;
     - `<repeat-style>`
       - : Sets the repetition of the mask image. See {{cssxref("mask-repeat")}}.
     - `<geometry-box>`
-      - : If only one `<geometry-box>` value is given, it sets both the {{cssxref("mask-origin")}} and {{cssxref("mask-clip")}} property values. If two `<geometry-box>` values are present, the first defines the `mask-origin` and the second defines the 1mask-clip`.
+      - : If only one `<geometry-box>` value is given, it sets both the {{cssxref("mask-origin")}} and {{cssxref("mask-clip")}} property values. If two `<geometry-box>` values are present, the first defines the `mask-origin` and the second defines the `mask-clip`.
     - `<geometry-box> | no-clip`
       - : Sets the area affected by the mask image. See {{cssxref("mask-clip")}}.
     - `<compositing-operator>`
