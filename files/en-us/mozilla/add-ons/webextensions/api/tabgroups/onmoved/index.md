@@ -9,6 +9,7 @@ browser-compat: webextensions.api.tabGroups.onMoved
 
 Fires when a tab group is moved, within a window or to another window. {{WebExtAPIRef("tabs.onMoved")}} also fire for the tabs within the group.
 
+The event is passed a {{WebExtAPIRef("tabGroups.TabGroup")}} object. This includes the `windowId` but not the position of the tab group. To determine the position of the tab group, use {{WebExtAPIRef("tabs.query()")}} with the `groupId`, and read the `index` property of the returned result.
 In Chrome, this event doesn't fire when a tab group is moved between windows; instead, the group is removed from one window and created in another (firing {{WebExtAPIRef("tabGroups.onRemoved")}} and {{WebExtAPIRef("tabGroups.onCreated")}}.
 
 ## Syntax
@@ -45,7 +46,7 @@ Listen for and log tab group movement:
 
 ```js
 function tabGroupMoved(group) {
-  console.log(`Tab with ID ${group.id} was moved to window ${group.windotId}.`);
+  console.log(`Tab group with ID ${group.id} was moved to window ${group.windowId}.`);
 }
 
 browser.tabGroups.onMoved.addListener(tabGroupMoved);
