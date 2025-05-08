@@ -6,13 +6,13 @@ page-type: guide
 
 {{DefaultAPISidebar("Summarizer API")}}
 
-The [Summarizer API](/en-US/docs/Web/API/Summarizer_API) provides an asynchronous ({{jsxref("Promise")}}-based) mechanism for a website to feed a body of text into the browser's own internal language model and request that it returns a summary of the text based on specified options. This article explains how to use the fundamentals of the Summarizer API.
+The [Summarizer API](/en-US/docs/Web/API/Summarizer_API) provides an asynchronous ({{jsxref("Promise")}}-based) mechanism for a website to feed a body of text into the browser's own internal AI model and request that it returns a summary of the text based on specified options. This article explains how to use the fundamentals of the Summarizer API.
 
 ## Creating a summarizer
 
 All of the Summarizer API's functionality is accessed through a single interface — {{domxref("Summarizer")}}.
 
-The first step in getting the browser LLM to output a summary is to create a `Summarizer` object instance. This is done using the {{domxref("Summarizer.create_static", "Summarizer.create()")}} static method, which takes an options object as an argument specifying options for what kind of summary you want written:
+The first step in getting the browser AI model to output a summary is to create a `Summarizer` object instance. This is done using the {{domxref("Summarizer.create_static", "Summarizer.create()")}} static method, which takes an options object as an argument specifying options for what kind of summary you want written:
 
 ```js
 const summarizer = await Summarizer.create({
@@ -26,11 +26,11 @@ const summarizer = await Summarizer.create({
 });
 ```
 
-The {{domxref("Summarizer.sharedContext", "sharedContext")}} provides a string that helps the LLM write a more suitable summary for the context the text is being used in, while the {{domxref("Summarizer.type", "type")}} specifies what kind of summary you want to provide (key bullet points? A "tl;dr" summary?).
+The {{domxref("Summarizer.sharedContext", "sharedContext")}} option provides a string that helps the AI model write a more suitable summary for the context the text is being used in, while the {{domxref("Summarizer.type", "type")}} specifies what kind of summary you want to provide, like key bullet points or a "tl;dr" summary.
 
 We also specify the desired {{domxref("Summarizer.length", "length")}}, output {{domxref("Summarizer.format", "format")}}, {{domxref("Summarizer.expectedInputLanguages", "expectedInputLanguages")}}, and desired {{domxref("Summarizer.outputLanguage", "outputLanguage")}}. If the input and output languages are not specified, the language of the input text is auto-detected, and the output language will match the input language.
 
-If the browser's LLM does not support the specified input or output languages, an error is thrown.
+If the browser's AI model does not support the specified input or output languages, an error is thrown.
 
 > [!NOTE]
 > See the {{domxref("Summarizer.create_static", "create()")}} reference page for the full list of available options.
@@ -51,7 +51,12 @@ const availability = await Summarizer.availability({
 });
 ```
 
-This method returns an emumerated value indicating whether support is, or will be available for the specified set of options. The meaning of the `available` and `unavailable` values is fairly obvious, but there are also `downloadable` and `downloading` values that mean support for the specified set of options is available to download or currently downloading, respectively.
+This method returns an emumerated value indicating whether support is, or will be available for the specified set of options:
+
+- `downloadable` means that the implementation supports the requested options, but needs to download a model or some fine-tuning data.
+- `downloading` means that the implementation supports the requested options, but needs to finish an ongoing download.
+- `available` means that the implementation supports the requested options without requiring any new downloads.
+- `unavailable` means that the implementation doesn't support the requested options.
 
 ## Generating a summary
 
@@ -86,7 +91,7 @@ You can cancel a pending `create()`, `summarize()`, or `summarizeStreaming()` op
 
 ```js
 const controller = new AbortController();
-const summary = await summarizer.summarize(formData.get("summaryText"), {
+const summary = await summarizer.summarize(myTextString, {
   signal: controller.signal,
 });
 
@@ -97,7 +102,7 @@ controller.abort();
 
 EDITORIAL: I've tried this, and it doesn't seem to work. Am I missing something?
 
-## Example
+## Complete example
 
 Let's look at a complete example that demonstrates the Summarizer API in action.
 
@@ -199,14 +204,14 @@ const inputCount = document.querySelector(".input-count");
 const outputCount = document.querySelector(".output-count");
 ```
 
-Next, we use the {{domxref("EventTarget.when()")}} method to create {{domxref("Observable")}} objects representing:
+Next, we use the {{domxref("EventTarget.addEventListener()")}} method to listen to two sets of events:
 
 - `click` events on the `<button>` element; when the button is clicked, the `handleSubmission()` function is called (we're not doing a real form `submit`, as they are disabled in the MDN live example embeds for security purposes).
 - `input` events on the `<textarea>` element; when the current `<textarea>` value is changed, the `updateInputCount()` function is called.
 
 ```js live-sample___summarizer-example
-submitBtn.when("click").subscribe(handleSubmission);
-textarea.when("input").subscribe(updateInputCount);
+submitBtn.addEventListener("click", handleSubmission);
+textarea.addEventListener("input", updateInputCount);
 ```
 
 The `updateInputCount()` function, defined next, sets the first `<output>` element's {{domxref("Node.textContent", "textContent")}} to a string containing the length of the `<textarea>` value. We also define a counterpart `displayOutputCount()` function that does the same thing for the second `<output>` element. This isn't called until near the end of the `handleSubmission()` function, after the summary has been returned.
@@ -221,7 +226,7 @@ function displayOutputCount() {
 }
 ```
 
-Now we define the `handleSubmission()` function itself. We begin by creating a new {{domxref("FormData")}} object instance containing all our `<form>` data name/value pairs. We then run some data validation tests, checking whether the `<textarea>` content (`summaryText`) is empty or too short to waste LLM cycles on, and printing an error message inside the summary output `<p>` if so.
+Now we define the `handleSubmission()` function itself. We begin by creating a new {{domxref("FormData")}} object instance containing all our `<form>` data name/value pairs. We then run some data validation tests, checking whether the `<textarea>` content (`summaryText`) is empty or too short to waste cycles on, and printing an error message inside the summary output `<p>` if so.
 
 Provided the text passed the tests, we create a `Summarizer` object using the `create()` method, passing it a `sharedContext` string and the `type` (`summaryType`) and `length` (`summaryLength`) values selected in the form. We then set the output summary `<p>` and `<output>` to "pending" messages and disable the `<submit>` button while we run the `summarize()` operation.
 

@@ -43,8 +43,6 @@ const summarizer = await Summarizer.create({
 summarizer.destroy();
 ```
 
-EDITORIAL: From reading the spec, it sounds like I need to use this along with an `AbortController`, but I'm not sure what this would look like.
-
 ## Specifications
 
 {{Specifications}}

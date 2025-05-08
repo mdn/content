@@ -78,24 +78,15 @@ console.log(summary);
 ### Generating a summary stream
 
 ```js
-const stream = await summarizer.summarizeStreaming(myTextString);
-const reader = stream.getReader();
+const stream = summarizer.summarizeStreaming(myTextString);
 let summary = "";
 
-async function processText({ done, value }) {
-  if (done) {
-    console.log("Stream complete");
-    console.log(summary);
-    return;
-  } else {
-    summary += value;
-    const result = await reader.read();
-    processText(result);
-  }
+for await (const chunk of stream) {
+  summary += chunk;
 }
 
-const result = await reader.read();
-processText(result);
+console.log("Stream complete");
+summaryOutput.textContent = summary;
 ```
 
 ## Specifications

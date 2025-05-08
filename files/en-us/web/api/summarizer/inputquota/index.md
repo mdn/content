@@ -16,15 +16,32 @@ The **`inputQuota`** read-only property of the {{domxref("Summarizer")}} interfa
 
 A number specifying the available input quota. This number is implementation dependant. For example, it might be {{jsxref("infinity")}} if there are no limits beyond the user's memory and the maximum length of JavaScript strings, or it might be a number of tokens in the case of LLMs that use a token/credits scheme.
 
-EDITORIAL: I'm not sure how this number is useful — the value returned is so subjective that it seems meaningless. I'd like to get some insight into its use cases, and an example of how Chrome implements it.
-
 ## Examples
 
-```js
-const summarizer = await Summarizer.create();
+### Checking if you have enough quota
 
-// Logs a number
-console.log(summarizer.inputQuota);
+In the below snippet, we create a new `Summarizer` instance using {{domxref("Summarizer.create_static", "create()")}}, then return the total input quota via `inputQuota` and the input quota usage for a summarizing a particular text string via {{domxref("Summarizer.measureInputUsage", "measureInputUsage()")}}.
+
+We then test to see if the individual input usage for that string is great than the total available quota. If so, we throw an appropriate error; it not, we commence summarizing the string using {{domxref("Summarizer.summarize", "summarize()")}}.
+
+```js
+const summarizer = await Summarizer.create({
+  sharedContext:
+    "A general summary to help a user decide if the text is worth reading",
+  type: "tl;dr",
+  length: "short",
+});
+
+const totalInputQuota = summarizer.inputQuota;
+const inputUsage = await summarizer.measureInputUsage(myTextString);
+
+if (inputUsage > totalInputQuota) {
+  throw new Error("Boo, not enough quota left to generate a summary.");
+} else {
+  console.log("Yay, enough quote left to generate a summary.");
+  const summary = await summarizer.summarize(myTextString);
+  // ...
+}
 ```
 
 ## Specifications

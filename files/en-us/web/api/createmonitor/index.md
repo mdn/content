@@ -9,7 +9,7 @@ browser-compat: api.CreateMonitor
 
 {{APIRef("Summarizer API")}}{{SeeCompatTable}}
 
-The **`CreateMonitor`** interface of the Writing Assistance APIs ({{domxref("Summarizer API", "Summarizer API", "", "nocode")}} provides information on the progress of an AI model download, which will typilcally be an LLM (Gemini Nano, in the case of Google Chrome).
+The **`CreateMonitor`** interface of the Writing Assistance APIs ({{domxref("Summarizer API", "Summarizer API", "", "nocode")}} provides information on the progress of an AI model download or some fine-tuning data for the model.
 
 {{InheritanceDiagram}}
 

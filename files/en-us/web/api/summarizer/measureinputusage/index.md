@@ -10,7 +10,7 @@ browser-compat: api.Summarizer.measureInputUsage
 
 {{APIRef("Summarizer API")}}{{SeeCompatTable}}
 
-The **`measureInputUsage()`** method of the {{domxref("Summarizer")}} interface reports how much input quota would be used by a summarize operation for a given text input.
+The **`measureInputUsage()`** method of the {{domxref("Summarizer")}} interface reports how much {{domxref("Summarizer.inputQuota", "inputQuota")}} would be used by a summarize operation for a given text input.
 
 ## Syntax
 
@@ -30,13 +30,9 @@ measureInputUsage(input, options)
     - `signal`
       - : An {{domxref("AbortSignal")}} object instance, which allows the `measureInputUsage()` operation to be aborted via the associated {{domxref("AbortController")}}.
 
-EDITORIAL: Aborting the call via an abort signal doesn't seem to work. Am I missing something?
-
 ### Return value
 
 A {{jsxref("Promise")}} that fulfills with a number specifying the {{domxref("Summarizer.inputQuota", "inputQuota")}} usage of the given input text.
-
-EDITORIAL: As I said on the inputQuota page, I ought to include some information about input quota and how it is determined for each implenentation. Maybe just including all of that info on the inputQuota page and then linking to it from here would be enough? I should specify how accurate the value returned by measureInputUsage is, whether it is an estimaate, etc.?
 
 ### Exceptions
 
@@ -51,7 +47,11 @@ EDITORIAL: As I said on the inputQuota page, I ought to include some information
 
 ## Examples
 
-### Basic `measureInputUsage()` usage
+### Checking if you have enough quota
+
+In the below snippet, we create a new `Summarizer` instance using {{domxref("Summarizer.create_static", "create()")}}, then return the total input quota via {{domxref("Summarizer.inputQuota", "inputQuota")}} and the input quota usage for a summarizing a particular text string via `measureInputUsage()`.
+
+We then test to see if the individual input usage for that string is great than the total available quota. If so, we throw an appropriate error; it not, we commence summarizing the string using {{domxref("Summarizer.summarize", "summarize()")}}.
 
 ```js
 const summarizer = await Summarizer.create({
@@ -61,8 +61,16 @@ const summarizer = await Summarizer.create({
   length: "short",
 });
 
-const inputUsage = await summarizer.measureInputUsage(myText);
-console.log(`Input usage: ${inputUsage}`);
+const totalInputQuota = summarizer.inputQuota;
+const inputUsage = await summarizer.measureInputUsage(myTextString);
+
+if (inputUsage > totalInputQuota) {
+  throw new Error("Boo, not enough quota left to generate a summary.");
+} else {
+  console.log("Yay, enough quote left to generate a summary.");
+  const summary = await summarizer.summarize(myTextString);
+  // ...
+}
 ```
 
 ## Specifications

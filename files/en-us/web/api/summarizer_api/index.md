@@ -10,7 +10,7 @@ spec-urls: https://webmachinelearning.github.io/writing-assistance-apis/#summari
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Summarizer API")}}
 
-The **Summarizer API** summarizes a given body of text via a browser's own internal language model.
+The **Summarizer API** summarizes a given body of text via a browser's own internal AI model.
 
 ## Concepts and usage
 
@@ -20,13 +20,13 @@ Writing a summary of a larger body of text is a common writing task, and one tha
 - Summarizing a meeting transcript so those joining the meeting late can get up to speed with what they've missed.
 - Summarizing a set of product reviews to quickly communicate overall sentiment.
 
-The Summarizer API provides an asynchronous ({{jsxref("Promise")}}-based) mechanism for a website to feed a body of text into the browser's own internal language model and request that it returns a summary of the text based on specified options.
+The Summarizer API provides an asynchronous ({{jsxref("Promise")}}-based) mechanism for a website to feed a body of text into the browser's own internal AI model and request that it returns a summary of the text based on specified options.
 
 This is done using the functionality made available by the {{domxref("Summarizer")}} interface, in a two-step process:
 
 1. Create a `Summarizer` object instance using the {{domxref("Summarizer.create_static", "Summarizer.create()")}} static method, specifying options for what kind of summary you want written. Options include length, type (for example, "tl;dr" or key points), format (plain text or markdown), and input and output languages.
    > [!NOTE]
-   > If you want to check whether the browser LLM is able to support your preferences, you can do so with the {{domxref("Summarizer.availability_static", "Summarizer.availability()")}} static method.
+   > If you want to check whether the browser AI model is able to support your preferences, you can do so with the {{domxref("Summarizer.availability_static", "Summarizer.availability()")}} static method.
 2. Run the {{domxref("Summarizer.summarize()")}} instance method to request the summary.
 
 After a `Summarizer` instance has been created, you can remove it again using the {{domxref("Summarizer.destroy()")}} instance method. You can also cancel a pending `create()` or `summarize()` operation using an {{domxref("AbortController")}}.
