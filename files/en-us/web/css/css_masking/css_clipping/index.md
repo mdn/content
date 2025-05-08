@@ -12,13 +12,17 @@ CSS clipping enables you to define visible portions of an element, effectively "
 
 Clipping is a CSS technique used to clip, or hide, sections of an element, displaying only the area of the element located within a developer defined path. By applying clipping, you can create visually engaging designs. With clipping, elements aren't limited to being rendered as rectangles.
 
-The `clip-path` lets you apply clipping using shapes or paths. In this example, we clip a blue square {{htmlelement("div")}}, creating a diamond, using the {{cssxref("basic-shape/polygon","polygon()")}} function as the clipping path:
+The `clip-path` lets you apply clipping using shapes or paths.
 
-```html hidden live-sample__diamond
+### Example
+
+In this example, we clip a blue square {{htmlelement("div")}}, creating a diamond, using the {{cssxref("basic-shape/polygon","polygon()")}} function as the clipping path:
+
+```html hidden live-sample__clip-path
 <div></div>
 ```
 
-```css live-sample__diamond
+```css live-sample__clip-path
 div {
   height: 200px;
   width: 200px;
@@ -28,7 +32,7 @@ div {
 }
 ```
 
-{{ EmbedLiveSample('diamond', 230, 230) }}
+{{ EmbedLiveSample('clip-path', 230, 230) }}
 
 ### Values for `clip-path` property
 
