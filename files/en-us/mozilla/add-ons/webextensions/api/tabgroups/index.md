@@ -7,7 +7,9 @@ browser-compat: webextensions.api.tabGroups
 
 {{AddonSidebar}}
 
-This API enables extensions to modify and rearrange tab groups.
+This API enables extensions to modify and rearrange [tab groups](https://support.mozilla.org/en-US/kb/tab-groups).
+
+Tab groups persist across browser restarts, except for tab groups in private browsing windows.
 
 ## Permissions
 
