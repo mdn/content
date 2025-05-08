@@ -7,12 +7,12 @@ browser-compat: css.properties.mask-size
 
 {{CSSRef}}
 
-The **`mask-size`** [CSS](/en-US/docs/Web/CSS) property specifies the sizes of the mask images. The size of the mask image can be fully or partially constrained in order to preserve its {{glossary("aspect ratio", "intrinsic ratio")}}.
+The **`mask-size`** [CSS](/en-US/docs/Web/CSS) property specifies the sizes of specified mask images. Mask image sizes can be fully or partially constrained to preserve their {{glossary("aspect ratio", "intrinsic aspect ratios")}}.
 
 ## Syntax
 
 ```css
-/* Keywords syntax */
+/* Keyword syntax */
 mask-size: cover;
 mask-size: contain;
 mask-size: auto;
