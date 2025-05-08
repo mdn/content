@@ -163,6 +163,40 @@ div {
 
 {{EmbedLiveSample('Setting_height_using_pixels_and_percentages', 'auto', 240)}}
 
+### Using stretch value
+
+#### HTML
+
+```html
+<div class="parent">
+  <div class="child">text</div>
+  <div class="child stretch">stretch</div>
+</div>
+```
+
+#### CSS
+
+```css
+.parent {
+  height: 200px;
+  border: solid;
+}
+
+.child {
+  margin: 10px;
+  background: #0999;
+}
+
+.stretch {
+  height: -webkit-fill-available;
+  height: stretch;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Using stretch value', 'auto', 300)}}
+
 ## Specifications
 
 {{Specifications}}

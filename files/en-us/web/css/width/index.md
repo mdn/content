@@ -207,6 +207,39 @@ p.min-blue {
 
 {{EmbedLiveSample('Example using "min-content"', '500px', '155px')}}
 
+### Using stretch value
+
+#### HTML
+
+```html
+<div class="parent">
+  <div class="child">text</div>
+  <div class="child stretch">stretch</div>
+</div>
+```
+
+#### CSS
+
+```css
+.parent {
+  border: solid;
+  margin: 10px;
+  display: flex;
+}
+.child {
+  background: #0999;
+  margin: 10px;
+}
+.stretch {
+  width: -webkit-fill-available;
+  width: stretch;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Using stretch value', 'auto', 150)}}
+
 ## Specifications
 
 {{Specifications}}
