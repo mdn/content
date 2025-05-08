@@ -8,8 +8,9 @@ browser-compat: api.Selection.anchorNode
 
 {{ ApiRef("DOM") }}
 
-The **`Selection.anchorNode`** read-only property returns the
-{{domxref("Node")}} in which the selection begins.
+The **`Selection.anchorNode`** read-only property returns the {{domxref("Node")}} in which
+the selection begins. It can return `null` if selection never existed in the document 
+(e.g., an iframe that was never clicked on).
 
 A user may make a selection from left to right (in document order) or right to left
 (reverse of document order). The anchor is where the user began the selection. This can
