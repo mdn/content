@@ -12,7 +12,7 @@ CSS clipping enables you to define visible portions of an element, effectively "
 
 Clipping is a CSS technique used to clip, or hide, sections of an element, displaying only the area of the element located within a developer defined path. By applying clipping, you can create visually engaging designs. With clipping, elements aren't limited to being rendered as rectangles.
 
-The `clip-path` lets you apply clipping using shapes or paths.
+The `clip-path` property lets you apply clipping using shapes or paths.
 
 ### Example
 
@@ -34,7 +34,7 @@ div {
 
 {{ EmbedLiveSample('clip-path', 230, 230) }}
 
-### Values for `clip-path` property
+### Values of the `clip-path` property
 
 The `polygon()` function is a {{cssxref("basic-shape")}}. The value can be a clip source, a CSS shape, a geometry-box, both a shape and geometry-box, or the keyword `none`, which is the default.
 
