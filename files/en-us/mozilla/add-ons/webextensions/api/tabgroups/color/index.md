@@ -23,9 +23,6 @@ Values of this type are a {{jsxref("string")}} and can take these values:
 - red
 - yello
 
-> [!NOTE]
-> The British English spelling of grey is used to maintain compatibility with Chrome.
-
 {{WebExtExamples("h2")}}
 
 ## Browser compatibility
