@@ -43,7 +43,7 @@ Listen for and log tab group creation:
 
 ```js
 function tabGroupCreated(group) {
-  console.log(`Tab with ID ${group.id} was created.`);
+  console.log(`Tab group with ID ${group.id} was created in window ${group.windowId}.`);
 }
 
 browser.tabGroups.onCreated.addListener(tabGroupCreated);

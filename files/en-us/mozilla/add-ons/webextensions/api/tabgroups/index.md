@@ -36,7 +36,7 @@ To use this API, an extension must request the `"tabGroups"` [permission](/en-US
 - {{WebExtAPIRef("tabGroups.move()")}}
   - : Moves a tab group within or to another window.
 - {{WebExtAPIRef("tabGroups.query()")}}
-  - : Returns all grups or finds tab groups with certain properties.
+  - : Returns all tab groups or finds tab groups with certain properties.
 - {{WebExtAPIRef("tabGroups.update()")}}
   - : Modifies the state of a tab group.
 
@@ -56,3 +56,9 @@ To use this API, an extension must request the `"tabGroups"` [permission](/en-US
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+- {{WebExtAPIRef("tabs.group()")}}
+- {{WebExtAPIRef("tabs.ungroup()")}}
+- {{WebExtAPIRef("tabs.query()")}}
+- {{WebExtAPIRef("tabs.Tab")}}
