@@ -14,6 +14,8 @@ If a call moves tabs out of tab groups and any of those tab groups become empty,
 > [!NOTE]
 > The `tabs.group()` method is not the only way to group tabs. A tab also joins a tab group when {{WebExtAPIRef("tabs.move")}} places it between tabs that are part of a tab group.
 
+For more information on tab groups, see {{WebExtAPIRef("tabGroups")}}.
+
 ## Syntax
 
 ```js-nolint

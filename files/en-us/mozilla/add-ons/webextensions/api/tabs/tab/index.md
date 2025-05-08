@@ -32,7 +32,7 @@ Values of this type are objects. They contain the following properties:
 - `favIconUrl` {{optional_inline}}
   - : `string`. The URL of the tab's favicon. Only present if the extension has the `"tabs"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) or [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions). It may also be `undefined` if the page has no favicon, or an empty string if the tab is loading.
 - `groupId` {{optional_inline}}
-  - : `integer`. The ID of the tab group the tab belongs to. Set to {{WebExtAPIRef("tabGroups.TAB_GROUP_ID_NONE")}} if the tab doesn't belong to a tab group. See {{WebExtAPIRef("tabs.group")}}.
+  - : `integer`. The ID of the tab group the tab belongs to. Set to `-1` ({{WebExtAPIRef("tabGroups.TAB_GROUP_ID_NONE")}}) if the tab doesn't belong to a tab group. See {{WebExtAPIRef("tabs.group")}}. For more information on tab groups, see {{WebExtAPIRef("tabGroups")}}.
 - `height` {{optional_inline}}
   - : `integer`. The height of the tab in pixels.
 - `hidden`

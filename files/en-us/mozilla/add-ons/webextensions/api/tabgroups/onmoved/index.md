@@ -54,6 +54,15 @@ function tabGroupMoved(group) {
 browser.tabGroups.onMoved.addListener(tabGroupMoved);
 ```
 
+Locate a tab group moved to another window.
+
+```js
+let tabs = await browser.tabs.query({
+  groupId: group.id,
+});
+console.log(`Moved tab group to ${tabs[0].index} in window ${group.windowId}`);
+```
+
 {{WebExtExamples}}
 
 ## Browser compatibility

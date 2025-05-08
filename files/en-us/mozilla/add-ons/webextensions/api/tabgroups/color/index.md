@@ -11,7 +11,7 @@ The color of a tab group.
 
 ## Type
 
-Values of this type are a {{jsxref("string")}} and can take these values:
+Values of this type are a string and can take these values:
 
 - blue
 - cyan
