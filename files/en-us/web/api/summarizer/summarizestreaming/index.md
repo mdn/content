@@ -34,7 +34,7 @@ EDITORIAL: Aborting the call via an abort signal doesn't seem to work. Am I miss
 
 ### Return value
 
-A {{jsxref("Promise")}} that fulfills with a {{domxref("ReadableStream")}} containing the generated summary.
+A {{domxref("ReadableStream")}} containing the generated summary.
 
 ### Exceptions
 
@@ -61,24 +61,15 @@ const summarizer = await Summarizer.create({
   length: "short",
 });
 
-const stream = await summarizer.summarizeStreaming(myTextString);
-const reader = stream.getReader();
+const stream = summarizer.summarizeStreaming(myTextString);
 let summary = "";
 
-async function processText({ done, value }) {
-  if (done) {
-    console.log("Stream complete");
-    console.log(summary);
-    return;
-  } else {
-    summary += value;
-    const result = await reader.read();
-    processText(result);
-  }
+for await (const chunk of stream) {
+  summary += chunk;
 }
 
-const result = await reader.read();
-processText(result);
+console.log("Stream complete");
+summaryOutput.textContent = summary;
 ```
 
 ## Specifications

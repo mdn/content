@@ -10,7 +10,7 @@ browser-compat: api.Summarizer.sharedContext
 
 {{APIRef("Summarizer API")}}{{SeeCompatTable}}
 
-The **`sharedContext`** read-only property of the {{domxref("Summarizer")}} interface returns a string describeing the context the pieces of text to summarize are being used in. This helps the `Summarizer` to generate more suitable summaries.
+The **`sharedContext`** read-only property of the {{domxref("Summarizer")}} interface returns a string describing the context the pieces of text to summarize are being used in. This helps the `Summarizer` to generate more suitable summaries.
 
 ## Value
 

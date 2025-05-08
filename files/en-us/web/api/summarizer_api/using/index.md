@@ -12,7 +12,7 @@ The [Summarizer API](/en-US/docs/Web/API/Summarizer_API) provides an asynchronou
 
 All of the Summarizer API's functionality is accessed through a single interface — {{domxref("Summarizer")}}.
 
-The first step in getting the browser LLM to output a summary is to create a `Summarizer` object instance. This is done using the {{domxref("Summarizer.create()")}} static method, which takes an options object as an argument specifying options for what kind of summary you want written:
+The first step in getting the browser LLM to output a summary is to create a `Summarizer` object instance. This is done using the {{domxref("Summarizer.create_static", "Summarizer.create()")}} static method, which takes an options object as an argument specifying options for what kind of summary you want written:
 
 ```js
 const summarizer = await Summarizer.create({
@@ -33,13 +33,13 @@ We also specify the desired {{domxref("Summarizer.length", "length")}}, output {
 If the browser's LLM does not support the specified input or output languages, an error is thrown.
 
 > [!NOTE]
-> See the {{domxref("Summarizer.create", "create()")}} reference page for the full list of available options.
+> See the {{domxref("Summarizer.create_static", "create()")}} reference page for the full list of available options.
 
 Different implementations will likely support different languages.
 
 ## Checking configuration support
 
-Before creating a `Summarizer`, you can check whether your desired configuration is supported by the current browser using the {{domxref("Summarizer.availability()")}} static method. For example:
+Before creating a `Summarizer`, you can check whether your desired configuration is supported by the current browser using the {{domxref("Summarizer.availability_static", "Summarizer.availability()")}} static method. For example:
 
 ```js
 const availability = await Summarizer.availability({
@@ -67,24 +67,15 @@ It also optionally accepts an options object as a second argument that can accep
 There is a streaming version of the `summarize()` method available — {{domxref("Summarizer.summarizeStreaming()")}} — that allows you to return the summary as a {{domxref("ReadableStream")}}:
 
 ```js
-const stream = await summarizer.summarizeStreaming(myTextString);
-const reader = stream.getReader();
+const stream = summarizer.summarizeStreaming(myTextString);
 let summary = "";
 
-async function processText({ done, value }) {
-  if (done) {
-    console.log("Stream complete");
-    console.log(summary);
-    return;
-  } else {
-    summary += value;
-    const result = await reader.read();
-    processText(result);
-  }
+for await (const chunk of stream) {
+  summary += chunk;
 }
 
-const result = await reader.read();
-processText(result);
+console.log("Stream complete");
+summaryOutput.textContent = summary;
 ```
 
 After a `Summarizer` instance has been created, you can remove it again using the {{domxref("Summarizer.destroy()")}} instance method.
@@ -250,22 +241,26 @@ async function handleSubmission() {
     summaryOutput.innerHTML = "";
   }
 
-  const summarizer = await Summarizer.create({
-    sharedContext:
-      "A general summary to help a user decide if the text is worth reading",
-    type: formData.get("summaryType"),
-    length: formData.get("summaryLength"),
-  });
+  try {
+    const summarizer = await Summarizer.create({
+      sharedContext:
+        "A general summary to help a user decide if the text is worth reading",
+      type: formData.get("summaryType"),
+      length: formData.get("summaryLength"),
+    });
 
-  summaryOutput.textContent = "...generating summary...";
-  outputCount.textContent = "Output summary character count: -";
-  submitBtn.disabled = true;
+    summaryOutput.textContent = "...generating summary...";
+    outputCount.textContent = "Output summary character count: -";
+    submitBtn.disabled = true;
 
-  const summary = await summarizer.summarize(formData.get("summaryText"));
+    const summary = await summarizer.summarize(formData.get("summaryText"));
 
-  summaryOutput.textContent = summary;
-  displayOutputCount();
-  submitBtn.disabled = false;
+    summaryOutput.textContent = summary;
+    displayOutputCount();
+    submitBtn.disabled = false;
+  } catch (e) {
+    summaryOutput.innerHTML = `<span class="error">${e}</span>`;
+  }
 }
 ```
 
