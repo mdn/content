@@ -11,10 +11,10 @@ The state of a tab group.
 
 ## Type
 
-An {{jsxref("object")}} with these properties:
+Values of this type are objects that can contain these properties:
 
 - `collapsed`
-  - : A {{jsxref("boolean")}} indicating whether the tab group is collapsed or expanded in the tab strip.
+  - : `boolean`. Whether the tab group is collapsed or expanded in the tab strip.
 - `color`
   - : A {{WebExtAPIRef("tabGroups.Color")}} type for the name of the user-selected color for the tab group's label and icons.
 - `id`

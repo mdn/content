@@ -11,6 +11,15 @@ The tab group ID value returned when a tab isn't in a tab group.
 
 Its value is `-1`.
 
+This value can appear as `groupId` in the following APIs:
+
+- {{WebExtAPIRef("tabs.group()")}}
+- {{WebExtAPIRef("tabs.ungroup()")}}
+- {{WebExtAPIRef("tabs.query()")}}
+- {{WebExtAPIRef("tabs.Tab")}}
+
+The `tabGroups.TAB_GROUP_ID_NONE` constant is part of the `tabGroups` namespace, which is only available when the [`tabGroups` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabGroups#permissions) has been granted. If your extension does not require the `tabGroups` permission, use `-1` instead of `tabGroups.TAB_GROUP_ID_NONE`.
+
 {{WebExtExamples("h2")}}
 
 ## Browser compatibility

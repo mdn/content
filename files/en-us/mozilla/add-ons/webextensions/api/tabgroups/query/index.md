@@ -7,12 +7,12 @@ browser-compat: webextensions.api.tabGroups.query
 
 {{AddonSidebar}}
 
-Return all grups or find groups with certain properties.
+Return all tab groups or find groups with certain properties.
 
 ## Syntax
 
 ```js-nolint
-let tabGroupDetails = await browser.tabGroups.query(
+let group = await browser.tabGroups.query(
     groupId                // integer
 );
 ```
