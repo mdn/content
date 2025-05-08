@@ -63,24 +63,15 @@ console.log(translation);
 ### Generating a translation stream
 
 ```js
-const stream = await translator.translateStreaming(myTextString);
-const reader = stream.getReader();
+const stream = translator.translateStreaming((myTextString);
 let translation = "";
 
-async function processText({ done, value }) {
-  if (done) {
-    console.log("Stream complete");
-    console.log(translation);
-    return;
-  } else {
-    translation += value;
-    const result = await reader.read();
-    processText(result);
-  }
+for await (const chunk of stream) {
+  translation += chunk;
 }
 
-const result = await reader.read();
-processText(result);
+console.log("Stream complete");
+console.log(translation);
 ```
 
 ## Specifications
