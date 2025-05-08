@@ -169,8 +169,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // Add navigation event handlers to each tab
   tabs.forEach((tab) => {
-    tab.addEventListener('click', changeTabsMouse);
-    tab.addEventListener('keydown', changeTabsKey);
+    tab.addEventListener("click", changeTabsMouse);
+    tab.addEventListener("keydown", changeTabsKey);
   });
 });
 
