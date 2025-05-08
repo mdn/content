@@ -22,6 +22,9 @@ This property is a shorthand for the following CSS properties:
 - {{cssxref("mask-repeat")}}
 - {{cssxref("mask-size")}}
 
+> [!NOTE]
+> As the `mask` shorthand resets all the component properties as well as the {{cssxref("mask-border")}} properties to their initial values, the specification authors recommend using the `mask` shorthand rather than the individual component properties to override any mask values set earlier in the cascade. This ensures that `mask-border` is also reset, allowing the new styles to take effect.
+
 ## Syntax
 
 ```css
@@ -71,7 +74,7 @@ mask: unset;
     - `<repeat-style>`
       - : Sets the repetition of the mask image. See {{cssxref("mask-repeat")}}.
     - `<geometry-box>`
-      - : If only one `<geometry-box>` value is given, it sets both the {{cssxref("mask-origin")}} and {{cssxref("mask-clip")}} property values. If two `<geometry-box>` values are present, the first defines the `mask-origin` and the second defines the 1mask-clip`.
+      - : If only one `<geometry-box>` value is given, it sets both {{cssxref("mask-origin")}} and {{cssxref("mask-clip")}}. If two `<geometry-box>` values are present, then the first sets {{cssxref("mask-origin")}} and the second sets {{cssxref("mask-clip")}}.
     - `<geometry-box> | no-clip`
       - : Sets the area affected by the mask image. See {{cssxref("mask-clip")}}.
     - `<compositing-operator>`
@@ -79,7 +82,7 @@ mask: unset;
 
 ## Description
 
-The `mask` shorthand property hides part or all of the element it is applied to. Which parts are hidden, visible, or partially rendered depends on the opacity or luminance of the mask areas. The sections masked by opaque parts of the mask, or light parts in the case of `luminance`, are visible, whereas transparent sections of the mask, and black parts in the case of luminance, are hidden.
+The `mask` property hides part or all of the element it is applied to. Which parts are hidden, visible, or partially rendered depends on the opacity of the mask at that pixel. The sections masked by opaque parts of the mask are completely hidden, whereas transparent sections of the mask render the element visible.
 
 While not all constituent mask properties need to be declared, any values that are omitted default to their initial values, which are:
 
