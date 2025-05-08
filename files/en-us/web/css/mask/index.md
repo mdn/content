@@ -79,7 +79,7 @@ mask: unset;
 
 ## Description
 
-The `mask` shorthand property hides part or all of the element it is applied to. The parts of the element that are hidden, visible, or partially shown depend on either the opacity (alpha channel of the mask) or the brightness (luminance) of the mask. In alpha masking, opaque areas of the mask reveal the element, and transparent areas hide it. In luminance masking, light areas of the mask reveal the element, and dark areas hide it.
+The `mask` shorthand property hides part or all of the element it is applied to. The parts of the element that are hidden, visible, or partially shown depend on either the opacity (alpha channel of the mask) or the brightness (luminance) of the mask. In alpha masking, opaque areas of the mask reveal the element, and transparent areas hide it. In luminance masking, light opaque areas of the mask reveal the element, and dark or transparent areas hide it.
 
 While not all constituent mask properties need to be declared, any values that are omitted default to their initial values, which are:
 
