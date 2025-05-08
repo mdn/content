@@ -297,11 +297,10 @@ body {
 /* Clipping region with curves and smooth transitions and a box */
 .shape2 {
   clip-path: shape(
-    from 10px 10px,
-    curve to 55px 30px with 25px 5px / 10px 20px,
-    smooth to 90px 10px,
-    curve by -30px 90px with 30px 40px,
-    curve by -50px -90px with -60px -45px,
+    from 20px 50px,
+    curve to 60px 40px with -20px 0 / 60px 0,
+    curve to 100px 50px with 60px 0 / 140px 0,
+    line to 60px 100px,
     close,
     move to 100px 100px,
     hline by 50px,
