@@ -139,6 +139,8 @@ We use `mask-star.svg` as a mask image on our first image:
 ```css
 img:first-of-type {
   mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-size: 25%;
+  max-width: 50%;
 }
 ```
 
