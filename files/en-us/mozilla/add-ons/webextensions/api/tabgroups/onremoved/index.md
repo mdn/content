@@ -9,7 +9,8 @@ browser-compat: webextensions.api.tabGroups.onRemoved
 
 Fires when a tab group is removed. This can occur when a user closes a tab group or a tab group is closed automatically because another change means it no longer contained any tabs.
 
-> [!NOTE] In Firefox, this event does not fire when a window is closed ([bug 1965007](https://bugzilla.mozilla.org/show_bug.cgi?id=1965007)). As an alternative, use {{WebExtAPIRef("windows.onRemoved")}} to detect closed windows, and retrieve the remaining set of groups with {{WebExtAPIRef("tabGroups.query()")}}.
+> [!NOTE] In Firefox, this event does not fire when a window is closed ([bug 1965007](https://bugzil.la/1965007)). As an alternative, use {{WebExtAPIRef("windows.onRemoved")}} to detect closed windows, and retrieve the remaining set of groups with {{WebExtAPIRef("tabGroups.query()")}}.
+
 ## Syntax
 
 ```js-nolint

@@ -46,7 +46,9 @@ Listen for and log tab group movement:
 
 ```js
 function tabGroupMoved(group) {
-  console.log(`Tab group with ID ${group.id} was moved to window ${group.windowId}.`);
+  console.log(
+    `Tab group with ID ${group.id} was moved to window ${group.windowId}.`,
+  );
 }
 
 browser.tabGroups.onMoved.addListener(tabGroupMoved);

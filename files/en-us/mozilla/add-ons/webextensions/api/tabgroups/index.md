@@ -58,6 +58,7 @@ To use this API, an extension must request the `"tabGroups"` [permission](/en-US
 {{Compat}}
 
 ## See also
+
 - {{WebExtAPIRef("tabs.group()")}}
 - {{WebExtAPIRef("tabs.ungroup()")}}
 - {{WebExtAPIRef("tabs.query()")}}
