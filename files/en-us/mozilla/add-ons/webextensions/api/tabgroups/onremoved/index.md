@@ -44,7 +44,7 @@ Listen for and log tab group removals:
 
 ```js
 function tabGroupRemoved(group) {
-  console.log(`Tab with ID ${group.id} was removed.`);
+  console.log(`Tab group with ID ${group.id} was removed.`);
 }
 
 browser.tabGroups.onRemoved.addListener(tabGroupRemoved);

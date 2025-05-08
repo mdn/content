@@ -9,6 +9,8 @@ browser-compat: webextensions.api.tabGroups.onUpdated
 
 Fires when a tab group is updated.
 
+To detect `windowId` changes, use {{WebExtAPIRef("tabGroups.onMoved")}} instead.
+
 ## Syntax
 
 ```js-nolint
@@ -43,7 +45,7 @@ Listen for and log tab group updates:
 
 ```js
 function tabGroupUpdated(group) {
-  console.log(`Tab with ID ${group.id} was updated.`);
+  console.log(`Tab group with ID ${group.id} was updated.`, group);
 }
 
 browser.tabGroups.onUpdated.addListener(tabGroupUpdated);
