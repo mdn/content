@@ -32,7 +32,7 @@ div {
 
 {{ EmbedLiveSample('clip-path', 230, 230) }}
 
-With the `clip-path` property, you can make complex shapes by clipping an element to a `<basic-shape>` or to an SVG source. You can animate and transition `clip-path` shapes if the declared states have the same number of vector points.
+With the `clip-path` property, you can make complex shapes by clipping an element to a `<basic-shape>` or to an SVG source. You can [animate and transition `clip-path` shapes](#animation) if the declared states have the same number of vector points.
 
 ### Values of the `clip-path` property
 
@@ -257,9 +257,106 @@ Some of these functions appear to only provide basic predefined clipping options
 
 ### Creating polygons
 
-With `polygon()`, by defining pairs of coordinates, each of which represents a vertex of the shape. you can create intricate forms like stars or abstract figures.
+With `polygon()`, by defining pairs of coordinates, each of which represents a vertex of the shape. you can create intricate forms like stars or abstract figures. The coordinates define vector points connected by straight lines.
+
+Here we use the `polygon()` function to create a star:
+
+```html hidden
+<div></div>
+```
+
+```css
+div {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(rebeccapurple, magenta) blue;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    100% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    0% 35%,
+    39% 35%,
+    50% 0%
+  );
+}
+```
+
+{{ EmbedLiveSample('Creating polygons', 230, 230) }}
 
 ### Animation
+
+Clipped shapes can be animated and transitioned by declaring the same number of vector points for the different states.
+
+```html hidden
+<div></div>
+```
+
+```css hidden
+div {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(rebeccapurple, magenta) blue;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    100% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    0% 35%,
+    39% 35%,
+    50% 0%
+  );
+}
+```
+
+```css
+@keyframes morphStar {
+  from {
+    clip-path: polygon(
+      50% 0%,
+      61% 35%,
+      100% 35%,
+      68% 57%,
+      79% 91%,
+      50% 70%,
+      21% 91%,
+      32% 57%,
+      0% 35%,
+      39% 35%,
+      50% 0%
+    );
+  }
+  to {
+    clip-path: polygon(
+      50% 10%,
+      65% 30%,
+      90% 20%,
+      75% 60%,
+      85% 95%,
+      50% 80%,
+      15% 95%,
+      25% 60%,
+      10% 20%,
+      35% 30%,
+      50% 10%
+    );
+  }
+}
+
+div {
+  animation: morphStar alternate 3s infinite ease-in-out;
+}
+```
+
+{{ EmbedLiveSample('Animation', 230, 230) }}
 
 ### Paths and shapes()
 
