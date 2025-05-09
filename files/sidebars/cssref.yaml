@@ -247,11 +247,10 @@ sidebar:
       - /Web/CSS/CSS_positioned_layout/Understanding_z-index
       - /Web/CSS/CSS_positioned_layout/Using_z-index
       - /Web/CSS/CSS_positioned_layout/Stacking_without_z-index
-  - title: Scroll_snap
+  - type: listSubPages
+    path: /Web/CSS/CSS_scroll_snap
+    title: Scroll_snap
     details: closed
-    children:
-      - /Web/CSS/CSS_scroll_snap/Basic_concepts
-      - /Web/CSS/CSS_scroll_snap/Using_scroll_snap_events
   - title: Shapes
     details: closed
     children:
@@ -271,6 +270,13 @@ sidebar:
     details: closed
     children:
       - /Web/CSS/CSS_transitions/Using_CSS_transitions
+  - title: Values and units
+    details: closed
+    children:
+      - /Web/CSS/CSS_Values_and_Units/Value_definition_syntax
+      - /Web/CSS/CSS_Values_and_Units/Numeric_data_types
+      - /Web/CSS/CSS_Values_and_Units/Textual_data_types
+      - /Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions
   - type: section
     link: /Web/CSS/Layout_cookbook
   - children:
@@ -291,13 +297,6 @@ sidebar:
       - /Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator
       - /Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
       - /Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator
-  - title: Values and units
-    details: closed
-    children:
-      - /Web/CSS/CSS_Values_and_Units/Value_definition_syntax
-      - /Web/CSS/CSS_Values_and_Units/Numeric_data_types
-      - /Web/CSS/CSS_Values_and_Units/Textual_data_types
-      - /Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions
 l10n:
   de:
     Beginners: Einsteiger-Tutorials
