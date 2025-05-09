@@ -75,7 +75,7 @@ beforeBtn.addEventListener("click", () => {
   if (activeElem) {
     activeElem.insertAdjacentElement("beforebegin", tempDiv);
   }
-  setListener(tempDiv);
+  setListener(tempDiv); // Definition in the linked GitHub demo
 });
 
 afterBtn.addEventListener("click", () => {
@@ -84,7 +84,7 @@ afterBtn.addEventListener("click", () => {
   if (activeElem) {
     activeElem.insertAdjacentElement("afterend", tempDiv);
   }
-  setListener(tempDiv);
+  setListener(tempDiv); // Definition in the linked GitHub demo
 });
 ```
 

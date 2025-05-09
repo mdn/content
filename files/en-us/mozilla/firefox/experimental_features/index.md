@@ -1192,6 +1192,47 @@ The affected methods and properties are: {{domxref("Element.innerHTML")}}, {{dom
   </tbody>
 </table>
 
+### Removal of `beforescriptexecute` and `afterscriptexecute` events
+
+The non-standard events [`beforescriptexecute`](/en-US/docs/Web/API/Document/beforescriptexecute_event) and [`afterscriptexecute`](/en-US/docs/Web/API/Document/afterscriptexecute_event) on the {{domxref("Document")}} interface, and [`afterscriptexecute`](/en-US/docs/Web/API/Element/afterscriptexecute_event) and [`beforescriptexecute`](/en-US/docs/Web/API/Element/beforescriptexecute_event) on the {{domxref("Element")}} interface are on the path to removal. They have been disabled in Nightly.
+([Firefox bug 1954685](https://bugzil.la/1954685)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>139</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>139</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>139</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>139</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.events.script_execute.enable</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ### PerformanceEventTiming.interactionId
 
 {{domxref("PerformanceEventTiming.interactionId")}} can be used to measure latency timing for events triggered by a particular user interaction. ([Firefox bug 1934683](https://bugzil.la/1934683)).
@@ -1889,10 +1930,10 @@ See [Firefox bug 1697647](https://bugzil.la/1697647) for more details.
 
 ### Prioritized Task Scheduling API
 
-The [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) provides a standardized way to prioritize all tasks belonging to an application, whether they defined in a website developer's code, or in third party libraries and frameworks. ([Firefox bug 1734997](https://bugzil.la/1734997))
-
-This feature was enabled on Firefox Nightly in Firefox 101.
-Support in Firefox Nightly 135 has been temporarily disabled in order to avoid [breakage in-the-wild](https://bugzil.la/1937232).
+The [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) provides a standardized way to prioritize all tasks belonging to an application, whether they are defined in a website developer's code, or in third-party libraries and frameworks.
+Support for most of the API was added behind a preference in Firefox version 101.
+Firefox version 139 adds support for {{domxref("scheduler.yield()")}} and enables the API in the Nightly release.
+([Firefox bug 1734997](https://bugzil.la/1734997) and [Firefox bug 1920115](https://bugzil.la/1920115)).
 
 <table>
   <thead>
@@ -1905,8 +1946,8 @@ Support in Firefox Nightly 135 has been temporarily disabled in order to avoid [
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>101</td>
-      <td>No</td>
+      <td>139</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
