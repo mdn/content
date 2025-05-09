@@ -9,6 +9,10 @@ browser-compat: html.elements.fencedframe
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Fenced Frame API")}}
 
+> [!WARNING]
+> This feature is currently opposed by one browser vendor.
+> See the [Standards positions](#standards_positions) section below for details.
+
 The **Fenced Frame API** provides functionality for controlling content embedded in {{htmlelement("fencedframe")}} elements.
 
 ## Concepts and usage
@@ -141,6 +145,13 @@ The following demos all make use of `<fencedframe>`s:
 ## Specifications
 
 {{Specifications}}
+
+### Standards positions
+
+One browser vendor [opposes](/en-US/docs/Glossary/Web_standards#opposing_standards) this specification.
+Known standards positions are as follows:
+
+- Mozilla (Firefox): [Negative](https://github.com/mozilla/standards-positions/issues/781)
 
 ## Browser compatibility
 
