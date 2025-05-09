@@ -5,7 +5,7 @@ page-type: guide
 sidebar: svgref
 ---
 
-There are several ways to create an manipulate SVG using JavaScript.
+There are several ways to create and manipulate SVG using JavaScript.
 This document describes event handling, interactivity and working with embedded SVG content.
 
 One can override default browser behaviors with the `evt.preventDefault()` method, add event listeners to objects with the syntax `element.addEventListener(event, function, useCapture)`, and set element properties with syntax like `svgElement.style.setProperty("fill-opacity", "0.0", "")`. Note the existence of all three arguments setting properties.
