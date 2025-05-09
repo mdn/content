@@ -206,14 +206,17 @@ function changeTabsKey(e) {
   const tabParent = targetTab.parentNode;
   const tabPanelGroup = tabParent.parentNode.children[1];
 
-switch (true) {
-  case (e.key == 'ArrowLeft') || (e.shiftKey && e.key == 'Tab'):
-    targetTab = targetTab.previousElementSibling || targetTab.parentNode.lastElementChild;
-    break;
-  case (e.key == 'ArrowRight') || (e.key == "Tab"):
-    targetTab = targetTab.nextElementSibling || targetTab.parentNode.firstElementChild;
-    break;
-}
+  switch (true) {
+    case e.key == "ArrowLeft" || (e.shiftKey && e.key == "Tab"):
+      targetTab =
+        targetTab.previousElementSibling ||
+        targetTab.parentNode.lastElementChild;
+      break;
+    case e.key == "ArrowRight" || e.key == "Tab":
+      targetTab =
+        targetTab.nextElementSibling || targetTab.parentNode.firstElementChild;
+      break;
+  }
 
   // Remove all current selected tabs
   tabParent
