@@ -126,6 +126,8 @@ sidebar:
   - title: Box alignment
     details: closed
     children:
+      - link: /Web/CSS/CSS_box_alignment/Box_alignment
+        title: Overview
       - link: /Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables
         title: Box_alignment_in_block_layout
       - /Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox
@@ -173,19 +175,10 @@ sidebar:
     children:
       - /Web/CSS/CSSOM_view/Coordinate_systems
       - /Web/CSS/CSSOM_view/Viewport_concepts
-  - title: Display
+  - type: listSubPages
+    path: /Web/CSS/CSS_display
+    title: Display
     details: closed
-    children:
-      - /Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow
-      - /Web/CSS/CSS_display/Containing_block
-      - /Web/CSS/CSS_display/Flow_layout
-      - /Web/CSS/CSS_display/In_flow_and_out_of_flow
-      - /Web/CSS/CSS_display/Introduction_to_formatting_contexts
-      - /Web/CSS/CSS_display/Block_formatting_context
-      - /Web/CSS/CSS_display/Flow_layout_and_writing_modes
-      - /Web/CSS/CSS_display/Flow_layout_and_overflow
-      - /Web/CSS/CSS_display/multi-keyword_syntax_of_display
-      - /Web/CSS/CSS_display/Visual_formatting_model
   - title: Flexbox
     details: closed
     children:
@@ -196,12 +189,10 @@ sidebar:
       - /Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis
       - /Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items
       - /Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
-  - title: Fonts
+  - type: listSubPages
+    path: /Web/CSS/CSS_fonts
+    title: Fonts
     details: closed
-    children:
-      - /Web/CSS/CSS_fonts/OpenType_fonts_guide
-      - /Web/CSS/CSS_fonts/Variable_fonts_guide
-      - /Web/CSS/CSS_fonts/WOFF
   - title: Grid
     details: closed
     children:
