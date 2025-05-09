@@ -17,11 +17,11 @@ Clipping is a CSS technique used to clip, or hide, sections of an element, displ
 The `clip-path` property lets you apply clipping. The value is the vector path defining the area of the element that should remain visible. The path can be defined using boxes, a reference to an [SVG `<clipPath>`](#svg-as-source), or CSS [shapes and paths](#shape-function). For example, we clip a blue square {{htmlelement("div")}}, creating a diamond, using the {{cssxref("basic-shape/polygon","polygon()")}} function as the clipping path:
 
 ```html hidden live-sample__clip-path
-<div></div>
+<div class="diamond"></div>
 ```
 
 ```css live-sample__clip-path
-div {
+.diamond {
   height: 200px;
   width: 200px;
   background-color: blue;
@@ -240,7 +240,7 @@ Even values like `clip-path: margin-box` can actually be useful. In addition to 
 
 ## Clipping to basic shapes
 
-The `clip-path` property's support of `<basic-shapes>` values provides a powerful way to shape elements. The various shape function enable defining precise clipping regions, effectively sculpting elements into unique forms. The basic shape functions, include:
+The `clip-path` property's support of {{cssxref("basic-shape")}} values provides a powerful way to shape elements. The various shape function enable defining precise clipping regions, effectively sculpting elements into unique forms. The basic shape functions, include:
 
 - {{cssxref("basic-shape/circle","circle()")}}
 - {{cssxref("basic-shape/ellipse","ellipse()")}}
@@ -262,11 +262,11 @@ With `polygon()`, by defining pairs of coordinates, each of which represents a v
 Here we use the `polygon()` function to create a star:
 
 ```html hidden
-<div></div>
+<div class="star"></div>
 ```
 
 ```css
-div {
+.star {
   width: 200px;
   height: 200px;
   background: linear-gradient(rebeccapurple, magenta) blue;
@@ -293,11 +293,11 @@ div {
 Clipped shapes can be animated and transitioned by declaring the same number of vector points for the different states.
 
 ```html hidden
-<div></div>
+<div class="star"></div>
 ```
 
 ```css hidden
-div {
+.star {
   width: 200px;
   height: 200px;
   background: linear-gradient(rebeccapurple, magenta) blue;
@@ -351,7 +351,7 @@ div {
   }
 }
 
-div {
+.star {
   animation: morphStar alternate 3s infinite ease-in-out;
 }
 ```
@@ -365,11 +365,11 @@ The `path()` function enables drawing shapes using SVG commands. The function ac
 The star from the previous example can be created using `path()`:
 
 ```html hidden
-<div></div>
+<div class="star"></div>
 ```
 
-```css hidden
-div {
+```css
+.star {
   width: 200px;
   height: 200px;
   background: linear-gradient(rebeccapurple, magenta) blue;
@@ -386,11 +386,11 @@ div {
 With `path()`, we are not limited to straight lines. In this example, we use the `path()` function to create a heart:
 
 ```html hidden
-<div></div>
+<div class="heart"></div>
 ```
 
 ```css
-div {
+.heart {
   width: 200px;
   height: 200px;
   background: linear-gradient(rebeccapurple, magenta) blue;
@@ -407,7 +407,7 @@ div {
 Instead of passing an SVG {{svgattr("d)}} attribute string as the `path()` function argument, the value of the `clip-path` property can reference the SVG {{svgelem("clipPath")}} element directly.
 
 ```html
-<div></div>
+<div class="heart"></div>
 <svg height="0" width="0">
   <clipPath id="heart">
     <path d="M20,70 A40,40,0,0,1,100,70 A40,40,0,0,1,180,70 Q180,130,100,190 Q20,130,20,70 Z">
@@ -418,7 +418,7 @@ Instead of passing an SVG {{svgattr("d)}} attribute string as the `path()` funct
 The `id` of the `<clipPath>` is the parameter of the {{cssxref("url")}} function.
 
 ```css
-div {
+.heart {
   width: 200px;
   height: 200px;
   background: linear-gradient(rebeccapurple, magenta) blue;
@@ -450,7 +450,7 @@ The `shape()` function is more robust in that it accepts CSS values and units (`
 :root {
   --m: 10;
 }
-div {
+.heart {
   width: calc(20px * var(--m));
   height: calc(20px * var(--m));
   display: inline-block;
@@ -480,9 +480,9 @@ div {
 ```
 
 ```html
-<div class="small"></div>
-<div class="medium"></div>
-<div class="large"></div>
+<div class="heart small"></div>
+<div class="heart medium"></div>
+<div class="heart large"></div>
 ```
 
 {{ EmbedLiveSample('shape function', 230, 240) }}
@@ -494,8 +494,8 @@ Clipped elements are still rectangular boxed. Clipping means your element doesn'
 The content includes two elements to be clipped and the content that will be shaped around them.
 
 ```html
-<div></div>
-<div></div>
+<div class="leftTriangle"></div>
+<div class="rightTriangle"></div>
 <blockquote>
   <q>
     I've learned that people will forget what you said, people will forget what
@@ -516,25 +516,34 @@ div {
   display: inline-block;
   background: linear-gradient(rebeccapurple, magenta) blue;
 }
+cite {
+  display: block;
+  text-align: right;
+}
 ```
 
 In addition to applying the same shape for both the `clip-shape` and `shape-outside` properties, the clipped element has to be floated so that the clipped element is on the same line as the content.
 
 ```css
-div:first-of-type {
+.leftTriangle {
   clip-path: polygon(0 0, 0 100%, 100% 0);
   shape-outside: polygon(0 0, 0 100%, 100% 0);
   float: left;
 }
-div:last-of-type {
+.rightTriangle {
   clip-path: polygon(100% 0, 100% 100%, 0 100%);
   shape-outside: polygon(100% 0, 100% 100%, 0 100%);
   float: right;
 }
 ```
 
-{{ EmbedLiveSample('Wrapping text around your clipped shapes', 230, 260) }}
+{{ EmbedLiveSample('Wrapping text around your clipped shapes', 230, 290) }}
 
 ## See also
 
+- {{cssxref("basic-shape")}}
+- {{cssxref("shape-image-threshold")}}
+- {{cssxref("shape-margin")}}
+- [Overview of shapes](/en-US/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
 - [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
+- [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) module
