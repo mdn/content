@@ -226,7 +226,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
     A source size value can be any non-negative [length](/en-US/docs/Web/CSS/length). It must not use CSS functions other than the [math functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#math_functions). Units are interpreted in the same way as [media queries](/en-US/docs/Web/CSS/CSS_media_queries), meaning that all relative length units are relative to the document root rather than the `<img>` element, so an `em` value is relative to the root font size, rather than the font size of the image. [Percentage](/en-US/docs/Web/CSS/percentage) values are not allowed.
 
-    - `sizes=auto`
+    The `sizes` attribute also accepts the following keyword values:
+
+    - `auto`
 
       - : Additionally, you can use the value `auto` to replace the whole list of sizes or the first entry in the list. It is only valid when combined with `loading="lazy"`, and resolves to the [concrete size](/en-US/docs/Web/CSS/image) of the image. Since the intrinsic size of the image is not yet known, `width` and `height` attributes (or CSS equivalents) should also be specified to [prevent the browser assuming a default width of 300px](https://html.spec.whatwg.org/multipage/images.html#sizes-attributes:~:text=it%20is%20strongly%20encouraged%20to%20specify%20dimensions%20using%20the%20width%20and%20height%20attributes).
 
