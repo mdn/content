@@ -20,7 +20,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 > [!WARNING]
 > The `tabindex` attribute must not be used on the `<dialog>` element. See [usage notes](#usage_notes).
 
-- `closedby`
+- `closedby` {{experimental_inline}}
 
   - : Specifies the types of user actions that can be used to close the `<dialog>` element. This attribute distinguishes three methods by which a dialog might be closed:
 
