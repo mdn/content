@@ -18,7 +18,7 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
     Corresponds to {{domxref("RTCIceCandidate.address")}}.
 - {{domxref("RTCIceCandidateStats.candidateType", "candidateType")}}
   - : A string matching one of the values in [`RTCIceCandidate.type`](/en-US/docs/Web/API/RTCIceCandidate/type#value), indicating what kind of candidate the object provides statistics for.
-- {{domxref("RTCIceCandidateStats.foundation", "foundation")}} {{optional_inline}}
+- {{domxref("RTCIceCandidateStats.foundation", "foundation")}} {{optional_inline}} {{experimental_inline}}
   - : A string that uniquely identifies the candidate across multiple transports.
     Corresponds to {{domxref("RTCIceCandidate.foundation")}}.
 - {{domxref("RTCIceCandidateStats.port", "port")}} {{optional_inline}}
@@ -32,7 +32,7 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
     Corresponds to {{domxref("RTCIceCandidate.protocol")}}.
 - {{domxref("RTCIceCandidateStats.transportId", "transportId")}}
   - : A string uniquely identifying the transport object that was inspected in order to obtain the {{domxref("RTCTransportStats")}} associated with the candidate corresponding to these statistics.
-- {{domxref("RTCIceCandidateStats.usernameFragment", "usernameFragment")}} {{optional_inline}}
+- {{domxref("RTCIceCandidateStats.usernameFragment", "usernameFragment")}} {{optional_inline}} {{experimental_inline}}
   - : A string containing the ICE username fragment ("ice-ufrag").
     Corresponds to {{domxref("RTCIceCandidate.usernameFragment")}}.
 
