@@ -6,7 +6,7 @@ page-type: listing-page
 sidebar: mathmlref
 ---
 
-This page lists guides for MathML to help you author MathML on your web pages, including guidance on writing, editors, fonts and more.
+This page lists guides for MathML to help you author MathML on your web pages, including guidance on writing, editors, fonts, and more.
 
 - [Authoring MathML](/en-US/docs/Web/MathML/Guides/Authoring)
   - : This page explains how to write mathematics using the MathML language, which is described with tags and attributes in text format.
@@ -20,7 +20,7 @@ To complement guides, the following pages demonstrate how MathML can be used in 
 - [Proving the Pythagorean theorem](/en-US/docs/Web/MathML/Guides/Proving_the_Pythagorean_theorem)
   - : This page outlines the proof of the [Pythagorean theorem](https://en.wikipedia.org/wiki/Pythagorean_theorem) using MathML to structure each step visually.
 - [Deriving the quadratic formula](/en-US/docs/Web/MathML/Guides/Deriving_the_quadratic_formula)
-  - : This page outlines the derivation of the [Quadratic Formula](https://en.wikipedia.org/wiki/Quadratic_formula), showing how MathML can be used to present each transformation.
+  - : This page outlines the derivation of the [quadratic formula](https://en.wikipedia.org/wiki/Quadratic_formula), showing how MathML can be used to present each transformation.
 
 ## See also
 
