@@ -26,9 +26,9 @@ comprised of a media condition, then at least one whitespace character, then the
 source size value to use for the image when the media condition
 evaluates to `true`.
 
-  - `sizes=auto`
+- `sizes=auto`
 
-    - : Additionally, you can use the value `auto` to replace the whole list of sizes or the first entry in the list. It is only valid when combined with `loading="lazy"`, and resolves to the [concrete size](/en-US/docs/Web/CSS/image) of the image. Since the intrinsic size of the image is not yet known, `width` and `height` attributes (or CSS equivalents) should also be specified to [prevent the browser assuming a default width of 300px](https://html.spec.whatwg.org/multipage/images.html#sizes-attributes:~:text=it%20is%20strongly%20encouraged%20to%20specify%20dimensions%20using%20the%20width%20and%20height%20attributes).
+  - : Additionally, you can use the value `auto` to replace the whole list of sizes or the first entry in the list. It is only valid when combined with `loading="lazy"`, and resolves to the [concrete size](/en-US/docs/Web/CSS/image) of the image. Since the intrinsic size of the image is not yet known, `width` and `height` attributes (or CSS equivalents) should also be specified to [prevent the browser assuming a default width of 300px](https://html.spec.whatwg.org/multipage/images.html#sizes-attributes:~:text=it%20is%20strongly%20encouraged%20to%20specify%20dimensions%20using%20the%20width%20and%20height%20attributes).
 
 For more information about the syntax of the `sizes` attribute, see [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes).
 
