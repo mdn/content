@@ -25,7 +25,7 @@ A few notes about macro calls:
 Macros can be as simple as just inserting a larger block of text or swapping in contents from another part of MDN, or as complex as building an entire index of content by searching through parts of the site, styling the output, and adding links.
 
 You can read up on our most commonly used macros on the [Commonly used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros) page.
-Less common macros are described in the [Other macros](MDN/Writing_guidelines/Page_structures/Macros/Other) documentation.
+Less common macros are described in the [Other macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Other) documentation.
 
 ## See also
 
