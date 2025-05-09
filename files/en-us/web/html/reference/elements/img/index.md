@@ -228,7 +228,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
     - `sizes=auto`
 
-    Additionally, you can use the value `auto` to replace the whole list of sizes or the first entry in the list. It is only valid when combined with `loading="lazy"`, and resolves to the [concrete size](/en-US/docs/Web/CSS/image) of the image. Since the intrinsic size of the image is not yet known, `width` and `height` attributes (or CSS equivalents) should also be specified to [prevent the browser assuming a default width of 300px](https://html.spec.whatwg.org/multipage/images.html#sizes-attributes:~:text=it%20is%20strongly%20encouraged%20to%20specify%20dimensions%20using%20the%20width%20and%20height%20attributes).
+      - : Additionally, you can use the value `auto` to replace the whole list of sizes or the first entry in the list. It is only valid when combined with `loading="lazy"`, and resolves to the [concrete size](/en-US/docs/Web/CSS/image) of the image. Since the intrinsic size of the image is not yet known, `width` and `height` attributes (or CSS equivalents) should also be specified to [prevent the browser assuming a default width of 300px](https://html.spec.whatwg.org/multipage/images.html#sizes-attributes:~:text=it%20is%20strongly%20encouraged%20to%20specify%20dimensions%20using%20the%20width%20and%20height%20attributes).
 
 - `src`
   - : The image {{glossary("URL")}}. Mandatory for the `<img>` element. On {{glossary("Browser", "browsers")}} supporting `srcset`, `src` is treated like a candidate image with a pixel density descriptor `1x`, unless an image with this pixel density descriptor is already defined in `srcset`, or unless `srcset` contains `w` descriptors.
