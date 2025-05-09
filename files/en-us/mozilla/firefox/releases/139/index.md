@@ -79,7 +79,7 @@ These features are newly shipped in Firefox 139 but are disabled by default. To 
 - **Support for escaping `<` and `>` in attributes when serializing HTML**: `dom.security.html_serialization_escape_lt_gt`.
   Firefox now replaces the `<` and `>` characters with `&lt;` and `&gt;`, respectively, in attributes when serializing HTML. This helps prevent certain exploits where HTML is serialized and then injected back into the DOM.
   The affected methods and properties are: {{domxref("Element.innerHTML")}}, {{domxref("Element.outerHTML")}}, {{domxref("Element.getHTML()")}}, {{domxref("ShadowRoot.innerHTML")}}, and {{domxref("ShadowRoot.getHTML()")}}. ([Firefox bug 1941347](https://bugzil.la/1941347)).
-- **Disable non-standard `beforescriptexecute` and `afterscriptexecute`** `dom.events.script_execute.enabled`.
+- **Disable non-standard `beforescriptexecute` and `afterscriptexecute`**: `dom.events.script_execute.enabled`.
   The events have been disabled on Nightly only, allowing browser testing prior to their removal.
   The affected events are: [`beforescriptexecute`](/en-US/docs/Web/API/Document/beforescriptexecute_event) and [`afterscriptexecute`](/en-US/docs/Web/API/Document/afterscriptexecute_event) on the {{domxref("Document")}} interface, and [`afterscriptexecute`](/en-US/docs/Web/API/Element/afterscriptexecute_event) and [`beforescriptexecute`](/en-US/docs/Web/API/Element/beforescriptexecute_event) on the {{domxref("Element")}} interface. ([Firefox bug 1954685](https://bugzil.la/1954685)).
 
