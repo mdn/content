@@ -15,7 +15,7 @@ This page lists guides for MathML to help you author MathML on your web pages, i
 
 ## Examples
 
-To compliment guides, the following pages demonstrate how MathML can be used in real derivations and proofs.
+To complement guides, the following pages demonstrate how MathML can be used in real derivations and proofs.
 
 - [Proving the Pythagorean theorem](/en-US/docs/Web/MathML/Guides/Proving_the_Pythagorean_theorem)
   - : This page outlines the proof of the [Pythagorean theorem](https://en.wikipedia.org/wiki/Pythagorean_theorem) using MathML to structure each step visually.
