@@ -14,7 +14,7 @@ Clipping is a CSS technique used to clip, or hide, sections of an element, displ
 
 ### The `clip-path` property
 
-The `clip-path` property lets you apply clipping. The value is the vector path defining the area of the element that should remain visible. The path can be defined using boxes, a reference to an SVG {{svgelem("clipPath")}}, or CSS shapes and paths. For example, we clip a blue square {{htmlelement("div")}}, creating a diamond, using the {{cssxref("basic-shape/polygon","polygon()")}} function as the clipping path:
+The `clip-path` property lets you apply clipping. The value is the vector path defining the area of the element that should remain visible. The path can be defined using boxes, a reference to an [SVG `<clipPath>`](#svg-as-source), or CSS [shapes and paths](#shape-function). For example, we clip a blue square {{htmlelement("div")}}, creating a diamond, using the {{cssxref("basic-shape/polygon","polygon()")}} function as the clipping path:
 
 ```html hidden live-sample__clip-path
 <div></div>
@@ -32,7 +32,7 @@ div {
 
 {{ EmbedLiveSample('clip-path', 230, 230) }}
 
-With the `clip-path` property, you can make complex shapes by clipping an element to a `<basic-shape>` or to an SVG source. You can [animate and transition `clip-path` shapes](#animation) if the declared states have the same number of vector points.
+With the `clip-path` property, you can make complex shapes by clipping an element to a `<basic-shape>` or to an [SVG source](#svg-as-source). You can [animate and transition `clip-path` shapes](#animation) if the declared states have the same number of vector points.
 
 ### Values of the `clip-path` property
 
@@ -358,17 +358,180 @@ div {
 
 {{ EmbedLiveSample('Animation', 230, 230) }}
 
-### Paths and shapes()
+### The `path()` function
 
-The `path()` function enables drawing shapes using SVG commands. The function accepts the equivalent of the SVG {{svgattr(d")}} attribute as the function's parameter.
+The `path()` function enables drawing shapes using SVG commands. The function accepts the equivalent of the SVG {{svgattr("d")}} attribute as the function's parameter.
 
-The `shape()` function also takes path drawing directive, but with a syntax that is more human readable. The `shape()` function is more robust in that it accepts CSS values and units (`path()` is limited to coordinates), including using CSS math functions like `calc()`.
+The star from the previous example can be created using `path()`:
 
-is a {{cssxref("basic-shape")}}. The value can be a clip source, a CSS shape, a geometry-box, both a shape and geometry-box, or the keyword `none`, which is the default.
+```html hidden
+<div></div>
+```
+
+```css hidden
+div {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(rebeccapurple, magenta) blue;
+  clip-path: path(
+    "M100,0 L122,70 L200,70 L136,114 L158,182 L100,140 L42,182 L64,114 L0,70 L78,70 L100,0 Z"
+  );
+}
+```
+
+{{ EmbedLiveSample('The path function', 230, 230) }}
+
+### Curved lines
+
+With `path()`, we are not limited to straight lines. In this example, we use the `path()` function to create a heart:
+
+```html hidden
+<div></div>
+```
+
+```css
+div {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(rebeccapurple, magenta) blue;
+  clip-path: path(
+    "M20,70 A40,40,0,0,1,100,70 A40,40,0,0,1,180,70 Q180,130,100,190 Q20,130,20,70 Z"
+  );
+}
+```
+
+{{ EmbedLiveSample('Curved lines', 230, 230) }}
+
+### SVG as source
+
+Instead of passing an SVG {{svgattr("d)}} attribute string as the `path()` function argument, the value of the `clip-path` property can reference the SVG {{svgelem("clipPath")}} element directly.
+
+```html
+<div></div>
+<svg height="0" width="0">
+  <clipPath id="heart">
+    <path d="M20,70 A40,40,0,0,1,100,70 A40,40,0,0,1,180,70 Q180,130,100,190 Q20,130,20,70 Z">
+  </clipPath>
+</svg>
+```
+
+The `id` of the `<clipPath>` is the parameter of the {{cssxref("url")}} function.
+
+```css
+div {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(rebeccapurple, magenta) blue;
+  clip-path: url(#heart);
+}
+```
+
+{{ EmbedLiveSample('svg as source', 230, 230) }}
+
+### Shape function
+
+The SVG path syntax is not the most intuitive. For this reason, CSS also offers a`shape()` function. The `shape()` function also takes path drawing directive, but with a syntax that is more human readable. We can recreate the heart with more declarative CSS:
+
+```css
+.heart {
+  clip-path: shape(
+    from 20px 70px,
+    arc to 100px 70px of 1% cw,
+    arc to 180px 70px of 1% cw,
+    curve to 100px 190px with 180px 130px,
+    curve to 20px 70px with 20px 130px
+  );
+}
+```
+
+The `shape()` function is more robust in that it accepts CSS values and units (`path()` is limited to coordinates), including using CSS math functions like `calc()`. By using variables, we can create shapes (and boxes) of many different sizes:
+
+```css
+:root {
+  --m: 10;
+}
+div {
+  width: calc(20px * var(--m));
+  height: calc(20px * var(--m));
+  display: inline-block;
+  background: linear-gradient(rebeccapurple, magenta) blue;
+  clip-path: border-box
+    shape(
+      from calc(2px * var(--m)) calc(7px * var(--m)),
+      arc to calc(10px * var(--m)) calc(7px * var(--m)) of 1% cw,
+      arc to calc(18px * var(--m)) calc(7px * var(--m)) of 1% cw,
+      curve to calc(10px * var(--m)) calc(19px * var(--m)) with
+        calc(18px * var(--m)) calc(13px * var(--m)),
+      curve to calc(2px * var(--m)) calc(7px * var(--m)) with
+        calc(2px * var(--m)) calc(13px * var(--m))
+    );
+}
+.small {
+  --m: 4;
+}
+
+.medium {
+  --m: 8;
+}
+
+.large {
+  --m: 12;
+}
+```
+
+```html
+<div class="small"></div>
+<div class="medium"></div>
+<div class="large"></div>
+```
+
+{{ EmbedLiveSample('shape function', 230, 240) }}
 
 ### Wrapping text around your clipped shapes
 
 Clipped elements are still rectangular boxed. Clipping means your element doesn't look like a box; but it is still a box. To wrap inline content around the non-rectangular (or rectangular) shapes you define, use the {{cssxref("shape-outside")}} property. By default, inline content wraps around its margin box; `shape-outside` provides a way to customize this wrapping, making it possible to wrap text around the elements you've clipped, following the clip path you replicated rather than the element's rectangular box.
+
+The content includes two elements to be clipped and the content that will be shaped around them.
+
+```html
+<div></div>
+<div></div>
+<blockquote>
+  <q>
+    I've learned that people will forget what you said, people will forget what
+    you did, but people will never forget how you made them feel.</q
+  >
+  <cite>&mdash; Maya Angelou</cite>
+</blockquote>
+```
+
+```css hidden
+:root {
+  --m: 10;
+  font-size: calc(3px * var(--m));
+}
+div {
+  width: calc(0.75em * var(--m));
+  height: calc(0.75em * var(--m));
+  display: inline-block;
+  background: linear-gradient(rebeccapurple, magenta) blue;
+}
+```
+
+In addition to applying the same shape for both the `clip-shape` and `shape-outside` properties, the clipped element has to be floated so that the clipped element is on the same line as the content.
+
+```css
+div:first-of-type {
+  clip-path: polygon(0 0, 0 100%, 100% 0);
+  shape-outside: polygon(0 0, 0 100%, 100% 0);
+  float: left;
+}
+div:last-of-type {
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  shape-outside: polygon(100% 0, 100% 100%, 0 100%);
+  float: right;
+}
+```
 
 ## See also
 
