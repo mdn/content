@@ -99,7 +99,7 @@ The equation is:
 
 Given a `100px`-wide mask and a `1000px`-wide origin box, setting `mask-postion: 10%;` (the equivalent of `10% 50%`) results in the mask being vertically centered at `90px` from the left edge. The equation is `(1000 - 100) * 10% = 90`. If the left offset had been `0%`, the mask's left edge would be flush to the left of the container (`(1000 - 100) * 0% = 0`).
 
-If the left offset had been `100%`, the mask's right edge would be flush to the right of the container as the left edge of the `100px` wide mask would be `900px` (`(1000 - 100) * 100% = 900`) from the left edge of the container (The `100px` width put `900px` from the left edge, means the right edge would be `1000px` from the left edge, which is the right edge of the container).
+If the left offset had been `100%`, the mask's right edge would be flush to the right of the container as the left edge of the `100px` wide mask would be `900px` (`(1000 - 100) * 100% = 900`) from the left edge of the container (the `100px` mask width plus `900px` distance from the left edge means the right edge would be `1000px` from the left edge, which is the right edge of the container).
 
 ### Two-value syntax
 
@@ -114,9 +114,11 @@ If one of the two values is `top`, `right`, `bottom`, or `left`, the order of th
 
 ### Four-value syntax
 
-The four-value syntax is the similar to the two-value syntax. In the two-value syntax, the `<length>` and `<percentage>` values are offsets from the top or left edge. The four-value syntax allows defining the offset edge. For example, `mask-position: 1em 2em` is a `1em` horizontal offset from the left box edge and a `2em` vertical offset from the top edge. In the four-value syntax, this would be `mask-position: left 1em top 2em`. Because we're defining the offset edges when using the four-value syntax, the order isn't important: Setting `mask-position: top 2em left 1em` produces the same result; also a `2em` horizontal offset from the left edge and a `1em` vertical offset from the top edge.
+The four-value syntax consists of two pairs of values, each pair containing a keyword specifying the edge to offset from, and a `<length>` and `<percentage>` value specifying the offset distance. For example, `mask-position: left 1em top 2em` specifies a `1em` horizontal offset from the left box edge and a `2em` vertical offset from the top edge. The two-value equivalent would be `mask-position: 1em 2em`.
 
-The real power of the four-value syntax is that it allows us the define the offset edge. For example, `mask-position:  bottom 10px right 20px` creates a `10px` vertical offset up from the bottom edge and a `20px` horizontal offset leftward from the right edge. Usually the four-value syntax is used to offset from the bottom and/or right. But this syntax is also helpful if you can't remember the offset edge order for the two-value syntax.
+Because we're defining the offset edges when using the four-value syntax, the order isn't important: `mask-position: top 2em left 1em` and `mask-position: left 1em top 2em` both produce the same result.
+
+The real power of the four-value syntax is that it allows us to specify offset edges other than `left` and `top`. For example, `mask-position:  bottom 10px right 20px` creates a `10px` vertical offset up from the bottom edge and a `20px` horizontal offset leftward from the right edge. Usually, the four-value syntax is used to offset from the bottom and/or right. But this syntax is also helpful if you can't remember the offset edge order for the two-value syntax.
 
 One thing to note is that, unlike the `<bg-position>` data type values for {{cssxref("background-position")}}, the `<position>` values for `mask-position` do not allow for a 3-value syntax and do not allow offsetting from `center`. When offsetting the mask from the `bottom` or `right`, the `mask-position` requires all four values (either `top` or `bottom` as the vertical offset edge along with the vertical length or percentage offset value and either `left` or `right`as the horizontal offset edge along with the horizontal length or percentage offset value) to be declared.
 
