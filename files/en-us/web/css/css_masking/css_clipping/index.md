@@ -533,6 +533,8 @@ div:last-of-type {
 }
 ```
 
+{{ EmbedLiveSample('Wrapping text around your clipped shapes', 230, 260) }}
+
 ## See also
 
 - [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
