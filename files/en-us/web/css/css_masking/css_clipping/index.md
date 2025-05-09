@@ -43,9 +43,13 @@ To visually clip an element, the `clip-path` property is set to either a {{cssxr
 
 The `clip-path` hides everything outside of the clipped region. The most basic clipping is done via a geometry box. You can clip an element based on it's margin, border, padding, or content. The effects of these visual box values can achieved via other CSS properties, such as setting the {{cssxref("border-color")}} to transparent and the {{cssxref("background-origin")}} to the desired visual box. We're looking at these values mostly because these values are using in conjunction with the shape functions, which we'll look at later, to define the origin of the shape clip path.
 
+[Understanding the reference box](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes#the_reference_box) used by CSS shapes is important when using `clip-path`, especially with [basic shapes](#clipping-to-basic-shapes), as the reference box defines a shape's coordinate system.
+
+#### Visual box values
+
 This live example demonstrates the `clip-path` property's different visual box values on a element, while comparing it to the CSS `background-origin` property. We've applied a {{cssxref("border")}}, a {{cssxref("background-color")}}, a {{cssxref("background-image")}}, and {{cssxref("padding")}} to the {{htmlelement("blockquote")}}. Select a radio button to update the `--value` to a different `<geometry-box>` value, which updates the {{cssxref("background-origin")}} and the {{cssxref("clip-path")}} resolved values.
 
-```css hidden live-sample__geometry
+```css hidden
 body {
   display: flex;
   flex-flow: row wrap;
@@ -78,9 +82,12 @@ body:has([value="padding-box"]:checked) {
 body:has([value="content-box"]:checked) {
   --value: content-box;
 }
+body:has([type="checkbox"]:checked) blockquote {
+  border-radius: 70px;
+}
 ```
 
-```css live-sample__geometry
+```css
 blockquote {
   width: 210px;
   padding: 20px;
@@ -101,7 +108,7 @@ blockquote {
 }
 ```
 
-```html hidden live-sample__geometry
+```html hidden
 <blockquote class="clippath">
   <q
     >I've learned that people will forget what you said, people will forget what
@@ -140,17 +147,20 @@ blockquote {
     >
   </p>
 </fieldset>
+<p>
+  <label><input type="checkbox" /> Change the border radius</label>
+</p>
 ```
 
-{{ EmbedLiveSample('geometry', 230, 420) }}
+{{ EmbedLiveSample('visual box values', 230, 430) }}
 
 When a `<geometry>` box is specified in combination with a `<basic-shape>`, the value defines the reference box for the basic shape. If specified by itself, it causes the edges of the specified box, including any corner shaping (such as a border-radius), to be the clipping path.
 
-### Shape origin
+#### Shape origin
 
 The previous example may make you think that the `<geometry-box>` values are useless, as you can use `background-origin` instead. And you can. But when clipping using basic shapes, the `<geometry-box>`, when included along with a `<basic-shape>` as the `clip-path` value, defines the reference box for, or origin of, that shape. We can combine the two previous examples to demonstrate this.
 
-```html hidden live-sample__origin
+```html hidden
 <blockquote class="clippath">
   <q
     >I've learned that people will forget what you said, people will forget what
@@ -179,7 +189,7 @@ The previous example may make you think that the `<geometry-box>` values are use
 </fieldset>
 ```
 
-```css live-sample__origin
+```css
 blockquote {
   width: 210px;
   padding: 20px;
@@ -193,7 +203,7 @@ blockquote {
 }
 ```
 
-```css hidden live-sample__origin
+```css hidden
 blockquote {
   font-size: 1.2rem;
 }
@@ -222,38 +232,42 @@ body:has([value="content-box"]:checked) {
 }
 ```
 
-{{ EmbedLiveSample('origin', 230, 420) }}
+{{ EmbedLiveSample('shape origin', 230, 420) }}
 
 For another example, see [`clip-path` shapes and geometry boxes](/en-US/docs/Web/CSS/clip-path#shapes_and_geometry_boxes).
 
-Note that evenly seemingly useless values like `clip-path: margin-box` can actually be useful, as any computed value for `clip-path`, other than `none`, results in the creation of a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context) the same way that CSS {{cssxref("opacity")}} does for values other than `1`. And even if it seems useless, there are some creative effects you can create by placing the clip-path's edge at the margin-box edge.
+Even values like `clip-path: margin-box` can actually be useful. In addition to creative visuals made by placing the clip-path's edge at the margin-box edge, any computed value for `clip-path`, other than `none`, results in the creation of a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context) the same way that CSS {{cssxref("opacity")}} does for values other than `1`.
 
-```html hidden live-sample__margin
-<section></section>
-```
+## Clipping to basic shapes
 
-```css live-sample__margin
-section {
-  width: 200px;
-  padding: 20px;
-  margin: 60px;
-  background-color: #ededed;
-  background-image: linear-gradient(rebeccapurple, magenta);
-  background-repeat: no-repeat;
+The `clip-path` property's support of `<basic-shapes>` values provides a powerful way to shape elements. The various shape function enable defining precise clipping regions, effectively sculpting elements into unique forms. The basic shape functions, include:
 
-  clip-path: margin-box circle(60px at top right);
-}
-```
+- {{cssxref("basic-shape/circle","circle()")}}
+- {{cssxref("basic-shape/ellipse","ellipse()")}}
+- {{cssxref("basic-shape/inset","inset()")}}
+- {{cssxref("basic-shape/path","path()")}}
+- {{cssxref("basic-shape/polygon","polygon()")}}
+- {{cssxref("basic-shape/rect","rect()")}}
+- {{cssxref("basic-shape/shape","shape()")}}
+- {{cssxref("basic-shape/xywh","xywh()")}}
 
-{{ EmbedLiveSample('margin', 230, 420) }}
+The size and position of these shapes are defined by the `<geometry-box>` value, which defaults to border-box being used as the reference box if the `clip-path` value includes a shape without the `<geometry-box>` component value.
 
-### SVG clip-path
+Some of these functions appear to only provide basic predefined clipping options. They may appear to replicate effects you can created with {{csxref("border-radius")}}, but if you [toggled the `border-radius`](#visual-box-values) property in the previous example, you may have noticed the power of CSS clipping. Shapes provide even more control. For example,`inset()` enables clipping a rectangul with precise margins. The real power and control comes with `path()`, `shape()`, and even `polygon()`, which allows for custom multi-point shapes.
 
-The
+### Creating polygons
 
-### Clipping to basic shapes
+With `polygon()`, by defining pairs of coordinates, each of which represents a vertex of the shape. you can create intricate forms like stars or abstract figures.
 
-The `polygon()` function is a {{cssxref("basic-shape")}}. The value can be a clip source, a CSS shape, a geometry-box, both a shape and geometry-box, or the keyword `none`, which is the default.
+### Animation
+
+### Paths and shapes()
+
+The `path()` function enables drawing shapes using SVG commands. The function accepts the equivalent of the SVG {{svgattr(d")}} attribute as the function's parameter.
+
+The `shape()` function also takes path drawing directive, but with a syntax that is more human readable. The `shape()` function is more robust in that it accepts CSS values and units (`path()` is limited to coordinates), including using CSS math functions like `calc()`.
+
+is a {{cssxref("basic-shape")}}. The value can be a clip source, a CSS shape, a geometry-box, both a shape and geometry-box, or the keyword `none`, which is the default.
 
 ### Wrapping text around your clipped shapes
 
