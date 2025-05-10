@@ -48,6 +48,9 @@ You could access the paragraph element in JavaScript using code like:
 const content = window.preamble.textContent;
 ```
 
+> [!WARNING]
+> Relying on this behavior is dangerous and discouraged. It can lead to unexpected conflicts with some existing or future APIs in the browser. For example, if browsers introduce a new global property named `preamble`, then the same code will no longer be able to access the HTML element. Use `document.getElementById()` or `document.querySelector()` instead.
+
 ### Syntax
 
 An ID attribute's value must not contain [ASCII whitespace](/en-US/docs/Glossary/Whitespace#in_html) characters. Browsers treat non-conforming IDs that contain whitespace as if the whitespace is part of the ID. In contrast to the [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class) attribute, which allows space-separated values, elements can only have one single ID value.
