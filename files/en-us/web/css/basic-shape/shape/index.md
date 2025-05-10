@@ -294,18 +294,20 @@ body {
   clip-path: shape(from 0% 0%, line to 100% 0%, line to 50% 100%, close);
 }
 
-/* Clipping region with curves and smooth transitions and a box */
+/* A Heart clipping region using curve and arc transitions
+   and a box using hline and vline transitions */
 .shape2 {
   clip-path: shape(
-    from 20px 50px,
-    curve to 60px 40px with -20px 0 / 60px 0,
-    curve to 100px 50px with 60px 0 / 140px 0,
-    line to 60px 100px,
+    from 20px 70px, 
+    arc to 100px 70px of 1% cw,
+    arc to 180px 70px of 1% cw,
+    curve to 100px 190px with 180px 130px,
+    curve to 20px 70px with 20px 130px,
     close,
-    move to 100px 100px,
-    hline by 50px,
-    vline by 50px,
-    hline by -50px,
+    move to 150px 150px,
+    hline by 40px,
+    vline by 40px,
+    hline by -40px,
     close
   );
 }
