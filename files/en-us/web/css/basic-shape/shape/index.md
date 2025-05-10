@@ -298,7 +298,7 @@ body {
    and a box using hline and vline transitions */
 .shape2 {
   clip-path: shape(
-    from 20px 70px, 
+    from 20px 70px,
     arc to 100px 70px of 1% cw,
     arc to 180px 70px of 1% cw,
     curve to 100px 190px with 180px 130px,
