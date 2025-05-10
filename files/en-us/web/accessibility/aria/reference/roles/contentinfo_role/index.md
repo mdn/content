@@ -1,5 +1,6 @@
 ---
 title: "ARIA: contentinfo role"
+short-title: contentinfo
 slug: Web/Accessibility/ARIA/Reference/Roles/contentinfo_role
 page-type: aria-role
 spec-urls:

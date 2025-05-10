@@ -1,5 +1,6 @@
 ---
 title: "ARIA: combobox role"
+short-title: combobox
 slug: Web/Accessibility/ARIA/Reference/Roles/combobox_role
 page-type: aria-role
 spec-urls:

@@ -1,5 +1,6 @@
 ---
-title: aria-label
+title: "ARIA: aria-label attribute"
+short-title: aria-label
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-label
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-label

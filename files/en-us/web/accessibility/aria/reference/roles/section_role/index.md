@@ -1,5 +1,6 @@
 ---
 title: "ARIA: section role"
+short-title: section
 slug: Web/Accessibility/ARIA/Reference/Roles/section_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#section

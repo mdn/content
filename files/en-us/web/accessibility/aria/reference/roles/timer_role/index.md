@@ -1,5 +1,6 @@
 ---
 title: "ARIA: timer role"
+short-title: timer
 slug: Web/Accessibility/ARIA/Reference/Roles/timer_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#timer

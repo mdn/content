@@ -1,5 +1,6 @@
 ---
-title: aria-dropeffect
+title: "ARIA: aria-dropeffect attribute"
+short-title: aria-dropeffect
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-dropeffect
 page-type: aria-attribute
 status:

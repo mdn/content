@@ -1,5 +1,6 @@
 ---
 title: "ARIA: slider role"
+short-title: slider
 slug: Web/Accessibility/ARIA/Reference/Roles/slider_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#slider

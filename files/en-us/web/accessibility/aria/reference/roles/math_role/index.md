@@ -1,5 +1,6 @@
 ---
 title: "ARIA: math role"
+short-title: math
 slug: Web/Accessibility/ARIA/Reference/Roles/math_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#math

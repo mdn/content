@@ -1,5 +1,6 @@
 ---
 title: "ARIA: listbox role"
+short-title: listbox
 slug: Web/Accessibility/ARIA/Reference/Roles/listbox_role
 page-type: aria-role
 spec-urls:

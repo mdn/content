@@ -1,5 +1,6 @@
 ---
 title: "ARIA: table role"
+short-title: table
 slug: Web/Accessibility/ARIA/Reference/Roles/table_role
 page-type: aria-role
 spec-urls:

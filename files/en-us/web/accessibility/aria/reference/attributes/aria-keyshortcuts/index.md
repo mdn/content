@@ -1,5 +1,6 @@
 ---
-title: aria-keyshortcuts
+title: "ARIA: aria-keyshortcuts attribute"
+short-title: aria-keyshortcuts
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-keyshortcuts
 page-type: aria-attribute
 spec-urls:

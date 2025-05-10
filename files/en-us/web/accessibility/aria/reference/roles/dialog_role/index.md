@@ -1,5 +1,6 @@
 ---
 title: "ARIA: dialog role"
+short-title: dialog
 slug: Web/Accessibility/ARIA/Reference/Roles/dialog_role
 page-type: aria-role
 spec-urls:

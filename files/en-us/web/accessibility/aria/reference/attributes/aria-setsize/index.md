@@ -1,5 +1,6 @@
 ---
-title: aria-setsize
+title: "ARIA: aria-setsize attribute"
+short-title: aria-setsize
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-setsize
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-setsize

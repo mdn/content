@@ -1,5 +1,6 @@
 ---
 title: "ARIA: mark role"
+short-title: mark
 slug: Web/Accessibility/ARIA/Reference/Roles/mark_role
 page-type: aria-role
 sidebar: accessibilitysidebar

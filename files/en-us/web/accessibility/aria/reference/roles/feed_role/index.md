@@ -1,5 +1,6 @@
 ---
 title: "ARIA: feed role"
+short-title: feed
 slug: Web/Accessibility/ARIA/Reference/Roles/feed_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#feed

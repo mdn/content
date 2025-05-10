@@ -1,5 +1,6 @@
 ---
 title: "ARIA: grid role"
+short-title: grid
 slug: Web/Accessibility/ARIA/Reference/Roles/grid_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#grid

@@ -1,5 +1,6 @@
 ---
-title: aria-description
+title: "ARIA: aria-description attribute"
+short-title: aria-description
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-description
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-description

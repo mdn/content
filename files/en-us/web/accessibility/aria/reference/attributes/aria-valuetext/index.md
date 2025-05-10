@@ -1,5 +1,6 @@
 ---
-title: aria-valuetext
+title: "ARIA: aria-valuetext attribute"
+short-title: aria-valuetext
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-valuetext
