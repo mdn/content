@@ -76,7 +76,11 @@ Compression Dictionary Transport can achieve an order of magnitude more compress
 
 ## Dictionary format
 
-A compression dictionary is a "raw" file that does not follow any specific format, nor have a specific {{Glossary("MIME type")}}. They are regular files that can be used to compress other files with similar content and so can be text files or even binary. For example, [WASM](/en-US/docs/WebAssembly) binary files are large resources that can also benefit from delta compression.
+A compression dictionary is a "raw" file that does not follow any specific format, nor have a specific {{Glossary("MIME type")}}. They are regular files that can be used to compress other files with similar content. This is why previous versions of files can be used as in delta compression.
+
+Another typical approach is to list common strings (for example your HTML templates) together into a new `dictionary.txt` file so it can be used to compress HTML pages on the website. You can optimize this further by using specialized tooling, for example [Brotli's dictionary generator](https://github.com/google/brotli/blob/master/research/dictionary_generator.cc).
+
+Dictionaries do not even need to be text and can even be binary. For example, [WASM](/en-US/docs/WebAssembly) binary files are large resources that can also benefit from delta compression.
 
 ## Existing resource as a dictionary
 
