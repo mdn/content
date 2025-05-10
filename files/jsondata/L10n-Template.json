@@ -72,19 +72,22 @@
     "fr": "Non standard",
     "ja": "非標準",
     "ko": "비표준",
+    "pt-BR": "Não padrão",
     "ru": "Не стандартно",
     "zh-CN": "非标准"
   },
 
   "non_standard_header_copy": {
-    "de": "Diese Funktion ist nicht standardisiert und befindet sich nicht auf dem Weg zur Standardisierung. Verwenden Sie sie nicht auf Produktionsseiten, die dem Web ausgesetzt sind: Sie funktioniert nicht für alle Benutzer. Es kann auch große Inkompatibilitäten zwischen Implementierungen geben, und das Verhalten kann sich in Zukunft ändern.",
-    "en-US": "This feature is non-standard and is not on a standards track. Do not use it on production sites facing the Web: it will not work for every user. There may also be large incompatibilities between implementations and the behavior may change in the future.",
-    "es": "Esta característica no es parte de los estándares. No la uses en sitios Web en producción: no funcionará para todos los usuarios. Podrían haber también incompatibilidades considerables entre distintas implementaciones y el comportamiento podría cambiar en el futuro.",
-    "fr": "Cette fonctionnalité n'est ni standard, ni en voie de standardisation. Ne l'utilisez pas pour des sites accessibles sur le Web : elle ne fonctionnera pas pour tout utilisateur. Il peut également y avoir d'importantes incompatibilités entre les implémentations et son comportement peut être modifié dans le futur.",
-    "ja": "この機能は標準ではなく、標準化の予定もありません。公開されているウェブサイトには使用しないでください。ユーザーによっては使用できないことがあります。実装ごとに大きな差があることもあり、将来は振る舞いが変わるかもしれません。",
-    "ko": "이 기능은 비표준이므로 실제 프로덕션에서 사용하지 마세요. 모든 사용자 환경에서 작동하지 않을 수 도 있으며, 미래에 호환성 문제가 생길 수 있습니다.",
-    "ru": "Эта возможность не является стандартной и стандартизировать её пока никто не собирается. Не используйте её на сайтах, смотрящих во внешний мир: она будет работать не у всех пользователей. Также могут присутствовать большие несовместимости между реализациями и её поведение может в будущем измениться.",
-    "zh-CN": "该特性是非标准的，请尽量不要在生产环境中使用它！"
+    "de": "Wir raten davon ab, diese Funktion auf produktiven Webseiten zu verwenden, da sie nicht bei jedem funktionieren wird.",
+    "en-US": "We do not recommend using this feature on production sites facing the web because it will not work for everyone.",
+    "es": "No recomendamos usar esta función en sitios de producción que estén en la web porque no funcionará para todos los usuarios.",
+    "fr": "Nous ne recommandons pas d'utiliser cette fonctionnalité sur des sites de production face au web car elle ne fonctionnera pas pour tous les utilisateurs.",
+    "ja": "この機能をウェブに面した本番サイトで使用することはお勧めしません。すべてのユーザーに対応するわけではないからです。",
+    "ko": "이 기능을 웹에 공개된 프로덕션 사이트에서 사용하는 것은 권장하지 않습니다. 모든 사용자에게 작동하지 않을 수 있기 때문입니다.",
+    "pt-BR": "Não recomendamos usar este recurso em sites de produção na web, pois ele não funcionará para todos os usuários.",
+    "ru": "Мы не рекомендуем использовать эту функцию на продукционных сайтах, доступных через веб, так как она не будет работать для каждого пользователя.",
+    "zh-CN": "我们不建议在面向 web 的生产站点上使用此特性，因为它不会对每个用户都有效。",
+    "zh-TW": "我們不建議在面向 web 的生產站點上使用此功能，因為它不會對每個用戶都有效。"
   },
 
   "secure_context_label": {
