@@ -210,6 +210,10 @@ You can specify
 
   - : Controls whether a document loaded in a third-party context (i.e., embedded in an {{htmlelement("iframe")}}) is allowed to use the {{domxref("Storage Access API", "Storage Access API", "", "nocode")}} to request access to unpartitioned cookies.
 
+- {{httpheader("Permissions-Policy/summarizer", "summarizer")}} {{Experimental_Inline}}
+
+  - : Controls access to the [Summarizer API](/en-US/docs/Web/API/Summarizer_API).
+
 - {{httpheader('Permissions-Policy/usb', 'usb')}} {{Experimental_Inline}}
 
   - : Controls whether the current document is allowed to use the [WebUSB API](/en-US/docs/Web/API/WebUSB_API).
