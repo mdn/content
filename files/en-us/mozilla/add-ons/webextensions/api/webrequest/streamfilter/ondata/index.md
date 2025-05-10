@@ -319,6 +319,7 @@ This example shows, how to handle a non-UTF-8 page:
 
 ```js
 // This example uses https://github.com/t-kouyama/fast-sjis-encoder
+// Note: Make sure the file you paste in has the encoding set to UTF-8
 function listener(details) {
   if (details.statusCode != 200) {
     return;
