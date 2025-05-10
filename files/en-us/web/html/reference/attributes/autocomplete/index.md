@@ -64,10 +64,40 @@ Some autocomplete values may need to be re-used multiple times. For example, a f
 
 If including the `autocomplete` attribute on {{HTMLElement("input/hidden", "hidden")}} input elements (`<input type="hidden">`), its value must be an ordered list of space-separated tokens; the `on` and `off` keywords are not allowed.
 
-The source of the suggested values is generally up to the browser; typically values come from past values entered by the user, but they may also come from pre-configured values. For instance, a browser might let the user save their name, address, phone number, and email addresses for autocomplete purposes. The browser may also offer the ability to save encrypted credit card information, for autocompletion following an authentication procedure.
+The source of the suggested values is generally up to the browser; typically values come from past values entered by the user, but they may also come from pre-configured values. For instance, a browser might let the user save their name, address, phone number, and email addresses for autocomplete purposes. This makes it possible for non-assistive technology and assistive technology users to quickly and easily fill out a form as the attribute value reduces typing and reliance on memory. The browser may also offer the ability to save encrypted credit card information, for autocompletion following an authentication procedure.
 
 > [!NOTE]
 > The `autocomplete` attribute also controls whether Firefox will — unlike other browsers — [persist the dynamic disabled state and (if applicable) dynamic checkedness](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` element, `<textarea>` element, or entire `<form>` across page loads. The persistence feature is enabled by default. Setting the value of the `autocomplete` attribute to `off` disables this feature. This works even when the `autocomplete` attribute would normally not apply by virtue of its `type`. See [Firefox bug 654072](https://bugzil.la/654072).
+
+## Accessibility Concerns
+
+If a form does not have `autocomplete="off"`, the browser will still attempt to autocomplete the form fields, which can make it difficult for screen readers and other assistive technologies to navigate the form, potentially causing these users to be unable to complete the form. the lack of autocomplete or autocomplete=off and so on is something that automated accessibility tests would reliably catch and flag. This affects the usability of a form specifically but also the accessibility compliance of the website as a whole.
+
+## Example
+
+### HTML
+
+```html
+<form>
+  <label for="username">Username:</label>
+  <input
+    type="text"
+    id="username"
+    name="username"
+    autocomplete="on"
+    aria-required="true"
+    aria-label="Enter your username" />
+  <label for="password">Password:</label>
+  <input
+    type="password"
+    id="password"
+    name="password"
+    autocomplete="on"
+    aria-required="true"
+    aria-label="Enter your password" />
+  <input type="submit" value="Submit" />
+</form>
+```
 
 ## Values
 
