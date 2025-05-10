@@ -7,10 +7,30 @@ sidebar: urlsidebar
 ---
 
 **Uniform Resource Identifiers (URI)** are used to identify "resources" on the web.
-URIs are commonly used as targets of [HTTP](/en-US/docs/Web/HTTP) requests, in which case the URI represents a location for a physical resource, such as a document, a photo, binary data.
+URIs are commonly used as targets of [HTTP](/en-US/docs/Web/HTTP) requests, in which case the URI represents a location for a resource, such as a document, a photo, binary data.
 The most common type of URI is a Uniform Resource Locator ({{Glossary("URL")}}), which is known as the _web address_.
 
 URIs can be used to trigger behaviors other than fetching a resource, including opening an email client, sending text messages, or executing JavaScript, when used in other places such as the [`href`](/en-US/docs/Web/HTML/Reference/Elements/a#href) of an HTML `<a>` link.
+
+## Reference
+
+The [URI reference](/en-US/docs/Web/URI/Reference) provides details about the components that make up a URI.
+
+- [URI schemes](/en-US/docs/Web/URI/Reference/Schemes)
+  - : The first part of the URI, before the `:` character, which indicates the protocol the browser must use to fetch the resource.
+- [URI authority](/en-US/docs/Web/URI/Reference/Authority)
+  - : The section that comes after the scheme and before the path.
+    It may have up to three parts: `user` information, `host`, and `port`.
+- [URI fragment](/en-US/docs/Web/URI/Reference/Fragment)
+  - : An optional part at the end of a URI starting with a `#` character.
+    It is used to identify a specific part of the resource, such as a section of a document or a position in a video.
+
+## Guides
+
+The [URI guides](/en-US/docs/Web/URI/Guides) help you work with URIs on the web.
+
+- [Choosing between www and non-www URLs](Choosing_between_www_and_non-www_URLs)
+  - : A recurring question among website owners is whether to choose 'www' (`www.example.com`) or 'non-www' (`example.com`) URLs for your projects.
 
 ## URLs and URNs
 
