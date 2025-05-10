@@ -1,0 +1,140 @@
+---
+title: "Sanitizer: Sanitizer() constructor"
+short-title: Sanitizer()
+slug: Web/API/Sanitizer/Sanitizer
+page-type: web-api-constructor
+browser-compat: api.Sanitizer.Sanitizer
+---
+
+{{APIRef("HTML Sanitizer API")}}
+
+The **`Sanitizer()`** constructor creates a new {{domxref("Sanitizer")}} object, which can be used to filter unwanted elements and attributes from HTML or documents before they are inserted/parsed into the DOM.
+
+The default `Sanitizer()` configuration allows only XSS-safe input by default, omitting elements such as {{HTMLElement("script")}}, {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("use")}}, and event handler attributes from their respective allow lists, and disallowing data attributes, and comments.
+
+The constructor `configuration` option can be used to customize the sanitizer behavior.
+
+Note that a {{domxref("Sanitizer")}} can be constructed with an XSS-unsafe configuration and used in the "unsafe" DOM insertion methods ({{domxref('Element.setHTMLUnsafe()')}}, and {{domxref('ShadowRoot.setHTMLUnsafe()')}}, {{domxref('Document.parseHTMLUnsafe()')}}) or with the safe methods ({{domxref('Element.setHTML()')}}, {{domxref('ShadowRoot.setHTML()')}}, and {{domxref('Document.parseHTML()')}}).
+If used with the safe methods then {{domxref('Sanitizer.removeUnsafe()')}} is implicitly called on the passed sanitizer to make it safe (without changing the actual object).
+
+<!--
+Either here or in the config (or both) explain what a (in)valid config looks like
+-->
+
+## Syntax
+
+```js-nolint
+new Sanitizer()
+new Sanitizer(configuration)
+```
+
+### Parameters
+
+- `configuration` {{optional_inline}}
+  - : A {{domxref("SanitizerConfig")}} defining a sanitizer configuration, or the string `"default"` to indicate the default configuration.
+
+### Returns
+
+An instance of the {{domxref("Sanitizer")}} object.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if a string other than `"default"` or an invalid configuration definition is used.
+
+## Examples
+
+### Creating a sanitizer and using with SetHTML
+
+This example shows how you might create a sanitizer and use it in a safe HTML DOM insertion method.
+
+#### HTML
+
+Here we define two {{htmlelement("pre")}} elements in which we'll display both the sanitized and unsanitized HTML.
+
+```html
+<pre id="unmodified"></pre>
+<pre id="setHTML"></pre>
+```
+
+```html hidden
+<pre id="log"></pre>
+```
+
+```css hidden
+#log {
+  height: 400px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+#### JavaScript
+
+```js hidden
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.textContent = text;
+}
+```
+
+The following code tests whether the `Sanitizer` interface is supported.
+It then defines a string of "unsafe HTML", which contains bot safe elements, such as {{htmlelement("p")}} and {{htmlelement("span")}}, and XSS-unsafe elements such as {{htmlelement("script")}}
+
+We then create a `Sanitizer` object with a {{domxref("SanitizerConfig")}} that allows the HTML elements: {{htmlelement("div")}}, {{htmlelement("p")}}, {{htmlelement("span")}}, and {{htmlelement("script")}}.
+The sanitizer is used with the unsafe string in {{domxref("Element.setHTML()")}}.
+Both the original and sanitized strings are displayed as text nodes.
+
+```js
+if ("Sanitizer" in window) {
+  // Define unsafe string of HTML
+  const unsafeHTMLString = `
+  <div>
+    <p>This is a paragraph. <span onclick="alert('You clicked the span!')">Click me</span></p>
+    <script src="path/to/amodule.js" type="module"
+  </div>
+`;
+
+  // Set unsafe string as a text node of first element
+  const unmodifiedElement = document.querySelector("#unmodified");
+  unmodifiedElement.innerText = unsafeHTMLString;
+
+  // Create sanitizer using a SanitizerConfig that allows script (and other elements)
+  const sanitizer = new Sanitizer({ elements: ["div", "p", "span", "script"] });
+
+  // Use the sanitizer to set the HTML of the second element using the safe method
+  const setHTMLElement = document.querySelector("#setHTML");
+  setHTMLElement.setHTML(unsafeHTMLString, { sanitizer: sanitizer });
+
+  // Get that HTML and set it back to the element as a text node
+  // (so we can see the elements)
+  setHTMLElement.innerText = setHTMLElement.innerHTML;
+
+  // Log the configuration
+  const sanitizerConfig = sanitizer.get();
+  log(JSON.stringify(sanitizerConfig, null, 2));
+} else {
+  log("The HTML Sanitizer API is NOT supported in this browser.");
+  // Provide fallback or alternative behavior
+}
+```
+
+#### Results
+
+The original string and the HTML that is actually parsed into the DOM are shown below.
+Note that even though the sanitizer allows `<script>` elements, these are stripped out of the injected HTML when using {{domxref("Element.setHTML()")}}.
+
+{{EmbedLiveSample("Creating a sanitizer and using with SetHTML","100","480px")}}
+
+For other examples see the examples in:
+
+[`Sanitizer.get()`](/en-US/docs/Web/API/Sanitizer/get#examples)
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
