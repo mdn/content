@@ -318,7 +318,7 @@ browser.webRequest.onBeforeRequest.addListener(
 This example demonstrates, how to search for multi-byte pattern in an array:
 
 ```js
-Array.prototype.indexOfMulti = function(searchElements, fromIndex) {
+Array.prototype.indexOfMulti = function (searchElements, fromIndex) {
   let i = this.indexOf(searchElements[0], fromIndex);
   if (searchElements.length === 1 || i === -1) {
     // Not found or no other elements to check
