@@ -315,6 +315,60 @@ browser.webRequest.onBeforeRequest.addListener(
 );
 ```
 
+This example demonstrates, how to search for multi-byte pattern in an array:
+
+```js
+Array.prototype.indexOfMulti = function(searchElements, fromIndex) {
+  let i = this.indexOf(searchElements[0], fromIndex);
+  if (searchElements.length === 1 || i === -1) {
+    // Not found or no other elements to check
+    return i;
+  }
+
+  const initial = i;
+  for (let j = 1; j < searchElements.length && i < this.length; j++) {
+    if (this[++i] !== searchElements[j]) {
+      return this.indexOfMulti(searchElements, initial + 1);
+    }
+  }
+
+  return (i === initial + searchElements.length - 1) ? initial : -1;
+};
+
+const encoder = new TextEncoder();
+const elements = encoder.encode("WebExtension ");
+const bytes = encoder.encode("Example");
+
+function listener(details) {
+  const filter = browser.webRequest.filterResponseData(details.requestId);
+
+  const data = [];
+  filter.ondata = (event) => {
+    const buffer = new Uint8Array(event.data);
+    for (let i = 0, l = buffer.length; i < l; i++) {
+      data.push(buffer[i]);
+    }
+  };
+
+  filter.onstop = (event) => {
+    let i, pos;
+    while ((i = data.indexOfMulti(bytes, pos)) !== -1) {
+      data.splice(i, 0, ...elements);
+      pos = i + elements.length + bytes.length;
+    }
+
+    filter.write(new Uint8Array(data));
+    filter.close();
+  };
+}
+
+browser.webRequest.onBeforeRequest.addListener(
+  listener,
+  { urls: ["https://example.com/"], types: ["main_frame"] },
+  ["blocking"],
+);
+```
+
 {{WebExtExamples}}
 
 ## Browser compatibility
