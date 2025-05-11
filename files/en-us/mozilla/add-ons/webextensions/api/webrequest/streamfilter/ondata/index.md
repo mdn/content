@@ -332,7 +332,7 @@ Array.prototype.indexOfMulti = function (searchElements, fromIndex) {
     }
   }
 
-  return (i === initial + searchElements.length - 1) ? initial : -1;
+  return i === initial + searchElements.length - 1 ? initial : -1;
 };
 
 const encoder = new TextEncoder();
