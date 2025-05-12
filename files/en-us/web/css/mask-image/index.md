@@ -289,4 +289,5 @@ Toggle the checkbox to toggle the value of the `mask-mode` between `alpha` (chec
 - {{cssxref("mask-size")}}
 - {{cssxref("mask-border")}}
 - {{cssxref("clip-path")}}
+- [Introduction to CSS masking](/en-US/docs/Web/CSS/CSS_masking/masking)
 - [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
