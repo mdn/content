@@ -3,9 +3,8 @@ title: screenshots
 slug: Web/Progressive_web_apps/Manifest/Reference/screenshots
 page-type: web-manifest-member
 spec-urls: https://w3c.github.io/manifest-app-info/#screenshots-member
+sidebar: pwasidebar
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 The `screenshots` manifest member lets you specify one or more images that showcase your web application.
 These images help users preview your web app's interface and features in app stores.

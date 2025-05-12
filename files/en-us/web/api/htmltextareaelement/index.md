@@ -89,7 +89,7 @@ Listen to these events using {{domxref("EventTarget/addEventListener", "addEvent
 
 - {{domxref("HTMLTextAreaElement/select_event", "select")}} event
   - : Fires when some text has been selected.
-- {{domxref("HTMLTextAreaElement/selectionchange_event", "selectionchange")}} event {{experimental_inline}}
+- {{domxref("HTMLTextAreaElement/selectionchange_event", "selectionchange")}} event
   - : Fires when the text selection in a {{HTMLElement("textarea")}} element has been changed.
 
 ## Examples

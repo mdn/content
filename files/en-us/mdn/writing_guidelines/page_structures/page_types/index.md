@@ -57,6 +57,7 @@ Below are examples of the various pages you'll find on MDN along with templates 
 - [API landing pages](#api_landing_page)
 - [API reference page](#api_reference_page)
 - [API reference subpage](#api_reference_subpage)
+- [ARIA reference](#aria_reference_page)
 - [Conceptual pages](#conceptual_page)
 - [CSS feature reference](#css_feature_reference_page)
 - [CSS module landing page](#css_module_landing_page)
@@ -213,6 +214,19 @@ It also provides examples, browser compatibility information, and other importan
 #### Templates
 
 - [HTTP header page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/HTTP_header_page_template)
+
+### ARIA reference page
+
+An **ARIA reference page** describes a [role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) or [attribute](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes) that defines ways to make web content and web applications more accessible to people with disabilities.
+
+#### Examples
+
+- [`aria-busy` attribute](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy)
+- [`application` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)
+
+#### Templates
+
+- [ARIA page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/ARIA_Page_Template)
 
 ### Conceptual page
 

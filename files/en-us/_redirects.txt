@@ -3479,8 +3479,9 @@
 /en-US/docs/Games/Anatomy_of_a_vIdeo_game	/en-US/docs/Games/Anatomy
 /en-US/docs/Games/Index	/en-US/docs/Games
 /en-US/docs/Games/Introduction/Introduction_3D	/en-US/docs/Games/Techniques/3D_on_the_web
-/en-US/docs/Games/Introduction_to_HTML5_Game_Development_(summary)	/en-US/docs/Games/Introduction_to_HTML5_Game_Development
-/en-US/docs/Games/Introduction_to_HTML5_Game_Gevelopment_(summary)	/en-US/docs/Games/Introduction_to_HTML5_Game_Development
+/en-US/docs/Games/Introduction_to_HTML5_Game_Development	/en-US/docs/Games/Tools
+/en-US/docs/Games/Introduction_to_HTML5_Game_Development_(summary)	/en-US/docs/Games/Tools
+/en-US/docs/Games/Introduction_to_HTML5_Game_Gevelopment_(summary)	/en-US/docs/Games/Tools
 /en-US/docs/Games/Techniques/3D_collision_detection/Bounding_boxes_with_THREE.js	/en-US/docs/Games/Techniques/3D_collision_detection/Bounding_volume_collision_detection_with_THREE.js
 /en-US/docs/Games/Techniques/3D_on_the_web/WebVR	/en-US/docs/Games/Techniques/3D_on_the_web/WebXR
 /en-US/docs/Games/Techniques/Crisp,_pixel_art_look_with_image-rendering	/en-US/docs/Games/Techniques/Crisp_pixel_art_look
@@ -5849,12 +5850,13 @@
 /en-US/docs/MDN/Changelog	/en-US/docs/MDN/Writing_guidelines/Changelog
 /en-US/docs/MDN/Community/Contributing	/en-US/docs/MDN/Community
 /en-US/docs/MDN/Community/Contributing/Getting_started	/en-US/docs/MDN/Community/Getting_started
-/en-US/docs/MDN/Community/Contributing/Security_vulnerability_response	/en-US/docs/MDN/Community/Security_vulnerability_response
+/en-US/docs/MDN/Community/Contributing/Security_vulnerability_response	https://github.com/mdn/mdn/issues/45
 /en-US/docs/MDN/Community/Contributing/Translated_content	/en-US/docs/MDN/Community/Translated_content
 /en-US/docs/MDN/Community/Issues/Issue_triage	/en-US/docs/MDN/Community/Issues
 /en-US/docs/MDN/Community/MDN_content	/en-US/docs/MDN/Community/Getting_started
 /en-US/docs/MDN/Community/MDN_content/Issues	/en-US/docs/MDN/Community/Issues
 /en-US/docs/MDN/Community/MDN_content/Pull_requests	/en-US/docs/MDN/Community/Pull_requests
+/en-US/docs/MDN/Community/Security_vulnerability_response	https://github.com/mdn/mdn/issues/45
 /en-US/docs/MDN/Community/Users_teams	/en-US/docs/MDN/Community/Roles_teams
 /en-US/docs/MDN/Contribute	/en-US/docs/MDN/Community/Getting_started
 /en-US/docs/MDN/Contribute/Changelog	/en-US/docs/MDN/Writing_guidelines/Changelog
@@ -9935,7 +9937,7 @@
 /en-US/docs/Web/API/RTCIceCandidateInit/usernameFragment	/en-US/docs/Web/API/RTCIceCandidate/usernameFragment
 /en-US/docs/Web/API/RTCIceCandidatePairStats/bytesReceieved	/en-US/docs/Web/API/RTCIceCandidatePairStats/bytesReceived
 /en-US/docs/Web/API/RTCIceCandidateStats/ip	/en-US/docs/Web/API/RTCIceCandidateStats/address
-/en-US/docs/Web/API/RTCIceCandidateStats/mozLocalTransport	/en-US/docs/Web/API/RTCIceCandidateStats/relayProtocol
+/en-US/docs/Web/API/RTCIceCandidateStats/mozLocalTransport	/en-US/docs/Web/API/RTCIceCandidateStats
 /en-US/docs/Web/API/RTCIceCandidateType	/en-US/docs/Web/API/RTCIceCandidate/type
 /en-US/docs/Web/API/RTCIceComponent	/en-US/docs/Web/API/RTCIceCandidate/component
 /en-US/docs/Web/API/RTCIceConnectionState	/en-US/docs/Web/API/RTCPeerConnection/iceConnectionState
