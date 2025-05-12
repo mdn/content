@@ -120,7 +120,9 @@ Because we're defining the offset edges when using the four-value syntax, the or
 
 The real power of the four-value syntax is that it allows us to specify offset edges other than `left` and `top`. For example, `mask-position:  bottom 10px right 20px` creates a `10px` vertical offset up from the bottom edge and a `20px` horizontal offset leftward from the right edge. Usually, the four-value syntax is used to offset from the bottom and/or right. But this syntax is also helpful if you can't remember the offset edge order for the two-value syntax.
 
-One thing to note is that, unlike the `<bg-position>` data type values for {{cssxref("background-position")}}, the `<position>` values for `mask-position` do not allow for a 3-value syntax and do not allow offsetting from `center`. When offsetting the mask from the `bottom` or `right`, the `mask-position` requires all four values (either `top` or `bottom` as the vertical offset edge along with the vertical length or percentage offset value and either `left` or `right`as the horizontal offset edge along with the horizontal length or percentage offset value) to be declared.
+One thing to note is that, unlike the `<bg-position>` data type values for {{cssxref("background-position")}}, the `<position>` values for `mask-position` do not allow for a 3-value syntax and do not allow offsetting from `center`. When offsetting the mask from the `bottom` or `right`, the `mask-position` requires all four values to be declared.
+
+For the four-value syntax to be valid, it needs to specify either `top` or `bottom` as the vertical offset edge, along with the vertical length or percentage offset value, and either `left` or `right` as the horizontal offset edge, along with the horizontal length or percentage offset value. 
 
 ## Formal definition
 
