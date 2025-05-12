@@ -18,9 +18,10 @@ The resulting [reading flow](/en-US/docs/Glossary/Reading_order#reading_flow) ca
 reading-flow: normal;
 reading-flow: flex-visual;
 reading-flow: flex-flow;
-reading-flow: grid-rows;
 reading-flow: grid-columns;
+reading-flow: grid-rows;
 reading-flow: grid-order;
+reading-flow: source-order;
 
 /* Global values */
 reading-flow: inherit;
@@ -46,13 +47,13 @@ The `reading-flow` property takes one of the following keywords as its value:
 
   - : The reading order follows the [flex-flow](/en-US/docs/Web/CSS/flex-flow) direction. Only affects flex containers.
 
-- `grid-rows`
-
-  - : The reading order follows the visual order of grid items by row, taking the `writing-mode` into account. Only affects {{glossary("Grid Container", "grid containers")}}.
-
 - `grid-columns`
 
   - : The reading order follows the visual order of grid items by column, taking the writing mode into account. Only affects grid containers.
+
+- `grid-rows`
+
+  - : The reading order follows the visual order of grid items by row, taking the `writing-mode` into account. Only affects {{glossary("Grid Container", "grid containers")}}.
 
 - `grid-order`
 
@@ -65,9 +66,9 @@ The `reading-flow` property takes one of the following keywords as its value:
 
 The `reading-flow` property modifies the order in which elements in a block, flex, or grid layout are rendered to speech or are navigated to when using sequential navigation such as tabbing to links or buttons.
 
-By default, web content is read out in DOM source order; generally, the source order should express the logical reading order of the content. However, sometimes multiple layouts are applied to a document via [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) to suit different device or user requirements.
+By default, web content is read out in DOM source order. Generally, the source order should express a sensible reading order for the content. However, sometimes there are exceptions where it is beneficial to adjust the reading order so that it still makes sense — the `reading-flow` property allows you to make such adjustments.
 
-In such cases, it is beneficial to adjust the reading order so that it still makes sense in each case. The `reading-flow` property allows you to make these adjustments, causing the reading order to match the layout order resulting from use of flexbox or CSS grid, for example.
+For example, you might apply multiple flexbox or grid layouts to a document via [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) to suit different device or user requirements; `reading-flow` can be used to create a sensible reading order in each case.
 
 In some cases you may wish to further fine-tune the reading order. You can use the {{cssxref("reading-order")}} property to put reading flow container children into different ordinal groups, which are read out in number order.
 
