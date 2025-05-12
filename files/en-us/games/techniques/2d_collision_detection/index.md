@@ -116,16 +116,17 @@ const circle2 = Crafty.e("2D, Canvas, Circle, Fourway")
   .circle(20, "blue");
 
 circle2.bind("EnterFrame", function () {
-  const dx = circle1.x - circle2.x;
-  const dy = circle1.y - circle2.y;
+  const dx = (circle1.x + circle1.radius) - (circle2.x + circle2.radius);
+  const dy = (circle1.y + circle1.radius) - (circle2.y + circle2.radius);
   const distance = Math.sqrt(dx * dx + dy * dy);
 
   const colliding = distance < circle1.radius + circle2.radius;
   this.color = colliding ? "green" : "blue";
 });
 ```
-
 {{ EmbedLiveSample('Circle_Collision', '700', '300') }}
+
+> **Note:** For each circle `x` and `y` co-ordinates begin at the top left corner but not the center, so we need to add the radius to shift the points to the center.
 
 > **Note:** [Here is another example without Canvas or external libraries.](https://jsfiddle.net/jlr7245/teb4znk0/20/)
 
