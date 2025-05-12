@@ -287,6 +287,7 @@ gfx.offscreencanvas
 Glat
 globoff
 Gloc
+glossarysidebar
 gonm
 GPOS
 Grek
@@ -567,6 +568,7 @@ onpagereveal
 onpageswap
 onpaymentrequest
 onpointerrawupdate
+onprerenderingchange
 onrtctransform
 onsamplebufferfull
 onscreenschange
@@ -653,6 +655,7 @@ propstat
 PUNCHTHROUGH
 purgecaches
 PVRTC
+pwasidebar
 pwid
 pythonanywhere
 pyxpidl
