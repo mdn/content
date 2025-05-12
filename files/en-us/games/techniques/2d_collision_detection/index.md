@@ -128,7 +128,7 @@ circle2.bind("EnterFrame", function () {
 {{ EmbedLiveSample('Circle_Collision', '700', '300') }}
 
 > [!NOTE]
-> For each circle `x` and `y` co-ordinates begin at the top left corner but not the center, so we need to add the radius to shift the points to the center.
+> The circles' `x` and `y` coordinates refer to their top left corners, so we need to add the radius to compare their centers.
 
 > **Note:** [Here is another example without Canvas or external libraries.](https://jsfiddle.net/jlr7245/teb4znk0/20/)
 
