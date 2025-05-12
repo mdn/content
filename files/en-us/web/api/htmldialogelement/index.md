@@ -18,7 +18,7 @@ The **`HTMLDialogElement`** interface provides methods to manipulate {{HTMLEleme
 
 _Also inherits properties from its parent interface, {{domxref("HTMLElement")}}._
 
-- {{domxref("HTMLDialogElement.closedBy")}}
+- {{domxref("HTMLDialogElement.closedBy")}} {{experimental_inline}}
   - : A string that sets or returns the [`closedby`](/en-US/docs/Web/HTML/Reference/Elements/dialog#closedby) attribute value of the `<dialog>` element, which indicates the types of user actions that can be used to close the dialog.
 - {{domxref("HTMLDialogElement.open")}}
   - : A boolean value reflecting the [`open`](/en-US/docs/Web/HTML/Reference/Elements/dialog#open) HTML attribute, indicating whether the dialog is available for interaction.
