@@ -3,9 +3,8 @@ title: start_url
 slug: Web/Progressive_web_apps/Manifest/Reference/start_url
 page-type: web-manifest-member
 browser-compat: manifests.webapp.start_url
+sidebar: pwasidebar
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 The `start_url` manifest member is used to specify the URL that should be opened when a user launches your web application, such as when tapping the application's icon on their device's home screen or in an application list.
 

@@ -6,9 +6,7 @@ sidebar: mdnsidebar
 ---
 
 This page lists many of the general-purpose macros created for use on MDN.
-For additional how-to information on using these macros, see [Using macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros).
-
-See [Other macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Other) for information on macros that are infrequently used, are used only in special contexts, or are deprecated.
+For generic how-to information on using them in MDN content, see [Using macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros).
 
 ## Linking
 
@@ -267,3 +265,4 @@ The following macros are included on all reference pages, but are also supported
 - [Page templates](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types#page_templates)
 - [Page components](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#page_components)
 - [Feature status macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status)
+- [Other macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Other): infrequently used or deprecated macros

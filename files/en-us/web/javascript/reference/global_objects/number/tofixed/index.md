@@ -89,7 +89,7 @@ numObj.toFixed(6); // '12345.678900'; additional zeros
 // it rounds up as it's less than Number.EPSILON away from 2.45.
 // This literal actually encodes the same number value as 2.45
 
-(6.02 * 10 ** 23).toFixed(50); // 6.019999999999999e+23; large numbers still use exponential notation
+(6.02 * 10 ** 23).toFixed(50); // '6.019999999999999e+23'; large numbers still use exponential notation
 ```
 
 ### Using toFixed() with negative numbers
@@ -97,7 +97,7 @@ numObj.toFixed(6); // '12345.678900'; additional zeros
 Because member access has higher [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence) than unary minus, you need to group the negative number expression to get a string.
 
 ```js-nolint
--2.34.toFixed(1); // -2.3, a number
+-2.34.toFixed(1); // -2.3; a number
 (-2.34).toFixed(1); // '-2.3'
 ```
 

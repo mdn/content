@@ -38,12 +38,22 @@ const types = [
   "video/webm;codecs=h264",
   "audio/webm;codecs=opus",
   "video/mp4",
+  "video/mp4;codecs=avc1.64003E,mp4a.40.2",
+  "video/mp4;codecs=avc1.64003E,opus",
+  "video/mp4;codecs=avc3.64003E,mp4a.40.2",
+  "video/mp4;codecs=avc3.64003E,opus",
+  "video/mp4;codecs=hvc1.1.6.L186.B0,mp4a.40.2",
+  "video/mp4;codecs=hvc1.1.6.L186.B0,opus",
+  "video/mp4;codecs=hev1.1.6.L186.B0,mp4a.40.2",
+  "video/mp4;codecs=hev1.1.6.L186.B0,opus",
+  "video/mp4;codecs=av01.0.19M.08,mp4a.40.2",
+  "video/mp4;codecs=av01.0.19M.08,opus",
 ];
 
 for (const type of types) {
   console.log(
     `Is ${type} supported? ${
-      MediaRecorder.isTypeSupported(type) ? "Maybe!" : "Nope :("
+      MediaRecorder.isTypeSupported(type) ? "Yes!" : "Nope :("
     }`,
   );
 }

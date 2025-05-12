@@ -2,9 +2,8 @@
 title: Progressive web apps
 slug: Web/Progressive_web_apps
 page-type: landing-page
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 A **progressive web app** (PWA) is an app that's built using web platform technologies, but that provides a user experience like that of a platform-specific app.
 
