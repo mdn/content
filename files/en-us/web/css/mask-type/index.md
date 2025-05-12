@@ -29,7 +29,7 @@ mask-type: unset;
 - `alpha`
   - : Indicates that the alpha (transparency) values of the `<mask>` should be used.
 - `luminance`
-  - : Indicates that the [luminance (brightness) values](#understanding-luminance) of the `<mask>` should be used.
+  - : Indicates that the [luminance (brightness) values](#understanding_luminance) of the `<mask>` should be used.
 
 ## Description
 
