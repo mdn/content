@@ -32,7 +32,8 @@ The [SVG guides](/en-US/docs/Web/SVG/Guides) help you work with SVG on the web, 
 - [Content type](/en-US/docs/Web/SVG/Guides/Content_type)
   - : SVG makes use of a number of data types. This article lists these types along with their syntax and descriptions of what they're used for.
 - [Namespaces crash course](/en-US/docs/Web/SVG/Guides/Namespaces_crash_course)
-  - : Namespaces are essential to user agents that support multiple XML dialects; browsers must be very strict. Taking the time to understand namespaces now will save you from future headaches.
+  - : Namespaces are essential to user agents that support multiple XML dialects.
+    Browsers must be very strict; taking the time to understand namespaces now will save you from future headaches.
 - [Scripting](/en-US/docs/Web/SVG/Guides/Scripting)
   - : There are several ways to create an manipulate SVG using JavaScript.
     This document describes event handling, interactivity and working with embedded SVG content.
