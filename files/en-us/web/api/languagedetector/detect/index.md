@@ -28,8 +28,6 @@ detect(input, options)
     - `signal`
       - : An {{domxref("AbortSignal")}} object instance, which allows the `detect()` operation to be aborted via the associated {{domxref("AbortController")}}.
 
-EDITORIAL: Aborting the call via an abort signal doesn't seem to work. Am I missing something?
-
 ### Return value
 
 A {{jsxref("Promise")}} that fulfills with an array of objects representing the detected languages. Each object contains the following properties:

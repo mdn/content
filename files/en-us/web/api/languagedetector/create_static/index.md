@@ -23,13 +23,11 @@ LanguageDetector.create(options)
   - : An object specifying configuration options for the `LanguageDetector`. Possible values include:
 
     - `expectedInputLanguages`
-      - : An array of strings specifying the expected languages of the input text to have its language detected. These should be valid [BCP 47 language tags](https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags) (as specified in [RFC 5646](https://datatracker.ietf.org/doc/html/rfc5646)).
+      - : An array of strings specifying the expected languages of the input text to have its language detected. These should be valid [BCP 47 language tags](https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags) (as specified in [RFC 5646](https://datatracker.ietf.org/doc/html/rfc5646)). Defaults to `["en"]`.
     - `monitor` {{optional_inline}}
       - : A callback function with a {{domxref("CreateMonitor")}} argument that enables monitoring download progress of the AI model.
     - `signal` {{optional_inline}}
       - : An {{domxref("AbortSignal")}} object instance, which allows the `create()` operation to be aborted via the associated {{domxref("AbortController")}}.
-
-EDITORIAL: Aborting the call via an abort signal doesn't seem to work. Am I missing something?
 
 ### Return value
 

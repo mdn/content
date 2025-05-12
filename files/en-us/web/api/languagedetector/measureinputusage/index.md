@@ -28,13 +28,9 @@ measureInputUsage(input, options)
     - `signal`
       - : An {{domxref("AbortSignal")}} object instance, which allows the `measureInputUsage()` operation to be aborted via the associated {{domxref("AbortController")}}.
 
-EDITORIAL: Aborting the call via an abort signal doesn't seem to work. Am I missing something?
-
 ### Return value
 
 A {{jsxref("Promise")}} that fulfills with a number specifying the {{domxref("LanguageDetector.inputQuota", "inputQuota")}} usage of the given input text.
-
-EDITORIAL: As I said on the inputQuota page, I ought to include some information about input quota and how it is determined for each implementation. Maybe just including all of that info on the inputQuota page and then linking to it from here would be enough? I should specify how accurate the value returned by measureInputUsage is, whether it is an estimate, etc.?
 
 ### Exceptions
 
@@ -45,15 +41,27 @@ EDITORIAL: As I said on the inputQuota page, I ought to include some information
 
 ## Examples
 
-### Basic `measureInputUsage()` usage
+### Checking if you have enough quota
+
+In the below snippet, we create a new `LanguageDetector` instance using {{domxref("LanguageDetector.create_static", "create()")}}, then return the total input quota via {{domxref("LanguageDetector.inputQuota", "inputQuota")}} and the input quota usage for a detecting a particular text string's language via `measureInputUsage()`.
+
+We then test to see if the individual input usage for that string is greater than the total available quota. If so, we throw an appropriate error; it not, we commence detecting the string's language using {{domxref("LanguageDetector.detect", "detect()")}}.
 
 ```js
 const detector = await LanguageDetector.create({
   expectedInputLanguages: ["en-US", "zh"],
 });
 
+const totalInputQuota = detector.inputQuota;
 const inputUsage = await detector.measureInputUsage(myTextString);
-console.log(`Input usage: ${inputUsage}`);
+
+if (inputUsage > totalInputQuota) {
+  throw new Error("Boo, not enough quota left to detect languages.");
+} else {
+  console.log("Yay, enough quota left to detect languages.");
+  const results = await detector.detect(myTextString);
+  // ...
+}
 ```
 
 ## Specifications

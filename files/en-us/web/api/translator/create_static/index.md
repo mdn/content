@@ -23,15 +23,13 @@ Translator.create(options)
   - : An object specifying configuration options for the `Translator`. Possible values include:
 
     - `sourceLanguage`
-      - : A string specifying the expected language of the input text to be translated, which should be a valid [BCP 47 language tag](https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags) (as specified in [RFC 5646](https://datatracker.ietf.org/doc/html/rfc5646)).
+      - : A string specifying the expected language of the input text to be translated, which should be a valid [BCP 47 language tag](https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags) (as specified in [RFC 5646](https://datatracker.ietf.org/doc/html/rfc5646)). Defaults to `en`.
     - `targetLanguage`
-      - : A string specifying the language that the input text will be translated into, which should be valid BCP 47 language tag.
+      - : A string specifying the language that the input text will be translated into, which should be valid BCP 47 language tag. Defaults to `en`.
     - `monitor` {{optional_inline}}
       - : A callback function with a {{domxref("CreateMonitor")}} argument that enables monitoring download progress of the AI model.
     - `signal` {{optional_inline}}
       - : An {{domxref("AbortSignal")}} object instance, which allows the `create()` operation to be aborted via the associated {{domxref("AbortController")}}.
-
-EDITORIAL: Aborting the call via an abort signal doesn't seem to work. Am I missing something?
 
 ### Return value
 

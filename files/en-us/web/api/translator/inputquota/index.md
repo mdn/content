@@ -14,11 +14,15 @@ The **`inputQuota`** read-only property of the {{domxref("Translator")}} interfa
 
 ## Value
 
-A number specifying the available input quota. This number is implementation dependant. For example, it might be {{jsxref("infinity")}} if there are no limits beyond the user's memory and the maximum length of JavaScript strings, or it might be a number of tokens in the case of LLMs that use a token/credits scheme.
-
-EDITORIAL: I'm not sure how this number is useful — the value returned is so subjective that it seems meaningless. I'd like to get some insight into its use cases, and an example of how Chrome implements it.
+A number specifying the available input quota. This number is implementation dependant. For example, it might be {{jsxref("infinity")}} if there are no limits beyond the user's memory and the maximum length of JavaScript strings, or it might be a number of tokens in the case of AI models that use a token/credits scheme.
 
 ## Examples
+
+### Checking if you have enough quota
+
+In the below snippet, we create a new `Translator` instance using {{domxref("Translator.create_static", "create()")}}, then return the total input quota via `inputQuota` and the input quota usage for a translating a particular text string via {{domxref("Translator.measureInputUsage", "measureInputUsage()")}}.
+
+We then test to see if the individual input usage for that string is greater than the total available quota. If so, we throw an appropriate error; it not, we commence translating the string using {{domxref("Translator.translate", "translate()")}}.
 
 ```js
 const translator = await Translator.create({
@@ -26,8 +30,16 @@ const translator = await Translator.create({
   targetLanguage: "ja",
 });
 
-// Logs a number
-console.log(translator.inputQuota);
+const totalInputQuota = translator.inputQuota;
+const inputUsage = await translator.measureInputUsage(myTextString);
+
+if (inputUsage > totalInputQuota) {
+  throw new Error("Boo, not enough quota left to translate.");
+} else {
+  console.log("Yay, enough quota left to translate.");
+  const translation = await translator.translate(myTextString);
+  // ...
+}
 ```
 
 ## Specifications

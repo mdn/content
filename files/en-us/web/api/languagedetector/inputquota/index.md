@@ -14,19 +14,31 @@ The **`inputQuota`** read-only property of the {{domxref("LanguageDetector")}} i
 
 ## Value
 
-A number specifying the available input quota. This number is implementation dependant. For example, it might be {{jsxref("infinity")}} if there are no limits beyond the user's memory and the maximum length of JavaScript strings, or it might be a number of tokens in the case of LLMs that use a token/credits scheme.
-
-EDITORIAL: I'm not sure how this number is useful — the value returned is so subjective that it seems meaningless. I'd like to get some insight into its use cases, and an example of how Chrome implements it.
+A number specifying the available input quota. This number is implementation dependant. For example, it might be {{jsxref("infinity")}} if there are no limits beyond the user's memory and the maximum length of JavaScript strings, or it might be a number of tokens in the case of AI models that use a token/credits scheme.
 
 ## Examples
+
+### Checking if you have enough quota
+
+In the below snippet, we create a new `LanguageDetector` instance using {{domxref("LanguageDetector.create_static", "create()")}}, then return the total input quota via `inputQuota` and the input quota usage for a detecting a particular text string's language via {{domxref("LanguageDetector.measureInputUsage", "measureInputUsage()")}}.
+
+We then test to see if the individual input usage for that string is greater than the total available quota. If so, we throw an appropriate error; it not, we commence detecting the string's language using {{domxref("LanguageDetector.detect", "detect()")}}.
 
 ```js
 const detector = await LanguageDetector.create({
   expectedInputLanguages: ["en-US", "zh"],
 });
 
-// Logs a number
-console.log(detector.inputQuota);
+const totalInputQuota = detector.inputQuota;
+const inputUsage = await detector.measureInputUsage(myTextString);
+
+if (inputUsage > totalInputQuota) {
+  throw new Error("Boo, not enough quota left to detect languages.");
+} else {
+  console.log("Yay, enough quota left to detect languages.");
+  const results = await detector.detect(myTextString);
+  // ...
+}
 ```
 
 ## Specifications

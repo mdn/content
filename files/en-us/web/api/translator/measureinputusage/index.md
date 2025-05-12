@@ -28,13 +28,9 @@ measureInputUsage(input, options)
     - `signal`
       - : An {{domxref("AbortSignal")}} object instance, which allows the `measureInputUsage()` operation to be aborted via the associated {{domxref("AbortController")}}.
 
-EDITORIAL: Aborting the call via an abort signal doesn't seem to work. Am I missing something?
-
 ### Return value
 
 A {{jsxref("Promise")}} that fulfills with a number specifying the {{domxref("Translator.inputQuota", "inputQuota")}} usage of the given input text.
-
-EDITORIAL: As I said on the inputQuota page, I ought to include some information about input quota and how it is determined for each implenentation. Maybe just including all of that info on the inputQuota page and then linking to it from here would be enough? I should specify how accurate the value returned by measureInputUsage is, whether it is an estimate, etc.?
 
 ### Exceptions
 
@@ -47,7 +43,11 @@ EDITORIAL: As I said on the inputQuota page, I ought to include some information
 
 ## Examples
 
-### Basic `measureInputUsage()` usage
+### Checking if you have enough quota
+
+In the below snippet, we create a new `Translator` instance using {{domxref("Translator.create_static", "create()")}}, then return the total input quota via {{domxref("Translator.inputQuota", "inputQuota")}} and the input quota usage for a translating a particular text string via `measureInputUsage()`.
+
+We then test to see if the individual input usage for that string is greater than the total available quota. If so, we throw an appropriate error; it not, we commence translating the string using {{domxref("Translator.translate", "translate()")}}.
 
 ```js
 const translator = await Translator.create({
@@ -55,8 +55,16 @@ const translator = await Translator.create({
   targetLanguage: "ja",
 });
 
+const totalInputQuota = translator.inputQuota;
 const inputUsage = await translator.measureInputUsage(myTextString);
-console.log(`Input usage: ${inputUsage}`);
+
+if (inputUsage > totalInputQuota) {
+  throw new Error("Boo, not enough quota left to translate.");
+} else {
+  console.log("Yay, enough quota left to translate.");
+  const translation = await translator.translate(myTextString);
+  // ...
+}
 ```
 
 ## Specifications

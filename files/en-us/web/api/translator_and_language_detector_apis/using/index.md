@@ -6,13 +6,13 @@ page-type: guide
 
 {{DefaultAPISidebar("Translator and Language Detector APIs")}}
 
-The [Translator and Language Detector APIs](/en-US/docs/Web/API/Translator_and_Language_Detector_APIs) provide asynchronous ({{jsxref("Promise")}}-based) mechanisms for a website to detect languages and translate text via the browser's own internal language model. This is useful and efficient because the browser handles the service, rather than the developer having to rely on the user downloading large language models, or host or pay for a cloud-based translation service. This article explains how to use the fundamentals of the these APIs.
+The [Translator and Language Detector APIs](/en-US/docs/Web/API/Translator_and_Language_Detector_APIs) provide asynchronous ({{jsxref("Promise")}}-based) mechanisms for a website to detect languages and translate text via the browser's own internal AI model. This is useful and efficient because the browser handles the service, rather than the developer having to rely on the user downloading AI models, or host or pay for a cloud-based translation service. This article explains how to use the fundamentals of the these APIs.
 
 ## Detecting a language
 
 All of the language detection functionality is accessed through a single interface — {{domxref("LanguageDetector")}}.
 
-The first step in getting the browser LLM to detect a language is to create a `LanguageDetector` object instance. This is done using the {{domxref("LanguageDetector.create_static", "LanguageDetector.create()")}} static method, which takes an options object as an argument:
+The first step in getting the AI model to detect a language is to create a `LanguageDetector` object instance. This is done using the {{domxref("LanguageDetector.create_static", "LanguageDetector.create()")}} static method, which takes an options object as an argument:
 
 ```js
 const detector = await LanguageDetector.create({
@@ -98,7 +98,12 @@ const translatorAvailability = await Translator.availability({
 });
 ```
 
-These methods return an emumerated value indicating whether support is, or will be available for the specified set of options. The meaning of the `available` and `unavailable` values is fairly obvious, but there are also `downloadable` and `downloading` values that mean support for the specified set of options is available to download or currently downloading, respectively.
+These methods return an emumerated value indicating whether support is, or will be available for the specified set of options:
+
+- `downloadable` means that the implementation supports the requested options, but needs to download a model or some fine-tuning data.
+- `downloading` means that the implementation supports the requested options, but needs to finish an ongoing download.
+- `available` means that the implementation supports the requested options without requiring any new downloads.
+- `unavailable` means that the implementation doesn't support the requested options.
 
 ## Cancelling operations and destroying instances
 
@@ -117,8 +122,6 @@ const translator = await Translator.create({
 
 controller.abort();
 ```
-
-EDITORIAL: I've tried this, and it doesn't seem to work. Am I missing something?
 
 Once a `Translator` or `LanguageDetector` instance has been created, you can destroy it when it is finished with using the {{domxref("Translator.destroy()")}}/{{domxref("LanguageDetector.destroy()")}} methods:
 
@@ -159,8 +162,6 @@ console.log(translator.inputQuota);
 const usage = await translator.measureInputUsage(myTextString);
 console.log(usage);
 ```
-
-EDITORIAL: It would be good to state what the quota is for Chrome; I appreciate that the exact quota will vary across implementations.
 
 ## Complete example
 
