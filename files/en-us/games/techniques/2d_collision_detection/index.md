@@ -123,10 +123,12 @@ circle2.bind("EnterFrame", function () {
   const colliding = distance < circle1.radius + circle2.radius;
   this.color = colliding ? "green" : "blue";
 });
+
 ```
 {{ EmbedLiveSample('Circle_Collision', '700', '300') }}
 
-> **Note:** For each circle `x` and `y` co-ordinates begin at the top left corner but not the center, so we need to add the radius to shift the points to the center.
+> [!NOTE]
+> For each circle `x` and `y` co-ordinates begin at the top left corner but not the center, so we need to add the radius to shift the points to the center.
 
 > **Note:** [Here is another example without Canvas or external libraries.](https://jsfiddle.net/jlr7245/teb4znk0/20/)
 
