@@ -545,5 +545,6 @@ In addition to applying the same shape for both the `clip-shape` and `shape-outs
 - {{cssxref("shape-image-threshold")}}
 - {{cssxref("shape-margin")}}
 - [Overview of shapes](/en-US/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
+- [Introduction to CSS masking](/en-US/docs/Web/CSS/CSS_masking/masking)
 - [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
 - [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) module
