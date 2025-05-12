@@ -1,5 +1,6 @@
 ---
-title: aria-sort
+title: "ARIA: aria-sort attribute"
+short-title: aria-sort
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-sort
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-sort
