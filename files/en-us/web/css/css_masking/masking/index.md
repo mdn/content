@@ -8,7 +8,9 @@ page-type: guide
 
 CSS masking enables you to define visible portions of an element by applying a mask, which selectively hides or reveals parts of the element. This guide explores the `mask` properties, with explanations and examples.
 
-Masking is a CSS technique used to hide portions of an element while revealing others based on a mask image or shape. Masks can be gradients, images, or SVG sources. Unlike CSS clipping, which either fully shows or hides areas of an element based on a shape of a single path, masking allows for nuanced transparency and blending effects based on the alpha transparency and, optionally, luminance of one or more shapes.
+Masking is a CSS technique used to hide portions of an element while revealing others based on a mask image or shape. Masks can be gradients, images, or SVG sources. Unlike [CSS clipping](/en-US/docs/Web/CSS/CSS_masking/CSS_clipping), which either fully shows or hides areas of an element based on a shape of a single path, masking allows for nuanced transparency and blending effects based on the alpha transparency and, optionally, luminance of one or more shapes.
+
+This guide introduces the concept of masking, the various mask image types, and how the luminance and alpha-transparency of the mask impact the portions of the element that are masked (made visible), versus the portions that are clipped (or hidden).
 
 ## What is masking in CSS?
 
@@ -16,16 +18,16 @@ In CSS, masks can be used to define areas of an element that are visible and oth
 
 With alpha masks, the areas of the element where the mask is fully opaque will be visible. Wherever the mask is fully transparent will be fully hidden. Areas of the element that are masked by partially opaque section of a mask will be partially opaque, matching the opacity of the mask applied to it.
 
-With alpha masks, the color of the mask is irrelevant. Only the opacity of the mask matters. In the case of [luminance masks](redxxx), the luminance, or brightness, of the mask, also comes in to play.
+With alpha masks, the color of the mask is irrelevant. Only the opacity of the mask matters. In the case of [luminance masks](#alpha_transparency_versus_luminance), the luminance, or brightness, of the mask, also comes in to play.
 
-Masks can be defined using CSS gradients, raster images (such as PNGs), and SVG {{svgelem("mask")}} elements. Each mask layers consists of a {{cssxref("mask-image")}}, which is positioned relative to an origin box. The mask images can be [sized](redxxx), [repeated](redxxx), and [clipped](redxxx). The way individual mask layers are combined, or "composited", with other mask layers can also be defined.
+Masks can be defined using CSS gradients, raster images (such as PNGs), and SVG {{svgelem("mask")}} elements. Each mask layers consists of a {{cssxref("mask-image")}}, which is positioned relative to an origin box. The mask images can be [sized](/en-US/docs/Web/CSS/mask-size), [repeated](/en-US/docs/Web/CSS/mask-repeat), and [clipped](/en-US/docs/Web/CSS/mask-clip). The way individual mask layers are combined, or "composited", with other mask layers can also be defined. In this guide, we introduce the various mask image types as we discuss [opaqueness and transparency](#opaqueness_versus_transparency), [luminance](#alpha-transparency_versus_luminance), and [compare masking versus CSS clipping](#svg_mask_as_mask_source).
 
 > [!NOTE]
 > All examples with be using the following image as the underlying element upon which masks will be applied:
 >
 > <img src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg" alt="Pride flag" />
 
-### Opaqueness versus transparency
+## Opaqueness versus transparency
 
 With alpha masks, the areas of the element that are visible depend on the alpha-transparency of the mask applied to it. Wherever the mask is fully opaque, the element will be visible. At every pixel where the mask is fully transparent will be fully hidden. Areas of the element that are masked by partially opaque section of a mask will be partially opaque, matching the opacity of the mask applied to it.
 
@@ -37,7 +39,7 @@ With alpha masks, the areas of the element that are visible depend on the alpha-
 <div class="mask-source"></div>
 ```
 
-```css hidden live-sample___gradient1 live-sample___gradient2 live-sample___image1   live-sample___luminance1 live-sample___luminance2 live-sample___luminance3
+```css hidden live-sample___gradient1 live-sample___gradient2 live-sample___image1   live-sample___luminance1 live-sample___luminance2 live-sample___luminance3 live-sample___svg1
 body {
   display: flex;
   gap: 20px;
@@ -48,6 +50,7 @@ body {
   background-size: 20px 20px;
 }
 div,
+svg,
 img {
   width: 220px;
   aspect-ratio: 1;
@@ -114,7 +117,7 @@ Note how the transparent mask areas crop the element; the only parts of the elem
 
 {{EmbedLiveSample("image1", "", "250px")}}
 
-### Alpha transparency versus luminance
+## Alpha transparency versus luminance
 
 We can force the colors of the mask to matter with the {{cssxref("mask-mode")}} property. Here we change the `mask-mode` to from the default of `match-source`, which sets the `mask-mode` to the mask's {{cssxref("mask-type")}}. The `mask-type` defaults to `alpha` for all mask types other than mask sources that are SVG {{svgelement("mask")}} elements.
 
@@ -208,19 +211,75 @@ The sky is clipped and not visible where the sky is black. The image is most vis
 
 In this case, if you toggle the mask-mode to `alpha`, the entire element will be visible as the entire mask is opaque.
 
-### SVG `<mask>` as mask source
+## SVG `<mask>` as mask source
+
+A mask can be any type of CSS {{cssxref("image")}} or a `<mask-source>`. A `<mask-source>` is a {{cssxref("url_value", "&lt;url&gt;")}} reference to an SVG {{SVGElement("mask")}} element. This is similar to clipping in CSS, but with {{cssxref("clip-path")}}, the "mask" is an SVG {{SVGElement("clipPath")}} element instead.
+
+In this example, we define an SVG with a `<mask>` element, an identical {{SVGElement("clipPath")}} element, and an identical {{SVGElement("path")}} element so you can view the mask and clip path source.
+
+```html live-sample___svg1
+<img
+  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+  alt="Pride flag"
+  class="applied-mask" />
+<svg class="mask-source">
+  <mask id="mask-heart">
+    <path
+      d="M20,70 A40,40,0,0,1,100,70 A40,40,0,0,1,180,70 Q180,130,100,190 Q20,130,20,70 Z"
+      fill="rgb(255 0 0 / 0.5)"
+      stroke="rgb(255 255 255 / 1)"
+      stroke-width="20" />
+  </mask>
+  <clippath id="clip-heart">
+    <path
+      d="M20,70 A40,40,0,0,1,100,70 A40,40,0,0,1,180,70 Q180,130,100,190 Q20,130,20,70 Z"
+      fill="rgb(255 0 0 / 0.5)"
+      stroke="rgb(255 255 255 / 1)"
+      stroke-width="20" />
+  </clippath>
+  <path
+    d="M20,70 A40,40,0,0,1,100,70 A40,40,0,0,1,180,70 Q180,130,100,190 Q20,130,20,70 Z"
+    fill="rgb(255 0 0 / 0.5)"
+    stroke="rgb(255 255 255 / 1)"
+    stroke-width="20" />
+</svg>
+<img
+  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+  alt="Pride flag"
+  class="applied-clip" />
+```
+
+```css live-sample___svg1
+.applied-mask {
+  mask-image: url(#mask-heart);
+}
+.applied-clip {
+  clip-path: url(#clip-heart);
+}
+```
+
+```css hidden live-sample___svg1
+:has(:checked) .applied-mask {
+  mask-mode: alpha;
+}
+body {
+  flex-flow: row wrap;
+}
+```
+
+```html hidden live-sample___svg1
+<label><input type="checkbox" /><code>mask-mode: alpha;</code></label>
+```
 
 The `mask-type` defaults to `alpha` for all mask types other than mask sources that are SVG {{svgelement("mask")}} elements. In the case of `<mask>`, the `mask-type` defaults to either the value defaults to `luminance` unless the {{svgattr("mask-type")}} attribute is explicitly set to `alpha`.
 
-```html
-<svg>
-  <mask id="heart">
-    <path
-      d="M20,70 A40,40,0,0,1,100,70 A40,40,0,0,1,180,70 Q180,130,100,190 Q20,130,20,70 Z"
-      fill="none"
-      stroke="white"
-      stroke-width="20" />
-  </mask>
-  <svg></svg>
-</svg>
-```
+As we haven't set the `mask-type` attribute or CSS property on our mask, the `mask-mode` property default of `match-source` resolves to `luminance`. Toggle the checkbox to set the `mask-mode` value to `alpha` or allow it to default to `match-source`.
+
+{{EmbedLiveSample("svg1", "", "290px")}}
+
+This example also demonstrated the difference between masking and clipping in CSS. You'll note that luminance and alpha-transparency are relevant to masking but not in CSS clipping. Masking can be used to controls the opacity of an element while clipping shows everything inside the clipping path and fully hides the parts of the element outside the clip path. Clipped areas are completely invisible whereas masked areas can be partially or fully visible. Masking provides more control. If all you need are shapes, clipping may suffice. But if you need fading, variable opacity, or even control of position and size which were are discussed in a separate guide, masking is more suitable.
+
+## See also
+
+- [CSS clipping guide](/en-US/docs/Web/CSS/CSS_masking/CSS_clipping)
+- [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
