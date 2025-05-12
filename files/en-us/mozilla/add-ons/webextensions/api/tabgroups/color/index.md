@@ -21,7 +21,7 @@ Values of this type are a string and can take these values:
 - pink
 - purple
 - red
-- yello
+- yellow
 
 {{WebExtExamples("h2")}}
 

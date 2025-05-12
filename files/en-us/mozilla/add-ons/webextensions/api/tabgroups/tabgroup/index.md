@@ -1,8 +1,8 @@
 ---
-title: tabGroups.tabGroup
-slug: Mozilla/Add-ons/WebExtensions/API/tabGroups/tabGroup
+title: tabGroups.TabGroup
+slug: Mozilla/Add-ons/WebExtensions/API/tabGroups/TabGroup
 page-type: webextension-api-type
-browser-compat: webextensions.api.tabGroups.tabGroup
+browser-compat: webextensions.api.tabGroups.TabGroup
 ---
 
 {{AddonSidebar}}
