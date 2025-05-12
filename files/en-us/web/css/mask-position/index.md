@@ -122,7 +122,7 @@ The real power of the four-value syntax is that it allows us to specify offset e
 
 One thing to note is that, unlike the `<bg-position>` data type values for {{cssxref("background-position")}}, the `<position>` values for `mask-position` do not allow for a 3-value syntax and do not allow offsetting from `center`. When offsetting the mask from the `bottom` or `right`, the `mask-position` requires all four values to be declared.
 
-For the four-value syntax to be valid, it needs to specify either `top` or `bottom` as the vertical offset edge, along with the vertical length or percentage offset value, and either `left` or `right` as the horizontal offset edge, along with the horizontal length or percentage offset value. 
+For the four-value syntax to be valid, it needs to specify either `top` or `bottom` as the vertical offset edge, along with the vertical length or percentage offset value, and either `left` or `right` as the horizontal offset edge, along with the horizontal length or percentage offset value.
 
 ## Formal definition
 
