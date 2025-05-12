@@ -1,12 +1,12 @@
 ---
-title: How to make PWAs installable
+title: "js13kGames: How to make PWAs installable"
+short-title: Making PWAs installable
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
 page-type: guide
+sidebar: pwasidebar
 ---
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
-
-{{PWASidebar}}
 
 In the last step of this tutorial, we read about how the example application, [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/), works offline thanks to its [service worker](/en-US/docs/Web/API/Service_Worker_API), but we can go even further and allow users to install the web app on their device. The installed web app can then be launched by users just as if it were any OS-native app. This article explains how to achieve this using the web app's manifest.
 

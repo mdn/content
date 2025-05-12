@@ -12,6 +12,8 @@ This article lists guides and references for various features you may use when i
 
 ## Guides
 
+The [Media guides](/en-US/docs/Web/Media/Guides) are resources that help you understand, transform, and optimize media on the web, including audio, video, and images using modern web technologies.
+
 - [Audio and Video Delivery](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery)
   - : We can deliver audio and video on the web in a number of ways, ranging from 'static' media files to adaptive live streams. This article is intended as a starting point for exploring the various delivery mechanisms of web-based media and compatibility with popular browsers.
 - [Audio and Video manipulation](/en-US/docs/Web/Media/Guides/Audio_and_video_manipulation)
@@ -31,7 +33,7 @@ This article lists guides and references for various features you may use when i
 
 ### HTML
 
-These articles describe the HTML elements used for including media:
+The following HTML elements are used for including media on a page.
 
 - {{HTMLElement("audio")}}
   - : The `<audio>` element is used to play audio. These can be used invisibly as a destination for more complex media, or with visible controls for user-controlled playback of audio files. Accessible from JavaScript as {{domxref("HTMLAudioElement")}} objects.
