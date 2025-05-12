@@ -1,5 +1,6 @@
 ---
-title: aria-placeholder
+title: "ARIA: aria-placeholder attribute"
+short-title: aria-placeholder
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-placeholder
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-placeholder

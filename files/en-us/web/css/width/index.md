@@ -102,9 +102,6 @@ width: unset;
 
   - : Sets the width of the element's [margin box](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#parts_of_a_box) to the width of its [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block#identifying_the_containing_block). It attempts to make the margin box fill the available space in the containing block, so in a way behaving similar to `100%` but applying the resulting size to the margin box rather than the box determined by [box-sizing](/en-US/docs/Web/CSS/box-sizing).
 
-    > [!NOTE]
-    > To check aliases used by browsers for the `stretch` value and its implementation status, see the [Browser compatibility](#browser_compatibility) section.
-
 ## Accessibility
 
 Ensure that elements set with a `width` aren't truncated and/or don't obscure other content when the page is zoomed to increase text size.
@@ -125,13 +122,13 @@ Ensure that elements set with a `width` aren't truncated and/or don't obscure ot
 ### Default width
 
 ```css
-p.goldie {
+p.gold {
   background: gold;
 }
 ```
 
 ```html
-<p class="goldie">The MDN community writes really great documentation.</p>
+<p class="gold">The MDN community writes really great documentation.</p>
 ```
 
 {{EmbedLiveSample('Default_width', '500px', '64px')}}
@@ -206,6 +203,55 @@ p.min-blue {
 ```
 
 {{EmbedLiveSample('Example using "min-content"', '500px', '155px')}}
+
+### Stretch width to fill the containing block
+
+#### HTML
+
+```html
+<div class="parent">
+  <div class="child">text</div>
+</div>
+
+<div class="parent">
+  <div class="child stretch">stretch</div>
+</div>
+```
+
+#### CSS
+
+```css hidden
+@supports not (width: stretch) {
+  .parent {
+    display: none !important;
+  }
+
+  body::after {
+    content: "Your browser doesn't support the `stretch` value yet.";
+  }
+}
+```
+
+```css
+.parent {
+  border: solid;
+  margin: 1rem;
+  display: flex;
+}
+
+.child {
+  background: #0999;
+  margin: 1rem;
+}
+
+.stretch {
+  width: stretch;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Stretch width to fill the containing block', 'auto', 250)}}
 
 ## Specifications
 

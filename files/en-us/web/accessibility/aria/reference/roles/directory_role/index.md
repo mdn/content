@@ -1,5 +1,6 @@
 ---
 title: "ARIA: directory role"
+short-title: directory
 slug: Web/Accessibility/ARIA/Reference/Roles/directory_role
 page-type: aria-role
 status:

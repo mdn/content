@@ -3,10 +3,12 @@ title: "DocumentFragment: moveBefore() method"
 short-title: moveBefore()
 slug: Web/API/DocumentFragment/moveBefore
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.DocumentFragment.moveBefore
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
 The **`moveBefore()`** method of the {{domxref("DocumentFragment")}} interface moves a given {{domxref("Node")}} inside the invoking `DocumentFragment` as a direct child, before a given reference node.
 
