@@ -321,7 +321,7 @@ For example, in this key specification:
 "content_scripts": [
     {
     "matches": ["*://*.mozilla.org/*"],
-    "js": ["my-content-script.js"],
+    "js": ["jquery.js", "my-content-script.js"],
     "run_at": "document_idle"
   },
   {
@@ -332,7 +332,7 @@ For example, in this key specification:
   },
   {
     "matches": ["*://*.mozilla.org/*"],
-    "js": ["jquery.js"],
+    "js": ["run-first.js"],
     "run_at": "document_start"
   }
 ]
