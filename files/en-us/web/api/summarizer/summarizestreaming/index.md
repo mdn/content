@@ -30,8 +30,6 @@ summarizeStreaming(input, options)
     - `signal`
       - : An {{domxref("AbortSignal")}} object instance, which allows the `summarizeStreaming()` operation to be aborted via the associated {{domxref("AbortController")}}.
 
-EDITORIAL: Aborting the call via an abort signal doesn't seem to work. Am I missing something?
-
 ### Return value
 
 A {{domxref("ReadableStream")}} containing the generated summary.

@@ -30,8 +30,6 @@ summarize(input, options)
     - `signal`
       - : An {{domxref("AbortSignal")}} object instance, which allows the `summarize()` operation to be aborted via the associated {{domxref("AbortController")}}.
 
-EDITORIAL: Aborting the call via an abort signal doesn't seem to work. Am I missing something?
-
 ### Return value
 
 A {{jsxref("Promise")}} that fulfills with a string containing the generated summary.

@@ -58,6 +58,8 @@ This method returns an emumerated value indicating whether support is, or will b
 - `available` means that the implementation supports the requested options without requiring any new downloads.
 - `unavailable` means that the implementation doesn't support the requested options.
 
+If a download is required, it will be started automatically by the browser once a `Summarizer` instance is created using the `create()` method. You can track download progress automatically using a [monitor](#monitoring_download_progress_and_usage).
+
 ## Generating a summary
 
 When you've determined that your desired configuration works and you've created a `Summarizer` instance, you can use it to generate a summary by calling the {{domxref("Summarizer.summarize()")}} instance method on it, passing it the text to summarize as an argument.
@@ -83,7 +85,7 @@ console.log("Stream complete");
 summaryOutput.textContent = summary;
 ```
 
-After a `Summarizer` instance has been created, you can remove it again using the {{domxref("Summarizer.destroy()")}} instance method.
+After a `Summarizer` instance has been created, you can remove it again using the {{domxref("Summarizer.destroy()")}} instance method. It makes sense to destroy `Summarizer` objects if they are no longer going to be used, as they tie up significant resources in their handling.
 
 ## Cancelling summarize operations
 
@@ -100,7 +102,39 @@ const summary = await summarizer.summarize(myTextString, {
 controller.abort();
 ```
 
-EDITORIAL: I've tried this, and it doesn't seem to work. Am I missing something?
+## Monitoring download progress and usage
+
+If the AI model for a particular summarizer is downloading (`availability()` returns `downloadable` and `downloading`), it is helpful to provide the user with feedback to tell them how long they need to wait before the operation completes.
+
+The `Summarizer.create()` method can accept a `monitor` property, the value of which is a callback function that takes a {{domxref("CreateMonitor")}} instance as an argument. `CreateMonitor` has a {{domxref("CreateMonitor/downloadprogress_event", "downloadprogress")}} event available, which fires when progress is made on downloading the AI model.
+You can use this event to expose loading progress data:
+
+```js
+const summarizer = await Summarizer.create({
+  sharedContext:
+    "A general summary to help a user decide if the text is worth reading",
+  type: "tl;dr",
+  length: "short",
+  monitor: (monitor) => {
+    monitor.addEventListener("downloadprogress", (e) => {
+      console.log(`Downloaded ${Math.floor(e.loaded * 100)}%`);
+    });
+  },
+});
+```
+
+It is also worth mentioning that some implementations have an input quota that governs how many operations a website can request in a given period. The total quota can be accessed via the {{domxref("Summarizer.inputQuota")}} property, while the quota usage for a particular summary operation can be returned using the {{domxref("Summarizer.measureInputUsage()")}} method:
+
+For example:
+
+```js
+// Return total available quota
+console.log(summarizer.inputQuota);
+
+// Return quota usage for summarizing this particular string
+const usage = await summarizer.measureInputUsage(myTextString);
+console.log(usage);
+```
 
 ## Complete example
 
