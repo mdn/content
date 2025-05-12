@@ -105,6 +105,8 @@ These methods return an emumerated value indicating whether support is, or will 
 - `available` means that the implementation supports the requested options without requiring any new downloads.
 - `unavailable` means that the implementation doesn't support the requested options.
 
+If a download is required, it will be started automatically by the browser once a `LanguageDetector` or `Translator` instance is created using the relevant `create()` method. You can track download progress automatically using a [monitor](#monitoring_download_progress_and_usage).
+
 ## Cancelling operations and destroying instances
 
 You can cancel a pending detection or translation operation using an {{domxref("AbortController")}}, with the associated {{domxref("AbortSignal")}} being included inside the method options object as a `signal` property value. For example, aborting a `Translator.create()` operation would look like this:
@@ -130,6 +132,8 @@ translator.destroy();
 detector.destroy();
 ```
 
+It makes sense to destroy these objects if they are no longer going to be used, as they tie up significant resources in their handling.
+
 ## Monitoring download progress and usage
 
 If the AI model for a particular detection or translation is downloading (`availability()` returns `downloadable` and `downloading`), it is helpful to provide the user with feedback to tell them how long they need to wait before the operation completes.
@@ -150,7 +154,7 @@ translator = await Translator.create({
 });
 ```
 
-It is also worth mentioning that AI APIs have an input quota that governs how many operations a website can request in a given period. The total quota can be accessed via the {{domxref("Translator.inputQuota")}}/{{domxref("LanguageDetector.inputQuota")}} properties, while the quota usage for a particular translation or language detection can be returned using the {{domxref("Translator.measureInputUsage()")}}/{{domxref("LanguageDetector.measureInputUsage()")}} methods:
+It is also worth mentioning that some implementations have an input quota that governs how many operations a website can request in a given period. The total quota can be accessed via the {{domxref("Translator.inputQuota")}}/{{domxref("LanguageDetector.inputQuota")}} properties, while the quota usage for a particular translation or language detection can be returned using the {{domxref("Translator.measureInputUsage()")}}/{{domxref("LanguageDetector.measureInputUsage()")}} methods:
 
 For example:
 

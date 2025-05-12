@@ -14,15 +14,15 @@ The **Translator and Language Detector APIs** provide functionality to detect th
 
 ## Concepts and usage
 
-Translating a body of text is a common task on today's web, and one that AI is well-suited to. Typical use cases include:
+Translating a body of text is a common task on today's web. Typical use cases include:
 
 - An on-the-fly translation of an article that isn't available in your language.
 - Translating a user's support requests into a language the support agent understands.
 - Facilitating chats between users that don't speak each other's languages.
 
-For successful automated translation, it is vital to be able to detect the language of a body of text, however, language detection also has other uses beyond translation. You could automatically switch the language of UI strings or error/feedback messages based on the text input by a user. You could also detect the language of entered text and then automatically load the correct dictionary for spell checking or curse word detection.
+Detecting the language of a body of test is an important precursor for successful automated translation, but has other uses beyond direct translation. For example, it allows automatic UI configuration based on user text entry, ranging from updating UI and error strings, to automatically loading appropriate dictionaries for spell checking or curse word detection.
 
-The Translator and Language Detector APIs provide asynchronous ({{jsxref("Promise")}}-based) mechanisms for a website to detect languages and translate text via the browser's own internal AI model. This is useful and efficient because the browser handles the service, rather than the developer having to rely on the user downloading AI models, or host or pay for a cloud-based translation service.
+AI is well-suited to facilitating translation and language detection. The Translator and Language Detector APIs provide asynchronous ({{jsxref("Promise")}}-based) mechanisms for a website to detect languages and translate text via the browser's own internal AI model. This is useful and efficient because the browser handles the service, rather than the developer having to rely on the user downloading AI models, or host or pay for a cloud-based translation service.
 
 - Language detection is done via the {{domxref("LanguageDetector")}} interface. A `LanguageDetector` object instance is created using the {{domxref("LanguageDetector.create_static", "LanguageDetector.create()")}} static method, then the {{domxref("LanguageDetector.detect", "detect()")}} instance method is passed the text string to detect the language for.
 - Translation is done via the {{domxref("Translator")}} interface. A `Translator` object instance is created using the {{domxref("Translator.create_static", "Translator.create()")}} static method, then the {{domxref("Translator.translate", "translate()")}} instance method is passed the text string to translate.
