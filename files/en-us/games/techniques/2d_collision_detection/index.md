@@ -123,8 +123,8 @@ circle2.bind("EnterFrame", function () {
   const colliding = distance < circle1.radius + circle2.radius;
   this.color = colliding ? "green" : "blue";
 });
-
 ```
+
 {{ EmbedLiveSample('Circle_Collision', '700', '300') }}
 
 > [!NOTE]
