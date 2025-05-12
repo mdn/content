@@ -80,7 +80,7 @@ A compression dictionary is a "raw" file that does not follow any specific forma
 
 Another typical approach is to list common strings (for example your HTML templates) together into a new `dictionary.txt` file so it can be used to compress HTML pages on the website. You can optimize this further by using specialized tooling, for example [Brotli's dictionary generator](https://github.com/google/brotli/blob/master/research/dictionary_generator.cc).
 
-Dictionaries do not even need to be text and can even be binary. For example, [WASM](/en-US/docs/WebAssembly) binary files are large resources that can also benefit from delta compression.
+Dictionaries can also be used to effectively compress binary formats. For example, [WASM](/en-US/docs/WebAssembly) binary files are large resources that can also benefit from delta compression.
 
 ## Existing resource as a dictionary
 
