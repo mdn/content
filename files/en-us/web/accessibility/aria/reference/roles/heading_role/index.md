@@ -27,7 +27,7 @@ This defines the text in the `<div>` to be the main heading of the page, indicat
 ### Associated WAI-ARIA roles, states, and properties
 
 - [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level)
-  - : The `aria-level` attribute specifies the heading level in the document structure. If no level is present, a value of 2 is the default.
+  - : The `aria-level` attribute specifies the heading level in the document structure. This attribute is required: authors must indicate the proper nesting level, to ensure elements with a role of heading are organized into a logical outline.
 
 ### Keyboard interactions
 
