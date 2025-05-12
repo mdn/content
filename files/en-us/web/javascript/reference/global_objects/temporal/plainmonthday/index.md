@@ -112,3 +112,4 @@ console.log(
 - {{jsxref("Temporal")}}
 - {{jsxref("Temporal.PlainDate")}}
 - {{jsxref("Temporal.PlainYearMonth")}}
+- [List of commonly supported `calendar` types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types)

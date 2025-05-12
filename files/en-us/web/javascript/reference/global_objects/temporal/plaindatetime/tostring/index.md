@@ -75,3 +75,4 @@ For examples with rounding times, see {{jsxref("Temporal/PlainTime/toString", "T
 - {{jsxref("Temporal/PlainDateTime/from", "Temporal.PlainDateTime.from()")}}
 - {{jsxref("Temporal/PlainDateTime/toJSON", "Temporal.PlainDateTime.prototype.toJSON()")}}
 - {{jsxref("Temporal/PlainDateTime/toLocaleString", "Temporal.PlainDateTime.prototype.toLocaleString()")}}
+- [List of commonly supported `calendar` types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types)

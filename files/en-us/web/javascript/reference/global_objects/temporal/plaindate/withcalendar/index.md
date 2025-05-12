@@ -22,7 +22,7 @@ withCalendar(calendar)
 ### Parameters
 
 - `calendar`
-  - : A string that corresponds to the {{jsxref("Temporal/PlainDate/calendarId", "calendarId")}} property. A list of [supported calendar types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types).
+  - : A string that corresponds to the {{jsxref("Temporal/PlainDate/calendarId", "calendarId")}} property. See [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types) for a list of commonly supported calendar types.
 
 ### Return value
 

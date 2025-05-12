@@ -93,3 +93,4 @@ console.log(ym.toString({ calendarName: "critical" })); // '2021-09-07[!u-ca=chi
 - {{jsxref("Temporal/PlainYearMonth/from", "Temporal.PlainYearMonth.from()")}}
 - {{jsxref("Temporal/PlainYearMonth/toJSON", "Temporal.PlainYearMonth.prototype.toJSON()")}}
 - {{jsxref("Temporal/PlainYearMonth/toLocaleString", "Temporal.PlainYearMonth.prototype.toLocaleString()")}}
+- [List of commonly supported `calendar` types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types)

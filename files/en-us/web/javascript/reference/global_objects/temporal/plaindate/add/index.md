@@ -151,3 +151,4 @@ console.log(end.toString()); // 2021-01-02
 - {{jsxref("Temporal.PlainDate")}}
 - {{jsxref("Temporal.Duration")}}
 - {{jsxref("Temporal/PlainDate/subtract", "Temporal.PlainDate.prototype.subtract()")}}
+- [List of commonly supported `calendar` types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types)
