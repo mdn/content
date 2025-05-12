@@ -7,9 +7,9 @@ browser-compat: webextensions.api.tabGroups.onUpdated
 
 {{AddonSidebar}}
 
-Fires when a tab group's state changes. 
+Fires when a tab group's state changes.
 
-This event does not fire when the group's membership changes or when a tab group is moved. Those updates are covered by {{WebExtAPIRef("tabs.onUpdated")}} and {{WebExtAPIRef("tabGroups.onMoved")}} respectively. 
+This event does not fire when the group's membership changes or when a tab group is moved. Those updates are covered by {{WebExtAPIRef("tabs.onUpdated")}} and {{WebExtAPIRef("tabGroups.onMoved")}} respectively.
 
 To detect `windowId` changes, use {{WebExtAPIRef("tabGroups.onMoved")}} instead.
 
