@@ -64,7 +64,7 @@ The `<repeat-style>` values include:
 
 - `round`
 
-  - : The mask image is repeated as many times as possible in its original dimensions. If the size of the mask origin box is not an exact multiple of the mask image's size, all mask images will be rescaled, [shrinking or stretching](#rounded-repetitions) to ensure no repetitions are clipped.
+  - : The mask image is repeated as many times as possible in its original dimensions. If the size of the mask origin box is not an exact multiple of the mask image's size, all mask images will be rescaled, [shrinking or stretching](#rounded_repetitions) to ensure no repetitions are clipped.
 
 - `no-repeat`
 
@@ -119,7 +119,7 @@ The one-value syntax is a shorthand for the full two-value syntax:
 
 ## Description
 
-The `mask-repeat` property accepts a comma-separated pair of values or one [shorthand value](#shorthand-values). In the two-value syntax, the first value represents the horizontal repetition behavior and the second value represents the vertical behavior.
+The `mask-repeat` property accepts a comma-separated pair of values or one [shorthand value](#shorthand_values). In the two-value syntax, the first value represents the horizontal repetition behavior and the second value represents the vertical behavior.
 
 ### Multiple values
 
