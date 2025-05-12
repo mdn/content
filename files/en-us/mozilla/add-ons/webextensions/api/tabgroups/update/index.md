@@ -13,7 +13,8 @@ Modifies the state of a tab group.
 
 ```js-nolint
 let updatedTabGroup = await browser.tabGroups.update(
-    groupId                // integer
+    groupId,               // integer
+    updateProperties       // object
 );
 ```
 
@@ -23,14 +24,14 @@ let updatedTabGroup = await browser.tabGroups.update(
 
   - : `integer` The ID of the tab group to update.
 
-- `updateProperties` {{optional_inline}}
-  - : An object containing details of the property values to be matched in returned tab groups. Properties that aren't specified aren't modified.
+- `updateProperties`
+  - : An object containing details of the properties to update for this tab group. Properties that aren't specified aren't modified.
     - `collapsed` {{optional_inline}}
       - : `boolean`. Whether the tab group is collapsed or expanded in the tab strip.
     - `color` {{optional_inline}}
-      - : {{WebExtAPIRef("tabGroups.Color")}} The name of the color to use for the tab group.
+      - : {{WebExtAPIRef("tabGroups.Color")}}. The name of the color to use for the tab group.
     - `title` {{optional_inline}}
-      - : `string` The name of the tab group.
+      - : `string`. The name of the tab group.
 
 ### Return value
 

@@ -27,9 +27,9 @@ let movedTabGroup = await browser.tabGroups.move(
 - `moveProperties`
   - : An object containing details of the location to move the tab group to.
     - `index`
-      - : `integer` The position to move the group to. Use -1 to place the group at the end of the window.
+      - : `integer`. The position to move the group to. Use -1 to place the group at the end of the window.
     - `windowId` {{optional_inline}}
-      - : `integer` The window to move the group to. Defaults to the window the group is in. Groups can only be moved to and from windows with {{WebExtAPIRef("windows.WindowType")}} type `"normal"`.
+      - : `integer`. The window to move the group to. Defaults to the window the group is in. Groups can only be moved to and from windows with {{WebExtAPIRef("windows.WindowType")}} type `"normal"`.
 
 ### Return value
 

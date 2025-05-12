@@ -13,24 +13,24 @@ Return all tab groups or find groups with certain properties.
 
 ```js-nolint
 let group = await browser.tabGroups.query(
-    groupId                // integer
+    queryInfo                // object
 );
 ```
 
 ### Parameters
 
-- `queryInfo` {{optional_inline}}
+- `queryInfo`
   - : An object containing details of the property values to be matched in returned tab groups.
     - `collapsed` {{optional_inline}}
-      - : `boolean` Whether the returned tab groups are collapsed or expanded in the tab strip.
+      - : `boolean`. Whether the returned tab groups are collapsed or expanded in the tab strip.
     - `color` {{optional_inline}}
-      - : {{WebExtAPIRef("tabGroups.Color")}} The name of the color returned tab groups are using.
+      - : {{WebExtAPIRef("tabGroups.Color")}}. The name of the color returned tab groups are using.
     - `shared` {{optional_inline}}
-      - : `boolean` Whether the returned tab groups are shared.
+      - : `boolean`. Whether the returned tab groups are shared.
     - `title` {{optional_inline}}
-      - : `string` The name of the tab groups to return.
+      - : `string`. The name of the tab groups to return.
     - `windowId` {{optional_inline}}
-      - : `integer` The ID of the window the returned tab group are in.
+      - : `integer`. The ID of the window the returned tab group are in.
 
 ### Return value
 

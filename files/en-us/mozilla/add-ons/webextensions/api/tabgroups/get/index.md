@@ -20,7 +20,7 @@ let tabGroupDetails = await browser.tabGroups.get(
 ### Parameters
 
 - `groupId`
-  - : `integer` The ID of the tab group to return details for.
+  - : `integer`. The ID of the tab group to return details for.
 
 ### Return value
 

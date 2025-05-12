@@ -9,6 +9,8 @@ browser-compat: webextensions.api.tabGroups.onCreated
 
 Fires when a tab group is created.
 
+In Chrome, this event is also fired when a tab group is moved between windows, instead of {{WebExtAPIRef("tabGroups.onMoved")}}.
+
 ## Syntax
 
 ```js-nolint

@@ -18,7 +18,7 @@ Values of this type are strings. Possible values are:
 - `color`
   - : {{WebExtAPIRef("tabGroups.Color")}}. The name of the user-selected color for the tab group's label and icons.
 - `id`
-  - : `integer` The unique ID of the tab group. Contains the {{WebExtAPIRef("tabGroups.TAB_GROUP_ID_NONE")}} value when the tab isn't in a tab group.
+  - : `integer`. The unique ID of the tab group. Can't be {{WebExtAPIRef("tabGroups.TAB_GROUP_ID_NONE")}}. The ID of a closed tab group may be reused when a tab group is restored, but this isn't guaranteed by the API. To identify tab groups across browser restarts, look at other properties and the tabs within the tab groups.
 - `title`
   - : `string`. The user-defined name of the tab group.
 - `windowId`
