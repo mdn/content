@@ -104,15 +104,25 @@ All of the `tabpanel` elements have `tabindex="0"` to make them tabbable, and al
     </button>
   </div>
   <div>
-  <div id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
-    <p>Content for the first panel</p>
-  </div>
-  <div id="panel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2" hidden>
-    <p>Content for the second panel</p>
-  </div>
-  <div id="panel-3" role="tabpanel" tabindex="0" aria-labelledby="tab-3" hidden>
-    <p>Content for the third panel</p>
-  </div>
+    <div id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
+      <p>Content for the first panel</p>
+    </div>
+    <div
+      id="panel-2"
+      role="tabpanel"
+      tabindex="0"
+      aria-labelledby="tab-2"
+      hidden>
+      <p>Content for the second panel</p>
+    </div>
+    <div
+      id="panel-3"
+      role="tabpanel"
+      tabindex="0"
+      aria-labelledby="tab-3"
+      hidden>
+      <p>Content for the third panel</p>
+    </div>
   </div>
 </div>
 ```
