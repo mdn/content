@@ -1,5 +1,6 @@
 ---
 title: "ARIA: menubar role"
+short-title: menubar
 slug: Web/Accessibility/ARIA/Reference/Roles/menubar_role
 page-type: aria-role
 spec-urls:

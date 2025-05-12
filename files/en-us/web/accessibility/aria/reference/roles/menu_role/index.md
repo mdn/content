@@ -1,5 +1,6 @@
 ---
 title: "ARIA: menu role"
+short-title: menu
 slug: Web/Accessibility/ARIA/Reference/Roles/menu_role
 page-type: aria-role
 spec-urls:

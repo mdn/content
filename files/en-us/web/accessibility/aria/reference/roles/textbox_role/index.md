@@ -1,5 +1,6 @@
 ---
 title: "ARIA: textbox role"
+short-title: textbox
 slug: Web/Accessibility/ARIA/Reference/Roles/textbox_role
 page-type: aria-role
 sidebar: accessibilitysidebar
