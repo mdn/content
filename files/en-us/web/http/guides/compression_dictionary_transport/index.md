@@ -79,7 +79,7 @@ Compression Dictionary Transport can achieve an order of magnitude more compress
 A compression dictionary does not follow any specific format, nor have a specific {{Glossary("MIME type")}}. They are regular files that can be used in the compression of other files with similar content.
 
 Previous versions of files typically have lots of similar content, which is why they make excellent dictionaries.
-Using a previous version of a file as a dictionary allows the compression algorithm to reference all the unchanged content, and just capture the relatively small changes in the new version. This approach is referred to as delta compression.
+Using a previous version of a file as a dictionary allows the compression algorithm to efficiently reference all the unchanged content, and just capture the relatively small differences in the new version. This approach is referred to as delta compression.
 
 Another approach is to list common strings (for example your HTML templates) together in a new `dictionary.txt` file so it can be used to compress HTML pages on the website. You can optimize this further by using specialized tooling, for example [Brotli's dictionary generator](https://github.com/google/brotli/blob/master/research/dictionary_generator.cc), which reduces dictionaries down to their minimum size with minimal overlap.
 
