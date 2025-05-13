@@ -16,7 +16,7 @@ A `Translator` instance's `sourceLanguage` is set when creating it via a {{domxr
 
 ## Value
 
-A string specifying the source language. This should be a valid [BCP 47 language tag](https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags) (as specified in [RFC 5646](https://datatracker.ietf.org/doc/html/rfc5646)).
+A string specifying the source language. This will be a valid [BCP 47 language tag](https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags) (as specified in [RFC 5646](https://datatracker.ietf.org/doc/html/rfc5646)).
 
 ## Examples
 
