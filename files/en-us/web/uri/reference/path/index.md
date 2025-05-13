@@ -38,8 +38,8 @@ https://example.com/
 https://example.com
 ```
 
-
 Browsers, including the {{domxref("URL")}} web API, normalize empty paths to `/`.
+
 ## Specifications
 
 {{Specifications}}
