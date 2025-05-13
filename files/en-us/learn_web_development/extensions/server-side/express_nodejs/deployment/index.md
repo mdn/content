@@ -378,7 +378,7 @@ The steps are:
 
 Now that the repository ("repo") is created on GitHub we are going to want to clone (copy) it to our local computer:
 
-1. Install _git_ for your local computer ([official download guide](https://git-scm.com/downloads)).
+1. Install _git_ for your local computer ([official Git download guide](https://git-scm.com/downloads)).
 2. Open a command prompt/terminal and clone your repo using the URL you copied above:
 
    ```bash
