@@ -57,9 +57,8 @@ Here are some initial ideas for how to get involved in some community networks:
 - Have a look at resources such as [confs.tech](https://confs.tech/) to find tech conferences of interest. If they are out of your price range, try contacting the organizers to see if you could work the conference as a volunteer — you'll still get to attend it and meet lots of people.
 - The [freeCodeCamp forums](https://forum.freecodecamp.org/) is another great place to ask and answer questions.
 - Check out the [Frontend Developers](https://discord.me/frontenddevelopers) Discord server.
-- Join a friendly developer-oriented Slack channel such as [DevChat](https://devchat.webflow.io/).
 - Hang out on [MDN's Discord server](/discord).
-- Try meeting some people on an {{glossary("IRC")}} network such as [Libera.Chat](https://web.libera.chat/).
+- Join a friendly developer-oriented {{glossary("IRC")}} channel such as [Libera.Chat](https://web.libera.chat/).
 - Our learning partner, Scrimba, provides a [strong community and collaboration experience](https://scrimba.com/the-frontend-developer-career-path-c0j/~0xyi?via=mdn) via their Discord server, intending to help their students gain experience in working with others.
 - Find web developers on the social networks, see what they are saying, and join in conversations.
 

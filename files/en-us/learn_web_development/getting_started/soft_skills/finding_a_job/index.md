@@ -322,5 +322,6 @@ Be patient. Even the best candidates will get rejections from multiple job appli
 - [Getting hired](https://scrimba.com/the-frontend-developer-career-path-c0j/~0156?via=mdn), Scrimba <sup>Course Partner</sup>
 - [Technical Interviewing 101: Ultimate Guide to Acing Your Tech Interview](https://learntocodewith.me/posts/technical-interview/), learntocodewith.me (2022)
 - [30 Technical Interview Questions and Tips for Answering](https://www.coursera.org/articles/technical-interview-questions), Coursera (2023)
+- [How to land your first developer job](/en-US/blog/how-to-land-your-first-developer-job), MDN Blog, 2024
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes", "Learn_web_development/Core", "Learn_web_development/Getting_started/Soft_skills")}}
