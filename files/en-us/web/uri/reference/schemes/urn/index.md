@@ -22,6 +22,8 @@ urn:<NID>:<NSS>
 
 - `<NID>`
   - : A NID (Namespace Identifier) is a case insensitive identifier for the namespace (e.g., `ISBN` and `isbn` are equivalent).
+    NIDs are maintained by [registries such as IANA](https://www.iana.org/assignments/urn-namespaces/urn-namespaces.xhtml), and their resolution depends on the specific namespace.
+    For instance, the `ISBN` NID resolution is handled by [International ISBN Agency](https://www.isbn-international.org/) systems.
 - `<NSS>`
   - : The NSS (Namespace Specific String) is a string unique within a URN namespace.
     The combination of the NID (unique across the entire "urn" scheme) and the NSS ensures that the resulting URN is globally unique.

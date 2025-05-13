@@ -30,7 +30,7 @@ protocol:
     - `ftp`
       - : {{Glossary("FTP","File Transfer Protocol")}}
     - `http` / `https`
-      - : Hyper text transfer protocol (and secure connections) ({{glossary("HTTP")}}/{{glossary("HTTPS")}})
+      - : [Hypertext Transfer Protocol](/en-US/docs/Web/HTTP) (and secure connections)
     - [`javascript`](/en-US/docs/Web/URI/Reference/Schemes/javascript)
       - : URL-embedded JavaScript code
     - `mailto`
@@ -56,7 +56,7 @@ Consider the following URL:
 http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereInTheDocument
 ```
 
-`http://` is the _scheme_ of the URL, indicating which protocol the browser must use. Usually it is the HTTP protocol or its secured version, HTTPS. The Web requires one of these two, but browsers also know how to handle other protocols such as `mailto:` (to open a mail client) or `ftp:` to handle a file transfer.
+`http` is the _scheme_ of the URL, indicating which protocol the browser must use. Usually it is the HTTP protocol or its secured version, HTTPS. The Web requires `http` or `https`, but browsers can open URIs with other schemes, like those that start with `mailto:` (to open a mail client) or `ftp:` (file transfers).
 
 When using URLs in {{Glossary("HTML")}} content, you generally only use a few of these URL schemes. When referring to subresources — that is, files that are being loaded as part of a larger document — you should only use the HTTP and HTTPS schemes. Increasingly, browsers are removing support for using FTP to load subresources, for security reasons.
 
