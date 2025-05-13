@@ -20,7 +20,7 @@ A number specifying the available input quota. This number is implementation-dep
 
 ### Checking if you have enough quota
 
-In the below snippet, we create a new `LanguageDetector` instance using {{domxref("LanguageDetector.create_static", "create()")}}, then return the total input quota via `inputQuota` and the input quota usage for a detecting a particular text string's language via {{domxref("LanguageDetector.measureInputUsage", "measureInputUsage()")}}.
+In the below snippet, we create a new `LanguageDetector` instance using {{domxref("LanguageDetector.create_static", "create()")}}, then return the total input quota via `inputQuota` and the input quota usage for detecting a particular text string's language via {{domxref("LanguageDetector.measureInputUsage", "measureInputUsage()")}}.
 
 We then test to see if the individual input usage for that string is greater than the total available quota. If so, we throw an appropriate error; it not, we commence detecting the string's language using {{domxref("LanguageDetector.detect", "detect()")}}.
 
