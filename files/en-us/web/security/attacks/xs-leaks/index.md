@@ -96,16 +96,16 @@ const frames = target.length;
 
 ### Leaking redirects with a CSP
 
-In some websites, the server will redirect a request, or not, based on whether the user is signed in (or has some special status on the site). For example, imagine a site which shows administrators a page at `https://example.org/admin`. If the user is not signed in, and requests this page, then the server might redirect them to `https://example.org/login`.
-This means that if an attacker could determine whether an attempt to load `https://example.org/admin` led to a redirect, then they know whether the user is an administrator on the site.
+In some websites, the server will redirect a request, or not, based on whether the user is signed in (or has some special status on the site). For example, imagine a site which shows administrators a page at `https://admin.example.org/`. If the user is not signed in, and requests this page, then the server might redirect them to `https://login.example.org/`.
+This means that if an attacker could determine whether an attempt to load `https://admin.example.org/` led to a redirect, then they know whether the user is an administrator on the site.
 
 In the attack described here, the attacker uses the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) feature to detect whether a cross-site request was redirected.
 
-- First, they create a page governed by a CSP that only allows {{htmlelement("iframe")}} elements to contain content from `https://example.org/admin`.
+- First, they create a page governed by a CSP that only allows {{htmlelement("iframe")}} elements to contain content from `https://admin.example.org/`.
 
 - Next, they add an event listener in the page that listens for the {{domxref("Document.securitypolicyviolation_event", "securitypolicyviolation")}} event.
 
-- Finally, they create an {{htmlelement("iframe")}} element and set its `src` attribute to `https://example.org/admin`.
+- Finally, they create an {{htmlelement("iframe")}} element and set its `src` attribute to `https://admin.example.org/`.
 
 ```html
 <!DOCTYPE html>
@@ -113,7 +113,7 @@ In the attack described here, the attacker uses the [Content Security Policy (CS
   <head>
     <meta
       http-equiv="Content-Security-Policy"
-      content="frame-src https://example.org/admin" />
+      content="frame-src https://admin.example.org/" />
   </head>
   <body>
     <script>
@@ -122,14 +122,14 @@ In the attack described here, the attacker uses the [Content Security Policy (CS
       });
       const frame = document.createElement("iframe");
       document.body.appendChild(frame);
-      frame.src = "https://example.org/admin";
+      frame.src = "https://admin.example.org/";
     </script>
   </body>
 </html>
 ```
 
 - If the user is logged in as an admin, then the `<iframe>` will load, and the browser will not fire `securitypolicyviolation`.
-- If the user is not logged in as admin, the server redirects to `https://example.org/login`. Because this URL is not allowed by the attacker's CSP, the browser will block the `<iframe>` and fire the `securitypolicyviolation` event, and the attacker's event handler will run.
+- If the user is not logged in as admin, the server redirects to `https://login.example.org/`. Because this URL is not allowed by the attacker's CSP, the browser will block the `<iframe>` and fire the `securitypolicyviolation` event, and the attacker's event handler will run.
 
 Note that this attack works even if the target site disallows embedding using a mechanism such as [`frame-ancestors`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors).
 
