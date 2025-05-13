@@ -104,9 +104,9 @@ async function langSupport(source, target) {
   return availability;
 }
 
-langSupport("en", "fr");
-langSupport("en", "pt");
-langSupport("en", "zh");
+await langSupport("en", "fr");
+await langSupport("en", "pt");
+await langSupport("en", "zh");
 ```
 
 ## Specifications
