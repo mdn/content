@@ -37,4 +37,3 @@ Web servers can use the parameters to modify responses, like applying filtering,
 ## See also
 
 - [URIs](/en-US/docs/Web/URI)
-- [Choosing between www and non-www URLs](/en-US/docs/Web/URI/Guides/Choosing_between_www_and_non-www_URLs)

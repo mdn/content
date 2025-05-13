@@ -26,18 +26,20 @@ In the following two URIs:
 
 ```url
 urn:nbn:de:bvb:19-epub-5359-3
-http://example.com:80/images/animated/ayse.gif
+https://example.com:80/images/animated/ayse.gif
 ```
 
-`nbn:de:bvb:19-epub-5359-3` is the path of the [URN](Web/URI/Reference/Schemes/urn) and `/images/animated/ayse.gif` is the path of the `http` URI.
+`nbn:de:bvb:19-epub-5359-3` is the path of the [URN](/en-US/docs/Web/URI/Reference/Schemes/urn). `/images/animated/ayse.gif` is the path of the `https` URI.
 
 Every URI has a path component, meaning the paths in the following examples are a forward-slash (`/`) in the first URL and an empty path component in the second:
 
 ```url
-http://example.com/
-http://example.com
+https://example.com/
+https://example.com
 ```
 
+
+Browsers, including the {{domxref("URL")}} web API, normalize empty paths to `/`.
 ## Specifications
 
 {{Specifications}}
@@ -45,4 +47,3 @@ http://example.com
 ## See also
 
 - [URIs](/en-US/docs/Web/URI)
-- [Choosing between www and non-www URLs](/en-US/docs/Web/URI/Guides/Choosing_between_www_and_non-www_URLs)
