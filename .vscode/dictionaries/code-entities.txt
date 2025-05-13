@@ -655,6 +655,7 @@ propstat
 PUNCHTHROUGH
 purgecaches
 PVRTC
+pwasidebar
 pwid
 pythonanywhere
 pyxpidl
