@@ -135,7 +135,7 @@ Note that this attack works even if the target site disallows embedding using a 
 
 ## Defenses against cross-site leaks
 
-Cross-site leaks exploit mechanisms in the web platform which enables websites to interact with each other. Correspondingly, the defenses against cross-site leaks all involve _isolating_ the target website from potential attackers, by disabling or controlling these cross-site interactions.
+Cross-site leaks exploit mechanisms in the web platform which enables websites to interact with each other. Correspondingly, the defenses against cross-site leaks usually involve _isolating_ the target website from potential attackers, by disabling or controlling these cross-site interactions.
 
 Since cross-site leaks can work in many different ways, there isn't a single defense that will work against all of them. However, there are several practices that will work against many of them, and we will summarize them here.
 
