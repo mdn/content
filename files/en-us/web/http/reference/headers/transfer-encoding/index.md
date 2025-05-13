@@ -45,6 +45,7 @@ Transfer-Encoding: deflate
 Transfer-Encoding: gzip
 
 // Several values can be listed, separated by a comma
+// This indicates that the content has been compressed using the gzip coding and then chunked using the chunked coding while forming the message body
 Transfer-Encoding: gzip, chunked
 ```
 
