@@ -37,6 +37,10 @@ A {{jsxref("Promise")}} that fulfills with an array of objects representing the 
 - `confidence`
   - : A number between `0` and `1` representing the AI model's confidence that the detected language is correct.
 
+The sum of all the returned `confidence` values should theoretically be 1, however, it may be lower because very low confidence values are excluded from the results.
+
+The last array element returned will always have a `detectedLanguage` value of `und` — this is an abbreviation of "undetermined", and represents the probability that the text is not written in a language the model knows.
+
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
@@ -62,6 +66,7 @@ results.forEach((result) => {
 // es: 0.017705978825688362
 // sv: 0.012977192178368568
 // en: 0.011148443445563316
+// und: 0.0003214875760022551
 ```
 
 ## Specifications

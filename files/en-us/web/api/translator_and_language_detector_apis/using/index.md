@@ -48,7 +48,11 @@ results.forEach((result) => {
 // es: 0.017705978825688362
 // sv: 0.012977192178368568
 // en: 0.011148443445563316
+// und: 0.0003214875760022551
 ```
+
+> [!NOTE]
+> The last array element always represents a confidence score for the `und` language — this is an abbreviation of "undetermined", and represents the probability that the text is not written in a language the model knows.
 
 ## Creating a translation
 
