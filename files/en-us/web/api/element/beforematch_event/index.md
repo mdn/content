@@ -3,12 +3,10 @@ title: "Element: beforematch event"
 short-title: beforematch
 slug: Web/API/Element/beforematch_event
 page-type: web-api-event
-status:
-  - experimental
 browser-compat: api.Element.beforematch_event
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef}}
 
 An element receives a **`beforematch`** event when it is in the _hidden until found_ state and the browser is about to reveal its content because the user has found the content through the "find in page" feature or through fragment navigation.
 

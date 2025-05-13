@@ -83,6 +83,7 @@ No notable changes
   - `groupId` to {{WebExtAPIRef("tabs.Tab")}}. ([Firefox bug 1959713](https://bugzil.la/1959713))
   - `groupId` to {{WebExtAPIRef("tabs.query")}}. ([Firefox bug 1959715](https://bugzil.la/1959715))
   - `groupId` to {{WebExtAPIRef("tabs.onUpdated")}}. ([Firefox bug 1959716](https://bugzil.la/1959716)
+- The `json` resource type is now supported in both {{WebExtAPIRef("webRequest.ResourceType")}} and {{WebExtAPIRef("declarativeNetRequest.ResourceType")}} in Firefox, with import attributes enabled by default. Previously, it was reported as `script`. ([Firefox bug 1858078](https://bugzil.la/1858078) and [Firefox bug 1950836](https://bugzil.la/1950836))
 
 ## Experimental web features
 
