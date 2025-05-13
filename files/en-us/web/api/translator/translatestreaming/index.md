@@ -51,6 +51,7 @@ const stream = translator.translateStreaming((myTextString);
 let translation = "";
 
 for await (const chunk of stream) {
+  console.log(chunk);
   translation += chunk;
 }
 
