@@ -55,8 +55,7 @@ for await (const chunk of stream) {
   translation += chunk;
 }
 
-console.log("Stream complete");
-console.log(translation);
+console.log("Complete translation:", translation);
 ```
 
 ## Specifications
