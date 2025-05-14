@@ -24,7 +24,7 @@ The `media-type` is a [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types) string
 
 If the data contains [characters defined in RFC 3986 as reserved characters](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2), or contains space characters, newline characters, or other non-printing characters, those characters must be {{Glossary("Percent-encoding", "percent-encoded")}}.
 
-If the data is textual, you can embed the text (using the appropriate entities or escapes based on the enclosing document's type). Otherwise, you can specify `base64` to embed base64-encoded binary data. You can find more info on MIME types [here](/en-US/docs/Web/HTTP/Guides/MIME_types) and [here](/en-US/docs/Web/HTTP/Guides/MIME_types/Common_types).
+If the data is textual, you can embed the text (using the appropriate entities or escapes based on the enclosing document's type). Otherwise, you can specify `base64` to embed base64-encoded binary data. You can find [a full dissection of MIME type structure](/en-US/docs/Web/HTTP/Guides/MIME_types) and [a table of common MIME types on the web](/en-US/docs/Web/HTTP/Guides/MIME_types/Common_types).
 
 A few examples:
 

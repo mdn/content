@@ -1,5 +1,6 @@
 ---
 title: "ARIA: menuitemradio role"
+short-title: menuitemradio
 slug: Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role
 page-type: aria-role
 spec-urls:

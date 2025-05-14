@@ -290,7 +290,7 @@ Can you change the size of the second box (by adding CSS to the `.alternate` cla
 {{EmbedLiveSample("box-models", "", "400px")}}
 
 > [!NOTE]
-> You can find a solution for this task [here](https://github.com/mdn/css-examples/blob/main/learn/solutions.md#the-box-model).
+> You can find a solution for this task [in our css-examples repo](https://github.com/mdn/css-examples/blob/main/learn/solutions.md#the-box-model).
 
 ### Use browser DevTools to view the box model
 
