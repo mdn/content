@@ -144,9 +144,13 @@ For example:
 
 Additionally, avoid using vague link text like "Click here" or "Read this article". Descriptive link text provides better context for all readers and improves the experience for users of assistive technologies.
 
+<!-- markdownlint-disable descriptive-link-text -->
+
 - **Correct**: "Learn more about [how to order flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)."
 - **Incorrect**: "Click [here](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items) to learn more."
 - **Incorrect**: "Read [this article](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items) to learn more."
+
+<!-- markdownlint-enable descriptive-link-text -->
 
 By following these guidelines, you help make MDN documentation accessible, clear, and usable by everyone, regardless of how they access the page.
 

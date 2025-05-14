@@ -44,7 +44,7 @@ Also, not all valid ID attribute values are valid JavaScript identifiers. For ex
 
 ## Description
 
-The purpose of the ID attribute is to identify a single element when linking (using a [fragment identifier](/en-US/docs/Web/URI#fragment)), scripting, or styling (with {{glossary("CSS")}}).
+The purpose of the ID attribute is to identify a single element when linking (using a [fragment identifier](/en-US/docs/Web/URI/Reference/Fragment)), scripting, or styling (with {{glossary("CSS")}}).
 
 Elements with ID attributes are available as global properties. The property name is the ID attribute, and the property value is the element. For example, given markup like:
 

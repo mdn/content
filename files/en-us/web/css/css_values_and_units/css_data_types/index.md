@@ -112,15 +112,15 @@ Some CSS properties can take a dimension or a percentage value. In this case the
 
 - {{cssxref("&lt;image&gt;")}}
   - : A URL reference to an image or a color gradient.
-- {{cssxref("&lt;color-stop-list&gt;")}}
+- `<color-stop-list>`
   - : A list of two or more color stops with optional transition information using a color hint.
-- {{cssxref("&lt;linear-color-stop&gt;")}}
+- `<linear-color-stop>`
   - : A `<color>` and a `<length-percentage>` to indicate the color stop for this part of the gradient.
-- {{cssxref("&lt;linear-color-hint&gt;")}}
+- `<linear-color-hint>`
   - : A `<length-percentage>` to indicate how the color interpolates.
-- {{cssxref("&lt;ending-shape&gt;")}}
+- `<ending-shape>`
   - : Used for radial gradients; can have a keyword value of `circle` or `ellipse`.
-- {{cssxref("&lt;size&gt;")}}
+- `<size>`
   - : Determines the size of the radial gradient's ending shape. This accepts a value of a keyword or a `<length>` but not a percentage.
 
 ## 2D positioning
