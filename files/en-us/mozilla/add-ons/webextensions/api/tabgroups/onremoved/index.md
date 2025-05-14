@@ -39,6 +39,10 @@ Events have three functions:
 
     - `group`
       - : {{WebExtAPIRef("tabGroups.TabGroup")}}. Details of the removed tab group's state.
+    - `removeInfo`
+      - : `object`. Information on why the tab group is closing.
+        - `isWindowClosing`
+          - : `boolean`. `true` if the tab group is closing because its window is closing.
 
 ## Examples
 

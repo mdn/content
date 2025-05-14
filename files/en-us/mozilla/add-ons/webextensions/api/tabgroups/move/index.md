@@ -7,7 +7,7 @@ browser-compat: webextensions.api.tabGroups.move
 
 {{AddonSidebar}}
 
-Moves a tab group within or to another window.
+Moves a tab group within or to another window. Groups can't be moved before a pinned tab or inside another tab group.
 
 ## Syntax
 
@@ -27,7 +27,7 @@ let movedTabGroup = await browser.tabGroups.move(
 - `moveProperties`
   - : An object containing details of the location to move the tab group to.
     - `index`
-      - : `integer`. The position to move the group to. Use -1 to place the group at the end of the window.
+      - : `integer`. The position to move the group to. After moving, the first tab in the tab group is at this index in the tab strip. Use -1 to place the group at the end of the window.
     - `windowId` {{optional_inline}}
       - : `integer`. The window to move the group to. Defaults to the window the group is in. Groups can only be moved to and from windows with {{WebExtAPIRef("windows.WindowType")}} type `"normal"`.
 
