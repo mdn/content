@@ -7,4 +7,4 @@ sidebar: htmlsidebar
 
 This page lists how-to guides for HTML, covering tasks such as adding JavaScript to pages, optimizing load performance, defining terms semantically, working with `data-*` attributes, and more.
 
-{{subpageswithsummaries}}
+{{SubpagesWithSummaries}}
