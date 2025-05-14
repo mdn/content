@@ -232,6 +232,11 @@ border-bottom-left-radius: 3px 4px;
 
 ## Examples
 
+### Comparing border styles
+
+The following example has seven {{htmlelement("pre")}} elements, each of which demonstrates combinations of `border` and `border-radius` styles.
+The styles applied to each `<pre>` element are included as the element's contents, so you can see the CSS declarations necessary to create the associated border style:
+
 ```html hidden
 <pre id="example-1">
   border: solid 10px;
@@ -279,7 +284,7 @@ pre {
   margin: 20px;
   padding: 20px;
   width: 80%;
-  height: 80px;
+  height: 50px;
 }
 
 pre#example-1 {
@@ -323,15 +328,7 @@ pre#example-7 {
 }
 ```
 
-{{EmbedLiveSample("Examples", "200", "1150")}}
-
-### Live Samples
-
-- Sample 1 : <https://jsfiddle.net/Tripad/qnGKj/2/>
-- Sample 2 : <https://jsfiddle.net/Tripad/qnGKj/3/>
-- Sample 3 : <https://jsfiddle.net/Tripad/qnGKj/4/>
-- Sample 4 : <https://jsfiddle.net/Tripad/qnGKj/5/>
-- Sample 5 : <https://jsfiddle.net/Tripad/qnGKj/6/>
+{{EmbedLiveSample("Examples", "200", "900")}}
 
 ## Specifications
 
