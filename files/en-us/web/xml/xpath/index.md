@@ -13,7 +13,7 @@ XPath uses a path notation (as in URLs) for navigating through the hierarchical 
 
 ## Guides
 
-The [XPath guides](/en-US/docs/Web/XML/XPath/Guides/) cover practical snippets and describe how to use XPath in JavaScript.
+The [XPath guides](/en-US/docs/Web/XML/XPath/Guides) cover practical snippets and describe how to use XPath in JavaScript.
 
 - [Introduction to using XPath in JavaScript](/en-US/docs/Web/XML/XPath/Guides/Introduction_to_using_XPath_in_JavaScript)
   - : Describes a non-XSLT use of XPath.
