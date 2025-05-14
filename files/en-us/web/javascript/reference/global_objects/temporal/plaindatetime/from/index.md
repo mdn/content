@@ -91,4 +91,3 @@ For more examples, especially regarding different calendars and overflow setting
 - {{jsxref("Temporal.PlainDateTime")}}
 - {{jsxref("Temporal/PlainDateTime/PlainDateTime", "Temporal.PlainDateTime()")}}
 - {{jsxref("Temporal/PlainDateTime/with", "Temporal.PlainDateTime.prototype.with()")}}
-- [List of commonly supported `calendar` types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types)

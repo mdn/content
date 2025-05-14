@@ -96,4 +96,3 @@ console.log(months.map((d) => d.toString()));
 
 - {{jsxref("Temporal.PlainYearMonth")}}
 - {{jsxref("Temporal/PlainYearMonth/equals", "Temporal.PlainYearMonth.prototype.equals()")}}
-- [List of commonly supported `calendar` types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types)

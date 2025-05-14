@@ -55,4 +55,3 @@ console.log(md1.equals(md4)); // false
 ## See also
 
 - {{jsxref("Temporal.PlainMonthDay")}}
-- [List of commonly supported `calendar` types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types)

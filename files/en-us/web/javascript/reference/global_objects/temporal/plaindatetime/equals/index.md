@@ -54,4 +54,3 @@ console.log(dt1.equals(dt4)); // false
 
 - {{jsxref("Temporal.PlainDateTime")}}
 - {{jsxref("Temporal/PlainDateTime/compare", "Temporal.PlainDateTime.compare()")}}
-- [List of commonly supported `calendar` types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types)

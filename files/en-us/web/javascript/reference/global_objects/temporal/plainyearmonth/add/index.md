@@ -157,4 +157,3 @@ const end = start.add({ years: 1 }, { overflow: "reject" }); // RangeError: inva
 - {{jsxref("Temporal.PlainYearMonth")}}
 - {{jsxref("Temporal.Duration")}}
 - {{jsxref("Temporal/PlainYearMonth/subtract", "Temporal.PlainYearMonth.prototype.subtract()")}}
-- [List of commonly supported `calendar` types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types)

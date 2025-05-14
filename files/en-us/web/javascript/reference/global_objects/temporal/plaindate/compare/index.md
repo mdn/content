@@ -97,4 +97,3 @@ console.log(dates.map((d) => d.toString()));
 
 - {{jsxref("Temporal.PlainDate")}}
 - {{jsxref("Temporal/PlainDate/equals", "Temporal.PlainDate.prototype.equals()")}}
-- [List of commonly supported `calendar` types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types)
