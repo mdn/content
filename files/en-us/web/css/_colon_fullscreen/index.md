@@ -23,13 +23,13 @@ The `:fullscreen` pseudo-class lets you configure your stylesheets to automatica
 
 ## Examples
 
-### Styling a Fullscreen Element
+### Styling a fullscreen element
 
 This example applies a different background color to a {{htmlelement("div")}} element, depending on whether or not it is in fullscreen mode. It includes a {{htmlelement("button")}} to toggle fullscreen on and off.
 
 ```html
 <div class="element">
-  <h1>MDN :fullscreen pseudo-class demo</h1>
+  <h1>MDN <code>:fullscreen</code> pseudo-class demo</h1>
 
   <p>
     This demo uses the <code>:fullscreen</code> pseudo-class to automatically
@@ -71,9 +71,18 @@ document.querySelector(".toggle").addEventListener("click", function (event) {
 });
 ```
 
-#### Demo
+```css hidden
+.element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  padding: 1.2em;
+}
+```
 
-[See the example live](https://jsfiddle.net/yookoala/oLc1uws0/).
+{{embedlivesample("", "", "300")}}
 
 ## Specifications
 
