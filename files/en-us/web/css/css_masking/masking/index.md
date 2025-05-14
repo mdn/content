@@ -123,7 +123,10 @@ Note how the transparent mask areas crop the element; the only parts of the elem
 
 ## Alpha transparency versus luminance
 
-We can force the colors of the mask to matter with the {{cssxref("mask-mode")}} property. Here we change the `mask-mode` to from the default of `match-source`, which sets the `mask-mode` either `alpha` or `luminance` depending on the mask type, and, in the case of SVG {{svgelement("mask")}} elements, `<mask>` element's actual {{cssxref("mask-type")}}. The mask mode defaults to `alpha` for all masks unless the mask source is an SVG {{svgelement("mask")}} element, in which case the `mask-type`, unless explicitly set with the CSS {{cssxref("mask-type")}} property or the SVG {{svgattr("mask-type")}} attribute, defaults to `luminance`, so the `match-source` value resolves to `luminance`.
+The `mask-mode`'s default value sets the mode to either `alpha` or `luminance`, depending on the value, with the default `match-source` resolving to `alpha` for all mask sources other than for SVG {{svgelement("mask")}} elements. If the mask source is a `<mask>`, `match-source` resolves the `<mask>`'s {{cssxref("mask-type")}} property value, if set. Otherwise, it resolves to the value of the SVG {{svgattr("mask-type")}}  attribute set on the `<mask>` element. If that is not explicitly set either, setting `mask-mode: match-source` will resolve to `luminance.`
+
+We can force the colors of the mask to matter with the {{cssxref("mask-mode")}} property by setting the mask to be a `luminance` mask. In the previous demo, the `mask-mode` was not set, so the value defaulted to `match-source`. As the colorful heart image is a transparent PNG, the `mask-mode` resolved to `alpha`. By explicitly setting this property, we can control the mode. In this demo, we change the `mask-mode` from the default value of `match-source` to `luminance`.
+
 
 ```css live-sample___luminance1
 .applied-mask {
