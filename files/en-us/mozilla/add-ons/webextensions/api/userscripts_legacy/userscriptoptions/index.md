@@ -9,12 +9,12 @@ page-type: webextension-api-type
 > [!WARNING]
 > This is documentation for the legacy `userScripts` API. It's available in Firefox for Manifest V2. For functionality to work with user scripts in Manifest V3 see the new {{WebExtAPIRef("userScripts")}} API.
 
-The UserScriptOptions object represents the content scripts to register. It has similar syntax to the contentScript options supported by browser.contentScripts.register. The differences are:
+The `UserScriptOptions` object represents the content scripts to register. It has similar syntax to the `contentScript` options supported by `browser.contentScripts.register`. The differences are:
 
-- it does not support a CSS property (use browser.contentScripts.register to dynamically register/unregister stylesheets)
-- It does support an optional scriptMetadata property (as a plain JSON object which contains some metadata properties associated to the registered userScripts)
+- it does not support a CSS property (use `browser.contentScripts.register` to dynamically register/unregister stylesheets)
+- It does support an optional `scriptMetadata` property (as a plain JSON object which contains some metadata properties associated to the registered `userScripts`)
 
-The UserScriptOptions object has the following properties:
+The `UserScriptOptions` object has the following properties:
 
 - `allFrames` {{optional_inline}}
   - : Same as `all_frames` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
@@ -33,6 +33,6 @@ The UserScriptOptions object has the following properties:
 - `runAt` {{optional_inline}}
   - : Same as `run_at` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
 - `scriptMetadata` {{optional_inline}}
-  - : A user script metadata value
+  - : A user script metadata value.
 
-It has similar syntax to the contentScript options supported by browser.contentScripts.register.
+It has similar syntax to the `contentScript` options supported by `browser.contentScripts.register`.

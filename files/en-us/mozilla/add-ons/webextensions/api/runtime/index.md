@@ -27,6 +27,8 @@ It also provides messaging APIs enabling you to:
   - : Identifies the browser's processor architecture.
 - {{WebExtAPIRef("runtime.PlatformInfo")}}
   - : Contains information about the platform the browser is running on.
+- {{WebExtAPIRef("runtime.PlatformNaclArch")}}
+  - : The native client architecture. This may be different from arch on some platforms.
 - {{WebExtAPIRef("runtime.RequestUpdateCheckStatus")}}
   - : Result of a call to {{WebExtAPIRef("runtime.requestUpdateCheck()")}}.
 - {{WebExtAPIRef("runtime.OnInstalledReason")}}
