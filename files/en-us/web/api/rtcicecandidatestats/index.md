@@ -18,6 +18,8 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
     Corresponds to {{domxref("RTCIceCandidate.address")}}.
 - {{domxref("RTCIceCandidateStats.candidateType", "candidateType")}}
   - : A string matching one of the values in [`RTCIceCandidate.type`](/en-US/docs/Web/API/RTCIceCandidate/type#value), indicating what kind of candidate the object provides statistics for.
+- {{domxref("RTCIceCandidateStats.deleted", "deleted")}}
+  - : A boolean indicating whether or not the candidate has been deleted or released.
 - {{domxref("RTCIceCandidateStats.foundation", "foundation")}} {{optional_inline}} {{experimental_inline}}
   - : A string that uniquely identifies the candidate across multiple transports.
     Corresponds to {{domxref("RTCIceCandidate.foundation")}}.
@@ -30,8 +32,12 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 - {{domxref("RTCIceCandidateStats.protocol", "protocol")}} {{optional_inline}}
   - : A string specifying the protocol (`tcp` or `udp`) used to transmit data on the `port`.
     Corresponds to {{domxref("RTCIceCandidate.protocol")}}.
+- {{domxref("RTCIceCandidateStats.relayProtocol", "relayProtocol")}}
+  - : A string specifying the protocol being used by a local {{Glossary("ICE")}} candidate to communicate with the {{Glossary("TURN")}} server.
 - {{domxref("RTCIceCandidateStats.transportId", "transportId")}}
   - : A string uniquely identifying the transport object that was inspected in order to obtain the {{domxref("RTCTransportStats")}} associated with the candidate corresponding to these statistics.
+- {{domxref("RTCIceCandidateStats.url", "url")}} {{optional_inline}}
+  - : A string specifying the URL of the {{Glossary("ICE")}} server from which the described candidate was obtained. This property is _only_ available for local candidates.
 - {{domxref("RTCIceCandidateStats.usernameFragment", "usernameFragment")}} {{optional_inline}} {{experimental_inline}}
   - : A string containing the ICE username fragment ("ice-ufrag").
     Corresponds to {{domxref("RTCIceCandidate.usernameFragment")}}.
