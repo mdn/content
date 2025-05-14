@@ -13,12 +13,16 @@ XPath uses a path notation (as in URLs) for navigating through the hierarchical 
 
 ## Guides
 
+The [XPath guides](/en-US/docs/Web/XML/XPath/Guides) cover practical snippets and describe how to use XPath in JavaScript.
+
 - [Introduction to using XPath in JavaScript](/en-US/docs/Web/XML/XPath/Guides/Introduction_to_using_XPath_in_JavaScript)
   - : Describes a non-XSLT use of XPath.
 - [XPath snippets](/en-US/docs/Web/XML/XPath/Guides/Snippets)
   - : These are JavaScript utility functions, that can be used in your own code, based on [DOM Level 3 XPath](https://www.w3.org/TR/DOM-Level-3-XPath/) APIs.
 
 ## Reference
+
+The [XPath reference](/en-US/docs/Web/XML/XPath/Reference) covers all XPath axes and functions documented on MDN.
 
 - [XPath:Axes](/en-US/docs/Web/XML/XPath/Reference/Axes)
   - : List and definition of the axes defined in the XPath specification. Axes are used to describe the relationships between nodes.
