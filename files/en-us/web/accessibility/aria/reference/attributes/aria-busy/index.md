@@ -1,5 +1,6 @@
 ---
-title: aria-busy
+title: "ARIA: aria-busy attribute"
+short-title: aria-busy
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-busy
 page-type: aria-attribute
 spec-urls:

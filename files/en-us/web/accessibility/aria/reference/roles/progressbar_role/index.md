@@ -1,5 +1,6 @@
 ---
 title: "ARIA: progressbar role"
+short-title: progressbar
 slug: Web/Accessibility/ARIA/Reference/Roles/progressbar_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#progressbar

@@ -22,7 +22,10 @@ offset-path: shape(from 10px 10px, move by 10px 5px, line by 20px 40%, close);
 offset-path: shape(from 10px 10px, hline by 50px, vline to 5rem);
 
 /* <curve-command> */
-offset-path: shape(from 10px 10px, curve to 80px 80px via 160px 1px 20% 16px);
+offset-path: shape(
+  from 10px 10px,
+  curve to 80px 80px with 160px 1px / 20% 16px
+);
 
 /* <smooth-command> */
 offset-path: shape(from 10px 10px, smooth to 100px 50pt);
@@ -45,10 +48,11 @@ offset-path: shape(
 
 clip-path: shape(
   evenodd from 10px 10px,
-  curve to 60px 20% via 40px 0,
+  curve to 60px 20% with 40px 0,
   smooth to 90px 0,
-  curve by -20px 60% via 10% 40px 20% 20px,
-  smooth by -40% -10px via -10px 70px
+  curve by -20px 60% with 10% 40px / 20% 20px,
+  smooth by -40% -10px with -10px 70px,
+  close
 );
 ```
 
@@ -89,15 +93,15 @@ clip-path: shape(
 
     `<hv-line-command>`: Specified as `[hline | vline] [by | to] <length-percentage>`. This command adds a horizontal (`hline`) or vertical (`vline`) [LineTo command](/en-US/docs/Web/SVG/Reference/Attribute/d#lineto_path_commands) to the list of shape commands. With `hline`, a horizontal line is drawn from the command's starting point `to` or `by` the `x` position defined by `<length-percentage>`. With `vline`, a vertical line is drawn from the command's starting point `to` or `by` the `y` position defined by `<length-percentage>`. The `by` or `to` keyword determines the relative or absolute ending point, respectively. This command is equivalent to `<line-command>` with one coordinate value set by the single `<length-percentage>` and the other coordinate value remaining unchanged from its starting command.
 
-    `<curve-command>`: Specified as `curve [by | to] <coordinate-pair> via <coordinate-pair> [<coordinate-pair>]`. This command adds a [Bézier curve command](/en-US/docs/Web/SVG/Reference/Attribute/d#cubic_bézier_curve) to the list of shape commands. The `by` or `to` keyword determines whether the ending point of the curve, specified by the first `<coordinate-pair>`, is relative or absolute, respectively. The `via` keyword specifies the control points of the Bézier curve.
+    `<curve-command>`: Specified as `curve [by | to] <coordinate-pair> with <coordinate-pair> [/ <coordinate-pair>]`. This command adds a [Bézier curve command](/en-US/docs/Web/SVG/Reference/Attribute/d#cubic_bézier_curve) to the list of shape commands. The `by` or `to` keyword determines whether the ending point of the curve, specified by the first `<coordinate-pair>`, is relative or absolute, respectively. The `with` keyword specifies the control points of the Bézier curve.
 
     - If only a single `<coordinate-pair>` is provided, the command draws a [quadratic Bézier curve](/en-US/docs/Web/SVG/Reference/Attribute/d#quadratic_bézier_curve), which is defined by three points (the start point, control point, and end point).
     - If two `<coordinate-pair>` values are provided, the command draws a cubic Bézier curve, which is defined by four points (the start point, two control points, and the end point).
 
-    `<smooth-command>`: Specified as `smooth [by | to] <coordinate-pair> [via <coordinate-pair>]`. This command adds a smooth [Bézier curve command](/en-US/docs/Web/SVG/Reference/Attribute/d#cubic_bézier_curve) to the list of shape commands. The `by` or `to` keyword determines whether the ending point of the curve, specified by the first `<coordinate-pair>`, is relative or absolute, respectively.
+    `<smooth-command>`: Specified as `smooth [by | to] <coordinate-pair> [with <coordinate-pair>]`. This command adds a smooth [Bézier curve command](/en-US/docs/Web/SVG/Reference/Attribute/d#cubic_bézier_curve) to the list of shape commands. The `by` or `to` keyword determines whether the ending point of the curve, specified by the first `<coordinate-pair>`, is relative or absolute, respectively.
 
-    - If `via <coordinate-pair>` is omitted, the command draws a smooth quadratic Bézier curve, which uses the previous control point and the current endpoint to define the curve.
-    - If the optional `via` keyword is included, it specifies the control points of the curve through `<coordinate-pair>`, drawing a smooth cubic Bézier curve defined by the previous control point, the current control point, and the current endpoint.
+    - If `with <coordinate-pair>` is omitted, the command draws a smooth quadratic Bézier curve, which uses the previous control point and the current endpoint to define the curve.
+    - If the optional `with` keyword is included, it specifies the control points of the curve through `<coordinate-pair>`, drawing a smooth cubic Bézier curve defined by the previous control point, the current control point, and the current endpoint.
 
     Smooth curves ensure a continuous transition from the shape, while quadratic curves do not. Smooth quadratic curves maintain a seamless transition using a single control point, whereas smooth cubic curves provide a more refined transition using two control points.
 
@@ -203,7 +207,7 @@ body {
 .shape1 {
   offset-path: shape(
     from 30% 60px,
-    curve to 180px 180px via 90px 190px,
+    curve to 180px 180px with 90px 190px,
     close,
     move by 0px 150px,
     hline by 40%
@@ -290,19 +294,20 @@ body {
   clip-path: shape(from 0% 0%, line to 100% 0%, line to 50% 100%, close);
 }
 
-/* Clipping region with curves and smooth transitions and a box */
+/* A Heart clipping region using curve and arc transitions
+   and a box using hline and vline transitions */
 .shape2 {
   clip-path: shape(
-    from 10px 10px,
-    curve to 60px 20% via 40px 0,
-    smooth to 90px 0,
-    curve by -20px 60% via 10% 40px 20% 20px,
-    smooth by -40% -10px via -10px 70px,
+    from 20px 70px,
+    arc to 100px 70px of 1% cw,
+    arc to 180px 70px of 1% cw,
+    curve to 100px 190px with 180px 130px,
+    curve to 20px 70px with 20px 130px,
     close,
-    move to 100px 100px,
-    hline by 50px,
-    vline by 50px,
-    hline by -50px,
+    move to 150px 150px,
+    hline by 40px,
+    vline by 40px,
+    hline by -40px,
     close
   );
 }

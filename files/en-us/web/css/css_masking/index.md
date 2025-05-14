@@ -58,6 +58,12 @@ While masking provides more control and options, clipping can perform better if 
 - {{domxref("SVGMaskElement")}}
   - {{domxref("SVGMaskElement.maskContentUnits")}}
 
+## Guides
+
+- [Introduction to CSS clipping](/en-US/docs/Web/CSS/CSS_masking/Clipping)
+
+  - : Introduction to clipping in CSS, including the `clip-path` property with examples.
+
 ## Related concepts
 
 - [`<coord-box>`](/en-US/docs/Web/CSS/box-edge#values)

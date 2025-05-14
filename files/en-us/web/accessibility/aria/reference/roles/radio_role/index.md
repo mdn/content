@@ -1,5 +1,6 @@
 ---
 title: "ARIA: radio role"
+short-title: radio
 slug: Web/Accessibility/ARIA/Reference/Roles/radio_role
 page-type: aria-role
 sidebar: accessibilitysidebar
