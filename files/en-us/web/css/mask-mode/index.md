@@ -147,5 +147,5 @@ Because the mask source is an `<image>` and not an SVG `<mask>`, the `match-sour
 - {{cssxref("mask-type")}}
 - {{cssxref("mask-image")}}
 - {{cssxref("mask")}} shorthand
-- [Introduction to CSS masking](/en-US/docs/Web/CSS/CSS_masking/masking)
+- [Introduction to CSS masking](/en-US/docs/Web/CSS/CSS_masking/Masking)
 - [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module

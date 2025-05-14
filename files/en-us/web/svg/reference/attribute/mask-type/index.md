@@ -96,4 +96,4 @@ For {{SVGElement("mask")}}, `mask-type` defines whether the content of the mask 
 
 - CSS {{cssxref("mask-type")}} property
 - CSS {{cssxref("mask-mode")}} property
-- [Introduction to CSS masking](/en-US/docs/Web/CSS/CSS_masking/masking)
+- [Introduction to CSS masking](/en-US/docs/Web/CSS/CSS_masking/Masking)
