@@ -283,7 +283,7 @@ As we haven't set the `mask-type` attribute or CSS property on our mask, the `ma
 
 This example also demonstrated the difference between masking and clipping in CSS. You'll note that luminance and alpha-transparency are relevant to masking but not to clipping. Masking can be used to control the opacity of an element, while clipping shows everything inside the clipping path and fully hides the parts of the element outside the clip path. Clipped areas are completely invisible, whereas masked areas can be partially or fully visible.
 
-If all you need are shapes, clipping may suffice. But if you need fading, variable opacity, or even control of position and size (which we'll discuss in a separate guide), masking is more suitable. 
+If all you need are shapes, clipping may suffice. But if you need fading, variable opacity, or even control of position and size (which we'll discuss in a separate guide), masking is more suitable.
 
 ## See also
 
