@@ -127,7 +127,6 @@ The `mask-mode`'s default value sets the mode to either `alpha` or `luminance`, 
 
 We can force the colors of the mask to matter with the {{cssxref("mask-mode")}} property by setting the mask to be a `luminance` mask. In the previous demo, the `mask-mode` was not set, so the value defaulted to `match-source`. As the colorful heart image is a transparent PNG, the `mask-mode` resolved to `alpha`. By explicitly setting this property, we can control the mode. In this demo, we change the `mask-mode` from the default value of `match-source` to `luminance`.
 
-
 ```css live-sample___luminance1
 .applied-mask {
   mask-mode: luminance;
