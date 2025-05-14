@@ -1,6 +1,6 @@
 ---
 title: Manipulator in the Middle (MITM)
-slug: Web/Security/Attacks/CSRF
+slug: Web/Security/Attacks/MITM
 page-type: guide
 sidebar: security
 ---
