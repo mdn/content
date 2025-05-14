@@ -36,7 +36,11 @@ This example prints to the screen whenever the {{HtmlElement("img")}} element su
 ### HTML
 
 ```html
-<img id="image" src="favicon144.png" alt="MDN logo" width="72" />
+<img
+  id="image"
+  src="/shared-assets/images/examples/favicon144.png"
+  alt="MDN logo"
+  width="72" />
 <div><button onclick="reload()">Reload</button></div>
 ```
 
@@ -50,7 +54,7 @@ image.onload = () => {
 };
 
 function reload() {
-  image.src = "favicon144.png";
+  image.src = "/shared-assets/images/examples/favicon144.png";
 }
 ```
 

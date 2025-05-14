@@ -6,7 +6,12 @@ spec-urls: https://drafts.csswg.org/css-backgrounds/#the-background-image
 sidebar: svgref
 ---
 
-SVG images can be used as an image format, in a number of contexts. Browsers support SVG images in:
+SVG can be used as an image format in HTML, CSS, certain SVG elements, and via the Canvas API.
+This page lists the features where you can provide SVG as an image source.
+
+## Features supporting SVG
+
+Browsers support SVG images in:
 
 - HTML {{HTMLElement("img")}} or {{SVGElement("svg")}} elements
 - CSS {{cssxref("background-image")}}
@@ -18,10 +23,11 @@ SVG images can be used as an image format, in a number of contexts. Browsers sup
 
 ## Restrictions
 
-For security purposes, Gecko places some restrictions on SVG content when it's being used as an image:
+For security purposes, some browsers place restrictions on SVG content when it's being used as an image.
+Specifically, the following limitations may apply:
 
 - [JavaScript](/en-US/docs/Web/JavaScript) is disabled.
-- External resources (e.g., images, stylesheets) cannot be loaded, though they can be used if inlined through data: URLs.
+- External resources (e.g., images, stylesheets) cannot be loaded, though they can be used if inlined through [`data:` URLs](/en-US/docs/Web/URI/Reference/Schemes/data).
 - {{cssxref(":visited")}}-link styles aren't rendered.
 - Platform-native widget styling (based on OS theme) is disabled.
 

@@ -1,5 +1,6 @@
 ---
 title: "ARIA: application role"
+short-title: application
 slug: Web/Accessibility/ARIA/Reference/Roles/application_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#application

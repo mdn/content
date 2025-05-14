@@ -207,7 +207,7 @@ const outerBound = 1.5;
 Let's create a function that takes the direction we want to move as a parameter, and both modifies the CSS transform and updates the position and orientation values of our panner node properties to change the sound as appropriate.
 
 To start with let's take a look at our left, right, up and down values as these are pretty straightforward.
-We'll move the boombox along these axis and update the appropriate position.
+We'll move the boombox along these axes and update the appropriate position.
 
 ```js
 function moveBoombox(direction) {
@@ -474,7 +474,7 @@ function moveBoombox(direction, prevMove) {
 
 ## Wiring up our controls
 
-Wiring up out control buttons is comparatively simple — now we can listen for a mouse event on our controls and run this function, as well as stop it when the mouse is released:
+Wiring up our control buttons is comparatively simple — now we can listen for a mouse event on our controls and run this function, as well as stop it when the mouse is released:
 
 ```js
 // for each of our controls, move the boombox and change the position values
