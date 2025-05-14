@@ -68,7 +68,7 @@ We create some styles to hide the error message by default, but make it visible 
 
 #### JavaScript
 
-We then check for input, and set {{domxref("ariaInvalid")}} to `true` or `false` based on the [`typeMismatch`](/en-US/docs/Web/API/ValidityState/typeMismatch) constraint violation.
+We then check for input, and set {{domxref("Element/ariaInvalid", "ariaInvalid")}} to `true` or `false` based on the [`typeMismatch`](/en-US/docs/Web/API/ValidityState/typeMismatch) constraint violation.
 `ariaInvalid` is in turn reflected in the `aria-invalid` attribute, which hides and displays the error as needed.
 
 ```js
