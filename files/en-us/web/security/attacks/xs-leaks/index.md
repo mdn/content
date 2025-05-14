@@ -196,7 +196,7 @@ app.get("/admin", (req, res) => {
 
 Since the attacker's request is cross-site and is not a navigation, then this server always returns an error for it, whether the user is signed in or not.
 
-Note that we also send the {{httpheader("Vary")}} response header. This ensures that if the response is cached, the cached response will only be given to requests with the same fetch metadata header values.
+Note that we also send the {{httpheader("Vary")}} response header. This ensures that if the response is cached, the cached response will only be given to requests with the same values for the Fetch metadata headers we are using.
 
 A policy like this is called a _Resource Isolation Policy_. To learn much more about implementing isolation policies with Fetch metadata, see [Protect your resources from web attacks with Fetch Metadata](https://web.dev/articles/fetch-metadata) and [Isolation Policies](https://xsleaks.dev/docs/defenses/isolation-policies/).
 
