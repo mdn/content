@@ -484,7 +484,7 @@ The `shape()` function is more robust in that it accepts CSS values and units (`
 <div class="heart large"></div>
 ```
 
-{{ EmbedLiveSample('shape function', 230, 240) }}
+{{ EmbedLiveSample('shape function', 230, 270) }}
 
 ### Wrapping text around your clipped shapes
 
