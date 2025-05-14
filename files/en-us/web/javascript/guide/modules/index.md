@@ -4,7 +4,7 @@ slug: Web/JavaScript/Guide/Modules
 page-type: guide
 ---
 
-{{jsSidebar("JavaScript Guide")}}{{Previous("Web/JavaScript/Guide/Meta_programming")}}
+{{jsSidebar("JavaScript Guide")}}{{Previous("Web/JavaScript/Guide/Internationalization")}}
 
 This guide gives you all you need to get started with JavaScript module syntax.
 
@@ -1012,4 +1012,4 @@ Here are a few tips that may help you if you are having trouble getting your mod
 - [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) on hacks.mozilla.org (2015)
 - [Exploring JS, Ch.16: Modules](https://exploringjs.com/es6/ch_modules.html) by Dr. Axel Rauschmayer
 
-{{Previous("Web/JavaScript/Guide/Meta_programming")}}
+{{Previous("Web/JavaScript/Guide/Internationalization")}}
