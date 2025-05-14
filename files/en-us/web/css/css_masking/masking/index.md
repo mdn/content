@@ -123,9 +123,9 @@ Note how the transparent mask areas crop the element; the only parts of the elem
 
 ## Alpha transparency versus luminance
 
-The `mask-mode`'s default value sets the mode to either `alpha` or `luminance`, depending on the value, with the default `match-source` resolving to `alpha` for all mask sources other than for SVG {{svgelement("mask")}} elements. If the mask source is a `<mask>`, `match-source` resolves the `<mask>`'s {{cssxref("mask-type")}} property value, if set. Otherwise, it resolves to the value of the SVG {{svgattr("mask-type")}} attribute set on the `<mask>` element. If that is not explicitly set either, setting `mask-mode: match-source` will resolve to `luminance.`
+The `mask-mode` property's default value — `match-source` — sets the mode to either `alpha` or `luminance`, depending on the value. The `match-source` value resolves to `alpha` for all mask sources other than SVG {{svgelement("mask")}} elements. If the mask source is a `<mask>` element, `match-source` resolves to the `<mask>`'s {{cssxref("mask-type")}} property value, if set. Otherwise, it resolves to the value of the SVG {{svgattr("mask-type")}} attribute set on the `<mask>` element. If that is not explicitly set either, `match-source` will resolve to `luminance.`
 
-We can force the colors of the mask to matter with the {{cssxref("mask-mode")}} property by setting the mask to be a `luminance` mask. In the previous demo, the `mask-mode` was not set, so the value defaulted to `match-source`. As the colorful heart image is a transparent PNG, the `mask-mode` resolved to `alpha`. By explicitly setting this property, we can control the mode. In this demo, we change the `mask-mode` from the default value of `match-source` to `luminance`.
+If `mask-mode` resolves to `luminance`, or we explicitly set it to `luminance`, the colors of the mask will affect the mask opacity. In the previous demo, the `mask-mode` was not set, so the value defaulted to `match-source`. As the colorful heart image is a transparent PNG, `match-source` resolves to `alpha`. By explicitly setting this property, we can control the mode. In this demo, we change the `mask-mode` to `luminance`.
 
 ```css live-sample___luminance1
 .applied-mask {
