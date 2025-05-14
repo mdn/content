@@ -60,7 +60,7 @@ While masking provides more control and options, clipping can perform better if 
 
 ## Guides
 
-- [Introduction to CSS clipping](/en-US/docs/Web/CSS/CSS_masking/CSS_clipping)
+- [Introduction to CSS clipping](/en-US/docs/Web/CSS/CSS_masking/Clipping)
 
   - : Introduction to clipping in CSS, including the `clip-path` property with examples.
 

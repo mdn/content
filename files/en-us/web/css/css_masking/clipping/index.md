@@ -1,6 +1,6 @@
 ---
 title: Introduction to CSS clipping
-slug: Web/CSS/CSS_masking/CSS_clipping
+slug: Web/CSS/CSS_masking/Clipping
 page-type: guide
 ---
 

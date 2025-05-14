@@ -35,4 +35,4 @@ _This interface doesn't implement any specific methods, but inherits methods fro
 ## See also
 
 - {{SVGElement("clipPath")}}
-- [Introduction to CSS clipping](/en-US/docs/Web/CSS/CSS_masking/CSS_clipping)
+- [Introduction to CSS clipping](/en-US/docs/Web/CSS/CSS_masking/Clipping)
