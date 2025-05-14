@@ -199,7 +199,7 @@ A policy like this is called a _Resource Isolation Policy_. To learn much more a
 
 ### SameSite cookies
 
-The [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) cookie attribute determines whether or not the cookie will be sent in requests originating from a different site.
+The [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) cookie attribute determines whether or not the cookie will be sent in requests originating from a different site.
 
 The `Lax` value of `SameSite` means that cross-site requests will only include the cookie if the request is a top-level navigation (meaning, essentially, that the value in the browser's address bar changes to the target site) and uses a {{glossary("Safe/HTTP", "safe")}} method (most notably, this excludes {{httpmethod("POST")}} requests).
 
@@ -215,10 +215,10 @@ This means it is a good practice to prevent a site from being embeddable unless 
 
 There are two relevant tools here:
 
-- The [`frame-ancestors` directive](/en-US/docs/Web/HTTP/CSP#clickjacking_protection) in a [content security policy](/en-US/docs/Web/HTTP/CSP).
+- The [`frame-ancestors` directive](/en-US/docs/Web/HTTP/Guides/CSP#clickjacking_protection) in a [content security policy](/en-US/docs/Web/HTTP/Guides/CSP).
 - The {{httpheader("X-Frame-Options")}} response header.
 
-The `frame-ancestors` directive is a replacement for `X-Frame-Options`. Although [browser support for `frame-ancestors` is very good](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors#browser_compatibility), some very old browsers, notably Internet Explorer, don't support `frame-ancestors`.
+The `frame-ancestors` directive is a replacement for `X-Frame-Options`. Although [browser support for `frame-ancestors` is very good](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors#browser_compatibility), some very old browsers, notably Internet Explorer, don't support `frame-ancestors`.
 
 If `frame-ancestors` and `X-Frame-Options` are both set, then browsers that support `frame-ancestors` will ignore `X-Frame-Options`. This means that there's no reason not to set `X-Frame-Options` as well as `frame-ancestors`, and thus prevent embedding even in browsers that don't support `frame-ancestors`.
 
