@@ -277,7 +277,7 @@ body {
 
 Because the image source is a `<mask>`, and the mask has neither the `mask-type` CSS property nor the `mask-type` SVG attribute set, the `mask-type` defaults to `alpha`, so the default of `mask-mode: match-source` resolves to `luminance`. This is because, for mask sources that are SVG {{svgelement("mask")}} elements, the `mask-type` defaults to `luminance` unless the {{svgattr("mask-type")}} attribute is explicitly set to `alpha`.
 
-{{EmbedLiveSample("svg1", "", "290px")}}
+{{EmbedLiveSample("svg1", "", "300px")}}
 
 As we haven't set the `mask-type` attribute or CSS property on our mask, the `mask-mode` property default of `match-source` resolves to `luminance`. Toggle the checkbox to set the `mask-mode` value to `alpha` or allow it to default to `match-source`.
 
