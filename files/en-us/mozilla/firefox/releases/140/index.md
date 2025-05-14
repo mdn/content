@@ -57,6 +57,8 @@ This article provides information about the changes in Firefox 140 that affect d
 
 ## Changes for add-on developers
 
+- Support added for `unspecified` in {{WebExtAPIRef("cookies.SameSiteStatus")}}. In addition, `unspecified` is now the default value for `sameSite` in {{WebExtAPIRef("cookies.set()")}}. ([Firefox bug 1550032](https://bugzil.la/1550032))
+
 ### Removals
 
 ### Other
