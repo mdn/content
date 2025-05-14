@@ -873,21 +873,11 @@ An SVG viewer can use this information to conserve memory by discarding elements
 
 ### Temporal API
 
-The [Temporal object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal) aims to simplify working with dates and times in various scenarios, with built-in time zone and calendar representations ([Firefox bug 1912511](https://bugzil.la/1912511)).
-This includes:
+The `withCalendar()` method for [`PlainDate`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/withCalendar), [`PlainDateTime`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime/withCalendar), and [`ZonedDateTime`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/withCalendar) objects within the [Temporal object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal) currently have the following [`calendar` types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types) disabled in all versions other than Firefox Nightly ([Firefox bug 1912511](https://bugzil.la/1912511) and [Firefox bug 1954138](https://bugzil.la/1954138)):
 
-- A **duration** (difference between two time points): {{jsxref("Temporal.Duration")}}
-- **Points in time**:
-  - As a unique instant in history:
-    - A timestamp: {{jsxref("Temporal.Instant")}}
-    - A date-time with a time zone: {{jsxref("Temporal.ZonedDateTime")}}
-  - **Time-zone-unaware date/time ("Plain")**:
-    - Date (year, month, day) + time (hour, minute, second, millisecond, nanosecond): {{jsxref("Temporal.PlainDateTime")}}
-      - Date (year, month, day): {{jsxref("Temporal.PlainDate")}}
-        - Year, month: {{jsxref("Temporal.PlainYearMonth")}}
-        - Month, day: {{jsxref("Temporal.PlainMonthDay")}}
-      - Time (hour, minute, second, millisecond, nanosecond): {{jsxref("Temporal.PlainTime")}}
-- **Now** (current time) as various class instances, or in a specific format: {{jsxref("Temporal.Now")}}
+- `islamic`
+- `islamic-rgsa`
+- `islamic-umalqura`
 
 <table>
   <thead>
@@ -900,7 +890,7 @@ This includes:
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>137</td>
+      <td>139</td>
       <td>Yes</td>
     </tr>
     <tr>
@@ -920,7 +910,7 @@ This includes:
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2"><code>javascript.options.experimental.temporal</code></td>
+      <td colspan="2">N/A</td>
     </tr>
   </tbody>
 </table>
