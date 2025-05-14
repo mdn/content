@@ -1,6 +1,6 @@
 ---
 title: Introduction to CSS masking
-slug: Web/CSS/CSS_masking/masking
+slug: Web/CSS/CSS_masking/Masking
 page-type: guide
 ---
 
