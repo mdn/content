@@ -184,9 +184,9 @@ function isAllowed(req) {
 }
 
 app.get("/admin", (req, res) => {
+  res.setHeader("Vary", "sec-fetch-site, sec-fetch-mode");
   if (isAllowed(req)) {
     // Respond with the admin page if the user is admin
-    res.setHeader("Vary", "sec-fetch-site, sec-fetch-mode");
     getAdminPage(req, res);
   } else {
     res.status(404).send("Not found.");
