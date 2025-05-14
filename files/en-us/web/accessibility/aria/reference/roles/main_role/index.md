@@ -1,5 +1,6 @@
 ---
 title: "ARIA: main role"
+short-title: main
 slug: Web/Accessibility/ARIA/Reference/Roles/main_role
 page-type: aria-role
 spec-urls:

@@ -1192,6 +1192,47 @@ The affected methods and properties are: {{domxref("Element.innerHTML")}}, {{dom
   </tbody>
 </table>
 
+### Removal of `beforescriptexecute` and `afterscriptexecute` events
+
+The non-standard events [`beforescriptexecute`](/en-US/docs/Web/API/Document/beforescriptexecute_event) and [`afterscriptexecute`](/en-US/docs/Web/API/Document/afterscriptexecute_event) on the {{domxref("Document")}} interface, and [`afterscriptexecute`](/en-US/docs/Web/API/Element/afterscriptexecute_event) and [`beforescriptexecute`](/en-US/docs/Web/API/Element/beforescriptexecute_event) on the {{domxref("Element")}} interface are on the path to removal. They have been disabled in Nightly.
+([Firefox bug 1954685](https://bugzil.la/1954685)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>139</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>139</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>139</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>139</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.events.script_execute.enable</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ### PerformanceEventTiming.interactionId
 
 {{domxref("PerformanceEventTiming.interactionId")}} can be used to measure latency timing for events triggered by a particular user interaction. ([Firefox bug 1934683](https://bugzil.la/1934683)).
@@ -2105,7 +2146,7 @@ Note that supported policies can be set through the [`allow`](/en-US/docs/Web/HT
 
 ### Privacy Preserving Attribution API (PPA)
 
-[PPA API](https://support.mozilla.org/en-US/kb/privacy-preserving-attribution) provides an alternative to user tracking for ad attribution using the new `navigator.privateAttribution` object with `saveImpression()` and `measureConversion()` methods. Read more about PPA [in the explainer](https://github.com/mozilla/explainers/tree/main/ppa-experiment). This experiment can be enabled for websites via [origin trial](https://wiki.mozilla.org/Origin_Trials) or in the browser by setting the preference to `1`. ([Firefox bug 1900929](https://bugzil.la/1900929)).
+[PPA API](https://support.mozilla.org/en-US/kb/privacy-preserving-attribution) provides an alternative to user tracking for ad attribution using the new `navigator.privateAttribution` object with `saveImpression()` and `measureConversion()` methods. Read more about PPA [in the original explainer](https://github.com/mozilla/explainers/tree/main/archive/ppa-experiment) and the [proposed spec](https://w3c.github.io/ppa/). This experiment can be enabled for websites via [origin trial](https://wiki.mozilla.org/Origin_Trials) or in the browser by setting the preference to `1`. ([Firefox bug 1900929](https://bugzil.la/1900929)).
 
 <table>
   <thead>

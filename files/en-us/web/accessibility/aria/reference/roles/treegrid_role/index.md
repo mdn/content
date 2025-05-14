@@ -1,5 +1,6 @@
 ---
 title: "ARIA: treegrid role"
+short-title: treegrid
 slug: Web/Accessibility/ARIA/Reference/Roles/treegrid_role
 page-type: aria-role
 spec-urls:

@@ -81,11 +81,12 @@ In this example, a video is presented in a web page. Pressing the <kbd>Enter</kb
 When the page is loaded, this code is run to set up an event listener to watch for the <kbd>Enter</kbd> key.
 
 ```js
+const video = document.getElementById("video");
 document.addEventListener(
-  "keydown",
-  (e) => {
+  "keypress",
+  function (e) {
     if (e.key === "Enter") {
-      toggleFullScreen();
+      toggleFullScreen(video);
     }
   },
   false,
@@ -97,11 +98,16 @@ document.addEventListener(
 This code is called by the event handler above when the user hits the <kbd>Enter</kbd> key.
 
 ```js
-function toggleFullScreen() {
+function toggleFullScreen(video) {
   if (!document.fullscreenElement) {
-    document.documentElement.requestFullscreen();
-  } else if (document.exitFullscreen) {
-    document.exitFullscreen();
+    // If the document is not in full screen mode
+    // make the video full screen
+    video.requestFullscreen();
+  } else {
+    // Otherwise exit the full screen
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
   }
 }
 ```

@@ -127,7 +127,7 @@ console.log(accessibleName);
 
 For normal reflected properties, updates to the property are reflected in the corresponding attribute and vice versa.
 For reflected element references this is not the case.
-Instead, setting the property clears ("undefines") the attribute, so that the property and attribute no longer reflect each other.
+Instead, setting the property clears (unsets) the attribute, so that the property and attribute no longer reflect each other.
 For example, given the following HTML:
 
 ```html

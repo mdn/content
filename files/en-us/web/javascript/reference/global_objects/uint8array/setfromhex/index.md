@@ -1,5 +1,5 @@
 ---
-title: Uint8Array.setFromHex()
+title: Uint8Array.prototype.setFromHex()
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array/setFromHex
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Uint8Array.setFromHex

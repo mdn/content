@@ -88,7 +88,7 @@ This examples demonstrates three `mask-clip` values.
 
 #### HTML
 
-We include three elments, each with a different `<coord-box>` value as a class name.
+We include three elements, each with a different `<coord-box>` value as a class name.
 
 ```html live-sample___mask-clip-example
 <div class="border-box"></div>

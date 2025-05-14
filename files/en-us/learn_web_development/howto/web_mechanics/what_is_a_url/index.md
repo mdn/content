@@ -136,6 +136,22 @@ All of the following URLs are relative URLs:
 - Going back in the directory tree: `../CSS/display` — the protocol and domain name are missing, and the path begins with `..`. This is inherited from the UNIX file system world — to tell the browser we want to go up by one level. Here we want to reach this URL: `https://developer.mozilla.org/en-US/docs/Learn_web_development/../Web/CSS/display`, which can be simplified to: `https://developer.mozilla.org/en-US/docs/Web/CSS/display`.
 - Anchor-only: `#semantic_urls` - all parts are missing except the anchor. The browser will use the current document's URL and replace or add the anchor part to it. This is useful when you want to link to a specific part of the current document.
 
+## URL usernames and passwords
+
+Less common than the URL parts discussed above, you may see a username and password included in URLs.
+
+For example:
+
+```plain
+https://username:password@www.example.com:80/
+```
+
+When included, the username and password are put between the `://` characters and the authority, with a colon between the two and an ampersand (`@`) at the end.
+
+A username and password can be included in the URL when accessing websites that use the [HTTP authentication](/en-US/docs/Web/HTTP/Guides/Authentication) security mechanism, to immediately sign in to a website and bypass the username/password dialog box that would otherwise appear to enter your credentials into.
+
+While you might still see this mechanism used in the wild, it is deprecated because of security concerns, and modern websites tend to use other mechanisms for authentication. See [Access using credentials in the URL](/en-US/docs/Web/HTTP/Guides/Authentication#access_using_credentials_in_the_url) for more details.
+
 ## Semantic URLs
 
 Despite their very technical flavor, URLs represent a human-readable entry point for a website. They can be memorized, and anyone can enter them into a browser's address bar. People are at the core of the Web, and so it is considered best practice to build what is called [_semantic URLs_](https://en.wikipedia.org/wiki/Semantic_URL). Semantic URLs use words with inherent meaning that can be understood by anyone, regardless of their technical know-how.

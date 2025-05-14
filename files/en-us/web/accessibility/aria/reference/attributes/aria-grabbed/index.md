@@ -1,5 +1,6 @@
 ---
-title: aria-grabbed
+title: "ARIA: aria-grabbed attribute"
+short-title: aria-grabbed
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-grabbed
 page-type: aria-attribute
 status:

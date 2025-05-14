@@ -1,5 +1,6 @@
 ---
-title: aria-rowspan
+title: "ARIA: aria-rowspan attribute"
+short-title: aria-rowspan
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-rowspan
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-rowspan

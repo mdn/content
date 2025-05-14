@@ -38,7 +38,7 @@ The `mask-mode` property can take multiple comma-separated `<masking-mode>` keyw
 
 - `luminance`
 
-  - : Indicates that the [luminance (brightness)](#understanding-luminance) values of the mask image should be used.
+  - : Indicates that the [luminance (brightness)](#understanding_luminance) values of the mask image should be used.
 
 - `match-source`
   - : Indicates that the type of mask is determined by the source. This is the default property value.
