@@ -6,9 +6,8 @@ page-type: how-to
 
 {{HTMLSidebar}}
 
-These tips are based on common knowledge and experimentation.
-
 An optimized web page not only provides for a more responsive site for your visitors but also reduces the load on your web servers and internet connection. This can be crucial for high volume sites or sites which have a spike in traffic due to unusual circumstances such as breaking news stories.
+This article describes how to improve page load times based on common knowledge and experimentation.
 
 Optimizing page load performance is not just for content which will be viewed by narrowband dial-up or mobile device visitors. It is just as important for broadband content and can lead to dramatic improvements even for your visitors with the fastest connections.
 
