@@ -82,11 +82,15 @@ When the page is loaded, this code is run to set up an event listener to watch f
 
 ```js
 const video = document.getElementById("video");
-document.addEventListener("keypress", function(e) {
-  if (e.key === 'Enter') {
-    toggleFullScreen(video);
-  }
-}, false);
+document.addEventListener(
+  "keypress",
+  function (e) {
+    if (e.key === "Enter") {
+      toggleFullScreen(video);
+    }
+  },
+  false,
+);
 ```
 
 #### Toggling fullscreen mode
