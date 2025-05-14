@@ -403,7 +403,7 @@ With `path()`, we are not limited to straight lines. In this example, we use the
 
 ### SVG as source
 
-Instead of passing an SVG {{svgattr("d)}} attribute string as the `path()` function argument, the value of the `clip-path` property can reference the SVG {{svgelem("clipPath")}} element directly.
+Instead of passing an SVG {{svgattr("d")}} attribute string as the `path()` function argument, the value of the `clip-path` property can reference the SVG {{svgElement("clipPath")}} element directly.
 
 ```html
 <div class="heart"></div>
