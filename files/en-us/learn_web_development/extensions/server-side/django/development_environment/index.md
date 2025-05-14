@@ -224,7 +224,7 @@ The libraries we'll use for creating our virtual environments are [virtualenvwra
 
 #### Ubuntu virtual environment setup
 
-After installing Python and pip you can install _virtualenvwrapper_ (which includes _virtualenv_). The official installation guide can be found [here](https://virtualenvwrapper.readthedocs.io/en/latest/install.html), or follow the instructions below.
+After installing Python and pip you can install _virtualenvwrapper_ (which includes _virtualenv_). You can check [the official installation guide](https://virtualenvwrapper.readthedocs.io/en/latest/install.html), or follow the instructions below.
 
 Install the tool using _pip3_:
 
@@ -463,7 +463,7 @@ Now that the repository ("repo") is created on GitHub we are going to want to cl
    In the "Clone" section, select the "HTTPS" tab, and copy the URL.
    If you used the repository name "django_local_library", the URL should be something like: `https://github.com/<your_git_user_id>/django_local_library.git`.
 
-2. Install _git_ for your local computer (you can find versions for different platforms [here](https://git-scm.com/downloads)).
+2. Install _git_ for your local computer ([official Git download guide](https://git-scm.com/downloads)).
 3. Open a command prompt/terminal and clone your repo using the URL you copied above:
 
    ```bash

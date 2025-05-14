@@ -105,7 +105,7 @@ If the left offset had been `100%`, the mask's right edge would be flush to the 
 
 A two-value `<position>` specifies the position of the mask image inside its mask positioning area, with length and percentage values specifying offsets from the `left` and `top` of the area.
 
-If the two values are {{cssxref("&lt;length&gt;")}} values, {{cssxref("&lt;percentage&gt;")}} values, or the keyword `center`, the first value represents the horizontal position as an offset from the left edge of the mask positioning area, and the second value represents the vertical position as an offset from it's top edge, with [percentages being offset](#percentage-values) by the mask's size in that dimension.
+If the two values are {{cssxref("&lt;length&gt;")}} values, {{cssxref("&lt;percentage&gt;")}} values, or the keyword `center`, the first value represents the horizontal position as an offset from the left edge of the mask positioning area, and the second value represents the vertical position as an offset from it's top edge, with [percentages being offset](#percentage_values) by the mask's size in that dimension.
 
 In addition, if {{cssxref("&lt;percentage&gt;")}} values are specified, the first value is also the horizontal position value relative to the left edge, and the second value is also the vertical position value relative to the top edge.
 

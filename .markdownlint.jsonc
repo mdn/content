@@ -170,8 +170,24 @@
   },
   // Disabled, as yari generates link fragments by replacing spaces with underscores, not dashes.
   "link-fragments": false,
-  // TODO: enable
-  "descriptive-link-text": false,
+  "descriptive-link-text": {
+    "prohibited_texts": [
+      "here",
+      "link",
+      "more",
+      "this",
+      "this link",
+      "this page",
+      "this site",
+      "this article",
+      "click here",
+      "click this link",
+      "see here",
+      "see this page",
+      "see this site",
+      "see this article",
+    ],
+  },
 
   // https://github.com/OnkarRuikar/markdownlint-rule-search-replace
   "search-replace": {
