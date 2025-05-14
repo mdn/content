@@ -873,7 +873,7 @@ An SVG viewer can use this information to conserve memory by discarding elements
 
 ### Temporal API
 
-The `withCalendar()` method for [`PlainDate`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/withCalendar) and [`PlainDateTime`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime/withCalendar) objects within the [Temporal object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal) currently have the following [`calendar` types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types) disabled in all versions other than Firefox Nightly:
+The `withCalendar()` method for [`PlainDate`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/withCalendar), [`PlainDateTime`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime/withCalendar), and [`ZonedDateTime`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/withCalendar) objects within the [Temporal object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal) currently have the following [`calendar` types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types) disabled in all versions other than Firefox Nightly ([Firefox bug 1912511](https://bugzil.la/1912511) and [Firefox bug 1954138](https://bugzil.la/1954138)):
 
 - `islamic`
 - `islamic-rgsa`
