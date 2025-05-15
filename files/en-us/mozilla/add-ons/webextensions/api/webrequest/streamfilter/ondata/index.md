@@ -326,7 +326,11 @@ Array.prototype.indexOfMulti = function (searchElements, fromIndex) {
   }
 
   const initial = i;
-  for (let j = 1; j < searchElements.length && i < this.length; j++) {
+  for (
+    let j = 1, m = searchElements.length, n = this.length;
+    j < m && i < n;
+    j++
+  ) {
     if (this[++i] !== searchElements[j]) {
       return this.indexOfMulti(searchElements, initial + 1);
     }
