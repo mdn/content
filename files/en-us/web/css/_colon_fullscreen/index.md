@@ -82,7 +82,7 @@ document.querySelector(".toggle").addEventListener("click", (event) => {
 }
 ```
 
-{{embedlivesample("", "", "300")}}
+{{EmbedLiveSample("Styling a fullscreen element", "", "300", "", "", "", "fullscreen")}}
 
 ## Specifications
 
