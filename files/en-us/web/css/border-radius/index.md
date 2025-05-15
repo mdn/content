@@ -328,7 +328,7 @@ pre#example-7 {
 }
 ```
 
-{{EmbedLiveSample("Examples", "200", "900")}}
+{{EmbedLiveSample("Comparing border styles", "", "900")}}
 
 ## Specifications
 
