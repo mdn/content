@@ -29,7 +29,7 @@ This example applies a different background color to a {{htmlelement("div")}} el
 
 ```html
 <div class="element">
-  <h1>MDN <code>:fullscreen</code> pseudo-class demo</h1>
+  <h1><code>:fullscreen</code> pseudo-class demo</h1>
 
   <p>
     This demo uses the <code>:fullscreen</code> pseudo-class to automatically
