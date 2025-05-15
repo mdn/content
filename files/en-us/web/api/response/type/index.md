@@ -67,7 +67,7 @@ console.log(response.type);
 
 ### An opaque response
 
-The following response is made with the [`no-cors`](/en-US/docs/Web/API/Request/mode#no-cors) option, so the reponse's type is `opaque`:
+The following request is made with the [`no-cors`](/en-US/docs/Web/API/Request/mode#no-cors) option, so it returns an `opaque` response:
 
 ```js
 const response = await fetch("https://example.org/flowers.jpg", {
