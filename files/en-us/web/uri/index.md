@@ -32,7 +32,7 @@ The [URI reference](/en-US/docs/Web/URI/Reference) provides details about the co
 
 The [URI guides](/en-US/docs/Web/URI/Guides) help you work with URIs on the web.
 
-- [Choosing between www and non-www URLs](Choosing_between_www_and_non-www_URLs)
+- [Choosing between www and non-www URLs](/en-US/docs/Web/URI/Guides/Choosing_between_www_and_non-www_URLs)
   - : Guidance on when sites should use a `www.` prefix in URLs (`www.example.com` vs `example.com`).
 
 ## Specifications

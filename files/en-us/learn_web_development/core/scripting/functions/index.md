@@ -87,7 +87,7 @@ Bear in mind that some built-in browser functions are not part of the core JavaS
 
 **Functions** that are part of objects are called **methods**; you'll learn about objects later in the module. For now, we just wanted to clear up any possible confusion about method versus function — you are likely to meet both terms as you look at the available related resources across the Web.
 
-The built-in code we've made use of so far comes in both forms: **functions** and **methods.** You can check the full list of the built-in functions, as well as the built-in objects and their corresponding methods [here](/en-US/docs/Web/JavaScript/Reference/Global_Objects).
+The built-in code we've made use of so far comes in both forms: **functions** and **methods.** You can check the full list of the built-in functions, as well as the built-in objects and their corresponding methods [in our JavaScript reference](/en-US/docs/Web/JavaScript/Reference/Global_Objects).
 
 You've also seen a lot of **custom functions** in the course so far — functions defined in your code, not inside the browser. Anytime you saw a custom name with parentheses straight after it, you were using a custom function. In our [random-canvas-circles.html](https://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) example (see also the full [source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/random-canvas-circles.html)) from our [loops article](/en-US/docs/Learn_web_development/Core/Scripting/Loops), we included a custom `draw()` function that looked like this:
 

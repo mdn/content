@@ -87,5 +87,7 @@ By default, {{cssxref("pointer-events")}} are not dispatched on clipped regions.
 
 ## Related
 
-- Other clipping and masking SVG elements: {{SVGElement("mask")}}
-- Some CSS properties: {{cssxref("clip-path")}}, {{cssxref("pointer-events")}}
+- {{SVGElement("mask")}}
+- CSS {{cssxref("clip-path")}} property
+- [Introduction to CSS clipping](/en-US/docs/Web/CSS/CSS_masking/Clipping)
+- [CSS masking](/en-US/docs/Web/CSS/CSS_masking/Clipping) module

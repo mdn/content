@@ -169,6 +169,8 @@ If the request was not blocked or redirected, the matching `modifyHeaders` actio
 
 ## Types
 
+- {{WebExtAPIRef("declarativeNetRequest.HeaderInfo")}}
+  - : The response header to match for the request, declared in the [`rule.condition.excludedResponseHeaders`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/RuleCondition#excludedresponseheaders) array or [`rule.condition.responseHeaders`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/RuleCondition#responseheaders) array.
 - {{WebExtAPIRef("declarativeNetRequest.MatchedRule")}}
   - : Details of a matched rule.
 - {{WebExtAPIRef("declarativeNetRequest.ModifyHeaderInfo")}}

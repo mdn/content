@@ -46,7 +46,7 @@ For example:
 
 If a page needs to make connections to many third-party domains, preconnecting them all can be counterproductive. The `<link rel="preconnect">` hint is best used for only the most critical connections. For the others, just use `<link rel="dns-prefetch">` to save time on the first step — the DNS lookup.
 
-You can also implement preconnect as an HTTP [Link](/en-US/docs/Web/HTTP/Reference/Headers/Link) header, for example:
+You can also implement preconnect as an HTTP [`Link`](/en-US/docs/Web/HTTP/Reference/Headers/Link) header, for example:
 
 ```http
 Link: <https://example.com>; rel="preconnect"
@@ -86,7 +86,7 @@ For example:
 
 The result is kept in a per-document in-memory cache. If you preload something your current page doesn't use as a subresource, it is generally a waste of resources, although the result may populate the HTTP cache if headers allow.
 
-You can also implement preload as an HTTP [Link](/en-US/docs/Web/HTTP/Reference/Headers/Link) header, for example:
+You can also implement preload as an HTTP [`Link`](/en-US/docs/Web/HTTP/Reference/Headers/Link) header, for example:
 
 ```http
 Link: <https://www.example.com/fonts/cicle_fina-webfont.woff2>; rel="preload"
