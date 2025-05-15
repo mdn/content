@@ -60,7 +60,7 @@ The `:fullscreen` pseudo-class is used to override the [`background-color`](/en-
 The following JavaScript provides an event handler function that toggles fullscreen when the `<button>` is clicked.
 
 ```js
-document.querySelector(".toggle").addEventListener("click", function (event) {
+document.querySelector(".toggle").addEventListener("click", (event) => {
   if (document.fullscreenElement) {
     // If there is a fullscreen element, exit full screen.
     document.exitFullscreen();
