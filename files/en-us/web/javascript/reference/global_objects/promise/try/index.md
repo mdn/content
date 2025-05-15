@@ -107,7 +107,7 @@ In async/await, the same code would look like this:
 ```js
 async function doSomething(action) {
   try {
-    const result = await action();
+    const result = await Promise.try(action);
     console.log(result);
   } catch (error) {
     console.error(error);
