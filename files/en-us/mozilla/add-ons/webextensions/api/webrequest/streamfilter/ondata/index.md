@@ -327,9 +327,7 @@ Array.prototype.indexOfMulti = function (searchElements, fromIndex) {
 
   const initial = i;
   for (
-    let j = 1,
-        m = searchElements.length,
-        n = this.length;
+    let j = 1, m = searchElements.length, n = this.length;
     j < m && i < n;
     j++
   ) {
@@ -358,9 +356,7 @@ function listener(details) {
 
   filter.onstop = (event) => {
     for (
-      let i = data.indexOfMulti(bytes),
-          m = elements.length,
-          n = bytes.length;
+      let i = data.indexOfMulti(bytes), m = elements.length, n = bytes.length;
       i >= 0;
       i = data.indexOfMulti(bytes, i + m + n)
     ) {
