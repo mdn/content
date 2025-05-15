@@ -84,7 +84,7 @@ console.log(response.status);
 
 ### An error response
 
-The following response is constructed using {{domxref("Response.error_static", "Response.error()")}} and is of type `error`:
+The following code uses {{domxref("Response.error_static", "Response.error()")}} to create an `error` response:
 
 ```js
 const response = Response.error();
