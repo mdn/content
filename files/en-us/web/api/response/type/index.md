@@ -9,47 +9,92 @@ browser-compat: api.Response.type
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`type`** read-only property of the {{domxref("Response")}} interface contains the type of the response.
-It can be one of the following:
-
-- `basic`: Normal, same origin response, with all headers exposed except "Set-Cookie".
-- `cors`: Response was received from a valid cross-origin request. [Certain headers and the body](https://fetch.spec.whatwg.org/#concept-filtered-response-cors) may be accessed.
-- `error`: Network error.
-  No useful information describing the error is available.
-  The Response's status is 0, headers are empty and immutable.
-  This is the type for a Response obtained from `Response.error()`.
-- `opaque`: Response for "no-cors" request to cross-origin resource.
-  [Severely restricted](https://fetch.spec.whatwg.org/#concept-filtered-response-opaque).
-- `opaqueredirect`: The fetch request was made with `redirect: "manual"`.
-  The Response's status is 0, headers are empty, body is null and trailer is empty.
-
-> [!NOTE]
-> An "error" Response never really gets exposed to script: such a response to a {{domxref("Window/fetch", "fetch()")}} would reject the promise.
 
 ## Value
 
-A `ResponseType` string indicating the type of the response.
+A string, which may be any of the following values:
+
+- `basic`
+
+  - : This applies in any of the following cases:
+
+    - The request is same-origin.
+    - The requested URL's scheme is [`data:`](/en-US/docs/Web/URI/Reference/Schemes/data).
+    - The request's {{domxref("Request.mode", "mode")}} is `navigate` or `websocket`.
+
+    All response headers are exposed except {{httpheader("Set-Cookie")}}.
+
+- `cors`
+
+  - : The request was cross-origin and was successfully processed using [CORS](/en-US/docs/Web/HTTP/Guides/CORS). Only {{glossary("CORS-safelisted response header", "CORS-safelisted response headers")}} are exposed in the response.
+
+- `error`
+
+  - : A network error occurred. The {{domxref("Response.status", "status")}} property is set to `0`, {{domxref("Response.body", "body")}} is `null`, headers are empty and immutable.
+
+    This is the type of response returned by {{domxref("Response.error_static", "Response.error()")}}. A response of this type is not returned by a call to {{domxref("Window.fetch", "fetch()")}}, because if a network error occurs, the promise is rejected.
+
+- `opaque`
+
+  - : A response to a cross-origin request whose {{domxref("Request.mode", "mode")}} was set to `no-cors`. The {{domxref("Response.status", "status")}} property is set to `0`, {{domxref("Response.body", "body")}} is `null`, headers are empty and immutable.
+
+- `opaqueredirect`
+  - : A response to a request whose {{domxref("Request.redirect", "redirect")}} option was set to `manual`, and which was redirected by the server. The {{domxref("Response.status", "status")}} property is set to `0`, {{domxref("Response.body", "body")}} is `null`, headers are empty and immutable.
 
 ## Examples
 
-In our [Fetch Response example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-response) (see [Fetch Response live](https://mdn.github.io/dom-examples/fetch/fetch-response/)) we create a new {{domxref("Request")}} object using the {{domxref("Request.Request","Request()")}} constructor, passing it a JPG path.
-We then fetch this request using {{domxref("Window/fetch", "fetch()")}}, extract a blob from the response using {{domxref("Response.blob")}}, create an object URL out of it using {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}, and display this in an {{htmlelement("img")}}.
+### A basic response
 
-Note that at the top of the `fetch()` block we log the response `type` to the console.
+The following same-origin request will return a `basic` response:
 
 ```js
-const myImage = document.querySelector("img");
+const response = await fetch("flowers.jpg");
 
-const myRequest = new Request("flowers.jpg");
+console.log(response.type);
+// "basic"
+```
 
-fetch(myRequest)
-  .then((response) => {
-    console.log("response.type =", response.type); // response.type = 'basic'
-    return response.blob();
-  })
-  .then((myBlob) => {
-    const objectURL = URL.createObjectURL(myBlob);
-    myImage.src = objectURL;
-  });
+### A CORS response
+
+Assuming `https://example.org` is not the requester's origin, and that the server responds with the appropriate CORS headers, this request will return a `cors` response:
+
+```js
+const response = await fetch("https://example.org/flowers.jpg");
+
+console.log(response.type);
+// "cors"
+```
+
+### An opaque response
+
+The following response is made with the [`no-cors`](/en-US/docs/Web/API/Request/mode#no-cors) option, so the reponse's type is `opaque`:
+
+```js
+const response = await fetch("https://example.org/flowers.jpg", {
+  mode: "no-cors",
+});
+
+console.log(response.type);
+// "opaque"
+console.log(response.body);
+// null
+console.log(response.status);
+// 0
+```
+
+### An error response
+
+The following response is constructed using {{domxref("Response.error_static", "Response.error()")}} and is of type `error`:
+
+```js
+const response = Response.error();
+
+console.log(response.type);
+// "error"
+console.log(response.body);
+// null
+console.log(response.status);
+// 0
 ```
 
 ## Specifications
