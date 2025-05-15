@@ -55,7 +55,7 @@
     "env-cmd": "10.1.0",
     "fdir": "^6.4.4",
     "gray-matter": "^4.0.3",
-    "yaml": "^2.7.1"
+    "yaml": "^2.8.0"
   },
   "devDependencies": {
     "cspell": "9.0.1",
@@ -67,7 +67,7 @@
     "node-html-parser": "^7.0.1",
     "parse-diff": "^0.11.1",
     "prettier": "3.5.3",
-    "yaml": "^2.7.1",
+    "yaml": "^2.8.0",
     "yargs": "^17.7.2"
   },
   "packageManager": "yarn@1.22.22"
