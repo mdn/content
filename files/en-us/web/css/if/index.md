@@ -259,23 +259,255 @@ color: if(
 
 ### Basic `if()` usage
 
-This example shows ...
+In this example, we'll show basic usage of each of the three types of CSS if condition.
 
 #### HTML
 
+Our HTML features a {{htmlelement("section")}} element with two {{htmlelement("article")}} elements inside it, containing `<h2>` [headings](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements). The `<section>` has a custom property set on it inside a [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute — `--show-apple:true` — which we use later on to conditionally set a property value.
+
+```html live-sample___basic
+<section style="--show-apple:true">
+  <article><h2>First article</h2></article>
+  <article><h2>Second article</h2></article>
+</section>
+```
+
 #### CSS
 
-xx
+In our CSS, we first target the `<section>` element, laying it out with [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) and setting a {{cssxref("gap")}} between the two child `<article>` elements. We then use an `if()` function with a media query if condition to set the value of the {{cssxref("flex-direction")}} property to `row` if the document is in landscape orientation, or `column` if it is in portrait orientation. This lays out the `article` elements side-by-side in wide screens, and top-to-bottom in narrow screens.
+
+```css hidden live-sample___basic
+html {
+  height: 100%;
+  font-family: sans-serif;
+}
+
+body,
+section {
+  height: inherit;
+}
+
+h2 {
+  text-align: center;
+}
+
+article {
+  background-color: cyan;
+  border: 3px solid gray;
+  flex: 1;
+}
+```
+
+```css-nolint live-sample___basic
+section {
+  display: flex;
+  gap: 16px;
+  flex-direction: if(
+    media(orientation:landscape): row;
+    else: column;
+  )
+}
+```
+
+Next, we target the `<h2>` element's {{cssxref("::before")}} pseudo-element, setting its {{cssxref("content")}} property to contain an apple emoji., but only if `--show-apple:true` is set (we did this earlier in our HTML). We achieve this using an `if()` function with a style query if condition:
+
+```css-nolint live-sample___basic
+h2::before {
+  content: if(
+    style(--show-apple:true): "🍎 ";
+  );
+}
+```
+
+Finally, we target the `<h2>` element itself. We use a feature query if condition to test whether the browser supports `lch()` colors, and set the {{cssxref("color")}} property to an `lch()` color if so, or a hex equivalent if not.
+
+```css-nolint live-sample___basic
+h2 {
+    color: if(
+    supports(color: lch(29.57% 43.25 344.44)): lch(29.57% 43.25 344.44);
+    else: #792359;
+  )
+}
+```
 
 #### Result
 
-{{EmbedLiveSample("Basic `color()` usage", "100%", "240")}}
+This demo will render as follows:
 
-xx
+{{EmbedLiveSample("basic", "100%", "240")}}
+
+Note how the styling is applied. You can test out the conditional styling pretty easily for at least the first two `if()` queries by modifying the rendered demo using your browser's devtools:
+
+- Try for example removing the `<section>` element's `style` attribute and note how the apple emojis are no longer rendered.
+- You could also try changing the `height` attribute of the embedding `<iframe>` to say `1200px`, resulting in the document orientation changing from landscape to portrait, and note how the layout changes as a result.
 
 ### Controlling a color scheme with `if()`
 
-xx
+This demo shows how you can start to have some real fun with CSS `if()` functions. Amongst other things, we use `if()` functions to conditionally set the values of a couple of custom properties to control an entire color scheme.
+
+#### HTML
+
+Our HTML contains an {{htmlelement("article")}} element with some content inside it — a top-level heading, a couple of {{htmlelement("p")}} elements, and an {{htmlelement("aside")}}. Below that we include a {{htmlelement("form")}} containing a {{htmlelement("select")}} drop-down that allows you to select a color scheme.
+
+```html-nolint live-sample___color-scheme
+<article>
+  <h1>Main heading</h1>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipiscing elit.
+    Quisque faucibus ex sapien vitae pellentesque sem placerat.
+    In id cursus mi pretium tellus duis convallis.
+  </p>
+  <aside>
+    <h2>An aside</h2>
+    <p>
+      Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus
+      fringilla lacus nec metus bibendum egestas.
+    </p>
+  </aside>
+  <p>
+    Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut
+    hendrerit semper vel class aptent taciti sociosqu. Ad litora
+    torquent per conubia nostra inceptos himenaeos.
+  </p>
+</article>
+<form>
+  <label for="scheme">Choose color scheme:</label>
+  <select id="scheme">
+    <option value="">Default</option>
+    <option value="ice">Ice</option>
+    <option value="fire">Fire</option>
+  </select>
+</form>
+```
+
+### JavaScript
+
+Next, let's look at our minimal JavaScript. This adds a [`change`](/en-US/docs/Web/API/HTMLElement/change_event) event listener to the `<select>` element. When a new value is selected, our script sets the `<article>` element's [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class) attribute to equal that value.
+
+```js live-sample___color-scheme
+const articleElem = document.querySelector("article");
+const selectElem = document.querySelector("select");
+
+selectElem.addEventListener("change", () => {
+  articleElem.className = selectElem.value;
+});
+```
+
+### CSS
+
+In our CSS, we start by giving the `<body>` element a {{cssxref("max-width")}} of `700px`. We then center it on the screen using `auto` {{cssxref("margin")}} values. However, we use an `if()` function with a media query if condition to set the value to `0 auto` if the viewport width is less than `700px`, and `20px auto 0` if it is wider. This means that on wide screens, we get a bit of margin at the top of the content, but it is removed on narrow screens, where it looks a bit weird.
+
+```css hidden live-sample___color-scheme
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  line-height: 1.5;
+}
+
+form {
+  padding-left: 20px;
+  margin-top: 20px;
+}
+
+article h2 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+```
+
+```css-nolint live-sample___color-scheme
+body {
+  max-width: 700px;
+  margin: if(
+    media(width < 700px): 0 auto;
+    else: 20px auto 0;
+  );
+}
+```
+
+Next up, we set the `--scheme` custom property to a different value on our `<article>` element depending on the `class` name set on it by our JavaScript when a new value is selected in our `<select>` element. You'll see the significance of this in the next CSS block.
+
+```css live-sample___color-scheme
+.ice {
+  --scheme: ice;
+}
+
+.fire {
+  --scheme: fire;
+}
+```
+
+Here we can start to see the real power of CSS `if()` functions combined with custom properties. We are using `if()` functions to set our `--color1` and `--color2` custom properties to different color values depending on the value set for the `--scheme` custom property. We then use the `--color1` and `--color2` values in our `<article>` element's {{cssxref("color")}}, {{cssxref("border")}}, and {{cssxref("background-image")}} properties, and our `<aside>` element's `color` and `background-color` properties.
+
+We are controlling our entire color scheme via custom properties, with different values set via `if() functions.`
+
+```css-nolint live-sample___color-scheme
+article {
+  padding: 20px;
+  --color1: if(
+    style(--scheme: ice): #03045e;
+    style(--scheme: fire): #621708;
+    else: black;
+  );
+  --color2: if(
+    style(--scheme: ice): #caf0f8;
+    style(--scheme: fire): #ffc971;
+    else: white;
+  );
+
+  color: var(--color1);
+  border: 3px solid var(--color1);
+  background-image: linear-gradient(
+    to left,
+    var(--color2),
+    white,
+    var(--color2)
+  );
+}
+
+aside {
+  color: var(--color2);
+  background-color: var(--color1);
+  padding: 20px;
+}
+```
+
+Finally, we use `if()` functions in a couple more places:
+
+- We set our `<h1>` element's {{cssxref("font-size")}} to be `calc(3rem + 2vw)` if the viewport is wider than `700px`, and `3rem` if not. This means that the font sizes dynamically with the viewport on wider screens, but stays the same on narrow screens.
+- We set a suitable emoji as the {{cssxref("content")}} of our `<h1>` element's {{cssxref("::before")}} pseudo-class, depending on the value of the `--scheme` custom property.
+
+```css-nolint live-sample___color-scheme
+h1 {
+  margin: 0;
+  font-size: if(
+    media(width > 700px): calc(3rem + 2vw);
+    else: 3rem;
+  );
+}
+
+h1::before {
+  content: if(
+    style(--scheme: ice): "❄️ ";
+    style(--scheme: fire): "🔥 ";
+    else: "";
+  );
+}
+```
+
+#### Result
+
+This demo renders as follows:
+
+{{EmbedLiveSample("color-scheme", "100%", "500")}}
+
+Try selecting different color scheme values to see the effect on the look and feel.
 
 ## Specifications
 
