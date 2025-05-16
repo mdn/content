@@ -318,50 +318,75 @@ browser.webRequest.onBeforeRequest.addListener(
 This example shows, how to handle a non-UTF-8 page:
 
 ```js
-// This example uses https://github.com/t-kouyama/fast-sjis-encoder
-// Note: Make sure the file you paste in has the encoding set to UTF-8
-function listener(details) {
-  if (details.statusCode != 200) {
-    return;
+Array.prototype.indexOfMulti = function(searchElements, fromIndex) {
+  let i = this.indexOf(searchElements[0], fromIndex);
+  if (searchElements.length === 1 || i === -1) {
+    // Not found or no other elements to check
+    return i;
   }
 
+  const initial = i;
+  for (
+    let j = 1, m = searchElements.length, n = this.length;
+    j < m && i < n;
+    j++
+  ) {
+    if (this[++i] !== searchElements[j]) {
+      return this.indexOfMulti(searchElements, initial + 1);
+    }
+  }
+
+  return i === initial + searchElements.length - 1 ? initial : -1;
+};
+
+const encoder = new TextEncoder();
+const start1 = encoder.encode("<a href=\"/pc/\" class=\"p-catList_cell p-catList_cell--pc-\">");
+const end1 = encoder.encode("</a>");
+const start2 = encoder.encode("<li class=\"p-catList_items_item\">");
+const end2 = encoder.encode("</li>");
+
+const words = [
+  "laptop",
+  "tablet",
+  "hard disk",
+  "PC parts",
+  "Peripheral equipment"
+].map(word => encoder.encode(word));
+
+function listener(details) {
   const filter = browser.webRequest.filterResponseData(details.requestId);
-  let decoder = new TextDecoder();
 
   const data = [];
   filter.ondata = (event) => {
-    data.push(new Uint8Array(event.data));
+    const buffer = new Uint8Array(event.data);
+    for (let i = 0, l = buffer.length; i < l; i++) {
+      data.push(buffer[i]);
+    }
   };
 
   filter.onstop = (event) => {
-    const combinedLength = data.reduce((acc, buffer) => acc + buffer.length, 0);
-    const combinedArray = new Uint8Array(combinedLength);
-    let writeOffset = 0;
-    for (const buffer of data) {
-      combinedArray.set(buffer, writeOffset);
-      writeOffset += buffer.length;
+    let start = data.indexOfMulti(start1);
+    if (start != -1) {
+      let end = data.indexOfMulti(end1, start + start1.length);
+      let parent = data.splice(start, end - start + end1.length);
+      let pos = 0;
+      for (const word of words) {
+        let start = parent.indexOfMulti(start2, pos);
+        let end = parent.indexOfMulti(end2, start + start2.length);
+        let text = parent.slice(start + start2.length, end);
+        // Replace original text with our text
+        parent.splice(start + start2.length, text.length, ...word);
+        pos = end;
+      }
+      // Insert modified array
+      data.splice(start, 0, ...parent);
     }
-    // Get the charset from the page meta tag
-    const part = decoder.decode(combinedArray.slice(0, 1000));
-    const charset = part.match(/<meta charset="(.+?)">/)[1];
-    // Creates a new TextDecoder object with the label "shift_jis"
-    decoder = new TextDecoder(charset);
-
-    let str = decoder.decode(combinedArray);
-    // Translated with Google Translate
-    str = str.replace("ノートパソコン", "laptop");
-    str = str.replace("タブレット", "tablet");
-    str = str.replace("ハードディスク", "hard disk");
-    str = str.replace("PCパーツ", "PC parts");
-    str = str.replace("周辺機器", "Peripheral equipment");
-
-    // Need to use an external library because TextEncoder only supports "UTF-8"
-    filter.write(sjis(str));
+    filter.write(new Uint8Array(data));
     filter.close();
   };
 }
 
-browser.webRequest.onHeadersReceived.addListener(
+browser.webRequest.onBeforeRequest.addListener(
   listener,
   { urls: ["https://kakaku.com/"], types: ["main_frame"] },
   ["blocking"],
