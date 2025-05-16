@@ -70,6 +70,25 @@ All {{domxref("DragEvent")}} objects have a property called {{domxref("DragEvent
 
 When a drag occurs, data must be associated with the drag which identifies _what_ is being dragged. For example, when dragging the selected text within a textbox, the data associated with the _drag data item_ is the text itself. Similarly, when dragging a link on a web page, the drag data item is the link's URL.
 
+## Drag data
+
+All {{domxref("DragEvent")}} objects have a property called {{domxref("DragEvent.dataTransfer","dataTransfer")}} which holds the drag data (`dataTransfer` is a {{domxref("DataTransfer")}} object).
+
+When a drag occurs, data must be associated with the drag which identifies _what_ is being dragged. For example, when dragging the selected text within a textbox, the data associated with the _drag data item_ is the text itself. Similarly, when dragging a link on a web page, the drag data item is the link's URL.
+
+### Drag data store modes
+
+The {{domxref("DataTransfer")}} object operates in different "data store modes" depending on the drag event:
+
+- **Read/Write mode:** During `dragstart`, you can read and write data.
+- **ReadOnly mode:** During `dragenter`, `dragover`, and `dragleave`, you can only read the list of data types (via the `types` property); you cannot access or modify the data values.
+- **Protected mode:** During `drop`, you can read the data (with `getData()`), but cannot write it.
+
+> [!NOTE]
+> You cannot access the actual data values with `getData()` during `dragenter`, `dragover`, or `dragleave` events—only the types are available. This protects sensitive data from being exposed before the drop occurs.
+
+For more, see the [HTML Drag and Drop spec: Data Transfer modes](https://html.spec.whatwg.org/dev/dnd.html#dnddatastoremodes).
+
 The {{domxref("DataTransfer")}} contains two pieces of information, the **type** (or format) of the data, and the data's **value**. The format is a type string (such as [`text/plain`](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#dragging_text) for text data), and the value is a string of text. When the drag begins, you add data by providing a type and the data. During the drag, in an event listener for the {{domxref("HTMLElement/dragenter_event", "dragenter")}} and {{domxref("HTMLElement/dragover_event", "dragover")}} events, you use the data types of the data being dragged to check whether a drop is allowed. For instance, a drop target that accepts links would check for the type [`text/uri-list`](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#dragging_links). During a drop event, a listener would retrieve the data being dragged and insert it at the drop location.
 
 The {{domxref("DataTransfer")}}'s {{domxref("DataTransfer.types","types")}} property returns a list of MIME-type like strings, such as [`text/plain`](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#dragging_text) or [`image/jpeg`](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#dragging_images). You can also create your own types. The most commonly used types are listed in the article [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types).
