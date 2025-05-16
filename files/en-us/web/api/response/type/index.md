@@ -8,7 +8,7 @@ browser-compat: api.Response.type
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-The **`type`** read-only property of the {{domxref("Response")}} interface contains the type of the response.
+The **`type`** read-only property of the {{domxref("Response")}} interface contains the type of the response. The type determines whether scripts are able to access the response body and headers.
 
 ## Value
 
