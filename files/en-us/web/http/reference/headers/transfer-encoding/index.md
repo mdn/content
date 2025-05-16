@@ -18,7 +18,7 @@ When present in a request it indicates the encodings supported by the client.
 Multiple encodings may be specified, and the client must support the `chunked` directive.
 
 When present on a response it indicates the compression used on the message, and/or whether the message has been chunked.
-Note that if the message is chunked, this must be applied last, after any other compression. 
+Note that if the message is chunked, this must be applied last, after any other compression.
 For example, `Transfer-Encoding: gzip, chunked` indicates that the content has been compressed using the gzip coding and then chunked using the chunked coding while forming the message body.
 While multiple compression options may be specified in theory, there is no practical value in applying more than one compression.
 
