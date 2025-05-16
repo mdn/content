@@ -79,7 +79,7 @@
 
   "non_standard_header_copy": {
     "de": "Wir raten davon ab, diese Funktion auf produktiven Webseiten zu verwenden, da sie nicht bei jedem funktionieren wird.",
-    "en-US": "We do not recommend using this feature on production sites facing the web because it will not work for everyone.",
+    "en-US": "This feature is not standardized. We do not recommend using non-standard features in production, as they have limited browser support, and may change or be removed. However, they can be a suitable alternative in specific cases where no standard option exists.",
     "es": "No recomendamos usar esta función en sitios de producción que estén en la web porque no funcionará para todos los usuarios.",
     "fr": "Nous ne recommandons pas d'utiliser cette fonctionnalité sur des sites de production face au web car elle ne fonctionnera pas pour tous les utilisateurs.",
     "ja": "この機能をウェブに面した本番サイトで使用することはお勧めしません。すべてのユーザーに対応するわけではないからです。",
