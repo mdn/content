@@ -60,6 +60,8 @@ img {
 
 With alpha masks, the visible areas of an element are defined by the alpha-transparency of the mask applied to it. Wherever the mask is fully opaque, the element will be visible. At every pixel where the mask is fully transparent, the element too will be fully hidden. Areas of the element that are masked by a partially opaque section of a mask will be partially opaque, matching the opacity of the mask applied to it.
 
+### With gradients
+
 To demonstrate this, let's look at an example using a {{cssxref("conic-gradient")}} as the `mask-image`. CSS gradients, including conic gradients, can be used to create smooth transitions between visible and hidden areas.
 
 In this case, the top-right corner of the mask is fully opaque, the top-left quadrant is fully transparent, and the bottom half has a smooth transition between opaque and transparent.
@@ -101,6 +103,8 @@ With alpha masks, the color of the mask doesn't matter, only the transparency. I
 Note how the fully opaque mask areas reveal fully opaque element pixels, semi-transparent mask areas create semi-transparent areas, and fully transparent mask areas hide the associated areas completely.
 
 {{EmbedLiveSample("gradient2", "", "250px")}}
+
+### With imported images
 
 The previous two examples used gradients as masks and background images. The mask image doesn't have to be a CSS image. It can be an external image or an SVG.
 
