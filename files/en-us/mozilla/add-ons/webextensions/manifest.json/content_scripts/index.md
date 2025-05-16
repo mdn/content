@@ -308,12 +308,11 @@ This table details all the keys you can include.
 
 ## Load order
 
-Files declared in `content_scripts` are injected into web pages in a defined order. When a webpage loads, matching key objects are processed in this order:
+Registered objects in `content_scripts` are injected into matching web pages at the time specified by `run_at` (first `document_start`, then`document_end`, and finally `document_idle`):
 
-- in accordance with the `run_at` directive, then for each object with the same directive:
-  - in the order of each object in the key array, then for each object:
-    - CSS in the order items are specified in the object's `css` property, then,
-    - JavaScript in the order items are specified in the object's `js` property.
+- In the order specified in the `content_scripts` array, for each object with a matching `run_at` value, then:
+  - CSS is applied in the order specified in its `css` array.
+  - JavaScript code is executed in the order specified in its `js` array.
 
 For example, in this key specification:
 
