@@ -47,7 +47,7 @@ let setting = browser.cookies.set(
     - `path` {{optional_inline}}
       - : A `string` representing the path of the cookie. If omitted, this defaults to the path portion of the URL parameter.
     - `sameSite` {{optional_inline}}
-      - : A {{WebExtAPIRef("cookies.SameSiteStatus")}} value that indicates the SameSite state of the cookie. If omitted, it defaults to 0, 'no_restriction'.
+      - : A {{WebExtAPIRef("cookies.SameSiteStatus")}} value that indicates the SameSite state of the cookie. If omitted, defaults to `unspecified`.
     - `secure` {{optional_inline}}
       - : A `boolean` that specifies whether the cookie is marked as secure (`true`), or not (false). If omitted, it defaults to false.
     - `storeId` {{optional_inline}}
