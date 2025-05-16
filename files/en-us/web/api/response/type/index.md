@@ -22,10 +22,10 @@ A string, which may be any of the following values:
     - The requested URL's scheme is [`data:`](/en-US/docs/Web/URI/Reference/Schemes/data).
     - The request's {{domxref("Request.mode", "mode")}} is `navigate` or `websocket`.
 
-    All response headers are exposed except {{httpheader("Set-Cookie")}}.
+    With this type, all response headers are exposed except {{httpheader("Set-Cookie")}}.
 
 - `cors`
-  - : The request was cross-origin and was successfully processed using [CORS](/en-US/docs/Web/HTTP/Guides/CORS). Only {{glossary("CORS-safelisted response header", "CORS-safelisted response headers")}} are exposed in the response.
+  - : The request was cross-origin and was successfully processed using [CORS](/en-US/docs/Web/HTTP/Guides/CORS). With this type, only {{glossary("CORS-safelisted response header", "CORS-safelisted response headers")}} are exposed.
 - `error`
 
   - : A network error occurred. The {{domxref("Response.status", "status")}} property is set to `0`, {{domxref("Response.body", "body")}} is `null`, headers are empty and immutable.
