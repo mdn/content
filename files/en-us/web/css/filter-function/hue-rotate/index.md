@@ -74,7 +74,8 @@ This example applies a `hue-rotate()` filter via the `backdrop-filter` CSS prope
 
 ```css
 .container {
-  background: url(image.jpg) no-repeat left / contain #011296;
+  background: url("/shared-assets/images/examples/listen_to_black_women.jpg")
+    no-repeat left / contain #011296;
 }
 p {
   backdrop-filter: hue-rotate(240deg);
@@ -96,9 +97,7 @@ p {
 ```
 
 ```html hidden
-<div
-  class="container"
-  style="background-image: url('https://mdn.github.io/shared-assets/images/examples/listen_to_black_women.jpg');">
+<div class="container">
   <p>
     Text on images can be illegible and inaccessible even with a drop shadow.
   </p>
