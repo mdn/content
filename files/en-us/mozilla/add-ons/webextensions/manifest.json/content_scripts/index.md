@@ -340,8 +340,9 @@ For example, in this key specification:
 
 The files are loaded like this when a mozilla.org domain opens:
 
-- `"jquery.js"` - because it's requested to run at `"document_start"`.
-- `"my-content-script.js"` - because it's in the first array requesting run at `"document_idle"`.
+- `"run-first.js"` - because it's requested to run at `"document_start"`.
+- `"jquery.js"` - because it's in the first array requesting run at `"document_idle"`.
+- `"my-content-script.js"` - because it's the second item in the first array requesting run at `"document_idle"`.
 - `"my-css.css"` - because an object's CSS is loaded before its JavaScript.
 - `"another-content-script.js"` - because it's the first item in the `js` property.
 - `"yet-another-content-script.js"`
