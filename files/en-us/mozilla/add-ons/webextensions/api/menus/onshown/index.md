@@ -30,7 +30,7 @@ browser.menus.onShown.addListener(async (info, tab) => {
   lastMenuInstanceId = menuInstanceId;
 
   // Call an async function
-  await /* the function to call */ ;
+  await doSomethingAsync();
 
   // After completing the async operation, check whether the menu is still shown.
   if (menuInstanceId !== lastMenuInstanceId) {

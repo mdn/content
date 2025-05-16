@@ -119,8 +119,12 @@ But now we need a way to differentiate between each of these routes, so that the
 First of all, return once more to our `todo-data.js` file. It already contains a getter that returns all todos, and a getter that returns incomplete todos. The getter we are missing is one to return just the completed todos. Add the following below the existing getters:
 
 ```js
-get completed() {
-  return this.todos.filter((todo) => todo.isCompleted);
+export default class TodoDataService extends Service {
+  // …
+  get completed() {
+    return this.todos.filter((todo) => todo.isCompleted);
+  }
+  // …
 }
 ```
 

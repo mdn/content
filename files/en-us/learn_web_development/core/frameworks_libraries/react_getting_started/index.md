@@ -423,7 +423,7 @@ The curly braces around `subject` are another feature of JSX's syntax. The curly
 <h1>Hello, {2 + 2}!</h1>
 ```
 
-Even comments in JSX are written inside curly braces! This is because comments, too, are technically JavaScript expressions. The `/* block comment syntax */` is necessary for your program to know where the comment starts and ends.
+Even comments in JSX are written inside curly braces! This is because curly braces can contain a single JavaScript expression, and comments are valid as part of a JavaScript expression (and get ignored). You can use both `/* block comment syntax */` and `// line comment syntax` (with a trailing new line) inside curly braces.
 
 ### Component props
 
@@ -445,7 +445,11 @@ Back in `App.jsx`, let's revisit the `App()` function. Change the signature of `
 function App(props) {
   console.log(props);
   return (
-    // code omitted for brevity
+    <>
+      {
+        // code omitted for brevity
+      }
+    </>
   );
 }
 ```

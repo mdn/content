@@ -383,10 +383,6 @@ A common practice for tables is to use _zebra-stripes_ which alternates between 
 
 #### HTML
 
-```html-nolint hidden
-<div class="wrapper">
-```
-
 ```html-nolint
 <table class="broken">
   <thead>
@@ -416,14 +412,10 @@ A common practice for tables is to use _zebra-stripes_ which alternates between 
 </table>
 ```
 
-```html hidden
-</div>
-```
-
 #### CSS
 
 ```css hidden
-.wrapper {
+body {
   display: flex;
   justify-content: space-around;
 }

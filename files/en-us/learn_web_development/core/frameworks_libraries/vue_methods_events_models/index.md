@@ -85,9 +85,14 @@ We now have an app that displays a list of to-do items. However, we can't update
 5. You also need to register the new component in your `App` component — update the `components` property of the component object so that it looks like this:
 
    ```js
-   components: {
-     ToDoItem, ToDoForm,
-   }
+   export default {
+     // …
+     components: {
+       ToDoItem,
+       ToDoForm,
+     },
+     // …
+   };
    ```
 
 6. Finally for this section, render your `ToDoForm` component inside your app by adding the `<to-do-form />` element inside your `App`'s `<template>`, like so:
@@ -210,11 +215,13 @@ The first thing we need is a `data` property in our form to track the value of t
    Update your `onSubmit()` method to look like this:
 
    ```js
-   methods: {
-     onSubmit() {
-       console.log('Label value: ', this.label);
-     }
-   },
+   export default {
+     methods: {
+       onSubmit() {
+         console.log("Label value: ", this.label);
+       },
+     },
+   };
    ```
 
 4. Now go back to your running app, add some text to the `<input>` field, and click the "Add" button. You should see the value you entered logged to your console, for example:

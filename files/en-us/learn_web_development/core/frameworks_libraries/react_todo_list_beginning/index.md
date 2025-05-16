@@ -227,10 +227,12 @@ The `aria-labelledby` attribute tells assistive technologies that we're treating
 Finally, the labels and inputs in our list items have some attributes unique to JSX:
 
 ```jsx
-<input id="todo-0" type="checkbox" defaultChecked />
-<label className="todo-label" htmlFor="todo-0">
-  Eat
-</label>
+<div className="c-cb">
+  <input id="todo-0" type="checkbox" defaultChecked />
+  <label className="todo-label" htmlFor="todo-0">
+    Eat
+  </label>
+</div>
 ```
 
 The `defaultChecked` attribute in the `<input />` tag tells React to check this checkbox initially. If we were to use `checked`, as we would in regular HTML, React would log some warnings into our browser console relating to handling events on the checkbox, which we want to avoid. Don't worry too much about this for now — we will cover this later on when we get to using events.

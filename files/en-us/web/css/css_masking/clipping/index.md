@@ -409,7 +409,8 @@ Instead of passing an SVG {{svgattr("d")}} attribute string as the `path()` func
 <div class="heart"></div>
 <svg height="0" width="0">
   <clipPath id="heart">
-    <path d="M20,70 A40,40,0,0,1,100,70 A40,40,0,0,1,180,70 Q180,130,100,190 Q20,130,20,70 Z">
+    <path
+      d="M20,70 A40,40,0,0,1,100,70 A40,40,0,0,1,180,70 Q180,130,100,190 Q20,130,20,70 Z" />
   </clipPath>
 </svg>
 ```

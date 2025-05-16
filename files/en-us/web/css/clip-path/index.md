@@ -337,13 +337,14 @@ This example demonstrates the various values of the `clip-path` property clippin
 The HTML includes an `<img>` that will be clipped, a star-shaped `<clipPath>`, and a {{htmlelement("select")}} element to choose a `clip-path` property value from.
 
 ```html
-<img id="clipped"
+<img
+  id="clipped"
   src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
   alt="Pride flag" />
 <svg height="0" width="0">
   <defs>
     <clipPath id="star">
-      <path d="M100,0 42,180 196,70 4,70 158,180z">
+      <path d="M100,0 42,180 196,70 4,70 158,180z" />
     </clipPath>
   </defs>
 </svg>

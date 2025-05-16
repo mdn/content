@@ -208,7 +208,10 @@ import { inject as service } from "@ember/service";
 With this import in place, we can now make the `todo-data` service available inside the `HeaderComponent` class via the `todos` object, using the `@service` decorator. Add the following line just below the opening `export…` line:
 
 ```js
-@service('todo-data') todos;
+export default class HeaderComponent extends Component {
+  @service("todo-data") todos;
+  // …
+}
 ```
 
 Now the placeholder `alert(text);` line can be replaced with a call to our new `add()` function. Replace it with the following:
@@ -249,8 +252,13 @@ One issue here is that our service is called `todos`, but the list of todos is a
 To do this, go back to your `todo-data.js` file and add the following below the `@tracked todos = [];` line:
 
 ```js
-get all() {
-  return this.todos;
+export default class TodoDataService extends Service {
+  @tracked todos = [];
+
+  get all() {
+    return this.todos;
+  }
+  // …
 }
 ```
 
