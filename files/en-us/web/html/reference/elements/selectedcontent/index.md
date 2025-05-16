@@ -39,7 +39,7 @@ When creating a [Customizable select element](/en-US/docs/Learn_web_development/
 Any subsequent `<select>` content will be included in the drop-down picker.
 
 Whenever the `<select>` element's selected `<option>` switches from one option to another, the `<selectedcontent>` element's content is removed and replaced by a new cloned copy of the DOM structure of the newly selected `<option>`, which is created using {{domxref("Node.cloneNode", "cloneNode()")}}.
-Dynamic modifications to the selected `<option>` element's content made after the `<select>` element has been created are not automatically cloned to the `<selectedcontent>` element and must be manually updated by the developer.
+Dynamic modifications to the selected `<option>` element's content made after the `<select>` element has been created are not automatically cloned to the `<selectedcontent>` element, and must be manually updated by the developer.
 
 > [!NOTE]
 > The `<selectedcontent>` element's built-in synchronization features that make it ideal for websites built with minimal or no JavaScript. However, its use is not required when building customizable selects. Developers using JavaScript frameworks may prefer to use the UI synchronization features provided by their framework instead of using `<selectedcontent>`.
