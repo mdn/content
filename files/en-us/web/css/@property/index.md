@@ -42,6 +42,9 @@ The following conditions must be met for the `@property` rule to be valid:
   If either is missing, the entire `@property` rule is invalid and ignored.
 - The {{cssxref("@property/initial-value","initial-value")}} descriptor is optional if the value of the `syntax` descriptor is the universal syntax definition (that is, `syntax: "*"`).
   If the `initial-value` descriptor is required but omitted, the entire `@property` rule is invalid and ignored.
+- The {{cssxref("@property/initial-value","initial-value")}} descriptor has to be a [computationally independent value](https://www.w3.org/TR/css-properties-values-api-1/#computationally-independent)
+  if the value of the `syntax` descriptor is not the universal syntax definition (that is, `syntax: "*"`).
+  This excludes relative units like `rem`.
 - Unknown descriptors are invalid and ignored, but do not invalidate the `@property` rule.
 
 ## Formal syntax
