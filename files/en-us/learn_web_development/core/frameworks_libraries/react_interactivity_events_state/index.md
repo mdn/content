@@ -80,6 +80,8 @@ To use this function, add an `onSubmit` attribute to the [`<form>`](/en-US/docs/
 
 ```jsx
 <form onSubmit={handleSubmit}>
+  {/* … */}
+</fom>
 ```
 
 Now if you head back to your browser and click on the "Add" button, your browser will show you an alert dialog with the words "Hello, world!" — or whatever you chose to write there.
