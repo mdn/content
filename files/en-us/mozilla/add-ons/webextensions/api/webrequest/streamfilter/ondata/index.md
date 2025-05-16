@@ -318,7 +318,7 @@ browser.webRequest.onBeforeRequest.addListener(
 This example shows, how to handle a non-UTF-8 page:
 
 ```js
-Array.prototype.indexOfMulti = function(searchElements, fromIndex) {
+Array.prototype.indexOfMulti = function (searchElements, fromIndex) {
   let i = this.indexOf(searchElements[0], fromIndex);
   if (searchElements.length === 1 || i === -1) {
     // Not found or no other elements to check
@@ -340,9 +340,11 @@ Array.prototype.indexOfMulti = function(searchElements, fromIndex) {
 };
 
 const encoder = new TextEncoder();
-const start1 = encoder.encode("<a href=\"/pc/\" class=\"p-catList_cell p-catList_cell--pc-\">");
+const start1 = encoder.encode(
+  '<a href="/pc/" class="p-catList_cell p-catList_cell--pc-">'
+);
 const end1 = encoder.encode("</a>");
-const start2 = encoder.encode("<li class=\"p-catList_items_item\">");
+const start2 = encoder.encode('<li class="p-catList_items_item">');
 const end2 = encoder.encode("</li>");
 
 const words = [
@@ -350,8 +352,8 @@ const words = [
   "tablet",
   "hard disk",
   "PC parts",
-  "Peripheral equipment"
-].map(word => encoder.encode(word));
+  "Peripheral equipment",
+].map((word) => encoder.encode(word));
 
 function listener(details) {
   const filter = browser.webRequest.filterResponseData(details.requestId);
