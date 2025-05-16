@@ -25,9 +25,7 @@ A string, which may be any of the following values:
     All response headers are exposed except {{httpheader("Set-Cookie")}}.
 
 - `cors`
-
   - : The request was cross-origin and was successfully processed using [CORS](/en-US/docs/Web/HTTP/Guides/CORS). Only {{glossary("CORS-safelisted response header", "CORS-safelisted response headers")}} are exposed in the response.
-
 - `error`
 
   - : A network error occurred. The {{domxref("Response.status", "status")}} property is set to `0`, {{domxref("Response.body", "body")}} is `null`, headers are empty and immutable.
@@ -35,9 +33,7 @@ A string, which may be any of the following values:
     This is the type of response returned by {{domxref("Response.error_static", "Response.error()")}}. A response of this type is not returned by a call to {{domxref("Window.fetch", "fetch()")}}, because if a network error occurs, the promise is rejected.
 
 - `opaque`
-
   - : A response to a cross-origin request whose {{domxref("Request.mode", "mode")}} was set to `no-cors`. The {{domxref("Response.status", "status")}} property is set to `0`, {{domxref("Response.body", "body")}} is `null`, headers are empty and immutable.
-
 - `opaqueredirect`
   - : A response to a request whose {{domxref("Request.redirect", "redirect")}} option was set to `manual`, and which was redirected by the server. The {{domxref("Response.status", "status")}} property is set to `0`, {{domxref("Response.body", "body")}} is `null`, headers are empty and immutable.
 
@@ -50,8 +46,7 @@ The following same-origin request will return a `basic` response:
 ```js
 const response = await fetch("flowers.jpg");
 
-console.log(response.type);
-// "basic"
+console.log(response.type); // "basic"
 ```
 
 ### A CORS response
@@ -61,8 +56,7 @@ Assuming `https://example.org` is not the requester's origin, and that the serve
 ```js
 const response = await fetch("https://example.org/flowers.jpg");
 
-console.log(response.type);
-// "cors"
+console.log(response.type); // "cors"
 ```
 
 ### An opaque response
@@ -74,12 +68,9 @@ const response = await fetch("https://example.org/flowers.jpg", {
   mode: "no-cors",
 });
 
-console.log(response.type);
-// "opaque"
-console.log(response.body);
-// null
-console.log(response.status);
-// 0
+console.log(response.type); // "opaque"
+console.log(response.body); // null
+console.log(response.status); // 0
 ```
 
 ### An error response
@@ -89,12 +80,9 @@ The following code uses {{domxref("Response.error_static", "Response.error()")}}
 ```js
 const response = Response.error();
 
-console.log(response.type);
-// "error"
-console.log(response.body);
-// null
-console.log(response.status);
-// 0
+console.log(response.type); // "error"
+console.log(response.body); // null
+console.log(response.status); // 0
 ```
 
 ## Specifications
