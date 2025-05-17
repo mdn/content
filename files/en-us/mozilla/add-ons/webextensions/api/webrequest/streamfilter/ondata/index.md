@@ -318,26 +318,28 @@ browser.webRequest.onBeforeRequest.addListener(
 This example demonstrates, how to search for multi-byte pattern in an array:
 
 ```js
-Array.prototype.indexOfMulti = function (searchElements, fromIndex) {
-  let i = this.indexOf(searchElements[0], fromIndex);
-  if (searchElements.length === 1 || i === -1) {
-    // Not found or no other elements to check
-    return i;
-  }
-
-  const initial = i;
-  for (
-    let j = 1, m = searchElements.length, n = this.length;
-    j < m && i < n;
-    j++
-  ) {
-    if (this[++i] !== searchElements[j]) {
-      return this.indexOfMulti(searchElements, initial + 1);
+Object.defineProperty(Array.prototype, "indexOfMulti", {
+  value: function (searchElements, fromIndex) {
+    let i = this.indexOf(searchElements[0], fromIndex);
+    if (searchElements.length === 1 || i === -1) {
+      // Not found or no other elements to check
+      return i;
     }
-  }
 
-  return i === initial + searchElements.length - 1 ? initial : -1;
-};
+    const initial = i;
+    for (
+      let j = 1, m = searchElements.length, n = this.length;
+      j < m && i < n;
+      j++
+    ) {
+      if (this[++i] !== searchElements[j]) {
+        return this.indexOfMulti(searchElements, initial + 1);
+      }
+    }
+
+    return i === initial + searchElements.length - 1 ? initial : -1;
+  },
+});
 
 const encoder = new TextEncoder();
 const elements = encoder.encode("WebExtension ");
