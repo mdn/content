@@ -326,18 +326,17 @@ Object.defineProperty(Array.prototype, "indexOfMulti", {
       return i;
     }
 
+    if (i + searchElements.length > this.length) {
+      return -1;
+    }
+
     const initial = i;
-    for (
-      let j = 1, m = searchElements.length, n = this.length;
-      j < m && i < n;
-      j++
-    ) {
+    for (let j = 1, l = searchElements.length; j < l; j++) {
       if (this[++i] !== searchElements[j]) {
         return this.indexOfMulti(searchElements, initial + 1);
       }
     }
-
-    return i === initial + searchElements.length - 1 ? initial : -1;
+    return initial;
   },
 });
 
