@@ -362,6 +362,7 @@ function listener(details) {
       i >= 0;
       i = data.indexOfMulti(bytes, i + m + n)
     ) {
+      // Insert "WebExtension " at the given index
       data.splice(i, 0, ...elements);
     }
 
