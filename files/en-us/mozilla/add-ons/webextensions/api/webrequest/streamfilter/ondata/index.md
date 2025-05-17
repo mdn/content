@@ -338,7 +338,7 @@ Object.defineProperty(Array.prototype, 'indexOfMulti', {
     }
 
     return i === initial + searchElements.length - 1 ? initial : -1;
-  }
+  },
 });
 
 const encoder = new TextEncoder();
