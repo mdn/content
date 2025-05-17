@@ -318,7 +318,7 @@ browser.webRequest.onBeforeRequest.addListener(
 This example shows, how to handle a non-UTF-8 page:
 
 ```js
-Object.defineProperty(Array.prototype, 'indexOfMulti', {
+Object.defineProperty(Array.prototype, "indexOfMulti", {
   value: function (searchElements, fromIndex) {
     let i = this.indexOf(searchElements[0], fromIndex);
     if (searchElements.length === 1 || i === -1) {
