@@ -26,7 +26,7 @@ The **`<img>`** [HTML](/en-US/docs/Web/HTML) element embeds an image into the do
 
 The above example shows usage of the `<img>` element:
 
-- The `src` attribute holds the path to the image you want to embed. It is not mandatory if the [srcset](/en-US/docs/Web/API/HTMLImageElement/srcset) is available. However, at least one of the `src` or `srcset` attributes must be provided.
+- The `src` attribute holds the path to the image you want to embed. It is not mandatory if the [srcset](/en-US/docs/Web/API/HTMLImageElement/srcset) attribute is available. However, at least one of the `src` or `srcset` attributes must be provided.
 - The `alt` attribute holds a textual replacement for the image, which is mandatory and **incredibly useful** for accessibility — screen readers read the attribute value out to their users so they know what the image means. Alt text is also displayed on the page if the image can't be loaded for some reason: for example, network errors, content blocking, or link rot.
 
 There are many other attributes to achieve various purposes:
