@@ -26,7 +26,7 @@ The **`<img>`** [HTML](/en-US/docs/Web/HTML) element embeds an image into the do
 
 The above example shows usage of the `<img>` element:
 
-- The `src` attribute is **required**, and contains the path to the image you want to embed.
+- The `src` attribute holds the path to the image you want to embed. It is not mandatory if the [srcset](/en-US/docs/Web/API/HTMLImageElement/srcset) is available. However, at least one of the `src` or `srcset` attributes must be provided.
 - The `alt` attribute holds a textual replacement for the image, which is mandatory and **incredibly useful** for accessibility — screen readers read the attribute value out to their users so they know what the image means. Alt text is also displayed on the page if the image can't be loaded for some reason: for example, network errors, content blocking, or link rot.
 
 There are many other attributes to achieve various purposes:
@@ -61,7 +61,7 @@ SVG remains the recommended format for images that must be drawn accurately at d
 
 If an error occurs while loading or rendering an image, and an `onerror` event handler has been set for the {{domxref("HTMLElement/error_event", "error")}} event, that event handler will get called. This can happen in several situations, including:
 
-- The `src` attribute is empty (`""`) or `null`.
+- The `src` or `srcset` attributes are empty (`""`) or `null`.
 - The `src` {{glossary("URL")}} is the same as the URL of the page the user is currently on.
 - The image is corrupted in some way that prevents it from being loaded.
 - The image's metadata is corrupted in such a way that it's impossible to retrieve its dimensions, and no dimensions were specified in the `<img>` element's attributes.
