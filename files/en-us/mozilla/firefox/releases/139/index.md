@@ -42,6 +42,9 @@ This article provides information about the changes in Firefox 139 that affect d
 - The {{domxref("HTMLDialogElement/requestClose", "requestClose()")}} method of the {{domxref("HTMLDialogElement")}} interface is now supported.
   This allows developers to conditionally prevent a dialog from closing by providing a [`cancel` event](/en-US/docs/Web/API/HTMLDialogElement/cancel_event) handler.
   ([Firefox bug 1960556](https://bugzil.la/1960556)).
+- The [`largeBlob`](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#largeblob) and [`credProps`](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#credprops) Web Authentication extensions are now supported, while the [`prf`](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#prf) extension is supported on all desktop platforms.
+  These respectively provide support for large blob storage associated with a credential, additional information about a credential, and a mechanism for generating a random number associated with a credential and a particular input.
+  ([Firefox bug 1795020](https://bugzil.la/1795020), [Firefox bug 1844449](https://bugzil.la/1844449), [Firefox bug 1844449](https://bugzil.la/1935280)).
 
 #### Media, WebRTC, and Web Audio
 
