@@ -205,7 +205,7 @@ See the reference documentation for {{domxref("RequestInit", "", "mode")}} for m
 
 ### Including credentials
 
-Credentials are cookies, {{glossary("TLS")}} client certificates, or authentication headers containing a username and password.
+Credentials are cookies, {{glossary("TLS")}} client certificates, and authentication headers.
 
 To control whether or not the browser sends credentials, as well as whether the browser respects any **`Set-Cookie`** response headers, set the `credentials` option, which can take one of the following three values:
 
