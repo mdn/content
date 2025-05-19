@@ -20,8 +20,9 @@ A string with one of the following values:
 
 - `omit`
   - : Never send credentials in the request or include credentials in the response.
-- `same-origin` (the default)
+- `same-origin`
   - : Only send and include credentials for same-origin requests.
+    This is the default.
 - `include`
   - : Always include credentials, even for cross-origin requests.
 
