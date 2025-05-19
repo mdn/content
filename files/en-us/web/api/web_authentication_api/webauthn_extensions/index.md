@@ -417,12 +417,13 @@ None
 Allows a relying party to get outputs for either one or two inputs from a pseudo-random function (PRF) associated with a credential.
 A PRF is effectively a [random oracle](https://en.wikipedia.org/wiki/Random_oracle) — a function that returns a random value for any given input, but will always return the same value for the same input.
 
+The ability to generate a random number associated with a user's credential is useful in a number of cryptographic applications.
+For example, it can be used to generate a symmetric key for encrypting sensitive data, and that can only be decrypted by a user who has the seed and the associated authenticator.
+It could similarly be used to create a symmetric key for end-to-end encryption, seeded with a value from the server and unique for that credential and session.
+
 The extension allows you to pass buffer values of type {{jsxref("ArrayBuffer")}} or {{jsxref("TypedArray")}} to the authenticator which will return the result of evaluating the value with the PRF of the associated credential.
 This can be done in an assertion, as part of the authentication workflow, specifying the credential or credentials for which the result is to be evaluated.
 It can also be done when creating a credential, but fewer authenticators support this generating outputs when creating credentials.
-
-This ability to generate a random number associated with a credential can be used for a number of cryptographic purposes.
-You might for example use the function to generate a symmetric key to use for end-to-end encryption, seeded with a value from the server and unique for that credential and session.
 
 #### Input
 
