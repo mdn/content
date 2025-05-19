@@ -47,8 +47,10 @@ The `matrix()` function is specified with six values. The constant values are im
 parameters; the other parameters are described in the column-major order.
 
 ```css
-matrix(a, b, c, d, tx, ty)
+matrix(a, b, c, d, tx, ty) 
 ```
+
+> **Note:** `matrix(a, b, c, d, tx, ty)` is also the same as matrix(scaleX, skewX, scaleY, skewY, translateX, translateY)
 
 ### Values
 
