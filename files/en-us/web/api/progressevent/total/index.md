@@ -8,7 +8,7 @@ browser-compat: api.ProgressEvent.total
 
 {{APIRef("XMLHttpRequest API")}}{{AvailableInWorkers}}
 
-The **`ProgressEvent.total`** read-only property is a 64-bit unsigned integer
+The **`ProgressEvent.total`** read-only property is a double-precision floating point value
 indicating the total size, in bytes, of the data being transmitted or processed.
 
 When downloading a resource using HTTP, this value is taken from the `Content-Length` response header. It only counts the body of the HTTP message, and doesn't include headers and other overhead.
@@ -18,7 +18,7 @@ property is `false`, this value is meaningless and should be ignored.
 
 ## Value
 
-An integer.
+A `double`.
 
 ## Specifications
 

@@ -8,7 +8,7 @@ browser-compat: api.ProgressEvent.loaded
 
 {{APIRef("XMLHttpRequest API")}}{{AvailableInWorkers}}
 
-The **`ProgressEvent.loaded`** read-only property is a 64-bit unsigned integer
+The **`ProgressEvent.loaded`** read-only property is a double-precision floating point value
 indicating the size, in bytes, of the data already transmitted or processed. The ratio can be calculated by dividing the value of this property by `ProgressEvent.total`.
 When downloading a resource using HTTP, this only counts the body of the HTTP message, and doesn't include headers and other overhead.
 
@@ -16,7 +16,7 @@ Note that for compressed requests of unknown total size, `loaded` might contain 
 
 ## Value
 
-A number.
+A `double`.
 
 ## Specifications
 
