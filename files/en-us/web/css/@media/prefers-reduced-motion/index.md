@@ -65,7 +65,7 @@ This example uses a scaling animation for the purpose of demonstrating `prefers-
 }
 
 /* Tone down the animation to avoid vestibular motion triggers. */
-@media (prefers-reduced-motion) {
+@media (prefers-reduced-motion: reduce) {
   .animation {
     animation: dissolve 4s linear infinite both;
     background-color: green;
