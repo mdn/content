@@ -21,6 +21,25 @@ This article provides information about the changes in Firefox 139 that affect d
 
 ### JavaScript
 
+- The Temporal API is now supported, this aims to simplify working with dates and times in various scenarios, with built-in time zone and calendar representations ([Firefox bug 1912511](https://bugzil.la/1912511) and [Firefox bug 1954138](https://bugzil.la/1954138)).
+This includes:
+  - A **duration** (difference between two time points): {{jsxref("Temporal.Duration")}}
+  - **Points in time**:
+    - As a unique instant in history:
+      - A timestamp: {{jsxref("Temporal.Instant")}}
+      - A date-time with a time zone: {{jsxref("Temporal.ZonedDateTime")}}
+    - **Time-zone-unaware date/time ("Plain")**:
+      - Date (year, month, day) + time (hour, minute, second, millisecond, nanosecond): {{jsxref("Temporal.PlainDateTime")}}
+        - Date (year, month, day): {{jsxref("Temporal.PlainDate")}}
+          - Year, month: {{jsxref("Temporal.PlainYearMonth")}}
+          - Month, day: {{jsxref("Temporal.PlainMonthDay")}}
+        - Time (hour, minute, second, millisecond, nanosecond): {{jsxref("Temporal.PlainTime")}}
+  - **Now** (current time) as various class instances, or in a specific format: {{jsxref("Temporal.Now")}}
+- Currently the following calendar types are disabled for the `withCalendar()` method for [`PlainDate`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/withCalendar), [`PlainDateTime`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime/withCalendar), and [`ZonedDateTime`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/withCalendar) objects:
+  - `islamic`
+  - `islamic-rgsa`
+  - `islamic-umalqura`
+
 #### Removals
 
 ### SVG
