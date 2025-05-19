@@ -408,6 +408,119 @@ The inputs for the `payment` extension are defined in the [AuthenticationExtensi
 
 None
 
+### `prf`
+
+- Usable in: Registration ({{domxref("CredentialsContainer.create()","create()")}}) and authentication ({{domxref("CredentialsContainer.get()","get()")}})
+- Processed by: User agent
+- Specification: [Pseudo-random function extension (prf)](https://w3c.github.io/webauthn/#prf-extension)
+
+Allows a relying party to get outputs for either one or two inputs from a pseudo-random function (PRF) associated with a credential.
+A PRF is effectively a [random oracle](https://en.wikipedia.org/wiki/Random_oracle) — a function that returns a random value for any given input, but will always return the same value for the same input.
+
+The extension allows you to pass buffer values of type {{jsxref("ArrayBuffer")}} or {{jsxref("TypedArray")}} to the authenticator which will return the result of evaluating the value with the PRF of the associated credential.
+This can be done in an assertion, as part of the authentication workflow, specifying the credential or credentials for which the result is to be evaluated.
+It can also be done when creating a credential, but fewer authenticators support this generating outputs when creating credentials.
+
+This ability to generate a random number associated with a credential can be used for a number of cryptographic purposes.
+You might for example use the function to generate a symmetric key to use for end-to-end encryption, seeded with a value from the server and unique for that credential and session.
+
+#### Input
+
+During a `create()` call, the `publicKey`'s `extensions` property may contain a `prf` property which has `eval` object with the property `first` and optional property `second`.
+These properties are either {{jsxref("ArrayBuffer")}} or {{jsxref("TypedArray")}} instances that the contains values to pass to the PRF for the credential.
+
+For example, the definition below might be used when creating a new credential in order to create a new symmetric key from a server-provided secret.
+
+```js
+({
+  extensions: {
+    prf: {
+      eval: { first: new TextEncoder().encode("Salt for new symmetric key") },
+    },
+  },
+});
+```
+
+The optional `second` property can be used if two random values need to be created for a credential.
+For example, this might be used in workflows where the encryption key is rotated on each session.
+
+```js
+{
+  extensions: {
+    prf: {
+      eval: {
+        first: currentSessionKey /* salt for current session */,
+        second: nextSessionKey /* salt for next session */,
+      },
+    },
+  },
+};
+```
+
+The `create()` call may reject with the following exceptions:
+
+- `NotSupportedError` {{domxref("DomException")}}
+  - The `evalByCredential` key is present in the `eval` object.
+
+Note that evaluating a PRF when creating a credential may not be supported, and this would be reported in the output.
+You could still try evaluating the PRF in an assertion as shown below.
+
+During a `get()` call, the `publicKey`'s `extensions` property may contain a `prf` property with the `evalByCredential` sub-property.
+This is an object that maps {{glossary("Base64")}} URL-encoded credential IDs to evaluation objects with the same form as shown above.
+In other words, this allows you to specify values to evaluate for different credentials.
+
+```js
+{
+  extensions: {
+    prf: {
+      evalByCredential: {"<credentialId>": {first: bufferOne, second: bufferTwo}, ..., "<credentialId>": {first: anotherBufferOne, second: anotherBufferTwo} }
+    },
+  },
+};
+```
+
+The `get()` call may reject with the following exceptions:
+
+- `NotSupportedError` {{domxref("DomException")}}
+  - : If `eval` is the `prf` object, or if `allowCredentials` is empty when `evalByCredential` is not empty.
+- `SyntaxError` {{domxref("DomException")}}
+  - : Any key in `evalByCredential` is the empty string or is not a valid Base64 URL encoding, or does not match the id of some element with [`publicKey.allowCredentials`](/en-US/docs/Web/API/PublicKeyCredentialRequestOptions#allowcredentials).
+
+#### Output
+
+A successful `create()` call provides the following extension output if the registered credential supports using the PRF when creating credentials.
+Note that `enabled` is only present as an output for `create()`, and that `first` and `second` contain the result of evaluating `first` and `second` on the input.
+
+```js
+{
+  prf: {
+    enabled: true, // PRF can be used when creating credentials.
+    results: {first: outputBuffer1, second: outputBuffer2}
+  },
+};
+```
+
+If the authenticator doesn't support using the PRF on creation, the output will look like this:
+
+```js
+{
+  prf: {
+    enabled: false, // PRF cannot be used when creating credentials.
+  },
+};
+```
+
+A `get()` returns a `prf` object that does not include the `enabled` key.
+The values are otherwise as for the create call.
+
+```js
+{
+  prf: {
+    results: {first: outputBuffer1, second: outputBuffer2}
+  },
+};
+```
+
 ## Specifications
 
 There are a number of places that WebAuthn extensions are specified. IANA's [WebAuthn Extension Identifiers](https://www.iana.org/assignments/webauthn/webauthn.xhtml#webauthn-extension-ids) provides a registry of all extensions, but bear in mind that some may be deprecated.
