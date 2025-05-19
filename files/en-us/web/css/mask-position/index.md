@@ -97,7 +97,7 @@ The equation is:
 
 `(container dimension - mask dimension) * position percentage = dimension offset value`
 
-Given a `100px`-wide mask and a `1000px`-wide origin box, setting `mask-postion: 10%;` (the equivalent of `10% 50%`) results in the mask being vertically centered at `90px` from the left edge. The equation is `(1000 - 100) * 10% = 90`. If the left offset had been `0%`, the mask's left edge would be flush to the left of the container (`(1000 - 100) * 0% = 0`).
+Given a `100px`-wide mask and a `1000px`-wide origin box, setting `mask-positon: 10%;` (the equivalent of `10% 50%`) results in the mask being vertically centered at `90px` from the left edge. The equation is `(1000 - 100) * 10% = 90`. If the left offset had been `0%`, the mask's left edge would be flush to the left of the container (`(1000 - 100) * 0% = 0`).
 
 If the left offset had been `100%`, the mask's right edge would be flush to the right of the container as the left edge of the `100px` wide mask would be `900px` (`(1000 - 100) * 100% = 900`) from the left edge of the container (the `100px` mask width plus `900px` distance from the left edge means the right edge would be `1000px` from the left edge, which is the right edge of the container).
 
