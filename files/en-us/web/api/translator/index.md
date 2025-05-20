@@ -36,7 +36,7 @@ The **`Translator`** interface of the {{domxref("Translator and Language Detecto
 - {{domxref("Translator.measureInputUsage", "measureInputUsage()")}} {{Experimental_Inline}}
   - : Reports how much input quota would be used by a translation operation for a given text input.
 - {{domxref("Translator.translate", "translate()")}} {{Experimental_Inline}}
-  - : Generates a new translation string.
+  - : Returns a string containing a translation of the input string.
 - {{domxref("Translator.translateStreaming", "translateStreaming()")}} {{Experimental_Inline}}
   - : Generates a new translation as a {{domxref("ReadableStream")}}.
 
