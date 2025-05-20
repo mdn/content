@@ -102,7 +102,8 @@ There are many ways to create a new React application. We're going to use Vite t
 It's possible to [add React to an existing project](https://react.dev/learn/add-react-to-an-existing-project) by copying some [`<script>`](/en-US/docs/Web/HTML/Reference/Elements/script) elements into an HTML file, but using Vite will allow you to spend more time building your app and less time fussing with setup.
 
 > [!NOTE]
-> To start with, you can get your hands dirty writing some React code without doing _any_ local setup by working through Scrimba's [First React Code](https://scrimba.com/learn-react-c0e/~03uo?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> scrim. Give it a try before continuing.
+> You can start writing React code without doing _any_ local setup by working through Scrimba's [First React Code](https://scrimba.com/learn-react-c0e/~03uo?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> scrim.
+> Feel free to give it a try before continuing.
 
 ### Requirements
 
