@@ -35,13 +35,13 @@ p {
 ## Description
 
 The `hidden` attribute indicates that the content of an element should not be presented to the user.
-The attribute can take any one of the following values:
+The attribute takes any one of the following values:
 
 - the keyword `hidden`
 - the keyword `until-found`
 - an empty string
 
-Invalid values set an element to the _hidden_ state, meaning, all the following elements have the [_hidden_](#the_hidden_state) state:
+Invalid `hidden=` values also set an element to the _hidden_ state, meaning, all the following elements have a [_hidden_](#the_hidden_state) state:
 
 ```html
 <span hidden>I'm hidden</span>
@@ -50,7 +50,7 @@ Invalid values set an element to the _hidden_ state, meaning, all the following 
 <span hidden="bananas">I'm equally as hidden!</span>
 ```
 
-Aside from the _hidden_ state, the keyword `until-found` sets the element to the [_hidden until found_](#the_hidden_until_found_state) state:
+The keyword `until-found` sets the element to the [_hidden until found_](#the_hidden_until_found_state) state:
 
 ```html
 <span hidden="until-found">I'm hidden until found</span>
@@ -60,24 +60,29 @@ Aside from the _hidden_ state, the keyword `until-found` sets the element to the
 
 The _hidden_ state indicates that the element is not currently relevant to the page, or that it is being used to declare content for reuse by other parts of the page and should not be directly presented to the user. The browser will not render elements that are in the _hidden_ state.
 
-Web browsers may implement the _hidden_ state using `display: none`, in which case the element will not participate in page layout. This also means that changing the value of the CSS {{cssxref("display")}} property on an element in the _hidden_ state will override the state. For instance, elements styled `display: block` will be displayed despite the `hidden` attribute's presence.
+Web browsers may implement the _hidden_ state using `display: none`, in which case the element will not participate in page layout.
+Additionally, changing the value of the CSS {{cssxref("display")}} property on a hidden element will override the _hidden_ state.
+For instance, elements styled `display: block` will be displayed despite the `hidden` attribute's presence.
 
 ### The hidden until found state
 
-In the _hidden until found_ state, the element is hidden but its content will be accessible to the browser's "find in page" feature or to fragment navigation. When these features cause a scroll to an element in a _hidden until found_ subtree, the browser will:
+In the _hidden until found_ state, the element is hidden but its content will be accessible to the browser's "find in page" feature or to fragment navigation.
+When these features cause a scroll to an element in a _hidden until found_ subtree, the browser will:
 
 - fire a [`beforematch`](/en-US/docs/Web/API/Element/beforematch_event) event on the hidden element
 - remove the `hidden` attribute from the element
 - scroll to the element
 
-This enables a developer to collapse a section of content, but make it searchable and accessible via fragment navigation.
+This enables a developer to collapse a section of content, but make it searchable and accessible through navigation.
 
-Note that browsers typically implement _hidden until found_ using {{cssxref("content-visibility", "content-visibility: hidden")}}. This means that unlike elements in the _hidden_ state, elements in the _hidden until found_ state will have generated boxes, meaning that:
+Browsers typically implement _hidden until found_ using {{cssxref("content-visibility", "content-visibility: hidden")}}.
+This means that, unlike elements in the _hidden_ state, elements in the _hidden until found_ state will have generated boxes, and:
 
 - the element will participate in page layout
 - margin, borders, padding, and background for the element will be rendered.
 
-Also, the element needs to be affected by [layout containment](/en-US/docs/Web/CSS/CSS_containment) in order to be revealed. This means that if the element in the _hidden until found_ state has a `display` value of `none`, `contents`, or `inline`, then the element will not be revealed by find in page or fragment navigation.
+Also, the element needs to be affected by [layout containment](/en-US/docs/Web/CSS/CSS_containment) in order to be revealed.
+If the element in the _hidden until found_ state has a `display` value of `none`, `contents`, or `inline`, then the element will not be revealed by "find in page" or fragment navigation.
 
 ### Usage notes
 
@@ -97,7 +102,7 @@ Elements that are descendants of a hidden element are still active, which means 
 ### Using the hidden attribute
 
 In this example we have three {{HTMLElement("div")}} elements. The first and the third are not hidden, while the second has a `hidden` attribute.
-Note that the element has no generated box.
+Note that the hidden element has no generated box.
 
 ```html
 <div>I'm not hidden</div>
