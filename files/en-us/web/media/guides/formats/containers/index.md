@@ -640,17 +640,17 @@ You can also [add the `codecs` parameter](/en-US/docs/Web/Media/Guides/Formats/c
     </tr>
     <tr>
       <th scope="row">Opus</th>
-      <td></td>
-      <td></td>
       <td>Yes</td>
-      <td></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes (Safari 18.4+ on macOS 15.4+/iOS 18.4+)</td>
     </tr>
     <tr>
       <th scope="row">Vorbis</th>
       <td></td>
       <td></td>
       <td>Yes</td>
-      <td></td>
+      <td>Yes</td>
     </tr>
   </tbody>
 </table>
