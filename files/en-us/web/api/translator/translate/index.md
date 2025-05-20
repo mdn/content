@@ -10,7 +10,7 @@ browser-compat: api.Translator.translate
 
 {{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}
 
-The **`translate()`** method of the {{domxref("Translator")}} interface generates a new translation string.
+The **`translate()`** method of the {{domxref("Translator")}} interface returns a translation of an input string.
 
 ## Syntax
 
