@@ -1752,6 +1752,46 @@ Notifications have the [`requireInteraction`](/en-US/docs/Web/API/Notification/r
   </tbody>
 </table>
 
+### View Transition API
+
+The [View Transition API](/en-US/docs/Web/API/View_Transition_API) has been enabled for [SPAs (Single-page Applications)](/en-US/docs/Glossary/SPA) in the Nightly release. This provides a mechanism for easily creating animated transitions between different website views. ([Firefox bug 1950759](https://bugzil.la/1950759)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version changed</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>139</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>—</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>—</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>—</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2">N/A</td>
+    </tr>
+  </tbody>
+</table>
+
 ## Security and privacy
 
 ### Block plain text requests from Flash on encrypted pages

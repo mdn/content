@@ -99,6 +99,8 @@ These features are newly shipped in Firefox 139 but are disabled by default. To 
   The [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) provides a standardized way to prioritize all tasks belonging to an application, whether they are defined in a website developer's code, or in third-party libraries and frameworks.
   This adds support for the {{domxref("scheduler.yield()")}} method and re-enables the whole API in the Nightly release.
   ([Firefox bug 1958943](https://bugzil.la/1958943), [Firefox bug 1920115](https://bugzil.la/1920115)).
+- **View Transition API** (Nightly release).
+  The [View Transition API](/en-US/docs/Web/API/View_Transition_API) has been enabled for [SPAs (Single-page Applications)](/en-US/docs/Glossary/SPA) in the Nightly release. This provides a mechanism for easily creating animated transitions between different website views. ([Firefox bug 1950759](https://bugzil.la/1950759)).
 - **Support for escaping `<` and `>` in attributes when serializing HTML**: `dom.security.html_serialization_escape_lt_gt`.
   Firefox now replaces the `<` and `>` characters with `&lt;` and `&gt;`, respectively, in attributes when serializing HTML. This helps prevent certain exploits where HTML is serialized and then injected back into the DOM.
   The affected methods and properties are: {{domxref("Element.innerHTML")}}, {{domxref("Element.outerHTML")}}, {{domxref("Element.getHTML()")}}, {{domxref("ShadowRoot.innerHTML")}}, and {{domxref("ShadowRoot.getHTML()")}}. ([Firefox bug 1941347](https://bugzil.la/1941347)).
