@@ -79,7 +79,7 @@ This example shows how to apply the `brightness()` filter to a paragraph via the
 
 ```css
 .container {
-  background: url(image.jpg) no-repeat right / contain #d4d5b2;
+  background: url(be_fierce.jpg) no-repeat right / contain #d4d5b2;
 }
 p {
   backdrop-filter: brightness(150%);
@@ -101,7 +101,7 @@ p {
 ```
 
 ```html hidden
-<div class="container" style="background-image: url(be_fierce.jpg);">
+<div class="container">
   <p>
     Text on images can be illegible and inaccessible even with a drop shadow.
   </p>
@@ -159,7 +159,7 @@ In this example, to create a filter that darkens the content on which it is appl
 
 Given the following:
 
-```css hidden
+```css hidden live-sample___svg_filter
 .filter {
   filter: brightness(0.75);
 }
@@ -168,7 +168,7 @@ svg {
 }
 ```
 
-```html
+```html live-sample___svg_filter
 <svg role="none">
   <filter id="darken25" color-interpolation-filters="sRGB">
     <feComponentTransfer>
@@ -190,7 +190,7 @@ filter: url(folder/fileName.svg#darken25); /* external svg filter definition */
 
 In the images below, the first one has a `brightness()` filter function applied, the second one has a similar SVG brightness function applied, and the third is the original image for comparison.
 
-```html hidden
+```html hidden live-sample___svg_filter
 <table cellpadding="5">
   <thead>
     <tr>
@@ -223,7 +223,7 @@ In the images below, the first one has a `brightness()` filter function applied,
 </table>
 ```
 
-{{EmbedLiveSample('blur','100%','280')}}
+{{EmbedLiveSample('svg_filter','100%','280')}}
 
 ## Specifications
 

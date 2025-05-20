@@ -420,6 +420,7 @@ Select different options to change the `clip-path` value.
 - {{CSSxRef("mask")}}
 - {{CSSxRef("filter")}}
 - {{cssxref("background-clip")}}
+- [Introduction to CSS clipping](/en-US/docs/Web/CSS/CSS_masking/Clipping)
 - [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
 - SVG {{SVGAttr("clip-path")}} attribute
 - [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)

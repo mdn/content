@@ -8,7 +8,7 @@ page-type: guide
 
 Algorithms to detect collision in 2D games depend on the type of shapes that can collide (e.g., Rectangle to Rectangle, Rectangle to Circle, Circle to Circle). Generally you will have a simple generic shape that covers the entity known as a "hitbox" so even though collision may not be pixel perfect, it will look good enough and be performant across multiple entities. This article provides a review of the most common techniques used to provide collision detection in 2D games.
 
-## Axis-Aligned Bounding Box
+## Axis-aligned bounding box
 
 One of the simpler forms of collision detection is between two rectangles that are axis aligned — meaning no rotation. The algorithm works by ensuring there is no gap between any of the 4 sides of the rectangles. Any gap means a collision does not exist.
 
@@ -54,7 +54,7 @@ rect2.bind("EnterFrame", function () {
 
 > **Note:** [Another example without Canvas or external libraries](https://jsfiddle.net/jlr7245/217jrozd/3/).
 
-## Circle Collision
+## Circle collision
 
 Another simple shape for collision detection is between two circles. This algorithm works by taking the center points of the two circles and ensuring the distance between the center points are less than the two radii added together.
 
@@ -116,8 +116,8 @@ const circle2 = Crafty.e("2D, Canvas, Circle, Fourway")
   .circle(20, "blue");
 
 circle2.bind("EnterFrame", function () {
-  const dx = circle1.x - circle2.x;
-  const dy = circle1.y - circle2.y;
+  const dx = circle1.x + circle1.radius - (circle2.x + circle2.radius);
+  const dy = circle1.y + circle1.radius - (circle2.y + circle2.radius);
   const distance = Math.sqrt(dx * dx + dy * dy);
 
   const colliding = distance < circle1.radius + circle2.radius;
@@ -126,6 +126,9 @@ circle2.bind("EnterFrame", function () {
 ```
 
 {{ EmbedLiveSample('Circle_Collision', '700', '300') }}
+
+> [!NOTE]
+> The circles' `x` and `y` coordinates refer to their top left corners, so we need to add the radius to compare their centers.
 
 > **Note:** [Here is another example without Canvas or external libraries.](https://jsfiddle.net/jlr7245/teb4znk0/20/)
 
@@ -141,14 +144,14 @@ Implementing SAT is out of scope for this page so see the recommended tutorials 
 4. [SAT (Separating Axis Theorem)](https://dyn4j.org/2010/01/sat/)
 5. [Separating Axis Theorem](https://programmerart.weebly.com/separating-axis-theorem.html)
 
-## Collision Performance
+## Collision performance
 
 While some of these algorithms for collision detection are simple enough to calculate, it can be a waste of cycles to test _every_ entity with every other entity. Usually games will split collision into two phases, broad and narrow.
 
-### Broad Phase
+### Broad phase
 
 Broad phase should give you a list of entities that _could_ be colliding. This can be implemented with a spatial data structure that will give you a rough idea of where the entity exists and what exist around it. Some examples of spatial data structures are Quad Trees, R-Trees or a Spatial Hashmap.
 
-### Narrow Phase
+### Narrow phase
 
 When you have a small list of entities to check you will want to use a narrow phase algorithm (like the ones listed above) to provide a certain answer as to whether there is a collision or not.

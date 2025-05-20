@@ -39,7 +39,7 @@ The [`evaluate()`](/en-US/docs/Web/API/Document/evaluate) method takes a total o
 
 ### Return Value
 
-Returns `xpathResult`, which is an `XPathResult` object of the type [specified](#specifying_the_return_type) in the `resultType` parameter. The `XPathResult` Interface is defined [here](/en-US/docs/Web/API/XPathResult).
+Returns an {{domxref("XPathResult")}} object of the type [specified](#specifying_the_return_type) in the `resultType` parameter.
 
 ### Implementing a Default Namespace Resolver
 

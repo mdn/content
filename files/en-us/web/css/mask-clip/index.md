@@ -66,7 +66,7 @@ The property accepts a comma-separated list of keyword values. Each value is a `
 
 The `mask-clip` property defines the area of the element that is affected by the applied mask.
 
-For mask layer images that do not reference an SVG {{svgElem("mask")}} element, the `mask-clip` property defines the mask painting area, or the area affected by the mask. The painted content of the element will be restricted to this area.
+For mask layer images that do not reference an SVG {{svgelement("mask")}} element, the `mask-clip` property defines the mask painting area, or the area affected by the mask. The painted content of the element will be restricted to this area.
 
 The `mask-clip` property has no affect on a mask layer image that references a `<mask>` element. The `<mask>` element's {{svgAttr("x")}}, {{svgAttr("y")}}, {{svgAttr("width")}}, {{svgAttr("height")}}, and {{svgAttr("maskUnits")}} attributes determine the mask painting area when the source of the {{cssxref("mask-image")}} is a `<mask>`.
 
@@ -88,7 +88,7 @@ This examples demonstrates three `mask-clip` values.
 
 #### HTML
 
-We include three elments, each with a different `<coord-box>` value as a class name.
+We include three elements, each with a different `<coord-box>` value as a class name.
 
 ```html live-sample___mask-clip-example
 <div class="border-box"></div>

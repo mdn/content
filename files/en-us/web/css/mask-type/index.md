@@ -29,7 +29,7 @@ mask-type: unset;
 - `alpha`
   - : Indicates that the alpha (transparency) values of the `<mask>` should be used.
 - `luminance`
-  - : Indicates that the [luminance (brightness) values](#understanding-luminance) of the `<mask>` should be used.
+  - : Indicates that the [luminance (brightness) values](#understanding_luminance) of the `<mask>` should be used.
 
 ## Description
 
@@ -163,5 +163,6 @@ As the default value for the `mask-mode` property is `match-source`, the first m
 
 - {{cssxref("mask")}}
 - {{cssxref("mask-mode")}}
+- [Introduction to CSS masking](/en-US/docs/Web/CSS/CSS_masking/Masking)
 - [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
 - SVG {{svgattr("mask-type")}} attribute

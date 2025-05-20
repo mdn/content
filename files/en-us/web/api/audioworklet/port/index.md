@@ -3,10 +3,12 @@ title: "AudioWorklet: port"
 short-title: port
 slug: Web/API/AudioWorklet/port
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.AudioWorklet.port
 ---
 
-{{APIRef("Web Audio API")}}
+{{APIRef("Web Audio API")}}{{SeeCompatTable}}
 
 The **`port`** read-only property of the {{domxref("AudioWorklet")}} interface returns a {{domxref("MessagePort")}} object that can be used to send and receive messages between the main thread and the associated {{domxref("AudioWorkletGlobalScope")}}.
 

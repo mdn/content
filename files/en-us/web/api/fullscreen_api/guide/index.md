@@ -77,43 +77,9 @@ In addition, navigating to another page, changing tabs, or switching to another 
 
 ## Example
 
-In this example, a video is presented in a web page. Pressing the <kbd>Return</kbd> or <kbd>Enter</kbd> key lets the user toggle between windowed and fullscreen presentation of the video.
+The [mdn/dom-examples GitHub repo](https://github.com/mdn/) has a complete example of the Fullscreen API.
 
-[View Live Examples](https://mdn.dev/archives/media/samples/domref/fullscreen.html)
-
-### Watching for the Enter key
-
-When the page is loaded, this code is run to set up an event listener to watch for the <kbd>Enter</kbd> key.
-
-```js
-document.addEventListener(
-  "keydown",
-  (e) => {
-    if (e.key === "Enter") {
-      toggleFullScreen();
-    }
-  },
-  false,
-);
-```
-
-### Toggling fullscreen mode
-
-This code is called when the user hits the <kbd>Enter</kbd> key, as seen above.
-
-```js
-function toggleFullScreen() {
-  if (!document.fullscreenElement) {
-    document.documentElement.requestFullscreen();
-  } else if (document.exitFullscreen) {
-    document.exitFullscreen();
-  }
-}
-```
-
-This starts by looking at the value of the `fullscreenElement` attribute on the {{DOMxRef("document")}}. If it's `null`, the document is currently in windowed mode, so we need to switch to fullscreen mode. Switching to fullscreen mode is done by calling {{DOMxRef("Element.requestFullscreen()")}}.
-
-If fullscreen mode is already active (`fullscreenElement` is non-`null`), we call {{DOMxRef("document.exitFullscreen()")}}.
+[Run the example](https://mdn.github.io/dom-examples/fullscreen-api/index.html) and [browse the source code](https://github.com/mdn/dom-examples/tree/main/fullscreen-api).
 
 ## Specifications
 

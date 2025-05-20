@@ -114,7 +114,6 @@ sidebar:
         children:
           - /MDN/Community
           - /MDN/Community/Getting_started
-          - /MDN/Community/Security_vulnerability_response
       - /MDN/Community/Open_source_etiquette
       - /MDN/Community/Communication_channels
       - /MDN/Community/Discussions
