@@ -26,7 +26,7 @@ The {{domxref("LanguageDetector.expectedInputLanguages", "expectedInputLanguages
 > [!NOTE]
 > Different implementations will likely support different languages.
 
-When you've created a `LanguageDetector` instance, you can use it to detect a language by calling the {{domxref("LanguageDetector.detect()")}} instance method on it, passing it the text to summarize as an argument.
+When you've created a `LanguageDetector` instance, you can use it to detect a language by calling the {{domxref("LanguageDetector.detect()")}} instance method on it, passing it the text to check as an argument.
 
 ```js
 const results = await detector.detect(myTextString);
