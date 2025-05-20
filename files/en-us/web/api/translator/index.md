@@ -38,7 +38,7 @@ The **`Translator`** interface of the {{domxref("Translator and Language Detecto
 - {{domxref("Translator.translate", "translate()")}} {{Experimental_Inline}}
   - : Returns a string containing a translation of the input string.
 - {{domxref("Translator.translateStreaming", "translateStreaming()")}} {{Experimental_Inline}}
-  - : Generates a new translation as a {{domxref("ReadableStream")}}.
+  - : Generates a translation of the input string as a {{domxref("ReadableStream")}}.
 
 ## Examples
 
