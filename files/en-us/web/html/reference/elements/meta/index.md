@@ -58,7 +58,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
         - The number of seconds until the page should be reloaded - if the [`content`](#content) attribute's value is a non-negative integer.
         - The number of seconds until the page should redirect to another - if the [`content`](#content) attribute's value is a non-negative integer followed by `;url=` and a valid URL.
 
-        The timer starts when the page is _completely loaded_, which is after the {{domxref("Window/load_event", "load")}} and {{domxref("Window/pageshow_event", "pageshow")}} events have both fired.
+        The timer starts when the page is _completely loaded_, which is after both {{domxref("Window/load_event", "load")}} and {{domxref("Window/pageshow_event", "pageshow")}} events are fired.
 
         Also see {{HTTPHeader("Refresh")}}.
 
