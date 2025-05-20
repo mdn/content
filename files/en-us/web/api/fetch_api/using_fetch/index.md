@@ -205,9 +205,13 @@ See the reference documentation for {{domxref("RequestInit", "", "mode")}} for m
 
 ### Including credentials
 
-Credentials are cookies, {{glossary("TLS")}} client certificates, and authentication headers.
+In the context of an HTTP request, a credential is an extra piece of data sent along with the request, that the server may use to authenticate the user. All the following items are considered to be credentials:
 
-To control whether or not the browser sends credentials, as well as whether the browser respects any **`Set-Cookie`** response headers, set the `credentials` option, which can take one of the following three values:
+- HTTP cookies
+- {{glossary("TLS")}} client certificates
+- The {{httpheader("Authorization")}} and {{httpheader("Proxy-Authorization")}} headers.
+
+By default, credentials are only included in same-origin requests. To customize this behavior, as well as to control whether the browser respects any **`Set-Cookie`** response headers, set the [`credentials`](/en-US/docs/Web/API/RequestInit#credentials) option, which can take one of the following three values:
 
 - `omit`: never send credentials in the request or include credentials in the response.
 - `same-origin` (the default): only send and include credentials for same-origin requests.
