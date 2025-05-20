@@ -83,4 +83,4 @@ Interactive components authored using non-interactive elements are not listed in
 - All [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes)
 - {{domxref("HTMLElement.tabIndex")}} that reflects this attribute
 - Accessibility problems with `tabindex`: see [Don't Use Tabindex Greater than 0](https://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html) by Adrian Roselli
-- {{glossary("reading order")}}
+- {{glossary("Reading order")}}

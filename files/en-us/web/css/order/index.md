@@ -174,4 +174,4 @@ The `<article>` appears first in the source order but visually rendered in the c
 - [Ordering flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
 - [CSS grid layout and accessibility](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
 - [CSS display](/en-US/docs/Web/CSS/CSS_display) module
-- {{glossary("reading order")}}
+- {{glossary("Reading order")}}

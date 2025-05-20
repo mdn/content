@@ -35,40 +35,38 @@ The `reading-flow` property takes one of the following keywords as its value:
 
 - `normal`
 
-  - : The reading order follows the order of elements in the DOM. This is the default value if `reading-flow` is not explicitly set.
+  - : The default value. The reading order follows the order of elements in the DOM.
 
 - `flex-visual`
 
-  - : The reading order follows the visual reading order of `flex` items, taking the {{cssxref("writing-mode")}} into account. Therefore, a document in English with `flex-direction: row-reverse` and `reading-flow: flex-visual` set would have a reading order of left-to-right. Only affects flex containers.
+  - : Only affects {{glossary("Flex Container", "flex containers")}}. The reading order follows the visual order of the `flex` items, taking the {{cssxref("writing-mode")}} into account. Therefore, a document in English with `flex-direction: row-reverse` and `reading-flow: flex-visual` set would have a reading order of left-to-right.
 
 - `flex-flow`
 
-  - : The reading order follows the [flex-flow](/en-US/docs/Web/CSS/flex-flow) direction. Only affects flex containers.
+  - : Only affects flex containers. The reading order follows the {{cssxref("flex-flow")}} direction.
 
 - `grid-columns`
 
-  - : The reading order follows the visual order of grid items by column, taking the writing mode into account. Only affects grid containers.
+  - : Only affects {{glossary("Grid Container", "grid containers")}}. The reading order follows the visual order of grid items, column by column, taking the writing mode into account.
 
 - `grid-rows`
 
-  - : The reading order follows the visual order of grid items by row, taking the `writing-mode` into account. Only affects {{glossary("Grid Container", "grid containers")}}.
+  - : Only affects grid containers. The reading order follows the visual order of grid items, row by row, taking the writing mode into account.
 
 - `grid-order`
 
-  - : The reading order follows the modified document order resulting from using the {{cssxref("order")}} property to change the order of items. Behaves as `normal` if no `order` was set. Only affects grid containers.
+  - : When applied to a grid container, if the {{cssxref("order")}} property is applied to any of the element's children, the reading order follows the modified item order. If the `order` property is not applied to the grid items, behaves as `normal`.
 
 - `source-order`
-  - : Enables the use of the `reading-order` property on direct children. Other than respecting the `reading-order` property, the reading order follows the order of elements in the DOM. Affects grid, flex, and block containers.
+  - : Affects grid, flex, and block containers. Has no effect on its own — the container's reading order continues to follow the order of elements in the DOM — but allows the reading order to be modified by setting the {{cssxref("reading-order")}} property on the container's children.
 
 ## Description
 
 The `reading-flow` property modifies the {{glossary("reading order")}} of elements within a [block](/en-US/docs/Glossary/Block/CSS), [flex](/en-US/docs/Web/CSS/CSS_flexible_box_layout), or [grid](/en-US/docs/Web/CSS/CSS_grid_layout) container when set to a value other than `normal`. Such a container is referred to as a [reading flow container](/en-US/docs/Glossary/Reading_order#reading_flow_container).
 
-By default, web content is read out in DOM source order. Generally, the source order should express a sensible reading order for the content, and this should also be reflected by the visual order in the content layout. However, sometimes the visual order goes out of sync with the source order. For example, you might apply multiple flexbox or grid layouts to a document via [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) to suit different device or user requirements.
+By default, web content is read out in DOM source order. Generally, the source order should express a sensible reading order for the content, and this should also be reflected by the visual order in the content layout. However, sometimes the visual order or tab order differs from the source order. For example, when applying multiple flexbox or grid layouts to a document via [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) to suit different device or user requirements, the order of containers may differ based on the viewport width. In such a case, the `reading-flow` can be used to ensure the reading and tabbing order reflect the visual order.
 
-This can cause accessibility issues, for example the content might not be perceived in the same way by sighted users and {{glossary("screen reader")}} users. In such cases, it is beneficial to adjust the reading order so that it still makes sense to all users. The `reading-flow` property allows you to make such adjustments.
-
-In some cases you may wish to further fine-tune the reading order. You can use {{cssxref("reading-order")}} property values other than `0` on the reading flow container's children to put them into different ordinal groups, which are read out in number order.
+In some cases you may wish to further fine-tune the reading order within a reading flow container. You can use {{cssxref("reading-order")}} property values on the container's children, putting them into ordinal groups which are then read out in numerical order.
 
 ## Formal definition
 
