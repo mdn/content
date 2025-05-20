@@ -319,7 +319,7 @@ async function detectLanguage() {
 }
 ```
 
-Now we define the `handleTranslation()` function. We begin by creating a new {{domxref("FormData")}} object instance containing our `<form>` data name/value pairs. We then run a data validation test, checking whether the detected `<textarea>` content language is the same as the language chosen to translate into (`translateLanguage`). If it is, we print an error message inside the translate output `<p>`.
+Now we define the `handleTranslation()` function. We begin by creating a new {{domxref("FormData")}} object instance containing our `<form>` data name/value pairs. We then run a data validation test, checking whether the detected `<textarea>` content language is the same as the language chosen to translate into (`translateLanguage`). If it is, we print an error message inside the `<p>` with class `translate-output`.
 
 ```js
 async function handleTranslation(e) {
