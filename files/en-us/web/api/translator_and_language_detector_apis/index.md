@@ -29,7 +29,7 @@ AI is well-suited to facilitating language detection and translation. The Transl
 
 After the above instances have been created, you can remove them again using a `destroy()` instance method (for example, the {{domxref("Translator.destroy()")}}). You can also cancel pending operations using an {{domxref("AbortController")}}.
 
-See [Using the Translator and Language Detector APIs](/en-US/docs/Web/API/Translator_and_Language_Detector_APIs/Using) for a walkthrough of how the APIs work.
+See [Using the Translator and Language Detector APIs](/en-US/docs/Web/API/Translator_and_Language_Detector_APIs/Using) for a walkthrough of how to use the APIs.
 
 ## Interfaces
 
