@@ -7,17 +7,18 @@ browser-compat: api.Sanitizer
 
 {{DefaultAPISidebar("HTML Sanitizer API")}}
 
-The **HTML Sanitizer API** allow developers to take untrusted strings of HTML and sanitize them for safe insertion into the DOM.
+The **HTML Sanitizer API** allows developers to take strings of HTML and filter out unwanted elements, attributes, and other HTML entities when they are inserted into the DOM or a shadow DOM.
 
 ## Concepts and usage
 
 Web applications often need to work with untrusted HTML on the client side, for example, as part of a client-side templating solution, when rendering user generated content, or if including data in a frame from another site.
 
 Injecting untrusted HTML can make a site vulnerable to various [types of attacks](/en-US/docs/Web/Security/Types_of_attacks).
-In particular [Cross-Side scripting (XSS) attacks](/en-US/docs/Web/Security/Attacks/XSS) work by injecting untrusted HTML into the DOM that then executes JavaScript in the context of the current origin — giving the attacker access to the server as though it were client code.
-These attacks can be mitigated by sanitizing the HTML before it is injected into the DOM.
+In particular [cross-site scripting (XSS) attacks](/en-US/docs/Web/Security/Attacks/XSS) work by injecting untrusted HTML into the DOM that then executes JavaScript in the context of the current origin — giving the attacker access to the server as though it were client code.
+These attacks can be mitigated by sanitizing unsafe HTML entities before it is injected into the DOM.
 
-The HTML Sanitizer API provides methods for sanitizing untrusted HTML input strings as they are injecting untrusted HTML in a context aware and XSS-safe manner, and for injecting HTML in an way that is potentially XSS-unsafe, but allows the developer to control what elements and attributes are allowed.
+The HTML Sanitizer API provides a number of methods for sanitizing HTML input strings as they are injected into the DOM.
+These come in variants that ensure that only XSS-safe elements are injected, and others that unsafe variants that give developers full control over what HTML entities are allowed.
 
 ### Sanitization methods
 
