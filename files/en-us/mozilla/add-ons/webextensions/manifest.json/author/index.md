@@ -34,7 +34,7 @@ Firefox expects this key to represent the name of the person or entity that deve
 
 Using the `developer` key to identify the author in Firefox is recommended.
 
-As of May 2025, Chrome and the Chrome Store don't use this key.
+As of May 2025, Chrome and the Chrome Web Store don't use this key.
 
 ## Example
 
