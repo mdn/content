@@ -78,7 +78,7 @@
   },
 
   "non_standard_header_copy": {
-    "de": "Diese Funktion ist nicht standardisiert. Wir raten davon ab, nicht-standardisierte Funktionen auf produktiven Webseiten zu verwenden, da sie nur begrenzt von Browsern unterstützt werden und sich ändern oder entfernt werden können. In bestimmten Fällen, in denen es keine standardisierte Alternative gibt, kann sie jedoch eine geeignete Option sein.",
+    "de": "Diese Funktion ist nicht standardisiert. Wir raten davon ab, nicht-standardisierte Funktionen auf produktiven Webseiten zu verwenden, da sie nur von bestimmten Browsern unterstützt werden und sich in Zukunft ändern oder entfernt werden können. Unter Umständen kann sie jedoch eine geeignete Option sein, wenn es keine standardisierte Alternative gibt.",
     "en-US": "This feature is not standardized. We do not recommend using non-standard features in production, as they have limited browser support, and may change or be removed. However, they can be a suitable alternative in specific cases where no standard option exists.",
     "es": "Esta función no está estandarizada. No recomendamos usar funciones no estándar en producción, ya que tienen un soporte limitado en los navegadores y pueden cambiar o eliminarse. Sin embargo, pueden ser una alternativa adecuada en casos específicos donde no exista una opción estándar.",
     "fr": "Cette fonctionnalité n'est pas standardisée. Nous déconseillons d'utiliser des fonctionnalités non standard en production, car leur prise en charge par les navigateurs est limitée, et elles peuvent être modifiées ou supprimées. Toutefois, elles peuvent constituer une alternative appropriée dans certains cas où aucune option standard n'existe.",
