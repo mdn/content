@@ -15,8 +15,7 @@ A web application manifest contains a single JSON object where the top-level key
 
 ## Members
 
-This section lists the members that may appear in the manifest.
-
+This section lists [reference pages for manifest members](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference) that are documented on MDN.
 All members are optional in the specification, but some applications require some members to be present. For example, [PWAs must provide certain manifest members](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#required_manifest_members).
 
 {{ListSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
