@@ -6,7 +6,8 @@ page-type: guide
 
 {{DefaultAPISidebar("Translator and Language Detector APIs")}}
 
-The [Translator and Language Detector APIs](/en-US/docs/Web/API/Translator_and_Language_Detector_APIs) provide asynchronous ({{jsxref("Promise")}}-based) mechanisms for a website to detect languages and translate text via the browser's own internal AI model. This is useful and efficient because the browser handles the service, rather than the developer having to rely on the user downloading AI models, or host or pay for a cloud-based translation service. This article explains how to use the fundamentals of the these APIs.
+The [Translator and Language Detector APIs](/en-US/docs/Web/API/Translator_and_Language_Detector_APIs) provide asynchronous ({{jsxref("Promise")}}-based) mechanisms for a website to detect languages and translate text via the browser's own internal AI model. This is useful and efficient because the browser handles the service, rather than the developer having to rely on the user downloading AI models, or host or pay for a cloud-based translation service.
+This article explains how to use these APIs.
 
 ## Detecting a language
 
