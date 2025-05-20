@@ -32,7 +32,8 @@ When you've created a `LanguageDetector` instance, you can use it to detect a la
 const results = await detector.detect(myTextString);
 ```
 
-This method returns an array of objects representing the detected potential language matches. each one contains:
+This method returns an array of objects representing the detected potential language matches.
+Each one contains:
 
 - A string containing the [BCP 47 language tag](https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags) representing the detected language.
 - A number between 0 and 1 representing a confidence score for that match.
