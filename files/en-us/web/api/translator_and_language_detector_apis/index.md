@@ -16,7 +16,7 @@ The **Translator and Language Detector APIs** provide functionality to detect th
 
 Translating a body of text is a common task on today's web. Typical use cases include:
 
-- An on-the-fly translation of an article that isn't available in your language.
+- On-the-fly translation of an article that isn't available in your language.
 - Translating a user's support requests into a language the support agent understands.
 - Facilitating chats between users that don't speak each other's languages.
 
