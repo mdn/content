@@ -168,7 +168,7 @@ For example:
 // Return total available quota
 console.log(translator.inputQuota);
 
-// Return quota usage for translating this particulat string
+// Return quota usage for translating this particular string
 const usage = await translator.measureInputUsage(myTextString);
 console.log(usage);
 ```
