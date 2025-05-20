@@ -9,7 +9,13 @@ browser-compat: api.CreateMonitor
 
 {{APIRef("Summarizer API")}}{{SeeCompatTable}}
 
-The **`CreateMonitor`** interface of the Writing Assistance APIs ({{domxref("Summarizer API", "Summarizer API", "", "nocode")}} provides information on the progress of an AI model download or some fine-tuning data for the model.
+The **`CreateMonitor`** interface provides information on the progress of an AI model download or some fine-tuning data for the model.
+
+It can be used via:
+
+- {{domxref("Summarizer.create_static", "Summarizer.create()")}}
+- {{domxref("LanguageDetector.create_static", "LanguageDetector.create()")}}
+- {{domxref("Translator.create_static", "Translator.create()")}}
 
 {{InheritanceDiagram}}
 
@@ -21,6 +27,10 @@ _Inherits events from its parent, {{DOMxRef("EventTarget")}}._
   - : Fired when progress is made on the AI model download.
 
 ## Examples
+
+### Basic `CreateMonitor` usage
+
+A `CreateMonitor` instance is used via the `monitor` property of an AI API's `create()` method ({{domxref("Summarizer.create_static", "Summarizer.create()")}} is shown below). The `monitor` property takes a callback function as a value, the argument of which is the `CreateMonitor` instance. You can then monitor download progress via the instance's {{domxref("CreateMonitor/downloadprogress_event", "downloadprogress")}} event.
 
 ```js
 const summarizer = await Summarizer.create({
