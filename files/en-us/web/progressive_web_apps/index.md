@@ -29,7 +29,7 @@ They're intended to help you understand what kinds of things are possible with P
 
 ## How to
 
-These [PWA how-tos](/en-US/docs/Web/Progressive_web_apps/How_to) give concrete detailed instructions for how to implement specific PWA features.
+The [PWA how-tos](/en-US/docs/Web/Progressive_web_apps/How_to) provide detailed instructions on implementing specific PWA features.
 
 - [Create a standalone app](/en-US/docs/Web/Progressive_web_apps/How_to/Create_a_standalone_app)
   - : Describes how to specify that a PWA should be launched in its own dedicated window when it is launched, rather than a browser tab.
@@ -50,7 +50,7 @@ These [PWA how-tos](/en-US/docs/Web/Progressive_web_apps/How_to) give concrete d
 
 ## Tutorials
 
-Build a PWA from scratch using these [PWA Tutorials](/en-US/docs/Web/Progressive_web_apps/Tutorials) which walk through the steps from start to finish, explaining how the different features of the app are implemented along the way.
+Build a PWA from scratch using these [PWA Tutorials](/en-US/docs/Web/Progressive_web_apps/Tutorials), which walk through the steps from start to finish, explaining how the different features of the app are implemented along the way.
 
 - [Creating your first PWA](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker)
   - : This novice-level tutorial walks through the creation of a PWA to track menstrual cycles. Lessons include a walk through of the HTML, CSS, and JavaScript required to create a fully functional web app, setting up a testing environment, and complete explanations guiding the learner through upgrading the web app into a PWA; including developing and inspecting a manifest, adding a service worker, and using the service worker to delete stale caches.
@@ -59,7 +59,7 @@ Build a PWA from scratch using these [PWA Tutorials](/en-US/docs/Web/Progressive
 
 ## Reference
 
-[PWA reference](/en-US/docs/Web/Progressive_web_apps/Reference) page lists all features documented on MDN that you use to build a PWA.
+Our [PWA reference](/en-US/docs/Web/Progressive_web_apps/Reference) lists all features documented on MDN that you'll need to build a PWA.
 
 ### Web app manifest
 
