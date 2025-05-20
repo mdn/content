@@ -11,7 +11,7 @@ This article explains how to use these APIs.
 
 ## Detecting a language
 
-All of the language detection functionality is accessed through a single interface — {{domxref("LanguageDetector")}}.
+All of the language detection functionality is accessed through the {{domxref("LanguageDetector")}} interface.
 
 The first step in getting the AI model to detect a language is to create a `LanguageDetector` object instance. This is done using the {{domxref("LanguageDetector.create_static", "LanguageDetector.create()")}} static method, which takes an options object as an argument:
 
