@@ -36,12 +36,12 @@ The HTML [`hidden`](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden) att
 
 ### Using beforematch
 
-In this example we have:
+In this example we have two {{HTMLElement("div")}} elements.
+The first is not hidden, while the second has `hidden="until-found"` and `id="until-found-box"` attributes.
+The _hidden until found_ element has a dotted red border and a gray background.
 
-- Two {{HTMLElement("div")}} elements. The first is not hidden, while the second has `hidden="until-found"` and `id="until-found-box"` attributes.
-- A link whose target is the `"until-found-box"` fragment.
-
-We also have some JavaScript that listens for the `beforematch` event firing on the hidden until found element. The event handler changes the text content of the box.
+We also have a link whose target is the `"until-found-box"` fragment and JavaScript that listens for the `beforematch` event firing on the hidden until found element.
+The event handler changes the text content of the box as illustration of an action that can be taken when _hidden until found_ state is about to be removed.
 
 #### HTML
 
@@ -67,11 +67,11 @@ div {
   padding: 1rem;
   font-size: 2rem;
 }
-```
 
-```css hidden
-#until-found-box {
-  scroll-margin-top: 200px;
+div#until-found-box {
+  color: red;
+  border: 5px dotted red;
+  background-color: lightgray;
 }
 ```
 
