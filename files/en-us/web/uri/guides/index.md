@@ -7,6 +7,10 @@ sidebar: urlsidebar
 ---
 
 This page lists guides for URIs.
-They're intended to help you understand how URIs work, types of URIs, and how to use them within your applications.
+They're intended to help you understand how URIs work and how to use them within your applications.
 
 {{SubPagesWithSummaries}}
+
+## See also
+
+- [URI reference](/en-US/docs/Web/URI/Reference)

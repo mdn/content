@@ -35,7 +35,7 @@ None.
 let uiLanguage = browser.i18n.getUILanguage();
 console.log(uiLanguage);
 
-//e.g. "fr"
+// e.g. "fr"
 ```
 
 {{WebExtExamples}}

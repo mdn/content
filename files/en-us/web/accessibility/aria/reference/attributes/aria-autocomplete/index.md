@@ -1,5 +1,6 @@
 ---
-title: aria-autocomplete
+title: "ARIA: aria-autocomplete attribute"
+short-title: aria-autocomplete
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete
 page-type: aria-attribute
 spec-urls:

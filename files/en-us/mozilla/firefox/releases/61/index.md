@@ -144,7 +144,7 @@ _No changes._
 
 ### SVG
 
-- The deprecated (and never properly implemented) {{domxref("SVGViewElement")}}`.viewTarget` property has been removed ([Firefox bug 1455763](https://bugzil.la/1455763)).
+- The deprecated (and never properly implemented) `SVGViewElement.viewTarget` property has been removed ([Firefox bug 1455763](https://bugzil.la/1455763)).
 - The following deprecated properties have been removed from {{domxref("SVGSVGElement")}} ([Firefox bug 1133172](https://bugzil.la/1133172)):
 
   - `pixelUnitToMillimeterX`

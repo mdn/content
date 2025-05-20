@@ -10,6 +10,8 @@ page-type: glossary-definition
 
 Camel casing is often used as a variable naming convention. The following variables are in camel case: {{domxref("console")}}, {{jsxref("encodeURIComponent")}}, {{jsxref("ArrayBuffer")}}, and {{domxref("HTMLElement")}}.
 
+<!-- cSpell:ignore XMLHTTP -->
+
 Note that if the phrase contains acronyms (such as `URI` and `HTML`), camel casing practices vary. Some prefer to keep all of them capitalized, such as `encodeURIComponent` above. This may sometimes lead to ambiguity with multiple consecutive acronyms, such as `XMLHTTPRequest`. Others prefer to only capitalize the first letter, as `XmlHttpRequest`. The actual global variable, {{domxref("XMLHttpRequest")}}, uses a mix of both.
 
 When the first letter of the entire phrase is upper case, it is called _upper camel case_ or _Pascal case_. Otherwise, it is called _lower camel case_.

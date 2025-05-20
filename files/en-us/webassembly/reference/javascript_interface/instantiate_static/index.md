@@ -44,7 +44,7 @@ WebAssembly.instantiate(module, importObject, compileOptions)
 - `bufferSource`
   - : A [typed array](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) or
     {{jsxref("ArrayBuffer")}} containing the binary code of the Wasm module you want to
-    compile, or a [`WebAssembly.Module`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Module).
+    compile.
 - `module`
   - : The [`WebAssembly.Module`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Module) object to be instantiated.
 - `importObject` {{optional_inline}}

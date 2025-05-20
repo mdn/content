@@ -2,9 +2,8 @@
 title: Trigger installation from your PWA
 slug: Web/Progressive_web_apps/How_to/Trigger_install_prompt
 page-type: how-to
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 > [!WARNING]
 > The technique described here depends on the {{domxref("Window.beforeinstallprompt_event", "beforeinstallprompt")}} event, which is non-standard and currently only implemented in Chromium-based browsers.

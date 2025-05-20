@@ -133,7 +133,7 @@ For example, if `doSomething()` returns `false` in the code below, the checkbox 
 checkbox.onclick = () => doSomething();
 ```
 
-This is unlikely to be desired behaviour!
+This is unlikely to be desired behavior!
 To be safe, when the return value of a function is not intended to be used, it can be passed to the `void` operator to ensure that (for example) changing APIs do not cause arrow functions' behaviors to change.
 
 ```js example-good

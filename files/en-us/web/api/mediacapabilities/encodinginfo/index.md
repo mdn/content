@@ -89,7 +89,7 @@ All supported audio codecs are reported to be power efficient.
 ## Examples
 
 ```js
-//Create media configuration to be tested
+// Create media configuration to be tested
 const mediaConfig = {
   type: "record", // or 'transmission'
   video: {

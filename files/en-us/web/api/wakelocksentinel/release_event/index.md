@@ -17,10 +17,10 @@ This can happen if the document becomes inactive or looses visibility, if the de
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("release", (event) => {});
+```js-nolint
+addEventListener("release", (event) => { })
 
-onrelease = (event) => {};
+onrelease = (event) => { }
 ```
 
 ## Event type

@@ -210,7 +210,7 @@ This is what the DOM Level 3 specification says should happen. There are some ca
 
 #### Auto-repeat on some GTK environments such as Ubuntu 9.4
 
-In some GTK-based environments, auto-repeat dispatches a native key-up event automatically during auto-repeat, and there's no way for Gecko to know the difference between a repeated series of keypresses and an auto-repeat. On those platforms, then, an auto-repeat key will generate the following sequence of events:
+In some GTK-based environments, auto-repeat dispatches a native key-up event automatically during auto-repeat, and there's no way for Gecko to know the difference between a repeated series of key presses and an auto-repeat. On those platforms, then, an auto-repeat key will generate the following sequence of events:
 
 1. `keydown`
 2. `keypress`

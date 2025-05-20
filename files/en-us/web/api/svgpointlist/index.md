@@ -50,8 +50,8 @@ The following example shows an SVG which contains a {{SVGElement("polyline")}} w
 ```
 
 ```js
-let example = document.getElementById("example");
-console.log(example.points); //an SVGPointList
+const example = document.getElementById("example");
+console.log(example.points); // An SVGPointList
 ```
 
 ## Specifications

@@ -18,4 +18,4 @@ Developing and finishing the game is not enough. You have to let the world know 
 
 ## Game monetization
 
-When you spend your time building, publishing and promoting your game, you will at some point consider earning money out of it. [Game monetization](/en-US/docs/Games/Publishing_games/Game_monetization) is essential to anyone who considers their game development work a serious endeavour on the path to becoming an independent game developer able to make a living, so read on and see what your options are. The technology is mature enough; it's just a matter of choosing the right approach.
+When you spend your time building, publishing and promoting your game, you will at some point consider earning money out of it. [Game monetization](/en-US/docs/Games/Publishing_games/Game_monetization) is essential to anyone who considers their game development work a serious endeavor on the path to becoming an independent game developer able to make a living, so read on and see what your options are. The technology is mature enough; it's just a matter of choosing the right approach.

@@ -27,7 +27,7 @@ In cases where the `GPUTexture` does not have a depth or layers, the value is 1.
 ## Examples
 
 ```js
-// ...
+// …
 
 const test = device.createTexture({
   size: [128],

@@ -13,18 +13,18 @@ browser-compat: javascript.operators.property_accessors
 
 ```js interactive-example
 const person1 = {};
-person1["firstname"] = "Mario";
-person1["lastname"] = "Rossi";
+person1["firstName"] = "Mario";
+person1["lastName"] = "Rossi";
 
-console.log(person1.firstname);
+console.log(person1.firstName);
 // Expected output: "Mario"
 
 const person2 = {
-  firstname: "John",
-  lastname: "Doe",
+  firstName: "John",
+  lastName: "Doe",
 };
 
-console.log(person2["lastname"]);
+console.log(person2["lastName"]);
 // Expected output: "Doe"
 ```
 

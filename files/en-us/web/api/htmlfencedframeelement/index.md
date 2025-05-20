@@ -34,7 +34,7 @@ The following example gets a `FencedFrameConfig` from a Protected Audience API's
 
 ```js
 const frameConfig = await navigator.runAdAuction({
-  // ...auction configuration
+  // … auction configuration
   resolveToConfig: true,
 });
 

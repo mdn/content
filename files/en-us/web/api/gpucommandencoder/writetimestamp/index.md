@@ -45,18 +45,18 @@ The following criteria must be met when calling **`writeTimestamp()`**, otherwis
 ## Examples
 
 ```js
-// ...
+// …
 
 const querySet = device.createQuerySet({
   type: "timestamp",
   count: 32,
 });
 
-// ...
+// …
 
 commandEncoder.writeTimestamp(querySet, 0);
 
-// ...
+// …
 ```
 
 ## Specifications

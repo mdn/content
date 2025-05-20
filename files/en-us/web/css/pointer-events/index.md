@@ -34,7 +34,7 @@ pointer-events: fill; /* SVG-only */
       <a href="#">example link</a>
     </p>
     <p>
-      <svg viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
         <a xlink:href="#">
           <circle
             cx="50"

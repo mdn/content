@@ -76,7 +76,7 @@ try {
   });
   const body = await res.blob();
   // Do something with downloaded content
-  // ...
+  // …
 } catch (e) {
   if (e.name === "AbortError") {
     // Cancelled by the user

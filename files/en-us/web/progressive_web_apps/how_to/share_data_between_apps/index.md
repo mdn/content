@@ -2,9 +2,8 @@
 title: Share data between apps
 slug: Web/Progressive_web_apps/How_to/Share_data_between_apps
 page-type: how-to
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 Application sharing is the ability of one application to pass information or data to another application on the same device. This feature is useful for users as it allows them to share information between two applications without the need for these applications to have prior knowledge of each other.
 

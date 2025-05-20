@@ -61,7 +61,7 @@ async function setUpBidirectional() {
   // stream.writable is a WritableStream
   const writable = stream.writable;
 
-  // ...
+  // …
 }
 ```
 

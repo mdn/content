@@ -186,7 +186,7 @@ For timestamp queries:
 In our [basic render demo](https://mdn.github.io/dom-examples/webgpu-render-demo/), a number of commands are recorded via a {{domxref("GPUCommandEncoder")}}. These commands originate from the {{domxref("GPURenderPassEncoder")}} created via `beginRenderPass()` :
 
 ```js
-// ...
+// …
 
 // Create GPUCommandEncoder
 const commandEncoder = device.createCommandEncoder();
@@ -218,7 +218,7 @@ passEncoder.end();
 
 device.queue.submit([commandEncoder.finish()]);
 
-// ...
+// …
 ```
 
 ## Specifications

@@ -36,7 +36,7 @@ To create an array with non-zero length, but without any items, either of the fo
 // This...
 const arr1 = new Array(arrayLength);
 
-// ...results in the same array as this
+// … results in the same array as this
 const arr2 = Array(arrayLength);
 
 // This has exactly the same effect

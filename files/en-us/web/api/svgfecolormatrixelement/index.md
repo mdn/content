@@ -11,47 +11,6 @@ The **`SVGFEColorMatrixElement`** interface corresponds to the {{SVGElement("feC
 
 {{InheritanceDiagram}}
 
-## Constants
-
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th>Name</th>
-      <th>Value</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td><code>SVG_FECOLORMATRIX_TYPE_UNKNOWN</code></td>
-      <td>0</td>
-      <td>
-        The type is not one of predefined types. It is invalid to attempt to
-        define a new value of this type or to attempt to switch an existing
-        value to this type.
-      </td>
-    </tr>
-    <tr>
-      <td><code>SVG_FECOLORMATRIX_TYPE_MATRIX</code></td>
-      <td>1</td>
-      <td>Corresponds to the <code>matrix</code> value.</td>
-    </tr>
-    <tr>
-      <td><code>SVG_FECOLORMATRIX_TYPE_SATURATE</code></td>
-      <td>2</td>
-      <td>Corresponds to the <code>saturate</code> value.</td>
-    </tr>
-    <tr>
-      <td><code>SVG_FECOLORMATRIX_TYPE_HUEROTATE</code></td>
-      <td>3</td>
-      <td>Corresponds to <code>hueRotate</code> value.</td>
-    </tr>
-    <tr>
-      <td><code>SVG_FECOLORMATRIX_TYPE_LUMINANCETOALPHA</code></td>
-      <td>4</td>
-      <td>Corresponds to <code>luminanceToAlpha</code> value.</td>
-    </tr>
-  </tbody>
-</table>
-
 ## Instance properties
 
 _This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
@@ -76,6 +35,19 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 ## Instance methods
 
 _This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}_.
+
+## Static properties
+
+- `SVG_FECOLORMATRIX_TYPE_UNKNOWN` (0)
+  - : The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.
+- `SVG_FECOLORMATRIX_TYPE_MATRIX` (1)
+  - : Corresponds to the value `matrix`.
+- `SVG_FECOLORMATRIX_TYPE_SATURATE` (2)
+  - : Corresponds to the value `saturate`.
+- `SVG_FECOLORMATRIX_TYPE_HUEROTATE` (3)
+  - : Corresponds to the value `hueRotate`.
+- `SVG_FECOLORMATRIX_TYPE_LUMINANCETOALPHA` (4)
+  - : Corresponds to the value `luminanceToAlpha`.
 
 ## Specifications
 

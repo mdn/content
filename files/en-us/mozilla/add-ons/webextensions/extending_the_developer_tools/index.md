@@ -64,8 +64,8 @@ browser.devtools.panels
     "/devtools/panel/panel.html", // content
   )
   .then((newPanel) => {
-    newPanel.onShown.addListener(initialisePanel);
-    newPanel.onHidden.addListener(unInitialisePanel);
+    newPanel.onShown.addListener(initializePanel);
+    newPanel.onHidden.addListener(unInitializePanel);
   });
 ```
 

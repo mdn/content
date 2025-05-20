@@ -3,12 +3,10 @@ title: "HTMLTextAreaElement: selectionchange event"
 short-title: selectionchange
 slug: Web/API/HTMLTextAreaElement/selectionchange_event
 page-type: web-api-event
-status:
-  - experimental
 browser-compat: api.HTMLTextAreaElement.selectionchange_event
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef}}
 
 The **`selectionchange`** event of the [Selection API](/en-US/docs/Web/API/Selection) is fired when the text selection within an {{HTMLElement("textarea")}} element is changed.
 This includes both changes in the selected range of characters, or if the caret moves.
@@ -23,10 +21,10 @@ It is also possible to add a listener on the global `onselectionchange` event ha
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("selectionchange", (event) => {});
+```js-nolint
+addEventListener("selectionchange", (event) => { })
 
-onselectionchange = (event) => {};
+onselectionchange = (event) => { }
 ```
 
 ## Event type

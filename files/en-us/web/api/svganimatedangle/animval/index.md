@@ -45,4 +45,4 @@ console.log(animAngle.unitType); // Output: 2 (constant for SVG_ANGLETYPE_DEG)
 ## See also
 
 - {{domxref("SVGAnimatedAngle.baseVal")}}
-- {{domxref("SVGAngle")}} and [angle `value` constants](/en-US/docs/Web/API/SVGAngle#constants)
+- {{domxref("SVGAngle")}} and [angle `value` constants](/en-US/docs/Web/API/SVGAngle#static_properties)

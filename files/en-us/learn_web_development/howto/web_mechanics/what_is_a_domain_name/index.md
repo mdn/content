@@ -2,9 +2,8 @@
 title: What is a Domain Name?
 slug: Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name
 page-type: learn-faq
+sidebar: learn-how-to
 ---
-
-{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 <table>
   <tbody>
@@ -60,7 +59,7 @@ Each of those parts provides specific information about the whole domain name.
 
     TLDs can contain special as well as latin characters. A TLD's maximum length is 63 characters, although most are around 2–3.
 
-    The full list of TLDs is [maintained by ICANN](https://www.icann.org/resources/pages/tlds-2012-02-25-en).
+    The full list of TLDs is [maintained by ICANN](https://www.icann.org/en/contracted-parties/registry-operators/resources/list-of-top-level-domains).
 
 - Label (or component)
 
@@ -172,4 +171,4 @@ Okay, we talked a lot about processes and architecture. Time to move on.
 - If you want to get hands-on, it's a good time to start digging into design and explore [the anatomy of a web page](/en-US/docs/Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts).
 - It's also worth noting that some aspects of building a website cost money. Please refer to [how much it costs to build a website](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost).
 - Or read more about [Domain Names](https://en.wikipedia.org/wiki/Domain_name) on Wikipedia.
-- You can also find [here](https://howdns.works/) a fun and colorful explanation of how DNS works.
+- The [How DNS works](https://howdns.works/) tutorial has a fun and colorful explanation.

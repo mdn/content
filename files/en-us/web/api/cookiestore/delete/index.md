@@ -162,7 +162,7 @@ The method then lists the cookie names again.
 
 ```js
 async function cookieTest() {
-  //Create our test cookies
+  // Create our test cookies
   await setTestCookies();
 
   // Delete cookie1 specifying just the name

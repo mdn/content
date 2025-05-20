@@ -18,10 +18,10 @@ This event is not cancellable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("rtctransform", (event) => {});
+```js-nolint
+addEventListener("rtctransform", (event) => { })
 
-onrtctransform = (event) => {};
+onrtctransform = (event) => { }
 ```
 
 ## Event type
@@ -52,7 +52,7 @@ addEventListener("rtctransform", (event) => {
     transform = createReceiverTransform(); // A TransformStream
   else return;
 
-  //Pipe frames from the readable to writeable through TransformStream
+  // Pipe frames from the readable to writeable through TransformStream
   event.transformer.readable
     .pipeThrough(transform)
     .pipeTo(event.transformer.writable);

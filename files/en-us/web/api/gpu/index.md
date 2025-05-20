@@ -44,7 +44,7 @@ async function init() {
 
   const device = await adapter.requestDevice();
 
-  //...
+  // …
 }
 ```
 

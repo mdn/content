@@ -14,7 +14,7 @@ During a view transition, `::view-transition-group` is included in the associate
 `::view-transition-group` is given the following default styling in the UA stylesheet:
 
 ```css
-html::view-transition-group(*) {
+:root::view-transition-group(*) {
   position: absolute;
   top: 0;
   left: 0;

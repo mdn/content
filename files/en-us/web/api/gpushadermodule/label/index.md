@@ -24,7 +24,7 @@ A string. If this has not been previously set as described above, it will be an 
 Setting and getting a label via `GPUShaderModule.label`:
 
 ```js
-// ...
+// …
 
 const shaderModule = device.createShaderModule({
   code: shaders,
@@ -38,7 +38,7 @@ console.log(shaderModule.label); // "my_shader"
 Setting a label via the originating {{domxref("GPUDevice.createShaderModule()")}} call, and then getting it via `GPUShaderModule.label`:
 
 ```js
-// ...
+// …
 
 const shaderModule = device.createShaderModule({
   code: shaders,

@@ -2,9 +2,8 @@
 title: How do I start to design my website?
 slug: Learn_web_development/Howto/Design_and_accessibility/Thinking_before_coding
 page-type: learn-faq
+sidebar: learn-how-to
 ---
-
-{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 This article covers the all-important first step of every project: define what you want to accomplish with it.
 

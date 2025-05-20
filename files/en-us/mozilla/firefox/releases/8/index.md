@@ -157,7 +157,9 @@ The `nsIWorkerFactory` interface has been removed as well. Workers can still be 
 - When a window is minimized, un-minimized, or switches between full screen and windowed mode, it receives a `sizemodechange` event.
 - You can now [use the `extensions.autoDisableScopes` preference](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/#preventing_automatic_install_from_specific_locations) to disable automatic installation of add-ons from specific add-on install locations.
 - The new `mozSyntheticDocument` property on {{ domxref("Document") }} objects lets you determine whether a document is synthetic (that is, something like a standalone image, video, or audio file) rather than a full, standard DOM document. This can be useful, for example, if you want to present different user interface in this situation (such as adding contextual items differently depending on this case).
-- You can now specify a filter when opening `about:config`; for example, "about:config?filter=sessionstore" will show only session storage related preferences.
+- You can now specify a filter when opening `about:config`; for example, `about:config?filter=sessionstore` will show only session storage related preferences.
+
+<!-- cSpell:ignore sessionstore -->
 
 ## See also
 

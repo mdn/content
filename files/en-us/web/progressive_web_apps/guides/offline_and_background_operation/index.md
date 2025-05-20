@@ -2,9 +2,8 @@
 title: Offline and background operation
 slug: Web/Progressive_web_apps/Guides/Offline_and_background_operation
 page-type: guide
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 Usually, websites are very dependent on both reliable network connectivity and on the user having their pages open in a browser. Without network connectivity, most websites are just unusable, and if the user does not have the site open in a browser tab, most websites are unable to do anything.
 
@@ -216,7 +215,7 @@ async function requestBackgroundFetch(movieData) {
       downloadTotal: 60 * 1024 * 1024,
     },
   );
-  //...
+  // …
 }
 ```
 
@@ -279,7 +278,7 @@ The event object passed into `backgroundfetchsuccess` and `backgroundfetchfail` 
 
 self.addEventListener("backgroundfetchsuccess", (event) => {
   // retrieve and store response data
-  // ...
+  // …
 
   event.updateUI({ title: "Finished your download!" });
 });
