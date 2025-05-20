@@ -1,5 +1,6 @@
 ---
 title: "ARIA: complementary role"
+short-title: complementary
 slug: Web/Accessibility/ARIA/Reference/Roles/complementary_role
 page-type: aria-role
 spec-urls:

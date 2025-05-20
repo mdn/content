@@ -1,5 +1,6 @@
 ---
 title: "ARIA: button role"
+short-title: button
 slug: Web/Accessibility/ARIA/Reference/Roles/button_role
 page-type: aria-role
 spec-urls:

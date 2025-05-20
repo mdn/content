@@ -1,5 +1,6 @@
 ---
-title: aria-checked
+title: "ARIA: aria-checked attribute"
+short-title: aria-checked
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-checked
 page-type: aria-attribute
 spec-urls:

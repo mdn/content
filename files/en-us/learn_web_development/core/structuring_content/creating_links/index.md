@@ -251,6 +251,8 @@ Let's look at a specific example:
 <p><a href="https://www.mozilla.org/en-US/firefox/new/">Download Firefox</a></p>
 ```
 
+<!-- markdownlint-disable descriptive-link-text -->
+
 **Bad** link text: [Click here](https://www.mozilla.org/en-US/firefox/new/) to download Firefox
 
 ```html example-bad
@@ -259,6 +261,8 @@ Let's look at a specific example:
   download Firefox
 </p>
 ```
+
+<!-- markdownlint-enable descriptive-link-text -->
 
 Other tips:
 
