@@ -26,14 +26,14 @@ If the method is used with both a trusted types and a sanitizer, the input strin
 ## Syntax
 
 ```js-nolint
-setHTMLUnsafe(html)
-setHTMLUnsafe(html, options)
+setHTMLUnsafe(input)
+setHTMLUnsafe(input, options)
 ```
 
 ### Parameters
 
-- `html`
-  - : A string or {{domxref("TrustedHTML")}} instance defining HTML to be parsed and sanitized.
+- `input`
+  - : A string or {{domxref("TrustedHTML")}} instance defining HTML to be parsed.
 - `options` {{optional_inline}}
 
   - : An options object with the following optional parameters:
@@ -53,7 +53,7 @@ None (`undefined`).
 
   - : This is thrown if:
 
-    - `html` is passed a string when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are [enforced by a CSP](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) and no default policy is defined.
+    - `input` is passed a string when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are [enforced by a CSP](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) and no default policy is defined.
     - `options.sanitizer` is passed a:
       - value that is not a {{domxref("Sanitizer")}}, {{domxref("SanitizerConfig")}}, or string.
       - non-normalized {{domxref("SanitizerConfig")}} (one that includes both "allowed" and "removed" configuration settings).

@@ -25,14 +25,14 @@ If the method is used with both a trusted types and a sanitizer, the input strin
 ## Syntax
 
 ```js-nolint
-setHTMLUnsafe(html)
-setHTMLUnsafe(html, options)
+setHTMLUnsafe(input)
+setHTMLUnsafe(input, options)
 ```
 
 ### Parameters
 
-- `html`
-  - : A string or {{domxref("TrustedHTML")}} instance defining HTML to be parsed and sanitized.
+- `input`
+  - : A string or {{domxref("TrustedHTML")}} instance defining HTML to be parsed.
 - `options` {{optional_inline}}
 
   - : An options object with the following optional parameters:
