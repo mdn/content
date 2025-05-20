@@ -10,7 +10,7 @@ browser-compat: api.Translator.translateStreaming
 
 {{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}
 
-The **`translateStreaming()`** method of the {{domxref("Translator")}} interface generates a new translation as a {{domxref("ReadableStream")}}.
+The **`translateStreaming()`** method of the {{domxref("Translator")}} interface generates a translation as a {{domxref("ReadableStream")}}.
 
 ## Syntax
 
