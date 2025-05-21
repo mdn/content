@@ -38,7 +38,7 @@ The HTML [`hidden`](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden) att
 
 In this example, we have two {{HTMLElement("div")}} elements.
 The first is visible, while the second has the `hidden="until-found"` and `id="until-found-box"` attributes.
-The element with a _hidden until found_ state has a dotted red border and a gray background.
+The element with a `until-found-box` id has a dotted red border and a gray background.
 
 We also have a link that targets the `"until-found-box"` fragment and JavaScript that listens for the `beforematch` event firing on that hidden element.
 The event handler changes the text content of the box to illustrate an action that can occur when the _hidden until found_ state is about to be removed.
