@@ -43,9 +43,15 @@ See [Using the Summarizer API](/en-US/docs/Web/API/Summarizer_API/Using) for a w
 - {{httpheader("Permissions-Policy")}}; the {{httpheader('Permissions-Policy/summarizer','summarizer')}} directive
   - : Controls access to the Summarizer API. Where a policy specifically disallows the use of the Summarizer API, any attempts to call the API's methods will fail with a `NotAllowedError` {{domxref("DOMException")}}.
 
+## Security considerations
+
+The specification requires that a user has recently interacted with the page when creating `Summarizer` objects ([transient user activation](/en-US/docs/Web/Security/User_activation) is required).
+
+In addition, the specification controls access to the API via {{httpheader('Permissions-Policy/summarizer','summarizer')}} {{httpheader("Permissions-Policy")}} directives.
+
 ## Examples
 
-For a full example, see [Using the Summarizer API](/en-US/docs/Web/API/Summarizer_API/Using)
+For a full example, see [Using the Summarizer API](/en-US/docs/Web/API/Summarizer_API/Using).
 
 ## Specifications
 
@@ -58,4 +64,4 @@ For a full example, see [Using the Summarizer API](/en-US/docs/Web/API/Summarize
 ## See also
 
 - [Summarize with built-in AI](https://developer.chrome.com/docs/ai/summarizer-api) on developer.chrome.com (2025)
-- [Web AI demos](https://chrome.dev/web-ai-demos/) on chrome.dev.
+- [Web AI demos](https://chrome.dev/web-ai-demos/) on chrome.dev

@@ -44,6 +44,8 @@ A {{jsxref("Promise")}} that fulfills with a string containing the generated sum
   - : Thrown if the output summary was filtered by the user agent, for example because it was detected to be harmful, inaccurate, or nonsensical.
 - `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if the provided `context` is not in language the `Summarizer` supports.
+- `QuotaExceededError` {{domxref("DOMException")}}
+  - : Thrown if the summarize operation exceeds the available {{domxref("Summarize.inputQuota", "inputQuota")}}.
 - `UnknownError` {{domxref("DOMException")}}
   - : Thrown if the `summarize()` call failed for any other reason, or a reason the user agent did not wish to disclose.
 
@@ -74,4 +76,4 @@ console.log(summary);
 ## See also
 
 - [Using the Summarizer API](/en-US/docs/Web/API/Summarizer_API/Using)
-- [Web AI demos](https://chrome.dev/web-ai-demos/) on chrome.dev.
+- [Web AI demos](https://chrome.dev/web-ai-demos/) on chrome.dev

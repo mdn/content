@@ -44,4 +44,4 @@ console.log(summarizer.format);
 ## See also
 
 - [Using the Summarizer API](/en-US/docs/Web/API/Summarizer_API/Using)
-- [Web AI demos](https://chrome.dev/web-ai-demos/) on chrome.dev.
+- [Web AI demos](https://chrome.dev/web-ai-demos/) on chrome.dev

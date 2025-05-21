@@ -51,12 +51,12 @@ const availability = await Summarizer.availability({
 
 This method returns an enumerated value indicating whether support is, or will be available for the specified set of options:
 
-- `downloadable` means that the implementation supports the requested options, but needs to download a model or some fine-tuning data.
-- `downloading` means that the implementation supports the requested options, but needs to finish an ongoing download.
-- `available` means that the implementation supports the requested options without requiring any new downloads.
-- `unavailable` means that the implementation doesn't support the requested options.
+- `downloadable` means that the browser supports the requested options, but it first needs to download an AI model, or some fine-tuning data for the model.
+- `downloading` means that the browser supports the requested options, but needs to finish an ongoing download before it can proceed.
+- `available` means that the browser supports the given configuration without requiring any new downloads.
+- `unavailable` means that the browser does not support the given configuration.
 
-If a download is required, it will be started automatically by the browser once a `Summarizer` instance is created using the `create()` method. You can track download progress automatically using a [monitor](#monitoring_download_progress_and_usage).
+If a download is required, it will be started automatically by the browser once a `Summarizer` instance is created using the `create()` method. You can track download progress automatically using a [monitor](#monitoring_download_progress).
 
 ## Generating a summary
 
@@ -100,7 +100,7 @@ const summary = await summarizer.summarize(myTextString, {
 controller.abort();
 ```
 
-## Monitoring download progress and usage
+## Monitoring download progress
 
 If the AI model for a particular summarizer is downloading (`availability()` returns `downloadable` and `downloading`), it is helpful to provide the user with feedback to tell them how long they need to wait before the operation completes.
 
@@ -121,18 +121,35 @@ const summarizer = await Summarizer.create({
 });
 ```
 
+## Usage quotas
+
 Some implementations have an input quota that governs how many operations a website can request in a given period. The total quota can be accessed via the {{domxref("Summarizer.inputQuota")}} property, while the quota usage for a particular summary operation can be returned using the {{domxref("Summarizer.measureInputUsage()")}} method:
 
-For example:
+For example, in the below snippet, we create a new `Summarizer` instance using {{domxref("Summarizer.create_static", "create()")}}, then return the total input quota via `inputQuota` and the input quota usage for a summarizing a particular text string via `measureInputUsage()`.
+
+We then test to see if the individual input usage for that string is great than the total available quota. If so, we throw an appropriate error; it not, we commence summarizing the string using {{domxref("Summarizer.summarize", "summarize()")}}.
 
 ```js
-// Return total available quota
-console.log(summarizer.inputQuota);
+const summarizer = await Summarizer.create({
+  sharedContext:
+    "A general summary to help a user decide if the text is worth reading",
+  type: "tl;dr",
+  length: "short",
+});
 
-// Return quota usage for summarizing this particular string
-const usage = await summarizer.measureInputUsage(myTextString);
-console.log(usage);
+const totalInputQuota = summarizer.inputQuota;
+const inputUsage = await summarizer.measureInputUsage(myTextString);
+
+if (inputUsage > totalInputQuota) {
+  throw new Error("Boo, insufficient quota to generate a summary.");
+} else {
+  console.log("Yay, quota available to generate a summary.");
+  const summary = await summarizer.summarize(myTextString);
+  // ...
+}
 ```
+
+If you try to run a summarize operation that exceeds the available quota, a `QuotaExceededError` {{domxref("DOMException")}} will be thrown.
 
 ## Complete example
 
@@ -238,11 +255,11 @@ const outputCount = document.querySelector(".output-count");
 
 Next, we use the {{domxref("EventTarget.addEventListener()")}} method to listen to two sets of events:
 
-- `click` events on the `<button>` element; when the button is clicked, the `handleSubmission()` function is called (we're not doing a real form `submit`, as they are disabled in the MDN live example embeds for security purposes).
+- `submit` events on the `<form>` element; when the submit button is clicked, the `handleSubmission()` function is called.
 - `input` events on the `<textarea>` element; when the current `<textarea>` value is changed, the `updateInputCount()` function is called.
 
 ```js live-sample___summarizer-example
-submitBtn.addEventListener("click", handleSubmission);
+form.addEventListener("submit", handleSubmission);
 textarea.addEventListener("input", updateInputCount);
 ```
 
@@ -258,14 +275,15 @@ function displayOutputCount() {
 }
 ```
 
-Now we define the `handleSubmission()` function itself. We begin by creating a new {{domxref("FormData")}} object instance containing all our `<form>` data name/value pairs. We then run some data validation tests, checking whether the `<textarea>` content (`summaryText`) is empty or too short to waste cycles on, and printing an error message inside the summary output `<p>` if so.
+Now we define the `handleSubmission()` function itself. After preventing the default form submission, we create a new {{domxref("FormData")}} object instance containing all our `<form>` data name/value pairs. We then run some data validation tests, checking whether the `<textarea>` content (`summaryText`) is empty or too short to waste cycles on, and printing an error message inside the summary output `<p>` if so.
 
 Provided the text passed the tests, we create a `Summarizer` object using the `create()` method, passing it a `sharedContext` string and the `type` (`summaryType`) and `length` (`summaryLength`) values selected in the form. We then set the output summary `<p>` and `<output>` to "pending" messages and disable the `<submit>` button while we run the `summarize()` operation.
 
 After the `summary` value is successfully returned, we set it as the output summary `<p>` element's `textContent`, call `displayOutputCount()` to display the output character count in the second `<output>` element, and reenable the submit `<button>`.
 
 ```js live-sample___summarizer-example
-async function handleSubmission() {
+async function handleSubmission(e) {
+  e.preventDefault();
   const formData = new FormData(form);
 
   if (formData.get("summaryText") === "") {
@@ -311,10 +329,10 @@ updateInputCount();
 
 The rendered example looks like this:
 
-{{EmbedLiveSample("summarizer-example", "100%", "400px")}}
+{{EmbedLiveSample("summarizer-example", , "750px", , , , , "allow-forms")}}
 
 Try entering a body of text into the "Input" `<textarea>` then pressing the submit button to generate an AI-generated summary. The text from your favorite Wikipedia page would be ideal. Try generating multiple summaries with different option combinations, to see how they affect the output.
 
 ## See also
 
-- [Web AI demos](https://chrome.dev/web-ai-demos/) on chrome.dev.
+- [Web AI demos](https://chrome.dev/web-ai-demos/) on chrome.dev

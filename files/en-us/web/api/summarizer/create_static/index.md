@@ -10,6 +10,9 @@ browser-compat: api.Summarizer.create_static
 
 The **`create()`** static method of the {{domxref("Summarizer")}} interface creates a new `Summarizer` instance from which to generate summaries.
 
+> [!NOTE]
+> The `create()` method requires [transient activation](/en-US/docs/Glossary/Transient_activation), that is, it must be invoked in response to a user action such as a mouse click or button press.
+
 ## Syntax
 
 ```js-nolint
@@ -28,9 +31,9 @@ Summarizer.create(options)
     - `expectedContextLanguages`
       - : An array of strings specifying the expected languages of any provided context strings (either the [`sharedContext`](#sharedContext) passed to the `Summarizer`, or a `context` specified during a {{domxref("Summarizer.summarize", "summarize()")}} or {{domxref("Summarizer.summarizeStreaming", "summarizeStreaming()")}} call), which should be valid BCP 47 language tags. Defaults to `["en"]`.
     - `format`
-      - : An enumerated value specifying the text {{domxref("Summarizer.format", "format")}} you want summaries returned in. defaults to `markdown`.
+      - : An enumerated value specifying the text {{domxref("Summarizer.format", "format")}} you want summaries returned in. Defaults to `markdown`.
     - `length`
-      - : An enumerated value specifying the relative {{domxref("Summarizer.length", "length")}} for the generated summaries. defaults to `short`.
+      - : An enumerated value specifying the relative {{domxref("Summarizer.length", "length")}} for the generated summaries. Defaults to `short`.
     - `monitor`
       - : A callback function with a {{domxref("CreateMonitor")}} argument that enables monitoring download progress of the AI model.
     - `outputLanguage`
@@ -40,7 +43,7 @@ Summarizer.create(options)
     - `signal`
       - : An {{domxref("AbortSignal")}} object instance, which allows the `create()` operation to be aborted via the associated {{domxref("AbortController")}}.
     - `type`
-      - : An enumerated value specifying the {{domxref("Summarizer.type", "type")}} of summary you want this `Summarizer` to generate. defaults to `key-points`.
+      - : An enumerated value specifying the {{domxref("Summarizer.type", "type")}} of summary you want this `Summarizer` to generate. Defaults to `key-points`.
 
 ### Return value
 
@@ -82,4 +85,4 @@ const summarizer = await Summarizer.create({
 ## See also
 
 - [Using the Summarizer API](/en-US/docs/Web/API/Summarizer_API/Using)
-- [Web AI demos](https://chrome.dev/web-ai-demos/) on chrome.dev.
+- [Web AI demos](https://chrome.dev/web-ai-demos/) on chrome.dev

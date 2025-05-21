@@ -10,7 +10,7 @@ browser-compat: api.Summarizer.destroy
 
 {{APIRef("Summarizer API")}}{{SeeCompatTable}}
 
-The **`destroy()`** method of the {{domxref("Summarizer")}} interface destroys the `Summarizer` instance it is called on.
+The **`destroy()`** method of the {{domxref("Summarizer")}} interface destroys the `Summarizer` instance it is called on. It makes sense to destroy `Summarizer` objects if they are no longer going to be used, as they tie up significant resources in their handling.
 
 ## Syntax
 
@@ -54,4 +54,4 @@ summarizer.destroy();
 ## See also
 
 - [Using the Summarizer API](/en-US/docs/Web/API/Summarizer_API/Using)
-- [Web AI demos](https://chrome.dev/web-ai-demos/) on chrome.dev.
+- [Web AI demos](https://chrome.dev/web-ai-demos/) on chrome.dev
