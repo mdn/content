@@ -1754,7 +1754,7 @@ Notifications have the [`requireInteraction`](/en-US/docs/Web/API/Notification/r
 
 ### View Transition API
 
-The [View Transition API](/en-US/docs/Web/API/View_Transition_API) has been enabled for [SPAs (Single-page Applications)](/en-US/docs/Glossary/SPA) in the Nightly release. This provides a mechanism for easily creating animated transitions between different website views. ([Firefox bug 1950759](https://bugzil.la/1950759)).
+The [View Transition API](/en-US/docs/Web/API/View_Transition_API) provides a mechanism for easily creating animated transitions between different website views. This is especially useful for [SPAs (single-page applications)](/en-US/docs/Glossary/SPA). ([Firefox bug 1950759](https://bugzil.la/1950759)).
 
 <table>
   <thead>
