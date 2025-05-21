@@ -507,7 +507,7 @@ async function handleTranslation(e) {
 
 The rendered example looks like this:
 
-{{EmbedLiveSample("translator-example", , "750px", , , , , "allow-forms")}}
+{{EmbedLiveSample("translator-example", , "750px", , , , "translator; language-detector", "allow-forms")}}
 
 Try typing a body of text into the `<textarea>`, and note how the detected language and confidence are only reported when the number of characters becomes greater than 20. Choose a translation language different to your input text, then press the submit button to generate an AI-generated translation.
 
