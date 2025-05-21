@@ -13,8 +13,9 @@ This article provides information about the changes in Firefox 139 that affect d
 
 ### HTML
 
-- The [`hidden=until-found` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden#the_hidden_until_found_state) and the [`beforematch` event](/en-US/docs/Web/API/Element/beforematch_event) are now enabled by default.
-  A _hidden until found_ state allows you to hide the contents of an element (`content-visibility: hidden`) until found by search ("find in page") or by fragment navigation, and the `beforematch` event fires before the `hidden` attribute is removed ([Firefox bug 1761043](https://bugzil.la/1761043) and [Firefox bug 1955379](https://bugzil.la/1955379)).
+- The [`hidden=until-found`](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden#the_hidden_until_found_state) HTML attribute and the [`beforematch` event](/en-US/docs/Web/API/Element/beforematch_event) are now supported.
+  The _hidden until found_ state allows you to hide the contents of an element until it is found by user search (for example, using "Find in page") or by fragment navigation.
+  The `beforematch` event fires just before the `hidden` attribute is removed ([Firefox bug 1761043](https://bugzil.la/1761043) and [Firefox bug 1955379](https://bugzil.la/1955379)).
 
 #### Removals
 
