@@ -42,7 +42,7 @@ Events have three functions:
     - `removeInfo`
       - : `object`. Information on why the tab group is closing.
         - `isWindowClosing`
-          - : `boolean`. `true` if the tab group is closing because its window is closing.
+          - : `boolean`. `true` if the tab group is removed because its window is closing.
 
 ## Examples
 
