@@ -15,7 +15,7 @@ The **`prefers-reduced-motion`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-
 Such animations can trigger discomfort for those with [vestibular motion disorders](https://www.a11yproject.com/posts/understanding-vestibular-disorders/). Animations such as scaling or panning large objects can be vestibular motion triggers.
 
 ```css
-@media (prefers-reduced-motion) {
+@media (prefers-reduced-motion: reduce) {
   /* styles to apply if a user's device settings are set to reduced motion */
 }
 ```
@@ -25,7 +25,7 @@ Such animations can trigger discomfort for those with [vestibular motion disorde
 - `no-preference`
   - : Indicates that a user has made no preference known on the device. This keyword value evaluates as false.
 - `reduce`
-  - : Indicates that a user has enabled the setting on their device for reduced motion. This keyword value evaluates as true.
+- : Indicates that a user has enabled the setting on their device for reduced motion. The reduce keyword value evaluates as true, therefore `@media (prefers-reduced-motion)` is equivalent to `@media (prefers-reduced-motion: reduce)`.
 
 ## User preferences
 
