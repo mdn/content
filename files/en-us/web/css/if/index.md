@@ -51,7 +51,7 @@ border: 3px solid if(
 The `if()` function's syntax is as follows:
 
 ```plain
-if([<if-condition> : <value>;]* [else : <value>;]?)
+if([[<if-condition> : <value>;] | [else : <value>;]]*)
 ```
 
 The parameters are:
@@ -70,20 +70,19 @@ The parameters are:
 
 ### Return value
 
-A value, or nothing, in which case the property retains its initial value.
+A value, or {{glossary("guaranteed_invalid_value", "guaranteed-invalid")}}, in which case the property retains its initial value.
 
 ## Description
 
 The CSS `if()` function provides conditional logic to CSS property values, and works in a similar fashion to JavaScript [`if ... else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statements.
 
-The `if()` function can be used inside the value of any property, and can contain zero or more `<if-condition> : <value>` pairs, followed by zero or one `else : <value>` pair.
+The `if()` function can be used inside the value of any property, and can contain zero or more `<if-condition> : <value>` pairs and `else : <value>` pairs.
 
 The return value is calculated as follows:
 
 1. The `<if-condition>` expressions are evaluated, in the order they appear in the function.
-2. The first `<if-condition>` that evaluates to true has its associated `<value>` returned.
-3. If none of the provided `<if-condition>` expressions evaluate to true (or no `<if-condition> : <value>` pairs are provided), the `else` `<value>` will be returned, if an `else : <value>` pair is included.
-4. If no `else : <value>` pair is included, nothing is returned.
+2. The first `<if-condition>` that evaluates to true, or `else` that appears, has its associated `<value>` returned.
+3. If none of the conditions evaluate to true, {{glossary("guaranteed_invalid_value", "guaranteed-invalid")}} is returned, in which case the property retains its initial value.
 
 For example:
 
@@ -104,7 +103,42 @@ In this case, we are setting a different {{cssxref("background-image")}} {{cssxr
 
 If a single `<if-condition>` or `<value>` is invalid, it does not invalidate the entire `if()` function; instead, the parser moves on to the next `<if-condition> : <value>` pair.
 
-An `if()` function is still valid if it contains only an `else : <value>` pair, or nothing at all:
+### Frequency and position of `else : <value>` pairs
+
+It is possible to include as many `else : <value>` pairs as you want inside an `if()` function, in whatever positions you want. However, in most cases it makes sense to use a single `else : <value>` pair at the end of your values list to provide a default value that is always returned if none of the supplied conditions evaluate to true.
+
+If you included it before the `<if-condition> : <value>` pairs, the `else` would evaluate to true, and none of the later pairs would be considered. The following example `if()` always returns `none`:
+
+```css-nolint
+div {
+  background-image: if(
+    else: none;
+    /* Never considered */
+    style(--scheme: ice): linear-gradient(to left, #caf0f8, white, #caf0f8);
+    /* Never considered */
+    style(--scheme: fire): linear-gradient(to left, #ffc971, white, #ffc971)
+  );
+}
+```
+
+One circumstance in which you might want to put an `else : <value>` in a position other than the end of the values list is when a value is not behaving as expected, and you are trying to debug it. For example:
+
+```css-nolint
+div {
+  background-image: if(
+    /* Is this one not working? */
+    style(--scheme: ice): linear-gradient(to left, #caf0f8, white, #caf0f8);
+    /* Not working indicator image */
+    else: url("debug.png");
+    /* Never considered */
+    style(--scheme: fire): linear-gradient(to left, #ffc971, white, #ffc971);
+    /* Never considered */
+    else: none
+  );
+}
+```
+
+Note that an `if()` function is still valid if it contains only an `else : <value>` pair, or nothing at all:
 
 ```css
 background-color: if(else: yellow);
@@ -125,33 +159,40 @@ An `<if-condition>` can be one of three different types. This section looks at e
 
 [Container style query](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#container_style_queries) if conditions allow you to test whether a particular property value is set on an element, and apply a value to a different property as a result. We walked through a style query example earlier on, but let's look at a single `<if-condition> : <value>` pair again:
 
-```css
-style(--scheme: ice): linear-gradient(to left, #caf0f8, white, #caf0f8);
+```css-nolint
+background-image: if (
+  style(--scheme: ice): linear-gradient(to left, #caf0f8, white, #caf0f8);
+)
 ```
 
 If the `--scheme` custom property is set to a value of `ice` on the same element, the provided `linear-gradient()` value is returned.
 
 Using style queries inside `if()` statements has an advantage over using style queries via {{cssxref("@container")}} — you can check for a set property value on an element and set a different property on the same element as a result, rather than having to check styles on a container and apply styles to the container's children.
 
-However, you can only set single property values at a time with `if()`, whereas `@container` queries can be used to set whole sets of rules. You can also only check for a single property value at a time with `if()`, and can't use `and`, `or`, or `not`. There is no way to do something like this:
+You can also use `and`, `or`, or `not` logic inside style queries. For example:
 
-```css
-style(--scheme: dark or --scheme: very-dark): black;
+```css-nolint
+background-color: if(
+  style((--scheme: dark) or (--scheme: very-dark)): black
+);
+
+background-color: if(
+  style((--scheme: dark) and (--contrast: hi)): black
+);
+
+background-color: if(
+  not style(--scheme: light): black
+);
 ```
 
-You'd have to do this instead:
-
-```css
-style(--scheme: dark): black;
-style(--scheme: very-dark): black;
-```
-
-The two approaches are complementary, and have different uses.
+`@container` does have some advantages — you can only set single property values at a time with `if()`, whereas `@container` queries can be used to conditionally apply whole sets of rules. The two approaches are complementary, and have different uses.
 
 Note that container style queries currently don't support regular CSS properties, just CSS custom properties. So for example, the following won't work:
 
-```css
-background-color: if(style(color: white): black;);
+```css-nolint
+if(
+  background-color: if(style(color: white): black;);
+)
 ```
 
 #### Media queries
@@ -160,17 +201,35 @@ background-color: if(style(color: white): black;);
 
 You can use media types. For example, the following `<if-condition> : <value>` pair returns a value of `white` on printed media.
 
-```css
-media(print): white;
+```css-nolint
+background-color: if (
+  media(print): white;
+)
 ```
 
 You can also use media features — the following returns a value of `0 auto` if the current viewport width is less than `700px`:
 
-```css
-media(width < 700px): 0 auto;
+```css-nolint
+margin: if {
+  media(width < 700px): 0 auto;
+}
 ```
 
-This is really useful when you need to vary a single property value based on a media query result, however, you can't use complex media queries inside an `if()` statement (multiple queries connected via `and`, `or`, or `not` keywords). For such cases, a regular {{cssxref("@media")}} construct is needed. The two approaches are complementary, and have different uses.
+This is really useful when you need to vary a single property value based on a media query result.
+
+You can also use `and`, `or`, or `not` logic inside media queries. For example:
+
+```css-nolint
+border-color: if(
+  media((width > 700px) and (width < 1000px)): blue;
+);
+
+border-color: if(
+  media((width < 500px) or (orientation: landscape)): blue;
+);
+```
+
+When you want to set multiple declarations or rules based on one media query, a regular {{cssxref("@media")}} construct is needed. The two approaches are complementary, and have different uses.
 
 #### Feature queries
 
@@ -178,23 +237,47 @@ This is really useful when you need to vary a single property value based on a m
 
 For example, the following returns an {{cssxref("color_value/lch()")}} color, if `lch()` colors are supported:
 
-```css
-supports(color: lch(77.7% 0 0)): lch(77.7% 0 0);
+```css-nolint
+color: if (
+  supports(color: lch(77.7% 0 0)): lch(77.7% 0 0);
+)
 ```
 
 Selector support queries also work. The following will return a value of `blue` if the browser supports the `h2 > p` selector:
 
-```css
-supports(selector(h2 > p)): blue;
+```css-nolint
+color: if(
+  supports(selector(h2 + p)): blue;
+)
+```
+
+You can also use `and`, `or`, or `not` logic inside feature queries. For example:
+
+```css-nolint
+color: if(
+  supports((selector(h2 + p)) and (color: blue)): blue;
+);
+
+color: if(
+  supports((selector(h2 + p)) or (color: not-a-color)): blue;
+);
+
+color: if(
+  supports(not selector(h2 + p)): blue;
+);
 ```
 
 Interestingly, support queries for a property without a value don't work, for example:
 
-```css
-supports(color): blue;
+```css-nolint
+color: if(
+  supports(color): blue;
+)
 ```
 
-Feature queries are really useful inside `if()` statements when you need to vary a single property value based on support for a particular property: value combination. however, you can't use complex feature queries inside an `if()` statement (multiple queries connected via `and`, `or`, or `not` keywords). For such cases, a regular {{cssxref("@supports")}} construct is needed. The two approaches are complementary, and have different uses.
+Feature queries are really useful inside `if()` statements when you need to vary a single property value based on support for a particular property: value combination.
+
+When you want to set multiple declarations or rules based on one feature query, a regular {{cssxref("@supports")}} construct is needed. The two approaches are complementary, and have different uses.
 
 ### Providing fallback values
 
