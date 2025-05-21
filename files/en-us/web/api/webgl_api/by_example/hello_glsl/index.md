@@ -64,11 +64,6 @@ button {
 </script>
 ```
 
-```js hidden
-;(() => {
-  "use strict";
-```
-
 ```js
 window.addEventListener("load", setupWebGL, false);
 let gl;
@@ -148,10 +143,6 @@ function getRenderingContext() {
   gl.clear(gl.COLOR_BUFFER_BIT);
   return gl;
 }
-```
-
-```js hidden
-})();
 ```
 
 The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/hello-glsl).
