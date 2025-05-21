@@ -123,15 +123,6 @@ _Also, inherits events from its parent, {{DOMxRef("Element")}}._
 - {{DOMxRef("HTMLElement/load_event", "load")}}
   - : Fires for elements containing a resource when the resource has successfully loaded.
 
-### Clipboard events
-
-- {{DOMxRef("HTMLElement/copy_event", "copy")}}
-  - : Fired when the user initiates a copy action through the browser's user interface.
-- {{DOMxRef("HTMLElement/cut_event", "cut")}}
-  - : Fired when the user initiates a cut action through the browser's user interface.
-- {{DOMxRef("HTMLElement/paste_event", "paste")}}
-  - : Fired when the user initiates a paste action through the browser's user interface.
-
 ### Drag & drop events
 
 - {{DOMxRef("HTMLElement/drag_event", "drag")}}

@@ -21,7 +21,7 @@ With `alpha` masks, the opacity of the masked element matches the opacity of the
 
 With alpha masks, the color of the mask is irrelevant. Only the opacity of the mask matters. With [luminance masks](#alpha_transparency_versus_luminance), the brightness of the mask colors is taken into account when determining the opacity of the masked element. The brighter and more opaque the color, the more opaque the element. The darker and more transparent the color, the less opaque the mask will be.
 
-Masks can be defined using CSS gradients, raster images (such as PNGs), and SVG {{svgelem("mask")}} elements. In this guide, we introduce the various mask image types as we discuss [opaqueness and transparency](#opaqueness_versus_transparency), [luminance](#alpha_transparency_versus_luminance), and [masking versus CSS clipping](#svg_mask_as_mask_source).
+Masks can be defined using CSS gradients, raster images (such as PNGs), and SVG {{svgelement("mask")}} elements. In this guide, we introduce the various mask image types as we discuss [opaqueness and transparency](#opaqueness_versus_transparency), [luminance](#alpha_transparency_versus_luminance), and [masking versus CSS clipping](#svg_mask_as_mask_source).
 
 Each mask layer consists of a {{cssxref("mask-image")}}, which is [positioned](/en-US/docs/Web/CSS/mask-position) relative to an origin box. The mask images can be [sized](/en-US/docs/Web/CSS/mask-size), [repeated](/en-US/docs/Web/CSS/mask-repeat), and [clipped](/en-US/docs/Web/CSS/mask-clip). In cases where multiple mask images are declared, the way the [mask layers are composited](/en-US/docs/Web/CSS/mask-composite), or combined, can be set. These are discussed in the [masking properties guide](/en-US/docs/Web/CSS/CSS_masking/CSS_mask_properties).
 

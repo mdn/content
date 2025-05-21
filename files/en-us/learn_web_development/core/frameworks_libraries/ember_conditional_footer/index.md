@@ -72,8 +72,12 @@ To get the footer working, we need to implement the following three areas of fun
    In `todo-data.js`, add the following getter underneath the existing `all()` getter to define what the incomplete todos actually are:
 
    ```ts
-   get incomplete() {
-     return this.todos.filter((todo) => !todo.isCompleted);
+   export default class TodoDataService extends Service {
+     // …
+     get incomplete() {
+       return this.todos.filter((todo) => !todo.isCompleted);
+     }
+     // …
    }
    ```
 
@@ -82,9 +86,13 @@ To get the footer working, we need to implement the following three areas of fun
 4. Next, add the following action underneath the existing `add(text)` action:
 
    ```ts
-   @action
-   clearCompleted() {
-     this.todos = this.incomplete;
+   export default class TodoDataService extends Service {
+     // …
+     @action
+     clearCompleted() {
+       this.todos = this.incomplete;
+     }
+     // …
    }
    ```
 
@@ -146,11 +154,15 @@ with the following:
 
 This will give us an error, however — in Ember, these simple if statements can currently only test for a truthy/falsy value, not a more complex expression such as a comparison. To fix this, we'll have to add a getter to `todo-data.js` to return the result of `this.incomplete.length === 1`, and then call that in our template.
 
-Add the following new getter to `todo-data.js`, just below the existing getters. Note that here we need `this.incomplete.length`, not `this.todos.incomplete.length`, because we are doing this inside the service, where the `incomplete()` getter is available directly (in the template, the contents of the service has been made available as `todos` via the `@service('todo-data') todos;` line inside the footer class, hence it being `this.todos.incomplete.length` there).
+Add the following new getter to `todo-data.js`, just below the existing getters. Note that here we need `this.incomplete.length`, not `this.todos.incomplete.length`, because we are doing this inside the service, where the `incomplete()` getter is available directly (in the template, the contents of the service has been made available as `todos` via the `@service("todo-data") todos;` line inside the footer class, hence it being `this.todos.incomplete.length` there).
 
 ```ts
-get todoCountIsOne() {
-  return this.incomplete.length === 1;
+export default class TodoDataService extends Service {
+  // …
+  get todoCountIsOne() {
+    return this.incomplete.length === 1;
+  }
+  // …
 }
 ```
 
@@ -195,9 +207,13 @@ As with the other components, we need a class to access the service.
 3. Next, go back again to our `todo-data.js` service file and add the following action just below the previous ones, which will allow us to toggle a completion state for each todo:
 
    ```ts
-   @action
-   toggleCompletion(todo) {
-     todo.isCompleted = !todo.isCompleted;
+   export default class TodoDataService extends Service {
+     // …
+     @action
+     toggleCompletion(todo) {
+       todo.isCompleted = !todo.isCompleted;
+     }
+     // …
    }
    ```
 
