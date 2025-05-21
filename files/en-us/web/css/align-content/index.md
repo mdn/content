@@ -152,10 +152,6 @@ In this example, you can switch between three different {{cssxref("display")}} p
 
 #### HTML
 
-```html-nolint hidden
-<div class="wrapper">
-```
-
 ```html
 <section>
   <div class="olive">Olive</div>
