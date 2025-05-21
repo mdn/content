@@ -24,7 +24,9 @@ A string containing a comma-separated list of source size descriptors
 followed by an optional fallback size. Each source size descriptor is
 comprised of a media condition, then at least one whitespace character, then the
 source size value to use for the image when the media condition
-evaluates to `true`. For more information about the syntax of the `sizes` attribute, see [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes).
+evaluates to `true`.
+You can use the value `auto` to replace the whole list of sizes or the first entry in the list.
+For more information about the syntax of the `sizes` attribute, see [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes).
 
 ## Examples
 

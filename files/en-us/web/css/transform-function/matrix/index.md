@@ -38,9 +38,6 @@ transform: matrix(0.1, 1, -0.3, 1, 0, 0);
 </section>
 ```
 
-> **Note:** `matrix(a, b, c, d, tx, ty)` is a shorthand for
-> `matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)`.
-
 ## Syntax
 
 The `matrix()` function is specified with six values. The constant values are implied and not passed as
@@ -49,6 +46,8 @@ parameters; the other parameters are described in the column-major order.
 ```css
 matrix(a, b, c, d, tx, ty)
 ```
+
+> **Note:** `matrix(a, b, c, d, tx, ty)` is a shorthand for `matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)`. It is also equivalent to `matrix(scaleX, skewX, scaleY, skewY, translateX, translateY)`.
 
 ### Values
 

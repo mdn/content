@@ -6,7 +6,7 @@ page-type: listing-page
 sidebar: svgref
 ---
 
-This page lists guides for SVG.
+This page lists guides for SVG, covering topics such as embedding, MIME (media) types, handling scripts, animations, filters, and more.
 
 {{SubPagesWithSummaries}}
 

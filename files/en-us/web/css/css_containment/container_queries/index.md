@@ -6,7 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-[Container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries) enable you to apply styles to an element based on certain attributes of its container:
+Container queries enable you to apply styles to an element based on certain attributes of its container:
 
 - The container's size.
 - Styles applied to the container.
@@ -20,7 +20,7 @@ This article provides an introduction to using container queries, specifically f
 
 ## Using container size queries
 
-While container queries apply styles based on the container type, container size queries apply styles specifcally based on the container's dimensions. To use container size queries, you need to declare a **containment context** on an element so that the browser knows you might want to query the dimensions of this container later.
+While container queries apply styles based on the container type, container size queries apply styles specifically based on the container's dimensions. To use container size queries, you need to declare a **containment context** on an element so that the browser knows you might want to query the dimensions of this container later.
 To do this, use the {{cssxref("container-type")}} property with a value of `size`, `inline-size`, or `normal`.
 
 These values have the following effects:

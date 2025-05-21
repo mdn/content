@@ -1,5 +1,6 @@
 ---
 title: "ARIA: gridcell role"
+short-title: gridcell
 slug: Web/Accessibility/ARIA/Reference/Roles/gridcell_role
 page-type: aria-role
 sidebar: accessibilitysidebar

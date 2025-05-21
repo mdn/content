@@ -116,7 +116,7 @@ to break the loop if the connection has been closed (e.g., client closes the pag
 
 ## Error handling
 
-When problems occur (such as a network timeout or issues pertaining to [access control](/en-US/docs/Web/HTTP/Guides/CORS)), an error event is generated. You can take action on this programmatically by implementing the `onerror` callback on the `EventSource` object:
+If the server responds with an `error` key (e.g., `JSON.parse(event.data.error)` or another problem occurs (such as a network timeout or issues pertaining to [access control](/en-US/docs/Web/HTTP/Guides/CORS)), an error event is generated. You can take action on this programmatically by implementing the `onerror` callback on the `EventSource` object:
 
 ```js
 evtSource.onerror = (err) => {

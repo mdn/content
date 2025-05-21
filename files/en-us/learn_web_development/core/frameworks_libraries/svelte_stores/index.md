@@ -398,7 +398,7 @@ In our case, just adding a `role="alert"` to the `<div>` container will do the t
 <div role="alert" on:click={() => visible = false}>
 ```
 
-In general, testing your applications using screen readers is a good idea, not only to discover accessibility issues but also to get used to how visually impaired people use the Web. You have several options, like [NVDA](https://www.nvaccess.org/) for Windows, [ChromeVox](https://support.google.com/chromebook/answer/7031755) for Chrome, [Orca](https://wiki.gnome.org/Projects/Orca) on Linux, and [VoiceOver](https://www.apple.com/accessibility/vision/) for macOS and iOS, among other options.
+In general, testing your applications using screen readers is a good idea, not only to discover accessibility issues but also to get used to how visually impaired people use the Web. You have several options, like [NVDA](https://www.nvaccess.org/) for Windows, [ChromeVox](https://support.google.com/chromebook/answer/7031755) for Chrome, [Orca](https://wiki.gnome.org/Projects/Orca) on Linux, and [VoiceOver](https://www.apple.com/accessibility/features/?vision) for macOS and iOS, among other options.
 
 To learn more about detecting and fixing accessibility issues, check out our [Accessibility](/en-US/docs/Learn_web_development/Core/Accessibility) module.
 
