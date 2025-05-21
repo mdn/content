@@ -22,7 +22,7 @@ An enumerated value specifying the form the summary will be generated in; possib
   - : A bulleted list specifying the most important points presented in the input text.
 - `teaser`
   - : A "teaser" paragraph summarizing the most interesting or intruiging points of the input text, designed to draw the reader in to read more.
-- `tr;dr`
+- `tl;dr`
   - : A short, concise overview, designed as a summary for a busy reader.
 
 ## Examples
