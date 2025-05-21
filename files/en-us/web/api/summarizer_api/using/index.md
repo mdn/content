@@ -121,7 +121,7 @@ const summarizer = await Summarizer.create({
 });
 ```
 
-It is also worth mentioning that some implementations have an input quota that governs how many operations a website can request in a given period. The total quota can be accessed via the {{domxref("Summarizer.inputQuota")}} property, while the quota usage for a particular summary operation can be returned using the {{domxref("Summarizer.measureInputUsage()")}} method:
+Some implementations have an input quota that governs how many operations a website can request in a given period. The total quota can be accessed via the {{domxref("Summarizer.inputQuota")}} property, while the quota usage for a particular summary operation can be returned using the {{domxref("Summarizer.measureInputUsage()")}} method:
 
 For example:
 
