@@ -51,7 +51,7 @@ const availability = await Summarizer.availability({
 });
 ```
 
-This method returns an emumerated value indicating whether support is, or will be available for the specified set of options:
+This method returns an enumerated value indicating whether support is, or will be available for the specified set of options:
 
 - `downloadable` means that the implementation supports the requested options, but needs to download a model or some fine-tuning data.
 - `downloading` means that the implementation supports the requested options, but needs to finish an ongoing download.
