@@ -47,7 +47,7 @@ parameters; the other parameters are described in the column-major order.
 matrix(a, b, c, d, tx, ty)
 ```
 
-> **Note:** `matrix(a, b, c, d, tx, ty)` is a shorthand for `matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)`. It is also equivalent to `matrix(scaleX, skewX, scaleY, skewY, translateX, translateY)`
+> **Note:** `matrix(a, b, c, d, tx, ty)` is a shorthand for `matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)`. It is also equivalent to `matrix(scaleX, skewX, scaleY, skewY, translateX, translateY)`.
 
 ### Values
 
