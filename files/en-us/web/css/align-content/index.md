@@ -194,7 +194,7 @@ section {
   display: <span id="displayStyle">block</span>;
   align-content: <span id="align">normal</span>
 }
-    </pre>
+  </pre>
 </fieldset>
 ```
 
