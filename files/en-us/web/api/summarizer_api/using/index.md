@@ -311,7 +311,7 @@ updateInputCount();
 
 ### Result
 
-The rendered exaple looks like this:
+The rendered example looks like this:
 
 {{EmbedLiveSample("summarizer-example", "100%", "400px")}}
 
