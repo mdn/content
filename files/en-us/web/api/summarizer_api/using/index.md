@@ -329,7 +329,7 @@ updateInputCount();
 
 The rendered example looks like this:
 
-{{EmbedLiveSample("summarizer-example", , "750px", , , , , "allow-forms")}}
+{{EmbedLiveSample("summarizer-example", , "750px", , , , "summarizer", "allow-forms")}}
 
 Try entering a body of text into the "Input" `<textarea>` then pressing the submit button to generate an AI-generated summary. The text from your favorite Wikipedia page would be ideal. Try generating multiple summaries with different option combinations, to see how they affect the output.
 
