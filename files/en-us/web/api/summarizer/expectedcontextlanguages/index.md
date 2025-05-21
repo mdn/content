@@ -16,7 +16,7 @@ The **`expectedContextLanguages`** read-only property of the {{domxref("Summariz
 
 An array of strings specifying the expected languages of any provided context strings (either the {{domxref("Summarizer.sharedContext")}}, or a `context` specified during a {{domxref("Summarizer.summarize", "summarize()")}} or {{domxref("Summarizer.summarizeStreaming", "summarizeStreaming()")}} call).
 
-The strings should be valid [BCP 47 language tags](https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags) (as specified in [RFC 5646](https://datatracker.ietf.org/doc/html/rfc5646))
+The strings should be valid [BCP 47 language tags](https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags) (as specified in [RFC 5646](https://datatracker.ietf.org/doc/html/rfc5646)).
 
 ## Examples
 
