@@ -45,9 +45,9 @@ Possible values include:
 - `available`
   - : The browser supports the given configuration and can be used immediately.
 - `downloadable`
-  - : The browser does support the given configuration, but it first needs to download an AI model, or some fine-tuning data for the model.
+  - : The browser supports the given configuration, but it first needs to download an AI model, or some fine-tuning data for the model.
 - `downloading`
-  - : The browser does support the given configuration, but it has to finish an ongoing download before it can proceed.
+  - : The browser supports the given configuration, but it needs to finish an ongoing download before it can proceed.
 - `unavailable`
   - : The browser does not support the given configuration.
 
