@@ -142,7 +142,7 @@ Let's look at a complete example that demonstrates the Summarizer API in action.
 
 ### HTML
 
-In our markup, we first define an input {{htmlelement("form")}} that allows the user to set the text to summarize, and configuration options. This includes a {{htmlelement("textarea")}} for entering the text itself, an {{htmlelement("output")}} element to display the text character count, and two {{htmlelement("select")}} elements for choosing a summarizer {{domxref("Summarizer.type", "type")}} and {{domxref("Summarizer.length", "length")}}.
+In our markup, we first define an input {{htmlelement("form")}} that allows the user to set the text to summarize, and configuration options. This includes a {{htmlelement("textarea")}} for entering the text to be summarized, an {{htmlelement("output")}} element to display the character count of the text set by the user, and two {{htmlelement("select")}} elements for choosing a summarizer {{domxref("Summarizer.type", "type")}} and {{domxref("Summarizer.length", "length")}}.
 
 ```html live-sample___summarizer-example
 <h2>Input</h2>
