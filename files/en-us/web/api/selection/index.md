@@ -22,7 +22,7 @@ A user may make a selection from left to right (in document order) or right to l
 - {{DOMxRef("Selection.direction")}} {{ReadOnlyInline}}
   - : A string describing the direction of the current selection.
 - {{DOMxRef("Selection.focusNode")}} {{ReadOnlyInline}}
-  - : Returns the {{DOMxRef("Node")}} in which the selection ends. Can return `null` if selection never existed in the document (for example, in an `iframe` that was never clicked on).
+  - : Returns the {{DOMxRef("Node")}} in which the selection ends. Can return `null` if selection never existed in the document (e.g., an iframe that was never clicked on).
 - {{DOMxRef("Selection.focusOffset")}} {{ReadOnlyInline}}
   - : Returns a number representing the offset of the selection's focus within the `focusNode`. If `focusNode` is a text node, this is the number of characters within `focusNode` preceding the focus. If `focusNode` is an element, this is the number of child nodes of the `focusNode` preceding the focus.
 - {{DOMxRef("Selection.isCollapsed")}} {{ReadOnlyInline}}
@@ -50,7 +50,7 @@ A user may make a selection from left to right (in document order) or right to l
   - : Removes all ranges from the selection, leaving the {{domxref("Selection.anchorNode", "anchorNode")}} and {{domxref("Selection.focusNode","focusNode")}} properties equal to `null` and nothing selected.
 - {{DOMxRef("Selection.extend()")}}
   - : Moves the focus of the selection to a specified point.
-- {{DOMxRef("Selection.getComposedRanges()")}} {{experimental_inline}}
+- {{DOMxRef("Selection.getComposedRanges()")}}
   - : Returns an array of {{DOMxRef("StaticRange")}} objects, each that represents a selection that might cross shadow DOM boundaries.
 - {{DOMxRef("Selection.getRangeAt()")}}
   - : Returns a {{DOMxRef("Range")}} object representing one of the ranges currently selected.

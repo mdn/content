@@ -213,7 +213,7 @@ format&#x3C;/code>.</pre
       <td id="audio-example">
         <pre class="brush: html">
 &#x3C;audio controls>
-  &#x3C;source src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3" type="audio/mpeg">
+  &#x3C;source src="/shared-assets/audio/t-rex-roar.mp3" type="audio/mpeg">
 &#x3C;/audio>
         </pre>
         {{EmbedLiveSample("audio-example", 100, 80)}}
@@ -225,8 +225,8 @@ format&#x3C;/code>.</pre
       <td id="video-example">
         <pre class="brush: html">
 &#x3C;video controls width="250"
-  src="https://archive.org/download/ElephantsDream/ed_hd.ogv" >
-  &#x3C;a href="https://archive.org/download/ElephantsDream/ed_hd.ogv">Download OGV video&#x3C;/a>
+  src="/shared-assets/videos/flower.webm" >
+  &#x3C;a href="/shared-assets/videos/flower.webm">Download WebM video&#x3C;/a>
 &#x3C;/video></pre
         >
         {{EmbedLiveSample("video-example", 100, 200)}}

@@ -1560,6 +1560,14 @@
       "properties": ["Response.body"],
       "events": []
     },
+    "Summarizer API": {
+      "overview": ["Summarizer API"],
+      "guides": ["/docs/Web/API/Summarizer_API/Using"],
+      "interfaces": ["Summarizer", "CreateMonitor"],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "SVG": {
       "overview": ["SVG API"],
       "guides": ["/docs/Web/SVG"],

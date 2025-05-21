@@ -59,11 +59,12 @@ The `<repeat-style>` values include:
 - `space`
 
   - : The mask image is repeated as many times as possible without clipping. If the element's origin size is at least twice the size as the mask image's size in the associated dimension, the {{cssxref("mask-position")}} property is ignored and the first and last images are positioned at the edges of the mask origin container. If the the mask origin box is not an exact multiple of the mask image's size, whitespace is distributed evenly between the repeated mask images.
-  - : If the origin box size is less than twice the mask image's size in the given dimension, only one mask image can be displayed. In this case, the image is positioned as defined by the `mask-position` property, which defaults to `0% 0%`. The mask image will only be clipped if the mask image is larger than the mask origin box.
+
+    If the origin box size is less than twice the mask image's size in the given dimension, only one mask image can be displayed. In this case, the image is positioned as defined by the `mask-position` property, which defaults to `0% 0%`. The mask image will only be clipped if the mask image is larger than the mask origin box.
 
 - `round`
 
-  - : The mask image is repeated as many times as possible in its original dimensions. If the size of the mask origin box is not an exact multiple of the mask image's size, all mask images will be rescaled, [shrinking or stretching](#rounded-repetitions) to ensure no repetitions are clipped.
+  - : The mask image is repeated as many times as possible in its original dimensions. If the size of the mask origin box is not an exact multiple of the mask image's size, all mask images will be rescaled, [shrinking or stretching](#rounded_repetitions) to ensure no repetitions are clipped.
 
 - `no-repeat`
 
@@ -118,7 +119,7 @@ The one-value syntax is a shorthand for the full two-value syntax:
 
 ## Description
 
-The `mask-repeat` property accepts a comma-separated pair of values or one [shorthand value](#shorthand-values). In the two-value syntax, the first value represents the horizontal repetition behavior and the second value represents the vertical behavior.
+The `mask-repeat` property accepts a comma-separated pair of values or one [shorthand value](#shorthand_values). In the two-value syntax, the first value represents the horizontal repetition behavior and the second value represents the vertical behavior.
 
 ### Multiple values
 
@@ -146,7 +147,7 @@ In the case of `round`, mask images are scaled up or down to fit the mask image 
 
 The rendered dimensions of the mask is the size of the origin box divided by the number of iterations of masks in that dimension, where the iterations being an integer greater than zero. The number of iterations is: `X' = D / round(D / X)` where `D` is the width or height, and `round()` is a function that returns the nearest integer greater than zero.
 
-For example, if `mask-repeat` is set to `round` and the `mask-size` sets the mask to be `40px` wide, when the origin box is present (greater than `0px` wide) but less than `60px` wide, there will be a single iteration that is 100% of the width of that box. If the box is at least `60px` wide but less than `100px` wide, there will be two iterations that are each `50%` of the box. From 100px to 140px, three masks will fit along the horizontal axis. These "`40px`"-wide masks will only be `40px` wide if the origin box is an exact multiple of `40px`.
+For example, if `mask-repeat` is set to `round` and the `mask-size` sets the mask to be `40px` wide, when the origin box is present (greater than `0px` wide) but less than `60px` wide, there will be a single iteration that is 100% of the width of that box. If the box is at least `60px` wide but less than `100px` wide, there will be two iterations that are each `50%` of the box. From 100px to 140px, three masks will fit along the horizontal axis. These "`40px`-wide" masks will only be `40px` wide if the origin box is an exact multiple of `40px`.
 
 ## Formal definition
 

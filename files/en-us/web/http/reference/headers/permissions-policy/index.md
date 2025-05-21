@@ -218,6 +218,10 @@ You can specify
 
   - : Controls access to the translation functionality of the [Translator and Language Detector APIs](/en-US/docs/Web/API/Translator_and_Language_Detector_APIs).
 
+- {{httpheader("Permissions-Policy/summarizer", "summarizer")}} {{Experimental_Inline}}
+
+  - : Controls access to the [Summarizer API](/en-US/docs/Web/API/Summarizer_API).
+
 - {{httpheader('Permissions-Policy/usb', 'usb')}} {{Experimental_Inline}}
 
   - : Controls whether the current document is allowed to use the [WebUSB API](/en-US/docs/Web/API/WebUSB_API).

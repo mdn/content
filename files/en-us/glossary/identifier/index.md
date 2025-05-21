@@ -10,7 +10,7 @@ An **identifier** is a sequence of characters in the code that identifies a {{gl
 
 In {{glossary("JavaScript")}}, identifiers can contain {{glossary("Unicode")}} letters, `$`, `_`, and digits (0-9), but may not start with a digit. An identifier differs from a string in that a {{glossary("string")}} is data, while an identifier is part of the code. In JavaScript, there is no way to convert identifiers to strings, but sometimes it is possible to parse strings into identifiers.
 
-In {{glossary("CSS")}}, there are two identifier data types: {{cssxref("custom-ident")}} and {{cssxref("dashed-ident")}}. The CSS {{cssxref("ident")}} can start with a digit and can contain almost any character, but non-letter/digit ASCII characters such as `"`, `\`, and `*` need to be escaped. Emojis, which are valid as identifiers, do not need to be escaped.
+In {{glossary("CSS")}}, there are two identifier data types: {{cssxref("custom-ident")}} and {{cssxref("dashed-ident")}}. The CSS {{cssxref("ident")}} can contain almost any character, but non-letter/digit ASCII characters such as `"`, `\`, and `*` must be escaped, it must not start with a digit, and emojis are valid as identifiers that do not require escaping.
 
 ## See also
 

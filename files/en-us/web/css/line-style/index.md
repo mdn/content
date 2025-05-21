@@ -212,37 +212,35 @@ This example demonstrates line-style and color choice. With some `<line-style>` 
 
 This example uses multiple {{HTMLElement( "div" )}} elements, each with a different `border-color` set as an inline [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style).
 
-```html-nolint hidden
-<section>
-```
-
 ```html
 <div style="border-color: #000000"></div>
 ```
 
-```html hidden
-<div style="border-color: #000001"></div>
-<div style="border-color: #ffffff"></div>
+```html hidden live-sample___line_style_colors
+<section>
+  <div style="border-color: #000000"></div>
+  <div style="border-color: #000001"></div>
+  <div style="border-color: #ffffff"></div>
 
-<div style="border-color: #ff00ff"></div>
-<div style="border-color: #ffff00"></div>
-<div style="border-color: #00ffff"></div>
+  <div style="border-color: #ff00ff"></div>
+  <div style="border-color: #ffff00"></div>
+  <div style="border-color: #00ffff"></div>
 
-<div style="border-color: #cc33cc"></div>
-<div style="border-color: #cccc33"></div>
-<div style="border-color: #33cccc"></div>
+  <div style="border-color: #cc33cc"></div>
+  <div style="border-color: #cccc33"></div>
+  <div style="border-color: #33cccc"></div>
 
-<div style="border-color: #ff0000"></div>
-<div style="border-color: #00ff00"></div>
-<div style="border-color: #0000ff"></div>
+  <div style="border-color: #ff0000"></div>
+  <div style="border-color: #00ff00"></div>
+  <div style="border-color: #0000ff"></div>
 
-<div style="border-color: #cc3333"></div>
-<div style="border-color: #33cc33"></div>
-<div style="border-color: #3333cc"></div>
+  <div style="border-color: #cc3333"></div>
+  <div style="border-color: #33cc33"></div>
+  <div style="border-color: #3333cc"></div>
 
-<div style="border-color: #993333"></div>
-<div style="border-color: #339933"></div>
-<div style="border-color: #333399"></div>
+  <div style="border-color: #993333"></div>
+  <div style="border-color: #339933"></div>
+  <div style="border-color: #333399"></div>
 </section>
 ```
 
@@ -250,7 +248,7 @@ This example uses multiple {{HTMLElement( "div" )}} elements, each with a differ
 
 The four sides of each `<div>` have a different `<line-style>` value, and each list item has a different {{cssxref("color_value", "&lt;color>")}} value. We use [generated content](/en-US/docs/Web/CSS/content) to display the CSS declared inline.
 
-```css hidden
+```css hidden live-sample___line_style_colors
 section {
   display: flex;
   flex-wrap: wrap;
@@ -260,7 +258,7 @@ section {
 }
 ```
 
-```css
+```css live-sample___line_style_colors
 div {
   border-width: 10px;
   border-style: inset groove ridge outset;
@@ -273,7 +271,7 @@ div::before {
 
 #### Result
 
-{{EmbedLiveSample("Line_style_colors", "500", "400")}}
+{{EmbedLiveSample("line_style_colors", "500", "400")}}
 
 Notice that the almost-black color of `#000001` may be different from the actual black, and the contrast between the dark and light edges is more noticeable when using lighter colors.
 
