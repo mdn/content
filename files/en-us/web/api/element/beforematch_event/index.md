@@ -28,9 +28,9 @@ A generic {{domxref("Event")}}.
 
 The HTML [`hidden`](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden) attribute accepts a value `until-found`: when this value is specified, the element is hidden but its content will be accessible to the browser's "find in page" feature or to fragment navigation. When these features cause a scroll to an element in a "hidden until found" subtree, the browser will:
 
-- fire a `beforematch` event on the hidden element
-- remove the `hidden` attribute from the element
-- scroll to the element
+1. Fire a `beforematch` event on the hidden element
+2. Remove the `hidden` attribute from the element
+3. Scroll to the element
 
 ## Examples
 
