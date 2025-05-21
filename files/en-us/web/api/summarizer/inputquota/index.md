@@ -36,9 +36,9 @@ const totalInputQuota = summarizer.inputQuota;
 const inputUsage = await summarizer.measureInputUsage(myTextString);
 
 if (inputUsage > totalInputQuota) {
-  throw new Error("Boo, not enough quota left to generate a summary.");
+  throw new Error("Boo, insufficient quota to generate a summary.");
 } else {
-  console.log("Yay, enough quote left to generate a summary.");
+  console.log("Yay, quota available to generate a summary.");
   const summary = await summarizer.summarize(myTextString);
   // ...
 }
