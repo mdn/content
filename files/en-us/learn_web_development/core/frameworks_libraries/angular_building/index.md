@@ -2,9 +2,8 @@
 title: Building Angular applications and further resources
 slug: Learn_web_development/Core/Frameworks_libraries/Angular_building
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenu("Learn_web_development/Core/Frameworks_libraries/Angular_filtering", "Learn_web_development/Core/Frameworks_libraries")}}
 

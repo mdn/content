@@ -1,5 +1,6 @@
 ---
 title: "ARIA: region role"
+short-title: region
 slug: Web/Accessibility/ARIA/Reference/Roles/region_role
 page-type: aria-role
 spec-urls:
@@ -47,7 +48,7 @@ Using the {{HTMLElement('section')}} element will automatically communicate a se
 
 Use sparingly! [Landmark roles](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles#3._landmark_roles) are intended to be used sparingly, to identify larger overall sections of the document. Using too many landmark roles can create "noise" in screen readers, making it difficult to understand the overall layout of the page.
 
-Only use the `region` role if no other relevant [content sectioning](/en-US/docs/Web/HTML/Element#content_sectioning) element or [landmark role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles#3._landmark_roles) applies. If multiple regions exist on a page, it may be worth reinvestigating the page's overall structure.
+Only use the `region` role if no other relevant [content sectioning](/en-US/docs/Web/HTML/Reference/Elements#content_sectioning) element or [landmark role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles#3._landmark_roles) applies. If multiple regions exist on a page, it may be worth reinvestigating the page's overall structure.
 
 ## Best practices
 

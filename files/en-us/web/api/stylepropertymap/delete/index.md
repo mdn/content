@@ -31,7 +31,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 The following example removes the {{cssxref('background-image')}} property from the
-element's [style attribute](/en-US/docs/Web/HTML/Global_attributes/style).
+element's [style attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/style).
 
 ```js
 // get the button element

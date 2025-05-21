@@ -24,7 +24,7 @@ A string. If this has not been previously set as described above, it will be an 
 Setting and getting a label via `GPUSampler.label`:
 
 ```js
-// ...
+// …
 
 const sampler = device.createSampler({
   compare: "less",
@@ -38,7 +38,7 @@ console.log(sampler.label); // "my_sampler"
 Setting a label via the originating {{domxref("GPUDevice.createSampler()")}} call, and then getting it via `GPUSampler.label`:
 
 ```js
-// ...
+// …
 
 const sampler = device.createSampler({
   compare: "less",

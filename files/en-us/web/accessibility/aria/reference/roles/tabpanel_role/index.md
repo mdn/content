@@ -1,5 +1,6 @@
 ---
 title: "ARIA: tabpanel role"
+short-title: tabpanel
 slug: Web/Accessibility/ARIA/Reference/Roles/tabpanel_role
 page-type: aria-role
 spec-urls:
@@ -28,13 +29,13 @@ When keyboard focus is on a `tablist`, or a `tab` within the `tablist`, the <kbd
 
 Each `tab` in a `tablist` can serve as the label for its corresponding `tabpanel`. Include the `id` of each `tab` as the value for each `tabpanel`'s [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attribute.
 
-You can also optionally associate each `tabpanel` with its associated `tab` by including the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of the `tabpanel` as the value of the `tab`'s [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) attribute.
+You can also optionally associate each `tabpanel` with its associated `tab` by including the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) of the `tabpanel` as the value of the `tab`'s [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) attribute.
 
 When a tabbed interface is initialized, one `tabpanel` is displayed and its associated `tab` is styled to indicate that it is active, reflecting its programmatic state. All inactive `tabpanel` elements must be hidden to all users. This is most commonly achieved by use of CSS's `display: none`.
 
 See the [ARIA `tab` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) article for more information specific to the use of this role.
 
-Include [`tabindex="-1"`](/en-US/docs/Web/HTML/Global_attributes/tabindex) to allow a `tabpanel` to receive focus without including the `tabpanel` in the page's keyboard focus order.
+Include [`tabindex="-1"`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) to allow a `tabpanel` to receive focus without including the `tabpanel` in the page's keyboard focus order.
 
 Make sure to define styles for a `tabpanel` for when it receives focus, optimally using the CSS {{CSSXref(':focus')}} pseudo-class, so keyboard users know there was a change in focus and are aware of what content currently has focus.
 

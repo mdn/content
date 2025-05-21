@@ -1,5 +1,6 @@
 ---
-title: aria-rowindex
+title: "ARIA: aria-rowindex attribute"
+short-title: aria-rowindex
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-rowindex
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-rowindex
@@ -99,4 +100,4 @@ Inherited into roles:
 - [`aria-rowcount`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowcount)
 - [`aria-rowspan`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowspan)
 - [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex)
-- The [`rowspan`](/en-US/docs/Web/HTML/Element/td#rowspan) attribute on {{HTMLElement('td')}}
+- The [`rowspan`](/en-US/docs/Web/HTML/Reference/Elements/td#rowspan) attribute on {{HTMLElement('td')}}

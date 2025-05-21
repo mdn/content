@@ -5,14 +5,19 @@ page-type: web-api-interface
 browser-compat: api.MediaStreamTrackProcessor
 ---
 
-{{APIRef("Insertable Streams for MediaStreamTrack API")}}
+{{APIRef("Insertable Streams for MediaStreamTrack API")}}{{AvailableInWorkers("dedicated")}}
 
-The **`MediaStreamTrackProcessor`** interface of the [Insertable Streams for MediaStreamTrack API](/en-US/docs/Web/API/Insertable_Streams_for_MediaStreamTrack_API) consumes a {{domxref("MediaStreamTrack")}} object's source and generates a stream of media frames.
+> [!WARNING]
+> Browsers differ on which global context they expose this interface in (e.g., only window in some browsers and only dedicated worker in others), making them incompatible. Keep this in mind when comparing support.
+
+The **`MediaStreamTrackProcessor`** interface of the [Insertable Streams for MediaStreamTrack API](/en-US/docs/Web/API/Insertable_Streams_for_MediaStreamTrack_API) consumes a video {{domxref("MediaStreamTrack")}} object's source and generates a stream of {{domxref("VideoFrame")}} objects.
 
 ## Constructor
 
 - {{domxref("MediaStreamTrackProcessor.MediaStreamTrackProcessor", "MediaStreamTrackProcessor()")}}
   - : Creates a new `MediaStreamTrackProcessor` object.
+- {{domxref("MediaStreamTrackProcessor.MediaStreamTrackProcessor", "window.MediaStreamTrackProcessor()")}} {{Experimental_Inline}} {{Non-standard_Inline}}
+  - : Creates a new `MediaStreamTrackProcessor` object on the {{Glossary("main thread")}} that can process both video and audio.
 
 ## Instance properties
 
@@ -21,27 +26,28 @@ The **`MediaStreamTrackProcessor`** interface of the [Insertable Streams for Med
 
 ## Examples
 
-The following example is from the article [Insertable streams for MediaStreamTrack](https://developer.chrome.com/docs/capabilities/web-apis/mediastreamtrack-insertable-media-processing), and demonstrates a barcode scanner application, which transforms the stream accessed via {{domxref("MediaStreamTrackProcessor.readable")}} by highlighting the barcode.
+The following example is from the article [Unbundling MediaStreamTrackProcessor and VideoTrackGenerator](https://blog.mozilla.org/webrtc/unbundling-mediastreamtrackprocessor-and-videotrackgenerator/). It [transfers](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) a camera {{domxref("MediaStreamTrack")}} to a worker for processing. The worker creates a pipeline that applies a sepia tone filter to the video frames and mirrors them. The pipeline culminates in a {{domxref("VideoTrackGenerator")}} whose {{domxref("MediaStreamTrack")}} is transferred back and played. The media now flows in real time through the transform off the {{Glossary("main thread")}}.
 
 ```js
-const stream = await getUserMedia({ video: true });
-const videoTrack = stream.getVideoTracks()[0];
+const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+const [track] = stream.getVideoTracks();
+const worker = new Worker("worker.js");
+worker.postMessage({ track }, [track]);
+const { data } = await new Promise((r) => (worker.onmessage = r));
+video.srcObject = new MediaStream([data.track]);
+```
 
-const trackProcessor = new MediaStreamTrackProcessor({ track: videoTrack });
-const trackGenerator = new MediaStreamTrackGenerator({ kind: "video" });
+worker.js:
 
-const transformer = new TransformStream({
-  async transform(videoFrame, controller) {
-    const barcodes = await detectBarcodes(videoFrame);
-    const newFrame = highlightBarcodes(videoFrame, barcodes);
-    videoFrame.close();
-    controller.enqueue(newFrame);
-  },
-});
-
-trackProcessor.readable
-  .pipeThrough(transformer)
-  .pipeTo(trackGenerator.writable);
+```js
+onmessage = async ({ data: { track } }) => {
+  const vtg = new VideoTrackGenerator();
+  self.postMessage({ track: vtg.track }, [vtg.track]);
+  const { readable } = new MediaStreamTrackProcessor({ track });
+  await readable
+    .pipeThrough(new TransformStream({ transform }))
+    .pipeTo(vtg.writable);
+};
 ```
 
 ## Specifications
@@ -51,3 +57,10 @@ trackProcessor.readable
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("VideoTrackGenerator")}}
+- [Insertable streams for MediaStreamTrack](https://developer.chrome.com/docs/capabilities/web-apis/mediastreamtrack-insertable-media-processing) on developer.chrome.com
+  > [!NOTE]
+  > This article was written before the API was restricted to workers and video. Beware its use of the non-standard version of `MediaStreamTrackProcessor` which blocks on the {{Glossary("main thread")}}.

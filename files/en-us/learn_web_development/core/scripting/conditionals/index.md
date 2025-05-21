@@ -3,9 +3,8 @@ title: Making decisions in your code — conditionals
 short-title: Conditionals
 slug: Learn_web_development/Core/Scripting/Conditionals
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting/Loops", "Learn_web_development/Core/Scripting")}}
 
@@ -82,8 +81,8 @@ However, you need to be careful here — in this case, the second block of code 
 As a final point, while not recommended, you may sometimes see `if...else` statements written without the curly braces:
 
 ```js example-bad
-if (condition) /* code to run if condition is true */
-else /* run some other code instead */
+if (condition) doSomething();
+else doSomethingElse();
 ```
 
 This syntax is perfectly valid, but it is much easier to understand the code if you use the curly braces to delimit the blocks of code, and use multiple lines and indentation.
@@ -94,12 +93,12 @@ To understand this syntax better, let's consider a real example. Imagine a child
 
 ```js
 let shoppingDone = false;
-let childsAllowance;
+let childAllowance;
 
 if (shoppingDone === true) {
-  childsAllowance = 10;
+  childAllowance = 10;
 } else {
-  childsAllowance = 5;
+  childAllowance = 5;
 }
 ```
 
@@ -188,13 +187,13 @@ And, returning to our previous example about the child doing a chore for their p
 
 ```js
 let shoppingDone = false;
-let childsAllowance;
+let childAllowance;
 
 // We don't need to explicitly specify 'shoppingDone === true'
 if (shoppingDone) {
-  childsAllowance = 10;
+  childAllowance = 10;
 } else {
-  childsAllowance = 5;
+  childAllowance = 5;
 }
 ```
 
@@ -873,7 +872,7 @@ function insertAtCaret(text) {
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Conditionals](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Conditionals).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Conditionals](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Conditionals).
 
 ## Summary
 

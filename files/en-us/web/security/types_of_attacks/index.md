@@ -2,9 +2,8 @@
 title: Types of attacks
 slug: Web/Security/Types_of_attacks
 page-type: guide
+sidebar: security
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
 This article describes various types of security attacks and techniques to mitigate them.
 

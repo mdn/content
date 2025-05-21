@@ -139,7 +139,7 @@ The Payment Request API's {{domxref("PaymentRequest.canMakePayment()")}} method 
 
 ```js
 async function checkCanMakePayment() {
-  // ...
+  // …
 
   const canMakePayment = await request.canMakePayment();
   if (!canMakePayment) {
@@ -186,7 +186,7 @@ self.addEventListener("paymentrequest", async (e) => {
   // Preserve the event for future use
   payment_request_event = e;
 
-  // ...
+  // …
 });
 ```
 
@@ -209,10 +209,10 @@ navigator.serviceWorker.register("serviceworker.js").then((registration) => {
   registration.paymentManager
     .enableDelegations(["shippingAddress", "payerName"])
     .then(() => {
-      // ...
+      // …
     });
 
-  // ...
+  // …
 });
 ```
 

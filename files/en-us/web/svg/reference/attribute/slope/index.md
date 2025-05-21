@@ -19,7 +19,7 @@ You can use this attribute with the following SVG component transfer function el
 - {{SVGElement("feFuncA")}}
 
 > [!NOTE]
-> Originally, the `slope` attribute was used within {{SVGElement("font-face")}} to indicate the vertical stroke angle of a font. This use case has been deprecated.
+> Originally, the `slope` attribute was used within `<font-face>` to indicate the vertical stroke angle of a font. This use case has been deprecated.
 
 ## Usage notes
 

@@ -16,10 +16,10 @@ You can redraw, re-retrieve resources, and reinitialize the state of your contex
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("contextrestored", (event) => {});
+```js-nolint
+addEventListener("contextrestored", (event) => { })
 
-oncontextrestored = (event) => {};
+oncontextrestored = (event) => { }
 ```
 
 ## Event type

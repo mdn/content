@@ -14,7 +14,7 @@ Extra information about a transition. Note that many values here are not current
 Values of this type are strings. Possible values are:
 
 - "client_redirect"
-  - : Redirect(s) caused by JavaScript running in the page or a "refresh" pragma in the page's [meta](/en-US/docs/Web/HTML/Element/meta) tag.
+  - : Redirect(s) caused by JavaScript running in the page or a "refresh" pragma in the page's [meta](/en-US/docs/Web/HTML/Reference/Elements/meta) tag.
 - "server_redirect"
   - : Redirect(s) caused by a [3XX HTTP status code](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#3xx_Redirection) sent from the server.
 - "forward_back"

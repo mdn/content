@@ -2,9 +2,8 @@
 title: Handling conflicts
 slug: Learn_web_development/Core/Styling_basics/Handling_conflicts
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics")}}
 
@@ -435,7 +434,7 @@ If using the ID is the only way to target the element — perhaps because you do
 
 ### Inline styles
 
-Inline styles, that is, the style declaration inside a [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute, take precedence over all normal styles, no matter the specificity. Such declarations don't have selectors, but their specificity can be construed as 1-0-0-0; always more than any other specificity weight no matter how many IDs are in the selectors.
+Inline styles, that is, the style declaration inside a [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute, take precedence over all normal styles, no matter the specificity. Such declarations don't have selectors, but their specificity can be construed as 1-0-0-0; always more than any other specificity weight no matter how many IDs are in the selectors.
 
 ### !important
 
@@ -475,7 +474,7 @@ Let's walk through this to see what's happening — try removing some of the pro
 
 1. You'll see that the third rule's {{cssxref("color")}} and {{cssxref("padding")}} values have been applied, but the {{cssxref("background-color")}} hasn't. Why? Really, all three should surely apply because rules later in the source order generally override earlier rules.
 2. However, the rules above it win because class selectors have higher specificity than element selectors.
-3. Both elements have a [`class`](/en-US/docs/Web/HTML/Global_attributes/class) of `better`, but the 2nd one has an [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of `winning` too. Since IDs have an _even higher_ specificity than classes (you can only have one element with each unique ID on a page, but many elements with the same class — ID selectors are _very specific_ in what they target), the red background color and the 1px black border should both be applied to the 2nd element, with the first element getting the gray background color, and no border, as specified by the class.
+3. Both elements have a [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class) of `better`, but the 2nd one has an [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) of `winning` too. Since IDs have an _even higher_ specificity than classes (you can only have one element with each unique ID on a page, but many elements with the same class — ID selectors are _very specific_ in what they target), the red background color and the 1px black border should both be applied to the 2nd element, with the first element getting the gray background color, and no border, as specified by the class.
 4. The 2nd element _does_ get the red background color, but no border. Why? Because of the `!important` flag in the second rule. Adding the `!important` flag after `border: none` means that this declaration will win over the `border` value in the previous rule, even though the ID selector has higher specificity.
 
 > [!NOTE]
@@ -505,7 +504,7 @@ Conflicting declarations will be applied in the following order, with later ones
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: The Cascade](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_tasks).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: The Cascade](/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade).
 
 ## Summary
 

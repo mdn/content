@@ -32,16 +32,23 @@ The HTML content for this example is primarily a checkbox, shaped as an actual b
 
 ```html
 <div class="controls">
-    <input type="checkbox" id="playButton">
-    <label for="playButton">Activate: </label>
-    <label for="volumeControl">Volume: </label>
-    <input type="range" min="0.0" max="1.0" step="0.01"
-           value="0.8" name="volume" id="volumeControl">
-  </div>
+  <input type="checkbox" id="playButton" />
+  <label for="playButton">Activate: </label>
+  <label for="volumeControl">Volume: </label>
+  <input
+    type="range"
+    min="0.0"
+    max="1.0"
+    step="0.01"
+    value="0.8"
+    name="volume"
+    id="volumeControl" />
 </div>
 
-<p>Toggle the checkbox above to start and stop the tones, and use the volume control to
-change the volume of the notes E and G in the chord.</p>
+<p>
+  Toggle the checkbox above to start and stop the tones, and use the volume
+  control to change the volume of the notes E and G in the chord.
+</p>
 ```
 
 ```css hidden

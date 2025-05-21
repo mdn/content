@@ -16,10 +16,10 @@ An event handler for this event can be added by setting the `onanimationcancel` 
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("animationcancel", (event) => {});
+```js-nolint
+addEventListener("animationcancel", (event) => { })
 
-onanimationcancel = (event) => {};
+onanimationcancel = (event) => { }
 ```
 
 ## Event type

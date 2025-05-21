@@ -2,9 +2,10 @@
 title: Creating an item component
 slug: Learn_web_development/Core/Frameworks_libraries/Angular_item_component
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_styling","Learn_web_development/Core/Frameworks_libraries/Angular_filtering", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_styling","Learn_web_development/Core/Frameworks_libraries/Angular_filtering", "Learn_web_development/Core/Frameworks_libraries")}}
 
 Components provide a way for you to organize your application. This article walks you through creating a component to handle the individual items in the list, and adding check, edit, and delete functionality. The Angular event model is covered here.
 
@@ -287,7 +288,7 @@ In this example, we've defined the selector as `app-item`:
 ```ts
 @Component({
   selector: "app-item",
-  // ...
+  // …
 })
 export class ItemComponent {
   // …

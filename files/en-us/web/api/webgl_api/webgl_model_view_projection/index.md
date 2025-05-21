@@ -78,7 +78,7 @@ WebGLBox.prototype.draw = function (settings) {
   // drawn to the screen. There are two that form a square.
 
   const data = new Float32Array([
-    //Triangle 1
+    // Triangle 1
     settings.left,
     settings.bottom,
     settings.depth,
@@ -89,7 +89,7 @@ WebGLBox.prototype.draw = function (settings) {
     settings.top,
     settings.depth,
 
-    //Triangle 2
+    // Triangle 2
     settings.left,
     settings.top,
     settings.depth,
@@ -260,9 +260,9 @@ The clipping of points and polygons from clip space happens before the homogeneo
 To start playing with this idea the previous example can be modified to allow for the use of the `w` component.
 
 ```js
-//Redefine the triangles to use the W component
+// Redefine the triangles to use the W component
 const data = new Float32Array([
-  //Triangle 1
+  // Triangle 1
   settings.left,
   settings.bottom,
   settings.depth,
@@ -276,7 +276,7 @@ const data = new Float32Array([
   settings.depth,
   settings.w,
 
-  //Triangle 2
+  // Triangle 2
   settings.left,
   settings.top,
   settings.depth,
@@ -368,7 +368,7 @@ The following code sample defines a method on the `CubeDemo` object that will cr
 
 ```js
 CubeDemo.prototype.computeModelMatrix = function (now) {
-  //Scale down by 50%
+  // Scale down by 50%
   const scale = MDN.scaleMatrix(0.5, 0.5, 0.5);
 
   // Rotate around X according to time
@@ -473,7 +473,7 @@ The last step of filling in the w component can actually be accomplished with a 
 const identity = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1];
 
 MDN.multiplyPoint(identity, [2, 3, 4, 1]);
-//> [2, 3, 4, 1]
+// [2, 3, 4, 1]
 ```
 
 Then move the last column's 1 up one space.
@@ -482,7 +482,7 @@ Then move the last column's 1 up one space.
 const copyZ = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0];
 
 MDN.multiplyPoint(copyZ, [2, 3, 4, 1]);
-//> [2, 3, 4, 4]
+// [2, 3, 4, 4]
 ```
 
 However in the last example we performed `(z + 1) * scaleFactor`:
@@ -490,48 +490,37 @@ However in the last example we performed `(z + 1) * scaleFactor`:
 ```js
 const scaleFactor = 0.5;
 
+// prettier-ignore
 const simpleProjection = [
-  1,
-  0,
-  0,
-  0,
-  0,
-  1,
-  0,
-  0,
-  0,
-  0,
-  1,
-  scaleFactor,
-  0,
-  0,
-  0,
-  scaleFactor,
+  1, 0, 0, 0,
+  0, 1, 0, 0,
+  0, 0, 1, scaleFactor,
+  0, 0, 0, scaleFactor,
 ];
 
 MDN.multiplyPoint(simpleProjection, [2, 3, 4, 1]);
-//> [2, 3, 4, 2.5]
+// [2, 3, 4, 2.5]
 ```
 
 Breaking it out a little further we can see how this works:
 
 ```js
-let x = 2 * 1 + 3 * 0 + 4 * 0 + 1 * 0;
-let y = 2 * 0 + 3 * 1 + 4 * 0 + 1 * 0;
-let z = 2 * 0 + 3 * 0 + 4 * 1 + 1 * 0;
-let w = 2 * 0 + 3 * 0 + 4 * scaleFactor + 1 * scaleFactor;
+const x = 2 * 1 + 3 * 0 + 4 * 0 + 1 * 0;
+const y = 2 * 0 + 3 * 1 + 4 * 0 + 1 * 0;
+const z = 2 * 0 + 3 * 0 + 4 * 1 + 1 * 0;
+const w = 2 * 0 + 3 * 0 + 4 * scaleFactor + 1 * scaleFactor;
 ```
 
 The last line could be simplified to:
 
 ```js
-w = 4 * scaleFactor + 1 * scaleFactor;
+const w = 4 * scaleFactor + 1 * scaleFactor;
 ```
 
 Then factoring out the scaleFactor, we get this:
 
 ```js
-w = (4 + 1) * scaleFactor;
+const w = (4 + 1) * scaleFactor;
 ```
 
 Which is exactly the same as the `(z + 1) * scaleFactor` that we used in the previous example.
@@ -540,23 +529,12 @@ In the box demo, an additional `computeSimpleProjectionMatrix()` method is added
 
 ```js
 CubeDemo.prototype.computeSimpleProjectionMatrix = function (scaleFactor) {
+  // prettier-ignore
   this.transforms.projection = [
-    1,
-    0,
-    0,
-    0,
-    0,
-    1,
-    0,
-    0,
-    0,
-    0,
-    1,
-    scaleFactor,
-    0,
-    0,
-    0,
-    scaleFactor,
+    1, 0, 0, 0,
+    0, 1, 0, 0,
+    0, 0, 1, scaleFactor,
+    0, 0, 0, scaleFactor,
   ];
 };
 ```
@@ -622,23 +600,12 @@ MDN.perspectiveMatrix = function (
   const f = 1.0 / Math.tan(fieldOfViewInRadians / 2);
   const rangeInv = 1 / (near - far);
 
+  // prettier-ignore
   return [
-    f / aspectRatio,
-    0,
-    0,
-    0,
-    0,
-    f,
-    0,
-    0,
-    0,
-    0,
-    (near + far) * rangeInv,
-    -1,
-    0,
-    0,
-    near * far * rangeInv * 2,
-    0,
+    f / aspectRatio, 0, 0, 0,
+    0, f, 0, 0,
+    0, 0, (near + far) * rangeInv, -1,
+    0, 0, near * far * rangeInv * 2, 0,
   ];
 };
 ```

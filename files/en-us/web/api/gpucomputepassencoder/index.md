@@ -46,7 +46,7 @@ A `GPUComputePassEncoder` object instance is created via the {{domxref("GPUComma
 In our [basic compute demo](https://mdn.github.io/dom-examples/webgpu-compute-demo/), several commands are recorded via a {{domxref("GPUCommandEncoder")}}. Most of these commands originate from the `GPUComputePassEncoder` created via {{domxref("GPUCommandEncoder.beginComputePass()")}}.
 
 ```js
-// ...
+// …
 
 // Create GPUCommandEncoder to encode commands to issue to the GPU
 const commandEncoder = device.createCommandEncoder();
@@ -74,7 +74,7 @@ commandEncoder.copyBufferToBuffer(
 // End frame by passing array of command buffers to command queue for execution
 device.queue.submit([commandEncoder.finish()]);
 
-// ...
+// …
 ```
 
 ## Specifications

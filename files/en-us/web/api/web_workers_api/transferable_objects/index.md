@@ -91,6 +91,7 @@ Some of the items that various specifications indicate can be _transferred_ are 
 - {{domxref("RTCDataChannel")}}
 - {{domxref("MediaSourceHandle")}}
 - {{domxref("MIDIAccess")}}
+- {{domxref("MediaStreamTrack")}}
 
 > [!NOTE]
 > Transferable objects are marked up in [Web IDL files](https://github.com/w3c/webref/tree/main/ed/idl) with the attribute `[Transferable]`.

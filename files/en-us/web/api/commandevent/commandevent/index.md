@@ -3,12 +3,10 @@ title: "CommandEvent: CommandEvent() constructor"
 short-title: CommandEvent()
 slug: Web/API/CommandEvent/CommandEvent
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.CommandEvent.CommandEvent
 ---
 
-{{APIRef("Invoker Commands API")}}{{SeeCompatTable}}
+{{APIRef("Invoker Commands API")}}
 
 The **`CommandEvent()`** constructor creates a new {{domxref("CommandEvent")}} object.
 

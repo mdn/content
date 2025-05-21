@@ -17,13 +17,13 @@ git clone https://github.com/webmproject/libwebp
 
 To start off simple, expose `WebPGetEncoderVersion()` from `encode.h` to JavaScript by writing a C file called `webp.c`:
 
-```cpp
+```c
 #include "emscripten.h"
 #include "src/webp/encode.h"
 
 EMSCRIPTEN_KEEPALIVE
 int version() {
-  return WebPGetEncoderVersion();
+    return WebPGetEncoderVersion();
 }
 ```
 
@@ -87,17 +87,17 @@ async function loadImage(src) {
 
 Now it's "only" a matter of copying the data from JavaScript into Wasm. For that, you need to expose two additional functions — one that allocates memory for the image inside Wasm and one that frees it up again:
 
-```cpp
+```c
 #include <stdlib.h> // required for malloc definition
 
 EMSCRIPTEN_KEEPALIVE
 uint8_t* create_buffer(int width, int height) {
-  return malloc(width * height * 4 * sizeof(uint8_t));
+    return malloc(width * height * 4 * sizeof(uint8_t));
 }
 
 EMSCRIPTEN_KEEPALIVE
 void destroy_buffer(uint8_t* p) {
-  free(p);
+    free(p);
 }
 ```
 
@@ -117,7 +117,7 @@ const api = {
 const image = await loadImage("./image.jpg");
 const p = api.create_buffer(image.width, image.height);
 Module.HEAP8.set(image.data, p);
-// ... call encoder ...
+// … call encoder …
 api.destroy_buffer(p);
 ```
 
@@ -127,17 +127,17 @@ The image is now available in Wasm. It is time to call the WebP encoder to do it
 
 The result of the encoding operation is an output buffer and its length. Because functions in C can't have arrays as return types (unless you allocate memory dynamically), this example resorts to a static global array. This may not be clean C. In fact, it relies on Wasm pointers being 32 bits wide. But this is a fair shortcut for keeping things simple:
 
-```cpp
+```c
 int result[2];
 EMSCRIPTEN_KEEPALIVE
 void encode(uint8_t* img_in, int width, int height, float quality) {
-  uint8_t* img_out;
-  size_t size;
+    uint8_t* img_out;
+    size_t size;
 
-  size = WebPEncodeRGBA(img_in, width, height, width * 4, quality, &img_out);
+    size = WebPEncodeRGBA(img_in, width, height, width * 4, quality, &img_out);
 
-  result[0] = (int)img_out;
-  result[1] = size;
+    result[0] = (int)img_out;
+    result[1] = size;
 }
 
 EMSCRIPTEN_KEEPALIVE

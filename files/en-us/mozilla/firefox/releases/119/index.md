@@ -14,11 +14,11 @@ This article provides information about the changes in Firefox 119 that affect d
 
 #### Removals
 
-- The {{HTMLElement('input')}} element no longer supports the non-standard `mozactionhint` attribute. Use [`enterkeyhint`](/en-US/docs/Web/HTML/Global_attributes/enterkeyhint) instead. (See [Firefox bug 1735980](https://bugzil.la/1735980) for more details.)
+- The {{HTMLElement('input')}} element no longer supports the non-standard `mozactionhint` attribute. Use [`enterkeyhint`](/en-US/docs/Web/HTML/Reference/Global_attributes/enterkeyhint) instead. (See [Firefox bug 1735980](https://bugzil.la/1735980) for more details.)
 
 ### CSS
 
-- The {{cssxref("attr")}} CSS function fallback value is now supported. This allows the setting of a fallback value to be used if the [global attribute](/en-US/docs/Web/HTML/Global_attributes) is missing ([Firefox bug 1448248](https://bugzil.la/1448248)).
+- The {{cssxref("attr")}} CSS function fallback value is now supported. This allows the setting of a fallback value to be used if the [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) is missing ([Firefox bug 1448248](https://bugzil.la/1448248)).
 
 ### JavaScript
 
@@ -45,7 +45,7 @@ This article provides information about the changes in Firefox 119 that affect d
 
 #### DOM
 
-- [ARIA](/en-US/docs/Web/Accessibility/ARIA) reflection is now supported by default for attributes that do not reference other elements; only non-IDREF attributes are reflected. You can now get and set ARIA attributes on DOM elements directly via JavaScript APIs, rather than by using `setAttribute` and `getAttribute`. For example, `buttonElement.ariaPressed = "true";` is now supported in addition to `buttonElement.setAttribute("aria-pressed", "true");` ([Firefox bug 1785412](https://bugzil.la/1785412)).
+- [ARIA](/en-US/docs/Web/Accessibility/ARIA) reflection is now supported by default for attributes that do not reference other elements; only non-ID-reference attributes are reflected. You can now get and set ARIA attributes on DOM elements directly via JavaScript APIs, rather than by using `setAttribute` and `getAttribute`. For example, `buttonElement.ariaPressed = "true";` is now supported in addition to `buttonElement.setAttribute("aria-pressed", "true");` ([Firefox bug 1785412](https://bugzil.la/1785412)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 

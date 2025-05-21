@@ -19,7 +19,7 @@ There are two types of custom element:
 - **Customized built-in elements** inherit from standard HTML elements such as {{domxref("HTMLImageElement")}} or {{domxref("HTMLParagraphElement")}}. Their implementation extends the behavior of select instances of the standard element.
 
   > [!NOTE]
-  > Safari does not plan to support custom built-in elements. See the [`is` attribute](/en-US/docs/Web/HTML/Global_attributes/is) for more information.
+  > Safari does not plan to support custom built-in elements. See the [`is` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/is) for more information.
 
 ## Implementing a custom element
 
@@ -55,10 +55,11 @@ Once your custom element is registered, the browser will call certain methods of
 
 Custom element lifecycle callbacks include:
 
-- `connectedCallback()`: called each time the element is added to the document. The specification recommends that, as far as possible, developers should implement custom element setup in this callback rather than the constructor.
-- `disconnectedCallback()`: called each time the element is removed from the document.
-- `adoptedCallback()`: called each time the element is moved to a new document.
-- `attributeChangedCallback()`: called when attributes are changed, added, removed, or replaced. See [Responding to attribute changes](#responding_to_attribute_changes) for more details about this callback.
+- `connectedCallback()`: Called each time the element is added to the document. The specification recommends that, as far as possible, developers should implement custom element setup in this callback rather than the constructor.
+- `disconnectedCallback()`: Called each time the element is removed from the document.
+- `connectedMoveCallback()`: When defined, this is called _instead of_ `connectedCallback()` and `disconnectedCallback()` each time the element is moved to a different place in the DOM via {{domxref("Element.moveBefore()")}}. Use this to avoid running initialization/cleanup code in the `connectedCallback()` and `disconnectedCallback()` callbacks when the element is not actually being added to or removed from the DOM. See [Lifecycle callbacks and state-preserving moves](#lifecycle_callbacks_and_state-preserving_moves) for more details.
+- `adoptedCallback()`: Called each time the element is moved to a new document.
+- `attributeChangedCallback()`: Called when attributes are changed, added, removed, or replaced. See [Responding to attribute changes](#responding_to_attribute_changes) for more details about this callback.
 
 Here's a minimal custom element that logs these lifecycle events:
 
@@ -80,6 +81,10 @@ class MyCustomElement extends HTMLElement {
     console.log("Custom element removed from page.");
   }
 
+  connectedMoveCallback() {
+    console.log("Custom element moved with moveBefore()");
+  }
+
   adoptedCallback() {
     console.log("Custom element moved to new page.");
   }
@@ -90,6 +95,24 @@ class MyCustomElement extends HTMLElement {
 }
 
 customElements.define("my-custom-element", MyCustomElement);
+```
+
+#### Lifecycle callbacks and state-preserving moves
+
+The position of a custom element in the DOM can be manipulated just like any regular HTML element, but there are lifecycle side-effects to consider.
+
+Each time a custom element is moved (via methods such as {{domxref("Element.moveBefore()")}} or {{domxref("Node.insertBefore()")}}), the `disconnectedCallback()` and `connectedCallback()` lifecycle callbacks are fired, because the element is disconnected from and reconnected to the DOM.
+
+This might be your intended behavior. However, since these callbacks are typically used to implement any required initialization or cleanup code to run at the start or end of the element's lifecycle, running them when the element is moved (rather than removed or inserted) may cause problems with its state. You might for example remove some stored data that the element still needs.
+
+If you want to preserve the element's state, you can do so by defining a `connectedMoveCallback()` lifecycle callback inside the element class, and then using the {{domxref("Element.moveBefore()")}} method to move the element (instead of similar methods such as {{domxref("Node.insertBefore()")}}). This causes the `connectedMoveCallback()` to run instead of `connectedCallback()` and `disconnectedCallback()`.
+
+You could add an empty `connectedMoveCallback()` to stop the other two callbacks running, or include some custom logic to handle the move:
+
+```js
+connectedMoveCallback() {
+  console.log("Custom move-handling logic here.");
+}
 ```
 
 ## Registering a custom element
@@ -121,7 +144,7 @@ customElements.define("popup-info", PopupInfo);
 
 Once you've defined and registered a custom element, you can use it in your code.
 
-To use a customized built-in element, use the built-in element but with the custom name as the value of the [`is`](/en-US/docs/Web/HTML/Global_attributes/is) attribute:
+To use a customized built-in element, use the built-in element but with the custom name as the value of the [`is`](/en-US/docs/Web/HTML/Reference/Global_attributes/is) attribute:
 
 ```html
 <p is="word-count"></p>
@@ -428,7 +451,7 @@ Now let's have a look at a customized built in element example. This example ext
 - [See the source code](https://github.com/mdn/web-components-examples/tree/main/expanding-list-web-component)
 
 > [!NOTE]
-> Please see the [`is`](/en-US/docs/Web/HTML/Global_attributes/is) attribute reference for caveats on implementation reality of custom built-in elements.
+> Please see the [`is`](/en-US/docs/Web/HTML/Reference/Global_attributes/is) attribute reference for caveats on implementation reality of custom built-in elements.
 
 First of all, we define our element's class:
 
@@ -512,7 +535,7 @@ Using the built-in element in a web document also looks somewhat different:
 
 You use a `<ul>` element as normal, but specify the name of the custom element inside the `is` attribute.
 
-Note that in this case we must ensure that the script defining our custom element is executed after the DOM has been fully parsed, because `connectedCallback()` is called as soon as the expanding list is added to the DOM, and at that point its children have not been added yet, so the `querySelectorAll()` calls will not find any items. One way to ensure this is to add the [defer](/en-US/docs/Web/HTML/Element/script#defer) attribute to the line that includes the script:
+Note that in this case we must ensure that the script defining our custom element is executed after the DOM has been fully parsed, because `connectedCallback()` is called as soon as the expanding list is added to the DOM, and at that point its children have not been added yet, so the `querySelectorAll()` calls will not find any items. One way to ensure this is to add the [defer](/en-US/docs/Web/HTML/Reference/Elements/script#defer) attribute to the line that includes the script:
 
 ```html
 <script src="main.js" defer></script>

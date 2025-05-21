@@ -108,7 +108,7 @@ The following criteria must be met when calling **`createSampler()`**, otherwise
 The following snippet creates a `GPUSampler` that does trilinear filtering and repeats texture coordinates:
 
 ```js
-// ...
+// …
 
 const sampler = device.createSampler({
   addressModeU: "repeat",

@@ -3,9 +3,8 @@ title: The box model
 short-title: Box model
 slug: Learn_web_development/Core/Styling_basics/Box_model
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics")}}
 
@@ -291,7 +290,7 @@ Can you change the size of the second box (by adding CSS to the `.alternate` cla
 {{EmbedLiveSample("box-models", "", "400px")}}
 
 > [!NOTE]
-> You can find a solution for this task [here](https://github.com/mdn/css-examples/blob/main/learn/solutions.md#the-box-model).
+> You can find a solution for this task [in our css-examples repo](https://github.com/mdn/css-examples/blob/main/learn/solutions.md#the-box-model).
 
 ### Use browser DevTools to view the box model
 
@@ -617,7 +616,7 @@ li {
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: The box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_Model_Tasks).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: The box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Box_model).
 
 ## Summary
 

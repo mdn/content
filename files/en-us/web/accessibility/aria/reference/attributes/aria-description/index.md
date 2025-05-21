@@ -1,5 +1,6 @@
 ---
-title: aria-description
+title: "ARIA: aria-description attribute"
+short-title: aria-description
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-description
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-description
@@ -52,6 +53,6 @@ Used in **ALL** roles.
 
 ## See also
 
-- [HTML `title` attribute](/en-US/docs/Web/HTML/Global_attributes/title)
+- [HTML `title` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/title)
 - [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
 - [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details)

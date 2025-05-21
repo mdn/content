@@ -14,10 +14,10 @@ The `loadingdone` event fires when the document has loaded all fonts.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("loadingdone", (event) => {});
+```js-nolint
+addEventListener("loadingdone", (event) => { })
 
-onloadingdone = (event) => {};
+onloadingdone = (event) => { }
 ```
 
 ## Example

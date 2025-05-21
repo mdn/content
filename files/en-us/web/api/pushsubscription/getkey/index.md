@@ -63,7 +63,7 @@ reg.pushManager.getSubscription().then((subscription) => {
   const key = subscription.getKey("p256dh");
   const auth = subscription.getKey("auth");
 
-  // ...
+  // …
 });
 ```
 

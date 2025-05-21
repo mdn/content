@@ -94,7 +94,7 @@ Console.WriteLine("A client connected.");
 
 NetworkStream stream = client.GetStream();
 
-//enter to an infinite cycle to be able to handle every change in stream
+// Enter to an infinite cycle to be able to handle every change in stream
 while (true) {
     while (!stream.DataAvailable);
 
@@ -123,7 +123,7 @@ byte[] bytes = new byte[client.Available];
 
 stream.Read(bytes, 0, bytes.Length);
 
-//translate bytes of request to string
+// Translate bytes of request to string
 String data = Encoding.UTF8.GetString(bytes);
 
 if (Regex.IsMatch(data, "^GET")) {
@@ -282,29 +282,29 @@ class Server {
                     mask = (bytes[1] & 0b10000000) != 0; // must be true, "All messages from the client to the server have this bit set"
                 int opcode = bytes[0] & 0b00001111; // expecting 1 - text message
                 ulong offset = 2,
-                      msglen = bytes[1] & (ulong)0b01111111;
+                      msgLen = bytes[1] & (ulong)0b01111111;
 
-                if (msglen == 126) {
+                if (msgLen == 126) {
                     // bytes are reversed because websocket will print them in Big-Endian, whereas
                     // BitConverter will want them arranged in little-endian on windows
-                    msglen = BitConverter.ToUInt16(new byte[] { bytes[3], bytes[2] }, 0);
+                    msgLen = BitConverter.ToUInt16(new byte[] { bytes[3], bytes[2] }, 0);
                     offset = 4;
-                } else if (msglen == 127) {
+                } else if (msgLen == 127) {
                     // To test the below code, we need to manually buffer larger messages — since the NIC's autobuffering
                     // may be too latency-friendly for this code to run (that is, we may have only some of the bytes in this
                     // websocket frame available through client.Available).
-                    msglen = BitConverter.ToUInt64(new byte[] { bytes[9], bytes[8], bytes[7], bytes[6], bytes[5], bytes[4], bytes[3], bytes[2] },0);
+                    msgLen = BitConverter.ToUInt64(new byte[] { bytes[9], bytes[8], bytes[7], bytes[6], bytes[5], bytes[4], bytes[3], bytes[2] },0);
                     offset = 10;
                 }
 
-                if (msglen == 0) {
-                    Console.WriteLine("msglen == 0");
+                if (msgLen == 0) {
+                    Console.WriteLine("msgLen == 0");
                 } else if (mask) {
-                    byte[] decoded = new byte[msglen];
+                    byte[] decoded = new byte[msgLen];
                     byte[] masks = new byte[4] { bytes[offset], bytes[offset + 1], bytes[offset + 2], bytes[offset + 3] };
                     offset += 4;
 
-                    for (ulong i = 0; i < msglen; ++i)
+                    for (ulong i = 0; i < msgLen; ++i)
                         decoded[i] = (byte)(bytes[offset + i] ^ masks[i % 4]);
 
                     string text = Encoding.UTF8.GetString(decoded);

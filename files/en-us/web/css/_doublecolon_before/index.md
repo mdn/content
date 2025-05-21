@@ -238,7 +238,7 @@ li[aria-current="step"]::before {
 
 The `::before::marker` [nested pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements#nesting_pseudo-elements) selects the list {{CSSxRef("::marker")}} of an `::after` pseudo-element that is itself a list item, that is, it has its {{CSSxRef("display")}} property set to `list-item`.
 
-In this demo, we generate extra [list items](/en-US/docs/Web/HTML/Element/li) before and after a list navigation menu using `::before` and `::after` (setting them to `display: list-item` so they behave like list items). We then use `ul::before::marker` and `ul::after::marker` to give their list markers a different color.
+In this demo, we generate extra [list items](/en-US/docs/Web/HTML/Reference/Elements/li) before and after a list navigation menu using `::before` and `::after` (setting them to `display: list-item` so they behave like list items). We then use `ul::before::marker` and `ul::after::marker` to give their list markers a different color.
 
 #### HTML
 

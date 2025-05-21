@@ -2,9 +2,8 @@
 title: "Challenge: Image gallery"
 slug: Learn_web_development/Core/Scripting/Image_gallery
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Event_bubbling","Learn_web_development/Core/Scripting/Object_basics", "Learn_web_development/Core/Scripting")}}
 

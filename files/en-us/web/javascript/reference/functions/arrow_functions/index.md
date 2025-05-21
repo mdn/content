@@ -377,7 +377,7 @@ promise
     // …
   });
 
-// Parameterless arrow functions that are visually easier to parse
+// Arrow functions without parameters
 setTimeout(() => {
   console.log("I happen sooner");
   setTimeout(() => {

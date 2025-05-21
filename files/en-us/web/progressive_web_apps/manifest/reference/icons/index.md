@@ -3,9 +3,8 @@ title: icons
 slug: Web/Progressive_web_apps/Manifest/Reference/icons
 page-type: web-manifest-member
 browser-compat: manifests.webapp.icons
+sidebar: pwasidebar
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 The `icons` manifest member is used to specify one or more image files that define the icons to represent your web application.
 
@@ -67,7 +66,7 @@ The `icons` manifest member is used to specify one or more image files that defi
         For vector formats like SVG, you can use `any` to indicate scalability.
         If `sizes` is not specified, the selection and display of the icon may vary depending on the browser's implementation.
 
-        Note that the format of `sizes` is similar to the HTML `<link>` element's [`sizes`](/en-US/docs/Web/HTML/Element/link#sizes) attribute.
+        Note that the format of `sizes` is similar to the HTML `<link>` element's [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/link#sizes) attribute.
 
     - `type` {{Optional_Inline}}
 
