@@ -16,7 +16,7 @@ Note that for compressed requests of unknown total size, `loaded` might contain 
 
 ## Value
 
-A `double`.
+A floating-point number.
 
 ## Specifications
 

@@ -18,7 +18,7 @@ property is `false`, this value is meaningless and should be ignored.
 
 ## Value
 
-A `double`.
+A floating-point number.
 
 ## Specifications
 
