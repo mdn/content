@@ -366,6 +366,7 @@ Lesh
 Lexi
 Leyla
 Lianghekou
+Libera.Chat
 Libertinus
 Lighttpd
 Lindenberg

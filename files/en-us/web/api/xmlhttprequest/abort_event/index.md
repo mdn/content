@@ -112,7 +112,7 @@ function runXHR(url) {
 }
 
 xhrButtonSuccess.addEventListener("click", () => {
-  runXHR("my-picture.jpg");
+  runXHR("/shared-assets/images/examples/balloon.jpg");
 });
 
 xhrButtonError.addEventListener("click", () => {
@@ -120,7 +120,7 @@ xhrButtonError.addEventListener("click", () => {
 });
 
 xhrButtonAbort.addEventListener("click", () => {
-  runXHR("my-picture.jpg").abort();
+  runXHR("/shared-assets/images/examples/balloon.jpg").abort();
 });
 ```
 
