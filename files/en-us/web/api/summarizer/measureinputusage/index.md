@@ -47,7 +47,7 @@ A {{jsxref("Promise")}} that fulfills with a number specifying the {{domxref("Su
 
 ## Examples
 
-### Checking if you have enough quota
+### Checking if you have sufficient quota
 
 In the below snippet, we create a new `Summarizer` instance using {{domxref("Summarizer.create_static", "create()")}}, then return the total input quota via {{domxref("Summarizer.inputQuota", "inputQuota")}} and the input quota usage for a summarizing a particular text string via `measureInputUsage()`.
 
