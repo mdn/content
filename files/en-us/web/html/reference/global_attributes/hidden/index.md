@@ -39,9 +39,9 @@ The attribute takes any one of the following values:
 
 - the keyword `hidden`
 - the keyword `until-found`
-- an empty string
+- an empty string or no value
 
-Invalid `hidden=` values also set an element to the _hidden_ state, meaning, all the following elements have a [_hidden_](#the_hidden_state) state:
+Invalid `hidden` attribute values also place the element in the _hidden_ state. Therefore, all the following elements are in the [_hidden_](#the_hidden_state) state:
 
 ```html
 <span hidden>I'm hidden</span>
@@ -66,32 +66,32 @@ For instance, elements styled `display: block` will be displayed despite the `hi
 
 ### The hidden until found state
 
-In the _hidden until found_ state, the element is hidden but its content will be accessible to the browser's "find in page" feature or to fragment navigation.
+In the _hidden until found_ state, the element is hidden but its content will be accessible to the browser's "Find in page" feature or to fragment navigation.
 When these features cause a scroll to an element in a _hidden until found_ subtree, the browser will:
 
 - fire a [`beforematch`](/en-US/docs/Web/API/Element/beforematch_event) event on the hidden element
 - remove the `hidden` attribute from the element
 - scroll to the element
 
-This enables a developer to collapse a section of content, but make it searchable and accessible through navigation.
+This lets you collapse a section of content while still allowing users to find it through search or navigation.
 
 Browsers typically implement _hidden until found_ using {{cssxref("content-visibility", "content-visibility: hidden")}}.
-This means that, unlike elements in the _hidden_ state, elements in the _hidden until found_ state will have generated boxes, and:
+This means that, unlike elements in the _hidden_ state, elements in the _hidden until-found_ state generate boxes, and:
 
-- the element will participate in page layout
-- margin, borders, padding, and background for the element will be rendered.
+- they participate in page layout
+- their margin, borders, padding, and background are rendered
 
 Also, the element needs to be affected by [layout containment](/en-US/docs/Web/CSS/CSS_containment) in order to be revealed.
-If the element in the _hidden until found_ state has a `display` value of `none`, `contents`, or `inline`, then the element will not be revealed by "find in page" or fragment navigation.
+If the element in the _hidden until-found_ state has a `display` value of `none`, `contents`, or `inline`, then the element will not be revealed by "Find in page" or fragment navigation.
 
-### Usage notes
+## Usage notes
 
 The `hidden` attribute must not be used to hide content just from one presentation.
 If something is marked hidden, it is hidden from all presentations, including, for instance, screen readers.
 
-Hidden elements shouldn't be linked from non-hidden elements. For example, it would be incorrect to use the `href` attribute to link to a section marked with the `hidden` attribute. If the content is not applicable or relevant, then there is no reason to link to it.
+Hidden elements shouldn't be linked from visible elements. For example, it would be incorrect to use the `href` attribute to link to a section marked with the `hidden` attribute. If the content is not applicable or relevant, it shouldn't be linked.
 
-It would be fine, however, to use the ARIA [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) attribute to refer to descriptions that are themselves hidden. While hiding the descriptions implies that they are not useful on their own, they could be written in such a way that they are useful in the specific context of being referenced from the element that they describe.
+It is fine, however, to use the ARIA [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) attribute to refer to hidden descriptions. While hiding the descriptions implies that they're not useful on their own, they can provide helpful context when referenced in this way.
 
 Similarly, a canvas element with the `hidden` attribute could be used by a scripted graphics engine as an off-screen buffer, and a form control could refer to a hidden form element using its form attribute.
 
@@ -101,7 +101,7 @@ Elements that are descendants of a hidden element are still active, which means 
 
 ### Using the hidden attribute
 
-In this example we have three {{HTMLElement("div")}} elements. The first and the third are not hidden, while the second has a `hidden` attribute.
+In this example, we have three {{HTMLElement("div")}} elements. The first and the third are not hidden, while the second has a `hidden` attribute.
 Note that the hidden element has no generated box.
 
 ```html
@@ -123,14 +123,14 @@ div {
 
 {{EmbedLiveSample("using_the_hidden_attribute", "", 300)}}
 
-### Using until-found
+### Using the until-found value
 
-In this example we have three {{HTMLElement("div")}} elements.
-The first and the third are not hidden, while the second has `hidden="until-found"` and `id="until-found-box"` attributes.
-The _hidden until found_ element has a dotted red border and a gray background.
+In this example, we have three {{HTMLElement("div")}} elements.
+The first and the third are visible, while the second has the `hidden="until-found"` and `id="until-found-box"` attributes.
+The element with a _hidden until found_ state has a dotted red border and a gray background.
 
-We also have a link whose target is the `"until-found-box"` fragment and JavaScript that listens for the `beforematch` event firing on the hidden until found element.
-The event handler changes the text content of the box as illustration of an action that can be taken when _hidden until found_ state is about to be removed.
+We also have a link that targets the `"until-found-box"` fragment and JavaScript that listens for the `beforematch` event firing on that hidden element.
+The event handler changes the text content of the box to illustrate an action that can occur when the _hidden until found_ state is about to be removed.
 
 #### HTML
 
@@ -190,7 +190,7 @@ document.querySelector("#reset").addEventListener("click", () => {
 
 #### Result
 
-Clicking the "Go to hidden content" button navigates to the _hidden until found_ element. The `beforematch` event fires, the text content is updated, and the element content is displayed.
+Clicking the "Go to hidden content" link navigates to the _hidden until found_ element. The `beforematch` event fires, the text content is updated, and the element becomes visible.
 Note that although the content of the element is hidden, the element still has a generated box, occupying space in the layout and with background and borders rendered.
 
 To run the example again, click "Reset".
