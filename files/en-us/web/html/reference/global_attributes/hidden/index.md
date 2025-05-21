@@ -69,9 +69,9 @@ For instance, elements styled `display: block` will be displayed despite the `hi
 In the _hidden until found_ state, the element is hidden but its content will be accessible to the browser's "Find in page" feature or to fragment navigation.
 When these features cause a scroll to an element in a _hidden until found_ subtree, the browser will:
 
-- fire a [`beforematch`](/en-US/docs/Web/API/Element/beforematch_event) event on the hidden element
-- remove the `hidden` attribute from the element
-- scroll to the element
+1. Fire a [`beforematch`](/en-US/docs/Web/API/Element/beforematch_event) event on the hidden element
+2. Remove the `hidden` attribute from the element
+3. Scroll to the element
 
 This lets you collapse a section of content while still allowing users to find it through search or navigation.
 
@@ -95,7 +95,15 @@ It is fine, however, to use the ARIA [`aria-describedby`](/en-US/docs/Web/Access
 
 Similarly, a canvas element with the `hidden` attribute could be used by a scripted graphics engine as an off-screen buffer, and a form control could refer to a hidden form element using its form attribute.
 
-Elements that are descendants of a hidden element are still active, which means that script elements can still execute and form elements can still submit.
+Finally, note that elements that are descendants of a hidden element are still active, which means that script elements can still execute, and form elements can still submit:
+
+```html
+<div hidden>
+  <script>
+    console.warn("Boo! I'm hidden *and* running!");
+  </script>
+</div>
+```
 
 ## Examples
 
