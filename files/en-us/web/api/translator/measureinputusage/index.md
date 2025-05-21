@@ -32,6 +32,8 @@ measureInputUsage(input, options)
 
 A {{jsxref("Promise")}} that fulfills with a number specifying the {{domxref("Translator.inputQuota", "inputQuota")}} usage of the given input text.
 
+This number is implementation-dependant; if it is less than the {{domxref("Translator.inputQuota", "inputQuota")}}, the string can be translated.
+
 ### Exceptions
 
 - `NotAllowedError` {{domxref("DOMException")}}

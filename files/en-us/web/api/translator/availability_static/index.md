@@ -23,9 +23,9 @@ Translator.availability(options)
   - : An object specifying configuration options for the `Translator`. Possible values include:
 
     - `sourceLanguage`
-      - : A string specifying the language of the input text to be translated, which should be a valid [BCP 47 language tag](https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags) (as specified in [RFC 5646](https://datatracker.ietf.org/doc/html/rfc5646)). Defaults to `en`.
+      - : A string specifying the language of the input text to be translated, which should be a valid [BCP 47 language tag](https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags) (as specified in [RFC 5646](https://datatracker.ietf.org/doc/html/rfc5646)).
     - `targetLanguage`
-      - : A string specifying the language that the input text will be translated into, which should be valid BCP 47 language tag. Defaults to `en`.
+      - : A string specifying the language that the input text will be translated into, which should be valid BCP 47 language tag.
 
 ### Return value
 
@@ -40,7 +40,7 @@ Possible values include:
 - `downloading`
   - : The browser supports the given configuration, but it has to finish an ongoing download before it can proceed.
 - `unavailable`
-  - : The browser does not support the given configuration.
+  - : The browser does not support the given configuration. This value is also returned if the specified `sourceLanguage` and `targetLanguage` are the same.
 
 ### Exceptions
 

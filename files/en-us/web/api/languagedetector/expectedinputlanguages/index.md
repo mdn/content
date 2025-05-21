@@ -10,7 +10,7 @@ browser-compat: api.LanguageDetector.expectedInputLanguages
 
 {{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}
 
-The **`expectedInputLanguages`** read-only property of the {{domxref("LanguageDetector")}} interface returns the expected languages to be detected in the input text.
+The **`expectedInputLanguages`** read-only property of the {{domxref("LanguageDetector")}} interface returns the expected languages to be detected in the input text. Specifying expected input languages helps improve the accuracy of the language detection.
 
 A `LanguageDetector` instance's `expectedInputLanguages` are set when creating it via a {{domxref("LanguageDetector.create_static", "create()")}} call.
 

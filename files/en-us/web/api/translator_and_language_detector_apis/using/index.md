@@ -75,7 +75,7 @@ const translation = await translator.translate(myTextString);
 
 This returns a string containing the translation.
 
-There is also a streaming version of the `translate()` method available — {{domxref("Translator.translateStreaming()")}} — that allows you to return the translation as a {{domxref("ReadableStream")}}:
+There is also a streaming version of the `translate()` method available — {{domxref("Translator.translateStreaming()")}} — that allows you to return the translation as a {{domxref("ReadableStream")}}. This can be useful when translating very large bodies of text:
 
 ```js
 const stream = translator.translateStreaming((myTextString);
@@ -111,7 +111,7 @@ These methods return an emumerated value indicating whether support is, or will 
 - `available` means that the implementation supports the requested options without requiring any new downloads.
 - `unavailable` means that the implementation doesn't support the requested options.
 
-If a download is required, it will be started automatically by the browser once a `LanguageDetector` or `Translator` instance is created using the relevant `create()` method. You can track download progress automatically using a [monitor](#monitoring_download_progress_and_usage).
+If a download is required, it will be started automatically by the browser once a `LanguageDetector` or `Translator` instance is created using the relevant `create()` method. You can track download progress automatically using a [monitor](#monitoring_download_progress).
 
 ## Cancelling operations and destroying instances
 
@@ -140,7 +140,7 @@ detector.destroy();
 
 It makes sense to destroy these objects if they are no longer going to be used, as they tie up significant resources in their handling.
 
-## Monitoring download progress and usage
+## Monitoring download progress
 
 If the AI model for a particular detection or translation is downloading (`availability()` returns `downloadable` and `downloading`), it is helpful to provide the user with feedback to tell them how long they need to wait before the operation completes.
 
@@ -160,18 +160,35 @@ translator = await Translator.create({
 });
 ```
 
-It is also worth mentioning that some implementations have an input quota that governs how many operations a website can request in a given period. The total quota can be accessed via the {{domxref("Translator.inputQuota")}}/{{domxref("LanguageDetector.inputQuota")}} properties, while the quota usage for a particular translation or language detection can be returned using the {{domxref("Translator.measureInputUsage()")}}/{{domxref("LanguageDetector.measureInputUsage()")}} methods:
+If the specified languages are not supported, a download will not be initiated, and a `NotSupportedError` {{domxref("DOMException")}} will be thrown.
 
-For example:
+## Usage quotas
+
+Some implementations have an input quota that governs how many operations a website can request in a given period. The total quota can be accessed via the {{domxref("Translator.inputQuota")}}/{{domxref("LanguageDetector.inputQuota")}} properties, while the quota usage for a particular translation or language detection can be returned using the {{domxref("Translator.measureInputUsage()")}}/{{domxref("LanguageDetector.measureInputUsage()")}} methods:
+
+For example, the below snippet returns the total input quota via `Translator.inputQuota` and the input quota usage for a translating a particular text string via `Translator.measureInputUsage()`.
+
+We then test to see if the individual input usage for that string is greater than the total available quota. If so, we throw an appropriate error; it not, we commence translating the string using {{domxref("Translator.translate", "translate()")}}.
 
 ```js
-// Return total available quota
-console.log(translator.inputQuota);
+const translator = await Translator.create({
+  sourceLanguage: "en",
+  targetLanguage: "ja",
+});
 
-// Return quota usage for translating this particular string
-const usage = await translator.measureInputUsage(myTextString);
-console.log(usage);
+const totalInputQuota = translator.inputQuota;
+const inputUsage = await translator.measureInputUsage(myTextString);
+
+if (inputUsage > totalInputQuota) {
+  throw new Error("Boo, not enough quota left to translate.");
+} else {
+  console.log("Yay, enough quota left to translate.");
+  const translation = await translator.translate(myTextString);
+  // ...
+}
 ```
+
+If you try to run a language detection or translation operation that exceeds the available quota, a `QuotaExceededError` {{domxref("DOMException")}} will be thrown.
 
 ## Complete example
 
@@ -337,9 +354,9 @@ async function handleTranslation(e) {
 
 If the test passes, we open a [`try { ... }`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block. We start by checking the availability of the model for translating between the detected input and chosen output languages using the {{domxref("Translator.availability_static", "availability()")}} method:
 
-- If it returns `unavailable`, we print an appropriate error message inside the translate output `<p>`.
+- If it returns `unavailable`, we print an appropriate error message inside the `<p>` with class `translate-output`.
 - If it returns `available`, we create a translator using the {{domxref("Translator.create_static", "create()")}} method, passing it the detected input and chosen output languages. The required AI model is available, so we can use it immediately.
-- If it returns a different value (that is, `downloadable` or `downloading`), we run the same `create()` method call, but this time we include a `monitor` that prints out the percentage of the model downloaded to the translate output `<p>` each time the {{domxref("CreateMonitor/downloadprogress_event", "downloadprogress")}} event fires.
+- If it returns a different value (that is, `downloadable` or `downloading`), we run the same `create()` method call, but this time we include a `monitor` that prints out the percentage of the model downloaded to the `translate-output` `<p>` each time the {{domxref("CreateMonitor/downloadprogress_event", "downloadprogress")}} event fires.
 
 ```js
   try {

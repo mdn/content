@@ -10,7 +10,7 @@ spec-urls: https://webmachinelearning.github.io/translation-api
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Translator and Language Detector APIs")}}
 
-The **Translator and Language Detector APIs** provide functionality to detect the language a body of text is written in and translate text into different languages via a browser's own internal AI model.
+The **Translator and Language Detector APIs** provide functionality to detect the language that text is written in, and to translate text into different languages, via a browser's own internal AI model.
 
 ## Concepts and usage
 
@@ -27,7 +27,9 @@ AI is well-suited to facilitating language detection and translation. The Transl
 - Language detection is done via the {{domxref("LanguageDetector")}} interface. A `LanguageDetector` object instance is created using the {{domxref("LanguageDetector.create_static", "LanguageDetector.create()")}} static method, then the {{domxref("LanguageDetector.detect", "detect()")}} instance method is passed the text string to detect the language for.
 - Translation is done via the {{domxref("Translator")}} interface. A `Translator` object instance is created using the {{domxref("Translator.create_static", "Translator.create()")}} static method, then the {{domxref("Translator.translate", "translate()")}} instance method is passed the text string to translate.
 
-After the above instances have been created, you can remove them again using a `destroy()` instance method (for example, the {{domxref("Translator.destroy()")}}). You can also cancel pending operations using an {{domxref("AbortController")}}.
+You can also cancel pending operations using an {{domxref("AbortController")}}.
+
+The `Translator` and `LanguageDetector` instances consume a lot of resources, so once you're finished with them, you are encouraged to remove them using a `destroy()` instance method (for example, {{domxref("Translator.destroy()")}}).
 
 See [Using the Translator and Language Detector APIs](/en-US/docs/Web/API/Translator_and_Language_Detector_APIs/Using) for a walkthrough of how to use the APIs.
 
@@ -44,6 +46,12 @@ See [Using the Translator and Language Detector APIs](/en-US/docs/Web/API/Transl
   - : Controls access to the language detection functionality. Where a policy specifically disallows its use, any attempts to call the `LanguageDetector` methods will fail with a `NotAllowedError` {{domxref("DOMException")}}.
 - {{httpheader("Permissions-Policy")}}; the {{httpheader("Permissions-Policy/translator", "translator")}} directive
   - : Controls access to the translation functionality. Where a policy specifically disallows its use, any attempts to call the `Translator` methods will fail with a `NotAllowedError` {{domxref("DOMException")}}.
+
+## Security considerations
+
+The specification requires that a user has recently interacted with the page to create `LanguageDetector` and `Translator` objects ([transient user activation](/en-US/docs/Web/Security/User_activation) is required).
+
+In addition, the specification controls access to the API via {{httpheader("Permissions-Policy/language-detector", "language-detector")}} and {{httpheader("Permissions-Policy/translator", "translator")}} {{httpheader("Permissions-Policy")}} directives.
 
 ## Examples
 

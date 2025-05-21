@@ -25,7 +25,7 @@ The **`Translator`** interface of the {{domxref("Translator and Language Detecto
 ## Static methods
 
 - {{domxref("Translator.availability_static", "availability()")}} {{Experimental_Inline}}
-  - : Returns an enumerated value that indicates whether the browser AI model supports a given `Translator` configuration.
+  - : Returns an enumerated value that indicates the availability of the AI model for the given `Translator` configuration.
 - {{domxref("Translator.create_static", "create()")}} {{Experimental_Inline}}
   - : Creates a new `Translator` instance from which to generate translations.
 
