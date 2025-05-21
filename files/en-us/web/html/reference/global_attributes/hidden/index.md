@@ -82,14 +82,16 @@ This means that, unlike elements in the _hidden_ state, elements in the _hidden 
 - their margin, borders, padding, and background are rendered
 
 Also, the element needs to be affected by [layout containment](/en-US/docs/Web/CSS/CSS_containment) in order to be revealed.
-If the element in the _hidden until-found_ state has a `display` value of `none`, `contents`, or `inline`, then the element will not be revealed by "Find in page" or fragment navigation.
+If the element in the _hidden until found_ state has a `display` value of `none`, `contents`, or `inline`, then the element will not be revealed by "Find in page" or fragment navigation.
 
 ## Usage notes
 
 The `hidden` attribute must not be used to hide content just from one presentation.
 If something is marked hidden, it is hidden from all presentations, including, for instance, screen readers.
 
-Hidden elements shouldn't be linked from visible elements. For example, it would be incorrect to use the `href` attribute to link to a section marked with the `hidden` attribute. If the content is not applicable or relevant, it shouldn't be linked.
+Hidden elements shouldn't be linked from visible elements unless using `hidden="until-found"`.
+For example, it would be incorrect to use the `href` attribute to link to a section with the `hidden` attribute.
+If the content is not applicable or relevant, it shouldn't be linked.
 
 It is fine, however, to use the ARIA [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) attribute to refer to hidden descriptions. While hiding the descriptions implies that they're not useful on their own, they can provide helpful context when referenced in this way.
 
