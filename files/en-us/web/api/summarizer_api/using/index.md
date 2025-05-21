@@ -35,8 +35,6 @@ If the browser's AI model does not support the specified input or output languag
 > [!NOTE]
 > See the {{domxref("Summarizer.create_static", "create()")}} reference page for the full list of available options.
 
-Different implementations will likely support different languages.
-
 ## Checking configuration support
 
 Before creating a `Summarizer`, you can check whether your desired configuration is supported by the current browser using the {{domxref("Summarizer.availability_static", "Summarizer.availability()")}} static method. For example:
