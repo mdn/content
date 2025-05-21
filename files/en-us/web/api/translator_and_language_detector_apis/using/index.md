@@ -180,9 +180,9 @@ const totalInputQuota = translator.inputQuota;
 const inputUsage = await translator.measureInputUsage(myTextString);
 
 if (inputUsage > totalInputQuota) {
-  throw new Error("Boo, not enough quota left to translate.");
+  throw new Error("Boo, insufficient quota to translate.");
 } else {
-  console.log("Yay, enough quota left to translate.");
+  console.log("Yay, quota available to translate.");
   const translation = await translator.translate(myTextString);
   // ...
 }
@@ -295,11 +295,11 @@ let detectedLanguage = "";
 
 Next, we use the {{domxref("EventTarget.addEventListener()")}} method to listen to two events:
 
-- `click` events on the `<button>` element; when the form is submitted, the `handleTranslation()` function is called (we're not doing a real form `submit`, as they are disabled in the MDN live example embeds for security purposes).
+- `submit` events on the `<form>` element; when the form is submitted, the `handleTranslation()` function is called.
 - `input` events on the `<textarea>` element; when the current `<textarea>` value is changed, the `detectLanguage()` function is called.
 
 ```js
-SubmitBtn.addEventListener("click", handleTranslation);
+form.addEventListener("submit", handleTranslation);
 textarea.addEventListener("input", detectLanguage);
 ```
 
@@ -336,7 +336,7 @@ async function detectLanguage() {
 }
 ```
 
-Now we define the `handleTranslation()` function. We begin by creating a new {{domxref("FormData")}} object instance containing our `<form>` data name/value pairs. We then run a data validation test, checking whether the detected `<textarea>` content language is the same as the language chosen to translate into (`translateLanguage`). If it is, we print an error message inside the `<p>` with class `translate-output`.
+Now we define the `handleTranslation()` function. After preventing the form's default submission, we create a new {{domxref("FormData")}} object instance containing our `<form>` data name/value pairs. We then run a data validation test, checking whether the detected `<textarea>` content language is the same as the language chosen to translate into (`translateLanguage`). If it is, we print an error message inside the `<p>` with class `translate-output`.
 
 ```js
 async function handleTranslation(e) {
@@ -419,7 +419,7 @@ const translateOutput = document.querySelector(".translate-output");
 const detectedLanguageOutput = document.querySelector(".detected-language");
 let detectedLanguage = "";
 
-submitBtn.addEventListener("click", handleTranslation);
+form.addEventListener("submit", handleTranslation);
 textarea.addEventListener("input", detectLanguage);
 
 async function detectLanguage() {
@@ -507,7 +507,7 @@ async function handleTranslation(e) {
 
 The rendered example looks like this:
 
-{{EmbedLiveSample("translator-example", "100%", "400px")}}
+{{EmbedLiveSample("translator-example", , "750px", , , , , "allow-forms")}}
 
 Try typing a body of text into the `<textarea>`, and note how the detected language and confidence are only reported when the number of characters becomes greater than 20. Choose a translation language different to your input text, then press the submit button to generate an AI-generated translation.
 

@@ -56,9 +56,9 @@ const totalInputQuota = detector.inputQuota;
 const inputUsage = await detector.measureInputUsage(myTextString);
 
 if (inputUsage > totalInputQuota) {
-  throw new Error("Boo, not enough quota left to detect languages.");
+  throw new Error("Boo, insufficient quota to detect languages.");
 } else {
-  console.log("Yay, enough quota left to detect languages.");
+  console.log("Yay, quota available to detect languages.");
   const results = await detector.detect(myTextString);
   // ...
 }
