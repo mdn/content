@@ -18,7 +18,7 @@ A number specifying the available input quota. This number is implementation dep
 
 ## Examples
 
-### Checking if you have enough quota
+### Checking if you have sufficient quota
 
 In the below snippet, we create a new `Summarizer` instance using {{domxref("Summarizer.create_static", "create()")}}, then return the total input quota via `inputQuota` and the input quota usage for a summarizing a particular text string via {{domxref("Summarizer.measureInputUsage", "measureInputUsage()")}}.
 
