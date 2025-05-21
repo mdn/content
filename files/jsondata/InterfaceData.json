@@ -2008,6 +2008,10 @@
       "inh": "",
       "impl": []
     },
+    "LanguageDetector": {
+      "inh": "",
+      "impl": []
+    },
     "LargestContentfulPaint": {
       "inh": "PerformanceEntry",
       "impl": []
@@ -3778,6 +3782,10 @@
     },
     "TransitionEvent": {
       "inh": "Event",
+      "impl": []
+    },
+    "Translator": {
+      "inh": "",
       "impl": []
     },
     "TreeWalker": {

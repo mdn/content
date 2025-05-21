@@ -40,7 +40,7 @@ WebAssembly.instantiateStreaming(source, importObject, compileOptions)
     - `builtins` {{optional_inline}}
       - : An array of strings that enables the usage of [JavaScript builtins](/en-US/docs/WebAssembly/Guides/JavaScript_builtins) in the compiled Wasm module. The strings define the builtins you want to enable. Currently the only available value is `"js-string"`, which enables JavaScript string builtins.
     - `importedStringConstants` {{optional_inline}}
-      - : A string specifying a namespace for [imported global string constants](/en-US/docs/WebAssembly/Guides/Imported_string_constants)s. This property needs to be specified if you wish to use imported global string constants in the Wasm module.
+      - : A string specifying a namespace for [imported global string constants](/en-US/docs/WebAssembly/Guides/Imported_string_constants). This property needs to be specified if you wish to use imported global string constants in the Wasm module.
 
 ### Return value
 
