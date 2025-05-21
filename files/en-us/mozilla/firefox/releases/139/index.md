@@ -13,6 +13,10 @@ This article provides information about the changes in Firefox 139 that affect d
 
 ### HTML
 
+- The [`hidden=until-found`](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden#the_hidden_until_found_state) HTML attribute and the [`beforematch` event](/en-US/docs/Web/API/Element/beforematch_event) are now supported.
+  The _hidden until found_ state allows you to hide the contents of an element until it is found by user search (for example, using "Find in page") or by fragment navigation.
+  The `beforematch` event fires just before the `hidden` attribute is removed ([Firefox bug 1761043](https://bugzil.la/1761043) and [Firefox bug 1955379](https://bugzil.la/1955379)).
+
 #### Removals
 
 ### CSS
@@ -22,7 +26,7 @@ This article provides information about the changes in Firefox 139 that affect d
 ### JavaScript
 
 - The Temporal API is now supported, this aims to simplify working with dates and times in various scenarios, with built-in time zone and calendar representations ([Firefox bug 1912511](https://bugzil.la/1912511) and [Firefox bug 1954138](https://bugzil.la/1954138)).
-This includes:
+  This includes:
   - A **duration** (difference between two time points): {{jsxref("Temporal.Duration")}}
   - **Points in time**:
     - As a unique instant in history:
