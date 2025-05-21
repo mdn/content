@@ -315,7 +315,7 @@ The rendered example looks like this:
 
 {{EmbedLiveSample("summarizer-example", "100%", "400px")}}
 
-Try entering a body of text into the `<textarea>` then pressing the button to generate an AI-generated summary. The text from your favourite Wikipedia page would be ideal. Try generating multiple summaries with different option combinations, to see how they affect the output.
+Try entering a body of text into the "Input" `<textarea>` then pressing the submit button to generate an AI-generated summary. The text from your favorite Wikipedia page would be ideal. Try generating multiple summaries with different option combinations, to see how they affect the output.
 
 ## See also
 
