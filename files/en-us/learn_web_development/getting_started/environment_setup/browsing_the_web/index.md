@@ -2,9 +2,8 @@
 title: Browsing the web
 slug: Learn_web_development/Getting_started/Environment_setup/Browsing_the_web
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Installing_software", "Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup")}}
 
@@ -175,7 +174,7 @@ AI-generated search results are a very popular way of receiving information. The
 When learning to code, AI chat prompts can be useful in a variety of ways:
 
 - Doing conventional searches, like the examples above.
-- Figuring out bugs in a block of code. If you are getting frustrated because your code is not working, you can paste your code into an AI chat prompt, preceeded by a question such as `Where is the mistake in this code?`
+- Figuring out bugs in a block of code. If you are getting frustrated because your code is not working, you can paste your code into an AI chat prompt, preceded by a question such as `Where is the mistake in this code?`
 - Generating an optimized version of a specific block of code. This can be useful when you've written a block of code that works, but you want to find out how it could be done more efficiently, or in a more robust way that solves more use cases.
 - Providing advice on how to do something. For example, if you don't just want to know where the bug is in a block of code, but instead you want advice on what strategy to use to debug it.
 
@@ -214,6 +213,6 @@ As a result, you need to be careful to check the answers they give you, and not 
   - `intitle:cheese` will only return results that have "cheese" in the main title of the page.
 
   > [!NOTE]
-  > There are many other techniques you can use in various different search engines. Try seeing what others you can find — some useful resources are [Refine Google Searches](https://support.google.com/websearch/answer/2466433?hl=en), [How to use advanced syntax on DuckDuckGo Search](https://duckduckgo.com/duckduckgo-help-pages/results/syntax/), and [Microsoft: Advanced search options](https://support.microsoft.com/en-us/topic/advanced-search-options-b92e25f1-0085-4271-bdf9-14aaea720930).
+  > There are many other techniques you can use in various different search engines. Try seeing what others you can find — some useful resources are [Refine Google Searches](https://support.google.com/websearch/answer/2466433?hl=en), [How to use advanced syntax on DuckDuckGo Search](https://duckduckgo.com/duckduckgo-help-pages/results/syntax), and [Microsoft: Advanced search options](https://support.microsoft.com/en-us/topic/advanced-search-options-b92e25f1-0085-4271-bdf9-14aaea720930).
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Installing_software", "Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup")}}

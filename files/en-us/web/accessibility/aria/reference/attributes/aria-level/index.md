@@ -1,5 +1,6 @@
 ---
-title: aria-level
+title: "ARIA: aria-level attribute"
+short-title: aria-level
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-level
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-level
@@ -61,4 +62,4 @@ Used in roles:
 
 ## See also
 
-- [`<h1>` through `<h6>`: The HTML Section Heading elements](/en-US/docs/Web/HTML/Element/Heading_Elements) ({{htmlelement("Heading_Elements", "h1")}}, {{htmlelement("Heading_Elements", "h2")}}, {{htmlelement("Heading_Elements", "h3")}}, {{htmlelement("Heading_Elements", "h4")}}, {{htmlelement("Heading_Elements", "h5")}}, and {{htmlelement("Heading_Elements", "h6")}})
+- [`<h1>` through `<h6>`: The HTML Section Heading elements](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) ({{htmlelement("Heading_Elements", "h1")}}, {{htmlelement("Heading_Elements", "h2")}}, {{htmlelement("Heading_Elements", "h3")}}, {{htmlelement("Heading_Elements", "h4")}}, {{htmlelement("Heading_Elements", "h5")}}, and {{htmlelement("Heading_Elements", "h6")}})

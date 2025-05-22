@@ -3,9 +3,8 @@ title: A first splash into JavaScript
 short-title: JavaScript walkthrough
 slug: Learn_web_development/Core/Scripting/A_first_splash
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/What_is_JavaScript", "Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting")}}
 

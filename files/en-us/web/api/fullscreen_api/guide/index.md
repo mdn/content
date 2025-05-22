@@ -45,7 +45,7 @@ When fullscreen mode is successfully engaged, the document which contains the el
 
 ### When a fullscreen request fails
 
-It's not guaranteed that you'll be able to switch into fullscreen mode. For example, {{HTMLElement("iframe")}} elements have the [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#allowfullscreen) attribute in order to opt-in to allowing their content to be displayed in fullscreen mode. In addition, certain kinds of content, such as windowed plug-ins, cannot be presented in fullscreen mode. Attempting to put an element which can't be displayed in fullscreen mode (or the parent or descendant of such an element) won't work. Instead, the element which requested fullscreen will receive a `fullscreenerror` event. When a fullscreen request fails, Firefox will log an error message to the Web Console explaining why the request failed. In Chrome and newer versions of Opera however, no such warning is generated.
+It's not guaranteed that you'll be able to switch into fullscreen mode. For example, {{HTMLElement("iframe")}} elements have the [`allowfullscreen`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen) attribute in order to opt-in to allowing their content to be displayed in fullscreen mode. In addition, certain kinds of content, such as windowed plug-ins, cannot be presented in fullscreen mode. Attempting to put an element which can't be displayed in fullscreen mode (or the parent or descendant of such an element) won't work. Instead, the element which requested fullscreen will receive a `fullscreenerror` event. When a fullscreen request fails, Firefox will log an error message to the Web Console explaining why the request failed. In Chrome and newer versions of Opera however, no such warning is generated.
 
 > [!NOTE]
 > Fullscreen requests need to be called from within an event handler or otherwise they will be denied.
@@ -77,43 +77,9 @@ In addition, navigating to another page, changing tabs, or switching to another 
 
 ## Example
 
-In this example, a video is presented in a web page. Pressing the <kbd>Return</kbd> or <kbd>Enter</kbd> key lets the user toggle between windowed and fullscreen presentation of the video.
+The [mdn/dom-examples GitHub repo](https://github.com/mdn/) has a complete example of the Fullscreen API.
 
-[View Live Examples](https://mdn.dev/archives/media/samples/domref/fullscreen.html)
-
-### Watching for the Enter key
-
-When the page is loaded, this code is run to set up an event listener to watch for the <kbd>Enter</kbd> key.
-
-```js
-document.addEventListener(
-  "keydown",
-  (e) => {
-    if (e.key === "Enter") {
-      toggleFullScreen();
-    }
-  },
-  false,
-);
-```
-
-### Toggling fullscreen mode
-
-This code is called when the user hits the <kbd>Enter</kbd> key, as seen above.
-
-```js
-function toggleFullScreen() {
-  if (!document.fullscreenElement) {
-    document.documentElement.requestFullscreen();
-  } else if (document.exitFullscreen) {
-    document.exitFullscreen();
-  }
-}
-```
-
-This starts by looking at the value of the `fullscreenElement` attribute on the {{DOMxRef("document")}}. If it's `null`, the document is currently in windowed mode, so we need to switch to fullscreen mode. Switching to fullscreen mode is done by calling {{DOMxRef("Element.requestFullscreen()")}}.
-
-If fullscreen mode is already active (`fullscreenElement` is non-`null`), we call {{DOMxRef("document.exitFullscreen()")}}.
+[Run the example](https://mdn.github.io/dom-examples/fullscreen-api/index.html) and [browse the source code](https://github.com/mdn/dom-examples/tree/main/fullscreen-api).
 
 ## Specifications
 
@@ -131,4 +97,4 @@ If fullscreen mode is already active (`fullscreenElement` is non-`null`), we cal
 - {{DOMxRef("Document.fullscreen")}}
 - {{DOMxRef("Document.fullscreenElement")}}
 - {{CSSxRef(":fullscreen")}}, {{CSSxRef("::backdrop")}}
-- [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#allowfullscreen)
+- [`allowfullscreen`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)

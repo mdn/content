@@ -29,7 +29,14 @@ A string with one of the following values:
 In this example the value of `ariaOrientation` is set to "vertical".
 
 ```js
-this.internals_.ariaOrientation = "vertical";
+class CustomEl extends HTMLElement {
+  constructor() {
+    super();
+    this.internals_ = this.attachInternals();
+    this.internals_.ariaOrientation = "vertical";
+  }
+  // …
+}
 ```
 
 ## Specifications

@@ -248,7 +248,7 @@ const buffer = await response.arrayBuffer();
 First, we create a new Vertex Buffer Object (VBO) and supply it with our array buffer:
 
 ```js
-//Bind array buffer to a Vertex Buffer Object
+// Bind array buffer to a Vertex Buffer Object
 const vbo = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, vbo);
 gl.bufferData(gl.ARRAY_BUFFER, buffer, gl.STATIC_DRAW);
@@ -258,23 +258,23 @@ Then, we specify the memory layout of the array buffer, either by setting the in
 ourselves:
 
 ```js
-//Describe the layout of the buffer:
-//1. position, not normalized
+// Describe the layout of the buffer:
+// 1. position, not normalized
 gl.vertexAttribPointer(0, 3, gl.FLOAT, false, 20, 0);
 gl.enableVertexAttribArray(0);
-//2. normal vector, normalized to [-1, 1]
+// 2. normal vector, normalized to [-1, 1]
 gl.vertexAttribPointer(1, 4, gl.BYTE, true, 20, 12);
 gl.enableVertexAttribArray(1);
-//3. texture coordinates, normalized to [0, 1]
+// 3. texture coordinates, normalized to [0, 1]
 gl.vertexAttribPointer(2, 2, gl.UNSIGNED_SHORT, true, 20, 16);
 gl.enableVertexAttribArray(2);
 
-//Set the attributes in the vertex shader to the same indices
+// Set the attributes in the vertex shader to the same indices
 gl.bindAttribLocation(shaderProgram, 0, "position");
 gl.bindAttribLocation(shaderProgram, 1, "normal");
 gl.bindAttribLocation(shaderProgram, 2, "texUV");
-//Since the attribute indices have changed, we must re-link the shader
-//Note that this will reset all uniforms that were previously set.
+// Since the attribute indices have changed, we must re-link the shader
+// Note that this will reset all uniforms that were previously set.
 gl.linkProgram(shaderProgram);
 ```
 

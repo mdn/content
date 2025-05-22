@@ -1,10 +1,10 @@
 ---
 title: Customize your app's theme and background colors
+short-title: Customize colors of your app
 slug: Web/Progressive_web_apps/How_to/Customize_your_app_colors
 page-type: how-to
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 When building [Progressive Web Apps (PWAs)](/en-US/docs/Web/Progressive_web_apps), it's important to not only consider the appearance of your app's content, but also the way the app appears on the user's device once the app is installed.
 
@@ -84,7 +84,7 @@ The following screenshot shows the above code in action when the app is installe
 
 ### Relationship with the `theme-color` meta element value
 
-The [`theme-color`](/en-US/docs/Web/HTML/Element/meta/name/theme-color) value for the [`name`](/en-US/docs/Web/HTML/Element/meta/name) attribute of the {{htmlelement("meta")}} HTML element can be used to define a theme color per webpage. This is different from the `theme_color` manifest member which you define only once, globally, for your app.
+The [`theme-color`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/theme-color) value for the [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta/name) attribute of the {{htmlelement("meta")}} HTML element can be used to define a theme color per webpage. This is different from the `theme_color` manifest member which you define only once, globally, for your app.
 
 If both are set, the `theme-color` meta element value overrides the `theme_color` manifest member. This lets you define a global color for your app and override it on specific pages.
 

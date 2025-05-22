@@ -1,5 +1,6 @@
 ---
 title: "ARIA: input role"
+short-title: input
 slug: Web/Accessibility/ARIA/Reference/Roles/input_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#input
@@ -13,7 +14,7 @@ The `input` abstract role is a generic type of widget that allows user input.
 
 ## Description
 
-The `input` role is an abstract role. It must not be used by web authors. It is the superclass for input widgets that provide for user input, including [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role), [`radio`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role), and [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role). For all three, consider using the {{HTMLElement("input")}} element of type [`checkbox`](/en-US/docs/Web/HTML/Element/input/checkbox), [`radio`](/en-US/docs/Web/HTML/Element/input/radio) and [`text`](/en-US/docs/Web/HTML/Element/input/text), respectively.
+The `input` role is an abstract role. It must not be used by web authors. It is the superclass for input widgets that provide for user input, including [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role), [`radio`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role), and [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role). For all three, consider using the {{HTMLElement("input")}} element of type [`checkbox`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox), [`radio`](/en-US/docs/Web/HTML/Reference/Elements/input/radio) and [`text`](/en-US/docs/Web/HTML/Reference/Elements/input/text), respectively.
 
 ## Specifications
 
@@ -29,4 +30,4 @@ The `input` role is an abstract role. It must not be used by web authors. It is 
 - [ARIA: `slider` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)
 - [ARIA: `spinbutton` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role)
 - [ARIA: `textbox` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)
-- [HTML: the `input` element](/en-US/docs/Web/HTML/Element/input)
+- [HTML: the `input` element](/en-US/docs/Web/HTML/Reference/Elements/input)

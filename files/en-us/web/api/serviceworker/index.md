@@ -17,7 +17,7 @@ A `ServiceWorker` object is available via a number of properties:
 - {{domxref("ServiceWorkerRegistration.installing")}} — when the service worker is in `installing` state
 - {{domxref("ServiceWorkerRegistration.waiting")}} — when the service worker is in `installed` state
 
-The {{domxref("ServiceWorker.state")}} property and [`statechanged` event](/en-US/docs/Web/API/ServiceWorker/statechange_event) can be used to check and observe changes in the lifecycle-state of the object's associated service worker.
+The {{domxref("ServiceWorker.state")}} property and [`statechange` event](/en-US/docs/Web/API/ServiceWorker/statechange_event) can be used to check and observe changes in the lifecycle-state of the object's associated service worker.
 Related lifecycle events, such as [`install`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/install_event) and [`activate`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate_event) are fired at the service worker itself.
 
 Service workers allow static import of [ECMAScript modules](/en-US/docs/Web/JavaScript/Guide/Modules), if supported, using [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import).

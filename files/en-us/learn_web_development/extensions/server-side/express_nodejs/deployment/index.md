@@ -3,9 +3,10 @@ title: "Express Tutorial Part 7: Deploying to production"
 short-title: "7: Deploying"
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/forms", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
+{{PreviousMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/forms", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 Now you've created (and tested) an awesome [LocalLibrary](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website) website, you're going to want to install it on a public web server so that it can be accessed by library staff and members over the Internet. This article provides an overview of how you might go about finding a host to deploy your website, and what you need to do in order to get your site ready for production.
 
@@ -377,7 +378,7 @@ The steps are:
 
 Now that the repository ("repo") is created on GitHub we are going to want to clone (copy) it to our local computer:
 
-1. Install _git_ for your local computer (you can find versions for different platforms [here](https://git-scm.com/downloads)).
+1. Install _git_ for your local computer ([official Git download guide](https://git-scm.com/downloads)).
 2. Open a command prompt/terminal and clone your repo using the URL you copied above:
 
    ```bash

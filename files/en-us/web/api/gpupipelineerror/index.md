@@ -32,7 +32,7 @@ _Inherits properties from its parent, {{domxref("DOMException")}}._
 In the following snippet we are attempting to create a {{domxref("GPUComputePipeline")}} using {{domxref("GPUDevice.createComputePipelineAsync()")}}. However, we have misspelt our compute pipeline `entryPoint` as `"maijn"` (it should be `"main"`), therefore pipeline creation fails, and our `catch` block prints the resulting reason and error message to the console.
 
 ```js
-// ...
+// …
 
 let computePipeline;
 
@@ -52,7 +52,7 @@ try {
   console.error(`Pipeline creation failed: ${error.message}`);
 }
 
-// ...
+// …
 ```
 
 In this case, the given `reason` is `"Validation"`, and the `message` is `"Entry point "maijn" doesn't exist in the shader module [ShaderModule]."`

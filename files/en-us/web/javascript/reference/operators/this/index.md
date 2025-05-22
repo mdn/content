@@ -259,7 +259,7 @@ new Bad(); // ReferenceError: Must call super constructor in derived class befor
 
 In the global execution context (outside of any functions or classes; may be inside [blocks](/en-US/docs/Web/JavaScript/Reference/Statements/block) or [arrow functions](#arrow_functions) defined in the global scope), the `this` value depends on what execution context the script runs in. Like [callbacks](#callbacks), the `this` value is determined by the runtime environment (the caller).
 
-At the top level of a script, `this` refers to {{jsxref("globalThis")}} whether in strict mode or not. This is generally the same as the global object — for example, if the source is put inside an HTML [`<script>`](/en-US/docs/Web/HTML/Element/script) element and executed as a script, `this === window`.
+At the top level of a script, `this` refers to {{jsxref("globalThis")}} whether in strict mode or not. This is generally the same as the global object — for example, if the source is put inside an HTML [`<script>`](/en-US/docs/Web/HTML/Reference/Elements/script) element and executed as a script, `this === window`.
 
 > **Note:** `globalThis` is generally the same concept as the global object (i.e., adding properties to `globalThis` makes them global variables) — this is the case for browsers and Node — but hosts are allowed to provide a different value for `globalThis` that's unrelated to the global object.
 
@@ -457,7 +457,7 @@ for (const element of elements) {
 
 ### this in inline event handlers
 
-When the code is called from an inline [event handler attribute](/en-US/docs/Web/HTML/Attributes#event_handler_attributes), its `this` is bound to the DOM element on which the listener is placed:
+When the code is called from an inline [event handler attribute](/en-US/docs/Web/HTML/Reference/Attributes#event_handler_attributes), its `this` is bound to the DOM element on which the listener is placed:
 
 ```html
 <button onclick="alert(this.tagName.toLowerCase());">Show this</button>

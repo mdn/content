@@ -3,9 +3,8 @@ title: How to use promises
 short-title: Using promises
 slug: Learn_web_development/Extensions/Async_JS/Promises
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Async_JS/Introducing", "Learn_web_development/Extensions/Async_JS/Implementing_a_promise-based_API", "Learn_web_development/Extensions/Async_JS")}}
 

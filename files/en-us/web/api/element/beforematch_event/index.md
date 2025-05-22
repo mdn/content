@@ -3,12 +3,10 @@ title: "Element: beforematch event"
 short-title: beforematch
 slug: Web/API/Element/beforematch_event
 page-type: web-api-event
-status:
-  - experimental
 browser-compat: api.Element.beforematch_event
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef}}
 
 An element receives a **`beforematch`** event when it is in the _hidden until found_ state and the browser is about to reveal its content because the user has found the content through the "find in page" feature or through fragment navigation.
 
@@ -16,10 +14,10 @@ An element receives a **`beforematch`** event when it is in the _hidden until fo
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("beforematch", (event) => {});
+```js-nolint
+addEventListener("beforematch", (event) => { })
 
-onbeforematch = (event) => {};
+onbeforematch = (event) => { }
 ```
 
 ## Event type
@@ -28,7 +26,7 @@ A generic {{domxref("Event")}}.
 
 ## Usage notes
 
-The HTML [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden) attribute accepts a value `until-found`: when this value is specified, the element is hidden but its content will be accessible to the browser's "find in page" feature or to fragment navigation. When these features cause a scroll to an element in a "hidden until found" subtree, the browser will:
+The HTML [`hidden`](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden) attribute accepts a value `until-found`: when this value is specified, the element is hidden but its content will be accessible to the browser's "find in page" feature or to fragment navigation. When these features cause a scroll to an element in a "hidden until found" subtree, the browser will:
 
 - fire a `beforematch` event on the hidden element
 - remove the `hidden` attribute from the element
@@ -114,4 +112,4 @@ If your browser does not support the `"until-found"` enumerated value of the `hi
 
 ## See also
 
-- The HTML [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden) attribute
+- The HTML [`hidden`](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden) attribute

@@ -50,7 +50,7 @@ async function init() {
     }
   });
 
-  // ...
+  // …
 }
 ```
 

@@ -3,9 +3,8 @@ title: display
 slug: Web/Progressive_web_apps/Manifest/Reference/display
 page-type: web-manifest-member
 browser-compat: manifests.webapp.display
+sidebar: pwasidebar
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 The `display` manifest member is used to specify your preferred display mode for the web application. The display mode determines how much of the browser UI is shown to the user when the app is launched within the context of an operating system. You can choose to show the full browser interface or hide it to provide a more app-like experience.
 

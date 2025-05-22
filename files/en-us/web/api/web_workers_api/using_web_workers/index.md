@@ -225,7 +225,7 @@ When a message comes back through the port from the worker, we insert the calcul
 
 The {{domxref("Worker")}} interface spawns real OS-level threads, and mindful programmers may be concerned that concurrency can cause "interesting" effects in your code if you aren't careful.
 
-However, since web workers have carefully controlled communication points with other threads, it's actually very hard to cause concurrency problems. There's no access to non-threadsafe components or the DOM. And you have to pass specific data in and out of a thread through serialized objects. So you have to work really hard to cause problems in your code.
+However, since web workers have carefully controlled communication points with other threads, it's actually very hard to cause concurrency problems. There's no access to non-thread-safe components or the DOM. And you have to pass specific data in and out of a thread through serialized objects. So you have to work really hard to cause problems in your code.
 
 ## Content security policy
 
@@ -452,7 +452,7 @@ Here are the full implementation:
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>MDN Example - Queryable worker</title>
-    <script type="text/javascript">
+    <script>
       // QueryableWorker instances methods:
       //   * sendQuery(queryable function name, argument to pass 1, argument to pass 2, etc. etc.): calls a Worker's queryable function
       //   * postMessage(string or JSON Data): see Worker.prototype.postMessage()

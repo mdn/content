@@ -18,8 +18,13 @@ Let's begin by considering the **identity matrix**. This is a special transforma
 
 The identity matrix looks like this in JavaScript:
 
-```js
-let identityMatrix = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1];
+```js-nolint
+const identityMatrix = [
+  1, 0, 0, 0,
+  0, 1, 0, 0,
+  0, 0, 1, 0,
+  0, 0, 0, 1,
+];
 ```
 
 What does multiplying by the identity matrix look like? The easiest example is to multiply a single point by the identity matrix. Since a 3D point only needs three values (`x`, `y`, and `z`), and the transformation matrix is a 4×4 value matrix, we need to add a fourth dimension to the point. By convention, this dimension is called the **perspective**, and is represented by the letter `w`. For a typical position, setting `w` to 1 will make the math work out.
@@ -45,40 +50,40 @@ In our example code we have defined a function to multiply a matrix and a point 
 // point • matrix
 function multiplyMatrixAndPoint(matrix, point) {
   // Give a simple variable name to each part of the matrix, a column and row number
-  let c0r0 = matrix[0],
+  const c0r0 = matrix[0],
     c1r0 = matrix[1],
     c2r0 = matrix[2],
     c3r0 = matrix[3];
-  let c0r1 = matrix[4],
+  const c0r1 = matrix[4],
     c1r1 = matrix[5],
     c2r1 = matrix[6],
     c3r1 = matrix[7];
-  let c0r2 = matrix[8],
+  const c0r2 = matrix[8],
     c1r2 = matrix[9],
     c2r2 = matrix[10],
     c3r2 = matrix[11];
-  let c0r3 = matrix[12],
+  const c0r3 = matrix[12],
     c1r3 = matrix[13],
     c2r3 = matrix[14],
     c3r3 = matrix[15];
 
   // Now set some simple names for the point
-  let x = point[0];
-  let y = point[1];
-  let z = point[2];
-  let w = point[3];
+  const x = point[0];
+  const y = point[1];
+  const z = point[2];
+  const w = point[3];
 
   // Multiply the point against each part of the 1st column, then add together
-  let resultX = x * c0r0 + y * c0r1 + z * c0r2 + w * c0r3;
+  const resultX = x * c0r0 + y * c0r1 + z * c0r2 + w * c0r3;
 
   // Multiply the point against each part of the 2nd column, then add together
-  let resultY = x * c1r0 + y * c1r1 + z * c1r2 + w * c1r3;
+  const resultY = x * c1r0 + y * c1r1 + z * c1r2 + w * c1r3;
 
   // Multiply the point against each part of the 3rd column, then add together
-  let resultZ = x * c2r0 + y * c2r1 + z * c2r2 + w * c2r3;
+  const resultZ = x * c2r0 + y * c2r1 + z * c2r2 + w * c2r3;
 
   // Multiply the point against each part of the 4th column, then add together
-  let resultW = x * c3r0 + y * c3r1 + z * c3r2 + w * c3r3;
+  const resultW = x * c3r0 + y * c3r1 + z * c3r2 + w * c3r3;
 
   return [resultX, resultY, resultZ, resultW];
 }
@@ -109,7 +114,7 @@ Now using the function above we can multiply a point by the matrix. Using the id
 
 ```js
 // sets identityResult to [4,3,2,1]
-let identityResult = multiplyMatrixAndPoint(identityMatrix, [4, 3, 2, 1]);
+const identityResult = multiplyMatrixAndPoint(identityMatrix, [4, 3, 2, 1]);
 ```
 
 Returning the same point is not very useful, but there are other types of matrices that can perform helpful operations on points. The next sections will demonstrate some of these matrices.
@@ -119,38 +124,27 @@ Returning the same point is not very useful, but there are other types of matric
 In addition to multiplying a matrix and a point together, you can also multiply two matrices together. The function from above can be re-used to help out in this process:
 
 ```js
-//matrixB • matrixA
+// matrixB • matrixA
 function multiplyMatrices(matrixA, matrixB) {
   // Slice the second matrix up into rows
-  let row0 = [matrixB[0], matrixB[1], matrixB[2], matrixB[3]];
-  let row1 = [matrixB[4], matrixB[5], matrixB[6], matrixB[7]];
-  let row2 = [matrixB[8], matrixB[9], matrixB[10], matrixB[11]];
-  let row3 = [matrixB[12], matrixB[13], matrixB[14], matrixB[15]];
+  const row0 = [matrixB[0], matrixB[1], matrixB[2], matrixB[3]];
+  const row1 = [matrixB[4], matrixB[5], matrixB[6], matrixB[7]];
+  const row2 = [matrixB[8], matrixB[9], matrixB[10], matrixB[11]];
+  const row3 = [matrixB[12], matrixB[13], matrixB[14], matrixB[15]];
 
   // Multiply each row by matrixA
-  let result0 = multiplyMatrixAndPoint(matrixA, row0);
-  let result1 = multiplyMatrixAndPoint(matrixA, row1);
-  let result2 = multiplyMatrixAndPoint(matrixA, row2);
-  let result3 = multiplyMatrixAndPoint(matrixA, row3);
+  const result0 = multiplyMatrixAndPoint(matrixA, row0);
+  const result1 = multiplyMatrixAndPoint(matrixA, row1);
+  const result2 = multiplyMatrixAndPoint(matrixA, row2);
+  const result3 = multiplyMatrixAndPoint(matrixA, row3);
 
   // Turn the result rows back into a single matrix
+  // prettier-ignore
   return [
-    result0[0],
-    result0[1],
-    result0[2],
-    result0[3],
-    result1[0],
-    result1[1],
-    result1[2],
-    result1[3],
-    result2[0],
-    result2[1],
-    result2[2],
-    result2[3],
-    result3[0],
-    result3[1],
-    result3[2],
-    result3[3],
+    result0[0], result0[1], result0[2], result0[3],
+    result1[0], result1[1], result1[2], result1[3],
+    result2[0], result2[1], result2[2], result2[3],
+    result3[0], result3[1], result3[2], result3[3],
   ];
 }
 ```
@@ -158,12 +152,12 @@ function multiplyMatrices(matrixA, matrixB) {
 Let's look at this function in action:
 
 ```js
-let someMatrix = [4, 0, 0, 0, 0, 3, 0, 0, 0, 0, 5, 0, 4, 8, 4, 1];
+const someMatrix = [4, 0, 0, 0, 0, 3, 0, 0, 0, 0, 5, 0, 4, 8, 4, 1];
 
-let identityMatrix = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1];
+const identityMatrix = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1];
 
 // Returns a new array equivalent to someMatrix
-let someMatrixResult = multiplyMatrices(identityMatrix, someMatrix);
+const someMatrixResult = multiplyMatrices(identityMatrix, someMatrix);
 ```
 
 > [!WARNING]
@@ -176,11 +170,11 @@ A **translation matrix** is based upon the identity matrix, and is used in 3D gr
 You can't actually drink the coffee using only a translation matrix, because to drink it, you have to be able to tilt or rotate the cup to pour the coffee into your mouth. We'll look at the type of matrix (cleverly called a **[rotation matrix](#rotation_matrix)**) you use to do this later.
 
 ```js
-let x = 50;
-let y = 100;
-let z = 0;
+const x = 50;
+const y = 100;
+const z = 0;
 
-let translationMatrix = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, x, y, z, 1];
+const translationMatrix = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, x, y, z, 1];
 ```
 
 Place the distances along the three axes in the corresponding positions in the translation matrix, then multiply it by the point or matrix you need to move through 3D space.
@@ -205,10 +199,10 @@ function matrixArrayToCssMatrix(array) {
 }
 
 // Grab the DOM element
-let moveMe = document.getElementById("move-me");
+const moveMe = document.getElementById("move-me");
 
 // Returns a result like: "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 50, 100, 0, 1);"
-let matrix3dRule = matrixArrayToCssMatrix(translationMatrix);
+const matrix3dRule = matrixArrayToCssMatrix(translationMatrix);
 
 // Set the transform
 moveMe.style.transform = matrix3dRule;
@@ -225,11 +219,11 @@ A **scale matrix** makes something larger or smaller in one or more of the three
 The amount of change to apply to each of the width, height, and depth is placed diagonally starting at the top-left corner and making their way down toward the bottom-right.
 
 ```js
-let w = 1.5; // width  (x)
-let h = 0.7; // height (y)
-let d = 1; // depth  (z)
+const w = 1.5; // width  (x)
+const h = 0.7; // height (y)
+const d = 1; // depth  (z)
 
-let scaleMatrix = [w, 0, 0, 0, 0, h, 0, 0, 0, 0, d, 0, 0, 0, 0, 1];
+const scaleMatrix = [w, 0, 0, 0, 0, h, 0, 0, 0, 0, d, 0, 0, 0, 0, 1];
 ```
 
 [View on JSFiddle](https://jsfiddle.net/tatumcreative/fndd6e1b/)
@@ -244,15 +238,15 @@ First, here's code that rotates a point around the origin without using matrices
 
 ```js
 // Manually rotating a point about the origin without matrices
-let point = [10, 2];
+const point = [10, 2];
 
 // Calculate the distance from the origin
-let distance = Math.sqrt(point[0] * point[0] + point[1] * point[1]);
+const distance = Math.sqrt(point[0] * point[0] + point[1] * point[1]);
 
 // The equivalent of 60 degrees, in radians
-let rotationInRadians = Math.PI / 3;
+const rotationInRadians = Math.PI / 3;
 
-let transformedPoint = [
+const transformedPoint = [
   Math.cos(rotationInRadians) * distance,
   Math.sin(rotationInRadians) * distance,
 ];
@@ -261,32 +255,21 @@ let transformedPoint = [
 It is possible to encode these type of steps into a matrix, and do it for each of the `x`, `y`, and `z` dimensions. Below is the representation of a counterclockwise rotation about the Z axis in a left-handed coordinate system:
 
 ```js
-let sin = Math.sin;
-let cos = Math.cos;
+const sin = Math.sin;
+const cos = Math.cos;
 
 // NOTE: There is no perspective in these transformations, so a rotation
 //       at this point will only appear to only shrink the div
 
-let a = Math.PI * 0.3; //Rotation amount in radians
+const a = Math.PI * 0.3; // Rotation amount in radians
 
 // Rotate around Z axis
-let rotateZMatrix = [
-  cos(a),
-  -sin(a),
-  0,
-  0,
-  sin(a),
-  cos(a),
-  0,
-  0,
-  0,
-  0,
-  1,
-  0,
-  0,
-  0,
-  0,
-  1,
+// prettier-ignore
+const rotateZMatrix = [
+  cos(a), -sin(a), 0, 0,
+  sin(a), cos(a), 0, 0,
+  0, 0, 1, 0,
+  0, 0, 0, 1,
 ];
 ```
 
@@ -298,15 +281,33 @@ Here are a set of functions that return rotation matrices for rotating around ea
 
 ```js
 function rotateAroundXAxis(a) {
-  return [1, 0, 0, 0, 0, cos(a), -sin(a), 0, 0, sin(a), cos(a), 0, 0, 0, 0, 1];
+  // prettier-ignore
+  return [
+    1, 0, 0, 0,
+    0, cos(a), -sin(a), 0,
+    0, sin(a), cos(a), 0,
+    0, 0, 0, 1,
+  ];
 }
 
 function rotateAroundYAxis(a) {
-  return [cos(a), 0, sin(a), 0, 0, 1, 0, 0, -sin(a), 0, cos(a), 0, 0, 0, 0, 1];
+  // prettier-ignore
+  return [
+    cos(a), 0, sin(a), 0,
+    0, 1, 0, 0,
+    -sin(a), 0, cos(a), 0,
+    0, 0, 0, 1,
+  ];
 }
 
 function rotateAroundZAxis(a) {
-  return [cos(a), -sin(a), 0, 0, sin(a), cos(a), 0, 0, 0, 0, 1, 0, 0, 0, 0, 1];
+  // prettier-ignore
+  return [
+    cos(a), -sin(a), 0, 0,
+    sin(a), cos(a), 0, 0,
+    0, 0, 1, 0,
+    0, 0, 0, 1,
+  ];
 }
 ```
 
@@ -329,7 +330,7 @@ transformation = rotate * translate * scale
 The function that we will be using to compose our matrices is `multiplyArrayOfMatrices()`, which is part of the set of [utility functions](https://github.com/gregtatum/mdn-webgl) introduced near the top of this article. It takes an array of matrices and multiplies them together, returning the result. In WebGL shader code, this is built into the language and the `*` operator can be used. Additionally this example uses `scale()` and `translate()` functions, which return matrices as defined above.
 
 ```js
-let transformMatrix = MDN.multiplyArrayOfMatrices([
+const transformMatrix = MDN.multiplyArrayOfMatrices([
   rotateAroundZAxis(Math.PI * 0.5), // Step 3: rotate around 90 degrees
   translate(0, 200, 0), // Step 2: move down 200 pixels
   scale(0.8, 0.8, 0.8), // Step 1: scale down
@@ -343,7 +344,7 @@ let transformMatrix = MDN.multiplyArrayOfMatrices([
 Finally, a fun step to show how matrices work is to reverse the steps to bring the matrix back to the original identity matrix.
 
 ```js
-let transformMatrix = MDN.multiplyArrayOfMatrices([
+const transformMatrix = MDN.multiplyArrayOfMatrices([
   scale(1.25, 1.25, 1.25), // Step 6: scale back up
   translate(0, -200, 0), // Step 5: move back up
   rotateAroundZAxis(-Math.PI * 0.5), // Step 4: rotate back

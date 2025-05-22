@@ -36,10 +36,10 @@ svg {
 
 - {{SVGAttr('points')}}
   - : This attribute defines the list of points (pairs of `x,y` absolute coordinates) required to draw the polygon.
-    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number)+ ; _Default value_: `""`; _Animatable_: **yes**
+    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number)+; _Default value_: `""`; _Animatable_: **yes**
 - {{SVGAttr("pathLength")}}
   - : This attribute lets specify the total length for the path, in user units.
-    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number) ; _Default value_: _none_; _Animatable_: **yes**
+    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number); _Default value_: _none_; _Animatable_: **yes**
 
 ## Usage context
 

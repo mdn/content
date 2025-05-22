@@ -7,7 +7,9 @@ sidebar: accessibilitysidebar
 
 Accessible Rich Internet Applications **(<abbr>ARIA</abbr>)** is a set of [roles](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) and [attributes](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes) that define ways to make web content and web applications (especially those developed with JavaScript) more accessible to people with disabilities.
 
-It supplements HTML so that interactions and widgets commonly used in applications can be passed to assistive technologies when there is not otherwise a mechanism. For example, ARIA enables accessible JavaScript widgets, form hints and error messages, live content updates, and more.
+ARIA supplements HTML so that interactions and widgets commonly used in applications can be passed to assistive technologies when there is not otherwise a mechanism. For example, ARIA enables accessible JavaScript widgets, form hints and error messages, live content updates, and more.
+
+## Before using ARIA
 
 > [!WARNING]
 > Many of these widgets are fully supported in modern browsers. **Developers should prefer using the correct semantic HTML element over using ARIA**, if such an element exists. For instance, native elements have built-in [keyboard accessibility](/en-US/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets), roles and states. However, if you choose to use ARIA, you are responsible for mimicking the equivalent browser behavior in script.
@@ -71,12 +73,18 @@ It is also important to acknowledge that some people who rely on assistive techn
 
 It is also important to test your authored ARIA with actual assistive technology. This is because browser emulators and simulators are not really effective for testing full support. Similarly, proxy assistive technology solutions are not sufficient to fully guarantee functionality.
 
-## References
+## Reference
+
+The [ARIA reference](/en-US/docs/Web/Accessibility/ARIA/Reference) is a comprehensive list of ARIA attributes and roles that are documented on MDN.
 
 - [ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles)
-  - : Reference pages covering all the WAI-ARIA roles discussed on MDN.
-- [ARIA states and properties](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes)
-  - : Reference pages covering all the WAI-ARIA states and properties discussed on MDN.
+  - : ARIA roles can be used to describe elements that don't natively exist in HTML or those which exist but don't yet have wide browser support.
+- [ARIA states and properties (attributes)](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes)
+  - : ARIA attributes enable modifying an element's states and properties as defined in the accessibility tree.
+
+## Guides
+
+The [ARIA guides](/en-US/docs/Web/Accessibility/ARIA/Guides) and [How-to pages](/en-US/docs/Web/Accessibility/ARIA/How_to) are resources that help you improve the accessibility of web page features such as tables, forms, and keyboard-navigation.
 
 ## Standardization efforts
 

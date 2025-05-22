@@ -199,7 +199,7 @@ const destinationDiv = document.querySelector("#destination");
 destinationDiv.addEventListener("click", pasteData);
 
 async function pasteData() {
-  destinationDiv.innerText = ""; //Clear inner text
+  destinationDiv.innerText = ""; // Clear inner text
   try {
     const clipboardContents = await navigator.clipboard.read();
     for (const item of clipboardContents) {
@@ -208,8 +208,7 @@ async function pasteData() {
         mimeTypeElement.innerText = `MIME type: ${mimeType}`;
         destinationDiv.appendChild(mimeTypeElement);
         if (mimeType === "image/png") {
-          const pngImage = new Image(); // Image constructor
-          pngImage.src = "image1.png";
+          const pngImage = new Image();
           pngImage.alt = "PNG image from clipboard";
           const blob = await item.getType("image/png");
           pngImage.src = URL.createObjectURL(blob);

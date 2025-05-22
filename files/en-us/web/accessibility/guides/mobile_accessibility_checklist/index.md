@@ -66,7 +66,7 @@ This document provides a concise checklist of accessibility requirements for mob
   <h3>Low level heading</h3>
   ```
 
-- [ARIA Landmark Roles](https://www.washington.edu/accesstech/websites/regions/) should be used to describe an app or document structure, such as `banner`, `complementary`, `contentinfo`, `main`, `navigation`, `search`.
+- [ARIA Landmark Roles](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles#3._landmark_roles) should be used to describe an app or document structure, such as `banner`, `complementary`, `contentinfo`, `main`, `navigation`, `search`.
 - For touch events, ensure the following ([WCAG 2.1: Pointer Cancellation](https://www.w3.org/WAI/WCAG21/Understanding/pointer-cancellation.html)):
 
   - The down-event should not be used to execute any part of the function;

@@ -3,9 +3,10 @@ title: "Django Tutorial Part 10: Testing a Django web application"
 short-title: "10: Testing"
 slug: Learn_web_development/Extensions/Server-side/Django/Testing
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Forms", "Learn_web_development/Extensions/Server-side/Django/Deployment", "Learn_web_development/Extensions/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Forms", "Learn_web_development/Extensions/Server-side/Django/Deployment", "Learn_web_development/Extensions/Server-side/Django")}}
 
 As websites grow they become harder to test manually. Not only is there more to test, but, as interactions between components become more complex, a small change in one area can impact other areas, so more changes will be required to ensure everything keeps working and errors are not introduced as more changes are made. One way to mitigate these problems is to write automated tests, which can easily and reliably be run every time you make a change. This tutorial shows how to automate _unit testing_ of your website using Django's test framework.
 
@@ -346,7 +347,7 @@ class AuthorModelTest(TestCase):
 
     def test_get_absolute_url(self):
         author = Author.objects.get(id=1)
-        # This will also fail if the urlconf is not defined.
+        # This will also fail if the URLConf is not defined.
         self.assertEqual(author.get_absolute_url(), '/catalog/author/1')
 ```
 
@@ -381,7 +382,7 @@ def test_object_name_is_last_name_comma_first_name(self):
 
 def test_get_absolute_url(self):
     author = Author.objects.get(id=1)
-    # This will also fail if the urlconf is not defined.
+    # This will also fail if the URLConf is not defined.
     self.assertEqual(author.get_absolute_url(), '/catalog/author/1')
 ```
 

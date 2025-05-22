@@ -29,7 +29,7 @@ intercept(options)
     - `focusReset` {{optional_inline}}
       - : Defines the navigation's focus behavior. This may take one of the following values:
         - `after-transition`
-          - : Once the promise returned by your handler function resolves, the browser will focus the first element with the [`autofocus`](/en-US/docs/Web/HTML/Global_attributes/autofocus) attribute, or the {{htmlelement("body")}} element if no element has `autofocus` set. This is the default value.
+          - : Once the promise returned by your handler function resolves, the browser will focus the first element with the [`autofocus`](/en-US/docs/Web/HTML/Reference/Global_attributes/autofocus) attribute, or the {{htmlelement("body")}} element if no element has `autofocus` set. This is the default value.
         - `manual`
           - : Disable the default behavior.
     - `scroll` {{optional_inline}}

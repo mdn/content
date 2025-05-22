@@ -54,7 +54,7 @@ The following criteria must be met when calling **`setIndexBuffer()`**, otherwis
 ## Examples
 
 ```js
-// ...
+// …
 
 const bundleEncoder = device.createRenderBundleEncoder(descriptor);
 
@@ -67,7 +67,7 @@ bundleEncoder.drawIndexed(indexCount);
 
 const renderBundle = bundleEncoder.finish();
 
-// ...
+// …
 ```
 
 ## Specifications

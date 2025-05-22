@@ -95,8 +95,8 @@ This method can be used in almost the same way as {{jsxref("String.prototype.rep
 ```js
 const re = /-/g;
 const str = "2016-01-01";
-const newstr = re[Symbol.replace](str, ".");
-console.log(newstr); // 2016.01.01
+const newStr = re[Symbol.replace](str, ".");
+console.log(newStr); // 2016.01.01
 ```
 
 ### Using `[Symbol.replace]()` in subclasses
@@ -121,8 +121,8 @@ class MyRegExp extends RegExp {
 
 const re = new MyRegExp("\\d", "", 3);
 const str = "01234567";
-const newstr = str.replace(re, "#"); // String.prototype.replace calls re[Symbol.replace]().
-console.log(newstr); // ###34567
+const newStr = str.replace(re, "#"); // String.prototype.replace calls re[Symbol.replace]().
+console.log(newStr); // ###34567
 ```
 
 ## Specifications

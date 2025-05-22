@@ -1,5 +1,6 @@
 ---
 title: "ARIA: listitem role"
+short-title: listitem
 slug: Web/Accessibility/ARIA/Reference/Roles/listitem_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#listitem
@@ -71,9 +72,9 @@ or use an ordered list if the order of the list items matters:
 
 ## See also
 
-- [HTML `<li>` element](/en-US/docs/Web/HTML/Element/li)
-- [HTML `<ul>` element](/en-US/docs/Web/HTML/Element/ul)
-- [HTML `<ol>` element](/en-US/docs/Web/HTML/Element/ol)
+- [HTML `<li>` element](/en-US/docs/Web/HTML/Reference/Elements/li)
+- [HTML `<ul>` element](/en-US/docs/Web/HTML/Reference/Elements/ul)
+- [HTML `<ol>` element](/en-US/docs/Web/HTML/Reference/Elements/ol)
 - [ARIA: `list` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/list_role)
 - [ARIA: `group` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role)
 - [Accessibility Object Model](https://wicg.github.io/aom/spec/)

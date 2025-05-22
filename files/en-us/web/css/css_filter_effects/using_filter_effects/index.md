@@ -73,7 +73,7 @@ img:focus {
 }
 ```
 
-In the {{HTMLElement("img")}} element, [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) is set to `0` to enable focus without altering the tabbing order for keyboard users because `<img>` is not an interactive element.
+In the {{HTMLElement("img")}} element, [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) is set to `0` to enable focus without altering the tabbing order for keyboard users because `<img>` is not an interactive element.
 
 ```css hidden
 img {
@@ -118,7 +118,8 @@ This example applies two filters — [`hue-rotate()`](/en-US/docs/Web/CSS/filter
 
 ```css
 .container {
-  background: url(image.jpg) no-repeat left / contain goldenrod;
+  background: url("/shared-assets/images/examples/listen_to_black_women.jpg")
+    no-repeat left / contain goldenrod;
 }
 p {
   backdrop-filter: hue-rotate(240deg) blur(5px);
@@ -141,9 +142,7 @@ p {
 ```
 
 ```html hidden
-<div
-  class="container"
-  style="background-image: url('https://mdn.github.io/shared-assets/images/examples/listen_to_black_women.jpg');">
+<div class="container">
   <p>
     Text on images can be illegible and inaccessible even with a drop shadow.
   </p>

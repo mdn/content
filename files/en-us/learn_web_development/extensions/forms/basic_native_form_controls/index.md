@@ -2,9 +2,10 @@
 title: Basic native form controls
 slug: Learn_web_development/Extensions/Forms/Basic_native_form_controls
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/How_to_structure_a_web_form", "Learn_web_development/Extensions/Forms/HTML5_input_types", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/How_to_structure_a_web_form", "Learn_web_development/Extensions/Forms/HTML5_input_types", "Learn_web_development/Extensions/Forms")}}
 
 In the [previous article](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form), we marked up a functional web form example, introducing some form controls and common structural elements, and focusing on accessibility best practices. Next, we will look at the functionality of the different form controls, or widgets, in detail — studying all the different options available to collect different types of data. In this particular article, we will look at the original set of form controls, available in all browsers since the early days of the web.
 
@@ -36,7 +37,7 @@ You've already met some form elements, including {{HTMLelement('form')}}, {{HTML
 - Some of the attributes that are common to all form controls.
 
 > [!NOTE]
-> We cover additional, more powerful form controls in the next two articles. If you want a more advanced reference, you should consult our [HTML forms element reference](/en-US/docs/Web/HTML/Element#forms), and in particular our extensive [`<input>` types](/en-US/docs/Web/HTML/Element/input) reference.
+> We cover additional, more powerful form controls in the next two articles. If you want a more advanced reference, you should consult our [HTML forms element reference](/en-US/docs/Web/HTML/Reference/Elements#forms), and in particular our extensive [`<input>` types](/en-US/docs/Web/HTML/Reference/Elements/input) reference.
 
 ## Text input fields
 
@@ -47,17 +48,17 @@ Text {{htmlelement("input")}} fields are the most basic form widgets. They are a
 
 All basic text controls share some common behaviors:
 
-- They can be marked as [`readonly`](/en-US/docs/Web/HTML/Element/input#readonly) (the user cannot modify the input value but it is still sent with the rest of the form data) or [`disabled`](/en-US/docs/Web/HTML/Element/input#disabled) (the input value can't be modified and is never sent with the rest of the form data).
-- They can have a [`placeholder`](/en-US/docs/Web/HTML/Element/input#placeholder); this is the text that appears inside the text input box that should be used to briefly describe the purpose of the box.
-- They can be constrained in [`size`](/en-US/docs/Web/HTML/Attributes/size) (the physical size of the box) and [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength) (the maximum number of characters that can be entered into the box).
-- They can benefit from spell-checking (using the [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes/spellcheck) attribute).
+- They can be marked as [`readonly`](/en-US/docs/Web/HTML/Reference/Elements/input#readonly) (the user cannot modify the input value but it is still sent with the rest of the form data) or [`disabled`](/en-US/docs/Web/HTML/Reference/Elements/input#disabled) (the input value can't be modified and is never sent with the rest of the form data).
+- They can have a [`placeholder`](/en-US/docs/Web/HTML/Reference/Elements/input#placeholder); this is the text that appears inside the text input box that should be used to briefly describe the purpose of the box.
+- They can be constrained in [`size`](/en-US/docs/Web/HTML/Reference/Attributes/size) (the physical size of the box) and [`maxlength`](/en-US/docs/Web/HTML/Reference/Attributes/maxlength) (the maximum number of characters that can be entered into the box).
+- They can benefit from spell-checking (using the [`spellcheck`](/en-US/docs/Web/HTML/Reference/Global_attributes/spellcheck) attribute).
 
 > [!NOTE]
-> The {{htmlelement("input")}} element is unique amongst HTML elements because it can take many forms depending on its [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute value. It is used for creating most types of form widgets including single line text fields, time and date controls, controls without text input like checkboxes, radio buttons, and color pickers, and buttons.
+> The {{htmlelement("input")}} element is unique amongst HTML elements because it can take many forms depending on its [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute value. It is used for creating most types of form widgets including single line text fields, time and date controls, controls without text input like checkboxes, radio buttons, and color pickers, and buttons.
 
 ### Single line text fields
 
-A single line text field is created using an {{HTMLElement("input")}} element whose [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute value is set to `text`, or by omitting the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute altogether (`text` is the default value). The value `text` for this attribute is also the fallback value if the value you specify for the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute is unknown by the browser (for example if you specify `type="color"` and the browser doesn't support native color pickers).
+A single line text field is created using an {{HTMLElement("input")}} element whose [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute value is set to `text`, or by omitting the [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute altogether (`text` is the default value). The value `text` for this attribute is also the fallback value if the value you specify for the [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute is unknown by the browser (for example if you specify `type="color"` and the browser doesn't support native color pickers).
 
 > [!NOTE]
 > You can find examples of all the single line text field types on GitHub at [single-line-text-fields.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/single-line-text-fields.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/single-line-text-fields.html)).
@@ -77,7 +78,7 @@ The screenshot below shows a text input in default, focused, and disabled states
 The screenshots used in this document were taken in the Chrome browser on macOS. There may be minor variations in these fields/buttons across different browsers, but the basic highlighting technique remains similar.
 
 > [!NOTE]
-> We discuss values for the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute that enforce specific validation constraints including color, email, and url input types, in the next article, [The HTML5 input types](/en-US/docs/Learn_web_development/Extensions/Forms/HTML5_input_types).
+> We discuss values for the [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute that enforce specific validation constraints including color, email, and url input types, in the next article, [The HTML5 input types](/en-US/docs/Learn_web_development/Extensions/Forms/HTML5_input_types).
 
 #### Password field
 
@@ -111,9 +112,9 @@ Other text input types, like {{HTMLElement("input/search", "search")}}, {{HTMLEl
 
 ## Checkable items: checkboxes and radio buttons
 
-Checkable items are controls whose state you can change by clicking on them or their associated labels. There are two kinds of checkable items: the checkbox and the radio button. Both use the [`checked`](/en-US/docs/Web/HTML/Element/input/checkbox#checked) attribute to indicate whether the widget is checked by default or not.
+Checkable items are controls whose state you can change by clicking on them or their associated labels. There are two kinds of checkable items: the checkbox and the radio button. Both use the [`checked`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox#checked) attribute to indicate whether the widget is checked by default or not.
 
-It's worth noting that these widgets do not behave exactly like other form widgets. For most form widgets, once the form is submitted all widgets that have a [`name`](/en-US/docs/Web/HTML/Element/input#name) attribute are sent, even if no value has been filled out. In the case of checkable items, their values are sent only if they are checked. If they are not checked, nothing is sent, not even their name. If they are checked but have no value, the name is sent with a value of _on._
+It's worth noting that these widgets do not behave exactly like other form widgets. For most form widgets, once the form is submitted all widgets that have a [`name`](/en-US/docs/Web/HTML/Reference/Elements/input#name) attribute are sent, even if no value has been filled out. In the case of checkable items, their values are sent only if they are checked. If they are not checked, nothing is sent, not even their name. If they are checked but have no value, the name is sent with a value of _on._
 
 > [!NOTE]
 > You can find the examples from this section on GitHub as [checkable-items.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/checkable-items.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/checkable-items.html)).
@@ -122,13 +123,13 @@ For maximum usability/accessibility, you are advised to surround each list of re
 
 ### Checkbox
 
-A checkbox is created using the {{HTMLElement("input")}} element with a [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute set to the value {{HTMLElement("input/checkbox", "checkbox")}}.
+A checkbox is created using the {{HTMLElement("input")}} element with a [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute set to the value {{HTMLElement("input/checkbox", "checkbox")}}.
 
 ```html
 <input type="checkbox" id="questionOne" name="subscribe" value="yes" checked />
 ```
 
-Related checkbox items should use the same [`name`](/en-US/docs/Web/HTML/Element/input#name) attribute. Including the [`checked`](/en-US/docs/Web/HTML/Element/input/checkbox#checked) attribute makes the checkbox checked automatically when the page loads. Clicking the checkbox or its associated label toggles the checkbox on and off.
+Related checkbox items should use the same [`name`](/en-US/docs/Web/HTML/Reference/Elements/input#name) attribute. Including the [`checked`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox#checked) attribute makes the checkbox checked automatically when the page loads. Clicking the checkbox or its associated label toggles the checkbox on and off.
 
 ```html
 <fieldset>
@@ -160,19 +161,19 @@ The following screenshot shows checkboxes in the default, focused, and disabled 
 ![Default, focused and disabled Checkboxes in chrome 115 on macOS](checkboxes.png)
 
 > [!NOTE]
-> Any checkboxes and radio buttons with the [`checked`](/en-US/docs/Web/HTML/Element/input/checkbox#checked) attribute on load match the {{cssxref(':default')}} pseudo-class, even if they are no longer checked. Any that are currently checked match the {{cssxref(':checked')}} pseudo-class.
+> Any checkboxes and radio buttons with the [`checked`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox#checked) attribute on load match the {{cssxref(':default')}} pseudo-class, even if they are no longer checked. Any that are currently checked match the {{cssxref(':checked')}} pseudo-class.
 
 Due to the on-off nature of checkboxes, the checkbox is considered a toggle button, with many developers and designers expanding on the default checkbox styling to create buttons that look like toggle switches. You can [see an example in action here](https://mdn.github.io/learning-area/html/forms/toggle-switch-example/) (also see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/toggle-switch-example/index.html)).
 
 ### Radio button
 
-A radio button is created using the {{HTMLElement("input")}} element with its [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute set to the value `radio`:
+A radio button is created using the {{HTMLElement("input")}} element with its [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute set to the value `radio`:
 
 ```html
 <input type="radio" id="soup" name="meal" value="soup" checked />
 ```
 
-Several radio buttons can be tied together. If they share the same value for their [`name`](/en-US/docs/Web/HTML/Element/input#name) attribute, they will be considered to be in the same group of buttons. Only one button in a given group may be checked at a time; this means that when one of them is checked all the others automatically get unchecked. When the form is sent, only the value of the checked radio button is sent. If none of them are checked, the whole pool of radio buttons is considered to be in an unknown state and no value is sent with the form. Once one of the radio buttons in a same-named group of buttons is checked, it is not possible for the user to uncheck all the buttons without resetting the form.
+Several radio buttons can be tied together. If they share the same value for their [`name`](/en-US/docs/Web/HTML/Reference/Elements/input#name) attribute, they will be considered to be in the same group of buttons. Only one button in a given group may be checked at a time; this means that when one of them is checked all the others automatically get unchecked. When the form is sent, only the value of the checked radio button is sent. If none of them are checked, the whole pool of radio buttons is considered to be in an unknown state and no value is sent with the form. Once one of the radio buttons in a same-named group of buttons is checked, it is not possible for the user to uncheck all the buttons without resetting the form.
 
 ```html
 <fieldset>
@@ -211,45 +212,22 @@ The radio button isn't actually a button, despite its name; let's move on and lo
 
 Then we also have the {{htmlelement("button")}} element itself. This can take a `type` attribute of value `submit`, `reset`, or `button` to mimic the behavior of the three `<input>` types mentioned above. The main difference between the two is that actual `<button>` elements are much easier to style.
 
-```html
-<input type="submit" value="Submit this form" />
-<input type="reset" value="Reset this form" />
-<input type="button" value="Do Nothing without JavaScript" />
-
-<button type="submit">Submit this form</button>
-<button type="reset">Reset this form</button>
-<button type="button">Do Nothing without JavaScript</button>
+```html live-sample___actual_buttons_ex
+<p>Using &lt;input></p>
+<p>
+  <input type="submit" value="Submit this form" />
+  <input type="reset" value="Reset this form" />
+  <input type="button" value="Do Nothing without JavaScript" />
+</p>
+<p>Using &lt;button></p>
+<p>
+  <button type="submit">Submit this form</button>
+  <button type="reset">Reset this form</button>
+  <button type="button">Do Nothing without JavaScript</button>
+</p>
 ```
 
-```html hidden
-<div class="button-demo">
-  <p>Using &lt;input></p>
-  <p>
-    <input type="submit" value="Submit this form" />
-    <input type="reset" value="Reset this form" />
-    <input type="button" value="Do Nothing without JavaScript" />
-  </p>
-  <p>Using &lt;button></p>
-  <p>
-    <button type="submit">Submit this form</button>
-    <button type="reset">Reset this form</button>
-    <button type="button">Do Nothing without JavaScript</button>
-  </p>
-</div>
-```
-
-```css hidden
-button,
-input {
-  display: none;
-}
-.button-demo button,
-.button-demo input {
-  all: revert;
-}
-```
-
-{{ EmbedLiveSample('Actual_buttons', '500', '250') }}
+{{ EmbedLiveSample('actual_buttons_ex', '500', '250') }}
 
 > [!NOTE]
 > The `image` input type also renders as a button. We'll cover that later too.
@@ -293,7 +271,7 @@ The following screenshot shows a button in the default, focused, and disabled st
 
 The **image button** control is rendered exactly like an {{HTMLElement("img")}} element, except that when the user clicks on it, it behaves like a submit button.
 
-An image button is created using an {{HTMLElement("input")}} element with its [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute set to the value `image`. This element supports exactly the same set of attributes as the {{HTMLElement("img")}} element, plus all the attributes supported by other form buttons.
+An image button is created using an {{HTMLElement("input")}} element with its [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute set to the value `image`. This element supports exactly the same set of attributes as the {{HTMLElement("img")}} element, plus all the attributes supported by other form buttons.
 
 ```html
 <input type="image" alt="Click me!" src="my-img.png" width="80" height="30" />
@@ -301,8 +279,8 @@ An image button is created using an {{HTMLElement("input")}} element with its [`
 
 If the image button is used to submit the form, this control doesn't submit its value — instead, the X and Y coordinates of the click on the image are submitted (the coordinates are relative to the image, meaning that the upper-left corner of the image represents the coordinate (0, 0)). The coordinates are sent as two key/value pairs:
 
-- The X value key is the value of the [`name`](/en-US/docs/Web/HTML/Element/input#name) attribute followed by the string "_.x_".
-- The Y value key is the value of the [`name`](/en-US/docs/Web/HTML/Element/input#name) attribute followed by the string "_.y_".
+- The X value key is the value of the [`name`](/en-US/docs/Web/HTML/Reference/Elements/input#name) attribute followed by the string "_.x_".
+- The Y value key is the value of the [`name`](/en-US/docs/Web/HTML/Reference/Elements/input#name) attribute followed by the string "_.y_".
 
 So for example when you click on the image at coordinate (123, 456) and it submits via the `get` method, you'll see the values appended to the URL as follows:
 
@@ -316,7 +294,7 @@ This is a very convenient way to build a "hot map". How these values are sent an
 
 There is one last `<input>` type that came to us in early HTML: the file input type. Forms are able to send files to a server (this specific action is also detailed in the [Sending form data](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data) article). The file picker widget can be used to choose one or more files to send.
 
-To create a [file picker widget](/en-US/docs/Web/HTML/Element/input/file), you use the {{HTMLElement("input")}} element with its [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute set to `file`. The types of files that are accepted can be constrained using the [`accept`](/en-US/docs/Web/HTML/Element/input#accept) attribute. In addition, if you want to let the user pick more than one file, you can do so by adding the [`multiple`](/en-US/docs/Web/HTML/Element/input#multiple) attribute.
+To create a [file picker widget](/en-US/docs/Web/HTML/Reference/Elements/input/file), you use the {{HTMLElement("input")}} element with its [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute set to `file`. The types of files that are accepted can be constrained using the [`accept`](/en-US/docs/Web/HTML/Reference/Elements/input#accept) attribute. In addition, if you want to let the user pick more than one file, you can do so by adding the [`multiple`](/en-US/docs/Web/HTML/Reference/Elements/input#multiple) attribute.
 
 ### Example
 
@@ -354,7 +332,7 @@ Many of the elements used to define form controls have some of their own specifi
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTML/Global_attributes/autofocus"
+          ><a href="/en-US/docs/Web/HTML/Reference/Global_attributes/autofocus"
             >autofocus</a
           ></code
         >
@@ -368,7 +346,7 @@ Many of the elements used to define form controls have some of their own specifi
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/disabled">disabled</a></code
+          ><a href="/en-US/docs/Web/HTML/Reference/Attributes/disabled">disabled</a></code
         >
       </td>
       <td>false</td>
@@ -380,7 +358,7 @@ Many of the elements used to define form controls have some of their own specifi
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/input#form">form</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/input#form">form</a></code>
       </td>
       <td></td>
       <td>
@@ -391,14 +369,14 @@ Many of the elements used to define form controls have some of their own specifi
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/input#name">name</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/input#name">name</a></code>
       </td>
       <td></td>
       <td>The name of the element; this is submitted with the form data.</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/input#value">value</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/input#value">value</a></code>
       </td>
       <td></td>
       <td>The element's initial value.</td>
@@ -408,7 +386,7 @@ Many of the elements used to define form controls have some of their own specifi
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Basic controls](/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Basic_controls).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Basic controls](/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Basic_controls).
 
 ## Summary
 

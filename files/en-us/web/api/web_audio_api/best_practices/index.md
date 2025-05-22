@@ -28,7 +28,7 @@ The Web Audio API specification is constantly evolving and like most things on t
 
 There's the [`standardized-audio-context`](https://github.com/chrisguttandin/standardized-audio-context) npm package, which creates API functionality consistently across browsers, filling holes as they are found. It's constantly in development and endeavors to keep up with the current specification.
 
-There is also the option of libraries, of which there are a few depending on your use case. For a good all-rounder, [howler.js](https://howlerjs.com/) is a good choice. It has cross-browser support and, provides a useful subset of functionality. Although it doesn't harness the full gamut of filters and other effects the Web Audio API comes with, you can do most of what you'd want to do.
+There is also the option of libraries, of which there are a few depending on your use case. For a good all-rounder, [howler.js](https://howlerjs.com/) is a good choice. It has cross-browser support and provides a useful subset of functionality. Although it doesn't harness the full gamut of filters and other effects the Web Audio API comes with, you can do most of what you'd want to do.
 
 If you are looking for sound creation or a more instrument-based option, [tone.js](https://tonejs.github.io/) is a great library. It provides advanced scheduling capabilities, synths, and effects, and intuitive musical abstractions built on top of the Web Audio API.
 
@@ -84,7 +84,7 @@ If your website or application contains sound, you should allow the user control
 
 If you have buttons that switch audio on and off, using the ARIA [`role="switch"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role) attribute on them is a good option for signalling to assistive technology what the button's exact purpose is, and therefore making the app more accessible. There's a [demo of how to use it here](https://codepen.io/Wilto/pen/ZoGoQm?editors=1100).
 
-As you work with a lot of changing values within the Web Audio API and will want to provide users with control over these, the [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range) is often a good choice of control to use. It's a good option as you can set minimum and maximum values, as well as increments with the [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute.
+As you work with a lot of changing values within the Web Audio API and will want to provide users with control over these, the [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range) is often a good choice of control to use. It's a good option as you can set minimum and maximum values, as well as increments with the [`step`](/en-US/docs/Web/HTML/Reference/Elements/input#step) attribute.
 
 ## Setting AudioParam values
 

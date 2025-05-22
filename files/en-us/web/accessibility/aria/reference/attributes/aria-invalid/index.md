@@ -1,5 +1,6 @@
 ---
-title: aria-invalid
+title: "ARIA: aria-invalid attribute"
+short-title: aria-invalid
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-invalid
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-invalid
@@ -25,7 +26,7 @@ There are currently four values: in addition to `true` and `false` we have `gram
 
 HTML has native form validation. When a user submits a form with a control containing errors, the first form control with an invalid value displays an error message, natively.
 
-If there is a [`required`](/en-US/docs/Web/HTML/Attributes/required) attribute on a form control that isn't filled out, the form will not submit, and an error message appears reading "Please fill out this field" or something similar. The messaging for native validation varies depending on the browser, and cannot be styled.
+If there is a [`required`](/en-US/docs/Web/HTML/Reference/Attributes/required) attribute on a form control that isn't filled out, the form will not submit, and an error message appears reading "Please fill out this field" or something similar. The messaging for native validation varies depending on the browser, and cannot be styled.
 
 ```html
 <input type="number" step="2" min="0" max="100" required />
@@ -115,6 +116,13 @@ function updateAlert(msg) {
 ```
 
 Note that the alert has the ARIA role attribute set to [`alert`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role).
+
+## Associated interfaces
+
+- {{domxref("Element.ariaInvalid")}}
+  - : The [`ariaInvalid`](/en-US/docs/Web/API/Element/ariaInvalid) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-invalid` attribute, which indicates whether the element is exposed to an accessibility API.
+- {{domxref("ElementInternals.ariaInvalid")}}
+  - : The [`ariaInvalid`](/en-US/docs/Web/API/ElementInternals/ariaInvalid) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-invalid` attribute.
 
 ## Associated roles
 

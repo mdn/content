@@ -590,7 +590,7 @@ The ending ")" of [`do...while`](/en-US/docs/Web/JavaScript/Reference/Statements
 
 ```js-nolint
 do {
-  // ...
+  // …
 } while (condition) /* ; */ // ASI here
 const a = 1
 ```
@@ -779,7 +779,7 @@ There are the following rules-of-thumb for dealing with ASI, if you want to enfo
   ```js-nolint example-bad
   // The () may be merged with the previous line as a function call
   (() => {
-    // ...
+    // …
   })()
 
   // The [ may be merged with the previous line as a property access
@@ -800,7 +800,7 @@ There are the following rules-of-thumb for dealing with ASI, if you want to enfo
 
   ```js-nolint example-good
   ;(() => {
-    // ...
+    // …
   })()
   ;[1, 2, 3].forEach(console.log)
   ;`string text ${data}`.match(pattern).forEach(console.log)

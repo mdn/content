@@ -14,6 +14,11 @@ The **`view-timeline-inset`** [CSS](/en-US/docs/Web/CSS) property is used to spe
 This can be combined with or used instead of {{cssxref("animation-range")}} and its longhand properties, which can be used to set the attachment range of an animation along its timeline.
 See [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) for more details.
 
+> [!NOTE]
+> If the scroller element does not overflow its container in the axis dimension or if the overflow is hidden or clipped, no scroll progress timeline will be created.
+
+The `view-timeline-inset`, {{cssxref("view-timeline-axis")}}, and {{cssxref("view-timeline-name")}} properties can also be set using the {{cssxref("view-timeline")}} shorthand property.
+
 ## Syntax
 
 ```css
@@ -152,7 +157,7 @@ Last, an animation is specified on the element that animates its opacity and sca
   }
 
   to {
-    opacity: 1,
+    opacity: 1;
     transform: scaleX(1);
   }
 }
@@ -174,7 +179,7 @@ Scroll to see the subject element being animated.
 
 ## See also
 
-- [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline)
+- {{cssxref("animation-timeline")}}
 - {{cssxref("timeline-scope")}}
-- [`view-timeline`](/en-US/docs/Web/CSS/view-timeline), [`view-timeline-axis`](/en-US/docs/Web/CSS/view-timeline-axis), [`view-timeline-name`](/en-US/docs/Web/CSS/view-timeline-name)
+- {{cssxref("view-timeline")}}, {{cssxref("view-timeline-axis")}}, {{cssxref("view-timeline-name")}}
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)

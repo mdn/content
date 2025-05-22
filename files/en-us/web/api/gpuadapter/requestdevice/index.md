@@ -67,7 +67,7 @@ async function init() {
 
   const device = await adapter.requestDevice();
 
-  // ...
+  // …
 }
 ```
 
@@ -111,7 +111,7 @@ async function init() {
     requiredLimits,
   });
 
-  // ...
+  // …
 }
 ```
 

@@ -1,5 +1,6 @@
 ---
-title: aria-hidden
+title: "ARIA: aria-hidden attribute"
+short-title: aria-hidden
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-hidden
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-hidden
@@ -39,7 +40,7 @@ On the surface, the `aria-hidden="true"` and the `role="presentation"` and its s
 
 `aria-hidden="true"` should not be added when:
 
-- The HTML [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden) attribute is present
+- The HTML [`hidden`](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden) attribute is present
 - The element or the element's ancestor is hidden with [`display: none`](/en-US/docs/Web/CSS/display)
 - The element or the element's ancestor is hidden with [`visibility: hidden`](/en-US/docs/Web/CSS/visibility)
 
@@ -89,6 +90,6 @@ Used in **ALL** roles
 - [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled)
 - [`aria-modal`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal)
 - [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded)
-- HTML [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden) attribute
+- HTML [`hidden`](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden) attribute
 - CSS {{CSSXref('display')}} property
 - CSS {{CSSXref('visibility')}} property

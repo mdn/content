@@ -10,9 +10,9 @@ browser-compat: api.HTMLInputElement.checked
 
 The **`checked`** property of the {{DOMxRef("HTMLInputElement")}} interface specifies the current checkedness of the element; that is, whether the form control is checked or not.
 
-The boolean `checked` property is relevant to the `radio` ([`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio)) and `checkbox` ([`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox)) input types.
+The boolean `checked` property is relevant to the `radio` ([`<input type="radio">`](/en-US/docs/Web/HTML/Reference/Elements/input/radio)) and `checkbox` ([`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox)) input types.
 
-The presence of the HTML [`checked`](/en-US/docs/Web/HTML/Element/input#checked) attribute indicates the checkbox is checked by default. It does not indicate whether this checkbox is currently checked: if the checkbox's state is changed, this content attribute does not reflect the change; only the `HTMLInputElement`'s `checked` IDL property is updated. The `checked` attribute is reflected by the {{domxref("HTMLInputElement.defaultChecked", "defaultChecked")}} property.
+The presence of the HTML [`checked`](/en-US/docs/Web/HTML/Reference/Elements/input#checked) attribute indicates the checkbox is checked by default. It does not indicate whether this checkbox is currently checked: if the checkbox's state is changed, this content attribute does not reflect the change; only the `HTMLInputElement`'s `checked` IDL property is updated. The `checked` attribute is reflected by the {{domxref("HTMLInputElement.defaultChecked", "defaultChecked")}} property.
 
 When a radio input `checked` property is `true`, all other radio inputs with the same {{DOMxRef("HTMLInputElement.name", "name")}} are `false`. If any radio button in a same-named group of radio buttons is {{DOMxRef("HTMLInputElement.required", "required")}}, as long as one button in the group is `checked`, the {{domxref('ValidityState')}} object's read-only {{domxref('ValidityState.valueMissing','valueMissing')}} property for each radio button in the group will be `false`.
 

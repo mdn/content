@@ -49,7 +49,7 @@ for that `Request` is set to `cors`.
 However, for requests created other than by the {{domxref("Request.Request", "Request()")}}
 constructor, `no-cors` is typically used as the mode; for example, for
 embedded resources where the request is initiated from markup, unless the
-[`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin)
+[`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin)
 attribute is present, the request is in most cases made using the `no-cors`
 mode — that is, for the {{HTMLElement("link")}} or {{HTMLElement("script")}} elements
 (except when used with modules), or {{HTMLElement("img")}}, {{HTMLElement("audio")}},

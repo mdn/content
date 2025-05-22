@@ -40,7 +40,7 @@ async function initTransport(url) {
     // The connection can be used once ready fulfills
     await transport.ready;
 
-    // ...
+    // …
   } catch (error) {
     const msg = `Transport initialization failed.
                  Reason: ${error.message}.

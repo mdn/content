@@ -16,7 +16,7 @@ The **`:target`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/
 }
 ```
 
-For example, the following URL has a fragment identifier (denoted by the _#_ sign) that marks the element with the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of `setup` as the document's target element:
+For example, the following URL has a fragment identifier (denoted by the _#_ sign) that marks the element with the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) of `setup` as the document's target element:
 
 ```url
 http://www.example.com/help/#setup

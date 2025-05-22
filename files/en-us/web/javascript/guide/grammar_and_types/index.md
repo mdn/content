@@ -295,6 +295,7 @@ In the case that a value representing a number is in memory as a string, there a
 
 - {{jsxref("parseInt()")}}
 - {{jsxref("parseFloat()")}}
+- {{jsxref("Number()")}}
 
 `parseInt` only returns whole numbers, so its use is diminished for decimals.
 
@@ -305,7 +306,7 @@ In the case that a value representing a number is in memory as a string, there a
 parseInt("101", 2); // 5
 ```
 
-An alternative method of retrieving a number from a string is with the `+` (unary plus) operator:
+An alternative method of retrieving a number from a string is with the `+` (unary plus) operator. This implicitly performs [number conversion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), which is the same process as the {{jsxref("Number()")}} function.
 
 ```js-nolint
 "1.1" + "1.1"; // '1.11.1'

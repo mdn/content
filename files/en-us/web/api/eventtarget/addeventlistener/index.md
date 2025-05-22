@@ -301,11 +301,11 @@ Read [the function guide](/en-US/docs/Web/JavaScript/Guide/Functions#function_sc
 ### Memory issues
 
 ```js
-const elts = document.getElementsByTagName("*");
+const elems = document.getElementsByTagName("*");
 
 // Case 1
-for (const elt of elts) {
-  elt.addEventListener(
+for (const elem of elems) {
+  elem.addEventListener(
     "click",
     (e) => {
       // Do something
@@ -319,8 +319,8 @@ function processEvent(e) {
   // Do something
 }
 
-for (const elt of elts) {
-  elt.addEventListener("click", processEvent, false);
+for (const elem of elems) {
+  elem.addEventListener("click", processEvent, false);
 }
 ```
 
@@ -650,7 +650,7 @@ function noneOnceHandler(event) {
   log("outer, none-once, default\n");
 }
 function captureHandler(event) {
-  //event.stopImmediatePropagation();
+  // event.stopImmediatePropagation();
   log("middle, capture");
 }
 function noneCaptureHandler(event) {
@@ -663,7 +663,7 @@ function passiveHandler(event) {
 }
 function nonePassiveHandler(event) {
   event.preventDefault();
-  //event.stopPropagation();
+  // event.stopPropagation();
   log("inner2, none-passive, default, not open new page");
 }
 ```

@@ -22,7 +22,7 @@ withCalendar(calendar)
 ### Parameters
 
 - `calendar`
-  - : A string that corresponds to the {{jsxref("Temporal/ZonedDateTime/calendarId", "calendarId")}} property.
+  - : A string that corresponds to the {{jsxref("Temporal/ZonedDateTime/calendarId", "calendarId")}} property. See [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types) for a list of commonly supported calendar types.
 
 ### Return value
 
@@ -43,8 +43,8 @@ A new `Temporal.ZonedDateTime` object, representing the date-time specified by t
 const zdt = Temporal.ZonedDateTime.from(
   "2021-07-01T12:34:56[America/New_York]",
 );
-const newZDT = zdt.withCalendar("islamic");
-console.log(newZDT.toLocaleString("en-US", { calendar: "islamic" }));
+const newZDT = zdt.withCalendar("islamic-umalqura");
+console.log(newZDT.toLocaleString("en-US", { calendar: "islamic-umalqura" }));
 // 11/21/1442 AH, 12:34:56 PM EDT
 ```
 

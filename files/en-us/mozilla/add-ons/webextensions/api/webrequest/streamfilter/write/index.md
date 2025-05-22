@@ -51,7 +51,7 @@ function listener(details) {
     filter.disconnect();
   };
 
-  //return {}; // not needed
+  // return {}; // not needed
 }
 
 browser.webRequest.onBeforeRequest.addListener(

@@ -47,7 +47,7 @@ None ({{jsxref("Undefined")}}).
 ## Examples
 
 ```js
-// ...
+// …
 
 const passEncoder = commandEncoder.beginRenderPass(renderPassDescriptor);
 
@@ -58,7 +58,7 @@ passEncoder.draw(3);
 
 passEncoder.end();
 
-// ...
+// …
 ```
 
 ## Specifications
