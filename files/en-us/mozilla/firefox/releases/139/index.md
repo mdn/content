@@ -81,9 +81,11 @@ This article provides information about the changes in Firefox 139 that affect d
 
 #### General
 
+- The priority manager (on macOS, the background QoS manager) in Firefox, which manages IPC message prioritization between the parent and content processes, has been temporarily disabled for all supported Remote Protocols. This change resolves an issue where, under high system load, initial page loads in newly opened background tabs were not being scheduled, resulting in certain commands hanging ([Firefox bug 1960734](https://bugzil.la/1960734)).
+
 #### WebDriver BiDi
 
-#### Marionette
+- Implemented the `emulation.setGeolocationOverride` command, allowing tests and automation tools to simulate geographic locations across specified browsing contexts or user contexts. This enables consumers to test location-aware features such as geofencing for local recommendations ([Firefox bug 1954992](https://bugzil.la/1954992)).
 
 ## Changes for add-on developers
 
