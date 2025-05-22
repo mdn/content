@@ -1,5 +1,6 @@
 ---
 title: "ARIA: note role"
+short-title: note
 slug: Web/Accessibility/ARIA/Reference/Roles/note_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#note

@@ -58,6 +58,16 @@ While masking provides more control and options, clipping can perform better if 
 - {{domxref("SVGMaskElement")}}
   - {{domxref("SVGMaskElement.maskContentUnits")}}
 
+## Guides
+
+- [Introduction to CSS clipping](/en-US/docs/Web/CSS/CSS_masking/Clipping)
+
+  - : Introduction to clipping in CSS, including the `clip-path` property with examples.
+
+- [Introduction to CSS masking](/en-US/docs/Web/CSS/CSS_masking/Masking)
+
+  - : Introduction to masking in CSS, the various mask image types, and the effects of luminance and alpha-transparency in masking.
+
 ## Related concepts
 
 - [`<coord-box>`](/en-US/docs/Web/CSS/box-edge#values)

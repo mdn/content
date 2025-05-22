@@ -84,7 +84,7 @@ So why is this both good and bad? Well, in this case the browser has created the
 > [!NOTE]
 > HTML is parsed permissively because when the web was first created, it was decided that getting content published was more important than making sure the syntax was absolutely correct. The web would probably not be as popular as it is today if it had been more strict from the very beginning.
 
-So how do you find markup errors? Later on we will show you how to find errors in HTML using a tool called the [HTML validator](#html_validation), but first we will show you how inspect your HTML manually using a **DOM inspector**, and then explore what kinds of markup errors you might be looking for, and how the browser might interpret those.
+So how do you find markup errors? Later on we will show you how to find errors in HTML using a tool called the [HTML validator](#html_validation), but first we will show you how to inspect your HTML manually using a **DOM inspector**, and then explore what kinds of markup errors you might be looking for, and how the browser might interpret those.
 
 ## Using a DOM inspector
 

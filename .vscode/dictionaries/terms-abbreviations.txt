@@ -976,6 +976,7 @@ XPCOM
 xrayed
 Xrays
 XRCPU
+xsleaks
 XSSI
 yari
 yearless
