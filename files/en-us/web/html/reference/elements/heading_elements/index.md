@@ -77,12 +77,9 @@ Prefer using only one `<h1>` per page and [nest headings](#nesting) without skip
 
 ### Specifying a uniform font size for `<h1>`
 
-The [HTML standard](https://html.spec.whatwg.org/multipage/rendering.html#sections-and-headings) specifies that `<h1>` elements in a `<section>`, `<article>`, `<aside>`, or `<nav>` element should render as an `<h2>` (smaller {{cssxref("font-size")}} with an adjusted {{cssxref("margin-block")}}), or as an `<h3>` if nested another level, and so on.
+Before May 2025, the [HTML standard](https://html.spec.whatwg.org/multipage/rendering.html#sections-and-headings) specified that `<h1>` elements in a `<section>`, `<article>`, `<aside>`, or `<nav>` element should render as an `<h2>` (smaller {{cssxref("font-size")}} with an adjusted {{cssxref("margin-block")}}), or as an `<h3>` if nested another level, and so on. This special context-dependent default style has now been [removed](https://github.com/whatwg/html/issues/7867).
 
-> [!NOTE]
-> There is a [proposal](https://github.com/whatwg/html/issues/7867) to remove this special default style, so that `<h1>` always has the same default style. This proposal is currently [implemented in Firefox Nightly](/en-US/docs/Mozilla/Firefox/Experimental_features#ua_styles_for_h1_nested_in_sectioning_elements).
-
-To ensure consistent `<h1>` rendering, use the following style rule:
+To ensure consistent `<h1>` rendering for browsers that implement the old context-dependent default style, use the following style rule:
 
 ```css
 h1 {
