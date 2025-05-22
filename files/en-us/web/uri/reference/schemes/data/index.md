@@ -2,7 +2,7 @@
 title: "data: URLs"
 short-title: "data:"
 slug: Web/URI/Reference/Schemes/data
-page-type: reference
+page-type: uri-scheme
 browser-compat: http.data-url
 sidebar: urlsidebar
 ---
@@ -14,17 +14,17 @@ sidebar: urlsidebar
 
 ## Syntax
 
-Data URLs are composed of four parts: a prefix (`data:`), a [MIME type](/en-US/docs/Web/HTTP/MIME_types) indicating the type of data, an optional `base64` token if non-textual, and the data itself:
+Data URLs are composed of four parts: a prefix (`data:`), a [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types) indicating the type of data, an optional `base64` token if non-textual, and the data itself:
 
 ```plain
 data:[<media-type>][;base64],<data>
 ```
 
-The `media-type` is a [MIME type](/en-US/docs/Web/HTTP/MIME_types) string, such as `'image/jpeg'` for a JPEG image file. If omitted, defaults to `text/plain;charset=US-ASCII`
+The `media-type` is a [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types) string, such as `'image/jpeg'` for a JPEG image file. If omitted, defaults to `text/plain;charset=US-ASCII`
 
 If the data contains [characters defined in RFC 3986 as reserved characters](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2), or contains space characters, newline characters, or other non-printing characters, those characters must be {{Glossary("Percent-encoding", "percent-encoded")}}.
 
-If the data is textual, you can embed the text (using the appropriate entities or escapes based on the enclosing document's type). Otherwise, you can specify `base64` to embed base64-encoded binary data. You can find more info on MIME types [here](/en-US/docs/Web/HTTP/MIME_types) and [here](/en-US/docs/Web/HTTP/MIME_types/Common_types).
+If the data is textual, you can embed the text (using the appropriate entities or escapes based on the enclosing document's type). Otherwise, you can specify `base64` to embed base64-encoded binary data. You can find [a full dissection of MIME type structure](/en-US/docs/Web/HTTP/Guides/MIME_types) and [a table of common MIME types on the web](/en-US/docs/Web/HTTP/Guides/MIME_types/Common_types).
 
 A few examples:
 
@@ -81,7 +81,7 @@ bash$ echo -n hello | base64
 
 This section describes problems that commonly occur when creating and using `data` URLs.
 
-```html
+```plain
 data:text/html,lots of text…<p><a name%3D"bottom">bottom</a>?arg=val</p>
 ```
 

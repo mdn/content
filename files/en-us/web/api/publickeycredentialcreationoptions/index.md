@@ -155,7 +155,7 @@ The **`PublicKeyCredentialCreationOptions`** dictionary represents the object pa
         If omitted, `id` defaults to the document origin — which would be `login.example.com` in the above example.
 
     - `name`
-      - : A string representing the name of the relying party (e.g. `"Facebook"`). This is the name the user will be presented with when creating or validating a WebAuthn operation.
+      - : A string representing the name of the relying party (e.g., `"Facebook"`). This is the name the user will be presented with when creating or validating a WebAuthn operation.
 
 - `timeout` {{optional_inline}}
 
@@ -174,7 +174,7 @@ The **`PublicKeyCredentialCreationOptions`** dictionary represents the object pa
       - : An {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, or {{jsxref("DataView")}} representing a unique ID for the user account. This value has a maximum length of 64 bytes, and is not intended to be displayed to the user.
 
     - `name`
-      - : A string providing a human-friendly identifier for the user's account, to help distinguish between different accounts with similar `displayName`s. This could be an email address (such as `"john.doe@example.com"`), phone number (for example `"+12345678901"`), or some other kind of user account identifier (for example `"johndoe667"`).
+      - : A string providing a human-friendly identifier for the user's account, to help distinguish between different accounts with similar `displayName`s. This could be an email address (such as `"john.doe@example.com"`), phone number (for example `"+12345678901"`), or some other kind of user account identifier (for example `"JohnDoe667"`).
 
 - `hints` {{optional_inline}}
 

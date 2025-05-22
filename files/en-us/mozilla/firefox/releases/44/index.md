@@ -23,7 +23,7 @@ Highlights:
 
 ### HTML
 
-- [`<link rel="prefetch">`](/en-US/docs/Glossary/Prefetch) now obeys the [`crossorigin`](/en-US/docs/Web/HTML/Element/link#crossorigin) attribute ([Firefox bug 1214819](https://bugzil.la/1214819)).
+- [`<link rel="prefetch">`](/en-US/docs/Glossary/Prefetch) now obeys the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Elements/link#crossorigin) attribute ([Firefox bug 1214819](https://bugzil.la/1214819)).
 
 ### CSS
 
@@ -183,7 +183,7 @@ _No change._
 
 ## HTTP
 
-- Support for the [Brotli](https://en.wikipedia.org/wiki/Brotli) algorithm has been added and both [`Accept-Encoding`](/en-US/docs/Web/HTTP/Content_negotiation#the_accept-encoding_header) and [`Content-Encoding`](/en-US/docs/Web/HTTP/Headers/Content-Encoding) headers now support the `br` value ([Firefox bug 366559](https://bugzil.la/366559) and [Firefox bug 1211916](https://bugzil.la/1211916)).
+- Support for the [Brotli](https://en.wikipedia.org/wiki/Brotli) algorithm has been added and both [`Accept-Encoding`](/en-US/docs/Web/HTTP/Guides/Content_negotiation#the_accept-encoding_header) and [`Content-Encoding`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Encoding) headers now support the `br` value ([Firefox bug 366559](https://bugzil.la/366559) and [Firefox bug 1211916](https://bugzil.la/1211916)).
 - Incorrect support of HTTP/2 headers containing line breaks (`'/n'`) have been removed as the spec doesn't allow it, unlike HTTP/1 ([Firefox bug 1197847](https://bugzil.la/1197847)).
 
 ## Networking
@@ -215,7 +215,7 @@ _No change._
 
 ### Other
 
-- Due to breaking changes in Firefox 44 ([bug 1202902](https://bugzil.la/1202902)), add-ons packed with [cfx](/en-US/docs/Mozilla/Add-ons/SDK/Tools/cfx) will not work any longer. To make your add-on compatible again, please use [jpm](/en-US/docs/Mozilla/Add-ons/SDK/Tools/jpm). You can find steps to migrate from _cfx_ to _jpm_ [here](/en-US/docs/Mozilla/Add-ons/SDK/Tools/cfx_to_jpm).
+- Due to breaking changes in Firefox 44 ([bug 1202902](https://bugzil.la/1202902)), add-ons packed with [cfx](/en-US/docs/Mozilla/Add-ons/SDK/Tools/cfx) will not work any longer. To make your add-on compatible again, please use [jpm](/en-US/docs/Mozilla/Add-ons/SDK/Tools/jpm). See the [_cfx_ to _jpm_ migration guide](/en-US/docs/Mozilla/Add-ons/SDK/Tools/cfx_to_jpm).
 
 ## Older versions
 

@@ -19,7 +19,7 @@ A feature query consists of the `@supports` at-rule followed by the support cond
 ```css
 /* `@supports` at-rule */
 @supports <support-condition> {
-  CSS rules to apply
+  /* CSS rules to apply */
 }
 
 /* `supports()` function */
@@ -31,11 +31,11 @@ For example, we can apply a set of styles or import an entire stylesheet if the 
 ```css
 /* `@supports` at-rule */
 @supports (color: red) {
-  CSS rules to apply
+  /* CSS rules to apply */
 }
 
 /* `supports()` function */
-@import `/css/styles.css` supports(color: red);
+@import "/css/styles.css" supports(color: red);
 ```
 
 As another example, if you want to check if a browser supports the `row-gap` property you would write the following feature query. It doesn't matter which value you use in a lot of cases: if all you want is to check that the browser supports this property, then any valid value will do.
@@ -73,11 +73,11 @@ Expanding on the `color` property example above, here we check if the browser su
 ```css
 /* `@supports` at-rule */
 @supports (color: AccentColor) {
-  CSS rules to apply
+  /* CSS rules to apply */
 }
 
 /* `supports()` function */
-@import `/css/styles.css` supports(color: AccentColor);
+@import "/css/styles.css" supports(color: AccentColor);
 ```
 
 In these examples, we've used feature queries to check if the user-agent supports a specific value of a CSS property, listing the single declaration within parenthesis. You can test for multiple property values or the lack of support.
@@ -89,7 +89,7 @@ In addition to asking the browser if it supports a feature, you can test for the
 ```css
 /* `@supports` at-rule with `not` */
 @supports not (property: value) {
-  CSS rules to apply
+  /* CSS rules to apply */
 }
 ```
 
@@ -128,7 +128,7 @@ You may need to test support for more than one property in your feature query. T
 ```css
 /* multiple feature `@supports` at-rule */
 @supports (property1: value) and (property2: value) {
-  CSS rules to apply
+  /* CSS rules to apply */
 }
 ```
 
@@ -168,7 +168,7 @@ You can also use `or` to apply CSS only if one or more declarations are supporte
 ```css
 /* any feature `@supports` at-rule */
 @supports (property1: value) or (property2: value) {
-  CSS rules to apply
+  /* CSS rules to apply */
 }
 ```
 

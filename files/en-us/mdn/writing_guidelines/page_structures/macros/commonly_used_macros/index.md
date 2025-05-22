@@ -6,9 +6,7 @@ sidebar: mdnsidebar
 ---
 
 This page lists many of the general-purpose macros created for use on MDN.
-For additional how-to information on using these macros, see [Using macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros).
-
-See [Other macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Other) for information on macros that are infrequently used, are used only in special contexts, or are deprecated.
+For generic how-to information on using them in MDN content, see [Using macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros).
 
 ## Linking
 
@@ -70,7 +68,7 @@ Most macros will also take a second argument allowing you to change the display 
         <a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/htmlxref.rs">HTMLElement</a>
       </td>
       <td>
-        <a href="/en-US/docs/Web/HTML/Element">HTML Elements reference</a> (/Web/HTML/Element)
+        <a href="/en-US/docs/Web/HTML/Reference/Elements">HTML Elements reference</a> (/Web/HTML/Reference/Elements)
       </td>
       <td>
         <code>\{{HTMLElement("select")}}</code> results in {{HTMLElement("select")}}
@@ -92,7 +90,7 @@ Most macros will also take a second argument allowing you to change the display 
         <a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/svgattr.rs">SVGAttr</a>
       </td>
       <td>
-        <a href="/en-US/docs/Web/SVG/Attribute">SVG attribute reference</a> (/Web/SVG/Attribute).
+        <a href="/en-US/docs/Web/SVG/Reference/Attribute">SVG attribute reference</a> (/Web/SVG/Reference/Attribute).
       </td>
       <td>
         <code>\{{SVGAttr("d")}}</code> results in {{SVGAttr("d")}}
@@ -104,7 +102,7 @@ Most macros will also take a second argument allowing you to change the display 
           href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/svgxref.rs">SVGElement</a>
       </td>
       <td>
-        <a href="/en-US/docs/Web/SVG/Attribute">SVG Element reference</a> (/Web/SVG/Element).
+        <a href="/en-US/docs/Web/SVG/Reference/Element">SVG Element reference</a> (/Web/SVG/Reference/Element).
       </td>
       <td>
         <code>\{{SVGElement("view")}}</code> results in {{SVGElement("view")}}
@@ -115,7 +113,7 @@ Most macros will also take a second argument allowing you to change the display 
         <code><a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/http.rs">HTTPHeader</a></code>
       </td>
       <td>
-        <a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a> (/Web/HTTP/Headers).
+        <a href="/en-US/docs/Web/HTTP/Reference/Headers">HTTP headers</a> (/Web/HTTP/Reference/Headers).
       </td>
       <td>
         <code>\{{HTTPHeader("ACCEPT")}}</code> results in {{HTTPHeader("ACCEPT")}}
@@ -126,7 +124,7 @@ Most macros will also take a second argument allowing you to change the display 
         <a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/http.rs">HTTPMethod</a>
       </td>
       <td>
-        <a href="/en-US/docs/Web/HTTP/Methods">HTTP request methods</a> (/Web/HTTP/Methods).
+        <a href="/en-US/docs/Web/HTTP/Reference/Methods">HTTP request methods</a> (/Web/HTTP/Reference/Methods).
       </td>
       <td>
         <code>\{{HTTPMethod("HEAD")}}</code> results in {{HTTPMethod("HEAD")}}
@@ -137,7 +135,7 @@ Most macros will also take a second argument allowing you to change the display 
         <a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/http.rs">HTTPStatus</a>
       </td>
       <td>
-        <a href="/en-US/docs/Web/HTTP/Status">HTTP response status codes</a> (/Web/HTTP/Status)
+        <a href="/en-US/docs/Web/HTTP/Reference/Status">HTTP response status codes</a> (/Web/HTTP/Reference/Status)
       </td>
       <td>
         <code>\{{HTTPStatus("404")}}</code> results in {{HTTPStatus("404")}}
@@ -232,7 +230,7 @@ They can also be used to mark up a section on a page.
   Example: `\{{SeeCompatTable}}` {{SeeCompatTable}}
 - [`Deprecated_Header`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs): `\{{Deprecated_Header}}` {{Deprecated_Header}}
 - [`SecureContext_Header`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs).
-  Should be used on main pages like interface pages, API overview pages, and API entry points (e.g. `navigator.xyz`) but usually not on subpages like method and property pages.
+  Should be used on main pages like interface pages, API overview pages, and API entry points (e.g., `navigator.xyz`) but usually not on subpages like method and property pages.
   Example: `\{{SecureContext_Header}}` {{SecureContext_Header}}
 
 #### Indicating that a feature is available in web workers
@@ -256,12 +254,10 @@ You can also pass some arguments to indicate that a feature works in specified w
 
 The following macros are included on all reference pages, but are also supported by all page types:
 
-- `\{{Compat}}` / `\{{Compat(&lt;feature>)}}` / `\{{Compat(&lt;feature>, &lt;depth>)}}`
-
-  - : Generates a [compatibility table](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) for the feature passed as the parameter. If no parameter is included, it defaults to the features defined by `browser-compat` in the frontmatter. An optional depth parameter sets how deep sub features should be added to the table. The depth, if omitted, defaults to 1, meaning only the first level of sub feature data from BCD will be included.
-
-- `\{{Specifications}}` / `\{{Specifications(&lt;feature>)}}`
-  - : Includes the specification for the feature specified in the parameter. If no parameter is passed, the specification listed is defined by the value for `spec-urls` in the frontmatter, if present, or from the specification listed in browser compatibility data defined by `browser-compat` in the frontmatter. The specification is rendered as an external link.
+- `\{{Compat}}`
+  - : Generates a [compatibility table](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) for the feature(s) defined by `browser-compat` in the frontmatter.
+- `\{{Specifications}}`
+  - : Includes a [specification table](/en-US/docs/MDN/Writing_guidelines/Page_structures/Specification_tables) for the feature(s) defined by `spec-urls` in the frontmatter, if present, or from the specification listed in browser compatibility data defined by `browser-compat` in the frontmatter.
 
 ## See also
 
@@ -269,3 +265,4 @@ The following macros are included on all reference pages, but are also supported
 - [Page templates](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types#page_templates)
 - [Page components](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#page_components)
 - [Feature status macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status)
+- [Other macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Other): infrequently used or deprecated macros

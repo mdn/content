@@ -1,5 +1,6 @@
 ---
 title: "ARIA: row role"
+short-title: row
 slug: Web/Accessibility/ARIA/Reference/Roles/row_role
 page-type: aria-role
 spec-urls:
@@ -37,7 +38,7 @@ An element with `role="row"` is a row of cells within a tabular structure. A row
 
 ## Description
 
-The element with `role="row"` is a row within a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role), [`table`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/table_role), or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role), and optionally within a [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role) that contains one or more [`cell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role), [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role), [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role), or [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role) elements within a static tabular structure. Using native [HTML `<tr>`](/en-US/docs/Web/HTML/Element/tr) elements, whenever possible, is strongly encouraged.
+The element with `role="row"` is a row within a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role), [`table`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/table_role), or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role), and optionally within a [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role) that contains one or more [`cell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role), [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role), [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role), or [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role) elements within a static tabular structure. Using native [HTML `<tr>`](/en-US/docs/Web/HTML/Reference/Elements/tr) elements, whenever possible, is strongly encouraged.
 
 To create an ARIA row, add `role="row"` to the container element. That row should be nested within a grid, table or treegrid. A group of rows can be nested within a grid, table or treegrid directly, or within a rowgroup in one of those containers. Each row contains child cells. These cells can be of different types, depending on whether they are column or row headers, or grid or regular cells.
 
@@ -110,9 +111,9 @@ To create an interactive widget that has a tabular structure, use the grid patte
 
     If all the rows are present in the DOM, this attribute is not necessary.
 
-### Keyboard Interactions
+### Keyboard interactions
 
-None
+None.
 
 ### Required JavaScript features
 

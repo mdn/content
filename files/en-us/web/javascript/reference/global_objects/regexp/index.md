@@ -184,8 +184,8 @@ In the replacement text, the script uses `$1` and `$2` to indicate the results o
 ```js
 const re = /(\w+)\s(\w+)/;
 const str = "Maria Cruz";
-const newstr = str.replace(re, "$2, $1");
-console.log(newstr);
+const newStr = str.replace(re, "$2, $1");
+console.log(newStr);
 ```
 
 This displays `"Cruz, Maria"`.
@@ -252,7 +252,7 @@ With the global flag `g`, all 6 digits would be matched, not just 3.
 
 `\w` and `\W` only matches ASCII based characters; for example, `a` to `z`, `A` to `Z`, `0` to `9`, and `_`.
 
-To match characters from other languages such as Cyrillic or Hebrew, use `\uhhhh`, where `hhhh` is the character's Unicode value in hexadecimal.
+To match characters from other languages such as Cyrillic or Hebrew, use `\uHHHH`, where `HHHH` is the character's Unicode value in hexadecimal.
 
 This example demonstrates how one can separate out Unicode characters from a word.
 

@@ -1,5 +1,6 @@
 ---
-title: aria-describedby
+title: "ARIA: aria-describedby attribute"
+short-title: aria-describedby
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-describedby
 page-type: aria-attribute
 spec-urls:
@@ -12,7 +13,7 @@ The global `aria-describedby` attribute identifies the element (or elements) tha
 
 ## Description
 
-The `aria-describedby` attribute lists the [`id`](/en-US/docs/Web/HTML/Global_attributes/id)s of the elements that describe the object. It is used to establish a relationship between widgets or groups and the text that describes them.
+The `aria-describedby` attribute lists the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id)s of the elements that describe the object. It is used to establish a relationship between widgets or groups and the text that describes them.
 
 The `aria-describedby` attribute is not limited to form controls. It can also be used to associate static text with widgets, groups of elements, regions that have a heading, definitions, and more. The `aria-describedby` attribute can be used with semantic HTML elements and with elements that have an ARIA [`role`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles).
 
@@ -43,6 +44,15 @@ The `aria-describedby` property is appropriate when the associated content conta
 - ID reference list
   - : The `id` or space-separated list of element `id`s that describe the current element.
 
+## Associated interfaces
+
+- {{domxref("Element.ariaDescribedByElements")}}
+  - : The `ariaDescribedByElements` property is part of each element's interface.
+    Its value is an array of subclasses of {{domxref("Element")}} that reflect the `id` references in the `aria-describedby` attribute ([with some caveats](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references)).
+- {{domxref("ElementInternals.ariaDescribedByElements")}}
+  - : The `ariaDescribedByElements` property is part of each custom element's interface.
+    Its value is an array of subclasses of {{domxref("Element")}} that reflect the `id` references in the `aria-describedby` attribute ([with some caveats](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references)).
+
 ## Associated roles
 
 Used in **all** roles. Usable in all HTML elements as well.
@@ -53,7 +63,6 @@ Used in **all** roles. Usable in all HTML elements as well.
 
 ## See also
 
-- {{HTMLElement('label')}}
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
 - [`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-description)
 - [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details)

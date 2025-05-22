@@ -26,7 +26,7 @@ This example looks at the `remoteDescription` and displays an alert containing t
 
 ```js
 const pc = new RTCPeerConnection();
-// ...
+// …
 const sd = pc.remoteDescription;
 if (sd) {
   alert(`Remote session: type='${sd.type}'; sdp description='${sd.sdp}'`);

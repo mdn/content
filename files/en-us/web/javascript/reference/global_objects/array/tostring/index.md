@@ -10,7 +10,7 @@ browser-compat: javascript.builtins.Array.toString
 The **`toString()`** method of {{jsxref("Array")}} instances returns a string representing the
 specified array and its elements.
 
-{{InteractiveExample("JavaScript Demo: Array.toString()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.toString()", "shorter")}}
 
 ```js interactive-example
 const array1 = [1, 2, "a", "1a"];

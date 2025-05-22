@@ -2,9 +2,8 @@
 title: Event bubbling
 slug: Learn_web_development/Core/Scripting/Event_bubbling
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Events","Learn_web_development/Core/Scripting/Image_gallery", "Learn_web_development/Core/Scripting")}}
 
@@ -134,9 +133,7 @@ The HTML looks like this:
 
 <div class="hidden">
   <video>
-    <source
-      src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
-      type="video/webm" />
+    <source src="/shared-assets/videos/flower.webm" type="video/webm" />
     <p>
       Your browser doesn't support HTML video. Here is a
       <a href="rabbit320.mp4">link to the video</a> instead.
@@ -229,9 +226,7 @@ All we're doing here is calling `stopPropagation()` on the event object in the h
 
 <div class="hidden">
   <video>
-    <source
-      src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
-      type="video/webm" />
+    <source src="/shared-assets/videos/flower.webm" type="video/webm" />
     <p>
       Your browser doesn't support HTML video. Here is a
       <a href="rabbit320.mp4">link to the video</a> instead.
@@ -417,7 +412,7 @@ The `target` property is commonly used in event delegation, as in our [Event del
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? To verify you've retained this information before you move on — see [Test your skills: Events](/en-US/docs/Learn_web_development/Core/Scripting/Building_blocks/Test_your_skills:_Events).
+You've reached the end of this article, but can you remember the most important information? To verify you've retained this information before you move on — see [Test your skills: Events](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Events).
 
 ## Summary
 

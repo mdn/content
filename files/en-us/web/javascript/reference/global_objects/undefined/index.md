@@ -11,7 +11,7 @@ The **`undefined`** global property represents the primitive
 value [`undefined`](/en-US/docs/Web/JavaScript/Guide/Data_structures#undefined_type). It is one of JavaScript's
 {{Glossary("Primitive", "primitive types")}}.
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - undefined")}}
+{{InteractiveExample("JavaScript Demo: undefined")}}
 
 ```js interactive-example
 function test(t) {

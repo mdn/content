@@ -62,6 +62,6 @@ _Include this is there are any specific things to watch out for in regard to acc
 
 ## See also
 
-- _Links of link of related properties: {{Cssxref("example-property")}}_
+- _Links of link of related properties: `example-property`_
 - _Links to article showing how to use the property in context: "Using … article"_
 - _Very good external links. Don't be afraid of external links, but they should be outstanding, and not only mention minor details._

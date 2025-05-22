@@ -32,10 +32,10 @@ function onFs(fs) {
     "Documents",
     { create: true },
     (directoryEntry) => {
-      //directoryEntry.isFile === false
-      //directoryEntry.isDirectory === true
-      //directoryEntry.name === 'Documents'
-      //directoryEntry.fullPath === '/Documents'
+      // directoryEntry.isFile === false
+      // directoryEntry.isDirectory === true
+      // directoryEntry.name === 'Documents'
+      // directoryEntry.fullPath === '/Documents'
     },
     onError,
   );

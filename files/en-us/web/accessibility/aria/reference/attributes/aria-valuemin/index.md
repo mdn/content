@@ -1,5 +1,6 @@
 ---
-title: aria-valuemin
+title: "ARIA: aria-valuemin attribute"
+short-title: aria-valuemin
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-valuemin
@@ -10,7 +11,7 @@ The `aria-valuemin` attribute defines the minimum allowed value for a range widg
 
 ## Description
 
-The `aria-valuemin` attribute defines the minimum value allowed for range widgets. It is similar to the `min` attribute of {{HTMLElement('progress')}}, {{HTMLElement('meter')}}, and {{HTMLElement('input')}} of type [`range`](/en-US/docs/Web/HTML/Element/input/range), [`number`](/en-US/docs/Web/HTML/Element/input/number) and all the date-time types.
+The `aria-valuemin` attribute defines the minimum value allowed for range widgets. It is similar to the `min` attribute of {{HTMLElement('progress')}}, {{HTMLElement('meter')}}, and {{HTMLElement('input')}} of type [`range`](/en-US/docs/Web/HTML/Reference/Elements/input/range), [`number`](/en-US/docs/Web/HTML/Reference/Elements/input/number) and all the date-time types.
 
 When creating a range type role, including [`meter`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/meter_role), [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role), [`slider`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role), and [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role) on a non-semantic element, the `aria-valuemin` enables defining a minimum that is less than the maximum value and is a required attribute of `slider`, `scrollbar` and `spinbutton`.
 
@@ -58,6 +59,6 @@ Inherited into roles:
 ## See also
 
 - [`range` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/range_role)
-- [`<input type="range>` element `min` attribute](/en-US/docs/Web/HTML/Element/input/range#min)
+- [`<input type="range>` element `min` attribute](/en-US/docs/Web/HTML/Reference/Elements/input/range#min)
 - [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax)
 - [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow)

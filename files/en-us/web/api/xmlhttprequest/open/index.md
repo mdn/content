@@ -28,7 +28,7 @@ open(method, url, async, user, password)
 ### Parameters
 
 - `method`
-  - : The [HTTP request method](/en-US/docs/Web/HTTP/Methods) to use, such as
+  - : The [HTTP request method](/en-US/docs/Web/HTTP/Reference/Methods) to use, such as
     `"GET"`, `"POST"`, `"PUT"`, `"DELETE"`,
     etc. Ignored for non-HTTP(S) URLs.
 - `url`

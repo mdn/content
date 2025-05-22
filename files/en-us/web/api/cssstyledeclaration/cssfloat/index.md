@@ -34,7 +34,7 @@ let myRules = document.styleSheets[0].cssRules;
 let rule = myRules[0];
 console.log(rule.style.cssFloat); // "left"
 rule.style.cssFloat = "right";
-console.log(rule.style.cssFloat); //right
+console.log(rule.style.cssFloat); // "right"
 ```
 
 ## Specifications

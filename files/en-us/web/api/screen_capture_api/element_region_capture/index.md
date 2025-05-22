@@ -111,7 +111,7 @@ video,
 }
 ```
 
-Finally, we give the `<video>` element a {{cssxref("max-width")}} of `50%` and a fixed {{cssxref("aspect-ratio")}} of `4/3`. This is to keep the video at a consistent size and avoid too much layout upheaval when the screen capture starts to be broadcast. If we didn't do this, the `<video>` element would grow to the same width as the entire captured area (window or screen), which would affect the layout. It is a [replaced element](/en-US/docs/Web/CSS/Replaced_element), after all, so its [intrinsic size](/en-US/docs/Glossary/Intrinsic_Size) depends on that of its content.
+Finally, we give the `<video>` element a {{cssxref("max-width")}} of `50%` and a fixed {{cssxref("aspect-ratio")}} of `4/3`. This is to keep the video at a consistent size and avoid too much layout upheaval when the screen capture starts to be broadcast. If we didn't do this, the `<video>` element would grow to the same width as the entire captured area (window or screen), which would affect the layout. It is a {{ glossary("replaced elements", "replaced element")}}, after all, so its [intrinsic size](/en-US/docs/Glossary/Intrinsic_Size) depends on that of its content.
 
 ```css
 video {
@@ -164,7 +164,7 @@ This obviously isn't ideal, and would cause issues in any kind of conferencing a
 
 The Element Capture API restricts the captured region to a specified rendered DOM tree (a selected element and its descendants). In this section we will explore a second demo that is identical to the one presented above, except that it uses Element Capture on top of basic Screen Capture. See this demo running live at [Element Capture API example](https://mdn.github.io/dom-examples/screen-capture-api/element-capture/) (also see the [source code](https://github.com/mdn/dom-examples/tree/main/screen-capture-api/element-capture)).
 
-The HTML is identical to the previous example, and the CSS is _nearly_ identical. We'll explain the differences in the JavaScript now, then look at the CSS differences later on, in the [Issues with the Element Capture API](#issues-with-the-element-capture-api) section.
+The HTML is identical to the previous example, and the CSS is _nearly_ identical. We'll explain the differences in the JavaScript now, then look at the CSS differences later on, in the [Restrictions on the Element Capture API](#restrictions_on_the_element_capture_api) section.
 
 To use the Element Capture API, we additionally grab a reference to a DOM element that we will later use as a **restriction target** — the screen area shown in the stream will be restricted to just that rendered element and its descendants:
 

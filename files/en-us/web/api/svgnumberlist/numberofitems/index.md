@@ -8,7 +8,7 @@ browser-compat: api.SVGNumberList.numberOfItems
 
 {{APIRef("SVG")}}
 
-The **`numberOfItems`** property of the {{domxref("SVGNumberList")}} interface returns the number of items in the list. {{domxref("SVGNumberList.length", "length")}} is an alias of of it.
+The **`numberOfItems`** property of the {{domxref("SVGNumberList")}} interface returns the number of items in the list. {{domxref("SVGNumberList.length", "length")}} is an alias of it.
 
 ## Value
 

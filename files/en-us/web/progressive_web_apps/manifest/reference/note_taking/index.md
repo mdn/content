@@ -4,10 +4,11 @@ slug: Web/Progressive_web_apps/Manifest/Reference/note_taking
 page-type: web-manifest-member
 status:
   - experimental
-browser-compat: html.manifest.note_taking
+browser-compat: manifests.webapp.note_taking
+sidebar: pwasidebar
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The `note_taking` member identifies a web app as a note-taking app and defines related information, for example a URL pointing to functionality for taking a new note. This enables operating systems to integrate the app's note taking functionality, for example including a "New note" option in the app's context menu, or providing the app as an option for taking a note in other apps.
 

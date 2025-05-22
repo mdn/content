@@ -6,6 +6,10 @@ page-type: guide
 sidebar: privacy
 ---
 
+> [!WARNING]
+> Some of these features that require this enrollment process are currently opposed by one or more browser vendors.
+> See specific API entry points for more details.
+
 To access certain privacy sandbox features, browsers require developers to complete an **enrollment** process.
 
 Enrollment provides a mechanism to verify the entities that call privacy sandbox features, and to gather the developer-specific data needed to properly configure and use them. The enrollment process adds an additional layer of protections on top of the structural restrictions enforced within each feature by adding transparency to who is collecting data, and mitigating attempts to misuse features to gather more data than intended.
@@ -33,4 +37,4 @@ The documentation of each feature includes more details on exactly which sub-fea
 
 ## See also
 
-- [The Privacy Sandbox](https://developers.google.com/privacy-sandbox) on developers.google.com
+- [The Privacy Sandbox](https://privacysandbox.google.com/) on privacysandbox.google.com

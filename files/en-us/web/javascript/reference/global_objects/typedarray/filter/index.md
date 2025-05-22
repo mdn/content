@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.TypedArray.filter
 
 The **`filter()`** method of {{jsxref("TypedArray")}} instances creates a copy of a portion of a given typed array, filtered down to just the elements from the given typed array that pass the test implemented by the provided function. This method has the same algorithm as {{jsxref("Array.prototype.filter()")}}.
 
-{{InteractiveExample("JavaScript Demo: TypedArray.filter()")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.prototype.filter()")}}
 
 ```js interactive-example
 function isNegative(element, index, array) {

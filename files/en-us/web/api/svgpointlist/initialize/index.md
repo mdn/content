@@ -45,11 +45,11 @@ The following example shows an SVG which contains a {{SVGElement("polyline")}} w
 ```
 
 ```js
-let example = document.getElementById("example");
-console.log(example.points.length); //5;
-let svgPoint = document.getElementById("svg").createSVGPoint();
+const example = document.getElementById("example");
+console.log(example.points.length); // 5;
+const svgPoint = document.getElementById("svg").createSVGPoint();
 example.points.initialize(svgPoint);
-console.log(example.points.length); //1
+console.log(example.points.length); // 1
 ```
 
 ## Specifications

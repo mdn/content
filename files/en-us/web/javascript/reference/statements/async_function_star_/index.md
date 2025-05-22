@@ -11,7 +11,7 @@ The **`async function*`** declaration creates a {{Glossary("binding")}} of a new
 
 You can also define async generator functions using the [`async function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/async_function*).
 
-{{InteractiveExample("JavaScript Demo: Expressions - Async Function Asterisk", "taller")}}
+{{InteractiveExample("JavaScript Demo: async function* declaration", "taller")}}
 
 ```js interactive-example
 async function* foo() {

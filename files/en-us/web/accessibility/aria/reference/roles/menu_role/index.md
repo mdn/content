@@ -1,5 +1,6 @@
 ---
 title: "ARIA: menu role"
+short-title: menu
 slug: Web/Accessibility/ARIA/Reference/Roles/menu_role
 page-type: aria-role
 spec-urls:
@@ -42,7 +43,7 @@ If the menu is visually persistent, consider the [`menubar`](/en-US/docs/Web/Acc
 
   - : A divider that separates and distinguishes sections of content or groups of menu items within the menu
 
-- [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute
+- [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) attribute
   - : The `menu` container has `tabindex` set to `-1` or `0` and each item in the menu has `tabindex` set to `-1`.
 - [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant)
   - : Set to the ID of the focused item, if there is one.
@@ -131,7 +132,6 @@ The following snippet of code is a popup menu nested in a menubar. It is display
     tabindex="0"
     aria-label="Text Color: purple">
     Purple
-    <span></span>
   </button>
   <ul role="menu" id="colormenu" aria-label="Color Options" tabindex="-1">
     <li

@@ -10,7 +10,7 @@ A CORS preflight request is a {{Glossary("CORS")}} request that checks to see if
 
 It is an {{HTTPMethod("OPTIONS")}} request, using two or three HTTP request headers: {{HTTPHeader("Access-Control-Request-Method")}}, {{HTTPHeader("Origin")}}, and optionally {{HTTPHeader("Access-Control-Request-Headers")}}.
 
-A preflight request is automatically issued by a browser and in normal cases, front-end developers don't need to craft such requests themselves. It appears when request is qualified as ["to be preflighted"](/en-US/docs/Web/HTTP/CORS#preflighted_requests) and omitted for [simple requests](/en-US/docs/Web/HTTP/CORS#simple_requests).
+A preflight request is automatically issued by a browser and in normal cases, front-end developers don't need to craft such requests themselves. It appears when request is qualified as ["to be preflighted"](/en-US/docs/Web/HTTP/Guides/CORS#preflighted_requests) and omitted for [simple requests](/en-US/docs/Web/HTTP/Guides/CORS#simple_requests).
 
 For example, a client might be asking a server if it would allow a {{HTTPMethod("DELETE")}} request, before sending a `DELETE` request, by using a preflight request:
 

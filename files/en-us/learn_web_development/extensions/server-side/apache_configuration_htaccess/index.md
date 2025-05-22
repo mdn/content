@@ -2,9 +2,8 @@
 title: "Apache Configuration: .htaccess"
 slug: Learn_web_development/Extensions/Server-side/Apache_Configuration_htaccess
 page-type: guide
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 Apache .htaccess files allow users to configure directories of the web server they control without modifying the main configuration file.
 
@@ -79,7 +78,7 @@ One alternative is to explicitly state what domains have access to the content o
 
 ### Cross-origin images
 
-As reported in the [Chromium Blog](https://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html) and documented in [Allowing cross-origin use of images and canvas](/en-US/docs/Web/HTML/CORS_enabled_image) can lead to [fingerprinting](/en-US/docs/Glossary/Fingerprinting) attacks.
+As reported in the [Chromium Blog](https://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html) and documented in [Allowing cross-origin use of images and canvas](/en-US/docs/Web/HTML/How_to/CORS_enabled_image) can lead to [fingerprinting](/en-US/docs/Glossary/Fingerprinting) attacks.
 
 To mitigate the possibility of these attacks, you should use the `crossorigin` attribute in the images you request and the code snippet below in your `.htaccess` to set the CORS header from the server.
 
@@ -108,7 +107,7 @@ Google Chrome's [Google Fonts troubleshooting guide](https://developers.google.c
 
 The [Resource Timing Level 1](https://www.w3.org/TR/resource-timing/) specification defines an interface for web applications to access the complete timing information for resources in a document.
 
-The [Timing-Allow-Origin](/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin) response header specifies origins that are allowed to see values of attributes retrieved via features of the Resource Timing API, which would otherwise be reported as zero due to cross-origin restrictions.
+The [Timing-Allow-Origin](/en-US/docs/Web/HTTP/Reference/Headers/Timing-Allow-Origin) response header specifies origins that are allowed to see values of attributes retrieved via features of the Resource Timing API, which would otherwise be reported as zero due to cross-origin restrictions.
 
 If a resource isn't served with a `Timing-Allow-Origin` or if the header does not include the origin after making the request, some attributes of the `PerformanceResourceTiming` object will be set to zero.
 
@@ -465,7 +464,7 @@ Be aware that Strict Transport Security is not revokable, and you must ensure be
    - If you want to use the `<base>` element, then use `base-uri 'self'` instead
 
 3. Only allows form submissions are from the current origin with: `form-action 'self'`
-4. Prevents all websites (including your own) from embedding your webpages within e.g. the `<iframe>` or `<object>` element by setting: `frame-ancestors 'none'`.
+4. Prevents all websites (including your own) from embedding your webpages within e.g., the `<iframe>` or `<object>` element by setting: `frame-ancestors 'none'`.
 
    - The `frame-ancestors` directive helps avoid [clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) attacks and is similar to the `X-Frame-Options` header
    - Browsers that support the CSP header will ignore `X-Frame-Options` if `frame-ancestors` is also specified
@@ -474,7 +473,7 @@ Be aware that Strict Transport Security is not revokable, and you must ensure be
 
    - **`upgrade-insecure-requests` does not ensure HTTPS for the top-level navigation. If you want to force the website itself to be loaded over HTTPS you must include the `Strict-Transport-Security` header**
 
-6. Includes the `Content-Security-Policy` header in all responses that are able to execute scripting. This includes the commonly used file types: HTML, XML and PDF documents. Although JavaScript files can not execute scripts in a "browsing context", they are included to target [web workers](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#csp_in_workers)
+6. Includes the `Content-Security-Policy` header in all responses that are able to execute scripting. This includes the commonly used file types: HTML, XML and PDF documents. Although JavaScript files can not execute scripts in a "browsing context", they are included to target [web workers](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#csp_in_workers)
 
 Some older browsers would try and guess the content type of a resource, even when it isn't properly set up on the server configuration. This reduces exposure to drive-by download attacks and cross-origin data leaks.
 
@@ -505,7 +504,7 @@ Use services like the ones below to check your `Referrer-Policy`:
 
 ## Disable `TRACE` HTTP Method
 
-The [TRACE](/en-US/docs/Web/HTTP/Methods/TRACE) method, while seemingly harmless, can be successfully leveraged in some scenarios to steal legitimate users' credentials. See [A Cross-Site Tracing (XST) attack](https://owasp.org/www-community/attacks/Cross_Site_Tracing) and [OWASP Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/06-Test_HTTP_Methods#test-xst-potential)
+The [TRACE](/en-US/docs/Web/HTTP/Reference/Methods/TRACE) method, while seemingly harmless, can be successfully leveraged in some scenarios to steal legitimate users' credentials. See [A Cross-Site Tracing (XST) attack](https://owasp.org/www-community/attacks/Cross_Site_Tracing) and [OWASP Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/06-Test_HTTP_Methods#test-xst-potential)
 
 Modern browsers now prevent TRACE requests made via JavaScript, however, other ways of sending TRACE requests with browsers have been discovered, such as using Java.
 
@@ -622,7 +621,7 @@ Map the following filename extensions to the specified encoding type using [AddE
 
 ## Cache expiration
 
-Serve resources with a far-future expiration date using the [mod_expires](https://httpd.apache.org/docs/current/mod/mod_expires.html) module, and [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) and [Expires](/en-US/docs/Web/HTTP/Headers/Expires) headers.
+Serve resources with a far-future expiration date using the [mod_expires](https://httpd.apache.org/docs/current/mod/mod_expires.html) module, and [Cache-Control](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control) and [Expires](/en-US/docs/Web/HTTP/Reference/Headers/Expires) headers.
 
 ```apacheconf
 <IfModule mod_expires.c>

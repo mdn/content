@@ -2,9 +2,8 @@
 title: What is a Domain Name?
 slug: Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name
 page-type: learn-faq
+sidebar: learn-how-to
 ---
-
-{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 <table>
   <tbody>
@@ -34,7 +33,7 @@ page-type: learn-faq
 
 Domain names are a key part of the Internet infrastructure. They provide a human-readable address for any web server available on the Internet.
 
-Any Internet-connected computer can be reached through a public {{Glossary("IP Address")}}, either an IPv4 address (e.g. `192.0.2.172`) or an IPv6 address (e.g., `2001:db8:8b73:0000:0000:8a2e:0370:1337`).
+Any Internet-connected computer can be reached through a public {{Glossary("IP Address")}}, either an IPv4 address (e.g., `192.0.2.172`) or an IPv6 address (e.g., `2001:db8:8b73:0000:0000:8a2e:0370:1337`).
 
 Computers can handle such addresses easily, but people have a hard time finding out who is running the server or what service the website offers. IP addresses are hard to remember and might change over time.
 
@@ -60,7 +59,7 @@ Each of those parts provides specific information about the whole domain name.
 
     TLDs can contain special as well as latin characters. A TLD's maximum length is 63 characters, although most are around 2–3.
 
-    The full list of TLDs is [maintained by ICANN](https://www.icann.org/resources/pages/tlds-2012-02-25-en).
+    The full list of TLDs is [maintained by ICANN](https://www.icann.org/en/contracted-parties/registry-operators/resources/list-of-top-level-domains).
 
 - Label (or component)
 
@@ -68,7 +67,7 @@ Each of those parts provides specific information about the whole domain name.
 
     The label located right before the TLD is also called a _Secondary Level Domain_ (SLD).
 
-    A domain name can have many labels (or components). It is not mandatory nor necessary to have 3 labels to form a domain name. For instance, [informatics.ed.ac.uk](https://informatics.ed.ac.uk/) is a valid domain name. For any domain you control (e.g. [mozilla.org](https://www.mozilla.org/en-US/)), you can create "subdomains" with different content located at each, like [developer.mozilla.org](/), [support.mozilla.org](https://support.mozilla.org/), or [bugzilla.mozilla.org](https://bugzilla.mozilla.org/).
+    A domain name can have many labels (or components). It is not mandatory nor necessary to have 3 labels to form a domain name. For instance, [informatics.ed.ac.uk](https://informatics.ed.ac.uk/) is a valid domain name. For any domain you control (e.g., [mozilla.org](https://www.mozilla.org/en-US/)), you can create "subdomains" with different content located at each, like [developer.mozilla.org](/), [support.mozilla.org](https://support.mozilla.org/), or [bugzilla.mozilla.org](https://bugzilla.mozilla.org/).
 
 ### Buying a domain name
 
@@ -172,4 +171,4 @@ Okay, we talked a lot about processes and architecture. Time to move on.
 - If you want to get hands-on, it's a good time to start digging into design and explore [the anatomy of a web page](/en-US/docs/Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts).
 - It's also worth noting that some aspects of building a website cost money. Please refer to [how much it costs to build a website](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost).
 - Or read more about [Domain Names](https://en.wikipedia.org/wiki/Domain_name) on Wikipedia.
-- You can also find [here](https://howdns.works/) a fun and colorful explanation of how DNS works.
+- The [How DNS works](https://howdns.works/) tutorial has a fun and colorful explanation.

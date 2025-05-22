@@ -25,7 +25,7 @@ It is good to have a cool design on your website, but the design is worthless if
 
 ## Examples
 
-Let's have a look at some simple HTML and CSS code:
+Let's have a look at some HTML and CSS code:
 
 ```html
 <div class="good">Good contrast</div>

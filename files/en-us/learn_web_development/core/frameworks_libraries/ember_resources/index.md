@@ -2,9 +2,8 @@
 title: Ember resources and troubleshooting
 slug: Learn_web_development/Core/Frameworks_libraries/Ember_resources
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenu("Learn_web_development/Core/Frameworks_libraries/Ember_routing", "Learn_web_development/Core/Frameworks_libraries")}}
 

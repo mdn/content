@@ -2,9 +2,8 @@
 title: Template primer
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Template_primer
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 A template is a text file defining the _structure_ or layout of an output file, with placeholders used to represent where data will be inserted when the template is rendered (in _Express_, templates are referred to as _views_).
 
@@ -31,7 +30,7 @@ If you look in the views directory you will see the .pug files for the project's
 These include the view for the home page (**index.pug**) and base template (**layout.pug**) that we will need to replace with our own content.
 
 ```plain
-/express-locallibrary-tutorial  //the project root
+/express-locallibrary-tutorial  # the project root
   /views
     error.pug
     index.pug
@@ -42,7 +41,7 @@ These include the view for the home page (**index.pug**) and base template (**la
 
 The example template file below shows off many of Pug's most useful features.
 
-The first thing to notice is that the file maps the structure of a typical HTML file, with the first word in (almost) every line being an HTML element, and indentation being used to indicate nested elements. So for example, the `body` element is inside an `html` element, and paragraph elements (`p`) are within the `body` element, etc. Non-nested elements (e.g. individual paragraphs) are on separate lines.
+The first thing to notice is that the file maps the structure of a typical HTML file, with the first word in (almost) every line being an HTML element, and indentation being used to indicate nested elements. So for example, the `body` element is inside an `html` element, and paragraph elements (`p`) are within the `body` element, etc. Non-nested elements (e.g., individual paragraphs) are on separate lines.
 
 ```pug
 doctype html
@@ -87,7 +86,7 @@ Element attributes are defined in parentheses after their associated element. In
 - `script(type='text/javascript')`, `link(rel='stylesheet', href='/stylesheets/style.css')`
 - `meta(name='viewport' content='width=device-width initial-scale=1')`
 
-The values of all attributes are _escaped_ (e.g. characters like `>` are converted to their HTML code equivalents like `&gt;`) to prevent JavaScript injection or cross-site scripting attacks.
+The values of all attributes are _escaped_ (e.g., characters like `>` are converted to their HTML code equivalents like `&gt;`) to prevent JavaScript injection or cross-site scripting attacks.
 
 If a tag is followed by the equals sign, the following text is treated as a JavaScript _expression_. So for example, in the first line below, the content of the `h1` tag will be _variable_ `title` (either defined in the file or passed into the template from Express). In the second line the paragraph content is a text string concatenated with the `title` variable. In both cases the default behavior is to _escape_ the line.
 
@@ -110,7 +109,7 @@ p This line has an un-escaped string: !{'<em> is emphasized</em>'}, an escaped s
 ```
 
 > [!NOTE]
-> You will almost always want to escape data from users (via the **`#{}`** syntax). Data that can be trusted (e.g. generated counts of records, etc.) may be displayed without escaping the values.
+> You will almost always want to escape data from users (via the **`#{}`** syntax). Data that can be trusted (e.g., generated counts of records, etc.) may be displayed without escaping the values.
 
 You can use the pipe ('**|**') character at the beginning of a line to indicate "[plain text](https://pugjs.org/language/plain-text.html)". For example, the additional text shown below will be displayed on the same line as the preceding anchor, but will not be linked.
 

@@ -80,27 +80,32 @@ sidebar:
   - type: listSubPagesGrouped
     path: /Web/CSS
     tags: css-pseudo-class
+    link: /Web/CSS/Pseudo-classes
     title: Pseudo-classes
     details: closed
   - type: listSubPagesGrouped
     path: /Web/CSS
     tags: css-pseudo-element
+    link: /Web/CSS/Pseudo-elements
     title: Pseudo-elements
     details: closed
   - type: listSubPages
     path: /Web/CSS
     tags: css-at-rule
+    link: /Web/CSS/CSS_syntax/At-rule
     title: At-rules
     details: closed
   - type: listSubPages
     path: /Web/CSS
     tags: css-function
     depth: 2
+    link: /Web/CSS/CSS_Values_and_Units/CSS_Value_Functions
     title: Functions
     details: closed
   - type: listSubPages
     path: /Web/CSS
     tags: css-type
+    link: /Web/CSS/CSS_Values_and_Units/CSS_data_types
     title: Types
     details: closed
   - type: section
@@ -109,6 +114,7 @@ sidebar:
   - title: Animations
     details: closed
     children:
+      - /Web/CSS/CSS_animated_properties
       - /Web/CSS/CSS_animations/Using_CSS_animations
   - title: Backgrounds_and_Borders
     details: closed
@@ -116,9 +122,12 @@ sidebar:
       - /Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
       - link: /Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
         title: Resizing_background_images
+      - /Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds
   - title: Box alignment
     details: closed
     children:
+      - link: /Web/CSS/CSS_box_alignment/Box_alignment
+        title: Overview
       - link: /Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables
         title: Box_alignment_in_block_layout
       - /Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox
@@ -146,6 +155,7 @@ sidebar:
     children:
       - /Web/CSS/CSS_multicol_layout/Basic_concepts
       - /Web/CSS/CSS_multicol_layout/Styling_columns
+      - /Web/CSS/CSS_multicol_layout/Using_multicol_layouts
       - /Web/CSS/CSS_multicol_layout/Spanning_balancing_columns
       - /Web/CSS/CSS_multicol_layout/Handling_overflow_in_multicol_layout
       - /Web/CSS/CSS_multicol_layout/Handling_content_breaks_in_multicol_layout
@@ -153,6 +163,7 @@ sidebar:
     details: closed
     children:
       - /Web/CSS/CSS_conditional_rules/Using_feature_queries
+      - /Web/CSS/CSS_conditional_rules/Container_scroll-state_queries
   - title: Containment
     details: closed
     children:
@@ -163,15 +174,11 @@ sidebar:
     details: closed
     children:
       - /Web/CSS/CSSOM_view/Coordinate_systems
-  - title: Display
+      - /Web/CSS/CSSOM_view/Viewport_concepts
+  - type: listSubPages
+    path: /Web/CSS/CSS_display
+    title: Display
     details: closed
-    children:
-      - /Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow
-      - /Web/CSS/CSS_display/In_flow_and_out_of_flow
-      - /Web/CSS/CSS_display/Introduction_to_formatting_contexts
-      - /Web/CSS/CSS_display/Flow_layout_and_writing_modes
-      - /Web/CSS/CSS_display/Flow_layout_and_overflow
-      - /Web/CSS/CSS_display/multi-keyword_syntax_of_display
   - title: Flexbox
     details: closed
     children:
@@ -182,11 +189,10 @@ sidebar:
       - /Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis
       - /Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items
       - /Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
-  - title: Fonts
+  - type: listSubPages
+    path: /Web/CSS/CSS_fonts
+    title: Fonts
     details: closed
-    children:
-      - /Web/CSS/CSS_fonts/OpenType_fonts_guide
-      - /Web/CSS/CSS_fonts/Variable_fonts_guide
   - title: Grid
     details: closed
     children:
@@ -206,6 +212,8 @@ sidebar:
     details: closed
     children:
       - /Web/CSS/CSS_images/Using_CSS_gradients
+      - /Web/CSS/CSS_images/Replaced_element_properties
+      - /Web/CSS/CSS_images/Implementing_image_sprites_in_CSS
   - title: Lists_and_counters
     details: closed
     children:
@@ -218,10 +226,6 @@ sidebar:
       - /Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning
       - /Web/CSS/CSS_logical_properties_and_values/Margins_borders_padding
       - /Web/CSS/CSS_logical_properties_and_values/Sizing
-  - title: Math_functions
-    details: closed
-    children:
-      - /Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions
   - title: Media_queries
     details: closed
     children:
@@ -238,11 +242,15 @@ sidebar:
   - title: Positioning
     details: closed
     children:
+      - /Web/CSS/CSS_positioned_layout/Stacking_context
+      - /Web/CSS/CSS_positioned_layout/Stacking_floating_elements
       - /Web/CSS/CSS_positioned_layout/Understanding_z-index
-  - title: Scroll_snap
+      - /Web/CSS/CSS_positioned_layout/Using_z-index
+      - /Web/CSS/CSS_positioned_layout/Stacking_without_z-index
+  - type: listSubPages
+    path: /Web/CSS/CSS_scroll_snap
+    title: Scroll_snap
     details: closed
-    children:
-      - /Web/CSS/CSS_scroll_snap/Basic_concepts
   - title: Shapes
     details: closed
     children:
@@ -262,6 +270,13 @@ sidebar:
     details: closed
     children:
       - /Web/CSS/CSS_transitions/Using_CSS_transitions
+  - title: Values and units
+    details: closed
+    children:
+      - /Web/CSS/CSS_Values_and_Units/Value_definition_syntax
+      - /Web/CSS/CSS_Values_and_Units/Numeric_data_types
+      - /Web/CSS/CSS_Values_and_Units/Textual_data_types
+      - /Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions
   - type: section
     link: /Web/CSS/Layout_cookbook
   - children:
@@ -314,7 +329,6 @@ l10n:
     Images: Bilder
     Lists_and_counters: Listen und Zähler
     Logical_properties: Logische Eigenschaften
-    Math_functions: Mathematische Funktionen
     Media_queries: Media-Abfragen
     Modules: Module
     Nesting: Verschachteln von Stilregeln
@@ -331,6 +345,8 @@ l10n:
     Tools: Werkzeuge
     Types: Typen
   en-US:
+    Accessibility_Understanding_colors_and_luminance: "Accessibility: Colors and luminance"
+    Applying_color_to_HTML_elements: Applying color to HTML
     Beginners: Beginner's tutorials
     Styling_the_content: "Your first website: Styling the content"
     CSS_styling_basics: CSS styling basics
@@ -355,7 +371,6 @@ l10n:
     Images: Images
     Lists_and_counters: Lists and counters
     Logical_properties: Logical properties
-    Math_functions: Math functions
     Media_queries: Media queries
     Nesting: Nesting style rules
     Positioning: Positioning
@@ -416,7 +431,6 @@ l10n:
     Images: 画像
     Lists_and_counters: リストとカウンター
     Logical_properties: 論理的プロパティ
-    Math_functions: 数学関数
     Media_queries: メディアクエリー
     Nesting: 入れ子のスタイルルール
     Positioning: 位置指定
@@ -511,7 +525,6 @@ l10n:
     Images: 图片
     Lists_and_counters: 列表和计数器
     Logical_properties: 逻辑属性
-    Math_functions: 数学函数
     Media_queries: 媒体查询
     Nesting: 嵌套样式规则
     Positioning: 定位

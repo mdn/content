@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Intl.NumberFormat.resolvedOptions
 
 The **`resolvedOptions()`** method of {{jsxref("Intl.NumberFormat")}} instances returns a new object with properties reflecting the options computed during initialization of this `NumberFormat` object.
 
-{{InteractiveExample("JavaScript Demo: Intl.NumberFormat.prototype.resolvedOptions")}}
+{{InteractiveExample("JavaScript Demo: Intl.NumberFormat.prototype.resolvedOptions()")}}
 
 ```js interactive-example
 const numberFormat1 = new Intl.NumberFormat("de-DE");

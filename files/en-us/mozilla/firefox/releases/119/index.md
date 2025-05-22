@@ -14,25 +14,25 @@ This article provides information about the changes in Firefox 119 that affect d
 
 #### Removals
 
-- The {{HTMLElement('input')}} element no longer supports the non-standard `mozactionhint` attribute. Use [`enterkeyhint`](/en-US/docs/Web/HTML/Global_attributes/enterkeyhint) instead. (See [Firefox bug 1735980](https://bugzil.la/1735980) for more details.)
+- The {{HTMLElement('input')}} element no longer supports the non-standard `mozactionhint` attribute. Use [`enterkeyhint`](/en-US/docs/Web/HTML/Reference/Global_attributes/enterkeyhint) instead. (See [Firefox bug 1735980](https://bugzil.la/1735980) for more details.)
 
 ### CSS
 
-- The {{cssxref("attr")}} CSS function fallback value is now supported. This allows the setting of a fallback value to be used if the [global attribute](/en-US/docs/Web/HTML/Global_attributes) is missing ([Firefox bug 1448248](https://bugzil.la/1448248)).
+- The {{cssxref("attr")}} CSS function fallback value is now supported. This allows the setting of a fallback value to be used if the [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) is missing ([Firefox bug 1448248](https://bugzil.la/1448248)).
 
 ### JavaScript
 
 - The {{jsxref("Object.groupBy()")}} and {{jsxref("Map.groupBy()")}} static methods for grouping the elements of an iterable are now supported (See [Firefox bug 1792650](https://bugzil.la/1792650) for more details.)
-- The {{jsxref("String.prototype.isWellFormed()")}} and {{jsxref("String.prototype.toWellFormed()")}} methods respectively can be used to check if a string contains well-formed Unicode text (i.e. contains no [lone surrogates](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters)) and sanitize an ill-formed string to well-formed Unicode text.
+- The {{jsxref("String.prototype.isWellFormed()")}} and {{jsxref("String.prototype.toWellFormed()")}} methods respectively can be used to check if a string contains well-formed Unicode text (i.e., contains no [lone surrogates](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters)) and sanitize an ill-formed string to well-formed Unicode text.
   (See [Firefox bug 1850755](https://bugzil.la/1850755) for more details).
 
 ### SVG
 
-- The [SVG attributes](/en-US/docs/Web/SVG/Attribute) that accept a [`<length>`](/en-US/docs/Web/SVG/Content_type#length) value now support [level 3](https://www.w3.org/TR/css-values-3/#lengths) {{cssxref("length")}} [CSS data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) for all SVG elements. This enables the sizing of SVG elements based on font sizes (`cap`, `rem`, etc.), viewport (`vh`, `vw`, `vmin`, etc.), or absolute lengths (`px`, `cm`, etc.), e.g. `<line x1="10vw" y1="10vh" x2="50vw" y2="50vh"/>`. (See [Firefox bug 1287054](https://bugzil.la/1287054) for more details).
+- The [SVG attributes](/en-US/docs/Web/SVG/Reference/Attribute) that accept a [`<length>`](/en-US/docs/Web/SVG/Guides/Content_type#length) value now support [level 3](https://www.w3.org/TR/css-values-3/#lengths) {{cssxref("length")}} [CSS data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) for all SVG elements. This enables the sizing of SVG elements based on font sizes (`cap`, `rem`, etc.), viewport (`vh`, `vw`, `vmin`, etc.), or absolute lengths (`px`, `cm`, etc.), e.g., `<line x1="10vw" y1="10vh" x2="50vw" y2="50vh"/>`. (See [Firefox bug 1287054](https://bugzil.la/1287054) for more details).
 
 ### HTTP
 
-- The [`credentialless`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy#credentialless) directive of the {{HTTPHeader("Cross-Origin-Embedder-Policy")}} HTTP response header is now supported on desktop platforms (and mobile platforms other than Android), allowing `no-cors` requests for resources to be made on cross-origin servers that have not explicitly opted into it, albeit without cookies or other credentials ([Firefox bug 1851467](https://bugzil.la/1851467)).
+- The [`credentialless`](/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy#credentialless) directive of the {{HTTPHeader("Cross-Origin-Embedder-Policy")}} HTTP response header is now supported on desktop platforms (and mobile platforms other than Android), allowing `no-cors` requests for resources to be made on cross-origin servers that have not explicitly opted into it, albeit without cookies or other credentials ([Firefox bug 1851467](https://bugzil.la/1851467)).
 
 ### APIs
 
@@ -45,7 +45,7 @@ This article provides information about the changes in Firefox 119 that affect d
 
 #### DOM
 
-- [ARIA](/en-US/docs/Web/Accessibility/ARIA) reflection is now supported by default for attributes that do not reference other elements; only non-IDREF attributes are reflected. You can now get and set ARIA attributes on DOM elements directly via JavaScript APIs, rather than by using `setAttribute` and `getAttribute`. For example, `buttonElement.ariaPressed = "true";` is now supported in addition to `buttonElement.setAttribute("aria-pressed", "true");` ([Firefox bug 1785412](https://bugzil.la/1785412)).
+- [ARIA](/en-US/docs/Web/Accessibility/ARIA) reflection is now supported by default for attributes that do not reference other elements; only non-ID-reference attributes are reflected. You can now get and set ARIA attributes on DOM elements directly via JavaScript APIs, rather than by using `setAttribute` and `getAttribute`. For example, `buttonElement.ariaPressed = "true";` is now supported in addition to `buttonElement.setAttribute("aria-pressed", "true");` ([Firefox bug 1785412](https://bugzil.la/1785412)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 

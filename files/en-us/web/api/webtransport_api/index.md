@@ -42,10 +42,10 @@ async function initTransport(url) {
   // The connection can be used once ready fulfills
   await transport.ready;
 
-  // ...
+  // …
 }
 
-// ...
+// …
 
 async function closeTransport(transport) {
   // Respond to connection closing
@@ -171,7 +171,7 @@ async function setUpBidirectional() {
   // stream.writable is a WebTransportSendStream
   const writable = stream.writable;
 
-  ...
+  // …
 }
 ```
 

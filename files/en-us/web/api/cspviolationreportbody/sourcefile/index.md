@@ -8,7 +8,7 @@ browser-compat: api.CSPViolationReportBody.sourceFile
 
 {{APIRef("Reporting API")}}
 
-The **`sourceFile`** read-only property of the {{domxref("CSPViolationReportBody")}} interface indicates the URL of the source file that violated the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP).
+The **`sourceFile`** read-only property of the {{domxref("CSPViolationReportBody")}} interface indicates the URL of the source file that violated the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP).
 
 For a violation triggered by the use of an inline script, `sourceFile` is the URL of the current document.
 Similarly, if a document successfully loads a script that then violates the document CSP, the `sourceFile` is the URL of the script.
@@ -31,7 +31,7 @@ This example triggers a CSP violation using an inline script, and reports the vi
 
 #### HTML
 
-The HTML file below uses the [`<meta>`](/en-US/docs/Web/HTML/Element/meta) element to set the {{httpheader('Content-Security-Policy')}} `default-src` to `self`, which allows scripts and other resources to be loaded from the same origin, but does not allow inline scripts to be executed.
+The HTML file below uses the [`<meta>`](/en-US/docs/Web/HTML/Reference/Elements/meta) element to set the {{httpheader('Content-Security-Policy')}} `default-src` to `self`, which allows scripts and other resources to be loaded from the same origin, but does not allow inline scripts to be executed.
 The document also includes an inline script, which should therefore trigger a CSP violation.
 
 ```html

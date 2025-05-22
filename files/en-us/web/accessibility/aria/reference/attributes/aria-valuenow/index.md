@@ -1,5 +1,6 @@
 ---
-title: aria-valuenow
+title: "ARIA: aria-valuenow attribute"
+short-title: aria-valuenow
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-valuenow
@@ -10,7 +11,7 @@ The `aria-valuenow` attribute defines the current value for a `range` widget.
 
 ## Description
 
-The `aria-valuenow` attribute defines the current value for range widgets. It is similar to the `value` attribute of {{HTMLElement('progress')}}, {{HTMLElement('meter')}}, and {{HTMLElement('input')}} of type [`range`](/en-US/docs/Web/HTML/Element/input/range), [`number`](/en-US/docs/Web/HTML/Element/input/number) and all the date-time types.
+The `aria-valuenow` attribute defines the current value for range widgets. It is similar to the `value` attribute of {{HTMLElement('progress')}}, {{HTMLElement('meter')}}, and {{HTMLElement('input')}} of type [`range`](/en-US/docs/Web/HTML/Reference/Elements/input/range), [`number`](/en-US/docs/Web/HTML/Reference/Elements/input/number) and all the date-time types.
 
 When creating a range type role, including [`meter`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/meter_role), [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role), [`slider`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role), and [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role) on a non-semantic element, the `aria-valuenow` enables defining a current numeric value between the minimum and maximum values. The minimum and maximum values are defined with [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin) and [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax).
 
@@ -116,7 +117,7 @@ Inherited into roles:
 ## See also
 
 - [`range` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/range_role)
-- [`<input type="range>` element `value` attribute](/en-US/docs/Web/HTML/Element/input/range#value)
+- [`<input type="range>` element `value` attribute](/en-US/docs/Web/HTML/Reference/Elements/input/range#value)
 - [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext)
 - [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax)
 - [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin).

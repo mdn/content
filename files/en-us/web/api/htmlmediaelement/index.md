@@ -21,7 +21,7 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
   - : An {{domxref("AudioTrackList")}} that lists the {{domxref("AudioTrack")}} objects contained in the element.
 - {{domxref("HTMLMediaElement.autoplay")}}
 
-  - : A boolean value that reflects the [`autoplay`](/en-US/docs/Web/HTML/Element/video#autoplay) HTML attribute, indicating whether playback should automatically begin as soon as enough media is available to do so without interruption.
+  - : A boolean value that reflects the [`autoplay`](/en-US/docs/Web/HTML/Reference/Elements/video#autoplay) HTML attribute, indicating whether playback should automatically begin as soon as enough media is available to do so without interruption.
 
     > [!NOTE]
     > Automatically playing audio when the user doesn't expect or desire it is a poor user experience and should be avoided in most cases, though there are exceptions. See the [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Guides/Autoplay) for more information. Keep in mind that browsers may ignore autoplay requests, so you should ensure that your code isn't dependent on autoplay working.
@@ -29,17 +29,17 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
 - {{domxref("HTMLMediaElement.buffered")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("TimeRanges")}} object that indicates the ranges of the media source that the browser has buffered (if any) at the moment the `buffered` property is accessed.
 - {{domxref("HTMLMediaElement.controls")}}
-  - : A boolean that reflects the [`controls`](/en-US/docs/Web/HTML/Element/video#controls) HTML attribute, indicating whether user interface items for controlling the resource should be displayed.
+  - : A boolean that reflects the [`controls`](/en-US/docs/Web/HTML/Reference/Elements/video#controls) HTML attribute, indicating whether user interface items for controlling the resource should be displayed.
 - {{domxref("HTMLMediaElement.controlsList")}}
   - : Returns a {{domxref("DOMTokenList")}} that helps the user agent select what controls to show on the media element whenever the user agent shows its own set of controls. The `DOMTokenList` takes one or more of three possible values: `nodownload`, `nofullscreen`, and `noremoteplayback`.
 - {{domxref("HTMLMediaElement.crossOrigin")}}
-  - : A string indicating the [CORS setting](/en-US/docs/Web/HTML/Attributes/crossorigin) for this media element.
+  - : A string indicating the [CORS setting](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) for this media element.
 - {{domxref("HTMLMediaElement.currentSrc")}} {{ReadOnlyInline}}
   - : Returns a string with the absolute URL of the chosen media resource.
 - {{domxref("HTMLMediaElement.currentTime")}}
   - : A double-precision floating-point value indicating the current playback time in seconds; if the media has not started to play and has not been seeked, this value is the media's initial playback time. Setting this value seeks the media to the new time. The time is specified relative to the media's timeline.
 - {{domxref("HTMLMediaElement.defaultMuted")}}
-  - : A boolean that reflects the [`muted`](/en-US/docs/Web/HTML/Element/video#muted) HTML attribute, which indicates whether the media element's audio output should be muted by default.
+  - : A boolean that reflects the [`muted`](/en-US/docs/Web/HTML/Reference/Elements/video#muted) HTML attribute, which indicates whether the media element's audio output should be muted by default.
 - {{domxref("HTMLMediaElement.defaultPlaybackRate")}}
   - : A `double` indicating the default playback rate for the media.
 - {{domxref("HTMLMediaElement.disableRemotePlayback")}}
@@ -51,7 +51,7 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
 - {{domxref("HTMLMediaElement.error")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("MediaError")}} object for the most recent error, or `null` if there has not been an error.
 - {{domxref("HTMLMediaElement.loop")}}
-  - : A boolean that reflects the [`loop`](/en-US/docs/Web/HTML/Element/video#loop) HTML attribute, which indicates whether the media element should start over when it reaches the end.
+  - : A boolean that reflects the [`loop`](/en-US/docs/Web/HTML/Reference/Elements/video#loop) HTML attribute, which indicates whether the media element should start over when it reaches the end.
 - {{domxref("HTMLMediaElement.mediaKeys")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a {{domxref("MediaKeys")}} object, that is a set of keys that the element can use for decryption of media data during playback. If no key is available, it can be `null`.
 - {{domxref("HTMLMediaElement.muted")}}
@@ -65,7 +65,7 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
 - {{domxref("HTMLMediaElement.played")}} {{ReadOnlyInline}}
   - : Returns a {{domxref('TimeRanges')}} object that contains the ranges of the media source that the browser has played, if any.
 - {{domxref("HTMLMediaElement.preload")}}
-  - : A string that reflects the [`preload`](/en-US/docs/Web/HTML/Element/video#preload) HTML attribute, indicating what data should be preloaded, if any. Possible values are: `none`, `metadata`, `auto`.
+  - : A string that reflects the [`preload`](/en-US/docs/Web/HTML/Reference/Elements/video#preload) HTML attribute, indicating what data should be preloaded, if any. Possible values are: `none`, `metadata`, `auto`.
 - {{domxref("HTMLMediaElement.preservesPitch")}}
   - : A boolean value that determines if the pitch of the sound will be preserved. If set to `false`, the pitch will adjust to the speed of the audio.
 - {{domxref("HTMLMediaElement.readyState")}} {{ReadOnlyInline}}
@@ -79,9 +79,9 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
 - {{domxref("HTMLMediaElement.sinkId")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a string that is the unique ID of the audio device delivering output, or an empty string if the user agent default audio device is being used.
 - {{domxref("HTMLMediaElement.src")}}
-  - : A string that reflects the [`src`](/en-US/docs/Web/HTML/Element/video#src) HTML attribute, which contains the URL of a media resource to use.
+  - : A string that reflects the [`src`](/en-US/docs/Web/HTML/Reference/Elements/video#src) HTML attribute, which contains the URL of a media resource to use.
 - {{domxref("HTMLMediaElement.srcObject")}}
-  - : An object which serves as the source of the media associated with the {{domxref("HTMLMediaElement")}}, or `null` if not assigned.
+  - : An object which serves as the source of the media associated with the `HTMLMediaElement`, or `null` if not assigned.
 - {{domxref("HTMLMediaElement.textTracks")}} {{ReadOnlyInline}}
   - : Returns a {{domxref('TextTrackList')}} object containing the list of {{domxref("TextTrack")}} objects contained in the element.
 - {{domxref("HTMLMediaElement.videoTracks")}} {{ReadOnlyInline}}
@@ -115,7 +115,7 @@ _This interface also inherits methods from its ancestors {{domxref("HTMLElement"
 - {{domxref("HTMLMediaElement.fastSeek()")}}
   - : Quickly seeks to the given time with low precision.
 - {{domxref("HTMLMediaElement.load()")}}
-  - : Resets the media to the beginning and selects the best available source from the sources provided using the [`src`](/en-US/docs/Web/HTML/Element/video#src) attribute or the {{HTMLElement("source")}} element.
+  - : Resets the media to the beginning and selects the best available source from the sources provided using the [`src`](/en-US/docs/Web/HTML/Reference/Elements/video#src) attribute or the {{HTMLElement("source")}} element.
 - {{domxref("HTMLMediaElement.pause()")}}
   - : Pauses the media playback.
 - {{domxref("HTMLMediaElement.play()")}}

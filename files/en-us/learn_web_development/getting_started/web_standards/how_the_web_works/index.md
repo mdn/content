@@ -2,9 +2,8 @@
 title: How the web works
 slug: Learn_web_development/Getting_started/Web_standards/How_the_web_works
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Getting_started/Web_standards/The_Web_standards_model", "Learn_web_development/Getting_started/Web_standards")}}
 
@@ -31,7 +30,7 @@ This theory is not essential to writing web code in the short term, but before l
           <li>DNS and how it works at a high level.</li>
           <li>The purpose of TCP/IP, HTTP, and packets.</li>
           <li>HTTP syntax at a basic level.</li>
-          <li>Common HTTP response codes (e.g. 200, 301, 403, 404, and 500).</li>
+          <li>Common HTTP response codes (e.g., 200, 301, 403, 404, and 500).</li>
           <li>Basic components of a URL (protocol, domain, subdomain, path).</li>
         </ul>
       </td>
@@ -106,7 +105,7 @@ Basically, when data is sent across the web, it is sent in thousands of small ch
 
 ## HTTP basics
 
-HTTP uses a simple language of verbs to perform actions such as making requests (see [HTTP request methods](/en-US/docs/Web/HTTP/Methods)). The HTTP [`GET`](/en-US/docs/Web/HTTP/Methods/GET) method is the one normally used to make HTTP requests of the type described above. For example, a request for the MDN home page might look like this:
+HTTP uses a simple language of verbs to perform actions such as making requests (see [HTTP request methods](/en-US/docs/Web/HTTP/Reference/Methods)). The HTTP [`GET`](/en-US/docs/Web/HTTP/Reference/Methods/GET) method is the one normally used to make HTTP requests of the type described above. For example, a request for the MDN home page might look like this:
 
 ```http
 GET /en-US/ HTTP/2
@@ -133,18 +132,18 @@ content-type: text/html
 The full response is more complex than this, but we have omitted most of it for brevity. The main parts are as follows:
 
 - `HTTP/2 200`
-  - : The version of HTTP that the server is using to send the response, in this case HTTP/2, followed by a [status code](/en-US/docs/Web/HTTP/Status) indicating whether the request was successful. `200` indicates success.
+  - : The version of HTTP that the server is using to send the response, in this case HTTP/2, followed by a [status code](/en-US/docs/Web/HTTP/Reference/Status) indicating whether the request was successful. `200` indicates success.
 - `date`, `expires`, etc.
-  - : [HTTP headers](/en-US/docs/Web/HTTP/Headers) containing additional information about the response (note that requests can have headers too), which provide extra information and/or modify its behavior.
+  - : [HTTP headers](/en-US/docs/Web/HTTP/Reference/Headers) containing additional information about the response (note that requests can have headers too), which provide extra information and/or modify its behavior.
 - `<!doctype html>`, etc.
   - : The response body, which in this case contains the MDN homepage's HTML document.
 
 > [!NOTE]
-> See the MDN [HTTP reference](/en-US/docs/Web/HTTP) for a lot more detail on HTTP, if you are curious. [An overview of HTTP](/en-US/docs/Web/HTTP/Overview) is a good place to start.
+> See the MDN [HTTP reference](/en-US/docs/Web/HTTP) for a lot more detail on HTTP, if you are curious. [An overview of HTTP](/en-US/docs/Web/HTTP/Guides/Overview) is a good place to start.
 
 ### Other status codes
 
-Above, we met the `200` [status code](/en-US/docs/Web/HTTP/Status), which indicates that the HTTP request was successful. There are many HTTP status codes with specific meanings and uses, but you will only commonly see a few:
+Above, we met the `200` [status code](/en-US/docs/Web/HTTP/Reference/Status), which indicates that the HTTP request was successful. There are many HTTP status codes with specific meanings and uses, but you will only commonly see a few:
 
 - `301`
   - : The requested resource has been permanently moved to a new location, which is provided in the response. This is used for redirecting content when it's moved.
@@ -172,7 +171,7 @@ The main parts of the URL are:
 - `https`
   - : The **protocol** being used to send the request. In this case, we are using [HTTPS](/en-US/docs/Glossary/HTTPS), which is a secure version of HTTP that stops bad people from reading your data while it is being transported. On the modern web, pretty much every server uses HTTPS, so if you don't include it explicitly, the browser assumes that is what you are using and adds it for you.
 - `developer.mozilla.org`
-  - : The [**domain name**](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name) of the URL, which represents the top-level location of the server you are connecting to. In this case, the web address you typed in is equal to the domain name, but this is not always the case — you could choose to type in a more complicated web address. Note that the `developer` part is a **subdomain** (distinct content area) of Mozilla's `mozilla.org` domain. There are other subdomains on Mozilla's site that host distinct content — see [support.mozilla.org](https://support.mozilla.org) and [bugzilla.mozilla.org](https://bugzilla.mozilla.org), for example.
+  - : The [**domain name**](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name) of the URL, which represents the top-level location of the server you are connecting to. In this case, the web address you typed in is equal to the domain name, but this is not always the case — you could choose to type in a more complicated web address. Note that the `developer` part is a **subdomain** (distinct content area) of Mozilla's `mozilla.org` domain. There are other subdomains on Mozilla's site that host distinct content — see [support.mozilla.org](https://support.mozilla.org/) and [bugzilla.mozilla.org](https://bugzilla.mozilla.org/), for example.
 - `/en-US/`
 
   - : The **path** to the resource on the server that you are accessing. MDN keeps all its US English content in a folder called `en-US`, which is what this URL is pointing to.

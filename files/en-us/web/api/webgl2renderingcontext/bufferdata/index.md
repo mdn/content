@@ -48,7 +48,7 @@ bufferData(target, srcData, usage, srcOffset, length)
     store.
     One of `size` and `srcData` must be provided.
 - `srcData` {{optional_inline}}
-  - : An {{jsxref("ArrayBuffer")}}, {{jsxref("SharedArrayBuffer")}}, a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}}
+  - : A {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} that views an {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}}
     that will be copied into the data store.
     If `null`, a data store is still created, but the content is uninitialized and undefined.
     One of `size` and `srcData` must be provided.

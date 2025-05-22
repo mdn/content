@@ -202,7 +202,7 @@ Here's a non-exhaustive list of built-in methods and operators that might cause 
 - [`~`](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_NOT), [`<<`](/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift), [`>>`](/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift)
   - : Each of these operators uses the ToInt32 algorithm internally. Since there is only one representation for 0 in the internal 32-bit integer type, `-0` will not survive a round trip after an inverse operation. E.g., both `Object.is(~~(-0), -0)` and `Object.is(-0 << 2 >> 2, -0)` evaluate to `false`.
 
-Relying on {{jsxref("Object.is")}} when the signedness of zeros is not taken into account can be hazardous. Of course, when the intent is to distinguish between `-0` and `+0`, it does exactly what's desired.
+Relying on {{jsxref("Object.is")}} when the sign of zeros is not taken into account can be hazardous. Of course, when the intent is to distinguish between `-0` and `+0`, it does exactly what's desired.
 
 ### Caveat: Object.is() and NaN
 

@@ -9,7 +9,7 @@ browser-compat: javascript.statements.let
 
 The **`let`** declaration declares re-assignable, block-scoped local variables, optionally initializing each to a value.
 
-{{InteractiveExample("JavaScript Demo: Statement - Let")}}
+{{InteractiveExample("JavaScript Demo: let declaration")}}
 
 ```js interactive-example
 let x = 1;
@@ -72,7 +72,7 @@ Compared with {{jsxref("Statements/var", "var")}}, `let` declarations have the f
 
 Note that `let` is allowed as an identifier name when declared with `var` or `function` in [non-strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), but you should avoid using `let` as an identifier name to prevent unexpected syntax ambiguities.
 
-Many style guides (including [MDN's](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript#variable_declarations)) recommend using {{jsxref("Statements/const", "const")}} over `let` whenever a variable is not reassigned in its scope. This makes the intent clear that a variable's type (or value, in the case of a primitive) can never change. Others may prefer `let` for non-primitives that are mutated.
+Many style guides (including [MDN's](/en-US/docs/MDN/Writing_guidelines/Code_style_guide/JavaScript#variable_declarations)) recommend using {{jsxref("Statements/const", "const")}} over `let` whenever a variable is not reassigned in its scope. This makes the intent clear that a variable's type (or value, in the case of a primitive) can never change. Others may prefer `let` for non-primitives that are mutated.
 
 The list that follows the `let` keyword is called a _{{Glossary("binding")}} list_ and is separated by commas, where the commas are _not_ [comma operators](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator) and the `=` signs are _not_ [assignment operators](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment). Initializers of later variables can refer to earlier variables in the list.
 

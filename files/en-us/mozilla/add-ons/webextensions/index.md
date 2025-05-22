@@ -24,11 +24,24 @@ The technology for extensions in Firefox is, to a large extent, compatible with 
 
 ## Get started
 
-Discover [what extensions can do](/en-US/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions) before building [your first extension.](/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension) Learn about the [anatomy of an extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension) and get an overview of the [extension development and publication workflow, Firefox style](https://extensionworkshop.com/documentation/develop/firefox-workflow-overview/). Explore a little deeper with a comprehensive selection of [example extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples) that you can run right in Firefox.
+Discover [what extensions can do](/en-US/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions) before building [your first extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension) and [your second extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension). Learn about the [anatomy of an extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension) and get an overview of the [extension development and publication workflow, Firefox style](https://extensionworkshop.com/documentation/develop/firefox-workflow-overview/). Explore a little deeper with a comprehensive selection of [example extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples) that you can run right in Firefox. Continue your learning by [discovering a list of resources](/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next) to follow.
 
 ## Concepts
 
-Get detailed information on the concept that underpin extensions [from an overview of the JavaScript API](/en-US/docs/Mozilla/Add-ons/WebExtensions/API), through [content scripts,](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns), [working with files](/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_files), [internationalization](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization), and [content security policy](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy), to more advanced subjects such as [native messaging](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging), [using the devtools APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools), and [native manifests](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests).
+Get detailed information on the concepts that underpin extensions.
+
+- [Overview of the JavaScript API](/en-US/docs/Mozilla/Add-ons/WebExtensions/API)
+- [Content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
+- [Background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts)
+- [Match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)
+- [Working with files](/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_files)
+- [Internationalization](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization)
+- [Content security policy](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
+- [Native messaging](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging)
+- [Native manifests](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests)
+- [User actions](/en-US/docs/Mozilla/Add-ons/WebExtensions/User_actions)
+- [Differences between API implementations](/en-US/docs/Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations)
+- [Chrome incompatibilities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities)
 
 ## User interface
 
@@ -36,7 +49,21 @@ Discover all the [user interface](/en-US/docs/Mozilla/Add-ons/WebExtensions/user
 
 ## How to
 
-From patterns you'll regularly use such as [work with the Tabs API](/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API) and [adding a button to the toolbar](/en-US/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar) to more advanced topics such as [intercepting HTTP requests](/en-US/docs/Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests) and [working with contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities), you'll find a range of tutorials to get you started.
+A range of tutorials to get you started on specific aspects of extension development.
+
+- [Intercept HTTP requests](/en-US/docs/Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests)
+- [Modify a web page](/en-US/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page)
+- [Safely insert external content into a page](/en-US/docs/Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page)
+- [Share objects with page scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts)
+- [Add a button to the toolbar](/en-US/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar)
+- [Implement a settings page](/en-US/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page)
+- [Work with the Tabs API](/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API)
+- [Work with the Bookmarks API](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_the_Bookmarks_API)
+- [Work with the Cookies API](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_the_Cookies_API)
+- [Work with contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)
+- [Interact with the clipboard](/en-US/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard)
+- [Extend the developer tools](/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)
+- [Build a cross-browser extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension)
 
 ## Firefox workflow
 
@@ -55,4 +82,4 @@ Get comprehensive details about the methods, properties, types, and events for a
 
 ### Manifest keys
 
-Get full details about the [manifest keys](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json), including all their properties and settings. There's also detailed information on the [compatibility](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json) of each key with the major browsers.
+Get full details about the [manifest keys](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json), including all their properties and settings.

@@ -64,9 +64,8 @@ For example, the key `extension:appid` can be used to check if the [`appid` exte
 
 The returned {{jsxref("Promise")}} may be rejected with the following values:
 
-- `NotAllowedError` {{domxref("DOMException")}}
-  - : The Web Authentication API is not allowed in the current browsing context.
-    For example, it might be blocked by a permission policy.
+- `SecurityError` {{domxref("DOMException")}}
+  - : The RP domain is not valid.
 
 ## Description
 

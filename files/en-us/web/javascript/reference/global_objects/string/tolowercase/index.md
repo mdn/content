@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.String.toLowerCase
 
 The **`toLowerCase()`** method of {{jsxref("String")}} values returns this string converted to lower case.
 
-{{InteractiveExample("JavaScript Demo: String.toLowerCase()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.toLowerCase()", "shorter")}}
 
 ```js interactive-example
 const sentence = "The quick brown fox jumps over the lazy dog.";

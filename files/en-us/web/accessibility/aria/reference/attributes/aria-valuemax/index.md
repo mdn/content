@@ -1,5 +1,6 @@
 ---
-title: aria-valuemax
+title: "ARIA: aria-valuemax attribute"
+short-title: aria-valuemax
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-valuemax
@@ -10,7 +11,7 @@ The `aria-valuemax` attribute defines the maximum allowed value for a range widg
 
 ## Description
 
-The `aria-valuemax` attribute defines the maximum value allowed for range widgets. It is similar to the `max` attribute of {{HTMLElement('progress')}}, {{HTMLElement('meter')}}, and {{HTMLElement('input')}} of type [`range`](/en-US/docs/Web/HTML/Element/input/range), [`number`](/en-US/docs/Web/HTML/Element/input/number) and all the date-time types.
+The `aria-valuemax` attribute defines the maximum value allowed for range widgets. It is similar to the `max` attribute of {{HTMLElement('progress')}}, {{HTMLElement('meter')}}, and {{HTMLElement('input')}} of type [`range`](/en-US/docs/Web/HTML/Reference/Elements/input/range), [`number`](/en-US/docs/Web/HTML/Reference/Elements/input/number) and all the date-time types.
 
 When creating a range type role, including [`meter`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/meter_role), [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role), [`slider`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role), and [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role) on a non-semantic element, the `aria-valuemax` enables defining a maximum that is more than the minimum value and is a required attribute of `slider`, `scrollbar` and `spinbutton`.
 
@@ -21,7 +22,7 @@ Declaring the minimum and maximum values allows assistive technologies to convey
 
 ## Example
 
-The code below shows a simple slider with a maximum value of 9.
+The code below shows a slider with a maximum value of 9.
 
 ```html
 <div id="dimesLabel">Dimes</div>
@@ -71,6 +72,6 @@ Inherited into roles:
 ## See also
 
 - [`range` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/range_role)
-- [`<input type="range>` element `max` attribute](/en-US/docs/Web/HTML/Element/input/range#max)
+- [`<input type="range>` element `max` attribute](/en-US/docs/Web/HTML/Reference/Elements/input/range#max)
 - [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin)
 - [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow)

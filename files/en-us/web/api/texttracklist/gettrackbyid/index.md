@@ -11,7 +11,7 @@ browser-compat: api.TextTrackList.getTrackById
 The **{{domxref("TextTrackList")}}** method
 **`getTrackById()`** returns the first
 {{domxref("TextTrack")}} object from the track list whose
-[`id`](/en-US/docs/Web/HTML/Global_attributes/id) matches the
+[`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) matches the
 specified string. This lets you find a specified track if you know its ID
 string.
 

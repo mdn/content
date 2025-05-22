@@ -5,7 +5,8 @@ page-type: guide
 sidebar: mediasidebar
 ---
 
-The format of audio and video media files is defined in two parts (three if a file has both audio and video in it, of course): the audio and/or video codecs used and the media container format (or file type) used.
+A **media container** is a file format that encapsulates one or more media streams (such as audio or video) along with metadata, enabling them to be stored and played back together.
+The format of audio and video media files is defined by multiple components, including the audio and/or video codecs used, the media container format (or file type), and optionally other elements such as subtitle codecs or metadata.
 In this guide, we'll look at the container formats used most commonly on the web, covering basics about their specifications as well as their benefits, limitations, and ideal use cases.
 
 [WebRTC](/en-US/docs/Web/API/WebRTC_API) does not use a container at all.
@@ -16,15 +17,12 @@ See [Codecs used by WebRTC](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs) 
 
 While there are a vast number of media container formats, the ones listed below are the ones you are most likely to encounter.
 Some support only audio while others support both audio and video.
-The MIME types and extensions for each are listed. The most commonly used containers for media on the web are probably MPEG-4 (MP4), Web Media File (WEBM), and MPEG Audio Layer III (MP3).
-However, you may also encounter MP3, Ogg, WAV, AVI, MOV, and other formats.
-Not all of these are broadly supported by browsers, however; some combinations of container and codec are sometimes given their own file extensions and MIME types as a matter of convenience, or because of their ubiquity.
+The MIME types and extensions for each are listed. The most commonly used containers for media on the web are probably MPEG-4 Part-14 (MP4) and Web Media File (WEBM). However, you may also encounter Ogg, WAV, AVI, MOV, and other formats.
+Not all of these are broadly supported by browsers; some combinations of container and codec are sometimes given their own file extensions and MIME types as a matter of convenience, or because of their ubiquity.
 For example, an Ogg file with only an Opus audio track is sometimes referred to as an Opus file, and might even have the extension `.opus`.
 But it's still actually just an Ogg file.
 
-In other cases, a particular codec, stored in a certain container type, is so ubiquitous that the pairing is treated in a unique fashion.
-A good example of this is the MP3 audio file, which is in fact an MPEG-1 container with a single audio track encoded using MPEG-1 Audio Layer III encoding.
-These files use the `audio/mp3` MIME type and the `.mp3` extension, even though their containers are just MPEG.
+In some cases, a particular codec becomes so ubiquitous that its usage is treated as a unique format. A prime example is the MP3 audio file, which isn't stored in a conventional container. Instead, an MP3 file is essentially a stream of MPEG-1 Audio Layer III-encoded frames, often accompanied by metadata such as ID3 tags. These files use the `audio/mpeg` MIME type and the `.mp3` extension.
 
 ### Index of media container formats (file types)
 
@@ -282,7 +280,7 @@ Firefox support for AAC relies upon the operating system's media infrastructure,
 
 ### FLAC
 
-The **Free Lossless Audio Codec** (**FLAC**) is a lossless audio codec; there is also an associated simple container format, also called FLAC, that can contain this audio.
+The **Free Lossless Audio Codec** (**FLAC**) is a lossless audio codec; there is also an associated container format, also called FLAC, that can contain this audio.
 The format is not encumbered by any patents, so its use is safe from interference.
 FLAC files can only contain FLAC audio data.
 
@@ -325,8 +323,7 @@ FLAC files can only contain FLAC audio data.
 The **[MPEG-1](https://en.wikipedia.org/wiki/MPEG-1)** and **[MPEG-2](https://en.wikipedia.org/wiki/MPEG-2)** file formats are essentially identical.
 Created by the Moving Picture Experts Group (MPEG), these formats are widely used in physical media, including as the format of the video on DVD media.
 
-On the internet, perhaps the most common use of the MPEG file format is to contain [Layer_III/MP3](https://en.wikipedia.org/wiki/MPEG-1) sound data; the resulting files are the wildly popular MP3 file used by digital music devices around the world.
-Otherwise, MPEG-1 and MPEG-2 are not widely used in Web content.
+On the internet, perhaps the most common application of the MPEG standard is for [MPEG-1 Audio Layer III](https://en.wikipedia.org/wiki/MPEG-1), commonly known as MP3, sound data. These MP3 files are wildly popular with digital music devices around the world, even though MPEG-1 and MPEG-2, as a whole, are not widely used in other web content.
 
 The main differences between MPEG-1 and MPEG-2 take place in the media data formats rather than the container format.
 MPEG-1 was introduced in 1992; MPEG-2 was introduced in 1996.
@@ -561,7 +558,7 @@ While Ogg has been around for a long time, it has never gained the wide support 
 You are typically better off using WebM, though there are times when Ogg is useful to offer, such as when you wish to support older versions of Firefox and Chrome which don't yet support WebM.
 For example, Firefox 3.5 and 3.6 support Ogg, but not WebM.
 
-You can get more information about Ogg and its codecs in the [Theora Cookbook](https://en.flossmanuals.net/ogg-theora/_full/).
+You can get more information about Ogg and its codecs in the [Theora Cookbook](https://archive.flossmanuals.net/ogg-theora/).
 
 | Audio       | Video       |
 | ----------- | ----------- |
@@ -1040,22 +1037,13 @@ The relative importance of each will depend on your needs, your license requirem
 
 ### Guidelines
 
-The best choice also depends on what you'll be doing with the media.
-Playing back media is a different thing than recording and/or editing it.
-If you're going to be manipulating the media data, using an uncompressed format can improve performance, while using a lossless compressed format at least prevents the accumulation of noise as compression artifacts are multiplied with each re-compression that occurs.
+When selecting the appropriate media format, your decision should depend on your intended usage. Playing back media is different from recording or editing it. For manipulation, uncompressed formats can improve performance, while lossless compression prevents the accumulation of noise from repeated recompression.
 
 - If your target audience is likely to include users on mobile, especially on lower-end devices or on slow networks, consider providing a version of your media in a 3GP container with appropriate compression.
 - If you have any specific encoding requirements, make sure the container you choose supports the appropriate codecs.
 - If you want your media to be in a non-proprietary, open format, consider using one of the open container formats such as FLAC (for audio) or WebM (for video).
 - If for any reason you are only able to provide media in a single format, choose a format that's available on the broadest selection of devices and browsers, such as MP3 (for audio) or MP4 (for video and/or audio).
-- If your media is audio-only, choosing an audio-only container format likely makes sense.
-  Now that the patents have all expired, MP3 is a widely supported and good choice.
-  WAVE is good but uncompressed, so be aware of that before using it for large audio samples.
-  FLAC is a very good choice, due to its lossless compression, if the target browsers all support it.
-
-Unfortunately, neither of the relatively major lossless compression formats (FLAC and ALAC) are universally supported.
-FLAC is the more broadly supported of the two, but is not supported by macOS without additional software installed, and is not supported at all on iOS.
-If you need to offer lossless audio, you may need to provide both FLAC and ALAC to get close to universal compatibility.
+- If your media is audio-only, choosing an audio-only format likely makes sense. See below for a comparison of the various audio-only formats.
 
 ### Container selection advice
 
@@ -1065,26 +1053,93 @@ Be sure to consider the needs of your application and your organization before s
 
 #### Audio-only files
 
-| If you need…                                  | Consider using this container format |
-| --------------------------------------------- | ------------------------------------ |
-| Compressed files for general-purpose playback | MP3 (MPEG-1 Audio Layer III)         |
-| Losslessly compressed files                   | FLAC with ALAC fallback              |
-| Uncompressed files                            | WAV                                  |
+<table>
+  <thead>
+    <tr>
+      <th>Need</th>
+      <th>Format</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Compressed files for general-purpose playback</strong></td>
+      <td><strong>MP3 (MPEG-1 Audio Layer III)</strong></td>
+      <td>Widely compatible and recognized; uses lossy compression to provide a good balance between file size and audio quality.</td>
+    </tr>
+    <tr>
+      <td rowspan="2"><strong>Lossless compression</strong></td>
+      <td><strong>FLAC (Free Lossless Audio Codec)</strong></td>
+      <td>Offers lossless compression, ensuring that the original audio remains intact while reducing file size.</td>
+    </tr>
+    <tr>
+      <td><strong>ALAC (Apple Lossless Audio Codec)</strong></td>
+      <td>Similar to FLAC but designed for Apple devices; it's a great fallback when working within the Apple ecosystem.</td>
+    </tr>
+    <tr>
+      <td rowspan="2"><strong>Uncompressed files</strong></td>
+      <td><strong>WAV (Waveform Audio File Format)</strong></td>
+      <td>Contains uncompressed PCM audio, delivering the highest fidelity at the cost of larger file sizes.</td>
+    </tr>
+    <tr>
+      <td><strong>AIFF (Audio Interchange File Format)</strong></td>
+      <td>Comparable to WAV in terms of quality and file size, though it's often favored on Apple platforms.</td>
+    </tr>
+  </tbody>
+</table>
 
 Now that MP3's patents have all expired, the choice of audio file format has become much easier to make.
 It's no longer necessary to choose between MP3's broad compatibility and the need to pay royalties when using it.
 
+Unfortunately, neither of the relatively major lossless compression formats (FLAC and ALAC) are universally supported.
+FLAC is the more broadly supported of the two, but is not supported by macOS without additional software installed, and is not supported at all on iOS.
+If you need to offer lossless audio, you may need to provide both FLAC and ALAC to get close to universal compatibility.
+
 #### Video files
 
-| If you need…                                        | Consider using this container format                |
-| --------------------------------------------------- | --------------------------------------------------- |
-| General purpose video, preferably in an open format | WebM (ideally with MP4 fallback)                    |
-| General purpose video                               | MP4 (ideally with WebM or Ogg fallback)             |
-| High compression optimized for slow connections     | 3GP (ideally with MP4 fallback)                     |
-| Compatibility with older devices/browsers           | QuickTime (ideally with AVI and/or MPEG-2 fallback) |
+<table>
+  <thead>
+    <tr>
+      <th>Need</th>
+      <th>Format</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>General purpose video (preferably open format)</strong></td>
+      <td><strong>WebM</strong></td>
+      <td>
+        Designed for modern web usage, WebM is an open, royalty-free container that offers efficient compression and native support in most browsers.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>General purpose video</strong></td>
+      <td><strong>MP4</strong></td>
+      <td>
+        MP4 is the industry standard for video content, widely supported across devices and browsers.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>High compression for slow connections</strong></td>
+      <td><strong>3GP</strong></td>
+      <td>
+        Optimized for mobile devices and low-bandwidth environments, 3GP delivers acceptable video quality under constrained conditions.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Compatibility with older devices/browsers</strong></td>
+      <td><strong>QuickTime</strong></td>
+      <td>
+        QuickTime is a legacy container originally popular on Apple platforms. It is still commonly produced by macOS video recording software.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 These suggestions make a number of assumptions.
 You should carefully consider the options before making a final decision, especially if you have a lot of media that will need to be encoded.
+Very often, you would want to provide multiple fallback options for these formats—for example, MP4 fallback for WebM or 3GP, or AVI for QuickTime.
 
 ## Maximizing compatibility with multiple containers
 
@@ -1092,7 +1147,7 @@ To optimize compatibility, it's worth considering providing more than one versio
 For example, you can offer an Ogg or WebM video as the first choice, with a fallback in MP4 format.
 You could even choose to offer a retro-like QuickTime or AVI fallback for good measure.
 
-To do this, you create a `<video>` (or `<audio>`) element with no [`src`](/en-US/docs/Web/HTML/Element/video#src) attribute.
+To do this, you create a `<video>` (or `<audio>`) element with no [`src`](/en-US/docs/Web/HTML/Reference/Elements/video#src) attribute.
 Then add child {{HTMLElement("source")}} elements within the `<video>` element, one for each version of the video you offer.
 This can be used to offer various versions of a video that can be selected depending on bandwidth availability, but in our case, we'll use it to offer format options.
 
@@ -1112,7 +1167,7 @@ In the example shown here, a video is offered to the browser in two formats: Web
 </video>
 ```
 
-The video is offered first in WebM format (with the [`type`](/en-US/docs/Web/HTML/Element/source#type) attribute set to `video/webm`).
+The video is offered first in WebM format (with the [`type`](/en-US/docs/Web/HTML/Reference/Elements/source#type) attribute set to `video/webm`).
 If the {{Glossary("user agent")}} can't play that, it moves on to the next option, whose `type` is specified as `video/mp4`.
 If neither of those can be played, the text "This browser does not support the HTML video element." is presented.
 

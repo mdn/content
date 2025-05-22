@@ -2,10 +2,9 @@
 title: orientation
 slug: Web/Progressive_web_apps/Manifest/Reference/orientation
 page-type: web-manifest-member
-browser-compat: html.manifest.orientation
+browser-compat: manifests.webapp.orientation
+sidebar: pwasidebar
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 The `orientation` manifest member is used to specify the default orientation for your web application.
 It defines how the app should be displayed when launched and during use, in relation to the device's screen orientation, particularly on devices that support multiple orientations.

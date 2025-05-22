@@ -2,9 +2,8 @@
 title: Lists
 slug: Learn_web_development/Core/Structuring_content/Lists
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Emphasis_and_importance", "Learn_web_development/Core/Structuring_content/Structuring_documents", "Learn_web_development/Core/Structuring_content")}}
 
@@ -769,7 +768,7 @@ textarea.onkeyup = () => {
 
 ## Test your skills!
 
-You've reached the end of this set of three articles about basic HTML semantic elements, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: HTML text basics](/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_HTML_text_basics).
+You've reached the end of this set of three articles about basic HTML semantic elements, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: HTML text basics](/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics).
 
 ## Summary
 

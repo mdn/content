@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-In HTTP messages, the **payload body** or **payload** was the resource representation transferred in a message body, stripped of any [transfer encoding](/en-US/docs/Web/HTTP/Headers/Transfer-Encoding). With no transfer encoding, the _payload body_ and _message body_ are identical. Representation data could also be transferred in HTTP headers, but such data would not be considered a "payload".
+In HTTP messages, the **payload body** or **payload** was the resource representation transferred in a message body, stripped of any [transfer encoding](/en-US/docs/Web/HTTP/Reference/Headers/Transfer-Encoding). With no transfer encoding, the _payload body_ and _message body_ are identical. Representation data could also be transferred in HTTP headers, but such data would not be considered a "payload".
 
 Since {{RFC("9110")}}, the word **content** replaces the word **payload**. See [**HTTP content**](/en-US/docs/Glossary/HTTP_Content).
 

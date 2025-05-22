@@ -2,13 +2,12 @@
 title: Third-party APIs
 slug: Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenu("Learn_web_development/Extensions/Client-side_APIs/Client-side_storage", "Learn_web_development/Extensions/Client-side_APIs")}}
 
-The APIs we've covered so far are built into the browser, but not all APIs are. Many large websites and services such as Google Maps, Twitter, Facebook, PayPal, etc. provide APIs allowing developers to make use of their data (e.g. displaying your twitter stream on your blog) or services (e.g. using Facebook login to log in your users). This article looks at the difference between browser APIs and 3rd party APIs and shows some typical uses of the latter.
+The APIs we've covered so far are built into the browser, but not all APIs are. Many large websites and services such as Google Maps, Twitter, Facebook, PayPal, etc. provide APIs allowing developers to make use of their data (e.g., displaying your twitter stream on your blog) or services (e.g., using Facebook login to log in your users). This article looks at the difference between browser APIs and 3rd party APIs and shows some typical uses of the latter.
 
 <table>
   <tbody>
@@ -189,7 +188,7 @@ The app will end up allowing you to type in a search term and optional start and
 
 ### Connect the API to your app
 
-First, you'll need to make a connection between the API and your app. In the case of this API, you need to include the API key as a [get](/en-US/docs/Web/HTTP/Methods/GET) parameter every time you request data from the service at the correct URL.
+First, you'll need to make a connection between the API and your app. In the case of this API, you need to include the API key as a [get](/en-US/docs/Web/HTTP/Reference/Methods/GET) parameter every time you request data from the service at the correct URL.
 
 1. Find the following line:
 
@@ -392,7 +391,7 @@ To get it running, you'll need to:
 - Make sure you visit the [Enabled APIs page](https://console.cloud.google.com/apis/enabled), and in the list of APIs, make sure the status is ON for the YouTube Data API v3.
 - Get an API key from [Google Cloud](https://cloud.google.com/).
 - Find the string `ENTER-API-KEY-HERE` in the source code, and replace it with your API key.
-- Run the example through a web server. It won't work if you just run it directly in the browser (i.e. via a `file://` URL).
+- Run the example through a web server. It won't work if you just run it directly in the browser (i.e., via a `file://` URL).
 
 ## Summary
 

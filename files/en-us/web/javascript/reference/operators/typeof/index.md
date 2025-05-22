@@ -9,7 +9,7 @@ browser-compat: javascript.operators.typeof
 
 The **`typeof`** operator returns a string indicating the type of the operand's value.
 
-{{InteractiveExample("JavaScript Demo: Expressions - typeof")}}
+{{InteractiveExample("JavaScript Demo: typeof operator")}}
 
 ```js interactive-example
 console.log(typeof 42);
@@ -151,8 +151,8 @@ The `typeof` operator has higher [precedence](/en-US/docs/Web/JavaScript/Referen
 // Parentheses can be used for determining the data type of expressions.
 const someData = 99;
 
-typeof someData + " Wisen"; // "number Wisen"
-typeof (someData + " Wisen"); // "string"
+typeof someData + " foo"; // "number foo"
+typeof (someData + " foo"); // "string"
 ```
 
 ### Interaction with undeclared and uninitialized variables
@@ -189,7 +189,7 @@ Although `document.all` is also [falsy](/en-US/docs/Glossary/Falsy) and [loosely
 
 `typeof` is very useful, but it's not as versatile as might be required. For example, `typeof []` is `"object"`, as well as `typeof new Date()`, `typeof /abc/`, etc.
 
-For greater specificity in checking types, here we present a custom `type(value)` function, which mostly mimics the behavior of `typeof`, but for non-primitives (i.e. objects and functions), it returns a more granular type name where possible.
+For greater specificity in checking types, here we present a custom `type(value)` function, which mostly mimics the behavior of `typeof`, but for non-primitives (i.e., objects and functions), it returns a more granular type name where possible.
 
 ```js
 function type(value) {

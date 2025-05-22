@@ -7,7 +7,7 @@ browser-compat: css.properties.object-fit
 
 {{CSSRef}}
 
-The **`object-fit`** [CSS](/en-US/docs/Web/CSS) property sets how the content of a [replaced element](/en-US/docs/Web/CSS/Replaced_element), such as an {{HTMLElement("img")}} or {{HTMLElement("video")}}, should be resized to fit its container.
+The **`object-fit`** [CSS](/en-US/docs/Web/CSS) property sets how the content of a {{ glossary("replaced elements", "replaced element")}}, such as an {{HTMLElement("img")}} or {{HTMLElement("video")}}, should be resized to fit its container.
 
 > [!NOTE]
 > The `object-fit` property has no effect on {{HTMLElement("iframe")}}, {{HTMLElement("embed")}}, and {{HTMLElement("fencedframe")}} elements.

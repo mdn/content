@@ -1,5 +1,6 @@
 ---
 title: "ARIA: scrollbar role"
+short-title: scrollbar
 slug: Web/Accessibility/ARIA/Reference/Roles/scrollbar_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#scrollbar
@@ -28,9 +29,9 @@ It is always best to use native scroll bars. You can use the CSS {{CSSXref('over
 
 Because native scroll bar styling has historically been limited, you may come across a scrollbar implemented in JavaScript that you need to support and make fully accessible. For this, you can use the `scrollbar` role to inform assistive technologies that a UI control is an interactive scrollbar.
 
-An element with the `scrollbar` role is a graphical object that controls the scrolling of content within a viewing area; it is the ARIA role which indicates an element is a scroll bar. The HTML element that is most similar is the `range` {{HTMLElement('input')}} type, [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range).
+An element with the `scrollbar` role is a graphical object that controls the scrolling of content within a viewing area; it is the ARIA role which indicates an element is a scroll bar. The HTML element that is most similar is the `range` {{HTMLElement('input')}} type, [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range).
 
-The `scrollbar` element has two required attributes: [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) and [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow). The `aria-controls` attribute references the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of the scrollable area it controls. The `aria-valuenow` property defines the current value of the scrollbar.
+The `scrollbar` element has two required attributes: [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) and [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow). The `aria-controls` attribute references the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) of the scrollable area it controls. The `aria-valuenow` property defines the current value of the scrollbar.
 
 While the `aria-valuenow` is always required, the [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin) and [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax) properties only need to be set for the scrollbar role when the `scrollbar`'s minimum value is not 0 or the maximum value is not 100. The value of `aria-valuenow` must always be between the minimum and maximum inclusive values, or between `0` and `100` inclusive if the minimum and maximum values default to `0` and `100` respectively. `aria-valuenow` communicates how close the viewport is to the bottom of the document. Think of it like a progress bar, where the start of the document is the minimum value and the end of the document is the maximum value.
 
@@ -91,7 +92,7 @@ From the assistive technology user's perspective, the heading does not exist sin
 - [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax)
   - : Set to a decimal value representing the maximum value, and greater than `aria-valuemin`. If not present, the default value is `100`.
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
-  - : When not using a native form control and therefore not able to associate the scrollbar with a {{HTMLElement('label')}}, if visible text is available that can provide the required accessible name, set to the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of an element containing text serving as a label. Otherwise, use `aria-label`.
+  - : When not using a native form control and therefore not able to associate the scrollbar with a {{HTMLElement('label')}}, if visible text is available that can provide the required accessible name, set to the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) of an element containing text serving as a label. Otherwise, use `aria-label`.
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
   - : If no {{htmlelement('label')}} can be used, and no visible text is present that can be referenced by `aria-labelledby`, provides the string value that labels the `scrollbar` element providing the required accessible name.
 - [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation)
@@ -117,9 +118,9 @@ From the assistive technology user's perspective, the heading does not exist sin
 The following is an example of a word likely being too long for a parent container.
 
 ```html
-<span id="pi-label">Pi</div>
+<div id="pi-label">Pi</div>
 <div id="pi">
-3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679
+  3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679
 </div>
 <div
   role="scrollbar"
@@ -159,7 +160,7 @@ The above CSS means a native scroll bar will appear when the user interacts with
 
 ## See also
 
-- [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range),
+- [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range),
 - HTML {{HTMLElement('progress')}} element
 - HTML {{HTMLElement('meter')}} element
 - Other range widgets include:

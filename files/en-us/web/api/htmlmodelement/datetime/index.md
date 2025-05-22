@@ -8,11 +8,11 @@ browser-compat: api.HTMLModElement.dateTime
 
 {{ APIRef("HTML DOM") }}
 
-The **`dateTime`** property of the {{domxref("HTMLModElement")}} interface is a string containing a machine-readable date with an optional time value. It reflects the [`datetime`](/en-US/docs/Web/HTML/Element/time#datetime) HTML attribute of the {{HTMLElement("del")}} and {{HTMLElement("ins")}} elements.
+The **`dateTime`** property of the {{domxref("HTMLModElement")}} interface is a string containing a machine-readable date with an optional time value. It reflects the [`datetime`](/en-US/docs/Web/HTML/Reference/Elements/time#datetime) HTML attribute of the {{HTMLElement("del")}} and {{HTMLElement("ins")}} elements.
 
 ## Value
 
-A string. For valid string formats, see the [`datetime` valid values](/en-US/docs/Web/HTML/Element/time#valid_datetime_values).
+A string. For valid string formats, see the [`datetime` valid values](/en-US/docs/Web/HTML/Reference/Elements/time#valid_datetime_values).
 
 ## Examples
 
@@ -63,7 +63,7 @@ If our script ran on January 9, 2025, our HTML would be as follows:
 - {{domxref("HTMLModElement")}}
 - {{domxref("HTMLModElement.cite")}}
 - {{domxref("HTMLTimeElement.dateTime")}}
-- [Date strings](/en-US/docs/Web/HTML/Date_and_time_formats#date_strings)
-- [Local date and time strings](/en-US/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings)
+- [Date strings](/en-US/docs/Web/HTML/Guides/Date_and_time_formats#date_strings)
+- [Local date and time strings](/en-US/docs/Web/HTML/Guides/Date_and_time_formats#local_date_and_time_strings)
 - {{jsxref("Date")}}
 - {{domxref("Element.insertAdjacentElement()")}}

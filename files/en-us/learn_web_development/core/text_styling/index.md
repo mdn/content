@@ -2,9 +2,8 @@
 title: CSS text styling
 slug: Learn_web_development/Core/Text_styling
 page-type: learn-module
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Text_styling/Fundamentals", "Learn_web_development/Core")}}
 

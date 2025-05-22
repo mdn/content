@@ -26,7 +26,7 @@ A `GPUCommandBuffer` is created via the {{domxref("GPUCommandEncoder.finish()")}
 ## Examples
 
 ```js
-// ...
+// …
 
 const commandBuffer = commandEncoder.finish();
 device.queue.submit([commandBuffer]);

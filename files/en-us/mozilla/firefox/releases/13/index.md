@@ -12,14 +12,14 @@ Firefox 13 was shipped on June 5, 2012. This page summarizes the changes in Fire
 
 ### HTML
 
-- Tables' [`cellspacing`](/en-US/docs/Web/HTML/Element/table#cellspacing) attributes are now parsed the same outside quirks mode as they are in quirks mode. That is, if a value is specified as a percentage, it's treated as a number of pixels instead, since percentage values are not actually permitted according to the specification.
+- Tables' [`cellspacing`](/en-US/docs/Web/HTML/Reference/Elements/table#cellspacing) attributes are now parsed the same outside quirks mode as they are in quirks mode. That is, if a value is specified as a percentage, it's treated as a number of pixels instead, since percentage values are not actually permitted according to the specification.
 - The {{htmlelement("wbr")}} element has seen its bidirectional behavior fixed. It now behaves like the Unicode `U+200B ZERO-WIDTH SPACE` and therefore doesn't affect bi-directionality of its parent element anymore.
 - The {{Cssxref(":invalid")}} pseudo-class can now be applied to the {{htmlelement("form")}} element.
 
 ### CSS
 
 - The `turn` {{cssxref("&lt;angle&gt;")}} unit is now supported (to be used with CSS functions like `rotate()`).
-- Support for 3-to-4 value syntax of the {{cssxref("background-position")}} has been added. You can offset a background image from any corner by writing like "`right 10px bottom 20px`". See [Firefox bug 522607](https://bugzil.la/522607)
+- Support for 3-to-4 value syntax of the {{cssxref("background-position")}} has been added. You can offset a background image from any corner by writing like `right 10px bottom 20px`. See [Firefox bug 522607](https://bugzil.la/522607)
 - Support for the 2-value syntax of the CSS {{cssxref("background-repeat")}} has been added.
 - Support for {{cssxref("border-radius","-moz-border-radius*")}} and {{cssxref("box-shadow","-moz-box-shadow")}} has been removed. Authors should use unprefixed `border-radius` or `box-shadow` instead. See [Firefox bug 693510](https://bugzil.la/693510)
 - The {{cssxref("column-fill")}} property has been implemented (prefixed).

@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.DataView.getFloat64
 
 The **`getFloat64()`** method of {{jsxref("DataView")}} instances reads 8 bytes starting at the specified byte offset of this `DataView` and interprets them as a 64-bit floating point number. There is no alignment constraint; multi-byte values may be fetched from any offset within bounds.
 
-{{InteractiveExample("JavaScript Demo: DataView.getFloat64()")}}
+{{InteractiveExample("JavaScript Demo: DataView.prototype.getFloat64()")}}
 
 ```js interactive-example
 // Create an ArrayBuffer with a size in bytes

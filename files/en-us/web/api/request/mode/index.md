@@ -31,7 +31,7 @@ One of the following values:
 
 - `cors`
 
-  - : If the request is cross-origin then it will use the [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS) mechanism.
+  - : If the request is cross-origin then it will use the [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS) mechanism.
 
 - `navigate`
 
@@ -49,7 +49,7 @@ for that `Request` is set to `cors`.
 However, for requests created other than by the {{domxref("Request.Request", "Request()")}}
 constructor, `no-cors` is typically used as the mode; for example, for
 embedded resources where the request is initiated from markup, unless the
-[`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin)
+[`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin)
 attribute is present, the request is in most cases made using the `no-cors`
 mode — that is, for the {{HTMLElement("link")}} or {{HTMLElement("script")}} elements
 (except when used with modules), or {{HTMLElement("img")}}, {{HTMLElement("audio")}},
@@ -78,5 +78,5 @@ const myMode = myRequest.mode; // returns "cors" by default
 ## See also
 
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

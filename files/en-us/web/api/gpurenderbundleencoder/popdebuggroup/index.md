@@ -36,12 +36,12 @@ None ({{jsxref("Undefined")}}).
 
 The following criteria must be met when calling **`popDebugGroup()`**, otherwise a {{domxref("GPUValidationError")}} is generated and the {{domxref("GPURenderBundleEncoder")}} becomes invalid:
 
-- The render bundle encoder's debug stack is not empty (i.e. at least one render bundle debug group was previously started with {{domxref("GPURenderBundleEncoder.pushDebugGroup", "pushDebugGroup()")}}).
+- The render bundle encoder's debug stack is not empty (i.e., at least one render bundle debug group was previously started with {{domxref("GPURenderBundleEncoder.pushDebugGroup", "pushDebugGroup()")}}).
 
 ## Examples
 
 ```js
-// ...
+// …
 
 const bundleEncoder = device.createRenderBundleEncoder(renderBundleDescriptor);
 
@@ -53,7 +53,7 @@ bundleEncoder.draw(3);
 
 bundleEncoder.popDebugGroup();
 
-// ...
+// …
 ```
 
 ## Specifications

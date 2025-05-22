@@ -46,4 +46,4 @@ console.log(matrix.rotate(30).isIdentity); // output: false
 - CSS {{cssxref("transform-function/matrix()")}} function
 - CSS {{cssxref("transform")}} property
 - [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms) module
-- SVG [`transform`](/en-US/docs/Web/SVG/Attribute/transform) attribute
+- SVG [`transform`](/en-US/docs/Web/SVG/Reference/Attribute/transform) attribute

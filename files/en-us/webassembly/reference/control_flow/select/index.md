@@ -5,7 +5,7 @@ page-type: webassembly-instruction
 sidebar: webassemblysidebar
 ---
 
-The **`select`** instruction, selects one of its first two operands based on whether its third operand is zero or not. It shares some similarities with the ternary operator in other languages (e.g. `false ? 10 : 20`), but doesn't [short-circuit](https://en.wikipedia.org/wiki/Short-circuit_evaluation). The instruction may be followed by an immediate value type: `select (result T)`. `select (result T)` uses a different binary opcode, and allows types besides those introduced by the WebAssembly MVP (`i32`, `i64`, `f32`, `f64`), for example, it allows selection between two `externref` values.
+The **`select`** instruction, selects one of its first two operands based on whether its third operand is zero or not. It shares some similarities with the ternary operator in other languages (e.g., `false ? 10 : 20`), but doesn't [short-circuit](https://en.wikipedia.org/wiki/Short-circuit_evaluation). The instruction may be followed by an immediate value type: `select (result T)`. `select (result T)` uses a different binary opcode, and allows types besides those introduced by the WebAssembly MVP (`i32`, `i64`, `f32`, `f64`), for example, it allows selection between two `externref` values.
 
 {{InteractiveExample("Wat Demo: select", "tabbed-taller")}}
 
@@ -49,7 +49,7 @@ await WebAssembly.instantiateStreaming(fetch(url)).then((result) => {
 
 ## Syntax
 
-```wasm
+```wat
 ;; push two values onto the stack
 i32.const 10
 i32.const 20

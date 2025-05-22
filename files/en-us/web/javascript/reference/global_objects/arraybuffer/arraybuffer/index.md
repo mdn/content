@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.ArrayBuffer.ArrayBuffer
 
 The **`ArrayBuffer()`** constructor creates {{jsxref("ArrayBuffer")}} objects.
 
-{{InteractiveExample("JavaScript Demo: ArrayBuffer Constructor", "shorter")}}
+{{InteractiveExample("JavaScript Demo: ArrayBuffer() constructor", "shorter")}}
 
 ```js interactive-example
 // Create an ArrayBuffer with a size in bytes

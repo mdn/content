@@ -1,5 +1,6 @@
 ---
 title: "ARIA: landmark role"
+short-title: landmark
 slug: Web/Accessibility/ARIA/Reference/Roles/landmark_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#landmark
@@ -21,7 +22,7 @@ A visible label should be provided, referenced with [`aria-labelledby`](/en-US/d
 
 For screen reader users, adding landmark roles effectively creates 'skip links' for screen reader users, but don't replace in page navigation as the landmark roles are not otherwise surfaced.
 
-## Best Practices
+## Best practices
 
 Do not use `role="landmark"`. Do use HTML and subclass landmark roles.
 

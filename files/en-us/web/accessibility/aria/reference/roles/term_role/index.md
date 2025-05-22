@@ -1,5 +1,6 @@
 ---
 title: "ARIA: term role"
+short-title: term
 slug: Web/Accessibility/ARIA/Reference/Roles/term_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#term
@@ -74,11 +75,9 @@ or without any ARIA (but possibly not how you want it presented)
 
 Don't use the `role="term"` on interactive elements such as links as it can interfere with the assistive technology user's ability to interact with the element.
 
-## Best Practices
+## Best practices
 
 Allow the term itself to define the accessible name. Do not use `aria-label` or `aria-labelledby`.
-
-### Prefer HTML
 
 ## Specifications
 

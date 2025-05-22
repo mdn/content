@@ -11,7 +11,7 @@ browser-compat: api.HTMLImageElement.attributionSrc
 {{APIRef("Attribution Reporting API")}}{{securecontext_header}}{{SeeCompatTable}}
 
 The
-**`attributionSrc`** property of the {{domxref("HTMLImageElement")}} interface gets and sets the [`attributionsrc`](/en-US/docs/Web/HTML/Element/img#attributionsrc) attribute on an {{htmlelement("img")}} element programmatically, reflecting the value of that attribute. `attributionsrc` specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with the image request.
+**`attributionSrc`** property of the {{domxref("HTMLImageElement")}} interface gets and sets the [`attributionsrc`](/en-US/docs/Web/HTML/Reference/Elements/img#attributionsrc) attribute on an {{htmlelement("img")}} element programmatically, reflecting the value of that attribute. `attributionsrc` specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with the image request.
 
 On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header in the response, to register an image-based [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#html-based_event_sources) or [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers#html-based_attribution_triggers), respectively. Which response header should be sent back depends on the value of the `Attribution-Reporting-Eligible` header that triggered the registration.
 
@@ -26,7 +26,7 @@ See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_AP
 
 A string. There are two versions of this property that you can get and set:
 
-- Empty string, i.e. `imgElem.attributionSrc=""`. This specifies that you want the {{httpheader("Attribution-Reporting-Eligible")}} header sent to the same server as the `src` attribute points to. This is fine when you are handling the attribution source or trigger registration on the same server. When registering an attribution trigger this property is optional, and an empty string value will be used if it is omitted.
+- Empty string, i.e., `imgElem.attributionSrc=""`. This specifies that you want the {{httpheader("Attribution-Reporting-Eligible")}} header sent to the same server as the `src` attribute points to. This is fine when you are handling the attribution source or trigger registration on the same server. When registering an attribution trigger this property is optional, and an empty string value will be used if it is omitted.
 - Value containing one or more URLs, for example:
 
   ```js

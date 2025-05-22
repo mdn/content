@@ -148,7 +148,7 @@ The code above assign a dark grey ambient light for the whole scene. The box loo
 
 ## Material
 
-This example uses a material called [Standard material](https://api.playcanvas.com/classes/Engine.StandardMaterial.html), which is the main, general purpose material that is most often used for rendering.
+This example uses a material called [Standard material](https://api.playcanvas.com/engine/classes/StandardMaterial.html), which is the main, general purpose material that is most often used for rendering.
 Add the following lines to your code:
 
 ```js

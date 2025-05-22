@@ -19,11 +19,11 @@ This article provides information about the changes in Firefox 81 that will affe
 
 ### HTML
 
-- Automatic downloads are now blocked in a sandboxed [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) element ([Firefox bug 1558394](https://bugzil.la/1558394)).
+- Automatic downloads are now blocked in a sandboxed [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe) element ([Firefox bug 1558394](https://bugzil.la/1558394)).
 
 #### Removals
 
-- Support for the non-standard `mozallowfullscreen` attribute has been removed from [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe). Consider using `allow="fullscreen"` instead ([Firefox bug 1657599](https://bugzil.la/1657599)).
+- Support for the non-standard `mozallowfullscreen` attribute has been removed from [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe). Consider using `allow="fullscreen"` instead ([Firefox bug 1657599](https://bugzil.la/1657599)).
 
 ### CSS
 
@@ -40,8 +40,8 @@ _No changes._
 
 ### HTTP
 
-- Firefox now accepts non-standard [`Content-Disposition`](/en-US/docs/Web/HTTP/Headers/Content-Disposition) headers with an unquoted filename containing spaces ([Firefox bug 1440677](https://bugzil.la/1440677)).
-- Firefox now supports the HTTP [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy) header's [`web-share`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/web-share) directive, which can be used to restrict access to the [Web Share API](/en-US/docs/Web/API/Navigator/share) to trusted origins. Note that Firefox does not support the Web Share API itself, at time of writing ([Firefox bug 1653199](https://bugzil.la/1653199)).
+- Firefox now accepts non-standard [`Content-Disposition`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Disposition) headers with an unquoted filename containing spaces ([Firefox bug 1440677](https://bugzil.la/1440677)).
+- Firefox now supports the HTTP [`Feature-Policy`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy) header's [`web-share`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/web-share) directive, which can be used to restrict access to the [Web Share API](/en-US/docs/Web/API/Navigator/share) to trusted origins. Note that Firefox does not support the Web Share API itself, at time of writing ([Firefox bug 1653199](https://bugzil.la/1653199)).
 
 ### APIs
 
@@ -51,7 +51,7 @@ _No changes._
 
 #### Workers/Service workers
 
-- Strict MIME type checks are now enforced on worker and shared worker scripts, i.e. scripts targeted by the {{domxref("Worker.Worker()", "Worker()")}} and {{domxref("SharedWorker.SharedWorker()", "SharedWorker()")}} constructors must now be served with `text/javascript` ([Firefox bug 1569123](https://bugzil.la/1569123)).
+- Strict MIME type checks are now enforced on worker and shared worker scripts, i.e., scripts targeted by the {{domxref("Worker.Worker()", "Worker()")}} and {{domxref("SharedWorker.SharedWorker()", "SharedWorker()")}} constructors must now be served with `text/javascript` ([Firefox bug 1569123](https://bugzil.la/1569123)).
 
 ### WebDriver conformance (Marionette)
 

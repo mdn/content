@@ -23,7 +23,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 
 ### HTML
 
-- The `rel="noopener"` [Link type](/en-US/docs/Web/HTML/Attributes/rel) has been implemented (see [Firefox bug 1222516](https://bugzil.la/1222516)).
+- The `rel="noopener"` [Link type](/en-US/docs/Web/HTML/Reference/Attributes/rel) has been implemented (see [Firefox bug 1222516](https://bugzil.la/1222516)).
 
 ### CSS
 
@@ -36,7 +36,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 - Added support for subpixel antialiasing in CSS {{cssxref("mask")}} / {{cssxref("clip-path")}} ([Firefox bug 1305259](https://bugzil.la/1305259)).
 - Implemented CSS Text 3 segment break transformation rules ([Firefox bug 1081858](https://bugzil.la/1081858)).
 - Basic shape clipping (as applied via the {{cssxref("clip-path")}} property) can now be applied to SVG content ([Firefox bug 1246741](https://bugzil.la/1246741)).
-- Implemented Flexbox layout for {{cssxref("align-self")}}|{{cssxref("justify-self")}}: \[ first | last ]? baseline ([Firefox bug 1221524](https://bugzil.la/1221524)).
+- Implemented Flexbox layout for {{cssxref("align-self")}} and {{cssxref("justify-self")}} ([Firefox bug 1221524](https://bugzil.la/1221524)).
 - The {{cssxref("touch-action")}} property is now enabled by default on all platforms. (For the full story, see [intent to ship mail #1](https://groups.google.com/forum/#!topic/mozilla.dev.platform/6CGjsm1XpD4) and [intent to ship mail #2](https://groups.google.com/forum/#!topic/mozilla.dev.platform/SYEzvXJKw9M).)
 - Flexbox {{cssxref("align-content")}} handling & single-line-sizing should depend on {{cssxref("flex-wrap")}}, not number of lines ([Firefox bug 1090031](https://bugzil.la/1090031)).
 - [CSS Animations](/en-US/docs/Web/CSS/CSS_animations) can now be used to animate non-interpolated properties (see [Firefox bug 1064937](https://bugzil.la/1064937)).
@@ -47,10 +47,10 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 - There have been a number of changes to CSS {{cssxref("&lt;color&gt;")}} values (see [Firefox bug 1295456](https://bugzil.la/1295456)):
 
   - `rgba()` and `hsla()` have now been redefined as aliases of `rgb()` and `hsl()`; both accept the same parameter syntax.
-  - `rgb(`) and `hsl()` now accept an optional alpha value, e.g. `rgb(255, 0, 0, 0.5)`.
-  - Color functions now accept space-separated parameters rather than commas, e.g. `rgb(255 0 0 / 0.5)`.
-  - Alpha values can now be specified as percentages as well as numbers, e.g. `rgb(255 0 0 / 50%)`.
-  - The hue component in `hsl()` colors can now be specified as an angle, as well as a number, e.g. `hsl(120deg, 60%, 70%)`.
+  - `rgb(`) and `hsl()` now accept an optional alpha value, e.g., `rgb(255, 0, 0, 0.5)`.
+  - Color functions now accept space-separated parameters rather than commas, e.g., `rgb(255 0 0 / 0.5)`.
+  - Alpha values can now be specified as percentages as well as numbers, e.g., `rgb(255 0 0 / 50%)`.
+  - The hue component in `hsl()` colors can now be specified as an angle, as well as a number, e.g., `hsl(120deg, 60%, 70%)`.
 
 - Firefox's implementation of child-indexed pseudo-classes (such as {{cssxref(":nth-child")}}, {{cssxref(":first-child")}}, and so forth) has been updated to match the CSS selectors level 4 specification: these pseudo-classes now match the appropriate sibling elements rather than the children of their parent element. This allows these pseudo-classes to be used when there is no parent, or the parent is not an {{domxref("Element")}} ([Firefox bug 1300374](https://bugzil.la/1300374).
 
@@ -83,11 +83,11 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 
 - [Array destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring#array_destructuring) now throws a {{jsxref("SyntaxError")}} when using destructuring rest with trailing comma ([Firefox bug 1041341](https://bugzil.la/1041341)).
 - Duplicate `__proto__` properties are now allowed in [object destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) ([Firefox bug 1204024](https://bugzil.la/1204024)).
-- {{jsxref("Array.prototype.toLocaleString()")}} has been re-implemented to support the Intl API parameters "`locales`" and "`options`" ([Firefox bug 1130636](https://bugzil.la/1130636)).
+- {{jsxref("Array.prototype.toLocaleString()")}} has been re-implemented to support the Intl API parameters `locales` and `options` ([Firefox bug 1130636](https://bugzil.la/1130636)).
 - {{jsxref("TypedArray")}} constructors now accept [iterables](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) to create new typed arrays ([Firefox bug 1232266](https://bugzil.la/1232266)).
 - {{jsxref("TypedArray.from()")}}, {{jsxref("TypedArray.of()")}}, {{jsxref("TypedArray.prototype.filter()")}}, {{jsxref("TypedArray.prototype.map()")}}, {{jsxref("TypedArray.prototype.slice()")}}, {{jsxref("TypedArray.prototype.subarray()")}} now require that their `this` values are valid Typed Array constructors ([Firefox bug 1122396](https://bugzil.la/1122396)).
 - The non-standard {{jsxref("ArrayBuffer.slice()")}} method (not {{jsxref("ArrayBuffer.prototype.slice()")}}) is deprecated and now presents a warning when used ([Firefox bug 1316913](https://bugzil.la/1316913)).
-- [Unicode code point escapes](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#unicode_code_point_escapes) can now also be used as identifiers (e.g. "`let \u{61} = 123`", see [Firefox bug 1314037](https://bugzil.la/1314037)).
+- [Unicode code point escapes](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#unicode_code_point_escapes) can now also be used as identifiers (e.g., `let \u{61} = 123`, see [Firefox bug 1314037](https://bugzil.la/1314037)).
 - To conform with ES2015, `\u2e2f` and `ⸯ` now throw when used as identifier, for details see [Firefox bug 917436](https://bugzil.la/917436) and [Firefox bug 1197230](https://bugzil.la/1197230).
 
 ### WebAssembly
@@ -106,7 +106,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 - The {{domxref("DataTransfer.types")}} property of the [Drag and drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) now returns a frozen array of strings rather than a {{domxref("DOMStringList")}} (see [Firefox bug 1298243](https://bugzil.la/1298243)).
 - The `loadstart` and `loadend` events are now fired on {{htmlelement("img")}} elements (see [Firefox bug 1264769](https://bugzil.la/1264769)).
 - The {{domxref("Notification.requireInteraction")}} of the [Notifications API](/en-US/docs/Web/API/Notifications_API) has been implemented (see [Firefox bug 862395](https://bugzil.la/862395).)
-- The {{domxref("Window.open()")}} method now has a `noopener` [window feature](/en-US/docs/Web/API/Window/open#window_functionality_features) available (see [Firefox bug 1267339](https://bugzil.la/1267339)), which mirrors the functionality of the `rel="noopener"` [Link type](/en-US/docs/Web/HTML/Attributes/rel).
+- The {{domxref("Window.open()")}} method now has a `noopener` [window feature](/en-US/docs/Web/API/Window/open#window_functionality_features) available (see [Firefox bug 1267339](https://bugzil.la/1267339)), which mirrors the functionality of the `rel="noopener"` [Link type](/en-US/docs/Web/HTML/Reference/Attributes/rel).
 - The {{domxref("CustomElementRegistry.get()")}} method of the [Web Components API](/en-US/docs/Web/API/Web_components) has been implemented (see [Firefox bug 1275838](https://bugzil.la/1275838)).
 - [Pointer Event](/en-US/docs/Web/API/Pointer_events) {{domxref("PointerEvent.width","width")}} and {{domxref("PointerEvent.height","height")}} properties now default to a value of 1 (see [Firefox bug 1304315](https://bugzil.la/1304315)).
 - The [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) has been updated to include changes in the [latest spec](https://wicg.github.io/entries-api/) (see [Firefox bug 1284987](https://bugzil.la/1284987) for the exact details).
@@ -154,8 +154,8 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 ### HTTP
 
 - The {{HTTPHeader("Referrer-Policy")}} header now supports the directives `same-origin`, `strict-origin`, and `strict-origin-when-cross-origin` ([Firefox bug 1276836](https://bugzil.la/1276836)).
-- The [`'strict-dynamic'` source expression](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#strict-dynamic) is now supported for {{HTTPHeader("Content-Security-Policy")}} directives, such as {{CSP("script-src")}} ([Firefox bug 1299483](https://bugzil.la/1299483)).
-- Insecure sites (`http:`) can't [set cookies](/en-US/docs/Web/HTTP/Cookies) with the "secure" directive anymore as per the [Strict Secure Cookies specification](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-cookie-alone-01) ([Firefox bug 976073](https://bugzil.la/976073)).
+- The [`'strict-dynamic'` source expression](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#strict-dynamic) is now supported for {{HTTPHeader("Content-Security-Policy")}} directives, such as {{CSP("script-src")}} ([Firefox bug 1299483](https://bugzil.la/1299483)).
+- Insecure sites (`http:`) can't [set cookies](/en-US/docs/Web/HTTP/Guides/Cookies) with the "secure" directive anymore as per the [Strict Secure Cookies specification](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-cookie-alone-01) ([Firefox bug 976073](https://bugzil.la/976073)).
 - The maximum table size format of the HTTP/2 header compression format [HPACK](https://datatracker.ietf.org/doc/html/rfc7541) has been increased from 4 KB to 64 KB ([Firefox bug 1296280](https://bugzil.la/1296280)).
 - The {{HTTPHeader("Large-Allocation")}} header has been added ([Firefox bug 1304140](https://bugzil.la/1304140)).
 
@@ -165,7 +165,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 
 ### Security
 
-- When login pages (i.e., those containing an [`<input type="password">`](/en-US/docs/Web/HTML/Element/input/password) field) are created so that they would be submitted insecurely, Firefox displays an in-context warning message below the password field to warn users ([Firefox bug 1319119](https://bugzil.la/1319119)). Autofill is also disabled on insecure login forms ([Firefox bug 1217152](https://bugzil.la/1217152)). See [Insecure passwords](/en-US/docs/Web/Security/Insecure_passwords) for more details.
+- When login pages (i.e., those containing an [`<input type="password">`](/en-US/docs/Web/HTML/Reference/Elements/input/password) field) are created so that they would be submitted insecurely, Firefox displays an in-context warning message below the password field to warn users ([Firefox bug 1319119](https://bugzil.la/1319119)). Autofill is also disabled on insecure login forms ([Firefox bug 1217152](https://bugzil.la/1217152)). See [Insecure passwords](/en-US/docs/Web/Security/Insecure_passwords) for more details.
 - Support for SHA-1 SSL certificates has been removed; navigating to a secure page that uses a SHA-1 certificate will now result in an `Untrusted Connection` error ([Firefox bug 1330043](https://bugzil.la/1330043)).
 
 ## Plugins

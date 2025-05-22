@@ -4,10 +4,11 @@ slug: Web/Progressive_web_apps/Manifest/Reference/related_applications
 page-type: web-manifest-member
 status:
   - experimental
-browser-compat: html.manifest.related_applications
+browser-compat: manifests.webapp.related_applications
+sidebar: pwasidebar
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The `related_applications` manifest member is used to specify one or more native applications that are related to your web application.
 It can be used with the [`prefer_related_applications`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/prefer_related_applications) manifest member, which indicates a preference for installing either a related native application or your web application.

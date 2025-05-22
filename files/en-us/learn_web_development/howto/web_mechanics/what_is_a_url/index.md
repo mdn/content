@@ -2,9 +2,8 @@
 title: What is a URL?
 slug: Learn_web_development/Howto/Web_mechanics/What_is_a_URL
 page-type: learn-faq
+sidebar: learn-how-to
 ---
-
-{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 This article discusses Uniform Resource Locators (URLs), explaining what they are and how they're structured.
 
@@ -71,7 +70,7 @@ The first part of the URL is the _scheme_, which indicates the protocol that the
 
 ![Authority](mdn-url-authority.png)
 
-Next follows the _authority_, which is separated from the scheme by the character pattern `://`. If present the authority includes both the _domain_ (e.g. `www.example.com`) and the _port_ (`80`), separated by a colon:
+Next follows the _authority_, which is separated from the scheme by the character pattern `://`. If present the authority includes both the _domain_ (e.g., `www.example.com`) and the _port_ (`80`), separated by a colon:
 
 - The domain indicates which Web server is being requested. Usually this is a [domain name](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name), but an {{Glossary("IP address")}} may also be used (but this is rare as it is much less convenient).
 - The port indicates the technical "gate" used to access the resources on the web server. It is usually omitted if the web server uses the standard ports of the HTTP protocol (80 for HTTP and 443 for HTTPS) to grant access to its resources. Otherwise it is mandatory.
@@ -136,6 +135,22 @@ All of the following URLs are relative URLs:
 - Sub-resources: `Howto/Web_mechanics/What_is_a_URL` — the protocol and domain name are missing, and the path doesn't begin with `/`. The browser will attempt to find the document in a subdirectory of the one containing the current resource. In this case, we really want to reach this URL: `https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL`.
 - Going back in the directory tree: `../CSS/display` — the protocol and domain name are missing, and the path begins with `..`. This is inherited from the UNIX file system world — to tell the browser we want to go up by one level. Here we want to reach this URL: `https://developer.mozilla.org/en-US/docs/Learn_web_development/../Web/CSS/display`, which can be simplified to: `https://developer.mozilla.org/en-US/docs/Web/CSS/display`.
 - Anchor-only: `#semantic_urls` - all parts are missing except the anchor. The browser will use the current document's URL and replace or add the anchor part to it. This is useful when you want to link to a specific part of the current document.
+
+## URL usernames and passwords
+
+Less common than the URL parts discussed above, you may see a username and password included in URLs.
+
+For example:
+
+```plain
+https://username:password@www.example.com:80/
+```
+
+When included, the username and password are put between the `://` characters and the authority, with a colon between the two and an ampersand (`@`) at the end.
+
+A username and password can be included in the URL when accessing websites that use the [HTTP authentication](/en-US/docs/Web/HTTP/Guides/Authentication) security mechanism, to immediately sign in to a website and bypass the username/password dialog box that would otherwise appear to enter your credentials into.
+
+While you might still see this mechanism used in the wild, it is deprecated because of security concerns, and modern websites tend to use other mechanisms for authentication. See [Access using credentials in the URL](/en-US/docs/Web/HTTP/Guides/Authentication#access_using_credentials_in_the_url) for more details.
 
 ## Semantic URLs
 

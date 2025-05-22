@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.RegExp.lastIndex
 
 The **`lastIndex`** data property of a {{jsxref("RegExp")}} instance specifies the index at which to start the next match.
 
-{{InteractiveExample("JavaScript Demo: RegExp.lastIndex")}}
+{{InteractiveExample("JavaScript Demo: RegExp: lastIndex")}}
 
 ```js interactive-example
 const regex1 = new RegExp("foo", "g");

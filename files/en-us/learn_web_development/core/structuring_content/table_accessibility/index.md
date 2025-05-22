@@ -1,14 +1,14 @@
 ---
 title: HTML table accessibility
+short-title: Table accessibility
 slug: Learn_web_development/Core/Structuring_content/Table_accessibility
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_table_basics", "Learn_web_development/Core/Structuring_content/Planet_data_table", "Learn_web_development/Core/Structuring_content")}}
 
-In the previous article, we looked at one of the most important features for making HTML tables accessible to visually impaired users — the {{htmlelement("th")}} element. In this article we continue down this path, looking at more HTML table accessibility features such as captions/summaries, grouping your rows into table head, body and footer sections, and scoping columns and rows.
+In the previous article, we looked at one of the most important features for making HTML tables accessible to visually impaired users — the {{htmlelement("th")}} element. In this article, we continue down this path, looking at more HTML table accessibility features such as captions/summaries, grouping your rows into table head, body and footer sections, and scoping columns and rows.
 
 <table>
   <tbody>
@@ -37,7 +37,7 @@ In the previous article, we looked at one of the most important features for mak
 
 ## Recap: Tables for visually impaired users
 
-Let's recap briefly on how we use data tables. A table can be a handy tool, for giving us quick access to data and allowing us to look up different values. For example, it takes only a short glance at the table below to find out how many rings were sold in Gent during August 2016. To understand its information we make visual associations between the data in this table and its column and/or row headers.
+Let's recap briefly on how we use data tables. A table can be a handy tool, for giving us quick access to data and allowing us to look up different values. For example, it takes only a short glance at the table below to find out how many rings were sold in Gent during August 2016. To understand its information, we make visual associations between the data in this table and its column and/or row headers.
 
 <table>
   <caption>Items Sold August 2016</caption>
@@ -133,7 +133,7 @@ As you can infer from the brief example above, the caption is meant to contain a
 A caption is placed directly beneath the `<table>` tag.
 
 > [!NOTE]
-> The [`summary`](/en-US/docs/Web/HTML/Element/table#summary) attribute can also be used on the `<table>` element to provide a description — this is also read out by screen readers. We'd recommend using the `<caption>` element instead, however, as `summary` is deprecated and can't be read by sighted users (it doesn't appear on the page).
+> The [`summary`](/en-US/docs/Web/HTML/Reference/Elements/table#summary) attribute can also be used on the `<table>` element to provide a description — this is also read out by screen readers. We'd recommend using the `<caption>` element instead, however, as `summary` is deprecated and can't be read by sighted users (it doesn't appear on the page).
 
 ### Active learning: Adding a caption
 
@@ -166,7 +166,7 @@ Let's put these new elements into action.
 
 1. First of all, make a local copy of [spending-record.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/spending-record.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/minimal-table.css) in a new folder.
 2. Try putting the obvious headers row inside a `<thead>` element, the "SUM" row inside a `<tfoot>` element, and the rest of the content inside a `<tbody>` element.
-3. Next, add a [`colspan`](/en-US/docs/Web/HTML/Element/td#colspan) attribute to make the "SUM" cell span across the first four columns, so the actual number appears at the bottom of the "Cost" column.
+3. Next, add a [`colspan`](/en-US/docs/Web/HTML/Reference/Elements/td#colspan) attribute to make the "SUM" cell span across the first four columns, so the actual number appears at the bottom of the "Cost" column.
 4. Let's add some simple extra styling to the table, to give you an idea of how useful these elements are for applying CSS. Inside the head of your HTML document, you'll see an empty {{htmlelement("style")}} element. Inside this element, add the following lines of CSS code:
 
    ```css
@@ -190,11 +190,11 @@ Your finished table should look something like the following:
 {{ EmbedGHLiveSample('learning-area/html/tables/advanced/spending-record-finished.html', '100%', 400) }}
 
 > [!NOTE]
-> You can also find it on GitHub as [spending-record-finished.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/spending-record-finished.html).
+> You can also find it on GitHub as [spending-record-finished.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/spending-record-finished.html) ([see it live here](https://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html)).
 
 ## The `scope` attribute
 
-The [`scope`](/en-US/docs/Web/HTML/Element/th#scope) attribute can be added to the `<th>` element to tell screen readers exactly what cells the header is a header for — is it a header for the row it is in, or the column, for example? Looking back to our spending record example from earlier on, you could unambiguously define the column headers as column headers like this:
+The [`scope`](/en-US/docs/Web/HTML/Reference/Elements/th#scope) attribute can be added to the `<th>` element to tell screen readers exactly what cells the header is a header for — is it a header for the row it is in, or the column, for example? Looking back to our spending record example from earlier on, you could unambiguously define the column headers as column headers like this:
 
 ```html
 <thead>
@@ -255,26 +255,32 @@ The same applies to headers for multiple grouped rows. Take another look at the 
 </tr>
 ```
 
-## The id and headers attributes
+## The `id` and `headers` attributes
 
-An alternative to using the `scope` attribute is to use [`id`](/en-US/docs/Web/HTML/Global_attributes/id) and [`headers`](/en-US/docs/Web/HTML/Element/td#headers) attributes to create associations between headers and cells.
+An alternative to using the `scope` attribute is to use [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) and [`headers`](/en-US/docs/Web/HTML/Reference/Elements/td#headers) attributes to create associations between data cells and header cells.
 
-The `headers` attribute takes a list of unordered, space-separated {{Glossary("string", "strings")}}, each corresponding to the unique `id` of the `<th>` elements that provide headings for either a data cell (`<td>` element) or another header cell (`<th>` element).
+A `<th>` element can provide a heading for either a data cell (`<td>`) or, in more complex tables, for another header cell (`<th>`). This allows you to create layered or grouped headers, where one header describes several others.
 
-This gives your HTML table an explicit definition of the position of each cell in the table, defined by the header(s) for each column and row it is part of, kind of like a spreadsheet. For it to work well, the table really needs both column and row headers.
+The `headers` attribute is used to link a cell, `<td>` or `<th>`, to one or more header cells. It takes a space-separated list of {{Glossary("string", "strings")}}; the order of strings does not matter. Each string must match the unique `id` of a `<th>` element that the cell is associated with.
 
-Returning to our "Items Sold August 2016" example, we can use the `id` and `headers` attributes as follows:
+This method gives your HTML table a more explicit definition of the position of each cell, based on the headers for the column and the row it belongs to, kind of like a spreadsheet. For this to work well, your table should include both column and row headers.
+
+Let's look at a portion of the "Items Sold August 2016" example to see how to use the `id` and `headers` attributes:
 
 1. Add a unique `id` to each `<th>` element in the table.
-2. Add a `headers` attribute to each `<th>` element that acts as a subheading, i.e., has a header element above it. The value is the `id` of the heading that sits over the top and defines the subheadings, which is `"clothes"` for the column headers and `"belgium"` for the row header in our example.
-3. Add a `headers` attribute to each `<td>` element and add the `id`s of the associated `<th>` element(s) in form of a space-separated list. You can proceed as you would in a spreadsheet: Find the data cell and search for the corresponding headings for the row and column. The order of the specified `id`s doesn't matter, but you should be consistent to keep it organized.
+2. For the header cells: Add a `headers` attribute to each `<th>` element that acts as a subheading, that is, a header cell with another header above it. The value is the `id` of the high-level heading. In our example, that's `"clothes"` for the column headers and `"belgium"` for the row header.
+3. For the data cells: Add a `headers` attribute to each `<td>` element, and add the `id`s of the associated `<th>` element(s) as a space-separated list. You can proceed as you would in a spreadsheet: Find the data cell, then locate the row and column headers that describe it. The order of the specified `id`s doesn't matter, but keeping it consistent helps to keep it organized and improves readability of the code.
 
 ```html
 <thead>
   <tr>
+    <th></th>
+    <th></th>
     <th id="clothes" colspan="3">Clothes</th>
   </tr>
   <tr>
+    <th></th>
+    <th></th>
     <th id="trousers" headers="clothes">Trousers</th>
     <th id="skirts" headers="clothes">Skirts</th>
     <th id="dresses" headers="clothes">Dresses</th>
@@ -282,14 +288,26 @@ Returning to our "Items Sold August 2016" example, we can use the `id` and `head
 </thead>
 <tbody>
   <tr>
-    <th id="belgium" rowspan="3">Belgium</th>
+    <th id="belgium" rowspan="2">Belgium</th>
     <th id="antwerp" headers="belgium">Antwerp</th>
-    <td headers="antwerp belgium clothes trousers">56</td>
-    <td headers="antwerp belgium clothes skirts">22</td>
-    <td headers="antwerp belgium clothes dresses">43</td>
+    <td headers="belgium antwerp clothes trousers">56</td>
+    <td headers="belgium antwerp clothes skirts">22</td>
+    <td headers="belgium antwerp clothes dresses">43</td>
+  </tr>
+  <tr>
+    <th id="ghent" headers="belgium">Ghent</th>
+    <td headers="belgium ghent clothes trousers">41</td>
+    <td headers="belgium ghent clothes skirts">17</td>
+    <td headers="belgium ghent clothes dresses">35</td>
   </tr>
 </tbody>
 ```
+
+In this example:
+
+- The `<th>` for `"Belgium"` uses `rowspan="2"` to span both `"Antwerp"` and `"Ghent"`.
+- The city header cells (`"Antwerp"` and `"Ghent"`) use the `headers` attribute to reference `"belgium"` to show they belong to the Belgium group.
+- Each `<td>` includes a `headers` attribute for country (`belgium`), city (`antwerp` or `ghent`), group (`clothes`), and the specific clothing item (`trousers`, `skirts`, or `dresses`).
 
 > [!NOTE]
 > This method creates very precise associations between headers and data cells but it uses **a lot** more markup and does not leave any room for errors. The `scope` approach is usually sufficient for most tables.

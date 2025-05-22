@@ -108,5 +108,5 @@ details[open]::details-content {
 
 ## See also
 
-- [`<details>`](/en-US/docs/Web/HTML/Element/details)
-- [`<summary>`](/en-US/docs/Web/HTML/Element/summary)
+- [`<details>`](/en-US/docs/Web/HTML/Reference/Elements/details)
+- [`<summary>`](/en-US/docs/Web/HTML/Reference/Elements/summary)

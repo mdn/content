@@ -9,7 +9,7 @@ browser-compat: javascript.operators.subtraction
 
 The **subtraction (`-`)** operator subtracts the two operands, producing their difference.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Subtraction operator")}}
+{{InteractiveExample("JavaScript Demo: Subtraction (-) operator")}}
 
 ```js interactive-example
 console.log(5 - 3);

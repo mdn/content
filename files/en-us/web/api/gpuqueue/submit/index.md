@@ -33,7 +33,7 @@ None ({{jsxref("Undefined")}}).
 The following criteria must be met when calling **`submit()`**, otherwise a {{domxref("GPUValidationError")}} is generated and the {{domxref("GPUQueue")}} becomes invalid:
 
 - The array of {{domxref("GPUCommandBuffer")}} objects referenced in the `submit()` call does not contain duplicates.
-- Any {{domxref("GPUBuffer")}}, {{domxref("GPUTexture")}}, and {{domxref("GPUQuerySet")}} objects used in the encoded commands are available for use, i.e. not unavailable (`GPUBuffer`s are unavailable if they are currently {{domxref("GPUBuffer.mapAsync", "mapped", "", "nocode")}}) or destroyed (with the `destroy()` method).
+- Any {{domxref("GPUBuffer")}}, {{domxref("GPUTexture")}}, and {{domxref("GPUQuerySet")}} objects used in the encoded commands are available for use, i.e., not unavailable (`GPUBuffer`s are unavailable if they are currently {{domxref("GPUBuffer.mapAsync", "mapped", "", "nocode")}}) or destroyed (with the `destroy()` method).
 - Any {{domxref("GPUExternalTexture")}} objects used in the encoded commands are not expired (they expire automatically shortly after being imported via {{domxref("GPUDevice.importExternalTexture", "importExternalTexture()")}}).
 - If a {{domxref("GPUQuerySet")}} object used in an encoded command is of type `"occlusion"` query, it is not already used, except by {{domxref("GPURenderPassEncoder.beginOcclusionQuery()")}}.
 
@@ -42,7 +42,7 @@ The following criteria must be met when calling **`submit()`**, otherwise a {{do
 In our [basic render demo](https://mdn.github.io/dom-examples/webgpu-render-demo/), a number of commands are recorded via a {{domxref("GPUCommandEncoder")}}:
 
 ```js
-// ...
+// …
 
 // Create GPUCommandEncoder
 const commandEncoder = device.createCommandEncoder();
@@ -72,7 +72,7 @@ passEncoder.draw(3);
 
 passEncoder.end();
 
-// ...
+// …
 ```
 
 The commands encoded by the {{domxref("GPUCommandEncoder")}} are recoded into a {{domxref("GPUCommandBuffer")}} using the {{domxref("GPUCommandEncoder.finish()")}} method. The command buffer is then passed into the queue via a `submit()` call, ready to be processed by the GPU.

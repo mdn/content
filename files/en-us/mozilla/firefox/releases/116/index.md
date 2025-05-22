@@ -12,7 +12,7 @@ This article provides information about the changes in Firefox 116 that affect d
 
 ### HTML
 
-- The [`dirname`](/en-US/docs/Web/HTML/Element/input#dirname) attribute is now supported on [`input`](/en-US/docs/Web/HTML/Element/input#dirname) and [`textarea`](/en-US/docs/Web/HTML/Element/textarea#dirname) elements.
+- The [`dirname`](/en-US/docs/Web/HTML/Reference/Elements/input#dirname) attribute is now supported on [`input`](/en-US/docs/Web/HTML/Reference/Elements/input#dirname) and [`textarea`](/en-US/docs/Web/HTML/Reference/Elements/textarea#dirname) elements.
   This attribute allows for passing text directionality information (`ltr` or `rtl`) to the server during form submission ([Firefox bug 675943](https://bugzil.la/675943)).
 
 ### CSS
@@ -34,11 +34,11 @@ This article provides information about the changes in Firefox 116 that affect d
 
 ### SVG
 
-- The `q` [length unit](/en-US/docs/Web/SVG/Content_type#length) (`1q = 1/40th of 1cm`) is now supported ([Firefox bug 1836995](https://bugzil.la/1836995)).
+- The `q` [length unit](/en-US/docs/Web/SVG/Guides/Content_type#length) (`1q = 1/40th of 1cm`) is now supported ([Firefox bug 1836995](https://bugzil.la/1836995)).
 
 ### HTTP
 
-- Configuring a [Content-Security-Policy](/en-US/docs/Web/HTTP/CSP) now supports specifying [external JavaScript files to be allowlisted using hashes](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#allowlisting_external_scripts_using_hashes), where previously only inline scripts could be allowlisted using a hash ([Firefox bug 1409200](https://bugzil.la/1409200)).
+- Configuring a [Content-Security-Policy](/en-US/docs/Web/HTTP/Guides/CSP) now supports specifying [external JavaScript files to be allowlisted using hashes](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#allowlisting_external_scripts_using_hashes), where previously only inline scripts could be allowlisted using a hash ([Firefox bug 1409200](https://bugzil.la/1409200)).
 
 ### APIs
 
@@ -51,7 +51,7 @@ This article provides information about the changes in Firefox 116 that affect d
 
 - The [Audio Output Devices API](/en-US/docs/Web/API/Audio_Output_Devices_API) is now supported on all platforms except for Android.
   This API allows web applications to redirect audio output to a permitted Bluetooth headset, speakerphone, or other device, instead of having to use the browser or underlying OS default.
-  Affected APIs include {{domxref("MediaDevices.selectAudioOutput()")}}, {{domxref("MediaDevices.enumerateDevices()")}}, [`HTMLMediaElement.setSinkId()`](/en-US/docs/Web/API/HTMLMediaElement/setSinkId), [`HTMLMediaElement.sinkId`](/en-US/docs/Web/API/HTMLMediaElement/sinkId), and the permission policy [`Permissions-Policy: speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) ([Firefox bug 1498512](https://bugzil.la/1498512)).
+  Affected APIs include {{domxref("MediaDevices.selectAudioOutput()")}}, {{domxref("MediaDevices.enumerateDevices()")}}, [`HTMLMediaElement.setSinkId()`](/en-US/docs/Web/API/HTMLMediaElement/setSinkId), [`HTMLMediaElement.sinkId`](/en-US/docs/Web/API/HTMLMediaElement/sinkId), and the permission policy [`Permissions-Policy: speaker-selection`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/speaker-selection) ([Firefox bug 1498512](https://bugzil.la/1498512)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 

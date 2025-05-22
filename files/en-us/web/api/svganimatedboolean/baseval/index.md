@@ -10,7 +10,7 @@ browser-compat: api.SVGAnimatedBoolean.baseVal
 
 The **`baseVal`** property of the {{domxref("SVGAnimatedBoolean")}} interface is the value of the associated animatable boolean SVG attribute in its base (none-animated) state. It reflects the value of the associated animatable boolean attribute when no animations are applied.
 
-Some boolean SVG attributes, such as [`preserveAlpha`](/en-US/docs/Web/SVG/Attribute/preserveAlpha), are animatable. In such cases, `SVGAnimatedBoolean.baseVal` property is `false` when the attribute is set to `false`, is omitted and defaults to `false`, or is inheritable and inherits `false`. Otherwise, the value is `true`.
+Some boolean SVG attributes, such as [`preserveAlpha`](/en-US/docs/Web/SVG/Reference/Attribute/preserveAlpha), are animatable. In such cases, `SVGAnimatedBoolean.baseVal` property is `false` when the attribute is set to `false`, is omitted and defaults to `false`, or is inheritable and inherits `false`. Otherwise, the value is `true`.
 
 ## Value
 

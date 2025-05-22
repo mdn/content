@@ -78,7 +78,9 @@ align-items: anchor-center;
 /* Baseline alignment */
 align-items: baseline;
 align-items: first baseline;
-align-items: last baseline; /* Overflow alignment (for positional alignment only) */
+align-items: last baseline;
+
+/* Overflow alignment (for positional alignment only) */
 align-items: safe center;
 align-items: unsafe center;
 

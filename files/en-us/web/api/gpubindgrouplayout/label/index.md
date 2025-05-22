@@ -24,7 +24,7 @@ A string. If this has not been previously set as described above, it will be an 
 Setting and getting a label via `GPUBindGroupLayout.label`:
 
 ```js
-// ...
+// …
 
 const bindGroupLayout = device.createBindGroupLayout({
   entries: [
@@ -46,7 +46,7 @@ console.log(bindGroupLayout.label); // "my_bind_group_layout"
 Setting a label via the originating {{domxref("GPUDevice.createBindGroupLayout()")}} call, and then getting it via `GPUBindGroupLayout.label`:
 
 ```js
-// ...
+// …
 
 const bindGroupLayout = device.createBindGroupLayout({
   entries: [

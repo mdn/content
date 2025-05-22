@@ -1,5 +1,6 @@
 ---
-title: aria-multiselectable
+title: "ARIA: aria-multiselectable attribute"
+short-title: aria-multiselectable
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-multiselectable
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-multiselectable
@@ -47,7 +48,7 @@ If a tree, grid, tab list, or list box supports selection of more than one node,
 
 This listbox supports multiple selection so we set the element with role `listbox` with `aria-multiselectable="true"`. All selected options have `aria-selected` set to `true`. All options that are not selected but are selectable have `aria-selected` set to false. Had we included options that were disabled or otherwise not selectable, we would have omitted the `aria-selected` attribute altogether. Including the attribute, even with no value or explicitly set to `false` indicates to assistive technology users that the item is selectable.
 
-The first rule of ARIA use is "if you can use a native feature with the semantics and behavior you require already built in, instead of repurposing an element and **adding** an ARIA role, state or property to make it accessible, then do so." Instead of creating an unordered list requiring [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex), ARIA and JavaScript to turn text into selectable options, we could have used a native multiselect: the {{htmlelement('select')}} element has a Boolean [`multiple`](/en-US/docs/Web/HTML/Element/select#multiple) attribute. If included, the user can select multiple options. If not, only a single option can be selected.
+The first rule of ARIA use is "if you can use a native feature with the semantics and behavior you require already built in, instead of repurposing an element and **adding** an ARIA role, state or property to make it accessible, then do so." Instead of creating an unordered list requiring [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex), ARIA and JavaScript to turn text into selectable options, we could have used a native multiselect: the {{htmlelement('select')}} element has a Boolean [`multiple`](/en-US/docs/Web/HTML/Reference/Elements/select#multiple) attribute. If included, the user can select multiple options. If not, only a single option can be selected.
 
 ```html
 <label for="flagcolors"> Choose the colors for your flag. </label>
@@ -123,7 +124,7 @@ If the above isn't stylable to your liking, you can also create a list of select
 </fieldset>
 ```
 
-Instead of `aria-selected="true"`, include the [`checked`](/en-US/docs/Web/HTML/Element/input/checkbox#checked) attribute. The browser does the rest.
+Instead of `aria-selected="true"`, include the [`checked`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox#checked) attribute. The browser does the rest.
 
 ## Values
 
@@ -161,5 +162,5 @@ Inherited into roles:
 - HTML {{HTMLElement('select')}} element
 - HTML {{HTMLElement('option')}} element
 - HTML {{HTMLElement('input')}} element
-- [multiple](/en-US/docs/Web/HTML/Attributes/multiple) attribute
+- [multiple](/en-US/docs/Web/HTML/Reference/Attributes/multiple) attribute
 - [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected)

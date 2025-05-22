@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Function.apply
 
 The **`apply()`** method of {{jsxref("Function")}} instances calls this function with a given `this` value, and `arguments` provided as an array (or an [array-like object](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)).
 
-{{InteractiveExample("JavaScript Demo: Function.apply()")}}
+{{InteractiveExample("JavaScript Demo: Function.prototype.apply()")}}
 
 ```js interactive-example
 const numbers = [5, 6, 2, 3, 7];

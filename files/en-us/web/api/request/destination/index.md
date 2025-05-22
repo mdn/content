@@ -41,8 +41,8 @@ Possible values are:
 - `""`
 
   - : The empty string is the default value, and is used for destinations that do not have their own value. This is the value when requests are made using the following APIs (among others):
-    - [`<a ping>`](/en-US/docs/Web/HTML/Element/a#ping)
-    - [`<area ping>`](/en-US/docs/Web/HTML/Element/area#ping)
+    - [`<a ping>`](/en-US/docs/Web/HTML/Reference/Elements/a#ping)
+    - [`<area ping>`](/en-US/docs/Web/HTML/Reference/Elements/area#ping)
     - {{domxref("Cache")}}
     - {{domxref("EventSource")}}
     - {{domxref("Window/fetch", "fetch()")}}
@@ -113,5 +113,5 @@ const myDestination = myRequest.destination; // returns the empty string by defa
 ## See also
 
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

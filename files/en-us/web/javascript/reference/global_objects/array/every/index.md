@@ -11,7 +11,7 @@ The **`every()`** method of {{jsxref("Array")}} instances tests whether
 all elements in the array pass the test implemented by the provided function. It
 returns a Boolean value.
 
-{{InteractiveExample("JavaScript Demo: Array.every()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.every()", "shorter")}}
 
 ```js interactive-example
 const isBelowThreshold = (currentValue) => currentValue < 40;

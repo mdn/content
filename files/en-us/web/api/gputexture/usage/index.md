@@ -30,7 +30,7 @@ The bitwise flags representing the original usages set when the `GPUTexture` was
 ## Examples
 
 ```js
-// ...
+// …
 
 const depthTexture = device.createTexture({
   size: [canvas.width, canvas.height],

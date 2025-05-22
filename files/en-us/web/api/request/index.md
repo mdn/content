@@ -25,7 +25,7 @@ You can create a new `Request` object using the {{domxref("Request.Request","Req
 - {{domxref("Request.cache")}} {{ReadOnlyInline}}
   - : Contains the cache mode of the request (e.g., `default`, `reload`, `no-cache`).
 - {{domxref("Request.credentials")}} {{ReadOnlyInline}}
-  - : Contains the credentials of the request (e.g., `omit`, `same-origin`, `include`). The default is `same-origin`.
+  - : Contains a value controlling whether credentials should be included with the request (e.g., `omit`, `same-origin`, `include`). The default is `same-origin`.
 - {{domxref("Request.destination")}} {{ReadOnlyInline}}
   - : A string describing the type of content being requested.
 - {{domxref("Request.headers")}} {{ReadOnlyInline}}
@@ -93,7 +93,7 @@ fetch(request)
   });
 ```
 
-In the following snippet, we create a new request using the `Request()` constructor with some initial data and body content for an API request which need a body payload:
+In the following snippet, we create a new request using the `Request()` constructor with some initial data and body content for an API request which needs a body payload:
 
 ```js
 const request = new Request("https://example.com", {
@@ -141,5 +141,5 @@ fetch(request)
 ## See also
 
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

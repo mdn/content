@@ -2,9 +2,8 @@
 title: How do you set up a local testing server?
 slug: Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server
 page-type: learn-faq
+sidebar: learn-how-to
 ---
-
-{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 This article explains how to set up a simple local testing server on your machine, and the basics of how to use it.
 
@@ -121,7 +120,7 @@ To do this:
 5. By default, this will run the contents of the directory on a local web server, on port 8000. You can go to this server by going to the URL `localhost:8000` in your web browser. Here you'll see the contents of the directory listed — click the HTML file you want to run.
 
 > [!NOTE]
-> If you already have something running on port 8000, you can choose another port by running the server command followed by an alternative port number, e.g. `python3 -m http.server 7800`. You can then access your content at `localhost:7800`.
+> If you already have something running on port 8000, you can choose another port by running the server command followed by an alternative port number, e.g., `python3 -m http.server 7800`. You can then access your content at `localhost:7800`.
 
 ## Running server-side languages locally
 

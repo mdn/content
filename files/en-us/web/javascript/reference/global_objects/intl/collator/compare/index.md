@@ -10,7 +10,7 @@ browser-compat: javascript.builtins.Intl.Collator.compare
 The **`compare()`** method of {{jsxref("Intl.Collator")}} instances compares two
 strings according to the sort order of this collator object.
 
-{{InteractiveExample("JavaScript Demo: Intl.Collator.prototype.compare")}}
+{{InteractiveExample("JavaScript Demo: Intl.Collator.prototype.compare()")}}
 
 ```js interactive-example
 const enCollator = new Intl.Collator("en");

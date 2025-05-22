@@ -5,10 +5,11 @@ page-type: web-manifest-member
 status:
   - experimental
   - non-standard
-browser-compat: html.manifest.serviceworker
+browser-compat: manifests.webapp.serviceworker
+sidebar: pwasidebar
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}{{SeeCompatTable}}{{Non-standard_header}}
+{{SeeCompatTable}}{{Non-standard_header}}
 
 The `serviceworker` member specifies a serviceworker that is Just-In-Time (JIT)-installed and registered to run a web-based payment app providing a payment mechanism for a specified payment method in a merchant website. See {{domxref("Payment Handler API", "Payment Handler API", "", "nocode")}} for more details.
 

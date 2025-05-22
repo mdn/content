@@ -351,9 +351,6 @@ function handleFiles() {
       const img = document.createElement("img");
       img.src = URL.createObjectURL(this.files[i]);
       img.height = 60;
-      img.onload = () => {
-        URL.revokeObjectURL(img.src);
-      };
       li.appendChild(img);
       const info = document.createElement("span");
       info.textContent = `${this.files[i].name}: ${this.files[i].size} bytes`;
@@ -375,12 +372,13 @@ If the {{DOMxRef("FileList")}} object passed to `handleFiles()` is empty, we set
    2. Create a new image ({{HTMLElement("img")}}) element.
    3. Set the image's source to a new object URL representing the file, using {{DOMxref("URL.createObjectURL_static", "URL.createObjectURL()")}} to create the blob URL.
    4. Set the image's height to 60 pixels.
-   5. Set up the image's load event handler to release the object URL since it's no longer needed once the image has been loaded. This is done by calling the {{DOMxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} method and passing in the object URL string as specified by `img.src`.
-   6. Append the new list item to the list.
+   5. Append the new list item to the list.
 
 Here is a live demo of the code above:
 
 {{EmbedLiveSample('Example_Using_object_URLs_to_display_images', '100%', '300px')}}
+
+Note that we don't immediately revoke the object URL after the image has loaded, because doing so would make the image unusable for user interactions (such as right-clicking to save the image or opening it in a new tab). For long-lived applications, you should revoke object URLs when they're no longer needed (such as when the image is removed from the DOM) to free up memory by calling the {{DOMxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} method and passing in the object URL string.
 
 ## Example: Uploading a user-selected file
 
@@ -493,57 +491,61 @@ This example, which uses PHP on the server side and JavaScript on the client sid
 
 ```php
 <?php
-if (isset($_FILES['myFile'])) {
-    // Example:
-    move_uploaded_file($_FILES['myFile']['tmp_name'], "uploads/" . $_FILES['myFile']['name']);
-    exit;
+if (isset($_FILES["myFile"])) {
+  // Example:
+  move_uploaded_file($_FILES["myFile"]["tmp_name"], "uploads/" . $_FILES["myFile"]["name"]);
+  exit;
 }
 ?><!doctype html>
 <html lang="en-US">
-<head>
-  <meta charset="UTF-8">
-  <title>dnd binary upload</title>
-    <script type="application/javascript">
-        function sendFile(file) {
-            const uri = "/index.php";
-            const xhr = new XMLHttpRequest();
-            const fd = new FormData();
+  <head>
+    <meta charset="UTF-8" />
+    <title>dnd binary upload</title>
+    <script>
+      function sendFile(file) {
+        const uri = "/index.php";
+        const xhr = new XMLHttpRequest();
+        const fd = new FormData();
 
-            xhr.open("POST", uri, true);
-            xhr.onreadystatechange = () => {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    alert(xhr.responseText); // handle response.
-                }
-            };
-            fd.append('myFile', file);
-            // Initiate a multipart/form-data upload
-            xhr.send(fd);
-        }
+        xhr.open("POST", uri, true);
+        xhr.onreadystatechange = () => {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            alert(xhr.responseText); // handle response.
+          }
+        };
+        fd.append("myFile", file);
+        // Initiate a multipart/form-data upload
+        xhr.send(fd);
+      }
 
-        window.onload = () => {
-            const dropzone = document.getElementById("dropzone");
-            dropzone.ondragover = dropzone.ondragenter = (event) => {
-                event.stopPropagation();
-                event.preventDefault();
-            }
+      window.onload = () => {
+        const dropzone = document.getElementById("dropzone");
+        dropzone.ondragover = dropzone.ondragenter = (event) => {
+          event.stopPropagation();
+          event.preventDefault();
+        };
 
-            dropzone.ondrop = (event) => {
-                event.stopPropagation();
-                event.preventDefault();
+        dropzone.ondrop = (event) => {
+          event.stopPropagation();
+          event.preventDefault();
 
-                const filesArray = event.dataTransfer.files;
-                for (let i=0; i<filesArray.length; i++) {
-                    sendFile(filesArray[i]);
-                }
-            }
-        }
+          const filesArray = event.dataTransfer.files;
+          for (let i = 0; i < filesArray.length; i++) {
+            sendFile(filesArray[i]);
+          }
+        };
+      };
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <div>
-        <div id="dropzone" style="margin:30px; width:500px; height:300px; border:1px dotted grey;">Drag & drop your file here</div>
+      <div
+        id="dropzone"
+        style="margin:30px; width:500px; height:300px; border:1px dotted grey;">
+        Drag & drop your file here
+      </div>
     </div>
-</body>
+  </body>
 </html>
 ```
 
@@ -560,10 +562,12 @@ In Firefox, to have the PDF appear embedded in the iframe (rather than proposed 
 And here is the change of the `src` attribute:
 
 ```js
-const obj_url = URL.createObjectURL(blob);
+const objURL = URL.createObjectURL(blob);
 const iframe = document.getElementById("viewer");
-iframe.setAttribute("src", obj_url);
-URL.revokeObjectURL(obj_url);
+iframe.setAttribute("src", objURL);
+
+// Later:
+URL.revokeObjectURL(objURL);
 ```
 
 ## Example: Using object URLs with other file types
@@ -572,10 +576,12 @@ You can manipulate files of other formats the same way. Here is how to preview u
 
 ```js
 const video = document.getElementById("video");
-const obj_url = URL.createObjectURL(blob);
-video.src = obj_url;
+const objURL = URL.createObjectURL(blob);
+video.src = objURL;
 video.play();
-URL.revokeObjectURL(obj_url);
+
+// Later:
+URL.revokeObjectURL(objURL);
 ```
 
 ## See also

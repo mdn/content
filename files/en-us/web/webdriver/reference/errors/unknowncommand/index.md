@@ -9,7 +9,7 @@ The **unknown command** error is a [WebDriver error](/en-US/docs/Web/WebDriver/R
 
 ## Examples
 
-The `/session/{session id}/foo` endpoint does not exist, and will return an unknown command error with a [`404 Not Found`](/en-US/docs/Web/HTTP/Status/404) HTTP status code:
+The `/session/{session id}/foo` endpoint does not exist, and will return an unknown command error with a [`404 Not Found`](/en-US/docs/Web/HTTP/Reference/Status/404) HTTP status code:
 
 ```bash
 curl -i -d '{}' http://localhost:4444/session/foo

@@ -31,12 +31,12 @@ None ({{jsxref("Undefined")}}).
 
 The following criteria must be met when calling **`endOcclusionQuery()`**, otherwise a {{domxref("GPUValidationError")}} is generated and the {{domxref("GPURenderPassEncoder")}} becomes invalid:
 
-- An occlusion query is active for this render pass (i.e. via a previous `beginOcclusionQuery()` call).
+- An occlusion query is active for this render pass (i.e., via a previous `beginOcclusionQuery()` call).
 
 ## Examples
 
 ```js
-// ...
+// …
 
 // Create a query set to hold the occlusion queries
 const querySet = device.createQuerySet({
@@ -71,7 +71,7 @@ passEncoder.draw(3);
 // End the occlusion query
 passEncoder.endOcclusionQuery();
 
-// ...
+// …
 ```
 
 ## Specifications

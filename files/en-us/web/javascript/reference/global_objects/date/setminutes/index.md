@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Date.setMinutes
 
 The **`setMinutes()`** method of {{jsxref("Date")}} instances changes the minutes for this date according to local time.
 
-{{InteractiveExample("JavaScript Demo: Date.setMinutes()")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.setMinutes()")}}
 
 ```js interactive-example
 const event = new Date("August 19, 1975 23:15:30");

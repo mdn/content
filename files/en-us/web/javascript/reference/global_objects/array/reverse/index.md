@@ -11,7 +11,7 @@ The **`reverse()`** method of {{jsxref("Array")}} instances reverses an array _[
 
 To reverse the elements in an array without mutating the original array, use {{jsxref("Array/toReversed", "toReversed()")}}.
 
-{{InteractiveExample("JavaScript Demo: Array.reverse()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.reverse()")}}
 
 ```js interactive-example
 const array1 = ["one", "two", "three"];
@@ -78,7 +78,7 @@ reversed[0] = 5;
 console.log(numbers[0]); // 5
 ```
 
-In case you want `reverse()` to not mutate the original array, but return a [shallow-copied](/en-US/docs/Glossary/Shallow_copy) array like other array methods (e.g. [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)) do, use the {{jsxref("Array/toReversed", "toReversed()")}} method. Alternatively, you can do a shallow copy before calling `reverse()`, using the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) or [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
+In case you want `reverse()` to not mutate the original array, but return a [shallow-copied](/en-US/docs/Glossary/Shallow_copy) array like other array methods (e.g., [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)) do, use the {{jsxref("Array/toReversed", "toReversed()")}} method. Alternatively, you can do a shallow copy before calling `reverse()`, using the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) or [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
 
 ```js
 const numbers = [3, 2, 4, 1, 5];

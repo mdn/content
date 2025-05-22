@@ -1,11 +1,10 @@
 ---
 title: "CycleTracker: Service workers"
-short-title: Service workers
+short-title: Offline support using service workers
 slug: Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers
 page-type: tutorial-chapter
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 {{PreviousMenu("Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
 
@@ -110,7 +109,9 @@ We name our cache `period-tracker-` with the current `VERSION` appended. As the 
 const VERSION = "v1";
 const CACHE_NAME = `period-tracker-${VERSION}`;
 
-const APP_STATIC_RESOURCES = [ ... ];
+const APP_STATIC_RESOURCES = [
+  // …
+];
 ```
 
 We have successfully declared our constants; a unique identifier, the list of offline resources as an array, and the application's cache name that changes every time the identifier is updated. Now let's focus on installing, updating, and deleting unused cached resources.
@@ -127,15 +128,11 @@ The {{domxref("Cache.addAll()")}} method takes an array of URLs as a parameter, 
 
 ```js
 self.addEventListener("install", (e) => {
-  e.waitUntil((async () => {
+  e.waitUntil(
+    (async () => {
       const cache = await caches.open("cacheName_identifier");
-      cache.addAll([
-        "/",
-        "/index.html"
-        "/style.css"
-        "/app.js"
-      ]);
-    })()
+      cache.addAll(["/", "/index.html", "/style.css", "/app.js"]);
+    })(),
   );
 });
 ```
@@ -197,7 +194,7 @@ We can take advantage of the [`fetch`](/en-US/docs/Web/API/ServiceWorkerGlobalSc
 
 As our PWA consists of a single page, for page navigation requests, we go back to the `index.html` home page. There are no other pages and we don't ever want to go to the server. If the Fetch API's [`Request`](/en-US/docs/Web/API/Request) readonly [`mode`](/en-US/docs/Web/API/Request/mode) property is `navigate`, meaning it's looking for a web page, we use the FetchEvent's [`respondWith()`](/en-US/docs/Web/API/FetchEvent/respondWith) method to prevent the browser's default fetch handling, providing our own response promise employing the [`caches.match()`](/en-US/docs/Web/API/CacheStorage/match) method.
 
-For all other request modes, we open the caches as done in the [install event response](#saving_the_cache_on_pwa_installation), instead passing the event request to the same `match()` method. It checks if the request is a key for a stored {{domxref("Response")}}. If yes, it returns the cached response. If not, we return a [404 status](/en-US/docs/Web/HTTP/Status/404) as a response.
+For all other request modes, we open the caches as done in the [install event response](#saving_the_cache_on_pwa_installation), instead passing the event request to the same `match()` method. It checks if the request is a key for a stored {{domxref("Response")}}. If yes, it returns the cached response. If not, we return a [404 status](/en-US/docs/Web/HTTP/Reference/Status/404) as a response.
 
 Using the [`Response()`](/en-US/docs/Web/API/Response/Response) constructor to pass a `null` body and a `status: 404` as options, doesn't mean there is an error in our PWA. Rather, everything we need should already be in the cache, and if it isn't, we're not going to the server to resolve this non-issue.
 

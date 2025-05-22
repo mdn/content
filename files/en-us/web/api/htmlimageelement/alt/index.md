@@ -178,7 +178,7 @@ Note the use of the `alt` attribute on the {{HTMLElement("img")}}, providing a g
   <img
     src="https://www.bitstampede.com/mdn-test/new-page.svg"
     alt="New Page!"
-    class="pageinfo-badge" />
+    class="page-info-badge" />
   <p class="contents">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis orci
     ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac neque
@@ -199,7 +199,7 @@ The main feature of the CSS here is the use of {{cssxref("clip-path")}} and {{cs
   max-width: 500px;
 }
 
-.pageinfo-badge {
+.page-info-badge {
   width: 9em;
   padding-right: 1em;
   float: left;

@@ -12,7 +12,7 @@ If no elements satisfy the testing function, -1 is returned.
 
 See also the {{jsxref("Array/find", "find()")}} method, which returns the first element that satisfies the testing function (rather than its index).
 
-{{InteractiveExample("JavaScript Demo: Array.findIndex()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.findIndex()", "shorter")}}
 
 ```js interactive-example
 const array1 = [5, 12, 8, 130, 44];

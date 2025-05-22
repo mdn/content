@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Function.bind
 
 The **`bind()`** method of {{jsxref("Function")}} instances creates a new function that, when called, calls this function with its `this` keyword set to the provided value, and a given sequence of arguments preceding any provided when the new function is called.
 
-{{InteractiveExample("JavaScript Demo: Function.bind()", "taller")}}
+{{InteractiveExample("JavaScript Demo: Function.prototype.bind()", "taller")}}
 
 ```js interactive-example
 const module = {
@@ -286,7 +286,7 @@ Take {{jsxref("Array.prototype.slice()")}}, for example, which you want to use f
 ```js
 const slice = Array.prototype.slice;
 
-// ...
+// …
 
 slice.call(arguments);
 ```
@@ -298,7 +298,7 @@ Note that you can't save `slice.call` and call it as a plain function, because t
 const unboundSlice = Array.prototype.slice;
 const slice = Function.prototype.call.bind(unboundSlice);
 
-// ...
+// …
 
 slice(arguments);
 ```

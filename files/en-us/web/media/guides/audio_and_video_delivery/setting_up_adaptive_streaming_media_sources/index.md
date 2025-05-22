@@ -34,7 +34,7 @@ For live services streaming, the LIVE profile is a requirement. The stream switc
 
 Other reasons to use LIVE profile over Ondemand for VOD content may be:
 
-1. Your client or server does not support [range requests](/en-US/docs/Web/HTTP/Range_requests)
+1. Your client or server does not support [range requests](/en-US/docs/Web/HTTP/Guides/Range_requests)
 2. Your server cannot cache range requests efficiently
 3. Your server cannot prefetch range requests efficiently
 4. The SIDX\* is large and having to load it first slows down startup a little
@@ -210,7 +210,7 @@ it might be wise to provide a fallback:
 
 ## HLS Encoding
 
-HTTP Live Streaming (HLS) is an HTTP-based media streaming protocol implemented by Apple. It's incorporated into iOS and OSX platforms and works well on [mobile and desktop Safari and most Android devices with some caveats](https://jwplayer.com/blog/http-live-streaming/).
+HTTP Live Streaming (HLS) is an HTTP-based media streaming protocol implemented by Apple. It's incorporated into iOS and OSX platforms and works well on [mobile and desktop Safari and most Android devices](https://caniuse.com/?search=hls).
 
 Media is usually encoded as MPEG-4 (H.264 video and AAC audio) and packaged into an MPEG-2 Transport Stream, which is then broken into segments and saved as one or more `.ts` media files. Apple provides tools to convert media files to the appropriate format.
 

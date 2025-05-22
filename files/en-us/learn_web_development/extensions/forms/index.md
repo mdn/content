@@ -2,9 +2,8 @@
 title: Web forms
 slug: Learn_web_development/Extensions/Forms
 page-type: learn-module
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions")}}
 
@@ -43,6 +42,8 @@ The above text is a good indicator as to why we've put web forms into its own st
   - : This article provides an introduction to styling forms with CSS, including all the basics you might need to know for basic styling tasks.
 - [Advanced form styling](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)
   - : Here we look at some more advanced form styling techniques that need to be used when trying to deal with some of the more difficult-to-style form elements.
+- [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select)
+  - : This article explains how to use dedicated, modern HTML and CSS features together to create fully-customized `<select>` elements. This includes having full control over styling the select button, drop-down picker, arrow icon, current selection checkmark, and each individual `<option>` element.
 - [UI pseudo-classes](/en-US/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes)
   - : An introduction to the UI pseudo-classes enabling HTML form controls to be targeted based on their current state.
 
@@ -53,20 +54,22 @@ The above text is a good indicator as to why we've put web forms into its own st
 - [Sending form data](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)
   - : This article looks at what happens when a user submits a form — where does the data go, and how do we handle it when it gets there? We also look at some of the security concerns associated with sending form data.
 
-## Advanced articles
+## Additional articles
 
 The following articles aren't included in the learning pathway, but they'll prove interesting and useful when you've mastered the above techniques and want to know more.
 
 - [How to build custom form controls](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
-  - : You'll come across some cases where the native form widgets just don't provide what you need, e.g. because of styling or functionality. In such cases, you may need to build your own form widget out of raw HTML. This article explains how you'd do this and the considerations you need to be aware of when doing so, with a practical case study.
+  - : You'll come across some cases where the native form widgets just don't provide what you need, e.g., because of styling or functionality. In such cases, you may need to build your own form widget out of raw HTML. This article explains how you'd do this and the considerations you need to be aware of when doing so, with a practical case study.
 - [Sending forms through JavaScript](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)
   - : This article looks at ways to use a form to assemble an HTTP request and send it via custom JavaScript, rather than standard form submission. It also looks at why you'd want to do this, and the implications of doing so. (See also [Using FormData objects](/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects).)
+- [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select)
+  - : This article explains how to use dedicated, modern HTML and CSS features together to create fully-customized {{htmlelement("select")}} elements.
 
 ## See also
 
-- [HTML forms element reference](/en-US/docs/Web/HTML/Element#forms)
-- [HTML \<input> types reference](/en-US/docs/Web/HTML/Element/input)
-- [HTML attribute reference](/en-US/docs/Web/HTML/Attributes)
+- [HTML forms element reference](/en-US/docs/Web/HTML/Reference/Elements#forms)
+- [HTML \<input> types reference](/en-US/docs/Web/HTML/Reference/Elements/input)
+- [HTML attribute reference](/en-US/docs/Web/HTML/Reference/Attributes)
 - [User input methods and controls](/en-US/docs/Learn_web_development/Extensions/Forms/User_input_methods)
 
 {{NextMenu("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions")}}

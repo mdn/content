@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Date.getMonth
 
 The **`getMonth()`** method of {{jsxref("Date")}} instances returns the month for this date according to local time, as a zero-based value (where zero indicates the first month of the year).
 
-{{InteractiveExample("JavaScript Demo: Date.getMonth()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.getMonth()", "shorter")}}
 
 ```js interactive-example
 const moonLanding = new Date("July 20, 69 00:20:18");

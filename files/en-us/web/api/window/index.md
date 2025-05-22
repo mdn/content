@@ -91,7 +91,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns a reference to the window that opened this current window.
 - {{domxref("Window.origin")}} {{ReadOnlyInline}}
   - : Returns the global object's origin, serialized as a string.
-- {{domxref("Window.originAgentCluster")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Window.originAgentCluster")}} {{ReadOnlyInline}}
   - : Returns `true` if this window belongs to an origin-keyed agent cluster.
 - {{domxref("Window.outerHeight")}} {{ReadOnlyInline}}
   - : Gets the height of the outside of the browser window.
@@ -189,6 +189,8 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Writes a message to the console.
 - {{domxref("Window.fetch()")}}
   - : Starts the process of fetching a resource from the network.
+- {{domxref("Window.fetchLater()")}} {{experimental_inline}}
+  - : Creates a deferred fetch, which is sent once the page is navigated away from (it is destroyed or enters the [bfcache](/en-US/docs/Glossary/bfcache)), or after a provided `activateAfter` timeout — whichever comes first.
 - {{domxref("Window.find()")}} {{Non-standard_Inline}}
   - : Searches for a given string in a window.
 - {{domxref("Window.focus()")}}
@@ -258,14 +260,10 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
 
 ### Deprecated methods
 
-- {{domxref("Window.back()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Moves back one in the window history. This method is deprecated; you should instead use {{domxref("History.back", "history.back()")}}.
 - {{domxref("Window.captureEvents()")}} {{Deprecated_Inline}}
   - : Registers the window to capture all events of the specified type.
 - {{domxref("Window.clearImmediate()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Cancels the repeated execution set using `setImmediate()`.
-- {{domxref("Window.forward()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Moves the window one document forward in the history. This method is deprecated; you should instead use {{domxref("History.forward", "history.forward()")}}.
 - {{domxref("Window.releaseEvents()")}} {{Deprecated_Inline}}
   - : Releases the window from trapping events of a specific type.
 - {{domxref("Window.requestFileSystem()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
@@ -274,8 +272,6 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Executes a function after the browser has finished other heavy tasks.
 - {{domxref("Window.setResizable()")}} {{Non-standard_Inline}} {{deprecated_inline}}
   - : Does nothing (no-op). Kept for backward compatibility with Netscape 4.x.
-- {{domxref("Window.showModalDialog()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Displays a modal dialog.
 - {{domxref("Window.webkitConvertPointFromNodeToPage()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Transforms a {{domxref("WebKitPoint")}} from the node's coordinate system to the page's coordinate system.
 - {{domxref("Window.webkitConvertPointFromPageToNode()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
@@ -293,18 +289,6 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
   - : Fired when the window has been resized.
 - {{domxref("Window/storage_event", "storage")}}
   - : Fired when a storage area (`localStorage` or `sessionStorage`) has been modified in the context of another document.
-
-### Clipboard events
-
-- {{domxref("Window/copy_event", "copy")}}
-  - : Fired when the user initiates a copy action through the browser's user interface.
-    Also available via the {{domxref("HTMLElement/copy_event", "oncopy")}} property.
-- {{domxref("Window/cut_event", "cut")}}
-  - : Fired when the user initiates a cut action through the browser's user interface.
-    Also available via the {{domxref("HTMLElement/cut_event", "oncut")}} property.
-- {{domxref("Window/paste_event", "paste")}}
-  - : Fired when the user initiates a paste action through the browser's user interface.
-    Also available via the {{domxref("HTMLElement/paste_event", "onpaste")}} property.
 
 ### Connection events
 
@@ -393,7 +377,7 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 - {{domxref("Window/scrollsnapchange_event", "scrollsnapchange")}} {{experimental_inline}}
   - : Fired on the scroll container at the end of a scrolling operation when a new scroll snap target has been selected.
 - {{domxref("Window/scrollsnapchanging_event", "scrollsnapchanging")}} {{experimental_inline}}
-  - : Fired on the scroll container when the browser determines a new scroll snap target is pending, i.e. it will be selected when the current scroll gesture ends.
+  - : Fired on the scroll container when the browser determines a new scroll snap target is pending, i.e., it will be selected when the current scroll gesture ends.
 
 ### Deprecated events
 
@@ -408,7 +392,7 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 - {{domxref("Window/vrdisplaydeactivate_event", "vrdisplaydeactivate")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Fired when a display can no longer be presented to.
 - {{domxref("Window/vrdisplaypresentchange_event", "vrdisplaypresentchange")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Fired when the presenting state of a VR device changes — i.e. goes from presenting to not presenting, or vice versa.
+  - : Fired when the presenting state of a VR device changes — i.e., goes from presenting to not presenting, or vice versa.
 
 ### Bubbled events
 

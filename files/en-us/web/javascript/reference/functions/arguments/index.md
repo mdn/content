@@ -9,7 +9,7 @@ browser-compat: javascript.functions.arguments
 
 **`arguments`** is an array-like object accessible inside [functions](/en-US/docs/Web/JavaScript/Guide/Functions) that contains the values of the arguments passed to that function.
 
-{{InteractiveExample("JavaScript Demo: Functions Arguments")}}
+{{InteractiveExample("JavaScript Demo: The arguments object")}}
 
 ```js interactive-example
 function func1(a, b, c) {
@@ -170,7 +170,7 @@ myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
 
 ### Defining a function that creates HTML lists
 
-This example defines a function that creates a string containing HTML for a list. The only formal argument for the function is a string that is `"u"` if the list is to be [unordered (bulleted)](/en-US/docs/Web/HTML/Element/ul), or `"o"` if the list is to be [ordered (numbered)](/en-US/docs/Web/HTML/Element/ol). The function is defined as follows:
+This example defines a function that creates a string containing HTML for a list. The only formal argument for the function is a string that is `"u"` if the list is to be [unordered (bulleted)](/en-US/docs/Web/HTML/Reference/Elements/ul), or `"o"` if the list is to be [ordered (numbered)](/en-US/docs/Web/HTML/Reference/Elements/ol). The function is defined as follows:
 
 ```js
 function list(type) {

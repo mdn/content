@@ -33,7 +33,7 @@ None ({{jsxref("Undefined")}}).
 ## Examples
 
 ```js
-// ...
+// …
 
 commandEncoder.pushDebugGroup("my_group_marker"); // Start labeled debug group
 
@@ -47,7 +47,7 @@ passEncoder.end();
 
 commandEncoder.popDebugGroup(); // End labeled debug group
 
-// ...
+// …
 ```
 
 ## Specifications

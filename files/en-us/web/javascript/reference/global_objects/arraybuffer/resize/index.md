@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.ArrayBuffer.resize
 
 The **`resize()`** method of {{jsxref("ArrayBuffer")}} instances resizes the `ArrayBuffer` to the specified size, in bytes.
 
-{{InteractiveExample("JavaScript Demo: ArrayBuffer.resize()")}}
+{{InteractiveExample("JavaScript Demo: ArrayBuffer.prototype.resize()")}}
 
 ```js interactive-example
 const buffer = new ArrayBuffer(8, { maxByteLength: 16 });

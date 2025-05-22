@@ -25,7 +25,7 @@ A `GPUExternalTexture` object instance is created using {{domxref("GPUDevice.imp
 In the WebGPU samples [Video Uploading sample](https://webgpu.github.io/webgpu-samples/samples/videoUploading/), a `GPUExternalTexture` object (created via a {{domxref("GPUDevice.importExternalTexture()")}} call) is used as the value of a bind group entry `resource`, specified when creating a {{domxref("GPUBindGroup")}} via a {{domxref("GPUDevice.createBindGroup()")}} call:
 
 ```js
-//...
+// …
 const uniformBindGroup = device.createBindGroup({
   layout: pipeline.getBindGroupLayout(0),
   entries: [
@@ -41,7 +41,7 @@ const uniformBindGroup = device.createBindGroup({
     },
   ],
 });
-//...
+// …
 ```
 
 ## Specifications

@@ -24,6 +24,8 @@ Avoid doing the following:
 - Opening lots of issues asking vague questions.
 - Asking questions without trying to solve the problem yourself first.
 
+If you want to suggest new documentation or ways to improve the website, see [Proposing new content or features](/en-US/docs/MDN/Community/Issues/Content_suggestions_feature_proposals).
+
 ## Guidelines for reporting an issue
 
 [Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues) are used to track bugs. An issue must be a single actionable task or a collection of related actionable tasks and must have a clear outcome.
@@ -61,7 +63,7 @@ Ensure that you list all the actionable tasks as a checklist.
 
 For example:
 
-```markdown
+```md
 // Issue title
 Ensure sections follow the order defined in the CSS property template
 

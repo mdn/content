@@ -11,7 +11,7 @@ The **`async function`** declaration creates a {{Glossary("binding")}} of a new 
 
 You can also define async functions using the [`async function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/async_function).
 
-{{InteractiveExample("JavaScript Demo: Statement - Async", "taller")}}
+{{InteractiveExample("JavaScript Demo: async function declaration", "taller")}}
 
 ```js interactive-example
 function resolveAfter2Seconds() {
@@ -294,7 +294,7 @@ after 3 seconds.
 
 In `sequentialWait`, both timers are created and then `await`ed.
 The timers run concurrently, which means the code finishes in 2 rather than 3 seconds,
-i.e. the slowest timer.
+i.e., the slowest timer.
 However, the `await` calls still run in series, which means the second
 `await` will wait for the first one to finish. In this case, the result of
 the fastest timer is processed after the slowest.

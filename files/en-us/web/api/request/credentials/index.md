@@ -22,6 +22,7 @@ A string with one of the following values:
   - : Never send credentials in the request or include credentials in the response.
 - `same-origin`
   - : Only send and include credentials for same-origin requests.
+    This is the default.
 - `include`
   - : Always include credentials, even for cross-origin requests.
 
@@ -45,5 +46,5 @@ const credentials = request.credentials; // returns "same-origin" by default
 ## See also
 
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

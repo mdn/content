@@ -6,7 +6,7 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-[Firefox 3.6](https://www.mozilla.org/en-US/firefox/) offers support for new and developing web standards, increased performance, and an overall better experience for web users and developers. This page provides links to articles covering the new capabilities of Firefox 3.6.
+[Firefox 3.6](https://www.mozilla.org/en-US/firefox/new/) offers support for new and developing web standards, increased performance, and an overall better experience for web users and developers. This page provides links to articles covering the new capabilities of Firefox 3.6.
 
 ## For website and application developers
 
@@ -32,7 +32,7 @@ page-type: firefox-release-notes
 - {{Cssxref("text-align")}}:end is now supported. [Firefox bug 299837](https://bugzil.la/299837)
 - DOM changes to elements using the table {{Cssxref("display")}} types now work much better.
 - Added {{cssxref(":-moz-locale-dir_ltr", ":-moz-locale-dir(ltr)")}} and {{cssxref(":-moz-locale-dir_rtl", ":-moz-locale-dir(rtl)")}} to make it easier to customize layouts based on whether the user interface is being displayed using a left-to-right or a right-to-left locale. [Firefox bug 478416](https://bugzil.la/478416)
-- Added support for the {{cssxref(":indeterminate")}} pseudo-class, which matches `checkbox` [`input`](/en-US/docs/Web/HTML/Element/input) elements whose `indeterminate` attribute is `true`.
+- Added support for the {{cssxref(":indeterminate")}} pseudo-class, which matches `checkbox` [`input`](/en-US/docs/Web/HTML/Reference/Elements/input) elements whose `indeterminate` attribute is `true`.
 - Windowed plugins are no longer displayed in CSS transforms, because they can't be transformed properly by the compositor.
 
 ### HTML
@@ -40,13 +40,13 @@ page-type: firefox-release-notes
 - [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)
   - : Support for the new HTML5 File API has been added to Gecko, making it possible for web applications to access local files selected by the user. This includes support for selecting multiple files using the `input type="file"` HTML element's new `multiple` attribute.
 - HTML5 video supports poster frames
-  - : The `poster` attribute is now supported for the [`video`](/en-US/docs/Web/HTML/Element/video) element, allowing content to specify a poster frame to be displayed until the video begins to play.
+  - : The `poster` attribute is now supported for the [`video`](/en-US/docs/Web/HTML/Reference/Elements/video) element, allowing content to specify a poster frame to be displayed until the video begins to play.
 - Checkboxes and radio buttons support the `indeterminate` property
-  - : HTML [`input`](/en-US/docs/Web/HTML/Element/input) elements of types `checkbox` and `radio` now support the indeterminate property, which allows a third, "indeterminate" state.
+  - : HTML [`input`](/en-US/docs/Web/HTML/Reference/Elements/input) elements of types `checkbox` and `radio` now support the indeterminate property, which allows a third, "indeterminate" state.
 - Canvas image smoothing can be controlled
-  - : The new [`mozImageSmoothingEnabled`](/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images#controlling_image_scaling_behavior) property can be used to turn on and off image smoothing when scaling in [`canvas`](/en-US/docs/Web/HTML/Element/canvas) elements.
+  - : The new [`mozImageSmoothingEnabled`](/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images#controlling_image_scaling_behavior) property can be used to turn on and off image smoothing when scaling in [`canvas`](/en-US/docs/Web/HTML/Reference/Elements/canvas) elements.
 - Asynchronous script execution
-  - : By setting the `async` attribute on a [`script`](/en-US/docs/Web/HTML/Element/script) element, the `script` will not block loading or display of the rest of the page. Instead the `script` executes as soon as it is downloaded.
+  - : By setting the `async` attribute on a [`script`](/en-US/docs/Web/HTML/Reference/Elements/script) element, the `script` will not block loading or display of the rest of the page. Instead the `script` executes as soon as it is downloaded.
 
 ### JavaScript
 

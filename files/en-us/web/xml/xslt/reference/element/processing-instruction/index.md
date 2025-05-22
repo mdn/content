@@ -9,7 +9,9 @@ The `<xsl:processing-instruction>` element writes a processing instruction to th
 
 ## Syntax
 
-`<xsl:processing-instruction name=NAME> TEMPLATE </xsl:processing-instruction>`
+```xml
+<xsl:processing-instruction name=NAME>TEMPLATE</xsl:processing-instruction>
+```
 
 ### Required Attributes
 

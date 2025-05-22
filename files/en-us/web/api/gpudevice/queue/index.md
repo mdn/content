@@ -35,13 +35,13 @@ async function init() {
   // Create a GPUDevice
   const device = await adapter.requestDevice();
 
-  // ...
+  // …
 
   // Common queue use — end current frame by passing array of
   // command buffers to queue for execution
   device.queue.submit([commandEncoder.finish()]);
 
-  // ...
+  // …
 }
 ```
 

@@ -1,5 +1,6 @@
 ---
 title: "ARIA: suggestion role"
+short-title: suggestion
 slug: Web/Accessibility/ARIA/Reference/Roles/suggestion_role
 page-type: aria-role
 sidebar: accessibilitysidebar
@@ -44,7 +45,7 @@ Browsers tend to provide a default black strikethrough for deletions, and a blac
 
 ### Prefer HTML
 
-Using the [`<ins>`](/en-US/docs/Web/HTML/Element/ins) and [`<del>`](/en-US/docs/Web/HTML/Element/del) element will automatically communicate a section has a role of `insertion` or `deletion`. If at all possible, prefer using the HTML elements.
+Using the [`<ins>`](/en-US/docs/Web/HTML/Reference/Elements/ins) and [`<del>`](/en-US/docs/Web/HTML/Reference/Elements/del) element will automatically communicate a section has a role of `insertion` or `deletion`. If at all possible, prefer using the HTML elements.
 
 ## Specifications
 

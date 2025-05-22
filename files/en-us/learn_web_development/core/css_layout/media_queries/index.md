@@ -1,10 +1,10 @@
 ---
 title: Media query fundamentals
+short-title: Media queries
 slug: Learn_web_development/Core/CSS_layout/Media_queries
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{learnsidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Responsive_design", "Learn_web_development/Core/CSS_layout/Fundamental_layout_comprehension", "Learn_web_development/Core/CSS_layout")}}
 
@@ -52,7 +52,7 @@ The simplest media query syntax looks like this:
 
 It consists of:
 
-- A media type, which tells the browser what kind of media this code is for (e.g. print, or screen).
+- A media type, which tells the browser what kind of media this code is for (e.g., print, or screen).
 - A media expression, which is a rule, or test that must be passed for the contained CSS to be applied.
 - A set of CSS rules that will be applied if the test passes and the media type is correct.
 
@@ -544,13 +544,13 @@ If you look at the HTML source in the above example, you'll see the following el
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 ```
 
-This is the [viewport meta tag](/en-US/docs/Web/HTML/Viewport_meta_tag) — it exists as a way to control how mobile browsers render content. This is needed because by default, most mobile browsers lie about their viewport width. Non-responsive sites commonly look really bad when rendered in a narrow viewport, so mobile browsers usually render the site with a viewport width wider than the real device width by default (usually 980 pixels), and then shrink the rendered result so that it fits in the display.
+This is the [viewport meta tag](/en-US/docs/Web/HTML/Guides/Viewport_meta_element) — it exists as a way to control how mobile browsers render content. This is needed because by default, most mobile browsers lie about their viewport width. Non-responsive sites commonly look really bad when rendered in a narrow viewport, so mobile browsers usually render the site with a viewport width wider than the real device width by default (usually 980 pixels), and then shrink the rendered result so that it fits in the display.
 
 This is all well and good, but it means that responsive sites are not going to work as expected. If the viewport width is reported as 980 pixels, then mobile layouts (for example created using a media query of `@media screen and (max-width: 600px) { }`) are not going to render as expected.
 
 To remedy this, including a viewport meta tag like the one above on your page tells the browser "don't render the content with a 980 pixel viewport — render it using the real device width instead, and set a default initial scale level for better consistency." The media queries will then kick in as expected.
 
-There are a number of other options you can put inside the `content` attribute of the viewport meta tag — see [Using the viewport meta tag to control layout on mobile browsers](/en-US/docs/Web/HTML/Viewport_meta_tag) for more details.
+There are a number of other options you can put inside the `content` attribute of the viewport meta tag — see [Using the viewport meta tag to control layout on mobile browsers](/en-US/docs/Web/HTML/Guides/Viewport_meta_element) for more details.
 
 ## Do you really need a media query?
 
@@ -608,7 +608,7 @@ Make the screen wider and narrower to see the number of column tracks change. Th
 
 ## Test your skills
 
-You've reached the end of this article, but can you remember the most important information? You can find a test to verify that you've retained this information before you move on — see [Test your skills: Responsive web design and media queries](/en-US/docs/Learn_web_development/Core/CSS_layout/rwd_skills).
+You've reached the end of this article, but can you remember the most important information? You can find a test to verify that you've retained this information before you move on — see [Test your skills: Responsive web design and media queries](/en-US/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Responsive_design).
 
 ## Summary
 

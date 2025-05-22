@@ -27,6 +27,10 @@ This object allows developers to access specific details about the user's GPU so
   - : A vendor-specific identifier for the adapter. Returns an empty string if it is not available.
 - {{domxref("GPUAdapterInfo.vendor", "vendor")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : The name of the adapter vendor. Returns an empty string if it is not available.
+- {{domxref("GPUAdapterInfo.subgroupMaxSize", "subgroupMaxSize")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+  - : The maximum supported [subgroup size](https://gpuweb.github.io/gpuweb/wgsl/#subgroup-size) for the {{domxref("GPUAdapter")}}.
+- {{domxref("GPUAdapterInfo.subgroupMinSize", "subgroupMinSize")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+  - : The minimum supported [subgroup size](https://gpuweb.github.io/gpuweb/wgsl/#subgroup-size) for the {{domxref("GPUAdapter")}}.
 
 ## Examples
 

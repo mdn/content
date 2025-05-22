@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Intl.Locale.Locale
 
 The **`Intl.Locale()`** constructor creates {{jsxref("Intl.Locale")}} objects.
 
-{{InteractiveExample("JavaScript Demo: Intl.Locale")}}
+{{InteractiveExample("JavaScript Demo: Intl.Locale() constructor")}}
 
 ```js interactive-example
 const korean = new Intl.Locale("ko", {

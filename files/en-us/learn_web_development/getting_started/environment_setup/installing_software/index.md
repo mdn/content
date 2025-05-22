@@ -1,10 +1,10 @@
 ---
 title: Installing basic software
+short-title: Installing software
 slug: Learn_web_development/Getting_started/Environment_setup/Installing_software
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Getting_started/Environment_setup/Browsing_the_web", "Learn_web_development/Getting_started/Environment_setup")}}
 
@@ -71,7 +71,7 @@ One of the easiest options we've found to make a local server available is to us
 4. Press the _Install_ button to install the extension.
 5. Now, when you are working on an HTML file in the editor, you should be able to click the "Show Preview" button to open the live example up in a separate tab.
 
-The above option is simple, but not that flexible. In future, you may want to made a more flexible local server option available that can be used to load examples in any browser you have available. For other options (and more background information around why local servers are necessary), see [How do you set up a local testing server?](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server).
+The above option is simple, but not that flexible. In the future, you may want to have a more flexible local server option that can be used to load examples in any browser you have. For other options (and more background information around why local servers are necessary), see [How do you set up a local testing server?](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server).
 
 ## Graphics editors
 
@@ -87,7 +87,7 @@ For example:
 - The built-in Windows [Photos app](https://support.microsoft.com/en-gb/windows/manage-photos-and-videos-with-microsoft-photos-app-c0c6422f-d4cb-2e3d-eb65-7069071b2f9b) comes with many similar features.
 - The [tinypng](https://tinypng.com/) website, provides a free service allowing you to compress PNGs, JPEGs, and more. This is a very common task you'll have to do when preparing assets for use on a website.
 
-If you have more substantial graphics editing/creation needs, you'll want a fully-fledged graphics package. In terms of commercial offerings, [Adobe Photoshop](https://www.adobe.com/products/photoshop.html) has long been the industry standard, and there are also popular relative newcomers such as [Figma](https://www.figma.com/), [Sketch](https://www.sketch.com/), and [Canva](https://www.canva.com).
+If you have more substantial graphics editing/creation needs, you'll want a fully-fledged graphics package. In terms of commercial offerings, [Adobe Photoshop](https://www.adobe.com/products/photoshop.html) has long been the industry standard especially for photo editing, while programs like [Sketch](https://www.sketch.com/) are better suited to icon and UI work. There are also popular newcomers such as [Figma](https://www.figma.com/), [The Affinity Suite](https://affinity.serif.com/en-us/), and [Canva](https://www.canva.com/).
 
 If your budget is limited, most of the above apps have trials or free modes there are worth exploring. There are also some well-regarded free apps available such as [GIMP](https://www.gimp.org/), [Adobe Express](https://www.adobe.com/express/), and [Paint.NET](https://www.getpaint.net/).
 

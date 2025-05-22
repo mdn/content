@@ -48,7 +48,6 @@ The code below demonstrates setting the `crossOrigin` property on an
 newly-created image.
 
 ```js
-const imageUrl = "clock-demo-400px.png";
 const container = document.querySelector(".container");
 
 function loadImage(url) {
@@ -66,7 +65,7 @@ function loadImage(url) {
   image.src = url;
 }
 
-loadImage(imageUrl);
+loadImage("clock-demo-400px.png");
 ```
 
 ### HTML

@@ -14,7 +14,7 @@ If `true`, when a non-focusable part of the shadow DOM is clicked, or `.focus()`
 
 Focus is of particular importance for keyboard users (including those using screen readers). `delegatesFocus` default behavior is to focus the first focusable element — which may be undesirable if that element is not meant to be part of the tabbing order (for example, an element with `tabindex="-1"`), or if a more 'important' focusable element should receive initial focus (for instance, the first text field rather than the 'close' button which precedes it). In such cases, the `autofocus` attribute can be specified on the element which should receive initial focus. Use the `autofocus` attribute with caution as it can introduce accessibility issues, such as bypassing important content which may go unnoticed due to focus being set to an element later in the DOM order.
 
-The property value is originally set using the `delegatesFocus` property of the object passed to {{domxref("Element.attachShadow()")}}, or using the [`shadowrootdelegatesfocus`](/en-US/docs/Web/HTML/Element/template#shadowrootclonable) attribute of the [`<template>`](/en-US/docs/Web/HTML/Element/template) element when a shadow root is created declaratively.
+The property value is originally set using the `delegatesFocus` property of the object passed to {{domxref("Element.attachShadow()")}}, or using the [`shadowrootdelegatesfocus`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootclonable) attribute of the [`<template>`](/en-US/docs/Web/HTML/Reference/Elements/template) element when a shadow root is created declaratively.
 
 ## Value
 
@@ -23,16 +23,16 @@ The property value is originally set using the `delegatesFocus` property of the 
 ## Examples
 
 ```js
-let customElem = document.querySelector("my-shadow-dom-element");
-let shadow = customElem.shadowRoot;
+const customElem = document.querySelector("my-shadow-dom-element");
+const shadow = customElem.shadowRoot;
 
-// ...
+// …
 
 // Does it delegate focus?
-let hostElem = shadow.delegatesFocus;
+const hostElem = shadow.delegatesFocus;
 ```
 
-The [Declarative Shadow DOM with delegated focus](/en-US/docs/Web/HTML/Element/template#declarative_shadow_dom_with_delegated_focus) example in the `<template>` documentation demonstrates the effects of delegating focus.
+The [Declarative Shadow DOM with delegated focus](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom_with_delegated_focus) example in the `<template>` documentation demonstrates the effects of delegating focus.
 
 ## Specifications
 

@@ -43,7 +43,7 @@ const css = CSSStyleValue.parse(
 );
 ```
 
-```css
+```plain
 CSSTransformValue {0: CSSTranslate, 1: CSSScale, length: 2, is2D: false}
 ```
 

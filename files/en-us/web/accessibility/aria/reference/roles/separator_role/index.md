@@ -1,5 +1,6 @@
 ---
 title: "ARIA: separator role"
+short-title: separator
 slug: Web/Accessibility/ARIA/Reference/Roles/separator_role
 page-type: aria-role
 spec-urls:
@@ -8,7 +9,7 @@ spec-urls:
 sidebar: accessibilitysidebar
 ---
 
-The `separator` role indicates the element is a divider that separates and distinguishes sections of content or groups of menuitems. The implicit ARIA role the native thematic break {{HTMLElement('hr')}} element is `separator`.
+The `separator` role indicates the element is a divider that separates and distinguishes sections of content or groups of menuitems. The implicit ARIA role of the native thematic break {{HTMLElement('hr')}} element is `separator`.
 
 ## Description
 

@@ -1,5 +1,6 @@
 ---
 title: "ARIA: alertdialog role"
+short-title: alertdialog
 slug: Web/Accessibility/ARIA/Reference/Roles/alertdialog_role
 page-type: aria-role
 spec-urls:
@@ -33,6 +34,15 @@ Adding `role="alertdialog"` alone is not sufficient to make an alert dialog acce
 - Keyboard focus must be managed correctly
 
 The `alertdialog` must have an accessible name, defined with [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label). The alert dialog text must have an {{glossary("accessible description")}} using [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby).
+
+### Associated WAI-ARIA roles, states, and properties
+
+- [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
+
+  - : Use this attribute to label the alertdialog. The `aria-labelledby` attribute is generally the id of the element used to title the alertdialog.
+
+- [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
+  - : Use this attribute to encompass the description of the contents of the alert dialog. The value of the `aria-describedby` attribute is generally the ID of the element containing the alert dialog's messaging, usually coming right after the title.
 
 ## Examples
 
@@ -83,15 +93,6 @@ The code snippet above shows how to mark up an alert dialog that only provides a
   </ul>
 </div>
 ```
-
-### Associated WAI-ARIA roles, states, and properties
-
-- [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
-
-  - : Use this attribute to label the alertdialog. The `aria-labelledby` attribute is generally the id of the element used to title the alertdialog.
-
-- [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
-  - : Use this attribute to encompass the description of the contents of the alert dialog. The value of the `aria-describedby` attribute is generally the ID of the element containing the alert dialog's messaging, usually coming right after the title.
 
 ## Specifications
 

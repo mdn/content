@@ -1,10 +1,10 @@
 ---
 title: Overflowing content
+short-title: Overflow
 slug: Learn_web_development/Core/Styling_basics/Overflow
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics")}}
 
@@ -227,7 +227,7 @@ When developing a site, always keep overflow in mind. Test designs with large an
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Overflow](/en-US/docs/Learn_web_development/Core/Styling_basics/Overflow_Tasks).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Overflow](/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Overflow).
 
 ## Summary
 

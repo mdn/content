@@ -39,7 +39,7 @@ _No changes._
 
 ### CSS
 
-- CSS Shadow Parts are now enabled. This includes the [`part` attribute](/en-US/docs/Web/HTML/Global_attributes/part) and [`::part` pseudo-element](/en-US/docs/Web/CSS/::part), which allow shadow hosts to selectively expose chosen elements from their shadow tree to the outside page for styling purposes ([Firefox bug 1559074](https://bugzil.la/1559074)).
+- CSS Shadow Parts are now enabled. This includes the [`part` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/part) and [`::part` pseudo-element](/en-US/docs/Web/CSS/::part), which allow shadow hosts to selectively expose chosen elements from their shadow tree to the outside page for styling purposes ([Firefox bug 1559074](https://bugzil.la/1559074)).
 - [CSS Motion Path](/en-US/docs/Web/CSS/CSS_motion_path) has been shipped ([Firefox bug 1582554](https://bugzil.la/1582554), also see the [Intent to Ship](https://groups.google.com/forum/#!topic/mozilla.dev.platform/nOOIRsuxvuc)). This includes:
 
   - {{cssxref("offset")}}
@@ -98,7 +98,7 @@ _No changes._
 - Removed the non-standard `window.mozPaintCount` property. ([Firefox bug 1591968](https://bugzil.la/1591968))
 - The {{domxref("BatteryManager")}} interface is no longer exposed to web content ([Firefox bug 1441976](https://bugzil.la/1441976)).
 - {{domxref("Navigator.vibrate()")}} is no longer supported in cross-origin {{htmlelement("iframe")}}s ([Firefox bug 1591113](https://bugzil.la/1591113)).
-- WebRTC no longer supports the `rid=` and `pt=` parameters on the `simulcast` attribute. The new syntax for a line such as "`a=simulcast: send rid=7 recv rid=8`" is now "`a=simulcast: send 7 recv 8`". The new syntax has been supported since Firefox 68, so now it's time tor retire support for the old syntax ([Firefox bug 1470568](https://bugzil.la/1470568)).
+- WebRTC no longer supports the `rid=` and `pt=` parameters on the `simulcast` attribute. The new syntax for a line such as `a=simulcast: send rid=7 recv rid=8` is now `a=simulcast: send 7 recv 8`. The new syntax has been supported since Firefox 68, so now it's time tor retire support for the old syntax ([Firefox bug 1470568](https://bugzil.la/1470568)).
 
 ### Security
 

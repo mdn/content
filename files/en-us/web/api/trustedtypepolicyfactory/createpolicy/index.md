@@ -38,9 +38,9 @@ A {{domxref("TrustedTypePolicy")}} object.
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if policy names are restricted by the [Content Security Policy `trusted-types` directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/trusted-types) and this name is not on the allowlist.
+  - : Thrown if policy names are restricted by the [Content Security Policy `trusted-types` directive](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/trusted-types) and this name is not on the allowlist.
 - {{jsxref("TypeError")}}
-  - : Thrown if the name is a duplicate and the [Content Security Policy trusted-types directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/trusted-types) is not using `allow-duplicates`.
+  - : Thrown if the name is a duplicate and the [Content Security Policy trusted-types directive](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/trusted-types) is not using `allow-duplicates`.
 
 ## Examples
 
@@ -56,7 +56,7 @@ const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
 
 ### Creating a default policy
 
-On a site where Trusted Types are enforced via a Content Security Policy with the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for) directive set to `script`, any injection script that accepts a script expects a Trusted Type object. In the case that a string is inserted instead, a [default policy](/en-US/docs/Web/API/Trusted_Types_API#the_default_policy) will be used.
+On a site where Trusted Types are enforced via a Content Security Policy with the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) directive set to `script`, any injection script that accepts a script expects a Trusted Type object. In the case that a string is inserted instead, a [default policy](/en-US/docs/Web/API/Trusted_Types_API#the_default_policy) will be used.
 
 The default policy logs a message to the console to remind the developer to refactor this part of the application to use a Trusted Type object. It also appends details of the use of the default policy, type, and injection sink to the returned value.
 

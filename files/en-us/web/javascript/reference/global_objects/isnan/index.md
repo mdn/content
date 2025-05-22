@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.isNaN
 
 The **`isNaN()`** function determines whether a value is {{jsxref("NaN")}}, first converting the value to a number if necessary. Because coercion inside the `isNaN()` function can be [surprising](#description), you may prefer to use {{jsxref("Number.isNaN()")}}.
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - isNaN()")}}
+{{InteractiveExample("JavaScript Demo: isNaN()")}}
 
 ```js interactive-example
 function milliseconds(x) {

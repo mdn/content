@@ -1,10 +1,10 @@
 ---
 title: Handling text — strings in JavaScript
+short-title: Strings
 slug: Learn_web_development/Core/Scripting/Strings
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting")}}
 

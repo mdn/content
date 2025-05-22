@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.DataView.DataView
 
 The **`DataView()`** constructor creates {{jsxref("DataView")}} objects.
 
-{{InteractiveExample("JavaScript Demo: DataView Constructor")}}
+{{InteractiveExample("JavaScript Demo: DataView() constructor")}}
 
 ```js interactive-example
 // Create an ArrayBuffer with a size in bytes

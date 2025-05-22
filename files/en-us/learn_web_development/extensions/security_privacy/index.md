@@ -2,9 +2,8 @@
 title: Security and privacy
 slug: Learn_web_development/Extensions/Security_privacy
 page-type: learn-module
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 > [!NOTE]
 > As you'll see below, this module is currently only a curriculum outline/syllabus, with some links provided to starter guides. We are intending to convert this into a full course in the future, as time allows.
@@ -94,7 +93,7 @@ Learning outcomes:
 
 - Understand how to comply with such laws, in terms of practical implementation.
 
-> [!NOTE]:
+> [!NOTE]
 > Conforming to the above criteria does not require students to become legal experts in privacy laws, but they should understand the implications of these laws, and how that affects their work.
 
 ## Resources

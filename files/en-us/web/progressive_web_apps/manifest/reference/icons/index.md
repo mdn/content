@@ -2,10 +2,9 @@
 title: icons
 slug: Web/Progressive_web_apps/Manifest/Reference/icons
 page-type: web-manifest-member
-browser-compat: html.manifest.icons
+browser-compat: manifests.webapp.icons
+sidebar: pwasidebar
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 The `icons` manifest member is used to specify one or more image files that define the icons to represent your web application.
 
@@ -67,7 +66,7 @@ The `icons` manifest member is used to specify one or more image files that defi
         For vector formats like SVG, you can use `any` to indicate scalability.
         If `sizes` is not specified, the selection and display of the icon may vary depending on the browser's implementation.
 
-        Note that the format of `sizes` is similar to the HTML `<link>` element's [`sizes`](/en-US/docs/Web/HTML/Element/link#sizes) attribute.
+        Note that the format of `sizes` is similar to the HTML `<link>` element's [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/link#sizes) attribute.
 
     - `type` {{Optional_Inline}}
 
@@ -109,14 +108,14 @@ The context in which an icon can be used is determined by the browser and the op
 
 ## Security considerations
 
-The browser's ability to fetch an icon image is governed by the Content Security Policy ({{Glossary("CSP")}}) of the manifest's owner document, specifically by the [`img-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) directive. This security aspect is related to the `src` property.
+The browser's ability to fetch an icon image is governed by the Content Security Policy ({{Glossary("CSP")}}) of the manifest's owner document, specifically by the [`img-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/img-src) directive. This security aspect is related to the `src` property.
 
 For example, if the `img-src` directive in a CSP header specifies `icons.example.com`, icons from only that domain would be fetchable. In a manifest with two icons, one from `icons.example.com/low-res` and another from `other.com/hi-res`, only the former would be fetched successfully because of CSP restrictions.
 
 ## Performance considerations
 
 Specifying the `type` property can significantly improve performance because it allows browsers to ignore images with unsupported formats more easily.
-If you don't specify the `type` property, browsers may need to infer the image format using more resource-intensive methods, such as [MIME sniffing](/en-US/docs/Web/HTTP/MIME_types#mime_sniffing) the file for a signature.
+If you don't specify the `type` property, browsers may need to infer the image format using more resource-intensive methods, such as [MIME sniffing](/en-US/docs/Web/HTTP/Guides/MIME_types#mime_sniffing) the file for a signature.
 
 At a minimum, if you omit the `type` property, use appropriate and unambiguous file extensions for your icon images.
 

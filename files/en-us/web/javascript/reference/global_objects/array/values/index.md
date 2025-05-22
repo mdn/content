@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Array.values
 
 The **`values()`** method of {{jsxref("Array")}} instances returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that iterates the value of each item in the array.
 
-{{InteractiveExample("JavaScript Demo: Array.values()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.values()")}}
 
 ```js interactive-example
 const array1 = ["a", "b", "c"];

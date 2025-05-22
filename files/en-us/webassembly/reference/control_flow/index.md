@@ -10,7 +10,7 @@ WebAssembly control flow instructions.
 - [`block`](/en-US/docs/WebAssembly/Reference/Control_flow/block)
   - : Creates a label that can later be branched out of with a [`br`](/en-US/docs/WebAssembly/Reference/Control_flow/br).
 - [`br`](/en-US/docs/WebAssembly/Reference/Control_flow/br)
-  - : Branches to a loop or block.
+  - : Branches to a loop, block, or if.
 - [`call`](/en-US/docs/WebAssembly/Reference/Control_flow/call)
   - : Calls a function.
 - [`drop`](/en-US/docs/WebAssembly/Reference/Control_flow/Drop)
@@ -18,7 +18,7 @@ WebAssembly control flow instructions.
 - [`end`](/en-US/docs/WebAssembly/Reference/Control_flow/end)
   - : Can be used to end a `block`, `loop`, `if`, or `else`.
 - [`if...else`](/en-US/docs/WebAssembly/Reference/Control_flow/if...else)
-  - : Executes a statement if the last item on the stack is true (`1`).
+  - : Executes a statement if the last item on the stack is true (non-zero).
 - [`loop`](/en-US/docs/WebAssembly/Reference/Control_flow/loop)
   - : Creates a label that can later be branched to with a [`br`](/en-US/docs/WebAssembly/Reference/Control_flow/br).
 - [`nop`](/en-US/docs/WebAssembly/Reference/Control_flow/nop)

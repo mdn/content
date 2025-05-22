@@ -16,7 +16,7 @@ The **`renderTime`** read-only property of the {{domxref("PerformanceElementTimi
 
 A {{domxref("DOMHighResTimeStamp")}} with the render time of the element.
 
-For images this will be the **image rendering timestamp**. This is defined as the next paint that occurs after the image becomes fully loaded. If the timing allow check fails (as defined by the [Timing-allow-origin](/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin) header) this will return `0`.
+For images this will be the **image rendering timestamp**. This is defined as the next paint that occurs after the image becomes fully loaded. If the timing allow check fails (as defined by the [Timing-allow-origin](/en-US/docs/Web/HTTP/Reference/Headers/Timing-Allow-Origin) header) this will return `0`.
 
 For text nodes this will be the **text rendering timestamp**. This is defined as when the element becomes text painted.
 
@@ -24,7 +24,7 @@ For text nodes this will be the **text rendering timestamp**. This is defined as
 
 ### Logging `renderTime`
 
-In this example an {{HTMLElement("img")}} element is being observed by adding the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute. A {{domxref("PerformanceObserver")}} is registered to get all performance entries of type `"element"` and the `buffered` flag is used to access data from before observer creation. Calling `entry.renderTime` returns the render time of the image element.
+In this example an {{HTMLElement("img")}} element is being observed by adding the [`elementtiming`](/en-US/docs/Web/HTML/Reference/Attributes/elementtiming) attribute. A {{domxref("PerformanceObserver")}} is registered to get all performance entries of type `"element"` and the `buffered` flag is used to access data from before observer creation. Calling `entry.renderTime` returns the render time of the image element.
 
 ```html
 <img

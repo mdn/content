@@ -1,5 +1,6 @@
 ---
-title: aria-details
+title: "ARIA: aria-details attribute"
+short-title: aria-details
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-details
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-details
@@ -16,7 +17,7 @@ There are other HTML and WAI-ARIA properties that have similar purposes. The HTM
 
 The `aria-details` attribute serves a similar purpose as HTML's never fully-supported `longdesc` attribute － a URL of a long description to a replaced element's content － which was deprecated due to lack of support and misuse.
 
-The `aria-details` attribute takes the [`id`](/en-US/docs/Web/HTML/Global_attributes/id), or space separated list of `id`s of the elements to get more detailed information as its values. When `aria-details` is included on an element, assistive technologies inform users of the availability of extended information, enabling the user to navigate to the referenced content.
+The `aria-details` attribute takes the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id), or space separated list of `id`s of the elements to get more detailed information as its values. When `aria-details` is included on an element, assistive technologies inform users of the availability of extended information, enabling the user to navigate to the referenced content.
 
 Elements referenced by `aria-details` are intended to contain more information than would normally be provided via [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby).
 
@@ -31,24 +32,27 @@ Unlike `aria-describedby`, elements referenced by `aria-details` are not used in
 When it comes to definition and term roles, the `aria-details` would be included on the [`term`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/term_role) element with the `id` of the element with a [`definition`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/definition_role) role.
 
 ```html
-<p>The <strong>cubic-bezier()<strong> functional notation defines a cubic
-  <span role="term" aria-details="bezier bezImg">Bézier curve</span>. As
-  these curves are continuous, they are often used to smooth down the start and
-  end of the curve and are therefore sometimes called easing functions.
+<p>
+  The <strong>cubic-bezier()</strong> functional notation defines a cubic
+  <span role="term" aria-details="bezier bezImg">Bézier curve</span>. As these
+  curves are continuous, they are often used to smooth down the start and end of
+  the curve and are therefore sometimes called easing functions.
 </p>
 
-<p role="definition" id="bezier">A <strong>Bézier curve</strong>,
- (Pronounced \ ˈbe-zē-ˌā \)
- <i aria-description="English pronunciation">BEH-zee-ay</i>) is a mathematically
- described curve used in computer graphics and animation. The curve is defined
- by a set of control points with a minimum of two. Web related graphics
- and animations use Cubic Béziers, which are curves with four control
- points P<sub>0</sub>, P<sub>1</sub>, P<sub>2</sub>, and P<sub>3</sub>.
+<p role="definition" id="bezier">
+  A <strong>Bézier curve</strong>, (Pronounced \ ˈbe-zē-ˌā \)
+  <i aria-description="English pronunciation">BEH-zee-ay</i>) is a
+  mathematically described curve used in computer graphics and animation. The
+  curve is defined by a set of control points with a minimum of two. Web related
+  graphics and animations use Cubic Béziers, which are curves with four control
+  points P<sub>0</sub>, P<sub>1</sub>, P<sub>2</sub>, and P<sub>3</sub>.
 </p>
 
-<a href="bezierExplanation.html" id="bezImg"
+<a
+  href="bezierExplanation.html"
+  id="bezImg"
   aria-label="Explanation of Bézier curve in CSS easing functions">
-  <img alt="Animated Bézier curve showing 4 control points." src="bezier.gif">
+  <img alt="Animated Bézier curve showing 4 control points." src="bezier.gif" />
 </a>
 ```
 
@@ -56,6 +60,15 @@ When it comes to definition and term roles, the `aria-details` would be included
 
 - ID reference list
   - : An `id` or space separated list of ids of elements that provide or link to additional related information.
+
+## Associated interfaces
+
+- {{domxref("Element.ariaDetailsElements")}}
+  - : The `ariaDetailsElements` property is part of each element's interface.
+    Its value is an array of subclasses of {{domxref("Element")}} that reflect the `id` references in the `aria-details` attribute ([with some caveats](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references)).
+- {{domxref("ElementInternals.ariaDetailsElements")}}
+  - : The `ariaDetailsElements` property is part of each custom element's interface.
+    Its value is an array of subclasses of {{domxref("Element")}} that reflect the `id` references in the `aria-details` attribute ([with some caveats](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references)).
 
 ## Associated roles
 
@@ -67,9 +80,9 @@ Used in **ALL** roles.
 
 ## See also
 
-- HTML [id](/en-US/docs/Web/HTML/Global_attributes/id) attribute
+- HTML [id](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attribute
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
 - [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
 - [`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-description)
 - [The image `alt` attribute](/en-US/docs/Web/API/HTMLImageElement/alt)
-- HTML [title](/en-US/docs/Web/HTML/Global_attributes/title) attribute
+- HTML [title](/en-US/docs/Web/HTML/Reference/Global_attributes/title) attribute
