@@ -3,9 +3,10 @@ title: Introducing a complete toolchain
 short-title: Sample toolchain
 slug: Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_tools/Package_management","Learn_web_development/Extensions/Client-side_tools/Deployment", "Learn_web_development/Extensions/Client-side_tools")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_tools/Package_management","Learn_web_development/Extensions/Client-side_tools/Deployment", "Learn_web_development/Extensions/Client-side_tools")}}
 
 In the final couple of articles in the series, we will solidify your tooling knowledge by walking you through the process of building up a sample case study toolchain. We'll go all the way from setting up a sensible development environment and putting transformation tools in place to actually deploying your app. In this article, we'll introduce the case study, set up our development environment, and set up our code transformation tools.
 
@@ -195,7 +196,7 @@ You can also replace `./index.html` with any other file or folder to format them
 
 ```json
 "scripts": {
-  // ...
+  // …
   "format": "prettier --write ."
 },
 ```

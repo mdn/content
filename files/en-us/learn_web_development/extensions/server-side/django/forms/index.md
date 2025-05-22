@@ -3,9 +3,10 @@ title: "Django Tutorial Part 9: Working with forms"
 short-title: "9: Forms"
 slug: Learn_web_development/Extensions/Server-side/Django/Forms
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django/Testing", "Learn_web_development/Extensions/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django/Testing", "Learn_web_development/Extensions/Server-side/Django")}}
 
 In this tutorial, we'll show you how to work with HTML Forms in Django, and, in particular, the easiest way to write forms to create, update, and delete model instances. As part of this demonstration, we'll extend the [LocalLibrary](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) website so that librarians can renew books, and create, update, and delete authors using our own forms (rather than using the admin application).
 
@@ -457,13 +458,13 @@ Perhaps unsurprisingly, when used as shown this provides the default rendering o
 > [!NOTE]
 > It is perhaps not obvious because we only have one field, but, by default, every field is defined in its own table row. This same rendering is provided if you reference the template variable `\{{ form.as_table }}`.
 
-If you were to enter an invalid date, you'd additionally get a list of the errors rendered on the page (see `errorlist` below).
+If you were to enter an invalid date, you'd additionally get a list of the errors rendered on the page (see `error-list` below).
 
 ```html
 <tr>
   <th><label for="id_renewal_date">Renewal date:</label></th>
   <td>
-    <ul class="errorlist">
+    <ul class="error-list">
       <li>Invalid date - renewal in past</li>
     </ul>
     <input

@@ -1,10 +1,10 @@
 ---
 title: Features restricted to secure contexts
+short-title: Restricted features
 slug: Web/Security/Secure_Contexts/features_restricted_to_secure_contexts
 page-type: guide
+sidebar: security
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
 This reference lists the web platform features available only in secure contexts — see [Secure Contexts](/en-US/docs/Web/Security/Secure_Contexts) for a definition and more details.
 

@@ -44,7 +44,7 @@ This section is a summary of the basic steps to add drag-and-drop functionality 
 
 #### Identify what is draggable
 
-Making an element _draggable_ requires adding the [`draggable`](/en-US/docs/Web/HTML/Global_attributes/draggable) attribute and the {{domxref("HTMLElement.dragstart_event","dragstart")}} event handler, as shown in the following code sample:
+Making an element _draggable_ requires adding the [`draggable`](/en-US/docs/Web/HTML/Reference/Global_attributes/draggable) attribute and the {{domxref("HTMLElement.dragstart_event","dragstart")}} event handler, as shown in the following code sample:
 
 ```html
 <script>
@@ -66,7 +66,7 @@ Making an element _draggable_ requires adding the [`draggable`](/en-US/docs/Web/
 
 For more information, see:
 
-- [Draggable attribute reference](/en-US/docs/Web/HTML/Global_attributes/draggable)
+- [Draggable attribute reference](/en-US/docs/Web/HTML/Reference/Global_attributes/draggable)
 - [Drag operations guide](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#the_draggable_attribute)
 
 #### Define the drag's data
@@ -238,7 +238,7 @@ A key difference between the {{domxref("DataTransfer")}} and {{domxref("DataTran
 - [Copying and moving elements with the `DataTransferListItem` interface](https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransferItemList.html)
 - Dragging and dropping files (Firefox only): <https://jsfiddle.net/9C2EF/>
 - Dragging and dropping files (All browsers): [https://jsbin.com/hiqasek/](https://jsbin.com/hiqasek/edit?html,js,output)
-- A parking project using the Drag and Drop API: <https://park.glitch.me/> (You can edit [here](https://glitch.com/edit/#!/park))
+- A parking project using the Drag and Drop API: <https://park.glitch.me/> ([Edit it here](https://glitch.com/edit/#!/park))
 
 ## Specifications
 

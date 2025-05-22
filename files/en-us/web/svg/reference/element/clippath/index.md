@@ -71,7 +71,7 @@ By default, {{cssxref("pointer-events")}} are not dispatched on clipped regions.
 
 - {{SVGAttr("clipPathUnits")}}
   - : Defines the coordinate system for the contents of the `<clipPath>` element.
-    _Value type_: `userSpaceOnUse`|`objectBoundingBox` ; _Default value_: `userSpaceOnUse`; _Animatable_: **yes**
+    _Value type_: `userSpaceOnUse` | `objectBoundingBox`; _Default value_: `userSpaceOnUse`; _Animatable_: **yes**
 
 ## Usage context
 
@@ -87,5 +87,7 @@ By default, {{cssxref("pointer-events")}} are not dispatched on clipped regions.
 
 ## Related
 
-- Other clipping and masking SVG elements: {{SVGElement("mask")}}
-- Some CSS properties: {{cssxref("clip-path")}}, {{cssxref("pointer-events")}}
+- {{SVGElement("mask")}}
+- CSS {{cssxref("clip-path")}} property
+- [Introduction to CSS clipping](/en-US/docs/Web/CSS/CSS_masking/Clipping)
+- [CSS masking](/en-US/docs/Web/CSS/CSS_masking/Clipping) module

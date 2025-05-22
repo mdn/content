@@ -24,6 +24,7 @@ sidebar: mdnsidebar
 >   - experimental
 >   - non-standard
 > browser-compat: css.types.NameOfTheFunction
+> sidebar: cssref
 > ---
 > ```
 >
@@ -38,7 +39,10 @@ sidebar: mdnsidebar
 > - **status**
 >   - : Flags describing the status of this feature. An array which may contain one or more of the following: `experimental`, `deprecated`, `non-standard`. This key should not be set manually: it is set automatically based on values in the browser compatibility data for the feature. See ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
 > - **browser-compat**
->   - : Replace the placeholder value <code>css.types.NameOfTheFunction</code> with the query string for the function in the [Browser compat data repo](https://github.com/mdn/browser-compat-data/tree/main/css/types). Check the _Other macros in the page_ section of this note block to see how this key-value is used to generate content for the _Specifications_ and _Browser compatibility_ sections.
+>   - : Replace the placeholder value `css.types.NameOfTheFunction` with the query string for the function in the [Browser compat data repo](https://github.com/mdn/browser-compat-data/tree/main/css/types). Check the _Other macros in the page_ section of this note block to see how this key-value is used to generate content for the _Specifications_ and _Browser compatibility_ sections.
+> - **sidebar**
+>   - : This is `cssref` for all CSS guide and reference pages.
+>     See [Page structures: Sidebars](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars) for details.
 >
 > ---
 >
@@ -51,11 +55,6 @@ sidebar: mdnsidebar
 >   If the technology is experimental and is hidden behind a preference in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 > - `\{{Deprecated_Header}}`: This macro generates a **Deprecated** banner, which indicates that the use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
 > - `\{{Non-standard_Header}}` — this generates a **Non-standard** banner that indicates that the feature is not part of any specification.
->
-> You should update or delete the following macros according to the advice below:
->
-> - `\{{CSSRef}}`: This macro must be present on every CSS page. It generates a suitable CSS sidebar, depending on the tags included on the page.
->   Remember to remove the `\{{MDNSidebar}}` macro when you use this template.
 >
 > Do not provide status header macros manually. Refer to the section ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated) to add these statuses to the page.
 >
@@ -73,7 +72,7 @@ sidebar: mdnsidebar
 >
 > _Remember to remove this note block before publishing._
 
-{{CSSRef}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 Begin the content on the page with an introductory paragraph, which names the function and says what it does.
 This should ideally be one or two short sentences.

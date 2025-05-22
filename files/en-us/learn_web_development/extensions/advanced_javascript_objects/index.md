@@ -2,9 +2,8 @@
 title: Advanced JavaScript objects
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects
 page-type: learn-module
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes", "Learn_web_development/Extensions")}}
 

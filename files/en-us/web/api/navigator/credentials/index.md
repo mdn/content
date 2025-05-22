@@ -19,10 +19,10 @@ A {{domxref("CredentialsContainer")}} object.
 ```js
 if ("credentials" in navigator) {
   navigator.credentials.get({ password: true }).then((creds) => {
-    //Do something with the credentials.
+    // Do something with the credentials.
   });
 } else {
-  //Handle sign-in the way you did before.
+  // Handle sign-in the way you did before.
 }
 ```
 

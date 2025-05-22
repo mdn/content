@@ -1,5 +1,6 @@
 ---
 title: "ARIA: figure role"
+short-title: figure
 slug: Web/Accessibility/ARIA/Reference/Roles/figure_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#figure
@@ -112,5 +113,5 @@ If at all possible, you should use the appropriate semantic HTML elements to mar
 
 - [Accessibility Object Model](https://wicg.github.io/aom/spec/)
 - [ARIA in HTML](https://w3c.github.io/html-aria/)
-- [HTML `<figure>` element](/en-US/docs/Web/HTML/Element/figure)
-- [HTML `<figcaption>` element](/en-US/docs/Web/HTML/Element/figcaption)
+- [HTML `<figure>` element](/en-US/docs/Web/HTML/Reference/Elements/figure)
+- [HTML `<figcaption>` element](/en-US/docs/Web/HTML/Reference/Elements/figcaption)

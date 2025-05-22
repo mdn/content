@@ -15,7 +15,8 @@ sidebar:
         title: Dynamic_scripting_with_JavaScript
       - link: /Learn_web_development/Core/Frameworks_libraries
         title: JavaScript_frameworks_and_libraries
-  - title: Guide
+  - link: /Web/JavaScript/Guide
+    title: Guide
     details: closed
     children:
       - link: /Web/JavaScript/Guide/Introduction
@@ -52,8 +53,6 @@ sidebar:
         title: Guide_Iterators_generators
       - link: /Web/JavaScript/Guide/Internationalization
         title: Guide_Internationalization
-      - link: /Web/JavaScript/Guide/Meta_programming
-        title: Guide_Meta
       - link: /Web/JavaScript/Guide/Modules
         title: Guide_Modules
   - title: Intermediate
@@ -80,6 +79,8 @@ sidebar:
     children:
       - link: /Web/JavaScript/Guide/Inheritance_and_the_prototype_chain
         title: Inheritance
+      - link: /Web/JavaScript/Guide/Meta_programming
+        title: Guide_Meta
       - link: /Web/JavaScript/Guide/Memory_management
         title: Memory_management
   - type: section
@@ -87,37 +88,43 @@ sidebar:
     title: Reference
   - type: listSubPages
     path: /Web/JavaScript/Reference/Global_Objects
-    includeParent: true
+    link: /Web/JavaScript/Reference/Global_Objects
     title: Global_Objects
     details: closed
   - type: listSubPages
     path: /Web/JavaScript/Reference/Operators
-    includeParent: true
+    depth: 2
+    nested: true
+    link: /Web/JavaScript/Reference/Operators
     title: Operators
     details: closed
   - type: listSubPages
     path: /Web/JavaScript/Reference/Statements
-    includeParent: true
+    depth: 2
+    nested: true
+    link: /Web/JavaScript/Reference/Statements
     title: Statements
     details: closed
   - type: listSubPages
     path: /Web/JavaScript/Reference/Functions
-    includeParent: true
+    depth: 2
+    nested: true
+    link: /Web/JavaScript/Reference/Functions
     title: Functions
     details: closed
   - type: listSubPages
     path: /Web/JavaScript/Reference/Classes
-    includeParent: true
+    link: /Web/JavaScript/Reference/Classes
     title: Classes
     details: closed
   - type: listSubPages
     path: /Web/JavaScript/Reference/Regular_expressions
-    includeParent: true
+    link: /Web/JavaScript/Reference/Regular_expressions
     title: Guide_RegExp
     details: closed
   - type: listSubPages
     path: /Web/JavaScript/Reference/Errors
-    includeParent: true
+    link: /Web/JavaScript/Reference/Errors
     title: Errors
     details: closed
   - title: More

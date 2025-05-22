@@ -203,7 +203,7 @@ let signature = await window.crypto.subtle.sign("HMAC", key, encoded);
 
 ### Ed25519 (key generation, signing, and verification)
 
-This code generates an Ed25519 signing key pair, uses the private key to sign the (encoded) contents of a text [`<input>`](/en-US/docs/Web/HTML/Element/input/text), and then verifies the signature using the public key.
+This code generates an Ed25519 signing key pair, uses the private key to sign the (encoded) contents of a text [`<input>`](/en-US/docs/Web/HTML/Reference/Elements/input/text), and then verifies the signature using the public key.
 It is derived from [this source code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/sign-verify/ed25519.js), which you can [run live here](https://mdn.github.io/dom-examples/web-crypto/sign-verify/).
 
 #### HTML
@@ -291,7 +291,7 @@ async function test(data) {
     log(
       `encodedData: ${shorterEncodedBuffer}...[${encodedData.byteLength} bytes total]`,
     );
-    //log(`encodedData: ${encodedData}`);
+    // log(`encodedData: ${encodedData}`);
 
     // Sign the data using the private key.
     const signature = await crypto.subtle.sign(

@@ -22,7 +22,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement('rect')}}
 - {{SVGElement('text')}}
 - {{SVGElement('textPath')}}
-- {{SVGElement('tref')}}
 - {{SVGElement('tspan')}}
 
 ## Examples

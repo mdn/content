@@ -9,13 +9,17 @@ browser-compat: html.elements.fencedframe
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Fenced Frame API")}}
 
+> [!WARNING]
+> This feature is currently opposed by one browser vendor.
+> See the [Standards positions](#standards_positions) section below for details.
+
 The **Fenced Frame API** provides functionality for controlling content embedded in {{htmlelement("fencedframe")}} elements.
 
 ## Concepts and usage
 
 One major source of [privacy](/en-US/docs/Web/Privacy) and [security](/en-US/docs/Web/Security) problems on the web is content embedded in {{htmlelement("iframe")}} elements. Historically `<iframe>`s have been used to set third-party cookies, which can be used to share information and track users across sites. In addition, content embedded in an `<iframe>` can communicate with its embedding document (for example, using {{domxref("Window.postMessage()")}}).
 
-The embedding document can also use scripting to read various forms of information from the `<iframe>` — for example you can potentially get significant tracking/fingerprinting data from reading the embedded URL from the `src` property, especially if it contains [URL parameters](/en-US/docs/Web/URI#query). The `<iframe>` can also access the embedding context's DOM, and vice versa.
+The embedding document can also use scripting to read various forms of information from the `<iframe>` — for example you can potentially get significant tracking/fingerprinting data from reading the embedded URL from the `src` property, especially if it contains [URL parameters](/en-US/docs/Web/URI/Reference/Query). The `<iframe>` can also access the embedding context's DOM, and vice versa.
 
 Most modern browsers are working on mechanisms to partition storage so that cookie data can no longer be used for tracking (for example see [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies) or [Firefox State Partitioning](/en-US/docs/Web/Privacy/Guides/State_Partitioning)).
 
@@ -49,7 +53,7 @@ The following example gets a `FencedFrameConfig` from a Protected Audience API's
 
 ```js
 const frameConfig = await navigator.runAdAuction({
-  // ...auction configuration
+  // … auction configuration
   resolveToConfig: true,
 });
 
@@ -57,7 +61,7 @@ const frame = document.createElement("fencedframe");
 frame.config = frameConfig;
 ```
 
-`resolveToConfig: true` must be passed in to the `runAdAuction()` call to obtain a `FencedFrameConfig` object. If `resolveToConfig` is set to `false`, the resulting {{jsxref("Promise")}} will resolve to an opaque [URN](/en-US/docs/Web/URI#urns) (for example `urn:uuid:c36973b5-e5d9-de59-e4c4-364f137b3c7a`) that can only be used in an `<iframe>`.
+`resolveToConfig: true` must be passed in to the `runAdAuction()` call to obtain a `FencedFrameConfig` object. If `resolveToConfig` is set to `false`, the resulting {{jsxref("Promise")}} will resolve to an opaque [URN](/en-US/docs/Web/URI/Reference/Schemes/urn) (for example `urn:uuid:c36973b5-e5d9-de59-e4c4-364f137b3c7a`) that can only be used in an `<iframe>`.
 
 Either way, the browser stores a URL containing the target location of the content to embed — mapped to the opaque URN, or the `FencedFrameConfig`'s internal `url` property. The URL value cannot be read by JavaScript running in the embedding context.
 
@@ -73,7 +77,7 @@ For example, {{domxref("Fence.reportEvent()")}} provides a way to trigger the su
 
 ### Permissions policy
 
-Only specific features designed to be used in `<fencedframe>`s can be enabled via permissions policies set on them; other policy-controlled features are not available in this context. See [Permissions policies available to fenced frames](/en-US/docs/Web/HTML/Element/fencedframe#permissions_policies_available_to_fenced_frames) for more details.
+Only specific features designed to be used in `<fencedframe>`s can be enabled via permissions policies set on them; other policy-controlled features are not available in this context. See [Permissions policies available to fenced frames](/en-US/docs/Web/HTML/Reference/Elements/fencedframe#permissions_policies_available_to_fenced_frames) for more details.
 
 ### HTTP headers
 
@@ -92,7 +96,7 @@ Supports-Loading-Mode: fenced-frame
 Other effects of fenced frames on HTTP headers are as follows:
 
 - [User-agent client hints](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client_hints) are not available inside fenced frames because they rely on [permissions policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) delegation, which could be used to leak data.
-- Strict [`Cross-Origin-Opener-Policy`](/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy) settings are enforced on new browsing contexts opened from inside fenced frames, otherwise they could be used to leak information to other origins. Any new window opened from inside a fenced frame will have [`rel="noopener"`](/en-US/docs/Web/HTML/Attributes/rel/noopener) and `Cross-Origin-Opener-Policy: same-origin` set to ensure that {{domxref("Window.opener")}} returns `null` and place it in its own browsing context group.
+- Strict [`Cross-Origin-Opener-Policy`](/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy) settings are enforced on new browsing contexts opened from inside fenced frames, otherwise they could be used to leak information to other origins. Any new window opened from inside a fenced frame will have [`rel="noopener"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/noopener) and `Cross-Origin-Opener-Policy: same-origin` set to ensure that {{domxref("Window.opener")}} returns `null` and place it in its own browsing context group.
 - [`Content-Security-Policy: fenced-frame-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/fenced-frame-src) has been added for specifying valid sources for nested browsing contexts loaded into `<fencedframe>` elements.
 - [`Content-Security-Policy: sandbox`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/sandbox) custom settings cannot be inherited by fenced frames, to mitigate privacy issues. For a fenced frame to load, you need to specify no `sandbox` CSP (which implies the below values), or specify the following sandbox values:
   - `allow-same-origin`
@@ -141,6 +145,13 @@ The following demos all make use of `<fencedframe>`s:
 ## Specifications
 
 {{Specifications}}
+
+### Standards positions
+
+One browser vendor [opposes](/en-US/docs/Glossary/Web_standards#opposing_standards) this specification.
+Known standards positions are as follows:
+
+- Mozilla (Firefox): [Negative](https://github.com/mozilla/standards-positions/issues/781)
 
 ## Browser compatibility
 

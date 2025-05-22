@@ -18,10 +18,10 @@ This event is not [cancelable](/en-US/docs/Web/API/Event/cancelable).
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("toggle", (event) => {});
+```js-nolint
+addEventListener("toggle", (event) => { })
 
-ontoggle = (event) => {};
+ontoggle = (event) => { }
 ```
 
 ## Event type
@@ -98,7 +98,7 @@ For example:
 
 ```js
 popover.addEventListener("toggle", () => {
-  //...
+  // …
 });
 
 popover.showPopover();
@@ -120,6 +120,6 @@ popover.hidePopover();
 
 ## See also
 
-- [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) HTML global attribute
+- [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) HTML global attribute
 - [Popover API](/en-US/docs/Web/API/Popover_API)
 - Related event: [`beforetoggle`](/en-US/docs/Web/API/HTMLElement/beforetoggle_event)

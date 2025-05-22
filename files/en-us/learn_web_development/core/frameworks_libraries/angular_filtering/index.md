@@ -2,9 +2,10 @@
 title: Filtering our to-do items
 slug: Learn_web_development/Core/Frameworks_libraries/Angular_filtering
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_item_component","Learn_web_development/Core/Frameworks_libraries/Angular_building", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_item_component","Learn_web_development/Core/Frameworks_libraries/Angular_building", "Learn_web_development/Core/Frameworks_libraries")}}
 
 Now let's move on to adding functionality to allow users to filter their to-do items, so they can view active, completed, or all items.
 

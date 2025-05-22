@@ -16,10 +16,10 @@ The `reading` event of the {{DOMxRef("NDEFReader")}} interface is fired whenever
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("reading", (event) => {});
+```js-nolint
+addEventListener("reading", (event) => { })
 
-onreading = (event) => {};
+onreading = (event) => { }
 ```
 
 ## Event type

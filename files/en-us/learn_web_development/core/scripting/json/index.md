@@ -3,9 +3,8 @@ title: Working with JSON
 short-title: JSON
 slug: Learn_web_development/Core/Scripting/JSON
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Network_requests","Learn_web_development/Core/Scripting/Debugging_JavaScript", "Learn_web_development/Core/Scripting")}}
 
@@ -155,7 +154,7 @@ As mentioned earlier, any JSON is a valid JavaScript literal (object, array, num
 
 Even a single misplaced comma or colon can make a JSON file invalid and cause it to fail.
 You should be careful to validate any data you are attempting to use (although computer-generated JSON is less likely to include errors, as long as the generator program is working correctly).
-You can validate JSON using an application like [JSONLint](https://jsonlint.com/) or [JSON-validate](https://json-validate.com)
+You can validate JSON using an application like [JSONLint](https://jsonlint.com/) or [JSON-validate](https://www.json-validate.com/)
 
 ## Active learning: Working through a JSON example
 
@@ -348,7 +347,7 @@ Here we're creating a JavaScript object, then checking what it contains, then co
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: JSON](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_JSON).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: JSON](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/JSON).
 
 ## Summary
 

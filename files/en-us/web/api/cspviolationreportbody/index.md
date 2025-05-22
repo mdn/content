@@ -70,7 +70,7 @@ First, we will set our {{HTTPHeader("Content-Security-Policy")}} header in the H
 Content-Security-Policy: default-src 'self';
 ```
 
-or in the HTML [`<meta>`](/en-US/docs/Web/HTML/Element/meta) element:
+or in the HTML [`<meta>`](/en-US/docs/Web/HTML/Reference/Elements/meta) element:
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />

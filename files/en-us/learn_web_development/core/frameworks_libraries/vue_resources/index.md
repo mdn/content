@@ -2,9 +2,8 @@
 title: Vue resources
 slug: Learn_web_development/Core/Frameworks_libraries/Vue_resources
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenu("Learn_web_development/Core/Frameworks_libraries/Vue_refs_focus_management", "Learn_web_development/Core/Frameworks_libraries")}}
 

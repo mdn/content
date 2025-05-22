@@ -35,7 +35,7 @@ In our [basic compute demo](https://mdn.github.io/dom-examples/webgpu-compute-de
 ```js
 const BUFFER_SIZE = 1000;
 
-// ...
+// …
 
 // Create GPUCommandEncoder to encode commands to issue to the GPU
 const commandEncoder = device.createCommandEncoder();
@@ -63,7 +63,7 @@ commandEncoder.copyBufferToBuffer(
 // End frame by passing array of command buffers to command queue for execution
 device.queue.submit([commandEncoder.finish()]);
 
-// ...
+// …
 ```
 
 ## Specifications

@@ -7,7 +7,7 @@ browser-compat: css.properties.position
 
 {{CSSRef}}
 
-The **`position`** [CSS](/en-US/docs/Web/CSS) property sets how an element is positioned in a document. The {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, and {{Cssxref("left")}} properties determine the final location of positioned elements.
+The **`position`** [CSS](/en-US/docs/Web/CSS) property sets how an element is positioned in a document. The {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, and {{Cssxref("left")}} physical properties and the {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}} flow-relative logical properties can be used to determine the final location of positioned elements.
 
 {{InteractiveExample("CSS Demo: position")}}
 
@@ -23,8 +23,8 @@ left: 40px;
 
 ```css interactive-example-choice
 position: absolute;
-top: 40px;
-left: 40px;
+inset-inline-start: 40px;
+inset-block-start: 40px;
 ```
 
 ```css interactive-example-choice
@@ -288,8 +288,8 @@ span {
 .positioned {
   position: absolute;
   background: yellow;
-  top: 30px;
-  left: 30px;
+  inset-block-start: 30px;
+  inset-inline-start: 30px;
 }
 ```
 
@@ -543,5 +543,7 @@ When you put both bulbs in their proper place, you'll notice that they are relat
 
 ## See also
 
+- {{glossary("Inset properties")}}
 - [Learn CSS: Positioning](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning)
-- [Using container scroll-state queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)
+- [Inset properties for positioned layout](/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning#example_inset_properties_for_positioned_layout)
+- [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) modules

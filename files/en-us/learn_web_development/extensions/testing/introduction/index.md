@@ -3,9 +3,10 @@ title: Introduction to cross-browser testing
 short-title: Introduction
 slug: Learn_web_development/Extensions/Testing/Introduction
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Testing/Testing_strategies", "Learn_web_development/Extensions/Testing")}}
+{{NextMenu("Learn_web_development/Extensions/Testing/Testing_strategies", "Learn_web_development/Extensions/Testing")}}
 
 This article gives an overview of cross-browser testing: what cross-browser testing is, some common problems, and some approaches for debugging/troubleshooting.
 

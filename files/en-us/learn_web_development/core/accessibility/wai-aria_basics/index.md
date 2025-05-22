@@ -3,9 +3,8 @@ title: WAI-ARIA basics
 short-title: WAI-ARIA
 slug: Learn_web_development/Core/Accessibility/WAI-ARIA_basics
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/CSS_and_JavaScript","Learn_web_development/Core/Accessibility/Multimedia", "Learn_web_development/Core/Accessibility")}}
 
@@ -1229,7 +1228,7 @@ In our tests, this new structure did serve to improve things overall. The `<butt
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: WAI-ARIA](/en-US/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics/Test_your_skills:_WAI-ARIA).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: WAI-ARIA](/en-US/docs/Learn_web_development/Core/Accessibility/Test_your_skills/WAI-ARIA).
 
 ## Summary
 

@@ -19,7 +19,7 @@ There are four properties in an accessibility tree object:
 - [**role**](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles)
   - : What kind of thing is it? For example, is it a button, a nav bar, or a list of items?
 - [**state**](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes)
-  - : Does it have a state? Examples include checked or unchecked checkbox states and collapsed or expanded states for the [`<summary>`](/en-US/docs/Web/HTML/Element/summary) element.
+  - : Does it have a state? Examples include checked or unchecked checkbox states and collapsed or expanded states for the [`<summary>`](/en-US/docs/Web/HTML/Reference/Elements/summary) element.
 
 Additionally, the accessibility tree often contains information on what can be done with an element: a link can be _followed_, a text input can be _typed into_, etc.
 

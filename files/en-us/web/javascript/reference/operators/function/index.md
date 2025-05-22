@@ -92,7 +92,7 @@ const math = {
   },
 };
 
-math.factorial(3); //3;2;1;
+math.factorial(3); // 3;2;1;
 ```
 
 If a function expression is named, the [`name`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name) property of the function is set to that name, instead of the implicit name inferred from syntax (such as the variable the function is assigned to).

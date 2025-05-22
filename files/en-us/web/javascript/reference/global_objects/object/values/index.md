@@ -13,13 +13,13 @@ The **`Object.values()`** static method returns an array of a given object's own
 
 ```js interactive-example
 const object1 = {
-  a: "somestring",
+  a: "some string",
   b: 42,
   c: false,
 };
 
 console.log(Object.values(object1));
-// Expected output: Array ["somestring", 42, false]
+// Expected output: Array ["some string", 42, false]
 ```
 
 ## Syntax

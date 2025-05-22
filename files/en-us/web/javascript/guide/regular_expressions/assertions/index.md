@@ -269,8 +269,8 @@ In this example, we match fruit names containing a word that ends in "en" or "ed
 const fruitsWithDescription = ["Red apple", "Orange orange", "Green Avocado"];
 
 // Select descriptions that contains 'en' or 'ed' words endings:
-const enEdSelection = fruitsWithDescription.filter((descr) =>
-  /(en|ed)\b/.test(descr),
+const enEdSelection = fruitsWithDescription.filter((description) =>
+  /(en|ed)\b/.test(description),
 );
 
 console.log(enEdSelection); // [ 'Red apple', 'Green Avocado' ]

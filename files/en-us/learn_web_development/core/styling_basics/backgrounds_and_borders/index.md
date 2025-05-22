@@ -2,9 +2,8 @@
 title: Backgrounds and borders
 slug: Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics")}}
 
@@ -554,7 +553,7 @@ We have set all four corners in the example below and then changed the values fo
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Backgrounds and borders](/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills_backgrounds_and_borders).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Backgrounds and borders](/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders).
 
 ## Summary
 

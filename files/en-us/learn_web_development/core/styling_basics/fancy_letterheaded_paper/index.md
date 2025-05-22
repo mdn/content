@@ -3,9 +3,8 @@ title: "Challenge: Creating fancy letterheaded paper"
 short-title: "Challenge: Fancy letterhead"
 slug: Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension", "Learn_web_development/Core/Styling_basics/Cool-looking_box", "Learn_web_development/Core/Styling_basics")}}
 

@@ -99,7 +99,7 @@ grid-template-areas: unset;
 
 - `none`
   - : The grid container doesn't define any named grid areas.
-- `{{cssxref("&lt;string&gt;")}}+`
+- {{cssxref("&lt;string&gt;")}}
 
   - : A row is created for every separate string listed, and a column is created for each cell in the string. Multiple cell tokens with the same name within and between rows create a single named grid area that spans the corresponding grid cells. Unless those cells form a rectangle, the declaration is invalid.
 

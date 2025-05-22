@@ -16,7 +16,8 @@ If not populated it is the empty string `""`.
 Note that this is only populated when attempting to load _inline_ scripts, event handlers, or styles that violate CSP [`script-src*`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) and [`style-src*`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src) rules — external resources that violate the CSP will not generate a sample.
 In addition, a sample is only included if the `Content-Security-Policy` directive that was violated also contains the [`'report-sample'`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#report-sample) keyword.
 
-> [!NOTE] Violation reports should be considered attacker-controlled data.
+> [!NOTE]
+> Violation reports should be considered attacker-controlled data.
 > The content of this field _in particular_ should be sanitized before storing or rendering.
 
 ## Value
@@ -32,7 +33,7 @@ We also add `'report-sample'` to the CSP in order to populate a `sample` in the 
 
 #### HTML
 
-The HTML file below uses the [`<meta>`](/en-US/docs/Web/HTML/Element/meta) element to set the {{httpheader('Content-Security-Policy')}} `script-src-elem` to `self`, which allows scripts to be loaded from the same domain, but does not allow inline scripts to be executed.
+The HTML file below uses the [`<meta>`](/en-US/docs/Web/HTML/Reference/Elements/meta) element to set the {{httpheader('Content-Security-Policy')}} `script-src-elem` to `self`, which allows scripts to be loaded from the same domain, but does not allow inline scripts to be executed.
 We include `'report-sample'` in the directive so that a sample is generated.
 The document also includes an inline script, which should trigger a CSP violation.
 

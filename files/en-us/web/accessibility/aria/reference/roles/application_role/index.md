@@ -1,5 +1,6 @@
 ---
 title: "ARIA: application role"
+short-title: application
 slug: Web/Accessibility/ARIA/Reference/Roles/application_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#application
@@ -41,7 +42,7 @@ The `application` role is designed to provide a means for widgets that are not p
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
   - : Used to provide the name of the application or purpose of the widget that is being exposed.
 - [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
-  - : Used to indicate the idref of an element that contains additional instructions for navigating or operating this element.
+  - : Used to reference the ID of an element that contains additional instructions for navigating or operating this element.
 - [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-roledescription)
   - : Used to give the application a more descriptive role text for screen readers to speak. This should be localized.
 - [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled)
@@ -57,7 +58,7 @@ The `application` role is designed to provide a means for widgets that are not p
 
 Keyboard interaction is completely under the web author's control and can be anything associated with the particular widget being implemented. In a slides application, for example, a widget could be created that uses the arrow keys to position elements on the slide, and uses audio feedback via an ARIA live region to communicate the position and overlap status with other objects. Focus is being managed via _aria-activedescendant_.
 
-The <kbd>Tab</kbd>, <kbd>Space</kbd> and <kbd>Enter</kbd> keys, as well as <kbd>Escape</kbd>, must be handled by the application. The one exception is if focus is set to a standard widget inside the application that supports keyboard navigation from the browser, for example an [input](/en-US/docs/Web/HTML/Element/input) element.
+The <kbd>Tab</kbd>, <kbd>Space</kbd> and <kbd>Enter</kbd> keys, as well as <kbd>Escape</kbd>, must be handled by the application. The one exception is if focus is set to a standard widget inside the application that supports keyboard navigation from the browser, for example an [input](/en-US/docs/Web/HTML/Reference/Elements/input) element.
 
 ### Required JavaScript features
 

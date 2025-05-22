@@ -42,7 +42,7 @@ If you want to work with a file from the user's computer one option is to let th
 
 Example: [Imagify](https://github.com/mdn/webextensions-examples/tree/main/imagify)
 Guide: [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)
-API references: [HTML input element](/en-US/docs/Web/HTML/Element/input/file) | [DOM File API](/en-US/docs/Web/API/File)
+API references: [HTML input element](/en-US/docs/Web/HTML/Reference/Elements/input/file) | [DOM File API](/en-US/docs/Web/API/File)
 
 > [!NOTE]
 > If you want to access or process all the files in a selected folder, you can do so using `<input type="file" webkitdirectory="true"/>` to select the folder and return all the files it contains.

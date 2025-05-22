@@ -2,9 +2,8 @@
 title: What is accessibility?
 slug: Learn_web_development/Howto/Design_and_accessibility/What_is_accessibility
 page-type: learn-faq
+sidebar: learn-how-to
 ---
-
-{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 This article introduces the basic concepts behind web accessibility.
 

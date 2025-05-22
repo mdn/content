@@ -242,7 +242,7 @@ The code below prints "Feature: Supported" if the API is supported on this brows
 ```
 
 ```js hidden
-//hidden logger code - simplifies example
+// hidden logger code - simplifies example
 let log = document.getElementById("log");
 function myLog(text) {
   log.textContent += `${text}\n`;

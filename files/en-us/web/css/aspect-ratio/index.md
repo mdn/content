@@ -65,7 +65,7 @@ aspect-ratio: revert-layer;
 aspect-ratio: unset;
 ```
 
-This property is specified as one or both of the keyword auto or a `<ratio>`. If both are given, and the element is a {{ glossary("replaced elements", "replaced element")}}, such as [`<img>`](/en-US/docs/Web/HTML/Element/img), then the given ratio is used until the content is loaded. After the content is loaded, the `auto` value is applied, so the intrinsic aspect ratio of the loaded content is used.
+This property is specified as one or both of the keyword auto or a `<ratio>`. If both are given, and the element is a {{ glossary("replaced elements", "replaced element")}}, such as [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img), then the given ratio is used until the content is loaded. After the content is loaded, the `auto` value is applied, so the intrinsic aspect ratio of the loaded content is used.
 
 If the element is not a replaced element, then the given `ratio` is used.
 

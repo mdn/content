@@ -86,7 +86,7 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
 
 ## See also
 
-- [WebAssembly](/en-US/docs/WebAssembly) overview page
+- [WebAssembly](/en-US/docs/WebAssembly) overview
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Guides/Concepts)
 - [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Guides/Using_the_JavaScript_API)
 - [Import/Export mutable globals proposal](https://github.com/WebAssembly/mutable-global/blob/master/proposals/mutable-global/Overview.md)

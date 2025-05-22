@@ -12,17 +12,17 @@ The **`delete`** operator removes a property from an object. If the property's v
 {{InteractiveExample("JavaScript Demo: delete operator")}}
 
 ```js interactive-example
-const Employee = {
-  firstname: "Maria",
-  lastname: "Sanchez",
+const employee = {
+  firstName: "Maria",
+  lastName: "Sanchez",
 };
 
-console.log(Employee.firstname);
+console.log(employee.firstName);
 // Expected output: "Maria"
 
-delete Employee.firstname;
+delete employee.firstName;
 
-console.log(Employee.firstname);
+console.log(employee.firstName);
 // Expected output: undefined
 ```
 

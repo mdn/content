@@ -3,9 +3,8 @@ title: What will your website look like?
 short-title: What will it look like?
 slug: Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website")}}
 
@@ -79,16 +78,19 @@ Note that most images on the web, including in Google Images, are copyrighted. T
 
 ## Choosing a font
 
-As with images, many fonts are protected by licenses, meaning you cannot freely use them in your site. [Google Fonts](https://developers.google.com/fonts) is a web service owned by Google that provides access to many fonts.
+There is a set of fonts called the [web safe fonts](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals#web_safe_fonts) — such as Arial, Times New Roman, or Courier New — that are generally available on most computer systems. If you use one of these fonts on your website, the browser will load the font file available on the user's computer.
 
-Once you have found a font, there are two main ways of using it:
+However, if you want to use other fonts not generally available on devices, you need to either include them along with your website files or reference the font files from a third-party font service so the browser can download them as needed. [Google Fonts](https://fonts.google.com/) is one such service that provides access to many fonts.
 
-1. Add a reference in your code to load the font from Google's servers.
-2. Download the font file to your own system, host the font yourself, and use your hosted copy in your website's code.
+Let's use Google fonts to choose a font for your website:
+
+1. Go to [Google Fonts](https://fonts.google.com/).
+2. Scroll down the list of fonts until you find one you like. If you are having trouble finding one, you can use the filters available in the other column to narrow down your search.
+3. Click your font option, then on the next page click the "Get font" button.
+4. On the next page, click "Get embed code".
+5. Copy both of the provided code blocks, and save them somewhere safe for later use.
 
 > [!NOTE]
-> Serving fonts hosted on Google Fonts may be incompatible with the European Union's data privacy regulation [GDPR](https://gdpr.eu/) as the font service exposes the user's IP address. If this is a potential problem for you, then either choose the second option or choose a font provider that is GDPR compliant, such as [Bunny Fonts](https://fonts.bunny.net/about).
-
-Alternatively you can use [safe web fonts](https://web.mit.edu/jmorzins/www/fonts.html) such as Arial, Times New Roman, or Courier New.
+> As with images, many fonts are protected by licenses, meaning you cannot necessarily use them freely on commercial websites. You will be fine for now while working on learning examples, but keep this in mind when choosing fonts for real websites.
 
 {{NextMenu("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website")}}

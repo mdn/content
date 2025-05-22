@@ -18,10 +18,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("periodicsync", (event) => {});
+```js-nolint
+addEventListener("periodicsync", (event) => { })
 
-onperiodicsync = (event) => {};
+onperiodicsync = (event) => { }
 ```
 
 ## Event type
@@ -53,7 +53,7 @@ You can also set up the event handler using the `onperiodicsync` property:
 
 ```js
 self.onperiodicsync = (event) => {
-  // ...
+  // …
 };
 ```
 

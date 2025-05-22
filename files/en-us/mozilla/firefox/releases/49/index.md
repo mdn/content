@@ -34,12 +34,12 @@ page-type: firefox-release-notes
 ### HTML
 
 - Added support for the {{HTMLElement("details")}} and {{HTMLElement("summary")}} elements ([Firefox bug 1226455](https://bugzil.la/1226455)).
-- The [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern) attribute of the {{HTMLElement("input")}} element now uses the `'u'` parameter in the underlying JavaScript {{jsxref("RegExp")}} ([Firefox bug 1227906](https://bugzil.la/1227906)).
-- To match a spec change, an invalid value of the [`kind`](/en-US/docs/Web/HTML/Element/track#kind) attribute of the {{HTMLElement('track')}} element is now treated like `"metadata"` instead of `"subtitles"` ([Firefox bug 1269712](https://bugzil.la/1269712)).
-- The {{HTMLElement("iframe")}} element's [`sandbox`](/en-US/docs/Web/HTML/Element/iframe#sandbox) attribute now supports the `'allow-popups-to-escape-sandbox'` and `'allow-modals'` values ([Firefox bug 1190641](https://bugzil.la/1190641)).
+- The [`pattern`](/en-US/docs/Web/HTML/Reference/Elements/input#pattern) attribute of the {{HTMLElement("input")}} element now uses the `'u'` parameter in the underlying JavaScript {{jsxref("RegExp")}} ([Firefox bug 1227906](https://bugzil.la/1227906)).
+- To match a spec change, an invalid value of the [`kind`](/en-US/docs/Web/HTML/Reference/Elements/track#kind) attribute of the {{HTMLElement('track')}} element is now treated like `"metadata"` instead of `"subtitles"` ([Firefox bug 1269712](https://bugzil.la/1269712)).
+- The {{HTMLElement("iframe")}} element's [`sandbox`](/en-US/docs/Web/HTML/Reference/Elements/iframe#sandbox) attribute now supports the `'allow-popups-to-escape-sandbox'` and `'allow-modals'` values ([Firefox bug 1190641](https://bugzil.la/1190641)).
 - Support for microdata attributes and the Microdata API have been removed ([Firefox bug 909633](https://bugzil.la/909633)).
-- The [`referrerpolicy`](/en-US/docs/Web/HTML/Element/a#referrerpolicy) attribute on the {{HTMLElement("a")}} element now supports the `'no-referrer-when-downgrade'` and `'origin-when-cross-origin'` ([Firefox bug 1178337](https://bugzil.la/1178337)).
-- The [`form`](/en-US/docs/Web/HTML/Element/label#form) content attribute of the {{HTMLElement("label")}} element has been removed. The {{domxref("HTMLLabelElement.form")}} property still exists, but now returns the form with which the label's control is associated, if there is a control (and if that control is associated with a form) ([Firefox bug 1268852](https://bugzil.la/1268852)).
+- The [`referrerpolicy`](/en-US/docs/Web/HTML/Reference/Elements/a#referrerpolicy) attribute on the {{HTMLElement("a")}} element now supports the `'no-referrer-when-downgrade'` and `'origin-when-cross-origin'` ([Firefox bug 1178337](https://bugzil.la/1178337)).
+- The [`form`](/en-US/docs/Web/HTML/Reference/Elements/label#form) content attribute of the {{HTMLElement("label")}} element has been removed. The {{domxref("HTMLLabelElement.form")}} property still exists, but now returns the form with which the label's control is associated, if there is a control (and if that control is associated with a form) ([Firefox bug 1268852](https://bugzil.la/1268852)).
 
 ### CSS
 
@@ -55,7 +55,7 @@ page-type: firefox-release-notes
 - Our experimental [CSS Grids](/en-US/docs/Web/CSS/CSS_grid_layout) implementation has been improved:
 
   - Implemented {{cssxref("&lt;percentage&gt;")}} for the `grid-gap`, `grid-row-gap`, and `grid-column-gap` properties ([Firefox bug 1266268](https://bugzil.la/1266268)).
-  - Implemented grid layout support for {{cssxref("align")}}, {{cssxref("justify-self")}}`:baseline` and `last-baseline` (aka "baseline self-alignment") ([Firefox bug 1221525](https://bugzil.la/1221525)).
+  - Implemented grid layout support for {{cssxref("align-self")}}, {{cssxref("justify-self")}} values `baseline` and `last-baseline` (aka "baseline self-alignment") ([Firefox bug 1221525](https://bugzil.la/1221525)).
   - Implemented grid item baseline content alignment ([Firefox bug 1256429](https://bugzil.la/1256429)).
 
 - Our experimental [CSS Masks](/en-US/docs/Web/CSS/CSS_masking) implementation has been improved:
@@ -70,7 +70,7 @@ page-type: firefox-release-notes
 
 - The ES2015 {{jsxref("Global_Objects/Proxy/Proxy/getPrototypeOf", "getPrototypeOf()")}} and {{jsxref("Global_Objects/Proxy/Proxy/setPrototypeOf", "setPrototypeOf()")}} {{jsxref("Proxy")}} traps have been implemented ([Firefox bug 888969](https://bugzil.la/888969)).
 - The ES2015 [`RegExp.prototype[Symbol.match]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match), [`RegExp.prototype[Symbol.replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace), [`RegExp.prototype[Symbol.search]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search), and [`RegExp.prototype[Symbol.split]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split) methods, and [`RegExp[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.species) getter have been implemented ([Firefox bug 887016](https://bugzil.la/887016)).
-- The deprecated, non-standard `flags` argument of `String.prototype.`{{jsxref("String.prototype.match", "match")}}/{{jsxref("String.prototype.search", "search")}}/{{jsxref("String.prototype.replace", "replace")}} has been removed ([Firefox bug 1108382](https://bugzil.la/1108382)).
+- The deprecated, non-standard `flags` argument of {{jsxref("String.prototype.match")}}/{{jsxref("String.prototype.search", "search")}}/{{jsxref("String.prototype.replace", "replace")}} has been removed ([Firefox bug 1108382](https://bugzil.la/1108382)).
 - The behavior of the {{jsxref("Date.parse()")}} method when parsing 2-digit years has been changed to be more interoperable with the Google Chrome browser ([Firefox bug 1265136](https://bugzil.la/1265136)).
 
 ### Interfaces/APIs/DOM

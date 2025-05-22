@@ -85,7 +85,7 @@ if (user_info.length > 0) {
   const picture = user_info[0].picture;
   const email = user_info[0].email;
 
-  // ...
+  // …
 
   // Render the personalized sign-in button using the information above
 }

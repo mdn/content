@@ -2,9 +2,8 @@
 title: Trigger installation from your PWA
 slug: Web/Progressive_web_apps/How_to/Trigger_install_prompt
 page-type: how-to
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 > [!WARNING]
 > The technique described here depends on the {{domxref("Window.beforeinstallprompt_event", "beforeinstallprompt")}} event, which is non-standard and currently only implemented in Chromium-based browsers.
@@ -24,7 +23,7 @@ First, add some UI to the app indicating that the user can install it. For examp
 <button id="install" hidden>Install</button>
 ```
 
-We're setting the button's [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden) attribute, because if the user visits the app with a browser that can't install it, we don't want the install UI to be visible. Next, we'll see how to make the button visible only on browsers that support installing PWAs locally.
+We're setting the button's [`hidden`](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden) attribute, because if the user visits the app with a browser that can't install it, we don't want the install UI to be visible. Next, we'll see how to make the button visible only on browsers that support installing PWAs locally.
 
 ## Listening for beforeinstallprompt
 

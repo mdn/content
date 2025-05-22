@@ -406,6 +406,7 @@
       "guides": [
         "/docs/Web/API/Document_Object_Model/Introduction",
         "/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model",
+        "/docs/Web/API/Document_Object_Model/Reflected_attributes",
         "/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces",
         "/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors",
         "/docs/Web/API/Document_Object_Model/Transforming_with_XSLT",
@@ -529,6 +530,14 @@
       "guides": ["/docs/Web/API/Fetch_API/Using_Fetch"],
       "interfaces": ["Headers", "Request", "RequestInit", "Response"],
       "methods": ["Window.fetch()", "WorkerGlobalScope.fetch()"],
+      "properties": [],
+      "events": []
+    },
+    "fetchLater API": {
+      "overview": ["fetchLater API"],
+      "guides": ["/docs/Web/API/fetchLater_API/fetchLater_quotas"],
+      "interfaces": ["DeferredRequestInit", "FetchLaterResult"],
+      "methods": ["Window.fetchLater()"],
       "properties": [],
       "events": []
     },
@@ -710,6 +719,10 @@
     },
     "HTML DOM": {
       "overview": ["HTML DOM API"],
+      "guides": [
+        "/docs/Web/API/HTML_DOM_API/Microtask_guide",
+        "/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth"
+      ],
       "interfaces": [
         "BeforeUnloadEvent",
         "DOMStringMap",
@@ -815,7 +828,6 @@
         "Element: DOMActivate",
         "Element: focus",
         "Element: select",
-        "Element: show",
         "HTMLDialogElement: cancel",
         "HTMLDialogElement: close",
         "HTMLElement: input",
@@ -943,7 +955,11 @@
     "Insertable Streams for MediaStreamTrack API": {
       "overview": ["Insertable Streams for MediaStreamTrack API"],
       "guides": [],
-      "interfaces": ["MediaStreamTrackGenerator", "MediaStreamTrackProcessor"],
+      "interfaces": [
+        "MediaStreamTrackGenerator",
+        "MediaStreamTrackProcessor",
+        "VideoTrackGenerator"
+      ],
       "methods": [],
       "properties": [],
       "events": []
@@ -1544,6 +1560,14 @@
       "properties": ["Response.body"],
       "events": []
     },
+    "Summarizer API": {
+      "overview": ["Summarizer API"],
+      "guides": ["/docs/Web/API/Summarizer_API/Using"],
+      "interfaces": ["Summarizer", "CreateMonitor"],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "SVG": {
       "overview": ["SVG API"],
       "guides": ["/docs/Web/SVG"],
@@ -1570,7 +1594,6 @@
         "SVGCircleElement",
         "SVGClipPathElement",
         "SVGComponentTransferFunctionElement",
-        "SVGCursorElement",
         "SVGDefsElement",
         "SVGDescElement",
         "SVGDiscardElement",
@@ -1602,19 +1625,11 @@
         "SVGFETileElement",
         "SVGFETurbulenceElement",
         "SVGFilterElement",
-        "SVGFontElement",
-        "SVGFontFaceElement",
-        "SVGFontFaceFormatElement",
-        "SVGFontFaceNameElement",
-        "SVGFontFaceSrcElement",
-        "SVGFontFaceUriElement",
         "SVGForeignObjectElement",
         "SVGGElement",
-        "SVGGlyphElement",
         "SVGGradientElement",
         "SVGGraphicsElement",
         "SVGMarkerElement",
-        "SVGHKernElement",
         "SVGImageElement",
         "SVGLength",
         "SVGLengthList",
@@ -1622,7 +1637,6 @@
         "SVGLineElement",
         "SVGMaskElement",
         "SVGMetadataElement",
-        "SVGMissingGlyphElement",
         "SVGMPathElement",
         "SVGNumber",
         "SVGNumberList",
@@ -1651,12 +1665,10 @@
         "SVGTitleElement",
         "SVGTransform",
         "SVGTransformList",
-        "SVGTRefElement",
         "SVGTSpanElement",
         "SVGUnitTypes",
         "SVGUseElement",
         "SVGViewElement",
-        "SVGVKernElement",
         "TimeEvent"
       ],
       "methods": [],
@@ -1772,7 +1784,7 @@
     },
     "URL Fragment Text Directives": {
       "overview": ["URL Fragment Text Directives"],
-      "guides": ["/en-US/docs/Web/URI/Fragment/Text_fragments"],
+      "guides": ["/en-US/docs/Web/URI/Reference/Fragment/Text_fragments"],
       "interfaces": ["FragmentDirective"],
       "methods": [],
       "properties": ["Document.fragmentDirective"]
@@ -1831,7 +1843,8 @@
       "guides": [
         "/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API",
         "/docs/Web/API/Web_Animations_API/Web_Animations_API_Concepts",
-        "/docs/Web/API/Web_Animations_API/Keyframe_Formats"
+        "/docs/Web/API/Web_Animations_API/Keyframe_Formats",
+        "/docs/Web/API/Web_Animations_API/Tips"
       ],
       "interfaces": [
         "Animation",
@@ -2257,9 +2270,7 @@
         "RTCPeerConnection: connectionstatechange",
         "RTCPeerConnection: datachannel",
         "RTCDataChannel: error",
-        "RTCIceTransport: error",
         "RTCDtlsTransport: error",
-        "RTCSctpTransport: error",
         "RTCIceTransport: gatheringstatechange",
         "RTCPeerConnection: icecandidate",
         "RTCPeerConnection: icecandidateerror",
@@ -2428,8 +2439,8 @@
       "methods": ["Navigator.getVRDisplays()"],
       "properties": ["Gamepad.displayId", "Navigator.activeVRDisplays"],
       "events": [
-        "Window: vrdisplayconnected",
-        "Window: vrdisplaydisconnected",
+        "Window: vrdisplayconnect",
+        "Window: vrdisplaydisconnect",
         "Window: vrdisplayactivate",
         "Window: vrdisplaydeactivate",
         "Window: vrdisplayblur",

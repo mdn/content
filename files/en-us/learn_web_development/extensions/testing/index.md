@@ -2,9 +2,8 @@
 title: Testing
 slug: Learn_web_development/Extensions/Testing
 page-type: learn-module
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Extensions/Testing/Introduction", "Learn_web_development/Extensions")}}
 

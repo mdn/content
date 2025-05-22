@@ -3,9 +3,8 @@ title: Pseudo-classes and pseudo-elements
 short-title: Pseudo-classes and elements
 slug: Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics")}}
 

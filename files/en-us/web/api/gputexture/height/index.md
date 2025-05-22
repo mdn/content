@@ -22,7 +22,7 @@ A number.
 ## Examples
 
 ```js
-// ...
+// …
 
 const depthTexture = device.createTexture({
   size: [640, 480],

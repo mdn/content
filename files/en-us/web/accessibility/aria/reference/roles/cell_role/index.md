@@ -1,5 +1,6 @@
 ---
 title: "ARIA: cell role"
+short-title: cell
 slug: Web/Accessibility/ARIA/Reference/Roles/cell_role
 page-type: aria-role
 spec-urls:
@@ -17,7 +18,7 @@ The `cell` value of the ARIA _role_ attribute identifies an element as being a c
 </div>
 ```
 
-A better, more semantic way of writing the cells above would be to use the semantic [`<td>`](/en-US/docs/Web/HTML/Element/td) element.
+A better, more semantic way of writing the cells above would be to use the semantic [`<td>`](/en-US/docs/Web/HTML/Reference/Elements/td) element.
 
 ```html
 <tr role="row">
@@ -44,11 +45,11 @@ A cell can contain a number of property attributes clarifying the cell's positio
 - [role="row"](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
   - : An element with `role="row"` is a row of cells within a tabular structure. A row contains one or more cells, grid cells, column headers, or row headers within a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role), [`table`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/table_role) or `treegrid`, and optionally within a [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role).
 - [role="rowgroup"](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role)
-  - : `Row` is a required cell parent. `Rowgroup` is an optional contextual row parent. It establishes a relationship between descendant rows. It is a structural equivalent to the [`thead`](/en-US/docs/Web/HTML/Element/thead), [`tfoot`](/en-US/docs/Web/HTML/Element/tfoot), and [`tbody`](/en-US/docs/Web/HTML/Element/tbody) elements in an [HTML `table`](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics) element.
+  - : `Row` is a required cell parent. `Rowgroup` is an optional contextual row parent. It establishes a relationship between descendant rows. It is a structural equivalent to the [`thead`](/en-US/docs/Web/HTML/Reference/Elements/thead), [`tfoot`](/en-US/docs/Web/HTML/Reference/Elements/tfoot), and [`tbody`](/en-US/docs/Web/HTML/Reference/Elements/tbody) elements in an [HTML `table`](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics) element.
 - [role="table"](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)
-  - : One of the three possible contexts (along with `grid` and `treegrid`) in which you'll find a row containing cells. Table identifies the cell as being part of a non-interactive table structure containing data arranged in rows and columns, similar to the native HTML [`<table>`](/en-US/docs/Web/HTML/Element/table) element.
+  - : One of the three possible contexts (along with `grid` and `treegrid`) in which you'll find a row containing cells. Table identifies the cell as being part of a non-interactive table structure containing data arranged in rows and columns, similar to the native HTML [`<table>`](/en-US/docs/Web/HTML/Reference/Elements/table) element.
 - [role="grid"](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role)
-  - : One of the three possible contexts (along with `table` and `treegrid`) in which you'll find a row containing `cells` and `gridcells`. `Grid` identifies a cell as being part of a possibly interactive table structure containing data arranged in rows and columns, similar to the native [`<table>`](/en-US/docs/Web/HTML/Element/table) HTML element.
+  - : One of the three possible contexts (along with `table` and `treegrid`) in which you'll find a row containing `cells` and `gridcells`. `Grid` identifies a cell as being part of a possibly interactive table structure containing data arranged in rows and columns, similar to the native [`<table>`](/en-US/docs/Web/HTML/Reference/Elements/table) HTML element.
 - [role="treegrid"](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role)
   - : Similar to a grid, but with rows that can be expanded and collapsed in the same manner as for a tree.
 
@@ -57,16 +58,16 @@ A cell can contain a number of property attributes clarifying the cell's positio
 - [role="gridcell"](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
   - : A cell in a row within a `grid` or `treegrid`.
 - [role="columnheader"](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
-  - : A header cell that is the structural equivalent of the HTML [`<th>`](/en-US/docs/Web/HTML/Element/th) element with a column scope. Unlike a plain cell, the `columnheader` role establishes a relationship between it and all cells in the corresponding column.
+  - : A header cell that is the structural equivalent of the HTML [`<th>`](/en-US/docs/Web/HTML/Reference/Elements/th) element with a column scope. Unlike a plain cell, the `columnheader` role establishes a relationship between it and all cells in the corresponding column.
 - [role="rowheader"](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
-  - : A header cell that is the structural equivalent of the HTML [`<th>`](/en-US/docs/Web/HTML/Element/th) element with a row scope. Unlike a plain cell, the `rowheader` role establishes a relationship between it and all cells in the corresponding row.
+  - : A header cell that is the structural equivalent of the HTML [`<th>`](/en-US/docs/Web/HTML/Reference/Elements/th) element with a row scope. Unlike a plain cell, the `rowheader` role establishes a relationship between it and all cells in the corresponding row.
 
 #### States and properties
 
 - [`aria-colspan`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colspan)
-  - : Similar to the HTML [`<th>`](/en-US/docs/Web/HTML/Element/th) and [`<td>` colspan attribute](/en-US/docs/Web/HTML/Element/td), it defines the number of columns spanned by the cell.
+  - : Similar to the HTML [`<th>`](/en-US/docs/Web/HTML/Reference/Elements/th) and [`<td>` colspan attribute](/en-US/docs/Web/HTML/Reference/Elements/td), it defines the number of columns spanned by the cell.
 - [`aria-rowspan`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowspan)
-  - : Similar to the HTML [`<th>`](/en-US/docs/Web/HTML/Element/th) and [`<td>` rowspan attribute](/en-US/docs/Web/HTML/Element/td), it defines the number of rows spanned by the cell.
+  - : Similar to the HTML [`<th>`](/en-US/docs/Web/HTML/Reference/Elements/th) and [`<td>` rowspan attribute](/en-US/docs/Web/HTML/Reference/Elements/td), it defines the number of rows spanned by the cell.
 - [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex) attribute
   - : The `aria-colindex` attribute is only needed if columns are hidden from the DOM. The attribute takes as its value an integer between 1 and the total number of columns within the `table`, `grid` or `treegrid`. The `aria-colindex` defines an element's column index or position with respect to the total number of columns within a row. If all the columns are in the DOM, this attribute is not necessary.
 - [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindex) attribute
@@ -78,7 +79,7 @@ None.
 
 ### Required JavaScript features
 
-The first rule of ARIA use is if you can use a native feature with the semantics and behavior you require already built in, instead of repurposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. Employ the HTML [`<td>`](/en-US/docs/Web/HTML/Element/td) element instead of the ARIA role of `cell` whenever possible.
+The first rule of ARIA use is if you can use a native feature with the semantics and behavior you require already built in, instead of repurposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. Employ the HTML [`<td>`](/en-US/docs/Web/HTML/Reference/Elements/td) element instead of the ARIA role of `cell` whenever possible.
 
 ## Examples
 
@@ -180,7 +181,7 @@ When applied to a {{HTMLElement('td')}}, it returns cell semantics to the elemen
 
 - [`role="row"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
 - [`role="gridcell"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
-- [HTML `<td>` element](/en-US/docs/Web/HTML/Element/td)
-- [HTML `<th>` element](/en-US/docs/Web/HTML/Element/th)
+- [HTML `<td>` element](/en-US/docs/Web/HTML/Reference/Elements/td)
+- [HTML `<th>` element](/en-US/docs/Web/HTML/Reference/Elements/th)
 - [Learn: HTML table accessibility](/en-US/docs/Learn_web_development/Core/Structuring_content/Table_accessibility)
 - [Learn: HTML table basics](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)

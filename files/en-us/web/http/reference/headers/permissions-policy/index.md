@@ -109,6 +109,14 @@ You can specify
 
   - : Controls whether the current document can be treated as {{domxref("Window.crossOriginIsolated", "cross-origin isolated", "", 1)}}.
 
+- {{HTTPHeader('Permissions-Policy/deferred-fetch', 'deferred-fetch')}} {{experimental_inline}}
+
+  - : Controls the allocation of the top-level origin's [`fetchLater()` quota](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas).
+
+- {{HTTPHeader('Permissions-Policy/deferred-fetch-minimal', 'deferred-fetch-minimal')}} {{experimental_inline}}
+
+  - : Controls the allocation of the shared cross-origin subframe [`fetchLater()` quota](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas).
+
 - {{HTTPHeader('Permissions-Policy/display-capture', 'display-capture')}} {{experimental_inline}}
 
   - : Controls whether or not the current document is permitted to use the {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} method to capture screen contents. When this policy is disabled, the promise returned by `getDisplayMedia()` will reject with a `NotAllowedError` {{DOMxRef("DOMException")}} if permission is not obtained to capture the display's contents.
@@ -201,6 +209,10 @@ You can specify
 - {{httpheader("Permissions-Policy/storage-access", "storage-access")}} {{Experimental_Inline}}
 
   - : Controls whether a document loaded in a third-party context (i.e., embedded in an {{htmlelement("iframe")}}) is allowed to use the {{domxref("Storage Access API", "Storage Access API", "", "nocode")}} to request access to unpartitioned cookies.
+
+- {{httpheader("Permissions-Policy/summarizer", "summarizer")}} {{Experimental_Inline}}
+
+  - : Controls access to the [Summarizer API](/en-US/docs/Web/API/Summarizer_API).
 
 - {{httpheader('Permissions-Policy/usb', 'usb')}} {{Experimental_Inline}}
 

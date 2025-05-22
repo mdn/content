@@ -2,9 +2,8 @@
 title: Display a badge on the app icon
 slug: Web/Progressive_web_apps/How_to/Display_badge_on_app_icon
 page-type: how-to
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 Applications native to mobile and desktop operating systems can display badges on top of their app icons to inform users that new content is available. For example, an email client application can display the total number of unread messages in a badge and update this number even if the app is not running.
 

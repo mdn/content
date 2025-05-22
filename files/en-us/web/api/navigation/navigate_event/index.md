@@ -16,10 +16,10 @@ The **`navigate`** event of the {{domxref("Navigation")}} interface is fired whe
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("navigate", (event) => {});
+```js-nolint
+addEventListener("navigate", (event) => { })
 
-onnavigate = (event) => {};
+onnavigate = (event) => { }
 ```
 
 ## Event type

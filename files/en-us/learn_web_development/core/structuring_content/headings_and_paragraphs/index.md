@@ -2,9 +2,8 @@
 title: Headings and paragraphs
 slug: Learn_web_development/Core/Structuring_content/Headings_and_paragraphs
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content/Emphasis_and_importance", "Learn_web_development/Core/Structuring_content")}}
 

@@ -165,7 +165,7 @@ The following criteria must be met when calling **`createBindGroupLayout()`**, o
 Our [basic compute demo](https://mdn.github.io/dom-examples/webgpu-compute-demo/) shows an example of creating a bind group layout and then using that as a template when creating a bind group.
 
 ```js
-// ...
+// …
 
 const bindGroupLayout = device.createBindGroupLayout({
   entries: [
@@ -191,7 +191,7 @@ const bindGroup = device.createBindGroup({
   ],
 });
 
-// ...
+// …
 ```
 
 ## Specifications

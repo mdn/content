@@ -89,7 +89,7 @@ The container size has to be set by context, such as block-level elements that s
 
 - Whether the container's contents are partially scrolled.
 - Whether the container is a snap target that is snapped to a scroll snap container.
-- Whether the container is positioned via [`position: sticky`](/en-US/docs/Web/CSS/display) and stuck to a boundary of a {{glossary("scroll container", "scolling container")}}.
+- Whether the container is positioned via [`position: sticky`](/en-US/docs/Web/CSS/display) and stuck to a boundary of a {{glossary("scroll container", "scrolling container")}}.
 
 In the first case, the queried container is the scroll container itself. In the other two cases the queried container is an element that is affected by the scroll position of an ancestor scroll container.
 

@@ -3,9 +3,8 @@ title: Handling common HTML and CSS problems
 short-title: Common HTML and CSS problems
 slug: Learn_web_development/Extensions/Testing/HTML_and_CSS
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Testing/Testing_strategies","Learn_web_development/Extensions/Testing/Feature_detection", "Learn_web_development/Extensions/Testing")}}
 
@@ -106,7 +105,7 @@ Some problems can be solved by just taking advantage of the natural way in which
 
 Unrecognized HTML elements are treated by the browser as anonymous inline elements (effectively inline elements with no semantic value, similar to {{htmlelement("span")}} elements). You can still refer to them by their names, and style them with CSS, for example — you just need to make sure they are behaving as you want them to. Style them just as you would any other element, including setting the `display` property to something other than `inline` if needed.
 
-More complex elements like HTML [`<video>`](/en-US/docs/Web/HTML/Element/video), [`<audio>`](/en-US/docs/Web/HTML/Element/audio), [`<picture>`](/en-US/docs/Web/HTML/Element/picture), [`<object>`](/en-US/docs/Web/HTML/Element/object), and [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas) (and other features besides) have natural mechanisms for fallbacks to be added in case the resources linked to are not supported. You can add fallback content in between the opening and closing tags, and non-supporting browsers will effectively ignore the outer element and run the nested content.
+More complex elements like HTML [`<video>`](/en-US/docs/Web/HTML/Reference/Elements/video), [`<audio>`](/en-US/docs/Web/HTML/Reference/Elements/audio), [`<picture>`](/en-US/docs/Web/HTML/Reference/Elements/picture), [`<object>`](/en-US/docs/Web/HTML/Reference/Elements/object), and [`<canvas>`](/en-US/docs/Web/HTML/Reference/Elements/canvas) (and other features besides) have natural mechanisms for fallbacks to be added in case the resources linked to are not supported. You can add fallback content in between the opening and closing tags, and non-supporting browsers will effectively ignore the outer element and run the nested content.
 
 For example:
 
@@ -127,7 +126,7 @@ For example:
 
 This example includes a simple link allowing you to download the video if even the HTML video player doesn't work, so at least the user can still access the video.
 
-Another example is form elements. When new [`<input>`](/en-US/docs/Web/HTML/Element/input) types were introduced for inputting specific information into forms, such as times, dates, colors, numbers, etc., if a browser didn't support the new feature, the browser used the default of `type="text"`. Input types were added, which are very useful, particularly on mobile platforms, where providing a pain-free way of entering data is very important for the user experience. Platforms provide different UI widgets depending on the input type, such as a calendar widget for entering dates. Should a browser not support an input type, the user can still enter the required data.
+Another example is form elements. When new [`<input>`](/en-US/docs/Web/HTML/Reference/Elements/input) types were introduced for inputting specific information into forms, such as times, dates, colors, numbers, etc., if a browser didn't support the new feature, the browser used the default of `type="text"`. Input types were added, which are very useful, particularly on mobile platforms, where providing a pain-free way of entering data is very important for the user experience. Platforms provide different UI widgets depending on the input type, such as a calendar widget for entering dates. Should a browser not support an input type, the user can still enter the required data.
 
 The following example shows date and time inputs:
 
@@ -212,7 +211,9 @@ For example, in the Firefox dev tools, you get this kind of output at the bottom
 If for example you were trying to use this selector, you'd be able to see that it wouldn't select the input element as desired:
 
 ```css
-form > #date
+form > #date {
+  /* … */
+}
 ```
 
 (The `date` form input isn't a direct child of the `<form>`; you'd be better off using a general descendant selector instead of a child selector).
@@ -259,9 +260,9 @@ If you do need to include modern features, test for feature support using [`@sup
 
 ### Responsive design problems
 
-Responsive design is the practice of creating web layouts that change to suit different device form factors — for example, different screen widths, orientations (portrait or landscape), or resolutions. A desktop layout for example will look terrible when viewed on a mobile device, so you need to provide a suitable mobile layout using [media queries](/en-US/docs/Web/CSS/CSS_media_queries), and make sure it is applied correctly using [viewport](/en-US/docs/Web/HTML/Viewport_meta_tag). You can find a detailed account of such practices in [our responsive design tutorial](/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design).
+Responsive design is the practice of creating web layouts that change to suit different device form factors — for example, different screen widths, orientations (portrait or landscape), or resolutions. A desktop layout for example will look terrible when viewed on a mobile device, so you need to provide a suitable mobile layout using [media queries](/en-US/docs/Web/CSS/CSS_media_queries), and make sure it is applied correctly using [viewport](/en-US/docs/Web/HTML/Guides/Viewport_meta_element). You can find a detailed account of such practices in [our responsive design tutorial](/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design).
 
-Resolution is a big issue too — for example, mobile devices are less likely to need big heavy images than desktop computers, and are more likely to have slower internet connections and possibly even expensive data plans that make wasted bandwidth more of a problem. In addition, different devices can have a range of different resolutions, meaning that smaller images could appear pixelated. There are a number of techniques that allow you to work around such problems, from [media queries](/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design#media_queries) to more complex [responsive image techniques](/en-US/docs/Web/HTML/Responsive_images#resolution_switching_different_sizes), including {{HTMLElement('picture')}} and the {{HTMLElement('img')}} element's [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) and [`sizes`](/en-US/docs/Web/HTML/Element/img#sizes) attributes.
+Resolution is a big issue too — for example, mobile devices are less likely to need big heavy images than desktop computers, and are more likely to have slower internet connections and possibly even expensive data plans that make wasted bandwidth more of a problem. In addition, different devices can have a range of different resolutions, meaning that smaller images could appear pixelated. There are a number of techniques that allow you to work around such problems, from [media queries](/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design#media_queries) to more complex [responsive image techniques](/en-US/docs/Web/HTML/Guides/Responsive_images#resolution_switching_different_sizes), including {{HTMLElement('picture')}} and the {{HTMLElement('img')}} element's [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset) and [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes) attributes.
 
 ## Finding help
 
@@ -271,7 +272,7 @@ Among the best sources of support information are the Mozilla Developer Network 
 
 To use the Mozilla Developer Network (MDN), most people do a search engine search of the technology they are trying to find information on, plus the term "mdn", for example, "mdn HTML video". MDN contains several useful types of content:
 
-- Reference material with browser support information for client-side web technologies, e.g., the [\<video> reference page](/en-US/docs/Web/HTML/Element/video).
+- Reference material with browser support information for client-side web technologies, e.g., the [\<video> reference page](/en-US/docs/Web/HTML/Reference/Elements/video).
 - Other supporting reference material, for example our [Guide to media types and formats on the web](/en-US/docs/Web/Media/Guides/Formats),
 - Useful tutorials that solve specific problems, for example, [Creating a cross-browser video player](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player).
 

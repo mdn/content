@@ -23,7 +23,7 @@ Highlights:
 
 ### HTML
 
-- [`<link rel="prefetch">`](/en-US/docs/Glossary/Prefetch) now obeys the [`crossorigin`](/en-US/docs/Web/HTML/Element/link#crossorigin) attribute ([Firefox bug 1214819](https://bugzil.la/1214819)).
+- [`<link rel="prefetch">`](/en-US/docs/Glossary/Prefetch) now obeys the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Elements/link#crossorigin) attribute ([Firefox bug 1214819](https://bugzil.la/1214819)).
 
 ### CSS
 
@@ -215,7 +215,7 @@ _No change._
 
 ### Other
 
-- Due to breaking changes in Firefox 44 ([bug 1202902](https://bugzil.la/1202902)), add-ons packed with [cfx](/en-US/docs/Mozilla/Add-ons/SDK/Tools/cfx) will not work any longer. To make your add-on compatible again, please use [jpm](/en-US/docs/Mozilla/Add-ons/SDK/Tools/jpm). You can find steps to migrate from _cfx_ to _jpm_ [here](/en-US/docs/Mozilla/Add-ons/SDK/Tools/cfx_to_jpm).
+- Due to breaking changes in Firefox 44 ([bug 1202902](https://bugzil.la/1202902)), add-ons packed with [cfx](/en-US/docs/Mozilla/Add-ons/SDK/Tools/cfx) will not work any longer. To make your add-on compatible again, please use [jpm](/en-US/docs/Mozilla/Add-ons/SDK/Tools/jpm). See the [_cfx_ to _jpm_ migration guide](/en-US/docs/Mozilla/Add-ons/SDK/Tools/cfx_to_jpm).
 
 ## Older versions
 

@@ -2,7 +2,9 @@
 title: stdDeviation
 slug: Web/SVG/Reference/Attribute/stdDeviation
 page-type: svg-attribute
-browser-compat: svg.elements.feGaussianBlur.stdDeviation
+browser-compat:
+  - svg.elements.feDropShadow.stdDeviation
+  - svg.elements.feGaussianBlur.stdDeviation
 sidebar: svgref
 ---
 
@@ -10,6 +12,7 @@ The **`stdDeviation`** attribute defines the standard deviation for the blur ope
 
 You can use this attribute with the following SVG elements:
 
+- {{SVGElement("feDropShadow")}}
 - {{SVGElement("feGaussianBlur")}}
 
 ## Example

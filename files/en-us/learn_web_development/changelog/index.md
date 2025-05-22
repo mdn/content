@@ -2,9 +2,8 @@
 title: Changelog
 slug: Learn_web_development/Changelog
 page-type: landing-page
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 ## December 2024
 

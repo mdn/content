@@ -3,7 +3,9 @@ title: "store: Wasm text instruction"
 short-title: store
 slug: WebAssembly/Reference/Memory/Store
 page-type: webassembly-instruction
-browser-compat: webassembly.multiMemory
+browser-compat:
+  - webassembly.api.Memory
+  - webassembly.multiMemory
 spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-memory
 sidebar: webassemblysidebar
 ---
@@ -55,7 +57,7 @@ console.log(first_number_in_mem);
 
 Store in default memory
 
-```wasm
+```wat
 ;; Store value in default memory at particular offset
 i32.const 0 ;; stack variable with offset in memory to store the number
 i32.const 20 ;; stack variable with the number to store
@@ -67,7 +69,7 @@ i32.store ;; store in default memory
 
 Store to specified memory (if multi-memory supported)
 
-```wasm
+```wat
 ;; Store in memory referenced by its index
 i32.const 0 ;; offset in memory to store the number
 i32.const 20 ;; the number to store
@@ -102,8 +104,7 @@ i32.store (memory $memoryName)  ;; store in memory with name "$memoryName"
 
 ## Browser compatibility
 
-> [!NOTE]
-> Memory support in Wasm modules matches the [`WebAssembly.Memory`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory) JavaScript API.
-> The [multiMemory](#webassembly.multimemory) key indicates versions in which `store` can be used with a specified memory.
-
 {{Compat}}
+
+> [!NOTE]
+> The `multiMemory` compatibility table indicates versions in which `store` can be used with a specified memory.

@@ -10,7 +10,7 @@ browser-compat: api.Element.paste_event
 
 The **`paste`** event of the [Clipboard API](/en-US/docs/Web/API/Clipboard_API) is fired when the user has initiated a "paste" action through the browser's user interface.
 
-If the cursor is in an editable context (for example, in a {{HTMLElement("textarea")}} or an element with [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute set to `true`) then the default action is to insert the contents of the clipboard into the document at the cursor position.
+If the cursor is in an editable context (for example, in a {{HTMLElement("textarea")}} or an element with [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) attribute set to `true`) then the default action is to insert the contents of the clipboard into the document at the cursor position.
 
 A handler for this event can access the clipboard contents by calling {{domxref("DataTransfer/getData", "getData()")}} on the event's `clipboardData` property.
 
@@ -18,16 +18,16 @@ To override the default behavior (for example to insert some different data or a
 
 It's possible to construct and dispatch a [synthetic](/en-US/docs/Web/Events/Creating_and_triggering_events) `paste` event, but this will not affect the document's contents.
 
-This event [bubbles](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling), is [cancelable](/en-US/docs/Web/API/Event/cancelable) and is [composed](/en-US/docs/Web/API/Event/composed).
+This event [bubbles](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling) up the DOM tree, eventually to {{domxref("Document")}} and {{domxref("Window")}}, is [cancelable](/en-US/docs/Web/API/Event/cancelable) and is [composed](/en-US/docs/Web/API/Event/composed).
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("paste", (event) => {});
+```js-nolint
+addEventListener("paste", (event) => { })
 
-onpaste = (event) => {};
+onpaste = (event) => { }
 ```
 
 ## Event type
@@ -90,6 +90,5 @@ target.addEventListener("paste", (event) => {
 
 ## See also
 
-- Related events: {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}
-- This event on {{domxref("Document")}} targets: {{domxref("Document/paste_event", "paste")}}
-- This event on {{domxref("Window")}} targets: {{domxref("Window/paste_event", "paste")}}
+- {{domxref("Element/cut_event", "cut")}} event
+- {{domxref("Element/copy_event", "copy")}} event

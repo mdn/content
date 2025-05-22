@@ -12,7 +12,7 @@ browser-compat: api.Keyboard.lock
 
 The **`lock()`** method of the
 {{domxref("Keyboard")}} interface returns a {{jsxref('Promise')}} that resolves after enabling the
-capture of keypresses for any or all of the keys on the physical keyboard. This method
+capture of key presses for any or all of the keys on the physical keyboard. This method
 can only capture keys that are granted access by the underlying operating
 system.
 
@@ -53,7 +53,7 @@ A {{jsxref('Promise')}} that resolves with {{jsxref('undefined')}} when the lock
 
 ### Capturing all keys
 
-The following example captures all keypresses.
+The following example captures all key presses.
 
 ```js
 navigator.keyboard.lock();

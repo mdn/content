@@ -2,9 +2,8 @@
 title: How to turn off form autocompletion
 slug: Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
 page-type: guide
+sidebar: security
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
 This article explains how to disable autocomplete for form fields on a website.
 
@@ -14,11 +13,11 @@ By default, browsers remember information that the user submits through {{HTMLEl
 
 These features are usually enabled by default, but they can be a privacy concern for users, so browsers can let users disable them. However, some data submitted in forms is either not useful beyond the current interaction (for example, a one-time pin) or contains sensitive information (for example, a unique government identifier or credit card security code). As the website author, you may prefer the browser not to remember the values for such fields, even if the browser's autocomplete feature is enabled.
 
-> **Note:** [WCAG 2.1 Success Criterion 1.3.5: Identify Input Purpose](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html) does not require that autocomplete or autofill features must work; it only requires that form fields that relate to specific personal user information are programmatically identified. This means that the criterion can still be met (by adding the relevant [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete) attributes to individual form fields) even when autocompletion for the form itself has been turned off.
+> **Note:** [WCAG 2.1 Success Criterion 1.3.5: Identify Input Purpose](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html) does not require that autocomplete or autofill features must work; it only requires that form fields that relate to specific personal user information are programmatically identified. This means that the criterion can still be met (by adding the relevant [`autocomplete`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete) attributes to individual form fields) even when autocompletion for the form itself has been turned off.
 
 ## Disabling autocompletion
 
-To disable autocompletion in forms, you can set the [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete) attribute to `"off"`:
+To disable autocompletion in forms, you can set the [`autocomplete`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete) attribute to `"off"`:
 
 ```plain
 autocomplete="off"

@@ -2,9 +2,10 @@
 title: Measuring performance
 slug: Learn_web_development/Extensions/Performance/Measuring_performance
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}} {{PreviousMenuNext("Learn_web_development/Extensions/Performance/Perceived_performance", "Learn_web_development/Extensions/Performance/Multimedia", "Learn_web_development/Extensions/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Perceived_performance", "Learn_web_development/Extensions/Performance/Multimedia", "Learn_web_development/Extensions/Performance")}}
 
 Measuring performance provides an important metric to help you assess the success of your app, site, or web service.
 

@@ -88,7 +88,7 @@ HTTP redirects aren't the only way to define redirections. There are two others:
 
 ### HTML redirections
 
-HTTP redirects are the best way to create redirections, but sometimes you don't have control over the server. In that case, try a {{HTMLElement("meta")}} element with its [`http-equiv`](/en-US/docs/Web/HTML/Element/meta#http-equiv) attribute set to `Refresh` in the {{HTMLElement("head")}} of the page. When displaying the page, the browser will go to the indicated URL.
+HTTP redirects are the best way to create redirections, but sometimes you don't have control over the server. In that case, try a {{HTMLElement("meta")}} element with its [`http-equiv`](/en-US/docs/Web/HTML/Reference/Elements/meta#http-equiv) attribute set to `Refresh` in the {{HTMLElement("head")}} of the page. When displaying the page, the browser will go to the indicated URL.
 
 ```html
 <head>
@@ -96,7 +96,7 @@ HTTP redirects are the best way to create redirections, but sometimes you don't 
 </head>
 ```
 
-The [`content`](/en-US/docs/Web/HTML/Element/meta#content) attribute should start with a number indicating how many seconds the browser should wait before redirecting to the given URL. Always set it to `0` for accessibility compliance.
+The [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content) attribute should start with a number indicating how many seconds the browser should wait before redirecting to the given URL. Always set it to `0` for accessibility compliance.
 
 Obviously, this method only works with HTML, and cannot be used for images or other types of content.
 

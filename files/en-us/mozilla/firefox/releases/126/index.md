@@ -61,7 +61,7 @@ No notable changes.
 
 ##### Removals
 
-- The [`<marquee>` HTML element](/en-US/docs/Web/HTML/Element/marquee) events [`bounce`](/en-US/docs/Web/API/HTMLMarqueeElement#bounce), [`finish`](/en-US/docs/Web/API/HTMLMarqueeElement#finish), and [`start`](/en-US/docs/Web/API/HTMLMarqueeElement#start) have been removed from [`HTMLMarqueeElement`](/en-US/docs/Web/API/HTMLMarqueeElement), along with the corresponding [event handler attributes](/en-US/docs/Web/API/HTMLMarqueeElement#events) ([Firefox bug 1689705](https://bugzil.la/1689705)).
+- The [`<marquee>` HTML element](/en-US/docs/Web/HTML/Reference/Elements/marquee) events [`bounce`](/en-US/docs/Web/API/HTMLMarqueeElement#bounce), [`finish`](/en-US/docs/Web/API/HTMLMarqueeElement#finish), and [`start`](/en-US/docs/Web/API/HTMLMarqueeElement#start) have been removed from [`HTMLMarqueeElement`](/en-US/docs/Web/API/HTMLMarqueeElement), along with the corresponding [event handler attributes](/en-US/docs/Web/API/HTMLMarqueeElement#events) ([Firefox bug 1689705](https://bugzil.la/1689705)).
 - The [Theora](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#theora) codec was disabled by default, and will be removed in a future release ([Firefox bug 1860492](https://bugzil.la/1860492)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
@@ -70,7 +70,7 @@ No notable changes.
 
 - Added the `contexts` argument to the `network.addIntercept` command to limit the interception of network requests to particular top-level browsing contexts ([Firefox bug 1882260](https://bugzil.la/1882260)).
 - Both the commands `session.subscribe` and `session.unsubscribe` now raise an `invalid argument` error when the value of the arguments `events` or `contexts` are empty arrays ([Firefox bug 1887871](https://bugzil.la/1887871)).
-- Updated the implementation of the `storage.getCookies` command to align with the Gecko default cookie behaviour. This allows the removal of the user value for the preference `network.cookie.cookieBehavior`, which was only expected to be set for our CDP implementation ([Firefox bug 1879503](https://bugzil.la/1879503)).
+- Updated the implementation of the `storage.getCookies` command to align with the Gecko default cookie behavior. This allows the removal of the user value for the preference `network.cookie.cookieBehavior`, which was only expected to be set for our CDP implementation ([Firefox bug 1879503](https://bugzil.la/1879503)).
 - Removed the `ownership` and `sandbox` arguments for the `browsingContext.locateNodes` command because they are no longer necessary ([Firefox bug 1884935](https://bugzil.la/1884935)).
 - Improved error message for the `session.new` command when no capabilities are specified ([Firefox bug 1838152](https://bugzil.la/1838152)).
 

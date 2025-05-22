@@ -26,8 +26,8 @@ _See the [Mozilla Hacks blog post](https://hacks.mozilla.org/2014/02/css-source-
 
 ### CSS
 
-- [CSS variables](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) have been implemented ([Firefox bug 773296](https://bugzil.la/773296)). Mozilla Hacks article can be found [here](https://hacks.mozilla.org/2013/12/css-variables-in-firefox-nightly/). They are enabled by default only for non-release builds (on release builds flip the pref `layout.css.variables.enabled` to `true` if you want to play with them).
-- Flexboxes now support {{cssxref("visibility")}}`: collapse` ([Firefox bug 783470](https://bugzil.la/783470)).
+- [CSS variables](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) have been implemented ([Firefox bug 773296](https://bugzil.la/773296)). The [CSS Variables in Firefox Nightly](https://hacks.mozilla.org/2013/12/css-variables-in-firefox-nightly/) on Mozilla Hacks contains more details. They are enabled by default only for non-release builds (on release builds flip the pref `layout.css.variables.enabled` to `true` if you want to play with them).
+- Flexboxes now support {{cssxref("visibility", "visibility: collapse")}} ([Firefox bug 783470](https://bugzil.la/783470)).
 - The {{cssxref("box-sizing")}} property has been unprefixed ([Firefox bug 243412](https://bugzil.la/243412)).
 - The {{cssxref("will-change")}} property, a hint to that something will animate has been added. The preference `layout.css.will-change.enabled` must be switched to `true` to enable it. ([Firefox bug 940842](https://bugzil.la/940842))
 - Scientific exponential notation, like `3e1` or `10e+0`, is now supported for {{cssxref("&lt;number&gt;")}} values and derivatives, like {{cssxref("&lt;percentage&gt;")}} and unit values, but not {{cssxref("&lt;integer&gt;")}} ([Firefox bug 964529](https://bugzil.la/964529)).
