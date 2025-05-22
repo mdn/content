@@ -1,5 +1,6 @@
 ---
-title: "CSP: block-all-mixed-content"
+title: "Content-Security-Policy: block-all-mixed-content directive"
+short-title: block-all-mixed-content
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/block-all-mixed-content
 page-type: http-csp-directive
 status:

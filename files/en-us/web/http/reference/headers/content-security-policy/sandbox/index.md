@@ -1,5 +1,6 @@
 ---
-title: "CSP: sandbox"
+title: "Content-Security-Policy: sandbox directive"
+short-title: sandbox
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/sandbox
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.sandbox

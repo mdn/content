@@ -1,5 +1,6 @@
 ---
-title: "CSP: font-src"
+title: "Content-Security-Policy: font-src directive"
+short-title: font-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/font-src
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.font-src
