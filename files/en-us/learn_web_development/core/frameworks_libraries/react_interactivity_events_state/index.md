@@ -79,7 +79,7 @@ function handleSubmit(event) {
 To use this function, add an `onSubmit` attribute to the [`<form>`](/en-US/docs/Web/HTML/Reference/Elements/form) element, and set its value to the `handleSubmit` function:
 
 ```jsx
-<form onSubmit={handleSubmit}>
+<form onSubmit={handleSubmit}>{/* … */}</form>
 ```
 
 Now if you head back to your browser and click on the "Add" button, your browser will show you an alert dialog with the words "Hello, world!" — or whatever you chose to write there.

@@ -1,5 +1,6 @@
 ---
 title: "ARIA: form role"
+short-title: form
 slug: Web/Accessibility/ARIA/Reference/Roles/form_role
 page-type: aria-role
 spec-urls:

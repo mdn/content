@@ -1,5 +1,6 @@
 ---
 title: "ARIA: heading role"
+short-title: heading
 slug: Web/Accessibility/ARIA/Reference/Roles/heading_role
 page-type: aria-role
 spec-urls:

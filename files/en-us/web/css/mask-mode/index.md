@@ -38,7 +38,7 @@ The `mask-mode` property can take multiple comma-separated `<masking-mode>` keyw
 
 - `luminance`
 
-  - : Indicates that the [luminance (brightness)](#understanding-luminance) values of the mask image should be used.
+  - : Indicates that the [luminance (brightness)](#understanding_luminance) values of the mask image should be used.
 
 - `match-source`
   - : Indicates that the type of mask is determined by the source. This is the default property value.
@@ -147,4 +147,5 @@ Because the mask source is an `<image>` and not an SVG `<mask>`, the `match-sour
 - {{cssxref("mask-type")}}
 - {{cssxref("mask-image")}}
 - {{cssxref("mask")}} shorthand
+- [Introduction to CSS masking](/en-US/docs/Web/CSS/CSS_masking/Masking)
 - [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
