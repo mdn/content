@@ -25,7 +25,7 @@ Such animations can trigger discomfort for those with [vestibular motion disorde
 - `no-preference`
   - : Indicates that a user has made no preference known on the device. This keyword value evaluates as false.
 - `reduce`
-- : Indicates that a user has enabled the setting on their device for reduced motion. The reduce keyword value evaluates as true, therefore `@media (prefers-reduced-motion)` is equivalent to `@media (prefers-reduced-motion: reduce)`.
+  - : Indicates that a user has enabled the setting on their device for reduced motion. The `reduce` keyword value evaluates as true; therefore, `@media (prefers-reduced-motion)` is equivalent to `@media (prefers-reduced-motion: reduce)`.
 
 ## User preferences
 
