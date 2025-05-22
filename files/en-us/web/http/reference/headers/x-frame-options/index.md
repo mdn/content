@@ -1,5 +1,6 @@
 ---
-title: X-Frame-Options
+title: X-Frame-Options header
+short-title: X-Frame-Options
 slug: Web/HTTP/Reference/Headers/X-Frame-Options
 page-type: http-header
 browser-compat: http.headers.X-Frame-Options

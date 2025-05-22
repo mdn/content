@@ -1,5 +1,6 @@
 ---
-title: Dictionary-ID
+title: Dictionary-ID header
+short-title: Dictionary-ID
 slug: Web/HTTP/Reference/Headers/Dictionary-ID
 page-type: http-header
 status:

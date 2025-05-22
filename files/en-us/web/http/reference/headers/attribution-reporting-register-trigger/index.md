@@ -1,5 +1,6 @@
 ---
-title: Attribution-Reporting-Register-Trigger
+title: Attribution-Reporting-Register-Trigger header
+short-title: Attribution-Reporting-Register-Trigger
 slug: Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Trigger
 page-type: http-header
 status:

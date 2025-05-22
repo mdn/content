@@ -1,5 +1,6 @@
 ---
-title: If-Match
+title: If-Match header
+short-title: If-Match
 slug: Web/HTTP/Reference/Headers/If-Match
 page-type: http-header
 browser-compat: http.headers.If-Match

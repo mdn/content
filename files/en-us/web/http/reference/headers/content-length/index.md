@@ -1,5 +1,6 @@
 ---
-title: Content-Length
+title: Content-Length header
+short-title: Content-Length
 slug: Web/HTTP/Reference/Headers/Content-Length
 page-type: http-header
 browser-compat: http.headers.Content-Length

@@ -1,5 +1,6 @@
 ---
-title: Sec-GPC
+title: Sec-GPC header
+short-title: Sec-GPC
 slug: Web/HTTP/Reference/Headers/Sec-GPC
 page-type: http-header
 status:

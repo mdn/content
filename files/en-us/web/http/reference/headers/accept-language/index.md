@@ -1,5 +1,6 @@
 ---
-title: Accept-Language
+title: Accept-Language header
+short-title: Accept-Language
 slug: Web/HTTP/Reference/Headers/Accept-Language
 page-type: http-header
 browser-compat: http.headers.Accept-Language

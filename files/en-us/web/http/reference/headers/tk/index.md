@@ -1,5 +1,6 @@
 ---
-title: Tk
+title: Tk header
+short-title: Tk
 slug: Web/HTTP/Reference/Headers/Tk
 page-type: http-header
 status:
