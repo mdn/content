@@ -44,7 +44,11 @@ bread
 hummus
 ```
 
-Every unordered list starts off with a {{htmlelement("ul")}} element—this wraps around all the list items:
+We'll build this list step by step in HTML.
+
+**Step 1**: We add a {{htmlelement("ul")}} element—every unordered list uses this to wrap around all the list items.
+
+Note that the following code is not valid HTML yet. We'll build on it in the next step.
 
 ```html-nolint
 <ul>
@@ -55,7 +59,7 @@ Every unordered list starts off with a {{htmlelement("ul")}} element—this wrap
 </ul>
 ```
 
-The last step is to wrap each list item in a {{htmlelement("li")}} (list item) element:
+**Step 2**: We wrap each list item in a {{htmlelement("li")}} (list item) element:
 
 ```html
 <ul>
