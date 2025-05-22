@@ -3,10 +3,12 @@ title: "Summarizer: create() static method"
 short-title: create()
 slug: Web/API/Summarizer/create_static
 page-type: web-api-static-method
+status:
+  - experimental
 browser-compat: api.Summarizer.create_static
 ---
 
-{{APIRef("Summarizer API")}}{{securecontext_header}}
+{{APIRef("Summarizer API")}}{{securecontext_header}}{{SeeCompatTable}}
 
 The **`create()`** static method of the {{domxref("Summarizer")}} interface creates a new `Summarizer` instance from which to generate summaries.
 

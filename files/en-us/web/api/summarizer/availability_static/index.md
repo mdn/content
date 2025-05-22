@@ -3,10 +3,12 @@ title: "Summarizer: availability() static method"
 short-title: availability()
 slug: Web/API/Summarizer/availability_static
 page-type: web-api-static-method
+status:
+  - experimental
 browser-compat: api.Summarizer.availability_static
 ---
 
-{{APIRef("Summarizer API")}}{{securecontext_header}}
+{{APIRef("Summarizer API")}}{{securecontext_header}}{{SeeCompatTable}}
 
 The **`availability()`** static method of the {{domxref("Summarizer")}} interface returns an enumerated value that indicates whether the browser AI model supports (or will support) a given `Summarizer` configuration.
 
