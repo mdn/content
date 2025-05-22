@@ -5,7 +5,7 @@ page-type: firefox-release-notes
 sidebar: firefoxsidebar
 ---
 
-This article provides information about the changes in Firefox 139 that affect developers. Firefox 139 was released on [May 27, 2025](https://whattrainisitnow.com/release/?version=139).
+This article provides information about the changes in Firefox 139 that affect developers. Firefox 139 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [May 27, 2025](https://whattrainisitnow.com/release/?version=139).
 
 ## Changes for web developers
 
@@ -99,7 +99,7 @@ This article provides information about the changes in Firefox 139 that affect d
 
 ## Experimental web features
 
-These features are newly shipped in Firefox 139 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+These features are shipping in Firefox 139 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 
 - **Prioritized Task Scheduling API** (Nightly release).
   The [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) provides a standardized way to prioritize all tasks belonging to an application, whether they are defined in a website developer's code, or in third-party libraries and frameworks.
