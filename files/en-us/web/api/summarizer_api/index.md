@@ -10,7 +10,7 @@ spec-urls: https://webmachinelearning.github.io/writing-assistance-apis/#summari
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Summarizer API")}}
 
-The **Summarizer API** summarizes a given body of text via a browser's internal AI model.
+The **Summarizer API** summarizes a given body of text via a browser's internal AI model (which may differ between browsers).
 
 ## Concepts and usage
 
