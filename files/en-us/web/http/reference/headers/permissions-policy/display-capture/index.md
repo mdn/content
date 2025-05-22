@@ -1,5 +1,6 @@
 ---
-title: "Permissions-Policy: display-capture"
+title: "Permissions-Policy: display-capture directive"
+short-title: display-capture
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/display-capture
 page-type: http-permissions-policy-directive
 status:

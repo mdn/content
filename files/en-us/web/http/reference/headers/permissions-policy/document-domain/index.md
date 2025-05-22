@@ -1,5 +1,6 @@
 ---
-title: "Permissions-Policy: document-domain"
+title: "Permissions-Policy: document-domain directive"
+short-title: document-domain
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/document-domain
 page-type: http-permissions-policy-directive
 status:
