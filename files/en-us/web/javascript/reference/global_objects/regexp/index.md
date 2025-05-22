@@ -195,8 +195,8 @@ This displays `"Cruz, Maria"`.
 The default line ending varies depending on the platform (Unix, Windows, etc.). The line splitting provided in this example works on all platforms.
 
 ```js
-const text = "Some text\nAnd some more\r\nAnd yet\rThis is the end";
-const lines = text.split(/\r\n|\r|\n/);
+const text = "Some text\nAnd some more\r\nAnd yet\nThis is the end";
+const lines = text.split(/\r?\n/);
 console.log(lines); // [ 'Some text', 'And some more', 'And yet', 'This is the end' ]
 ```
 
@@ -204,13 +204,15 @@ Note that the order of the patterns in the regular expression matters.
 
 ### Using regular expression on multiple lines
 
+By default, the `.` character does not match newlines. To make it match newlines, use the `s` flag (`dotAll` mode).
+
 ```js
 const s = "Please yes\nmake my day!";
 
 s.match(/yes.*day/);
 // Returns null
 
-s.match(/yes[^]*day/);
+s.match(/yes.*day/s);
 // Returns ["yes\nmake my day"]
 ```
 

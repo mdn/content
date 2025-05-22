@@ -1096,16 +1096,16 @@ const b = 2;
 const c = 3;
 
 // default precedence
-a + b * c     // 7
+a + b * c; // 7
 // evaluated by default like this
-a + (b * c)   // 7
+a + (b * c); // 7
 
 // now overriding precedence
 // addition before multiplication
-(a + b) * c   // 9
+(a + b) * c; // 9
 
 // which is equivalent to
-a * c + b * c // 9
+a * c + b * c; // 9
 ```
 
 ### Property accessor
