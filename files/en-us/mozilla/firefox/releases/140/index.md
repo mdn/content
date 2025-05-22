@@ -5,7 +5,7 @@ page-type: firefox-release-notes
 sidebar: firefoxsidebar
 ---
 
-This article provides information about the changes in Firefox 140 that affect developers. Firefox 140 was released on [June 24, 2025](https://whattrainisitnow.com/release/?version=140).
+This article provides information about the changes in Firefox 140 that affect developers. Firefox 140 is the current [Nightly version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly) and ships on [June 24, 2025](https://whattrainisitnow.com/release/?version=140).
 
 ## Changes for web developers
 

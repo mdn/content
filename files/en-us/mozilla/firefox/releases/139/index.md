@@ -5,7 +5,7 @@ page-type: firefox-release-notes
 sidebar: firefoxsidebar
 ---
 
-This article provides information about the changes in Firefox 139 that affect developers. Firefox 139 was released on [May 27, 2025](https://whattrainisitnow.com/release/?version=139).
+This article provides information about the changes in Firefox 139 that affect developers. Firefox 139 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [May 27, 2025](https://whattrainisitnow.com/release/?version=139).
 
 ## Changes for web developers
 
