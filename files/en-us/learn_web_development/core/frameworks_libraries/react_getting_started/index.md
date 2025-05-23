@@ -213,8 +213,8 @@ Let's open `src/App.jsx`, since our browser is prompting us to edit it. This fil
 
 ```jsx
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
+import reactLogo from "./assets/react.svg";
 import "./App.css";
 
 function App() {
@@ -257,8 +257,8 @@ The `import` statements at the top of the file allow `App.jsx` to use code that 
 
 ```jsx
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
+import reactLogo from "./assets/react.svg";
 import "./App.css";
 ```
 

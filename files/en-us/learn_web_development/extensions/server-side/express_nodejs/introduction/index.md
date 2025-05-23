@@ -154,6 +154,7 @@ First lets consider the standard Express [Hello World](https://expressjs.com/en/
 
 ```js
 const express = require("express");
+
 const app = express();
 const port = 3000;
 
@@ -180,6 +181,7 @@ The code below shows how we import a module by name, using the _Express_ framewo
 
 ```js
 const express = require("express");
+
 const app = express();
 ```
 
@@ -203,6 +205,7 @@ We can import this module using `require()`, and then call the exported method(s
 
 ```js
 const square = require("./square"); // Here we require() the name of the file without the (optional) .js file extension
+
 console.log(`The area of a square with a width of 4 is ${square.area(4)}`);
 ```
 
@@ -292,6 +295,7 @@ Often it is useful to group route handlers for a particular part of a site toget
 // wiki.js - Wiki route module
 
 const express = require("express");
+
 const router = express.Router();
 
 // Home page route
@@ -314,6 +318,7 @@ To use the router in our main app file we would then `require()` the route modul
 
 ```js
 const wiki = require("./wiki.js");
+
 // …
 app.use("/wiki", wiki);
 ```
@@ -341,6 +346,7 @@ You could then call `use()` on the _Express application object_ to add the middl
 ```js
 const express = require("express");
 const logger = require("morgan");
+
 const app = express();
 app.use(logger("dev"));
 // …
@@ -357,6 +363,7 @@ The example below shows how you can add the middleware function using both appro
 
 ```js
 const express = require("express");
+
 const app = express();
 
 // An example middleware function
@@ -461,7 +468,7 @@ The database itself can be installed locally or on a cloud server. In your Expre
 This works with older versions of MongoDB version ~ 2.2.33:
 
 ```js
-const MongoClient = require("mongodb").MongoClient;
+const { MongoClient } = require("mongodb");
 
 MongoClient.connect("mongodb://localhost:27017/animals", (err, db) => {
   if (err) throw err;
@@ -479,7 +486,7 @@ MongoClient.connect("mongodb://localhost:27017/animals", (err, db) => {
 For MongoDB version 3.0 and up:
 
 ```js
-const MongoClient = require("mongodb").MongoClient;
+const { MongoClient } = require("mongodb");
 
 MongoClient.connect("mongodb://localhost:27017/animals", (err, client) => {
   if (err) throw err;
@@ -511,6 +518,7 @@ In your application settings code you set the template engine to use and the loc
 ```js
 const express = require("express");
 const path = require("path");
+
 const app = express();
 
 // Set directory to contain the templates ('views')

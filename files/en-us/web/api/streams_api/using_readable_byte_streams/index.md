@@ -102,7 +102,7 @@ class MockHypotheticalSocket {
     const resultObj = {};
     resultObj["bytesRead"] = 0;
 
-    return new Promise((resolve /*, reject*/) => {
+    return new Promise((resolve /*, reject */) => {
       if (this.data_read >= this.max_data) {
         // Out of data
         resolve(resultObj);
@@ -440,7 +440,7 @@ class MockUnderlyingFileHandle {
     resultObj["buffer"] = buffer;
     resultObj["bytesRead"] = 0;
 
-    return new Promise((resolve /*, reject*/) => {
+    return new Promise((resolve /*, reject */) => {
       if (position >= this.maxdata) {
         // Out of data
         resolve(resultObj);
@@ -701,7 +701,7 @@ class MockUnderlyingFileHandle {
     resultObj["buffer"] = buffer;
     resultObj["bytesRead"] = 0;
 
-    return new Promise((resolve /*, reject*/) => {
+    return new Promise((resolve /*, reject */) => {
       if (position >= this.maxdata) {
         // Out of data
         resolve(resultObj);
@@ -941,7 +941,7 @@ class MockUnderlyingFileHandle {
     resultObj["buffer"] = buffer;
     resultObj["bytesRead"] = 0;
 
-    return new Promise((resolve /*, reject*/) => {
+    return new Promise((resolve /*, reject */) => {
       if (position >= this.maxdata) {
         // Out of data
         resolve(resultObj);
