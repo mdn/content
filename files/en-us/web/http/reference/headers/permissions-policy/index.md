@@ -1,5 +1,6 @@
 ---
-title: Permissions-Policy
+title: Permissions-Policy header
+short-title: Permissions-Policy
 slug: Web/HTTP/Reference/Headers/Permissions-Policy
 page-type: http-header
 status:

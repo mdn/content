@@ -1,5 +1,6 @@
 ---
-title: Content-Range
+title: Content-Range header
+short-title: Content-Range
 slug: Web/HTTP/Reference/Headers/Content-Range
 page-type: http-header
 browser-compat: http.headers.Content-Range

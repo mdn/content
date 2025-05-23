@@ -1,5 +1,6 @@
 ---
-title: Reporting-Endpoints
+title: Reporting-Endpoints header
+short-title: Reporting-Endpoints
 slug: Web/HTTP/Reference/Headers/Reporting-Endpoints
 page-type: http-header
 browser-compat: http.headers.Reporting-Endpoints

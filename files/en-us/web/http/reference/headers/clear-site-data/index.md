@@ -1,5 +1,6 @@
 ---
-title: Clear-Site-Data
+title: Clear-Site-Data header
+short-title: Clear-Site-Data
 slug: Web/HTTP/Reference/Headers/Clear-Site-Data
 page-type: http-header
 browser-compat: http.headers.Clear-Site-Data

@@ -1,5 +1,6 @@
 ---
-title: X-Permitted-Cross-Domain-Policies
+title: X-Permitted-Cross-Domain-Policies header
+short-title: X-Permitted-Cross-Domain-Policies
 slug: Web/HTTP/Reference/Headers/X-Permitted-Cross-Domain-Policies
 page-type: http-header
 status:
