@@ -34,7 +34,7 @@ During a view transition, `::view-transition-image-pair` has {{cssxref("isolatio
 }
 ```
 
-The accepted values are as follows:
+### Parameters
 
 - `*`
   - : The [universal selector (`*`)](/en-US/docs/Web/CSS/Universal_selectors); selects all view transition groups on a page.

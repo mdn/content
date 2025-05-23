@@ -41,18 +41,18 @@ In addition, the element's transform is animated from the "old" view state's scr
 }
 ```
 
-The accepted values are as follows:
+### Parameters
 
 - `*`
   - : The [universal selector (`*`)](/en-US/docs/Web/CSS/Universal_selectors); selects all view transition groups on a page.
 - `root`
-  - : The {{cssxref("view-transition-name")}} applied to {{cssxref(":root")}}. Causes the pseudo-element to match the default `root` view transition snapshot group created by the user agent to contain the view transition for the overall page. This group includes any element not assigned to its own specific view transition snapshot group via the `view-transition-name` property.
+  - : The {{cssxref("view-transition-name")}} applied to {{cssxref(":root")}} causes the pseudo-element to match the default `root` view transition group. This is the snapshot group created by the user agent to contain the view transition for the overall page. This group includes any element not assigned to its own specific view transition snapshot group via the `view-transition-name` property.
 - `<pt-name-selector>`
   - : The {{cssxref("custom-ident")}} set as the value of the {{cssxref("view-transition-name")}} property.
 - `<pt-class-selector>`
-  - : The {{cssxref("custom-ident")}} set as the value of the {{cssxref("view-transition-class")}} property preceded by a period (`.`).
+  - : The {{cssxref("custom-ident")}} set as the value of the {{cssxref("view-transition-class")}} property, preceded by a period (`.`).
 
-If using the parameter is the universal selector, the {{cssxref("specificity")}} of the named view transition pseudo-element selector is zero. Otherwise, the [specificity](/en-US/docs/Web/CSS/Specificity#type_column) is equal to a [type selector](/en-US/docs/Web/CSS/Type_selectors).
+The  {{cssxref("specificity")}} of the named view transition pseudo-element is equal to the [specificity of the type selector](/en-US/docs/Web/CSS/Specificity#type_column), unless the parameter used is the universal selector is used, in which case the specificity is zero.
 
 ## Examples
 
