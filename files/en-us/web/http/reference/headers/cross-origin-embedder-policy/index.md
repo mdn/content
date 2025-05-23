@@ -1,5 +1,5 @@
 ---
-title: Cross-Origin-Embedder-Policy header
+title: Cross-Origin-Embedder-Policy (COEP) header
 short-title: Cross-Origin-Embedder-Policy
 slug: Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy
 page-type: http-header

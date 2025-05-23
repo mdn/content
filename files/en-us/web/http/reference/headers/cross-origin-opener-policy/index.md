@@ -1,5 +1,5 @@
 ---
-title: Cross-Origin-Opener-Policy header
+title: Cross-Origin-Opener-Policy (COOP) header
 short-title: Cross-Origin-Opener-Policy
 slug: Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy
 page-type: http-header
