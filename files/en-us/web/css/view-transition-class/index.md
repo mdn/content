@@ -55,20 +55,20 @@ Until the `view-transition-class` property is fully supported in all browsers su
 ## Examples
 
 ```css
-::view-transition-group(.card) {
+::view-transition-group(.product) {
   animation-duration: 3s;
 }
 
-.card {
-  view-transition-class: card;
+.product {
+  view-transition-class: fast-card-slide;
 }
 
-.card#card1 {
-  view-transition-name: card1;
+.product#card1 {
+  view-transition-name: show-card;
 }
 
-.card#card2 {
-  view-transition-name: card2;
+.product#card2 {
+  view-transition-name: hide-card;
 }
 ```
 
