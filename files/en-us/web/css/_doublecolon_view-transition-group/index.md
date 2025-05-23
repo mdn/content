@@ -52,7 +52,7 @@ In addition, the element's transform is animated from the "old" view state's scr
 - `<pt-class-selector>`
   - : The {{cssxref("custom-ident")}} set as the value of the {{cssxref("view-transition-class")}} property, preceded by a period (`.`).
 
-The  {{cssxref("specificity")}} of the named view transition pseudo-element is equal to the [specificity of the type selector](/en-US/docs/Web/CSS/Specificity#type_column), unless the parameter used is the universal selector is used, in which case the specificity is zero.
+The {{cssxref("specificity")}} of the named view transition pseudo-element is equal to the [specificity of the type selector](/en-US/docs/Web/CSS/Specificity#type_column), unless the parameter used is the universal selector is used, in which case the specificity is zero.
 
 ## Examples
 

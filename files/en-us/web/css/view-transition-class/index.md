@@ -37,7 +37,7 @@ view-transition-class: unset;
 
 ## Description
 
-The `view-transition-class` value provides a styling hook, similar to a CSS class name, which can be used to apply the same styles to multiple view transition pseudo-elements. It does not mark an element for capturing. Each individual element still needs its own unique {{cssxref("view-transition-name")}}; the `view-transition-class` is only used as an additional way to style elements that already have a `view-transition-name`. 
+The `view-transition-class` value provides a styling hook, similar to a CSS class name, which can be used to apply the same styles to multiple view transition pseudo-elements. It does not mark an element for capturing. Each individual element still needs its own unique {{cssxref("view-transition-name")}}; the `view-transition-class` is only used as an additional way to style elements that already have a `view-transition-name`.
 Support for determining the `view-transition-name` automatically is being discussed in the [CSS View Transitions Module Level 2](https://drafts.csswg.org/css-view-transitions-2/#auto-vt-name) spec.
 
 The `view-transition-class` apply styles using the view transition pseudo-elements, including {{cssxref("::view-transition-group()")}}, {{cssxref("::view-transition-image-pair()")}}, {{cssxref("::view-transition-old()")}}, and {{cssxref("::view-transition-new()")}}. This is different from the `view-transition-name`, which matches view transitions between the element in the old state with its corresponding element in the new state.
