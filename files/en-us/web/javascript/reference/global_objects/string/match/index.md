@@ -85,7 +85,7 @@ The following example demonstrates the use of the global flag and ignore-case fl
 
 ```js
 const str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-const regexp = /[A-E]/gi;
+const regexp = /[a-e]/gi;
 const matches = str.match(regexp);
 
 console.log(matches);

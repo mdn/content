@@ -148,7 +148,7 @@ The `array` argument is useful if you want to access another element in the arra
 ```js
 const names = ["JC63", "Bob132", "Ursula89", "Ben96"];
 const greatIDs = names
-  .map((name) => parseInt(name.match(/[0-9]+/)[0], 10))
+  .map((name) => parseInt(name.match(/\d+/)[0], 10))
   .filter((id, idx, arr) => {
     // Without the arr argument, there's no way to easily access the
     // intermediate array without saving it to a variable.

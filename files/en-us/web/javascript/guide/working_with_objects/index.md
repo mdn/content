@@ -329,9 +329,7 @@ You can remove a non-inherited property using the [`delete`](/en-US/docs/Web/Jav
 
 ```js
 // Creates a new object, myObj, with two properties, a and b.
-const myObj = new Object();
-myObj.a = 5;
-myObj.b = 12;
+const myObj = { a: 5, b: 12 };
 
 // Removes the a property, leaving myObj with only the b property.
 delete myObj.a;

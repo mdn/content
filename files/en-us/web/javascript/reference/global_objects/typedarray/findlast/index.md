@@ -88,6 +88,7 @@ const uint8 = new Uint8Array([0, 1, , , , 5, 6]);
 // Note that all elements are visited.
 uint8.findLast((value, index) => {
   console.log(`Visited index ${index} with value ${value}`);
+  return false;
 });
 
 // Shows all indexes, including deleted
@@ -99,6 +100,7 @@ uint8.findLast((value, index) => {
   }
   // Element 3 is still visited but will have a new value.
   console.log(`Visited index ${index} with value ${value}`);
+  return false;
 });
 // Visited index 6 with value 6
 // Visited index 5 with value 5

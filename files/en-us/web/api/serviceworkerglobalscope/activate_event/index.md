@@ -47,6 +47,7 @@ self.addEventListener("activate", (event) => {
           if (!cacheAllowlist.includes(cacheName)) {
             return caches.delete(cacheName);
           }
+          return undefined;
         }),
       );
     }),

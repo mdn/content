@@ -13430,7 +13430,7 @@
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/autoplay	/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/autoplay
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/camera	/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/camera
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/display-capture	/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/display-capture
-/en-US/docs/Web/HTTP/Headers/Feature-Policy/document-domain	/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/document-domain
+/en-US/docs/Web/HTTP/Headers/Feature-Policy/document-domain	/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/encrypted-media	/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/encrypted-media
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/fullscreen	/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/fullscreen
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/gamepad	/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/gamepad
@@ -13487,7 +13487,7 @@
 /en-US/docs/Web/HTTP/Headers/Permissions-Policy/compute-pressure	/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/compute-pressure
 /en-US/docs/Web/HTTP/Headers/Permissions-Policy/cross-origin-isolated	/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/cross-origin-isolated
 /en-US/docs/Web/HTTP/Headers/Permissions-Policy/display-capture	/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/display-capture
-/en-US/docs/Web/HTTP/Headers/Permissions-Policy/document-domain	/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/document-domain
+/en-US/docs/Web/HTTP/Headers/Permissions-Policy/document-domain	/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy
 /en-US/docs/Web/HTTP/Headers/Permissions-Policy/encrypted-media	/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/encrypted-media
 /en-US/docs/Web/HTTP/Headers/Permissions-Policy/fullscreen	/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/fullscreen
 /en-US/docs/Web/HTTP/Headers/Permissions-Policy/gamepad	/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/gamepad
@@ -13630,6 +13630,7 @@
 /en-US/docs/Web/HTTP/Public_Key_Pinning	/en-US/docs/Web/Security/Certificate_Transparency
 /en-US/docs/Web/HTTP/Range_requests	/en-US/docs/Web/HTTP/Guides/Range_requests
 /en-US/docs/Web/HTTP/Redirections	/en-US/docs/Web/HTTP/Guides/Redirections
+/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/document-domain	/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy
 /en-US/docs/Web/HTTP/Resources_and_URIs	/en-US/docs/Web/HTTP/Guides/MIME_types
 /en-US/docs/Web/HTTP/Resources_and_specifications	/en-US/docs/Web/HTTP/Reference/Resources_and_specifications
 /en-US/docs/Web/HTTP/Response_codes	/en-US/docs/Web/HTTP/Reference/Status

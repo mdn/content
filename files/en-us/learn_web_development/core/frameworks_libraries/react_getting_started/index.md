@@ -101,6 +101,10 @@ There are many ways to create a new React application. We're going to use Vite t
 
 It's possible to [add React to an existing project](https://react.dev/learn/add-react-to-an-existing-project) by copying some [`<script>`](/en-US/docs/Web/HTML/Reference/Elements/script) elements into an HTML file, but using Vite will allow you to spend more time building your app and less time fussing with setup.
 
+> [!NOTE]
+> You can start writing React code without doing _any_ local setup by working through Scrimba's [First React Code](https://scrimba.com/learn-react-c0e/~03uo?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> scrim.
+> Feel free to give it a try before continuing.
+
 ### Requirements
 
 In order to use Vite, you need to have [Node.js](https://nodejs.org/en/) installed. As of Vite 5.0, at least Node version 18 or later is required, and it's a good idea to run the latest long term support (LTS) version when you can. As of 24th October 2023, Node 20 is the latest LTS version. Node includes npm (the Node package manager).
@@ -209,8 +213,8 @@ Let's open `src/App.jsx`, since our browser is prompting us to edit it. This fil
 
 ```jsx
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
+import reactLogo from "./assets/react.svg";
 import "./App.css";
 
 function App() {
@@ -253,8 +257,8 @@ The `import` statements at the top of the file allow `App.jsx` to use code that 
 
 ```jsx
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
+import reactLogo from "./assets/react.svg";
 import "./App.css";
 ```
 

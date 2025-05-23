@@ -1709,6 +1709,14 @@
         "Element: touchcancel"
       ]
     },
+    "Translator and Language Detector APIs": {
+      "overview": ["Translator and Language Detector APIs"],
+      "guides": ["/docs/Web/API/Translator_and_Language_Detector_APIs/Using"],
+      "interfaces": ["CreateMonitor", "LanguageDetector", "Translator"],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Trusted Types API": {
       "overview": ["Trusted Types API"],
       "interfaces": [

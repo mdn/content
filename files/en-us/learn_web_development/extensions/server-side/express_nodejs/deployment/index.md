@@ -128,6 +128,7 @@ Replace the line with the following code that uses `process.env.MONGODB_URI` to 
 ```js
 // Set up mongoose connection
 const mongoose = require("mongoose");
+
 mongoose.set("strictQuery", false);
 
 const dev_db_url =

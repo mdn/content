@@ -159,6 +159,10 @@ You can specify
 
   - : Controls whether the current document is allowed to use the {{domxref("Idle Detection API", "Idle Detection API", "", "nocode")}} to detect when users are interacting with their devices, for example to report "available"/"away" status in chat applications.
 
+- {{httpheader("Permissions-Policy/language-detector", "language-detector")}} {{Experimental_Inline}}
+
+  - : Controls access to the language detection functionality of the [Translator and Language Detector APIs](/en-US/docs/Web/API/Translator_and_Language_Detector_APIs).
+
 - {{httpheader('Permissions-Policy/local-fonts','local-fonts')}} {{Experimental_Inline}}
 
   - : Controls whether the current document is allowed to gather data on the user's locally-installed fonts via the {{DOMxRef("Window.queryLocalFonts()")}} method (see also the {{domxref("Local Font Access API", "Local Font Access API", "", "nocode")}}).
@@ -210,6 +214,10 @@ You can specify
 - {{httpheader("Permissions-Policy/storage-access", "storage-access")}} {{Experimental_Inline}}
 
   - : Controls whether a document loaded in a third-party context (i.e., embedded in an {{htmlelement("iframe")}}) is allowed to use the {{domxref("Storage Access API", "Storage Access API", "", "nocode")}} to request access to unpartitioned cookies.
+
+- {{httpheader("Permissions-Policy/translator", "translator")}} {{Experimental_Inline}}
+
+  - : Controls access to the translation functionality of the [Translator and Language Detector APIs](/en-US/docs/Web/API/Translator_and_Language_Detector_APIs).
 
 - {{httpheader("Permissions-Policy/summarizer", "summarizer")}} {{Experimental_Inline}}
 

@@ -194,7 +194,7 @@ self.addEventListener("activate", (e) => {
       return Promise.all(
         keyList.map((key) => {
           if (key === cacheName) {
-            return;
+            return undefined;
           }
           return caches.delete(key);
         }),

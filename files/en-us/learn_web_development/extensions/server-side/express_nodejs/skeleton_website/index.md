@@ -439,6 +439,7 @@ This file creates an `express` application object (named `app`, by convention), 
 
 ```js
 const express = require("express");
+
 const app = express();
 // …
 module.exports = app;
@@ -534,6 +535,7 @@ Then it specifies a route on that object and lastly exports the router from the 
 
 ```js
 const express = require("express");
+
 const router = express.Router();
 
 /* GET users listing. */
