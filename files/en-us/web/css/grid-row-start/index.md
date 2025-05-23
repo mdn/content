@@ -122,6 +122,7 @@ This property is specified as a single `<grid-line>` value. A `<grid-line>` valu
     If the \<integer> is omitted, it defaults to `1`. Negative integers or 0 are invalid.
 
     The `<custom-ident>` cannot take the `span` and `auto` value.
+
 ## Formal definition
 
 {{cssinfo}}
