@@ -97,7 +97,7 @@ grid-row-end: unset;
 
     Otherwise, this is treated as if the integer `1` had been specified along with the `<custom-ident>`.
 
-    The `<custom-ident>` cannot take the `span` value.
+    The `<custom-ident>` cannot take the `span` and `auto` value.
 
 - `<integer> && <custom-ident>?`
 
