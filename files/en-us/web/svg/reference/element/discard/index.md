@@ -3,12 +3,12 @@ title: <discard>
 slug: Web/SVG/Reference/Element/discard
 page-type: svg-element
 status:
-  - experimental
+  - deprecated
 browser-compat: svg.elements.discard
 sidebar: svgref
 ---
 
-{{SeeCompatTable}}
+{{deprecated_header}}
 
 The **`<discard>`** [SVG](/en-US/docs/Web/SVG) element may be used to specify the time at which a particular element should be removed from the DOM.
 This allows an SVG viewer to conserve memory by discarding elements that are no longer needed, such as animated elements that have completed.

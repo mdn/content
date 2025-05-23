@@ -870,48 +870,7 @@ Currently only support for `::details-content::first-letter` can be parsed, usin
 
 ## SVG
 
-### `<discard>` element for SVG animations
-
-The {{svgelement("discard")}} SVG element is now supported, along with its corresponding {{domxref("SVGDiscardElement")}} JavaScript interface.
-The element allows developers to specify a trigger time or event at which a specified element and its children should be removed from the DOM.
-An SVG viewer can use this information to conserve memory by discarding elements that are no longer needed, such as animated elements that have completed.
-([Firefox bug 1069931](https://bugzil.la/1069931)).
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>136</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>136</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>136</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>136</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>svg.discard.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
+None.
 
 ## JavaScript
 
