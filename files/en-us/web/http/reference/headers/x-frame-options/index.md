@@ -117,7 +117,8 @@ http-response set-header X-Frame-Options SAMEORIGIN
 To set `X-Frame-Options` to `SAMEORIGIN` using [Helmet](https://helmetjs.github.io/) add the following to your server configuration:
 
 ```js
-const helmet = require("helmet");
+import helmet from "helmet";
+
 const app = express();
 app.use(
   helmet({

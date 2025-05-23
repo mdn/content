@@ -17,14 +17,7 @@ Open **/controllers/genreController.js**, and add the following line at the top 
 const { body, validationResult } = require("express-validator");
 ```
 
-> [!NOTE]
-> This syntax allows us to use `body` and `validationResult` as the associated middleware functions, as you will see in the post route section below. It is equivalent to:
->
-> ```js
-> const validator = require("express-validator");
-> const body = validator.body;
-> const validationResult = validator.validationResult;
-> ```
+Note that `require("express-validator")` is just a function call that returns an object, and we [destructure](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) the two properties, `body` and `validationResult`, from the object, so we can use them as variables directly.
 
 ## Controller—get route
 
