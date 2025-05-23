@@ -86,9 +86,9 @@ self.addEventListener("fetch", (event) => {
             // and serve second one
             let responseClone = response.clone();
 
-            caches.open("v1").then((cache) => {
-              cache.put(event.request, responseClone);
-            });
+            caches
+              .open("v1")
+              .then((cache) => cache.put(event.request, responseClone));
             return response;
           })
           .catch(() => caches.match("/gallery/myLittleVader.jpg"));
