@@ -82,31 +82,31 @@ When returning an immediately-resolved or immediately-rejected Promise, you do n
 This is not legal (the [`Promise` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) is not being called correctly) and will throw a `TypeError: this is not a constructor` exception:
 
 ```js example-bad
-const fn = () => {
+function fn() {
   return new Promise.resolve(true);
-};
+}
 ```
 
 This is legal, but unnecessarily long:
 
 ```js
-const fn = () => {
+function fn() {
   return new Promise((resolve, reject) => {
     resolve(true);
   });
-};
+}
 ```
 
 Instead, return the static method:
 
 ```js example-good
-const resolveAlways = () => {
+function resolveAlways() {
   return Promise.resolve(true);
-};
+}
 
-const rejectAlways = () => {
+function rejectAlways() {
   return Promise.reject(new Error());
-};
+}
 ```
 
 ## See also

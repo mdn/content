@@ -379,9 +379,7 @@ function makePushSourceStream() {
 
 ```js hidden
 // Monkey patch fetch() so it returns a response that is a mocked stream
-window.fetch = async (...args) => {
-  return { body: stream };
-};
+window.fetch = async (...args) => ({ body: stream });
 ```
 
 The code below shows a more complete example.
