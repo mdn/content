@@ -36,7 +36,7 @@ The following example uses an error scope to capture a suspected validation erro
 ```js
 device.pushErrorScope("internal");
 
-const module = device.createShaderModule({
+let module = device.createShaderModule({
   code: shader, // REALLY complex shader
 });
 

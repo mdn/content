@@ -528,7 +528,7 @@ function clientWaitAsync(gl, sync, flags, interval_ms) {
     function test() {
       const res = gl.clientWaitSync(sync, flags, 0);
       if (res === gl.WAIT_FAILED) {
-        reject();
+        reject(new Error("clientWaitSync failed"));
         return;
       }
       if (res === gl.TIMEOUT_EXPIRED) {
@@ -593,19 +593,20 @@ On supporting browsers (Chromium?), `ResizeObserver` can be used with `'device-p
 window.getDevicePixelSize =
   window.getDevicePixelSize ||
   (async (elem) => {
-    await new Promise((fn_resolve) => {
-      const observer = new ResizeObserver((entries) => {
-        for (const cur of entries) {
-          const dev_size = cur.devicePixelContentBoxSize;
-          const ret = {
-            width: dev_size[0].inlineSize,
-            height: dev_size[0].blockSize,
-          };
-          fn_resolve(ret);
-          observer.disconnect();
-          return;
+    await new Promise((resolve) => {
+      const observer = new ResizeObserver(([cur]) => {
+        if (!cur) {
+          throw new Error(
+            `device-pixel-content-box not observed for elem ${elem}`,
+          );
         }
-        throw `device-pixel-content-box not observed for elem ${elem}`;
+        const devSize = cur.devicePixelContentBoxSize;
+        const ret = {
+          width: devSize[0].inlineSize,
+          height: devSize[0].blockSize,
+        };
+        resolve(ret);
+        observer.disconnect();
       });
       observer.observe(elem, { box: "device-pixel-content-box" });
     });

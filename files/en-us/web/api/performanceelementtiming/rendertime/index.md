@@ -64,7 +64,7 @@ Alternatively, you can use {{domxref("PerformanceEntry.startTime", "startTime")}
 If you use `startTime`, you can flag any inaccuracies by checking if `renderTime` was used:
 
 ```js
-const isRenderTime = entry.renderTime ? true : false;
+const isRenderTime = Boolean(entry.renderTime);
 ```
 
 ## Specifications

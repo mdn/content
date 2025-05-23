@@ -143,6 +143,7 @@ const array = [0, 1, , , , 5, 6];
 // Shows all indexes, not just those with assigned values
 array.find((value, index) => {
   console.log("Visited index", index, "with value", value);
+  return false;
 });
 // Visited index 0 with value 0
 // Visited index 1 with value 1
@@ -161,6 +162,7 @@ array.find((value, index) => {
   }
   // Element 5 is still visited even though deleted
   console.log("Visited index", index, "with value", value);
+  return false;
 });
 // Deleting array[5] with value 5
 // Visited index 0 with value 0

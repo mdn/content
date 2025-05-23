@@ -52,8 +52,10 @@ const vertexShader = createShader(gl, vertexShaderSource, gl.VERTEX_SHADER);
 ### Creating a fragment shader
 
 ```js
-const fragmentShaderSource =
-  "void main() {\n" + "  gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);\n" + "}\n";
+const fragmentShaderSource = `void main() {
+  gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+}
+`;
 
 // Use the createShader function from the example above
 const fragmentShader = createShader(

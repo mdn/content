@@ -72,6 +72,12 @@ This gives us the following result:
 
 I'm creating a link to [the Mozilla homepage](https://www.mozilla.org/en-US/).
 
+> [!CALLOUT]
+>
+> **Try it out**
+>
+> Scrimba's [Anchor tags](https://scrimba.com/learn-html-and-css-c0p/~0a?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> scrim provides an interactive demonstration of how to create links using HTML, plus a challenge to get you creating your own links.
+
 ### Block level links
 
 As mentioned before, almost any content can be made into a link, even {{Glossary("Block/CSS", "block-level elements")}}.

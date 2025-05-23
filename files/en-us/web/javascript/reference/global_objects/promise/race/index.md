@@ -209,7 +209,9 @@ In this function, if `promise` is pending, the second value, `pendingState`, whi
 ```js
 const p1 = new Promise((res) => setTimeout(() => res(100), 100));
 const p2 = new Promise((res) => setTimeout(() => res(200), 200));
-const p3 = new Promise((res, rej) => setTimeout(() => rej(300), 100));
+const p3 = new Promise((res, rej) =>
+  setTimeout(() => rej(new Error("failed")), 100),
+);
 
 async function getStates() {
   console.log(await promiseState(p1));
@@ -232,7 +234,7 @@ setTimeout(() => {
 // After waiting for 100ms:
 // { status: 'fulfilled', value: 100 }
 // { status: 'pending' }
-// { status: 'rejected', reason: 300 }
+// { status: 'rejected', reason: Error: failed }
 ```
 
 > [!NOTE]

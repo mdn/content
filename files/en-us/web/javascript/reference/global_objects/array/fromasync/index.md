@@ -151,7 +151,7 @@ Similar to [`for await...of`](/en-US/docs/Web/JavaScript/Reference/Statements/fo
 function* generatorWithRejectedPromises() {
   try {
     yield 0;
-    yield Promise.reject(3);
+    yield Promise.reject(new Error("error"));
   } finally {
     console.log("called finally");
   }
@@ -164,7 +164,7 @@ function* generatorWithRejectedPromises() {
     console.log("caught", e);
   }
 })();
-// caught 3
+// caught Error: error
 // No "called finally" message
 ```
 
