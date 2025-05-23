@@ -56,7 +56,7 @@ The following default styling is included in the UA stylesheet:
 }
 ```
 
-The accepted values are as follows:
+### Parameters
 
 - `*`
   - : The universal selector (`*`) selects all view transition groups on a page.
