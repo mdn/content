@@ -274,9 +274,7 @@ class MockPushSource {
   }
 
   // Dummy close function
-  close() {
-    return;
-  }
+  close() {}
 
   // Return random character string
   static #randomChars(length = 8) {

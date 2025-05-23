@@ -80,14 +80,13 @@ exports.author_create_post = [
         errors: errors.array(),
       });
       return;
-    } else {
-      // Data from form is valid.
-
-      // Save author.
-      await author.save();
-      // Redirect to new author record.
-      res.redirect(author.url);
     }
+    // Data from form is valid.
+
+    // Save author.
+    await author.save();
+    // Redirect to new author record.
+    res.redirect(author.url);
   }),
 ];
 ```

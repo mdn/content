@@ -190,7 +190,7 @@ A `var` declaration within a `catch` block can have the same name as the `catch`
 
 ```js-nolint example-bad
 try {
-  throw 1;
+  throw new Error();
 } catch (e) {
   var e = 2; // Works
 }

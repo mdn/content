@@ -189,9 +189,7 @@ class MockHypotheticalSocket {
   }
 
   // Dummy close function
-  close() {
-    return;
-  }
+  close() {}
 
   // Return random number bytes in this call of socket
   getNumberRandomBytesSocket() {

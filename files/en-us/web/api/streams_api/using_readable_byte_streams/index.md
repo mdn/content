@@ -137,9 +137,7 @@ class MockHypotheticalSocket {
   }
 
   // Dummy close function
-  close() {
-    return;
-  }
+  close() {}
 
   // Return random number bytes in this call of socket
   getNumberRandomBytesSocket() {
@@ -355,7 +353,9 @@ function readStream(reader) {
         if (bytesReceived > 300 && bytesReceived < 600) {
           logConsumer(`Delaying read to emulate slow stream reading`);
           const delay = (ms) =>
-            new Promise((resolve) => setTimeout(resolve, ms));
+            new Promise((resolve) => {
+              setTimeout(resolve, ms);
+            });
           await delay(1000);
         }
 
@@ -473,9 +473,7 @@ class MockUnderlyingFileHandle {
   }
 
   // Dummy close function
-  close() {
-    return;
-  }
+  close() {}
 
   // Return random character string
   randomChars(length = 8) {
@@ -734,9 +732,7 @@ class MockUnderlyingFileHandle {
   }
 
   // Dummy close function
-  close() {
-    return;
-  }
+  close() {}
 
   // Return random character string
   randomChars(length = 8) {
@@ -974,9 +970,7 @@ class MockUnderlyingFileHandle {
   }
 
   // Dummy close function
-  close() {
-    return;
-  }
+  close() {}
 
   // Return random character string
   randomChars(length = 8) {

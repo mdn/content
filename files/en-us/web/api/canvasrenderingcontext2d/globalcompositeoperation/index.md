@@ -193,7 +193,6 @@ window.onload = () => {
   lightMix();
   colorSphere();
   runComposite();
-  return;
 };
 ```
 

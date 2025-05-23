@@ -139,7 +139,8 @@ function changeCheckbox(code) {
 
   if (code && code !== "Space") {
     return;
-  } else if (checked === "true") {
+  }
+  if (checked === "true") {
     item.setAttribute("aria-checked", "false");
   } else {
     item.setAttribute("aria-checked", "true");

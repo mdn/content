@@ -136,10 +136,7 @@ function myDrawFrame(currentFrameTime, frame) {
   animationFrameRequestID = session.requestAnimationFrame(myDrawFrame);
 
   if (viewerPose) {
-    if (!previousViewerPose) {
-      previousViewerPose = viewerPose;
-    }
-
+    previousViewerPose ??= viewerPose;
     let offsetMatrix = mat4.create();
     mat4.sub(
       offsetMatrix,
