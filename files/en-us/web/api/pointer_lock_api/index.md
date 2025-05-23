@@ -221,12 +221,10 @@ function updatePosition(e) {
   }
   tracker.textContent = `X position: ${x}, Y position: ${y}`;
 
-  if (!animation) {
-    animation = requestAnimationFrame(() => {
-      animation = null;
-      canvasDraw();
-    });
-  }
+  animation ??= requestAnimationFrame(() => {
+    animation = null;
+    canvasDraw();
+  });
 }
 ```
 

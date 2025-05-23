@@ -59,9 +59,9 @@ function sleep(time, value, state) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (state === "fulfill") {
-        return resolve(value);
+        resolve(value);
       } else {
-        return reject(new Error(value));
+        reject(new Error(value));
       }
     }, time);
   });

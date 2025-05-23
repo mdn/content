@@ -67,27 +67,28 @@ Possible values include:
 ### Basic `availability()` usage
 
 ```js
-const options = {
-  sharedContext: "This is a scientific article",
-  type: "key-points",
-  format: "markdown",
-  length: "medium",
-};
+async function getSummarizer() {
+  const options = {
+    sharedContext: "This is a scientific article",
+    type: "key-points",
+    format: "markdown",
+    length: "medium",
+  };
 
-const availability = await Summarizer.availability(options);
-let summarizer;
-if (availability === "unavailable") {
-  // The Summarizer API isn't usable
-  return;
-} else if (availability === "available") {
-  // The Summarizer API can be used immediately
-  summarizer = await Summarizer.create(options);
-} else {
+  const availability = await Summarizer.availability(options);
+  if (availability === "unavailable") {
+    // The Summarizer API isn't usable
+    return undefined;
+  } else if (availability === "available") {
+    // The Summarizer API can be used immediately
+    return Summarizer.create(options);
+  }
   // The Summarizer API can be used after the model is downloaded
-  summarizer = await Summarizer.create(options);
+  const summarizer = await Summarizer.create(options);
   summarizer.addEventListener("downloadprogress", (e) => {
     console.log(`Downloaded ${e.loaded * 100}%`);
   });
+  return summarizer;
 }
 ```
 

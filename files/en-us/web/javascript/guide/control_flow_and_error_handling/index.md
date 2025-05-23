@@ -333,18 +333,18 @@ function. If the value does not correspond to a month number
 `'InvalidMonthNo'` and the statements in the `catch` block set the
 `monthName` variable to `'unknown'`.
 
-```js-nolint
+```js
 function getMonthName(mo) {
   mo--; // Adjust month number for array index (so that 0 = Jan, 11 = Dec)
+  // prettier-ignore
   const months = [
     "Jan", "Feb", "Mar", "Apr", "May", "Jun",
     "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
   ];
-  if (months[mo]) {
-    return months[mo];
-  } else {
-    throw new Error("InvalidMonthNo"); // throw keyword is used here
+  if (!months[mo]) {
+    throw new Error("Invalid month code"); // throw keyword is used here
   }
+  return months[mo];
 }
 
 try {
@@ -520,9 +520,8 @@ For example:
 function doSomethingErrorProne() {
   if (ourCodeMakesAMistake()) {
     throw new Error("The message");
-  } else {
-    doSomethingToGetAJavaScriptError();
   }
+  doSomethingToGetAJavaScriptError();
 }
 
 try {

@@ -63,20 +63,19 @@ exports.genre_create_post = [
         errors: errors.array(),
       });
       return;
+    }
+    // Data from form is valid.
+    // Check if Genre with same name already exists.
+    const genreExists = await Genre.findOne({ name: req.body.name })
+      .collation({ locale: "en", strength: 2 })
+      .exec();
+    if (genreExists) {
+      // Genre exists, redirect to its detail page.
+      res.redirect(genreExists.url);
     } else {
-      // Data from form is valid.
-      // Check if Genre with same name already exists.
-      const genreExists = await Genre.findOne({ name: req.body.name })
-        .collation({ locale: "en", strength: 2 })
-        .exec();
-      if (genreExists) {
-        // Genre exists, redirect to its detail page.
-        res.redirect(genreExists.url);
-      } else {
-        await genre.save();
-        // New genre saved. Redirect to genre detail page.
-        res.redirect(genre.url);
-      }
+      await genre.save();
+      // New genre saved. Redirect to genre detail page.
+      res.redirect(genre.url);
     }
   }),
 ];
@@ -120,10 +119,9 @@ asyncHandler(async (req, res, next) => {
       errors: errors.array(),
     });
     return;
-  } else {
-    // Data from form is valid.
-    // …
   }
+  // Data from form is valid.
+  // …
 });
 ```
 
