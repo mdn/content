@@ -68,6 +68,7 @@ First we create routes for a wiki in a module named **wiki.js**. The code first 
 // wiki.js - Wiki route module.
 
 const express = require("express");
+
 const router = express.Router();
 
 // Home page route.
@@ -90,6 +91,7 @@ To use the router module in our main app file we first `require()` the route mod
 
 ```js
 const wiki = require("./wiki.js");
+
 // …
 app.use("/wiki", wiki);
 ```
@@ -507,13 +509,14 @@ Open **/routes/catalog.js** and copy in the code below:
 
 ```js
 const express = require("express");
-const router = express.Router();
 
 // Require controller modules.
 const book_controller = require("../controllers/bookController");
 const author_controller = require("../controllers/authorController");
 const genre_controller = require("../controllers/genreController");
 const book_instance_controller = require("../controllers/bookinstanceController");
+
+const router = express.Router();
 
 /// BOOK ROUTES ///
 

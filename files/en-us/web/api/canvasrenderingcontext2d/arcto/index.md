@@ -349,7 +349,7 @@ can be used to change an underlined element that is in focus.
             return;
           }
           /* Handle non-digits entered by parsing */
-          let value = parseInt(target.textContent);
+          let value = parseInt(target.textContent, 10);
           value = isNaN(value) ? 0 : value;
           textInput.updateFull(value);
           break;

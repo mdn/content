@@ -34,16 +34,16 @@ const vBox = svg.viewBox;
 
 // The SVGSVGElement viewBox property
 console.dir(vBox); // SVGAnimatedRect { baseVal: SVGRect, animVal: SVGRect }
-​console.log(vBox.baseVal.x); // -12
-​console.log(vBox.baseVal.y); // -18
-​console.log(vBox.baseVal.width); // 200
-​console.log(vBox.baseVal.height); // 300
+console.log(vBox.baseVal.x); // -12
+console.log(vBox.baseVal.y); // -18
+console.log(vBox.baseVal.width); // 200
+console.log(vBox.baseVal.height); // 300
 
 // Other SVGSVGElement properties
-​console.log(svg.x); // 5
-​console.log(svg.y); // 5
-​console.log(svg.width); // 400
-​console.log(svg.height); // 600
+console.log(svg.x); // 5
+console.log(svg.y); // 5
+console.log(svg.width); // 400
+console.log(svg.height); // 600
 ```
 
 ## Specifications

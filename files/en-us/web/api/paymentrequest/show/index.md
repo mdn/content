@@ -270,7 +270,7 @@ call to {{domxref("paymentResponse.complete()")}} can indicate the success or fa
 the payment.
 
 ```js
-button.onclick = async function handlePurchase() {
+button.onclick = async () => {
   // Initialization of PaymentRequest arguments are excerpted for the sake of
   // brevity.
   const payment = new PaymentRequest(methods, details, options);

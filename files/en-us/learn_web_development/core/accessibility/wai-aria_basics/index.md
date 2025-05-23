@@ -1101,9 +1101,7 @@ class TabsManual {
       tab.addEventListener("keydown", this.onKeydown.bind(this));
       tab.addEventListener("click", this.onClick.bind(this));
 
-      if (!this.firstTab) {
-        this.firstTab = tab;
-      }
+      this.firstTab ??= tab;
       this.lastTab = tab;
     }
 

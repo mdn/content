@@ -1,5 +1,6 @@
 ---
-title: "CSP: report-uri"
+title: "Content-Security-Policy: report-uri directive"
+short-title: report-uri
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/report-uri
 page-type: http-csp-directive
 status:

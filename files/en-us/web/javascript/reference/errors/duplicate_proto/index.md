@@ -47,7 +47,9 @@ const obj2 = {
   ["__proto__"]: {},
   __proto__,
   __proto__() {},
-  get __proto__() {},
+  get __proto__() {
+    return 1;
+  },
 };
 ```
 

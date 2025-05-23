@@ -397,22 +397,6 @@ With this table in place, we can find out the frequency for a given note in a pa
 > [!NOTE]
 > The values in the example table above have been rounded to two decimal places.
 
-```js hidden
-if (!Object.entries) {
-  Object.entries = function entries(O) {
-    return reduce(
-      keys(O),
-      (e, k) =>
-        concat(
-          e,
-          typeof k === "string" && isEnumerable(O, k) ? [[k, O[k]]] : [],
-        ),
-      [],
-    );
-  };
-}
-```
-
 ### Building the keyboard
 
 The `setup()` function is responsible for building the keyboard and preparing the app to play music.

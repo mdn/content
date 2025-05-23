@@ -494,10 +494,9 @@ async function* makeTextFileLineIterator(fileURL) {
   const response = await fetch(fileURL);
   const reader = response.body.pipeThrough(new TextDecoderStream()).getReader();
 
-  let { value: chunk, done: readerDone } = await reader.read();
-  chunk = chunk || "";
+  let { value: chunk = "", done: readerDone } = await reader.read();
 
-  const newline = /\r?\n/gm;
+  const newline = /\r?\n/g;
   let startIndex = 0;
 
   while (true) {

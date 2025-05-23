@@ -27165,10 +27165,6 @@
       "JesseW"
     ]
   },
-  "Web/API/Document/copy_event": {
-    "modified": "2020-10-15T22:16:12.053Z",
-    "contributors": ["mfuji09", "wbamberg"]
-  },
   "Web/API/Document/createAttribute": {
     "modified": "2020-10-15T21:04:22.086Z",
     "contributors": [
@@ -27604,10 +27600,6 @@
       "Midnightaz",
       "sicking"
     ]
-  },
-  "Web/API/Document/cut_event": {
-    "modified": "2020-10-15T22:16:11.993Z",
-    "contributors": ["mfuji09", "wbamberg"]
   },
   "Web/API/Document/defaultView": {
     "modified": "2020-10-15T21:04:28.447Z",
@@ -28702,10 +28694,6 @@
       "Dria",
       "JesseW"
     ]
-  },
-  "Web/API/Document/paste_event": {
-    "modified": "2020-10-15T22:16:13.117Z",
-    "contributors": ["mfuji09", "wbamberg"]
   },
   "Web/API/Document/pictureInPictureElement": {
     "modified": "2020-10-25T11:04:35.581Z",
@@ -37457,40 +37445,6 @@
       "McGurk"
     ]
   },
-  "Web/API/HTMLElement/copy_event": {
-    "modified": "2020-10-15T21:03:53.270Z",
-    "contributors": [
-      "mfuji09",
-      "hoang4",
-      "mfluehr",
-      "fscholz",
-      "valtlai",
-      "teoli",
-      "kscarfone",
-      "nairakhil13",
-      "Sheppy",
-      "ethertank",
-      "ziyunfei",
-      "Mgjbot",
-      "Potappo"
-    ]
-  },
-  "Web/API/HTMLElement/cut_event": {
-    "modified": "2020-10-15T21:03:56.356Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "valtlai",
-      "teoli",
-      "kscarfone",
-      "nairakhil13",
-      "Sheppy",
-      "ethertank",
-      "ziyunfei",
-      "Mgjbot",
-      "Potappo"
-    ]
-  },
   "Web/API/HTMLElement/dataset": {
     "modified": "2020-11-29T09:53:07.128Z",
     "contributors": [
@@ -37883,25 +37837,6 @@
       "Rob W",
       "rolfedh",
       "cvrebert"
-    ]
-  },
-  "Web/API/HTMLElement/paste_event": {
-    "modified": "2020-10-15T21:03:50.733Z",
-    "contributors": [
-      "mfluehr",
-      "Mooocraft",
-      "fscholz",
-      "mfuji09",
-      "depthdev",
-      "valtlai",
-      "teoli",
-      "kscarfone",
-      "nairakhil13",
-      "Sheppy",
-      "ethertank",
-      "ziyunfei",
-      "Mgjbot",
-      "Potappo"
     ]
   },
   "Web/API/HTMLElement/tabIndex": {
@@ -56232,21 +56167,9 @@
     "modified": "2020-10-15T21:51:27.873Z",
     "contributors": ["mfuji09", "fscholz", "libbymc", "Sebastianz"]
   },
-  "Web/API/SVGGraphicsElement/copy_event": {
-    "modified": "2020-10-15T22:23:53.813Z",
-    "contributors": ["Sebastianz"]
-  },
-  "Web/API/SVGGraphicsElement/cut_event": {
-    "modified": "2020-10-15T22:23:54.745Z",
-    "contributors": ["Sebastianz"]
-  },
   "Web/API/SVGGraphicsElement/getBBox": {
     "modified": "2020-08-08T13:10:10.615Z",
     "contributors": ["Zearin_Galaurum", "mfuji09", "voxspox", "maxzeroedge"]
-  },
-  "Web/API/SVGGraphicsElement/paste_event": {
-    "modified": "2020-10-15T22:23:54.359Z",
-    "contributors": ["Sebastianz"]
   },
   "Web/API/SVGImageElement": {
     "modified": "2020-10-15T21:09:22.741Z",
@@ -65961,10 +65884,6 @@
       "JesseW"
     ]
   },
-  "Web/API/Window/copy_event": {
-    "modified": "2020-10-15T22:16:13.286Z",
-    "contributors": ["mfuji09", "wbamberg"]
-  },
   "Web/API/Window/createImageBitmap": {
     "modified": "2020-10-15T21:37:56.407Z",
     "contributors": [
@@ -66033,10 +65952,6 @@
       "david_ross",
       "arthurevans"
     ]
-  },
-  "Web/API/Window/cut_event": {
-    "modified": "2020-10-15T22:16:14.635Z",
-    "contributors": ["mfuji09", "wbamberg"]
   },
   "Web/API/Window/devicePixelRatio": {
     "modified": "2020-10-15T21:28:17.748Z",
@@ -67365,10 +67280,6 @@
       "Dria",
       "JesseW"
     ]
-  },
-  "Web/API/Window/paste_event": {
-    "modified": "2020-10-15T22:16:14.230Z",
-    "contributors": ["mfuji09", "wbamberg"]
   },
   "Web/API/Window/performance": {
     "modified": "2020-10-15T21:22:10.802Z",
@@ -99010,10 +98921,6 @@
   "Web/HTTP/Reference/Headers/Permissions-Policy/display-capture": {
     "modified": "2020-10-15T22:18:20.836Z",
     "contributors": ["sideshowbarker", "bershanskiy", "Sheppy"]
-  },
-  "Web/HTTP/Reference/Headers/Permissions-Policy/document-domain": {
-    "modified": "2020-10-15T22:11:41.981Z",
-    "contributors": ["bershanskiy", "chrisdavidmills", "sideshowbarker"]
   },
   "Web/HTTP/Reference/Headers/Permissions-Policy/encrypted-media": {
     "modified": "2020-10-15T22:10:28.002Z",

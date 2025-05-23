@@ -1,5 +1,6 @@
 ---
-title: Accept-Patch
+title: Accept-Patch header
+short-title: Accept-Patch
 slug: Web/HTTP/Reference/Headers/Accept-Patch
 page-type: http-header
 spec-urls: https://www.rfc-editor.org/rfc/rfc5789#section-3.1

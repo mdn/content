@@ -65,7 +65,7 @@ The following example iterates over an async generator, logging values 1–6 to 
 // An async task. Pretend it's doing something more useful
 // in practice.
 function delayedValue(time, value) {
-  return new Promise((resolve /*, reject*/) => {
+  return new Promise((resolve /*, reject */) => {
     setTimeout(() => resolve(value), time);
   });
 }

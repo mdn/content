@@ -163,5 +163,6 @@ As the default value for the `mask-mode` property is `match-source`, the first m
 
 - {{cssxref("mask")}}
 - {{cssxref("mask-mode")}}
+- [Introduction to CSS masking](/en-US/docs/Web/CSS/CSS_masking/Masking)
 - [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
 - SVG {{svgattr("mask-type")}} attribute

@@ -1,5 +1,6 @@
 ---
-title: Device-Memory
+title: Device-Memory header
+short-title: Device-Memory
 slug: Web/HTTP/Reference/Headers/Device-Memory
 page-type: http-header
 browser-compat: http.headers.Device-Memory

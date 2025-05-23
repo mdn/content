@@ -1,5 +1,6 @@
 ---
-title: Sec-CH-UA-WoW64
+title: Sec-CH-UA-WoW64 header
+short-title: Sec-CH-UA-WoW64
 slug: Web/HTTP/Reference/Headers/Sec-CH-UA-WoW64
 page-type: http-header
 status:

@@ -1,5 +1,6 @@
 ---
-title: Forwarded
+title: Forwarded header
+short-title: Forwarded
 slug: Web/HTTP/Reference/Headers/Forwarded
 page-type: http-header
 spec-urls: https://datatracker.ietf.org/doc/html/rfc7239

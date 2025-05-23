@@ -1,5 +1,6 @@
 ---
-title: Expires
+title: Expires header
+short-title: Expires
 slug: Web/HTTP/Reference/Headers/Expires
 page-type: http-header
 browser-compat: http.headers.Expires
