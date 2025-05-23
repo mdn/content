@@ -442,8 +442,9 @@ For example, the definition below might be used when creating a new credential i
 });
 ```
 
-The optional `second` property can be used if two random values need to be created for a credential.
-For example, this might be used in workflows where the encryption key is rotated on each session.
+The optional `second` property can be used if two random values need to be created for a credential, such as in workflow where the encryption key is rotated on each session.
+As an example of such a workflow, in each session you pass two salts: the `first` salt returns a value that can be used to decrypt the previous session data, while the `second` salt returns a value that can be used to encrypt this session data.
+In subsequent sessions the `second` salt is moved to the position of the `first` salt, so the lifetime where a particular salt can be usefully compromised is bounded.
 
 ```js
 {
@@ -490,7 +491,6 @@ The `get()` call may reject with the following exceptions:
 #### Output
 
 A successful `create()` call provides the following extension output if the registered credential supports using the PRF when creating credentials.
-Note that `enabled` is only present as an output for `create()`, and that `first` and `second` contain the result of evaluating `first` and `second` on the input.
 
 ```js
 {
@@ -501,7 +501,10 @@ Note that `enabled` is only present as an output for `create()`, and that `first
 };
 ```
 
-If the authenticator doesn't support using the PRF on creation, the output will look like this:
+The `enabled` property indicates whether the PRF can be used when creating credentials.
+The `first` and `second` properties contain the result of evaluating `first` and `second` on the input, and `second` will be omitted if the corresponding input was not specified.
+
+If the authenticator doesn't support using the PRF on creation, the output on `create()` will look like this:
 
 ```js
 {
@@ -511,14 +514,23 @@ If the authenticator doesn't support using the PRF on creation, the output will 
 };
 ```
 
-A `get()` returns a `prf` object that does not include the `enabled` key.
-The values are otherwise as for the create call.
+A `get()` returns a same `prf` object with the same structure as `create()`, except that it omits the `enabled` key.
+The object contains PRF values that correspond to the inputs for the credential that was selected by the user.
 
 ```js
 {
   prf: {
     results: {first: outputBuffer1, second: outputBuffer2}
   },
+};
+```
+
+Note that `enabled` is only present as an output for `create()`, and indicates if PRF is supported by the authenticator when a credential is created.
+If the authenticator doesn't support PRF at all, the result for the `get()` call will be:
+
+```js
+{
+  prf: {},
 };
 ```
 
