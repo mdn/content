@@ -50,6 +50,10 @@ This article provides information about the changes in Firefox 139 that affect d
 
 #### Removals
 
+- The {{domxref("SVGDiscardElement")}} JavaScript interface has been removed, along with its corresponding experimental {{svgelement("discard")}} SVG element.
+  These aren't in other browsers and are expected to be removed from the specification.
+  ([Firefox bug 1958839](https://bugzil.la/1958839)).
+
 ### HTTP
 
 #### Removals
