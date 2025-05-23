@@ -105,7 +105,7 @@ const resolveAlways = () => {
 };
 
 const rejectAlways = () => {
-  return Promise.reject(false);
+  return Promise.reject(new Error());
 };
 ```
 

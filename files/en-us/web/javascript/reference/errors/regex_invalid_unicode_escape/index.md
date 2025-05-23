@@ -38,7 +38,7 @@ In [Unicode-aware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegE
 
 ```js example-good
 /\u0065/u; // Lowercase "e"
-/\u{1F600}/u; // Grinning face emoji
+/\u{1f600}/u; // Grinning face emoji
 /\cA/u; // U+0001 (Start of Heading)
 ```
 

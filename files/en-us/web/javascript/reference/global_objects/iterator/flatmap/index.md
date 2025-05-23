@@ -67,6 +67,8 @@ A new [iterator helper object](/en-US/docs/Web/JavaScript/Reference/Global_Objec
             return it;
           },
         };
+      default:
+        return undefined;
     }
   })
   .toArray();
