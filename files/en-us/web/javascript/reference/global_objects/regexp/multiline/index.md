@@ -39,7 +39,7 @@ The set accessor of `multiline` is `undefined`. You cannot change this property 
 ### Using multiline
 
 ```js
-const regex = /foo/m;
+const regex = /^foo/m;
 
 console.log(regex.multiline); // true
 ```
