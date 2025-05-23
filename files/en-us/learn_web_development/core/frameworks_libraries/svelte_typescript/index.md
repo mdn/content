@@ -499,7 +499,7 @@ We will also use the `Filter` enum in the `Todos.svelte` component.
    import Todo from "./Todo.svelte";
    import MoreActions from "./MoreActions.svelte";
    import NewTodo from "./NewTodo.svelte";
-   import TodosStatus from "./TodosStatus.svelte";
+   import type TodosStatus from "./TodosStatus.svelte";
    import { alert } from "../stores";
 
    import { Filter } from "../types/filter.enum";

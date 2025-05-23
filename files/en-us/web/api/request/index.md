@@ -25,7 +25,7 @@ You can create a new `Request` object using the {{domxref("Request.Request","Req
 - {{domxref("Request.cache")}} {{ReadOnlyInline}}
   - : Contains the cache mode of the request (e.g., `default`, `reload`, `no-cache`).
 - {{domxref("Request.credentials")}} {{ReadOnlyInline}}
-  - : Contains the credentials of the request (e.g., `omit`, `same-origin`, `include`). The default is `same-origin`.
+  - : Contains a value controlling whether credentials should be included with the request (e.g., `omit`, `same-origin`, `include`). The default is `same-origin`.
 - {{domxref("Request.destination")}} {{ReadOnlyInline}}
   - : A string describing the type of content being requested.
 - {{domxref("Request.headers")}} {{ReadOnlyInline}}

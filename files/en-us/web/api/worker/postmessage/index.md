@@ -103,7 +103,7 @@ console.log(
 
 ```js
 // listen for main to transfer the buffer to myWorker
-self.onmessage = function handleMessageFromMain(msg) {
+self.onmessage = (msg) => {
   console.log("message from main received in worker:", msg);
 
   const bufTransferredFromMain = msg.data;

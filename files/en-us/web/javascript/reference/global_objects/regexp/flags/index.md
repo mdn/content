@@ -17,7 +17,7 @@ The **`flags`** accessor property of {{jsxref("RegExp")}} instances returns the 
 console.log(/foo/gi.flags);
 // Expected output: "gi"
 
-console.log(/bar/muy.flags);
+console.log(/^bar/muy.flags);
 // Expected output: "muy"
 ```
 
@@ -35,7 +35,7 @@ The set accessor of `flags` is `undefined`. You cannot change this property dire
 
 ```js-nolint
 /foo/ig.flags; // "gi"
-/bar/myu.flags; // "muy"
+/^bar/myu.flags; // "muy"
 ```
 
 ## Specifications

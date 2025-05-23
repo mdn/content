@@ -51,6 +51,7 @@ const allCSS = [...document.styleSheets]
         "Access to stylesheet %s is denied. Ignoring…",
         styleSheet.href,
       );
+      return undefined;
     }
   })
   .filter(Boolean)
