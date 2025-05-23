@@ -788,7 +788,7 @@ const email = document.getElementById("mail");
 const error = document.getElementById("error");
 
 // Regular expression for email validation as per HTML specification
-const emailRegExp = /^[\w.!#$%&'*+/=?^`{|}~-]+@[a-z0-9-]+(?:\.[a-z0-9-]+)*$/i;
+const emailRegExp = /^[\w.!#$%&'*+/=?^`{|}~-]+@[a-z\d-]+(?:\.[a-z\d-]+)*$/i;
 
 // Check if the email is valid
 const isValidEmail = () => {

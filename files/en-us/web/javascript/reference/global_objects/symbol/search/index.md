@@ -38,7 +38,7 @@ The well-known symbol `Symbol.search`.
 ### Custom string search
 
 ```js
-class caseInsensitiveSearch {
+class CaseInsensitiveSearch {
   constructor(value) {
     this.value = value.toLowerCase();
   }
@@ -47,7 +47,7 @@ class caseInsensitiveSearch {
   }
 }
 
-console.log("foobar".search(new caseInsensitiveSearch("BaR"))); // 3
+console.log("foobar".search(new CaseInsensitiveSearch("BaR"))); // 3
 ```
 
 ## Specifications
