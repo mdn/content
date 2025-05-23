@@ -1,6 +1,6 @@
 ---
-title: Firefox user agent string reference header
-short-title: Firefox user agent string reference
+title: Firefox user agent string reference
+short-title: Firefox UA string
 slug: Web/HTTP/Reference/Headers/User-Agent/Firefox
 page-type: guide
 ---
