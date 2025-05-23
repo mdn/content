@@ -42,7 +42,7 @@ Support for determining the `view-transition-name` automatically is being discus
 
 The `view-transition-class` apply styles using the view transition pseudo-elements, including {{cssxref("::view-transition-group()")}}, {{cssxref("::view-transition-image-pair()")}}, {{cssxref("::view-transition-old()")}}, and {{cssxref("::view-transition-new()")}}. This is different from the `view-transition-name`, which matches view transitions between the element in the old state with its corresponding element in the new state.
 
-Until the `view-transition-class` property is fully supported in all browsers supporting view transitions, include a custom `::view-transition-group` for each element.
+Until the `view-transition-class` property is fully supported in all browsers supporting view transitions, include a custom `::view-transition-group()` for each element.
 
 ## Formal definition
 

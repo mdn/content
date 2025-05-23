@@ -1,5 +1,5 @@
 ---
-title: ::view-transition-image-pair
+title: ::view-transition-image-pair()
 slug: Web/CSS/::view-transition-image-pair
 page-type: css-pseudo-element
 browser-compat: css.selectors.view-transition-image-pair
@@ -7,11 +7,11 @@ browser-compat: css.selectors.view-transition-image-pair
 
 {{CSSRef}}
 
-The **`::view-transition-image-pair`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents a container for a [view transition's](/en-US/docs/Web/API/View_Transition_API) "old" and "new" view states — before and after the transition.
+The **`::view-transition-image-pair()`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents a container for a [view transition's](/en-US/docs/Web/API/View_Transition_API) "old" and "new" view states — before and after the transition.
 
-During a view transition, `::view-transition-image-pair` is included in the associated pseudo-element tree as explained in [The view transition pseudo-element tree](/en-US/docs/Web/API/View_Transition_API/Using#the_view_transition_pseudo-element_tree). It is only ever a child of a {{cssxref("::view-transition-group")}}. In terms of children, it can have a {{cssxref("::view-transition-new")}} or a {{cssxref("::view-transition-old")}}, or both.
+During a view transition, `::view-transition-image-pair()` is included in the associated pseudo-element tree as explained in [The view transition pseudo-element tree](/en-US/docs/Web/API/View_Transition_API/Using#the_view_transition_pseudo-element_tree). It is only ever a child of a {{cssxref("::view-transition-group()")}}. In terms of children, it can have a {{cssxref("::view-transition-new()")}} or a {{cssxref("::view-transition-old()")}}, or both.
 
-`::view-transition-image-pair` is given the following default styling in the UA stylesheet:
+`::view-transition-image-pair()` is given the following default styling in the UA stylesheet:
 
 ```css
 :root::view-transition-image-pair(*) {
@@ -24,7 +24,7 @@ During a view transition, `::view-transition-image-pair` is included in the asso
 }
 ```
 
-During a view transition, `::view-transition-image-pair` has {{cssxref("isolation", "isolation: isolate")}} set on it in the view transition style sheet so that its children can be blended with non-normal blend modes without affecting other visual outputs.
+During a view transition, `::view-transition-image-pair()` has {{cssxref("isolation", "isolation: isolate")}} set on it in the view transition style sheet so that its children can be blended with non-normal blend modes without affecting other visual outputs.
 
 ## Syntax
 

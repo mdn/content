@@ -1,5 +1,5 @@
 ---
-title: ::view-transition-group
+title: ::view-transition-group()
 slug: Web/CSS/::view-transition-group
 page-type: css-pseudo-element
 browser-compat: css.selectors.view-transition-group
@@ -7,11 +7,11 @@ browser-compat: css.selectors.view-transition-group
 
 {{CSSRef}}
 
-The **`::view-transition-group`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents a single view transition snapshot group.
+The **`::view-transition-group()`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents a single view transition snapshot group.
 
-During a view transition, `::view-transition-group` is included in the associated pseudo-element tree as explained in [The view transition pseudo-element tree](/en-US/docs/Web/API/View_Transition_API/Using#the_view_transition_pseudo-element_tree). It is only ever a child of {{cssxref("::view-transition")}}, and has a {{cssxref("::view-transition-image-pair")}} as a child.
+During a view transition, `::view-transition-group()` is included in the associated pseudo-element tree as explained in [The view transition pseudo-element tree](/en-US/docs/Web/API/View_Transition_API/Using#the_view_transition_pseudo-element_tree). It is only ever a child of {{cssxref("::view-transition")}}, and has a {{cssxref("::view-transition-image-pair()")}} as a child.
 
-`::view-transition-group` is given the following default styling in the UA stylesheet:
+`::view-transition-group()` is given the following default styling in the UA stylesheet:
 
 ```css
 :root::view-transition-group(*) {
@@ -24,7 +24,7 @@ During a view transition, `::view-transition-group` is included in the associate
 }
 ```
 
-By default, selected elements initially mirror the size and position of the {{cssxref("::view-transition-old")}} pseudo-element representing the "old" view state, or the {{cssxref("::view-transition-new")}} pseudo-element representing the "new" view state if there isn't an "old" view state.
+By default, selected elements initially mirror the size and position of the {{cssxref("::view-transition-old()")}} pseudo-element representing the "old" view state, or the {{cssxref("::view-transition-new()")}} pseudo-element representing the "new" view state if there isn't an "old" view state.
 
 If there's both an "old" and "new" view state, styles in the view transition style sheet animate this pseudo-element's {{cssxref("width")}} and {{cssxref("height")}} from the size of the "old" view state's border box to that of the "new" view state's border box.
 

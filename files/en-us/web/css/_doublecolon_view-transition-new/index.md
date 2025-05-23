@@ -1,5 +1,5 @@
 ---
-title: ::view-transition-new
+title: ::view-transition-new()
 slug: Web/CSS/::view-transition-new
 page-type: css-pseudo-element
 browser-compat: css.selectors.view-transition-new
@@ -7,9 +7,9 @@ browser-compat: css.selectors.view-transition-new
 
 {{CSSRef}}
 
-The **`::view-transition-new`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the "new" view state of a view transition — a snapshot live representation of the state after the transition.
+The **`::view-transition-new()`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the "new" view state of a view transition — a snapshot live representation of the state after the transition.
 
-During a view transition, `::view-transition-new` is included in the associated pseudo-element tree as explained in [The view transition pseudo-element tree](/en-US/docs/Web/API/View_Transition_API/Using#the_view_transition_pseudo-element_tree). It is only ever a child of a {{cssxref("::view-transition-image-pair")}}, and never has any children.
+During a view transition, `::view-transition-new()` is included in the associated pseudo-element tree as explained in [The view transition pseudo-element tree](/en-US/docs/Web/API/View_Transition_API/Using#the_view_transition_pseudo-element_tree). It is only ever a child of a {{cssxref("::view-transition-image-pair()")}}, and never has any children.
 
 It is a replaced element and therefore can be manipulated with properties such as {{cssxref("object-fit")}} and {{cssxref("object-position")}}. It has natural dimensions equal to the content's size.
 
@@ -46,7 +46,7 @@ The following default styling is included in the UA stylesheet:
 ```
 
 > [!NOTE]
-> Additional view transition styles are also setup to animate `::view-transition-new`. These are dynamically generated during the view transition; see the specification [setup transition pseudo-elements](https://drafts.csswg.org/css-view-transitions-1/#setup-transition-pseudo-elements) and [update pseudo-element styles](https://drafts.csswg.org/css-view-transitions-1/#update-pseudo-element-styles) sections for more details.
+> Additional view transition styles are also setup to animate `::view-transition-new()`. These are dynamically generated during the view transition; see the specification [setup transition pseudo-elements](https://drafts.csswg.org/css-view-transitions-1/#setup-transition-pseudo-elements) and [update pseudo-element styles](https://drafts.csswg.org/css-view-transitions-1/#update-pseudo-element-styles) sections for more details.
 
 ## Syntax
 
