@@ -49,9 +49,9 @@ See [Using the Translator and Language Detector APIs](/en-US/docs/Web/API/Transl
 
 ## Security considerations
 
-The specification requires that a user has recently interacted with the page to create `LanguageDetector` and `Translator` objects ([transient user activation](/en-US/docs/Web/Security/User_activation) is required).
+Creation of `LanguageDetector` and `Translator` objects requires that the user has recently interacted with the page ([transient user activation](/en-US/docs/Web/Security/User_activation) is required).
 
-In addition, the specification controls access to the API via {{httpheader("Permissions-Policy/language-detector", "language-detector")}} and {{httpheader("Permissions-Policy/translator", "translator")}} {{httpheader("Permissions-Policy")}} directives.
+Access to the API is also controlled via {{httpheader("Permissions-Policy/language-detector", "language-detector")}} and {{httpheader("Permissions-Policy/translator", "translator")}} {{httpheader("Permissions-Policy")}} directives.
 
 ## Examples
 

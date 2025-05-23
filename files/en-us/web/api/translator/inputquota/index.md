@@ -18,6 +18,8 @@ A number specifying the available input quota.
 
 This number is implementation-dependant. For example, it might be {{jsxref("Infinity")}} if there are no limits beyond the user's memory and the maximum length of JavaScript strings, or it might be a number of tokens in the case of AI models that use a token/credits scheme.
 
+The only guarantee is that `inputQuota` - {{domxref("Translator.measureInputUsage", "measureInputUsage()")}} will be non-negative if there is sufficient quota to translate the text.
+
 ## Examples
 
 ### Checking if you have enough quota
@@ -36,9 +38,9 @@ const totalInputQuota = translator.inputQuota;
 const inputUsage = await translator.measureInputUsage(myTextString);
 
 if (inputUsage > totalInputQuota) {
-  throw new Error("Boo, insufficient quota to translate.");
+  throw new Error("Insufficient quota to translate.");
 } else {
-  console.log("Yay, quota available to translate.");
+  console.log("Quota available to translate.");
   const translation = await translator.translate(myTextString);
   // ...
 }

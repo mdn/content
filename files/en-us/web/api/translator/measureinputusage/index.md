@@ -61,9 +61,9 @@ const totalInputQuota = translator.inputQuota;
 const inputUsage = await translator.measureInputUsage(myTextString);
 
 if (inputUsage > totalInputQuota) {
-  throw new Error("Boo, insufficient quota to translate.");
+  throw new Error("Insufficient quota to translate.");
 } else {
-  console.log("Yay, quota available to translate.");
+  console.log("Quota available to translate.");
   const translation = await translator.translate(myTextString);
   // ...
 }

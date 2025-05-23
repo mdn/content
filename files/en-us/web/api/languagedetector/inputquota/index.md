@@ -14,7 +14,11 @@ The **`inputQuota`** read-only property of the {{domxref("LanguageDetector")}} i
 
 ## Value
 
-A number specifying the available input quota. This number is implementation-dependant. For example, it might be {{jsxref("Infinity")}} if there are no limits beyond the user's memory and the maximum length of JavaScript strings, or it might be a number of tokens in the case of AI models that use a token/credits scheme.
+A number specifying the available input quota.
+
+This number is implementation-dependant. For example, it might be {{jsxref("Infinity")}} if there are no limits beyond the user's memory and the maximum length of JavaScript strings, or it might be a number of tokens in the case of AI models that use a token/credits scheme.
+
+The only guarantee is that `inputQuota` - {{domxref("LanguageDetector.measureInputUsage", "measureInputUsage()")}} will be non-negative if there is sufficient quota to detect the text's language.
 
 ## Examples
 
@@ -33,9 +37,9 @@ const totalInputQuota = detector.inputQuota;
 const inputUsage = await detector.measureInputUsage(myTextString);
 
 if (inputUsage > totalInputQuota) {
-  throw new Error("Boo, insufficient quota to detect languages.");
+  throw new Error("Insufficient quota to detect languages.");
 } else {
-  console.log("Yay, quota available to detect languages.");
+  console.log("Quota available to detect languages.");
   const results = await detector.detect(myTextString);
   // ...
 }

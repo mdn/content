@@ -32,6 +32,8 @@ measureInputUsage(input, options)
 
 A {{jsxref("Promise")}} that fulfills with a number specifying the {{domxref("LanguageDetector.inputQuota", "inputQuota")}} usage of the given input text.
 
+This number is implementation-dependant; if it is less than the {{domxref("LanguageDetector.inputQuota", "inputQuota")}}, the string's language can be detected.
+
 ### Exceptions
 
 - `NotAllowedError` {{domxref("DOMException")}}
@@ -56,9 +58,9 @@ const totalInputQuota = detector.inputQuota;
 const inputUsage = await detector.measureInputUsage(myTextString);
 
 if (inputUsage > totalInputQuota) {
-  throw new Error("Boo, insufficient quota to detect languages.");
+  throw new Error("Insufficient quota to detect languages.");
 } else {
-  console.log("Yay, quota available to detect languages.");
+  console.log("Quota available to detect languages.");
   const results = await detector.detect(myTextString);
   // ...
 }
