@@ -108,7 +108,7 @@ p1.then(
 
 ```js
 Promise.resolve(1).then(2).then(console.log); // 1
-Promise.reject(1).then(2, 2).then(console.log, console.log); // 1
+Promise.reject(new Error("failed")).then(2, 2).then(console.log, console.log); // Error: failed
 ```
 
 ### Chaining
@@ -214,7 +214,7 @@ Promise.resolve()
 In all other cases, the returned promise eventually fulfills. In the following example, the first `then()` returns `42` wrapped in a fulfilled Promise, even though the previous Promise in the chain was rejected.
 
 ```js
-Promise.reject()
+Promise.reject(new Error("Oh no!"))
   .then(
     () => 99,
     () => 42,

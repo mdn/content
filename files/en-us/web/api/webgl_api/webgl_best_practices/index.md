@@ -528,7 +528,7 @@ function clientWaitAsync(gl, sync, flags, interval_ms) {
     function test() {
       const res = gl.clientWaitSync(sync, flags, 0);
       if (res === gl.WAIT_FAILED) {
-        reject();
+        reject(new Error("clientWaitSync failed"));
         return;
       }
       if (res === gl.TIMEOUT_EXPIRED) {

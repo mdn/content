@@ -260,7 +260,7 @@ This example demonstrates how one can separate out Unicode characters from a wor
 
 ```js
 const text = "Образец text на русском языке";
-const regex = /[\u0400-\u04FF]+/g;
+const regex = /[\u0400-\u04ff]+/g;
 
 const match = regex.exec(text);
 console.log(match[0]); // 'Образец'
