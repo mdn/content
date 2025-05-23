@@ -62,21 +62,20 @@ In the following snippet, we start by checking the availability of the model for
 - If it returns a different value (that is, `downloadable` or `downloading`), we run the same `create()` method call, but this time we include a `monitor` that logs the percentage of the model downloaded each time the {{domxref("CreateMonitor/downloadprogress_event", "downloadprogress")}} event fires.
 
 ```js
-const availability = await LanguageDetector.availability({
-  expectedInputLanguages: ["en-US", "ja"],
-});
-let detector;
-
-if (availability === "unavailable") {
-  console.log(`Detection not supported; try a different set of languages.`);
-  return;
-} else if (availability === "available") {
-  detector = await LanguageDetector.create({
-    expectedInputLanguages: ["en-US", "zh"],
+async function getDetector(languages) {
+  const availability = await LanguageDetector.availability({
+    expectedInputLanguages: languages,
   });
-} else {
-  detector = await LanguageDetector.create({
-    expectedInputLanguages: ["en-US", "zh"],
+  if (availability === "unavailable") {
+    console.log(`Detection not supported; try a different set of languages.`);
+    return undefined;
+  } else if (availability === "available") {
+    return await LanguageDetector.create({
+      expectedInputLanguages: languages,
+    });
+  }
+  return await LanguageDetector.create({
+    expectedInputLanguages: languages,
     monitor: (monitor) => {
       monitor.addEventListener("downloadprogress", (e) => {
         console.log(`Downloaded ${Math.floor(e.loaded * 100)}%`);
@@ -84,6 +83,8 @@ if (availability === "unavailable") {
     },
   });
 }
+
+const detector = await getDetector(["en-US", "zh"]);
 ```
 
 ### Detecting language support

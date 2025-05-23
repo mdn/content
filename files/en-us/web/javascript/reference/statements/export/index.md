@@ -187,6 +187,7 @@ export * from "./mod2.js";
 
 // -- main.js --
 import * as ns from "./barrel.js";
+
 console.log(ns.a); // undefined
 ```
 

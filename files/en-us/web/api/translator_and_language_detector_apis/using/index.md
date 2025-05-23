@@ -78,7 +78,7 @@ This returns a string containing the translation.
 There is also a streaming version of the `translate()` method available — {{domxref("Translator.translateStreaming()")}} — that allows you to return the translation as a {{domxref("ReadableStream")}}. This can be useful when translating very large bodies of text:
 
 ```js
-const stream = translator.translateStreaming((myTextString);
+const stream = translator.translateStreaming(myTextString);
 let translation = "";
 
 for await (const chunk of stream) {
@@ -455,9 +455,8 @@ async function handleTranslation(e) {
   if (formData.get("translateLanguage") === detectedLanguage) {
     translateOutput.innerHTML = `<span class="error">Input language and translation language are the same.</span>`;
     return;
-  } else {
-    translateOutput.innerHTML = "";
   }
+  translateOutput.innerHTML = "";
 
   try {
     const availability = await Translator.availability({
@@ -469,7 +468,8 @@ async function handleTranslation(e) {
     if (availability === "unavailable") {
       translateOutput.innerHTML = `<span class="error">Translation not available; try a different language combination.</span>`;
       return;
-    } else if (availability === "available") {
+    }
+    if (availability === "available") {
       translator = await Translator.create({
         sourceLanguage: detectedLanguage,
         targetLanguage: formData.get("translateLanguage"),

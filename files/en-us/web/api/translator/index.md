@@ -63,7 +63,7 @@ console.log(translation);
 ### Generating a translation stream
 
 ```js
-const stream = translator.translateStreaming((myTextString);
+const stream = translator.translateStreaming(myTextString);
 let translation = "";
 
 for await (const chunk of stream) {

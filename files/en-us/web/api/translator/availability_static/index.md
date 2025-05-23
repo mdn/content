@@ -64,26 +64,19 @@ In the following snippet, we start by checking the availability of the model for
 - If it returns a different value (that is, `downloadable` or `downloading`), we run the same `create()` method call, but this time we include a `monitor` that logs the percentage of the model downloaded each time the {{domxref("CreateMonitor/downloadprogress_event", "downloadprogress")}} event fires.
 
 ```js
-const availability = await Translator.availability({
-  sourceLanguage: "en",
-  targetLanguage: "ja",
-});
-let translator;
+async function getTranslator(languages) {
+  const availability = await Translator.availability(languages);
 
-if (availability === "unavailable") {
-  console.log(
-    `Translation not supported; try a different language combination.`,
-  );
-  return;
-} else if (availability === "available") {
-  translator = await Translator.create({
-    sourceLanguage: "en",
-    targetLanguage: "ja",
-  });
-} else {
-  translator = await Translator.create({
-    sourceLanguage: "en",
-    targetLanguage: "ja",
+  if (availability === "unavailable") {
+    console.log(
+      `Translation not supported; try a different language combination.`,
+    );
+    return undefined;
+  } else if (availability === "available") {
+    return await Translator.create(languages);
+  }
+  return await Translator.create({
+    ...languages,
     monitor: (monitor) => {
       monitor.addEventListener("downloadprogress", (e) => {
         console.log(`Downloaded ${Math.floor(e.loaded * 100)}%`);
@@ -91,6 +84,11 @@ if (availability === "unavailable") {
     },
   });
 }
+
+const translator = await getTranslator({
+  sourceLanguage: "en",
+  targetLanguage: "ja",
+});
 ```
 
 ### Detecting language support
