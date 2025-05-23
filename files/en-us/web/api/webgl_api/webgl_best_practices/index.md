@@ -587,7 +587,7 @@ Demo: [Device pixel presnap](https://kdashg.github.io/misc/webgl/device-pixel-pr
 
 ## ResizeObserver and 'device-pixel-content-box'
 
-On supporting browsers (Chromium?), `ResizeObserver` can be used with `'device-pixel-content-box'` to request a callback that includes the true {{glossary("device pixel")}} size of an element. This can be used to build an async-but-accurate function:
+On [supporting browsers](/en-US/docs/Web/API/ResizeObserverEntry/devicePixelContentBoxSize#browser_compatibility), `ResizeObserver` can be used with `'device-pixel-content-box'` to request a callback that includes the true {{glossary("device pixel")}} size of an element. This can be used to build an async-but-accurate function:
 
 ```js
 function getDevicePixelSize(elem) {
