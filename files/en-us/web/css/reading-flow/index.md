@@ -7,7 +7,7 @@ browser-compat: css.properties.reading-flow
 
 {{CSSRef}}
 
-The **`reading-flow`** [CSS](/en-US/docs/Web/CSS) property modifies the order in which elements in a [block](/en-US/docs/Glossary/Block/CSS), [flex](/en-US/docs/Web/CSS/CSS_flexible_box_layout), or [grid](/en-US/docs/Web/CSS/CSS_grid_layout) layout are rendered to speech or are navigated to when using sequential navigation such as tabbing to links or buttons.
+The **`reading-flow`** [CSS](/en-US/docs/Web/CSS) property enables modifying the {{glossary("reading order")}} of child elements of a [block](/en-US/docs/Glossary/Block/CSS), [flex](/en-US/docs/Web/CSS/CSS_flexible_box_layout), or [grid](/en-US/docs/Web/CSS/CSS_grid_layout) layout. This affects the order in which they are rendered to speech and navigated to when using sequential navigation such as tabbing to links or buttons.
 
 ## Syntax
 
@@ -64,7 +64,7 @@ The `reading-flow` property takes one of the following keywords as its value:
 
 The `reading-flow` property modifies the {{glossary("reading order")}} of elements within a [block](/en-US/docs/Glossary/Block/CSS), [flex](/en-US/docs/Web/CSS/CSS_flexible_box_layout), or [grid](/en-US/docs/Web/CSS/CSS_grid_layout) container when set to a value other than `normal`. Such a container is referred to as a [reading flow container](/en-US/docs/Glossary/Reading_order#reading_flow_container).
 
-By default, web content is read out in DOM source order. Generally, the source order should express a sensible reading order for the content, and this should also be reflected by the visual order in the content layout. However, sometimes the visual order or tab order differs from the source order. For example, when applying multiple flexbox or grid layouts to a document via [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) to suit different device or user requirements, the order of containers may differ based on the viewport width. In such a case, the `reading-flow` can be used to ensure the reading and tabbing order reflect the visual order.
+By default, web content is read out in DOM source order. Generally, the source order should express a sensible reading order for the content, and this should also be reflected by the visual order in the content layout. However, sometimes the visual order or tab order differs from the source order. For example, when applying multiple flexbox or grid layouts to a document via [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) to suit different device or user requirements, the content order may differ based on the viewport width. In such a case, the `reading-flow` can be used to ensure the reading and tabbing order reflect the visual order.
 
 In some cases you may wish to further fine-tune the reading order within a reading flow container. You can use {{cssxref("reading-order")}} property values on the container's children, putting them into ordinal groups which are then read out in numerical order.
 
@@ -102,13 +102,14 @@ The markup includes a {{htmlelement("select")}} element for selecting different 
 
 We use a {{cssxref("display")}} value of `flex` to turn the `<div>` into a flex container, and display the flex items in a row in reverse DOM order with a {{cssxref("flex-direction")}} value of `row-reverse`. Initially, we set a `reading-flow` of `normal` so the items are read or tabbed through in DOM source order.
 
-We also set an {{cssxref("order")}} value of `1` on the first `<a>` element to cause it to display after the second and third item in the flex flow. The resulting display order of the flex items from left to right is "Item 1", "Item 3", then "Item 2".
+We also set an {{cssxref("order")}} value of `1` on the first `<a>` element to cause it to display after the second and third item in the flex flow. The resulting visual order of the flex items from left to right is "Item 1", "Item 3", then "Item 2", but the DOM order remains unchanged.
 
 ```css
 .wrapper {
   display: flex;
   flex-direction: row-reverse;
   reading-flow: normal;
+  gap: 1em;
 }
 
 a:first-child {
@@ -161,10 +162,10 @@ The markup includes a {{htmlelement("select")}} element for selecting different 
   </select>
 </form>
 <div class="wrapper">
-  <a class="a" href="#">Item 1</a>
-  <a class="b" href="#">Item 2</a>
-  <a class="c" href="#">Item 3</a>
-  <a class="d" href="#">Item 4</a>
+  <a class="a" href="#">Item A</a>
+  <a class="b" href="#">Item B</a>
+  <a class="c" href="#">Item C</a>
+  <a class="d" href="#">Item D</a>
 </div>
 ```
 
@@ -174,7 +175,7 @@ We use a {{cssxref("display")}} value of `grid` to turn the `<div>` into a grid 
 
 Finally, we set an {{cssxref("order")}} value of `1` on the first `<a>` element; this has no effect on the layout because it does not override the grid area placement, but it does have an effect when a certain `reading-flow` value is set, as you'll se later on.
 
-Reading from left to right, the resulting display order of the grid items is "Item 4", "Item 2", "Item 3", then "Item 1".
+Reading from left to right, the resulting display order of the grid items is "Item D", "Item B", "Item C", then "Item A".
 
 ```css
 .wrapper {
@@ -223,13 +224,13 @@ The demo renders like this:
 
 {{EmbedLiveSample('Grid value comparison', '', '100px')}}
 
-First, try tabbing through the links with `reading-flow: normal` set. The tabbing order is "Item 1", "Item 2", "Item 3", then "Item 4", as that is the order of the elements in the DOM.
+First, try tabbing through the links with `reading-flow: normal` set. The tabbing order is "Item A", "Item B", "Item C", and "Item D", as that is the order of the elements in the DOM.
 
-Now try changing the `reading-flow` value and tabbing through the links again:
+Now change the `reading-flow` value and then try tabbing through the links again:
 
-- A value of `grid-rows` causes the items to be tabbed through in the visual display order by row. This is "Item 4", "Item 2", "Item 3", then "Item 1".
-- A value of `grid-columns` causes the items to be tabbed through in the visual display order by column. This is "Item 4", "Item 3", "Item 2", then "Item 1".
-- A value of `grid-order` causes the items to be tabbed through in DOM order, but taking into account any changes due to set `order` values. Since we've got `order: 1;` set on the first `<a>` element, the tabbing order is "Item 2", "Item 3", "Item 4", then "Item 1".
+- A value of `grid-rows` causes the items to be tabbed through in the visual display order by row. This is "Item D", "Item B", "Item C", then "Item A".
+- A value of `grid-columns` causes the items to be tabbed through in the visual display order by column. This is "Item D", "Item C", "Item B", then "Item A".
+- A value of `grid-order` causes the items to be tabbed through in DOM order, but takes into account any `order` value changes. Since we have `order: 1;` set on the first `<a>` element, the tabbing order is "Item B", "Item C", "Item D", then "Item A".
 
 ### Reading order adjustment on block containers
 
@@ -241,16 +242,16 @@ The markup includes a wrapper {{htmlelement("div")}} containing four {{htmleleme
 
 ```html
 <div class="wrapper">
-  <a class="a" href="#">Item 1</a>
-  <a class="b" href="#">Item 2</a>
-  <a class="c" href="#">Item 3</a>
-  <a class="d" href="#">Item 4</a>
+  <a class="a" href="#">Item A</a>
+  <a class="b" href="#">Item B</a>
+  <a class="c" href="#">Item C</a>
+  <a class="d" href="#">Item D</a>
 </div>
 ```
 
 #### CSS
 
-We set a `reading-flow` of `source-order` so the items are read or tabbed through in DOM source order, but modifications are allowed to the reading order via `reading-order`. We set a `reading-order` value of `1` on the first `<a>` element.
+We set a `reading-flow` of `source-order` so the items are read or tabbed through in DOM source order, but modifications are allowed to the reading order via {{cssxref("reading-order")}}. We set a `reading-order` value of `1` on the first `<a>` element.
 
 ```css
 .wrapper {
@@ -268,7 +269,7 @@ The demo renders like this:
 
 {{EmbedLiveSample('Reading flow adjustment on block containers', '', '100px')}}
 
-Try tabbing through the links: the tabbing order is "Item 2", "Item 3", "Item 4", then "Item 1" — the order of the elements in the DOM is followed, but Item 1 has been put in a higher reading order ordinal group than the others (the default `reading-order` value is `0`), therefore it is tabbed to last.
+Try tabbing through the links: the tabbing order is "Item B", "Item C", "Item D", then "Item A" — the order of the elements in the DOM is followed, but Item A has been put in a higher reading order ordinal group than the others (the default `reading-order` value is `0`), therefore it is tabbed to last.
 
 ## Specifications
 

@@ -6,11 +6,11 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-**Reading order** refers to the order in which content is accessed, for example when read out by a {{glossary("screen reader")}}, or navigated to using sequential navigation methods such as tabbing through links or buttons.
+**Reading order** refers to the order in which content is accessed, for example when read out by a {{glossary("screen reader")}}, or navigated to using sequential navigation methods such as tabbing through links or buttons. By default, the reading order of a webpage is defined by the document source order.
 
-By default, the reading order of a webpage is defined by the document source order. Generally, the source order should express a sensible reading order for the content, and this should also be reflected by the visual order of the content layout. However, sometimes the visual order goes out of sync with the source order. For example, you might apply multiple layouts to a document via [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) to suit different device or user requirements, or adjust tabbing order via [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex).
+Generally, the source order should express a sensible reading order for the content, and this should also be reflected by the visual order of the content layout. However, sometimes the visual order goes out of sync with the source order. For example, you might apply multiple layouts to a document via [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) to suit different device or user requirements, or adjust tabbing order via [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex).
 
-These updates can cause accessibility issues, for example the content might not be perceived in the same way by sighted users and {{glossary("screen reader")}} users. In such cases, it is beneficial to adjust the reading order so that it still makes sense to all users.
+These updates can cause accessibility issues. For example, when a sighted {{glossary("screen reader")}} user tabs through content, and the screen reader order differs from the visual order, this is bad user experience and can be inaccessible. The {{glossary("reading order")}} should make sense to all users no matter how they access the content.
 
 An element's reading order can be modified via the {{cssxref("reading-flow")}} property, and tweaked further by setting {{cssxref("reading-order")}} values on child items of the element.
 

@@ -7,9 +7,7 @@ browser-compat: css.properties.reading-order
 
 {{CSSRef}}
 
-The **`reading-order`** [CSS](/en-US/docs/Web/CSS) property enables defining a {{glossary("reading order")}} for the children of a [reading flow container](/en-US/docs/Glossary/Reading_order#reading_flow_container).
-
-When an element's [block](/en-US/docs/Glossary/Block/CSS), [flex](/en-US/docs/Web/CSS/CSS_flexible_box_layout), or [grid](/en-US/docs/Web/CSS/CSS_grid_layout) parent container has a {{cssxref("reading-flow")}} resolving to a value other than `normal`, the `reading-order` property can be used to set the element's [reading flow](/en-US/docs/Glossary/Reading_order#reading_flow) position relative to that of its siblings.
+The **`reading-order`** [CSS](/en-US/docs/Web/CSS) property enables changing the order in which a child of a [reading flow container](/en-US/docs/Glossary/Reading_order#reading_flow_container) is read relative to its element siblings.
 
 ## Syntax
 
@@ -29,11 +27,11 @@ reading-order: unset;
 ### Value
 
 - {{cssxref("&lt;integer&gt;")}}
-  - : Represents the ordinal group an element belongs to.
+  - : Represents the ordinal group the element belongs to.
 
 ## Description
 
-The `reading-order` property lets the author define where in the reading order an element is read out or tabbed to relative to its siblings within a reading flow container parent, optionally overriding the reading order set by the [reading-flow](/en-US/docs/Web/CSS/reading-flow) property on that parent.
+When an element's [block](/en-US/docs/Glossary/Block/CSS), [flex](/en-US/docs/Web/CSS/CSS_flexible_box_layout), or [grid](/en-US/docs/Web/CSS/CSS_grid_layout) parent container has a {{cssxref("reading-flow")}} property set to a value other than `normal`, the `reading-order` property can be used to set the element's [reading flow](/en-US/docs/Glossary/Reading_order#reading_flow) position relative to that of its siblings.
 
 For reading and navigation, elements inside a block, flex, or grid container are sorted by ascending `reading-order` value. If multiple siblings have the same `reading-order` value, those items are sorted according to the container's `reading-flow` value. Siblings not given an explicit `reading-order` value are assigned the default value of `0`, which puts all the children of a reading flow container in the same ordinal group by default.
 
@@ -49,11 +47,11 @@ The `reading-order` defines the reading and tabbing order, but has no effect on 
 
 ### Grid row order
 
-In this example there are six {{htmlelement("a")}} elements, laid out on a grid. One of them has a lower `reading-order` value set, so will be read out before the others, and another has a higher `reading-order` value set, so will be read out after the others, regardless of source or display order.
+This example demonstrates using `reading-order` to control the positions of individual grid items within a grid container's reading order. One grid item has a `reading-order` value that is lower than the default `0`, so will be read out before its sibling elements. Another has a higher `reading-order` value set, so will be read out after the others, regardless of source or display order.
 
 #### HTML
 
-The six `<a>` elements are contained inside a wrapper {{htmlelement("div")}}.
+In our markup we have six {{htmlelement("a")}} elements contained inside a wrapper {{htmlelement("div")}}.
 
 ```html
 <div class="wrapper">
@@ -68,7 +66,7 @@ The six `<a>` elements are contained inside a wrapper {{htmlelement("div")}}.
 
 #### CSS
 
-On the `<div>`, we set the [grid-auto-flow](/en-US/docs/Web/CSS/grid-auto-flow) property to `dense`, therefore items may display out of source order. The `reading-order` property on the `<a>` element with a class of `top` is set to `-1`, therefore "Item 4" will be the first item in reading flow. The `reading-order` property on the `<a>` element with a class of `bottom` is set to `21`, therefore "Item 4" will be the last item in the reading flow. The remaining items will be visited in between, in the order they display in rows, as the `<div>` element's {{cssxref("reading-flow")}} property is set to [grid-rows](/en-US/docs/Web/CSS/grid-row).
+On the `<div>`, we set the [grid-auto-flow](/en-US/docs/Web/CSS/grid-auto-flow) property to `dense`, therefore items may display out of source order. The `reading-order` property on the `<a>` element with a class of `top` is set to `-1`, therefore "Item 4" will be the first item in reading flow. The `reading-order` property on the `<a>` element with a class of `bottom` is set to `21`, therefore "Item 4" will be the last item in the reading order. The remaining items will be visited in between, in grid row order, as the `<div>` element's {{cssxref("reading-flow")}} property is set to [grid-rows](/en-US/docs/Web/CSS/grid-row).
 
 ```css
 .wrapper {
@@ -97,11 +95,11 @@ Try tabbing through the links. Note how "Item 4" is tabbed to first and "Item 2"
 
 ### Source order override
 
-In this example there are five {{htmlelement("a")}} elements, displayed as block-level elements. The odd-number items have a lower `reading-order` value set, so will be read out before the others, regardless of source or display order.
+In this example, the odd-numbered items have a lower `reading-order` value set, so will be read out before the others in a group, regardless of source or display order.
 
 #### HTML
 
-The five `<a>` elements are contained inside a wrapper {{htmlelement("div")}}.
+In our markup, we have five `<a>` elements contained inside a wrapper {{htmlelement("div")}}.
 
 ```html
 <div class="wrapper">
@@ -115,7 +113,7 @@ The five `<a>` elements are contained inside a wrapper {{htmlelement("div")}}.
 
 #### CSS
 
-The `<div>` element's `reading-flow` property is set to `source-order`, which allows `reading-order` to be used to override the default source reading order. The odd-numbered `<a>` elements have a `reading-order` value of `-1`, therefore they are read out before the even-numbered items, regardless of source order.
+The `<div>` element's `reading-flow` property is set to `source-order`, which allows `reading-order` to be used to override the default source reading order. The odd-numbered `<a>` elements have a `reading-order` value of `-1`, therefore they are read out before the even-numbered items.
 
 ```css
 .wrapper {
