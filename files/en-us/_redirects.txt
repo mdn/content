@@ -5825,6 +5825,8 @@
 /en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_HTML5_controls	/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Input_types
 /en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Other_controls	/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Other_controls
 /en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Styling_basics	/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Styling_basics
+/en-US/docs/Learn_web_development/Extensions/Security_privacy	/en-US/docs/Web/Security
+/en-US/docs/Learn_web_development/Extensions/Transform_animate	/en-US/docs/Learn_web_development/Extensions
 /en-US/docs/Learn_web_development/Getting_started/Basic_setup	/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software
 /en-US/docs/Learn_web_development/Getting_started/Soft_skills/Job_interviews	/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Finding_a_job
 /en-US/docs/Learn_web_development/Getting_started/Soft_skills/Learning_and_getting_help	/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning
