@@ -33,7 +33,7 @@ A generic {{domxref("Event")}}.
 
 ## Examples
 
-The example below shows how to get the text selected in an {{HTMLElement("textarea")}} element.
+The example below shows how to get the text selected in a {{HTMLElement("textarea")}} element.
 
 ### HTML
 
