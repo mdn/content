@@ -77,7 +77,7 @@ async function getTranslator(languages) {
   }
   return await Translator.create({
     ...languages,
-    monitor: (monitor) => {
+    monitor(monitor) {
       monitor.addEventListener("downloadprogress", (e) => {
         console.log(`Downloaded ${Math.floor(e.loaded * 100)}%`);
       });

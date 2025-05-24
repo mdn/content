@@ -76,7 +76,7 @@ async function getDetector(languages) {
   }
   return await LanguageDetector.create({
     expectedInputLanguages: languages,
-    monitor: (monitor) => {
+    monitor(monitor) {
       monitor.addEventListener("downloadprogress", (e) => {
         console.log(`Downloaded ${Math.floor(e.loaded * 100)}%`);
       });

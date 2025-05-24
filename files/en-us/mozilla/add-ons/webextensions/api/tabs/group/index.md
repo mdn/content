@@ -60,7 +60,7 @@ const groupId = await browser.tabs.group({
 const tab3 = await browser.tabs.create({});
 await browser.tabs.group({
   tabIds: tab3.id,
-  groupId: groupId,
+  groupId,
 });
 ```
 
