@@ -33,11 +33,11 @@ const synth = window.speechSynthesis;
 
 synth.addEventListener("voiceschanged", () => {
   const voices = synth.getVoices();
-  for (let i = 0; i < voices.length; i++) {
+  for (const voice of voices) {
     const option = document.createElement("option");
-    option.textContent = `${voices[i].name} (${voices[i].lang})`;
-    option.setAttribute("data-lang", voices[i].lang);
-    option.setAttribute("data-name", voices[i].name);
+    option.textContent = `${voice.name} (${voice.lang})`;
+    option.setAttribute("data-lang", voice.lang);
+    option.setAttribute("data-name", voice.name);
     voiceSelect.appendChild(option);
   }
 });
@@ -49,11 +49,11 @@ Or use the `onvoiceschanged` event handler property:
 const synth = window.speechSynthesis;
 synth.onvoiceschanged = () => {
   const voices = synth.getVoices();
-  for (let i = 0; i < voices.length; i++) {
+  for (const voice of voices) {
     const option = document.createElement("option");
-    option.textContent = `${voices[i].name} (${voices[i].lang})`;
-    option.setAttribute("data-lang", voices[i].lang);
-    option.setAttribute("data-name", voices[i].name);
+    option.textContent = `${voice.name} (${voice.lang})`;
+    option.setAttribute("data-lang", voice.lang);
+    option.setAttribute("data-name", voice.name);
     voiceSelect.appendChild(option);
   }
 };

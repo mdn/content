@@ -131,8 +131,8 @@ function start_handler(ev) {
   ev.preventDefault();
   // Cache the touch points for later processing of 2-touch pinch/zoom
   if (ev.targetTouches.length === 2) {
-    for (let i = 0; i < ev.targetTouches.length; i++) {
-      tpCache.push(ev.targetTouches[i]);
+    for (const touch of ev.targetTouches) {
+      tpCache.push(touch);
     }
   }
   if (logEvents) log("touchStart", ev, true);
@@ -252,8 +252,8 @@ function log(name, ev, printTargetIds) {
 
   if (printTargetIds) {
     s = "";
-    for (let i = 0; i < ev.targetTouches.length; i++) {
-      s += `... id = ${ev.targetTouches[i].identifier}\n`;
+    for (const touch of ev.targetTouches) {
+      s += `... id = ${touch.identifier}\n`;
     }
     o.innerText += s;
   }

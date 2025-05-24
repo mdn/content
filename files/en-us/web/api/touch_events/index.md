@@ -95,13 +95,13 @@ function handleStart(evt) {
   const ctx = el.getContext("2d");
   const touches = evt.changedTouches;
 
-  for (let i = 0; i < touches.length; i++) {
+  for (const [i, touch] of touches.entries()) {
     log(`touchstart: ${i}.`);
-    ongoingTouches.push(copyTouch(touches[i]));
-    const color = colorForTouch(touches[i]);
-    log(`color of touch with id ${touches[i].identifier} = ${color}`);
+    ongoingTouches.push(copyTouch(touch));
+    const color = colorForTouch(touch);
+    log(`color of touch with id ${touch.identifier} = ${color}`);
     ctx.beginPath();
-    ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0, 2 * Math.PI, false); // a circle at the start
+    ctx.arc(touch.pageX, touch.pageY, 4, 0, 2 * Math.PI, false); // a circle at the start
     ctx.fillStyle = color;
     ctx.fill();
   }
@@ -123,9 +123,9 @@ function handleMove(evt) {
   const ctx = el.getContext("2d");
   const touches = evt.changedTouches;
 
-  for (let i = 0; i < touches.length; i++) {
-    const color = colorForTouch(touches[i]);
-    const idx = ongoingTouchIndexById(touches[i].identifier);
+  for (const touch of touches) {
+    const color = colorForTouch(touch);
+    const idx = ongoingTouchIndexById(touch.identifier);
 
     if (idx >= 0) {
       log(`continuing touch ${idx}`);
@@ -134,13 +134,13 @@ function handleMove(evt) {
         `ctx.moveTo( ${ongoingTouches[idx].pageX}, ${ongoingTouches[idx].pageY} );`,
       );
       ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
-      log(`ctx.lineTo( ${touches[i].pageX}, ${touches[i].pageY} );`);
-      ctx.lineTo(touches[i].pageX, touches[i].pageY);
+      log(`ctx.lineTo( ${touch.pageX}, ${touch.pageY} );`);
+      ctx.lineTo(touch.pageX, touch.pageY);
       ctx.lineWidth = 4;
       ctx.strokeStyle = color;
       ctx.stroke();
 
-      ongoingTouches.splice(idx, 1, copyTouch(touches[i])); // swap in the new touch record
+      ongoingTouches.splice(idx, 1, copyTouch(touch)); // swap in the new touch record
     } else {
       log("can't figure out which touch to continue");
     }
@@ -166,17 +166,17 @@ function handleEnd(evt) {
   const ctx = el.getContext("2d");
   const touches = evt.changedTouches;
 
-  for (let i = 0; i < touches.length; i++) {
-    const color = colorForTouch(touches[i]);
-    let idx = ongoingTouchIndexById(touches[i].identifier);
+  for (const touch of touches) {
+    const color = colorForTouch(touch);
+    let idx = ongoingTouchIndexById(touch.identifier);
 
     if (idx >= 0) {
       ctx.lineWidth = 4;
       ctx.fillStyle = color;
       ctx.beginPath();
       ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
-      ctx.lineTo(touches[i].pageX, touches[i].pageY);
-      ctx.fillRect(touches[i].pageX - 4, touches[i].pageY - 4, 8, 8); // and a square at the end
+      ctx.lineTo(touch.pageX, touch.pageY);
+      ctx.fillRect(touch.pageX - 4, touch.pageY - 4, 8, 8); // and a square at the end
       ongoingTouches.splice(idx, 1); // remove it; we're done
     } else {
       log("can't figure out which touch to end");
@@ -197,7 +197,7 @@ function handleCancel(evt) {
   log("touchcancel.");
   const touches = evt.changedTouches;
 
-  for (let i = 0; i < touches.length; i++) {
+  for (const touch of touches) {
     let idx = ongoingTouchIndexById(touches[i].identifier);
     ongoingTouches.splice(idx, 1); // remove it; we're done
   }

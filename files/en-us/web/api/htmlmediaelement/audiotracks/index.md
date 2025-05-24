@@ -50,8 +50,8 @@ The JavaScript code handles muting the video element's audio tracks.
 ```js
 const video = document.getElementById("video");
 
-for (let i = 0; i < video.audioTracks.length; i += 1) {
-  video.audioTracks[i].enabled = false;
+for (const track of video.audioTracks) {
+  track.enabled = false;
 }
 ```
 

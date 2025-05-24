@@ -97,15 +97,15 @@ const template = `<article>
   </ul>
 </article>`;
 let content = "";
-for (let i = 0; i < games.length; i++) {
-  let entry = template
+for (const game of games) {
+  const entry = template
     .replace(/POS/g, i + 1)
-    .replace(/SLUG/g, games[i].slug)
-    .replace(/NAME/g, games[i].name)
-    .replace(/AUTHOR/g, games[i].author)
-    .replace(/WEBSITE/g, games[i].website)
-    .replace(/GITHUB/g, games[i].github);
-  entry = entry.replace("<a href='http:///'></a>", "-");
+    .replace(/SLUG/g, game.slug)
+    .replace(/NAME/g, game.name)
+    .replace(/AUTHOR/g, game.author)
+    .replace(/WEBSITE/g, game.website)
+    .replace(/GITHUB/g, game.github)
+    .replace("<a href='http:///'></a>", "-");
   content += entry;
 }
 document.getElementById("content").innerHTML = content;
@@ -182,8 +182,8 @@ const appShellFiles = [
   "/pwa-examples/js13kpwa/icons/icon-512.png",
 ];
 const gamesImages = [];
-for (let i = 0; i < games.length; i++) {
-  gamesImages.push(`data/img/${games[i].slug}.jpg`);
+for (const game of games) {
+  gamesImages.push(`data/img/${game.slug}.jpg`);
 }
 const contentToCache = appShellFiles.concat(gamesImages);
 ```
