@@ -516,7 +516,7 @@ You can find more information about WebGPU error handling in the explainer — s
 - {{domxref("HTMLCanvasElement.getContext()")}} — the `"webgpu"` `contextType`
   - : Invoking `getContext()` with the `"webgpu"` `contextType` returns a {{domxref("GPUCanvasContext")}} object instance, which can then be configured with {{domxref("GPUCanvasContext.configure()")}}.
 - {{domxref("GPUCanvasContext")}}
-  - : Represents the WebGPU rendering context of an {{htmlelement("canvas")}} element.
+  - : Represents the WebGPU rendering context of a {{htmlelement("canvas")}} element.
 
 ### Representing pipeline resources
 
