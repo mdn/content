@@ -55,5 +55,6 @@ figcaption {
 
 ## See also
 
+- {{cssxref("view-transition-class")}}
 - [View Transition API](/en-US/docs/Web/API/View_Transition_API)
 - [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/)
