@@ -1940,6 +1940,10 @@
       "inh": "",
       "impl": []
     },
+    "IntegrityPolicyViolationReportBody": {
+      "inh": "ReportBody",
+      "impl": []
+    },
     "InterestGroupBiddingAndScoringScriptRunnerGlobalScope": {
       "inh": "InterestGroupScriptRunnerGlobalScope",
       "impl": []
