@@ -308,7 +308,7 @@ This table details all the keys you can include.
 
 ## Load order
 
-Registered objects in `content_scripts` are injected into matching web pages at the time specified by `run_at` (first `document_start`, then`document_end`, and finally `document_idle`):
+Registered objects in `content_scripts` are injected into matching web pages at the time specified by `run_at` (first `document_start`, then `document_end`, and finally `document_idle`):
 
 - In the order specified in the `content_scripts` array, for each object with a matching `run_at` value, then:
   - CSS is applied in the order specified in its `css` array.

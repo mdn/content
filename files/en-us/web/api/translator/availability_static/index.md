@@ -38,7 +38,7 @@ Possible values include:
 - `available`
   - : The browser supports the given configuration and it can be used immediately.
 - `downloadable`
-  - : The browser supports the given configuration, but it first needs to download an AI model, or some fune-tuning data for the model.
+  - : The browser supports the given configuration, but it first needs to download an AI model, or some fine-tuning data for the model.
 - `downloading`
   - : The browser supports the given configuration, but it has to finish an ongoing download before it can proceed.
 - `unavailable`
