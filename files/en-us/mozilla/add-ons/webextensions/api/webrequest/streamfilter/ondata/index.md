@@ -268,8 +268,8 @@ function listener(details) {
 
   filter.onstop = async (event) => {
     const blob = new Blob(data, { type: "text/html" });
-    const buffer = await blob.arrayBuffer();
-    let str = decoder.decode(buffer);
+    const bytes = await blob.bytes();
+    let str = decoder.decode(bytes);
     str = str.replaceAll("Example", "WebExtension $&");
     filter.write(encoder.encode(str));
     filter.close();
