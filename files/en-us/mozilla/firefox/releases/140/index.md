@@ -37,6 +37,11 @@ This article provides information about the changes in Firefox 140 that affect d
 
 ### APIs
 
+### Escape < and > in attributes when serializing HTML
+
+- {{domxref("Element.innerHTML")}}, {{domxref("Element.outerHTML")}}, {{domxref("Element.getHTML()")}}, {{domxref("ShadowRoot.innerHTML")}}, and {{domxref("ShadowRoot.getHTML()")}} now replace the `<` and `>` characters with `&lt;` and `&gt;` (respectively) when serializing the HTML to a string. This prevents certain exploits where HTML is serialized and then injected back into the DOM.
+  ([Firefox bug 1962084](https://bugzil.la/1962084)).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
