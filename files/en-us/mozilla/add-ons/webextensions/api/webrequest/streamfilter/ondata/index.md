@@ -315,6 +315,68 @@ browser.webRequest.onBeforeRequest.addListener(
 );
 ```
 
+This example demonstrates, how to search for multi-byte pattern in an array:
+
+```js
+Object.defineProperty(Array.prototype, "indexOfMulti", {
+  value: function (searchElements, fromIndex) {
+    let i = this.indexOf(searchElements[0], fromIndex);
+    if (searchElements.length === 1 || i === -1) {
+      // Not found or no other elements to check
+      return i;
+    }
+
+    if (i + searchElements.length > this.length) {
+      return -1;
+    }
+
+    const initial = i;
+    for (let j = 1, l = searchElements.length; j < l; j++) {
+      if (this[++i] !== searchElements[j]) {
+        return this.indexOfMulti(searchElements, initial + 1);
+      }
+    }
+    return initial;
+  },
+});
+
+const encoder = new TextEncoder();
+const elements = encoder.encode("WebExtension ");
+const bytes = encoder.encode("Example");
+
+function listener(details) {
+  const filter = browser.webRequest.filterResponseData(details.requestId);
+
+  const data = [];
+  filter.ondata = (event) => {
+    const buffer = new Uint8Array(event.data);
+    for (let i = 0, l = buffer.length; i < l; i++) {
+      data.push(buffer[i]);
+    }
+  };
+
+  filter.onstop = (event) => {
+    for (
+      let i = data.indexOfMulti(bytes), m = elements.length, n = bytes.length;
+      i >= 0;
+      i = data.indexOfMulti(bytes, i + m + n)
+    ) {
+      // Insert "WebExtension " at the given index
+      data.splice(i, 0, ...elements);
+    }
+
+    filter.write(new Uint8Array(data));
+    filter.close();
+  };
+}
+
+browser.webRequest.onBeforeRequest.addListener(
+  listener,
+  { urls: ["https://example.com/"], types: ["main_frame"] },
+  ["blocking"],
+);
+```
+
 {{WebExtExamples}}
 
 ## Browser compatibility
