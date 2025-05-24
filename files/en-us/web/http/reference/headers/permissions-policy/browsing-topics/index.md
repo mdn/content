@@ -1,5 +1,6 @@
 ---
-title: "Permissions-Policy: browsing-topics"
+title: "Permissions-Policy: browsing-topics directive"
+short-title: browsing-topics
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/browsing-topics
 page-type: http-permissions-policy-directive
 status:

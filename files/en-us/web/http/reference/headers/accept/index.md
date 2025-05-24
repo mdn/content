@@ -1,5 +1,6 @@
 ---
-title: Accept
+title: Accept header
+short-title: Accept
 slug: Web/HTTP/Reference/Headers/Accept
 page-type: http-header
 browser-compat: http.headers.Accept

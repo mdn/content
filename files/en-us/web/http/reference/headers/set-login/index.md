@@ -1,5 +1,6 @@
 ---
-title: Set-Login
+title: Set-Login header
+short-title: Set-Login
 slug: Web/HTTP/Reference/Headers/Set-Login
 page-type: http-header
 browser-compat: http.headers.Set-Login

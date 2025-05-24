@@ -1,5 +1,6 @@
 ---
-title: Authorization
+title: Authorization header
+short-title: Authorization
 slug: Web/HTTP/Reference/Headers/Authorization
 page-type: http-header
 browser-compat: http.headers.Authorization

@@ -1,5 +1,6 @@
 ---
-title: "Permissions-Policy: compute-pressure"
+title: "Permissions-Policy: compute-pressure directive"
+short-title: compute-pressure
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/compute-pressure
 page-type: http-permissions-policy-directive
 status:

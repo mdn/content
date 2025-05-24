@@ -1,5 +1,6 @@
 ---
-title: Speculation-Rules
+title: Speculation-Rules header
+short-title: Speculation-Rules
 slug: Web/HTTP/Reference/Headers/Speculation-Rules
 page-type: http-header
 status:

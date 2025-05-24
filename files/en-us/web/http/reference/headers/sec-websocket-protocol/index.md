@@ -1,5 +1,6 @@
 ---
-title: Sec-WebSocket-Protocol
+title: Sec-WebSocket-Protocol header
+short-title: Sec-WebSocket-Protocol
 slug: Web/HTTP/Reference/Headers/Sec-WebSocket-Protocol
 page-type: http-header
 browser-compat: http.headers.Sec-WebSocket-Protocol
