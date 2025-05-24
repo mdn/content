@@ -1,0 +1,190 @@
+---
+title: "CanvasRenderingContext2D: lang property"
+short-title: lang
+slug: Web/API/CanvasRenderingContext2D/lang
+page-type: web-api-instance-property
+browser-compat: api.CanvasRenderingContext2D.lang
+---
+
+{{APIRef}}
+
+The **`CanvasRenderingContext2D.lang`** property of the Canvas 2D API gets or sets the language of the canvas drawing context.
+
+## Value
+
+A [BCP 47 language tag](https://datatracker.ietf.org/doc/html/rfc5646) representing the language of the canvas context, or `"inherit"`, in which case the language is inherited from the [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute of the originating {{HTMLElement("canvas")}} element or its nearest ancestor with an explicit `lang` set.
+
+The default value is `"inherit"`.
+
+## Examples
+
+### Basic usage
+
+```js
+const canvasElem = document.querySelector("canvas");
+const ctx = canvasElem.getContext("2d");
+
+// Get context language; returns "inherit" by default
+console.log(ctx.lang);
+
+// Set context language
+ctx.lang = "en";
+// Logs "en"
+console.log(ctx.lang);
+```
+
+### Demonstrating canvas context localization support
+
+In this example, we render a text string to a 2D canvas context in a particular font that has language-dependant ligatures. We allow the canvas context's language to be adjusted so you can see the difference in rendering.
+
+#### HTML
+
+The HTML features a {{htmlelement("select")}} element that allows you to choose a language — `en` (English) or `tr` (Turkish) — and a {{htmlelement("canvas")}} element to render to.
+
+```html live-example___canvas-l10n
+<p>
+  <label for="lang">Choose language:</label>
+  <select id="lang" name="lang">
+    <option>en</option>
+    <option>tr</option>
+  </select>
+</p>
+<canvas></canvas>
+```
+
+#### JavaScript
+
+In the JavaScript, we first grab references to the `<canvas>` element, its `CanvasRenderingContext2D`, and the `<select>` element, then load the language-dependant font using the [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API). Once the font is loaded, we run an `init()` function. This function defines another function — `drawText()`, which draws some text to the canvas context that uses the loaded font, adds a [`change`](/en-US/docs/Web/API/HTMLElement/change_event) [event listener](/en-US/docs/Web/API/EventTarget/addEventListener) to the `<select>` element, then calls `drawText()` so that the text is immediately drawn to the canvas when the page first loads.
+
+```js live-example___canvas-l10n
+const canvasElem = document.querySelector("canvas");
+const ctx = canvasElem.getContext("2d");
+
+const selectElem = document.querySelector("select");
+
+let latoMediumFontFace = new FontFace(
+  // Lato-Medium is a font with language specific ligatures
+  "Lato-Medium",
+  "url(https://mdn.github.io/shared-assets/fonts/Lato-Medium.ttf)",
+);
+
+latoMediumFontFace.load().then((font) => {
+  document.fonts.add(font);
+  init();
+});
+
+function init() {
+  function drawText() {
+    ctx.clearRect(0, 0, canvasElem.width, canvasElem.height);
+    ctx.font = "30px Lato-Medium";
+    ctx.color = "black";
+    ctx.fillText("finish crafting", 50, 100);
+  }
+
+  selectElem.addEventListener("change", () => {
+    document.documentElement.lang = selectElem.value;
+    drawText();
+  });
+
+  drawText();
+}
+```
+
+When the `<select>` value is changed, the `change` event handler function fires, which:
+
+- Sets the value of the `<html>` element's [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute to the `<select>` element value, effectively changing the language of the document.
+- Runs the `drawText()` function. The `CanvasRenderingContext2D.lang` property is set to `inherit` by default, therefore the canvas context inherits the language of the document.
+
+#### Result
+
+The example is rendered as follows:
+
+{{ EmbedLiveSample('canvas-l10n', "100%", 220) }}
+
+Try changing the document language using the `<select>` element. When the language is set to English, the font will be rendered with the "fi" ligature. However, when it is set to Turkish, the font will be rendered without the "fi" ligature, because that locale doesn't include it.
+
+### Language support for offscreen canvases
+
+This example is the same as the previous example, except that the font is rendered to a {{domxref("OffscreenCanvasRenderingContext2D")}} then the resulting bitmap is transferred to the on-screen `<canvas>` to display. The `lang` attribute can be used to provide localization support to the off-screen canvas in just the same way as the regular on-screen `<canvas>`.
+
+#### HTML
+
+```html live-example___offscreen-l10n
+<p>
+  <label for="lang">Choose language:</label>
+  <select id="lang" name="lang">
+    <option>en</option>
+    <option>tr</option>
+  </select>
+</p>
+<canvas></canvas>
+```
+
+#### JavaScript
+
+The JavaScript works in the same way as the previous example, except that:
+
+- The on-screen canvas context is defined as an {{domxref("ImageBitmapRenderingContext")}}.
+- We define a new `OffscreenCanvasRenderingContext2D` to draw the text onto, transfer the result to a bitmap using {{domxref("OffscreenCanvas.transferToImageBitmap", "transferToImageBitmap()")}}, then render it on the `<canvas>` using {{domxref("ImageBitmapRenderingContext.transferFromImageBitmap", "transferFromImageBitmap()")}}
+
+```js live-example___offscreen-l10n
+const canvasElem = document.querySelector("canvas");
+const ctx = canvasElem.getContext("bitmaprenderer");
+
+const offscreen = new OffscreenCanvas(canvasElem.width, canvasElem.height);
+const offscreen_ctx = offscreen.getContext("2d");
+
+const selectElem = document.querySelector("select");
+
+let latoMediumFontFace = new FontFace(
+  // Lato-Medium is a font with language specific ligatures.
+  "Lato-Medium",
+  "url(https://mdn.github.io/shared-assets/fonts/Lato-Medium.ttf)",
+);
+
+latoMediumFontFace.load().then((font) => {
+  document.fonts.add(font);
+  init();
+});
+
+function init() {
+  function drawText() {
+    offscreen_ctx.clearRect(0, 0, canvasElem.width, canvasElem.height);
+    offscreen_ctx.font = "30px Lato-Medium";
+    offscreen_ctx.color = "black";
+    offscreen_ctx.fillText("finish crafting", 50, 100);
+
+    const bitmap = offscreen.transferToImageBitmap();
+    ctx.transferFromImageBitmap(bitmap);
+  }
+
+  selectElem.addEventListener("change", () => {
+    document.documentElement.lang = selectElem.value;
+    drawText();
+  });
+
+  drawText();
+}
+```
+
+#### Result
+
+The example is rendered as follows:
+
+EDITORIAL: IN THIS CASE, THE OFF-SCREEN CANVAS DOES NOT APPEAR TO BE INHERITING THE LANG FROM THE DOCUMENT. I'M PRETTY SURE THIS SHOULD BE WORKING, BUT IT ISN'T. ANY THOUGHTS AS TO WHY?
+
+{{ EmbedLiveSample('offscreen-l10n', "100%", 220) }}
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- {{domxref("OffscreenCanvasRenderingContext2D.lang")}}
+- {{domxref("CanvasRenderingContext2D")}}
+- [Canvas Localization Support](https://blogs.igalia.com/schenney/canvas-localization-support/) from Igalia (2025)
