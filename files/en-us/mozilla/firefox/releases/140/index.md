@@ -67,6 +67,12 @@ This article provides information about the changes in Firefox 140 that affect d
 
 These features are shipping in Firefox 140 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 
+- **Prioritized Task Scheduling API** (Nightly release).
+  The [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) provides a standardized way to prioritize all tasks belonging to an application, whether they are defined in a website developer's code, or in third-party libraries and frameworks.
+  This adds support for the [`TaskSignal.any()`](/en-US/docs/Web/API/TaskSignal/any_static) static method, which returns a signal that is triggered when any of the `TaskSignal` objects it is created from are triggered.
+  The API is now feature complete.
+  ([Firefox bug 1964407](https://bugzil.la/1964407)).
+
 ## Older versions
 
 {{Firefox_for_developers}}
