@@ -3,10 +3,12 @@ title: "LanguageDetector: availability() static method"
 short-title: availability()
 slug: Web/API/LanguageDetector/availability_static
 page-type: web-api-static-method
+status:
+  - experimental
 browser-compat: api.LanguageDetector.availability_static
 ---
 
-{{APIRef("Translator and Language Detector APIs")}}{{securecontext_header}}
+{{APIRef("Translator and Language Detector APIs")}}{{securecontext_header}}{{SeeCompatTable}}
 
 The **`availability()`** static method of the {{domxref("LanguageDetector")}} interface returns an enumerated value that indicates whether the browser AI model supports a given `LanguageDetector` configuration.
 

@@ -3,10 +3,12 @@ title: "Translator: availability() static method"
 short-title: availability()
 slug: Web/API/Translator/availability_static
 page-type: web-api-static-method
+status:
+  - experimental
 browser-compat: api.Translator.availability_static
 ---
 
-{{APIRef("Translator and Language Detector APIs")}}{{securecontext_header}}
+{{APIRef("Translator and Language Detector APIs")}}{{securecontext_header}}{{SeeCompatTable}}
 
 The **`availability()`** static method of the {{domxref("Translator")}} interface returns an enumerated value that indicates the availability of the AI model for the given `Translator` configuration.
 

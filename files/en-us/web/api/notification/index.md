@@ -30,7 +30,7 @@ _Also inherits properties from its parent interface, {{domxref("EventTarget")}}_
     - `granted` — The user accepts having notifications displayed.
     - `default` — The user choice is unknown and therefore the browser will act as if the value were denied.
 
-- {{domxref("Notification.maxActions_static", "Notification.maxActions")}} {{ReadOnlyInline}}
+- {{domxref("Notification.maxActions_static", "Notification.maxActions")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : The maximum number of actions supported by the device and the User Agent.
 
 ## Instance properties
