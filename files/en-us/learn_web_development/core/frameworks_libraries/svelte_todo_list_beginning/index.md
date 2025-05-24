@@ -359,13 +359,13 @@ export default {
   plugins: [
     svelte({
       dev: !production,
-      css: (css) => {
+      css(css) {
         css.write("public/build/bundle.css");
       },
       // Warnings are normally passed straight to Rollup. You can
       // optionally handle them here, for example to squelch
       // warnings with a particular code
-      onwarn: (warning, handler) => {
+      onwarn(warning, handler) {
         // e.g. I don't care about screen readers -> please DON'T DO THIS!!!
         if (warning.code === "a11y-missing-attribute") {
           return;

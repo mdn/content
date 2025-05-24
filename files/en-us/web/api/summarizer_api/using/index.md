@@ -113,7 +113,7 @@ const summarizer = await Summarizer.create({
     "A general summary to help a user decide if the text is worth reading",
   type: "tl;dr",
   length: "short",
-  monitor: (monitor) => {
+  monitor(monitor) {
     monitor.addEventListener("downloadprogress", (e) => {
       console.log(`Downloaded ${Math.floor(e.loaded * 100)}%`);
     });

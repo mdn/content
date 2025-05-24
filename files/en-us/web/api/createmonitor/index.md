@@ -36,7 +36,7 @@ A `CreateMonitor` instance is used via the `monitor` property of an AI API's `cr
 const summarizer = await Summarizer.create({
   sharedContext:
     "A general summary to help a user decide if the text is worth reading",
-  monitor: (monitor) => {
+  monitor(monitor) {
     monitor.addEventListener("downloadprogress", (e) => {
       console.log(`download progress: ${e.loaded}/${e.total}`);
     });

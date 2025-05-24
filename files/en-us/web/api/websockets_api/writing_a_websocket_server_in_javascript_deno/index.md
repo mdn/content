@@ -25,7 +25,7 @@ Create a `main.js` file. This file will contain the code for a simple HTTP serve
 ```js
 Deno.serve({
   port: 80,
-  handler: async (request) => {
+  async handler(request) {
     if (request.headers.get("upgrade") !== "websocket") {
       // If the request is a normal HTTP request,
       // we serve the client HTML file.

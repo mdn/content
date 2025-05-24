@@ -37,7 +37,7 @@ exports.author_detail = asyncHandler(async (req, res, next) => {
 
   res.render("author_detail", {
     title: "Author Detail",
-    author: author,
+    author,
     author_books: allBooksByAuthor,
   });
 });

@@ -81,7 +81,7 @@ The following example creates a new {{domxref("VideoDecoder")}} and configures i
 ```js
 const init = {
   output: handleFrame,
-  error: (e) => {
+  error(e) {
     console.log(e.message);
   },
 };

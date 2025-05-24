@@ -22,7 +22,7 @@ class RegExp1 extends RegExp {
 console.log("2016-01-02".split(new RegExp1("-")));
 // Expected output: Array ["(2016)", "(01)", "(02)"]
 
-console.log("2016-01-02".split(new RegExp("-")));
+console.log("2016-01-02".split(/-/));
 // Expected output: Array ["2016", "01", "02"]
 ```
 

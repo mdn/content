@@ -82,7 +82,7 @@ The following example creates a new {{domxref("VideoEncoder")}} and configures i
 ```js
 const init = {
   output: handleChunk,
-  error: (e) => {
+  error(e) {
     console.log(e.message);
   },
 };

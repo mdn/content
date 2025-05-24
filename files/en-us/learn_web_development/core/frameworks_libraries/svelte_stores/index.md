@@ -568,7 +568,7 @@ Moreover, because web storage only supports saving string values, we will have t
 
      return {
        subscribe,
-       set: (value) => {
+       set(value) {
          localStorage.setItem(key, toString(value)); // save also to local storage as a string
          return set(value);
        },

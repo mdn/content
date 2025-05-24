@@ -19,10 +19,10 @@ function warn(x) {
   return "Precision may be lost!";
 }
 
-console.log(warn(Math.pow(2, 53)));
+console.log(warn(2 ** 53));
 // Expected output: "Precision may be lost!"
 
-console.log(warn(Math.pow(2, 53) - 1));
+console.log(warn(2 ** 53 - 1));
 // Expected output: "Precision safe."
 ```
 

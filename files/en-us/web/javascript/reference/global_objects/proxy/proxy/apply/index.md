@@ -17,7 +17,7 @@ function sum(a, b) {
 }
 
 const handler = {
-  apply: function (target, thisArg, argumentsList) {
+  apply(target, thisArg, argumentsList) {
     console.log(`Calculate sum: ${argumentsList}`);
     // Expected output: "Calculate sum: 1,2"
 

@@ -175,7 +175,7 @@ exports.author_update_get = asyncHandler(async (req, res, next) => {
     return next(err);
   }
 
-  res.render("author_form", { title: "Update Author", author: author });
+  res.render("author_form", { title: "Update Author", author });
 });
 ```
 

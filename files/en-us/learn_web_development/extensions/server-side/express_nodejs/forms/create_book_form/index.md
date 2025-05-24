@@ -104,7 +104,7 @@ exports.book_create_post = [
         title: "Create Book",
         authors: allAuthors,
         genres: allGenres,
-        book: book,
+        book,
         errors: errors.array(),
       });
     } else {
