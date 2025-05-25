@@ -283,9 +283,10 @@ function draw() {
   requestAnimationFrame(draw);
 }
 
-document.getElementById("runButton").addEventListener("click", function () {
-  draw();
-  this.disabled = true;
+const runButton = document.getElementById("runButton");
+runButton.addEventListener("click", () => {
+  startGame();
+  runButton.disabled = true;
 });
 ```
 

@@ -71,7 +71,7 @@ This minimum example has `main` create an `ArrayBuffer` and transfer it to `myWo
 const myWorker = new Worker("myWorker.js");
 
 // listen for myWorker to transfer the buffer back to main
-myWorker.addEventListener("message", function handleMessageFromWorker(msg) {
+myWorker.addEventListener("message", (msg) => {
   console.log("message from worker received in main:", msg);
 
   const bufTransferredBackFromWorker = msg.data;

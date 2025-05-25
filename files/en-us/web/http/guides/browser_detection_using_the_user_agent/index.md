@@ -75,7 +75,7 @@ You can do this by checking for a `geolocation` property available on the global
 
 ```js
 if ("geolocation" in navigator) {
-  navigator.geolocation.getCurrentPosition(function (position) {
+  navigator.geolocation.getCurrentPosition((position) => {
     // show the location on a map, such as the Google Maps API
   });
 } else {

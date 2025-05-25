@@ -205,9 +205,9 @@ const boxMaterial = new BABYLON.StandardMaterial("material", scene);
 boxMaterial.emissiveColor = new BABYLON.Color3(0, 0.58, 0.86);
 box.material = boxMaterial;
 
-const renderLoop = function () {
+function renderLoop() {
   scene.render();
-};
+}
 
 engine.runRenderLoop(renderLoop);
 ```
@@ -367,13 +367,13 @@ cylinderMaterial.emissiveColor = new BABYLON.Color3(1, 0.58, 0);
 cylinder.material = cylinderMaterial;
 
 let t = 0;
-const renderLoop = function () {
+function renderLoop() {
   scene.render();
   t -= 0.01;
   box.rotation.y = t * 2;
   torus.scaling.z = Math.abs(Math.sin(t * 2)) + 0.5;
   cylinder.position.y = Math.sin(t * 3);
-};
+}
 engine.runRenderLoop(renderLoop);
 ```
 

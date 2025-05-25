@@ -362,9 +362,9 @@ Similarly, [`arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/a
 
 ```js
 "use strict";
-const f = function () {
+function f() {
   return arguments.callee;
-};
+}
 f(); // throws a TypeError
 ```
 

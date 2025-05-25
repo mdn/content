@@ -460,9 +460,9 @@ event listener.
 
 ```js
 // Function to change the content of t2
-function modifyText(new_text) {
+function modifyText(newText) {
   const t2 = document.getElementById("t2");
-  t2.firstChild.nodeValue = new_text;
+  t2.firstChild.nodeValue = newText;
 }
 
 // Function to add event listener to table
@@ -506,9 +506,9 @@ notation.
 
 ```js
 // Function to change the content of t2
-function modifyText(new_text) {
+function modifyText(newText) {
   const t2 = document.getElementById("t2");
-  t2.firstChild.nodeValue = new_text;
+  t2.firstChild.nodeValue = newText;
 }
 
 // Add event listener to table with an arrow function
