@@ -405,8 +405,8 @@ function listener(details) {
 
   const oldData = [];
   filter.ondata = (event) => {
-    const buffer = new Uint8Array(event.data);
-    let data = Array.from(buffer);
+    let data = new Uint8Array(event.data);
+    data = Array.from(data);
     if (oldData.length) {
       data = oldData.concat(data);
       oldData.length = 0;
@@ -420,25 +420,25 @@ function listener(details) {
       len += elements.length;
     }
 
-    const uint8 = new Uint8Array(data);
-    let i = uint8.lastIndexOf(bytes[0]);
-    if (i != -1 && i + bytes.length > uint8.length) {
+    data = new Uint8Array(data);
+    let i = data.lastIndexOf(bytes[0]);
+    if (i != -1 && i + bytes.length > data.length) {
       // Handle cases where the end of the data looks like "<h1>Exampl"
       const initial = i;
       let found = true;
-      for (let j = 1, l = uint8.length - i; j < l; j++) {
-        if (uint8[++i] !== bytes[j]) {
+      for (let j = 1, l = data.length - i; j < l; j++) {
+        if (data[++i] !== bytes[j]) {
           found = false;
           break;
         }
       }
       if (found) {
-        oldData.push(...uint8.subarray(initial));
-        filter.write(uint8.subarray(0, initial));
+        oldData.push(...data.subarray(initial));
+        filter.write(data.subarray(0, initial));
         return;
       }
     }
-    filter.write(uint8);
+    filter.write(data);
   };
 
   filter.onstop = () => {
