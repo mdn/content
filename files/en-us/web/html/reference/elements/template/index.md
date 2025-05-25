@@ -177,8 +177,10 @@ In this example, a hidden support warning is included at the beginning of the ma
 ```
 
 ```js
-const isShadowRootModeSupported =
-  HTMLTemplateElement.prototype.hasOwnProperty("shadowRootMode");
+const isShadowRootModeSupported = Object.hasOwn(
+  HTMLTemplateElement.prototype,
+  "shadowRootMode",
+);
 
 document
   .querySelector("p[hidden]")
