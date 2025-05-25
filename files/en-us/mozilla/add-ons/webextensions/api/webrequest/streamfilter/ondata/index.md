@@ -432,7 +432,7 @@ function listener(details) {
         }
       }
       if (found) {
-        oldData.push(...uint8.slice(initial));
+        oldData.push(...uint8.subarray(initial));
         filter.write(uint8.subarray(0, initial));
         return;
       }
