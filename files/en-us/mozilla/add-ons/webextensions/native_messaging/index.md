@@ -275,7 +275,7 @@ function sendMessage(message) {
 while (true) {
   try {
     const message = await getMessage();
-    await sendMessage(message);
+    sendMessage(message);
   } catch (e) {
     console.error(e);
     process.exit(1);
