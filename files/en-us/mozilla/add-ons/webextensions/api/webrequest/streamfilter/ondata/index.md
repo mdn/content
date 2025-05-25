@@ -423,14 +423,13 @@ function listener(details) {
     const uint8 = new Uint8Array(data);
     let i = uint8.lastIndexOf(bytes[0]);
     if (i != -1 && i + bytes.length > uint8.length) {
-      // Handle cases where the data looks like "<h1>Exampl"
+      // Handle cases where the end of the data looks like "<h1>Exampl"
       const initial = i;
-      let found = false;
+      let found = true;
       for (let j = 1, l = uint8.length - i; j < l; j++) {
         if (uint8[++i] !== bytes[j]) {
+          found = false;
           break;
-        } else if (j === l - 1) {
-          found = true;
         }
       }
       if (found) {
