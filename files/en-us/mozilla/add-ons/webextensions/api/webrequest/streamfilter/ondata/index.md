@@ -318,11 +318,11 @@ browser.webRequest.onBeforeRequest.addListener(
 This example demonstrates, how to search for multi-byte pattern in an array:
 
 ```js
-// JavaScript program to search the pattern in given array 
+// JavaScript program to search the pattern in given array
 // using KMP Algorithm
 
 function constructLps(pat, lps) {
-  // len stores the length of longest prefix which 
+  // len stores the length of longest prefix which
   // is also a suffix for the previous index
   let len = 0;
 
@@ -340,7 +340,7 @@ function constructLps(pat, lps) {
     // If there is a mismatch
     else {
       if (len !== 0) {
-        // Update len to the previous lps value 
+        // Update len to the previous lps value
         // to avoid redundant comparisons
         len = lps[len - 1];
       } else {
@@ -361,7 +361,7 @@ function search(pat, arr) {
 
   constructLps(pat, lps);
 
-  // Pointers i and j, for traversing 
+  // Pointers i and j, for traversing
   // the array and pattern
   let i = 0;
   let j = 0;
@@ -372,11 +372,11 @@ function search(pat, arr) {
       i++;
       j++;
 
-      // If the entire pattern is matched 
+      // If the entire pattern is matched
       // store the start index in result
       if (j === m) {
         res.push(i - j);
-        // Use LPS of previous index to 
+        // Use LPS of previous index to
         // skip unnecessary comparisons
         j = lps[j - 1];
       }
@@ -392,7 +392,7 @@ function search(pat, arr) {
       }
     }
   }
-  return res; 
+  return res;
 }
 
 const encoder = new TextEncoder();
@@ -404,7 +404,7 @@ function listener(details) {
   const filter = browser.webRequest.filterResponseData(details.requestId);
 
   const oldData = [];
-  filter.ondata = event => {
+  filter.ondata = (event) => {
     const buffer = new Uint8Array(event.data);
     let data = Array.from(buffer);
     if (oldData.length) {
