@@ -427,7 +427,9 @@ function listener(details) {
       const initial = i;
       let found = false;
       for (let j = 1, l = uint8.length - i; j < l; j++) {
-        if (uint8[++i] == bytes[j] && j == l - 1) {
+        if (uint8[++i] !== bytes[j]) {
+          break;
+        } else if (j === l - 1) {
           found = true;
         }
       }
