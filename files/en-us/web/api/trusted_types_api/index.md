@@ -155,7 +155,7 @@ In this section we'll look at how the trusted types tinyfill can protect a websi
 The trusted types tinyfill is just this:
 
 ```js
-if (typeof trustedTypes == "undefined")
+if (typeof trustedTypes === "undefined")
   trustedTypes = { createPolicy: (n, rules) => rules };
 ```
 

@@ -73,7 +73,7 @@ This example gets all the contexts associated with the extension in private brow
 ```js
 function gotContextInfo(contexts) {
   for (const context of contexts) {
-    if (context.tabId == -1) {
+    if (context.tabId === -1) {
       console.log("Not hosted in a tab");
     } else {
       console.log(
