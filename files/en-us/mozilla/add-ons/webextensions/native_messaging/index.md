@@ -265,11 +265,11 @@ async function readFullAsync(length, buffer = new Uint8Array(65536)) {
   return new Uint8Array(data);
 }
 
-async function sendMessage(message) {
+function sendMessage(message) {
   const header = Buffer.from(new Uint32Array([message.length]).buffer);
   const stdout = process.stdout;
-  await stdout.write(header);
-  await stdout.write(message);
+  stdout.write(header);
+  stdout.write(message);
 }
 
 while (true) {
