@@ -318,54 +318,129 @@ browser.webRequest.onBeforeRequest.addListener(
 This example demonstrates, how to search for multi-byte pattern in an array:
 
 ```js
-Object.defineProperty(Array.prototype, "indexOfMulti", {
-  value: function (searchElements, fromIndex) {
-    let i = this.indexOf(searchElements[0], fromIndex);
-    if (searchElements.length === 1 || i === -1) {
-      // Not found or no other elements to check
-      return i;
-    }
+// JavaScript program to search the pattern in given array 
+// using KMP Algorithm
 
-    if (i + searchElements.length > this.length) {
-      return -1;
-    }
+function constructLps(pat, lps) {
+  // len stores the length of longest prefix which 
+  // is also a suffix for the previous index
+  let len = 0;
 
-    const initial = i;
-    for (let j = 1, l = searchElements.length; j < l; j++) {
-      if (this[++i] !== searchElements[j]) {
-        return this.indexOfMulti(searchElements, initial + 1);
+  // lps[0] is always 0
+  lps[0] = 0;
+
+  let i = 1;
+  while (i < pat.length) {
+    // If characters match, increment the size of lps
+    if (pat[i] === pat[len]) {
+      len++;
+      lps[i] = len;
+      i++;
+    }
+    // If there is a mismatch
+    else {
+      if (len !== 0) {
+        // Update len to the previous lps value 
+        // to avoid redundant comparisons
+        len = lps[len - 1];
+      } else {
+        // If no matching prefix found, set lps[i] to 0
+        lps[i] = 0;
+        i++;
       }
     }
-    return initial;
-  },
-});
+  }
+}
+
+function search(pat, arr) {
+  const n = arr.length;
+  const m = pat.length;
+
+  const lps = new Array(m);
+  const res = [];
+
+  constructLps(pat, lps);
+
+  // Pointers i and j, for traversing 
+  // the array and pattern
+  let i = 0;
+  let j = 0;
+
+  while (i < n) {
+    // If characters match, move both pointers forward
+    if (arr[i] === pat[j]) {
+      i++;
+      j++;
+
+      // If the entire pattern is matched 
+      // store the start index in result
+      if (j === m) {
+        res.push(i - j);
+        // Use LPS of previous index to 
+        // skip unnecessary comparisons
+        j = lps[j - 1];
+      }
+    }
+    // If there is a mismatch
+    else {
+      // Use lps value of previous index
+      // to avoid redundant comparisons
+      if (j !== 0) {
+        j = lps[j - 1];
+      } else {
+        i++;
+      }
+    }
+  }
+  return res; 
+}
 
 const encoder = new TextEncoder();
+
 const elements = encoder.encode("WebExtension ");
 const bytes = encoder.encode("Example");
 
 function listener(details) {
   const filter = browser.webRequest.filterResponseData(details.requestId);
 
-  const data = [];
-  filter.ondata = (event) => {
+  const oldData = [];
+  filter.ondata = event => {
     const buffer = new Uint8Array(event.data);
-    for (let i = 0, l = buffer.length; i < l; i++) {
-      data.push(buffer[i]);
+    let data = Array.from(buffer);
+    if (oldData.length) {
+      data = oldData.concat(data);
+      oldData.length = 0;
     }
+
+    const res = search(bytes, data);
+    let len = 0;
+    for (const i of res) {
+      // Insert "WebExtension " at the given index
+      data.splice(i + len, 0, ...elements);
+      len += elements.length;
+    }
+
+    const uint8 = new Uint8Array(data);
+    let i = uint8.lastIndexOf(bytes[0]);
+    if (i != -1 && i + bytes.length > uint8.length) {
+      // Handle cases where the data looks like "<h1>Exampl"
+      const initial = i;
+      let found = false;
+      for (let j = 1, l = uint8.length - i; j < l; j++) {
+        if (uint8[++i] == bytes[j] && j == l - 1) {
+          found = true;
+        }
+      }
+      if (found) {
+        oldData.push(...uint8.slice(initial));
+        filter.write(uint8.subarray(0, initial));
+        return;
+      }
+    }
+    filter.write(uint8);
   };
 
-  filter.onstop = (event) => {
-    for (
-      let i = data.indexOfMulti(bytes), m = elements.length, n = bytes.length;
-      i >= 0;
-      i = data.indexOfMulti(bytes, i + m + n)
-    ) {
-      // Insert "WebExtension " at the given index
-      data.splice(i, 0, ...elements);
-    }
-
-    filter.write(new Uint8Array(data));
+  filter.onstop = () => {
     filter.close();
   };
 }
