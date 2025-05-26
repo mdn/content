@@ -41,7 +41,7 @@ This module takes you through the essentials of version control using Git and Gi
 
 ## See also
 
-- Other useful topics from GitHub:
+- Other useful topics covered in GitHub Docs include:
   - [Understanding the GitHub flow](https://docs.github.com/en/get-started/using-github/github-flow)
   - [Addressing merge conflicts](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts)
   - [Ignoring files with .gitignore](https://docs.github.com/en/get-started/git-basics/ignoring-files)
