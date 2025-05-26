@@ -918,6 +918,49 @@ The `withCalendar()` method for [`PlainDate`](/en-US/docs/Web/JavaScript/Referen
   </tbody>
 </table>
 
+### Atomics
+
+#### Atomics.waitAsync()
+
+The {{jsxref("Atomics.waitAsync()")}} static method waits asynchronously on a shared memory location and returns an object representing the result of the operation.
+It is non-blocking and usable on the main thread. ([Firefox bug 1467846](https://bugzil.la/1467846)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>140</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>140</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>140</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>140</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>javascript.options.atomics_wait_async</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ## APIs
 
 ### CloseWatcher Interface
