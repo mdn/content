@@ -1263,11 +1263,11 @@ The non-standard events [`beforescriptexecute`](/en-US/docs/Web/API/Document/bef
   </tbody>
 </table>
 
-### Notification.actions
+### Notification actions and maxActions properties
 
-The {{domxref("Notification.actions","actions")}} read-only property of the {{domxref("Notification")}} interface is supported in Nightly.
-This contains notification actions set with {{domxref("ServiceWorkerRegistration.showNotification()")}}.
-([Firefox bug 1225110](https://bugzil.la/1225110)).
+The {{domxref("Notification/actions","actions")}} read-only property and the [`maxActions`](/en-US/docs/Web/API/Notification/maxActions_static) static read-only property of the {{domxref("Notification")}} interface are supported in Nightly on desktop.
+These contain the notification actions set with {{domxref("ServiceWorkerRegistration.showNotification()")}}, and the maximum number of actions that can be set, respectively.
+([Firefox bug 1225110](https://bugzil.la/1225110), [Firefox bug 1963263](https://bugzil.la/1963263)).
 
 <table>
   <thead>
@@ -1281,6 +1281,7 @@ This contains notification actions set with {{domxref("ServiceWorkerRegistration
     <tr>
       <th>Nightly</th>
       <td>138</td>
+      <td>Yes (desktop only)</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
