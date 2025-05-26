@@ -63,7 +63,7 @@ Clear-Site-Data: "*"
 
 - `"prefetchCache"`
 
-  - : Used to evict {{ domxref("Speculation Rules API", "speculation rules") }} prefetches that are scoped to the referrer origin.
+  - : Used to evict {{domxref("Speculation Rules API", "speculation rules", "", "nocode")}} prefetches that are scoped to the referrer origin.
 
 - `"prerenderCache"`
 
