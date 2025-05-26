@@ -124,31 +124,20 @@ Some new features regarding a touch point's [touch area](/en-US/docs/Web/API/Tou
 
 ## What about Pointer Events?
 
-The introduction of new input mechanisms results in increased application complexity to handle various input events, such as key events, mouse events, pen/stylus events, and touch events. To help address this problem, the [Pointer Events standard](https://www.w3.org/TR/pointerevents/) _defines events and related interfaces for handling hardware agnostic pointer input from devices including a mouse, pen, touchscreen, etc._. That is, the abstract _pointer_ creates a unified input model that can represent a contact point for a finger, pen/stylus or mouse. See the [Pointer Events MDN article](/en-US/docs/Web/API/Pointer_events).
+The introduction of new input mechanisms results in increased application complexity to handle various input events, such as key events, mouse events, pen/stylus events, and touch events. To help address this problem, the [Pointer Events](/en-US/docs/Web/API/Pointer_events) API defines events and related interfaces for handling hardware agnostic pointer input from devices including a mouse, pen, touchscreen, etc. That is, the abstract _pointer_ creates a unified input model that can represent a contact point for a finger, pen/stylus or mouse.
 
 The pointer event model can simplify an application's input processing since a pointer represents input from any input device. Additionally, the pointer event types are very similar to mouse event types (for example, `pointerdown` and `pointerup`) thus code to handle pointer events closely matches mouse handling code.
 
 The implementation status of pointer events in browsers is [relatively high](https://caniuse.com/#search=pointer) with Chrome, Firefox, IE11 and Edge having complete implementations.
 
-## Examples and demos
+## See also
 
-The following documents describe how to use touch events and include example code:
-
-- [Touch events overview](/en-US/docs/Web/API/Touch_events)
-- [Implement Custom Gestures](https://web.dev/articles/add-touch-to-your-site)
+- [Touch events](/en-US/docs/Web/API/Touch_events)
+- [Pointer events](/en-US/docs/Web/API/Pointer_events)
+- [Add touch to your site](https://web.dev/articles/add-touch-to-your-site) on web.dev
 - [Add touch screen support to your website (The easy way)](https://www.codicode.com/art/easy_way_to_add_touch_support_to_your_website.aspx)
-
-Touch event demonstrations:
-
-- [Paint Program (by Rick Byers)](https://rbyers.github.io/paint.html)
-- [Touch/pointer tests and demos (by Patrick H. Lauke)](https://patrickhlauke.github.io/touch/)
-
-## Community
-
+- [Paint Program](https://rbyers.github.io/paint.html) by Rick Byers
+- [Touch/pointer tests and demos](https://patrickhlauke.github.io/touch/) by Patrick H. Lauke
 - [Touch Events Community Group](https://github.com/w3c/touch-events)
 - [Mail list](https://lists.w3.org/Archives/Public/public-touchevents/)
 - [W3C #touchevents IRC channel](irc://irc.w3.org:6667/)
-
-## Related topics and resources
-
-- [Pointer Events Standard](https://www.w3.org/TR/pointerevents/)
