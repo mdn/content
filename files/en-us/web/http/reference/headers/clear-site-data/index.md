@@ -88,7 +88,8 @@ Clear-Site-Data: "*"
 
 ### Sign out of a website
 
-If a user signs out of your website or service, you might want to remove locally stored data and speculated navigations. To do this, add the `Clear-Site-Data` header to the page that confirms the logging out from the site has been accomplished successfully (`https://example.com/logout`, for example):
+If a user signs out of your website or service, you might want to remove locally stored data, including any prefetched or prerendered content for {{domxref("Speculation Rules API", "speculated navigations","", "nocode")}}.
+To do this, add the `Clear-Site-Data` header to the page that confirms the logging out from the site has been accomplished successfully (`https://example.com/logout`, for example):
 
 ```http
 Clear-Site-Data: "cache", "cookies", "storage", "executionContexts", "prefetchCache", "prerenderCache"
