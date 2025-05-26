@@ -7,9 +7,9 @@ sidebar: learnsidebar
 
 {{PreviousMenu("Learn_web_development/Core/Design_for_developers", "Learn_web_development/Core")}}
 
-Version control tools (often called **Version Control Systems**, or **VCS**) are an essential part of modern workflows, for backing up and collaborating on codebases, and rolling back to earlier versions if required.
+Version control tools (often called **Version Control Systems** or **VCS**) are an essential part of modern workflows–for backing up code, collaborating on codebases, and rolling back to earlier versions if required.
 
-Version control tools meet the above needs. [Git](https://git-scm.com/) is an example of a version control tool, and [GitHub](https://github.com/) is a website + infrastructure that provides a Git server plus a number of really useful tools for working with git repositories individually or in teams, such as reporting issues with the code, reviewing tools, project management features such as assigning tasks and task statuses, and more.
+[Git](https://git-scm.com/) is an example of a version control tool. [GitHub](https://github.com/), on the other hand, is a website and infrastructure that provides a Git server plus a number of useful tools for working with Git repositories, both individually and in teams. GitHub lets you report issues with the code, review code collaboratively, and offers project management features such as triaging issues, assigning tasks, planning projects, and more.
 
 This module takes you through the essentials of version control using Git and GitHub.
 
