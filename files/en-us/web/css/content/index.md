@@ -103,7 +103,7 @@ The keywords and data types mentioned above are described in more detail below:
 
 - `normal`
 
-  - : For the {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements, this value computes to `none` . For other pseudo-elements such as {{cssxref("::marker")}}, {{cssxref("::placeholder")}}, or {{cssxref("::file-selector-button")}}, it produces the element's initial (or normal) content. For regular elements or page margin boxes, it computes to the element's descendants. `normal` is the default value for the `content` property.
+  - : For the {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements, this value computes to `none` . For other pseudo-elements such as {{cssxref("::marker")}}, {{cssxref("::placeholder")}}, or {{cssxref("::file-selector-button")}}, it produces the element's initial (or normal) content. For regular elements or page margin boxes, it computes to the element's descendants. This is the default value.
 
 - {{cssxref("&lt;string&gt;")}}
 

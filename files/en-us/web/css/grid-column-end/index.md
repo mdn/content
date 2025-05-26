@@ -90,7 +90,7 @@ grid-column-end: unset;
   - : Contributes nothing to the grid item's placement, indicating auto-placement, an automatic span, or a default span of `1`. This is the default value.
 - `<custom-ident>`
 
-  - : Contributes the first line to the grid item's placement if there is a named line with the name '\<custom-ident>-end'.
+  - : Contributes the first line to the grid item's placement if there is a named line with the name `<custom-ident>-end`.
 
     > [!NOTE]
     > Named grid areas automatically generate implicit named lines of this form, so specifying `grid-column-end: foo;` will choose the end edge of that named grid area (unless another line named `foo-end` was explicitly specified before it).
