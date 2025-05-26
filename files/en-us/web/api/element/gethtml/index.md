@@ -17,6 +17,7 @@ Without arguments, child nodes that are shadow roots are not serialized, and thi
 
 Note that some browsers serialize the `<` and `>` characters as `&lt;` and `&gt;` when they appear in attribute values (see [Browser compatibility](#browser_compatibility)).
 This is to prevent a potential security vulnerability ([mutation XSS](https://research.securitum.com/dompurify-bypass-using-mxss/)) in which an attacker can craft input that bypasses a [sanitization function](/en-US/docs/Web/Security/Attacks/XSS#sanitization), enabling a cross-site scripting (XSS) attack.
+
 ## Syntax
 
 ```js-nolint
