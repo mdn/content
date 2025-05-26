@@ -14778,7 +14778,7 @@
 /en-US/docs/Web/SVG/Element/cursor	/en-US/docs/Web/CSS/cursor
 /en-US/docs/Web/SVG/Element/defs	/en-US/docs/Web/SVG/Reference/Element/defs
 /en-US/docs/Web/SVG/Element/desc	/en-US/docs/Web/SVG/Reference/Element/desc
-/en-US/docs/Web/SVG/Element/discard	/en-US/docs/Web/SVG/Reference/Element/discard
+/en-US/docs/Web/SVG/Element/discard	/en-US/docs/Web/SVG/Reference/Element
 /en-US/docs/Web/SVG/Element/ellipse	/en-US/docs/Web/SVG/Reference/Element/ellipse
 /en-US/docs/Web/SVG/Element/feBlend	/en-US/docs/Web/SVG/Reference/Element/feBlend
 /en-US/docs/Web/SVG/Element/feColorMatrix	/en-US/docs/Web/SVG/Reference/Element/feColorMatrix
@@ -14894,6 +14894,7 @@
 /en-US/docs/Web/SVG/Reference/Attribute/widths	/en-US/docs/Web/SVG/Reference/Attribute
 /en-US/docs/Web/SVG/Reference/Attribute/x-height	/en-US/docs/Web/SVG/Reference/Attribute
 /en-US/docs/Web/SVG/Reference/Element/cursor	/en-US/docs/Web/CSS/cursor
+/en-US/docs/Web/SVG/Reference/Element/discard	/en-US/docs/Web/SVG/Reference/Element
 /en-US/docs/Web/SVG/Reference/Element/font	/en-US/docs/Web/CSS/@font-face
 /en-US/docs/Web/SVG/Reference/Element/font-face	/en-US/docs/Web/CSS/@font-face
 /en-US/docs/Web/SVG/Reference/Element/font-face-format	/en-US/docs/Web/CSS/@font-face
