@@ -7,11 +7,8 @@ browser-compat: http.headers.Content-Security-Policy.sandbox
 
 {{HTTPSidebar}}
 
-The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
-**`sandbox`** directive enables a sandbox for the requested
-resource similar to the {{HTMLElement("iframe")}} [`sandbox`](/en-US/docs/Web/HTML/Reference/Elements/iframe#sandbox)
-attribute. It applies restrictions to a page's actions including preventing popups,
-preventing the execution of plugins and scripts, and enforcing a same-origin policy.
+The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`sandbox`** directive enables a sandbox for the requested resource similar to the {{HTMLElement("iframe")}} [`sandbox`](/en-US/docs/Web/HTML/Reference/Elements/iframe#sandbox) attribute.
+It applies restrictions to a page's actions including preventing popups, preventing the execution of plugins and scripts, and enforcing a same-origin policy.
 
 <table class="properties">
   <tbody>
@@ -25,10 +22,7 @@ preventing the execution of plugins and scripts, and enforcing a same-origin pol
     </tr>
     <tr>
       <th colspan="2" scope="row">
-        This directive is not supported in the {{HTMLElement("meta")}}
-        element or by the
-        {{HTTPHeader("Content-Security-policy-Report-Only")}}
-        header field.
+        This directive is not supported in the {{HTMLElement("meta")}} element or by the {{HTTPHeader("Content-Security-policy-Report-Only")}} header field.
       </th>
     </tr>
   </tbody>
@@ -44,7 +38,8 @@ Content-Security-Policy: sandbox <value>;
 where `<value>` can optionally be one of the following values:
 
 - `allow-downloads`
-  - : Allows downloading files through an {{HTMLElement("a")}} or {{HTMLElement("area")}} element with the [download](/en-US/docs/Web/HTML/Reference/Elements/a#download) attribute, as well as through the navigation that leads to a download of a file. This works regardless of whether the user clicked on the link, or JS code initiated it without user interaction.
+  - : Allows downloading files through an {{HTMLElement("a")}} or {{HTMLElement("area")}} element with the [download](/en-US/docs/Web/HTML/Reference/Elements/a#download) attribute, as well as through the navigation that leads to a download of a file.
+    This works regardless of whether the user clicked on the link, or JS code initiated it without user interaction.
 - `allow-forms`
   - : Allows the page to submit forms. If this keyword is not used, form will be displayed as normal, but submitting it will not trigger input validation, sending data to a web server or closing a dialog.
 - `allow-modals`
