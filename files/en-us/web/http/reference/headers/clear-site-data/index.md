@@ -67,7 +67,7 @@ Clear-Site-Data: "*"
 
 - `"prerenderCache"`
 
-  - : Used to cancel {{ domxref("Speculation Rules API", "speculation rules") }} prerenders that are scoped to the referrer origin.
+  - : Used to cancel {{domxref("Speculation Rules API", "speculation rules","", "nocode")}} prerenders that are scoped to the referrer origin.
 
 - `"storage"`
 
