@@ -1102,7 +1102,8 @@ The [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) allow developer
 
 ### Choose allowed mechanisms for closing dialogs
 
-The {{domxref("HTMLDialogElement/closedBy", "closedBy")}} attribute of the {{domxref("HTMLDialogElement")}} interface, and corresponding [`closedby`](/en-US/docs/Web/HTML/Reference/Elements/dialog#closedby) attribute of the {{htmlelement("dialog")}} element, are supported, allowing developers to specify what mechanisms are able to close the dialogs.
+The {{domxref("HTMLDialogElement/closedBy", "closedBy")}} attribute of the {{domxref("HTMLDialogElement")}} interface, and corresponding [`closedby`](/en-US/docs/Web/HTML/Reference/Elements/dialog#closedby) attribute of the {{htmlelement("dialog")}} element, are supported.
+These can be used by developers to specify whether users can close a dialog by clicking outside of the dialog area, or the dialog must be closed programmatically, and so on. 
 ([Firefox bug 1964077](https://bugzil.la/1964077)).
 
 <table>
