@@ -55,7 +55,7 @@ The `reading-flow` property takes one of the following keywords as its value:
 
 - `grid-order`
 
-  - : When applied to a grid container, if the {{cssxref("order")}} property is applied to any of the element's children, the reading order follows the modified item order. If the `order` property is not applied to the grid items, behaves as `normal`.
+  - : Only affects grid containers. if the {{cssxref("order")}} property is applied to any of the container's children, the reading order follows the modified item order. If the `order` property is not applied to the grid items, `grid-order` behaves as `normal`.
 
 - `source-order`
   - : Affects grid, flex, and block containers. Has no effect on its own — the container's reading order continues to follow the order of elements in the DOM — but allows the reading order to be modified by setting the {{cssxref("reading-order")}} property on the container's children.
