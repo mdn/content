@@ -600,7 +600,7 @@ A `target_hint` can be included to indicate the target window in which matching 
 </script>
 ```
 
-This will allow the following links to be prerendered correctly in the appropriate targets:
+The rules above allow the following links to be prerendered correctly in the appropriate targets:
 
 ```html
 <a href="page1.html">Open link in this window</a>
