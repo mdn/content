@@ -186,7 +186,7 @@ Each object can contain the following properties:
       - : Open rerendered content in a new page.
     - `"target_hint": "_self"`
       - : Open rerendered content in the current page.
-        This is the default, if not specified.     
+        This is the default, if not specified.
 
 > [!NOTE]
 > As speculation rules use a `<script>` element, they need to be explicitly allowed in the [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) [`script-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) directive if the site includes it. This is done by adding the `"inline-speculation-rules"` value along with a hash- or nonce-source.
