@@ -260,7 +260,8 @@ It is also potentially risky to prefetch a document whose server-rendered conten
 > [!NOTE]
 > Browsers will cache prefetched pages for a short time (Chrome for example caches them for 5 minutes) before discarding them, so in any case, your users might see content that is up to 5 minutes out of date.
 
-Stale prefetches can be cleared using the {{ httpheader("Clear-Site-Data#prefetchCache", `prefetchCache`) }} value of the {{ httpheader("Clear-Site-Data") }} response header for state changing requests (for example, for logout API calls).
+Stale prefetches can be cleared using the {{httpheader("Clear-Site-Data#prefetchCache", "prefetchCache")}} value of the {{httpheader("Clear-Site-Data")}} response header.
+This might be used, for example, when for state changing requests mean that the cached data is no longer valid, such as when logging out of a site.
 
 Prefetching is safe if all side effects of fetching the page result from JavaScript execution, since the JavaScript will not run until activation.
 
