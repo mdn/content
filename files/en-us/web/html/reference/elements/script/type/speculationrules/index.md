@@ -179,7 +179,6 @@ Each object can contain the following properties:
 
   - : A string indicating where the page expects the prerendered content to be activated.
     The directive not supported for prefetch speculations.
-    
     Allowed values are:
     - `"target_hint": "_blank"`
       - : Open rerendered content in a new page.
