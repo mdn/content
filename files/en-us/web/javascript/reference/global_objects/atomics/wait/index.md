@@ -38,8 +38,8 @@ Atomics.wait(typedArray, index, value, timeout)
 
 A string which is either `"ok"`, `"not-equal"`, or `"timed-out"`.
 
-- `"ok"` is returned if woken up by a call to `Atomics.notify()`, **regardless of whether the expected value has changed**.
 - `"not-equal"` is returned immediately if the initial `value` does not equal what is stored at `index`.
+- `"ok"` is returned if woken up by a call to `Atomics.notify()`, **regardless of whether the expected value has changed**.
 - `"timed-out"` is returned if a sleeping wait exceeds the specified `timeout` without being woken up by `Atomics.notify()`.
 
 ### Exceptions
