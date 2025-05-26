@@ -7,9 +7,10 @@ browser-compat: javascript.builtins.Atomics.waitAsync
 
 {{JSRef}}
 
-The **`Atomics.waitAsync()`** static method waits asynchronously on a shared memory location and returns an object representing the result of the operation.
+The **`Atomics.waitAsync()`** static method verifies that a shared memory location contains a given value, immediately returning with `"not-equal"` if the memory location does not match the given value, or `"timed-out"` if the timeout was set to zero.
+Otherwise the method returns a {{jsxref("Promise")}} that fulfills with either `"ok"` when {{jsxref("Atomics.notify()")}} is called, or `"timed-out"` if the timeout expires.
 
-Unlike {{jsxref("Atomics.wait()")}}, `waitAsync` is non-blocking and usable on the main thread.
+`waitAsync` is non-blocking and, unlike {{jsxref("Atomics.wait()")}}, can be used on the main thread.
 
 > [!NOTE]
 > This operation only works with an {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} that views a {{jsxref("SharedArrayBuffer")}}.

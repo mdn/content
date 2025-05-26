@@ -7,13 +7,13 @@ browser-compat: javascript.builtins.Atomics.wait
 
 {{JSRef}}
 
-The **`Atomics.wait()`** static
-method verifies that a shared memory location still contains a
-given value and if so sleeps, awaiting a wake-up notification or times out. It returns a string which
-is either `"ok"`, `"not-equal"`, or `"timed-out"`.
+The **`Atomics.wait()`** static method verifies that a shared memory location contains a given value and if so sleeps, awaiting a wake-up notification or a time out.
+It returns a string which is `"not-equal"` if the memory location does not match the given value, `"ok"` if woken by {{jsxref("Atomics.notify()")}}, or `"timed-out"` if the timeout expires.
+
+This operation only works with an {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} that views a {{jsxref("SharedArrayBuffer")}}.
+The method is blocking and cannot be used in the main thread.
 
 > [!NOTE]
-> This operation only works with an {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} that views a {{jsxref("SharedArrayBuffer")}}, and may not be allowed on the main thread.
 > For a non-blocking, asynchronous version of this method, see {{jsxref("Atomics.waitAsync()")}}.
 
 ## Syntax
@@ -38,9 +38,9 @@ Atomics.wait(typedArray, index, value, timeout)
 
 A string which is either `"ok"`, `"not-equal"`, or `"timed-out"`.
 
-- `"ok"` is returned if woken up by a call to `Atomics.notify()`, **regardless of if the expected value has changed**
-- `"not-equal"` is returned immediately if the initial `value` does not equal what is stored at `index`
-- `"timed-out"` is returned if a sleeping wait exceeds the specified `timeout` without being woken up by `Atomics.notify()`
+- `"ok"` is returned if woken up by a call to `Atomics.notify()`, **regardless of whether the expected value has changed**.
+- `"not-equal"` is returned immediately if the initial `value` does not equal what is stored at `index`.
+- `"timed-out"` is returned if a sleeping wait exceeds the specified `timeout` without being woken up by `Atomics.notify()`.
 
 ### Exceptions
 
