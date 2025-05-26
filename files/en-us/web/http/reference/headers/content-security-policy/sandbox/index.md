@@ -49,7 +49,8 @@ where `<value>` can optionally be one of the following values:
 - `allow-pointer-lock`
   - : Allows the page to use the [Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API).
 - `allow-popups`
-  - : Allows popups (created, for example, by {{domxref("Window.open()")}} or `target="_blank"`). If this keyword is not used, such functionality will silently fail.
+  - : Allows popups (created, for example, by {{domxref("Window.open()")}} or `target="_blank"`).
+    If this keyword is not used, popup display will silently fail.
 - `allow-popups-to-escape-sandbox`
   - : Allows a sandboxed document to open new windows without forcing the sandboxing flags upon them. This will allow, for example, a third-party advertisement to be safely sandboxed without forcing the same restrictions upon the page the ad links to.
 - `allow-presentation`
