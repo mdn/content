@@ -181,7 +181,6 @@ Each object can contain the following properties:
     The directive not supported for prefetch speculations.
     
     Allowed values are:
-    
     - `"target_hint": "_blank"`
       - : Open rerendered content in a new page.
     - `"target_hint": "_self"`
