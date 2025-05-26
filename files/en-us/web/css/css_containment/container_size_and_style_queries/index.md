@@ -200,7 +200,7 @@ The behavior of registered custom properties is different. When explicitly defin
 ```css
 @property --theme-color {
   initial-value: rebeccapurple;
-  inherited: true;
+  inherits: true;
 }
 
 :root {
