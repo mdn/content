@@ -37,6 +37,11 @@ This article provides information about the changes in Firefox 140 that affect d
 
 ### APIs
 
+### Escape < and > in attributes when serializing HTML
+
+- {{domxref("Element.innerHTML")}}, {{domxref("Element.outerHTML")}}, {{domxref("Element.getHTML()")}}, {{domxref("ShadowRoot.innerHTML")}}, and {{domxref("ShadowRoot.getHTML()")}} now replace the `<` and `>` characters with `&lt;` and `&gt;` (respectively) when serializing the HTML to a string. This prevents certain exploits where HTML is serialized and then injected back into the DOM.
+  ([Firefox bug 1962084](https://bugzil.la/1962084)).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
@@ -77,6 +82,12 @@ These features are shipping in Firefox 140 but are disabled by default. To exper
   The {{jsxref("Atomics.waitAsync()")}} static method waits asynchronously on a shared memory location and returns an object representing the result of the operation.
   It is non-blocking and usable on the main thread.
   ([Firefox bug 1467846](https://bugzil.la/1467846)).
+
+- **Prioritized Task Scheduling API** (Nightly release).
+  The [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) provides a standardized way to prioritize all tasks belonging to an application, whether they are defined in a website developer's code, or in third-party libraries and frameworks.
+  This adds support for the [`TaskSignal.any()`](/en-US/docs/Web/API/TaskSignal/any_static) static method, which returns a signal that is triggered when any of the `TaskSignal` objects it is created from are triggered.
+  The API is now feature complete.
+  ([Firefox bug 1964407](https://bugzil.la/1964407)).
 
 ## Older versions
 
