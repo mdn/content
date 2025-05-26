@@ -569,7 +569,7 @@ See {{HTTPHeader("Sec-Speculation-Tags")}} for more examples.
 
 ### `target_hint` example
 
-A `target_hint` can be included to indicate:
+A `target_hint` can be included to indicate the target window in which matching prerender speculations will be opened:
 
 ```html
 <script type="speculationrules">
