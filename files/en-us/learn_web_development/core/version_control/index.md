@@ -7,7 +7,7 @@ sidebar: learnsidebar
 
 {{PreviousMenu("Learn_web_development/Core/Design_for_developers", "Learn_web_development/Core")}}
 
-Version control tools (often called **Version Control Systems** or **VCS**) are an essential part of modern workflows–for backing up code, collaborating on codebases, and rolling back to earlier versions if required.
+Version control tools (often called **Version Control Systems** or **VCS**) are an essential part of modern coding workflows–for backing up code, collaborating on codebases, and rolling back to earlier versions if required.
 
 [Git](https://git-scm.com/) is an example of a version control tool. [GitHub](https://github.com/), on the other hand, is a website and infrastructure that provides a Git server plus a number of useful tools for working with Git repositories, both individually and in teams. GitHub lets you report issues with the code, review code collaboratively, and offers project management features such as triaging issues, assigning tasks, planning projects, and more.
 
@@ -46,9 +46,9 @@ This module takes you through the essentials of version control using Git and Gi
   - [Addressing merge conflicts](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts)
   - [Ignoring files with .gitignore](https://docs.github.com/en/get-started/git-basics/ignoring-files)
   - [Authentication to GitHub](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github)
+  - [Mastering markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) (the text format you write in on PR, issue comments, and `.md` files).
+  - [Getting Started with GitHub Pages](https://docs.github.com/en/pages/quickstart) (how to publish demos and websites on GitHub).
 - [Git command list](https://git-scm.com/docs)
-- [Mastering markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) (the text format you write in on PR, issue comments, and `.md` files).
-- [Getting Started with GitHub Pages](https://docs.github.com/en/pages/quickstart) (how to publish demos and websites on GitHub).
 - [Learn Git branching](https://learngitbranching.js.org/)
 - [Flight rules for Git](https://github.com/k88hudson/git-flight-rules) (a very useful compendium of ways to achieve specific things in Git, including how to correct things when you went wrong).
 - [Dangit, git!](https://dangitgit.com/) (another useful compendium, specifically of ways to correct things when you went wrong).
