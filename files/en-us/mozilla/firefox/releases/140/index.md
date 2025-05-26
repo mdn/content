@@ -101,6 +101,12 @@ These features are shipping in Firefox 140 but are disabled by default. To exper
   The API is now feature complete.
   ([Firefox bug 1964407](https://bugzil.la/1964407)).
 
+- **`Choose allowed mechanisms for closing dialogs`** (Nightly): `dom.dialog.light-dismiss.enabled`
+
+  The {{domxref("HTMLDialogElement/closedBy", "closedBy")}} attribute of the {{domxref("HTMLDialogElement")}} interface, and corresponding [`closedby`](/en-US/docs/Web/HTML/Reference/Elements/dialog#closedby) attribute of the {{htmlelement("dialog")}} element, are supported.
+  Developers can use these to specify what mechanisms are able to close the dialogs, such as user interaction outside the dialog ("light dismiss") or programmatic closing.
+  ([Firefox bug 1964077](https://bugzil.la/1964077)).
+
 ## Older versions
 
 {{Firefox_for_developers}}
