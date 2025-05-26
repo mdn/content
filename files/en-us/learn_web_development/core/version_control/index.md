@@ -26,7 +26,7 @@ This module takes you through the essentials of version control using Git and Gi
 - [About GitHub and Git (from GitHub)](https://docs.github.com/en/get-started/start-your-journey/about-github-and-git)
   - : This covers what Git and GitHub are, how they work together, and how to get started.
 - [Hello, World (from GitHub)](https://docs.github.com/en/get-started/start-your-journey/hello-world)
-  - : This practical guide jumps right into using GitHub, learning the basics of Git such as creating repositories and branches, making commits, and opening and merging pull requests.
+  - : This practical guide jumps right into using GitHub, teaching the basics of Git such as creating repositories and branches, making commits, and opening and merging pull requests.
 - [Using Git (from GitHub)](https://docs.github.com/en/get-started/using-git)
   - : The Git Handbook goes into a little more depth, explaining what a version control tool is, what a repository is, how the basic GitHub model works, Git commands and examples, and more.
 - [Contributing to a project (from GitHub)](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project)
