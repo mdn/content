@@ -316,7 +316,7 @@ By combining the align and justify properties we can easily center an item insid
 
 ## Aligning the grid tracks on the block axis
 
-If you have a situation where your grid tracks use an area that is smaller than the grid container you can align the grid tracks themselves inside that container. The {{cssxref("align-content")}} aligns the tracks on the block axis and {{cssxref("justify-content")}} aligns on the inline axis. As with the `*-items` and `*-item` properties, the {{CSSxRef("place-content")}} property is shorthand for `align-content` and `justify-content.
+If you have a situation where your grid tracks use an area that is smaller than the grid container you can align the grid tracks themselves inside that container. The {{cssxref("align-content")}} aligns the tracks on the block axis and {{cssxref("justify-content")}} aligns on the inline axis. As with the `*-items` and `*-item` properties, the {{CSSxRef("place-content")}} property is shorthand for `align-content` and `justify-content`.
 
 The values for `align-content`, `justify-content` and `place-content` all include the {{cssxref("content-distribution")}} and {{cssxref("content-position")}} values. The `align-content` property also accepts {{cssxref("baseline-position")}} values and, like the other `justify-*` properties, `justify-content` also accepts `left` and `right`.
 
