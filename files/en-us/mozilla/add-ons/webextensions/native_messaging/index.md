@@ -244,7 +244,9 @@ You can quickly get started sending and receiving messages with this NodeJS code
 
 import fs from "node:fs/promises";
 
-const _r = rs=>_rs_rp = rs; let _rs_rp, _rp = null; // read promise
+const _r = (rs) => (_rs_rp = rs);
+let _rs_rp,
+  _rp = null; // read promise
 async function getMessage() {
   while (_rp) await _rp; // wait for previous reads
   _rp = new Promise(_r); // make any further calls to getMessage wait
@@ -254,7 +256,8 @@ async function getMessage() {
   const message = new Uint8Array(header[0]);
   await input.read(message);
   await input.close();
-  _rs_rp(); _rp = null; // allow the next getMessage call to proceed
+  _rs_rp();
+  _rp = null; // allow the next getMessage call to proceed
   return message;
 }
 
