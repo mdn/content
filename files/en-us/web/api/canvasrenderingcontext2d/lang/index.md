@@ -12,9 +12,14 @@ The **`CanvasRenderingContext2D.lang`** property of the Canvas 2D API gets or se
 
 ## Value
 
-A [BCP 47 language tag](https://datatracker.ietf.org/doc/html/rfc5646) representing the language of the canvas context, or `"inherit"`, in which case the language is inherited from the [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute of the originating {{HTMLElement("canvas")}} element or its nearest ancestor with an explicit `lang` set.
+A [BCP 47 language tag](https://datatracker.ietf.org/doc/html/rfc5646) representing the language of the canvas context, or `inherit`, in which case the language is inherited from the [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute of the originating {{HTMLElement("canvas")}} element or its nearest ancestor with an explicit `lang` set.
 
-The default value is `"inherit"`.
+The default value is `inherit`.
+
+Due to technical limitations, the `inherit` value behaves differently for on-screen and off-screen canvases:
+
+- For on-screen canvases, the `lang` value is inherited when the associated `CanvasRenderingContext2D` object is first created; the inherited `lang` value then changes dynamically if the `lang` attribute value is updated.
+- For off-screen canvases, the `lang` value is inherited when the associated {{domxref("OffscreenCanvasRenderingContext2D")}} object is first created, and then fixed for the lifetime of the {{domxref("OffscreenCanvas")}}. It **does not** change if the `lang` attribute value is updated. Because of this, the language of an off-screen canvas can only be changed by setting the `lang` value explicitly.
 
 ## Examples
 
@@ -105,7 +110,9 @@ Try changing the document language using the `<select>` element. When the langua
 
 ### Language support for offscreen canvases
 
-This example is the same as the previous example, except that the font is rendered to a {{domxref("OffscreenCanvasRenderingContext2D")}} then the resulting bitmap is transferred to the on-screen `<canvas>` to display. The `lang` attribute can be used to provide localization support to the off-screen canvas in just the same way as the regular on-screen `<canvas>`.
+This example is the similar to the previous example, except that the font is rendered to a {{domxref("OffscreenCanvasRenderingContext2D")}} then the resulting bitmap is transferred to the on-screen `<canvas>` to display.
+
+In addition, because an inherited off-screen canvas language is only set once, and not dynamically updated if the inherited `lang` attribute value is changed, we explicitly set the `lang` property on the `OffscreenCanvasRenderingContext2D` instead.
 
 #### HTML
 
@@ -125,7 +132,8 @@ This example is the same as the previous example, except that the font is render
 The JavaScript works in the same way as the previous example, except that:
 
 - The on-screen canvas context is defined as an {{domxref("ImageBitmapRenderingContext")}}.
-- We define a new `OffscreenCanvasRenderingContext2D` to draw the text onto, transfer the result to a bitmap using {{domxref("OffscreenCanvas.transferToImageBitmap", "transferToImageBitmap()")}}, then render it on the `<canvas>` using {{domxref("ImageBitmapRenderingContext.transferFromImageBitmap", "transferFromImageBitmap()")}}
+- We define a new `OffscreenCanvasRenderingContext2D` to draw the text onto, transfer the result to a bitmap using {{domxref("OffscreenCanvas.transferToImageBitmap", "transferToImageBitmap()")}}, then render it on the `<canvas>` using {{domxref("ImageBitmapRenderingContext.transferFromImageBitmap", "transferFromImageBitmap()")}}.
+- When the `<select>` value is changed, we update the `lang` property directly on the `OffscreenCanvasRenderingContext2D` instead of changing the `<html>` `lang` attribute value.
 
 ```js live-example___offscreen-l10n
 const canvasElem = document.querySelector("canvas");
@@ -150,6 +158,7 @@ latoMediumFontFace.load().then((font) => {
 function init() {
   function drawText() {
     offscreen_ctx.clearRect(0, 0, canvasElem.width, canvasElem.height);
+    offscreen_ctx.lang = selectElem.value;
     offscreen_ctx.font = "30px Lato-Medium";
     offscreen_ctx.color = "black";
     offscreen_ctx.fillText("finish crafting", 50, 100);
@@ -159,7 +168,6 @@ function init() {
   }
 
   selectElem.addEventListener("change", () => {
-    document.documentElement.lang = selectElem.value;
     drawText();
   });
 
@@ -170,8 +178,6 @@ function init() {
 #### Result
 
 The example is rendered as follows:
-
-EDITORIAL: IN THIS CASE, THE OFF-SCREEN CANVAS DOES NOT APPEAR TO BE INHERITING THE LANG FROM THE DOCUMENT. I'M PRETTY SURE THIS SHOULD BE WORKING, BUT IT ISN'T. ANY THOUGHTS AS TO WHY?
 
 {{ EmbedLiveSample('offscreen-l10n', "100%", 220) }}
 
