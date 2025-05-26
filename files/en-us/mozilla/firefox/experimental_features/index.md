@@ -828,7 +828,7 @@ The CSS {{cssxref("::details-content")}} pseudo-element enables you to style the
 
 Work has started on allowing [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) such as {{cssxref("::first-letter")}} and {{cssxref("::before")}} to be appended to [element-backed pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements#element-backed_pseudo-elements) such as {{cssxref("::details-content")}} and {{cssxref("::file-selector-button")}}.
 
-This will allow users to, for , example, style the first letter of the {{htmlElement("details")}} element by using the CSS selector `::details-content::first-letter` or add content before a {{HTMLElement("input") }} of [`type="file"`](/en-US/docs/Web/HTML/Reference/Elements/input/file) using the CSS selector `::file-selector-button::before`.
+This will allow users to, for , example, style the first letter of the {{htmlElement("details")}} element by using the CSS selector `::details-content::first-letter` or add content before an {{HTMLElement("input") }} of [`type="file"`](/en-US/docs/Web/HTML/Reference/Elements/input/file) using the CSS selector `::file-selector-button::before`.
 
 Currently only support for `::details-content::first-letter` can be parsed, using `@supports(::details-content::first-letter)` and the preference for [::details-content pseudo-element](#details-content_pseudo-element) needs enabling for this to be tested. The `::file-selector-button` pseudo-element is not yet marked as an element-based pseudo-element so there is no current way of testing this. ([Firefox bug 1953557](https://bugzil.la/1953557)).
 
@@ -870,48 +870,7 @@ Currently only support for `::details-content::first-letter` can be parsed, usin
 
 ## SVG
 
-### `<discard>` element for SVG animations
-
-The {{svgelement("discard")}} SVG element is now supported, along with its corresponding {{domxref("SVGDiscardElement")}} JavaScript interface.
-The element allows developers to specify a trigger time or event at which a specified element and its children should be removed from the DOM.
-An SVG viewer can use this information to conserve memory by discarding elements that are no longer needed, such as animated elements that have completed.
-([Firefox bug 1069931](https://bugzil.la/1069931)).
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>136</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>136</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>136</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>136</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>svg.discard.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
+None.
 
 ## JavaScript
 
@@ -1263,11 +1222,11 @@ The non-standard events [`beforescriptexecute`](/en-US/docs/Web/API/Document/bef
   </tbody>
 </table>
 
-### Notification.actions
+### Notification actions and maxActions properties
 
-The {{domxref("Notification.actions","actions")}} read-only property of the {{domxref("Notification")}} interface is supported in Nightly.
-This contains notification actions set with {{domxref("ServiceWorkerRegistration.showNotification()")}}.
-([Firefox bug 1225110](https://bugzil.la/1225110)).
+The {{domxref("Notification/actions","actions")}} read-only property and the [`maxActions`](/en-US/docs/Web/API/Notification/maxActions_static) static read-only property of the {{domxref("Notification")}} interface are supported in Nightly on desktop.
+These contain the notification actions set with {{domxref("ServiceWorkerRegistration.showNotification()")}}, and the maximum number of actions that can be set, respectively.
+([Firefox bug 1225110](https://bugzil.la/1225110), [Firefox bug 1963263](https://bugzil.la/1963263)).
 
 <table>
   <thead>
@@ -1281,6 +1240,7 @@ This contains notification actions set with {{domxref("ServiceWorkerRegistration
     <tr>
       <th>Nightly</th>
       <td>138</td>
+      <td>Yes (desktop only)</td>
     </tr>
     <tr>
       <th>Developer Edition</th>

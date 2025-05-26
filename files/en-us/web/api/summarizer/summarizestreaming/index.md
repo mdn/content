@@ -45,7 +45,7 @@ A {{domxref("ReadableStream")}} containing the generated summary.
 - `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if the provided `context` is not in language the `Summarizer` supports.
 - `QuotaExceededError` {{domxref("DOMException")}}
-  - : Thrown if the summarize operation exceeds the available {{domxref("Summarize.inputQuota", "inputQuota")}}.
+  - : Thrown if the summarize operation exceeds the available {{domxref("Summarizer.inputQuota", "inputQuota")}}.
 - `UnknownError` {{domxref("DOMException")}}
   - : Thrown if the `summarizeStreaming()` call failed for any other reason, or a reason the user agent did not wish to disclose.
 

@@ -3,10 +3,12 @@ title: "LanguageDetector: create() static method"
 short-title: create()
 slug: Web/API/LanguageDetector/create_static
 page-type: web-api-static-method
+status:
+  - experimental
 browser-compat: api.LanguageDetector.create_static
 ---
 
-{{APIRef("Translator and Language Detector APIs")}}{{securecontext_header}}
+{{APIRef("Translator and Language Detector APIs")}}{{securecontext_header}}{{SeeCompatTable}}
 
 The **`create()`** static method of the {{domxref("LanguageDetector")}} interface creates a new `LanguageDetector` instance to detect languages.
 

@@ -270,6 +270,7 @@ gameworlds
 Gbps
 GCLI
 generatable
+geofencing
 geolocate
 geolocated
 geolocating
