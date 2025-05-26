@@ -36,7 +36,7 @@ Atomics.wait(typedArray, index, value, timeout)
 
 ### Return value
 
-A string which is either `"ok"`, `"not-equal"`, or `"timed-out"`.
+A string which is either `"not-equal"`, `"ok"`, or `"timed-out"`.
 
 - `"not-equal"` is returned immediately if the initial `value` does not equal what is stored at `index`.
 - `"ok"` is returned if woken up by a call to `Atomics.notify()`, **regardless of whether the expected value has changed**.
