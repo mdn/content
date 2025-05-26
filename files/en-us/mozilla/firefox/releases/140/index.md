@@ -72,6 +72,12 @@ These features are shipping in Firefox 140 but are disabled by default. To exper
   The [`Notification.maxActions`](/en-US/docs/Web/API/Notification/maxActions_static) read-only static property returns the browser limit on the number of actions that can be associated with a `Notification`, which you create using {{domxref("ServiceWorkerRegistration.showNotification()")}}.
   This was released prematurely in Firefox version 138, and this change makes it available only in the Nightly build. ([Firefox bug 1963263](https://bugzil.la/1963263)).
 
+- **`Atomics.waitAsync()`**: `javascript.options.atomics_wait_async`
+
+  The {{jsxref("Atomics.waitAsync()")}} static method waits asynchronously on a shared memory location and returns an object representing the result of the operation.
+  It is non-blocking and usable on the main thread.
+  ([Firefox bug 1467846](https://bugzil.la/1467846)).
+
 ## Older versions
 
 {{Firefox_for_developers}}
