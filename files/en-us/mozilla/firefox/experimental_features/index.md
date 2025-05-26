@@ -1057,49 +1057,6 @@ The [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) allow developer
   </tbody>
 </table>
 
-### Escape < and > in attributes when serializing HTML
-
-Firefox replaces the `<` and `>` characters with `&lt;` and `&gt;` (respectively) in attributes when serializing HTML.
-This prevents certain exploits where HTML is serialized and then injected back into the DOM.
-The affected methods and properties are: {{domxref("Element.innerHTML")}}, {{domxref("Element.outerHTML")}}, {{domxref("Element.getHTML()")}}, {{domxref("ShadowRoot.innerHTML")}}, and {{domxref("ShadowRoot.getHTML()")}}.
-([Firefox bug 1941347](https://bugzil.la/1941347)).
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>139</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>139</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>139</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>139</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.security.html_serialization_escape_lt_gt</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ### Removal of MutationEvent
 
 {{domxref("MutationEvent")}} and its associated events (`DOMSubtreeModified`, `DOMNodeInserted`, `DOMNodeRemoved`, `DOMCharacterDataModified`, `DOMAttrModified`) are on the path for removal, and have been disabled on nightly.
@@ -1881,8 +1838,7 @@ See [Firefox bug 1697647](https://bugzil.la/1697647) for more details.
 ### Prioritized Task Scheduling API
 
 The [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) provides a standardized way to prioritize all tasks belonging to an application, whether they are defined in a website developer's code, or in third-party libraries and frameworks.
-Support for most of the API was added behind a preference in Firefox version 101.
-Firefox version 139 adds support for {{domxref("scheduler.yield()")}} and enables the API in the Nightly release.
+From Firefox version 140 the API is both feature complete and enabled in the Nightly release.
 ([Firefox bug 1734997](https://bugzil.la/1734997) and [Firefox bug 1920115](https://bugzil.la/1920115)).
 
 <table>
