@@ -17,7 +17,7 @@ This module takes you through the essentials of version control using Git and Gi
 
 - A desktop computer with Git installed on it (see the [Git downloads page](https://git-scm.com/downloads)).
 - A tool to use Git. Depending on how you like to work, you could use:
-  - A [Git GUI client](https://git-scm.com/downloads/guis/) (we'd recommend [GitHub Desktop](https://desktop.github.com/download/), [SourceTree](https://www.sourcetreeapp.com/) or [Git Kraken](https://www.gitkraken.com/))
+  - A [Git GUI client](https://git-scm.com/downloads/guis/) (we'd recommend [GitHub Desktop](https://desktop.github.com/download/), [SourceTree](https://www.sourcetreeapp.com/) or [Git Kraken](https://www.gitkraken.com/)).
   - A command line/terminal window (check out our [Command line crash course](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line) for an introduction).
 - A [GitHub account](https://github.com/signup). If you haven't already got one, sign up now using the provided link.
 
