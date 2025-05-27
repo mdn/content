@@ -9,8 +9,9 @@ browser-compat: api.HTMLModelElement.environmentMapReady
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLModelElement")}} property **`environmentMapReady`**
+
 is a {{jsxref("Promise")}} that reflects the ready-state of a model's
-[environment map](/en-US/docs/model/environmentmap) resource. It is
+[environment map](/en-US/docs/Web/API/HTMLModelElement/environmentMap) resource. It is
 resolved when a valid environment map resource is downloaded and ready
 to contribute to rendering, or is rejected if for any reason the resource
 cannot be used.

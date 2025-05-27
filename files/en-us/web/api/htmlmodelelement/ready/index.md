@@ -9,7 +9,7 @@ browser-compat: api.HTMLModelElement.ready
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLModelElement")}}
-**`ready`** is a {{jsxref("Promise")}} that reflects the ready-state of a model's [currentSrc](/en-US/docs/model/currentSrc) resource. It is resolved when a valid model resource is loaded and processed, or is rejected if for any reason the resource cannot be used.
+**`ready`** is a {{jsxref("Promise")}} that reflects the ready-state of a model's [currentSrc](/en-US/docs/Web/API/HTMLModelElement/currentSrc) resource. It is resolved when a valid model resource is loaded and processed, or is rejected if for any reason the resource cannot be used.
 
 > [!NOTE]
 > Because a model's rendering depends _necessarily_ on a valid
@@ -45,4 +45,4 @@ fallback capability to the user.
 
 ## See also
 
-- [model.environmentMapReady](/en-US/docs/Web/API/HTMLModelElement/environmentmapready)
+- [model.environmentMapReady](/en-US/docs/Web/API/HTMLModelElement/environmentMapReady)

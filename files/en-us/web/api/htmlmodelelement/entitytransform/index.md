@@ -9,7 +9,7 @@ browser-compat: api.HTMLModelElement.entityTransform
 {{APIRef("HTML DOM")}}
 
 The **`HTMLModelElement.entityTransform`**
-property reflects the model's visual transformation, indicating the translation, rotation and scale of the model contents, specified as a {{domxref("DOMMatrixReadOnly")}} that may be read or overwritten (unless the model is in a special stage mode such as `orbit`, see the discussion of [`"orbit" stage mode`](/en-US/docs/Web/API/HTMLModelElement/stagemode#orbit_mode).)
+property reflects the model's visual transformation, indicating the translation, rotation and scale of the model contents, specified as a {{domxref("DOMMatrixReadOnly")}} that may be read or overwritten (unless the model is in a special stage mode such as `orbit`, see the discussion of [`"orbit" stage mode`](/en-US/docs/Web/API/HTMLModelElement/stageMode#orbit_mode).)
 
 ## Value
 

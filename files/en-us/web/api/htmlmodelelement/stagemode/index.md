@@ -34,7 +34,7 @@ While the specific behavior of an orbit mode may vary between user agents, it ha
 Setting the `stagemode` to `orbit` immediately has these consequences for the model element's `entityTransform`:
 
 - Transform is <strong>`orbit-fit`</strong>:
-  The scale and position reflected by the model's `entityTransform` is forced to be centered on its `boundingBoxCenter` and to accommodate the full size of the model's `boundingBoxExtents`. This differs to - and is likely smaller than - the model's default, [object fit](/en-US/docs/Web/HTML/Element/model#object_fit) transformation.
+  The scale and position reflected by the model's `entityTransform` is forced to be centered on its `boundingBoxCenter` and to accommodate the full size of the model's `boundingBoxExtents`. This differs to - and is likely smaller than - the model's default, [object fit](/en-US/docs/Web/HTML/Reference/Elements/model#object_fit) transformation.
 
 - Transform is <strong>read-only</strong>:
   While `entityTransform` is set to a read-only mode where any programmatic attempt to set it directly is ignored, throwing an error.
@@ -51,8 +51,6 @@ This example demonstrates how to set a model's stage mode to orbit.
 </model>
 ```
 
-You can [try out or remix this example in real time on Glitch](https://Model-play-promise.glitch.me/).
-
 ## Specifications
 
 {{Specifications}}
@@ -62,8 +60,3 @@ You can [try out or remix this example in real time on Glitch](https://Model-pla
 {{Compat}}
 
 ## See also
-
-- [Web model technologies](/en-US/docs/Web/Model)
-- Learning: [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
-- [Autoplay guide for model and Web Audio APIs](/en-US/docs/Web/Model/Autoplay_guide)
-- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

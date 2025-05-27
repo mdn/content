@@ -45,9 +45,9 @@ The coordinate space in a model context
 
 ## Attributes
 
-This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
-- [`environmentmap`](/en-US/docs/Web/API/HTMLModelElement/environmentmap#usage_notes)
+- [`environmentmap`](/en-US/docs/Web/API/HTMLModelElement/environmentMap#usage_notes)
 
   - : Defines the URL for the environment map to use to illuminate the model. This resource is assumed to be in an [equirectangular](https://en.wikipedia.org/wiki/Equirectangular_projection) projection. A valid environment map may be supplied in any valid image format, but it is recommended to supply a resource capable of presenting raw luminance values, such as [OpenEXR `.exr`](https://en.wikipedia.org/wiki/OpenEXR) format, or [RGBE `.hdr`](https://en.wikipedia.org/wiki/RGBE_image_format) format.
 
@@ -74,7 +74,7 @@ The projection of the equirectangular back to a sphere
 
   - : A Boolean attribute; if specified, the browser will automatically seek back to the start upon reaching the end of the model's animation and continue playback.
 
-- [`stagemode`](/en-US/docs/Web/API/HTMLModelElement/stagemode#usage_notes)
+- [`stagemode`](/en-US/docs/Web/API/HTMLModelElement/stageMode#usage_notes)
 
   - : An enumerated attribute indicating which mode, if any, the User Agent should respond to pointer events with by default. It can have the following values:
     - `none`, which indicates that the User Agent should take no action,
@@ -82,7 +82,7 @@ The projection of the equirectangular back to a sphere
 
 - `src`
 
-  - : The model {{glossary("URL")}} to be fetched. Multiple model file candidates may also be provided through one or more [source](/en-US/docs/Web/HTML/Element/source) elements for alternate resources, such as the [GLTF](https://www.khronos.org/gltf/) or [USDZ](https://openusd.org/release/spec_usdz.html) formats.
+  - : The model {{glossary("URL")}} to be fetched. Multiple model file candidates may also be provided through one or more [source](/en-US/docs/Web/HTML/Reference/Elements/source) elements for alternate resources, such as the [GLTF](https://www.khronos.org/gltf/) or [USDZ](https://openusd.org/release/spec_usdz.html) formats.
 
 - `height`
 
@@ -140,22 +140,22 @@ The semantics of the `model` element is that of declaratively portraying a singl
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content"
           >phrasing content</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#interactive_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#interactive_content"
           >interactive content</a
         >,
         <a
-          href="/en-US/docs/Web/HTML/Content_categories#palpable_content"
+          href="/en-US/docs/Web/HTML/Guides/Content_categories#palpable_content"
           >palpable content</a>
       </td>
     </tr>
@@ -171,7 +171,7 @@ The semantics of the `model` element is that of declaratively portraying a singl
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#embedded_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#embedded_content"
           >embedded content</a
         >.
       </td>
