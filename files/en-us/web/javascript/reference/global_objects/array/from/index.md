@@ -22,14 +22,14 @@ console.log(Array.from([1, 2, 3], (x) => x + x));
 ## Syntax
 
 ```js-nolint
-Array.from(arrayLike)
-Array.from(arrayLike, mapFn)
-Array.from(arrayLike, mapFn, thisArg)
+Array.from(items)
+Array.from(items, mapFn)
+Array.from(items, mapFn, thisArg)
 ```
 
 ### Parameters
 
-- `arrayLike`
+- `items`
   - : An iterable or array-like object to convert to an array.
 - `mapFn` {{optional_inline}}
   - : A function to call on every element of the array. If provided, every value to be added to the array is first passed through this function, and `mapFn`'s return value is added to the array instead. The function is called with the following arguments:
@@ -53,14 +53,14 @@ A new {{jsxref("Array")}} instance.
 
 To convert an ordinary object that's not iterable or array-like to an array (by enumerating its property keys, values, or both), use {{jsxref("Object.keys()")}}, {{jsxref("Object.values()")}}, or {{jsxref("Object.entries()")}}. To convert an [async iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols) to an array, use {{jsxref("Array.fromAsync()")}}.
 
-`Array.from()` never creates a sparse array. If the `arrayLike` object is missing some index properties, they become `undefined` in the new array.
+`Array.from()` never creates a sparse array. If the `items` object is missing some index properties, they become `undefined` in the new array.
 
 `Array.from()` has an optional parameter `mapFn`, which allows you to execute a function on each element of the array being created, similar to {{jsxref("Array/map", "map()")}}. More clearly, `Array.from(obj, mapFn, thisArg)` has the same result as `Array.from(obj).map(mapFn, thisArg)`, except that it does not create an intermediate array, and `mapFn` only receives two arguments (`element`, `index`) without the whole array, because the array is still under construction.
 
 > [!NOTE]
 > This behavior is more important for [typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays), since the intermediate array would necessarily have values truncated to fit into the appropriate type. `Array.from()` is implemented to have the same signature as {{jsxref("TypedArray.from()")}}.
 
-The `Array.from()` method is a generic factory method. For example, if a subclass of `Array` inherits the `from()` method, the inherited `from()` method will return new instances of the subclass instead of `Array` instances. In fact, the `this` value can be any constructor function that accepts a single argument representing the length of the new array. When an iterable is passed as `arrayLike`, the constructor is called with no arguments; when an array-like object is passed, the constructor is called with the [normalized length](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#normalization_of_the_length_property) of the array-like object. The final `length` will be set again when iteration finishes. If the `this` value is not a constructor function, the plain `Array` constructor is used instead.
+The `Array.from()` method is a generic factory method. For example, if a subclass of `Array` inherits the `from()` method, the inherited `from()` method will return new instances of the subclass instead of `Array` instances. In fact, the `this` value can be any constructor function that accepts a single argument representing the length of the new array. When an iterable is passed as `items`, the constructor is called with no arguments; when an array-like object is passed, the constructor is called with the [normalized length](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#normalization_of_the_length_property) of the array-like object. The final `length` will be set again when iteration finishes. If the `this` value is not a constructor function, the plain `Array` constructor is used instead.
 
 ## Examples
 

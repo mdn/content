@@ -49,14 +49,14 @@ To handle creating the outbound and inbound transition animations, the API const
 ```
 
 > [!NOTE]
-> A {{cssxref("::view-transition-group")}} subtree is created for every captured `view-transition-name`.
+> A {{cssxref("::view-transition-group()")}} subtree is created for every captured `view-transition-name`.
 
 In the case of same-document transitions (SPAs), the pseudo-element tree is made available in the document. In the case of cross-document transitions (MPAs), the pseudo-element tree is made available in the destination document only.
 
 The most interesting parts of the tree structure are as follows:
 
 - {{cssxref("::view-transition")}} is the root of view transitions overlay, which contains all view transition snapshot groups and sits over the top of all other page content.
-- A {{cssxref("::view-transition-group")}} acts as a container for each view transition snapshot group. The `root` argument specifies the default snapshot group — the view transition animation will apply to the snapshot whose `view-transition-name` is `root`. By default, this is the {{cssxref(":root")}} element, because the default browser styles define this:
+- A {{cssxref("::view-transition-group()")}} acts as a container for each view transition snapshot group. The `root` argument specifies the default snapshot group — the view transition animation will apply to the snapshot whose `view-transition-name` is `root`. By default, this is the {{cssxref(":root")}} element, because the default browser styles define this:
 
   ```css
   :root {
@@ -66,13 +66,13 @@ The most interesting parts of the tree structure are as follows:
 
   Be aware however that page authors can change this by unsetting the above, and setting `view-transition-name: root` on a different element.
 
-- {{cssxref("::view-transition-old")}} targets the static snapshot of the old page element, and {{cssxref("::view-transition-new")}} targets the live snapshot of the new page element. Both of these render as replaced content, in the same manner as an {{htmlelement("img")}} or {{htmlelement("video")}}, meaning that they can be styled with handy properties like {{cssxref("object-fit")}} and {{cssxref("object-position")}}.
+- {{cssxref("::view-transition-old()")}} targets the static snapshot of the old page element, and {{cssxref("::view-transition-new()")}} targets the live snapshot of the new page element. Both of these render as replaced content, in the same manner as an {{htmlelement("img")}} or {{htmlelement("video")}}, meaning that they can be styled with handy properties like {{cssxref("object-fit")}} and {{cssxref("object-position")}}.
 
 > [!NOTE]
-> It is possible to target different DOM elements with different custom view transition animations by setting a different {{cssxref("view-transition-name")}} on each one. In such cases, a `::view-transition-group` is created for each one. See [Different animations for different elements](#different_animations_for_different_elements) for an example.
+> It is possible to target different DOM elements with different custom view transition animations by setting a different {{cssxref("view-transition-name")}} on each one. In such cases, a `::view-transition-group()` is created for each one. See [Different animations for different elements](#different_animations_for_different_elements) for an example.
 
 > [!NOTE]
-> As you'll see later, to customize the outbound and inbound animations you need to target the {{cssxref("::view-transition-old")}} and {{cssxref("::view-transition-new")}} pseudo-elements with your animations, respectively.
+> As you'll see later, to customize the outbound and inbound animations you need to target the {{cssxref("::view-transition-old()")}} and {{cssxref("::view-transition-new()")}} pseudo-elements with your animations, respectively.
 
 ## Creating a basic view transition
 
@@ -130,7 +130,7 @@ Most appearance transitions are given a default smooth cross-fade animation, as 
 - `height` and `width` transitions have a smooth scaling animation applied.
 - `position` and `transform` transitions have a smooth movement animation applied.
 
-You can modify the default animations in any way you want using regular CSS — target the "from" animation with {{cssxref("::view-transition-old")}}, and the "to" animation with {{cssxref("::view-transition-new")}}.
+You can modify the default animations in any way you want using regular CSS — target the "from" animation with {{cssxref("::view-transition-old()")}}, and the "to" animation with {{cssxref("::view-transition-new()")}}.
 
 For example, to change the speed of both:
 
@@ -217,7 +217,7 @@ With this CSS applied, the generated pseudo-element tree will now look like this
 The existence of the second set of pseudo-elements allows separate view transition styling to be applied just to the `<figcaption>`. The different old and new view captures are handled separately from one another.
 
 > [!NOTE]
-> The value of `view-transition-name` can be anything you want except for `none` — the `none` value specifically means that the element will not participate in a view transition.
+> The value of `view-transition-name` is a unique {{cssxref("custom-ident")}}; it can be any identifier that wouldn't be misinterpreted as a keyword. The keyword `none` is not a valid name, as that value means the element will not participate in any view transitions. Also avoid `auto`, as it's being discussed as a way to [determine `view-transition-name` automatically](https://drafts.csswg.org/css-view-transitions-2/#auto-vt-name).
 >
 > `view-transition-name` values must also be unique. If two rendered elements have the same `view-transition-name` at the same time, {{domxref("ViewTransition.ready")}} will reject and the transition will be skipped.
 
@@ -283,7 +283,7 @@ figcaption {
 }
 ```
 
-This works because, by default, `::view-transition-group` transitions `width` and `height` between the old and new views with a smooth scale. We just needed to set a fixed `height` on both states to make it work.
+This works because, by default, `::view-transition-group()` transitions `width` and `height` between the old and new views with a smooth scale. We just needed to set a fixed `height` on both states to make it work.
 
 > **Note:** [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/) contains several other customization examples.
 
