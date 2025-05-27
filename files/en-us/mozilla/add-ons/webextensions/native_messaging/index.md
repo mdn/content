@@ -244,20 +244,20 @@ You can quickly get started sending and receiving messages with this NodeJS code
 
 import fs from "node:fs/promises";
 
-const _r = (rs) => (_rs_rp = rs);
-let _rs_rp,
-  _rp = null; // read promise
+let readPromise = null; // Prevents reading until an in-progress read has finished.
+
 async function getMessage() {
-  while (_rp) await _rp; // wait for previous reads
-  _rp = new Promise(_r); // make any further calls to getMessage wait
+  while (readPromise) await readPromise; // await in-progress read promise
+  let resolveReadPromise;
+  readPromise = new Promise((resolve) => (resolveReadPromise = resolve)); // create in-progress read promise
   const input = await fs.open("/dev/stdin");
   const header = new Uint32Array(1);
   await input.read(header);
   const message = new Uint8Array(header[0]);
   await input.read(message);
   await input.close();
-  _rs_rp();
-  _rp = null; // allow the next getMessage call to proceed
+  resolveReadPromise(); // resolve in-progress read promise
+  readPromise = null; // allow the next getMessage call to proceed
   return message;
 }
 
