@@ -473,8 +473,8 @@ function toggleBilling() {
   const billingItems = document.querySelectorAll('#billing input[type="text"]');
 
   // Toggle the billing text fields
-  for (let i = 0; i < billingItems.length; i++) {
-    billingItems[i].disabled = !billingItems[i].disabled;
+  for (const item of billingItems) {
+    item.disabled = !item.disabled;
   }
 }
 ```
