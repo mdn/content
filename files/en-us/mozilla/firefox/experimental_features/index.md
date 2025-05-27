@@ -918,6 +918,49 @@ The `withCalendar()` method for [`PlainDate`](/en-US/docs/Web/JavaScript/Referen
   </tbody>
 </table>
 
+### Atomics
+
+#### Atomics.waitAsync()
+
+The {{jsxref("Atomics.waitAsync()")}} static method waits asynchronously on a shared memory location and returns an object representing the result of the operation.
+It is non-blocking and usable on the main thread. ([Firefox bug 1467846](https://bugzil.la/1467846)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>140</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>140</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>140</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>140</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>javascript.options.atomics_wait_async</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ## APIs
 
 ### CloseWatcher Interface
@@ -1057,12 +1100,11 @@ The [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) allow developer
   </tbody>
 </table>
 
-### Escape < and > in attributes when serializing HTML
+### `closedBy` attribute for `<dialog>`
 
-Firefox replaces the `<` and `>` characters with `&lt;` and `&gt;` (respectively) in attributes when serializing HTML.
-This prevents certain exploits where HTML is serialized and then injected back into the DOM.
-The affected methods and properties are: {{domxref("Element.innerHTML")}}, {{domxref("Element.outerHTML")}}, {{domxref("Element.getHTML()")}}, {{domxref("ShadowRoot.innerHTML")}}, and {{domxref("ShadowRoot.getHTML()")}}.
-([Firefox bug 1941347](https://bugzil.la/1941347)).
+The {{domxref("HTMLDialogElement/closedBy", "closedBy")}} attribute of the {{domxref("HTMLDialogElement")}} interface, and corresponding [`closedby`](/en-US/docs/Web/HTML/Reference/Elements/dialog#closedby) attribute of the {{htmlelement("dialog")}} element, are supported.
+These can be used by developers to specify whether users can close a dialog by clicking outside of the dialog area, or the dialog must be closed programmatically, and so on.
+([Firefox bug 1964077](https://bugzil.la/1964077)).
 
 <table>
   <thead>
@@ -1075,27 +1117,27 @@ The affected methods and properties are: {{domxref("Element.innerHTML")}}, {{dom
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>139</td>
+      <td>140</td>
       <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>139</td>
+      <td>140</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Beta</th>
-      <td>139</td>
+      <td>140</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Release</th>
-      <td>139</td>
+      <td>140</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2"><code>dom.security.html_serialization_escape_lt_gt</code></td>
+      <td colspan="2"><code>dom.dialog.light-dismiss.enabled</code></td>
     </tr>
   </tbody>
 </table>
@@ -1881,8 +1923,7 @@ See [Firefox bug 1697647](https://bugzil.la/1697647) for more details.
 ### Prioritized Task Scheduling API
 
 The [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) provides a standardized way to prioritize all tasks belonging to an application, whether they are defined in a website developer's code, or in third-party libraries and frameworks.
-Support for most of the API was added behind a preference in Firefox version 101.
-Firefox version 139 adds support for {{domxref("scheduler.yield()")}} and enables the API in the Nightly release.
+From Firefox version 140 the API is both feature complete and enabled in the Nightly release.
 ([Firefox bug 1734997](https://bugzil.la/1734997) and [Firefox bug 1920115](https://bugzil.la/1920115)).
 
 <table>

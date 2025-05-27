@@ -971,7 +971,6 @@ For methods and functions, the `typeof` operator returns results as follows:
 
 ```js
 typeof blur; // returns "function"
-typeof eval; // returns "function"
 typeof parseInt; // returns "function"
 typeof shape.split; // returns "function"
 ```

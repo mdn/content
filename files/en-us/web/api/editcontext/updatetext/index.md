@@ -64,7 +64,7 @@ editContext.addEventListener("textupdate", (e) => {
 });
 
 canvas.addEventListener("keydown", async (e) => {
-  if (e.key == "v" && (e.ctrlKey || e.metaKey)) {
+  if (e.key === "v" && (e.ctrlKey || e.metaKey)) {
     const pastedText = await navigator.clipboard.readText();
     console.log(
       `The user pasted the text: ${pastedText}. Updating the EditContext text.`,

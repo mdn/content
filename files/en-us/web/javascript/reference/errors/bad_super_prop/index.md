@@ -33,7 +33,7 @@ You can't use `super.x` outside of a method in an object:
 ```js example-bad
 const obj = {
   __proto__: { x: 1 },
-  x: super.x, // SyntaxError
+  x: super.x, // SyntaxError: use of super property accesses only valid within methods or eval code within methods
 };
 ```
 
@@ -41,13 +41,13 @@ You can't use `super.x` in a function, even if that function has the effect of b
 
 ```js example-bad
 function getX() {
-  return super.x; // SyntaxError
+  return super.x; // SyntaxError: use of super property accesses only valid within methods or eval code within methods
 }
 
 const obj = {
   getX,
   getX2: function () {
-    return super.x; // SyntaxError
+    return super.x; // SyntaxError: use of super property accesses only valid within methods or eval code within methods
   },
 };
 

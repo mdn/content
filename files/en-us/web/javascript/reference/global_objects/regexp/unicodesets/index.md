@@ -12,8 +12,8 @@ The **`unicodeSets`** accessor property of {{jsxref("RegExp")}} instances return
 {{InteractiveExample("JavaScript Demo: RegExp.prototype.unicodeSets")}}
 
 ```js interactive-example
-const regex1 = new RegExp("[\\p{Lowercase}&&\\p{Script=Greek}]");
-const regex2 = new RegExp("[\\p{Lowercase}&&\\p{Script=Greek}]", "v");
+const regex1 = /[\p{Lowercase}&&\p{Script=Greek}]/;
+const regex2 = /[\p{Lowercase}&&\p{Script=Greek}]/v;
 
 console.log(regex1.unicodeSets);
 // Expected output: false
