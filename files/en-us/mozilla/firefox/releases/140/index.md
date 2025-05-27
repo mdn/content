@@ -89,6 +89,12 @@ These features are shipping in Firefox 140 but are disabled by default. To exper
   The [`Notification.maxActions`](/en-US/docs/Web/API/Notification/maxActions_static) read-only static property returns the browser limit on the number of actions that can be associated with a `Notification`, which you create using {{domxref("ServiceWorkerRegistration.showNotification()")}}.
   This was released prematurely in Firefox version 138, and this change makes it available only in the Nightly build. ([Firefox bug 1963263](https://bugzil.la/1963263)).
 
+- **`closedBy` attribute for `<dialog>`** (Nightly): `dom.dialog.light-dismiss.enabled`
+
+  The {{domxref("HTMLDialogElement/closedBy", "closedBy")}} attribute of the {{domxref("HTMLDialogElement")}} interface, and corresponding [`closedby`](/en-US/docs/Web/HTML/Reference/Elements/dialog#closedby) attribute of the {{htmlelement("dialog")}} element, are supported.
+  Developers can use these to specify what mechanisms are able to close the dialogs, such as user interaction outside the dialog ("light dismiss") or programmatic closing.
+  ([Firefox bug 1964077](https://bugzil.la/1964077)).
+
 - **`Atomics.waitAsync()`**: `javascript.options.atomics_wait_async`
 
   The {{jsxref("Atomics.waitAsync()")}} static method waits asynchronously on a shared memory location and returns an object representing the result of the operation.
