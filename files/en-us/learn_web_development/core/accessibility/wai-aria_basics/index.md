@@ -1088,8 +1088,7 @@ class TabsManual {
     this.tabs = Array.from(this.tablistNode.querySelectorAll("[role=tab]"));
     this.tabpanels = [];
 
-    for (let i = 0; i < this.tabs.length; i += 1) {
-      const tab = this.tabs[i];
+    for (const tab of this.tabs) {
       const tabpanel = document.getElementById(
         tab.getAttribute("aria-controls"),
       );
@@ -1109,8 +1108,7 @@ class TabsManual {
   }
 
   setSelectedTab(currentTab) {
-    for (let i = 0; i < this.tabs.length; i += 1) {
-      const tab = this.tabs[i];
+    for (const tab of this.tabs.length) {
       if (currentTab === tab) {
         tab.setAttribute("aria-selected", "true");
         tab.removeAttribute("tabindex");
@@ -1195,10 +1193,10 @@ class TabsManual {
 
 // Initialize tablist
 
-window.addEventListener("load", function () {
+window.addEventListener("load", () => {
   const tablists = document.querySelectorAll("[role=tablist].manual");
-  for (let i = 0; i < tablists.length; i++) {
-    new TabsManual(tablists[i]);
+  for (const tablist of tablists) {
+    new TabsManual(tablist);
   }
 });
 ```

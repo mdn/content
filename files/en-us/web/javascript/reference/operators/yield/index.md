@@ -73,8 +73,8 @@ The following code is the declaration of an example generator function.
 ```js
 function* countAppleSales() {
   const saleList = [3, 7, 5];
-  for (let i = 0; i < saleList.length; i++) {
-    yield saleList[i];
+  for (const sale of saleList) {
+    yield sale;
   }
 }
 ```
