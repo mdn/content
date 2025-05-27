@@ -70,7 +70,7 @@ function log(text) {
 
 const check = (input) => {
   // Handle cases where input is too vague
-  if (input.value == "good" || input.value == "fine") {
+  if (input.value === "good" || input.value === "fine") {
     input.setCustomValidity(`"${input.value}" is not a feeling.`);
   } else {
     // An empty string resets the custom validity state

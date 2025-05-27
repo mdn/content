@@ -394,8 +394,8 @@ const selectElem = document.querySelector("select");
 const inputElems = document.querySelectorAll("input");
 
 selectElem.onchange = () => {
-  for (let i = 0; i < inputElems.length; i++) {
-    inputElems[i].value = "";
+  for (const e of inputElems) {
+    e.value = "";
   }
 
   if (selectElem.value === "US") {

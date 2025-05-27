@@ -14,7 +14,7 @@ The **`bind()`** method of {{jsxref("Function")}} instances creates a new functi
 ```js interactive-example
 const module = {
   x: 42,
-  getX: function () {
+  getX() {
     return this.x;
   },
 };

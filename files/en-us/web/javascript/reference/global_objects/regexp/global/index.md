@@ -12,12 +12,12 @@ The **`global`** accessor property of {{jsxref("RegExp")}} instances returns whe
 {{InteractiveExample("JavaScript Demo: RegExp.prototype.global")}}
 
 ```js interactive-example
-const regex1 = new RegExp("foo", "g");
+const regex1 = /foo/g;
 
 console.log(regex1.global);
 // Expected output: true
 
-const regex2 = new RegExp("bar", "i");
+const regex2 = /bar/i;
 
 console.log(regex2.global);
 // Expected output: false

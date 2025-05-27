@@ -99,7 +99,7 @@ The following example creates a new {{domxref("AudioEncoder")}} and configures i
 ```js
 const init = {
   output: handleOutput,
-  error: (e) => {
+  error(e) {
     console.log(e.message);
   },
 };
@@ -123,7 +123,7 @@ The following example creates a new {{domxref("AudioEncoder")}} and configures i
 ```js
 const init = {
   output: handleOutput,
-  error: (e) => {
+  error(e) {
     console.log(e.message);
   },
 };

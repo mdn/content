@@ -169,7 +169,7 @@ As soon as the device has network connectivity, the `sync` event fires in the se
 // service-worker.js
 
 self.addEventListener("sync", (event) => {
-  if (event.tag == "send-message") {
+  if (event.tag === "send-message") {
     event.waitUntil(sendMessage());
   }
 });
