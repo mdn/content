@@ -11,7 +11,7 @@ The **`Atomics.waitAsync()`** static method verifies that a shared memory locati
 
 `Atomics.waitAsync()` and {{jsxref("Atomics.notify()")}} are used together to enable thread synchronization based on a value in shared memory. A thread can proceed immediately if the synchronization value has changed, or it can wait for notification from another thread when it reaches the synchronization point.
 
-This method only works with an {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} that views a {{jsxref("SharedArrayBuffer")}}. It is non-blocking and, unlike {{jsxref("Atomics.wait()")}}, can be used on the main thread.
+This method only works with an {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} that views a {{jsxref("SharedArrayBuffer")}}. It is non-blocking and, unlike {{jsxref("Atomics.wait()")}}, can be used on the main thread. Because it does not block the whole thread, you still need to be careful not to access the shared memory before the promise settles.
 
 ## Syntax
 
