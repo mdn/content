@@ -12,8 +12,7 @@ Otherwise the method returns a {{jsxref("Promise")}} that fulfills with either `
 
 `waitAsync` is non-blocking and, unlike {{jsxref("Atomics.wait()")}}, can be used on the main thread.
 
-> [!NOTE]
-> This operation only works with an {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} that views a {{jsxref("SharedArrayBuffer")}}.
+This operation only works with an {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} that views a {{jsxref("SharedArrayBuffer")}}.
 
 ## Syntax
 

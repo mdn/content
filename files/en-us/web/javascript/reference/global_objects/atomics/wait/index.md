@@ -11,10 +11,9 @@ The **`Atomics.wait()`** static method verifies that a shared memory location co
 It returns a string which is `"not-equal"` if the memory location does not match the given value, `"ok"` if woken by {{jsxref("Atomics.notify()")}}, or `"timed-out"` if the timeout expires.
 
 This operation only works with an {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} that views a {{jsxref("SharedArrayBuffer")}}.
-The method is blocking and cannot be used in the main thread.
 
-> [!NOTE]
-> For a non-blocking, asynchronous version of this method, see {{jsxref("Atomics.waitAsync()")}}.
+The method is blocking and cannot be used in the main thread.
+For a non-blocking, asynchronous version of this method, see {{jsxref("Atomics.waitAsync()")}}.
 
 ## Syntax
 
