@@ -31,40 +31,43 @@ The sample code below from [Video / Media Session Sample](https://googlechrome.g
 ```js
 const BASE_URL = "https://storage.googleapis.com/media-session/";
 
-chapterInfo: [
-  {
-    title: "Chapter 1",
-    startTime: 0,
-    artwork: [
-      {
-        src: BASE_URL + "sintel/chapter1-128.png",
-        sizes: "128x128",
-        type: "image/png",
-      },
-      {
-        src: BASE_URL + "sintel/chapter1-512.png",
-        sizes: "512x512",
-        type: "image/png",
-      },
-    ],
-  },
-  {
-    title: "Chapter 2",
-    startTime: 37,
-    artwork: [
-      {
-        src: BASE_URL + "sintel/chapter2-128.png",
-        sizes: "128x128",
-        type: "image/png",
-      },
-      {
-        src: BASE_URL + "sintel/chapter2-512.png",
-        sizes: "512x512",
-        type: "image/png",
-      },
-    ],
-  },
-];
+const metadata = {
+  // …
+  chapterInfo: [
+    {
+      title: "Chapter 1",
+      startTime: 0,
+      artwork: [
+        {
+          src: BASE_URL + "sintel/chapter1-128.png",
+          sizes: "128x128",
+          type: "image/png",
+        },
+        {
+          src: BASE_URL + "sintel/chapter1-512.png",
+          sizes: "512x512",
+          type: "image/png",
+        },
+      ],
+    },
+    {
+      title: "Chapter 2",
+      startTime: 37,
+      artwork: [
+        {
+          src: BASE_URL + "sintel/chapter2-128.png",
+          sizes: "128x128",
+          type: "image/png",
+        },
+        {
+          src: BASE_URL + "sintel/chapter2-512.png",
+          sizes: "512x512",
+          type: "image/png",
+        },
+      ],
+    },
+  ],
+};
 ```
 
 The following snippet shows how it can be used inside Media Session code (the above object property is part of the `playlist` object referenced below):

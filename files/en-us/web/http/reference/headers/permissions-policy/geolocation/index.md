@@ -1,5 +1,6 @@
 ---
-title: "Permissions-Policy: geolocation"
+title: "Permissions-Policy: geolocation directive"
+short-title: geolocation
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/geolocation
 page-type: http-permissions-policy-directive
 status:

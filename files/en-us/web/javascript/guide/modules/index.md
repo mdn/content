@@ -150,8 +150,8 @@ reportPerimeter(square1.length, reportList);
 Above we saw how a browser can import a module using a module specifier that is either an absolute URL, or a relative URL that is resolved using the base URL of the document:
 
 ```js
-import { name as squareName, draw } from "./shapes/square.js";
 import { name as circleName } from "https://example.com/shapes/circle.js";
+import { name as squareName, draw } from "./shapes/square.js";
 ```
 
 [Import maps](/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap) allow developers to instead specify almost any text they want in the module specifier when importing a module; the map provides a corresponding value that will replace the text when the module URL is resolved.
@@ -493,18 +493,18 @@ Inside your `import` and `export` statement's curly braces, you can use the keyw
 So for example, both of the following would do the same job, albeit in a slightly different way:
 
 ```js
-// inside module.js
+// -- module.js --
 export { function1 as newFunctionName, function2 as anotherNewFunctionName };
 
-// inside main.js
+// -- main.js --
 import { newFunctionName, anotherNewFunctionName } from "./modules/module.js";
 ```
 
 ```js
-// inside module.js
+// -- module.js --
 export { function1, function2 };
 
-// inside main.js
+// -- main.js --
 import {
   function1 as newFunctionName,
   function2 as anotherNewFunctionName,

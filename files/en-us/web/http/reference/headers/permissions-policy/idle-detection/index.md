@@ -1,5 +1,6 @@
 ---
-title: "Permissions-Policy: idle-detection"
+title: "Permissions-Policy: idle-detection directive"
+short-title: idle-detection
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/idle-detection
 page-type: http-permissions-policy-directive
 status:

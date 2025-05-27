@@ -1,5 +1,5 @@
 ---
-title: Content-Security-Policy (CSP)
+title: Content-Security-Policy (CSP) header
 short-title: Content-Security-Policy
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy
 page-type: http-header

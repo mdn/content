@@ -354,28 +354,32 @@ You can tell Svelte to ignore this warning for the next block of markup with a [
 If you want to globally disable this warning, you can add this `onwarn` handler to your `rollup.config.js` file inside the configuration for the `Svelte` plugin, like this:
 
 ```js
-plugins: [
-  svelte({
-    dev: !production,
-    css: (css) => {
-      css.write("public/build/bundle.css");
-    },
-    // Warnings are normally passed straight to Rollup. You can
-    // optionally handle them here, for example to squelch
-    // warnings with a particular code
-    onwarn: (warning, handler) => {
-      // e.g. I don't care about screen readers -> please DON'T DO THIS!!!
-      if (warning.code === "a11y-missing-attribute") {
-        return;
-      }
-
-      // let Rollup handle all other warnings normally
-      handler(warning);
-    },
-  }),
-
+export default {
   // …
-];
+  plugins: [
+    svelte({
+      dev: !production,
+      css: (css) => {
+        css.write("public/build/bundle.css");
+      },
+      // Warnings are normally passed straight to Rollup. You can
+      // optionally handle them here, for example to squelch
+      // warnings with a particular code
+      onwarn: (warning, handler) => {
+        // e.g. I don't care about screen readers -> please DON'T DO THIS!!!
+        if (warning.code === "a11y-missing-attribute") {
+          return;
+        }
+
+        // let Rollup handle all other warnings normally
+        handler(warning);
+      },
+    }),
+
+    // …
+  ],
+  // …
+};
 ```
 
 By design, these warnings are implemented in the compiler itself, and not as a plug-in that you may choose to add to your project. The idea is to check for a11y issues in your markup by default and let you opt out of specific warnings.

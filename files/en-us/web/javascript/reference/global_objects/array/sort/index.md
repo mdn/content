@@ -223,9 +223,7 @@ temporary array to achieve the right order.
 const data = ["delta", "alpha", "charlie", "bravo"];
 
 // temporary array holds objects with position and sort-value
-const mapped = data.map((v, i) => {
-  return { i, value: someSlowOperation(v) };
-});
+const mapped = data.map((v, i) => ({ i, value: someSlowOperation(v) }));
 
 // sorting the mapped array containing the reduced values
 mapped.sort((a, b) => {

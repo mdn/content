@@ -580,7 +580,6 @@ openReq.onupgradeneeded = (event) => {
 openReq.onsuccess = (event) => {
   const db = event.target.result;
   useDatabase(db);
-  return;
 };
 
 function useDatabase(db) {
