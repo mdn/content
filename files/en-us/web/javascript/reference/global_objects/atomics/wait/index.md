@@ -7,14 +7,11 @@ browser-compat: javascript.builtins.Atomics.wait
 
 {{JSRef}}
 
-The **`Atomics.wait()`** static
-method verifies that a shared memory location still contains a
-given value and if so sleeps, awaiting a wake-up notification or times out. It returns a string which
-is either `"ok"`, `"not-equal"`, or `"timed-out"`.
+The **`Atomics.wait()`** static method verifies that a shared memory location contains a given value and if so sleeps, awaiting a wake-up notification or a time out. It returns a string which is `"not-equal"` if the memory location does not match the given value, `"ok"` if woken by {{jsxref("Atomics.notify()")}}, or `"timed-out"` if the timeout expires.
 
-> [!NOTE]
-> This operation only works with an {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} that views a {{jsxref("SharedArrayBuffer")}}, and may not be allowed on the main thread.
-> For a non-blocking, asynchronous version of this method, see {{jsxref("Atomics.waitAsync()")}}.
+`Atomics.wait()` and {{jsxref("Atomics.notify()")}} are used together to enable thread synchronization based on a value in shared memory. A thread can proceed immediately if the synchronization value has changed, or it can wait for notification from another thread when it reaches the synchronization point.
+
+This method only works with an {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} that views a {{jsxref("SharedArrayBuffer")}}. It is blocking and cannot be used in the main thread. For a non-blocking, asynchronous version of this method, see {{jsxref("Atomics.waitAsync()")}}.
 
 ## Syntax
 
@@ -36,11 +33,11 @@ Atomics.wait(typedArray, index, value, timeout)
 
 ### Return value
 
-A string which is either `"ok"`, `"not-equal"`, or `"timed-out"`.
+A string which is either `"not-equal"`, `"ok"`, or `"timed-out"`.
 
-- `"ok"` is returned if woken up by a call to `Atomics.notify()`, **regardless of if the expected value has changed**
-- `"not-equal"` is returned immediately if the initial `value` does not equal what is stored at `index`
-- `"timed-out"` is returned if a sleeping wait exceeds the specified `timeout` without being woken up by `Atomics.notify()`
+- `"not-equal"` is returned immediately if the initial `value` does not equal what is stored at `index`.
+- `"ok"` is returned if woken up by a call to `Atomics.notify()`, **regardless of whether the expected value has changed**.
+- `"timed-out"` is returned if a sleeping wait exceeds the specified `timeout` without being woken up by `Atomics.notify()`.
 
 ### Exceptions
 
