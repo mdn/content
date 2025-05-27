@@ -53,7 +53,7 @@ a {
 ```
 
 We add JavaScript to grab our link and return back a definition list of all the CSS
-property values using `computedStyleMap().`
+property values using `computedStyleMap()`.
 
 ```js
 // get the element
