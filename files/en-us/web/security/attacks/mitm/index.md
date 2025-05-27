@@ -33,7 +33,7 @@ If it's not possible for you to update your code to load resources from HTTPS UR
 
 ### Upgrading HTTP requests
 
-Even if your site is served over HTTPS, users may still request it over HTTP: for example, by typing `http://example.org` into the address bar. To enable your site to work in cases like this, you can listen for HTTP requests and use a [301 Moved Permanently](/en-US/docs/Web/HTTP/Reference/Status/301) response to redirect to the HTTPS version.
+Even if your site is only served over HTTPS, users may still request it over HTTP: for example, by typing `http://example.org` into the address bar. To enable your site to work in cases like this, you can listen for HTTP requests and use a [301 Moved Permanently](/en-US/docs/Web/HTTP/Reference/Status/301) response to redirect to the HTTPS version.
 
 However, this gives attackers the opportunity to intercept the initial exchange, and then prevent the upgrade to HTTPS from happening. This is sometimes called an _SSL stripping_ attack ({{glossary("SSL")}} is the precursor to TLS).
 
