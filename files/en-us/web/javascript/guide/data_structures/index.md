@@ -81,12 +81,12 @@ The {{jsxref("Number")}} type is a [double-precision 64-bit binary format IEEE 7
 
 Values outside the representable range are automatically converted:
 
-- Positive values greater than {{jsxref("Number.MAX_VALUE")}} are converted to `+Infinity`.
-- Positive values smaller than {{jsxref("Number.MIN_VALUE")}} are converted to `+0`.
+- Positive values greater than {{jsxref("Number.MAX_VALUE")}} are converted to `Infinity`.
+- Positive values smaller than {{jsxref("Number.MIN_VALUE")}} are converted to `0`.
 - Negative values smaller than -{{jsxref("Number.MAX_VALUE")}} are converted to `-Infinity`.
 - Negative values greater than -{{jsxref("Number.MIN_VALUE")}} are converted to `-0`.
 
-`+Infinity` and `-Infinity` behave similarly to mathematical infinity, but with some slight differences; see {{jsxref("Number.POSITIVE_INFINITY")}} and {{jsxref("Number.NEGATIVE_INFINITY")}} for details.
+`Infinity` and `-Infinity` behave similarly to mathematical infinity, but with some slight differences; see {{jsxref("Number.POSITIVE_INFINITY")}} and {{jsxref("Number.NEGATIVE_INFINITY")}} for details.
 
 The Number type has only one value with multiple representations: `0` is represented as both `-0` and `+0` (where `0` is an alias for `+0`). In practice, there is almost no difference between the different representations; for example, `+0 === -0` is `true`. However, you are able to notice this when you divide by zero:
 
