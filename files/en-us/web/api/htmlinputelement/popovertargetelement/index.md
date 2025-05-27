@@ -25,7 +25,7 @@ A reference to a popover element in the DOM.
 
 ```js
 function supportsPopover() {
-  return HTMLElement.prototype.hasOwnProperty("popover");
+  return Object.hasOwn(HTMLElement.prototype, "popover");
 }
 
 const popover = document.getElementById("mypopover");
@@ -64,7 +64,7 @@ const toggleBtn = document.getElementById("toggleBtn");
 
 // Check for popover API support.
 function supportsPopover() {
-  return HTMLElement.prototype.hasOwnProperty("popover");
+  return Object.hasOwn(HTMLElement.prototype, "popover");
 }
 ```
 
