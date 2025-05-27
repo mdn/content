@@ -213,7 +213,6 @@ References to elements we'll need access to are obtained:
 - `volumeControl` is the {{HTMLElement("input")}} element (of type `"range"`) used to control the main audio volume.
 
 ```js
-let noteFreq = null;
 let customWaveform = null;
 let sineTerms = null;
 let cosineTerms = null;
@@ -221,7 +220,6 @@ let cosineTerms = null;
 
 Finally, global variables that will be used when constructing waveforms are created:
 
-- `noteFreq` will be an array of arrays; each array represents one octave, each of which contains one entry for each note in that octave. The value for each is the frequency, in Hertz, of the note's tone.
 - `customWaveform` will be set up as a {{domxref("PeriodicWave")}} describing the waveform to use when the user selects "Custom" from the waveform picker.
 - `sineTerms` and `cosineTerms` will be used to store the data for generating the waveform; each will contain an array that's generated when the user chooses "Custom".
 
@@ -259,6 +257,7 @@ function createNoteTable() {
     );
   }
   noteFreq.push({ C: 4186.009044809578 });
+  return noteFreq;
 }
 ```
 
@@ -322,7 +321,7 @@ The `setup()` function is responsible for building the keyboard and preparing th
 
 ```js
 function setup() {
-  noteFreq = createNoteTable();
+  const noteFreq = createNoteTable();
 
   volumeControl.addEventListener("change", changeVolume, false);
 
@@ -494,8 +493,9 @@ This sets the value of the main gain node's `gain` {{domxref("AudioParam")}} to 
 
 The code below adds [`keydown`](/en-US/docs/Web/API/Element/keydown_event) and [`keyup`](/en-US/docs/Web/API/Element/keyup_event) event listeners to handle keyboard input. The `keydown` event handler calls `notePressed()` to start playing the note corresponding to the key that was pressed, and the `keyup` event handler calls `noteReleased()` to stop playing the note corresponding to the key that was released.
 
-```js-nolint
+```js
 const synthKeys = document.querySelectorAll(".key");
+// prettier-ignore
 const keyCodes = [
   "Space",
   "ShiftLeft", "KeyZ", "KeyX", "KeyC", "KeyV", "KeyB", "KeyN", "KeyM", "Comma", "Period", "Slash", "ShiftRight",
