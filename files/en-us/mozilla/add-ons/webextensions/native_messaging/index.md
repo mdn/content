@@ -246,19 +246,27 @@ import fs from "node:fs/promises";
 
 let readPromise = null; // Prevents reading until an in-progress read has finished.
 
+// This function cannot be called multiple times in parallel because they
+// share access to /dev/stdin. We use a lock `readPromise` to prevent this.
 async function getMessage() {
-  while (readPromise) await readPromise; // await in-progress read promise
+  while (readPromise) await readPromise;
   let resolveReadPromise;
-  readPromise = new Promise((resolve) => (resolveReadPromise = resolve)); // create in-progress read promise
-  const input = await fs.open("/dev/stdin");
-  const header = new Uint32Array(1);
-  await input.read(header);
-  const message = new Uint8Array(header[0]);
-  await input.read(message);
-  await input.close();
-  resolveReadPromise(); // resolve in-progress read promise
-  readPromise = null; // allow the next getMessage call to proceed
-  return message;
+  readPromise = new Promise((resolve) => {
+    resolveReadPromise = resolve;
+  });
+  try {
+    const input = await fs.open("/dev/stdin");
+    const header = new Uint32Array(1);
+    await input.read(header);
+    const message = new Uint8Array(header[0]);
+    await input.read(message);
+    await input.close();
+    return message;
+  } finally {
+    // Release lock and allow the next `getMessage()` call to proceed
+    resolveReadPromise();
+    readPromise = null;
+  }
 }
 
 async function sendMessage(message) {
