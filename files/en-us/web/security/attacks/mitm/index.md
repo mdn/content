@@ -39,7 +39,7 @@ However, this gives attackers the opportunity to intercept the initial exchange,
 
 To reduce the risk of this attack, your server should also send the {{httpheader("Strict-Transport-Security")}} HTTP response header (also known as HSTS): this informs clients that you wish them to use HTTPS, and will cause the browser to connect using HTTPS directly for any subsequent visits, even those made using HTTP URLs.
 
-That reduces the window of exposure for SSL stripping to the first time the browser tries to connect to your site (or, since HSTS has an expiry, the first time after an HSTS record in the browser has expired). To close this window as well, Chrome maintains a list of domains called the [HSTS preload list](https://hstspreload.org/): if a domain is on this list, then Chrome will always upgrade HTTP request to HTTPS, effectively behaving as if the server has already sent the HSTS header. Safari and Firefox have similar behavior, using a list that is derived from the Chrome list.
+With HSTS, SSL stripping is prevented except for the first time the browser tries to connect to your site (or, since HSTS has an expiry, the first time after an HSTS record in the browser has expired). To protect your site even on first connection or HSTS record expiry, Chrome maintains a list of domains called the [HSTS preload list](https://hstspreload.org/): if a domain is on this list, then Chrome will always upgrade HTTP request to HTTPS, effectively behaving as if the server has already sent the HSTS header. Safari and Firefox have similar behavior, using a list that is derived from the Chrome list.
 
 ### Defense summary checklist
 
