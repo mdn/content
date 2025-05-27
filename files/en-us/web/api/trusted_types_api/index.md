@@ -95,7 +95,7 @@ If you create a policy named `"default"`, and your CSP enforces the use of trust
 
 ```js
 trustedTypes.createPolicy("default", {
-  createHTML: (value) => {
+  createHTML(value) {
     console.log("Please refactor this code");
     return sanitize(value);
   },
@@ -117,7 +117,7 @@ If the default policy returned `null` or `undefined`, then the browser will thro
 
 ```js
 trustedTypes.createPolicy("default", {
-  createHTML: (value) => {
+  createHTML(value) {
     console.log("Please refactor this code");
     return null;
   },
