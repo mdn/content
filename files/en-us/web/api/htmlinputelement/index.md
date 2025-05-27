@@ -280,7 +280,7 @@ Listen to these events using {{domxref("EventTarget.addEventListener", "addEvent
 - {{domxref("HTMLInputElement/select_event", "select")}} event
   - : Fired when some text has been selected.
 - {{domxref("HTMLInputElement/selectionchange_event", "selectionchange")}} event
-  - : Fires when the text selection in a {{HTMLElement("input")}} element has been changed.
+  - : Fires when the text selection in an {{HTMLElement("input")}} element has been changed.
 
 ## Specifications
 

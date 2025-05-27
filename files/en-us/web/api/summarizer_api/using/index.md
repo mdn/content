@@ -292,9 +292,8 @@ async function handleSubmission(e) {
   } else if (formData.get("summaryText").length < 100) {
     summaryOutput.innerHTML = `<span class="error">I'm not trying to summarize something that short!</span>`;
     return;
-  } else {
-    summaryOutput.innerHTML = "";
   }
+  summaryOutput.innerHTML = "";
 
   try {
     const summarizer = await Summarizer.create({

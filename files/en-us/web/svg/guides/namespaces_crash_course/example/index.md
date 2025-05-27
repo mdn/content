@@ -87,13 +87,12 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
 
   <script>
   <![CDATA[
-
     // Array of motes
     let motes;
 
     // Get the display element.
     function Display() {
-      return document.getElementById('display');
+      return document.getElementById("display");
     }
 
     // Determine dimensions of the display element.
@@ -101,8 +100,8 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
     function Dimensions() {
       // Our Rendering Element
       const display = Display();
-      const width = parseInt(display.getAttributeNS(null, 'width'));
-      const height = parseInt(display.getAttributeNS(null, 'height'));
+      const width = parseInt(display.getAttributeNS(null, "width"), 10);
+      const height = parseInt(display.getAttributeNS(null, "height"), 10);
 
       return [width, height];
     }
@@ -114,9 +113,9 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
       mouse_x = evt.clientX;
       mouse_y = evt.clientY;
 
-      const widget = document.getElementById('cursor');
-      widget.setAttributeNS(null,'cx',mouse_x);
-      widget.setAttributeNS(null,'cy',mouse_y);
+      const widget = document.getElementById("cursor");
+      widget.setAttributeNS(null, "cx", mouse_x);
+      widget.setAttributeNS(null, "cy", mouse_y);
     }
     document.onmousemove = OnMouseMove;
 
@@ -142,8 +141,7 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
     }
 
     // A nicer, integer random
-    function Rand(modulo)
-    {
+    function Rand(modulo) {
       return Math.round(Math.random() * (modulo - 1));
     }
 
@@ -184,12 +182,12 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
       } else if (pos[1] < this.y) {
         this.vy -= mag;
       }
-    }
+    };
 
     // Mote::capVelocity() — Apply an upper limit
     // on mote velocity.
     Mote.prototype.capVelocity = function () {
-      const max = parseInt(document.getElementById('max_velocity').value);
+      const max = parseInt(document.getElementById("max_velocity").value, 10);
 
       if (max < this.vx) {
         this.vx = max;
@@ -202,7 +200,7 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
       } else if (-max > this.vy) {
         this.vy = -max;
       }
-    }
+    };
 
     // Mote::capPosition() — Apply an upper/lower limit
     // on mote position.
@@ -219,17 +217,17 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
       } else if (this.y >= dims[1]) {
         this.y = dims[1] - 1;
       }
-    }
+    };
 
     // Mote::move() — move a mote, update the screen.
     Mote.prototype.move = function () {
       // Apply attraction to cursor.
-      const attract = parseInt(document.getElementById('attract_cursor').value);
+      const attract = parseInt(document.getElementById("attract_cursor").value, 10);
       const cursor = Cursor();
       this.applyForce(cursor, attract);
 
       // Apply repulsion from average mote position.
-      const repel = parseInt(document.getElementById('repel_peer').value);
+      const repel = parseInt(document.getElementById("repel_peer").value, 10);
       const average = AverageMotePosition();
       this.applyForce(average, -repel);
 
@@ -249,20 +247,20 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
 
       // Draw it.
       if (this.elt === null) {
-        const svg = 'http://www.w3.org/2000/svg';
-        this.elt = document.createElementNS(svg, 'line');
-        this.elt.setAttributeNS(null, 'stroke', 'green');
-        this.elt.setAttributeNS(null, 'stroke-width', '3');
-        this.elt.setAttributeNS(null, 'stroke-opacity', '0.5');
+        const svg = "http://www.w3.org/2000/svg";
+        this.elt = document.createElementNS(svg, "line");
+        this.elt.setAttributeNS(null, "stroke", "green");
+        this.elt.setAttributeNS(null, "stroke-width", "3");
+        this.elt.setAttributeNS(null, "stroke-opacity", "0.5");
         Display().appendChild(this.elt);
       }
 
-      this.elt.setAttributeNS(null, 'x1', old_x);
-      this.elt.setAttributeNS(null, 'y1', old_y);
+      this.elt.setAttributeNS(null, "x1", old_x);
+      this.elt.setAttributeNS(null, "y1", old_y);
 
-      this.elt.setAttributeNS(null, 'x2', this.x);
-      this.elt.setAttributeNS(null, 'y2', this.y);
-    }
+      this.elt.setAttributeNS(null, "x2", this.x);
+      this.elt.setAttributeNS(null, "y2", this.y);
+    };
 
     function update() {
       // First call?
@@ -271,8 +269,8 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
       }
 
       // How many motes should there be?
-      let num = parseInt( document.getElementById('num_motes').value );
-      if ( num < 0 ) {
+      let num = parseInt(document.getElementById("num_motes").value, 10);
+      if (num < 0) {
         num = 0;
       }
 
@@ -295,7 +293,7 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
       }
 
       // And do this again in 1/100 sec
-      setTimeout('update()', 10);
+      setTimeout(() => update(), 10);
     }
   ]]>
   </script>

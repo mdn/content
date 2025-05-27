@@ -587,30 +587,28 @@ Demo: [Device pixel presnap](https://kdashg.github.io/misc/webgl/device-pixel-pr
 
 ## ResizeObserver and 'device-pixel-content-box'
 
-On supporting browsers (Chromium?), `ResizeObserver` can be used with `'device-pixel-content-box'` to request a callback that includes the true {{glossary("device pixel")}} size of an element. This can be used to build an async-but-accurate function:
+On [supporting browsers](/en-US/docs/Web/API/ResizeObserverEntry/devicePixelContentBoxSize#browser_compatibility), `ResizeObserver` can be used with `'device-pixel-content-box'` to request a callback that includes the true {{glossary("device pixel")}} size of an element. This can be used to build an async-but-accurate function:
 
 ```js
-window.getDevicePixelSize =
-  window.getDevicePixelSize ||
-  (async (elem) => {
-    await new Promise((resolve) => {
-      const observer = new ResizeObserver(([cur]) => {
-        if (!cur) {
-          throw new Error(
-            `device-pixel-content-box not observed for elem ${elem}`,
-          );
-        }
-        const devSize = cur.devicePixelContentBoxSize;
-        const ret = {
-          width: devSize[0].inlineSize,
-          height: devSize[0].blockSize,
-        };
-        resolve(ret);
-        observer.disconnect();
-      });
-      observer.observe(elem, { box: "device-pixel-content-box" });
+function getDevicePixelSize(elem) {
+  return new Promise((resolve) => {
+    const observer = new ResizeObserver(([cur]) => {
+      if (!cur) {
+        throw new Error(
+          `device-pixel-content-box not observed for elem ${elem}`,
+        );
+      }
+      const devSize = cur.devicePixelContentBoxSize;
+      const ret = {
+        width: devSize[0].inlineSize,
+        height: devSize[0].blockSize,
+      };
+      resolve(ret);
+      observer.disconnect();
     });
+    observer.observe(elem, { box: "device-pixel-content-box" });
   });
+}
 ```
 
 Please refer to [the specification](https://www.w3.org/TR/resize-observer/#resize-observer-interface) for more details.

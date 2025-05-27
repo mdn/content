@@ -1,5 +1,6 @@
 ---
-title: "Permissions-Policy: gamepad"
+title: "Permissions-Policy: gamepad directive"
+short-title: gamepad
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/gamepad
 page-type: http-permissions-policy-directive
 status:

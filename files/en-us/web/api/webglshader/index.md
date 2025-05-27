@@ -24,7 +24,7 @@ function createShader(gl, sourceCode, type) {
 
   if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
     const info = gl.getShaderInfoLog(shader);
-    throw `Could not compile WebGL program. \n\n${info}`;
+    throw new Error(`Could not compile WebGL program. \n\n${info}`);
   }
   return shader;
 }

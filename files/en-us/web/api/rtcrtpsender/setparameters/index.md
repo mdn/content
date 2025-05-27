@@ -190,11 +190,7 @@ async function setVideoParams(sender, height, bitrate) {
   const params = sender.getParameters();
 
   // If encodings is null, create it
-
-  if (!params.encodings) {
-    params.encodings = [{}];
-  }
-
+  params.encodings ??= [{}];
   params.encodings[0].scaleResolutionDownBy = Math.max(scaleRatio, 1);
   params.encodings[0].maxBitrate = bitrate;
   await sender.setParameters(params);

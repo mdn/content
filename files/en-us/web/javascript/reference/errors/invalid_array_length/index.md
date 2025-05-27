@@ -50,10 +50,10 @@ new ArrayBuffer(Math.pow(2, 32)); // 32-bit system
 new ArrayBuffer(-1);
 
 const a = [];
-a.length = a.length - 1; // set the length property to -1
+a.length -= 1; // set the length property to -1
 
 const b = new Array(Math.pow(2, 32) - 1);
-b.length = b.length + 1; // set the length property to 2^32
+b.length += 1; // set the length property to 2^32
 b.length = 2.5; // set the length property to a floating-point number
 
 const c = new Array(2.5); // pass a floating-point number

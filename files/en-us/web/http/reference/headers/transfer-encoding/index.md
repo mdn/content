@@ -1,5 +1,6 @@
 ---
-title: Transfer-Encoding
+title: Transfer-Encoding header
+short-title: Transfer-Encoding
 slug: Web/HTTP/Reference/Headers/Transfer-Encoding
 page-type: http-header
 browser-compat: http.headers.Transfer-Encoding

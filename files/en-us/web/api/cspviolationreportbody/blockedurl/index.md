@@ -126,10 +126,8 @@ The policy also uses the `trusted-types` directive to specify that a {{domxref("
 
   <script>
     const policy = trustedTypes.createPolicy("somePolicy", {
-      createHTML: (string) => {
-        // Some (insufficient) sanitization code
-        return string.replace(/</g, "&lt;");
-      },
+      // Some (insufficient) sanitization code
+      createHTML: (string) => string.replace(/</g, "&lt;"),
     });
   </script>
 </html>
@@ -193,10 +191,8 @@ In order to avoid the violation we would need to update the script to define a t
 
 ```js
 const policy = trustedTypes.createPolicy("myPolicy", {
-  createHTML: (string) => {
-    // Some (insufficient) sanitization code
-    return string.replace(/</g, "&lt;");
-  },
+  // Some (insufficient) sanitization code
+  createHTML: (string) => string.replace(/</g, "&lt;"),
 });
 
 function updateContent() {

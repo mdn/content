@@ -1,5 +1,6 @@
 ---
-title: Trailer
+title: Trailer header
+short-title: Trailer
 slug: Web/HTTP/Reference/Headers/Trailer
 page-type: http-header
 browser-compat: http.headers.Trailer

@@ -1,5 +1,6 @@
 ---
-title: Content-Encoding
+title: Content-Encoding header
+short-title: Content-Encoding
 slug: Web/HTTP/Reference/Headers/Content-Encoding
 page-type: http-header
 browser-compat: http.headers.Content-Encoding

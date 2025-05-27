@@ -1,5 +1,6 @@
 ---
-title: Service-Worker-Allowed
+title: Service-Worker-Allowed header
+short-title: Service-Worker-Allowed
 slug: Web/HTTP/Reference/Headers/Service-Worker-Allowed
 page-type: http-header
 browser-compat: http.headers.Service-Worker-Allowed

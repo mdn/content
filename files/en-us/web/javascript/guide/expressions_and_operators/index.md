@@ -925,7 +925,7 @@ The parentheses are optional.
 Suppose you define the following variables:
 
 ```js
-const myFun = new Function("5 + 2");
+const myFun = () => 5 + 2;
 const shape = "round";
 const size = 1;
 const foo = ["Apple", "Mango", "Orange"];

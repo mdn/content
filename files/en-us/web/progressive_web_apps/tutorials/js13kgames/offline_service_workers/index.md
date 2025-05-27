@@ -190,16 +190,16 @@ Remember the `activate` event we skipped? It can be used to clear out the old ca
 ```js
 self.addEventListener("activate", (e) => {
   e.waitUntil(
-    caches.keys().then((keyList) => {
-      return Promise.all(
+    caches.keys().then((keyList) =>
+      Promise.all(
         keyList.map((key) => {
           if (key === cacheName) {
             return undefined;
           }
           return caches.delete(key);
         }),
-      );
-    }),
+      ),
+    ),
   );
 });
 ```

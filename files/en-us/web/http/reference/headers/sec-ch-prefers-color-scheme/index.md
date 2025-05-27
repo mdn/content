@@ -1,5 +1,6 @@
 ---
-title: Sec-CH-Prefers-Color-Scheme
+title: Sec-CH-Prefers-Color-Scheme header
+short-title: Sec-CH-Prefers-Color-Scheme
 slug: Web/HTTP/Reference/Headers/Sec-CH-Prefers-Color-Scheme
 page-type: http-header
 status:

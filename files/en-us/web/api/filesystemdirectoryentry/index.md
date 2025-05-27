@@ -42,7 +42,7 @@ function onFs(fs) {
 }
 
 // Opening a file system with temporary storage
-window.requestFileSystem(TEMPORARY, 1024 * 1024 /*1MB*/, onFs, onError);
+window.requestFileSystem(TEMPORARY, 1024 * 1024 /* 1MB */, onFs, onError);
 ```
 
 ## Instance properties

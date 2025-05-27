@@ -1,5 +1,6 @@
 ---
-title: Service-Worker
+title: Service-Worker header
+short-title: Service-Worker
 slug: Web/HTTP/Reference/Headers/Service-Worker
 page-type: http-header
 browser-compat: http.headers.Service-Worker

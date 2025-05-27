@@ -1,5 +1,6 @@
 ---
-title: Width
+title: Width header
+short-title: Width
 slug: Web/HTTP/Reference/Headers/Width
 page-type: http-header
 status:

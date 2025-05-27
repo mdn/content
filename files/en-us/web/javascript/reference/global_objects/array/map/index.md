@@ -198,9 +198,10 @@ products.forEach((product) => {
 Or, if you want to create a new array instead:
 
 ```js
-const productsWithPrice = products.map((product) => {
-  return { ...product, price: 100 };
-});
+const productsWithPrice = products.map((product) => ({
+  ...product,
+  price: 100,
+}));
 ```
 
 ### Using the third argument of callbackFn
