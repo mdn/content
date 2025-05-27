@@ -57,6 +57,10 @@ Clear-Site-Data: "*"
 
   - : The server signals that the client should remove all cookies for the origin of the response URL. HTTP authentication credentials are also cleared out. This affects the entire registered domain, including subdomains. So `https://example.com` as well as `https://stage.example.com`, will have cookies cleared.
 
+- `"executionContexts"` {{Experimental_Inline}}
+
+  - : The server signals that the client should reload all browsing contexts for the origin of the response ({{domxref("Location.reload")}}).
+
 - `"prefetchCache"`
 
   - : Used to clear {{domxref("Speculation Rules API", "speculation rules", "", "nocode")}} prefetches that are scoped to the referrer origin.
