@@ -270,7 +270,7 @@ footer {
 }
 
 nav {
-  background-color: ff80ff;
+  background-color: #ff80ff;
   display: flex;
   gap: 2vw;
   @media (width <= 650px) {
@@ -523,7 +523,7 @@ footer {
 }
 
 nav {
-  background-color: ff80ff;
+  background-color: #ff80ff;
   display: flex;
   gap: 2vw;
   @media (width <= 650px) {
