@@ -141,7 +141,7 @@ First, try tabbing through the links with `reading-flow: normal` set. The tabbin
 Now try changing the `reading-flow` value and tabbing through the links again:
 
 - A value of `flex-visual` causes the items to be tabbed through in the order "Item 1", "Item 3", then "Item 2", which is the visual display order resulting from the applied flexbox properties.
-- A value of `flex-flow` causes the items to be tabbed through in the order "Item 2", "Item 3", then "Item 1", which is the direction of the flex flow in this `row-reverse` case, where the tabbing order is the reverse of the display order.
+- A value of `flex-flow` causes the items to be tabbed through in the order "Item 2", "Item 3", then "Item 1", which matches the direction of the `flex-flow` — in this case, `row-reverse`. Here, the tabbing order is the reverse of the display order.
 
 ### Grid value comparison
 
