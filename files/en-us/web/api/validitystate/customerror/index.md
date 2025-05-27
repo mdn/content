@@ -86,7 +86,7 @@ const validateInput = () => {
   userInput.reportValidity();
   if (userInput.validity.customError) {
     // We can handle custom validity states here
-    log("Custom validity error: " + userInput.validationMessage);
+    log(`Custom validity error: ${userInput.validationMessage}`);
   } else {
     log(userInput.validationMessage);
   }

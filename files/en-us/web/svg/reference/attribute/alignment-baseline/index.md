@@ -122,7 +122,7 @@ SVG 2 introduces some changes to the definition of this property. In particular:
 
   <style>
     <![CDATA[
-      text{
+      text {
         font: bold 36px Verdana, Helvetica, Arial, sans-serif;
       }
     ]]>

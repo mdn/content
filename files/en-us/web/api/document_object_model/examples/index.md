@@ -89,7 +89,7 @@ The following example shows the use of the `height` and `width` properties along
 
     <script>
       function setBorderWidth(width) {
-        document.getElementById("img1").style.borderWidth = width + "px";
+        document.getElementById("img1").style.borderWidth = `${width}px`;
       }
     </script>
   </head>
@@ -404,7 +404,7 @@ To add a row and some cells to an existing table:
 
   for (let i = 0; i < 2; i++) {
     cell = row.insertCell(-1);
-    text = "Row " + row.rowIndex + " Cell " + i;
+    text = `Row ${row.rowIndex} Cell ${i}`;
     cell.appendChild(document.createTextNode(text));
   }
 </script>

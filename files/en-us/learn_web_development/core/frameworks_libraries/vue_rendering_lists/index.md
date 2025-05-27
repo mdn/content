@@ -88,7 +88,7 @@ To make sure that Vue can accurately compare the `key` attributes, they need to 
    import { nanoid } from "nanoid";
    ```
 
-2. Next, add an `id` field to each element in your `ToDoItems` array, and assign each of them a value of `"todo-" + nanoid()`.
+2. Next, add an `id` field to each element in your `ToDoItems` array, and assign each of them a value of `` `todo-${nanoid()}` ``.
 
    The `<script>` element in `App.vue` should now have the following contents:
 
@@ -104,15 +104,15 @@ To make sure that Vue can accurately compare the `key` attributes, they need to 
      data() {
        return {
          ToDoItems: [
-           { id: "todo-" + nanoid(), label: "Learn Vue", done: false },
+           { id: `todo-${nanoid()}`, label: "Learn Vue", done: false },
            {
-             id: "todo-" + nanoid(),
+             id: `todo-${nanoid()}`,
              label: "Create a Vue project with the CLI",
              done: true,
            },
-           { id: "todo-" + nanoid(), label: "Have fun", done: true },
+           { id: `todo-${nanoid()}`, label: "Have fun", done: true },
            {
-             id: "todo-" + nanoid(),
+             id: `todo-${nanoid()}`,
              label: "Create a to-do list",
              done: false,
            },

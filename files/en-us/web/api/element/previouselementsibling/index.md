@@ -29,7 +29,7 @@ An {{domxref("Element")}} object, or `null`.
   let el = document.getElementById("div-03").previousElementSibling;
   document.write("<p>Siblings of div-03</p><ol>");
   while (el) {
-    document.write("<li>" + el.nodeName + "</li>");
+    document.write(`<li>"${el.nodeName}</li>`);
     el = el.previousElementSibling;
   }
   document.write("</ol>");

@@ -111,7 +111,7 @@ import("/my-module.js").then((mod2) => {
 This aggressive caching ensures that a piece of JavaScript code is never executed more than once, even if it is imported multiple times. Future imports don't even result in HTTP requests or disk access. If you do need to re-import and re-evaluate a module without restarting the entire JavaScript environment, one possible trick is to use a unique query parameter in the module specifier. This works in non-browser runtimes that support URL specifiers too.
 
 ```js
-import("/my-module.js?t=" + Date.now());
+import(`/my-module.js?t=${Date.now()}`);
 ```
 
 Note that this can lead to memory leaks in a long-running application, because the engine cannot safely garbage-collect any module namespace objects. Currently, there is no way to manually clear the cache of module namespace objects.

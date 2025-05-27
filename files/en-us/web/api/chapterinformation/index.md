@@ -39,12 +39,12 @@ const metadata = {
       startTime: 0,
       artwork: [
         {
-          src: BASE_URL + "sintel/chapter1-128.png",
+          src: `${BASE_URL}sintel/chapter1-128.png`,
           sizes: "128x128",
           type: "image/png",
         },
         {
-          src: BASE_URL + "sintel/chapter1-512.png",
+          src: `${BASE_URL}sintel/chapter1-512.png`,
           sizes: "512x512",
           type: "image/png",
         },
@@ -55,12 +55,12 @@ const metadata = {
       startTime: 37,
       artwork: [
         {
-          src: BASE_URL + "sintel/chapter2-128.png",
+          src: `${BASE_URL}sintel/chapter2-128.png`,
           sizes: "128x128",
           type: "image/png",
         },
         {
-          src: BASE_URL + "sintel/chapter2-512.png",
+          src: `${BASE_URL}sintel/chapter2-512.png`,
           sizes: "512x512",
           type: "image/png",
         },
@@ -76,7 +76,7 @@ The following snippet shows how it can be used inside Media Session code (the ab
 function updateMetadata() {
   const track = playlist[index];
 
-  log("Playing " + track.title + " track...");
+  log(`Playing ${track.title} track...`);
   navigator.mediaSession.metadata = new MediaMetadata({
     title: track.title,
     artist: track.artist,

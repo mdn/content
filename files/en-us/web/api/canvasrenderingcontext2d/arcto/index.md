@@ -809,7 +809,7 @@ can be used to change an underlined element that is in focus.
   /* Allow arrow key presses on the point labels to move the point in
    * x and y directions */
   function addPointArrowMove(indexPoint) {
-    const elem = document.getElementById("value-P" + indexPoint);
+    const elem = document.getElementById(`value-P${indexPoint}`);
     let indexTextInput = 2 * indexPoint + 1;
     elem.addEventListener("keydown", (evt) => {
       let valueNew;

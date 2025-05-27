@@ -169,14 +169,14 @@ const bar = {
   foo1() {
     return 1;
   },
-  ["foo" + 2]() {
+  ["foo".toUpperCase()]() {
     return 2;
   },
 };
 
 console.log(bar.foo0()); // 0
 console.log(bar.foo1()); // 1
-console.log(bar.foo2()); // 2
+console.log(bar.FOO()); // 2
 ```
 
 ### Generator methods
