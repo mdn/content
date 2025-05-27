@@ -31,11 +31,8 @@ It is an array-like object but can't be iterated over using {{jsxref("Array")}} 
 ### Get CSSStyleSheet objects with for loop
 
 ```js
-const styleSheet = [];
-const styleSheets = document.styleSheets;
-
-for (let i = 0; i < styleSheets.length; i++) {
-  styleSheet.push(styleSheets[i]);
+for (const styleSheet of document.styleSheets) {
+  console.log(styleSheet); // A CSSStyleSheet object
 }
 ```
 

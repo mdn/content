@@ -46,7 +46,7 @@ _In addition to the properties listed below, properties from the parent interfac
 You can use the `nomatch` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+const recognition = new (SpeechRecognition || webkitSpeechRecognition)();
 
 recognition.addEventListener("nomatch", () => {
   console.error("Speech not recognized");

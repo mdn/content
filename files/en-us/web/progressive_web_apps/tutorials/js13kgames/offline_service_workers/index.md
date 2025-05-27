@@ -82,8 +82,8 @@ Next, the links to images to be loaded along with the content from the data/game
 
 ```js
 const gamesImages = [];
-for (let i = 0; i < games.length; i++) {
-  gamesImages.push(`data/img/${games[i].slug}.jpg`);
+for (const game of games) {
+  gamesImages.push(`data/img/${game.slug}.jpg`);
 }
 const contentToCache = appShellFiles.concat(gamesImages);
 ```

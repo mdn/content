@@ -21,8 +21,8 @@ of text (with capture groups).
 ```js interactive-example
 const str = "table football";
 
-const regex = new RegExp("fo+");
-const globalRegex = new RegExp("fo+", "g");
+const regex = /fo+/;
+const globalRegex = /fo+/g;
 
 console.log(regex.test(str));
 // Expected output: true

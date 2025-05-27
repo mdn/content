@@ -109,7 +109,7 @@ if (browser.contextualIdentities === undefined) {
 
 Firefox installs with the contextual identity feature turned off. It's turned on when an extension using the `contextualIdentities` API is installed. However, the user can turn the feature off using an option on the preferences page (about:preferences), hence the need for the check.
 
-The script now uses {{WebExtAPIRef("contextualIdentities.query.")}} to determine whether any contextual identities are defined in the browser. If there are none, a message is added to the popup and the script stops.
+The script now uses {{WebExtAPIRef("contextualIdentities.query")}} to determine whether any contextual identities are defined in the browser. If there are none, a message is added to the popup and the script stops.
 
 ```js
   browser.contextualIdentities.query({}).then((identities) => {

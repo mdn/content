@@ -45,7 +45,7 @@ if (!adapter) {
 const device = await adapter.requestDevice();
 
 context.configure({
-  device: device,
+  device,
   format: navigator.gpu.getPreferredCanvasFormat(),
   alphaMode: "premultiplied",
 });

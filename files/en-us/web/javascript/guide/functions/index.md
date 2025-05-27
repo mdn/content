@@ -254,8 +254,8 @@ function walkTree(node) {
     return;
   }
   // do something with node
-  for (let i = 0; i < node.childNodes.length; i++) {
-    walkTree(node.childNodes[i]);
+  for (const child of node.childNodes) {
+    walkTree(child);
   }
 }
 ```
@@ -495,8 +495,8 @@ For example, consider a function that concatenates several strings. The only for
 function myConcat(separator) {
   let result = ""; // initialize list
   // iterate through arguments
-  for (let i = 1; i < arguments.length; i++) {
-    result += arguments[i] + separator;
+  for (const arg of arguments) {
+    result += arg + separator;
   }
   return result;
 }
