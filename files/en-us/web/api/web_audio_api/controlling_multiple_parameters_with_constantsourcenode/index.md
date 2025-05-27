@@ -216,19 +216,19 @@ When the user clicks the play/pause toggle button while the oscillators aren't p
 function startOscillators() {
   oscNode1 = new OscillatorNode(context, {
     type: "sine",
-    frequency: 261.625565300598634, // middle C$
+    frequency: 261.6255653005986, // middle C$
   });
   oscNode1.connect(gainNode1);
 
   oscNode2 = new OscillatorNode(context, {
     type: "sine",
-    frequency: 329.627556912869929, // E
+    frequency: 329.6275569128699, // E
   });
   oscNode2.connect(gainNode2);
 
   oscNode3 = new OscillatorNode(context, {
     type: "sine",
-    frequency: 391.995435981749294, // G
+    frequency: 391.99543598174927, // G
   });
   oscNode3.connect(gainNode3);
 
