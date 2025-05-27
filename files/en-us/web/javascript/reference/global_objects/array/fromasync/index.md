@@ -102,7 +102,7 @@ Array.fromAsync(createAsyncIter()).then((array) => console.log(array));
 ```
 
 > [!NOTE]
-> In practice, you would rarely encounter an async iterable that yields promises, because if you implement it using an [async generator function](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*), then the [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield) expression automatically unwraps promises.
+> In practice, you will rarely encounter an async iterable that yields promises, because if you implement it using an [async generator function](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*), then the [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield) expression automatically unwraps promises.
 
 ### Array from a sync iterable
 
