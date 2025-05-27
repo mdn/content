@@ -87,7 +87,7 @@ exampleButton.addEventListener("invalid", () => {
 
 exampleButton.addEventListener("click", (e) => {
   e.preventDefault();
-  if (exampleButton.value == "error") {
+  if (exampleButton.value === "error") {
     breakOrFixButton("fixed");
   } else {
     breakOrFixButton("error");
@@ -97,7 +97,7 @@ exampleButton.addEventListener("click", (e) => {
 
 const breakOrFixButton = () => {
   const state = toggleButton();
-  if (state == "error") {
+  if (state === "error") {
     exampleButton.setCustomValidity("This is a custom error message");
   } else {
     exampleButton.setCustomValidity("");
@@ -105,7 +105,7 @@ const breakOrFixButton = () => {
 };
 
 const toggleButton = () => {
-  if (exampleButton.value == "error") {
+  if (exampleButton.value === "error") {
     exampleButton.value = "fixed";
     exampleButton.innerHTML = "No error";
   } else {

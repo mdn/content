@@ -62,7 +62,7 @@ The `transition-behavior` value can be included as part of a shorthand {{cssxref
 }
 ```
 
-In the above snippet we include the `transition` property twice. The first instance does not include the `allow-discrete` value — this provides cross-browser support, ensuring the card's other properties still transition in browsers that don't support `transition-behavior.`
+In the above snippet we include the `transition` property twice. The first instance does not include the `allow-discrete` value — this provides cross-browser support, ensuring the card's other properties still transition in browsers that don't support `transition-behavior`.
 
 ### Discrete animation behavior
 

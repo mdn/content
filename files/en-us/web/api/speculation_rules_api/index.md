@@ -390,7 +390,7 @@ APIs that require the containing document to be focused:
 
 APIs that require the containing document's {{domxref("Document.visibilityState")}} to be `"visible"`:
 
-- [Picture-in-Picture API](/en-US/docs/Web/API/Picture-in-Picture_API): {{domxref("HTMLVideoElement.requestPictureInPicture()")}} (requires the containing document's visibility state to be `"visible", _or_ {{glossary("transient activation")}})
+- [Picture-in-Picture API](/en-US/docs/Web/API/Picture-in-Picture_API): {{domxref("HTMLVideoElement.requestPictureInPicture()")}} (requires the containing document's visibility state to be `"visible"`, _or_ {{glossary("transient activation")}})
 - [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API): {{domxref("WakeLock.request()")}}
 
 ### Other restricted features
