@@ -82,14 +82,14 @@ const increaseButton = document.getElementById("increase");
 const decreaseButton = document.getElementById("decrease");
 
 increaseButton.addEventListener("click", () => {
-  cell.colSpan = cell.colSpan + 1;
+  cell.colSpan += 1;
 
   // Update the display
   output.textContent = cell.colSpan;
 });
 
 decreaseButton.addEventListener("click", () => {
-  cell.colSpan = cell.colSpan - 1;
+  cell.colSpan -= 1;
 
   // Update the display
   output.textContent = cell.colSpan;

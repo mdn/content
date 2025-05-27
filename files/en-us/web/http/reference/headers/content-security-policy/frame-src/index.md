@@ -1,5 +1,6 @@
 ---
-title: "CSP: frame-src"
+title: "Content-Security-Policy: frame-src directive"
+short-title: frame-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/frame-src
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.frame-src

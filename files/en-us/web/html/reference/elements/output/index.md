@@ -49,8 +49,8 @@ const b = form.elements["b"];
 const result = form.elements["result"];
 
 function updateResult() {
-  const aValue = parseInt(a.value);
-  const bValue = parseInt(b.value);
+  const aValue = a.valueAsNumber;
+  const bValue = b.valueAsNumber;
   result.value = aValue + bValue;
 }
 

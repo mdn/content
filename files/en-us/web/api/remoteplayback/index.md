@@ -70,8 +70,8 @@ function availabilityCallback(available) {
 }
 
 videoElem.remote.watchAvailability(availabilityCallback).catch(() => {
-  /* If the device cannot continuously watch available,
-  show the button to allow the user to try to prompt for a connection.*/
+  // If the device cannot continuously watch available,
+  // show the button to allow the user to try to prompt for a connection.
   deviceBtn.style.display = "inline";
 });
 ```

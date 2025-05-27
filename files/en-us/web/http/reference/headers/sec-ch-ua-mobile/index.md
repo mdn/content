@@ -1,5 +1,6 @@
 ---
-title: Sec-CH-UA-Mobile
+title: Sec-CH-UA-Mobile header
+short-title: Sec-CH-UA-Mobile
 slug: Web/HTTP/Reference/Headers/Sec-CH-UA-Mobile
 page-type: http-header
 status:

@@ -6,7 +6,7 @@ browser-compat: webassembly.api.instantiate_static
 sidebar: webassemblysidebar
 ---
 
-The **`WebAssembly.instantiate()`** function allows you to
+The **`WebAssembly.instantiate()`** static method allows you to
 compile and instantiate WebAssembly code. This function has two overloads:
 
 - The primary overload takes the WebAssembly binary code, in the form of a [typed array](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) or

@@ -29,14 +29,14 @@ In character classes, you can join two characters with a hyphen `-` to represent
 ### Invalid cases
 
 ```js example-bad
-/[2-1]/; // The range is out of order
+/[9-1]/; // The range is out of order
 /[_-=]/; // _ has value 95, = has value 61
 ```
 
 ### Valid cases
 
 ```js example-good
-/[1-2]/; // Swap the range
+/[1-9]/; // Swap the range
 /[_\-=]/; // Escape the hyphen so it matches the literal character
 ```
 

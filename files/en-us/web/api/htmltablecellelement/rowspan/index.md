@@ -83,14 +83,14 @@ const increaseButton = document.getElementById("increase");
 const decreaseButton = document.getElementById("decrease");
 
 increaseButton.addEventListener("click", () => {
-  cell.rowSpan = cell.rowSpan + 1;
+  cell.rowSpan += 1;
 
   // Update the display
   output.textContent = cell.rowSpan;
 });
 
 decreaseButton.addEventListener("click", () => {
-  cell.rowSpan = cell.rowSpan - 1;
+  cell.rowSpan -= 1;
 
   // Update the display
   output.textContent = `${cell.rowSpan == 0 ? "all remaining" : cell.rowSpan}`;

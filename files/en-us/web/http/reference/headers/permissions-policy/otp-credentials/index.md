@@ -1,5 +1,6 @@
 ---
-title: "Permissions-Policy: otp-credentials"
+title: "Permissions-Policy: otp-credentials directive"
+short-title: otp-credentials
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/otp-credentials
 page-type: http-permissions-policy-directive
 status:

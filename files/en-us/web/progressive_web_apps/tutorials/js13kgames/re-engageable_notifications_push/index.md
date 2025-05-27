@@ -74,9 +74,10 @@ You can examine the [Service Workers Cookbook examples](https://github.com/mdn/s
 As mentioned before, to be able to receive push messages, you have to have a service worker, the basics of which are already explained in the [Making PWAs work offline with Service workers](/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers) article. Inside the service worker, a push-service subscription mechanism is created by calling the [`getSubscription()`](/en-US/docs/Web/API/PushManager/getSubscription) method of the [`PushManager`](/en-US/docs/Web/API/PushManager) interface.
 
 ```js
-navigator.serviceWorker.register("service-worker.js").then((registration) => {
-  return registration.pushManager.getSubscription().then(/* ... */);
-});
+navigator.serviceWorker
+  .register("service-worker.js")
+  .then((registration) => registration.pushManager.getSubscription())
+  .then(/* … */);
 ```
 
 Once the user is subscribed, they can receive push notifications from the server.
@@ -112,13 +113,7 @@ The `index.js` file starts by registering the service worker:
 ```js
 navigator.serviceWorker
   .register("service-worker.js")
-  .then((registration) => {
-    return registration.pushManager
-      .getSubscription()
-      .then(async (subscription) => {
-        // registration part
-      });
-  })
+  .then((registration) => registration.pushManager.getSubscription())
   .then((subscription) => {
     // subscription part
   });

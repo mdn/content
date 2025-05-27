@@ -218,6 +218,7 @@ dom.webnotifications.requireuserinteraction
 dom.webshare
 domxref
 downdiagonalstrike
+downloadprogress
 DPAD
 DRAGDDROP
 dragdrop
@@ -559,6 +560,7 @@ oncurrententrychange
 oncurrentscreenchange
 ondequeue
 ondispose
+ondownloadprogress
 onefive
 ongesturestart
 onnavigate

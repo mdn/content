@@ -122,12 +122,11 @@ exports.book_update_post = [
         errors: errors.array(),
       });
       return;
-    } else {
-      // Data from form is valid. Update the record.
-      const updatedBook = await Book.findByIdAndUpdate(req.params.id, book, {});
-      // Redirect to book detail page.
-      res.redirect(updatedBook.url);
     }
+    // Data from form is valid. Update the record.
+    const updatedBook = await Book.findByIdAndUpdate(req.params.id, book, {});
+    // Redirect to book detail page.
+    res.redirect(updatedBook.url);
   }),
 ];
 ```

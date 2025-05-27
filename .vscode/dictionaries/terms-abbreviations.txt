@@ -270,6 +270,7 @@ gameworlds
 Gbps
 GCLI
 generatable
+geofencing
 geolocate
 geolocated
 geolocating
@@ -976,6 +977,7 @@ XPCOM
 xrayed
 Xrays
 XRCPU
+xsleaks
 XSSI
 yari
 yearless

@@ -261,7 +261,7 @@ function tetheredGetNumber(resolve, reject) {
     if (value < THRESHOLD_A) {
       resolve(value);
     } else {
-      reject(`Too large: ${value}`);
+      reject(new RangeError(`Too large: ${value}`));
     }
   }, 500);
 }
@@ -281,7 +281,7 @@ function promiseGetWord(parityInfo) {
   return new Promise((resolve, reject) => {
     const { value, isOdd } = parityInfo;
     if (value >= THRESHOLD_A - 1) {
-      reject(`Still too large: ${value}`);
+      reject(new RangeError(`Still too large: ${value}`));
     } else {
       parityInfo.wordEvenOdd = isOdd ? "odd" : "even";
       resolve(parityInfo);

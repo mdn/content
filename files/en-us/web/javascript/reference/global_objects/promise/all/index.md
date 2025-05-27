@@ -79,7 +79,7 @@ const p = Promise.all([1, 2, 3]);
 const p2 = Promise.all([1, 2, 3, Promise.resolve(444)]);
 // One (and the only) input promise is rejected,
 // so the returned promise gets rejected
-const p3 = Promise.all([1, 2, 3, Promise.reject(555)]);
+const p3 = Promise.all([1, 2, 3, Promise.reject(new Error("bad"))]);
 
 // Using setTimeout, we can execute code after the queue is empty
 setTimeout(() => {
@@ -91,7 +91,7 @@ setTimeout(() => {
 // Logs:
 // Promise { <state>: "fulfilled", <value>: Array[3] }
 // Promise { <state>: "fulfilled", <value>: Array[4] }
-// Promise { <state>: "rejected", <reason>: 555 }
+// Promise { <state>: "rejected", <reason>: Error: bad }
 ```
 
 ### Asynchronicity or synchronicity of Promise.all
@@ -122,7 +122,10 @@ setTimeout(() => {
 The same thing happens if `Promise.all` rejects:
 
 ```js
-const mixedPromisesArray = [Promise.resolve(33), Promise.reject(44)];
+const mixedPromisesArray = [
+  Promise.resolve(33),
+  Promise.reject(new Error("bad")),
+];
 const p = Promise.all(mixedPromisesArray);
 console.log(p);
 setTimeout(() => {
@@ -133,7 +136,7 @@ setTimeout(() => {
 // Logs:
 // Promise { <state>: "pending" }
 // the queue is now empty
-// Promise { <state>: "rejected", <reason>: 44 }
+// Promise { <state>: "rejected", <reason>: Error: bad }
 ```
 
 `Promise.all` resolves synchronously if and only if the `iterable` passed is empty:

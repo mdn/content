@@ -49,11 +49,10 @@ class MyIterator extends Iterator {
     this.#end = end;
   }
   next() {
-    if (this.#step < this.#end) {
-      return { value: this.#step++, done: false };
-    } else {
+    if (this.#step >= this.#end) {
       return { done: true };
     }
+    return { value: this.#step++, done: false };
   }
 }
 

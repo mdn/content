@@ -40,25 +40,25 @@ Browsers generate console warnings for other cases where the import map JSON doe
 When importing a [JavaScript module](/en-US/docs/Web/JavaScript/Guide/Modules), both the [`import` statement](/en-US/docs/Web/JavaScript/Reference/Statements/import) and [`import()` operator](/en-US/docs/Web/JavaScript/Reference/Operators/import) have a "module specifier" that indicates the module to be imported.
 A browser must be able to resolve this specifier to an absolute URL in order to import the module.
 
-For example, the following statements import elements from the module specifier `"./modules/shapes/square.js"`, which is a path relative to the base URL of the document, and the module specifier `"https://example.com/shapes/circle.js"`, which is an absolute URL.
+For example, the following statements import elements from the module specifier `"https://example.com/shapes/circle.js"`, which is an absolute URL, and the module specifier `"./modules/shapes/square.js"`, which is a path relative to the base URL of the document.
 
 ```js
-import { name as squareName, draw } from "./modules/shapes/square.js";
 import { name as circleName } from "https://example.com/shapes/circle.js";
+import { name as squareName, draw } from "./modules/shapes/square.js";
 ```
 
 Import maps allow developers to specify (almost) any text they want in the module specifier; the map provides a corresponding value that will replace the text when the module specifier is resolved.
 
 ### Bare modules
 
-The import map below defines an `imports` key that has a "module specifier map" with properties `square` and `circle`.
+The import map below defines an `imports` key that has a "module specifier map" with properties `circle` and `square`.
 
 ```html
 <script type="importmap">
   {
     "imports": {
-      "square": "./modules/shapes/square.js",
-      "circle": "https://example.com/shapes/circle.js"
+      "circle": "https://example.com/shapes/circle.js",
+      "square": "./modules/shapes/square.js"
     }
   }
 </script>
@@ -67,8 +67,8 @@ The import map below defines an `imports` key that has a "module specifier map" 
 With this import map we can import the same modules as above, but using "bare modules" in our module specifiers:
 
 ```js
-import { name as squareName, draw } from "square";
 import { name as circleName } from "circle";
+import { name as squareName, draw } from "square";
 ```
 
 ### Mapping path prefixes

@@ -5825,6 +5825,8 @@
 /en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_HTML5_controls	/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Input_types
 /en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Other_controls	/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Other_controls
 /en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Styling_basics	/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Styling_basics
+/en-US/docs/Learn_web_development/Extensions/Security_privacy	/en-US/docs/Web/Security
+/en-US/docs/Learn_web_development/Extensions/Transform_animate	/en-US/docs/Learn_web_development/Extensions
 /en-US/docs/Learn_web_development/Getting_started/Basic_setup	/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software
 /en-US/docs/Learn_web_development/Getting_started/Soft_skills/Job_interviews	/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Finding_a_job
 /en-US/docs/Learn_web_development/Getting_started/Soft_skills/Learning_and_getting_help	/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning
@@ -13430,7 +13432,7 @@
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/autoplay	/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/autoplay
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/camera	/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/camera
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/display-capture	/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/display-capture
-/en-US/docs/Web/HTTP/Headers/Feature-Policy/document-domain	/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/document-domain
+/en-US/docs/Web/HTTP/Headers/Feature-Policy/document-domain	/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/encrypted-media	/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/encrypted-media
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/fullscreen	/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/fullscreen
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/gamepad	/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/gamepad
@@ -13487,7 +13489,7 @@
 /en-US/docs/Web/HTTP/Headers/Permissions-Policy/compute-pressure	/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/compute-pressure
 /en-US/docs/Web/HTTP/Headers/Permissions-Policy/cross-origin-isolated	/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/cross-origin-isolated
 /en-US/docs/Web/HTTP/Headers/Permissions-Policy/display-capture	/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/display-capture
-/en-US/docs/Web/HTTP/Headers/Permissions-Policy/document-domain	/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/document-domain
+/en-US/docs/Web/HTTP/Headers/Permissions-Policy/document-domain	/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy
 /en-US/docs/Web/HTTP/Headers/Permissions-Policy/encrypted-media	/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/encrypted-media
 /en-US/docs/Web/HTTP/Headers/Permissions-Policy/fullscreen	/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/fullscreen
 /en-US/docs/Web/HTTP/Headers/Permissions-Policy/gamepad	/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/gamepad
@@ -13630,6 +13632,7 @@
 /en-US/docs/Web/HTTP/Public_Key_Pinning	/en-US/docs/Web/Security/Certificate_Transparency
 /en-US/docs/Web/HTTP/Range_requests	/en-US/docs/Web/HTTP/Guides/Range_requests
 /en-US/docs/Web/HTTP/Redirections	/en-US/docs/Web/HTTP/Guides/Redirections
+/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/document-domain	/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy
 /en-US/docs/Web/HTTP/Resources_and_URIs	/en-US/docs/Web/HTTP/Guides/MIME_types
 /en-US/docs/Web/HTTP/Resources_and_specifications	/en-US/docs/Web/HTTP/Reference/Resources_and_specifications
 /en-US/docs/Web/HTTP/Response_codes	/en-US/docs/Web/HTTP/Reference/Status
@@ -14775,7 +14778,7 @@
 /en-US/docs/Web/SVG/Element/cursor	/en-US/docs/Web/CSS/cursor
 /en-US/docs/Web/SVG/Element/defs	/en-US/docs/Web/SVG/Reference/Element/defs
 /en-US/docs/Web/SVG/Element/desc	/en-US/docs/Web/SVG/Reference/Element/desc
-/en-US/docs/Web/SVG/Element/discard	/en-US/docs/Web/SVG/Reference/Element/discard
+/en-US/docs/Web/SVG/Element/discard	/en-US/docs/Web/SVG/Reference/Element
 /en-US/docs/Web/SVG/Element/ellipse	/en-US/docs/Web/SVG/Reference/Element/ellipse
 /en-US/docs/Web/SVG/Element/feBlend	/en-US/docs/Web/SVG/Reference/Element/feBlend
 /en-US/docs/Web/SVG/Element/feColorMatrix	/en-US/docs/Web/SVG/Reference/Element/feColorMatrix
@@ -14891,6 +14894,7 @@
 /en-US/docs/Web/SVG/Reference/Attribute/widths	/en-US/docs/Web/SVG/Reference/Attribute
 /en-US/docs/Web/SVG/Reference/Attribute/x-height	/en-US/docs/Web/SVG/Reference/Attribute
 /en-US/docs/Web/SVG/Reference/Element/cursor	/en-US/docs/Web/CSS/cursor
+/en-US/docs/Web/SVG/Reference/Element/discard	/en-US/docs/Web/SVG/Reference/Element
 /en-US/docs/Web/SVG/Reference/Element/font	/en-US/docs/Web/CSS/@font-face
 /en-US/docs/Web/SVG/Reference/Element/font-face	/en-US/docs/Web/CSS/@font-face
 /en-US/docs/Web/SVG/Reference/Element/font-face-format	/en-US/docs/Web/CSS/@font-face

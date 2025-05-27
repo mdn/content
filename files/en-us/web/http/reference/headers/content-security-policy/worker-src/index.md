@@ -1,5 +1,6 @@
 ---
-title: "CSP: worker-src"
+title: "Content-Security-Policy: worker-src directive"
+short-title: worker-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/worker-src
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.worker-src

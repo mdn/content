@@ -1,5 +1,6 @@
 ---
-title: DNT
+title: DNT header
+short-title: DNT
 slug: Web/HTTP/Reference/Headers/DNT
 page-type: http-header
 status:

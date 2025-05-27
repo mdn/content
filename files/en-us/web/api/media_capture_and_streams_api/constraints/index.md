@@ -439,11 +439,12 @@ function startVideo() {
         videoTrack = videoTracks[0];
       }
     })
-    .then(() => {
-      return new Promise((resolve) => {
-        videoElement.onloadedmetadata = resolve;
-      });
-    })
+    .then(
+      () =>
+        new Promise((resolve) => {
+          videoElement.onloadedmetadata = resolve;
+        }),
+    )
     .then(() => {
       getCurrentSettings();
     })
