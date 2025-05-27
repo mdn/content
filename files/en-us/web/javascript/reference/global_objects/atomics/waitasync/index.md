@@ -7,8 +7,8 @@ browser-compat: javascript.builtins.Atomics.waitAsync
 
 {{JSRef}}
 
-The **`Atomics.waitAsync()`** static method verifies that a shared memory location contains a given value, immediately returning with `"not-equal"` if the memory location does not match the given value, or `"timed-out"` if the timeout was set to zero.
-Otherwise the method returns a {{jsxref("Promise")}} that fulfills with either `"ok"` when {{jsxref("Atomics.notify()")}} is called, or `"timed-out"` if the timeout expires.
+The **`Atomics.waitAsync()`** static method verifies that a shared memory location contains a given value, immediately returning an object with the `value` property containing the string `"not-equal"` if the memory location does not match the given value, or `"timed-out"` if the timeout was set to zero.
+Otherwise the method returns an object where the `value` property is a {{jsxref("Promise")}} that fulfills with either `"ok"` when {{jsxref("Atomics.notify()")}} is called, or `"timed-out"` if the timeout expires.
 
 `waitAsync` is non-blocking and, unlike {{jsxref("Atomics.wait()")}}, can be used on the main thread.
 
