@@ -102,25 +102,21 @@ function dragstart_handler(ev) {
 function drop_handler(ev) {
   console.log("Drop");
   ev.preventDefault();
-  const data = event.dataTransfer.items;
   // Loop through the dropped items and log their data
-  for (let i = 0; i < data.length; i++) {
-    if (data[i].kind === "string" && data[i].type.match("^text/plain")) {
+  for (const item of event.dataTransfer.items) {
+    if (item.kind === "string" && item.type.match("^text/plain")) {
       // This item is the target node
-      data[i].getAsString((s) => {
+      item.getAsString((s) => {
         ev.target.appendChild(document.getElementById(s));
       });
-    } else if (data[i].kind === "string" && data[i].type.match("^text/html")) {
+    } else if (item.kind === "string" && item.type.match("^text/html")) {
       // Drag data item is HTML
-      data[i].getAsString((s) => {
+      item.getAsString((s) => {
         console.log(`… Drop: HTML = ${s}`);
       });
-    } else if (
-      data[i].kind === "string" &&
-      data[i].type.match("^text/uri-list")
-    ) {
+    } else if (item.kind === "string" && item.type.match("^text/uri-list")) {
       // Drag data item is URI
-      data[i].getAsString((s) => {
+      item.getAsString((s) => {
         console.log(`… Drop: URI = ${s}`);
       });
     }

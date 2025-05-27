@@ -14,7 +14,7 @@ The **`Object.create()`** static method creates a new object, using an existing 
 ```js interactive-example
 const person = {
   isHuman: false,
-  printIntroduction: function () {
+  printIntroduction() {
     console.log(`My name is ${this.name}. Am I human? ${this.isHuman}`);
   },
 };

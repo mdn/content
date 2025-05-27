@@ -204,7 +204,7 @@ elem.addEventListener("cancel", () => {
   console.log("Cancelled.");
 });
 elem.addEventListener("change", () => {
-  if (elem.files.length == 1) {
+  if (elem.files.length === 1) {
     console.log("File selected: ", elem.files[0]);
   }
 });

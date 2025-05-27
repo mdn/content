@@ -87,8 +87,8 @@ fieldset:not(:first-of-type) > div:not(:last-child) {
 ```js
 const inputs = document.getElementsByTagName("input");
 
-for (let i = 0; i < inputs.length; i++) {
-  inputs[i].indeterminate = true;
+for (const input of inputs) {
+  input.indeterminate = true;
 }
 ```
 

@@ -12,8 +12,8 @@ The **`ignoreCase`** accessor property of {{jsxref("RegExp")}} instances returns
 {{InteractiveExample("JavaScript Demo: RegExp.prototype.ignoreCase")}}
 
 ```js interactive-example
-const regex1 = new RegExp("foo");
-const regex2 = new RegExp("foo", "i");
+const regex1 = /foo/;
+const regex2 = /foo/i;
 
 console.log(regex1.test("Football"));
 // Expected output: false

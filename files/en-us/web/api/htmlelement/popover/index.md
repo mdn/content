@@ -42,7 +42,7 @@ You can use the `popover` attribute to feature detect the [Popover API](/en-US/d
 
 ```js
 function supportsPopover() {
-  return HTMLElement.prototype.hasOwnProperty("popover");
+  return Object.hasOwn(HTMLElement.prototype, "popover");
 }
 ```
 

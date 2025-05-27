@@ -157,7 +157,7 @@ An `RTCRtpSender` instance is only compatible for reuse if it meets the followin
 If all of those criteria are met, the sender gets reused, which results in these changes occurring to the existing `RTCRtpSender` and its `RTCRtpTransceiver`:
 
 - The `RTCRtpSender`'s {{domxref("RTCRtpSender.track", "track")}} is set to the specified track.
-- The sender's set of associated streams is set to the list of streams passed into this method, `stream...`.
+- The sender's set of associated streams is set to the list of streams passed into this method, `stream1`, …, `streamN`.
 - The associated {{domxref("RTCRtpTransceiver")}} has its `currentDirection` updated to indicate that it is sending;
   if its current value is `"recvonly"`, it becomes `"sendrecv"`, and if its current value is `"inactive"`, it becomes `"sendonly"`.
 

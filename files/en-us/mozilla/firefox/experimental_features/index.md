@@ -828,7 +828,7 @@ The CSS {{cssxref("::details-content")}} pseudo-element enables you to style the
 
 Work has started on allowing [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) such as {{cssxref("::first-letter")}} and {{cssxref("::before")}} to be appended to [element-backed pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements#element-backed_pseudo-elements) such as {{cssxref("::details-content")}} and {{cssxref("::file-selector-button")}}.
 
-This will allow users to, for , example, style the first letter of the {{htmlElement("details")}} element by using the CSS selector `::details-content::first-letter` or add content before a {{HTMLElement("input") }} of [`type="file"`](/en-US/docs/Web/HTML/Reference/Elements/input/file) using the CSS selector `::file-selector-button::before`.
+This will allow users to, for , example, style the first letter of the {{htmlElement("details")}} element by using the CSS selector `::details-content::first-letter` or add content before an {{HTMLElement("input") }} of [`type="file"`](/en-US/docs/Web/HTML/Reference/Elements/input/file) using the CSS selector `::file-selector-button::before`.
 
 Currently only support for `::details-content::first-letter` can be parsed, using `@supports(::details-content::first-letter)` and the preference for [::details-content pseudo-element](#details-content_pseudo-element) needs enabling for this to be tested. The `::file-selector-button` pseudo-element is not yet marked as an element-based pseudo-element so there is no current way of testing this. ([Firefox bug 1953557](https://bugzil.la/1953557)).
 
@@ -870,48 +870,7 @@ Currently only support for `::details-content::first-letter` can be parsed, usin
 
 ## SVG
 
-### `<discard>` element for SVG animations
-
-The {{svgelement("discard")}} SVG element is now supported, along with its corresponding {{domxref("SVGDiscardElement")}} JavaScript interface.
-The element allows developers to specify a trigger time or event at which a specified element and its children should be removed from the DOM.
-An SVG viewer can use this information to conserve memory by discarding elements that are no longer needed, such as animated elements that have completed.
-([Firefox bug 1069931](https://bugzil.la/1069931)).
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>136</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>136</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>136</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>136</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>svg.discard.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
+None.
 
 ## JavaScript
 
@@ -955,6 +914,49 @@ The `withCalendar()` method for [`PlainDate`](/en-US/docs/Web/JavaScript/Referen
     <tr>
       <th>Preference name</th>
       <td colspan="2">N/A</td>
+    </tr>
+  </tbody>
+</table>
+
+### Atomics
+
+#### Atomics.waitAsync()
+
+The {{jsxref("Atomics.waitAsync()")}} static method waits asynchronously on a shared memory location and returns an object representing the result of the operation.
+It is non-blocking and usable on the main thread. ([Firefox bug 1467846](https://bugzil.la/1467846)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>140</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>140</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>140</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>140</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>javascript.options.atomics_wait_async</code></td>
     </tr>
   </tbody>
 </table>
@@ -1098,12 +1100,11 @@ The [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) allow developer
   </tbody>
 </table>
 
-### Escape < and > in attributes when serializing HTML
+### `closedBy` attribute for `<dialog>`
 
-Firefox replaces the `<` and `>` characters with `&lt;` and `&gt;` (respectively) in attributes when serializing HTML.
-This prevents certain exploits where HTML is serialized and then injected back into the DOM.
-The affected methods and properties are: {{domxref("Element.innerHTML")}}, {{domxref("Element.outerHTML")}}, {{domxref("Element.getHTML()")}}, {{domxref("ShadowRoot.innerHTML")}}, and {{domxref("ShadowRoot.getHTML()")}}.
-([Firefox bug 1941347](https://bugzil.la/1941347)).
+The {{domxref("HTMLDialogElement/closedBy", "closedBy")}} attribute of the {{domxref("HTMLDialogElement")}} interface, and corresponding [`closedby`](/en-US/docs/Web/HTML/Reference/Elements/dialog#closedby) attribute of the {{htmlelement("dialog")}} element, are supported.
+These can be used by developers to specify whether users can close a dialog by clicking outside of the dialog area, or the dialog must be closed programmatically, and so on.
+([Firefox bug 1964077](https://bugzil.la/1964077)).
 
 <table>
   <thead>
@@ -1116,27 +1117,27 @@ The affected methods and properties are: {{domxref("Element.innerHTML")}}, {{dom
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>139</td>
+      <td>140</td>
       <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>139</td>
+      <td>140</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Beta</th>
-      <td>139</td>
+      <td>140</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Release</th>
-      <td>139</td>
+      <td>140</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2"><code>dom.security.html_serialization_escape_lt_gt</code></td>
+      <td colspan="2"><code>dom.dialog.light-dismiss.enabled</code></td>
     </tr>
   </tbody>
 </table>
@@ -1263,11 +1264,11 @@ The non-standard events [`beforescriptexecute`](/en-US/docs/Web/API/Document/bef
   </tbody>
 </table>
 
-### Notification.actions
+### Notification actions and maxActions properties
 
-The {{domxref("Notification.actions","actions")}} read-only property of the {{domxref("Notification")}} interface is supported in Nightly.
-This contains notification actions set with {{domxref("ServiceWorkerRegistration.showNotification()")}}.
-([Firefox bug 1225110](https://bugzil.la/1225110)).
+The {{domxref("Notification/actions","actions")}} read-only property and the [`maxActions`](/en-US/docs/Web/API/Notification/maxActions_static) static read-only property of the {{domxref("Notification")}} interface are supported in Nightly on desktop.
+These contain the notification actions set with {{domxref("ServiceWorkerRegistration.showNotification()")}}, and the maximum number of actions that can be set, respectively.
+([Firefox bug 1225110](https://bugzil.la/1225110), [Firefox bug 1963263](https://bugzil.la/1963263)).
 
 <table>
   <thead>
@@ -1281,6 +1282,7 @@ This contains notification actions set with {{domxref("ServiceWorkerRegistration
     <tr>
       <th>Nightly</th>
       <td>138</td>
+      <td>Yes (desktop only)</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
@@ -1921,8 +1923,7 @@ See [Firefox bug 1697647](https://bugzil.la/1697647) for more details.
 ### Prioritized Task Scheduling API
 
 The [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) provides a standardized way to prioritize all tasks belonging to an application, whether they are defined in a website developer's code, or in third-party libraries and frameworks.
-Support for most of the API was added behind a preference in Firefox version 101.
-Firefox version 139 adds support for {{domxref("scheduler.yield()")}} and enables the API in the Nightly release.
+From Firefox version 140 the API is both feature complete and enabled in the Nightly release.
 ([Firefox bug 1734997](https://bugzil.la/1734997) and [Firefox bug 1920115](https://bugzil.la/1920115)).
 
 <table>

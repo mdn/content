@@ -225,7 +225,6 @@ Update your `App.vue` file's `<style>` element so it looks like so:
     height: 1px;
     width: 1px;
     overflow: hidden;
-    clip: rect(1px 1px 1px 1px);
     clip: rect(1px, 1px, 1px, 1px);
     clip-path: rect(1px, 1px, 1px, 1px);
     white-space: nowrap;
@@ -351,7 +350,6 @@ Next, copy the following CSS into the newly created `<style>` element:
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 16px;
   font-size: 1rem;
   line-height: 1.25;
   color: #0b0c0c;
@@ -363,12 +361,10 @@ Next, copy the following CSS into the newly created `<style>` element:
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 16px;
   font-size: 1rem;
   line-height: 1.25;
   box-sizing: border-box;
   width: 100%;
-  height: 40px;
   height: 2.5rem;
   margin-top: 0;
   padding: 5px;
@@ -453,7 +449,6 @@ Next, copy the following CSS into the newly created `<style>` element:
   label,
   input,
   .custom-checkbox {
-    font-size: 19px;
     font-size: 1.9rem;
     line-height: 1.31579;
   }
