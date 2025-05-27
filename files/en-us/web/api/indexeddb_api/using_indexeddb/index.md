@@ -261,7 +261,7 @@ request.onupgradeneeded = (event) => {
 };
 ```
 
-For more details about the key generator, please see [Key Generators](https://w3c.github.io/IndexedDB/#key-generator-construct) in the spec.
+For more details about the key generator, see [Key generators](https://w3c.github.io/IndexedDB/#key-generator-construct) in the spec.
 
 ## Adding, retrieving, and removing data
 

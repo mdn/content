@@ -15,7 +15,7 @@ The **`get()`** method of the
 {{domxref('KeyboardLayoutMap')}} interface returns the element with the given
 key.
 
-A list of valid keys is found in the [UI Events KeyboardEvent code Values](https://w3c.github.io/uievents-code/) spec.
+A list of valid keys is found in the [UI Events KeyboardEvent code Values](https://w3c.github.io/uievents-code/) specification.
 
 The method is otherwise the same as {{jsxref("Map.prototype.get()")}}.
 

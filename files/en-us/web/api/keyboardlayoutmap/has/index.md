@@ -16,7 +16,7 @@ The **`has()`** method of the
 object has an element with the specified key.
 
 A list of valid keys is found in
-the [UI Events KeyboardEvent code Values](https://w3c.github.io/uievents-code/) spec.
+the [UI Events KeyboardEvent code Values](https://w3c.github.io/uievents-code/) specification.
 
 The method is otherwise the same as {{jsxref("Map.prototype.has()")}}.
 
