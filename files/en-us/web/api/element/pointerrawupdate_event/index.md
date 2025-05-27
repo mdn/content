@@ -10,14 +10,17 @@ browser-compat: api.Element.pointerrawupdate_event
 
 {{APIRef}}{{SeeCompatTable}}{{secureContext_header}}
 
-The **`pointerrawupdate`** {{DOMxRef('PointerEvent')}} is fired when a pointer changes any properties that don't fire {{domxref('Element/pointerdown_event', 'pointerdown')}} or {{domxref('Element/pointerup_event', 'pointerup')}} events.
+The **`pointerrawupdate`** event is fired when a pointer changes any properties that don't fire {{domxref('Element/pointerdown_event', 'pointerdown')}} or {{domxref('Element/pointerup_event', 'pointerup')}} events.
 See {{domxref('Element/pointermove_event', 'pointermove')}} for a list of these properties.
 
 The `pointerrawupdate` event may have coalesced events if there is already another `pointerrawupdate` event with the same pointer ID that hasn't been dispatched in the event loop.
 For information on coalesced events, see the {{domxref("PointerEvent.getCoalescedEvents")}} documentation.
 
-Listeners for `pointerrawupdate` events should only be added if your JavaScript needs high-frequency events and can handle them as quickly as they are dispatched.
-For most use cases, other pointer event types should suffice as there may be performance implications to adding listeners for `pointerrawupdate` events.
+`pointerrawupdate` is intended for applications that require high-precision input handling, and that cannot achieve smooth interaction using coalesced pointermove events alone.
+However, as there may be performance implications to adding listeners for `pointerrawupdate` events, these listeners should only be added if your JavaScript needs high-frequency events and can handle them as quickly as they are dispatched.
+For most use cases, other pointer event types should suffice.
+
+This event [bubbles](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling) and is [composed](/en-US/docs/Web/API/Event/composed), but is not [cancelable](/en-US/docs/Web/API/Event/cancelable) and has no default action.
 
 ## Syntax
 
