@@ -16,7 +16,8 @@ sidebar: mdnsidebar
 >
 > ```md
 > ---
-> title: NameOfTheHeader
+> title: NameOfTheHeader header
+> short-title: NameOfTheHeader
 > slug: Web/HTTP/Reference/Headers/NameOfTheHeader
 > page-type: http-header
 > status:
@@ -29,7 +30,9 @@ sidebar: mdnsidebar
 > ```
 >
 > - **title**
->   - : Title heading displayed at the top of the page. Format as _NameOfTheHeader_. For example, the [Cache-Control](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control) header has a _title_ of `Cache-Control`.
+>   - : Title heading displayed at the top of the page. Format as _NameOfTheHeader header_. For example, the [Cache-Control](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control) header has a _title_ of `Cache-Control header`.
+> - **short-title**
+>   - : A short title used in breadcrumbs and sidebars. Format as _NameOfTheHeader_. For example, the [Cache-Control](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control) header has a _short-title_ of `Cache-Control`.
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`. This will be formatted like `Web/HTTP/Reference/Headers/NameOfTheHeader`. For example, the [Cache-Control](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control) slug is `Web/HTTP/Reference/Headers/Cache-Control`.
 > - **page-type**
@@ -137,6 +140,7 @@ feel free to include multiple definition lists, subsections, and explanations as
 ## Description
 
 If there is too much content to include in the opening paragraphs, provide as much detail as necessary here, such as background information, hints for usage, and links to documentation.
+This is a good place to note whether real-world patterns differ from what's specified if widely-deployed implementations deviate from what's described in specifications.
 
 ## Examples
 
