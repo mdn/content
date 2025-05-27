@@ -11,7 +11,7 @@ The **`Atomics.wait()`** static method verifies that a shared memory location co
 It returns a string which is `"not-equal"` if the memory location does not match the given value, `"ok"` if woken by {{jsxref("Atomics.notify()")}}, or `"timed-out"` if the timeout expires.
 
 `Atomics.wait()` and {{jsxref("Atomics.notify()")}} are used together to enable thread synchronization based on a value in shared memory.
-A thread can proceed immediately, without waiting if the synchronization value has changed, or it can wait for notification from another thread when it reaches the synchronization point.
+A thread can proceed immediately if the synchronization value has changed, or it can wait for notification from another thread when it reaches the synchronization point.
 
 This operation only works with an {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} that views a {{jsxref("SharedArrayBuffer")}}.
 

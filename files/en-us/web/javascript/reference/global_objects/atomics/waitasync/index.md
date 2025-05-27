@@ -10,6 +10,9 @@ browser-compat: javascript.builtins.Atomics.waitAsync
 The **`Atomics.waitAsync()`** static method verifies that a shared memory location contains a given value, immediately returning an object with the `value` property containing the string `"not-equal"` if the memory location does not match the given value, or `"timed-out"` if the timeout was set to zero.
 Otherwise the method returns an object where the `value` property is a {{jsxref("Promise")}} that fulfills with either `"ok"` when {{jsxref("Atomics.notify()")}} is called, or `"timed-out"` if the timeout expires.
 
+`Atomics.waitAsync()` and {{jsxref("Atomics.notify()")}} are used together to enable thread synchronization based on a value in shared memory.
+A thread can proceed immediately if the synchronization value has changed, or it can wait for notification from another thread when it reaches the synchronization point.
+
 `waitAsync` is non-blocking and, unlike {{jsxref("Atomics.wait()")}}, can be used on the main thread.
 
 This operation only works with an {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} that views a {{jsxref("SharedArrayBuffer")}}.
