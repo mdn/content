@@ -395,7 +395,7 @@ py -3 -m django --version
 >
 > In Windows _Python 3_ scripts are launched by prefixing the command with `py -3`, although this can vary depending on your specific installation.
 > Try omitting the `-3` modifier if you encounter any problems with commands.
-> In Linux/macOS, the command is `python3.`
+> In Linux/macOS, the command is `python3`.
 
 > [!WARNING]
 > The rest of this **module** uses the _Linux_ command for invoking Python 3 (`python3`). If you're working on _Windows_ replace this prefix with: `py -3`
