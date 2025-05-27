@@ -63,7 +63,7 @@ The HTML content for this example is primarily a checkbox, shaped as an actual b
   content: "⏸";
 }
 
-#playButton:not(checked) + label::after {
+#playButton:not(:checked) + label::after {
   content: "▶️";
 }
 
