@@ -70,13 +70,13 @@ console.log(url.origin);
 
 const add_params = {
   c: "a",
-  d: new String(2),
-  e: false.toString(),
+  d: 2,
+  e: false,
 };
 
 const new_params = new URLSearchParams([
   ...Array.from(url.searchParams.entries()), // [["a","hello"],["b","world"]]
-  ...Object.entries(add_params), // [["c","a"],["d","2"],["e","false"]]
+  ...Object.entries(add_params), // [["c","a"],["d",2],["e",false]]
 ]).toString();
 console.log(new_params);
 // a=hello&b=world&c=a&d=2&e=false
