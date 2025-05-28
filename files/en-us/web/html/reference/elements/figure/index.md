@@ -187,8 +187,7 @@ function NavigatorExample() {
       <th scope="row">Permitted ARIA roles</th>
       <td>
         With no
-        <a href="/en-US/docs/Web/HTML/Reference/Elements/figcaption">figcaption </a
-        >descendant:
+        <a href="/en-US/docs/Web/HTML/Reference/Elements/figcaption">figcaption</a> descendant:
         <a href="https://www.w3.org/TR/html-aria/#dfn-any-role">any</a>,
         otherwise no permitted roles
       </td>
