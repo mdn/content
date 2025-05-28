@@ -70,7 +70,7 @@ While masking provides more control and options, clipping can perform better if 
 
 - [CSS mask properties](/en-US/docs/Web/CSS/CSS_masking/Mask_properties)
 
-  - : Just like a {{cssxref("background-image")}}, every {{cssxref("mask-image")}} can be positioned, sized, and repeated, with CSS masking properties.
+  - : An exploration of CSS masking and the `mask` shorthand component properties, with explanations and examples.
 
 - [Declaring multiple masks](/en-US/docs/Web/CSS/CSS_masking/Multiple_masks)
 

@@ -10,11 +10,10 @@ CSS masking is a technique that enables you to define visible portions of an ele
 
 In CSS, masks are used to hide and partially hide element areas. CSS masks are the opposite of mask worn at masquerade balls where the wearer's face is hidden wherever the mask is opaque. In CSS, the mask areas that are fully opaque reveal the element while transparent areas hide the element.
 
-Each mask layers consists of a {{cssxref("mask-image")}}, which is [positioned](#XXX) relative to an origin box. The mask images can be [sized](#XXX), [repeated](#XXX), and [clipped](#XXX). In cases where multiple mask images are declared, the way the [mask layers are composited](#XXX), or combined, can be set. This guide explores these CSS masking and the `mask` shorthand component properties, with explanations and examples.
+Each mask layers consists of a {{cssxref("mask-image")}}, which is [positioned](#XXX) relative to an origin box. The mask images can be [sized](#XXX), [repeated](#XXX), and [clipped](#XXX). In cases where multiple mask images are declared, the way the [mask layers are composited](#the_mask-composite_property), or combined, can be set. This guide explores these CSS masking and the `mask` shorthand component properties, with explanations and examples.
 
 - [Mask layers and the `mask-image` property](#mask_layers_and_the_mask-image_property)
-- The `mask-mode` property
-- Mask
+- [The `mask-mode` property](#the-mask-mode-property)
 - Sizing
 - Repeating
 - Positioning
@@ -31,6 +30,16 @@ A mask can be defined using [CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using
 ```css
 .masked-element {
   mask-image:
+    url(alphaImage.png), linear-gradient(to right, black, transparent),
+    radial-gradient(circle, white 50%, transparent 75%), none, url(#svg-mask);
+}
+```
+
+or, using the {{cssxref("mask")}} shorthand:
+
+```css
+.masked-element {
+  mask:
     url(alphaImage.png), linear-gradient(to right, black, transparent),
     radial-gradient(circle, white 50%, transparent 75%), none, url(#svg-mask);
 }
@@ -57,7 +66,9 @@ With `luminance` masks, the [brightness of mask's colors](/en-US/docs/Web/CSS/CS
 
 This example demonstrates the difference between `alpha` and `luminance` masks. The masks are the same, but in the `alpha` mask, only the alpha-transparency of the gradient mask colors matter. In the `luminance` example, the R, G, B, and A all matter.
 
-```html hidden
+Two containers contain images, while the last is empty but is included to display the gradient we will be using as our `mask-image`.
+
+```html live-sample___mode
 <div class="alpha">
   <img
     src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
@@ -71,15 +82,18 @@ This example demonstrates the difference between `alpha` and `luminance` masks. 
 <div class="gradient"></div>
 ```
 
-```css hidden
+```css hidden live-sample___mode
 body {
   display: flex;
   gap: 20px;
   padding: 15px;
-  background-image:
-    linear-gradient(to right, rgb(0 0 0 / 0) 50%, rgb(0 0 0 / 0.05) 50%),
-    linear-gradient(to bottom, rgb(0 0 0 / 0) 50%, rgb(0 0 0 / 0.05) 50%);
-  background-size: 20px 20px;
+  background-image: conic-gradient(
+    rgb(0 0 0 / 0) 90deg,
+    rgb(0 0 0 / 0.05) 90deg 180deg,
+    rgb(0 0 0 / 0) 180deg 270deg,
+    rgb(0 0 0 / 0.05) 270deg
+  );
+  background-size: 30px 30px;
 }
 div,
 svg,
@@ -87,15 +101,70 @@ img {
   width: 220px;
   aspect-ratio: 1;
 }
+div {
+  border: 1px solid black;
+}
 ```
+
+We declare a [`repeating-linear-gradient`](/en-US/docs/Web/CSS/gradient/repeating-linear-gradient) with red, transparent, and semi-transparent red diagonal stripes. This gradient is used as our mask and, for the last container, as the background image:
+
+```css live-sample___mode
+img {
+  mask-image: repeating-linear-gradient(
+    to bottom right,
+    #f00 0 20px,
+    #f005 20px 40px,
+    transparent 40px 60px
+  );
+}
+.gradient {
+  background: repeating-linear-gradient(
+    to bottom right,
+    #f00 0 20px,
+    #f005 20px 40px,
+    transparent 40px 60px
+  );
+}
+```
+
+We set different values for the `mask-mode` property for each image:
+
+```css live-sample___mode
+.alpha img {
+  mask-mode: alpha;
+}
+
+.luminance img {
+  mask-mode: luminance;
+}
+```
+
+{{EmbedLiveSample("mode", "", "250px")}}
+
+In the `alpha` case, only the transparency of the gradient's colors matter. Where the gradient is opaque red, the image is opaque. Where the gradient is transparent, the image is hidden. Where the gradient is 50% opaque, the image is 50% opaque. In the `luminance` case, the color's brightness matters! See [Alpha transparency versus luminance](/en-US/docs/Web/CSS/CSS_masking/Masking#alpha_transparency_versus_luminance) to learn about the equation that uses the color's R, G, B, and A channels to determine the opacity of the mask.
 
 ### The `mask-mode` default value: `match-source`
 
-In the `masked-element` example, if we don't explicitly set the `mask-mode` property, it will default to `match-source` for each layer, as if we had set the following:
+In the previous example, we set the `mask-mode` property to `alpha` or `luminance`. Neither of these is the default value. Rather, `match-source`, which sets the mask-mode to match the mask type, is the default. Every mask is a `alpha` mask except masks where the mask source is an SVG {{svgelement("mask")}} element, in which case the {{cssxref("mask-type")}} property defaults to the value of the {{cssxref("mask-type")}} property, if present, or the SVG {{svgAttr("mask-type")}} attribute if present, or `luminance` if the neither the property nor attribute are explicitly set on the `<mask>` element itself.
+
+Continuing with the `masked-element` example, if we don't explicitly set the `mask-mode` property, it will default to `match-source` for each layer, as if we had set the following:
 
 ```css
 .masked-element {
   mask-mode: match-source;
+}
+```
+
+or, using the `mask` shorthand:
+
+```css
+.masked-element {
+  mask:
+    url(alphaImage.png) match-source,
+    linear-gradient(to right, black, transparent) match-source,
+    radial-gradient(circle, white 50%, transparent 75%) match-source,
+    none match-source,
+    url(#svg-mask) match-source;
 }
 ```
 
@@ -115,39 +184,66 @@ If we don't declare the `mask-mode` property at all, and allow it default to `ma
 }
 ```
 
-## Opaqueness versus transparency
+or, using the `mask` shorthand:
 
-```html hidden live-sample___xxx
-<img
-  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-  alt="Pride flag"
-  class="applied-mask" />
-<div class="mask-source"></div>
-```
-
-```css hidden live-sample___xxx
-body {
-  display: flex;
-  gap: 20px;
-  padding: 15px;
-  background-image:
-    linear-gradient(to right, rgb(0 0 0 / 0) 50%, rgb(0 0 0 / 0.05) 50%),
-    linear-gradient(to bottom, rgb(0 0 0 / 0) 50%, rgb(0 0 0 / 0.05) 50%);
-  background-size: 20px 20px;
-}
-div,
-svg,
-img {
-  width: 220px;
-  aspect-ratio: 1;
+```css
+.masked-element {
+  mask:
+    url(alphaImage.png) alpha,
+    linear-gradient(to right, black, transparent) alpha,
+    radial-gradient(circle, white 50%, transparent 75%) alpha,
+    none match-source,
+    url(#svg-mask) luminance;
 }
 ```
 
-{{EmbedLiveSample("xxx", "", "250px")}}
+## The `mask-size` property
+
+## The `mask-repeat` property
+
+## The `mask-position` property
+
+## The `mask-origin` property
+
+The `mask-origin` property sets the origin of a mask, determining the origin of the `mask-position` property, also known as the _mask positioning area_. For example, if the `mask-position` is `top left`, is that relative to the border's outer edge, the padding's outer edge, or the content's outer edge?
+
+By default, HTML elements have masks their masks positioned relative to the `border-box`, which is the outer edge of the border. Continuing with the `masked-element` example, if we don't explicitly set the `mask-origin` property, it will default to `border-box` for each layer, as if we had set the following:
+
+```css
+.masked-element {
+  mask-mode: border-box;
+}
+```
+
+For HTML elements, you can use the `mask-origin` property to set it to `padding-box` or `content-box` as well.
+
+For SVG elements, which don't have the associated CSS layout boxes, a mask can be contained inside the SVG element's fill, stroke, or view box.
+
+## The `mask-clip` property
+
+The `mask-clip` property determines the area the element which will be affected by a mask. It is analogous to the {{cssxref("background-clip")}} property,
+
+Continuing with the `masked-element` example, if we don't explicitly set the `mask-origin` property, it will default to `border-box` for each layer, as if we had set the following:
+
+For mask layer images that do not reference an SVG {{svgelement("mask")}} element, the `mask-clip` property defines whether the mask painting area, or the area affected by the mask, is the border, padding, or content box. The painted content of the element will be restricted to this area.
+
+Setting the `mask-clip` and `mask-origin` to different values can cause the mask layer image to be clipped. For example, If an element's has a border and padding, if `mask-clip` is set to `content-box` while `mask-origin` is set to `border-box`, and the `mask-position` is set to the `top left` edge, the mask layer image will be clipped at the top-left edge.
+
+Generally, you will want the mask-clip to be the same as the mask origin. In the `mask` shorthand, if only one [`<geometry-box>`](/en-US/docs/Web/CSS/clip-path#geometry-box) value is given, it sets both the `mask-origin` and `mask-clip` property values. If two `<geometry-box>` values are present, the first defines the `mask-origin` and the second defines the `mask-clip`. The `no-clip` value sets the painted content to not be clipped.
+
+When the mask layer's {{cssxref("mask-image")}} source is a `<mask>`, the `mask-clip` property has no affect. Rather, the `<mask>` element's {{svgAttr("x")}}, {{svgAttr("y")}}, {{svgAttr("width")}}, {{svgAttr("height")}}, and {{svgAttr("maskUnits")}} attributes determine the mask painting area.
 
 ## The `mask-composite` property
 
 The `mask` shorthand includes the {{cssxref("mask-composite")}} property which, in multiple mask declarations. This property defines how the multiple masks interact with each other, or are combined, in creating the final mask effect. Each value in the comma-separated list of values determines whether the browser should `add`, `subtract`, `include` or `exclude` the associated mask layer to or from the mask layers below it. There is no equivalent property for background images.
+
+Continuing with the `masked-element` example, if we don't explicitly set the `mask-composite` property, it will default to `add` for each layer, as if we had set the following:
+
+```css
+.masked-element {
+  mask-composite: add;
+}
+```
 
 The `mask-composite` property is explored in detail in the [Multiple masks and their interactions](/en-US/docs/Web/CSS/CSS_masking/Multiple_masks) guide.
 
