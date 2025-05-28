@@ -7,10 +7,10 @@ page-type: landing-page
 
 {{GlossarySidebar}}
 
-Web technologies use many types of jargon, acronyms, and abbreviations in documentation, programming languages, and other contexts.
+Web technologies use many types of jargon, acronyms, and abbreviations in documentation, code, and other contexts.
 This glossary provides definitions of words and abbreviations you need to know to successfully understand and build for the web.
 
-Glossary terms can be selected from the sidebar.
+Use the sidebar to browse through or jump to specific glossary terms. You can also use the search "Filter" at the top of the sidebar to quickly look for a term.
 
 > [!NOTE]
 > This glossary is a never-ending work in progress.
