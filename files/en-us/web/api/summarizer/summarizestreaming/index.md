@@ -57,7 +57,7 @@ A {{domxref("ReadableStream")}} containing the generated summary.
 const summarizer = await Summarizer.create({
   sharedContext:
     "A general summary to help a user decide if the text is worth reading",
-  type: "tl;dr",
+  type: "tldr",
   length: "short",
 });
 

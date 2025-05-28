@@ -274,8 +274,7 @@ form.onsubmit = validate;
 
 function validate(e) {
   errorList.textContent = "";
-  for (let i = 0; i < formItems.length; i++) {
-    const testItem = formItems[i];
+  for (const testItem of formItems) {
     if (testItem.input.value === "") {
       errorField.style.left = "360px";
       createLink(testItem);

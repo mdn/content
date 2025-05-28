@@ -29,7 +29,7 @@ A generic {{DOMxRef("Event")}} with no added properties.
 You can use the `audiostart` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+const recognition = new (SpeechRecognition || webkitSpeechRecognition)();
 
 recognition.addEventListener("audiostart", () => {
   console.log("Audio capturing started");

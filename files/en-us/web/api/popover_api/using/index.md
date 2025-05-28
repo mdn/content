@@ -102,7 +102,7 @@ The {{domxref("HTMLElement.popover")}} property can be used to get or set the [`
 
 ```js
 function supportsPopover() {
-  return HTMLElement.prototype.hasOwnProperty("popover");
+  return Object.hasOwn(HTMLElement.prototype, "popover");
 }
 ```
 

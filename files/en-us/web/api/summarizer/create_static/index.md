@@ -68,7 +68,7 @@ A {{jsxref("Promise")}} that fulfills with a `Summarizer` object instance.
 const summarizer = await Summarizer.create({
   sharedContext:
     "A general summary to help a user decide if the text is worth reading",
-  type: "tl;dr",
+  type: "tldr",
   length: "short",
   format: "markdown",
   expectedInputLanguages: ["en-US"],

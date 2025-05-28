@@ -354,7 +354,7 @@ function makePushSourceStream() {
       readRepeatedly().catch((e) => controller.error(e));
       function readRepeatedly() {
         return pushSource.dataRequest().then((result) => {
-          if (result.data.length == 0) {
+          if (result.data.length === 0) {
             logSource(`No data from source: closing`);
             controller.close();
             return;

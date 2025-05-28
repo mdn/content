@@ -1,5 +1,6 @@
 ---
-title: "Permissions-Policy: language-detector"
+title: "Permissions-Policy: language-detector directive"
+short-title: language-detector
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/language-detector
 page-type: http-permissions-policy-directive
 status:

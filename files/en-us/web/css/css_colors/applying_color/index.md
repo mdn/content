@@ -169,7 +169,7 @@ The `.boxLeft` class, used to style the box on the left, sets up the color of th
   background-color: hwb(270deg 63% 13%);
   outline: 4px dashed #6e1478;
   color: hsl(0deg 100% 100%);
-  text-decoration: underline;
+  text-decoration-line: underline;
   text-decoration-style: wavy;
   text-decoration-color: #8f8;
   text-decoration: underline wavy #8f8;

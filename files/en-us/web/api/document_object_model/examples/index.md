@@ -155,11 +155,9 @@ In this simple example, some basic style properties of an HTML paragraph element
 The {{domxref("document.styleSheets", "styleSheets")}} property on the {{domxref("document")}} object returns a list of the stylesheets that have been loaded on that document. You can access these stylesheets and their rules individually using the stylesheet, style, and {{domxref("CSSRule")}} objects, as demonstrated in this example, which prints out all of the style rule selectors to the console.
 
 ```js
-const ss = document.styleSheets;
-
-for (let i = 0; i < ss.length; i++) {
-  for (let j = 0; j < ss[i].cssRules.length; j++) {
-    console.log(`${ss[i].cssRules[j].selectorText}\n`);
+for (const styleSheet of document.styleSheets) {
+  for (const rule of styleSheet.cssRules) {
+    console.log(`${rule.selectorText}\n`);
   }
 }
 ```

@@ -523,13 +523,13 @@ function getProperties() {
 
 function getCheckedValue(radioName) {
   const radios = document.forms[0].elements[radioName];
-  for (let i = 0; i < radios.length; i++) {
-    if (radios[i].checked) {
+  for (const radio of radios) {
+    if (radio.checked) {
       const curElemName = `input_${radioName}`;
       const curElem = document.getElementById(curElemName);
-      curElem.value = radios[i].value;
+      curElem.value = radio.value;
 
-      return radios[i].value;
+      return radio.value;
     }
   }
 }

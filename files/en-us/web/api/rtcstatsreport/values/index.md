@@ -36,7 +36,7 @@ The properties of statistics objects with the `type` of `outbound-rtp` are logge
 const stats = await myPeerConnection.getStats();
 
 for (const stat of stats.values()) {
-  if (stat.type != "outbound-rtp") continue;
+  if (stat.type !== "outbound-rtp") continue;
   Object.keys(stat).forEach((statName) => {
     console.log(`${statName}: ${report[statName]}`);
   });
