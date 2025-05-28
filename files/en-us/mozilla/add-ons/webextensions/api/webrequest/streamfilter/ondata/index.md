@@ -421,21 +421,18 @@ function listener(details) {
     }
 
     data = new Uint8Array(data);
-    let i = data.lastIndexOf(bytes[0]);
-    if (i != -1 && i + bytes.length > data.length) {
-      // Handle cases where the end of the data looks like "<h1>Exampl"
-      const initial = i;
-      let found = true;
-      for (let j = 1, l = data.length - i; j < l; j++) {
-        if (data[++i] !== bytes[j]) {
-          found = false;
-          break;
+    outer: for (let i = data.length - 1, l = data.length - bytes.length; i > l; i--) {
+      if (bytes[0] === data[i]) {
+        // Handle cases where the end of the data looks like "<h1>Exampl"
+        const initial = i;
+        for (let j = 1, l = data.length - i; j < l; j++) {
+          if (data[++i] !== bytes[j]) {
+            break outer;
+          }
         }
-      }
-      if (found) {
-        oldData.push(...data.subarray(initial));
-        filter.write(data.subarray(0, initial));
-        return;
+        oldData.push(...data.slice(initial));
+        data = data.slice(0, initial);
+        break;
       }
     }
     filter.write(data);
