@@ -405,22 +405,23 @@ function listener(details) {
 
   const oldData = [];
   filter.ondata = (event) => {
-    let data = new Uint8Array(event.data);
+    let data = event.data;
+    data = new Uint8Array(data);
     data = Array.from(data);
+
     if (oldData.length) {
       data = oldData.concat(data);
       oldData.length = 0;
     }
 
-    const res = search(bytes, data);
     let len = 0;
+    const res = search(bytes, data);
     for (const i of res) {
       // Insert "WebExtension " at the given index
       data.splice(i + len, 0, ...elements);
       len += elements.length;
     }
 
-    data = new Uint8Array(data);
     outer: for (let i = data.length - 1, l = data.length - bytes.length; i > l; i--) {
       if (bytes[0] === data[i]) {
         // Handle cases where the end of the data looks like "<h1>Exampl"
@@ -435,7 +436,7 @@ function listener(details) {
         break;
       }
     }
-    filter.write(data);
+    filter.write(new Uint8Array(data));
   };
 
   filter.onstop = () => {
