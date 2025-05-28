@@ -119,8 +119,8 @@ To prevent ambiguity, each property that uses `<custom-ident>` forbids the use o
     - `disclosure-open`
     - `disclosure-close`
 
-- {{CSSxRef("grid-row-start")}}, {{CSSxRef("grid-row-end")}}, {{CSSxRef("grid-column-start")}}, {{CSSxRef("grid-column-end")}}
-  - : Forbids the `span` and `auto` value.
+- {{CSSxRef("grid-row-start")}}, {{CSSxRef("grid-row-end")}}, {{CSSxRef("grid-column-start")}}, {{CSSxRef("grid-column-end")}}, {{CSSxRef("grid-template-rows")}}, {{CSSxRef("grid-template-columns")}}
+  - : Forbids the `span` and `auto` values.
 - {{CSSxRef("view-transition-name")}}
   - : Forbids the global CSS values (`unset`, `initial`, and `inherit`), as well as `none`.
 - {{CSSxRef("will-change")}}
