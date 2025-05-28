@@ -64,7 +64,7 @@ The main web app (for example, `https://example.com`) needs to include the origi
 
 ### Opt-in via a .well-known file
 
-To opt-in to the association, the sites whose origins are specified as in-scope inside the web app's `scope_extensions` manifest member need to include a [.well-known](https://en.wikipedia.org/wiki/Well-known_URI) file called `web-app-origin-association` at a relative URL of `/.well-known/web-app-origin-association`. This needs to contain a JSON structure that includes a property equal to the [`id`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/id) manifest member of each web app the site is opting into the scope of.
+To opt-in to the association, the sites whose origins are specified as in-scope inside the web app's `scope_extensions` manifest member need to include a [.well-known](https://en.wikipedia.org/wiki/Well-known_URI) file called `web-app-origin-association` at a relative URL of `/.well-known/web-app-origin-association`. This must contain a JSON structure that includes one or more properties whose keys are equal to the [`id`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/id) manifest members of each web app the site is opting into the scope of.
 
 For example:
 
@@ -72,13 +72,17 @@ For example:
 {
   "https://example.com": {
     "scope": "/"
+  },
+  "https://beta.example.com": {
+    "scope": "/"
   }
 }
 ```
 
 The value of each property is an object containing a `scope` property with a value specifying the exact path that will be in-scope for the referencing web app.
 
-EDITORIAL: I'M ASSUMING YOU CAN INCLUDE MULTIPLE FIELDS IN THE WELL-KNOWN FILE, TO OPT-IN TO THE SCOPE OF MULTIPLE WEB APPS, OR INCLUDE DIFFERENT SCOPES IN THE SCOPE OF A SINGLE WEB APP?
+> [!NOTE]
+> It is not possible to specify different scopes for the same web app — you can't include multiple entries for the same key.
 
 ### Effect of `scope_extensions`
 
