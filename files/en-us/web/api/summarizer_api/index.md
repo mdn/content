@@ -24,7 +24,7 @@ The Summarizer API provides an asynchronous ({{jsxref("Promise")}}-based) mechan
 
 This is done using the functionality made available by the {{domxref("Summarizer")}} interface, in a two-step process:
 
-1. Create a `Summarizer` object instance using the {{domxref("Summarizer.create_static", "Summarizer.create()")}} static method, specifying options for what kind of summary you want written. Options include length, type (for example, "tl;dr" or key points), format (plain text or markdown), and input and output languages.
+1. Create a `Summarizer` object instance using the {{domxref("Summarizer.create_static", "Summarizer.create()")}} static method, specifying options for what kind of summary you want written. Options include length, type (for example, "tldr" or key points), format (plain text or markdown), and input and output languages.
    > [!NOTE]
    > If you want to check whether the browser AI model is able to support your preferences, you can do so with the {{domxref("Summarizer.availability_static", "Summarizer.availability()")}} static method.
 2. Run the {{domxref("Summarizer.summarize()")}} instance method to request the summary.
