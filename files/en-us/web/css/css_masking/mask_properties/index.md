@@ -19,7 +19,7 @@ Each mask layers consists of a {{cssxref("mask-image")}}, which is [positioned](
 - Repeating
 - Positioning
 - Clipping
-- Compositing
+- [Compositing](#the_mask-composite_property)
 -
 
 ## Mask layers and the `mask-image` property
@@ -144,6 +144,12 @@ img {
 ```
 
 {{EmbedLiveSample("xxx", "", "250px")}}
+
+## The `mask-composite` property
+
+The `mask` shorthand includes the {{cssxref("mask-composite")}} property which, in multiple mask declarations. This property defines how the multiple masks interact with each other, or are combined, in creating the final mask effect. Each value in the comma-separated list of values determines whether the browser should `add`, `subtract`, `include` or `exclude` the associated mask layer to or from the mask layers below it. There is no equivalent property for background images.
+
+The `mask-composite` property is explored in detail in the [Multiple masks and their interactions](/en-US/docs/Web/CSS/CSS_masking/Multiple_masks) guide.
 
 ## See also
 
