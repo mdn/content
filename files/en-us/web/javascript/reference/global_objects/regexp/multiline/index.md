@@ -12,8 +12,8 @@ The **`multiline`** accessor property of {{jsxref("RegExp")}} instances returns 
 {{InteractiveExample("JavaScript Demo: RegExp.prototype.multiline", "taller")}}
 
 ```js interactive-example
-const regex1 = new RegExp("^football");
-const regex2 = new RegExp("^football", "m");
+const regex1 = /^football/;
+const regex2 = /^football/m;
 
 console.log(regex1.multiline);
 // Expected output: false

@@ -57,7 +57,7 @@ elem.addEventListener("cancel", () => {
 });
 
 elem.addEventListener("change", () => {
-  if (elem.files.length == 1) {
+  if (elem.files.length === 1) {
     result.textContent = "File Selected.";
   }
 });

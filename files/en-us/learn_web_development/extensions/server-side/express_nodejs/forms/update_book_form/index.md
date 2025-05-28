@@ -37,7 +37,7 @@ exports.book_update_get = asyncHandler(async (req, res, next) => {
     title: "Update Book",
     authors: allAuthors,
     genres: allGenres,
-    book: book,
+    book,
   });
 });
 ```
@@ -118,7 +118,7 @@ exports.book_update_post = [
         title: "Update Book",
         authors: allAuthors,
         genres: allGenres,
-        book: book,
+        book,
         errors: errors.array(),
       });
       return;

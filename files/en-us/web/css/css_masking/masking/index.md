@@ -123,7 +123,7 @@ Note how the transparent mask areas crop the element; the only parts of the elem
 
 ## Alpha transparency versus luminance
 
-The `mask-mode` property's default value — `match-source` — sets the mode to either `alpha` or `luminance`, depending on the value. The `match-source` value resolves to `alpha` for all mask sources other than SVG {{svgelement("mask")}} elements. If the mask source is a `<mask>` element, `match-source` resolves to the `<mask>`'s {{cssxref("mask-type")}} property value, if set. Otherwise, it resolves to the value of the SVG {{svgattr("mask-type")}} attribute set on the `<mask>` element. If that is not explicitly set either, `match-source` will resolve to `luminance.`
+The `mask-mode` property's default value — `match-source` — sets the mode to either `alpha` or `luminance`, depending on the value. The `match-source` value resolves to `alpha` for all mask sources other than SVG {{svgelement("mask")}} elements. If the mask source is a `<mask>` element, `match-source` resolves to the `<mask>`'s {{cssxref("mask-type")}} property value, if set. Otherwise, it resolves to the value of the SVG {{svgattr("mask-type")}} attribute set on the `<mask>` element. If that is not explicitly set either, `match-source` will resolve to `luminance`.
 
 If `mask-mode` resolves to `luminance`, or we explicitly set it to `luminance`, the colors of the mask will affect the mask opacity. In the previous demo, the `mask-mode` was not set, so the value defaulted to `match-source`. As the colorful heart image is a transparent PNG, `match-source` resolves to `alpha`. By explicitly setting this property, we can control the mode. In this demo, we change the `mask-mode` to `luminance`.
 

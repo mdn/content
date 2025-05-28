@@ -89,8 +89,8 @@ someElement.addEventListener(
   (ev) => {
     // Iterate through the touch points that were activated
     // for this element and process each event 'target'
-    for (let i = 0; i < ev.targetTouches.length; i++) {
-      process_target(ev.targetTouches[i].target);
+    for (const touch of ev.targetTouches) {
+      process_target(touch.target);
     }
   },
   false,

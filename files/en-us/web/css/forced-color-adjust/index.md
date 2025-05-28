@@ -29,7 +29,7 @@ The `forced-color-adjust` property's value must be one of the following keywords
 ### Values
 
 - `auto`
-  - : The element's colors are adjusted by the {{Glossary("user agent")}} in forced colors mode. This is the default.
+  - : The element's colors are adjusted by the {{Glossary("user agent")}} in forced colors mode. This is the default value.
 - `none`
   - : The element's colors are not automatically adjusted by the {{Glossary("user agent")}} in forced colors mode.
 - `preserve-parent-color`

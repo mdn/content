@@ -229,9 +229,8 @@ This demo loads with `font-weight: 500;` set. Change the value of the `font-weig
 .sample {
   text-transform: uppercase;
   font-weight: 500;
-  font:
-    1.5rem "MutatorSans",
-    sans-serif;
+  font-size: 1.5rem;
+  font-family: "MutatorSans", sans-serif;
 }
 ```
 

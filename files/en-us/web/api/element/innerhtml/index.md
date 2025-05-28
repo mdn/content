@@ -8,7 +8,7 @@ browser-compat: api.Element.innerHTML
 
 {{APIRef("DOM")}}
 
-The {{domxref("Element")}} property **`innerHTML`** gets or sets the HTML or XML markup contained within the element.
+The **`innerHTML`** property of the {{domxref("Element")}} interface gets or sets the HTML or XML markup contained within the element.
 
 More precisely, `innerHTML` gets a serialization of the nested child DOM elements within the element, or sets HTML or XML that should be parsed to replace the DOM tree within the element.
 
@@ -19,6 +19,9 @@ Similarly, when setting element content using `innerHTML`, the HTML string is pa
 
 So for example [`<template>`](/en-US/docs/Web/HTML/Reference/Elements/template) is parsed into as {{domxref("HTMLTemplateElement")}}, whether or not the [`shadowrootmode`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootmode) attribute is specified
 In order to set an element's contents from an HTML string that includes declarative shadow roots, you must use either {{domxref("Element.setHTMLUnsafe()")}} or {{domxref("ShadowRoot.setHTMLUnsafe()")}}.
+
+Note that some browsers serialize `<` and `>` in attributes as `&lt;` and `&gt;` when reading the HTML (see [Browser compatibility](#browser_compatibility)).
+This prevents certain exploits where code becomes executable when serialized and then deserialized into HTML.
 
 ## Value
 
@@ -42,7 +45,7 @@ Reading `innerHTML` causes the user agent to serialize the HTML or XML fragment 
 The resulting string is returned.
 
 ```js
-let contents = myElement.innerHTML;
+const contents = myElement.innerHTML;
 ```
 
 This lets you look at the HTML markup of the element's content nodes.

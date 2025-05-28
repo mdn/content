@@ -190,8 +190,8 @@ Consider providing a mechanism for pausing or disabling animation, as well as us
 ```js hidden
 function updateTransition() {
   const els = document.querySelectorAll(".parent > div[class]");
-  for (let i = 0; i < els.length; i++) {
-    els[i].classList.toggle("box1");
+  for (const el of els) {
+    el.classList.toggle("box1");
   }
 }
 
@@ -261,8 +261,8 @@ const intervalID = setInterval(updateTransition, 10000);
 ```js hidden
 function updateTransition() {
   const els = document.querySelectorAll(".parent > div[class]");
-  for (let i = 0; i < els.length; i++) {
-    els[i].classList.toggle("box1");
+  for (const el of els) {
+    el.classList.toggle("box1");
   }
 }
 

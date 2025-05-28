@@ -278,7 +278,7 @@ books_containing_genre = Book.objects.filter(genre__name__icontains='fiction')
 
 > [!NOTE]
 > You can use underscores (`__`) to navigate as many levels of relationships (`ForeignKey`/`ManyToManyField`) as you like.
-> For example, a `Book` that had different types, defined using a further "cover" relationship might have a parameter name: `type__cover__name__exact='hard'.`
+> For example, a `Book` that had different types, defined using a further "cover" relationship might have a parameter name: `type__cover__name__exact='hard'`.
 
 There is a lot more you can do with queries, including backwards searches from related models, chaining filters, returning a smaller set of values, etc. For more information, see [Making queries](https://docs.djangoproject.com/en/5.0/topics/db/queries/) (Django Docs).
 
