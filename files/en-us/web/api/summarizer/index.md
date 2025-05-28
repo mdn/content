@@ -60,7 +60,7 @@ See [Using the Summarizer API](/en-US/docs/Web/API/Summarizer_API/Using) for a c
 const summarizer = await Summarizer.create({
   sharedContext:
     "A general summary to help a user decide if the text is worth reading",
-  type: "tl;dr",
+  type: "tldr",
   length: "short",
   format: "markdown",
   expectedInputLanguages: ["en-US"],
