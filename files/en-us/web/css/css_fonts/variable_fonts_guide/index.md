@@ -402,7 +402,7 @@ In the following live example, you can adjust the slant.
 ```css hidden live-sample___slant-example
 @font-face {
   font-family: "SlantFont";
-  font-style: oblique -15 15;
+  font-style: oblique -15deg 15deg;
   src: url("https://mdn.github.io/shared-assets/fonts/font_with_slant_axis.woff2")
     format("woff2");
 }

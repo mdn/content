@@ -101,7 +101,7 @@ function addStylesheetRules(rules) {
   // Grab style element's sheet
   const styleSheet = styleEl.sheet;
 
-  for (const rule of rules) {
+  for (let rule of rules) {
     let i = 1,
       selector = rule[0],
       propStr = "";
