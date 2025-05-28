@@ -246,8 +246,8 @@ import fs from "node:fs/promises";
 
 let readPromise = null; // Prevents reading until an in-progress read has finished.
 
-// This function cannot be called multiple times in parallel because they
-// share access to /dev/stdin. We use a lock `readPromise` to prevent this.
+// This function should not be called in parallel, because each call would
+// share access to /dev/stdin. A `readPromise` lock is used to prevent this.
 async function getMessage() {
   while (readPromise) await readPromise;
   let resolveReadPromise;
