@@ -27,18 +27,14 @@ It provides a private, declarative method to display three-dimensional model inf
 
 ## Coordinate space
 
-A valid model resource will contain three-dimensional data. The coordinate space is interpreted as
-a right-handed, Y-up [coordinate system](https://en.wikipedia.org/wiki/Cartesian_coordinate_system). That is by default, the
-model will be displayed with the following alignment:
+A valid model resource will contain three-dimensional data. The coordinate space is interpreted as a right-handed, Y-up [coordinate system](https://en.wikipedia.org/wiki/Cartesian_coordinate_system). That is by default, the model will be displayed with the following alignment:
 
 - Y will be displayed as the _vertical_ dimension, with positive-Y directed _upward_,
 - X will be displayed as the _horizontal_ dimension, with positive-X directed _right_,
 - Z will be displayed as the _depth_ dimension, with _negative_-Z directed _inward_.
 
 > [!NOTE]
-> For safety and security reasons, rendering of content is only
-> permitted inside the portal within the page, and content that protrudes
-> in the +Z dimension beyond the front plane of the page will be clipped.
+> For safety and security reasons, rendering of content is only permitted inside the portal within the page, and content that protrudes in the +Z dimension beyond the front plane of the page will be clipped.
 
 ![The coordinate space in a model context](axes.svg)
 The coordinate space in a model context
@@ -96,7 +92,7 @@ The projection of the equirectangular back to a sphere
 
 - While it provides benefits for all devices and User Agents, the `<model>` element has particular value on platforms with stereoscopic and/or head-tracking capabilities, such as Head-Mounted Displays (HMDs). It can be used as declarative alternative to the WebXR API to provide spatial content.
 
-## Object fit
+### Object fit
 
 By default, the model content is initially set to an "object fit". That is, the scale is set such that the model's `entityTransform` is:
 
@@ -111,7 +107,7 @@ This will result in the model being centered inside the viewport and scaled to f
 ![A model file scaled to the bounds of the viewport specified](object-fit.svg)
 A model file scaled to the bounds of the viewport specified
 
-## Natural scale
+### Natural scale
 
 While model elements are governed by "object fit" and ["orbit fit"](/en-US/docs/Web/API/HTMLModelElement/stageMode#orbit_mode) transformations by default, model resources have implicit real-world dimensions. For example, A model with its `entityTransform` set to the [identity matrix](https://en.wikipedia.org/wiki/Identity_matrix) _I<sub>4</sub>_ with a 10cm teapot will be displayed as occupying 10cm, or approximately 378 CSS pixels in the window.
 
@@ -184,14 +180,14 @@ The semantics of the `model` element is that of declaratively portraying a singl
             with non-empty <code>alt</code> attribute or no
             <code>alt</code> attribute:
             <code
-              ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/model_role"
+              ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/model_role"
                 ><code>model</code></a
               ></code
             >
           </li>
           <li>
             with empty <code>alt</code> attribute:
-            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"
               ><code>presentation</code></a
             >
           </li>
@@ -208,7 +204,7 @@ The semantics of the `model` element is that of declaratively portraying a singl
               <li>
                 <code
                   ><a
-                    href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role"
+                    href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/button_role"
                     >button</a
                   ></code
                 >
@@ -216,41 +212,41 @@ The semantics of the `model` element is that of declaratively portraying a singl
               <li>
                 <code
                   ><a
-                    href="/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role"
+                    href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role"
                     >checkbox</a
                   ></code
                 >
               </li>
-              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a></li>
-              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a></li>
-              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a></li>
-              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a></li>
-              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a></li>
-              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role"><code>progressbar</code></a></li>
-              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role"><code>scrollbar</code></a></li>
-              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role"><code>separator</code></a></li>
-              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role"><code>slider</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/link_role"><code>link</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role"><code>menuitem</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role"><code>menuitemradio</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/option_role"><code>option</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/progressbar_role"><code>progressbar</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role"><code>scrollbar</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role"><code>separator</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role"><code>slider</code></a></li>
               <li>
                 <code
                   ><a
-                    href="/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role"
+                    href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role"
                     >switch</a
                   ></code
                 >
               </li>
               <li>
                 <code
-                  ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role"
+                  ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role"
                     >tab</a
                   ></code
                 >
               </li>
-              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role"><code>treeitem</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role"><code>treeitem</code></a></li>
             </ul>
           </li>
           <li>
-            with empty <code>alt</code> attribute, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
-            or <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
+            with empty <code>alt</code> attribute, <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>
+            or <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>
           </li>
           <li>
             with no <code>alt</code> attribute, no <code>role</code> permitted

@@ -8,18 +8,10 @@ browser-compat: api.HTMLModelElement.boundingBoxCenter
 
 {{APIRef("HTML DOM")}}
 
-Once a model resource has is ready and renderable, the
-**`HTMLModelElement.boundingBoxCenter`** property indicates the center of the
-axis-aligned bounding box (AABB) of a model resource's contents, irrespective
-of their size.
+Once a model resource has is ready and renderable, the **`HTMLModelElement.boundingBoxCenter`** property indicates the center of the axis-aligned bounding box (AABB) of a model resource's contents, irrespective of their size.
 
 > [!NOTE]
-> The values for the bounding box information remains constant for the lifetime
-> of the model. If a model contains animated content, the values of
-> `boundingBoxCenter` and `boundingBoxExtents` will reflect the state of the
-> model on the first frame of the animation, or the bounding box of the
-> skeletal bind pose, if a
-> [skeletal animation](https://en.wikipedia.org/wiki/Skeletal_animation) is present.
+> The values for the bounding box information remains constant for the lifetime of the model. If a model contains animated content, the values of `boundingBoxCenter` and `boundingBoxExtents` will reflect the state of the model on the first frame of the animation, or the bounding box of the skeletal bind pose, if a [skeletal animation](https://en.wikipedia.org/wiki/Skeletal_animation) is present.
 
 ## Value
 

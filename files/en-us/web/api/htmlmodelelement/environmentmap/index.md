@@ -8,14 +8,7 @@ browser-compat: api.HTMLModelElement.environmentMap
 
 {{APIRef("HTML DOM")}}
 
-The **`environmentMap`** property reflects the
-[`environmentmap`](/en-US/docs/Web/HTML/Reference/Elements/model#environmentmap)
-HTML attribute, and represents the {{glossary("URL")}} of the image file
-providing the lighting information for a given model, interpreted as an
-[equirectangular](https://en.wikipedia.org/wiki/Equirectangular_projection)
-projection. When an environment map resource is ready to participate in rendering, the model's
-{{domxref("HTMLModelElement.environmentMapReady", "environmentMapReady")}}
-promise is resolved, or is rejected if the resource cannot load or be used.
+The **`environmentMap`** property reflects the [`environmentmap`](/en-US/docs/Web/HTML/Reference/Elements/model#environmentmap) HTML attribute, and represents the {{glossary("URL")}} of the image file providing the lighting information for a given model, interpreted as an [equirectangular](https://en.wikipedia.org/wiki/Equirectangular_projection) projection. When an environment map resource is ready to participate in rendering, the model's {{domxref("HTMLModelElement.environmentMapReady", "environmentMapReady")}} promise is resolved, or is rejected if the resource cannot load or be used.
 
 <table><tr><td>
 
@@ -52,7 +45,7 @@ This example demonstrates how to specify a custom environment map, both in JavaS
 ```
 
 ```js
-let modelElem = document.querySelector("model");
+const modelElem = document.querySelector("model");
 
 async function goToTundra() {
   modelElem.alt = "a teapot in a frozen tundra";

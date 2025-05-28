@@ -12,13 +12,10 @@ The **`HTMLModelElement.playbackRate`** property sets the rate at which the mode
 
 ## Value
 
-A [`double`](https://en.wikipedia.org/wiki/Double-precision_floating-point_format).
-`1.0` is "normal speed," values lower than `1.0` make the model animation
-play slower than normal, higher values make it play faster. (**Default:** `1.0`)
+A [`double`](https://en.wikipedia.org/wiki/Double-precision_floating-point_format). `1.0` is "normal speed," values lower than `1.0` make the model animation play slower than normal, higher values make it play faster. (**Default:** `1.0`)
 
 > [!NOTE]
-> A model's `currentTime` and `duration` are unaffected
-> by changes to its animation's `playbackRate`.
+> A model's `currentTime` and `duration` are unaffected by changes to its animation's `playbackRate`.
 
 ## Examples
 

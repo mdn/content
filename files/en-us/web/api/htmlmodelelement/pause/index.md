@@ -8,8 +8,7 @@ browser-compat: api.HTMLModelElement.pause
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLModelElement.pause()`** method will pause playback
-of the model element's animation, if the model is already in a paused state this method will have no effect.
+The **`HTMLModelElement.pause()`** method will pause playback of the model element's animation, if the model is already in a paused state this method will have no effect.
 
 ## Syntax
 
@@ -23,8 +22,7 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}} that is resolved when playback has been paused, or is
-rejected if for any reason playback cannot be paused.
+A {{jsxref("Promise")}} that is resolved when playback has been paused, or is rejected if for any reason playback cannot be paused.
 
 ### Exceptions
 

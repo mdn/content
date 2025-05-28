@@ -8,13 +8,11 @@ browser-compat: api.HTMLModelElement.paused
 
 {{APIRef("HTML DOM")}}
 
-The read-only **`HTMLModelElement.paused`** property
-indicates whether the model element's animation is paused.
+The read-only **`HTMLModelElement.paused`** property indicates whether the model element's animation is paused.
 
 ## Value
 
-A boolean value. `true` is paused and `false` is not
-paused.
+A boolean value. `true` is paused and `false` is not paused.
 
 ## Examples
 
@@ -33,4 +31,4 @@ console.log(obj.paused); // true
 
 ## See also
 
-- {{domxref("HTMLModelElement")}}: Interface used to define the `HTMLModelElement.paused` property
+- {{domxref("HTMLModelElement")}}

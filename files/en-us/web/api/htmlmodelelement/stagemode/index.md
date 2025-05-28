@@ -8,9 +8,7 @@ browser-compat: api.HTMLModelElement.stageMode
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLModelElement.stageMode`** property reflects the
-[`stagemode`](/en-US/docs/Web/HTML/Reference/Elements/model#stagemode) HTML attribute,
-which indicates the current stage mode for the model element.
+The **`HTMLModelElement.stageMode`** property reflects the [`stagemode`](/en-US/docs/Web/HTML/Reference/Elements/model#stagemode) HTML attribute, which indicates the current stage mode for the model element.
 
 ### Value
 
@@ -18,10 +16,9 @@ stageMode can be set to the following values:
 
 - `none`: Take no action; equivalent to the value not being set.
 
-- `orbit`: Enter Orbit mode, interpret horizontal user gestures as a rotation
-  of the vertical axis and vertical gestures as rotation in the local pitch plane.
+- `orbit`: Enter Orbit mode, interpret horizontal user gestures as a rotation of the vertical axis and vertical gestures as rotation in the local pitch plane.
 
-## Orbit mode
+### Orbit mode
 
 While the specific behavior of an orbit mode may vary between user agents, it has the following characteristics:
 
@@ -33,12 +30,12 @@ While the specific behavior of an orbit mode may vary between user agents, it ha
 
 Setting the `stagemode` to `orbit` immediately has these consequences for the model element's `entityTransform`:
 
-- Transform is <strong>`orbit-fit`</strong>:
+- Transform is **`orbit-fit`**:
   The scale and position reflected by the model's `entityTransform` is forced to be centered on its `boundingBoxCenter` and to accommodate the full size of the model's `boundingBoxExtents`. This differs to - and is likely smaller than - the model's default, [object fit](/en-US/docs/Web/HTML/Reference/Elements/model#object_fit) transformation.
 
-- Transform is <strong>read-only</strong>:
+- Transform is **read-only**:
   While `entityTransform` is set to a read-only mode where any programmatic attempt to set it directly is ignored, throwing an error.
-- Transform <strong>remains updated</strong>:
+- Transform **remains updated**:
   Updates to the effective transform _are_ reflected in the parameter, so that information related the model's current orientation can be used to drive other aspects of the page's behavior.
 
 ## Examples

@@ -31,4 +31,4 @@ obj.loop = true; // true
 
 ## See also
 
-- {{domxref("HTMLModelElement")}}: Interface used to define the `HTMLModelElement.loop` property
+- {{domxref("HTMLModelElement")}}

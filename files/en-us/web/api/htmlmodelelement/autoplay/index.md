@@ -8,15 +8,11 @@ browser-compat: api.HTMLModelElement.autoplay
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLModelElement.autoplay`** property reflects the
-[`autoplay`](/en-US/docs/Web/HTML/Reference/Elements/model#autoplay) HTML
-attribute, indicating whether playback should automatically begin as soon
-as the model resource is ready and renderable.
+The **`HTMLModelElement.autoplay`** property reflects the [`autoplay`](/en-US/docs/Web/HTML/Reference/Elements/model#autoplay) HTML attribute, indicating whether playback should automatically begin as soon as the model resource is ready and renderable.
 
 ## Value
 
-A boolean value which is `true` if the model element will
-begin playback as soon as the resource is ready.
+A boolean value which is `true` if the model element will begin playback as soon as the resource is ready.
 
 ## Examples
 
