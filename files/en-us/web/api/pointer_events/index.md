@@ -392,16 +392,8 @@ Some additional values have been defined for the CSS {{cssxref("touch-action")}}
 
 ## See also
 
-### Demos and examples
-
-- [Touch/pointer tests and demos (by Patrick H. Lauke)](https://patrickhlauke.github.io/touch/)
-
-### Community
-
+- [Touch Events](/en-US/docs/Web/API/Touch_events)
 - [Pointer Events Working Group](https://github.com/w3c/pointerevents)
 - [Mail list](https://lists.w3.org/Archives/Public/public-pointer-events/)
 - [W3C #pointerevents IRC channel](irc://irc.w3.org:6667/)
-
-### Related topics and resources
-
-- [Touch Events Standard](https://www.w3.org/TR/touch-events/)
+- [Touch/pointer tests and demos](https://patrickhlauke.github.io/touch/) by Patrick H. Lauke
