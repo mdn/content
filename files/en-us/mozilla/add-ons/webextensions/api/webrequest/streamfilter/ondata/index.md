@@ -422,7 +422,11 @@ function listener(details) {
       len += elements.length;
     }
 
-    outer: for (let i = data.length - 1, l = data.length - bytes.length; i > l; i--) {
+    outer: for (
+      let i = data.length - 1, l = data.length - bytes.length;
+      i > l;
+      i--
+    ) {
       if (bytes[0] === data[i]) {
         // Handle cases where the end of the data looks like "<h1>Exampl"
         const initial = i;
