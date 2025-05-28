@@ -3,8 +3,8 @@ title: SVGDiscardElement
 slug: Web/API/SVGDiscardElement
 page-type: web-api-interface
 status:
-  - experimental
   - deprecated
+  - experimental
 browser-compat: api.SVGDiscardElement
 ---
 
