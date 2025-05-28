@@ -1,5 +1,5 @@
 ---
-title: Glossary definitions of Web-related terms
+title: Glossary of web terms
 short-title: Glossary
 slug: Glossary
 page-type: landing-page
