@@ -94,7 +94,7 @@ const range = selObj.getRangeAt(0);
 - `selObj` is a Selection object
 - `range` is a {{DOMxRef("Range")}} object
 
-As the [Selection API specification notes](https://www.w3.org/TR/selection-api/#h_note_15), the Selection API was initially created by Netscape and allowed multiple ranges (for instance, to allow the user to select a column from a {{HTMLElement("table")}}). However, browsers other than Gecko did not implement multiple ranges, and the specification also requires the selection to always have a single range.
+As the [Selection API specification notes](https://w3c.github.io/selection-api/#h-note-13), the Selection API was initially created by Netscape and allowed multiple ranges (for instance, to allow the user to select a column from a {{HTMLElement("table")}}). However, browsers other than Gecko did not implement multiple ranges, and the specification also requires the selection to always have a single range.
 
 ### Selection and input focus
 

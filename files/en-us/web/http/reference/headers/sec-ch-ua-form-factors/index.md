@@ -1,5 +1,6 @@
 ---
-title: Sec-CH-UA-Form-Factors
+title: Sec-CH-UA-Form-Factors header
+short-title: Sec-CH-UA-Form-Factors
 slug: Web/HTTP/Reference/Headers/Sec-CH-UA-Form-Factors
 page-type: http-header
 status:

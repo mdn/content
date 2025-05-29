@@ -101,29 +101,9 @@ Object.defineProperty(obj, "key2", {
   value: "static",
 });
 
-// 3. Recycling same object
-function withValue(value) {
-  const d =
-    withValue.d ||
-    (withValue.d = {
-      enumerable: false,
-      writable: false,
-      configurable: false,
-      value,
-    });
-
-  // avoiding duplicate operation for assigning value
-  if (d.value !== value) d.value = value;
-
-  return d;
-}
-// and
-Object.defineProperty(obj, "key", withValue("static"));
-
-// if freeze is available, prevents adding or
-// removing the object prototype properties
+// 3. Prevents adding or removing the object prototype properties
 // (value, get, set, enumerable, writable, configurable)
-(Object.freeze || Object)(Object.prototype);
+Object.freeze(Object.prototype);
 ```
 
 When the property already exists, `Object.defineProperty()` attempts to modify the property according to the values in the descriptor and the property's current configuration.

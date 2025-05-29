@@ -37,7 +37,7 @@ async function initTransport(url) {
   // Prior to this the reliability is "pending"
   await transport.ready;
 
-  if (transport.reliability == "reliable-only") {
+  if (transport.reliability === "reliable-only") {
     // Use connection only with reliable transports
   } else {
     // Use connection with either reliable or unreliable transports.

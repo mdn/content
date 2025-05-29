@@ -1,5 +1,6 @@
 ---
-title: X-Robots-Tag
+title: X-Robots-Tag header
+short-title: X-Robots-Tag
 slug: Web/HTTP/Reference/Headers/X-Robots-Tag
 page-type: http-header
 status:

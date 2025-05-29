@@ -72,7 +72,7 @@ The element is the opening tag, followed by content, followed by the closing tag
 
 ### Active learning: creating your first HTML element
 
-Edit the line below in the "Editable code" area by wrapping it with the tags `<em>` and `</em>.` To _open the element_, put the opening tag `<em>` at the start of the line. To _close the element_, put the closing tag `</em>` at the end of the line. Doing this should give the line italic text formatting! See your changes update live in the _Output_ area.
+Edit the line below in the "Editable code" area by wrapping it with the tags `<em>` and `</em>`. To _open the element_, put the opening tag `<em>` at the start of the line. To _close the element_, put the closing tag `</em>` at the end of the line. Doing this should give the line italic text formatting! See your changes update live in the _Output_ area.
 
 If you make a mistake, you can clear your work using the _Reset_ button. If you get really stuck, press the _Show solution_ button to see the answer.
 

@@ -1,5 +1,6 @@
 ---
-title: Sec-Fetch-Site
+title: Sec-Fetch-Site header
+short-title: Sec-Fetch-Site
 slug: Web/HTTP/Reference/Headers/Sec-Fetch-Site
 page-type: http-header
 browser-compat: http.headers.Sec-Fetch-Site

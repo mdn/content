@@ -1,5 +1,6 @@
 ---
-title: Accept-Encoding
+title: Accept-Encoding header
+short-title: Accept-Encoding
 slug: Web/HTTP/Reference/Headers/Accept-Encoding
 page-type: http-header
 browser-compat: http.headers.Accept-Encoding

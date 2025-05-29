@@ -1,5 +1,6 @@
 ---
-title: "Permissions-Policy: hid"
+title: "Permissions-Policy: hid directive"
+short-title: hid
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/hid
 page-type: http-permissions-policy-directive
 status:

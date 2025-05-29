@@ -1,5 +1,6 @@
 ---
-title: Access-Control-Request-Method
+title: Access-Control-Request-Method header
+short-title: Access-Control-Request-Method
 slug: Web/HTTP/Reference/Headers/Access-Control-Request-Method
 page-type: http-header
 browser-compat: http.headers.Access-Control-Request-Method

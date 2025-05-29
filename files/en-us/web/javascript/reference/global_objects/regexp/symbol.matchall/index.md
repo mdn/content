@@ -22,7 +22,7 @@ class MyRegExp extends RegExp {
   }
 }
 
-const re = new MyRegExp("-[0-9]+", "g");
+const re = new MyRegExp("-\\d+", "g");
 console.log("2016-01-02|2019-03-07".matchAll(re));
 // Expected output: Array [Array ["-01"], Array ["-02"], Array ["-03"], Array ["-07"]]
 ```
@@ -90,7 +90,7 @@ This method exists for customizing the behavior of `matchAll()` in {{jsxref("Reg
 This method can be used in almost the same way as {{jsxref("String.prototype.matchAll()")}}, except for the different value of `this` and the different order of arguments.
 
 ```js
-const re = /[0-9]+/g;
+const re = /\d+/g;
 const str = "2016-01-02";
 const result = re[Symbol.matchAll](str);
 
@@ -112,7 +112,7 @@ class MyRegExp extends RegExp {
   }
 }
 
-const re = new MyRegExp("([0-9]+)-([0-9]+)-([0-9]+)", "g");
+const re = new MyRegExp("(\\d+)-(\\d+)-(\\d+)", "g");
 const str = "2016-01-02|2019-03-07";
 const result = str.matchAll(re);
 

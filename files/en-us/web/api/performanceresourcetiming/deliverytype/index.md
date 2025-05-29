@@ -33,9 +33,9 @@ The following example uses a {{domxref("PerformanceObserver")}} to notify of new
 
 ```js
 const observer = new PerformanceObserver((list) => {
-  const cachedResources = list.getEntries().filter((entry) => {
-    return entry.deliveryType === "cache";
-  });
+  const cachedResources = list
+    .getEntries()
+    .filter((entry) => entry.deliveryType === "cache");
   console.log(cachedResources);
 });
 
@@ -45,9 +45,9 @@ observer.observe({ type: "resource", buffered: true });
 The following example uses {{domxref("Performance.getEntriesByType()")}}, which only shows `resource` performance entries present in the browser's performance timeline at the time you call the method.
 
 ```js
-const scripts = performance.getEntriesByType("resource").filter((entry) => {
-  return entry.deliveryType === "cache";
-});
+const scripts = performance
+  .getEntriesByType("resource")
+  .filter((entry) => entry.deliveryType === "cache");
 console.log(scripts);
 ```
 

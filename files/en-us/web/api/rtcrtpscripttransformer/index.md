@@ -99,10 +99,10 @@ Note that the properties of the object are arbitrary (provided the values can be
 // Code to instantiate transform and attach them to sender/receiver pipelines.
 onrtctransform = (event) => {
   let transform;
-  if (event.transformer.options.name == "senderTransform")
+  if (event.transformer.options.name === "senderTransform")
     transform = createSenderTransform();
   // returns a TransformStream (not shown)
-  else if (event.transformer.options.name == "receiverTransform")
+  else if (event.transformer.options.name === "receiverTransform")
     transform = createReceiverTransform();
   // returns a TransformStream (not shown)
   else return;

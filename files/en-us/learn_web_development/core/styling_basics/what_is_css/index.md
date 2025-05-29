@@ -159,14 +159,11 @@ When the CSS is applied to the HTML, the rendered output is as follows:
 > 1. Add another paragraph of text below the two existing ones, and note how the second CSS rule is automatically applied to the new paragraph.
 > 2. Add an `<h2>` subheading somewhere below the `<h1>`, maybe after one of the paragraphs. Try giving it a different color by adding a new rule to the CSS. Make a copy of the `h1` rule, change the selector to `h2`, and change the `color` value from `red` to `purple`, for example.
 > 3. If you are feeling adventurous, try looking up some new CSS properties and values in the MDN [CSS reference](/en-US/docs/Web/CSS/Reference) to add to your rules!
+>
+> For some additional practice with CSS basics, see [Write your first lines of CSS!](https://scrimba.com/learn-html-and-css-c0p/~0j?via=mdn) from Scrimba <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>. This scrim gives a useful rundown of basic CSS syntax, and provides an interactive challenge where you can get some more practice with writing CSS declarations.
 
 ## Summary
 
 Now that you have some understanding of what CSS is and how it works, let's move on to giving you some practice with writing CSS yourself and explaining the syntax in more detail.
-
-## See also
-
-- [Write your first lines of CSS!](https://scrimba.com/learn-html-and-css-c0p/~0j?via=mdn), Scrimba <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
-  - : This scrim gives a useful rundown of basic CSS syntax, and provides an interactive challenge where you can get some more practice with writing CSS declarations.
 
 {{NextMenu("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics")}}

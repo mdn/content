@@ -176,6 +176,7 @@ self.addEventListener("activate", (event) => {
           if (name !== CACHE_NAME) {
             return caches.delete(name);
           }
+          return undefined;
         }),
       );
       await clients.claim();
@@ -263,6 +264,7 @@ self.addEventListener("activate", (event) => {
           if (name !== CACHE_NAME) {
             return caches.delete(name);
           }
+          return undefined;
         }),
       );
       await clients.claim();

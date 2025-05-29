@@ -243,12 +243,9 @@ Pattern and mask specification is done the same way as for SOCKS configuration.
 #### Examples
 
 ```js
-function alertEval(str) {
-  alert(`${str} is ${eval(str)}`);
-}
 function FindProxyForURL(url, host) {
-  alertEval('isInNet(host, "192.0.2.172", "255.255.255.255")');
-  // "PAC-alert: isInNet(host, "192.0.2.172", "255.255.255.255") is true"
+  alert(isInNet(host, "192.0.2.172", "255.255.255.255"));
+  // "PAC-alert: true"
 }
 ```
 
@@ -548,9 +545,8 @@ All hosts which aren't fully qualified, or the ones that are in local domain, wi
 function FindProxyForURL(url, host) {
   if (isPlainHostName(host) || dnsDomainIs(host, ".mozilla.org")) {
     return "DIRECT";
-  } else {
-    return "PROXY w3proxy.mozilla.org:8080; DIRECT";
   }
+  return "PROXY w3proxy.mozilla.org:8080; DIRECT";
 }
 ```
 
@@ -571,9 +567,8 @@ function FindProxyForURL(url, host) {
     !localHostOrDomainIs(host, "merchant.mozilla.org")
   ) {
     return "DIRECT";
-  } else {
-    return "PROXY w3proxy.mozilla.org:8080; DIRECT";
   }
+  return "PROXY w3proxy.mozilla.org:8080; DIRECT";
 }
 ```
 
@@ -637,9 +632,8 @@ function FindProxyForURL(url, host) {
     isInNet(host, "192.0.2.0", "255.255.0.0")
   ) {
     return "DIRECT";
-  } else {
-    return "PROXY proxy.mydomain.com:8080";
   }
+  return "PROXY proxy.mydomain.com:8080";
 }
 ```
 
@@ -666,9 +660,8 @@ function FindProxyForURL(url, host) {
     return "PROXY proxy1.mydomain.com:8080; PROXY proxy4.mydomain.com:8080";
   } else if (shExpMatch(host, "*.edu")) {
     return "PROXY proxy2.mydomain.com:8080; PROXY proxy4.mydomain.com:8080";
-  } else {
-    return "PROXY proxy3.mydomain.com:8080; PROXY proxy4.mydomain.com:8080";
   }
+  return "PROXY proxy3.mydomain.com:8080; PROXY proxy4.mydomain.com:8080";
 }
 ```
 

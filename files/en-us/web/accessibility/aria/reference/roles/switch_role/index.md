@@ -138,11 +138,10 @@ button.switch {
   border: 2px solid black;
   display: inline-block;
   margin-right: 0.25em;
-  line-height: 20px;
   vertical-align: middle;
   text-align: center;
   font:
-    12px "Open Sans",
+    12px / 20px "Open Sans",
     "Arial",
     serif;
 }

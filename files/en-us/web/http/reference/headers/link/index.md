@@ -1,5 +1,6 @@
 ---
-title: Link
+title: Link header
+short-title: Link
 slug: Web/HTTP/Reference/Headers/Link
 page-type: http-header
 browser-compat: http.headers.Link

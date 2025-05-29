@@ -239,22 +239,22 @@ Browsers that support the `module` value for the [`type`](/en-US/docs/Web/HTML/R
 ### Importing modules with importmap
 
 When importing modules in scripts, if you don't use the [`type=importmap`](/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap) feature, then each module must be imported using a module specifier that is either an absolute or relative URL.
-In the example below, the first module specifier ("./shapes/square.js") resolves relative to the base URL of the document, while the second is an absolute URL.
+In the example below, the first module specifier is an absolute URL, while the second (`"./shapes/square.js"`) resolves relative to the base URL of the document.
 
 ```js
-import { name as squareName, draw } from "./shapes/square.js";
 import { name as circleName } from "https://example.com/shapes/circle.js";
+import { name as squareName, draw } from "./shapes/square.js";
 ```
 
 An import map allows you to provide a mapping that, if matched, can replace the text in the module specifier.
-The import map below defines keys `square` and `circle` that can be used as aliases for the module specifiers shown above.
+The import map below defines keys `circle` and `square` that can be used as aliases for the module specifiers shown above.
 
 ```html
 <script type="importmap">
   {
     "imports": {
-      "square": "./shapes/square.js",
-      "circle": "https://example.com/shapes/circle.js"
+      "circle": "https://example.com/shapes/circle.js",
+      "square": "./shapes/square.js"
     }
   }
 </script>
@@ -263,8 +263,8 @@ The import map below defines keys `square` and `circle` that can be used as alia
 This allows us to import modules using names in the module specifier (rather than absolute or relative URLs).
 
 ```js
-import { name as squareName, draw } from "square";
 import { name as circleName } from "circle";
+import { name as squareName, draw } from "square";
 ```
 
 For more examples of what you can do with import maps, see the [Importing modules using import maps](/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps) section in the JavaScript modules guide.

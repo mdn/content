@@ -40,7 +40,7 @@ _In addition to the properties listed below, properties from the parent interfac
 You can use the `error` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+const recognition = new (SpeechRecognition || webkitSpeechRecognition)();
 
 recognition.addEventListener("error", (event) => {
   console.error(`Speech recognition error detected: ${event.error}`);
