@@ -591,7 +591,7 @@ The rules above allow the following links to be prerendered correctly in the app
 <a target="_blank" href="page2.html">Open link in new window</a>
 ```
 
-`target_hint` is only needed for list rules (using `urls` ), and not for document rules (using  `where`) since in the latter this can be known from the a`target` attribute of the `<a>` link element.
+`target_hint` is only needed for list rules (using `urls` ), and not for document rules (using `where`) since in the latter this can be known from the a`target` attribute of the `<a>` link element.
 
 ## Specifications
 
