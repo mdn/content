@@ -16,6 +16,7 @@ The **`copyBufferToBuffer()`** method of the
 ## Syntax
 
 ```js-nolint
+copyBufferToBuffer(source, destination)
 copyBufferToBuffer(source, sourceOffset, destination, destinationOffset, size)
 ```
 
@@ -23,14 +24,17 @@ copyBufferToBuffer(source, sourceOffset, destination, destinationOffset, size)
 
 - `source`
   - : The {{domxref("GPUBuffer")}} to copy from.
-- `sourceOffset`
+- `sourceOffset` {{optional_inline}}
   - : The offset, in bytes, into the `source` to begin copying from.
 - `destination`
   - : The {{domxref("GPUBuffer")}} to copy to.
-- `destinationOffset`
+- `destinationOffset` {{optional_inline}}
   - : The offset, in bytes, into the `destination` to begin copying to.
-- `size`
+- `size` {{optional_inline}}
   - : The number of bytes to copy.
+
+> [!NOTE]
+> The `sourceOffset`, `destinationOffset`, and `size` can be omitted if you are copying the entire source buffer to the destination buffer.
 
 ### Return value
 
@@ -81,6 +85,9 @@ commandEncoder.copyBufferToBuffer(
   0, // Destination offset
   BUFFER_SIZE,
 );
+
+// Since we are copying the entire buffer, this can be shortened to
+// commandEncoder.copyBufferToBuffer(output, stagingBuffer);
 
 // …
 ```
