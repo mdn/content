@@ -254,15 +254,16 @@ async function getMessage() {
   readPromise = new Promise((resolve) => {
     resolveReadPromise = resolve;
   });
+  let input;
   try {
-    const input = await fs.open("/dev/stdin");
+    input = await fs.open("/dev/stdin");
     const header = new Uint32Array(1);
     await input.read(header);
     const message = new Uint8Array(header[0]);
     await input.read(message);
-    await input.close();
     return message;
   } finally {
+    if (input) await input.close();
     // Release lock and allow the next `getMessage()` call to proceed
     resolveReadPromise();
     readPromise = null;
