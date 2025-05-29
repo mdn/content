@@ -422,7 +422,7 @@ function listener(details) {
       len += elements.length;
     }
 
-    outer: for (
+    mainLoop: for (
       let i = data.length - 1, l = data.length - bytes.length;
       i > l;
       i--
@@ -432,7 +432,7 @@ function listener(details) {
         const initial = i;
         for (let j = 1, l = data.length - i; j < l; j++) {
           if (data[++i] !== bytes[j]) {
-            break outer;
+            break mainLoop;
           }
         }
         oldData.push(...data.slice(initial));
