@@ -12,12 +12,16 @@ Generally, the source order should express a sensible reading order for the cont
 
 These updates can cause accessibility issues. For example, when a sighted screen reader user tabs through content, and the screen reader order differs from the visual order, this is bad user experience and can be inaccessible. The reading order should make sense to all users no matter how they access the content.
 
+## Modifying reading order in CSS
+
 An element's reading order can be modified via the {{cssxref("reading-flow")}} property, and tweaked further by setting {{cssxref("reading-order")}} values on child items of the element.
 
-- Reading flow
-  - : A modified reading order.
+The following definitions are significant in understanding modified reading order:
+
 - Reading flow container
-  - : An element with a reading flow set on it.
+  - : An element with a modified reading order resulting from the values set for its {{cssxref("reading-flow")}} and {{cssxref("reading-order")}} properties.
+- Reading flow
+  - : The modified reading order of a reading flow container's child elements.
 
 ## See also
 
