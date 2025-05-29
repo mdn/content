@@ -10,7 +10,7 @@ CSS masking is a technique that enables you to define visible portions of an ele
 
 In CSS, masks are used to hide and partially hide element areas. CSS masks are the opposite of mask worn at masquerade balls where the wearer's face is hidden wherever the mask is opaque. In CSS, the mask areas that are fully opaque reveal the element while transparent areas hide the element.
 
-Each mask layers consists of a {{cssxref("mask-image")}}, which is [positioned](#the_mask-position_property) relative to an [origin](#the_mask-origin_property) box. The mask images can be [sized](#the_mask-size_property), [repeated](#the_mask-repeat_property), and [clipped](#the_mask-clip_property). In cases where multiple mask images are declared, the way the [mask layers are composited](#the_mask-composite_property), or combined, can be set. This guide explores these CSS masking and the `mask` shorthand component properties, with explanations and examples.
+Each mask layers consists of a {{cssxref("mask-image")}}, which is [positioned](#the_mask-position_property) relative to an [origin](#the_mask-origin_property) box. The mask images can be [sized](#the_mask-size_property), [repeated](#the_mask-repeat_property), and [clipped](#the_mask-clip_property). In cases where multiple mask images are declared, the way the [mask layers are composited](#the_mask-composite_property), or combined, can be set. This guide explores these CSS masking and the {{cssxref("mask")}} shorthand component properties, with explanations and examples.
 
 ## Mask layers and the `mask-image` property
 
@@ -142,6 +142,9 @@ Continuing with the `masked-element` example, if we don't explicitly set the `ma
 
 ```css
 .masked-element {
+  mask-image:
+    url(alphaImage.png), linear-gradient(to right, black, transparent),
+    radial-gradient(circle, white 50%, transparent 75%), none, url(#svg-mask);
   mask-mode: match-source;
 }
 ```
@@ -171,6 +174,9 @@ If we don't declare the `mask-mode` property at all, and allow it default to `ma
 
 ```css
 .masked-element {
+  mask-image:
+    url(alphaImage.png), linear-gradient(to right, black, transparent),
+    radial-gradient(circle, white 50%, transparent 75%), none, url(#svg-mask);
   mask-mode: alpha, alpha, alpha, match-source, luminance;
 }
 ```
@@ -221,6 +227,10 @@ Continuing with the `masked-element` example, if we don't explicitly set the `ma
 
 ```css
 .masked-element {
+  mask-image:
+    url(alphaImage.png), linear-gradient(to right, black, transparent),
+    radial-gradient(circle, white 50%, transparent 75%), none, url(#svg-mask);
+  mask-mode: match-source;
   mask-position: 0% 0%;
 }
 ```
@@ -240,19 +250,94 @@ or, expanding on the example using the `mask` shorthand:
 
 ## The `mask-origin` property
 
-The {{cssxref("mask-origin")}} property determines**\_\_**. It is analogous to the {{cssxref("background-origin")}} property.
+The {{cssxref("mask-origin")}} property specifies the _mask positioning area_, which is the mask origin box area within which a mask image is positioned. It is analogous to the {{cssxref("background-origin")}} property.
 
-{{EmbedLiveSample("origin", "", "250px")}}
+HTML elements can have masks contained within their content border box, padding box, or content box. The `mask-position` is relative to this origin box.
+
+```html hidden live-sample___origin
+<div class="border-box">
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+    alt="Pride flag" />
+</div>
+<fieldset>
+  <legend>Set the <code>mask-origin</code> value</legend>
+  <label
+    ><input type="radio" name="origin" id="border-box" checked />
+    border-box</label
+  >
+  <label
+    ><input type="radio" name="origin" id="padding-box" /> padding-box</label
+  >
+  <label
+    ><input type="radio" name="origin" id="content-box" /> content-box</label
+  >
+</fieldset>
+```
+
+```css hidden live-sample___origin
+div {
+  all: unset;
+}
+legend {
+  align-self: baseline;
+}
+```
+
+Expanding on the previous `mask-position` example where we positioned the mask in the bottom right corner, you'll note the difference this property can make on elements with large borders and padding. We've added a green background color to enable seeing the star masking on the padding area.
+
+```css live-sample___origin
+img {
+  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-position: bottom right;
+  padding: 15px;
+  border: 15px solid;
+  background-color: green;
+}
+:has(#border-box:checked) img {
+  mask-origin: border-box;
+}
+:has(#padding-box:checked) img {
+  mask-origin: padding-box;
+}
+:has(#content-box:checked) img {
+  mask-origin: content-box;
+}
+```
+
+{{EmbedLiveSample("origin", "", "450px")}}
+
+You can change the value of the `mask-origin` property.
+
+The default value is `border-box`. With this value, the initial mask is placed at the borders bottom right edge and is not clipped. When the initial mask is placed at the outer or inner edge of the padding, there is room below it and to the right; these repeating masks are clipped.
+
+Had we had no border and no padding, `border-box`, `padding-box`, and `content-box` would have rendered identically.
 
 Continuing with the `masked-element` example, if we don't explicitly set the `mask-origin` property, it will default to `border-box` for each layer, as if we had set the following:
 
 ```css
 .masked-element {
+  mask-image:
+    url(alphaImage.png), linear-gradient(to right, black, transparent),
+    radial-gradient(circle, white 50%, transparent 75%), none, url(#svg-mask);
+  mask-mode: match-source;
+  mask-position: 0% 0%;
   mask-origin: border-box;
 }
 ```
 
 or, expanding on the example using the `mask` shorthand:
+
+```css
+.masked-element {
+  mask:
+    url(alphaImage.png) 0% 0% match-source,
+    linear-gradient(to right, black, transparent) 0% 0% match-source,
+    radial-gradient(circle, white 50%, transparent 75%) 0% 0% match-source,
+    none 0% 0% match-source,
+    url(#svg-mask) 0% 0% match-source;
+}
+```
 
 The `mask-origin` property sets the origin of a mask, determining the origin of the `mask-position` property, also known as the _mask positioning area_. For example, if the `mask-position` is `top left`, is that relative to the border's outer edge, the padding's outer edge, or the content's outer edge?
 
@@ -302,7 +387,7 @@ Continuing with the `masked-element` example, if we don't explicitly set the `ma
 }
 ```
 
-or, expanding on the example using the `mask` shorthand:
+or, expanding on the example using the `mask` shorthand, with the `mask-size` component going after the `mask-position` value, separated by a forward slash (/):
 
 The rendered size of the mask image is computed as follows:
 
