@@ -311,8 +311,6 @@ The best mitigation for these cases, and indeed any time when content can get ou
 
 Where refreshes are not possible, speculations can be cleared using the {{ httpheader("Clear-Site-Data") }} response header with the {{ httpheader("Clear-Site-Data#prefetchCache", `prefetchCache`) }} or {{ httpheader("Clear-Site-Data#prerenderCache", `prerenderCache`) }} values (or both) as appropriate.
 
-For example, this might be needed in a shopping site when a new item is added to the shopping cart — in order to invalidate any prefetched or prerendered pages that display the old number of items in the cart.
-
 The header can be returned on any same-site HTTP request (such as an `/api/add-to-cart` API call).
 
 ## Session history behavior for prerendered documents

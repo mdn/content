@@ -575,23 +575,9 @@ A `target_hint` can be included to indicate the target window in which matching 
     "tag": "my-rules",
     "prerender": [
       {
-        "where": {
-          "and": [
-            { "href_matches": "/*" },
-            { "not": { "selector_matches": "a[target='_blank']" } }
-          ]
-        },
-        "eagerness": "eager"
-      },
-      {
-        "where": {
-          "and": [
-            { "href_matches": "/*" },
-            { "selector_matches": "a[target='_blank']" }
-          ]
-        },
         "eagerness": "eager",
-        "target_hint": "_blank"
+        "target_hint": "_blank",
+        "urls": ["page2.html"]
       }
     ]
   }
@@ -604,6 +590,8 @@ The rules above allow the following links to be prerendered correctly in the app
 <a href="page1.html">Open link in this window</a>
 <a target="_blank" href="page2.html">Open link in new window</a>
 ```
+
+`target_hint` is only needed for list rules (using `urls` ), and not for document rules (using  `where`) since in the latter this can be known from the a`target` attribute of the `<a>` link element.
 
 ## Specifications
 
