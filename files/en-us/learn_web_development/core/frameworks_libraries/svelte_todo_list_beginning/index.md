@@ -522,7 +522,6 @@ body {
   height: 1px;
   width: 1px;
   overflow: hidden;
-  clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
   white-space: nowrap;
 }
@@ -608,7 +607,7 @@ body {
 }
 .filters {
   width: 100%;
-  margin: unset auto;
+  margin: unset;
 }
 /* Todo item styles */
 .todo {
