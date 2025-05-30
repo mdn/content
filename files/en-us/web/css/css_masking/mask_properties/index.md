@@ -250,7 +250,7 @@ or, expanding on the example using the `mask` shorthand:
 
 ## The `mask-origin` property
 
-The {{cssxref("mask-origin")}} property specifies the _mask positioning area_, which is the mask origin box area within which a mask image is positioned. It is analogous to the {{cssxref("background-origin")}} property.
+The {{cssxref("mask-origin")}} property specifies the _mask positioning area_, which is the mask origin box area within which a mask image is positioned. The `mask-origin` property sets the origin of a mask, determining the origin of the `mask-position` property, also known as the _mask positioning area_. For example, if the `mask-position` is `top left`, is that relative to the border's outer edge, the padding's outer edge, or the content's outer edge? It is analogous to the {{cssxref("background-origin")}} property.
 
 HTML elements can have masks contained within their content border box, padding box, or content box. The `mask-position` is relative to this origin box.
 
@@ -307,11 +307,13 @@ img {
 
 {{EmbedLiveSample("origin", "", "450px")}}
 
-You can change the value of the `mask-origin` property.
+You can change the value of the `mask-origin` property by changing the selected radio button.
 
 The default value is `border-box`. With this value, the initial mask is placed at the borders bottom right edge and is not clipped. When the initial mask is placed at the outer or inner edge of the padding, there is room below it and to the right; these repeating masks are clipped.
 
 Had we had no border and no padding, `border-box`, `padding-box`, and `content-box` would have rendered identically.
+
+By default, HTML elements have masks their masks positioned relative to the `border-box`, which is the outer edge of the border. Continuing with the `masked-element` example, if we don't explicitly set the `mask-origin` property, it will default to `border-box` for each layer, as if we had set the following:
 
 Continuing with the `masked-element` example, if we don't explicitly set the `mask-origin` property, it will default to `border-box` for each layer, as if we had set the following:
 
@@ -331,25 +333,14 @@ or, expanding on the example using the `mask` shorthand:
 ```css
 .masked-element {
   mask:
-    url(alphaImage.png) 0% 0% match-source,
-    linear-gradient(to right, black, transparent) 0% 0% match-source,
-    radial-gradient(circle, white 50%, transparent 75%) 0% 0% match-source,
-    none 0% 0% match-source,
-    url(#svg-mask) 0% 0% match-source;
+    url(alphaImage.png) 0% 0% border-box match-source,
+    linear-gradient(to right, black, transparent) 0% 0% border-box match-source,
+    radial-gradient(circle, white 50%, transparent 75%) 0% 0% border-box
+      match-source,
+    none 0% 0% border-box match-source,
+    url(#svg-mask) 0% 0% border-box match-source;
 }
 ```
-
-The `mask-origin` property sets the origin of a mask, determining the origin of the `mask-position` property, also known as the _mask positioning area_. For example, if the `mask-position` is `top left`, is that relative to the border's outer edge, the padding's outer edge, or the content's outer edge?
-
-By default, HTML elements have masks their masks positioned relative to the `border-box`, which is the outer edge of the border. Continuing with the `masked-element` example, if we don't explicitly set the `mask-origin` property, it will default to `border-box` for each layer, as if we had set the following:
-
-```css
-.masked-element {
-  mask-mode: border-box;
-}
-```
-
-For HTML elements, you can use the `mask-origin` property to set it to `padding-box` or `content-box` as well.
 
 For SVG elements, which don't have the associated CSS layout boxes, a mask can be contained inside the SVG element's fill, stroke, or view box.
 
@@ -359,7 +350,34 @@ The {{cssxref("mask-clip")}} property determines the area the element which will
 
 {{EmbedLiveSample("clip", "", "250px")}}
 
-Continuing with the `masked-element` example, if we don't explicitly set the `mask-origin` property, it will default to `border-box` for each layer, as if we had set the following:
+Continuing with the `masked-element` example, if we don't explicitly set the `mask-clip` property, it will default to `border-box` for each layer, as if we had set the following:
+
+```css
+.masked-element {
+  mask-image:
+    url(alphaImage.png), linear-gradient(to right, black, transparent),
+    radial-gradient(circle, white 50%, transparent 75%), none, url(#svg-mask);
+  mask-mode: match-source;
+  mask-position: 0% 0%;
+  mask-origin: border-box;
+  mask-clip: border-box;
+}
+```
+
+or, expanding on the example using the `mask` shorthand:
+
+```css
+.masked-element {
+  mask:
+    url(alphaImage.png) 0% 0% border-box border-box match-source,
+    linear-gradient(to right, black, transparent) 0% 0% border-box border-box
+      match-source,
+    radial-gradient(circle, white 50%, transparent 75%) 0% 0% border-box
+      border-box match-source,
+    none 0% 0% border-box border-box match-source,
+    url(#svg-mask) 0% 0% border-box border-box match-source;
+}
+```
 
 For mask layer images that do not reference an SVG {{svgelement("mask")}} element, the `mask-clip` property defines whether the mask painting area, or the area affected by the mask, is the border, padding, or content box. The painted content of the element will be restricted to this area.
 
@@ -383,11 +401,31 @@ Continuing with the `masked-element` example, if we don't explicitly set the `ma
 
 ```css
 .masked-element {
-  mask-mode: auto;
+  mask-image:
+    url(alphaImage.png), linear-gradient(to right, black, transparent),
+    radial-gradient(circle, white 50%, transparent 75%), none, url(#svg-mask);
+  mask-mode: match-source;
+  mask-position: 0% 0%;
+  mask-origin: border-box;
+  mask-clip: border-box;
+  mask-size: auto;
 }
 ```
 
 or, expanding on the example using the `mask` shorthand, with the `mask-size` component going after the `mask-position` value, separated by a forward slash (/):
+
+```css
+.masked-element {
+  mask:
+    url(alphaImage.png) 0% 0% / auto border-box border-box match-source,
+    linear-gradient(to right, black, transparent) 0% 0% / auto border-box
+      border-box match-source,
+    radial-gradient(circle, white 50%, transparent 75%) 0% 0% / auto border-box
+      border-box match-source,
+    none 0% 0% / auto border-box border-box match-source,
+    url(#svg-mask) 0% 0% / auto border-box border-box match-source;
+}
+```
 
 The rendered size of the mask image is computed as follows:
 
@@ -406,11 +444,32 @@ Continuing with the `masked-element` example, if we don't explicitly set the `ma
 
 ```css
 .masked-element {
+  mask-image:
+    url(alphaImage.png), linear-gradient(to right, black, transparent),
+    radial-gradient(circle, white 50%, transparent 75%), none, url(#svg-mask);
+  mask-mode: match-source;
+  mask-position: 0% 0%;
+  mask-origin: border-box;
+  mask-clip: border-box;
+  mask-size: auto;
   mask-repeat: repeat;
 }
 ```
 
 or, expanding on the example using the `mask` shorthand:
+
+```css
+.masked-element {
+  mask:
+    url(alphaImage.png) 0% 0% / auto repeat border-box border-box match-source,
+    linear-gradient(to right, black, transparent) 0% 0% / auto repeat border-box
+      border-box match-source,
+    radial-gradient(circle, white 50%, transparent 75%) 0% 0% / auto repeat
+      border-box border-box match-source,
+    none 0% 0% / auto repeat border-box border-box match-source,
+    url(#svg-mask) 0% 0% / auto repeat border-box border-box match-source;
+}
+```
 
 ## The `mask-composite` property
 
@@ -420,11 +479,34 @@ Continuing with the `masked-element` example, if we don't explicitly set the `ma
 
 ```css
 .masked-element {
+  mask-image:
+    url(alphaImage.png), linear-gradient(to right, black, transparent),
+    radial-gradient(circle, white 50%, transparent 75%), none, url(#svg-mask);
+  mask-mode: match-source;
+  mask-position: 0% 0%;
+  mask-origin: border-box;
+  mask-clip: border-box;
+  mask-size: auto;
+  mask-repeat: repeat;
   mask-composite: add;
 }
 ```
 
 or, expanding on the example using the `mask` shorthand:
+
+```css
+.masked-element {
+  mask:
+    url(alphaImage.png) 0% 0% / auto repeat border-box border-box add
+      match-source,
+    linear-gradient(to right, black, transparent) 0% 0% / auto repeat border-box
+      border-box add match-source,
+    radial-gradient(circle, white 50%, transparent 75%) 0% 0% / auto repeat
+      border-box border-box add match-source,
+    none 0% 0% / auto repeat border-box border-box add match-source,
+    url(#svg-mask) 0% 0% / auto repeat border-box border-box add match-source;
+}
+```
 
 The `mask-composite` property is explored in detail in the [Multiple masks and their interactions](/en-US/docs/Web/CSS/CSS_masking/Multiple_masks) guide.
 
