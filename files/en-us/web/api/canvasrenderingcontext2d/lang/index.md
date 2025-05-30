@@ -12,14 +12,27 @@ The **`CanvasRenderingContext2D.lang`** property of the Canvas 2D API gets or se
 
 ## Value
 
-A [BCP 47 language tag](https://datatracker.ietf.org/doc/html/rfc5646) representing the language of the canvas context, or `inherit`, in which case the language is inherited from the [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute of the originating {{HTMLElement("canvas")}} element or its nearest ancestor with an explicit `lang` set.
+A [BCP 47 language tag](https://datatracker.ietf.org/doc/html/rfc5646) representing the language of the canvas context, or `inherit`, in which case the language is inherited from the [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute of the originating {{HTMLElement("canvas")}} element or the nearest available ancestor with an explicit `lang` set.
 
 The default value is `inherit`.
+
+## Description
+
+Sometimes, it is necessary to set a language for a canvas rendering context so that it knows how to render language-dependent features such as some fonts. An on-screen canvas context (`CanvasRenderingContext2D`) is always associated with a particular `<canvas>` element, so whenever you render content using it, it can derive the language from the value of the `<canvas>` element's `lang` attribute.
+
+However, an off-screen canvas context ({{domxref("OffscreenCanvasRenderingContext2D")}}) renders its content before it is associated with a `<canvas>` element, so it can't derive a rendering language from the `lang` attribute of the `<canvas>` element. The `lang` property addresses this issue, allowing you to set a language directly on a canvas rendering context, whether you are using an on-screen or off-screen canvas.
+
+### The `inherit` value
+
+When the `inherit` value is used, the language of the canvas context is inherited from the [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute of the nearest-available HTML source:
+
+- In the case of an on-screen context, or an off-screen context that was transferred from an on-screen context, this will be the originating {{HTMLElement("canvas")}} element, provided it has a valid `lang` attribute set.
+- If a `lang` attribute is not available on an associated `<canvas>` element, which could be the case for an on- or off-screen context, this will be the nearest available ancestor with an explicit `lang` set, which is commonly the document root.
 
 Due to technical limitations, the `inherit` value behaves differently for on-screen and off-screen canvases:
 
 - For on-screen canvases, the `lang` value is inherited when the associated `CanvasRenderingContext2D` object is first created; the inherited `lang` value then changes dynamically if the `lang` attribute value is updated.
-- For off-screen canvases, the `lang` value is inherited when the associated {{domxref("OffscreenCanvasRenderingContext2D")}} object is first created, and then fixed for the lifetime of the {{domxref("OffscreenCanvas")}}. It **does not** change if the `lang` attribute value is updated. Because of this, the language of an off-screen canvas can only be changed by setting the `lang` value explicitly.
+- For off-screen canvases, the `lang` value is inherited when the associated `OffscreenCanvasRenderingContext2D` object is first created, and then fixed for the lifetime of the {{domxref("OffscreenCanvas")}}. It **does not** change if the `lang` attribute value is updated. Because of this, the language of an off-screen canvas can only be changed by setting the `lang` value explicitly.
 
 ## Examples
 
@@ -191,6 +204,5 @@ The example is rendered as follows:
 
 ## See also
 
-- {{domxref("OffscreenCanvasRenderingContext2D.lang")}}
 - {{domxref("CanvasRenderingContext2D")}}
 - [Canvas Localization Support](https://blogs.igalia.com/schenney/canvas-localization-support/) from Igalia (2025)
