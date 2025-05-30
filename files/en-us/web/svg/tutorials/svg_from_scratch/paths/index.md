@@ -936,6 +936,6 @@ updatePaths();
 updateScreen();
 ```
 
-{{EmbedLiveSample("arcs_interactive", "", 400)}}
+{{EmbedLiveSample("arcs_interactive", "", 600)}}
 
 {{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes", "Web/SVG/Tutorials/SVG_from_scratch/Fills_and_strokes") }}
