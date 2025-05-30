@@ -262,7 +262,7 @@ async function getMessage() {
     const message = new Uint8Array(header[0]);
     let offset = 0;
     while (offset < header[0]) {
-      const {bytesRead} = await input.read(message, {offset});
+      const { bytesRead } = await input.read(message, { offset });
       offset += bytesRead;
     }
     return message;
