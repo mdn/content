@@ -57,9 +57,9 @@ This article provides information about the changes in Firefox 140 that affect d
 #### DOM
 
 - The [`pointerrawupdate` event](/en-US/docs/Web/API/Element/pointerrawupdate_event) is now supported.
-  This event typically provides lower-latency access to pointer movement properties than the corresponding [`pointermove`](/en-US/docs/Web/API/Element/pointermove_event) event, by firing as soon as the pointer data is available.
+  This event typically provides lower-latency access to pointer movement properties compared to the corresponding [`pointermove`](/en-US/docs/Web/API/Element/pointermove_event) events, firing as soon as the pointer data is available.
   It is intended for applications that require high-precision input handling, and that cannot achieve smooth interaction using coalesced `pointermove` events alone.
-  The event may impact performance, and should only be avoided for other use cases.
+  Because listening to this event may impact performance, you should avoid using it for other use cases.
   ([Firefox bug 1550462](https://bugzil.la/1550462)).
 
 #### Media, WebRTC, and Web Audio

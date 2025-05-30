@@ -14,10 +14,10 @@ The **`pointerrawupdate`** event is fired when a pointer changes any properties 
 See {{domxref('Element/pointermove_event', 'pointermove')}} for a list of these properties.
 
 The `pointerrawupdate` event may have coalesced events if there is already another `pointerrawupdate` event with the same pointer ID that hasn't been dispatched in the event loop.
-For information on coalesced events, see the {{domxref("PointerEvent.getCoalescedEvents")}} documentation.
+For information on coalesced events, see the {{domxref("PointerEvent.getCoalescedEvents()")}} documentation.
 
-`pointerrawupdate` is intended for applications that require high-precision input handling, and that cannot achieve smooth interaction using coalesced pointermove events alone.
-However, as there may be performance implications to adding listeners for `pointerrawupdate` events, these listeners should only be added if your JavaScript needs high-frequency events and can handle them as quickly as they are dispatched.
+`pointerrawupdate` is intended for applications that require high-precision input handling and cannot achieve smooth interaction using coalesced [`pointermove`](/en-US/docs/Web/API/Element/pointermove_event) events alone.
+However, because listening to `pointerrawupdate` events can affect performance, you should add these listeners only if your JavaScript needs high-frequency events and can handle them as quickly as they are dispatched.
 For most use cases, other pointer event types should suffice.
 
 This event [bubbles](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling) and is [composed](/en-US/docs/Web/API/Event/composed), but is not [cancelable](/en-US/docs/Web/API/Event/cancelable) and has no default action.
