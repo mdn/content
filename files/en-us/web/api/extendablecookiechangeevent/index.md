@@ -7,12 +7,14 @@ browser-compat: api.ExtendableCookieChangeEvent
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}}{{AvailableInWorkers("service")}}
 
-The **`ExtendableCookieChangeEvent`** interface of the {{domxref("Cookie Store API", "", "", "nocode")}} is the event type passed to {{domxref("ServiceWorkerGlobalScope/cookiechange_event", "cookiechange")}} event fired at the {{domxref("ServiceWorkerGlobalScope")}} when any cookie changes occur which match the service worker's cookie change subscription list. A cookie change event consists of a cookie and a type. (either "changed" or "deleted")
+The **`ExtendableCookieChangeEvent`** interface of the {{domxref("Cookie Store API", "", "", "nocode")}} is the event type passed to {{domxref("ServiceWorkerGlobalScope/cookiechange_event", "cookiechange")}} event fired at the {{domxref("ServiceWorkerGlobalScope")}} when any cookie changes occur which match the service worker's cookie change subscription list. A cookie change event consists of a cookie and a type (either "changed" or "deleted").
 
 Cookie changes that cause the `ExtendableCookieChangeEvent` to be dispatched are:
 
-- A cookie is newly created and not immediately removed. In this case `type` is "changed".
-- A cookie is newly created and immediately removed. In this case `type` is "deleted"
+- A cookie is newly created and not immediately removed.
+  In this case `type` is "changed".
+- A cookie is newly created and immediately removed.
+  In this case `type` is "deleted"
 - A cookie is removed. In this case `type` is "deleted".
 
 > [!NOTE]
