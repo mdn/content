@@ -14,8 +14,8 @@ The HTTP **`Transfer-Encoding`** {{glossary("request header", "request")}} and {
 Each segment of a multi-node connection can use different `Transfer-Encoding` values.
 If you want to compress data over the whole connection, use the end-to-end {{HTTPHeader("Content-Encoding")}} header instead.
 
-When present in a request it indicates the encodings supported by the client.
-Multiple encodings may be specified, and the client must support the `chunked` directive.
+When present in a request it indicates the encodings applied to the request body.
+While multiple encodings may be specified, and the client must support the `chunked` directive, in practice this header is rarely used in requests (and if used, only with `chunked`).
 
 When present on a response it indicates the compression used on the message, and/or whether the message has been chunked.
 Note that if the message is chunked, this must be applied last, after any other compression.
