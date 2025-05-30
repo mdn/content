@@ -64,11 +64,11 @@ exportFunction(changeMyName, window, {
 
 ```js
 // less-privileged scope: for example, a page script
-const user = { name: "Jim" };
-const test = document.getElementById("test");
+var user = { name: "Jim" };
+var test = document.getElementById("test");
 test.addEventListener(
   "click",
-  () => {
+  function () {
     console.log(user.name); // "Jim"
     window.changeMyName(user);
     console.log(user.name); // "Bill"
@@ -96,15 +96,15 @@ exportFunction(logUser, window, {
 
 ```js
 // less-privileged scope: for example, a page script
-const user = {
-  getUser() {
+var user = {
+  getUser: function () {
     return "Bill";
   },
 };
-const test = document.getElementById("test");
+var test = document.getElementById("test");
 test.addEventListener(
   "click",
-  () => {
+  function () {
     window.logUser(user);
   },
   false,
@@ -132,10 +132,10 @@ exportFunction(logUser, unsafeWindow, {
 function getUser() {
   return "Bill";
 }
-const test = document.getElementById("test");
+var test = document.getElementById("test");
 test.addEventListener(
   "click",
-  () => {
+  function () {
     window.logUser(getUser);
   },
   false,
@@ -154,7 +154,7 @@ This script defines a function and then exports it to a content window:
 
 ```js
 // extension-script.js
-const salutation = "hello ";
+var salutation = "hello ";
 function greetMe(user) {
   return salutation + user;
 }
@@ -165,7 +165,7 @@ Instead of using `defineAs`, the script can assign the result of `exportFunction
 
 ```js
 // extension-script.js
-const salutation = "hello ";
+var salutation = "hello ";
 function greetMe(user) {
   return salutation + user;
 }
@@ -176,18 +176,18 @@ Either way, code running in the content window's scope can call the function:
 
 ```js
 // page-script.js
-const greeting = foo("alice");
+var greeting = foo("alice");
 console.log(greeting);
 // "hello alice"
 ```
 
 ### Export to an existing local object
 
-Instead of attaching the function to the target's global `window` object, the caller can attach it to any other object in the target context. Suppose the content window defines a global `bar`:
+Instead of attaching the function to the target's global `window` object, the caller can attach it to any other object in the target context. Suppose the content window defines a local variable `bar`:
 
 ```js
 // page-script.js
-window.bar = {};
+var bar = {};
 ```
 
 Now the extension script can attach the function to `bar`:
@@ -201,7 +201,7 @@ exportFunction(greetMe, window.bar, {
 
 ```js
 // page-script.js
-const value = bar.greetMe("bob");
+var value = bar.greetMe("bob");
 console.log(value);
 // "hello bob"
 ```
