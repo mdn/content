@@ -260,7 +260,11 @@ async function getMessage() {
     const header = new Uint32Array(1);
     await input.read(header);
     const message = new Uint8Array(header[0]);
-    await input.read(message);
+    let offset = 0;
+    while (offset < header[0]) {
+      const {bytesRead} = await input.read(message, {offset});
+      offset += bytesRead;
+    }
     return message;
   } finally {
     if (input) await input.close();
