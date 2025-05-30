@@ -19,23 +19,27 @@ A boolean value.
 ## Examples
 
 ```html
-<html lang="en">
-  <head>
-    <title>ctrlKey example</title>
-    <script>
-      function showChar(e) {
-        alert(`Key Pressed: ${e.key}\nCTRL key pressed: ${e.ctrlKey}\n`);
-      }
-    </script>
-  </head>
-  <body onkeypress="showChar(event);">
-    <p>
-      Press any character key, with or without holding down the CTRL key.<br />
-      You can also use the SHIFT key together with the CTRL key.
-    </p>
-  </body>
-</html>
+<p>
+  Press any character key, with or without holding down the CTRL key.<br />
+  You can also use the SHIFT key together with the CTRL key.
+</p>
+<pre id="output"></pre>
 ```
+
+```js
+const output = document.getElementById("output");
+
+function showChar(e) {
+  output.textContent = `Key KeyDown: ${String.fromCharCode(e.charCode)}
+charCode: ${e.charCode}
+CTRL key KeyDown: ${e.ctrlKey}
+`;
+}
+
+document.addEventListener("keydown", showChar);
+```
+
+{{EmbedLiveSample("examples", "", "400")}}
 
 ## Specifications
 
