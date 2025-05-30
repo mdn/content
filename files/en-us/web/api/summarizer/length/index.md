@@ -20,17 +20,17 @@ Possible values are:
 
 - `short`
   - : A "short" summary
-    - For `type` `tl;dr` and `teaser`, the summary should fit into one sentence.
+    - For `type` `tldr` and `teaser`, the summary should fit into one sentence.
     - For `type` `key-points`, the summary should be no more than three bullet points.
     - For `type` `headline`, the summary should be no more than 12 words.
 - `medium`
   - : A "medium" summary
-    - For `type` `tl;dr` and `teaser`, the summary should fit into one short paragraph.
+    - For `type` `tldr` and `teaser`, the summary should fit into one short paragraph.
     - For `type` `key-points`, the summary should be no more than five bullet points.
     - For `type` `headline`, the summary should be no more than 17 words.
 - `long`
   - : A "long" summary
-    - For `type` `tl;dr` and `teaser`, the summary should fit into one paragraph.
+    - For `type` `tldr` and `teaser`, the summary should fit into one paragraph.
     - For `type` `key-points`, the summary should be no more than seven bullet points.
     - For `type` `headline`, the summary should be no more than 22 words.
 

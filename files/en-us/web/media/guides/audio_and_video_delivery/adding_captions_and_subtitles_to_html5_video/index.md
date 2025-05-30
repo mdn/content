@@ -106,7 +106,6 @@ No image is used for the captions button, so it is styled as:
 .controls button[data-state="subtitles"] {
   height: 85%;
   text-indent: 0;
-  font-size: 16px;
   font-size: 1rem;
   font-weight: bold;
   color: #666;

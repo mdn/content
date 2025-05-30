@@ -188,8 +188,6 @@ So now that we have the basic functionality in place, the fun can start. The fol
   border-radius: 0.4em;
   box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%);
 
-  /* The first declaration is for browsers that do not support linear gradients. */
-  background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
@@ -331,7 +329,6 @@ So here's the result with our three states ([check out the source code here](/en
 
   box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
-  background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
@@ -453,7 +450,6 @@ So here's the result with our three states ([check out the source code here](/en
 
   box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
-  background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
@@ -575,7 +571,6 @@ So here's the result with our three states ([check out the source code here](/en
 
   box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
-  background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
@@ -835,7 +830,6 @@ Check out the [full source code](/en-US/docs/Learn_web_development/Extensions/Fo
 
   box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
-  background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
@@ -1133,7 +1127,6 @@ Check out the [full source code](/en-US/docs/Learn_web_development/Extensions/Fo
 
   box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
-  background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
@@ -1463,7 +1456,6 @@ Check out the [source code here](/en-US/docs/Learn_web_development/Extensions/Fo
 
   box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
-  background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
@@ -1789,7 +1781,6 @@ Check out the [full source code here](/en-US/docs/Learn_web_development/Extensio
 
   box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
-  background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
