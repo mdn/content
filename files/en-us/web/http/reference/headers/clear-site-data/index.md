@@ -54,7 +54,21 @@ Clear-Site-Data: "*"
     > In browsers that support the `"clientHints"` data type, client hints are also cleared when the `"cache"`, `"cookies"`, or `"*"` types are specified. `"clientHints"` is therefore only needed when none of those other types are specified.
 
 - `"cookies"`
+
   - : The server signals that the client should remove all cookies for the origin of the response URL. HTTP authentication credentials are also cleared out. This affects the entire registered domain, including subdomains. So `https://example.com` as well as `https://stage.example.com`, will have cookies cleared.
+
+- `"executionContexts"` {{Experimental_Inline}}
+
+  - : The server signals that the client should reload all browsing contexts for the origin of the response ({{domxref("Location.reload")}}).
+
+- `"prefetchCache"`
+
+  - : Used to clear {{domxref("Speculation Rules API", "speculation rules", "", "nocode")}} prefetches that are scoped to the referrer origin.
+
+- `"prerenderCache"`
+
+  - : Used to clear {{domxref("Speculation Rules API", "speculation rules","", "nocode")}} prerenders that are scoped to the referrer origin.
+
 - `"storage"`
 
   - : The server signals that the client should remove all DOM storage for the origin of the response URL. This includes storage mechanisms such as:
@@ -67,8 +81,6 @@ Clear-Site-Data: "*"
     - [FileSystem API data](/en-US/docs/Web/API/File_and_Directory_Entries_API),
     - Plugin data (Flash via [`NPP_ClearSiteData`](https://wiki.mozilla.org/NPAPI:ClearSiteData)).
 
-- `"executionContexts"` {{Experimental_Inline}}
-  - : The server signals that the client should reload all browsing contexts for the origin of the response ({{domxref("Location.reload")}}).
 - `"*"` (wildcard)
   - : The server signals that the client should clear all types of data for the origin of the response. If more data types are added in future versions of this header, they will also be covered by it.
 
@@ -76,10 +88,11 @@ Clear-Site-Data: "*"
 
 ### Sign out of a website
 
-If a user signs out of your website or service, you might want to remove locally stored data. To do this, add the `Clear-Site-Data` header to the page that confirms the logging out from the site has been accomplished successfully (`https://example.com/logout`, for example):
+If a user signs out of your website or service, you might want to remove locally stored data, including any prefetched or prerendered content for {{domxref("Speculation Rules API", "speculated navigations","", "nocode")}}.
+To do this, add the `Clear-Site-Data` header to the page that confirms the logging out from the site has been accomplished successfully (`https://example.com/logout`, for example):
 
 ```http
-Clear-Site-Data: "cache", "cookies", "storage", "executionContexts"
+Clear-Site-Data: "cache", "cookies", "storage", "executionContexts", "prefetchCache", "prerenderCache"
 ```
 
 ### Clearing cookies
@@ -89,6 +102,28 @@ If this header is delivered with the response at `https://example.com/clear-cook
 ```http
 Clear-Site-Data: "cookies"
 ```
+
+### Clearing speculations
+
+If this header is delivered with the response at `https://example.com/change-state.json`, all {{domxref("Speculation Rules API", "speculated navigations","", "nocode")}} prerenders on the same domain `https://example.com` and any subdomains (such as `https://stage.example.com`), will be cleared.
+
+```http
+Clear-Site-Data: "prerenderCache"
+```
+
+To clear both prefetch and prerender speculations, both `prefetchCache` and `prerenderCache` must be sent:
+
+```http
+Clear-Site-Data: "prefetchCache", "prerenderCache"
+```
+
+There are cases where clearing one or the other, or both, is appropriate.
+
+For example, a client-side rendered application that pulls in data from JavaScript might use `prerenderCache` on state change to discard the prerendered pages, but keep the prefetched HTML to use when the page is rendered (or prerendered again).
+
+On the other hand, if the prefetched HTML document contains stale data but the corresponding prerendered page is set up to refresh the data when it is displayed, you may not need to use `prerenderCache` but you probably will want to use the `prefetchCache` directive: so that the stale HTML isn't used in a future prerender.
+
+Finally, if the prefetched HTML document contains stale data, and also does not refresh stale content on prerendered pages, then specifying both `prefetchCache` and `prerenderCache` is most appropriate.
 
 ## Specifications
 
