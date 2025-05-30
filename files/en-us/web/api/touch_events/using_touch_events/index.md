@@ -135,7 +135,7 @@ The implementation status of pointer events in browsers is [relatively high](htt
 - [Touch events](/en-US/docs/Web/API/Touch_events)
 - [Pointer events](/en-US/docs/Web/API/Pointer_events)
 - [Add touch to your site](https://web.dev/articles/add-touch-to-your-site) on web.dev
-- [Add touch screen support to your website (The easy way)](https://www.codicode.com/art/easy_way_to_add_touch_support_to_your_website.aspx)
+- [Add touch screen support to your website (The easy way)](https://codicode.com/art/easy_way_to_add_touch_support_to_your_website.aspx)
 - [Paint Program](https://rbyers.github.io/paint.html) by Rick Byers
 - [Touch/pointer tests and demos](https://patrickhlauke.github.io/touch/) by Patrick H. Lauke
 - [Touch Events Community Group](https://github.com/w3c/touch-events)
