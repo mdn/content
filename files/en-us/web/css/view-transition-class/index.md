@@ -2,8 +2,6 @@
 title: view-transition-class
 slug: Web/CSS/view-transition-class
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.view-transition-class
 ---
 
