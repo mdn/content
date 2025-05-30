@@ -188,14 +188,14 @@ function stopEvent(event) {
 
   // this ought to keep t-daddy from getting the click.
   event.stopPropagation();
-  alert("event propagation halted.");
+  console.log("event propagation halted.");
 }
 
 const elem = document.getElementById("tbl1");
 elem.addEventListener("click", stopEvent, false);
 
 document.getElementById("t-daddy").addEventListener("click", () => {
-  alert("t-daddy clicked");
+  console.log("t-daddy clicked");
 });
 ```
 
@@ -233,27 +233,27 @@ This example demonstrates how the {{domxref("window.getComputedStyle")}} method 
 
 ```js
 function cStyles() {
-  const RefDiv = document.getElementById("d1");
+  const refDiv = document.getElementById("d1");
   const txtHeight = document.getElementById("t1");
-  const h_style = document.defaultView
-    .getComputedStyle(RefDiv, null)
+  const hStyle = document.defaultView
+    .getComputedStyle(refDiv, null)
     .getPropertyValue("height");
 
-  txtHeight.value = h_style;
+  txtHeight.value = hStyle;
 
   const txtWidth = document.getElementById("t2");
-  const w_style = document.defaultView
-    .getComputedStyle(RefDiv, null)
+  const wStyle = document.defaultView
+    .getComputedStyle(refDiv, null)
     .getPropertyValue("width");
 
-  txtWidth.value = w_style;
+  txtWidth.value = wStyle;
 
   const txtBackgroundColor = document.getElementById("t3");
-  const b_style = document.defaultView
-    .getComputedStyle(RefDiv, null)
+  const bStyle = document.defaultView
+    .getComputedStyle(refDiv, null)
     .getPropertyValue("background-color");
 
-  txtBackgroundColor.value = b_style;
+  txtBackgroundColor.value = bStyle;
 }
 
 document.querySelector("button").addEventListener("click", cStyles);
