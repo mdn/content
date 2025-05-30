@@ -422,15 +422,16 @@ function listener(details) {
       len += elements.length;
     }
 
+    // Check if the end of the data looks like "<h1>Exampl"
+    const n = data.length;
     mainLoop: for (
-      let i = data.length - 1, l = data.length - bytes.length;
+      let i = n - 1, l = n - bytes.length;
       i > l;
       i--
     ) {
       if (bytes[0] === data[i]) {
-        // Handle cases where the end of the data looks like "<h1>Exampl"
         const initial = i;
-        for (let j = 1, l = data.length - i; j < l; j++) {
+        for (let j = 1, l = n - i; j < l; j++) {
           if (data[++i] !== bytes[j]) {
             break mainLoop;
           }
