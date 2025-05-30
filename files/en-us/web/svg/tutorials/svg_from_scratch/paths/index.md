@@ -765,7 +765,7 @@ svg {
 
 ```js hidden live-sample___arcs_interactive
 const svgContext = document.getElementById("svg-context");
-const rect = svgContext.getBoundingClientRect(); // helper to enclose mouse coordinates into svg box
+let rect = svgContext.getBoundingClientRect(); // helper to enclose mouse coordinates into svg box
 
 const pageXEl = document.getElementById("page-x");
 const pageYEl = document.getElementById("page-y");
