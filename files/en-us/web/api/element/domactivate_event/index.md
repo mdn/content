@@ -47,7 +47,7 @@ A {{domxref("MouseEvent")}}. Inherits from {{domxref("UIEvent")}} and {{domxref(
 
   <!-- JavaScript to change the radius -->
   <script>
-        <![CDATA[
+    <![CDATA[
     function change(evt) {
       const circle = evt.target;
       const currentRadius = circle.getFloatTrait("r");

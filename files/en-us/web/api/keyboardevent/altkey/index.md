@@ -30,8 +30,7 @@ A boolean value.
 const output = document.getElementById("output");
 
 function showChar(e) {
-  output.textContent = `Key KeyDown: ${String.fromCharCode(e.charCode)}
-charCode: ${e.charCode}
+  output.textContent = `Key KeyDown: "${e.key}"
 ALT key KeyDown: ${e.altKey}
 `;
 }
