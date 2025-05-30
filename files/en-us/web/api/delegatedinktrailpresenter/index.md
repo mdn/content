@@ -65,7 +65,7 @@ canvas.addEventListener("pointermove", (evt) => {
       "rgb(" + r + " " + g + " " + b + " / 100%)";
   }
   move_cnt += 1;
-  presenter.then(function (v) {
+  presenter.then((v) => {
     v.updateInkTrailStartPoint(evt, style);
   });
 });

@@ -172,7 +172,7 @@ for (control of controls) {
 document.querySelector("button").addEventListener(
   "click",
   () => {
-    setTimeout(function () {
+    setTimeout(() => {
       changeCSS();
     }, 50);
   },
