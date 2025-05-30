@@ -117,13 +117,13 @@ To clear both prefetch and prerender speculations, both `prefetchCache` and `pre
 Clear-Site-Data: "prefetchCache", "prerenderCache"
 ```
 
-There are case where clearing one or the other, or both is appropriate.
+There are cases where clearing one or the other, or both, is appropriate.
 
-For example, for a client-side rendered application that pulls in data from JavaScript you could just clear `prerenderCache` on state change, but still continue to use the same cached prefetched HTML.
+For example, a client-side rendered application that pulls in data from JavaScript might use `prerenderCache` on state change to discard the prerendered pages, but keep the prefetched HTML to use when the page is rendered (or prerendered again).
 
-On the other hand, if the HTML document contains the stale data, but a prerendered page is set up to refresh state on change, you may not need to use `prerenderCache` but you probably don't want to reuse that stale HTML for a future prerender. In this case `prefetchCache` would be the appropriate.
+On the other hand, if the prefetched HTML document contains stale data but the corresponding prerendered page is set up to refresh the data when it is displayed, you may not need to use `prerenderCache` but you probably will want to use the `prefetchCache` directive: so that the stale HTML isn't used in a future prerender.
 
-Finally, if the HTML document contains the stale data but you do not refresh stale content on prerendered pages, then clearing both `prefetchCache` and `prerenderCache` is most appropriate.
+Finally, if the prefetched HTML document contains stale data, and also does not refresh stale content on prerendered pages, then specifying both `prefetchCache` and `prerenderCache` is most appropriate.
 
 ## Specifications
 
