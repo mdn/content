@@ -16,7 +16,7 @@ It can also be passed as the `option.sanitizer` parameter when calling:
 - {{domxref("ShadowRoot/setHTMLUnsafe","setHTMLUnsafe()")}} or {{domxref("ShadowRoot/setHTMLUnsafe","setHTMLUnsafe()")}} on {{domxref("ShadowRoot")}}.
 - [`Document.parseHTMLUnsafe()`](/en-US/docs/Web/API/Document/parseHTMLUnsafe_static) or [`Document.parseHTML()`](/en-US/docs/Web/API/Document/parseHTML_static) static methods
 
-Note that normally a {{domxref("Sanitizer")}} instance would be be passed as the option instead of `SanitizerConfig` in the above methods, as `Sanitizer` instances can be shared, modified, and reused more efficiently than importing a `SanitizerConfig` every time HTML sanitization is needed.
+Note that normally a {{domxref("Sanitizer")}} instance would be be passed as the option instead of `SanitizerConfig` in the above methods, in particular because `anitizer` instances are more efficient to share and modify.
 
 <!-- High level description probably needed, or a link to the user guide. Specifically to make it clear that -->
 
