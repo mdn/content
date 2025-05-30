@@ -98,8 +98,9 @@ document.getElementById("btn2").addEventListener("click", () => {
 In this simple example, some basic style properties of an HTML paragraph element are accessed using the style object on the element and that object's CSS style properties, which can be retrieved and set from the DOM. In this case, you are manipulating the individual styles directly. In the next example (see Example 4), you can use stylesheets and their rules to change styles for whole documents.
 
 ```html
+<p id="pid">Some text</p>
 <form>
-  <p><input value="rec" type="button" onclick="changeText();" /></p>
+  <p><button type="button">Change text</button></p>
 </form>
 ```
 
@@ -111,7 +112,7 @@ function changeText() {
   p.style.fontSize = "18pt";
 }
 
-document.querySelector("input").addEventListener("click", () => {
+document.querySelector("button").addEventListener("click", () => {
   changeText();
 });
 ```
