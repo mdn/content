@@ -117,6 +117,7 @@ In `index.html`:
     <meta charset="utf-8" />
     <script type="module">
       import data from "./data.json" with { type: "json" };
+
       const p = document.createElement("p");
       p.textContent = `name: ${data.name}`;
       document.body.appendChild(p);

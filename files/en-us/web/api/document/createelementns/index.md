@@ -66,18 +66,19 @@ elements from two different namespaces within a single document:
       onload="init()">
 
 <script><![CDATA[
- let container;
- let newDiv;
- let textNode;
+let container;
+let newDiv;
+let textNode;
 
- function init(){
-   container = document.getElementById("ContainerBox");
-   newDiv = document.createElementNS("http://www.w3.org/1999/xhtml", "div");
-   textNode = document.createTextNode("This is text that was constructed dynamically with createElementNS and createTextNode then inserted into the document using appendChild.");
-   newDiv.appendChild(textNode);
-   container.appendChild(newDiv);
- }
-
+function init() {
+  container = document.getElementById("ContainerBox");
+  newDiv = document.createElementNS("http://www.w3.org/1999/xhtml", "div");
+  textNode = document.createTextNode(
+    "This is text that was constructed dynamically with createElementNS and createTextNode then inserted into the document using appendChild.",
+  );
+  newDiv.appendChild(textNode);
+  container.appendChild(newDiv);
+}
 ]]></script>
 
  <vbox id="ContainerBox" flex="1">

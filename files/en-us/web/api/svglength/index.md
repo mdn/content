@@ -61,24 +61,24 @@ An `SVGLength` object can be designated as read only, which means that attempts 
   <script><![CDATA[
 function start() {
   const rect = document.getElementById("myRect");
-  const val  = rect.x.baseVal;
+  const val = rect.x.baseVal;
 
   // read x in pixel and cm units
-  console.log("value: " + val.value +
-            ", valueInSpecifiedUnits: " + val.unitType + ": " + val.valueInSpecifiedUnits +
-            ", valueAsString: " + val.valueAsString);
+  console.log(
+    `value: ${val.value}, valueInSpecifiedUnits: ${val.valueInSpecifiedUnits} (${val.unitType}), valueAsString: ${val.valueAsString}`,
+  );
 
   // set x = 20pt and read it out in pixel and pt units
   val.newValueSpecifiedUnits(SVGLength.SVG_LENGTHTYPE_PT, 20);
-  console.log("value: " + val.value +
-            ", valueInSpecifiedUnits " + val.unitType + ": " + val.valueInSpecifiedUnits +
-            ", valueAsString: " + val.valueAsString);
+  console.log(
+    `value: ${val.value}, valueInSpecifiedUnits: ${val.valueInSpecifiedUnits} (${val.unitType}), valueAsString: ${val.valueAsString}`,
+  );
 
   // convert x = 20pt to inches and read out in pixel and inch units
   val.convertToSpecifiedUnits(SVGLength.SVG_LENGTHTYPE_IN);
-  console.log("value: " + val.value +
-            ", valueInSpecifiedUnits " + val.unitType + ": " + val.valueInSpecifiedUnits +
-            ", valueAsString: " + val.valueAsString);
+  console.log(
+    `value: ${val.value}, valueInSpecifiedUnits: ${val.valueInSpecifiedUnits} (${val.unitType}), valueAsString: ${val.valueAsString}`,
+  );
 }
 ]]></script>
   <rect id="myRect"

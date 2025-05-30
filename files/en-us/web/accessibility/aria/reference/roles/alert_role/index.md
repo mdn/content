@@ -76,7 +76,7 @@ Using JavaScript, you can dynamically change the content _inside_ the element wi
 document.getElementById("alertContainer").textContent = "";
 // inject the new alert message
 document.getElementById("alertContainer").textContent =
-  "Your session will expire in " + expiration + " minutes";
+  `Your session will expire in ${expiration} minutes`;
 ```
 
 ### Example 3: Visually hidden alert container for screen reader notifications

@@ -420,7 +420,7 @@ The curly braces around `subject` are another feature of JSX's syntax. The curly
 
 ```jsx-nolint
 {/* Hello, React :)! */}
-<h1>Hello, {subject + ' :)'}!</h1>
+<h1>Hello, {`${subject} :)`}!</h1>
 {/* Hello, REACT */}
 <h1>Hello, {subject.toUpperCase()}</h1>
 {/* Hello, 4! */}

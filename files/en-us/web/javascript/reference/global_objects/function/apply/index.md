@@ -114,7 +114,7 @@ let min = Math.min.apply(null, numbers);
 
 // vs. loop based algorithm
 max = -Infinity;
-min = +Infinity;
+min = Infinity;
 
 for (const n of numbers) {
   if (n > max) {

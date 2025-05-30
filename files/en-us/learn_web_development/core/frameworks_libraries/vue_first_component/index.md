@@ -328,7 +328,7 @@ export default {
   data() {
     return {
       isDone: this.done,
-      id: "todo-" + crypto.randomUUID(),
+      id: `todo-${crypto.randomUUID()}`,
     };
   },
 };
