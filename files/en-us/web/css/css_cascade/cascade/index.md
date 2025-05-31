@@ -203,11 +203,11 @@ In this example, the author used CSS's {{CSSXref('@import')}} rule to import fiv
 
 ```html
 <style>
-  @import unlayeredStyles.css;
-  @import AStyles.css layer(A);
-  @import moreUnlayeredStyles.css;
-  @import BStyles.css layer(B);
-  @import CStyles.css layer(C);
+  @import "unlayeredStyles.css";
+  @import "AStyles.css" layer(A);
+  @import "moreUnlayeredStyles.css";
+  @import "BStyles.css" layer(B);
+  @import "CStyles.css" layer(C);
   p {
     color: red;
     padding: 1em !important;

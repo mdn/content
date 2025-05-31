@@ -55,7 +55,7 @@ transform-origin: bottom right 60px;
 
 @keyframes rotate3d {
   from {
-    transform: rotate3d(0);
+    transform: rotate3d(0, 0, 0);
   }
 
   to {
