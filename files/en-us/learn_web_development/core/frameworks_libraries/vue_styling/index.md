@@ -226,7 +226,7 @@ Update your `App.vue` file's `<style>` element so it looks like so:
     width: 1px;
     overflow: hidden;
     clip: rect(1px, 1px, 1px, 1px);
-    clip-path: rect(1px, 1px, 1px, 1px);
+    clip-path: rect(1px 1px 1px 1px);
     white-space: nowrap;
   }
   [class*="stack"] > * {

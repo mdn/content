@@ -349,7 +349,7 @@ When two selectors from different layers match the same element, origin and impo
 
 ```html
 <style>
-  @import TW.css layer();
+  @import "TW.css" layer();
   p,
   p * {
     font-size: 1rem;
@@ -380,7 +380,7 @@ If you're unable to remove `!important` flags from an authors style sheet, the o
 
 ```html
 <style>
-  @import importantOverrides.css layer();
+  @import "importantOverrides.css" layer();
 </style>
 ```
 

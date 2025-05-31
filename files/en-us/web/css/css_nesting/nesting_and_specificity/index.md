@@ -10,7 +10,7 @@ The [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity) of the `&` nestin
 
 ```html
 <b class="foo">
-  <c>Blue text</c>
+  <i>Blue text</i>
 </b>
 ```
 
@@ -18,12 +18,12 @@ The [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity) of the `&` nestin
 
 ```css-nolint
 #a, b {
-  & c {
+  & i {
     color: blue;
   }
 }
 
-.foo c {
+.foo i {
   color: red;
 }
 ```
@@ -32,19 +32,19 @@ The [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity) of the `&` nestin
 
 ```css
 :is(#a, b) {
-  & c {
+  & i {
     color: blue;
   }
 }
 
-.foo c {
+.foo i {
   color: red;
 }
 ```
 
 In this example, the id selector (`#a`) has a specificity of [`1-0-0`](/en-US/docs/Web/CSS/CSS_cascade/Specificity#selector_weight_categories), while the type selector (`b`) has a specificity of `0-0-1`. The [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector) and `:is()` pseudo-class both take a specificity of `1-0-0`, even though the `#a` id selector is never used.
 
-The `.foo` class selector has a specificity of `0-1-0`. This makes the total specificity `1-0-1` for `& c` and `0-1-1` for `.foo c`, meaning that `color: blue;` wins out.
+The `.foo` class selector has a specificity of `0-1-0`. This makes the total specificity `1-0-1` for `& i` and `0-1-1` for `.foo i`, meaning that `color: blue;` wins out.
 
 ## See also
 
