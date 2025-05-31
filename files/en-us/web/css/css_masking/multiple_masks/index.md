@@ -1,5 +1,5 @@
 ---
-title: CSS mask properties
+title: Declaring multiple mask images
 slug: Web/CSS/CSS_masking/Multiple_masks
 page-type: guide
 ---
