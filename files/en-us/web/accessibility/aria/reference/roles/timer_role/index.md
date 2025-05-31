@@ -35,6 +35,64 @@ Along with [`alert`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_ro
 
 If a time limit needs to be in place, for example, for security reasons, the user should have the option to turn it off or extend it. This restriction does not apply if the time limit is due to a live event, such as an auction or a game, or if the time to complete the form is essential for a valid submission.
 
+## Examples
+
+### A basic timer
+
+This example has a timer that counts down from 30 seconds to 0 seconds. The whole time display region has `role="time"`, and also [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic) to indicate that the region should be announced as a whole, not just the changed regions. Due to the implicit `aria-live="off"`, changes are not announced by default; we manually set it to `"assertive"` when the timer reaches 10 seconds remaining so it gets announced once.
+
+```html
+<div id="countdown" role="timer" aria-atomic="true">
+  <span id="number">30</span> seconds left!
+</div>
+```
+
+```css
+html {
+  font-size: 50px;
+  text-align: center;
+  margin-top: 1em;
+  font-family: sans-serif;
+}
+
+#number {
+  font-family: monospace;
+  color: #cc0000;
+  font-weight: bold;
+  font-size: 1.25em;
+  vertical-align: middle;
+}
+```
+
+```js
+const numElement = document.getElementById("number");
+const liveRegion = document.getElementById("countdown");
+let startTime = new Date().getTime();
+
+function decrement() {
+  const timeNow = new Date().getTime();
+  const elapsedTime = Math.floor((timeNow - startTime) / 1000);
+  let newNumber = 30 - elapsedTime;
+
+  if (newNumber >= 0) {
+    numElement.textContent = newNumber;
+  }
+
+  if (newNumber === 10) {
+    liveRegion.setAttribute("aria-live", "assertive");
+    liveRegion.setAttribute("role", "alert");
+    setTimeout(() => {
+      liveRegion.removeAttribute("aria-live");
+      liveRegion.setAttribute("role", "timer");
+    }, 999);
+  }
+}
+
+window.setInterval(() => {
+  decrement();
+}, 500);
+```
+
 ## Specifications
 
 {{Specifications}}
@@ -46,4 +104,3 @@ If a time limit needs to be in place, for example, for security reasons, the use
 - [ARIA: `marquee` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/marquee_role)
 - [ARIA: `status` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/status_role)
 - [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions)
-- [`timer` example on CodePen](https://codepen.io/heydon/pres/NGgNjZ) by Heydon Pickering
