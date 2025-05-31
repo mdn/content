@@ -10154,6 +10154,7 @@
 /en-US/docs/Web/API/SVGTRefElement	/en-US/docs/Web/API/SVGElement
 /en-US/docs/Web/API/SVGURIReference	/en-US/docs/Web/SVG/Reference/Attribute/href
 /en-US/docs/Web/API/SVGVKernElement	/en-US/docs/Web/API/SVGElement
+/en-US/docs/Web/API/Sanitizer/sanitize	/en-US/docs/Web/API/Sanitizer
 /en-US/docs/Web/API/Screen.availHeight	/en-US/docs/Web/API/Screen/availHeight
 /en-US/docs/Web/API/Screen.availLeft	/en-US/docs/Web/API/ScreenDetailed/availLeft
 /en-US/docs/Web/API/Screen.availTop	/en-US/docs/Web/API/ScreenDetailed/availTop
