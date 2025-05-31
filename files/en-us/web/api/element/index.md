@@ -462,7 +462,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when a pointer is moved out of the _hit test_ boundaries of an element (among other reasons).
 - {{domxref("Element/pointerover_event", "pointerover")}}
   - : Fired when a pointer is moved into an element's hit test boundaries.
-- {{domxref("Element/pointerrawupdate_event", "pointerrawupdate")}} {{Experimental_Inline}}
+- {{domxref("Element/pointerrawupdate_event", "pointerrawupdate")}}
   - : Fired when a pointer changes any properties that don't fire {{domxref("Element/pointerdown_event", "pointerdown")}} or {{domxref("Element/pointerup_event", "pointerup")}} events.
 - {{domxref("Element/pointerup_event", "pointerup")}}
   - : Fired when a pointer is no longer active.
