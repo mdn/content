@@ -42,9 +42,9 @@ The following conditions must be met for the `@property` rule to be valid:
   If either is missing, the entire `@property` rule is invalid and ignored.
 - The {{cssxref("@property/initial-value","initial-value")}} descriptor is optional if the value of the `syntax` descriptor is the universal syntax definition (that is, `syntax: "*"`).
   If the `initial-value` descriptor is required but omitted, the entire `@property` rule is invalid and ignored.
-- If the value of the `syntax` descriptor is not the universal syntax definition, the {{cssxref("@property/initial-value","initial-value")}} descriptor has to be a [computationally independent](https://www.w3.org/TR/css-properties-values-api-1/#computationally-independent) value.
+- If the value of the `syntax` descriptor is not the universal syntax definition, the {{cssxref("@property/initial-value","initial-value")}} descriptor has to be a [computationally independent](https://drafts.css-houdini.org/css-properties-values-api-1/#computationally-independent) value.
   This means the value can be converted into a computed value without depending on other values, except for "global" definitions independent of CSS.
-  For example, a pixel value like `10px` is computationally independent and therefore valid — it doesn't change when converted to a computed value. An inch value like `2in` is also valid, because `1in` is always equivalent to `96px`. However, an em value like `3em` is not valid, because the value of an em is dependent on the parent's {{cssxref("font-size")}}.
+  For example, `10px` is computationally independent—it doesn't change when converted to a computed value. `2in` is also valid, because `1in` is always equivalent to `96px`. However, `3em` is not valid, because the value of an `em` is dependent on the parent's {{cssxref("font-size")}}.
 - Unknown descriptors are invalid and ignored, but do not invalidate the `@property` rule.
 
 ## Formal syntax
