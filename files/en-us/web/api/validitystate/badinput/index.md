@@ -56,7 +56,7 @@ function log(text) {
 userInput.addEventListener("input", () => {
   userInput.reportValidity();
   if (userInput.validity.badInput) {
-    log("Bad input detected: " + userInput.validationMessage);
+    log(`Bad input detected: ${userInput.validationMessage}`);
   }
 });
 ```

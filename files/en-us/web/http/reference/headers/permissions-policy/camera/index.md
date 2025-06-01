@@ -1,5 +1,6 @@
 ---
-title: "Permissions-Policy: camera"
+title: "Permissions-Policy: camera directive"
+short-title: camera
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/camera
 page-type: http-permissions-policy-directive
 status:

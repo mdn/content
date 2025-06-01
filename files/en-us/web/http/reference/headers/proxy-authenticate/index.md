@@ -1,5 +1,6 @@
 ---
-title: Proxy-Authenticate
+title: Proxy-Authenticate header
+short-title: Proxy-Authenticate
 slug: Web/HTTP/Reference/Headers/Proxy-Authenticate
 page-type: http-header
 browser-compat: http.headers.Proxy-Authenticate

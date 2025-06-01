@@ -2,6 +2,7 @@
 title: Cross-site scripting (XSS)
 slug: Web/Security/Attacks/XSS
 page-type: guide
+sidebar: security
 ---
 
 A cross-site scripting (XSS) attack is one in which an attacker is able to get a target site to execute malicious code as though it was part of the website.
@@ -320,7 +321,3 @@ We can summarize the defenses above as follows:
 ## See also
 
 - [Cross Site Scripting Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html) at [owasp.org](https://owasp.org/)
-
-<section id="Quick_links">
-{{ListSubpages("/en-US/docs/Web/Security", "1", "0", "1")}}
-</section>

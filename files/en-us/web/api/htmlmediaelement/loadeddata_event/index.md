@@ -17,10 +17,10 @@ The **`loadeddata`** event is fired when the frame at the current playback posit
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("loadeddata", (event) => {});
+```js-nolint
+addEventListener("loadeddata", (event) => { })
 
-onloadeddata = (event) => {};
+onloadeddata = (event) => { }
 ```
 
 ## Event type

@@ -40,7 +40,7 @@ This element is used to mark up sub-portions of a larger text. It must be a chil
 
   <style>
     <![CDATA[
-      text{
+      text {
         dominant-baseline: hanging;
         font: 28px Verdana, Helvetica, Arial, sans-serif;
       }
@@ -81,7 +81,7 @@ This element fetches via its `href` attribute an arbitrary path and aligns the c
 
   <style>
     <![CDATA[
-      text{
+      text {
         dominant-baseline: hanging;
         font: 28px Verdana, Helvetica, Arial, sans-serif;
       }

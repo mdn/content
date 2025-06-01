@@ -110,7 +110,7 @@ Once you have created an object, you might want to read or change them. Object p
 object.foo; // "bar"
 object["age"]; // 42
 object.baz; // {myProp: 12}
-object.baz.myProp; //12
+object.baz.myProp; // 12
 ```
 
 ### Property definitions
@@ -161,7 +161,9 @@ A property of an object can also refer to a [function](/en-US/docs/Web/JavaScrip
 ```js
 const o = {
   property: function (parameters) {},
-  get property() {},
+  get property() {
+    return 1;
+  },
   set property(value) {},
 };
 ```

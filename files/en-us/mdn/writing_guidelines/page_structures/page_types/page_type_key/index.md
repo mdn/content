@@ -12,10 +12,11 @@ Like any other front matter key, the `page-type` key is specified in the YAML at
 
 ```md
 ---
-title: Geolocation.getCurrentPosition()
-slug: Web/API/Geolocation/getCurrentPosition
-page-type: web-api-instance-method
-browser-compat: api.Geolocation.getCurrentPosition
+title: 100 Continue
+slug: Web/HTTP/Reference/Status/100
+page-type: http-status-code
+spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.100
+sidebar: httpsidebar
 ---
 ```
 
@@ -43,7 +44,7 @@ This section lists `page-type` values for pages under [Learn](/en-US/docs/Learn_
 - `learn-topic`: an overview of a topic, that is, a collection of modules like [_CSS_](/en-US/docs/Learn_web_development/Core/Styling_basics).
 - `learn-module` an overview of a module, that is, an ordered collection of guides, like [_Structuring content with HTML_](/en-US/docs/Learn_web_development/Core/Structuring_content).
 - `learn-module-chapter` a guide that is part of a module, like [_Mobile accessibility_](/en-US/docs/Learn_web_development/Core/Accessibility/Mobile).
-- `learn-module-assessment` a special guide with an activity allowing to assess the comprehension of a module or a part of it, like [_Test your skills: basic controls_](/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Basic_controls).
+- `learn-module-assessment` a special guide with an activity allowing to assess the comprehension of a module or a part of it, like [_Test your skills: basic controls_](/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Basic_controls).
 - `learn-faq`: the answer to a specific question about web development, like [_What is a domain name?_](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name).
 
 ### Accessibility page types

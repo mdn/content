@@ -1,5 +1,6 @@
 ---
-title: "CSP: child-src"
+title: "Content-Security-Policy: child-src directive"
+short-title: child-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/child-src
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.child-src
@@ -68,7 +69,7 @@ This {{HTMLElement("iframe")}} and worker are blocked and won't load:
 <iframe src="https://not-example.com"></iframe>
 
 <script>
-  const blockedWorker = new Worker("data:application/javascript,…");
+  const blockedWorker = new Worker("data:text/javascript,…");
 </script>
 ```
 

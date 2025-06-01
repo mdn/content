@@ -12,12 +12,12 @@ The **`dotAll`** accessor property of {{jsxref("RegExp")}} instances returns whe
 {{InteractiveExample("JavaScript Demo: RegExp.prototype.dotAll")}}
 
 ```js interactive-example
-const regex1 = new RegExp("foo", "s");
+const regex1 = /f.o/s;
 
 console.log(regex1.dotAll);
 // Expected output: true
 
-const regex2 = new RegExp("bar");
+const regex2 = /bar/;
 
 console.log(regex2.dotAll);
 // Expected output: false

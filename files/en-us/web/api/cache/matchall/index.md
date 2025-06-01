@@ -66,11 +66,12 @@ The following example retrieves all responses in the `v1` cache matching the URL
 It then logs the number of matching responses.
 
 ```js
-caches.open("v1").then((cache) => {
-  cache.matchAll("/", { ignoreSearch: true }).then((responses) => {
+caches
+  .open("v1")
+  .then((cache) => cache.matchAll("/", { ignoreSearch: true }))
+  .then((responses) => {
     console.log(`Found ${responses.length} matching responses`);
   });
-});
 ```
 
 ## Specifications

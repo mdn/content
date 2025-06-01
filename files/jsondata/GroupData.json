@@ -406,6 +406,7 @@
       "guides": [
         "/docs/Web/API/Document_Object_Model/Introduction",
         "/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model",
+        "/docs/Web/API/Document_Object_Model/Reflected_attributes",
         "/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces",
         "/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors",
         "/docs/Web/API/Document_Object_Model/Transforming_with_XSLT",
@@ -1559,6 +1560,14 @@
       "properties": ["Response.body"],
       "events": []
     },
+    "Summarizer API": {
+      "overview": ["Summarizer API"],
+      "guides": ["/docs/Web/API/Summarizer_API/Using"],
+      "interfaces": ["Summarizer", "CreateMonitor"],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "SVG": {
       "overview": ["SVG API"],
       "guides": ["/docs/Web/SVG"],
@@ -1700,6 +1709,14 @@
         "Element: touchcancel"
       ]
     },
+    "Translator and Language Detector APIs": {
+      "overview": ["Translator and Language Detector APIs"],
+      "guides": ["/docs/Web/API/Translator_and_Language_Detector_APIs/Using"],
+      "interfaces": ["CreateMonitor", "LanguageDetector", "Translator"],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Trusted Types API": {
       "overview": ["Trusted Types API"],
       "interfaces": [
@@ -1775,7 +1792,7 @@
     },
     "URL Fragment Text Directives": {
       "overview": ["URL Fragment Text Directives"],
-      "guides": ["/en-US/docs/Web/URI/Fragment/Text_fragments"],
+      "guides": ["/en-US/docs/Web/URI/Reference/Fragment/Text_fragments"],
       "interfaces": ["FragmentDirective"],
       "methods": [],
       "properties": ["Document.fragmentDirective"]

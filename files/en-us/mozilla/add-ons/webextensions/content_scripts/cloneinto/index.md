@@ -83,7 +83,7 @@ You can also pass it into a function defined in the page script. Suppose the pag
 ```js
 // page script
 function foo(greeting) {
-  console.log("they said: " + greeting.message);
+  console.log(`they said: ${greeting.message}`);
 }
 ```
 

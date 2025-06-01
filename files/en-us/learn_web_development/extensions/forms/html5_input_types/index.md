@@ -374,7 +374,7 @@ Clicking a color control generally displays the operating system's default color
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: HTML5 controls](/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_HTML5_controls).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: HTML5 controls](/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Input_types).
 
 ## Summary
 

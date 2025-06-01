@@ -1,14 +1,14 @@
 ---
-title: Progressive loading
+title: "js13kGames: Progressive loading"
+short-title: Progressive loading
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Loading
 page-type: guide
+sidebar: pwasidebar
 ---
 
 {{PreviousMenu("Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
 
-{{PWASidebar}}
-
-In previous steps of this tutorial we covered APIs that help us make our [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) example a Progressive Web App: [Service Workers](/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers), [Web Manifests](/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs), [Notifications and Push](/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push). In this article we will go further and improve the performance of the app by progressively loading its resources.
+In previous steps of this tutorial, we covered APIs that help us make our [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) example a Progressive Web App using [Service Workers](/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers), [Web Manifests](/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs), and [Notifications and Push](/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push). In this article, we will go further and improve the performance of the app by progressively loading its resources.
 
 ## First meaningful paint
 

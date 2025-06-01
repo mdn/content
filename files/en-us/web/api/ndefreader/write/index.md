@@ -134,7 +134,8 @@ ndef.onreading = (event) => console.log("We read a tag!");
 function write(data, { timeout } = {}) {
   return new Promise((resolve, reject) => {
     const controller = new AbortController();
-    controller.signal.onabort = () => reject("Time is up, bailing out!");
+    controller.signal.onabort = () =>
+      reject(new Error("Time is up, bailing out!"));
     setTimeout(() => controller.abort(), timeout);
 
     ndef.addEventListener(

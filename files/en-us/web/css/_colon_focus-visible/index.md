@@ -168,4 +168,3 @@ If your code has to work in old browser versions that do not support `:focus-vis
 
 - {{CSSxRef(":focus")}}
 - {{CSSxRef(":focus-within")}}
-- [A polyfill for `:focus-visible`](https://github.com/WICG/focus-visible)

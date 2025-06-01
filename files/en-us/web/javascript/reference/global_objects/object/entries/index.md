@@ -13,7 +13,7 @@ The **`Object.entries()`** static method returns an array of a given object's ow
 
 ```js interactive-example
 const object1 = {
-  a: "somestring",
+  a: "some string",
   b: 42,
 };
 
@@ -22,7 +22,7 @@ for (const [key, value] of Object.entries(object1)) {
 }
 
 // Expected output:
-// "a: somestring"
+// "a: some string"
 // "b: 42"
 ```
 

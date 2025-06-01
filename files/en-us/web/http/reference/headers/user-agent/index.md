@@ -1,5 +1,6 @@
 ---
-title: User-Agent
+title: User-Agent header
+short-title: User-Agent
 slug: Web/HTTP/Reference/Headers/User-Agent
 page-type: http-header
 browser-compat: http.headers.User-Agent

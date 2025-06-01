@@ -3,12 +3,10 @@ title: "Selection: getComposedRanges() method"
 short-title: getComposedRanges()
 slug: Web/API/Selection/getComposedRanges
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.Selection.getComposedRanges
 ---
 
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+{{ ApiRef("DOM") }}
 
 The **`Selection.getComposedRanges()`** method returns an array of {{domxref("StaticRange")}} objects representing the current selection ranges, and can return ranges that potentially cross shadow boundaries.
 
@@ -29,17 +27,22 @@ Application code might use a {{domxref("MutationObserver")}} to monitor for DOM 
 
 ```js-nolint
 getComposedRanges()
-getComposedRanges(shadowRoot1)
-getComposedRanges(shadowRoot1, shadowRoot2)
-getComposedRanges(shadowRoot1, shadowRoot2, /* …, */ shadowRootN)
+getComposedRanges(options)
 ```
 
 ### Parameters
 
-- `shadowRoot1`, …, `shadowRootN`
-  - : Zero or more {{domxref("ShadowRoot")}} arguments.
-    If a selection endpoint is within one of the provided shadow roots, the range will be able to return nodes within its corresponding Shadow DOM tree.
-    Otherwise, if the selection crosses a shadow boundary and the corresponding `ShadowRoot` is not provided, the returned range will be adjusted to include the entire host element for the shadow root.
+- `options` {{optional_inline}}
+
+  - : An object with the following properties, all optional:
+
+    - `shadowRoots` {{optional_inline}}
+      - : An array of {{domxref("ShadowRoot")}} objects.
+        If a selection endpoint is within one of the provided shadow roots, the range will be able to return nodes within its corresponding Shadow DOM tree.
+        Otherwise, if the selection crosses a shadow boundary and the corresponding `ShadowRoot` is not provided, the returned range will be adjusted to include the entire host element for the shadow root.
+
+> [!NOTE]
+> In the original specification, shadow roots were specified as a set of [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters). Some browsers may still support this legacy syntax.
 
 ### Return value
 
@@ -56,7 +59,7 @@ It allows you to select text that is defined in different nodes in the DOM, and 
 
 #### HTML
 
-The HTML defines some text nodes with some `<span>` elements to which we'll attach a shadow root using JavScript.
+The HTML defines some text nodes with some `<span>` elements to which we'll attach a shadow root using JavaScript.
 We also add some buttons for copying and applying the selection using a number of different methods.
 
 ```html
@@ -144,7 +147,7 @@ const copySelectionWithShadowRootsButton = document.querySelector(
 copySelectionWithShadowRootsButton.addEventListener("click", () => {
   composedRangeSelection = window
     .getSelection()
-    .getComposedRanges(openRoot, closedRoot)[0];
+    .getComposedRanges({ shadowRoots: [openRoot, closedRoot] })[0];
   log(`Selection has been copied (shadow roots passed)`);
 });
 ```

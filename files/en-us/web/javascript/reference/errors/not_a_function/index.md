@@ -68,9 +68,7 @@ which will work with {{jsxref("Array")}} objects only.
 ```js example-bad
 const obj = { a: 13, b: 37, c: 42 };
 
-obj.map(function (num) {
-  return num * 2;
-});
+obj.map((num) => num * 2);
 
 // TypeError: obj.map is not a function
 ```
@@ -80,9 +78,7 @@ Use an array instead:
 ```js example-good
 const numbers = [1, 4, 9];
 
-numbers.map(function (num) {
-  return num * 2;
-}); // [2, 8, 18]
+numbers.map((num) => num * 2); // [2, 8, 18]
 ```
 
 ### Function shares a name with a pre-existing property
@@ -104,7 +100,7 @@ Dog.prototype.name = function (name) {
 };
 
 const myNewDog = new Dog();
-myNewDog.name("Cassidy"); //Uncaught TypeError: myNewDog.name is not a function
+myNewDog.name("Cassidy"); // TypeError: myNewDog.name is not a function
 ```
 
 Use a different property name instead:
@@ -113,7 +109,7 @@ Use a different property name instead:
 function Dog() {
   this.age = 11;
   this.color = "black";
-  this.dogName = "Ralph"; //Using this.dogName instead of .name
+  this.dogName = "Ralph"; // Using this.dogName instead of .name
   return this;
 }
 
@@ -123,7 +119,7 @@ Dog.prototype.name = function (name) {
 };
 
 const myNewDog = new Dog();
-myNewDog.name("Cassidy"); //Dog { age: 11, color: 'black', dogName: 'Cassidy' }
+myNewDog.name("Cassidy"); // Dog { age: 11, color: 'black', dogName: 'Cassidy' }
 ```
 
 ### Using parentheses for multiplication
@@ -153,7 +149,7 @@ Ensure you are importing the module correctly.
 An example helpers library (`helpers.js`)
 
 ```js
-const helpers = function () {};
+function helpers() {}
 
 helpers.groupBy = function (objectArray, property) {
   return objectArray.reduce((acc, obj) => {

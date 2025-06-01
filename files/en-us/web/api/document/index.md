@@ -244,6 +244,8 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : New name for {{DOMxRef("Document.hasStorageAccess()")}}.
 - {{DOMxRef("Document.importNode()")}}
   - : Returns a clone of a node from an external document.
+- {{DOMxRef("Document.moveBefore()")}} {{Experimental_Inline}}
+  - : Moves a given {{domxref("Node")}} inside the `Document` DOM node as a direct child, before a given reference node, without removing and then inserting the node.
 - {{DOMxRef("Document.mozSetImageElement()")}} {{Non-standard_Inline}}
   - : Allows you to change the element being used as the background image for a specified element ID.
 - {{DOMxRef("Document.prepend()")}}
@@ -327,15 +329,6 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when a content security policy is violated.
 - {{DOMxRef("Document/visibilitychange_event", "visibilitychange")}}
   - : Fired when the content of a tab has become visible or has been hidden.
-
-### Clipboard events
-
-- {{DOMxRef("Document/copy_event", "copy")}}
-  - : Fired when the user initiates a copy action through the browser's user interface.
-- {{DOMxRef("Document/cut_event", "cut")}}
-  - : Fired when the user initiates a cut action through the browser's user interface.
-- {{DOMxRef("Document/paste_event", "paste")}}
-  - : Fired when the user initiates a paste action through the browser's user interface.
 
 ### Fullscreen events
 

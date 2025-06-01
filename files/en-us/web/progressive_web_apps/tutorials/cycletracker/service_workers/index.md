@@ -1,11 +1,10 @@
 ---
 title: "CycleTracker: Service workers"
-short-title: Service workers
+short-title: Offline support using service workers
 slug: Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers
 page-type: tutorial-chapter
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 {{PreviousMenu("Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
 
@@ -177,6 +176,7 @@ self.addEventListener("activate", (event) => {
           if (name !== CACHE_NAME) {
             return caches.delete(name);
           }
+          return undefined;
         }),
       );
       await clients.claim();
@@ -264,6 +264,7 @@ self.addEventListener("activate", (event) => {
           if (name !== CACHE_NAME) {
             return caches.delete(name);
           }
+          return undefined;
         }),
       );
       await clients.claim();

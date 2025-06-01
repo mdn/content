@@ -31,7 +31,7 @@ createWriter(successCallback, errorCallback)
 - `errorCallback` {{optional_inline}}
   - : If provided, this must be a method which is called when an error occurs while trying
     to create the {{domxref("FileWriter")}}. This callback receives as input a
-    {{domxref("FileError")}} object describing the error.
+    {{domxref("DOMException")}} object describing the error.
 
 ### Return value
 
@@ -50,7 +50,7 @@ function writeToFileEntry(entry, text) {
 
       fileWriter.write(data);
     },
-    (fileError) => {
+    (error) => {
       /* do whatever to handle the error */
     },
   );

@@ -60,7 +60,7 @@ Any newline characters inserted in the source are part of the template literal.
 Using normal strings, you would have to use the following syntax in order to get multi-line strings:
 
 ```js
-console.log("string text line 1\n" + "string text line 2");
+console.log("string text line 1\nstring text line 2");
 // "string text line 1
 // string text line 2"
 ```

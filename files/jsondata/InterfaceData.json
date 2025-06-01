@@ -480,6 +480,10 @@
       "inh": "ReportBody",
       "impl": []
     },
+    "CreateMonitor": {
+      "inh": "EventTarget",
+      "impl": []
+    },
     "Credential": {
       "inh": "",
       "impl": []
@@ -1936,6 +1940,10 @@
       "inh": "",
       "impl": []
     },
+    "IntegrityPolicyViolationReportBody": {
+      "inh": "ReportBody",
+      "impl": []
+    },
     "InterestGroupBiddingAndScoringScriptRunnerGlobalScope": {
       "inh": "InterestGroupScriptRunnerGlobalScope",
       "impl": []
@@ -2001,6 +2009,10 @@
       "impl": []
     },
     "KHR_parallel_shader_compile": {
+      "inh": "",
+      "impl": []
+    },
+    "LanguageDetector": {
       "inh": "",
       "impl": []
     },
@@ -2732,6 +2744,10 @@
       "inh": "",
       "impl": []
     },
+    "ProtectedAudienceUtilities": {
+      "inh": "",
+      "impl": []
+    },
     "ProximitySensor": {
       "inh": "Sensor",
       "impl": []
@@ -2861,6 +2877,10 @@
       "impl": []
     },
     "RestrictionTarget": {
+      "inh": "",
+      "impl": []
+    },
+    "Rewriter": {
       "inh": "",
       "impl": []
     },
@@ -3152,6 +3172,14 @@
       "inh": "Event",
       "impl": []
     },
+    "SpeechRecognitionPhrase": {
+      "inh": "",
+      "impl": []
+    },
+    "SpeechRecognitionPhraseList": {
+      "inh": "",
+      "impl": []
+    },
     "SpeechRecognitionResult": {
       "inh": "",
       "impl": []
@@ -3237,6 +3265,10 @@
       "impl": []
     },
     "SubtleCrypto": {
+      "inh": "",
+      "impl": []
+    },
+    "Summarizer": {
       "inh": "",
       "impl": []
     },
@@ -3756,6 +3788,10 @@
       "inh": "Event",
       "impl": []
     },
+    "Translator": {
+      "inh": "",
+      "impl": []
+    },
     "TreeWalker": {
       "inh": "",
       "impl": []
@@ -4209,6 +4245,10 @@
       "impl": []
     },
     "WritableStreamDefaultWriter": {
+      "inh": "",
+      "impl": []
+    },
+    "Writer": {
       "inh": "",
       "impl": []
     },

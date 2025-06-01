@@ -159,9 +159,9 @@ Changing between `display: flow-root` and `display: block flow-root` will achiev
 
 ```js hidden
 function changeDisplayType() {
-  var parentDiv = document.getElementById("parent");
-  var siblingDiv = document.getElementById("sibling");
-  var displayType = document.getElementById("displayType").value;
+  const parentDiv = document.getElementById("parent");
+  const siblingDiv = document.getElementById("sibling");
+  const displayType = document.getElementById("displayType").value;
 
   parentDiv.style.display = displayType;
   siblingDiv.style.display = displayType;

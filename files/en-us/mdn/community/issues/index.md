@@ -24,6 +24,8 @@ Avoid doing the following:
 - Opening lots of issues asking vague questions.
 - Asking questions without trying to solve the problem yourself first.
 
+If you want to suggest new documentation or ways to improve the website, see [Proposing new content or features](/en-US/docs/MDN/Community/Issues/Content_suggestions_feature_proposals).
+
 ## Guidelines for reporting an issue
 
 [Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues) are used to track bugs. An issue must be a single actionable task or a collection of related actionable tasks and must have a clear outcome.
@@ -44,7 +46,7 @@ Here are some hints for opening issues:
   - **Issue title** must convey succinctly the _required action_.
   - **Issue description** must clearly describe the bug and the action required to resolve the issue. It must also list the task or sub-tasks to be completed to resolve the issue. Some other guidelines include:
     - Use the description field to indicate the status of the task or sub-tasks by using checklists.
-    - Update the status of a task in the issue description instead of commenting on the issue. Use [task lists](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-task-lists) in the description if an issue has multiple parts. This helps others who may otherwise need to scroll through comments on the issue to determine the status of various tasks.
+    - Update the status of a task in the issue description instead of commenting on the issue. Use [task lists](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-tasklists) in the description if an issue has multiple parts. This helps others who may otherwise need to scroll through comments on the issue to determine the status of various tasks.
     - Comments in an issue should be limited to details or context that help resolve the issue.
 - If you find yourself in one of the following situations, move the conversation to [MDN's discussion on GitHub](https://github.com/orgs/mdn/discussions):
   - A discussion needs to take place to clarify an issue.
@@ -55,7 +57,7 @@ Here are some hints for opening issues:
 
 ### Creating a task list issue
 
-If the issue you're opening is not to report a bug but to perform a series of tasks, you can create the issue as a [task list](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-task-lists).
+If the issue you're opening is not to report a bug but to perform a series of tasks, you can create the issue as a [task list](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-tasklists).
 Explain the context or reason for performing the tasks in the description.
 Ensure that you list all the actionable tasks as a checklist.
 

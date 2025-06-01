@@ -1,5 +1,6 @@
 ---
-title: Refresh
+title: Refresh header
+short-title: Refresh
 slug: Web/HTTP/Reference/Headers/Refresh
 page-type: http-header
 browser-compat: http.headers.Refresh

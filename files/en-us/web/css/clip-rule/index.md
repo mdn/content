@@ -7,7 +7,9 @@ browser-compat: css.properties.clip-rule
 
 {{CSSRef}}
 
-The **`clip-rule`** [CSS](/en-US/docs/Web/CSS) property defines how to determine which pixels in a mask's box are inside the clipping shape defined by a [clip path](/en-US/docs/Web/CSS/clip-path), and which are outside, when parts of the path overlap other parts. Specifically, it chooses between the "non-zero" and "even-odd" methods of determining inclusion. `clip-rule` can be applied to all SVG elements, but only has an effect on those which are part of a clipping path. CSS values of the `clip-rule` property can override SVG values of the {{SVGAttr("clip-rule")}} attribute.
+The **`clip-rule`** [CSS](/en-US/docs/Web/CSS) property determines, when parts of the path overlap other parts, which pixels in a mask's box are inside the clipping shape defined by a [clip path](/en-US/docs/Web/CSS/clip-path) and which are outside.
+
+The `clip-rule` property only applies to SVG elements that are contained within a {{SVGElement("clipPath")}} element, overriding the element's {{SVGAttr("clip-rule")}} attribute value if present. The `clip-rule` property basically works as the {{cssxref("fill-rule")}} property, except that it applies to `<clipPath>` definitions. It does not have any effect on CSS {{cssxref("basic-shape")}}s.
 
 ## Syntax
 
@@ -39,6 +41,144 @@ clip-rule: unset;
 {{csssyntax}}
 
 ## Examples
+
+### Value comparison
+
+In this example, we will apply different CSS `clip-rule` values to similar SVG {{SVGElement("path")}} elements to demonstrate the difference between `evenodd` and `non-zero`.
+
+#### HTML
+
+The markup has multiple `<svg>` containers, each containing a `<clipPath>` element that defines a star shape, and a `<rect>` element to draw the star inside. The stars are created with overlapping lines. Other than the `id`, the markup of the first two SVG elements is identical. The third SVG includes just the `<path>` element, showing how the lines of the path that created the star overlap.
+
+```html
+<svg>
+  <clipPath id="star1">
+    <path d="M50,0 21,90 98,35 2,35 79,90z" />
+  </clipPath>
+  <rect clip-path="url(#star1)" width="95" height="95" />
+</svg>
+
+<svg>
+  <clipPath id="star2">
+    <path d="M50,0 21,90 98,35 2,35 79,90z" />
+  </clipPath>
+  <rect clip-path="url(#star2)" width="95" height="95" />
+</svg>
+
+<svg id="star3">
+  <path d="M50,0 21,90 98,35 2,35 79,90z" />
+</svg>
+```
+
+#### CSS
+
+The `clip-rule` for the `<path>` in the first SVG is set to `evenodd`; `nonzero` in the second SVG. For the path-only SVG, we removed the default {{cssxref("fill")}} and defined both a {{cssxref("stroke")}} color and {{cssxref("stroke-width")}} to make the overlapping path lines visible:
+
+```css hidden
+body {
+  display: flex;
+  gap: 20px;
+}
+svg {
+  width: 110px;
+  height: 110px;
+}
+```
+
+```css
+#star1 path {
+  clip-rule: evenodd;
+}
+
+#star2 path {
+  clip-rule: nonzero;
+}
+
+#star3 path {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1;
+}
+```
+
+#### Results
+
+{{EmbedLiveSample("Value comparison", "", "130")}}
+
+### Within basic shape definitions
+
+This example demonstrates that, while the `clip-rule` does not have any effect on CSS {{cssxref("basic-shape")}}s, it can affect a `<clipPath>` used as the source of a shape.
+
+#### HTML
+
+We include an SVG with two `<clipPath>` elements that define star shapes, which are identical except for their `id` attribute values. We also include two `<div>` elements that will contain our star shapes.
+
+```html
+<svg height="0" width="0">
+  <defs>
+    <clipPath id="star1">
+      <path d="M100,0 42,180 196,70 4,70 158,180z" />
+    </clipPath>
+    <clipPath id="star2">
+      <path d="M100,0 42,180 196,70 4,70 158,180z" />
+    </clipPath>
+  </defs>
+</svg>
+
+<div></div>
+<div></div>
+```
+
+#### CSS
+
+We provide the `<div>` elements with a set {{cssxref("width")}} and {{cssxref("height")}}, adding a [`conic-gradient()`](/en-US/docs/Web/CSS/gradient/conic-gradient) for their {{cssxref("background-image")}} value:
+
+```css hidden
+body {
+  display: flex;
+  gap: 20px;
+}
+```
+
+```css
+div {
+  height: 200px;
+  width: 200px;
+  background-image: conic-gradient(
+    at center,
+    rebeccapurple,
+    green,
+    lightblue,
+    rebeccapurple
+  );
+}
+```
+
+We use the {{cssxref("clip-path")}} property to set the different `<clipPath>` elements as the clipping path for each `<div>`:
+
+```css
+div:first-of-type {
+  clip-path: url(#star1);
+}
+div:last-of-type {
+  clip-path: url(#star2);
+}
+```
+
+Finally, we set the different `clip-rule` values for each of the `<clipPath>` element's `<path>`s:
+
+```css
+#star1 path {
+  clip-rule: evenodd;
+}
+#star2 path {
+  clip-rule: nonzero;
+}
+```
+
+#### Results
+
+{{EmbedLiveSample("Within basic shape definitions", "", "200")}}
 
 ### Choosing between rules for a path with all clockwise paths
 
@@ -140,6 +280,10 @@ In this case, because the outer part of the path moves in a clockwise (left-to-r
 
 ## See also
 
+- {{cssxref("fill-rule")}}
+- {{cssxref("clip-path")}}
+- [Introduction to CSS clipping](/en-US/docs/Web/CSS/CSS_masking/Clipping)
+- [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
 - SVG {{SVGAttr("clip-rule")}} attribute
 - SVG {{SVGElement("clipPath")}} element
-- CSS {{CSSxRef('clip-path')}} property
+- SVG {{SVGAttr("fill-rule")}} attribute

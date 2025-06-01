@@ -1,5 +1,6 @@
 ---
-title: Sec-CH-UA-Full-Version
+title: Sec-CH-UA-Full-Version header
+short-title: Sec-CH-UA-Full-Version
 slug: Web/HTTP/Reference/Headers/Sec-CH-UA-Full-Version
 page-type: http-header
 status:

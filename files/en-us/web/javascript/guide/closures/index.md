@@ -205,7 +205,7 @@ The shared lexical environment is created in the body of an anonymous function, 
 Those three public functions form closures that share the same lexical environment. Thanks to JavaScript's lexical scoping, they each have access to the `privateCounter` variable and the `changeBy` function.
 
 ```js
-const makeCounter = function () {
+function makeCounter() {
   let privateCounter = 0;
   function changeBy(val) {
     privateCounter += val;
@@ -223,7 +223,7 @@ const makeCounter = function () {
       return privateCounter;
     },
   };
-};
+}
 
 const counter1 = makeCounter();
 const counter2 = makeCounter();

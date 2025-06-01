@@ -274,9 +274,7 @@ class MockPushSource {
   }
 
   // Dummy close function
-  close() {
-    return;
-  }
+  close() {}
 
   // Return random character string
   static #randomChars(length = 8) {
@@ -356,7 +354,7 @@ function makePushSourceStream() {
       readRepeatedly().catch((e) => controller.error(e));
       function readRepeatedly() {
         return pushSource.dataRequest().then((result) => {
-          if (result.data.length == 0) {
+          if (result.data.length === 0) {
             logSource(`No data from source: closing`);
             controller.close();
             return;
@@ -379,9 +377,7 @@ function makePushSourceStream() {
 
 ```js hidden
 // Monkey patch fetch() so it returns a response that is a mocked stream
-window.fetch = async (...args) => {
-  return { body: stream };
-};
+window.fetch = async (...args) => ({ body: stream });
 ```
 
 The code below shows a more complete example.

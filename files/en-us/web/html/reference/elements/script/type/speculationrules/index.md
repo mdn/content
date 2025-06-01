@@ -175,6 +175,17 @@ Each object can contain the following properties:
 
   - : A string used to identify a rule or ruleset. This will be included in the {{HTTPHeader("Sec-Speculation-Tags")}} request header for any speculations covered by that rule.
 
+- `"target_hint"` {{experimental_inline}}
+
+  - : A string indicating where the page expects the prerendered content to be activated.
+    The directive not supported for prefetch speculations.
+    Allowed values are:
+    - `"target_hint": "_blank"`
+      - : Open rerendered content in a new page.
+    - `"target_hint": "_self"`
+      - : Open rerendered content in the current page.
+        This is the default, if not specified.
+
 > [!NOTE]
 > As speculation rules use a `<script>` element, they need to be explicitly allowed in the [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) [`script-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) directive if the site includes it. This is done by adding the `"inline-speculation-rules"` value along with a hash- or nonce-source.
 
@@ -553,6 +564,35 @@ Or to identify individual rules:
 ```
 
 See {{HTTPHeader("Sec-Speculation-Tags")}} for more examples.
+
+### `target_hint` example
+
+A `target_hint` can be included to indicate the target window in which matching prerender speculations will be opened:
+
+```html
+<script type="speculationrules">
+  {
+    "tag": "my-rules",
+    "prerender": [
+      {
+        "eagerness": "eager",
+        "target_hint": "_blank",
+        "urls": ["page2.html"]
+      }
+    ]
+  }
+</script>
+```
+
+The rules above allow the following links to be prerendered correctly in the appropriate targets:
+
+```html
+<a href="page1.html">Open link in this window</a>
+<a target="_blank" href="page2.html">Open link in new window</a>
+```
+
+`target_hint` is only needed for list rules, which use `urls`.
+They are not needed for document rules (which use `where`) since in these the target can be known from the `target` attribute of the `<a>` link element.
 
 ## Specifications
 

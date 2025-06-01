@@ -15,7 +15,7 @@ The **`for`** statement creates a loop that consists of three optional expressio
 let str = "";
 
 for (let i = 0; i < 9; i++) {
-  str = str + i;
+  str += i;
 }
 
 console.log(str);

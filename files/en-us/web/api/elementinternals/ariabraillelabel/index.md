@@ -32,7 +32,7 @@ class StarRating extends HTMLElement {
     this._internals.ariaBrailleLabel = this.ariaBrailleLabel;
   }
 
-  // ...
+  // …
 }
 
 customElements.define("star-rating", StarRating);
@@ -88,4 +88,3 @@ log(el._internals.ariaBrailleLabel);
 ## See also
 
 - {{domxref("ElementInternals.ariaBrailleRoleDescription")}}
-- {{domxref("ElementInternals.ariaBrailleRole")}}

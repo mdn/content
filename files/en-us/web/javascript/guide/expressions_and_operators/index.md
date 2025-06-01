@@ -925,7 +925,7 @@ The parentheses are optional.
 Suppose you define the following variables:
 
 ```js
-const myFun = new Function("5 + 2");
+const myFun = () => 5 + 2;
 const shape = "round";
 const size = 1;
 const foo = ["Apple", "Mango", "Orange"];
@@ -971,7 +971,6 @@ For methods and functions, the `typeof` operator returns results as follows:
 
 ```js
 typeof blur; // returns "function"
-typeof eval; // returns "function"
 typeof parseInt; // returns "function"
 typeof shape.split; // returns "function"
 ```
@@ -1096,16 +1095,16 @@ const b = 2;
 const c = 3;
 
 // default precedence
-a + b * c     // 7
+a + b * c; // 7
 // evaluated by default like this
-a + (b * c)   // 7
+a + (b * c); // 7
 
 // now overriding precedence
 // addition before multiplication
-(a + b) * c   // 9
+(a + b) * c; // 9
 
 // which is equivalent to
-a * c + b * c // 9
+a * c + b * c; // 9
 ```
 
 ### Property accessor

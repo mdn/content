@@ -1,5 +1,6 @@
 ---
-title: Sec-Speculation-Tags
+title: Sec-Speculation-Tags header
+short-title: Sec-Speculation-Tags
 slug: Web/HTTP/Reference/Headers/Sec-Speculation-Tags
 page-type: http-header
 status:
@@ -35,7 +36,7 @@ Sec-Speculation-Tags: <tag-list>
 ## Directives
 
 - `<tag-list>`
-  - : A comma-separated list of tags indicating [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) rules that may have initiated this request. See [Speculation rules JSON representation](/en-US/docs/Web/HTML/Element/script/type/speculationrules#speculation_rules_json_representation) for the syntax reference.
+  - : A comma-separated list of tags indicating [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) rules that may have initiated this request. See [Speculation rules JSON representation](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules#speculation_rules_json_representation) for the syntax reference.
 
 ## Examples
 
@@ -186,4 +187,4 @@ Sec-Speculation-Tags: null, "cdn-rule"
 ## See also
 
 - [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API)
-- [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Element/script/type/speculationrules)
+- [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules)

@@ -57,11 +57,13 @@ Below are examples of the various pages you'll find on MDN along with templates 
 - [API landing pages](#api_landing_page)
 - [API reference page](#api_reference_page)
 - [API reference subpage](#api_reference_subpage)
+- [ARIA reference](#aria_reference_page)
 - [Conceptual pages](#conceptual_page)
 - [CSS feature reference](#css_feature_reference_page)
 - [CSS module landing page](#css_module_landing_page)
 - [Glossary entry](#glossary_page)
 - [HTML element](#html_element_reference_page)
+- [HTML attribute](#html_attribute_reference_page)
 - [HTTP header](#http_header_reference_page)
 - [Landing page](#landing_page)
 - [SVG element](#svg_element_reference_page)
@@ -76,7 +78,7 @@ It does not link directly to specific methods or properties within the API's cla
 It is primarily a _navigation_ page, but also functions as an at-a-glance _reference_ page for the API.
 
 There are some instances where multiple APIs exist that are distinct, and are defined in their own specifications, but they closely related and therefore would make sense to cover with a single API landing page.
-For example, the [Generic Sensor API](https://www.w3.org/TR/generic-sensor/) cover general sensor concerns, but more specific concerns are covered in other APIs such as [Ambient Light Sensor](https://www.w3.org/TR/ambient-light/), [Motion Sensor](https://www.w3.org/TR/motion-sensors/), etc.
+For example, the [Generic Sensor API](https://w3c.github.io/sensors/) cover general sensor concerns, but more specific concerns are covered in other APIs such as [Ambient Light Sensor](https://w3c.github.io/ambient-light/), [Motion Sensor](https://w3c.github.io/motion-sensors/), etc.
 In such cases, many of the high level concepts are the same, so it makes no sense to repeat those over multiple landing pages.
 In such a case, it would make more sense in terms of repetition and findability to cover them all under a single "Web sensors" landing page.
 
@@ -135,6 +137,21 @@ An **HTML reference page** lists all the attributes that are available on an HTM
 #### Templates
 
 - [HTML element page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/HTML_element_page_template)
+
+### HTML attribute reference page
+
+An HTML attribute page lists all the values that exist on an HTML attribute, explains the attribute's purpose and use cases, providing examples, browser compatibility information, and other important data.
+
+> [!NOTE]
+> Element-specific attributes (e.g., `placeholder` for `<input>`) don't require a separate page if the attributes can be sufficiently covered within the parent element's reference page (e.g., the `placeholder` attribute should be covered on the `<input>` element's page, not as a standalone page).
+
+#### Example
+
+- [`class` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/class)
+
+#### Templates
+
+- [HTML attribute page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/HTML_attribute_page_template)
 
 ### SVG element reference page
 
@@ -197,6 +214,19 @@ It also provides examples, browser compatibility information, and other importan
 #### Templates
 
 - [HTTP header page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/HTTP_header_page_template)
+
+### ARIA reference page
+
+An **ARIA reference page** describes a [role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) or [attribute](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes) that defines ways to make web content and web applications more accessible to people with disabilities.
+
+#### Examples
+
+- [`aria-busy` attribute](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy)
+- [`application` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)
+
+#### Templates
+
+- [ARIA page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/ARIA_Page_Template)
 
 ### Conceptual page
 

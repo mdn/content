@@ -24,7 +24,7 @@ A string. If this has not been previously set as described above, it will be an 
 Setting and getting a label via `GPUTexture.label`:
 
 ```js
-// ...
+// …
 
 const depthTexture = device.createTexture({
   size: [canvas.width, canvas.height],
@@ -40,7 +40,7 @@ console.log(depthTexture.label); // "my_texture"
 Setting a label via the originating {{domxref("GPUDevice.createTexture()")}} call, and then getting it via `GPUTexture.label`:
 
 ```js
-// ...
+// …
 
 const depthTexture = device.createTexture({
   size: [canvas.width, canvas.height],

@@ -2,9 +2,8 @@
 title: How can we design for all types of users?
 slug: Learn_web_development/Howto/Design_and_accessibility/Design_for_all_types_of_users
 page-type: learn-faq
+sidebar: learn-how-to
 ---
-
-{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 This article provides basic tips to help you design websites for any kind of user.
 

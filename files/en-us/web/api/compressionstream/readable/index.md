@@ -20,7 +20,7 @@ The following example returns a {{domxref("ReadableStream")}} from a `Compressio
 
 ```js
 let stream = new CompressionStream("gzip");
-console.log(stream.readable); //a ReadableStream
+console.log(stream.readable); // A ReadableStream
 ```
 
 ## Specifications

@@ -12,9 +12,9 @@ It was designed for communication between web browsers and web servers, but it c
 HTTP follows a classical [client-server model](https://en.wikipedia.org/wiki/Client%E2%80%93server_model), with a client opening a connection to make a request, then waiting until it receives a response from the server.
 HTTP is a [stateless protocol](https://en.wikipedia.org/wiki/Stateless_protocol), meaning that the server does not keep any session data between two requests, although the later addition of [cookies](/en-US/docs/Web/HTTP/Guides/Cookies) adds state to some client-server interactions.
 
-## Reference documentation
+## Reference
 
-The HTTP reference documentation contains detailed information about headers, request methods, status responses, and lists relevant specifications and standards documents.
+The [HTTP reference](/en-US/docs/Web/HTTP/Reference) documentation contains detailed information about headers, request methods, status responses, and lists relevant specifications and standards documents.
 
 - [HTTP headers](/en-US/docs/Web/HTTP/Reference/Headers)
   - : Message headers are used to send metadata about a resource or a HTTP message, and to describe the behavior of the client or the server.
@@ -36,12 +36,12 @@ The following subsections are also notable:
   - : The {{HTTPHeader("Permissions-Policy")}} response header provides a mechanism to allow or deny the use of browser features in a document or within any {{HTMLElement("iframe")}} element in the document.
     This section lists directives that can be used in a Permissions-Policy header, with individual documentation pages that describe how the directives work and how to use them.
 
-## HTTP guides
+## Guides
 
 HTTP is an extensible protocol that relies on concepts like resources and Uniform Resource Identifiers (URIs), a basic message structure, and client-server communication model.
 On top of these concepts, numerous extensions have been developed over the years that add functionality and updated semantics, including additional HTTP methods and headers.
 
-The guides below are listed in order from general overviews to specialized, use-case-driven topics.
+The [HTTP guides](/en-US/docs/Web/HTTP/Guides) are listed in order from general overviews to specialized, use-case-driven topics.
 Beginners are encouraged to start with the foundational guides before exploring more focused articles.
 
 - [Overview of HTTP](/en-US/docs/Web/HTTP/Guides/Overview)
