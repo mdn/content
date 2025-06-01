@@ -238,6 +238,7 @@ Put the following content in the `index.html` file:
   <body>
     <script type="module">
       import init, { greet } from "./pkg/hello_wasm.js";
+
       init().then(() => {
         greet("WebAssembly");
       });

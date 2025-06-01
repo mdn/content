@@ -41,7 +41,7 @@ BigInt.asUintN(bits, bigint)
 
 ### Return value
 
-The value of `bigint` modulo 2^`bits`, as an unsigned integer.
+The value of `bigint` modulo `2 ** bits`, as an unsigned integer.
 
 ### Exceptions
 

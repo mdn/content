@@ -93,7 +93,7 @@ function decimalAdjust(type, value, exp) {
   const adjustedValue = Math[type](`${magnitude}e${exponent - exp}`);
   // Shift back
   const [newMagnitude, newExponent = 0] = adjustedValue.toString().split("e");
-  return Number(`${newMagnitude}e${+newExponent + exp}`);
+  return Number(`${newMagnitude}e${Number(newExponent) + exp}`);
 }
 
 // Decimal round
