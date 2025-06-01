@@ -338,7 +338,37 @@ div.comma-separated {
 
 ### Legacy versus modern syntax
 
-The example demonstrates how the `hsla()` syntax is an alias for `hsl()`; both are supported using both modern and legacy (comma-separated) syntaxes.
+The `hsl()` and `hsla()` functions support both modern and legacy syntaxes. While both are supported, the modern syntax is recommended for new code as it provides better readability and consistency with other CSS color functions.
+
+#### Modern syntax
+
+```css
+/* Space-separated values with optional alpha channel */
+hsl(120 75% 50%)
+hsl(120 75% 50% / 0.8)
+
+/* Using the hsla() alias (functionally identical) */
+hsla(120 75% 50% / 0.8)
+```
+
+#### Legacy syntax
+
+```css
+/* Comma-separated values */
+hsl(120, 75%, 50%)
+
+/* Legacy hsla() with comma-separated values */
+hsla(120, 75%, 50%, 0.8)
+```
+
+#### Key differences
+
+1. **Separators**: Modern syntax uses spaces to separate values, while legacy uses commas.
+2. **Alpha channel**: Modern syntax uses a forward slash (`/`) before the alpha value, while legacy `hsla()` uses a comma.
+3. **Units**: In modern syntax, the `deg` unit for hue is optional, and the `%` units for saturation and lightness can be omitted for values of 0.
+4. **Consistency**: The modern syntax aligns with other CSS color functions like `rgb()` and `hwb()`.
+
+For better readability and future compatibility, it's recommended to use the modern syntax in new projects.
 
 #### HTML
 
