@@ -422,14 +422,18 @@ function listener(details) {
       len += elements.length;
     }
 
-    // Check if the end of the data looks like "<h1>Exampl"
+    // Check if the word "Example" is cropped at the end, e.g. "<h1>Exampl"
     const n = data.length;
     const m = bytes.length;
-    mainLoop: for (let i = n - 1, l = n - m; i > l; i--) {
+
+    let i = n - 1;
+    let j = 1;
+
+    mainLoop: while (i > n - m) {
       if (bytes[0] === data[i]) {
         const initial = i;
-        for (let j = 1, l = n - i; j < l; j++) {
-          if (data[++i] !== bytes[j]) {
+        while (j < n - initial) {
+          if (data[++i] !== bytes[j++]) {
             break mainLoop;
           }
         }
@@ -437,6 +441,7 @@ function listener(details) {
         data = data.slice(0, initial);
         break;
       }
+      i--;
     }
     filter.write(new Uint8Array(data));
   };
