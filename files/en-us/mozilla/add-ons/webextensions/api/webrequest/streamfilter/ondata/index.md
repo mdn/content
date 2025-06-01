@@ -333,9 +333,7 @@ function constructLps(pat, lps) {
   while (i < pat.length) {
     // If characters match, increment the size of lps
     if (pat[i] === pat[len]) {
-      len++;
-      lps[i] = len;
-      i++;
+      lps[i++] = ++len;
     }
     // If there is a mismatch
     else {
@@ -345,8 +343,7 @@ function constructLps(pat, lps) {
         len = lps[len - 1];
       } else {
         // If no matching prefix found, set lps[i] to 0
-        lps[i] = 0;
-        i++;
+        lps[i++] = 0;
       }
     }
   }
