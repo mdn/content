@@ -132,11 +132,12 @@ The `attr()` function can reference attributes that were never intended by the p
 ```html
 <!-- This won't work! -->
 <span data-icon="https://example.org/icons/question-mark.svg">help</span>
-<style>
-  span[data-icon] {
-    background-image: url(attr(data-icon));
-  }
-</style>
+```
+
+```css
+span[data-icon] {
+  background-image: url(attr(data-icon));
+}
 ```
 
 Values that use `attr()` get marked as _`attr()`-tainted_. Using an `attr()`-tainted value as or in a `<url>` makes a declaration become ["invalid at computed value time" or IACVT for short](https://www.bram.us/2024/02/26/css-what-is-iacvt/).

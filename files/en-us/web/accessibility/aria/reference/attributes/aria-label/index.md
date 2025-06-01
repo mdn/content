@@ -18,7 +18,7 @@ In cases where an element that is not part of the [prohibited list](#associated_
 The code below shows an example of how to use the `aria-label` attribute to provide an accessible name for a `<button>` element. The button in this example contains an SVG graphic and lacks textual content, making the `aria-label` essential for screen reader users to understand its function, which in this case is "Close".
 
 ```html
-<button aria-label="Close" onclick="myDialog.close()">
+<button aria-label="Close">
   <svg
     aria-hidden="true"
     focusable="false"
@@ -30,6 +30,12 @@ The code below shows an example of how to use the `aria-label` attribute to prov
       fill="#000" />
   </svg>
 </button>
+```
+
+```js
+document.querySelector("button").addEventListener("click", () => {
+  myDialog.close();
+});
 ```
 
 > **Note:** `aria-label` is intended for naming elements where the implicit or explicit role does not prohibit naming. It is strongly recommended to prioritize the use of `aria-labelledby` over `aria-label` if a visible label exists for the element to reference and receive its name from.
