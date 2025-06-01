@@ -303,15 +303,14 @@ The output is as follows:
 
 {{ EmbedLiveSample("Using relative colors with hsl()", "100%", "200") }}
 
-### Legacy syntax: comma-separated values
+### Modern syntax with alpha channel
 
-For legacy reasons, the `hsl()` function accepts a form in which all values are separated using commas.
+The modern syntax for `hsl()` uses space-separated values and a forward slash to separate the alpha channel. This is the recommended way to specify colors with transparency.
 
 #### HTML
 
 ```html
-<div class="space-separated"></div>
-<div class="comma-separated"></div>
+<div class="modern-syntax"></div>
 ```
 
 #### CSS
@@ -323,22 +322,19 @@ div {
   margin: 1rem;
 }
 
-div.space-separated {
+div.modern-syntax {
   background-color: hsl(0 100% 50% / 50%);
-}
-
-div.comma-separated {
-  background-color: hsl(0, 100%, 50%, 0.5);
+  /* Equivalent to hsla(0, 100%, 50%, 0.5) */
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample("legacy_syntax_comma-separated_values", "100%", 150)}}
+{{EmbedLiveSample("modern_syntax_with_alpha", "100%", 100)}}
 
-### Legacy versus modern syntax
+### Legacy syntax compatibility
 
-The example demonstrates how the `hsla()` syntax is an alias for `hsl()`; both are supported using both modern and legacy (comma-separated) syntaxes.
+For backward compatibility, the `hsla()` function is still supported as an alias for `hsl()`. However, the modern space-separated syntax is preferred. The following examples demonstrate equivalent color values using different syntaxes:
 
 #### HTML
 

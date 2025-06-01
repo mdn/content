@@ -11,7 +11,7 @@ spec-urls:
 {{CSSRef}}
 
 > [!NOTE]
-> The `rgba()` functional notation is an alias for `rgb()`. They are exactly equivalent. It is recommended to use `rgb()`.
+> The `rgba()` functional notation is an alias for `rgb()`. While both are supported, it is recommended to use the modern `rgb()` syntax with space-separated values and a forward slash for the alpha channel.
 
 The **`rgb()`** functional notation expresses a color in the {{glossary("RGB", "sRGB")}} {{glossary("color space")}} according to its red, green, and blue components. An optional alpha component represents the color's transparency.
 
@@ -59,12 +59,18 @@ rgb(from green r g b / 0.5)
 rgb(from #0000FF calc(r + 40) calc(g + 40) b)
 rgb(from hwb(120deg 10% 20%) r g calc(b + 200))
 
-/* Legacy 'rgba()' alias */
-rgba(0 255 255)
-
-/* Legacy format */
+/* Legacy format with commas (not recommended) */
 rgb(0, 255, 255)
-rgb(0, 255, 255, 50%)
+rgba(0, 255, 255, 0.5)
+```
+
+### Modern syntax with alpha channel
+
+The modern syntax for `rgb()` uses space-separated values and a forward slash to separate the alpha channel. This is the recommended way to specify colors with transparency:
+
+```css
+/* Modern syntax with space-separated values and forward slash for alpha */
+rgb(255 255 255 / 50%)
 ```
 
 > [!NOTE]
