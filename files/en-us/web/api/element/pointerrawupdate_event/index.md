@@ -3,12 +3,10 @@ title: "Element: pointerrawupdate event"
 short-title: pointerrawupdate
 slug: Web/API/Element/pointerrawupdate_event
 page-type: web-api-event
-status:
-  - experimental
 browser-compat: api.Element.pointerrawupdate_event
 ---
 
-{{APIRef}}{{SeeCompatTable}}{{secureContext_header}}
+{{APIRef}}{{secureContext_header}}
 
 The **`pointerrawupdate`** event is fired when a pointer changes any properties that don't fire {{domxref('Element/pointerdown_event', 'pointerdown')}} or {{domxref('Element/pointerup_event', 'pointerup')}} events.
 See {{domxref('Element/pointermove_event', 'pointermove')}} for a list of these properties.
