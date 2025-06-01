@@ -21,6 +21,24 @@ const map1 = array1.map((x) => x * 2);
 
 console.log(map1);
 // Expected output: Array [2, 8, 18, 32]
+
+// Example with array of objects
+const users = [
+  { id: 1, name: 'Alice', age: 25 },
+  { id: 2, name: 'Bob', age: 30 },
+  { id: 3, name: 'Charlie', age: 35 }
+];
+
+const userNames = users.map(user => user.name);
+console.log(userNames);
+// Expected output: Array ["Alice", "Bob", "Charlie"]
+
+const userAgesInFiveYears = users.map(user => ({
+  ...user,
+  age: user.age + 5
+}));
+console.log(userAgesInFiveYears);
+// Expected output: Array of users with ages increased by 5
 ```
 
 ## Syntax
