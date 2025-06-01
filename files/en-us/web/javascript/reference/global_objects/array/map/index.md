@@ -24,18 +24,18 @@ console.log(map1);
 
 // Example with array of objects
 const users = [
-  { id: 1, name: 'Alice', age: 25 },
-  { id: 2, name: 'Bob', age: 30 },
-  { id: 3, name: 'Charlie', age: 35 }
+  { id: 1, name: "Alice", age: 25 },
+  { id: 2, name: "Bob", age: 30 },
+  { id: 3, name: "Charlie", age: 35 },
 ];
 
-const userNames = users.map(user => user.name);
+const userNames = users.map((user) => user.name);
 console.log(userNames);
 // Expected output: Array ["Alice", "Bob", "Charlie"]
 
-const userAgesInFiveYears = users.map(user => ({
+const userAgesInFiveYears = users.map((user) => ({
   ...user,
-  age: user.age + 5
+  age: user.age + 5,
 }));
 console.log(userAgesInFiveYears);
 // Expected output: Array of users with ages increased by 5
