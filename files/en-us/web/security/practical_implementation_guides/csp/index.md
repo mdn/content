@@ -18,7 +18,7 @@ The main problem this article focuses on is cross-site scripting ({{Glossary("Cr
 CSP can also help to fix other problems, which are covered in other articles:
 
 - [Preventing clickjacking](/en-US/docs/Web/Security/Practical_implementation_guides/Clickjacking) by stopping your site being embedded into {{htmlelement("iframe")}} elements. This is done using the CSP [`frame-ancestors`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors) directive.
-- Preventing [manipulator-in-the-middle](/en-US/docs/Glossary/MitM) (MiTM) attacks by upgrading any HTTP connections to HTTPS. This is helped by the CSP [`upgrade-insecure-requests`](/en-US/docs/Web/HTTP/Reference/Headers/Upgrade-Insecure-Requests) directive. See [Upgrading insecure requests](/en-US/docs/Web/HTTP/Guides/CSP#upgrading_insecure_requests).
+- Preventing [manipulator-in-the-middle](/en-US/docs/Glossary/MitM) (MiTM) attacks by upgrading any HTTP connections to HTTPS. This is helped by the CSP [`upgrade-insecure-requests`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/upgrade-insecure-requests) directive. See [Upgrading insecure requests](/en-US/docs/Web/HTTP/Guides/CSP#upgrading_insecure_requests).
 
 ## Solution
 
