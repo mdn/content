@@ -900,6 +900,9 @@
     },
     "HTML Sanitizer API": {
       "overview": ["HTML Sanitizer API"],
+      "guides": [
+        "/docs/Web/API/HTML_Sanitizer_API/Using_the_HTML_Sanitizer_API"
+      ],
       "interfaces": ["Sanitizer", "SanitizerConfig"],
       "methods": [
         "Element.setHTMLUnsafe()",

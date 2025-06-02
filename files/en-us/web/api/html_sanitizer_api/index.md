@@ -180,7 +180,7 @@ In most cases calling `Element.setHTML()` with the default sanitizer can be used
 The code below demonstrates how the method is used to sanitize the HTML input before it is injected into an element with id of `target`.
 
 ```js
-const untrustedString = "abc <script>alert(1)<" + "/script> def"; // Unsanitized HTML (perhaps from user input)
+const untrustedString = "abc <script>alert(1)<" + "/script> def"; // Untrusted HTML (perhaps from user input)
 const someTargetElement = document.getElementById("target");
 
 // someElement.innerHTML = untrustedString;
