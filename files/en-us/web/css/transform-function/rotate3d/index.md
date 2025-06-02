@@ -13,7 +13,7 @@ fixed axis in 3D space, without deforming it. Its result is a {{cssxref("&lt;tra
 {{InteractiveExample("CSS Demo: rotate3d()")}}
 
 ```css interactive-example-choice
-transform: rotate3d(0, 0, 0);
+transform: rotate3d(0, 0, 0, 0);
 ```
 
 ```css interactive-example-choice
