@@ -84,7 +84,7 @@ target.setHTML(unsanitizedString, {
 });
 ```
 
-### setHTML live example
+### setHTML() live example
 
 This example provides a "live" demonstration of the method when called with different sanitizers.
 The code defines buttons that you can click to sanitize and inject a string of HTML using a default and a custom sanitizer, respectively.
@@ -196,7 +196,7 @@ allowScriptButton.addEventListener("click", () => {
 Click the "Default" and "allowScript" buttons to see the effects of the default and custom sanitizer, respectively.
 Note that in both cases the `<script>` element and `onclick` handler are removed, even if explicitly allowed by the sanitizer.
 
-{{EmbedLiveSample("setHTML live example","100","350px")}}
+{{EmbedLiveSample("setHTML() live example","100","350px")}}
 
 ## Specifications
 

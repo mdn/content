@@ -7,18 +7,17 @@ browser-compat: api.Sanitizer.get api.Sanitizer.Sanitizer
 
 {{APIRef("HTML Sanitizer API")}}
 
-The **`SanitizerConfig`** dictionary of the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) represents a sanitizer configuration.
+The **`SanitizerConfig`** dictionary of the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) represents a sanitizer configuration object.
+The configuration specifies what elements, attributes and comments are allowed or should be removed when inserting strings of HTML into an {{domxref("Element")}} or {{domxref("ShadowRoot")}}, or when parsing an HTML string into a {{domxref("Document")}}.
 
 An instance of this type can be passed to the {{domxref("Sanitizer.Sanitizer", "Sanitizer()")}} constructor to configure a {{domxref("Sanitizer")}}, and is returned by {{domxref('Sanitizer.get()')}}.
-It can also be passed as the `option.sanitizer` parameter when calling:
+It can also be passed as the `option.sanitizer` parameter when calling the [sanitization methods](/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_methods):
 
 - {{domxref("Element/setHTMLUnsafe","setHTMLUnsafe()")}} or {{domxref("Element/setHTMLUnsafe","setHTMLUnsafe()")}} on {{domxref("Element")}}.
 - {{domxref("ShadowRoot/setHTMLUnsafe","setHTMLUnsafe()")}} or {{domxref("ShadowRoot/setHTMLUnsafe","setHTMLUnsafe()")}} on {{domxref("ShadowRoot")}}.
-- [`Document.parseHTMLUnsafe()`](/en-US/docs/Web/API/Document/parseHTMLUnsafe_static) or [`Document.parseHTML()`](/en-US/docs/Web/API/Document/parseHTML_static) static methods
+- [`Document.parseHTMLUnsafe()`](/en-US/docs/Web/API/Document/parseHTMLUnsafe_static) or [`Document.parseHTML()`](/en-US/docs/Web/API/Document/parseHTML_static) static methods.
 
-Note that normally a {{domxref("Sanitizer")}} instance would be be passed as the option instead of `SanitizerConfig` in the above methods, in particular because `anitizer` instances are more efficient to share and modify.
-
-<!-- High level description probably needed, or a link to the user guide. Specifically to make it clear that -->
+Note that normally a {{domxref("Sanitizer")}} instance would be be passed as the option instead of `SanitizerConfig` in the above methods, in particular because `sanitizer` instances are more efficient to share and modify.
 
 ## Instance properties
 
@@ -111,8 +110,35 @@ Note that normally a {{domxref("Sanitizer")}} instance would be be passed as the
 
 ## Examples
 
-<!-- TBD -->
-<!-- Perhaps showing how you might get/set/modify, or a link to user guide once we have one. that -->
+### Creating an "allow" configuration
+
+This example shows how you might create an "allow" sanitizer configuration, and in this case pass it to the {{domxref("Sanitizer.Sanitizer", "Sanitizer()")}} constructor.
+
+```js
+const sanitizer = new Sanitizer({
+  elements: ["div", "p", "script"],
+  attributes: ["id"],
+  replaceWithChildrenElements: ["b"],
+  comments: true,
+  dataAttributes: false,
+});
+```
+
+Note that you cannot specify both allow and remove lists in the same configuration without causing an exception when passing the configuration to the constructor or a sanitization method.
+
+### Creating a "remove" configuration
+
+This example shows how you might create a "remove" sanitizer configuration, and in this case pass it to the {{domxref("Sanitizer.Sanitizer", "Sanitizer()")}} constructor.
+
+```js
+const sanitizer = new Sanitizer({
+  removeElements: ["span", "script"],
+  removeAttributes: ["lang", "id"],
+  comments: false,
+});
+```
+
+Note that you cannot specify both allow and remove lists in the same configuration without causing an exception when passing the configuration to the constructor or a sanitization method.
 
 ## Specifications
 

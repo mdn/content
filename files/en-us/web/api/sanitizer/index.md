@@ -7,28 +7,20 @@ browser-compat: api.Sanitizer
 
 {{APIRef("Sanitizer")}}
 
-The **`Sanitizer`** interface of the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) defines a configuration object that specifies what elements, attributes and comments are allowed or should be removed when inserting strings of HTML into an element or ShadowRoot, or when parsing an HTML string into a {{domxref("Document")}}.
+The **`Sanitizer`** interface of the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) defines a configuration object that specifies what elements, attributes and comments are allowed or should be removed when inserting strings of HTML into an {{domxref("Element")}} or {{domxref("ShadowRoot")}}, or when parsing an HTML string into a {{domxref("Document")}}.
 
-<!--
+A `Sanitizer` instance is effectively a wrapper around a {{domxref("SanitizerConfig")}}, and can be passed as a configuration alterative in the same [sanitization methods](/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_methods):
 
-The default configuration disallows XSS-relevant input by default, including {{HTMLElement("script")}} tags, custom elements, event handler attributes, and comments.
-This configuration may be customized using constructor options.
+- {{domxref("Element/setHTMLUnsafe","setHTMLUnsafe()")}} or {{domxref("Element/setHTMLUnsafe","setHTMLUnsafe()")}} on {{domxref("Element")}}.
+- {{domxref("ShadowRoot/setHTMLUnsafe","setHTMLUnsafe()")}} or {{domxref("ShadowRoot/setHTMLUnsafe","setHTMLUnsafe()")}} on {{domxref("ShadowRoot")}}.
+- [`Document.parseHTMLUnsafe()`](/en-US/docs/Web/API/Document/parseHTMLUnsafe_static) or [`Document.parseHTML()`](/en-US/docs/Web/API/Document/parseHTML_static) static methods.
 
-An object of this type can be passed to the following methods in order to sanitize the input HTML string:
-
-- {{domxref('Element.setHTML()')}} and {{domxref('Element.setHTMLUnsafe()')}} - insert HTML into an element
-- {{domxref('ShadowRoot.setHTML()')}} and {{domxref('ShadowRoot.setHTMLUnsafe()')}}
-- {{domxref('Document.parseHTML()')}} and {{domxref('Document.parseHTMLUnsafe()')}}
-
-Note that the methods that do not have the `Unsafe()` suffix are XSS-"safe" methods.
-They will always use a sanitizer, either the one that is specified or the default, and they will sanitize the input of unsafe elements and attributes irrespective of whether they are allowed by the sanitizer.
-By contrast, the unsafe methods will allow any input allowed by the sanitizer, or all input if none is specified.
--->
+Note that `Sanitizer` is expected to be more efficient to reuse and modify when needed.
 
 ## Constructors
 
 - {{domxref("Sanitizer.Sanitizer", "Sanitizer()")}}
-  - : Creates and returns a `Sanitizer` object, optionally with custom sanitization behavior.
+  - : Creates and returns a `Sanitizer` object, optionally with custom sanitization behavior defined in a {{domxref('SanitizerConfig')}}.
 
 ## Instance methods
 
@@ -42,13 +34,13 @@ By contrast, the unsafe methods will allow any input allowed by the sanitizer, o
 - {{domxref('Sanitizer.allowElement()')}}
   - : Sets an element as allowed by the sanitizer, optionally with an array of attributes that are allowed or disallowed.
 - {{domxref('Sanitizer.removeElement()')}}
-  - : Sets an element as disallowed (to be removed) by the sanitizer.
+  - : Sets an element to be removed by the sanitizer.
 - {{domxref('Sanitizer.replaceElementWithChildren()')}}
   - : Sets an element to be replaced by its child HTML elements.
 - {{domxref('Sanitizer.allowAttribute()')}}
   - : Sets an attribute as allowed on any element.
 - {{domxref('Sanitizer.removeAttribute()')}}
-  - : Sets an attribute as disallowed on any element.
+  - : Sets an attribute to be removed from any element.
 - {{domxref('Sanitizer.setComments()')}}
   - : Sets whether comments will be allowed or removed by the sanitizer.
 - {{domxref('Sanitizer.setDataAttributes()')}}
@@ -61,7 +53,69 @@ By contrast, the unsafe methods will allow any input allowed by the sanitizer, o
 
 ## Examples
 
-For examples see the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and the individual methods.
+For more examples see the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) and the individual methods.
+Below we show a few examples of how you might create different sanitizer configurations.
+
+### Creating a default sanitizer
+
+The default sanitizer is constructed as shown below.
+
+```js
+const sanitizer = new Sanitizer();
+```
+
+The XSS-safe [sanitization methods](/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_methods) create the same sanitizer automatically if no options are passed.
+
+### Creating an empty sanitizer
+
+To create an empty sanitizer, pass an empty object to the constructor.
+The resulting sanitizer configuration is shown below.
+
+```js
+const sanitizer = new Sanitizer({});
+/*
+{
+  "attributes": [],
+  "comments": true,
+  "dataAttributes": true,
+  "elements": [],
+  "removeAttributes": [],
+  "removeElements": [],
+  "replaceWithChildrenElements": []
+}
+*/
+```
+
+### Creating an "allow" sanitizer
+
+This example shows how you might create an "allow sanitizer": a sanitizer that allows only a subset of attributes and elements.
+
+The code first uses the {{domxref("Sanitizer.Sanitizer", "Sanitizer()")}} constructor to create a `Sanitizer`, specifying a {{domxref("SanitizerConfig")}} that allows the element `div`, `p` and `script`.
+
+The example then uses `allowElement()` to further allow `span` elements, `allowAttribute()` to allow the `id` attribute on any element, and `replaceElementWithChildren()` method to set that any `b` elements should be replaced by their inner content (this is a kind of "allow" in that you are explicitly specifying some entities to keep).
+Lastly we specify that comments should be retained.
+
+```js
+const sanitizer = new Sanitizer({ elements: ["div", "p", "script"] });
+sanitizer.allowElement("span");
+sanitizer.allowAttribute("id");
+sanitizer.replaceElementWithChildren("b");
+sanitizer.setComments(true);
+```
+
+### Creating a "remove" sanitizer
+
+This example shows how you might create a "remove sanitizer", specifying items to remove from the input.
+
+The code first uses the {{domxref("Sanitizer.Sanitizer", "Sanitizer()")}} constructor to create a `Sanitizer`, specifying a {{domxref("SanitizerConfig")}} that removes the element `span` and `script`.
+We then use `removeElement()` to add `h6` to the array of elements to be removed, and`removeAttribute()` to remove `lang` from the attributes list. We also remove comments.
+
+```js
+const sanitizer = new Sanitizer({ removeElements: ["span", "script"] });
+sanitizer.removeElement("h6");
+sanitizer.removeAttribute("lang");
+sanitizer.setComments(false);
+```
 
 ## Specifications
 
