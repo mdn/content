@@ -12,4 +12,4 @@ This glossary provides definitions of words and abbreviations you need to know t
 
 Use the sidebar to browse through or jump to specific glossary terms. You can also use the search "Filter" at the top of the sidebar to quickly look for a term.
 
-You can help by contributing [new terms](/en-US/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary) or improving the existing defintions.
+You can help by contributing [new terms](/en-US/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary) or improving the existing definitions.
