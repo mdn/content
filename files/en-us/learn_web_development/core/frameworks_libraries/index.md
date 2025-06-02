@@ -22,6 +22,9 @@ After that, we'll provide some tutorials covering the essentials React, a popula
 
 We also provide some tutorials covering the basics of other framework choices, for those who want to make a different choice to React.
 
+> [!NOTE]
+> Scrimba's [Libraries/Frameworks](https://scrimba.com/learn-react-c0e/~033a?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> interactive tutorial provides a useful summary of frameworks versus libraries, a brief history of libraries and frameworks on the web, and some background information specifically on React.
+
 ## Prerequisites
 
 You should really learn the basics of the core web languages first before attempting to move on to learning client-side frameworks — [HTML](/en-US/docs/Learn_web_development/Core/Structuring_content), [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics), and especially [JavaScript](/en-US/docs/Learn_web_development/Core/Scripting).

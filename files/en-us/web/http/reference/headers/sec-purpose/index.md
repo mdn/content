@@ -1,5 +1,6 @@
 ---
-title: Sec-Purpose
+title: Sec-Purpose header
+short-title: Sec-Purpose
 slug: Web/HTTP/Reference/Headers/Sec-Purpose
 page-type: http-header
 browser-compat: http.headers.Sec-Purpose

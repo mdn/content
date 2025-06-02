@@ -12,18 +12,10 @@ The **`toString()`** method of {{jsxref("Object")}} instances returns a string r
 {{InteractiveExample("JavaScript Demo: Object.prototype.toString()")}}
 
 ```js interactive-example
-function Dog(name) {
-  this.name = name;
-}
+const map = new Map();
 
-const dog1 = new Dog("Gabby");
-
-Dog.prototype.toString = function dogToString() {
-  return `${this.name}`;
-};
-
-console.log(dog1.toString());
-// Expected output: "Gabby"
+console.log(map.toString());
+// Expected output: "[object Map]"
 ```
 
 ## Syntax

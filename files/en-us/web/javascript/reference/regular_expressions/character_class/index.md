@@ -147,7 +147,7 @@ The following function matches all non-ASCII numbers.
 
 ```js
 function nonASCIINumbers(str) {
-  return str.match(/[\p{Decimal_Number}--[0-9]]/gv);
+  return str.match(/[\p{Decimal_Number}--\d]/gv);
 }
 
 // 𑜹 is U+11739 AHOM DIGIT NINE

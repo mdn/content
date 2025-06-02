@@ -31,7 +31,7 @@ In web pages, the window object is also a _global object_. This means:
 2. You can access the built-in properties of the window object without having to prefix them with `window.`:
 
    ```js
-   setTimeout("alert('Hi!')", 50); // equivalent to using window.setTimeout().
+   setTimeout(() => alert("Hi!"), 50); // equivalent to using window.setTimeout() and window.alert().
    alert(window === window.window); // displays "true"
    ```
 

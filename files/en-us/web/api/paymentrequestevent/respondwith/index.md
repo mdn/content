@@ -48,7 +48,7 @@ self.addEventListener("paymentrequest", async (e) => {
     client = await e.openWindow(checkoutURL);
     if (!client) {
       // Reject if the window fails to open
-      throw "Failed to open window";
+      throw new Error("Failed to open window");
     }
   } catch (err) {
     // Reject the promise on failure

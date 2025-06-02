@@ -11,7 +11,9 @@ page-type: glossary-definition
 For example, in the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}}, a {{domxref("GPUBuffer")}} object instance is created using the {{domxref("GPUDevice.createBuffer()")}} method. When invoking this method, you define a `usage` property in the descriptor containing one or more flags that enable different allowed usages of that buffer.
 
 ```js
-usage: GPUBufferUsage.COPY_SRC | GPUBufferUsage.MAP_WRITE;
+const descriptor = {
+  usage: GPUBufferUsage.COPY_SRC | GPUBufferUsage.MAP_WRITE,
+};
 ```
 
 These values are defined inside the same namespace, and each one has a hexadecimal value:

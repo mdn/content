@@ -39,7 +39,7 @@ const canvas = document.querySelector("#gpuCanvas");
 const context = canvas.getContext("webgpu");
 
 context.configure({
-  device: device,
+  device,
   format: navigator.gpu.getPreferredCanvasFormat(),
   alphaMode: "premultiplied",
 });

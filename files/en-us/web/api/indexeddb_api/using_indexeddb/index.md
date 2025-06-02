@@ -261,7 +261,7 @@ request.onupgradeneeded = (event) => {
 };
 ```
 
-For more details about the key generator, please see ["W3C Key Generators"](https://www.w3.org/TR/IndexedDB/#key-generator-concept).
+For more details about the key generator, see [Key generators](https://w3c.github.io/IndexedDB/#key-generator-construct) in the spec.
 
 ## Adding, retrieving, and removing data
 
@@ -580,7 +580,6 @@ openReq.onupgradeneeded = (event) => {
 openReq.onsuccess = (event) => {
   const db = event.target.result;
   useDatabase(db);
-  return;
 };
 
 function useDatabase(db) {
@@ -642,7 +641,7 @@ Further reading for you to find out more information if desired.
 ### Reference
 
 - [IndexedDB API Reference](/en-US/docs/Web/API/IndexedDB_API)
-- [Indexed Database API Specification](https://www.w3.org/TR/IndexedDB/)
+- [Indexed Database API Specification](https://w3c.github.io/IndexedDB/)
 - IndexedDB [interface files](https://searchfox.org/mozilla-central/search?q=dom%2FindexedDB%2F.*%5C.idl&path=&case=false&regexp=true) in the Firefox source code
 
 ### Tutorials and guides

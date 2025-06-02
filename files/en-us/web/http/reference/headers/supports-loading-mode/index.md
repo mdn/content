@@ -1,5 +1,6 @@
 ---
-title: Supports-Loading-Mode
+title: Supports-Loading-Mode header
+short-title: Supports-Loading-Mode
 slug: Web/HTTP/Reference/Headers/Supports-Loading-Mode
 page-type: http-header
 status:

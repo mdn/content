@@ -98,16 +98,9 @@ The following example creates an otherwise non-semantic checkbox element using C
   role="checkbox"
   id="chkPref"
   aria-checked="false"
-  onclick="changeCheckbox()"
-  onKeyDown="changeCheckbox(event.code)"
   tabindex="0"
   aria-labelledby="chk1-label"></span>
-<label
-  id="chk1-label"
-  onclick="changeCheckbox()"
-  onKeyDown="changeCheckbox(event.code)"
-  >Remember my preferences</label
->
+<label id="chk1-label">Remember my preferences</label>
 ```
 
 ### CSS
@@ -133,18 +126,32 @@ The following example creates an otherwise non-semantic checkbox element using C
 ### JavaScript
 
 ```js
+const item = document.getElementById("chkPref");
+const label = document.getElementById("chk1-label");
+
 function changeCheckbox(code) {
-  const item = document.getElementById("chkPref");
   const checked = item.getAttribute("aria-checked");
 
   if (code && code !== "Space") {
     return;
-  } else if (checked === "true") {
+  }
+  if (checked === "true") {
     item.setAttribute("aria-checked", "false");
   } else {
     item.setAttribute("aria-checked", "true");
   }
 }
+
+item.addEventListener("keydown", (event) => {
+  changeCheckbox(event.code);
+});
+
+label.addEventListener("keydown", (event) => {
+  changeCheckbox(event.code);
+});
+
+item.addEventListener("click", changeCheckbox);
+label.addEventListener("click", changeCheckbox);
 ```
 
 {{EmbedLiveSample("Examples", 230, 250)}}

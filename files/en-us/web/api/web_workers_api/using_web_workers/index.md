@@ -323,7 +323,6 @@ First, we create a `QueryableWorker` class that takes the URL of the worker, a d
 
 ```js
 function QueryableWorker(url, defaultListener, onError) {
-  const instance = this;
   const worker = new Worker(url);
   const listeners = {};
 
@@ -416,7 +415,8 @@ function reply(queryMethodListener, ...queryMethodArguments) {
   });
 }
 
-/* This method is called when main page calls QueryWorker's postMessage method directly*/
+// This method is called when main page calls QueryWorker's postMessage
+// method directly
 function defaultReply(message) {
   // do something
 }
@@ -660,7 +660,7 @@ There is not an "official" way to embed the code of a worker within a web page, 
       // In the past blob builder existed, but now we use Blob
       const blob = new Blob(
         Array.prototype.map.call(
-          document.querySelectorAll("script[type='text\/js-worker']"),
+          document.querySelectorAll("script[type='text/js-worker']"),
           (script) => script.textContent,
         ),
         { type: "text/javascript" },

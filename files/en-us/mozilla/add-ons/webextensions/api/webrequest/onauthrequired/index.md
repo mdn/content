@@ -304,13 +304,12 @@ function provideCredentialsAsync(requestDetails) {
   if (pendingRequests.includes(requestDetails.requestId)) {
     console.log(`bad credentials for: ${requestDetails.requestId}`);
     return { cancel: true };
-  } else {
-    pendingRequests.push(requestDetails.requestId);
-    console.log(`providing credentials for: ${requestDetails.requestId}`);
-    // we can return a promise that will be resolved
-    // with the stored credentials
-    return browser.storage.local.get(null);
   }
+  pendingRequests.push(requestDetails.requestId);
+  console.log(`providing credentials for: ${requestDetails.requestId}`);
+  // we can return a promise that will be resolved
+  // with the stored credentials
+  return browser.storage.local.get(null);
 }
 
 browser.webRequest.onAuthRequired.addListener(

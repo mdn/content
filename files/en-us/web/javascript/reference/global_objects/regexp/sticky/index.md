@@ -13,7 +13,7 @@ The **`sticky`** accessor property of {{jsxref("RegExp")}} instances returns whe
 
 ```js interactive-example
 const str1 = "table football";
-const regex1 = new RegExp("foo", "y");
+const regex1 = /foo/y;
 
 regex1.lastIndex = 6;
 

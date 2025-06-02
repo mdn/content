@@ -432,11 +432,10 @@ class SimpleClass {
       // Note: using an arrow function allows `this` to point to the
       // one of `[Symbol.iterator]()` instead of `next()`
       next: () => {
-        if (index < this.#data.length) {
-          return { value: this.#data[index++], done: false };
-        } else {
+        if (index >= this.#data.length) {
           return { done: true };
         }
+        return { value: this.#data[index++], done: false };
       },
     };
   }
@@ -563,9 +562,9 @@ class MyIterable {
     return false;
   }
   *[Symbol.iterator]() {
-    for (let i = 0; i < this.#data.length; i++) {
-      if (this.#data[i] !== tombstone) {
-        yield this.#data[i];
+    for (const data of this.#data) {
+      if (data !== tombstone) {
+        yield data;
       }
     }
   }

@@ -53,8 +53,8 @@ The example demonstrates how a `ProgressEvent` is built using a constructor. Thi
 function updateProgress(loaded, total) {
   const progressEvent = new ProgressEvent("progress", {
     lengthComputable: true,
-    loaded: loaded,
-    total: total,
+    loaded,
+    total,
   });
 
   document.dispatchEvent(progressEvent);

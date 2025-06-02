@@ -115,11 +115,10 @@ You could then fetch this API request by passing the `Request` object in as a pa
 ```js
 fetch(request)
   .then((response) => {
-    if (response.status === 200) {
-      return response.json();
-    } else {
+    if (response.status !== 200) {
       throw new Error("Something went wrong on API server!");
     }
+    return response.json();
   })
   .then((response) => {
     console.debug(response);

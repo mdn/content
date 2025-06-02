@@ -114,7 +114,7 @@ This example require font "Yu Gothic" installed in your OS, other fonts may not 
 ```html
 <table>
   <thead></thead>
-  <tbody style="border:0;">
+  <tbody>
     <tr>
       <th>normal/jis78:</th>
       <td>麹町</td>
@@ -137,6 +137,10 @@ This example require font "Yu Gothic" installed in your OS, other fonts may not 
 #### CSS
 
 ```css
+tbody {
+  border: 0;
+}
+
 td {
   font-family: "Yu Gothic";
   font-size: 20px;

@@ -79,9 +79,7 @@ const cachedResponse = caches
   .then((r) => (r !== undefined ? r : fetch(event.request)))
   .then((r) => {
     response = r;
-    caches.open("v1").then((cache) => {
-      cache.put(event.request, response);
-    });
+    caches.open("v1").then((cache) => cache.put(event.request, response));
     return response.clone();
   })
   .catch(() => caches.match("/gallery/myLittleVader.jpg"));

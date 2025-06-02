@@ -101,19 +101,18 @@ function addStylesheetRules(rules) {
   // Grab style element's sheet
   const styleSheet = styleEl.sheet;
 
-  for (let i = 0; i < rules.length; i++) {
-    let j = 1,
-      rule = rules[i],
+  for (let rule of rules) {
+    let i = 1,
       selector = rule[0],
       propStr = "";
     // If the second argument of a rule is an array of arrays, correct our variables.
     if (Array.isArray(rule[1][0])) {
       rule = rule[1];
-      j = 0;
+      i = 0;
     }
 
-    for (let pl = rule.length; j < pl; j++) {
-      const prop = rule[j];
+    for (; i < rule.length; i++) {
+      const prop = rule[i];
       propStr += `${prop[0]}: ${prop[1]}${prop[2] ? " !important" : ""};\n`;
     }
 
