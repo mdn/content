@@ -74,7 +74,7 @@ In some cases you may wish to further fine-tune the reading order within a readi
 
 If a set of reading flow container child elements that are not normally focusable are made focusable with [`tabindex="0"`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) attributes, their reading order will be modified as expected by the `reading-flow` and `reading-order` properties, in just the same way as interactive elements such as {{htmlelement("a")}} or {{htmlelement("button")}}.
 
-However, any attempt to modify the tabbing order of a reading flow container's content using positive `tabindex` values will be ignored — overriden by the effects of `reading-flow` and `reading-order`. You generally shouldn't be using these anyway; see [Don't Use Tabindex Greater than 0](https://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html). The `reading-flow` and `reading-order` properties provide a much better way to modify tabbing order if required.
+However, any attempt to modify the tabbing order of a reading flow container's content using positive `tabindex` values will be ignored — overridden by the effects of `reading-flow` and `reading-order`. You generally shouldn't be using these anyway; see [Don't Use Tabindex Greater than 0](https://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html). The `reading-flow` and `reading-order` properties provide a much better way to modify tabbing order if required.
 
 ## Formal definition
 
