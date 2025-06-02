@@ -75,8 +75,8 @@ The total number of bytes of a resource may reveal too much information about a 
 function updateProgress(loaded, total) {
   const progressEvent = new ProgressEvent("progress", {
     lengthComputable: true,
-    loaded: loaded,
-    total: total,
+    loaded,
+    total,
   });
 
   document.dispatchEvent(progressEvent);

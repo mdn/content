@@ -7,7 +7,7 @@ browser-compat: api.ProgressEvent
 
 {{APIRef("XMLHttpRequest API")}}{{AvailableInWorkers}}
 
-The **`ProgressEvent`** interface represents events that measure the progress of an underlying process, like an HTTP request (e.g., an `XMLHttpRequest`), or the loading of the underlying resource of an {{HTMLElement("img")}}, {{HTMLElement("audio")}}, {{HTMLElement("video")}}, {{HTMLElement("style")}} or {{HTMLElement("link")}}.
+The **`ProgressEvent`** interface represents events that measure the progress of an underlying process, like an HTTP request (e.g., an `XMLHttpRequest`, or the loading of the underlying resource of an {{HTMLElement("img")}}, {{HTMLElement("audio")}}, {{HTMLElement("video")}}, {{HTMLElement("style")}} or {{HTMLElement("link")}}).
 
 {{InheritanceDiagram}}
 
@@ -67,8 +67,8 @@ The total number of bytes of a resource may reveal too much information about a 
 function updateProgress(loaded, total) {
   const progressEvent = new ProgressEvent("progress", {
     lengthComputable: true,
-    loaded: loaded,
-    total: total,
+    loaded,
+    total,
   });
 
   document.dispatchEvent(progressEvent);
