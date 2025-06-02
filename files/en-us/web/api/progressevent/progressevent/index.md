@@ -30,14 +30,15 @@ new ProgressEvent(type, options)
         It defaults to `false`.
     - `loaded` {{optional_inline}}
       - : A number representing the amount of work already performed by the underlying process.
-        The ratio of work done can be calculated with this property and `ProgressEvent.total`.
-        When downloading a resource using HTTP, this represents the size, in bytes, of the message content, excluding headers and other overhead.
+        For a `ProgressEvent` dispatched by the browser in HTTP messages, the value refers to the size, in bytes, of the message body, excluding headers and other overhead.
+        In a `ProgressEvent` you create yourself, you can assign any numeric value to `loaded` that represents the amount of work completed relative to the `total` value.
         It defaults to `0`.
     - `total` {{optional_inline}}
-      - : A number representing the total amount of work that the underlying process is performing.
-        When downloading a resource using HTTP, this represents the size, in bytes, of the message content, excluding headers and other overhead.
-        To avoid revealing the exact size of a resource, a normalized value such as `1` can be used instead.
-        In such cases, `loaded` should be a value between `0` and `1`, representing progress as a fraction.
+      - : A number indicating the total size of the data being transmitted or processed.
+        For `ProgressEvent`s dispatched by the browser in HTTP messages, the value refers to the size, in bytes, of a resource and is derived from the `Content-Length` response header.
+        In a `ProgressEvent` you create yourself, you may wish to normalize `total` to a value such as `100` or `1` if revealing the precise amount of bytes of a resource is a concern.
+        If using `1` as a total, for example, then `loaded` should be a decimal value between `0` and `1`.
+        It defaults to `0`.
 
 ### Return value
 
