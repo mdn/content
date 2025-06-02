@@ -83,8 +83,17 @@ By adding `data-*` attributes, even ordinary HTML elements can become rather com
   data-shields="72%"
   data-x="414354"
   data-y="85160"
-  data-z="31940"
-  onclick="spaceships[this.dataset.shipId].blasted()" />
+  data-z="31940" />
+```
+
+```js
+function clickSpaceship() {
+  spaceships[this.dataset.shipId].blasted();
+}
+
+document.querySelectorAll("img.spaceship").forEach((ship) => {
+  ship.addEventListener("click", clickSpaceship);
+});
 ```
 
 For a more in-depth tutorial about using HTML data attributes, see [Using data attributes](/en-US/docs/Web/HTML/How_to/Use_data_attributes).
