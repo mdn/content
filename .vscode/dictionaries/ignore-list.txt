@@ -33,7 +33,6 @@ apiscript
 Argh
 Asclepias
 aurl
-Awwww
 AXQB
 azuki
 baaabaac
@@ -41,14 +40,12 @@ baabac
 barfoo
 bbbc
 Beastify
-Beetlejuice
 bfalse
 bgpicker
 bigcorp
 blaa
 blaaa
 blabla
-Blahblah
 bleh
 BlYAJQFz
 bobsmith
@@ -95,7 +92,6 @@ cubetexture
 cycletracker
 data-ffo-opensans
 data-ffo-opensanslight
-davidwalsh.name
 dbar
 dbbd
 Decem
@@ -141,7 +137,6 @@ fgrt46jfgd
 filteron
 finanzierungs
 flabada
-flexy
 foobarbaz
 foobarfoo
 fooexamplefoo
@@ -167,8 +162,6 @@ gubergren
 harborside
 hellonode
 HEXDIG
-hexdigit
-hiliteabeunti
 howtoplay
 HUD5767ghtyfyr4536dh45dg45dg3
 idbkeyrange
@@ -198,7 +191,6 @@ jícama
 kasd
 Khiresh
 kitchensink
-lambdatest
 Latine
 latinmodern-math
 learntocodewith.me
@@ -207,7 +199,6 @@ letmein
 libpkcs11testmodule
 librero
 livin
-liZhYMsy8MGgxUny6Q8NCoH9xSiviwLFfK
 Llanfair
 LLLLLLLLLLLLLLLLRRRRRRRRRRRRRRRR
 locallibrary
@@ -227,7 +218,6 @@ morethanwarm
 MYAGE
 mybooks
 myclass
-Myco
 mynamespace
 myns
 mypassword
@@ -264,7 +254,6 @@ privat
 proinde
 public-webapps
 pwllgwyngyll
-PXHQTXP
 Quaaaack
 quandong
 quaxxor
@@ -312,7 +301,6 @@ Tweety
 UCCE
 ultricied
 updatebg
-UQND
 urlscheme
 userconnect
 userdisconnect
