@@ -21,7 +21,7 @@ When present on a response it indicates the compression used on the message, and
 Note that if the message is chunked, this must be applied last, after any other compression.
 For example, `Transfer-Encoding: gzip, chunked` indicates that the content has been compressed using the gzip coding and then chunked using the chunked coding while forming the message body.
 
-The response to a {{HTTPMethod("HEAD")}} request has no body and no transfer encoding, so the header is optional.
+The header is optional in responses to a {{HTTPMethod("HEAD")}} request as these messages have no body and, therefore, no transfer encoding.
 When present it indicates the value that would have applied to the corresponding response to a {{HTTPMethod("GET")}} message, if that `GET` request did not include a preferred `Transfer-Encoding`.
 
 > [!WARNING]
