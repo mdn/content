@@ -10,9 +10,9 @@ In a **cross-site request forgery** (CSRF) attack, an attacker tricks the browse
 
 A CSRF attack is possible if a website:
 
-- Uses HTTP requests to change some state on the server.
-- Uses only cookies to validate that the request came from an authenticated user.
-- Uses only parameters in the request that an attacker can predict.
+- Uses HTTP requests to change some state on the server
+- Uses only cookies to validate that the request came from an authenticated user
+- Uses only parameters in the request that an attacker can predict
 
 There are several defenses against CSRF attacks, including [CSRF tokens](/en-US/docs/Web/Security/Attacks/CSRF#csrf_tokens), using [fetch metadata](/en-US/docs/Web/Security/Attacks/CSRF#fetch_metadata) to block certain cross-site requests, and [setting the `SameSite` attribute](/en-US/docs/Web/Security/Attacks/CSRF#defense_in_depth_samesite_cookies) on cookies used to authenticate sensitive requests.
 

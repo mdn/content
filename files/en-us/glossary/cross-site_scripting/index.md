@@ -14,7 +14,7 @@ A **cross-site scripting** (XSS) attack is one in which an attacker is able to g
 All XSS attacks depend on a website doing two things:
 
 1. Accepting some input that could have been crafted by an attacker
-2. Including this input in a page without sanitizing it: that is, without ensuring that it won't be executable as JavaScript.
+2. Including this input in a page without sanitizing it: that is, without ensuring that it won't be executable as JavaScript
 
 ## See also
 
