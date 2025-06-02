@@ -57,7 +57,11 @@ _The `Highlight` interface doesn't inherit any methods_.
 The following example demonstrates how specific parts of a block of text can be highlighted.
 
 ```html
-<p class="foo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem sapiente non eum facere? Nam rem hic culpa, ipsa rerum ab itaque consectetur molestiae dolores vitae! Quo ex explicabo tempore? Tenetur.</p>
+<p class="foo">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
+  sapiente non eum facere? Nam rem hic culpa, ipsa rerum ab itaque consectetur
+  molestiae dolores vitae! Quo ex explicabo tempore? Tenetur.
+</p>
 ```
 
 This JavaScript demonstrates how to create [ranges](/en-US/docs/Web/API/Range), instantiate a new [`Highlight`](/en-US/docs/Web/API/Highlight/Highlight) object for them, and [register it](/en-US/docs/Web/API/HighlightRegistry/set) to be styled on the page:
