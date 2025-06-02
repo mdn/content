@@ -1,18 +1,15 @@
-<!-- 🙌 Thanks for contributing to MDN Web Docs. Adding details below will help us to merge your PR faster. -->
+<!-- 🙌 Thanks for contributing to MDN Web Docs. 🙌
 
-<!-- 📝 For large changes, check our contribution guide:
-     https://developer.mozilla.org/en-US/docs/MDN/Community/Pull_requests -->
+Add details below to help us review your PR faster.
+Take the time to explain your changes and link to an issue or pull request that this PR relates to.
+If there's missing information, your PR may be delayed or closed.
 
-<!-- 🚨 Low-quality, spammy, or disruptive pull requests are moderated heavily.
-     Severe or repeated violations can result in being banned from contributing.
-     Make sure you've read and agree to the following:
-     - Community Participation Guidelines: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines
-     - MDN Content Enforcement Policy: https://developer.mozilla.org/en-US/docs/MDN/Community/Community_Participation_Guidelines -->
+📝 For large changes: https://developer.mozilla.org/en-US/docs/MDN/Community/Pull_requests
+💡 Writing Guidelines: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines
+🧡 CoC Enforcement: https://developer.mozilla.org/en-US/docs/MDN/Community/Community_Participation_Guidelines
 
-<!-- Please complete all sections, especially the Motivation field. If there’s no related issue, explaining why this change is needed helps reviewers understand the context and prioritize your request. Without it, your PR may be delayed or closed. -->
-
-<!-- 👷‍♀️ After submitting, go to the 'Checks' tab of your PR for the build status -->
----
+🚨 Low-quality, spammy, or disruptive pull requests are moderated heavily. Severe or repeated violations can result in being banned.
+-->
 
 ### Description
 
