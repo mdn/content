@@ -57,8 +57,14 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Referenc
 ```html
 <p>
   This is the first sentence.
-  <span style="font-size:0.8em">This whole sentence is in small letters.</span>
+  <span class="small">This whole sentence is in small letters.</span>
 </p>
+```
+
+```css
+.small {
+  font-size: 0.8em;
+}
 ```
 
 #### Result

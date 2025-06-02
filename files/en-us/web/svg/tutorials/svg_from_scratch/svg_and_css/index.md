@@ -18,7 +18,7 @@ Below you'll create a demonstration that runs in a browser.
 
 Make a new SVG document as a plain text file, `doc8.svg`. Copy and paste the content from here, making sure that you scroll to get all of it:
 
-```html
+```html live-sample___example
 <svg
   width="600px"
   height="600px"
@@ -253,7 +253,7 @@ Make a new SVG document as a plain text file, `doc8.svg`. Copy and paste the con
 
 Make a new CSS file, `style8.css` in the same directory as `doc8.svg`. Copy and paste the content from here, making sure that you scroll to get all of it:
 
-```css
+```css live-sample___example
 /*** SVG demonstration ***/
 
 /* page */
@@ -388,7 +388,7 @@ Open the `doc8.svg` document in your SVG-enabled browser. Move your mouse pointe
 
 ### Result
 
-{{EmbedLiveSample("Example", "660", "660")}}
+{{EmbedLiveSample("example", "660", "660")}}
 
 Notes about this demonstration:
 
