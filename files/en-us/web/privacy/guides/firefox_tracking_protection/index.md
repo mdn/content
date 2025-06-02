@@ -50,50 +50,46 @@ More subtly, if other parts of your site depend on trackers being loaded, then t
 
 For example, you should not use Google Analytics in the following way:
 
-```html example-bad
-<a
-  href="http://www.example.com"
-  onclick="trackLink('http://www.example.com', event);">
-  Visit example.com
-</a>
+```js example-bad
+function trackLink(url, event) {
+  event.preventDefault();
+  ga("send", "event", "outbound", "click", url, {
+    transport: "beacon",
+    hitCallback() {
+      document.location = url;
+    },
+  });
+}
 
-<script>
-  function trackLink(url, event) {
-    event.preventDefault();
+document.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    trackLink(link.href, event);
+  });
+});
+```
+
+Instead, you should account for the case when Google Analytics is missing by checking to see if the ga object has initialized:
+
+```js example-good
+function trackLink(url, event) {
+  event.preventDefault();
+  if (window.ga && ga.loaded) {
     ga("send", "event", "outbound", "click", url, {
       transport: "beacon",
       hitCallback() {
         document.location = url;
       },
     });
+  } else {
+    document.location = url;
   }
-</script>
-```
+}
 
-Instead, you should account for the case when Google Analytics is missing by checking to see if the ga object has initialized:
-
-```html example-good
-<a
-  href="http://www.example.com"
-  onclick="trackLink('http://www.example.com', event);">
-  Visit example.com
-</a>
-
-<script>
-  function trackLink(url, event) {
-    event.preventDefault();
-    if (window.ga && ga.loaded) {
-      ga("send", "event", "outbound", "click", url, {
-        transport: "beacon",
-        hitCallback() {
-          document.location = url;
-        },
-      });
-    } else {
-      document.location = url;
-    }
-  }
-</script>
+document.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    trackLink(link.href, event);
+  });
+});
 ```
 
 More information about this technique is available at [Google Analytics, Privacy, and Event Tracking](https://hacks.mozilla.org/2016/01/google-analytics-privacy-and-event-tracking/).

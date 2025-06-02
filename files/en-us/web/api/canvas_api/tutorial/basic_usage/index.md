@@ -113,40 +113,36 @@ Here is a minimalistic template, which we'll be using as a starting point for la
 
 The script includes a function called `draw()`, which is executed once the page finishes loading; this is done by listening for the {{domxref("Window/load_event", "load")}} event on the document. This function, or one like it, could also be called using {{domxref("Window.setTimeout", "setTimeout()")}}, {{domxref("Window.setInterval", "setInterval()")}}, or any other event handler, as long as the page has been loaded first.
 
-Here is how a template would look in action. As shown here, it is initially blank.
-
-{{EmbedLiveSample("A_skeleton_template", "", "160")}}
+At this point, this document should be rendered blank.
 
 ## A simple example
 
-To begin, let's take a look at an example that draws two intersecting rectangles, one of which has alpha transparency. We'll explore how this works in more detail in later examples.
+To begin, let's take a look at an example that draws two intersecting rectangles, one of which has alpha transparency. We'll explore how this works in more detail in later examples. Update your `script` element content to this:
 
-```html
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Canvas experiment</title>
-  </head>
-  <body>
-    <canvas id="canvas" width="150" height="150"></canvas>
-    <script>
-      function draw() {
-        const canvas = document.getElementById("canvas");
-        if (canvas.getContext) {
-          const ctx = canvas.getContext("2d");
+```html hidden
+<canvas id="tutorial" width="150" height="150"></canvas>
+```
 
-          ctx.fillStyle = "rgb(200 0 0)";
-          ctx.fillRect(10, 10, 50, 50);
+```css hidden
+canvas {
+  border: 1px solid black;
+}
+```
 
-          ctx.fillStyle = "rgb(0 0 200 / 50%)";
-          ctx.fillRect(30, 30, 50, 50);
-        }
-      }
-      draw();
-    </script>
-  </body>
-</html>
+```js
+function draw() {
+  const canvas = document.getElementById("canvas");
+  if (canvas.getContext) {
+    const ctx = canvas.getContext("2d");
+
+    ctx.fillStyle = "rgb(200 0 0)";
+    ctx.fillRect(10, 10, 50, 50);
+
+    ctx.fillStyle = "rgb(0 0 200 / 50%)";
+    ctx.fillRect(30, 30, 50, 50);
+  }
+}
+draw();
 ```
 
 This example looks like this:

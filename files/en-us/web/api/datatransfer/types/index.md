@@ -23,78 +23,66 @@ This example shows the use of the `types` and
 {{domxref("DataTransfer.items","items")}} properties.
 
 ```html
-<!doctype html>
-<html lang="en">
-  <title>Examples of DataTransfer.{types,items} properties</title>
-  <meta content="width=device-width" />
-  <style>
-    div {
-      margin: 0em;
-      padding: 2em;
-    }
-    #target {
-      border: 1px solid black;
-    }
-  </style>
-  <script>
-    function dragstart_handler(ev) {
-      console.log(`dragStart: target.id = ${ev.target.id}`);
+<ul>
+  <li id="i1" draggable="true">Drag Item 1 to the Drop Zone</li>
+  <li id="i2" draggable="true">Drag Item 2 to the Drop Zone</li>
+</ul>
+<div id="target">Drop Zone</div>
+```
 
-      // Add this element's id to the drag payload so the drop handler will
-      // know which element to add to its tree
-      ev.dataTransfer.setData("text/plain", ev.target.id);
-      ev.dataTransfer.effectAllowed = "move";
-    }
+```css
+div {
+  margin: 0em;
+  padding: 2em;
+}
+#target {
+  border: 1px solid black;
+}
+```
 
-    function drop_handler(ev) {
-      console.log(`drop: target.id = ${ev.target.id}`);
-      ev.preventDefault();
+```js
+document.querySelectorAll("li").forEach((item) => {
+  item.addEventListener("dragstart", dragstart_handler);
+});
 
-      // Get the id of the target and add the moved element to the target's DOM
-      const data = ev.dataTransfer.getData("text");
-      ev.target.appendChild(document.getElementById(data));
+function dragstart_handler(ev) {
+  console.log(`dragStart: target.id = ${ev.target.id}`);
 
-      // Print each format type
-      for (let i = 0; i < ev.dataTransfer.types.length; i++) {
-        console.log(`… types[${i}] = ${ev.dataTransfer.types[i]}`);
-      }
+  // Add this element's id to the drag payload so the drop handler will
+  // know which element to add to its tree
+  ev.dataTransfer.setData("text/plain", ev.target.id);
+  ev.dataTransfer.effectAllowed = "move";
+}
 
-      // Print each item's "kind" and "type"
-      for (let i = 0; i < ev.dataTransfer.items.length; i++) {
-        console.log(
-          `… items[${i}].kind = ${ev.dataTransfer.items[i].kind}; type = ${ev.dataTransfer.items[i].type}`,
-        );
-      }
-    }
+const target = document.getElementById("target");
 
-    function dragover_handler(ev) {
-      console.log("dragOver");
-      ev.preventDefault();
-      // Set the dropEffect to move
-      ev.dataTransfer.dropEffect = "move";
-    }
-  </script>
-  <body>
-    <h1>
-      Examples of <code>DataTransfer</code>.{<code>types</code>,
-      <code>items</code>} properties
-    </h1>
-    <ul>
-      <li id="i1" ondragstart="dragstart_handler(event);" draggable="true">
-        Drag Item 1 to the Drop Zone
-      </li>
-      <li id="i2" ondragstart="dragstart_handler(event);" draggable="true">
-        Drag Item 2 to the Drop Zone
-      </li>
-    </ul>
-    <div
-      id="target"
-      ondrop="drop_handler(event);"
-      ondragover="dragover_handler(event);">
-      Drop Zone
-    </div>
-  </body>
-</html>
+target.addEventListener("drop", (ev) => {
+  console.log(`drop: target.id = ${ev.target.id}`);
+  ev.preventDefault();
+
+  // Get the id of the target and add the moved element to the target's DOM
+  const data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+
+  // Print each format type
+  for (let i = 0; i < ev.dataTransfer.types.length; i++) {
+    console.log(`… types[${i}] = ${ev.dataTransfer.types[i]}`);
+  }
+
+  // Print each item's "kind" and "type"
+  for (let i = 0; i < ev.dataTransfer.items.length; i++) {
+    console.log(
+      `… items[${i}].kind = ${ev.dataTransfer.items[i].kind}; type = ${ev.dataTransfer.items[i].type}`,
+    );
+  }
+});
+
+target.addEventListener("dragover", (ev) => {
+  console.log("dragOver");
+  ev.preventDefault();
+  // Set the dropEffect to move
+  ev.dataTransfer.dropEffect = "move";
+});
 ```
 
 ## Specifications
