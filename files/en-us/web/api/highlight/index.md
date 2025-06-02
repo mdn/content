@@ -56,7 +56,7 @@ _The `Highlight` interface doesn't inherit any methods_.
 
 The following example demonstrates how specific parts of a block of text can be highlighted.
 
-```html
+```html-nolint
 <p class="foo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
   sapiente non eum facere? Nam rem hic culpa, ipsa rerum ab itaque consectetur
   molestiae dolores vitae! Quo ex explicabo tempore? Tenetur.</p>
