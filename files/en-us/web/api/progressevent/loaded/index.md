@@ -8,11 +8,12 @@ browser-compat: api.ProgressEvent.loaded
 
 {{APIRef("XMLHttpRequest API")}}{{AvailableInWorkers}}
 
-The **`ProgressEvent.loaded`** read-only property is a number
-indicating the size, in bytes, of the data already transmitted or processed. The ratio can be calculated by dividing the value of this property by `ProgressEvent.total`.
-When downloading a resource using HTTP, this only counts the body of the HTTP message, and doesn't include headers and other overhead.
+The **`ProgressEvent.loaded`** read-only property is a number indicating the size of the data already transmitted or processed.
+The ratio can be calculated by dividing the value of this property by {{domxref("ProgressEvent.total")}}.
 
-Note that for compressed requests of unknown total size, `loaded` might contain the size of the compressed, or decompressed, data, depending on the browser. As of 2024, it contains the size of the compressed data in Firefox, and the size of the uncompressed data in Chrome.
+When downloading a resource using HTTP, this counts the body of the HTTP message, excluding headers and other overhead.
+For compressed requests of unknown total size, `loaded` might contain the size of the compressed or decompressed data, depending on the browser.
+As of 2024, it contains the size of the compressed data in Firefox, and the size of the uncompressed data in Chrome.
 
 ## Value
 

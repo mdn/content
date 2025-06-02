@@ -25,26 +25,27 @@ new ProgressEvent(type, options)
 - `options` {{optional_inline}}
   - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
     - `lengthComputable` {{optional_inline}}
-      - : A boolean value indicating if the total work to be done, and the
-        amount of work already done, by the underlying process is calculable. In other words,
-        it tells if the progress is measurable or not. It defaults to `false`.
+      - : A boolean value indicating if the total work to be done, and the amount of work already done, by the underlying process is calculable.
+        In other words, it tells if the progress is measurable or not.
+        It defaults to `false`.
     - `loaded` {{optional_inline}}
-      - : A number representing the amount of work already
-        performed by the underlying process. The ratio of work done can be calculated with the
-        property and `ProgressEvent.total`. When downloading a resource using HTTP,
-        this only represent the part of the content itself, not headers and other overhead. It
-        defaults to `0`.
+      - : A number representing the amount of work already performed by the underlying process.
+        The ratio of work done can be calculated with this property and `ProgressEvent.total`.
+        When downloading a resource using HTTP, this represents the size, in bytes, of the message content, excluding headers and other overhead.
+        It defaults to `0`.
     - `total` {{optional_inline}}
-      - : A number representing the total amount of work that the
-        underlying process is in the progress of performing. When downloading a resource using
-        HTTP, this only represent the content itself, not headers and other overhead. It
-        defaults to `0`.
+      - : A number representing the total amount of work that the underlying process is performing.
+        When downloading a resource using HTTP, this represents the size, in bytes, of the message content, excluding headers and other overhead.
+        To avoid revealing the exact size of a resource, a normalized value such as `1` can be used instead.
+        In such cases, `loaded` should be a value between `0` and `1`, representing progress as a fraction.
 
 ### Return value
 
 A new {{domxref("ProgressEvent")}} object.
 
 ## Example
+
+### File upload
 
 The example demonstrates how a `ProgressEvent` is built using a constructor. This is particularly useful for tracking the progress of processes like file uploads, downloads, or any long-running tasks.
 
@@ -64,6 +65,28 @@ document.addEventListener("progress", (event) => {
 });
 
 updateProgress(50, 100);
+```
+
+### Using fractions in a ProgressEvent
+
+The total number of bytes of a resource may reveal too much information about a download, so a number between 0 and 1 may be used instead:
+
+```js
+function updateProgress(loaded, total) {
+  const progressEvent = new ProgressEvent("progress", {
+    lengthComputable: true,
+    loaded: loaded,
+    total: total,
+  });
+
+  document.dispatchEvent(progressEvent);
+}
+
+document.addEventListener("progress", (event) => {
+  console.log(`Progress: ${event.loaded}/${event.total}`);
+});
+
+updateProgress(0.123456, 1);
 ```
 
 ## Specifications
