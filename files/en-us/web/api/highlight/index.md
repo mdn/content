@@ -90,7 +90,7 @@ The following CSS code snippet demonstrates how to style the registered custom h
 }
 ```
 
-#### Result
+### Result
 
 {{EmbedLiveSample("example", "100%", '100')}}
 
