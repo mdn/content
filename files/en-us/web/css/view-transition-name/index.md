@@ -7,7 +7,7 @@ browser-compat: css.properties.view-transition-name
 
 {{CSSRef}}
 
-The **`view-transition-name`** [CSS](/en-US/docs/Web/CSS) property specifies the [view transition](/en-US/docs/Web/API/View_Transition_API) group that selected elements will appear in, which enables an element to be animated using a separate view transition to the default (root) transition, or not animated at all.
+The **`view-transition-name`** [CSS](/en-US/docs/Web/CSS) property specifies the [view transition](/en-US/docs/Web/API/View_Transition_API) snapshot group that selected elements will participate in, which enables an element to be animated separately from the rest of the page during a view transition, or not animated at all.
 
 ## Syntax
 
@@ -24,20 +24,17 @@ view-transition-name: match-element;
 ### Values
 
 - {{cssxref("custom-ident")}}
-  - : An identifying name that causes the selected element to participate in a separate [view transition](/en-US/docs/Web/API/View_Transition_API) from the root view transition. The `<custom-ident>` cannot be `auto`, `match-element`, or `none`.
+  - : An identifying name that causes the selected element to participate in a separate snapshot from the root snapshot. The `<custom-ident>` cannot be `auto`, `match-element`, or `none`.
 - `match-element`
-  - : The selected element is automatically given an unique identifying name based on the type of element, which enables it to be transitioned separately from all other elements on the page. The name is an internal token representing the element, which is not visible to the web document.
+  - : The selected element is automatically given an unique identifying name based on its identity, which enables it to be animated separately from all other elements on the page. The name is an internal token representing the element, which is not visible to the web document.
 - `none`
-  - : The selected element will not participate in a view transition.
-
-> [!NOTE]
-> The specification also mentions an `auto` keyword value, which isn't yet supported in any browser.
+  - : The selected element will not participate in a view transition, unless it has a parent element with a `view-transition-name` set, in which case it would be snapshotted as part of that element.
 
 ## Description
 
-By default, when a view transition is applied to a web app, all changes to the UI that occur during that transition are animated as a single group, which is the default — or `root` — group (see [The view transition pseudo-element tree](/en-US/docs/Web/API/View_Transition_API/Using#the_view_transition_pseudo-element_tree)). By default, this animation is a smooth cross-fade, which can be seen in action in our [View Transitions SPA demo](https://mdn.github.io/dom-examples/view-transitions/spa/).
+By default, when a view transition is applied to a web app, all changes to the UI that occur during that transition are snapshotted and animated together, which is the default — or `root` — snapshot (see [The view transition pseudo-element tree](/en-US/docs/Web/API/View_Transition_API/Using#the_view_transition_pseudo-element_tree)). By default, this animation is a smooth cross-fade, which can be seen in action in our [View Transitions SPA demo](https://mdn.github.io/dom-examples/view-transitions/spa/).
 
-If you want certain elements to be animated differently from the `root` group during the view transition, you can do so by giving them a different `view-transition-name`, for example:
+If you want certain elements to be animated differently from the `root` snapshot during the view transition, you can do so by giving them a different `view-transition-name`, for example:
 
 ```css
 figcaption {
@@ -57,7 +54,7 @@ You can then specify what animation you want for the before and after snapshots 
 }
 ```
 
-If you don't want an element to be animated during a view transition, you can specify a `view-transition-name` value of `none`:
+If you don't want an element to be snapshotted separately, you can specify a `view-transition-name` value of `none`:
 
 ```css
 .dont-animate-me {
@@ -67,7 +64,7 @@ If you don't want an element to be animated during a view transition, you can sp
 
 ### Specifying `view-transition-name` values automatically
 
-Sometimes you will want to include multiple UI elements in a view transition, but animate all of them separately. This is often the case for example when you have a list of elements on a page and want to rearrange them in some way:
+Sometimes you will want to animate multiple UI elements separately in a view transition. This is often the case when you have a list of elements on a page and want to rearrange them in some way:
 
 ```html
 <ul>
@@ -89,7 +86,7 @@ li:nth-child(4) { view-transition-name: item4; }
 ...
 ```
 
-To get around this problem, you can use the `match-element` value, which causes the browser to give each selected element a unique internal `view-transition-name` based on its type:
+To get around this problem, you can use the `match-element` value, which causes the browser to give each selected element a unique internal `view-transition-name`:
 
 ```css
 li {
@@ -97,7 +94,7 @@ li {
 }
 ```
 
-Because of technical limitations, `match-element` can only be used for single-page view transitions. The auto-generated internal identifiers are not transferrable across different documents.
+Because `match-element` assigns automatic `view-transition-name` values based on element identity, it can only be used for single-page view transitions. The auto-generated internal identifiers are not transferrable across different elements or documents.
 
 ## Formal definition
 
@@ -113,7 +110,7 @@ Because of technical limitations, `match-element` can only be used for single-pa
 
 Our [View Transitions SPA demo](https://mdn.github.io/dom-examples/view-transitions/spa/), is a basic image gallery. See [Basic SPA view transition](/en-US/docs/Web/API/View_Transition_API/Using#basic_spa_view_transition) for a more detailed explanation of how this demo works.
 
-Most of the UI changes are animated using the `root` transition group. However, the `<figcaption>` is given a `view-transition-name` of `figure-caption` to allow it to be animated differently from the rest of the page:
+Most of the UI changes are animated using the `root` transition snapshot. However, the `<figcaption>` is given a `view-transition-name` of `figure-caption` to allow it to be animated differently from the rest of the page:
 
 ```css
 figcaption {
@@ -186,7 +183,7 @@ The markup features a {{htmlelement("main")}} element, which contains an [unorde
 
 #### CSS
 
-We use [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) to lay out the list and the `<article>` side-by-side, and to the cause the list items to all take up an equal amount of space in the left-hand column. The list has a fixed width, while the `<article>` takes up the rest of the available horizontal space.
+We use [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) to lay out the list and the `<article>` side-by-side, and to cause the list items to all take up an equal amount of space in the left-hand column. The list has a fixed width, while the `<article>` takes up the rest of the available horizontal space.
 
 ```css
 main {
@@ -224,7 +221,7 @@ We also define a rule that selects elements with the `active-item` class. When t
 }
 ```
 
-By default, all the rendered elements involved in the view transition will all be animated together, in one cross-fade. However, in this case, we don't want this — we want to give each list item an individual movement animation. We can achieve this by applying `view-transition-name: match-element` to the list items:
+By default, all the rendered elements involved in the view transition will be animated together, in one cross-fade. However, in this case, we don't want this — we want to give each list item an individual movement animation. We can achieve this by applying `view-transition-name: match-element` to the list items:
 
 ```css
 .match-element-applied li {
@@ -261,7 +258,7 @@ function updateActiveItem(event) {
 
   // Keep track of the previous item that was clicked, if any.
   // Remove the active-item class from the previous item so that only
-  // one list item grows and moves at any one time
+  // one list item is placed over the <article> at any one time
   if (prevElem === clickedElem) {
     prevElem.className = "";
     prevElem = undefined;

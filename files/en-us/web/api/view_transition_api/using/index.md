@@ -66,7 +66,7 @@ The most interesting parts of the tree structure are as follows:
 
   Be aware however that page authors can change this by unsetting the above, and setting `view-transition-name: root` on a different element.
 
-- {{cssxref("::view-transition-old()")}} targets the static snapshot of the old page element, and {{cssxref("::view-transition-new()")}} targets the live snapshot of the new page element. Both of these render as replaced content, in the same manner as an {{htmlelement("img")}} or {{htmlelement("video")}}, meaning that they can be styled with handy properties like {{cssxref("object-fit")}} and {{cssxref("object-position")}}.
+- {{cssxref("::view-transition-old()")}} targets the static snapshot of the old page element, and {{cssxref("::view-transition-new()")}} targets the live snapshot of the new page element. Both of these render as replaced content, in the same manner as an {{htmlelement("img")}} or {{htmlelement("video")}}, meaning that they can be styled with properties like {{cssxref("object-fit")}} and {{cssxref("object-position")}}.
 
 > [!NOTE]
 > It is possible to target different DOM elements with different custom view transition animations by setting a different {{cssxref("view-transition-name")}} on each one. In such cases, a `::view-transition-group()` is created for each one. See [Different animations for different elements](#different_animations_for_different_elements) for an example.
@@ -156,7 +156,7 @@ It is recommended that you target the `::view-transition-group()` with such styl
 > [!NOTE]
 > This is also a good option for safeguarding your code — `::view-transition-group()` also animates and you could end up with different durations for the `group`/`image-pair` pseudo-elements versus the `old` and `new` pseudo-elements.
 
-In the case of cross-document (MPA) transitions, the pseudo-elements need to be included in the destination document only for the view transition to work. If you want to use the view transition in both directions, you'll need to include it in both, of course.
+In the case of cross-document (MPA) transitions, the pseudo-elements need to be included in the destination document only for the view transition to work. If you want to use the view transition in both directions, you'll need to include it in both.
 
 Our [View Transitions MPA demo](https://mdn.github.io/dom-examples/view-transitions/mpa/) includes the above CSS, but takes the customization a step further, defining custom animations and applying them to the `::view-transition-old(root)` and `::view-transition-new(root)` pseudo-elements. The result is that the default cross-fade transition is swapped out for a "swipe up" transition when navigation occurs:
 
@@ -274,7 +274,7 @@ The `view-transition-name` property can take a unique {{cssxref("custom-ident")}
 
 It can also take keyword values of:
 
-- `none`: Causes the element to not participate in any view transitions.
+- `none`: Causes the element to not participate in a view transitions.
 - `match-element`: Automatically sets unique `view-transition-name` values on all selected elements.
 
 ### Taking advantage of the default animation styles
