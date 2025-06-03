@@ -215,10 +215,6 @@ div {
   justify-content: space-around;
   flex-flow: row wrap;
 }
-
-select {
-  valign: top;
-}
 ```
 
 ```css
