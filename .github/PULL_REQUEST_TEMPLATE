@@ -21,10 +21,3 @@ If there's missing information, your PR may be delayed or closed. -->
 <!-- 🔨 If this fully resolves a GitHub issue, use "Fixes #123" -->
 <!-- 👉 Highlight related pull requests using "Relates to #123" -->
 <!-- ❗ If another pull request should be merged first, use "**Depends on:** #123" -->
-
-<!-- __Resources:__
-
-💡 Writing guidelines: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines
-📝 For large changes : https://developer.mozilla.org/en-US/docs/MDN/Community/Pull_requests
-🧡 Code of Conduct   : https://developer.mozilla.org/en-US/docs/MDN/Community/Community_Participation_Guidelines
--->
