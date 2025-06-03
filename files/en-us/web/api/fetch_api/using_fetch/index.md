@@ -503,7 +503,7 @@ async function* makeTextFileLineIterator(fileURL) {
     const result = newline.exec(chunk);
     if (!result) {
       if (readerDone) break;
-      const remainder = chunk.substr(startIndex);
+      const remainder = chunk.slice(startIndex);
       ({ value: chunk, done: readerDone } = await reader.read());
       chunk = remainder + (chunk || "");
       startIndex = newline.lastIndex = 0;
