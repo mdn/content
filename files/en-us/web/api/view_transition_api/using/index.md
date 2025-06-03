@@ -80,7 +80,11 @@ This section illustrates how to create a basic view transition, in both the SPA 
 
 ### Basic SPA view transition
 
-As an example, an SPA may include functionality to fetch new content and update the DOM in response to an event of some kind, such as a navigation link being clicked or an update being pushed from the server. In our [View Transitions SPA demo](https://mdn.github.io/dom-examples/view-transitions/spa/) we've simplified this to a `displayNewImage()` function that shows a new full-size image based on the thumbnail that was clicked. We've encapsulated this inside an `updateView()` function that only calls the View Transition API if the browser supports it:
+An SPA may include functionality to fetch new content and update the DOM in response to an event of some kind, such as a navigation link being clicked or an update being pushed from the server.
+
+Our [View Transitions SPA demo](https://mdn.github.io/dom-examples/view-transitions/spa/) is a basic image gallery. We have a series of {{htmlelement("a")}} elements that contain thumbnail {{htmlelement("img")}} elements, dynamically generated using JavaScript. We also have a {{htmlelement("figure")}} element containing a {{htmlelement("figcaption")}} and an `<img>`, which displays the full-size gallery images.
+
+When a thumbnail is clicked, the `displayNewImage()` function is run via {{domxref("Document.startViewTransition()")}}, which causes the full-size image and its associated caption to be displayed inside the `<figure>`. We've encapsulated this inside an `updateView()` function that only calls the View Transition API if the browser supports it:
 
 ```js
 function updateView(event) {
@@ -216,11 +220,6 @@ With this CSS applied, the generated pseudo-element tree will now look like this
 
 The existence of the second set of pseudo-elements allows separate view transition styling to be applied just to the `<figcaption>`. The different old and new view captures are handled separately from one another.
 
-> [!NOTE]
-> The value of `view-transition-name` is a unique {{cssxref("custom-ident")}}; it can be any identifier that wouldn't be misinterpreted as a keyword. The keyword `none` is not a valid name, as that value means the element will not participate in any view transitions. Also avoid `auto`, as it's being discussed as a way to [determine `view-transition-name` automatically](https://drafts.csswg.org/css-view-transitions-2/#auto-vt-name).
->
-> `view-transition-name` values must also be unique. If two rendered elements have the same `view-transition-name` at the same time, {{domxref("ViewTransition.ready")}} will reject and the transition will be skipped.
-
 The following code applies a custom animation just to the `<figcaption>`:
 
 ```css
@@ -268,6 +267,15 @@ Here we've created a custom CSS animation and applied it to the `::view-transiti
 >   animation-duration: 2s;
 > }
 > ```
+
+### Valid `view-transition-name` values
+
+The `view-transition-name` property can take a unique {{cssxref("custom-ident")}} value, which can be any identifier that wouldn't be misinterpreted as a keyword. The value of `view-transition-name` for each rendered element must be unique. If two rendered elements have the same `view-transition-name` at the same time, {{domxref("ViewTransition.ready")}} will reject and the transition will be skipped.
+
+It can also take keyword values of:
+
+- `none`: Causes the element to not participate in any view transitions.
+- `match-element`: Automatically sets unique `view-transition-name` values on all selected elements.
 
 ### Taking advantage of the default animation styles
 
