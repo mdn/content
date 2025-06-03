@@ -114,7 +114,7 @@ The second box shows how to use `pi` inside a [`sin()`](/en-US/docs/Web/CSS/sin)
 .container {
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: start;
   width: 200px;
 }
 .container > div {

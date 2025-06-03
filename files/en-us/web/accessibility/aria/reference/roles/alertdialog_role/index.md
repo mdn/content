@@ -79,19 +79,22 @@ The code snippet above shows how to mark up an alert dialog that only provides a
   </div>
   <ul>
     <li>
-      <button type="button" onclick="closeThis()">No</button>
+      <button id="close-btn" type="button">No</button>
     </li>
     <li>
-      <button
-        type="button"
-        aria-controls="form"
-        id="delete_file_confirm"
-        onclick="deleteFile()">
-        Yes
-      </button>
+      <button id="confirm-btn" type="button" aria-controls="form">Yes</button>
     </li>
   </ul>
 </div>
+```
+
+```js
+document.getElementById("close-btn").addEventListener("click", () => {
+  closeDialog();
+});
+document.getElementById("confirm-btn").addEventListener("click", (event) => {
+  deleteFile();
+});
 ```
 
 ## Specifications

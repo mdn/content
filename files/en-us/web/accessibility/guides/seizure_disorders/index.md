@@ -367,10 +367,7 @@ JavaScript is also an option for reducing contrast dynamically. Here's a code ex
 
 ```html
 <body>
-  <input
-    type="button"
-    value="Set paragraph background color"
-    onclick="set_background()" />
+  <input type="button" value="Set paragraph background color" />
   <p>hi</p>
   <p>hello</p>
 </body>
@@ -379,18 +376,18 @@ JavaScript is also an option for reducing contrast dynamically. Here's a code ex
 **JavaScript Content [(link to source page)](/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces#javascript_2)**
 
 ```js
-function set_background() {
-  // get a list of all the body elements (there will only be one),
-  // and then select the zeroth (or first) such element
-  myBody = document.getElementsByTagName("body")[0];
+function setBackground() {
+  // now, get all the p elements in the document
+  const paragraphs = document.getElementsByTagName("p");
 
-  // now, get all the p elements that are descendants of the body
-  myBodyElements = myBody.getElementsByTagName("p");
+  // get the second paragraph from the list
+  const secondParagraph = paragraphs[1];
 
-  // get the second item of the list of p elements
-  myP = myBodyElements[1];
-  myP.style.background = "rgb(255 0 0)";
+  // set the inline style
+  secondParagraph.style.background = "red";
 }
+
+document.querySelector("input").addEventListener("click", setBackground);
 ```
 
 #### Avoid fully saturated reds for flashing content
@@ -430,11 +427,9 @@ Use the {{HTMLElement('link')}} element, alongside with and together with the at
 
 **{{CSSxref('@import')}}** is also a way to incorporate style sheets, but it is not quite as well supported as the {{HTMLElement('link')}} element.
 
-```html
-<style>
-  @import url(alternate1.css);
-  @import url(alternate2.css);
-</style>
+```css
+@import url(alternate1.css);
+@import url(alternate2.css);
 ```
 
 By using alternate style sheets (remember to add the titles) you are setting it up for users to be able to use their browsers to choose alternate styles.

@@ -288,23 +288,6 @@ Everything is rendered properly and animating — congratulations on building yo
       dur: 2000; loop: true; easing: linear;">
   </a-entity>
 </a-scene>
-
-<script>
-  const scene = document.querySelector("a-scene");
-  const cylinder = document.createElement("a-cylinder");
-  cylinder.setAttribute("color", "#FF9500");
-  cylinder.setAttribute("height", "2");
-  cylinder.setAttribute("radius", "0.75");
-  cylinder.setAttribute("position", "3 1 0");
-  scene.appendChild(cylinder);
-  let t = 0;
-  function render() {
-    t += 0.01;
-    requestAnimationFrame(render);
-    cylinder.setAttribute("position", `3 ${Math.sin(t * 2) + 1} 0`);
-  }
-  render();
-</script>
 ```
 
 ```css hidden live-sample___a-frame-animation
@@ -315,6 +298,23 @@ body {
   height: 100%;
   font-size: 0;
 }
+```
+
+```js live-sample___a-frame-animation
+const scene = document.querySelector("a-scene");
+const cylinder = document.createElement("a-cylinder");
+cylinder.setAttribute("color", "#FF9500");
+cylinder.setAttribute("height", "2");
+cylinder.setAttribute("radius", "0.75");
+cylinder.setAttribute("position", "3 1 0");
+scene.appendChild(cylinder);
+let t = 0;
+function render() {
+  t += 0.01;
+  requestAnimationFrame(render);
+  cylinder.setAttribute("position", `3 ${Math.sin(t * 2) + 1} 0`);
+}
+render();
 ```
 
 {{embedlivesample("a-frame-animation", "", "400px")}}
