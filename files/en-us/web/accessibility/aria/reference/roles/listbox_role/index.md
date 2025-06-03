@@ -143,9 +143,6 @@ The snippet below, using [`aria-activedescendant`](/en-US/docs/Web/Accessibility
   tabindex="0"
   id="listbox1"
   aria-labelledby="listbox1label"
-  onclick="return listItemClick(event);"
-  onkeydown="return listItemKeyEvent(event);"
-  onkeypress="return listItemKeyEvent(event);"
   aria-activedescendant="listbox1-1">
   <div role="option" id="listbox1-1" class="selected" aria-selected="true">
     Green
@@ -156,6 +153,13 @@ The snippet below, using [`aria-activedescendant`](/en-US/docs/Web/Accessibility
   <div role="option" id="listbox1-5">Violet</div>
   <div role="option" id="listbox1-6">Periwinkle</div>
 </div>
+```
+
+```js
+const listbox = document.getElementById("listbox1");
+listbox.addEventListener("click", listItemClick);
+listbox.addEventListener("keydown", listItemKeyEvent);
+listbox.addEventListener("keypress", listItemKeyEvent);
 ```
 
 This could have more easily been handled with the native HTML {{HTMLElement('select')}} and {{HTMLElement('label')}} elements.

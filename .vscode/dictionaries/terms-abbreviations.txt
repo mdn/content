@@ -1,16 +1,13 @@
 AABB
 ABNF
 abspos
-ACAO
 accname
 achromatopsia
 ACSS
-ADHD
 ADPCM
 ADSR
 AEDT
 AEST
-affordance
 aggregatable
 ALAC
 alphanumerals
@@ -21,7 +18,6 @@ ANMF
 anonymization
 antialiasing
 antitracking
-apideck
 APNG
 appcontent
 arcosh
@@ -38,7 +34,6 @@ ATAG
 atlasing
 ATSC
 autoallocate
-autobuffering
 autocapitalization
 autoconfig
 autocorrection
@@ -53,7 +48,6 @@ autohide
 automagically
 automaticity
 autoplace
-autoplacement
 autoplaying
 autoplays
 AVPF
@@ -90,7 +84,6 @@ bootup
 botmaster
 BPPmaxKb
 BPTC
-Brotli
 browserless
 BSAC
 bytestream
@@ -123,7 +116,6 @@ CLREQ
 codabar
 codegen
 codepaths
-codespace
 COEP
 colex
 colexographical
@@ -151,7 +143,6 @@ cryptosystem
 cryptosystems
 CSSWG
 CSWH
-CTAP
 cubemap
 cubemaps
 CWND
@@ -180,8 +171,6 @@ destructures
 detuning
 deutan
 deuteranomaly
-devrel
-dezippering
 dinos
 discardable
 distros
@@ -194,7 +183,6 @@ doorhanger
 dotless
 downsampled
 downsampling
-downscaling
 dragonfish
 DSCP
 DTLSL
@@ -207,14 +195,11 @@ encrypter
 engageable
 EOTF
 ephemerons
-EPUB
 equirect
 equirectangular
 ESSL
-ethnicities
 ETSI
 exfiltrating
-exfiltration
 EXIF
 expando
 EXSL
@@ -233,7 +218,6 @@ fangled
 fastload
 favoriting
 fieldsets
-FIFA
 findability
 findbar
 Finito
@@ -247,7 +231,6 @@ fontface
 fontfaces
 footguns
 forgeable
-FOSS
 FOUC
 Fourway
 FOUT
@@ -264,7 +247,6 @@ fullwidth
 futexes
 Gamedev
 Gamedevs
-gameplay
 gameworld
 gameworlds
 Gbps
@@ -281,7 +263,6 @@ glanceable
 GLSL
 GPGPU
 GPII
-GPIO
 GPRS
 grabbable
 Gradians
@@ -345,7 +326,6 @@ isoluminant
 jank
 janking
 janky
-JavaScripters
 javascripting
 JFIF
 JLREQ
@@ -366,7 +346,6 @@ Kona
 labelable
 laggy
 lazify
-leaderboards
 leetspeak
 letterboxed
 letterboxing
@@ -387,7 +366,6 @@ longhands
 longterm
 longwinded
 lookaheads
-losslessly
 LPCM
 LSTM
 luma
@@ -398,11 +376,9 @@ macroblock
 macroblocks
 mansplaining
 maplike
-MATF
 MBASW
 Mbit
 Mbps
-Metafile
 metalness
 metastring
 microcontrollers
@@ -427,7 +403,6 @@ modelessly
 Mojibake
 monkeypatch
 monoscopic
-mouselook
 Mozillians
 MSAA
 MSISDN
@@ -442,7 +417,6 @@ multisampled
 multisampling
 multiscreen
 multistream
-multitouch
 multiuser
 multivalued
 multiview
@@ -457,7 +431,6 @@ naïvely
 NCBI
 NCLX
 netherbeasts
-neuroscientists
 nightlies
 nomming
 nonbinary
@@ -494,7 +467,6 @@ overscrolling
 packetization
 packetizer
 packetizing
-pageload
 paintable
 pantherina
 papermakers
@@ -524,7 +496,6 @@ playout
 PLTE
 plumeria
 polyfilling
-polylines
 polymarker
 polymarkers
 pomaceous
@@ -534,7 +505,6 @@ posterization
 posterizing
 powerups
 preactivate
-precache
 precached
 precaches
 precaching
@@ -580,7 +550,6 @@ quicklinks
 quickmenu
 qvalues
 QWERTZ
-randomizer
 rari
 rasterizes
 RDBMS
@@ -610,18 +579,13 @@ rescan
 reselecting
 resends
 resizability
-resnapped
 respecified
 restartless
 retarget
 retargeted
-retargeting
 retargetings
-reviewdog
 RFCOMM
 RGTC
-roadmaps
-Rockhopper
 romcoms
 roundoff
 RSAOAEP
@@ -632,9 +596,8 @@ RTMPE
 RTMPS
 RTMPT
 RTSP
-ruleset
-rulesets
 run-throughs
+résumé
 safelisted
 Saltasaurus
 sandboxing
@@ -645,7 +608,6 @@ scattergun
 schemeful
 scopable
 scorpionfish
-screencast
 screenful
 scriptable
 scriptless
@@ -692,8 +654,6 @@ SMIL
 smoosh
 SMPTE
 snapport
-snapshotted
-snapshotting
 SNES
 spammy
 spatialization
@@ -724,7 +684,6 @@ strobing
 styracosaurus
 subarticle
 subarticles
-subbuffer
 subcarrier
 subclassing
 subcollections
@@ -748,7 +707,6 @@ submatch
 submatches
 subminor
 subminute
-subpage
 subpages
 subpanels
 subpattern
@@ -770,7 +728,6 @@ subsentence
 subsetting
 substate
 substeps
-substream
 substreams
 subtag
 subtags
@@ -795,12 +752,10 @@ SVCB
 syncbase
 tablists
 tabstrip
-tada
 Tanuki
 targetable
 taskbars
 taskboard
-Techmakers
 teleporting
 texels
 textboxes
@@ -812,14 +767,12 @@ thumbstick
 thumbsticks
 TIAS
 tickmarks
-tiktok
 tilemap
 tilemaps
 tileset
 timebox
 timecode
 timecodes
-timeframe
 timerange
 timeslice
 timeslices
@@ -829,7 +782,6 @@ TIPC
 toggletips
 toolkits
 toolsets
-touchpad
 touchpads
 touchpoint
 touchpoints
@@ -858,7 +810,6 @@ tweens
 UAAG
 ufrag
 UMTS
-unabbreviate
 unbookmark
 unbundling
 uncacheable
@@ -874,7 +825,6 @@ unconfigured
 uncredentialed
 underflowing
 underflows
-underliner
 underlyingly
 underover
 underscript
@@ -924,8 +874,6 @@ unthrottled
 untriaged
 unzoomed
 uppercasing
-upscaling
-usecase
 userbase
 VDOM
 Velociraptor
@@ -962,7 +910,6 @@ whizzy
 WHOIS
 WICG
 wideband
-wireframe
 wireframed
 wireframes
 wordmark
@@ -984,6 +931,5 @@ yearless
 Zalgo
 zoomable
 ZQSD
-Zstandard
 ZWNBSP
 ZWSP

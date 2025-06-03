@@ -181,7 +181,7 @@ First of all, add a {{htmlelement("style")}} element to your page, inside your H
 
 ```html
 <style>
-  …
+  /* CSS goes here */
 </style>
 ```
 

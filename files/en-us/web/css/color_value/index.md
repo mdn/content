@@ -85,11 +85,22 @@ The `currentcolor` keyword represents the value of an element's {{Cssxref("color
 If `currentcolor` is used as the value of the `color` property, it instead takes its value from the inherited value of the `color` property.
 
 ```html
-<div style="color: blue; border: 1px dashed currentcolor;">
+<div class="container">
   The color of this text is blue.
-  <div style="background: currentcolor; height:9px;"></div>
+  <div class="child"></div>
   This block is surrounded by a blue border.
 </div>
+```
+
+```css
+.container {
+  color: blue;
+  border: 1px dashed currentcolor;
+}
+.child {
+  background: currentcolor;
+  height: 9px;
+}
 ```
 
 {{EmbedLiveSample("currentcolor_keyword", "100%", 80)}}

@@ -62,8 +62,7 @@ The following snippet shows a simplified version of two form fields with a valid
       name="name"
       id="name"
       aria-required="true"
-      aria-invalid="false"
-      onblur="checkValidity('name', ' ', 'Invalid name entered (requires both first and last name)');" />
+      aria-invalid="false" />
   </li>
   <li>
     <label for="email">Email Address</label>
@@ -72,10 +71,23 @@ The following snippet shows a simplified version of two form fields with a valid
       name="email"
       id="email"
       aria-required="true"
-      aria-invalid="false"
-      onblur="checkValidity('email', '@', 'Invalid email address');" />
+      aria-invalid="false" />
   </li>
 </ul>
+```
+
+```js
+document.getElementById("name").addEventListener("blur", () => {
+  checkValidity(
+    "name",
+    " ",
+    "Invalid name entered (requires both first and last name)",
+  );
+});
+
+document.getElementById("email").addEventListener("blur", () => {
+  checkValidity("email", "@", "Invalid email address");
+});
 ```
 
 Note that it is not necessary to validate the fields immediately on blur; the application could wait until the form is submitted (though this is not necessarily recommended).
