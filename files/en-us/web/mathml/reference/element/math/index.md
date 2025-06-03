@@ -1,5 +1,5 @@
 ---
-title: <math>: The MathML element
+title: "<math>: The MathML element"
 slug: Web/MathML/Reference/Element/math
 page-type: mathml-element
 browser-compat: mathml.elements.math
