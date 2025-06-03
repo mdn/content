@@ -68,7 +68,7 @@ document.querySelectorAll("a").forEach((link) => {
 });
 ```
 
-Instead, you should account for the case when Google Analytics is missing by checking to see if the ga object has initialized:
+Instead, you should account for the case when Google Analytics is missing by checking to see if the `ga` object has initialized:
 
 ```js example-good
 function trackLink(url, event) {
