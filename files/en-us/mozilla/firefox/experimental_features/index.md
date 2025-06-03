@@ -611,15 +611,15 @@ See [Firefox bug 1539075](https://bugzil.la/1539075) for more details.
 
 Note that, as shown below, the feature is only available on Nightly builds (irrespective of whether the preference is set).
 
+- `image.jxl.enabled`
+  - : Set to `true` to enable.
+
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
 | Nightly           | 90            | No                  |
 | Developer Edition | —             | —                   |
 | Beta              | —             | —                   |
 | Release           | —             | —                   |
-
-- `image.jxl.enabled`
-  - : Set to `true` to enable.
 
 ### CSS Custom Highlight API
 
@@ -725,15 +725,17 @@ The `GeometryUtils` method `getBoxQuads()` returns the CSS boxes for a {{domxref
 
 The [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) provides support for handling web-based payments within web content or apps. Due to a bug that came up during testing of the user interface, we have decided to postpone shipping this API while discussions over potential changes to the API are held. Work is ongoing. (See [Firefox bug 1318984](https://bugzil.la/1318984) for more details.)
 
+- `dom.payments.request.enabled`
+  - : Set to `true` to enable.
+- ``dom.payments.request.supportedRegions`
+  - : Country codes as a comma-separated allowlist of regions (e.g., `US,CA`).
+
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
 | Nightly           | 55            | No                  |
 | Developer Edition | 55            | No                  |
 | Beta              | 55            | No                  |
 | Release           | 55            | No                  |
-
-- `dom.payments.request.enabled` and <br>`dom.payments.request.supportedRegions`
-  - : Set to `true` to enable.
 
 ### WebShare API
 
@@ -802,13 +804,15 @@ Notifications have the [`requireInteraction`](/en-US/docs/Web/API/Notification/r
 
 The [View Transition API](/en-US/docs/Web/API/View_Transition_API) provides a mechanism for easily creating animated transitions between different website views. This is especially useful for [SPAs (single-page applications)](/en-US/docs/Glossary/SPA). ([Firefox bug 1950759](https://bugzil.la/1950759)).
 
+- `dom.viewTransitions.enabled`
+  - : Set to `true` to enable.
+
 | Release channel   | Version changed | Enabled by default? |
 | ----------------- | --------------- | ------------------- |
 | Nightly           | 139             | Yes                 |
 | Developer Edition | —               | No                  |
 | Beta              | —               | No                  |
 | Release           | —               | No                  |
-| Preference name   | N/A             |                     |
 
 ## Security and privacy
 
@@ -865,15 +869,15 @@ Note that supported policies can be set through the [`allow`](/en-US/docs/Web/HT
 
 [PPA API](https://support.mozilla.org/en-US/kb/privacy-preserving-attribution) provides an alternative to user tracking for ad attribution using the new `navigator.privateAttribution` object with `saveImpression()` and `measureConversion()` methods. Read more about PPA [in the original explainer](https://github.com/mozilla/explainers/tree/main/archive/ppa-experiment) and the [proposed spec](https://w3c.github.io/ppa/). This experiment can be enabled for websites via [origin trial](https://wiki.mozilla.org/Origin_Trials) or in the browser by setting the preference to `1`. ([Firefox bug 1900929](https://bugzil.la/1900929)).
 
+- `dom.origin-trials.private-attribution.state`
+  - : Set to `true` to enable.
+
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
 | Nightly           | 128           | No                  |
 | Developer Edition | 128           | No                  |
 | Beta              | 128           | No                  |
 | Release           | 128           | No                  |
-
-- `dom.origin-trials.private-attribution.state`
-  - : Set to `true` to enable.
 
 ## HTTP
 
@@ -881,6 +885,9 @@ Note that supported policies can be set through the [`allow`](/en-US/docs/Web/HT
 
 The HTTP [`Accept`](/en-US/docs/Web/HTTP/Reference/Headers/Accept) header in [default requests and image requests](/en-US/docs/Web/HTTP/Guides/Content_negotiation/List_of_default_Accept_values) can be configured via a preference to indicate support for the `image/jxl` MIME type.
 
+- `image.jxl.enabled`
+  - : Set to `true` to enable.
+
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
 | Nightly           | 128           | No                  |
@@ -888,14 +895,14 @@ The HTTP [`Accept`](/en-US/docs/Web/HTTP/Reference/Headers/Accept) header in [de
 | Beta              | 128           | No                  |
 | Release           | 128           | No                  |
 
-- `image.jxl.enabled`
-  - : Set to `true` to enable.
-
 ### SameSite=Lax by default
 
 [`SameSite` cookies](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) have a default value of `Lax`.
 With this setting, cookies are only sent when a user is navigating to the origin site, not for cross-site subrequests to load images or frames into a third party site and so on.
 For more details see [Firefox bug 1617609](https://bugzil.la/1617609).
+
+- `network.cookie.sameSite.laxByDefault`
+  - : Set to `true` to enable.
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
@@ -903,9 +910,6 @@ For more details see [Firefox bug 1617609](https://bugzil.la/1617609).
 | Developer Edition | 69            | No                  |
 | Beta              | 69            | No                  |
 | Release           | 69            | No                  |
-
-- `network.cookie.sameSite.laxByDefault`
-  - : Set to `true` to enable.
 
 ### Access-Control-Allow-Headers wildcard does not cover Authorization
 
@@ -916,15 +920,15 @@ By default, Firefox includes the `Authorization` header in the final request aft
 Set the preference to `false` to ensure Firefox does not include the `Authorization` header.
 For more details see [Firefox bug 1687364](https://bugzil.la/1687364).
 
+- `network.cors_preflight.authorization_covered_by_wildcard`
+  - : Set to `true` to enable.
+
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
 | Nightly           | 115           | Yes                 |
 | Developer Edition | 115           | Yes                 |
 | Beta              | 115           | Yes                 |
 | Release           | 115           | Yes                 |
-
-- `network.cors_preflight.authorization_covered_by_wildcard`
-  - : Set to `true` to enable.
 
 ## Developer tools
 
