@@ -20,7 +20,7 @@ browser-compat: webextensions.manifest.browser_specific_settings
           <li>In Firefox:
             <ul>
               <li>Manifest V3: Mandatory for signing extensions, i.e., distribution through addons.mozilla.org (AMO) or self-distribution, to provide an extension ID.</li>
-              <li>Manifest V2: Not required unless an extension ID must be specified.</li>
+              <li>Manifest V2: Not required unless an extension ID must be specified. However, setting the ID is recommended.</li>
             </ul>
             See <a href="#id"
               ><code>browser_specific_settings.gecko.id</code></a
@@ -62,9 +62,9 @@ The `gecko` sub-key supports these properties:
 
 - `id`
 
-  - : The extension ID. Optional for Manifest V2 and required for signing Manifest V3 extensions. If you don't provide a value for Manifest V2 extensions, AMO assigns a GUID to the extension when it is signed. You must create an ID for signing Manifest V3 extensions; AMO does not assign an ID. When provided, this property must be a:
+  - : The extension ID. Optional for Manifest V2 (although setting an ID is recommended) and required for signing Manifest V3 extensions. If you don't provide a value for Manifest V2 extensions, AMO assigns a GUID to the extension when it is signed. You must create an ID for signing Manifest V3 extensions; AMO does not assign an ID. When provided, this property must be a:
 
-    - (recommended) string contain 80 characters or less formatted like an email address. (`^[a-zA-Z0-9-._]*@[a-zA-Z0-9-._]+$`). Be aware that using a real email address here may attract spam.
+    - (recommended) string contain 80 characters or less formatted like an email address. (`^[a-zA-Z0-9-._]*@[a-zA-Z0-9-._]+$`). While you can use a real email address (remembering that this may attract spam) any correctly formatted string can be used. For example, `great_app@developers.company`.
     - [GUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) (`^\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\}$`)
 
     When signing extensions for the first time, addons.mozilla.org (AMO) checks that the ID is unique.
