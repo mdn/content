@@ -2,9 +2,8 @@
 title: How does the Internet work?
 slug: Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work
 page-type: learn-faq
+sidebar: learn-how-to
 ---
-
-{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 This article discusses what the Internet is and how it works.
 

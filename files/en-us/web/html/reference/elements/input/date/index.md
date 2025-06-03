@@ -266,9 +266,9 @@ input:valid + span::after {
     <tr>
       <td><strong>IDL attributes</strong></td>
       <td>
-        <a href="/en-US/docs/Web/HTML/Reference/Elements/input#value"><code>value</code></a>,
-        <code>valueAsDate</code>,
-        <code>valueAsNumber</code>
+        <a href="/en-US/docs/Web/API/HTMLInputElement/value"><code>value</code></a>,
+        <a href="/en-US/docs/Web/API/HTMLInputElement/valueAsDate"><code>valueAsDate</code></a>,
+        <a href="/en-US/docs/Web/API/HTMLInputElement/valueAsNumber"><code>valueAsNumber</code></a>
       </td>
     </tr>
     <tr>

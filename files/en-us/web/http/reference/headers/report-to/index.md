@@ -1,5 +1,6 @@
 ---
-title: Report-To
+title: Report-To header
+short-title: Report-To
 slug: Web/HTTP/Reference/Headers/Report-To
 page-type: http-header
 status:

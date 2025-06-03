@@ -92,7 +92,7 @@ function previewFiles() {
 
   function readAndPreview(file) {
     // Make sure `file.name` matches our extensions criteria
-    if (/\.(jpe?g|png|gif)$/i.test(file.name)) {
+    if (/\.(?:jpe?g|png|gif)$/i.test(file.name)) {
       const reader = new FileReader();
 
       reader.addEventListener(

@@ -119,7 +119,7 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener("click", function () {
+reset.addEventListener("click", () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
@@ -127,7 +127,7 @@ reset.addEventListener("click", function () {
   updateCode();
 });
 
-solution.addEventListener("click", function () {
+solution.addEventListener("click", () => {
   if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
     solution.value = "Hide solution";

@@ -153,11 +153,11 @@ dropzone.addEventListener(
     event.preventDefault();
     listing.textContent = "";
 
-    for (let i = 0; i < items.length; i++) {
-      let item = items[i].webkitGetAsEntry();
+    for (const item of items) {
+      const entry = item.webkitGetAsEntry();
 
-      if (item) {
-        scanFiles(item, listing);
+      if (entry) {
+        scanFiles(entry, listing);
       }
     }
   },

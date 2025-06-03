@@ -1,5 +1,6 @@
 ---
-title: Range
+title: Range header
+short-title: Range
 slug: Web/HTTP/Reference/Headers/Range
 page-type: http-header
 browser-compat: http.headers.Range

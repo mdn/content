@@ -1,5 +1,6 @@
 ---
-title: Content-DPR
+title: Content-DPR header
+short-title: Content-DPR
 slug: Web/HTTP/Reference/Headers/Content-DPR
 page-type: http-header
 status:

@@ -12,7 +12,7 @@ The **`exec()`** method of {{jsxref("RegExp")}} instances executes a search with
 {{InteractiveExample("JavaScript Demo: RegExp.prototype.exec()")}}
 
 ```js interactive-example
-const regex1 = RegExp("foo*", "g");
+const regex1 = /fo+/g;
 const str1 = "table football, foosball";
 let array1;
 
@@ -90,7 +90,7 @@ The following table shows the state of `result` after running this script:
 | `index`   | `4`                                                                |
 | `indices` | `[[4, 25], [10, 15], [20, 25]]`<br />`groups: { color: [10, 15 ]}` |
 | `input`   | `"The Quick Brown Fox Jumps Over The Lazy Dog"`                    |
-| `groups`  | `{ color: "brown" }`                                               |
+| `groups`  | `{ color: "Brown" }`                                               |
 
 In addition, `re.lastIndex` will be set to `25`, due to this regex being global.
 

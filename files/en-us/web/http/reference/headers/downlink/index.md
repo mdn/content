@@ -1,5 +1,6 @@
 ---
-title: Downlink
+title: Downlink header
+short-title: Downlink
 slug: Web/HTTP/Reference/Headers/Downlink
 page-type: http-header
 status:

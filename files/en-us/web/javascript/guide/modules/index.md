@@ -4,7 +4,7 @@ slug: Web/JavaScript/Guide/Modules
 page-type: guide
 ---
 
-{{jsSidebar("JavaScript Guide")}}{{Previous("Web/JavaScript/Guide/Meta_programming")}}
+{{jsSidebar("JavaScript Guide")}}{{Previous("Web/JavaScript/Guide/Internationalization")}}
 
 This guide gives you all you need to get started with JavaScript module syntax.
 
@@ -150,8 +150,8 @@ reportPerimeter(square1.length, reportList);
 Above we saw how a browser can import a module using a module specifier that is either an absolute URL, or a relative URL that is resolved using the base URL of the document:
 
 ```js
-import { name as squareName, draw } from "./shapes/square.js";
 import { name as circleName } from "https://example.com/shapes/circle.js";
+import { name as squareName, draw } from "./shapes/square.js";
 ```
 
 [Import maps](/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap) allow developers to instead specify almost any text they want in the module specifier when importing a module; the map provides a corresponding value that will replace the text when the module URL is resolved.
@@ -395,7 +395,7 @@ You can only use `import` and `export` statements inside modules, not regular sc
 ```html example-bad
 <script>
   import _ from "lodash"; // SyntaxError: import declarations may only appear at top level of a module
-  // ...
+  // …
 </script>
 <script src="a-module-using-import-statements.js"></script>
 <!-- SyntaxError: import declarations may only appear at top level of a module -->
@@ -493,18 +493,18 @@ Inside your `import` and `export` statement's curly braces, you can use the keyw
 So for example, both of the following would do the same job, albeit in a slightly different way:
 
 ```js
-// inside module.js
+// -- module.js --
 export { function1 as newFunctionName, function2 as anotherNewFunctionName };
 
-// inside main.js
+// -- main.js --
 import { newFunctionName, anotherNewFunctionName } from "./modules/module.js";
 ```
 
 ```js
-// inside module.js
+// -- module.js --
 export { function1, function2 };
 
-// inside main.js
+// -- main.js --
 import {
   function1 as newFunctionName,
   function2 as anotherNewFunctionName,
@@ -1012,4 +1012,4 @@ Here are a few tips that may help you if you are having trouble getting your mod
 - [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) on hacks.mozilla.org (2015)
 - [Exploring JS, Ch.16: Modules](https://exploringjs.com/es6/ch_modules.html) by Dr. Axel Rauschmayer
 
-{{Previous("Web/JavaScript/Guide/Meta_programming")}}
+{{Previous("Web/JavaScript/Guide/Internationalization")}}

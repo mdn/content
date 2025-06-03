@@ -49,7 +49,7 @@ The following criteria must be met when calling **`resolveQuerySet()`**, otherwi
 ## Examples
 
 ```js
-// ...
+// …
 
 const queryBuffer = device.createBuffer({
   size: 1024,
@@ -61,17 +61,17 @@ const querySet = device.createQuerySet({
   count: 32,
 });
 
-// ...
+// …
 
 const commandEncoder = device.createCommandEncoder();
 
 // Write timestamps to querySet
 commandEncoder.writeTimestamp(querySet, 0);
-// ...
+// …
 commandEncoder.writeTimestamp(querySet, 1);
 // etc.
 
-// ...
+// …
 
 commandEncoder.resolveQuerySet(
   querySet,
@@ -81,7 +81,7 @@ commandEncoder.resolveQuerySet(
   0, // Buffer offset
 );
 
-// ...
+// …
 ```
 
 ## Specifications

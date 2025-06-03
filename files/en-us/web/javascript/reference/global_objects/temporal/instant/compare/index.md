@@ -26,7 +26,7 @@ Temporal.Instant.compare(instant1, instant2)
 
 ### Return value
 
-Returns `-1` if `instant1` comes before `instant2`, `0` if they are the same, and `1` if `instant1` comes after.
+Returns `-1` if `instant1` comes before `instant2`, `0` if they are the same, and `1` if `instant1` comes after `instant2`.
 
 ## Examples
 

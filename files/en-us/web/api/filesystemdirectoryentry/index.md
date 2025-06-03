@@ -32,17 +32,17 @@ function onFs(fs) {
     "Documents",
     { create: true },
     (directoryEntry) => {
-      //directoryEntry.isFile === false
-      //directoryEntry.isDirectory === true
-      //directoryEntry.name === 'Documents'
-      //directoryEntry.fullPath === '/Documents'
+      // directoryEntry.isFile === false
+      // directoryEntry.isDirectory === true
+      // directoryEntry.name === 'Documents'
+      // directoryEntry.fullPath === '/Documents'
     },
     onError,
   );
 }
 
 // Opening a file system with temporary storage
-window.requestFileSystem(TEMPORARY, 1024 * 1024 /*1MB*/, onFs, onError);
+window.requestFileSystem(TEMPORARY, 1024 * 1024 /* 1MB */, onFs, onError);
 ```
 
 ## Instance properties

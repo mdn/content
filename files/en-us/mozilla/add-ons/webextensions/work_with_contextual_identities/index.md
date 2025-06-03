@@ -102,48 +102,48 @@ It then checks whether the contextual identities feature is turned on in the bro
 
 ```js
 if (browser.contextualIdentities === undefined) {
-  div.innerText = 'browser.contextualIdentities not available. Check that the privacy.userContext.enabled pref is set to true, and reload the add-on.';
+  div.innerText =
+    "browser.contextualIdentities not available. Check that the privacy.userContext.enabled pref is set to true, and reload the add-on.";
 } else {
 ```
 
 Firefox installs with the contextual identity feature turned off. It's turned on when an extension using the `contextualIdentities` API is installed. However, the user can turn the feature off using an option on the preferences page (about:preferences), hence the need for the check.
 
-The script now uses {{WebExtAPIRef("contextualIdentities.query.")}} to determine whether any contextual identities are defined in the browser. If there are none, a message is added to the popup and the script stops.
+The script now uses {{WebExtAPIRef("contextualIdentities.query")}} to determine whether any contextual identities are defined in the browser. If there are none, a message is added to the popup and the script stops.
 
 ```js
-  browser.contextualIdentities.query({})
-    .then((identities) => {
-      if (!identities.length) {
-        div.innerText = 'No identities returned from the API.';
-        return;
-      }
+  browser.contextualIdentities.query({}).then((identities) => {
+    if (!identities.length) {
+      div.innerText = "No identities returned from the API.";
+      return;
+    }
 ```
 
 If there are contextual identities present—Firefox comes with four default identities—the script loops through each one adding its name, styled in its chosen color, to the `<div>` element. The function `createOptions()` then adds the options to "create" or "close all" to the `<div>` before it's added to the popup.
 
 ```js
-     for (const identity of identities) {
-       const row = document.createElement('div');
-       const span = document.createElement('span');
-       span.className = 'identity';
-       span.innerText = identity.name;
-       span.style = `color: ${identity.color}`;
-       console.log(identity);
-       row.appendChild(span);
-       createOptions(row, identity);
-       div.appendChild(row);
-     }
+    for (const identity of identities) {
+      const row = document.createElement("div");
+      const span = document.createElement("span");
+      span.className = "identity";
+      span.innerText = identity.name;
+      span.style = `color: ${identity.color}`;
+      console.log(identity);
+      row.appendChild(span);
+      createOptions(row, identity);
+      div.appendChild(row);
+    }
   });
 }
 
 function createOptions(node, identity) {
-  for (const option of ['Create', 'Close All']) {
-    const a = document.createElement('a');
-    a.href = '#';
+  for (const option of ["Create", "Close All"]) {
+    const a = document.createElement("a");
+    a.href = "#";
     a.innerText = option;
-    a.dataset.action = option.toLowerCase().replace(' ', '-');
+    a.dataset.action = option.toLowerCase().replace(" ", "-");
     a.dataset.identity = identity.cookieStoreId;
-    a.addEventListener('click', eventHandler);
+    a.addEventListener("click", eventHandler);
     node.appendChild(a);
   }
 }
@@ -169,12 +169,14 @@ if (event.target.dataset.action === "create") {
 If the user selects the option to close all tabs for the identity, the script performs a {{WebExtAPIRef("tabs.query")}} to get all the tabs using the identity's cookie store. The script then passes this list of tabs to {{WebExtAPIRef("tabs.remove")}}.
 
 ```js
-  if (event.target.dataset.action === 'close-all') {
-    browser.tabs.query({
-      cookieStoreId: event.target.dataset.identity
-    }).then((tabs) => {
-      browser.tabs.remove(tabs.map((i) => i.id));
-    });
+  if (event.target.dataset.action === "close-all") {
+    browser.tabs
+      .query({
+        cookieStoreId: event.target.dataset.identity,
+      })
+      .then((tabs) => {
+        browser.tabs.remove(tabs.map((i) => i.id));
+      });
   }
   event.preventDefault();
 }

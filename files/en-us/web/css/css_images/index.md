@@ -31,8 +31,9 @@ The **CSS images** module defines the types of images that can be used (the {{CS
 - {{CSSxRef("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
 - {{CSSxRef("cross-fade", "cross-fade()")}}
 - {{CSSxRef("element", "element()")}}
-- {{CSSxRef("image/image", "image()")}}
 - {{CSSxRef("image/image-set", "image-set()")}}
+
+The specification also defines the {{CSSxRef("image/image", "image()")}} function, which is not yet supported by any browser.
 
 ### Data types
 

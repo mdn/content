@@ -33,7 +33,8 @@ From your web server, generate a random base64-encoded string of at least 128 bi
 random number generator. Nonces should be generated differently each time the page loads (nonce only once!). For example, in nodejs:
 
 ```js
-const crypto = require("crypto");
+import crypto from "node:crypto";
+
 crypto.randomBytes(16).toString("base64");
 // '8IBTHwOdqNKAWeKl7plt8g=='
 ```

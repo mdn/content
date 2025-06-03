@@ -8,35 +8,28 @@ browser-compat: api.RTCStatsReport.type_local-candidate.priority
 
 {{APIRef("WebRTC")}}
 
-The {{domxref("RTCIceCandidateStats")}} dictionary's
-**`priority`** property is a positive integer value
-indicating the priority (or desirability) of the described candidate.
+The **`priority`** property of the {{domxref("RTCIceCandidateStats")}} dictionary is a positive integer value indicating the priority (or desirability) of the described candidate.
 
-During {{Glossary("ICE")}} negotiation while setting up a WebRTC peer connection, the
-priority values reported to the remote peer by a {{Glossary("user agent")}} are used
-to determine which candidates are considered "more desirable". The higher the value,
-the more desirable the candidate is.
+### Value
 
-## Value
+A positive integer indicating the priority of the {{domxref("RTCIceCandidate")}} described by the `RTCIceCandidateStats` object.
+The value may be anywhere from 1 to 2,147,483,647.
 
-A positive integer indicating the priority of the {{domxref("RTCIceCandidate")}}
-described by the `RTCIceCandidateStats` object. The value may be anywhere
-from 1 to 2,147,483,647.
+## Description
 
-## Determining priority
+During {{Glossary("ICE")}} negotiation while setting up a WebRTC peer connection, the priority values reported to the remote peer by a {{Glossary("user agent")}} are used to determine which candidates are considered "more desirable".
+The higher the value, the more desirable the candidate is.
 
-The ICE specification describes how user agents and other software using WebRTC should
-calculate the priority. The priority of a candidate is calculated using the following
-variables as inputs:
+### Determining priority
 
-- The preferability of the candidate type (local, server reflexive, peer reflexive,
-  or relayed)
+The ICE specification describes how user agents and other software using WebRTC should calculate the priority.
+The priority of a candidate is calculated using the following variables as inputs:
+
+- The preferability of the candidate type (local, server reflexive, peer reflexive, or relayed)
 - The preferability of the candidate's specific IP address (for multihomed agents)
 - The candidate's component ID (1 for RTP, 2 for RTCP)
 
-The candidate's priority is computed using the formula (_p<sub>type</sub>_ is
-the priority of the candidate's type and _p<sub>local</sub>_ is the priority of
-the IP address):
+The candidate's priority is computed using the formula (_p<sub>type</sub>_ is the priority of the candidate's type and _p<sub>local</sub>_ is the priority of the IP address):
 
 <!-- prettier-ignore-start -->
 <math display="block">
@@ -44,9 +37,7 @@ the IP address):
 </math>
 <!-- prettier-ignore-end -->
 
-This is equivalent to mapping the priorities of the candidate type, the local IP, and
-the component ID into various bit ranges within the 32-bit `priority`
-value.
+This is equivalent to mapping the priorities of the candidate type, the local IP, and the component ID into various bit ranges within the 32-bit `priority` value.
 
 ## Specifications
 

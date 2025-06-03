@@ -38,7 +38,7 @@ This example shows the use of the `types` and
   </style>
   <script>
     function dragstart_handler(ev) {
-      console.log("dragStart: target.id = " + ev.target.id);
+      console.log(`dragStart: target.id = ${ev.target.id}`);
 
       // Add this element's id to the drag payload so the drop handler will
       // know which element to add to its tree
@@ -47,7 +47,7 @@ This example shows the use of the `types` and
     }
 
     function drop_handler(ev) {
-      console.log("drop: target.id = " + ev.target.id);
+      console.log(`drop: target.id = ${ev.target.id}`);
       ev.preventDefault();
 
       // Get the id of the target and add the moved element to the target's DOM

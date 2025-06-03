@@ -38,7 +38,7 @@ The following criteria must be met when calling **`popDebugGroup()`**, otherwise
 ## Examples
 
 ```js
-// ...
+// …
 
 const passEncoder = commandEncoder.beginComputePass();
 
@@ -50,7 +50,7 @@ passEncoder.dispatchWorkgroups(Math.ceil(BUFFER_SIZE / 64));
 
 passEncoder.popDebugGroup();
 
-// ...
+// …
 ```
 
 ## Specifications

@@ -3,10 +3,12 @@ title: "Element: moveBefore() method"
 short-title: moveBefore()
 slug: Web/API/Element/moveBefore
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.Element.moveBefore
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
 The **`moveBefore()`** method of the {{domxref("Element")}} interface moves a given {{domxref("Node")}} inside the invoking node as a direct child, before a given reference node.
 
@@ -177,7 +179,7 @@ The HTML features an {{htmlelement("article")}} element containing two {{htmlele
   <section id="section2"></section>
 </article>
 <div id="controls">
-  <button id="movebefore">move with <code>moveBefore()</code></button>
+  <button id="move-before">move with <code>moveBefore()</code></button>
   <button id="insertbefore">move with <code>insertBefore()</code></button>
   <button id="prepend">move with <code>prepend()</code></button>
 </div>
@@ -230,11 +232,11 @@ In our script, we attach `click` event listeners to each `<button>` via {{domxre
 const section1 = document.getElementById("section1");
 const section2 = document.getElementById("section2");
 const mover = document.getElementById("mover");
-const movebeforeBtn = document.getElementById("movebefore");
+const moveBeforeBtn = document.getElementById("move-before");
 const insertbeforeBtn = document.getElementById("insertbefore");
 const prependBtn = document.getElementById("prepend");
 
-movebeforeBtn.addEventListener("click", () => {
+moveBeforeBtn.addEventListener("click", () => {
   if (mover.parentElement === section1) {
     section2.moveBefore(mover, null);
   } else {

@@ -48,7 +48,7 @@ In some cases, you must read many external files. This is a standard function wh
 
 ```js
 function xhrSuccess() {
-  this.callback.apply(this, this.arguments);
+  this.callback(...this.arguments);
 }
 
 function xhrError() {

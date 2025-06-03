@@ -61,7 +61,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 ```html
 <object
   type="video/webm"
-  data="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
+  data="/shared-assets/videos/flower.webm"
   width="600"
   height="140">
   <img src="path/image.jpg" alt="useful image description" />

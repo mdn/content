@@ -1,5 +1,6 @@
 ---
-title: aria-activedescendant
+title: "ARIA: aria-activedescendant attribute"
+short-title: aria-activedescendant
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant
 page-type: aria-attribute
 spec-urls:
@@ -36,6 +37,15 @@ The value of `aria-activedescendant` refers to an owned element of the controlle
 
 - ID reference
   - : takes as its value the `id` of the currently focused element.
+
+## Associated interfaces
+
+- {{domxref("Element.ariaActiveDescendantElement")}}
+  - : The `ariaActiveDescendantElement` property is part of each element's interface.
+    Its value is an instance of a subclass of {{domxref("Element")}} that reflects the `id` reference in the `aria-activedescendant` attribute ([with some caveats](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references)).
+- {{domxref("ElementInternals.ariaActiveDescendantElement")}}
+  - : The `ariaActiveDescendantElement` property is part of each custom element's interface.
+    Its value is an instance of a subclass of {{domxref("Element")}} that reflects the `id` reference in the `aria-activedescendant` attribute ([with some caveats](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references)).
 
 ## Associated roles
 

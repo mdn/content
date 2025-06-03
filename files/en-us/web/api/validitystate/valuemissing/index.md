@@ -60,7 +60,7 @@ userInput.addEventListener("input", () => {
   } else if (userInput.validity.valueMissing) {
     log("Required field cannot be empty.");
   } else {
-    log("Bad input detected: " + userInput.validationMessage);
+    log(`Bad input detected: ${userInput.validationMessage}`);
   }
 });
 ```

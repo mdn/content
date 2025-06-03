@@ -114,7 +114,7 @@ The second box shows how to use `pi` inside a [`sin()`](/en-US/docs/Web/CSS/sin)
 .container {
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: start;
   width: 200px;
 }
 .container > div {
@@ -163,12 +163,12 @@ const eValue = document.querySelector("#e-value");
 const piValue = document.querySelector("#pi-value");
 
 eInput.addEventListener("input", function () {
-  e.style.transform = "rotate(calc(1deg * pow(" + this.value + ", e)))";
+  e.style.transform = `rotate(calc(1deg * pow(${this.value}, e)))`;
   eValue.textContent = e.style.transform;
 });
 
 piInput.addEventListener("input", function () {
-  pi.style.rotate = "calc(sin(" + this.value + " * pi) * 100deg)";
+  pi.style.rotate = `calc(sin(${this.value} * pi) * 100deg)`;
   piValue.textContent = pi.style.rotate;
 });
 ```

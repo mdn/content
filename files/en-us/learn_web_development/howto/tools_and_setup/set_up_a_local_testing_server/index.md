@@ -2,9 +2,8 @@
 title: How do you set up a local testing server?
 slug: Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server
 page-type: learn-faq
+sidebar: learn-how-to
 ---
-
-{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 This article explains how to set up a simple local testing server on your machine, and the basics of how to use it.
 

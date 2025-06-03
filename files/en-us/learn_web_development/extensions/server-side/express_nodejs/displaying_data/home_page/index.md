@@ -20,7 +20,7 @@ As a reminder, all the route functions are defined in **/routes/catalog.js**:
 
 ```js
 // GET catalog home page.
-router.get("/", book_controller.index); //This actually maps to /catalog/ because we import the route with a /catalog prefix
+router.get("/", book_controller.index); // This actually maps to /catalog/ because we import the route with a /catalog prefix
 ```
 
 The book controller index function passed as a parameter (`book_controller.index`) has a "placeholder" implementation defined in **/controllers/bookController.js**:

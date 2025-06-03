@@ -1,5 +1,6 @@
 ---
-title: Warning
+title: Warning header
+short-title: Warning
 slug: Web/HTTP/Reference/Headers/Warning
 page-type: http-header
 status:

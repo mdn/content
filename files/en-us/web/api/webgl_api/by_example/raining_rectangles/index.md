@@ -47,11 +47,6 @@ button {
 }
 ```
 
-```js hidden
-;(() => {
-  "use strict";
-```
-
 ```js
 window.addEventListener("load", setupAnimation, false);
 let gl;
@@ -123,26 +118,26 @@ function playerClick(evt) {
   }
 }
 
-function Rectangle() {
-  // Keeping a reference to the new Rectangle object, rather
-  // than using the confusing this keyword.
-  const rect = this;
-  // We get three random numbers and use them for new rectangle
-  // size and position. For each we use a different number,
-  // because we want horizontal size, vertical size and
-  // position to be determined independently.
-  const randNums = getRandomVector();
-  rect.size = [5 + 120 * randNums[0], 5 + 120 * randNums[1]];
-  rect.position = [
-    randNums[2] * (gl.drawingBufferWidth - rect.size[0]),
-    gl.drawingBufferHeight,
-  ];
-  rect.velocity = 1.0 + 6.0 * Math.random();
-  rect.color = getRandomVector();
-  gl.clearColor(rect.color[0], rect.color[1], rect.color[2], 1.0);
-  function getRandomVector() {
-    return [Math.random(), Math.random(), Math.random()];
+class Rectangle {
+  constructor() {
+    // We get three random numbers and use them for new rectangle
+    // size and position. For each we use a different number,
+    // because we want horizontal size, vertical size and
+    // position to be determined independently.
+    const randVec = getRandomVector();
+    this.size = [5 + 120 * randVec[0], 5 + 120 * randVec[1]];
+    this.position = [
+      randVec[2] * (gl.drawingBufferWidth - this.size[0]),
+      gl.drawingBufferHeight,
+    ];
+    this.velocity = 1.0 + 6.0 * Math.random();
+    this.color = getRandomVector();
+    gl.clearColor(this.color[0], this.color[1], this.color[2], 1.0);
   }
+}
+
+function getRandomVector() {
+  return [Math.random(), Math.random(), Math.random()];
 }
 ```
 
@@ -164,10 +159,6 @@ function getRenderingContext() {
   gl.clear(gl.COLOR_BUFFER_BIT);
   return gl;
 }
-```
-
-```js hidden
-})();
 ```
 
 The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/raining-rectangles).

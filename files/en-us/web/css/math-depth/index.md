@@ -64,7 +64,7 @@ The last two subformulas show the effect of setting `math-depth` to a specific v
 #### HTML
 
 ```html
-<p style="font-size: 3rem; margin: 1rem 0">
+<p>
   <math>
     <mtext>0</mtext>
 
@@ -91,6 +91,13 @@ The last two subformulas show the effect of setting `math-depth` to a specific v
     </mrow>
   </math>
 </p>
+```
+
+```css hidden
+p {
+  font-size: 3rem;
+  margin: 1rem 0;
+}
 ```
 
 #### Result

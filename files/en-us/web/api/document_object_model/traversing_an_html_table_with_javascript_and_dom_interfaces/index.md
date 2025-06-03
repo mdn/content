@@ -150,10 +150,7 @@ In this example we change the background color of a paragraph when a button is c
 
 ```html
 <body>
-  <input
-    type="button"
-    value="Set paragraph background color"
-    onclick="setBackground()" />
+  <input type="button" value="Set paragraph background color" />
   <p>hi</p>
   <p>hello</p>
 </body>
@@ -172,6 +169,8 @@ function setBackground() {
   // set the inline style
   secondParagraph.style.background = "red";
 }
+
+document.querySelector("input").addEventListener("click", setBackground);
 ```
 
 #### Result

@@ -35,7 +35,7 @@ Now let's turn our attention to lists. Lists are everywhere in life—from your 
 
 ## Unordered lists
 
-Unordered lists are used to mark up lists of items for which the order of the items doesn't matter. Let's take a shopping list as an example:
+Unordered lists are used to mark up lists of items for which the order of the items doesn't matter. Let's take a grocery shopping list as an example:
 
 ```plain
 milk
@@ -44,18 +44,8 @@ bread
 hummus
 ```
 
-Every unordered list starts off with a {{htmlelement("ul")}} element—this wraps around all the list items:
-
-```html-nolint
-<ul>
-  milk
-  eggs
-  bread
-  hummus
-</ul>
-```
-
-The last step is to wrap each list item in a {{htmlelement("li")}} (list item) element:
+In this example, the items can be in any order. To create this list in HTML, we first wrap the whole list in a {{htmlelement("ul")}} (unordered list) element.
+Then, we wrap each item in a {{htmlelement("li")}} (list item) element:
 
 ```html
 <ul>

@@ -303,16 +303,24 @@ p {
     transparent 2px 1lh
   );
 }
+
+.lh-2 {
+  line-height: 2em;
+}
+
+.lh-4 {
+  line-height: 4em;
+}
 ```
 
 ```html
-<p style="line-height: 2em">
+<p class="lh-2">
   Summer is a time for adventure, and this year was no exception. I had many
   exciting experiences, but two of my favorites were my trip to the beach and my
   week at summer camp.
 </p>
 
-<p style="line-height: 4em">
+<p class="lh-4">
   At the beach, I spent my days swimming, collecting shells, and building
   sandcastles. I also went on a boat ride and saw dolphins swimming alongside
   us.

@@ -269,7 +269,7 @@ if (!navigator.getAutoplayPolicy) {
     "navigator.getAutoplayPolicy() not supported. It may or may not autoplay, depending on the browser!";
 } else {
   // Here we pass in the HTMLVideoElement to check
-  log.textContent = `navigator.getAutoplayPolicy(video) == ${navigator.getAutoplayPolicy(
+  log.textContent = `navigator.getAutoplayPolicy(video) === ${navigator.getAutoplayPolicy(
     "mediaelement",
   )}`;
 

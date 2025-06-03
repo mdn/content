@@ -1,5 +1,6 @@
 ---
-title: Use-As-Dictionary
+title: Use-As-Dictionary header
+short-title: Use-As-Dictionary
 slug: Web/HTTP/Reference/Headers/Use-As-Dictionary
 page-type: http-header
 status:
@@ -16,13 +17,13 @@ See the [Compression Dictionary Transport guide](/en-US/docs/Web/HTTP/Guides/Com
 ## Syntax
 
 ```http
-Use-As-Dictionary: match="<urlpattern>"
+Use-As-Dictionary: match="<url-pattern>"
 Use-As-Dictionary: match-dest=("<destination1>" "<destination2>", …)
 Use-As-Dictionary: id="<string-identifier>"
 Use-As-Dictionary: type="raw"
 
 // Multiple, in any order
-Content-Encoding: match="<urlpattern>", match-dest=("<destination1>")
+Content-Encoding: match="<url-pattern>", match-dest=("<destination1>")
 ```
 
 ## Directives

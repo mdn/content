@@ -122,9 +122,9 @@ If the `Promise` is rejected, the rejected value is thrown.
 ```js
 async function f4() {
   try {
-    const z = await Promise.reject(30);
+    const z = await Promise.reject(new Error("rejected!"));
   } catch (e) {
-    console.error(e); // 30
+    console.error(e); // Error: rejected!
   }
 }
 

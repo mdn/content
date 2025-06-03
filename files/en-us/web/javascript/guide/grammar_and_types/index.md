@@ -295,6 +295,7 @@ In the case that a value representing a number is in memory as a string, there a
 
 - {{jsxref("parseInt()")}}
 - {{jsxref("parseFloat()")}}
+- {{jsxref("Number()")}}
 
 `parseInt` only returns whole numbers, so its use is diminished for decimals.
 
@@ -305,7 +306,7 @@ In the case that a value representing a number is in memory as a string, there a
 parseInt("101", 2); // 5
 ```
 
-An alternative method of retrieving a number from a string is with the `+` (unary plus) operator:
+An alternative method of retrieving a number from a string is with the `+` (unary plus) operator. This implicitly performs [number conversion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), which is the same process as the {{jsxref("Number()")}} function.
 
 ```js-nolint
 "1.1" + "1.1"; // '1.11.1'
@@ -523,7 +524,7 @@ const obj = {
   // Methods
   toString() {
     // Super calls
-    return "d " + super.toString();
+    return `d ${super.toString()}`;
   },
   // Computed (dynamic) property names
   ["prop_" + (() => 42)()]: 42,
@@ -565,18 +566,19 @@ console.log("Joyo's cat".length); // In this case, 10.
 
 Template literals provide syntactic sugar for constructing strings. (This is similar to string interpolation features in Perl, Python, and more.)
 
-```js-nolint
+```js
 // Basic literal string creation
-`In JavaScript '\n' is a line-feed.`
+`In JavaScript '\n' is a line-feed.`;
 
 // Multiline strings
 `In JavaScript, template strings can run
  over multiple lines, but double and single
- quoted strings cannot.`
+ quoted strings cannot.`;
 
 // String interpolation
-const name = 'Lev', time = 'today';
-`Hello ${name}, how are you ${time}?`
+const name = "Lev",
+  time = "today";
+`Hello ${name}, how are you ${time}?`;
 ```
 
 [Tagged templates](/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_templates) are a compact syntax for specifying a template literal along with a call to a "tag" function for parsing it. A tagged template is just a more succinct and semantic way to invoke a function that processes a string and a set of relevant values. The name of the template tag function precedes the template literal — as in the following example, where the template tag function is named `print`. The `print` function will interpolate the arguments and serialize any objects or arrays that may come up, avoiding the pesky `[object Object]`.

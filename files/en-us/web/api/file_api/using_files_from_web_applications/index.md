@@ -251,9 +251,7 @@ Let's say you're developing the next great photo-sharing website and want to use
 
 ```js
 function handleFiles(files) {
-  for (let i = 0; i < files.length; i++) {
-    const file = files[i];
-
+  for (const file of files) {
     if (!file.type.startsWith("image/")) {
       continue;
     }
@@ -344,16 +342,16 @@ function handleFiles() {
   } else {
     const list = document.createElement("ul");
     fileList.appendChild(list);
-    for (let i = 0; i < this.files.length; i++) {
+    for (const file of this.files) {
       const li = document.createElement("li");
       list.appendChild(li);
 
       const img = document.createElement("img");
-      img.src = URL.createObjectURL(this.files[i]);
+      img.src = URL.createObjectURL(file);
       img.height = 60;
       li.appendChild(img);
       const info = document.createElement("span");
-      info.textContent = `${this.files[i].name}: ${this.files[i].size} bytes`;
+      info.textContent = `${file.name}: ${file.size} bytes`;
       li.appendChild(info);
     }
   }
@@ -397,8 +395,8 @@ Continuing with the code that built the thumbnails in the previous example, reca
 function sendFiles() {
   const imgs = document.querySelectorAll(".obj");
 
-  for (let i = 0; i < imgs.length; i++) {
-    new FileUpload(imgs[i], imgs[i].file);
+  for (const img of imgs) {
+    new FileUpload(img, img.file);
   }
 }
 ```
@@ -416,13 +414,12 @@ function FileUpload(img, file) {
   const xhr = new XMLHttpRequest();
   this.xhr = xhr;
 
-  const self = this;
   this.xhr.upload.addEventListener(
     "progress",
     (e) => {
       if (e.lengthComputable) {
         const percentage = Math.round((e.loaded * 100) / e.total);
-        self.ctrl.update(percentage);
+        this.ctrl.update(percentage);
       }
     },
     false,
@@ -431,8 +428,8 @@ function FileUpload(img, file) {
   xhr.upload.addEventListener(
     "load",
     (e) => {
-      self.ctrl.update(100);
-      const canvas = self.ctrl.ctx.canvas;
+      this.ctrl.update(100);
+      const canvas = this.ctrl.ctx.canvas;
       canvas.parentNode.removeChild(canvas);
     },
     false,
@@ -491,57 +488,61 @@ This example, which uses PHP on the server side and JavaScript on the client sid
 
 ```php
 <?php
-if (isset($_FILES['myFile'])) {
-    // Example:
-    move_uploaded_file($_FILES['myFile']['tmp_name'], "uploads/" . $_FILES['myFile']['name']);
-    exit;
+if (isset($_FILES["myFile"])) {
+  // Example:
+  move_uploaded_file($_FILES["myFile"]["tmp_name"], "uploads/" . $_FILES["myFile"]["name"]);
+  exit;
 }
 ?><!doctype html>
 <html lang="en-US">
-<head>
-  <meta charset="UTF-8">
-  <title>dnd binary upload</title>
-    <script type="application/javascript">
-        function sendFile(file) {
-            const uri = "/index.php";
-            const xhr = new XMLHttpRequest();
-            const fd = new FormData();
+  <head>
+    <meta charset="UTF-8" />
+    <title>dnd binary upload</title>
+    <script>
+      function sendFile(file) {
+        const uri = "/index.php";
+        const xhr = new XMLHttpRequest();
+        const fd = new FormData();
 
-            xhr.open("POST", uri, true);
-            xhr.onreadystatechange = () => {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    alert(xhr.responseText); // handle response.
-                }
-            };
-            fd.append('myFile', file);
-            // Initiate a multipart/form-data upload
-            xhr.send(fd);
-        }
+        xhr.open("POST", uri, true);
+        xhr.onreadystatechange = () => {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            alert(xhr.responseText); // handle response.
+          }
+        };
+        fd.append("myFile", file);
+        // Initiate a multipart/form-data upload
+        xhr.send(fd);
+      }
 
-        window.onload = () => {
-            const dropzone = document.getElementById("dropzone");
-            dropzone.ondragover = dropzone.ondragenter = (event) => {
-                event.stopPropagation();
-                event.preventDefault();
-            }
+      window.onload = () => {
+        const dropzone = document.getElementById("dropzone");
+        dropzone.ondragover = dropzone.ondragenter = (event) => {
+          event.stopPropagation();
+          event.preventDefault();
+        };
 
-            dropzone.ondrop = (event) => {
-                event.stopPropagation();
-                event.preventDefault();
+        dropzone.ondrop = (event) => {
+          event.stopPropagation();
+          event.preventDefault();
 
-                const filesArray = event.dataTransfer.files;
-                for (let i=0; i<filesArray.length; i++) {
-                    sendFile(filesArray[i]);
-                }
-            }
-        }
+          const filesArray = event.dataTransfer.files;
+          for (let i = 0; i < filesArray.length; i++) {
+            sendFile(filesArray[i]);
+          }
+        };
+      };
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <div>
-        <div id="dropzone" style="margin:30px; width:500px; height:300px; border:1px dotted grey;">Drag & drop your file here</div>
+      <div
+        id="dropzone"
+        style="margin:30px; width:500px; height:300px; border:1px dotted grey;">
+        Drag & drop your file here
+      </div>
     </div>
-</body>
+  </body>
 </html>
 ```
 

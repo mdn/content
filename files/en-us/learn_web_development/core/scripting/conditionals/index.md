@@ -81,8 +81,8 @@ However, you need to be careful here — in this case, the second block of code 
 As a final point, while not recommended, you may sometimes see `if...else` statements written without the curly braces:
 
 ```js example-bad
-if (condition) /* code to run if condition is true */
-else /* run some other code instead */
+if (condition) doSomething();
+else doSomethingElse();
 ```
 
 This syntax is perfectly valid, but it is much easier to understand the code if you use the curly braces to delimit the blocks of code, and use multiple lines and indentation.
@@ -93,12 +93,12 @@ To understand this syntax better, let's consider a real example. Imagine a child
 
 ```js
 let shoppingDone = false;
-let childsAllowance;
+let childAllowance;
 
 if (shoppingDone === true) {
-  childsAllowance = 10;
+  childAllowance = 10;
 } else {
-  childsAllowance = 5;
+  childAllowance = 5;
 }
 ```
 
@@ -187,13 +187,13 @@ And, returning to our previous example about the child doing a chore for their p
 
 ```js
 let shoppingDone = false;
-let childsAllowance;
+let childAllowance;
 
 // We don't need to explicitly specify 'shoppingDone === true'
 if (shoppingDone) {
-  childsAllowance = 10;
+  childAllowance = 10;
 } else {
-  childsAllowance = 5;
+  childAllowance = 5;
 }
 ```
 

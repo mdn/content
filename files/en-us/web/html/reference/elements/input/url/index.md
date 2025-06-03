@@ -262,96 +262,76 @@ The syntax of a URL is fairly intricate. It's defined by WHATWG's [URL Living St
 
 As mentioned earlier, to make a URL entry required before the form can be submitted (you can't leave the field blank), you just need to include the [`required`](/en-US/docs/Web/HTML/Reference/Elements/input#required) attribute on the input.
 
-```html
-<form>
-  <input id="myURL" name="myURL" type="url" required />
-  <button>Submit</button>
-</form>
-```
-
-{{EmbedLiveSample("Making_a_URL_required", 600, 40)}}
-
-Try submitting the above form with no value entered to see what happens.
-
 ### Pattern validation
 
 If you need the entered URL to be restricted further than just "any string that looks like a URL," you can use the [`pattern`](/en-US/docs/Web/HTML/Reference/Elements/input#pattern) attribute to specify a {{Glossary("regular expression")}} the value must match for the value to be valid.
 
-For example, let's say you're building a support page for employees of Myco, Inc. which will let them contact their IT department for help if one of their pages has a problem. In our simplified form, the user needs to enter the URL of the page that has a problem, and a message describing what is wrong. But we want the URL to only successfully validate if the entered URL is in a Myco domain.
+## Examples
 
-Since inputs of type `url` validate against both the standard URL validation _and_ the specified [`pattern`](/en-US/docs/Web/HTML/Reference/Elements/input#pattern), you can implement this with a regular expression. Let's see how:
+### URL validation
 
-```css hidden
-div {
-  margin-bottom: 10px;
-  position: relative;
-}
+In this example, we make sure that a URL is filled in using the [`required`](/en-US/docs/Web/HTML/Reference/Elements/input#required) attribute and that the URL is something on `mozilla.org` using the [`pattern`](/en-US/docs/Web/HTML/Reference/Elements/input#pattern) attribute for illustration.
 
-input[type="number"] {
-  width: 100px;
-}
+#### HTML
 
-input + span {
-  padding-right: 30px;
-}
+In the `url` input, we set `pattern` to `".*\.mozilla\.org.*"`. This regular expression validates a string that has any number of characters, followed by ".mozilla.org", followed by any number of characters. Because the browser runs both the standard URL filter _and_ our custom pattern against the specified text, we wind up with a validation that says "make sure this is a valid URL, and also contains `.mozilla.org`."
 
-input:invalid + span::after {
-  position: absolute;
-  content: "✖";
-  padding-left: 5px;
-}
+Note that a strict pattern like `https://developer\.mozilla\.org.*` would be more robust, but that would make the `type="url"` attribute redundant in this case.
 
-input:valid + span::after {
-  position: absolute;
-  content: "✓";
-  padding-left: 5px;
-}
-```
+The [`title`](/en-US/docs/Web/HTML/Reference/Global_attributes/title) attribute also describes the `pattern` for users with assistive technologies.
 
-```html
+```html live-sample___url-validation
 <form>
-  <div>
-    <label for="myURL">Enter the problem website address:</label>
+  <label for="myURL">
+    Enter a url from this site:
     <input
       id="myURL"
       name="myURL"
       type="url"
       required
-      pattern=".*\.myco\..*"
-      title="The URL must be in a Myco domain" />
+      pattern=".*\.mozilla\.org.*"
+      title="URL should include mozilla.org" />
     <span class="validity"></span>
-  </div>
-  <div>
-    <label for="myComment">What is the problem?</label>
-    <input id="myComment" name="myComment" type="text" required />
-    <span class="validity"></span>
-  </div>
-  <div>
-    <button>Submit</button>
-  </div>
+  </label>
+  <button>Submit</button>
 </form>
 ```
 
-{{EmbedLiveSample("Pattern_validation", 700, 150)}}
+#### CSS
 
-First of all, the [`required`](/en-US/docs/Web/HTML/Reference/Elements/input#required) attribute is specified, making it mandatory that a valid URL be provided.
+The CSS gives visual clues to show the user if the content is {{cssxref(":valid")}} or {{cssxref(":invalid")}} by adding an appropriate {{cssxref("content")}} property and includes [alternative text](/en-US/docs/Web/CSS/content#alternative_text_string_counter) for users with assistive technologies.
 
-Second, in the `url` input, we set `pattern` to `".*\.myco\..*"`. This regular expression requests a string that has any number of characters, followed by a dot, followed by "myco", followed by a dot, followed by any number of characters. Because the browser runs both the standard URL filter _and_ our custom pattern against the specified text, we wind up with a validation that says "make sure this is a valid URL, and also in a Myco domain."
+```css live-sample___url-validation
+input:focus:invalid {
+  outline: 2px solid red;
+}
 
-This isn't perfect, but it is good enough for this basic demo's requirements.
+input:focus:valid {
+  outline: 2px solid green;
+}
 
-It's advisable to use the [`title`](/en-US/docs/Web/HTML/Reference/Global_attributes/title) attribute along with `pattern`. If you do, the `title` _must_ describe the pattern; it should explain what format the data should take on, rather than any other information. That's because the `title` may be displayed or spoken as part of a validation error message. For example, the browser might present the message "The entered text doesn't match the required pattern." followed by your specified `title`. If your `title` is something like "URL", the result would be the message "The entered text doesn't match the required pattern. URL", which is not a good user experience.
+input + span {
+  padding: 0 0.3rem;
+}
 
-That's why, instead, we specify the string "The URL must be in a myco domain". By doing that, the resulting full error message might be something like "The entered text doesn't match the required pattern. The URL should be in a myco domain."
+input:invalid + span:after {
+  content: "✖" / "Content is not valid";
+  color: red;
+}
 
-> [!NOTE]
-> If you run into trouble while writing your validation regular expressions and they're not working properly, check your browser's console; there may be helpful error messages there to aid you in solving the problem.
+input:valid + span:after {
+  content: "✓" / "Content is valid";
+  color: green;
+}
+```
 
-## Examples
+#### Result
 
-There's not much else to say about `url` type inputs; check the [Pattern validation](#pattern_validation) and [Using URL inputs](#using_url_inputs) sections for numerous examples.
+Copy this page's url and paste it in the input field and you will see a green outline and green tick. Enter any other URL that doesn't contain **mozilla.org** or an invalid URL and you will see a red outline and red cross.
 
-You can also find our [pattern validation example on GitHub](https://github.com/mdn/learning-area/blob/main/html/forms/url-example/index.html) (see it [running live also](https://mdn.github.io/learning-area/html/forms/url-example/)).
+{{EmbedLiveSample("url-validation", "40px", , , , , "allow-forms")}}
+
+Check the [Pattern validation](#pattern_validation) and [Using URL inputs](#using_url_inputs) sections for other examples.
 
 ## Technical summary
 

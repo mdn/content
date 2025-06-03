@@ -24,7 +24,7 @@ A string. If this has not been previously set as described above, it will be an 
 Setting and getting a label via `GPUComputePipeline.label`:
 
 ```js
-// ...
+// …
 
 const computePipeline = device.createComputePipeline({
   layout: device.createPipelineLayout({
@@ -44,7 +44,7 @@ console.log(computePipeline.label); // "my_compute_pipeline"
 Setting a label via a {{domxref("GPUDevice.createComputePipeline()")}} call, and then getting it via `GPUComputePipeline.label`:
 
 ```js
-// ...
+// …
 
 const computePipeline = device.createComputePipeline({
   layout: device.createPipelineLayout({

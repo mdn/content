@@ -235,7 +235,7 @@ scheduler
   .postTask(() => console.log("Task executing"), {
     signal: abortTaskController.signal,
   })
-  .then((taskResult) => console.log(`${taskResult}`)) //This won't run!
+  .then((taskResult) => console.log(`${taskResult}`)) // This won't run!
   .catch((error) => console.error("Error:", error)); // Log the error
 
 // Abort the task

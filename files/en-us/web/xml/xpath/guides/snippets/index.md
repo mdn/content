@@ -88,12 +88,15 @@ The following is a utility function to get (ordered) XPath results into an array
 // const els = docEvaluateArray('//a');
 // console.log(els[0].nodeName); // gives 'A' in HTML document with at least one link
 
-function docEvaluateArray(expr, doc, context, resolver) {
+function docEvaluateArray(
+  expr,
+  context,
+  doc = context ? context.ownerDocument : document,
+  resolver = null,
+) {
   let i;
   const a = [];
-  doc = doc || (context ? context.ownerDocument : document);
-  resolver = resolver || null;
-  context = context || doc;
+  context ||= doc;
 
   const result = doc.evaluate(
     expr,

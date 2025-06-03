@@ -81,15 +81,14 @@ In this example, a video is presented in a web page. Pressing the <kbd>Enter</kb
 When the page is loaded, this code is run to set up an event listener to watch for the <kbd>Enter</kbd> key.
 
 ```js
-document.addEventListener(
-  "keydown",
-  (e) => {
-    if (e.key === "Enter") {
-      toggleFullScreen();
-    }
-  },
-  false,
-);
+const video = document.getElementById("video");
+
+// On pressing ENTER call toggleFullScreen method
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    toggleFullScreen(video);
+  }
+});
 ```
 
 #### Toggling fullscreen mode
@@ -97,16 +96,19 @@ document.addEventListener(
 This code is called by the event handler above when the user hits the <kbd>Enter</kbd> key.
 
 ```js
-function toggleFullScreen() {
+function toggleFullScreen(video) {
   if (!document.fullscreenElement) {
-    document.documentElement.requestFullscreen();
-  } else if (document.exitFullscreen) {
-    document.exitFullscreen();
+    // If the document is not in full screen mode
+    // make the video full screen
+    video.requestFullscreen();
+  } else {
+    // Otherwise exit the full screen
+    document.exitFullscreen?.();
   }
 }
 ```
 
-This starts by looking at the value of the {{DOMxRef("Document", "document")}}'s `fullscreenElement` attribute. In a real-world deployment, at this time, you'll want to check for prefixed versions of this (`mozFullScreenElement`, `msFullscreenElement`, or `webkitFullscreenElement`, for example). If the value is `null`, the document is currently in windowed mode, so we need to switch to fullscreen mode; otherwise, it's the element that's currently in fullscreen mode. Switching to fullscreen mode is done by calling {{DOMxRef("Element.requestFullscreen()")}} on the {{HTMLElement("video")}} element.
+This starts by looking at the value of the {{DOMxRef("Document", "document")}}'s `fullscreenElement` attribute. If the value is `null`, the document is currently in windowed mode, so we need to switch to fullscreen mode; otherwise, it's the element that's currently in fullscreen mode. Switching to fullscreen mode is done by calling {{DOMxRef("Element.requestFullscreen()")}} on the {{HTMLElement("video")}} element.
 
 If fullscreen mode is already active (`fullscreenElement` is not `null`), we call {{DOMxRef("Document.exitFullscreen", "exitFullscreen()")}} on the `document` to shut off fullscreen mode.
 

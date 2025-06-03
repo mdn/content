@@ -6,7 +6,7 @@ browser-compat: webdriver.classic.CloseWindow
 sidebar: webdriver
 ---
 
-The _Close Window_ [command](/en-US/docs/Web/WebDriver/Command) of the [WebDriver](/en-US/docs/Web/WebDriver) API closes the current top-level browsing context (window or tab) and returns with the list of currently open [`WebWindow`](/en-US/docs/Web/WebDriver/WebWindow)s. If it is the last window that is being closed, the WebDriver session will implicitly be deleted. Subsequent commands after the session is ended will therefore cause [invalid session ID](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidSessionID) errors.
+The _Close Window_ [command](/en-US/docs/Web/WebDriver/Reference/Command) of the [WebDriver](/en-US/docs/Web/WebDriver) API closes the current top-level browsing context (window or tab) and returns with the list of currently open [`WebWindow`](/en-US/docs/Web/WebDriver/Reference/WebWindow)s. If it is the last window that is being closed, the WebDriver session will implicitly be deleted. Subsequent commands after the session is ended will therefore cause [invalid session ID](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidSessionID) errors.
 
 ## Syntax
 
@@ -23,7 +23,7 @@ The _Close Window_ [command](/en-US/docs/Web/WebDriver/Command) of the [WebDrive
 
 - [Invalid session ID](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidSessionID)
   - : Session does not exist.
-- [Unexpected alert open](/en-US/docs/Web/WebDriver/Errors/UnexpectedAlertOpen)
+- [Unexpected alert open](/en-US/docs/Web/WebDriver/Reference/Errors/UnexpectedAlertOpen)
   - : A user prompt, such as [`window.alert`](/en-US/docs/Web/API/Window/alert), blocks execution of command until it is dealt with.
 
 ## Example
@@ -45,7 +45,7 @@ session.switch_to.window(original_window)
 
 C#:
 
-```cpp
+```cs
 using OpenQA.Selenium.Firefox;
 
 namespace MDNWebDriverExamples
@@ -77,6 +77,6 @@ namespace MDNWebDriverExamples
 
 ## See also
 
-- [Switch To Window](/en-US/docs/Web/WebDriver/Commands/SwitchToWindow) command
-- [Get Window Handle](/en-US/docs/Web/WebDriver/Commands/GetWindowHandle) command
+- [Switch To Window](/en-US/docs/Web/WebDriver/Reference/Commands/SwitchToWindow) command
+- [Get Window Handle](/en-US/docs/Web/WebDriver/Reference/Commands/GetWindowHandle) command
 - [Get Window Handles](/en-US/docs/Web/WebDriver/Reference/Commands/GetWindowHandles) command

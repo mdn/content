@@ -1,5 +1,6 @@
 ---
-title: Timing-Allow-Origin
+title: Timing-Allow-Origin header
+short-title: Timing-Allow-Origin
 slug: Web/HTTP/Reference/Headers/Timing-Allow-Origin
 page-type: http-header
 browser-compat: http.headers.Timing-Allow-Origin

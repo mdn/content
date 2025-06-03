@@ -60,7 +60,7 @@ The following criteria must be met when calling **`drawIndirect()`**, otherwise 
 ## Examples
 
 ```js
-// ...
+// …
 
 // Create GPURenderBundleEncoder
 const bundleEncoder = device.createRenderBundleEncoder(descriptor);
@@ -89,7 +89,7 @@ bundleEncoder.drawIndirect(drawValues, 0);
 // End the bundle recording
 const renderBundle = bundleEncoder.finish();
 
-// ...
+// …
 ```
 
 ## Specifications

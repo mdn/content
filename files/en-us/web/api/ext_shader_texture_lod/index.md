@@ -19,7 +19,7 @@ WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExt
 
 The following new functions can be used in GLSL shader code, if this extension is enabled:
 
-```cpp
+```c
 vec4 texture2DLodEXT(sampler2D sampler, vec2 coord, float lod)
 vec4 texture2DProjLodEXT(sampler2D sampler, vec3 coord, float lod)
 vec4 texture2DProjLodEXT(sampler2D sampler, vec4 coord, float lod)

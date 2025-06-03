@@ -377,7 +377,7 @@ Intl.supportedValuesOf("unit").forEach((unit) => {
 try {
   Intl.supportedValuesOf("someInvalidKey");
 } catch (err) {
-  //Error: RangeError: invalid key: "someInvalidKey"
+  // RangeError: invalid key: "someInvalidKey"
 }
 ```
 

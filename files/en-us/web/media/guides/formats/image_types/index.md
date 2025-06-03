@@ -495,7 +495,7 @@ GIF was one of the first two graphics formats supported by {{Glossary("HTML")}},
 
 Each pixel in a GIF is represented by a single 8-bit value serving as an index into a palette of 24-bit colors (8 bits each of red, green, and blue). The length of a color table is always a power of 2 (that is, each palette has 2, 4, 8, 16, 32, 64, or 256 entries).
 To simulate more than 255 or 256 colors, [dithering](https://en.wikipedia.org/wiki/Dithering) is generally used.
-It is [technically possible](https://gif.ski/) to tile multiple image blocks, each with its own color palette, to create truecolor images, but in practice this is rarely done.
+It is [technically possible](https://gif.ski/) to tile multiple image blocks, each with its own color palette, to create true color images, but in practice this is rarely done.
 
 Pixels are opaque, unless a specific color index is designated as transparent, in which case pixels colored that value are entirely transparent.
 
@@ -1210,7 +1210,7 @@ Each image consists of 2 to 4 `#define` directives, providing the width and heig
 The image must be a multiple of 8 pixels wide.
 For example, the following code represents an XBM image which is 8 pixels by 8 pixels, with those pixels in a black-and-white checkerboard pattern:
 
-```cpp
+```c
 #define square8_width 8
 #define square8_height 8
 static unsigned char square8_bits[] = {

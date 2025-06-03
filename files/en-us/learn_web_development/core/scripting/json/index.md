@@ -154,7 +154,10 @@ As mentioned earlier, any JSON is a valid JavaScript literal (object, array, num
 
 Even a single misplaced comma or colon can make a JSON file invalid and cause it to fail.
 You should be careful to validate any data you are attempting to use (although computer-generated JSON is less likely to include errors, as long as the generator program is working correctly).
-You can validate JSON using an application like [JSONLint](https://jsonlint.com/) or [JSON-validate](https://json-validate.com)
+You can validate JSON using an application like [JSONLint](https://jsonlint.com/) or [JSON-validate](https://www.json-validate.com/)
+
+> [!NOTE]
+> Now you've read through this section, you might also want to supplement your learning with Scrimba's [JSON review](https://scrimba.com/frontend-path-c0j/~0lt?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> interactive tutorial, which provide some useful guidance around basic JSON syntax and how to view JSON request data inside your browser's devtools.
 
 ## Active learning: Working through a JSON example
 
@@ -175,7 +178,7 @@ The latter contains some simple CSS to style our page, while the former contains
 </section>
 
 <script>
-...
+// JavaScript goes here
 </script>
 ```
 

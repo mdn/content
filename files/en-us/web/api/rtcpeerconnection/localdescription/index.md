@@ -23,7 +23,7 @@ This example looks at the `localDescription` and displays an alert containing th
 
 ```js
 const pc = new RTCPeerConnection();
-// ...
+// …
 const sd = pc.localDescription;
 if (sd) {
   alert(`Local session: type='${sd.type}'; sdp description='${sd.sdp}'`);

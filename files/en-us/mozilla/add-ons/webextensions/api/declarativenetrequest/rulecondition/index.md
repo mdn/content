@@ -47,9 +47,9 @@ Values of this type are objects. They contain these properties:
 - `excludedResponseHeaders` {{optional_inline}}
   - : An array of {{WebExtAPIRef("declarativeNetRequest.HeaderInfo")}}. The rule does not match if the request matches any response header condition in this list (if specified). If both `excludedResponseHeaders` and `responseHeaders` are specified, then the `excludedResponseHeaders` property takes precedence.
 - `tabIds` {{optional_inline}}
-  - : An array of `number`. List of {{WebExtAPIRef("tabs.Tab")}}.`id` that the rule should match. An ID of {{WebExtAPIRef("tabs.TAB_ID_NONE")}} matches requests that don't originate from a tab. An empty list is not allowed. Only supported for session-scoped rules.
+  - : An array of `number`. List of {{WebExtAPIRef("tabs.Tab")}}. `id` that the rule should match. An ID of {{WebExtAPIRef("tabs.TAB_ID_NONE")}} matches requests that don't originate from a tab. An empty list is not allowed. Only supported for session-scoped rules.
 - `excludedTabIds` {{optional_inline}}
-  - : An array of `number`. List of {{WebExtAPIRef("tabs.Tab")}}.`id` that the rule should not match. An ID of {{WebExtAPIRef("tabs.TAB_ID_NONE")}} excludes requests that do not originate from a tab. Only supported for session-scoped rules.
+  - : An array of `number`. List of {{WebExtAPIRef("tabs.Tab")}}. `id` that the rule should not match. An ID of {{WebExtAPIRef("tabs.TAB_ID_NONE")}} excludes requests that do not originate from a tab. Only supported for session-scoped rules.
 - `urlFilter` {{optional_inline}}
 
   - : A `string`. The pattern that is matched against the network request URL. Supported constructs:

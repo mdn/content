@@ -122,9 +122,14 @@ In order to track the names of tasks we want to complete, we should ensure that 
 In `App.jsx`, give each `<Todo />` a name prop. Let's use the names of our tasks that we had before:
 
 ```jsx
-<Todo name="Eat" />
-<Todo name="Sleep" />
-<Todo name="Repeat" />
+<ul
+  role="list"
+  className="todo-list stack-large stack-exception"
+  aria-labelledby="list-heading">
+  <Todo name="Eat" />
+  <Todo name="Sleep" />
+  <Todo name="Repeat" />
+</ul>
 ```
 
 When your browser refreshes, you will see… the exact same thing as before. We gave our `<Todo />` some props, but we aren't using them yet. Let's go back to `Todo.jsx` and remedy that.
@@ -169,9 +174,14 @@ _Now_ your browser should show three unique tasks. Another problem remains thoug
 In our original static list, only `Eat` was checked. Once again, we want to reuse _most_ of the UI that makes up a `<Todo />` component, but change one thing. That's a good job for another prop! Give your first `<Todo />` call a boolean prop of `completed`, and leave the other two as they are.
 
 ```jsx
-<Todo name="Eat" completed />
-<Todo name="Sleep" />
-<Todo name="Repeat" />
+<ul
+  role="list"
+  className="todo-list stack-large stack-exception"
+  aria-labelledby="list-heading">
+  <Todo name="Eat" completed />
+  <Todo name="Sleep" />
+  <Todo name="Repeat" />
+</ul>
 ```
 
 As before, we must go back to `Todo.jsx` to actually use these props. Change the `defaultChecked` attribute on the `<input />` so that its value is equal to the `completed` prop. Once you're done, the Todo component's `<input />` element will read like this:
@@ -198,9 +208,14 @@ The second problem is affecting our app right now. If you click on the word "Sle
 We had unique `id` attributes before we created the `<Todo />` component. Let's bring them back, following the format of `todo-i`, where `i` gets larger by one every time. Update the `Todo` component instances inside `App.jsx` to add in `id` props, as follows:
 
 ```jsx
-<Todo name="Eat" id="todo-0" completed />
-<Todo name="Sleep" id="todo-1" />
-<Todo name="Repeat" id="todo-2" />
+<ul
+  role="list"
+  className="todo-list stack-large stack-exception"
+  aria-labelledby="list-heading">
+  <Todo name="Eat" id="todo-0" completed />
+  <Todo name="Sleep" id="todo-1" />
+  <Todo name="Repeat" id="todo-2" />
+</ul>
 ```
 
 > [!NOTE]

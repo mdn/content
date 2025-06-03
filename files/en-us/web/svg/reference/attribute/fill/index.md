@@ -3,15 +3,18 @@ title: fill
 slug: Web/SVG/Reference/Attribute/fill
 page-type: svg-attribute
 browser-compat:
+  - svg.elements.animate.fill
+  - svg.elements.animateMotion.fill
+  - svg.elements.animateTransform.fill
   - svg.elements.circle.fill
   - svg.elements.ellipse.fill
   - svg.elements.path.fill
   - svg.elements.polygon.fill
   - svg.elements.polyline.fill
   - svg.elements.rect.fill
+  - svg.elements.set.fill
   - svg.elements.text.fill
   - svg.elements.textPath.fill
-  - svg.elements.tref.fill
   - svg.elements.tspan.fill
 sidebar: svgref
 ---

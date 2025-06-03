@@ -5,9 +5,10 @@ page-type: web-manifest-member
 status:
   - experimental
 browser-compat: manifests.webapp.prefer_related_applications
+sidebar: pwasidebar
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The `prefer_related_applications` manifest member is used to provide a hint to browsers whether to prefer installing native applications specified in the [`related_applications`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/related_applications) manifest member over your web application.
 

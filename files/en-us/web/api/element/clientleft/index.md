@@ -10,7 +10,8 @@ browser-compat: api.Element.clientLeft
 
 The **`clientLeft`** read-only property of the {{domxref("Element")}} interface returns the width of the left border of an element in pixels. It includes the width of the vertical scrollbar if the text direction of the element is right-to-left and if there is an overflow causing a left vertical scrollbar to be rendered. `clientLeft` does not include the left margin or the left padding.
 
-> [!NOTE] When an element has `display: inline`, `clientLeft` returns `0` regardless of the element's border.
+> [!NOTE]
+> When an element has `display: inline`, `clientLeft` returns `0` regardless of the element's border.
 
 ## Value
 

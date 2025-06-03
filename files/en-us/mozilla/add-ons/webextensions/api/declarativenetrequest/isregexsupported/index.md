@@ -7,7 +7,7 @@ browser-compat: webextensions.api.declarativeNetRequest.isRegexSupported
 
 {{AddonSidebar}}
 
-Checks if a regular expression is supported as a {{WebExtAPIRef("declarativeNetRequest.RuleCondition")}}`.regexFilter` rule condition.
+Checks if a regular expression is supported as a [`declarativeNetRequest.RuleCondition.regexFilter`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/RuleCondition#regexfilter) rule condition.
 
 ## Syntax
 

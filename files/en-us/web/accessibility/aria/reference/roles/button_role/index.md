@@ -1,5 +1,6 @@
 ---
 title: "ARIA: button role"
+short-title: button
 slug: Web/Accessibility/ARIA/Reference/Roles/button_role
 page-type: aria-role
 spec-urls:
@@ -27,7 +28,7 @@ The above example creates a focusable button, but requires JavaScript and CSS to
 ```
 
 > [!NOTE]
-> If using `role="button"` instead of the semantic `<button>` or `<input type="button">` elements, you will need to make the element focusable and define event handlers for {{domxref("Element/click_event", "click")}} and {{domxref("Element/keydown_event", "keydown")}} events. This includes handling the <kbd>Enter</kbd> and <kbd>Space</kbd> keypresses in order to process all forms of user input. See [the official WAI-ARIA example code](https://www.w3.org/WAI/ARIA/apg/patterns/button/examples/button/).
+> If using `role="button"` instead of the semantic `<button>` or `<input type="button">` elements, you will need to make the element focusable and define event handlers for {{domxref("Element/click_event", "click")}} and {{domxref("Element/keydown_event", "keydown")}} events. This includes handling the <kbd>Enter</kbd> and <kbd>Space</kbd> key presses in order to process all forms of user input. See [the official WAI-ARIA example code](https://www.w3.org/WAI/ARIA/apg/patterns/button/examples/button/).
 
 In addition to the ordinary button widget, `role="button"` should be included when creating a toggle button or menu button using a non-button element.
 
@@ -116,13 +117,7 @@ Try the example by adding a name to the text box. The button will cause the name
 <ul id="nameList"></ul>
 <label for="newName">Enter your Name: </label>
 <input type="text" id="newName" />
-<span
-  role="button"
-  tabindex="0"
-  onclick="handleCommand(event)"
-  onKeyDown="handleCommand(event)"
-  >Add Name</span
->
+<span role="button" tabindex="0">Add Name</span>
 ```
 
 #### CSS
@@ -152,7 +147,7 @@ function handleCommand(event) {
   // Handles both mouse clicks and keyboard
   // activate with Enter or Space
 
-  // Keypresses other than Enter and Space should not trigger a command
+  // Key presses other than Enter and Space should not trigger a command
   if (
     event instanceof KeyboardEvent &&
     event.key !== "Enter" &&
@@ -177,6 +172,10 @@ function handleCommand(event) {
     list.appendChild(listItem);
   }
 }
+
+const btn = document.querySelector("span[role='button']");
+btn.addEventListener("click", handleCommand);
+btn.addEventListener("keydown", handleCommand);
 ```
 
 {{EmbedLiveSample("Basic_button_example")}}
@@ -188,21 +187,9 @@ In this snippet a {{HTMLElement("span")}} element is converted to a toggle butto
 #### HTML
 
 ```html
-<button
-  type="button"
-  onclick="handleBtnClick(event)"
-  onKeyDown="handleBtnKeyDown(event)">
-  Mute Audio
-</button>
+<button type="button">Mute Audio</button>
 
-<span
-  role="button"
-  tabindex="0"
-  aria-pressed="false"
-  onclick="handleBtnClick(event)"
-  onKeyDown="handleBtnKeyDown(event)">
-  Mute Audio
-</span>
+<span role="button" tabindex="0" aria-pressed="false"> Mute Audio </span>
 
 <audio
   id="audio"
@@ -260,6 +247,13 @@ function toggleButton(element) {
     audio.play();
   }
 }
+
+const button = document.querySelector("button");
+const spanButton = document.querySelector("span[role='button']");
+button.addEventListener("click", handleBtnClick);
+button.addEventListener("keydown", handleBtnKeyDown);
+spanButton.addEventListener("click", handleBtnClick);
+spanButton.addEventListener("keydown", handleBtnKeyDown);
 ```
 
 #### Result

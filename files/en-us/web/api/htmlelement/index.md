@@ -33,7 +33,7 @@ _Also inherits properties from its parent, {{DOMxRef("Element")}}._
 - {{DOMxRef("HTMLElement.contentEditable")}}
   - : A string, where a value of `true` means the element is editable and a value of `false` means it isn't.
 - {{DOMxRef("HTMLElement.dataset")}} {{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("DOMStringMap")}} with which script can read and write the element's [custom data attributes](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes) (`data-*`).
+  - : Returns a {{DOMxRef("DOMStringMap")}} with which script can read and write the element's [custom data attributes](/en-US/docs/Web/HTML/How_to/Use_data_attributes) (`data-*`).
 - {{DOMxRef("HTMLElement.dir")}}
   - : A string, reflecting the `dir` global attribute, representing the directionality of the element. Possible values are `"ltr"`, `"rtl"`, and `"auto"`.
 - {{DOMxRef("HTMLElement.draggable")}}
@@ -122,15 +122,6 @@ _Also, inherits events from its parent, {{DOMxRef("Element")}}._
   - : Fired when a resource failed to load, or can't be used.
 - {{DOMxRef("HTMLElement/load_event", "load")}}
   - : Fires for elements containing a resource when the resource has successfully loaded.
-
-### Clipboard events
-
-- {{DOMxRef("HTMLElement/copy_event", "copy")}}
-  - : Fired when the user initiates a copy action through the browser's user interface.
-- {{DOMxRef("HTMLElement/cut_event", "cut")}}
-  - : Fired when the user initiates a cut action through the browser's user interface.
-- {{DOMxRef("HTMLElement/paste_event", "paste")}}
-  - : Fired when the user initiates a paste action through the browser's user interface.
 
 ### Drag & drop events
 

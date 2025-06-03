@@ -21,7 +21,7 @@ _Also inherits properties from its parent interface,_ {{domxref("EventTarget")}}
   - : Returns a service worker whose state is `activating` or `activated`. This is initially set to `null`. An active worker will control a {{domxref("Client")}} if the client's URL falls within the scope of the registration (the `scope` option set when {{domxref("ServiceWorkerContainer.register")}} is first called.)
 - {{domxref("ServiceWorkerRegistration.backgroundFetch")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a reference to a {{domxref("BackgroundFetchManager")}} object, which manages background fetch operations.
-- {{domxref("ServiceWorkerRegistration.cookies")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("ServiceWorkerRegistration.cookies")}} {{ReadOnlyInline}}
   - : Returns a reference to the {{domxref("CookieStoreManager")}} interface, which allows subscribe and unsubscribe to cookie change events.
 - {{domxref("ServiceWorkerRegistration.index")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a reference to the {{domxref("ContentIndex")}} interface, for managing indexed content for offline viewing.
