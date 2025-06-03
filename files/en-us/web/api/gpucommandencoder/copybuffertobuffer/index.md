@@ -17,6 +17,7 @@ The **`copyBufferToBuffer()`** method of the
 
 ```js-nolint
 copyBufferToBuffer(source, destination)
+copyBufferToBuffer(source, destination, size)
 copyBufferToBuffer(source, sourceOffset, destination, destinationOffset, size)
 ```
 
@@ -34,7 +35,7 @@ copyBufferToBuffer(source, sourceOffset, destination, destinationOffset, size)
   - : The number of bytes to copy.
 
 > [!NOTE]
-> The `sourceOffset`, `destinationOffset`, and `size` can be omitted if you are copying the entire source buffer to the destination buffer.
+> The `sourceOffset` and `destinationOffset` can be omitted if you are copying part of the source buffer at a `0` offset in both the source and destination buffers. The `sourceOffset`, `destinationOffset`, and `size` can be omitted if you are copying the entire source buffer to the destination buffer.
 
 ### Return value
 
