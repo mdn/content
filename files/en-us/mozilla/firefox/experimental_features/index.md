@@ -874,53 +874,7 @@ None.
 
 ## JavaScript
 
-### Temporal API
-
-The `withCalendar()` method for [`PlainDate`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/withCalendar), [`PlainDateTime`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime/withCalendar), and [`ZonedDateTime`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/withCalendar) objects within the [Temporal object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal) currently have the following [`calendar` types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types) disabled in all versions other than Firefox Nightly ([Firefox bug 1912511](https://bugzil.la/1912511) and [Firefox bug 1954138](https://bugzil.la/1954138)):
-
-- `islamic`
-- `islamic-rgsa`
-- `islamic-umalqura`
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>139</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>137</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>137</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>137</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">N/A</td>
-    </tr>
-  </tbody>
-</table>
-
-### Atomics
-
-#### Atomics.waitAsync()
+### Atomics.waitAsync()
 
 The {{jsxref("Atomics.waitAsync()")}} static method waits asynchronously on a shared memory location and returns an object representing the result of the operation.
 It is non-blocking and usable on the main thread. ([Firefox bug 1467846](https://bugzil.la/1467846)).
