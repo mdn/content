@@ -62,7 +62,7 @@ The following example demonstrates how specific parts of a block of text can be 
   molestiae dolores vitae! Quo ex explicabo tempore? Tenetur.</p>
 ```
 
-This JavaScript demonstrates how to create [ranges](/en-US/docs/Web/API/Range), instantiate a new [`Highlight`](/en-US/docs/Web/API/Highlight/Highlight) object for them, and [register it](/en-US/docs/Web/API/HighlightRegistry/set) to be styled on the page:
+This JavaScript demonstrates how to create [ranges](/en-US/docs/Web/API/Range), instantiate a new `Highlight` object for them, and [register it](/en-US/docs/Web/API/HighlightRegistry/set) to be styled on the page:
 
 ```js
 const parentNode = document.querySelector(".foo");
