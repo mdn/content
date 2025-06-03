@@ -407,6 +407,9 @@ l10n:
     Transitions: Transitions
     Tools: Outils
   ja:
+    Accessibility_Understanding_colors_and_luminance: "アクセシビリティ: 色と輝度"
+    Applying_color_to_HTML_elements: HTML への色の適用
+    At-rules: アットルール
     Beginners: 初心者向けチュートリアル
     Styling_the_content: "初めてのウェブサイト: コンテンツのスタイル設定"
     CSS_styling_basics: CSS スタイル設定の基本
@@ -416,30 +419,41 @@ l10n:
     Animations: アニメーション
     Backgrounds_and_Borders: 背景と境界
     Resizing_background_images: 背景画像の拡大縮小
+    Box alignment: ボックス配置
     Box_alignment_in_block_layout: ブロックレイアウトでのボックス配置
     Box_model: ボックスモデル
     Colors: 色
     Color_contrast: "アクセシビリティ: 色のコントラスト"
     Columns: 段組み
+    Combinators: 結合子
     Conditional_rules: 条件付きルール
-    Containment: 拘束
-    Display: フローレイアウト
+    Containment: コンテナー
     CSSOM_view: CSSOM view
+    Display: 表示
     Flexbox: フレックスボックス
     Fonts: フォント
+    Functions: 関数
     Grid: グリッド
     Images: 画像
     Lists_and_counters: リストとカウンター
     Logical_properties: 論理的プロパティ
     Media_queries: メディアクエリー
+    Modules: モジュール
     Nesting: 入れ子のスタイルルール
+    Overview: 概要
     Positioning: 位置指定
+    Properties: プロパティ
+    Pseudo-classes: 擬似クラス
+    Pseudo-elements: 擬似要素
     Scroll_snap: スクロールスナップ
+    Selectors: セレクター
     Shapes: シェイプ
     Text: テキスト
     Transforms: 座標変換
     Transitions: トランジション
     Tools: ツール
+    Types: データ型
+    Values and units: 値と単位
   ko:
     CSS_layout: CSS 레이아웃
     Guides: 안내서
