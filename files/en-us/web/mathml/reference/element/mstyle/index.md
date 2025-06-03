@@ -59,7 +59,7 @@ The following example uses [global attributes](/en-US/docs/Web/MathML/Reference/
 The following example shows a formula with [`font-size`](/en-US/docs/Web/CSS/font-size) set to `128pt`. It contains numbers that are placed in nested superscripts as well as an `<mstyle>` element with legacy attributes `scriptsizemultiplier` and `scriptminsize`. The `font-size` is multiplied by `0.5` when entering each superscript as long as that does not make it smaller than `16pt`.
 
 ```html
-<math display="block" style="font-size: 128pt">
+<math display="block">
   <mstyle scriptsizemultiplier="0.5" scriptminsize="16pt">
     <msup>
       <mn>2</mn>
@@ -82,6 +82,12 @@ The following example shows a formula with [`font-size`](/en-US/docs/Web/CSS/fon
     </msup>
   </mstyle>
 </math>
+```
+
+```css
+math {
+  font-size: 128pt;
+}
 ```
 
 {{EmbedLiveSample('Legacy script attributes', 700, 400)}}
