@@ -8,7 +8,8 @@ sidebar: learnsidebar
 
 {{PreviousMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/forms", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
-Now you've created (and tested) an awesome [LocalLibrary](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website) website, you're going to want to install it on a public web server so that it can be accessed by library staff and members over the Internet. This article provides an overview of how you might go about finding a host to deploy your website, and what you need to do in order to get your site ready for production.
+Now that you've created and tested a sample website using Express, it's time to deploy it to a web server so people can access it over the public internet.
+This page explains how to host an Express project and outlines what you need to get it ready for production.
 
 <table>
   <tbody>
