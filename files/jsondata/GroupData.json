@@ -909,8 +909,8 @@
         "Element.setHTML()",
         "ShadowRoot.setHTMLUnsafe()",
         "ShadowRoot.setHTML()",
-        "Document.parseHTMLUnsafe_static",
-        "Document.parseHTML_static"
+        "Document.parseHTMLUnsafe_static()",
+        "Document.parseHTML_static()"
       ],
       "properties": [],
       "events": []
