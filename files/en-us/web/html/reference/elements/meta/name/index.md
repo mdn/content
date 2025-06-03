@@ -15,6 +15,8 @@ The HTML specification defines the following set of standard metadata names:
 
 - `application-name`: the name of the application running in the web page. Only use this if the page is a web application. To provide translations, use multiple `<meta>` tags with the `lang` attribute for each language.
 
+To provide translations, use multiple `<meta>` tags with the `lang` attribute for each language:
+
   ```html
   <!-- English name -->
   <meta name="application-name" content="Weather Wizard" lang="en" />
