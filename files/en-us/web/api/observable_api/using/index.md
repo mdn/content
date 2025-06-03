@@ -98,7 +98,7 @@ In the next section we'll look at an example of how to explicitly define a custo
 
 In this example, we will print the numbers 1 to 10 to the page, then print a message to say that the count is complete. We won't show the HTML because it just includes a single `<p>` element to display the count, and a {{htmlelement("button")}} to start the count.
 
-```html hidden live-sample___basic-constructor-example live-sample___basic-teardown-example live-sample___basic-abort-example
+```html hidden live-sample___basic-constructor-example live-sample___basic-teardown-example
 <button>Start count</button>
 <p></p>
 ```
@@ -228,11 +228,18 @@ The example runs identically to the first version, but note that the events no l
 
 Using an `AbortController` to unsubscribe has the advantage that you can unsubscribe mid-way through observable data processing, at any point you like.
 
-Let's modify our [Basic `Observable()` example](#basic_observable_example) again, this time to use an `AbortController`. Our `Observable()` constructor call is very similar, except that this time we don't include a conditional inside the `setInterval()` call, and we don't call `Subscriber.complete()`; all of the conditional code is handled inside the `Subscriber.next()` function.
+Let's modify our [Basic `Observable()` example](#basic_observable_example) again, this time to use an `AbortController`. The HTML is very similar except that it includes an "Abort count" `<button>`. Our `Observable()` constructor call is also very similar, except that this time we don't include a conditional inside the `setInterval()` call, and we don't call `Subscriber.complete()`; all of the conditional code is handled inside the `Subscriber.next()` function. We also disable the "Start count" `<button>` inside the `addTeardown()` function, as we are not going to be able to run it again after it is aborted.
+
+```html hidden live-sample___basic-abort-example
+<button class="count">Start count</button>
+<button class="abort">Abort count</button>
+<p></p>
+```
 
 ```js hidden live-sample___basic-abort-example
 const outputElem = document.querySelector("p");
-const btn = document.querySelector("button");
+const countBtn = document.querySelector(".count");
+const abortBtn = document.querySelector(".abort");
 ```
 
 ```js live-sample___basic-abort-example
@@ -243,9 +250,7 @@ const observable = new Observable((subscriber) => {
     i++;
   }, 500);
   subscriber.addTeardown(() => {
-    if (btn.textContent === "Start count") {
-      btn.textContent = "Restart count";
-    }
+    countBtn.disabled = true;
   });
 });
 ```
@@ -256,7 +261,7 @@ Next, we create a new `AbortController` using the {{domxref("AbortController.Abo
 let controller = new AbortController();
 ```
 
-Finally, we update the `Observable.subscribe()` call as follows. We have removed the `complete()` method definition, and updated the `next()` method definition so that it checks whether the passed `value` is higher than `10`. If so, we update the `<p>` text to "Count complete" and call the {{domxref("AbortController.abort()")}} method to unsubscribe from the observable. If not, we update the `<p>` text to the current `value` and carry on to the next iteration.
+We update the `Observable.subscribe()` call as follows. We have removed the `complete()` method definition, and updated the `next()` method definition so that it checks whether the passed `value` is higher than `10`. If so, we update the `<p>` text to "Count complete" and abort the subscription via {{domxref("AbortController.abort()")}}; if not, we update the `<p>` text to the current `value` and carry on to the next iteration.
 
 We have also added a second `subscribe` argument — an options object containing a `signal` property equal to the {{domxref("AbortController.signal")}} property. This is required to associate the controller with the observable, enabling us to unsubscribe via the `abort()` call.
 
@@ -280,17 +285,25 @@ function init() {
 }
 ```
 
+When the "Abort count" `<button>` is clicked, we run `AbortController.abort()` to abort the subscription:
+
 ```js hidden live-sample___basic-abort-example
-btn.when("click").subscribe(init);
+countBtn.when("click").subscribe(init);
+```
+
+```js live-sample___basic-abort-example
+abortBtn.addEventListener("click", () => {
+  controller.abort();
+});
 ```
 
 The rendered output looks like this:
 
-{{EmbedLiveSample("basic-constructor-example", "100%", "80px")}}
+{{EmbedLiveSample("basic-abort-example", "100%", "80px")}}
 
-When you press the `<button>`, the output should be identical to the previous version of the example; this time the unsubscribe step is being handled via the `AbortController` rather than the `complete()` function. The `addTeardown()` function will still fire on unsubscription, to update the `<button>` text.
+When you press the "Start count" `<button>`, the output should be identical to the previous version of the example. However, this time the unsubscribe step is being handled via the `AbortController` rather than the `complete()` function. After pressing "Start count", you can press "Abort count" at any time to unsubscribe and stop the count, or wait for the count to finish.
 
-EDITORIAL: Hrm, currently the `addTeardown()` function doesn't fire after the `abort()` function is run, but I'm pretty sure it should do. Am I doing something wrong?
+If you want to experiment with the abort step multiple times, you'll have to refresh the page.
 
 ## Dynamic list example
 
