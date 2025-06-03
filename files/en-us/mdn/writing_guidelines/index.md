@@ -13,7 +13,7 @@ MDN Web Docs is an open-source project. The sections outlined below describe our
 
     - [Inclusion criteria](/en-US/docs/MDN/Writing_guidelines/Criteria_for_inclusion)
 
-      - : Provides an in-depth criteria for content to be included on MDN Web Docs, the application process for getting new documentation added on MDN Web Docs, and the expectations and guidelines for a party applying.
+      - : This article describes, in detail, criteria for content to be included on MDN Web Docs, the application process for including new documentation, and expectations and guidelines for a party applying.
 
 - [Our writing style guide](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide)
 
