@@ -392,7 +392,7 @@ With the following CSS:
 ```css
 .foo {
   background-color: silver;
-  @media (screen) {
+  @media screen {
     color: tomato;
   }
   color: black;

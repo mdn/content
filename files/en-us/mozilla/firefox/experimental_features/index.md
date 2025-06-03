@@ -621,23 +621,6 @@ Note that, as shown below, the feature is only available on Nightly builds (irre
 | Beta              | —             | —                   |
 | Release           | —             | —                   |
 
-### CSS Custom Highlight API
-
-The [CSS Custom Highlight API](/en-US/docs/Web/API/CSS_Custom_Highlight_API) provides a mechanism for styling arbitrary text ranges in a document (generalizing the behavior of other highlight pseudo-elements such as {{cssxref('::selection')}}, {{cssxref('::spelling-error')}}, {{cssxref('::grammar-error')}}, and {{cssxref('::target-text')}}).
-The ranges are defined in JavaScript using [`Range`](/en-US/docs/Web/API/Range) instances grouped in a [`Highlight`](/en-US/docs/Web/API/Highlight), and then registered with a name using [`HighlightRegistry`](/en-US/docs/Web/API/HighlightRegistry).
-The CSS [`::highlight`](/en-US/docs/Web/CSS/::highlight) pseudo-element is used to apply styles to a registered highlight.
-See [Firefox bug 1703961](https://bugzil.la/1703961) for more details.
-
-- `dom.customHighlightAPI.enabled`
-  - : Set to `true` to enable.
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 117           | Yes                 |
-| Developer Edition | 117           | No                  |
-| Beta              | 117           | No                  |
-| Release           | 117           | No                  |
-
 ### WebVR API
 
 #### WebVR API (Disabled)

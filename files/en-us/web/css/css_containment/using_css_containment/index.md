@@ -101,7 +101,7 @@ If you set `contain: size` on an element, you need to specify the size of the el
 ```css
 article {
   contain: size;
-  contain-intrinsic-size: 100vw auto;
+  contain-intrinsic-size: 100vw auto none;
 }
 ```
 
@@ -136,7 +136,7 @@ To remove this risk, always set a size when using `strict`:
 ```css
 article {
   contain: strict;
-  contain-intrinsic-size: 80vw auto;
+  contain-intrinsic-size: 80vw auto none;
 }
 ```
 
@@ -145,7 +145,7 @@ The above is the same as:
 ```css
 article {
   contain: size layout paint style;
-  contain-intrinsic-size: 80vw auto;
+  contain-intrinsic-size: 80vw auto none;
 }
 ```
 
