@@ -39,9 +39,12 @@ beginRenderPass(descriptor)
 
       - : An array of objects defining where and when timestamp query values will be written for this pass. These objects have the following properties:
 
-        - `querySet`: A {{domxref("GPUQuerySet")}} of type `"timestamp"` that the timestamp query results will be written to.
-        - `beginningOfPassWriteIndex`: A number specifying the query index in `querySet` where the timestamp at the beginning of the render pass will be written. This is optional - if not defined, no timestamp will be written for the beginning of the pass.
-        - `endOfPassWriteIndex`: A number specifying the query index in `querySet` where the timestamp at the end of the render pass will be written. This is optional - if not defined, no timestamp will be written for the end of the pass.
+        - `querySet`
+          - : A {{domxref("GPUQuerySet")}} of type `"timestamp"` that the timestamp query results will be written to.
+        - `beginningOfPassWriteIndex`
+          - : A number specifying the query index in `querySet` where the timestamp at the beginning of the render pass will be written. This is optional - if not defined, no timestamp will be written for the beginning of the pass.
+        - `endOfPassWriteIndex`
+          - : A number specifying the query index in `querySet` where the timestamp at the end of the render pass will be written. This is optional - if not defined, no timestamp will be written for the end of the pass.
 
         > [!NOTE]
         > The `timestamp-query` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) needs to be enabled to use timestamp queries. Timestamp query values are written in nanoseconds, but how the value is determined is implementation-defined.
