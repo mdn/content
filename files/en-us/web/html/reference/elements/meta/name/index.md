@@ -22,9 +22,9 @@ To provide translations, use multiple `<meta>` tags with the `lang` attribute fo
 <!-- English name -->
 <meta name="application-name" content="Weather Wizard" lang="en" />
 
-  <!-- Spanish translation -->
-  <meta name="application-name" content="Mago del Clima" lang="es" />
-  ```
+<!-- Spanish translation -->
+<meta name="application-name" content="Mago del Clima" lang="es" />
+```
 
   > [!NOTE]
   >
