@@ -452,15 +452,15 @@ The {{domxref("HTMLDialogElement/closedBy", "closedBy")}} attribute of the {{dom
 These can be used by developers to specify whether users can close a dialog by clicking outside of the dialog area, or the dialog must be closed programmatically, and so on.
 ([Firefox bug 1964077](https://bugzil.la/1964077)).
 
+- `dom.dialog.light-dismiss.enabled`
+  - : Set to `true` to enable.
+
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
 | Nightly           | 140           | Yes                 |
 | Developer Edition | 140           | No                  |
 | Beta              | 140           | No                  |
 | Release           | 140           | No                  |
-
-- `dom.dialog.light-dismiss.enabled`
-  - : Set to `true` to enable.
 
 ### Removal of MutationEvent
 
