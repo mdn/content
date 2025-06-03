@@ -25,10 +25,10 @@ To provide translations, use multiple `<meta>` tags with the `lang` attribute fo
 <meta name="application-name" content="Mago del Clima" lang="es" />
 ```
 
-  > [!NOTE]
-  >
-  > - Browsers may use this to identify the application. It is different from the {{HTMLElement("title")}} element, which usually contain the application name, but may also contain information like the document name or a status.
-  > - Individual web pages shouldn't define an `application-name`.
+> [!NOTE]
+>
+> - Browsers may use this to identify the application. It is different from the {{HTMLElement("title")}} element, which usually contain the application name, but may also contain information like the document name or a status.
+> - Individual web pages shouldn't define an `application-name`.
 
 - `author`: the name of the document's author.
 - `description`: a short and accurate summary of the content of the page. Search engines like [Google](https://developers.google.com/search/docs/appearance/snippet#meta-descriptions) may use this field to control the appearance of the webpage in the search result.
