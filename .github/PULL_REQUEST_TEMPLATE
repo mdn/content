@@ -1,15 +1,8 @@
 <!-- 🙌 Thanks for contributing to MDN Web Docs. 🙌
 
-Add details below to help us review your PR faster.
-Take the time to explain your changes and link to an issue or pull request that this PR relates to.
-If there's missing information, your PR may be delayed or closed.
-
-📝 For large changes: https://developer.mozilla.org/en-US/docs/MDN/Community/Pull_requests
-💡 Writing Guidelines: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines
-🧡 CoC Enforcement: https://developer.mozilla.org/en-US/docs/MDN/Community/Community_Participation_Guidelines
-
-🚨 Low-quality, spammy, or disruptive pull requests are moderated heavily. Severe or repeated violations can result in being banned.
--->
+Add details below to help us review your PR.
+Explain the changes and link to an issue or pull request that this PR relates to.
+If there's missing information, your PR may be delayed or closed. -->
 
 ### Description
 
@@ -28,3 +21,10 @@ If there's missing information, your PR may be delayed or closed.
 <!-- 🔨 If this fully resolves a GitHub issue, use "Fixes #123" -->
 <!-- 👉 Highlight related pull requests using "Relates to #123" -->
 <!-- ❗ If another pull request should be merged first, use "**Depends on:** #123" -->
+
+<!-- __Resources:__
+
+💡 Writing guidelines: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines
+📝 For large changes : https://developer.mozilla.org/en-US/docs/MDN/Community/Pull_requests
+🧡 Code of Conduct   : https://developer.mozilla.org/en-US/docs/MDN/Community/Community_Participation_Guidelines
+-->
