@@ -68,7 +68,7 @@ There are two very closely related sanitizer configuration interfaces, either of
 
 While you can use either interface in any of the sanitizing methods, `Sanitizer` is likely to be more efficient to share and reuse than `SanitizerConfig`.
 
-#### Allow or remove configurations
+#### Allow and remove configurations
 
 You can build up a configuration in two ways: allow configurations and remove configurations.
 
