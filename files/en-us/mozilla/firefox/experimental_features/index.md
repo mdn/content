@@ -1,5 +1,6 @@
 ---
 title: Experimental features in Firefox
+short-title: Experimental features
 slug: Mozilla/Firefox/Experimental_features
 page-type: guide
 ---
