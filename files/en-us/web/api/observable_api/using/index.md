@@ -6,22 +6,21 @@ page-type: guide
 
 {{DefaultAPISidebar("Observable API")}}
 
-The [Observable API](/en-US/docs/Web/API/Payment_Request_API) The **Observable API** ("observables") provides a mechanism for handling an asynchronous stream of events in an efficient, ergonomic fashion. This guide provides an introduction to using the fundamental features of observables.
+The [Observable API](/en-US/docs/Web/API/Observable_API) provides a mechanism for handling an asynchronous stream of events in an efficient, ergonomic fashion. This guide provides an introduction to using the fundamental features of observables.
 
 ## Creating an observable
 
-The use of observables centers around {{domxref("Observable")}} objects, which represent a stream of events that can be observed and manipulated. The two main ways to create an `Observable` instance are as follows:
+{{domxref("Observable")}} objects (commonly called **observables**) represent a stream of events that can be observed and manipulated. The two main ways to create an observable are as follows:
 
-- The {{domxref("EventTarget.when()")}} method, which returns an {{domxref("Observable")}} object instance representing a stream of events that will be fired on the `EventTarget`.
-- The {{domxref("Observable.Observable", "Observable()")}} constructor, which returns an {{domxref("Observable")}} object instance representing a custom stream of events that can be subscribed to as needed.
+- The {{domxref("EventTarget.when()")}} method, which returns an `Observable` object instance representing a stream of events that will be fired on the `EventTarget`.
+- The {{domxref("Observable.Observable", "Observable()")}} constructor, which returns an `Observable` object instance representing a custom stream of events that can be subscribed to as needed.
 
-We will first look at the `EventTarget.when()` method, as that is the most common use case for observable; we will look `Observable()` constructor examples too, later on in the article.
+> [!NOTE]
+> You can also convert objects such as [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) and [Iterables](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) into observables using the static {{domxref("Observable.from_static", "Observable.from()")}} method.
 
-`Observable` instances have several methods that return a reference to the same `Observable`, and these methods can be chained together to create a pipeline.
+Observables have several methods that return a new observable, and these methods can be chained together to create a pipeline. Events passing through the pipeline can be modified at each stage; the final stage is to subscribe to the event stream produced by the `EventTarget`, specifying a function that will be called each time the event is fired.
 
-Events passing through the pipeline can be modified at each stage; the final stage is to subscribe the event target to the event stream, specifying a function that will be called each time the event is fired.
-
-Let's study an example to explore what this looks like.
+We will first look at the `EventTarget.when()` method, as that is the most common way to use observables; we will look at the `Observable()` constructor later on in this article when discussing custom observables.
 
 ## Basic `when()` example
 
@@ -55,13 +54,13 @@ document.body
   .subscribe({ next: reportCoords });
 ```
 
-In this snippet we first grab a reference to the `<p>` element, then specify the [`mousemove`](/en-US/docs/Web/API/Element/mousemove_event) event inside the `when()` method on the page's {{htmlelement("body")}} element, which returns a `Observable` object representing a stream of `mousedown` events.
+In this snippet we first grab a reference to the `<p>` element, then specify the [`mousemove`](/en-US/docs/Web/API/Element/mousemove_event) event inside the `when()` method on the page's {{htmlelement("body")}} element, which returns a observable representing a stream of `mousedown` events fired on the `<body>` element.
 
 We then specify a pipeline:
 
-- {{domxref("Observable.filter()")}} is used to filter the elements on which the event will be fired, to only `EventTarget`s that match the `div` CSS selector (tested using the {{domxref("Element.matches()")}} method). This means that only `mousemove` events directly fired on the `<div>` element will fire.
-- {{domxref("Observable.map()")}} is used to modify the fired `mousemove` {{domxref("Event")}} objects, setting them equal to the coordinates of the mouse cursor when the event was fired.
-- {{domxref("Observable.subscribe()")}} is used to subscribe to the event stream, calling the `reportCoords()` function each time a `mousemove` event fires on the `<div>`s.
+- {{domxref("Observable.filter()")}} is used to filter the events passed through the pipeline to only events fired on `EventTarget`s that match the `div` CSS selector (tested using the {{domxref("Element.matches()")}} method). This means that only `mousemove` events directly fired on the `<div>` element will pass through the pipline.
+- {{domxref("Observable.map()")}} is used to map the fired `mousemove` {{domxref("Event")}} objects to new objects containing the coordinates of the mouse cursor when the event was fired.
+- {{domxref("Observable.subscribe()")}} is used to subscribe the observable to the event stream, calling the `reportCoords()` function each time a `mousemove` event fires on the `<div>`s.
 
 Finally, we define the `reportCoords()` function, which prints the mouse coordinates to the `<p>` element:
 
@@ -82,18 +81,18 @@ Try moving the mouse over the top of the example; the coordinates are printed to
 
 ## The observable lifecycle
 
-When an observable is created, it has a callback passed into it that is invoked synchronously when `subscribe()` is called on it; this sets up a new **subscription** to the observable. The callback's argument is a {{domxref("Subscriber")}} object, which has the following methods available on it that are called at different points in the observable lifecycle:
+Observables, like Promises, get an initializing callback upon construction which controls what values the observable emits. For developer-created custom observables (created using the `Observable()` constructor) you pass this callback in manually, whereas for platform-returned ones (created using `EventTarget.when()`), the platform constructs the Observable with an internal callback that runs when you subscribe the observable to the event stream using `subscribe()`.
+
+The initializing callback's argument is a {{domxref("Subscriber")}} object, which has the following methods available on it that are called at different points in the observable lifecycle:
 
 - `next()`: Called whenever an event is fired. This can be called any number of times.
 - `complete()`: Called when the pipeline has been successfully completed and no more data will be sent.
 - `error()`: Called when the pipeline has been completed with an error.
 - `addTeardown()`: Called at the end of the observer's lifecycle after it has completed or been unsubscribed, to clean up any resources relevant to the subscription.
 
-With a subscription set up, the `Observable` can signal any number of events to the `Subscriber` via the `next()` callback, optionally followed by a single call to the `complete()` or `error()` callback, signaling that the stream of data is finished.
+With a subscription set up, the observable can signal any number of events to the `Subscriber` via the `next()` callback, optionally followed by a single call to the `complete()` or `error()` callback, signaling that the stream of data is finished.
 
-When {{domxref("EventTarget.when()")}} is used to create an observable (as seen previously), this mechanism of lifecycle methods is set up for you in the background implicitly.
-
-However, when creating a custom observable using the `Observable()` constructor, the lifecycle methods are explicitly defined. Let's look at an example of how to do this.
+In the next section we'll look at an example of how to explicitly define a custom observable's initializing callback and the functionality of its lifecycle methods.
 
 ## Basic `Observable()` example
 
@@ -138,7 +137,7 @@ function init() {
 }
 ```
 
-Finally, we call `when()` on the `<button>`, passing it the [`click`](/en-US/docs/Web/API/Element/click_event) event, then subscribe to the resulting observable, passing a reference to the `init` function into `subscribe()`. This means that `init()` will be called and the subscription to our custom observable will happen when the `<button>` is clicked.
+Finally, we call `when()` on the `<button>`, passing it the [`click`](/en-US/docs/Web/API/Element/click_event) event, then subscribe the observable to the resulting event stream, passing a reference to the `init` function into `subscribe()`. This means that `init()` will be called and the subscription will happen when the `<button>` is clicked.
 
 ```js live-sample___basic-constructor-example
 btn.when("click").subscribe(init);
@@ -156,12 +155,9 @@ Click the button. Every 500 milliseconds, the value of `i` is printed to the pag
 > [!NOTE]
 > The first three lifecycle methods can be specified inside the object passed into the `subscribe()` method during subscription. However, as you'll see in the next section, `addTeardown()` is called directly on the `Subscriber` object inside the constructor callback.
 
-> [!NOTE]
-> You can also convert objects such as [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) and [Iterables](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) into observables using the static {{domxref("Observable.from_static", "Observable.from()")}} method.
-
 ## Teardown
 
-Observable subscribers can register a teardown callback to clean up any resources relevant to the subscription, via `Subscriber.addTeardown()`. This is called directly on the `Subscriber` object available inside the callback passed into the `Observable()` constructor, and the function can contain any arbitrary code that the teardown process requires.
+Observable subscribers can register a teardown callback to clean up any resources relevant to the subscription, via {{domxref("Subscriber.addTeardown()")}}. This is called directly on the `Subscriber` object available inside the callback passed into the `Observable()` constructor, and the function can contain any arbitrary code that the teardown process requires.
 
 For example, adding a basic teardown callback to our [previous](#basic_observable_example) example might look like this:
 
@@ -193,7 +189,7 @@ const observable = new Observable((subscriber) => {
 btn.when("click").subscribe(init);
 ```
 
-The `addTeardown()` function is automatically invoked immediately after the `Subscriber.complete()` or `Subscriber.error()` function is invoked to signal the completion of the pipeline (it is also invoked when the subscriber is aborted via an `AbortController`, as seen in the next section). In this case, we use it check whether the `<button>` text is "Start count"; if so, we change it to "Restart count" so that it makes more sense after the count has already run.
+The `addTeardown()` function is invoked immediately after the `Subscriber.complete()` or `Subscriber.error()` function is invoked to signal the completion of the pipeline (it is also invoked when the subscriber is aborted via an `AbortController`, as seen in the next section). In this case, we use it check whether the `<button>` text is "Start count"; if so, we change it to "Restart count" so that it makes more sense after the count has already run.
 
 The example now renders like so:
 
@@ -203,7 +199,7 @@ Press the `<button>`, and note how its text changes to "Restart count" once the 
 
 ## Unsubscribing
 
-You can unsubscribe from an observable using the {{domxref("Observable.takeUntil()")}} method, or an {{domxref("AbortController")}}.
+You can unsubscribe from an observable — signaling that you want it to stop producing values — using the {{domxref("Observable.takeUntil()")}} method or an {{domxref("AbortController")}}.
 
 ### Unsubscribing with `takeUntil()`
 
@@ -371,7 +367,7 @@ function addItemToList() {
 }
 ```
 
-Next, we wire up the remove buttons, so that they remove the list items when clicked. We do this by creating a `"click"` `Observable` on the list `<ul>` using `when()`. Next, we add a {{domxref("Observable.filter", "filter()")}} for elements that match the `li button` CSS selector, to make sure the click events are only fired on the remove buttons. In these cases, we run the function defined inside the {{domxref("Observable.subscribe", "subscribe()")}}, which removes the {{domxref("Node.parentNode", "parentNode")}} of the button via the {{domxref("Element.remove", "remove()")}} function.
+Next, we wire up the remove buttons so that they remove the list items when clicked. We do this by creating a `"click"` observable on the list `<ul>` using `when()`. Next, we add a {{domxref("Observable.filter", "filter()")}} for events fired on the `li button` CSS selector, to make sure only `click` events fired on the remove buttons run code in response. In these cases, we run the function defined inside the {{domxref("Observable.subscribe", "subscribe()")}}, which removes the {{domxref("Node.parentNode", "parentNode")}} of the button via the {{domxref("Element.remove", "remove()")}} function.
 
 ```js live-sample___list-example
 list
@@ -382,7 +378,7 @@ list
   });
 ```
 
-The final functionality we need to implement is the live updating list count. To implement this we'll create a new `Observable` using the {{("Observable.Observable", "Observable()")}} constructor, which constantly polls the number of list items every 500 milliseconds (via a {{domxref("Window.setInterval()")}} call) and calls the {{domxref("Subscriber.next()")}} function, passing it the list length.
+The final functionality we need to implement is the live updating list count. To implement this we'll create a new observable using the {{("Observable.Observable", "Observable()")}} constructor, which constantly polls the number of list items every 500 milliseconds (via a {{domxref("Window.setInterval()")}} call) and calls the {{domxref("Subscriber.next()")}} function, passing it the list length.
 
 ```js live-sample___list-example
 const listObservable = new Observable((subscriber) => {
@@ -394,7 +390,7 @@ const listObservable = new Observable((subscriber) => {
 });
 ```
 
-All that's left to do now is subscribe to the custom `Observable` using {{domxref("Observable.subscribe()")}}. We pass it an object that defines the `next()` function we call in the previous snippet's callback. The `next()` function updates the output `<p>` to state the new number of list items when it changes; if `listLength` is `5` or more (our maximum value), we add a "Maximum length reached!" message and disable the `<input>` field so no more items can be entered. If not, we just state the number of items, and re-enable the `<input>` if it was previous disabled (a user could remove an item to get the length down below the maximum again).
+All that's left to do now is subscribe to the custom observable using {{domxref("Observable.subscribe()")}}. We pass it an object that defines the `next()` function we call in the previous snippet's callback. The `next()` function updates the output `<p>` to state the new number of list items when it changes; if `listLength` is `5` or more (our maximum value), we add a "Maximum length reached!" message and disable the `<input>` field so no more items can be entered. If not, we just state the number of items, and re-enable the `<input>` if it was previously disabled (a user could remove an item to get the length down below the maximum again).
 
 ```js live-sample___list-example
 listObservable.subscribe({
@@ -420,7 +416,7 @@ The example renders like this:
 
 ## Canvas drawing example
 
-In this example, we create a basic {{htmlelement("canvas")}}-based drawing app, which demonstrates some of the nice ways observables can be used to work with combinations of events.
+In this example we create a basic {{htmlelement("canvas")}}-based drawing app, which demonstrates some of the nice ways observables can be used to work with combinations of events.
 
 ### HTML
 
@@ -493,7 +489,7 @@ form input {
 
 ### JavaScript
 
-In our script, we first grab references to our `<canvas>`, `<form>`, `<input>` elements, and `<output>` element:
+In our script, we first grab references to our `<canvas>`, `<form>`, `<input>`, and `<output>` elements:
 
 ```js live-sample___canvas-example
 const canvas = document.querySelector("canvas");
@@ -503,7 +499,7 @@ const sizeOutput = document.querySelector("output");
 const colorInput = document.querySelector("[type='color']");
 ```
 
-Next, we define a function called `sizeCanvas()`, which sets the `<canvas>` {{domxref("HTMLCanvasElement.width","width")}} and {{domxref("HTMLCanvasElement.height","height")}} to equal the {{domxref("Element.clientWidth", "clientWidth")}}/{{domxref("Element.clientHeight", "clientHeight")}} of the `<body>`. We immediately run this function to set the `<canvas>` size when the page first loads, then we call `when("resize")` on the {{domxref("Window")}} object to set up an observable on it. We subscribe that that observable with `subscribe()`, passing it a reference to the `sizeCanvas()` function so that it runs every time the window is resized.
+Next, we define a function called `sizeCanvas()`, which sets the `<canvas>` {{domxref("HTMLCanvasElement.width","width")}} and {{domxref("HTMLCanvasElement.height","height")}} to equal the {{domxref("Element.clientWidth", "clientWidth")}}/{{domxref("Element.clientHeight", "clientHeight")}} of the `<body>`. We immediately run this function to set the `<canvas>` size when the page first loads, then we call `when("resize")` on the {{domxref("Window")}} object to set up an observable on it. We subscribe to that observable with `subscribe()`, passing it a reference to the `sizeCanvas()` function so that it runs every time the window is resized.
 
 ```js live-sample___canvas-example
 function sizeCanvas() {
@@ -556,7 +552,7 @@ function draw(e) {
 }
 ```
 
-The last function we define is `finishDraw()`, which is intended to show the `<form>` again when the drawing is finished.
+The last function we define is `finishDraw()`, which shows the `<form>` again when the drawing is finished.
 
 ```js live-sample___canvas-example
 function finishDraw() {
@@ -566,7 +562,7 @@ function finishDraw() {
 
 Finally, we'll create some more observables to control the drawing functionality. The first two are simple, and use the same pattern as the `resize` one we saw earlier. They keep the pen size and color updated to the user's choices by:
 
-- Running the `updatePenSize()` function whenever a [`input`](/en-US/docs/Web/API/Element/input_event) event fires on the range slider
+- Running the `updatePenSize()` function whenever a [`input`](/en-US/docs/Web/API/Element/input_event) event fires on the range slider.
 - Running the `updatePenColor()` function whenever a [`change`](/en-US/docs/Web/API/HTMLElement/change_event) event fires on the color picker.
 
 ```js live-sample___canvas-example
@@ -574,7 +570,7 @@ sizeInput.when("input").subscribe(updatePenSize);
 colorInput.when("change").subscribe(updatePenColor);
 ```
 
-Finally, we create an observable on the `<canvas>` element, this time representing a stream of [`mousedown`](/en-US/docs/Web/API/Element/mousedown_event) events. We use {{domxref("Observable.map()")}} to modify the fired event objects, setting them equal to the coordinates of the mouse cursor when the event was fired. We then call `subscribe()` at the end of the chain, passing it a reference to the `draw()` function so that it is called whenever an event fires.
+Finally, we create an observable on the `<canvas>` element, this time representing a stream of [`mousedown`](/en-US/docs/Web/API/Element/mousedown_event) events that will be fired on the `<canvas>`. We use {{domxref("Observable.map()")}} to map the fired event objects to new objects containing the coordinates of the mouse cursor when the event was fired. We then call `subscribe()` at the end of the chain, passing it a reference to the `draw()` function so that it is called whenever an event fires.
 
 However — and this is where it gets interesting — we don't want to run `draw()` on `mousedown` events. We want to run it on every `mousemove` event that happens after a `mousedown` event, and we want to stop running it when a `mouseup` event fires. We achieve this by inserting an {{domxref("Observable.flatMap()")}} call into the chain.
 
@@ -592,7 +588,7 @@ canvas
 Inside the `flatMap()` callback, we do two things:
 
 1. Define a value called `mouseUp` that contains the criteria for stopping subscription to a series of `mousemove` events — namely a `<canvas>` `mouseup` observable — we want to unsubscribe from `mousemove` events when a `mouseup` event is fired on the `<canvas>`. We also chain an {{domxref("Observable.finally()")}} call onto the end containing a reference to the `finishDraw()` function — so that when the subscription ends, this function is called, making the `<form>` appear again at the end of the process.
-2. Return a `<canvas>` `mousemove` observable, with a {{domxref("Observable.takeUntil()")}} call chained on the end that we pass the `mouseUp` value to. Returning this observable out of the `flatMap()` call effectively causes the `mousemove` observables to become part of the outer `mousedown` observable pipeline
+2. Return a `<canvas>` `mousemove` observable, with a {{domxref("Observable.takeUntil()")}} call chained on the end that we pass the `mouseUp` value to. Returning this observable out of the `flatMap()` call effectively causes the `mousemove` observables to become part of the outer `mousedown` observable pipeline.
 
 The result is that we are subscribing to a `mousedown` observable but then responding to `mousemove` events that are made part of the main pipeline via the `flatMap()` call. And we are stopping subscription to the inner `mousemove` observable when a `mouseup` event is fired (after which we run the final `finishDraw()` function).
 
