@@ -52,7 +52,7 @@ _The `Highlight` interface doesn't inherit any methods_.
 - {{domxref("Highlight.values()")}}
   - : Returns a new iterator object that yields the ranges in the highlight object in insertion order.
 
-## Example
+## Examples
 
 The following example demonstrates how specific parts of a block of text can be highlighted.
 
