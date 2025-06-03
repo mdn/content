@@ -1,5 +1,6 @@
 ---
 title: "ARIA: button role"
+short-title: button
 slug: Web/Accessibility/ARIA/Reference/Roles/button_role
 page-type: aria-role
 spec-urls:
@@ -116,13 +117,7 @@ Try the example by adding a name to the text box. The button will cause the name
 <ul id="nameList"></ul>
 <label for="newName">Enter your Name: </label>
 <input type="text" id="newName" />
-<span
-  role="button"
-  tabindex="0"
-  onclick="handleCommand(event)"
-  onKeyDown="handleCommand(event)"
-  >Add Name</span
->
+<span role="button" tabindex="0">Add Name</span>
 ```
 
 #### CSS
@@ -177,6 +172,10 @@ function handleCommand(event) {
     list.appendChild(listItem);
   }
 }
+
+const btn = document.querySelector("span[role='button']");
+btn.addEventListener("click", handleCommand);
+btn.addEventListener("keydown", handleCommand);
 ```
 
 {{EmbedLiveSample("Basic_button_example")}}
@@ -188,21 +187,9 @@ In this snippet a {{HTMLElement("span")}} element is converted to a toggle butto
 #### HTML
 
 ```html
-<button
-  type="button"
-  onclick="handleBtnClick(event)"
-  onKeyDown="handleBtnKeyDown(event)">
-  Mute Audio
-</button>
+<button type="button">Mute Audio</button>
 
-<span
-  role="button"
-  tabindex="0"
-  aria-pressed="false"
-  onclick="handleBtnClick(event)"
-  onKeyDown="handleBtnKeyDown(event)">
-  Mute Audio
-</span>
+<span role="button" tabindex="0" aria-pressed="false"> Mute Audio </span>
 
 <audio
   id="audio"
@@ -260,6 +247,13 @@ function toggleButton(element) {
     audio.play();
   }
 }
+
+const button = document.querySelector("button");
+const spanButton = document.querySelector("span[role='button']");
+button.addEventListener("click", handleBtnClick);
+button.addEventListener("keydown", handleBtnKeyDown);
+spanButton.addEventListener("click", handleBtnClick);
+spanButton.addEventListener("keydown", handleBtnKeyDown);
 ```
 
 #### Result

@@ -1,10 +1,10 @@
 ---
 title: Content Security Policy (CSP) implementation
+short-title: Content Security Policy (CSP)
 slug: Web/Security/Practical_implementation_guides/CSP
 page-type: guide
+sidebar: security
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
 The [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) HTTP header provides fine-grained control over the code that can be loaded on a site, and what it is allowed to do.
 
@@ -17,8 +17,8 @@ The main problem this article focuses on is cross-site scripting ({{Glossary("Cr
 
 CSP can also help to fix other problems, which are covered in other articles:
 
-- [Preventing clickjacking](/en-US/docs/Web/Security/Practical_implementation_guides/Clickjacking) by stopping your site being embedded into {{htmlelement("iframe")}} elements. This is done using the CSP [`frame-ancestors`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors) directive.
-- Preventing [manipulator-in-the-middle](/en-US/docs/Glossary/MitM) (MiTM) attacks by upgrading any HTTP connections to HTTPS. This is helped by the CSP [`upgrade-insecure-requests`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors) directive. See [Upgrading insecure requests](/en-US/docs/Web/HTTP/Guides/CSP#upgrading_insecure_requests).
+- Preventing [clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) by stopping your site being embedded into {{htmlelement("iframe")}} elements. This is done using the CSP [`frame-ancestors`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors) directive.
+- Preventing [manipulator-in-the-middle](/en-US/docs/Web/Security/Attacks/MitM) (MiTM) attacks by upgrading any HTTP connections to HTTPS. This is helped by the CSP [`upgrade-insecure-requests`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/upgrade-insecure-requests) directive. See [Upgrading insecure requests](/en-US/docs/Web/HTTP/Guides/CSP#upgrading_insecure_requests).
 
 ## Solution
 

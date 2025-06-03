@@ -519,7 +519,7 @@ function getKey(keyMaterial, salt) {
   return window.crypto.subtle.deriveKey(
     {
       name: "HKDF",
-      salt: salt,
+      salt,
       info: new TextEncoder().encode("Encryption example"),
       hash: "SHA-256",
     },

@@ -701,7 +701,7 @@ Below is an example on how to interact with the TestingBot API with the NodeJS c
      api_secret: "your-tb-secret",
    });
 
-   tb.getTests(function (err, tests) {
+   tb.getTests((err, tests) => {
      console.log(tests);
    });
    ```

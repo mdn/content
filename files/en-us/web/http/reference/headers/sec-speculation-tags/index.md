@@ -1,5 +1,6 @@
 ---
-title: Sec-Speculation-Tags
+title: Sec-Speculation-Tags header
+short-title: Sec-Speculation-Tags
 slug: Web/HTTP/Reference/Headers/Sec-Speculation-Tags
 page-type: http-header
 status:

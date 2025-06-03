@@ -47,10 +47,10 @@ This example shows a 'long' sentence that wraps within a div with a blue border,
 <script>
   const box = document.getElementById("box");
   const longSpan = document.getElementById("long-span");
-  box.style.left = longSpan.offsetLeft + document.body.scrollLeft + "px";
-  box.style.top = longSpan.offsetTop + document.body.scrollTop + "px";
-  box.style.width = longSpan.offsetWidth + "px";
-  box.style.height = longSpan.offsetHeight + "px";
+  box.style.left = `${longSpan.offsetLeft}${document.body.scrollLeft}px`;
+  box.style.top = `${longSpan.offsetTop}${document.body.scrollTop}px`;
+  box.style.width = `${longSpan.offsetWidth}px`;
+  box.style.height = `${longSpan.offsetHeight}px`;
 </script>
 ```
 

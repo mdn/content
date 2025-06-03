@@ -1,5 +1,6 @@
 ---
-title: No-Vary-Search
+title: No-Vary-Search header
+short-title: No-Vary-Search
 slug: Web/HTTP/Reference/Headers/No-Vary-Search
 page-type: http-header
 status:

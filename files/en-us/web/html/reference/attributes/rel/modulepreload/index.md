@@ -53,11 +53,6 @@ Only after `main.js` has loaded does the browser discover and fetch the two depe
   <head>
     <meta charset="utf-8" />
     <title>Basic JavaScript module example</title>
-    <style>
-      canvas {
-        border: 1px solid black;
-      }
-    </style>
     <script type="module" src="main.js"></script>
   </head>
   <body></body>
@@ -77,12 +72,6 @@ By the time `main.js` has been parsed and its dependencies are known, they have 
     <link rel="modulepreload" href="main.js" />
     <link rel="modulepreload" href="modules/canvas.js" />
     <link rel="modulepreload" href="modules/square.js" />
-    <style>
-      canvas {
-        border: 1px solid black;
-      }
-    </style>
-
     <script type="module" src="main.js"></script>
   </head>
   <body></body>

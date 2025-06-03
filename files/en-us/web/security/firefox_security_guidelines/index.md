@@ -2,9 +2,8 @@
 title: Firefox security guidelines
 slug: Web/Security/Firefox_Security_Guidelines
 page-type: guide
+sidebar: security
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
 ## Purpose
 

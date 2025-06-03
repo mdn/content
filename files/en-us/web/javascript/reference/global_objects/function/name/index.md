@@ -177,7 +177,9 @@ When using [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get) and [`set
 
 ```js
 const o = {
-  get foo() {},
+  get foo() {
+    return 1;
+  },
   set foo(x) {},
 };
 

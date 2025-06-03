@@ -1,5 +1,6 @@
 ---
-title: Strict-Transport-Security
+title: Strict-Transport-Security header
+short-title: Strict-Transport-Security
 slug: Web/HTTP/Reference/Headers/Strict-Transport-Security
 page-type: http-header
 browser-compat: http.headers.Strict-Transport-Security

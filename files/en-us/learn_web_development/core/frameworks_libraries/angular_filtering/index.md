@@ -58,21 +58,21 @@ In the following snippet, the existing sections in your HTML are in comments so 
 <div class="btn-wrapper">
   <button
     class="btn btn-menu"
-    [class.active]="filter == 'all'"
+    [class.active]="filter === 'all'"
     (click)="filter = 'all'">
     All
   </button>
 
   <button
     class="btn btn-menu"
-    [class.active]="filter == 'active'"
+    [class.active]="filter === 'active'"
     (click)="filter = 'active'">
     To Do
   </button>
 
   <button
     class="btn btn-menu"
-    [class.active]="filter == 'done'"
+    [class.active]="filter === 'done'"
     (click)="filter = 'done'">
     Done
   </button>
@@ -90,7 +90,7 @@ Clicking the buttons changes the `filter` values, which determines the `items` t
 
 A class attribute binding, using square brackets, `[]`, controls the text color of the buttons.
 The class binding, `[class.active]`, applies the `active` class when the value of `filter` matches the expression.
-For example, when the user clicks the **Done** button, which sets the `filter` value to `done`, the class binding expression of `filter == 'done'` evaluates to `true`.
+For example, when the user clicks the **Done** button, which sets the `filter` value to `done`, the class binding expression of `filter === 'done'` evaluates to `true`.
 When the `filter` value is `done`, Angular applies the `active` class to the **Done** button to make the text color green.
 As soon as the user clicks on one of the other buttons, the value a `filter` is no longer `done`, so the green text color no longer applies.
 

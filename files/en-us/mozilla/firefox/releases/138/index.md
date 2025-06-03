@@ -83,6 +83,7 @@ No notable changes
   - `groupId` to {{WebExtAPIRef("tabs.Tab")}}. ([Firefox bug 1959713](https://bugzil.la/1959713))
   - `groupId` to {{WebExtAPIRef("tabs.query")}}. ([Firefox bug 1959715](https://bugzil.la/1959715))
   - `groupId` to {{WebExtAPIRef("tabs.onUpdated")}}. ([Firefox bug 1959716](https://bugzil.la/1959716)
+- The `json` resource type is now supported in both {{WebExtAPIRef("webRequest.ResourceType")}} and {{WebExtAPIRef("declarativeNetRequest.ResourceType")}} in Firefox, with import attributes enabled by default. Previously, it was reported as `script`. ([Firefox bug 1858078](https://bugzil.la/1858078) and [Firefox bug 1950836](https://bugzil.la/1950836))
 
 ## Experimental web features
 
@@ -125,7 +126,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **HTML Sanitizer API**: `dom.security.sanitizer.enabled`
 
-  The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document's DOM. ([Firefox bug 1950605](https://bugzil.la/1950605)), ([Firefox bug 1952250](https://bugzil.la/1952250)).
+  The [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document's DOM. ([Firefox bug 1950605](https://bugzil.la/1950605)), ([Firefox bug 1952250](https://bugzil.la/1952250)).
 
 ## Older versions
 

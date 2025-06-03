@@ -144,9 +144,13 @@ For example:
 
 Additionally, avoid using vague link text like "Click here" or "Read this article". Descriptive link text provides better context for all readers and improves the experience for users of assistive technologies.
 
+<!-- markdownlint-disable descriptive-link-text -->
+
 - **Correct**: "Learn more about [how to order flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)."
 - **Incorrect**: "Click [here](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items) to learn more."
 - **Incorrect**: "Read [this article](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items) to learn more."
+
+<!-- markdownlint-enable descriptive-link-text -->
 
 By following these guidelines, you help make MDN documentation accessible, clear, and usable by everyone, regardless of how they access the page.
 
@@ -418,7 +422,7 @@ In the repository, we maintain several word lists, located at [`.vscode/dictiona
 
 These are our recommendations for using certain technical terms:
 
-- **HTML elements**: Use the term "element" to refer to HTML and XML elements, instead of "tag". In addition, the element should be wrapped in angle brackets "<>" and should be styled using backticks (\`). For example, using \<input\> inside backticks will style it as `<input>` as is expected.
+- **HTML elements**: Use the term "element" to refer to HTML and XML elements, instead of "tag". In addition, the element should be wrapped in angle brackets "<>" and should be styled using backticks (`` ` ``). For example, using \<input\> inside backticks will style it as `<input>` as is expected.
 
   - **Correct**: the `<span>` element
   - **Incorrect**: the span tag
@@ -628,7 +632,7 @@ To maintain consistency across MDN Web Docs, keep the following guidelines in mi
   - **Incorrect**: The [`revert-layer`](/en-US/docs/Web/CSS/revert-layer) keyword.
   - **Correct**: [HTML DOM API](/en-US/docs/Web/API/HTML_DOM_API)
   - **Incorrect**: The [HTML DOM API](/en-US/docs/Web/API/HTML_DOM_API)
-- As shown in the previous examples, add code formatting using backticks (\`) to keywords and literals in the link text, even though the formatting is not used in page and section titles. For example, for the page title "Array() constructor", the link text will be [`Array()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Array).
+- As shown in the previous examples, add code formatting using backticks (`` ` ``) to keywords and literals in the link text, even though the formatting is not used in page and section titles. For example, for the page title "Array() constructor", the link text will be [`Array()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Array).
 
 #### Descriptive text
 

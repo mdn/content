@@ -14,10 +14,10 @@ The **`exit`** event fires when a cue stops being active.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("exit", (event) => {});
+```js-nolint
+addEventListener("exit", (event) => { })
 
-onexit = (event) => {};
+onexit = (event) => { }
 ```
 
 ## Event type

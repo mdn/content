@@ -925,7 +925,7 @@ The parentheses are optional.
 Suppose you define the following variables:
 
 ```js
-const myFun = new Function("5 + 2");
+const myFun = () => 5 + 2;
 const shape = "round";
 const size = 1;
 const foo = ["Apple", "Mango", "Orange"];
@@ -971,7 +971,6 @@ For methods and functions, the `typeof` operator returns results as follows:
 
 ```js
 typeof blur; // returns "function"
-typeof eval; // returns "function"
 typeof parseInt; // returns "function"
 typeof shape.split; // returns "function"
 ```
@@ -1058,30 +1057,41 @@ All operators eventually operate on one or more basic expressions. These basic e
 
 ### this
 
-Use the [`this` keyword](/en-US/docs/Web/JavaScript/Reference/Operators/this) to refer to the current object.
-In general, `this` refers to the calling object in a method.
-Use `this` either with the dot or the bracket notation:
+The [`this` keyword](/en-US/docs/Web/JavaScript/Reference/Operators/this) is usually used within a function. In general, when the function is attached to an object as a method, `this` refers to the object that the method is called on. It functions like a hidden parameter that is passed to the function. `this` is an expression that evaluates to the object, so you can use all the object operations we introduced.
 
 ```js
 this["propertyName"];
 this.propertyName;
+doSomething(this);
 ```
 
-Suppose a function called `validate` validates an object's `value` property, given the object and the high and low values:
+For example, suppose a function is defined as follows:
 
 ```js
-function validate(obj, lowVal, highVal) {
-  if (obj.value < lowVal || obj.value > highVal) {
-    console.log("Invalid Value!");
-  }
+function getFullName() {
+  return `${this.firstName} ${this.lastName}`;
 }
 ```
 
-You could call `validate` in each form element's `onChange` event handler, using `this` to pass it to the form element, as in the following example:
+We can now attach this function to an object, and it will use the properties of that object when called:
 
-```html
-<p>Enter a number between 18 and 99:</p>
-<input type="text" name="age" size="3" onChange="validate(this, 18, 99);" />
+```js
+const person1 = {
+  firstName: "Chris",
+  lastName: "Martin",
+};
+
+const person2 = {
+  firstName: "Chester",
+  lastName: "Bennington",
+};
+
+// Attach the same function
+person1.getFullName = getFullName;
+person2.getFullName = getFullName;
+
+console.log(person1.getFullName()); // "Chris Martin"
+console.log(person2.getFullName()); // "Chester Bennington"
 ```
 
 ### Grouping operator
@@ -1096,16 +1106,16 @@ const b = 2;
 const c = 3;
 
 // default precedence
-a + b * c     // 7
+a + b * c; // 7
 // evaluated by default like this
-a + (b * c)   // 7
+a + (b * c); // 7
 
 // now overriding precedence
 // addition before multiplication
-(a + b) * c   // 9
+(a + b) * c; // 9
 
 // which is equivalent to
-a * c + b * c // 9
+a * c + b * c; // 9
 ```
 
 ### Property accessor

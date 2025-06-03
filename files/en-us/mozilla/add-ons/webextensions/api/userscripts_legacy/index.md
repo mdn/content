@@ -30,6 +30,8 @@ To use the API, call {{WebExtAPIRef("userScripts_legacy.register","register()")}
 
 - {{WebExtAPIRef("userScripts_legacy.RegisteredUserScript", "userScripts.RegisteredUserScript")}}
   - : The `object` returned by the {{WebExtAPIRef("userScripts_legacy.register","register()")}} method. It represents the registered user scripts and is used to deregister the user scripts.
+- {{WebExtAPIRef("userScripts_legacy.UserScriptOptions", "userScripts.UserScriptOptions")}}
+  - : The `object` passed to the {{WebExtAPIRef("userScripts_legacy.register","register()")}} method. It represents the content scripts to register.
 
 ## Methods
 

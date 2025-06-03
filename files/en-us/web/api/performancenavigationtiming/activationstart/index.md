@@ -50,9 +50,9 @@ let firstContentfulPaint = performance.getEntriesByName(
   "first-contentful-paint",
 )[0].startTime;
 
-console.log("time to first paint: " + (firstPaint - activationStart));
+console.log(`time to first paint: ${firstPaint - activationStart}`);
 console.log(
-  "time to first-contentful-paint: " + (firstContentfulPaint - activationStart),
+  `time to first-contentful-paint: ${firstContentfulPaint - activationStart}`,
 );
 ```
 

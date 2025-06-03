@@ -170,6 +170,24 @@
   },
   // Disabled, as yari generates link fragments by replacing spaces with underscores, not dashes.
   "link-fragments": false,
+  "descriptive-link-text": {
+    "prohibited_texts": [
+      "here",
+      "link",
+      "more",
+      "this",
+      "this link",
+      "this page",
+      "this site",
+      "this article",
+      "click here",
+      "click this link",
+      "see here",
+      "see this page",
+      "see this site",
+      "see this article",
+    ],
+  },
 
   // https://github.com/OnkarRuikar/markdownlint-rule-search-replace
   "search-replace": {
@@ -273,7 +291,7 @@
         "name": "bad-gfm-alert",
         "message": "Use the correct GFM syntax: `> [!NOTE]`",
         // TODO this should use the modifier syntax; until it has better Node support
-        "searchPattern": "/^ *> !?\\[!?((?!NOTE)[Nn][Oo][Tt][Ee]|(?!WARNING)[Ww][Aa][Rr][Nn][Ii][Nn][Gg]|(?!CALLOUT)[Cc][Aa][Ll][Ll][Oo][Uu][Tt])\\]\\n|^ *> (?!\\[!)!?\\[!?(NOTE|WARNING|CALLOUT)\\]\\n/gm",
+        "searchPattern": "/^ *> !?\\[!?((?!NOTE)[Nn][Oo][Tt][Ee]|(?!WARNING)[Ww][Aa][Rr][Nn][Ii][Nn][Gg]|(?!CALLOUT)[Cc][Aa][Ll][Ll][Oo][Uu][Tt])\\]\\n|^ *> (?!\\[!)!?\\[!?(NOTE|WARNING|CALLOUT)\\]\\n|^ *> \\[!(NOTE|WARNING|CALLOUT)\\](?!\\n)/gm",
         "searchScope": "text",
       },
       {

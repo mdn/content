@@ -126,7 +126,7 @@ See more examples on the [demo page](https://mdn.github.io/css-examples/counter-
 
 ### Ready-made counter styles
 
-Find a collection of over 100 `counter-style` code snippets in the [Ready-made Counter Styles](https://www.w3.org/TR/predefined-counter-styles/) document. This document provides counters that meet the needs of languages and cultures around the world.
+Find a collection of over 100 `counter-style` code snippets in the [Ready-made Counter Styles](https://w3c.github.io/predefined-counter-styles/) document. This document provides counters that meet the needs of languages and cultures around the world.
 
 The [Counter styles converter](https://r12a.github.io/app-counters/) pulls from this list to test and create copy and paste code for counter styles.
 

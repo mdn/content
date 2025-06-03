@@ -56,7 +56,7 @@ try {
   await writer.close(); // wait for all chunks to be written
   console.log("All chunks written");
 } catch (error) {
-  console.error("Stream error: " + error);
+  console.error("Stream error: ", error);
 }
 ```
 

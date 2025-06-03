@@ -3,12 +3,10 @@ title: "Element: beforematch event"
 short-title: beforematch
 slug: Web/API/Element/beforematch_event
 page-type: web-api-event
-status:
-  - experimental
 browser-compat: api.Element.beforematch_event
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef}}
 
 An element receives a **`beforematch`** event when it is in the _hidden until found_ state and the browser is about to reveal its content because the user has found the content through the "find in page" feature or through fragment navigation.
 
@@ -16,10 +14,10 @@ An element receives a **`beforematch`** event when it is in the _hidden until fo
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("beforematch", (event) => {});
+```js-nolint
+addEventListener("beforematch", (event) => { })
 
-onbeforematch = (event) => {};
+onbeforematch = (event) => { }
 ```
 
 ## Event type
@@ -30,20 +28,20 @@ A generic {{domxref("Event")}}.
 
 The HTML [`hidden`](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden) attribute accepts a value `until-found`: when this value is specified, the element is hidden but its content will be accessible to the browser's "find in page" feature or to fragment navigation. When these features cause a scroll to an element in a "hidden until found" subtree, the browser will:
 
-- fire a `beforematch` event on the hidden element
-- remove the `hidden` attribute from the element
-- scroll to the element
+1. Fire a `beforematch` event on the hidden element
+2. Remove the `hidden` attribute from the element
+3. Scroll to the element
 
 ## Examples
 
 ### Using beforematch
 
-In this example we have:
+In this example, we have two {{HTMLElement("div")}} elements.
+The first is visible, while the second has the `hidden="until-found"` and `id="until-found-box"` attributes.
+The element with a `until-found-box` id has a dotted red border and a gray background.
 
-- Two {{HTMLElement("div")}} elements. The first is not hidden, while the second has `hidden="until-found"` and `id="until-found-box"` attributes.
-- A link whose target is the `"until-found-box"` fragment.
-
-We also have some JavaScript that listens for the `beforematch` event firing on the hidden until found element. The event handler changes the text content of the box.
+We also have a link that targets the `"until-found-box"` fragment and JavaScript that listens for the `beforematch` event firing on that hidden element.
+The event handler changes the text content of the box to illustrate an action that can occur when the _hidden until found_ state is about to be removed.
 
 #### HTML
 
@@ -69,11 +67,11 @@ div {
   padding: 1rem;
   font-size: 2rem;
 }
-```
 
-```css hidden
-#until-found-box {
-  scroll-margin-top: 200px;
+div#until-found-box {
+  color: red;
+  border: 5px dotted red;
+  background-color: lightgray;
 }
 ```
 
@@ -96,7 +94,8 @@ document.querySelector("#reset").addEventListener("click", () => {
 
 #### Result
 
-Clicking the "Go to hidden content" button navigates to the hidden-until-found element. The `beforematch` event fires, the text content is updated, and then the element's content is displayed.
+Clicking the "Go to hidden content" button navigates to the element in the _hidden until found_ state.
+The `beforematch` event fires, the text content is updated, and then the element's content is displayed (the `hidden` attribute is removed).
 
 To run the example again, click "Reload".
 

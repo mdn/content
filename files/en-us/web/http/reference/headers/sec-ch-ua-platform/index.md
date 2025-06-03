@@ -1,5 +1,6 @@
 ---
-title: Sec-CH-UA-Platform
+title: Sec-CH-UA-Platform header
+short-title: Sec-CH-UA-Platform
 slug: Web/HTTP/Reference/Headers/Sec-CH-UA-Platform
 page-type: http-header
 status:

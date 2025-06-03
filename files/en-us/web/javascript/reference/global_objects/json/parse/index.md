@@ -68,9 +68,9 @@ Similar to the `replacer` parameter of {{jsxref("JSON.stringify()")}}, for array
 If you return another value from `reviver`, that value will completely replace the originally parsed value. This even applies to the root value. For example:
 
 ```js
-const transformedObj1 = JSON.parse('[1,5,{"s":1}]', (key, value) => {
-  return typeof value === "object" ? undefined : value;
-});
+const transformedObj1 = JSON.parse('[1,5,{"s":1}]', (key, value) =>
+  typeof value === "object" ? undefined : value,
+);
 
 console.log(transformedObj1); // undefined
 ```

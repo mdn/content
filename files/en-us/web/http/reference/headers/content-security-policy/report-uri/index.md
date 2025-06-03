@@ -1,5 +1,6 @@
 ---
-title: "CSP: report-uri"
+title: "Content-Security-Policy: report-uri directive"
+short-title: report-uri
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/report-uri
 page-type: http-csp-directive
 status:
@@ -55,7 +56,8 @@ Content-Security-Policy: report-uri <uri> <uri>;
 
 The report JSON object is sent via an HTTP `POST` operation with a {{HTTPHeader("Content-Type")}} of `application/csp-report`.
 
-> [!NOTE] Violation reports should be considered attacker-controlled data.
+> [!NOTE]
+> Violation reports should be considered attacker-controlled data.
 > The content should be properly sanitized before storing or rendering.
 > This is particularly true of the [script-sample](#script-sample) property, if supplied.
 

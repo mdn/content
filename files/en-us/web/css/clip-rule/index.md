@@ -117,10 +117,10 @@ We include an SVG with two `<clipPath>` elements that define star shapes, which 
 <svg height="0" width="0">
   <defs>
     <clipPath id="star1">
-      <path d="M100,0 42,180 196,70 4,70 158,180z">
+      <path d="M100,0 42,180 196,70 4,70 158,180z" />
     </clipPath>
     <clipPath id="star2">
-      <path d="M100,0 42,180 196,70 4,70 158,180z">
+      <path d="M100,0 42,180 196,70 4,70 158,180z" />
     </clipPath>
   </defs>
 </svg>
@@ -282,6 +282,7 @@ In this case, because the outer part of the path moves in a clockwise (left-to-r
 
 - {{cssxref("fill-rule")}}
 - {{cssxref("clip-path")}}
+- [Introduction to CSS clipping](/en-US/docs/Web/CSS/CSS_masking/Clipping)
 - [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
 - SVG {{SVGAttr("clip-rule")}} attribute
 - SVG {{SVGElement("clipPath")}} element

@@ -56,18 +56,18 @@ To create a single link in a sidebar, you include a YAML list item containing a 
 
 ```yaml
 sidebar:
-  - /MDN/Changelog
+  - /MDN/Writing_guidelines/Page_structures/Sidebars
 ```
 
-The URL is relative to the `docs` directory in the MDN URL structure, so for example, `/MDN/Changelog` would generate a link to https://developer.mozilla.org/en-US/docs/MDN/Changelog. The system automatically uses the linked page's document title as the link text.
+The URL is relative to the `docs` directory in the MDN URL structure, so for example, `/MDN/Writing_guidelines/Page_structures/Sidebars` would generate a link to the current page. The system automatically uses the linked page's document title as the link text.
 If the page has a `short-title` key in the front matter, that will be used for the sidebar link display text instead.
 
-If you want to use custom link text that's not a document's `title` or `short-title`, you need to include two keys inside the list item — `title`, which contains the custom link text, and `link`, which contains the relative URL as before. The following example would create a link to the MDN Web Docs changelog as before, but with custom link text of "Our changelog":
+If you want to use custom link text that's not a document's `title` or `short-title`, you need to include two keys inside the list item — `title`, which contains the custom link text, and `link`, which contains the relative URL as before. The following example would create a link to the current page as before, but with custom link text of "Writing sidebars":
 
 ```yaml
 sidebar:
-  - title: Our changelog
-    link: /MDN/Changelog
+  - title: Writing sidebars
+    link: /MDN/Writing_guidelines/Page_structures/Sidebars
 ```
 
 ### Section titles
@@ -114,7 +114,6 @@ sidebar:
         children:
           - /MDN/Community
           - /MDN/Community/Getting_started
-          - /MDN/Community/Security_vulnerability_response
       - /MDN/Community/Open_source_etiquette
       - /MDN/Community/Communication_channels
       - /MDN/Community/Discussions

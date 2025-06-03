@@ -1,5 +1,6 @@
 ---
-title: "Permissions-Policy: midi"
+title: "Permissions-Policy: midi directive"
+short-title: midi
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/midi
 page-type: http-permissions-policy-directive
 status:

@@ -1,5 +1,6 @@
 ---
 title: "ARIA: row role"
+short-title: row
 slug: Web/Accessibility/ARIA/Reference/Roles/row_role
 page-type: aria-role
 spec-urls:

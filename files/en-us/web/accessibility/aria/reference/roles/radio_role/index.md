@@ -1,5 +1,6 @@
 ---
 title: "ARIA: radio role"
+short-title: radio
 slug: Web/Accessibility/ARIA/Reference/Roles/radio_role
 page-type: aria-role
 sidebar: accessibilitysidebar
@@ -207,27 +208,23 @@ A lot of JavaScript is required to make radio buttons out of non-semantic HTML.
 
 const radioGroups = document.querySelectorAll('[role="radiogroup"]');
 
-for (let i = 0; i < radioGroups.length; i++) {
-  const radios = radioGroups[i].querySelectorAll("[role=radio]");
-  for (let j = 0; j < radios.length; j++) {
-    radios[j].addEventListener("keydown", function () {
-      handleKeydown();
-    });
-    radios[j].addEventListener("click", function () {
-      handleClick();
-    });
+for (const radioGroup of radioGroups) {
+  const radios = radioGroup.querySelectorAll("[role=radio]");
+  for (const radio of radios) {
+    radio.addEventListener("keydown", handleKeydown);
+    radio.addEventListener("click", handleClick);
   }
 }
 
 // handle mouse and touch events
-let handleClick = function (event) {
+function handleClick(event) {
   setChecked(this);
   event.stopPropagation();
   event.preventDefault();
-};
+}
 
 // handle key presses
-let handleKeydown = function (event) {
+function handleKeydown(event) {
   switch (event.code) {
     case "Space":
     case "Enter":
@@ -249,12 +246,12 @@ let handleKeydown = function (event) {
   }
   event.stopPropagation();
   event.preventDefault();
-};
+}
 
 // when a radio is selected, give it focus, set checked to true;
 // ensure all other radios in radio group are not checked
 
-setChecked = function () {
+function setChecked() {
   // uncheck all the radios in group
   // iterated through all the radios in radio group
   // eachRadio.tabIndex = -1;
@@ -264,7 +261,7 @@ setChecked = function () {
   // thisRadio.tabIndex = 0;
   // thisRadio.focus();
   // set the value of the radioGroup to the value of the currently selected radio
-};
+}
 ```
 
 <!-- {{EmbedLiveSample("Examples", 230, 250)}} -->

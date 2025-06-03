@@ -1,5 +1,6 @@
 ---
 title: "ARIA: radiogroup role"
+short-title: radiogroup
 slug: Web/Accessibility/ARIA/Reference/Roles/radiogroup_role
 page-type: aria-role
 spec-urls:
