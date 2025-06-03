@@ -18,9 +18,9 @@ The HTML specification defines the following set of standard metadata names:
 
 To provide translations, use multiple `<meta>` tags with the `lang` attribute for each language:
 
-  ```html
-  <!-- English name -->
-  <meta name="application-name" content="Weather Wizard" lang="en" />
+```html
+<!-- English name -->
+<meta name="application-name" content="Weather Wizard" lang="en" />
 
   <!-- Spanish translation -->
   <meta name="application-name" content="Mago del Clima" lang="es" />
