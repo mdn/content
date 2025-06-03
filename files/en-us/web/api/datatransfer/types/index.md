@@ -28,6 +28,7 @@ This example shows the use of the `types` and
   <li id="i2" draggable="true">Drag Item 2 to the Drop Zone</li>
 </ul>
 <div id="target">Drop Zone</div>
+<pre id="output"></pre>
 ```
 
 ```css
@@ -41,12 +42,17 @@ div {
 ```
 
 ```js
+const output = document.getElementById("output");
+function log(msg) {
+  output.textContent += `${msg}\n`;
+}
+
 document.querySelectorAll("li").forEach((item) => {
   item.addEventListener("dragstart", dragstart_handler);
 });
 
 function dragstart_handler(ev) {
-  console.log(`dragStart: target.id = ${ev.target.id}`);
+  log(`dragStart: target.id = ${ev.target.id}`);
 
   // Add this element's id to the drag payload so the drop handler will
   // know which element to add to its tree
@@ -57,7 +63,7 @@ function dragstart_handler(ev) {
 const target = document.getElementById("target");
 
 target.addEventListener("drop", (ev) => {
-  console.log(`drop: target.id = ${ev.target.id}`);
+  log(`drop: target.id = ${ev.target.id}`);
   ev.preventDefault();
 
   // Get the id of the target and add the moved element to the target's DOM
@@ -66,24 +72,24 @@ target.addEventListener("drop", (ev) => {
 
   // Print each format type
   for (let i = 0; i < ev.dataTransfer.types.length; i++) {
-    console.log(`… types[${i}] = ${ev.dataTransfer.types[i]}`);
+    log(`… types[${i}] = ${ev.dataTransfer.types[i]}`);
   }
 
   // Print each item's "kind" and "type"
   for (let i = 0; i < ev.dataTransfer.items.length; i++) {
-    console.log(
+    log(
       `… items[${i}].kind = ${ev.dataTransfer.items[i].kind}; type = ${ev.dataTransfer.items[i].type}`,
     );
   }
 });
 
 target.addEventListener("dragover", (ev) => {
-  console.log("dragOver");
   ev.preventDefault();
-  // Set the dropEffect to move
   ev.dataTransfer.dropEffect = "move";
 });
 ```
+
+{{EmbedLiveSample("examples", "", 400)}}
 
 ## Specifications
 
