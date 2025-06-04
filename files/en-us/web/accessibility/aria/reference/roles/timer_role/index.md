@@ -39,7 +39,7 @@ If a time limit needs to be in place, for example, for security reasons, the use
 
 ### A basic timer
 
-This example has a timer that counts down from 30 seconds to 0 seconds. The whole time display region has `role="time"`, and also [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic) to indicate that the region should be announced as a whole, not just the changed regions. Due to the implicit `aria-live="off"`, changes are not announced by default; we manually set it to `"assertive"` when the timer reaches 10 seconds remaining so it gets announced once.
+This example has a timer that counts down from 30 seconds to 0 seconds. The whole time display region has `role="timer"`, and also [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic) to indicate that the region should be announced as a whole, not just the changed regions. Due to the implicit `aria-live="off"`, changes are not announced by default; we manually change the role to `"alert"` when the timer reaches 10 seconds remaining so it gets announced once.
 
 ```html
 <div id="countdown" role="timer" aria-atomic="true">
@@ -79,10 +79,8 @@ function decrement() {
   }
 
   if (newNumber === 10) {
-    liveRegion.setAttribute("aria-live", "assertive");
     liveRegion.setAttribute("role", "alert");
     setTimeout(() => {
-      liveRegion.removeAttribute("aria-live");
       liveRegion.setAttribute("role", "timer");
     }, 999);
   }
