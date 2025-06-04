@@ -22,7 +22,7 @@ The **Observable API** provides a mechanism for handling an asynchronous stream 
 > [!NOTE]
 > You can also convert objects such as [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) and [Iterables](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) into observables using the static {{domxref("Observable.from_static", "Observable.from()")}} method.
 
-Observables can be thought of as more powerful event listeners that integrate with {{domxref("EventTarget")}}. They improve event handling code in a similar way to how promises improved on callbacks, simplifying code by reducing the need for nested blocks.
+Observables can be thought of as more powerful event listeners that integrate with {{domxref("EventTarget")}}. They improve event handling code in a similar way to how [promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) improved on callbacks, simplifying code by reducing the need for nested blocks.
 
 Observables have several methods that return a new observable, and these methods can be chained together to create a pipeline.
 

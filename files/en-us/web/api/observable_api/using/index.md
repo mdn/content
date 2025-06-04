@@ -81,13 +81,13 @@ Try moving the mouse over the top of the example; the coordinates are printed to
 
 ## The observable lifecycle
 
-Observables, like Promises, get an initializing callback upon construction which controls what values the observable emits. For developer-created custom observables (created using the `Observable()` constructor) you pass this callback in manually, whereas for platform-returned ones (created using `EventTarget.when()`), the platform constructs the Observable with an internal callback that runs when you subscribe the observable to the event stream using `subscribe()`.
+Observables, like Promises, get an initializing callback upon construction which controls what values the observable emits. For developer-created custom observables (created using the `Observable()` constructor) you pass this callback in manually, whereas for platform-returned ones (created using `EventTarget.when()`), the platform constructs the observable with an internal callback that runs when you subscribe the observable to the event stream using `subscribe()`.
 
 The initializing callback's argument is a {{domxref("Subscriber")}} object, which has the following methods available on it that are called at different points in the observable lifecycle:
 
 - `next()`: Called whenever an event is fired. This can be called any number of times.
-- `complete()`: Called when the pipeline has been successfully completed and no more data will be sent.
-- `error()`: Called when the pipeline has been completed with an error.
+- `complete()`: Called when the stream has been successfully completed and no more data will be sent.
+- `error()`: Called when the stream has been completed with an error.
 - `addTeardown()`: Called at the end of the observer's lifecycle after it has completed or been unsubscribed, to clean up any resources relevant to the subscription.
 
 With a subscription set up, the observable can signal any number of events to the `Subscriber` via the `next()` callback, optionally followed by a single call to the `complete()` or `error()` callback, signaling that the stream of data is finished.
@@ -601,7 +601,7 @@ canvas
 Inside the `flatMap()` callback, we do two things:
 
 1. Define a value called `mouseUp` that contains the criteria for stopping subscription to a series of `mousemove` events — namely a `<canvas>` `mouseup` observable — we want to unsubscribe from `mousemove` events when a `mouseup` event is fired on the `<canvas>`. We also chain an {{domxref("Observable.finally()")}} call onto the end containing a reference to the `finishDraw()` function — so that when the subscription ends, this function is called, making the `<form>` appear again at the end of the process.
-2. Return a `<canvas>` `mousemove` observable, with a {{domxref("Observable.takeUntil()")}} call chained on the end that we pass the `mouseUp` value to. Returning this observable out of the `flatMap()` call effectively causes the `mousemove` observables to become part of the outer `mousedown` observable pipeline.
+2. Return a `<canvas>` `mousemove` observable, with a {{domxref("Observable.takeUntil()")}} call chained on the end that we pass the `mouseUp` value to. Returning this observable out of the `flatMap()` call effectively causes the inner `mousemove` observable pipeline to become part of the outer `mousedown` observable pipeline.
 
 The result is that we are subscribing to a `mousedown` observable but then responding to `mousemove` events that are made part of the main pipeline via the `flatMap()` call. And we are stopping subscription to the inner `mousemove` observable when a `mouseup` event is fired (after which we run the final `finishDraw()` function).
 
