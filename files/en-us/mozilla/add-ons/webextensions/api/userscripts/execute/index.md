@@ -11,11 +11,10 @@ Injects a user script defined in the `js` property into a target context (e.g., 
 
 ## Syntax
 
-``` js
+```js
 let executeUserScript = chrome.userScripts.execute(
-    injection // array of objects
+  injection, // array of objects
 );
-
 ```
 
 ### Parameters
@@ -29,11 +28,13 @@ A {{JSxRef("Promise")}} that consists of an array of {{WebExtAPIRef("userScripts
 
 ## Examples
 
-``` js
-await chrome.userScripts.execute([{
+```js
+await chrome.userScripts.execute([
+  {
     js: [{ code: "console.log('Hello world!');" }],
-    target: {tabId: 1}
-}]);
+    target: { tabId: 1 },
+  },
+]);
 ```
 
 ## Browser compatibility
