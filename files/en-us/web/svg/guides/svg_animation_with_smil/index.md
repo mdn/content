@@ -5,7 +5,7 @@ page-type: guide
 sidebar: svgref
 ---
 
-[Synchronized Multimedia Integration Language](https://www.w3.org/TR/REC-smil/) (SMIL) is an XML-based language for writing interactive multimedia presentations.
+[Synchronized Multimedia Integration Language](https://www.w3.org/TR/SMIL/) (SMIL) is an XML-based language for writing interactive multimedia presentations.
 Authors can use SMIL syntax in other XML-based languages to define the timing and layout of elements for animation.
 
 SMIL allows you to:
@@ -132,4 +132,4 @@ Same example as before with a curved path and following the direction of the pat
 
 - [SVG](/en-US/docs/Web/SVG)
 - [SVG Animation Specification](https://www.w3.org/TR/SVG/animate.html)
-- [SMIL Specification](https://www.w3.org/TR/REC-smil/)
+- [SMIL Specification](https://www.w3.org/TR/SMIL/)

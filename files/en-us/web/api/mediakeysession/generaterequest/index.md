@@ -20,9 +20,9 @@ generateRequest(initDataType, initData)
 
 - `initDataType`
   - : A string that specifies the format of the `initData` parameter. This must be one of the following values:
-    - `"cenc"`: The `initData` parameter uses the [`"cenc"`](https://www.w3.org/TR/eme-initdata-cenc/) format.
-    - `"keyids"`: The `initData` parameter uses the [`"keyids"`](https://www.w3.org/TR/eme-initdata-keyids/) format.
-    - `"webm"`: The `initData` parameter uses the [`"webm"`](https://www.w3.org/TR/eme-initdata-webm/) format.
+    - `"cenc"`: The `initData` parameter uses the [`"cenc"`](https://w3c.github.io/encrypted-media/format-registry/initdata/cenc.html) format.
+    - `"keyids"`: The `initData` parameter uses the [`"keyids"`](https://w3c.github.io/encrypted-media/format-registry/initdata/keyids.html) format.
+    - `"webm"`: The `initData` parameter uses the [`"webm"`](https://w3c.github.io/encrypted-media/format-registry/initdata/webm.html) format.
 - `initData`
 
   - : Initialization data for the request, in the format specified by `initDataType`. It is an instance of any of the following types:
