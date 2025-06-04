@@ -98922,10 +98922,6 @@
     "modified": "2020-10-15T22:18:20.836Z",
     "contributors": ["sideshowbarker", "bershanskiy", "Sheppy"]
   },
-  "Web/HTTP/Reference/Headers/Permissions-Policy/document-domain": {
-    "modified": "2020-10-15T22:11:41.981Z",
-    "contributors": ["bershanskiy", "chrisdavidmills", "sideshowbarker"]
-  },
   "Web/HTTP/Reference/Headers/Permissions-Policy/encrypted-media": {
     "modified": "2020-10-15T22:10:28.002Z",
     "contributors": ["mfuji09", "bershanskiy", "fscholz"]
@@ -125025,10 +125021,6 @@
       "rolfedh",
       "adithya_mani"
     ]
-  },
-  "Web/Security/Types_of_attacks": {
-    "modified": "2020-05-29T13:56:47.726Z",
-    "contributors": ["jswisher"]
   },
   "Web/Security/Weak_Signature_Algorithm": {
     "modified": "2019-03-23T23:07:20.873Z",

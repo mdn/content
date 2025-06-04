@@ -1,5 +1,6 @@
 ---
-title: "Permissions-Policy: cross-origin-isolated"
+title: "Permissions-Policy: cross-origin-isolated directive"
+short-title: cross-origin-isolated
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/cross-origin-isolated
 page-type: http-permissions-policy-directive
 status:

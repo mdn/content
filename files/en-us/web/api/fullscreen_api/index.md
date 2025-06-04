@@ -103,9 +103,7 @@ function toggleFullScreen(video) {
     video.requestFullscreen();
   } else {
     // Otherwise exit the full screen
-    if (document.exitFullscreen) {
-      document.exitFullscreen();
-    }
+    document.exitFullscreen?.();
   }
 }
 ```

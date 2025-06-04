@@ -1,5 +1,6 @@
 ---
-title: Want-Content-Digest
+title: Want-Content-Digest header
+short-title: Want-Content-Digest
 slug: Web/HTTP/Reference/Headers/Want-Content-Digest
 page-type: http-header
 spec-urls: https://datatracker.ietf.org/doc/html/rfc9530#section-4

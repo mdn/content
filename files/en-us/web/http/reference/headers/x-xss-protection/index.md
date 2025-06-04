@@ -1,5 +1,6 @@
 ---
-title: X-XSS-Protection
+title: X-XSS-Protection header
+short-title: X-XSS-Protection
 slug: Web/HTTP/Reference/Headers/X-XSS-Protection
 page-type: http-header
 status:

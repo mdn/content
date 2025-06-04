@@ -1,5 +1,6 @@
 ---
-title: Expect
+title: Expect header
+short-title: Expect
 slug: Web/HTTP/Reference/Headers/Expect
 page-type: http-header
 spec-urls: https://www.rfc-editor.org/rfc/rfc9110#field.expect

@@ -1,5 +1,6 @@
 ---
-title: "CSP: manifest-src"
+title: "Content-Security-Policy: manifest-src directive"
+short-title: manifest-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/manifest-src
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.manifest-src

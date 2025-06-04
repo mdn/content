@@ -1,5 +1,6 @@
 ---
-title: "Permissions-Policy: summarizer"
+title: "Permissions-Policy: summarizer directive"
+short-title: summarizer
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/summarizer
 page-type: http-permissions-policy-directive
 status:

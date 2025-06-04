@@ -20,7 +20,7 @@ In this example we add a new table to the page when a button is clicked.
 #### HTML
 
 ```html
-<input type="button" value="Generate a table" onclick="generateTable()" />
+<input type="button" value="Generate a table" />
 ```
 
 #### JavaScript
@@ -57,6 +57,10 @@ function generateTable() {
   // sets the border attribute of tbl to '2'
   tbl.setAttribute("border", "2");
 }
+
+document
+  .querySelector("input[type='button']")
+  .addEventListener("click", generateTable);
 ```
 
 ```css hidden
@@ -150,10 +154,7 @@ In this example we change the background color of a paragraph when a button is c
 
 ```html
 <body>
-  <input
-    type="button"
-    value="Set paragraph background color"
-    onclick="setBackground()" />
+  <input type="button" value="Set paragraph background color" />
   <p>hi</p>
   <p>hello</p>
 </body>
@@ -172,6 +173,8 @@ function setBackground() {
   // set the inline style
   secondParagraph.style.background = "red";
 }
+
+document.querySelector("input").addEventListener("click", setBackground);
 ```
 
 #### Result
@@ -257,9 +260,9 @@ The final state for the modified object tree looks like this:
 
 ![Creating and appending a new node element to the object tree text structure](sample2d.jpg)
 
-## Creating a table dynamically (back to Sample1.html)
+## Creating a table dynamically
 
-For the rest of this article we will continue working with sample1.html. The following figure shows the table object tree structure for the table created in the sample.
+The following figure shows the table object tree structure for the table created in the sample.
 
 ### Reviewing the HTML Table structure
 
@@ -267,62 +270,50 @@ For the rest of this article we will continue working with sample1.html. The fol
 
 ### Creating element nodes and inserting them into the document tree
 
-The basic steps to create the table in sample1.html are:
+The basic steps to create the table are:
 
 - Get the body object (first item of the document object).
 - Create all the elements.
-- Finally, append each child according to the table structure (as in the above figure). The following source code is a commented version for the sample1.html.
+- Finally, append each child according to the table structure (as in the above figure).
 
 > [!NOTE]
-> At the end of the `start` function, there is a new line of code. The table's `border` property was set using another DOM method, `setAttribute()`. `setAttribute()` has two arguments: the attribute name and the attribute value. You can set any attribute of any element using the `setAttribute` method.
+> At the end of the script, there is a new line of code. The table's `border` property was set using another DOM method, `setAttribute()`. `setAttribute()` has two arguments: the attribute name and the attribute value. You can set any attribute of any element using the `setAttribute` method.
 
-```html
-<html lang="en">
-  <head>
-    <title>
-      Sample code - Traversing an HTML Table with JavaScript and DOM Interfaces
-    </title>
-    <script>
-      function start() {
-        // get the reference for the body
-        const myBody = document.getElementsByTagName("body")[0];
+```js
+// get the reference for the body
+const myBody = document.getElementsByTagName("body")[0];
 
-        // creates <table> and <tbody> elements
-        const myTable = document.createElement("table");
-        const myTableBody = document.createElement("tbody");
+// creates <table> and <tbody> elements
+const myTable = document.createElement("table");
+const myTableBody = document.createElement("tbody");
 
-        // creating all cells
-        for (let j = 0; j < 3; j++) {
-          // creates a <tr> element
-          const myCurrentRow = document.createElement("tr");
+// creating all cells
+for (let j = 0; j < 3; j++) {
+  // creates a <tr> element
+  const myCurrentRow = document.createElement("tr");
 
-          for (let i = 0; i < 4; i++) {
-            // creates a <td> element
-            const myCurrentCell = document.createElement("td");
-            // creates a Text Node
-            const currentText = document.createTextNode(
-              `cell is row ${j}, column ${i}`,
-            );
-            // appends the Text Node we created into the cell <td>
-            myCurrentCell.appendChild(currentText);
-            // appends the cell <td> into the row <tr>
-            myCurrentRow.appendChild(myCurrentCell);
-          }
-          // appends the row <tr> into <tbody>
-          myTableBody.appendChild(myCurrentRow);
-        }
+  for (let i = 0; i < 4; i++) {
+    // creates a <td> element
+    const myCurrentCell = document.createElement("td");
+    // creates a Text Node
+    const currentText = document.createTextNode(
+      `cell is row ${j}, column ${i}`,
+    );
+    // appends the Text Node we created into the cell <td>
+    myCurrentCell.appendChild(currentText);
+    // appends the cell <td> into the row <tr>
+    myCurrentRow.appendChild(myCurrentCell);
+  }
+  // appends the row <tr> into <tbody>
+  myTableBody.appendChild(myCurrentRow);
+}
 
-        // appends <tbody> into <table>
-        myTable.appendChild(myTableBody);
-        // appends <table> into <body>
-        myBody.appendChild(myTable);
-        // sets the border attribute of myTable to 2;
-        myTable.setAttribute("border", "2");
-      }
-    </script>
-  </head>
-  <body onload="start()"></body>
-</html>
+// appends <tbody> into <table>
+myTable.appendChild(myTableBody);
+// appends <table> into <body>
+myBody.appendChild(myTable);
+// sets the border attribute of myTable to 2;
+myTable.setAttribute("border", "2");
 ```
 
 ## Manipulating the table with DOM and CSS
@@ -341,17 +332,17 @@ Then, to display the results in this example, it creates a new text node whose c
 > If your object is a text node, you can use the data attribute and retrieve the text content of the node.
 
 ```js
-myBody = document.getElementsByTagName("body")[0];
-myTable = myBody.getElementsByTagName("table")[0];
-myTableBody = myTable.getElementsByTagName("tbody")[0];
-myRow = myTableBody.getElementsByTagName("tr")[1];
-myCell = myRow.getElementsByTagName("td")[1];
+const myBody = document.getElementsByTagName("body")[0];
+const myTable = myBody.getElementsByTagName("table")[0];
+const myTableBody = myTable.getElementsByTagName("tbody")[0];
+const myRow = myTableBody.getElementsByTagName("tr")[1];
+const myCell = myRow.getElementsByTagName("td")[1];
 
 // first item element of the childNodes list of myCell
-myCellText = myCell.childNodes[0];
+const myCellText = myCell.childNodes[0];
 
 // content of currentText is the data content of myCellText
-currentText = document.createTextNode(myCellText.data);
+const currentText = document.createTextNode(myCellText.data);
 myBody.appendChild(currentText);
 ```
 
@@ -365,37 +356,30 @@ myTable.getAttribute("border");
 
 ### Hiding a column by changing style properties
 
-Once you have the object in your JavaScript variable, you can set `style` properties directly. The following code is a modified version of sample1.html in which each cell of the second column is hidden and each cell of the first column is changed to have a red background. Note that the `style` property was set directly.
+Once you have the object in your JavaScript variable, you can set `style` properties directly. The following code is a modified version in which each cell of the second column is hidden and each cell of the first column is changed to have a red background. Note that the `style` property was set directly.
 
-```html
-<html lang="en">
-  <body onload="start()"></body>
-  <script>
-    function start() {
-      const myBody = document.getElementsByTagName("body")[0];
-      const myTable = document.createElement("table");
-      const myTableBody = document.createElement("tbody");
+```js
+const myBody = document.getElementsByTagName("body")[0];
+const myTable = document.createElement("table");
+const myTableBody = document.createElement("tbody");
 
-      for (let row = 0; row < 2; row++) {
-        const myCurrentRow = document.createElement("tr");
-        for (let col = 0; col < 2; col++) {
-          const myCurrentCell = document.createElement("td");
-          const currentText = document.createTextNode(`cell is: ${row}${col}`);
-          myCurrentCell.appendChild(currentText);
-          myCurrentRow.appendChild(myCurrentCell);
-          // set the cell background color
-          // if the column is 0. If the column is 1 hide the cell
-          if (col === 0) {
-            myCurrentCell.style.background = "rgb(255 0 0)";
-          } else {
-            myCurrentCell.style.display = "none";
-          }
-        }
-        myTableBody.appendChild(myCurrentRow);
-      }
-      myTable.appendChild(myTableBody);
-      myBody.appendChild(myTable);
+for (let row = 0; row < 2; row++) {
+  const myCurrentRow = document.createElement("tr");
+  for (let col = 0; col < 2; col++) {
+    const myCurrentCell = document.createElement("td");
+    const currentText = document.createTextNode(`cell is: ${row}${col}`);
+    myCurrentCell.appendChild(currentText);
+    myCurrentRow.appendChild(myCurrentCell);
+    // set the cell background color
+    // if the column is 0. If the column is 1 hide the cell
+    if (col === 0) {
+      myCurrentCell.style.background = "rgb(255 0 0)";
+    } else {
+      myCurrentCell.style.display = "none";
     }
-  </script>
-</html>
+  }
+  myTableBody.appendChild(myCurrentRow);
+}
+myTable.appendChild(myTableBody);
+myBody.appendChild(myTable);
 ```

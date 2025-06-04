@@ -1,5 +1,6 @@
 ---
-title: Permissions-Policy
+title: Permissions-Policy header
+short-title: Permissions-Policy
 slug: Web/HTTP/Reference/Headers/Permissions-Policy
 page-type: http-header
 status:
@@ -121,10 +122,6 @@ You can specify
 
   - : Controls whether or not the current document is permitted to use the {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} method to capture screen contents. When this policy is disabled, the promise returned by `getDisplayMedia()` will reject with a `NotAllowedError` {{DOMxRef("DOMException")}} if permission is not obtained to capture the display's contents.
 
-- {{httpheader('Permissions-Policy/document-domain','document-domain')}} {{Experimental_Inline}}
-
-  - : Controls whether the current document is allowed to set {{domxref("document.domain")}}. When this policy is disabled, attempting to set {{domxref("document.domain")}} will fail and cause a `SecurityError` {{domxref("DOMException")}} to be thrown.
-
 - {{httpheader('Permissions-Policy/encrypted-media', 'encrypted-media')}} {{Experimental_Inline}}
 
   - : Controls whether the current document is allowed to use the [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API) (EME). When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("Navigator.requestMediaKeySystemAccess()")}} will reject with a `SecurityError` {{domxref("DOMException")}}.
@@ -157,6 +154,10 @@ You can specify
 - {{httpheader('Permissions-Policy/idle-detection','idle-detection')}} {{Experimental_Inline}}
 
   - : Controls whether the current document is allowed to use the {{domxref("Idle Detection API", "Idle Detection API", "", "nocode")}} to detect when users are interacting with their devices, for example to report "available"/"away" status in chat applications.
+
+- {{httpheader("Permissions-Policy/language-detector", "language-detector")}} {{Experimental_Inline}}
+
+  - : Controls access to the language detection functionality of the [Translator and Language Detector APIs](/en-US/docs/Web/API/Translator_and_Language_Detector_APIs).
 
 - {{httpheader('Permissions-Policy/local-fonts','local-fonts')}} {{Experimental_Inline}}
 
@@ -209,6 +210,10 @@ You can specify
 - {{httpheader("Permissions-Policy/storage-access", "storage-access")}} {{Experimental_Inline}}
 
   - : Controls whether a document loaded in a third-party context (i.e., embedded in an {{htmlelement("iframe")}}) is allowed to use the {{domxref("Storage Access API", "Storage Access API", "", "nocode")}} to request access to unpartitioned cookies.
+
+- {{httpheader("Permissions-Policy/translator", "translator")}} {{Experimental_Inline}}
+
+  - : Controls access to the translation functionality of the [Translator and Language Detector APIs](/en-US/docs/Web/API/Translator_and_Language_Detector_APIs).
 
 - {{httpheader("Permissions-Policy/summarizer", "summarizer")}} {{Experimental_Inline}}
 

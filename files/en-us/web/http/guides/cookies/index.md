@@ -90,7 +90,7 @@ You can specify an expiration date or time period after which the cookie should 
 - _Session_ cookies — cookies without a `Max-Age` or `Expires` attribute – are deleted when the current session ends. The browser defines when the "current session" ends, and some browsers use _session restoring_ when restarting. This can cause session cookies to last indefinitely.
 
   > [!NOTE]
-  > If your site authenticates users, it should regenerate and resend session cookies, even ones that already exist, whenever a user authenticates. This approach helps prevent [session fixation attacks](/en-US/docs/Web/Security/Types_of_attacks#session_fixation), where a third-party can reuse a user's session.
+  > If your site authenticates users, it should regenerate and resend session cookies, even ones that already exist, whenever a user authenticates. This approach helps prevent [session fixation](https://owasp.org/www-community/attacks/Session_fixation) attacks, where a third-party can reuse a user's session.
 
 There are some techniques designed to recreate cookies after they're deleted. These are known as "zombie" cookies. These techniques violate the principles of user [privacy](#privacy_and_tracking) and control, may violate [data privacy regulations](#cookie-related_regulations), and could expose a website using them to legal liability.
 
@@ -143,7 +143,7 @@ Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly
 
 - A cookie with the `Secure` attribute is only sent to the server with an encrypted request over the HTTPS protocol. It's never sent with unsecured HTTP (except on localhost), which means {{Glossary("MitM", "man-in-the-middle")}} attackers can't access it easily. Insecure sites (with `http:` in the URL) can't set cookies with the `Secure` attribute. However, don't assume that `Secure` prevents all access to sensitive information in cookies. For example, someone with access to the client's hard disk (or JavaScript if the `HttpOnly` attribute isn't set) can read and modify the information.
 
-- A cookie with the `HttpOnly` attribute can't be accessed by JavaScript, for example using {{domxref("Document.cookie")}}; it can only be accessed when it reaches the server. Cookies that persist user sessions for example should have the `HttpOnly` attribute set — it would be really insecure to make them available to JavaScript. This precaution helps mitigate cross-site scripting ([XSS](/en-US/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss)) attacks.
+- A cookie with the `HttpOnly` attribute can't be accessed by JavaScript, for example using {{domxref("Document.cookie")}}; it can only be accessed when it reaches the server. Cookies that persist user sessions for example should have the `HttpOnly` attribute set — it would be really insecure to make them available to JavaScript. This precaution helps mitigate cross-site scripting ([XSS](/en-US/docs/Web/Security/Attacks/XSS)) attacks.
 
 > [!NOTE]
 > Depending on the application, you may want to use an opaque identifier that the server looks up rather than storing sensitive information directly in cookies, or investigate alternative authentication/confidentiality mechanisms such as [JSON Web Tokens](https://jwt.io/).
@@ -219,14 +219,14 @@ If no `SameSite` attribute is set, the cookie is treated as `Lax` by default.
 
 Because of the design of the cookie mechanism, a server can't confirm that a cookie was set from a secure origin or even tell _where_ a cookie was originally set.
 
-A vulnerable application on a subdomain can set a cookie with the `Domain` attribute, which gives access to that cookie on all other subdomains. This mechanism can be abused in a _session fixation_ attack. See [session fixation](/en-US/docs/Web/Security/Types_of_attacks#session_fixation) for primary mitigation methods.
+An application on a subdomain can set a cookie with the `Domain` attribute, which gives access to that cookie on all other subdomains. This mechanism can be abused in a [session fixation](https://owasp.org/www-community/attacks/Session_fixation) attack.
 
 As a [defense-in-depth measure](<https://en.wikipedia.org/wiki/Defense_in_depth_(computing)>), however, you can use _cookie prefixes_ to assert specific facts about the cookie. Two prefixes are available:
 
 - `__Host-`: If a cookie name has this prefix, it's accepted in a {{HTTPHeader("Set-Cookie")}} header only if it's also marked with the `Secure` attribute, was sent from a secure origin, does _not_ include a `Domain` attribute, and has the `Path` attribute set to `/`. In other words, the cookie is _domain-locked_.
 - `__Secure-`: If a cookie name has this prefix, it's accepted in a {{HTTPHeader("Set-Cookie")}} header only if it's marked with the `Secure` attribute and was sent from a secure origin. This is weaker than the `__Host-` prefix.
 
-The browser will reject cookies with these prefixes that don't comply with their restrictions. This ensures that subdomain-created cookies with prefixes are either confined to a subdomain or ignored completely. As the application server only checks for a specific cookie name when determining if the user is authenticated or a CSRF token is correct, this effectively acts as a defense measure against session fixation.
+The browser will reject cookies with these prefixes that don't comply with their restrictions. This ensures that subdomain-created cookies with prefixes are either confined to a subdomain or ignored completely. As the application server only checks for a specific cookie name when determining if the user is authenticated or a CSRF token is correct, this effectively acts as a defense measure against [session fixation](https://owasp.org/www-community/attacks/Session_fixation).
 
 > [!NOTE]
 > On the server, the web application _must_ check for the full cookie name including the prefix. User agents _do not_ strip the prefix from the cookie before sending it in a request's {{HTTPHeader("Cookie")}} header.

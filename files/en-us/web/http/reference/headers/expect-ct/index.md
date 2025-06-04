@@ -1,5 +1,6 @@
 ---
-title: Expect-CT
+title: Expect-CT header
+short-title: Expect-CT
 slug: Web/HTTP/Reference/Headers/Expect-CT
 page-type: http-header
 status:

@@ -1,5 +1,6 @@
 ---
-title: "Permissions-Policy: bluetooth"
+title: "Permissions-Policy: bluetooth directive"
+short-title: bluetooth
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/bluetooth
 page-type: http-permissions-policy-directive
 status:

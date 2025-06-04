@@ -213,7 +213,7 @@ Another example of `aria-atomic` - an update/notification made as a result of a 
 ```html
 <div id="date-input">
   <label for="year">Year:</label>
-  <input type="text" id="year" value="1990" onblur="change(event)" />
+  <input type="text" id="year" value="1990" />
 </div>
 
 <div id="date-output" aria-atomic="true" aria-live="polite">
@@ -230,10 +230,10 @@ function change(event) {
     case "year":
       yearOut.textContent = event.target.value;
       break;
-    default:
-      return;
   }
 }
+
+document.getElementById("year").addEventListener("blur", change);
 ```
 
 Without `aria-atomic="true"` the screen reader announces only the changed value of year. With `aria-atomic="true"`, the screen reader announces "The set year is: _changed value_"

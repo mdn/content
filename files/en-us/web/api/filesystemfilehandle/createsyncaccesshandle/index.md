@@ -199,14 +199,14 @@ onmessage = function (e) {
     accessHandle.read(dataView, { at: 0 });
 
     // Log the current file contents to the console
-    console.log("File contents: " + textDecoder.decode(dataView));
+    console.log(`File contents: ${textDecoder.decode(dataView)}`);
 
     // Flush the changes
     accessHandle.flush();
   }
 
   // Log the size of the file to the console
-  console.log("Size: " + size);
+  console.log(`Size: ${size}`);
 };
 ```
 

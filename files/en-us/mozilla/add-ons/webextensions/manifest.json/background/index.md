@@ -205,7 +205,7 @@ To illustrate, this is an example of a cross-browser extension that supports `sc
 And, background.js contains:
 
 ```js
-if (typeof browser == "undefined") {
+if (typeof browser === "undefined") {
   // Chrome does not support the browser namespace yet.
   globalThis.browser = chrome;
 }

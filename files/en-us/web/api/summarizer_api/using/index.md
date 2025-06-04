@@ -18,7 +18,7 @@ The first step in getting the browser AI model to output a summary is to create 
 const summarizer = await Summarizer.create({
   sharedContext:
     "A general summary to help a user decide if the text is worth reading",
-  type: "tl;dr",
+  type: "tldr",
   length: "short",
   format: "markdown",
   expectedInputLanguages: ["en-US"],
@@ -26,7 +26,7 @@ const summarizer = await Summarizer.create({
 });
 ```
 
-The {{domxref("Summarizer.sharedContext", "sharedContext")}} option provides a string that helps the AI model write a more suitable summary for the context the text is being used in, while the {{domxref("Summarizer.type", "type")}} specifies what kind of summary you want to provide, like key bullet points or a "tl;dr" summary.
+The {{domxref("Summarizer.sharedContext", "sharedContext")}} option provides a string that helps the AI model write a more suitable summary for the context the text is being used in, while the {{domxref("Summarizer.type", "type")}} specifies what kind of summary you want to provide, like key bullet points or a "tldr" summary.
 
 We also specify the desired {{domxref("Summarizer.length", "length")}}, output {{domxref("Summarizer.format", "format")}}, {{domxref("Summarizer.expectedInputLanguages", "expectedInputLanguages")}}, and desired {{domxref("Summarizer.outputLanguage", "outputLanguage")}}. If the input and output languages are not specified, the language of the input text is auto-detected, and the output language will match the input language.
 
@@ -41,7 +41,7 @@ Before creating a `Summarizer`, you can check whether your desired configuration
 
 ```js
 const availability = await Summarizer.availability({
-  type: "tl;dr",
+  type: "tldr",
   length: "short",
   format: "markdown",
   expectedInputLanguages: ["en-US"],
@@ -111,9 +111,9 @@ You can use this event to expose loading progress data:
 const summarizer = await Summarizer.create({
   sharedContext:
     "A general summary to help a user decide if the text is worth reading",
-  type: "tl;dr",
+  type: "tldr",
   length: "short",
-  monitor: (monitor) => {
+  monitor(monitor) {
     monitor.addEventListener("downloadprogress", (e) => {
       console.log(`Downloaded ${Math.floor(e.loaded * 100)}%`);
     });
@@ -133,7 +133,7 @@ We then test to see if the individual input usage for that string is great than 
 const summarizer = await Summarizer.create({
   sharedContext:
     "A general summary to help a user decide if the text is worth reading",
-  type: "tl;dr",
+  type: "tldr",
   length: "short",
 });
 
@@ -174,7 +174,7 @@ In our markup, we first define an input {{htmlelement("form")}} that allows the 
       <option value="headline">Headline</option>
       <option value="key-points">Key points</option>
       <option value="teaser">Teaser</option>
-      <option value="tl;dr" selected>tl;dr</option>
+      <option value="tldr" selected>tldr</option>
     </select>
   </div>
   <div>
@@ -292,9 +292,8 @@ async function handleSubmission(e) {
   } else if (formData.get("summaryText").length < 100) {
     summaryOutput.innerHTML = `<span class="error">I'm not trying to summarize something that short!</span>`;
     return;
-  } else {
-    summaryOutput.innerHTML = "";
   }
+  summaryOutput.innerHTML = "";
 
   try {
     const summarizer = await Summarizer.create({

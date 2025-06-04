@@ -90,7 +90,7 @@ async function* makeTextFileLineIterator(fileURL) {
   let { value: chunk, done: readerDone } = await reader.read();
   chunk = chunk ? utf8Decoder.decode(chunk, { stream: true }) : "";
 
-  let re = /\r\n|\n|\r/gm;
+  let re = /\r?\n/g;
   let startIndex = 0;
 
   for (;;) {

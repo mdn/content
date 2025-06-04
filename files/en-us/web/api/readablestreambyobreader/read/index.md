@@ -154,7 +154,7 @@ class MockHypotheticalSocket {
     const resultObj = {};
     resultObj["bytesRead"] = 0;
 
-    return new Promise((resolve /*, reject*/) => {
+    return new Promise((resolve /*, reject */) => {
       if (this.data_read >= this.max_data) {
         // Out of data
         resolve(resultObj);
@@ -189,9 +189,7 @@ class MockHypotheticalSocket {
   }
 
   // Dummy close function
-  close() {
-    return;
-  }
+  close() {}
 
   // Return random number bytes in this call of socket
   getNumberRandomBytesSocket() {

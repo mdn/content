@@ -1,5 +1,6 @@
 ---
-title: CONNECT
+title: CONNECT request method
+short-title: CONNECT
 slug: Web/HTTP/Reference/Methods/CONNECT
 page-type: http-method
 browser-compat: http.methods.CONNECT

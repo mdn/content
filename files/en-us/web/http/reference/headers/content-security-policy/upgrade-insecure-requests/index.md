@@ -1,5 +1,6 @@
 ---
-title: "CSP: upgrade-insecure-requests"
+title: "Content-Security-Policy: upgrade-insecure-requests directive"
+short-title: upgrade-insecure-requests
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/upgrade-insecure-requests
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.upgrade-insecure-requests

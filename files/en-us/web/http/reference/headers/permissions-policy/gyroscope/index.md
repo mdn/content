@@ -1,5 +1,6 @@
 ---
-title: "Permissions-Policy: gyroscope"
+title: "Permissions-Policy: gyroscope directive"
+short-title: gyroscope
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/gyroscope
 page-type: http-permissions-policy-directive
 status:

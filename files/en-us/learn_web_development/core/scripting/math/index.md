@@ -89,7 +89,7 @@ The [`Number`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) objec
 For example, to round your number to a fixed number of decimal places, use the [`toFixed()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) method. Type the following lines into your browser's [console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html):
 
 ```js
-const lotsOfDecimal = 1.766584958675746364;
+const lotsOfDecimal = 1.7665849587;
 lotsOfDecimal;
 const twoDecimalPlaces = lotsOfDecimal.toFixed(2);
 twoDecimalPlaces;

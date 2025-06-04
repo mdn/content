@@ -1,5 +1,6 @@
 ---
-title: "CSP: child-src"
+title: "Content-Security-Policy: child-src directive"
+short-title: child-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/child-src
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.child-src

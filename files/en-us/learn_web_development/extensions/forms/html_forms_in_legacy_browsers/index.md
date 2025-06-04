@@ -72,7 +72,7 @@ The {{HTMLElement("input")}} element can make things a little difficult if you w
 <input type="button" value="click me" />
 ```
 
-If we remove the border on all inputs, can we restore the default appearance on input buttons only?
+If we remove the border on all inputs, we can restore the default appearance for input buttons only with the global CSS {{cssxref('revert')}} value.
 
 ```css
 input {
@@ -81,21 +81,10 @@ input {
   border: 1px solid #ccc;
 }
 input[type="button"] {
-  /* This does NOT restore the default rendering */
-  border: none;
-}
-input[type="button"] {
-  /* These don't either! Actually there is no standard way to do it in any browser */
-  border: auto;
-  border: initial;
-}
-input[type="button"] {
-  /* This will come the closest to restoring default rendering. */
+  /* Revert the last border declaration */
   border: revert;
 }
 ```
-
-See the global CSS {{cssxref('revert')}} value for more information.
 
 ### Let go of CSS
 

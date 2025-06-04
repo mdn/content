@@ -229,10 +229,7 @@ function listener(details) {
   };
 
   filter.onstop = (event) => {
-    let combinedLength = 0;
-    for (const buffer of data) {
-      combinedLength += buffer.length;
-    }
+    const combinedLength = data.reduce((acc, buffer) => acc + buffer.length, 0);
     const combinedArray = new Uint8Array(combinedLength);
     let writeOffset = 0;
     for (const buffer of data) {

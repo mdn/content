@@ -1,5 +1,6 @@
 ---
-title: Server
+title: Server header
+short-title: Server
 slug: Web/HTTP/Reference/Headers/Server
 page-type: http-header
 browser-compat: http.headers.Server

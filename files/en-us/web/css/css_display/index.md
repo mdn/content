@@ -2,7 +2,9 @@
 title: CSS display
 slug: Web/CSS/CSS_display
 page-type: css-module
-spec-urls: https://drafts.csswg.org/css-display/
+spec-urls:
+  - https://drafts.csswg.org/css-display/
+  - https://drafts.csswg.org/css-display-4/
 ---
 
 {{CSSRef}}
@@ -16,6 +18,8 @@ The **CSS display** module defines how the CSS formatting box tree is generated 
 - {{CSSxRef("display")}}
 - {{CSSxRef("order")}}
 - {{CSSxRef("visibility")}}
+- {{cssxref("reading-flow")}}
+- {{cssxref("reading-order")}}
 
 ### Data types
 
@@ -33,6 +37,7 @@ The **CSS display** module defines how the CSS formatting box tree is generated 
 - {{glossary("Block-level content")}}
 - [Containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block)
 - [Flow layout](/en-US/docs/Web/CSS/CSS_display/Flow_layout)
+- {{glossary("Reading order")}}
 - {{glossary("Replaced elements")}}
 - {{glossary("Ruby")}}
 

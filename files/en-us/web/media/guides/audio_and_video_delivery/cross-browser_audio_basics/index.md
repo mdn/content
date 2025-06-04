@@ -422,8 +422,8 @@ Consider this snippet of HTML:
 
 <div id="controls">
   <span id="loading">loading</span>
-  <button id="play" style="display:none">play</button>
-  <button id="pause" style="display:none">pause</button>
+  <button id="play">play</button>
+  <button id="pause">pause</button>
 </div>
 <div id="progress">
   <div id="bar"></div>
@@ -448,53 +448,56 @@ Styled like so:
   background-color: green;
   width: 0;
 }
+
+#play,
+#pause {
+  display: none; /* hide until media is ready */
+}
 ```
 
 Now let's wire this thing up with JavaScript:
 
 ```js
-window.onload = () => {
-  const audio = document.getElementById("my-audio");
-  const play = document.getElementById("play");
-  const pause = document.getElementById("pause");
-  const loading = document.getElementById("loading");
-  const bar = document.getElementById("bar");
+const audio = document.getElementById("my-audio");
+const play = document.getElementById("play");
+const pause = document.getElementById("pause");
+const loading = document.getElementById("loading");
+const bar = document.getElementById("bar");
 
-  function displayControls() {
-    loading.style.display = "none";
-    play.style.display = "block";
-  }
+function displayControls() {
+  loading.style.display = "none";
+  play.style.display = "block";
+}
 
-  // Check that the media is ready before displaying the controls
-  if (audio.paused) {
+// Check that the media is ready before displaying the controls
+if (audio.paused) {
+  displayControls();
+} else {
+  // not ready yet - wait for canplay event
+  audio.addEventListener("canplay", () => {
     displayControls();
-  } else {
-    // not ready yet - wait for canplay event
-    audio.addEventListener("canplay", () => {
-      displayControls();
-    });
-  }
-
-  play.addEventListener("click", () => {
-    audio.play();
-    play.style.display = "none";
-    pause.style.display = "block";
   });
+}
 
-  pause.addEventListener("click", () => {
-    audio.pause();
-    pause.style.display = "none";
-    play.style.display = "block";
-  });
+play.addEventListener("click", () => {
+  audio.play();
+  play.style.display = "none";
+  pause.style.display = "block";
+});
 
-  // Display progress
-  audio.addEventListener("timeupdate", () => {
-    // Sets the percentage
-    bar.style.width = `${Math.floor(
-      (audio.currentTime / audio.duration) * 100,
-    )}%`;
-  });
-};
+pause.addEventListener("click", () => {
+  audio.pause();
+  pause.style.display = "none";
+  play.style.display = "block";
+});
+
+// Display progress
+audio.addEventListener("timeupdate", () => {
+  // Sets the percentage
+  bar.style.width = `${Math.floor(
+    (audio.currentTime / audio.duration) * 100,
+  )}%`;
+});
 ```
 
 You should end up with something like this:

@@ -12,7 +12,7 @@ The **`Promise.any()`** static method takes an iterable of promises as input and
 {{InteractiveExample("JavaScript Demo: Promise.any()")}}
 
 ```js interactive-example
-const promise1 = Promise.reject(0);
+const promise1 = Promise.reject(new Error("error"));
 const promise2 = new Promise((resolve) => setTimeout(resolve, 100, "quick"));
 const promise3 = new Promise((resolve) => setTimeout(resolve, 500, "slow"));
 
@@ -58,7 +58,7 @@ Also, unlike {{jsxref("Promise.race()")}}, which returns the first _settled_ val
 
 ```js
 const pErr = new Promise((resolve, reject) => {
-  reject("Always fails");
+  reject(new Error("Always fails"));
 });
 
 const pSlow = new Promise((resolve, reject) => {
@@ -83,7 +83,7 @@ Promise.any([pErr, pSlow, pFast]).then((value) => {
 
 ```js
 const failure = new Promise((resolve, reject) => {
-  reject("Always fails");
+  reject(new Error("Always fails"));
 });
 
 Promise.any([failure]).catch((err) => {
