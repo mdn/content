@@ -1,5 +1,6 @@
 ---
 title: Experimental features in Firefox
+short-title: Experimental features
 slug: Mozilla/Firefox/Experimental_features
 page-type: guide
 ---
@@ -350,27 +351,7 @@ None.
 
 ## JavaScript
 
-### Temporal API
-
-The `withCalendar()` method for [`PlainDate`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/withCalendar), [`PlainDateTime`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime/withCalendar), and [`ZonedDateTime`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/withCalendar) objects within the [Temporal object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal) currently have the following [`calendar` types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types) disabled in all versions other than Firefox Nightly ([Firefox bug 1912511](https://bugzil.la/1912511) and [Firefox bug 1954138](https://bugzil.la/1954138)):
-
-- `islamic`
-- `islamic-rgsa`
-- `islamic-umalqura`
-
-- `javascript.options.experimental.temporal`
-  - : Set to `true` to enable.
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 139           | Yes                 |
-| Developer Edition | 137           | No                  |
-| Beta              | 137           | No                  |
-| Release           | 137           | No                  |
-
-### Atomics
-
-#### Atomics.waitAsync()
+### Atomics.waitAsync()
 
 The {{jsxref("Atomics.waitAsync()")}} static method waits asynchronously on a shared memory location and returns an object representing the result of the operation.
 It is non-blocking and usable on the main thread. ([Firefox bug 1467846](https://bugzil.la/1467846)).

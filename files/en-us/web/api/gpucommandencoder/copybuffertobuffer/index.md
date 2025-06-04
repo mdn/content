@@ -16,6 +16,8 @@ The **`copyBufferToBuffer()`** method of the
 ## Syntax
 
 ```js-nolint
+copyBufferToBuffer(source, destination)
+copyBufferToBuffer(source, destination, size)
 copyBufferToBuffer(source, sourceOffset, destination, destinationOffset, size)
 ```
 
@@ -23,14 +25,17 @@ copyBufferToBuffer(source, sourceOffset, destination, destinationOffset, size)
 
 - `source`
   - : The {{domxref("GPUBuffer")}} to copy from.
-- `sourceOffset`
+- `sourceOffset` {{optional_inline}}
   - : The offset, in bytes, into the `source` to begin copying from.
 - `destination`
   - : The {{domxref("GPUBuffer")}} to copy to.
-- `destinationOffset`
+- `destinationOffset` {{optional_inline}}
   - : The offset, in bytes, into the `destination` to begin copying to.
-- `size`
+- `size` {{optional_inline}}
   - : The number of bytes to copy.
+
+> [!NOTE]
+> The `sourceOffset` and `destinationOffset` can be omitted if you are copying part of the source buffer at a `0` offset in both the source and destination buffers. The `sourceOffset`, `destinationOffset`, and `size` can be omitted if you are copying the entire source buffer to the destination buffer.
 
 ### Return value
 
@@ -49,14 +54,14 @@ The following criteria must be met when calling **`copyBufferToBuffer()`**, othe
 
 ## Examples
 
-In our [basic compute demo](https://mdn.github.io/dom-examples/webgpu-compute-demo/), we use `copyBufferToBuffer()` to copy the contents of our `output` buffer to the `stagingBuffer`.
+In our [basic compute demo](https://mdn.github.io/dom-examples/webgpu-compute-demo/), we use `copyBufferToBuffer()` to copy the contents of our `outputBuffer` to the `stagingBuffer`.
 
 ```js
 // …
 
 // Create an output buffer to read GPU calculations to, and a staging buffer to be mapped for JavaScript access
 
-const output = device.createBuffer({
+const outputBuffer = device.createBuffer({
   size: BUFFER_SIZE,
   usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_SRC,
 });
@@ -75,12 +80,15 @@ const commandEncoder = device.createCommandEncoder();
 
 // Copy output buffer to staging buffer
 commandEncoder.copyBufferToBuffer(
-  output,
+  outputBuffer,
   0, // Source offset
   stagingBuffer,
   0, // Destination offset
   BUFFER_SIZE,
 );
+
+// Since we are copying the entire buffer, this can be shortened to
+// commandEncoder.copyBufferToBuffer(outputBuffer, stagingBuffer);
 
 // …
 ```
