@@ -76,7 +76,7 @@ You can load nodes from an external SVG file via the `<use>` element by specifyi
 Historically, the URL fragment was always required, even if you just wanted to load the entire SVG document. In such a case, the `id` would be included on the SVG root element:
 
 ```html
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" id="my-fragment">
+<svg xmlns="http://www.w3.org/2000/svg" id="my-fragment">
   <circle cx="150" cy="100" r="80" fill="green" />
 </svg>
 ```
