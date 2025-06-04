@@ -10,19 +10,6 @@ The `scope_extensions` manifest member is used to extend the scope of a web app 
 
 ## Syntax
 
-Array of strings:
-
-```json
-"scope_extensions": [
-  "https://support.example.com",
-  "https://shop.example.com",
-  "https://example.de",
-  "https://example.co.uk"
-]
-```
-
-Array of objects:
-
 ```json
 "scope_extensions": [
   { "type": "origin", "origin": "https://support.example.com"},
@@ -36,12 +23,12 @@ Array of objects:
 
 - `scope_extensions`
 
-  - : An array of strings or an array of objects each containing a `type` property and an `origin` property.
+  - : An array of objects each containing the following properties:
 
-    - In the array of strings, each string represents an origin that the web app wishes to extend its scope to.
-    - In the array of objects, the value of `type` is always `origin`, indicating an origin entry, and the value of `origin` is a string representing an origin that the web app wishes to extend its scope to.
-
-    The array format can be considered a shorthand form of the object format; the object version allows for future extension by adding fields other than `origin`.
+    - `type`
+      - : A string defining the type of scope extension. This is currently always `origin`, but future extensions may add other types.
+    - `origin`
+      - : A string representing an origin that the web app wishes to extend its scope to.
 
 ## Description
 
@@ -55,10 +42,10 @@ The main web app (for example, `https://example.com`) needs to include the origi
 
 ```json
 "scope_extensions": [
-  "https://example.jp",
-  "https://my-example.com",
-  "https://my-partner-site.com",
-  "https://example.slack.com"
+  { "type": "origin", "origin": "https://example.jp"},
+  { "type": "origin", "origin": "https://my-example.com"},
+  { "type": "origin", "origin": "https://my-partner-site.com"},
+  { "type": "origin", "origin": "https://example.slack.com"}
 ]
 ```
 
