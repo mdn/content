@@ -4,11 +4,10 @@ slug: Web/API/SVGDiscardElement
 page-type: web-api-interface
 status:
   - deprecated
-  - experimental
 browser-compat: api.SVGDiscardElement
 ---
 
-{{APIRef("SVG")}}{{deprecated_header}}{{SeeCompatTable}}
+{{APIRef("SVG")}}{{deprecated_header}}
 
 The **`SVGDiscardElement`** interface is an interface for the deprecated `<discard>` element.
 
