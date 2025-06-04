@@ -8,9 +8,9 @@ page-type: guide
 {{FirefoxSidebar}}
 
 This page lists Firefox's experimental and partially-implemented features, including evolving or proposed web platform standards.
-Each entry below includes information on the builds in which the features are included, whether they are activated by default or not, and which **preference** can be used to activate or deactivate them.
-The description of each feature also includes links to relevant [bugzilla bugs](https://bugzilla.mozilla.org) which implement or enable the feature.
-This allows you to test features before they are released for feedback and experimentation.
+Each entry below includes information about the builds in which a feature is included (Nightly, Beta, Developer Edition, or Release), whether it is activated by default or not, and the name of the **preference** you can use to activate or configure the feature.
+The description of each feature also includes links to relevant [Bugzilla bugs](https://bugzilla.mozilla.org) that implement or enable the feature.
+This information allows you to try out experimental features and provide feedback before they are officially released.
 
 In terms of lifecycle, new features usually appear first in [Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly), where they are often enabled by default for early feedback and testing.
 If no major problems are found, they are included in [Beta](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and [Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) pre-release builds. Finally, approved features ship in the [stable Release](https://www.mozilla.org/en-US/firefox/new/) channel.
