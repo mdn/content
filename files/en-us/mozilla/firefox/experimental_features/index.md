@@ -691,7 +691,7 @@ The [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) provides supp
 
 - `dom.payments.request.enabled`
   - : Set to `true` to enable.
-- ``dom.payments.request.supportedRegions`
+- `dom.payments.request.supportedRegions`
   - : Country codes as a comma-separated allowlist of regions (e.g., `US,CA`).
 
 | Release channel   | Version added | Enabled by default? |
