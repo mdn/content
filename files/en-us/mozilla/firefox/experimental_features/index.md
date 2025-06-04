@@ -12,12 +12,12 @@ Each entry below includes information on the builds in which the features are in
 The description of each feature also includes links to relevant [bugzilla bugs](https://bugzilla.mozilla.org) which implement or enable the feature.
 This allows you to test features before they are released for feedback and experimentation.
 
-In terms of lifecycle, new features usually appear first in [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/), where they are often enabled by default.
-If there's no major problems detected, the changes then land in [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/), before finally being shipped in the stable [release version](https://www.mozilla.org/en-US/firefox/new/).
+In terms of lifecycle, new features usually appear first in [Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly), where they are often enabled by default for early feedback and testing.
+If no major problems are found, they are included in [Beta](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and [Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) pre-release builds. Finally, approved features ship in the [stable Release](https://www.mozilla.org/en-US/firefox/new/) channel.
 When a feature is enabled by default in a release, it is no longer considered experimental and is removed from this page.
 
-To enable these features, change the associated **preference** at `about:config` in the Firefox address bar.
-Depending on the feature, restarting the browser might be necessary for the change in preferences to be successfully applied.
+To enable these features, enter `about:config` in the Firefox address bar, search for the associated **preference** and change its value, which is usually a toggle between `true` and `false`.
+Depending on the feature, you might need to restart the browser for the change to take effect.
 Check the [Firefox Configuration Editor](https://support.mozilla.org/en-US/kb/about-config-editor-firefox) support article for more information about managing preferences in Firefox.
 
 ## HTML
