@@ -5,6 +5,9 @@ page-type: guide
 sidebar: privacy
 ---
 
+This page describes how Firefox's built-in tracking protection works and how loading of third-party content is affected.
+Developers should consider this information to ensure compatibility when this feature is enabled by visitors.
+
 ## What is tracking protection?
 
 Firefox Desktop and Firefox for Android include built-in tracking protection. In Private Browsing windows (tabs, in Firefox for Android), Firefox will block content loaded from domains that track users across sites (i.e., via [third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies)).
