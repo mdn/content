@@ -31,9 +31,12 @@ sidebar:
       - link: /en-US/observatory
         title: HTTP Observatory
       - /Web/HTTP/Guides/Permissions_Policy
-      - /Web/HTTP/Guides/CSP
       - /Web/HTTP/Guides/Cross-Origin_Resource_Policy
       - /Web/HTTP/Guides/CORS
+      - type: listSubPages
+        path: /Web/HTTP/Guides/CSP
+        link: /Web/HTTP/Guides/CSP
+        details: closed
       - type: listSubPages
         path: /Web/HTTP/Guides/CORS/Errors
         link: /Web/HTTP/Guides/CORS/Errors
