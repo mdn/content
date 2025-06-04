@@ -53,7 +53,7 @@ console.log(ctx.lang);
 
 ### Demonstrating canvas context localization support
 
-In this example, we render a text string to a 2D canvas context in a particular font that has language-dependant ligatures. We allow the canvas context's language to be adjusted so you can see the difference in rendering.
+In this example, we render a text string to a 2D canvas context in a particular font that has language-dependent ligatures. We allow the canvas context's language to be adjusted so you can see the difference in rendering.
 
 #### HTML
 
