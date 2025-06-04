@@ -45,7 +45,7 @@ The two main ways to create an observable are as follows:
 - {{domxref("Observable.catch", "catch()")}} {{Experimental_Inline}}
   - : Fires an error callback if the previous pipeline stages throw an exception.
 - {{domxref("Observable.drop", "drop()")}} {{Experimental_Inline}}
-  - : Specifies a number of values that will be ignored when the resulting observable is reached in the pipeline, after which subsequent values will flow through to rest of the pipeline.
+  - : Specifies a number of values that will be dropped when the resulting observable is reached in the pipeline, after which subsequent values will flow through to rest of the pipeline.
 - {{domxref("Observable.filter", "filter()")}} {{Experimental_Inline}}
   - : Filters each value passed through the stream based on a condition. Those that don't fulfill the condition are ignored.
 - {{domxref("Observable.finally", "finally()")}} {{Experimental_Inline}}
@@ -59,7 +59,7 @@ The two main ways to create an observable are as follows:
 - {{domxref("Observable.switchMap", "switchMap()")}} {{Experimental_Inline}}
   - : ?
 - {{domxref("Observable.take", "take()")}} {{Experimental_Inline}}
-  - : Specifies a maximum number of values that can be passed through the the resulting observable, after which the stream is completed and no more data is sent.
+  - : Specifies a maximum number of values that can be passed through the resulting observable, after which the stream is completed and no more data is sent.
 - {{domxref("Observable.takeUntil", "takeUntil()")}} {{Experimental_Inline}}
   - : Specifies a condition under which an observable will unsubscribe from an event stream.
 
