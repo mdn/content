@@ -160,7 +160,7 @@ Content-Security-Policy:
   script-src 'nonce-416d1177-4d12-4e3b-b7c9-f6c409789fb8'
 ```
 
-The server then includes this value as the value of the `nonce` attribute of all the `<script>` and/or `<style>` tags that they intend to include in the document.
+The server then includes this value as the value of the `nonce` attribute of all the inline `<script>` and/or `<style>` tags that they intend to include in the document. It is important to note that nonces allow execution of inline `<script>` and `<style>` elements with a matching nonce, but have no effect on whether external resources are loaded.
 
 The browser compares the two values, and loads the resource only if they match. The idea is that even if an attacker can insert some JavaScript into the page, they won't know which nonce the server is going to use, so the browser will refuse to run the script.
 
@@ -175,7 +175,7 @@ Here's a snippet of [Express](/en-US/docs/Learn_web_development/Extensions/Serve
 ```js
 function content(nonce) {
   return `
-    <script nonce="${nonce}" src="/main.js"></script>
+    <script src="/main.js"></script>
     <script nonce="${nonce}">console.log("hello!");</script>
     <h1>Hello world</h1> 
     `;
@@ -188,10 +188,10 @@ app.get("/", (req, res) => {
 });
 ```
 
-On every request, the server generates a new nonce, inserts it into the CSP and into the {{htmlelement("script")}} tags in the returned document. Note that the server:
+On every request, the server generates a new nonce, inserts it into the CSP and into the inline {{htmlelement("script")}} tags in the returned document. Note that the server:
 
 - generates a new nonce for every request
-- can use nonces with both external and inline scripts
+- uses nonces only with inline scripts
 - uses the same nonce for all `<script>` tags in the document
 
 It's important that the server uses some kind of templating to insert nonces, and does not just insert them into all `<script>` tags: otherwise, the server might inadvertently insert nonces into scripts that were injected by an attacker.
