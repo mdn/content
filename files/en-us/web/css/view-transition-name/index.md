@@ -7,7 +7,7 @@ browser-compat: css.properties.view-transition-name
 
 {{CSSRef}}
 
-The **`view-transition-name`** [CSS](/en-US/docs/Web/CSS) property specifies the [view transition](/en-US/docs/Web/API/View_Transition_API) snapshot group that selected elements will participate in, which enables an element to be animated separately from the rest of the page during a view transition, or not animated at all.
+The **`view-transition-name`** [CSS](/en-US/docs/Web/CSS) property specifies the [view transition](/en-US/docs/Web/API/View_Transition_API) snapshot group that selected elements will participate in, which enables an element to be animated separately from the rest of the page during a view transition.
 
 ## Syntax
 
@@ -26,9 +26,9 @@ view-transition-name: match-element;
 - {{cssxref("custom-ident")}}
   - : An identifying name that causes the selected element to participate in a separate snapshot from the root snapshot. The `<custom-ident>` cannot be `auto`, `match-element`, or `none`.
 - `match-element`
-  - : The selected element is automatically given an unique identifying name based on its identity, which enables it to be animated separately from all other elements on the page. The name is an internal token representing the element, which is not visible to the web document.
+  - : The selected element is automatically given an unique identifying name based on its identity, which enables it to be snapshotted separately from all other elements on the page. The name is an internal token representing the element, which is not visible to the web document.
 - `none`
-  - : The selected element will not participate in a view transition, unless it has a parent element with a `view-transition-name` set, in which case it would be snapshotted as part of that element.
+  - : The selected element will not participate in a separate snapshot, unless it has a parent element with a `view-transition-name` set, in which case it will be snapshotted as part of that element.
 
 ## Description
 
@@ -94,7 +94,7 @@ li {
 }
 ```
 
-Because `match-element` assigns automatic `view-transition-name` values based on element identity, it can only be used for single-page view transitions. The auto-generated internal identifiers are not transferrable across different elements or documents.
+Because `match-element` assigns automatic `view-transition-name` values based on element identity, it can only be used for same-document view transitions. The auto-generated internal identifiers are not transferrable across different elements or documents.
 
 ## Formal definition
 

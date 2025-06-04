@@ -274,7 +274,7 @@ The `view-transition-name` property can take a unique {{cssxref("custom-ident")}
 
 It can also take keyword values of:
 
-- `none`: Causes the element to not participate in a view transitions.
+- `none`: Causes the element to not participate in a separate snapshot, unless it has a parent element with a `view-transition-name` set, in which case it will be snapshotted as part of that element.
 - `match-element`: Automatically sets unique `view-transition-name` values on all selected elements.
 
 ### Taking advantage of the default animation styles
