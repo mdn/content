@@ -20,7 +20,7 @@ Examples include:
 
 ## BCP 47 syntax
 
-The full BCP 47 syntax is in-depth enough to mark extremely specific language dialects, but most usage is much simpler.
+The full BCP 47 syntax is specified in {{rfc("5646")}}. It is capable of identifying extremely specific language dialects, but most usage is much simpler.
 
 A language tag is made of hyphen-separated _subtags_, where each subtag indicates a certain property of the language. The three most common subtags are:
 
