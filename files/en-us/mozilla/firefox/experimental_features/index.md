@@ -569,12 +569,6 @@ This adds the promise-based methods {{domxref("SourceBuffer.appendBufferAsync", 
 The `image.avif.compliance_strictness` preference can be used to control the _strictness_ applied when processing [AVIF](/en-US/docs/Web/Media/Guides/Formats/Image_types#avif_image) images.
 This allows Firefox users to display images that render on some other browsers, even if they are not strictly compliant.
 
-Permitted values are:
-
-- `0`: Accept images with specification violations in both recommendations ("should" language) and requirements ("shall" language), provided they can be safely or unambiguously interpreted.
-- `1` (default): Reject violations of requirements, but allow violations of recommendations.
-- `2`: Strict. Reject any violations in requirements or recommendations.
-
 | Release channel   | Version added | Default value |
 | ----------------- | ------------- | ------------- |
 | Nightly           | 92            | 1             |
@@ -583,7 +577,10 @@ Permitted values are:
 | Release           | 92            | 1             |
 
 - `image.avif.compliance_strictness`
-  - : Set to `true` to enable.
+  - : Numeric value indicating a _strictness_ level. Permitted values are:
+    - `0`: Permissive. Accept images with specification violations in both recommendations ("should" language) and requirements ("shall" language), provided they can be safely or unambiguously interpreted.
+    - `1` **(default)**: Mixed. Reject violations of requirements ("shall"), but allow violations of recommendations ("should").
+    - `2`: Strict. Reject any violations of specified requirements or recommendations.
 
 #### JPEG XL support
 
