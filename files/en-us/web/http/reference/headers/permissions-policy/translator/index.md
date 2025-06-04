@@ -1,5 +1,6 @@
 ---
-title: "Permissions-Policy: translator"
+title: "Permissions-Policy: translator directive"
+short-title: translator
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/translator
 page-type: http-permissions-policy-directive
 status:

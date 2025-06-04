@@ -376,7 +376,7 @@ const myMap = new Map();
 
 const keyString = "a string";
 const keyObj = {};
-const keyFunc = function () {};
+const keyFunc = () => {};
 
 // setting the values
 myMap.set(keyString, "value associated with 'a string'");
@@ -392,7 +392,7 @@ console.log(myMap.get(keyFunc)); // "value associated with keyFunc"
 
 console.log(myMap.get("a string")); // "value associated with 'a string'", because keyString === 'a string'
 console.log(myMap.get({})); // undefined, because keyObj !== {}
-console.log(myMap.get(function () {})); // undefined, because keyFunc !== function () {}
+console.log(myMap.get(() => {})); // undefined, because keyFunc !== () => {}
 ```
 
 ### Using NaN as Map keys

@@ -28,7 +28,7 @@ Summarizer.availability(options)
     - `expectedInputLanguages`
       - : An array of strings equal to [BCP 47 language tags](https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags) (as specified in [RFC 5646](https://datatracker.ietf.org/doc/html/rfc5646)) specifying the expected languages of the input text. Defaults to `["en"]`.
     - `expectedContextLanguages`
-      - : An array of strings equal to BCP 47 language tags specifying the expected languages of any provided context strings (either the [`sharedContext`](#sharedContext) passed to the `Summarizer`, or a `context` specified during a {{domxref("Summarizer.summarize", "summarize()")}} or {{domxref("Summarizer.summarizeStreaming", "summarizeStreaming()")}} call). Defaults to `["en"]`.
+      - : An array of strings equal to BCP 47 language tags specifying the expected languages of any provided context strings (either the [`sharedContext`](/en-US/docs/Web/API/Summarizer/create_static#sharedcontext) passed to the `Summarizer`, or a `context` specified during a {{domxref("Summarizer.summarize", "summarize()")}} or {{domxref("Summarizer.summarizeStreaming", "summarizeStreaming()")}} call). Defaults to `["en"]`.
     - `format`
       - : An enumerated value specifying the text {{domxref("Summarizer.format", "format")}} you want summaries returned in. Defaults to `markdown`.
     - `length`

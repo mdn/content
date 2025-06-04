@@ -70,37 +70,29 @@ A trick to make all content elements in a containing box the same size, is to gi
 ### Setting box-flex
 
 ```html
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8" />
-    <title>-moz-box-flex example</title>
-    <style>
-      div.example {
-        display: -moz-box;
-        display: -webkit-box;
-        border: 1px solid black;
-        width: 100%;
-      }
-      div.example > p:nth-child(1) {
-        -moz-box-flex: 1; /* Mozilla */
-        -webkit-box-flex: 1; /* WebKit */
-        border: 1px solid black;
-      }
-      div.example > p:nth-child(2) {
-        -moz-box-flex: 0; /* Mozilla */
-        -webkit-box-flex: 0; /* WebKit */
-        border: 1px solid black;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="example">
-      <p>I will expand to fill extra space</p>
-      <p>I will not expand</p>
-    </div>
-  </body>
-</html>
+<div class="example">
+  <p>I will expand to fill extra space</p>
+  <p>I will not expand</p>
+</div>
+```
+
+```css
+div.example {
+  display: -moz-box;
+  display: -webkit-box;
+  border: 1px solid black;
+  width: 100%;
+}
+div.example > p:nth-child(1) {
+  -moz-box-flex: 1; /* Mozilla */
+  -webkit-box-flex: 1; /* WebKit */
+  border: 1px solid black;
+}
+div.example > p:nth-child(2) {
+  -moz-box-flex: 0; /* Mozilla */
+  -webkit-box-flex: 0; /* WebKit */
+  border: 1px solid black;
+}
 ```
 
 ## Specifications

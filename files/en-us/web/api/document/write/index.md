@@ -42,7 +42,7 @@ None ({{jsxref("undefined")}}).
 
 ```html
 <p>Some original document content.</p>
-<button onclick="newContent()">Replace document content</button>
+<button>Replace document content</button>
 ```
 
 ```js
@@ -51,6 +51,8 @@ function newContent() {
   document.write("<h1>Out with the old, in with the new!</h1>");
   document.close();
 }
+
+document.querySelector("button").addEventListener("click", newContent);
 ```
 
 {{EmbedLiveSample("Examples")}}

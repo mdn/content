@@ -66,18 +66,20 @@ See [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Usin
 
 - {{cssxref("view-transition-name")}}
   - : Provides the selected element with a separate identifying name and causes it to participate in a separate view transition from the root view transition — or no view transition if the `none` value is specified.
+- {{cssxref("view-transition-class")}}
+  - : Provides an additional method of styling to selected elements that have a `view-transition-name`.
 
 ### Pseudo-elements
 
 - {{cssxref("::view-transition")}}
   - : The root of the view transitions overlay, which contains all view transitions and sits over the top of all other page content.
-- {{cssxref("::view-transition-group", "::view-transition-group()")}}
+- {{cssxref("::view-transition-group()")}}
   - : The root of a single view transition.
-- {{cssxref("::view-transition-image-pair", "::view-transition-image-pair()")}}
+- {{cssxref("::view-transition-image-pair()")}}
   - : The container for a view transition's old and new views — before and after the transition.
-- {{cssxref("::view-transition-old", "::view-transition-old()")}}
+- {{cssxref("::view-transition-old()")}}
   - : A static snapshot of the old view, before the transition.
-- {{cssxref("::view-transition-new", "::view-transition-new()")}}
+- {{cssxref("::view-transition-new()")}}
   - : A live representation of the new view, after the transition.
 
 ## Examples

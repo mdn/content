@@ -24,7 +24,7 @@ available, this string is empty.
 
 ## Examples
 
-This example creates a {{HTMLElement("audio")}} element, establishes an error handler
+This example creates an {{HTMLElement("audio")}} element, establishes an error handler
 for it, then lets the user click buttons to choose whether to assign a valid audio file
 or a missing file to the element's [`src`](/en-US/docs/Web/HTML/Reference/Elements/audio#src) attribute. The error
 handler outputs a message to a box onscreen describing the error, including both the

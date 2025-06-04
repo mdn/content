@@ -59,7 +59,7 @@ did not. To get around this `arguments.callee` was added so you could do
 However, the design of `arguments.callee` has multiple issues. The first problem is that the recursive call will get a different `this` value. For example:
 
 ```js
-const sillyFunction = function (recursed) {
+function sillyFunction(recursed) {
   if (this !== globalThis) {
     console.log("This is:", this);
   } else {
@@ -69,7 +69,7 @@ const sillyFunction = function (recursed) {
   if (!recursed) {
     return arguments.callee(true);
   }
-};
+}
 
 sillyFunction();
 // This is the global

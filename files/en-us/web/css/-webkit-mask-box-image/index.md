@@ -101,7 +101,7 @@ Border repeat styles, when included, are interpreted in the order of `<repeat-x>
 
 ```css
 .example-two {
-  -webkit-mask-box-image: url("logo.png") 100 100 0 0 round round;
+  -webkit-mask-box-image: url("logo.png") 100px 100px 0px 0px round round;
 }
 ```
 

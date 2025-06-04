@@ -5,7 +5,6 @@ Assemblée
 Aéro
 bezje
 canadien
-Català
 Ceci
 communiqué
 Congrès
@@ -62,7 +61,6 @@ oscuro
 partes
 partout
 pasado
-Português
 présenté
 puede
 quand
@@ -71,7 +69,6 @@ quinto
 Repetitio
 resh
 réservé
-résumé
 s'écrase
 schon
 Schonheit

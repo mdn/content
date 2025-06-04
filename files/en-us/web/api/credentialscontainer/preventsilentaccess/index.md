@@ -12,7 +12,7 @@ The **`preventSilentAccess()`** method of the {{domxref("CredentialsContainer")}
 For example, you might call this, after a user signs out of a website to ensure that they aren't automatically signed in on the next site visit.
 Mediation varies by origin, and is an added check point of browser stored credentials, informing a user of an account login status. This method is typically called after a user signs out of a website, ensuring this user's login information is not automatically passed on the next site visit.
 
-This method [generally has no effect](https://www.w3.org/TR/webauthn-2/#sctn-preventSilentAccessCredential) when using a {{domxref("PublicKeyCredential")}}; such authenticators typically require user interaction. However, it _is possible_ that certain authenticators may be excluded, which could otherwise have operated silently.
+When using a {{domxref("PublicKeyCredential")}}, this method generally has no effect; such authenticators typically require user interaction. However, it _is possible_ that certain authenticators may be excluded, which could otherwise have operated silently.
 
 Earlier versions of the spec called this method `requireUserMediation()`.
 The [Browser compatibility](/en-US/docs/Web/API/CredentialsContainer#browser_compatibility) section has support details.

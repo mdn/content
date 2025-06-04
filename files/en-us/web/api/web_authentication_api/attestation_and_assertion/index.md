@@ -19,7 +19,7 @@ The attestation is returned through the WebAuthn API as the [AuthenticatorAttest
   - [Authenticator data](/en-US/docs/Web/API/Web_Authentication_API/Authenticator_data) containing an `attestedCredentialData` field, which in turn contains the `credentialId` and `credentialPublicKey`. The `attestedCredentialData` is an optional field used in attestation. It is not included when used in the AuthenticatorAssertionResponse.
   - An attestation statement, which is optionally present depending on whether the relying party requests attestation. In general, relying parties aren't encouraged to request attestation, so it's more likely that this statement won't be present.
 
-Different devices have different attestation formats. The [pre-defined attestation formats in WebAuthn](https://www.w3.org/TR/webauthn/#defined-attestation-formats) are:
+Different devices have different attestation formats. The [pre-defined attestation formats in WebAuthn](https://w3c.github.io/webauthn/#sctn-defined-attestation-formats) are:
 
 - **Packed** - a generic attestation format that is commonly used by devices whose sole function is as a WebAuthn authenticator, such as security keys.
 - **TPM** - the Trusted Platform Module (TPM) is a set of specifications from the Trusted Platform Group (TPG). This attestation format is commonly found in desktop computers and is used by Windows Hello as its preferred attestation format.

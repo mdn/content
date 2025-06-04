@@ -528,7 +528,7 @@ In this example of square grid items, the grid tracks are auto-sized, taking the
 ```css hidden
 div {
   gap: 20px;
-  font-size: 1.1;
+  font-size: 1.1rem;
 }
 
 div div {

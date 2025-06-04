@@ -178,7 +178,7 @@ The latter contains some simple CSS to style our page, while the former contains
 </section>
 
 <script>
-...
+// JavaScript goes here
 </script>
 ```
 

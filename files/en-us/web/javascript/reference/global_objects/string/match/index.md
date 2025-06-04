@@ -135,17 +135,15 @@ When the `regexp` parameter is a string or a number, it is implicitly converted 
 
 ```js
 const str1 =
-  "NaN means not a number. Infinity contains -Infinity and +Infinity in JavaScript.";
+  "All numbers except NaN satisfy <= Infinity and >= -Infinity in JavaScript.";
 const str2 =
   "My grandfather is 65 years old and My grandmother is 63 years old.";
 const str3 = "The contract was declared null and void.";
 str1.match("number"); // "number" is a string. returns ["number"]
 str1.match(NaN); // the type of NaN is the number. returns ["NaN"]
 str1.match(Infinity); // the type of Infinity is the number. returns ["Infinity"]
-str1.match(+Infinity); // returns ["Infinity"]
 str1.match(-Infinity); // returns ["-Infinity"]
 str2.match(65); // returns ["65"]
-str2.match(+65); // A number with a positive sign. returns ["65"]
 str3.match(null); // returns ["null"]
 ```
 

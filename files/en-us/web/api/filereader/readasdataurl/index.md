@@ -43,16 +43,20 @@ None ({{jsxref("undefined")}}).
 #### HTML
 
 ```html
-<input type="file" onchange="previewFile()" /><br />
+<input type="file" /><br />
 <img src="" height="200" alt="Image preview" />
 ```
 
 #### JavaScript
 
 ```js
+const preview = document.querySelector("img");
+const fileInput = document.querySelector("input[type=file]");
+
+fileInput.addEventListener("change", previewFile);
+
 function previewFile() {
-  const preview = document.querySelector("img");
-  const file = document.querySelector("input[type=file]").files[0];
+  const file = fileInput.files[0];
   const reader = new FileReader();
 
   reader.addEventListener(

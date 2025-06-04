@@ -1,5 +1,6 @@
 ---
 title: Firefox release notes for developers
+short-title: Release notes for developers
 slug: Mozilla/Firefox/Releases
 page-type: landing-page
 ---

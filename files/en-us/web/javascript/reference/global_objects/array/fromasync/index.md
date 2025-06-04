@@ -12,19 +12,19 @@ The **`Array.fromAsync()`** static method creates a new, shallow-copied `Array` 
 ## Syntax
 
 ```js-nolint
-Array.fromAsync(arrayLike)
-Array.fromAsync(arrayLike, mapFn)
-Array.fromAsync(arrayLike, mapFn, thisArg)
+Array.fromAsync(items)
+Array.fromAsync(items, mapFn)
+Array.fromAsync(items, mapFn, thisArg)
 ```
 
 ### Parameters
 
-- `arrayLike`
+- `items`
   - : An async iterable, iterable, or array-like object to convert to an array.
 - `mapFn` {{optional_inline}}
   - : A function to call on every element of the array. If provided, every value to be added to the array is first passed through this function, and `mapFn`'s return value is added to the array instead (after being [awaited](/en-US/docs/Web/JavaScript/Reference/Operators/await)). The function is called with the following arguments:
     - `element`
-      - : The current element being processed in the array. Because all elements are first [awaited](/en-US/docs/Web/JavaScript/Reference/Operators/await), this value will never be a [thenable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables).
+      - : The current element being processed in the array. If `items` is a sync iterable or array-like object, then all elements are first [awaited](/en-US/docs/Web/JavaScript/Reference/Operators/await), and `element` will never be a [thenable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables). If `items` is an async iterable, then each yielded value is passed as-is.
     - `index`
       - : The index of the current element being processed in the array.
 - `thisArg` {{optional_inline}}
@@ -42,12 +42,21 @@ A new {{jsxref("Promise")}} whose fulfillment value is a new {{jsxref("Array")}}
 - [iterable objects](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) (objects such as {{jsxref("Map")}} and {{jsxref("Set")}}); or, if the object is not iterable,
 - array-like objects (objects with a `length` property and indexed elements).
 
-`Array.fromAsync()` iterates the async iterable in a fashion very similar to {{jsxref("Statements/for-await...of", "for await...of")}}. `Array.fromAsync()` is almost equivalent to {{jsxref("Array.from()")}} in terms of behavior, except the following:
+`Array.fromAsync()` iterates the async iterable in a fashion very similar to {{jsxref("Statements/for-await...of", "for await...of")}}. `Array.fromAsync(items)` is generally equivalent to the following code, if `items` is an async iterable or sync iterable:
+
+```js
+const result = [];
+for await (const element of items) {
+  result.push(element);
+}
+```
+
+`Array.fromAsync()` is almost equivalent to {{jsxref("Array.from()")}} in terms of behavior, except the following:
 
 - `Array.fromAsync()` handles async iterable objects.
 - `Array.fromAsync()` returns a {{jsxref("Promise")}} that fulfills to the array instance.
 - If `Array.fromAsync()` is called with a non-async iterable object, each element to be added to the array is first [awaited](/en-US/docs/Web/JavaScript/Reference/Operators/await).
-- If a `mapFn` is provided, its input and output are internally awaited.
+- If a `mapFn` is provided, its output is also internally awaited.
 
 `Array.fromAsync()` and {{jsxref("Promise.all()")}} can both turn an iterable of promises into a promise of an array. However, there are two key differences:
 
@@ -69,6 +78,31 @@ const asyncIterable = (async function* () {
 Array.fromAsync(asyncIterable).then((array) => console.log(array));
 // [0, 1, 2, 3, 4]
 ```
+
+When `items` is an async iterable where each result's `value` is also a promise, then those promises are added to the resulting array without being awaited. This is consistent with the behavior of `for await...of`.
+
+```js
+function createAsyncIter() {
+  let i = 0;
+  return {
+    [Symbol.asyncIterator]() {
+      return {
+        async next() {
+          if (i > 2) return { done: true };
+          i++;
+          return { value: Promise.resolve(i), done: false };
+        },
+      };
+    },
+  };
+}
+
+Array.fromAsync(createAsyncIter()).then((array) => console.log(array));
+// (3) [Promise, Promise, Promise]
+```
+
+> [!NOTE]
+> In practice, you will rarely encounter an async iterable that yields promises, because if you implement it using an [async generator function](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*), then the [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield) expression automatically unwraps promises.
 
 ### Array from a sync iterable
 
@@ -103,9 +137,9 @@ Array.fromAsync({
 // [1, 2, 3]
 ```
 
-### Using mapFn
+### Using mapFn with a sync iterable
 
-Both the input and output of `mapFn` are awaited internally by `Array.fromAsync()`.
+When `items` is a sync iterable or array-like object, both the input and output of `mapFn` are awaited internally by `Array.fromAsync()`.
 
 ```js
 function delayedValue(v) {
@@ -117,6 +151,26 @@ Array.fromAsync(
   (element) => delayedValue(element * 2),
 ).then((array) => console.log(array));
 // [2, 4, 6]
+```
+
+### Using mapFn with an async iterable
+
+When `items` is an async iterable, the input to `mapFn` is not awaited, but the output is. Using the same `createAsyncIter` function as above:
+
+```js
+Array.fromAsync(createAsyncIter(), async (element) => (await element) * 2).then(
+  (array) => console.log(array),
+);
+// [2, 4, 6]
+```
+
+Curiously, this means that `Array.fromAsync(createAsyncIter())` is not equivalent to `Array.fromAsync(createAsyncIter(), (element) => element)`, because the latter awaits each yielded value, while the former does not.
+
+```js
+Array.fromAsync(createAsyncIter(), (element) => element).then((array) =>
+  console.log(array),
+);
+// [1, 2, 3]
 ```
 
 ### Comparison with Promise.all()

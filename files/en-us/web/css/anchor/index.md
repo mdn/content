@@ -473,16 +473,16 @@ function makeDraggable(elem) {
   elem.addEventListener("keyup", (e) => {
     switch (e.key) {
       case "d":
-        elem.style.left = elem.offsetLeft + 5 + "px";
+        elem.style.left = `${elem.offsetLeft + 5}px`;
         break;
       case "a":
-        elem.style.left = elem.offsetLeft - 5 + "px";
+        elem.style.left = `${elem.offsetLeft - 5}px`;
         break;
       case "w":
-        elem.style.top = elem.offsetTop - 5 + "px";
+        elem.style.top = `${elem.offsetTop - 5}px`;
         break;
       case "s":
-        elem.style.top = elem.offsetTop + 5 + "px";
+        elem.style.top = `${elem.offsetTop + 5}px`;
         break;
     }
     e.preventDefault();
@@ -496,8 +496,8 @@ function makeDraggable(elem) {
     pos3 = e.offsetLeft;
     pos4 = e.offsetTop;
     // set the element's new position:
-    elem.style.top = elem.offsetTop - pos2 + "px";
-    elem.style.left = elem.offsetLeft - pos1 + "px";
+    elem.style.top = `${elem.offsetTop - pos2}px`;
+    elem.style.left = `${elem.offsetLeft - pos1}px`;
   }
 
   function dragMouseDown(e) {
@@ -516,8 +516,8 @@ function makeDraggable(elem) {
     pos3 = e.clientX;
     pos4 = e.clientY;
     // set the element's new position:
-    elem.style.top = elem.offsetTop - pos2 + "px";
-    elem.style.left = elem.offsetLeft - pos1 + "px";
+    elem.style.top = `${elem.offsetTop - pos2}px`;
+    elem.style.left = `${elem.offsetLeft - pos1}px`;
   }
 
   function closeDragElement() {

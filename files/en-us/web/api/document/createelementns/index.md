@@ -36,8 +36,7 @@ createElementNS(namespaceURI, qualifiedName, options)
 - `options` {{Optional_Inline}}
 
   - : An optional `ElementCreationOptions` object containing a single property named `is`, whose value is the tag name for a custom element previously defined using `customElements.define()`.
-    For backwards compatibility with previous versions of the [Custom Elements specification](https://www.w3.org/TR/custom-elements/),
-    some browsers will allow you to pass a string here instead of an object, where the string's value is the custom element's tag name.
+    For backwards compatibility, some browsers allow you to pass a string here instead of an object, where the string's value is the custom element's tag name.
     See [Extending native HTML elements](https://web.dev/articles/web-components) for more information on how to use this parameter.
 
     The new element will be given an `is` attribute whose value is the custom element's tag name. Custom elements are an experimental feature only available in some browsers.
@@ -67,18 +66,19 @@ elements from two different namespaces within a single document:
       onload="init()">
 
 <script><![CDATA[
- let container;
- let newDiv;
- let textNode;
+let container;
+let newDiv;
+let textNode;
 
- function init(){
-   container = document.getElementById("ContainerBox");
-   newDiv = document.createElementNS("http://www.w3.org/1999/xhtml", "div");
-   textNode = document.createTextNode("This is text that was constructed dynamically with createElementNS and createTextNode then inserted into the document using appendChild.");
-   newDiv.appendChild(textNode);
-   container.appendChild(newDiv);
- }
-
+function init() {
+  container = document.getElementById("ContainerBox");
+  newDiv = document.createElementNS("http://www.w3.org/1999/xhtml", "div");
+  textNode = document.createTextNode(
+    "This is text that was constructed dynamically with createElementNS and createTextNode then inserted into the document using appendChild.",
+  );
+  newDiv.appendChild(textNode);
+  container.appendChild(newDiv);
+}
 ]]></script>
 
  <vbox id="ContainerBox" flex="1">

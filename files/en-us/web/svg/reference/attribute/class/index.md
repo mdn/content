@@ -59,14 +59,14 @@ You can use this class to style SVG content using CSS.
       xmlns="http://www.w3.org/2000/svg">
       <style>
         <![CDATA[
-            rect.rectClass {
-                stroke: #000066;
-                fill:   #00cc00;
-            }
-            circle.circleClass {
-                stroke: #006600;
-                fill:   #cc0000;
-            }
+          rect.rectClass {
+            stroke: #000066;
+            fill: #00cc00;
+          }
+          circle.circleClass {
+            stroke: #006600;
+            fill: #cc0000;
+          }
         ]]>
       </style>
 

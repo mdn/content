@@ -36,12 +36,28 @@ For additional examples that use {{DOMxRef("Window.requestAnimationFrame()", "re
 The following example shows how to use the `scroll` event to detect when the user is scrolling inside an element:
 
 ```html
-<div
-  id="scroll-box"
-  style="overflow: scroll; height: 100px; width: 100px; float: left;">
-  <p style="height: 200px; width: 200px;">Scroll me!</p>
+<div id="scroll-box">
+  <p>Scroll me!</p>
 </div>
-<p style="text-align: center;" id="output">Waiting on scroll events...</p>
+<p id="output">Waiting on scroll events...</p>
+```
+
+```css
+#scroll-box {
+  overflow: scroll;
+  height: 100px;
+  width: 100px;
+  float: left;
+}
+
+#scroll-box p {
+  height: 200px;
+  width: 200px;
+}
+
+#output {
+  text-align: center;
+}
 ```
 
 ```js
@@ -63,12 +79,28 @@ element.addEventListener("scroll", (event) => {
 The following example shows how to use the `onscroll` event handler property to detect when the user is scrolling:
 
 ```html
-<div
-  id="scroll-box"
-  style="overflow: scroll; height: 100px; width: 100px; float: left;">
-  <p style="height: 200px; width: 200px;">Scroll me!</p>
+<div id="scroll-box">
+  <p>Scroll me!</p>
 </div>
-<p id="output" style="text-align: center;">Waiting on scroll events...</p>
+<p id="output">Waiting on scroll events...</p>
+```
+
+```css
+#scroll-box {
+  overflow: scroll;
+  height: 100px;
+  width: 100px;
+  float: left;
+}
+
+#scroll-box p {
+  height: 200px;
+  width: 200px;
+}
+
+#output {
+  text-align: center;
+}
 ```
 
 ```js

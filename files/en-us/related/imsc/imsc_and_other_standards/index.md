@@ -16,7 +16,7 @@ IMSC is also a syntactic superset of both [SDP-US](https://www.w3.org/TR/ttml10-
 
 IMSC traces its origins to the CFF-TT format, and [CFF-TT documents](https://www.w3.org/TR/ttml-imsc1.1/#cff-tt) can be converted to IMSC relatively easily.
 
-IMSC is unrelated to [WebVTT](https://www.w3.org/TR/webvtt1/), and does not use the same syntax. [Basic conversion guidelines](https://www.w3.org/TR/webvtt1/) exist.
+IMSC is unrelated to [WebVTT](https://w3c.github.io/webvtt/), and does not use the same syntax.
 
 ## Active IMSC versions
 

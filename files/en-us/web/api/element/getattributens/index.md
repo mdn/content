@@ -65,36 +65,27 @@ In an HTML document, the attribute has to be accessed with `test:foo` since
 namespaces are not supported.
 
 ```html
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8" />
-    <title>getAttributeNS() test page</title>
-  </head>
-  <body>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      xmlns:test="http://www.example.com/2014/test"
-      width="40"
-      height="40">
-      <circle
-        id="target"
-        cx="12"
-        cy="12"
-        r="10"
-        stroke="#444"
-        stroke-width="2"
-        fill="none"
-        test:foo="Foo value" />
-    </svg>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:test="http://www.example.com/2014/test"
+  width="40"
+  height="40">
+  <circle
+    id="target"
+    cx="12"
+    cy="12"
+    r="10"
+    stroke="#444"
+    stroke-width="2"
+    fill="none"
+    test:foo="Foo value" />
+</svg>
+```
 
-    <script>
-      const ns = "http://www.example.com/2014/test";
-      const circle = document.getElementById("target");
-      console.log(`Attribute value: ${circle.getAttribute("test:foo")}`);
-    </script>
-  </body>
-</html>
+```js
+const ns = "http://www.example.com/2014/test";
+const circle = document.getElementById("target");
+console.log(`Attribute value: ${circle.getAttribute("test:foo")}`);
 ```
 
 ## Notes

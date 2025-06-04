@@ -103,7 +103,7 @@ Here, after ensuring that the constrainable properties for which matches must be
 
 ### Advanced constraints
 
-So-called advanced constraints are created by adding an `advanced` property to the constraint set; this property's value is an array of additional constraint sets which are considered optional. There are few if any use cases for this feature, and there is some interest in removing it from the specification, so it will not be discussed here. If you wish to learn more, see [section 11 of the Media Capture and Streams specification](https://www.w3.org/TR/mediacapture-streams/#idl-def-Constraints), past example 2.
+So-called advanced constraints are created by adding an `advanced` property to the constraint set; this property's value is an array of additional constraint sets which are considered optional. There are few if any use cases for this feature, and there is some interest in removing it from the specification, so it will not be discussed here. If you wish to learn more, see [section 11 of the Media Capture and Streams specification](https://w3c.github.io/mediacapture-main/#constrainable-interface), past example 2.
 
 ## Checking capabilities
 

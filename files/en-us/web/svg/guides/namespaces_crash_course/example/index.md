@@ -17,23 +17,21 @@ In this example, we use [XHTML](/en-US/docs/Glossary/XHTML), [SVG](/en-US/docs/W
   <title>A swarm of motes</title>
   <style>
   <![CDATA[
-    label, input
-    {
-      width: 150px;
-      display: block;
-      float: left;
-      margin-bottom: 10px;
-    }
-    label
-    {
-      text-align: right;
-      width: 75px;
-      padding-right: 20px;
-    }
-    br
-    {
-      clear: left;
-    }
+label,
+input {
+  width: 150px;
+  display: block;
+  float: left;
+  margin-bottom: 10px;
+}
+label {
+  text-align: right;
+  width: 75px;
+  padding-right: 20px;
+}
+br {
+  clear: left;
+}
   ]]>
   </style>
   </head>
@@ -56,9 +54,9 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
     <script>
     <![CDATA[
       // foil spam bots
-      let email = '@riovia.net';
-      email ='nick' + email;
-      document.getElementById('email-me').href = 'mailto:'+email;
+      let email = "@riovia.net";
+      email = "nick" + email;
+      document.getElementById("email-me").href = "mailto:" + email;
     ]]>
     </script>
     This software is free for you to use in any way whatsoever,

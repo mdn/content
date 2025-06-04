@@ -28,9 +28,7 @@ repeat(count)
 ### Parameters
 
 - `count`
-  - : An integer between `0` and
-    {{jsxref("Number/POSITIVE_INFINITY", "+Infinity")}}, indicating the
-    number of times to repeat the string.
+  - : An integer between `0` and {{jsxref("Number/POSITIVE_INFINITY", "Infinity")}}, indicating the number of times to repeat the string.
 
 ### Return value
 

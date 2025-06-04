@@ -8,7 +8,7 @@ browser-compat: api.HTMLTextAreaElement.selectionchange_event
 
 {{APIRef}}
 
-The **`selectionchange`** event of the [Selection API](/en-US/docs/Web/API/Selection) is fired when the text selection within an {{HTMLElement("textarea")}} element is changed.
+The **`selectionchange`** event of the [Selection API](/en-US/docs/Web/API/Selection) is fired when the text selection within a {{HTMLElement("textarea")}} element is changed.
 This includes both changes in the selected range of characters, or if the caret moves.
 
 This event is not cancelable.
@@ -33,7 +33,7 @@ A generic {{domxref("Event")}}.
 
 ## Examples
 
-The example below shows how to get the text selected in an {{HTMLElement("textarea")}} element.
+The example below shows how to get the text selected in a {{HTMLElement("textarea")}} element.
 
 ### HTML
 

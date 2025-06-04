@@ -93,7 +93,7 @@ decreaseButton.addEventListener("click", () => {
   cell.rowSpan -= 1;
 
   // Update the display
-  output.textContent = `${cell.rowSpan == 0 ? "all remaining" : cell.rowSpan}`;
+  output.textContent = `${cell.rowSpan === 0 ? "all remaining" : cell.rowSpan}`;
 });
 ```
 

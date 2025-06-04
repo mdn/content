@@ -51,83 +51,31 @@ Also, when you set this property on an element, you override any styles that hav
 To change a particular element's style, you can adapt the following example for the element(s) you want to style.
 
 ```html
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>simple style example</title>
+<p id="p1">Click here to change background color.</p>
+<button>Reset background color</button>
+```
 
-    <script>
-      function alterStyle(elem) {
-        elem.style.background = "green";
-      }
+```css
+#p1 {
+  border: solid blue 2px;
+}
+```
 
-      function resetStyle(elemId) {
-        const elem = document.getElementById(elemId);
-        elem.style.background = "white";
-      }
-    </script>
-    <style>
-      #p1 {
-        border: solid blue 2px;
-      }
-    </style>
-  </head>
+```js
+const p1 = document.getElementById("p1");
+const button = document.querySelector("button");
 
-  <body>
-    <!-- passes a reference to the element's object as parameter 'this'. -->
-    <p id="p1" onclick="alterStyle(this);">
-      Click here to change background color.
-    </p>
-
-    <!-- passes the 'p1' id of another element's style to modify. -->
-    <button onclick="resetStyle('p1');">Reset background color</button>
-  </body>
-</html>
+p1.addEventListener("click", () => {
+  p1.style.background = "green";
+});
+button.addEventListener("click", () => {
+  elem.style.background = "white";
+});
 ```
 
 {{ EmbedLiveSample('Modify_an_elements_style') }}
 
 The {{domxref("window.getComputedStyle", "getComputedStyle()")}} method on the `document.defaultView` object returns all styles that have actually been computed for an element.
-
-## DOM Style Object
-
-The `style` object represents an individual style statement. The style object is accessed from the `document` or from the elements to which that style is applied. It represents the _in-line_ styles on a particular element.
-
-### Setting style properties
-
-More important than the two properties noted here is the use of the `style` object to set individual style properties on an element:
-
-```html
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Style Property Example</title>
-    <link rel="StyleSheet" href="example.css" />
-    <script>
-      function setStyle() {
-        document.getElementById("d").style.color = "orange";
-      }
-      function resetStyle() {
-        document.getElementById("d").style.color = "black";
-      }
-    </script>
-  </head>
-
-  <body>
-    <div id="d" class="thunder">Thunder</div>
-    <button onclick="setStyle()">Click here to change text color</button>
-    <button onclick="resetStyle()">Reset text color</button>
-  </body>
-</html>
-```
-
-{{ EmbedLiveSample('Setting_style_properties') }}
-
-The **media** and **type** of the style may or may not be given.
 
 ### Using the setAttribute method
 
