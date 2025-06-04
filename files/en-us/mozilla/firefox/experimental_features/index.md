@@ -237,8 +237,8 @@ Specifically, this preference will disable the following prefixed properties:
 The `<h1>` heading doesn't decrease in font size now when nested within [sectioning elements](/en-US/docs/Web/HTML/Guides/Content_categories#sectioning_content) `<article>`, `<aside>`, `<nav>`, and `<section>`. The UA styles for `<h1>` nested within sectioning elements are no longer relevant since the outline algorithm [has been removed](https://github.com/whatwg/html/pull/7829) from the HTML specification. ([Firefox bug 1883896](https://bugzil.la/1883896)).
 
 > [!NOTE]
-> The preference for this feature works in reverse: it's set to `false` in the Nightly build, which removes the UA styling for headings nested in sectioning elements.
-> It's set to `true` in all other channels, which retains the existing UA styling for the nested headings.
+> The preference for this feature works in reverse: when set to `false`, it removes the UA styling for headings nested in sectioning elements.
+> When set to `true`, it retains the existing UA styling for the nested headings.
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
@@ -800,12 +800,12 @@ The two `security.insecure_connection_text_*` preferences add a "Not secure" tex
 | Beta              | 60            | No                  |
 | Release           | 60            | No                  |
 
+- `security.insecure_connection_text.enabled`
+  - : Set to `true` to enable the text label for normal browsing mode.
 - `security.insecure_connection_text.pbmode.enabled`
   - : Set to `true` to enable the text label for private browsing mode.
 - `browser.urlbar.trimHttps`
   - : Set to `true` to trim the `https:` prefix from address bar URLs.
-- `security.insecure_connection_text.enabled`
-  - : Set to `true` to enable the text label for normal browsing mode.
 
 ### Permissions Policy / Feature policy
 
