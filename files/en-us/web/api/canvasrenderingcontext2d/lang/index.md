@@ -12,11 +12,17 @@ The **`CanvasRenderingContext2D.lang`** property of the Canvas 2D API gets or se
 
 ## Value
 
-A [BCP 47 language tag](https://datatracker.ietf.org/doc/html/rfc5646) representing the language of the canvas context, or `inherit`, in which case the language is inherited from the [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute of the originating {{HTMLElement("canvas")}} element or the nearest available ancestor with an explicit `lang` set.
+The `lang` property can take one of the following string values:
+
+- A {{glossary("BCP 47 language tag")}} representing the language of the canvas context.
+- The string `inherit`, in which case the language is inherited from the [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute of the originating {{HTMLElement("canvas")}} element or the nearest available ancestor with an explicit `lang` set.
+- An empty string (`""`), which can be set to specify that the canvas context has no language.
 
 The default value is `inherit`.
 
 ## Description
+
+Sometimes, you need to set a language for a canvas rendering context so that it knows how to render language-dependent features: for example, some fonts have certain characters rendered differently in different languages. An on-screen canvas context (`CanvasRenderingContext2D`) is always associated with a particular `<canvas>` element, so whenever you render content using it, it can derive the language from the value of the `<canvas>` element's `lang` attribute.
 
 Sometimes, it is necessary to set a language for a canvas rendering context so that it knows how to render language-dependent features such as some fonts. An on-screen canvas context (`CanvasRenderingContext2D`) is always associated with a particular `<canvas>` element, so whenever you render content using it, it can derive the language from the value of the `<canvas>` element's `lang` attribute.
 
