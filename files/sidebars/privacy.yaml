@@ -14,7 +14,7 @@ sidebar:
   - link: /Web/Privacy/Guides/State_Partitioning
   - type: listSubPages
     path: /Web/Privacy/Guides/Storage_Access_Policy
-    depth: 3
+    depth: 2
     nested: true
     link: /Web/Privacy/Guides/Storage_Access_Policy
     details: closed
