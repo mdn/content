@@ -157,7 +157,7 @@ const offscreen_ctx = offscreen.getContext("2d");
 
 const selectElem = document.querySelector("select");
 
-let latoMediumFontFace = new FontFace(
+const latoMediumFontFace = new FontFace(
   // Lato-Medium is a font with language specific ligatures.
   "Lato-Medium",
   "url(https://mdn.github.io/shared-assets/fonts/Lato-Medium.ttf)",
