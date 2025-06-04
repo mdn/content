@@ -52,7 +52,7 @@ The event handler here does three things:
 
 Note that the event will not fire if:
 
-- The PWA is already installed (valid only for desktop and WebAPK on Android).
+- The PWA is already installed.
 - The app does not pass the [PWA installation criteria](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#installability).
 - The PWA is not installable on the current device (for example, because of a lack of permissions).
 
