@@ -27,6 +27,9 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Referenc
 
 Rocks!
 
+> [!NOTE]
+> The `<noscript>` element contains a text representation of its children. Accessing [`.children`](/en-US/docs/Web/API/Element/children) will return an empty list.
+
 ### Result with scripting disabled
 
 [External Link](https://www.mozilla.org/)
