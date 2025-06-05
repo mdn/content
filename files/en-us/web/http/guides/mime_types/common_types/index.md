@@ -1,5 +1,5 @@
 ---
-title: Common MIME types
+title: Common media types
 slug: Web/HTTP/Guides/MIME_types/Common_types
 page-type: guide
 ---

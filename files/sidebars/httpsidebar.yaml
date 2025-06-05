@@ -10,26 +10,34 @@ sidebar:
   - /Web/HTTP/Guides/Evolution_of_HTTP
   - /Web/HTTP/Guides/Session
   - /Web/HTTP/Guides/Messages
-  - /Web/HTTP/Guides/MIME_types
+  - link: /Web/HTTP/Guides/MIME_types
+    children:
+      - /Web/HTTP/Guides/MIME_types/Common_types
   - /Web/HTTP/Guides/Compression
-  - /Web/HTTP/Guides/Compression_dictionary_transport
   - /Web/HTTP/Guides/Caching
   - /Web/HTTP/Guides/Authentication
   - /Web/HTTP/Guides/Cookies
   - /Web/HTTP/Guides/Redirections
   - /Web/HTTP/Guides/Conditional_requests
   - /Web/HTTP/Guides/Range_requests
-  - /Web/HTTP/Guides/Content_negotiation
+  - /Web/HTTP/Guides/Client_hints
+  - /Web/HTTP/Guides/Compression_dictionary_transport
+  - /Web/HTTP/Guides/Network_Error_Logging
+  - link: /Web/HTTP/Guides/Content_negotiation
+    children:
+      - /Web/HTTP/Guides/Content_negotiation/List_of_default_Accept_values
+  - /Web/HTTP/Guides/Browser_detection_using_the_user_agent
   - /Web/HTTP/Guides/Connection_management_in_HTTP_1.x
   - /Web/HTTP/Guides/Protocol_upgrade_mechanism
-  - /Web/HTTP/Guides/Proxy_servers_and_tunneling
-  - /Web/HTTP/Guides/Client_hints
+  - link: /Web/HTTP/Guides/Proxy_servers_and_tunneling
+    children:
+      - /Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
   - title: Security
     details: closed
     children:
-      - /Web/Security/Practical_implementation_guides
       - link: /en-US/observatory
         title: HTTP Observatory
+      - /Web/Security/Practical_implementation_guides
       - /Web/HTTP/Guides/Permissions_Policy
       - /Web/HTTP/Guides/Cross-Origin_Resource_Policy
       - /Web/HTTP/Guides/CORS

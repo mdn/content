@@ -1,5 +1,6 @@
 ---
 title: HTTP conditional requests
+short-title: Conditional requests
 slug: Web/HTTP/Guides/Conditional_requests
 page-type: guide
 ---
