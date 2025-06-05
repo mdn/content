@@ -49,7 +49,7 @@ figcaption {
 }
 ```
 
-You can then specify what animation you want for the before and after snapshots using the relevant view transition pseudo-elements — {{cssxref("::view-transition-old()")}} and {{cssxref("::view-transition-new()")}}. For example:
+You can then specify which animations you want for the before and after snapshots using the relevant view transition pseudo-elements — {{cssxref("::view-transition-old()")}} and {{cssxref("::view-transition-new()")}}. For example:
 
 ```css
 ::view-transition-old(figure-caption) {
