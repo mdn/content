@@ -121,7 +121,7 @@ sidebar:
     children:
       - /Web/CSS/CSS_animated_properties
       - /Web/CSS/CSS_animations/Using_CSS_animations
-  - title: Backgrounds_and_borders
+  - title: Backgrounds_and_Borders
     details: closed
     children:
       - /Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
@@ -155,7 +155,7 @@ sidebar:
         title: Accessibility_Understanding_colors_and_luminance
       - link: /Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast
         title: Color_contrast
-  - title: Multi-column layouts
+  - title: Columns
     details: closed
     children:
       - /Web/CSS/CSS_multicol_layout/Basic_concepts
@@ -367,14 +367,15 @@ l10n:
     Guides: Guides
     Anchor_positioning: Anchor positioning
     Animations: Animations
-    Backgrounds_and_borders: Backgrounds and borders
-    Containment: Containment
+    Backgrounds_and_Borders: Backgrounds and borders
     Resizing_background_images: Resizing background images
     Box_alignment_in_block_layout: Box alignment in block layout
     Box_model: Box model
     Colors: Colors
     Color_contrast: "Accessibility: Color contrast"
+    Columns: Columns
     Conditional_rules: Conditional rules
+    Containment: Containment
     CSSOM_view: CSSOM view
     Display: Display
     Flexbox: Flexbox
