@@ -31,8 +31,7 @@ Atomics.notify(typedArray, index, count)
 
 ### Return value
 
-- Returns the number of woken up agents.
-- Returns `0`, if `typedArray` is a view on a non-shared {{jsxref("ArrayBuffer")}}.
+Returns the number of woken up agents, or `0` if `typedArray` is a view on a non-shared {{jsxref("ArrayBuffer")}}.
 
 ### Exceptions
 
