@@ -17,7 +17,11 @@ It reflects the `blocking` attribute of the {{HTMLElement("style")}} element.
 A string. Must be a space-separated list of blocking tokens listed below indicating the operations that are to be blocked:
 
 - `render`
-  - : The rendering of content on the screen is blocked.
+
+- : The rendering of content on the screen is blocked.
+
+  > [!NOTE]
+  > In order to block rendering, `style` elements with `blocking="render"` must be in the `head` of the document. `style` elements that are in the `head` are implicitly render-blocking, unless they are added to the document via script. `style` elements added via script need an explicit `blocking="render"` in order to block rendering.
 
 ## Examples
 

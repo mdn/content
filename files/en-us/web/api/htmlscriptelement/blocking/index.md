@@ -17,7 +17,11 @@ It reflects the `blocking` attribute of the {{HTMLElement("script")}} element.
 A string. Must be a space-separated list of blocking tokens listed below indicating the operations that are to be blocked:
 
 - `render`
-  - : The rendering of content on the screen is blocked.
+
+- : The rendering of content on the screen is blocked.
+
+  > [!NOTE]
+  > In order to block rendering, `script` elements with `blocking="render"` must be in the `head` of the document. `script` elements in the `head` are implicitly render-blocking unless they have `type="module"`, `async`, or `defer`. `script` elements with any of these attributes need an explicit `blocking="render"` in order to block rendering.
 
 ## Examples
 
