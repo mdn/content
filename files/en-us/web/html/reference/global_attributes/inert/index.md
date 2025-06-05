@@ -1,5 +1,6 @@
 ---
-title: inert
+title: "HTML global attribute: inert"
+short-title: inert
 slug: Web/HTML/Reference/Global_attributes/inert
 page-type: html-attribute
 browser-compat: html.global_attributes.inert

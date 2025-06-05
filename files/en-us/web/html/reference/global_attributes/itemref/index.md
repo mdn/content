@@ -1,5 +1,6 @@
 ---
-title: itemref
+title: "HTML global attribute: itemref"
+short-title: itemref
 slug: Web/HTML/Reference/Global_attributes/itemref
 page-type: html-attribute
 spec-urls: https://html.spec.whatwg.org/multipage/microdata.html#attr-itemref

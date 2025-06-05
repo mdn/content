@@ -1,5 +1,6 @@
 ---
-title: autocapitalize
+title: "HTML global attribute: autocapitalize"
+short-title: autocapitalize
 slug: Web/HTML/Reference/Global_attributes/autocapitalize
 page-type: html-attribute
 browser-compat: html.global_attributes.autocapitalize

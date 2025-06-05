@@ -1,5 +1,6 @@
 ---
-title: class
+title: "HTML global attribute: class"
+short-title: class
 slug: Web/HTML/Reference/Global_attributes/class
 page-type: html-attribute
 browser-compat: html.global_attributes.class

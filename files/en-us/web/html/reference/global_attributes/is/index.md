@@ -1,5 +1,6 @@
 ---
-title: is
+title: "HTML global attribute: is"
+short-title: is
 slug: Web/HTML/Reference/Global_attributes/is
 page-type: html-attribute
 browser-compat: html.global_attributes.is

@@ -1,5 +1,6 @@
 ---
-title: tabindex
+title: "HTML global attribute: tabindex"
+short-title: tabindex
 slug: Web/HTML/Reference/Global_attributes/tabindex
 page-type: html-attribute
 browser-compat: html.global_attributes.tabindex

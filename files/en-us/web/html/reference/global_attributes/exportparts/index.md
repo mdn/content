@@ -1,5 +1,6 @@
 ---
-title: exportparts
+title: "HTML global attribute: exportparts"
+short-title: exportparts
 slug: Web/HTML/Reference/Global_attributes/exportparts
 page-type: html-attribute
 browser-compat: html.global_attributes.exportparts

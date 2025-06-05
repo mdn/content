@@ -1,5 +1,6 @@
 ---
-title: enterkeyhint
+title: "HTML global attribute: enterkeyhint"
+short-title: enterkeyhint
 slug: Web/HTML/Reference/Global_attributes/enterkeyhint
 page-type: html-attribute
 browser-compat: html.global_attributes.enterkeyhint

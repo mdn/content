@@ -1,5 +1,6 @@
 ---
-title: virtualkeyboardpolicy
+title: "HTML global attribute: virtualkeyboardpolicy"
+short-title: virtualkeyboardpolicy
 slug: Web/HTML/Reference/Global_attributes/virtualkeyboardpolicy
 page-type: html-attribute
 status:

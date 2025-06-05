@@ -1,5 +1,6 @@
 ---
-title: autocorrect
+title: "HTML global attribute: autocorrect"
+short-title: autocorrect
 slug: Web/HTML/Reference/Global_attributes/autocorrect
 page-type: html-attribute
 browser-compat: html.global_attributes.autocorrect

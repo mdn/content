@@ -1,5 +1,6 @@
 ---
-title: spellcheck
+title: "HTML global attribute: spellcheck"
+short-title: spellcheck
 slug: Web/HTML/Reference/Global_attributes/spellcheck
 page-type: html-attribute
 browser-compat: html.global_attributes.spellcheck

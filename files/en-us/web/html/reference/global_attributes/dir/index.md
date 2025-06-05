@@ -1,5 +1,6 @@
 ---
-title: dir
+title: "HTML global attribute: dir"
+short-title: dir
 slug: Web/HTML/Reference/Global_attributes/dir
 page-type: html-attribute
 browser-compat: html.global_attributes.dir

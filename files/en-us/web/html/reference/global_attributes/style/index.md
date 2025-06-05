@@ -1,5 +1,6 @@
 ---
-title: style
+title: "HTML global attribute: style"
+short-title: style
 slug: Web/HTML/Reference/Global_attributes/style
 page-type: html-attribute
 browser-compat: html.global_attributes.style

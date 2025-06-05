@@ -1,5 +1,6 @@
 ---
-title: hidden
+title: "HTML global attribute: hidden"
+short-title: hidden
 slug: Web/HTML/Reference/Global_attributes/hidden
 page-type: html-attribute
 browser-compat: html.global_attributes.hidden
