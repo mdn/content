@@ -33,7 +33,7 @@ view-transition-name: unset;
 - {{cssxref("custom-ident")}}
   - : An identifying name that causes the selected element to participate in a separate snapshot from the root snapshot. The `<custom-ident>` cannot be `auto`, `match-element`, `none`, or a [CSS-wide keyword](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types#css-wide_keywords) value.
 - `match-element`
-  - : The selected element is automatically given an unique identifying name based on its identity, which enables it to be snapshotted separately from all other elements on the page. The name is an internal token representing the element, which is not visible to the web document.
+  - : The selected element is automatically given a unique identifying name. This name enables the element to be snapshotted separately from all other elements on the page and is not visible to the web document.
 - `none`
   - : The selected element will not participate in a separate snapshot, unless it has a parent element with a `view-transition-name` set, in which case it will be snapshotted as part of that element.
 
