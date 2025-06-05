@@ -10,6 +10,14 @@ The **`<defs>`** [SVG](/en-US/docs/Web/SVG) element is used to store graphical o
 
 Graphical objects can be referenced from anywhere, however, defining these objects inside of a `<defs>` element promotes understandability of the SVG content and is beneficial to the overall accessibility of the document.
 
+## Usage context
+
+{{svginfo}}
+
+## DOM Interface
+
+This element implements the {{domxref("SVGDefsElement")}} interface.
+
 ## Example
 
 ```css hidden
@@ -38,10 +46,6 @@ svg {
 ```
 
 {{EmbedLiveSample('Example', 150, '100%')}}
-
-## Usage context
-
-{{svginfo}}
 
 ## Specifications
 
