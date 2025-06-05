@@ -53,7 +53,7 @@ Until the `view-transition-class` property is fully supported in all browsers su
 ## Examples
 
 ```css
-::view-transition-group(fast-card-slide) {
+::view-transition-group(.fast-card-slide) {
   animation-duration: 3s;
 }
 
