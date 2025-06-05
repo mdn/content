@@ -1,5 +1,6 @@
 ---
 title: Syntax
+short-title: Introduction
 slug: Web/CSS/CSS_syntax/Syntax
 page-type: guide
 ---
