@@ -57,15 +57,15 @@ canvas.addEventListener("pointermove", (evt) => {
     let g = getRandomInt(0, 255);
     let b = getRandomInt(0, 255);
     style = {
-      color: "rgb(" + r + " " + g + " " + b + " / 100%)",
+      color: `rgb(${r} ${g} ${b} / 100%)`,
       diameter: 10,
     };
     move_cnt = 0;
     document.getElementById("div").style.backgroundColor =
-      "rgb(" + r + " " + g + " " + b + " / 100%)";
+      `rgb(${r} ${g} ${b} / 100%)`;
   }
   move_cnt += 1;
-  presenter.then(function (v) {
+  presenter.then((v) => {
     v.updateInkTrailStartPoint(evt, style);
   });
 });

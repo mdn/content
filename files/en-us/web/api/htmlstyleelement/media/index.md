@@ -38,8 +38,14 @@ A string describing a single medium or a comma-separated list.
   </head>
   <body>
     <script>
-      alert("LinkedStyle: " + document.getElementById("LinkedStyle").media); // 'screen'
-      alert("InlineStyle: " + document.getElementById("InlineStyle").media); // 'screen, print'
+      console.log(
+        "LinkedStyle: ",
+        document.getElementById("LinkedStyle").media,
+      ); // 'screen'
+      console.log(
+        "InlineStyle: ",
+        document.getElementById("InlineStyle").media,
+      ); // 'screen, print'
     </script>
   </body>
 </html>

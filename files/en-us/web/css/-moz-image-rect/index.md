@@ -69,6 +69,8 @@ Then the four boxes defining the segments of the image are defined. Let's look a
   background-image: -moz-image-rect(url(firefox.png), 0%, 50%, 50%, 0%);
   width: 133px;
   height: 136px;
+  left: 0px;
+  top: 0px;
   position: absolute;
 }
 ```
@@ -80,6 +82,8 @@ This is the top-left corner of the image. It defines a rectangle containing the 
   background-image: -moz-image-rect(url(firefox.png), 0%, 100%, 50%, 50%);
   width: 133px;
   height: 136px;
+  left: 133px;
+  top: 0px;
   position: absolute;
 }
 ```
@@ -93,12 +97,16 @@ The other corners follow a similar pattern:
   background-image: -moz-image-rect(url(firefox.png), 50%, 50%, 100%, 0%);
   width: 133px;
   height: 136px;
+  left: 0px;
+  top: 136px;
   position: absolute;
 }
 #box4 {
   background-image: -moz-image-rect(url(firefox.png), 50%, 100%, 100%, 50%);
   width: 133px;
   height: 136px;
+  left: 133px;
+  top: 136px;
   position: absolute;
 }
 ```
@@ -108,17 +116,17 @@ The other corners follow a similar pattern:
 We include a container with four boxes:
 
 ```html
-<div id="container" onclick="rotate()">
-  <div id="box1" style="left:0px;top:0px;">Top left</div>
-  <div id="box2" style="left:133px;top:0px;">Top right</div>
-  <div id="box3" style="left:0px;top:136px;">Bottom left</div>
-  <div id="box4" style="left:133px;top:136px;">Bottom right</div>
+<div id="container">
+  <div id="box1">Top left</div>
+  <div id="box2">Top right</div>
+  <div id="box3">Bottom left</div>
+  <div id="box4">Bottom right</div>
 </div>
 ```
 
 This places the four segments of our image in a two-by-two box grid. These four segments are all contained within a larger {{HTMLElement("div")}} block whose primary purpose is to receive click events and dispatch them to our JavaScript code.
 
-### The JavaScript code
+### JavaScript
 
 This code handles the click event when the container receives a mouse click.
 
@@ -140,6 +148,8 @@ function rotate() {
     prevStyle = curStyle;
   }
 }
+
+document.getElementById("container").addEventListener("click", rotate);
 ```
 
 This uses {{DOMxRef("window.getComputedStyle()")}} to fetch the style of each element, shifting it to the following element. Notice that before it begins doing so it saves a copy of the last box's style since it will be overwritten by the third element's style. By copying the values of the {{CSSxRef("background-image")}} property from one element to the next with each mouse click, we achieve the desired effect.

@@ -660,7 +660,7 @@ There is not an "official" way to embed the code of a worker within a web page, 
       // In the past blob builder existed, but now we use Blob
       const blob = new Blob(
         Array.prototype.map.call(
-          document.querySelectorAll("script[type='text\/js-worker']"),
+          document.querySelectorAll("script[type='text/js-worker']"),
           (script) => script.textContent,
         ),
         { type: "text/javascript" },

@@ -73,6 +73,6 @@ navigator.credentials
 
 ## See also
 
-- [The list of the currently defined extensions](https://www.w3.org/TR/webauthn/#sctn-defined-extensions)
+- [The list of the currently defined extensions](https://w3c.github.io/webauthn/#sctn-defined-extensions)
 - {{domxref("AuthenticatorAssertionResponse.authenticatorData")}} which contains the
   result of the authenticator's extensions processing

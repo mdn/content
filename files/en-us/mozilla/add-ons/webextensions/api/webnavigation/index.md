@@ -70,7 +70,7 @@ To use this API you need to have the "webNavigation" [permission](/en-US/docs/Mo
 - {{WebExtAPIRef("webNavigation.onTabReplaced")}}
   - : Fired when the contents of the tab is replaced by a different (usually previously pre-rendered) tab.
 - {{WebExtAPIRef("webNavigation.onHistoryStateUpdated")}}
-  - : Fired when the page used the [history API (2011)](/en-US/docs/Web/API/History_API) to update the URL displayed in the browser's location bar.
+  - : Fired when the page used the [history API](/en-US/docs/Web/API/History_API) to update the URL displayed in the browser's location bar.
 
 ## Browser compatibility
 

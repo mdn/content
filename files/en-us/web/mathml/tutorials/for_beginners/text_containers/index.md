@@ -27,9 +27,15 @@ Since most of these characters are not part of Basic Latin Unicode block, it is 
       href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
   </head>
   <body>
-    <p style="font-family: Latin Modern Math">∀A∊𝔰𝔩(n,𝔽),TrA=0</p>
+    <p>∀A∊𝔰𝔩(n,𝔽),TrA=0</p>
   </body>
 </html>
+```
+
+```css
+p {
+  font-family: Latin Modern Math;
+}
 ```
 
 {{ EmbedLiveSample('Unicode_characters_for_mathematics', 700, 100, "", "") }}
@@ -233,7 +239,7 @@ Now that you are a bit familiar with special features of `<mi>` and `<mo>`, let'
       href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
   </head>
   <body>
-    <p style="font-family: Latin Modern Math">∀A∊𝔰𝔩(n,𝔽),TrA=0</p>
+    <p class="text">∀A∊𝔰𝔩(n,𝔽),TrA=0</p>
     <p>
       <math>
         <mo>∀</mo>
@@ -271,6 +277,10 @@ Now that you are a bit familiar with special features of `<mi>` and `<mo>`, let'
 ```css hidden
 div {
   padding: 0.5em;
+}
+
+.text {
+  font-family: Latin Modern Math;
 }
 ```
 

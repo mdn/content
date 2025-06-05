@@ -172,7 +172,7 @@ for (control of controls) {
 document.querySelector("button").addEventListener(
   "click",
   () => {
-    setTimeout(function () {
+    setTimeout(() => {
       changeCSS();
     }, 50);
   },
@@ -180,19 +180,22 @@ document.querySelector("button").addEventListener(
 );
 
 function changeCSS() {
-  let currentFilter =
-    "filter: " +
-    blur() +
-    brightness() +
-    contrast() +
-    dropShadow() +
-    grayscale() +
-    hueRotate() +
-    invert() +
-    opacity() +
-    saturate() +
-    sepia() +
-    ";";
+  let currentFilter = "filter: ";
+  for (const filter of [
+    blur(),
+    brightness(),
+    contrast(),
+    dropShadow(),
+    grayscale(),
+    hueRotate(),
+    invert(),
+    opacity(),
+    saturate(),
+    sepia(),
+  ]) {
+    currentFilter += filter;
+  }
+  currentFilter += ";";
   image.setAttribute("style", currentFilter);
   output.innerText = currentFilter;
 }

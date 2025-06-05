@@ -400,9 +400,9 @@ const obj = {
 globalThis.num = 42;
 
 // A traditional function to operate on "this"
-const add = function (a, b, c) {
+function add(a, b, c) {
   return this.num + a + b + c;
-};
+}
 
 console.log(add.call(obj, 1, 2, 3)); // 106
 console.log(add.apply(obj, [1, 2, 3])); // 106

@@ -70,7 +70,7 @@ If the file is named `detect.html`, the following function can be used for detec
 ```js
 function detectHtmlInXhr(callback) {
   if (!window.XMLHttpRequest) {
-    setTimeout(function () {
+    setTimeout(() => {
       callback(false);
     }, 0);
 
@@ -101,7 +101,7 @@ function detectHtmlInXhr(callback) {
     xhr.responseType = "document";
     xhr.send();
   } catch (e) {
-    setTimeout(function () {
+    setTimeout(() => {
       if (!done) {
         done = true;
         callback(false);

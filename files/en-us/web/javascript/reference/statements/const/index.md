@@ -75,7 +75,7 @@ Constants can be declared with uppercase or lowercase, but a common convention i
 // define MY_FAV as a constant and give it the value 7
 const MY_FAV = 7;
 
-console.log("my favorite number is: " + MY_FAV);
+console.log(`my favorite number is: ${MY_FAV}`);
 ```
 
 ```js-nolint example-bad

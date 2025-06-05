@@ -1,11 +1,12 @@
 ---
 title: Firefox 140 for developers
+short-title: Firefox 140 (Beta)
 slug: Mozilla/Firefox/Releases/140
-page-type: firefox-release-notes
+page-type: active-fx-release
 sidebar: firefoxsidebar
 ---
 
-This article provides information about the changes in Firefox 140 that affect developers. Firefox 140 is the current [Nightly version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly) and ships on [June 24, 2025](https://whattrainisitnow.com/release/?version=140).
+This article provides information about the changes in Firefox 140 that affect developers. Firefox 140 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [June 24, 2025](https://whattrainisitnow.com/release/?version=140).
 
 ## Changes for web developers
 
@@ -16,6 +17,10 @@ This article provides information about the changes in Firefox 140 that affect d
 #### Removals
 
 ### CSS
+
+- The [CSS Custom Highlight API](/en-US/docs/Web/API/CSS_Custom_Highlight_API) is now supported. It provides a mechanism for styling arbitrary text ranges in a document, generalizing the behavior of other highlight pseudo-elements such as {{cssxref('::selection')}}, {{cssxref('::spelling-error')}}, {{cssxref('::grammar-error')}}, and {{cssxref('::target-text')}}.
+  You define text ranges in JavaScript using [`Range`](/en-US/docs/Web/API/Range) instances that are grouped in a [`Highlight`](/en-US/docs/Web/API/Highlight), and then register them with a name using [`HighlightRegistry`](/en-US/docs/Web/API/HighlightRegistry).
+  You can apply styles to a registered highlight using the CSS [`::highlight`](/en-US/docs/Web/CSS/::highlight) pseudo-element. ([Firefox bug 1964089](https://bugzil.la/1964089)).
 
 #### Removals
 
@@ -55,6 +60,12 @@ This article provides information about the changes in Firefox 140 that affect d
   ([Firefox bug 1962084](https://bugzil.la/1962084)).
 
 #### DOM
+
+- The [`pointerrawupdate` event](/en-US/docs/Web/API/Element/pointerrawupdate_event) is now supported.
+  This event typically provides lower-latency access to pointer movement properties compared to the corresponding [`pointermove`](/en-US/docs/Web/API/Element/pointermove_event) events, firing as soon as the pointer data is available.
+  It is intended for applications that require high-precision input handling, and that cannot achieve smooth interaction using coalesced `pointermove` events alone.
+  Because listening to this event may impact performance, you should avoid using it for other use cases.
+  ([Firefox bug 1550462](https://bugzil.la/1550462)).
 
 #### Media, WebRTC, and Web Audio
 

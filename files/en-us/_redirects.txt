@@ -14982,10 +14982,13 @@
 /en-US/docs/Web/Security/Do_not_track_field_guide/Tutorials/Additional_resources	/en-US/docs/Web/HTTP/Reference/Headers/DNT
 /en-US/docs/Web/Security/HTTP_strict_transport_security	/en-US/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security
 /en-US/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content	/en-US/docs/Web/Security/Mixed_content#developer_console
+/en-US/docs/Web/Security/Practical_implementation_guides/CSRF_prevention	/en-US/docs/Web/Security/Attacks/CSRF
+/en-US/docs/Web/Security/Practical_implementation_guides/Clickjacking	/en-US/docs/Web/Security/Attacks/Clickjacking
 /en-US/docs/Web/Security/Public_Key_Pinning	/en-US/docs/Web/Security/Certificate_Transparency
 /en-US/docs/Web/Security/Securing_your_site	/en-US/docs/Web/Security/Practical_implementation_guides
 /en-US/docs/Web/Security/Securing_your_site/Configuring_server_MIME_types	/en-US/docs/Learn_web_development/Extensions/Server-side/Configuring_server_MIME_types
 /en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion	/en-US/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
+/en-US/docs/Web/Security/Types_of_attacks	/en-US/docs/Web/Security/Attacks
 /en-US/docs/Web/Text_fragments	/en-US/docs/Web/URI/Reference/Fragment/Text_fragments
 /en-US/docs/Web/Tutorials	/en-US/docs/MDN/Tutorials
 /en-US/docs/Web/URI/Authority	/en-US/docs/Web/URI/Reference/Authority

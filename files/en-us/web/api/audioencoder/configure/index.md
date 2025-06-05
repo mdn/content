@@ -23,7 +23,7 @@ configure(config)
   - : A dictionary object containing the following members:
 
     - `codec`
-      - : A string containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry). See ["codecs" parameter](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter#codec_options_by_container) for details on codec string construction.
+      - : A string containing a [valid codec string](https://w3c.github.io/webcodecs/codec_registry.html#audio-codec-registry). See ["codecs" parameter](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter#codec_options_by_container) for details on codec string construction.
     - `sampleRate`
       - : An integer representing the number of frame samples per second.
     - `numberOfChannels`

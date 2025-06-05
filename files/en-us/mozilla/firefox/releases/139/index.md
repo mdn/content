@@ -1,15 +1,15 @@
 ---
 title: Firefox 139 for developers
+short-title: Firefox 139 (Stable)
 slug: Mozilla/Firefox/Releases/139
-page-type: firefox-release-notes
+page-type: active-fx-release
 sidebar: firefoxsidebar
 ---
 
-This article provides information about the changes in Firefox 139 that affect developers. Firefox 139 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [May 27, 2025](https://whattrainisitnow.com/release/?version=139).
+This article provides information about the changes in Firefox 139 that affect developers.
+Firefox 139 was released on [May 27, 2025](https://whattrainisitnow.com/release/?version=139).
 
 ## Changes for web developers
-
-### Developer Tools
 
 ### HTML
 
@@ -17,11 +17,9 @@ This article provides information about the changes in Firefox 139 that affect d
   The _hidden until found_ state allows you to hide the contents of an element until it is found by user search (for example, using "Find in page") or by fragment navigation.
   The `beforematch` event fires just before the `hidden` attribute is removed ([Firefox bug 1761043](https://bugzil.la/1761043) and [Firefox bug 1955379](https://bugzil.la/1955379)).
 
-#### Removals
-
 ### CSS
 
-#### Removals
+No notable changes
 
 ### JavaScript
 
@@ -44,8 +42,6 @@ This article provides information about the changes in Firefox 139 that affect d
   - `islamic-rgsa`
   - `islamic-umalqura`
 
-#### Removals
-
 ### SVG
 
 #### Removals
@@ -56,11 +52,7 @@ This article provides information about the changes in Firefox 139 that affect d
 
 ### HTTP
 
-#### Removals
-
-### Security
-
-#### Removals
+No notable changes
 
 ### APIs
 
@@ -72,14 +64,6 @@ This article provides information about the changes in Firefox 139 that affect d
 - The [`largeBlob`](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#largeblob) and [`credProps`](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#credprops) Web Authentication extensions are now supported, while the [`prf`](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#prf) extension is supported on all desktop platforms.
   These respectively provide support for large blob storage associated with a credential, additional information about a credential, and a mechanism for generating a random number associated with a credential and a particular input.
   ([Firefox bug 1795020](https://bugzil.la/1795020), [Firefox bug 1844449](https://bugzil.la/1844449), [Firefox bug 1935280](https://bugzil.la/1935280)).
-
-#### Media, WebRTC, and Web Audio
-
-#### Removals
-
-### WebAssembly
-
-#### Removals
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -96,10 +80,6 @@ This article provides information about the changes in Firefox 139 that affect d
 - Localized extensions now cascade through locale subtags to find translations before reverting to the extension's default language. Previously, the extension used the extension default if a translation couldn't be found for a language with subtags. See [Localized string selection](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#localized_string_selection) in the Internationalization article for more details of the new behavior. ([Firefox bug 1381580](https://bugzil.la/1381580))
 - Content scripts and styles are now guaranteed to execute in the order of registration (i.e., their order in the [`content_scripts` manifest key array](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts)). Previously, the order was only guaranteed for scripts within the same `js` array. ([Firefox bug 1792685](https://bugzil.la/1792685))
 - The {{WebExtAPIRef("tabGroups")}} API is now available. This API enables extensions to modify and rearrange [tab groups](https://support.mozilla.org/en-US/kb/tab-groups). For more information, see [WebExtensions Support for Tab Groups](https://blog.mozilla.org/addons/2025/04/30/webextensions-support-for-tab-groups/). ([Firefox bug 1940631](https://bugzil.la/1940631))
-
-### Removals
-
-### Other
 
 ## Experimental web features
 
