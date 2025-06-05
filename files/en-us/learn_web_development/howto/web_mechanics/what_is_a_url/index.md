@@ -140,7 +140,7 @@ All of the following URLs are relative URLs:
 
 Less common than the URL parts discussed above, you may see a username and password included in URLs.
 
-When included, the username and password are put between the `://` characters and the authority, with a colon colon (`:`) separating the username and password, and an at symbol (`@`) at the end to connect to the authority (domain/port).
+When included, the username and password are put between the `://` characters and the authority, with a colon (`:`) separating the username and password, and an at symbol (`@`) at the end to connect to the authority (domain/port).
 For example:
 ```plain
 https://username:password@www.example.com:80/
