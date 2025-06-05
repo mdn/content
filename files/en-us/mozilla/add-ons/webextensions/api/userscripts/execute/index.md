@@ -9,6 +9,9 @@ browser-compat: webextensions.api.userScripts.execute
 
 Injects a user script defined in the `js` property into a target context (e.g., tab or frame).
 
+> [!NOTE]
+> By default, the injected script is executed at `document_idle`, or immediately if the page has already loaded. If the `injectImmediately` property is set to `true`, the script injects without waiting, even if the page has not finished loading.
+
 ## Syntax
 
 ```js
@@ -20,7 +23,7 @@ let executeUserScript = chrome.userScripts.execute(
 ### Parameters
 
 - `injection`
-  - : `Array`of {{WebExtAPIRef("userScripts.InjectionUserScript")}}. Defines where and what user scripts to inject.
+  - : `Array` of {{WebExtAPIRef("userScripts.InjectionUserScript")}}. Defines where and what user scripts to inject.
 
 ### Return Value
 
