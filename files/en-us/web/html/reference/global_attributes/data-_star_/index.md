@@ -1,5 +1,5 @@
 ---
-title: "HTML global attribute: data-*"
+title: data-* global attribute
 short-title: data-*
 slug: Web/HTML/Reference/Global_attributes/data-*
 page-type: html-attribute

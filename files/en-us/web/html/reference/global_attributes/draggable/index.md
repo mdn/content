@@ -1,5 +1,5 @@
 ---
-title: "HTML global attribute: draggable"
+title: draggable global attribute
 short-title: draggable
 slug: Web/HTML/Reference/Global_attributes/draggable
 page-type: html-attribute

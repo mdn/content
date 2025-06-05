@@ -1,5 +1,5 @@
 ---
-title: "HTML global attribute: exportparts"
+title: exportparts global attribute
 short-title: exportparts
 slug: Web/HTML/Reference/Global_attributes/exportparts
 page-type: html-attribute

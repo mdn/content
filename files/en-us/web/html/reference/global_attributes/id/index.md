@@ -1,5 +1,5 @@
 ---
-title: "HTML global attribute: id"
+title: id global attribute
 short-title: id
 slug: Web/HTML/Reference/Global_attributes/id
 page-type: html-attribute

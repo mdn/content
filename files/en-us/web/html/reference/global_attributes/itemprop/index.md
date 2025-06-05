@@ -1,5 +1,5 @@
 ---
-title: "HTML global attribute: itemprop"
+title: itemprop global attribute
 short-title: itemprop
 slug: Web/HTML/Reference/Global_attributes/itemprop
 page-type: html-attribute

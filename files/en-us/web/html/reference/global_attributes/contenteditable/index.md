@@ -1,5 +1,5 @@
 ---
-title: "HTML global attribute: contenteditable"
+title: contenteditable global attribute
 short-title: contenteditable
 slug: Web/HTML/Reference/Global_attributes/contenteditable
 page-type: html-attribute

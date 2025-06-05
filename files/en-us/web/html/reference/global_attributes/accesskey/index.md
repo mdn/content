@@ -1,5 +1,5 @@
 ---
-title: "HTML global attribute: accesskey"
+title: accesskey global attribute
 short-title: accesskey
 slug: Web/HTML/Reference/Global_attributes/accesskey
 page-type: html-attribute

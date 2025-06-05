@@ -1,5 +1,5 @@
 ---
-title: "HTML global attribute: popover"
+title: popover global attribute
 short-title: popover
 slug: Web/HTML/Reference/Global_attributes/popover
 page-type: html-attribute

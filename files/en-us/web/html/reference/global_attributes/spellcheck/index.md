@@ -1,5 +1,5 @@
 ---
-title: "HTML global attribute: spellcheck"
+title: spellcheck global attribute
 short-title: spellcheck
 slug: Web/HTML/Reference/Global_attributes/spellcheck
 page-type: html-attribute

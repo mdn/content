@@ -1,5 +1,5 @@
 ---
-title: "HTML global attribute: lang"
+title: lang global attribute
 short-title: lang
 slug: Web/HTML/Reference/Global_attributes/lang
 page-type: html-attribute
