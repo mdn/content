@@ -228,7 +228,7 @@ We also define a rule that selects elements with the `active-item` class. When t
 }
 ```
 
-By default, all the rendered elements involved in the view transition will be animated together, in one cross-fade. However, in this case, we don't want this — we want to give each list item an individual movement animation. We can achieve this by applying `view-transition-name: match-element` to the list items:
+By default, all the rendered elements involved in the view transition are animated together in one cross-fade. However, in this case, we don't want this — we want to give each list item an individual movement animation. We can achieve this by applying `view-transition-name: match-element` to every list item:
 
 ```css
 .match-element-applied li {
