@@ -44,9 +44,9 @@ svg {
 
 {{svginfo}}
 
-## DOM interface
+## DOM Interface
 
-The <path> element is associated with the [SVGPathElement](/en-US/docs/Web/API/SVGPathElement) interface.
+This element implements the {{domxref("SVGPathElement")}} interface.
 
 ## Specifications
 
