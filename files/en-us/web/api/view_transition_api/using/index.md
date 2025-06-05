@@ -17,7 +17,7 @@ Let's walk through the process by which a view transition works:
    - In the case of cross-document transitions (MPAs), a view transition is triggered by initiating navigation to a new document. Both the current and destination documents of the navigation need to be on the same origin, and opt-in to the view transition by including a {{cssxref("@view-transition")}} at rule in their CSS with a `navigation` descriptor of `auto`.
      > [!NOTE]
      > An active view transition has an associated {{domxref("ViewTransition")}} instance (for example, returned by `startViewTransition()` in the case of same-document (SPA) transitions). The `ViewTransition` object includes several promises, allowing you to run code in response to different parts of the view transition process being reached. See [Controlling view transitions with JavaScript](#controlling_view_transitions_with_javascript) for more information.
-2. On the current (old page) view, the API captures snapshots of elements that have a {{cssxref("view-transition-name")}} declared on them.
+2. On the current (old page) view, the API captures static image **snapshots** of elements that have a {{cssxref("view-transition-name")}} declared on them.
 3. The view change occurs:
 
    - In the case of same-document transitions (SPAs), the callback passed to `startViewTransition()` is invoked, which causes the DOM to change.
@@ -26,7 +26,7 @@ Let's walk through the process by which a view transition works:
 
    - In the case of cross-document transitions (MPAs), the navigation occurs between the current and destination documents.
 
-4. The API captures snapshots from the new view as a live representation.
+4. The API captures "live" snapshots (meaning, interactive DOM regions) from the new view.
 
    At this point, the view transition is about to run, and the {{domxref("ViewTransition.ready")}} promise fulfills, allowing you to respond by running a custom JavaScript animation instead of the default, for example.
 
@@ -35,6 +35,14 @@ Let's walk through the process by which a view transition works:
 
 > [!NOTE]
 > If the document's [page visibility state](/en-US/docs/Web/API/Page_Visibility_API) is `hidden` (for example if the document is obscured by a window, the browser is minimized, or another browser tab is active) during a {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} call, the view transition is skipped entirely.
+
+### An aside on snapshots
+
+It is worth noting that when talking about view transitions, we commonly use the term snapshot to refer to a part of the page that has a `view-transition-name` declared on it and will therefore be animated separately from other parts of the page with different `view-transition-name` values set on them. As you've read above, the process of animating a snapshot via a view transition actually involves two separate snapshots of the old and new UI states, but we use snapshot to refer to the whole page area for simplicity.
+
+The snapshot of the old UI state is a static image, so that the user can't interact with it as it animates "out".
+
+The snapshot of the new UI state is an interactive DOM region, so that the user can start to interact with the new content as it animates "in".
 
 ### The view transition pseudo-element tree
 
@@ -48,15 +56,12 @@ To handle creating the outbound and inbound transition animations, the API const
       └─ ::view-transition-new(root)
 ```
 
-> [!NOTE]
-> A {{cssxref("::view-transition-group()")}} subtree is created for every captured `view-transition-name`.
-
 In the case of same-document transitions (SPAs), the pseudo-element tree is made available in the document. In the case of cross-document transitions (MPAs), the pseudo-element tree is made available in the destination document only.
 
 The most interesting parts of the tree structure are as follows:
 
-- {{cssxref("::view-transition")}} is the root of view transitions overlay, which contains all view transition snapshot groups and sits over the top of all other page content.
-- A {{cssxref("::view-transition-group()")}} acts as a container for each view transition snapshot group. The `root` argument specifies the default snapshot group — the view transition animation will apply to the snapshot whose `view-transition-name` is `root`. By default, this is the {{cssxref(":root")}} element, because the default browser styles define this:
+- {{cssxref("::view-transition")}} is the root of view transitions overlay, which contains all view transition groups and sits over the top of all other page content.
+- A {{cssxref("::view-transition-group()")}} acts as a container for each view transition snapshot. The `root` argument specifies the default snapshot — the view transition animation will apply to the snapshot whose `view-transition-name` is `root`. By default, this is a snapshot of the {{cssxref(":root")}} element, because the default browser styles define this:
 
   ```css
   :root {

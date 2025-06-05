@@ -65,7 +65,7 @@ See [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Usin
 ### Properties
 
 - {{cssxref("view-transition-name")}}
-  - : Specifies the view transition snapshot group that selected elements will participate in, which enables an element to be animated separately from the rest of the page during a view transition.
+  - : Specifies the view transition snapshot that selected elements will participate in, which enables an element to be animated separately from the rest of the page during a view transition.
 - {{cssxref("view-transition-class")}}
   - : Provides an additional method of styling selected elements that have a `view-transition-name`.
 

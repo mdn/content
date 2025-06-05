@@ -7,7 +7,7 @@ browser-compat: css.properties.view-transition-name
 
 {{CSSRef}}
 
-The **`view-transition-name`** [CSS](/en-US/docs/Web/CSS) property specifies the [view transition](/en-US/docs/Web/API/View_Transition_API) snapshot group that selected elements will participate in, which enables an element to be animated separately from the rest of the page during a view transition.
+The **`view-transition-name`** [CSS](/en-US/docs/Web/CSS) property specifies the [view transition](/en-US/docs/Web/API/View_Transition_API) snapshot that selected elements will participate in, which enables an element to be animated separately from the rest of the page during a view transition.
 
 ## Syntax
 
@@ -69,6 +69,8 @@ If you don't want an element to be snapshotted separately, you can specify a `vi
 }
 ```
 
+The `view-transition-name` `<custom-ident>` must be unique for each rendered element taking part in the view transition. If two rendered elements have the same `view-transition-name` at the same time, {{domxref("ViewTransition.ready")}} will reject and the transition will be skipped.
+
 ### Specifying `view-transition-name` values automatically
 
 Sometimes you will want to animate multiple UI elements separately in a view transition. This is often the case when you have a list of elements on a page and want to rearrange them in some way:
@@ -79,18 +81,34 @@ Sometimes you will want to animate multiple UI elements separately in a view tra
   <li>Item 2</li>
   <li>Item 3</li>
   <li>Item 4</li>
-  ...
+
+  <!-- ... -->
+
+  <li>Item 99</li>
 </ul>
 ```
 
-The `view-transition-name` `<custom-ident>` must be unique for each rendered element taking part in the view transition. If two rendered elements have the same `view-transition-name` at the same time, {{domxref("ViewTransition.ready")}} will reject and the transition will be skipped. Giving each one a unique name can be inconvenient, especially as the number of elements gets larger:
+Giving each one a unique name can be inconvenient, especially as the number of elements gets larger:
 
-```css
-li:nth-child(1) { view-transition-name: item1; }
-li:nth-child(2) { view-transition-name: item2; }
-li:nth-child(3) { view-transition-name: item3; }
-li:nth-child(4) { view-transition-name: item4; }
-...
+```css-nolint
+li:nth-child(1) {
+  view-transition-name: item1;
+}
+li:nth-child(2) {
+  view-transition-name: item2;
+}
+li:nth-child(3) {
+  view-transition-name: item3;
+}
+li:nth-child(4) {
+  view-transition-name: item4;
+}
+
+/* ... */
+
+li:nth-child(99) {
+  view-transition-name: item99;
+}
 ```
 
 To get around this problem, you can use the `match-element` value, which causes the browser to give each selected element a unique internal `view-transition-name`:
@@ -236,7 +254,7 @@ By default, all the rendered elements involved in the view transition are animat
 }
 ```
 
-The `match-element-applied` class is applied to the `<main>` element. You can remove this class by unchecking the checkbox in the bottom-right corner of the UI. This allows you to compare the singular cross-fade animation you get without `view-transition-name: match-element` to the individual movement animations you get when it is applied.
+The `match-element-applied` class is applied to the `<main>` element. When looking at the [live demo](https://mdn.github.io/dom-examples/view-transitions/match-element/), you can remove this class by unchecking the checkbox in the bottom-right corner of the UI. This allows you to compare the singular cross-fade animation you get without `view-transition-name: match-element` to the individual movement animations you get when it is applied.
 
 We also use the {{cssxref("::view-transition-group()")}} pseudo-element to apply an {{cssxref("animation-duration")}} to all the view transition groups (signified by the `*` identifier) and give all the old and new snapshots a {{cssxref("height")}} of `100%` to work around differences in their aspect ratios and make the animations look smoother:
 
