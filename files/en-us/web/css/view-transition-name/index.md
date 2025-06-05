@@ -19,6 +19,13 @@ view-transition-name: figure-caption;
 /* Keyword value */
 view-transition-name: none;
 view-transition-name: match-element;
+
+/* Global values */
+view-transition-name: inherit;
+view-transition-name: initial;
+view-transition-name: revert;
+view-transition-name: revert-layer;
+view-transition-name: unset;
 ```
 
 ### Values
