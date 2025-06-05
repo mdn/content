@@ -166,7 +166,7 @@ We create a custom CSS animation and apply it to the `::view-transition-old(figu
 
 ### Using the `match-element` value
 
-Our [View Transitions match-element demo](https://mdn.github.io/dom-examples/view-transitions/match-element/) contains a list of content items in a sidebar with a large main content space beside it. The headings inside the list items can be clicked to cause them to animate into the main content space and show all their content.
+The [View Transitions match-element demo](https://mdn.github.io/dom-examples/view-transitions/match-element/) contains a list of content items in a sidebar with a large main content space beside it. The headings inside the list items can be clicked, which will cause them to animate into the main content space and show all their content.
 
 #### HTML
 
