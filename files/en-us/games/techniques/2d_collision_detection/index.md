@@ -49,15 +49,18 @@ const collider = {
   },
 };
 
+const container = document.getElementById("container");
+
 class BaseEntity {
   ref;
   position;
-  constructor(ref) {
-    this.ref = ref;
-    this.position = {
-      x: parseInt(ref.style.left, 10),
-      y: parseInt(ref.style.top, 10),
-    };
+  constructor(position) {
+    this.position = position;
+    this.ref = document.createElement("div");
+    this.ref.classList.add("entity");
+    this.ref.style.left = `${this.position.x}px`;
+    this.ref.style.top = `${this.position.y}px`;
+    container.appendChild(this.ref);
   }
   shiftPosition(dx, dy) {
     this.position.x += dx;
@@ -79,8 +82,6 @@ class BaseEntity {
     throw new Error("isCollidingWith must be implemented in subclasses");
   }
 }
-
-const container = document.getElementById("container");
 
 document.addEventListener("keydown", (e) => {
   e.preventDefault();
@@ -143,15 +144,18 @@ const collider = {
   },
 };
 
+const container = document.getElementById("container");
+
 class BaseEntity {
   ref;
   position;
-  constructor(ref) {
-    this.ref = ref;
-    this.position = {
-      x: parseInt(ref.style.left, 10),
-      y: parseInt(ref.style.top, 10),
-    };
+  constructor(position) {
+    this.position = position;
+    this.ref = document.createElement("div");
+    this.ref.classList.add("entity");
+    this.ref.style.left = `${this.position.x}px`;
+    this.ref.style.top = `${this.position.y}px`;
+    container.appendChild(this.ref);
   }
   shiftPosition(dx, dy) {
     this.position.x += dx;
@@ -173,8 +177,6 @@ class BaseEntity {
     throw new Error("isCollidingWith must be implemented in subclasses");
   }
 }
-
-const container = document.getElementById("container");
 
 document.addEventListener("keydown", (e) => {
   e.preventDefault();
@@ -213,25 +215,18 @@ class BoxEntity extends BaseEntity {
 ```
 
 ```js hidden
-// create a bunch of random divs
 for (let i = 0; i < 100; i++) {
-  const newStaticDiv = document.createElement("div");
-  newStaticDiv.style.top = `${Math.floor(Math.random() * 500)}px`;
-  newStaticDiv.style.left = `${Math.floor(Math.random() * 500)}px`;
-  newStaticDiv.classList.add("entity");
-  container.appendChild(newStaticDiv);
-  const entity = new BoxEntity(newStaticDiv);
-  collider.staticEntities.push(entity);
+  collider.staticEntities.push(
+    new BoxEntity({
+      x: Math.floor(Math.random() * 500),
+      y: Math.floor(Math.random() * 500),
+    }),
+  );
 }
 
-// create the moveable div
-const newMoveableDiv = document.createElement("div");
-newMoveableDiv.style.left = "500px";
-newMoveableDiv.style.top = "500px";
-newMoveableDiv.classList.add("entity", "movable");
-container.appendChild(newMoveableDiv);
-const entity = new BoxEntity(newMoveableDiv);
-collider.moveableEntity = entity;
+const moveableEntity = new BoxEntity({ x: 500, y: 500 });
+moveableEntity.ref.classList.add("movable");
+collider.moveableEntity = moveableEntity;
 ```
 
 {{EmbedLiveSample("axis-aligned_bounding_box", "", 550)}}
@@ -283,15 +278,18 @@ const collider = {
   },
 };
 
+const container = document.getElementById("container");
+
 class BaseEntity {
   ref;
   position;
-  constructor(ref) {
-    this.ref = ref;
-    this.position = {
-      x: parseInt(ref.style.left, 10),
-      y: parseInt(ref.style.top, 10),
-    };
+  constructor(position) {
+    this.position = position;
+    this.ref = document.createElement("div");
+    this.ref.classList.add("entity");
+    this.ref.style.left = `${this.position.x}px`;
+    this.ref.style.top = `${this.position.y}px`;
+    container.appendChild(this.ref);
   }
   shiftPosition(dx, dy) {
     this.position.x += dx;
@@ -313,8 +311,6 @@ class BaseEntity {
     throw new Error("isCollidingWith must be implemented in subclasses");
   }
 }
-
-const container = document.getElementById("container");
 
 document.addEventListener("keydown", (e) => {
   e.preventDefault();
@@ -344,7 +340,7 @@ class CircleEntity extends BaseEntity {
     const dx =
       this.position.x + this.radius - (other.position.x + other.radius);
     const dy =
-      this.position.y + this.radius - (other.position.t + other.radius);
+      this.position.y + this.radius - (other.position.y + other.radius);
     const distance = Math.sqrt(dx * dx + dy * dy);
     return distance < this.radius + other.radius;
   }
@@ -352,25 +348,18 @@ class CircleEntity extends BaseEntity {
 ```
 
 ```js hidden
-// create a bunch of random divs
 for (let i = 0; i < 100; i++) {
-  const newStaticDiv = document.createElement("div");
-  newStaticDiv.classList.add("entity");
-  newStaticDiv.style.top = `${Math.floor(Math.random() * 500)}px`;
-  newStaticDiv.style.left = `${Math.floor(Math.random() * 500)}px`;
-  container.appendChild(newStaticDiv);
-  const entity = new CircleEntity(newStaticDiv);
-  collider.staticEntities.push(entity);
+  collider.staticEntities.push(
+    new CircleEntity({
+      x: Math.floor(Math.random() * 500),
+      y: Math.floor(Math.random() * 500),
+    }),
+  );
 }
 
-// create the moveable div
-const newMoveableDiv = document.createElement("div");
-newMoveableDiv.style.left = "500px";
-newMoveableDiv.style.top = "500px";
-newMoveableDiv.classList.add("entity", "movable");
-container.appendChild(newMoveableDiv);
-const entity = new CircleEntity(newMoveableDiv);
-collider.moveableEntity = entity;
+const moveableEntity = new CircleEntity({ x: 500, y: 500 });
+moveableEntity.ref.classList.add("movable");
+collider.moveableEntity = moveableEntity;
 ```
 
 > [!NOTE]
