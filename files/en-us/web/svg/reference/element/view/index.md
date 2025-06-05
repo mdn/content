@@ -24,6 +24,10 @@ The **`<view>`** [SVG](/en-US/docs/Web/SVG) element defines a particular view of
   - : This attribute specifies whether the SVG document can be magnified and panned.
     _Value type_: **disable | magnify**; _Default value_: magnify; _Animatable_: **no**
 
+## DOM Interface
+
+This element implements the {{domxref("SVGViewElement")}} interface.
+
 ## Example
 
 ### SVG
