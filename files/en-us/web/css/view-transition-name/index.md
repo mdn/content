@@ -295,7 +295,7 @@ mainElem.addEventListener("click", (event) => {
 });
 ```
 
-Running the `updateActiveItem()` function via the `startViewTransition()` function causes the UI changes to be animated smoothly.
+Running the `updateActiveItem()` function via the `startViewTransition()` function causes the UI changes to animate smoothly.
 
 ## Specifications
 
