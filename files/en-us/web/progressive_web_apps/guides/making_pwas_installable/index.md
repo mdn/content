@@ -112,7 +112,7 @@ On desktop:
 
 - Chromium browsers support installing PWAs that have a manifest file on all supported desktop operating systems.
 - Safari supports Add to Dock on macOS Sonoma and later for any web app with or without a manifest file.
-- Firefox do not support installing PWAs using a manifest file.
+- Firefox does not support installing PWAs using a manifest file.
 
 On mobile:
 
