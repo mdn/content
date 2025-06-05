@@ -24,7 +24,7 @@ view-transition-name: match-element;
 ### Values
 
 - {{cssxref("custom-ident")}}
-  - : An identifying name that causes the selected element to participate in a separate snapshot from the root snapshot. The `<custom-ident>` cannot be `auto`, `match-element`, or `none`.
+  - : An identifying name that causes the selected element to participate in a separate snapshot from the root snapshot. The `<custom-ident>` cannot be `auto`, `match-element`, `none`, or a [CSS-wide keyword](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types#css-wide_keywords) value.
 - `match-element`
   - : The selected element is automatically given an unique identifying name based on its identity, which enables it to be snapshotted separately from all other elements on the page. The name is an internal token representing the element, which is not visible to the web document.
 - `none`
