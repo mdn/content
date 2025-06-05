@@ -27,9 +27,17 @@ For example, the following `<meta>` tag provides a `description` as metadata of 
 The HTML specification defines the following set of standard metadata names:
 
 - `application-name`
+
   - : Browsers may use this to identify the application running in the web page.
     It is different from the {{HTMLElement("title")}} element, which may contain an application (or website) name, but a `<title>` may add contextual information like a document name or a status.
     Individual pages shouldn't define their own, unique `application-name`.
+    To provide translations, use multiple `<meta>` tags with the `lang` attribute for each language:
+
+    ```html
+    <meta name="application-name" content="Weather Wizard" lang="en" />
+    <meta name="application-name" content="Mago del Clima" lang="es" />
+    ```
+
 - `author`
   - : The document author's name.
 - [`color-scheme`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/color-scheme)
