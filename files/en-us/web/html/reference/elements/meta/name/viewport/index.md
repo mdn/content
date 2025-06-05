@@ -1,0 +1,92 @@
+---
+title: <meta name="viewport">
+short-title: viewport
+slug: Web/HTML/Reference/Elements/meta/name/viewport
+page-type: html-attribute-value
+browser-compat: html.elements.meta.name.viewport
+---
+
+{{HTMLSidebar}}
+
+The **`viewport`** value for the [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta#name) attribute of the {{htmlelement("meta")}} element gives hints about the size of the initial size of the {{glossary("viewport")}}.
+If specified, the [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content) attribute contains the viewport value as a comma-separated list of keywords.
+
+For example, to render at device width and scale to 100%:
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+```
+
+## Usage
+
+A `<meta name="viewport">` element has the following additional attributes:
+
+- `content`
+  - : The `content` attribute should be defined, and its value sets various viewport-related behaviors.
+    May be any of the following keywords as a comma-separated list:
+    - `width`
+      - : A positive integer number, or the keyword `device-width`.
+        Defines the pixel width of the viewport that you want the website to be rendered at.
+    - `height`
+      - : A positive integer, or the keyword `device-height`.
+        Defines the height of the viewport. Not used by any browser.
+    - `initial-scale`
+      - : A positive number between `0.0` and `10.0`.
+        Defines the ratio between the device width (`device-width` in portrait mode or `device-height` in landscape mode) and the viewport size.
+    - `maximum-scale`
+      - : A positive number between `0.0` and `10.0`.
+        Defines the maximum amount to zoom in.
+        It must be greater or equal to the `minimum-scale` or the behavior is undefined.
+        Browser settings can ignore this rule and iOS10+ ignores it by default.
+    - `minimum-scale`
+      - : A positive number between `0.0` and `10.0`.
+        Defines the minimum zoom level.
+        It must be smaller or equal to the `maximum-scale` or the behavior is undefined.
+        Browser settings can ignore this rule and iOS10+ ignores it by default.
+    - `user-scalable`
+      - : `yes` or `no`.
+        If set to `no`, the user is not able to zoom in the webpage.
+        Browser settings can ignore this rule, and iOS10+ ignores it by default.
+        The default is `yes`.
+        > [!WARNING]
+        > Disabling zooming capabilities by setting `user-scalable` to a value of `no` prevents people experiencing low vision conditions from being able to read and understand page content.
+        >
+        > - [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+        > - [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
+    - `viewport-fit`
+      - : `auto`, `contain`, or `cover`.
+        - `auto`: Doesn't affect the initial layout viewport, and the whole web page is viewable.
+        - `contain`: The viewport is scaled to fit the largest rectangle inscribed within the display.
+        - `cover`: The viewport is scaled to fill the device display. It is highly recommended to use the [safe area inset](/en-US/docs/Web/CSS/env) variables to ensure that important content doesn't end up outside the display.
+
+## Examples
+
+### Using a meta viewport size
+
+The following example indicates to the browser that the page should be rendered at the device width:
+
+```html
+<meta name="viewport" content="width=device-width" />
+```
+
+### Using a media query and a viewport keyword
+
+The following `content` value uses multiple keywords which hint to the browser to use fullscreen, and a `viewport-fit` which can be used to avoid display cutouts like mobile device notches:
+
+```html
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- {{glossary("viewport")}} glossary entry

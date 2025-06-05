@@ -1,0 +1,68 @@
+---
+title: <meta name="referrer">
+short-title: referrer
+slug: Web/HTML/Reference/Elements/meta/name/referrer
+page-type: html-attribute-value
+browser-compat: html.elements.meta.name.referrer
+---
+
+{{HTMLSidebar}}
+
+The **`referrer`** value for the [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta#name) attribute of the {{htmlelement("meta")}} element controls the HTTP {{httpheader("Referer")}} header of requests sent from the document.
+If specified, the [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content) attribute sets the corresponding value.
+
+For example, the following `<meta>` element sends the {{glossary("origin")}} of the document as the referrer:
+
+```html
+<meta name="referrer" content="origin" />
+```
+
+> [!WARNING]
+> Dynamically inserting `<meta name="referrer">` (with {{domxref("Document.write", "document.write()")}} or {{domxref("Node.appendChild", "appendChild()")}}) makes the referrer behavior unpredictable.
+> When several conflicting policies are defined, the `no-referrer` policy is applied.
+
+## Usage
+
+A `<meta name="referrer">` element has the following additional attributes:
+
+- `content`
+  - : The [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content) attribute should be defined and its value sets the document referrer.
+    May be any of the following values:
+    - `no-referrer`
+      - : Do not send a HTTP `Referer` header.
+    - `origin`
+      - : Send the origin of the document.
+    - `no-referrer-when-downgrade`
+      - : Send the full URL when the destination is at least as secure as the current page (HTTP(S)→HTTPS), but send no referrer when it's less secure (HTTPS→HTTP). This is the default behavior.
+    - `origin-when-cross-origin`
+      - : Send the full URL (stripped of parameters) for same-origin requests, but only send the origin for other cases.
+    - `same-origin`
+      - : Send the full URL (stripped of parameters) for same-origin requests. Cross-origin requests will contain no referrer header.
+    - `strict-origin`
+      - : Send the origin when the destination is at least as secure as the current page (HTTP(S)→HTTPS), but send no referrer when it's less secure (HTTPS→HTTP).
+    - `strict-origin-when-cross-origin`
+      - : Send the full URL (stripped of parameters) for same-origin requests. Send the origin when the destination is at least as secure as the current page (HTTP(S)→HTTPS). Otherwise, send no referrer.
+    - `unsafe-URL`
+      - : Send the full URL (stripped of parameters) for same-origin or cross-origin requests.
+
+## Examples
+
+### Removing a referrer from requests
+
+The following `<meta>` element specifies that the document shouldn't send a `Referer` header with HTTP requests from the document:
+
+```html
+<meta name="referrer" content="no-referrer" />
+```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- HTTP {{httpheader("Referer")}} header
