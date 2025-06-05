@@ -46,7 +46,7 @@ svg {
 
 ## DOM interface
 
-The <path> element is associated with the [SVGPathElement](https://developer.mozilla.org/en-US/docs/Web/API/SVGPathElement) interface.
+The <path> element is associated with the [SVGPathElement](/en-US/docs/Web/API/SVGPathElement) interface.
 
 ## Specifications
 
