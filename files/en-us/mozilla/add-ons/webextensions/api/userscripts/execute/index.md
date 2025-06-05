@@ -27,12 +27,12 @@ let executeUserScript = browser.userScripts.execute(
 
 ### Return Value
 
-A {{JSxRef("Promise")}} fulfilled with an array of {{WebExtAPIRef("userScripts.InjectionResult")}} objects.
+A {{JSxRef("Promise")}} fulfilled with an array of {{WebExtAPIRef("userScripts.InjectionResult")}} objects. If the injection fails, the attached result object will include an `error` property.
 
 ## Examples
 
 ```js
-await chrome.userScripts.execute([
+await browser.userScripts.execute([
   {
     js: [{ code: "console.log('Hello world!');" }],
     target: { tabId: 1 },
