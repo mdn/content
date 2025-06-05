@@ -323,12 +323,14 @@ l10n:
     Accessibility_Understanding_colors_and_luminance: "Barrierefreiheit: Farbwerte verstehen"
     Applying_color_to_HTML_elements: Farben auf HTML-Elemente anwenden
     At-rules: At-Regeln
+    Backgrounds_and_Borders: Hintergründe und Rahmen
     Resizing_background_images: Hintergrundbilder skalieren
     Box alignment: Box-Ausrichtung
     Box_alignment_in_block_layout: Box-Ausrichtung im Block-Layout
     Box_model: Box-Modell
     Colors: Farben
     Color_contrast: "Barrierefreiheit: Farbkontrast"
+    Columns: Spalten
     Combinators: Kombinatoren
     Conditional_rules: Bedingte Regeln
     Containment: Containment
@@ -397,9 +399,11 @@ l10n:
     CSS_layout: Dispositions CSS
     Guides: Guides
     Animations: Animations
+    Backgrounds_and_Borders: Arrière-plans et bordures
     Resizing_background_images: Redimensionner les images d'arrière-plan
     Box_alignment_in_block_layout: Alignement des boîtes avec la disposition en bloc
     Box_model: Modèle de boîte
+    Columns: Colonnes
     Conditional_rules: Règles conditionnelles
     CSSOM_view: Vue CSSOM
     Flexbox: Boîtes flexibles
@@ -428,12 +432,14 @@ l10n:
     CSS_layout: CSS レイアウト
     Guides: ガイド
     Animations: アニメーション
+    Backgrounds_and_Borders: 背景と境界
     Resizing_background_images: 背景画像の拡大縮小
     Box alignment: ボックス配置
     Box_alignment_in_block_layout: ブロックレイアウトでのボックス配置
     Box_model: ボックスモデル
     Colors: 色
     Color_contrast: "アクセシビリティ: 色のコントラスト"
+    Columns: 段組み
     Combinators: 結合子
     Conditional_rules: 条件付きルール
     Containment: コンテナー
@@ -467,9 +473,11 @@ l10n:
     CSS_layout: CSS 레이아웃
     Guides: 안내서
     Animations: 애니메이션
+    Backgrounds_and_Borders: 배경과 보더
     Resizing_background_images: 배경 이미지 크기 조정하기
     Box_alignment_in_block_layout: 블록 레이아웃 박스 정렬하기
     Box_model: 박스 모델
+    Columns: 열
     Conditional_rules: CSS에서 규칙 정의하기
     CSSOM_view: CSSOM view
     Display: 플로 레이아웃
@@ -495,9 +503,11 @@ l10n:
     CSS_layout: CSS макет
     Guides: Руководства
     Animations: Анимации
+    Backgrounds_and_Borders: Фоны и границы
     Resizing_background_images: Изменение размера фоновых изображений
     Box_alignment_in_block_layout: Выравнивание в блочной раскладке
     Box_model: Блочная модель
+    Columns: Колонки
     Conditional_rules: Условные конструкции
     CSSOM_view: CSSOM View
     Display: Потоковая раскладка
@@ -526,12 +536,14 @@ l10n:
     Guides: 指南
     Animations: 动画
     At-rules: At 规则
+    Backgrounds_and_Borders: 背景和边框
     Resizing_background_images: 调整背景图片的大小
     Box alignment: 盒对齐
     Box_alignment_in_block_layout: 块布局中的盒对齐方式
     Box_model: 盒模型
     Colors: 颜色
     Color_contrast: Web 无障碍：色彩对比度
+    Columns: 多列
     Conditional_rules: 条件规则
     CSSOM_view: CSS 对象模型视图
     Display: 流式布局
