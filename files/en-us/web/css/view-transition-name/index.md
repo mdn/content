@@ -39,7 +39,7 @@ view-transition-name: unset;
 
 ## Description
 
-By default, when a view transition is applied to a web app, all changes to the UI that occur during that transition are snapshotted and animated together, which is the default — or `root` — snapshot (see [The view transition pseudo-element tree](/en-US/docs/Web/API/View_Transition_API/Using#the_view_transition_pseudo-element_tree)). By default, this animation is a smooth cross-fade, which can be seen in action in our [View Transitions SPA demo](https://mdn.github.io/dom-examples/view-transitions/spa/).
+By default, when a view transition is applied to a web app, all changes to the UI that occur during that transition are snapshotted and animated together. This is the default — or `root` — snapshot (see [The view transition pseudo-element tree](/en-US/docs/Web/API/View_Transition_API/Using#the_view_transition_pseudo-element_tree)). By default, this animation is a smooth cross-fade, which can be seen in action in the [View Transitions SPA demo](https://mdn.github.io/dom-examples/view-transitions/spa/).
 
 If you want certain elements to be animated differently from the `root` snapshot during the view transition, you can do so by giving them a different `view-transition-name`, for example:
 
