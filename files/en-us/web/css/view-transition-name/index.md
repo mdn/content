@@ -115,7 +115,7 @@ Because `match-element` assigns automatic `view-transition-name` values based on
 
 ### Basic `view-transition-name` usage
 
-Our [View Transitions SPA demo](https://mdn.github.io/dom-examples/view-transitions/spa/), is a basic image gallery. See [Basic SPA view transition](/en-US/docs/Web/API/View_Transition_API/Using#basic_spa_view_transition) for a more detailed explanation of how this demo works.
+This example comes from the [View Transitions SPA demo](https://mdn.github.io/dom-examples/view-transitions/spa/), which is a basic image gallery. The [Basic SPA view transition](/en-US/docs/Web/API/View_Transition_API/Using#basic_spa_view_transition) provides a more detailed explanation of how this demo works.
 
 Most of the UI changes are animated using the `root` transition snapshot. However, the `<figcaption>` is given a `view-transition-name` of `figure-caption` to allow it to be animated differently from the rest of the page:
 
