@@ -162,7 +162,7 @@ The following code applies a custom animation just to the `<figcaption>`:
 }
 ```
 
-Here we've created a custom CSS animation and applied it to the `::view-transition-old(figure-caption)` and `::view-transition-new(figure-caption)` pseudo-elements. We've also added several other styles to both to keep them in the same place and stop the default styling from interfering with our custom animations.
+We create a custom CSS animation and apply it to the `::view-transition-old(figure-caption)` and `::view-transition-new(figure-caption)` pseudo-elements. We also apply other styles to keep them both in the same place and to stop the default styling from interfering with our custom animations.
 
 ### Using the `match-element` value
 
