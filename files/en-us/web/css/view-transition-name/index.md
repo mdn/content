@@ -170,7 +170,7 @@ The [View Transitions match-element demo](https://mdn.github.io/dom-examples/vie
 
 #### HTML
 
-The markup features a {{htmlelement("main")}} element, which contains an [unordered list](/en-US/docs/Web/HTML/Reference/Elements/ul) and an {{htmlelement("article")}} element. Each child {{htmlelement("li")}} element inside the list contains text content, which includes an {{htmlelement("a")}} element inside a [heading](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements).
+The {{htmlelement("main")}} element contains an [unordered list](/en-US/docs/Web/HTML/Reference/Elements/ul) and an {{htmlelement("article")}} element. The multiple child {{htmlelement("li")}} elements inside the list each contain an {{htmlelement("a")}} element inside a [heading](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements).
 
 ```html
 <main class="match-element-applied">
