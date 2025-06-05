@@ -238,7 +238,7 @@ By default, all the rendered elements involved in the view transition are animat
 
 The `match-element-applied` class is applied to the `<main>` element. You can remove this class by unchecking the checkbox in the bottom-right corner of the UI. This allows you to compare the singular cross-fade animation you get without `view-transition-name: match-element` to the individual movement animations you get when it is applied.
 
-We also apply a specific {{cssxref("animation-duration")}} to all view transition groups (signified by the `*` identifier) using the {{cssxref("::view-transition-group()")}} pseudo-element, and give all the old and new snapshots a {{cssxref("height")}} of `100%` to work around differences in their aspect ratios and make the animations look smoother:
+We also use the {{cssxref("::view-transition-group()")}} pseudo-element to apply an {{cssxref("animation-duration")}} to all the view transition groups (signified by the `*` identifier) and give all the old and new snapshots a {{cssxref("height")}} of `100%` to work around differences in their aspect ratios and make the animations look smoother:
 
 ```css
 ::view-transition-group(*) {
