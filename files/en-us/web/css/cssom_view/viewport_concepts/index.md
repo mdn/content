@@ -1,5 +1,6 @@
 ---
 title: Viewport concepts
+short-title: Viewports
 slug: Web/CSS/CSSOM_view/Viewport_concepts
 page-type: guide
 ---
@@ -143,7 +144,7 @@ Generally, when you write the above media query, the styles are applied if the v
 
 The [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API) provides a mechanism for querying and modifying the properties of the visual viewport.
 
-## Mobile Viewports
+## Mobile viewports
 
 Mobile devices come in all shapes and sizes, with screens of differing {{glossary("device pixel")}} ratios. The mobile browser's viewport is the area of the window in which web content can be seen, which is not necessarily the same size as the rendered page. Mobile browsers render pages in a virtual window or viewport, generally at 980px, which is usually wider than the screen, and then shrink the rendered result down so it can all be seen at once. Users can then pan and zoom to see different areas of the page. For example, if a mobile screen has a width of 320px, a website might be rendered with a virtual viewport of 980px, and then it will be shrunk down to fit into the 320px space, which, depending on the design, is illegible for many if not everyone. To tell a mobile browser to use the viewport width instead of the default 980px as the width of the screen, developers can include a viewport meta tag, like the following:
 

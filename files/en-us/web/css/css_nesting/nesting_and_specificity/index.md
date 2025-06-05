@@ -1,5 +1,6 @@
 ---
 title: CSS nesting and specificity
+short-title: Nesting and specificity
 slug: Web/CSS/CSS_nesting/Nesting_and_specificity
 page-type: guide
 ---

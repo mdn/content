@@ -111,12 +111,17 @@ sidebar:
   - type: section
     link: /Web/CSS/Guides
     title: Guides
+  - title: Anchor_positioning
+    details: closed
+    children:
+      - /Web/CSS/CSS_anchor_positioning/Using
+      - /Web/CSS/CSS_anchor_positioning/Try_options_hiding
   - title: Animations
     details: closed
     children:
       - /Web/CSS/CSS_animated_properties
       - /Web/CSS/CSS_animations/Using_CSS_animations
-  - title: Backgrounds_and_Borders
+  - title: Backgrounds_and_borders
     details: closed
     children:
       - /Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
@@ -150,7 +155,7 @@ sidebar:
         title: Accessibility_Understanding_colors_and_luminance
       - link: /Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast
         title: Color_contrast
-  - title: Columns
+  - title: Multi-column layouts
     details: closed
     children:
       - /Web/CSS/CSS_multicol_layout/Basic_concepts
@@ -167,18 +172,27 @@ sidebar:
   - title: Containment
     details: closed
     children:
-      - /Web/CSS/CSS_containment/Using_CSS_containment
       - /Web/CSS/CSS_containment/Container_queries
+      - /Web/CSS/CSS_containment/Using_CSS_containment
       - /Web/CSS/CSS_containment/Container_size_and_style_queries
   - title: CSSOM_view
     details: closed
     children:
       - /Web/CSS/CSSOM_view/Coordinate_systems
       - /Web/CSS/CSSOM_view/Viewport_concepts
-  - type: listSubPages
-    path: /Web/CSS/CSS_display
-    title: Display
+  - title: Display
     details: closed
+    children:
+      - /Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow
+      - /Web/CSS/CSS_display/Flow_layout
+      - /Web/CSS/CSS_display/Flow_layout_and_overflow
+      - /Web/CSS/CSS_display/Flow_layout_and_writing_modes
+      - /Web/CSS/CSS_display/In_flow_and_out_of_flow
+      - /Web/CSS/CSS_display/Containing_block
+      - /Web/CSS/CSS_display/Introduction_to_formatting_contexts
+      - /Web/CSS/CSS_display/Block_formatting_context
+      - /Web/CSS/CSS_display/multi-keyword_syntax_of_display
+      - /Web/CSS/CSS_display/Visual_formatting_model
   - title: Flexbox
     details: closed
     children:
@@ -198,15 +212,15 @@ sidebar:
     children:
       - /Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
       - /Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods
-      - /Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
       - /Web/CSS/CSS_grid_layout/Grid_template_areas
+      - /Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
       - /Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
       - /Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout
       - /Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout
       - /Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes
-      - /Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility
       - /Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
       - /Web/CSS/CSS_grid_layout/Subgrid
+      - /Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility
       - /Web/CSS/CSS_grid_layout/Masonry_layout
   - title: Images
     details: closed
@@ -236,9 +250,9 @@ sidebar:
   - title: Nesting
     details: closed
     children:
-      - /Web/CSS/CSS_nesting/Using_CSS_nesting
       - /Web/CSS/CSS_nesting/Nesting_at-rules
       - /Web/CSS/CSS_nesting/Nesting_and_specificity
+      - /Web/CSS/CSS_nesting/Using_CSS_nesting
   - title: Positioning
     details: closed
     children:
@@ -256,8 +270,8 @@ sidebar:
     children:
       - /Web/CSS/CSS_shapes/Overview_of_shapes
       - /Web/CSS/CSS_shapes/From_box_values
-      - /Web/CSS/CSS_shapes/Basic_shapes
       - /Web/CSS/CSS_shapes/Shapes_from_images
+      - /Web/CSS/CSS_shapes/Basic_shapes
   - title: Text
     details: closed
     children:
@@ -309,14 +323,12 @@ l10n:
     Accessibility_Understanding_colors_and_luminance: "Barrierefreiheit: Farbwerte verstehen"
     Applying_color_to_HTML_elements: Farben auf HTML-Elemente anwenden
     At-rules: At-Regeln
-    Backgrounds_and_Borders: Hintergründe und Rahmen
     Resizing_background_images: Hintergrundbilder skalieren
     Box alignment: Box-Ausrichtung
     Box_alignment_in_block_layout: Box-Ausrichtung im Block-Layout
     Box_model: Box-Modell
     Colors: Farben
     Color_contrast: "Barrierefreiheit: Farbkontrast"
-    Columns: Spalten
     Combinators: Kombinatoren
     Conditional_rules: Bedingte Regeln
     Containment: Containment
@@ -353,16 +365,16 @@ l10n:
     CSS_text_styling: CSS text styling
     CSS_layout: CSS layout
     Guides: Guides
+    Anchor_positioning: Anchor positioning
     Animations: Animations
-    Backgrounds_and_Borders: Backgrounds and Borders
+    Backgrounds_and_borders: Backgrounds and borders
+    Containment: Containment
     Resizing_background_images: Resizing background images
     Box_alignment_in_block_layout: Box alignment in block layout
     Box_model: Box model
     Colors: Colors
     Color_contrast: "Accessibility: Color contrast"
-    Columns: Columns
     Conditional_rules: Conditional rules
-    Containment: Containment
     CSSOM_view: CSSOM view
     Display: Display
     Flexbox: Flexbox
@@ -384,11 +396,9 @@ l10n:
     CSS_layout: Dispositions CSS
     Guides: Guides
     Animations: Animations
-    Backgrounds_and_Borders: Arrière-plans et bordures
     Resizing_background_images: Redimensionner les images d'arrière-plan
     Box_alignment_in_block_layout: Alignement des boîtes avec la disposition en bloc
     Box_model: Modèle de boîte
-    Columns: Colonnes
     Conditional_rules: Règles conditionnelles
     CSSOM_view: Vue CSSOM
     Flexbox: Boîtes flexibles
@@ -417,14 +427,12 @@ l10n:
     CSS_layout: CSS レイアウト
     Guides: ガイド
     Animations: アニメーション
-    Backgrounds_and_Borders: 背景と境界
     Resizing_background_images: 背景画像の拡大縮小
     Box alignment: ボックス配置
     Box_alignment_in_block_layout: ブロックレイアウトでのボックス配置
     Box_model: ボックスモデル
     Colors: 色
     Color_contrast: "アクセシビリティ: 色のコントラスト"
-    Columns: 段組み
     Combinators: 結合子
     Conditional_rules: 条件付きルール
     Containment: コンテナー
@@ -458,11 +466,9 @@ l10n:
     CSS_layout: CSS 레이아웃
     Guides: 안내서
     Animations: 애니메이션
-    Backgrounds_and_Borders: 배경과 보더
     Resizing_background_images: 배경 이미지 크기 조정하기
     Box_alignment_in_block_layout: 블록 레이아웃 박스 정렬하기
     Box_model: 박스 모델
-    Columns: 열
     Conditional_rules: CSS에서 규칙 정의하기
     CSSOM_view: CSSOM view
     Display: 플로 레이아웃
@@ -488,11 +494,9 @@ l10n:
     CSS_layout: CSS макет
     Guides: Руководства
     Animations: Анимации
-    Backgrounds_and_Borders: Фоны и границы
     Resizing_background_images: Изменение размера фоновых изображений
     Box_alignment_in_block_layout: Выравнивание в блочной раскладке
     Box_model: Блочная модель
-    Columns: Колонки
     Conditional_rules: Условные конструкции
     CSSOM_view: CSSOM View
     Display: Потоковая раскладка
@@ -521,14 +525,12 @@ l10n:
     Guides: 指南
     Animations: 动画
     At-rules: At 规则
-    Backgrounds_and_Borders: 背景和边框
     Resizing_background_images: 调整背景图片的大小
     Box alignment: 盒对齐
     Box_alignment_in_block_layout: 块布局中的盒对齐方式
     Box_model: 盒模型
     Colors: 颜色
     Color_contrast: Web 无障碍：色彩对比度
-    Columns: 多列
     Conditional_rules: 条件规则
     CSSOM_view: CSS 对象模型视图
     Display: 流式布局
