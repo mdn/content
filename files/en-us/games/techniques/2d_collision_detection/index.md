@@ -8,129 +8,375 @@ page-type: guide
 
 Algorithms to detect collision in 2D games depend on the type of shapes that can collide (e.g., Rectangle to Rectangle, Rectangle to Circle, Circle to Circle). Generally you will have a simple generic shape that covers the entity known as a "hitbox" so even though collision may not be pixel perfect, it will look good enough and be performant across multiple entities. This article provides a review of the most common techniques used to provide collision detection in 2D games.
 
+## Engine code
+
+The demos in this page don't rely on any external library, so we implement all the orchestration ourselves, which includes rendering, handling user input, and invoking behaviors of each entity. The code is shown below (it won't be repeated for each example):
+
+```html
+<div id="container"></div>
+```
+
+```css
+.entity {
+  display: inline-block;
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-color: blue;
+}
+
+.movable {
+  left: 50px;
+  top: 50px;
+  background-color: red;
+}
+
+.collision-state {
+  background-color: green !important;
+}
+```
+
+```js
+const collider = {
+  moveableEntity: null,
+  staticEntities: [],
+  checkCollision() {
+    // Important: the isCollidingWith method is what we are implementing
+    const isColliding = this.staticEntities.some((staticEntity) =>
+      this.moveableEntity.isCollidingWith(staticEntity),
+    );
+    this.moveableEntity.setCollisionState(isColliding);
+  },
+};
+
+class BaseEntity {
+  ref;
+  position;
+  constructor(ref) {
+    this.ref = ref;
+    this.position = {
+      x: parseInt(ref.style.left, 10),
+      y: parseInt(ref.style.top, 10),
+    };
+  }
+  shiftPosition(dx, dy) {
+    this.position.x += dx;
+    this.position.y += dy;
+    this.redraw();
+  }
+  redraw() {
+    this.ref.style.left = `${this.position.x}px`;
+    this.ref.style.top = `${this.position.y}px`;
+  }
+  setCollisionState(isColliding) {
+    if (isColliding && !this.ref.classList.contains("collision-state")) {
+      this.ref.classList.add("collision-state");
+    } else if (!isColliding) {
+      this.ref.classList.remove("collision-state");
+    }
+  }
+  isCollidingWith(other) {
+    throw new Error("isCollidingWith must be implemented in subclasses");
+  }
+}
+
+const container = document.getElementById("container");
+
+document.addEventListener("keydown", (e) => {
+  e.preventDefault();
+  switch (e.key) {
+    case "ArrowLeft":
+      collider.moveableEntity.shiftPosition(-5, 0);
+      break;
+    case "ArrowUp":
+      collider.moveableEntity.shiftPosition(0, -5);
+      break;
+    case "ArrowRight":
+      collider.moveableEntity.shiftPosition(5, 0);
+      break;
+    case "ArrowDown":
+      collider.moveableEntity.shiftPosition(0, 5);
+      break;
+  }
+  collider.checkCollision();
+});
+```
+
 ## Axis-aligned bounding box
 
 One of the simpler forms of collision detection is between two rectangles that are axis aligned — meaning no rotation. The algorithm works by ensuring there is no gap between any of the 4 sides of the rectangles. Any gap means a collision does not exist.
 
 ```html hidden
-<div id="cr-stage"></div>
-<p>
-  Move the rectangle with arrow keys. Green means collision, blue means no
-  collision.
-</p>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/crafty/0.5.4/crafty-min.js"></script>
+<div id="container"></div>
 ```
 
-```js
-Crafty.init(200, 200);
+```css hidden
+.entity {
+  display: inline-block;
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-color: blue;
+}
 
-const dim1 = { x: 5, y: 5, w: 50, h: 50 };
-const dim2 = { x: 20, y: 10, w: 60, h: 40 };
+.movable {
+  left: 50px;
+  top: 50px;
+  background-color: red;
+}
 
-const rect1 = Crafty.e("2D, Canvas, Color").attr(dim1).color("red");
+.collision-state {
+  background-color: green !important;
+}
+```
 
-const rect2 = Crafty.e("2D, Canvas, Color, Keyboard, Fourway")
-  .fourway(2)
-  .attr(dim2)
-  .color("blue");
+```js hidden
+const collider = {
+  moveableEntity: null,
+  staticEntities: [],
+  checkCollision() {
+    // Important: the isCollidingWith method is what we are implementing
+    const isColliding = this.staticEntities.some((staticEntity) =>
+      this.moveableEntity.isCollidingWith(staticEntity),
+    );
+    this.moveableEntity.setCollisionState(isColliding);
+  },
+};
 
-rect2.bind("EnterFrame", function () {
-  if (
-    rect1.x < rect2.x + rect2.w &&
-    rect1.x + rect1.w > rect2.x &&
-    rect1.y < rect2.y + rect2.h &&
-    rect1.y + rect1.h > rect2.y
-  ) {
-    // Collision detected!
-    this.color("green");
-  } else {
-    // No collision
-    this.color("blue");
+class BaseEntity {
+  ref;
+  position;
+  constructor(ref) {
+    this.ref = ref;
+    this.position = {
+      x: parseInt(ref.style.left, 10),
+      y: parseInt(ref.style.top, 10),
+    };
   }
+  shiftPosition(dx, dy) {
+    this.position.x += dx;
+    this.position.y += dy;
+    this.redraw();
+  }
+  redraw() {
+    this.ref.style.left = `${this.position.x}px`;
+    this.ref.style.top = `${this.position.y}px`;
+  }
+  setCollisionState(isColliding) {
+    if (isColliding && !this.ref.classList.contains("collision-state")) {
+      this.ref.classList.add("collision-state");
+    } else if (!isColliding) {
+      this.ref.classList.remove("collision-state");
+    }
+  }
+  isCollidingWith(other) {
+    throw new Error("isCollidingWith must be implemented in subclasses");
+  }
+}
+
+const container = document.getElementById("container");
+
+document.addEventListener("keydown", (e) => {
+  e.preventDefault();
+  switch (e.key) {
+    case "ArrowLeft":
+      collider.moveableEntity.shiftPosition(-5, 0);
+      break;
+    case "ArrowUp":
+      collider.moveableEntity.shiftPosition(0, -5);
+      break;
+    case "ArrowRight":
+      collider.moveableEntity.shiftPosition(5, 0);
+      break;
+    case "ArrowDown":
+      collider.moveableEntity.shiftPosition(0, 5);
+      break;
+  }
+  collider.checkCollision();
 });
 ```
 
-{{ EmbedLiveSample('Axis-Aligned_Bounding_Box', '700', '300') }}
+```js
+class BoxEntity extends BaseEntity {
+  width = 20;
+  height = 20;
 
-> **Note:** [Another example without Canvas or external libraries](https://jsfiddle.net/jlr7245/217jrozd/3/).
+  isCollidingWith(other) {
+    return (
+      this.position.x < other.position.x + other.width &&
+      this.position.x + this.width > other.position.x &&
+      this.position.y < other.position.y + other.height &&
+      this.position.y + this.height > other.position.y
+    );
+  }
+}
+```
+
+```js hidden
+// create a bunch of random divs
+for (let i = 0; i < 100; i++) {
+  const newStaticDiv = document.createElement("div");
+  newStaticDiv.style.top = `${Math.floor(Math.random() * 500)}px`;
+  newStaticDiv.style.left = `${Math.floor(Math.random() * 500)}px`;
+  newStaticDiv.classList.add("entity");
+  container.appendChild(newStaticDiv);
+  const entity = new BoxEntity(newStaticDiv);
+  collider.staticEntities.push(entity);
+}
+
+// create the moveable div
+const newMoveableDiv = document.createElement("div");
+newMoveableDiv.style.left = "500px";
+newMoveableDiv.style.top = "500px";
+newMoveableDiv.classList.add("entity", "movable");
+container.appendChild(newMoveableDiv);
+const entity = new BoxEntity(newMoveableDiv);
+collider.moveableEntity = entity;
+```
+
+{{EmbedLiveSample("axis-aligned_bounding_box", "", 550)}}
 
 ## Circle collision
 
 Another simple shape for collision detection is between two circles. This algorithm works by taking the center points of the two circles and ensuring the distance between the center points are less than the two radii added together.
 
 ```html hidden
-<div id="cr-stage"></div>
-<p>
-  Move the circle with arrow keys. Green means collision, blue means no
-  collision.
-</p>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/crafty/0.5.4/crafty-min.js"></script>
+<div id="container"></div>
 ```
 
 ```css hidden
-#cr-stage {
-  position: static !important;
-  height: 200px !important;
+.entity {
+  display: inline-block;
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-color: blue;
+}
+
+.movable {
+  left: 50px;
+  top: 50px;
+  background-color: red;
+}
+
+.collision-state {
+  background-color: green !important;
 }
 ```
 
-```js
-Crafty.init(200, 200);
+```css
+.entity {
+  border-radius: 50%;
+}
+```
 
-const dim1 = { x: 5, y: 5 };
-const dim2 = { x: 20, y: 20 };
-
-Crafty.c("Circle", {
-  circle(radius, color) {
-    this.radius = radius;
-    this.w = this.h = radius * 2;
-    this.color = color || "#000000";
-
-    this.bind("Move", Crafty.DrawManager.drawAll);
-    return this;
-  },
-
-  draw() {
-    const ctx = Crafty.canvas.context;
-    ctx.save();
-    ctx.fillStyle = this.color;
-    ctx.beginPath();
-    ctx.arc(
-      this.x + this.radius,
-      this.y + this.radius,
-      this.radius,
-      0,
-      Math.PI * 2,
+```js hidden
+const collider = {
+  moveableEntity: null,
+  staticEntities: [],
+  checkCollision() {
+    // Important: the isCollidingWith method is what we are implementing
+    const isColliding = this.staticEntities.some((staticEntity) =>
+      this.moveableEntity.isCollidingWith(staticEntity),
     );
-    ctx.closePath();
-    ctx.fill();
-    ctx.restore();
+    this.moveableEntity.setCollisionState(isColliding);
   },
-});
+};
 
-const circle1 = Crafty.e("2D, Canvas, Circle").attr(dim1).circle(15, "red");
+class BaseEntity {
+  ref;
+  position;
+  constructor(ref) {
+    this.ref = ref;
+    this.position = {
+      x: parseInt(ref.style.left, 10),
+      y: parseInt(ref.style.top, 10),
+    };
+  }
+  shiftPosition(dx, dy) {
+    this.position.x += dx;
+    this.position.y += dy;
+    this.redraw();
+  }
+  redraw() {
+    this.ref.style.left = `${this.position.x}px`;
+    this.ref.style.top = `${this.position.y}px`;
+  }
+  setCollisionState(isColliding) {
+    if (isColliding && !this.ref.classList.contains("collision-state")) {
+      this.ref.classList.add("collision-state");
+    } else if (!isColliding) {
+      this.ref.classList.remove("collision-state");
+    }
+  }
+  isCollidingWith(other) {
+    throw new Error("isCollidingWith must be implemented in subclasses");
+  }
+}
 
-const circle2 = Crafty.e("2D, Canvas, Circle, Fourway")
-  .fourway(2)
-  .attr(dim2)
-  .circle(20, "blue");
+const container = document.getElementById("container");
 
-circle2.bind("EnterFrame", function () {
-  const dx = circle1.x + circle1.radius - (circle2.x + circle2.radius);
-  const dy = circle1.y + circle1.radius - (circle2.y + circle2.radius);
-  const distance = Math.sqrt(dx * dx + dy * dy);
-
-  const colliding = distance < circle1.radius + circle2.radius;
-  this.color = colliding ? "green" : "blue";
+document.addEventListener("keydown", (e) => {
+  e.preventDefault();
+  switch (e.key) {
+    case "ArrowLeft":
+      collider.moveableEntity.shiftPosition(-5, 0);
+      break;
+    case "ArrowUp":
+      collider.moveableEntity.shiftPosition(0, -5);
+      break;
+    case "ArrowRight":
+      collider.moveableEntity.shiftPosition(5, 0);
+      break;
+    case "ArrowDown":
+      collider.moveableEntity.shiftPosition(0, 5);
+      break;
+  }
+  collider.checkCollision();
 });
 ```
 
-{{ EmbedLiveSample('Circle_Collision', '700', '300') }}
+```js
+class CircleEntity extends BaseEntity {
+  radius = 10;
+
+  isCollidingWith(other) {
+    const dx =
+      this.position.x + this.radius - (other.position.x + other.radius);
+    const dy =
+      this.position.y + this.radius - (other.position.t + other.radius);
+    const distance = Math.sqrt(dx * dx + dy * dy);
+    return distance < this.radius + other.radius;
+  }
+}
+```
+
+```js hidden
+// create a bunch of random divs
+for (let i = 0; i < 100; i++) {
+  const newStaticDiv = document.createElement("div");
+  newStaticDiv.classList.add("entity");
+  newStaticDiv.style.top = `${Math.floor(Math.random() * 500)}px`;
+  newStaticDiv.style.left = `${Math.floor(Math.random() * 500)}px`;
+  container.appendChild(newStaticDiv);
+  const entity = new CircleEntity(newStaticDiv);
+  collider.staticEntities.push(entity);
+}
+
+// create the moveable div
+const newMoveableDiv = document.createElement("div");
+newMoveableDiv.style.left = "500px";
+newMoveableDiv.style.top = "500px";
+newMoveableDiv.classList.add("entity", "movable");
+container.appendChild(newMoveableDiv);
+const entity = new CircleEntity(newMoveableDiv);
+collider.moveableEntity = entity;
+```
 
 > [!NOTE]
 > The circles' `x` and `y` coordinates refer to their top left corners, so we need to add the radius to compare their centers.
 
-> **Note:** [Here is another example without Canvas or external libraries.](https://jsfiddle.net/jlr7245/teb4znk0/20/)
+{{EmbedLiveSample("circle_collision", "", 550)}}
 
 ## Separating Axis Theorem
 
