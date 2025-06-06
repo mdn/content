@@ -5,8 +5,8 @@ page-type: guide
 sidebar: privacy
 ---
 
-This page describes how Firefox's built-in tracking protection works and how loading of third-party content is affected.
-Developers should consider this information to ensure compatibility when this feature is enabled by visitors.
+This page describes how Firefox's built-in tracking protection works and how it affects loading of third-party content.
+Understanding how tracking protection works will help ensure your site functions as expected when your visitors have it enabled.
 
 ## What is tracking protection?
 
