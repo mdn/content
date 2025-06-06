@@ -82,4 +82,3 @@ This element implements the {{domxref('HTMLElement')}} interface.
 
 - CSS: {{cssxref("font-size")}}, {{cssxref("font")}}
 - HTML: {{htmlelement("small")}}, {{htmlelement("font")}}, {{htmlelement("style")}}
-- HTML 4.01 Specification: [Font Styles](https://www.w3.org/TR/html4/present/graphics.html#h-15.2)
