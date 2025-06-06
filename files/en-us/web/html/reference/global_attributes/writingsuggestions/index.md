@@ -1,5 +1,5 @@
 ---
-title: writingsuggestions global attribute
+title: HTML writingsuggestions global attribute
 short-title: writingsuggestions
 slug: Web/HTML/Reference/Global_attributes/writingsuggestions
 page-type: html-attribute

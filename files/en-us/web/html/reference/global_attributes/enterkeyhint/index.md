@@ -1,5 +1,5 @@
 ---
-title: enterkeyhint global attribute
+title: HTML enterkeyhint global attribute
 short-title: enterkeyhint
 slug: Web/HTML/Reference/Global_attributes/enterkeyhint
 page-type: html-attribute

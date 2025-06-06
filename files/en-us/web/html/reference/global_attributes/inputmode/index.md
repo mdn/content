@@ -1,5 +1,5 @@
 ---
-title: inputmode global attribute
+title: HTML inputmode global attribute
 short-title: inputmode
 slug: Web/HTML/Reference/Global_attributes/inputmode
 page-type: html-attribute

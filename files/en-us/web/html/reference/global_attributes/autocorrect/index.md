@@ -1,5 +1,5 @@
 ---
-title: autocorrect global attribute
+title: HTML autocorrect global attribute
 short-title: autocorrect
 slug: Web/HTML/Reference/Global_attributes/autocorrect
 page-type: html-attribute

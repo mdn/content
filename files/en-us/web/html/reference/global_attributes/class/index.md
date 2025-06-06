@@ -1,5 +1,5 @@
 ---
-title: class global attribute
+title: HTML class global attribute
 short-title: class
 slug: Web/HTML/Reference/Global_attributes/class
 page-type: html-attribute

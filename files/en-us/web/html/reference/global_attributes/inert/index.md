@@ -1,5 +1,5 @@
 ---
-title: inert global attribute
+title: HTML inert global attribute
 short-title: inert
 slug: Web/HTML/Reference/Global_attributes/inert
 page-type: html-attribute

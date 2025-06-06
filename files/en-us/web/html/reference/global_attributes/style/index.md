@@ -1,5 +1,5 @@
 ---
-title: style global attribute
+title: HTML style global attribute
 short-title: style
 slug: Web/HTML/Reference/Global_attributes/style
 page-type: html-attribute

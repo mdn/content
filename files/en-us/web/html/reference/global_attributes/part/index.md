@@ -1,5 +1,5 @@
 ---
-title: part global attribute
+title: HTML part global attribute
 short-title: part
 slug: Web/HTML/Reference/Global_attributes/part
 page-type: html-attribute

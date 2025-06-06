@@ -1,5 +1,5 @@
 ---
-title: title global attribute
+title: HTML title global attribute
 short-title: title
 slug: Web/HTML/Reference/Global_attributes/title
 page-type: html-attribute

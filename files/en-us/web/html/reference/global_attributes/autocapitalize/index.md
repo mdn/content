@@ -1,5 +1,5 @@
 ---
-title: autocapitalize global attribute
+title: HTML autocapitalize global attribute
 short-title: autocapitalize
 slug: Web/HTML/Reference/Global_attributes/autocapitalize
 page-type: html-attribute

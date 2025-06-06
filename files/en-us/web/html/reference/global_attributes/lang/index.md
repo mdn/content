@@ -1,5 +1,5 @@
 ---
-title: lang global attribute
+title: HTML lang global attribute
 short-title: lang
 slug: Web/HTML/Reference/Global_attributes/lang
 page-type: html-attribute

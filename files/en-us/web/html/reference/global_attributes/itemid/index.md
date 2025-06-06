@@ -1,5 +1,5 @@
 ---
-title: itemid global attribute
+title: HTML itemid global attribute
 short-title: itemid
 slug: Web/HTML/Reference/Global_attributes/itemid
 page-type: html-attribute

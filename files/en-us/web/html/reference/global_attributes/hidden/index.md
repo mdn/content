@@ -1,5 +1,5 @@
 ---
-title: hidden global attribute
+title: HTML hidden global attribute
 short-title: hidden
 slug: Web/HTML/Reference/Global_attributes/hidden
 page-type: html-attribute

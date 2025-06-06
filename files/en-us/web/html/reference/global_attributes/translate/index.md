@@ -1,5 +1,5 @@
 ---
-title: translate global attribute
+title: HTML translate global attribute
 short-title: translate
 slug: Web/HTML/Reference/Global_attributes/translate
 page-type: html-attribute
