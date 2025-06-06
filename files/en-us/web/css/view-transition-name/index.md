@@ -69,7 +69,7 @@ If you don't want an element to be snapshotted separately, you can specify a `vi
 }
 ```
 
-The `view-transition-name` `<custom-ident>` must be unique for each rendered element taking part in the view transition. If two rendered elements have the same `view-transition-name` at the same time, {{domxref("ViewTransition.ready")}} will reject and the transition will be skipped.
+The `view-transition-name` `<custom-ident>` must be unique for each rendered element taking part in the view transition. If two rendered elements have the same `view-transition-name` at the same time, the {{domxref("ViewTransition.ready")}} {{JSxRef("Promise")}} will reject and the transition will be skipped.
 
 ### Specifying `view-transition-name` values automatically
 
