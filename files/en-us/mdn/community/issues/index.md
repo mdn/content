@@ -15,7 +15,7 @@ While reporting an issue or participating in a conversation in an issue, always 
 Do the following:
 
 - Before filing an issue, consider if you need to [discuss](/en-US/docs/MDN/Community/Communication_channels#chat_rooms) it with the staff/community. Use discussions to gain different viewpoints and to converge on an agreed-upon course of action. This helps to keep issues focused and productive.
-- After filing an issue, try to fix the problem yourself. Read our [contribution guide](https://github.com/mdn/content/blob/main/CONTRIBUTING.md) to learn more.
+- After filing an issue, try to fix the problem yourself. There's a guide about [Pull request submission and reviews](/en-US/docs/MDN/Community/Pull_requests) that covers everything you need to know about the contribution process.
 - If you have a question, you can ask it in the [MDN Web Docs chat rooms](/en-US/docs/MDN/Community/Communication_channels#chat_rooms) instead of filing an issue.
 
 Avoid doing the following:
@@ -106,11 +106,11 @@ These are the general steps for working on an issue:
 
 ### Fixing issues yourself
 
-If you spot a bug — whether it's a problem with the website's look and feel or an error in documentation — you can try to fix it yourself. Learn how you can contribute by going through our [contribution guide](https://github.com/mdn/content/blob/main/CONTRIBUTING.md).
-
+If you spot a bug — whether it's a problem with the website's look and feel or an error in documentation — you can try to fix it yourself in a [pull request](/en-US/docs/MDN/Community/Pull_requests).
 If the bug is small, such as a typo or a minor sentence improvement, or involves an uncontroversial fix, submit a pull request with the changes.
 
-For all other type of bugs, begin by [opening the issue](#guidelines_for_reporting_an_issue). Add a comment about your intent to work on the issue and if possible, describe your proposed solution or steps to fix the issue.
+For all other type of bugs, begin by [opening the issue](#guidelines_for_reporting_an_issue).
+Add a comment about your intent to work on the issue and if possible, describe your proposed solution or steps to fix the issue.
 Wait for the issue to be triaged, so that the MDN Web Docs team can verify that the issue is legit and approves your proposed solution.
 
 > [!NOTE]
