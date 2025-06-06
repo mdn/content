@@ -14,6 +14,10 @@ Graphical objects can be referenced from anywhere, however, defining these objec
 
 {{svginfo}}
 
+## Attributes
+
+This element only includes global attributes.
+
 ## DOM Interface
 
 This element implements the {{domxref("SVGDefsElement")}} interface.

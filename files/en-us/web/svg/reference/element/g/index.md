@@ -14,6 +14,10 @@ Transformations applied to the `<g>` element are performed on its child elements
 
 {{svginfo}}
 
+## Attributes
+
+This element only includes global attributes.
+
 ## DOM Interface
 
 This element implements the {{domxref("SVGGElement")}} interface.
