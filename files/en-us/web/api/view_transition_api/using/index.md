@@ -60,7 +60,7 @@ In the case of same-document transitions (SPAs), the pseudo-element tree is made
 
 The most interesting parts of the tree structure are as follows:
 
-- {{cssxref("::view-transition")}} is the root of view transitions overlay, which contains all view transition groups and sits over the top of all other page content.
+- {{cssxref("::view-transition")}} is the root of the view transitions overlay, which contains all view transition groups and sits above all other page content.
 - A {{cssxref("::view-transition-group()")}} acts as a container for each view transition snapshot. The `root` argument specifies the default snapshot — the view transition animation will apply to the snapshot whose `view-transition-name` is `root`. By default, this is a snapshot of the {{cssxref(":root")}} element, because the default browser styles define this:
 
   ```css
