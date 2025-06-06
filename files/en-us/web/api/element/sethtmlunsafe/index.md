@@ -8,20 +8,9 @@ browser-compat: api.Element.setHTMLUnsafe
 
 {{APIRef("DOM")}}
 
-The **`setHTMLUnsafe()`** method of the {{domxref("Element")}} interface is used to parse a string of HTML into a {{domxref("DocumentFragment")}}, filtering out unwanted elements and attributes, and those that don't belong in the context, and then using it to replace the element's subtree in the DOM.
+The **`setHTMLUnsafe()`** method of the {{domxref("Element")}} interface is used to parse a string of HTML into a {{domxref("DocumentFragment")}}, optionally filtering out unwanted elements and attributes, and those that don't belong in the context, and then using it to replace the element's subtree in the DOM.
 
-The suffix "Unsafe" in the method name indicates that while the method does allow the input string to be filtered of unwanted HTML entities, it does not enforce the sanitization or removal of potentially unsafe XSS-relevant input, such as {{htmlelement("script")}} elements, and script or event handler content attributes.
-If no sanitizer configuration is specified in the `options.sanitizer` parameter, `setHTMLUnsafe()` is used without any sanitization.
-
-The input HTML may include [declarative shadow roots](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom).
-If the string of HTML defines more than one [declarative shadow root](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in a particular shadow host then only the first {{domxref("ShadowRoot")}} is created — subsequent declarations are parsed as `<template>` elements within that shadow root.
-
-Like `setHTML()`, `setHTMLUnsafe()` may be used instead of {{domxref("Element.innerHTML")}} in order to parse strings of HTML that may contain declarative shadow roots.
-`setHTMLUnsafe()` should be instead of {{domxref("Element.setHTML()")}} when parsing potentially unsafe strings of HTML that for whatever reason need to contain XSS-unsafe elements or attributes.
-If strings to be injected don't need to contain unsafe HTML entities, then you should always use {{domxref("Element.setHTML()")}}.
-
-Note that since this method does not necessarily sanitize input strings of XSS-unsafe entities, input strings should also be validated using the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API).
-If the method is used with both a trusted types and a sanitizer, the input string will be passed through the trusted transformation function before it is sanitized.
+Unlike with {{domxref("Element.setHTML()")}}, XSS-unsafe HTML entities are not guaranteed to be removed.
 
 ## Syntax
 
@@ -58,6 +47,23 @@ None (`undefined`).
       - value that is not a {{domxref("Sanitizer")}}, {{domxref("SanitizerConfig")}}, or string.
       - non-normalized {{domxref("SanitizerConfig")}} (one that includes both "allowed" and "removed" configuration settings).
       - string that does not have the value `"default"`.
+
+## Description
+
+The **`setHTMLUnsafe()`** method is used to parse a string of HTML into a {{domxref("DocumentFragment")}}, optionally filtering out unwanted elements and attributes, and those that don't belong in the context, and then using it to replace the element's subtree in the DOM.
+
+The suffix "Unsafe" in the method name indicates that while the method does allow the input string to be filtered of unwanted HTML entities, it does not enforce the sanitization or removal of potentially unsafe XSS-relevant input, such as {{htmlelement("script")}} elements, and script or event handler content attributes.
+If no sanitizer configuration is specified in the `options.sanitizer` parameter, `setHTMLUnsafe()` is used without any sanitization.
+
+The input HTML may include [declarative shadow roots](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom).
+If the string of HTML defines more than one [declarative shadow root](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in a particular shadow host then only the first {{domxref("ShadowRoot")}} is created — subsequent declarations are parsed as `<template>` elements within that shadow root.
+
+Like `setHTML()`, `setHTMLUnsafe()` may be used instead of {{domxref("Element.innerHTML")}} in order to parse strings of HTML that may contain declarative shadow roots.
+`setHTMLUnsafe()` should be instead of {{domxref("Element.setHTML()")}} when parsing potentially unsafe strings of HTML that for whatever reason need to contain XSS-unsafe elements or attributes.
+If strings to be injected don't need to contain unsafe HTML entities, then you should always use {{domxref("Element.setHTML()")}}.
+
+Note that since this method does not necessarily sanitize input strings of XSS-unsafe entities, input strings should also be validated using the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API).
+If the method is used with both a trusted types and a sanitizer, the input string will be passed through the trusted transformation function before it is sanitized.
 
 ## Examples
 
