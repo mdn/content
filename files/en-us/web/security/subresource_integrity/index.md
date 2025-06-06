@@ -130,7 +130,7 @@ Browsers handle SRI by doing the following:
 
 ## Integrity policy
 
-The `Integrity-Policy` and `Integrity-Policy-Report-Only` HTTP headers enable a document to enforce a policy regarding the integrity metadata requirements on all the subresources it loads of certain types of subresources. (currently scripts)
+The `Integrity-Policy` and `Integrity-Policy-Report-Only` HTTP headers enable a document to enforce a policy regarding the integrity metadata requirements on loaded subresources of specified types (currently scripts only).
 
 When specified, the browser would not allow requests without an `integrity` attribute to be made. (or simply report about them if the policy is specified using the `Integrity-Policy-Report-Only` header)
 
