@@ -134,7 +134,7 @@ The `Integrity-Policy` and `Integrity-Policy-Report-Only` HTTP headers enable a 
 
 When specified, the browser would not allow requests without an `integrity` attribute to be made. (or simply report about them if the policy is specified using the `Integrity-Policy-Report-Only` header)
 
-The headers are defined as a [structured field dictionary](https://www.rfc-editor.org/rfc/rfc8941.html#name-dictionaries) with the following keys:
+The header values are defined as [structured field dictionaries](https://www.rfc-editor.org/rfc/rfc8941.html#name-dictionaries) with the following keys:
 
 - `blocked-destinations` - defines an [inner list](https://www.rfc-editor.org/rfc/rfc8941.html#name-inner-lists) of [request destinations](/en-US/docs/Web/API/Request/destination) to be blocked. The only currently supported value is "script".
 - `sources` - defines an [inner list](https://www.rfc-editor.org/rfc/rfc8941.html#name-inner-lists) of integrity sources. The default and only currently supported value is "inline".
