@@ -37,8 +37,8 @@ Rocks!
 
 The `<noscript>` element represents its children differently depending on if scripting is enabled:
 
- - If scripting is disabled the `<noscript>` element represents its children as [HTML content](/en-US/docs/Web/API/HTMLElement).
- - If scripting is enabled, the `<noscript>` element represents its children as [text](/en-US/docs/Web/API/Text).
+- If scripting is disabled the `<noscript>` element represents its children as [HTML content](/en-US/docs/Web/API/HTMLElement).
+- If scripting is enabled, the `<noscript>` element represents its children as [text](/en-US/docs/Web/API/Text).
 
 ## Technical summary
 
