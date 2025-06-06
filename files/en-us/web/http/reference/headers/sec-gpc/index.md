@@ -6,7 +6,7 @@ page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Sec-GPC
-spec-urls: https://privacycg.github.io/gpc-spec/
+spec-urls: https://w3c.github.io/gpc/#the-sec-gpc-header-field-for-http-requests
 ---
 
 {{HTTPSidebar}}{{SeeCompatTable}}
