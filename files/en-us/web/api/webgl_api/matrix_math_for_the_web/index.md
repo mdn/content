@@ -18,7 +18,7 @@ Let's begin by considering the **identity matrix**. This is a special transforma
 
 The identity matrix looks like this in JavaScript:
 
-```js live-sample___translation_matrix_ex live-sample___scale_matrix_ex live-sample___rotation_matrix_ex live-sample___matrix_composition_ex
+```js
 // prettier-ignore
 const identityMatrix = [
   1, 0, 0, 0,
@@ -150,10 +150,10 @@ function multiplyMatrices(matrixA, matrixB) {
 }
 
 function multiplyArrayOfMatrices(matrices) {
-  return matrices.reduce(
-    (result, matrix) => multiplyMatrices(result, matrix),
-    identityMatrix,
-  );
+  if (matrices.length === 1) {
+    return matrices[0];
+  }
+  return matrices.reduce((result, matrix) => multiplyMatrices(result, matrix));
 }
 ```
 
