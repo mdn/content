@@ -27,14 +27,18 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Referenc
 
 Rocks!
 
-> [!NOTE]
-> The `<noscript>` element contains a text representation of its children. Accessing [`.children`](/en-US/docs/Web/API/Element/children) will return an empty list.
-
 ### Result with scripting disabled
 
 [External Link](https://www.mozilla.org/)
 
 Rocks!
+
+## Usage notes
+
+The `<noscript>` element represents its children differently depending on if scripting is enabled:
+
+ - If scripting is disabled the `<noscript>` element represents its children as [HTML content](/en-US/docs/Web/API/HTMLElement).
+ - If scripting is enabled, the `<noscript>` element represents its children as [text](/en-US/docs/Web/API/Text).
 
 ## Technical summary
 
