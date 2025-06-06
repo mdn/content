@@ -140,10 +140,11 @@ The headers are defined as a [structured field dictionary](https://www.rfc-edito
 * `endpoints` - defines an [inner list](https://www.rfc-editor.org/rfc/rfc8941.html#name-inner-lists) of [reporting endpoints](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#endpoint).
 
 In case a request is blocked by integrity policy, a [Reporting API](/en-US/docs/Web/API/Reporting_API) violation report is created with of the "integrity-violation" type. It contains:
-* `documentURL` - the URL of the document.
-* `blockedURL` - the URL of the blocked subresource.
-* `destination` - the request destination.
-* `reportOnly` - whether the report is a result of a report-only policy. When false, that means that the subresource was blocked from loading.
+
+- `documentURL` - the URL of the document.
+- `blockedURL` - the URL of the blocked subresource.
+- `destination` - the request destination.
+- `reportOnly` - whether the report is a result of a report-only policy. When false, that means that the subresource was blocked from loading.
 
 ## Specifications
 
