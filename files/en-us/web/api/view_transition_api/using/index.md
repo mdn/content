@@ -38,7 +38,7 @@ Let's walk through the process by which a view transition works:
 
 ### An aside on snapshots
 
-It is worth noting that when talking about view transitions, we commonly use the term snapshot to refer to a part of the page that has a `view-transition-name` declared on it and will therefore be animated separately from other parts of the page with different `view-transition-name` values set on them. As you've read above, the process of animating a snapshot via a view transition actually involves two separate snapshots of the old and new UI states, but we use snapshot to refer to the whole page area for simplicity.
+It is worth noting that when talking about view transitions, we commonly use the term _snapshot_ to refer to a part of the page that has a `view-transition-name` declared on it. These sections will be animated separately from other parts of the page with different `view-transition-name` values set on them. While the process of animating a snapshot via a view transition actually involves two separate snapshots—one of the old and one of the new UI states—we use snapshot to refer to the whole page area for simplicity.
 
 The snapshot of the old UI state is a static image, so that the user can't interact with it as it animates "out".
 
