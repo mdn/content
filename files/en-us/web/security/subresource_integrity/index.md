@@ -132,7 +132,8 @@ Browsers handle SRI by doing the following:
 
 The `Integrity-Policy` and `Integrity-Policy-Report-Only` HTTP headers enable a document to enforce a policy regarding the integrity metadata requirements on loaded subresources of specified types (currently scripts only).
 
-When specified, the browser would not allow requests without an `integrity` attribute to be made. (or simply report about them if the policy is specified using the `Integrity-Policy-Report-Only` header)
+When an {{HTTP("Integrity-Policy")}} header is specified, the browser would block requests with [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode or without an `integrity` attribute from being made.
+When an {{HTTP("Integrity-Policy-Report-Only")}} header is specified, such requests would be made, but reported on to the specified reporting endpoint.
 
 The header values are defined as [structured field dictionaries](https://www.rfc-editor.org/rfc/rfc8941.html#name-dictionaries) with the following keys:
 
@@ -145,10 +146,14 @@ The header values are defined as [structured field dictionaries](https://www.rfc
 
 In cases where a request is blocked by an integrity policy, a [Reporting API](/en-US/docs/Web/API/Reporting_API) violation report is created with a type of "integrity-violation". It contains:
 
-- `documentURL` - the URL of the document.
-- `blockedURL` - the URL of the blocked subresource.
-- `destination` - the request destination.
-- `reportOnly` - whether the report is a result of a report-only policy. When false, that means that the subresource was blocked from loading.
+- `documentURL`
+  - : The URL of the document.
+- `blockedURL`
+  - : The URL of the blocked subresource.
+- `destination`
+  - : The request destination.
+- `reportOnly`
+  - : Whether the report is a result of a report-only policy. When false, that means that the subresource was blocked from loading.
 
 ## Specifications
 
