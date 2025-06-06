@@ -27,7 +27,7 @@ let executeUserScript = browser.userScripts.execute(
 
 ### Return Value
 
-A {{JSxRef("Promise")}} fulfilled with an array of {{WebExtAPIRef("userScripts.InjectionResult")}} objects. If the injection fails, the attached result object will include an `error` property.
+A {{JSxRef("Promise")}} fulfilled with an array of {{WebExtAPIRef("userScripts.InjectionResult")}} objects. If the injection fails, the result object includes an `error` property.
 
 ## Examples
 
