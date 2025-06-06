@@ -1,5 +1,6 @@
 ---
 title: HTTP range requests
+short-title: Range requests
 slug: Web/HTTP/Guides/Range_requests
 page-type: guide
 ---
