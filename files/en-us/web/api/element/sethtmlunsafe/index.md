@@ -76,7 +76,9 @@ target.setHTMLUnsafe(unsanitizedString);
 
 // Define custom Sanitizer and use in setHTMLUnsafe()
 // This allows only elements: div, p, button, script
-const sanitizer1 = new Sanitizer({ elements: ["div", "p", "button", "script"] });
+const sanitizer1 = new Sanitizer({
+  elements: ["div", "p", "button", "script"],
+});
 target.setHTML(unsanitizedString, { sanitizer: sanitizer1 });
 
 // Define custom SanitizerConfig within setHTMLUnsafe()
