@@ -23,7 +23,7 @@ const someTargetElement = document.getElementById("target");
 // someElement.innerHTML = untrustedString;
 someElement.setHTML(untrustedString);
 
-console.log(target.innerHTML); //abc def
+console.log(target.innerHTML); // abc def
 ```
 
 The other XSS-safe methods, {{domxref('ShadowRoot.setHTML()')}} and {{domxref('Document/parseHTML_static','Document.parseHTML()')}}, are used in the same way.
@@ -56,7 +56,7 @@ For example, in the following sanitizer all safe elements are allowed, and we fu
 const untrustedString = '<button onclick="alert(1)">Button text</button>';
 const someTargetElement = document.getElementById("target");
 
-sanitizerOne = Sanitizer(); //default sanitizer
+sanitizerOne = Sanitizer(); // Default sanitizer
 sanitizerOne.allowElement({ name: "button", attributes: ["onclick"] });
 someElement.setHTMLUnsafe(untrustedString, { sanitizer: sanitizerOne });
 ```
@@ -76,7 +76,7 @@ It also replaces {{htmlelement("b")}} elements with their contents (this is a fo
 
 ```js
 const sanitizer = Sanitizer({
-  elements: ["p", "div", "span"],
+  elements: ["p", "div"],
   attributes: ["cite", "onclick"],
   replaceWithChildrenElements: ["b"],
 });
@@ -210,8 +210,8 @@ targetElement.setHTML("This <b>highlighting</b> isn't needed", {
   sanitizer: replaceBoldSanitizer,
 });
 
-//Log the result
-targetElement.log(targetElement.innerHTML); //This highlighting isn't needed
+// Log the result
+targetElement.log(targetElement.innerHTML); // This highlighting isn't needed
 ```
 
 As with elements and attributes, you can also specify the replacement elements with a namespace, or use the {{domxref("Sanitizer.replaceElementWithChildren()")}} method:
@@ -330,7 +330,7 @@ The {{domxref("Sanitizer")}} object is a wrapper around {{domxref("SanitizerConf
 - When you use the methods to allow or remove HTML entities, the entities are removed from the "opposite" lists.
   These normalizations make the configuration more efficient.
 - The {{domxref("Sanitizer.removeUnsafe()")}} method can be used to remove all XSS-unsafe entities from an existing configuration.
-- You can export the configuration to see exactly what entities are allowed and dropped
+- You can export the configuration to see exactly what entities are allowed and dropped.
 
 Note though, if you can use the safe sanitization methods, then you may not need to define a sanitizer configuration at all.
 
@@ -419,11 +419,11 @@ The remaining elements display the string to be parsed (editable) and the result
 
 ```html
 <div>
-  <label for="unmodified">Original string (Editable)</label>
-  <pre contenteditable="true" id="unmodified"></pre>
-  <label for="setHTML">setHTML() (HTML as string): </label>
+  <p>Original string (Editable)</p>
+  <pre contenteditable id="unmodified"></pre>
+  <p>setHTML() (HTML as string)</p>
   <pre id="setHTML"></pre>
-  <label for="setHTMLUnsafe">setHTMLUnsafe() (HTML as string):</label>
+  <p>setHTMLUnsafe() (HTML as string)</p>
   <pre id="setHTMLUnsafe"></pre>
 </div>
 ```
@@ -463,7 +463,7 @@ if ("Sanitizer" in window) {
   // Define unsafe string of HTML
   const initialHTMLString =
     `<div id="mainDiv"><!-- HTML comment -->
-    <p data-paratest="true">This is a paragraph. <span onclick="alert('You clicked the span!')">Click me</span></p>
+    <p data-paratest="true">This is a paragraph. <button onclick="alert('You clicked the button!')">Click me</button></p>
     <p>Be <b>bold</b> and brave!</p>
     <script>alert(1)<` + "/script></div>";
 
@@ -481,7 +481,7 @@ if ("Sanitizer" in window) {
 
 The `applySanitizer()` logging method is shown below.
 This gets the initial content of the "untrusted string" from the first text area, and parses it using the {{domxref("Element.setHTML()")}} and {{domxref("Element.setHTMLUnsafe()")}} methods with the passed `sanitizer` argument into the respective text areas.
-In each case the injected HTML is then read from the element with `innerHTML` and written back into the element as `innerText` (so that is is human readable).
+In each case the injected HTML is then read from the element with `innerHTML` and written back into the element as `innerText` (so that it is human readable).
 
 The code then logs the current sanitizer configuration, which it obtains with {{domxref("Sanitizer.get()")}}.
 
@@ -591,8 +591,8 @@ toggleDataAttributesBtn.addEventListener("click", () => {
 
 
 } else {
-log("The HTML Sanitizer API is NOT supported in this browser.");
-// Provide fallback or alternative behavior
+  log("The HTML Sanitizer API is NOT supported in this browser.");
+  // Provide fallback or alternative behavior
 }
 ```
 
@@ -604,7 +604,7 @@ You can then use the selection lists to add some elements and attributes to the 
 The current sanitizer configuration is logged.
 The text in the top text area is sanitized using the current sanitizer configuration and parsed with `setHTML()` and `setHTMLUnsafe()`.
 
-{{EmbedLiveSample("Creating a sanitizer and using with SetHTML()","100","650px")}}
+{{EmbedLiveSample("Sanitizer demo","100","650px")}}
 
 Note that adding elements and attributes to the allow lists removes them from the remove lists, and vice versa.
 Also note that you can allow elements in sanitizer that will be injected with the unsafe methods, but not the safe methods.

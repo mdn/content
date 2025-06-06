@@ -15,8 +15,6 @@ The attribute is removed from the [`removeAttributes`](/en-US/docs/Web/API/Sanit
 
 Note that to allow/disallow attributes only on specific elements use {{domxref('Sanitizer.allowElement()')}}.
 
-<!-- Check which overrides - global or local setting -->
-
 ## Syntax
 
 ```js-nolint
@@ -36,7 +34,7 @@ allowAttribute(attribute)
 
 ### Returns
 
-`undefined`.
+None (`undefined`).
 
 ## Examples
 

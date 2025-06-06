@@ -32,7 +32,7 @@ The configuration defines the HTML entities that will be filtered out of the inp
 The {{domxref('Element')}} methods are context aware, and will additionally drop any elements that the HTML specification does not allow in the target element.
 
 The safe methods always remove XSS-unsafe elements and attributes.
-If no sanitizer is passed as a parameter they will use the default sanitizer configuration, which allows all elements and attributes except those that are known to be unsafe, such as `<script>` elements and `onclick` event handlers.
+If no sanitizer is passed as a parameter they will use the default sanitizer configuration, which allows all elements and attributes except those that are known to be unsafe, such as {{htmlelement("script")}} elements and `onclick` event handlers.
 If a custom sanitizer is used, it is implicitly updated to remove any elements and attributes that are not XSS-safe (note that the passed sanitizer is not modified, and might still allow unsafe entities if used with an unsafe method).
 
 The safe methods should be used instead of {{domxref("Element.innerHTML")}}, {{domxref("Element.outerHTML")}}, or {{domxref("ShadowRoot.innerHTML")}}, for injecting untrusted HTML content.
@@ -49,7 +49,7 @@ For example, if you wanted to inject unsafe HTML but for some reason you needed 
 
 ```js
 const sanitizer1 = Sanitizer(); // Default sanitizer
-sanitizer.allowAttribute("onblur"); // Disallow onblur
+sanitizer.allowAttribute("onblur"); // Allow onblur
 
 someElement.setHTMLUnsafe(untrustedString, { sanitizer: sanitizer1 });
 ```
@@ -140,7 +140,7 @@ The API is integrated with the browser, and is more aware of the parsing context
 
 ## Extensions to other interfaces
 
-### XSS-safe Methods
+### XSS-safe methods
 
 - {{domxref('Element.setHTML()')}}
   - : Parse a string of HTML into a subtree of nodes, dropping any elements that are invalid in the context of the element.
@@ -155,7 +155,7 @@ The API is integrated with the browser, and is more aware of the parsing context
     Then drop any elements and attributes that are not allowed by the sanitizer configuration, and any that are considered XSS-unsafe (even if allowed by the configuration).
     The subtree is then set as the root of the {{domxref("Document")}}.
 
-### XSS-unsafe Methods
+### XSS-unsafe methods
 
 - {{domxref('Element.setHTMLUnsafe()')}}
   - : Parse a string of HTML into a subtree of nodes, dropping any elements that are invalid in the context of the element.
@@ -174,7 +174,7 @@ The API is integrated with the browser, and is more aware of the parsing context
 
 The following examples show how to use the sanitizer API using the _default_ sanitizer (at time of writing configuration operations are not yet supported).
 
-### Using Element.setHTML() with the default sanitizer
+### Using `Element.setHTML()` with the default sanitizer
 
 In most cases calling `Element.setHTML()` with the default sanitizer can be used as a drop-in replacement for {{domxref("Element.innerHTML")}}.
 The code below demonstrates how the method is used to sanitize the HTML input before it is injected into an element with id of `target`.
@@ -186,10 +186,10 @@ const someTargetElement = document.getElementById("target");
 // someElement.innerHTML = untrustedString;
 someElement.setHTML(untrustedString);
 
-console.log(target.innerHTML); //abc def
+console.log(target.innerHTML); // abc def
 ```
 
-The `script` element is not allowed by the default sanitizer, or by the `setHTML()` method, so the `alert()` is removed.
+The `{{htmlelement("script")}}` element is not allowed by the default sanitizer, or by the `setHTML()` method, so the `alert()` is removed.
 
 Note that using `Element.setHTMLUnsafe()` with the default sanitizer will sanitize the same HTML entities.
 The main difference is that if you use this method with Trusted Types it may still be audited:

@@ -73,18 +73,18 @@ const target = document.getElementById("target");
 target.setHTML(unsanitizedString);
 
 // Define custom Sanitizer and use in setHTML()
-// This allows only elements: div, p, span (script is unsafe and will be removed)
-const sanitizer1 = new Sanitizer({ elements: ["div", "p", "span", "script"] });
+// This allows only elements: div, p, button (script is unsafe and will be removed)
+const sanitizer1 = new Sanitizer({ elements: ["div", "p", "button", "script"] });
 target.setHTML(unsanitizedString, { sanitizer: sanitizer1 });
 
 // Define custom SanitizerConfig within setHTML()
-// This removes elements div, p, span, script, and any other unsafe elements/attributes
+// This removes elements div, p, button, script, and any other unsafe elements/attributes
 target.setHTML(unsanitizedString, {
-  sanitizer: { removeElements: ["div", "p", "span", "script"] },
+  sanitizer: { removeElements: ["div", "p", "button", "script"] },
 });
 ```
 
-### setHTML() live example
+### `setHTML()` live example
 
 This example provides a "live" demonstration of the method when called with different sanitizers.
 The code defines buttons that you can click to sanitize and inject a string of HTML using a default and a custom sanitizer, respectively.
@@ -99,7 +99,7 @@ The HTML defines two {{htmlelement("button")}} elements for applying different s
 <button id="buttonAllowScript" type="button">allowScript</button>
 
 <button id="reload" type="button">Reload</button>
-<div id="target">Original Content of Target Element</div>
+<div id="target">Original content of target element</div>
 ```
 
 ```html hidden
@@ -127,7 +127,6 @@ function log(text) {
 
 ```js hidden
 if ("Sanitizer" in window) {
-  // Define unsafe string of HTML
 ```
 
 First we define the string to sanitize, which will be the same for all cases.
@@ -135,10 +134,11 @@ This contains the {{htmlelement("script")}} element and the `onclick` handler, b
 We also define the handler for the reload button.
 
 ```js
+// Define unsafe string of HTML
 const unsanitizedString = `
   <div>
-    <p>This is a paragraph. <span onclick="alert('You clicked the span!')">Click me</span></p>
-    <script src="path/to/amodule.js" type="module"><script>
+    <p>This is a paragraph. <button onclick="alert('You clicked the button!')">Click me</button></p>
+    <script src="path/to/a/module.js" type="module"><script>
   </div>
 `;
 

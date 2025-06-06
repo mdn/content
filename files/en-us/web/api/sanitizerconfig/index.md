@@ -2,7 +2,9 @@
 title: SanitizerConfig
 slug: Web/API/SanitizerConfig
 page-type: web-api-interface
-browser-compat: api.Sanitizer.get api.Sanitizer.Sanitizer
+browser-compat:
+  - api.Sanitizer.get
+  - api.Sanitizer.Sanitizer
 ---
 
 {{APIRef("HTML Sanitizer API")}}
@@ -32,7 +34,7 @@ Note that normally a {{domxref("Sanitizer")}} instance would be be passed as the
     - `namespace` {{optional_inline}}
       - : A string containing the namespace of the element.
         The default namespace is `"http://www.w3.org/1999/xhtml"`.
-    - `attributes` {{optional_inline}} <!-- to check: spec doesn't explicitly make them optional -->
+    - `attributes` {{optional_inline}}
 
       - : An array indicating the attributes to allow on this (allowed) element when sanitizing HTML.
 
@@ -43,7 +45,7 @@ Note that normally a {{domxref("Sanitizer")}} instance would be be passed as the
         - `namespace` {{optional_inline}}
           - : A string containing the namespace of the attribute, which defaults to `null`.
 
-    - `removeAttributes` {{optional_inline}} <!-- to check: spec doesn't explicitly make them optional -->
+    - `removeAttributes` {{optional_inline}}
 
       - : An array indicating the attributes to remove on this (allowed) element when sanitizing HTML.
 
@@ -78,8 +80,6 @@ Note that normally a {{domxref("Sanitizer")}} instance would be be passed as the
     - `namespace` {{optional_inline}}
       - : A string containing the namespace of the element.
         The default namespace is `"http://www.w3.org/1999/xhtml"`.
-
-    <!-- TODO: How deep does it go? Some test code  -->
 
 - `attributes`
 

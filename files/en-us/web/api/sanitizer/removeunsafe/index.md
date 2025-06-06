@@ -11,7 +11,7 @@ browser-compat: api.Sanitizer.removeUnsafe
 The **`removeUnsafe()`** method of the {{domxref("Sanitizer")}} interface configures the sanitizer configuration so that it will remove all elements, attributes, and event handler content attributes that are considered XSS-unsafe by the browser.
 
 The unsafe elements and attributes are added to the configuration by calling {{domxref('Sanitizer.removeElement()')}} and {{domxref('Sanitizer.removeAttribute()')}} for each, respectively.
-This adds them to the sanitizer configuration disallow lists: [`removeElements`](/en-US/docs/Web/API/SanitizerConfig#removeelements) and [`removeAttributes`](/en-US/docs/Web/API/SanitizerConfig#removeattributes_2) , and removes them (if present) from the configuration allow lists: [`elements`](/en-US/docs/Web/API/SanitizerConfig#removeelements), [`replaceWithChildrenElements`](/en-US/docs/Web/API/SanitizerConfig#replacewithchildrenelements) and [`attributes`](/en-US/docs/Web/API/SanitizerConfig#attributes).
+This adds them to the sanitizer configuration disallow lists: [`removeElements`](/en-US/docs/Web/API/SanitizerConfig#removeelements) and [`removeAttributes`](/en-US/docs/Web/API/SanitizerConfig#removeattributes_2), and removes them (if present) from the configuration allow lists: [`elements`](/en-US/docs/Web/API/SanitizerConfig#removeelements), [`replaceWithChildrenElements`](/en-US/docs/Web/API/SanitizerConfig#replacewithchildrenelements) and [`attributes`](/en-US/docs/Web/API/SanitizerConfig#attributes).
 
 The method can be called to make any custom configuration XSS-safe.
 If used with a configuration that uses the allow lists, it will remove the XSS-unsafe entities from those lists.
@@ -32,7 +32,7 @@ None.
 
 ### Returns
 
-`undefined`.
+None (`undefined`).
 
 ## Examples
 
@@ -74,7 +74,7 @@ function log(text) {
 
 #### JavaScript
 
-If the `Sanitizer` interface is supported, the code creates a new `Sanitizer` object that that allows the safe element {{htmlelement("p")}}, the unsafe elements {{htmlelement("script")}} and {{htmlelement("iframe")}}, and the unsafe `onwebkitAnimationEnd` event handler attribute.
+If the `Sanitizer` interface is supported, the code creates a new `Sanitizer` object that that allows the safe element {{htmlelement("p")}}, the unsafe elements {{htmlelement("script")}} and {{htmlelement("iframe")}}, and the unsafe `onwebkitanimationend` event handler attribute.
 
 The code then calls `removeUnsafe()` on the sanitizer and logs its configuration.
 
@@ -83,7 +83,7 @@ if ("Sanitizer" in window) {
   // Create sanitizer that allows
   const sanitizer = new Sanitizer({
     elements: ["p", "script"],
-    attributes: ["onwebkitAnimationEnd"],
+    attributes: ["onwebkitanimationend"],
     replaceWithChildrenElements: ["iframe"],
   });
 
@@ -103,9 +103,9 @@ if ("Sanitizer" in window) {
 
 The resulting configuration is shown below.
 Note how the unsafe elements and attributes have been removed from the "allow" lists to the corresponding "remove" lists.
-In this case we still have {{htmlelement("p")}}in the allowed elements, so only `<p>` elements in the input will be imported when the sanitizer is used.
+In this case we still have {{htmlelement("p")}} in the allowed elements, so only `<p>` elements in the input will be imported when the sanitizer is used.
 
-{{EmbedLiveSample("How to disallow specific attributes","100","480px")}}
+{{EmbedLiveSample("Making a sanitizer configuration safe","100","480px")}}
 
 ## Specifications
 

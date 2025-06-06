@@ -34,7 +34,7 @@ replaceElementWithChildren(element)
 
 ### Returns
 
-`undefined`.
+None (`undefined`).
 
 ## Examples
 
@@ -95,7 +95,7 @@ if ("Sanitizer" in window) {
   const unsanitizedString = `<p>This is a with <strong>important</strong> text <em>highlighted</em>.</p>`;
   log(`unsanitizedHTMLString:\n ${unsanitizedString}`);
 
-  // Create a div element
+  // Create a <div> element
   const divElement = document.createElement("div");
 
   divElement.setHTML(unsanitizedString, { sanitizer: sanitizer });

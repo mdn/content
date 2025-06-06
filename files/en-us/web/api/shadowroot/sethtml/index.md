@@ -89,18 +89,18 @@ const unsanitizedString = "abc <script>alert(1)<" + "/script> def";
 shadow.setHTML(unsanitizedString);
 
 // Define custom Sanitizer and use in setHTML()
-// This allows only elements: div, p, span (script is unsafe and will be removed)
+// This allows only elements: <div>, <p>, <span> (<script> is unsafe and will be removed)
 const sanitizer1 = new Sanitizer({ elements: ["div", "p", "span", "script"] });
 shadow.setHTML(unsanitizedString, { sanitizer: sanitizer1 });
 
 // Define custom SanitizerConfig within setHTML()
-// This removes elements div, p, span, script, and any other unsafe elements/attributes
+// This removes elements <div>, <p>, <span>, <script>, and any other unsafe elements/attributes
 shadow.setHTML(unsanitizedString, {
   sanitizer: { removeElements: ["div", "p", "span", "script"] },
 });
 ```
 
-### setHTML() live example
+### `setHTML()` live example
 
 This example provides a "live" demonstration of the method when called with different sanitizers.
 The code defines buttons that you can click to sanitize and inject a string of HTML using a default and a custom sanitizer, respectively.
@@ -164,8 +164,8 @@ We also get variable `shadow`, which is our handle to the shadow root.
 // Define unsafe string of HTML
 const unsanitizedString = `
   <div>
-    <p>Paragraph to inject into shadow DOM. <span onclick="alert('You clicked the span!')">Click me</span></p>
-    <script src="path/to/amodule.js" type="module"><script>
+    <p>Paragraph to inject into shadow DOM. <button onclick="alert('You clicked the button!')">Click me</button></p>
+    <script src="path/to/a/module.js" type="module"><script>
   </div>
 `;
 
@@ -184,7 +184,7 @@ defaultSanitizerButton.addEventListener("click", () => {
 
   // Log HTML before sanitization and after being injected
   logElement.textContent =
-    "Default sanitizer: remove script element and onclick attribute\n\n";
+    "Default sanitizer: remove &lt;script&gt; element and onclick attribute\n\n";
   log(`\nunsanitized: ${unsanitizedString}`);
   log(`\nsanitized: ${shadow.innerHTML}`);
 });

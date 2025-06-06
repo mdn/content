@@ -26,7 +26,7 @@ setDataAttributes(allow);
 
 ### Returns
 
-`undefined`.
+None (`undefined`).
 
 ## Examples
 

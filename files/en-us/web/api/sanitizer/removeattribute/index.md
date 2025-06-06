@@ -15,8 +15,6 @@ The attribute is removed from the [`attributes`](/en-US/docs/Web/API/SanitizerCo
 
 Note that to allow/disallow attributes only on specific elements use {{domxref('Sanitizer.allowElement()')}}.
 
-<!-- Check which overrides - global or local setting -->
-
 ## Syntax
 
 ```js-nolint
@@ -36,7 +34,7 @@ removeAttribute(attribute)
 
 ### Returns
 
-`undefined`.
+None (`undefined`).
 
 ## Examples
 
@@ -66,7 +64,7 @@ function log(text) {
 
 #### JavaScript
 
-If the `Sanitizer` interface is supported, the code creates a new `Sanitizer` object that initially specifies no attributes or elements. <!-- what happens with empty sanitizer? -->
+If the `Sanitizer` interface is supported, the code creates a new `Sanitizer` object that initially specifies no attributes or elements.
 We then call `removeAttribute()` with the attributes `title` and `mathcolor`.
 
 ```js

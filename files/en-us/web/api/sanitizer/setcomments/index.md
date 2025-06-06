@@ -26,7 +26,7 @@ setComments(allow);
 
 ### Returns
 
-`undefined`.
+None (`undefined`).
 
 ## Examples
 

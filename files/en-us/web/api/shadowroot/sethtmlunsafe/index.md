@@ -91,7 +91,7 @@ const unsanitizedString = "abc <script>alert(1)<" + "/script> def";
 shadow.setHTMLUnsafe(unsanitizedString);
 
 // Define custom Sanitizer and use in setHTMLUnsafe()
-// This allows only elements: div, p, span, script (script is unsafe)
+// This allows only elements: <div>, <p>, <span>, <script> (<script> is unsafe)
 const sanitizer1 = new Sanitizer({ elements: ["div", "p", "span", "script"] });
 shadow.setHTMLUnsafe(unsanitizedString, { sanitizer: sanitizer1 });
 
@@ -102,7 +102,7 @@ shadow.setHTMLUnsafe(unsanitizedString, {
 });
 ```
 
-### setHTMLUnsafe() live example
+### `setHTMLUnsafe()` live example
 
 This example provides a "live" demonstration of the method when called with different sanitizers.
 The code defines buttons that you can click to sanitize and inject a string of HTML using a default and a custom sanitizer, respectively.
@@ -166,8 +166,8 @@ We also get variable `shadow`, which is our handle to the shadow root.
 // Define unsafe string of HTML
 const unsanitizedString = `
   <div>
-    <p>Paragraph to inject into shadow DOM. <span onclick="alert('You clicked the span!')">Click me</span></p>
-    <script src="path/to/amodule.js" type="module"><script>
+    <p>Paragraph to inject into shadow DOM. <button onclick="alert('You clicked the button!')">Click me</button></p>
+    <script src="path/to/a/module.js" type="module"><script>
   </div>
 `;
 
@@ -220,7 +220,7 @@ allowScriptButton.addEventListener("click", () => {
 Click the "None" and "allowScript" buttons to see the effects of no sanitizer and a custom sanitizer, respectively.
 
 When you click the "None" button, you should see that the input and output match, as no sanitizer is applied.
-When you click the "allowScript" button the `<script>` element is still present, but the `<span>` element is removed.
+When you click the "allowScript" button the `<script>` element is still present, but the `<button>` element is removed.
 With this approach you can create safe HTML, but you aren't forced to.
 
 {{EmbedLiveSample("setHTMLUnsafe() live example","100","350px")}}

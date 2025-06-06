@@ -10,7 +10,7 @@ browser-compat: api.Element.setHTMLUnsafe
 
 The **`setHTMLUnsafe()`** method of the {{domxref("Element")}} interface is used to parse a string of HTML into a {{domxref("DocumentFragment")}}, filtering out unwanted elements and attributes, and those that don't belong in the context, and then using it to replace the element's subtree in the DOM.
 
-The suffix "Unsafe" in the method name indicates that while the method does allow the input string to be filtered of unwanted HTML entities, it does not enforce the sanitization or removal of potentially unsafe XSS-relevant input, such as `<script>` elements, and script or event handler content attributes.
+The suffix "Unsafe" in the method name indicates that while the method does allow the input string to be filtered of unwanted HTML entities, it does not enforce the sanitization or removal of potentially unsafe XSS-relevant input, such as {{htmlelement("script")}} elements, and script or event handler content attributes.
 If no sanitizer configuration is specified in the `options.sanitizer` parameter, `setHTMLUnsafe()` is used without any sanitization.
 
 The input HTML may include [declarative shadow roots](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom).
@@ -75,18 +75,18 @@ const target = document.getElementById("target");
 target.setHTMLUnsafe(unsanitizedString);
 
 // Define custom Sanitizer and use in setHTMLUnsafe()
-// This allows only elements: div, p, span, script
-const sanitizer1 = new Sanitizer({ elements: ["div", "p", "span", "script"] });
+// This allows only elements: div, p, button, script
+const sanitizer1 = new Sanitizer({ elements: ["div", "p", "button", "script"] });
 target.setHTML(unsanitizedString, { sanitizer: sanitizer1 });
 
 // Define custom SanitizerConfig within setHTMLUnsafe()
-// Removes the script element but allows other potentially unsafe entities.
+// Removes the <script> element but allows other potentially unsafe entities.
 target.setHTMLUnsafe(unsanitizedString, {
   sanitizer: { removeElements: ["script"] },
 });
 ```
 
-### setHTMLUnsafe() live example
+### `setHTMLUnsafe()` live example
 
 This example provides a "live" demonstration of the method when called with different sanitizers.
 The code defines buttons that you can click to inject a string of HTML that is not sanitized, and that uses and a custom sanitizer, respectively.
@@ -101,7 +101,7 @@ The HTML defines two {{htmlelement("button")}} elements for calling the method w
 <button id="buttonAllowScript" type="button">allowScript</button>
 
 <button id="reload" type="button">Reload</button>
-<div id="target">Original Content of Target Element</div>
+<div id="target">Original content of target element</div>
 ```
 
 ```html hidden
@@ -129,7 +129,6 @@ function log(text) {
 
 ```js hidden
 if ("Sanitizer" in window) {
-  // Define unsafe string of HTML
 ```
 
 First we define the string to sanitize, which will be the same for all cases.
@@ -137,10 +136,11 @@ This contains the {{htmlelement("script")}} element and the `onclick` handler, b
 We also define the handler for the reload button.
 
 ```js
+// Define unsafe string of HTML
 const unsanitizedString = `
   <div>
-    <p>This is a paragraph. <span onclick="alert('You clicked the span!')">Click me</span></p>
-    <script src="path/to/amodule.js" type="module"><script>
+    <p>This is a paragraph. <button onclick="alert('You clicked the button!')">Click me</button></p>
+    <script src="path/to/a/module.js" type="module"><script>
   </div>
 `;
 
@@ -149,7 +149,7 @@ reload.addEventListener("click", () => document.location.reload());
 ```
 
 Next we define the click handler for the button that sets the HTML with no sanitizer.
-Generally we would expect the method to drop elements in the string that aren't allowed in the context (such as table-specific elements in a `div` element), but otherwise match the input string.
+Generally we would expect the method to drop elements in the string that aren't allowed in the context (such as table-specific elements in a `<div>` element), but otherwise match the input string.
 In this case the strings should match.
 
 ```js
@@ -197,7 +197,7 @@ allowScriptButton.addEventListener("click", () => {
 Click the "None" and "allowScript" buttons to see the effects of no sanitizer and a custom sanitizer, respectively.
 
 When you click the "None" button, you should see that the input and output match, as no sanitizer is applied.
-When you click the "allowScript" button the `<script>` element is still present, but the `<span>` element is removed.
+When you click the "allowScript" button the `<script>` element is still present, but the `<button>` element is removed.
 With this approach you can create safe HTML, but you aren't forced to.
 
 {{EmbedLiveSample("setHTMLUnsafe() live example","100","380px")}}

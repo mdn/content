@@ -91,7 +91,7 @@ Note that the default configuration is quite big, allowing many elements and att
 
 {{EmbedLiveSample("Creating the default sanitizer","100","480px")}}
 
-### Creating a sanitizer and using with SetHTML()
+### Creating a sanitizer and using it with `setHTML()`
 
 This example shows how you might create and use a custom sanitizer in a safe HTML DOM insertion method.
 
@@ -173,7 +173,7 @@ The original string and sanitized HTML that was parsed into the DOM are shown be
 Note that even though the sanitizer allows `<script>` elements, these are stripped out of the injected HTML when using {{domxref("Element.setHTML()")}}.
 Also note that the configuration includes both the names of the elements and their namespaces.
 
-{{EmbedLiveSample("Creating a sanitizer and using with SetHTML()","100","650px")}}
+{{EmbedLiveSample("Creating the default sanitizer","100","650px")}}
 
 ## Specifications
 

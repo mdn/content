@@ -58,7 +58,7 @@ allowElement(element)
 
 ### Returns
 
-`undefined`.
+None (`undefined`).
 
 ## Examples
 

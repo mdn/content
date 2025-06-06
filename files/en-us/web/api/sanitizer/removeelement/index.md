@@ -33,7 +33,7 @@ removeElement(element)
 
 ### Returns
 
-`undefined`.
+None (`undefined`).
 
 ## Examples
 

@@ -24,17 +24,14 @@ Note that `Sanitizer` is expected to be more efficient to reuse and modify when 
 
 ## Instance methods
 
-### Get configuration
-
-- {{domxref('Sanitizer.get()')}}
-  - : Returns the current `Sanitizer` configuration as an {{domxref('SanitizerConfig')}} dictionary instance.
-
-### Modify configuration
-
 - {{domxref('Sanitizer.allowElement()')}}
   - : Sets an element as allowed by the sanitizer, optionally with an array of attributes that are allowed or disallowed.
+- {{domxref('Sanitizer.get()')}}
+  - : Returns the current `Sanitizer` configuration as an {{domxref('SanitizerConfig')}} dictionary instance.
 - {{domxref('Sanitizer.removeElement()')}}
   - : Sets an element to be removed by the sanitizer.
+- {{domxref('Sanitizer.removeUnsafe()')}}
+  - : Updates the sanitizer configuration so that it will remove any XSS-unsafe HTML.
 - {{domxref('Sanitizer.replaceElementWithChildren()')}}
   - : Sets an element to be replaced by its child HTML elements.
 - {{domxref('Sanitizer.allowAttribute()')}}
@@ -45,11 +42,6 @@ Note that `Sanitizer` is expected to be more efficient to reuse and modify when 
   - : Sets whether comments will be allowed or removed by the sanitizer.
 - {{domxref('Sanitizer.setDataAttributes()')}}
   - : Sets whether data attributes on elements will be allowed or removed by the sanitizer.
-
-### Make sanitizer XSS-safe
-
-- {{domxref('Sanitizer.removeUnsafe()')}}
-  - : Updates the sanitizer configuration so that it will remove any XSS-unsafe HTML.
 
 ## Examples
 
@@ -90,9 +82,9 @@ const sanitizer = new Sanitizer({});
 
 This example shows how you might create an "allow sanitizer": a sanitizer that allows only a subset of attributes and elements.
 
-The code first uses the {{domxref("Sanitizer.Sanitizer", "Sanitizer()")}} constructor to create a `Sanitizer`, specifying a {{domxref("SanitizerConfig")}} that allows the element `div`, `p` and `script`.
+The code first uses the {{domxref("Sanitizer.Sanitizer", "Sanitizer()")}} constructor to create a `Sanitizer`, specifying a {{domxref("SanitizerConfig")}} that allows the element `<div>`, `<p>` and `<script>`.
 
-The example then uses `allowElement()` to further allow `span` elements, `allowAttribute()` to allow the `id` attribute on any element, and `replaceElementWithChildren()` method to set that any `b` elements should be replaced by their inner content (this is a kind of "allow" in that you are explicitly specifying some entities to keep).
+The example then uses `allowElement()` to further allow `<span>` elements, `allowAttribute()` to allow the `id` attribute on any element, and `replaceElementWithChildren()` method to set that any `<b>` elements should be replaced by their inner content (this is a kind of "allow" in that you are explicitly specifying some entities to keep).
 Lastly we specify that comments should be retained.
 
 ```js
@@ -107,8 +99,8 @@ sanitizer.setComments(true);
 
 This example shows how you might create a "remove sanitizer", specifying items to remove from the input.
 
-The code first uses the {{domxref("Sanitizer.Sanitizer", "Sanitizer()")}} constructor to create a `Sanitizer`, specifying a {{domxref("SanitizerConfig")}} that removes the element `span` and `script`.
-We then use `removeElement()` to add `h6` to the array of elements to be removed, and`removeAttribute()` to remove `lang` from the attributes list. We also remove comments.
+The code first uses the {{domxref("Sanitizer.Sanitizer", "Sanitizer()")}} constructor to create a `Sanitizer`, specifying a {{domxref("SanitizerConfig")}} that removes the element `<span>` and `<script>`.
+We then use `removeElement()` to add `<h6>` to the array of elements to be removed, and`removeAttribute()` to remove `lang` from the attributes list. We also remove comments.
 
 ```js
 const sanitizer = new Sanitizer({ removeElements: ["span", "script"] });
