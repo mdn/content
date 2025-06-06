@@ -11,14 +11,11 @@ The **`ExtendableCookieChangeEvent`** interface of the {{domxref("Cookie Store A
 
 Cookie changes that cause the `ExtendableCookieChangeEvent` to be dispatched are:
 
-- A cookie is newly created and not immediately removed.
+- A cookie is newly created and not immediately removed, or if a cookies is replaced.
   In this case `type` is "changed".
 - A cookie is newly created and immediately removed.
   In this case `type` is "deleted"
 - A cookie is removed. In this case `type` is "deleted".
-
-> [!NOTE]
-> A cookie that is replaced due to the insertion of another cookie with the same name, domain, and path, is ignored and does not trigger a change event.
 
 {{InheritanceDiagram}}
 
