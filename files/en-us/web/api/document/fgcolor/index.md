@@ -29,7 +29,7 @@ document.bgColor = "darkblue";
 The default value for this property in Mozilla Firefox is black (`#000000`
 in hexadecimal).
 
-`document.fgColor` is [the HTML specification](https://html.spec.whatwg.org/multipage/obsolete.html#dom-document-fgcolor). The recommended alternative is the CSS property {{Cssxref("color")}}
+`document.fgColor` is deprecated in [the HTML specification](https://html.spec.whatwg.org/multipage/obsolete.html#dom-document-fgcolor). The recommended alternative is the CSS property {{Cssxref("color")}}
 (e.g., `document.body.style.color = "red"`).
 
 ## Specifications
