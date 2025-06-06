@@ -324,7 +324,7 @@ At this point, we want you to practice writing some slightly more substantial HT
 
 {{ EmbedLiveSample('basic_html_3', "100%", 60) }}
 
-Here are the intructions to follow:
+Here are the instructions to follow:
 
 1. Just below the opening tag of the {{htmlelement("body")}} element, add a main title for the document. This should be wrapped inside an `<h1>` opening tag and `</h1>` closing tag.
 2. Edit the paragraph content to include text about a topic that you find interesting.
