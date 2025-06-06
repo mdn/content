@@ -136,7 +136,8 @@ When specified, the browser would not allow requests without an `integrity` attr
 
 The header values are defined as [structured field dictionaries](https://www.rfc-editor.org/rfc/rfc8941.html#name-dictionaries) with the following keys:
 
-- `blocked-destinations` - defines an [inner list](https://www.rfc-editor.org/rfc/rfc8941.html#name-inner-lists) of [request destinations](/en-US/docs/Web/API/Request/destination) to be blocked. The only currently supported value is "script".
+- `blocked-destinations`
+  - : Defines an [inner list](https://www.rfc-editor.org/rfc/rfc8941.html#name-inner-lists) of [request destinations](/en-US/docs/Web/API/Request/destination) to be blocked. The only currently supported value is "script".
 - `sources` - defines an [inner list](https://www.rfc-editor.org/rfc/rfc8941.html#name-inner-lists) of integrity sources. The default and only currently supported value is "inline".
 - `endpoints` - defines an [inner list](https://www.rfc-editor.org/rfc/rfc8941.html#name-inner-lists) of [reporting endpoints](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#endpoint).
 
