@@ -1,5 +1,6 @@
 ---
-title: accesskey
+title: HTML accesskey global attribute
+short-title: accesskey
 slug: Web/HTML/Reference/Global_attributes/accesskey
 page-type: html-attribute
 browser-compat: html.global_attributes.accesskey
