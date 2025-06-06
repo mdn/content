@@ -27,8 +27,7 @@ createNodeIterator(root, whatToShow, filter)
 - `whatToShow` {{optional_inline}}
 
   - : An optional `unsigned long` representing a bitmask created by
-    combining the constant properties of
-    [`NodeFilter`](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter).
+    combining the constant properties of `NodeFilter`.
     It is a convenient way of filtering for certain types of node. It defaults to
     `0xFFFFFFFF` representing the `SHOW_ALL` constant.
 

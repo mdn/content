@@ -79,10 +79,10 @@ Some of the new features in Firefox 1.5:
 Firefox support for Web standards continues to lead the industry with consistent cross-platform implementations for:
 
 - Hypertext Markup Language ([HTML](/en-US/docs/Web/HTML)) and Extensible Hypertext Markup Language ([XHTML](/en-US/docs/Glossary/XHTML)): [HTML 4.01](https://www.w3.org/TR/html401/) and [XHTML 1.0/1.1](https://www.w3.org/TR/xhtml1/)
-- Cascading Style Sheets ([CSS](/en-US/docs/Web/CSS)): [CSS Level 1](https://www.w3.org/TR/REC-CSS1/), [CSS Level 2](https://www.w3.org/TR/CSS22/) and parts of [CSS Level 3](https://www.w3.org/Style/CSS/current-work.html)
-- Document Object Model ([DOM](/en-US/docs/Web/API/Document_Object_Model)): [DOM Level 1](https://www.w3.org/TR/2000/WD-DOM-Level-1-20000929/), [DOM Level 2](https://www.w3.org/DOM/DOMTR#dom2) and parts of [DOM Level 3](https://www.w3.org/DOM/DOMTR#dom3)
+- Cascading Style Sheets ([CSS](/en-US/docs/Web/CSS)): [CSS Level 1](https://www.w3.org/TR/CSS1/), [CSS Level 2](https://www.w3.org/TR/CSS22/) and parts of [CSS Level 3](https://www.w3.org/Style/CSS/current-work.html)
+- Document Object Model ([DOM](/en-US/docs/Web/API/Document_Object_Model)): [DOM Level 1](https://www.w3.org/TR/DOM-Level-1/), [DOM Level 2](https://www.w3.org/DOM/DOMTR#dom2) and parts of [DOM Level 3](https://www.w3.org/DOM/DOMTR#dom3)
 - Mathematical Markup Language: [MathML Version 2.0](https://www.w3.org/Math/)
-- Extensible Markup Language ([XML](/en-US/docs/Web/XML)): [XML 1.0](https://www.w3.org/TR/REC-xml/), [Namespaces in XML](https://www.w3.org/TR/REC-xml-names/), [Associating Style Sheets with XML Documents 1.0](https://www.w3.org/TR/xml-stylesheet/), [Fragment Identifier for XML](https://lists.w3.org/Archives/Public/www-xml-linking-comments/2001AprJun/att-0074/NOTE-FIXptr-20010425.htm)
+- Extensible Markup Language ([XML](/en-US/docs/Web/XML)): [XML 1.0](https://www.w3.org/TR/xml/), [Namespaces in XML](https://www.w3.org/TR/xml-names/), [Associating Style Sheets with XML Documents 1.0](https://www.w3.org/TR/xml-stylesheet/), [Fragment Identifier for XML](https://lists.w3.org/Archives/Public/www-xml-linking-comments/2001AprJun/att-0074/NOTE-FIXptr-20010425.htm)
 - XSL Transformations ([XSLT](/en-US/docs/Web/XML/XSLT)): [XSLT 1.0](https://www.w3.org/TR/xslt/)
 - XML Path Language ([XPath](/en-US/docs/Web/XML/XPath)): [XPath 1.0](https://www.w3.org/TR/xpath/)
 - Resource Description Framework ([RDF](/en-US/docs/Glossary/RDF)): [RDF](https://www.w3.org/RDF/)

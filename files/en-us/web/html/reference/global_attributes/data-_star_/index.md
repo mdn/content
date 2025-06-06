@@ -60,7 +60,7 @@ li:hover:after {
 ```
 
 All such custom data are available via the {{domxref("HTMLElement")}} interface of the element the attribute is set on. The {{domxref("HTMLElement.dataset")}} property gives access to them.
-The `*` may be replaced by any name following [the production rule of XML names](https://www.w3.org/TR/REC-xml/#NT-Name) which includes the following recommendations:
+The `*` may be replaced by any name following [the production rule of XML names](https://www.w3.org/TR/xml/#NT-Name) which includes the following recommendations:
 
 - The name should not start with `xml` (case-insensitive), as it's reserved for future XML specifications.
 - The name should not contain any colon characters (`:`), as XML assigns meaning to such names.

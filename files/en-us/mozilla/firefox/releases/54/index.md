@@ -72,7 +72,7 @@ Firefox 54 was released on June 13, 2017. This article lists key changes that ar
 #### Encrypted MediaExtensions API
 
 - The `MediaKeySession.keySystem` string has been removed from the specification, and as such we've taken it out of Firefox 54 ([Firefox bug 1335555](https://bugzil.la/1335555)).
-- Support has been added for the VP9 codec in encrypted streams using [Clear Key](https://www.w3.org/TR/encrypted-media/#clear-key) and [Widevine](https://www.widevine.com/) ([Firefox bug 1338064](https://bugzil.la/1338064)).
+- Support has been added for the VP9 codec in encrypted streams using [Clear Key](https://w3c.github.io/encrypted-media/#dfn-clear-key) and [Widevine](https://www.widevine.com/) ([Firefox bug 1338064](https://bugzil.la/1338064)).
 - Previously, MSE was only allowed to use WebM/VP8 video if the system was considered "fast enough." Now playback of VP8-encoded `webm/video` media is always supported, regardless of system performance.
 
 #### WebRTC

@@ -54,7 +54,7 @@ This article provides information about the changes in Firefox 127 that affect d
 
 #### WebDriver BiDi
 
-- Added the `permissions.setPermission` command which allows to update browser permissions (such as `geolocation`). The permissions module is an extension to the WebDriver BiDi specification [defined in the Permissions specification](https://www.w3.org/TR/permissions/#webdriver-bidi-module-permissions) ([Firefox bug 1875065](https://bugzil.la/1875065)).
+- Added the `permissions.setPermission` command which allows to update browser permissions (such as `geolocation`). The permissions module is an extension to the WebDriver BiDi specification [defined in the Permissions specification](https://w3c.github.io/permissions/#webdriver-bidi-module-permissions) ([Firefox bug 1875065](https://bugzil.la/1875065)).
 - Added support for a11y attributes `name` and `role` as locators for the `browsingContext.locateNodes` command ([Firefox bug 1885577](https://bugzil.la/1885577)).
 - Added support for the `devicePixelRatio` argument to `browsingContext.setViewport` which allows to emulate the behavior of the screens with different device pixel ratio ([Firefox bug 1857961](https://bugzil.la/1857961)).
 - Improved `browsingContext.navigate` to avoid race conditions leading to wait unnecessarily before resolving the command ([Firefox bug 1894305](https://bugzil.la/1894305)).

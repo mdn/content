@@ -512,9 +512,7 @@ Eric Bailey, of CSS-Tricks, found an innovative use the update feature which, us
 }
 ```
 
-From W3.org's page on [Media Queries 4](https://www.w3.org/TR/mediaqueries-4/):
-
-The `update` media feature is used to query the ability of the output device to modify the appearance of content once it has been rendered. It has the values of "none", "slow", and "fast".
+The [`update`](/en-US/docs/Web/CSS/@media/update) media feature is used to query the ability of the output device to modify the appearance of content once it has been rendered. It has the values of "none", "slow", and "fast".
 
 ## Developmental & Experimental Features
 
@@ -546,7 +544,7 @@ Section 4.2 from the CSSWG.org drafts integrates with the [event loop](https://h
 
 #### Personalization Help and Support
 
-The requirement for the `literal` property is taken from [section 23 Non-literal Text and Images](https://www.w3.org/TR/personalization-semantics-help-1.0/).
+The requirement for the `literal` property is taken from [WAI-Adapt: Help and Support](https://w3c.github.io/adapt/help/#literal-explanation).
 
 **Requirement:** Some users cannot understand non-literal text and icons such as metaphors, idioms etc. The `literal` property is intended to identify text or images as non-literal and allows the author to explain non-literal text and images to users.
 
@@ -615,7 +613,7 @@ Along with the Harding tool, is generally recognized to be one of the two "gold 
 ### W3C
 
 - [CSS Color Module Level 3](https://www.w3.org/TR/css-color-3/)
-- [Personalization Semantics Explainer 1.0](https://www.w3.org/TR/personalization-semantics-1.0/). Working Draft
+- [WAI-Adapt Explainer](https://w3c.github.io/adapt/). Working Draft
 - [WAI-Adapt: Tools Module](https://www.w3.org/TR/adapt-tools/) Working Draft
 - [Three Flashes or Below Threshold Understanding SC 2.3.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/seizure-does-not-violate.html) Understanding WCAG 2.0 (Older, but contains some explanations of references made in the WCAG 2.1 criteria)
 - [Three Flashes or Below Threshold Understanding Success Criterion 2.3.1](https://www.w3.org/WAI/WCAG21/Understanding/three-flashes-or-below-threshold.html) Understanding WCAG 2.1
