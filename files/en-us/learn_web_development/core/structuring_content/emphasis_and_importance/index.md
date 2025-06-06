@@ -84,7 +84,7 @@ In this section, we want you to play with emphasis and importance:
 1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
 2. In the main heading give the word "Emphasis" emphasis, and the word "importance" strong importance.
 3. In the first paragraph, give the coffee machine name strong importance, and emphasize the adjectives used to describe the coffee.
-4. In the second paragraph, give the temprature description ("cold") and the action you should take ("wrap up warm to avoid falling ill") strong importance. Give "falling ill" some extra markup so it is both emphasized and important.
+4. In the second paragraph, give the temperature description ("cold") and the action you should take ("wrap up warm to avoid falling ill") strong importance. Give "falling ill" some extra markup so it is both emphasized and important.
 
 If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the code block.
 
