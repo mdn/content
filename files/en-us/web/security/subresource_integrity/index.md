@@ -135,9 +135,10 @@ The `Integrity-Policy` and `Integrity-Policy-Report-Only` HTTP headers enable a 
 When specified, the browser would not allow requests without an `integrity` attribute to be made. (or simply report about them if the policy is specified using the `Integrity-Policy-Report-Only` header)
 
 The headers are defined as a [structured field dictionary](https://www.rfc-editor.org/rfc/rfc8941.html#name-dictionaries) with the following keys:
-* `blocked-destinations` - defines an [inner list](https://www.rfc-editor.org/rfc/rfc8941.html#name-inner-lists) of [request destinations](/en-US/docs/Web/API/Request/destination) to be blocked. The only currently supported value is "script".
-* `sources` - defines an [inner list](https://www.rfc-editor.org/rfc/rfc8941.html#name-inner-lists) of integrity sources. The default and only currently supported value is "inline".
-* `endpoints` - defines an [inner list](https://www.rfc-editor.org/rfc/rfc8941.html#name-inner-lists) of [reporting endpoints](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#endpoint).
+
+- `blocked-destinations` - defines an [inner list](https://www.rfc-editor.org/rfc/rfc8941.html#name-inner-lists) of [request destinations](/en-US/docs/Web/API/Request/destination) to be blocked. The only currently supported value is "script".
+- `sources` - defines an [inner list](https://www.rfc-editor.org/rfc/rfc8941.html#name-inner-lists) of integrity sources. The default and only currently supported value is "inline".
+- `endpoints` - defines an [inner list](https://www.rfc-editor.org/rfc/rfc8941.html#name-inner-lists) of [reporting endpoints](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#endpoint).
 
 In case a request is blocked by integrity policy, a [Reporting API](/en-US/docs/Web/API/Reporting_API) violation report is created with of the "integrity-violation" type. It contains:
 
