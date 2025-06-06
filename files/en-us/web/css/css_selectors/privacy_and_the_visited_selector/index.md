@@ -1,6 +1,6 @@
 ---
 title: Privacy and the :visited selector
-short-title: Using :visited
+short-title: Privacy and :visited
 slug: Web/CSS/CSS_selectors/Privacy_and_the_visited_selector
 page-type: guide
 ---

@@ -1,5 +1,5 @@
 ---
-title: Syntax
+title: "Introduction to CSS syntax: declarations, rulesets, and statements"
 short-title: Introduction
 slug: Web/CSS/CSS_syntax/Syntax
 page-type: guide

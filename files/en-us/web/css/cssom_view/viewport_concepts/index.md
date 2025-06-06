@@ -1,6 +1,5 @@
 ---
 title: Viewport concepts
-short-title: Viewports
 slug: Web/CSS/CSSOM_view/Viewport_concepts
 page-type: guide
 ---
