@@ -55,7 +55,7 @@ The two main ways to create an observable are as follows:
 - {{domxref("Observable.inspect", "inspect()")}} {{Experimental_Inline}}
   - : Enables the different lifecycle stages of the observable stream to be inspected.
 - {{domxref("Observable.map", "map()")}} {{Experimental_Inline}}
-  - : Maps each value passed through the observable stream to a new object structure.
+  - : Maps each value passed through the observable stream to a new structure.
 - {{domxref("Observable.switchMap", "switchMap()")}} {{Experimental_Inline}}
   - : ?
 - {{domxref("Observable.take", "take()")}} {{Experimental_Inline}}

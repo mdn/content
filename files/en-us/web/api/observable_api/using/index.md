@@ -58,7 +58,7 @@ In this snippet we first grab a reference to the `<p>` element, then specify the
 
 We then specify a pipeline:
 
-- {{domxref("Observable.filter()")}} is used to filter the events passed through the pipeline to only events fired on `EventTarget`s that match the `div` CSS selector (tested using the {{domxref("Element.matches()")}} method). This means that only `mousemove` events directly fired on the `<div>` element will pass through the pipline.
+- {{domxref("Observable.filter()")}} is used to filter the events passed through the pipeline to only events fired on `EventTarget`s that match the `div` CSS selector (tested using the {{domxref("Element.matches()")}} method). This means that only `mousemove` events directly fired on the `<div>` elements will pass through the pipeline.
 - {{domxref("Observable.map()")}} is used to map the fired `mousemove` {{domxref("Event")}} objects to new objects containing the coordinates of the mouse cursor when the event was fired.
 - {{domxref("Observable.subscribe()")}} is used to subscribe the observable to the event stream, calling the `reportCoords()` function each time a `mousemove` event fires on the `<div>`s.
 

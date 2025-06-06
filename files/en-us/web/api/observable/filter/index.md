@@ -1,0 +1,107 @@
+---
+title: "Observable: filter() method"
+short-title: filter()
+slug: Web/API/Observable/filter
+page-type: web-api-instance-method
+status:
+  - experimental
+browser-compat: api.Observable.filter
+---
+
+{{APIRef("Observable API")}}{{SeeCompatTable}}
+
+The **`filter()`** method of the {{domxref("Observable")}} interface filters each value passed through the stream based on a condition. Those that don't fulfill the condition are dropped.
+
+## Syntax
+
+```js-nolint
+filter(predicate, index)
+```
+
+### Parameters
+
+- `predicate`
+  - : A callback function representing a condition to test the value against. If the value fulfills the condition, the predicate returns `true` and the value passes through the stream. If not, the predicate returns `false` and the value is dropped. This is commonly used to test whether events are being fired on a certain element type.
+- `index` {{optional_inline}}
+  - : A number ... (EDITORIAL: I'm really not sure what this does)
+
+### Return value
+
+An {{domxref("Observable")}}.
+
+## Examples
+
+### Basic `filter()` example
+
+In this example, we'll print the updated mouse coordinates to the screen whenever the mouse is moved over the top of a couple of {{htmlelement("div")}} elements.
+
+#### HTML
+
+The markup includes two `<div>` elements plus a single {{htmlelement("p")}} element to display the returned coordinate data.
+
+```html live-sample___basic-filter
+<div></div>
+<div></div>
+<p></p>
+```
+
+#### CSS
+
+We style the `<div>` elements with a {{cssxref("height")}}, {{cssxref("background-color")}}, and {{cssxref("margin-bottom")}}:
+
+```css live-sample___basic-filter
+div {
+  height: 120px;
+  background-color: purple;
+  margin-bottom: 40px;
+}
+```
+
+#### JavaScript
+
+The first chunk of JavaScript looks like this:
+
+```js live-sample___basic-filter
+const outputElem = document.querySelector("p");
+
+document.body
+  .when("mousemove")
+  .filter((e) => e.target.matches("div"))
+  .map((e) => ({ x: e.clientX, y: e.clientY }))
+  .subscribe({ next: reportCoords });
+```
+
+In this snippet we first grab a reference to the `<p>` element, then specify the [`mousemove`](/en-US/docs/Web/API/Element/mousemove_event) event inside the `when()` method on the page's {{htmlelement("body")}} element, which returns a observable representing a stream of `mousedown` events fired on the `<body>` element.
+
+We then specify a pipeline:
+
+- `filter()` is used to filter the events passed through the pipeline to only events fired on `EventTarget`s that match the `div` CSS selector (tested using the {{domxref("Element.matches()")}} method). This means that only `mousemove` events directly fired on the `<div>` elements will pass through the pipeline.
+- {{domxref("Observable.map()")}} is used to map the fired `mousemove` {{domxref("Event")}} objects to new objects containing the coordinates of the mouse cursor when the event was fired.
+- {{domxref("Observable.subscribe()")}} is used to subscribe the observable to the event stream, calling the `reportCoords()` function each time a `mousemove` event fires on the `<div>`s.
+
+Finally, we define the `reportCoords()` function, which prints the mouse coordinates to the `<p>` element:
+
+```js live-sample___basic-filter
+function reportCoords(e) {
+  outputElem.textContent = `${e.x},${e.y}`;
+}
+```
+
+The rendered output looks like this:
+
+{{EmbedLiveSample("basic-filter", "100%", "360px")}}
+
+Try moving the mouse over the top of the example; the coordinates are printed to the `<p>` only when the `<div>` elements are moved over, not the areas outside the `<div>`s.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- [Using the Observable API](/en-US/docs/Web/API/Observable_API/Using)
+- [Observable explainer](https://github.com/WICG/observable/blob/master/README.md)
