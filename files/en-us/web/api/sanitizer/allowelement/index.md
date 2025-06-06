@@ -88,28 +88,33 @@ function log(text) {
 
 #### JavaScript
 
-If the `Sanitizer` interface is supported, the code creates a new `Sanitizer` object that initially allows {{htmlelement("div")}} and {{htmlelement("script")}} elements.
+The code first creates a new `Sanitizer` object that initially allows {{htmlelement("div")}} and {{htmlelement("script")}} elements.
 It then calls `allowElement()` to add a {{htmlelement("p")}} element specified as a string parameter, and then again to add a {{htmlelement("span")}} element specified as an object.
 We then get and log the configuration.
 
-```js
+```js hidden
 if ("Sanitizer" in window) {
-  // Create sanitizer using SanitizerConfig
-  const sanitizer = new Sanitizer({
-    elements: ["div", "script"],
-  });
+```
 
-  // Allow <p> specifying an string
-  sanitizer.allowElement("p");
+```js
+// Create sanitizer using SanitizerConfig
+const sanitizer = new Sanitizer({
+  elements: ["div", "script"],
+});
 
-  // Allow <span> specifying an object
-  sanitizer.allowElement({ name: "span" });
+// Allow <p> specifying an string
+sanitizer.allowElement("p");
 
-  let sanitizerConfig = sanitizer.get();
-  log(JSON.stringify(sanitizerConfig, null, 2));
+// Allow <span> specifying an object
+sanitizer.allowElement({ name: "span" });
+
+let sanitizerConfig = sanitizer.get();
+log(JSON.stringify(sanitizerConfig, null, 2));
+```
+
+```js hidden
 } else {
   log("The HTML Sanitizer API is NOT supported in this browser.");
-  // Provide fallback or alternative behavior
 }
 ```
 
@@ -146,36 +151,41 @@ function log(text) {
 
 #### JavaScript
 
-If the `Sanitizer` interface is supported, the code creates a new `Sanitizer` object that initially allows {{htmlelement("div")}} elements (removing attributes other than `id`) and also replaced {{htmlelement("span")}} elements with any child elements.
+The code first creates a new `Sanitizer` object that initially allows {{htmlelement("div")}} elements (removing attributes other than `id`) and also replaced {{htmlelement("span")}} elements with any child elements.
 
 It then calls `allowElement()`, firstly to add a {{htmlelement("div")}} element that removes `style` attributes.
 Since the `<div>` element is already allowed, it is removed from the [`elements` configuration](/en-US/docs/Web/API/SanitizerConfig#elements) and the `<div>` element definition is is appended.
 
 A {{htmlelement("span")}} element is then added to the allow list, which removes it from the [`replaceWithChildrenElements` configuration list](/en-US/docs/Web/API/SanitizerConfig#replacewithchildrenelements).
 
-```js
+```js hidden
 if ("Sanitizer" in window) {
-  // Create sanitizer using SanitizerConfig
-  const sanitizer = new Sanitizer({
-    elements: [{ name: "div", attributes: [{ name: "id" }] }],
-    replaceWithChildrenElements: ["span"],
-  });
+```
 
-  // Allow <div> elements.
-  // Allow id elements but strip their style attributes
-  sanitizer.allowElement({
-    name: "div",
-    removeAttributes: ["style"],
-  });
+```js
+// Create sanitizer using SanitizerConfig
+const sanitizer = new Sanitizer({
+  elements: [{ name: "div", attributes: [{ name: "id" }] }],
+  replaceWithChildrenElements: ["span"],
+});
 
-  // Allow <span> elements
-  sanitizer.allowElement("span");
+// Allow <div> elements.
+// Allow id elements but strip their style attributes
+sanitizer.allowElement({
+  name: "div",
+  removeAttributes: ["style"],
+});
 
-  let sanitizerConfig = sanitizer.get();
-  log(JSON.stringify(sanitizerConfig, null, 2));
+// Allow <span> elements
+sanitizer.allowElement("span");
+
+let sanitizerConfig = sanitizer.get();
+log(JSON.stringify(sanitizerConfig, null, 2));
+```
+
+```js hidden
 } else {
   log("The HTML Sanitizer API is NOT supported in this browser.");
-  // Provide fallback or alternative behavior
 }
 ```
 

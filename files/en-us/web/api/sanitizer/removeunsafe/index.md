@@ -74,28 +74,33 @@ function log(text) {
 
 #### JavaScript
 
-If the `Sanitizer` interface is supported, the code creates a new `Sanitizer` object that that allows the safe element {{htmlelement("p")}}, the unsafe elements {{htmlelement("script")}} and {{htmlelement("iframe")}}, and the unsafe `onwebkitanimationend` event handler attribute.
+The code first creates a new `Sanitizer` object that that allows the safe element {{htmlelement("p")}}, the unsafe elements {{htmlelement("script")}} and {{htmlelement("iframe")}}, and the unsafe `onwebkitanimationend` event handler attribute.
 
 The code then calls `removeUnsafe()` on the sanitizer and logs its configuration.
 
-```js
+```js hidden
 if ("Sanitizer" in window) {
-  // Create sanitizer that allows
-  const sanitizer = new Sanitizer({
-    elements: ["p", "script"],
-    attributes: ["onwebkitanimationend"],
-    replaceWithChildrenElements: ["iframe"],
-  });
+```
 
-  // Make the sanitizer safe!
-  sanitizer.removeUnsafe();
+```js
+// Create sanitizer that allows
+const sanitizer = new Sanitizer({
+  elements: ["p", "script"],
+  attributes: ["onwebkitanimationend"],
+  replaceWithChildrenElements: ["iframe"],
+});
 
-  // Log the sanitizer configuration
-  const sanitizerConfig = sanitizer.get();
-  log(JSON.stringify(sanitizerConfig, null, 2));
+// Make the sanitizer safe!
+sanitizer.removeUnsafe();
+
+// Log the sanitizer configuration
+const sanitizerConfig = sanitizer.get();
+log(JSON.stringify(sanitizerConfig, null, 2));
+```
+
+```js hidden
 } else {
   log("The HTML Sanitizer API is NOT supported in this browser.");
-  // Provide fallback or alternative behavior
 }
 ```
 

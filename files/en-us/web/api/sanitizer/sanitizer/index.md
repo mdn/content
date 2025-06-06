@@ -70,17 +70,22 @@ function log(text) {
 }
 ```
 
-```js
+```js hidden
 if ("Sanitizer" in window) {
-  // Create default sanitizer
-  const sanitizer = new Sanitizer();
+```
 
-  // Get and log the (default) configuration
-  const defaultConfig = sanitizer.get();
-  log(JSON.stringify(defaultConfig, null, 2));
+```js
+// Create default sanitizer
+const sanitizer = new Sanitizer();
+
+// Get and log the (default) configuration
+const defaultConfig = sanitizer.get();
+log(JSON.stringify(defaultConfig, null, 2));
+```
+
+```js hidden
 } else {
   log("The HTML Sanitizer API is NOT supported in this browser.");
-  // Provide fallback or alternative behavior
 }
 ```
 
@@ -133,37 +138,42 @@ We then create a `Sanitizer` object with a {{domxref("SanitizerConfig")}} that a
 The sanitizer is used with the unsafe string in {{domxref("Element.setHTML()")}}.
 Both the original and sanitized strings are displayed as text nodes.
 
-```js
+```js hidden
 if ("Sanitizer" in window) {
-  // Define unsafe string of HTML
-  const unsafeHTMLString = `
+```
+
+```js
+// Define unsafe string of HTML
+const unsafeHTMLString = `
   <div>
     <p>This is a paragraph. <span onclick="alert('You clicked the span!')">Click me</span></p>
     <script src="path/to/amodule.js" type="module"
   </div>
 `;
 
-  // Set unsafe string as a text node of first element
-  const unmodifiedElement = document.querySelector("#unmodified");
-  unmodifiedElement.innerText = unsafeHTMLString;
+// Set unsafe string as a text node of first element
+const unmodifiedElement = document.querySelector("#unmodified");
+unmodifiedElement.innerText = unsafeHTMLString;
 
-  // Create sanitizer using a SanitizerConfig that allows script (and other elements)
-  const sanitizer = new Sanitizer({ elements: ["div", "p", "span", "script"] });
+// Create sanitizer using a SanitizerConfig that allows script (and other elements)
+const sanitizer = new Sanitizer({ elements: ["div", "p", "span", "script"] });
 
-  // Use the sanitizer to set the HTML of the second element using the safe method
-  const setHTMLElement = document.querySelector("#setHTML");
-  setHTMLElement.setHTML(unsafeHTMLString, { sanitizer: sanitizer });
+// Use the sanitizer to set the HTML of the second element using the safe method
+const setHTMLElement = document.querySelector("#setHTML");
+setHTMLElement.setHTML(unsafeHTMLString, { sanitizer: sanitizer });
 
-  // Get that HTML and set it back to the element as a text node
-  // (so we can see the elements)
-  setHTMLElement.innerText = setHTMLElement.innerHTML;
+// Get that HTML and set it back to the element as a text node
+// (so we can see the elements)
+setHTMLElement.innerText = setHTMLElement.innerHTML;
 
-  // Log the configuration
-  const sanitizerConfig = sanitizer.get();
-  log(JSON.stringify(sanitizerConfig, null, 2));
+// Log the configuration
+const sanitizerConfig = sanitizer.get();
+log(JSON.stringify(sanitizerConfig, null, 2));
+```
+
+```js hidden
 } else {
   log("The HTML Sanitizer API is NOT supported in this browser.");
-  // Provide fallback or alternative behavior
 }
 ```
 

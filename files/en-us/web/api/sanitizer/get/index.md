@@ -60,18 +60,23 @@ function log(text) {
 The following code tests whether the `Sanitizer` interface is supported, and if so creates a new `Sanitizer` object using a simple {{domxref("SanitizerConfig")}} that allows the HTML elements: {{htmlelement("div")}}, {{htmlelement("p")}}, {{htmlelement("span")}}, {{htmlelement("script")}}.
 It then gets and logs the configuration.
 
-```js
+```js hidden
 if ("Sanitizer" in window) {
-  // Create sanitizer using SanitizerConfig
-  const sanitizer = new Sanitizer({ elements: ["div", "p", "span", "script"] });
+```
 
-  // Get current configuration
-  const sanitizerConfig = sanitizer.get();
+```js
+// Create sanitizer using SanitizerConfig
+const sanitizer = new Sanitizer({ elements: ["div", "p", "span", "script"] });
 
-  log(JSON.stringify(sanitizerConfig, null, 2));
+// Get current configuration
+const sanitizerConfig = sanitizer.get();
+
+log(JSON.stringify(sanitizerConfig, null, 2));
+```
+
+```js hidden
 } else {
   log("The HTML Sanitizer API is NOT supported in this browser.");
-  // Provide fallback or alternative behavior
 }
 ```
 
@@ -113,18 +118,23 @@ function log(text) {
 }
 ```
 
-```js
+```js hidden
 if ("Sanitizer" in window) {
-  // Create default sanitizer
-  const sanitizer = new Sanitizer();
+```
 
-  // Get default configuration
-  const defaultConfig = sanitizer.get();
+```js
+// Create default sanitizer
+const sanitizer = new Sanitizer();
 
-  log(JSON.stringify(defaultConfig, null, 2));
+// Get default configuration
+const defaultConfig = sanitizer.get();
+
+log(JSON.stringify(defaultConfig, null, 2));
+```
+
+```js hidden
 } else {
   log("The HTML Sanitizer API is NOT supported in this browser.");
-  // Provide fallback or alternative behavior
 }
 ```
 

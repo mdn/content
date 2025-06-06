@@ -63,33 +63,38 @@ function log(text) {
 
 #### JavaScript
 
-If the `Sanitizer` interface is supported, the code creates a new `Sanitizer` object that initially allows {{htmlelement("div")}} and {{htmlelement("script")}} elements, and that replaces {{htmlelement("span")}} elements with their child elements.
+The code first creates a new `Sanitizer` object that initially allows {{htmlelement("div")}} and {{htmlelement("script")}} elements, and that replaces {{htmlelement("span")}} elements with their child elements.
 
 The code then calls `removeElement()` to add {{htmlelement("p")}}, `<script>` and `<span>` elements to the [`removeElements`](/en-US/docs/Web/API/SanitizerConfig#removeelements) list in the configuration.
 Note that adding `<script>` and `<span>` removes the elements from their original lists.
 
-```js
+```js hidden
 if ("Sanitizer" in window) {
-  // Create sanitizer using SanitizerConfig
-  const sanitizer = new Sanitizer({
-    elements: ["div", "script"],
-    replaceWithChildrenElements: ["span"],
-  });
+```
 
-  // Disallow the <p> element
-  sanitizer.removeElement("p");
+```js
+// Create sanitizer using SanitizerConfig
+const sanitizer = new Sanitizer({
+  elements: ["div", "script"],
+  replaceWithChildrenElements: ["span"],
+});
 
-  // Disallow the <script> element
-  sanitizer.removeElement("script");
-  // Disallow the <span> element
-  sanitizer.removeElement("span");
+// Disallow the <p> element
+sanitizer.removeElement("p");
 
-  // Log the sanitizer configuration
-  let sanitizerConfig = sanitizer.get();
-  log(JSON.stringify(sanitizerConfig, null, 2));
+// Disallow the <script> element
+sanitizer.removeElement("script");
+// Disallow the <span> element
+sanitizer.removeElement("span");
+
+// Log the sanitizer configuration
+let sanitizerConfig = sanitizer.get();
+log(JSON.stringify(sanitizerConfig, null, 2));
+```
+
+```js hidden
 } else {
   log("The HTML Sanitizer API is NOT supported in this browser.");
-  // Provide fallback or alternative behavior
 }
 ```
 

@@ -76,37 +76,42 @@ function log(text) {
 
 #### JavaScript
 
-If the `Sanitizer` interface is supported, the code creates a new `Sanitizer` object that initially allows {{htmlelement("p")}}, {{htmlelement("em")}}, and {{htmlelement("strong")}} elements.
+The code first creates a new `Sanitizer` object that initially allows {{htmlelement("p")}}, {{htmlelement("em")}}, and {{htmlelement("strong")}} elements.
 We then call `replaceElementWithChildren()` on the sanitizer specifying that `<strong>` elements should be replaced.
 
 The code defines a string that has `<strong>` elements and uses {{domxref("Element.setHTML()")}} with the sanitizer to inject the string.
 The original string, the sanitized HTML from the element, and the sanitizer are logged.
 
-```js
+```js hidden
 if ("Sanitizer" in window) {
-  // Create sanitizer using SanitizerConfig
-  const sanitizer = new Sanitizer({
-    elements: ["p", "em", "strong"],
-  });
+```
 
-  // Replace the <strong> element
-  sanitizer.replaceElementWithChildren("strong");
+```js
+// Create sanitizer using SanitizerConfig
+const sanitizer = new Sanitizer({
+  elements: ["p", "em", "strong"],
+});
 
-  const unsanitizedString = `<p>This is a with <strong>important</strong> text <em>highlighted</em>.</p>`;
-  log(`unsanitizedHTMLString:\n ${unsanitizedString}`);
+// Replace the <strong> element
+sanitizer.replaceElementWithChildren("strong");
 
-  // Create a <div> element
-  const divElement = document.createElement("div");
+const unsanitizedString = `<p>This is a with <strong>important</strong> text <em>highlighted</em>.</p>`;
+log(`unsanitizedHTMLString:\n ${unsanitizedString}`);
 
-  divElement.setHTML(unsanitizedString, { sanitizer: sanitizer });
-  log(`\n\nsanitizedHTML:\n ${divElement.innerHTML}`);
+// Create a <div> element
+const divElement = document.createElement("div");
 
-  // Log the sanitizer configuration
-  const sanitizerConfig = sanitizer.get();
-  log(`\n\nsanitizerConfig:\n ${JSON.stringify(sanitizerConfig, null, 2)}`);
+divElement.setHTML(unsanitizedString, { sanitizer: sanitizer });
+log(`\n\nsanitizedHTML:\n ${divElement.innerHTML}`);
+
+// Log the sanitizer configuration
+const sanitizerConfig = sanitizer.get();
+log(`\n\nsanitizerConfig:\n ${JSON.stringify(sanitizerConfig, null, 2)}`);
+```
+
+```js hidden
 } else {
   log("The HTML Sanitizer API is NOT supported in this browser.");
-  // Provide fallback or alternative behavior
 }
 ```
 

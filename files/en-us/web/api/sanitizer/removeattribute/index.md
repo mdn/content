@@ -48,7 +48,7 @@ This example shows how `removeAttribute()` is used to specify that an attribute 
 
 ```css hidden
 #log {
-  height: 420px;
+  height: 300px;
   overflow: scroll;
   padding: 0.5rem;
   border: 1px solid black;
@@ -64,27 +64,32 @@ function log(text) {
 
 #### JavaScript
 
-If the `Sanitizer` interface is supported, the code creates a new `Sanitizer` object that initially specifies no attributes or elements.
+The code first creates a new `Sanitizer` object that initially specifies no attributes or elements.
 We then call `removeAttribute()` with the attributes `title` and `mathcolor`.
 
-```js
+```js hidden
 if ("Sanitizer" in window) {
-  // Create sanitizer that allows
-  const sanitizer = new Sanitizer({
-    removeAttributes: [],
-  });
+```
 
-  // Remove the title attribute
-  sanitizer.removeAttribute("title");
-  // Remove the mathcolor attribute
-  sanitizer.removeAttribute("mathcolor");
+```js
+// Create sanitizer that allows
+const sanitizer = new Sanitizer({
+  removeAttributes: [],
+});
 
-  // Log the sanitizer configuration
-  let sanitizerConfig = sanitizer.get();
-  log(JSON.stringify(sanitizerConfig, null, 2));
+// Remove the title attribute
+sanitizer.removeAttribute("title");
+// Remove the mathcolor attribute
+sanitizer.removeAttribute("mathcolor");
+
+// Log the sanitizer configuration
+let sanitizerConfig = sanitizer.get();
+log(JSON.stringify(sanitizerConfig, null, 2));
+```
+
+```js hidden
 } else {
   log("The HTML Sanitizer API is NOT supported in this browser.");
-  // Provide fallback or alternative behavior
 }
 ```
 
@@ -93,7 +98,7 @@ if ("Sanitizer" in window) {
 The final configuration is logged below.
 Note how both attributes are now added to the [`removeAttributes`](2/en-US/docs/Web/API/SanitizerConfig#removeattributes_2) list (these attributes will removed if present on elements when the sanitizer is used).
 
-{{EmbedLiveSample("How to disallow specific attributes","100","480px")}}
+{{EmbedLiveSample("How to disallow specific attributes","100","360px")}}
 
 ## Specifications
 

@@ -64,27 +64,32 @@ function log(text) {
 
 #### JavaScript
 
-If the `Sanitizer` interface is supported, the code creates a new `Sanitizer` object that initially allows no attributes.
+The code first creates a new `Sanitizer` object that initially allows no attributes.
 We then call `allowAttribute()` with the attributes `title` and `mathcolor`.
 
-```js
+```js hidden
 if ("Sanitizer" in window) {
-  // Create sanitizer that allows
-  const sanitizer = new Sanitizer({
-    attributes: [],
-  });
+```
 
-  // Allow the "title" attribute
-  sanitizer.allowAttribute("title");
-  // Allow the "mathcolor" attribute
-  sanitizer.allowAttribute("mathcolor");
+```js
+// Create an allow sanitizer
+const sanitizer = new Sanitizer({
+  attributes: [],
+});
 
-  // Log the sanitizer configuration
-  let sanitizerConfig = sanitizer.get();
-  log(JSON.stringify(sanitizerConfig, null, 2));
+// Allow the "title" attribute
+sanitizer.allowAttribute("title");
+// Allow the "mathcolor" attribute
+sanitizer.allowAttribute("mathcolor");
+
+// Log the sanitizer configuration
+let sanitizerConfig = sanitizer.get();
+log(JSON.stringify(sanitizerConfig, null, 2));
+```
+
+```js hidden
 } else {
   log("The HTML Sanitizer API is NOT supported in this browser.");
-  // Provide fallback or alternative behavior
 }
 ```
 
