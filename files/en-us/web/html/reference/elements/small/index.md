@@ -153,4 +153,3 @@ Although the `<small>` element, like the {{htmlelement("b")}} and {{htmlelement(
 - {{HTMLElement("sub")}} and {{HTMLElement("sup")}}
 - {{HTMLElement("font")}}
 - {{HTMLElement("style")}}
-- HTML 4.01 Specification: [Font Styles](https://www.w3.org/TR/html4/present/graphics.html#h-15.2)

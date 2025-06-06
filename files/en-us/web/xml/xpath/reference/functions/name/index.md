@@ -24,7 +24,7 @@ A string representing the QName of a node.
 
 ## Description
 
-- The [QName](https://www.w3.org/TR/REC-xml-names/#NT-QName) is the node's qualified name, including its namespace prefix and its local name.
+- The [QName](https://www.w3.org/TR/xml-names/#NT-QName) is the node's qualified name, including its namespace prefix and its local name.
 
 ## Specifications
 

@@ -288,5 +288,5 @@ If a link performs the action of a button, giving the element `role="button"` he
 - [`aria-expanded`](https://www.w3.org/TR/wai-aria-1.1/#aria-expanded)
 - [`aria-haspopup`](https://www.w3.org/TR/wai-aria-1.1/#aria-haspopup)
 - [Strong native semantics in HTML5](https://html.spec.whatwg.org/multipage/dom.html#aria-usage-note)
-- [Notes on Using ARIA in HTML](https://www.w3.org/TR/aria-in-html/)
+- [Notes on Using ARIA in HTML](https://w3c.github.io/using-aria/)
 - [Official WAI-ARIA example code](https://www.w3.org/WAI/ARIA/apg/patterns/button/examples/button/)
