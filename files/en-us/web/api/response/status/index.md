@@ -17,6 +17,8 @@ For example, `200` for success, `404` if the resource could not be found.
 An unsigned short number.
 This is one of the [HTTP response status codes](/en-US/docs/Web/HTTP/Reference/Status).
 
+A value is `0` is returned for an [‘opaque’ filtered response](https://fetch.spec.whatwg.org/#concept-filtered-response-opaque) (whose type is `opaque` or `opaqueredirect`), or for a [network error response](https://fetch.spec.whatwg.org/#concept-network-error) (whose type is `error`).
+
 ## Examples
 
 In our [Fetch Response example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-response) (see [Fetch Response live](https://mdn.github.io/dom-examples/fetch/fetch-response/))
