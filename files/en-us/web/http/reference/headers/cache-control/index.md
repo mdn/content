@@ -336,6 +336,11 @@ Same meaning that `no-transform` has for a response, but for a request instead.
 
 The client indicates that an already-cached response should be returned. If a cache has a stored response, even a stale one, it will be returned. If no cached response is available, a [504 Gateway Timeout](/en-US/docs/Web/HTTP/Reference/Status/504) response will be returned.
 
+#### `stale-if-error`
+
+The `stale-if-error` request directive indicates that the browser is interested in receiving stale content on error from any intermediate server for a particular origin.
+This is not supported by current browsers (see [Browser compatibility](#browser_compatibility)).
+
 ## Use Cases
 
 ### Preventing storing
