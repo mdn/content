@@ -32,11 +32,11 @@ contrast-color(var(--backgroundColor))
 
 #### Contrasting text for a button
 
-```html hidden live-sample__button_text_ex
+```html hidden
 <button>Submit</button>
 ```
 
-```css live-sample__button_text_ex
+```css
 :root {
   --button-color: lightblue;
 }
@@ -48,7 +48,7 @@ button {
 }
 ```
 
-```css hidden live-sample__button_text_ex
+```css hidden
 @supports not (color: contrast-color(red)) {
   body::before {
     content: "Your browser doesn't support the contrast-color() function.";
