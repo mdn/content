@@ -14,19 +14,17 @@ The **`DOMActivate`** event is fired at an element when it becomes active, such 
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}.
 
 ```js-nolint
 addEventListener("DOMActivate", (event) => { })
-
-onDOMActivate = (event) => { }
 ```
 
 ## Event type
 
-A {{domxref("MouseEvent")}}. Inherits from {{domxref("UIEvent")}} and {{domxref("Event")}}.
+A {{domxref("UIEvent")}}. Inherits from {{domxref("Event")}}.
 
-{{InheritanceDiagram("MouseEvent")}}
+{{InheritanceDiagram("UIEvent")}}
 
 ## Event properties
 
@@ -34,51 +32,28 @@ A {{domxref("MouseEvent")}}. Inherits from {{domxref("UIEvent")}} and {{domxref(
 
 ## Examples
 
+This example displays the number of consecutive clicks on a {{HtmlElement("button")}}.
+
+### HTML
+
 ```html
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  version="1.2"
-  baseProfile="tiny"
-  xmlns:ev="http://www.w3.org/2001/xml-events"
-  width="6cm"
-  height="5cm"
-  viewBox="0 0 600 500">
-  <desc>Example: invoke an JavaScript function from a DOMActivate event</desc>
-
-  <!-- JavaScript to change the radius -->
-  <script>
-    <![CDATA[
-    function change(evt) {
-      const circle = evt.target;
-      const currentRadius = circle.getFloatTrait("r");
-      if (currentRadius === 100) {
-        circle.setFloatTrait("r", currentRadius * 2);
-      } else {
-        circle.setFloatTrait("r", currentRadius * 0.5);
-      }
-    }
-    ]]>
-  </script>
-
-  <!-- Act on each DOMActivate event -->
-  <circle cx="300" cy="225" r="100" fill="red">
-    <handler type="text/javascript" ev:event="DOMActivate">
-      change(evt);
-    </handler>
-  </circle>
-
-  <text
-    x="300"
-    y="480"
-    font-family="Verdana"
-    font-size="35"
-    text-anchor="middle">
-    Activate the circle to change its size
-  </text>
-</svg>
+<button>Click</button>
 ```
 
-{{EmbedLiveSample("Examples", 640, 200)}}
+### JavaScript
+
+```js
+const button = document.querySelector("button");
+
+button.addEventListener("DOMActivate", (event) => {
+  button.textContent = `Click count: ${event.detail}`;
+});
+```
+### Result
+
+Try making rapid, repeated clicks on the button to increase the click count. If you take a break between clicks, the count will reset.
+
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 
@@ -90,7 +65,5 @@ A {{domxref("MouseEvent")}}. Inherits from {{domxref("UIEvent")}} and {{domxref(
 
 ## See also
 
-- {{domxref("MouseEvent")}}
-- {{domxref("Element/mousedown_event", "mousedown")}}
-- {{domxref("Element/mouseup_event", "mouseup")}}
-- {{domxref("Element/mousemove_event", "mousemove")}}
+- {{domxref("UIEvent")}}
+- {{domxref("Element/click_event", "click")}}
