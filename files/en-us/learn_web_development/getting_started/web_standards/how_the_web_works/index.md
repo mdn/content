@@ -86,13 +86,11 @@ This is called an {{Glossary("IP Address", "IP address")}}, and it represents a 
 
 Websites can be reached directly via their IP addresses. You can use a DNS lookup tool to find the IP address of a website.
 
-> [!CALLOUT]
->
-> **Try it out**
->
-> 1. Go to the [NsLookup.io DNS lookup tool](https://www.nslookup.io/website-to-ip-lookup/), type in `developer.mozilla.org`, and press the button.
-> 2. In the results screen, copy the IP Address (the IPv4 address) to your system clipboard.
-> 3. Open a new browser tab, paste the IP Address into the address bar and press <kbd>Enter</kbd>/<kbd>Return</kbd>. You should see MDN load up, proving that the IP address points to it.
+Let's look up the MDN IP address now, and prove that it points to the same place as the web address:
+
+1. Go to the [NsLookup.io DNS lookup tool](https://www.nslookup.io/website-to-ip-lookup/), type in `developer.mozilla.org`, and press the button.
+2. In the results screen, copy the IP Address (the IPv4 address) to your system clipboard.
+3. Open a new browser tab, paste the IP Address into the address bar and press <kbd>Enter</kbd>/<kbd>Return</kbd>. You should see MDN load up, proving that the IP address points to it.
 
 ## Packets explained
 
