@@ -19,8 +19,8 @@ The function produces only `white` or `black` value, depending on which value pr
 ## Syntax
 
 ```css
-color-contrast(red)
-color-contrast(var(--backgroundColor))
+contrast-color(red)
+contrast-color(var(--backgroundColor))
 ```
 
 ### Values
@@ -49,9 +49,9 @@ button {
 ```
 
 ```css hidden live-sample__button_text_ex
-@supports not (color: color-contrast(red)) {
+@supports not (color: contrast-color(red)) {
   body::before {
-    content: "Your browser doesn't support the color-contrast() function.";
+    content: "Your browser doesn't support the contrast-color() function.";
     background-color: wheat;
     display: block;
     width: 100%;
