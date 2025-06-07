@@ -3,10 +3,12 @@ title: "CanvasRenderingContext2D: lang property"
 short-title: lang
 slug: Web/API/CanvasRenderingContext2D/lang
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.CanvasRenderingContext2D.lang
 ---
 
-{{APIRef}}
+{{APIRef}}{{SeeCompatTable}}
 
 The **`CanvasRenderingContext2D.lang`** property of the Canvas 2D API gets or sets the language of the canvas drawing context.
 
