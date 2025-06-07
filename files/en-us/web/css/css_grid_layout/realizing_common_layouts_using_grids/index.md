@@ -1,5 +1,6 @@
 ---
 title: Realizing common layouts using grids
+short-title: Common grid layouts
 slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
 page-type: guide
 ---

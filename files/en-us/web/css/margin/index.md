@@ -220,5 +220,5 @@ margin: auto; /* top and bottom: 0 margin     */
 - {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, and {{cssxref("margin-inline-end")}}
 - {{cssxref("margin-block")}} and {{cssxref("margin-inline")}} shorthands
 - [Mastering margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-- [Introduction to the CSS basic box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [Introduction to the CSS box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) guide
 - [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module

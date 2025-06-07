@@ -1,5 +1,6 @@
 ---
-title: OpenType font features guide
+title: OpenType font features
+short-title: OpenType features
 slug: Web/CSS/CSS_fonts/OpenType_fonts_guide
 page-type: guide
 ---

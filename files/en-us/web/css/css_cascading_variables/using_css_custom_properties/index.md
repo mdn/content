@@ -1,5 +1,6 @@
 ---
 title: Using CSS custom properties (variables)
+short-title: Using custom properties
 slug: Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties
 page-type: guide
 ---

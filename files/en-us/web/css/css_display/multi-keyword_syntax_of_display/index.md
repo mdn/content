@@ -1,5 +1,6 @@
 ---
 title: Using the multi-keyword syntax with CSS display
+short-title: Using multi-keyword syntax
 slug: Web/CSS/CSS_display/multi-keyword_syntax_of_display
 page-type: guide
 ---

@@ -1,5 +1,5 @@
 ---
-title: Scaling of SVG backgrounds
+title: Scaling SVG backgrounds
 slug: Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds
 page-type: guide
 ---

@@ -1,5 +1,6 @@
 ---
-title: "Handling overflow: try fallbacks and conditional hiding"
+title: Fallback options and conditional hiding for overflow
+short-title: Handling overflow
 slug: Web/CSS/CSS_anchor_positioning/Try_options_hiding
 page-type: guide
 ---

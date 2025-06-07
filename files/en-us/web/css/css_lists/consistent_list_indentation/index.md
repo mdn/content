@@ -1,5 +1,6 @@
 ---
 title: Consistent list indentation
+short-title: Indenting lists
 slug: Web/CSS/CSS_lists/Consistent_list_indentation
 page-type: guide
 ---
@@ -10,9 +11,9 @@ One of the most common style changes made to lists is a change in the indentatio
 
 To understand why this is the case, and more importantly how to avoid the problem altogether, it's necessary to examine the details of list construction.
 
-## Making a List
+## Creating a list
 
-### The stand-alone list item
+### Stand-alone list item
 
 First, we consider the pure list item, not nested in a list of items. When using the HTML {{htmlelement("li")}} element, the browser sets the {{cssxref("display")}} value to `list-item`. Whether list items not nested in a list are provided a marker (otherwise known as a "bullet") depends on the browser. We can remove that bullet with {{cssxref("list-style-type", "list-style-type: none")}}.
 
@@ -46,7 +47,7 @@ li {
 
 That dotted red border represents the outer edges of the content area of each list item. At this point, the list items have no padding or borders.
 
-### List items nested in a list
+### Nested list items
 
 Now we wrap these in a parent element; in this case, we'll wrap them in an unordered list (i.e., `<ul>`). According to the CSS box model, the list items' boxes must be displayed within the parent element's content area.
 

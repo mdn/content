@@ -1,5 +1,6 @@
 ---
-title: Introducing the CSS Cascade
+title: Introduction to the CSS cascade
+short-title: Introduction
 slug: Web/CSS/CSS_cascade/Cascade
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-cascade/

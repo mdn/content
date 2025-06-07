@@ -1,5 +1,6 @@
 ---
 title: Basic concepts of scroll snap
+short-title: Basic concepts
 slug: Web/CSS/CSS_scroll_snap/Basic_concepts
 page-type: guide
 ---
