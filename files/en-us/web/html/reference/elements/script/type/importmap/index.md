@@ -1,5 +1,6 @@
 ---
 title: <script type="importmap">
+short-title: importmap
 slug: Web/HTML/Reference/Elements/script/type/importmap
 page-type: html-attribute-value
 browser-compat: html.elements.script.type.importmap
