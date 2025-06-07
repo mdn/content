@@ -29,10 +29,6 @@ A {{domxref("UIEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("UIEvent")}}
 
-## Event properties
-
-[...]
-
 ## Examples
 
 This example displays the number of consecutive clicks on a {{HtmlElement("button")}}.
