@@ -33,6 +33,11 @@ contrast-color(var(--backgroundColor))
 #### Contrasting text for a button
 
 ```html hidden
+<label>
+  Select background color of the button:
+  <input type="color" id="colorPicker" value="#660066" />
+</label>
+<br />
 <button>Submit</button>
 ```
 
@@ -49,6 +54,18 @@ button {
 ```
 
 ```css hidden
+body {
+  padding: 1rem;
+}
+
+button {
+  margin: 3rem;
+  padding: 1rem;
+  width: 150px;
+  font-size: 2rem;
+  border-radius: 1rem;
+}
+
 @supports not (color: contrast-color(red)) {
   body::before {
     content: "Your browser doesn't support the contrast-color() function.";
@@ -64,7 +81,19 @@ button {
 }
 ```
 
-{{EmbedLiveSample("button_text_ex", "", 200)}}
+```js hidden
+const colorPicker = document.getElementById("colorPicker");
+const root = document.documentElement;
+
+function updateColor(color) {
+  root.style.setProperty("--button-color", colorPicker.value);
+}
+
+colorPicker.addEventListener("change", updateColor);
+updateColor();
+```
+
+{{EmbedLiveSample("Contrasting text for a button", "", 250)}}
 
 ## Specifications
 
