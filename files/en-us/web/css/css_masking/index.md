@@ -68,9 +68,10 @@ While masking provides more control and options, clipping can perform better if 
 
   - : Introduction to masking in CSS, the various mask image types, and the effects of luminance and alpha-transparency in masking.
 
-## Related concepts
+- [CSS mask properties](/en-US/docs/Web/CSS/CSS_masking/Mask_properties)
 
-- [`<coord-box>`](/en-US/docs/Web/CSS/box-edge#values)
+  - : An exploration of CSS masking and the `mask` shorthand component properties, with explanations and examples.
+
 - {{cssxref("&lt;image&gt;")}}
 - {{cssxref("&lt;position&gt;")}}
 - {{cssxref("&lt;url&gt;")}}
