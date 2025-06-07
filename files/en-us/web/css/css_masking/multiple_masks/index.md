@@ -1,5 +1,5 @@
 ---
-title: Declaring multiple mask images
+title: Declaring multiple masks
 slug: Web/CSS/CSS_masking/Multiple_masks
 page-type: guide
 ---
@@ -8,15 +8,15 @@ page-type: guide
 
 CSS masking is a technique that enables you to use images as masks, defining which sections of an element are fully visible or semi-opaque. The CSS mask selectively reveals or hides parts of the element based on the alpha channel and in some cases the brightness of the colors of the applied mask images.
 
-CSS masks are the opposite of masks worn at masquerade balls where the wearer's face is hidden wherever the mask is opaque and visible wherever you can see through the mask. In CSS, the mask areas that are fully opaque reveal the element, while transparent areas hide the element.
+CSS masks are the opposite of masks worn at masquerade balls where the wearer's face is hidden wherever the mask is opaque and visible wherever you can see through the mask. In CSS, the areas where the composited mask layers are fully opaque reveal the element, while transparent areas hide the element.
 
-CSS masks are made up of one or more composited mask layers. In this guide, we discuss the concept of mask layers and how to declare multiple mask layers using [the `mask` shorthand](#the-mask-shorthand) property.
+CSS masks are made up of one or more mask layers. In this guide, we discuss the concept of mask layers and how to declare multiple mask layers using the {{cssxref("mask")}} shorthand property.
 
 ## Understanding mask layers
 
-All HTML elements and most SVG elements can have a CSS mask applied, with the mask being made on one or more composited mask layers. The number of layers is determined by the number of comma-separated values in the {{cssxref("mask")}} shorthand property or the {{cssxref("mask-image")}} property value (even if a value is `none`).
+All HTML elements and most SVG elements can have CSS masking applied, with the mask being made of one or more composited mask layers. The number of layers is determined by the number of comma-separated values in the {{cssxref("mask")}} shorthand property or the {{cssxref("mask-image")}} property value (even if a value is `none`).
 
-Each mask layer can contain a [mask image](#the-mask-image-property), positioned relative to the mask's origin box, that can be sized, repeated, and clipped. If you include more than one mask image, you can define the way the [mask layers are composited](#the_mask-composite_property), or combined. (All these options are introduced in this guide, but described more fully in the [masking properties guide](/en-US/docs/Web/CSS/CSS_masking/Mask_properties).)
+Each mask layer can contain a [mask image](#the-mask-image-property), positioned relative to the mask's origin box, that can be sized, repeated, and clipped. If you include more than one mask image, you can define the way the mask layers are composited, or combined. (These features are briefly introduced in this guide. For more details and examples, see the [masking properties guide](/en-US/docs/Web/CSS/CSS_masking/Mask_properties).)
 
 ### Layer syntax
 
@@ -26,7 +26,7 @@ The `mask` shorthand property takes as its value a comma-separated list of mask 
 
 All the components are optional in each layer, but if the `mask-image` value is omitted it defaults to a transparent black image, revealing none of the element that layer is masking.
 
-The `mask` shorthand declaration sets all the properties that make up the `mask` shorthand, defaulting to `initial` if the component is not declared within a layer. The `mask` property also resets all the `mask-border-*` properties, to their `initial` value. A `mask` declaration that only includes a `mask-image` value implicitly sets the following:
+The `mask` shorthand declaration sets values for all the properties that make up the `mask` shorthand, defaulting to their initial value if the component is not declared within a layer. The `mask` property also resets all the `mask-border-*` properties, to their initial value. A `mask` declaration that only includes a `mask-image` value implicitly sets the following:
 
 ```css
 mask-mode: match-source;
@@ -47,7 +47,7 @@ mask-border-width: auto;
 
 ### The `mask-image` property
 
-As long as a comma-separated {{cssxref("mask-image")}} property declaration includes at least one non-`none` value, a mask layer is created for every value in the declaration, even for the `none` values. These mask images can be gradients, images, or SVG sources, defined using a [CSS gradient](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients), a [raster image](/en-US/docs/Web/CSS/CSS_masking/Masking#with_impoorted_images) (such as PNGs), or an SVG {{svgelment("mask")}} element. This holds true whether using the `mask-image` property or the `mask` shorthand.
+As long as a comma-separated {{cssxref("mask-image")}} property declaration includes at least one non-`none` value, a mask layer is created for every value in the declaration, even for the `none` values. These mask images can be gradients, images, or SVG sources, defined using a [CSS gradient](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients), a [raster image](/en-US/docs/Web/CSS/CSS_masking/Masking#with_impoorted_images) (such as PNGs), or an SVG {{svgelement("mask")}} element. This holds true whether using the `mask-image` property or the `mask` shorthand.
 
 ```css
 .gradient-mask {
@@ -75,7 +75,7 @@ The `mask-image` property is analogous to the {{cssxref("background-image")}} pr
 }
 ```
 
-Each mask image in a multiple image declaration creates a mask layers. Of these examples, all the styles include one mask layer, except for the `multiple-gradient-mask` declaration, which has two.
+Each mask image in a multiple image declaration creates a mask layer. All the examples in this section create one mask layer except the `multiple-gradient-mask` declaration which creates two.
 
 ### Mask layers and the `none` keyword
 
@@ -87,7 +87,7 @@ If `none` is the only value of the `mask-image` property, no mask layers are cre
 }
 ```
 
-Similarly, when using the `mask` shorthand, if no `mask-image` value is present other than `none`, no masking occurs. If any of the following are declared, no mask layers are created and no masking occurs (nothing is hidden):
+Similarly, when using the `mask` shorthand, if no `mask-image` value is present other than `none`, no masking occurs. If any of the following are declared, no mask layers are created and nothing is hidden:
 
 ```css
 mask: none;
@@ -95,9 +95,7 @@ mask: none 100px 100px no-repeat;
 mask: 100px 100px no-repeat;
 ```
 
-Otherwise, as long as there is a non-`none` mask image declared, a mask layer is created for every value in the comma separated list of values, even when the mask image is omitted from a value in the comma-separated list, or is explicitly set to `none`. In other words, a layer is created for each valid comma-separated values unless the entire property resolves to `none`.
-
-The keyword `none` within a list of mask sources creates a mask layer, albeit a transparent black image layer. Any elements with the class `masked-element` will have five mask layers:
+Otherwise, as long as there is a `mask-image` declared that isn't set to `none`, a mask layer is created for every value in the comma separated list of values, even when the mask image is omitted from a value in the comma-separated list or is explicitly set to `none`. In other words, a layer is created for each valid comma-separated values unless the entire property resolves to `none`.
 
 ```css
 .masked-element {
@@ -107,7 +105,9 @@ The keyword `none` within a list of mask sources creates a mask layer, albeit a 
 }
 ```
 
-or, using the `mask` shorthand:
+The keyword `none` within a list of mask sources creates a mask layer, albeit a transparent black image layer. Any elements with the class `masked-element` will have five mask layers:
+
+We can also create the layers using the `mask` shorthand:
 
 ```css
 .masked-element {
@@ -117,17 +117,15 @@ or, using the `mask` shorthand:
 }
 ```
 
-If a value in the comma-separated list of values an empty image, fails to download, references a `<mask>` element that doesn't exist, or otherwise cannot be displayed (or is set to `none`), it still counts as a mask image layer, rendering a transparent black mask image that has no visual effect. If all of the values do this, the element will be fully hidden.
+If a value in the comma-separated list of values is an empty image, fails to download, references a `<mask>` element that doesn't exist, or otherwise cannot be displayed (or is set to `none`), it still counts as a mask image layer, rendering a transparent black mask image that has no visual effect. If all of the values do this, the element will be fully hidden.
 
-Only if the entire property resolves to `none` does no masking occur; leaving the element fully visible. On the other hand, if there are multiple layers with at least one layer that does not resolve to `none`, in this case, the `none` layers don't reveal any part of the element or make any part of the element visible.
+Only if the entire property resolves to `none` does no masking occur; leaving the element fully visible. On the other hand, if there are multiple layers with at least one layer that does not resolve to `none`, the `none` layers don't reveal any part of the element or make any part of the element visible. In this case, the value did not resolve to `none`, so if none of the non-`none` images exist, masking does occur, and the element will be fully hidden.
 
 A computed value other than `none` creates a [CSS stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context).
 
 ### The importance of mask layers
 
-The number of mask layers is important if you are using individual `mask-*` properties after your `mask` declaration or with more specificity than your `mask` declaration.
-
-Each `mask-*` value in this comma-separated list of `mask` component properties applies to a separate mask layer. As we now know, an element can have multiple mask layers applied and the number of layers is determined by the number of comma-separated values in the `mask-image` or `mask` properties. Each `mask-*` value is matched up with a mask layer, in order. If the number of values in the `mask-*` property differs, any excess values are ignored, or, if the mask component property has fewer values than layers, the `mask-*` values are repeated.
+The number of mask layers is important if you are using individual `mask-*` properties after or with more specificity than your `mask` declaration.
 
 The `mask-*` properties include:
 
@@ -145,7 +143,10 @@ The `mask-*` properties include:
 
 - {{cssxref("mask-composite")}}: Defines how a mask is combined with the mask layers below it. Each mask layer is either added to, subtracted from, included with, or excluded from the previously composited mask layers below it. Similar to `mask-mode`, there is no analogous `background-*` property.
 
-To learn more about these individual properties, see [CSS mask properties](/en-US/docs/Web/CSS/CSS_masking/Mask_properties).
+Each `mask-*` value in a comma-separated list of `mask` component properties applies to a separate mask layer. As we now know, an element can have multiple mask layers applied and the number of layers is determined by the number of comma-separated values in the `mask-image` or `mask` properties. Each `mask-*` value is matched up with a mask layer, in order. If the number of values in the `mask-*` property is greater than the number of mask layers, any excess values are ignored. If the mask component property has fewer values than the number of mask layers, the `mask-*` values are repeated.
+
+> [!NOTE]
+> To learn more about these individual properties, see [CSS mask properties](/en-US/docs/Web/CSS/CSS_masking/Mask_properties).
 
 ## Shorthand component property order
 
@@ -153,7 +154,7 @@ For the most part, the order of the properties is flexible, but there are a few 
 
 ### `mask-origin` and `mask-clip` order
 
-The `mask-origin` and `mask-clip`, listed in the syntax as `<origin>` and `<clip>`, accept similar values.
+The `mask-origin` value, listed in the syntax as `<origin>`, comes before the `mask-clip` values, listed in the syntax as `<clip>`.
 
 `<image> <position> / <size> <repeat> <origin> <clip> <composite> <mode>`
 
@@ -165,13 +166,15 @@ Both are [`<geometry-box>`](/en-US/docs/Web/CSS/box-edge#geometry-box) values, w
 
 - If there are two `<geometry-box>` values are present, the first `<geometry-box>` sets the `mask-origin` component and the second `<geometry-box>` value is the `mask-clip` component value. Here the order is very important.
 
+Setting the incorrect order for the `mask-origin` and `mask-clip` values may effect the appearance, but will not cause the declaration to fail.
+
 ### `mask-size` and `mask-position` syntax
 
 You may have noticed a slash between `mask-position` and `mask-size`, listed in the syntax as `<position>` and `<size>`, in the layer syntax. They too accept similar values.
 
 `<image> <position> / <size> <repeat> <origin> <clip> <composite> <mode>`
 
-In this case, the order is very important. Including both a size and position in a mask layer without including the slash between the two will invalidate the entire declaration. In addition, if only only one or a pair of {{cssxref("length-percentage")}} values are present, that will define the position of the image, not the size.
+In this case, the order is very important. If only one or a pair of {{cssxref("length-percentage")}} values are present, that will define the position of the image, not the size. Including both a size and position in a mask layer without including the slash between the two will invalidate the entire declaration.
 
 ```css
 mask:
@@ -183,6 +186,7 @@ mask:
 If a single pair of `<length-percentage>` values is present, it sets the `mask-position` property, and the `mask-size` will be `auto`. If a layer includes both a `mask-size` and a `mask-position`, the `mask-size` property value must come after the `mask-position` property value and the values must be separated by a forward slash (`/`). The slash is required even if the `mask-size` is set to a value that is not a valid `mask-position` value.
 
 ```css example-bad
+mask: url(star.svg) contain;
 mask: url(star.svg) 10px 10px cover;
 mask: url(star.svg) top right 100px 100px;
 ```
@@ -193,7 +197,7 @@ mask: url(star.svg) top 100px right 100px;
 mask: url(star.svg) top right / 100px 100px;
 ```
 
-To include a `mask-size` in a mask layer using the `mask` shorthand, you must include a the `mask-position` component and the slash.
+To include a `mask-size` in a mask layer using the `mask` shorthand, you must include a `mask-position` value and a slash immediately before it.
 
 > [!WARNING]
 > Including both a size and position in a mask layer without including the slash between the two will invalidate the entire declaration.
