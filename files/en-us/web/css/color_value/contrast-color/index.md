@@ -32,6 +32,8 @@ contrast-color(var(--backgroundColor))
 
 #### Contrasting text for a button
 
+In the following example when you change background color of the button, the webbrowser automatically applies a contrasting color to the `Submit` text.
+
 ```html hidden
 <label>
   Select background color of the button:
@@ -49,6 +51,7 @@ contrast-color(var(--backgroundColor))
 button {
   background-color: var(--button-color);
 
+  /* set contrasting text color automatically */
   color: contrast-color(var(--button-color));
 }
 ```
@@ -94,6 +97,68 @@ updateColor();
 ```
 
 {{EmbedLiveSample("Contrasting text for a button", "", 250)}}
+
+#### Light and dark mode usage
+
+In the following example [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) has been used to set background color based on operating system or browser color scheme/theme setting. The `contrast-color()` function sets text color automatically.
+
+In the browser setting try changing the dark mode setting to see the effect.
+
+```html hidden
+<pre>
+    Q: How does CSS transform light into energy?
+  Ans: Using <a href="/en-US/docs/Web/CSS/font-synthesis">font-synthesis</a>.
+</pre>
+```
+
+```css
+:root {
+  --background-color: navy;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-color: wheat;
+  }
+}
+
+body,
+a {
+  background-color: var(--background-color);
+  color: contrast-color(var(--background-color));
+}
+```
+
+```css hidden
+body {
+  padding: 2rem;
+  font-size: 1.2rem;
+}
+
+pre {
+  margin-top: 3rem;
+}
+
+@supports not (color: contrast-color(red)) {
+  body::before {
+    content: "Your browser doesn't support the contrast-color() function.";
+    background-color: wheat;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  body {
+    background-color: white;
+  }
+
+  body > * {
+    display: none;
+  }
+}
+```
+
+{{EmbedLiveSample("Light and dark mode usage", "", 250)}}
 
 ## Specifications
 
