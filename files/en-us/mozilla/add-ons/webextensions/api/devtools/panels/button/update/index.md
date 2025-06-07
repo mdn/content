@@ -1,0 +1,69 @@
+---
+title: devtools.panels.Button.update()
+slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/Button/update
+page-type: webextension-api-function
+browser-compat: webextensions.api.devtools.panels.Button.update
+---
+
+{{AddonSidebar()}}
+
+Updates the attributes of the button. If an argument is omitted or null, the corresponding attributes is not updated.
+
+## Syntax
+
+```js-nolint
+let updating = browser.devtools.panels.Button.update(
+  disabled,       // boolean
+  iconPath,       // string
+  tooltipText     // string
+)
+```
+
+### Parameters
+
+- `disabled` {{optional_inline}}
+  - : `boolean`. Whether the button is disabled.
+- `iconPath` {{optional_inline}}
+  - : `string`. Path to the new icon of the button.
+- `tooltipText` {{optional_inline}}
+  - : `string`. Text shown as a tooltip when user hovers the mouse over the button.
+
+### Return value
+
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+
+{{WebExtExamples("h2")}}
+
+## Browser compatibility
+
+{{Compat}}
+
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
+//
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided that the following conditions are
+// met:
+//
+//    * Redistributions of source code must retain the above copyright
+// notice, this list of conditions and the following disclaimer.
+//    * Redistributions in binary form must reproduce the above
+// copyright notice, this list of conditions and the following disclaimer
+// in the documentation and/or other materials provided with the
+// distribution.
+//    * Neither the name of Google Inc. nor the names of its
+// contributors may be used to endorse or promote products derived from
+// this software without specific prior written permission.
+//
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
