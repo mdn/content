@@ -20,6 +20,9 @@ Use the event name in methods like {{domxref("EventTarget.addEventListener", "ad
 addEventListener("DOMActivate", (event) => { })
 ```
 
+> [!NOTE]
+> There is no `onDOMActivate` event handler property for this event.
+
 ## Event type
 
 A {{domxref("UIEvent")}}. Inherits from {{domxref("Event")}}.
@@ -49,6 +52,7 @@ button.addEventListener("DOMActivate", (event) => {
   button.textContent = `Click count: ${event.detail}`;
 });
 ```
+
 ### Result
 
 Try making rapid, repeated clicks on the button to increase the click count. If you take a break between clicks, the count will reset.
