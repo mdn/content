@@ -65,7 +65,7 @@ the text box ("zil" in the word "Mozilla").
 
 ```html
 <input type="text" id="text-box" size="20" value="Mozilla" />
-<button onclick="selectText()">Select text</button>
+<button>Select text</button>
 ```
 
 ### JavaScript
@@ -76,6 +76,8 @@ function selectText() {
   input.focus();
   input.setSelectionRange(2, 5);
 }
+
+document.querySelector("button").addEventListener("click", selectText);
 ```
 
 ### Result

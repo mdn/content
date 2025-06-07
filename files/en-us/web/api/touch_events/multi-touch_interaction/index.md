@@ -18,29 +18,27 @@ This example demonstrates using the {{domxref("Element/touchstart_event", "touch
 
 The application uses {{HTMLElement("div")}} elements to represent four touch areas.
 
-```html
-<style>
-  div {
-    margin: 0em;
-    padding: 2em;
-  }
-  #target1 {
-    background: white;
-    border: 1px solid black;
-  }
-  #target2 {
-    background: white;
-    border: 1px solid black;
-  }
-  #target3 {
-    background: white;
-    border: 1px solid black;
-  }
-  #target4 {
-    background: white;
-    border: 1px solid black;
-  }
-</style>
+```css
+div {
+  margin: 0em;
+  padding: 2em;
+}
+#target1 {
+  background: white;
+  border: 1px solid black;
+}
+#target2 {
+  background: white;
+  border: 1px solid black;
+}
+#target3 {
+  background: white;
+  border: 1px solid black;
+}
+#target4 {
+  background: white;
+  border: 1px solid black;
+}
 ```
 
 ### Global state

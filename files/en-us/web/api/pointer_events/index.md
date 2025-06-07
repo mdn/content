@@ -336,16 +336,6 @@ The {{cssxref("touch-action")}} CSS property is used to specify whether or not t
 
 A value of `auto` means the browser is free to apply its default touch behavior (to the specified region) and the value of `none` disables the browser's default touch behavior for the region. The values `pan-x` and `pan-y`, mean that touches that begin on the specified region are only for horizontal and vertical scrolling, respectively. The value `manipulation` means the browser may consider touches that begin on the element are only for scrolling and zooming.
 
-In the following example, the browser's default touch behavior is disabled for the `div` element.
-
-```html
-<html lang="en">
-  <body>
-    <div style="touch-action:none;">Can't touch this…</div>
-  </body>
-</html>
-```
-
 In the following example, default touch behavior is disabled for some `button` elements.
 
 ```css

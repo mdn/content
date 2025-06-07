@@ -19,30 +19,19 @@ A string containing the stylesheet's URI.
 
 ## Examples
 
-On a local Windows machine:
+Assume the `<head>` contains the following:
 
 ```html
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>href example</title>
-    <link rel="styleSheet" href="example.css" />
-    <script>
-      function printRef() {
-        alert(document.styleSheets[0].href);
-      }
-    </script>
-  </head>
-  <body>
-    <div class="thunder">Thunder</div>
-    <button onclick="printRef()">ss</button>
-  </body>
-</html>
+<link rel="styleSheet" href="example.css" />
 ```
 
-Returns "file:////C:/Windows/Desktop/example.css"
+Then, if you open the HTML page via a file URL on Windows, and run the following script::
+
+```js
+console.log(document.styleSheets[0].href);
+```
+
+The result looks like: "file:////C:/Windows/Desktop/example.css".
 
 ## Notes
 

@@ -128,8 +128,14 @@ The HTML defines two buttons that will be used to set the focus of a third butto
 </button>
 
 <div id="container">
-  <button id="myButton" style="margin-top: 500px;">Button</button>
+  <button id="myButton">Button</button>
 </div>
+```
+
+```css hidden
+#myButton {
+  margin-top: 500px; /* Push the button off-screen */
+}
 ```
 
 #### JavaScript
