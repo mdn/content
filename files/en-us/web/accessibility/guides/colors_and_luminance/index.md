@@ -178,7 +178,7 @@ A color contrast ratio is meaningless without its luminance component, and once 
 
 Where human perception is concerned, a difference in luminance matters more than a color difference. This is important, as luminance contrast enables the development of content that even those with color blindness can see. With this understanding, luminance may be manipulated so that colors that are difficult to see because of their low luminance could be made more legible by placing these colors against another with contrasting luminance. An interesting study by NASA on the color blue, for example, noted that this color, which has low luminance, can be made legible if _care was taken to achieve adequate luminance contrast_ (From the article, [Designing with blue](https://colorusage.arc.nasa.gov/blue_2.php))
 
-Calculations for relative luminance are not casual ones. Luckily, there are [online luminance and contrast checkers](https://www.siegemedia.com/contrast-ratio) available, and even instructions on how to [calculate relative luminance](https://www.w3.org/TR/WCAG21/#dfn-relative-luminance).
+Calculations for relative luminance are not casual ones. Luckily, there are [online luminance and contrast checkers](https://www.siegemedia.com/contrast-ratio) available, and even instructions on how to [calculate relative luminance](https://w3c.github.io/wcag/guidelines/22/#dfn-relative-luminance).
 
 ## Perceiving color
 
