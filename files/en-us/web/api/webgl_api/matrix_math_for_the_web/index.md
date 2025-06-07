@@ -334,7 +334,7 @@ It is possible to encode these type of steps into a matrix, and do it for each o
 const sin = Math.sin;
 const cos = Math.cos;
 
-function rotateAroundXAxis(a) {
+function rotateX(a) {
   // prettier-ignore
   return [
     1, 0, 0, 0,
@@ -344,7 +344,7 @@ function rotateAroundXAxis(a) {
   ];
 }
 
-function rotateAroundYAxis(a) {
+function rotateY(a) {
   // prettier-ignore
   return [
     cos(a), 0, sin(a), 0,
@@ -354,7 +354,7 @@ function rotateAroundYAxis(a) {
   ];
 }
 
-function rotateAroundZAxis(a) {
+function rotateZ(a) {
   // prettier-ignore
   return [
     cos(a), -sin(a), 0, 0,
@@ -366,7 +366,7 @@ function rotateAroundZAxis(a) {
 ```
 
 ```js live-sample___rotation_matrix_ex
-const rotateZMatrix = rotateAroundZAxis(Math.PI * 0.3);
+const rotateZMatrix = rotateZ(Math.PI * 0.3);
 setTransform(rotateZMatrix);
 ```
 
@@ -390,7 +390,7 @@ The function that we will be using to compose our matrices is `multiplyArrayOfMa
 
 ```js live-sample___matrix_composition_ex
 const transformMatrix = multiplyArrayOfMatrices([
-  rotateAroundZAxis(Math.PI * 0.5), // Step 3: rotate around 90 degrees
+  rotateZ(Math.PI * 0.5), // Step 3: rotate around 90 degrees
   translate(0, 200, 0), // Step 2: move down 200 pixels
   scale(0.8, 0.8, 0.8), // Step 1: scale down
 ]);
@@ -406,8 +406,8 @@ Finally, a fun step to show how matrices work is to reverse the steps to bring t
 const transformMatrix = multiplyArrayOfMatrices([
   scale(1.25, 1.25, 1.25), // Step 6: scale back up
   translate(0, -200, 0), // Step 5: move back up
-  rotateAroundZAxis(-Math.PI * 0.5), // Step 4: rotate back
-  rotateAroundZAxis(Math.PI * 0.5), // Step 3: rotate around 90 degrees
+  rotateZ(-Math.PI * 0.5), // Step 4: rotate back
+  rotateZ(Math.PI * 0.5), // Step 3: rotate around 90 degrees
   translate(0, 200, 0), // Step 2: move down 200 pixels
   scale(0.8, 0.8, 0.8), // Step 1: scale down
 ]);
