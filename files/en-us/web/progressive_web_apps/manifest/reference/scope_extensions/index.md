@@ -6,6 +6,8 @@ browser-compat: manifests.webapp.scope_extensions
 sidebar: pwasidebar
 ---
 
+{{SeeCompatTable}}
+
 The `scope_extensions` manifest member is used to extend the scope of a web app to include other origins. This allows multiple domains to be presented as a single web app.
 
 ## Syntax
