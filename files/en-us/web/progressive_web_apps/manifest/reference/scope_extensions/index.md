@@ -2,6 +2,8 @@
 title: scope_extensions
 slug: Web/Progressive_web_apps/Manifest/Reference/scope_extensions
 page-type: web-manifest-member
+status:
+  - experimental
 browser-compat: manifests.webapp.scope_extensions
 sidebar: pwasidebar
 ---
