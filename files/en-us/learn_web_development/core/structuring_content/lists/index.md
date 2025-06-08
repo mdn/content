@@ -114,7 +114,7 @@ meters up the road
 
 ## Marking up our recipe page
 
-Now for a real challenge! At this point in the article, you have all the information you need to mark up a slightly more complex section of content. We want you to mark up the instructions for our favourite hummus recipe.
+Now for a real challenge! At this point in the article, you have all the information you need to mark up a slightly more complex section of content. We want you to mark up the instructions for our favorite hummus recipe.
 
 You can choose to either:
 
