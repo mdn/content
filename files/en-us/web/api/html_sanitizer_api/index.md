@@ -13,7 +13,7 @@ The **HTML Sanitizer API** allows developers to take strings of HTML and filter 
 
 Web applications often need to work with untrusted HTML on the client side, for example, as part of a client-side templating solution, when rendering user generated content, or if including data in a frame from another site.
 
-Injecting untrusted HTML can make a site vulnerable to various [types of attacks](/en-US/docs/Web/Security/Types_of_attacks).
+Injecting untrusted HTML can make a site vulnerable to various [types of attacks](/en-US/docs/Web/Security/Attacks).
 In particular, [cross-site scripting (XSS) attacks](/en-US/docs/Web/Security/Attacks/XSS) work by injecting untrusted HTML into the DOM that then executes JavaScript in the context of the current origin — allowing malicious code to run as though it was served from the site's origin.
 These attacks can be mitigated by removing unsafe HTML elements and attributes before they are injected into the DOM.
 
