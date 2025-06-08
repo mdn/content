@@ -118,6 +118,9 @@ These features are shipping in Firefox 140 but are disabled by default. To exper
   The API is now feature complete.
   ([Firefox bug 1964407](https://bugzil.la/1964407)).
 
+- **`CloseWatcher`** (Nightly - desktop only): `dom.closewatcher.enabled`.
+  The {{domxref("CloseWatcher")}} interface enables developers to implement components that can be closed using device-native mechanisms, in the same way as built-in components. For example, on Android you can close a dialog using the back button: this interface allows you to similarly close a custom sidebar.([Firefox bug 1966459](https://bugzil.la/1966459)).
+
 ## Older versions
 
 {{Firefox_for_developers}}

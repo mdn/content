@@ -373,12 +373,12 @@ For example, on Android you can close a dialog using the back button.
 The {{domxref("CloseWatcher")}} interface allows developers to implement UI components, such as custom sidebars, that can similarly be closed using native mechanisms.
 ([Firefox bug 1888729](https://bugzil.la/1888729)).
 
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 132           | No                  |
-| Developer Edition | 132           | Yes                 |
-| Beta              | 132           | Yes                 |
-| Release           | 132           | No                  |
+| Release channel   | Version added | Enabled by default?          |
+| ----------------- | ------------- | ---------------------------- |
+| Nightly           | 140           | Yes (Desktop). No (Android). |
+| Developer Edition | 132           | No                           |
+| Beta              | 132           | No                           |
+| Release           | 132           | No                           |
 
 - `dom.closewatcher.enabled`
   - : Set to `true` to enable.
