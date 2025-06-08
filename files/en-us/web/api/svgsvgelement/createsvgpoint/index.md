@@ -22,7 +22,7 @@ None.
 
 ### Return value
 
-An {{domxref("SVGPoint")}} object, initialized to the point `(0,0)` in the user coordinate system.
+An {{domxref("DOMPoint")}} object, initialized to the point `(0,0)` in the user coordinate system.
 
 ## Specifications
 
