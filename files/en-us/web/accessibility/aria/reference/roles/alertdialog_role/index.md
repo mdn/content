@@ -3,9 +3,7 @@ title: "ARIA: alertdialog role"
 short-title: alertdialog
 slug: Web/Accessibility/ARIA/Reference/Roles/alertdialog_role
 page-type: aria-role
-spec-urls:
-  - https://w3c.github.io/aria/#alertdialog
-  - https://www.w3.org/TR/wai-aria-1.2/#alertdialog
+spec-urls: https://w3c.github.io/aria/#alertdialog
 sidebar: accessibilitysidebar
 ---
 

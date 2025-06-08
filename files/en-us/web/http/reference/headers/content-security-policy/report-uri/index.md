@@ -138,7 +138,7 @@ As you can see, the report includes the full path to the violating resource in `
 This is not always the case.
 For example, if `signup.html` attempted to load CSS from `http://anothercdn.example.com/stylesheet.css`, the browser would _not_ include the full path, only the origin,
 (`http://anothercdn.example.com`) in order to prevent leaking sensitive information about cross-origin resources.
-The CSP specification [gives an explanation](https://www.w3.org/TR/CSP/#security-violation-reports) of this behavior.
+The CSP specification [gives an explanation](https://w3c.github.io/webappsec-csp/#security-violation-reports) of this behavior.
 
 ### CSP violation report with Content-Security-Policy-Report-Only
 

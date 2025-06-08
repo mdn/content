@@ -9,34 +9,9 @@ sidebar: svgref
 The **`<textPath>`** [SVG](/en-US/docs/Web/SVG) element is used to render text along the shape of a {{SVGElement("path")}} element.
 The text must be enclosed in the `<textPath>` element and its {{SVGAttr("href")}} attribute is used to reference the desired `<path>`.
 
-## Example
+## Usage context
 
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- to hide the path, it is usually wrapped in a <defs> element -->
-  <!-- <defs> -->
-  <path
-    id="MyPath"
-    fill="none"
-    stroke="red"
-    d="M10,90 Q90,90 90,45 Q90,10 50,10 Q10,10 10,40 Q10,70 45,70 Q70,70 75,50" />
-  <!-- </defs> -->
-
-  <text>
-    <textPath href="#MyPath">Quick brown fox jumps over the lazy dog.</textPath>
-  </text>
-</svg>
-```
-
-{{EmbedLiveSample('Example', 200, 200)}}
+{{svginfo}}
 
 ## Attributes
 
@@ -65,9 +40,38 @@ svg {
   - : The width of the space into which the text will render.
     _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage) | [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number); _Default value_: _auto_; _Animatable_: **yes**
 
-## Usage context
+## DOM Interface
 
-{{svginfo}}
+This element implements the {{domxref("SVGTextPathElement")}} interface.
+
+## Example
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- to hide the path, it is usually wrapped in a <defs> element -->
+  <!-- <defs> -->
+  <path
+    id="MyPath"
+    fill="none"
+    stroke="red"
+    d="M10,90 Q90,90 90,45 Q90,10 50,10 Q10,10 10,40 Q10,70 45,70 Q70,70 75,50" />
+  <!-- </defs> -->
+
+  <text>
+    <textPath href="#MyPath">Quick brown fox jumps over the lazy dog.</textPath>
+  </text>
+</svg>
+```
+
+{{EmbedLiveSample('Example', 200, 200)}}
 
 ## Specifications
 

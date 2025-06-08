@@ -1,7 +1,8 @@
 ---
 title: Firefox 140 for developers
+short-title: Firefox 140 (Beta)
 slug: Mozilla/Firefox/Releases/140
-page-type: firefox-release-notes
+page-type: active-fx-release
 sidebar: firefoxsidebar
 ---
 
@@ -16,6 +17,10 @@ This article provides information about the changes in Firefox 140 that affect d
 #### Removals
 
 ### CSS
+
+- The [CSS Custom Highlight API](/en-US/docs/Web/API/CSS_Custom_Highlight_API) is now supported. It provides a mechanism for styling arbitrary text ranges in a document, generalizing the behavior of other highlight pseudo-elements such as {{cssxref('::selection')}}, {{cssxref('::spelling-error')}}, {{cssxref('::grammar-error')}}, and {{cssxref('::target-text')}}.
+  You define text ranges in JavaScript using [`Range`](/en-US/docs/Web/API/Range) instances that are grouped in a [`Highlight`](/en-US/docs/Web/API/Highlight), and then register them with a name using [`HighlightRegistry`](/en-US/docs/Web/API/HighlightRegistry).
+  You can apply styles to a registered highlight using the CSS [`::highlight`](/en-US/docs/Web/CSS/::highlight) pseudo-element. ([Firefox bug 1964089](https://bugzil.la/1964089)).
 
 #### Removals
 
