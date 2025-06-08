@@ -27,7 +27,10 @@ A {{jsxref('Promise')}} that fulfills with a {{domxref("FileSystemDirectoryHandl
 ### Exceptions
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : Thrown if the user agent is not able to map the requested directory to the local OPFS.
+  - : Thrown if the user agent is not able to map the requested directory to the local OPFS, due to factors such as:
+    - **Storage or memory constraints** that prevent OPFS allocation.
+    - **Security policies**, including restrictions in non-secure contexts (e.g., non-HTTPS sessions).
+    - **Private browsing mode**, where OPFS access is commonly restricted by browsers to prevent persistent data storage.
 
 ## Examples
 
