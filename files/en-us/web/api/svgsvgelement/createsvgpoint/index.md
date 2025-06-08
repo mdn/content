@@ -8,7 +8,7 @@ browser-compat: api.SVGSVGElement.createSVGPoint
 
 {{APIRef("SVG")}}
 
-The `createSVGPoint()` method of the {{domxref("SVGSVGElement")}} interface creates an {{domxref("SVGPoint")}} object outside of any document trees.
+The `createSVGPoint()` method of the {{domxref("SVGSVGElement")}} interface creates a {{domxref("DOMPoint")}} object outside of any document trees.
 
 ## Syntax
 
@@ -34,4 +34,4 @@ An {{domxref("DOMPoint")}} object, initialized to the point `(0,0)` in the user 
 
 ## See also
 
-- {{domxref("SVGPoint")}}
+- {{domxref("DOMPoint")}}
