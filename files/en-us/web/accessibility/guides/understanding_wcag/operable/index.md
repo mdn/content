@@ -8,7 +8,7 @@ sidebar: accessibilitysidebar
 This article provides practical advice on how to write your web content so that it conforms to the success criteria outlined in the **Operable** principle of the Web Content Accessibility Guidelines (WCAG) 2.0 and 2.1. Operable states that user interface components and navigation must be operable.
 
 > [!NOTE]
-> To read the W3C definitions for Operable and its guidelines and success criteria, see [Principle 2: Operable — User interface components and navigation must be operable.](https://www.w3.org/TR/WCAG21/#operable)
+> To read the W3C definitions for Operable and its guidelines and success criteria, see [Principle 2: Operable — User interface components and navigation must be operable.](https://w3c.github.io/wcag/guidelines/22/#operable)
 
 ## Guideline 2.1 — Keyboard Accessible: Make all functionality available from a keyboard
 
@@ -84,11 +84,6 @@ This guideline covers the necessity of making core website functionality availab
     <tr>
       <td>
         2.1.4 Character Key Shortcuts (A)
-        <em
-          ><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
-            >added in 2.1</a
-          ></em
-        >
       </td>
       <td>
         If a single character key shortcut exists, then at least one of the
@@ -107,7 +102,7 @@ This guideline covers the necessity of making core website functionality availab
 </table>
 
 > [!NOTE]
-> Also see the WCAG description for [Guideline 2.1 Keyboard Accessible: Make all functionality available from a keyboard](https://www.w3.org/TR/WCAG21/#keyboard-accessible).
+> Also see the WCAG description for [Guideline 2.1 Keyboard Accessible: Make all functionality available from a keyboard](https://w3c.github.io/wcag/guidelines/22/#keyboard-accessible).
 
 ## Guideline 2.2 — Enough Time: Provide users enough time to read and use content
 
@@ -187,11 +182,6 @@ This guideline covers situations in which functionality may have a time limit. F
     <tr>
       <td>
         2.2.6 Timeouts (AAA)
-        <em
-          ><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
-            >added in 2.1</a
-          ></em
-        >
       </td>
       <td>
         <p>
@@ -210,7 +200,7 @@ This guideline covers situations in which functionality may have a time limit. F
 </table>
 
 > [!NOTE]
-> Also see the WCAG description for [Guideline 2.2 Enough Time: Provide users enough time to read and use content](https://www.w3.org/TR/WCAG21/#enough-time).
+> Also see the WCAG description for [Guideline 2.2 Enough Time: Provide users enough time to read and use content](https://w3c.github.io/wcag/guidelines/22/#enough-time).
 
 ## Guideline 2.3 — Seizures and Physical Reactions: Do not design content in a way that is known to cause seizures or physical reactions
 
@@ -227,7 +217,7 @@ This refers to content that, if not changed, could cause seizures in users with 
   <tbody>
     <tr>
       <td>2.3.1 Three flashes, or below threshold (A)</td>
-      <td>Content doesn't contain any aspect that Flashes more than three times per second, or flashing content is below acceptable <a href="https://www.w3.org/TR/WCAG20/#general-thresholddef">flash and red flash thresholds</a>.</td>
+      <td>Content doesn't contain any aspect that Flashes more than three times per second, or flashing content is below acceptable <a href="https://w3c.github.io/wcag/guidelines/22/#dfn-general-flash-and-red-flash-thresholds">flash and red flash thresholds</a>.</td>
       <td></td>
     </tr>
     <tr>
@@ -236,15 +226,15 @@ This refers to content that, if not changed, could cause seizures in users with 
       <td></td>
     </tr>
     <tr>
-      <td>2.3.3 Animations from Interactions (AAA) <em><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">added in 2.1</a></em></td>
+      <td>2.3.3 Animations from Interactions (AAA)</em></td>
       <td>Allow users to disable animations from interactions (unless the animation is essential).</td>
-      <td><a href="https://www.w3.org/TR/WCAG21/#animation-from-interactions">Understanding Animations from Interactions</a></td>
+      <td><a href="https://w3c.github.io/wcag/guidelines/22/#animation-from-interactions">Understanding Animations from Interactions</a></td>
     </tr>
   </tbody>
 </table>
 
 > [!NOTE]
-> Also see the WCAG description for [Guideline 2.3 Seizures and Physical Reactions: Do not design content in a way that is known to cause seizures or physical reactions.](https://www.w3.org/TR/WCAG21/#seizures-and-physical-reactions)
+> Also see the WCAG description for [Guideline 2.3 Seizures and Physical Reactions: Do not design content in a way that is known to cause seizures or physical reactions.](https://w3c.github.io/wcag/guidelines/22/#seizures-and-physical-reactions)
 
 ## Guideline 2.4 — Navigable: Provide ways to help users navigate, find content, and determine where they are
 
@@ -318,7 +308,7 @@ The conformance criteria under this guideline relate to ways in which users can 
         The purpose/destination of a link can be determined from the link text,
         or from its surroundings (e.g., the surrounding text). Exceptions are
         where the link purpose is ambiguous to <em>all</em> users (see
-        <a href="https://www.w3.org/TR/WCAG20/#ambiguouslinkdef"
+        <a href="https://w3c.github.io/wcag/guidelines/22/#dfn-ambiguous-to-users-in-general"
           >ambiguous to users in general</a
         >
         for a useful explanation of this).
@@ -504,7 +494,7 @@ The conformance criteria under this guideline relate to ways in which users can 
 </table>
 
 > [!NOTE]
-> Also see the WCAG description for [Guideline 2.4 Navigable: Provide ways to help users navigate, find content, and determine where they are.](https://www.w3.org/TR/WCAG21/#navigable)
+> Also see the WCAG description for [Guideline 2.4 Navigable: Provide ways to help users navigate, find content, and determine where they are.](https://w3c.github.io/wcag/guidelines/22/#navigable)
 
 ## Guideline 2.5 Input Modalities: Make it easier for users to operate functionality through various inputs beyond keyboard
 
@@ -520,32 +510,32 @@ The conformance criteria under this guideline ensures that users are able to int
  </thead>
  <tbody>
   <tr>
-   <td>2.5.1 Pointer Gestures (A) <em><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">added in 2.1</a></em></td>
+   <td>2.5.1 Pointer Gestures (A)</em></td>
    <td>All functionality that can be operated with a pointer can be operated with single-point actions. Path-based or multi-point gestures are not required to operate any functionality. Exceptions exist.</td>
    <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/pointer-gestures.html">Understanding Pointer Gestures</a></td>
   </tr>
   <tr>
-   <td>2.5.2 Pointer Cancellation (A) <em><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">added in 2.1</a></em></td>
+   <td>2.5.2 Pointer Cancellation (A)</em></td>
    <td>For functionality that can be operated using a single-pointer at least one of the following is true: no down-event, abort/undo, up reversal or essential.</td>
    <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/pointer-cancellation.html">Understanding Pointer Cancellation</a></td>
   </tr>
   <tr>
-   <td>2.5.3 Label in Name (A) <em><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">added in 2.1</a></em></td>
+   <td>2.5.3 Label in Name (A)</em></td>
    <td>For each user interface component that includes a visible text label, make sure the accessible name matches (or includes) the visible text in the label.</td>
    <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html">Understanding Label in Name</a></td>
   </tr>
   <tr>
-   <td>2.5.4 Motion Actuation (A) <em><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">added in 2.1</a></em></td>
+   <td>2.5.4 Motion Actuation (A)</em></td>
    <td>Ensure that for functionality that can be triggered by a) device motion (like shaking, tilting) or b) user gestures detected by device sensors (including a camera) that both of the following are true: 1) motion actuation can be disabled, and 2) the functionality can be operated without using device motion or user gestures. Exceptions exist.</td>
    <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html">Understanding Motion Actuation</a></td>
   </tr>
   <tr>
-   <td>2.5.5 Target Size (AAA) <em><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">added in 2.1</a></em></td>
+   <td>2.5.5 Target Size (AAA)</td>
    <td>The size of an actionable item's touch target must be at least 44 CSS pixels in both width and height. Exceptions exist.</td>
    <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/target-size.html">Understanding Target Size</a></td>
   </tr>
   <tr>
-   <td>2.5.6 Concurrent Input Mechanisms (AAA) <em><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">added in 2.1</a></em></td>
+   <td>2.5.6 Concurrent Input Mechanisms (AAA)</td>
    <td>Make sure people can use and switch between different modes of input when interacting with digital content including touchscreen, keyboard, mouse, voice commands, or alternative input devices. An essential exception exists. </td>
    <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/concurrent-input-mechanisms.html">Understanding Concurrent Input Mechanism</a></td>
  </tr>
@@ -566,7 +556,7 @@ The conformance criteria under this guideline ensures that users are able to int
 </table>
 
 > [!NOTE]
-> Also see the WCAG description for [Guideline 2.5: Input Modalities: Make it easier for users to operate functionality through various inputs beyond keyboard.](https://www.w3.org/TR/WCAG21/#input-modalities)
+> Also see the WCAG description for [Guideline 2.5: Input Modalities: Make it easier for users to operate functionality through various inputs beyond keyboard.](https://w3c.github.io/wcag/guidelines/22/#input-modalities)
 
 ## See also
 

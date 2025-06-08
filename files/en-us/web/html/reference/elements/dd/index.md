@@ -92,7 +92,7 @@ For examples, see the [examples provided for the `<dl>` element](/en-US/docs/Web
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >No corresponding role</a
         >
         </td>

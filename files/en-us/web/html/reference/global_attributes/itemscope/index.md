@@ -1,5 +1,6 @@
 ---
-title: itemscope
+title: HTML itemscope global attribute
+short-title: itemscope
 slug: Web/HTML/Reference/Global_attributes/itemscope
 page-type: html-attribute
 spec-urls: https://html.spec.whatwg.org/multipage/microdata.html#attr-itemscope

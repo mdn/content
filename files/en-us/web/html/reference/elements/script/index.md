@@ -332,7 +332,7 @@ so that the script doesn't block parsing but is guaranteed to be evaluated befor
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a>
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role">No corresponding role</a>
       </td>
     </tr>
     <tr>
