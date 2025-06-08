@@ -9,7 +9,7 @@ browser-compat: api.Observable
 
 {{APIRef("Observable API")}}{{SeeCompatTable}}
 
-The **`Observable`** interface of the {{domxref("Observable API", "Observable API", "", "nocode")}} represents a stream of events that can be subscribed to.
+The **`Observable`** interface of the {{domxref("Observable API", "Observable API", "", "nocode")}} represents a stream of values that can be subscribed to.
 
 `Observable` objects (commonly called **observables**) can be thought of as more powerful event listeners that integrate with {{domxref("EventTarget")}}. They improve event handling code in a similar way to how [promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) improved on callbacks, simplifying code by reducing the need for nested blocks.
 

@@ -61,9 +61,9 @@ See [Using the Observable API](/en-US/docs/Web/API/Observable_API/Using) for mor
 ## Interfaces
 
 - {{domxref("Observable")}} {{Experimental_Inline}}
-  - : Represents a stream of events that can be subscribed to.
+  - : Represents a stream of values that can be subscribed to.
 - {{domxref("Subscriber")}} {{Experimental_Inline}}
-  - : Represents an observer subscription, and contains methods to manage that subscription.
+  - : Represents a subscription to a stream of observable values, and contains methods to manage the lifecycle of that subscription.
 
 ## Extensions to other interfaces
 
