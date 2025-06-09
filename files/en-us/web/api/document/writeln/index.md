@@ -10,8 +10,9 @@ browser-compat: api.Document.writeln
 
 The **`writeln()`** method of the {{domxref("Document")}} interface writes text in one or more {{domxref("TrustedHTML")}} or string parameters to a document stream opened by {{domxref("document.open()")}}, followed by a newline character.
 
-The method is essentially the same as {{domxref("document.write()")}} but adds a newline.
+The method is essentially the same as {{domxref("document.write()")}} but adds a newline (information in the linked topic also applies to this method).
 This newline will only be visible if it is injected inside an element where newlines are displayed.
+There is more information about how it is used and limitations in
 
 ## Syntax
 
