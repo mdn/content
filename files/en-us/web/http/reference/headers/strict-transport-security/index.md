@@ -86,7 +86,7 @@ With HSTS, as long as at least one secure connection has been made to the host i
 3. The server responds with a `301 Moved Permanently` redirect to `https://example.com/`.
 4. The browser makes a new request, this time using HTTPS.
 5. The response, made via HTTPS, includes the header:
-   ```
+   ```http
    Strict-Transport-Security: max-age=15768000; includeSubDomains
    ```
    Your browser remembers `example.com` as a Known HSTS Host, and that it specified `includeSubDomains`.
