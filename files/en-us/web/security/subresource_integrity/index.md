@@ -132,7 +132,7 @@ Browsers handle SRI by doing the following:
 
 The {{httpheader("Integrity-Policy")}} and {{httpheader("Integrity-Policy-Report-Only")}} HTTP headers enable a document to enforce a policy regarding the integrity metadata requirements on loaded subresources of specified types (currently scripts only).
 
-When an {{HTTP("Integrity-Policy")}} header is specified, the browser would block requests with [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode or without an `integrity` attribute from being made.
+When an `Integrity-Policy` header is specified, the browser would block requests with [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode or without an `integrity` attribute from being made.
 When an {{HTTP("Integrity-Policy-Report-Only")}} header is specified, such requests would be made, but reported on to the specified reporting endpoint.
 
 The header values are defined as [structured field dictionaries](https://www.rfc-editor.org/rfc/rfc8941.html#name-dictionaries) with the following keys:
