@@ -100,7 +100,7 @@ In most cases, the effect is to remove the stylized border, which makes CSS styl
 
 ### Taming search boxes
 
-[`<input type="search">`](/en-US/docs/Web/HTML/Reference/Elements/input/search) is basically just a text input, so why is `appearance: none;` useful here? The answer is that Safari search boxes have some styling restrictions — you can't adjust their `height` or `font-size` freely, for example.
+[`<input type="search">`](/en-US/docs/Web/HTML/Reference/Elements/input/search) is basically just a text input, so why is `appearance: none;` useful here?The answer is that Safari search boxes have traditionally had styling restrictions — for example, older versions did not allow freely adjusting their `height` or `font-size`. However, as of Safari 16 and later, applying `appearance: none;` to general input elements also affects `<input type="search">`, making such restrictions no longer apply. For better compatibility, it’s still recommended to target `input[type="search"]` explicitly.
 
 This can be fixed using our friend `appearance: none;`, which disables the default appearance:
 
@@ -110,11 +110,11 @@ input[type="search"] {
 }
 ```
 
-In the example below, you can see two identical styled search boxes. The right one has `appearance: none;` applied, and the left one doesn't. If you look at it in Safari on macOS you'll see that the left one isn't sized properly.
+In the example below, you can see two identical styled search boxes. The right one has `appearance: none;` applied, and the left one doesn't. If you look at it in old Safari on macOS you'll see that the left one isn't sized properly.
 
 {{EmbedGHLiveSample("learning-area/html/forms/styling-examples/search-appearance.html", '100%', 200)}}
 
-Interestingly, setting border/background on the search field also fixes this problem. The following styled search doesn't have `appearance: none;` applied, but it doesn't suffer from the same problem in Safari as the previous example.
+Interestingly, setting border/background on the search field also fixes this problem. The following styled search doesn't have `appearance: none;` applied, but it doesn't suffer from the same problem in old Safari as the previous example.
 
 {{EmbedGHLiveSample("learning-area/html/forms/styling-examples/styled-search.html", '100%', 200)}}
 
