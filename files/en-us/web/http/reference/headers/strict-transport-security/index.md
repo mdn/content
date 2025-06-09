@@ -86,14 +86,17 @@ With HSTS, as long as at least one secure connection has been made to the host i
 3. The server responds with a `301 Moved Permanently` redirect to `https://example.com/`.
 4. The browser makes a new request, this time using HTTPS.
 5. The response, made via HTTPS, includes the header:
+
    ```http
    Strict-Transport-Security: max-age=15768000; includeSubDomains
    ```
+
    Your browser remembers `example.com` as a Known HSTS Host, and that it specified `includeSubDomains`.
-7. A few weeks later, you are at the airport and decide to use the free Wi-Fi. But unknowingly, you connect to a rogue access point running on an attacker's laptop.
-8. You open your browser to `http://login.example.com/`. Because your browser remembers `example.com` as a Known HSTS Host and the `includeSubDomains` directive was used, your browser uses HTTPS.
-9. The attacker intercepts the request with a fake HTTPS server, but does not have a valid certificate for the domain.
-10. Your browser displays an invalid certificate error, and does not allow you to bypass it, thus preventing you from giving your password to the attacker.
+
+6. A few weeks later, you are at the airport and decide to use the free Wi-Fi. But unknowingly, you connect to a rogue access point running on an attacker's laptop.
+7. You open your browser to `http://login.example.com/`. Because your browser remembers `example.com` as a Known HSTS Host and the `includeSubDomains` directive was used, your browser uses HTTPS.
+8. The attacker intercepts the request with a fake HTTPS server, but does not have a valid certificate for the domain.
+9. Your browser displays an invalid certificate error, and does not allow you to bypass it, thus preventing you from giving your password to the attacker.
 
 ### Preloading Strict Transport Security
 
