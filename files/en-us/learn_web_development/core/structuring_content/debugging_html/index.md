@@ -79,14 +79,14 @@ If you load this HTML into a browser then look at the [rendered DOM](/en-US/docs
 </p>
 ```
 
-So why is this both good and bad? Well, in this case the browser has created the intended result, but as you'll see [later on](#active_learning_studying_html_using_the_dom_inspector), this is not always the case. You'll always get _something_ running, but the browser doesn't always get it right, which can cause problems. It is better to write correct markup in the first place.
+So why is this both good and bad? Well, in this case the browser has created the intended result, but as you'll see [later on](#lets_study_some_html_using_the_dom_inspector), this is not always the case. You'll always get _something_ running, but the browser doesn't always get it right, which can cause problems. It is better to write correct markup in the first place.
 
 > [!NOTE]
 > HTML is parsed permissively because when the web was first created, it was decided that getting content published was more important than making sure the syntax was absolutely correct. The web would probably not be as popular as it is today if it had been more strict from the very beginning.
 
 So how do you find markup errors? Later on we will show you how to find errors in HTML using a tool called the [HTML validator](#html_validation), but first we will show you how to inspect your HTML manually using a **DOM inspector**, and then explore what kinds of markup errors you might be looking for, and how the browser might interpret those.
 
-## Using a DOM inspector
+## Using the DOM inspector
 
 All modern browsers have a set of [developer tools](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) (devtools) built into them, which provide a set of functionality for examining the webpage loaded into the current tab. These can show you what HTML is rendered in the page, what CSS is applied to each DOM node, what JavaScript is running in the page, and more. They also allow you to edit the currently-running code and see the effect live on the page.
 
@@ -100,9 +100,9 @@ For this article, the only relevant devtools function is the **DOM inspector**, 
 4. Also try hovering over the nodes (or selecting them with the cursor keys) and note how the currently-hovered (or selected) element is highlighted in the viewport.
 5. You can also edit the rendered DOM. We won't use the editing functionality in this article, but take some time to look up how to do this if you are curious.
 
-## Active learning: Studying HTML using the DOM inspector
+## Let's study some HTML using the DOM inspector
 
-It's time to study some HTML code using the DOM inspector, and see how the browser handles common markup errors.
+In this section we'll get your hands dirty again. It's time to study some HTML code using the DOM inspector, and see how the browser handles common markup errors.
 
 1. First, save the following HTML file listing as `debug-example.html`, somewhere on your local machine. This demo is deliberately written with some built-in errors for us to explore.
 
@@ -191,9 +191,9 @@ The tool for this job is the [Markup Validation Service](https://validator.w3.or
 
 To specify the HTML to validate, you can provide a web address, upload an HTML file, or directly input some HTML code.
 
-## Active learning: Validating an HTML document
+## Validating an HTML document
 
-Let's try this with our [sample document](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/debugging-html/debug-example.html).
+In this task, we'll get you to try out the HTML validator. You will validate our [sample document](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/debugging-html/debug-example.html) and see what results are returned. This example contains the same HTML that you studied with the DOM inspector earlier.
 
 1. First, load the [Markup Validation Service](https://validator.w3.org/) in a new browser tab, if it isn't already open.
 2. Switch to the [Validate by Direct Input](https://validator.w3.org/#validate_by_input) tab.
@@ -209,7 +209,7 @@ This should give you a list of errors and other information.
 The error messages are usually helpful, but sometimes they are not so easy to understand. With a bit of practice, you can work out how to interpret these to fix your code. Let's go through the error messages and see what they mean. You'll see that each message comes with a line and column number to help you to locate the error easily.
 
 - "End tag `li` implied, but there were open elements" (2 instances): These messages indicate that an element is open that should be closed. The ending tag is implied, but not actually there. The line/column information points to the first line after the line where the closing tag should really be, but this is a good enough clue to see what is wrong.
-- "Unclosed element `strong`": This is really easy to understand — a {{htmlelement("strong")}} element is unclosed, and the line/column information points right to where it is.
+- "Unclosed element `strong`": This is easier to understand — a {{htmlelement("strong")}} element is unclosed, and the line/column information points right to where it is.
 - "End tag `strong` violates nesting rules": This points out the incorrectly nested elements, and the line/column information points out where they are.
 - "End of file reached when inside an attribute value. Ignoring tag": This one is rather cryptic; it refers to the fact that there is an attribute value not properly formed somewhere, possibly near the end of the file because the end of the file appears inside the attribute value. The fact that the browser doesn't render the link should give us a good clue as to what element is at fault.
 - "End of file seen and there were open elements": This is a bit ambiguous, but basically refers to the fact there are open elements that need to be properly closed. The line numbers point to the last few lines of the file, and this error message comes with a line of code that points out an example of an open element:
