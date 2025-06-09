@@ -434,7 +434,7 @@ Sometimes we want cells to span multiple rows or columns. Take the following sim
 
 The initial markup looks like this:
 
-```html
+```html live-sample___multiple-rows-columns
 <table>
   <tr>
     <th>Animals</th>
@@ -462,7 +462,7 @@ The initial markup looks like this:
 </table>
 ```
 
-```css hidden
+```css hidden live-sample___multiple-rows-columns
 table {
   border-collapse: collapse;
 }
@@ -475,7 +475,7 @@ th {
 
 But the output doesn't give us quite what we want:
 
-{{EmbedLiveSample("Allowing_cells_to_span_multiple_rows_and_columns", "", "350")}}
+{{EmbedLiveSample("multiple-rows-columns", "", "350")}}
 
 ### Fixing the layout with `rowspan` and `colspan`
 
