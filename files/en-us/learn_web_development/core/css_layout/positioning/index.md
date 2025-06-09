@@ -50,9 +50,76 @@ Static positioning is the default that every element gets. It just means "put th
 
 To see this (and get your example set up for future sections) first add a `class` of `positioned` to the second {{htmlelement("p")}} in the HTML:
 
-```html
-<p class="positioned">…</p>
+```html hidden live-sample___relative-positioning
+<h1>Relative positioning</h1>
 ```
+
+```html hidden live-sample___absolute-positioning
+<h1>Absolute positioning</h1>
+```
+
+```html hidden live-sample___positioning-context
+<h1>Positioning context</h1>
+```
+
+```html hidden live-sample___z-index-1
+<h1>z-index</h1>
+```
+
+```html hidden live-sample___fixed-positioning
+<h1>Fixed positioning</h1>
+```
+
+<!-- prettier-ignore-start -->
+```html hidden live-sample___relative-positioning live-sample___absolute-positioning live-sample___positioning-context live-sample___z-index-1 live-sample___fixed-positioning
+
+
+<p>
+  I am a basic block level element. My adjacent block level elements
+  sit on new lines below me.
+</p>
+
+```
+
+```html live-sample___relative-positioning
+<p class="positioned">
+  By default we span 100% of the width of our parent element, and we
+  are as tall as our child content. Our total width and height is our
+  content + padding + border width/height.
+</p>
+```
+
+```html hidden live-sample___absolute-positioning live-sample___positioning-context live-sample___z-index-1
+<p class="positioned">
+  Now I'm absolutely positioned relative to the
+  <code>&lt;body&gt;</code> element, not the <code>&lt;html&gt;</code> element!
+</p>
+```
+
+```html hidden live-sample___fixed-positioning
+<p class="positioned">I'm not positioned any more.</p>
+```
+
+```html hidden live-sample___relative-positioning live-sample___absolute-positioning live-sample___positioning-context live-sample___z-index-1 live-sample___fixed-positioning
+
+
+<p>
+  We are separated by our margins. Because of margin collapsing, we are
+  separated by the width of one of our margins, not both.
+</p>
+
+<p>
+  Inline elements <span>like this one</span> and <span>this one</span>
+  sit on the same line as one another, and adjacent text nodes,
+  if there is space on the same line. Overflowing inline elements
+  <span>wrap onto a new line if possible — like this one containing text</span>,
+  or just go on to a new line if not, much like this image will do:
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
+    alt="snippet of cloth" />
+</p>
+```
+<!-- prettier-ignore-end -->
 
 Now add the following rule to the bottom of your CSS:
 
@@ -95,37 +162,6 @@ If you save and refresh at this stage, you won't see a change in the result at a
 > The values of these properties can take any [units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units) you'd reasonably expect: pixels, mm, rems, %, etc.
 
 If you now save and refresh, you'll get a result something like this:
-
-```html hidden live-sample___relative-positioning
-<h1>Relative positioning</h1>
-
-<p>
-  I am a basic block level element. My adjacent block level elements sit on new
-  lines below me.
-</p>
-
-<p class="positioned">
-  By default we span 100% of the width of our parent element, and we are as tall
-  as our child content. Our total width and height is our content + padding +
-  border width/height.
-</p>
-
-<p>
-  We are separated by our margins. Because of margin collapsing, we are
-  separated by the width of one of our margins, not both.
-</p>
-
-<p>
-  Inline elements <span>like this one</span> and <span>this one</span> sit on
-  the same line as one another, and adjacent text nodes, if there is space on
-  the same line. Overflowing inline elements
-  <span>wrap onto a new line if possible — like this one containing text</span>,
-  or just go on to a new line if not, much like this image will do:
-  <img
-    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
-    alt="snippet of cloth" />
-</p>
-```
 
 ```css hidden live-sample___relative-positioning
 body {
@@ -175,37 +211,6 @@ Let's try changing the position declaration in your code as follows:
 <!-- prettier-ignore-end -->
 
 If you now save and refresh, you should see something like so:
-
-```html hidden live-sample___absolute-positioning
-<h1>Absolute positioning</h1>
-
-<p>
-  I am a basic block level element. My adjacent block level elements sit on new
-  lines below me.
-</p>
-
-<p class="positioned">
-  By default we span 100% of the width of our parent element, and we are as tall
-  as our child content. Our total width and height is our content + padding +
-  border width/height.
-</p>
-
-<p>
-  We are separated by our margins. Because of margin collapsing, we are
-  separated by the width of one of our margins, not both.
-</p>
-
-<p>
-  inline elements <span>like this one</span> and <span>this one</span> sit on
-  the same line as one another, and adjacent text nodes, if there is space on
-  the same line. Overflowing inline elements
-  <span>wrap onto a new line if possible — like this one containing text</span>,
-  or just go on to a new line if not, much like this image will do:
-  <img
-    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
-    alt="snippet of cloth" />
-</p>
-```
 
 ```css hidden live-sample___absolute-positioning
 body {
@@ -263,36 +268,6 @@ The positioned element is nested inside the {{htmlelement("body")}} in the HTML 
 <!-- prettier-ignore-end -->
 
 This should give the following result:
-
-```html hidden live-sample___positioning-context
-<h1>Positioning context</h1>
-
-<p>
-  I am a basic block level element. My adjacent block level elements sit on new
-  lines below me.
-</p>
-
-<p class="positioned">
-  Now I'm absolutely positioned relative to the
-  <code>&lt;body&gt;</code> element, not the <code>&lt;html&gt;</code> element!
-</p>
-
-<p>
-  We are separated by our margins. Because of margin collapsing, we are
-  separated by the width of one of our margins, not both.
-</p>
-
-<p>
-  inline elements <span>like this one</span> and <span>this one</span> sit on
-  the same line as one another, and adjacent text nodes, if there is space on
-  the same line. Overflowing inline elements
-  <span>wrap onto a new line if possible — like this one containing text</span>,
-  or just go on to a new line if not, much like this image will do:
-  <img
-    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
-    alt="snippet of cloth" />
-</p>
-```
 
 ```css hidden live-sample___positioning-context
 body {
@@ -358,36 +333,6 @@ To change the stacking order, try adding the following declaration to your `p:nt
 <!-- prettier-ignore-end -->
 
 You should now see the lime paragraph on top:
-
-```html hidden live-sample___z-index-1
-<h1>z-index</h1>
-
-<p>
-  I am a basic block level element. My adjacent block level elements sit on new
-  lines below me.
-</p>
-
-<p class="positioned">
-  Now I'm absolutely positioned relative to the
-  <code>&lt;body&gt;</code> element, not the <code>&lt;html&gt;</code> element!
-</p>
-
-<p>
-  We are separated by our margins. Because of margin collapsing, we are
-  separated by the width of one of our margins, not both.
-</p>
-
-<p>
-  inline elements <span>like this one</span> and <span>this one</span> sit on
-  the same line as one another, and adjacent text nodes, if there is space on
-  the same line. Overflowing inline elements
-  <span>wrap onto a new line if possible — like this one containing text</span>,
-  or just go on to a new line if not, much like this image will do:
-  <img
-    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
-    alt="snippet of cloth" />
-</p>
-```
 
 ```css hidden live-sample___z-index-1
 body {
@@ -471,33 +416,6 @@ p:nth-of-type(1) {
 ```
 
 You should now see the finished example:
-
-```html hidden live-sample___fixed-positioning
-<h1>Fixed positioning</h1>
-
-<p>
-  I am a basic block level element. My adjacent block level elements sit on new
-  lines below me.
-</p>
-
-<p class="positioned">I'm not positioned any more.</p>
-
-<p>
-  We are separated by our margins. Because of margin collapsing, we are
-  separated by the width of one of our margins, not both.
-</p>
-
-<p>
-  Inline elements <span>like this one</span> and <span>this one</span> sit on
-  the same line as one another, and adjacent text nodes, if there is space on
-  the same line. Overflowing inline elements
-  <span>wrap onto a new line if possible — like this one containing text</span>,
-  or just go on to a new line if not, much like this image will do:
-  <img
-    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
-    alt="snippet of cloth" />
-</p>
-```
 
 ```css hidden live-sample___fixed-positioning
 body {
