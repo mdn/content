@@ -144,7 +144,7 @@ The header values are defined as [structured field dictionaries](https://www.rfc
 - `endpoints`
   - : Defines an [inner list](https://www.rfc-editor.org/rfc/rfc8941.html#name-inner-lists) of [reporting endpoints](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#endpoint).
 
-In cases where a request is blocked by an integrity policy, a [Reporting API](/en-US/docs/Web/API/Reporting_API) violation report is created with a type of "integrity-violation". It contains:
+In cases where a request is blocked by an integrity policy, a [Reporting API](/en-US/docs/Web/API/Reporting_API) violation report is created with a type of `"integrity-violation"`. It contains:
 
 - `documentURL`
   - : The URL of the document.
