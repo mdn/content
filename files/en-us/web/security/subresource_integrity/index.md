@@ -140,7 +140,7 @@ The header values are defined as [structured field dictionaries](https://www.rfc
 - `blocked-destinations`
   - : Defines an [inner list](https://www.rfc-editor.org/rfc/rfc8941.html#name-inner-lists) of [request destinations](/en-US/docs/Web/API/Request/destination) to be blocked. The only currently supported value is `"script"`.
 - `sources`
-  - : Defines an [inner list](https://www.rfc-editor.org/rfc/rfc8941.html#name-inner-lists) of integrity sources. The default and only currently supported value is "inline".
+  - : Defines an [inner list](https://www.rfc-editor.org/rfc/rfc8941.html#name-inner-lists) of integrity sources. The default and only currently supported value is `"inline"`.
 - `endpoints`
   - : Defines an [inner list](https://www.rfc-editor.org/rfc/rfc8941.html#name-inner-lists) of [reporting endpoints](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#endpoint).
 
