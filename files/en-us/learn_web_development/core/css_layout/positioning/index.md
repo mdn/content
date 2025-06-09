@@ -72,9 +72,11 @@ If you save and refresh, you'll see no difference at all, except for the updated
 
 Relative positioning is the first position type we'll take a look at. This is very similar to static positioning, except that once the positioned element has taken its place in the normal flow, you can then modify its final position, including making it overlap other elements on the page. Go ahead and update the `position` declaration in your code:
 
+<!-- prettier-ignore-start -->
 ```css
-position: relative;
+  position: relative;
 ```
+<!-- prettier-ignore-end -->
 
 If you save and refresh at this stage, you won't see a change in the result at all. So how do you modify the element's position? You need to use the {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("right")}} properties, which we'll explain in the next section.
 
@@ -82,17 +84,19 @@ If you save and refresh at this stage, you won't see a change in the result at a
 
 {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("right")}} are used alongside {{cssxref("position")}} to specify exactly where to move the positioned element to. To try this out, add the following declarations to the `.positioned` rule in your CSS:
 
+<!-- prettier-ignore-start -->
 ```css
-top: 30px;
-left: 30px;
+  top: 30px;
+  left: 30px;
 ```
+<!-- prettier-ignore-end -->
 
 > [!NOTE]
 > The values of these properties can take any [units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units) you'd reasonably expect: pixels, mm, rems, %, etc.
 
 If you now save and refresh, you'll get a result something like this:
 
-```html hidden
+```html hidden live-sample___relative-positioning
 <h1>Relative positioning</h1>
 
 <p>
@@ -123,7 +127,7 @@ If you now save and refresh, you'll get a result something like this:
 </p>
 ```
 
-```css hidden
+```css hidden live-sample___relative-positioning
 body {
   width: 500px;
   margin: 0 auto;
@@ -149,7 +153,7 @@ span {
 }
 ```
 
-{{ EmbedLiveSample('Introducing_top_bottom_left_and_right', '100%', 500) }}
+{{ EmbedLiveSample('relative-positioning', '', 500) }}
 
 Cool, huh? Ok, so this probably wasn't what you were expecting. Why has it moved to the bottom and to the right if we specified _top_ and _left_? This may seem counterintuitive. You need to think of it as if there's an invisible force that pushes the specified side of the positioned box, moving it in the opposite direction. So, for example, if you specify `top: 30px;`, it's as if a force will push the top of the box, causing it to move downwards by 30px.
 
@@ -164,13 +168,15 @@ Absolute positioning brings very different results.
 
 Let's try changing the position declaration in your code as follows:
 
+<!-- prettier-ignore-start -->
 ```css
-position: absolute;
+  position: absolute;
 ```
+<!-- prettier-ignore-end -->
 
 If you now save and refresh, you should see something like so:
 
-```html hidden
+```html hidden live-sample___absolute-positioning
 <h1>Absolute positioning</h1>
 
 <p>
@@ -201,7 +207,7 @@ If you now save and refresh, you should see something like so:
 </p>
 ```
 
-```css hidden
+```css hidden live-sample___absolute-positioning
 body {
   width: 500px;
   margin: 0 auto;
@@ -227,7 +233,7 @@ span {
 }
 ```
 
-{{ EmbedLiveSample('Setting_position_absolute', '100%', 450) }}
+{{ EmbedLiveSample('absolute-positioning', '', 450) }}
 
 First of all, note that the gap where the positioned element should be in the document flow is no longer there — the first and third elements have closed together like it no longer exists! Well, in a way, this is true. An absolutely positioned element no longer exists in the normal document flow. Instead, it sits on its own layer separate from everything else. This is very useful: it means that we can create isolated UI features that don't interfere with the layout of other elements on the page. For example, popup information boxes, control menus, rollover panels, UI features that can be dragged and dropped anywhere on the page, and so on.
 
@@ -250,13 +256,15 @@ If no ancestor elements have their position property explicitly defined, then by
 
 The positioned element is nested inside the {{htmlelement("body")}} in the HTML source, but in the final layout it's 30px away from the top and the left edges of the page. We can change the **positioning context**, that is, which element the absolutely positioned element is positioned relative to. This is done by setting positioning on one of the element's ancestors: to one of the elements it's nested inside of (you can't position it relative to an element it's not nested inside of). To see this, add the following declaration to your `body` rule:
 
+<!-- prettier-ignore-start -->
 ```css
-position: relative;
+  position: relative;
 ```
+<!-- prettier-ignore-end -->
 
 This should give the following result:
 
-```html hidden
+```html hidden live-sample___positioning-context
 <h1>Positioning context</h1>
 
 <p>
@@ -286,7 +294,7 @@ This should give the following result:
 </p>
 ```
 
-```css hidden
+```css hidden live-sample___positioning-context
 body {
   width: 500px;
   margin: 0 auto;
@@ -313,7 +321,7 @@ span {
 }
 ```
 
-{{ EmbedLiveSample('Positioning_contexts', '100%', 420) }}
+{{ EmbedLiveSample('positioning-context', '', 420) }}
 
 The positioned element now sits relative to the {{htmlelement("body")}} element.
 
@@ -343,13 +351,15 @@ Web pages also have a z-axis: an imaginary line that runs from the surface of yo
 
 To change the stacking order, try adding the following declaration to your `p:nth-of-type(1)` rule:
 
+<!-- prettier-ignore-start -->
 ```css
-z-index: 1;
+  z-index: 1;
 ```
+<!-- prettier-ignore-end -->
 
 You should now see the lime paragraph on top:
 
-```html hidden
+```html hidden live-sample___z-index-1
 <h1>z-index</h1>
 
 <p>
@@ -379,7 +389,7 @@ You should now see the lime paragraph on top:
 </p>
 ```
 
-```css hidden
+```css hidden live-sample___z-index-1
 body {
   width: 500px;
   margin: 0 auto;
@@ -414,7 +424,7 @@ p:nth-of-type(1) {
 }
 ```
 
-{{ EmbedLiveSample('Introducing_z-index', '100%', 400) }}
+{{ EmbedLiveSample('z-index-1', '', 400) }}
 
 Note that `z-index` only accepts unitless index values; you can't specify that you want one element to be 23 pixels up the Z-axis — it doesn't work like that. Higher values will go above lower values and it's up to you what values you use. Using values of 2 or 3 would give the same effect as values of 300 or 40000.
 
@@ -462,7 +472,7 @@ p:nth-of-type(1) {
 
 You should now see the finished example:
 
-```html hidden
+```html hidden live-sample___fixed-positioning
 <h1>Fixed positioning</h1>
 
 <p>
@@ -489,7 +499,7 @@ You should now see the finished example:
 </p>
 ```
 
-```css hidden
+```css hidden live-sample___fixed-positioning
 body {
   width: 500px;
   height: 1400px;
@@ -512,6 +522,7 @@ h1 {
   position: fixed;
   top: 0px;
   width: 500px;
+  margin-top: 0;
   background: white;
   padding: 10px;
 }
@@ -521,7 +532,7 @@ p:nth-of-type(1) {
 }
 ```
 
-{{ EmbedLiveSample('Fixed_positioning', '100%', 400) }}
+{{ EmbedLiveSample('fixed-positioning', '', 400) }}
 
 > [!NOTE]
 > You can see an example for this live at [`6_fixed-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/6_fixed-positioning.html) ([see source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/6_fixed-positioning.html)).
@@ -597,7 +608,7 @@ body {
 }
 ```
 
-{{ EmbedLiveSample('Basic_example', '100%', 200) }}
+{{ EmbedLiveSample('Basic_example', '', 200) }}
 
 ### Scrolling index
 
@@ -657,7 +668,7 @@ body {
 }
 ```
 
-{{ EmbedLiveSample('Scrolling_index', '100%', 200) }}
+{{ EmbedLiveSample('Scrolling_index', '', 200) }}
 
 Sticky elements are "sticky" relative to the nearest ancestor with a "scrolling mechanism", which is determined by its ancestors' [overflow](/en-US/docs/Web/CSS/overflow) property.
 
