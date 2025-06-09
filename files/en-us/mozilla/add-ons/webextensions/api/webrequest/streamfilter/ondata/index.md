@@ -23,6 +23,8 @@ This example adds an `ondata` listener which replaces "Example" in the response 
 <!-- cSpell:ignore Examp -->
 
 ```js
+"use strict";
+
 function listener(details) {
   const filter = browser.webRequest.filterResponseData(details.requestId);
   const decoder = new TextDecoder("utf-8");
@@ -58,6 +60,8 @@ browser.webRequest.onBeforeRequest.addListener(
 Another example for handling large documents:
 
 ```js
+"use strict";
+
 function listener(details) {
   const filter = browser.webRequest.filterResponseData(details.requestId);
   const decoder = new TextDecoder("utf-8");
@@ -94,6 +98,8 @@ browser.webRequest.onBeforeRequest.addListener(
 Here's another version:
 
 ```js
+"use strict";
+
 function listener(details) {
   const filter = browser.webRequest.filterResponseData(details.requestId);
   const decoder = new TextDecoder("utf-8");
@@ -127,6 +133,8 @@ browser.webRequest.onBeforeRequest.addListener(
 The above example can also be written like so:
 
 ```js
+"use strict";
+
 function listener(details) {
   const filter = browser.webRequest.filterResponseData(details.requestId);
   const decoder = new TextDecoder("utf-8");
@@ -157,6 +165,8 @@ browser.webRequest.onBeforeRequest.addListener(
 This example uses a {{domxref("Blob")}}:
 
 ```js
+"use strict";
+
 function listener(details) {
   const filter = browser.webRequest.filterResponseData(details.requestId);
   const encoder = new TextEncoder();
@@ -185,6 +195,8 @@ browser.webRequest.onBeforeRequest.addListener(
 This example makes use of the {{domxref("DOMParser")}} interface:
 
 ```js
+"use strict";
+
 function listener(details) {
   const filter = browser.webRequest.filterResponseData(details.requestId);
   const encoder = new TextEncoder();
@@ -218,6 +230,8 @@ browser.webRequest.onBeforeRequest.addListener(
 This example combines all buffers into a single buffer:
 
 ```js
+"use strict";
+
 function listener(details) {
   const filter = browser.webRequest.filterResponseData(details.requestId);
   const decoder = new TextDecoder("utf-8");
@@ -253,6 +267,8 @@ browser.webRequest.onBeforeRequest.addListener(
 The above example can also be written like so:
 
 ```js
+"use strict";
+
 function listener(details) {
   const filter = browser.webRequest.filterResponseData(details.requestId);
   const decoder = new TextDecoder("utf-8");
@@ -283,6 +299,8 @@ browser.webRequest.onBeforeRequest.addListener(
 This example demonstrates, how one can detect, if it's the final chunk in the response:
 
 ```js
+"use strict";
+
 function listener(details) {
   const filter = browser.webRequest.filterResponseData(details.requestId);
   const encoder = new TextEncoder();
