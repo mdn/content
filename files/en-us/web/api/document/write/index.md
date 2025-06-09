@@ -23,7 +23,7 @@ browser-compat: api.Document.write
 > > And to make matters even worse, the exact behavior of this method can in some cases be dependent on network latency, which can lead to failures that are very hard to debug.
 > > For all these reasons, use of this method is strongly discouraged.
 
-The **`document.write()`** method writes text in one or more {{domxref("TrustedHTML")}} or string parameters to a document stream opened by {{domxref("document.open()")}}.
+The **write()`** method of the {{domxref("Document")}} interface writes text in one or more {{domxref("TrustedHTML")}} or string parameters to a document stream opened by {{domxref("document.open()")}}.
 
 ## Syntax
 
@@ -68,7 +68,9 @@ The exception is that if the `document.write()` call is embedded within an inlin
 </script>
 ```
 
-`document.write()` and {{domxref("document.writeln")}} cannot be used with XML or XHTML, and attempting to do so will throw an `InvalidStateError` exception.
+`document.write()` (and {{domxref("document.writeln")}}) cannot be used with XML or XHTML, and attempting to do so will throw an `InvalidStateError` exception.
+This is the case if opening a local file with a .xhtml file extension or for any document served with an `application/xhtml+xml` MIME type.
+More information is available in the [W3C XHTML FAQ](https://www.w3.org/MarkUp/2004/xhtml-faq#docwrite).
 
 Using `document.write()` in [deferred](/en-US/docs/Web/HTML/Reference/Elements/script#defer) or [asynchronous](/en-US/docs/Web/HTML/Reference/Elements/script#async) scripts will be ignored and you'll get a message like "A call to `document.write()` from an asynchronously-loaded external script was ignored" in the error console.
 
