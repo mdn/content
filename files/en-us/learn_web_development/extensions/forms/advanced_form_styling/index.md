@@ -100,7 +100,7 @@ In most cases, the effect is to remove the stylized border, which makes CSS styl
 
 ### Taming search boxes
 
-[`<input type="search">`](/en-US/docs/Web/HTML/Reference/Elements/input/search) is basically just a text input, so why is `appearance: none;` useful here?The answer is that Safari search boxes have traditionally had styling restrictions — for example, older versions did not allow freely adjusting their `height` or `font-size`. However, as of Safari 16 and later, applying `appearance: none;` to general input elements also affects `<input type="search">`, making such restrictions no longer apply. For better compatibility, it’s still recommended to target `input[type="search"]` explicitly.
+[`<input type="search">`](/en-US/docs/Web/HTML/Reference/Elements/input/search) is basically just a text input, so why is `appearance: none;` useful here?The answer is that Safari search boxes have traditionally had styling restrictions — for example, older versions did not allow freely adjusting their `height` or `font-size`. However, as of Safari 16 and later, applying `appearance: none;` to general input elements also affects `<input type="search">`, making such restrictions no longer apply. For better compatibility, it's still recommended to target `input[type="search"]` explicitly.
 
 This can be fixed using our friend `appearance: none;`, which disables the default appearance:
 
