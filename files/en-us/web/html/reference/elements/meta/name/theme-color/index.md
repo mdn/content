@@ -35,11 +35,13 @@ A `<meta name="theme-color">` element has the following additional attributes:
 
 ### Setting a color value
 
-The following image shows the effect that the {{htmlelement("meta")}} element above will have on a document displayed in Chrome running on an Android mobile device.
+Consider the following code that uses `<meta>` to set a theme color:
 
 ```html
 <meta name="theme-color" content="#4285f4" />
 ```
+
+The following image shows the effect of this setting in Chrome on an Android mobile device:
 
 ![Image showing the effect of using theme-color](theme-color.png)
 
