@@ -354,7 +354,7 @@ The process might look like this:
 
 5. Now try to sketch a rough sitemap — have a box for each page on your site, and draw lines to show the typical workflow between pages. The homepage will probably be in the top or at the center, and link to most if not all of the others. Most of the pages in a small site should be available from the main navigation, although there are exceptions. You might also want to include notes about how things might be presented.![A map of the site showing the homepage, country page, search results, specials page, and checkout and purchase flow](site-map.png)
 
-Try carrying out the above exercise for a website of your own creation. What would you like to make a site about? As a stretch goal, use the HTML knowledge you've gained so far to sart creating a few of the pages on the site. You could use our [basic HTML template](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html) as a starting point.
+Try carrying out the above exercise for a website of your own creation. What would you like to make a site about? As a stretch goal, use the HTML knowledge you've gained so far to create a few of the pages on the site. You could use our [basic HTML template](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html) as a starting point.
 
 ## Summary
 
