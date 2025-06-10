@@ -12,7 +12,8 @@ The HTTP **`Strict-Transport-Security`** {{Glossary("response header")}} (often 
 Additionally, on future connections to the host, the browser will not offer the user a means to bypass secure connection errors, such as an invalid certificate.
 
 > [!NOTE]
-> HSTS should be used in addition to configuring an HTTP to HTTPS ({{HTTPStatus("301")}}) redirect on your server, as the initial HTTP connection is still vulnerable to a man-in-the-middle attack.
+> HSTS should be used in addition to configuring an HTTP to HTTPS ({{HTTPStatus("301")}}) redirect on your server.
+> The initial HTTP connection is still vulnerable to a man-in-the-middle attack, but this can be mitigated using a browser HSTS preload list.
 
 <table class="properties">
   <tbody>
