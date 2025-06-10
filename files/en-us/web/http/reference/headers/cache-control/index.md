@@ -339,7 +339,7 @@ The client indicates that an already-cached response should be returned. If a ca
 #### `stale-if-error`
 
 The `stale-if-error` request directive indicates that the browser is interested in receiving stale content on error from any intermediate server for a particular origin.
-This is not supported by current browsers (see [Browser compatibility](#browser_compatibility)).
+This is not supported by any browser (see [Browser compatibility](#browser_compatibility)).
 
 ## Use Cases
 
