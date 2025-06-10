@@ -79,7 +79,7 @@ If you load this HTML into a browser then look at the [rendered DOM](/en-US/docs
 </p>
 ```
 
-So why is this both good and bad? Well, in this case the browser has created the intended result, but as you'll see [later on](#lets_study_some_html_using_the_dom_inspector), this is not always the case. You'll always get _something_ running, but the browser doesn't always get it right, which can cause problems. It is better to write correct markup in the first place.
+So why is this both good and bad? Well, in this case the browser has created the intended result, but as you'll see [later on](#your_turn_studying_html_using_the_dom_inspector), this is not always the case. You'll always get _something_ running, but the browser doesn't always get it right, which can cause problems. It is better to write correct markup in the first place.
 
 > [!NOTE]
 > HTML is parsed permissively because when the web was first created, it was decided that getting content published was more important than making sure the syntax was absolutely correct. The web would probably not be as popular as it is today if it had been more strict from the very beginning.
@@ -100,9 +100,9 @@ For this article, the only relevant devtools function is the **DOM inspector**, 
 4. Also try hovering over the nodes (or selecting them with the cursor keys) and note how the currently-hovered (or selected) element is highlighted in the viewport.
 5. You can also edit the rendered DOM. We won't use the editing functionality in this article, but take some time to look up how to do this if you are curious.
 
-## Let's study some HTML using the DOM inspector
+## Your turn: Studying HTML using the DOM inspector
 
-In this section we'll get your hands dirty again. It's time to study some HTML code using the DOM inspector, and see how the browser handles common markup errors.
+In this section, you'll study some code using the DOM inspector and see how the browser handles common markup errors.
 
 1. First, save the following HTML file listing as `debug-example.html`, somewhere on your local machine. This demo is deliberately written with some built-in errors for us to explore.
 
