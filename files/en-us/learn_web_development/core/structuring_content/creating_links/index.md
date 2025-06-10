@@ -180,6 +180,7 @@ If you make a mistake, you can clear your work using the _Reset_ button in the M
 <details>
 <summary>Click here to show the solution</summary>
 
+<!-- cSpell:disable -->
 Your finished HTML should look like this:
 
 ```html-nolint
