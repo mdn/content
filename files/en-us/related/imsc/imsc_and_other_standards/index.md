@@ -18,6 +18,23 @@ IMSC traces its origins to the CFF-TT format, and [CFF-TT documents](https://w3c
 
 IMSC is unrelated to [WebVTT](https://w3c.github.io/webvtt/), and does not use the same syntax.
 
+## Active IMSC versions
+
+Two versions of IMSC are in use today:
+
+- [IMSC 1.0.1](https://www.w3.org/TR/ttml-imsc1.0.1/)
+- [IMSC 1.1](https://www.w3.org/TR/ttml-imsc1.1/)
+
+IMSC 1.1 was designed such that valid IMSC 1.0.1 documents are valid IMSC 1.1 documents and will render as intended on an IMSC 1.1 renderer. It does however add important features on top of IMSC 1.0.1:
+
+- Japanese text layout features such as ruby.
+- Support for author-controlled luminance when compositing onto absolute luminance High-Dynamic Range video.
+- Support for stereoscopic 3D.
+
+> [!NOTE]
+> IMSC 1.1 also deprecates, but does not prohibit, a limited number features that have no practical use or for which better alternatives exist.
+In summary, authors are encouraged to create IMSC 1.0.1 documents if possible and for maximal compatibility, and implementers are encouraged to implement support for IMSC 1.1 for worldwide coverage.
+
 ## Summary
 
 This document gives you all you need to know about IMSC and its relationship with other specifications.
