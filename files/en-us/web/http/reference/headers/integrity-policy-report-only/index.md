@@ -12,7 +12,7 @@ The HTTP **`Integrity-Policy-Report-Only`** response header allows website admin
 
 It does so by _reporting_ on requests (of certain [request destinations](/en-US/docs/Web/API/Request/destination)) without integrity metadata or in [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode.
 
-This helps make developers aware of content manipulation of fetched subresources, and helps them to eventually deploy {{HTTPHeader("Integrity-Policy")}} without undesired breakage.
+This helps make developers aware of content manipulation of fetched subresources, and allows them to test [integrity policies](/en-US/docs/Web/Security/Subresource_Integrity#integrity_policy) and eventually deploy an {{HTTPHeader("Integrity-Policy")}} header without breakage.
 
 <table class="properties">
   <tbody>
