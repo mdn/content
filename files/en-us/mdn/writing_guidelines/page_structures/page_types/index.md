@@ -20,7 +20,7 @@ Adding a new document is relatively straightforward, especially if you can start
 There are a few things to keep in mind:
 
 - Documents are written in Markdown in an `index.md` file.
-- If you're creating a new CSS document for a property called `foo`, create a new folder `files/en-us/web/css/foo/` and put the Markdown file in this folder (`files/en-us/web/css/foo/index.md`).
+- For example, if you're creating a new document for a HTTP header called `foo`, create a new folder at `files/en-us/web/http/reference/headers/foo` and put the Markdown file in this folder (`files/en-us/web/http/reference/headers/foo/index.md`).
 - A document's `index.md` file must start with front-matter that defines the `title`, `slug`, and, most of the time, `page-type`.
   You might find it helpful to refer to the front-matter within a similar document's `index.md`.
 

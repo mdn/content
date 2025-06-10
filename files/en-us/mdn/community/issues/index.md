@@ -14,9 +14,10 @@ While reporting an issue or participating in a conversation in an issue, always 
 
 Do the following:
 
-- Before filing an issue, consider if you need to [discuss](/en-US/docs/MDN/Community/Communication_channels#chat_rooms) it with the staff/community. Use discussions to gain different viewpoints and to converge on an agreed-upon course of action. This helps to keep issues focused and productive.
-- After filing an issue, try to fix the problem yourself. There's a guide about [Pull request submission and reviews](/en-US/docs/MDN/Community/Pull_requests) that covers everything you need to know about the contribution process.
 - If you have a question, you can ask it in the [MDN Web Docs chat rooms](/en-US/docs/MDN/Community/Communication_channels#chat_rooms) instead of filing an issue.
+- If there's many ways to fix a problem, consider if you need to [discuss](/en-US/docs/MDN/Community/Communication_channels#chat_rooms) it with the staff/community.
+  Use discussions to gain different viewpoints and to converge on an agreed-upon course of action. This helps to keep issues focused and productive.
+- After filing an issue, try to fix the problem yourself. There's a guide about [Pull request submission and reviews](/en-US/docs/MDN/Community/Pull_requests) that covers everything you need to know about the contribution process.
 
 Avoid doing the following:
 
@@ -107,15 +108,14 @@ These are the general steps for working on an issue:
 ### Fixing issues yourself
 
 If you spot a bug — whether it's a problem with the website's look and feel or an error in documentation — you can try to fix it yourself in a [pull request](/en-US/docs/MDN/Community/Pull_requests).
-- If the bug is small (such as a typo or a minor sentence improvement) or involves an uncontroversial fix, please submit a pull request with the required changes.
+If the bug is small (such as a typo or a minor sentence improvement) or involves a quick fix, you can submit a pull request with the appropriate changes.
 
-For all other type of bugs, begin by [opening the issue](#guidelines_for_reporting_an_issue).
-Add a comment about your intent to work on the issue and if possible, describe your proposed solution or steps to fix the issue.
-Wait for the issue to be triaged, so that the MDN Web Docs team can verify that the issue is legit and approves your proposed solution.
+For any other type of bug, begin by [opening an issue](#guidelines_for_reporting_an_issue).
+Add a comment about your intent to work on the issue and, if possible, describe your proposed solution or steps to fix it.
 
 > [!NOTE]
-> If you open a pull request before the issue has been triaged, your time and effort might go waste if the linked issue is deemed invalid or the solution does not match the one expected by the MDN Web Docs team.
-> After the issue is triaged, assign the issue to yourself.
+> Your time and effort might go waste if you open a pull request without opening an issue first.
+> Wait for the issue to be triaged, so that the MDN Web Docs team can verify that the issue is legit and approve your proposed solution.
 
 Using the [guidelines on working on an issue](#guidelines_for_working_on_an_issue), try to fix the problem by updating the appropriate source, such as:
 
