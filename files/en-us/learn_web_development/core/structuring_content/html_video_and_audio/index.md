@@ -279,7 +279,7 @@ For more details, including on how to add labels please read [Adding captions an
 
 ## Embedding your own audio and video
 
-For this task, we'd (ideally) like you to go out into the world and record some of your own video and audio — most phones these days allow you to record audio and video very easily and, provided you can transfer it on to your computer, you can use it. You may have to do some conversion to end up with a WebM and MP4 in the case of video, and an MP3 and Ogg in the case of audio, but there are enough programs out there to allow you to do this without too much trouble, such as [Miro Video Converter](http://www.mirovideoconverter.com/) and [Audacity](https://sourceforge.net/projects/audacity/). We'd like you to have a go!
+For this task, why not go out into the world and record some of your own video and audio? If you have a phone, use that to record audio and video, transfer it to your computer, and try it out. You may have to do some conversion to end up with a WebM and MP4 in the case of video, and an MP3 and Ogg in the case of audio, but there are enough programs and tools out there to allow you to do this without too much trouble, such as [CloudConvert](https://cloudconvert.com/mp4-converter) (online) and [Audacity](https://sourceforge.net/projects/audacity/) (desktop application). We'd like you to have a go!
 
 > [!NOTE]
 > If you are unable to source any video or audio, then you can feel free to use our [sample audio and video files](https://github.com/mdn/learning-area/tree/main/html/multimedia-and-embedding/video-and-audio-content) to carry out this exercise.
