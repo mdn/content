@@ -50,6 +50,10 @@ Static positioning is the default that every element gets. It just means "put th
 
 To see this (and get your example set up for future sections) first add a `class` of `positioned` to the second {{htmlelement("p")}} in the HTML:
 
+```html hidden live-sample___static-positioning
+<h1>Static positioning</h1>
+```
+
 ```html hidden live-sample___relative-positioning
 <h1>Relative positioning</h1>
 ```
@@ -62,16 +66,16 @@ To see this (and get your example set up for future sections) first add a `class
 <h1>Positioning context</h1>
 ```
 
-```html hidden live-sample___z-index-1
+```html hidden live-sample___z-index-initial live-sample___z-index-1
 <h1>z-index</h1>
 ```
 
-```html hidden live-sample___fixed-positioning
+```html hidden live-sample___fixed-positioning-broken live-sample___fixed-positioning
 <h1>Fixed positioning</h1>
 ```
 
 <!-- prettier-ignore-start -->
-```html hidden live-sample___relative-positioning live-sample___absolute-positioning live-sample___positioning-context live-sample___z-index-1 live-sample___fixed-positioning
+```html hidden live-sample___static-positioning live-sample___relative-positioning live-sample___absolute-positioning live-sample___positioning-context live-sample___z-index-initial live-sample___z-index-1 live-sample___fixed-positioning-broken live-sample___fixed-positioning
 
 
 <p>
@@ -81,7 +85,7 @@ To see this (and get your example set up for future sections) first add a `class
 
 ```
 
-```html live-sample___relative-positioning
+```html live-sample___static-positioning live-sample___relative-positioning
 <p class="positioned">
   By default we span 100% of the width of our parent element, and we
   are as tall as our child content. Our total width and height is our
@@ -89,18 +93,18 @@ To see this (and get your example set up for future sections) first add a `class
 </p>
 ```
 
-```html hidden live-sample___absolute-positioning live-sample___positioning-context live-sample___z-index-1
+```html hidden live-sample___absolute-positioning live-sample___positioning-context live-sample___z-index-initial live-sample___z-index-1
 <p class="positioned">
   Now I'm absolutely positioned relative to the
   <code>&lt;body&gt;</code> element, not the <code>&lt;html&gt;</code> element!
 </p>
 ```
 
-```html hidden live-sample___fixed-positioning
+```html hidden live-sample___fixed-positioning-broken live-sample___fixed-positioning
 <p class="positioned">I'm not positioned any more.</p>
 ```
 
-```html hidden live-sample___relative-positioning live-sample___absolute-positioning live-sample___positioning-context live-sample___z-index-1 live-sample___fixed-positioning
+```html hidden live-sample___static-positioning live-sample___relative-positioning live-sample___absolute-positioning live-sample___positioning-context live-sample___z-index-initial live-sample___z-index-1 live-sample___fixed-positioning-broken live-sample___fixed-positioning
 
 
 <p>
@@ -123,7 +127,8 @@ To see this (and get your example set up for future sections) first add a `class
 
 Now add the following rule to the bottom of your CSS:
 
-```css hidden live-sample___relative-positioning live-sample___absolute-positioning
+<!-- prettier-ignore-start -->
+```css hidden live-sample___static-positioning live-sample___relative-positioning live-sample___absolute-positioning
 body {
   width: 500px;
   margin: 0 auto;
@@ -140,9 +145,11 @@ span {
   background: red;
   border: 1px solid black;
 }
-```
 
-```css
+```
+<!-- prettier-ignore-end -->
+
+```css live-sample___static-positioning
 .positioned {
   position: static;
   background: yellow;
@@ -150,6 +157,8 @@ span {
 ```
 
 If you save and refresh, you'll see no difference at all, except for the updated background color of the 2nd paragraph. This is fine — as we said before, static positioning is the default behavior!
+
+{{ EmbedLiveSample('static-positioning', '', 500) }}
 
 > [!NOTE]
 > You can see the example at this point live at [`1_static-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/1_static-positioning.html) ([see source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/1_static-positioning.html)).
@@ -219,14 +228,14 @@ Let's try changing the position declaration in your code as follows:
 ```
 <!-- prettier-ignore-end -->
 
-If you now save and refresh, you should see something like so:
-
 ```css hidden live-sample___absolute-positioning
   background: yellow;
   top: 30px;
   left: 30px;
 }
 ```
+
+If you now save and refresh, you should see something like so:
 
 {{ EmbedLiveSample('absolute-positioning', '', 450) }}
 
@@ -251,21 +260,19 @@ If no ancestor elements have their position property explicitly defined, then by
 
 The positioned element is nested inside the {{htmlelement("body")}} in the HTML source, but in the final layout it's 30px away from the top and the left edges of the page. We can change the **positioning context**, that is, which element the absolutely positioned element is positioned relative to. This is done by setting positioning on one of the element's ancestors: to one of the elements it's nested inside of (you can't position it relative to an element it's not nested inside of). To see this, add the following declaration to your `body` rule:
 
-```css hidden live-sample___positioning-context live-sample___z-index-1
+```css hidden live-sample___positioning-context live-sample___z-index-initial live-sample___z-index-1
 body {
   width: 500px;
   margin: 0 auto;
 ```
 
 <!-- prettier-ignore-start -->
-```css live-sample___positioning-context live-sample___z-index-1
+```css live-sample___positioning-context live-sample___z-index-initial live-sample___z-index-1
   position: relative;
 ```
 <!-- prettier-ignore-end -->
 
-This should give the following result:
-
-```css hidden live-sample___positioning-context live-sample___z-index-1
+```css hidden live-sample___positioning-context live-sample___z-index-initial live-sample___z-index-1
 }
 
 p {
@@ -288,6 +295,8 @@ span {
 }
 ```
 
+This should give the following result:
+
 {{ EmbedLiveSample('positioning-context', '', 420) }}
 
 The positioned element now sits relative to the {{htmlelement("body")}} element.
@@ -301,11 +310,14 @@ All this absolute positioning is good fun, but there's another feature we haven'
 
 Try adding the following to your CSS to make the first paragraph absolutely positioned too:
 
-```css hidden live-sample___z-index-1
+<!-- prettier-ignore-start -->
+```css hidden live-sample___z-index-initial live-sample___z-index-1
+
 
 ```
+<!-- prettier-ignore-end -->
 
-```css
+```css live-sample___z-index-initial
 p:nth-of-type(1) {
   position: absolute;
   background: lime;
@@ -315,6 +327,8 @@ p:nth-of-type(1) {
 ```
 
 At this point you'll see the first paragraph colored lime, moved out of the document flow, and positioned a bit above from where it originally was. It's also stacked below the original `.positioned` paragraph where the two overlap. This is because the `.positioned` paragraph is the second paragraph in the source order, and positioned elements later in the source order win over positioned elements earlier in the source order.
+
+{{ EmbedLiveSample('z-index-initial', '', 400) }}
 
 Can you change the stacking order? Yes, you can, by using the {{cssxref("z-index")}} property. "z-index" is a reference to the z-axis. You may recall from previous points in the course where we discussed web pages using horizontal (x-axis) and vertical (y-axis) coordinates to work out positioning for things like background images and drop shadow offsets. For languages that run left to right, (0,0) is at the top left of the page (or element), and the x- and y-axes run across to the right and down the page.
 
@@ -336,11 +350,11 @@ p:nth-of-type(1) {
 ```
 <!-- prettier-ignore-end -->
 
-You should now see the lime paragraph on top:
-
 ```css hidden live-sample___z-index-1
 }
 ```
+
+You should now see the lime paragraph on top:
 
 {{ EmbedLiveSample('z-index-1', '', 400) }}
 
@@ -357,7 +371,7 @@ Let's put together a simple example to show what we mean. First of all, delete t
 
 Now update the `body` rule to remove the `position: relative;` declaration and add a fixed height, like so:
 
-```css live-sample___fixed-positioning
+```css live-sample___fixed-positioning-broken live-sample___fixed-positioning
 body {
   width: 500px;
   height: 1400px;
@@ -367,7 +381,7 @@ body {
 
 Now we're going to give the {{htmlelement("Heading_Elements", "&lt;h1>")}} element `position: fixed;` and have it sit at the top of the viewport. Add the following rule to your CSS:
 
-```css hidden live-sample___fixed-positioning
+```css hidden live-sample___fixed-positioning-broken live-sample___fixed-positioning
 p {
   background: aqua;
   border: 3px solid blue;
@@ -381,7 +395,7 @@ span {
 }
 ```
 
-```css live-sample___fixed-positioning
+```css live-sample___fixed-positioning-broken live-sample___fixed-positioning
 h1 {
   position: fixed;
   top: 0;
@@ -394,7 +408,11 @@ h1 {
 
 The `top: 0;` is required to make it stick to the top of the screen. We give the heading the same width as the content column and then a white background and some padding and margin so the content won't be visible underneath it.
 
-If you save and refresh, you'll see a fun little effect of the heading staying fixed — the content appears to scroll up and disappear underneath it. But notice how some of the content is initially clipped under the heading. This is because the positioned heading no longer appears in the document flow, so the rest of the content moves up to the top. We could improve this by moving the paragraphs all down a bit. We can do this by setting some top margin on the first paragraph. Add this now:
+If you save and refresh, you'll see a fun little effect of the heading staying fixed:
+
+{{ EmbedLiveSample('fixed-positioning-broken', '', 400) }}
+
+The content appears to scroll up and disappear underneath it. But notice how some of the content is initially clipped under the heading. This is because the positioned heading no longer appears in the document flow, so the rest of the content moves up to the top. We could improve this by moving the paragraphs all down a bit. We can do this by setting some top margin on the first paragraph. Add this now:
 
 ```css hidden live-sample___fixed-positioning
 
@@ -464,7 +482,7 @@ Sticky positioning can be used, for example, to cause a navigation bar to scroll
 ```css hidden
 body {
   width: 500px;
-  margin: 0 auto;
+  margin: 0 auto 100vh auto;
 }
 
 .positioned {
@@ -480,7 +498,6 @@ body {
 .positioned {
   position: sticky;
   top: 30px;
-  left: 30px;
 }
 ```
 
@@ -524,6 +541,13 @@ An interesting and common use of `position: sticky` is to create a scrolling ind
 
 The CSS might look as follows. In normal flow the {{htmlelement("dt")}} elements will scroll with the content. When we add `position: sticky` to the {{htmlelement("dt")}} element, along with a {{cssxref("top")}} value of 0, supporting browsers will stick the headings to the top of the viewport as they reach that position. Each subsequent header will then replace the previous one as it scrolls up to that position.
 
+```css hidden
+body {
+  width: 500px;
+  margin: 0 auto 100vh auto;
+}
+```
+
 ```css
 dt {
   background-color: black;
@@ -531,16 +555,7 @@ dt {
   padding: 10px;
   position: sticky;
   top: 0;
-  left: 0;
   margin: 1em 0;
-}
-```
-
-```css hidden
-body {
-  width: 500px;
-  height: 880px;
-  margin: 0 auto;
 }
 ```
 
