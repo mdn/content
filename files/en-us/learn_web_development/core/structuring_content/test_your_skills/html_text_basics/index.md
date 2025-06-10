@@ -35,7 +35,9 @@ The Anaconda
 The crafty anaconda likes to slither around the page, traveling rapidly by way of anchors to sneak up on his prey.
 ```
 
-```css hidden live-sample___text-basics-1
+<!-- Shared/setup CSS code -->
+
+```css hidden live-sample___text-basics-1 hidden live-sample___text-basics-2 live-sample___text-basics-3 live-sample___text-basics-4
 body {
   background-color: #fff;
   color: #333;
@@ -58,6 +60,14 @@ h2 {
   margin: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+```
+
+<!-- Example-specific code -->
+
+```css hidden live-sample___text-basics-1
 h1,
 h2 {
   color: purple;
@@ -66,10 +76,6 @@ h2 {
 p {
   color: gray;
   margin: 0.5em 0;
-}
-
-* {
-  box-sizing: border-box;
 }
 ```
 
@@ -133,28 +139,6 @@ Turn the handle and push
 ```
 
 ```css hidden live-sample___text-basics-2
-body {
-  background-color: #fff;
-  color: #333;
-  font:
-    1em / 1.4 Helvetica Neue,
-    Helvetica,
-    Arial,
-    sans-serif;
-  padding: 1em;
-  margin: 0;
-}
-
-h1 {
-  font-size: 2rem;
-  margin: 0;
-}
-
-h2 {
-  font-size: 1.6rem;
-  margin: 0;
-}
-
 p {
   margin: 0.5em 0;
 }
@@ -229,21 +213,7 @@ His description is bottomless.
 ```
 
 ```css hidden live-sample___text-basics-3
-body {
-  background-color: #fff;
-  color: #333;
-  font:
-    1em / 1.4 Helvetica Neue,
-    Helvetica,
-    Arial,
-    sans-serif;
-  padding: 1em;
-  margin: 0;
-}
-
 h1 {
-  font-size: 2rem;
-  margin: 0;
   color: purple;
 }
 
@@ -255,10 +225,6 @@ dl {
 dt {
   font-weight: bold;
   color: purple;
-}
-
-* {
-  box-sizing: border-box;
 }
 ```
 
@@ -312,23 +278,6 @@ If you make a mistake, you can clear your work using the _Reset_ button in the M
 ```
 
 ```css hidden live-sample___text-basics-4
-body {
-  background-color: #fff;
-  color: #333;
-  font:
-    1em / 1.4 Helvetica Neue,
-    Helvetica,
-    Arial,
-    sans-serif;
-  padding: 1em;
-  margin: 0;
-}
-
-h1 {
-  font-size: 2rem;
-  margin: 0;
-}
-
 h1,
 strong {
   color: purple;
@@ -341,10 +290,6 @@ em {
 
 em {
   color: gray;
-}
-
-* {
-  box-sizing: border-box;
 }
 ```
 

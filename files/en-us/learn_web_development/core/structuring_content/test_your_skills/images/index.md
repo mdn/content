@@ -31,7 +31,9 @@ If you make a mistake, you can clear your work using the _Reset_ button in the M
 <img />
 ```
 
-```css hidden live-sample___images-1
+<!-- Shared/setup CSS code -->
+
+```css hidden live-sample___images-1 live-sample___images-2 live-sample___images-3
 body {
   background-color: #fff;
   color: #333;
@@ -86,29 +88,6 @@ If you make a mistake, you can clear your work using the _Reset_ button in the M
   alt="Several tall evergreen trees called larches" />
 ```
 
-```css hidden live-sample___images-2
-body {
-  background-color: #fff;
-  color: #333;
-  font:
-    1em / 1.4 Helvetica Neue,
-    Helvetica,
-    Arial,
-    sans-serif;
-  padding: 1em;
-  margin: 0;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-img {
-  border: 1px solid black;
-  max-width: 100%;
-}
-```
-
 {{ EmbedLiveSample('images-2', "100%", 600) }}
 
 <details>
@@ -147,25 +126,8 @@ The 2019 Firefox logo
 ```
 
 ```css hidden live-sample___images-3
-body {
-  background-color: #fff;
-  color: #333;
-  font:
-    1em / 1.4 Helvetica Neue,
-    Helvetica,
-    Arial,
-    sans-serif;
-  padding: 1em;
-  margin: 0;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-img {
-  border: 1px solid black;
-  max-width: 100%;
+figcaption {
+  font-style: italic;
 }
 ```
 
