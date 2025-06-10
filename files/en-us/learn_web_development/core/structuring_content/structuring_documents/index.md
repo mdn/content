@@ -301,7 +301,7 @@ Would render like this:
 
 ## Structuring a basic website
 
-The next stage after planing out the structure of a single webpage is to plan out the structure of a whole multi-page website, including how they should be arranged and link to one another for the best possible user experience. This is called {{glossary("Information architecture")}}.
+The next stage after planning out the structure of a single webpage is to plan out the structure of a whole multi-page website, including how they should be arranged and link to one another for the best possible user experience. This is called {{glossary("Information architecture")}}.
 
 In a large, complex website, a lot of planning can go into this process, but for a basic website with a few pages, it can be a quick and fun exercise.
 
