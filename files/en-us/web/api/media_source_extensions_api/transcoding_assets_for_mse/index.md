@@ -11,7 +11,7 @@ When working with Media Source Extensions, it is likely that you need to conditi
 ## Getting started
 
 1. The first and most important step is to ensure that your files are comprised of a container and codec that users' browsers support.
-2. Depending on the codec, you might need to fragment the file to comply with the [ISO BMFF spec](https://www.w3.org/TR/mse-byte-stream-format-isobmff/).
+2. Depending on the codec, you might need to fragment the file to comply with the [ISO BMFF spec](https://w3c.github.io/mse-byte-stream-format-isobmff/).
 3. (Optional) If you decide to use Dynamic Adaptive Streaming over HTTP (DASH) for adaptive bitrate streaming, you need to transcode your assets into multiple resolutions. Most DASH clients expect a corresponding Media Presentation Description (MPD) manifest file, which is typically generated while generating the multiple resolution asset files.
 
 Below we'll cover all of these steps, but first let's look at a toolchain we can use to do this fairly easily.
@@ -37,7 +37,7 @@ Sample media should be placed in the Bento4 `utils` directory and worked here.
 
 ### Container and Codec Support
 
-As specified in [section 1.1 of the MSE spec: Goals](https://www.w3.org/TR/media-source/#goals), MSE is designed not to require support for any particular media format or codec. While this is true on paper, browser support varies for specific container/codec combinations.
+As specified in [section 1.1 of the MSE spec: Goals](https://w3c.github.io/media-source/#goals), MSE is designed not to require support for any particular media format or codec. While this is true on paper, browser support varies for specific container/codec combinations.
 
 To check if the browser supports a particular container, you can pass a string of the MIME type to the {{domxref("MediaSource.isTypeSupported_static", "MediaSource.isTypeSupported()")}} method:
 
@@ -59,7 +59,7 @@ ffmpeg -i trailer_1080p.mov -c:v copy -c:a copy bunny.mp4
 
 ### Checking Fragmentation
 
-In order to properly stream MP4, we need the asset to be an [ISO BMF](https://www.w3.org/TR/mse-byte-stream-format-isobmff/) format MP4. Without proper fragmentation, any given MP4 file is not guaranteed to work with MSE. This means that metadata within the container is spread out and not lumped together.
+In order to properly stream MP4, we need the asset to be an [ISO BMF](https://w3c.github.io/mse-byte-stream-format-isobmff/) format MP4. Without proper fragmentation, any given MP4 file is not guaranteed to work with MSE. This means that metadata within the container is spread out and not lumped together.
 
 To check whether an MP4 file is a proper MP4 stream, you can again use the [mp4info](https://nickdesaulniers.github.io/mp4info/) utility to list the atoms of an MP4.
 

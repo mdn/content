@@ -167,4 +167,4 @@ Combinators are selectors that establish a relationship between two or more simp
 
 ## External Links
 
-- [CSS Indices (w3.org)](https://www.w3.org/TR/CSS/#indices)
+- [CSS Indices (w3.org)](https://www.w3.org/TR/css/#indices)

@@ -495,8 +495,8 @@ For example, consider a function that concatenates several strings. The only for
 function myConcat(separator) {
   let result = ""; // initialize list
   // iterate through arguments
-  for (const arg of arguments) {
-    result += arg + separator;
+  for (let i = 1; i < arguments.length; i++) {
+    result += arguments[i] + separator;
   }
   return result;
 }
