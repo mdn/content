@@ -71,7 +71,7 @@ The following example indicates to the browser that the page should be rendered 
 <meta name="viewport" content="width=device-width" />
 ```
 
-### Using a media query and a viewport keyword
+### Using a media query with a viewport meta
 
 The following `content` value uses multiple keywords that hint to the browser to use fullscreen mode, along with `viewport-fit`, which helps avoid display cutouts such as mobile device notches:
 
