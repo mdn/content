@@ -64,5 +64,4 @@ navigator.globalPrivacyControl; // "false" or "true"
 - {{HTTPHeader("DNT")}} header
 - {{HTTPHeader("Tk")}} header
 - [globalprivacycontrol.org](https://globalprivacycontrol.org/)
-- [Global Privacy Control Spec](https://privacycg.github.io/gpc-spec/)
 - [Do Not Track on Wikipedia](https://en.wikipedia.org/wiki/Do_Not_Track)

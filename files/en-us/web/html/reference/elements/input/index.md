@@ -1264,7 +1264,7 @@ The following is an example of how to associate the `<label>` with an `<input>` 
 
 ### Size
 
-Interactive elements such as form input should provide an area large enough that it is easy to activate them. This helps a variety of people, including people with motor control issues and people using non-precise forms of input such as a stylus or fingers. A minimum interactive size of 44×44 [CSS pixels](https://www.w3.org/TR/WCAG21/#dfn-css-pixels) is recommended.
+Interactive elements such as form input should provide an area large enough that it is easy to activate them. This helps a variety of people, including people with motor control issues and people using non-precise forms of input such as a stylus or fingers. A minimum interactive size of 44×44 [CSS pixels](https://w3c.github.io/wcag/guidelines/22/#dfn-css-pixels) is recommended.
 
 - [Understanding Success Criterion 2.5.5: Target Size | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
 - [Target Size and 2.5.5 | Adrian Roselli](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
@@ -1395,7 +1395,7 @@ Interactive elements such as form input should provide an area large enough that
           </li>
           <li>
             <code>type=color|date|datetime-local|file|hidden|month|password|time|week</code>:
-            <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">no corresponding role</a>
+            <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role">no corresponding role</a>
           </li>
         </ul>
       </td>

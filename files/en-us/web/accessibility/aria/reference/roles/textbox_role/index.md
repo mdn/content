@@ -81,7 +81,7 @@ In a single-line use (when `aria-multiline` is `false` or not used), the Return 
 All features associated with any and all properties and states must be maintained, and forms submission on enter or return on a single line textbox needs to be handled.
 
 - Focus event handler and aria-activedescendant attribute
-  - : If you are implementing a composite widget, such as a combobox composed of a text box and a listbox, you need to manage the `aria-activedescendant` attribute using a handler. Before using this technique, ensure that the browsers you need to target currently support it. See the [specification of aria-descendant](https://www.w3.org/TR/wai-aria-1.1/#aria-activedescendant) for further information.
+  - : If you are implementing a composite widget, such as a combobox composed of a text box and a listbox, you need to manage the `aria-activedescendant` attribute using a handler. Before using this technique, ensure that the browsers you need to target currently support it. See the [specification of aria-descendant](https://w3c.github.io/aria/#aria-activedescendant) for further information.
 
 > [!NOTE]
 > It is a better practice to use an {{HTMLElement("input")}} element with type="text", or a {{HTMLElement("textarea")}} element instead of the ARIA textbox role. When using either semantic element, the ARIA textbox role is not necessary. See [Notes on Using ARIA in HTML](https://w3c.github.io/using-aria/).

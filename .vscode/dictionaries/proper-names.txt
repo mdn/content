@@ -240,6 +240,7 @@ Hyperaudio
 Hönigswald
 Icecast
 idb-keyval
+Igalia
 Imagify
 Iniesta
 Inkscape
