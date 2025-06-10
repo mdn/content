@@ -33,6 +33,7 @@ IMSC 1.1 was designed such that valid IMSC 1.0.1 documents are valid IMSC 1.1 do
 
 > [!NOTE]
 > IMSC 1.1 also deprecates, but does not prohibit, a limited number features that have no practical use or for which better alternatives exist.
+
 In summary, authors are encouraged to create IMSC 1.0.1 documents if possible and for maximal compatibility, and implementers are encouraged to implement support for IMSC 1.1 for worldwide coverage.
 
 ## Summary
