@@ -18,11 +18,11 @@ For example, to indicate that a document should use `cornflowerblue` as a theme 
 <meta name="theme-color" content="cornflowerblue" />
 ```
 
-## Usage
+## Usage notes
 
 A `<meta name="theme-color">` element has the following additional attributes:
 
-- `content`
+- [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content)
   - : A `<meta>` element with `name=theme-color` must have a `content` attribute that defines the theme color.
     The value of `content` attribute is as follows:
     - {{cssxref("&lt;color&gt;")}} value

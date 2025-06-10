@@ -21,12 +21,12 @@ For example, the following `<meta>` element sends the {{glossary("origin")}} of 
 > Dynamically inserting `<meta name="referrer">` (with {{domxref("Document.write", "document.write()")}} or {{domxref("Node.appendChild", "appendChild()")}}) makes the referrer behavior unpredictable.
 > When several conflicting policies are defined, the `no-referrer` policy is applied.
 
-## Usage
+## Usage notes
 
 A `<meta name="referrer">` element has the following additional attributes:
 
 - [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content)
-  - : Sets the document referrer. You must define this attribute. 
+  - : Sets the document referrer. You must define this attribute.
     It can have any of the following values:
     - `no-referrer`
       - : Does not send an HTTP `Referer` header.

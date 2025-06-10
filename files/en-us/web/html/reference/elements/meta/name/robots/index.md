@@ -20,12 +20,13 @@ For example, to hint to crawlers that a page should be excluded from their searc
 > Only cooperative robots follow these rules. A crawler still needs to access the resource to read headers and meta elements (see [X-Robots-Tag: Interaction with robots.txt](/en-US/docs/Web/HTTP/Reference/Headers/X-Robots-Tag#interaction_with_robots.txt)).
 > If you want to prevent bandwidth consumption by crawlers, a restrictive {{Glossary("robots.txt")}} file is more effective than indexing rules as it blocks resources from being crawled entirely.
 
-## Usage
+## Value
 
 A `<meta name="robots">` element can have the following attributes:
 
-- `content`
-  - : The `content` attribute should be defined, and its value sets indexing and crawling behavior for cooperative search engine robots. May be any of the following values:
+- [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content)
+  - : The `content` attribute should be defined, and its value sets indexing and crawling behavior for cooperative search engine robots.
+    May be any of the following values:
     - `index`
       - : Allows the robot to index the page. This is the default behavior.
         Used by all major crawlers.

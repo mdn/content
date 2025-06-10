@@ -17,11 +17,11 @@ For example, to set the viewport to match the device's width and display content
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 ```
 
-## Usage
+## Usage notes
 
 A `<meta name="viewport">` element has the following additional attributes:
 
-- `content`
+- [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content)
   - : The `content` attribute should be defined, and its value sets various viewport-related behaviors.
     Use one or more of the following keywords in a comma-separated list:
     - `width`

@@ -21,12 +21,12 @@ For example, to indicate that a document prefers dark mode but also supports lig
 
 Your styles can adapt to the current color scheme using the {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} CSS media feature.
 
-## Usage
+## Usage notes
 
 A `<meta name="color-scheme">` element has the following additional attributes:
 
-- `content`
-  - : A `<meta>` element with `name=color-scheme` must have a [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content) attribute that defines the color scheme as a CSS {{cssxref("color-scheme")}} value.
+- [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content)
+  - : A `<meta>` element with `name=color-scheme` must have a `content` attribute that defines the color scheme as a CSS {{cssxref("color-scheme")}} value.
     The `content` attribute may be one of the following:
     - `normal`
       - : The document is unaware of color schemes and should be rendered using the default color palette.
