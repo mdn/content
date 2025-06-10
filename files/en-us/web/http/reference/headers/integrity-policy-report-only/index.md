@@ -10,7 +10,7 @@ browser-compat: http.headers.IntegrityPolicyReportOnly
 
 The HTTP **`Integrity-Policy-Report-Only`** response header allows website administrators to ensure that all resources the user agent loads (of a certain type) have [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity) guarantees.
 
-It does so by _reporting_ on requests (of certain [request destinations](/en-US/docs/Web/API/Request/destination)) without integrity metadata or in [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode that are being made.
+It does so by _reporting_ on requests (of certain [request destinations](/en-US/docs/Web/API/Request/destination)) without integrity metadata or in [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode.
 
 This helps make developers aware of content manipulation of fetched subresources, and helps them to eventually deploy {{HTTPHeader("Integrity-Policy")}} without undesired breakage.
 
