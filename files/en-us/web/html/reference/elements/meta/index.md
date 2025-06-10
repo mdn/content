@@ -7,7 +7,7 @@ browser-compat: html.elements.meta
 
 {{HTMLSidebar}}
 
-The **`<meta>`** [HTML](/en-US/docs/Web/HTML) element represents {{Glossary("Metadata","metadata")}} that cannot be represented by other meta-related elements, such as  {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, or {{HTMLElement("title")}}.
+The **`<meta>`** [HTML](/en-US/docs/Web/HTML) element represents {{Glossary("Metadata","metadata")}} that cannot be represented by other meta-related elements, such as {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, or {{HTMLElement("title")}}.
 
 The type of metadata provided by the `<meta>` element can be one of the following:
 
