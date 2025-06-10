@@ -111,6 +111,9 @@ These features are shipping in Firefox 140 but are disabled by default. To exper
   The API is now feature complete.
   ([Firefox bug 1964407](https://bugzil.la/1964407)).
 
+- **`CloseWatcher`** (Nightly - desktop only): `dom.closewatcher.enabled`.
+  The {{domxref("CloseWatcher")}} interface enables you to implement components that can be closed using device-native mechanisms, in the same way as built-in components. On Windows, for example, you can use this interface to make a custom sidebar close when users press the <kbd>Esc</kbd> key. ([Firefox bug 1966459](https://bugzil.la/1966459)).
+
 ## Older versions
 
 {{Firefox_for_developers}}
