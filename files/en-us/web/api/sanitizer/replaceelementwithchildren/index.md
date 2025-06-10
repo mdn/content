@@ -101,7 +101,7 @@ log(`unsanitizedHTMLString:\n ${unsanitizedString}`);
 // Create a <div> element
 const divElement = document.createElement("div");
 
-divElement.setHTML(unsanitizedString, { sanitizer: sanitizer });
+divElement.setHTML(unsanitizedString, { sanitizer });
 log(`\n\nsanitizedHTML:\n ${divElement.innerHTML}`);
 
 // Log the sanitizer configuration
