@@ -32,7 +32,7 @@ Our Llama is a big fan of list items. When she spies a patch of them on a web pa
 
 The Anaconda
 
-The crafty anaconda likes to slither around the page, travelling rapidly by way of anchors to sneak up on his prey.
+The crafty anaconda likes to slither around the page, traveling rapidly by way of anchors to sneak up on his prey.
 ```
 
 ```css hidden live-sample___text-basics-1
