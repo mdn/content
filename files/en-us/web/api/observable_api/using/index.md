@@ -199,7 +199,7 @@ Press the `<button>`, and note how its text changes to "Restart count" once the 
 
 ## Unsubscribing
 
-You can unsubscribe from an observable — signaling that you want it to stop producing values — using the {{domxref("Observable.takeUntil()")}} method or an {{domxref("AbortController")}}.
+You can unsubscribe an observable — signaling that you want it to stop producing values — using the {{domxref("Observable.takeUntil()")}} method or an {{domxref("AbortController")}}.
 
 ### Unsubscribing with `takeUntil()`
 
@@ -228,7 +228,7 @@ The example runs identically to the first version, but note that the events no l
 
 Using an `AbortController` to unsubscribe has the advantage that you can unsubscribe mid-way through observable data processing, at any point you like.
 
-Let's modify our [Basic `Observable()` example](#basic_observable_example) again, this time to use an `AbortController`. The HTML is very similar except that it includes an "Abort count" `<button>`. Our `Observable()` constructor call is also very similar, except that this time we don't include a conditional inside the `setInterval()` call, and we don't call `Subscriber.complete()`; all of the conditional code is handled inside the `Subscriber.next()` function. We also disable the "Start count" `<button>` inside the `addTeardown()` function, as we are not going to be able to run it again after it is aborted.
+Let's modify our [Basic `Observable()` example](#basic_observable_example) again, this time to use an `AbortController`. The HTML is very similar except that it includes an "Abort count" `<button>`.
 
 ```html hidden live-sample___basic-abort-example
 <button class="count">Start count</button>
@@ -242,37 +242,44 @@ const countBtn = document.querySelector(".count");
 const abortBtn = document.querySelector(".abort");
 ```
 
-```js live-sample___basic-abort-example
-const observable = new Observable((subscriber) => {
-  let i = 1;
-  setInterval(() => {
-    subscriber.next(i);
-    i++;
-  }, 500);
-  subscriber.addTeardown(() => {
-    countBtn.disabled = true;
-  });
-});
-```
-
-Next, we create a new `AbortController` using the {{domxref("AbortController.AbortController", "AbortController()")}} constructor:
+First, we create a `controller` variable that will later contain our {{domxref("AbortController")}}:
 
 ```js live-sample___basic-abort-example
-let controller = new AbortController();
+let controller;
 ```
 
-We update the `Observable.subscribe()` call as follows. We have removed the `complete()` method definition, and updated the `next()` method definition so that it checks whether the passed `value` is higher than `10`. If so, we update the `<p>` text to "Count complete" and abort the subscription via {{domxref("AbortController.abort()")}}; if not, we update the `<p>` text to the current `value` and carry on to the next iteration.
+Now onto our modified `init()` function. We've moved our `Observable()` constructor call in here, so that a new observable is created every time the count is started. The contrictor call is very similar to the previous example, except that this time we don't include a conditional inside the `setInterval()` call, and we don't call `Subscriber.complete()`; all of the conditional code is handled inside the `Subscriber.next()` function. We also disable the "Start count" `<button>` while the count is running, and enable it again inside the `addTeardown()` function so that it is enabled ready for the next count to start.
 
-We have also added a second `subscribe` argument — an options object containing a `signal` property equal to the {{domxref("AbortController.signal")}} property. This is required to associate the controller with the observable, enabling us to unsubscribe via the `abort()` call.
+Next, we create a new `AbortController` using the {{domxref("AbortController.AbortController", "AbortController()")}} constructor and assign it to the `controller` variable.
+
+In the `Observable.subscribe()` call, we have removed the `complete()` method definition, and updated the `next()` method definition so that it checks whether the passed `value` is higher than `10`. If so, we update the `<p>` text to "Count complete" and abort the subscription via {{domxref("AbortController.abort()")}}; if not, we update the `<p>` text to the current `value` and carry on to the next iteration.
+
+We have also added a second `subscribe()` argument — an options object containing a `signal` property equal to the {{domxref("AbortController.signal")}} property. This is required to associate the controller with the observable, enabling us to unsubscribe via the `abort()` call.
 
 ```js live-sample___basic-abort-example
 function init() {
+  const observable = new Observable((subscriber) => {
+    countBtn.textContent = "Counting...";
+    countBtn.disabled = true;
+    let i = 1;
+    setInterval(() => {
+      subscriber.next(i);
+      i++;
+    }, 500);
+    subscriber.addTeardown(() => {
+      countBtn.textContent = "Restart count";
+      countBtn.disabled = false;
+    });
+  });
+
+  controller = new AbortController();
+
   observable.subscribe(
     {
       next: (value) => {
         if (value > 10) {
-          outputElem.textContent = "Count complete";
           controller.abort();
+          outputElem.textContent = "Count complete";
         } else {
           outputElem.textContent = value;
         }
@@ -285,15 +292,16 @@ function init() {
 }
 ```
 
-When the "Abort count" `<button>` is clicked, we run `AbortController.abort()` to abort the subscription:
+When the "Abort count" `<button>` is clicked, we run `AbortController.abort()` to abort the subscription and update the `<p>` text to explicitly report that the count was aborted manually:
 
 ```js hidden live-sample___basic-abort-example
-countBtn.when("click").subscribe(init);
+countBtn.addEventListener("click", init);
 ```
 
 ```js live-sample___basic-abort-example
 abortBtn.addEventListener("click", () => {
   controller.abort();
+  outputElem.textContent = "Count aborted";
 });
 ```
 
@@ -302,8 +310,6 @@ The rendered output looks like this:
 {{EmbedLiveSample("basic-abort-example", "100%", "80px")}}
 
 When you press the "Start count" `<button>`, the output should be identical to the previous version of the example. However, this time the unsubscribe step is being handled via the `AbortController` rather than the `complete()` function. After pressing "Start count", you can press "Abort count" at any time to unsubscribe and stop the count, or wait for the count to finish.
-
-If you want to experiment with the abort step multiple times, you'll have to refresh the page.
 
 ## Dynamic list example
 

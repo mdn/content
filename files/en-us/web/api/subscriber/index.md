@@ -21,8 +21,8 @@ The subscriber callback defines _when_ the `Subscriber` lifecycle callbacks are 
 
 - {{domxref("Subscriber.active", "active")}} {{Experimental_Inline}}
   - : A boolean value that indicates whether the subscription is active or not.
-- {{domxref("Subscriber.active", "active")}} {{Experimental_Inline}}
-  - : An {{domxref("AbortSignal")}} object instance, which allows the subscription to be aborted via the associated {{domxref("AbortController")}}.
+- {{domxref("Subscriber.signal", "signal")}} {{Experimental_Inline}}
+  - : A reference to the {{domxref("AbortSignal")}} object instance set in the subscribing {{domxref("Observable.subscribe()")}} call.
 
 ## Instance methods
 
