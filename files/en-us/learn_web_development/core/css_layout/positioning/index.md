@@ -381,7 +381,10 @@ body {
 
 Now we're going to give the {{htmlelement("Heading_Elements", "&lt;h1>")}} element `position: fixed;` and have it sit at the top of the viewport. Add the following rule to your CSS:
 
+<!-- prettier-ignore-start -->
 ```css hidden live-sample___fixed-positioning-broken live-sample___fixed-positioning
+
+
 p {
   background: aqua;
   border: 3px solid blue;
@@ -393,7 +396,9 @@ span {
   background: red;
   border: 1px solid black;
 }
+
 ```
+<!-- prettier-ignore-end -->
 
 ```css live-sample___fixed-positioning-broken live-sample___fixed-positioning
 h1 {
@@ -414,9 +419,12 @@ If you save and refresh, you'll see a fun little effect of the heading staying f
 
 The content appears to scroll up and disappear underneath it. But notice how some of the content is initially clipped under the heading. This is because the positioned heading no longer appears in the document flow, so the rest of the content moves up to the top. We could improve this by moving the paragraphs all down a bit. We can do this by setting some top margin on the first paragraph. Add this now:
 
+<!-- prettier-ignore-start -->
 ```css hidden live-sample___fixed-positioning
 
+
 ```
+<!-- prettier-ignore-end -->
 
 ```css live-sample___fixed-positioning
 p:nth-of-type(1) {
