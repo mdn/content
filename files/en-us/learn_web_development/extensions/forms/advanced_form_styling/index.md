@@ -98,9 +98,9 @@ The following live example shows you what they look like in your system — defa
 
 In most cases, the effect is to remove the stylized border, which makes CSS styling a bit easier, but isn't really essential. In a couple of cases — search and radio buttons/checkboxes, it becomes way more useful. We'll look at those now.
 
-### Taming search boxes
+### Search boxes and `appearance`
 
-[`<input type="search">`](/en-US/docs/Web/HTML/Reference/Elements/input/search) is basically just a text input, so why is `appearance: none;` useful here? The `appearance: none;` value used to be particularly useful for consistently styling input type="search" elements. Without it, Safari didn't allow {{cssxref("height")}} or {{cssxref("font-size")}} values to be set on them. However, this is no longer the case in Safari 16 and later. You may still want to target `input[type="search"]` explicitly with `appearance: none;` if your browser support matrix includes Safari versions older than 16.
+The `appearance: none;` value used to be particularly useful for consistently styling [`<input type="search">`](/en-US/docs/Web/HTML/Reference/Elements/input/search)  elements. Without it, Safari didn't allow {{cssxref("height")}} or {{cssxref("font-size")}} values to be set on them. However, this is no longer the case in Safari 16 and later. You may still want to target `input[type="search"]` explicitly with `appearance: none;` if your browser support matrix includes Safari versions older than 16.
 
 In search inputs, the "x" delete button, which appears when the value is not null, disappears when the input loses focus in Edge and Chrome, but stays put in Safari. To remove via CSS, you can use this following rule:
 
