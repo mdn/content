@@ -31,7 +31,9 @@ If you make a mistake, you can clear your work using the _Reset_ button in the M
 <audio></audio>
 ```
 
-```css hidden live-sample___audio-1
+<!-- Shared styles -->
+
+```css hidden live-sample___video-1 live-sample___audio-1
 body {
   background-color: #fff;
   color: #333;
@@ -46,9 +48,8 @@ body {
 
 * {
   box-sizing: border-box;
-}
 
-audio {
+audio, video {
   border: 1px solid black;
 }
 ```
