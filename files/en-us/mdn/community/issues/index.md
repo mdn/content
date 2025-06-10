@@ -107,7 +107,7 @@ These are the general steps for working on an issue:
 ### Fixing issues yourself
 
 If you spot a bug — whether it's a problem with the website's look and feel or an error in documentation — you can try to fix it yourself in a [pull request](/en-US/docs/MDN/Community/Pull_requests).
-If the bug is small, such as a typo or a minor sentence improvement, or involves an uncontroversial fix, submit a pull request with the changes.
+- If the bug is small (such as a typo or a minor sentence improvement) or involves an uncontroversial fix, please submit a pull request with the required changes.
 
 For all other type of bugs, begin by [opening the issue](#guidelines_for_reporting_an_issue).
 Add a comment about your intent to work on the issue and if possible, describe your proposed solution or steps to fix the issue.
