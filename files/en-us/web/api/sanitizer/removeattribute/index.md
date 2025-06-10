@@ -96,7 +96,7 @@ log(JSON.stringify(sanitizerConfig, null, 2));
 #### Results
 
 The final configuration is logged below.
-Note how both attributes are now added to the [`removeAttributes`](2/en-US/docs/Web/API/SanitizerConfig#removeattributes_2) list (these attributes will removed if present on elements when the sanitizer is used).
+Note how both attributes are now added to the [`removeAttributes`](/en-US/docs/Web/API/SanitizerConfig#removeattributes_2) list (these attributes will removed if present on elements when the sanitizer is used).
 
 {{EmbedLiveSample("How to disallow specific attributes","100","360px")}}
 

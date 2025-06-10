@@ -160,7 +160,7 @@ const sanitizer = new Sanitizer({ elements: ["div", "p", "span", "script"] });
 
 // Use the sanitizer to set the HTML of the second element using the safe method
 const setHTMLElement = document.querySelector("#setHTML");
-setHTMLElement.setHTML(unsafeHTMLString, { sanitizer: sanitizer });
+setHTMLElement.setHTML(unsafeHTMLString, { sanitizer });
 
 // Get that HTML and set it back to the element as a text node
 // (so we can see the elements)

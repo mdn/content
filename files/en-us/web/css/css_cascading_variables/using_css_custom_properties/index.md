@@ -369,7 +369,7 @@ Including a custom property as a fallback, as seen in the second example above (
 You should be aware of the performance impact of this method, however, as it takes more time to parse through the nested variables.
 
 > [!NOTE]
-> The syntax of the fallback, like that of [custom properties](https://www.w3.org/TR/css-variables/#custom-property), allows commas. For example, `var(--foo, red, blue)` defines a fallback of `red, blue` — anything between the first comma and the end of the function is considered a fallback value.
+> The syntax of the fallback, like that of custom properties, allows commas. For example, `var(--foo, red, blue)` defines a fallback of `red, blue` — anything between the first comma and the end of the function is considered a fallback value.
 
 ### Fallbacks using the `@property` initial value
 
