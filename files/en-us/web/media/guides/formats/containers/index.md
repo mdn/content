@@ -1312,7 +1312,7 @@ If neither of those can be played, the text "This browser does not support the H
         <code>.oga</code><br /><code>.ogg</code>
       </td>
       <td style="vertical-align: top; border-right: 2px solid #d4dde4">
-        Firefox
+        Firefox, Safari
       </td>
       <td style="vertical-align: top"><code>video/ogg</code></td>
       <td style="vertical-align: top">
