@@ -148,7 +148,7 @@ This gives us the following result and hovering over the link displays the title
 OK, now it's your turn!
 
 1. Click **"Play"** in the code block below to edit the example in the MDN Playground, or make a copy of our [getting started template](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html) and copy the below code into there.
-2. Link the "Red squirrel" and "Eastern gray squirrel" text to the species' respective Wikipedia pages. Give each link a `title` attribute equal to the species' scientific name.
+2. Link the "Red squirrel" and "Eastern gray squirrel" text to Wikipedia pages that describe the relevant species. Give each link a `title` attribute equal to the species' scientific name.
 3. Link the "Wikipedia Squirrel page" text to the main Wikipedia page for squirrels.
 
 If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the code block.
