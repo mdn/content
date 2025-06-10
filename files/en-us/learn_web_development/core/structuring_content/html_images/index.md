@@ -215,7 +215,7 @@ It is better to include such supporting information in the main article text, ra
 It is now your turn to play! This task will get you to embed an image.
 
 1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Use the provided {{htmlelement("img")}} tag to embed the image located at the following URL:
+2. Edit the existing {{htmlelement("img")}} tag so that it embeds the image located at the following URL:
 
    ```url
    https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
