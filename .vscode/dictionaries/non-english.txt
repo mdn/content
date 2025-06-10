@@ -6,6 +6,7 @@ Aéro
 bezje
 canadien
 Ceci
+Clima
 communiqué
 Congrès
 contenido
@@ -44,6 +45,7 @@ indomable
 İstanbul
 JOURS
 lepiej
+Mago
 Mais
 Majestatis
 minuto

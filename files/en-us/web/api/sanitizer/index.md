@@ -100,7 +100,7 @@ sanitizer.setComments(true);
 This example shows how you might create a "remove sanitizer", specifying items to remove from the input.
 
 The code first uses the {{domxref("Sanitizer.Sanitizer", "Sanitizer()")}} constructor to create a `Sanitizer`, specifying a {{domxref("SanitizerConfig")}} that removes the element `<span>` and `<script>`.
-We then use `removeElement()` to add `<h6>` to the array of elements to be removed, and`removeAttribute()` to remove `lang` from the attributes list. We also remove comments.
+We then use `removeElement()` to add `<h6>` to the array of elements to be removed, and `removeAttribute()` to remove `lang` from the attributes list. We also remove comments.
 
 ```js
 const sanitizer = new Sanitizer({ removeElements: ["span", "script"] });
