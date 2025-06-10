@@ -606,7 +606,7 @@ Along with the Harding tool, is generally recognized to be one of the two "gold 
 
 ### W3C
 
-- [WAI-Adapt Explainer](https://w3c.github.io/adapt/). Working Draft
+- [WAI-Adapt Explainer](https://w3c.github.io/adapt/)
 - [WAI-Adapt: Tools Module](https://www.w3.org/TR/adapt-tools/) Working Draft
 - [Three Flashes or Below Threshold Understanding SC 2.3.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/seizure-does-not-violate.html) Understanding WCAG 2.0 (Older, but contains some explanations of references made in the WCAG 2.1 criteria)
 - [Three Flashes or Below Threshold Understanding Success Criterion 2.3.1](https://www.w3.org/WAI/WCAG21/Understanding/three-flashes-or-below-threshold.html) Understanding WCAG 2.1
