@@ -109,6 +109,7 @@ input[type="search"]:not(:focus, :active)::-webkit-search-cancel-button {
   display: none;
 }
 ```
+
 ### Styling checkboxes and radio buttons
 
 Styling a checkbox or a radio button is tricky by default. The sizes of checkboxes and radio buttons are not meant to be changed with their default designs, and browsers react very differently when you try.
