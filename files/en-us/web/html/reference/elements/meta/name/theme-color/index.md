@@ -50,7 +50,7 @@ _Image credit: from [Icons & Browser Colors](https://web.dev/articles/icons-and-
 ### Using a media query and a theme-color
 
 You can provide a media type or query inside the [`media`](/en-US/docs/Web/HTML/Reference/Elements/meta#media) attribute.
-The will then only be set if the media condition is true.
+The `theme-color` will then only be set if the media condition is true.
 For example:
 
 ```html
