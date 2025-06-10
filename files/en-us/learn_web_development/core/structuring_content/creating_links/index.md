@@ -209,6 +209,7 @@ Your finished HTML should look like this:
   <a href="https://en.wikipedia.org/wiki/Squirrel">Wikipedia Squirrel
   page</a>.</p>
 ```
+<!-- cSpell:enable -->
 
 </details>
 
