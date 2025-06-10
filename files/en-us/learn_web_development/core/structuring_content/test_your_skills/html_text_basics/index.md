@@ -99,8 +99,8 @@ Your finished HTML should look like this:
 <h2>The Anaconda</h2>
 
 <p>
-  The crafty anaconda likes to slither around the page, traveling rapidly by
-  way of anchors to sneak up on his prey.
+  The crafty anaconda likes to slither around the page, traveling rapidly by way
+  of anchors to sneak up on his prey.
 </p>
 ```
 
