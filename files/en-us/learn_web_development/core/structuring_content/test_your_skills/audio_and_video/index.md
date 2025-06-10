@@ -104,29 +104,13 @@ If you make a mistake, you can clear your work using the _Reset_ button in the M
 <video></video>
 ```
 
-```css hidden live-sample___video-1
-body {
-  background-color: #fff;
-  color: #333;
-  font:
-    1em / 1.4 Helvetica Neue,
-    Helvetica,
-    Arial,
-    sans-serif;
-  padding: 1em;
-  margin: 0;
-}
+```html live-sample___video-1
+<h1>Video embed</h1>
 
-* {
-  box-sizing: border-box;
-}
-
-video {
-  border: 1px solid black;
-}
+<video></video>
 ```
 
-{{ EmbedLiveSample('video-1', "100%", 300) }}
+{{EmbedLiveSample('video-1', "100%", 300)}}
 
 <details>
 <summary>Click here to show the solution</summary>
