@@ -1,5 +1,6 @@
 ---
-title: itemprop
+title: HTML itemprop global attribute
+short-title: itemprop
 slug: Web/HTML/Reference/Global_attributes/itemprop
 page-type: html-attribute
 spec-urls: https://html.spec.whatwg.org/multipage/microdata.html#names:-the-itemprop-attribute

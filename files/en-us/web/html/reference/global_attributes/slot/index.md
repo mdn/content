@@ -1,5 +1,6 @@
 ---
-title: slot
+title: HTML slot global attribute
+short-title: slot
 slug: Web/HTML/Reference/Global_attributes/slot
 page-type: html-attribute
 browser-compat: html.global_attributes.slot
