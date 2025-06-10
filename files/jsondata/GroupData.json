@@ -1374,6 +1374,8 @@
       "overview": ["Reporting API"],
       "guides": [],
       "interfaces": [
+        "COEPViolationReportBody",
+        "COOPViolationReportBody",
         "CSPViolationReportBody",
         "DeprecationReportBody",
         "InterventionReportBody",
