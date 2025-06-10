@@ -35,11 +35,17 @@ Integrity-Policy: blocked-destinations=(<destination>),sources=(<source>),endpoi
 The header values are defined as [structured field dictionaries](https://www.rfc-editor.org/rfc/rfc8941.html#name-dictionaries) with the following keys:
 
 - `blocked-destinations`
-  - : Defines an [inner list](https://www.rfc-editor.org/rfc/rfc8941.html#name-inner-lists) of [request destinations](/en-US/docs/Web/API/Request/destination) to be blocked. The only currently supported value is `"script"`.
+  - : Defines a list of [request destinations](/en-US/docs/Web/API/Request/destination) to be blocked. The only currently supported value is `"script"`.
 - `sources`
-  - : Defines an [inner list](https://www.rfc-editor.org/rfc/rfc8941.html#name-inner-lists) of integrity sources. The default and only currently supported value is `"inline"`.
+  - : Defines a list of integrity sources. The default and only currently supported value is `"inline"`.
 - `endpoints`
-  - : Defines an [inner list](https://www.rfc-editor.org/rfc/rfc8941.html#name-inner-lists) of [reporting endpoints](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#endpoint).
+  - : Defines a list of [reporting endpoints](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#endpoint).
+
+An example header might look like:
+
+```http
+Integrity-Policy: blocked-destinations=(script), endpoints=(integrity-endpoint, general-endpoint)
+```
 
 ## Specifications
 
