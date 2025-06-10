@@ -10,9 +10,9 @@ browser-compat: html.elements.meta.name
 
 The **`name`** attribute of the {{htmlelement("meta")}} element provides metadata in name-value pairs.
 When a `<meta>` element has a `name` attribute, a [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content) attribute defines the corresponding value.
-The metadata is _document-level metadata_, applying to the whole page.
+The metadata is _document-level metadata_ that applies to the whole page.
 
-For example, the following `<meta>` tag provides a `description` as metadata of a document:
+For example, the following `<meta>` tag provides a `description` as metadata for a document:
 
 ```html
 <meta

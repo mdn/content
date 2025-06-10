@@ -25,13 +25,13 @@ For example, the following `<meta>` element sends the {{glossary("origin")}} of 
 
 A `<meta name="referrer">` element has the following additional attributes:
 
-- `content`
-  - : The [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content) attribute should be defined and its value sets the document referrer.
-    May be any of the following values:
+- [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content)
+  - : Sets the document referrer. You must define this attribute. 
+    It can have any of the following values:
     - `no-referrer`
-      - : Do not send a HTTP `Referer` header.
+      - : Does not send an HTTP `Referer` header.
     - `origin`
-      - : Send the origin of the document.
+      - : Sends the origin of the document.
     - `no-referrer-when-downgrade`
       - : Send the full URL when the destination is at least as secure as the current page (HTTP(S)→HTTPS), but send no referrer when it's less secure (HTTPS→HTTP). This is the default behavior.
     - `origin-when-cross-origin`

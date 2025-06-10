@@ -7,12 +7,12 @@ browser-compat: html.elements.meta
 
 {{HTMLSidebar}}
 
-The **`<meta>`** [HTML](/en-US/docs/Web/HTML) element represents {{Glossary("Metadata","metadata")}} that cannot be represented by other meta-related elements, like {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} or {{HTMLElement("title")}}.
+The **`<meta>`** [HTML](/en-US/docs/Web/HTML) element represents {{Glossary("Metadata","metadata")}} that cannot be represented by other meta-related elements, such as  {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, or {{HTMLElement("title")}}.
 
 The type of metadata provided by the `<meta>` element can be one of the following:
 
-- If the [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta/name) attribute is set, the `<meta>` element provides _document-level metadata_, applying to the whole page.
-- If the [`http-equiv`](#http-equiv) attribute is set, the `<meta>` element is a _pragma directive_, to simulate directives that can be otherwise given by a HTTP header.
+- If the [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta/name) attribute is set, the `<meta>` element provides _document-level metadata_ that applies to the whole page.
+- If the [`http-equiv`](#http-equiv) attribute is set, the `<meta>` element acts as a _pragma directive_ to simulate directives that could otherwise be given by an HTTP header.
 - If the [`charset`](#charset) attribute is set, the `<meta>` element is a _charset declaration_, giving the character encoding in which the document is encoded.
 - If the [`itemprop`](/en-US/docs/Web/HTML/Reference/Global_attributes/itemprop) attribute is set, the `<meta>` element provides _user-defined metadata_.
 
@@ -21,7 +21,7 @@ The type of metadata provided by the `<meta>` element can be one of the followin
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 > [!NOTE]
-> The [`name`](#name) attribute has a specific meaning for the `<meta>` element, and the [`itemprop`](/en-US/docs/Web/HTML/Reference/Global_attributes/itemprop) attribute must not be set on the same `<meta>` element that has [`name`](#name), [`http-equiv`](#http-equiv) or [`charset`](#charset) attributes.
+> The [`name`](#name) attribute has a specific meaning for the `<meta>` element. The [`itemprop`](/en-US/docs/Web/HTML/Reference/Global_attributes/itemprop) attribute must not be set on a `<meta>` element that includes a [`name`](#name), [`http-equiv`](#http-equiv), or [`charset`](#charset) attribute.
 
 - `charset`
   - : This attribute declares the document's character encoding. If the attribute is present, its value must be an ASCII case-insensitive match for the string `"utf-8"`, because UTF-8 is the only valid encoding for HTML5 documents. `<meta>` elements which declare a character encoding must be located entirely within the first 1024 bytes of the document.
@@ -71,7 +71,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
 ### Setting a meta description
 
-The following `<meta>` tag provides a `description` as metadata of a document:
+The following `<meta>` tag provides a `description` as metadata for the web page:
 
 ```html
 <meta

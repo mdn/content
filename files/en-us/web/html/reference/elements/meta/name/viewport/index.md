@@ -11,7 +11,7 @@ browser-compat: html.elements.meta.name.viewport
 The **`viewport`** value for the [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta#name) attribute of the {{htmlelement("meta")}} element gives hints about the size of the initial size of the {{glossary("viewport")}}.
 If specified, the [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content) attribute contains the viewport value as a comma-separated list of keywords.
 
-For example, to render at device width and scale to 100%:
+For example, to set the viewport to match the device's width and display content at 100% zoom:
 
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,7 +23,7 @@ A `<meta name="viewport">` element has the following additional attributes:
 
 - `content`
   - : The `content` attribute should be defined, and its value sets various viewport-related behaviors.
-    May be any of the following keywords as a comma-separated list:
+    Use one or more of the following keywords in a comma-separated list:
     - `width`
       - : A positive integer number, or the keyword `device-width`.
         Defines the pixel width of the viewport that you want the website to be rendered at.
@@ -71,7 +71,7 @@ The following example indicates to the browser that the page should be rendered 
 
 ### Using a media query and a viewport keyword
 
-The following `content` value uses multiple keywords which hint to the browser to use fullscreen, and a `viewport-fit` which can be used to avoid display cutouts like mobile device notches:
+The following `content` value uses multiple keywords that hint to the browser to use fullscreen mode, along with `viewport-fit`, which helps avoid display cutouts such as mobile device notches:
 
 ```html
 <meta
@@ -89,4 +89,4 @@ The following `content` value uses multiple keywords which hint to the browser t
 
 ## See also
 
-- {{glossary("viewport")}} glossary entry
+- {{glossary("viewport")}} glossary term

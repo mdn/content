@@ -9,7 +9,7 @@ browser-compat: html.elements.meta.content
 {{HTMLSidebar}}
 
 The **`content`** attribute specifies the value of a metadata name defined by the [`<meta> name`](/en-US/docs/Web/HTML/Reference/Elements/meta/name) attribute.
-The `content` attribute takes as its value a string and the accepted syntax varies by `name` type.
+It takes a string as its value, and the expected syntax varies depending on the `name` value used.
 
 ## Value
 
