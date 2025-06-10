@@ -123,6 +123,25 @@ To see this (and get your example set up for future sections) first add a `class
 
 Now add the following rule to the bottom of your CSS:
 
+```css hidden live-sample___relative-positioning live-sample___absolute-positioning
+body {
+  width: 500px;
+  margin: 0 auto;
+}
+
+p {
+  background: aqua;
+  border: 3px solid blue;
+  padding: 10px;
+  margin: 10px;
+}
+
+span {
+  background: red;
+  border: 1px solid black;
+}
+```
+
 ```css
 .positioned {
   position: static;
@@ -139,9 +158,17 @@ If you save and refresh, you'll see no difference at all, except for the updated
 
 Relative positioning is the first position type we'll take a look at. This is very similar to static positioning, except that once the positioned element has taken its place in the normal flow, you can then modify its final position, including making it overlap other elements on the page. Go ahead and update the `position` declaration in your code:
 
+```css hidden live-sample___relative-positioning
+.positioned {
+```
+
 <!-- prettier-ignore-start -->
-```css
+```css live-sample___relative-positioning
   position: relative;
+```
+
+```css hidden live-sample___relative-positioning
+  background: yellow;
 ```
 <!-- prettier-ignore-end -->
 
@@ -152,42 +179,20 @@ If you save and refresh at this stage, you won't see a change in the result at a
 {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("right")}} are used alongside {{cssxref("position")}} to specify exactly where to move the positioned element to. To try this out, add the following declarations to the `.positioned` rule in your CSS:
 
 <!-- prettier-ignore-start -->
-```css
+```css live-sample___relative-positioning
   top: 30px;
   left: 30px;
 ```
 <!-- prettier-ignore-end -->
 
+```css hidden live-sample___relative-positioning
+}
+```
+
 > [!NOTE]
 > The values of these properties can take any [units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units) you'd reasonably expect: pixels, mm, rems, %, etc.
 
 If you now save and refresh, you'll get a result something like this:
-
-```css hidden live-sample___relative-positioning
-body {
-  width: 500px;
-  margin: 0 auto;
-}
-
-p {
-  background: aqua;
-  border: 3px solid blue;
-  padding: 10px;
-  margin: 10px;
-}
-
-span {
-  background: red;
-  border: 1px solid black;
-}
-
-.positioned {
-  position: relative;
-  background: yellow;
-  top: 30px;
-  left: 30px;
-}
-```
 
 {{ EmbedLiveSample('relative-positioning', '', 500) }}
 
@@ -204,8 +209,12 @@ Absolute positioning brings very different results.
 
 Let's try changing the position declaration in your code as follows:
 
+```css hidden live-sample___absolute-positioning
+.positioned {
+```
+
 <!-- prettier-ignore-start -->
-```css
+```css live-sample___absolute-positioning
   position: absolute;
 ```
 <!-- prettier-ignore-end -->
@@ -213,25 +222,6 @@ Let's try changing the position declaration in your code as follows:
 If you now save and refresh, you should see something like so:
 
 ```css hidden live-sample___absolute-positioning
-body {
-  width: 500px;
-  margin: 0 auto;
-}
-
-p {
-  background: aqua;
-  border: 3px solid blue;
-  padding: 10px;
-  margin: 10px;
-}
-
-span {
-  background: red;
-  border: 1px solid black;
-}
-
-.positioned {
-  position: absolute;
   background: yellow;
   top: 30px;
   left: 30px;
@@ -261,19 +251,21 @@ If no ancestor elements have their position property explicitly defined, then by
 
 The positioned element is nested inside the {{htmlelement("body")}} in the HTML source, but in the final layout it's 30px away from the top and the left edges of the page. We can change the **positioning context**, that is, which element the absolutely positioned element is positioned relative to. This is done by setting positioning on one of the element's ancestors: to one of the elements it's nested inside of (you can't position it relative to an element it's not nested inside of). To see this, add the following declaration to your `body` rule:
 
+```css hidden live-sample___positioning-context live-sample___z-index-1
+body {
+  width: 500px;
+  margin: 0 auto;
+```
+
 <!-- prettier-ignore-start -->
-```css
+```css live-sample___positioning-context live-sample___z-index-1
   position: relative;
 ```
 <!-- prettier-ignore-end -->
 
 This should give the following result:
 
-```css hidden live-sample___positioning-context
-body {
-  width: 500px;
-  margin: 0 auto;
-  position: relative;
+```css hidden live-sample___positioning-context live-sample___z-index-1
 }
 
 p {
@@ -309,6 +301,10 @@ All this absolute positioning is good fun, but there's another feature we haven'
 
 Try adding the following to your CSS to make the first paragraph absolutely positioned too:
 
+```css hidden live-sample___z-index-1
+
+```
+
 ```css
 p:nth-of-type(1) {
   position: absolute;
@@ -326,8 +322,16 @@ Web pages also have a z-axis: an imaginary line that runs from the surface of yo
 
 To change the stacking order, try adding the following declaration to your `p:nth-of-type(1)` rule:
 
+```css hidden live-sample___z-index-1
+p:nth-of-type(1) {
+  position: absolute;
+  background: lime;
+  top: 10px;
+  right: 30px;
+```
+
 <!-- prettier-ignore-start -->
-```css
+```css live-sample___z-index-1
   z-index: 1;
 ```
 <!-- prettier-ignore-end -->
@@ -335,37 +339,6 @@ To change the stacking order, try adding the following declaration to your `p:nt
 You should now see the lime paragraph on top:
 
 ```css hidden live-sample___z-index-1
-body {
-  width: 500px;
-  margin: 0 auto;
-  position: relative;
-}
-
-p {
-  background: aqua;
-  border: 3px solid blue;
-  padding: 10px;
-  margin: 10px;
-}
-
-span {
-  background: red;
-  border: 1px solid black;
-}
-
-.positioned {
-  position: absolute;
-  background: yellow;
-  top: 30px;
-  left: 30px;
-}
-
-p:nth-of-type(1) {
-  position: absolute;
-  background: lime;
-  top: 10px;
-  right: 30px;
-  z-index: 1;
 }
 ```
 
@@ -384,7 +357,7 @@ Let's put together a simple example to show what we mean. First of all, delete t
 
 Now update the `body` rule to remove the `position: relative;` declaration and add a fixed height, like so:
 
-```css
+```css live-sample___fixed-positioning
 body {
   width: 500px;
   height: 1400px;
@@ -394,7 +367,21 @@ body {
 
 Now we're going to give the {{htmlelement("Heading_Elements", "&lt;h1>")}} element `position: fixed;` and have it sit at the top of the viewport. Add the following rule to your CSS:
 
-```css
+```css hidden live-sample___fixed-positioning
+p {
+  background: aqua;
+  border: 3px solid blue;
+  padding: 10px;
+  margin: 10px;
+}
+
+span {
+  background: red;
+  border: 1px solid black;
+}
+```
+
+```css live-sample___fixed-positioning
 h1 {
   position: fixed;
   top: 0;
@@ -409,46 +396,17 @@ The `top: 0;` is required to make it stick to the top of the screen. We give the
 
 If you save and refresh, you'll see a fun little effect of the heading staying fixed — the content appears to scroll up and disappear underneath it. But notice how some of the content is initially clipped under the heading. This is because the positioned heading no longer appears in the document flow, so the rest of the content moves up to the top. We could improve this by moving the paragraphs all down a bit. We can do this by setting some top margin on the first paragraph. Add this now:
 
-```css
+```css hidden live-sample___fixed-positioning
+
+```
+
+```css live-sample___fixed-positioning
 p:nth-of-type(1) {
   margin-top: 60px;
 }
 ```
 
 You should now see the finished example:
-
-```css hidden live-sample___fixed-positioning
-body {
-  width: 500px;
-  height: 1400px;
-  margin: 0 auto;
-}
-
-p {
-  background: aqua;
-  border: 3px solid blue;
-  padding: 10px;
-  margin: 10px;
-}
-
-span {
-  background: red;
-  border: 1px solid black;
-}
-
-h1 {
-  position: fixed;
-  top: 0px;
-  width: 500px;
-  margin-top: 0;
-  background: white;
-  padding: 10px;
-}
-
-p:nth-of-type(1) {
-  margin-top: 60px;
-}
-```
 
 {{ EmbedLiveSample('fixed-positioning', '', 400) }}
 
