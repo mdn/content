@@ -9,7 +9,7 @@ browser-compat: http.headers.Strict-Transport-Security
 {{HTTPSidebar}}
 
 The HTTP **`Strict-Transport-Security`** {{Glossary("response header")}} (often abbreviated as {{Glossary("HSTS")}}) informs browsers that the host should only be accessed using HTTPS, and that any future attempts to access it using HTTP should automatically be upgraded to HTTPS.
-Additionally, on future connections to the host, the browser will not offer the user a means to bypass secure connection errors, such as an invalid certificate.
+Additionally, on future connections to the host, the browser will not allow the user to bypass secure connection errors, such as an invalid certificate.
 
 > [!NOTE]
 > HSTS should be used in addition to configuring an HTTP to HTTPS ({{HTTPStatus("301")}}) redirect on your server.
@@ -41,7 +41,7 @@ Strict-Transport-Security: max-age=<expire-time>; includeSubDomains; preload
 - `max-age=<expire-time>`
   - : The time, in seconds, that the browser should remember that a host is only to be accessed using HTTPS.
 - `includeSubDomains` {{optional_inline}}
-  - : If this optional directive is specified, the HSTS policy applies to all subdomains of the host's domain as well.
+  - : If this directive is specified, the HSTS policy applies to all subdomains of the host's domain as well.
 - `preload` {{optional_inline}} {{non-standard_inline}}
   - : See [Preloading Strict Transport Security](#preloading_strict_transport_security) for details. When using `preload`, the `max-age` directive must be at least `31536000` (1 year), and the `includeSubDomains` directive must be present.
     Not part of the specification.
@@ -58,7 +58,7 @@ If the domain name is already in the list, the expiration time and `includeSubDo
 Hosts are identified by their domain names, not including the port. An IP address cannot be a Known HSTS Host.
 
 Every time the browser loads a URL, it first checks the domain name against its Known HSTS Hosts list.
-If the domain name equals (case insensitive) a Known HSTS Host or is a subdomain of one that specified `includeSubDomains`,
+If the domain name is a case insensitive match for a Known HSTS Host or is a subdomain of one that specified `includeSubDomains`,
 then the browser uses HTTPS, even if the URL specified the `http` scheme or omitted a scheme.
 
 If a TLS warning or error, such as an invalid certificate, occurs when connecting to a Known HSTS Host,
@@ -76,7 +76,7 @@ Should it be necessary to disable Strict Transport Security, setting `max-age=0`
 
 ### Threat models
 
-HSTS mitigates several threat models. If an otherwise secure page accidentally includes a URL (such as for an image or script) with the `http` scheme, the insecure connection could expose cookies to eavesdroppers on the network and allow malicious response payload injection. In another scenario, a user opens an insecure URL, such as `http://www.example.com/`. Even if the server redirects the browser to HTTPS, a man-in-the-middle attack on the initial insecure request could direct visitors to a malicious site.
+HSTS mitigates several threat models. If an otherwise secure page accidentally includes a URL (such as for an image or script) with the `http` scheme, the insecure connection could expose cookies to eavesdroppers on the network and allow malicious response payload injection. In another scenario, a user opens an insecure URL, such as `http://www.example.com/`. Even if the server redirects the browser to HTTPS, a [manipulator-in-the-middle (MITM) attack](/en-US/docs/Web/Security/Attacks/MITM) on the initial insecure request could direct visitors to a malicious site.
 
 With HSTS, as long as at least one secure connection has been made to the host in the past and the `Strict-Transport-Security` response header was present, the browser remembers it as a Known HSTS Host, and the connection uses HTTPS before a man-in-the-middle attack has a chance to occur. However, the HSTS header alone cannot protect an initial insecure request if the browser has never before connected to the host and so does not have the domain name in its Known HSTS Hosts list. [Preloading](#preloading_strict_transport_security) can mitigate this problem. For the same reason, it is still important to specify the `https` scheme in URLs even when using HSTS.
 
