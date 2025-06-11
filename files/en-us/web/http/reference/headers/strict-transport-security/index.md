@@ -50,18 +50,16 @@ Strict-Transport-Security: max-age=<expire-time>; includeSubDomains; preload
 
 The `Strict-Transport-Security` header informs the browser that all connections to the host must use HTTPS.
 
-### How the browser handles Strict Transport Security
-
 When an HTTPS response includes the `Strict-Transport-Security` header, the browser adds the host's domain name
-to its persistent list of non-expired Known HSTS Hosts.
+to its persistent list of HSTS hosts.
 If the domain name is already in the list, the expiration time and `includeSubDomains` directive are updated.
-Hosts are identified by their domain names, not including the port. An IP address cannot be a Known HSTS Host.
+Hosts are identified by their domain names, not including the port. An IP address cannot be an HSTS host.
 
-Every time the browser loads a URL, it first checks the domain name against its Known HSTS Hosts list.
-If the domain name is a case insensitive match for a Known HSTS Host or is a subdomain of one that specified `includeSubDomains`,
+Every time the browser loads a URL, it first checks the domain name against its HSTS hosts list.
+If the domain name is a case insensitive match for an HSTS host or is a subdomain of one that specified `includeSubDomains`,
 then the browser uses HTTPS, even if the URL specified the `http` scheme or omitted a scheme.
 
-If a TLS warning or error, such as an invalid certificate, occurs when connecting to a Known HSTS Host,
+If a TLS warning or error, such as an invalid certificate, occurs when connecting to an HSTS host,
 the browser does not offer the user a way to proceed or "click through" the error message, which would compromise
 the intention of strict security.
 
@@ -78,12 +76,12 @@ Should it be necessary to disable Strict Transport Security, setting `max-age=0`
 
 HSTS mitigates several threat models. If an otherwise secure page accidentally includes a URL (such as for an image or script) with the `http` scheme, the insecure connection could expose cookies to eavesdroppers on the network and allow malicious response payload injection. In another scenario, a user opens an insecure URL, such as `http://www.example.com/`. Even if the server redirects the browser to HTTPS, a [manipulator-in-the-middle (MITM) attack](/en-US/docs/Web/Security/Attacks/MITM) on the initial insecure request could direct visitors to a malicious site.
 
-With HSTS, as long as at least one secure connection has been made to the host in the past and the `Strict-Transport-Security` response header was present, the browser remembers it as a Known HSTS Host, and the connection uses HTTPS before a man-in-the-middle attack has a chance to occur. However, the HSTS header alone cannot protect an initial insecure request if the browser has never before connected to the host and so does not have the domain name in its Known HSTS Hosts list. [Preloading](#preloading_strict_transport_security) can mitigate this problem. For the same reason, it is still important to specify the `https` scheme in URLs even when using HSTS.
+With HSTS, as long as at least one secure connection has been made to the host in the past and the `Strict-Transport-Security` response header was present, the browser remembers it as an HSTS host, and the connection uses HTTPS before an MITM attack has a chance to occur. However, the HSTS header alone cannot protect an initial insecure request if the browser has never before connected to the host and so does not have the domain name in its HSTS hosts list. [Preloading](#preloading_strict_transport_security) can mitigate this problem. For the same reason, it is still important to specify the `https` scheme in URLs even when using HSTS.
 
 ### Strict Transport Security example scenario
 
 1. At home, you visit `http://example.com/` for the first time.
-2. Since the URL scheme is `http` and the browser does not have it in its Known HSTS Hosts list, the connection uses insecure HTTP.
+2. Since the URL scheme is `http` and the browser does not have it in its HSTS hosts list, the connection uses insecure HTTP.
 3. The server responds with a `301 Moved Permanently` redirect to `https://example.com/`.
 4. The browser makes a new request, this time using HTTPS.
 5. The response, made via HTTPS, includes the header:
@@ -92,10 +90,10 @@ With HSTS, as long as at least one secure connection has been made to the host i
    Strict-Transport-Security: max-age=15768000; includeSubDomains
    ```
 
-   Your browser remembers `example.com` as a Known HSTS Host, and that it specified `includeSubDomains`.
+   Your browser remembers `example.com` as an HSTS host, and that it specified `includeSubDomains`.
 
 6. A few weeks later, you are at the airport and decide to use the free Wi-Fi. But unknowingly, you connect to a rogue access point running on an attacker's laptop.
-7. You open your browser to `http://login.example.com/`. Because your browser remembers `example.com` as a Known HSTS Host and the `includeSubDomains` directive was used, your browser uses HTTPS.
+7. You open your browser to `http://login.example.com/`. Because your browser remembers `example.com` as an HSTS host and the `includeSubDomains` directive was used, your browser uses HTTPS.
 8. The attacker intercepts the request with a fake HTTPS server, but does not have a valid certificate for the domain.
 9. Your browser displays an invalid certificate error, and does not allow you to bypass it, thus preventing you from giving your password to the attacker.
 
