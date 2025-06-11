@@ -9,7 +9,7 @@ browser-compat: html.elements.meta.name.referrer
 {{HTMLSidebar}}
 
 The **`referrer`** value for the [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta#name) attribute of the {{htmlelement("meta")}} element controls the HTTP {{httpheader("Referer")}} header of requests sent from the document.
-If specified, the [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content) attribute sets the corresponding value.
+If specified, you define the referrer using a [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content) attribute in the `<meta>` element as a keyword value.
 
 For example, the following `<meta>` element sends the {{glossary("origin")}} of the document as the referrer:
 
@@ -27,7 +27,7 @@ A `<meta name="referrer">` element has the following additional attributes:
 
 - [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content)
   - : Sets the document referrer. You must define this attribute.
-    It can have any of the following values:
+    Accepts one of the following values:
     - `no-referrer`
       - : Does not send an HTTP `Referer` header.
     - `origin`

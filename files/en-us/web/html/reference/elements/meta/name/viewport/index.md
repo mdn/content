@@ -9,7 +9,7 @@ browser-compat: html.elements.meta.name.viewport
 {{HTMLSidebar}}
 
 The **`viewport`** value for the [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta#name) attribute of a {{htmlelement("meta")}} element gives hints about the initial size of the {{glossary("viewport")}}.
-If specified, the [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content) attribute of the `<meta>` element contains the `viewport` value as a comma-separated list of keywords.
+If specified, you define viewport-related behaviors using a [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content) attribute in the `<meta>` element as a comma-separated list of one or more values.
 
 For example, to set the viewport to match the device's width and display content at 100% zoom:
 
@@ -22,8 +22,8 @@ For example, to set the viewport to match the device's width and display content
 A `<meta name="viewport">` element has the following additional attributes:
 
 - [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content)
-  - : The `content` attribute should be defined, and its value sets various viewport-related behaviors.
-    Use one or more of the following keywords in a comma-separated list:
+  - : The `content` attribute must be defined, and its value sets various viewport-related behaviors.
+    Accepts one or more of the following keywords in a comma-separated list:
     - `width`
       - : Defines the pixel width of the viewport that you want the website to be rendered at.
         It can be a positive whole number or the keyword `device-width`.

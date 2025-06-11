@@ -8,7 +8,7 @@ page-type: html-attribute-value
 {{HTMLSidebar}}
 
 The **`robots`** value for the [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta#name) attribute of the {{htmlelement("meta")}} element defines the crawl behavior that cooperative crawlers (or "robots") should use with the page.
-If specified, the [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content) attribute contains a list of values that correspond to the `robots` attribute value.
+If specified, you define crawl directives using a [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content) attribute in the `<meta>` element as a comma-separated list of one or more rules.
 
 For example, to hint to crawlers that a page should be excluded from their search indexes, a `noindex` value can be used:
 
@@ -17,16 +17,17 @@ For example, to hint to crawlers that a page should be excluded from their searc
 ```
 
 > [!NOTE]
-> Only cooperative robots follow these rules. A crawler still needs to access the resource to read headers and meta elements (see [X-Robots-Tag: Interaction with robots.txt](/en-US/docs/Web/HTTP/Reference/Headers/X-Robots-Tag#interaction_with_robots.txt)).
+> Only cooperative robots follow these rules.
+> A crawler still needs to access the resource to read headers and meta elements (see [X-Robots-Tag: Interaction with robots.txt](/en-US/docs/Web/HTTP/Reference/Headers/X-Robots-Tag#interaction_with_robots.txt)).
 > If you want to prevent bandwidth consumption by crawlers, a restrictive {{Glossary("robots.txt")}} file is more effective than indexing rules as it blocks resources from being crawled entirely.
 
-## Value
+## Usage notes
 
-A `<meta name="robots">` element can have the following attributes:
+A `<meta name="robots">` element can have the following additional attributes:
 
 - [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content)
-  - : The `content` attribute should be defined, and its value sets indexing and crawling behavior for cooperative search engine robots.
-    May be any of the following values:
+  - : The `content` attribute must be defined, and its value sets indexing and crawling behavior for cooperative search engine robots.
+    Accepts one or more of the following keywords as a comma-separated list:
     - `index`
       - : Allows the robot to index the page. This is the default behavior.
         Used by all major crawlers.
@@ -58,7 +59,7 @@ A `<meta name="robots">` element can have the following attributes:
       - : Synonym of `noarchive`.
         Used by: [Bing](https://www.bing.com/webmasters/help/which-robots-metatags-does-bing-support-5198d240).
 
-## Usage notes
+## Description
 
 There are several important considerations to note when setting a `robots` meta value:
 
