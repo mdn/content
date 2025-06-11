@@ -57,7 +57,7 @@ In this example, a message appears when you select the secret word. It uses
 <p id="win" hidden>You found it!</p>
 ```
 
-### CSS
+#### CSS
 
 ```css
 #secret {

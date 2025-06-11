@@ -25,7 +25,7 @@ Assume the `<head>` contains the following:
 <link rel="styleSheet" href="example.css" />
 ```
 
-Then, if you open the HTML page via a file URL on Windows, and run the following script::
+Then, if you open the HTML page via a `file://` URL on Windows, and run the following script:
 
 ```js
 console.log(document.styleSheets[0].href);
