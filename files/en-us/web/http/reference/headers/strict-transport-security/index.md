@@ -80,22 +80,22 @@ With HSTS, as long as at least one secure connection has been made to the host i
 
 ### Strict Transport Security example scenario
 
-1. At home, you visit `http://example.com/` for the first time.
+1. At home, the user visits `http://example.com/` for the first time.
 2. Since the URL scheme is `http` and the browser does not have it in its HSTS hosts list, the connection uses insecure HTTP.
 3. The server responds with a `301 Moved Permanently` redirect to `https://example.com/`.
 4. The browser makes a new request, this time using HTTPS.
 5. The response, made via HTTPS, includes the header:
 
    ```http
-   Strict-Transport-Security: max-age=15768000; includeSubDomains
+   Strict-Transport-Security: max-age=31536000; includeSubDomains
    ```
 
-   Your browser remembers `example.com` as an HSTS host, and that it specified `includeSubDomains`.
+   The browser remembers `example.com` as an HSTS host, and that it specified `includeSubDomains`.
 
-6. A few weeks later, you are at the airport and decide to use the free Wi-Fi. But unknowingly, you connect to a rogue access point running on an attacker's laptop.
-7. You open your browser to `http://login.example.com/`. Because your browser remembers `example.com` as an HSTS host and the `includeSubDomains` directive was used, your browser uses HTTPS.
+6. A few weeks later, the user is at the airport and decides to use the free Wi-Fi. But unknowingly, they connect to a rogue access point running on an attacker's laptop.
+7. The user opens `http://login.example.com/`. Because the browser remembers `example.com` as an HSTS host and the `includeSubDomains` directive was used, the browser uses HTTPS.
 8. The attacker intercepts the request with a fake HTTPS server, but does not have a valid certificate for the domain.
-9. Your browser displays an invalid certificate error, and does not allow you to bypass it, thus preventing you from giving your password to the attacker.
+9. The browser displays an invalid certificate error, and does not allow the user to bypass it, thus preventing them from giving their password to the attacker.
 
 ### Preloading Strict Transport Security
 
