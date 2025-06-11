@@ -90,8 +90,8 @@ l10n:
     Attributes: Attributes
     Attributes_element: Attributes by element
     Attribute_values: Attribute values
-    Input_types: <code>&lt;input&gt;</code> types
-    Script_types: <code>&lt;script&gt;</code> types
+    Input_types: <code>&lt;input&gt;</code> type
+    Script_types: <code>&lt;script&gt;</code> type
     Rel_keywords: <code>rel</code> keywords
     Guides: Guides
   fr:

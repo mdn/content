@@ -1,6 +1,6 @@
 ---
 title: <meta> name attribute
-short-title: <meta> names
+short-title: <meta> name
 slug: Web/HTML/Reference/Elements/meta/name
 page-type: html-attribute
 browser-compat: html.elements.meta.name
