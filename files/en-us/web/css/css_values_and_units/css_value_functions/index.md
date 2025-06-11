@@ -203,7 +203,7 @@ The {{CSSxRef("color_value","&lt;color&gt;")}} CSS [data type](/en-US/docs/Web/C
 - {{CSSxRef("color_value/color-mix", "color-mix()")}}
   - : Mixes two color values in a given colorspace by a given amount.
 - {{CSSxRef("color_value/contrast-color", "contrast-color()")}}
-  - : Returns color with maximum color contrast for a given color.
+  - : Returns a color with maximum color contrast for a given color.
 - {{CSSxRef("color_value/device-cmyk", "device-cmyk()")}}
   - : Defines CMYK colors in a device-dependent way.
 - {{CSSXref("color_value/light-dark", "light-dark()")}}

@@ -9,7 +9,9 @@ browser-compat: css.types.color.contrast-color
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`contrast-color()`** functional notation takes a {{cssxref("color_value","color")}} value and returns a [guaranteed](https://www.w3.org/TR/WCAG21/#contrast-minimum) contrasting color. The function makes it easy to specify text color when background colors are created dynamically. It saves developers from maintaining background-text color pairs. It is not limited to deriving text colors; you can use it for deriving colors of anything, such as border, background, etc.
+The **`contrast-color()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) takes a {{cssxref("color_value","color")}} value and returns a [guaranteed](https://www.w3.org/TR/WCAG21/#contrast-minimum) contrasting color.
+
+`contrast-color()` makes it easy, for example, to specify a text color when background colors are created dynamically, or vice versa. It avoids the need to maintain background-text color pairs.
 
 The function produces only `white` or `black` value, depending on which value produces maximum contrast with the input color. If both white and black colors produce the same contrast, then the `white` value is returned.
 
@@ -23,16 +25,16 @@ contrast-color(red)
 contrast-color(var(--backgroundColor))
 ```
 
-### Values
+### Parameters
 
 - `color`
-  - : Any valid {{cssxref("&lt;color&gt;")}}.
+  - : Any valid {{cssxref("&lt;color&gt;")}} value.
 
 ### Examples
 
 #### Contrasting text for a button
 
-In the following example when you change background color of the button, the webbrowser automatically applies a contrasting color to the `Submit` text.
+In the following example, the browser automatically applies a contrasting color to the submit {{htmlelement("button")}} text when you change its background color.
 
 ```html hidden
 <label>
@@ -51,7 +53,7 @@ In the following example when you change background color of the button, the web
 button {
   background-color: var(--button-color);
 
-  /* set contrasting text color automatically */
+  /* Set contrasting text color automatically */
   color: contrast-color(var(--button-color));
 }
 ```
@@ -100,9 +102,9 @@ updateColor();
 
 #### Light and dark mode usage
 
-In the following example [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) has been used to set background color based on operating system or browser color scheme/theme setting. The `contrast-color()` function sets text color automatically.
+In the following example, the [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) has been used to set a background color based on operating system or browser color scheme settings. The `contrast-color()` function is used to automatically set the text color.
 
-In the browser setting try changing the dark mode setting to see the effect.
+Try changing the browser or OS dark mode setting to see the effect.
 
 ```html hidden
 <pre>
