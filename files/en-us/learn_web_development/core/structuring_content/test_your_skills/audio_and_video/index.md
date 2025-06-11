@@ -105,12 +105,6 @@ If you make a mistake, you can clear your work using the _Reset_ button in the M
 <video></video>
 ```
 
-```html live-sample___video-1
-<h1>Video embed</h1>
-
-<video></video>
-```
-
 {{EmbedLiveSample('video-1', "100%", 300)}}
 
 <details>
