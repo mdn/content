@@ -35,7 +35,7 @@ If no `enterkeyhint` attribute is provided, the user agent might use contextual 
 or [`pattern`](/en-US/docs/Web/HTML/Reference/Elements/input#pattern)
 attributes to display a suitable enter key label (or icon).
 
-### Values
+## Value
 
 The `enterkeyhint` attribute is an [enumerated](/en-US/docs/Glossary/Enumerated) attribute and only accepts the following values:
 
