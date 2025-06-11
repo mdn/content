@@ -58,8 +58,7 @@ The returned object is the same {{DOMxRef("CSSStyleDeclaration")}} type as the o
     > [!NOTE]
     > Valid pseudo-element selector refers to syntactic
     > validity, e.g., `::unsupported` is considered valid, even though the
-    > pseudo-element itself is not supported. Additionally, the latest W3 standard [explicitly supports](https://www.w3.org/TR/cssom-1/#dom-window-getcomputedstyle) only `::before` and `::after`, while the CSS
-    > WG draft [does not restrict this value](https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle). Browser compatibility may vary.
+    > pseudo-element itself is not supported.
 
 ## Examples
 
@@ -107,9 +106,7 @@ para.textContent =
 
 ### Use with pseudo-elements
 
-`getComputedStyle` can pull style info from pseudo-elements (such as
-`::after`, `::before`, `::marker`,
-`::line-marker` — see [the pseudo-element spec](https://www.w3.org/TR/css-pseudo-4/)).
+`getComputedStyle` can pull style info from [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), such as `::after`, `::before`, `::marker`, or `::line-marker`.
 
 ```html
 <style>
