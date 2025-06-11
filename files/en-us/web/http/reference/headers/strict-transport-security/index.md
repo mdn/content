@@ -74,7 +74,7 @@ Should it be necessary to disable Strict Transport Security, setting `max-age=0`
 
 ### Threat models
 
-HSTS mitigates several threat models. If an otherwise secure page accidentally includes a URL (such as for an image or script) with the `http` scheme, the insecure connection could expose cookies to eavesdroppers on the network and allow malicious response payload injection. In another scenario, a user opens an insecure URL, such as `http://www.example.com/`. Even if the server redirects the browser to HTTPS, a [manipulator-in-the-middle (MITM) attack](/en-US/docs/Web/Security/Attacks/MITM) on the initial insecure request could direct visitors to a malicious site.
+When the browser loads an insecure URL, such as `http://www.example.com/`, even if the server redirects to HTTPS, a [manipulator-in-the-middle (MITM) attack](/en-US/docs/Web/Security/Attacks/MITM) on the initial insecure request could direct visitors to a malicious site.
 
 With HSTS, as long as at least one secure connection has been made to the host in the past and the `Strict-Transport-Security` response header was present, the browser remembers it as an HSTS host, and the connection uses HTTPS before an MITM attack has a chance to occur. However, the HSTS header alone cannot protect an initial insecure request if the browser has never before connected to the host and so does not have the domain name in its HSTS hosts list. [Preloading](#preloading_strict_transport_security) can mitigate this problem. For the same reason, it is still important to specify the `https` scheme in URLs even when using HSTS.
 
