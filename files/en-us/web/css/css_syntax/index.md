@@ -40,9 +40,9 @@ This module doesn't define any properties, [data types](/en-US/docs/Web/CSS/CSS_
 
 ## Guides
 
-- [Syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
+- [Introduction to CSS syntax: declarations, rulesets, and statements](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
 
-  - : Overview of CSS syntax, including CSS declarations, declaration blocks, rulesets, and statements.
+  - : Explains the overall CSS syntax and how declarations, declaration blocks, rulesets, and statements form the style rules.
 
 - [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
 
