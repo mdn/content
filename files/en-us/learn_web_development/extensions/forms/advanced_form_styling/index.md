@@ -47,11 +47,11 @@ To recap what we said in the previous article, we have:
 - [`<input type="file">`](/en-US/docs/Web/HTML/Reference/Elements/input/file)
 - {{HTMLElement("progress")}} and {{HTMLElement("meter")}}
 
-Let's first talk about the [`appearance`](/en-US/docs/Web/CSS/appearance) property, which is pretty useful for making all of the above more stylable.
+Let's first talk about the [`appearance`](/en-US/docs/Web/CSS/appearance) property, which is useful for making all of the above more stylable.
 
-## appearance: controlling OS-level styling
+## `appearance`: controlling OS-level styling
 
-In the previous article we said that historically, the styling of web form controls was largely taken from the underlying operating system, which is part of the problem with customizing the look of these controls.
+In the previous article, we mentioned that historically, the styling of web form controls was largely derived from the underlying operating system, which is part of the reason for the difficulty in customizing the look of these controls.
 
 The {{cssxref("appearance")}} property was created as a way to control what OS- or system-level styling was applied to web form controls. By far the most helpful value, and probably the only one you'll use, is `none`. This stops any control you apply it to from using system-level styling, as much as possible, and lets you build up the styles yourself using CSS.
 
@@ -96,7 +96,7 @@ The following live example shows you what they look like in your system — defa
 
 {{EmbedGHLiveSample("learning-area/html/forms/styling-examples/appearance-tester.html", '100%', 400)}}
 
-In most cases, the effect is to remove the stylized border, which makes CSS styling a bit easier, but isn't really essential. In a couple of cases — search and radio buttons/checkboxes, it becomes way more useful. We'll look at those now.
+In most cases, the effect is to remove the stylized border, which makes CSS styling a bit easier, but isn't essential. In a couple of cases, such as radio buttons and checkboxes, it becomes way more useful. We'll look at those now.
 
 ### Search boxes and `appearance`
 
@@ -241,9 +241,9 @@ If you view these checkboxes in a browser that doesn't support {{cssxref("appear
 
 Now let's turn our attention to the "ugly" controls — the ones that are really hard to thoroughly style. In short, these are drop-down boxes, complex control types like [`color`](/en-US/docs/Web/HTML/Reference/Elements/input/color) and [`datetime-local`](/en-US/docs/Web/HTML/Reference/Elements/input/datetime-local), and feedback—oriented controls like {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
 
-The problem is that these elements have very different default looks across browsers, and while you can style them in some ways, some parts of their internals are literally impossible to style.
+The problem is that these elements have very different default looks across browsers, and while you can style them in some ways, some parts of their internals are impossible to style.
 
-If you are prepared to live with some differences in look and feel, you can get away with some simple styling to make sizing consistent, uniform styling of things like background-colors, and usage of appearance to get rid of some system-level styling.
+If you are prepared to live with some differences in look and feel, you can use some simple styling to improve things significantly. This includes consistent sizing and styling of properties like `background-color`, and usage of `appearance` to remove some system-level styling.
 
 Take the following example, which shows a number of the "ugly" form features in action:
 
@@ -315,7 +315,7 @@ button {
 ```
 
 > [!NOTE]
-> If you want to test these examples across a number of browsers simultaneously, you can [find it live here](https://mdn.github.io/learning-area/html/forms/styling-examples/ugly-controls.html) (also [see here for the source code](https://github.com/mdn/learning-area/blob/main/html/forms/styling-examples/ugly-controls.html)).
+> If you want to test these examples across several browsers simultaneously, you can [find it live here](https://mdn.github.io/learning-area/html/forms/styling-examples/ugly-controls.html) (also [see here for the source code](https://github.com/mdn/learning-area/blob/main/html/forms/styling-examples/ugly-controls.html)).
 >
 > Also bear in mind that we've added some JavaScript to the page that lists the files selected by the file picker, below the control itself. This is a simplified version of the example found on the [`<input type="file">`](/en-US/docs/Web/HTML/Reference/Elements/input/file#examples) reference page.
 
@@ -341,7 +341,7 @@ meter {
 }
 ```
 
-We also added some uniform shadow and rounded corners to the controls on which it made sense:
+We also added some uniform shadow and rounded corners to the controls where it makes sense:
 
 ```css
 input[type="text"],
@@ -353,7 +353,7 @@ select {
 }
 ```
 
-On other controls like range types, progress bars, and meters they just add an ugly box around the control area, so it doesn't make sense.
+On other controls like range types, progress bars, and meters, they just add an ugly box around the control area, so it doesn't make sense.
 
 Let's talk about some specifics of each of these types of control, highlighting difficulties along the way.
 
@@ -361,9 +361,9 @@ Let's talk about some specifics of each of these types of control, highlighting 
 
 Some browsers now support [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select), a set of HTML and CSS features that together enable full customization of `<select>` elements and their contents just like any regular DOM elements. In supporting browsers and codebases, you no longer need to worry about the legacy techniques described below for `<select>` elements.
 
-Styling datalists and selects (in browsers that don't support customizable selects) allows an acceptable level of customization provided you don't want to vary the look and feel too much from the defaults. We've managed to get the basic look of the boxes looking pretty uniform and consistent. The datalist invoking control is an `<input type="text">` anyway, so we knew this wouldn't be a problem.
+Styling datalists and selects (in browsers that don't support customizable selects) allows an acceptable level of customization, provided you don't want to vary the look and feel too much from the defaults. We've managed to get the boxes looking pretty uniform and consistent. The datalist-invoking control is an `<input type="text">` anyway, so we knew this wouldn't be a problem.
 
-Two things are slightly more problematic. First of all, the select's "arrow" icon that indicates it is a dropdown differs across browsers. It also tends to change if you increase the size of the select box, or resize in an ugly fashion. To fix this in our example we first used our old friend `appearance: none` to get rid of the icon altogether:
+Two things are slightly more problematic. First of all, the select's "arrow" icon that indicates it is a dropdown differs across browsers. It also tends to change if you increase the size of the select box or resize it in an ugly fashion. To fix this in our example, we first used our old friend `appearance: none` to get rid of the icon altogether:
 
 ```css
 select {
@@ -371,7 +371,7 @@ select {
 }
 ```
 
-We then created our own icon using generated content. We put an extra wrapper around the control, because [`::before`](/en-US/docs/Web/CSS/::before)/[`::after`](/en-US/docs/Web/CSS/::after) don't work on `<select>` elements (because their content is fully controlled by the browser):
+We then created our own icon using generated content. We put an extra wrapper around the control, because [`::before`](/en-US/docs/Web/CSS/::before)/[`::after`](/en-US/docs/Web/CSS/::after) don't work on `<select>` elements (their content is fully controlled by the browser):
 
 ```html
 <label for="select">Select a fruit</label>
@@ -402,7 +402,7 @@ We then use generated content to generate a little down arrow, and put it in the
 
 The second, slightly more important issue is that you don't have control over the box that appears containing the options when you click on the `<select>` box to open it. You can inherit the font set on the parent, but you won't be able to set things like spacing and colors. The same is true for the autocomplete list that appears with {{HTMLElement("datalist")}}.
 
-If you really need full control over the option styling, you'll have to either use some kind of library to generate a custom control, or build your own custom control, or in the case of select use the `multiple` attribute, which makes all the options appear on the page, sidestepping this particular problem:
+If you really need full control over the option styling, you'll have to either use a library to generate a custom control or build your own. In the case of `<select>`, you could also use the `multiple` attribute, which makes all the options appear on the page, sidestepping this particular problem:
 
 ```html
 <label for="select">Select fruits</label>
@@ -417,10 +417,10 @@ Of course, this might also not fit in with the design you are going for, but it'
 
 The date/time input types ([`datetime-local`](/en-US/docs/Web/HTML/Reference/Elements/input/datetime-local), [`time`](/en-US/docs/Web/HTML/Reference/Elements/input/time), [`week`](/en-US/docs/Web/HTML/Reference/Elements/input/week), [`month`](/en-US/docs/Web/HTML/Reference/Elements/input/month)) all have the same major associated issue. The actual containing box is as easy to style as any text input, and what we've got in this demo looks fine.
 
-However, the internal parts of the control (e.g., the popup calendar that you use to pick a date, the spinner that you can use to increment/decrement values) are not stylable at all, and you can't get rid of them using `appearance: none;`. If you really need full control over the styling, you'll have to either use some kind of library to generate a custom control, or build your own.
+However, the internal parts of the control (e.g., the popup calendar that you use to pick a date, the spinner that you can use to increment/decrement values) are not stylable at all, and you can't get rid of them using `appearance: none;`. If you really need full control over the styling, you'll have to either use a library to generate a custom control or build your own.
 
 > [!NOTE]
-> It is worth mentioning [`<input type="number">`](/en-US/docs/Web/HTML/Reference/Elements/input/number) here too — this also has a spinner that you can use to increment/decrement values, so potentially suffers from the same problem. However, in the case of the `number` type the data being collected is simpler, and it is easy to just use a `tel` input type instead which has the appearance of `text`, but displays the numeric keypad in devices with touch keyboards.
+> It is worth mentioning [`<input type="number">`](/en-US/docs/Web/HTML/Reference/Elements/input/number) here too — this also has a spinner that you can use to increment/decrement values, so potentially suffers from the same problem. However, in the case of the `number` type the data being collected is simpler, and it is easy to just use a `tel` input type instead, which has the appearance of `text`, but displays the numeric keypad in devices with touch keyboards.
 
 ### Range input types
 
@@ -436,11 +436,11 @@ input[type="range"] {
 }
 ```
 
-However, it is very difficult to customize the style of the range control's drag handle — to get full control over range styling you'll need to use a whole bunch of complex CSS code, including multiple non-standard, browser-specific pseudo-elements. Check out [Styling Cross-Browser Compatible Range Inputs with CSS](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/) on CSS tricks for a detailed write-up of what's needed.
+However, it is very difficult to customize the style of the range control's drag handle — to get full control over range styling, you'll need to use some complex CSS code, including multiple non-standard, browser-specific pseudo-elements. Check out [Styling Cross-Browser Compatible Range Inputs with CSS](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/) on CSS tricks for a detailed write-up of what's needed.
 
 ### Color input types
 
-Input controls of type color are not too bad. In supporting browsers, they tend to just give you a block of solid color with a small border.
+Input controls of type color are not too bad. In supporting browsers, they tend to give you a block of solid color with a small border.
 
 You can remove the border, just leaving the block of color, using something like this:
 
@@ -457,7 +457,7 @@ However, a custom solution is the only way to get anything significantly differe
 
 Inputs of type file are generally OK — as you saw in our example, it is fairly easy to create something that fits in OK with the rest of the page — the output line that is part of the control will inherit the parent font if you tell the input to do so, and you can style the custom list of file names and sizes in any way you want; we created it after all.
 
-The only problem with file pickers is that the button provided that you press to open the file picker is completely unstylable — it can't be sized or colored, and it won't even accept a different font.
+The only problem with file pickers is that the button you press to open the file picker is completely unstylable — it can't be sized or colored, and it won't even accept a different font.
 
 One way around this is to take advantage of the fact that if you have a label associated with a form control, clicking the label will activate the control. So you could hide the actual form input using something like this:
 
@@ -469,7 +469,7 @@ input[type="file"] {
 }
 ```
 
-And then style the label to act like a button, which when pressed will open the file picker as expected:
+And then style the label to act like a button, which, when pressed, will open the file picker as expected:
 
 ```css
 label[for="file"] {
@@ -490,15 +490,15 @@ label[for="file"]:active {
 }
 ```
 
-You can see the result of the above CSS styling in the below live example (see also [styled-file-picker.html](https://mdn.github.io/learning-area/html/forms/styling-examples/styled-file-picker.html) live, and the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/styling-examples/styled-file-picker.html)).
+You can see the result of the above CSS styling in the live example below (see also [styled-file-picker.html](https://mdn.github.io/learning-area/html/forms/styling-examples/styled-file-picker.html) live, and the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/styling-examples/styled-file-picker.html)).
 
 {{EmbedGHLiveSample("learning-area/html/forms/styling-examples/styled-file-picker.html", '100%', 200)}}
 
 ### Meters and progress bars
 
-[`<meter>`](/en-US/docs/Web/HTML/Reference/Elements/meter) and [`<progress>`](/en-US/docs/Web/HTML/Reference/Elements/progress) are possibly the worst of the lot. As you saw in the earlier example, we can set them to the desired width relatively accurately. But beyond that, they are really difficult to style in any way. They don't handle height settings consistently between each other and between browsers, you can color the background, but not the foreground bar, and setting `appearance: none` on them makes things worse, not better.
+[`<meter>`](/en-US/docs/Web/HTML/Reference/Elements/meter) and [`<progress>`](/en-US/docs/Web/HTML/Reference/Elements/progress) are possibly the worst of the lot. As you saw in the earlier example, we can set them to the desired width relatively accurately. But beyond that, they are really difficult to style in any way. They don't handle height settings consistently between each other and between browsers, you can color the background but not the foreground bar, and setting `appearance: none` on them makes things worse, not better.
 
-It is easier to just create your own custom solution for these features, if you want to be able to control the styling, or use a third-party solution such as [progressbar.js](https://kimmobrunfeldt.github.io/progressbar.js/#examples).
+It is easier to create your own custom solution for these features if you want to control the styling, or use a third-party solution such as [progressbar.js](https://kimmobrunfeldt.github.io/progressbar.js/#examples).
 
 ## Summary
 
