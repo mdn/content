@@ -48,9 +48,9 @@ This module doesn't define any properties, [data types](/en-US/docs/Web/CSS/CSS_
 
   - : Explains the formal grammar for defining valid values for CSS properties and functions, along with semantic constraints. A guide for understanding CSS component value types, combinators, and multipliers.
 
-- [CSS syntax error handling](/en-US/docs/Web/CSS/CSS_syntax/Error_handling)
+- [CSS error handling](/en-US/docs/Web/CSS/CSS_syntax/Error_handling)
 
-  - : Overview of how the user agent handles invalid CSS.
+  - : Overview of how browsers handle invalid CSS.
 
 - [Learn CSS first steps: CSS syntax](/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#css_syntax_basics)
 
