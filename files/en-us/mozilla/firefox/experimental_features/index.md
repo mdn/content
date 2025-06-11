@@ -441,21 +441,6 @@ These can be used by developers to specify whether users can close a dialog by c
 - `dom.dialog.light-dismiss.enabled`
   - : Set to `true` to enable.
 
-### Removal of MutationEvent
-
-{{domxref("MutationEvent")}} and its associated events (`DOMSubtreeModified`, `DOMNodeInserted`, `DOMNodeRemoved`, `DOMCharacterDataModified`, `DOMAttrModified`) are on the path for removal, and have been disabled on nightly.
-([Firefox bug 1951772](https://bugzil.la/1951772)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 138           | No                  |
-| Developer Edition | 138           | Yes                 |
-| Beta              | 138           | Yes                 |
-| Release           | 138           | Yes                 |
-
-- `dom.mutation_events.enabled`
-  - : Set to `true` to enable.
-
 ### Removal of `beforescriptexecute` and `afterscriptexecute` events
 
 The non-standard events [`beforescriptexecute`](/en-US/docs/Web/API/Document/beforescriptexecute_event) and [`afterscriptexecute`](/en-US/docs/Web/API/Document/afterscriptexecute_event) on the {{domxref("Document")}} interface, and [`afterscriptexecute`](/en-US/docs/Web/API/Element/afterscriptexecute_event) and [`beforescriptexecute`](/en-US/docs/Web/API/Element/beforescriptexecute_event) on the {{domxref("Element")}} interface are on the path to removal. They have been disabled in Nightly.
