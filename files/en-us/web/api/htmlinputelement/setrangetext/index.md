@@ -59,7 +59,7 @@ inserted text will be highlighted (selected) afterwards.
   id="text-box"
   size="30"
   value="This text has NOT been updated." />
-<button onclick="selectText()">Update text</button>
+<button>Update text</button>
 ```
 
 ### JavaScript
@@ -70,6 +70,8 @@ function selectText() {
   input.focus();
   input.setRangeText("ALREADY", 14, 17, "select");
 }
+
+document.querySelector("button").addEventListener("click", selectText);
 ```
 
 ### Result
