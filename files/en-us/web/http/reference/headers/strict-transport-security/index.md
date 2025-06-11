@@ -8,7 +8,7 @@ browser-compat: http.headers.Strict-Transport-Security
 
 {{HTTPSidebar}}
 
-The HTTP **`Strict-Transport-Security`** {{Glossary("response header")}} (often abbreviated as {{Glossary("HSTS")}}) informs browsers that the host should only be accessed using HTTPS, and that any future attempts to access it using HTTP should automatically be upgraded to HTTPS.
+The HTTP **`Strict-Transport-Security`** {{Glossary("response header")}} (often abbreviated as {{Glossary("HSTS")}}) informs browsers that the {{Glossary("host")}} should only be accessed using HTTPS, and that any future attempts to access it using HTTP should automatically be upgraded to HTTPS.
 Additionally, on future connections to the host, the browser will not allow the user to bypass secure connection errors, such as an invalid certificate.
 
 > [!NOTE]
