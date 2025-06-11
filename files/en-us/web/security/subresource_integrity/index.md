@@ -118,6 +118,14 @@ You can use the following {{HTMLElement("script")}} element to tell a browser th
 > [!NOTE]
 > For more details on the purpose of the `crossorigin` attribute, see [CORS settings attributes](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin).
 
+### Integrity enforcement with the `Integrity-Policy` header
+
+You can add the following header to your document in order to ensure that all the external scripts it loads are loaded with integrity (and aren't loaded with [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode)
+
+```http
+Integrity-Policy: blocked-destinations=(script), endpoints=(integrity-endpoint, general-endpoint)
+```
+
 ## How browsers handle Subresource Integrity
 
 Browsers handle SRI by doing the following:
@@ -135,14 +143,15 @@ The {{httpheader("Integrity-Policy")}} and {{httpheader("Integrity-Policy-Report
 When an `Integrity-Policy` header is specified, the browser would block requests with [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode or without an `integrity` attribute from being made.
 When an `Integrity-Policy-Report-Only` header is specified, such requests would be made, but reported to the specified reporting endpoint.
 
-The header values are defined as [structured field dictionaries](https://www.rfc-editor.org/rfc/rfc8941.html#name-dictionaries) with the following keys:
+The header values are defined as structured field dictionaries with the following keys:
 
 - `blocked-destinations`
-  - : Defines an [inner list](https://www.rfc-editor.org/rfc/rfc8941.html#name-inner-lists) of [request destinations](/en-US/docs/Web/API/Request/destination) to be blocked. The only currently supported value is `"script"`.
-- `sources`
-  - : Defines an [inner list](https://www.rfc-editor.org/rfc/rfc8941.html#name-inner-lists) of integrity sources. The default and only currently supported value is `"inline"`.
-- `endpoints`
-  - : Defines an [inner list](https://www.rfc-editor.org/rfc/rfc8941.html#name-inner-lists) of [reporting endpoints](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#endpoint).
+  - : Defines a list of [request destinations](/en-US/docs/Web/API/Request/destination) to be blocked. The only currently supported value is `"script"`.
+- `sources` {{optional_inline}}
+  - : Defines a list of integrity sources. The default and only currently supported value is `"inline"`.
+- `endpoints` {{optional_inline}}
+  - : Defines a list of [reporting endpoints](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#endpoint).
+- `blocked-destinations`
 
 In cases where a request is blocked by an integrity policy, a [Reporting API](/en-US/docs/Web/API/Reporting_API) violation report is created with a type of `"integrity-violation"`. It contains:
 
