@@ -17,12 +17,12 @@ into the document via methods like {{domxref("Node.insertBefore()")}} or
 ## Syntax
 
 ```js-nolint
-createDocumentType(qualifiedNameStr, publicId, systemId)
+createDocumentType(name, publicId, systemId)
 ```
 
 ### Parameters
 
-- `qualifiedNameStr`
+- `name`
   - : A string containing the qualified name, like
     `svg:svg`.
 - `publicId`
