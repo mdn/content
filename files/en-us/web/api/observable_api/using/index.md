@@ -103,7 +103,7 @@ In this example, we will print the numbers 1 to 10 to the page, then print a mes
 <p></p>
 ```
 
-In the JavaScript, we first grab a reference to the `<p>` and `<button>` elements, then use the {{domxref("Observable.Observable", "Observable()")}} constructor to create a new observable. Inside its callback function, we declare a variable `i` with a value of `1`. We then use a {{domxref("Window.setInterval()")}} call to check the value of `i` every 500 milliseconds. If the value has reached `11`, we call the `Subscriber.complete()` method to complete observation. If not, we call `Subscriber.next()` to move to the next iteration of the pipeline. At the end of the interval, `i` is incremented by 1.
+In the JavaScript, we first grab a reference to the `<p>` and `<button>` elements, then use the {{domxref("Observable.Observable", "Observable()")}} constructor to create a new observable. Inside its callback function, we declare a variable `i` with a value of `1`. We then use a {{domxref("Window.setInterval()")}} call to check the value of `i` every 500 milliseconds. If the value has reached `11`, we call the `Subscriber.complete()` method to complete the subscription. If not, we call `Subscriber.next()` to move to the next iteration of the pipeline. At the end of the interval, `i` is incremented by 1.
 
 ```js live-sample___basic-constructor-example
 const outputElem = document.querySelector("p");
@@ -111,7 +111,7 @@ const btn = document.querySelector("button");
 
 const observable = new Observable((subscriber) => {
   let i = 1;
-  setInterval(() => {
+  const interval = setInterval(() => {
     if (i === 11) {
       subscriber.complete();
     } else {
@@ -169,7 +169,7 @@ const btn = document.querySelector("button");
 ```js live-sample___basic-teardown-example
 const observable = new Observable((subscriber) => {
   let i = 1;
-  setInterval(() => {
+  const interval = setInterval(() => {
     if (i === 11) {
       subscriber.complete();
     } else {
@@ -181,6 +181,7 @@ const observable = new Observable((subscriber) => {
     if (btn.textContent === "Start count") {
       btn.textContent = "Restart count";
     }
+    clearInterval(interval);
   });
 });
 ```
@@ -189,7 +190,9 @@ const observable = new Observable((subscriber) => {
 btn.when("click").subscribe(init);
 ```
 
-The `addTeardown()` function is invoked immediately after the `Subscriber.complete()` or `Subscriber.error()` function is invoked to signal the completion of the pipeline (it is also invoked when the subscriber is aborted via an `AbortController`, as seen in the next section). In this case, we use it check whether the `<button>` text is "Start count"; if so, we change it to "Restart count" so that it makes more sense after the count has already run.
+The `addTeardown()` function is invoked immediately after the `Subscriber.complete()` or `Subscriber.error()` function is invoked to signal the completion of the subscription (it is also invoked when the subscriber is aborted via an `AbortController`, as seen in the next section).
+
+In this case, we use it check whether the `<button>` text is "Start count"; if so, we change it to "Restart count" so that it makes more sense after the count has already run. More importantly, however, we use the teardown function to clear the interval (via {{domxref("Window.clearInterval()")}}) once the subscription is completed. This is important to avoid errors and memory leaks.
 
 The example now renders like so:
 
@@ -250,6 +253,8 @@ let controller;
 
 Now onto our modified `init()` function. We've moved our `Observable()` constructor call in here, so that a new observable is created every time the count is started. The contrictor call is very similar to the previous example, except that this time we don't include a conditional inside the `setInterval()` call, and we don't call `Subscriber.complete()`; all of the conditional code is handled inside the `Subscriber.next()` function. We also disable the "Start count" `<button>` while the count is running, and enable it again inside the `addTeardown()` function so that it is enabled ready for the next count to start.
 
+We also again use the teardown function to clear the interval once the subscription is completed.
+
 Next, we create a new `AbortController` using the {{domxref("AbortController.AbortController", "AbortController()")}} constructor and assign it to the `controller` variable.
 
 In the `Observable.subscribe()` call, we have removed the `complete()` method definition, and updated the `next()` method definition so that it checks whether the passed `value` is higher than `10`. If so, we update the `<p>` text to "Count complete" and abort the subscription via {{domxref("AbortController.abort()")}}; if not, we update the `<p>` text to the current `value` and carry on to the next iteration.
@@ -262,13 +267,14 @@ function init() {
     countBtn.textContent = "Counting...";
     countBtn.disabled = true;
     let i = 1;
-    setInterval(() => {
+    const interval = setInterval(() => {
       subscriber.next(i);
       i++;
     }, 500);
     subscriber.addTeardown(() => {
       countBtn.textContent = "Restart count";
       countBtn.disabled = false;
+      clearInterval(interval);
     });
   });
 
@@ -401,11 +407,12 @@ The final functionality we need to implement is the live updating list count. To
 
 ```js live-sample___list-example
 const listObservable = new Observable((subscriber) => {
-  setInterval(() => {
+  const interval = setInterval(() => {
     const listItems = document.querySelectorAll("li");
     const listLength = listItems.length;
     subscriber.next(listLength);
   }, 500);
+  subscriber.addTeardown(() => clearInterval(interval));
 });
 ```
 

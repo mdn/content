@@ -147,7 +147,9 @@ In the HTML because we include a single `<p>` element to display the count, and 
 
 #### JavaScript
 
-In the JavaScript, we first grab a reference to the `<p>` and `<button>` elements, then use the {{domxref("Observable.Observable", "Observable()")}} constructor to create a new observable. Inside its callback function, we declare a variable `i` with a value of `1`. We then use a {{domxref("Window.setInterval()")}} call to check the value of `i` every 500 milliseconds. If the value has reached `11`, we call the {{domxref("Subscriber.complete()")}} method to complete observation. If not, we call {{domxref("Subscriber.next()")}} to move to the next iteration of the pipeline. At the end of the interval, `i` is incremented by 1.
+In the JavaScript, we first grab a reference to the `<p>` and `<button>` elements, then use the {{domxref("Observable.Observable", "Observable()")}} constructor to create a new observable. Inside its callback function, we declare a variable `i` with a value of `1`. We then use a {{domxref("Window.setInterval()")}} call to check the value of `i` every 500 milliseconds. If the value has reached `11`, we call the {{domxref("Subscriber.complete()")}} method to complete the subscription. If not, we call {{domxref("Subscriber.next()")}} to move to the next iteration of the pipeline. At the end of the interval, `i` is incremented by 1.
+
+We also define a {{domxref("Subscriber.addTeardown()")}} callback to clear the interval (via {{domxref("Window.clearInterval()")}}) once the subscription is completed. This is important to avoid errors and memory leaks.
 
 ```js live-sample___basic-constructor-example
 const outputElem = document.querySelector("p");
@@ -155,7 +157,7 @@ const btn = document.querySelector("button");
 
 const observable = new Observable((subscriber) => {
   let i = 1;
-  setInterval(() => {
+  const interval = setInterval(() => {
     if (i === 11) {
       subscriber.complete();
     } else {
@@ -163,6 +165,7 @@ const observable = new Observable((subscriber) => {
     }
     i++;
   }, 500);
+  subscriber.addTeardown(() => clearInterval(interval));
 });
 ```
 

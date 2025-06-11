@@ -60,16 +60,13 @@ function init() {
     const interval = setInterval(() => {
       subscriber.next(i);
       i++;
-
-      if (!subscriber.active) {
-        clearInterval(interval);
-      }
     }, 500);
 
     subscriber.signal.addEventListener("abort", () => {
       countBtn.textContent = "Restart count";
       outputElem.textContent = "Count complete";
       countBtn.disabled = false;
+      clearInterval(interval);
     });
   });
 
@@ -96,8 +93,7 @@ In this function, we first create a new observable using the {{domxref("Observab
 
 - Set the start button's text content to "Counting..." and disable it so that multiple observables can't be created at once.
 - Initialize an `i` variable to the value `1` then start a {{domxref("Window.setInterval", "setInterval()")}} running every 500 milliseconds. Inside the interval, we call {{domxref("Subscriber.next()")}}, passing it the current value of `i`, then iterate `i` by `1`.
-- When `Subscriber.active` is no longer true, we clear the interval using {{domxref("Window.clearInterval", "clearInterval()")}} to make sure this interval doesn't interfere with the activity of future intervals.
-- Finally, we specify an `abort` event listener on the subscriber's `signal` property, so that when the subscription is aborted, we clean up the app ready for the next count. We set the start button's text to "Restart count", the output text to "Restart count", and re-enable the start button.
+- Finally, we specify an `abort` event listener on the subscriber's `signal` property, so that when the subscription is aborted, we clean up the app ready for the next count. We set the start button's text to "Restart count", the output text to "Restart count", and re-enable the start button. We also we clear the current interval using {{domxref("Window.clearInterval", "clearInterval()")}} to make sure it doesn't interfere with the activity of future intervals or cause memory leaks.
 
 Next, we create a new `AbortController` using the {{domxref("AbortController.AbortController", "AbortController()")}} constructor and assign it to the `controller` variable.
 

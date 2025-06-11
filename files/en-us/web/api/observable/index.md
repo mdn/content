@@ -61,14 +61,14 @@ The two main ways to create an observable are as follows:
 - {{domxref("Observable.take", "take()")}} {{Experimental_Inline}}
   - : Specifies a maximum number of values that can be passed through the resulting observable, after which the stream is completed and no more data is sent.
 - {{domxref("Observable.takeUntil", "takeUntil()")}} {{Experimental_Inline}}
-  - : Specifies a condition under which an observable will unsubscribe from an event stream.
+  - : Specifies an event on which the resulting observable will unsubscribe from the event stream.
 
 ### Promise-returning instance methods
 
 - {{domxref("Observable.every", "every()")}} {{Experimental_Inline}}
   - : Returns a boolean indicating whether every value passed through the observable stream passed a specified test.
 - {{domxref("Observable.find", "find()")}} {{Experimental_Inline}}
-  - : Returns the first value passed through the observable stream that passes a specified test.
+  - : Returns the first value passed through the observable stream that passes a specified test, or {{jsxref("undefined")}} if no values pass.
 - {{domxref("Observable.first", "first()")}} {{Experimental_Inline}}
   - : Returns the first value passed through the observable stream.
 - {{domxref("Observable.forEach", "forEach()")}} {{Experimental_Inline}}
@@ -110,14 +110,16 @@ function reportCoords(e) {
 
 ### Creating an observable using `new Observable()`
 
-In the below snippet, we first use the {{domxref("Observable.Observable", "Observable()")}} constructor to create a new observable. Inside its callback function, we declare a variable `i` with a value of `1`. We then use a {{domxref("Window.setInterval()")}} call to check the value of `i` every 500 milliseconds. If the value has reached `11`, we call the {{domxref("Subscriber.complete()")}} method to complete observation. If not, we call {{domxref("Subscriber.next()")}} to move to the next iteration of the pipeline. At the end of the interval, `i` is incremented by 1.
+In the below snippet, we first use the {{domxref("Observable.Observable", "Observable()")}} constructor to create a new observable. Inside its callback function, we declare a variable `i` with a value of `1`. We then use a {{domxref("Window.setInterval()")}} call to check the value of `i` every 500 milliseconds. If the value has reached `11`, we call the {{domxref("Subscriber.complete()")}} method to complete the subscription. If not, we call {{domxref("Subscriber.next()")}} to move to the next iteration of the pipeline. At the end of the interval, `i` is incremented by 1.
+
+We also define a {{domxref("Subscriber.addTeardown()")}} callback to clear the interval (via {{domxref("Window.clearInterval()")}}) once the subscription is completed. This is important to avoid errors and memory leaks.
 
 We then subscribe to the observable by calling {{domxref("Observable.subscribe()")}}. Inside the `subscribe()` method's argument, we define the {{domxref("Subscriber")}} object's methods referenced inside the constructor in the previous block — the `next()` method prints the value passed to it to the console (`i`, in the code above that calls it), and the `complete()` method prints "Count complete" to the console.
 
 ```js
 const observable = new Observable((subscriber) => {
   let i = 1;
-  setInterval(() => {
+  const interval = setInterval(() => {
     if (i === 11) {
       subscriber.complete();
     } else {
@@ -125,6 +127,7 @@ const observable = new Observable((subscriber) => {
     }
     i++;
   }, 500);
+  subscriber.addTeardown(() => clearInterval(interval));
 });
 
 observable.subscribe({

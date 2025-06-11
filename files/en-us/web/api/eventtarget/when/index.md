@@ -14,6 +14,8 @@ The **`when()`** method of the {{domxref("Observable API", "Observable API", "",
 
 To subscribe to the stream of events, you can then call {{domxref("Observable.subscribe", "subscribe()")}} on the resulting observable.
 
+In the background, an event listener is registered to capture the events as they are fired, in the same way as when you call {{domxref("EventTarget.addEventListener()")}}. However, only one listener is added for multiple subscriptions on the same `EventTarget` resulting from a `when()` call, whereas a separate listener is added for each `addEventListener()` call.
+
 ## Syntax
 
 ```js-nolint
@@ -30,7 +32,7 @@ when(type, options)
 - `options` {{optional_inline}}
   - : An options object containing the following properties:
     - `capture` {{optional_inline}}
-      - : A boolean value indicating that events of the specified type will be dispatched to the listener registered in the background once the observable is subscribed to before being dispatched to any `EventTarget` beneath it in the DOM tree. If not specified, defaults to `false`.
+      - : A boolean value indicating that events of the specified type will be dispatched to the listener registered in the background before being dispatched to any `EventTarget` beneath it in the DOM tree. If not specified, defaults to `false`.
     - `passive` {{optional_inline}}
       - : A boolean value that, if `true`, indicates that the observer subscription's [`next`](/en-US/docs/Web/API/Observable/subscribe#next) function will never call {{domxref("Event.preventDefault()")}}. If a passive listener calls `preventDefault()`, nothing will happen and a console warning may be generated. If not specified, defaults to `false`. See [Using passive listeners](/en-US/docs/Web/API/EventTarget/addEventListener#using_passive_listeners) for more information on why this is useful.
 

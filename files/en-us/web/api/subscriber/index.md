@@ -63,7 +63,7 @@ const btn = document.querySelector("button");
 btn.addEventListener("click", () => {
   const observable = new Observable((subscriber) => {
     let i = 1;
-    setInterval(() => {
+    const interval = setInterval(() => {
       if (i === 11) {
         subscriber.complete();
       } else {
@@ -75,6 +75,7 @@ btn.addEventListener("click", () => {
       if (btn.textContent === "Start count") {
         btn.textContent = "Restart count";
       }
+      clearInterval(interval);
     });
   });
 
@@ -93,7 +94,7 @@ Inside the `click` event handler function:
 
 - We use the {{domxref("Observable.Observable", "Observable()")}} constructor to create a new observable. Inside its callback function, we declare a variable `i` with a value of `1`. We then use a {{domxref("Window.setInterval()")}} call to check the value of `i` every 500 milliseconds. If the value has reached `11`, we call the {{domxref("Subscriber.complete", "complete()")}} method to complete the subscription. If not, we call {{domxref("Subscriber.next", "next()")}} to move to the next iteration of the pipeline.
 - At the end of the interval, `i` is incremented by 1.
-- We also register a teardown callback using {{domxref("Subscriber.addTeardown", "addTeardown()")}}, which changes the text on the `<button>` to "Restart count" if it doesn't already say that — this is more suitable if the count has already been run.
+- We also register a teardown callback using {{domxref("Subscriber.addTeardown", "addTeardown()")}}. Inside it, we change the text on the `<button>` to "Restart count" if it doesn't already say that — this is more suitable if the count has already been run. And more importantly, we clear the interval (via {{domxref("Window.clearInterval()")}}) once the subscription is completed. This is important to avoid errors and memory leaks.
 - Finally, we subscribe to the observable by calling {{domxref("Observable.subscribe()")}}. Inside the `subscribe()` method's argument, we define the functionality of the `Subscriber` object's `next()` and `complete()` methods referenced inside the constructor in the previous block — the `next()` method prints the value passed to it to the `<p>` element (`i`, in the code above that calls it), and the `complete()` method prints "Count complete" to the `<p>` element.
 
 #### Result
