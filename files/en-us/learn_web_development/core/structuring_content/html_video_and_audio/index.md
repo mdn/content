@@ -322,7 +322,7 @@ Your finished HTML should look something like this:
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Multimedia and embedding](/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Multimedia_and_embedding).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Audio and video](/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video).
 
 ## Summary
 
