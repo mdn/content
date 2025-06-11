@@ -33,17 +33,17 @@ A `<meta name="referrer">` element has the following additional attributes:
     - `origin`
       - : Sends the origin of the document.
     - `no-referrer-when-downgrade`
-      - : Send the full URL when the destination is at least as secure as the current page (HTTP(S)→HTTPS), but send no referrer when it's less secure (HTTPS→HTTP). This is the default behavior.
+      - : Sends the full URL when the destination is at least as secure as the current page (HTTP(S)→HTTPS), but sends no referrer when it's less secure (HTTPS→HTTP). This is the default behavior.
     - `origin-when-cross-origin`
-      - : Send the full URL (stripped of parameters) for same-origin requests, but only send the origin for other cases.
+      - : Sends the full URL (stripped of parameters) for same-origin requests, but only sends the origin for other cases.
     - `same-origin`
-      - : Send the full URL (stripped of parameters) for same-origin requests. Cross-origin requests will contain no referrer header.
+      - : Sends the full URL (stripped of parameters) for same-origin requests. Cross-origin requests will contain no referrer header.
     - `strict-origin`
-      - : Send the origin when the destination is at least as secure as the current page (HTTP(S)→HTTPS), but send no referrer when it's less secure (HTTPS→HTTP).
+      - : Sends the origin when the destination is at least as secure as the current page (HTTP(S)→HTTPS), but sends no referrer when it's less secure (HTTPS→HTTP).
     - `strict-origin-when-cross-origin`
-      - : Send the full URL (stripped of parameters) for same-origin requests. Send the origin when the destination is at least as secure as the current page (HTTP(S)→HTTPS). Otherwise, send no referrer.
+      - : Sends the full URL (stripped of parameters) for same-origin requests. Sends the origin when the destination is at least as secure as the current page (HTTP(S)→HTTPS). Otherwise, sends no referrer.
     - `unsafe-URL`
-      - : Send the full URL (stripped of parameters) for same-origin or cross-origin requests.
+      - : Sends the full URL (stripped of parameters) for same-origin or cross-origin requests.
 
 ## Examples
 
