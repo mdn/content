@@ -1,5 +1,6 @@
 ---
 title: Using CSS counters
+short-title: Using counters
 slug: Web/CSS/CSS_counter_styles/Using_CSS_counters
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-lists/#auto-numbering

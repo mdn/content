@@ -1,5 +1,6 @@
 ---
 title: CSS selectors and combinators
+short-title: Selectors and combinators
 slug: Web/CSS/CSS_selectors/Selectors_and_combinators
 page-type: guide
 spec-urls:
