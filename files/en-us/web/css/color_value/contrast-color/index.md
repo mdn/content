@@ -11,7 +11,7 @@ browser-compat: css.types.color.contrast-color
 
 The **`contrast-color()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) takes a {{cssxref("color_value","color")}} value and returns a [guaranteed](https://www.w3.org/TR/WCAG21/#contrast-minimum) contrasting color.
 
-`contrast-color()` makes it easy, for example, to specify a text color when background colors are created dynamically, or vice versa. It avoids the need to maintain background-text color pairs.
+`contrast-color()` makes it easy, for example, to specify a text color and automatically generate a contrasting background color, or vice versa. It avoids the need to maintain background-text color pairs.
 
 ## Syntax
 
@@ -27,11 +27,11 @@ contrast-color(var(--backgroundColor))
 
 ### Return value
 
-Either `white` or `black` color value.
+A {{cssxref("named-color")}} of either `white` or `black`.
 
 ## Description
 
-The function produces only `white` or `black` value, depending on which value produces maximum contrast with the input color. If both white and black colors produce the same contrast, then the `white` value is returned.
+The `contrast-color()` function returns a value of `white` or `black`, depending on which value has the greatest contrast with the input color. If both `white` and `black` have the same contrast with the input color, `white` is returned.
 
 > [!WARNING]
 > There is no guarantee that the values returned using the `contrast-color()` function will produce an accessible result. Mid-tone background colors generally don't provide enough contrast. It is recommended therefore to use light or dark colors with the `contrast-color()` function.
@@ -108,7 +108,7 @@ updateColor();
 
 ### Light and dark mode usage
 
-In the following example, the [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) has been used to set a background color based on operating system or browser color scheme settings. The `contrast-color()` function is used to automatically set the text color.
+In the following example, the [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) is used to set a background color based on operating system or browser color scheme settings. The `contrast-color()` function is used to set the text color automatically.
 
 Try changing the browser or OS dark mode setting to see the effect.
 
