@@ -64,6 +64,8 @@ This article provides information about the changes in Firefox 140 that affect d
 
 #### Removals
 
+- The {{domxref("MutationEvent")}} interface and its associated events (`DOMSubtreeModified`, `DOMNodeInserted`, `DOMNodeRemoved`, `DOMCharacterDataModified`, `DOMAttrModified`) have been removed. ([Firefox bug 1963043](https://bugzil.la/1963043)).
+
 ### WebAssembly
 
 #### Removals

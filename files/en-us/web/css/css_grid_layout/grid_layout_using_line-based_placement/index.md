@@ -1,5 +1,6 @@
 ---
 title: Grid layout using line-based placement
+short-title: Using line-based placement
 slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 page-type: guide
 ---

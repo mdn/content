@@ -1,5 +1,6 @@
 ---
-title: CSS Layout cookbook
+title: CSS layout cookbook
+short-title: Layout cookbook
 slug: Web/CSS/Layout_cookbook
 page-type: landing-page
 ---

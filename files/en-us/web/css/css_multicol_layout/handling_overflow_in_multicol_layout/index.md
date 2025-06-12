@@ -1,5 +1,6 @@
 ---
 title: Handling overflow in multi-column layout
+short-title: Handling overflow
 slug: Web/CSS/CSS_multicol_layout/Handling_overflow_in_multicol_layout
 page-type: guide
 ---
