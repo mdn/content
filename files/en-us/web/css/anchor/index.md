@@ -58,7 +58,11 @@ The parameters are:
     - `bottom`
       - : The bottom of the anchor element.
     - `left`
-      - : The left of the anchor element
+      - : The left of the anchor element.
+    - `inside`
+      - : Same side as the inset property. Attaches the positioned box from inside of the anchor box.
+    - `outside`
+      - : Opposite side of the inset property. Attaches the positioned box from outside the anchor box.
     - `start`
       - : The logical start of the anchor element's [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) along the axis of the inset property on which the `anchor()` function is set.
     - `end`
@@ -71,8 +75,6 @@ The parameters are:
       - : The center of the axis of the inset property on which the `anchor()` function is set.
     - {{cssxref("percentage")}}
       - : Specifies the distance, as a percentage, from the start of the element's content along the axis of the inset property on which the `anchor()` function is set.
-
-    The CSS anchor positioning module specifies two additional `<anchor-side>` values, `inside` and `outside`, which have not yet been implemented.
 
 - {{cssxref("length-percentage")}} {{optional_inline}}
   - : Specifies a fallback value the function should resolve to if the `anchor()` function would otherwise not be valid.
