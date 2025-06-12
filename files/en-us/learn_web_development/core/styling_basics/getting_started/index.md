@@ -8,7 +8,7 @@ sidebar: learnsidebar
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/What_is_CSS", "Learn_web_development/Core/Styling_basics/Styling_a_bio_page", "Learn_web_development/Core/Styling_basics")}}
 
-In this article, we will take a simple HTML document and apply CSS to it, learning some practical details of the language along the way. We will also review the CSS syntax features you've not looked at yet.
+In this article, we will get you to take a simple HTML document and apply CSS to it, learning some practical details of the language along the way. We will also review some additional CSS syntax features you've not looked at yet.
 
 <table>
   <tbody>
@@ -80,6 +80,8 @@ This renders like so:
 
 The very first thing we need to do is to tell the HTML document that we have some CSS rules we want it to use. There are three different ways to apply CSS to an HTML document that you'll commonly come across — external stylesheets, internal stylesheets, and inline styles. Let's look at these now.
 
+If you are working through this article using the MDN Playground, you won't be able to follow the steps detailed in this section in the same way as people writing the code on their local computers. This is because MDN Playground handles adding the CSS to the HTML implicitly in the background. You should however still read through the section to be aware of the content.
+
 ### External stylesheets
 
 An external stylesheet contains CSS in a separate file with a `.css` extension. This is the most common and useful method of bringing CSS to a document. You can link a single CSS file to multiple web pages, styling all of them with the same CSS stylesheet.
@@ -92,7 +94,7 @@ To link `styles.css` to `index.html`, add the following line somewhere inside th
 <link rel="stylesheet" href="styles.css" />
 ```
 
-This {{htmlelement("link")}} element tells the browser that we have a stylesheet, using the `rel` attribute, and the location of that stylesheet as the value of the `href` attribute. You can test that the CSS works by adding a rule to `styles.css`. Using your code editor, add the following to your CSS file (or add it to the "CSS" box in the MDN Playground):
+This {{htmlelement("link")}} element tells the browser that we have a stylesheet, using the `rel` attribute, and the location of that stylesheet as the value of the `href` attribute. You can test that the CSS works by adding a rule to `styles.css`. Using your code editor, add the following to your CSS file:
 
 ```css
 h1 {
@@ -236,7 +238,7 @@ So far, we have styled elements based on their HTML element names. This works as
 
 3. Save and refresh to see what the result is.
 
-You can now apply the class of `special` to others elements on your page that you want to have the same look as this list item. Add a class of `special` to the `<span>` inside the paragraph, then reload your page: It should also now be orange and bold.
+You can now apply the class of `special` to other elements on your page that you want to have the same look as this list item. Add a class of `special` to the `<span>` inside the paragraph, then reload your page: It should also now be orange and bold.
 
 ### Styling things based on their location in a document
 
@@ -455,7 +457,7 @@ Look up different values of properties listed below. Try writing CSS rules that 
 
 CSS [@rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule) (pronounced "at-rules") provide instructions for how CSS should behave. One common @rule that you are likely to encounter is `@media`, which is used to create [media queries](/en-US/docs/Web/CSS/CSS_media_queries). Media queries use conditional logic for applying CSS styling.
 
-In the example below, the stylesheet defines a default pink background for the `<body>` element. However, a media query follows that sets a blue background on the `<body>` element if the browser viewport is wider than 30em.
+In the example below, the stylesheet defines a default pink background for the `<body>` element. However, a media query follows that sets a blue background on the `<body>` element if the browser viewport is wider than `30em`.
 
 ```css
 body {
@@ -468,8 +470,6 @@ body {
   }
 }
 ```
-
-You will encounter other `@rules` throughout the course.
 
 ### Shorthand properties
 
@@ -572,7 +572,7 @@ p {
 }
 ```
 
-Try adding comments in your CSS.
+Try adding comments to your CSS.
 
 ### White space in CSS
 
@@ -610,7 +610,7 @@ body{font:1em/150% Helvetica,Arial,sans-serif;padding:1em;margin:0 auto;max-widt
 h1{font-size:1.5em;}
 ```
 
-Bear in mind that removing some white space can cause errors. Property names never contain whitespace, while property values that expect white space between multiple values will be invalid if that space is removed. For example, these declarations are valid CSS:
+Bear in mind that some white space changes can cause errors. Property names never contain whitespace, while property values that expect white space between multiple values will be invalid if that space is removed. For example, these declarations are valid CSS:
 
 ```css
 margin: 0 auto;
