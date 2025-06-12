@@ -388,5 +388,5 @@ For detailed information on anchor features and usage, see the [CSS anchor posit
 - {{cssxref("position-anchor")}}
 - [`anchor()`](/en-US/docs/Web/CSS/anchor) function
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide
-- [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide
+- [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module

@@ -1,5 +1,6 @@
 ---
 title: Basic concepts of grid layout
+short-title: Basic concepts
 slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
 page-type: guide
 ---

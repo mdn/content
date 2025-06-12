@@ -19,16 +19,22 @@ A {{DOMxRef("StyleSheet")}} object, or `null` if none is associated with the ele
 
 ## Examples
 
+Suppose the `<head>` contains the following:
+
 ```html
-<html>
-  <header>
-    <style media="print"></style>
-    …
-  </header>
-</html>
+<style id="inline-style">
+  p {
+    color: blue;
+  }
+</style>
 ```
 
 The `sheet` property of the associated `HTMLStyleElement` object will return the {{domxref("StyleSheet")}} object describing it.
+
+```js
+const style = document.getElementById("inline-style");
+console.log(style.sheet.cssRules[0].cssText); // 'p { color: blue; }'
+```
 
 ## Specifications
 
