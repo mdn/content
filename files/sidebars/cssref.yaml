@@ -65,6 +65,7 @@ sidebar:
     tags:
       - css-property
       - css-shorthand-property
+    link: /Web/CSS/Properties
     title: Properties
     details: closed
   - type: listSubPages
