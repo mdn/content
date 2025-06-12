@@ -12323,8 +12323,8 @@
 /en-US/docs/Web/CSS/clamp()	/en-US/docs/Web/CSS/clamp
 /en-US/docs/Web/CSS/color-adjust	/en-US/docs/Web/CSS/print-color-adjust
 /en-US/docs/Web/CSS/color_value/color()	/en-US/docs/Web/CSS/color_value/color
-/en-US/docs/Web/CSS/color_value/color-contrast	/en-US/docs/Web/CSS/color_value
-/en-US/docs/Web/CSS/color_value/color-contrast()	/en-US/docs/Web/CSS/color_value
+/en-US/docs/Web/CSS/color_value/color-contrast	/en-US/docs/Web/CSS/color_value/contrast-color
+/en-US/docs/Web/CSS/color_value/color-contrast()	/en-US/docs/Web/CSS/color_value/contrast-color
 /en-US/docs/Web/CSS/color_value/color-mix()	/en-US/docs/Web/CSS/color_value/color-mix
 /en-US/docs/Web/CSS/color_value/color_keywords	/en-US/docs/Web/CSS/named-color
 /en-US/docs/Web/CSS/color_value/device-cmyk()	/en-US/docs/Web/CSS/color_value/device-cmyk

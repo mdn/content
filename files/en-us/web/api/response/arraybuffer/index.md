@@ -100,14 +100,21 @@ The {{domxref("Response.Response","Response()")}} constructor accepts
 {{domxref("File")}}s and {{domxref("Blob")}}s, so it may be used to read a
 {{domxref("File")}} into other formats.
 
+```html
+<input type="file" />
+```
+
 ```js
 function readFile(file) {
   return new Response(file).arrayBuffer();
 }
-```
 
-```html
-<input type="file" onchange="readFile(this.files[0])" />
+document
+  .querySelector("input[type=file]")
+  .addEventListener("change", (event) => {
+    const file = event.target.files[0];
+    const buffer = readFile(file);
+  });
 ```
 
 ## Specifications

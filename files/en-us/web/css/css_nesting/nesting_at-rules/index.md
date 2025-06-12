@@ -1,5 +1,6 @@
 ---
 title: CSS nesting at-rules
+short-title: Nesting at-rules
 slug: Web/CSS/CSS_nesting/Nesting_at-rules
 page-type: guide
 ---
