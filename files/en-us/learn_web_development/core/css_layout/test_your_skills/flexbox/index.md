@@ -6,10 +6,10 @@ page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
-The aim of this skill test is to assess whether you understand how [flexbox and flex items](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox) behave. Below are four common design patterns that you might use flexbox to create. Your task is to build them.
+The aim of this skill test is to assess whether you understand how [flexbox and flex items](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox) behave. Below are four sets of design problems that you might use flexbox to solve. Your task is to fix the problems.
 
 > [!NOTE]
-> Click **"Play"** in the code blocks below to edit the examples in the MDN Playground.
+> Click **"Play"** in the code blocks in Tasks 1, 2, and 4 to edit the examples in the MDN Playground. Task 3 is an interactive example provided by our [learning partner](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds), [Scrimba](https://scrimba.com/home).
 > You can also copy the code (click the clipboard icon) and paste it into an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 > If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
@@ -158,62 +158,11 @@ li:first-child {
 
 ## Task 3
 
-In this task, there are two elements in the HTML below, a `<div>` element with a class of `parent` which contains another `<div>` element with a class of `child`. Use flexbox to center the child inside the parent. There is more than one possible solution here.
+For this task, we are handing you over to our [learning partner](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds), [Scrimba](https://scrimba.com/home), for a fun, interactive flexbox challenge.
 
-Your final result should look like the image below:
+Watch the embedded scrim and complete all the tasks on the timeline (the little ghost icons) by following the instructions and editing the code. When you are done, you can resume watching the scrim to check how the teacher's solution matches up to yours.
 
-![A box centered inside another box.](flex-task3.png)
-
-Try to update the code below to recreate the finished example:
-
-```html live-sample___flexbox3
-<div class="parent">
-  <div class="child">Center me.</div>
-</div>
-```
-
-```css hidden live-sample___flexbox3
-body {
-  font: 1.2em / 1.5 sans-serif;
-}
-.parent {
-  border: 2px solid #77a6b6;
-  border-radius: 0.5em;
-  height: 200px;
-}
-
-.child {
-  background-color: #4d7298;
-  color: #fff;
-  padding: 0.5em;
-  width: 150px;
-}
-```
-
-```css hidden live-sample___flexbox3
-.parent {
-}
-
-.child {
-}
-```
-
-{{EmbedLiveSample("flexbox3", "", "210px")}}
-
-<details>
-<summary>Click here to show the solution</summary>
-
-It's only necessary to change the parent styles to center an item horizontally and vertically:
-
-```css
-.parent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-```
-
-</details>
+<scrim-inline url="https://scrimba.com/frontend-path-c0j/~03a" scrimtitle="Flexbox alignment challenges"></scrim-inline>
 
 ## Task 4
 
