@@ -27,16 +27,10 @@ After applying the cascading rules and resolving values step by step, the browse
 
 All elements that are part of the document's flattened element tree have declared, cascaded, specified, computed, used, and actual values. For a specific property, these values may or may not be the same. For example, if your large code base includes the CSS `p { font-size: 1.25em; }` and your HTML includes `<p>CSS is fun!</p>`, what size will the paragraph be? The {{cssxref("font-size")}} value moves through a few stages to go from the `em` specified value to the rendered `px` value.
 
-- [Property values](#property-values)
-- [Processing stages](#processing-stages)
-  - [Initial value](#initial-value)
-  - [Specified value](#specified-value)
-  - [Computed value](#computed-value)
-  - [Used value](#used-value)
-- [Rendered values](#rendered-values)
-  - [Actual Value](#actual-value)
-  - [Resolved value](#resolved-value)
-- [See also](#see-also)
+- [Initial value](#initial_value)
+- [Specified value](#specified_value)
+- [Computed value](#computed_value)
+- [Used value](#used_value)
 
 These values are used to determine the final [rendered value](#rendered_values).
 
