@@ -315,7 +315,7 @@ When creating our example grid, we specifically defined our column tracks with t
 The _explicit grid_ consists of rows and columns defined with {{cssxref("grid-template-columns")}} or {{cssxref("grid-template-rows")}}. The
 _implicit grid_ extends the defined explicit grid when content is placed outside of that grid, such as into the rows by drawing additional grid lines.
 
-If you place something outside of the defined grid—or due to the amount of content, more grid tracks are needed—then the grid creates rows and columns in the _implicit grid_. These tracks will be auto-sized by default, meaning their size is influenced both by the content inside them and by the available free space within the grid container. The "auto" keyword allows the track to accommodate content while also sharing any remaining space.
+If you place something outside of the defined grid or due to the amount of content, more grid tracks are needed, then the grid creates rows and columns in the _implicit grid_. These tracks will be auto-sized by default, meaning their size is influenced both by the content that is inside them and by the available free space within the grid container. The `auto` keyword allows the track to accommodate content while also sharing any remaining space.
 
 You can also define a set size for tracks created in the implicit grid with the {{cssxref("grid-auto-rows")}} and {{cssxref("grid-auto-columns")}} properties.
 
