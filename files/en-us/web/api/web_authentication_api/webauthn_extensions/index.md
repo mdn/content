@@ -421,14 +421,14 @@ The ability to generate a random number associated with a user's credential is u
 For example, it can be used to generate a symmetric key for encrypting sensitive data, and that can only be decrypted by a user who has the seed and the associated authenticator.
 It could similarly be used to create a symmetric key for end-to-end encryption, seeded with a value from the server and unique for that credential and session.
 
-The extension allows you to pass buffer values of type {{jsxref("ArrayBuffer")}} or {{jsxref("TypedArray")}} to the authenticator which will return the result of evaluating the value with the PRF of the associated credential.
-This can be done in an assertion, as part of the authentication workflow, specifying the credential or credentials for which the result is to be evaluated.
-It can also be done when creating a credential, but fewer authenticators support this generating outputs when creating credentials.
+The extension allows you to pass buffer values of type {{jsxref("ArrayBuffer")}} or {{jsxref("TypedArray")}} to the authenticator, which will return the result of evaluating the value with the PRF of the associated credential.
+This can be done in an assertion, as part of the authentication workflow — specifying the credential or credentials for which the result is to be evaluated.
+It can also be done when creating a credential; but fewer authenticators support the generation of outputs when creating credentials.
 
 #### Input
 
 During a `create()` call, the `publicKey`'s `extensions` property may contain a `prf` property which has `eval` object with the property `first` and optional property `second`.
-These properties are either {{jsxref("ArrayBuffer")}} or {{jsxref("TypedArray")}} instances that the contains values to pass to the PRF for the credential.
+These properties are either {{jsxref("ArrayBuffer")}} or {{jsxref("TypedArray")}} instances that the contain values to pass to the PRF for the credential.
 
 For example, the definition below might be used when creating a new credential in order to create a new symmetric key from a server-provided secret.
 
@@ -442,7 +442,7 @@ For example, the definition below might be used when creating a new credential i
 });
 ```
 
-The optional `second` property can be used if two random values need to be created for a credential, such as in workflow where the encryption key is rotated on each session.
+The optional `second` property can be used if two random values need to be created for a credential, such as in a workflow where the encryption key is rotated on each session.
 As an example of such a workflow, in each session you pass two salts: the `first` salt returns a value that can be used to decrypt the previous session data, while the `second` salt returns a value that can be used to encrypt this session data.
 In subsequent sessions the `second` salt is moved to the position of the `first` salt, so the lifetime where a particular salt can be usefully compromised is bounded.
 
