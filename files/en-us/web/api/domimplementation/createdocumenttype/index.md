@@ -23,12 +23,11 @@ createDocumentType(name, publicId, systemId)
 ### Parameters
 
 - `name`
-  - : A string containing the qualified name, like
-    `svg:svg`.
+  - : A string containing the name of the doctype, like `html`. Corresponds to the {{domxref("DocumentType.name")}} property.
 - `publicId`
-  - : A string containing the `PUBLIC` identifier.
+  - : A string containing the `PUBLIC` identifier. Corresponds to the {{domxref("DocumentType.publicId")}} property.
 - `systemId`
-  - : A string containing the `SYSTEM` identifiers.
+  - : A string containing the `SYSTEM` identifiers. Corresponds to the {{domxref("DocumentType.systemId")}} property.
 
 ### Return value
 
@@ -38,7 +37,7 @@ A [`DocumentType`](/en-US/docs/Web/API/DocumentType).
 
 ```js
 const dt = document.implementation.createDocumentType(
-  "svg:svg",
+  "svg",
   "-//W3C//DTD SVG 1.1//EN",
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd",
 );
@@ -47,7 +46,7 @@ const d = document.implementation.createDocument(
   "svg:svg",
   dt,
 );
-alert(d.doctype.publicId); // -//W3C//DTD SVG 1.1//EN
+console.log(d.doctype.publicId); // -//W3C//DTD SVG 1.1//EN
 ```
 
 ## Specifications
