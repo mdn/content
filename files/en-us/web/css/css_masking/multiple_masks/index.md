@@ -145,8 +145,7 @@ The `mask-*` properties include:
 
 Each `mask-*` value in a comma-separated list of `mask` component properties applies to a separate mask layer. As stated earlier, an element can have multiple mask layers applied — the number of layers is determined by the number of comma-separated values in the `mask-image` or `mask` properties. Each `mask-*` value is matched with a mask layer, in order. If the number of values in the `mask-*` property is greater than the number of mask layers, any excess values are ignored. If the mask component property has fewer values than the number of mask layers, the `mask-*` values are repeated.
 
-> [!NOTE]
-> To learn more about these individual properties, see [CSS mask properties](/en-US/docs/Web/CSS/CSS_masking/Mask_properties).
+To learn more about these individual properties, see [CSS mask properties](/en-US/docs/Web/CSS/CSS_masking/Mask_properties).
 
 ## Order of shorthand component properties
 
