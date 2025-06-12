@@ -31,14 +31,14 @@ All members are optional in the specification, but some applications require som
   "name": "MDN Web Docs",
   "icons": [
     {
-      "src": "/favicon-192x192.png",
+      "src": "/favicon-192x192.webp",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/webp"
     },
     {
-      "src": "/favicon-512x512.png",
+      "src": "/favicon-512x512.webp",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/webp"
     }
   ],
   "start_url": ".",
