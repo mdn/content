@@ -147,9 +147,9 @@ const foo = {
   bar: "The dragons be out of office",
 };
 
-if (Object.hasOwn(foo, "bar")) {
-  console.log(foo.bar); // true - re-implementation of hasOwnProperty() does not affect Object
-}
+console.log(foo.hasOwnProperty("bar")); // false - re-implemented hasOwnProperty() reports false for *every* property
+
+console.log(Object.hasOwn(foo, "bar")); // true - re-implementation of hasOwnProperty() does not affect Object
 ```
 
 It can also be used with [`null`-prototype objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects). These do
@@ -158,9 +158,11 @@ not inherit from `Object.prototype`, and so `hasOwnProperty()` is inaccessible.
 ```js
 const foo = Object.create(null);
 foo.prop = "exists";
-if (Object.hasOwn(foo, "prop")) {
-  console.log(foo.prop); // true - works irrespective of how the object is created.
-}
+
+console.log(foo.hasOwnProperty("prop")) // Uncaught TypeError: foo.hasOwnProperty is not a function
+                                        // hasOwnProperty is on the prototype chain, which foo doesn't have
+
+Console.log(Object.hasOwn(foo, "prop")) // true - works irrespective of how the object is created.
 ```
 
 ## Specifications
