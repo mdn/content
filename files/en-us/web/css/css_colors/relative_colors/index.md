@@ -97,7 +97,6 @@ rgb(from red r g b / 100%)
 rgb(from red r g b)
 rgb(from red r g b / alpha)
 
-
 /* As the green and blue values are same */
 rgb(from red r g g)
 rgb(from red r b b)
