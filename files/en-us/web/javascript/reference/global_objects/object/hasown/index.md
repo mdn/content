@@ -162,7 +162,7 @@ foo.prop = "exists";
 console.log(foo.hasOwnProperty("prop")) // Uncaught TypeError: foo.hasOwnProperty is not a function
                                         // hasOwnProperty is on the prototype chain, which foo doesn't have
 
-Console.log(Object.hasOwn(foo, "prop")) // true - works irrespective of how the object is created.
+Console.log(Object.hasOwn(foo, "prop")); // true - works irrespective of how the object is created.
 ```
 
 ## Specifications
