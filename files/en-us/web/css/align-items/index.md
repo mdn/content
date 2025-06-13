@@ -130,7 +130,7 @@ align-items: unset;
 
 - `stretch`
 
-  - : If the items are smaller than the alignment container, auto-sized items will be equally enlarged to fill the container, respecting the items' width and height limits.
+  - : If the items are smaller than the alignment container, auto-sized items will be equally enlarged to fill the container (and vice-versa, overflowing items will be shrunk), respecting the items' width and height limits.
 
 - `anchor-center`
 
