@@ -60,9 +60,9 @@ The parameters are:
     - `left`
       - : The left of the anchor element.
     - `inside`
-      - : Same side as the inset property. Attaches the positioned box from inside of the anchor box.
+      - : The same side as the inset property.
     - `outside`
-      - : Opposite side of the inset property. Attaches the positioned box from outside the anchor box.
+      - : The opposite side of the inset property.
     - `start`
       - : The logical start of the anchor element's [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) along the axis of the inset property on which the `anchor()` function is set.
     - `end`
