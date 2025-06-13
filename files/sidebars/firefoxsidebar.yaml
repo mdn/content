@@ -6,7 +6,7 @@ sidebar:
     title: Firefox
   - type: listSubPages
     path: /Mozilla/Firefox/Releases
-    tags: unknown
+    tags: firefox-release-notes-active
     link: /Mozilla/Firefox/Releases
   - /Mozilla/Firefox/Experimental_features
   - type: listSubPages
