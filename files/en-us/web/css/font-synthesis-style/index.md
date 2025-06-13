@@ -34,7 +34,7 @@ font-synthesis-style: unset;
 - `none`
   - : Indicates that the synthesis of the missing oblique typeface by the browser is _not_ allowed.
 - `oblique-only`
-  - : Same as `auto` value, but when italics is requested, using `font-style: italic`, the synthesis doesn't happen.
+  - : Same as `auto`, but no font synthesis occurs if `font-style: italic` is set.
 
 ## Formal definition
 
@@ -89,25 +89,23 @@ This example compares all the `font-synthesis-style` values using italic and obl
 #### HTML
 
 ```html
-<fieldset class="fss-none">
-  <legend>font-synthesis-style: none</legend>
-  <p class="oblique">Oblique text</p>
-  <p class="italic">Italics text</p>
-</fieldset>
-<br />
+<div class="fss-none">
+  <h2>font-synthesis-style: none</h2>
+  <p class="oblique">This text is set to <code>oblique</code></p>
+  <p class="italic">This text is set to <code>italic</code></p>
+</div>
 
-<fieldset class="fss-oblique">
-  <legend>font-synthesis-style: oblique</legend>
-  <p class="oblique">Oblique text</p>
-  <p class="italic">Italics text</p>
-</fieldset>
-<br />
+<div class="fss-oblique">
+  <h2>font-synthesis-style: oblique</h2>
+  <p class="oblique">This text is set to <code>oblique</code></p>
+  <p class="italic">This text is set to <code>italic</code></p>
+</div>
 
-<fieldset class="fss-oblique-only">
-  <legend>font-synthesis-style: oblique-only</legend>
-  <p class="oblique">Oblique text</p>
-  <p class="italic">Italics text</p>
-</fieldset>
+<div class="fss-oblique-only">
+  <h2>font-synthesis-style: oblique-only</h2>
+  <p class="oblique">This text is set to <code>oblique</code></p>
+  <p class="italic">This text is set to <code>italic</code></p>
+</div>
 ```
 
 #### CSS
@@ -127,10 +125,6 @@ p {
     display: block;
     width: 100%;
     text-align: center;
-  }
-
-  body > * {
-    display: none;
   }
 }
 ```
@@ -174,7 +168,7 @@ p {
 
 #### Result
 
-{{EmbedLiveSample('Disabling synthesis of bold typeface', '', '560')}}
+{{EmbedLiveSample('Comparison of font-synthesis-style values', '', '560')}}
 
 ## Specifications
 
