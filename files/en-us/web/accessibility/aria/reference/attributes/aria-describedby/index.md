@@ -3,9 +3,7 @@ title: "ARIA: aria-describedby attribute"
 short-title: aria-describedby
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-describedby
 page-type: aria-attribute
-spec-urls:
-  - https://w3c.github.io/aria/#aria-describedby
-  - https://www.w3.org/TR/wai-aria-1.2/#aria-describedby
+spec-urls: https://w3c.github.io/aria/#aria-describedby
 sidebar: accessibilitysidebar
 ---
 

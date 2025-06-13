@@ -25,7 +25,7 @@ In the following example, there are four buttons: two change the `style` attribu
 #### HTML
 
 ```html
-<h1 class="blue" style="color:black;" id="hiMom">Hi, Mom!</h1>
+<h1 class="blue" id="hiMom">Hi, Mom!</h1>
 
 <button id="redButton">Set class to "red"</button>
 <button id="blueButton">Set class to "blue"</button>

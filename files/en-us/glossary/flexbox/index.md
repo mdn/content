@@ -39,4 +39,4 @@ Flexbox also enables alignment of items on the main or cross axis, thus providin
   - [Controlling ratios of flex items along the main axis](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
   - [Mastering wrapping of flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
   - [Typical use cases of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
-- _[CSS Flexible Box Layout Module Level 1 Specification](https://www.w3.org/TR/css-flexbox-1/)_
+- [CSS Flexible Box Layout Module Level 1](https://drafts.csswg.org/css-flexbox-1/) specification

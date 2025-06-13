@@ -162,7 +162,7 @@ Different operating systems have different accessibility APIs available:
 - Android: Accessibility framework
 - iOS: UIAccessibility
 
-Where the native semantic information provided by the HTML elements in your web apps falls down, you can supplement it with features from the [WAI-ARIA specification](https://www.w3.org/TR/wai-aria/), which add semantic information to the accessibility tree to improve accessibility. You can learn a lot more about WAI-ARIA in our [WAI-ARIA basics](/en-US/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics) article.
+Where the native semantic information provided by the HTML elements in your web apps falls down, you can supplement it with features from the [WAI-ARIA specification](https://w3c.github.io/aria/), which add semantic information to the accessibility tree to improve accessibility. You can learn a lot more about WAI-ARIA in our [WAI-ARIA basics](/en-US/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics) article.
 
 ## Summary
 

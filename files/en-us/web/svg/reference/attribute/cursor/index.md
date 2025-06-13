@@ -32,14 +32,6 @@ The `cursor` attribute specifies the mouse cursor displayed when the mouse point
       <th scope="row">Animatable</th>
       <td>Yes</td>
     </tr>
-    <tr>
-      <th scope="row">Normative document</th>
-      <td>
-        <a href="https://www.w3.org/TR/SVG11/interact.html#CursorProperty"
-          >SVG 1.1 (2nd Edition)</a
-        >
-      </td>
-    </tr>
   </tbody>
 </table>
 

@@ -79,7 +79,6 @@ If the dialog box doesn't have a heading, you can instead use `aria-label` to co
 - [`role="alertdialog"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role)
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
-- [WAI-ARIA: dialog role](https://www.w3.org/TR/wai-aria-1.2/#dialog)
 - [Dialog authoring practices](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/)
 
 ## Documents must have a title
@@ -277,9 +276,9 @@ If you define more than one toolbar in a web application using the ARIA `toolbar
 
 ## Related WCAG success criteria
 
-- [1.1.1 Non-text Content (A)](https://www.w3.org/TR/WCAG21/#non-text-content)
+- [1.1.1 Non-text Content (A)](https://w3c.github.io/wcag/guidelines/22/#non-text-content)
   - : All non-text content that is presented to the user has a text alternative that serves the equivalent purpose, except for the situations listed in the above link.
-- [2.4.4 Link Purpose (In Context) (A)](https://www.w3.org/TR/WCAG21/#link-purpose-in-context)
+- [2.4.4 Link Purpose (In Context) (A)](https://w3c.github.io/wcag/guidelines/22/#link-purpose-in-context)
   - : The purpose of each link can be determined from the link text alone or from the link text together with its programmatically determined link context, except where the purpose of the link would be ambiguous to users in general.
-- [2.4.9 Link Purpose (Link Only) (AAA)](https://www.w3.org/TR/WCAG21/#link-purpose-link-only)
+- [2.4.9 Link Purpose (Link Only) (AAA)](https://w3c.github.io/wcag/guidelines/22/#link-purpose-link-only)
   - : A mechanism is available to allow the purpose of each link to be identified from link text alone, except where the purpose of the link would be ambiguous to users in general.

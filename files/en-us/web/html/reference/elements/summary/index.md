@@ -253,7 +253,7 @@ The CSS includes the `[open]` [attribute selector](/en-US/docs/Web/CSS/Attribute
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
-      <td> <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a></td>
+      <td> <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role">No corresponding role</a></td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>

@@ -17,7 +17,7 @@ Let's walk through the process by which a view transition works:
    - In the case of cross-document transitions (MPAs), a view transition is triggered by initiating navigation to a new document. Both the current and destination documents of the navigation need to be on the same origin, and opt-in to the view transition by including a {{cssxref("@view-transition")}} at rule in their CSS with a `navigation` descriptor of `auto`.
      > [!NOTE]
      > An active view transition has an associated {{domxref("ViewTransition")}} instance (for example, returned by `startViewTransition()` in the case of same-document (SPA) transitions). The `ViewTransition` object includes several promises, allowing you to run code in response to different parts of the view transition process being reached. See [Controlling view transitions with JavaScript](#controlling_view_transitions_with_javascript) for more information.
-2. On the current (old page) view, the API captures snapshots of elements that have a {{cssxref("view-transition-name")}} declared on them.
+2. On the current (old page) view, the API captures static image **snapshots** of elements that have a {{cssxref("view-transition-name")}} declared on them.
 3. The view change occurs:
 
    - In the case of same-document transitions (SPAs), the callback passed to `startViewTransition()` is invoked, which causes the DOM to change.
@@ -26,7 +26,7 @@ Let's walk through the process by which a view transition works:
 
    - In the case of cross-document transitions (MPAs), the navigation occurs between the current and destination documents.
 
-4. The API captures snapshots from the new view as a live representation.
+4. The API captures "live" snapshots (meaning, interactive DOM regions) from the new view.
 
    At this point, the view transition is about to run, and the {{domxref("ViewTransition.ready")}} promise fulfills, allowing you to respond by running a custom JavaScript animation instead of the default, for example.
 
@@ -35,6 +35,14 @@ Let's walk through the process by which a view transition works:
 
 > [!NOTE]
 > If the document's [page visibility state](/en-US/docs/Web/API/Page_Visibility_API) is `hidden` (for example if the document is obscured by a window, the browser is minimized, or another browser tab is active) during a {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} call, the view transition is skipped entirely.
+
+### An aside on snapshots
+
+It is worth noting that when talking about view transitions, we commonly use the term _snapshot_ to refer to a part of the page that has a `view-transition-name` declared on it. These sections will be animated separately from other parts of the page with different `view-transition-name` values set on them. While the process of animating a snapshot via a view transition actually involves two separate snapshots—one of the old and one of the new UI states—we use snapshot to refer to the whole page area for simplicity.
+
+The snapshot of the old UI state is a static image, so that the user can't interact with it as it animates "out".
+
+The snapshot of the new UI state is an interactive DOM region, so that the user can start to interact with the new content as it animates "in".
 
 ### The view transition pseudo-element tree
 
@@ -48,15 +56,12 @@ To handle creating the outbound and inbound transition animations, the API const
       └─ ::view-transition-new(root)
 ```
 
-> [!NOTE]
-> A {{cssxref("::view-transition-group()")}} subtree is created for every captured `view-transition-name`.
-
 In the case of same-document transitions (SPAs), the pseudo-element tree is made available in the document. In the case of cross-document transitions (MPAs), the pseudo-element tree is made available in the destination document only.
 
 The most interesting parts of the tree structure are as follows:
 
-- {{cssxref("::view-transition")}} is the root of view transitions overlay, which contains all view transition snapshot groups and sits over the top of all other page content.
-- A {{cssxref("::view-transition-group()")}} acts as a container for each view transition snapshot group. The `root` argument specifies the default snapshot group — the view transition animation will apply to the snapshot whose `view-transition-name` is `root`. By default, this is the {{cssxref(":root")}} element, because the default browser styles define this:
+- {{cssxref("::view-transition")}} is the root of the view transitions overlay, which contains all view transition groups and sits above all other page content.
+- A {{cssxref("::view-transition-group()")}} acts as a container for each view transition snapshot. The `root` argument specifies the default snapshot — the view transition animation will apply to the snapshot whose `view-transition-name` is `root`. By default, this is a snapshot of the {{cssxref(":root")}} element, because the default browser styles define this:
 
   ```css
   :root {
@@ -66,7 +71,7 @@ The most interesting parts of the tree structure are as follows:
 
   Be aware however that page authors can change this by unsetting the above, and setting `view-transition-name: root` on a different element.
 
-- {{cssxref("::view-transition-old()")}} targets the static snapshot of the old page element, and {{cssxref("::view-transition-new()")}} targets the live snapshot of the new page element. Both of these render as replaced content, in the same manner as an {{htmlelement("img")}} or {{htmlelement("video")}}, meaning that they can be styled with handy properties like {{cssxref("object-fit")}} and {{cssxref("object-position")}}.
+- {{cssxref("::view-transition-old()")}} targets the static snapshot of the old page element, and {{cssxref("::view-transition-new()")}} targets the live snapshot of the new page element. Both of these render as replaced content, in the same manner as an {{htmlelement("img")}} or {{htmlelement("video")}}, meaning that they can be styled with properties like {{cssxref("object-fit")}} and {{cssxref("object-position")}}.
 
 > [!NOTE]
 > It is possible to target different DOM elements with different custom view transition animations by setting a different {{cssxref("view-transition-name")}} on each one. In such cases, a `::view-transition-group()` is created for each one. See [Different animations for different elements](#different_animations_for_different_elements) for an example.
@@ -80,7 +85,11 @@ This section illustrates how to create a basic view transition, in both the SPA 
 
 ### Basic SPA view transition
 
-As an example, an SPA may include functionality to fetch new content and update the DOM in response to an event of some kind, such as a navigation link being clicked or an update being pushed from the server. In our [View Transitions SPA demo](https://mdn.github.io/dom-examples/view-transitions/spa/) we've simplified this to a `displayNewImage()` function that shows a new full-size image based on the thumbnail that was clicked. We've encapsulated this inside an `updateView()` function that only calls the View Transition API if the browser supports it:
+An SPA may include functionality to fetch new content and update the DOM in response to an event of some kind, such as a navigation link being clicked or an update being pushed from the server.
+
+Our [View Transitions SPA demo](https://mdn.github.io/dom-examples/view-transitions/spa/) is a basic image gallery. We have a series of {{htmlelement("a")}} elements that contain thumbnail {{htmlelement("img")}} elements, dynamically generated using JavaScript. We also have a {{htmlelement("figure")}} element containing a {{htmlelement("figcaption")}} and an `<img>`, which displays the full-size gallery images.
+
+When a thumbnail is clicked, the `displayNewImage()` function is run via {{domxref("Document.startViewTransition()")}}, which causes the full-size image and its associated caption to be displayed inside the `<figure>`. We've encapsulated this inside an `updateView()` function that only calls the View Transition API if the browser supports it:
 
 ```js
 function updateView(event) {
@@ -152,7 +161,7 @@ It is recommended that you target the `::view-transition-group()` with such styl
 > [!NOTE]
 > This is also a good option for safeguarding your code — `::view-transition-group()` also animates and you could end up with different durations for the `group`/`image-pair` pseudo-elements versus the `old` and `new` pseudo-elements.
 
-In the case of cross-document (MPA) transitions, the pseudo-elements need to be included in the destination document only for the view transition to work. If you want to use the view transition in both directions, you'll need to include it in both, of course.
+In the case of cross-document (MPA) transitions, the pseudo-elements need to be included in the destination document only for the view transition to work. If you want to use the view transition in both directions, you'll need to include it in both.
 
 Our [View Transitions MPA demo](https://mdn.github.io/dom-examples/view-transitions/mpa/) includes the above CSS, but takes the customization a step further, defining custom animations and applying them to the `::view-transition-old(root)` and `::view-transition-new(root)` pseudo-elements. The result is that the default cross-fade transition is swapped out for a "swipe up" transition when navigation occurs:
 
@@ -216,11 +225,6 @@ With this CSS applied, the generated pseudo-element tree will now look like this
 
 The existence of the second set of pseudo-elements allows separate view transition styling to be applied just to the `<figcaption>`. The different old and new view captures are handled separately from one another.
 
-> [!NOTE]
-> The value of `view-transition-name` is a unique {{cssxref("custom-ident")}}; it can be any identifier that wouldn't be misinterpreted as a keyword. The keyword `none` is not a valid name, as that value means the element will not participate in any view transitions. Also avoid `auto`, as it's being discussed as a way to [determine `view-transition-name` automatically](https://drafts.csswg.org/css-view-transitions-2/#auto-vt-name).
->
-> `view-transition-name` values must also be unique. If two rendered elements have the same `view-transition-name` at the same time, {{domxref("ViewTransition.ready")}} will reject and the transition will be skipped.
-
 The following code applies a custom animation just to the `<figcaption>`:
 
 ```css
@@ -268,6 +272,15 @@ Here we've created a custom CSS animation and applied it to the `::view-transiti
 >   animation-duration: 2s;
 > }
 > ```
+
+### Valid `view-transition-name` values
+
+The `view-transition-name` property can take a unique {{cssxref("custom-ident")}} value, which can be any identifier that wouldn't be misinterpreted as a keyword. The value of `view-transition-name` for each rendered element must be unique. If two rendered elements have the same `view-transition-name` at the same time, {{domxref("ViewTransition.ready")}} will reject and the transition will be skipped.
+
+It can also take keyword values of:
+
+- `none`: Causes the element to not participate in a separate snapshot, unless it has a parent element with a `view-transition-name` set, in which case it will be snapshotted as part of that element.
+- `match-element`: Automatically sets unique `view-transition-name` values on all selected elements.
 
 ### Taking advantage of the default animation styles
 

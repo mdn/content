@@ -1,22 +1,12 @@
-<!-- 🙌 Thanks for contributing to MDN Web Docs. Adding details below will help us to merge your PR faster. -->
+<!-- 🙌 Thanks for contributing to MDN Web Docs. 🙌
 
-<!-- 📝 For large changes, check our contribution guide:
-     https://developer.mozilla.org/en-US/docs/MDN/Community/Pull_requests -->
-
-<!-- 🚨 Low-quality, spammy, or disruptive pull requests are moderated heavily.
-     Severe or repeated violations can result in being banned from contributing.
-     Make sure you've read and agree to the following:
-     - Community Participation Guidelines: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines
-     - MDN Content Enforcement Policy: https://developer.mozilla.org/en-US/docs/MDN/Community/Community_Participation_Guidelines -->
-
-<!-- Please complete all sections, especially the Motivation field. If there’s no related issue, explaining why this change is needed helps reviewers understand the context and prioritize your request. Without it, your PR may be delayed or closed. -->
-
-<!-- 👷‍♀️ After submitting, go to the 'Checks' tab of your PR for the build status -->
----
+Add details below to help us review your pull request (PR).
+Explain your changes and link to a related issue or pull request.
+Your PR may be delayed or closed if you don't provide enough information. -->
 
 ### Description
 
-<!-- ✍️ Summarize your changes in one or two sentences -->
+<!-- ✍️ Summarize your changes in one or two sentences. -->
 
 ### Motivation
 
@@ -24,10 +14,12 @@
 
 ### Additional details
 
-<!-- 🔗 Link to release notes, vendor docs, bug trackers, source control, or other places providing more context -->
+<!-- 🔗 Link to release notes, browser docs, bug trackers, source control, or other resources. -->
 
 ### Related issues and pull requests
 
 <!-- 🔨 If this fully resolves a GitHub issue, use "Fixes #123" -->
 <!-- 👉 Highlight related pull requests using "Relates to #123" -->
-<!-- ❗ If another pull request should be merged first, use "**Depends on:** #123" -->
+<!-- ❗ If another pull request must be merged first, use "**Depends on:** #123" -->
+
+<!-- 🔎 After submitting, the 'Checks' tab of your PR shows the build status. -->

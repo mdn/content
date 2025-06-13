@@ -228,7 +228,7 @@ Relatively positioned elements are offset a given amount from their normal posit
 
 ### Absolute positioning
 
-Elements that are relatively positioned remain in the normal flow of the document. In contrast, an element that is absolutely positioned is taken out of the flow; thus, other elements are positioned as if it did not exist. The absolutely positioned element is positioned relative to its _nearest positioned ancestor_ (i.e., the nearest ancestor that is not `static`). If a positioned ancestor doesn't exist, it is positioned relative to the ICB (initial containing block — see also the [W3C definition](https://www.w3.org/TR/CSS2/visudet.html#containing-block-details)), which is the containing block of the document's root element.
+Elements that are relatively positioned remain in the normal flow of the document. In contrast, an element that is absolutely positioned is taken out of the flow; thus, other elements are positioned as if it did not exist. The absolutely positioned element is positioned relative to its _nearest positioned ancestor_ (i.e., the nearest ancestor that is not `static`). If a positioned ancestor doesn't exist, it is positioned relative to the ICB ([initial containing block](https://drafts.csswg.org/css-display/#initial-containing-block)), which is the containing block of the document's root element.
 
 #### HTML
 
@@ -299,7 +299,7 @@ span {
 
 ### Fixed positioning
 
-Fixed positioning is similar to absolute positioning, with the exception that the element's [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) is the initial containing block established by the _viewport_, unless any ancestor has `transform`, `perspective`, or `filter` property set to something other than `none` (see [CSS Transforms Spec](https://www.w3.org/TR/css-transforms-1/#propdef-transform)), which then causes that ancestor to take the place of the elements [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block). This can be used to create a "floating" element that stays in the same position regardless of scrolling. In the example below, box "One" is fixed at 80 pixels from the top of the page and 10 pixels from the left. Even after scrolling, it remains in the same place relative to the viewport. Also, when the [`will-change`](/en-US/docs/Web/CSS/will-change) property is set to `transform`, a new containing block is established.
+Fixed positioning is similar to absolute positioning, with the exception that the element's [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) is the initial containing block established by the _viewport_, unless any ancestor has `transform`, `perspective`, or `filter` property set to something other than `none` (see [fixed positioning containing block](https://drafts.csswg.org/css-position/#fixed-positioning-containing-block)), which then causes that ancestor to take the place of the elements [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block). This can be used to create a "floating" element that stays in the same position regardless of scrolling. In the example below, box "One" is fixed at 80 pixels from the top of the page and 10 pixels from the left. Even after scrolling, it remains in the same place relative to the viewport. Also, when the [`will-change`](/en-US/docs/Web/CSS/will-change) property is set to `transform`, a new containing block is established.
 
 #### HTML
 

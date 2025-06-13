@@ -81,6 +81,6 @@ Used in roles:
 
 ## See also
 
-- [Sortable table example](https://www.w3.org/TR/wai-aria-practices-1.2/examples/table/sortable-table.html) -W3C
+- [Sortable table example](https://www.w3.org/WAI/ARIA/apg/patterns/table/examples/sortable-table/) - ARIA Authoring Practices Guide (APG)
 - [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-pressed)
 - The {{HTMLElement('th')}} element

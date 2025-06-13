@@ -93,4 +93,4 @@ Accessibility is a major issue in any software development. JavaScript can make 
 - {{htmlelement("script")}}
 - {{htmlelement("noscript")}}
 - [Writing JavaScript with Accessibility in Mind](https://www.sitepoint.com/writing-javascript-with-accessibility-in-mind/) by Manuel Matuzovic (2017)
-- [Accessibility guidelines from W3C](https://www.w3.org/TR/WCAG20/)
+- [Accessibility guidelines from W3C](https://w3c.github.io/wcag/guidelines/22/)

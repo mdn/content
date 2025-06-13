@@ -39,7 +39,7 @@ stroke: unset;
 
 - `<image>`
 
-  - : Sets the painting of the stroke with what SVG calls a [_paint server_](https://www.w3.org/TR/SVG2/pservers.html), which in this context is an SVG gradient or pattern. CSS gradients cannot be used with the `stroke` property.
+  - : Sets the painting of the stroke with what SVG calls a [_paint server_](https://svgwg.org/svg2-draft/pservers.html), which in this context is an SVG gradient or pattern. CSS gradients cannot be used with the `stroke` property.
 
 - `context-stroke`
 

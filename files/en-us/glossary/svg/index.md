@@ -19,4 +19,4 @@ As a [vector image format](https://en.wikipedia.org/wiki/Vector_graphics), SVG g
 - [SVG](https://en.wikipedia.org/wiki/SVG) on Wikipedia
 - [W3.org's SVG Primer](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html)
 - [SVG documentation on MDN](/en-US/docs/Web/SVG)
-- [Latest SVG specification](https://www.w3.org/TR/SVG/)
+- [Latest SVG specification](https://svgwg.org/svg2-draft/)

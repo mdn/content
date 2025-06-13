@@ -1,5 +1,6 @@
 ---
 title: HTTP conditional requests
+short-title: Conditional requests
 slug: Web/HTTP/Guides/Conditional_requests
 page-type: guide
 ---
@@ -91,7 +92,7 @@ Partial downloading of files is a functionality of HTTP that allows resuming pre
 
 ![A download has been stopped and only partial content has been retrieved.](https://mdn.github.io/shared-assets/images/diagrams/http/conditional-requests/resume-download-1.svg)
 
-A server supporting partial downloads broadcasts this by sending the {{HTTPHeader("Accept-Ranges")}} header. Once this happens, the client can resume a download by sending a {{HTTPHeader("Ranges")}} header with the missing ranges:
+A server supporting partial downloads broadcasts this by sending the {{HTTPHeader("Accept-Ranges")}} header. Once this happens, the client can resume a download by sending a {{HTTPHeader("Range")}} header with the missing ranges:
 
 ![The client resumes the requests by indicating the range he needs and preconditions checking the validators of the partially obtained request.](https://mdn.github.io/shared-assets/images/diagrams/http/conditional-requests/resume-download-2.svg)
 

@@ -1,5 +1,6 @@
 ---
-title: contenteditable
+title: HTML contenteditable global attribute
+short-title: contenteditable
 slug: Web/HTML/Reference/Global_attributes/contenteditable
 page-type: html-attribute
 browser-compat: html.global_attributes.contenteditable

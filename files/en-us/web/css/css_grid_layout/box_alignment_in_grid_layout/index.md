@@ -1,5 +1,6 @@
 ---
 title: Aligning items in CSS grid layout
+short-title: Aligning items
 slug: Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout
 page-type: guide
 ---

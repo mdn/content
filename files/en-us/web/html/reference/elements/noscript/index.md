@@ -33,6 +33,13 @@ Rocks!
 
 Rocks!
 
+## Usage notes
+
+The `<noscript>` element represents its children differently depending on if scripting is enabled:
+
+- If scripting is disabled the `<noscript>` element represents its children as [HTML content](/en-US/docs/Web/API/HTMLElement).
+- If scripting is enabled, the `<noscript>` element represents its children as [text](/en-US/docs/Web/API/Text).
+
 ## Technical summary
 
 <table class="properties">
@@ -91,7 +98,7 @@ Rocks!
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >No corresponding role</a
         >
       </td>

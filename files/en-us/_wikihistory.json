@@ -7511,6 +7511,10 @@
     "modified": "2020-08-29T02:34:36.621Z",
     "contributors": ["SnakeWhisperer", "onurbasturk", "chrisdavidmills"]
   },
+  "Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video": {
+    "modified": "2020-11-20T14:20:14.413Z",
+    "contributors": ["philou", "gdsimoes", "chrisdavidmills"]
+  },
   "Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics": {
     "modified": "2020-08-27T05:38:52.761Z",
     "contributors": ["SnakeWhisperer", "chrisdavidmills"]
@@ -7522,10 +7526,6 @@
   "Learn_web_development/Core/Structuring_content/Test_your_skills/Links": {
     "modified": "2020-08-28T04:26:18.208Z",
     "contributors": ["SnakeWhisperer", "chrisdavidmills", "onurbasturk"]
-  },
-  "Learn_web_development/Core/Structuring_content/Test_your_skills/Multimedia_and_embedding": {
-    "modified": "2020-11-20T14:20:14.413Z",
-    "contributors": ["philou", "gdsimoes", "chrisdavidmills"]
   },
   "Learn_web_development/Core/Structuring_content/Webpage_metadata": {
     "modified": "2020-09-28T22:06:13.983Z",
@@ -41220,6 +41220,10 @@
       "Enn"
     ]
   },
+  "Web/API/HTML_Sanitizer_API": {
+    "modified": "2020-12-13T12:18:13.088Z",
+    "contributors": ["Rumyra"]
+  },
   "Web/API/HashChangeEvent": {
     "modified": "2020-10-15T21:29:11.207Z",
     "contributors": [
@@ -56617,6 +56621,14 @@
       "Sheppy",
       "Jeremie"
     ]
+  },
+  "Web/API/Sanitizer": {
+    "modified": "2020-12-13T12:17:05.573Z",
+    "contributors": ["Rumyra"]
+  },
+  "Web/API/Sanitizer/Sanitizer": {
+    "modified": "2020-12-13T12:21:15.482Z",
+    "contributors": ["Rumyra"]
   },
   "Web/API/Screen": {
     "modified": "2020-10-15T21:29:41.001Z",

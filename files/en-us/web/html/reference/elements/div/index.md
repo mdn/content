@@ -54,7 +54,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
 ## Accessibility
 
-The `<div>` element has [an implicit role of `generic`](https://www.w3.org/TR/wai-aria-1.2/#generic), and not none. This may affect certain ARIA combination declarations that expect a direct descendant element with a certain role to function properly.
+The `<div>` element has [an implicit role of `generic`](https://w3c.github.io/aria/#generic), and not none. This may affect certain ARIA combination declarations that expect a direct descendant element with a certain role to function properly.
 
 ## Examples
 

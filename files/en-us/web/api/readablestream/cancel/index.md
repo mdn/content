@@ -38,8 +38,19 @@ A {{jsxref("Promise")}}, which fulfills with `undefined` value.
 
 ## Examples
 
-In Jake Archibald's [cancelling a fetch](https://jsbin.com/gameboy/edit?js,console) example, a stream is used to fetch the WHATWG HTML spec chunk by chunk;
-each chunk is searched for the string "service workers". When the search terms is found, `cancel()` is used to cancel the stream — the job is finished so it is no longer needed.
+In the following example, a stream is used to fetch the WHATWG HTML spec chunk by chunk; each chunk is searched for the string "service workers". When the search terms is found, `cancel()` is used to cancel the stream — the job is finished so it is no longer needed.
+
+```html
+<pre id="output"></pre>
+```
+
+```js hidden
+const output = document.getElementById("output");
+
+function log(text) {
+  output.textContent += text + "\n";
+}
+```
 
 ```js
 const searchTerm = "service workers";
@@ -49,11 +60,11 @@ const contextAfter = 30;
 const caseInsensitive = true;
 const url = "https://html.spec.whatwg.org/";
 
-console.log(`Searching '${url}' for '${searchTerm}'`);
+log(`Searching '${url}' for '${searchTerm}'`);
 
 fetch(url)
   .then((response) => {
-    console.log("Received headers");
+    log("Received headers");
 
     const decoder = new TextDecoder();
     const reader = response.body.getReader();
@@ -66,12 +77,12 @@ fetch(url)
 
     return reader.read().then(function process(result) {
       if (result.done) {
-        console.log("Failed to find match");
+        log("Failed to find match");
         return;
       }
 
       bytesReceived += result.value.length;
-      console.log(`Received ${bytesReceived} bytes of data so far`);
+      log(`Received ${bytesReceived} bytes of data so far`);
 
       buffer += decoder.decode(result.value, { stream: true });
 
@@ -87,18 +98,18 @@ fetch(url)
       } else if (
         buffer.slice(matchFoundAt + toMatch.length).length >= contextAfter
       ) {
-        console.log("Here's the match:");
-        console.log(
+        log("Here's the match:");
+        log(
           buffer.slice(
             Math.max(0, matchFoundAt - contextBefore),
             matchFoundAt + toMatch.length + contextAfter,
           ),
         );
-        console.log("Cancelling fetch");
+        log("Cancelling fetch");
         reader.cancel();
         return;
       } else {
-        console.log("Found match, but need more context…");
+        log("Found match, but need more context…");
       }
 
       // keep reading
@@ -106,12 +117,14 @@ fetch(url)
     });
   })
   .catch((err) => {
-    console.error(
+    log(
       "Something went wrong. See devtools for details. Does the response lack CORS headers?",
     );
     throw err;
   });
 ```
+
+{{EmbedLiveSample("examples", "", 300)}}
 
 ## Specifications
 

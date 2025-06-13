@@ -28,7 +28,7 @@ A string representing the QName of a node.
 
 ## Specifications
 
-[XPath 1.0 4.1](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-local-name)
+[XPath 1.0 4.1](https://www.w3.org/TR/xpath-10/#function-local-name)
 
 ## Gecko support
 

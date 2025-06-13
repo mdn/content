@@ -8,7 +8,7 @@ browser-compat: api.SVGPointList.removeItem
 
 {{APIRef("SVG")}}
 
-The **`removeItem()`** method of the {{domxref("SVGPointList")}} interface removes a {{domxref("SVGPoint","point")}} from the list.
+The **`removeItem()`** method of the {{domxref("SVGPointList")}} interface removes a {{domxref("DOMPoint")}} from the list.
 
 ## Syntax
 
@@ -23,7 +23,7 @@ removeItem(index)
 
 ### Return value
 
-The removed {{domxref("SVGPoint")}} object.
+The removed {{domxref("DOMPoint")}} object.
 
 ### Exceptions
 
@@ -47,7 +47,7 @@ The following example shows an SVG which contains a {{SVGElement("polyline")}} w
 ```
 
 ```js
-let example = document.getElementById("example");
+const example = document.getElementById("example");
 console.log(example.points.removeItem(2));
 ```
 

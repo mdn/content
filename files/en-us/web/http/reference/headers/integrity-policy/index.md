@@ -9,7 +9,7 @@ browser-compat: http.headers.IntegrityPolicy
 {{HTTPSidebar}}
 
 The HTTP **`Integrity-Policy`** response header allows website administrators to ensure that all resources the user agent loads (of a certain type) have [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity) guarantees.
-It does so by blocking requests (of certain [request destinations](/en-US/docs/Web/API/Request/destination)) without integrity metadata or in [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode from ever being made.
+It does so by blocking requests (of certain [request destinations](/en-US/docs/Web/API/Request/destination)) without integrity metadata or in [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode from ever being made, as well as reporting them as violations.
 
 This helps guard against content manipulation of fetched subresources.
 
@@ -35,16 +35,38 @@ Integrity-Policy: blocked-destinations=(<destination>),sources=(<source>),endpoi
 The header values are defined as structured field dictionaries with the following keys:
 
 - `blocked-destinations`
-  - : Defines a list of [request destinations](/en-US/docs/Web/API/Request/destination) to be blocked. The only currently supported value is `"script"`.
+  - : Defines a list of [request destinations](/en-US/docs/Web/API/Request/destination) to be blocked. The only allowed value is `script`.
 - `sources` {{optional_inline}}
-  - : Defines a list of integrity sources. The default and only currently supported value is `"inline"`.
+  - : Defines a list of integrity sources. The default and only currently supported value is `inline`. As a result, adding `sources=(inline)` to the header has a similar effect as omitting `sources`.
 - `endpoints` {{optional_inline}}
   - : Defines a list of [reporting endpoints](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#endpoint).
 
-An example header might look like:
+## Examples
+
+### Blocking and reporting when scripts lack integrity metadata
+
+This example shows a document that blocks and reports when any {{htmlelement("script")}} (or `HTMLScriptElement`) does not specify an `integrity` attribute, or when a script resource is requested in [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode.
+
+Note that the `integrity-endpoint` used in `Integrity-Policy` is defined in the {{httpheader("Reporting-Endpoints")}} header.
 
 ```http
-Integrity-Policy: blocked-destinations=(script), endpoints=(integrity-endpoint, general-endpoint)
+Reporting-Endpoints: integrity-endpoint=https://example.com/integrity, backup-integrity-endpoint=https://report-provider.example/integrity
+Integrity-Policy: blocked-destinations=(script), endpoints=(integrity-endpoint, backup-integrity-endpoint)
+```
+
+The report payload might look like this.
+
+```json
+{
+  "type": "integrity-violation",
+  "url": "https://example.com",
+  "body": {
+    "documentURL": "https://example.com",
+    "blockedURL": "https://example.com/main.js",
+    "destination": "script",
+    "reportOnly": false
+  }
+}
 ```
 
 ## Specifications

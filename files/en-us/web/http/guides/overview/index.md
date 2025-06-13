@@ -1,5 +1,5 @@
 ---
-title: An overview of HTTP
+title: Overview of HTTP
 slug: Web/HTTP/Guides/Overview
 page-type: guide
 ---

@@ -1,5 +1,6 @@
 ---
-title: itemid
+title: HTML itemid global attribute
+short-title: itemid
 slug: Web/HTML/Reference/Global_attributes/itemid
 page-type: html-attribute
 spec-urls: https://html.spec.whatwg.org/multipage/microdata.html#attr-itemid

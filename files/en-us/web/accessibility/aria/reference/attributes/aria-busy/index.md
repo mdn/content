@@ -3,9 +3,7 @@ title: "ARIA: aria-busy attribute"
 short-title: aria-busy
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-busy
 page-type: aria-attribute
-spec-urls:
-  - https://w3c.github.io/aria/#aria-busy
-  - https://www.w3.org/TR/wai-aria-1.2/#aria-busy
+spec-urls: https://w3c.github.io/aria/#aria-busy
 sidebar: accessibilitysidebar
 ---
 

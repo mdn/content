@@ -25,11 +25,11 @@ A node-set containing the node or nodes identified by the given id or ids.
 
 ## Description
 
-- The DTD of the XML document determines what attribute is an ID. See [XPath 1.0 5.2.1](https://www.w3.org/TR/xpath/#unique-id)
+- The DTD of the XML document determines what attribute is an ID. See [XPath 1.0 5.2.1](https://www.w3.org/TR/xpath-10/#unique-id)
 
 ## Specifications
 
-[XPath 1.0 4.1](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-id)
+[XPath 1.0 4.1](https://www.w3.org/TR/xpath-10/#function-id)
 
 ## Gecko support
 

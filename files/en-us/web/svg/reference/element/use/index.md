@@ -101,7 +101,7 @@ Check the [Browser compatibility](#browser_compatibility) table for browser supp
 
 ### Loading resources from data URIs via `<use>`
 
-Loading resources with data URIs in the `href` attribute is deprecated for security reasons. This applies to `<use href="data:...` and also when setting `href` by using the [`set`](/en-US/docs/Web/SVG/Reference/Element/set) or [`setAttribute`](/en-US/docs/Web/API/Element/setAttribute) method.
+Loading resources with data URIs in the `href` attribute is deprecated for security reasons. This applies to `<use href="data:..."` and also when setting `href` by using the [`set`](/en-US/docs/Web/SVG/Reference/Element/set) or [`setAttribute`](/en-US/docs/Web/API/Element/setAttribute) method.
 
 Again, check the [Browser compatibility](#browser_compatibility) table for browser support.
 

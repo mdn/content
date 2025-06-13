@@ -5,7 +5,7 @@ page-type: guide
 sidebar: xmlsidebar
 ---
 
-This article provides some XPath code snippets — examples of how to implement a few **utility functions**. These functions are based on standard interfaces from the [DOM Level 3 XPath specification](https://www.w3.org/TR/DOM-Level-3-XPath/) that expose XPath functionality to JavaScript code. The snippets are functions you can use in the real world in your own code.
+This article provides some XPath code snippets — examples of how to implement a few **utility functions**. These functions are based on standard interfaces that expose XPath functionality to JavaScript code. The snippets are functions you can use in the real world in your own code.
 
 ### Node-specific evaluator function
 

@@ -103,7 +103,7 @@ See {{glossary("Fetch metadata request header")}} for the complete list of Fetch
 
 Web browsers distinguish two sorts of HTTP requests: [_simple_ requests](/en-US/docs/Web/HTTP/Guides/CORS#simple_requests) and other requests.
 
-Simple requests, which are the sort of request that result from a `<form>` element submission, can be made cross-origin without being blocked. Since forms have been able to make cross-origin requests since the early days of the web, it's important for compatibility that they should still be able to make cross-origin requests. This is why we need to implement other strategies to defend forms against CRSF, such as using a CSRF token.
+Simple requests, which are the sort of request that result from a `<form>` element submission, can be made cross-origin without being blocked. Since forms have been able to make cross-origin requests since the early days of the web, it's important for compatibility that they should still be able to make cross-origin requests. This is why we need to implement other strategies to defend forms against CSRF, such as using a CSRF token.
 
 However, other parts of the web platform, in particular JavaScript APIs like {{domxref("Window.fetch()", "fetch()")}}, can make different sorts of requests (for example, requests that set custom headers), and these requests are by default not allowed cross-origin, so a CSRF attack would not succeed.
 

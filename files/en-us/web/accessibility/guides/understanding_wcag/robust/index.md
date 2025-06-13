@@ -8,7 +8,7 @@ sidebar: accessibilitysidebar
 This article provides practical advice on how to write your web content so that it conforms to the success criteria outlined in the **Robust** principle of the Web Content Accessibility Guidelines (WCAG) 2.0 and 2.1. Robust states that content must be robust enough that it can be interpreted reliably by a wide variety of user agents, including assistive technologies. This can generally be achieved by following web standards and [testing rigorously](/en-US/docs/Learn_web_development/Extensions/Testing).
 
 > [!NOTE]
-> To read the W3C definitions for Robust and its guidelines and success criteria, see [Principle 4: Robust — Content must be robust enough that it can be interpreted reliably by a wide variety of user agents, including assistive technologies.](https://www.w3.org/TR/WCAG21/#robust)
+> To read the W3C definitions for Robust and its guidelines and success criteria, see [Principle 4: Robust — Content must be robust enough that it can be interpreted reliably by a wide variety of user agents, including assistive technologies.](https://w3c.github.io/wcag/guidelines/22/#robust)
 
 ## Guideline 4.1 — Compatible: Maximize compatibility with current and future user agents, including assistive technologies
 
@@ -74,13 +74,7 @@ This guideline focuses on making content as compatible as possible, not only wit
     </tr>
     <tr>
       <td>
-        4.1.3 Status Messages (AA) <em
-          ><a
-            href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
-            rel="noopener"
-            >added in 2.1</a
-          ></em
-        >
+        4.1.3 Status Messages (AA)
       </td>
       <td>
         <p>
@@ -99,7 +93,7 @@ This guideline focuses on making content as compatible as possible, not only wit
 </table>
 
 > [!NOTE]
-> Also see the WCAG description for [Guideline 4.1: Compatible: Maximize compatibility with current and future user agents, including assistive technologies.](https://www.w3.org/TR/WCAG21/#compatible)
+> Also see the WCAG description for [Guideline 4.1: Compatible: Maximize compatibility with current and future user agents, including assistive technologies.](https://w3c.github.io/wcag/guidelines/22/#compatible)
 
 ## See also
 

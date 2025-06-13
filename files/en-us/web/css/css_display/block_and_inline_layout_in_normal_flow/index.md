@@ -1,5 +1,6 @@
 ---
 title: Block and inline layout in normal flow
+short-title: Block and inline layout
 slug: Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow
 page-type: guide
 ---

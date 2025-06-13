@@ -91,7 +91,6 @@ If there is a content area with `tabindex="0"`, add `role="region"` to convey to
 ## See also
 
 - The {{HTMLElement('section')}} element
-- [region (role): Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria/#region)
 - [ARIA: `banner` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role)
 - [ARIA: `main` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/main_role)
 - [ARIA: `contentinfo` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/contentinfo_role)

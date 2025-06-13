@@ -137,7 +137,6 @@ coprime
 CORB
 credentialled
 credentialless
-CRSF
 cryptids
 cryptosystem
 cryptosystems

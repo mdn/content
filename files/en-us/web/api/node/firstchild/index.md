@@ -34,14 +34,14 @@ might interfere with using this property.
 <p id="para-01">
   <span>First span</span>
 </p>
-
-<script>
-  const p01 = document.getElementById("para-01");
-  console.log(p01.firstChild.nodeName);
-</script>
 ```
 
-In the above, the [console](/en-US/docs/Web/API/console) will show '#text'
+```js
+const p01 = document.getElementById("para-01");
+console.log(p01.firstChild.nodeName);
+```
+
+In the above, the console will show '#text'
 because a text node is inserted to maintain the whitespace between the end of the
 opening `<p>` and `<span>` tags. **Any**
 [whitespace](/en-US/docs/Web/API/Document_Object_Model/Whitespace)
@@ -56,11 +56,11 @@ span element becomes the paragraph's first child.
 
 ```html
 <p id="para-01"><span>First span</span></p>
+```
 
-<script>
-  const p01 = document.getElementById("para-01");
-  console.log(p01.firstChild.nodeName);
-</script>
+```js
+const p01 = document.getElementById("para-01");
+console.log(p01.firstChild.nodeName);
 ```
 
 Now the console will show 'SPAN'.

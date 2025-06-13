@@ -333,6 +333,5 @@ This article has provided you with a quick tour of what vector graphics and SVG 
 
 - [SVG tutorial](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started) on MDN
 - [Sara Soueidan's tutorial on responsive SVG images](https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/)
-- [Accessibility benefits of SVG](https://www.w3.org/TR/SVG-access/)
 - [SVG Properties and CSS](https://css-tricks.com/svg-properties-and-css/)
 - [How to scale SVGs](https://css-tricks.com/scale-svg/) (it's not as simple as raster graphics!)

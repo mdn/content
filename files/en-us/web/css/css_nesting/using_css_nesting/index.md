@@ -1,5 +1,6 @@
 ---
 title: Using CSS nesting
+short-title: Using nesting
 slug: Web/CSS/CSS_nesting/Using_CSS_nesting
 page-type: guide
 ---

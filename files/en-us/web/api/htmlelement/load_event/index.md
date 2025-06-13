@@ -41,7 +41,7 @@ This example prints to the screen whenever the {{HtmlElement("img")}} element su
   src="/shared-assets/images/examples/favicon144.png"
   alt="MDN logo"
   width="72" />
-<div><button onclick="reload()">Reload</button></div>
+<div><button>Reload</button></div>
 ```
 
 ### JavaScript
@@ -52,6 +52,8 @@ image.onload = () => {
   document.body.appendChild(document.createElement("div")).textContent =
     "loaded!";
 };
+
+document.querySelector("button").addEventListener("click", reload);
 
 function reload() {
   image.src = "/shared-assets/images/examples/favicon144.png";

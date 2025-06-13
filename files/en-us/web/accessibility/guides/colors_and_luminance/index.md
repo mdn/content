@@ -30,7 +30,7 @@ Luminance must be established before the contrast may be. When speaking of color
 
 ### Terminology
 
-Terminology can be confusing because different terms often describe the same thing. "Luminance" and "Saturation" are particularly important to get right. For example, "saturation" is known as "chroma" in some circles. In others, "chroma" and "saturation" are two different concepts. The "L" in the HSL color space is sometimes referred to as "luminosity," and other times as "lightness." Even something seemingly simple, like naming common colors, can be open to debate. For example, the color "crimson red" may be described in hex values as `#990000` by some and `#DC143C` by others. For this document, we'll use terminology as it is defined in the W3C, in the [CSS Color Module Level 4](https://www.w3.org/TR/css-color-4/)
+Terminology can be confusing because different terms often describe the same thing. "Luminance" and "Saturation" are particularly important to get right. For example, "saturation" is known as "chroma" in some circles. In others, "chroma" and "saturation" are two different concepts. The "L" in the HSL color space is sometimes referred to as "luminosity," and other times as "lightness." Even something seemingly simple, like naming common colors, can be open to debate. For example, the color "crimson red" may be described in hex values as `#990000` by some and `#DC143C` by others. For this document, we'll use terminology as it is defined on the CSS [`<named-color>`](/en-US/docs/Web/CSS/named-color) page.
 
 When working with color, it's important to know which "color space" you are working in, as different color spaces map to different measurement systems.
 
@@ -178,7 +178,7 @@ A color contrast ratio is meaningless without its luminance component, and once 
 
 Where human perception is concerned, a difference in luminance matters more than a color difference. This is important, as luminance contrast enables the development of content that even those with color blindness can see. With this understanding, luminance may be manipulated so that colors that are difficult to see because of their low luminance could be made more legible by placing these colors against another with contrasting luminance. An interesting study by NASA on the color blue, for example, noted that this color, which has low luminance, can be made legible if _care was taken to achieve adequate luminance contrast_ (From the article, [Designing with blue](https://colorusage.arc.nasa.gov/blue_2.php))
 
-Calculations for relative luminance are not casual ones. Luckily, there are [online luminance and contrast checkers](https://www.siegemedia.com/contrast-ratio) available, and even instructions on how to [calculate relative luminance](https://www.w3.org/TR/WCAG21/#dfn-relative-luminance).
+Calculations for relative luminance are not casual ones. Luckily, there are [online luminance and contrast checkers](https://www.siegemedia.com/contrast-ratio) available, and even instructions on how to [calculate relative luminance](https://w3c.github.io/wcag/guidelines/22/#dfn-relative-luminance).
 
 ## Perceiving color
 

@@ -36,16 +36,38 @@ Integrity-Policy-Report-Only: blocked-destinations=(<destination>),sources=(<sou
 The header values are defined as structured field dictionaries with the following keys:
 
 - `blocked-destinations`
-  - : Defines a list of [request destinations](/en-US/docs/Web/API/Request/destination) to be blocked. The only currently supported value is `"script"`.
+  - : Defines a list of [request destinations](/en-US/docs/Web/API/Request/destination) to be blocked. The only allowed value is `script`.
 - `sources` {{optional_inline}}
-  - : Defines a list of integrity sources. The default and only currently supported value is `"inline"`.
+  - : Defines a list of integrity sources. The default and only currently supported value is `inline`. As a result, adding `sources=(inline)` to the header has a similar effect as omitting `sources`.
 - `endpoints` {{optional_inline}}
   - : Defines a list of [reporting endpoints](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#endpoint).
 
-An example header might look like:
+## Examples
+
+### Reporting when scripts lack integrity metadata
+
+This example shows a document that reports when any {{htmlelement("script")}} (or `HTMLScriptElement`) does not specify an `integrity` attribute, or when a script resource is requested in [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode.
+
+Note that the `integrity-endpoint` used in `Integrity-Policy-Report-Only` is defined in the {{httpheader("Reporting-Endpoints")}} header.
 
 ```http
-Integrity-Policy-Report-Only: blocked-destinations=(script), endpoints=(integrity-endpoint, general-endpoint)
+Reporting-Endpoints: integrity-endpoint=https://example.com/integrity, backup-integrity-endpoint=https://report-provider.example/integrity
+Integrity-Policy-Report-Only: blocked-destinations=(script), endpoints=(integrity-endpoint, backup-integrity-endpoint)
+```
+
+The report payload might look like this.
+
+```json
+{
+  "type": "integrity-violation",
+  "url": "https://example.com",
+  "body": {
+    "documentURL": "https://example.com",
+    "blockedURL": "https://example.com/main.js",
+    "destination": "script",
+    "reportOnly": false
+  }
+}
 ```
 
 ## Specifications

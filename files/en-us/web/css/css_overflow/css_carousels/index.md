@@ -1,5 +1,6 @@
 ---
 title: Creating CSS carousels
+short-title: Creating carousels
 slug: Web/CSS/CSS_overflow/CSS_carousels
 page-type: guide
 ---

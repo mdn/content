@@ -40,7 +40,7 @@ This article provides information about the changes in Firefox 76 that will affe
 
 ### CSS
 
-- Firefox now supports [CSS colors level 4 system colors](https://www.w3.org/TR/css-color-4/#typedef-system-color) ([Firefox bug 1590894](https://bugzil.la/1590894)).
+- Firefox now supports [CSS colors level 4 system colors](https://drafts.csswg.org/css-color-4/#typedef-system-color) ([Firefox bug 1590894](https://bugzil.la/1590894)).
 
 ### SVG
 

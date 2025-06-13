@@ -3,7 +3,7 @@ title: "ARIA: meter role"
 short-title: meter
 slug: Web/Accessibility/ARIA/Reference/Roles/meter_role
 page-type: aria-role
-spec-urls: https://www.w3.org/TR/wai-aria-1.2/#meter
+spec-urls: https://w3c.github.io/aria/#meter
 sidebar: accessibilitysidebar
 ---
 
@@ -73,7 +73,7 @@ An example of a meter using `role="meter"`:
 </div>
 ```
 
-In the above scenario, when the `aria-valuenow` value updates, the width of the SVG also needs to be updated as can be seen in [the W3C working meter example](https://www.w3.org/TR/wai-aria-practices-1.2/examples/meter/meter.html).
+In the above scenario, when the `aria-valuenow` value updates, the width of the SVG also needs to be updated as can be seen in [the ARIA Authoring Practices Guide (APG) working meter example](https://www.w3.org/WAI/ARIA/apg/patterns/meter/examples/meter/).
 
 ## Specifications
 

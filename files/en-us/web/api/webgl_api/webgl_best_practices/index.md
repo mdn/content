@@ -611,14 +611,6 @@ function getDevicePixelSize(elem) {
 }
 ```
 
-Please refer to [the specification](https://www.w3.org/TR/resize-observer/#resize-observer-interface) for more details.
-
-## ImageBitmap creation
-
-Using the [ImageBitmapOptions dictionary](https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html#imagebitmapoptions) is essential for properly preparing textures for upload to WebGL, but unfortunately there's no obvious way to query exactly which dictionary members are supported by a given browser.
-
-[This JSFiddle](https://jsfiddle.net/ptkyewhx/) illustrates how to determine which dictionary members a given browser supports.
-
 ## Use `WEBGL_provoking_vertex` when it's available
 
 When assembling vertices into primitives such as triangles and lines, in OpenGL's convention, the last vertex of the primitive is considered the "provoking vertex". This is relevant when using `flat` vertex attribute interpolation in ESSL300 (WebGL 2); the attribute value from the provoking vertex is used for all of the vertices of the primitive.

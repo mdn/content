@@ -14,7 +14,7 @@ ARIA supplements HTML so that interactions and widgets commonly used in applicat
 > [!WARNING]
 > Many of these widgets are fully supported in modern browsers. **Developers should prefer using the correct semantic HTML element over using ARIA**, if such an element exists. For instance, native elements have built-in [keyboard accessibility](/en-US/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets), roles and states. However, if you choose to use ARIA, you are responsible for mimicking the equivalent browser behavior in script.
 
-[The first rule of ARIA](https://www.w3.org/TR/using-aria/#rule1) use is "If you can use a native HTML element or attribute with the semantics and behavior you require already built in, instead of re-purposing an element and adding an ARIA role, state or property to make it accessible, then do so."
+[The first rule of ARIA](https://w3c.github.io/using-aria/#rule1) use is "If you can use a native HTML element or attribute with the semantics and behavior you require already built in, instead of re-purposing an element and adding an ARIA role, state or property to make it accessible, then do so."
 
 > [!NOTE]
 > There is a saying "No ARIA is better than bad ARIA." In [WebAim's survey of over one million home pages](https://webaim.org/projects/million/#aria), they found that Home pages with ARIA present averaged 41% more detected errors than those without ARIA. While ARIA is designed to make web pages more accessible, if used incorrectly, it can do more harm than good.
@@ -90,7 +90,7 @@ The [ARIA guides](/en-US/docs/Web/Accessibility/ARIA/Guides) and [How-to pages](
 
 - [WAI-ARIA specification](https://w3c.github.io/aria/)
   - : The W3C specification itself.
-- [WAI-ARIA authoring practices](https://www.w3.org/TR/wai-aria-practices-1.2/)
+- [WAI-ARIA authoring practices](https://www.w3.org/WAI/ARIA/apg/)
   - : The official best practices documents how best to ARIA-ify common widgets and interactions. An excellent resource.
 
 ## ARIA for scripted widgets

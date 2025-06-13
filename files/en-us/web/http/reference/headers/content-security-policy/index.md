@@ -193,7 +193,9 @@ The `<host-source>` and `<scheme-source>` formats must be unquoted, and all othe
 
 ### 'nonce-\<nonce_value>'
 
-This value consists of the string `nonce-` followed by a {{glossary("Base64", "base64-encoded")}} string. This string is a random value that the server generates for every HTTP response. For example:
+This value consists of the string `nonce-` followed by a nonce value. The nonce value may use any of the characters from [Base64](/en-US/docs/Glossary/Base64#base64_characters) or [URL-safe Base64](/en-US/docs/Glossary/Base64#url_and_filename_safe_base64).
+
+This string is a random value that the server generates for every HTTP response. For example:
 
 ```plain
 'nonce-416d1177-4d12-4e3b-b7c9-f6c409789fb8'
@@ -212,7 +214,7 @@ See [Nonces](/en-US/docs/Web/HTTP/Guides/CSP#nonces) in the CSP guide for more u
 
 ### '\<hash_algorithm>-<hash_value>'
 
-This value consists of a string identifying a hash algorithm, followed by `-`, followed by a {{glossary("Base64", "base64-encoded")}} string representing the hash value.
+This value consists of a string identifying a hash algorithm, followed by `-`, followed by a hash value. The hash value may use any of the characters from [Base64](/en-US/docs/Glossary/Base64#base64_characters) or [URL-safe Base64](/en-US/docs/Glossary/Base64#url_and_filename_safe_base64).
 
 - The hash algorithm identifier must be one of `sha256`, `sha384`, or `sha512`.
 - The hash value is the base64-encoded {{glossary("hash function", "hash")}} of a `<script>` or `<style>` resource, calculated using one of the following hash functions: SHA-256, SHA-384, or SHA-512.

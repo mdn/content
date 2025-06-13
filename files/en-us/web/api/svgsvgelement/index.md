@@ -61,7 +61,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
 - {{domxref("SVGSVGElement.currentScale")}}
   - : On an outermost {{SVGElement("svg")}} element, this float attribute indicates the current scale factor relative to the initial view to take into account user magnification and panning operations. DOM attributes `currentScale` and `currentTranslate` are equivalent to the 2×3 matrix `[a b c d e f] = [currentScale 0 0 currentScale currentTranslate.x currentTranslate.y]`. If "magnification" is enabled (i.e., `zoomAndPan="magnify"`), then the effect is as if an extra transformation were placed at the outermost level on the SVG document fragment (i.e., outside the outermost {{SVGElement("svg")}} element).
 - {{domxref("SVGSVGElement.currentTranslate")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGPoint")}} representing the translation factor that takes into account user "magnification" corresponding to an outermost {{SVGElement("svg")}} element. The behavior is undefined for `<svg>` elements that are not at the outermost level.
+  - : A {{domxref("DOMPointReadOnly")}} representing the translation factor that takes into account user "magnification" corresponding to an outermost {{SVGElement("svg")}} element. The behavior is undefined for `<svg>` elements that are not at the outermost level.
 
 ## Instance methods
 
@@ -122,7 +122,7 @@ _This interface also inherits methods from its parent, {{domxref("SVGGraphicsEle
 - {{domxref("SVGSVGElement.createSVGAngle()")}}
   - : Creates an {{domxref("SVGAngle")}} object outside of any document trees. The object is initialized to a value of `0` degrees (unitless).
 - {{domxref("SVGSVGElement.createSVGPoint()")}}
-  - : Creates an {{domxref("SVGPoint")}} object outside of any document trees. The object is initialized to the point `(0,0)` in the user coordinate system.
+  - : Creates a {{domxref("DOMPoint")}} object outside of any document trees. The object is initialized to the point `(0,0)` in the user coordinate system.
 - {{domxref("SVGSVGElement.createSVGMatrix()")}}
   - : Creates a {{domxref("DOMMatrix")}} object outside of any document trees. The object is initialized to the identity matrix.
 - {{domxref("SVGSVGElement.createSVGRect()")}}

@@ -44,7 +44,7 @@
   "dependencies": {
     "@apideck/better-ajv-errors": "^0.3.6",
     "@caporal/core": "^2.0.7",
-    "@mdn/yari": "4.11.0",
+    "@mdn/yari": "4.12.0",
     "@octokit/rest": "^22.0.0",
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
@@ -53,7 +53,7 @@
     "cli-progress": "^3.12.0",
     "cross-env": "7.0.3",
     "env-cmd": "10.1.0",
-    "fdir": "^6.4.4",
+    "fdir": "^6.4.6",
     "gray-matter": "^4.0.3",
     "yaml": "^2.8.0"
   },

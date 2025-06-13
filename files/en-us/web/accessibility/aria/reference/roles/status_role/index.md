@@ -21,11 +21,11 @@ Elements with the role status have an implicit [`aria-live`](/en-US/docs/Web/Acc
 
 - [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic)
 
-  - : Defines whether assistive technologies should present all, or only parts of, the changed region. Elements with the role `status` have an implicit [aria-atomic](https://www.w3.org/TR/wai-aria-1.1/#aria-atomic) value of `true`.
+  - : Defines whether assistive technologies should present all, or only parts of, the changed region. Elements with the role `status` have an implicit `aria-atomic` value of `true`.
 
 - [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live)
 
-  - : Defines when assistive technology should inform the user of updates to content. Elements with the role `status` have an implicit [aria-live](https://www.w3.org/TR/wai-aria-1.1/#aria-live) value of `polite`, meaning screen readers will announce changes inside the log when the user is idle.
+  - : Defines when assistive technology should inform the user of updates to content. Elements with the role `status` have an implicit `aria-live` value of `polite`, meaning screen readers will announce changes inside the log when the user is idle.
 
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
 
