@@ -97,7 +97,7 @@ rgb(from red r g b / 100%)
 rgb(from red r g b)
 rgb(from red r g b / alpha)
 
-/* As the green and blue values are same */
+/* For red color, g and b values are equal, making them interchangeable */
 rgb(from red r g g)
 rgb(from red r b b)
 rgb(from red 255 g g)
@@ -293,7 +293,7 @@ The output is as follows:
 
 {{ EmbedLiveSample("Using math functions", "100%", "200") }}
 
-## Manipulating alpha channel
+## Manipulating the alpha channel
 
 ```html
 <div class="container">
@@ -303,15 +303,7 @@ The output is as follows:
 
 ```css hidden
 .container {
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  box-sizing: border-box;
-}
-
-.item {
-  flex: 1;
-  margin: 60px;
+  padding: 60px;
 }
 ```
 
