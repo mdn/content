@@ -48,8 +48,10 @@ body {
 
 * {
   box-sizing: border-box;
+}
 
-audio, video {
+audio,
+video {
   border: 1px solid black;
 }
 ```

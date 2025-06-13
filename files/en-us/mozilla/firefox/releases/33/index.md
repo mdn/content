@@ -44,7 +44,7 @@ For details please [see the hacks post](https://hacks.mozilla.org/2014/07/event-
 - Added the experimental support for {{htmlelement("picture")}} element ([Firefox bug 870022](https://bugzil.la/870022)), behind the `dom.image.picture.enabled` preference (off by default).
 - The {{HTMLElement("label")}}, especially without a [`for`](/en-US/docs/Web/HTML/Reference/Elements/label#for) attribute, doesn't apply anymore to a `<input type=hidden>` field ([Firefox bug 597650](https://bugzil.la/597650)). The previous behavior wasn't spec-compliant.
 - The link annotation `noreferrer` has been implemented on {{HTMLElement("a")}} elements. `<a rel="noreferrer">` will not include the URL of the referrer in the HTTP request sent to fetch it ([Firefox bug 530396](https://bugzil.la/530396)). Note that this works only for in-page links, not for links clicked via the UI, like via contextual menus.
-- On Android, support for two new values for the [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta#name) attribute of {{HTMLElement("meta")}} has been added: `msapplication-TileImage` and `msapplication-TileColor` ([Firefox bug 1014712](https://bugzil.la/1014712)). Example:
+- On Android, support for two new values for the [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta/name) attribute of {{HTMLElement("meta")}} has been added: `msapplication-TileImage` and `msapplication-TileColor` ([Firefox bug 1014712](https://bugzil.la/1014712)). Example:
 
   ```html
   <meta name="msapplication-TileImage" content="images/my-img-144.png" />

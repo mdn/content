@@ -7,7 +7,7 @@ page-type: html-attribute-value
 
 {{HTMLSidebar}}
 
-The **`robots`** value for the [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta#name) attribute of the {{htmlelement("meta")}} element defines the crawl behavior that cooperative crawlers (or "robots") should use with the page.
+The **`robots`** value for the [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta/name) attribute of the {{htmlelement("meta")}} element defines the crawl behavior that cooperative crawlers (or "robots") should use with the page.
 If specified, you define crawl directives using a [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content) attribute in the `<meta>` element as a comma-separated list of one or more rules.
 
 For example, to hint to crawlers that a page should be excluded from their search indexes, a `noindex` value can be used:
