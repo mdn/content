@@ -13,7 +13,7 @@ A [CSS](/en-US/docs/Web/CSS) **_property_** is a parameter used in a [CSS declar
 For example, the {{CSSxRef("opacity")}} property is used to set the opacity (the opposite of transparency) of a selected element, allowing you to control if content behind that element is visible:
 
 ```css
-/* <img> elements with an "inactive" class have 0.8 opacity */
+/* Set 0.8 opacity on <img> elements with an "inactive" class */
 img.inactive {
   opacity: 0.8;
 }
