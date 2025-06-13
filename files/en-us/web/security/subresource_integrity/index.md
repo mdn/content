@@ -117,6 +117,8 @@ The {{httpheader("Integrity-Policy")}} and {{httpheader("Integrity-Policy-Report
 When an `Integrity-Policy` header is specified, the browser blocks requests with [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode or without an `integrity` attribute from being made, and will also report violations if a valid reporting endpoint is specified.
 When an `Integrity-Policy-Report-Only` header is specified the browser allows requests that violate the policy, but will report violations to the reporting endpoint (if a valid reporting endpoint is specified).
 
+Developers would typically use `Integrity-Policy-Report-Only` as a first deployment step in their Integrity Policy journey, to ensure that all the scripts loaded in their documents have appropriate integrity metadata. Once they'd see that no violation reports are being received, they'd know that they can enable blocking using the `Integrity-Policy` header without risking user-facing breakage.
+
 The header values are defined as structured field dictionaries with the following keys:
 
 - `blocked-destinations`
@@ -124,7 +126,7 @@ The header values are defined as structured field dictionaries with the followin
 - `sources` {{optional_inline}}
   - : Defines a list of integrity sources. The default and only currently supported value is `inline`. As a result, adding `sources=(inline)` to the header has a similar effect as omitting `sources`.
 - `endpoints` {{optional_inline}}
-  - : Defines a list of [reporting endpoints](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#endpoint).
+  - : Defines a list of [reporting endpoints](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#endpoint). The reporting endpoints need to be defined in a {{httpheader("Reporting-Endpoints")}} header.
 
 In cases where a request is blocked by an integrity policy, a [Reporting API](/en-US/docs/Web/API/Reporting_API) violation report is created with a type of `integrity-violation` and a body of type {{domxref("IntegrityViolationReportBody")}} that includes information such as the URL of the document and the blocked resource.
 
