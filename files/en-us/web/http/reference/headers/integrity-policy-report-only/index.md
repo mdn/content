@@ -41,6 +41,7 @@ The header values are defined as structured field dictionaries with the followin
   - : Defines a list of integrity sources. The default and only currently supported value is `"inline"`.
 - `endpoints` {{optional_inline}}
   - : Defines a list of [reporting endpoints](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#endpoint).
+    Reports are sent to all valid endpoints.
 
 An example header might look like:
 
