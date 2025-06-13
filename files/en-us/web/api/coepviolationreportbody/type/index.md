@@ -8,7 +8,7 @@ browser-compat: api.COEPViolationReportBody.type
 
 {{APIRef("Reporting API")}}{{AvailableInWorkers}}
 
-The **`type`** read-only property of the {{domxref("COEPViolationReportBody")}} dictionary returns a value that indicates whether the violation was caused by attempting to load a child resource or a dedicated worker.
+The **`type`** read-only property of the {{domxref("COEPViolationReportBody")}} dictionary returns a value that indicates the cause of the violation, such as embedding a child resource or loading a dedicated worker.
 
 ## Value
 

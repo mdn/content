@@ -7,19 +7,21 @@ browser-compat: api.COEPViolationReportBody
 
 {{APIRef("Reporting API")}}
 
-The `COEPViolationReportBody` dictionary represents the {{domxref("Report.body","body")}} of an [Cross-Origin-Embedder-Policy (COEP)](/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy) policy violation report.
+The `COEPViolationReportBody` dictionary represents the {{domxref("Report.body","body")}} of a {{domxref("Report")}} that has a {{domxref("Report.type","type")}} of `coep`.
+
+It is used with the [Reporting API](/en-US/docs/Web/API/Reporting_API) in reports for [Cross-Origin-Embedder-Policy (COEP)](/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy) policy violations.
 
 > [!NOTE]
-> This object does not derive from {{domxref("ReportBody")}} (unlike other {{domxref("Report.body")}} values).
+> This object does not derive from {{domxref("ReportBody")}} (unlike some other {{domxref("Report.body")}} values).
 
 ## Instance properties
 
 - {{domxref("COEPViolationReportBody.type")}} {{ReadOnlyInline}}
-  - : A string representing whether the violation was caused by loading a child resource or a dedicated worker.
+  - : A string representing what kind of cross-origin embedding caused the violation.
 - {{domxref("COEPViolationReportBody.blockedURL")}} {{ReadOnlyInline}}
   - : A string containing the URL of the blocked resource.
 - {{domxref("COEPViolationReportBody.disposition")}} {{ReadOnlyInline}}
-  - : A string representing whether the violation blocked resource loading or was only reported on.
+  - : A string indicating whether the violation was enforced or only reported.
 
 <!--
 - {{domxref("COEPViolationReportBody.destination")}} {{ReadOnlyInline}}
