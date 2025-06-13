@@ -19,7 +19,7 @@ img.inactive {
 }
 ```
 
-Each property has a name (e.g., `opacity`), followed by a colon (`:`), a value (e.g., `0.8`), and a defined behavior on the rendering of the document.
+Each property has a name (e.g., `opacity`), a value (e.g., `0.8`), and a defined behavior on the rendering of the document.
 CSS also defines shorthand properties, so you can specify multiple related properties in a single declaration.
 For example, the {{CSSxRef("padding")}} property is a shorthand for {{CSSxRef("padding-top")}}, {{CSSxRef("padding-right")}}, {{CSSxRef("padding-bottom")}}, and {{CSSxRef("padding-left")}}, setting the padding of all four sides of an element:
 
