@@ -624,7 +624,7 @@ margin: 0auto;
 padding- left: 10px;
 ```
 
-Do you see the spacing errors? First, `0auto` is not recognized as a valid value for the `margin` property. The entry `0auto` is meant to be two separate values: `0` and `auto`. Second, the browser does not recognize `padding-` as a valid property. The correct property name (`padding-left`) has a space inserted in it.
+Do you see the spacing errors? First, `0auto` is not recognized as a valid value for the `margin` property. The entry `0auto` is meant to be two separate values: `0` and `auto`. Second, the browser does not recognize `padding-` as a valid property. The correct property name (`padding-left`) doesn't have a space in it.
 
 You should always make sure to separate distinct values from one another by at least one space. Keep property names and property values together as single unbroken strings.
 
