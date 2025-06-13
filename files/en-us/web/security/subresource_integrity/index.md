@@ -126,16 +126,15 @@ The header values are defined as structured field dictionaries with the followin
 - `endpoints` {{optional_inline}}
   - : Defines a list of [reporting endpoints](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#endpoint).
 
-In cases where a request is blocked by an integrity policy, a [Reporting API](/en-US/docs/Web/API/Reporting_API) violation report is created with a type of `"integrity-violation"`. It contains:
+In cases where a request is blocked by an integrity policy, a [Reporting API](/en-US/docs/Web/API/Reporting_API) violation report is created with a type of `integrity-violation` and a body of type {{domxref("IntegrityViolationReportBody")}} that includes information such as the URL of the document and the blocked resource.
 
-- `documentURL`
-  - : The URL of the document.
-- `blockedURL`
-  - : The URL of the blocked subresource.
-- `destination`
-  - : The request destination.
-- `reportOnly`
-  - : Whether the report is a result of a report-only policy. When false, that means that the subresource was blocked from loading.
+A typical resource might look like this
+
+```json
+{
+Show a real example
+}
+```
 
 ## Examples
 
