@@ -46,7 +46,7 @@ The header values are defined as structured field dictionaries with the followin
 An example header might look like:
 
 ```http
-Integrity-Policy-Report-Only: blocked-destinations=(script), endpoints=(integrity-endpoint, general-endpoint)
+Integrity-Policy-Report-Only: blocked-destinations=(script), endpoints=(integrity-endpoint, some-other-integrity-endpoint)
 ```
 
 ## Specifications
