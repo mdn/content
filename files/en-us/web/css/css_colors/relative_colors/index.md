@@ -295,6 +295,8 @@ The output is as follows:
 
 ## Manipulating the alpha channel
 
+This example demonstrates how to change the alpha channel of a given color. Here, we have an item wrapped in a container, both having a `teal` colored background. To make them distinguishable, we bring variation in the alpha channel value using the relative color feature, the `calc()` function, and a custom property `--alpha-multiplier`.
+
 ```html
 <div class="container">
   <div class="item"></div>
@@ -304,6 +306,10 @@ The output is as follows:
 ```css hidden
 .container {
   padding: 60px;
+}
+
+.item {
+  height: 60px;
 }
 ```
 
@@ -322,6 +328,8 @@ div {
   --alpha-multiplier: 1;
 }
 ```
+
+In the above code, the alpha channel is referenced using the name `alpha`. The `calc(alpha * var(--alpha-multiplier))` expression modifies the alpha channel value by multiplying it with `--alpha-multiplier`. The container gets a semitransparent background because of the smaller multiplier `0.3`.
 
 The output is as follows:
 
