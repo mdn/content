@@ -120,7 +120,7 @@ When an `Integrity-Policy-Report-Only` header is specified, such requests would 
 The header values are defined as structured field dictionaries with the following keys:
 
 - `blocked-destinations`
-  - : Defines a list of [request destinations](/en-US/docs/Web/API/Request/destination) to be blocked. The only currently supported value is `"script"`.
+  - : Defines a list of [request destinations](/en-US/docs/Web/API/Request/destination) to be blocked. The only allowed value is `"script"`.
 - `sources` {{optional_inline}}
   - : Defines a list of integrity sources. The default and only currently supported value is `"inline"`.
 - `endpoints` {{optional_inline}}
