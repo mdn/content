@@ -8,7 +8,7 @@ browser-compat: api.COEPViolationReportBody.disposition
 
 {{APIRef("Reporting API")}}
 
-The **`disposition`** read-only property of the {{domxref("COEPViolationReportBody")}} dictionary represents whether the report is for a violation that was blocked or only reported.
+The **`disposition`** read-only property of the {{domxref("COOPViolatiCOEPViolationReportBodyonReportBody")}} dictionary indicates whether the policy violation was enforced, blocking loading of the associated resource, or just reported.
 
 ## Value
 
