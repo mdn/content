@@ -100,32 +100,6 @@ For subresource-integrity verification of a resource served from an origin other
 Access-Control-Allow-Origin: *
 ```
 
-## Examples
-
-In the following examples, assume that `oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC` is already known to be the expected SHA-384 hash (digest) of a particular script `example-framework.js`, and there's a copy of the script hosted at `https://example.com/example-framework.js`.
-
-### Subresource Integrity with the \<script> element
-
-You can use the following {{HTMLElement("script")}} element to tell a browser that before executing the `https://example.com/example-framework.js` script, the browser must first compare the script to the expected hash, and verify that there's a match.
-
-```html
-<script
-  src="https://example.com/example-framework.js"
-  integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
-  crossorigin="anonymous"></script>
-```
-
-> [!NOTE]
-> For more details on the purpose of the `crossorigin` attribute, see [CORS settings attributes](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin).
-
-### Integrity enforcement with the `Integrity-Policy` header
-
-You can add the following header to your document in order to ensure that all the external scripts it loads are loaded with integrity (and aren't loaded with [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode)
-
-```http
-Integrity-Policy: blocked-destinations=(script), endpoints=(integrity-endpoint, general-endpoint)
-```
-
 ## How browsers handle Subresource Integrity
 
 Browsers handle SRI by doing the following:
@@ -151,7 +125,6 @@ The header values are defined as structured field dictionaries with the followin
   - : Defines a list of integrity sources. The default and only currently supported value is `"inline"`.
 - `endpoints` {{optional_inline}}
   - : Defines a list of [reporting endpoints](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#endpoint).
-- `blocked-destinations`
 
 In cases where a request is blocked by an integrity policy, a [Reporting API](/en-US/docs/Web/API/Reporting_API) violation report is created with a type of `"integrity-violation"`. It contains:
 
@@ -163,6 +136,32 @@ In cases where a request is blocked by an integrity policy, a [Reporting API](/e
   - : The request destination.
 - `reportOnly`
   - : Whether the report is a result of a report-only policy. When false, that means that the subresource was blocked from loading.
+
+## Examples
+
+In the following examples, assume that `oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC` is already known to be the expected SHA-384 hash (digest) of a particular script `example-framework.js`, and there's a copy of the script hosted at `https://example.com/example-framework.js`.
+
+### Subresource Integrity with the \<script> element
+
+You can use the following {{HTMLElement("script")}} element to tell a browser that before executing the `https://example.com/example-framework.js` script, the browser must first compare the script to the expected hash, and verify that there's a match.
+
+```html
+<script
+  src="https://example.com/example-framework.js"
+  integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
+  crossorigin="anonymous"></script>
+```
+
+> [!NOTE]
+> For more details on the purpose of the `crossorigin` attribute, see [CORS settings attributes](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin).
+
+### Integrity enforcement with the `Integrity-Policy` header
+
+You can add the {{httpheader("Integrity-Policy")}} header to your document in order to ensure that all the external scripts it loads are loaded with integrity (and aren't loaded with [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode)
+
+```http
+Integrity-Policy: blocked-destinations=(script), endpoints=(integrity-endpoint, general-endpoint)
+```
 
 ## Specifications
 
