@@ -9,18 +9,18 @@ spec-urls:
 sidebar: cssref
 ---
 
-A [CSS](/en-US/docs/Web/CSS) **_property_** is a keyword used in a CSS declaration that lets you style certain aspects of selected element(s).
-For example, the {{CSSxRef("opacity")}} property is used to set the opacity (the opposite of transparency) of an element, allowing you to control if content behind an element is visible:
+A [CSS](/en-US/docs/Web/CSS) **_property_** is a parameter used in a [CSS declaration](/en-US/docs/Web/CSS/CSS_syntax/Syntax#css_declarations) that lets you style certain aspects of selected elements.
+For example, the {{CSSxRef("opacity")}} property is used to set the opacity (the opposite of transparency) of a selected element, allowing you to control if content behind that element is visible:
 
 ```css
-/* Give <img> elements with an "inactive" class 0.8 opacity */
+/* <img> elements with an "inactive" class have 0.8 opacity */
 img.inactive {
   opacity: 0.8;
 }
 ```
 
-A property consists of a keyword, followed by a colon (`:`) followed by the property value (e.g., `0.8`).
-A shorthand property is a way of specifying multiple related properties in one declaration.
+Each property has a name (e.g., `opacity`), followed by a colon (`:`), a value (e.g., `0.8`), and a defined behavior on the rendering of the document.
+CSS also defines shorthand properties, so you can specify multiple related properties in a single declaration.
 For example, the {{CSSxRef("padding")}} property is a shorthand for {{CSSxRef("padding-top")}}, {{CSSxRef("padding-right")}}, {{CSSxRef("padding-bottom")}}, and {{CSSxRef("padding-left")}}, setting the padding of all four sides of an element:
 
 ```css
