@@ -23,7 +23,7 @@ createDocumentType(name, publicId, systemId)
 ### Parameters
 
 - `name`
-  - : A string containing the qualified name, like
+  - : A string containing the [`qualified name`](/en-US/docs/Web/API/DocumentType/name), like
     `svg:svg`.
 - `publicId`
   - : A string containing the `PUBLIC` identifier.
