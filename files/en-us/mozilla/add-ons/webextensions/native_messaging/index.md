@@ -244,25 +244,34 @@ You can quickly get started sending and receiving messages with this NodeJS code
 
 import fs from "node:fs/promises";
 
-async function getMessage() {
-  const header = new Uint32Array(1);
-  await readFullAsync(1, header);
-  const message = await readFullAsync(header[0]);
-  return message;
-}
+let readPromise = null; // Prevents reading until an in-progress read has finished.
 
-async function readFullAsync(length, buffer = new Uint8Array(65536)) {
-  const data = [];
-  while (data.length < length) {
-    const input = await fs.open("/dev/stdin");
-    const { bytesRead } = await input.read({ buffer });
-    await input.close();
-    if (bytesRead === 0) {
-      break;
+// This function should not be called in parallel, because each call would
+// share access to /dev/stdin. A `readPromise` lock is used to prevent this.
+async function getMessage() {
+  while (readPromise) await readPromise;
+  let resolveReadPromise;
+  readPromise = new Promise((resolve) => {
+    resolveReadPromise = resolve;
+  });
+  let input;
+  try {
+    input = await fs.open("/dev/stdin");
+    const header = new Uint32Array(1);
+    await input.read(header);
+    const message = new Uint8Array(header[0]);
+    let offset = 0;
+    while (offset < header[0]) {
+      const { bytesRead } = await input.read(message, { offset });
+      offset += bytesRead;
     }
-    data.push(...buffer.subarray(0, bytesRead));
+    return message;
+  } finally {
+    if (input) await input.close();
+    // Release lock and allow the next `getMessage()` call to proceed
+    resolveReadPromise();
+    readPromise = null;
   }
-  return new Uint8Array(data);
 }
 
 async function sendMessage(message) {
