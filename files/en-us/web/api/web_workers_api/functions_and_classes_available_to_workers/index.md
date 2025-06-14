@@ -69,6 +69,7 @@ The following Web APIs are available to workers:
 - {{domxref("Reporting API", "", "", "nocode")}}
 - {{domxref("Server-Sent Events", "", "", "nocode")}}
 - {{domxref("Service Worker API", "", "", "nocode")}}
+- {{domxref("Storage Buckets API", "", "", "nocode")}}
 - {{domxref("Streams API", "", "", "nocode")}}
 - {{domxref("Trusted Types API", "", "", "nocode")}}
 - {{domxref("URL API", "", "", "nocode")}}
