@@ -133,54 +133,13 @@ There are a number of technologies to learn if you want to be a front-end web de
 
 ### HTML, CSS, and JavaScript
 
-[HTML](/en-US/docs/Web/HTML), [CSS](/en-US/docs/Web/CSS), and [JavaScript](/en-US/docs/Web/JavaScript) are the main three technologies you'll use to build a website.
+[HTML](/en-US/docs/Web/HTML), [CSS](/en-US/docs/Web/CSS), and [JavaScript](/en-US/docs/Web/JavaScript) are the main three technologies you'll use to build a website. You met these in the [previous module](/en-US/docs/Learn_web_development/Getting_started/Your_first_website), but, to recap:
 
-- HTML is for structure and semantics (meaning).
-- CSS is for styling and layout.
-- JavaScript and APIs are for controlling dynamic behavior.
-
-#### HTML
-
-HyperText Markup Language, or **HTML**, is a markup language consisting of different elements you can wrap (mark up) content in to give it meaning (semantics) and structure. Simple HTML looks like this:
-
-```html
-<h1>This is a top-level heading</h1>
-
-<p>This is a paragraph of text.</p>
-
-<img src="cat.jpg" alt="A picture of my cat" />
-```
-
-If we adopted a house-building analogy, HTML would be like the foundations and walls of the house, which give it structure and hold it together.
-
-#### CSS
-
-Cascading Style Sheets (**CSS**) is a rule-based language used to apply styles to your HTML — for example, setting text and background colors, adding borders, animating things, or laying out a page in a certain way. As a simple example, the following code would turn all HTML paragraphs red:
-
-```css
-p {
-  color: red;
-}
-```
-
-In the house analogy, CSS is like the paint, wallpaper, carpets and paintings you'd use to make the house look nice.
-
-#### JavaScript (and APIs)
-
-**JavaScript** is the programming language we use to add interactivity to websites, from dynamic style switching, to fetching updates from the server, right through to complex 3D graphics. The following simple JavaScript store a reference to a paragraph in memory and change the text inside it:
-
-```js
-let pElem = document.querySelector("p");
-pElem.textContent = "We changed the text!";
-```
-
-You'll also hear the term **APIs** along with JavaScript. API stands for **Application Programming Interface**. In general terms, an API is a bit of code that allows you to control other more complex bits of code or other functionality on your computer (such as hardware devices like your webcam or microphone) in a manageable way.
-
-For example, writing your own interface to communicate with your webcam and capture a video stream from it would be quite difficult, but the JavaScript [`getUserMedia()`](/en-US/docs/Web/API/MediaDevices/getUserMedia#examples) API method allows you to do this fairly easily. It does all the hard work for you, behind the scenes, so you don't need to reinvent the wheel each time.
-
-The simple code snippet above also uses an API. [`querySelector()`](/en-US/docs/Web/API/Document/querySelector) and [`textContent`](/en-US/docs/Web/API/Node/textContent) are both parts of the [Document Object Model (DOM)](/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting) family of APIs, which allow you to use JavaScript to manipulate web documents.
-
-In the house analogy, JavaScript is like the cooker, TV, Microwave, or hairdryer — the things that give your house useful functionality.
+- HyperText Markup Language, or **HTML**, is a markup language consisting of different elements you can wrap (mark up) content in to give it meaning (semantics) and structure. If we adopted a house-building analogy, HTML would be like the foundations and walls of the house, which give it structure and hold it together.
+- Cascading Style Sheets (**CSS**) is a rule-based language used to apply styles to your HTML — for example, setting text and background colors, adding borders, animating things, or laying out a page in a certain way. In the house analogy, CSS is like the paint, wallpaper, carpets and paintings you'd use to make the house look nice.
+- **JavaScript** is the programming language we use to add interactivity to websites, from dynamic style switching, to fetching updates from the server, right through to complex 3D graphics.
+  - You'll also hear the term **API** along with JavaScript, which stands for **Application Programming Interface**. A JavaScript API is functionality built on top of JavaScript that allows you to control other more complex bits of code or other functionality on your computer (such as hardware devices like your webcam or microphone) in a manageable way.
+  - In the house analogy, JavaScript is like the cooker, TV, Microwave, or hairdryer — the things that give your house useful functionality.
 
 ### Other web technologies
 
