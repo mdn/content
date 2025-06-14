@@ -51,7 +51,7 @@ object-view-box: none;
   body::before {
     content: "The 'object-view-box' property is not supported by your browser.";
     color: black;
-    background-color: wheat;
+    background-color: #ffcd33;
     display: block;
     width: 100%;
     text-align: center;
@@ -124,6 +124,21 @@ In this example, we allow users to zoom in on a leopard image. The zoom-in point
 ```css hidden
 input {
   width: 350px;
+}
+
+@supports not (object-view-box: none) {
+  body::before {
+    content: "The 'object-view-box' property is not supported by your browser.";
+    color: black;
+    background-color: #ffcd33;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  body > * {
+    display: none;
+  }
 }
 ```
 
