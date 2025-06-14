@@ -89,7 +89,7 @@ Although it renders text with the same default styling as the {{HTMLElement("i")
       <td>
         <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content"
           >Flow content</a
-        >, but with no nested <code>&#x3C;address></code> element, no heading
+        >, but with no nested <code>&#x3C;address></code> or <code>&#x3C;aside></code> element, no heading
         content ({{HTMLElement("hgroup")}}, {{HTMLElement("Heading_Elements", "h1")}},
         {{HTMLElement("Heading_Elements", "h2")}}, {{HTMLElement("Heading_Elements", "h3")}},
         {{HTMLElement("Heading_Elements", "h4")}}, {{HTMLElement("Heading_Elements", "h5")}},
