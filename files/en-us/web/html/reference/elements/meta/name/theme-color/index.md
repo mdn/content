@@ -11,12 +11,13 @@ browser-compat: html.elements.meta.name.theme-color
 The **`theme-color`** value for the [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta/name) attribute of the {{htmlelement("meta")}} element indicates a suggested color that user agents should use to customize the display of the page or of the surrounding user interface.
 If specified, you define a theme color using a [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content) attribute in the `<meta>` element as a CSS {{cssxref("&lt;color&gt;")}} value.
 
-To set the media to which the theme color metadata applies, include the [`media`](/en-US/docs/Web/HTML/Reference/Elements/meta#media) attribute with a valid media query list.
 For example, to indicate that a document should use `cornflowerblue` as a theme color, set the `<meta>` as:
 
 ```html
 <meta name="theme-color" content="cornflowerblue" />
 ```
+
+To set the media to which the theme color metadata applies, include the [`media`](/en-US/docs/Web/HTML/Reference/Elements/meta#media) attribute with a valid media query list (see the [`theme-color` media query example](#using_a_media_query_with_theme-color)).
 
 ## Usage notes
 
