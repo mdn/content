@@ -27,41 +27,46 @@ None.
 
 ### Return value
 
-A `MediaTrackCapabilities` object which specifies the accepted value or range of values supported for each of the user agent's constrainable properties. This can contain the following members:
+A `MediaTrackCapabilities` object which specifies the accepted value or range of values supported for each of the user agent's constrainable properties. Note that not every property appears on every track, the available members depend on whether the track is audio or video. This can contain the following members:
+
+For both audio and video tracks:
 
 - `deviceId`
-  - : A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) object containing the device ID.
+  - : A string that identifies the capture device.
 - `groupId`
-  - : A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) object containing a group ID.
+  - : A string that groups related devices.
+
+For audio tracks only:
+
 - `autoGainControl`
-  - : A [`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#constrainboolean) object reporting if the source can automatically control the input signal's gain.
-    If the feature can be controlled by a script the source will report both true and false as possible values.
+  - : A boolean or an array of booleans. If the device supports script-controlled toggling, you may see both `true` and `false`.
 - `channelCount`
-  - : A [`ConstrainULong`](/en-US/docs/Web/API/MediaTrackConstraints#constrainulong) containing the channel count or channel count range.
+  - : A range object describing the supported number of channels. For example: `{ min: 1, max: 2 }`
 - `echoCancellation`
-  - : A [`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#constrainboolean) object reporting if the source can provide echo cancellation.
-    If the feature can be controlled by a script the source will report both `true` and `false` as possible values.
+  - : A boolean or an array of booleans indicating if echo cancellation is supported.
 - `latency`
-  - : A [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#constraindouble) containing the latency or latency range.
+  - : Either a fixed numeric value or a range object (with `min`, `max`, and optionally `step`) representing the latency in seconds. This value could be an integer or, in some cases, a floating-point number depending on measurement precision
 - `noiseSuppression`
-  - : A [`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#constrainboolean) object reporting if the source can provide noise suppression.
-    If the feature can be controlled by a script the source will report both `true` and `false` as possible values.
+  - : A boolean or an array indicating whether noise suppression is available. If the feature can be controlled by a script the source will report both `true` and `false` as possible values.
 - `sampleRate`
-  - : A [`ConstrainULong`](/en-US/docs/Web/API/MediaTrackConstraints#constrainulong) containing the sample rate or sample rate range.
+  - : A range object indicating the supported audio sample rates (for example: `{ min: 22050, max: 48000 }`).
 - `sampleSize`
-  - : A [`ConstrainULong`](/en-US/docs/Web/API/MediaTrackConstraints#constrainulong) containing the sample size or sample size range.
+  - : A range object describing the supported audio sample sizes in bits.
+
+For video tracks only:
+
 - `aspectRatio`
-  - : A [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#constraindouble) containing the video {{glossary("aspect ratio")}} (width in pixels divided by height in pixels) or aspect ratio range.
+  - : Either a single number or a range object that represents the ratio (width divided by height) the video device can output.
 - `facingMode`
-  - : A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) object containing the camera facing mode. A camera may report multiple facings, for example "left" and "user".
+  - : A string or an array of strings (such as "user", "environment", or even "left"/"right") which indicate the camera orientation. On some devices, more than one facing mode may be reported.
 - `frameRate`
-  - : A [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#constraindouble) containing the frame rate or range of frame rates which are acceptable.
+  - : A number (if fixed) or a range object giving the supported frames per second.
 - `height`
-  - : A [`ConstrainULong`](/en-US/docs/Web/API/MediaTrackConstraints#constrainulong) containing the video height or height range, in pixels.
+  - : A numeric value or range object (with pixel dimensions) representing the video track's height.
 - `width`
-  - : A [`ConstrainULong`](/en-US/docs/Web/API/MediaTrackConstraints#constrainulong) containing the video width or width range, in pixels.
+  - : A numeric value or range object (with pixel dimensions) representing the video track's width in pixels.
 - `resizeMode`
-  - : A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) object containing the mode or an array of modes the UA can use to derive the resolution of the video track.
+  - : A string or an array of strings that indicates how the user agent may derive the desired resolution (for example, modes like "none" or "crop-and-scale").
 
 ## Examples
 
