@@ -153,7 +153,7 @@ sidebar:
       - /Web/CSS/CSS_cascade/Shorthand_properties
   - type: listSubPages
     path: /Web/CSS/CSS_cascading_variables
-    title: Custom properties
+    title: Custom_properties
     details: closed
   - title: Colors
     details: closed
@@ -415,6 +415,7 @@ l10n:
     Columns: Columns
     Conditional_rules: Conditional rules
     Containment: Containment
+    Custom_properties: Custom properties
     CSSOM_view: CSSOM view
     Display: Display
     Filter_effects: Filter effects
@@ -589,6 +590,7 @@ l10n:
     Color_contrast: Web 无障碍：色彩对比度
     Columns: 多列
     Conditional_rules: 条件规则
+    Custom_properties: 自定义属性
     CSSOM_view: CSS 对象模型视图
     Display: 流式布局
     Filter_effects: 滤镜效果
