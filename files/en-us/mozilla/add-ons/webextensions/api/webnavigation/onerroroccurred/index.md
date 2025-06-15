@@ -59,6 +59,8 @@ Events have three functions:
 
             Frame IDs are unique for a given tab and process.
 
+        - `parentFrameId`
+          - : `integer`. ID of this frame's parent. Set to `-1` if this is a top-level frame.
         - `timeStamp`
           - : `number`. The time at which the error occurred, in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
         - `error`
