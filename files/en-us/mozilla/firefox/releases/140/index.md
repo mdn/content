@@ -2,7 +2,7 @@
 title: Firefox 140 for developers
 short-title: Firefox 140 (Beta)
 slug: Mozilla/Firefox/Releases/140
-page-type: active-fx-release
+page-type: firefox-release-notes-active
 sidebar: firefoxsidebar
 ---
 
