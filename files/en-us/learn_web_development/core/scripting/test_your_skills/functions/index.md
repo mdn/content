@@ -9,8 +9,7 @@ sidebar: learnsidebar
 The aim of this skill test is to assess whether you've understood our [Functions — reusable blocks of code](/en-US/docs/Learn_web_development/Core/Scripting/Functions), [Build your own function](/en-US/docs/Learn_web_development/Core/Scripting/Build_your_own_function), and [Function return values](/en-US/docs/Learn_web_development/Core/Scripting/Return_values) articles.
 
 > [!NOTE]
-> You can try solutions by downloading the code and putting it in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
-> If there is an error, it will be logged in the results panel on the page or into the browser's JavaScript console to help you.
+> For Tasks 1, 3, 4, and 5, you can try solutions by downloading the code and putting it in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). Task 2 is an interactive example provided by our [learning partner](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds), [Scrimba](https://scrimba.com/home).
 >
 > If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
@@ -34,6 +33,14 @@ Try updating the live code below to recreate the finished example:
 
 ## Functions 2
 
+For this task, we are handing you over to our [learning partner](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds), [Scrimba](https://scrimba.com/home), for a fun, interactive challenge involving function return values.
+
+Watch the embedded scrim and complete the task on the timeline (the little ghost icon) by following the instructions and editing the code. When you are done, you can resume watching the scrim to check how the teacher's solution matches up to yours.
+
+<scrim-inline url="https://scrimba.com/learn-javascript-c0v/~02h" scrimtitle="Returning values in functions"></scrim-inline>
+
+## Functions 3
+
 For our second functions-related task, you need to create a function that draws a rectangle on the provided `<canvas>` (reference variable `canvas`, context available in `ctx`), based on the five provided input variables:
 
 - `x` — the x coordinate of the rectangle.
@@ -52,7 +59,7 @@ Try updating the live code below to recreate the finished example:
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/functions/functions2-download.html) to work in your own editor or in an online editor.
 
-## Functions 3
+## Functions 4
 
 In this task, you return to the problem posed in Task 1, with the aim of improving it. The three improvements we want you to make are:
 
@@ -68,7 +75,7 @@ Try updating the live code below to recreate the finished example:
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/functions/functions3-download.html) to work in your own editor or in an online editor.
 
-## Functions 4
+## Functions 5
 
 In this task, we have an array of names, and we're using {{jsxref("Array.filter()")}} to get an array of only names shorter than 5 characters. The filter is currently being passed a named function `isShort()` which checks the length of the name, returning `true` if the name is less than 5 characters long, and `false` otherwise.
 
