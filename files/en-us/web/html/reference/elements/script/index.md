@@ -57,8 +57,12 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
 - `blocking`
 
-  - : This attribute explicitly indicates that certain operations should be blocked on the fetching of the script. The operations that are to be blocked must be a space-separated list of blocking tokens listed below.
+  - : This attribute explicitly indicates that certain operations should be blocked until the script has executed. The operations that are to be blocked must be a space-separated list of blocking tokens. Currently there is only one token:
+
     - `render`: The rendering of content on the screen is blocked.
+
+    > [!NOTE]
+    > In order to block rendering, `script` elements with `blocking="render"` must be in the `head` of the document. `script` elements in the `head` are implicitly render-blocking unless they have `type="module"`, `async`, or `defer`. `script` elements with any of these attributes need an explicit `blocking="render"` in order to block rendering.
 
 - [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin)
   - : Normal `script` elements pass minimal information to the {{domxref('Window.error_event', 'window.onerror')}} for scripts which do not pass the standard {{Glossary("CORS")}} checks. To allow error logging for sites which use a separate domain for static media, use this attribute. See [CORS settings attributes](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) for a more descriptive explanation of its valid arguments.
