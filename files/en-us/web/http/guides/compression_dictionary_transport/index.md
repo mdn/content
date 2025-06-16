@@ -202,7 +202,7 @@ Additionally, dictionaries could themselves become tracking vectors so browsers 
 - Glossary terms:
   - {{Glossary("Brotli compression")}}
   - {{Glossary("Zstandard compression")}}
-- [&lt;link rel=&quot;compression-dictionary&quot;&gt;](/en-US/docs/Web/HTML/Reference/Attributes/rel/compression-dictionary)
+- [`<link rel="compression-dictionary">`](/en-US/docs/Web/HTML/Reference/Attributes/rel/compression-dictionary)
 - {{HTTPHeader("Accept-encoding")}}
 - {{HTTPHeader("Content-encoding")}}
 - {{HTTPHeader("Available-Dictionary")}}

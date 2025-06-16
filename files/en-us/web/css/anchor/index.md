@@ -58,7 +58,11 @@ The parameters are:
     - `bottom`
       - : The bottom of the anchor element.
     - `left`
-      - : The left of the anchor element
+      - : The left of the anchor element.
+    - `inside`
+      - : The same side as the inset property.
+    - `outside`
+      - : The opposite side of the inset property.
     - `start`
       - : The logical start of the anchor element's [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) along the axis of the inset property on which the `anchor()` function is set.
     - `end`
@@ -71,8 +75,6 @@ The parameters are:
       - : The center of the axis of the inset property on which the `anchor()` function is set.
     - {{cssxref("percentage")}}
       - : Specifies the distance, as a percentage, from the start of the element's content along the axis of the inset property on which the `anchor()` function is set.
-
-    The CSS anchor positioning module specifies two additional `<anchor-side>` values, `inside` and `outside`, which have not yet been implemented.
 
 - {{cssxref("length-percentage")}} {{optional_inline}}
   - : Specifies a fallback value the function should resolve to if the `anchor()` function would otherwise not be valid.
@@ -551,5 +553,5 @@ The positioned element is positioned relative to both anchor elements. Drag them
 - {{cssxref("position-area")}}
 - {{cssxref("anchor-size()")}} function
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide
-- [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide
+- [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module

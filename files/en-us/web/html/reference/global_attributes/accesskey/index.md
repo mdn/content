@@ -93,4 +93,4 @@ Because of these issues, it is generally advised not to use `accesskey`s for mos
 - {{domxref("HTMLElement.accessKey")}}
 - {{domxref("HTMLElement.accessKeyLabel")}}
 - All [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
-- [`aria-keyshortcuts`](https://www.w3.org/TR/wai-aria-1.1/#aria-keyshortcuts)
+- [`aria-keyshortcuts`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-keyshortcuts)

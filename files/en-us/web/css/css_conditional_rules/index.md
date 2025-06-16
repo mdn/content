@@ -3,9 +3,9 @@ title: CSS conditional rules
 slug: Web/CSS/CSS_conditional_rules
 page-type: css-module
 spec-urls:
-  - https://www.w3.org/TR/css-conditional-5/
-  - https://www.w3.org/TR/css-conditional-4/
-  - https://www.w3.org/TR/css-conditional-3/
+  - https://drafts.csswg.org/css-conditional-5/
+  - https://drafts.csswg.org/css-conditional-4/
+  - https://drafts.csswg.org/css-conditional-3/
 ---
 
 {{CSSRef}}

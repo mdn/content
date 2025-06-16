@@ -399,7 +399,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
 - [`autocomplete`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete)
 
-  - : (**Not** a Boolean attribute!) The [`autocomplete`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete) attribute takes as its value a space-separated string that describes what, if any, type of autocomplete functionality the input should provide. A typical implementation of autocomplete recalls previous values entered in the same input field, but more complex forms of autocomplete can exist. For instance, a browser could integrate with a device's contacts list to autocomplete `email` addresses in an email input field. See [`autocomplete`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete#values) for permitted values.
+  - : (**Not** a Boolean attribute!) The [`autocomplete`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete) attribute takes as its value a space-separated string that describes what, if any, type of autocomplete functionality the input should provide. A typical implementation of autocomplete recalls previous values entered in the same input field, but more complex forms of autocomplete can exist. For instance, a browser could integrate with a device's contacts list to autocomplete `email` addresses in an email input field. See [`autocomplete`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete#value) for permitted values.
 
     The `autocomplete` attribute is valid on `hidden`, `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`, `color`, and `password`. This attribute has no effect on input types that do not return numeric or text data, being valid for all input types except `checkbox`, `radio`, `file`, or any of the button types.
 
@@ -1264,7 +1264,7 @@ The following is an example of how to associate the `<label>` with an `<input>` 
 
 ### Size
 
-Interactive elements such as form input should provide an area large enough that it is easy to activate them. This helps a variety of people, including people with motor control issues and people using non-precise forms of input such as a stylus or fingers. A minimum interactive size of 44×44 [CSS pixels](https://www.w3.org/TR/WCAG21/#dfn-css-pixels) is recommended.
+Interactive elements such as form input should provide an area large enough that it is easy to activate them. This helps a variety of people, including people with motor control issues and people using non-precise forms of input such as a stylus or fingers. A minimum interactive size of 44×44 [CSS pixels](https://w3c.github.io/wcag/guidelines/22/#dfn-css-pixels) is recommended.
 
 - [Understanding Success Criterion 2.5.5: Target Size | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
 - [Target Size and 2.5.5 | Adrian Roselli](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
@@ -1395,7 +1395,7 @@ Interactive elements such as form input should provide an area large enough that
           </li>
           <li>
             <code>type=color|date|datetime-local|file|hidden|month|password|time|week</code>:
-            <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">no corresponding role</a>
+            <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role">no corresponding role</a>
           </li>
         </ul>
       </td>

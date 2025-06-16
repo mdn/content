@@ -1,5 +1,6 @@
 ---
-title: Introduction to the CSS basic box model
+title: Introduction to the CSS box model
+short-title: Introduction
 slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 page-type: guide
 ---
