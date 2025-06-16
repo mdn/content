@@ -23,11 +23,6 @@ It is used with the [Reporting API](/en-US/docs/Web/API/Reporting_API) in report
 - {{domxref("COEPViolationReportBody.disposition")}} {{ReadOnlyInline}}
   - : A string indicating whether the violation was enforced or only reported.
 
-<!--
-- {{domxref("COEPViolationReportBody.destination")}} {{ReadOnlyInline}}
-  - : A string indicating the parent navigable for which loading was was blocked: `"iframe"`.
--->
-
 ## Description
 
 COEP policy violations are reported using the [Reporting API](/en-US/docs/Web/API/Reporting_API) generic reporting framework.
