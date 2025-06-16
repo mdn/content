@@ -13,7 +13,7 @@ The HTTP **`Integrity-Policy`** response header allows website administrators to
 When set the user agent will block requests on specified [request destinations](/en-US/docs/Web/API/Request/destination) that omit integrity metadata, and will also block requests in [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode from ever being made.
 
 Violation reports may also be sent to if the header includes a reporting endpoint name that matches an endpoint declared using the {{HTTPHeader("Reporting-Endpoints")}} header.
-Reports are generated using the [Reporting API](/en-US/docs/Web/API/Reporting_API), and may also be observed in the page for which the integrity policy is being enforced.
+Reports are generated using the [Reporting API](/en-US/docs/Web/API/Reporting_API), and may also be observed in the page for which the integrity policy is being enforced, using a [ReportingObserver](/en-US/docs/Web/API/ReportingObserver).
 
 This helps guard against content manipulation of fetched subresources.
 
@@ -53,7 +53,7 @@ The header values are defined as structured field dictionaries with the followin
 
     - `inline`
 
-      - : Inline sources, such as scripts and styles, must include integrity metadata.
+      - : The integrity metadata source is inline to the content, such as the [integrity attribute](/en-US/docs/Web/API/HTMLScriptElement/integrity).
         This is the default.
 
         As this is the default and only value, omitting `sources` is equivalent to specifying `sources=(inline)`.
