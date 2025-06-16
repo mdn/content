@@ -82,7 +82,7 @@ For more information, refer to [Intervening against document.write()](https://de
 
 ### Writing TrustedHTML
 
-This example uses the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) to sanitize strings of {{htmlelement("script")}} elements before they are written to a document.
+This example uses the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) to sanitize HTML strings of {{htmlelement("script")}} elements before they are written to a document.
 
 The example initially displays some default text and a button.
 When the button is clicked, the current document is opened, three strings of HTML are converted to {{domxref("TrustedHTML")}} instances and written into the document, and the document is then closed.
