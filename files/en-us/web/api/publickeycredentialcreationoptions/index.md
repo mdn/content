@@ -125,7 +125,7 @@ The **`PublicKeyCredentialCreationOptions`** dictionary represents the object pa
 
       - : A number that is equal to a [COSE Algorithm Identifier](https://www.iana.org/assignments/cose/cose.xhtml#algorithms), representing the cryptographic algorithm to use for this credential type. It is recommended that relying parties that wish to support a wide range of authenticators should include at least the following values in the provided choices:
 
-        - `-8`: Ed25519
+        - `-8`: EdDSA
         - `-7`: ES256
         - `-257`: RS256
 

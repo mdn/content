@@ -1,5 +1,6 @@
 ---
 title: <script type="speculationrules">
+short-title: speculationrules
 slug: Web/HTML/Reference/Elements/script/type/speculationrules
 page-type: html-attribute-value
 status:

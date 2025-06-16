@@ -345,7 +345,7 @@ The conformance criteria under this guideline relate to ways in which users can 
           >Search field</a
         >,
         <a
-          href="/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links#active_learning_creating_a_navigation_menu"
+          href="/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links#creating_a_navigation_menu"
           >Creating a navigation menu</a
         >,
         <a

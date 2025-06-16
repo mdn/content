@@ -2,9 +2,7 @@
 title: CSS compositing and blending
 slug: Web/CSS/CSS_compositing_and_blending
 page-type: css-module
-spec-urls:
-  - https://drafts.fxtf.org/compositing/
-  - https://www.w3.org/TR/compositing-1/
+spec-urls: https://drafts.fxtf.org/compositing/
 ---
 
 {{CSSRef}}

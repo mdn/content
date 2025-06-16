@@ -1,5 +1,6 @@
 ---
 title: Implementing image sprites in CSS
+short-title: Implementing image sprites
 slug: Web/CSS/CSS_images/Implementing_image_sprites_in_CSS
 page-type: guide
 ---

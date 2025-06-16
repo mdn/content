@@ -1,5 +1,6 @@
 ---
 title: CSS property value processing
+short-title: Property value processing
 slug: Web/CSS/CSS_cascade/Value_processing
 page-type: guide
 ---
@@ -29,7 +30,7 @@ All elements that are part of the document's flattened element tree have declare
 - [Initial value](#initial_value)
 - [Specified value](#specified_value)
 - [Computed value](#computed_value)
-- [Used Value](#used_value)
+- [Used value](#used_value)
 
 These values are used to determine the final [rendered value](#rendered_values).
 

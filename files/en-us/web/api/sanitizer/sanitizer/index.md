@@ -3,10 +3,12 @@ title: "Sanitizer: Sanitizer() constructor"
 short-title: Sanitizer()
 slug: Web/API/Sanitizer/Sanitizer
 page-type: web-api-constructor
+status:
+  - experimental
 browser-compat: api.Sanitizer.Sanitizer
 ---
 
-{{APIRef("HTML Sanitizer API")}}
+{{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}
 
 The **`Sanitizer()`** constructor creates a new {{domxref("Sanitizer")}} object, which can be used to filter unwanted elements and attributes from HTML or documents before they are inserted/parsed into the DOM.
 
@@ -160,7 +162,7 @@ const sanitizer = new Sanitizer({ elements: ["div", "p", "span", "script"] });
 
 // Use the sanitizer to set the HTML of the second element using the safe method
 const setHTMLElement = document.querySelector("#setHTML");
-setHTMLElement.setHTML(unsafeHTMLString, { sanitizer: sanitizer });
+setHTMLElement.setHTML(unsafeHTMLString, { sanitizer });
 
 // Get that HTML and set it back to the element as a text node
 // (so we can see the elements)

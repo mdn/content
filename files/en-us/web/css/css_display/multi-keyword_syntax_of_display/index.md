@@ -1,5 +1,6 @@
 ---
 title: Using the multi-keyword syntax with CSS display
+short-title: Using multi-keyword syntax
 slug: Web/CSS/CSS_display/multi-keyword_syntax_of_display
 page-type: guide
 ---
@@ -263,16 +264,16 @@ An element with `display: inline-block` however, will also contain floats. It co
 
 The single values of `display` are described in the specification as legacy values, and currently you gain no benefit from using the multi-keyword versions, as there is a direct mapping for each multi-keyword version to a legacy version, as demonstrated in the table above.
 
-To deal with single values of `display` [the specification](https://www.w3.org/TR/css-display-3/#outer-role) explains what to do if only the outer value of `block` or `inline` is used:
+To deal with single values of `display` [the specification](https://drafts.csswg.org/css-display/#outer-role) explains what to do if only the outer value of `block` or `inline` is used:
 
 > "If a `<display-outside>` value is specified but `<display-inside>` is omitted, the element's inner display type defaults to flow."
 
 This means that the behavior is exactly as it is in a single value world. If you specify `display: block` or `display: inline`, that changes the outer display value of the box but any children continue in normal flow.
-If only an inner value of `flex`, `grid`, or `flow-root` is specified then [the specification](https://www.w3.org/TR/css-display-3/#inner-model) explains that the outer value should be set to `block`:
+If only an inner value of `flex`, `grid`, or `flow-root` is specified then [the specification](https://drafts.csswg.org/css-display/#inner-model) explains that the outer value should be set to `block`:
 
 > "If a `<display-inside>` value is specified but `<display-outside>` is omitted, the element's outer display type defaults to block—except for ruby, which defaults to inline."
 
-Finally, we have some legacy [pre-composed inline-level values](https://www.w3.org/TR/css-display-3/#legacy-display) of:
+Finally, we have some legacy [pre-composed inline-level values](https://drafts.csswg.org/css-display/#legacy-display) of:
 
 - `inline-block`
 - `inline-table`
