@@ -173,7 +173,7 @@ You may have noticed a slash between `mask-position` and `mask-size`, listed in 
 
 `<image> <position> / <size> <repeat> <origin> <clip> <composite> <mode>`
 
-In this case, the order is very important. If only one or a pair of {{cssxref("length-percentage")}} values are present, it will define the position of the image rather than the size. Including both a size and a position in a mask layer without including the slash between the two will invalidate the entire declaration.
+In this case, the order is very important. If only one or a pair of {{cssxref("length-percentage")}} values are present, it will define the position of the image rather than the size. Including both a position and a size in a mask layer without including the slash between the two will invalidate the entire declaration.
 
 ```css
 mask:
