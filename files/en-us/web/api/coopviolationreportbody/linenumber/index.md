@@ -10,7 +10,7 @@ browser-compat: api.COOPViolationReportBody.lineNumber
 
 The **`lineNumber`** read-only property of the {{domxref("COOPViolationReportBody")}} interface indicates the line number in the source file that triggered the [Cross-Origin-Opener-Policy (COEP)](/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-OPener-Policy) violation.
 
-This property is most useful alongside {{domxref("COOPViolationReportBody.sourceFile")}} and {{domxref("COOPViolationReportBody.columnNumber")}}, as it provides the location of the line in that file and the column that resulted in a violation.
+This property is used with {{domxref("COOPViolationReportBody.sourceFile")}} and {{domxref("COOPViolationReportBody.columnNumber")}} to indicate the location that triggered the violation.
 
 ## Value
 
