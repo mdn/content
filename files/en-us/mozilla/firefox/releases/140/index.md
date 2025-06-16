@@ -24,7 +24,7 @@ This article provides information about the changes in Firefox 140 that affect d
 
 #### Removals
 
-- The `<h1>` heading doesn't decrease in font size now when nested within [sectioning elements](/en-US/docs/Web/HTML/Guides/Content_categories#sectioning_content) `<article>`, `<aside>`, `<nav>`, and `<section>`. The UA styles for `<h1>` nested within sectioning elements are no longer relevant since the outline algorithm [has been removed](https://github.com/whatwg/html/pull/7829) from the HTML specification. ([Firefox bug 1964922](https://bugzil.la/1964922)).
+- The UA styles for `<h1>` elements nested within [sectioning elements](/en-US/docs/Web/HTML/Guides/Content_categories#sectioning_content) have been removed, following the [removal of the outline algorithm](https://github.com/whatwg/html/pull/7829) from the HTML specification. Previously, the `<h1>` headings nested within `<article>`, `<aside>`, `<nav>`, and `<section>` would appear smaller. Now, `<h1>` elements have a consistent font size, regardless of the nesting. ([Firefox bug 1964922](https://bugzil.la/1964922)).
 
 ### JavaScript
 
