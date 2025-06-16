@@ -66,16 +66,16 @@ If a TLS warning or error, such as an invalid certificate, occurs when connectin
 the browser does not offer the user a way to proceed or "click through" the error message, which would compromise
 the intention of strict security.
 
+> [!NOTE]
+> The host must send the `Strict-Transport-Security` header over HTTPS only, not insecure HTTP.
+> Browsers ignore the header if sent over HTTP to prevent a [manipulator-in-the-middle (MITM)](/en-US/docs/Web/Security/Attacks/MITM)
+> from altering the header to expire prematurely or adding it for a host that doesn't support HTTPS.
+
 Every time the browser receives a `Strict-Transport-Security` header, it updates the host's HSTS expiration time by
 adding `max-age` to the current time. After HSTS expires, insecure HTTP requests will not be upgraded to HTTPS automatically.
 Using a fixed value for `max-age` can prevent HSTS from expiring, as each subsequent response will push the expiration farther into the future.
 If the `Strict-Transport-Security` header is missing in a response from a host that previously sent one, the previous header remains in effect until its expiration time.
 To disable HSTS, set `max-age=0`.
-
-> [!NOTE]
-> The `Strict-Transport-Security` header is _ignored_ by the browser when the request uses HTTP.
-> Once your host is accessed over HTTPS with no certificate errors, the browser knows your site is HTTPS-capable and will honor the `Strict-Transport-Security` header.
-> Browsers do this as attackers may intercept insecure HTTP connections and inject or remove the header.
 
 ### Threat models
 
