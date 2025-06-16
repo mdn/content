@@ -1,5 +1,6 @@
 ---
-title: data-*
+title: HTML data-* global attribute
+short-title: data-*
 slug: Web/HTML/Reference/Global_attributes/data-*
 page-type: html-attribute
 browser-compat: html.global_attributes.data_attributes
@@ -60,7 +61,7 @@ li:hover:after {
 ```
 
 All such custom data are available via the {{domxref("HTMLElement")}} interface of the element the attribute is set on. The {{domxref("HTMLElement.dataset")}} property gives access to them.
-The `*` may be replaced by any name following [the production rule of XML names](https://www.w3.org/TR/REC-xml/#NT-Name) which includes the following recommendations:
+The `*` may be replaced by any name following [the production rule of XML names](https://www.w3.org/TR/xml/#NT-Name) which includes the following recommendations:
 
 - The name should not start with `xml` (case-insensitive), as it's reserved for future XML specifications.
 - The name should not contain any colon characters (`:`), as XML assigns meaning to such names.
@@ -70,7 +71,7 @@ These are recommendations. If these naming recommendations are not followed, no 
 
 If you plan to use {{domxref("HTMLElement.dataset")}}, the portion of the attribute name following the `data-` can only include characters allowed in JavaScript property names (and hyphens, which will be removed). The `dataset` version of the attribute name removes the "data-" prefix and converts the rest of the name from {{Glossary("kebab_case", "kebab-case")}} to camelCase. For example, `element.getAttribute("data-test")` is equivalent to `element.dataset.test` and `data-test-abc` will be accessible as `HTMLElement.dataset.testAbc` (or by `HTMLElement.dataset["testAbc"]`). Avoid non-alphabetic characters following a hyphen, such as `data-test-1` or `data--test`, as they will not be recognized by {{domxref("HTMLElement.dataset")}}.
 
-### Usage
+### Usage notes
 
 By adding `data-*` attributes, even ordinary HTML elements can become rather complex and powerful program-objects. For example, a space-ship "[sprite](<https://en.wikipedia.org/wiki/Sprite_(computer_graphics)>)_"_ in a game could just be an {{HTMLElement("img")}} element with a [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class) attribute and several `data-*` attributes:
 

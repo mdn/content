@@ -37,7 +37,7 @@ For a list of web game examples, see our list of [Tutorials](/en-US/docs/Games/T
   - : Weekly newsletter about HTML game development, sent every Friday. Contains the latest articles, tutorials, tools, and resources.
 - [HTML5 Game Engine](https://html5gameengine.com/)
   - : List of the most popular HTML game frameworks along with their rating, features and samples.
-- [Tuts+ Game Development](https://gamedevelopment.tutsplus.com/)
+- [Tuts+ Game Development](https://code.tutsplus.com/c/game-development)
   - : Tutorials and articles about game development in general.
 - [HTML5 Gamedev Starter](https://html5devstarter.enclavegames.com/)
   - : Starter for the new game developers, a curated list of links to various useful resources around the web.

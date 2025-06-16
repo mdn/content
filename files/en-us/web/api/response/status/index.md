@@ -17,6 +17,8 @@ For example, `200` for success, `404` if the resource could not be found.
 An unsigned short number.
 This is one of the [HTTP response status codes](/en-US/docs/Web/HTTP/Reference/Status).
 
+A value is `0` is returned for a response whose {{domxref("Response.type", "type")}} is `opaque`, `opaqueredirect`, or `error`.
+
 ## Examples
 
 In our [Fetch Response example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-response) (see [Fetch Response live](https://mdn.github.io/dom-examples/fetch/fetch-response/))
