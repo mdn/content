@@ -21,12 +21,12 @@ The type of metadata provided by the `<meta>` element can be one of the followin
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 > [!NOTE]
-> The [`name`](#name) attribute has a specific meaning for the `<meta>` element. The [`itemprop`](/en-US/docs/Web/HTML/Reference/Global_attributes/itemprop) attribute must not be set on a `<meta>` element that includes a [`name`](#name), [`http-equiv`](#http-equiv), or [`charset`](#charset) attribute.
+> The [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta/name) attribute has a specific meaning for the `<meta>` element. The [`itemprop`](/en-US/docs/Web/HTML/Reference/Global_attributes/itemprop) attribute must not be set on a `<meta>` element that includes a [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta/name), [`http-equiv`](#http-equiv), or [`charset`](#charset) attribute.
 
 - `charset`
   - : This attribute declares the document's character encoding. If the attribute is present, its value must be an ASCII case-insensitive match for the string `"utf-8"`, because UTF-8 is the only valid encoding for HTML5 documents. `<meta>` elements which declare a character encoding must be located entirely within the first 1024 bytes of the document.
 - `content`
-  - : This attribute contains the value for the [`http-equiv`](#http-equiv) or [`name`](#name) attribute, depending on which is used.
+  - : This attribute contains the value for the [`http-equiv`](#http-equiv) or [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta/name) attribute, depending on which is used.
 - `http-equiv`
 
   - : Defines a pragma directive. The attribute's name, short for `http-equivalent`, is because all the allowed values are names of particular HTTP headers:

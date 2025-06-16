@@ -25,26 +25,26 @@ There are certain instances where using the `&` nesting selector can be necessar
 
 ```css
 /* Without nesting selector */
-parent {
+.parent {
   /* parent styles */
-  child {
+  .child {
     /* child of parent styles */
   }
 }
 
 /* With nesting selector */
-parent {
+.parent {
   /* parent styles */
-  & child {
+  & .child {
     /* child of parent styles */
   }
 }
 
 /* the browser will parse both of these as */
-parent {
+.parent {
   /* parent styles */
 }
-parent child {
+.parent .child {
   /* child of parent styles */
 }
 ```
