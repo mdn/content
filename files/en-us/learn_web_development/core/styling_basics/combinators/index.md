@@ -37,7 +37,7 @@ The final selectors we will look at are called combinators. Combinators are used
 
 ## Descendant combinator
 
-The **descendant combinator** — represented by a single space (<code> </code>) character — combines two selectors such that elements matched by the second selector are selected if they have an ancestor (parent, parent's parent, parent's parent's parent, etc.) element matching the first selector. Selectors that utilize a descendant combinator are called _descendant selectors_.
+The **descendant combinator** — represented by a single space (<code> </code>) character — combines two selectors such that elements matched by the second selector are selected if they have an ancestor (a parent, a parent's parent, or a parent's parent's parent, etc.) element matching the first selector. Selectors that utilize a descendant combinator are called _descendant selectors_.
 
 ```css
 body article p {
@@ -140,7 +140,7 @@ h1 + p {
 In the previous example:
 
 1. Try inserting another element such as an `<h2>` in-between the `<h1>` and the `<p>`. You will find that the paragraph is no longer matched by the selector and so does not get the background and foreground color applied when the element is adjacent.
-2. Now modify the `h1 + p` selector so that the special style is applied to the first paragraoh once more.
+2. Now modify the `h1 + p` selector so that the special style is applied to the first paragraph once more.
 
 ## Subsequent-sibling combinator
 
