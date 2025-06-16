@@ -10,11 +10,11 @@ browser-compat: api.COOPViolationReportBody.sourceFile
 
 The **`sourceFile`** read-only property of the {{domxref("COOPViolationReportBody")}} interface indicates the URL of the source file that violated the [Cross-Origin-Opener-Policy (COEP)](/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-OPener-Policy).
 
-This property is most useful alongside {{domxref("COOPViolationReportBody.lineNumber")}} and {{domxref("COOPViolationReportBody.columnNumber")}}, which provide the location within the file that resulted in a violation.
+This property is used with {{domxref("COOPViolationReportBody.lineNumber")}} and {{domxref("COOPViolationReportBody.columnNumber")}} to indicate the location that triggered the violation.
 
 ## Value
 
-A string containing the URL of the file that triggered the violation
+A string containing the URL of the file that triggered the violation.
 
 ## Examples
 
