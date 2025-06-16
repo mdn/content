@@ -8,7 +8,7 @@ browser-compat: api.COEPViolationReportBody.blockedURL
 
 {{APIRef("Reporting API")}}
 
-The **`blockedURL`** read-only property of the {{domxref("COEPViolationReportBody")}} interface returns the URL of the resource that triggered the violation.
+The **`blockedURL`** read-only property of the {{domxref("COEPViolationReportBody")}} interface returns the URL of the resource that was blocked from loading by an enforced COEP violation, or would be blocked if a report-only policy was enforced.
 
 ## Value
 
@@ -29,7 +29,7 @@ const options = {
 const observer = new ReportingObserver((reports, observer) => {
   const firstReport = reports[0];
   console.log(firstReport.type); // coep
-  console.log(firstReport.body.blockedURL); // the URL of the violating resource
+  console.log(firstReport.body.blockedURL); // URL of the violating resource
 }, options);
 ```
 
