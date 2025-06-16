@@ -8,11 +8,13 @@ browser-compat: http.headers.IntegrityPolicyReportOnly
 
 {{HTTPSidebar}}
 
-The HTTP **`Integrity-Policy-Report-Only`** response header allows website administrators to ensure that all resources the user agent loads (of a certain type) have [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity) guarantees.
+The HTTP **`Integrity-Policy-Report-Only`** response header allows website administrators to report on resources that the user agent loads that would violate [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity) guarantees if the integrity policy was enforced (using the {{HTTPHeader("Integrity-Policy")}} header).
 
-It does so by _reporting_ on requests (of certain [request destinations](/en-US/docs/Web/API/Request/destination)) without integrity metadata or in [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode.
+Reports may be generated for requests on specified [request destinations](/en-US/docs/Web/API/Request/destination) that omit integrity metadata, or that are made in [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode.
+For reports to be sent to a reporting endpoint, the `Integrity-Policy-Report-Only` header must specify a valid reporting endpoint name that matches an endpoint declared using the {{HTTPHeader("Reporting-Endpoints")}} header.
+Reports are generated using the [Reporting API](/en-US/docs/Web/API/Reporting_API), and may also be observed in the page for which the integrity policy is being enforced.
 
-This helps make developers aware of content manipulation of fetched subresources, and allows them to test [integrity policies](/en-US/docs/Web/Security/Subresource_Integrity#integrity_policy) and eventually deploy an {{HTTPHeader("Integrity-Policy")}} header without breakage.
+The header allow developers to test [integrity policies](/en-US/docs/Web/Security/Subresource_Integrity#integrity_policy) and fix any content issues before eventually deploying an {{HTTPHeader("Integrity-Policy")}} header to enforce the policy.
 
 <table class="properties">
   <tbody>
@@ -36,11 +38,28 @@ Integrity-Policy-Report-Only: blocked-destinations=(<destination>),sources=(<sou
 The header values are defined as structured field dictionaries with the following keys:
 
 - `blocked-destinations`
-  - : Defines a list of [request destinations](/en-US/docs/Web/API/Request/destination) to be blocked. The only allowed value is `script`.
+
+  - : A list of [request destinations](/en-US/docs/Web/API/Request/destination) that must include valid integrity metadata.
+    Allowed values are:
+
+    - `script`
+      - : Script resources.
+
 - `sources` {{optional_inline}}
-  - : Defines a list of integrity sources. The default and only currently supported value is `inline`. As a result, adding `sources=(inline)` to the header has a similar effect as omitting `sources`.
+
+  - : A list of integrity sources that must include integrity metadata.
+    Allowed values are:
+
+    - `inline`
+
+      - : Inline sources, such as scripts and styles, must include integrity metadata.
+        This is the default.
+
+        As this is the default and only value, omitting `sources` is equivalent to specifying `sources=(inline)`.
+
 - `endpoints` {{optional_inline}}
-  - : Defines a list of [reporting endpoints](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#endpoint). The reporting endpoints need to be defined in a {{httpheader("Reporting-Endpoints")}} header.
+  - : A list of [reporting endpoint names](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#endpoint) that indicate where reports will be sent.
+    The reporting endpoints must be defined in a {{httpheader("Reporting-Endpoints")}} header.
 
 ## Examples
 
@@ -55,7 +74,7 @@ Reporting-Endpoints: integrity-endpoint=https://example.com/integrity, backup-in
 Integrity-Policy-Report-Only: blocked-destinations=(script), endpoints=(integrity-endpoint, backup-integrity-endpoint)
 ```
 
-The report payload might look like this.
+The [report payload](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints) might look like this.
 
 ```json
 {
@@ -81,4 +100,6 @@ The report payload might look like this.
 ## See also
 
 - {{HTTPHeader("Integrity-Policy")}}
+- {{HTTPHeader("Reporting-Endpoints")}}
 - [Integrity Policy](/en-US/docs/Web/Security/Subresource_Integrity#integrity_policy)
+- [Reporting API](/en-US/docs/Web/API/Reporting_API)

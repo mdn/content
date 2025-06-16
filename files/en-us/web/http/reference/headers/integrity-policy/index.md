@@ -9,7 +9,11 @@ browser-compat: http.headers.IntegrityPolicy
 {{HTTPSidebar}}
 
 The HTTP **`Integrity-Policy`** response header allows website administrators to ensure that all resources the user agent loads (of a certain type) have [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity) guarantees.
-It does so by blocking requests (of certain [request destinations](/en-US/docs/Web/API/Request/destination)) without integrity metadata or in [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode from ever being made, as well as reporting them as violations.
+
+When set the user agent will block requests on specified [request destinations](/en-US/docs/Web/API/Request/destination) that omit integrity metadata, and will also block requests in [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode from ever being made.
+
+Violation reports may also be sent to if the header includes a reporting endpoint name that matches an endpoint declared using the {{HTTPHeader("Reporting-Endpoints")}} header.
+Reports are generated using the [Reporting API](/en-US/docs/Web/API/Reporting_API), and may also be observed in the page for which the integrity policy is being enforced.
 
 This helps guard against content manipulation of fetched subresources.
 
@@ -35,11 +39,28 @@ Integrity-Policy: blocked-destinations=(<destination>),sources=(<source>),endpoi
 The header values are defined as structured field dictionaries with the following keys:
 
 - `blocked-destinations`
-  - : Defines a list of [request destinations](/en-US/docs/Web/API/Request/destination) to be blocked. The only allowed value is `script`.
+
+  - : A list of [request destinations](/en-US/docs/Web/API/Request/destination) that must include valid integrity metadata.
+    Allowed values are:
+
+    - `script`
+      - : Script resources.
+
 - `sources` {{optional_inline}}
-  - : Defines a list of integrity sources. The default and only currently supported value is `inline`. As a result, adding `sources=(inline)` to the header has a similar effect as omitting `sources`.
+
+  - : A list of integrity sources that must include integrity metadata.
+    Allowed values are:
+
+    - `inline`
+
+      - : Inline sources, such as scripts and styles, must include integrity metadata.
+        This is the default.
+
+        As this is the default and only value, omitting `sources` is equivalent to specifying `sources=(inline)`.
+
 - `endpoints` {{optional_inline}}
-  - : Defines a list of [reporting endpoints](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#endpoint). The reporting endpoints need to be defined in a {{httpheader("Reporting-Endpoints")}} header.
+  - : A list of [reporting endpoint names](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#endpoint) that indicate where reports will be sent.
+    The reporting endpoints must be defined in a {{httpheader("Reporting-Endpoints")}} header.
 
 ## Examples
 
@@ -54,7 +75,7 @@ Reporting-Endpoints: integrity-endpoint=https://example.com/integrity, backup-in
 Integrity-Policy: blocked-destinations=(script), endpoints=(integrity-endpoint, backup-integrity-endpoint)
 ```
 
-The report payload might look like this.
+The [report payload](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints) might look like this.
 
 ```json
 {
@@ -81,3 +102,4 @@ The report payload might look like this.
 
 - {{HTTPHeader("Integrity-Policy-Report-Only")}}
 - [Integrity Policy](/en-US/docs/Web/Security/Subresource_Integrity#integrity_policy)
+- [Reporting API](/en-US/docs/Web/API/Reporting_API)
