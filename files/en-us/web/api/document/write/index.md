@@ -47,7 +47,7 @@ None ({{jsxref("undefined")}}).
 - `InvalidStateError` {{domxref("DOMException")}}
   - : The method was called on an XML document, or called when the parser is currently executing a custom element constructor.
 - `TypeError`
-  - : A string is passed as one of the parameters when [Trusted Types are enforced](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) and [no default policy has been defined](https://developer.mozilla.org/en-US/docs/Web/API/TrustedTypePolicyFactory/createPolicy#creating_a_default_policy) for creating {{domxref("TrustedHTML")}} objects.
+  - : A string is passed as one of the parameters when [Trusted Types are enforced](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) and [no default policy has been defined](/en-US/docs/Web/API/TrustedTypePolicyFactory/createPolicy#creating_a_default_policy) for creating {{domxref("TrustedHTML")}} objects.
 
 ## Description
 
@@ -80,40 +80,13 @@ For more information, refer to [Intervening against document.write()](https://de
 
 ## Examples
 
-### Write strings
-
-When the button is clicked, this example opens the current document, writes two strings, then closes the document.
-This replaces the document in the example frame, including the original HTML for the button and the JavaScript that made the update!
-
-Note that in this example trusted types are not used or enforced.
-We're writing unsanitized strings, which may provide a path for [XSS attacks](/en-US/docs/Web/Security/Attacks/XSS).
-
-#### HTML
-
-```html
-<p>Some original document content.</p>
-<button id="replace" type="button">Replace document content</button>
-```
-
-#### JavaScript
-
-```js
-const replace = document.querySelector("#replace");
-
-replace.addEventListener("click", () => {
-  document.open();
-  document.write("<h1>Out with the old</h1>", "<p>in with the new!</p>");
-  document.close();
-});
-```
-
-#### Results
-
-{{EmbedLiveSample("Write strings")}}
-
 ### Writing TrustedHTML
 
-This example is the same as the previous one, except that we use the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) to create {{domxref("TrustedHTML")}} instances, and pass those to the `write()` method instead of strings.
+This example uses the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) to sanitize strings of {{htmlelement("script")}} elements before they are written to a document.
+
+The example initially displays some default text and a button.
+When the button is clicked, the current document is opened, three strings of HTML are converted to {{domxref("TrustedHTML")}} instances and written into the document, and the document is then closed.
+This replaces the document in the example frame, including the original HTML for the button and the JavaScript that made the update!
 
 #### HTML
 
@@ -129,12 +102,18 @@ First we use the {{domxref("Window.trustedTypes")}} property to access the globa
 The new policy defines a transformation function `createHTML()` for creating the {{domxref("TrustedHTML")}} objects that we will pass to the `write()` method.
 This method can do anything it likes with the input string: the trusted types API just requires that you pass the input through a policy transformation function, not that the transformation function does anything in particular.
 
-You'd use the method to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input by removing potentially unsafe features such as {{htmlelement("script")}} tags or event handler attributes. Sanitization is hard to get right, so this process typically uses a reputable third-party library such as [DOMPurify](https://github.com/cure53/DOMPurify).
-In this case we implement rudimentary "sanitizer" that just replaces `<` symbols with the `&lt;` characters.
+You'd use the method to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input by removing potentially unsafe features such as {{htmlelement("script")}} tags or event handler attributes.
+Sanitization is hard to get right, so this process typically uses a reputable third-party library such as [DOMPurify](https://github.com/cure53/DOMPurify).
+
+For the purposes of demonstration, here we implement a rudimentary "sanitizer" that replaces `<` symbols in script opening and closing tags with the `&lt;` character.
 
 ```js
-const writeDocumentHTMLPolicy = trustedTypes.createPolicy("docPolicy", {
-  createHTML: (string) => string.replace(/</g, "&lt;"),
+const policy = trustedTypes.createPolicy("docPolicy", {
+  createHTML: (string) => {
+    return string
+      .replace("<script", "&lt;script")
+      .replace("</script", "&lt;/script");
+  },
 });
 ```
 
@@ -144,21 +123,64 @@ These are then passed to the `write()` function when the user clicks the button.
 ```js
 const oneInput = "<h1>Out with the old</h1>";
 const twoInput = "<p>in with the new!</p>";
-
+const threeInput = "<script>alert('evil afoot')<" + "/script>";
 const replace = document.querySelector("#replace");
 
 replace.addEventListener("click", () => {
   document.open();
-  document.write(policy.createHTML(oneInput), policy.createHTML(twoInput));
+  document.write(
+    policy.createHTML(oneInput),
+    policy.createHTML(twoInput),
+    policy.createHTML(threeInput),
+  );
   document.close();
 });
+```
 
 #### Results
 
-Press the button and note that the HTML is now rendered as plain text.
-In a real application we'd filter just the unsafe HTML elements and inject the desired ones.
+Press the button and note that the HTML elements that we trust (in this example) are injected, but the untrusted {{htmlelement("script")}} element is now rendered as plain text.
 
 {{EmbedLiveSample("Writing TrustedHTML")}}
+
+### Write strings
+
+This is the same as the preceding example, except that trusted types are not used or enforced.
+We're writing unsanitized strings, which may provide a path for [XSS attacks](/en-US/docs/Web/Security/Attacks/XSS).
+
+The example initially displays some default text and a button.
+When the button is clicked, the current document is opened, three strings of HTML are written into the document, and the document is then closed.
+This replaces the document in the example frame, including the original HTML for the button and the JavaScript that made the update.
+
+#### HTML
+
+```html
+<p>Some original document content.</p>
+<button id="replace" type="button">Replace document content</button>
+```
+
+#### JavaScript
+
+```js
+const replace = document.querySelector("#replace");
+
+const oneInput = "<h1>Out with the old</h1>";
+const twoInput = "<p>in with the new!</p>";
+const threeInput = "<script>alert('evil afoot')<" + "/script>";
+
+replace.addEventListener("click", () => {
+  document.open();
+  document.write(oneInput, twoInput, threeInput);
+  document.close();
+});
+```
+
+#### Results
+
+Press the button and note that all the HTML elements are injected.
+This includes the {{htmlelement("script")}} element, which in a real application might have executed harmful code.
+
+{{EmbedLiveSample("Write strings")}}
 
 ## Specifications
 

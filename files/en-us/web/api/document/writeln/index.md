@@ -26,7 +26,6 @@ writeln(markup, markup2, /* …, */ markupN)
 
 - `markup`, …, `markupN`
   - : {{domxref("TrustedHTML")}} or string objects containing the text to be written to the document.
-    `TrustedHTML` is recommended for sanitizing any markup that may have been provided as user input.
 
 ### Return value
 
@@ -37,7 +36,7 @@ None ({{jsxref("undefined")}}).
 - `InvalidStateError` {{domxref("DOMException")}}
   - : The method was called on an XML document, or called when the parser is currently executing a custom element constructor.
 - `TypeError`
-  - : A string is passed as one of the parameters when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are enforced (using [CSP: require-trusted-types-for](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for)), and no [default policy](/en-US/docs/Web/API/TrustedTypePolicyFactory/createPolicy#the_default_policy) has been defined for creating {{domxref("TrustedHTML")}} objects.
+  - : A string is passed as one of the parameters when [Trusted Types are enforced](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) and [no default policy has been defined](/en-US/docs/Web/API/TrustedTypePolicyFactory/createPolicy#creating_a_default_policy) for creating {{domxref("TrustedHTML")}} objects.
 
 ## Examples
 
