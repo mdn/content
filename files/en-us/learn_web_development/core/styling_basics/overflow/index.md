@@ -41,7 +41,7 @@ Everything in CSS is a box. You can constrain the size of these boxes by assigni
 
 Let's consider two examples that demonstrate the default behavior of CSS when overflow occurs.
 
-The first example features a box that has been restricted by setting a `height`. The box's content exceeds the available space, threfore it overflows the box and falls into the paragraph below.
+The first example features a box that has been restricted by setting a `height`. The box's content exceeds the available space, therefore it overflows the box and falls into the paragraph below.
 
 ```html live-sample___block-overflow
 <div class="box">
