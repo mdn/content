@@ -112,6 +112,11 @@ sidebar:
   - type: section
     link: /Web/CSS/Guides
     title: Guides
+  - title: Anchor_positioning
+    details: closed
+    children:
+      - /Web/CSS/CSS_anchor_positioning/Using
+      - /Web/CSS/CSS_anchor_positioning/Try_options_hiding
   - title: Animations
     details: closed
     children:
@@ -139,6 +144,18 @@ sidebar:
     children:
       - /Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
       - /Web/CSS/CSS_box_model/Mastering_margin_collapsing
+  - title: Cascade
+    details: closed
+    children:
+      - /Web/CSS/CSS_cascade/Cascade
+      - /Web/CSS/CSS_cascade/Inheritance
+      - /Web/CSS/CSS_cascade/Specificity
+      - /Web/CSS/CSS_cascade/Value_processing
+      - /Web/CSS/CSS_cascade/Shorthand_properties
+  - type: listSubPages
+    path: /Web/CSS/CSS_cascading_variables
+    title: Custom properties
+    details: closed
   - title: Colors
     details: closed
     children:
@@ -168,17 +185,31 @@ sidebar:
   - title: Containment
     details: closed
     children:
-      - /Web/CSS/CSS_containment/Using_CSS_containment
       - /Web/CSS/CSS_containment/Container_queries
+      - /Web/CSS/CSS_containment/Using_CSS_containment
       - /Web/CSS/CSS_containment/Container_size_and_style_queries
   - title: CSSOM_view
     details: closed
     children:
       - /Web/CSS/CSSOM_view/Coordinate_systems
       - /Web/CSS/CSSOM_view/Viewport_concepts
+  - title: Display
+    details: closed
+    children:
+      - /Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow
+      - /Web/CSS/CSS_display/Flow_layout
+      - /Web/CSS/CSS_display/Flow_layout_and_overflow
+      - /Web/CSS/CSS_display/Flow_layout_and_writing_modes
+      - /Web/CSS/CSS_display/In_flow_and_out_of_flow
+      - /Web/CSS/CSS_display/Containing_block
+      - /Web/CSS/CSS_display/Introduction_to_formatting_contexts
+      - /Web/CSS/CSS_display/Block_formatting_context
+      - /Web/CSS/CSS_inline_layout/Inline_formatting_context
+      - /Web/CSS/CSS_display/multi-keyword_syntax_of_display
+      - /Web/CSS/CSS_display/Visual_formatting_model
   - type: listSubPages
-    path: /Web/CSS/CSS_display
-    title: Display
+    path: /Web/CSS/CSS_filter_effects
+    title: Filter_effects
     details: closed
   - title: Flexbox
     details: closed
@@ -199,15 +230,15 @@ sidebar:
     children:
       - /Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
       - /Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods
-      - /Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
       - /Web/CSS/CSS_grid_layout/Grid_template_areas
+      - /Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
       - /Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
       - /Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout
       - /Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout
       - /Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes
-      - /Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility
       - /Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
       - /Web/CSS/CSS_grid_layout/Subgrid
+      - /Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility
       - /Web/CSS/CSS_grid_layout/Masonry_layout
   - title: Images
     details: closed
@@ -237,9 +268,13 @@ sidebar:
   - title: Nesting
     details: closed
     children:
-      - /Web/CSS/CSS_nesting/Using_CSS_nesting
       - /Web/CSS/CSS_nesting/Nesting_at-rules
       - /Web/CSS/CSS_nesting/Nesting_and_specificity
+      - /Web/CSS/CSS_nesting/Using_CSS_nesting
+  - type: listSubPages
+    path: /Web/CSS/CSS_overflow
+    title: Overflow
+    details: closed
   - title: Positioning
     details: closed
     children:
@@ -249,16 +284,31 @@ sidebar:
       - /Web/CSS/CSS_positioned_layout/Using_z-index
       - /Web/CSS/CSS_positioned_layout/Stacking_without_z-index
   - type: listSubPages
+    path: /Web/CSS/CSS_scroll_anchoring
+    title: Scroll_anchoring
+    details: closed
+  - type: listSubPages
     path: /Web/CSS/CSS_scroll_snap
     title: Scroll_snap
+    details: closed
+  - type: listSubPages
+    path: /Web/CSS/CSS_selectors
+    title: Selectors
     details: closed
   - title: Shapes
     details: closed
     children:
       - /Web/CSS/CSS_shapes/Overview_of_shapes
       - /Web/CSS/CSS_shapes/From_box_values
-      - /Web/CSS/CSS_shapes/Basic_shapes
       - /Web/CSS/CSS_shapes/Shapes_from_images
+      - /Web/CSS/CSS_shapes/Basic_shapes
+  - title: Syntax
+    details: closed
+    children:
+      - /Web/CSS/CSS_syntax/Syntax
+      - /Web/CSS/CSS_syntax/Comments
+      - /Web/CSS/CSS_syntax/At-rule_functions
+      - /Web/CSS/CSS_syntax/Error_handling
   - title: Text
     details: closed
     children:
@@ -354,11 +404,13 @@ l10n:
     CSS_text_styling: CSS text styling
     CSS_layout: CSS layout
     Guides: Guides
+    Anchor_positioning: Anchor positioning
     Animations: Animations
-    Backgrounds_and_Borders: Backgrounds and Borders
+    Backgrounds_and_Borders: Backgrounds and borders
     Resizing_background_images: Resizing background images
     Box_alignment_in_block_layout: Box alignment in block layout
     Box_model: Box model
+    Cascade: Cascade
     Colors: Colors
     Color_contrast: "Accessibility: Color contrast"
     Columns: Columns
@@ -366,6 +418,7 @@ l10n:
     Containment: Containment
     CSSOM_view: CSSOM view
     Display: Display
+    Filter_effects: Filter effects
     Flexbox: Flexbox
     Fonts: Fonts
     Grid: Grid
@@ -374,9 +427,13 @@ l10n:
     Logical_properties: Logical properties
     Media_queries: Media queries
     Nesting: Nesting style rules
+    Overflow: Overflow
     Positioning: Positioning
+    Selectors: Selectors
+    Scroll_anchoring: Scroll anchoring
     Scroll_snap: Scroll snap
     Shapes: Shapes
+    Syntax: Syntax
     Text: Text
     Transforms: Transforms
     Transitions: Transitions

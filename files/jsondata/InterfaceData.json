@@ -2652,6 +2652,10 @@
       "inh": "MouseEvent",
       "impl": []
     },
+    "PointerTimeline": {
+      "inh": "AnimationTimeline",
+      "impl": []
+    },
     "PopStateEvent": {
       "inh": "Event",
       "impl": []

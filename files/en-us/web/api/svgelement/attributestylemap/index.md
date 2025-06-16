@@ -25,29 +25,30 @@ A live {{domxref("StylePropertyMap")}} object.
 The following code snippet shows the relationship between the `style` attribute and the `attributeStyleMap` property:
 
 ```html
-<div style="white-space: pre-line;">
-  <svg
-    width="50"
-    height="50"
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 250 250"
-    width="250"
-    height="250"
-    style="white-space: pre-line;">
-    <circle
-      cx="100"
-      cy="100"
-      r="50"
-      id="el"
-      style="border-top: 1px solid blue; color: red;" />
-  </svg>
-  <div id="output"></div>
-</div>
+<svg
+  width="50"
+  height="50"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 250 250"
+  width="250"
+  height="250">
+  <circle
+    cx="100"
+    cy="100"
+    r="50"
+    id="el"
+    style="border-top: 1px solid blue; color: red;" />
+</svg>
+<div id="output"></div>
 ```
 
 ```css
 #el {
   font-size: 16px;
+}
+
+#output {
+  white-space: pre-line;
 }
 ```
 

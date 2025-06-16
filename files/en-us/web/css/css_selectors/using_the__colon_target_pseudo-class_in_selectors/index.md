@@ -1,5 +1,6 @@
 ---
 title: Using the :target pseudo-class in selectors
+short-title: Using :target
 slug: Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors
 page-type: guide
 ---

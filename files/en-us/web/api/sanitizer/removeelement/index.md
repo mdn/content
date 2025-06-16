@@ -3,10 +3,12 @@ title: "Sanitizer: removeElement() method"
 short-title: removeElement()
 slug: Web/API/Sanitizer/removeElement
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.Sanitizer.removeElement
 ---
 
-{{APIRef("HTML Sanitizer API")}}
+{{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}
 
 The **`removeElement()`** method of the {{domxref("Sanitizer")}} interface sets an element to be disallowed — removed from input when the sanitizer is used.
 
