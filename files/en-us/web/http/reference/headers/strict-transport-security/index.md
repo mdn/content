@@ -66,9 +66,10 @@ If a TLS warning or error, such as an invalid certificate, occurs when connectin
 the browser does not offer the user a way to proceed or "click through" the error message, which would compromise
 the intention of strict security.
 
-When the expiration time specified by the `Strict-Transport-Security` header elapses, the next request to the host via HTTP will proceed with insecure HTTP instead of automatically using HTTPS. Whenever the `Strict-Transport-Security` header is delivered to the browser, it will update the expiration time for that host.
-Using a fixed value for `max-age` can prevent the HSTS policy from expiring, as each subsequent response will push the expiration farther into the future.
-Should it be necessary to disable Strict Transport Security, setting `max-age=0` (over an HTTPS connection) will immediately expire the HSTS policy, allowing access via HTTP.
+Every time the browser receives a `Strict-Transport-Security` header, it updates the host's HSTS expiration time by
+adding `max-age` to the current time. After HSTS expires, insecure HTTP requests will not be upgraded to HTTPS automatically.
+Using a fixed value for `max-age` can prevent HSTS from expiring, as each subsequent response will push the expiration farther into the future.
+To disable HSTS, set `max-age=0`.
 
 > [!NOTE]
 > The `Strict-Transport-Security` header is _ignored_ by the browser when the request uses HTTP.
