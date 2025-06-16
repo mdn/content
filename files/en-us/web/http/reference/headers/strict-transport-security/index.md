@@ -53,11 +53,14 @@ The `Strict-Transport-Security` header informs the browser that all connections 
 When an HTTPS response includes the `Strict-Transport-Security` header, the browser adds the host's domain name
 to its persistent list of HSTS hosts.
 If the domain name is already in the list, the expiration time and `includeSubDomains` directive are updated.
-Hosts are identified by their domain names, not including the port. An IP address cannot be an HSTS host.
+The host is identified only by its domain name. An IP address cannot be an HSTS host.
+HSTS applies to all ports of the host, regardless of what port was used for the request.
 
-Every time the browser loads a URL, it first checks the domain name against its HSTS hosts list.
+Before loading an `http` URL, the browser checks the domain name against its HSTS hosts list.
 If the domain name is a case insensitive match for an HSTS host or is a subdomain of one that specified `includeSubDomains`,
-then the browser uses HTTPS, even if the URL specified the `http` scheme or omitted a scheme.
+then the browser replaces the URL scheme with `https`.
+If the URL specifies port 80, the browser changes it to 443.
+Any other explicit port number remains unchanged, and the browser connects to that port using HTTPS.
 
 If a TLS warning or error, such as an invalid certificate, occurs when connecting to an HSTS host,
 the browser does not offer the user a way to proceed or "click through" the error message, which would compromise
