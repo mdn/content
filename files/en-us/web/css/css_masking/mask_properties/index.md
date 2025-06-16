@@ -10,7 +10,7 @@ CSS masking is a technique that enables you to define visible portions of an ele
 
 In CSS, masks are used to hide and partially hide element areas. CSS masks are the opposite of mask worn at masquerade balls where the wearer's face is hidden wherever the mask is opaque. In CSS, the mask areas that are fully opaque reveal the element while transparent areas hide the element.
 
-Each mask layers consists of a {{cssxref("mask-image")}}, which is [positioned](#the_mask-position_property) relative to an [origin](#the_mask-origin_property) box. The mask images can be [sized](#the_mask-size_property), [repeated](#the_mask-repeat_property), and [clipped](#the_mask-clip_property). In cases where multiple mask images are declared, the way the [mask layers are composited](#the_mask-composite_property), or combined, can be set. This guide explores these CSS masking and the {{cssxref("mask")}} shorthand component properties, with explanations and examples.
+Each mask layer consists of a {{cssxref("mask-image")}}, which is [positioned](#the_mask-position_property) relative to an [origin](#the_mask-origin_property) box. The mask images can be [sized](#the_mask-size_property), [repeated](#the_mask-repeat_property), and [clipped](#the_mask-clip_property). While a separate guide discusses using the {{cssxref("mask")}} shorthand property to [declare multiple masks](/en-US/docs/Web/CSS/CSS_masking/Multiple_masks), this guide explores the shorthand's component properties, with explanations and examples. In addition, this guide discusses, in cases where multiple mask images are declared, the way the [mask layers are composited](#the_mask-composite_property), or combined.
 
 ## Mask layers and the `mask-image` property
 
