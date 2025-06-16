@@ -110,7 +110,7 @@ use non-nested tables or divs as in
 </table>
 ```
 
-See also: [CSS flexible box layout](https://www.w3.org/TR/css-flexbox-1/) and [CSS grid layout](https://www.w3.org/TR/css-grid-1/) specifications.
+See also: [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) and [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) modules.
 
 ### Minify and compress SVG assets
 

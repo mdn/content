@@ -1,5 +1,6 @@
 ---
 title: CSS error handling
+short-title: Error handling
 slug: Web/CSS/CSS_syntax/Error_handling
 page-type: guide
 ---

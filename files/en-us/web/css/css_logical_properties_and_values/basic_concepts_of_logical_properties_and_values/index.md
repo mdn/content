@@ -1,5 +1,6 @@
 ---
 title: Basic concepts of logical properties and values
+short-title: Basic concepts
 slug: Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values
 page-type: guide
 ---

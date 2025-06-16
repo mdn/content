@@ -2,7 +2,7 @@
 title: Firefox 141 for developers
 short-title: Firefox 141 (Nightly)
 slug: Mozilla/Firefox/Releases/141
-page-type: active-fx-release
+page-type: firefox-release-notes-active
 sidebar: firefoxsidebar
 ---
 

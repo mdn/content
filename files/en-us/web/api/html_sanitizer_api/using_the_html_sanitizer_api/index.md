@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("HTML Sanitizer API")}}
 
-The [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API/Using_the_HTML_Sanitizer_API) provides methods that allow developers to safely inject untrusted HTML into an {{domxref("Element")}}, a {{domxref("ShadowRoot")}}, or a {{domxref("Document")}}.
+The [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) provides methods that allow developers to safely inject untrusted HTML into an {{domxref("Element")}}, a {{domxref("ShadowRoot")}}, or a {{domxref("Document")}}.
 The API also gives developers the flexibility to further restrict or expand what HTML entities are allowed if needed.
 
 ## Safe sanitization by default
@@ -111,7 +111,7 @@ const sanitizer = Sanitizer({
 });
 ```
 
-You can add the elements to the `Sanitizier` using its API.
+You can add the elements to the `Sanitizer` using its API.
 Here we add the same elements to an empty sanitizer:
 
 ```js
@@ -192,7 +192,7 @@ const sanitizer = Sanitizer({
 In both cases you can also specify each attribute as an object with `name` and `namespace` properties.
 You can also use set the attribute properties using the same element object passed to {{domxref("Sanitizer.allowElement()")}}.
 
-Note however that you can't specify both element `attributes` and `removeAttributes`in one call. Attempting to do so will raise an exception.
+Note however that you can't specify both element `attributes` and `removeAttributes` in one call. Attempting to do so will raise an exception.
 
 ### Replacing child elements
 
@@ -463,7 +463,7 @@ if ("Sanitizer" in window) {
   // Define unsafe string of HTML
   const initialHTMLString =
     `<div id="mainDiv"><!-- HTML comment -->
-    <p data-paratest="true">This is a paragraph. <button onclick="alert('You clicked the button!')">Click me</button></p>
+    <p data-test="true">This is a paragraph. <button onclick="alert('You clicked the button!')">Click me</button></p>
     <p>Be <b>bold</b> and brave!</p>
     <script>alert(1)<` + "/script></div>";
 
@@ -491,13 +491,11 @@ function applySanitizer(sanitizer) {
   unsafeHTMLString = unmodifiedElement.innerText;
 
   // Sanitize string using safe method and then display as text
-  setHTMLElement.setHTML(unsafeHTMLString, { sanitizer: sanitizer });
+  setHTMLElement.setHTML(unsafeHTMLString, { sanitizer });
   setHTMLElement.innerText = setHTMLElement.innerHTML;
 
   // Sanitize string using unsafe method and then display as text
-  setHTMLUnsafeElement.setHTMLUnsafe(unsafeHTMLString, {
-    sanitizer: sanitizer,
-  });
+  setHTMLUnsafeElement.setHTMLUnsafe(unsafeHTMLString, { sanitizer });
   setHTMLUnsafeElement.innerText = setHTMLUnsafeElement.innerHTML;
 
   // Display sanitizer configuration
@@ -544,25 +542,25 @@ In each case, `applySanitizer()` logs the results using the current sanitizer.
 
 ```js
 allowElementSelect.addEventListener("change", (event) => {
-  if (event.target.value != "") {
+  if (event.target.value !== "") {
     sanitizer.allowElement(event.target.value);
     applySanitizer(sanitizer);
   }
 });
 removeElementSelect.addEventListener("change", (event) => {
-  if (event.target.value != "") {
+  if (event.target.value !== "") {
     sanitizer.removeElement(event.target.value);
     applySanitizer(sanitizer);
   }
 });
 allowAttributeSelect.addEventListener("change", (event) => {
-  if (event.target.value != "") {
+  if (event.target.value !== "") {
     sanitizer.allowAttribute(event.target.value);
     applySanitizer(sanitizer);
   }
 });
 removeAttributeSelect.addEventListener("change", (event) => {
-  if (event.target.value != "") {
+  if (event.target.value !== "") {
     sanitizer.removeAttribute(event.target.value);
     applySanitizer(sanitizer);
   }

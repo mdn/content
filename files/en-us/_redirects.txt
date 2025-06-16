@@ -5473,7 +5473,7 @@
 /en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies	/en-US/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies
 /en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images	/en-US/docs/Web/HTML/Guides/Responsive_images
 /en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content	/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio
-/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding	/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Multimedia_and_embedding
+/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding	/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video
 /en-US/docs/Learn/HTML/Tables	/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics
 /en-US/docs/Learn/HTML/Tables/Advanced	/en-US/docs/Learn_web_development/Core/Structuring_content/Table_accessibility
 /en-US/docs/Learn/HTML/Tables/Basics	/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics
@@ -5784,7 +5784,8 @@
 /en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images/Test_your_skills	/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Images
 /en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images/Test_your_skills:_HTML_images	/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Images
 /en-US/docs/Learn_web_development/Core/Structuring_content/HTML_text_fundamentals	/en-US/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs
-/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio/Test_your_skills:_Multimedia_and_embedding	/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Multimedia_and_embedding
+/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio/Test_your_skills:_Multimedia_and_embedding	/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video
+/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Multimedia_and_embedding	/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video
 /en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_Advanced_HTML_text	/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Advanced_HTML_text
 /en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_HTML_text_basics	/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics
 /en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_Links	/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Links
@@ -12322,8 +12323,8 @@
 /en-US/docs/Web/CSS/clamp()	/en-US/docs/Web/CSS/clamp
 /en-US/docs/Web/CSS/color-adjust	/en-US/docs/Web/CSS/print-color-adjust
 /en-US/docs/Web/CSS/color_value/color()	/en-US/docs/Web/CSS/color_value/color
-/en-US/docs/Web/CSS/color_value/color-contrast	/en-US/docs/Web/CSS/color_value
-/en-US/docs/Web/CSS/color_value/color-contrast()	/en-US/docs/Web/CSS/color_value
+/en-US/docs/Web/CSS/color_value/color-contrast	/en-US/docs/Web/CSS/color_value/contrast-color
+/en-US/docs/Web/CSS/color_value/color-contrast()	/en-US/docs/Web/CSS/color_value/contrast-color
 /en-US/docs/Web/CSS/color_value/color-mix()	/en-US/docs/Web/CSS/color_value/color-mix
 /en-US/docs/Web/CSS/color_value/color_keywords	/en-US/docs/Web/CSS/named-color
 /en-US/docs/Web/CSS/color_value/device-cmyk()	/en-US/docs/Web/CSS/color_value/device-cmyk

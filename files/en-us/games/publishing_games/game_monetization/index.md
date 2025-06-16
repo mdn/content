@@ -76,7 +76,7 @@ If you're a graphic designer, you can sell the assets from the games you've crea
 
 ### Writing articles and tutorials
 
-It is possible to write articles about your games and even get paid for them. Game [promotion](/en-US/docs/Games/Publishing_games/Game_promotion) and monetization at the same time is a win-win, and if you don't abuse it with too much advertising the readers will enjoy reading them and as well as learning a thing or two. If you focus on sharing the knowledge first and use your games just as the examples it should be OK. Check out [Tuts+ Game Development](https://gamedevelopment.tutsplus.com/) or similar websites for writing opportunities.
+It is possible to write articles about your games and even get paid for them. Game [promotion](/en-US/docs/Games/Publishing_games/Game_promotion) and monetization at the same time is a win-win, and if you don't abuse it with too much advertising the readers will enjoy reading them and as well as learning a thing or two. If you focus on sharing the knowledge first and use your games just as the examples it should be OK. Check out [Tuts+ Game Development](https://code.tutsplus.com/c/game-development) or similar websites for writing opportunities.
 
 ### Merchandise
 

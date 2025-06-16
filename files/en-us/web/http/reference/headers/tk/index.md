@@ -6,7 +6,7 @@ page-type: http-header
 status:
   - deprecated
   - non-standard
-spec-urls: https://www.w3.org/TR/tracking-dnt/
+spec-urls: https://w3c.github.io/dnt/drafts/tracking-dnt.html#dfn-tk
 ---
 
 {{HTTPSidebar}}{{Deprecated_header}}{{non-standard_header}}

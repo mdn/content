@@ -49,18 +49,9 @@ input {
 
 If the user's browser doesn't support type `range`, it will fall back and treat it as a `{{HTMLElement('input/text', 'text')}}` input.
 
-### Validation
+## Value
 
-There is no pattern validation available; however, the following forms of automatic validation are performed:
-
-- If the [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) is set to something which can't be converted into a valid floating-point number, validation fails because the input is suffering from a bad input.
-- The value won't be less than [`min`](/en-US/docs/Web/HTML/Reference/Elements/input#min). The default is 0.
-- The value won't be greater than [`max`](/en-US/docs/Web/HTML/Reference/Elements/input#max). The default is 100.
-- The value will be a multiple of [`step`](/en-US/docs/Web/HTML/Reference/Elements/input#step). The default is 1.
-
-### Value
-
-The [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) attribute contains a string which contains a string representation of the selected number. The value is never an empty string (`""`). The default value is halfway between the specified minimum and maximum—unless the maximum is actually less than the minimum, in which case the default is set to the value of the `min` attribute. The algorithm for determining the default value is:
+The value of an `<input type="range">` element is set using the [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) attribute which accepts a string representing the selected number. The value is never an empty string (`""`). The default value is halfway between the specified minimum and maximum—unless the maximum is actually less than the minimum, in which case the default is set to the value of the `min` attribute. The algorithm for determining the default value is:
 
 ```js
 defaultValue =
@@ -70,6 +61,15 @@ defaultValue =
 ```
 
 If an attempt is made to set the value lower than the minimum, it is set to the minimum. Similarly, an attempt to set the value higher than the maximum results in it being set to the maximum.
+
+### Validation
+
+There is no pattern validation available; however, the following forms of automatic validation are performed:
+
+- If the [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) is set to something which can't be converted into a valid floating-point number, validation fails because the input is suffering from a bad input.
+- The value won't be less than [`min`](/en-US/docs/Web/HTML/Reference/Elements/input#min). The default is 0.
+- The value won't be greater than [`max`](/en-US/docs/Web/HTML/Reference/Elements/input#max). The default is 100.
+- The value will be a multiple of [`step`](/en-US/docs/Web/HTML/Reference/Elements/input#step). The default is 1.
 
 ## Additional attributes
 

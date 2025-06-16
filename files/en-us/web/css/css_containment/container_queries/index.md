@@ -1,5 +1,6 @@
 ---
 title: CSS container queries
+short-title: Container queries
 slug: Web/CSS/CSS_containment/Container_queries
 page-type: guide
 ---
