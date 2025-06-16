@@ -15,15 +15,17 @@ The **`filter()`** method of the {{domxref("Observable")}} interface filters eac
 ## Syntax
 
 ```js-nolint
-filter(predicate, index)
+filter(predicate)
 ```
 
 ### Parameters
 
 - `predicate`
-  - : A callback function representing a condition to test the value against. If the value fulfills the condition, the predicate returns `true` and the value passes through the stream. If not, the predicate returns `false` and the value is dropped. This is commonly used to test whether events are being fired on a certain element type.
-- `index` {{optional_inline}}
-  - : A number ... (EDITORIAL: I'm really not sure what this does)
+  - : A callback function representing a condition to test the value against. If the value fulfills the condition, the predicate returns `true` and the value passes through the stream. If not, the predicate returns `false` and the value is dropped. This is commonly used to test whether events are being fired on a certain element type. The callback is passed two arguments:
+    - `value` {{optional_inline}}
+      - : The value being tested.
+    - `index` {{optional_inline}}
+      - : A number representing the value's position in the stream. The first position has a value of `0`, in the same manner as an array.
 
 ### Return value
 

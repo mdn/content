@@ -16,7 +16,9 @@ The **`reduce()`** method of the {{domxref("Observable")}} interface returns an 
 
 ```js-nolint
 reduce(reducer)
+reduce(reducer, initialValue)
 reduce(reducer, options)
+reduce(reducer, initialValue, options)
 ```
 
 ### Parameters

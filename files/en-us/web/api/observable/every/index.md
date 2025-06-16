@@ -22,7 +22,11 @@ every(predicate, options)
 ### Parameters
 
 - `predicate`
-  - : A callback function that contains a test. Each value passed through the observable stream is evaluated to see if it passes the test.
+  - : A callback function that contains a test. Each value passed through the observable stream is evaluated to see if it passes the test. The callback is passed two arguments:
+    - `value` {{optional_inline}}
+      - : The current value being tested.
+    - `index` {{optional_inline}}
+      - : A number representing the value's position in the stream. The first position has a value of `0`, in the same manner as an array.
 - `options` {{optional_inline}}
   - : An options object containing the following properties:
     - `signal` {{optional_inline}}

@@ -15,15 +15,17 @@ The **`map()`** method of the {{domxref("Observable")}} interface maps each valu
 ## Syntax
 
 ```js-nolint
-map(mapper, index)
+map(mapper)
 ```
 
 ### Parameters
 
 - `mapper`
-  - : A callback function that transforms each value passed through the observable into a new value before passing it through to the rest of the stream.
-- `index` {{optional_inline}}
-  - : A number ... (EDITORIAL: I'm really not sure what this does)
+  - : A callback function that transforms each value passed through the observable into a new value before passing it through to the rest of the stream. The callback is passed two arguments:
+    - `value` {{optional_inline}}
+      - : The current value being mapped.
+    - `index` {{optional_inline}}
+      - : A number representing the value's position in the stream. The first position has a value of `0`, in the same manner as an array.
 
 ### Return value
 

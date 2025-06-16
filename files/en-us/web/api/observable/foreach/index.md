@@ -26,7 +26,7 @@ forEach(callback, options)
     - `value`
       - : The current value.
     - `index` {{optional_inline}}
-      - : The value's position in the stream. The first position has a value of `0`, in the same manner as an array.
+      - : A number representing the value's position in the stream. The first position has a value of `0`, in the same manner as an array.
 - `options` {{optional_inline}}
   - : An options object containing the following properties:
     - `signal` {{optional_inline}}

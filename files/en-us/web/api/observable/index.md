@@ -51,7 +51,7 @@ The two main ways to create an observable are as follows:
 - {{domxref("Observable.finally", "finally()")}} {{Experimental_Inline}}
   - : Fires a callback after the observable stream completes — either successfully, or by throwing an exception.
 - {{domxref("Observable.flatMap", "flatMap()")}} {{Experimental_Inline}}
-  - : Creates an inner observable stream that is returned and becomes part of the outer observable stream, enabling the chaining of multiple event types.
+  - : Creates an inner observable stream that is returned and becomes part of the outer observable stream. This enables, for example, the chaining of multiple event types.
 - {{domxref("Observable.inspect", "inspect()")}} {{Experimental_Inline}}
   - : Enables the different lifecycle stages of the observable stream to be inspected.
 - {{domxref("Observable.map", "map()")}} {{Experimental_Inline}}
