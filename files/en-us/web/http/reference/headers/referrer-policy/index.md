@@ -71,7 +71,7 @@ Referrer-Policy: unsafe-url
 
 ## Integration with HTML
 
-You can also set referrer policies inside HTML. For example, you can set the referrer policy for the entire document with a {{HTMLElement("meta")}} element with a [name](/en-US/docs/Web/HTML/Reference/Elements/meta#name) of `referrer`:
+You can also set referrer policies inside HTML. For example, you can set the referrer policy for the entire document with a {{HTMLElement("meta")}} element with a [name](/en-US/docs/Web/HTML/Reference/Elements/meta/name) of `referrer`:
 
 ```html
 <meta name="referrer" content="origin" />

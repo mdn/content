@@ -48,7 +48,7 @@ In the following example, a stream is used to fetch the WHATWG HTML spec chunk b
 const output = document.getElementById("output");
 
 function log(text) {
-  output.textContent += text + "\n";
+  output.textContent += `${text}\n`;
 }
 ```
 
