@@ -199,7 +199,7 @@ mask: url(star.svg) top right / 100px 100px;
 To include a `mask-size` in a mask layer using the `mask` shorthand, you must include a `mask-position` value with a slash immediately before it.
 
 > [!WARNING]
-> When including a size, always place it after a position followed by a slashto avoid invalidating the entire declaration.
+> If you include a size in a mask layer but forget the slash after the position, the entire declaration will become invalid.
 
 ## See also
 
