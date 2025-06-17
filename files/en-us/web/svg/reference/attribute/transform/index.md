@@ -11,7 +11,38 @@ The **`transform`** attribute defines a list of transform definitions that are a
 > [!NOTE]
 > As a presentation attribute, `transform` also has a CSS property counterpart: {{cssxref("transform")}}. When both are specified, the CSS property takes priority. However, be aware that there are some differences in syntax between the CSS property and the attribute. See the documentation for the CSS property {{cssxref('transform')}} for the specific syntax to use in that case.
 
-You can use this attribute with any SVG element.
+## Elements
+
+In SVG 2, you can use the `transform` attribute on any SVG element inside the {{SVGElement('svg')}} root. In addition, some browsers support using `transform` on the `<svg>` root itself, which is convenient for applying transforms to an entire SVG image without the need for extra wrapper elements or CSS workarounds.
+
+In SVG 1.1, only these 16 elements were allowed to have a `transform` applied: {{SVGElement('a')}}, {{SVGElement('circle')}}, {{SVGElement('clipPath')}}, {{SVGElement('defs')}}, {{SVGElement('ellipse')}}, {{SVGElement('foreignObject')}}, {{SVGElement('g')}}, {{SVGElement('image')}}, {{SVGElement('line')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('switch')}}, {{SVGElement('text')}}, and {{SVGElement('use')}}.
+
+Also, as a legacy from SVG 1.1, {{SVGElement('linearGradient')}} and {{SVGElement('radialGradient')}} support the `gradientTransform` attribute, and {{SVGElement('pattern')}} supports the `patternTransform` attribute, both of which behave exactly like the `transform` attribute.
+
+## Value
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#transform-list"
+            ><code>&#x3C;transform-list></code></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>none</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Example
 
@@ -45,36 +76,9 @@ svg {
 
 {{EmbedLiveSample("Example", '100%', 200)}}
 
-In SVG 1.1, only these 16 elements were allowed to use it: {{SVGElement('a')}}, {{SVGElement('circle')}}, {{SVGElement('clipPath')}}, {{SVGElement('defs')}}, {{SVGElement('ellipse')}}, {{SVGElement('foreignObject')}}, {{SVGElement('g')}}, {{SVGElement('image')}}, {{SVGElement('line')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('switch')}}, {{SVGElement('text')}}, and {{SVGElement('use')}}.
-
-Also, as a legacy from SVG 1.1, {{SVGElement('linearGradient')}} and {{SVGElement('radialGradient')}} support the `gradientTransform` attribute, and {{SVGElement('pattern')}} supports the `patternTransform` attribute, both of which act exactly like the `transform` attribute.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td>
-        <strong
-          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#transform-list"
-            ><code>&#x3C;transform-list></code></a
-          ></strong
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><em>none</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
-
 ## Transform functions
 
-The following transform functions can be used by the `transform` attribute `<transform-list>`
+The following transform functions can be used by the `transform` attribute `<transform-list>`.
 
 > [!WARNING]
 > As per the spec, you should be able to also use CSS [transform functions](/en-US/docs/Web/CSS/transform-function). However, the compatibility isn't guaranteed.
