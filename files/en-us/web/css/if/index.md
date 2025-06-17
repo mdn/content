@@ -233,6 +233,11 @@ border-color: if(
 border-color: if(
   media((width < 500px) or (orientation: landscape)): blue;
 );
+
+background-color: if(
+  not media(width < 500px): blue;
+  else: red
+);
 ```
 
 When you want to set multiple declarations or rules based on one media query, a regular {{cssxref("@media")}} construct is needed. The two approaches are complementary, and have different uses.
