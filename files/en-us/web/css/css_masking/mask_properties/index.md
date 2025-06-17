@@ -6,17 +6,20 @@ page-type: guide
 
 {{CSSRef}}
 
-CSS masking is a technique that enables you to define visible portions of an element by applying a mask, which selectively reveals or hides parts of the element based on the alpha channels, and optionally colors, of applied mask image or images. These mask images can be gradients, images, or SVG sources. The [introductory guide to masking](/en-US/docs/Web/CSS/CSS_masking) introduces the different types of mask images and their modes.
+CSS masking is a technique that enables you to define visible portions of an element by applying a mask, which selectively reveals or hides parts of the element based on the alpha channels, and optionally colors, of applied mask image or images.
 
-In CSS, masks are used to hide and partially hide element areas. CSS masks are the opposite of mask worn at masquerade balls where the wearer's face is hidden wherever the mask is opaque. In CSS, the mask areas that are fully opaque reveal the element while transparent areas hide the element.
+The [introductory guide to masking](/en-US/docs/Web/CSS/CSS_masking) introduces the different types of mask images and their modes. The guide to [declaring multiple masks](/en-US/docs/Web/CSS/CSS_masking/Multiple_masks) discusses the [mask layers](/en-US/docs/Web/CSS/CSS_masking/Multiple_masks#understanding_mask_layers) and the {{cssxref("mask")}} shorthand property, providing a brief introduction to the shorthand's component properties. In this guide we explore these component properties in greater deal and look at how these properties interact and how, in cases where multiple mask images are declared, the [mask layers are composited](#the_mask-composite_property), or combined.
 
-Each mask layer consists of a {{cssxref("mask-image")}}, which is [positioned](#the_mask-position_property) relative to an [origin](#the_mask-origin_property) box. The mask images can be [sized](#the_mask-size_property), [repeated](#the_mask-repeat_property), and [clipped](#the_mask-clip_property). While a separate guide discusses using the {{cssxref("mask")}} shorthand property to [declare multiple masks](/en-US/docs/Web/CSS/CSS_masking/Multiple_masks), this guide explores the shorthand's component properties, with explanations and examples. In addition, this guide discusses, in cases where multiple mask images are declared, the way the [mask layers are composited](#the_mask-composite_property), or combined.
+CSS masks are composed of one or more mask layers, with a mask layer created for every value in the comma separated list of `mask` or `mask-image` values, whether the value is an image or mask source or the keyword `none`. Every {{cssxref("mask-image")}} is [positioned](#the_mask-position_property) relative to an [origin](#the_mask-origin_property) box. The mask images can be [sized](#the_mask-size_property), [repeated](#the_mask-repeat_property), and [clipped](#the_mask-clip_property), then composited together with previous layers to create the final visual mask on the element.
 
-## Mask layers and the `mask-image` property
+## The `mask-image` property
 
-CSS masks are composed of one or more mask layers. The minimum required to create a layer is a {{cssxref("mask-image")}} value with a value other than `none`. This property analogous to the {{cssxref("background-image")}} property. A mask layer is created for every value in the comma separated list of `mask-image` values, whether the value is a mask source or the keyword `none`. These layers are then composited together to create the final visual mask on the element.
+The minimum required to create a mask is a {{cssxref("mask-image")}} value with a value other than `none`.
+The keyword `none` within a list of mask sources creates a mask layer. However, if `none` is the only value of the `mask-image` property, no masking occurs.
 
-A mask can be defined using [CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients), [raster images](/en-US/docs/Web/CSS/CSS_masking/Masking#with_impoorted_images) (such as PNGs), and SVG {{svgelment("mask")}} elements. The keyword `none` within a list of mask sources creates a mask layer. However, if `none` is the only value of the `mask-image` property, no masking occurs.
+The mask image can be a [CSS gradient](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients), an [imported image](/en-US/docs/Web/CSS/CSS_masking/Masking#with_impoorted_images) (such as a PNG, SVG, etc.), or an SVG {{svgelment("mask")}} element.
+
+In this example, we create five mask layers, including an imported image, two gradients, a layer with no image, and an SVG `<mask>` source as the mask image.
 
 ```css
 .masked-element {
@@ -26,17 +29,17 @@ A mask can be defined using [CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using
 }
 ```
 
-or, using the {{cssxref("mask")}} shorthand:
+This declaration creates five mask layers, applying four mask images to the `.masked-element` element.
 
-```css
-.masked-element {
-  mask:
-    url(alphaImage.png), linear-gradient(to right, black, transparent),
-    radial-gradient(circle, white 50%, transparent 75%), none, url(#svg-mask);
-}
-```
+### The importance of `none`
 
-This declaration creates five mask layers, applying four mask images to the `.masked-element`element.
+The `none` layer has no visual effect, but still serves an important purpose. This fourth layer in our five layers will match the fourth value of any another comma-separated `mask-*` property values. Each value in a comma-separated list of `mask-*` values applies to a separate mask layer.
+
+As previously mentioned, the number of layers is determined by the number of comma-separated values in the {{cssxref("mask-image")}} property value, even if a value is `none`. Each `mask-*` value is matched up with the `mask-image` values, in order. If the number of values in a `mask-*` property differs from the number of mask layers, any excess values are ignored, or, if the property has fewer values than the number of mask layers, the values are repeated.
+
+If a `mask-*` property has a single value, this value applies to all the layers. If we have five values, the fourth value applies to the `none` layer, with the last value being applied to the `<mask>` source layer. If there are two comma-separated values, the first value will apply to all the odd layers only, including that `<mask>` source layer.
+
+Learn more about [mask layers and the `none` keyword](/en-US/docs/Web/CSS/CSS_masking/Multiple_masks#mask_layers_and_the_none_keyword).
 
 ## The `mask-mode` property
 
@@ -46,9 +49,9 @@ The {{cssxref("mask-mode")}} property can be used to set the mode of each mask l
 
 Each mask is either an `alpha` or a `luminance` mask.
 
-With alpha masks, the alpha-transparency of each mask pixel is important. Wherever the mask is opaque the corresponding parts of the element will be visible. Wherever the transparent is transparent, the corresponding parts of the element will be hidden. Wherever the mask is semi-opaque the element will be equally semi-opaque. The color of the mask doesn't matter; just the alpha-transparency of the colors.
+With alpha masks, the alpha-transparency of each mask pixel is important. Wherever the mask is opaque the corresponding parts of the element will be visible. Wherever the mask is transparent, the corresponding parts of the element will be hidden. Wherever the mask is semi-opaque the element will be equally semi-opaque. The color of the mask doesn't matter; just the alpha-transparency of the colors.
 
-With `luminance` masks, the [brightness of mask's colors](/en-US/docs/Web/CSS/CSS_masking/Masking#alpha_transparency_versus_luminance) along with the alpha channel, determine the opaqueness of the masked areas.
+With `luminance` masks, both the [brightness of mask's colors](/en-US/docs/Web/CSS/CSS_masking/Masking#alpha_transparency_versus_luminance) and the alpha channel determine the opaqueness of the masked areas.
 
 > [!NOTE]
 > All examples with be using the following image as the underlying element upon which masks will be applied:
@@ -136,7 +139,7 @@ In the `alpha` case, only the transparency of the gradient's colors matter. Wher
 
 ### The `mask-mode` default value: `match-source`
 
-In the previous example, we set the {{cssxref("mask-mode")}} property to `alpha` or `luminance`. Neither of these is the default value. Rather, `match-source`, which sets the mask-mode to match the mask type, is the default. Every mask is a `alpha` mask except masks where the mask source is an SVG {{svgelement("mask")}} element, in which case the {{cssxref("mask-type")}} property defaults to the value of the {{cssxref("mask-type")}} property, if present, or the SVG {{svgAttr("mask-type")}} attribute if present, or `luminance` if the neither the property nor attribute are explicitly set on the `<mask>` element itself.
+The default value of the `mask-mode` property is `match-source`. This value sets the `mask-mode` to match the mask's mode type. The `match-source` value resolves to `alpha` for every mask except masks where the mask source is an SVG {{svgelement("mask")}} element. In the case of `<mask>`, the `match-source` resolves to the value of the `<mask>` element's {{cssxref("mask-type")}} property. If the `<mask>` element (not the "masked element") doesn't have the `mask-type` property defined, this property defaults to the value of the SVG {{svgAttr("mask-type")}} attribute, if present. If that is omitted as well, the `match-source` value will resolve to `luminance`.
 
 Continuing with the `masked-element` example, if we don't explicitly set the `mask-mode` property, it will default to `match-source` for each layer, as if we had set the following:
 
@@ -162,13 +165,13 @@ or, using the `mask` shorthand:
 }
 ```
 
-The first mask layer, `url(alphaImage.png)`, defined an external image file. In this case, the `mask-mode` resolves to `alpha`, with the opaque parts of this image making the corresponding parts of the element visible, while the transparent or semi-transparent parts are invisible or partially visible. If the `mask-mode` property was declared and its first or only value was `luminance`, the [brightness of the colors of the raster image would impact the opaqueness of the masked areas](/en-US/docs/Web/CSS/CSS_masking/Masking#alpha_transparency_versus_luminance).
+The first mask layer, `url(alphaImage.png)`, references an image. As this isn't a `<mask>` element within an `<svg>`, the `mask-mode` resolves to `alpha`, with the opaque parts of this image making the corresponding parts of the element visible, while the transparent or semi-transparent parts are invisible or partially visible.
 
-The `linear-gradient(to right, black, transparent)` is the second mask layer and `radial-gradient(circle, white 50%, transparent 75%)` is the third. The `match-source` value resolves to `alpha` here too, so the masking effect of these layers is determined by the [opaqueness of the gradient mask](/en-US/docs/Web/CSS/CSS_masking/Masking#opaqueness_versus_transparency) by default.
+The `linear-gradient(to right, black, transparent)` is the second mask layer and `radial-gradient(circle, white 50%, transparent 75%)` is the third. Again, these aren't `<mask>` elements, so the `match-source` value resolves to `alpha`. The masking effect of these layers is determined by the [opaqueness of the gradient mask](/en-US/docs/Web/CSS/CSS_masking/Masking#opaqueness_versus_transparency) by default.
 
-The fourth mask layer has `none` declared, meaning this layer creates no masking effect. As each comma-separated value in the `mask-image` property defines an independent mask layer, the fourth value of any other mask properties is applied to this `none` layer.
+The fourth mask layer has `none` declared, meaning this layer creates no masking effect. The `.masked-element` sets `mask-mode: match-source;`. Had this instead been a comma-separated list of values, the fourth value would have applied to this `none` layer, allowing the fifth value to apply to the fifth layer.
 
-The fifth mask layer is comprised of an SVG {{svgelement("mask")}} element that has `svg-mask` as it's [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id). While the mask mode of the other layers defaults to `alpha`, the default [mask type of SVG `<mask>` elements](/en-US/docs/Web/CSS/CSS_masking/Masking#svg_mask_as_mask_source) is `luminance`. In other words, the colors that make up the `<mask>` defined what areas of the element are masked.
+The fifth mask layer is comprised of an SVG {{svgelement("mask")}} element that has `svg-mask` as it's [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id). While default mask mode of the other layers is `alpha`, the default [mask type of SVG `<mask>` elements](/en-US/docs/Web/CSS/CSS_masking/Masking#svg_mask_as_mask_source) the `mask-type` value, or, if not set, the `mask-type` attribute. If that isn't defined either, the value defaults `luminance`. In other words, the masking effect of the `<mask>` is determined by both the brightness and transparency of the `<mask>` element's colors.
 
 If we don't declare the `mask-mode` property at all, and allow it default to `match-source` for each mask layer, the result in this `.masked-element` case would resolve to:
 
@@ -196,34 +199,74 @@ or, using the `mask` shorthand:
 
 ## The `mask-position` property
 
-The {{cssxref("mask-position")}} property sets the initial position of the mask image relative to the mask layer's origin box, defined by [the `mask-origin` property](#the_mask-origin_property). It is analogous to the {{cssxref("background-position")}} property.
+Analogous to the {{cssxref("background-position")}} property, the {{cssxref("mask-position")}} property sets the initial position of the mask image relative to the mask layer's origin box, defined by [the `mask-origin` property](#the_mask-origin_property). Just like `background-position`, the value is one, two, or four {{cssxref("&lt;position&gt;")}} values, which defines one to two relative or absolute position offsets.
 
-The value is one, two, or four {{cssxref("&lt;position&gt;")}} values. The value includes one to two relative or absolute offsets. When a pair of {{cssxref("length-percentage")}} offsets is included, you can optionally include two keywords defining the origin sides for those offsets. If the origin sides are not included, the position originates from the top left of the mask origin box. The syntax follows the [`background-position`'s `<position>` syntax](/en-US/docs/Web/CSS/background-position#position). When offsetting using percentage values, the mask's dimension is subtracted from the element's dimension, just as is done with [percentage offsets with `background-position`](/en-US/docs/Web/CSS/background-position#regarding_percentages).
+The syntax follows the [`background-position`'s `<position>` syntax](/en-US/docs/Web/CSS/background-position#position).
+
+If only one keyword value is present, it specifies the mask origin edge against which the mask will be placed or the center in the case of `center`, with the other dimension being `center`. If the single value is a {{cssxref("&lt;length-percentage&gt;")}}, this specifies the X coordinate relative to the left edge of the mask origin, with the Y coordinate set to `50%`.
+
+If two values are present, if both are keyword values, the order doesn't matter, but the value can not include two vertical or two horizontal axis values; `left right` and `top bottom` are both invalid. If one value is a keyword, and the other is a `<length-percentage>`, the order again doesn't matter. If the keyword is `left` or `right`, this defines the X coordinate relative to the left edge and the value defines the Y coordinate relative to the top edge. Similarly, if `top` or `bottom` is included, this defines the Y coordinate positioning the element against the top or bottom edge respectively, with the other value defining the X value relative to the left edge of the mask origin box.
+
+With the two value syntax, if one is `center` and the other is a `<length-percentage>`, or if both are `<length-percentage>` values, the order _does_ matter; with the first value defining the horizontal positioning and the second value defining the vertical position.
+
+The four value syntax includes two {{cssxref("length-percentage")}} offsets each preceded by the origin side for that offset. In the two `<length-percentage>` syntax, the origin sides are not included and the position originates from the top left of the mask origin box. For example, `10px 20px` omits the origin sides, but is the equivalent of `left 10px top 20px`. In this case, the offset sides aren't required, but the four value `mask-position` enables offsetting the mask from other edge combinations, such as `left 10px bottom 20px`.
+
+When offsetting using percentage values, the mask's dimension is subtracted from the element's dimension, just as is done with [percentage offsets with `background-position`](/en-US/docs/Web/CSS/background-position#regarding_percentages).
 
 The `mask-position` property defines only the initial position of the mask image. By "initial position", if the [mask repeats](#the_mask-repeat_property), the browser places the first mask image in the position defined by the `mask-position` property, thus defining the placement of the mask repetitions.
 
-For example, if we set the position to `bottom right`, the first mask will be placed at the bottom right edge of the mask origin box, with the repeating masks positioned against the mask's top and left.
+For example, for the first image, we set the position to `bottom right`, meaning the first mask will be placed at the bottom right edge of the mask origin box. Because mask images repeat by default, the repeating masks will be positioned against the first placed mask's top and left sides.
 
 ```html hidden live-sample___position
 <div>
   <img
+    class="keywords"
+    src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+    alt="Pride flag" />
+</div>
+<div>
+  <img
+    class="twoValue"
+    src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+    alt="Pride flag" />
+</div>
+<div>
+  <img
+    class="fourValue"
     src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
     alt="Pride flag" />
 </div>
 ```
 
-```css live-sample___position
+```css hidden live-sample___position
+div,
 img {
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
-  mask-position: bottom right;
+  width: calc(30vw - 20px);
 }
 ```
 
+```css live-sample___position
+img {
+  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+}
+.keywords {
+  mask-position: bottom right;
+}
+.twoValue {
+  mask-position: -20px -10px;
+}
+.fourValue {
+  mask-position: right -20px bottom -10px;
+}
+```
+
+The two-value example defines the top and left offsets of the first mask image's placement. The four-value example combines the previous two previous examples, position the first mask using the same offsets as the second image, but from the same edges as demonstrated in the first image Note that in the four-syntax value, the edge keyword must precede the offset value, but the order of the X and Y coordinate values don't matter, as the offset edge is defined by the keyword preceding it rather than the declaration order.
+
 {{EmbedLiveSample("position", "", "250px")}}
 
-The first star to be placed is the one on the bottom right, with the repeated stars above and to the left. Because of this positioning, the initial star is not clipped, but the top-most and left-most stars are.
+In the first image, the first star to be placed is the one on the bottom right, with the repeated stars above and to the left. Because of this positioning, the initial star is not clipped, but the top-most and left-most stars are.
 
-Continuing with the `masked-element` example, if we don't explicitly set the `mask-position` property, it will default to `0% 0%` for each layer, with the top-left corner of the mask abutting the top-left corner of the mask origin box, as if we had set the following:
+If we don't explicitly set the `mask-position` property, it will default to `0% 0%` for each layer, with the top-left corner of the mask abutting the top-left corner of the mask origin box. Continuing with the `masked-element` example, it is as if we had set the following:
 
 ```css
 .masked-element {
