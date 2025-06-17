@@ -10,14 +10,16 @@ browser-compat: api.COOPViolationReportBody.previousResponseURL
 
 The **`previousResponseURL`** read-only property of the {{domxref("COOPViolationReportBody")}} dictionary indicates the sanitized URL of the opener of the current document for same-origin navigations.
 
-This is send in a report for a page opened in a navigation, with a body {{domxref("COOPViolationReportBody.type","type")}} of [navigation-to-response](/en-US/docs/Web/API/COOPViolationReportBody/type#navigation-to-response_2), to indicate the URL of its opener.
+Note that if there are redirects, this may not be the original URL that triggered the navigation.
+
+This is sent in a report for a page opened in a navigation, with a body {{domxref("COOPViolationReportBody.type","type")}} of [navigation-to-response](/en-US/docs/Web/API/COOPViolationReportBody/type#navigation-to-response), to indicate the URL of its opener.
 
 ## Value
 
 This is a string indicating the URL of the opener document in a navigation, if the opener and opened documents are same-origin.
 If the documents are not same origin the value is `null`.
 
-The URL is sanitized of user credentials and the URL fragment is removed, if present.
+The URL is sanitized of user credentials and any URL fragment is removed.
 
 ## Examples
 
