@@ -76,7 +76,7 @@ Two containers contain images, while the last is empty but is included to displa
 <div class="gradient"></div>
 ```
 
-```css hidden live-sample___mode live-sample___position live-sample___clip live-sample___origin live-sample___repeat live-sample___size
+```css hidden live-sample___mode live-sample___position live-sample___position_no-repeat live-sample___clip live-sample___origin live-sample___repeat live-sample___size
 body {
   display: flex;
   gap: 20px;
@@ -209,7 +209,7 @@ If two values are present, if both are keyword values, the order doesn't matter,
 
 With the two value syntax, if one is `center` and the other is a `<length-percentage>`, or if both are `<length-percentage>` values, the order _does_ matter; with the first value defining the horizontal positioning and the second value defining the vertical position.
 
-The four value syntax includes two {{cssxref("length-percentage")}} offsets each preceded by the origin side for that offset. In the two `<length-percentage>` syntax, the origin sides are not included and the position originates from the top left of the mask origin box. For example, `10px 20px` omits the origin sides, but is the equivalent of `left 10px top 20px`. In this case, the offset sides aren't required, but the four value `mask-position` enables offsetting the mask from other edge combinations, such as `left 10px bottom 20px`.
+The four value syntax includes two {{cssxref("length-percentage")}} offsets each preceded by the origin side for that offset. In the two `<length-percentage>` syntax, the origin sides are not included and the position originates from the top left of the mask origin box. For example, `10px 20px` omits the origin sides, but is the equivalent of `left 10px top 20px`. In this case, the offset sides aren't required, but the four value `mask-position` enables offsetting the mask from other edge combinations, such as `left 10px bottom 20px`. In the four-syntax value, the edge keyword must precede the offset value, but the order of the X and Y coordinate values don't matter, as the offset edge is defined by the keyword preceding it rather than the declaration order.
 
 When offsetting using percentage values, the mask's dimension is subtracted from the element's dimension, just as is done with [percentage offsets with `background-position`](/en-US/docs/Web/CSS/background-position#regarding_percentages).
 
@@ -217,7 +217,7 @@ The `mask-position` property defines only the initial position of the mask image
 
 For example, for the first image, we set the position to `bottom right`, meaning the first mask will be placed at the bottom right edge of the mask origin box. Because mask images repeat by default, the repeating masks will be positioned against the first placed mask's top and left sides.
 
-```html hidden live-sample___position
+```html hidden live-sample___position live-sample___position_no-repeat
 <div>
   <img
     class="keywords"
@@ -238,14 +238,14 @@ For example, for the first image, we set the position to `bottom right`, meaning
 </div>
 ```
 
-```css hidden live-sample___position
+```css hidden live-sample___position live-sample___position_no-repeat
 div,
 img {
   width: calc(30vw - 20px);
 }
 ```
 
-```css live-sample___position
+```css live-sample___position live-sample___position_no-repeat
 img {
   mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
 }
@@ -260,9 +260,21 @@ img {
 }
 ```
 
-The two-value example defines the top and left offsets of the first mask image's placement. The four-value example combines the previous two previous examples, position the first mask using the same offsets as the second image, but from the same edges as demonstrated in the first image Note that in the four-syntax value, the edge keyword must precede the offset value, but the order of the X and Y coordinate values don't matter, as the offset edge is defined by the keyword preceding it rather than the declaration order.
+The `mask-position` defines the position of the first mask image's placement:
+
+```css live-sample___position_no-repeat
+img {
+  mask-repeat: no-repeat;
+}
+```
+
+{{EmbedLiveSample("position_no-repeat", "", "250px")}}
+
+By default, the images are then repeated:
 
 {{EmbedLiveSample("position", "", "250px")}}
+
+The two-value example defines the top and left offsets of the original mask. The four-value example combines the previous two previous examples, position the first mask using the same offsets as the second image, but from the same edges as demonstrated in the first image.
 
 In the first image, the first star to be placed is the one on the bottom right, with the repeated stars above and to the left. Because of this positioning, the initial star is not clipped, but the top-most and left-most stars are.
 
@@ -293,9 +305,9 @@ or, expanding on the example using the `mask` shorthand:
 
 ## The `mask-origin` property
 
-The {{cssxref("mask-origin")}} property specifies the _mask positioning area_, which is the mask origin box area within which a mask image is positioned. The `mask-origin` property sets the origin of a mask, determining the origin of the `mask-position` property, also known as the _mask positioning area_. For example, if the `mask-position` is `top left`, is that relative to the border's outer edge, the padding's outer edge, or the content's outer edge? It is analogous to the {{cssxref("background-origin")}} property.
+When an element has padding, border, or both, the {{cssxref("mask-origin")}} property defines which of these box edge values acts as the mask origin box for that mask layer. In the [`mask-position`](#the_mask-position_property) masking example, the position defined was relative to the content-box, padding-box, and border-box, as the `<img>` had no border or padding set, so these three [`<coord-box>`](/en-US/docs/Web/CSS/box-edge#values) values were all same (the `<div>` container did have a `1px` border).
 
-HTML elements can have masks contained within their content border box, padding box, or content box. The `mask-position` is relative to this origin box.
+Analogous to the {{cssxref("background-origin")}} property, the {{cssxref("mask-origin")}} property specifies the _mask positioning area_, which is the mask origin box area within which a mask image is positioned. HTML elements can have masks contained within their content border box, padding box, or content box. The `mask-origin` property sets the origin of a mask, determining the origin of the `mask-position` property, also known as the _mask positioning area_. For example, if the `mask-position` is `top left`, is that relative to the border's outer edge, the padding's outer edge, or the content's outer edge?
 
 ```html hidden live-sample___origin
 <div class="border-box">
@@ -327,12 +339,12 @@ legend {
 }
 ```
 
-Expanding on the previous `mask-position` example where we positioned the mask in the bottom right corner, you'll note the difference this property can make on elements with large borders and padding. We've added a green background color to enable seeing the star masking on the padding area.
+In this example, the `mask-position` places the initial mask in the top left corner of the `<img>` element that has a large border and padding, with a green background color to enable seeing the star masking on the padding area. Change the value of the `mask-origin` property to observe the difference the property can make.
 
 ```css live-sample___origin
 img {
   mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
-  mask-position: bottom right;
+  mask-position: top left;
   padding: 15px;
   border: 15px solid;
   background-color: green;
@@ -348,17 +360,13 @@ img {
 }
 ```
 
+Change the value of the `mask-origin` property by changing the selected radio button, looking at the top left point of the mask top left star as you do so.
+
 {{EmbedLiveSample("origin", "", "450px")}}
 
-You can change the value of the `mask-origin` property by changing the selected radio button.
-
-The default value is `border-box`. With this value, the initial mask is placed at the borders bottom right edge and is not clipped. When the initial mask is placed at the outer or inner edge of the padding, there is room below it and to the right; these repeating masks are clipped.
-
-Had we had no border and no padding, `border-box`, `padding-box`, and `content-box` would have rendered identically.
+The default value is `border-box`. With this value, the initial mask is placed at the borders top left edge and is not clipped. When the initial mask is placed at the outer or inner edge of the padding, there is room above it and to the left; these repeating masks are clipped.
 
 By default, HTML elements have masks their masks positioned relative to the `border-box`, which is the outer edge of the border. Continuing with the `masked-element` example, if we don't explicitly set the `mask-origin` property, it will default to `border-box` for each layer, as if we had set the following:
-
-Continuing with the `masked-element` example, if we don't explicitly set the `mask-origin` property, it will default to `border-box` for each layer, as if we had set the following:
 
 ```css
 .masked-element {
