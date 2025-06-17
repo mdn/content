@@ -55,7 +55,7 @@ The CSS properties used to style text generally fall into two categories, which 
 
 Let's move straight on to look at properties for styling fonts. In this example, we'll apply some CSS properties to the following HTML sample:
 
-```html
+```html live-sample___0unstyled live-sample___1color live-sample___2fonts live-sample___3font-style live-sample___4shadows live-sample___5text-align live-sample___6line-height live-sample___7letter-word-spacing
 <h1>Tommy the cat</h1>
 
 <p>Well I remember it as though it were a meal ago…</p>
@@ -68,8 +68,6 @@ Let's move straight on to look at properties for styling fonts. In this example,
   had many a story to tell. But it was a rare occasion such as this that he did.
 </p>
 ```
-
-You can find the [finished example on GitHub](https://mdn.github.io/learning-area/css/styling-text/fundamentals/) (see also [the source code](https://github.com/mdn/learning-area/blob/main/css/styling-text/fundamentals/index.html)).
 
 ### Color
 
@@ -77,7 +75,7 @@ The {{cssxref("color")}} property sets the color of the foreground content of th
 
 `color` can accept any [CSS color unit](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#color), for example:
 
-```css
+```css live-sample___1color live-sample___2fonts live-sample___3font-style live-sample___4shadows live-sample___5text-align live-sample___6line-height live-sample___7letter-word-spacing
 p {
   color: red;
 }
@@ -85,21 +83,7 @@ p {
 
 This will cause the paragraphs to become red, rather than the standard browser default of black, like so:
 
-```html hidden
-<h1>Tommy the cat</h1>
-
-<p>Well I remember it as though it were a meal ago…</p>
-
-<p>
-  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
-  nestled its way into his mighty throat. Many a fat alley rat had met its
-  demise while staring point blank down the cavernous barrel of this awesome
-  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
-  had many a story to tell. But it was a rare occasion such as this that he did.
-</p>
-```
-
-{{ EmbedLiveSample('Color', '100%', 230) }}
+{{ EmbedLiveSample('1color', '100%', 230) }}
 
 ### Font families
 
@@ -306,7 +290,7 @@ It is a good idea to provide a suitable generic font name at the end of the stac
 
 Let's add to our previous example, giving the paragraphs a sans-serif font:
 
-```css
+```css live-sample___2fonts live-sample___3font-style live-sample___4shadows live-sample___5text-align live-sample___6line-height live-sample___7letter-word-spacing
 p {
   color: red;
   font-family: Helvetica, Arial, sans-serif;
@@ -315,21 +299,7 @@ p {
 
 This gives us the following result:
 
-```html hidden
-<h1>Tommy the cat</h1>
-
-<p>Well I remember it as though it were a meal ago…</p>
-
-<p>
-  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
-  nestled its way into his mighty throat. Many a fat alley rat had met its
-  demise while staring point blank down the cavernous barrel of this awesome
-  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
-  had many a story to tell. But it was a rare occasion such as this that he did.
-</p>
-```
-
-{{ EmbedLiveSample('A_font-family_example', '100%', 220) }}
+{{ EmbedLiveSample('2fonts', '100%', 220) }}
 
 ### Font size
 
@@ -389,23 +359,7 @@ CSS provides four common properties to alter the visual weight/emphasis of text:
 
 Let's look at adding a couple of these properties to our example:
 
-Our new result is like so:
-
-```html hidden
-<h1>Tommy the cat</h1>
-
-<p>Well I remember it as though it were a meal ago…</p>
-
-<p>
-  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
-  nestled its way into his mighty throat. Many a fat alley rat had met its
-  demise while staring point blank down the cavernous barrel of this awesome
-  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
-  had many a story to tell. But it was a rare occasion such as this that he did.
-</p>
-```
-
-```css
+```css live-sample___3font-style live-sample___4shadows live-sample___5text-align live-sample___6line-height live-sample___7letter-word-spacing
 html {
   font-size: 10px;
 }
@@ -426,7 +380,9 @@ p {
 }
 ```
 
-{{ EmbedLiveSample('Font_style_font_weight_text_transform_and_text_decoration', '100%', 260) }}
+Our new result is like so:
+
+{{ EmbedLiveSample('3font-style', '100%', 260) }}
 
 ### Text drop shadows
 
@@ -447,7 +403,7 @@ The four properties are as follows:
 
 You can apply multiple shadows to the same text by including multiple shadow values separated by commas, for example:
 
-```css
+```css live-sample___4shadows live-sample___5text-align live-sample___6line-height live-sample___7letter-word-spacing
 h1 {
   text-shadow:
     1px 1px 1px red,
@@ -455,44 +411,9 @@ h1 {
 }
 ```
 
-If we applied this to the {{htmlelement("Heading_Elements", "h1")}} element in our Tommy The Cat example, we'd end up with this:
+If we applied this to the {{htmlelement("Heading_Elements", "&lt;h1>")}} element in our Tommy The Cat example, we'd end up with this:
 
-```html hidden
-<h1>Tommy the cat</h1>
-
-<p>Well I remember it as though it were a meal ago…</p>
-
-<p>
-  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
-  nestled its way into his mighty throat. Many a fat alley rat had met its
-  demise while staring point blank down the cavernous barrel of this awesome
-  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
-  had many a story to tell. But it was a rare occasion such as this that he did.
-</p>
-```
-
-```css hidden
-html {
-  font-size: 10px;
-}
-
-h1 {
-  font-size: 5rem;
-  text-transform: capitalize;
-}
-
-h1 + p {
-  font-weight: bold;
-}
-
-p {
-  font-size: 1.5rem;
-  color: red;
-  font-family: Helvetica, Arial, sans-serif;
-}
-```
-
-{{ EmbedLiveSample('Multiple_shadows', '100%', 260) }}
+{{ EmbedLiveSample('4shadows', '100%', 260) }}
 
 > [!NOTE]
 > You can see more interesting examples of `text-shadow` usage in the Sitepoint article [Moonlighting with CSS text-shadow](https://www.sitepoint.com/moonlighting-css-text-shadow/).
@@ -510,54 +431,21 @@ The {{cssxref("text-align")}} property is used to control how text is aligned wi
 - `center`: Centers the text.
 - `justify`: Makes the text spread out, varying the gaps in between the words so that all lines of text are the same width. You need to use this carefully — it can look terrible, especially when applied to a paragraph with lots of long words in it. If you are going to use this, you should also think about using something else along with it, such as {{cssxref("hyphens")}}, to break some of the longer words across lines.
 
-If we applied `text-align: center;` to the {{htmlelement("Heading_Elements", "h1")}} in our example, we'd end up with this:
+If we applied `text-align: center;` to the {{htmlelement("Heading_Elements", "&lt;h1>")}} in our example, we'd end up with this:
 
-```html hidden
-<h1>Tommy the cat</h1>
-
-<p>Well I remember it as though it were a meal ago…</p>
-
-<p>
-  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
-  nestled its way into his mighty throat. Many a fat alley rat had met its
-  demise while staring point blank down the cavernous barrel of this awesome
-  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
-  had many a story to tell. But it was a rare occasion such as this that he did.
-</p>
-```
-
-```css
-html {
-  font-size: 10px;
-}
-
+```css hidden live-sample___5text-align live-sample___6line-height live-sample___7letter-word-spacing
 h1 {
-  font-size: 5rem;
-  text-transform: capitalize;
-  text-shadow:
-    1px 1px 1px red,
-    2px 2px 1px red;
   text-align: center;
 }
-
-h1 + p {
-  font-weight: bold;
-}
-
-p {
-  font-size: 1.5rem;
-  color: red;
-  font-family: Helvetica, Arial, sans-serif;
-}
 ```
 
-{{ EmbedLiveSample('Text_alignment', '100%', 260) }}
+{{ EmbedLiveSample('5text-align', '100%', 260) }}
 
 ### Line height
 
 The {{cssxref("line-height")}} property sets the height of each line of text. This property can not only take most [length and size units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#lengths), but can also take a unitless value, which acts as a multiplier and is generally considered the best option. With a unitless value, the {{cssxref("font-size")}} gets multiplied and results in the `line-height`. Body text generally looks nicer and is easier to read when the lines are spaced apart. The recommended line height is around 1.5 – 2 (double spaced). To set our lines of text to 1.6 times the height of the font, we'd use:
 
-```css
+```css live-sample___6line-height live-sample___7letter-word-spacing
 p {
   line-height: 1.6;
 }
@@ -565,47 +453,7 @@ p {
 
 Applying this to the {{htmlelement("p")}} elements in our example would give us this result:
 
-```html hidden
-<h1>Tommy the cat</h1>
-
-<p>Well I remember it as though it were a meal ago…</p>
-
-<p>
-  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
-  nestled its way into his mighty throat. Many a fat alley rat had met its
-  demise while staring point blank down the cavernous barrel of this awesome
-  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
-  had many a story to tell. But it was a rare occasion such as this that he did.
-</p>
-```
-
-```css
-html {
-  font-size: 10px;
-}
-
-h1 {
-  font-size: 5rem;
-  text-transform: capitalize;
-  text-shadow:
-    1px 1px 1px red,
-    2px 2px 1px red;
-  text-align: center;
-}
-
-h1 + p {
-  font-weight: bold;
-}
-
-p {
-  font-size: 1.5rem;
-  color: red;
-  font-family: Helvetica, Arial, sans-serif;
-  line-height: 1.6;
-}
-```
-
-{{ EmbedLiveSample('Line_height', '100%', 300) }}
+{{ EmbedLiveSample('6line-height', '100%', 300) }}
 
 ### Letter and word spacing
 
@@ -613,7 +461,7 @@ The {{cssxref("letter-spacing")}} and {{cssxref("word-spacing")}} properties all
 
 To illustrate, we could apply some word- and letter-spacing to the first line of each {{htmlelement("p")}} element in our HTML sample with:
 
-```css
+```css live-sample___7letter-word-spacing
 p::first-line {
   letter-spacing: 4px;
   word-spacing: 4px;
@@ -622,49 +470,7 @@ p::first-line {
 
 This renders our HTML as:
 
-```html hidden
-<h1>Tommy the cat</h1>
-
-<p>Well I remember it as though it were a meal ago…</p>
-
-<p>
-  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
-  nestled its way into his mighty throat. Many a fat alley rat had met its
-  demise while staring point blank down the cavernous barrel of this awesome
-  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
-  had many a story to tell. But it was a rare occasion such as this that he did.
-</p>
-```
-
-```css
-html {
-  font-size: 10px;
-}
-
-h1 {
-  font-size: 5rem;
-  text-transform: capitalize;
-  text-shadow:
-    1px 1px 1px red,
-    2px 2px 1px red;
-  text-align: center;
-  letter-spacing: 2px;
-}
-
-h1 + p {
-  font-weight: bold;
-}
-
-p {
-  font-size: 1.5rem;
-  color: red;
-  font-family: Helvetica, Arial, sans-serif;
-  line-height: 1.6;
-  letter-spacing: 1px;
-}
-```
-
-{{ EmbedLiveSample('Letter_and_word_spacing', '100%', 330) }}
+{{ EmbedLiveSample('7letter-word-spacing', '100%', 330) }}
 
 ### Other properties worth looking at
 
