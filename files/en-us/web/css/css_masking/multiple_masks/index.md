@@ -16,7 +16,7 @@ CSS masks are made up of one or more mask layers. In this guide, we discuss the 
 
 You can apply CSS masking to all HTML elements and most SVG elements. A mask can consist of one or more composited mask layers. You define multiple layers using comma-separated values in the {{cssxref("mask")}} shorthand property or the {{cssxref("mask-image")}} property–even a value set to `none` counts as a layer.
 
-Each mask layer can contain a [mask image](#the-mask-image-property), which is positioned relative to the mask's origin box. The image can be sized, repeated, and clipped. If you include more than one mask image, you can define the way the mask layers are composited or combined. (These features are briefly introduced in this guide. For more details and examples, see the [masking properties guide](/en-US/docs/Web/CSS/CSS_masking/Mask_properties).)
+Each mask layer can contain a [mask image](/en-US/docs/Web/CSS/mask-image), which is positioned relative to the mask's origin box. The image can be sized, repeated, and clipped. If you include more than one mask image, you can define the way the mask layers are composited or combined. (These features are briefly introduced in this guide. For more details and examples, see the [masking properties guide](/en-US/docs/Web/CSS/CSS_masking/Mask_properties).)
 
 ### Syntax for multiple mask layers
 
@@ -47,7 +47,7 @@ mask-border-width: auto;
 
 ### Defining mask layers with `mask-image`
 
-As long as a comma-separated {{cssxref("mask-image")}} property declaration includes at least one value other than `none`, a mask layer is created for every value in the declaration, even for the `none` values. This behavior applies whether you're using the `mask-image` property or the `mask` shorthand. These mask images can be gradients, images, or SVG sources. You can define them using a [CSS gradient](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients), a [raster image](/en-US/docs/Web/CSS/CSS_masking/Masking#with_impoorted_images) (such as PNGs), or an SVG {{svgelement("mask")}} element.
+As long as a comma-separated {{cssxref("mask-image")}} property declaration includes at least one value other than `none`, a mask layer is created for every value in the declaration, even for the `none` values. This behavior applies whether you're using the `mask-image` property or the `mask` shorthand. These mask images can be gradients, images, or SVG sources. You can define them using a [CSS gradient](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients), a raster image (such as PNGs), or an SVG {{svgelement("mask")}} element.
 
 ```css
 .gradient-mask {
