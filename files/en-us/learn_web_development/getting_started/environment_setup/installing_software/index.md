@@ -54,7 +54,7 @@ The most common browsers you'll come across are as follows:
     > [!NOTE]
     > Most of the Android browsers listed above have iOS versions, but these were historically all powered by Apple's WebKit engine under the hood due to Apple's App Store rules. At the time of writing, browsers are starting to create versions of their iOS browsers based on their own rendering engines, due to regulatory changes. See [Apple is finally allowing full versions of Chrome and Firefox to run on the iPhone](https://www.theverge.com/2024/1/25/24050478/apple-ios-17-4-browser-engines-eu).
 
-Most browsers tend to install updates automatically, applying the changes when they are restarted. You can usually check for updates on the browser "About" page. This is available in slightly different places on different browsers and OSes, for example:
+Most modern browsers tend to install updates automatically, applying the changes when they are restarted. You can usually check for updates on the browser "About" page. This is available in slightly different places on different browsers and OSes, for example:
 
 - Firefox: Available at _Firefox_ > _About Firefox_ on macOS, and menu icon > _Help_ > _About Firefox_ on Windows.
 - Chrome: Available at _Chrome_ > _About Google Chrome_ on macOS, and menu icon > _Help_ > _About Google Chrome_ on Windows.
