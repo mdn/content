@@ -46,7 +46,11 @@ You can use this attribute with the following SVG elements:
 This example shows how to set an SVG {{SVGelement("script")}} element priority to `high`.
 
 ```html
-<svg viewBox="0 0 10 10" height="120px" width="120px" xmlns="http://www.w3.org/2000/svg">
+<svg
+  viewBox="0 0 10 10"
+  height="120px"
+  width="120px"
+  xmlns="http://www.w3.org/2000/svg">
   <circle id="normal" cx="5" cy="5" r="4" />
   <script href="./color-change.js" fetchpriority="high" />
 </svg>
