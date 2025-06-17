@@ -249,10 +249,7 @@ This isn't really an `<aside>`, as it doesn't necessarily relate to the main con
 > [!WARNING]
 > Divs are so convenient to use that it's easy to use them too much. As they carry no semantic value, they just clutter your HTML code. Take care to use them only when there is no better semantic solution and try to reduce their usage to the minimum otherwise you'll have a hard time updating and maintaining your documents.
 
-> [!CALLOUT]
->
-> **Try it out**
->
+> [!NOTE]
 > Scrimba's [Semantic HTML](https://scrimba.com/learn-accessible-web-design-c031/~0b?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> interactive tutorial provides a useful recap of semantic markup and why you should use it, plus a challenge that tests your ability to improve an HTML codebase with semantic elements.
 
 ### Line breaks and horizontal rules

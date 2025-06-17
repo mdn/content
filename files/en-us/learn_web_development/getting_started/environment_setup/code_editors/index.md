@@ -44,7 +44,7 @@ You are better off with a fully-fledged code editor like [Visual Studio Code](ht
 We would recommend Visual Studio Code (VS Code), as it is the editor we mostly use. If you do not already have VS Code (or another code editor) installed, you should [install it before proceeding](https://code.visualstudio.com/).
 
 > [!NOTE]
-> Integrated Development Environments (IDEs) such as [NetBeans](https://netbeans.apache.org/front/main/index.html) (multiplatform, free), and [WebStorm](https://www.jetbrains.com/webstorm/) (multiplatform, not free) tend to have more features than simple code editors but tend to be more complex than what you need at this stage in your learning journey.
+> Integrated Development Environments (IDEs) such as [NetBeans](https://netbeans.apache.org/front/main/index.html) (multiplatform, free), and [WebStorm](https://www.jetbrains.com/webstorm/) (multiplatform, not free) have more features than simple code editors but tend to be more complex than what you need at this stage in your learning journey.
 
 ## Basic code editor functionality
 
@@ -157,6 +157,8 @@ Most code editors have an extension or plugin system to allow you to add functio
 - Allow you to use the functionality of other tools from right inside the code editor, such as version control tools or local testing servers.
 - Provide additional user interface or code highlighting themes/color schemes.
 - Suggest code snippets to fulfill requirements. These can be generated from static templates, or via AI tools. Using AI to generate code snippets has many of the same advantages and caveats as using it to generate search results (see [Searching for information > Using AI](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web#using_ai) for more information).
+
+### Exploring VS Code extensions
 
 VS Code extensions are managed via the Extensions Marketplace panel in VS Code, accessed via the _View_ > _Extensions_ menu. Let's explore it now.
 
