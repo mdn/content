@@ -106,10 +106,7 @@ The recommended values in the {{HTMLElement("input/range", "range")}} type will 
 </datalist>
 ```
 
-**Note:** The `label` attribute creates tooltips that appear when hovering over tick marks in most browsers.
-This helps users understand the meaning of specific values.
-
-This behavior is defined in the [HTML Standard](<https://html.spec.whatwg.org/multipage/input.html#range-state-(type=range)>).
+**Note:** The `label` attribute is intended to provide labels for tick marks, as defined in the [HTML Standard](<https://html.spec.whatwg.org/multipage/input.html#range-state-(type=range)>). However, current browser support varies. In some cases, labels may not be displayed visually or as tooltips.
 
 {{EmbedLiveSample("Range_type", 600, 70)}}
 
