@@ -35,23 +35,18 @@ This example creates a new HTML document and inserts it into an {{HTMLElement("i
 Here's the HTML for this example:
 
 ```html
-<body>
-  <p>
-    Click <a href="javascript:makeDocument()">here</a> to create a new document
-    and insert it below.
-  </p>
-  <iframe id="theFrame" src="about:blank"></iframe>
-</body>
+<button id="create-doc">Create new document</button>
+<iframe id="theFrame" src="about:blank"></iframe>
 ```
 
 The JavaScript implementation of `makeDocument()` follows:
 
 ```js
 function makeDocument() {
-  let frame = document.getElementById("theFrame");
+  const frame = document.getElementById("theFrame");
 
-  let doc = document.implementation.createHTMLDocument("New Document");
-  let p = doc.createElement("p");
+  const doc = document.implementation.createHTMLDocument("New Document");
+  const p = doc.createElement("p");
   p.textContent = "This is a new paragraph.";
 
   try {
@@ -62,12 +57,14 @@ function makeDocument() {
 
   // Copy the new HTML document into the frame
 
-  let destDocument = frame.contentDocument;
-  let srcNode = doc.documentElement;
-  let newNode = destDocument.importNode(srcNode, true);
+  const destDocument = frame.contentDocument;
+  const srcNode = doc.documentElement;
+  const newNode = destDocument.importNode(srcNode, true);
 
   destDocument.replaceChild(newNode, destDocument.documentElement);
 }
+
+document.getElementById("create-doc").addEventListener("click", makeDocument);
 ```
 
 The code handles creating the new HTML document and inserting some content

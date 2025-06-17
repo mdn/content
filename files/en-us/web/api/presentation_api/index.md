@@ -48,7 +48,13 @@ Example codes below highlight the usage of main features of the Presentation API
 In `controller.html`:
 
 ```html
-<button id="presentBtn" style="display: none;">Present</button>
+<button id="presentBtn" class="hidden">Present</button>
+```
+
+```css
+.hidden {
+  display: none;
+}
 ```
 
 ```js
@@ -63,7 +69,11 @@ const presUrls = [
 
 // Show or hide present button depending on display availability
 const handleAvailabilityChange = (available) => {
-  presentBtn.style.display = available ? "inline" : "none";
+  if (available) {
+    presentBtn.classList.remove("hidden");
+  } else {
+    presentBtn.classList.add("hidden");
+  }
 };
 
 // Promise is resolved as soon as the presentation display availability is known.
@@ -108,13 +118,12 @@ presentBtn.onclick = () => {
 In the `controller.html` file:
 
 ```html
-<button id="reconnectBtn" style="display: none;">Reconnect</button>
+<button id="reconnectBtn" class="hidden">Reconnect</button>
 ```
 
 ```js
 const reconnect = () => {
-  // read presId from localStorage if exists
-  const presId = localStorage["presId"];
+  const presId = localStorage.getItem("presId");
   // presId is mandatory when reconnecting to a presentation.
   if (presId) {
     request
@@ -149,9 +158,9 @@ Setting `presentation.defaultRequest` allows the page to specify the `Presentati
 In `controller.html`:
 
 ```html
-<button id="disconnectBtn" style="display: none;">Disconnect</button>
-<button id="stopBtn" style="display: none;">Stop</button>
-<button id="reconnectBtn" style="display: none;">Reconnect</button>
+<button id="disconnectBtn" class="hidden">Disconnect</button>
+<button id="stopBtn" class="hidden">Stop</button>
+<button id="reconnectBtn" class="hidden">Reconnect</button>
 ```
 
 ```js
@@ -183,19 +192,24 @@ function setConnection(newConnection) {
 
   // Set the new connection and save the presentation ID
   connection = newConnection;
-  localStorage["presId"] = connection.id;
+  localStorage.setItem("presId", connection.id);
 
   function showConnectedUI() {
     // Allow the user to disconnect from or terminate the presentation
-    stopBtn.style.display = "inline";
-    disconnectBtn.style.display = "inline";
-    reconnectBtn.style.display = "none";
+    stopBtn.classList.remove("hidden");
+    disconnectBtn.classList.remove("hidden");
+    reconnectBtn.classList.add("hidden");
   }
 
   function showDisconnectedUI() {
-    disconnectBtn.style.display = "none";
-    stopBtn.style.display = "none";
-    reconnectBtn.style.display = localStorage["presId"] ? "inline" : "none";
+    disconnectBtn.classList.add("hidden");
+    stopBtn.classList.add("hidden");
+    if (localStorage.getItem("presId")) {
+      // If there is a presId in localStorage, allow the user to reconnect
+      reconnectBtn.classList.remove("hidden");
+    } else {
+      reconnectBtn.classList.add("hidden");
+    }
   }
 
   // Monitor the connection state
@@ -217,8 +231,7 @@ function setConnection(newConnection) {
   };
 
   connection.onterminate = () => {
-    // Remove presId from localStorage if exists
-    delete localStorage["presId"];
+    localStorage.removeItem("presId");
     connection = null;
     showDisconnectedUI();
   };
