@@ -105,7 +105,7 @@ More importantly, since a web server can host multiple websites, the term _web s
 
 ### Search engine
 
-Search engines are a common source of confusion on the web. A search engine is a special kind of web service that helps users find web pages from websites they are interested in.
+It's common for people to mix up search engines with websites. A search engine is a special kind of web service that helps users find web pages they are interested in, as well as specific types of content such as images, videos, or news articles.
 
 Search engines all tend to have their own websites that can be used to access the underlying web service. There are plenty out there: [Google](https://www.google.com/), [Bing](https://www.bing.com/), [Yandex](https://yandex.com/), [DuckDuckGo](https://duckduckgo.com/), and many more. Some are generic, some are specialized around certain topics.
 

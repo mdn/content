@@ -147,12 +147,13 @@ This is rendered as follows:
 
 {{EmbedLiveSample("form-anatomy", "100%", "200", , , , , "allow-forms")}}
 
-If you click "Sign me up!" on the form above, you'll see an error message.
-We'll explain more about why that is later, but first, copy the HTML example into a new HTML file using your [code editor](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors) and open it in a new browser tab.
+If you click click "Sign me up!" immediately, you'll see a validation error because no data was entered. If you fill out the fields with a name and email address then click "Sign me up!", you'll see a `404` error message.
+
+We'll explain why later on. Before moving on, copy the previous HTML code listing into a new HTML file using your [code editor](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors) and open it in a new browser tab.
 
 ### The `<form>` element
 
-As we said earlier, the {{htmlelement("form")}} element acts as the outer wrapper for the form, grouping together all the form controls inside it. When the `<button>` is pressed, all the data represented by the form controls will be submitted to the server. The `<form>` element can take many attributes, but the two most important ones, which we've included here, are as follows:
+As we said earlier, the {{htmlelement("form")}} element acts as the outer wrapper for the form, grouping together all the form controls inside it. When the `<button>` is pressed, all the data represented by the form controls will be submitted to the server. The `<form>` element can take many attributes, but the two most important ones, which we've included in our example, are as follows:
 
 - `action`: Contains a path to the page that we want to send the submitted form data to, to be processed. Later on, after you submit the form, you'll see `/submit_page` included in the URL. You'll also get a {{HTTPStatus("404")}} error response because the page doesn't actually exist, but that's fine for now.
 - `method`: Specifies the data transmission [method](/en-US/docs/Web/HTTP/Reference/Methods) you want to use for sending the form data to the server. Don't worry about this too much for now; the `get` value causes the data to be sent as parameters attached to the end of the URL.
@@ -203,8 +204,7 @@ In the case of radio buttons, you generally need to provide the value that would
 
 1. Again, go to the example you loaded in a separate tab, and try submitting the form with no value entered in either field. You'll see an error message pop up next to the "Name" field saying something like "Please fill in this field" (it will vary across different browsers). This is the `required` attribute — and the browser's default client-side form validation — in action.
 2. Now try submitting the form with a valid name entered in the first field, but a value that is not a valid email address in the second field (something like "aaaa" will do). This time you'll see an error message pop up next to the "Email" field saying something like "Please enter an email address".
-3. For the next exercise, you'll need to edit the form code. You can do this by opening the local example you created in your text editor, editing it there, and saving it.
-4. Try editing the form to include `value="Bob"` on the first input. When you reload the code, you'll see that the first field has a value of "Bob" entered into it by default.
+3. Try editing the form to include `value="Bob"` on the first input. When you reload the code, you'll see that the first field has a value of "Bob" entered into it by default.
 
 #### Specialized text field inputs
 
@@ -351,15 +351,11 @@ There are many other control types you can use to collect data in a form. Let's 
 
 This is rendered as follows:
 
-{{EmbedLiveSample("form-other-controls", "100%", "500")}}
+{{EmbedLiveSample("form-other-controls", "100%", "500", , , , , "allow-forms")}}
 
 We'd recommend that you open this example in a separate browser tab as you work through the next few sections, in which we look at each control type in turn. To achieve this, copy the code into an HTML file using your code editor, and open it in a browser tab.
 
-Before moving on, play with the above example:
-
-1. Again, save the HTML code into an HTML file using your code editor, and open it in a new browser tab.
-2. Play with the different form controls and select some values.
-3. Try submitting the form and see what the data submitted in the URL looks like.
+Before moving on, play with the different form controls in your local copy and select some values. Try submitting the form and see what the data submitted in the URL looks like.
 
 ### Radio buttons
 
