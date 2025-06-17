@@ -34,7 +34,7 @@ The `<generic-family>` {{glossary("enumerated")}} type is specified using one of
 
 - `cursive`
 
-  - : Glyphs in cursive fonts generally use a cursive script or other handwriting style, and the result looks more like handwritten pen or brush writing than printed letterwork. CSS uses the term "cursive" to apply to a font for any script, including those that do not have joining strokes. Example cursive fonts include Brush Script MT, Brush Script Std, Lucida Calligraphy, Lucida Handwriting, and Apple Chancery.
+  - : Glyphs in cursive fonts generally use a cursive script or other handwriting style, and the result looks more like handwritten pen or brush writing than printed typesetting. CSS uses the term "cursive" to apply to a font for any script, including those that do not have joining strokes. Example cursive fonts include Brush Script MT, Brush Script Std, Lucida Calligraphy, Lucida Handwriting, and Apple Chancery.
 
 - `fantasy`
 
