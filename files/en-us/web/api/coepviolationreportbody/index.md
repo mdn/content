@@ -9,7 +9,8 @@ browser-compat: api.COEPViolationReportBody
 
 The `COEPViolationReportBody` dictionary represents the {{domxref("Report.body","body")}} of a {{domxref("Report")}} that has a {{domxref("Report.type","type")}} of `coep`.
 
-It is used with the [Reporting API](/en-US/docs/Web/API/Reporting_API) in reports for [Cross-Origin-Embedder-Policy (COEP)](/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy) policy violations.
+Reports with this type are used by the [Reporting API](/en-US/docs/Web/API/Reporting_API) to notify of violations of COEP policies set with the HTTP headers {{httpheader("Cross-Origin-Embedder-Policy")}} and {{httpheader("Cross-Origin-Embedder-Policy-Report-Only")}}.
+A serialized version of the same report structure may also be sent to [reporting server endpoints](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints).
 
 > [!NOTE]
 > This object does not derive from {{domxref("ReportBody")}} (unlike some other {{domxref("Report.body")}} values).
@@ -27,7 +28,7 @@ It is used with the [Reporting API](/en-US/docs/Web/API/Reporting_API) in report
 
 A document's policies for loading and embedding cross-origin resources are configured and enforced using the {{httpheader("Cross-Origin-Embedder-Policy")}} HTTP header, and may also be reported but not enforced using the {{httpheader("Cross-Origin-Embedder-Policy-Report-Only")}} header.
 
-COEP policy violations are reported using the [Reporting API](/en-US/docs/Web/API/Reporting_API) whenever a policy set by those headers blocks (or would block) the loading of a resource.
+COEP policy violations may be reported using the [Reporting API](/en-US/docs/Web/API/Reporting_API) whenever a policy set by those headers blocks (or would block) the loading of a resource.
 
 A COEP policy violation report is represented by a {{domxref("Report")}} instance that has the {{domxref("Report.type","type")}} of `coep` and a {{domxref("Report.body","body")}} property that is an object of this type.
 Reports can be returned via the {{domxref("ReportingObserver")}} interface or serialized and sent in a `POST` to a [reporting server endpoint](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints).
