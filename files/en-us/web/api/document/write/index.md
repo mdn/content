@@ -30,7 +30,7 @@ browser-compat: api.Document.write
 > For this reason it's much safer to pass only {{domxref("TrustedHTML")}} objects into this method, and to [enforce](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) this using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
 > This means you can be sure that the input has been passed through a transformation function, which has the chance to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input to remove potentially dangerous markup, such as {{htmlelement("script")}} elements and event handler attributes.
 
-The **write()`** method of the {{domxref("Document")}} interface writes text in one or more {{domxref("TrustedHTML")}} or string parameters to a document stream opened by {{domxref("document.open()")}}.
+The **`write()`** method of the {{domxref("Document")}} interface writes text in one or more {{domxref("TrustedHTML")}} or string parameters to a document stream opened by {{domxref("document.open()")}}.
 
 ## Syntax
 
@@ -150,7 +150,7 @@ Press the button and note that the HTML elements that we trust (in this example)
 
 {{EmbedLiveSample("Writing TrustedHTML")}}
 
-### Write strings
+### Writing strings
 
 This is the same as the preceding example, except that trusted types are not used or enforced.
 We're writing unsanitized strings, which may provide a path for [XSS attacks](/en-US/docs/Web/Security/Attacks/XSS).
@@ -187,7 +187,7 @@ replace.addEventListener("click", () => {
 Press the button and note that all the HTML elements are injected.
 This includes the {{htmlelement("script")}} element, which in a real application might have executed harmful code.
 
-{{EmbedLiveSample("Write strings")}}
+{{EmbedLiveSample("Writing strings")}}
 
 ## Specifications
 
