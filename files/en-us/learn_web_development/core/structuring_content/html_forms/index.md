@@ -164,7 +164,9 @@ As we said earlier, the {{htmlelement("form")}} element acts as the outer wrappe
 
 The `action` and `method` attributes cause the form data to be submitted in a URL along the following lines:
 
-`/some/url/submit_page?name=Bob&email=bob%40bob.com`
+```plain
+/some/url/submit_page?name=Bob&email=bob%40bob.com
+```
 
 #### Structuring forms
 
