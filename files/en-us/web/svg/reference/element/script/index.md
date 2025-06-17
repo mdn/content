@@ -20,6 +20,17 @@ The **`<script>`** [SVG](/en-US/docs/Web/SVG) element allows to add scripts to a
 - [`crossorigin`](/en-US/docs/Web/HTML/Reference/Elements/script#crossorigin)
   - : This attribute defines [CORS settings](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) as define for the HTML {{HTMLElement('script')}} element.
     _Value type_: [**[ anonymous | use-credentials ]?**](/en-US/docs/Web/CSS/string); _Default value_: `?`; _Animatable_: **yes**
+- {{SVGAttr("fetchpriority")}}
+  - : Provides a hint of the relative priority to use when fetching an external script.
+    Allowed values:
+    - `high`
+      - : Fetch the external script at a high priority relative to other external scripts.
+    - `low`
+      - : Fetch the external script at a low priority relative to other external scripts.
+    - `auto`
+      - : Don't set a preference for the fetch priority.
+        This is the default.
+        It is used if no value or an invalid value is set.
 - {{SVGAttr("href")}}
   - : The {{Glossary("URL")}} to the script to load.
     _Value type_: **[\<URL>](/en-US/docs/Web/SVG/Guides/Content_type#url)**; _Default value_: _none_; _Animatable_: **no**
@@ -83,4 +94,5 @@ Click the circle to change colors.
 
 ## See also
 
+- {{SVGAttr("fetchpriority")}} attribute
 - [`script` element in HTML](/en-US/docs/Web/HTML/Reference/Elements/script)
