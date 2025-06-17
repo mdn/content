@@ -147,7 +147,8 @@ This is rendered as follows:
 
 {{EmbedLiveSample("form-anatomy", "100%", "200")}}
 
-Don't try to submit the form for now; you'll see it in action soon enough. To follow along with the next sections, copy the HTML code above into a new HTML file using your [code editor](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors) and open it in a new browser tab.
+If you click "Sign me up!" on the form above, you'll see an error message.
+We'll explain more about why that is later, but first, copy the HTML example into a new HTML file using your [code editor](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors) and open it in a new browser tab.
 
 ### The `<form>` element
 
