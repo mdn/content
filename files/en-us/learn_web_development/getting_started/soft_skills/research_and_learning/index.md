@@ -100,7 +100,7 @@ An effective research network consists of several groups of people with differen
 - Teachers or senior colleagues: If your peers can't help, the next step is normally to ask a senior colleague, manager, or teacher. They will have more experience than your peers, but bear in mind that they will have less free time available. You will get better results and more appreciation if you demonstrate that you've already tried to solve the problem yourself first, and are being respectful of their time. To do so:
 
   - Keep a record of what you've already tried to do. What already failed?
-  - If the research subject is a specific code example or technique that you can't get to work, create an online test case using a site like [Glitch](https://glitch.com/) or [Scrimba](https://scrimba.com/?via=mdn) <sup>Course partner</sup> that you can show to them.
+  - If the research subject is a specific code example or technique that you can't get to work, create an online test case using a site like [CodePen](https://codepen.io) or [Scrimba](https://scrimba.com/?via=mdn) <sup>Course partner</sup> that you can show to them.
   - Think carefully about what questions to ask them — what specifically is the problem? If you have multiple problems to ask them about, put them in order of priority to make sure you cover the most important items.
   - Set a goal for the session, for example, "try to find a solution to the highest priority problem". Note also that solving the biggest problem may also lead to a fix for other problems.
   - Ask them how they would prefer to communicate with you about the problem, to make the interaction as comfortable for them as possible.
