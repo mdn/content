@@ -80,7 +80,7 @@ Here are some popular editors:
       <td>Free</td>
       <td>Windows, Mac, Linux</td>
       <td>
-        <a href="https://webchat.freenode.net/?channels=brackets" rel="external"
+        <a href="https://irc.com/?channels=brackets" rel="external"
           >IRC</a
         >
       </td>
@@ -260,7 +260,7 @@ Here are some popular editors:
       <td>Mac</td>
       <td>
         <a href="https://x.com/macromates">Twitter</a>,
-        <a href="https://webchat.freenode.net/?channels=textmate">IRC</a>,
+        <a href="https://irc.com/?channels=textmate">IRC</a>,
         <a href="https://lists.macromates.com/postorius/lists/textmate.lists.macromates.com/" rel="external"
           >Mailing list</a
         >, <a href="mailto:tm-support@macromates.com">Email</a>

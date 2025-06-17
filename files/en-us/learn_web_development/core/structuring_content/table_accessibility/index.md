@@ -251,7 +251,7 @@ Your finished HTML should look something like this:
     </tr>
     <tr>
       <td>Shoes</td>
-      <td>Shoeshop</td>
+      <td>Shoe shop</td>
       <td>13/09</td>
       <td>Big regrets</td>
       <td>65</td>
