@@ -101,6 +101,9 @@ In this case, we are setting a different {{cssxref("background-image")}} {{cssxr
 > [!NOTE]
 > Each condition must be separated from its associated value with a colon, and each `<if-condition> : <value>` pair must be separated with a semi-colon.
 
+> [!WARNING]
+> There must be no space between the `if` and the opening parenthesis (`(`). If there is, the whole declaration is invalid.
+
 If a single `<if-condition>` or `<value>` is invalid, it does not invalidate the entire `if()` function; instead, the parser moves on to the next `<if-condition> : <value>` pair.
 
 ### Frequency and position of `else : <value>` pairs
@@ -157,17 +160,18 @@ An `<if-condition>` can be one of three different types. This section looks at e
 
 #### Style queries
 
-[Container style query](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#container_style_queries) if conditions allow you to test whether a particular property value is set on an element, and apply a value to a different property as a result. We walked through a style query example earlier on, but let's look at a single `<if-condition> : <value>` pair again:
+[Container style query](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#container_style_queries) if conditions allow you to test whether a particular property value is set on an element, and apply a value to a different property as a result. We walked through a style query example earlier on; let's look at another example:
 
 ```css-nolint
-background-image: if (
+background-image: if(
   style(--scheme: ice): linear-gradient(to left, #caf0f8, white, #caf0f8);
-)
+  else: none;
+);
 ```
 
-If the `--scheme` custom property is set to a value of `ice` on the same element, the provided `linear-gradient()` value is returned.
+If the `--scheme` custom property is set to a value of `ice` on the same element, the provided `linear-gradient()` value is returned. If not, then `none` is returned.
 
-Using style queries inside `if()` statements has an advantage over using style queries via {{cssxref("@container")}} — you can check for a set property value on an element and set a different property on the same element as a result, rather than having to check styles on a container and apply styles to the container's children.
+Using style queries inside `if()` statements has an advantage over using style queries via {{cssxref("@container")}} — you can target an element with styles directly, based on whether a custom property is set on it, rather than having to check set styles on a container parent element.
 
 You can also use `and`, `or`, or `not` logic inside style queries. For example:
 
@@ -199,20 +203,22 @@ if(
 
 [Media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) if conditions can be used to set a value for a property depending on whether a media query test returns true.
 
-You can use media types. For example, the following `<if-condition> : <value>` pair returns a value of `white` on printed media.
+You can use media types. For example, the following `<if-condition> : <value>` pair returns a value of `white` on print media, while the `else` clause causes `#eee` to be returned on non-print media.
 
 ```css-nolint
-background-color: if (
+background-color: if(
   media(print): white;
+  else: #eee;
 )
 ```
 
-You can also use media features — the following returns a value of `0 auto` if the current viewport width is less than `700px`:
+You can also use media features — the following returns a value of `0 auto` if the current viewport width is less than `700px`, or `20px auto` if this is not the case:
 
 ```css-nolint
-margin: if {
+margin: if(
   media(width < 700px): 0 auto;
-}
+  else: 20px auto;
+)
 ```
 
 This is really useful when you need to vary a single property value based on a media query result.
@@ -235,43 +241,45 @@ When you want to set multiple declarations or rules based on one media query, a 
 
 [Feature query](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries) if conditions can be used to set a value for a property depending on whether the browser supports a particular property value.
 
-For example, the following returns an {{cssxref("color_value/lch()")}} color, if `lch()` colors are supported:
-
-```css-nolint
-color: if (
-  supports(color: lch(77.7% 0 0)): lch(77.7% 0 0);
-)
-```
-
-Selector support queries also work. The following will return a value of `blue` if the browser supports the `h2 > p` selector:
+For example, the following returns an {{cssxref("color_value/lch()")}} color if `lch()` colors are supported, or an {{cssxref("color_value/rgb()")}} color if not:
 
 ```css-nolint
 color: if(
-  supports(selector(h2 + p)): blue;
+  supports(color: lch(77.7% 0 0)): lch(77.7% 0 0);
+  else: rgb(192, 192, 192);
+)
+```
+
+Selector support queries also work. The following will return a value of `0` if the browser supports the `h2 > p` selector, or `initial` if not:
+
+```css-nolint
+margin-top: if(
+  supports(selector(h2 + p)): 0;
+  else: initial
 )
 ```
 
 You can also use `and`, `or`, or `not` logic inside feature queries. For example:
 
 ```css-nolint
-color: if(
-  supports((selector(h2 + p)) and (color: blue)): blue;
+margin-top: if(
+  supports((selector(h2 + p)) and (color: blue)): 0;
 );
 
-color: if(
-  supports((selector(h2 + p)) or (color: not-a-color)): blue;
+margin-top: if(
+  supports((selector(h2 + p)) or (color: not-a-color)): 0;
 );
 
-color: if(
-  supports(not selector(h2 + p)): blue;
+margin-top: if(
+  supports(not selector(h2 + p)): 0;
 );
 ```
 
 Interestingly, support queries for a property without a value don't work, for example:
 
 ```css-nolint
-color: if(
-  supports(color): blue;
+margin: if(
+  supports(justify-content): 0;
 )
 ```
 
