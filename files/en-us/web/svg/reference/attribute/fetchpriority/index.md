@@ -2,10 +2,10 @@
 title: fetchpriority
 slug: Web/SVG/Reference/Attribute/fetchpriority
 page-type: svg-attribute
-browser-compat: 
-- svg.elements.feimage.fetchpriority
-- svg.elements.image.fetchpriority
-- svg.elements.script.fetchpriority
+browser-compat:
+  - svg.elements.feimage.fetchpriority
+  - svg.elements.image.fetchpriority
+  - svg.elements.script.fetchpriority
 sidebar: svgref
 ---
 The `fetchpriority` provides a hint of the relative priority to use when fetching an external script. This works the same way as `fetchpriority` for the HTML {{HTMLElement("script", "", "#fetchpriority")}} element.
