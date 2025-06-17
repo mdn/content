@@ -101,7 +101,7 @@ A _web server_ is a computer hosting one or more _websites_. "Hosting" means tha
 
 Don't confuse _websites_ and _web servers_. For example, if you hear someone say, "My website is not responding", it probably means that the _web server_ is not responding and therefore the _website_ is not available.
 
-More importantly, since a web server can host multiple websites, the term _web server_ is never used to designate a website, as it could cause great confusion. If we say "My web server is not responding", it means that multiple websites on that web server are not available.
+More importantly, since a web server can host multiple websites, the term _web server_ is no longer used to designate a website, as it could cause confusion. If someone says "My web server is not responding", it may be that multiple websites or applications hosted on the web server are not available.
 
 ### Search engine
 
