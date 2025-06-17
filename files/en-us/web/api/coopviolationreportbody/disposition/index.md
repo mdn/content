@@ -8,24 +8,24 @@ browser-compat: api.COOPViolationReportBody.disposition
 
 {{APIRef("Reporting API")}}
 
-The **`disposition`** read-only property of the {{domxref("COOPViolationReportBody")}} dictionary indicates whether the policy violation was enforced, blocking loading of the associated resource, or just reported.
+The **`disposition`** read-only property of the {{domxref("COOPViolationReportBody")}} dictionary indicates whether the report is for an enforced or report-only policy violation.
+
+Policy violations are enforced if the policy was set with {{httpheader("Cross-Origin-Opener-Policy")}}, and report-only if set with {{httpheader("Cross-Origin-Embedder-Policy-Report-Only")}}.
 
 ## Value
 
 A string that can have one of the following values:
 
 - `"enforce"`
-  - : The violation caused loading of the embedded resource to be blocked.
-    This is set for violations of policies set with {{httpheader("Cross-Origin-Embedder-Policy")}}.
+  - : The report is for policy violation that was enforced.
 - `"reporting"`
-  - : The violation was reported without blocking the resource from loading.
-    This is set for violations of policies set with {{httpheader("Cross-Origin-Embedder-Policy-Report-Only")}}.
+  - : The report is for policy violation that was report-only.
 
 ## Examples
 
 ### Get the disposition of a report
 
-In this example we create a new {{domxref("ReportingObserver")}} to observe COEP violation reports, then log the value of `disposition` to the console.
+In this example we create a new {{domxref("ReportingObserver")}} to observe COOP violation reports, then log the value of `disposition` to the console.
 
 ```js
 const options = {
