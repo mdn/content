@@ -40,7 +40,6 @@ Strict-Transport-Security: max-age=<expire-time>; includeSubDomains; preload
   - : If this directive is specified, the HSTS policy applies to all subdomains of the host's domain as well.
 - `preload` {{optional_inline}} {{non-standard_inline}}
   - : See [Preloading Strict Transport Security](#preloading_strict_transport_security) for details. When using `preload`, the `max-age` directive must be at least `31536000` (1 year), and the `includeSubDomains` directive must be present.
-    Not part of the specification.
 
 ## Description
 
