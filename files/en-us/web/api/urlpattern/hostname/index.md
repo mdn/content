@@ -3,12 +3,10 @@ title: "URLPattern: hostname property"
 short-title: hostname
 slug: Web/API/URLPattern/hostname
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.URLPattern.hostname
 ---
 
-{{APIRef("URL Pattern API")}}{{SeeCompatTable}} {{AvailableInWorkers}}
+{{APIRef("URL Pattern API")}} {{AvailableInWorkers}}
 
 The **`hostname`** read-only property of the {{domxref("URLPattern")}} interface is a
 string containing the pattern used to match the hostname part
