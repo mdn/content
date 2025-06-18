@@ -68,7 +68,7 @@
     "parse-diff": "^0.11.1",
     "prettier": "3.5.3",
     "yaml": "^2.8.0",
-    "yargs": "^17.7.2"
+    "yargs": "^18.0.0"
   },
   "packageManager": "yarn@1.22.22"
 }
