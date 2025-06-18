@@ -38,7 +38,7 @@ You can use this attribute with the following SVG elements:
   - : Fetches the external script at a low priority relative to other external scripts.
 - `auto`
   - : Doesn't set a preference for the fetch priority.
-     It is used if no value or an invalid value is set.
+    It is used if no value or an invalid value is set.
     This is the default.
 
 ## Examples
