@@ -88,6 +88,6 @@ Basic rendering of a PNG image in SVG:
 
 {{Compat}}
 
-## See Also
+## See also
 
 - {{SVGAttr("fetchpriority")}} attribute
