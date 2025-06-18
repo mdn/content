@@ -3,12 +3,10 @@ title: "GPUDevice: createBindGroup() method"
 short-title: createBindGroup()
 slug: Web/API/GPUDevice/createBindGroup
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUDevice.createBindGroup
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`createBindGroup()`** method of the
 {{domxref("GPUDevice")}} interface creates a {{domxref("GPUBindGroup")}} based on a {{domxref("GPUBindGroupLayout")}} that defines a set of resources to be bound together in a group and how those resources are used in shader stages.

@@ -3,12 +3,10 @@ title: "GPUDevice: createTexture() method"
 short-title: createTexture()
 slug: Web/API/GPUDevice/createTexture
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUDevice.createTexture
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`createTexture()`** method of the
 {{domxref("GPUDevice")}} interface creates a {{domxref("GPUTexture")}} in which to store 1D, 2D, or 3D arrays of data, such as images, to use in GPU rendering operations.

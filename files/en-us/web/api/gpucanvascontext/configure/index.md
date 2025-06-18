@@ -3,12 +3,10 @@ title: "GPUCanvasContext: configure() method"
 short-title: configure()
 slug: Web/API/GPUCanvasContext/configure
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUCanvasContext.configure
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`configure()`** method of the
 {{domxref("GPUCanvasContext")}} interface configures the context to use for rendering with a given {{domxref("GPUDevice")}}. When called the canvas will initially be cleared to transparent black.

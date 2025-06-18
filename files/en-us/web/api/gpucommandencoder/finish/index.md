@@ -3,12 +3,10 @@ title: "GPUCommandEncoder: finish() method"
 short-title: finish()
 slug: Web/API/GPUCommandEncoder/finish
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUCommandEncoder.finish
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`finish()`** method of the
 {{domxref("GPUCommandEncoder")}} interface completes recording of the command sequence encoded on this `GPUCommandEncoder`, returning a corresponding {{domxref("GPUCommandBuffer")}}.
