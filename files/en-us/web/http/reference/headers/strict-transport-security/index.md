@@ -10,6 +10,7 @@ browser-compat: http.headers.Strict-Transport-Security
 
 The HTTP **`Strict-Transport-Security`** {{Glossary("response header")}} (often abbreviated as {{Glossary("HSTS")}}) informs browsers that the {{Glossary("host")}} should only be accessed using HTTPS, and that any future attempts to access it using HTTP should automatically be upgraded to HTTPS.
 Additionally, on future connections to the host, the browser will not allow the user to bypass secure connection errors, such as an invalid certificate.
+HSTS identifies a host by its domain name only.
 
 <table class="properties">
   <tbody>
@@ -44,6 +45,8 @@ Strict-Transport-Security: max-age=<expire-time>; includeSubDomains; preload
 ## Description
 
 The `Strict-Transport-Security` header informs the browser that all connections to the host must use HTTPS.
+Although it is a response header, it does not affect how the browser handles the current response, but rather
+how it makes future requests.
 
 When an HTTPS response includes the `Strict-Transport-Security` header, the browser adds the host's domain name
 to its persistent list of HSTS hosts.
