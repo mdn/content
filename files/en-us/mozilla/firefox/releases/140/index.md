@@ -32,6 +32,8 @@ This article provides information about the changes in Firefox 140 that affect d
 
 ### SVG
 
+- The SVG {{SVGAttr("fetchpriority")}} attribute is now supported for the SVG {{SVGElement("feimage")}}, {{SVGElement("image")}}, and {{SVGElement("script")}} elements. It allows you to hint to the browser about the relative priority of an external resource. This works the same way as the `fetchpriority` attribute for the HTML {{HTMLElement("img", "", "#fetchpriority")}}, and {{HTMLElement("script", "", "#fetchpriority")}} elements. ([Firefox bug 1847712](https://bugzil.la/1847712)).
+
 #### Removals
 
 ### HTTP
