@@ -135,7 +135,7 @@ Let's consider this example:
 <!--div>
   <label for="username">Name:</label>
   <input id="username" type="text" name="username" required>
-  <label for="username"><span aria-label="required">*</label>
+  <label for="username"><span aria-label="required">*</span></label>
 </div-->
 
 <!-- would be better done like this: -->
