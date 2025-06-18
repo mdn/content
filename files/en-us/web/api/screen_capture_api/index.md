@@ -10,6 +10,7 @@ spec-urls:
   - https://w3c.github.io/mediacapture-screen-share/
   - https://screen-share.github.io/element-capture/
   - https://w3c.github.io/mediacapture-region/
+  - https://w3c.github.io/mediacapture-surface-control/
 ---
 
 {{DefaultAPISidebar("Screen Capture API")}}
@@ -18,7 +19,7 @@ The Screen Capture API introduces additions to the existing Media Capture and St
 
 ## Screen Capture API concepts and usage
 
-The Screen Capture API is relatively simple to use. Its sole method is {{domxref("MediaDevices.getDisplayMedia()")}}, whose job is to ask the user to select a screen or portion of a screen to capture in the form of a {{domxref("MediaStream")}}.
+The Screen Capture API is relatively simple to use. Its main method is {{domxref("MediaDevices.getDisplayMedia()")}}, whose job is to ask the user to select a screen or portion of a screen to capture in the form of a {{domxref("MediaStream")}}.
 
 To start capturing video from the screen, you call `getDisplayMedia()` on `navigator.mediaDevices`:
 
@@ -31,12 +32,22 @@ The {{jsxref("Promise")}} returned by `getDisplayMedia()` resolves to a {{domxre
 
 See the article [Using the Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture) for a more in-depth look at how to use the API to capture screen contents as a stream.
 
-The Screen Capture API also has features that limit the part of the screen captured in the stream:
+### Screen capture extensions
+
+The Screen Capture API also has features that extend the capabilities available to the Screen Capture API:
+
+#### Limiting the screen area captured in the stream
 
 - The **Element Capture API** restricts the captured region to a specified rendered DOM element and its descendants.
 - The **Region Capture API** crops the captured region to the area of the screen in which a specified DOM element is rendered.
 
 See [Using the Element Capture and Region Capture APIs](/en-US/docs/Web/API/Screen_Capture_API/Element_Region_Capture) to learn more.
+
+#### Controlling the captured screen area
+
+The Captured Surface Control API allows the capturing application to provide limited control over the captured screen, for example zooming and scrolling its contents.
+
+See [Using the Captured Surface Control API](/en-US/docs/Web/API/Screen_Capture_API/Captured_Surface_Control) to learn more.
 
 ## Interfaces
 
@@ -89,13 +100,15 @@ The Screen Capture API adds properties to the following dictionaries defined by 
 
 ## Permissions Policy validation
 
-{{Glossary("User agent", "User agents")}} that support [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) (either using the HTTP {{HTTPHeader("Permissions-Policy")}} header or the {{HTMLElement("iframe")}} attribute [`allow`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allow)) can specify a desire to use the Screen Capture API using the directive `display-capture`:
+{{Glossary("User agent", "User agents")}} that support [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) (either using the HTTP {{HTTPHeader("Permissions-Policy")}} header or the {{HTMLElement("iframe")}} attribute [`allow`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allow)) can specify a desire to use the Screen Capture API using the directive {{HTTPHeader("Permissions-Policy/display-capture", "display-capture")}}:
 
 ```html
 <iframe allow="display-capture" src="/some-other-document.html">…</iframe>
 ```
 
-The default allowlist is `self`, which lets any content within the same origin use Screen Capture.
+You can also specify a desire to use the [Captured Surface Control API](/en-US/docs/Web/API/Screen_Capture_API/Captured_Surface_Control) via the {{HTTPHeader("Permissions-Policy/captured-surface-control", "captured-surface-control")}} directive. Specifically, the {{domxref("CaptureController.forwardWheel", "forwardWheel()")}}, {{domxref("CaptureController.increaseZoomLevel", "increaseZoomLevel()")}}, {{domxref("CaptureController.decreaseZoomLevel", "decreaseZoomLevel()")}}, and {{domxref("CaptureController.resetZoomLevel", "resetZoomLevel()")}} methods are conlled by this directive.
+
+The default allowlist for both directives is `self`, which lets any content within the same origin use Screen Capture.
 
 ## Specifications
 
