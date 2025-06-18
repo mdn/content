@@ -307,7 +307,7 @@ or, expanding on the example using the `mask` shorthand:
 
 When an element has padding, border, or both, the {{cssxref("mask-origin")}} property defines which of these box edge values acts as the mask origin box for that mask layer. In the [`mask-position`](#the_mask-position_property) masking example, the position defined was relative to the content-box, padding-box, and border-box, as the `<img>` had no border or padding set, so these three [`<coord-box>`](/en-US/docs/Web/CSS/box-edge#values) values were all same (the `<div>` container did have a `1px` border).
 
-Analogous to the {{cssxref("background-origin")}} property, the {{cssxref("mask-origin")}} property specifies the _mask positioning area_, which is the mask origin box area within which a mask image is positioned. HTML elements can have masks contained within their content border box, padding box, or content box. The `mask-origin` property sets the origin of a mask, determining the origin of the `mask-position` property, also known as the _mask positioning area_. For example, if the `mask-position` is `top left`, is that relative to the border's outer edge, the padding's outer edge, or the content's outer edge?
+Analogous to the {{cssxref("background-origin")}} property, but with a different initial value and SVG-only values, the {{cssxref("mask-origin")}} property specifies the _mask positioning area_, which is the mask origin box area within which a mask image is positioned. HTML elements can have masks contained within their content border box, padding box, or content box. The `mask-origin` property sets the origin of a mask, determining the origin of the `mask-position` property, also known as the _mask positioning area_. For example, if the `mask-position` is `top left`, is that relative to the border's outer edge, the padding's outer edge, or the content's outer edge?
 
 ```html hidden live-sample___origin
 <div class="border-box">
@@ -318,30 +318,35 @@ Analogous to the {{cssxref("background-origin")}} property, the {{cssxref("mask-
 <fieldset>
   <legend>Set the <code>mask-origin</code> value</legend>
   <label
-    ><input type="radio" name="origin" id="border-box" checked />
+    ><input type="radio" name="origin" id="origin_border-box" checked />
     border-box</label
   >
   <label
-    ><input type="radio" name="origin" id="padding-box" /> padding-box</label
+    ><input type="radio" name="origin" id="origin_padding-box" />
+    padding-box</label
   >
   <label
-    ><input type="radio" name="origin" id="content-box" /> content-box</label
+    ><input type="radio" name="origin" id="origin_content-box" />
+    content-box</label
   >
 </fieldset>
 ```
 
-```css hidden live-sample___origin
+```css hidden live-sample___origin live-sample___clip
 div {
   all: unset;
 }
 legend {
   align-self: baseline;
 }
+label {
+  display: block;
+}
 ```
 
 In this example, the `mask-position` places the initial mask in the top left corner of the `<img>` element that has a large border and padding, with a green background color to enable seeing the star masking on the padding area. Change the value of the `mask-origin` property to observe the difference the property can make.
 
-```css live-sample___origin
+```css live-sample___origin live-sample___clip
 img {
   mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
   mask-position: top left;
@@ -349,20 +354,20 @@ img {
   border: 15px solid;
   background-color: green;
 }
-:has(#border-box:checked) img {
+:has(#origin_border-box:checked) img {
   mask-origin: border-box;
 }
-:has(#padding-box:checked) img {
+:has(#origin_padding-box:checked) img {
   mask-origin: padding-box;
 }
-:has(#content-box:checked) img {
+:has(#origin_content-box:checked) img {
   mask-origin: content-box;
 }
 ```
 
 Change the value of the `mask-origin` property by changing the selected radio button, looking at the top left point of the mask top left star as you do so.
 
-{{EmbedLiveSample("origin", "", "450px")}}
+{{EmbedLiveSample("origin", "", "350px")}}
 
 The default value is `border-box`. With this value, the initial mask is placed at the borders top left edge and is not clipped. When the initial mask is placed at the outer or inner edge of the padding, there is room above it and to the left; these repeating masks are clipped.
 
@@ -397,9 +402,69 @@ For SVG elements, which don't have the associated CSS layout boxes, a mask can b
 
 ## The `mask-clip` property
 
-The {{cssxref("mask-clip")}} property determines the area the element which will be affected by a mask. It is analogous to the {{cssxref("background-clip")}} property.
+The {{cssxref("mask-clip")}} property determines the area of the element that will be affected by a mask, effectively clipping the element at the defined box edge. It is analogous to the {{cssxref("background-clip")}} property, but with some different values.
 
-{{EmbedLiveSample("clip", "", "250px")}}
+Because the `mask-clip` property accepts all the `mask-origin` values and both have the same `border-box` default value, the two properties may seem similar, but they serve very different purposes. While `mask-origin` determines where the first mask image will be positioned, the `mask-clip` property defines which area of the original element will be painted with the painted content clipped to this area. It is important to understand them both, as if the mask-origin causes the mask-position to place the mask image outside the clipping area, the mask will be clipped.
+
+The `mask-clip` property accepts all the `mask-origin` values, as well as it's own `no-clip` value. The `no-clip` value sets the painted content to not be clipped, meaning the painted content is not restricted and isn't clipped by default. You can still cause the mask image to be clipped by positioning it outside of the border content area using `mask-position` values that are less than zero or resolve to greater than 100%.
+
+Setting the `mask-clip` and `mask-origin` to different values can cause the mask layer image to be clipped. For example, If an element's has a border and padding, if `mask-clip` is set to `content-box` while `mask-origin` is set to `border-box`, and the `mask-position` is set to the `top left` edge, the mask layer image will be clipped at the top-left edge.
+
+We can add clipping options to the previous example, both to demonstrate both the different non-svg `mask-clip` values and how the different `mask-origin` values are impacted by these values.
+
+```html hidden live-sample___clip
+<div class="border-box">
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+    alt="Pride flag" />
+</div>
+<fieldset>
+  <legend>Set the <code>mask-clip</code> value</legend>
+  <label
+    ><input type="radio" name="clip" id="clip_border-box" checked />
+    border-box</label
+  >
+  <label
+    ><input type="radio" name="clip" id="clip_padding-box" /> padding-box</label
+  >
+  <label
+    ><input type="radio" name="clip" id="clip_content-box" /> content-box</label
+  >
+
+  <label><input type="radio" name="clip" id="clip_no-clip" /> no-clip</label>
+</fieldset>
+<fieldset>
+  <legend>Set the <code>mask-origin</code> value</legend>
+  <label
+    ><input type="radio" name="origin" id="origin_border-box" checked />
+    border-box</label
+  >
+  <label
+    ><input type="radio" name="origin" id="origin_padding-box" />
+    padding-box</label
+  >
+  <label
+    ><input type="radio" name="origin" id="origin_content-box" />
+    content-box</label
+  >
+</fieldset>
+```
+
+```css live-sample___clip
+:has(#clip_border-box:checked) img {
+  mask-clip: border-box;
+}
+:has(#clip_padding-box:checked) img {
+  mask-clip: padding-box;
+}
+:has(#clip_content-box:checked) img {
+  mask-clip: content-box;
+}
+```
+
+{{EmbedLiveSample("clip", "", "350px")}}
+
+The first mask is placed at the top left edge of the mask origin container, then repeated. If the origin box is the border-box while the clipping region is the content-box, the top and left areas of the mask origin container will be clipped. Generally, you will want the mask-clip to be the same as the mask origin.
 
 Continuing with the `masked-element` example, if we don't explicitly set the `mask-clip` property, it will default to `border-box` for each layer, as if we had set the following:
 
@@ -430,11 +495,9 @@ or, expanding on the example using the `mask` shorthand:
 }
 ```
 
+In the `mask` shorthand, if only one [`<geometry-box>`](/en-US/docs/Web/CSS/clip-path#geometry-box) value is given, it sets both the `mask-origin` and `mask-clip` property values. If two `<geometry-box>` values are present, the first defines the `mask-origin` and the second defines the `mask-clip`.
+
 For mask layer images that do not reference an SVG {{svgelement("mask")}} element, the `mask-clip` property defines whether the mask painting area, or the area affected by the mask, is the border, padding, or content box. The painted content of the element will be restricted to this area.
-
-Setting the `mask-clip` and `mask-origin` to different values can cause the mask layer image to be clipped. For example, If an element's has a border and padding, if `mask-clip` is set to `content-box` while `mask-origin` is set to `border-box`, and the `mask-position` is set to the `top left` edge, the mask layer image will be clipped at the top-left edge.
-
-Generally, you will want the mask-clip to be the same as the mask origin. In the `mask` shorthand, if only one [`<geometry-box>`](/en-US/docs/Web/CSS/clip-path#geometry-box) value is given, it sets both the `mask-origin` and `mask-clip` property values. If two `<geometry-box>` values are present, the first defines the `mask-origin` and the second defines the `mask-clip`. The `no-clip` value sets the painted content to not be clipped.
 
 When the mask layer's {{cssxref("mask-image")}} source is a `<mask>`, the `mask-clip` property has no affect. Rather, the `<mask>` element's {{svgAttr("x")}}, {{svgAttr("y")}}, {{svgAttr("width")}}, {{svgAttr("height")}}, and {{svgAttr("maskUnits")}} attributes determine the mask painting area.
 
