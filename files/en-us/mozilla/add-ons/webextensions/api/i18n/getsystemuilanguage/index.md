@@ -7,7 +7,7 @@ browser-compat: webextensions.api.i18n.getSystemUILanguage
 
 {{AddonSidebar}}
 
-Returns the current UI locale of the operating system. This is different from {{WebExtAPIRef('i18n.getUILanguage')}}, which returns the UI locale of the web browser. 
+Returns the current UI locale of the operating system. This is different from {{WebExtAPIRef('i18n.getUILanguage')}}, which returns the UI locale of the web browser.
 
 ## Syntax
 

@@ -31,7 +31,6 @@ See the [Internationalization](/en-US/docs/Mozilla/Add-ons/WebExtensions/Interna
 - {{WebExtAPIRef("i18n.getSystemUILanguage()")}}
   - : Returns the current UI locale of the operating system.
 
-
 ## Browser compatibility
 
 {{Compat}}
