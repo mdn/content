@@ -23,7 +23,7 @@ You can use this attribute with the following SVG elements:
   <tbody>
     <tr>
       <th scope="row">Value</th>
-      <td><code>auto</code> | <code>high</code> | <code>low</code></td>
+      <code>high</code> | <code>low</code></td> | <td><code>auto</code>
     </tr>
     <tr>
       <th scope="row">Default value</th>
