@@ -7,7 +7,7 @@ browser-compat: api.CustomEvent
 
 {{APIRef("DOM")}}{{AvailableInWorkers}}
 
-The **`CustomEvent`** interface represents events initialized by an application for any purpose.
+The **`CustomEvent`** interface represents events initialized by an application for any purpose. As an alternative, it is also possible to [subclass the `Event` interface](/en-US/docs/Web/Events/Creating_and_triggering_events#adding_custom_data_–_subclassing_event).
 
 > [!NOTE]
 > If used to attempt to communicate between a web extension content script and a web page script, a non-string `detail` property throws with "Permission denied to access property" in Firefox. To avoid this issue clone the object. See [Share objects with page scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts) for more information.
