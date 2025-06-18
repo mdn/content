@@ -46,16 +46,16 @@ SVG files displayed with `<image>` are [treated as an image](/en-US/docs/Web/SVG
   - : Provides a hint to the browser as to whether it should perform image decoding synchronously or asynchronously.
     _Value type_: `async | sync | auto`; _Default value_: `auto`; _Animatable_: **yes**
 - {{SVGAttr("fetchpriority")}}
-  - : Provides a hint of the relative priority to use when fetching an external script.
+  - : Provides a hint of the relative priority to use when fetching an external image.
     Allowed values:
     - `high`
-      - : Fetch the external script at a high priority relative to other external scripts.
+      - : Fetches the external image at a high priority relative to other external resources.
     - `low`
-      - : Fetch the external script at a low priority relative to other external scripts.
+      - : Fetches the external image at a low priority relative to other external resources.
     - `auto`
-      - : Don't set a preference for the fetch priority.
-        This is the default.
+      - : Doesn't set a preference for the fetch priority.
         It is used if no value or an invalid value is set.
+        This is the default.
 - {{SVGAttr("xlink:href")}}{{deprecated_inline}}
   - : Points at a URL for the image file.
     _Value type_: **[\<URL>](/en-US/docs/Web/SVG/Guides/Content_type#url)**; _Default value_: _none_; _Animatable_: **no**

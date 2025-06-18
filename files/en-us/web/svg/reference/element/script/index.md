@@ -24,13 +24,13 @@ The **`<script>`** [SVG](/en-US/docs/Web/SVG) element allows to add scripts to a
   - : Provides a hint of the relative priority to use when fetching an external script.
     Allowed values:
     - `high`
-      - : Fetch the external script at a high priority relative to other external scripts.
+      - : Fetches the external script at a high priority relative to other external scripts.
     - `low`
-      - : Fetch the external script at a low priority relative to other external scripts.
+      - : Fetches the external script at a low priority relative to other external scripts.
     - `auto`
-      - : Don't set a preference for the fetch priority.
-        This is the default.
+      - : Doesn't set a preference for the fetch priority.
         It is used if no value or an invalid value is set.
+        This is the default.
 - {{SVGAttr("href")}}
   - : The {{Glossary("URL")}} to the script to load.
     _Value type_: **[\<URL>](/en-US/docs/Web/SVG/Guides/Content_type#url)**; _Default value_: _none_; _Animatable_: **no**
