@@ -3,12 +3,10 @@ title: "GPUExternalTexture: label property"
 short-title: label
 slug: Web/API/GPUExternalTexture/label
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.GPUExternalTexture.label
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`label`** property of the
 {{domxref("GPUExternalTexture")}} interface provides a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
