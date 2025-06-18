@@ -33,13 +33,13 @@ You can use this attribute with the following SVG elements:
 </table>
 
 - `high`
-  - : Fetch the external script at a high priority relative to other external scripts.
+  - : Fetches the external script at a high priority relative to other external scripts.
 - `low`
-  - : Fetch the external script at a low priority relative to other external scripts.
+  - : Fetches the external script at a low priority relative to other external scripts.
 - `auto`
-  - : Don't set a preference for the fetch priority.
+  - : Doesn't set a preference for the fetch priority.
+     It is used if no value or an invalid value is set.
     This is the default.
-    It is used if no value or an invalid value is set.
 
 ## Examples
 
