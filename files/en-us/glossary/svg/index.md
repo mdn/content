@@ -21,5 +21,6 @@ As a [vector image format](https://en.wikipedia.org/wiki/Vector_graphics), SVG g
 - Other image formats (glossary terms): {{Glossary("GIF")}}, {{Glossary("JPEG")}}, {{Glossary("PNG")}}, {{Glossary("WebP")}}
 - [HTML images](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images) (Learn web development)
 - [Adding custom icons to your site](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#adding_custom_icons_to_your_site)
+- [Including vector graphics in HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)
 - [SVG](https://en.wikipedia.org/wiki/SVG) on Wikipedia
 - [SVG Primer](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html) on w3.org
