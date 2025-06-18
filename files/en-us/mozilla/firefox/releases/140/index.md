@@ -2,7 +2,7 @@
 title: Firefox 140 for developers
 short-title: Firefox 140 (Beta)
 slug: Mozilla/Firefox/Releases/140
-page-type: active-fx-release
+page-type: firefox-release-notes-active
 sidebar: firefoxsidebar
 ---
 
@@ -23,6 +23,8 @@ This article provides information about the changes in Firefox 140 that affect d
   You can apply styles to a registered highlight using the CSS [`::highlight`](/en-US/docs/Web/CSS/::highlight) pseudo-element. ([Firefox bug 1964089](https://bugzil.la/1964089)).
 
 #### Removals
+
+- The UA styles for `<h1>` elements nested within [sectioning elements](/en-US/docs/Web/HTML/Guides/Content_categories#sectioning_content) have been removed, following the [removal of the outline algorithm](https://github.com/whatwg/html/pull/7829) from the HTML specification. Previously, the `<h1>` headings nested within `<article>`, `<aside>`, `<nav>`, and `<section>` would appear smaller. Now, `<h1>` elements have a consistent font size, regardless of the nesting. ([Firefox bug 1964922](https://bugzil.la/1964922)).
 
 ### JavaScript
 

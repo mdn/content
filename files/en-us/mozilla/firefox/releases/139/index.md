@@ -2,7 +2,7 @@
 title: Firefox 139 for developers
 short-title: Firefox 139 (Stable)
 slug: Mozilla/Firefox/Releases/139
-page-type: active-fx-release
+page-type: firefox-release-notes-active
 sidebar: firefoxsidebar
 ---
 
