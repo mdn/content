@@ -2,13 +2,11 @@
 title: URL Pattern API
 slug: Web/API/URL_Pattern_API
 page-type: web-api-overview
-status:
-  - experimental
 browser-compat: api.URLPattern
 spec-urls: https://urlpattern.spec.whatwg.org/
 ---
 
-{{DefaultAPISidebar("URL Pattern API")}}{{SeeCompatTable}} {{AvailableInWorkers}}
+{{DefaultAPISidebar("URL Pattern API")}} {{AvailableInWorkers}}
 
 The **URL Pattern API** defines a syntax that is used to create URL pattern
 matchers. These patterns can be matched against URLs or individual URL
@@ -37,7 +35,7 @@ section below.
 
 The URL Pattern API only has a single related interface:
 
-- {{domxref("URLPattern")}} {{Experimental_Inline}}
+- {{domxref("URLPattern")}}
   - : Represents a pattern that can match URLs or parts of URLs. The pattern can contain capturing groups that extract parts of the matched URL.
 
 ## Pattern syntax

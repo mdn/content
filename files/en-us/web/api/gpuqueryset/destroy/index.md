@@ -3,12 +3,10 @@ title: "GPUQuerySet: destroy() method"
 short-title: destroy()
 slug: Web/API/GPUQuerySet/destroy
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUQuerySet.destroy
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`destroy()`** method of the
 {{domxref("GPUQuerySet")}} interface destroys the `GPUQuerySet`.

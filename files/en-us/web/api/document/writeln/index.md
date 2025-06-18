@@ -3,10 +3,12 @@ title: "Document: writeln() method"
 short-title: writeln()
 slug: Web/API/Document/writeln
 page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.Document.writeln
 ---
 
-{{ ApiRef("DOM") }}
+{{ ApiRef("DOM") }}{{deprecated_header}}
 
 > [!WARNING]
 > This API parses its input as HTML, writing the result into the DOM.
