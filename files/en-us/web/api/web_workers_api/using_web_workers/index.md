@@ -459,6 +459,8 @@ Here are the full implementation:
 </ul>
 ```
 
+It needs to execute the following script, either inline or as an external file:
+
 ```js
 // QueryableWorker instances methods:
 //   * sendQuery(queryable function name, argument to pass 1, argument to pass 2, etc. etc.): calls a Worker's queryable function
@@ -743,6 +745,8 @@ The worker sets the property `onmessage` to a function which will receive messag
 
 <p id="result"></p>
 ```
+
+It needs to execute the following script, either inline or as an external file:
 
 ```js
 const form = document.querySelector("form");

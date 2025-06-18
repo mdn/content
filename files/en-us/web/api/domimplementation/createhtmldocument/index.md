@@ -34,14 +34,14 @@ This example creates a new HTML document and inserts it into an {{HTMLElement("i
 
 Here's the HTML for this example:
 
-```html
+```html live-sample___new-doc
 <button id="create-doc">Create new document</button>
 <iframe id="theFrame" src="about:blank"></iframe>
 ```
 
 The JavaScript implementation of `makeDocument()` follows:
 
-```js
+```js live-sample___new-doc
 function makeDocument() {
   const frame = document.getElementById("theFrame");
 
@@ -78,7 +78,7 @@ which we'll be injecting the new content. The next two lines handle importing th
 contents of our new document into the new document's context. Finally, `destDocument.replaceChild` actually
 replaces the contents of the frame with the new document's contents.
 
-[View Live Examples](https://mdn.dev/archives/media/samples/domref/createHTMLDocument.html)
+{{EmbedLiveSample("new-doc", "", 200)}}
 
 The returned document is pre-constructed with the following HTML:
 
