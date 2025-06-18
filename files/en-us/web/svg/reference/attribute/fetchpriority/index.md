@@ -9,7 +9,7 @@ browser-compat:
 sidebar: svgref
 ---
 
-The `fetchpriority` attribute provides a hint to the browser about the relative priority to use when fetching an external script. This works the same way as the `fetchpriority` attribute for the HTML {{HTMLElement("script", "", "#fetchpriority")}} element.
+The `fetchpriority` attribute provides a hint to the browser about the relative priority to use when fetching an external resource. This works the same way as the `fetchpriority` attribute for the HTML {{HTMLElement("img", "", "#fetchpriority")}}, and {{HTMLElement("script", "", "#fetchpriority")}} elements.
 
 You can use this attribute with the following SVG elements:
 
@@ -23,7 +23,7 @@ You can use this attribute with the following SVG elements:
   <tbody>
     <tr>
       <th scope="row">Value</th>
-      <code>high</code> | <code>low</code></td> | <td><code>auto</code>
+      <td><code>high</code> | <code>low</code> | <code>auto</code></td>
     </tr>
     <tr>
       <th scope="row">Default value</th>
