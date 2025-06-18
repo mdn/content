@@ -69,11 +69,35 @@ the intention of strict security.
 > Browsers ignore the header if sent over HTTP to prevent a [manipulator-in-the-middle (MITM)](/en-US/docs/Web/Security/Attacks/MITM)
 > from altering the header to expire prematurely or adding it for a host that doesn't support HTTPS.
 
+### Expiration
+
 Every time the browser receives a `Strict-Transport-Security` header, it updates the host's HSTS expiration time by
 adding `max-age` to the current time. After HSTS expires, insecure HTTP requests will not be upgraded to HTTPS automatically.
 Using a fixed value for `max-age` can prevent HSTS from expiring, as each subsequent response will push the expiration farther into the future.
 If the `Strict-Transport-Security` header is missing in a response from a host that previously sent one, the previous header remains in effect until its expiration time.
 To disable HSTS, set `max-age=0`.
+
+### Subdomains
+
+The `includeSubDomains` directive instructs the browser to apply a domain's HSTS policy to its subdomains as well.
+An HSTS policy for `secure.example.com` with `includeSubDomains` also applies to `login.secure.example.com`
+and `admin.login.secure.example.com`. But it does not apply to `example.com` or `insecure.example.com`.
+
+Each subdomain host should include `Strict-Transport-Security` headers in its responses even if the
+superdomain uses `includeSubDomains`, because a browser may contact a subdomain host before the superdomain.
+For example, if `example.com` includes the HSTS header with `includeSubDomains`, but all existing links
+go directly to `www.example.com`, the browser will never see `example.com`'s HSTS header.
+Therefore, `www.example.com` also should send HSTS headers.
+
+The browser stores the HSTS policy for each domain and subdomain independently, regardless of the `includeSubDomains` directive.
+If both `example.com` and `login.example.com` send HSTS headers, the browser stores two separate HSTS policies,
+and they can expire independently. If `example.com` used `includeSubDomains`, then `login.example.com` remains covered
+if either one of the policies expires.
+
+If `max-age=0`, `includeSubDomains` has no effect, since the domain that specified `includeSubDomains` is
+immediately deleted from the HSTS hosts list; this does not delete separate HSTS policies of each subdomain.
+
+### Insecure HTTP requests
 
 If the host accepts insecure HTTP requests, it should respond with a permanent redirect (such as status code {{HTTPStatus("301")}})
 having an `https` URL in the {{HTTPHeader("Location")}} header.
