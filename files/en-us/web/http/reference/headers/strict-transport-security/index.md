@@ -72,10 +72,14 @@ the intention of strict security.
 ### Expiration
 
 Every time the browser receives a `Strict-Transport-Security` header, it updates the host's HSTS expiration time by
-adding `max-age` to the current time. After HSTS expires, insecure HTTP requests will not be upgraded to HTTPS automatically.
+adding `max-age` to the current time.
 Using a fixed value for `max-age` can prevent HSTS from expiring, as each subsequent response will push the expiration farther into the future.
+
 If the `Strict-Transport-Security` header is missing in a response from a host that previously sent one, the previous header remains in effect until its expiration time.
+
 To disable HSTS, set `max-age=0`.
+This only takes effect once the browser makes a secure request and receives the response header.
+By design, you cannot disable HSTS over insecure HTTP.
 
 ### Subdomains
 
