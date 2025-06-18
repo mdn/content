@@ -9,7 +9,7 @@ browser-compat:
 sidebar: svgref
 ---
 
-The `fetchpriority` provides a hint of the relative priority to use when fetching an external script. This works the same way as `fetchpriority` for the HTML {{HTMLElement("script", "", "#fetchpriority")}} element.
+The `fetchpriority` attribute provides a hint to the browser about the relative priority to use when fetching an external script. This works the same way as the `fetchpriority` attribute for the HTML {{HTMLElement("script", "", "#fetchpriority")}} element.
 
 You can use this attribute with the following SVG elements:
 
