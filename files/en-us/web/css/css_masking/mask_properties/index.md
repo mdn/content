@@ -76,7 +76,7 @@ Two containers contain images, while the last is empty but is included to displa
 <div class="gradient"></div>
 ```
 
-```css hidden live-sample___mode live-sample___position live-sample___position_no-repeat live-sample___clip live-sample___origin live-sample___repeat live-sample___size
+```css hidden live-sample___mode live-sample___position live-sample___position_no-repeat live-sample___clip live-sample___origin live-sample___size
 body {
   display: flex;
   gap: 20px;
@@ -332,7 +332,7 @@ Analogous to the {{cssxref("background-origin")}} property, but with a different
 </fieldset>
 ```
 
-```css hidden live-sample___origin live-sample___clip
+```css hidden live-sample___origin live-sample___clip live-sample___size
 div {
   all: unset;
 }
@@ -503,13 +503,67 @@ When the mask layer's {{cssxref("mask-image")}} source is a `<mask>`, the `mask-
 
 ## The `mask-size` property
 
-The {{cssxref("mask-size")}} property is used to size mask layers. This property is analogous to the {{cssxref("background-size")}} property; taking the same values.
+The {{cssxref("mask-size")}} property is used to size mask layers. This property is analogous to the {{cssxref("background-size")}} property, taking the same values. When sizing your masks, remember that areas of the element not covered by the mask images are hidden.
 
-There are three ways to declare a `mask-size`: one `cover` or `contain` keyword, one length, percentage, or `auto`, or two lengths, percentages or the keyword `auto`. All these methods maintain the underlying {{glossary("aspect ratio")}} of the mask image except if you declare a two-value length-percentage value that distorts the mask image. When two values are specified, the first defines the mask width and the second defines its height. When one value is specified, it defines only the mask width, with the height defaulting to `auto`, which maintains the aspect ratio.
+There are three ways to declare a `mask-size`: the `cover` or `contain` keyword, a length, percentage, or `auto`, or two values that are a combination of lengths, percentages, or `auto`. The mask image can be left to its natural size, stretched, or constrained to fit the available space.
 
-{{EmbedLiveSample("size", "", "250px")}}
+If the `mask-size` is set to `contain` or `cover`, the mask image is rendered by preserving its {{glossary("aspect ratio")}} at the largest size contained within or covering the mask positioning area. In these cases, the mask image will grow or shrink so that the width is either the same width as the mask positioning area or the height of the image is as tall as the mask positioning area's height. With `contain`, the image is resized until one dimension is the same size as the corresponding mask positioning area's dimension without overflowing the area. With `cover` the image is resized until the second dimensions is the same size as the corresponding mask positioning area's dimension, overflowing the other dimension if the aspect ratio of the element and mask aren't the same.
 
-The default value of `mask-size` is `auto`, rendering the mask at its {{glossary("intrinsic size")}}, the size at which the mask would be displayed if no CSS were applied. In the case with [CSS gradients](/en-US/docs/Web/CSS/gradient), which has no intrinsic dimensions and no intrinsic proportion, the default `auto` is the entirety of the mask positioning area as set by [the `mask-origin` property](#the_mask-origin_property), which defaults to `border-box`.
+```html hidden live-sample___size
+<div class="border-box">
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+    alt="Pride flag" />
+</div>
+<fieldset>
+  <legend>Set the <code>mask-origin</code> value</legend>
+  <label
+    ><input type="radio" name="origin" id="border-box" checked />
+    border-box</label
+  >
+  <label
+    ><input type="radio" name="origin" id="padding-box" /> padding-box</label
+  >
+  <label
+    ><input type="radio" name="origin" id="content-box" /> content-box</label
+  >
+</fieldset>
+```
+
+```css hidden live-sample___size
+img {
+  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-position: top left;
+  padding: 15px;
+  border: 15px solid;
+  background-color: green;
+}
+```
+
+```css live-sample___size
+img {
+  mask-size: cover;
+}
+:has(#border-box:checked) img {
+  mask-origin: border-box;
+}
+:has(#padding-box:checked) img {
+  mask-origin: padding-box;
+}
+:has(#content-box:checked) img {
+  mask-origin: content-box;
+}
+```
+
+{{EmbedLiveSample("size", "", "350px")}}
+
+When one `<length-percentage>` value is specified, it defines only the mask width, with the height defaulting to `auto`, which maintains the aspect ratio. When two values are specified, the first defines the mask width and the second defines its height.
+
+The default value of `mask-size` is `auto`, rendering the mask at its {{glossary("intrinsic size")}}, the size at which the mask would be displayed if no CSS were applied. The underlying {{glossary("aspect ratio")}} of the mask image is maintained except if you declare two length-percentage values that distorts the mask image. This is because, if both components of `mask-size` are specified and are not `auto`, the mask image renders at the specified size.
+
+Like with all longhand components of shorthand property, if the {{cssxref("mask")}} shorthand property is set and the value of the `mask-size` property is not defined within any mask layer, the `mask-size` value is reset to its initial value of `auto` for those mask layers.
+
+If the image has no intrinsic proportion, such as with [CSS gradients](/en-US/docs/Web/CSS/gradient) which have no intrinsic dimensions or proportion, the default `auto` is the entirety of the mask positioning area as set by [the `mask-origin` property](#the_mask-origin_property).
 
 Continuing with the `masked-element` example, if we don't explicitly set the `mask-size` property, it will default to `auto` for each layer, as if we had set the following:
 
@@ -541,18 +595,11 @@ or, expanding on the example using the `mask` shorthand, with the `mask-size` co
 }
 ```
 
-The rendered size of the mask image is computed as follows:
-
-- If both components of `mask-size` are specified and are not `auto`, the mask image renders at the specified size.
-- If the `mask-size` is `contain` or `cover`, the image is rendered by preserving its aspect ratio at the largest size contained within or covering the mask positioning area. If the image has no intrinsic proportion, such as with gradients, then it is rendered at the size of the mask positioning area.
-
-- If `mask-size` has one `auto` component and one non-`auto` component, which applies to all single-value values, the aspect ratio is maintained if the mask source has an intrinsic proportion. If there are no intrinsic proportions, the `auto` value is assumed to be the dimension of the mask positioning area.
-
-Like with all longhand components of shorthand property, if the {{cssxref("mask")}} shorthand property is set and the value of the `mask-size` property is not defined within any mask layer, the `mask-size` value is reset to its initial value of `auto` for those mask layers.
-
 ## The `mask-repeat` property
 
-The {{cssxref("mask-repeat")}} property determines**\_\_**. It is analogous to the {{cssxref("background-repeat")}} property.
+In most of the examples thus far, the star mask has been repeated along the X and Y axis. This is the default. Only in [the `mask-position` example](#the_mask-position_property), where we set `mask-repeat: none;`, was there only a single, non-repeating mask.
+
+The {{cssxref("mask-repeat")}} property determines sets how mask images are repeated, or tiled, after the initial mask image has been sized and positioned. The first (and possibly only) mask-image repetition is positioned by [the `mask-position` property](#the_mask-position_property) and sized by [the `mask-size` property](#the_mask-size_property). The positions of the repeated masks are based on this initial mask instance. This mask image can then be repeated along the horizontal axis, the vertical axis, both axes, or not repeated at all. The `mask-repeat` property is analogous to the {{cssxref("background-repeat")}} property.
 
 Continuing with the `masked-element` example, if we don't explicitly set the `mask-repeat` property, it will default to `repeat` for each layer, as if we had set the following:
 
