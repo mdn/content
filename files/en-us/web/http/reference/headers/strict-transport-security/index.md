@@ -11,10 +11,6 @@ browser-compat: http.headers.Strict-Transport-Security
 The HTTP **`Strict-Transport-Security`** {{Glossary("response header")}} (often abbreviated as {{Glossary("HSTS")}}) informs browsers that the {{Glossary("host")}} should only be accessed using HTTPS, and that any future attempts to access it using HTTP should automatically be upgraded to HTTPS.
 Additionally, on future connections to the host, the browser will not allow the user to bypass secure connection errors, such as an invalid certificate.
 
-> [!NOTE]
-> HSTS should be used in addition to configuring an HTTP to HTTPS ({{HTTPStatus("301")}}) redirect on your server.
-> The initial HTTP connection is still vulnerable to a man-in-the-middle attack, but this can be mitigated using a browser HSTS preload list.
-
 <table class="properties">
   <tbody>
     <tr>
@@ -77,11 +73,19 @@ Using a fixed value for `max-age` can prevent HSTS from expiring, as each subseq
 If the `Strict-Transport-Security` header is missing in a response from a host that previously sent one, the previous header remains in effect until its expiration time.
 To disable HSTS, set `max-age=0`.
 
-### Threat models
+If the host accepts insecure HTTP requests, it should respond with a permanent redirect (such as status code {{HTTPStatus("301")}})
+having an `https` URL in the {{HTTPHeader("Location")}} header.
+The redirect must not include the `Strict-Transport-Security` header since the request used insecure HTTP
+but the header must be sent via HTTPS only.
+After the browser follows the redirect and makes a new request using HTTPS, the response
+should include the `Strict-Transport-Security` header to ensure that future attempts to load an `http` URL
+will use HTTPS immediately, without requiring a redirect.
 
-When the browser loads an insecure URL, such as `http://www.example.com/`, even if the server redirects to HTTPS, a [manipulator-in-the-middle (MITM) attack](/en-US/docs/Web/Security/Attacks/MITM) on the initial insecure request could direct visitors to a malicious site.
-
-With HSTS, as long as at least one secure connection has been made to the host in the past and the `Strict-Transport-Security` response header was present, the browser remembers it as an HSTS host, and the connection uses HTTPS before an MITM attack has a chance to occur. However, the HSTS header alone cannot protect an initial insecure request if the browser has never before connected to the host and so does not have the domain name in its HSTS hosts list. [Preloading](#preloading_strict_transport_security) can mitigate this problem. For the same reason, it is still important to specify the `https` scheme in URLs even when using HSTS.
+One weakness of HSTS is that it does not take effect until the browser has made at least one secure connection to the host
+and received the `Strict-Transport-Security` header.
+If the browser loads an insecure `http` URL prior to knowing that the host is an HSTS host, the initial request is
+vulnerable to network attacks.
+[Preloading](#preloading_strict_transport_security) mitigates this problem.
 
 ### Strict Transport Security example scenario
 
