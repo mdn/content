@@ -67,7 +67,7 @@ This property is a shorthand for the following CSS properties:
 
 #### Result
 
-{{EmbedLiveSample("Adding_a_red_text_stroke", 600, 60)}}
+{{EmbedLiveSample("Adding a red text stroke", "600", "60")}}
 
 ## Specifications
 
