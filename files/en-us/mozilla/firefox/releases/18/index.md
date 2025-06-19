@@ -62,14 +62,14 @@ Firefox 18 was released on January 8, 2013. This article lists key changes that 
 ### Interface changes
 
 - `nsIStreamListener`
-  - : The 4th parameter (aOffset) of `onDataAvailable()` method changes to unsigned long long. ([Firefox bug 784912](https://bugzil.la/784912))
+  - : The 4th parameter (`aOffset`) of `onDataAvailable()` method changes to `unsigned long long`. ([Firefox bug 784912](https://bugzil.la/784912))
 - `nsIUploadChannel`
   - : `setUploadStream()` supports over 2GB content-length ([Firefox bug 790617](https://bugzil.la/790617))
 - `nsIEditor`
   - : `addEditorObserver()` has been removed, use `setEditorObserver()` instead, `removeEditorObserver()` no longer takes a `nsIEditorObserver` parameter ([Firefox bug 785091](https://bugzil.la/785091))
 - `nsIHttpProtocolHandler`
   - : `http-on-modify-request` observers are no longer guaranteed to be called synchronously during `nsIChannel.asyncOpen()`.
-    For observers that need to be called during `asyncOpen()`, the new `http-on-opening-request` observer topic has been added. `See` ([Firefox bug 800799](https://bugzil.la/800799))
+    For observers that need to be called during `asyncOpen()`, the new `http-on-opening-request` observer topic has been added. See ([Firefox bug 800799](https://bugzil.la/800799))
 - `nsIProtocolProxyService`
   - : The `resolve` method has been removed. Now, only the `asyncResolve` method can be used. See ([Firefox bug 769764](https://bugzil.la/769764))
 
