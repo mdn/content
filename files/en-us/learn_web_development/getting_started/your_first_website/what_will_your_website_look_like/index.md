@@ -53,7 +53,7 @@ Next, grab pen and paper and sketch out roughly how you want your site to look. 
 > [!NOTE]
 > Even on real, complex websites, the design teams usually start out with rough sketches on paper and later on build digital mockups using a graphics editor or web technologies.
 >
-> Web teams often include both a [graphic designer](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes#graphic_designer) and a [user experience (UX) designer](/docs/Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes#user_experience_ux_designer). Graphic designers put together the visuals of the website. UX designers have a somewhat more abstract role in addressing how users will experience and interact with the website.
+> Web teams often include both a [graphic designer](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes#graphic_designer) and a [user experience (UX) designer](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes#user_experience_ux_designer). Graphic designers put together the visuals of the website. UX designers have a somewhat more abstract role in addressing how users will experience and interact with the website.
 
 At this point, it's good to start putting together the content that will eventually appear on your webpage. You should still have your paragraphs and title from earlier. Keep these close by.
 
