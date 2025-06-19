@@ -77,10 +77,10 @@ Here is one example of an atomic adder (same functionality as {{jsxref("Atomics.
 function add(mem, index, value) {
   let done = false;
   while (!done) {
-    const value = Atomics.load(mem, index);
-    done = Atomics.compareExchange(p, value, value + a) === value;
+    const currentValue = Atomics.load(mem, index);
+    done = Atomics.compareExchange(mem, index, currentValue, currentValue + value) === currentValue;
   }
-  return value + a;
+  return value + currentValue;
 }
 ```
 
