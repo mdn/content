@@ -74,11 +74,11 @@ Atomics.load(ta, 0); // 12
 Here is one example of an atomic adder (same functionality as {{jsxref("Atomics.add()")}}), adapted from the linked Wikipedia article:
 
 ```js
-function add(mem, index, value) {
+function add(mem, index, a) {
   let done = false;
   while (!done) {
     const value = Atomics.load(mem, index);
-    done = Atomics.compareExchange(p, value, value + a) === value;
+    done = Atomics.compareExchange(mem, index, value, value + a) === value;
   }
   return value + a;
 }

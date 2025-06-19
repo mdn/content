@@ -80,6 +80,7 @@ Carakan
 Cardano
 carinaanand
 Carle
+carolinensis
 Cassini
 Caterina
 caugner
@@ -478,6 +479,7 @@ Schirra
 Schmarsow
 Schola
 Schwarz
+Sciurus
 Scooby
 scottohara
 Scribie
@@ -566,6 +568,7 @@ Visio
 Voikko
 Volkman
 Vorbis
+vulgaris
 wabt
 Wakamai
 Waldron

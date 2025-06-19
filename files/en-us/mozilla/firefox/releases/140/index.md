@@ -24,11 +24,15 @@ This article provides information about the changes in Firefox 140 that affect d
 
 #### Removals
 
+- The UA styles for `<h1>` elements nested within [sectioning elements](/en-US/docs/Web/HTML/Guides/Content_categories#sectioning_content) have been removed, following the [removal of the outline algorithm](https://github.com/whatwg/html/pull/7829) from the HTML specification. Previously, the `<h1>` headings nested within `<article>`, `<aside>`, `<nav>`, and `<section>` would appear smaller. Now, `<h1>` elements have a consistent font size, regardless of the nesting. ([Firefox bug 1964922](https://bugzil.la/1964922)).
+
 ### JavaScript
 
 #### Removals
 
 ### SVG
+
+- The SVG {{SVGAttr("fetchpriority")}} attribute is now supported for the SVG {{SVGElement("feimage")}}, {{SVGElement("image")}}, and {{SVGElement("script")}} elements. It allows you to hint to the browser about the relative priority of an external resource. This works the same way as the `fetchpriority` attribute for the HTML {{HTMLElement("img", "", "#fetchpriority")}} and {{HTMLElement("script", "", "#fetchpriority")}} elements. ([Firefox bug 1847712](https://bugzil.la/1847712)).
 
 #### Removals
 

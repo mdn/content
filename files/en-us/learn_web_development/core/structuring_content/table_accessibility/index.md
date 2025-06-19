@@ -146,23 +146,22 @@ At this point we'll get you to try out adding a caption to an HTML table, using 
 
 Your finished HTML should look something like this:
 
-```html-nolint
+```html
 <table>
   <caption>
     Florence's weekly lesson timetable
   </caption>
   <colgroup>
     <col span="2" />
-    <col style="background-color:#97DB9A;" />
-    <col style="width:42px;" />
-    <col style="background-color:#97DB9A;" />
-    <col style="background-color:#DCC48E; border:4px solid #C1437A;" />
-    <col span="2" style="width:42px;" />
+    <col style="background-color: #97DB9A;" />
+    <col style="width: 42px;" />
+    <col style="background-color: #97DB9A;" />
+    <col style="background-color: #DCC48E; border: 4px solid #C1437A;" />
+    <col span="2" style="width: 42px;" />
   </colgroup>
   <tr>
-
     <!-- Rest of code omitted for brevity -->
-
+  </tr>
 </table>
 ```
 
@@ -251,7 +250,7 @@ Your finished HTML should look something like this:
     </tr>
     <tr>
       <td>Shoes</td>
-      <td>Shoeshop</td>
+      <td>Shoe shop</td>
       <td>13/09</td>
       <td>Big regrets</td>
       <td>65</td>

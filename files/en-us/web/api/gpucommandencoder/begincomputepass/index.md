@@ -3,12 +3,10 @@ title: "GPUCommandEncoder: beginComputePass() method"
 short-title: beginComputePass()
 slug: Web/API/GPUCommandEncoder/beginComputePass
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUCommandEncoder.beginComputePass
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`beginComputePass()`** method of the
 {{domxref("GPUCommandEncoder")}} interface starts encoding a compute pass, returning a {{domxref("GPUComputePassEncoder")}} that can be used to control computation.

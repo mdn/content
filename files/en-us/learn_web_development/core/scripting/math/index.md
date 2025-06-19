@@ -247,7 +247,7 @@ If you want to override operator precedence, you can put parentheses around the 
 (num2 + num1) / (8 + 2);
 ```
 
-Try it and see.
+Try entering the previous line into the console to test this out.
 
 > [!NOTE]
 > A full list of all JavaScript operators and their precedence can be found in [Operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence).

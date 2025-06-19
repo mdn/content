@@ -3,12 +3,10 @@ title: "GPU: requestAdapter() method"
 short-title: requestAdapter()
 slug: Web/API/GPU/requestAdapter
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPU.requestAdapter
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`requestAdapter()`** method of the
 {{domxref("GPU")}} interface returns a {{jsxref("Promise")}} that fulfills with a {{domxref("GPUAdapter")}} object instance. From this you can request a {{domxref("GPUDevice")}}, adapter info, features, and limits.
