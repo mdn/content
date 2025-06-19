@@ -509,6 +509,10 @@ There are three ways to declare a `mask-size`: the `cover` or `contain` keyword,
 
 If the `mask-size` is set to `contain` or `cover`, the mask image is rendered by preserving its {{glossary("aspect ratio")}} at the largest size contained within or covering the mask positioning area. In these cases, the mask image will grow or shrink so that the width is either the same width as the mask positioning area or the height of the image is as tall as the mask positioning area's height. With `contain`, the image is resized until one dimension is the same size as the corresponding mask positioning area's dimension without overflowing the area. With `cover` the image is resized until the second dimensions is the same size as the corresponding mask positioning area's dimension, overflowing the other dimension if the aspect ratio of the element and mask aren't the same.
 
+With `cover`, `contain`, and `<percentage>` values, the size is relative to the origin box. This means, if you set the `mask-size` to `cover`, `contain`, or `100%`, whether the size will be the dimension of the content box, padding box, or border box, depends on the value of the [`mask-origin` property](#the_mask-origin_property).
+
+In our star-mask and flag image example, the aspect ratio of both the mask image and the `<img>` are 1:1, meaning in this case `cover`, `contain`, and `100%` will all produce the same sized mask:
+
 ```html hidden live-sample___size
 <div class="border-box">
   <img
@@ -542,7 +546,7 @@ img {
 
 ```css live-sample___size
 img {
-  mask-size: cover;
+  mask-size: 100%;
 }
 :has(#border-box:checked) img {
   mask-origin: border-box;
@@ -555,9 +559,11 @@ img {
 }
 ```
 
+Change the value of the `mask-origin` property to see how the different values impact the mask size:
+
 {{EmbedLiveSample("size", "", "350px")}}
 
-When one `<length-percentage>` value is specified, it defines only the mask width, with the height defaulting to `auto`, which maintains the aspect ratio. When two values are specified, the first defines the mask width and the second defines its height.
+This example included one `<percentage>` value. When one `<length-percentage>` value is specified, it defines only the mask width, with the height defaulting to `auto`, which maintains the aspect ratio. When two values are specified, the first defines the mask width and the second defines its height.
 
 The default value of `mask-size` is `auto`, rendering the mask at its {{glossary("intrinsic size")}}, the size at which the mask would be displayed if no CSS were applied. The underlying {{glossary("aspect ratio")}} of the mask image is maintained except if you declare two length-percentage values that distorts the mask image. This is because, if both components of `mask-size` are specified and are not `auto`, the mask image renders at the specified size.
 
