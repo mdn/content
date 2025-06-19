@@ -97,7 +97,7 @@ rgb(from red r g b / 100%)
 rgb(from red r g b)
 rgb(from red r g b / alpha)
 
-/* For red color, g and b values are equal, making them interchangeable */
+/* With `red`, the g and b are the same, making them interchangeable */
 rgb(from red r g g)
 rgb(from red r b b)
 rgb(from red 255 g g)
@@ -295,7 +295,7 @@ The output is as follows:
 
 ## Manipulating the alpha channel
 
-This example demonstrates how to change the alpha channel of a given color. Here, we have an item wrapped in a container, both having a `teal` colored background. To make them distinguishable, we bring variation in the alpha channel value using the relative color feature, the `calc()` function, and a custom property `--alpha-multiplier`.
+This example demonstrates changing the alpha channel of a named color. Here, we have an item wrapped in a container that both have a `teal` background. To distinguish between the backgrounds, we vary the alpha channel value using the relative color feature, the [`calc()` function](/en-US/docs/Web/CSS/calc), and a [custom property](/en-US/docs/Web/CSS/--*).
 
 ```html
 <div class="container">
@@ -329,7 +329,7 @@ div {
 }
 ```
 
-In the above code, the alpha channel is referenced using the name `alpha`. The `calc(alpha * var(--alpha-multiplier))` expression modifies the alpha channel value by multiplying it with `--alpha-multiplier`. The container gets a semitransparent background because of the smaller multiplier `0.3`.
+The alpha channel is referenced using the `alpha` keyword. In this case, the `calc(alpha * var(--alpha-multiplier))` expression modifies the alpha channel value by multiplying `alpha` with the `--alpha-multiplier` custom property value. The container gets a semitransparent background because of the multiplier of `0.3` is less than `1.0`.
 
 The output is as follows:
 
