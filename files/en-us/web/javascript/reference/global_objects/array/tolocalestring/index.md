@@ -44,26 +44,27 @@ A string representing the elements of the array.
 
 ## Description
 
-The `Array.prototype.toLocaleString` method traverses its content, calling the `toLocaleString` method of every element with the `locales` and `options` parameters provided, and concatenates them with an implementation-defined separator (such as a comma ","). 
+The `Array.prototype.toLocaleString` method traverses its content, calling the `toLocaleString` method of every element with the `locales` and `options` parameters provided, and concatenates them with an implementation-defined separator (such as a comma ",").
 
-> **⚠️ Warning:**  
-> The `toLocaleString()` method **does not** control the separator used between array elements using the `locales` or `options` arguments. It only passes these arguments to the `toLocaleString()` of each element. The actual separator (usually a comma) depends solely on the host's current locale, not the `locales` parameter.  
-> 
-> If you're expecting localized list formatting (e.g., language-specific conjunctions), consider using [`Intl.ListFormat`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat) instead.  
-> 
+> **⚠️ Warning:**
+> The `toLocaleString()` method **does not** control the separator used between array elements using the `locales` or `options` arguments. It only passes these arguments to the `toLocaleString()` of each element. The actual separator (usually a comma) depends solely on the host's current locale, not the `locales` parameter.
+>
+> If you're expecting localized list formatting (e.g., language-specific conjunctions), consider using [`Intl.ListFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat) instead.
+
 > **Example:**
 >
 > ```js
 > const nums = [8888, 9999];
-> console.log(nums.toLocaleString('zh'));
+> console.log(nums.toLocaleString("zh"));
 > // "8,888,9,999" – formatted as individual numbers with locale separators
 >
-> const list = new Intl.ListFormat('zh', { type: 'conjunction', style: 'narrow' })
->   .format(nums.map(String));
+> const list = new Intl.ListFormat("zh", {
+>   type: "conjunction",
+>   style: "narrow",
+> }).format(nums.map(String));
 > console.log(list);
 > // "8888、9999" – formatted as a human-readable list
 > ```
-
 
 If an element is `undefined`, `null`, it is converted to an empty string instead of the string `"null"` or `"undefined"`.
 
