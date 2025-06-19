@@ -91,22 +91,41 @@ const someFunction = function someFunctionName() {};
 someFunction.name; // "someFunctionName"
 ```
 
-Anonymous function expressions created using the keyword `function` or arrow functions would have `""` (an empty string) as their name.
+Anonymous function expressions — created using either the `function` keyword or arrow function syntax — will have an empty string `""` as their `.name` property when they are not assigned to an identifier or property.
 
 ```js
-(function () {}).name; // ""
-(() => {}).name; // ""
+(function () {}).name; // "" (anonymous function)
+(() => {}).name; // "" (arrow function)
 ```
 
 However, such cases are rare — usually, in order to refer to the expression elsewhere, the function expression is attached to an identifier when it's created (such as in a variable declaration). In such cases, the name can be inferred, as the following few subsections demonstrate.
 
-One practical case where the name cannot be inferred is a function returned from another function:
+When such functions are assigned to a variable or property, their name is usually inferred by the JavaScript engine.
 
 ```js
-function getFoo() {
+const greet = function () {};
+console.log(greet.name); // "greet"
+
+const obj = {
+  sayHi: () => {},
+};
+console.log(obj.sayHi.name); // "sayHi"
+```
+
+Explicitly named function expressions retain their internal name:
+
+```js
+const f = function actualName() {};
+console.log(f.name); // "actualName"
+```
+
+A counter-example where the function name is still empty:
+
+```js
+function wrapper() {
   return () => {};
 }
-getFoo().name; // ""
+console.log(wrapper().name); // ""
 ```
 
 ### Variable declaration and method
