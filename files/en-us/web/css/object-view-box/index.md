@@ -90,8 +90,8 @@ object-fit: unset;
 
   - : No view box is specified. It makes the entire content visible.
 
-- `<basic-shape-rect>`
-  - : Specifies a view box for the element using {{cssxref("basic-shape/inset","inset()")}}, {{cssxref("basic-shape/xywh","xywh()")}}, or {{cssxref("basic-shape/rect","rect()")}} function.
+- [`<basic-shape-rect>`](/en-US/docs/Web/CSS/basic-shape#basic-shape-rect)
+  - : Specifies a view box for the element using a {{cssxref("basic-shape/inset","inset()")}}, {{cssxref("basic-shape/xywh","xywh()")}}, or {{cssxref("basic-shape/rect","rect()")}} function.
 
 ## Formal definition
 
@@ -115,12 +115,14 @@ We include an {{htmlelement("img")}} and a [`range`](Web/HTML/Reference/Elements
 <img
   src="https://mdn.github.io/shared-assets/images/examples/leopard.jpg"
   alt="leopard" />
-<br />
-<label for="box-size">Zoom: </label>
-<input type="range" id="box-size" min="100" max="350" value="150" />
+<p>
+  <label for="box-size">Zoom: </label>
+  <input type="range" id="box-size" min="100" max="350" value="150" />
+</p>
 ```
 
 ### CSS
+
 ```css hidden
 input {
   width: 350px;
@@ -134,10 +136,6 @@ input {
     display: block;
     width: 100%;
     text-align: center;
-  }
-
-  body > * {
-    display: none;
   }
 }
 ```
@@ -154,7 +152,7 @@ img {
 }
 ```
 
-In the above CSS, we define a custom property `--box-size` to adjust the view box size. Decreasing the size of the view box gives a zoom-in effect. Increasing the view box size gives a zoom-out effect. The `xywh()` function accepts an offset point and size of the view box. The view box's offset point is set at (500px, 30px), which is the top left corner of the right eye of the leopard.
+We define a custom property `--box-size` which we use to adjust the view box size. Decreasing the size of the view box gives a zoom-in effect. Increasing the view box size gives a zoom-out effect. The {{cssxref("basic-shape/xywh","xywh()")}} function accepts an offset point and size of the view box as parameters. The view box's offset point, the focal point in our zoom effects, is set at `(500px, 30px)`, which is the top left corner of the right eye of the leopard.
 
 ### JavaScript
 
@@ -170,7 +168,7 @@ zoom.addEventListener("input", update);
 update();
 ```
 
-The above JavaScript updates the `--box-size` property value when the user interacts with the input.
+### Result
 
 {{ EmbedLiveSample("Live zoom in using object-view-box property", 500, 450) }}
 
@@ -184,6 +182,7 @@ The above JavaScript updates the `--box-size` property value when the user inter
 
 ## See also
 
-- Other image-related CSS properties: {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}.
+- {{cssxref("object-fit")}}
+- {{cssxref("object-position")}}
 - {{cssxref("background-size")}}
 - [Understanding aspect ratio](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
