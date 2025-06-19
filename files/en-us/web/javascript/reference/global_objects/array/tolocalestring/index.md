@@ -70,7 +70,7 @@ prices.toLocaleString("ja-JP", { style: "currency", currency: "JPY" });
 
 ### List separators
 
-The list separator is not affected by the `locales` parameter. To configure it, use {{jsxref("Intl.Locale")}} instead.
+The list separator is not affected by the `locales` parameter. To configure it, use {{jsxref("Intl.ListFormat")}} instead.
 
 ```js
 const nums = [8888, 9999];
