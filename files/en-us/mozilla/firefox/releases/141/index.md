@@ -59,6 +59,8 @@ Firefox 141 is the current [Nightly version of Firefox](https://www.mozilla.org/
 
 ## Changes for add-on developers
 
+- Adds the {{WebExtAPIRef('i18n.getPreferredSystemLanguages')}} method to retrieve the preferred locales of the operating system. This complements {{WebExtAPIRef('i18n.getAcceptLanguages')}} which return details of the locales set in the browser. ([Firefox bug 1888486](https://bugzil.la/1888486))
+
 ### Removals
 
 ### Other
