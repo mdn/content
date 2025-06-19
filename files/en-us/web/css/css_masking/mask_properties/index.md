@@ -76,7 +76,7 @@ Two containers contain images, while the last is empty but is included to displa
 <div class="gradient"></div>
 ```
 
-```css hidden live-sample___mode live-sample___position live-sample___position_no-repeat live-sample___clip live-sample___origin live-sample___size
+```css hidden live-sample___mode live-sample___position live-sample___position_no-repeat live-sample___clip live-sample___origin live-sample___size live-sample___composite live-sample___composite2
 body {
   display: flex;
   gap: 20px;
@@ -640,7 +640,128 @@ or, expanding on the example using the `mask` shorthand:
 
 ## The `mask-composite` property
 
-The {{cssxref("mask")}} shorthand includes the {{cssxref("mask-composite")}} property which, in multiple mask declarations. This property defines how the multiple masks interact with each other, or are combined, in creating the final mask effect. Each value in the comma-separated list of values determines whether the browser should `add`, `subtract`, `include` or `exclude` the associated mask layer to or from the mask layers below it. Similar to `mask-mode`, and the other `mask-*` properties, there is no property in the {{cssxref("background")}} shorthand that is analogous.
+The {{cssxref("mask")}} shorthand includes the {{cssxref("mask-composite")}} property which, in multiple mask declarations. This property defines how the multiple masks interact with each other, or are combined, in creating the final mask effect. Each value in the comma-separated list of values determines whether the browser should `add`, `subtract`, `intersect` or `exclude` the associated mask layer to or from the mask layers below it. Similar to `mask-mode`, and the other `mask-*` properties, there is no property in the {{cssxref("background")}} shorthand that is analogous.
+
+```html hidden live-sample___composite
+<div class="add">
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+    alt="Pride flag" />
+</div>
+<div class="subtract">
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+    alt="Pride flag" />
+</div>
+<div class="intersect">
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+    alt="Pride flag" />
+</div>
+<div class="exclude">
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+    alt="Pride flag" />
+</div>
+```
+
+The `mask-composite` property is only relevant in cases that have two or more mask layers. This reads "mask layers", not "mask images, because if `none` is included, a transparent black mask is composited!
+
+In this example, we include two `mask-image` values, including the star and the gradient from the previous examples as mask images:
+
+```css live-sample___composite
+img {
+  mask-image:
+    repeating-linear-gradient(
+      to bottom right,
+      #f00 0 20px,
+      #f005 20px 40px,
+      transparent 40px 60px
+    ),
+    url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+}
+```
+
+We set a different `mask-composite` value for each image:
+
+```css live-sample___composite live-sample___composite2
+.add img {
+  mask-composite: add;
+}
+.subtract img {
+  mask-composite: subtract;
+}
+.intersect img {
+  mask-composite: intersect;
+}
+.exclude img {
+  mask-composite: exclude;
+}
+```
+
+```css hidden live-sample___composite live-sample___composite2
+div::before {
+  content: "mask-composite: " attr(class);
+  display: block;
+  text-align: center;
+  font-family: monospace;
+}
+body {
+  flex-flow: row wrap;
+}
+```
+
+{{EmbedLiveSample("composite", "", "600px")}}
+
+The semi-transparent star mask is added to, subtracted from, intersected with, or excluded from the striped mask, depending on the `mask-composite` value.
+
+If we inverse the mask layers, for some values we get very different results:
+
+```html hidden live-sample___composite2
+<div class="subtract">
+  <img
+    class="gradientFirst"
+    src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+    alt="Pride flag" />
+</div>
+<div class="subtract">
+  <img
+    class="starFirst"
+    src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+    alt="Pride flag" />
+</div>
+```
+
+```css live-sample___composite2
+.gradientFirst {
+  mask-image:
+    repeating-linear-gradient(
+      to bottom right,
+      #f00 0 20px,
+      #f005 20px 40px,
+      transparent 40px 60px
+    ),
+    url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+}
+.starFirst {
+  mask-image:
+    url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg),
+    repeating-linear-gradient(
+      to bottom right,
+      #f00 0 20px,
+      #f005 20px 40px,
+      transparent 40px 60px
+    );
+}
+```
+
+{{EmbedLiveSample("composite2", "", "350px")}}
+
+In the first example, the star is subtracted from the stripes. In the second, the stripes are subtracted from the star.
+
+Like all the other `mask` component properties, `mask-composite` takes a comma-separated list of values. Because the property effects how masks are combined, this property is only relevant for multiple mask layers and the number of used values is one less than the number of mask layers.
+
+The order of operations is that the last pair of masks are composited first. Then the previous mask image is composited with the product of the already composited mask images that come after it.
 
 Continuing with the `masked-element` example, if we don't explicitly set the `mask-composite` property, it will default to `add` for each layer, as if we had set the following:
 
@@ -659,7 +780,9 @@ Continuing with the `masked-element` example, if we don't explicitly set the `ma
 }
 ```
 
-or, expanding on the example using the `mask` shorthand:
+In this case, the `<mask>` element will be composited with the `none` layer. Then the radial gradient will be composited with the result of the previous composition, and so on.
+
+Like we saw with all the other component properties, we could have used the `mask` shorthand:
 
 ```css
 .masked-element {
@@ -674,8 +797,6 @@ or, expanding on the example using the `mask` shorthand:
     url(#svg-mask) 0% 0% / auto repeat border-box border-box add match-source;
 }
 ```
-
-The `mask-composite` property is explored in detail in the [Multiple masks and their interactions](/en-US/docs/Web/CSS/CSS_masking/Multiple_masks) guide.
 
 ## See also
 
