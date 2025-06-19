@@ -512,7 +512,7 @@ To ensure that your initial HTML has been parsed and will always render consiste
 
 Let's explore what this looks like with an example HTML document:
 
-```html-nolint
+```html
 <!doctype html>
 <html lang="en">
   <head>
@@ -521,7 +521,7 @@ Let's explore what this looks like with an example HTML document:
 
     <!-- Marking critical scripts as render blocking will
          ensure they're run before the view transition is activated -->
-    <script async href="layout.js" blocking="render"></script>
+    <script async src="layout.js" blocking="render"></script>
 
     <!-- Use rel="expect" and blocking="render" to ensure the
          #lead-content element is visible and fully parsed before
