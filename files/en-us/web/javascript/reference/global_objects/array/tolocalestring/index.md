@@ -46,7 +46,7 @@ A string representing the elements of the array.
 
 The `Array.prototype.toLocaleString` method traverses its content, calling the `toLocaleString` method of every element with the `locales` and `options` parameters provided, and concatenates them with an implementation-defined separator (such as a comma ",").
 
-> [!WARNING]
+> [!NOTE]
 > The `locales` or `options` arguments do not control the separator used between array elements; they are simply passed to the `toLocaleString()` method of each element. The actual separator (usually a comma) depends solely on the host's current locale. If you expect localized list formatting, consider using {{jsxref("Intl.ListFormat")}} instead.
 
 If an element is `undefined`, `null`, it is converted to an empty string instead of the string `"null"` or `"undefined"`.
