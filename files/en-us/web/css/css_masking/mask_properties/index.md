@@ -603,9 +603,9 @@ or, expanding on the example using the `mask` shorthand, with the `mask-size` co
 
 ## The `mask-repeat` property
 
-In most of the examples thus far, the star mask has been repeated along the X and Y axis. This is the default. Only in [the `mask-position` example](#the_mask-position_property), where we set `mask-repeat: none;`, was there only a single, non-repeating mask.
+Only in [the `mask-position` example](#the_mask-position_property), where we set `mask-repeat: none;`, was there only a single, non-repeating mask. In all the other examples, the star mask has been repeated along the X and Y axis. Even in the `mask-size` example, if you set the `mask-origin` to any value other than `content-box`, the mask repeated. This is the default.
 
-The {{cssxref("mask-repeat")}} property determines sets how mask images are repeated, or tiled, after the initial mask image has been sized and positioned. The first (and possibly only) mask-image repetition is positioned by [the `mask-position` property](#the_mask-position_property) and sized by [the `mask-size` property](#the_mask-size_property). The positions of the repeated masks are based on this initial mask instance. This mask image can then be repeated along the horizontal axis, the vertical axis, both axes, or not repeated at all. The `mask-repeat` property is analogous to the {{cssxref("background-repeat")}} property.
+The {{cssxref("mask-repeat")}} property defines how mask images are repeated, or tiled, after the initial mask image has been sized and positioned. The first (and possibly only) mask-image repetition is positioned by [the `mask-position` property](#the_mask-position_property) and sized by [the `mask-size` property](#the_mask-size_property). The positions of the repeated masks are based on this initial mask instance. The `mask-repeat` property defines if and how that mask image is repeated along the horizontal axis, the vertical axis, both axes. The `mask-repeat` property is analogous to the {{cssxref("background-repeat")}} property, accepting the same [`<repeat-style>`](/en-US/docs/Web/CSS/mask-repeat#values) values.
 
 Continuing with the `masked-element` example, if we don't explicitly set the `mask-repeat` property, it will default to `repeat` for each layer, as if we had set the following:
 
