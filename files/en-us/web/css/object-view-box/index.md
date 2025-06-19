@@ -66,19 +66,14 @@ object-view-box: none;
 ## Syntax
 
 ```css
+/* keywords */
 object-view-box: none;
 
-/* inset(allSides) */
+/* Rectangular shape functions */
 object-view-box: inset(20%);
-/* inset(vertical horizontal) */
 object-view-box: inset(20% 30%);
-/* inset(top right bottom left) */
 object-view-box: inset(10px 0 25px 33px);
-
-/* xywh(x y width height) */
 object-view-box: xywh(95px 20px 60px 60px);
-
-/* rect(top right bottom left) */
 object-view-box: rect(10px 30px 30px 10px);
 
 /* Global values */
@@ -110,7 +105,11 @@ object-fit: unset;
 
 ### Live zoom in using object-view-box property
 
-In this example, we allow users to zoom in on a leopard image. The zoom-in point is fixed at the eye of the leopard. We take user input using HTML [`range`](Web/HTML/Reference/Elements/input/range) input element.
+In this example, users can zoom in on an image of a leopard, with the eye of the leopard being the focal point.
+
+### HTML
+
+We include an {{htmlelement("img")}} and a [`range`](Web/HTML/Reference/Elements/input/range) {{htmlelement("input")}} element, associating a {{htmlelement("label")}} with the `<input>` .
 
 ```html
 <img
@@ -121,6 +120,7 @@ In this example, we allow users to zoom in on a leopard image. The zoom-in point
 <input type="range" id="box-size" min="100" max="350" value="150" />
 ```
 
+### CSS
 ```css hidden
 input {
   width: 350px;
@@ -128,7 +128,7 @@ input {
 
 @supports not (object-view-box: none) {
   body::before {
-    content: "The 'object-view-box' property is not supported by your browser.";
+    content: "Your browser doesn't support the 'object-view-box' property.";
     color: black;
     background-color: #ffcd33;
     display: block;
@@ -155,6 +155,8 @@ img {
 ```
 
 In the above CSS, we define a custom property `--box-size` to adjust the view box size. Decreasing the size of the view box gives a zoom-in effect. Increasing the view box size gives a zoom-out effect. The `xywh()` function accepts an offset point and size of the view box. The view box's offset point is set at (500px, 30px), which is the top left corner of the right eye of the leopard.
+
+### JavaScript
 
 ```js
 const zoom = document.getElementById("box-size");
@@ -184,4 +186,4 @@ The above JavaScript updates the `--box-size` property value when the user inter
 
 - Other image-related CSS properties: {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}.
 - {{cssxref("background-size")}}
-- [Understanding aspect ratios](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
+- [Understanding aspect ratio](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
