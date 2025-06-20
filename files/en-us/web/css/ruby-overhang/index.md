@@ -7,7 +7,7 @@ browser-compat: css.properties.ruby-overhang
 
 {{CSSRef}}
 
-The **`ruby-overhang`** [CSS](/en-US/docs/Web/CSS) property specifies whether or not ruby text it overhangs any surrounding base text, and to what amount.
+The **`ruby-overhang`** [CSS](/en-US/docs/Web/CSS) property specifies whether or not ruby text overhangs any surrounding base text.
 
 {{InteractiveExample("CSS Demo: ruby-overhang")}}
 
