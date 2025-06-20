@@ -9,9 +9,17 @@ sidebar: learnsidebar
 The aim of this skill test is to assess whether you understand how [flexbox and flex items](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox) behave. Below are four sets of design problems that you might use flexbox to solve. Your task is to fix the problems.
 
 > [!NOTE]
-> Click **"Play"** in the code blocks in Tasks 1, 2, and 4 to edit the examples in the MDN Playground. Task 3 is an interactive example provided by our [learning partner](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds), [Scrimba](https://scrimba.com/home).
+> Click **"Play"** in the code blocks in Tasks 1, 2, and 3 to edit the examples in the MDN Playground.
 > You can also copy the code (click the clipboard icon) and paste it into an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 > If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+
+## Interactive challenge
+
+First of all, we are giving you a fun, interactive flexbox challenge created by our [learning partner](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds), [Scrimba](https://scrimba.com/home).
+
+Watch the embedded scrim and complete all the tasks on the timeline (the little ghost icons) by following the instructions and editing the code. When you are done, you can resume watching the scrim to check how the teacher's solution matches up to yours.
+
+<scrim-inline url="https://scrimba.com/frontend-path-c0j/~03a" scrimtitle="Flexbox alignment challenges"></scrim-inline>
 
 ## Task 1
 
@@ -157,14 +165,6 @@ li:first-child {
 </details>
 
 ## Task 3
-
-For this task, we are handing you over to our [learning partner](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds), [Scrimba](https://scrimba.com/home), for a fun, interactive flexbox challenge.
-
-Watch the embedded scrim and complete all the tasks on the timeline (the little ghost icons) by following the instructions and editing the code. When you are done, you can resume watching the scrim to check how the teacher's solution matches up to yours.
-
-<scrim-inline url="https://scrimba.com/frontend-path-c0j/~03a" scrimtitle="Flexbox alignment challenges"></scrim-inline>
-
-## Task 4
 
 In this task, we want you to arrange these items into rows as in the image below:
 
