@@ -171,7 +171,8 @@ You can add the {{httpheader("Integrity-Policy")}} header to your document in or
 Integrity-Policy: blocked-destinations=(script), endpoints=(integrity-endpoint, some-other-integrity-endpoint)
 ```
 
-In case you're not sure all your the external scripts have integrity metadata, you can enable the report-only version of the feature and start getting reports of violations. You can do that with the {{httpheader("Integrity-Policy-Report-Only") header.
+In case you're not sure all your the external scripts have integrity metadata, you can enable the report-only version of the feature and start getting reports of violations.
+You can do that with the {{httpheader("Integrity-Policy-Report-Only")}} header.
 
 ```http
 Integrity-Policy-Report-Only: blocked-destinations=(script), endpoints=(integrity-endpoint, some-other-integrity-endpoint)
