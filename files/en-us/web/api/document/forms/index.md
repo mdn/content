@@ -12,6 +12,21 @@ The **`forms`** read-only property of
 the {{domxref("Document")}} interface returns an {{domxref("HTMLCollection")}} listing
 all the {{HTMLElement("form")}} elements contained in the document.
 
+> In addition to using `document.forms`, some browsers also expose named `<form>` elements as **properties of the `document` object** itself.
+> For example:
+>
+> ```html
+> <form name="loginForm">...</form>
+> ```
+>
+> ```js
+> console.log(document.loginForm); // Accesses the form via its name attribute
+> ```
+>
+> This behavior is part of the HTML specification's [named property access](https://html.spec.whatwg.org/multipage/window-object.html#named-access-on-the-window-object).
+> However, **this approach is discouraged** in modern development due to potential naming conflicts and reduced code clarity.
+> Prefer using `document.forms.namedItem("loginForm")`, `document.forms["loginForm"]`, or `document.querySelector()` instead.
+
 > [!NOTE]
 > Similarly, you can access a list of a form's component user
 > input elements using the {{domxref("HTMLFormElement.elements")}} property.
@@ -72,6 +87,9 @@ const loginForm = document.forms.login; // Or document.forms['login']
 loginForm.elements.email.placeholder = "test@example.com";
 loginForm.elements.password.placeholder = "password";
 ```
+
+> [!NOTE]
+> While it's possible to access forms directly via document.formName, tis is discouraged. Always prefer document.forms.namedItem("formName") or standard selectors for greater reliability.
 
 ## Specifications
 
