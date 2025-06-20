@@ -46,9 +46,13 @@ Also, as a legacy from SVG 1.1, {{SVGElement('linearGradient')}} and {{SVGElemen
   </tbody>
 </table>
 
-## Example
+## Examples
 
-```css hidden
+### Apply a transform to a single SVG element
+
+In this example, we apply a `transform` to a single {{svgelement("g")}} element inside an SVG document:
+
+```css hidden live-sample___transform-single-element live-sample___transform-svg-document
 html,
 body,
 svg {
@@ -56,7 +60,7 @@ svg {
 }
 ```
 
-```html
+```html live-sample___transform-single-element
 <svg
   viewBox="-40 0 150 100"
   xmlns="http://www.w3.org/2000/svg"
@@ -76,7 +80,32 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample("Example", '100%', 200)}}
+{{EmbedLiveSample("transform-single-element", '100%', 200)}}
+
+### Apply a transform to an entire SVG document
+
+In this example, we apply a `transform` to the {{svgelement("svg")}} root element, meaning that the transform is applied to the entire SVG document:
+
+```html live-sample___transform-svg-document
+<svg
+  viewBox="-40 0 150 100"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  transform="rotate(-10 50 100)
+               translate(-36 15.5)
+               skewX(40)
+               scale(1 0.5)">
+  <g fill="grey">
+    <path
+      id="heart"
+      d="M 10,30 A 20,20 0,0,1 50,30 A 20,20 0,0,1 90,30 Q 90,60 50,90 Q 10,60 10,30 z" />
+  </g>
+
+  <use href="#heart" fill="none" stroke="red" />
+</svg>
+```
+
+{{EmbedLiveSample("transform-svg-document", '100%', 200)}}
 
 ## Transform functions
 
