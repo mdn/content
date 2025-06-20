@@ -1,6 +1,6 @@
 ---
 title: arguments[Symbol.iterator]()
-short-title: iterator]()
+short-title: "[Symbol.iterator]"
 slug: Web/JavaScript/Reference/Functions/arguments/Symbol.iterator
 page-type: javascript-instance-method
 browser-compat: javascript.functions.arguments.@@iterator
