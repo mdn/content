@@ -13,7 +13,10 @@ The **`transform`** attribute defines a list of transform definitions that are a
 
 ## Elements
 
-In SVG 2, you can use the `transform` attribute on any SVG element inside the {{SVGElement('svg')}} root. In addition, some browsers support using `transform` on the `<svg>` root itself, which is convenient for applying transforms to an entire SVG image without the need for extra wrapper elements or CSS workarounds.
+In SVG 2, you can use the `transform` attribute on any element, including the {{SVGElement('svg')}} root.
+Note that using `transform` on the `<svg>` root is a newer feature, and you should check [browser compatibility](#browser_compatibility) for support.
+Using `transform` on the `<svg>` root is convenient for applying transforms to an entire SVG image without the need for extra wrapper elements or CSS workarounds.
+
 
 In SVG 1.1, only these 16 elements were allowed to have a `transform` applied: {{SVGElement('a')}}, {{SVGElement('circle')}}, {{SVGElement('clipPath')}}, {{SVGElement('defs')}}, {{SVGElement('ellipse')}}, {{SVGElement('foreignObject')}}, {{SVGElement('g')}}, {{SVGElement('image')}}, {{SVGElement('line')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('switch')}}, {{SVGElement('text')}}, and {{SVGElement('use')}}.
 
