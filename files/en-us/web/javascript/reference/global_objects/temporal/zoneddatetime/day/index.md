@@ -1,5 +1,6 @@
 ---
 title: Temporal.ZonedDateTime.prototype.day
+short-title: day
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/day
 page-type: javascript-instance-accessor-property
 status:

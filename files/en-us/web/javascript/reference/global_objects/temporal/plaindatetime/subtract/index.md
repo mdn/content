@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainDateTime.prototype.subtract()
+short-title: subtract()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime/subtract
 page-type: javascript-instance-method
 status:

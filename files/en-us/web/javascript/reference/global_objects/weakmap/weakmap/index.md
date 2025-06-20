@@ -1,5 +1,6 @@
 ---
 title: WeakMap() constructor
+short-title: WeakMap()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/WeakMap
 page-type: javascript-constructor
 browser-compat: javascript.builtins.WeakMap.WeakMap

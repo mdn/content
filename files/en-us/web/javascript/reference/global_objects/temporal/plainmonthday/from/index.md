@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainMonthDay.from()
+short-title: from()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainMonthDay/from
 page-type: javascript-static-method
 status:

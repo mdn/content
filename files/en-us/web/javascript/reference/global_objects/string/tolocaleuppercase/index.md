@@ -1,5 +1,6 @@
 ---
 title: String.prototype.toLocaleUpperCase()
+short-title: toLocaleUpperCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.toLocaleUpperCase

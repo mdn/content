@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainTime.prototype.toLocaleString()
+short-title: toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime/toLocaleString
 page-type: javascript-instance-method
 status:

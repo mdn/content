@@ -78,9 +78,16 @@ This article provides information about the changes in Firefox 140 that affect d
 
 #### General
 
+- Improved the Actions implementation in both Marionette and WebDriver BiDi to prevent microtasks from being blocked while individual events are dispatched. ([Firefox bug 1965183](https://bugzil.la/1965183))
+- Fixed a bug where WebDriver Classic and BiDi commands - particularly Action commands - could time out while waiting for a RequestAnimationFrame. ([Firefox bug 1947402](https://bugzil.la/1947402))
+
 #### WebDriver BiDi
 
-#### Marionette
+- Added support for `acceptInsecureCerts` argument to `browser.createUserContext` command. This argument allows clients to disable or enable certificate related security settings for a specific user context (aka Firefox container) and override the settings specified for a session. ([Firefox bug 1959372](https://bugzil.la/1959372))
+- Implemented a new `browsingContext` event, `browsingContext.navigationCommitted`, which should be emitted as soon as a new document has been created for a navigation. ([Firefox bug 1945184](https://bugzil.la/1945184))
+- Fixed a bug for various `browsingContext` events which were unexpectedly emitted for webextension Browsing Contexts. ([Firefox bug 1903272](https://bugzil.la/1903272))
+- Updated the `webExtension.uninstall` command to throw a `NoSuchWebExtensionError` when an empty string is provided as the extension ID. ([Firefox bug 1956945](https://bugzil.la/1956945))
+- Updated `browsingContext.contextCreated` and `browsingContext.contextDestroyed` events to return the `clientWindow` property in all the remaining cases (including Firefox for Android). This property corresponds to the ID of the window owning the Browsing Context. ([Firefox bug 1953743](https://bugzil.la/1953743))
 
 ## Changes for add-on developers
 

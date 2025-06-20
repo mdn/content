@@ -156,7 +156,7 @@ function log(text) {
 The code first creates a new `Sanitizer` object that initially allows {{htmlelement("div")}} elements (removing attributes other than `id`) and also replaced {{htmlelement("span")}} elements with any child elements.
 
 It then calls `allowElement()`, firstly to add a {{htmlelement("div")}} element that removes `style` attributes.
-Since the `<div>` element is already allowed, it is removed from the [`elements` configuration](/en-US/docs/Web/API/SanitizerConfig#elements) and the `<div>` element definition is is appended.
+Since the `<div>` element is already allowed, it is removed from the [`elements` configuration](/en-US/docs/Web/API/SanitizerConfig#elements) and the `<div>` element definition is appended.
 
 A {{htmlelement("span")}} element is then added to the allow list, which removes it from the [`replaceWithChildrenElements` configuration list](/en-US/docs/Web/API/SanitizerConfig#replacewithchildrenelements).
 

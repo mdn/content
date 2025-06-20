@@ -1,5 +1,6 @@
 ---
 title: DataView.prototype.getFloat16()
+short-title: getFloat16()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getFloat16
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.getFloat16

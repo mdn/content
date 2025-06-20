@@ -1,5 +1,6 @@
 ---
 title: Date.prototype.getMilliseconds()
+short-title: getMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getMilliseconds

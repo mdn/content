@@ -1,5 +1,6 @@
 ---
 title: Temporal.ZonedDateTime.prototype.subtract()
+short-title: subtract()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/subtract
 page-type: javascript-instance-method
 status:

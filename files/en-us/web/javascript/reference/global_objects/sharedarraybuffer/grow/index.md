@@ -1,5 +1,6 @@
 ---
 title: SharedArrayBuffer.prototype.grow()
+short-title: grow()
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/grow
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.SharedArrayBuffer.grow

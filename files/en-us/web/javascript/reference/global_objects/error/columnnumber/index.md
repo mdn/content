@@ -1,5 +1,6 @@
 ---
 title: "Error: columnNumber"
+short-title: columnNumber
 slug: Web/JavaScript/Reference/Global_Objects/Error/columnNumber
 page-type: javascript-instance-data-property
 status:
