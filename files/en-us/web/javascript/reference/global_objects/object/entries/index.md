@@ -1,5 +1,6 @@
 ---
 title: Object.entries()
+short-title: entries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/entries
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.entries

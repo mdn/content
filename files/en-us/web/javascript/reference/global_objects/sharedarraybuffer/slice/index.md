@@ -1,5 +1,6 @@
 ---
 title: SharedArrayBuffer.prototype.slice()
+short-title: slice()
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.SharedArrayBuffer.slice

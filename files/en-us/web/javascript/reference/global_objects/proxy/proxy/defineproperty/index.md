@@ -1,5 +1,6 @@
 ---
 title: handler.defineProperty()
+short-title: defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.defineProperty

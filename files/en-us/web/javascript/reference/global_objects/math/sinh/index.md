@@ -1,5 +1,6 @@
 ---
 title: Math.sinh()
+short-title: sinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sinh
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.sinh

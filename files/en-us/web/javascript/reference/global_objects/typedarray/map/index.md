@@ -1,5 +1,6 @@
 ---
 title: TypedArray.prototype.map()
+short-title: map()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/map
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.map

@@ -1,5 +1,6 @@
 ---
 title: Temporal.Now.instant()
+short-title: instant()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Now/instant
 page-type: javascript-static-method
 status:

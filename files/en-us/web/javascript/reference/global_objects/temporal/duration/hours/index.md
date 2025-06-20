@@ -1,5 +1,6 @@
 ---
 title: Temporal.Duration.prototype.hours
+short-title: hours
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/hours
 page-type: javascript-instance-accessor-property
 status:

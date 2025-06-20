@@ -1,5 +1,6 @@
 ---
 title: DataView.prototype.setInt8()
+short-title: setInt8()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setInt8
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.setInt8

@@ -1,5 +1,6 @@
 ---
 title: Error.stackTraceLimit
+short-title: stackTraceLimit
 slug: Web/JavaScript/Reference/Global_Objects/Error/stackTraceLimit
 page-type: javascript-static-data-property
 status:

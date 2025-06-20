@@ -1,5 +1,6 @@
 ---
 title: AsyncGenerator.prototype.throw()
+short-title: throw()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncGenerator/throw
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.AsyncGenerator.throw

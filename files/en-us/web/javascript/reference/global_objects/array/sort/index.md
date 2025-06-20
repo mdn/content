@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.sort()
+short-title: sort()
 slug: Web/JavaScript/Reference/Global_Objects/Array/sort
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.sort

@@ -1,5 +1,6 @@
 ---
 title: Temporal.ZonedDateTime.prototype.dayOfYear
+short-title: dayOfYear
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/dayOfYear
 page-type: javascript-instance-accessor-property
 status:

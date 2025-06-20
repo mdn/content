@@ -1,5 +1,6 @@
 ---
 title: Date.now()
+short-title: now()
 slug: Web/JavaScript/Reference/Global_Objects/Date/now
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Date.now

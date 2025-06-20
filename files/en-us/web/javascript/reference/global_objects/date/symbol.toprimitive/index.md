@@ -1,5 +1,6 @@
 ---
 title: Date.prototype[Symbol.toPrimitive]()
+short-title: "[Symbol.toPrimitive]()"
 slug: Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.@@toPrimitive

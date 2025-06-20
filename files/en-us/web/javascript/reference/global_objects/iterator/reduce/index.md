@@ -1,5 +1,6 @@
 ---
 title: Iterator.prototype.reduce()
+short-title: reduce()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/reduce
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Iterator.reduce

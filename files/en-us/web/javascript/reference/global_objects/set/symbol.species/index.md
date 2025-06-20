@@ -1,5 +1,6 @@
 ---
 title: Set[Symbol.species]
+short-title: "[Symbol.species]"
 slug: Web/JavaScript/Reference/Global_Objects/Set/Symbol.species
 page-type: javascript-static-accessor-property
 browser-compat: javascript.builtins.Set.@@species

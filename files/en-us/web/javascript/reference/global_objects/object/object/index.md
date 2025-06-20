@@ -1,5 +1,6 @@
 ---
 title: Object() constructor
+short-title: Object()
 slug: Web/JavaScript/Reference/Global_Objects/Object/Object
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Object.Object

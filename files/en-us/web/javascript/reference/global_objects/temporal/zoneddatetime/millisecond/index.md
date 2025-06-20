@@ -1,5 +1,6 @@
 ---
 title: Temporal.ZonedDateTime.prototype.millisecond
+short-title: millisecond
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/millisecond
 page-type: javascript-instance-accessor-property
 status:

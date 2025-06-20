@@ -1,5 +1,6 @@
 ---
 title: "Function: name"
+short-title: name
 slug: Web/JavaScript/Reference/Global_Objects/Function/name
 page-type: javascript-instance-data-property
 browser-compat: javascript.builtins.Function.name

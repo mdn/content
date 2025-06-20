@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainDateTime.prototype.dayOfWeek
+short-title: dayOfWeek
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime/dayOfWeek
 page-type: javascript-instance-accessor-property
 status:
