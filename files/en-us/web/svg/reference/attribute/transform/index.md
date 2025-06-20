@@ -17,7 +17,6 @@ In SVG 2, you can use the `transform` attribute on any element, including the {{
 Note that using `transform` on the `<svg>` root is a newer feature, and you should check [browser compatibility](#browser_compatibility) for support.
 Using `transform` on the `<svg>` root is convenient for applying transforms to an entire SVG image without the need for extra wrapper elements or CSS workarounds.
 
-
 In SVG 1.1, only these 16 elements were allowed to have a `transform` applied: {{SVGElement('a')}}, {{SVGElement('circle')}}, {{SVGElement('clipPath')}}, {{SVGElement('defs')}}, {{SVGElement('ellipse')}}, {{SVGElement('foreignObject')}}, {{SVGElement('g')}}, {{SVGElement('image')}}, {{SVGElement('line')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('switch')}}, {{SVGElement('text')}}, and {{SVGElement('use')}}.
 
 Also, as a legacy from SVG 1.1, {{SVGElement('linearGradient')}} and {{SVGElement('radialGradient')}} support the `gradientTransform` attribute, and {{SVGElement('pattern')}} supports the `patternTransform` attribute, both of which behave exactly like the `transform` attribute.
