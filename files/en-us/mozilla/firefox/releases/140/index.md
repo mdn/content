@@ -87,7 +87,7 @@ This article provides information about the changes in Firefox 140 that affect d
 - Implemented a new `browsingContext` event, `browsingContext.navigationCommitted`, which should be emitted as soon as a new document has been created for a navigation. ([Firefox bug 1945184](https://bugzil.la/1945184))
 - Fixed a bug for various `browsingContext` events which were unexpectedly emitted for webextension Browsing Contexts. ([Firefox bug 1903272](https://bugzil.la/1903272))
 - Updated the `webExtension.uninstall` command to throw a `NoSuchWebExtensionError` when an empty string is provided as the extension ID. ([Firefox bug 1956945](https://bugzil.la/1956945))
-- Updated `browsingContext.contextCreated` and `browsingContext.contextDestroyed` events to return the `clientWindow` property in all the remaining cases (including with Firefox for Android).([Firefox bug 1953743](https://bugzil.la/1953743))
+- Updated `browsingContext.contextCreated` and `browsingContext.contextDestroyed` events to return the `clientWindow` property in all the remaining cases (including Firefox for Android). This property corresponds to the ID of the window owning the Browsing Context. ([Firefox bug 1953743](https://bugzil.la/1953743))
 
 ## Changes for add-on developers
 
