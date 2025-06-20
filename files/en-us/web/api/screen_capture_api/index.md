@@ -28,7 +28,7 @@ captureStream =
   await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
 ```
 
-The {{jsxref("Promise")}} returned by `getDisplayMedia()` resolves to a {{domxref("MediaStream")}} which streams the captured media.
+The {{jsxref("Promise")}} returned by `getDisplayMedia()` resolves to a {{domxref("MediaStream")}} which streams the captured display surface.
 
 See the article [Using the Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture) for a more in-depth look at how to use the API to capture screen contents as a stream.
 
@@ -45,7 +45,7 @@ See [Using the Element Capture and Region Capture APIs](/en-US/docs/Web/API/Scre
 
 #### Controlling the captured screen area
 
-The Captured Surface Control API allows the capturing application to provide limited control over the captured screen, for example zooming and scrolling its contents.
+The Captured Surface Control API allows the capturing application to provide limited control over the captured display surface, for example zooming and scrolling its contents.
 
 See [Using the Captured Surface Control API](/en-US/docs/Web/API/Screen_Capture_API/Captured_Surface_Control) to learn more.
 
@@ -106,7 +106,7 @@ The Screen Capture API adds properties to the following dictionaries defined by 
 <iframe allow="display-capture" src="/some-other-document.html">…</iframe>
 ```
 
-You can also specify a desire to use the [Captured Surface Control API](/en-US/docs/Web/API/Screen_Capture_API/Captured_Surface_Control) via the {{HTTPHeader("Permissions-Policy/captured-surface-control", "captured-surface-control")}} directive. Specifically, the {{domxref("CaptureController.forwardWheel", "forwardWheel()")}}, {{domxref("CaptureController.increaseZoomLevel", "increaseZoomLevel()")}}, {{domxref("CaptureController.decreaseZoomLevel", "decreaseZoomLevel()")}}, and {{domxref("CaptureController.resetZoomLevel", "resetZoomLevel()")}} methods are conlled by this directive.
+You can also specify a desire to use the [Captured Surface Control API](/en-US/docs/Web/API/Screen_Capture_API/Captured_Surface_Control) via the {{HTTPHeader("Permissions-Policy/captured-surface-control", "captured-surface-control")}} directive. Specifically, the {{domxref("CaptureController.forwardWheel", "forwardWheel()")}}, {{domxref("CaptureController.increaseZoomLevel", "increaseZoomLevel()")}}, {{domxref("CaptureController.decreaseZoomLevel", "decreaseZoomLevel()")}}, and {{domxref("CaptureController.resetZoomLevel", "resetZoomLevel()")}} methods are controlled by this directive.
 
 The default allowlist for both directives is `self`, which lets any content within the same origin use Screen Capture.
 
@@ -122,4 +122,5 @@ The default allowlist for both directives is `self`, which lets any content with
 
 - [Using the Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
 - [Using the Element Capture and Region Capture APIs](/en-US/docs/Web/API/Screen_Capture_API/Element_Region_Capture)
+- [Using the Captured Surface Control API](/en-US/docs/Web/API/Screen_Capture_API/Captured_Surface_Control)
 - {{domxref("MediaDevices.getDisplayMedia()")}}
