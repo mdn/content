@@ -39,8 +39,7 @@
     "start": "yarn -s info:rari && yarn up-to-date-check && env-cmd --silent cross-env CONTENT_ROOT=files REACT_APP_DISABLE_AUTH=true BUILD_OUT_ROOT=build rari-server",
     "up-to-date-check": "node scripts/up-to-date-check.js",
     "jest": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
-    "test:front-matter-linter": "yarn jest tests",
-    "short-title": "node scripts/short-title.js"
+    "test:front-matter-linter": "yarn jest tests"
   },
   "dependencies": {
     "@apideck/better-ajv-errors": "^0.3.6",
