@@ -1,6 +1,6 @@
 ---
 title: Set.prototype[Symbol.iterator]()
-short-title: iterator]()
+short-title: "[Symbol.iterator]"
 slug: Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.@@iterator

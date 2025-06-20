@@ -1,6 +1,6 @@
 ---
 title: Array.prototype[Symbol.iterator]()
-short-title: iterator]()
+short-title: "[Symbol.iterator]"
 slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.@@iterator
