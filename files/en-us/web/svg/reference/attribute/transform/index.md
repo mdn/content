@@ -9,7 +9,7 @@ sidebar: svgref
 The **`transform`** attribute defines a list of transform definitions that are applied to an element and the element's children.
 
 > [!NOTE]
-> As a presentation attribute, `transform` also has a CSS property counterpart: {{cssxref("transform")}}. When both are specified, the CSS property takes priority. However, be aware that there are some differences in syntax between the CSS property and the attribute. See the documentation for the CSS property {{cssxref('transform')}} for the specific syntax to use in that case.
+> As a presentation attribute, `transform` also has a CSS property counterpart: {{cssxref("transform")}}. When both are specified, the CSS property takes priority. Note that there are some differences in syntax between the CSS property and the attribute!
 
 ## Elements
 
