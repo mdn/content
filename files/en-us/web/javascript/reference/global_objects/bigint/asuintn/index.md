@@ -1,5 +1,6 @@
 ---
 title: BigInt.asUintN()
+short-title: asuintn()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/asUintN
 page-type: javascript-static-method
 browser-compat: javascript.builtins.BigInt.asUintN

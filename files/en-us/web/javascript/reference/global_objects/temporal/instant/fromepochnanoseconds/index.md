@@ -1,5 +1,6 @@
 ---
 title: Temporal.Instant.fromEpochNanoseconds()
+short-title: fromepochnanoseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Instant/fromEpochNanoseconds
 page-type: javascript-static-method
 status:

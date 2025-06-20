@@ -1,5 +1,6 @@
 ---
 title: Date.UTC()
+short-title: utc()
 slug: Web/JavaScript/Reference/Global_Objects/Date/UTC
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Date.UTC

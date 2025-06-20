@@ -1,5 +1,6 @@
 ---
 title: Temporal.Now.timeZoneId()
+short-title: timezoneid()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Now/timeZoneId
 page-type: javascript-static-method
 status:

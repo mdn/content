@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainYearMonth.from()
+short-title: from()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth/from
 page-type: javascript-static-method
 status:

@@ -1,5 +1,6 @@
 ---
 title: Object.defineProperty()
+short-title: defineproperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.defineProperty

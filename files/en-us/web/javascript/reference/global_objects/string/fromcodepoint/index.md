@@ -1,5 +1,6 @@
 ---
 title: String.fromCodePoint()
+short-title: fromcodepoint()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
 page-type: javascript-static-method
 browser-compat: javascript.builtins.String.fromCodePoint

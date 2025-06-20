@@ -1,5 +1,6 @@
 ---
 title: Error.captureStackTrace()
+short-title: capturestacktrace()
 slug: Web/JavaScript/Reference/Global_Objects/Error/captureStackTrace
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Error.captureStackTrace

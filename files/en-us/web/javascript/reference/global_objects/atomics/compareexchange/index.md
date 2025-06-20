@@ -1,5 +1,6 @@
 ---
 title: Atomics.compareExchange()
+short-title: compareexchange()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/compareExchange
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.compareExchange

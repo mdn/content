@@ -1,5 +1,6 @@
 ---
 title: Map.groupBy()
+short-title: groupby()
 slug: Web/JavaScript/Reference/Global_Objects/Map/groupBy
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Map.groupBy

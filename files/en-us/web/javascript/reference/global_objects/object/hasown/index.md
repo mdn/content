@@ -1,5 +1,6 @@
 ---
 title: Object.hasOwn()
+short-title: hasown()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwn
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.hasOwn

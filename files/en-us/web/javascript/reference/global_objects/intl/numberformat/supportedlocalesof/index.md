@@ -1,5 +1,6 @@
 ---
 title: Intl.NumberFormat.supportedLocalesOf()
+short-title: supportedlocalesof()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/supportedLocalesOf
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Intl.NumberFormat.supportedLocalesOf

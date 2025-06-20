@@ -1,5 +1,6 @@
 ---
 title: Atomics.or()
+short-title: or()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/or
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.or
