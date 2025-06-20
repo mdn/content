@@ -1,6 +1,5 @@
 ---
 title: Intl.Segmenter
-short-title: Segmenter
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter
 page-type: javascript-class
 browser-compat: javascript.builtins.Intl.Segmenter

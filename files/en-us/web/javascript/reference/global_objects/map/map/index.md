@@ -1,5 +1,6 @@
 ---
 title: Map() constructor
+short-title: Map()
 slug: Web/JavaScript/Reference/Global_Objects/Map/Map
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Map.Map

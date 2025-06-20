@@ -1,6 +1,6 @@
 ---
 title: Object.getOwnPropertySymbols()
-short-title: getownpropertysymbols()
+short-title: getOwnPropertySymbols()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.getOwnPropertySymbols

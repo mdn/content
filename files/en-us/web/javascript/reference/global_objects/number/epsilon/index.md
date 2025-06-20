@@ -1,5 +1,6 @@
 ---
 title: Number.EPSILON
+short-title: EPSILON
 slug: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Number.EPSILON

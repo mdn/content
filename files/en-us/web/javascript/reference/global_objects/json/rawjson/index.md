@@ -1,6 +1,6 @@
 ---
 title: JSON.rawJSON()
-short-title: rawjson()
+short-title: rawJSON()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/rawJSON
 page-type: javascript-static-method
 browser-compat: javascript.builtins.JSON.rawJSON

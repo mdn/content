@@ -1,6 +1,6 @@
 ---
 title: Intl.getCanonicalLocales()
-short-title: getcanonicallocales()
+short-title: getCanonicalLocales()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/getCanonicalLocales
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Intl.getCanonicalLocales

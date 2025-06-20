@@ -1,6 +1,6 @@
 ---
 title: Reflect.getOwnPropertyDescriptor()
-short-title: getownpropertydescriptor()
+short-title: getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/getOwnPropertyDescriptor
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.getOwnPropertyDescriptor

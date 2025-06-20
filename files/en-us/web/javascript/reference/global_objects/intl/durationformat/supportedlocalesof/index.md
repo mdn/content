@@ -1,6 +1,6 @@
 ---
 title: Intl.DurationFormat.supportedLocalesOf()
-short-title: supportedlocalesof()
+short-title: supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/supportedLocalesOf
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Intl.DurationFormat.supportedLocalesOf

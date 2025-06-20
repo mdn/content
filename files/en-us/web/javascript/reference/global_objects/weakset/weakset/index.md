@@ -1,5 +1,6 @@
 ---
 title: WeakSet() constructor
+short-title: WeakSet()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/WeakSet
 page-type: javascript-constructor
 browser-compat: javascript.builtins.WeakSet.WeakSet

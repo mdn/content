@@ -1,6 +1,6 @@
 ---
 title: Reflect.setPrototypeOf()
-short-title: setprototypeof()
+short-title: setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/setPrototypeOf
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.setPrototypeOf

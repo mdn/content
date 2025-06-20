@@ -1,6 +1,5 @@
 ---
 title: BigInt
-short-title: BigInt
 slug: Web/JavaScript/Reference/Global_Objects/BigInt
 page-type: javascript-class
 browser-compat: javascript.builtins.BigInt

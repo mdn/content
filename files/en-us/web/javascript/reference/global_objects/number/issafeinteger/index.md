@@ -1,6 +1,6 @@
 ---
 title: Number.isSafeInteger()
-short-title: issafeinteger()
+short-title: isSafeInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Number.isSafeInteger

@@ -1,6 +1,6 @@
 ---
 title: Reflect.preventExtensions()
-short-title: preventextensions()
+short-title: preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/preventExtensions
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.preventExtensions

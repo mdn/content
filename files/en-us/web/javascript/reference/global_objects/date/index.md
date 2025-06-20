@@ -1,6 +1,5 @@
 ---
 title: Date
-short-title: Date
 slug: Web/JavaScript/Reference/Global_Objects/Date
 page-type: javascript-class
 browser-compat: javascript.builtins.Date

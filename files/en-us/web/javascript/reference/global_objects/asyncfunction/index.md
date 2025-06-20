@@ -1,6 +1,5 @@
 ---
 title: AsyncFunction
-short-title: AsyncFunction
 slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 page-type: javascript-class
 browser-compat: javascript.builtins.AsyncFunction

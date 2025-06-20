@@ -1,6 +1,5 @@
 ---
 title: TypedArray
-short-title: TypedArray
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray
 page-type: javascript-class
 browser-compat: javascript.builtins.TypedArray

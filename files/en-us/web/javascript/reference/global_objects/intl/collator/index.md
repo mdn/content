@@ -1,6 +1,5 @@
 ---
 title: Intl.Collator
-short-title: Collator
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator
 page-type: javascript-class
 browser-compat: javascript.builtins.Intl.Collator

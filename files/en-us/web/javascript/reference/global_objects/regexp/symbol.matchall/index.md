@@ -1,6 +1,6 @@
 ---
 title: RegExp.prototype[Symbol.matchAll]()
-short-title: matchAll]()
+short-title: "[Symbol.matchAll]()"
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.@@matchAll

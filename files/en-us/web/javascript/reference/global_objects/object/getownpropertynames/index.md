@@ -1,6 +1,6 @@
 ---
 title: Object.getOwnPropertyNames()
-short-title: getownpropertynames()
+short-title: getOwnPropertyNames()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.getOwnPropertyNames

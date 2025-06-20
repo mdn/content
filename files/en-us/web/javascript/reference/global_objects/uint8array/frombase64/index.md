@@ -1,6 +1,6 @@
 ---
 title: Uint8Array.fromBase64()
-short-title: frombase64()
+short-title: fromBase64()
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array/fromBase64
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Uint8Array.fromBase64

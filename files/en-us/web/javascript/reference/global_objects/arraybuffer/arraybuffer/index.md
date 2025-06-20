@@ -1,5 +1,6 @@
 ---
 title: ArrayBuffer() constructor
+short-title: ArrayBuffer()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer
 page-type: javascript-constructor
 browser-compat: javascript.builtins.ArrayBuffer.ArrayBuffer

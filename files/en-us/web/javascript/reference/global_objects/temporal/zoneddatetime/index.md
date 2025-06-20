@@ -1,6 +1,5 @@
 ---
 title: Temporal.ZonedDateTime
-short-title: ZonedDateTime
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime
 page-type: javascript-class
 status:

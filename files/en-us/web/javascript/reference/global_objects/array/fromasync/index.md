@@ -1,6 +1,6 @@
 ---
 title: Array.fromAsync()
-short-title: fromasync()
+short-title: fromAsync()
 slug: Web/JavaScript/Reference/Global_Objects/Array/fromAsync
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Array.fromAsync

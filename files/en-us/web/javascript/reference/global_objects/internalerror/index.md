@@ -1,6 +1,5 @@
 ---
 title: InternalError
-short-title: InternalError
 slug: Web/JavaScript/Reference/Global_Objects/InternalError
 page-type: javascript-class
 status:

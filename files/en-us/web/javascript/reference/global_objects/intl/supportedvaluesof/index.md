@@ -1,6 +1,6 @@
 ---
 title: Intl.supportedValuesOf()
-short-title: supportedvaluesof()
+short-title: supportedValuesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Intl.supportedValuesOf

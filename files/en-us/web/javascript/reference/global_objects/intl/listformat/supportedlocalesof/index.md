@@ -1,6 +1,6 @@
 ---
 title: Intl.ListFormat.supportedLocalesOf()
-short-title: supportedlocalesof()
+short-title: supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/supportedLocalesOf
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Intl.ListFormat.supportedLocalesOf

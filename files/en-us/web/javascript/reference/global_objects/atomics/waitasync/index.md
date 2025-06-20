@@ -1,6 +1,6 @@
 ---
 title: Atomics.waitAsync()
-short-title: waitasync()
+short-title: waitAsync()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/waitAsync
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.waitAsync

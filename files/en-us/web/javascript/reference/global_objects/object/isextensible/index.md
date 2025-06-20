@@ -1,6 +1,6 @@
 ---
 title: Object.isExtensible()
-short-title: isextensible()
+short-title: isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.isExtensible

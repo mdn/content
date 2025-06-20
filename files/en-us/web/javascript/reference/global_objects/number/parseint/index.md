@@ -1,6 +1,6 @@
 ---
 title: Number.parseInt()
-short-title: parseint()
+short-title: parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseInt
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Number.parseInt

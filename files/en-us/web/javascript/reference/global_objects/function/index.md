@@ -1,6 +1,5 @@
 ---
 title: Function
-short-title: Function
 slug: Web/JavaScript/Reference/Global_Objects/Function
 page-type: javascript-class
 browser-compat: javascript.builtins.Function

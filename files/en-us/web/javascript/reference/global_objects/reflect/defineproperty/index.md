@@ -1,6 +1,6 @@
 ---
 title: Reflect.defineProperty()
-short-title: defineproperty()
+short-title: defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.defineProperty

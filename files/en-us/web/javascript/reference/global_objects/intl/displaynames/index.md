@@ -1,6 +1,5 @@
 ---
 title: Intl.DisplayNames
-short-title: DisplayNames
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames
 page-type: javascript-class
 browser-compat: javascript.builtins.Intl.DisplayNames

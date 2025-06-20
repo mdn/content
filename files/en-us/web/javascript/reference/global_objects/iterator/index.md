@@ -1,6 +1,5 @@
 ---
 title: Iterator
-short-title: Iterator
 slug: Web/JavaScript/Reference/Global_Objects/Iterator
 page-type: javascript-class
 browser-compat: javascript.builtins.Iterator

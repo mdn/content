@@ -1,6 +1,6 @@
 ---
 title: Uint8Array.fromHex()
-short-title: fromhex()
+short-title: fromHex()
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array/fromHex
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Uint8Array.fromHex

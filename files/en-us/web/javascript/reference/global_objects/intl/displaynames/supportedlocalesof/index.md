@@ -1,6 +1,6 @@
 ---
 title: Intl.DisplayNames.supportedLocalesOf()
-short-title: supportedlocalesof()
+short-title: supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/supportedLocalesOf
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Intl.DisplayNames.supportedLocalesOf

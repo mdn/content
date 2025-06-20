@@ -1,6 +1,5 @@
 ---
 title: Temporal.PlainMonthDay
-short-title: PlainMonthDay
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainMonthDay
 page-type: javascript-class
 status:

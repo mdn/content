@@ -1,5 +1,6 @@
 ---
 title: Int8Array() constructor
+short-title: Int8Array()
 slug: Web/JavaScript/Reference/Global_Objects/Int8Array/Int8Array
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Int8Array.Int8Array

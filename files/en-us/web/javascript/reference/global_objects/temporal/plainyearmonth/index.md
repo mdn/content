@@ -1,6 +1,5 @@
 ---
 title: Temporal.PlainYearMonth
-short-title: PlainYearMonth
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth
 page-type: javascript-class
 status:

@@ -1,6 +1,6 @@
 ---
 title: Promise.withResolvers()
-short-title: withresolvers()
+short-title: withResolvers()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/withResolvers
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Promise.withResolvers

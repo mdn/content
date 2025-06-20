@@ -1,6 +1,5 @@
 ---
 title: Temporal.Duration
-short-title: Duration
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration
 page-type: javascript-class
 status:

@@ -1,6 +1,5 @@
 ---
 title: Int32Array
-short-title: Int32Array
 slug: Web/JavaScript/Reference/Global_Objects/Int32Array
 page-type: javascript-class
 browser-compat: javascript.builtins.Int32Array

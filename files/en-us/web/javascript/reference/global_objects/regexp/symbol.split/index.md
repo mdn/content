@@ -1,6 +1,6 @@
 ---
 title: RegExp.prototype[Symbol.split]()
-short-title: split]()
+short-title: "[Symbol.split]()"
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.@@split

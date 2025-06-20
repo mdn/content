@@ -1,6 +1,6 @@
 ---
 title: Temporal.Now.plainDateTimeISO()
-short-title: plaindatetimeiso()
+short-title: plainDateTimeISO()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Now/plainDateTimeISO
 page-type: javascript-static-method
 status:

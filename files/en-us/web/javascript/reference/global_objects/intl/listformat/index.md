@@ -1,6 +1,5 @@
 ---
 title: Intl.ListFormat
-short-title: ListFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 page-type: javascript-class
 browser-compat: javascript.builtins.Intl.ListFormat

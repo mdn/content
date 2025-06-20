@@ -1,6 +1,5 @@
 ---
 title: Uint8Array
-short-title: Uint8Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array
 page-type: javascript-class
 browser-compat: javascript.builtins.Uint8Array

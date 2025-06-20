@@ -1,6 +1,5 @@
 ---
 title: AsyncGeneratorFunction
-short-title: AsyncGeneratorFunction
 slug: Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction
 page-type: javascript-class
 browser-compat: javascript.builtins.AsyncGeneratorFunction

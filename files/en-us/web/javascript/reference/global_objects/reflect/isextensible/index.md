@@ -1,6 +1,6 @@
 ---
 title: Reflect.isExtensible()
-short-title: isextensible()
+short-title: isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/isExtensible
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.isExtensible

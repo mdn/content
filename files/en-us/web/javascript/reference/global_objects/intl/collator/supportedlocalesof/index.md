@@ -1,6 +1,6 @@
 ---
 title: Intl.Collator.supportedLocalesOf()
-short-title: supportedlocalesof()
+short-title: supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/supportedLocalesOf
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Intl.Collator.supportedLocalesOf

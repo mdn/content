@@ -1,6 +1,5 @@
 ---
 title: Intl.DurationFormat
-short-title: DurationFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat
 page-type: javascript-class
 browser-compat: javascript.builtins.Intl.DurationFormat

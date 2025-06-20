@@ -1,6 +1,6 @@
 ---
 title: Promise.allSettled()
-short-title: allsettled()
+short-title: allSettled()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Promise.allSettled

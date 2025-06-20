@@ -1,6 +1,6 @@
 ---
 title: Error.isError()
-short-title: iserror()
+short-title: isError()
 slug: Web/JavaScript/Reference/Global_Objects/Error/isError
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Error.isError

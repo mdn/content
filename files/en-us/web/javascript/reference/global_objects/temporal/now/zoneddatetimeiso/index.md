@@ -1,6 +1,6 @@
 ---
 title: Temporal.Now.zonedDateTimeISO()
-short-title: zoneddatetimeiso()
+short-title: zonedDateTimeISO()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Now/zonedDateTimeISO
 page-type: javascript-static-method
 status:

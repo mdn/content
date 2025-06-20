@@ -1,6 +1,6 @@
 ---
 title: Object.getOwnPropertyDescriptor()
-short-title: getownpropertydescriptor()
+short-title: getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.getOwnPropertyDescriptor

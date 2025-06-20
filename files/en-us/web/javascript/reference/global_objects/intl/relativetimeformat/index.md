@@ -1,6 +1,5 @@
 ---
 title: Intl.RelativeTimeFormat
-short-title: RelativeTimeFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 page-type: javascript-class
 browser-compat: javascript.builtins.Intl.RelativeTimeFormat

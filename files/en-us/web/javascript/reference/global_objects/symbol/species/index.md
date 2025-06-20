@@ -1,5 +1,6 @@
 ---
 title: Symbol.species
+short-title: species
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/species
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.species

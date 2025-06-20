@@ -1,5 +1,6 @@
 ---
 title: Intl.NumberFormat() constructor
+short-title: Intl.NumberFormat()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Intl.NumberFormat.NumberFormat

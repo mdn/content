@@ -1,6 +1,6 @@
 ---
 title: Function.prototype[Symbol.hasInstance]()
-short-title: hasInstance]()
+short-title: "[Symbol.hasInstance]()"
 slug: Web/JavaScript/Reference/Global_Objects/Function/Symbol.hasInstance
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Function.@@hasInstance

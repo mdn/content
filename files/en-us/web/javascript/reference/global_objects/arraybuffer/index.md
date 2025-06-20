@@ -1,6 +1,5 @@
 ---
 title: ArrayBuffer
-short-title: ArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 page-type: javascript-class
 browser-compat: javascript.builtins.ArrayBuffer

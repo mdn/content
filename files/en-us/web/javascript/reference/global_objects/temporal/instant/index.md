@@ -1,6 +1,5 @@
 ---
 title: Temporal.Instant
-short-title: Instant
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Instant
 page-type: javascript-class
 status:
