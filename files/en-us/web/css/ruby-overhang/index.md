@@ -22,8 +22,7 @@ ruby-overhang: none;
 ```html interactive-example
 <section id="default-example">
   <p id="example-element">
-    AB<ruby>C<rp>(</rp><rt>1234</rt><rp>)</rp></ruby
-    >DEF<ruby>
+    AB<ruby>C<rp>(</rp><rt>1234</rt><rp>)</rp></ruby>DEF<ruby>
   </p>
 </section>
 ```
