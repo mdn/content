@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainDateTime
+short-title: PlainDateTime
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime
 page-type: javascript-class
 status:

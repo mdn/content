@@ -1,5 +1,6 @@
 ---
 title: Uint8Array.prototype.toHex()
+short-title: toHex()
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array/toHex
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Uint8Array.toHex

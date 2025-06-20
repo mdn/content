@@ -1,5 +1,6 @@
 ---
 title: Date.prototype.setMinutes()
+short-title: setMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMinutes
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setMinutes

@@ -1,5 +1,6 @@
 ---
 title: FinalizationRegistry
+short-title: FinalizationRegistry
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry
 page-type: javascript-class
 browser-compat: javascript.builtins.FinalizationRegistry

@@ -1,5 +1,6 @@
 ---
 title: EvalError
+short-title: EvalError
 slug: Web/JavaScript/Reference/Global_Objects/EvalError
 page-type: javascript-class
 browser-compat: javascript.builtins.EvalError

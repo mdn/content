@@ -1,5 +1,6 @@
 ---
 title: RegExp.prototype[Symbol.match]()
+short-title: match]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.@@match

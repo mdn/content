@@ -1,5 +1,6 @@
 ---
 title: Object
+short-title: Object
 slug: Web/JavaScript/Reference/Global_Objects/Object
 page-type: javascript-class
 browser-compat: javascript.builtins.Object

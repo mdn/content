@@ -1,5 +1,6 @@
 ---
 title: String.prototype.trim()
+short-title: trim()
 slug: Web/JavaScript/Reference/Global_Objects/String/trim
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.trim

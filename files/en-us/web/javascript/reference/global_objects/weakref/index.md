@@ -1,5 +1,6 @@
 ---
 title: WeakRef
+short-title: WeakRef
 slug: Web/JavaScript/Reference/Global_Objects/WeakRef
 page-type: javascript-class
 browser-compat: javascript.builtins.WeakRef

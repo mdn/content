@@ -1,5 +1,6 @@
 ---
 title: TypedArray.prototype[Symbol.iterator]()
+short-title: iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.@@iterator

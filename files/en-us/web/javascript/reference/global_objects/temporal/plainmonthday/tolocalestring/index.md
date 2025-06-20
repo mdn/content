@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainMonthDay.prototype.toLocaleString()
+short-title: toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainMonthDay/toLocaleString
 page-type: javascript-instance-method
 status:

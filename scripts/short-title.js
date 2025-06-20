@@ -25,15 +25,18 @@ async function walkDirectory(dir) {
 
 async function generate() {
   const files = await walkDirectory(rootDir);
+  const availableTypes = [
+    "javascript-static-method",
+    "javascript-instance-method",
+    "javascript-instance-accessor-property",
+    "javascript-class",
+  ];
 
   for (const file of files) {
     const content = await fs.readFile(file, "utf-8");
     const { data } = grayMatter(content);
 
-    if (
-      !data["short-title"] &&
-      data["page-type"].includes("javascript-static-method")
-    ) {
+    if (!data["short-title"] && availableTypes.includes(data["page-type"])) {
       data["short-title"] = generateTitle(data.title);
       const updatedContent = grayMatter.stringify(content, data);
       await fs.writeFile(file, updatedContent);

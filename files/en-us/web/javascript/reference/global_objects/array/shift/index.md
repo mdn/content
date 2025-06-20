@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.shift()
+short-title: shift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/shift
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.shift

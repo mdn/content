@@ -1,5 +1,6 @@
 ---
 title: BigInt64Array
+short-title: BigInt64Array
 slug: Web/JavaScript/Reference/Global_Objects/BigInt64Array
 page-type: javascript-class
 browser-compat: javascript.builtins.BigInt64Array

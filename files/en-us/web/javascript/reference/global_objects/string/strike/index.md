@@ -1,5 +1,6 @@
 ---
 title: String.prototype.strike()
+short-title: strike()
 slug: Web/JavaScript/Reference/Global_Objects/String/strike
 page-type: javascript-instance-method
 status:

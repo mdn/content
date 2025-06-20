@@ -1,5 +1,6 @@
 ---
 title: TypeError
+short-title: TypeError
 slug: Web/JavaScript/Reference/Global_Objects/TypeError
 page-type: javascript-class
 browser-compat: javascript.builtins.TypeError

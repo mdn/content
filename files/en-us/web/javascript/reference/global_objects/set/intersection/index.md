@@ -1,5 +1,6 @@
 ---
 title: Set.prototype.intersection()
+short-title: intersection()
 slug: Web/JavaScript/Reference/Global_Objects/Set/intersection
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.intersection

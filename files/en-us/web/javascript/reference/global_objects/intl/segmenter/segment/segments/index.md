@@ -1,5 +1,6 @@
 ---
 title: Segments
+short-title: Segments
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments
 page-type: javascript-class
 browser-compat: javascript.builtins.Intl.Segments

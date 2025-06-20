@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainDateTime.prototype.since()
+short-title: since()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime/since
 page-type: javascript-instance-method
 status:

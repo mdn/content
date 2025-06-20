@@ -1,5 +1,6 @@
 ---
 title: Float64Array
+short-title: Float64Array
 slug: Web/JavaScript/Reference/Global_Objects/Float64Array
 page-type: javascript-class
 browser-compat: javascript.builtins.Float64Array

@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainDate.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/toString
 page-type: javascript-instance-method
 status:

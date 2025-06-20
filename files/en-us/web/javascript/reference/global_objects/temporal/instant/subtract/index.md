@@ -1,5 +1,6 @@
 ---
 title: Temporal.Instant.prototype.subtract()
+short-title: subtract()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Instant/subtract
 page-type: javascript-instance-method
 status:
