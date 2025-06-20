@@ -7,7 +7,7 @@ page-type: glossary-definition
 {{GlossarySidebar}}
 
 A **robots.txt** is a file that is usually placed in the root of a website (for example, `https://www.example.com/robots.txt`).
-It specifies whether {{Glossary("crawler", "crawlers")}} are allowed or disallowed from accessing an entire website or to certain resources on a website.
+It specifies whether or not {{Glossary("crawler", "crawlers")}} are allowed access to an entire website, or to specified resources.
 A restrictive `robots.txt` file can prevent bandwidth consumption by crawlers.
 
 A site owner can forbid crawlers to detect a certain path (and all files in that path) or a specific file.
