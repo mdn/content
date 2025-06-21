@@ -35,7 +35,7 @@ aspect-ratio: 0.5;
     class="transition-all"
     height="640"
     id="example-element"
-    src="/shared-assets/images/examples/plumeria.jpg"
+    src="./trex.jpg"
     width="466" />
 </section>
 ```
@@ -142,7 +142,7 @@ div:nth-child(5) {
 In this example we are using two `<img>` elements. The first element does not have its `src` attribute set to an image file.
 
 ```html
-<img src="" /> <img src="plumeria.jpg" />
+<img src="" /> <img src="./trex.png" />
 ```
 
 The following code sets `3/2` as the preferred aspect ratio and `auto` as a fallback.
