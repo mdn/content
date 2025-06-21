@@ -1550,6 +1550,17 @@
       "properties": [],
       "events": []
     },
+    "Storage Buckets API": {
+      "overview": ["Storage Buckets API"],
+      "guides": [],
+      "interfaces": ["StorageBucket", "StorageBucketManager"],
+      "methods": [],
+      "properties": [
+        "Navigator.storageBuckets",
+        "WorkerNavigator.storageBuckets"
+      ],
+      "events": []
+    },
     "Streams": {
       "overview": ["Streams API"],
       "guides": [
