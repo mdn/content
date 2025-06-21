@@ -118,6 +118,7 @@ The [sizes](/en-US/docs/Web/HTML/Reference/Elements/source#sizes) attribute help
   src="fallback.jpg"
   alt="Example image">
 ```
+
 providing media query makes right image to choose from srcset , the last one is chose as default (here 800px), note Firefox stays responsive on resizing screen,but Chrome/Edge won't downscale after initial load, to change you need to disable cache in network tab, however this attribute is not mandatory when using srcset, but it is recommended to use it in order to provide additional information to the browser to help it select the best image source.
 
 Without sizes, the browser will use the default size of the image as specified by its dimensions in pixels. This may not be the best fit for all devices, especially if the image is displayed on different screen sizes or in different contexts.
