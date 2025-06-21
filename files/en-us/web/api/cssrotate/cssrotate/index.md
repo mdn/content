@@ -21,14 +21,11 @@ new CSSRotate(x, y, z, angle)
 ### Parameters
 
 - {{domxref('CSSRotate.x','x')}}
-  - : A value for the x-axis of the {{domxref('CSSRotate')}} object to be constructed.
-    This must either be a number or a {{domxref('CSSNumericValue')}}.
+  - : A value for the x-axis of the {{domxref('CSSRotate')}} object to be constructed. This must either be a number (which is wrapped into a {{domxref("CSSUnitValue")}} of `unit: "number"`) or a {{domxref("CSSNumericValue")}}.
 - {{domxref('CSSRotate.y','y')}}
-  - : A value for the y-axis of the {{domxref('CSSRotate')}} object to be constructed.
-    This must either be a number or a {{domxref('CSSNumericValue')}}.
+  - : A value for the y-axis of the {{domxref('CSSRotate')}} object to be constructed. This must either be a number (which is wrapped into a {{domxref("CSSUnitValue")}} of `unit: "number"`) or a {{domxref("CSSNumericValue")}}.
 - {{domxref('CSSRotate.z','z')}}
-  - : A value for the z-axis of the {{domxref('CSSRotate')}} object to be constructed.
-    This must either be a number or a {{domxref('CSSNumericValue')}}.
+  - : A value for the z-axis of the {{domxref('CSSRotate')}} object to be constructed. This must either be a number (which is wrapped into a {{domxref("CSSUnitValue")}} of `unit: "number"`) or a {{domxref("CSSNumericValue")}}.
 - {{domxref('CSSRotate.angle','angle')}}
   - : A value for the angle of the {{domxref('CSSRotate')}} object to be constructed. This
     must be a {{domxref('CSSNumericValue')}}.
