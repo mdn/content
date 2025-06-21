@@ -7,7 +7,7 @@ browser-compat: api.TextEncoder
 
 {{APIRef("Encoding API")}}{{AvailableInWorkers}}
 
-The **`TextEncoder`** interface takes a stream of code points as input and emits a stream of UTF-8 bytes.
+The **`TextEncoder`** interface takes a string as input and encodes it using {{glossary("UTF-8")}}.
 
 ## Constructor
 
