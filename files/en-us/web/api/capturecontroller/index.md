@@ -18,10 +18,30 @@ A `CaptureController` object is associated with a capture session by passing it 
 - {{ domxref("CaptureController.CaptureController", "CaptureController()") }} {{Experimental_Inline}}
   - : Creates a new `CaptureController` object instance.
 
+## Instance properties
+
+- {{ domxref("CaptureController.zoomLevel", "zoomLevel") }} {{Experimental_Inline}}
+  - : The captured display surface's current zoom percentage.
+
 ## Instance methods
 
+- {{ domxref("CaptureController.decreaseZoomLevel", "decreaseZoomLevel()") }} {{Experimental_Inline}}
+  - : Decreases the captured display surface's zoom percentage to the next level down.
+- {{ domxref("CaptureController.forwardWheel", "forwardWheel()") }} {{Experimental_Inline}}
+  - : Starts forwarding {{domxref("Element.wheel_event", "wheel")}} events fired on the referenced element to the viewport of an associated captured display surface.
+- {{ domxref("CaptureController.getSupportedZoomLevels", "getSupportedZoomLevels()") }} {{Experimental_Inline}}
+  - : Returns the different zoom percentages that the captured display surface supports.
+- {{ domxref("CaptureController.increaseZoomLevel", "increaseZoomLevel()") }} {{Experimental_Inline}}
+  - : Increases the captured display surface's zoom percentage to the next level up.
+- {{ domxref("CaptureController.resetZoomLevel", "resetZoomLevel()") }} {{Experimental_Inline}}
+  - : Resets the captured display surface's zoom percentage to its initial level.
 - {{ domxref("CaptureController.setFocusBehavior", "setFocusBehavior()") }} {{Experimental_Inline}}
   - : Controls whether the captured tab or window will be focused or whether the focus will remain with the tab containing the capturing app.
+
+## Events
+
+- {{ domxref("CaptureController.zoomlevelchange_event", "zoomlevelchange") }} {{Experimental_Inline}}
+  - : Fires when the captured display surface's zoom percentage changes.
 
 ## Examples
 
@@ -58,4 +78,6 @@ if (displaySurface === "browser") {
 
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
 - {{domxref("MediaDevices.getDisplayMedia()")}}
+- [Using the Element Capture and Region Capture APIs](/en-US/docs/Web/API/Screen_Capture_API/Element_Region_Capture)
+- [Using the Captured Surface Control API](/en-US/docs/Web/API/Screen_Capture_API/Captured_Surface_Control)
 - [Better screen sharing with Conditional Focus](https://developer.chrome.com/docs/web-platform/conditional-focus/)
