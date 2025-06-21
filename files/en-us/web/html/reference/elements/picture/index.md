@@ -106,6 +106,7 @@ The `srcset` attribute can also be used on the `<img>` element without needing t
   width="320"
   alt="MDN Web Docs logo" />
 ```
+
 ### The sizes attribute
 
 The [sizes](/en-US/docs/Web/HTML/Reference/Elements/source#sizes) attribute helps browser by providing clearly how much space the image takes in device layout in terms of CSS pixels, for example if device width is 400px and DPR is 2x. Actual image needed is 400*2=800px image, example:
