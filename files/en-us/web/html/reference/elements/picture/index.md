@@ -112,7 +112,7 @@ The `srcset` attribute can also be used on the `<img>` element without needing t
 The [sizes](/en-US/docs/Web/HTML/Reference/Elements/source#sizes) attribute helps browser by providing clearly how much space the image takes in device layout in terms of CSS pixels, for example if device width is 400px and DPR is 2x. Actual image needed is 400*2=800px image, example:
 
 ```html
-<img 
+<img
   srcset="small.jpg 480w, medium.jpg 800w, large.jpg 1200w"
   sizes="(max-width: 600px) 400px, 800px"
   src="fallback.jpg"
