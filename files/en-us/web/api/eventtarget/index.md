@@ -31,6 +31,8 @@ Many event targets (including elements, documents, and windows) also support set
   - : Removes an event listener from the `EventTarget`.
 - {{domxref("EventTarget.dispatchEvent()")}}
   - : Dispatches an event to this `EventTarget`.
+- {{domxref("EventTarget.when()")}}
+  - : Returns an {{domxref("Observable")}} object representing a stream of events fired on the event target it is called on.
 
 ## Specifications
 
