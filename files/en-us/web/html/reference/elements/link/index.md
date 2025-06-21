@@ -181,8 +181,13 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
 - `blocking`
 
-  - : This attribute explicitly indicates that certain operations should be blocked on the fetching of an external resource. It must only be used when the `rel` attribute contains `expect` or `stylesheet` keywords. The operations that are to be blocked must be a space-separated list of blocking tokens listed below.
+  - : This attribute explicitly indicates that certain operations should be blocked until specific conditions are met. It must only be used when the `rel` attribute contains the `expect` or `stylesheet` keywords. With [`rel="expect"`](/en-US/docs/Web/HTML/Reference/Attributes/rel#expect), it indicates that operations should be blocked until a specific DOM node has been parsed. With [`rel="stylesheet"`](/en-US/docs/Web/HTML/Reference/Attributes/rel#stylesheet), it indicates that operations should be blocked until an external stylesheet and its critical subresources have been fetched and applied to the document. The operations that are to be blocked must be a space-separated list of blocking tokens listed below. Currently there is only one token:
+
     - `render`: The rendering of content on the screen is blocked.
+
+    > [!NOTE]
+    > In order to block rendering, `link` elements with `blocking="render"` must be in the `head` of the document.
+    > `link` elements with `rel="stylesheet"` that are in the `head` are implicitly render-blocking, unless they are added to the document via script. `link` elements with `rel="stylesheet"` added via script need an explicit `blocking="render"` in order to block rendering.
 
 - [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin)
 
@@ -408,7 +413,7 @@ You can find a number of `<link rel="preload">` examples in [Preloading content 
 ### Blocking rendering till a resource is fetched
 
 You can include `render` token inside a `blocking` attribute;
-the rendering of the page will be blocked till the resource is fetched. For example:
+the rendering of the page will be blocked till the resource and its critical subresources are fetched and applied to the document. For example:
 
 ```html
 <link blocking="render" rel="stylesheet" href="example.css" crossorigin />
