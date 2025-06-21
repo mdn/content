@@ -18,7 +18,7 @@ property will be set to false.
 
 ## Value
 
-A double integer or a {{domxref("CSSNumericValue")}}
+A number or a {{domxref("CSSNumericValue")}}
 
 ## Examples
 

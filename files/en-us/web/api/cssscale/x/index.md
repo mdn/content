@@ -14,7 +14,7 @@ translating vector.
 
 ## Value
 
-A double integer or a {{domxref("CSSNumericValue")}}
+A number or a {{domxref("CSSNumericValue")}}
 
 ## Examples
 
