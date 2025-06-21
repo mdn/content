@@ -18,8 +18,7 @@ property will be set to false.
 
 ## Value
 
-A {{domxref("CSSNumericValue")}}. Can be set to a number, which is wrapped in a
-{{domxref("CSSUnitValue")}} of `unit: "number"`.
+A {{domxref("CSSNumericValue")}}. Can be set to a number, which is wrapped in a {{domxref("CSSUnitValue")}} of `unit: "number"`.
 
 ## Examples
 
