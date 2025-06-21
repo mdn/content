@@ -106,8 +106,18 @@ The `srcset` attribute can also be used on the `<img>` element without needing t
   width="320"
   alt="MDN Web Docs logo" />
 ```
+### The sizes attribute
 
-The `sizes` attribute is not mandatory when using srcset, but it is recommended to use it in order to provide additional information to the browser to help it select the best image source.
+The [sizes](/en-US/docs/Web/HTML/Reference/Elements/source#sizes) attribute helps browser by providing clearly how much space the image takes in device layout in terms of CSS pixels, for example if device width is 400px and DPR is 2x. Actual image needed is 400*2=800px image, example:
+
+```html
+<img 
+  srcset="small.jpg 480w, medium.jpg 800w, large.jpg 1200w"
+  sizes="(max-width: 600px) 400px, 800px"
+  src="fallback.jpg"
+  alt="Example image">
+```
+providing media query makes right image to choose from srcset , the last one is chose as default (here 800px), note Firefox stays responsive on resizing screen,but Chrome/Edge won't downscale after initial load, to change you need to disable cache in network tab, however this attribute is not mandatory when using srcset, but it is recommended to use it in order to provide additional information to the browser to help it select the best image source.
 
 Without sizes, the browser will use the default size of the image as specified by its dimensions in pixels. This may not be the best fit for all devices, especially if the image is displayed on different screen sizes or in different contexts.
 
