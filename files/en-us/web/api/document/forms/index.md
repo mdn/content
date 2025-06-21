@@ -16,6 +16,8 @@ all the {{HTMLElement("form")}} elements contained in the document.
 > Similarly, you can access a list of a form's component user
 > input elements using the {{domxref("HTMLFormElement.elements")}} property.
 
+Named `<form>` elements are also exposed as properties of the `document` object itself. For example, `document["login-form"]` and `document.forms["login-form"]` can both access the form named `login-form`. Relying on this behavior is dangerous and discouraged. It can lead to unexpected conflicts with some existing or future APIs in the browser. For example, if browsers introduce a new `document` property with the same name as your form, then the same code will no longer be able to access the form element. Always use `document.forms` instead.
+
 ## Value
 
 An {{domxref("HTMLCollection")}} object listing all of the document's forms. Each item
