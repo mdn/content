@@ -52,7 +52,7 @@ The newly inserted rule's index within the stylesheet's rule-list.
 - `IndexSizeError` {{domxref("DOMException")}}
   - : Thrown if `index` > `{{domxref("CSSRuleList", "", "", "1")}}.length`.
 - `HierarchyRequestError` {{domxref("DOMException")}}
-  - : Thrown if `rule` cannot be inserted at the specified index due to some CSS constraint; for instance trying to insert an {{cssxref("@import")}} at-rule after a style rule.
+  - : Thrown if `rule` cannot be inserted at the specified index due to some CSS constraint; for instance: trying to insert an {{cssxref("@import")}} at-rule after a style rule.
 - `SyntaxError` {{domxref("DOMException")}}
   - : Thrown if more than one rule is given in the `rule` parameter.
 - `InvalidStateError` {{domxref("DOMException")}}
