@@ -438,7 +438,6 @@ When you install a new text editor, your OS will probably continue to open text 
 - [macOS](https://support.apple.com/guide/mac-help/choose-an-app-to-open-a-file-on-mac-mh35597/mac)
 
 - Linux
-
   - [Ubuntu Unity](https://askubuntu.com/questions/289337/how-can-i-change-file-association-globally)
   - [GNOME](https://help.gnome.org/users/gnome-help/stable/files-open.html.en)
   - [KDE](https://userbase.kde.org/System_Settings/File_Associations)

@@ -39,7 +39,6 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
 - Other list-related HTML Elements: {{HTMLElement("ol")}}, {{HTMLElement("ul")}}, {{HTMLElement("li")}}, and {{HTMLElement("menu")}};
 - CSS properties that may be specially useful to style the `<dir>` element:
-
   - The {{cssxref('list-style')}} property, useful to choose the way the ordinal is displayed.
   - [CSS counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), useful to handle complex nested lists.
   - The {{Cssxref('line-height')}} property, useful to simulate the deprecated [`compact`](#compact) attribute.

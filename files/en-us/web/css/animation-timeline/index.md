@@ -58,23 +58,19 @@ animation-timeline: unset;
 - `none`
   - : The animation is not associated with a timeline.
 - `auto`
-
   - : The animation's timeline is the document's default [DocumentTimeline](/en-US/docs/Web/API/DocumentTimeline).
 
 - `scroll()`
-
   - : An anonymous scroll progress timeline is provided by some ancestor scroller of the current element. The function parameters allow you to select the scroller, and the scrolling axis the timeline will be measured along.
 
     See {{cssxref("animation-timeline/scroll", "scroll()")}} for more information.
 
 - `view()`
-
   - : An anonymous view progress timeline is provided by the subject that `animation-timeline: view();` is set on. The function parameters allow you to select the scrollbar axis along which timeline progress will be tracked and an inset that adjusts the position of the box in which the subject is deemed to be visible.
 
     See {{cssxref("animation-timeline/view", "view()")}} for more information.
 
 - `<dashed-ident>`
-
   - : A {{cssxref('dashed-ident')}} identifying a named timeline previously declared with the {{cssxref('scroll-timeline-name')}} or {{cssxref('view-timeline-name')}} property (or the {{cssxref('scroll-timeline')}} or {{cssxref('view-timeline')}} shorthand property).
 
     > [!NOTE]

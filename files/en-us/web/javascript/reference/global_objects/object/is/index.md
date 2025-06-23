@@ -56,7 +56,6 @@ A boolean indicating whether or not the two arguments are the same value.
 - both [BigInts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) with the same numeric value
 - both [symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) that reference the same symbol value
 - both numbers and
-
   - both `+0`
   - both `-0`
   - both {{jsxref("NaN")}}

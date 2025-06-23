@@ -22,13 +22,10 @@ Temporal.PlainMonthDay.from(info, options)
 ### Parameters
 
 - `info`
-
   - : One of the following:
-
     - A {{jsxref("Temporal.PlainMonthDay")}} instance, which creates a copy of the instance.
     - An [RFC 9557](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainMonthDay#rfc_9557_format) string containing a date and optionally a calendar. If the calendar is not `iso8601`, a year is required.
     - An object containing the following properties (in the order they are retrieved and validated):
-
       - `calendar` {{optional_inline}}
         - : A string that corresponds to the {{jsxref("Temporal/PlainMonthDay/calendarId", "calendarId")}} property. Defaults to `"iso8601"`. All other properties are interpreted in this calendar system (unlike the {{jsxref("Temporal/PlainMonthDay/PlainMonthDay", "Temporal.PlainMonthDay()")}} constructor, which interprets the values in the ISO calendar system). See [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types) for a list of commonly supported calendar types.
       - `day`

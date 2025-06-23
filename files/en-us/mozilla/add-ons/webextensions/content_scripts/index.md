@@ -340,7 +340,6 @@ To create the connection:
 
 - One side listens for connections using [`runtime.onConnect`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect)
 - The other side calls:
-
   - [`tabs.connect()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/connect) (if connecting to a content script)
   - [`runtime.connect()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/connect) (if connecting to a background script)
 
@@ -380,7 +379,6 @@ The corresponding background script:
 
 - Listens for connection attempts from the content script
 - When receiving a connection attempt:
-
   - Stores the port in a variable named `portFromCS`
   - Sends the content script a message using the port
   - Starts listening to messages received on the port, and logs them
@@ -511,7 +509,6 @@ For a complete working example of this, [visit the demo page on GitHub](https://
 - In Chrome
   - : {{jsxref("Global_Objects/eval", "eval")}} always runs code in the context of the **content script**, not in the context of the page.
 - In Firefox
-
   - : If you call `eval()`, it runs code in the context of the **content script**.
 
     If you call `window.eval()`, it runs code in the context of the **page**.

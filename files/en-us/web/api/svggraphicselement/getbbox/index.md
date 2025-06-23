@@ -31,10 +31,8 @@ getBBox(options)
 ### Parameters
 
 - `options` {{experimental_inline}} {{optional_inline}}
-
   - : An options dictionary used to control which parts of the element are included in the
     bounding box. The available options are:
-
     - `fill`
       - : A boolean value indicating that the fill should be included in the bounding box,
         defaults to `true`.

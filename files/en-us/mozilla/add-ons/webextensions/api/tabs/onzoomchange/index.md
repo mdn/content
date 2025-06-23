@@ -31,9 +31,7 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `ZoomChangeInfo`
       - : `object`. Information about the zoom event. See the [ZoomChangeInfo](#zoomchangeinfo_2) section for more details.
 

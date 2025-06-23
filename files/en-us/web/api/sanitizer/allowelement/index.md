@@ -28,31 +28,25 @@ allowElement(element)
 ### Parameters
 
 - `element`
-
   - : A string indicating the name of the allowed element, or an object with the following properties:
-
     - `name`
       - : A string containing the name of the element.
     - `namespace` {{optional_inline}}
       - : A string containing the namespace of the element.
         The default namespace is `"http://www.w3.org/1999/xhtml"`.
     - `attributes` {{optional_inline}}
-
       - : An array indicating the attributes to allow on this (allowed) element when sanitizing HTML.
 
         Each attribute can be specified by name (a string), or as a object with the following properties:
-
         - `name`
           - : A string containing the name of the attribute.
         - `namespace` {{optional_inline}}
           - : A string containing the namespace of the attribute, which defaults to `null`.
 
     - `removeAttributes` {{optional_inline}}
-
       - : An array indicating the attributes to remove on this (allowed) element when sanitizing HTML.
 
         Each attribute can be specified by name (a string), or as a object with the following properties:
-
         - `name`
           - : A string containing the name of the attribute.
         - `namespace` {{optional_inline}}

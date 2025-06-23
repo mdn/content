@@ -37,9 +37,7 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `details`
       - : `object`. Contains a single property, a string named `version`, which represents the version number of the update.
 

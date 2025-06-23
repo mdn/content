@@ -27,10 +27,8 @@ checkVisibility(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An object indicating additional checks to run.
     The possible options are:
-
     - `contentVisibilityAuto`
       - : `true` to check if the element {{cssxref("content-visibility")}} property has (or inherits) the value [`auto`](/en-US/docs/Web/CSS/content-visibility#auto), and it is currently skipping its rendering.
         `false` by default.
@@ -38,7 +36,6 @@ checkVisibility(options)
       - : `true` to check if the element {{cssxref("opacity")}} property has (or inherits) a value of `0`.
         `false` by default.
     - `visibilityProperty`
-
       - : `true` to check if the element is invisible due to the value of its {{cssxref("visibility")}} property.
         `false` by default.
 

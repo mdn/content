@@ -22,9 +22,7 @@ let gettingAll = browser.windows.getAll(
 ### Parameters
 
 - `getInfo` {{optional_inline}}
-
   - : `object`. This controls what {{WebExtAPIRef('windows.Window')}} objects are retrieved.
-
     - `populate` {{optional_inline}}
       - : `boolean`. Defaults to `false`. If set to `true`, each {{WebExtAPIRef('windows.Window')}} object will have a `tabs` property that contains a list of {{WebExtAPIRef('tabs.Tab')}} objects representing the tabs in that window. The `Tab` objects will contain the `url`, `title` and `favIconUrl` properties only if the extension's manifest file includes the `"tabs"` permission or [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) that match the tab's URL.
     - `windowTypes` {{optional_inline}}

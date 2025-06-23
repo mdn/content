@@ -19,9 +19,7 @@ new Touch(options)
 ### Parameters
 
 - `touchInit`
-
   - : An object with the following fields:
-
     - `identifier`
       - : A `long` value, that is the identification number for the touch point.
     - `target`

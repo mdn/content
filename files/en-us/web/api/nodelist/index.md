@@ -47,7 +47,6 @@ It's good to keep this distinction in mind when you choose how to iterate over t
 ## Instance methods
 
 - {{domxref("NodeList.item()")}}
-
   - : Returns an item in the list by its index, or `null` if the index is out-of-bounds.
 
     An alternative to accessing `nodeList[i]` (which instead returns `undefined` when `i` is out-of-bounds). This is mostly useful for non-JavaScript DOM implementations.

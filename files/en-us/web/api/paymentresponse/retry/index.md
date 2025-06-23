@@ -25,7 +25,6 @@ retry(errorFields)
 ### Parameters
 
 - `errorFields`
-
   - : An object, with the following properties:
     - `error` {{optional_inline}}
       - : A general description of a payment error from which the user may attempt to recover by retrying the payment, possibly after correcting mistakes in the payment information. `error` can be provided all by itself to provide only a generic error message, or in concert with the other properties to serve as an overview while other properties' values guide the user to errors in specific fields in the payment form.
@@ -52,7 +51,6 @@ concept, in outline form, is:
 2. Display the payment request ({{domxref("PaymentRequest.show()")}}
 3. If `show()` resolves, the returned {{domxref("PaymentResponse")}}
    describes the requested payment and the options chosen by the user. Continue with the following steps:
-
    1. Validate the returned response; if there are any fields whose values are not
       acceptable, call the response's {{domxref("PaymentResponse.complete", "complete()")}} method with a value of `"fail"` to indicate failure.
    2. If the response's data is valid and acceptable, call

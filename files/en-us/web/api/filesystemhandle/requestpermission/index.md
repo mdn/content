@@ -23,11 +23,8 @@ requestPermission(descriptor)
 ### Parameters
 
 - `descriptor` {{optional_inline}}
-
   - : An object which specifies the permission mode to query for. Options are as follows:
-
     - `'mode'` {{optional_inline}}
-
       - : Can be either `'read'` or `'readwrite'`.
 
 ### Return value

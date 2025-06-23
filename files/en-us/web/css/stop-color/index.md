@@ -31,7 +31,6 @@ stop-color: unset;
 ### Values
 
 - {{cssxref("color_value", "&lt;color>")}}
-
   - : The color of the fill. This can be any valid CSS {{cssxref("color_value", "&lt;color>")}} value.
 
 ## Formal definition

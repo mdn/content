@@ -27,10 +27,8 @@ matchAll(request, options)
     {{domxref("Cache")}}. This can be a `Request` object or a URL. If this
     argument is omitted, you will get a copy of all responses in this cache.
 - `options` {{optional_inline}}
-
   - : An options object allowing you to set specific control options for the matching
     performed. The available options are:
-
     - `ignoreSearch`
       - : A boolean value that specifies whether the
         matching process should ignore the query string in the URL. If set to

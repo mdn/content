@@ -102,7 +102,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 ## See also
 
 - Elements that can be used inside the `<head>`:
-
   - {{HTMLElement("title")}}
   - {{HTMLElement("base")}}
   - {{HTMLElement("link")}}
