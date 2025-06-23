@@ -56,6 +56,9 @@ Firefox 141 is the current [Beta version of Firefox](https://www.mozilla.org/en-
 ### APIs
 
 - The {{domxref("PointerEvent/persistentDeviceId","persistentDeviceId")}} property of the {{domxref("PointerEvent")}} interface is now supported. This gives each pointing device that interacts with the screen a unique ID that persists for the session. It provides a reliable way to identify multiple pointing devices (such as pens) interacting with the screen simultaneously. ([Firefox bug 1968400](https://bugzil.la/1968400)).
+- The {{domxref("HTMLDialogElement/closedBy", "closedBy")}} attribute of the {{domxref("HTMLDialogElement")}} interface, and corresponding [`closedby`](/en-US/docs/Web/HTML/Reference/Elements/dialog#closedby) attribute of the {{htmlelement("dialog")}} element, are supported.
+  Developers can use these to specify what mechanisms are able to close the dialogs, such as user interaction outside the dialog ("light dismiss") or programmatic closing.
+  ([Firefox bug 1964078](https://bugzil.la/1964078)).
 
 <!-- #### DOM -->
 
