@@ -43,7 +43,8 @@ Clear-Site-Data: "*"
 > All directives must comply with the [quoted-string grammar](https://datatracker.ietf.org/doc/html/rfc7230#section-3.2.6). A directive that does not include the double quotes is invalid.
 
 - `"cache"`
-  - : The server signals that the client should remove locally cached data (the browser cache, see [HTTP caching](/en-US/docs/Web/HTTP/Guides/Caching)) for the origin of the response URL. Depending on the browser, this might also clear out things like pre-rendered pages, script caches, WebGL shader caches, or address bar suggestions.
+  - : The server signals that the client should remove locally cached data (the browser cache, see [HTTP caching](/en-US/docs/Web/HTTP/Guides/Caching)) for the origin of the response URL.
+    Depending on the browser, this might also clear out things like pre-rendered pages, {{glossary("bfcache","backwards-forwards cache")}}, script caches, WebGL shader caches, or address bar suggestions.
 
 - `"clientHints"` {{Experimental_Inline}}
   - : Indicates that the server will remove all [client hints](/en-US/docs/Web/HTTP/Guides/Client_hints) (requested via {{HTTPHeader("Accept-CH")}}) stored for the origin of the response URL.
