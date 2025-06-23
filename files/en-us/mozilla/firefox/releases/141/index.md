@@ -15,6 +15,9 @@ Firefox 141 is the current [Nightly version of Firefox](https://www.mozilla.org/
 
 ### HTML
 
+- The HTML [`webkitdirectory`](/en-US/docs/Web/HTML/Reference/Elements/input/file#webkitdirectory) attribute and the corresponding {{domxref("HTMLInputElement.webkitdirectory")}} property are now supported on Firefox Android.
+  The attribute can be set to indicate that an [`<input type="file">`](/en-US/docs/Web/HTML/Reference/Elements/input/file) element should offer selection of directories instead of files. ([Firefox bug 1887878](https://bugzil.la/1887878)).
+
 #### Removals
 
 ### CSS
