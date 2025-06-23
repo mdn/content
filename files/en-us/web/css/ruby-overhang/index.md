@@ -9,6 +9,8 @@ browser-compat: css.properties.ruby-overhang
 
 The **`ruby-overhang`** [CSS](/en-US/docs/Web/CSS) property specifies whether or not ruby text overhangs any surrounding base text.
 
+<!--
+
 {{InteractiveExample("CSS Demo: ruby-overhang")}}
 
 ```css interactive-example-choice
@@ -21,8 +23,8 @@ ruby-overhang: none;
 
 ```html interactive-example
 <section id="default-example">
-  <p id="example-element">
-    AB<ruby>C<rp>(</rp><rt>1234</rt><rp>)</rp></ruby>DEF<ruby>
+  <p>
+    AB<ruby id="example-element">C<rp>(</rp><rt>1234</rt><rp>)</rp></ruby>DEF
   </p>
 </section>
 ```
@@ -32,6 +34,8 @@ ruby-overhang: none;
   font-size: 2em;
 }
 ```
+
+-->
 
 ## Syntax
 

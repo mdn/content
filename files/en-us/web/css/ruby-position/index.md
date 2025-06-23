@@ -21,7 +21,9 @@ ruby-position: under;
 
 ```html interactive-example
 <section id="default-example">
-  <ruby id="example-element"> 明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp> </ruby>
+  <p>
+    <ruby id="example-element"> 明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp> </ruby>
+  </p>
 </section>
 ```
 
