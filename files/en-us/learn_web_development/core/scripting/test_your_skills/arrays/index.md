@@ -21,7 +21,7 @@ Watch the embedded scrim and complete the task on the timeline (the little ghost
 <scrim-inline url="https://scrimba.com/learn-javascript-c0v/~05e" scrimtitle="Render images from an array"></scrim-inline>
 
 > [!NOTE]
-> This task is somewhat of a stretch goal, given that it relies on JavaScript features you've not yet explicitly covering during the course. Give it your best shot, and search online for information on anything you are not sure about.
+> This task is somewhat of a stretch goal, given that it relies on JavaScript features you've not yet explicitly covered during the course. Give it your best shot, and search online for information on anything you are not sure about.
 
 ## Task 1
 
