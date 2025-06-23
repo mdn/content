@@ -1,5 +1,6 @@
 ---
 title: TypedArray.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/toString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.toString

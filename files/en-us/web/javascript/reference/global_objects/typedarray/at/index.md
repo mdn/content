@@ -1,5 +1,6 @@
 ---
 title: TypedArray.prototype.at()
+short-title: at()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/at
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.at

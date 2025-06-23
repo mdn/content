@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainTime.prototype.round()
+short-title: round()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime/round
 page-type: javascript-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
 title: Temporal.Instant.prototype.toZonedDateTimeISO()
+short-title: toZonedDateTimeISO()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Instant/toZonedDateTimeISO
 page-type: javascript-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.map()
+short-title: map()
 slug: Web/JavaScript/Reference/Global_Objects/Array/map
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.map

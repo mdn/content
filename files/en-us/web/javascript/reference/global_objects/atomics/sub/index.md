@@ -1,5 +1,6 @@
 ---
 title: Atomics.sub()
+short-title: sub()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/sub
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.sub

@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.toLocaleString()
+short-title: toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.toLocaleString

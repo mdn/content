@@ -1,5 +1,6 @@
 ---
 title: Promise.prototype.finally()
+short-title: finally()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/finally
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Promise.finally

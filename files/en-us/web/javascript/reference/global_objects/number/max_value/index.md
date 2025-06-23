@@ -1,5 +1,6 @@
 ---
 title: Number.MAX_VALUE
+short-title: MAX_VALUE
 slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Number.MAX_VALUE

@@ -1,5 +1,6 @@
 ---
 title: Temporal.Duration.prototype.blank
+short-title: blank
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/blank
 page-type: javascript-instance-accessor-property
 status:

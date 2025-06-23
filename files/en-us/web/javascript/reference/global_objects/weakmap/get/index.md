@@ -1,5 +1,6 @@
 ---
 title: WeakMap.prototype.get()
+short-title: get()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/get
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.WeakMap.get

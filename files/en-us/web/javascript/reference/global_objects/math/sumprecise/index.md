@@ -1,5 +1,6 @@
 ---
 title: Math.sumPrecise()
+short-title: sumPrecise()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sumPrecise
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.sumPrecise
