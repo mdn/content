@@ -35,7 +35,7 @@ Firefox 141 is the current [Nightly version of Firefox](https://www.mozilla.org/
 ### HTTP
 
 - The [`"cache"`](/en-US/docs/Web/HTTP/Reference/Headers/Clear-Site-Data#cache) directive of the {{httpheader("Clear-Site-Data")}} response header now clears the {{glossary("bfcache")}} (backwards-forwards cache).
-  This allows a site to ensure that if a user navigates backward after a user has signed out, no private details visible during the initial session will be exposed. ([Firefox bug 1930501](https://bugzil.la/1930501)).
+  This allows a site to ensure that if anyone navigates backward after a user has signed out, private details that were visible during the initial session will not be exposed. ([Firefox bug 1930501](https://bugzil.la/1930501)).
 
 #### Removals
 
