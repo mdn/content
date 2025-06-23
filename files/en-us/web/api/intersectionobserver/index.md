@@ -18,12 +18,19 @@ When an `IntersectionObserver` is created, it's configured to watch for given ra
 
 ## Instance properties
 
+- {{domxref("IntersectionObserver.delay")}} {{ReadOnlyInline}}
+  - : An integer indicating the minimum delay between notifications from this observer for a given target.
 - {{domxref("IntersectionObserver.root")}} {{ReadOnlyInline}}
   - : The {{domxref("Element")}} or {{domxref("Document")}} whose bounds are used as the bounding box when testing for intersection. If no `root` value was passed to the constructor or its value is `null`, the top-level document's viewport is used.
 - {{domxref("IntersectionObserver.rootMargin")}} {{ReadOnlyInline}}
   - : An offset rectangle applied to the root's {{Glossary('bounding box')}} when calculating intersections, effectively shrinking or growing the root for calculation purposes. The value returned by this property may not be the same as the one specified when calling the constructor as it may be changed to match internal requirements. Each offset can be expressed in pixels (`px`) or as a percentage (`%`). The default is "0px 0px 0px 0px".
+- {{domxref("IntersectionObserver.scrollMargin")}} {{ReadOnlyInline}}
+  - : An offset rectangle applied to each {{glossary("scroll container")}} on the path from intersection root to target, effectively shrinking or growing the clip rectangles used to calculate intersections.
+    The value returned by this property may not be the same as the one specified when calling the constructor.
 - {{domxref("IntersectionObserver.thresholds")}} {{ReadOnlyInline}}
   - : A list of thresholds, sorted in increasing numeric order, where each threshold is a ratio of intersection area to bounding box area of an observed target. Notifications for a target are generated when any of the thresholds are crossed for that target. If no value was passed to the constructor, 0 is used.
+- {{domxref("IntersectionObserver.trackVisibility")}} {{ReadOnlyInline}}
+  - : A boolean indicating whether this `IntersectionObserver` is tracking changes in a target's visibility.
 
 ## Instance methods
 
