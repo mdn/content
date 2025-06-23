@@ -21,8 +21,9 @@ ruby-overhang: none;
 
 ```html interactive-example
 <section id="default-example">
-  <p>
-    AB<ruby id="example-element">C<rp>(</rp><rt>1234</rt><rp>)</rp></ruby>DEF
+  <p id="example-element">
+    私は<ruby><rb>宮崎駿</rb><rt>みやざきはやお</rt></ruby
+    >を尊敬しています
   </p>
 </section>
 ```
@@ -69,24 +70,30 @@ ruby-overhang: unset;
 ### Ruby overhanging base text
 
 The following example shows two paragraphs, the first has `ruby-overhang: auto` and the second has `ruby-overhang: none`.
+A red `outline` of 1px helps highlight the text annotation of `<rt>` elements.
 For the paragraph with `none`, no overlapping is allowed with rubies and the adjacent boxes of base text:
 
 ```html
 <p class="auto">
-  AB<ruby>C<rp>(</rp><rt>1234</rt><rp>)</rp></ruby>DEF<ruby>
+  私は<ruby><rb>宮崎駿</rb><rt>みやざきはやお</rt></ruby
+  >を尊敬しています
 </p>
 
 <p class="none">
-  AB<ruby>C<rp>(</rp><rt>1234</rt><rp>)</rp></ruby>DEF<ruby>
+  私は<ruby><rb>宮崎駿</rb><rt>みやざきはやお</rt></ruby
+  >を尊敬しています
 </p>
 ```
 
 ```css
 p {
-  font-family: sans-serif;
-  font-size: 50px;
+  font-size: 40px;
   display: inline-block;
   margin: 0.5rem;
+}
+rt {
+  font-size: 28px;
+  outline: 1px solid red;
 }
 .auto {
   ruby-overhang: auto;
