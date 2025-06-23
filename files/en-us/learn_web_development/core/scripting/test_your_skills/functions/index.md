@@ -28,7 +28,7 @@ Watch the embedded scrim and complete the task on the timeline (the little ghost
 
 ## Task 1
 
-For this task, you have to create a simple function — `chooseName()` — that prints a random name from the provided array (`names`) to the provided paragraph (`para`), and then run it once.
+For this task, create a simple function—`chooseName()`—that prints a random name from the provided array (`names`) into the provided paragraph (`para`), and then run it once.
 
 Try updating the live code below to recreate the finished example:
 
