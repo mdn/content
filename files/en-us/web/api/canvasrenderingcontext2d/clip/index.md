@@ -42,10 +42,8 @@ clip(path, fillRule)
 ### Parameters
 
 - `fillRule`
-
   - : The algorithm by which to determine if a point is inside or outside the clipping
     region. Possible values:
-
     - `nonzero`
       - : The [non-zero winding rule](https://en.wikipedia.org/wiki/Nonzero-rule).
         Default rule.

@@ -39,9 +39,7 @@ This element also accepts the [global attributes](/en-US/docs/Web/HTML/Reference
 - `start`
   - : An integer to start counting from for the list items. Always an Arabic numeral (1, 2, 3, etc.), even when the numbering `type` is letters or Roman numerals. For example, to start numbering elements from the letter "d" or the Roman numeral "iv," use `start="4"`.
 - `type`
-
   - : Sets the numbering type:
-
     - `a` for lowercase letters
     - `A` for uppercase letters
     - `i` for lowercase Roman numerals
@@ -241,7 +239,6 @@ To determine which list to use, try changing the order of the list items; if the
 
 - Other list-related HTML Elements: {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}}
 - CSS properties that may be specially useful to style the `<ol>` element:
-
   - the {{CSSxRef("list-style")}} property, to choose the way the ordinal displays
   - [CSS counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), to handle complex nested lists
   - the {{CSSxRef("line-height")}} property, to simulate the deprecated `compact` attribute

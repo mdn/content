@@ -118,7 +118,6 @@ This property may be specified as:
 - {{cssxref("minmax", "minmax(min, max)")}}
   - : Is a functional notation that defines a size range, greater than or equal to _min_, and less than or equal to _max_. If _max_ is smaller than _min_, then _max_ is ignored and the function is treated as _min_. As a maximum, a `<flex>` value sets the track's flex factor. It is invalid as a minimum.
 - `auto`
-
   - : As a maximum represents the largest {{cssxref("max-content")}} size of the items in that track.
 
     As a minimum represents the largest minimum size of items in that track (specified by the {{cssxref("min-width")}}/{{cssxref("min-height")}} of the items). This is often, though not always, the {{cssxref("min-content")}} size.

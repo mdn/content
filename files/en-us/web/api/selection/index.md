@@ -146,14 +146,12 @@ Other key terms used in this section.
 - editing host
   - : An editable element (e.g., an HTML element with [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) set, or the HTML child of a document that has {{DOMxRef("Document.designMode", "designMode")}} enabled).
 - focus of a selection
-
   - : The _focus_ of a selection is the end point of the selection. When making a selection with a mouse, the focus is where in the document the mouse button is released. As the user changes the selection using the mouse or the keyboard, the focus is the end of the selection that moves.
 
     > [!NOTE]
     > This is not the same as the focused _element_ of the document, as returned by {{DOMxRef("document.activeElement")}}.
 
 - range
-
   - : A _range_ is a contiguous part of a document. A range can contain entire nodes as well as portions of nodes (such as a portion of a text node). A user will normally only select a single range at a time, but it's possible for a user to select multiple ranges (e.g., by using the <kbd>Control</kbd> key). A range can be retrieved from a selection as a {{DOMxRef("range")}} object. Range objects can also be created via the DOM and programmatically added or removed from a selection.
 
 ## Specifications

@@ -70,6 +70,5 @@ No browser currently supports this feature.
 - [CSS data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
 - [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module
 - Related CSS data types:
-
   - {{cssxref("frequency", "&lt;frequency&gt;")}}
   - {{cssxref("percentage", "&lt;percentage&gt;")}}

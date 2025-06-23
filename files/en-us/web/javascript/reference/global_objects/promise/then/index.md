@@ -33,18 +33,14 @@ then(onFulfilled, onRejected)
 ### Parameters
 
 - `onFulfilled`
-
   - : A function to asynchronously execute when this promise becomes fulfilled. Its return value becomes the fulfillment value of the promise returned by `then()`. The function is called with the following arguments:
-
     - `value`
       - : The value that the promise was fulfilled with.
 
     If it is not a function, it is internally replaced with an _identity_ function (`(x) => x`) which simply passes the fulfillment value forward.
 
 - `onRejected` {{optional_inline}}
-
   - : A function to asynchronously execute when this promise becomes rejected. Its return value becomes the fulfillment value of the promise returned by `then()`. The function is called with the following arguments:
-
     - `reason`
       - : The value that the promise was rejected with.
 

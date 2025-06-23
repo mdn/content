@@ -60,9 +60,7 @@ The `nth-last-child` pseudo-class is specified with a single argument, which rep
 ### Functional notation
 
 - `<An+B>`
-
   - : Represents elements whose numeric position in a series of siblings matches the pattern `An+B`, for every positive integer or zero value of `n`, where:
-
     - `A` is an integer step size,
     - `B` is an integer offset,
     - `n` is all nonnegative integers, starting from 0.

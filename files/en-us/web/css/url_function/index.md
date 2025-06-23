@@ -64,11 +64,8 @@ The **`url()`** function can be included as a value for
 ### Values
 
 - `<string>`
-
   - : A string that may specify a URL or the ID of an SVG shape.
-
     - url
-
       - : A URL, which is a relative or absolute address, or pointer, to the web resource to be included, or a data URL, optionally in single or double quotes. Quotes are required if the URL includes parentheses, whitespace, or quotes, unless these characters are escaped, or if the address includes control characters above 0x7e. Double quotes cannot occur inside double quotes and single quotes cannot occur inside single quotes unless escaped. The following are all valid and equivalent:
 
         ```css

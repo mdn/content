@@ -36,9 +36,7 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `selectInfo`
       - : `object`. See the [selectInfo](#selectinfo_2) section for more details.
 

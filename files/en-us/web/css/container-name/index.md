@@ -36,14 +36,11 @@ container-name: unset;
 ### Values
 
 - `none`
-
   - : Default value. The query container has no name.
 
 - {{cssxref("custom-ident")}}
-
   - : A case-sensitive string that is used to identify the container.
     The following conditions apply:
-
     - The name must not equal `or`, `and`, `not`, or `default`.
     - The name value must not be in quotes.
     - The dashed ident intended to denote author-defined identifiers (e.g., `--container-name`) is permitted.

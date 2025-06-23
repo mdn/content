@@ -19,9 +19,7 @@ getContext(contextType, contextAttributes)
 ### Parameters
 
 - `contextType`
-
   - : A string containing the context identifier defining the drawing context associated to the canvas. Possible values are:
-
     - `2d`
       - : Creates a {{domxref("OffscreenCanvasRenderingContext2D")}} object representing a two-dimensional rendering context.
     - `webgl`
@@ -39,7 +37,6 @@ getContext(contextType, contextAttributes)
     > The [Khronos Group](https://www.khronos.org/) certifies WebGL implementations under certain [conformance rules](https://registry.khronos.org/webgl/sdk/tests/CONFORMANCE_RULES.txt).
 
 - `contextAttributes`
-
   - : You can use several context attributes when creating your rendering context, for example:
 
     ```js
@@ -47,7 +44,6 @@ getContext(contextType, contextAttributes)
     ```
 
     2d context attributes:
-
     - `alpha`
       - : Boolean that indicates if the canvas contains an alpha channel. If set to `false`, the browser now knows that the backdrop is always opaque, which can speed up drawing of transparent content and images then.
     - `willReadFrequently`
@@ -56,7 +52,6 @@ getContext(contextType, contextAttributes)
         In Firefox this option is only available if the flag `gfx.canvas.willReadFrequently.enable` is set to `true` (which, by default, is only the case for B2G/Firefox OS).
 
     WebGL context attributes:
-
     - `alpha`
       - : Boolean that indicates if the canvas contains an alpha buffer.
     - `depth`

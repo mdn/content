@@ -31,9 +31,7 @@ Events have three functions:
 ### Parameters
 
 - `function`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `reason`
       - : A {{WebExtAPIRef('runtime.OnRestartRequiredReason')}} value — the reason that the event is being dispatched.
 

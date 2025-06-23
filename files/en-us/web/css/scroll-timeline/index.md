@@ -48,7 +48,6 @@ The `scroll-timeline` shorthand property can be applied to a container element a
 ### Values
 
 - `<scroll-timeline-name>`
-
   - : See [`scroll-timeline-name`](/en-US/docs/Web/CSS/scroll-timeline-name).
 
 - `<scroll-timeline-axis>`

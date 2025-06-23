@@ -39,9 +39,7 @@ Set-Login: <status>
 ## Directives
 
 - `<status>`
-
   - : A string representing the login status to set for the IdP. Possible values are:
-
     - `logged-in`: The IdP has at least one user account signed in.
     - `logged-out`: All IdP user accounts are currently signed out.
 

@@ -31,10 +31,8 @@ new XRWebGLLayer(session, context, options)
     identifying the WebGL drawing context to use for rendering the scene for the specified
     WebXR session.
 - `options` {{optional_inline}}
-
   - : An object providing configuration options for the new `XRWebGLLayer`. The available options
     are:
-
     - `alpha`
       - : The frame buffer's color buffer will be established with an alpha channel if the `alpha` Boolean property is `true`. Otherwise, the color buffer will not have an alpha channel. The default value is `true`.
     - `antialias`

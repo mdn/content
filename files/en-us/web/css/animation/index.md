@@ -90,7 +90,6 @@ Each individual animation is specified as:
 - zero, one, or two occurrences of the {{cssxref("&lt;time&gt;")}} value
 
 - zero or one occurrences of the following values:
-
   - [`<single-easing-function>`](#single-easing-function)
   - [`<single-animation-iteration-count>`](#single-animation-iteration-count)
   - [`<single-animation-direction>`](#single-animation-direction)

@@ -36,11 +36,9 @@ mask-image: unset;
 ### Values
 
 - `none`
-
   - : This keyword is interpreted as a transparent black image layer.
 
 - `<mask-source>`
-
   - : A {{cssxref("url_value", "&lt;url&gt;")}} reference to a {{SVGElement("mask")}} or to a CSS image.
 
 - {{cssxref("&lt;image&gt;")}}
