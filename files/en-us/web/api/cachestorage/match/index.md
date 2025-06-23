@@ -31,10 +31,8 @@ match(request, options)
   - : The {{domxref("Request")}} you want to match. This can be a {{domxref("Request")}}
     object or a URL string.
 - `options` {{optional_inline}}
-
   - : An object whose properties control how matching is done in the `match`
     operation. The available options are:
-
     - `ignoreSearch`
       - : A boolean value that specifies whether the
         matching process should ignore the query string in the URL. For example, if set

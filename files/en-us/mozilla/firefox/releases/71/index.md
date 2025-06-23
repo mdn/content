@@ -103,7 +103,6 @@ The following non-standard {{domxref("DataTransfer")}} members have been removed
 ### API changes
 
 - {{WebExtAPIRef("downloads.download")}} now identifies and reports as errors the following HTTP response codes:
-
   - 404 returning `SERVER_BAD_CONTENT`
   - 403 returning `SERVER_FORBIDDEN`
   - 402 and Proxy 407 returning `SERVER_UNAUTHORIZED`

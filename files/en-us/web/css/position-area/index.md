@@ -61,11 +61,9 @@ position-area: unset;
 The property value is two `<position-area>` keyterms, or the keyword `none`. If only one `<position-area>` keyterm is provided, the second keyterm is implied.
 
 - [`<position-area>`](/en-US/docs/Web/CSS/position-area_value)
-
   - : Specifies the area of the position area grid on which to place selected positioned elements.
 
 - `none`
-
   - : No position area is set.
 
 ## Description

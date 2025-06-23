@@ -38,9 +38,7 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed these arguments:
-
     - `request`
       - : `any`. The request sent by the calling script.
     - `sender`

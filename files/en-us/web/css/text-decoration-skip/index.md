@@ -50,7 +50,6 @@ text-decoration-skip: unset;
 - `trailing-spaces`
   - : The same as `spaces`, except that only trailing spaces are skipped.
 - `edges`
-
   - : The start and end of the text decoration is inset slightly (e.g., by half of the line thickness) from the content edge of the decorating box. Thus, adjacent elements receive separate underlines. (This is important in Chinese, where underlining is a form of punctuation.)
 
     ![An example of "text-decoration-skip: edges;".](decoration-skip-edges.png)

@@ -61,19 +61,16 @@ Upon looking at this brief, the first thing we can do is to start breaking it do
 4. Once a guess has been submitted first record it somewhere so the user can see their previous guesses.
 5. Next, check whether it is the correct number.
 6. If it is correct:
-
    1. Display congratulations message.
    2. Stop the player from being able to enter more guesses (this would mess the game up).
    3. Display control allowing the player to restart the game.
 
 7. If it is wrong and the player has turns left:
-
    1. Tell the player they are wrong and whether their guess was too high or too low.
    2. Allow them to enter another guess.
    3. Increment the turn number by 1.
 
 8. If it is wrong and the player has no turns left:
-
    1. Tell the player it is game over.
    2. Stop the player from being able to enter more guesses (this would mess the game up).
    3. Display control allowing the player to restart the game.
@@ -332,7 +329,6 @@ This is a lot of code — phew! Let's go through each section and explain what i
 
 - Next, we use a template literal to append the current `userGuess` value onto the end of the `guesses` paragraph, with a blank space in between.
 - The next block does a few checks:
-
   - The first `if (){ }` checks whether the user's guess is equal to the `randomNumber` set at the top of our JavaScript. If it is, the player has guessed correctly and the game is won, so we show the player a congratulations message with a nice green color, clear the contents of the Low/High guess information box, and run a function called `setGameOver()`, which we'll discuss later.
   - Now we've chained another test onto the end of the last one using an `else if (){ }` structure. This one checks whether this turn is the user's last turn. If it is, the program does the same thing as in the previous block, except with a game over message instead of a congratulations message.
   - The final block chained onto the end of this code (the `else { }`) contains code that is only run if neither of the other two tests returns true (i.e., the player didn't guess right, but they have more guesses left). In this case we tell them they are wrong, then we perform another conditional test to check whether the guess was higher or lower than the answer, displaying a further message as appropriate to tell them higher or lower.

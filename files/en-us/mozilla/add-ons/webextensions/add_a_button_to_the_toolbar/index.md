@@ -203,7 +203,6 @@ While browser actions are always shown, page actions are only shown in tabs wher
 - [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) manifest key
 - [`browserAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) API
 - Browser action examples:
-
   - [beastify](https://github.com/mdn/webextensions-examples/tree/main/beastify)
   - [Bookmark it!](https://github.com/mdn/webextensions-examples/tree/main/bookmark-it)
   - [favourite-colour](https://github.com/mdn/webextensions-examples/tree/main/favourite-colour)
@@ -212,5 +211,4 @@ While browser actions are always shown, page actions are only shown in tabs wher
 - [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) manifest key
 - [`pageAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) API
 - Page action examples:
-
   - [chill-out](https://github.com/mdn/webextensions-examples/tree/main/chill-out)

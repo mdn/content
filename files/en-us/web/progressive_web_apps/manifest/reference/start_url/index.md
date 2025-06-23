@@ -26,7 +26,6 @@ The `start_url` manifest member is used to specify the URL that should be opened
 ### Values
 
 - `start_url`
-
   - : A string that represents the starting URL of a web app.
     The URL can be absolute or relative.
     If the value is relative, it is resolved against the manifest file's URL.

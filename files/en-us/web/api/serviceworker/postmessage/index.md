@@ -23,7 +23,6 @@ postMessage(message, options)
 ### Parameters
 
 - `message`
-
   - : The object to deliver to the worker; this will be in the `data` field in the event delivered to the {{domxref("ServiceWorkerGlobalScope.message_event", "message")}} event. This may be any JavaScript object handled by the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 
     The `message` parameter is mandatory. If the data to be passed to the worker is unimportant, `null` or `undefined` must be passed explicitly.

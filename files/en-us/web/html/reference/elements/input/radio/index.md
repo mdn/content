@@ -157,13 +157,11 @@ Try this example out and see how there's never more than one result for the `con
 In addition to the common attributes shared by all {{HTMLElement("input")}} elements, `radio` inputs support the following attributes.
 
 - `checked`
-
   - : A Boolean attribute which, if present, indicates that this radio button is the default selected one in the group.
 
     Unlike other browsers, Firefox by default [persists the dynamic checked state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the [`autocomplete`](/en-US/docs/Web/HTML/Reference/Elements/input#autocomplete) attribute to control this feature.
 
 - `value`
-
   - : The `value` attribute is one which all {{HTMLElement("input")}}s share; however, it serves a special purpose for inputs of type `radio`: when a form is submitted, only radio buttons which are currently checked are submitted to the server, and the reported value is the value of the `value` attribute. If the `value` is not otherwise specified, it is the string `on` by default. This is demonstrated in the section [Value](#value) above.
 
 - [`required`](/en-US/docs/Web/HTML/Reference/Attributes/required)
