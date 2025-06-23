@@ -6259,6 +6259,7 @@
 /en-US/docs/Mozilla/Developer_guide/Source_Code/Directory_structure	https://firefox-source-docs.mozilla.org/contributing/directory_structure.html
 /en-US/docs/Mozilla/Firefox/Performance_best_practices_for_Firefox_fe_engineers	https://firefox-source-docs.mozilla.org/performance/bestpractices.html
 /en-US/docs/Mozilla/Firefox/Privacy	/en-US/docs/Web/Privacy
+/en-US/docs/Mozilla/Firefox/Privacy/Guides/Tracking_Protection	/en-US/docs/Web/Privacy/Guides/Firefox_tracking_protection
 /en-US/docs/Mozilla/Firefox/Privacy/Redirect_tracking_protection	/en-US/docs/Web/Privacy/Guides/Redirect_tracking_protection
 /en-US/docs/Mozilla/Firefox/Privacy/State_Partitioning	/en-US/docs/Web/Privacy/Guides/State_Partitioning
 /en-US/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy	/en-US/docs/Web/Privacy/Guides/Storage_Access_Policy
