@@ -52,7 +52,9 @@ Note that the returned file entries for the selected folder always contain an em
 
 <!-- #### Removals -->
 
-<!-- ### APIs -->
+### APIs
+
+- The {{domxref("PointerEvent/persistentDeviceId","persistentDeviceId")}} property of the {{domxref("PointerEvent")}} interface is now supported. This gives each pointing device that interacts with the screen a unique ID that persists for the session. It provides a reliable way to identify multiple pointing devices (such as pens) interacting with the screen simultaneously. ([Firefox bug 1968400](https://bugzil.la/1968400)).
 
 <!-- #### DOM -->
 
