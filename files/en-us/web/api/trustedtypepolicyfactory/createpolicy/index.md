@@ -62,7 +62,7 @@ The default policy logs a message to the console to remind the developer to refa
 
 ```js
 trustedTypes.createPolicy("default", {
-  createScriptURL: (s, type, sink) => {
+  createScriptURL(s, type, sink) {
     console.log("Please refactor.");
     return `${s}?default-policy-used&type=${encodeURIComponent(
       type,

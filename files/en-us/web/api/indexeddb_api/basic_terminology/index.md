@@ -178,7 +178,7 @@ With an understanding of IndexedDB's key characteristics and core terminology un
 
 ## See also
 
-- [Indexed Database API Specification](https://www.w3.org/TR/IndexedDB/)
+- [Indexed Database API Specification](https://w3c.github.io/IndexedDB/)
 - [IndexedDB API Reference](/en-US/docs/Web/API/IndexedDB_API)
 - [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - [IndexedDB — The Store in Your Browser](<https://learn.microsoft.com/en-us/previous-versions/msdn10/gg679063(v=msdn.10)>)

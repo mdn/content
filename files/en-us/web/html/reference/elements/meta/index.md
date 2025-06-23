@@ -7,12 +7,12 @@ browser-compat: html.elements.meta
 
 {{HTMLSidebar}}
 
-The **`<meta>`** [HTML](/en-US/docs/Web/HTML) element represents {{Glossary("Metadata","metadata")}} that cannot be represented by other HTML meta-related elements, like {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} or {{HTMLElement("title")}}.
+The **`<meta>`** [HTML](/en-US/docs/Web/HTML) element represents {{Glossary("Metadata","metadata")}} that cannot be represented by other meta-related elements, such as {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, or {{HTMLElement("title")}}.
 
 The type of metadata provided by the `<meta>` element can be one of the following:
 
-- If the [`name`](#name) attribute is set, the `<meta>` element provides _document-level metadata_, applying to the whole page.
-- If the [`http-equiv`](#http-equiv) attribute is set, the `<meta>` element is a _pragma directive_, providing information equivalent to what can be given by a similarly-named HTTP header.
+- If the [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta/name) attribute is set, the `<meta>` element provides _document-level metadata_ that applies to the whole page.
+- If the [`http-equiv`](#http-equiv) attribute is set, the `<meta>` element acts as a _pragma directive_ to simulate directives that could otherwise be given by an HTTP header.
 - If the [`charset`](#charset) attribute is set, the `<meta>` element is a _charset declaration_, giving the character encoding in which the document is encoded.
 - If the [`itemprop`](/en-US/docs/Web/HTML/Reference/Global_attributes/itemprop) attribute is set, the `<meta>` element provides _user-defined metadata_.
 
@@ -21,36 +21,26 @@ The type of metadata provided by the `<meta>` element can be one of the followin
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 > [!NOTE]
-> The attribute [`name`](#name) has a specific meaning for the `<meta>` element, and the [`itemprop`](/en-US/docs/Web/HTML/Reference/Global_attributes/itemprop) attribute must not be set on the same `<meta>` element that has any existing [`name`](#name), [`http-equiv`](#http-equiv) or [`charset`](#charset) attributes.
+> The [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta/name) attribute has a specific meaning for the `<meta>` element. The [`itemprop`](/en-US/docs/Web/HTML/Reference/Global_attributes/itemprop) attribute must not be set on a `<meta>` element that includes a [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta/name), [`http-equiv`](#http-equiv), or [`charset`](#charset) attribute.
 
 - `charset`
   - : This attribute declares the document's character encoding. If the attribute is present, its value must be an ASCII case-insensitive match for the string `"utf-8"`, because UTF-8 is the only valid encoding for HTML5 documents. `<meta>` elements which declare a character encoding must be located entirely within the first 1024 bytes of the document.
 - `content`
-  - : This attribute contains the value for the [`http-equiv`](#http-equiv) or [`name`](#name) attribute, depending on which is used.
+  - : This attribute contains the value for the [`http-equiv`](#http-equiv) or [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta/name) attribute, depending on which is used.
 - `http-equiv`
 
   - : Defines a pragma directive. The attribute's name, short for `http-equivalent`, is because all the allowed values are names of particular HTTP headers:
 
     - `content-security-policy`
-
       - : Allows page authors to define a [content policy](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) for the current page. Content policies mostly specify allowed server origins and script endpoints which help guard against cross-site scripting attacks.
-
-        Also see {{HTTPHeader("Content-Security-Policy")}}.
-
+        See {{HTTPHeader("Content-Security-Policy")}} for more information.
     - `content-type`
-
       - : Declares the [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types) and the document's character encoding. The `content` attribute must have the value `"text/html; charset=utf-8"` if specified. This is equivalent to a `<meta>` element with the [`charset`](#charset) attribute specified and carries the same restriction on placement within the document. **Note:** Can only be used in documents served with a `text/html` — not in documents served with an XML MIME type.
-
         Also see {{HTTPHeader("Content-Type")}}.
-
     - `default-style`
-
       - : Sets the name of the default [CSS style sheet](/en-US/docs/Web/CSS) set.
-
     - `x-ua-compatible`
-
       - : If specified, the `content` attribute must have the value `"IE=edge"`. User agents are required to ignore this pragma.
-
     - `refresh`
 
       - : This instruction specifies:
@@ -73,21 +63,28 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
         > - [Understanding Success Criterion 3.2.5 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-no-extreme-changes-context.html)
 
 - `media`
-
   - : The `media` attribute defines which media the theme color defined in the `content` attribute should be applied to. Its value is a [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), which defaults to `all` if the attribute is missing. This attribute is only relevant when the element's [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta/name) attribute is set to [`theme-color`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/theme-color). Otherwise, it has no effect, and should not be included.
-
-- `name`
-
+- [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta/name)
   - : The `name` and `content` attributes can be used together to provide document metadata in terms of name-value pairs, with the `name` attribute giving the metadata name, and the `content` attribute giving the value.
-
-    See [standard metadata names](/en-US/docs/Web/HTML/Reference/Elements/meta/name) for details about the set of standard metadata names defined in the HTML specification.
 
 ## Examples
 
-```html
-<meta charset="utf-8" />
+### Setting a meta description
 
-<!-- Redirect page after 3 seconds -->
+The following `<meta>` tag provides a `description` as metadata for the web page:
+
+```html
+<meta
+  name="description"
+  content="The HTML reference describes all elements and attributes of HTML, including global attributes that apply to all elements." />
+```
+
+### Setting a page redirect
+
+The following example uses `http-equiv="refresh"` to direct the browser to perform a redirect.
+The `content="3;url=https://www.mozilla.org"` attribute will redirect page to `https://www.mozilla.org` after 3 seconds:
+
+```html
 <meta http-equiv="refresh" content="3;url=https://www.mozilla.org" />
 ```
 
@@ -158,7 +155,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >No corresponding role</a
         >
       </td>

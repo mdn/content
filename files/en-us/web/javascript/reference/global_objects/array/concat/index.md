@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.concat()
+short-title: concat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/concat
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.concat

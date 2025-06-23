@@ -1,5 +1,6 @@
 ---
 title: ArrayBuffer[Symbol.species]
+short-title: "[Symbol.species]"
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/Symbol.species
 page-type: javascript-static-accessor-property
 browser-compat: javascript.builtins.ArrayBuffer.@@species

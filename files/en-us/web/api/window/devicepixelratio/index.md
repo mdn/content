@@ -124,9 +124,7 @@ let remove = null;
 const output = document.querySelector("#output");
 
 const updatePixelRatio = () => {
-  if (remove != null) {
-    remove();
-  }
+  remove?.();
   const mqString = `(resolution: ${window.devicePixelRatio}dppx)`;
   const media = matchMedia(mqString);
   media.addEventListener("change", updatePixelRatio);

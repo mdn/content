@@ -127,6 +127,7 @@ These permissions are available in Manifest V2 and above unless otherwise noted:
 - `search`
 - `sessions`
 - `storage`
+- `tabGroups`
 - `tabHide`
 - `tabs`
 - `theme`

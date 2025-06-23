@@ -1,5 +1,6 @@
 ---
 title: TypedArray.prototype.toReversed()
+short-title: toReversed()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/toReversed
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.toReversed

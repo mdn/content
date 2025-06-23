@@ -1,5 +1,6 @@
 ---
 title: WeakSet.prototype.add()
+short-title: add()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/add
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.WeakSet.add

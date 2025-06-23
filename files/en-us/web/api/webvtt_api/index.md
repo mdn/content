@@ -82,9 +82,7 @@ These [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-ele
 The following example adds a new {{domxref("TextTrack")}} to the video, then adds cues using {{domxref("TextTrack.addCue()")}} method calls, with constructed `VTTCue` objects as arguments.
 
 ```html
-<video
-  controls
-  src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4"></video>
+<video controls src="/shared-assets/videos/friday.mp4"></video>
 ```
 
 #### CSS
@@ -181,9 +179,7 @@ video {
 ```
 
 ```html
-<video
-  controls
-  src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4"></video>
+<video controls src="/shared-assets/videos/friday.mp4"></video>
 ```
 
 #### CSS
@@ -250,9 +246,7 @@ video {
 ```
 
 ```html hidden
-<video
-  controls
-  src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4"></video>
+<video controls src="/shared-assets/videos/friday.mp4"></video>
 ```
 
 #### Styling by tag type

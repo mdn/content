@@ -31,7 +31,7 @@ window.requestFileSystem =
 // Opening a file system with temporary storage
 window.requestFileSystem(
   TEMPORARY,
-  1024 * 1024 /*1MB*/,
+  1024 * 1024 /* 1MB */,
   (fs) => {
     fs.root.getFile(
       "log.txt",

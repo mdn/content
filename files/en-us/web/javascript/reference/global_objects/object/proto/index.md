@@ -1,5 +1,6 @@
 ---
 title: Object.prototype.__proto__
+short-title: __proto__
 slug: Web/JavaScript/Reference/Global_Objects/Object/proto
 page-type: javascript-instance-accessor-property
 status:
@@ -64,7 +65,7 @@ console.log(shape.__proto__ === Circle); // false
 ```
 
 ```js
-const ShapeA = function () {};
+function ShapeA() {}
 const ShapeB = {
   a() {
     console.log("aaa");
@@ -80,7 +81,7 @@ console.log(ShapeA.prototype === shapeA.__proto__); // true
 ```
 
 ```js
-const ShapeC = function () {};
+function ShapeC() {}
 const ShapeD = {
   a() {
     console.log("a");

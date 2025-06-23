@@ -137,7 +137,7 @@ To use variable fonts on your operating system, you need to make sure that it is
 
 ## Examples
 
-You can find a number of other variable font examples in our [Variable fonts guide](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide).
+You can find a number of other variable font examples in our [Variable fonts](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide) guide.
 
 ### Controlling variable font weight (wght)
 

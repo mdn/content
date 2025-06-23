@@ -3,12 +3,10 @@ title: "GPUBuffer: mapAsync() method"
 short-title: mapAsync()
 slug: Web/API/GPUBuffer/mapAsync
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUBuffer.mapAsync
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`mapAsync()`** method of the
 {{domxref("GPUBuffer")}} interface maps the specified range of the `GPUBuffer`. It returns a {{jsxref("Promise")}} that resolves when the `GPUBuffer`'s content is ready to be accessed. While the `GPUBuffer` is mapped it cannot be used in any GPU commands.

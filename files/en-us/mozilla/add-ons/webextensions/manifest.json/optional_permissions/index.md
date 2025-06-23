@@ -86,6 +86,7 @@ The optional API permissions are:
 - `search`
 - `sessions`
 - `tabHide`
+- `tabGroups`
 - `tabs`
 - `topSites`
 - 'userScripts' ([optional-only](#optional-only_permissions))
@@ -102,6 +103,7 @@ These optional permissions are granted silently, without a user prompt:
 - `activeTab`
 - `cookies`
 - `idle`
+- `tabGroups`
 - `webRequest`
 - `webRequestBlocking`
 - `webRequestFilterResponse`

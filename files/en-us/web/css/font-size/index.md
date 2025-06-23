@@ -195,7 +195,7 @@ In this example, the words "outer inner outer" are all displayed at 25.6px (assu
 
 ### Ex
 
-Like the `em` unit, an element's `font-size` set using the `ex` unit is computed or dynamic. It behaves in exactly the same way, except that when setting the `font-size` property using `ex` units, the `font-size` equals the x-height of the [first available font](https://www.w3.org/TR/css-fonts-3/#first-available-font) used on the page. The number value multiplies the element's inherited `font-size` and the `font-size` compounds relatively.
+Like the `em` unit, an element's `font-size` set using the `ex` unit is computed or dynamic. It behaves in exactly the same way, except that when setting the `font-size` property using `ex` units, the `font-size` equals the x-height of the [first available font](https://drafts.csswg.org/css-fonts/#first-available-font) used on the page. The number value multiplies the element's inherited `font-size` and the `font-size` compounds relatively.
 
 See the W3C Editor's Draft for a more detailed description of [font-relative length units](https://drafts.csswg.org/css-values-4/#font-relative-length) such as `ex`.
 

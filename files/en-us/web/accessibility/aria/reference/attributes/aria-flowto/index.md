@@ -1,5 +1,6 @@
 ---
-title: aria-flowto
+title: "ARIA: aria-flowto attribute"
+short-title: aria-flowto
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-flowto
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-flowto
@@ -22,9 +23,18 @@ When `aria-flowto` has a single [id](/en-US/docs/Web/HTML/Reference/Global_attri
 ## Values
 
 - `id`
-  - : Suggested next element in the reading order.
+  - : The `id` of the next element in the alternate reading order.
 - `id` list
-  - : Space separated list of ID values referencing the suggested elements the user may want to go to next in the alternate reading order of content.
+  - : Space separated list of values referencing the `id` values of elements the user may want to go to next in the alternate reading order of content.
+
+## Associated interfaces
+
+- {{domxref("Element.ariaFlowToElements")}}
+  - : The `ariaFlowToElements` property is part of each element's interface.
+    Its value is an array of instances of subclasses of {{domxref("Element")}} that reflect the `id` references in the `aria-flowto` attribute ([with some caveats](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references)).
+- {{domxref("ElementInternals.ariaFlowToElements")}}
+  - : The `ariaFlowToElements` property is part of each custom element's interface.
+    Its value is an array of instances of subclasses of {{domxref("Element")}} that reflect the `id` references in the `aria-flowto` attribute ([with some caveats](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references)).
 
 ## Associated roles
 

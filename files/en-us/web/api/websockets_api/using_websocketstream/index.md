@@ -224,80 +224,64 @@ closeBtn.addEventListener("click", () => {
 
 ### Full listing
 
-```html
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>WebSocketStream Test</title>
-  </head>
+```js
+const output = document.querySelector("#output");
+const closeBtn = document.querySelector("#close");
 
-  <body>
-    <h2>WebSocketStream Test</h2>
-    <p>Sends a ping every five seconds</p>
-    <button id="close" disabled>Close socket connection</button>
-    <div id="output"></div>
-    <script>
-      const output = document.querySelector("#output");
-      const closeBtn = document.querySelector("#close");
+function writeToScreen(message) {
+  const pElem = document.createElement("p");
+  pElem.textContent = message;
+  output.appendChild(pElem);
+}
 
-      function writeToScreen(message) {
-        const pElem = document.createElement("p");
-        pElem.textContent = message;
-        output.appendChild(pElem);
+if (!("WebSocketStream" in self)) {
+  writeToScreen("Your browser does not support WebSocketStream");
+} else {
+  const wsURL = "ws://127.0.0.1/";
+  const wss = new WebSocketStream(wsURL);
+
+  console.log(wss.url);
+
+  async function start() {
+    const { readable, writable, extensions, protocol } = await wss.opened;
+    writeToScreen("CONNECTED");
+    closeBtn.disabled = false;
+    const reader = readable.getReader();
+    const writer = writable.getWriter();
+
+    writer.write("ping");
+    writeToScreen("SENT: ping");
+
+    while (true) {
+      const { value, done } = await reader.read();
+      writeToScreen(`RECEIVED: ${value}`);
+      if (done) {
+        break;
       }
 
-      if (!("WebSocketStream" in self)) {
-        writeToScreen("Your browser does not support WebSocketStream");
-      } else {
-        const wsURL = "ws://127.0.0.1/";
-        const wss = new WebSocketStream(wsURL);
+      setTimeout(() => {
+        writer.write("ping");
+        writeToScreen("SENT: ping");
+      }, 5000);
+    }
+  }
 
-        console.log(wss.url);
+  start();
 
-        async function start() {
-          const { readable, writable, extensions, protocol } = await wss.opened;
-          writeToScreen("CONNECTED");
-          closeBtn.disabled = false;
-          const reader = readable.getReader();
-          const writer = writable.getWriter();
+  wss.closed.then((result) => {
+    writeToScreen(
+      `DISCONNECTED: code ${result.closeCode}, message "${result.reason}"`,
+    );
+    console.log("Socket closed", result.closeCode, result.reason);
+  });
 
-          writer.write("ping");
-          writeToScreen("SENT: ping");
+  closeBtn.addEventListener("click", () => {
+    wss.close({
+      code: 1000,
+      reason: "That's all folks",
+    });
 
-          while (true) {
-            const { value, done } = await reader.read();
-            writeToScreen(`RECEIVED: ${value}`);
-            if (done) {
-              break;
-            }
-
-            setTimeout(() => {
-              writer.write("ping");
-              writeToScreen("SENT: ping");
-            }, 5000);
-          }
-        }
-
-        start();
-
-        wss.closed.then((result) => {
-          writeToScreen(
-            `DISCONNECTED: code ${result.closeCode}, message "${result.reason}"`,
-          );
-          console.log("Socket closed", result.closeCode, result.reason);
-        });
-
-        closeBtn.addEventListener("click", () => {
-          wss.close({
-            code: 1000,
-            reason: "That's all folks",
-          });
-
-          closeBtn.disabled = true;
-        });
-      }
-    </script>
-  </body>
-</html>
+    closeBtn.disabled = true;
+  });
+}
 ```

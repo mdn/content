@@ -1,10 +1,10 @@
 ---
 title: Transport Layer Security (TLS) configuration
+short-title: Transport Layer Security (TLS)
 slug: Web/Security/Practical_implementation_guides/TLS
 page-type: guide
+sidebar: security
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
 [Transport Layer Security (TLS)](/en-US/docs/Glossary/TLS) provides assurances about the confidentiality, authenticity, and integrity of all communications, and as such, should be used for all inbound and outbound website communications.
 

@@ -1,5 +1,6 @@
 ---
-title: "Permissions-Policy: encrypted-media"
+title: "Permissions-Policy: encrypted-media directive"
+short-title: encrypted-media
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/encrypted-media
 page-type: http-permissions-policy-directive
 status:

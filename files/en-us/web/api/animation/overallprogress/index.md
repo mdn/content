@@ -50,7 +50,6 @@ html {
 }
 
 body {
-  margin: 0;
   width: 500px;
   margin: 0 auto;
   padding: 20px;

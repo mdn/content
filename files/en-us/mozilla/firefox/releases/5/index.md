@@ -71,7 +71,7 @@ Firefox 5, based on Gecko 5.0, was released on June 21, 2011. This article provi
 
 ### MathML
 
-- Support for [embellished operators](https://www.w3.org/TR/MathML3/chapter3.html#id.3.2.5.7.3)
+- Support for [embellished operators](https://w3c.github.io/mathml/spec.html#dfn-embellished-operator)
 
 ### Developer tools
 

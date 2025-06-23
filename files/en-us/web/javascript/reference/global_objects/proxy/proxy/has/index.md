@@ -1,5 +1,6 @@
 ---
 title: handler.has()
+short-title: has()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.has

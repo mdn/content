@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.join()
+short-title: join()
 slug: Web/JavaScript/Reference/Global_Objects/Array/join
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.join

@@ -1,5 +1,6 @@
 ---
 title: Object.seal()
+short-title: seal()
 slug: Web/JavaScript/Reference/Global_Objects/Object/seal
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.seal

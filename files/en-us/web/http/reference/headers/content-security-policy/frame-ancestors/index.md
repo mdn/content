@@ -1,5 +1,6 @@
 ---
-title: "CSP: frame-ancestors"
+title: "Content-Security-Policy: frame-ancestors directive"
+short-title: frame-ancestors
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.frame-ancestors

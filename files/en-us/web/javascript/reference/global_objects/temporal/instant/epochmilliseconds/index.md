@@ -1,5 +1,6 @@
 ---
 title: Temporal.Instant.prototype.epochMilliseconds
+short-title: epochMilliseconds
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Instant/epochMilliseconds
 page-type: javascript-instance-accessor-property
 status:

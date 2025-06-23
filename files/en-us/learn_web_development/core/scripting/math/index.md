@@ -89,7 +89,7 @@ The [`Number`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) objec
 For example, to round your number to a fixed number of decimal places, use the [`toFixed()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) method. Type the following lines into your browser's [console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html):
 
 ```js
-const lotsOfDecimal = 1.766584958675746364;
+const lotsOfDecimal = 1.7665849587;
 lotsOfDecimal;
 const twoDecimalPlaces = lotsOfDecimal.toFixed(2);
 twoDecimalPlaces;
@@ -247,7 +247,7 @@ If you want to override operator precedence, you can put parentheses around the 
 (num2 + num1) / (8 + 2);
 ```
 
-Try it and see.
+Try entering the previous line into the console to test this out.
 
 > [!NOTE]
 > A full list of all JavaScript operators and their precedence can be found in [Operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence).

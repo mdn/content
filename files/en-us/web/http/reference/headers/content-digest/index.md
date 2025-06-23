@@ -1,5 +1,6 @@
 ---
-title: Content-Digest
+title: Content-Digest header
+short-title: Content-Digest
 slug: Web/HTTP/Reference/Headers/Content-Digest
 page-type: http-header
 spec-urls: https://datatracker.ietf.org/doc/html/rfc9530#section-2

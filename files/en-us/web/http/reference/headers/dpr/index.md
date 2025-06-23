@@ -1,5 +1,6 @@
 ---
-title: DPR
+title: DPR header
+short-title: DPR
 slug: Web/HTTP/Reference/Headers/DPR
 page-type: http-header
 status:

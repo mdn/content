@@ -1,5 +1,6 @@
 ---
-title: Access-Control-Expose-Headers
+title: Access-Control-Expose-Headers header
+short-title: Access-Control-Expose-Headers
 slug: Web/HTTP/Reference/Headers/Access-Control-Expose-Headers
 page-type: http-header
 browser-compat: http.headers.Access-Control-Expose-Headers

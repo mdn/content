@@ -2,12 +2,10 @@
 title: position-anchor
 slug: Web/CSS/position-anchor
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.position-anchor
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{CSSRef}}
 
 The **`position-anchor`** [CSS](/en-US/docs/Web/CSS) property specifies the anchor name of the **anchor element** (i.e., an element that has an **anchor name** set on it via the {{cssxref("anchor-name")}} property) a positioned element is associated with.
 

@@ -126,10 +126,8 @@ The policy also uses the `trusted-types` directive to specify that a {{domxref("
 
   <script>
     const policy = trustedTypes.createPolicy("somePolicy", {
-      createHTML: (string) => {
-        // Some (insufficient) sanitization code
-        return string.replace(/</g, "&lt;");
-      },
+      // Some (insufficient) sanitization code
+      createHTML: (string) => string.replace(/</g, "&lt;"),
     });
   </script>
 </html>
@@ -167,7 +165,7 @@ In addition, it specifies the directive `require-trusted-types-for 'script'`, wh
   </head>
   <body>
     <input type="text" id="userInput" />
-    <button onclick="updateContent()">Update Content</button>
+    <button>Update Content</button>
     <div id="content"></div>
   </body>
 
@@ -178,6 +176,8 @@ In addition, it specifies the directive `require-trusted-types-for 'script'`, wh
       // Passing unsanitized content - a violation of the policy
       document.getElementById("content").innerHTML = userInput;
     }
+
+    document.querySelector("button").addEventListener("click", updateContent);
   </script>
 </html>
 ```
@@ -193,10 +193,8 @@ In order to avoid the violation we would need to update the script to define a t
 
 ```js
 const policy = trustedTypes.createPolicy("myPolicy", {
-  createHTML: (string) => {
-    // Some (insufficient) sanitization code
-    return string.replace(/</g, "&lt;");
-  },
+  // Some (insufficient) sanitization code
+  createHTML: (string) => string.replace(/</g, "&lt;"),
 });
 
 function updateContent() {

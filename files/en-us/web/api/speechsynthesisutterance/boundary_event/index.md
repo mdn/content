@@ -14,10 +14,10 @@ The **`boundary`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("boundary", (event) => {});
+```js-nolint
+addEventListener("boundary", (event) => { })
 
-onboundary = (event) => {};
+onboundary = (event) => { }
 ```
 
 ## Event type

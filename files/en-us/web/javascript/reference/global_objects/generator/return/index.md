@@ -1,5 +1,6 @@
 ---
 title: Generator.prototype.return()
+short-title: return()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/return
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Generator.return

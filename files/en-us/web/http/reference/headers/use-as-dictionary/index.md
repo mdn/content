@@ -1,5 +1,6 @@
 ---
-title: Use-As-Dictionary
+title: Use-As-Dictionary header
+short-title: Use-As-Dictionary
 slug: Web/HTTP/Reference/Headers/Use-As-Dictionary
 page-type: http-header
 status:

@@ -6,9 +6,9 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-The [Server Timing specification](https://www.w3.org/TR/server-timing/) enables the server to communicate performance metrics from the request-response cycle to the user agent, and utilizes a JavaScript interface to allow applications to collect, process, and act on these metrics to optimize application delivery.
+The [Server Timing specification](https://w3c.github.io/server-timing/) enables the server to communicate performance metrics from the request-response cycle to the user agent, and utilizes a JavaScript interface to allow applications to collect, process, and act on these metrics to optimize application delivery.
 
 ## See also
 
-- <https://www.w3.org/TR/server-timing/>
-- [Resource Timing](https://www.w3.org/TR/resource-timing/)
+- [Server Timing specification](https://w3c.github.io/server-timing/)
+- [Resource Timing specification](https://w3c.github.io/resource-timing/)

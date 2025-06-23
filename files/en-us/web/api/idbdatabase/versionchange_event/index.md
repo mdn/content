@@ -15,9 +15,10 @@ another window/tab on the same computer).
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("versionchange", (event) => {});
-onversionchange = (event) => {};
+```js-nolint
+addEventListener("versionchange", (event) => { })
+
+onversionchange = (event) => { }
 ```
 
 ## Event type

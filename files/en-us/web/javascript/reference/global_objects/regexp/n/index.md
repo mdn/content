@@ -1,5 +1,6 @@
 ---
 title: RegExp.$1, …, RegExp.$9
+short-title: $1, …, $9
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/n
 page-type: javascript-static-accessor-property
 status:

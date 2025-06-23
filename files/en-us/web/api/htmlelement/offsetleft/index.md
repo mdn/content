@@ -34,24 +34,38 @@ This example shows a 'long' sentence that wraps within a div with a blue border,
 ![A sentence that reads: Short span. This text is completely within a div with a blue border. A sentence that reads: Long span that wraps within this div. The words "long span that wraps" is within a box with a red border. The words "within this div" are within the div with the blue border. ](offsetleft.jpg)
 
 ```html
-<div
-  style="width: 300px; border-color:blue; border-style:solid; border-width:1;">
-  <span>Short span. </span>
+<div class="span-container">
+  <span>Short span.</span>
   <span id="long-span">Long span that wraps within this div.</span>
 </div>
 
-<div
-  id="box"
-  style="position: absolute; border-color: red; border-width: 1; border-style: solid; z-index: 10"></div>
+<div id="box"></div>
+```
 
-<script>
-  const box = document.getElementById("box");
-  const longSpan = document.getElementById("long-span");
-  box.style.left = longSpan.offsetLeft + document.body.scrollLeft + "px";
-  box.style.top = longSpan.offsetTop + document.body.scrollTop + "px";
-  box.style.width = longSpan.offsetWidth + "px";
-  box.style.height = longSpan.offsetHeight + "px";
-</script>
+```css
+.span-container {
+  width: 300px;
+  border-color: blue;
+  border-style: solid;
+  border-width: 1px;
+}
+
+#box {
+  position: absolute;
+  border-color: red;
+  border-width: 1px;
+  border-style: solid;
+  z-index: 10;
+}
+```
+
+```js
+const box = document.getElementById("box");
+const longSpan = document.getElementById("long-span");
+box.style.left = `${longSpan.offsetLeft}${document.body.scrollLeft}px`;
+box.style.top = `${longSpan.offsetTop}${document.body.scrollTop}px`;
+box.style.width = `${longSpan.offsetWidth}px`;
+box.style.height = `${longSpan.offsetHeight}px`;
 ```
 
 ## Specifications

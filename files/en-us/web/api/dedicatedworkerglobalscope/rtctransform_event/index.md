@@ -18,10 +18,10 @@ This event is not cancellable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("rtctransform", (event) => {});
+```js-nolint
+addEventListener("rtctransform", (event) => { })
 
-onrtctransform = (event) => {};
+onrtctransform = (event) => { }
 ```
 
 ## Event type
@@ -46,9 +46,9 @@ The `event.transformer` is a {{domxref("RTCRtpScriptTransformer")}}, the worker 
 addEventListener("rtctransform", (event) => {
   let transform;
   // Select a transform based on passed options
-  if (event.transformer.options.name == "senderTransform")
+  if (event.transformer.options.name === "senderTransform")
     transform = createSenderTransform(); // A TransformStream
-  else if (event.transformer.options.name == "receiverTransform")
+  else if (event.transformer.options.name === "receiverTransform")
     transform = createReceiverTransform(); // A TransformStream
   else return;
 

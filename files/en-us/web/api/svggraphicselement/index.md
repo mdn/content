@@ -33,17 +33,6 @@ _This interface also inherits methods from its parent, {{domxref("SVGElement")}}
 - {{domxref("SVGGraphicsElement.getScreenCTM()")}}
   - : Returns a {{domxref("DOMMatrix")}} representing the matrix that transforms the current element's coordinate system to the coordinate system of the SVG viewport for the SVG document fragment.
 
-## Events
-
-Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the equivalent `on...` handler property.
-
-- [`copy`](/en-US/docs/Web/API/SVGGraphicsElement/copy_event)
-  - : Fired when the user initiates a copy action through the browser's user interface.
-- [`cut`](/en-US/docs/Web/API/SVGGraphicsElement/cut_event)
-  - : Fired when the user has initiated a "cut" action through the browser's user interface.
-- [`paste`](/en-US/docs/Web/API/SVGGraphicsElement/paste_event)
-  - : Fires when the user has initiated a "paste" action through the browser's user interface.
-
 ## Specifications
 
 {{Specifications}}

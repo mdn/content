@@ -1,5 +1,6 @@
 ---
 title: Set.prototype.symmetricDifference()
+short-title: symmetricDifference()
 slug: Web/JavaScript/Reference/Global_Objects/Set/symmetricDifference
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.symmetricDifference

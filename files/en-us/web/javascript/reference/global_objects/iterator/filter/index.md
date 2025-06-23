@@ -1,5 +1,6 @@
 ---
 title: Iterator.prototype.filter()
+short-title: filter()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/filter
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Iterator.filter

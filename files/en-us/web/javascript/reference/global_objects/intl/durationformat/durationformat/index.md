@@ -1,5 +1,6 @@
 ---
 title: Intl.DurationFormat() constructor
+short-title: Intl.DurationFormat()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/DurationFormat
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Intl.DurationFormat.DurationFormat

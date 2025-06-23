@@ -1,5 +1,6 @@
 ---
-title: aria-valuenow
+title: "ARIA: aria-valuenow attribute"
+short-title: aria-valuenow
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-valuenow

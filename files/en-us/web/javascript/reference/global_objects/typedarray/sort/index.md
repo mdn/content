@@ -1,5 +1,6 @@
 ---
 title: TypedArray.prototype.sort()
+short-title: sort()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/sort
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.sort

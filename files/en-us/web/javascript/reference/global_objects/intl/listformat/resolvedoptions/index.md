@@ -1,5 +1,6 @@
 ---
 title: Intl.ListFormat.prototype.resolvedOptions()
+short-title: resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/resolvedOptions
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.ListFormat.resolvedOptions

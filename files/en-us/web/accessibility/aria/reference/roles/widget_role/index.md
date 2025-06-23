@@ -1,5 +1,6 @@
 ---
 title: "ARIA: widget role"
+short-title: widget
 slug: Web/Accessibility/ARIA/Reference/Roles/widget_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#widget

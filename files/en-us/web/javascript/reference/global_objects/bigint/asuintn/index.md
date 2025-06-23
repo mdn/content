@@ -1,5 +1,6 @@
 ---
 title: BigInt.asUintN()
+short-title: asUintN()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/asUintN
 page-type: javascript-static-method
 browser-compat: javascript.builtins.BigInt.asUintN
@@ -41,7 +42,7 @@ BigInt.asUintN(bits, bigint)
 
 ### Return value
 
-The value of `bigint` modulo 2^`bits`, as an unsigned integer.
+The value of `bigint` modulo `2 ** bits`, as an unsigned integer.
 
 ### Exceptions
 

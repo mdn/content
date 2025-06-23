@@ -1,5 +1,6 @@
 ---
-title: Service-Worker-Navigation-Preload
+title: Service-Worker-Navigation-Preload header
+short-title: Service-Worker-Navigation-Preload
 slug: Web/HTTP/Reference/Headers/Service-Worker-Navigation-Preload
 page-type: http-header
 browser-compat: http.headers.Service-Worker-Navigation-Preload

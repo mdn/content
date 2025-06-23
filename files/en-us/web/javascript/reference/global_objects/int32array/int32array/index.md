@@ -1,5 +1,6 @@
 ---
 title: Int32Array() constructor
+short-title: Int32Array()
 slug: Web/JavaScript/Reference/Global_Objects/Int32Array/Int32Array
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Int32Array.Int32Array

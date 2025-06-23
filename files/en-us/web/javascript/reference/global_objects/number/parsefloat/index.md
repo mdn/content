@@ -1,5 +1,6 @@
 ---
 title: Number.parseFloat()
+short-title: parseFloat()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Number.parseFloat

@@ -1,5 +1,6 @@
 ---
 title: "AggregateError: errors"
+short-title: errors
 slug: Web/JavaScript/Reference/Global_Objects/AggregateError/errors
 page-type: javascript-instance-data-property
 browser-compat: javascript.builtins.AggregateError.errors

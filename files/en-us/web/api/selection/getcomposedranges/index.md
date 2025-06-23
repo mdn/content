@@ -3,12 +3,10 @@ title: "Selection: getComposedRanges() method"
 short-title: getComposedRanges()
 slug: Web/API/Selection/getComposedRanges
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.Selection.getComposedRanges
 ---
 
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+{{ ApiRef("DOM") }}
 
 The **`Selection.getComposedRanges()`** method returns an array of {{domxref("StaticRange")}} objects representing the current selection ranges, and can return ranges that potentially cross shadow boundaries.
 
@@ -61,7 +59,7 @@ It allows you to select text that is defined in different nodes in the DOM, and 
 
 #### HTML
 
-The HTML defines some text nodes with some `<span>` elements to which we'll attach a shadow root using JavScript.
+The HTML defines some text nodes with some `<span>` elements to which we'll attach a shadow root using JavaScript.
 We also add some buttons for copying and applying the selection using a number of different methods.
 
 ```html

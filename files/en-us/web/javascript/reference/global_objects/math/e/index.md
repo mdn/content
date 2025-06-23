@@ -1,5 +1,6 @@
 ---
 title: Math.E
+short-title: E
 slug: Web/JavaScript/Reference/Global_Objects/Math/E
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Math.E

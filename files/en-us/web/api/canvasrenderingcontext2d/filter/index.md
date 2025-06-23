@@ -121,11 +121,17 @@ photo of a rhino.
 
 ```html
 <canvas id="canvas" width="400" height="150"></canvas>
-<div style="display:none;">
+<div class="hidden">
   <img
     id="source"
     src="https://mdn.github.io/shared-assets/images/examples/rhino.jpg" />
 </div>
+```
+
+```css hidden
+.hidden {
+  display: none;
+}
 ```
 
 #### JavaScript

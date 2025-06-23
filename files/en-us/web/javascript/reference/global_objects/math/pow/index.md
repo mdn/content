@@ -1,5 +1,6 @@
 ---
 title: Math.pow()
+short-title: pow()
 slug: Web/JavaScript/Reference/Global_Objects/Math/pow
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.pow

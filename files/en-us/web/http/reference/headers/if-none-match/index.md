@@ -1,5 +1,6 @@
 ---
-title: If-None-Match
+title: If-None-Match header
+short-title: If-None-Match
 slug: Web/HTTP/Reference/Headers/If-None-Match
 page-type: http-header
 browser-compat: http.headers.If-None-Match

@@ -215,7 +215,7 @@ _No change._
 
 ### Other
 
-- Due to breaking changes in Firefox 44 ([bug 1202902](https://bugzil.la/1202902)), add-ons packed with [cfx](/en-US/docs/Mozilla/Add-ons/SDK/Tools/cfx) will not work any longer. To make your add-on compatible again, please use [jpm](/en-US/docs/Mozilla/Add-ons/SDK/Tools/jpm). You can find steps to migrate from _cfx_ to _jpm_ [here](/en-US/docs/Mozilla/Add-ons/SDK/Tools/cfx_to_jpm).
+- Due to breaking changes in Firefox 44 ([bug 1202902](https://bugzil.la/1202902)), add-ons packed with [cfx](/en-US/docs/Mozilla/Add-ons/SDK/Tools/cfx) will not work any longer. To make your add-on compatible again, please use [jpm](/en-US/docs/Mozilla/Add-ons/SDK/Tools/jpm). See the [_cfx_ to _jpm_ migration guide](/en-US/docs/Mozilla/Add-ons/SDK/Tools/cfx_to_jpm).
 
 ## Older versions
 

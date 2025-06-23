@@ -14,15 +14,18 @@ While reporting an issue or participating in a conversation in an issue, always 
 
 Do the following:
 
-- Before filing an issue, consider if you need to [discuss](/en-US/docs/MDN/Community/Communication_channels#chat_rooms) it with the staff/community. Use discussions to gain different viewpoints and to converge on an agreed-upon course of action. This helps to keep issues focused and productive.
-- After filing an issue, try to fix the problem yourself. Read our [contribution guide](https://github.com/mdn/content/blob/main/CONTRIBUTING.md) to learn more.
 - If you have a question, you can ask it in the [MDN Web Docs chat rooms](/en-US/docs/MDN/Community/Communication_channels#chat_rooms) instead of filing an issue.
+- If there's many ways to fix a problem, consider if you need to [discuss](/en-US/docs/MDN/Community/Communication_channels#chat_rooms) it with the staff/community.
+  Use discussions to gain different viewpoints and to converge on an agreed-upon course of action. This helps to keep issues focused and productive.
+- After filing an issue, try to fix the problem yourself. There's a guide about [Pull request submission and reviews](/en-US/docs/MDN/Community/Pull_requests) that covers everything you need to know about the contribution process.
 
 Avoid doing the following:
 
 - Complicating issues by trying to discuss multiple topics or by making off-topic comments.
 - Opening lots of issues asking vague questions.
 - Asking questions without trying to solve the problem yourself first.
+
+If you want to suggest new documentation or ways to improve the website, see [Proposing new content or features](/en-US/docs/MDN/Community/Issues/Content_suggestions_feature_proposals).
 
 ## Guidelines for reporting an issue
 
@@ -44,7 +47,7 @@ Here are some hints for opening issues:
   - **Issue title** must convey succinctly the _required action_.
   - **Issue description** must clearly describe the bug and the action required to resolve the issue. It must also list the task or sub-tasks to be completed to resolve the issue. Some other guidelines include:
     - Use the description field to indicate the status of the task or sub-tasks by using checklists.
-    - Update the status of a task in the issue description instead of commenting on the issue. Use [task lists](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-task-lists) in the description if an issue has multiple parts. This helps others who may otherwise need to scroll through comments on the issue to determine the status of various tasks.
+    - Update the status of a task in the issue description instead of commenting on the issue. Use [task lists](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-tasklists) in the description if an issue has multiple parts. This helps others who may otherwise need to scroll through comments on the issue to determine the status of various tasks.
     - Comments in an issue should be limited to details or context that help resolve the issue.
 - If you find yourself in one of the following situations, move the conversation to [MDN's discussion on GitHub](https://github.com/orgs/mdn/discussions):
   - A discussion needs to take place to clarify an issue.
@@ -55,7 +58,7 @@ Here are some hints for opening issues:
 
 ### Creating a task list issue
 
-If the issue you're opening is not to report a bug but to perform a series of tasks, you can create the issue as a [task list](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-task-lists).
+If the issue you're opening is not to report a bug but to perform a series of tasks, you can create the issue as a [task list](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-tasklists).
 Explain the context or reason for performing the tasks in the description.
 Ensure that you list all the actionable tasks as a checklist.
 
@@ -104,16 +107,15 @@ These are the general steps for working on an issue:
 
 ### Fixing issues yourself
 
-If you spot a bug — whether it's a problem with the website's look and feel or an error in documentation — you can try to fix it yourself. Learn how you can contribute by going through our [contribution guide](https://github.com/mdn/content/blob/main/CONTRIBUTING.md).
+If you spot a bug — whether it's a problem with the website's look and feel or an error in documentation — you can try to fix it yourself in a [pull request](/en-US/docs/MDN/Community/Pull_requests).
+If the bug is small (such as a typo or a minor sentence improvement) or involves a quick fix, you can submit a pull request with the appropriate changes.
 
-If the bug is small, such as a typo or a minor sentence improvement, or involves an uncontroversial fix, submit a pull request with the changes.
-
-For all other type of bugs, begin by [opening the issue](#guidelines_for_reporting_an_issue). Add a comment about your intent to work on the issue and if possible, describe your proposed solution or steps to fix the issue.
-Wait for the issue to be triaged, so that the MDN Web Docs team can verify that the issue is legit and approves your proposed solution.
+For any other type of bug, begin by [opening an issue](#guidelines_for_reporting_an_issue).
+Add a comment about your intent to work on the issue and, if possible, describe your proposed solution or steps to fix it.
 
 > [!NOTE]
-> If you open a pull request before the issue has been triaged, your time and effort might go waste if the linked issue is deemed invalid or the solution does not match the one expected by the MDN Web Docs team.
-> After the issue is triaged, assign the issue to yourself.
+> Your time and effort might go waste if you open a pull request without opening an issue first.
+> Wait for the issue to be triaged, so that the MDN Web Docs team can verify that the issue is legit and approve your proposed solution.
 
 Using the [guidelines on working on an issue](#guidelines_for_working_on_an_issue), try to fix the problem by updating the appropriate source, such as:
 

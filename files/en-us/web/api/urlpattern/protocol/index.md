@@ -3,12 +3,10 @@ title: "URLPattern: protocol property"
 short-title: protocol
 slug: Web/API/URLPattern/protocol
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.URLPattern.protocol
 ---
 
-{{APIRef("URL Pattern API")}}{{SeeCompatTable}} {{AvailableInWorkers}}
+{{APIRef("URL Pattern API")}} {{AvailableInWorkers}}
 
 The **`protocol`** read-only property of the {{domxref("URLPattern")}} interface is a
 string containing the pattern used to match the protocol part

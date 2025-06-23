@@ -1,5 +1,6 @@
 ---
 title: Set.prototype.isSupersetOf()
+short-title: isSupersetOf()
 slug: Web/JavaScript/Reference/Global_Objects/Set/isSupersetOf
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.isSupersetOf

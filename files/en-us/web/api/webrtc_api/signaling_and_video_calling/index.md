@@ -157,9 +157,13 @@ The HTML for our client needs a location for video to be presented. This require
   <div class="camera-box">
     <video id="received_video" autoplay></video>
     <video id="local_video" autoplay muted></video>
-    <button id="hangup-button" onclick="hangUpCall();" disabled>Hang Up</button>
+    <button id="hangup-button" disabled>Hang Up</button>
   </div>
 </div>
+```
+
+```js
+document.getElementById("hangup-button").addEventListener("click", hangUpCall);
 ```
 
 The page structure defined here is using {{HTMLElement("div")}} elements, giving us full control over the page layout by enabling the use of CSS. We'll skip layout detail in this guide, but [take a look at the CSS](https://github.com/mdn/samples-server/blob/master/s/webrtc-from-chat/chat.css) on GitHub to see how we handled it. Take note of the two {{HTMLElement("video")}} elements, one for your self-view, one for the connection, and the {{HTMLElement("button")}} element.

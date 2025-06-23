@@ -1,5 +1,6 @@
 ---
-title: Access-Control-Allow-Methods
+title: Access-Control-Allow-Methods header
+short-title: Access-Control-Allow-Methods
 slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Methods
 page-type: http-header
 browser-compat: http.headers.Access-Control-Allow-Methods

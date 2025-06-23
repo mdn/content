@@ -1,5 +1,6 @@
 ---
 title: Object.prototype.propertyIsEnumerable()
+short-title: propertyIsEnumerable()
 slug: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Object.propertyIsEnumerable

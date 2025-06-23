@@ -1,5 +1,6 @@
 ---
-title: Repr-Digest
+title: Repr-Digest header
+short-title: Repr-Digest
 slug: Web/HTTP/Reference/Headers/Repr-Digest
 page-type: http-header
 spec-urls: https://datatracker.ietf.org/doc/html/rfc9530

@@ -16,10 +16,10 @@ This event is not cancelable.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("transitionstart", (event) => {});
+```js-nolint
+addEventListener("transitionstart", (event) => { })
 
-ontransitionstart = (event) => {};
+ontransitionstart = (event) => { }
 ```
 
 ## Event type

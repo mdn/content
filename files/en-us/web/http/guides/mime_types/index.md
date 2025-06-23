@@ -1,12 +1,13 @@
 ---
-title: MIME types (IANA media types)
+title: Media types (MIME types)
+short-title: Media types
 slug: Web/HTTP/Guides/MIME_types
 page-type: guide
 ---
 
 {{HTTPSidebar}}
 
-A **media type** (also known as a **Multipurpose Internet Mail Extensions or MIME type**) indicates the nature and format of a document, file, or assortment of bytes.
+A **media type** (formerly known as a **Multipurpose Internet Mail Extensions or MIME type**) indicates the nature and format of a document, file, or assortment of bytes.
 MIME types are defined and standardized in IETF's {{RFC(6838)}}.
 
 The [Internet Assigned Numbers Authority (IANA)](https://www.iana.org/) is responsible for all official MIME types, and you can find the most up-to-date and complete list at their [Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml) page.

@@ -251,7 +251,7 @@ There is also some preparation to do specific to each company you apply to:
 
 ### Initial screening
 
-Once the company have looked at your application and decided you sound like a "potential", they will probably start off by inviting you to an initial phone interview, just with the recruiter or hiring manager. This is usually a short interview to assess "culture fit" (are you going to get on with well with them?), make sure they don't pick up any immediate red flags that suggest you won't be a good employee, and tell you about what to expect from the rest of the interview process.
+Once the company have looked at your application and decided you sound like a "potential", they will probably start off by inviting you to an initial phone interview, just with the recruiter or hiring manager. This is usually a short interview to assess "culture fit" (are you going to get on well with them?), make sure they don't pick up any immediate red flags that suggest you won't be a good employee, and tell you about what to expect from the rest of the interview process.
 
 At this stage, you should be friendly and talkative, but don't talk too much, act naturally, and see where the interviewer steers the conversation. Make sure to let them know what days and times will be suitable for you to attend further interviews. Try to be as flexible as you can, and be prepared to move your schedule around to accommodate them.
 

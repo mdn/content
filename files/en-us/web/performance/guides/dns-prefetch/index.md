@@ -70,7 +70,7 @@ Some resources such as fonts are loaded in anonymous mode. In such cases you sho
 
 ## See also
 
-- [\<link>](/en-US/docs/Web/HTML/Reference/Elements/link)
+- [`<link>`](/en-US/docs/Web/HTML/Reference/Elements/link)
 - [HTML attribute: rel](/en-US/docs/Web/HTML/Reference/Attributes/rel)
 - [HTML rel attribute: preconnect](/en-US/docs/Web/HTML/Reference/Attributes/rel/preconnect)
 - [crossorigin](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin)

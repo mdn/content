@@ -24,10 +24,10 @@ The event is a device-independent event — meaning it can be activated by touch
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("click", (event) => {});
+```js-nolint
+addEventListener("click", (event) => { })
 
-onclick = (event) => {};
+onclick = (event) => { }
 ```
 
 ## Event type

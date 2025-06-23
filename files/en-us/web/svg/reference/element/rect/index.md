@@ -8,27 +8,9 @@ sidebar: svgref
 
 The **`<rect>`** [SVG](/en-US/docs/Web/SVG) element is a [basic SVG shape](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes) that draws rectangles, defined by their position, width, and height. The rectangles may have their corners rounded.
 
-## Example
+## Usage context
 
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg viewBox="0 0 220 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- Regular rectangle -->
-  <rect width="100" height="100" />
-
-  <!-- Rounded corner rectangle -->
-  <rect x="120" width="100" height="100" rx="15" />
-</svg>
-```
-
-{{EmbedLiveSample('Example', 100, '100%')}}
+{{svginfo}}
 
 ## Attributes
 
@@ -57,9 +39,31 @@ svg {
 > [!NOTE]
 > Starting with SVG2, `x`, `y`, `width`, `height`, `rx` and `ry` are _Geometry Properties_, meaning those attributes can also be used as CSS properties for that element.
 
-## Usage context
+## DOM Interface
 
-{{svginfo}}
+This element implements the {{domxref("SVGRectElement")}} interface.
+
+## Example
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 220 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Regular rectangle -->
+  <rect width="100" height="100" />
+
+  <!-- Rounded corner rectangle -->
+  <rect x="120" width="100" height="100" rx="15" />
+</svg>
+```
+
+{{EmbedLiveSample('Example', 100, '100%')}}
 
 ## Specifications
 

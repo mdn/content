@@ -1,5 +1,6 @@
 ---
-title: autofocus
+title: HTML autofocus global attribute
+short-title: autofocus
 slug: Web/HTML/Reference/Global_attributes/autofocus
 page-type: html-attribute
 browser-compat: html.global_attributes.autofocus

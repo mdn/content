@@ -24,9 +24,10 @@ This non-cancelable event [bubbles](/en-US/docs/Learn_web_development/Core/Scrip
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("abort", (event) => {});
-onabort = (event) => {};
+```js-nolint
+addEventListener("abort", (event) => { })
+
+onabort = (event) => { }
 ```
 
 ## Event type

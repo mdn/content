@@ -1,5 +1,6 @@
 ---
 title: Temporal.ZonedDateTime.prototype.inLeapYear
+short-title: inLeapYear
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/inLeapYear
 page-type: javascript-instance-accessor-property
 status:

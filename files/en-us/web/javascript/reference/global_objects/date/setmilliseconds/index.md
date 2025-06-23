@@ -1,5 +1,6 @@
 ---
 title: Date.prototype.setMilliseconds()
+short-title: setMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMilliseconds
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setMilliseconds

@@ -15,7 +15,8 @@ When used in the condition responseHeaders, the rule matches if the request matc
 
 Each object describes one header to match or exclude. To check multiple headers, multiple objects can be specified in these arrays, or across multiple rules.
 
-> [!NOTE] Matching by headers is a relatively new feature. Make sure to feature-detect its availability before relying on it. While some browsers ignore the complete rule when an unrecognized condition is present, Chrome 121 until 127 applied the whole rule while ignoring the `responseHeaders` condition. This could result in matching more requests than intended, see [Chromium issue 347186592](https://crbug.com/347186592).
+> [!NOTE]
+> Matching by headers is a relatively new feature. Make sure to feature-detect its availability before relying on it. While some browsers ignore the complete rule when an unrecognized condition is present, Chrome 121 until 127 applied the whole rule while ignoring the `responseHeaders` condition. This could result in matching more requests than intended, see [Chromium issue 347186592](https://crbug.com/347186592).
 
 ## Type
 

@@ -18,10 +18,10 @@ It is a proprietary event specific to WebKit.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("gesturestart", (event) => {});
+```js-nolint
+addEventListener("gesturestart", (event) => { })
 
-ongesturestart = (event) => {};
+ongesturestart = (event) => { }
 ```
 
 ## Event type

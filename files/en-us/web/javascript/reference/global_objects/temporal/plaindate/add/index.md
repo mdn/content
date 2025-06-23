@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainDate.prototype.add()
+short-title: add()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/add
 page-type: javascript-instance-method
 status:

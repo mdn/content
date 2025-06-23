@@ -47,10 +47,10 @@ Copy a remote image:
 
 ```js
 // requires:
-// * the host permission for "https://cdn.mdn.mozilla.net/*"
+// * the host permission for "https://mdn.github.io/*"
 // * the API permission "clipboardWrite"
 
-fetch("https://cdn.mdn.mozilla.net/static/img/favicon144.png")
+fetch("https://mdn.github.io/shared-assets/images/examples/favicon144.png")
   .then((response) => response.arrayBuffer())
   .then((buffer) => browser.clipboard.setImageData(buffer, "png"));
 ```

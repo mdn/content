@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainDateTime.prototype.daysInMonth
+short-title: daysInMonth
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime/daysInMonth
 page-type: javascript-instance-accessor-property
 status:

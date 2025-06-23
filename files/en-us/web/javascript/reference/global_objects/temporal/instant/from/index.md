@@ -1,5 +1,6 @@
 ---
 title: Temporal.Instant.from()
+short-title: from()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Instant/from
 page-type: javascript-static-method
 status:
@@ -46,11 +47,11 @@ const instant = Temporal.Instant.from("1970-01-01T00Z");
 console.log(instant.toString()); // 1970-01-01T00:00:00Z
 
 const instant2 = Temporal.Instant.from("1970-01-01T00+08:00");
-console.log(instant.toString()); // 1969-12-31T16:00:00Z
+console.log(instant2.toString()); // 1969-12-31T16:00:00Z
 
 // America/New_York is UTC-5 in January 1970, not UTC+8
 const instant3 = Temporal.Instant.from("1970-01-01T00+08:00[America/New_York]");
-console.log(instant.toString()); // 1969-12-31T16:00:00Z; the time zone name is ignored
+console.log(instant3.toString()); // 1969-12-31T16:00:00Z; the time zone name is ignored
 ```
 
 ### Creating an instant from another instant

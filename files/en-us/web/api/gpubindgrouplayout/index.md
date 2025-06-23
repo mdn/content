@@ -2,12 +2,10 @@
 title: GPUBindGroupLayout
 slug: Web/API/GPUBindGroupLayout
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.GPUBindGroupLayout
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPUBindGroupLayout`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} defines the structure and purpose of related GPU resources such as buffers that will be used in a pipeline, and is used as a template when creating {{domxref("GPUBindGroup")}}s.
 
@@ -17,7 +15,7 @@ A `GPUBindGroupLayout` object instance is created using the {{domxref("GPUDevice
 
 ## Instance properties
 
-- {{domxref("GPUBindGroupLayout.label", "label")}} {{Experimental_Inline}}
+- {{domxref("GPUBindGroupLayout.label", "label")}}
   - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
 
 ## Examples

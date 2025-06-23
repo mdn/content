@@ -211,7 +211,9 @@ startButton.addEventListener(
         downloadButton.href = stream;
         preview.captureStream =
           preview.captureStream || preview.mozCaptureStream;
-        return new Promise((resolve) => (preview.onplaying = resolve));
+        return new Promise((resolve) => {
+          preview.onplaying = resolve;
+        });
       })
       .then(() => startRecording(preview.captureStream(), recordingTimeMS))
       .then((recordedChunks) => {

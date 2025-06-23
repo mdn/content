@@ -1,5 +1,6 @@
 ---
 title: WeakMap() constructor
+short-title: WeakMap()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/WeakMap
 page-type: javascript-constructor
 browser-compat: javascript.builtins.WeakMap.WeakMap
@@ -32,7 +33,7 @@ const wm1 = new WeakMap();
 const wm2 = new WeakMap();
 const wm3 = new WeakMap();
 const o1 = {};
-const o2 = function () {};
+const o2 = () => {};
 const o3 = window;
 
 wm1.set(o1, 37);

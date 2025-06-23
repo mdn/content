@@ -161,7 +161,9 @@ A property of an object can also refer to a [function](/en-US/docs/Web/JavaScrip
 ```js
 const o = {
   property: function (parameters) {},
-  get property() {},
+  get property() {
+    return 1;
+  },
   set property(value) {},
 };
 ```

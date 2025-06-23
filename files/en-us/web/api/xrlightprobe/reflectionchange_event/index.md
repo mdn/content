@@ -16,10 +16,10 @@ The WebXR **`reflectionchange`** event fires each time the estimated reflection 
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("reflectionchange", (event) => {});
+```js-nolint
+addEventListener("reflectionchange", (event) => { })
 
-onreflectionchange = (event) => {};
+onreflectionchange = (event) => { }
 ```
 
 ## Event type

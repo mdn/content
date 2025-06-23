@@ -1,5 +1,6 @@
 ---
-title: Age
+title: Age header
+short-title: Age
 slug: Web/HTTP/Reference/Headers/Age
 page-type: http-header
 browser-compat: http.headers.Age

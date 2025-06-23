@@ -1,5 +1,6 @@
 ---
 title: handler.isExtensible()
+short-title: isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/isExtensible
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.isExtensible

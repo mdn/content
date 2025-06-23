@@ -2,7 +2,7 @@
 title: rel="me"
 slug: Web/HTML/Reference/Attributes/rel/me
 page-type: html-attribute-value
-browser-compat: html.elements.link.rel.me
+spec-urls: https://www.gmpg.org/xfn/11#me
 ---
 
 {{HTMLSidebar}}
@@ -21,4 +21,4 @@ The `rel="me"` attribute is used in [RelMeAuth](https://microformats.org/wiki/Re
 
 ## Browser compatibility
 
-{{Compat}}
+Browser compatibility is irrelevant because `rel="me"` is used by web services and not by browsers.

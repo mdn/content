@@ -2,12 +2,10 @@
 title: GPUPipelineError
 slug: Web/API/GPUPipelineError
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.GPUPipelineError
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPUPipelineError`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} describes a pipeline failure. This is the value received when a {{jsxref("Promise")}} returned by a {{domxref("GPUDevice.createComputePipelineAsync()")}} or {{domxref("GPUDevice.createRenderPipelineAsync()")}} call rejects.
 
@@ -15,14 +13,14 @@ The **`GPUPipelineError`** interface of the {{domxref("WebGPU API", "WebGPU API"
 
 ## Constructor
 
-- {{domxref("GPUPipelineError.GPUPipelineError", "GPUPipelineError()")}} {{Experimental_Inline}}
+- {{domxref("GPUPipelineError.GPUPipelineError", "GPUPipelineError()")}}
   - : Creates a new `GPUPipelineError` object instance.
 
 ## Instance properties
 
 _Inherits properties from its parent, {{domxref("DOMException")}}._
 
-- {{domxref("GPUPipelineError.reason", "reason")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUPipelineError.reason", "reason")}} {{ReadOnlyInline}}
   - : An enumerated value that defines the reason the pipeline creation failed in a machine-readable way.
 
 ## Examples

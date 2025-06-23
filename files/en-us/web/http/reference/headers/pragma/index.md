@@ -1,5 +1,6 @@
 ---
-title: Pragma
+title: Pragma header
+short-title: Pragma
 slug: Web/HTTP/Reference/Headers/Pragma
 page-type: http-header
 status:

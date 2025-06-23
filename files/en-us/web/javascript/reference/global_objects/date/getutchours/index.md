@@ -1,5 +1,6 @@
 ---
 title: Date.prototype.getUTCHours()
+short-title: getUTCHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCHours
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getUTCHours

@@ -3,9 +3,8 @@ title: id
 slug: Web/Progressive_web_apps/Manifest/Reference/id
 page-type: web-manifest-member
 browser-compat: manifests.webapp.id
+sidebar: pwasidebar
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 The `id` manifest member is used to specify a unique identifier for your web application.
 

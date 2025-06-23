@@ -3,12 +3,10 @@ title: "GPUCommandBuffer: label property"
 short-title: label
 slug: Web/API/GPUCommandBuffer/label
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.GPUCommandBuffer.label
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`label`** read-only property of the
 {{domxref("GPUCommandBuffer")}} interface is a string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.

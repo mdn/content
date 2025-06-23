@@ -313,7 +313,6 @@ doSomething()
 This will output the following text:
 
 ```plain
-Initial
 Do that
 Do this, no matter what happened before
 ```

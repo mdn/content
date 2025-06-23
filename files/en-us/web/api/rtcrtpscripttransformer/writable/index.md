@@ -26,9 +26,9 @@ The following example shows how {{domxref("RTCRtpScriptTransformer.readable")}} 
 addEventListener("rtctransform", (event) => {
   let transform;
   // Select a transform based on passed options
-  if (event.transformer.options.name == "senderTransform")
+  if (event.transformer.options.name === "senderTransform")
     transform = createSenderTransform(); // A TransformStream
-  else if (event.transformer.options.name == "receiverTransform")
+  else if (event.transformer.options.name === "receiverTransform")
     transform = createReceiverTransform(); // A TransformStream
   else return;
 

@@ -52,20 +52,20 @@ canvas.addEventListener("pointermove", (evt) => {
   const pointSize = 10;
   ctx.fillStyle = "#000000";
   ctx.fillRect(evt.pageX, evt.pageY, pointSize, pointSize);
-  if (move_cnt == 50) {
+  if (move_cnt === 50) {
     let r = getRandomInt(0, 255);
     let g = getRandomInt(0, 255);
     let b = getRandomInt(0, 255);
     style = {
-      color: "rgb(" + r + " " + g + " " + b + " / 100%)",
+      color: `rgb(${r} ${g} ${b} / 100%)`,
       diameter: 10,
     };
     move_cnt = 0;
     document.getElementById("div").style.backgroundColor =
-      "rgb(" + r + " " + g + " " + b + " / 100%)";
+      `rgb(${r} ${g} ${b} / 100%)`;
   }
   move_cnt += 1;
-  presenter.then(function (v) {
+  presenter.then((v) => {
     v.updateInkTrailStartPoint(evt, style);
   });
 });

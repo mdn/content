@@ -215,7 +215,7 @@ function render(text, selectionStart, selectionEnd) {
 
   // Convert the start/end offsets to a DOM selection.
   const { anchorNode, anchorOffset, extentNode, extentOffset } =
-    fromOffsetsToSelection(selectionStart, selectionEnd);
+    fromOffsetsToSelection(selectionStart, selectionEnd, editorEl);
 
   // Render the selection in the editor element.
   document

@@ -1,5 +1,6 @@
 ---
-title: SourceMap
+title: SourceMap header
+short-title: SourceMap
 slug: Web/HTTP/Reference/Headers/SourceMap
 page-type: http-header
 browser-compat: http.headers.SourceMap

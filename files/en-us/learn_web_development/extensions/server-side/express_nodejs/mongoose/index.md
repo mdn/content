@@ -687,6 +687,7 @@ Replace the database URL string ('_insert_your_database_url_here_') with the loc
 ```js
 // Set up mongoose connection
 const mongoose = require("mongoose");
+
 mongoose.set("strictQuery", false);
 const mongoDB = "insert_your_database_url_here";
 

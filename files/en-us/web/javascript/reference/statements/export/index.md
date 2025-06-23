@@ -130,6 +130,7 @@ export default k;
 ```js
 // some other file
 import m from "./test"; // note that we have the freedom to use import m instead of import k, because k was default export
+
 console.log(m); // 12
 ```
 
@@ -159,6 +160,7 @@ Which is comparable to a combination of import and export, except that `function
 
 ```js
 import { default as function1, function2 } from "bar.js";
+
 export { function1, function2 };
 ```
 
@@ -185,6 +187,7 @@ export * from "./mod2.js";
 
 // -- main.js --
 import * as ns from "./barrel.js";
+
 console.log(ns.a); // undefined
 ```
 
@@ -282,6 +285,7 @@ Then, in another script, it is straightforward to import the default export:
 
 ```js
 import cube from "./cube.js";
+
 console.log(cube(3)); // 27
 ```
 

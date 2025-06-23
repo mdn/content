@@ -50,7 +50,7 @@ document.addEventListener(
       // set the context to "opening a tab context menu".
       browser.menus.overrideContext({
         context: "tab",
-        tabId: parseInt(foo.dataset.tabId),
+        tabId: parseInt(foo.dataset.tabId, 10),
       });
     }
   },

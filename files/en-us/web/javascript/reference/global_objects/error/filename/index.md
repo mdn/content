@@ -1,5 +1,6 @@
 ---
 title: "Error: fileName"
+short-title: fileName
 slug: Web/JavaScript/Reference/Global_Objects/Error/fileName
 page-type: javascript-instance-data-property
 status:

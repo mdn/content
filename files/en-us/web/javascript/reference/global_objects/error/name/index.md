@@ -1,5 +1,6 @@
 ---
 title: Error.prototype.name
+short-title: name
 slug: Web/JavaScript/Reference/Global_Objects/Error/name
 page-type: javascript-instance-data-property
 browser-compat: javascript.builtins.Error.name

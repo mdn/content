@@ -1,5 +1,6 @@
 ---
-title: Content-Location
+title: Content-Location header
+short-title: Content-Location
 slug: Web/HTTP/Reference/Headers/Content-Location
 page-type: http-header
 browser-compat: http.headers.Content-Location

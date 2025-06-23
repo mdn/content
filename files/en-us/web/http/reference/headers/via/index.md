@@ -1,5 +1,6 @@
 ---
-title: Via
+title: Via header
+short-title: Via
 slug: Web/HTTP/Reference/Headers/Via
 page-type: http-header
 browser-compat: http.headers.Via

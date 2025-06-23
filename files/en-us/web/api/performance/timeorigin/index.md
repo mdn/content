@@ -40,7 +40,7 @@ In worker.js
 self.addEventListener("connect", (event) => {
   const port = event.ports[0];
 
-  port.onmessage = function (event) {
+  port.onmessage = (event) => {
     const workerTaskStart = performance.now();
     // doSomeWork()
     const workerTaskEnd = performance.now();

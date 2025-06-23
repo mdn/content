@@ -65,9 +65,9 @@ const m = 0644; // 420
 Hexadecimal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "X" (`0x` or `0X`). If the digits after 0x are outside the range (0123456789ABCDEF), the following {{jsxref("SyntaxError")}} is thrown: "Identifier starts immediately after numeric literal".
 
 ```js-nolint
-0xFFFFFFFFFFFFFFFFF // 295147905179352830000
-0x123456789ABCDEF   // 81985529216486900
-0XA                 // 10
+0xFFFFFFFFFFFFF // 4503599627370495
+0xabcdef123456  // 188900967593046
+0XA             // 10
 ```
 
 ### Exponentiation
@@ -304,7 +304,7 @@ Compared to numbers, BigInt values yield higher precision when representing larg
 const bigintDiv = 5n / 2n; // 2n, because there's no 2.5 in BigInt
 ```
 
-`Math` functions cannot be used on BigInt values. There is [an open proposal](https://github.com/tc39/proposal-bigint-math) to overload certain `Math` functions like `Math.max()` to allow BigInt values.
+`Math` functions cannot be used on BigInt values; they only work with numbers.
 
 Choosing between BigInt and number depends on your use-case and your input's range. The precision of numbers should be able to accommodate most day-to-day tasks already, and BigInts are most suitable for handling binary data.
 

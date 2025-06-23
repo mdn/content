@@ -9,7 +9,7 @@ browser-compat: api.HTMLTextAreaElement.setRangeText
 {{APIRef("HTML DOM")}}
 
 The **`setRangeText()`** method of the {{domxref("HTMLTextAreaElement")}} interface replaces a
-range of text in an {{HTMLElement("textarea")}} element with new text passed as the argument.
+range of text in a {{HTMLElement("textarea")}} element with new text passed as the argument.
 
 Additional optional parameters include the start of the section of text to change, the end of the section, and a keyword defining what part of the `<textarea>` should be selected after the text is updated. If the `startSelection` and `endSelection` arguments are not provided, the range is assumed to be the selection.
 

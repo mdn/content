@@ -21,23 +21,25 @@ browser-compat:
 sidebar: webassemblysidebar
 ---
 
-WebAssembly is a type of code that can be run in modern web browsers — it is a low-level assembly-like language with a compact binary format that runs with near-native performance and provides languages such as C/C++, C# and Rust with a compilation target so that they can run on the web. It is also designed to run alongside JavaScript, allowing both to work together.
-
-## In a Nutshell
-
-WebAssembly has huge implications for the web platform — it provides a way to run code written in multiple languages on the web at near-native speed, with client apps running on the web that previously couldn't have done so.
+WebAssembly is a type of code that can be run in modern web browsers.
+It is a low-level assembly-like language with a compact binary format that runs with near-native performance and provides languages such as C/C++, C# and Rust with a compilation target so that they can run on the web.
+It is also designed to run alongside JavaScript, allowing both to work together.
 
 WebAssembly is designed to complement and run alongside JavaScript — using the WebAssembly JavaScript APIs, you can load WebAssembly modules into a JavaScript app and share functionality between the two. This allows you to take advantage of WebAssembly's performance and power and JavaScript's expressiveness and flexibility in the same app, even if you don't know how to write WebAssembly code.
 
-And what's even better is that it is being developed as a web standard via the [W3C WebAssembly Working Group](https://www.w3.org/wasm/) and [Community Group](https://www.w3.org/community/webassembly/) with active participation from all major browser vendors.
+WebAssembly has big implications for the web platform, not only because it provides a way for code written in multiple languages to run on the web at near-native speed, but also because it enables client apps to run on the web that previously could not.
+
+And what's even better is that it is being developed as a web standard via the [W3C WebAssembly Working Group](https://www.w3.org/groups/wg/wasm/) and [Community Group](https://www.w3.org/community/webassembly/) with active participation from all major browser vendors.
 
 ## Guides
 
+The [WebAssembly guides](/en-US/docs/WebAssembly/Guides) cover topics such as high-level concepts, compiling from different languages, the textual representation of the Wasm binary format, and how to run WebAssembly.
+
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Guides/Concepts)
   - : Get started by reading the high-level concepts behind WebAssembly — what it is, why it is so useful, how it fits into the web platform (and beyond), and how to use it.
-- [Compiling a New C/C++ Module to WebAssembly](/en-US/docs/WebAssembly/Guides/C_to_Wasm)
+- [Compiling a new C/C++ module to WebAssembly](/en-US/docs/WebAssembly/Guides/C_to_Wasm)
   - : When you've written code in C/C++, you can then compile it into Wasm using a tool like [Emscripten](https://emscripten.org/). Let's look at how it works.
-- [Compiling an Existing C Module to WebAssembly](/en-US/docs/WebAssembly/Guides/Existing_C_to_Wasm)
+- [Compiling an existing C module to WebAssembly](/en-US/docs/WebAssembly/Guides/Existing_C_to_Wasm)
   - : A core use-case for WebAssembly is to take the existing ecosystem of C libraries and allow developers to use them on the web.
 - [Compiling from Rust to WebAssembly](/en-US/docs/WebAssembly/Guides/Rust_to_Wasm)
   - : If you've written some Rust code, you can compile it into WebAssembly! This tutorial takes you through all you need to know to compile a Rust project to Wasm and use it in an existing web app.
@@ -89,7 +91,7 @@ And what's even better is that it is being developed as a web standard via the [
 - [`WebAssembly.RuntimeError()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError)
   - : Creates a new WebAssembly `RuntimeError` object.
 
-## Examples
+## Example projects
 
 - [WASMSobel](https://github.com/JasonWeathersby/WASMSobel)
 - See our [webassembly-examples](https://github.com/mdn/webassembly-examples/) repo for a number of other examples.

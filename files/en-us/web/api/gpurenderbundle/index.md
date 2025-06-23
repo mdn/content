@@ -2,12 +2,10 @@
 title: GPURenderBundle
 slug: Web/API/GPURenderBundle
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.GPURenderBundle
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPURenderBundle`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents a container for pre-recorded bundles of commands.
 
@@ -21,7 +19,7 @@ A good example is VR rendering. Recording the rendering as a render bundle and t
 
 ## Instance properties
 
-- {{domxref("GPURenderBundle.label", "label")}} {{Experimental_Inline}}
+- {{domxref("GPURenderBundle.label", "label")}}
   - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
 
 ## Examples

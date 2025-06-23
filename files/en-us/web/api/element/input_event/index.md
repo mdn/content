@@ -22,10 +22,10 @@ The `input` event is fired every time the `value` of the element changes. This i
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("input", (event) => {});
+```js-nolint
+addEventListener("input", (event) => { })
 
-oninput = (event) => {};
+oninput = (event) => { }
 ```
 
 ## Event type

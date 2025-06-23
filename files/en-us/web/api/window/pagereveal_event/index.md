@@ -16,9 +16,10 @@ This is useful in the case of cross-document (MPA) [view transitions](/en-US/doc
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("pagereveal", (event) => {});
-onpagereveal = (event) => {};
+```js-nolint
+addEventListener("pagereveal", (event) => { })
+
+onpagereveal = (event) => { }
 ```
 
 ## Event type

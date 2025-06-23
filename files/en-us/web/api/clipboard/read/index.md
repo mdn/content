@@ -208,8 +208,7 @@ async function pasteData() {
         mimeTypeElement.innerText = `MIME type: ${mimeType}`;
         destinationDiv.appendChild(mimeTypeElement);
         if (mimeType === "image/png") {
-          const pngImage = new Image(); // Image constructor
-          pngImage.src = "image1.png";
+          const pngImage = new Image();
           pngImage.alt = "PNG image from clipboard";
           const blob = await item.getType("image/png");
           pngImage.src = URL.createObjectURL(blob);

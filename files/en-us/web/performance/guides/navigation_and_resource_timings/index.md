@@ -272,7 +272,7 @@ The order is:
         When the
         <code><a href="/en-US/docs/Web/API/Window/load_event">load</a></code>
         event was sent for the current document. If this event has not yet been
-        sent, it returns <code>0.</code>
+        sent, it returns <code>0</code>.
       </td>
     </tr>
     <tr>
@@ -284,7 +284,7 @@ The order is:
         <code><a href="/en-US/docs/Web/API/Window/load_event">load</a></code>
         event handler terminated, that is when the load event is completed. If
         this event has not yet been sent, or is not yet completed, it returns
-        <code>0.</code>
+        <code>0</code>.
       </td>
     </tr>
   </tbody>

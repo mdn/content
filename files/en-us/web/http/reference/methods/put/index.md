@@ -1,5 +1,6 @@
 ---
-title: PUT
+title: PUT request method
+short-title: PUT
 slug: Web/HTTP/Reference/Methods/PUT
 page-type: http-method
 spec-urls: https://www.rfc-editor.org/rfc/rfc9110#PUT

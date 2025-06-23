@@ -1,5 +1,6 @@
 ---
-title: Early-Data
+title: Early-Data header
+short-title: Early-Data
 slug: Web/HTTP/Reference/Headers/Early-Data
 page-type: http-header
 status:

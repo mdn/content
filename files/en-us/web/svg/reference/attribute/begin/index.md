@@ -16,7 +16,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("animate")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
-- {{SVGElement("discard")}}
 - {{SVGElement("set")}}
 
 ## animate, animateMotion, animateTransform, set

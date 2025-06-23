@@ -1,5 +1,6 @@
 ---
 title: Math.tanh()
+short-title: tanh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tanh
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.tanh

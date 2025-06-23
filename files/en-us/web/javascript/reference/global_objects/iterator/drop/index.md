@@ -1,5 +1,6 @@
 ---
 title: Iterator.prototype.drop()
+short-title: drop()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/drop
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Iterator.drop

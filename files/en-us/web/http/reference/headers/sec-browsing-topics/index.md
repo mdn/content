@@ -1,5 +1,6 @@
 ---
-title: Sec-Browsing-Topics
+title: Sec-Browsing-Topics header
+short-title: Sec-Browsing-Topics
 slug: Web/HTTP/Reference/Headers/Sec-Browsing-Topics
 page-type: http-header
 status:

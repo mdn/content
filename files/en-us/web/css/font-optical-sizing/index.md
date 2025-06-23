@@ -21,7 +21,7 @@ font-optical-sizing: none;
 
 ```html interactive-example
 <section id="default-example">
-  <div id="example-element" style="font-optical-sizing: auto">
+  <div id="example-element">
     <h2>Chapter 3</h2>
     <p>
       On this particular Thursday, something was moving quietly through the

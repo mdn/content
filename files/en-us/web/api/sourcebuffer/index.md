@@ -90,14 +90,13 @@ function loadVideo() {
 
 async function sourceOpen() {
   console.log(this.readyState); // open
-  const mediaSource = this;
-  const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
+  const sourceBuffer = this.addSourceBuffer(mimeCodec);
   const response = await fetch(assetURL);
   const buffer = await response.arrayBuffer();
   sourceBuffer.addEventListener("updateend", () => {
-    mediaSource.endOfStream();
+    this.endOfStream();
     video.play();
-    console.log(mediaSource.readyState); // ended
+    console.log(this.readyState); // ended
   });
   sourceBuffer.appendBuffer(buffer);
 }

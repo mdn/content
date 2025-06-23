@@ -1,5 +1,6 @@
 ---
 title: Function() constructor
+short-title: Function()
 slug: Web/JavaScript/Reference/Global_Objects/Function/Function
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Function.Function

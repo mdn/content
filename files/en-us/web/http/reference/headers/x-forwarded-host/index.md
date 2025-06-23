@@ -1,5 +1,6 @@
 ---
-title: X-Forwarded-Host
+title: X-Forwarded-Host header
+short-title: X-Forwarded-Host
 slug: Web/HTTP/Reference/Headers/X-Forwarded-Host
 page-type: http-header
 status:

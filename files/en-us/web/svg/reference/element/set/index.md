@@ -13,6 +13,20 @@ It supports all attribute types, including those that cannot reasonably be inter
 > [!NOTE]
 > The `<set>` element is non-additive. The {{SVGAttr('additive')}} and {{SVGAttr('accumulate')}} attributes are not allowed, and will be ignored if specified.
 
+## Usage context
+
+{{svginfo}}
+
+## Attributes
+
+- {{SVGAttr("to")}}
+  - : This attribute defines the value to be applied to the target attribute for the duration of the animation. The value must match the requirements of the target attribute.
+    _Value type_: [**\<anything>**](/en-US/docs/Web/SVG/Guides/Content_type#anything); _Default value_: none; _Animatable_: **no**
+
+## DOM Interface
+
+This element implements the {{domxref("SVGSetElement")}} interface.
+
 ## Example
 
 ```css hidden
@@ -42,16 +56,6 @@ svg {
 ```
 
 {{EmbedLiveSample('Example', 150, '100%')}}
-
-## Attributes
-
-- {{SVGAttr("to")}}
-  - : This attribute defines the value to be applied to the target attribute for the duration of the animation. The value must match the requirements of the target attribute.
-    _Value type_: [**\<anything>**](/en-US/docs/Web/SVG/Guides/Content_type#anything); _Default value_: none; _Animatable_: **no**
-
-## Usage context
-
-{{svginfo}}
 
 ## Specifications
 

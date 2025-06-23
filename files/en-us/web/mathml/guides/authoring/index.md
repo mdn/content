@@ -81,7 +81,6 @@ Alternatively, you can also just display a warning at the top of the page for br
 
 > [!NOTE]
 > These small scripts perform feature detection (of the [mspace](/en-US/docs/Web/MathML/Reference/Element/mspace) or [mpadded](/en-US/docs/Web/MathML/Reference/Element/mpadded) elements) which is preferred over [browser sniffing](/en-US/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent). Also, they are distributed under an open source license, so feel free to copy them on your own server and adapt them to your need.
-> These small scripts perform feature detection (of the [mspace](/en-US/docs/Web/MathML/Reference/Element/mspace) or [mpadded](/en-US/docs/Web/MathML/Reference/Element/mpadded) elements) which is preferred over [browser sniffing](/en-US/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent). Also, they are distributed under an open source license, so feel free to copy them on your own server and adapt them to your need.
 
 #### Mathematical fonts
 

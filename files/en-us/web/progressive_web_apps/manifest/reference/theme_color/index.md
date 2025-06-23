@@ -3,9 +3,8 @@ title: theme_color
 slug: Web/Progressive_web_apps/Manifest/Reference/theme_color
 page-type: web-manifest-member
 browser-compat: manifests.webapp.theme_color
+sidebar: pwasidebar
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 The `theme_color` member is used to specify the default color for your web application's user interface.
 This color may be applied to various browser UI elements, such as the toolbar, address bar, and status bar.

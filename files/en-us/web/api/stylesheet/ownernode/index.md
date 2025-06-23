@@ -23,18 +23,17 @@ A {{domxref("Node")}} object.
 
 ## Examples
 
+Assuming the `<head>` contains the following:
+
 ```html
-<html lang="en">
-  <head>
-    <link rel="stylesheet" href="example.css" />
-  </head>
-  <body>
-    <button onclick="alert(document.styleSheets[0].ownerNode)">
-      Show example.css's ownerNode
-    </button>
-  </body>
-</html>
-// Displays "object HTMLLinkElement"
+<link rel="stylesheet" href="example.css" />
+```
+
+Then:
+
+```js
+console.log(document.styleSheets[0].ownerNode);
+// Displays '<link rel="stylesheet" href="example.css">'
 ```
 
 ## Notes

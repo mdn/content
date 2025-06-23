@@ -152,10 +152,6 @@ In this example, you can switch between three different {{cssxref("display")}} p
 
 #### HTML
 
-```html-nolint hidden
-<div class="wrapper">
-```
-
 ```html
 <section>
   <div class="olive">Olive</div>
@@ -167,46 +163,45 @@ In this example, you can switch between three different {{cssxref("display")}} p
 </section>
 ```
 
-```html-nolint hidden
+```html hidden
 <fieldset class="controls">
-    <legend>Controls</legend>
-    <div class="row">
-      <label for="display">display: </label>
-      <select id="display">
-        <option value="block" selected>block</option>
-        <option value="flex">flex</option>
-        <option value="grid">grid</option>
-      </select>
-    </div>
-    <div class="row">
-      <label for="alignContent">align-content: </label>
-      <select id="alignContent">
-        <option value="normal" selected>normal</option>
-        <option value="start">start</option>
-        <option value="center">center</option>
-        <option value="end">end</option>
-        <option value="flex-start">flex-start</option>
-        <option value="flex-end">flex-end</option>
-        <option value="space-between">space-between</option>
-        <option value="space-around">space-around</option>
-        <option value="space-evenly">space-evenly</option>
-      </select>
-    </div>
-    <p>CSS applied</p>
-    <pre>
+  <legend>Controls</legend>
+  <div class="row">
+    <label for="display">display: </label>
+    <select id="display">
+      <option value="block" selected>block</option>
+      <option value="flex">flex</option>
+      <option value="grid">grid</option>
+    </select>
+  </div>
+  <div class="row">
+    <label for="alignContent">align-content: </label>
+    <select id="alignContent">
+      <option value="normal" selected>normal</option>
+      <option value="start">start</option>
+      <option value="center">center</option>
+      <option value="end">end</option>
+      <option value="flex-start">flex-start</option>
+      <option value="flex-end">flex-end</option>
+      <option value="space-between">space-between</option>
+      <option value="space-around">space-around</option>
+      <option value="space-evenly">space-evenly</option>
+    </select>
+  </div>
+  <p>CSS applied</p>
+  <pre>
 section {
   display: <span id="displayStyle">block</span>;
   align-content: <span id="align">normal</span>
 }
-    </pre>
-  </fieldset>
-</div>
+  </pre>
+</fieldset>
 ```
 
 #### CSS
 
 ```css hidden
-.wrapper {
+body {
   font-size: 1.25rem;
   display: flex;
   gap: 1rem;

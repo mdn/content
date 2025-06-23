@@ -3,9 +3,8 @@ title: "CycleTracker: JavaScript functionality"
 short-title: JavaScript functionality
 slug: Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality
 page-type: tutorial-chapter
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection", "Web/Progressive_web_apps/Tutorials/CycleTracker", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
 
@@ -147,9 +146,7 @@ function storeNewPeriod(startDate, endDate) {
 
   // Sort the array so that periods are ordered by start date, from newest
   // to oldest.
-  periods.sort((a, b) => {
-    return new Date(b.startDate) - new Date(a.startDate);
-  });
+  periods.sort((a, b) => new Date(b.startDate) - new Date(a.startDate));
 
   // Store the updated array back in the storage.
   window.localStorage.setItem(STORAGE_KEY, JSON.stringify(periods));
@@ -268,9 +265,7 @@ function checkDatesInvalid(startDate, endDate) {
 function storeNewPeriod(startDate, endDate) {
   const periods = getAllStoredPeriods();
   periods.push({ startDate, endDate });
-  periods.sort((a, b) => {
-    return new Date(b.startDate) - new Date(a.startDate);
-  });
+  periods.sort((a, b) => new Date(b.startDate) - new Date(a.startDate));
   window.localStorage.setItem(STORAGE_KEY, JSON.stringify(periods));
 }
 

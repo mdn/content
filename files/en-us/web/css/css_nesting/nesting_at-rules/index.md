@@ -1,5 +1,6 @@
 ---
 title: CSS nesting at-rules
+short-title: Nesting at-rules
 slug: Web/CSS/CSS_nesting/Nesting_at-rules
 page-type: guide
 ---
@@ -15,6 +16,7 @@ Any [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) whose body contains style 
 - {{cssxref('@layer')}}
 - {{cssxref('@scope')}}
 - {{cssxref('@container')}}
+- {{cssxref('@starting-style')}}
 
 ## Examples
 

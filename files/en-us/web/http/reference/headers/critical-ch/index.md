@@ -1,5 +1,6 @@
 ---
-title: Critical-CH
+title: Critical-CH header
+short-title: Critical-CH
 slug: Web/HTTP/Reference/Headers/Critical-CH
 page-type: http-header
 status:

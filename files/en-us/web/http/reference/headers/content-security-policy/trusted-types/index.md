@@ -1,5 +1,6 @@
 ---
-title: "CSP: trusted-types"
+title: "Content-Security-Policy: trusted-types directive"
+short-title: trusted-types
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/trusted-types
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.trusted-types

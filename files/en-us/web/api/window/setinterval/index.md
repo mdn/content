@@ -100,9 +100,7 @@ let intervalId;
 
 function changeColor() {
   // check if an interval has already been set up
-  if (!intervalId) {
-    intervalId = setInterval(flashText, 1000);
-  }
+  intervalId ??= setInterval(flashText, 1000);
 }
 
 function flashText() {

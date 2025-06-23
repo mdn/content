@@ -1,5 +1,6 @@
 ---
 title: SharedArrayBuffer.prototype.growable
+short-title: growable
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/growable
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.SharedArrayBuffer.growable

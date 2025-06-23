@@ -154,8 +154,8 @@ const gamepadAPI = {
     // Loop through axes and push their values to the array
     const axes = [];
     if (c.axes) {
-      for (let a = 0; a < c.axes.length; a++) {
-        axes.push(c.axes[a].toFixed(2));
+      for (const ax of c.axes) {
+        axes.push(ax.toFixed(2));
       }
     }
 
@@ -180,30 +180,18 @@ const gamepadAPI = {
   // …
   buttonPressed(button, hold) {
     let newPress = false;
-
-    // Loop through pressed buttons
-    for (let i = 0; i < gamepadAPI.buttonsStatus.length; i++) {
-      // If we found the button we're looking for
-      if (gamepadAPI.buttonsStatus[i] === button) {
-        // Set the boolean variable to true
-        newPress = true;
-
-        // If we want to check the single press
-        if (!hold) {
-          // Loop through the cached states from the previous frame
-          for (let j = 0; j < gamepadAPI.buttonsCache.length; j++) {
-            // If the button was already pressed, ignore new press
-            newPress = gamepadAPI.buttonsCache[j] !== button;
-          }
-        }
-      }
+    if (GamepadAPI.buttons.status.includes(button)) {
+      newPress = true;
+    }
+    if (!hold && GamepadAPI.buttons.cache.includes(button)) {
+      newPress = false;
     }
     return newPress;
   },
 };
 ```
 
-There are two types of action to consider for a button: a single press and a hold. The `newPress` boolean variable will indicate whether there's a new press of a button or not. Next, we loop through the array of pressed buttons — if the given button is the same as the one we're looking for, the `newPress` variable is set to `true`. To check if the press is a new one, so the player is not holding the key, we loop through the cached states of the buttons from the previous frame of the game loop. If we find it there it means that the button is being held, so there's no new press. In the end the `newPress` variable is returned. The `buttonPressed` function is used in the update loop of the game like this:
+There are two types of action to consider for a button: a single press and a hold. The `newPress` boolean variable will indicate whether there's a new press of a button or not. Next, we check the array of pressed buttons — if the given button is in here, the `newPress` variable is set to `true`. To check if the press is a new one, so the player is not holding the key, we check the cached states of the buttons from the previous frame of the game loop. If we find it there it means that the button is being held, so there's no new press. In the end the `newPress` variable is returned. The `buttonPressed` function is used in the update loop of the game like this:
 
 ```js
 if (gamepadAPI.turbo) {

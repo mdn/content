@@ -39,16 +39,16 @@ function populateVoiceList() {
 
   const voices = speechSynthesis.getVoices();
 
-  for (let i = 0; i < voices.length; i++) {
+  for (const voice of voices) {
     const option = document.createElement("option");
-    option.textContent = `${voices[i].name} (${voices[i].lang})`;
+    option.textContent = `${voice.name} (${voice.lang})`;
 
-    if (voices[i].default) {
+    if (voice.default) {
       option.textContent += " — DEFAULT";
     }
 
-    option.setAttribute("data-lang", voices[i].lang);
-    option.setAttribute("data-name", voices[i].name);
+    option.setAttribute("data-lang", voice.lang);
+    option.setAttribute("data-name", voice.name);
     document.getElementById("voiceSelect").appendChild(option);
   }
 }

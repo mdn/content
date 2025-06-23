@@ -35,7 +35,7 @@ const queryString = anchor.search; // Returns:'?q=123'
 
 // Further parsing:
 const params = new URLSearchParams(queryString);
-const q = parseInt(params.get("q")); // is the number 123
+const q = parseInt(params.get("q"), 10); // is the number 123
 ```
 
 ## Specifications

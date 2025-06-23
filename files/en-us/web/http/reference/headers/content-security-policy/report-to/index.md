@@ -1,5 +1,6 @@
 ---
-title: "CSP: report-to"
+title: "Content-Security-Policy: report-to directive"
+short-title: report-to
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/report-to
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.report-to

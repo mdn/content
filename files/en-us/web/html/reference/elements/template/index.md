@@ -177,8 +177,10 @@ In this example, a hidden support warning is included at the beginning of the ma
 ```
 
 ```js
-const isShadowRootModeSupported =
-  HTMLTemplateElement.prototype.hasOwnProperty("shadowRootMode");
+const isShadowRootModeSupported = Object.hasOwn(
+  HTMLTemplateElement.prototype,
+  "shadowRootMode",
+);
 
 document
   .querySelector("p[hidden]")
@@ -352,7 +354,7 @@ Since `firstClone` is a `DocumentFragment`, only its children are added to `cont
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >No corresponding role</a
         >
       </td>

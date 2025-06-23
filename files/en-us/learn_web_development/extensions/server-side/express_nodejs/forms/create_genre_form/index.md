@@ -17,14 +17,7 @@ Open **/controllers/genreController.js**, and add the following line at the top 
 const { body, validationResult } = require("express-validator");
 ```
 
-> [!NOTE]
-> This syntax allows us to use `body` and `validationResult` as the associated middleware functions, as you will see in the post route section below. It is equivalent to:
->
-> ```js
-> const validator = require("express-validator");
-> const body = validator.body;
-> const validationResult = validator.validationResult;
-> ```
+Note that `require("express-validator")` is just a function call that returns an object, and we [destructure](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) the two properties, `body` and `validationResult`, from the object, so we can use them as variables directly.
 
 ## Controller—get route
 
@@ -66,24 +59,23 @@ exports.genre_create_post = [
       // There are errors. Render the form again with sanitized values/error messages.
       res.render("genre_form", {
         title: "Create Genre",
-        genre: genre,
+        genre,
         errors: errors.array(),
       });
       return;
+    }
+    // Data from form is valid.
+    // Check if Genre with same name already exists.
+    const genreExists = await Genre.findOne({ name: req.body.name })
+      .collation({ locale: "en", strength: 2 })
+      .exec();
+    if (genreExists) {
+      // Genre exists, redirect to its detail page.
+      res.redirect(genreExists.url);
     } else {
-      // Data from form is valid.
-      // Check if Genre with same name already exists.
-      const genreExists = await Genre.findOne({ name: req.body.name })
-        .collation({ locale: "en", strength: 2 })
-        .exec();
-      if (genreExists) {
-        // Genre exists, redirect to its detail page.
-        res.redirect(genreExists.url);
-      } else {
-        await genre.save();
-        // New genre saved. Redirect to genre detail page.
-        res.redirect(genre.url);
-      }
+      await genre.save();
+      // New genre saved. Redirect to genre detail page.
+      res.redirect(genre.url);
     }
   }),
 ];
@@ -123,14 +115,13 @@ asyncHandler(async (req, res, next) => {
     // There are errors. Render the form again with sanitized values/error messages.
     res.render("genre_form", {
       title: "Create Genre",
-      genre: genre,
+      genre,
       errors: errors.array(),
     });
     return;
-  } else {
-    // Data from form is valid.
-    // …
   }
+  // Data from form is valid.
+  // …
 });
 ```
 

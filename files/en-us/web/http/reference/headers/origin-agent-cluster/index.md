@@ -1,5 +1,6 @@
 ---
-title: Origin-Agent-Cluster
+title: Origin-Agent-Cluster header
+short-title: Origin-Agent-Cluster
 slug: Web/HTTP/Reference/Headers/Origin-Agent-Cluster
 page-type: http-header
 browser-compat: http.headers.Origin-Agent-Cluster

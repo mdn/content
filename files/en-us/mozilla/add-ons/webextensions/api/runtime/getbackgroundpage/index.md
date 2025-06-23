@@ -22,7 +22,7 @@ This is an asynchronous function that returns a {{JSxRef("Promise")}}.
 > [!NOTE]
 > In Firefox, this method cannot be used in Private Browsing mode — it always returns `null`. For more info see [Firefox bug 1329304](https://bugzil.la/1329304).
 >
-> In Chrome, this method is available only with persistent background pages, which are not available in Manifest V3, so consider using Manifest V2. See the [this](https://developer.chrome.com/docs/extensions/develop/migrate/to-service-workers) for details.
+> In Chrome, this method is available only with persistent background pages, which are not available in Manifest V3, so consider using Manifest V2. See [Migrate to a service worker](https://developer.chrome.com/docs/extensions/develop/migrate/to-service-workers) for details.
 >
 > Consider using {{WebExtAPIRef("runtime.sendMessage","runtime.sendMessage()")}} or {{WebExtAPIRef("runtime.connect","runtime.connect()")}}, which work correctly in both scenarios above.
 

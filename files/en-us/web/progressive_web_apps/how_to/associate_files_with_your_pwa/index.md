@@ -2,9 +2,8 @@
 title: Associate files with your PWA
 slug: Web/Progressive_web_apps/How_to/Associate_files_with_your_PWA
 page-type: how-to
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 On a device, files are usually associated with apps, so when the user opens the file, the operating system launches the appropriate app and passes the file to it. For example, HTML files are often opened in a web browser, text files in a text editor, and videos in a video player.
 

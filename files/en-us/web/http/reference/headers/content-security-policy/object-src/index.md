@@ -1,5 +1,6 @@
 ---
-title: "CSP: object-src"
+title: "Content-Security-Policy: object-src directive"
+short-title: object-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/object-src
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.object-src

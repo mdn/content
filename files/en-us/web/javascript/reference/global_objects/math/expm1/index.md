@@ -1,5 +1,6 @@
 ---
 title: Math.expm1()
+short-title: expm1()
 slug: Web/JavaScript/Reference/Global_Objects/Math/expm1
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.expm1

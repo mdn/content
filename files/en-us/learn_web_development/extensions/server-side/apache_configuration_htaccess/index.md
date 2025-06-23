@@ -105,9 +105,9 @@ Google Chrome's [Google Fonts troubleshooting guide](https://developers.google.c
 
 ### Cross-origin resource timing
 
-The [Resource Timing Level 1](https://www.w3.org/TR/resource-timing/) specification defines an interface for web applications to access the complete timing information for resources in a document.
+The [Resource Timing](https://w3c.github.io/resource-timing/) specification defines an interface for web applications to access the complete timing information for resources in a document.
 
-The [Timing-Allow-Origin](/en-US/docs/Web/HTTP/Reference/Headers/Timing-Allow-Origin) response header specifies origins that are allowed to see values of attributes retrieved via features of the Resource Timing API, which would otherwise be reported as zero due to cross-origin restrictions.
+The [`Timing-Allow-Origin`](/en-US/docs/Web/HTTP/Reference/Headers/Timing-Allow-Origin) response header specifies origins that are allowed to see values of attributes retrieved via features of the Resource Timing API, which would otherwise be reported as zero due to cross-origin restrictions.
 
 If a resource isn't served with a `Timing-Allow-Origin` or if the header does not include the origin after making the request, some attributes of the `PerformanceResourceTiming` object will be set to zero.
 

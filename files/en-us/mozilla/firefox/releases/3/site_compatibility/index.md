@@ -18,17 +18,17 @@ In Gecko 1.8, it was not possible to set capturing load event listeners on image
 
 For example, this:
 
-```bash
-window.addEventListener('load', yourFunction, true);
+```js
+window.addEventListener("load", yourFunction, true);
 ```
 
 should be changed into this:
 
-```bash
-window.addEventListener('load', yourFunction, false);
+```js
+window.addEventListener("load", yourFunction, false);
 ```
 
-For an explanation of how event capture works, see [DOM Level 2 Event capture](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-flow-capture)
+For an explanation of how event capture works, see [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener).
 
 ### `preventBubble` has been removed
 

@@ -31,7 +31,7 @@ exports.author_delete_get = asyncHandler(async (req, res, next) => {
 
   res.render("author_delete", {
     title: "Delete Author",
-    author: author,
+    author,
     author_books: allBooksByAuthor,
   });
 });
@@ -69,15 +69,14 @@ exports.author_delete_post = asyncHandler(async (req, res, next) => {
     // Author has books. Render in same way as for GET route.
     res.render("author_delete", {
       title: "Delete Author",
-      author: author,
+      author,
       author_books: allBooksByAuthor,
     });
     return;
-  } else {
-    // Author has no books. Delete object and redirect to the list of authors.
-    await Author.findByIdAndDelete(req.body.authorid);
-    res.redirect("/catalog/authors");
   }
+  // Author has no books. Delete object and redirect to the list of authors.
+  await Author.findByIdAndDelete(req.body.authorid);
+  res.redirect("/catalog/authors");
 });
 ```
 

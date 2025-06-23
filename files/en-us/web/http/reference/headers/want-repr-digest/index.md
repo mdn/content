@@ -1,5 +1,6 @@
 ---
-title: Want-Repr-Digest
+title: Want-Repr-Digest header
+short-title: Want-Repr-Digest
 slug: Web/HTTP/Reference/Headers/Want-Repr-Digest
 page-type: http-header
 spec-urls: https://datatracker.ietf.org/doc/html/rfc9530#section-4

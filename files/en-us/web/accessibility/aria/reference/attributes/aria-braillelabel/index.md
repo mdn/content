@@ -1,5 +1,6 @@
 ---
-title: aria-braillelabel
+title: "ARIA: aria-braillelabel attribute"
+short-title: aria-braillelabel
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-braillelabel
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-braillelabel

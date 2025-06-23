@@ -1,5 +1,6 @@
 ---
-title: GET
+title: GET request method
+short-title: GET
 slug: Web/HTTP/Reference/Methods/GET
 page-type: http-method
 browser-compat: http.methods.GET

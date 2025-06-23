@@ -26,6 +26,8 @@ The articles below can help you learn more about HTML.
 
 ## Guides
 
+The [HTML guides](/en-US/docs/Web/HTML/Guides) help you build with HTML on the web, covering topics such as forms, CORS, content preloading, and responsive images.
+
 - [HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms)
   - : Forms are a very important part of the Web — these provide much of the functionality you need for interacting with websites, e.g., registering and logging in, sending feedback, buying products, and more. This module gets you started with creating the client-side/front-end parts of forms.
 - [CORS enabled image](/en-US/docs/Web/HTML/How_to/CORS_enabled_image)

@@ -24,7 +24,7 @@ document.body.addEventListener(
   (event) => {
     const theAction = event.command;
 
-    if (theAction == "show-modal") {
+    if (theAction === "show-modal") {
       console.log("Showing modal dialog");
     }
   },

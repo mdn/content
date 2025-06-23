@@ -3,12 +3,10 @@ title: "URLPattern: username property"
 short-title: username
 slug: Web/API/URLPattern/username
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.URLPattern.username
 ---
 
-{{APIRef("URL Pattern API")}}{{SeeCompatTable}} {{AvailableInWorkers}}
+{{APIRef("URL Pattern API")}} {{AvailableInWorkers}}
 
 The **`username`** read-only property of the {{domxref("URLPattern")}} interface is a
 string containing the pattern used to match the username part

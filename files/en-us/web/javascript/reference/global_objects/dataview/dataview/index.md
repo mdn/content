@@ -1,5 +1,6 @@
 ---
 title: DataView() constructor
+short-title: DataView()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/DataView
 page-type: javascript-constructor
 browser-compat: javascript.builtins.DataView.DataView

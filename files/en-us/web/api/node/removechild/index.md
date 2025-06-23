@@ -108,8 +108,8 @@ const child = document.getElementById("child");
 // This first call correctly removes the node
 const garbage = parent.removeChild(child);
 
-// Throws NotFoundError
-garbage = parent.removeChild(child);
+// Second call throws NotFoundError
+parent.removeChild(child);
 ```
 
 ## Specifications

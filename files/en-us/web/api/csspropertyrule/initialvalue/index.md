@@ -12,8 +12,7 @@ The read-only **`initialValue`** nullable property of the {{domxref("CSSProperty
 
 ## Value
 
-A string which is a {{CSSXref("&lt;declaration-value&gt;")}} as
-defined in [CSS Syntax 3](https://www.w3.org/TR/css-syntax-3/#typedef-declaration-value).
+A string which is a [`<declaration-value>`](https://drafts.csswg.org/css-syntax/#typedef-declaration-value).
 
 ## Examples
 

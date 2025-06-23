@@ -1,5 +1,6 @@
 ---
-title: OPTIONS
+title: OPTIONS request method
+short-title: OPTIONS
 slug: Web/HTTP/Reference/Methods/OPTIONS
 page-type: http-method
 browser-compat: http.methods.OPTIONS

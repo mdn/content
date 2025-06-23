@@ -3,12 +3,10 @@ title: "GPUComputePassEncoder: setBindGroup() method"
 short-title: setBindGroup()
 slug: Web/API/GPUComputePassEncoder/setBindGroup
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUComputePassEncoder.setBindGroup
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`setBindGroup()`** method of the
 {{domxref("GPUComputePassEncoder")}} interface sets the {{domxref("GPUBindGroup")}} to use for subsequent compute commands, for a given index.

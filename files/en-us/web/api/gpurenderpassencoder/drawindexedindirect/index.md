@@ -3,12 +3,10 @@ title: "GPURenderPassEncoder: drawIndexedIndirect() method"
 short-title: drawIndexedIndirect()
 slug: Web/API/GPURenderPassEncoder/drawIndexedIndirect
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPURenderPassEncoder.drawIndexedIndirect
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`drawIndexedIndirect()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface draws indexed primitives using parameters read from a {{domxref("GPUBuffer")}}.

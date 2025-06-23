@@ -99,7 +99,7 @@ const divElem = document.querySelector("body > div");
 
 const resizeObserver = new ResizeObserver((entries) => {
   for (const entry of entries) {
-    entry.target.style.width = entry.contentBoxSize[0].inlineSize + 10 + "px";
+    entry.target.style.width = `${entry.contentBoxSize[0].inlineSize + 10}px`;
   }
 });
 
@@ -120,7 +120,7 @@ const divElem = document.querySelector("body > div");
 const resizeObserver = new ResizeObserver((entries) => {
   requestAnimationFrame(() => {
     for (const entry of entries) {
-      entry.target.style.width = entry.contentBoxSize[0].inlineSize + 10 + "px";
+      entry.target.style.width = `${entry.contentBoxSize[0].inlineSize + 10}px`;
     }
   });
 });

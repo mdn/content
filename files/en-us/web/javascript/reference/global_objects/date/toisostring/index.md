@@ -1,5 +1,6 @@
 ---
 title: Date.prototype.toISOString()
+short-title: toISOString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toISOString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.toISOString

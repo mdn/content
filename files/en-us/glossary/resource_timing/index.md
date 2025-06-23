@@ -11,4 +11,4 @@ Diagnosing performance issues requires performance data at the granularity of th
 ## See also
 
 - [Using the resource timing API](/en-US/docs/Web/API/Performance_API/Resource_timing)
-- [Server Timing](https://www.w3.org/TR/server-timing/)
+- [Server Timing](https://w3c.github.io/server-timing/)

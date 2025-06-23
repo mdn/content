@@ -14,7 +14,7 @@ See [Navigation directives](/en-US/docs/Web/HTTP/Reference/Headers/Content-Secur
 
 ## See also
 
-- <https://www.w3.org/TR/CSP/#directives-navigation>
+- [Navigation directives](https://w3c.github.io/webappsec-csp/#directives-navigation) specification
 - Other kinds of directives:
 
   - {{Glossary("Fetch directive")}}

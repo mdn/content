@@ -11,7 +11,8 @@ browser-compat: api.Document.browsingTopics
 {{DefaultAPISidebar("Topics API")}}{{SeeCompatTable}}{{non-standard_header}}
 
 > [!WARNING]
-> This feature is currently opposed by two browser vendors. See the [Standards positions](#standards_positions) section below for details of opposition.
+> This feature is currently opposed by two browser vendors.
+> See the [Standards positions](#standards_positions) section below for details.
 
 > [!NOTE]
 > An [Enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment) is required to use the Topics API in your applications. See the [Enrollment](#enrollment) section for details of what sub-features are gated by enrollment.
@@ -84,7 +85,8 @@ This feature is not part of an official standard, although it is specified in th
 
 ### Standards positions
 
-Two browser vendors [oppose](/en-US/docs/Glossary/Web_standards#opposing_standards) this specification. Known positions are as follows:
+Two browser vendors [oppose](/en-US/docs/Glossary/Web_standards#opposing_standards) this specification.
+Known standards positions are as follows:
 
 - Mozilla (Firefox): [Negative](https://mozilla.github.io/standards-positions/#topics)
 - Apple (Safari): [Negative](https://webkit.org/standards-positions/#position-111)

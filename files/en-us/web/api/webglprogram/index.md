@@ -24,7 +24,7 @@ gl.linkProgram(program);
 
 if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
   const info = gl.getProgramInfoLog(program);
-  throw `Could not compile WebGL program. \n\n${info}`;
+  throw new Error(`Could not compile WebGL program. \n\n${info}`);
 }
 ```
 

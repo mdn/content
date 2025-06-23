@@ -1,5 +1,6 @@
 ---
 title: handler.construct()
+short-title: construct()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.construct

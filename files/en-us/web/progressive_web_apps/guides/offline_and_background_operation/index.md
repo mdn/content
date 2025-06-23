@@ -2,9 +2,8 @@
 title: Offline and background operation
 slug: Web/Progressive_web_apps/Guides/Offline_and_background_operation
 page-type: guide
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 Usually, websites are very dependent on both reliable network connectivity and on the user having their pages open in a browser. Without network connectivity, most websites are just unusable, and if the user does not have the site open in a browser tab, most websites are unable to do anything.
 
@@ -170,7 +169,7 @@ As soon as the device has network connectivity, the `sync` event fires in the se
 // service-worker.js
 
 self.addEventListener("sync", (event) => {
-  if (event.tag == "send-message") {
+  if (event.tag === "send-message") {
     event.waitUntil(sendMessage());
   }
 });

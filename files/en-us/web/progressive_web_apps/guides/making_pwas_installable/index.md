@@ -2,9 +2,8 @@
 title: Making PWAs installable
 slug: Web/Progressive_web_apps/Guides/Making_PWAs_installable
 page-type: guide
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 One of the defining aspects of a PWA is that it can be promoted by the browser for installation on the device. Once installed, a PWA appears to users as a platform-specific app, a permanent feature of their device which they can launch directly from the operating system like any other app.
 
@@ -112,7 +111,8 @@ Support for PWA installation promotion from the web varies by browser and by pla
 On desktop:
 
 - Chromium browsers support installing PWAs that have a manifest file on all supported desktop operating systems.
-- Firefox and Safari do not support installing PWAs using a manifest file.
+- Safari supports Add to Dock (_File_ > _Add to Dock..._) on macOS Sonoma (Safari 17) and later for any web app with or without a manifest file.
+- Firefox does not support installing PWAs using a manifest file.
 
 On mobile:
 

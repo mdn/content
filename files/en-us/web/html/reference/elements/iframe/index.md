@@ -128,7 +128,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     - `allow-pointer-lock`
       - : Allows the page to use the [Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API).
     - `allow-popups`
-      - : Allows popups (like from {{domxref("Window.open()")}}, `target="_blank"`, {{domxref("Window.showModalDialog()")}}). If this keyword is not used, that functionality will silently fail.
+      - : Allows popups (created, for example, by {{domxref("Window.open()")}} or `target="_blank"`). If this keyword is not used, such functionality will silently fail.
     - `allow-popups-to-escape-sandbox`
       - : Allows a sandboxed document to open a new browsing context without forcing the sandboxing flags upon it. This will allow, for example, a third-party advertisement to be safely sandboxed without forcing the same restrictions upon the page the ad links to. If this flag is not included, a redirected page, popup window, or new tab will be subject to the same sandbox restrictions as the originating `<iframe>`.
     - `allow-presentation`
@@ -324,7 +324,7 @@ Here's how to write escape sequences when using `srcdoc`:
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >No corresponding role</a
         >
       </td>

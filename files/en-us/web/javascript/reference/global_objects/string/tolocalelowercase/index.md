@@ -1,5 +1,6 @@
 ---
 title: String.prototype.toLocaleLowerCase()
+short-title: toLocaleLowerCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.toLocaleLowerCase

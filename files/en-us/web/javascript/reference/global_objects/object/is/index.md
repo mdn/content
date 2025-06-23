@@ -1,5 +1,6 @@
 ---
 title: Object.is()
+short-title: is()
 slug: Web/JavaScript/Reference/Global_Objects/Object/is
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.is

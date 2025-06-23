@@ -9,6 +9,10 @@ browser-compat: css.properties.width.fit-content
 
 The **`fit-content`** keyword is equivalent to {{cssxref("fit-content_function", "fit-content(stretch)")}}. In practice, this means that the box will use the available space, but never more than {{cssxref("max-content")}}.
 
+The `fit-content` size is calculated using the following equation, where `<available-space>` is the size of its parent or grid track in [grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout):
+
+`min(max-content, max(min-content, <available-space>))`
+
 When used as laid out box size for {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} and {{cssxref("max-height")}} the maximum and minimum sizes refer to the content size.
 
 The {{cssxref("interpolate-size")}} property and {{cssxref("calc-size()")}} function can be used to enable animations to and from `fit-content`.

@@ -199,7 +199,7 @@ That brings us to the JavaScript code which makes everything work. Let's start w
 let contentBox;
 
 let nextArticleID = 1;
-const visibleAds = new Set();
+let visibleAds = new Set();
 let previouslyVisibleAds = null;
 
 let adObserver;
@@ -265,7 +265,7 @@ function handleVisibilityChange() {
   if (document.hidden) {
     if (!previouslyVisibleAds) {
       previouslyVisibleAds = visibleAds;
-      visibleAds = [];
+      visibleAds = new Set();
       previouslyVisibleAds.forEach((adBox) => {
         updateAdTimer(adBox);
         adBox.dataset.lastViewStarted = 0;

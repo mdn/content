@@ -1,5 +1,6 @@
 ---
-title: Allow
+title: Allow header
+short-title: Allow
 slug: Web/HTTP/Reference/Headers/Allow
 page-type: http-header
 spec-urls: https://httpwg.org/specs/rfc9110.html#field.allow

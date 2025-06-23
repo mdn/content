@@ -52,7 +52,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 - `documentId`
   - : `string`. UUID of the document associated with the context, or undefined if the context is not hosted in a document.
 - `documentOrigin`
-  - : string`. The origin of the document associated with the context or undefined if the context is not hosted in a document.
+  - : `string`. The origin of the document associated with the context or undefined if the context is not hosted in a document.
 - `documentUrl`
   - : `string`. The URL of the document associated with the context or undefined if the context is not hosted in a document.
 - `frameId`
@@ -73,7 +73,7 @@ This example gets all the contexts associated with the extension in private brow
 ```js
 function gotContextInfo(contexts) {
   for (const context of contexts) {
-    if (context.tabId == -1) {
+    if (context.tabId === -1) {
       console.log("Not hosted in a tab");
     } else {
       console.log(

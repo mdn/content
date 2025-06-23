@@ -1,5 +1,6 @@
 ---
-title: TE
+title: TE header
+short-title: TE
 slug: Web/HTTP/Reference/Headers/TE
 page-type: http-header
 browser-compat: http.headers.TE

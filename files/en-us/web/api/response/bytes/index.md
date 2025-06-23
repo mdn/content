@@ -128,7 +128,7 @@ The file name and the file type are then logged.
 
 ```js
 async function checkSignature(url) {
-  if (url == "") return;
+  if (url === "") return;
   log(`File: ${url}`);
   const response = await fetch(url);
   const image = await response.bytes();

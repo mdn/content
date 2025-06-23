@@ -3,9 +3,6 @@ title: CSS
 slug: Web/API/CSS
 page-type: web-api-interface
 browser-compat: api.CSS
-spec-urls:
-  - https://drafts.csswg.org/cssom/#namespacedef-css
-  - https://www.w3.org/TR/css-properties-values-api-1/
 ---
 
 {{APIRef("CSSOM")}}

@@ -93,7 +93,7 @@ mediaDeviceBtn.addEventListener("click", async () => {
 We also provide the user with a dropdown menu to allow them to change the audio output device on the fly. To do this, we:
 
 1. Provide a button to populate the dropdown menu. We first invoke {{domxref("MediaDevices.getUserMedia()")}} to trigger the permissions prompt we need to allow device enumeration, then use {{domxref("MediaDevices.enumerateDevices()")}} to get all the available devices. We loop through the different devices and make each one available as an option in a {{htmlelement("select")}} element. We also create a "None" option for the case where you don't want to play your audio in any output.
-2. Add a {{domxref("HTMLElement/change_event", "change")}} event listener to the {{htmlelement("select")}} element to change the sink ID and therefore the audio output device when a new value is selected. If "None" is selected in the dropdown, we invoke `setSinkId()` with the `{ type : 'none' }` object parameter to select no audio device, otherwise we run it with the audio device ID contained in the `<select>` element `value` attribute` as the parameter.
+2. Add a {{domxref("HTMLElement/change_event", "change")}} event listener to the {{htmlelement("select")}} element to change the sink ID and therefore the audio output device when a new value is selected. If "None" is selected in the dropdown, we invoke `setSinkId()` with the `{ type : 'none' }` object parameter to select no audio device, otherwise we run it with the audio device ID contained in the `<select>` element `value` attribute as the parameter.
 
 The output device can be changed during audio playback, as well as before, or between plays.
 

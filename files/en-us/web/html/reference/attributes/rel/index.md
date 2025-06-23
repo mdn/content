@@ -55,7 +55,7 @@ The `rel` attribute is relevant to the {{htmlelement('link')}}, {{htmlelement('a
 
 The `rel` attribute has no default value. If the attribute is omitted or if none of the values in the attribute are supported, then the document has no particular relationship with the destination resource other than there being a hyperlink between the two. In this case, on {{htmlelement('link')}} and {{htmlelement('form')}}, if the `rel` attribute is absent, has no keywords, or if not one or more of the space-separated keywords above, then the element does not create any links. {{htmlelement('a')}} and {{htmlelement('area')}} will still created links, but without a defined relationship.
 
-## Values
+## Value
 
 - `alternate`
 

@@ -49,7 +49,7 @@ new Temporal.PlainDateTime(year, month, day, hour, minute, second, millisecond, 
 - `nanosecond` {{optional_inline}}
   - : A number, truncated to an integer, representing the nanosecond component.
 - `calendar` {{optional_inline}}
-  - : A string representing the [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars) to use. Note that irrespective of the `calendar`, the `year`, `month`, and `day` must be in the ISO 8601 calendar system. Defaults to `"iso8601"`.
+  - : A string representing the [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars) to use. See [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types) for a list of commonly supported calendar types. Defaults to `"iso8601"`. Note that irrespective of the `calendar`, the `year`, `month`, and `day` must be in the ISO 8601 calendar system.
 
 ### Return value
 

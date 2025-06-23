@@ -1,5 +1,6 @@
 ---
 title: Reflect.getPrototypeOf()
+short-title: getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/getPrototypeOf
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.getPrototypeOf

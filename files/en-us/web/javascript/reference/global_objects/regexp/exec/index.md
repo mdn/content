@@ -1,5 +1,6 @@
 ---
 title: RegExp.prototype.exec()
+short-title: exec()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/exec
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.exec
@@ -12,7 +13,7 @@ The **`exec()`** method of {{jsxref("RegExp")}} instances executes a search with
 {{InteractiveExample("JavaScript Demo: RegExp.prototype.exec()")}}
 
 ```js interactive-example
-const regex1 = RegExp("foo*", "g");
+const regex1 = /fo+/g;
 const str1 = "table football, foosball";
 let array1;
 

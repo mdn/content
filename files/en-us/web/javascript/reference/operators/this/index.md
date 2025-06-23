@@ -18,7 +18,7 @@ The value of `this` in JavaScript depends on how a function is invoked (runtime 
 ```js interactive-example
 const test = {
   prop: 42,
-  func: function () {
+  func() {
     return this.prop;
   },
 };

@@ -45,7 +45,7 @@ const toggleBtn = document.getElementById("toggleBtn");
 
 // Check for popover API support.
 function supportsPopover() {
-  return HTMLElement.prototype.hasOwnProperty("popover");
+  return Object.hasOwn(HTMLElement.prototype, "popover");
 }
 ```
 

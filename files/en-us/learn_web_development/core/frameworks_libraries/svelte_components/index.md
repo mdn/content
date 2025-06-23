@@ -283,6 +283,7 @@ We'll edit our `Todo` component to emit a `remove` event, passing the to-do bein
 
    ```js
    import { createEventDispatcher } from "svelte";
+
    const dispatch = createEventDispatcher();
    ```
 

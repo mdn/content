@@ -58,9 +58,7 @@ You can see full code of this [example at output-timestamp](https://github.com/m
 // Press the play button
 playBtn.addEventListener("click", () => {
   // We can create the audioCtx as there has been some user action
-  if (!audioCtx) {
-    audioCtx = new AudioContext();
-  }
+  audioCtx ??= new AudioContext();
   source = new AudioBufferSourceNode(audioCtx);
   getData();
   source.start(0);

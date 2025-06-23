@@ -86,7 +86,7 @@ navigator.serviceWorker.ready.then(async (swReg) => {
 });
 ```
 
-You can find a demo application which implements Background Fetch [here](https://glitch.com/edit/#!/bgfetch-http203?path=public%2Fclient.js%3A191%3A45).
+You can find a demo application which implements Background Fetch [on Glitch](https://glitch.com/edit/#!/bgfetch-http203?path=public%2Fclient.js%3A191%3A45).
 
 ## Specifications
 

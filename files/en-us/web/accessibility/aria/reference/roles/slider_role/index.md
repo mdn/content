@@ -1,5 +1,6 @@
 ---
 title: "ARIA: slider role"
+short-title: slider
 slug: Web/Accessibility/ARIA/Reference/Roles/slider_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#slider
@@ -175,8 +176,13 @@ Using semantic HTML, this could have been written as:
   max="25"
   step="0.1"
   value="20"
-  aria-valuetext="20 degrees celsius"
-  style="transform: rotate(-90deg);" />
+  aria-valuetext="20 degrees celsius" />
+```
+
+```css
+#temperatureSlider {
+  transform: rotate(-90deg);
+}
 ```
 
 By using {{HTMLElement('input')}}, we get an already-styled range-input widget with keyboard focus, focus styling, keyboard interactions, and `value` updated on user interaction for free. We still need to use JavaScript to change the `aria-valuetext` and the value of the {{HTMLElement('output')}} element.

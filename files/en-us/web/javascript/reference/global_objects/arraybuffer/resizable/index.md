@@ -1,5 +1,6 @@
 ---
 title: ArrayBuffer.prototype.resizable
+short-title: resizable
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/resizable
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.ArrayBuffer.resizable

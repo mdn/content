@@ -26,7 +26,7 @@ For scroll containers that are [snapped](/en-US/docs/Glossary/Scroll_snap) to an
 
 ## Guides
 
-- [Understanding scroll anchoring](/en-US/docs/Web/CSS/CSS_scroll_anchoring/Scroll_anchoring)
+- [Overview of scroll anchoring](/en-US/docs/Web/CSS/CSS_scroll_anchoring/Scroll_anchoring)
   - : What is scroll anchoring, suppression triggers, and when and how to enable and disable this browser feature.
 
 ## Related concepts

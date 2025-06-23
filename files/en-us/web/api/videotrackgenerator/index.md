@@ -34,7 +34,9 @@ const stream = await navigator.mediaDevices.getUserMedia({ video: true });
 const [track] = stream.getVideoTracks();
 const worker = new Worker("worker.js");
 worker.postMessage({ track }, [track]);
-const { data } = await new Promise((r) => (worker.onmessage = r));
+const { data } = await new Promise((r) => {
+  worker.onmessage = r;
+});
 video.srcObject = new MediaStream([data.track]);
 ```
 

@@ -17,6 +17,10 @@ Other direct children will be bypassed and therefore not rendered. If a child el
 
 {{svginfo}}
 
+## Attributes
+
+This element only includes global attributes.
+
 ## DOM Interface
 
 This element implements the {{domxref("SVGSwitchElement")}} interface.

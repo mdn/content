@@ -1,5 +1,6 @@
 ---
 title: "ARIA: structure role"
+short-title: structure
 slug: Web/Accessibility/ARIA/Reference/Roles/structure_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#structure

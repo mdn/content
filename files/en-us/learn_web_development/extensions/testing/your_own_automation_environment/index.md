@@ -583,7 +583,10 @@ Let's update our `bstack_duck_test.js` demo, to show how these features work:
 3. Now we'll update our `capabilities` object to include a project name — add the following line before the closing curly brace, remembering to add a comma at the end of the previous line (you can vary the build and project names to organize the tests in different windows in the BrowserStack automation dashboard):
 
    ```js
-   project: "DuckDuckGo test 2";
+   const capabilities = {
+     // …
+     project: "DuckDuckGo test 2",
+   };
    ```
 
 4. Next we'll retrieve the `sessionId` of the current session, and use it (along with your `userName` and `accessKey`) to assemble the URL to send requests to, to update the BrowserStack data. Include the following lines just below the block that creates the `driver` object (which starts with `const driver = new Builder()`) :
@@ -631,6 +634,7 @@ Let's look at an example that demonstrates getting Selenium tests to run remotel
 
    ```js
    const { Builder, By, Key } = require("selenium-webdriver");
+
    const username = "YOUR-USER-NAME";
    const accessKey = "YOUR-ACCESS-KEY";
 

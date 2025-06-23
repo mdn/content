@@ -1,5 +1,6 @@
 ---
-title: Sec-WebSocket-Extensions
+title: Sec-WebSocket-Extensions header
+short-title: Sec-WebSocket-Extensions
 slug: Web/HTTP/Reference/Headers/Sec-WebSocket-Extensions
 page-type: http-header
 browser-compat: http.headers.Sec-WebSocket-Extensions

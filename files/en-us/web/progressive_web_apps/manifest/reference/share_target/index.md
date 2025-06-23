@@ -5,9 +5,10 @@ page-type: web-manifest-member
 status:
   - experimental
 browser-compat: manifests.webapp.share_target
+sidebar: pwasidebar
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The `share_target` manifest member allows installed {{Glossary("Progressive Web Apps")}} (PWAs) to be registered as a share target in the system's share dialog.
 

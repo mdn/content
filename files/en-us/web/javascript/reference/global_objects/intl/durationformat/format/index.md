@@ -1,5 +1,6 @@
 ---
 title: Intl.DurationFormat.prototype.format()
+short-title: format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/format
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.DurationFormat.format

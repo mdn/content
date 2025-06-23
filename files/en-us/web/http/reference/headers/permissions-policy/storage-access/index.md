@@ -1,5 +1,6 @@
 ---
-title: "Permissions-Policy: storage-access"
+title: "Permissions-Policy: storage-access directive"
+short-title: storage-access
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/storage-access
 page-type: http-permissions-policy-directive
 status:

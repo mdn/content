@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainDate.prototype.valueOf()
+short-title: valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/valueOf
 page-type: javascript-instance-method
 status:

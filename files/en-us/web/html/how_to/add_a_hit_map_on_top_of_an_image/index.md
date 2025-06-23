@@ -6,7 +6,8 @@ page-type: how-to
 
 {{HTMLSidebar}}
 
-Here we go over how to set up an image map, and some downsides to consider first.
+You can create a clickable image map in HTML using {{htmlelement('area')}} and {{htmlelement('map')}} elements.
+This article describes how to set up an image map, and some downsides to consider before you build one.
 
 <table>
 <caption>Here are some things you need to know</caption>

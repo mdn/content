@@ -1,5 +1,6 @@
 ---
-title: X-Forwarded-For
+title: X-Forwarded-For header
+short-title: X-Forwarded-For
 slug: Web/HTTP/Reference/Headers/X-Forwarded-For
 page-type: http-header
 status:

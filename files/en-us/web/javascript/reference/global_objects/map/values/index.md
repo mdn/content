@@ -1,5 +1,6 @@
 ---
 title: Map.prototype.values()
+short-title: values()
 slug: Web/JavaScript/Reference/Global_Objects/Map/values
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Map.values

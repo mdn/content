@@ -81,21 +81,20 @@ if ("paintWorklet" in CSS) {
 
 This example shows how to use a paint `Worklet` in a stylesheet, including the simplest way to provide a fallback if `CSS.paintWorklet` isn't supported.
 
-```html
-<style>
-  textarea {
-    background-image: url(checkerboard);
-    background-image: paint(checkerboard);
-  }
-</style>
-<textarea></textarea>
+```css
+textarea {
+  background-image: url(checkerboard);
+  background-image: paint(checkerboard);
+}
 ```
 
 You can also use the {{cssxref('@supports')}} at-rule.
 
 ```css
 @supports (background: paint(id)) {
-  background-image: paint(checkerboard);
+  textarea {
+    background-image: paint(checkerboard);
+  }
 }
 ```
 

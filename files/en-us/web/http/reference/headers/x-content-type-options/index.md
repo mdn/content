@@ -1,5 +1,6 @@
 ---
-title: X-Content-Type-Options
+title: X-Content-Type-Options header
+short-title: X-Content-Type-Options
 slug: Web/HTTP/Reference/Headers/X-Content-Type-Options
 page-type: http-header
 browser-compat: http.headers.X-Content-Type-Options

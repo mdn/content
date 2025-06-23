@@ -1,5 +1,6 @@
 ---
 title: Set.prototype.delete()
+short-title: delete()
 slug: Web/JavaScript/Reference/Global_Objects/Set/delete
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.delete

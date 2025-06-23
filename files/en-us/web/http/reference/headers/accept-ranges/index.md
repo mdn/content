@@ -1,5 +1,6 @@
 ---
-title: Accept-Ranges
+title: Accept-Ranges header
+short-title: Accept-Ranges
 slug: Web/HTTP/Reference/Headers/Accept-Ranges
 page-type: http-header
 browser-compat: http.headers.Accept-Ranges

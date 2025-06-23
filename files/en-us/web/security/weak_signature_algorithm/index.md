@@ -2,9 +2,8 @@
 title: Weak signature algorithms
 slug: Web/Security/Weak_Signature_Algorithm
 page-type: guide
+sidebar: security
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
 The strength of the hash algorithm used in {{Glossary("Signature/Security", "signing")}} a {{Glossary("Digital certificate", "digital certificate")}} is a critical element of the security of the certificate. This article provides some information about signature algorithms known to be weak, so you can avoid them when appropriate.
 

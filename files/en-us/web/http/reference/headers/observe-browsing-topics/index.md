@@ -1,5 +1,6 @@
 ---
-title: Observe-Browsing-Topics
+title: Observe-Browsing-Topics header
+short-title: Observe-Browsing-Topics
 slug: Web/HTTP/Reference/Headers/Observe-Browsing-Topics
 page-type: http-header
 status:

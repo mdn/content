@@ -1,5 +1,6 @@
 ---
-title: Network Error Logging
+title: Network Error Logging (NEL)
+short-title: Network Error Logging
 slug: Web/HTTP/Guides/Network_Error_Logging
 page-type: guide
 status:

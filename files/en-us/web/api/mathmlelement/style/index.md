@@ -62,7 +62,7 @@ for (const prop in elementStyle) {
   // We also ensure that the property is a numeric index (indicating an inline style)
   if (
     Object.hasOwn(elementStyle, prop) &&
-    !Number.isNaN(Number.parseInt(prop))
+    !Number.isNaN(Number.parseInt(prop, 10))
   ) {
     out.textContent += `${
       elementStyle[prop]

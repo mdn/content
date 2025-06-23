@@ -1,5 +1,6 @@
 ---
-title: Host
+title: Host header
+short-title: Host
 slug: Web/HTTP/Reference/Headers/Host
 page-type: http-header
 browser-compat: http.headers.Host

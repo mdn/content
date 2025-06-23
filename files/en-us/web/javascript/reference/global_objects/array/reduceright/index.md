@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.reduceRight()
+short-title: reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.reduceRight

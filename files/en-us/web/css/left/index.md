@@ -192,8 +192,6 @@ When both `left` and {{cssxref("right")}} are defined, and width constraints don
 }
 
 pre {
-  white-space: pre;
-  white-space: pre-wrap;
   white-space: pre-line;
   word-wrap: break-word;
 }

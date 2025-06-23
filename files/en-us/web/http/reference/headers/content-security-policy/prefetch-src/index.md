@@ -1,5 +1,6 @@
 ---
-title: "CSP: prefetch-src"
+title: "Content-Security-Policy: prefetch-src directive"
+short-title: prefetch-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/prefetch-src
 page-type: http-csp-directive
 status:

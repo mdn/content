@@ -1,5 +1,6 @@
 ---
-title: "CSP: script-src"
+title: "Content-Security-Policy: script-src directive"
+short-title: script-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/script-src
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.script-src

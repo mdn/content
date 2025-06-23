@@ -1,5 +1,6 @@
 ---
 title: Number() constructor
+short-title: Number()
 slug: Web/JavaScript/Reference/Global_Objects/Number/Number
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Number.Number

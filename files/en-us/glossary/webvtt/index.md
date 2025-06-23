@@ -14,4 +14,4 @@ WebVTT files provide metadata that is time-aligned with audio or video content l
 
 - [WebVTT](https://en.wikipedia.org/wiki/WebVTT) on Wikipedia
 - [WebVTT](/en-US/docs/Web/API/WebVTT_API) on MDN
-- [Specification](https://www.w3.org/TR/webvtt1/)
+- [Specification](https://w3c.github.io/webvtt/)

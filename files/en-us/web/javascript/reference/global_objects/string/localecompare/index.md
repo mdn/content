@@ -1,5 +1,6 @@
 ---
 title: String.prototype.localeCompare()
+short-title: localeCompare()
 slug: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.localeCompare

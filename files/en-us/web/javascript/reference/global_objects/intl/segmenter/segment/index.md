@@ -1,5 +1,6 @@
 ---
 title: Intl.Segmenter.prototype.segment()
+short-title: segment()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.Segmenter.segment

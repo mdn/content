@@ -1,5 +1,6 @@
 ---
 title: Temporal.Duration.from()
+short-title: from()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/from
 page-type: javascript-static-method
 status:

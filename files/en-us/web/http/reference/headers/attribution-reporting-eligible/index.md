@@ -1,5 +1,6 @@
 ---
-title: Attribution-Reporting-Eligible
+title: Attribution-Reporting-Eligible header
+short-title: Attribution-Reporting-Eligible
 slug: Web/HTTP/Reference/Headers/Attribution-Reporting-Eligible
 page-type: http-header
 status:

@@ -1,5 +1,6 @@
 ---
 title: Overview of shapes
+short-title: Overview
 slug: Web/CSS/CSS_shapes/Overview_of_shapes
 page-type: guide
 ---

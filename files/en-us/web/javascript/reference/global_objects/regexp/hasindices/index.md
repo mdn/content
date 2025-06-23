@@ -1,5 +1,6 @@
 ---
 title: RegExp.prototype.hasIndices
+short-title: hasIndices
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.RegExp.hasIndices
@@ -12,12 +13,12 @@ The **`hasIndices`** accessor property of {{jsxref("RegExp")}} instances returns
 {{InteractiveExample("JavaScript Demo: RegExp.prototype.hasIndices")}}
 
 ```js interactive-example
-const regex1 = new RegExp("foo", "d");
+const regex1 = /foo/d;
 
 console.log(regex1.hasIndices);
 // Expected output: true
 
-const regex2 = new RegExp("bar");
+const regex2 = /bar/;
 
 console.log(regex2.hasIndices);
 // Expected output: false

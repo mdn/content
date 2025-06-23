@@ -47,7 +47,7 @@ const toggleBtn = document.getElementById("toggleBtn");
 
 // Check for popover API support.
 function supportsPopover() {
-  return HTMLElement.prototype.hasOwnProperty("popover");
+  return Object.hasOwn(HTMLElement.prototype, "popover");
 }
 ```
 
@@ -94,7 +94,7 @@ A `manual` popover must be closed explicitly, and not "light dismissed" by selec
 
 ```js
 function supportsPopover() {
-  return HTMLElement.prototype.hasOwnProperty("popover");
+  return Object.hasOwn(HTMLElement.prototype, "popover");
 }
 
 const popover = document.getElementById("mypopover");

@@ -173,7 +173,7 @@ function updateCSS() {
 The results are shown below.
 If you change the selection the results will be applied to the test element (blue outline) and the results of the `checkVisibility()` for each setting should be displayed.
 So for example, if you set the `opacity: 0` that test (only) should indicate `false`.
-However if you set `display: none` then all tests should return `false.
+However if you set `display: none` then all tests should return `false`.
 
 {{ EmbedLiveSample('Test checkVisibility() with varied CSS', "100%", "200" ) }}
 

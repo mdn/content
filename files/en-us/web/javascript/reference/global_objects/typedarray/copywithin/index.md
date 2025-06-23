@@ -1,5 +1,6 @@
 ---
 title: TypedArray.prototype.copyWithin()
+short-title: copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.copyWithin

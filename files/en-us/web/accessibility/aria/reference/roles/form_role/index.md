@@ -1,5 +1,6 @@
 ---
 title: "ARIA: form role"
+short-title: form
 slug: Web/Accessibility/ARIA/Reference/Roles/form_role
 page-type: aria-role
 spec-urls:
@@ -127,4 +128,3 @@ Using the {{HTMLElement('form')}} element will automatically communicate a secti
 
 - The {{HTMLElement('form')}} element
 - The {{HTMLElement('legend')}} element
-- [form (role): Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria/#form)

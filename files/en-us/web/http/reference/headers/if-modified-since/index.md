@@ -1,5 +1,6 @@
 ---
-title: If-Modified-Since
+title: If-Modified-Since header
+short-title: If-Modified-Since
 slug: Web/HTTP/Reference/Headers/If-Modified-Since
 page-type: http-header
 browser-compat: http.headers.If-Modified-Since

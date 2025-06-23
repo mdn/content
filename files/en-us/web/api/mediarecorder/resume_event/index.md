@@ -15,10 +15,10 @@ The **`resume`** event of the {{domxref("MediaRecorder")}} interface is fired wh
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("resume", (event) => {});
+```js-nolint
+addEventListener("resume", (event) => { })
 
-onresume = (event) => {};
+onresume = (event) => { }
 ```
 
 ## Event type

@@ -30,7 +30,7 @@ Apart from writing and testing code, contributions include creating and updating
 Depending on the frequency of your contributions, you can be someone who contributes occasionally or an active contributor.
 If you demonstrate a large impact on the project, you may be nominated as a [spotlight contributor](#spotlight_contributor) or be promoted to an [organization member](#organization_member).
 
-If you're new here and you would like to become a contributor, take a look at our [contribution guide](https://github.com/mdn/content/blob/main/CONTRIBUTING.md) and the [repositories in the MDN GitHub organization](https://github.com/orgs/mdn/repositories).
+If you're new here and you would like to become a contributor, take a look at our [Getting started guide](/en-US/docs/MDN/Community/Getting_started) and the [repositories in the MDN GitHub organization](https://github.com/orgs/mdn/repositories).
 
 As a contributor, you can get involved with the project by engaging in the following activities:
 
@@ -47,7 +47,7 @@ As a contributor, you can get involved with the project by engaging in the follo
 To be a contributor, you must follow:
 
 - [Mozilla's code of conduct](https://www.mozilla.org/en-US/about/governance/policies/participation/)
-- Contribution guidelines (check the `CONTRIBUTING.md` file in each repository; for example, these are the [contribution guidelines](https://github.com/mdn/content/blob/main/CONTRIBUTING.md) for the `mdn/content` repository).
+- The specific guidelines for each repository. If there are any project-specific hints or guidelines, you will find them in a `CONTRIBUTING.md` file in the project repository root.
 
 **Privileges:**
 

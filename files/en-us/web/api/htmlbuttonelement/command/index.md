@@ -51,9 +51,9 @@ toggleBtn.command = "show-popover";
 const image = document.getElementById("the-image");
 
 image.addEventListener("command", (event) => {
-  if (event.command == "--rotate-left") {
+  if (event.command === "--rotate-left") {
     event.target.style.rotate = "-90deg";
-  } else if (event.command == "--rotate-right") {
+  } else if (event.command === "--rotate-right") {
     event.target.style.rotate = "90deg";
   }
 });

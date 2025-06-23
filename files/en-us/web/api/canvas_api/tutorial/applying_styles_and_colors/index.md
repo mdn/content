@@ -404,7 +404,7 @@ function draw() {
   ctx.moveTo(0, 100);
   for (let i = 0; i < 24; i++) {
     const dy = i % 2 === 0 ? 25 : -25;
-    ctx.lineTo(Math.pow(i, 1.5) * 2, 75 + dy);
+    ctx.lineTo(i ** 1.5 * 2, 75 + dy);
   }
   ctx.stroke();
   return false;

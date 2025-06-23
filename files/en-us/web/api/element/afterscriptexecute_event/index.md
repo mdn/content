@@ -24,10 +24,10 @@ This event is not cancelable.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("afterscriptexecute", (event) => {});
+```js-nolint
+addEventListener("afterscriptexecute", (event) => { })
 
-onafterscriptexecute = (event) => {};
+onafterscriptexecute = (event) => { }
 ```
 
 ## Event type

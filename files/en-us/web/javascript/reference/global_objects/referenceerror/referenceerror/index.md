@@ -1,5 +1,6 @@
 ---
 title: ReferenceError() constructor
+short-title: ReferenceError()
 slug: Web/JavaScript/Reference/Global_Objects/ReferenceError/ReferenceError
 page-type: javascript-constructor
 browser-compat: javascript.builtins.ReferenceError.ReferenceError

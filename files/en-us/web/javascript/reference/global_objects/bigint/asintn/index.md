@@ -1,5 +1,6 @@
 ---
 title: BigInt.asIntN()
+short-title: asIntN()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/asIntN
 page-type: javascript-static-method
 browser-compat: javascript.builtins.BigInt.asIntN
@@ -41,7 +42,7 @@ BigInt.asIntN(bits, bigint)
 
 ### Return value
 
-The value of `bigint` modulo 2^`bits`, as a signed integer.
+The value of `bigint` modulo `2 ** bits`, as a signed integer.
 
 ### Exceptions
 

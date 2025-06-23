@@ -119,7 +119,7 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener("click", function () {
+reset.addEventListener("click", () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
@@ -127,7 +127,7 @@ reset.addEventListener("click", function () {
   updateCode();
 });
 
-solution.addEventListener("click", function () {
+solution.addEventListener("click", () => {
   if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
     solution.value = "Hide solution";
@@ -202,27 +202,24 @@ Say you wanted to include the MDN glossary on one of your web pages using the {{
 If you were to add the code below into one of your pages, you might be surprised to see an error message instead of the glossary page:
 
 ```html
-<head>
-  <style>
-    iframe {
-      border: none;
-    }
-  </style>
-</head>
-<body>
-  <iframe
-    src="https://developer.mozilla.org/en-US/docs/Glossary"
-    width="100%"
-    height="500"
-    allowfullscreen
-    sandbox>
-    <p>
-      <a href="/en-US/docs/Glossary">
-        Fallback link for browsers that don't support iframes
-      </a>
-    </p>
-  </iframe>
-</body>
+<iframe
+  src="https://developer.mozilla.org/en-US/docs/Glossary"
+  width="100%"
+  height="500"
+  allowfullscreen
+  sandbox>
+  <p>
+    <a href="/en-US/docs/Glossary">
+      Fallback link for browsers that don't support iframes
+    </a>
+  </p>
+</iframe>
+```
+
+```css
+iframe {
+  border: none;
+}
 ```
 
 If you have a look at your browser's console, you'll see an error message like the following:

@@ -1,5 +1,6 @@
 ---
 title: Intl.DisplayNames.prototype.of()
+short-title: of()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/of
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.DisplayNames.of

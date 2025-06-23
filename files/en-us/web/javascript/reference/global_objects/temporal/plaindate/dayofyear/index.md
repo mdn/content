@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainDate.prototype.dayOfYear
+short-title: dayOfYear
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/dayOfYear
 page-type: javascript-instance-accessor-property
 status:

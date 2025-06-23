@@ -43,7 +43,7 @@ The new {{domxref("Attr")}} node.
 - `NamespaceError` {{domxref("DOMException")}}
   - : Thrown if the [`namespaceURI`](#namespaceuri) value is not a valid namespace URI.
 - `InvalidCharacterError` {{domxref("DOMException")}}
-  - : Thrown if the [`qualifiedName`](#qualifiedname) value is not a valid [XML name](https://www.w3.org/TR/REC-xml/#dt-name); for example, it starts with a number, hyphen, or period, or contains characters other than alphanumeric characters, underscores, hyphens, or periods.
+  - : Thrown if the [`qualifiedName`](#qualifiedname) value is not a valid [XML name](https://www.w3.org/TR/xml/#dt-name); for example, it starts with a number, hyphen, or period, or contains characters other than alphanumeric characters, underscores, hyphens, or periods.
 
 ## Examples
 

@@ -1,5 +1,6 @@
 ---
 title: SharedArrayBuffer() constructor
+short-title: SharedArrayBuffer()
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer
 page-type: javascript-constructor
 browser-compat: javascript.builtins.SharedArrayBuffer.SharedArrayBuffer

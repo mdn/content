@@ -1,5 +1,6 @@
 ---
 title: GeneratorFunction.prototype.prototype
+short-title: prototype
 slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction/prototype
 page-type: javascript-instance-data-property
 spec-urls:

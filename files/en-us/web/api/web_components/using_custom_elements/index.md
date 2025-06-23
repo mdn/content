@@ -498,7 +498,7 @@ class ExpandingList extends HTMLUListElement {
           const nextUl = e.target.nextElementSibling;
 
           // Toggle visible state and update class attribute on ul
-          if (nextUl.style.display == "block") {
+          if (nextUl.style.display === "block") {
             nextUl.style.display = "none";
             nextUl.parentNode.setAttribute("class", "closed");
           } else {

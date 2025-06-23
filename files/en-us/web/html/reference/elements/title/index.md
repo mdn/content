@@ -7,7 +7,7 @@ browser-compat: html.elements.title
 
 {{HTMLSidebar}}
 
-The **`<title>`** [HTML](/en-US/docs/Web/HTML) element defines the document's title that is shown in a {{glossary("Browser", "browser")}}'s title bar or a page's tab. It only contains text; tags within the element are ignored.
+The **`<title>`** [HTML](/en-US/docs/Web/HTML) element defines the document's title that is shown in a {{glossary("Browser", "browser")}}'s title bar or a page's tab. It only contains text; HTML tags within the element, if any, are also treated as plain text.
 
 ```html
 <title>Grandma's Heavy Metal Festival Journal</title>
@@ -106,7 +106,7 @@ This example establishes a page whose title (as displayed at the top of the wind
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >No corresponding role</a
         >
       </td>

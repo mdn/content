@@ -249,7 +249,7 @@ Unlike the other mechanisms this returns when all fonts defined in the document 
 When the promise resolves we iterate the values in the document's font faces.
 
 ```js
-document.fonts.ready.then(function () {
+document.fonts.ready.then(() => {
   log.textContent += `\nFontFaces in document: ${document.fonts.size}.\n`;
 
   for (const fontFace of document.fonts.values()) {

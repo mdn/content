@@ -1,5 +1,6 @@
 ---
 title: "ARIA: grid role"
+short-title: grid
 slug: Web/Accessibility/ARIA/Reference/Roles/grid_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#grid
@@ -256,16 +257,15 @@ function moveTo(newRow, newCol) {
   const tgt = document.querySelector(
     `[data-row="${newRow}"][data-col="${newCol}"]`,
   );
-  if (tgt?.getAttribute("role") === "gridcell") {
-    document.querySelectorAll("[role=gridcell]").forEach((el) => {
-      el.setAttribute("tabindex", "-1");
-    });
-    tgt.setAttribute("tabindex", "0");
-    tgt.focus();
-    return true;
-  } else {
+  if (tgt?.getAttribute("role") !== "gridcell") {
     return false;
   }
+  document.querySelectorAll("[role=gridcell]").forEach((el) => {
+    el.setAttribute("tabindex", "-1");
+  });
+  tgt.setAttribute("tabindex", "0");
+  tgt.focus();
+  return true;
 }
 
 document.querySelector("table").addEventListener("keydown", (event) => {

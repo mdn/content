@@ -3,12 +3,10 @@ title: "URLPattern: pathname property"
 short-title: pathname
 slug: Web/API/URLPattern/pathname
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.URLPattern.pathname
 ---
 
-{{APIRef("URL Pattern API")}}{{SeeCompatTable}} {{AvailableInWorkers}}
+{{APIRef("URL Pattern API")}} {{AvailableInWorkers}}
 
 The **`pathname`** read-only property of the {{domxref("URLPattern")}} interface is a
 string containing the pattern used to match the pathname part

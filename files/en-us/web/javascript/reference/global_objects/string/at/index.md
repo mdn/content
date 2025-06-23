@@ -1,5 +1,6 @@
 ---
 title: String.prototype.at()
+short-title: at()
 slug: Web/JavaScript/Reference/Global_Objects/String/at
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.at

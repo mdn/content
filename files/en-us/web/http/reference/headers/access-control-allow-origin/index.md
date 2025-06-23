@@ -1,5 +1,6 @@
 ---
-title: Access-Control-Allow-Origin
+title: Access-Control-Allow-Origin header
+short-title: Access-Control-Allow-Origin
 slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Origin
 page-type: http-header
 browser-compat: http.headers.Access-Control-Allow-Origin

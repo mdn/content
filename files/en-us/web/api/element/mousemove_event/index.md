@@ -16,10 +16,10 @@ These events happen whether or not any mouse buttons are pressed. They can fire 
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("mousemove", (event) => {});
+```js-nolint
+addEventListener("mousemove", (event) => { })
 
-onmousemove = (event) => {};
+onmousemove = (event) => { }
 ```
 
 ## Event type

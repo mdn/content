@@ -54,11 +54,12 @@ deleted, or `false` otherwise.
 ## Examples
 
 ```js
-caches.open("v1").then((cache) => {
-  cache.delete("/images/image.png").then((response) => {
+caches
+  .open("v1")
+  .then((cache) => cache.delete("/images/image.png"))
+  .then((response) => {
     someUIUpdateFunction();
   });
-});
 ```
 
 ## Specifications

@@ -41,7 +41,7 @@ const colorYellow = 2;
 const colors = [colorBlue, colorGreen, colorYellow];
 
 const pointerToColorMap = new Map();
-const colorAssignmentIndex = 0;
+let colorAssignmentIndex = 0;
 
 const canvas = document.querySelector("#inking-surface");
 

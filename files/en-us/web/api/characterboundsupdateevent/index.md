@@ -81,9 +81,10 @@ editContext.addEventListener("characterboundsupdate", (e) => {
   console.log(
     "The required character bounds are",
     charBounds
-      .map((bound) => {
-        return `(x: ${bound.x}, y: ${bound.y}, width: ${bound.width}, height: ${bound.height})`;
-      })
+      .map(
+        (bound) =>
+          `(x: ${bound.x}, y: ${bound.y}, width: ${bound.width}, height: ${bound.height})`,
+      )
       .join(", "),
   );
 });

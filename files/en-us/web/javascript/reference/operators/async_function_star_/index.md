@@ -17,7 +17,7 @@ You can also define async generator functions using the [`async function*` decla
 async function joinAll(generator) {
   let str = "";
   for await (const val of generator()) {
-    str = str + val;
+    str += val;
   }
   return str;
 }

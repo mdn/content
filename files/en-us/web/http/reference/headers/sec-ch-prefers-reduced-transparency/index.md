@@ -1,5 +1,6 @@
 ---
-title: Sec-CH-Prefers-Reduced-Transparency
+title: Sec-CH-Prefers-Reduced-Transparency header
+short-title: Sec-CH-Prefers-Reduced-Transparency
 slug: Web/HTTP/Reference/Headers/Sec-CH-Prefers-Reduced-Transparency
 page-type: http-header
 status:

@@ -21,10 +21,10 @@ For detecting when scrolling inside an element is complete, see the {{domxref("E
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("scrollend", (event) => {});
+```js-nolint
+addEventListener("scrollend", (event) => { })
 
-onscrollend = (event) => {};
+onscrollend = (event) => { }
 ```
 
 ## Event type

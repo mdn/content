@@ -1,5 +1,6 @@
 ---
-title: Available-Dictionary
+title: Available-Dictionary header
+short-title: Available-Dictionary
 slug: Web/HTTP/Reference/Headers/Available-Dictionary
 page-type: http-header
 status:

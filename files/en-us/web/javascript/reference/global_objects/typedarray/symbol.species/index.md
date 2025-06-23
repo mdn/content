@@ -1,5 +1,6 @@
 ---
 title: TypedArray[Symbol.species]
+short-title: "[Symbol.species]"
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.species
 page-type: javascript-static-accessor-property
 browser-compat: javascript.builtins.TypedArray.@@species

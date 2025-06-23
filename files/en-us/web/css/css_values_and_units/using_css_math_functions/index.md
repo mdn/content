@@ -1,5 +1,6 @@
 ---
 title: Using CSS math functions
+short-title: Using math functions
 slug: Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions
 page-type: guide
 ---

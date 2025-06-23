@@ -95,7 +95,7 @@ First we check whether popovers are supported, and if they aren't we hide the po
 const instructions = document.getElementById("instructions");
 const popover = document.getElementById("mypopover");
 
-if (!HTMLElement.prototype.hasOwnProperty("popover")) {
+if (!Object.hasOwn(HTMLElement.prototype, "popover")) {
   popover.innerText = "";
   instructions.innerText = "Popovers not supported";
 }
@@ -105,7 +105,7 @@ If popovers are supported we add a listener for the `h` key to be pressed, and u
 We also log whether the popup was open or closed after the call, but only if a `true` or `false` was returned.
 
 ```js
-if (HTMLElement.prototype.hasOwnProperty("popover")) {
+if (Object.hasOwn(HTMLElement.prototype, "popover")) {
   document.addEventListener("keydown", (event) => {
     if (event.key === "h") {
       const popupOpened = popover.togglePopover();

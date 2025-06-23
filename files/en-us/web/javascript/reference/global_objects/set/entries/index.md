@@ -1,5 +1,6 @@
 ---
 title: Set.prototype.entries()
+short-title: entries()
 slug: Web/JavaScript/Reference/Global_Objects/Set/entries
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.entries

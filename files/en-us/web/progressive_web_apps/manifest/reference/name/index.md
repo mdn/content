@@ -3,9 +3,8 @@ title: name
 slug: Web/Progressive_web_apps/Manifest/Reference/name
 page-type: web-manifest-member
 browser-compat: manifests.webapp.name
+sidebar: pwasidebar
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 The `name` manifest member is used to specify the full name of your web application as it's usually displayed to users, such as in application lists or as a label for your application's icon.
 

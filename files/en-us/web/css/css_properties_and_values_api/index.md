@@ -2,7 +2,7 @@
 title: CSS properties and values API
 slug: Web/CSS/CSS_properties_and_values_API
 page-type: css-module
-spec-urls: https://www.w3.org/TR/css-properties-values-api-1/
+spec-urls: https://drafts.css-houdini.org/css-properties-values-api-1/
 ---
 
 {{CSSRef}}

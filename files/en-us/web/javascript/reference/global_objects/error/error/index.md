@@ -1,5 +1,6 @@
 ---
 title: Error() constructor
+short-title: Error()
 slug: Web/JavaScript/Reference/Global_Objects/Error/Error
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Error.Error

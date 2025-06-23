@@ -1,5 +1,6 @@
 ---
 title: Array.isArray()
+short-title: isArray()
 slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Array.isArray
@@ -46,7 +47,7 @@ Array.isArray(value)
 
 It is a more robust alternative to [`instanceof Array`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) because it avoids false positives and false negatives:
 
-- `Array.isArray()` rejects values that aren't actual `Array` instances, even if they have `Array.prototype` their prototype chain — `instanceof Array` would accept these as it does check the prototype chain.
+- `Array.isArray()` rejects values that aren't actual `Array` instances, even if they have `Array.prototype` in their prototype chain — `instanceof Array` would accept these as it does check the prototype chain.
 - `Array.isArray()` accepts `Array` objects constructed in another realm — `instanceof Array` returns `false` for these because the identity of the `Array` constructor is different across realms.
 
 See the article ["Determining with absolute accuracy whether or not a JavaScript object is an array"](https://web.mit.edu/jwalden/www/isArray.html) for more details.

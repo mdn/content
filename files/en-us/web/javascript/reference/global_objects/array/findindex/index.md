@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.findIndex()
+short-title: findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.findIndex

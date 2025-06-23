@@ -1,5 +1,6 @@
 ---
-title: "CSP: media-src"
+title: "Content-Security-Policy: media-src directive"
+short-title: media-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/media-src
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.media-src

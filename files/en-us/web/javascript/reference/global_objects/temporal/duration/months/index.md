@@ -1,5 +1,6 @@
 ---
 title: Temporal.Duration.prototype.months
+short-title: months
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/months
 page-type: javascript-instance-accessor-property
 status:

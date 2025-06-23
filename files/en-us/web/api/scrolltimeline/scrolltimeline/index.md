@@ -3,12 +3,10 @@ title: "ScrollTimeline: ScrollTimeline() constructor"
 short-title: ScrollTimeline()
 slug: Web/API/ScrollTimeline/ScrollTimeline
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.ScrollTimeline.ScrollTimeline
 ---
 
-{{APIRef("History API")}}{{SeeCompatTable}}
+{{APIRef("History API")}}
 
 The **`ScrollTimeline()`** constructor creates a new {{domxref("ScrollTimeline")}} object instance.
 

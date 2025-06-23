@@ -1,5 +1,6 @@
 ---
 title: Atomics.and()
+short-title: and()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/and
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.and

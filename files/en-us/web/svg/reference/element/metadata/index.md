@@ -12,6 +12,10 @@ The **`<metadata>`** [SVG](/en-US/docs/Web/SVG) element adds metadata to SVG con
 
 {{svginfo}}
 
+## Attributes
+
+This element only includes global attributes.
+
 ## DOM Interface
 
 This element implements the {{domxref("SVGMetadataElement")}} interface.

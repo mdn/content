@@ -37,15 +37,12 @@ A live {{domxref("CSSStyleDeclaration")}} object.
 The following code snippet demonstrates how the values obtained using the element's `style` property relates to the style set on the HTML attribute:
 
 ```html
-<!doctype html>
-<html lang="en-US">
-  <body style="font-weight:bold">
-    <div style="border-top: 1px solid blue; color:red" id="elt">
-      An example div
-    </div>
-    <pre id="out"></pre>
-  </body>
-</html>
+<div style="font-weight: bold;">
+  <div style="border-top: 1px solid blue; color: red;" id="elt">
+    An example div
+  </div>
+  <pre id="out"></pre>
+</div>
 ```
 
 ```js
@@ -59,7 +56,7 @@ for (const prop in elementStyle) {
   // We also ensure that the property is a numeric index (indicating an inline style)
   if (
     Object.hasOwn(elementStyle, prop) &&
-    !Number.isNaN(Number.parseInt(prop))
+    !Number.isNaN(Number.parseInt(prop, 10))
   ) {
     out.textContent += `${
       elementStyle[prop]

@@ -1,5 +1,6 @@
 ---
-title: itemprop
+title: HTML itemprop global attribute
+short-title: itemprop
 slug: Web/HTML/Reference/Global_attributes/itemprop
 page-type: html-attribute
 spec-urls: https://html.spec.whatwg.org/multipage/microdata.html#names:-the-itemprop-attribute
@@ -288,7 +289,7 @@ A property is an unordered set of unique tokens that are case-sensitive and repr
 > [!NOTE]
 > The rules above disallow ":" characters in non-URL values because otherwise they could not be distinguished from URLs. Values with "." characters are reserved for future extensions. Space characters are disallowed because otherwise the values would be parsed as multiple tokens.
 
-## Values
+## Value
 
 The property value of a name-value pair is as given for the first matching case in the following list:
 

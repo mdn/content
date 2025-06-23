@@ -32,7 +32,7 @@ let str = "";
 
 async function generate() {
   for await (const val of foo()) {
-    str = str + val;
+    str += val;
   }
   console.log(str);
 }

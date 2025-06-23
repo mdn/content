@@ -1,5 +1,6 @@
 ---
 title: Temporal.Duration.prototype.with()
+short-title: with()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/with
 page-type: javascript-instance-method
 status:

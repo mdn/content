@@ -1,5 +1,6 @@
 ---
 title: Temporal.ZonedDateTime.prototype.startOfDay()
+short-title: startOfDay()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/startOfDay
 page-type: javascript-instance-method
 status:

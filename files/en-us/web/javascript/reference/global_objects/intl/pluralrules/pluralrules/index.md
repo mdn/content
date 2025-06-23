@@ -1,5 +1,6 @@
 ---
 title: Intl.PluralRules() constructor
+short-title: Intl.PluralRules()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Intl.PluralRules.PluralRules

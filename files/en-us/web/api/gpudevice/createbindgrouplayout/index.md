@@ -3,12 +3,10 @@ title: "GPUDevice: createBindGroupLayout() method"
 short-title: createBindGroupLayout()
 slug: Web/API/GPUDevice/createBindGroupLayout
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUDevice.createBindGroupLayout
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`createBindGroupLayout()`** method of the
 {{domxref("GPUDevice")}} interface creates a {{domxref("GPUBindGroupLayout")}} that defines the structure and purpose of related GPU resources such as buffers that will be used in a pipeline, and is used as a template when creating {{domxref("GPUBindGroup")}}s.

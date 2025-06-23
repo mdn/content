@@ -20,7 +20,7 @@ See [Fetch directives](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-P
   - {{Glossary("Document directive")}}
   - {{Glossary("Navigation directive")}}
 - Reference
-  - <https://www.w3.org/TR/CSP/#directives-fetch>
+  - [Fetch directives](https://w3c.github.io/webappsec-csp/#directives-fetch) specification
   - {{HTTPHeader("Content-Security-Policy/upgrade-insecure-requests", "upgrade-insecure-requests")}}
   - {{HTTPHeader("Content-Security-Policy/block-all-mixed-content", "block-all-mixed-content")}}
   - {{HTTPHeader("Content-Security-Policy")}}

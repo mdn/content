@@ -2,12 +2,10 @@
 title: GPUComputePassEncoder
 slug: Web/API/GPUComputePassEncoder
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.GPUComputePassEncoder
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPUComputePassEncoder`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} encodes commands related to controlling the compute shader stage, as issued by a {{domxref("GPUComputePipeline")}}. It forms part of the overall encoding activity of a {{domxref("GPUCommandEncoder")}}.
 
@@ -19,26 +17,26 @@ A `GPUComputePassEncoder` object instance is created via the {{domxref("GPUComma
 
 ## Instance properties
 
-- {{domxref("GPUComputePassEncoder.label", "label")}} {{Experimental_Inline}}
+- {{domxref("GPUComputePassEncoder.label", "label")}}
   - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
 
 ## Instance methods
 
-- {{domxref("GPUComputePassEncoder.dispatchWorkgroups", "dispatchWorkgroups()")}} {{Experimental_Inline}}
+- {{domxref("GPUComputePassEncoder.dispatchWorkgroups", "dispatchWorkgroups()")}}
   - : Dispatches a specific grid of workgroups to perform the work being done by the current {{domxref("GPUComputePipeline")}}.
-- {{domxref("GPUComputePassEncoder.dispatchWorkgroupsIndirect", "dispatchWorkgroupsIndirect()")}} {{Experimental_Inline}}
+- {{domxref("GPUComputePassEncoder.dispatchWorkgroupsIndirect", "dispatchWorkgroupsIndirect()")}}
   - : Dispatches a grid of workgroups, defined by the parameters of a {{domxref("GPUBuffer")}}, to perform the work being done by the current {{domxref("GPUComputePipeline")}}.
-- {{domxref("GPUComputePassEncoder.end", "end()")}} {{Experimental_Inline}}
+- {{domxref("GPUComputePassEncoder.end", "end()")}}
   - : Completes recording of the current compute pass command sequence.
-- {{domxref("GPUComputePassEncoder.insertDebugMarker", "insertDebugMarker()")}} {{Experimental_Inline}}
+- {{domxref("GPUComputePassEncoder.insertDebugMarker", "insertDebugMarker()")}}
   - : Marks a specific point in a series of encoded commands with a label.
-- {{domxref("GPUComputePassEncoder.popDebugGroup", "popDebugGroup()")}} {{Experimental_Inline}}
+- {{domxref("GPUComputePassEncoder.popDebugGroup", "popDebugGroup()")}}
   - : Ends a debug group, which is begun with a {{domxref("GPUComputePassEncoder.pushDebugGroup", "pushDebugGroup()")}} call.
-- {{domxref("GPUComputePassEncoder.pushDebugGroup", "pushDebugGroup()")}} {{Experimental_Inline}}
+- {{domxref("GPUComputePassEncoder.pushDebugGroup", "pushDebugGroup()")}}
   - : Begins a debug group, which is marked with a specified label, and will contain all subsequent encoded commands up until a {{domxref("GPUComputePassEncoder.popDebugGroup", "popDebugGroup()")}} method is invoked.
-- {{domxref("GPUComputePassEncoder.setBindGroup", "setBindGroup()")}} {{Experimental_Inline}}
+- {{domxref("GPUComputePassEncoder.setBindGroup", "setBindGroup()")}}
   - : Sets the {{domxref("GPUBindGroup")}} to use for subsequent compute commands, for a given index.
-- {{domxref("GPUComputePassEncoder.setPipeline", "setPipeline()")}} {{Experimental_Inline}}
+- {{domxref("GPUComputePassEncoder.setPipeline", "setPipeline()")}}
   - : Sets the {{domxref("GPUComputePipeline")}} to use for this compute pass.
 
 ## Examples

@@ -1,5 +1,6 @@
 ---
 title: String.prototype.anchor()
+short-title: anchor()
 slug: Web/JavaScript/Reference/Global_Objects/String/anchor
 page-type: javascript-instance-method
 status:

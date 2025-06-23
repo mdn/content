@@ -19,13 +19,15 @@ Note that even when hidden from view, element contents will remain semantically 
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("contentvisibilityautostatechange", (event) => {});
-oncontentvisibilityautostatechange = (event) => {};
+```js-nolint
+addEventListener("contentvisibilityautostatechange", (event) => { })
+
+oncontentvisibilityautostatechange = (event) => { }
 ```
 
-> [!NOTE]
-> The event object is of type {{domxref("ContentVisibilityAutoStateChangeEvent")}}.
+## Event type
+
+A {{domxref("ContentVisibilityAutoStateChangeEvent")}}.
 
 ## Examples
 

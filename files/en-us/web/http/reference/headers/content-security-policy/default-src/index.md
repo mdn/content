@@ -1,5 +1,6 @@
 ---
-title: "CSP: default-src"
+title: "Content-Security-Policy: default-src directive"
+short-title: default-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/default-src
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.default-src
@@ -127,7 +128,7 @@ Alternatively, if the `default-src 'none'` policy is a hard requirement, you can
 ## See also
 
 - {{HTTPHeader("Content-Security-Policy")}}
-- CSP directives (<https://www.w3.org/TR/CSP/#csp-directives>):
+- CSP directives (<https://w3c.github.io/webappsec-csp/#csp-directives>):
 
   - {{Glossary("Fetch directive")}}
   - {{Glossary("Document directive")}}

@@ -1,5 +1,6 @@
 ---
 title: String.prototype.small()
+short-title: small()
 slug: Web/JavaScript/Reference/Global_Objects/String/small
 page-type: javascript-instance-method
 status:

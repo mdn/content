@@ -1,5 +1,6 @@
 ---
 title: SyntaxError() constructor
+short-title: SyntaxError()
 slug: Web/JavaScript/Reference/Global_Objects/SyntaxError/SyntaxError
 page-type: javascript-constructor
 browser-compat: javascript.builtins.SyntaxError.SyntaxError

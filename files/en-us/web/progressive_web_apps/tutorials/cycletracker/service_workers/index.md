@@ -1,11 +1,10 @@
 ---
 title: "CycleTracker: Service workers"
-short-title: Service workers
+short-title: Offline support using service workers
 slug: Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers
 page-type: tutorial-chapter
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 {{PreviousMenu("Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
 
@@ -177,6 +176,7 @@ self.addEventListener("activate", (event) => {
           if (name !== CACHE_NAME) {
             return caches.delete(name);
           }
+          return undefined;
         }),
       );
       await clients.claim();
@@ -264,6 +264,7 @@ self.addEventListener("activate", (event) => {
           if (name !== CACHE_NAME) {
             return caches.delete(name);
           }
+          return undefined;
         }),
       );
       await clients.claim();
@@ -307,25 +308,21 @@ Now that our service worker script is complete, we need to register the service 
 
 We start by checking that the browser supports the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) by using [feature detection](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection#the_concept_of_feature_detection) for the presence of the [`serviceWorker`](/en-US/docs/Web/API/ServiceWorker) property on the global [`navigator`](/en-US/docs/Web/API/Navigator) object:
 
-```html
-<script>
-  // Does "serviceWorker" exist
-  if ("serviceWorker" in navigator) {
-    // If yes, we register the service worker
-  }
-</script>
+```js
+// Does "serviceWorker" exist
+if ("serviceWorker" in navigator) {
+  // If yes, we register the service worker
+}
 ```
 
 If the property is supported, we can then use the [`register()`](/en-US/docs/Web/API/ServiceWorkerContainer/register) method of the service worker API's [`ServiceWorkerContainer`](/en-US/docs/Web/API/ServiceWorkerContainer) interface.
 
-```html
-<script>
-  if ("serviceWorker" in navigator) {
-    // Register the app's service worker
-    // Passing the filename where that worker is defined.
-    navigator.serviceWorker.register("sw.js");
-  }
-</script>
+```js
+if ("serviceWorker" in navigator) {
+  // Register the app's service worker
+  // Passing the filename where that worker is defined.
+  navigator.serviceWorker.register("sw.js");
+}
 ```
 
 While the above suffices for the CycleTracker app needs, the `register()` method does return a {{jsxref("Promise")}} that resolves with a {{domxref("ServiceWorkerRegistration")}} object. For a more robust application, error check the registration:

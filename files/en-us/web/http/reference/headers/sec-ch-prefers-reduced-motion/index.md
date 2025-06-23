@@ -1,5 +1,6 @@
 ---
-title: Sec-CH-Prefers-Reduced-Motion
+title: Sec-CH-Prefers-Reduced-Motion header
+short-title: Sec-CH-Prefers-Reduced-Motion
 slug: Web/HTTP/Reference/Headers/Sec-CH-Prefers-Reduced-Motion
 page-type: http-header
 status:

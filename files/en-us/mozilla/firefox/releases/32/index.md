@@ -6,6 +6,8 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
+Firefox 32 was released on September 2, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
+
 ## Changes for Web developers
 
 ### Developer Tools

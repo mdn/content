@@ -1,5 +1,6 @@
 ---
 title: Temporal.Instant.prototype.toLocaleString()
+short-title: toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Instant/toLocaleString
 page-type: javascript-instance-method
 status:

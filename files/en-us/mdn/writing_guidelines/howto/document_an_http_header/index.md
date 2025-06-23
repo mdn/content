@@ -18,7 +18,7 @@ This article explains how to create a new reference page for an HTTP header.
 
 ## Step 2 – Check the existing HTTP header pages
 
-- Existing HTTP headers are documented [here](/en-US/docs/Web/HTTP/Reference/Headers).
+- Existing HTTP headers are documented [in the HTTP reference](/en-US/docs/Web/HTTP/Reference/Headers).
 - There are different header categories: {{Glossary("Request header")}}, {{Glossary("Response header")}}, and {{Glossary("Representation header")}}.
 - Find the category of the header you are about to document (note that some headers can be both request and response headers, depending on the context).
 - Go to an existing header reference page that has the same category.

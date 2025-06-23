@@ -1,5 +1,6 @@
 ---
-title: aria-atomic
+title: "ARIA: aria-atomic attribute"
+short-title: aria-atomic
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-atomic
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-atomic

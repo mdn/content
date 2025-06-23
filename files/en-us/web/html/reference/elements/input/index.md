@@ -399,7 +399,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
 - [`autocomplete`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete)
 
-  - : (**Not** a Boolean attribute!) The [`autocomplete`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete) attribute takes as its value a space-separated string that describes what, if any, type of autocomplete functionality the input should provide. A typical implementation of autocomplete recalls previous values entered in the same input field, but more complex forms of autocomplete can exist. For instance, a browser could integrate with a device's contacts list to autocomplete `email` addresses in an email input field. See [`autocomplete`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete#values) for permitted values.
+  - : (**Not** a Boolean attribute!) The [`autocomplete`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete) attribute takes as its value a space-separated string that describes what, if any, type of autocomplete functionality the input should provide. A typical implementation of autocomplete recalls previous values entered in the same input field, but more complex forms of autocomplete can exist. For instance, a browser could integrate with a device's contacts list to autocomplete `email` addresses in an email input field. See [`autocomplete`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete#value) for permitted values.
 
     The `autocomplete` attribute is valid on `hidden`, `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`, `color`, and `password`. This attribute has no effect on input types that do not return numeric or text data, being valid for all input types except `checkbox`, `radio`, `file`, or any of the button types.
 
@@ -631,7 +631,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
     If `any` is not explicitly set, valid values for the `number`, date/time input types, and `range` input types are equal to the basis for stepping — the [`min`](#min) value and increments of the step value, up to the [`max`](#max) value, if specified.
 
-    For example, if you have `<input type="number" min="10" step="2">`, then any even integer, `10` or greater, is valid. If omitted, `<input type="number">`, any integer is valid, but floats (like `4.2`) are not valid, because `step` defaults to `1`. For `4.2` to be valid, `step` would have had to be set to `any`, 0.1, 0.2, or any the `min` value would have had to be a number ending in `.2`, such as `<input type="number" min="-5.2">`
+    For example, if you have `<input type="number" min="10" step="2">`, then any even integer, `10` or greater, is valid. If omitted, `<input type="number">`, any integer is valid, but floats (like `4.2`) are not valid, because `step` defaults to `1`. For `4.2` to be valid, `step` would have had to be set to `any`, 0.1, 0.2, or the `min` value would have had to be a number ending in `.2`, such as `<input type="number" min="-5.2">`.
 
     > [!NOTE]
     > When the data entered by the user doesn't adhere to the stepping configuration, the value is considered invalid in constraint validation and will match the `:invalid` pseudoclass.
@@ -822,7 +822,7 @@ Inputs, being replaced elements, have a few features not applicable to non form 
       <td>
         Matches {{HTMLElement("input/checkbox", "checkbox")}} and
         {{HTMLElement("input/radio", "radio")}} input types that
-        are currently checked (and the ({{HTMLElement("option")}} in a
+        are currently checked (and the {{HTMLElement("option")}} in a
         {{HTMLElement("select")}} that is currently selected).
       </td>
     </tr>
@@ -1264,7 +1264,7 @@ The following is an example of how to associate the `<label>` with an `<input>` 
 
 ### Size
 
-Interactive elements such as form input should provide an area large enough that it is easy to activate them. This helps a variety of people, including people with motor control issues and people using non-precise forms of input such as a stylus or fingers. A minimum interactive size of 44×44 [CSS pixels](https://www.w3.org/TR/WCAG21/#dfn-css-pixels) is recommended.
+Interactive elements such as form input should provide an area large enough that it is easy to activate them. This helps a variety of people, including people with motor control issues and people using non-precise forms of input such as a stylus or fingers. A minimum interactive size of 44×44 [CSS pixels](https://w3c.github.io/wcag/guidelines/22/#dfn-css-pixels) is recommended.
 
 - [Understanding Success Criterion 2.5.5: Target Size | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
 - [Target Size and 2.5.5 | Adrian Roselli](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
@@ -1395,7 +1395,7 @@ Interactive elements such as form input should provide an area large enough that
           </li>
           <li>
             <code>type=color|date|datetime-local|file|hidden|month|password|time|week</code>:
-            <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">no corresponding role</a>
+            <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role">no corresponding role</a>
           </li>
         </ul>
       </td>

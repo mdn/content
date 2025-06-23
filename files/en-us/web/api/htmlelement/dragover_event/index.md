@@ -16,10 +16,10 @@ This event is cancelable and may bubble up to the {{domxref("Document")}} and {{
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("dragover", (event) => {});
+```js-nolint
+addEventListener("dragover", (event) => { })
 
-ondragover = (event) => {};
+ondragover = (event) => { }
 ```
 
 ## Event type

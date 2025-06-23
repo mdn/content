@@ -1,5 +1,6 @@
 ---
 title: Object.prototype.__lookupGetter__()
+short-title: __lookupGetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
 page-type: javascript-instance-method
 status:

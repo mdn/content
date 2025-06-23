@@ -152,7 +152,7 @@ signaler.onmessage = async ({ data: { description, candidate } }) => {
       if (ignoreOffer) {
         return;
       }
-      isSettingRemoteAnswerPending = description.type == "answer";
+      isSettingRemoteAnswerPending = description.type === "answer";
       await pc.setRemoteDescription(description);
       isSettingRemoteAnswerPending = false;
       if (description.type === "offer") {

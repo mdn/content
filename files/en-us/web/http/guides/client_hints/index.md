@@ -1,5 +1,6 @@
 ---
 title: HTTP Client hints
+short-title: Client hints
 slug: Web/HTTP/Guides/Client_hints
 page-type: guide
 ---

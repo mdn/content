@@ -1,5 +1,6 @@
 ---
 title: TypeError() constructor
+short-title: TypeError()
 slug: Web/JavaScript/Reference/Global_Objects/TypeError/TypeError
 page-type: javascript-constructor
 browser-compat: javascript.builtins.TypeError.TypeError

@@ -34,10 +34,8 @@ queryCommandState(command)
 
 ```html
 <div contenteditable="true">Select a part of this text!</div>
-<button onclick="makeBold();">Test the state of the 'bold' command</button>
-
+<button>Test the state of the 'bold' command</button>
 <hr />
-
 <div id="output"></div>
 ```
 
@@ -68,6 +66,8 @@ function makeBold() {
   document.querySelector("#output").textContent = `Output: ${message}`;
   document.execCommand("bold");
 }
+
+document.querySelector("button").addEventListener("click", makeBold);
 ```
 
 ### Result

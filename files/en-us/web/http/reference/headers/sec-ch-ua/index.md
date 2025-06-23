@@ -1,5 +1,6 @@
 ---
-title: Sec-CH-UA
+title: Sec-CH-UA header
+short-title: Sec-CH-UA
 slug: Web/HTTP/Reference/Headers/Sec-CH-UA
 page-type: http-header
 status:

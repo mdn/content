@@ -1,5 +1,6 @@
 ---
-title: Sec-CH-UA-Bitness
+title: Sec-CH-UA-Bitness header
+short-title: Sec-CH-UA-Bitness
 slug: Web/HTTP/Reference/Headers/Sec-CH-UA-Bitness
 page-type: http-header
 status:

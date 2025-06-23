@@ -1,5 +1,6 @@
 ---
-title: NEL
+title: NEL header
+short-title: NEL
 slug: Web/HTTP/Reference/Headers/NEL
 page-type: http-header
 status:

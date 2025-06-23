@@ -68,15 +68,16 @@ First we create routes for a wiki in a module named **wiki.js**. The code first 
 // wiki.js - Wiki route module.
 
 const express = require("express");
+
 const router = express.Router();
 
 // Home page route.
-router.get("/", function (req, res) {
+router.get("/", (req, res) => {
   res.send("Wiki home page");
 });
 
 // About page route.
-router.get("/about", function (req, res) {
+router.get("/about", (req, res) => {
   res.send("About this wiki");
 });
 
@@ -90,6 +91,7 @@ To use the router module in our main app file we first `require()` the route mod
 
 ```js
 const wiki = require("./wiki.js");
+
 // …
 app.use("/wiki", wiki);
 ```
@@ -101,7 +103,7 @@ The two routes defined in our wiki route module are then accessible from `/wiki/
 Our module above defines a couple of typical route functions. The "about" route (reproduced below) is defined using the `Router.get()` method, which responds only to HTTP GET requests. The first argument to this method is the URL path while the second is a callback function that will be invoked if an HTTP GET request with the path is received.
 
 ```js
-router.get("/about", function (req, res) {
+router.get("/about", (req, res) => {
   res.send("About this wiki");
 });
 ```
@@ -143,7 +145,7 @@ Route paths can also be string patterns. String patterns use a form of regular e
 The route paths can also be JavaScript [regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions). For example, the route path below will match `catfish` and `dogfish`, but not `catflap`, `catfishhead`, and so on. Note that the path for a regular expression uses regular expression syntax (it is not a quoted string as in the previous cases).
 
 ```js
-app.get(/.*fish$/, function (req, res) {
+app.get(/.*fish$/, (req, res) => {
   // …
 });
 ```
@@ -207,7 +209,7 @@ In order for the framework to properly handle exceptions, they must be caught, a
 Re-imagining the simple example from the previous section with `About.find().exec()` as a database query that returns a promise, we might write the route function inside a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block like this:
 
 ```js
-exports.get("/about", async function (req, res, next) {
+exports.get("/about", async (req, res, next) => {
   try {
     const successfulResult = await About.find({}).exec();
     res.render("about_view", { title: "About", list: successfulResult });
@@ -507,13 +509,14 @@ Open **/routes/catalog.js** and copy in the code below:
 
 ```js
 const express = require("express");
-const router = express.Router();
 
 // Require controller modules.
 const book_controller = require("../controllers/bookController");
 const author_controller = require("../controllers/authorController");
 const genre_controller = require("../controllers/genreController");
 const book_instance_controller = require("../controllers/bookinstanceController");
+
+const router = express.Router();
 
 /// BOOK ROUTES ///
 
@@ -658,7 +661,7 @@ Open **/routes/index.js** and replace the existing route with the function below
 
 ```js
 // GET home page.
-router.get("/", function (req, res) {
+router.get("/", (req, res) => {
   res.redirect("/catalog");
 });
 ```

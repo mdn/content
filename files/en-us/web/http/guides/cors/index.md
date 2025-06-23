@@ -22,7 +22,7 @@ The CORS mechanism supports secure cross-origin requests and data transfers betw
 This [cross-origin sharing standard](https://fetch.spec.whatwg.org/#http-cors-protocol) can enable cross-origin HTTP requests for:
 
 - Invocations of `fetch()` or `XMLHttpRequest`, as discussed above.
-- Web Fonts (for cross-domain font usage in `@font-face` within CSS), [so that servers can deploy TrueType fonts that can only be loaded cross-origin and used by websites that are permitted to do so.](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)
+- Web Fonts (for cross-domain font usage in `@font-face` within CSS), as described in the [font fetching requirements](https://drafts.csswg.org/css-fonts/#font-fetching-requirements), so that servers can deploy TrueType fonts that can only be loaded cross-origin and used by websites that are permitted to do so.
 - [WebGL textures](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
 - Images/video frames drawn to a canvas using {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}}.
 - [CSS Shapes from images.](/en-US/docs/Web/CSS/CSS_shapes/Shapes_from_images)
@@ -399,13 +399,11 @@ The {{HTTPHeader("Access-Control-Expose-Headers")}} header adds the specified he
 Access-Control-Expose-Headers: <header-name>[, <header-name>]*
 ```
 
-For example, the following:
+For example, the following would allow the `X-My-Custom-Header` and `X-Another-Custom-Header` headers to be exposed to the browser:
 
 ```http
 Access-Control-Expose-Headers: X-My-Custom-Header, X-Another-Custom-Header
 ```
-
-…would allow the `X-My-Custom-Header` and `X-Another-Custom-Header` headers to be exposed to the browser.
 
 ### Access-Control-Max-Age
 

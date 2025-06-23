@@ -18,10 +18,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("pointerlockchange", (event) => {});
+```js-nolint
+addEventListener("pointerlockchange", (event) => { })
 
-onpointerlockchange = (event) => {};
+onpointerlockchange = (event) => { }
 ```
 
 ## Event type

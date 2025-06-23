@@ -56,6 +56,22 @@ If you need help or have any questions, feel free to get in touch with one of th
 - Discussions: [Matrix (`#mdn-l10n-es`)](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org), [Telegram (`MDN l10n ES`)](https://t.me/+Dr6qKQCAepw4MjFj), [Discord (`#spanish`)](/discord)
 - Current maintainers: [JuanVqz](https://github.com/JuanVqz), [davbrito](https://github.com/davbrito), [Graywolf9](https://github.com/Graywolf9), [Vallejoanderson](https://github.com/Vallejoanderson), [marcelozarate](https://github.com/marcelozarate), [Jalkhov](https://github.com/Jalkhov)
 
+## Machine-translated locales
+
+The following experimental locales are machine-translated from the English locale.
+
+### German (`de`)
+
+- Repository: [mdn/translated-content-de](https://github.com/mdn/translated-content-de)
+- Discussions: [Discord (`#german`)](/discord)
+- Current maintainers: [caugner](https://github.com/caugner)
+
+### Italian (`it`)
+
+- Repository: [mdn/translated-content-it](https://github.com/mdn/translated-content-it)
+- Discussions: [Discord (`#italian`)](/discord)
+- Current maintainers: [caugner](https://github.com/caugner)
+
 ## See also
 
 - [MDN localization update, February 2021](https://hacks.mozilla.org/2021/02/mdn-localization-update-february-2021/) — the latest state of localization on MDN

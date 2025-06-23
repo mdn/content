@@ -73,7 +73,7 @@ const btPermission = await navigator.permissions.query({
   name: "bluetooth",
   deviceId: sessionStorage.lastDevice,
 });
-if (result.devices.length == 1) {
+if (result.devices.length === 1) {
   return result.devices[0];
 } else {
   throw new DOMException("Lost permission", "NotFoundError");

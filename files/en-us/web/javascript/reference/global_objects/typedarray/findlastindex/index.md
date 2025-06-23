@@ -1,5 +1,6 @@
 ---
 title: TypedArray.prototype.findLastIndex()
+short-title: findLastIndex()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/findLastIndex
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.findLastIndex

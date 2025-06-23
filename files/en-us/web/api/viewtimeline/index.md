@@ -2,12 +2,10 @@
 title: ViewTimeline
 slug: Web/API/ViewTimeline
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.ViewTimeline
 ---
 
-{{APIRef("Web Animations")}}{{SeeCompatTable}}
+{{APIRef("Web Animations")}}
 
 The **`ViewTimeline`** interface of the {{domxref("Web Animations API", "Web Animations API", "", "nocode")}} represents a view progress timeline (see [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) for more details).
 
@@ -17,18 +15,18 @@ Pass a `ViewTimeline` instance to the {{domxref("Animation.Animation", "Animatio
 
 ## Constructor
 
-- {{domxref("ViewTimeline.ViewTimeline", "ViewTimeline()")}} {{Experimental_Inline}}
+- {{domxref("ViewTimeline.ViewTimeline", "ViewTimeline()")}}
   - : Creates a new `ViewTimeline` object instance.
 
 ## Instance properties
 
 _This interface also inherits the properties of its parent, {{domxref("ScrollTimeline")}}._
 
-- {{domxref("ViewTimeline.subject", "subject")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("ViewTimeline.subject", "subject")}} {{ReadOnlyInline}}
   - : Returns a reference to the subject element whose visibility within its nearest ancestor scrollable element (scroller) is driving the progress of the timeline and therefore the animation.
-- {{domxref("ViewTimeline.startOffset", "startOffset")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("ViewTimeline.startOffset", "startOffset")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("CSSNumericValue")}} representing the starting (0% progress) scroll position of the timeline as an offset from the start of the overflowing section of content in the scroller.
-- {{domxref("ViewTimeline.endOffset", "endOffset")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("ViewTimeline.endOffset", "endOffset")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("CSSNumericValue")}} representing the ending (100% progress) scroll position of the timeline as an offset from the start of the overflowing section of content in the scroller.
 
 ## Instance methods

@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainYearMonth.prototype.monthCode
+short-title: monthCode
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth/monthCode
 page-type: javascript-instance-accessor-property
 status:

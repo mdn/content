@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainDateTime.prototype.equals()
+short-title: equals()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime/equals
 page-type: javascript-instance-method
 status:

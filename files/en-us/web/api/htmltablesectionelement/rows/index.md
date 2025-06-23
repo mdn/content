@@ -16,7 +16,7 @@ A live {{domxref("HTMLCollection")}} of {{domxref("HTMLTableRowElement")}} objec
 
 ## Examples
 
-In this example, two buttons allow you to add and remove rows from the table body section; it also updates a {{HTMLElement("output")}} element with the number of rows currently in the table.
+In this example, two buttons allow you to add and remove rows from the table body section; it also updates an {{HTMLElement("output")}} element with the number of rows currently in the table.
 
 ### HTML
 

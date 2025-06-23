@@ -301,13 +301,12 @@ const current = Object.prototype.valueOf;
 Object.prototype.valueOf = function (...args) {
   if (Object.hasOwn(this, "-prop-value")) {
     return this["-prop-value"];
-  } else {
-    // It doesn't look like one of my objects, so let's fall back on
-    // the default behavior by reproducing the current behavior as best we can.
-    // The apply behaves like "super" in some other languages.
-    // Even though valueOf() doesn't take arguments, some other hook may.
-    return current.apply(this, args);
   }
+  // It doesn't look like one of my objects, so let's fall back on
+  // the default behavior by reproducing the current behavior as best we can.
+  // The apply behaves like "super" in some other languages.
+  // Even though valueOf() doesn't take arguments, some other hook may.
+  return current.apply(this, args);
 };
 ```
 

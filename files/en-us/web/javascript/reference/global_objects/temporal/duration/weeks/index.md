@@ -1,5 +1,6 @@
 ---
 title: Temporal.Duration.prototype.weeks
+short-title: weeks
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/weeks
 page-type: javascript-instance-accessor-property
 status:

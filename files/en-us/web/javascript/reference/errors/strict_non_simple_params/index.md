@@ -105,9 +105,7 @@ This can be converted to the following expression:
 ```js example-good
 const callback = (() => {
   "use strict";
-  return (...args) => {
-    return this.run(args);
-  };
+  return (...args) => this.run(args);
 })();
 ```
 

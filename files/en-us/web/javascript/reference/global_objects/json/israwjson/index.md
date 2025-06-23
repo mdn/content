@@ -1,5 +1,6 @@
 ---
 title: JSON.isRawJSON()
+short-title: isRawJSON()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/isRawJSON
 page-type: javascript-static-method
 browser-compat: javascript.builtins.JSON.isRawJSON

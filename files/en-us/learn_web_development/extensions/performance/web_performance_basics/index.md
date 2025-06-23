@@ -27,17 +27,24 @@ Below is a quick review of best practices, tools, APIs with links to provide mor
 
 ### CSS
 
-Web performance is all about user experience and perceived performance. As we learned in the [critical rendering path](/en-US/docs/Web/Performance/Guides/Critical_rendering_path) document, linking CSS with a traditional link tag with rel="stylesheet" is synchronous and blocks rendering. Optimize the rendering of your page by removing blocking CSS.
+Web performance is all about user experience and perceived performance. As we learned in the [critical rendering path](/en-US/docs/Web/Performance/Guides/Critical_rendering_path) document, linking CSS with a traditional link tag with `rel="stylesheet"` is synchronous and blocks rendering. Optimize the rendering of your page by removing blocking CSS.
 
-To load CSS asynchronously one can set the media type to print and then change to all once loaded. The following snippet includes an onload attribute, requiring JavaScript, so it is important to include a noscript tag with a traditional fallback.
+To load CSS asynchronously one can set the media type to `print` and then change to `all` once loaded. This requires JavaScript, so it is important to include a `<noscript>` tag with a traditional fallback.
 
 ```html
 <link
+  id="my-stylesheet"
   rel="stylesheet"
   href="/path/to/my.css"
-  media="print"
-  onload="this.media='all'" />
+  media="print" />
 <noscript><link rel="stylesheet" href="/path/to/my.css" /></noscript>
+```
+
+```js
+const stylesheet = document.getElementById("my-stylesheet");
+stylesheet.addEventListener("load", () => {
+  stylesheet.media = "all";
+});
 ```
 
 The downside with this approach is the flash of unstyled text (FOUT.) The simplest way to address this is by inlining CSS that is required for any content that is rendered above the fold, or what you see in the browser viewport before scrolling. These styles will improve perceived performance as the CSS does not require a file request.
@@ -50,7 +57,7 @@ The downside with this approach is the flash of unstyled text (FOUT.) The simple
 
 ### JavaScript
 
-Avoid JavaScript blocking by using the [async](/en-US/docs/Web/HTML/Reference/Elements/script) or [defer](/en-US/docs/Web/HTML/Reference/Elements/script) attributes, or link JavaScript assets after the page's DOM elements. JavaScript only block rendering for elements that appear after the script tag in the DOM tree.
+Avoid JavaScript blocking by using the [`async`](/en-US/docs/Web/HTML/Reference/Elements/script) or [`defer`](/en-US/docs/Web/HTML/Reference/Elements/script) attributes, or link JavaScript assets after the page's DOM elements. JavaScript only block rendering for elements that appear after the script tag in the DOM tree.
 
 ### Web Fonts
 

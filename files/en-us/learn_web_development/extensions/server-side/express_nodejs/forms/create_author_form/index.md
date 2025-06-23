@@ -76,18 +76,17 @@ exports.author_create_post = [
       // There are errors. Render form again with sanitized values/errors messages.
       res.render("author_form", {
         title: "Create Author",
-        author: author,
+        author,
         errors: errors.array(),
       });
       return;
-    } else {
-      // Data from form is valid.
-
-      // Save author.
-      await author.save();
-      // Redirect to new author record.
-      res.redirect(author.url);
     }
+    // Data from form is valid.
+
+    // Save author.
+    await author.save();
+    // Redirect to new author record.
+    res.redirect(author.url);
   }),
 ];
 ```

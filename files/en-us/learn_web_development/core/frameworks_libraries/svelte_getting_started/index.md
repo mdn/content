@@ -174,7 +174,7 @@ Components are the building blocks of Svelte applications. They are written into
 
 All three sections — `<script>`, `<style>`, and markup — are optional, and can appear in any order you like.
 
-```html
+```svelte
 <script>
   // logic goes here
 </script>
@@ -191,7 +191,7 @@ All three sections — `<script>`, `<style>`, and markup — are optional, and c
 
 With this in mind, let's have a look at the `src/App.svelte` file that came with the starter template. You should see something like the following:
 
-```html
+```svelte
 <script>
   export let name;
 </script>
@@ -231,7 +231,7 @@ With this in mind, let's have a look at the `src/App.svelte` file that came with
 
 The `<script>` block contains JavaScript that runs when a component instance is created. Variables declared (or imported) at the top level are 'visible' from the component's markup. Top-level variables are the way Svelte handles the component state, and they are reactive by default. We will explain in detail what this means later on.
 
-```html
+```svelte
 <script>
   export let name;
 </script>
@@ -243,7 +243,7 @@ Svelte uses the [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/expor
 
 In the markup section you can insert any HTML you like, and in addition you can insert valid JavaScript expressions inside single curly braces (`{}`). In this case we are embedding the value of the `name` prop right after the `Hello` text.
 
-```html
+```svelte
 <main>
   <h1>Hello {name}!</h1>
   <p>
@@ -259,7 +259,7 @@ Svelte also supports tags like `{#if}`, `{#each}`, and `{#await}` — these exam
 
 If you have experience working with CSS, the following snippet should make sense:
 
-```html
+```svelte
 <style>
   main {
     text-align: center;
@@ -301,7 +301,7 @@ When compiling the app, Svelte changes our `h1` styles definition to `h1.svelte-
 Now that we have a general idea of how it all fits together, we can start making a few changes.
 At this point you can try updating your `App.svelte` component — for example change the `<h1>` element in `App.svelte` so that it reads like this:
 
-```html
+```svelte
 <h1>Hello {name} from MDN!</h1>
 ```
 
@@ -315,7 +315,7 @@ In Svelte, reactivity is triggered by assigning a new value to any top-level var
 
 Try updating your `<script>` and markup sections like so:
 
-```html
+```svelte
 <script>
   export let name;
 

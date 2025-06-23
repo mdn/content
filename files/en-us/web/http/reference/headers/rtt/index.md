@@ -1,5 +1,6 @@
 ---
-title: RTT
+title: RTT header
+short-title: RTT
 slug: Web/HTTP/Reference/Headers/RTT
 page-type: http-header
 status:

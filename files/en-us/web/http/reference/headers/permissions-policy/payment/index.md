@@ -1,5 +1,6 @@
 ---
-title: "Permissions-Policy: payment"
+title: "Permissions-Policy: payment directive"
+short-title: payment
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/payment
 page-type: http-permissions-policy-directive
 status:

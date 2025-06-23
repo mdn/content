@@ -254,8 +254,8 @@ You'll see that:
           >submittable</a
         >
         <a href="/en-US/docs/Web/HTML/Guides/Content_categories#form-associated_content"
-          >form-associated </a
-        >element
+          >form-associated</a
+        > element
       </td>
     </tr>
     <tr>

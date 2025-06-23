@@ -1,5 +1,6 @@
 ---
-title: Priority
+title: Priority header
+short-title: Priority
 slug: Web/HTTP/Reference/Headers/Priority
 page-type: http-header
 browser-compat: http.headers.Priority

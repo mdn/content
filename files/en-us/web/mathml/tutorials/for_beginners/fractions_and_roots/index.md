@@ -206,10 +206,9 @@ const comment = document.getElementById("comment");
 const checkboxes = Array.from(options.getElementsByTagName("input"));
 const status = document.getElementById("status");
 function verifyOption(checkbox) {
-  let mathml = checkbox.dataset.highlight;
-  if (mathml) {
-    mathml = document.getElementById(mathml);
-  }
+  const mathml = checkbox.dataset.highlight
+    ? document.getElementById(mathml)
+    : null;
   if (checkbox.checked) {
     comment.textContent = checkbox.dataset.comment;
     if (mathml) {

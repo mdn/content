@@ -3,12 +3,10 @@ title: "GPURenderPassEncoder: drawIndirect() method"
 short-title: drawIndirect()
 slug: Web/API/GPURenderPassEncoder/drawIndirect
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPURenderPassEncoder.drawIndirect
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`drawIndirect()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface draws primitives using parameters read from a {{domxref("GPUBuffer")}}.

@@ -1,5 +1,6 @@
 ---
 title: Error.prototype.stack
+short-title: stack
 slug: Web/JavaScript/Reference/Global_Objects/Error/stack
 page-type: javascript-instance-data-property
 status:

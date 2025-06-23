@@ -1,5 +1,6 @@
 ---
 title: Symbol.keyFor()
+short-title: keyFor()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/keyFor
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Symbol.keyFor

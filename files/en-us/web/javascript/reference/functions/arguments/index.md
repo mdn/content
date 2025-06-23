@@ -46,9 +46,12 @@ The `arguments` object is useful for functions called with more arguments than t
 ```js
 function longestString() {
   let longest = "";
-  for (let i = 0; i < arguments.length; i++) {
-    if (arguments[i].length > longest.length) {
-      longest = arguments[i];
+  if (arguments.length === 0) {
+    throw new TypeError("At least one string is required");
+  }
+  for (const arg of arguments) {
+    if (arg.length > longest.length) {
+      longest = arg;
     }
   }
   return longest;

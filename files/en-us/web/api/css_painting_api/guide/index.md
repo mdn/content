@@ -551,7 +551,7 @@ registerPaint(
       // the values passed in the paint() function in the CSS
       const color = props.get("--boxColor");
       const strokeType = args[0].toString();
-      const strokeWidth = parseInt(args[1]);
+      const strokeWidth = parseInt(args[1], 10);
 
       // set the stroke width
       ctx.lineWidth = strokeWidth ?? 1.0;

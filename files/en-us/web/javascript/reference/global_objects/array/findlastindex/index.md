@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.findLastIndex()
+short-title: findLastIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLastIndex
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.findLastIndex

@@ -10,6 +10,18 @@ The **`<g>`** [SVG](/en-US/docs/Web/SVG) element is a container used to group ot
 
 Transformations applied to the `<g>` element are performed on its child elements, and its attributes are inherited by its children. It can also group multiple elements to be referenced later with the {{SVGElement("use")}} element.
 
+## Usage context
+
+{{svginfo}}
+
+## Attributes
+
+This element only includes global attributes.
+
+## DOM Interface
+
+This element implements the {{domxref("SVGGElement")}} interface.
+
 ## Example
 
 ```css hidden
@@ -31,10 +43,6 @@ svg {
 ```
 
 {{EmbedLiveSample('Example', 100, '100%')}}
-
-## Usage context
-
-{{svginfo}}
 
 ## Specifications
 

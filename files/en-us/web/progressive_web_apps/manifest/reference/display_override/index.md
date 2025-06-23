@@ -5,9 +5,10 @@ page-type: web-manifest-member
 status:
   - experimental
 browser-compat: manifests.webapp.display_override
+sidebar: pwasidebar
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The [`display`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display) member is used to determine the developer's preferred display mode for a website. It follows a process where the browser falls back to the next display mode if the requested one is not supported. In some advanced use cases, this fallback process might not be enough.
 

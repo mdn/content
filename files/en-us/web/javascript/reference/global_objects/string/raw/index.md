@@ -1,5 +1,6 @@
 ---
 title: String.raw()
+short-title: raw()
 slug: Web/JavaScript/Reference/Global_Objects/String/raw
 page-type: javascript-static-method
 browser-compat: javascript.builtins.String.raw

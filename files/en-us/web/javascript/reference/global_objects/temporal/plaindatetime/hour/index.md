@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainDateTime.prototype.hour
+short-title: hour
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime/hour
 page-type: javascript-instance-accessor-property
 status:

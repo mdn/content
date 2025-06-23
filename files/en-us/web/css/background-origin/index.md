@@ -69,7 +69,7 @@ The `background-origin` property is specified as one of the keyword values liste
 - `border-box`
   - : The background is positioned relative to the border box.
 - `padding-box`
-  - : The background is positioned relative to the padding box.
+  - : The background is positioned relative to the padding box. Default value.
 - `content-box`
   - : The background is positioned relative to the content box.
 

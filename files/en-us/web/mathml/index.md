@@ -20,10 +20,14 @@ Below you will find links to documentation, examples, and tools to work with Mat
 
 ## Tutorials
 
+The [MathML tutorials](/en-US/docs/Web/MathML/Tutorials) are designed to walk you through topics assuming that you have no prior experience, starting from the basics and progressing to more advanced techniques.
+
 - [MathML for beginners](/en-US/docs/Web/MathML/Tutorials/For_beginners)
   - : This tutorial will guide you through creating math formulas using structured markup. It starts with an introduction to adding MathML to an HTML document, followed by a deep dive into key components: fractions and roots, scripted elements, and text containers. The tutorial then covers tabular layouts for matrices and advanced math formatting. Finally, a challenge tests your understanding by having you recreate three famous mathematical formulas using the learned concepts.
 
 ## Guides
+
+The [MathML guides](/en-US/docs/Web/MathML/Guides) are resources that help you author MathML on your web pages, including guidance on writing, editors, fonts and more.
 
 - [Authoring MathML](/en-US/docs/Web/MathML/Guides/Authoring)
   - : Suggestions and tips for writing MathML, including suggested MathML editors and how to integrate their output into Web content.
@@ -31,6 +35,8 @@ Below you will find links to documentation, examples, and tools to work with Mat
   - : How users can install such math fonts to properly display MathML in browsers.
 
 ## Reference
+
+The [MathML reference](/en-US/docs/Web/MathML/Reference) is a comprehensive list of MathML elements and attributes that are documented on MDN.
 
 - [MathML element reference](/en-US/docs/Web/MathML/Reference/Element)
   - : Details about each MathML element and compatibility information for desktop and mobile browsers.

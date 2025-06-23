@@ -85,10 +85,10 @@ form of processing can be performed on them.
 const inputs = document.getElementById("my-form").elements;
 
 // Iterate over the form controls
-for (let i = 0; i < inputs.length; i++) {
-  if (inputs[i].nodeName === "INPUT" && inputs[i].type === "text") {
+for (const input of inputs) {
+  if (input.nodeName === "INPUT" && input.type === "text") {
     // Update text input
-    inputs[i].value.toLocaleUpperCase();
+    input.value = input.value.toLocaleUpperCase();
   }
 }
 ```
@@ -99,9 +99,9 @@ for (let i = 0; i < inputs.length; i++) {
 const inputs = document.getElementById("my-form").elements;
 
 // Iterate over the form controls
-for (let i = 0; i < inputs.length; i++) {
+for (const input of inputs) {
   // Disable all form controls
-  inputs[i].setAttribute("disabled", "");
+  input.setAttribute("disabled", "");
 }
 ```
 

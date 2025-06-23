@@ -50,9 +50,15 @@ The HTML `<marquee>` element is deprecated and its use is strongly discouraged. 
   width="250"
   height="200"
   behavior="alternate"
-  style="border:solid">
+  class="outlined">
   <marquee behavior="alternate">This text will bounce</marquee>
 </marquee>
+```
+
+```css
+.outlined {
+  border: solid;
+}
 ```
 
 ### Result

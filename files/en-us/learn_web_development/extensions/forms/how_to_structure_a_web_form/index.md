@@ -80,7 +80,7 @@ Because of its influence over assistive technology, the {{HTMLElement("fieldset"
 
 ## The \<label> element
 
-As we saw in the previous article, The {{HTMLElement("label")}} element is the formal way to define a label for an HTML form widget. This is the most important element if you want to build accessible forms — when implemented properly, screen readers will speak a form element's label along with any related instructions, as well as it being useful for sighted users. Take this example, which we saw in the previous article:
+As we saw in the previous article, the {{HTMLElement("label")}} element is the formal way to define a label for an HTML form widget. This is the most important element if you want to build accessible forms — when implemented properly, screen readers will speak a form element's label along with any related instructions, as well as it being useful for sighted users. Take this example, which we saw in the previous article:
 
 ```html
 <label for="name">Name:</label> <input type="text" id="name" name="user_name" />

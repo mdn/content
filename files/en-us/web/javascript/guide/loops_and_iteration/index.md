@@ -354,7 +354,7 @@ checkIandJ: while (i < 4) {
     console.log(j);
     j -= 1;
     if (j % 2 === 0) {
-      continue checkJ;
+      continue;
     }
     console.log(j, "is odd.");
   }

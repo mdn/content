@@ -139,8 +139,8 @@ At the end of our example we first include the `removeGamepads()` function:
 ```js
 function removeGamepads() {
   const gpLi = document.querySelectorAll(".gamepad");
-  for (let i = 0; i < gpLi.length; i++) {
-    list.removeChild(gpLi[i]);
+  for (const li of gpLi) {
+    list.removeChild(li);
   }
   reportGamepads();
 }

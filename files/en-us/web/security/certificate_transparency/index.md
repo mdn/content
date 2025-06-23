@@ -2,9 +2,8 @@
 title: Certificate Transparency
 slug: Web/Security/Certificate_Transparency
 page-type: guide
+sidebar: security
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
 **Certificate Transparency** is an open framework designed to protect against and monitor for certificate mis-issuances. With certificate transparency, newly-issued certificates are 'logged' to publicly-run, often independent _CT logs_ — which maintain an append-only, cryptographically-assured record of issued TLS certificates.
 

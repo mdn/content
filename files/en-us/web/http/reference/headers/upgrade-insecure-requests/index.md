@@ -1,5 +1,6 @@
 ---
-title: Upgrade-Insecure-Requests
+title: Upgrade-Insecure-Requests header
+short-title: Upgrade-Insecure-Requests
 slug: Web/HTTP/Reference/Headers/Upgrade-Insecure-Requests
 page-type: http-header
 browser-compat: http.headers.Upgrade-Insecure-Requests

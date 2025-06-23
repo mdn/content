@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.reverse()
+short-title: reverse()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reverse
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.reverse

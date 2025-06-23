@@ -1,5 +1,6 @@
 ---
 title: RegExp.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/toString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.toString

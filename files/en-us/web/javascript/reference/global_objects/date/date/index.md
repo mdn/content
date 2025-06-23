@@ -1,5 +1,6 @@
 ---
 title: Date() constructor
+short-title: Date()
 slug: Web/JavaScript/Reference/Global_Objects/Date/Date
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Date.Date

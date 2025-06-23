@@ -1,5 +1,6 @@
 ---
 title: "CSS: Cascading Style Sheets"
+short-title: CSS
 slug: Web/CSS
 page-type: landing-page
 ---

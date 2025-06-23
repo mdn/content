@@ -1,5 +1,6 @@
 ---
 title: Date.prototype.getMonth()
+short-title: getMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMonth
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getMonth

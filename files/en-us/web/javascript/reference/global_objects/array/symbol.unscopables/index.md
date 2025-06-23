@@ -1,5 +1,6 @@
 ---
 title: Array.prototype[Symbol.unscopables]
+short-title: "[Symbol.unscopables]"
 slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables
 page-type: javascript-instance-data-property
 browser-compat: javascript.builtins.Array.@@unscopables

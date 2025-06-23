@@ -20,7 +20,7 @@ A {{domxref("StyleSheet")}} object.
 
 ```js
 const docRules = document.styleSheets[0].cssRules;
-console.log(docRules[0].parentStyleSheet == document.styleSheets[0]); // returns true
+console.log(docRules[0].parentStyleSheet === document.styleSheets[0]); // returns true
 ```
 
 ## Specifications

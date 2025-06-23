@@ -16,10 +16,10 @@ Note that "moving into an element" refers to the element's position in the DOM t
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("mouseenter", (event) => {});
+```js-nolint
+addEventListener("mouseenter", (event) => { })
 
-onmouseenter = (event) => {};
+onmouseenter = (event) => { }
 ```
 
 ## Event type

@@ -331,7 +331,6 @@ peerConnection.addEventListener("icegatheringstatechange", (event) => {
     senders.forEach((sender) => {
       if (sender.track.kind === "video") {
         codecList = sender.getParameters().codecs;
-        return;
       }
     });
   }

@@ -262,7 +262,7 @@ This example shows how a flex item with `flex: auto` grows to absorb any free sp
 ```css hidden
 body * {
   padding: 1rem;
-  text-select: none;
+  user-select: none;
   box-sizing: border-box;
   font-family: Consolas, Arial, sans-serif;
 }

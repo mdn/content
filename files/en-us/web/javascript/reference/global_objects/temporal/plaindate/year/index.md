@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainDate.prototype.year
+short-title: year
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/year
 page-type: javascript-instance-accessor-property
 status:

@@ -8,6 +8,32 @@ sidebar: svgref
 
 The **`<line>`** [SVG](/en-US/docs/Web/SVG) element is an SVG basic shape used to create a line connecting two points.
 
+## Usage context
+
+{{svginfo}}
+
+## Attributes
+
+- {{SVGAttr('x1')}}
+  - : Defines the x-axis coordinate of the line starting point.
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage) | [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number); _Default value_: `0`; _Animatable_: **yes**
+- {{SVGAttr('x2')}}
+  - : Defines the x-axis coordinate of the line ending point.
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage) | [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number); _Default value_: `0`; _Animatable_: **yes**
+- {{SVGAttr('y1')}}
+  - : Defines the y-axis coordinate of the line starting point.
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage) | [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number); _Default value_: `0`; _Animatable_: **yes**
+- {{SVGAttr('y2')}}
+  - : Defines the y-axis coordinate of the line ending point.
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage) | [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number); _Default value_: `0`; _Animatable_: **yes**
+- {{SVGAttr("pathLength")}}
+  - : Defines the total path length in user units.
+    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number); _Default value_: _none_; _Animatable_: **yes**
+
+## DOM Interface
+
+This element implements the {{domxref("SVGLineElement")}} interface.
+
 ## Example
 
 ```css hidden
@@ -28,28 +54,6 @@ svg {
 ```
 
 {{EmbedLiveSample('Example', 100, 100)}}
-
-## Attributes
-
-- {{SVGAttr('x1')}}
-  - : Defines the x-axis coordinate of the line starting point.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage) | [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number); _Default value_: `0`; _Animatable_: **yes**
-- {{SVGAttr('x2')}}
-  - : Defines the x-axis coordinate of the line ending point.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage) | [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number); _Default value_: `0`; _Animatable_: **yes**
-- {{SVGAttr('y1')}}
-  - : Defines the y-axis coordinate of the line starting point.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage) | [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number); _Default value_: `0`; _Animatable_: **yes**
-- {{SVGAttr('y2')}}
-  - : Defines the y-axis coordinate of the line ending point.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage) | [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number); _Default value_: `0`; _Animatable_: **yes**
-- {{SVGAttr("pathLength")}}
-  - : Defines the total path length in user units.
-    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number); _Default value_: _none_; _Animatable_: **yes**
-
-## Usage context
-
-{{svginfo}}
 
 ## Specifications
 

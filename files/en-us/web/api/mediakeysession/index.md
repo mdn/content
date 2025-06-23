@@ -34,7 +34,7 @@ The **`MediaKeySession`** interface of the [Encrypted Media Extensions API](/en-
 - {{domxref("MediaKeySession.close()")}}
   - : Returns a {{jsxref("Promise")}} after notifying the current media session is no longer needed and that the CDM should release any resources associated with this object and close it.
 - {{domxref("MediaKeySession.generateRequest()")}}
-  - : Returns a {{jsxref("Promise")}} after generating a media request based on initialization data.
+  - : Returns a {{jsxref("Promise")}} after generating a license request based on initialization data.
 - {{domxref("MediaKeySession.load()")}}
   - : Returns a {{jsxref("Promise")}} that resolves to a boolean value after loading data for a specified session object.
 - {{domxref("MediaKeySession.remove()")}}

@@ -1,5 +1,6 @@
 ---
-title: POST
+title: POST request method
+short-title: POST
 slug: Web/HTTP/Reference/Methods/POST
 page-type: http-method
 browser-compat: http.methods.POST

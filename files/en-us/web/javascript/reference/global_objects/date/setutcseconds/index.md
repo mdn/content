@@ -1,5 +1,6 @@
 ---
 title: Date.prototype.setUTCSeconds()
+short-title: setUTCSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCSeconds
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setUTCSeconds

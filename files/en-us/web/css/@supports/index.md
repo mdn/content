@@ -200,9 +200,16 @@ The `or` operator creates a new expression from the disjunction of two shorter e
 Multiple disjunctions can be juxtaposed without the need of more parentheses. The following are both equivalent:
 
 ```css
-@supports (transform-style: preserve) or (-moz-transform-style: preserve) or (-webkit-transform-style: preserve) {}
+@supports (transform-style: preserve) or (-moz-transform-style: preserve) or
+  (-webkit-transform-style: preserve) {
+}
 
-@supports (transform-style: preserve-3d) or ((-moz-transform-style: preserve-3d) or (-webkit-transform-style: preserve-3d))) {}
+@supports (transform-style: preserve-3d) or
+  (
+    (-moz-transform-style: preserve-3d) or
+      (-webkit-transform-style: preserve-3d)
+  ) {
+}
 ```
 
 > [!NOTE]

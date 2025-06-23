@@ -3,12 +3,10 @@ title: "URLPattern: hash property"
 short-title: hash
 slug: Web/API/URLPattern/hash
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.URLPattern.hash
 ---
 
-{{APIRef("URL Pattern API")}}{{SeeCompatTable}} {{AvailableInWorkers}}
+{{APIRef("URL Pattern API")}} {{AvailableInWorkers}}
 
 The **`hash`** read-only property of the {{domxref("URLPattern")}} interface is a
 string containing the pattern used to match the fragment part

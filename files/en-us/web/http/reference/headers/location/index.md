@@ -1,5 +1,6 @@
 ---
-title: Location
+title: Location header
+short-title: Location
 slug: Web/HTTP/Reference/Headers/Location
 page-type: http-header
 browser-compat: http.headers.Location

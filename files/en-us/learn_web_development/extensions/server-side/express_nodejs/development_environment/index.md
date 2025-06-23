@@ -144,6 +144,7 @@ As a slightly more exciting test let's create a very basic "pure node" server th
    ```js
    // Load HTTP module
    const http = require("http");
+
    const hostname = "127.0.0.1";
    const port = 3000;
 
@@ -256,6 +257,7 @@ The following steps show how you can use npm to download a package, save it into
 
    ```js
    const express = require("express");
+
    const app = express();
    const port = 3000;
 

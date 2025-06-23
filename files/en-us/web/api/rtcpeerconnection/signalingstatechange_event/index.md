@@ -16,10 +16,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("signalingstatechange", (event) => {});
+```js-nolint
+addEventListener("signalingstatechange", (event) => { })
 
-onsignalingstatechange = (event) => {};
+onsignalingstatechange = (event) => { }
 ```
 
 ## Event type

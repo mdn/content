@@ -42,8 +42,8 @@ let getting = browser.cookies.getAll(
       - : An `object` defining which [storage partitions](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#storage_partitioning) to return cookies from:
 
         - If omitted, only cookies from unpartitioned storage are returned.
-        - If included without `topLevelSite', all cookies from partitioned and unpartitioned storage are returned.
-        - If included with the specified `topLevelSite', cookies from the specified partition storage are returned.
+        - If included without `topLevelSite`, all cookies from partitioned and unpartitioned storage are returned.
+        - If included with the specified `topLevelSite`, cookies from the specified partition storage are returned.
 
         This object contains:
 

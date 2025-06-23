@@ -156,9 +156,8 @@ A function can call itself. For example, here is a function that computes factor
 function factorial(n) {
   if (n === 0 || n === 1) {
     return 1;
-  } else {
-    return n * factorial(n - 1);
   }
+  return n * factorial(n - 1);
 }
 ```
 
@@ -255,8 +254,8 @@ function walkTree(node) {
     return;
   }
   // do something with node
-  for (let i = 0; i < node.childNodes.length; i++) {
-    walkTree(node.childNodes[i]);
+  for (const child of node.childNodes) {
+    walkTree(child);
   }
 }
 ```

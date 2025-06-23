@@ -24,10 +24,10 @@ As a web developer, you should listen for the `textformatupdate` event and updat
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("textformatupdate", (event) => {});
+```js-nolint
+addEventListener("textformatupdate", (event) => { })
 
-ontextformatupdate = (event) => {};
+ontextformatupdate = (event) => { }
 ```
 
 ## Event type

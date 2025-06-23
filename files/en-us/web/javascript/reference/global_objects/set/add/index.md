@@ -1,5 +1,6 @@
 ---
 title: Set.prototype.add()
+short-title: add()
 slug: Web/JavaScript/Reference/Global_Objects/Set/add
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.add

@@ -1,5 +1,6 @@
 ---
 title: RegExp.prototype.compile()
+short-title: compile()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/compile
 page-type: javascript-instance-method
 status:
@@ -38,7 +39,7 @@ None ({{jsxref("undefined")}}).
 The following example shows how to recompile a regular expression with a new pattern and a new flag.
 
 ```js
-const regexObj = new RegExp("foo", "gi");
+const regexObj = /foo/gi;
 regexObj.compile("new foo", "g");
 ```
 

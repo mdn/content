@@ -1,5 +1,6 @@
 ---
-title: HEAD
+title: HEAD request method
+short-title: HEAD
 slug: Web/HTTP/Reference/Methods/HEAD
 page-type: http-method
 browser-compat: http.methods.HEAD

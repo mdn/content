@@ -2,12 +2,10 @@
 title: timeline-scope
 slug: Web/CSS/timeline-scope
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.timeline-scope
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{CSSRef}}
 
 The **`timeline-scope`** [CSS](/en-US/docs/Web/CSS) property modifies the scope of a named animation timeline.
 

@@ -1,5 +1,6 @@
 ---
 title: Float32Array() constructor
+short-title: Float32Array()
 slug: Web/JavaScript/Reference/Global_Objects/Float32Array/Float32Array
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Float32Array.Float32Array

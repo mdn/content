@@ -1,5 +1,6 @@
 ---
-title: Content-Security-Policy-Report-Only
+title: Content-Security-Policy-Report-Only header
+short-title: Content-Security-Policy-Report-Only
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy-Report-Only
 page-type: http-header
 browser-compat: http.headers.Content-Security-Policy-Report-Only

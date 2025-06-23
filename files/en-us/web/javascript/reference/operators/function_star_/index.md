@@ -22,7 +22,7 @@ const foo = function* () {
 
 let str = "";
 for (const val of foo()) {
-  str = str + val;
+  str += val;
 }
 
 console.log(str);

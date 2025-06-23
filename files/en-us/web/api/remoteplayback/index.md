@@ -54,8 +54,14 @@ The following example demonstrates a player with custom controls that support re
 
 ```html
 <video id="videoElement" src="https://example.org/media.ext">
-  <button id="deviceBtn" style="display: none;">Pick device</button>
+  <button id="deviceBtn" class="hidden">Pick device</button>
 </video>
+```
+
+```css
+.hidden {
+  display: none;
+}
 ```
 
 The {{domxref("RemotePlayback.watchAvailability()")}} method is used to watch for available remote playback devices. If a device is available, use the callback to show the button.
@@ -66,13 +72,17 @@ const videoElem = document.getElementById("videoElement");
 
 function availabilityCallback(available) {
   // Show or hide the device picker button depending on device availability.
-  deviceBtn.style.display = available ? "inline" : "none";
+  if (available) {
+    deviceBtn.classList.remove("hidden");
+  } else {
+    deviceBtn.classList.add("hidden");
+  }
 }
 
 videoElem.remote.watchAvailability(availabilityCallback).catch(() => {
-  /* If the device cannot continuously watch available,
-  show the button to allow the user to try to prompt for a connection.*/
-  deviceBtn.style.display = "inline";
+  // If the device cannot continuously watch available,
+  // show the button to allow the user to try to prompt for a connection.
+  deviceBtn.classList.remove("hidden");
 });
 ```
 

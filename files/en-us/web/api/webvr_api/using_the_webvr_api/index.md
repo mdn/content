@@ -116,7 +116,7 @@ To begin with, `start()` retrieves a WebGL context to use to render 3D graphics 
 function start() {
   canvas = document.getElementById("gl-canvas");
 
-  initWebGL(canvas);      // Initialize the GL context
+  initWebGL(canvas); // Initialize the GL context
 
   // WebGL setup code here
 ```
@@ -136,7 +136,7 @@ Now onto our first WebVR-specific code. First of all, we check to see if {{domxr
 ```js
   // WebVR: Check to see if WebVR is supported
   if (navigator.getVRDisplays) {
-    console.log('WebVR 1.1 supported');
+    console.log("WebVR 1.1 supported");
 ```
 
 Inside our `if () { }` block, we run the {{domxref("Navigator.getVRDisplays()")}} function. This returns a promise, which is fulfilled with an array containing all the VR display devices connected to the computer. If none are connected, the array will be empty.
@@ -152,7 +152,7 @@ Inside the promise `then()` block, we check whether the array length is more tha
       // If a display is available, use it to present the scene
       if (displays.length > 0) {
         vrDisplay = displays[0];
-        console.log('Display found');
+        console.log("Display found");
 ```
 
 > [!NOTE]
@@ -172,10 +172,10 @@ Since the maximum number of layers you can display is currently 1, and the only 
 
 ```js
         // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
-        btn.addEventListener('click', () => {
-          if (btn.textContent === 'Start VR display') {
+        btn.addEventListener("click", () => {
+          if (btn.textContent === "Start VR display") {
             vrDisplay.requestPresent([{ source: canvas }]).then(() => {
-              console.log('Presenting to WebVR display');
+              console.log("Presenting to WebVR display");
 ```
 
 With our presentation request successful, we now want to start setting up to render content to present to the VRDisplay. First of all we set the canvas to the same size as the VR display area. We do this by getting the {{domxref("VREyeParameters")}} for both eyes using {{domxref("VRDisplay.getEyeParameters()")}}.
@@ -203,7 +203,7 @@ drawVRScene();
 Finally, we update the button text so that the next time it is pressed, it will stop presentation to the VR display.
 
 ```js
-              btn.textContent = 'Exit VR display';
+              btn.textContent = "Exit VR display";
             });
 ```
 
@@ -212,9 +212,9 @@ To stop the VR presentation when the button is subsequently pressed, we call {{d
 ```js
           } else {
             vrDisplay.exitPresent();
-            console.log('Stopped presenting to WebVR display');
+            console.log("Stopped presenting to WebVR display");
 
-            btn.textContent = 'Start VR display';
+            btn.textContent = "Start VR display";
 
             // Stop the VR presentation, and start the normal presentation
             vrDisplay.cancelAnimationFrame(vrSceneFrame);
@@ -224,7 +224,7 @@ To stop the VR presentation when the button is subsequently pressed, we call {{d
       }
     });
   } else {
-    console.log('WebVR API not supported by this browser.');
+    console.log("WebVR API not supported by this browser.");
   }
 }
 ```

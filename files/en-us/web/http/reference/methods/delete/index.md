@@ -1,5 +1,6 @@
 ---
-title: DELETE
+title: DELETE request method
+short-title: DELETE
 slug: Web/HTTP/Reference/Methods/DELETE
 page-type: http-method
 spec-urls: https://www.rfc-editor.org/rfc/rfc9110.html#name-delete

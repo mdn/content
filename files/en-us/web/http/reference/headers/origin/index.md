@@ -1,5 +1,6 @@
 ---
-title: Origin
+title: Origin header
+short-title: Origin
 slug: Web/HTTP/Reference/Headers/Origin
 page-type: http-header
 browser-compat: http.headers.Origin

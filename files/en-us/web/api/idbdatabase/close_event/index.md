@@ -16,9 +16,10 @@ Note that it is not fired if the database connection is closed normally using [`
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("close", (event) => {});
-onclose = (event) => {};
+```js-nolint
+addEventListener("close", (event) => { })
+
+onclose = (event) => { }
 ```
 
 ## Event type

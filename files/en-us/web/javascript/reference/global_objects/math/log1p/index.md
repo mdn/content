@@ -1,5 +1,6 @@
 ---
 title: Math.log1p()
+short-title: log1p()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log1p
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.log1p

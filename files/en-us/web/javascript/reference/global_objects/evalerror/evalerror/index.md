@@ -1,5 +1,6 @@
 ---
 title: EvalError() constructor
+short-title: EvalError()
 slug: Web/JavaScript/Reference/Global_Objects/EvalError/EvalError
 page-type: javascript-constructor
 browser-compat: javascript.builtins.EvalError.EvalError

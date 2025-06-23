@@ -1,5 +1,6 @@
 ---
 title: Math.sqrt()
+short-title: sqrt()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sqrt
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.sqrt

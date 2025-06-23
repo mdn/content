@@ -61,7 +61,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 ```html
 <object
   type="video/webm"
-  data="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
+  data="/shared-assets/videos/flower.webm"
   width="600"
   height="140">
   <img src="path/image.jpg" alt="useful image description" />
@@ -112,7 +112,7 @@ If the video in the example fails to load, the user will be provided with an ima
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a>
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role">No corresponding role</a>
       </td>
     </tr>
     <tr>

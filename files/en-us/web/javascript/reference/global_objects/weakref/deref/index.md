@@ -1,5 +1,6 @@
 ---
 title: WeakRef.prototype.deref()
+short-title: deref()
 slug: Web/JavaScript/Reference/Global_Objects/WeakRef/deref
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.WeakRef.deref

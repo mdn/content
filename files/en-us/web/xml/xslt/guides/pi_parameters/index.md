@@ -34,7 +34,7 @@ If there are multiple `xml-stylesheet` PIs the parameters apply to all styleshee
 The `xslt-param` PI supports 4 attributes:
 
 - `name`
-  - : The local-name part of the parameter name. No syntax checking is done on the attribute, however if it is not a valid [NCName](https://www.w3.org/TR/REC-xml-names/#NT-NCName) it will never match any parameter in the stylesheet.
+  - : The local-name part of the parameter name. No syntax checking is done on the attribute, however if it is not a valid [NCName](https://www.w3.org/TR/xml-names/#NT-NCName) it will never match any parameter in the stylesheet.
 - `namespace`
   - : The namespace of the parameter name. No syntax checking is done on the attribute.
 - `value`

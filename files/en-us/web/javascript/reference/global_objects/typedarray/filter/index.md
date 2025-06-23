@@ -1,5 +1,6 @@
 ---
 title: TypedArray.prototype.filter()
+short-title: filter()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/filter
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.filter

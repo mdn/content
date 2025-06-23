@@ -1,12 +1,12 @@
 ---
-title: How to make PWAs re-engageable using Notifications and Push
+title: "js13kGames: Make PWAs re-engageable using Notifications and Push APIs"
+short-title: Using Notifications and Push APIs
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push
 page-type: guide
+sidebar: pwasidebar
 ---
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs", "Web/Progressive_web_apps/Tutorials/js13kGames/Loading", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
-
-{{PWASidebar}}
 
 Having the ability to cache the contents of an app to work offline is a great feature. Allowing the user to install the web app on their device is even better. But instead of relying only on user actions, we can do more, using push messages and notifications to automatically re-engage and deliver new content whenever it is available.
 
@@ -74,9 +74,10 @@ You can examine the [Service Workers Cookbook examples](https://github.com/mdn/s
 As mentioned before, to be able to receive push messages, you have to have a service worker, the basics of which are already explained in the [Making PWAs work offline with Service workers](/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers) article. Inside the service worker, a push-service subscription mechanism is created by calling the [`getSubscription()`](/en-US/docs/Web/API/PushManager/getSubscription) method of the [`PushManager`](/en-US/docs/Web/API/PushManager) interface.
 
 ```js
-navigator.serviceWorker.register("service-worker.js").then((registration) => {
-  return registration.pushManager.getSubscription().then(/* ... */);
-});
+navigator.serviceWorker
+  .register("service-worker.js")
+  .then((registration) => registration.pushManager.getSubscription())
+  .then(/* … */);
 ```
 
 Once the user is subscribed, they can receive push notifications from the server.
@@ -112,13 +113,7 @@ The `index.js` file starts by registering the service worker:
 ```js
 navigator.serviceWorker
   .register("service-worker.js")
-  .then((registration) => {
-    return registration.pushManager
-      .getSubscription()
-      .then(async (subscription) => {
-        // registration part
-      });
-  })
+  .then((registration) => registration.pushManager.getSubscription())
   .then((subscription) => {
     // subscription part
   });

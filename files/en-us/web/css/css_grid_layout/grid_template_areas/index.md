@@ -468,7 +468,7 @@ The {{cssxref("grid")}} shorthand goes a step further and also sets properties u
 - {{cssxref("grid-auto-columns")}}
 - {{cssxref("grid-auto-flow")}}
 
-You can use this syntax in the exact same way as the {{cssxref("grid-template")}} shorthand. Just be aware than when doing so you will reset the other values set by the property.
+You can use this syntax in the exact same way as the {{cssxref("grid-template")}} shorthand. Just be aware that when doing so you will reset the other values set by the property.
 
 ```css
 .wrapper {

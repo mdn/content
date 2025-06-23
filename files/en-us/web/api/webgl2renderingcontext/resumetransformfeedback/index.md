@@ -33,7 +33,7 @@ const transformFeedback = gl.createTransformFeedback();
 gl.bindTransformFeedback(gl.TRANSFORM_FEEDBACK, transformFeedback);
 gl.beginTransformFeedback(gl.TRIANGLES);
 gl.pauseTransformFeedback();
-//…
+// …
 gl.resumeTransformFeedback();
 gl.drawArrays(gl.TRIANGLES, 0, 3);
 gl.endTransformFeedback();

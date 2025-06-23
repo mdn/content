@@ -133,9 +133,7 @@ The HTML looks like this:
 
 <div class="hidden">
   <video>
-    <source
-      src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
-      type="video/webm" />
+    <source src="/shared-assets/videos/flower.webm" type="video/webm" />
     <p>
       Your browser doesn't support HTML video. Here is a
       <a href="rabbit320.mp4">link to the video</a> instead.
@@ -228,9 +226,7 @@ All we're doing here is calling `stopPropagation()` on the event object in the h
 
 <div class="hidden">
   <video>
-    <source
-      src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
-      type="video/webm" />
+    <source src="/shared-assets/videos/flower.webm" type="video/webm" />
     <p>
       Your browser doesn't support HTML video. Here is a
       <a href="rabbit320.mp4">link to the video</a> instead.

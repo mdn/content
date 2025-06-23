@@ -106,7 +106,7 @@ ul {
 }
 ```
 
-Next, the list's `::scroll-marker-group` pseudo-element is laid out using flexbox, with a {{cssxref("justify-content")}} value of of `center` and a {{cssxref("gap")}} of `20px` so that its children (the {{cssxref("::scroll-marker")}} pseudo-elements) are centered inside the `::scroll-marker-group` with a gap between each one.
+Next, the list's `::scroll-marker-group` pseudo-element is laid out using flexbox, with a {{cssxref("justify-content")}} value of `center` and a {{cssxref("gap")}} of `20px` so that its children (the {{cssxref("::scroll-marker")}} pseudo-elements) are centered inside the `::scroll-marker-group` with a gap between each one.
 
 ```css live-sample___carousel-example live-sample___carousel-example_final
 ul::scroll-marker-group {

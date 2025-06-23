@@ -85,7 +85,7 @@ if (codec.includes("vp09")) {
   encodeOptions.av1 = { quantizer: qp };
 } else if (codec.includes("avc")) {
   encodeOptions.avc = { quantizer: qp };
-} else if (codec.includes("hvc1" || codec.includes("hev1"))) {
+} else if (codec.includes("hvc1") || codec.includes("hev1")) {
   encodeOptions.hevc = { quantizer: qp };
 }
 

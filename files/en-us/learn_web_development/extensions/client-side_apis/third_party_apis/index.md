@@ -111,8 +111,8 @@ Let's add some more functionality to the Mapquest example to show how to use som
 
 There are a number of different types of map that can be shown with the Mapquest API. To do this, find the following line:
 
-```js
-layers: L.mapquest.tileLayer("map");
+```js-nolint
+layers: L.mapquest.tileLayer("map"),
 ```
 
 Try changing `'map'` to `'hybrid'` to show a hybrid-style map. Try some other values too. The [`tileLayer` reference page](https://developer.mapquest.com/documentation/mapquest-js/v1.3/l-mapquest-tile-layer/) shows the different available options, plus a lot more information.

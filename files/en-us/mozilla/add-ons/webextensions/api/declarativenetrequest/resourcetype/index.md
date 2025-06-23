@@ -23,6 +23,8 @@ Values of this type are strings. Possible values are:
   - : Resources loaded to be rendered as image, except for `imageset` on browsers that support that type (see browser compatibility below).
 - `imageset`
   - : Images loaded by a {{HTMLElement("picture")}} element or given in an `<img>` element's [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset) attribute.
+- `json`
+  - : JSON modules loaded through an [import statement](/en-US/docs/Web/JavaScript/Reference/Statements/import).
 - `main_frame`
   - : Top-level documents loaded into a tab.
 - `media`

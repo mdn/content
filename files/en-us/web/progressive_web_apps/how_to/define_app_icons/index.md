@@ -2,9 +2,8 @@
 title: Define your app icons
 slug: Web/Progressive_web_apps/How_to/Define_app_icons
 page-type: how-to
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 [Progressive Web Apps (PWAs)](/en-US/docs/Web/Progressive_web_apps) can be installed on devices just like other apps. Once a PWA is installed, its app icon appears on the device's home screen, dock, taskbar, or any other place where operating system native apps normally appear.
 

@@ -1,5 +1,6 @@
 ---
-title: anchor
+title: HTML anchor global attribute
+short-title: anchor
 slug: Web/HTML/Reference/Global_attributes/anchor
 page-type: html-attribute
 status:

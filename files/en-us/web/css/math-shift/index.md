@@ -48,6 +48,7 @@ math-shift: unset;
 ```css
 math {
   math-shift: compact;
+  font-size: 64pt;
 }
 ```
 
@@ -56,7 +57,7 @@ math {
 The following MathML displays two versions of "x squared" using a font with an OpenType MATH table. Browser implementing the `math-shift` property should raise the superscripts using slightly different shifts.
 
 ```html
-<math style="font-size: 64pt;">
+<math>
   <msup style="math-shift: normal">
     <mi>x</mi>
     <mn>2</mn>

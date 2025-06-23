@@ -1,5 +1,6 @@
 ---
 title: Boolean() constructor
+short-title: Boolean()
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/Boolean
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Boolean.Boolean

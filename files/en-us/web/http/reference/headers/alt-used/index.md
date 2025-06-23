@@ -1,5 +1,6 @@
 ---
-title: Alt-Used
+title: Alt-Used header
+short-title: Alt-Used
 slug: Web/HTTP/Reference/Headers/Alt-Used
 page-type: http-header
 spec-urls: https://datatracker.ietf.org/doc/html/rfc7838

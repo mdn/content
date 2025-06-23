@@ -1,5 +1,6 @@
 ---
 title: Iterator.prototype.some()
+short-title: some()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/some
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Iterator.some

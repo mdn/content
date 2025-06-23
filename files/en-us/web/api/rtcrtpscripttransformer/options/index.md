@@ -59,9 +59,9 @@ First we implement a handler for the {{domxref("DedicatedWorkerGlobalScope.rtctr
 addEventListener("rtctransform", (event) => {
   let transform;
   // Select a transform based on passed options
-  if (event.transformer.options.name == "senderTransform")
+  if (event.transformer.options.name === "senderTransform")
     transform = createSenderTransform(); // A TransformStream
-  else if (event.transformer.options.name == "receiverTransform")
+  else if (event.transformer.options.name === "receiverTransform")
     transform = createReceiverTransform(); // A TransformStream
   else return;
 

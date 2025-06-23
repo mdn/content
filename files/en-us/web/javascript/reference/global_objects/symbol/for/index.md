@@ -1,5 +1,6 @@
 ---
 title: Symbol.for()
+short-title: for()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/for
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Symbol.for

@@ -69,7 +69,7 @@ function logRemovedNodes(records) {
   for (const record of records) {
     // Check if the childlist of the target node has been mutated
     if (record.type === "childList") {
-      totalRemovedNodes = totalRemovedNodes + record.removedNodes.length;
+      totalRemovedNodes += record.removedNodes.length;
       // Log the number of nodes added
       counter.textContent = `Total removed nodes: ${totalRemovedNodes}`;
     }

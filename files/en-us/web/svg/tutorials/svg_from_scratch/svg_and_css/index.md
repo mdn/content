@@ -18,7 +18,7 @@ Below you'll create a demonstration that runs in a browser.
 
 Make a new SVG document as a plain text file, `doc8.svg`. Copy and paste the content from here, making sure that you scroll to get all of it:
 
-```html
+```html live-sample___example
 <svg
   width="600px"
   height="600px"
@@ -253,7 +253,7 @@ Make a new SVG document as a plain text file, `doc8.svg`. Copy and paste the con
 
 Make a new CSS file, `style8.css` in the same directory as `doc8.svg`. Copy and paste the content from here, making sure that you scroll to get all of it:
 
-```css
+```css live-sample___example
 /*** SVG demonstration ***/
 
 /* page */
@@ -388,7 +388,7 @@ Open the `doc8.svg` document in your SVG-enabled browser. Move your mouse pointe
 
 ### Result
 
-{{EmbedLiveSample("Example", "660", "660")}}
+{{EmbedLiveSample("example", "660", "660")}}
 
 Notes about this demonstration:
 
@@ -416,7 +416,7 @@ Change the stylesheet so that the inner petals all turn pink when the mouse poin
 
 ## Simplified structure
 
-The SVG structure shown above could be written much more concise by referencing the individual parts of the flower via {{SVGElement("use")}} elements. This [behavior is standardized](https://www.w3.org/TR/SVG2/struct.html#UseStyleInheritance), though only a few browsers support the {{cssxref(":hover")}} pseudo-class and other more complex CSS selectors on elements referenced via `<use>` elements, at the moment. There is [some discussion about what rules apply to such referenced elements](https://github.com/w3c/svgwg/issues/504).
+The SVG structure shown above could be written much more concise by referencing the individual parts of the flower via {{SVGElement("use")}} elements. This [behavior is standardized](https://svgwg.org/svg2-draft/struct.html#UseStyleInheritance), though only a few browsers support the {{cssxref(":hover")}} pseudo-class and other more complex CSS selectors on elements referenced via `<use>` elements, at the moment. There is [some discussion about what rules apply to such referenced elements](https://github.com/w3c/svgwg/issues/504).
 
 See below how the structure then looks like.
 

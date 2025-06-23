@@ -1,5 +1,6 @@
 ---
 title: Temporal.Duration.prototype.round()
+short-title: round()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/round
 page-type: javascript-instance-method
 status:

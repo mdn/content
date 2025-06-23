@@ -1,5 +1,6 @@
 ---
-title: Sec-WebSocket-Key
+title: Sec-WebSocket-Key header
+short-title: Sec-WebSocket-Key
 slug: Web/HTTP/Reference/Headers/Sec-WebSocket-Key
 page-type: http-header
 browser-compat: http.headers.Sec-WebSocket-Key

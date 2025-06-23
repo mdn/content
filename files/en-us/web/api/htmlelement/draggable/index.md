@@ -25,14 +25,10 @@ const draggableElement = document.querySelector(".draggable-element");
 const notDraggableElement = document.querySelector(".not-draggable-element");
 
 // enable the target element's ability to drag
-if (!draggableElement.draggable) {
-  draggableElement.draggable = true;
-}
+draggableElement.draggable = true;
 
 // disable the target element's ability to drag
-if (notDraggableElement.draggable) {
-  notDraggableElement.draggable = false;
-}
+notDraggableElement.draggable = false;
 ```
 
 ## Specifications

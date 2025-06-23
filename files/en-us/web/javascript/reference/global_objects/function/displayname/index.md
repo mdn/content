@@ -1,5 +1,6 @@
 ---
 title: "Function: displayName"
+short-title: displayName
 slug: Web/JavaScript/Reference/Global_Objects/Function/displayName
 page-type: javascript-instance-data-property
 status:
@@ -37,7 +38,7 @@ If none of the above patterns match, the entire `displayName` is displayed.
 By entering the following in a Firefox console, it should display as something like `function MyFunction()`:
 
 ```js
-const a = function () {};
+function a() {}
 a.displayName = "MyFunction";
 
 a; // function MyFunction()

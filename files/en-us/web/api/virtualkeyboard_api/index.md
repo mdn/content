@@ -64,24 +64,26 @@ The `keyboard-inset-*` CSS environment variables are useful to adapt your layout
 The code snippet below uses the `keyboard-inset-height` CSS variable to reserve space for the virtual keyboard to appear below the list of messages and input field in a chat-like application. When the virtual keyboard is hidden, the `env()` function returns `0px` and the `keyboard` grid area is hidden. The messages and input elements can occupy the full height of the viewport. When the virtual keyboard appears, the `keyboard` grid area gets the height of the virtual keyboard.
 
 ```html
-<style>
-  body {
-    display: grid;
-    margin: 0;
-    height: 100vh;
-    grid-template:
-      "messages" 1fr
-      "input" auto
-      "keyboard" env(keyboard-inset-height, 0px);
-  }
-</style>
 <ul id="messages"></ul>
 <input type="text" />
-<script>
-  if ("virtualKeyboard" in navigator) {
-    navigator.virtualKeyboard.overlaysContent = true;
-  }
-</script>
+```
+
+```css
+body {
+  display: grid;
+  margin: 0;
+  height: 100vh;
+  grid-template:
+    "messages" 1fr
+    "input" auto
+    "keyboard" env(keyboard-inset-height, 0px);
+}
+```
+
+```js
+if ("virtualKeyboard" in navigator) {
+  navigator.virtualKeyboard.overlaysContent = true;
+}
 ```
 
 ### Control the virtual keyboard on `contenteditable` elements

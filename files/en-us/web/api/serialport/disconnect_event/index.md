@@ -26,10 +26,10 @@ For more information, see [Event bubbling](/en-US/docs/Learn_web_development/Cor
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("disconnect", (event) => {});
+```js-nolint
+addEventListener("disconnect", (event) => { })
 
-ondisconnect = (event) => {};
+ondisconnect = (event) => { }
 ```
 
 ## Event type

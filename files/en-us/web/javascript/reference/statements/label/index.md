@@ -9,20 +9,25 @@ browser-compat: javascript.statements.label
 
 A **labeled statement** is any [statement](/en-US/docs/Web/JavaScript/Reference/Statements) that is prefixed with an identifier. You can jump to this label using a {{jsxref("Statements/break", "break")}} or {{jsxref("Statements/continue", "continue")}} statement nested within the labeled statement.
 
-{{InteractiveExample("JavaScript Demo: Labeled statement")}}
+{{InteractiveExample("JavaScript Demo: Labeled statement", "taller")}}
 
 ```js interactive-example
-let str = "";
+let i, j;
 
-loop1: for (let i = 0; i < 5; i++) {
-  if (i === 1) {
-    continue loop1;
+loop1: for (i = 0; i < 3; i++) {
+  loop2: for (j = 0; j < 3; j++) {
+    if (i === 1 && j === 1) {
+      break loop1;
+    }
+    console.log(`i = ${i}, j = ${j}`);
   }
-  str = str + i;
 }
 
-console.log(str);
-// Expected output: "0234"
+// Expected output:
+// "i = 0, j = 0"
+// "i = 0, j = 1"
+// "i = 0, j = 2"
+// "i = 1, j = 0"
 ```
 
 ## Syntax

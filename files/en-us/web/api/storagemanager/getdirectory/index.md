@@ -27,7 +27,9 @@ A {{jsxref('Promise')}} that fulfills with a {{domxref("FileSystemDirectoryHandl
 ### Exceptions
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : Thrown if the user agent is not able to map the requested directory to the local OPFS.
+  - : Thrown if the browser is not able to map the requested directory to the local OPFS, for example due to storage or memory constraints. Also thrown in some browsers if `getDirectory()` is called in private browsing mode.
+- `UnknownError` {{domxref("DOMException")}}
+  - : Thrown in some browsers if `getDirectory()` is called in private browsing mode.
 
 ## Examples
 

@@ -1,5 +1,6 @@
 ---
 title: Map.prototype.forEach()
+short-title: forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Map/forEach
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Map.forEach

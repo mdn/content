@@ -6,7 +6,7 @@ sidebar:
     title: XML
   - link: /Web/XML/Guides
     title: XML Guides
-    details: open
+    details: closed
     children:
       - /Web/XML/Guides/XML_introduction
       - /Web/XML/Guides/Parsing_and_serializing_XML
@@ -15,7 +15,6 @@ sidebar:
     link: /Web/XML/XPath
     title: XPath
   - link: /Web/XML/XPath/Guides
-    title: XPath Guides
     details: closed
     children:
       - /Web/XML/XPath/Guides/Snippets
@@ -24,15 +23,13 @@ sidebar:
   - type: listSubPages
     path: /Web/XML/XPath/Reference/Functions
     link: /Web/XML/XPath/Reference/Functions
-    title: XPath Functions
     details: closed
+    code: true
   - link: /Web/XML/XPath/Reference/Axes
-    title: Xpath axes
   - type: section
     link: /Web/XML/XSLT
     title: XSLT
   - link: /Web/XML/XSLT/Guides
-    title: XSLT Guides
     details: closed
     children:
       - /Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
@@ -41,33 +38,33 @@ sidebar:
   - type: listSubPages
     path: /Web/XML/XSLT/Reference/Element
     link: /Web/XML/XSLT/Reference/Element
-    title: XSLT Elements
     details: closed
+    code: true
   - type: section
     link: /Web/XML/EXSLT
     title: EXSLT
   - type: listSubPages
     path: /Web/XML/EXSLT/Reference/exsl
     link: /Web/XML/EXSLT/Reference/exsl
-    title: EXSLT exsl
     details: closed
+    code: true
   - type: listSubPages
     path: /Web/XML/EXSLT/Reference/math
     link: /Web/XML/EXSLT/Reference/math
-    title: EXSLT math
     details: closed
+    code: true
   - type: listSubPages
     path: /Web/XML/EXSLT/Reference/regexp
     link: /Web/XML/EXSLT/Reference/regexp
-    title: EXSLT regexp
     details: closed
+    code: true
   - type: listSubPages
     path: /Web/XML/EXSLT/Reference/set
     link: /Web/XML/EXSLT/Reference/set
-    title: EXSLT set
     details: closed
+    code: true
   - type: listSubPages
     path: /Web/XML/EXSLT/Reference/str
     link: /Web/XML/EXSLT/Reference/str
-    title: EXSLT str
     details: closed
+    code: true

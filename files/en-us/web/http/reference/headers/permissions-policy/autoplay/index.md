@@ -1,5 +1,6 @@
 ---
-title: "Permissions-Policy: autoplay"
+title: "Permissions-Policy: autoplay directive"
+short-title: autoplay
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/autoplay
 page-type: http-permissions-policy-directive
 status:

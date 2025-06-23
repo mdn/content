@@ -1,5 +1,6 @@
 ---
-title: Introducing the CSS Cascade
+title: Introduction to the CSS cascade
+short-title: Introduction
 slug: Web/CSS/CSS_cascade/Cascade
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-cascade/
@@ -203,11 +204,11 @@ In this example, the author used CSS's {{CSSXref('@import')}} rule to import fiv
 
 ```html
 <style>
-  @import unlayeredStyles.css;
-  @import AStyles.css layer(A);
-  @import moreUnlayeredStyles.css;
-  @import BStyles.css layer(B);
-  @import CStyles.css layer(C);
+  @import "unlayeredStyles.css";
+  @import "AStyles.css" layer(A);
+  @import "moreUnlayeredStyles.css";
+  @import "BStyles.css" layer(B);
+  @import "CStyles.css" layer(C);
   p {
     color: red;
     padding: 1em !important;

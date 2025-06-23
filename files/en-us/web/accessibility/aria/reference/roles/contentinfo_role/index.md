@@ -1,5 +1,6 @@
 ---
 title: "ARIA: contentinfo role"
+short-title: contentinfo
 slug: Web/Accessibility/ARIA/Reference/Roles/contentinfo_role
 page-type: aria-role
 spec-urls:
@@ -125,7 +126,6 @@ Certain technologies such as browser extensions can generate lists of all landma
 ## See also
 
 - The {{HTMLElement('footer')}} element
-- [contentinfo (role): Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria/#contentinfo)
 - [Using HTML sections and outlines](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements)
 - [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://www.tpgi.com/using-wai-aria-landmarks-2013/)
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)

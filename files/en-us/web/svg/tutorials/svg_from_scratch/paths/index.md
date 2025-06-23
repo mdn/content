@@ -647,6 +647,295 @@ button.addEventListener("click", () => {
 
 Arcs are an easy way to create pieces of circles or ellipses in drawings. For instance, a pie chart would require a different arc for each piece.
 
-If transitioning to SVG from {{HTMLElement("canvas")}}, arcs can be the hardest thing to learn, but are also much more powerful. Complete circles and ellipses are the only shapes that SVG arcs have trouble drawing. Because the start and end points for any path going around a circle are the same point, there are an infinite number of circles that could be chosen, and the actual path is undefined. It's possible to approximate them by making the start and end points of the path slightly askew, and then connecting them with another path segment. For example, it's possible to make a circle with an arc for each semi-circle. At that point, it's often easier to use a real {{SVGElement("circle")}} or {{SVGElement("ellipse")}} node instead. This interactive demo might help understand the concepts behind SVG arcs: <https://codepen.io/lingtalfi/pen/yaLWJG> (tested in Chrome and Firefox only, might not work in your browser)
+If transitioning to SVG from {{HTMLElement("canvas")}}, arcs can be the hardest thing to learn, but are also much more powerful. Complete circles and ellipses are the only shapes that SVG arcs have trouble drawing. Because the start and end points for any path going around a circle are the same point, there are an infinite number of circles that could be chosen, and the actual path is undefined. It's possible to approximate them by making the start and end points of the path slightly askew, and then connecting them with another path segment. For example, it's possible to make a circle with an arc for each semi-circle. At that point, it's often easier to use a real {{SVGElement("circle")}} or {{SVGElement("ellipse")}} node instead. This interactive demo might help understand the concepts behind SVG arcs.
+
+```html hidden live-sample___arcs_interactive
+<script src="https://cdn.rawgit.com/lingtalfi/simpledrag/master/simpledrag.js"></script>
+<div class="ui">
+  <div class="controls">
+    Radius X: <input id="rx" type="range" min="0" max="500" /><br />
+    Radius Y: <input id="ry" type="range" min="0" max="500" /><br />
+    Rotation:
+    <input id="rot" type="range" min="0" max="360" value="0" /><br />
+    Large arc flag: <input id="laf" type="checkbox" /><br />
+    Sweep flag: <input id="sf" type="checkbox" /><br />
+    Arc command: <span id="arc-value"></span><br />
+  </div>
+  <div class="results">
+    mouse: pageX <span id="page-x"></span>, pageY <span id="page-y"></span
+    ><br />
+    A: <span id="ax-value"></span>, <span id="ay-value"></span><br />
+    B: <span id="bx-value"></span>, <span id="by-value"></span><br />
+    m: <span id="m-value"></span><br />
+    b(A): <span id="ba-value"></span><br />
+    b(B): <span id="bb-value"></span><br />
+    contextWidth: <span id="cw-value"></span><br />
+  </div>
+</div>
+
+<svg width="100%" height="100%" id="svg-context">
+  <path id="arc2" d="" fill="none" stroke="green" stroke-width="2"></path>
+  <path id="arc3" d="" fill="none" stroke="green" stroke-width="2"></path>
+  <path id="arc4" d="" fill="none" stroke="green" stroke-width="2"></path>
+
+  <path
+    id="arc"
+    d="M100 100 A 100 100 0 1 0 200 100"
+    fill="none"
+    stroke="red"
+    stroke-width="4"></path>
+
+  <line
+    id="line0"
+    x1="0"
+    y1="0"
+    x2="0"
+    y2="0"
+    fill="none"
+    stroke="black"
+    stroke-width="2"></line>
+  <line
+    id="line"
+    x1="0"
+    y1="0"
+    x2="0"
+    y2="0"
+    fill="none"
+    stroke="black"
+    stroke-width="2"></line>
+  <line
+    id="line2"
+    x1="0"
+    y1="0"
+    x2="0"
+    y2="0"
+    fill="none"
+    stroke="black"
+    stroke-width="2"></line>
+
+  <circle
+    id="circle1"
+    cx="100"
+    cy="100"
+    r="5"
+    fill="red"
+    stroke="red"
+    stroke-width="2"></circle>
+
+  <circle
+    id="circle2"
+    cx="200"
+    cy="100"
+    r="5"
+    fill="red"
+    stroke="red"
+    stroke-width="2"></circle>
+</svg>
+```
+
+```css hidden live-sample___arcs_interactive
+body {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #eee;
+}
+
+.ui {
+  display: flex;
+}
+
+.ui > div {
+  margin: 0 10px;
+}
+
+.ui .controls input {
+  vertical-align: middle;
+}
+
+#circle1,
+#circle2 {
+  cursor: pointer;
+}
+
+svg {
+  background: #ddd;
+}
+```
+
+```js hidden live-sample___arcs_interactive
+const svgContext = document.getElementById("svg-context");
+let rect = svgContext.getBoundingClientRect(); // helper to enclose mouse coordinates into svg box
+
+const pageXEl = document.getElementById("page-x");
+const pageYEl = document.getElementById("page-y");
+const mEl = document.getElementById("m-value");
+const rxEl = document.getElementById("rx");
+const ryEl = document.getElementById("ry");
+const rotEl = document.getElementById("rot");
+const lafEl = document.getElementById("laf");
+const sfEl = document.getElementById("sf");
+const axEl = document.getElementById("ax-value");
+const ayEl = document.getElementById("ay-value");
+const bxEl = document.getElementById("bx-value");
+const byEl = document.getElementById("by-value");
+const baEl = document.getElementById("ba-value");
+const bbEl = document.getElementById("bb-value");
+const circle1 = document.getElementById("circle1");
+const circle2 = document.getElementById("circle2");
+const line = document.getElementById("line");
+const line0 = document.getElementById("line0");
+const line2 = document.getElementById("line2");
+const cwEl = document.getElementById("cw-value");
+const arcCmdEl = document.getElementById("arc-value");
+const arcEl = document.getElementById("arc");
+const arc2El = document.getElementById("arc2");
+const arc3El = document.getElementById("arc3");
+const arc4El = document.getElementById("arc4");
+
+function updatePaths(pageX, pageY) {
+  pageXEl.textContent = pageX;
+  pageYEl.textContent = pageY;
+
+  // line between two points
+  line.setAttribute("x1", circle1.getAttribute("cx"));
+  line.setAttribute("y1", circle1.getAttribute("cy"));
+  line.setAttribute("x2", circle2.getAttribute("cx"));
+  line.setAttribute("y2", circle2.getAttribute("cy"));
+
+  axEl.textContent = circle1.getAttribute("cx");
+  ayEl.textContent = circle1.getAttribute("cy");
+  bxEl.textContent = circle2.getAttribute("cx");
+  byEl.textContent = circle2.getAttribute("cy");
+
+  // y = mx + b
+  let m, b, run; // m = rise/run = (y2-y1) / (x2-x1)
+  if (circle1.getAttribute("cx") <= circle2.getAttribute("cx")) {
+    run = circle2.getAttribute("cx") - circle1.getAttribute("cx");
+    if (run !== 0) {
+      m = (circle2.getAttribute("cy") - circle1.getAttribute("cy")) / run;
+    }
+  } else {
+    run = circle1.getAttribute("cx") - circle2.getAttribute("cx");
+    if (run !== 0) {
+      m = (circle1.getAttribute("cy") - circle2.getAttribute("cy")) / run;
+    }
+  }
+
+  if (run !== 0) {
+    // b = y - mx
+    b = circle1.getAttribute("cy") - m * circle1.getAttribute("cx");
+    b2 = circle2.getAttribute("cy") - m * circle2.getAttribute("cx");
+    baEl.textContent = b;
+    bbEl.textContent = b2;
+    mEl.textContent = m;
+
+    // draw segment from the left vertical axis (x=0) to the left most point (A or B).
+    // x=0 ----> y = b
+    let leftMost, rightMost;
+    if (circle1.getAttribute("cx") <= circle2.getAttribute("cx")) {
+      leftMost = circle1;
+      rightMost = circle2;
+    } else {
+      leftMost = circle2;
+      rightMost = circle1;
+    }
+
+    line0.setAttribute("x1", 0);
+    line0.setAttribute("y1", b);
+    line0.setAttribute("x2", leftMost.getAttribute("cx"));
+    line0.setAttribute("y2", leftMost.getAttribute("cy"));
+
+    // draw segment from point B to the right vertical axis (x=rect.width)
+    // representing the end of the svg box.
+    // y = mx + b
+    const y = m * rect.width + b;
+    line2.setAttribute("x1", rightMost.getAttribute("cx"));
+    line2.setAttribute("y1", rightMost.getAttribute("cy"));
+    line2.setAttribute("x2", rect.width);
+    line2.setAttribute("y2", y);
+
+    // now update the arc
+    const arcCmd = getArcCommand(
+      leftMost,
+      rightMost,
+      lafEl.checked,
+      sfEl.checked,
+    );
+    arcCmdEl.textContent = arcCmd;
+    arcEl.setAttribute("d", arcCmd);
+
+    // now update the other helper arcs
+    const combo = [
+      [true, true],
+      [true, false],
+      [false, true],
+      [false, false],
+    ].filter(
+      (item) => !(item[0] === lafEl.checked && item[1] === sfEl.checked),
+    );
+    arc2El.setAttribute(
+      "d",
+      getArcCommand(leftMost, rightMost, combo[0][0], combo[0][1]),
+    );
+    arc3El.setAttribute(
+      "d",
+      getArcCommand(leftMost, rightMost, combo[1][0], combo[1][1]),
+    );
+    arc4El.setAttribute(
+      "d",
+      getArcCommand(leftMost, rightMost, combo[2][0], combo[2][1]),
+    );
+  }
+}
+
+function getArcCommand(leftMost, rightMost, lafChecked, sfChecked) {
+  return `M${leftMost.getAttribute("cx")} ${leftMost.getAttribute("cy")} A ${rxEl.value} ${ryEl.value} ${rotEl.value} ${lafChecked ? "1" : "0"} ${sfChecked ? "1" : "0"} ${rightMost.getAttribute("cx")} ${rightMost.getAttribute("cy")}`;
+}
+
+function updateScreen() {
+  rect = svgContext.getBoundingClientRect();
+  cwEl.textContent = rect.width;
+}
+
+circle1.sdrag((el, pageX, startX, pageY, startY) => {
+  pageX -= rect.left;
+  pageY -= rect.top;
+
+  el.setAttribute("cx", pageX);
+  el.setAttribute("cy", pageY);
+  updatePaths(pageX, pageY);
+});
+
+circle2.sdrag((el, pageX, startX, pageY, startY) => {
+  pageX -= rect.left;
+  pageY -= rect.top;
+
+  el.setAttribute("cx", pageX);
+  el.setAttribute("cy", pageY);
+  updatePaths(pageX, pageY);
+});
+
+window.addEventListener("resize", updateScreen);
+
+// sliders
+["rx", "ry", "rot"].forEach((id) => {
+  document.getElementById(id).addEventListener("input", (e) => {
+    updatePaths();
+  });
+});
+
+// checkboxes
+["laf", "sf"].forEach((id) => {
+  document.getElementById(id).addEventListener("change", (e) => {
+    updatePaths();
+  });
+});
+
+updatePaths();
+updateScreen();
+```
+
+{{EmbedLiveSample("arcs_interactive", "", 600)}}
 
 {{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes", "Web/SVG/Tutorials/SVG_from_scratch/Fills_and_strokes") }}

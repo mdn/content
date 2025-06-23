@@ -2,9 +2,8 @@
 title: Features gated by user activation
 slug: Web/Security/User_activation
 page-type: guide
+sidebar: security
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
 To ensure applications are unable to abuse APIs that can create a bad user experience when the behavior is not desired, some APIs can only be used when the user is in an "active interaction" state, meaning the user is currently interacting with the web page, or has interacted with the page at least once. Browsers limit access to sensitive APIs like popups, fullscreen, or vibration APIs to active user interactions to prevent malicious scripts from abusing these features. This page lists web platform features available only after user activation.
 

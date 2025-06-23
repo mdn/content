@@ -1,5 +1,6 @@
 ---
 title: Temporal.ZonedDateTime.prototype.monthCode
+short-title: monthCode
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/monthCode
 page-type: javascript-instance-accessor-property
 status:

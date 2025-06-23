@@ -1,5 +1,6 @@
 ---
-title: Viewport-Width
+title: Viewport-Width header
+short-title: Viewport-Width
 slug: Web/HTTP/Reference/Headers/Viewport-Width
 page-type: http-header
 status:

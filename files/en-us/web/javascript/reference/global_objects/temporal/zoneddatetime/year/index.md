@@ -1,5 +1,6 @@
 ---
 title: Temporal.ZonedDateTime.prototype.year
+short-title: year
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/year
 page-type: javascript-instance-accessor-property
 status:

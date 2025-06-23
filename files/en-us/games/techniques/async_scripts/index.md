@@ -32,7 +32,7 @@ Two common situations in which a script is _not_ async (as [defined by the HTML 
 
 ```html
 <script async>
-  code();
+  // Inline JavaScript code
 </script>
 ```
 
@@ -40,7 +40,7 @@ and
 
 ```js
 const script = document.createElement("script");
-script.textContent = "code()";
+script.textContent = "// Inline JavaScript code";
 document.body.appendChild(script);
 ```
 

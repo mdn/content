@@ -130,7 +130,7 @@ p {
 }
 
 button {
-  background-color: -internal-light-dark(white, black);
+  background-color: light-dark(white, black);
   padding: 1rem 10rem;
   border-radius: 3rem;
   border: none;

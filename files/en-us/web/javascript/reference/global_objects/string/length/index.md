@@ -1,5 +1,6 @@
 ---
 title: "String: length"
+short-title: length
 slug: Web/JavaScript/Reference/Global_Objects/String/length
 page-type: javascript-instance-data-property
 browser-compat: javascript.builtins.String.length

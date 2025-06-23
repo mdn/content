@@ -14,10 +14,10 @@ The **`resize`** event of the {{domxref("VisualViewport")}} interface is fired w
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("resize", (event) => {});
+```js-nolint
+addEventListener("resize", (event) => { })
 
-onresize = (event) => {};
+onresize = (event) => { }
 ```
 
 ## Event type

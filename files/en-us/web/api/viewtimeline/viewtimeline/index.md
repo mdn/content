@@ -3,12 +3,10 @@ title: "ViewTimeline: ViewTimeline() constructor"
 short-title: ViewTimeline()
 slug: Web/API/ViewTimeline/ViewTimeline
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.ViewTimeline.ViewTimeline
 ---
 
-{{APIRef("History API")}}{{SeeCompatTable}}
+{{APIRef("History API")}}
 
 The **`ViewTimeline()`** constructor creates a new {{domxref("ViewTimeline")}} object instance.
 

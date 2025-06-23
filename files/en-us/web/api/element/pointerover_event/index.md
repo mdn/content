@@ -16,10 +16,10 @@ The `pointerover` event is fired when a pointing device is moved into an element
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("pointerover", (event) => {});
+```js-nolint
+addEventListener("pointerover", (event) => { })
 
-onpointerover = (event) => {};
+onpointerover = (event) => { }
 ```
 
 ## Event type

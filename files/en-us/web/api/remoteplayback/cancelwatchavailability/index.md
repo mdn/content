@@ -38,7 +38,7 @@ A {{jsxref("Promise")}} that resolves with `undefined`.
 
 ## Examples
 
-Once a remote playback device has been identified and is connected, the monitoring of available devices can be stopped using `cancelWatchAvailability().`
+Once a remote playback device has been identified and is connected, the monitoring of available devices can be stopped using `cancelWatchAvailability()`.
 
 ```js
 function switchToRemoteUI() {

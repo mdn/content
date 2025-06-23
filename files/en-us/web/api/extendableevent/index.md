@@ -64,16 +64,15 @@ self.addEventListener("install", (event) => {
   event.waitUntil(
     caches
       .open(CURRENT_CACHES["prefetch"])
-      .then((cache) => {
-        return cache
-          .addAll(
-            urlsToPrefetch.map((urlToPrefetch) => {
-              return new Request(urlToPrefetch, { mode: "no-cors" });
-            }),
-          )
-          .then(() => {
-            console.log("All resources have been fetched and cached.");
-          });
+      .then((cache) =>
+        cache.addAll(
+          urlsToPrefetch.map(
+            (urlToPrefetch) => new Request(urlToPrefetch, { mode: "no-cors" }),
+          ),
+        ),
+      )
+      .then(() => {
+        console.log("All resources have been fetched and cached.");
       })
       .catch((error) => {
         console.error("Pre-fetching failed:", error);

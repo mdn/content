@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.copyWithin()
+short-title: copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.copyWithin

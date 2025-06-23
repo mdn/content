@@ -1,5 +1,6 @@
 ---
-title: From
+title: From header
+short-title: From
 slug: Web/HTTP/Reference/Headers/From
 page-type: http-header
 browser-compat: http.headers.From

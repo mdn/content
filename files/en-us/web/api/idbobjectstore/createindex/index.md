@@ -67,7 +67,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
     - The method was not called from a `versionchange` transaction mode callback, i.e., from inside a {{domxref("IDBOpenDBRequest.upgradeneeded_event", "onupgradeneeded")}} handler.
     - The object store has been deleted.
 - `SyntaxError` {{domxref("DOMException")}}
-  - : Thrown if the provided `keyPath` is not a <a href="https://www.w3.org/TR/IndexedDB/#dfn-valid-key-path">valid key path</a>.
+  - : Thrown if the provided `keyPath` is not a [valid key path](https://w3c.github.io/IndexedDB/#valid-key-path).
 - `TransactionInactiveError` {{domxref("DOMException")}}
   - : Thrown if the transaction this {{domxref("IDBObjectStore")}}
     belongs to is not active (e.g., has been deleted or removed.) In Firefox

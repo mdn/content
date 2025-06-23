@@ -148,7 +148,7 @@ Once again, we see the `#[wasm_bindgen]` attribute. In this case, it's not modif
 
 This function is named `greet`, and takes one argument, a string (written `&str`), `name`. It then calls the `alert` function we asked for in the `extern` block above. It passes a call to the `format!` macro, which lets us concatenate strings.
 
-The `format!` macro takes two arguments in this case: a format string, and a variable to put in it. The format string is the `"Hello, {}!"` bit. It contains `{}`s, where variables will be interpolated. The variable we're passing is `name`, the argument to the function, so if we call `greet("Steve")` we should see `"Hello, Steve!".`
+The `format!` macro takes two arguments in this case: a format string, and a variable to put in it. The format string is the `"Hello, {}!"` bit. It contains `{}`s, where variables will be interpolated. The variable we're passing is `name`, the argument to the function, so if we call `greet("Steve")` we should see `"Hello, Steve!"`.
 
 This is passed to `alert()`, so when we call this function we will see an alert box with "Hello, Steve!" in it.
 
@@ -238,6 +238,7 @@ Put the following content in the `index.html` file:
   <body>
     <script type="module">
       import init, { greet } from "./pkg/hello_wasm.js";
+
       init().then(() => {
         greet("WebAssembly");
       });

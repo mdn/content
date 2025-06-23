@@ -94,51 +94,27 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-### HTML
-
-```html
-<div style="background:red; width:180px; padding:10px;">
-  <div id="out"></div>
-  <input type="text" />
-</div>
-```
-
-### JavaScript
-
 ```js
-document.body.onclick = (event) => {
-  const elementTag = event.target.tagName.toLowerCase();
-  document.getElementById("out").textContent = elementTag;
-};
-
-const simulateClick = () => {
-  const event = document.createEvent("MouseEvents");
-  event.initMouseEvent(
-    "click",
-    true,
-    true,
-    window,
-    0,
-    0,
-    0,
-    80,
-    20,
-    false,
-    false,
-    false,
-    false,
-    0,
-    null,
-  );
-  document.body.dispatchEvent(event);
-};
-
-simulateClick();
+const event = document.createEvent("MouseEvents");
+event.initMouseEvent(
+  "click",
+  true,
+  true,
+  window,
+  0,
+  0,
+  0,
+  80,
+  20,
+  false,
+  false,
+  false,
+  false,
+  0,
+  null,
+);
+document.body.dispatchEvent(event);
 ```
-
-### Result
-
-{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

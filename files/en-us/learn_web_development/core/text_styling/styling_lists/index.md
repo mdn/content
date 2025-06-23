@@ -321,30 +321,25 @@ Gives you this output:
 > [!NOTE]
 > Even if you are using a non-number {{cssxref("list-style-type")}}, you still need to use the equivalent numerical values in the `value` attribute.
 
-## Active learning: Styling a nested list
+## Styling a nested list
 
-In this active learning session, we want you to take what you've learned above and have a go at styling a nested list. We've provided you with the HTML, and we want you to:
+It is time for you to complete another task. This time we want you to take what you've learned above and have a go at styling a nested list.
 
-1. Give the unordered list square bullets.
-2. Give the unordered list items and the ordered list items a line-height of 1.5 of their font-size.
-3. Give the ordered list lower alphabetical bullets.
-4. Feel free to play with the list example as much as you like, experimenting with bullet types, spacing, or whatever else you can find.
+1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
+2. Style the unordered list with square bullets.
+3. Give the unordered list items and the ordered list items a `line-height` of `1.5` of their `font-size`.
+4. Set the ordered list to have lower alphabetical bullets.
+5. Feel free to play with the list example as much as you like, experimenting with bullet types, spacing, or whatever else you fancy using.
 
-If you make a mistake, you can always reset it using the _Reset_ button. If you get really stuck, press the _Show solution_ button to see a potential answer.
+If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the example output.
 
-```html hidden
-<div
-  class="body-wrapper"
-  style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
-  <h2>HTML Input</h2>
-  <textarea
-    id="code"
-    class="html-input"
-    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+```html live-sample___styling_lists
 <ul>
   <li>First, light the candle.</li>
   <li>Next, open the box.</li>
-  <li>Finally, place the three magic items in the box, in this exact order, to complete the spell:
+  <li>
+    Finally, place the three magic items in the box, in this exact order, to
+    complete the spell:
     <ol>
       <li>The book of spells</li>
       <li>The shiny rod</li>
@@ -352,80 +347,34 @@ If you make a mistake, you can always reset it using the _Reset_ button. If you 
     </ol>
   </li>
 </ul>
-  </textarea>
-
-  <h2>CSS Input</h2>
-  <textarea
-    id="code"
-    class="css-input"
-    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></textarea>
-
-  <h2>Output</h2>
-  <div
-    class="output"
-    style="width: 90%;height: 12em;padding: 10px;border: 1px solid #0095dd;overflow: auto;"></div>
-  <div class="controls">
-    <input
-      id="reset"
-      type="button"
-      value="Reset"
-      style="margin: 10px 10px 0 0;" />
-    <input
-      id="solution"
-      type="button"
-      value="Show solution"
-      style="margin: 10px 0 0 10px;" />
-  </div>
-</div>
 ```
 
-```js hidden
-const htmlInput = document.querySelector(".html-input");
-const cssInput = document.querySelector(".css-input");
-const reset = document.getElementById("reset");
-const htmlCode = htmlInput.value;
-const cssCode = cssInput.value;
-const output = document.querySelector(".output");
-const solution = document.getElementById("solution");
+```css live-sample___styling_lists
 
-const styleElem = document.createElement("style");
-const headElem = document.querySelector("head");
-headElem.appendChild(styleElem);
+```
 
-function drawOutput() {
-  output.innerHTML = htmlInput.value;
-  styleElem.textContent = cssInput.value;
-}
+{{ EmbedLiveSample('styling_lists', "100%", 160) }}
 
-reset.addEventListener("click", () => {
-  htmlInput.value = htmlCode;
-  cssInput.value = cssCode;
-  drawOutput();
-});
+<details>
+<summary>Click here to show the solution</summary>
 
-solution.addEventListener("click", () => {
-  htmlInput.value = htmlCode;
-  cssInput.value = `ul {
+Your finished CSS should look something like this:
+
+```css
+ul {
   list-style-type: square;
 }
 
-ul li,
-ol li {
+li {
   line-height: 1.5;
 }
 
 ol {
   list-style-type: lower-alpha;
-}`;
-  drawOutput();
-});
-
-htmlInput.addEventListener("input", drawOutput);
-cssInput.addEventListener("input", drawOutput);
-window.addEventListener("load", drawOutput);
+}
 ```
 
-{{ EmbedLiveSample('Active_learning_Styling_a_nested_list', 700, 800) }}
+</details>
 
 ## Summary
 

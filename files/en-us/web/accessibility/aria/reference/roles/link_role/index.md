@@ -1,5 +1,6 @@
 ---
 title: "ARIA: link role"
+short-title: link
 slug: Web/Accessibility/ARIA/Reference/Roles/link_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#link
@@ -57,9 +58,9 @@ span[role="link"]:focus {
 ```js
 const fakeLinks = document.querySelectorAll('[role="link"]');
 
-for (let i = 0; i < fakeLinks.length; i++) {
-  fakeLinks[i].addEventListener("click", navigateLink);
-  fakeLinks[i].addEventListener("keydown", navigateLink);
+for (const link of fakeLinks) {
+  link.addEventListener("click", navigateLink);
+  link.addEventListener("keydown", navigateLink);
 }
 
 // handles click and keydown events on the link

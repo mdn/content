@@ -25,7 +25,7 @@ new VideoEncoder(options)
         - `decoderConfig` {{Optional_Inline}}
           - : An object containing:
             - `codec`
-              - : A string containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#video-codec-registry).
+              - : A string containing a [valid codec string](https://w3c.github.io/webcodecs/codec_registry.html#video-codec-registry).
             - `description` {{Optional_Inline}}
               - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} containing a sequence of codec-specific bytes, commonly known as "extradata".
             - `codedWidth` {{Optional_Inline}}

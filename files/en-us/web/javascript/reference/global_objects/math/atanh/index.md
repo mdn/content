@@ -1,5 +1,6 @@
 ---
 title: Math.atanh()
+short-title: atanh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atanh
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.atanh

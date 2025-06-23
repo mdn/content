@@ -90,8 +90,6 @@ const processor = {
       frame.data[i * 4 + 2] = grey;
     }
     this.ctx1.putImageData(frame, 0, 0);
-
-    return;
   },
 };
 ```

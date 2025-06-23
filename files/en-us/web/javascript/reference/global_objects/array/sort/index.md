@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.sort()
+short-title: sort()
 slug: Web/JavaScript/Reference/Global_Objects/Array/sort
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.sort
@@ -223,9 +224,7 @@ temporary array to achieve the right order.
 const data = ["delta", "alpha", "charlie", "bravo"];
 
 // temporary array holds objects with position and sort-value
-const mapped = data.map((v, i) => {
-  return { i, value: someSlowOperation(v) };
-});
+const mapped = data.map((v, i) => ({ i, value: someSlowOperation(v) }));
 
 // sorting the mapped array containing the reduced values
 mapped.sort((a, b) => {

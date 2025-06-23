@@ -1,5 +1,6 @@
 ---
-title: Sec-Fetch-Dest
+title: Sec-Fetch-Dest header
+short-title: Sec-Fetch-Dest
 slug: Web/HTTP/Reference/Headers/Sec-Fetch-Dest
 page-type: http-header
 browser-compat: http.headers.Sec-Fetch-Dest

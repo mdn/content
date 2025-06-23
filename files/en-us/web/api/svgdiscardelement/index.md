@@ -3,15 +3,15 @@ title: SVGDiscardElement
 slug: Web/API/SVGDiscardElement
 page-type: web-api-interface
 status:
-  - experimental
+  - deprecated
 browser-compat: api.SVGDiscardElement
 ---
 
-{{APIRef("SVG")}}{{SeeCompatTable}}
+{{APIRef("SVG")}}{{deprecated_header}}
 
-The **`SVGDiscardElement`** interface is an interface for the {{SVGElement("discard")}} element.
+The **`SVGDiscardElement`** interface is an interface for the deprecated `<discard>` element.
 
-Note that it does not provide access to the specific attributes of the {{SVGElement("discard")}} element (`begin` and `href`).
+Note that it does not provide access to the specific attributes of the `<discard>` element (`begin` and `href`).
 
 {{InheritanceDiagram}}
 
@@ -30,7 +30,3 @@ _Inherits methods from its parent interface, {{domxref("SVGAnimationElement")}}.
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{SVGElement("discard")}} SVG element

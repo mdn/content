@@ -8,7 +8,7 @@ browser-compat: api.HTMLTextAreaElement.setSelectionRange
 
 {{APIRef("HTML DOM")}}
 
-The **`setSelectionRange()`** method of the {{domxref("HTMLTextAreaElement")}} interface sets the start and end positions of the current text selection, and optionally the direction, in an {{HTMLElement("textarea")}} element. The direction indicates the in which selection should be considered to have occurred; for example, that the selection was set by the user clicking and dragging from the end of the selected text toward the beginning. In addition, the {{domxref("HTMLTextAreaElement.select_event", "select")}} and {{domxref("HTMLTextAreaElement.selectionchange_event", "selectchange")}} events are fired.
+The **`setSelectionRange()`** method of the {{domxref("HTMLTextAreaElement")}} interface sets the start and end positions of the current text selection, and optionally the direction, in a {{HTMLElement("textarea")}} element. The direction indicates the in which selection should be considered to have occurred; for example, that the selection was set by the user clicking and dragging from the end of the selected text toward the beginning. In addition, the {{domxref("HTMLTextAreaElement.select_event", "select")}} and {{domxref("HTMLTextAreaElement.selectionchange_event", "selectchange")}} events are fired.
 
 This method also updates the {{domxref("HTMLTextAreaElement.selectionStart")}}, {{domxref("HTMLTextAreaElement.selectionEnd")}}, and {{domxref("HTMLTextAreaElement.selectionDirection")}} properties.
 

@@ -1,5 +1,6 @@
 ---
 title: FinalizationRegistry.prototype.register()
+short-title: register()
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/register
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.FinalizationRegistry.register

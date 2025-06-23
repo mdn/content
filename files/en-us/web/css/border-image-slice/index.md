@@ -125,7 +125,7 @@ The following example shows a `<div>` with a border image set on it. The source 
 
 ![nice multi-colored diamonds](border-diamonds.png)
 
-The diamonds are 30px across, therefore setting 30 pixels as the value for both [`border-width`](/en-US/docs/Web/CSS/border-width) and `border-image-slice` will get you complete and fairly crisp diamonds in your border:
+The diamonds are 30px across, so setting 30 pixels as the value for both [`border-width`](/en-US/docs/Web/CSS/border-width) and `border-image-slice` will get you complete and fairly crisp diamonds in your border:
 
 ```css
 border-width: 30px;
@@ -172,7 +172,7 @@ div > div {
   height: 200px;
   border-width: 30px;
   border-style: solid;
-  border-image: url(https://interactive-examples.mdn.mozilla.net/media/examples/border-diamonds.png);
+  border-image: url(/shared-assets/images/examples/border-diamonds.png);
   border-image-slice: 30;
   border-image-repeat: round;
 }

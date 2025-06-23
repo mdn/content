@@ -117,7 +117,7 @@ For specific cases where it is seen as beneficial, a separate **Formal syntax** 
 The aim is to make the syntax block as pure and unambiguous a definition of the feature's syntax as possible — don't include any irrelevant syntax. For example, you may see this syntax form used to describe promises in many places on the site:
 
 ```js-nolint
-caches.match(request, options).then(function (response) {
+caches.match(request, options).then((response) => {
   // Do something with the response
 })
 ```

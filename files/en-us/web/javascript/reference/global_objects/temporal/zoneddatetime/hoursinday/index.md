@@ -1,5 +1,6 @@
 ---
 title: Temporal.ZonedDateTime.prototype.hoursInDay
+short-title: hoursInDay
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/hoursInDay
 page-type: javascript-instance-accessor-property
 status:

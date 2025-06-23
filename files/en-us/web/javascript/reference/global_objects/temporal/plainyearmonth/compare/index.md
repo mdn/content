@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainYearMonth.compare()
+short-title: compare()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth/compare
 page-type: javascript-static-method
 status:

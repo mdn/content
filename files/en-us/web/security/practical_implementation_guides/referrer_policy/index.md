@@ -1,10 +1,10 @@
 ---
 title: Referrer policy configuration
+short-title: Referrer policy
 slug: Web/Security/Practical_implementation_guides/Referrer_policy
 page-type: guide
+sidebar: security
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
 The [`Referrer-Policy`](/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy) header provides fine-grained control over how and when browsers transmit the [`Referer`](/en-US/docs/Web/HTTP/Reference/Headers/Referer) header.
 

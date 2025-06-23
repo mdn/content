@@ -200,7 +200,7 @@ The behavior of registered custom properties is different. When explicitly defin
 ```css
 @property --theme-color {
   initial-value: rebeccapurple;
-  inherited: true;
+  inherits: true;
 }
 
 :root {
@@ -281,8 +281,8 @@ const body = document.querySelector("body");
 const other = document.getElementById("other");
 const color = document.getElementById("color");
 
-for (let i = 0; i < radios.length; i++) {
-  radios[i].addEventListener("change", (e) => {
+for (const radio of radios) {
+  radio.addEventListener("change", (e) => {
     body.style.setProperty("--theme", e.target.value);
   });
 }

@@ -1,5 +1,6 @@
 ---
 title: "ARIA: option role"
+short-title: option
 slug: Web/Accessibility/ARIA/Reference/Roles/option_role
 page-type: aria-role
 spec-urls:
@@ -91,8 +92,6 @@ From the assistive technology user's perspective, the heading does not exist sin
 
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
   - : Used to label the option. If the label is present in the DOM, `aria-labelledby` should be used instead. Optional.
-
-(For further details and a full list of ARIA states and properties see the <a href="https://www.w3.org/TR/wai-aria-1.1/#option">ARIA `option` (role)</a> documentation.)
 
 ## Specifications
 

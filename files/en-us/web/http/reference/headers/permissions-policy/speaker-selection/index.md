@@ -1,5 +1,6 @@
 ---
-title: "Permissions-Policy: speaker-selection"
+title: "Permissions-Policy: speaker-selection directive"
+short-title: speaker-selection
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/speaker-selection
 page-type: http-permissions-policy-directive
 status:

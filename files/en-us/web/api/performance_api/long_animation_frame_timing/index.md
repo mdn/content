@@ -78,7 +78,7 @@ Beyond the standard data returned by a {{domxref("PerformanceEntry")}} entry, th
 - {{domxref("PerformanceLongAnimationFrameTiming.blockingDuration", "blockingDuration")}}
   - : A {{domxref("DOMHighResTimeStamp")}} indicating the total time in milliseconds for which the main thread was blocked from responding to high priority tasks, such as user input. This is calculated by taking all the [long tasks](/en-US/docs/Web/API/PerformanceLongTaskTiming#description) within the LoAF that have a `duration` of more than `50ms`, subtracting `50ms` from each, adding the rendering time to the longest task time, and summing the results.
 - {{domxref("PerformanceLongAnimationFrameTiming.firstUIEventTimestamp", "firstUIEventTimestamp")}}
-  - : A {{domxref("DOMHighResTimeStamp")}} indicating the time of the first UI event — such as a mouse or keyboard event — to be queued during the current animation frame.
+  - : A {{domxref("DOMHighResTimeStamp")}} indicating the time of the first UI event — such as a mouse or keyboard event — to be processed during the current animation frame. Note this timestamp can be before the start of this animation frame if there was a delay between the event happening and it being processed.
 - {{domxref("PerformanceLongAnimationFrameTiming.renderStart", "renderStart")}}
   - : A {{domxref("DOMHighResTimeStamp")}} indicating the start time of the rendering cycle, which includes {{domxref("Window.requestAnimationFrame()")}} callbacks, style and layout calculation, {{domxref("ResizeObserver")}} callbacks, and {{domxref("IntersectionObserver")}} callbacks.
 - {{domxref("PerformanceLongAnimationFrameTiming.styleAndLayoutStart", "styleAndLayoutStart")}}

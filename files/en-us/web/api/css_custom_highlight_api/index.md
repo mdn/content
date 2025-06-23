@@ -178,9 +178,7 @@ query.addEventListener("input", () => {
 
   // Iterate over all text nodes and find matches.
   const ranges = allTextNodes
-    .map((el) => {
-      return { el, text: el.textContent.toLowerCase() };
-    })
+    .map((el) => ({ el, text: el.textContent.toLowerCase() }))
     .map(({ text, el }) => {
       const indices = [];
       let startPos = 0;

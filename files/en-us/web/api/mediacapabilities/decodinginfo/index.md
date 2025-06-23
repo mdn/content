@@ -89,7 +89,7 @@ decodingInfo(configuration)
         - `initDataType` {{optional_inline}}
 
           - : A string indicating the data type name the initialization data format, such as `"cenc"`, `"keyids"` and `"webm"`.
-            Allowed names are defined in the [Encrypted Media Extensions Initialization Data Format Registry](https://www.w3.org/TR/eme-initdata-registry/).
+            Allowed names are defined in the [Encrypted Media Extensions Initialization Data Format Registry](https://w3c.github.io/encrypted-media/format-registry/initdata/).
 
         - `distinctiveIdentifier` {{optional_inline}}
 

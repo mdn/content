@@ -159,7 +159,7 @@ window.addEventListener("message", (event) => {
   // message is to call postMessage on event.source and provide
   // event.origin as the targetOrigin.
   event.source.postMessage(
-    "hi there yourself! the secret response " + "is: rheeeeet!",
+    "hi there yourself! the secret response is: rheeeeet!",
     event.origin,
   );
 });

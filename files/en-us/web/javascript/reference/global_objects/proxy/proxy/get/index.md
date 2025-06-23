@@ -1,5 +1,6 @@
 ---
 title: handler.get()
+short-title: get()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.get
@@ -18,7 +19,7 @@ const monster1 = {
 };
 
 const handler1 = {
-  get: function (target, prop, receiver) {
+  get(target, prop, receiver) {
     if (prop === "secret") {
       return `${target.secret.substring(0, 4)} ... shhhh!`;
     }

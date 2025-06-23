@@ -1,5 +1,6 @@
 ---
-title: "Permissions-Policy: picture-in-picture"
+title: "Permissions-Policy: picture-in-picture directive"
+short-title: picture-in-picture
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/picture-in-picture
 page-type: http-permissions-policy-directive
 status:

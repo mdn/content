@@ -1,5 +1,6 @@
 ---
 title: Number.isInteger()
+short-title: isInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isInteger
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Number.isInteger

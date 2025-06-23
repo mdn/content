@@ -22,4 +22,4 @@ Web standards are designed in such a way as to minimize the ability of a website
 ## See also
 
 - [Cover Your Tracks](https://coveryourtracks.eff.org/): a tool to show the data a website can use to fingerprint your browser.
-- [Mitigating Browser Fingerprinting in Web Specifications](https://www.w3.org/TR/fingerprinting-guidance/): best practices for specification authors to prevent fingerprinting.
+- [Mitigating Browser Fingerprinting in Web Specifications](https://w3c.github.io/fingerprinting-guidance/): best practices for specification authors to prevent fingerprinting.

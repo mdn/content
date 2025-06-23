@@ -32,11 +32,17 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```html
-<!-- Scroll up the document by 5 lines -->
-<button id="scroll-up" onclick="scrollByLines(-5);">Up 5 lines</button>
+<button id="scroll-up">Up 5 lines</button>
+<button id="scroll-down">Down 5 lines</button>
+```
 
-<!-- Scroll down the document by 5 lines -->
-<button id="scroll-down" onclick="scrollByLines(5);">Down 5 lines</button>
+```js
+document.getElementById("scroll-up").addEventListener("click", () => {
+  window.scrollByLines(-5);
+});
+document.getElementById("scroll-down").addEventListener("click", () => {
+  window.scrollByLines(5);
+});
 ```
 
 ## Specifications

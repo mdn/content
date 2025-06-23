@@ -304,13 +304,15 @@ The `Document` interface for HTML documents inherit from the {{DOMxRef("HTMLDocu
   - : Returns the current value of the current range for a formatting command.
 - {{DOMxRef("Document.write()")}} {{deprecated_inline}}
   - : Writes text in a document.
-- {{DOMxRef("Document.writeln()")}}
+- {{DOMxRef("Document.writeln()")}} {{deprecated_inline}}
   - : Writes a line of text in a document.
 
 ## Static methods
 
 _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventTarget")}} interfaces._
 
+- {{domxref("Document/parseHTML_static", "Document.parseHTML()")}}
+  - : Creates a new `Document` object from a string of HTML in an XSS-safe manner with sanitization.
 - {{domxref("Document/parseHTMLUnsafe_static", "Document.parseHTMLUnsafe()")}}
   - : Creates a new `Document` object from a string of HTML without performing sanitization.
     The string may contain declarative shadow roots.
@@ -329,15 +331,6 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when a content security policy is violated.
 - {{DOMxRef("Document/visibilitychange_event", "visibilitychange")}}
   - : Fired when the content of a tab has become visible or has been hidden.
-
-### Clipboard events
-
-- {{DOMxRef("Document/copy_event", "copy")}}
-  - : Fired when the user initiates a copy action through the browser's user interface.
-- {{DOMxRef("Document/cut_event", "cut")}}
-  - : Fired when the user initiates a cut action through the browser's user interface.
-- {{DOMxRef("Document/paste_event", "paste")}}
-  - : Fired when the user initiates a paste action through the browser's user interface.
 
 ### Fullscreen events
 

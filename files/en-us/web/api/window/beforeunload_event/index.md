@@ -24,9 +24,10 @@ The last two mechanisms are legacy features; best practice is to trigger the dia
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("beforeunload", (event) => {});
-onbeforeunload = (event) => {};
+```js-nolint
+addEventListener("beforeunload", (event) => { })
+
+onbeforeunload = (event) => { }
 ```
 
 ## Event type

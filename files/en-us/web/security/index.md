@@ -1,7 +1,9 @@
 ---
 title: Security on the web
+short-title: Security
 slug: Web/Security
 page-type: landing-page
+sidebar: security
 ---
 
 Websites contain several different types of information. Some of it is non-sensitive, for example the copy shown on the public pages. Some of it is sensitive, for example customer usernames, passwords, and banking information, or internal algorithms and private product information.
@@ -174,7 +176,3 @@ Some of these guides are directly related to the [HTTP Observatory](/en-US/obser
 - [Learn: Website security](/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security)
 - [Mozilla Security Blog](https://blog.mozilla.org/security/)
 - [OWASP Cheat Sheet series](https://cheatsheetseries.owasp.org/index.html)
-
-<section id="Quick_links">
-{{ListSubpages("/en-US/docs/Web/Security", "1", "0", "1")}}
-</section>

@@ -1,5 +1,6 @@
 ---
-title: "CSP: form-action"
+title: "Content-Security-Policy: form-action directive"
+short-title: form-action
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/form-action
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.form-action

@@ -1,5 +1,6 @@
 ---
 title: ArrayBuffer.prototype.detached
+short-title: detached
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/detached
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.ArrayBuffer.detached

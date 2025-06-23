@@ -2,12 +2,10 @@
 title: MediaStreamTrackProcessor
 slug: Web/API/MediaStreamTrackProcessor
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.MediaStreamTrackProcessor
 ---
 
-{{APIRef("Insertable Streams for MediaStreamTrack API")}}{{SeeCompatTable}}{{AvailableInWorkers("dedicated")}}
+{{APIRef("Insertable Streams for MediaStreamTrack API")}}{{AvailableInWorkers("dedicated")}}
 
 > [!WARNING]
 > Browsers differ on which global context they expose this interface in (e.g., only window in some browsers and only dedicated worker in others), making them incompatible. Keep this in mind when comparing support.
@@ -16,14 +14,14 @@ The **`MediaStreamTrackProcessor`** interface of the [Insertable Streams for Med
 
 ## Constructor
 
-- {{domxref("MediaStreamTrackProcessor.MediaStreamTrackProcessor", "MediaStreamTrackProcessor()")}} {{Experimental_Inline}}
+- {{domxref("MediaStreamTrackProcessor.MediaStreamTrackProcessor", "MediaStreamTrackProcessor()")}}
   - : Creates a new `MediaStreamTrackProcessor` object.
 - {{domxref("MediaStreamTrackProcessor.MediaStreamTrackProcessor", "window.MediaStreamTrackProcessor()")}} {{Experimental_Inline}} {{Non-standard_Inline}}
   - : Creates a new `MediaStreamTrackProcessor` object on the {{Glossary("main thread")}} that can process both video and audio.
 
 ## Instance properties
 
-- {{domxref("MediaStreamTrackProcessor.readable")}} {{Experimental_Inline}}
+- {{domxref("MediaStreamTrackProcessor.readable")}}
   - : Returns a {{domxref("ReadableStream")}}.
 
 ## Examples
@@ -35,7 +33,9 @@ const stream = await navigator.mediaDevices.getUserMedia({ video: true });
 const [track] = stream.getVideoTracks();
 const worker = new Worker("worker.js");
 worker.postMessage({ track }, [track]);
-const { data } = await new Promise((r) => (worker.onmessage = r));
+const { data } = await new Promise((r) => {
+  worker.onmessage = r;
+});
 video.srcObject = new MediaStream([data.track]);
 ```
 

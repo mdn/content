@@ -2,9 +2,8 @@
 title: Tutorials
 slug: Web/Progressive_web_apps/Tutorials
 page-type: landing-page
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 This page lists tutorials to help learn how to develop PWAs. Tutorials walk through the steps of creating an app, from start to finish, explaining how the different features of the app are implemented.
 

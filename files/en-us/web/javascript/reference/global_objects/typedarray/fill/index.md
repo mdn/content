@@ -1,5 +1,6 @@
 ---
 title: TypedArray.prototype.fill()
+short-title: fill()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/fill
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.fill

@@ -18,7 +18,7 @@ An integer.
 
 ```js
 window.addEventListener("error", (ev) => {
-  console.log("The error occur in column: " + ev.colno);
+  console.log(`The error occur in column: ${ev.colno}`);
 });
 ```
 

@@ -1,5 +1,6 @@
 ---
 title: Date.prototype.toTemporalInstant()
+short-title: toTemporalInstant()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toTemporalInstant
 page-type: javascript-instance-method
 status:

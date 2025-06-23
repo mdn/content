@@ -487,6 +487,8 @@ See the [Topics API](/en-US/docs/Web/API/Topics_API) documentation for more info
   - : The [`Signed-Headers`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#name-the-signed-headers-header) header field identifies an ordered list of response header fields to include in a signature.
 - {{HTTPHeader("Speculation-Rules")}} {{experimental_inline}}
   - : Provides a list of URLs pointing to text resources containing [speculation rule](/en-US/docs/Web/API/Speculation_Rules_API) JSON definitions. When the response is an HTML document, these rules will be added to the document's speculation rule set.
+- {{HTTPHeader("Sec-Speculation-Tags")}} {{experimental_inline}}
+  - : Contains one or more tag values from the speculation rules that resulted in the speculation so a server can identify which rule(s) caused a speculation and potentially block them.
 - {{HTTPHeader("Supports-Loading-Mode")}} {{experimental_inline}}
   - : Set by a navigation target to opt-in to using various higher-risk loading modes. For example, cross-origin, same-site [prerendering](/en-US/docs/Web/API/Speculation_Rules_API#using_prerendering) requires a `Supports-Loading-Mode` value of `credentialed-prerender`.
 
@@ -501,7 +503,7 @@ See the [Topics API](/en-US/docs/Web/API/Topics_API) documentation for more info
 - {{HTTPHeader("X-DNS-Prefetch-Control")}} {{non-standard_inline}}
   - : Controls DNS prefetching, a feature by which browsers proactively perform domain name resolution on both links that the user may choose to follow as well as URLs for items referenced by the document, including images, CSS, JavaScript, and so forth.
 - {{HTTPHeader("X-Robots-Tag")}} {{non-standard_inline}}
-  - : The [`X-Robots-Tag`](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag) HTTP header is used to indicate how a web page is to be indexed within public search engine results. The header is effectively equivalent to `<meta name="robots" content="…">`.
+  - : The [`X-Robots-Tag`](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag) HTTP header is used to indicate how a web page is to be indexed within public search engine results. The header is equivalent to [`<meta name="robots">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/robots) elements.
 
 ## Deprecated headers
 

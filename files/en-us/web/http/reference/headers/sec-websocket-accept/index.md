@@ -1,5 +1,6 @@
 ---
-title: Sec-WebSocket-Accept
+title: Sec-WebSocket-Accept header
+short-title: Sec-WebSocket-Accept
 slug: Web/HTTP/Reference/Headers/Sec-WebSocket-Accept
 page-type: http-header
 browser-compat: http.headers.Sec-WebSocket-Accept

@@ -2,9 +2,8 @@
 title: How to turn off form autocompletion
 slug: Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
 page-type: guide
+sidebar: security
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
 This article explains how to disable autocomplete for form fields on a website.
 

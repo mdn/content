@@ -1,5 +1,6 @@
 ---
-title: "Permissions-Policy: window-management"
+title: "Permissions-Policy: window-management directive"
+short-title: window-management
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/window-management
 page-type: http-permissions-policy-directive
 status:

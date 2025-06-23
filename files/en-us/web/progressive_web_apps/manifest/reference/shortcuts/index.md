@@ -3,9 +3,8 @@ title: shortcuts
 slug: Web/Progressive_web_apps/Manifest/Reference/shortcuts
 page-type: web-manifest-member
 browser-compat: manifests.webapp.shortcuts
+sidebar: pwasidebar
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 The `shortcuts` manifest member is used to specify links to key tasks or pages within your web application.
 Browsers can use this information to create a context menu, which is typically displayed when a user interacts with the web app's icon.

@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainYearMonth.prototype.add()
+short-title: add()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth/add
 page-type: javascript-instance-method
 status:

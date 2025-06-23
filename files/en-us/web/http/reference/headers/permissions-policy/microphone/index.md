@@ -1,5 +1,6 @@
 ---
-title: "Permissions-Policy: microphone"
+title: "Permissions-Policy: microphone directive"
+short-title: microphone
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/microphone
 page-type: http-permissions-policy-directive
 status:

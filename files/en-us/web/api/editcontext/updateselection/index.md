@@ -48,7 +48,7 @@ const editContext = new EditContext();
 canvas.editContext = editContext;
 
 canvas.addEventListener("keydown", (e) => {
-  if (e.key == "ArrowLeft") {
+  if (e.key === "ArrowLeft") {
     const newPosition = Math.max(editContext.selectionStart - 1, 0);
 
     if (e.shiftKey) {
@@ -56,7 +56,7 @@ canvas.addEventListener("keydown", (e) => {
     } else {
       editContext.updateSelection(newPosition, newPosition);
     }
-  } else if (e.key == "ArrowRight") {
+  } else if (e.key === "ArrowRight") {
     const newPosition = Math.min(
       editContext.selectionEnd + 1,
       editContext.text.length,

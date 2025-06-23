@@ -53,8 +53,6 @@ sidebar:
         title: Guide_Iterators_generators
       - link: /Web/JavaScript/Guide/Internationalization
         title: Guide_Internationalization
-      - link: /Web/JavaScript/Guide/Meta_programming
-        title: Guide_Meta
       - link: /Web/JavaScript/Guide/Modules
         title: Guide_Modules
   - title: Intermediate
@@ -81,6 +79,8 @@ sidebar:
     children:
       - link: /Web/JavaScript/Guide/Inheritance_and_the_prototype_chain
         title: Inheritance
+      - link: /Web/JavaScript/Guide/Meta_programming
+        title: Guide_Meta
       - link: /Web/JavaScript/Guide/Memory_management
         title: Memory_management
   - type: section

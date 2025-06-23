@@ -5,9 +5,10 @@ page-type: web-manifest-member
 status:
   - experimental
 browser-compat: manifests.webapp.file_handlers
+sidebar: pwasidebar
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The `file_handlers` member specifies an array of objects representing the types of files an installed [progressive web app (PWA)](/en-US/docs/Web/Progressive_web_apps) can handle.
 

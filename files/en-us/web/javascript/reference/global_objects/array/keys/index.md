@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.keys()
+short-title: keys()
 slug: Web/JavaScript/Reference/Global_Objects/Array/keys
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.keys

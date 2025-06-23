@@ -1,5 +1,6 @@
 ---
-title: "CSP: style-src"
+title: "Content-Security-Policy: style-src directive"
+short-title: style-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/style-src
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.style-src

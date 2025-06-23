@@ -2,12 +2,10 @@
 title: view-timeline
 slug: Web/CSS/view-timeline
 page-type: css-shorthand-property
-status:
-  - experimental
 browser-compat: css.properties.view-timeline
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`view-timeline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) is used to define a _named view progress timeline_, which is progressed through based on the change in visibility of an element (known as the _subject_) inside a scrollable element (_scroller_). `view-timeline` is set on the subject.
 

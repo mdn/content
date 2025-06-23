@@ -39,7 +39,7 @@ const stats = await myPeerConnection.getStats();
 for (const id of stats.keys()) {
   // Get dictionary associated with key (id)
   const stat = stats.get(id);
-  if (stat.type != "outbound-rtp") continue;
+  if (stat.type !== "outbound-rtp") continue;
   Object.keys(stat).forEach((statName) => {
     console.log(`${statName}: ${report[statName]}`);
   });

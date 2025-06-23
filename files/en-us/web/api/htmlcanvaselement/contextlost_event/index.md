@@ -18,10 +18,10 @@ User code can prevent the context from being restored by calling [`Event.prevent
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("contextlost", (event) => {});
+```js-nolint
+addEventListener("contextlost", (event) => { })
 
-oncontextlost = (event) => {};
+oncontextlost = (event) => { }
 ```
 
 ## Event type

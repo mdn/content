@@ -1,5 +1,6 @@
 ---
-title: Content-Type
+title: Content-Type header
+short-title: Content-Type
 slug: Web/HTTP/Reference/Headers/Content-Type
 page-type: http-header
 browser-compat: http.headers.Content-Type

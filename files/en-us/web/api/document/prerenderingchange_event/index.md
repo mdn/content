@@ -16,10 +16,10 @@ The **`prerenderingchange`** event is fired on a prerendered document when it is
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("prerenderingchange", (event) => {});
+```js-nolint
+addEventListener("prerenderingchange", (event) => { })
 
-prerenderingchange = (event) => {};
+onprerenderingchange = (event) => { }
 ```
 
 ## Event type

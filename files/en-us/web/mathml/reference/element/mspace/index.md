@@ -27,13 +27,15 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 ```html
 <math display="block">
   <mn>1</mn>
-  <mspace
-    depth="40px"
-    height="20px"
-    width="100px"
-    style="background: lightblue" />
+  <mspace depth="40px" height="20px" width="100px" />
   <mn>2</mn>
 </math>
+```
+
+```css
+mspace {
+  background: lightblue;
+}
 ```
 
 {{EmbedLiveSample('Examples')}}

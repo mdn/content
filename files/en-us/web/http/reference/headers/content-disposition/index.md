@@ -1,5 +1,6 @@
 ---
-title: Content-Disposition
+title: Content-Disposition header
+short-title: Content-Disposition
 slug: Web/HTTP/Reference/Headers/Content-Disposition
 page-type: http-header
 browser-compat: http.headers.Content-Disposition

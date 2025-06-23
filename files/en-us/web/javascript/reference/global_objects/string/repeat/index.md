@@ -1,5 +1,6 @@
 ---
 title: String.prototype.repeat()
+short-title: repeat()
 slug: Web/JavaScript/Reference/Global_Objects/String/repeat
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.repeat
@@ -28,9 +29,7 @@ repeat(count)
 ### Parameters
 
 - `count`
-  - : An integer between `0` and
-    {{jsxref("Number/POSITIVE_INFINITY", "+Infinity")}}, indicating the
-    number of times to repeat the string.
+  - : An integer between `0` and {{jsxref("Number/POSITIVE_INFINITY", "Infinity")}}, indicating the number of times to repeat the string.
 
 ### Return value
 

@@ -1,5 +1,6 @@
 ---
-title: "CSP: report-uri"
+title: "Content-Security-Policy: report-uri directive"
+short-title: report-uri
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/report-uri
 page-type: http-csp-directive
 status:
@@ -55,7 +56,8 @@ Content-Security-Policy: report-uri <uri> <uri>;
 
 The report JSON object is sent via an HTTP `POST` operation with a {{HTTPHeader("Content-Type")}} of `application/csp-report`.
 
-> [!NOTE] Violation reports should be considered attacker-controlled data.
+> [!NOTE]
+> Violation reports should be considered attacker-controlled data.
 > The content should be properly sanitized before storing or rendering.
 > This is particularly true of the [script-sample](#script-sample) property, if supplied.
 
@@ -136,7 +138,7 @@ As you can see, the report includes the full path to the violating resource in `
 This is not always the case.
 For example, if `signup.html` attempted to load CSS from `http://anothercdn.example.com/stylesheet.css`, the browser would _not_ include the full path, only the origin,
 (`http://anothercdn.example.com`) in order to prevent leaking sensitive information about cross-origin resources.
-The CSP specification [gives an explanation](https://www.w3.org/TR/CSP/#security-violation-reports) of this behavior.
+The CSP specification [gives an explanation](https://w3c.github.io/webappsec-csp/#security-violation-reports) of this behavior.
 
 ### CSP violation report with Content-Security-Policy-Report-Only
 

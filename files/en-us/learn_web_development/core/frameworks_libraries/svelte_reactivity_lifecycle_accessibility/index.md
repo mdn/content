@@ -94,6 +94,7 @@ Now we'll tackle the _Check All_ and _Remove Completed_ buttons. Let's create a 
    ```svelte
    <script>
      import { createEventDispatcher } from "svelte";
+
      const dispatch = createEventDispatcher();
 
      let completed = true;

@@ -21,8 +21,16 @@ In the following example, we retrieve the list of rectangles for a {{htmlelement
 First, the HTML:
 
 ```html
-<div id="box" style="width: 50px; height: 20px; border: 1px solid black;"></div>
+<div id="box"></div>
 <div id="output"></div>
+```
+
+```css
+#box {
+  width: 50px;
+  height: 20px;
+  border: 1px solid black;
+}
 ```
 
 Now the JavaScript:

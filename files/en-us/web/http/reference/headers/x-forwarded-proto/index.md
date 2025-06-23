@@ -1,5 +1,6 @@
 ---
-title: X-Forwarded-Proto
+title: X-Forwarded-Proto header
+short-title: X-Forwarded-Proto
 slug: Web/HTTP/Reference/Headers/X-Forwarded-Proto
 page-type: http-header
 status:

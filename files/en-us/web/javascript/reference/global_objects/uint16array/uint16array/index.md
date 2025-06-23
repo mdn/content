@@ -1,5 +1,6 @@
 ---
 title: Uint16Array() constructor
+short-title: Uint16Array()
 slug: Web/JavaScript/Reference/Global_Objects/Uint16Array/Uint16Array
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Uint16Array.Uint16Array

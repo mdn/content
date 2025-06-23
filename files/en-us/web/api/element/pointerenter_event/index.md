@@ -14,10 +14,10 @@ The `pointerenter` event fires when a pointing device is moved into the hit test
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("pointerenter", (event) => {});
+```js-nolint
+addEventListener("pointerenter", (event) => { })
 
-onpointerenter = (event) => {};
+onpointerenter = (event) => { }
 ```
 
 ## Event type

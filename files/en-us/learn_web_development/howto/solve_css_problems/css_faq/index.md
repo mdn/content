@@ -261,8 +261,8 @@ Browsers no longer use CSS prefixes when implementing new experimental features.
 If you are required to use prefixes in your work, write the prefixed versions first followed by the non-prefixed standard version. This way the standard version will automatically override the prefixed versions when supported. For example:
 
 ```css
--webkit-text-stroke: 4px navy;
-text-stroke: 4px navy;
+-webkit-border-after-color: navy;
+border-block-end-color: navy;
 ```
 
 > [!NOTE]

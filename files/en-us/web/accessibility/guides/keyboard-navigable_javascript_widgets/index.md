@@ -146,7 +146,11 @@ If your widget handles a key event, prevent the browser from also handling it (f
 For example:
 
 ```html
-<span tabindex="-1" onkeydown="return handleKeyDown();">…</span>
+<span tabindex="-1">…</span>
+```
+
+```js
+span.onkeydown = handleKeyDown;
 ```
 
 If `handleKeyDown()` returns `false`, the event will be consumed, preventing the browser from performing any action based on the keystroke.

@@ -27,7 +27,7 @@ This article provides information about the changes in Firefox 130 that affect d
 
 #### Removals
 
-- {{domxref('WebGLRenderingContext.drawingBufferColorSpace')}} and [`WebGL2RenderingContext.drawingBufferColorSpace`](/en-US/docs/Web/API/WebGL2RenderingContext) were prematurely released (without an an implementation) in [Firefox 127](/en-US/docs/Mozilla/Firefox/Releases/127), and have been removed ([Firefox bug 1909559](https://bugzil.la/1909559)).
+- {{domxref('WebGLRenderingContext.drawingBufferColorSpace')}} and [`WebGL2RenderingContext.drawingBufferColorSpace`](/en-US/docs/Web/API/WebGL2RenderingContext) were prematurely released (without an implementation) in [Firefox 127](/en-US/docs/Mozilla/Firefox/Releases/127), and have been removed ([Firefox bug 1909559](https://bugzil.la/1909559)).
 
 ### WebAssembly
 

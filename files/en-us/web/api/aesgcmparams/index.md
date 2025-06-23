@@ -29,7 +29,7 @@ For details of how to supply appropriate values for this parameter, see the spec
 
   - : A `Number`. This determines the size in bits of the authentication tag generated in the encryption operation and used for authentication in the corresponding decryption.
 
-    According to the [Web Crypto specification](https://www.w3.org/TR/WebCryptoAPI/#dfn-AesGcmParams) this must have one of the following values: 32, 64, 96, 104, 112, 120, or 128. The AES-GCM specification recommends that it should be 96, 104, 112, 120 or 128, although 32 or 64 bits may be acceptable in some applications: [Appendix C of the specification](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38d.pdf#%5B%7B%22num%22%3A92%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22XYZ%22%7D%2C0%2C792%2Cnull%5D) provides additional guidance here.
+    The [Web Crypto API specification](https://w3c.github.io/webcrypto/#aes-gcm-operations-encrypt) requires this to have one of the following values: 32, 64, 96, 104, 112, 120, or 128. On the other hand, the AES-GCM specification recommends that it should be 96, 104, 112, 120, or 128, although 32 or 64 bits may be acceptable in some applications. For additional guidance, see [Appendix C](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38d.pdf#%5B%7B%22num%22%3A92%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22XYZ%22%7D%2C0%2C792%2Cnull%5D) of the NIST Publication on "Recommendation for Block Cipher Modes of Operation".
 
     `tagLength` is optional and defaults to 128 if it is not specified.
 

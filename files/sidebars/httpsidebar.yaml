@@ -10,28 +10,35 @@ sidebar:
   - /Web/HTTP/Guides/Evolution_of_HTTP
   - /Web/HTTP/Guides/Session
   - /Web/HTTP/Guides/Messages
-  - /Web/HTTP/Guides/MIME_types
+  - type: listSubPages
+    path: /Web/HTTP/Guides/MIME_types
+    link: /Web/HTTP/Guides/MIME_types
   - /Web/HTTP/Guides/Compression
-  - /Web/HTTP/Guides/Compression_dictionary_transport
   - /Web/HTTP/Guides/Caching
   - /Web/HTTP/Guides/Authentication
   - /Web/HTTP/Guides/Cookies
   - /Web/HTTP/Guides/Redirections
   - /Web/HTTP/Guides/Conditional_requests
   - /Web/HTTP/Guides/Range_requests
-  - /Web/HTTP/Guides/Content_negotiation
+  - /Web/HTTP/Guides/Client_hints
+  - /Web/HTTP/Guides/Compression_dictionary_transport
+  - /Web/HTTP/Guides/Network_Error_Logging
+  - type: listSubPages
+    path: /Web/HTTP/Guides/Content_negotiation
+    link: /Web/HTTP/Guides/Content_negotiation
+  - /Web/HTTP/Guides/Browser_detection_using_the_user_agent
   - /Web/HTTP/Guides/Connection_management_in_HTTP_1.x
   - /Web/HTTP/Guides/Protocol_upgrade_mechanism
-  - /Web/HTTP/Guides/Proxy_servers_and_tunneling
-  - /Web/HTTP/Guides/Client_hints
+  - type: listSubPages
+    path: /Web/HTTP/Guides/Proxy_servers_and_tunneling
+    link: /Web/HTTP/Guides/Proxy_servers_and_tunneling
   - title: Security
     details: closed
     children:
-      - /Web/Security/Practical_implementation_guides
       - link: /en-US/observatory
         title: HTTP Observatory
+      - /Web/Security/Practical_implementation_guides
       - /Web/HTTP/Guides/Permissions_Policy
-      - /Web/HTTP/Guides/CSP
       - /Web/HTTP/Guides/Cross-Origin_Resource_Policy
       - /Web/HTTP/Guides/CORS
       - type: listSubPages
@@ -40,6 +47,10 @@ sidebar:
         title: CORS_errors
         details: closed
         code: true
+      - type: listSubPages
+        path: /Web/HTTP/Guides/CSP
+        link: /Web/HTTP/Guides/CSP
+        details: closed
   - type: section
     link: /Web/HTTP/Reference
     title: Reference

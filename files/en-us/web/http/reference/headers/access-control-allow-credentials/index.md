@@ -1,5 +1,6 @@
 ---
-title: Access-Control-Allow-Credentials
+title: Access-Control-Allow-Credentials header
+short-title: Access-Control-Allow-Credentials
 slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Credentials
 page-type: http-header
 browser-compat: http.headers.Access-Control-Allow-Credentials

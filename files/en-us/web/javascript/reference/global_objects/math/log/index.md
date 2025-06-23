@@ -1,5 +1,6 @@
 ---
 title: Math.log()
+short-title: log()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.log

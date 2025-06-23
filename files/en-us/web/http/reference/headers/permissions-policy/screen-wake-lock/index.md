@@ -1,5 +1,6 @@
 ---
-title: "Permissions-Policy: screen-wake-lock"
+title: "Permissions-Policy: screen-wake-lock directive"
+short-title: screen-wake-lock
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/screen-wake-lock
 page-type: http-permissions-policy-directive
 status:

@@ -1,5 +1,6 @@
 ---
 title: String.prototype.sub()
+short-title: sub()
 slug: Web/JavaScript/Reference/Global_Objects/String/sub
 page-type: javascript-instance-method
 status:

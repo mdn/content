@@ -63,9 +63,9 @@ These properties are listed in the order in which they occur during the navigati
 - {{domxref("PerformanceTiming.domComplete")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : When the parser finished its work on the main document, that is when its {{domxref("Document.readyState")}} changes to `'complete'` and the corresponding {{domxref("Document/readystatechange_event", "readystatechange")}} event is thrown.
 - {{domxref("PerformanceTiming.loadEventStart")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-  - : When the {{domxref("Window/load_event", "load")}} event was sent for the current document. If this event has not yet been sent, it returns `0.`
+  - : When the {{domxref("Window/load_event", "load")}} event was sent for the current document. If this event has not yet been sent, it returns `0`.
 - {{domxref("PerformanceTiming.loadEventEnd")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-  - : When the {{domxref("Window/load_event", "load")}} event handler terminated, that is when the load event is completed. If this event has not yet been sent, or is not yet completed, it returns `0.`
+  - : When the {{domxref("Window/load_event", "load")}} event handler terminated, that is when the load event is completed. If this event has not yet been sent, or is not yet completed, it returns `0`.
 
 ## Instance methods
 

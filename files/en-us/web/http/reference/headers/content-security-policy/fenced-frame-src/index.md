@@ -1,5 +1,6 @@
 ---
-title: "CSP: fenced-frame-src"
+title: "Content-Security-Policy: fenced-frame-src directive"
+short-title: fenced-frame-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/fenced-frame-src
 page-type: http-csp-directive
 status:

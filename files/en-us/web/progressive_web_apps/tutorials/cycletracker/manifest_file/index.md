@@ -3,11 +3,10 @@ title: "CycleTracker: Manifest and iconography"
 short-title: Manifest and iconography
 slug: Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file
 page-type: tutorial-chapter
+sidebar: pwasidebar
 ---
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality", "Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
-
-{{PWASidebar}}
 
 A PWA manifest file is a JSON file that provides information about the features of that app to make it look and behave like a native app when installed on the user's device. The manifest contains metadata for your app, including its name, icons, and presentational directives.
 

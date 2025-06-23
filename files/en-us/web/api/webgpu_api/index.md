@@ -2,12 +2,10 @@
 title: WebGPU API
 slug: Web/API/WebGPU_API
 page-type: web-api-overview
-status:
-  - experimental
 browser-compat: api.GPU
 ---
 
-{{DefaultAPISidebar("WebGPU API")}}{{SeeCompatTable}}{{securecontext_header}}
+{{DefaultAPISidebar("WebGPU API")}}{{securecontext_header}}
 
 The **WebGPU API** enables web developers to use the underlying system's GPU (Graphics Processing Unit) to carry out high-performance computations and draw complex images that can be rendered in the browser.
 
@@ -157,7 +155,7 @@ const canvas = document.querySelector("#gpuCanvas");
 const context = canvas.getContext("webgpu");
 
 context.configure({
-  device: device,
+  device,
   format: navigator.gpu.getPreferredCanvasFormat(),
   alphaMode: "premultiplied",
 });
@@ -516,7 +514,7 @@ You can find more information about WebGPU error handling in the explainer — s
 - {{domxref("HTMLCanvasElement.getContext()")}} — the `"webgpu"` `contextType`
   - : Invoking `getContext()` with the `"webgpu"` `contextType` returns a {{domxref("GPUCanvasContext")}} object instance, which can then be configured with {{domxref("GPUCanvasContext.configure()")}}.
 - {{domxref("GPUCanvasContext")}}
-  - : Represents the WebGPU rendering context of an {{htmlelement("canvas")}} element.
+  - : Represents the WebGPU rendering context of a {{htmlelement("canvas")}} element.
 
 ### Representing pipeline resources
 

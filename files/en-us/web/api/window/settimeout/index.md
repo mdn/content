@@ -423,8 +423,8 @@ timeout by pressing on the second button.
 #### HTML
 
 ```html
-<button onclick="delayedMessage();">Show a message after two seconds</button>
-<button onclick="clearMessage();">Cancel message before it happens</button>
+<button id="show">Show a message after two seconds</button>
+<button id="cancel">Cancel message before it happens</button>
 
 <div id="output"></div>
 ```
@@ -446,6 +446,9 @@ function delayedMessage() {
 function clearMessage() {
   clearTimeout(timeoutID);
 }
+
+document.getElementById("show").addEventListener("click", delayedMessage);
+document.getElementById("cancel").addEventListener("click", clearMessage);
 ```
 
 ```css hidden

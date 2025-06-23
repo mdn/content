@@ -1,5 +1,6 @@
 ---
-title: ECT
+title: ECT header
+short-title: ECT
 slug: Web/HTTP/Reference/Headers/ECT
 page-type: http-header
 status:

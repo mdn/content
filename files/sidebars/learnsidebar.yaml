@@ -68,7 +68,7 @@ sidebar:
           - /Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics
           - /Learn_web_development/Core/Structuring_content/Test_your_skills/Links
           - /Learn_web_development/Core/Structuring_content/Test_your_skills/Images
-          - /Learn_web_development/Core/Structuring_content/Test_your_skills/Multimedia_and_embedding
+          - /Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video
           - /Learn_web_development/Core/Structuring_content/Test_your_skills/Advanced_HTML_text
   - link: /Learn_web_development/Core/Styling_basics
     title: CSS_styling_basics
@@ -318,10 +318,6 @@ sidebar:
       - /Learn_web_development/Extensions/Testing/Feature_detection
       - /Learn_web_development/Extensions/Testing/Automated_testing
       - /Learn_web_development/Extensions/Testing/Your_own_automation_environment
-  - link: /Learn_web_development/Extensions/Transform_animate
-    title: Transform_and_animate_CSS
-  - link: /Learn_web_development/Extensions/Security_privacy
-    title: Security_and_privacy
   - type: section
     title: Further_resources
   - type: listSubPages
@@ -362,8 +358,6 @@ l10n:
     Express_web_framework_(Node.js): Express Web-Framework (Node.js)
     Web_performance: Web-Performance
     Testing: Tests
-    Transform_and_animate_CSS: CSS transformieren und animieren
-    Security_and_privacy: Sicherheit und Datenschutz
     How_to_solve_common_problems: Häufige Probleme lösen
     About: Über
     Resources_for_educators: Ressourcen für Lehrkräfte
@@ -393,8 +387,6 @@ l10n:
     Express_web_framework_(Node.js): Express (Node.js)
     Web_performance: Web performance
     Testing: Testing
-    Transform_and_animate_CSS: Transform and animate CSS
-    Security_and_privacy: Security and privacy
     Further_resources: Further resources
     How_to_solve_common_problems: How to solve common problems
     About: About
@@ -439,8 +431,6 @@ l10n:
     Express_web_framework_(Node.js): Express web 框架（Node.js）
     Web_performance: Web 性能
     Testing: 测试
-    Transform_and_animate_CSS: CSS 变换与动画化
-    Security_and_privacy: 安全与隐私
     Further_resources: 更多资源
     How_to_solve_common_problems: 如何解决常见问题
     About: 关于
@@ -461,12 +451,36 @@ l10n:
     Django_web_framework_(Python): Django (Python)
     Further_resources: Ressources complémentaires
   ja:
+    Getting_started_modules: 入門モジュール
+    Environment_setup: 環境設定
+    Your_first_website: 初めてのウェブサイト
+    Web_standards: ウェブ標準
+    Soft_skills: ソフトスキル
+    Core_modules: コア学習モジュール
+    Structuring_content_with_HTML: HTML によるコンテンツの構造化
+    CSS_styling_basics: CSS によるスタイル設定の基本
+    CSS_text_styling: CSS テキスト装飾
     CSS_layout: CSS レイアウト
-    Asynchronous_JavaScript: 非同期 JavaScript
+    Dynamic_scripting_with_JavaScript: JavaScript による動的スクリプティング
+    JavaScript_frameworks_and_libraries: JavaScript フレームワークとライブラリー
+    Accessibility: アクセシビリティ
+    Design_for_developers: 開発者のためのデザイン
+    Version_control: バージョン管理
+    Extension_modules: 発展モジュール
+    Advanced JavaScript objects: 高度な JavaScript オブジェクト
     Client-side_web_APIs: クライアントサイド Web API
-    Web_forms: ウェブフォーム — ユーザーデータの操作
-    Django_web_framework_(Python): Django ウェブフレームワーク (Python)
+    Asynchronous_JavaScript: 非同期 JavaScript
+    Web_forms: ウェブフォーム
+    Understanding_client-side_tools: クライアントサイドウェブ開発ツール
+    Django_web_framework_(Python): Django (Python)
+    Express_web_framework_(Node.js): Express (Node.js)
+    Web_performance: ウェブのパフォーマンス
+    Testing: テスト
     Further_resources: その他のリソース
+    How_to_solve_common_problems: よくある質問
+    About: 概要
+    Resources_for_educators: 教育者向けリソース
+    Changelog: 変更履歴
   ko:
     CSS_layout: CSS 레이아웃
     Asynchronous_JavaScript: JavaScript의 비동기성

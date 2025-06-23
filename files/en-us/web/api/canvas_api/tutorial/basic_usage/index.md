@@ -11,7 +11,7 @@ Let's start this tutorial by looking at the {{HTMLElement("canvas")}} {{Glossary
 ## The `<canvas>` element
 
 ```html
-<canvas id="tutorial" width="150" height="150"></canvas>
+<canvas id="canvas" width="150" height="150"></canvas>
 ```
 
 At first sight a {{HTMLElement("canvas")}} looks like the {{HTMLElement("img")}} element, with the only clear difference being that it doesn't have the `src` and `alt` attributes. Indeed, the `<canvas>` element has only two attributes, [`width`](/en-US/docs/Web/HTML/Reference/Elements/canvas#width) and [`height`](/en-US/docs/Web/HTML/Reference/Elements/canvas#height). These are both optional and can also be set using {{Glossary("DOM")}} [properties](/en-US/docs/Web/API/HTMLCanvasElement). When no `width` and `height` attributes are specified, the canvas will initially be **300 pixels** wide and **150 pixels** high. The element can be sized arbitrarily by {{Glossary("CSS")}}, but during rendering the image is scaled to fit its layout size: if the CSS sizing doesn't respect the ratio of the initial canvas, it will appear distorted.
@@ -56,7 +56,7 @@ The {{HTMLElement("canvas")}} element creates a fixed-size drawing surface that 
 The canvas is initially blank. To display something, a script first needs to access the rendering context and draw on it. The {{HTMLElement("canvas")}} element has a method called {{domxref("HTMLCanvasElement.getContext", "getContext()")}}, used to obtain the rendering context and its drawing functions. `getContext()` takes one parameter, the type of context. For 2D graphics, such as those covered by this tutorial, you specify `"2d"` to get a {{domxref("CanvasRenderingContext2D")}}.
 
 ```js
-const canvas = document.getElementById("tutorial");
+const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 ```
 
@@ -67,7 +67,7 @@ The first line in the script retrieves the node in the DOM representing the {{HT
 The fallback content is displayed in browsers which do not support {{HTMLElement("canvas")}}. Scripts can also check for support programmatically by testing for the presence of the `getContext()` method. Our code snippet from above becomes something like this:
 
 ```js
-const canvas = document.getElementById("tutorial");
+const canvas = document.getElementById("canvas");
 
 if (canvas.getContext) {
   const ctx = canvas.getContext("2d");
@@ -97,10 +97,10 @@ Here is a minimalistic template, which we'll be using as a starting point for la
     </style>
   </head>
   <body>
-    <canvas id="tutorial" width="150" height="150"></canvas>
+    <canvas id="canvas" width="150" height="150"></canvas>
     <script>
       function draw() {
-        const canvas = document.getElementById("tutorial");
+        const canvas = document.getElementById("canvas");
         if (canvas.getContext) {
           const ctx = canvas.getContext("2d");
         }
@@ -111,42 +111,38 @@ Here is a minimalistic template, which we'll be using as a starting point for la
 </html>
 ```
 
-The script includes a function called `draw()`, which is executed once the page finishes loading; this is done by listening for the {{domxref("Window/load_event", "load")}} event on the document. This function, or one like it, could also be called using {{domxref("Window.setTimeout", "setTimeout()")}}, {{domxref("Window.setInterval", "setInterval()")}}, or any other event handler, as long as the page has been loaded first.
+The script includes a function called `draw()`, which is executed once the page finishes loading; this is done by putting the script after the main body content. This function, or one like it, could also be called using {{domxref("Window.setTimeout", "setTimeout()")}}, {{domxref("Window.setInterval", "setInterval()")}}, or the {{domxref("Window/load_event", "load")}} event handler, as long as the page has been loaded first.
 
-Here is how a template would look in action. As shown here, it is initially blank.
-
-{{EmbedLiveSample("A_skeleton_template", "", "160")}}
+At this point, this document should be rendered blank.
 
 ## A simple example
 
-To begin, let's take a look at an example that draws two intersecting rectangles, one of which has alpha transparency. We'll explore how this works in more detail in later examples.
+To begin, let's take a look at an example that draws two intersecting rectangles, one of which has alpha transparency. We'll explore how this works in more detail in later examples. Update your `script` element content to this:
 
-```html
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Canvas experiment</title>
-  </head>
-  <body>
-    <canvas id="canvas" width="150" height="150"></canvas>
-    <script>
-      function draw() {
-        const canvas = document.getElementById("canvas");
-        if (canvas.getContext) {
-          const ctx = canvas.getContext("2d");
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-          ctx.fillStyle = "rgb(200 0 0)";
-          ctx.fillRect(10, 10, 50, 50);
+```css hidden
+canvas {
+  border: 1px solid black;
+}
+```
 
-          ctx.fillStyle = "rgb(0 0 200 / 50%)";
-          ctx.fillRect(30, 30, 50, 50);
-        }
-      }
-      draw();
-    </script>
-  </body>
-</html>
+```js
+function draw() {
+  const canvas = document.getElementById("canvas");
+  if (canvas.getContext) {
+    const ctx = canvas.getContext("2d");
+
+    ctx.fillStyle = "rgb(200 0 0)";
+    ctx.fillRect(10, 10, 50, 50);
+
+    ctx.fillStyle = "rgb(0 0 200 / 50%)";
+    ctx.fillRect(30, 30, 50, 50);
+  }
+}
+draw();
 ```
 
 This example looks like this:

@@ -20,7 +20,7 @@ By the end of the tutorial you will have a fully functional demo game: [Cyber Or
 
 ## Starting with the project
 
-You can see [Cyber Orb source code](https://github.com/EnclaveGames/Cyber-Orb) on GitHub. The folder structure is quite straightforward: the starting point is the `index.html` file where we initialize the framework and set up an {{htmlelement("canvas")}} to render the game on.
+You can see [Cyber Orb source code](https://github.com/EnclaveGames/Cyber-Orb) on GitHub. The folder structure is quite straightforward: the starting point is the `index.html` file where we initialize the framework and set up a {{htmlelement("canvas")}} to render the game on.
 
 ![Screenshot of the GitHub repository with the Cyber Orb game code, listing the folders and the files in the main structure.](cyber-orb-github.png)
 
@@ -367,8 +367,7 @@ for (let i = 0; i < this.maxLevels; i++) {
   const newLevel = this.add.group();
   newLevel.enableBody = true;
   newLevel.physicsBodyType = Phaser.Physics.ARCADE;
-  for (let e = 0; e < this.levelData[i].length; e++) {
-    const item = this.levelData[i][e];
+  for (const item of this.levelData[i]) {
     newLevel.create(item.x, item.y, `element-${item.t}`);
   }
   newLevel.setAll("body.immovable", true);

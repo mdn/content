@@ -101,7 +101,7 @@ _To use this macro, remove the backticks and backslash in the markdown file._
 
 ## DOM Interface
 
-This element implements the `\{{domxref("NameOfSVGDOMElement")}}` interface.
+This element implements the `\{{domxref("NameOfSVGElement")}}` interface.
 
 ## Examples
 

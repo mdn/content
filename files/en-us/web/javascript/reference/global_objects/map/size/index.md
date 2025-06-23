@@ -1,5 +1,6 @@
 ---
 title: Map.prototype.size
+short-title: size
 slug: Web/JavaScript/Reference/Global_Objects/Map/size
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.Map.size

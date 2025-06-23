@@ -1,5 +1,6 @@
 ---
-title: "Permissions-Policy: attribution-reporting"
+title: "Permissions-Policy: attribution-reporting directive"
+short-title: attribution-reporting
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/attribution-reporting
 page-type: http-permissions-policy-directive
 status:
