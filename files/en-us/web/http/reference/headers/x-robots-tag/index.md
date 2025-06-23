@@ -103,7 +103,6 @@ Any of the following indexing rules may be used:
   - : Do not index images on this page.
     If omitted, images on the page may be indexed and shown in search results.
 - `unavailable_after: <date/time>`
-
   - : Requests not to show this page in search results after the specified `<date/time>`.
     Ignored if no valid `<date/time>` is specified.
     A date must be specified in a format such as {{RFC("822")}}, {{RFC("850")}}, or ISO 8601.

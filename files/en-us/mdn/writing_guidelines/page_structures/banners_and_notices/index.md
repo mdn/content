@@ -67,7 +67,6 @@ It is important to clarify the current standardization status of such features t
   > [!WARNING]
   > This feature is currently opposed by <number> browser vendor(s). See the [Standards positions](#standards_positions) section below for details of opposition.
   ```
-
   - Replace `<number>` with the number of browser vendors opposing the feature.
   - Use `vendor` or `vendors` as appropriate.
 

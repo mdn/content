@@ -33,7 +33,6 @@ The process for identifying the containing block depends entirely on the value o
 2. If the `position` property is **`absolute`**, the containing block is formed by the edge of the _padding box_ of the nearest ancestor element that has a `position` value other than `static` (`fixed`, `absolute`, `relative`, or `sticky`).
 3. If the `position` property is **`fixed`**, the containing block is established by the {{glossary("viewport")}} (in the case of continuous media) or the page area (in the case of paged media).
 4. If the `position` property is **`absolute`** or **`fixed`**, the containing block may also be formed by the edge of the _padding box_ of the nearest ancestor element that has any of the following:
-
    - A {{cssxref("filter")}}, {{cssxref("backdrop-filter")}}, {{cssxref("transform")}}, or {{cssxref("perspective")}} value other than `none`.
    - A {{cssxref("contain")}} value of `layout`, `paint`, `strict` or `content` (e.g., `contain: paint;`).
    - A {{cssxref("container-type")}} value other than `normal`.

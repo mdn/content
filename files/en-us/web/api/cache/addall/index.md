@@ -23,7 +23,6 @@ addAll(requests)
 ### Parameters
 
 - `requests`
-
   - : An array of requests for the resources you want to add to the cache. These can be {{domxref("Request")}} objects or URLs.
 
     These requests are used as parameters to the {{domxref("Request.Request()", "Request()")}} constructor, so URLs follow the same rules as for that constructor. In particular, URLs may be relative to the base URL, which is the document's {{domxref("Node.baseURI", "baseURI")}} in a window context, or {{domxref("WorkerGlobalScope.location")}} in a worker context.
@@ -35,7 +34,6 @@ A {{jsxref("Promise")}} that resolves with `undefined`.
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-
   - : The URL scheme is not `http` or `https`.
 
     The Response status is not in the 200 range (i.e., not a successful response.) This occurs if the request does not return successfully, but also if the request is a _cross-origin no-cors_ request (in which case the reported status is always 0.)

@@ -35,10 +35,8 @@ new SharedWorker(aURL, options)
   - : A string specifying an identifying name for the
     {{domxref("SharedWorkerGlobalScope")}} representing the scope of the worker, which is useful for creating new instances of the same SharedWorker and debugging.
 - `options` {{optional_inline}}
-
   - : An object containing option properties that can set when creating the object
     instance. Available properties are as follows:
-
     - `type`
       - : A string specifying the type of worker to
         create. The value can be `classic` or `module`. If not

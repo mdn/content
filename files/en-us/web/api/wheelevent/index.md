@@ -62,5 +62,4 @@ _This interface doesn't define any specific methods, but inherits methods from i
 
 - {{domxref("Element/wheel_event", "wheel")}} event
 - Interfaces replaced by this one:
-
   - Gecko's legacy mouse wheel event object: {{DOMxRef("MouseScrollEvent")}}

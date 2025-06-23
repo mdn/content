@@ -22,11 +22,9 @@ This information is accessed via the {{domxref("Window.getScreenDetails()")}} me
 _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 
 - {{domxref("ScreenDetails.currentScreen", "currentScreen")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-
   - : A single {{domxref("ScreenDetailed")}} object representing detailed information about the screen that the current browser window is displayed in.
 
 - {{domxref("ScreenDetails.screens", "screens")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-
   - : An array of {{domxref("ScreenDetailed")}} objects, each one representing detailed information about one specific screen available to the user's device.
 
     > **Note:** `screens` only includes "extended" displays, not those that mirror another display.

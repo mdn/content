@@ -37,7 +37,6 @@ A {{jsxref("Promise")}} that resolves with a `PaymentRequestDetailsUpdate` objec
 - `total`
   - : An updated total based on the changed payment method. The total can change, for example, because the billing address of the payment method selected by the user changes the applicable sales tax.
 - `modifiers`
-
   - : An {{jsxref("Array")}} of `PaymentDetailsModifier` objects, whose properties are described in {{domxref("PaymentRequestEvent.modifiers")}}.
 
 - `paymentMethodErrors`

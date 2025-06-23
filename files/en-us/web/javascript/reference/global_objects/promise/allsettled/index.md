@@ -45,7 +45,6 @@ A {{jsxref("Promise")}} that is:
 
 - **Already fulfilled**, if the `iterable` passed is empty.
 - **Asynchronously fulfilled**, when all promises in the given `iterable` have settled (either fulfilled or rejected). The fulfillment value is an array of objects, each describing the outcome of one promise in the `iterable`, in the order of the promises passed, regardless of completion order. Each outcome object has the following properties:
-
   - `status`
     - : A string, either `"fulfilled"` or `"rejected"`, indicating the eventual state of the promise.
   - `value`

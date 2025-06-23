@@ -37,7 +37,6 @@ new Set(iterable)
 ### Parameters
 
 - `iterable` {{optional_inline}}
-
   - : If an [iterable object](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) is passed, all of its elements will be added to the new
     `Set`.
 

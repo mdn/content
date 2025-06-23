@@ -26,19 +26,15 @@ These statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} 
   - : A string indicating the name of the cipher suite used for the DTLS transport, as defined in the "Description" column of the [TLS Cipher Suites](https://www.iana.org/assignments/tls-parameters/tls-parameters.xhtml#tls-parameters-4) section in the _IANA cipher suite registry_.
     For example `"TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256"`.
 - `dtlsRole` {{optional_inline}} {{experimental_inline}}
-
   - : The DTLS role of the associated {{domxref("RTCPeerConnection")}}.
     This is one of:
-
     - `client`
     - `server`
     - `unknown` (before the DTLS negotiation starts).
 
 - `dtlsState`
-
   - : A string indicating the current {{domxref("RTCDtlsTransport.state","state")}} of the underlying {{domxref("RTCDtlsTransport")}}.
     This is one of:
-
     - [`new`](/en-US/docs/Web/API/RTCDtlsTransport/state#new)
     - [`connecting`](/en-US/docs/Web/API/RTCDtlsTransport/state#connecting)
     - [`connected`](/en-US/docs/Web/API/RTCDtlsTransport/state#connected)
@@ -49,19 +45,15 @@ These statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} 
   - : A string indicating the local username fragment used in message validation procedures for this transport.
     This is the same value as the local {{domxref("RTCIceCandidate.usernameFragment")}}, and will change if the connection is renegotiated.
 - `iceRole` {{optional_inline}} {{experimental_inline}}
-
   - : A string indicating the [ICE `role`](/en-US/docs/Web/API/RTCIceTransport/role) of the underlying {{domxref("RTCDtlsTransport.iceTransport")}}.
     This is one of:
-
     - [`controlled`](/en-US/docs/Web/API/RTCIceTransport/role#controlled)
     - [`controlling`](/en-US/docs/Web/API/RTCIceTransport/role#controlling)
     - [`unknown`](/en-US/docs/Web/API/RTCIceTransport/role#unknown)
 
 - `iceState` {{optional_inline}} {{experimental_inline}}
-
   - : A string indicating the current {{domxref("RTCIceTransport.state","state")}} of the underlying {{domxref("RTCIceTransport")}}.
     This is one of:
-
     - [`new`](/en-US/docs/Web/API/RTCIceTransport/state#new)
     - [`checking`](/en-US/docs/Web/API/RTCIceTransport/state#checking)
     - [`connected`](/en-US/docs/Web/API/RTCIceTransport/state#connected)
@@ -86,7 +78,6 @@ These statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} 
   - : The number of times that the selected candidate pair of this transport has changed.
     The value is initially zero and increases whenever a candidate pair selected or lost.
 - `srtpCipher` {{optional_inline}}
-
   - : A string indicating the descriptive name of the protection profile used for the [Secure Real-time Transport Protocol (SRTP)](/en-US/docs/Glossary/RTP) transport, as defined in the "Profile" column of the [IANA DTLS-SRTP protection profile registry](https://www.iana.org/assignments/srtp-protection/srtp-protection.xhtml#srtp-protection-1) and [RFC5764](https://www.rfc-editor.org/rfc/rfc5764.html#section-4.1.2).
 
     For example `"AES_CM_128_HMAC_SHA1_80"` specifies the following profile, where `maximum_lifetime` is the maximum number of packets that can be protected by a single set of keys.
@@ -103,7 +94,6 @@ These statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} 
     ```
 
 - `tlsVersion` {{optional_inline}}
-
   - : A string containing the negotiated TLS version.
     This is present for DTLS transports, and only exists after DTLS has been negotiated.
 

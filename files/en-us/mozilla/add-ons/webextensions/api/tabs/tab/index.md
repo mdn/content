@@ -14,7 +14,6 @@ The type **`tabs.Tab`** contains information about a tab. This provides access t
 Values of this type are objects. They contain the following properties:
 
 - `active`
-
   - : `boolean`. Whether the tab is active in its window. This may be true even if the tab's window is not currently focused.
 
     The active tab is usually the selected one. However, on Firefox for Android, extension popups open in a new tab. When this popup tab is selected, the active tab will instead be the one in which the popup opened.
@@ -38,7 +37,6 @@ Values of this type are objects. They contain the following properties:
 - `hidden`
   - : `boolean`. Whether the tab is hidden.
 - `highlighted`
-
   - : `boolean`. Whether the tab is highlighted, i.e., part of the current tab selection. An active tab is always highlighted, but some browsers may allow additional tabs to be highlighted, for example by clicking them while holding <kbd>Ctrl</kbd>, <kbd>Shift</kbd> or <kbd>⌘ Command</kbd> keys.
 
     Firefox for Android doesn't support highlighting multiple tabs.
