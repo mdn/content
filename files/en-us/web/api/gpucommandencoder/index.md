@@ -7,7 +7,7 @@ browser-compat: api.GPUCommandEncoder
 
 {{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
-The **`GPUCommandEncoder`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents an encoder that collects a sequence of GPU commands. These commands are then finalized into a {{domxref("GPUCommandBuffer")}} using the {{domxref("GPUCommandEncoder.finish", "finish()")}} method and submitted for execution by the GPU.
+The **`GPUCommandEncoder`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents an encoder that collects a sequence of GPU commands to be issued to the GPU.
 
 A `GPUCommandEncoder` object instance is created via the {{domxref("GPUDevice.createCommandEncoder()")}} property.
 
