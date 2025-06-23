@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-UTF-16 is a {{glossary("character encoding")}} standard for {{glossary("Unicode")}}. It encodes each Unicode {{glossary("code point")}} using either one or two _code units_. Each code unit is a 16-bit value.
+UTF-16 is a {{glossary("character encoding")}} standard for {{glossary("Unicode")}}. It encodes each Unicode {{glossary("code point")}} using either one or two {{glossary("code unit", "code units")}}. Each code unit is a 16-bit value.
 
 Code points whose values are less than 2<sup>16</sup> are encoded as a single code unit that is numerically equal to the code point's value. These code points comprise the [Basic Multilingual Plane (BMP)](<https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane>), and include the most common characters, including Latin, Greek, Cyrillic, and many East Asian characters.
 
