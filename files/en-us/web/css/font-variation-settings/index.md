@@ -9,7 +9,45 @@ browser-compat: css.properties.font-variation-settings
 
 The **`font-variation-settings`** [CSS](/en-US/docs/Web/CSS) property provides low-level control over [variable font](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide) characteristics by letting you specify the four letter axis names of the characteristics you want to vary along with their values.
 
-{{EmbedInteractiveExample("pages/css/font-variation-settings.html")}}
+{{InteractiveExample("CSS Demo: font-variation-settings")}}
+
+```css interactive-example-choice
+font-variation-settings: "wght" 50;
+```
+
+```css interactive-example-choice
+font-variation-settings: "wght" 850;
+```
+
+```css interactive-example-choice
+font-variation-settings: "wdth" 25;
+```
+
+```css interactive-example-choice
+font-variation-settings: "wdth" 75;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    ...it would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
+  font-family: Amstelvar;
+  font-style: normal;
+}
+
+p {
+  font-size: 1.5rem;
+  font-family: Amstelvar;
+}
+```
 
 ## Syntax
 
@@ -39,9 +77,9 @@ This property's value can take one of two forms:
 
 ## Description
 
-This property is a low-level mechanism designed to set variable font features where no other way to enable or access those features exist. You should only use it when no basic properties exist to set those features (e.g. {{cssxref("font-weight")}}, {{cssxref("font-style")}}).
+This property is a low-level mechanism designed to set variable font features where no other way to enable or access those features exist. You should only use it when no basic properties exist to set those features (e.g., {{cssxref("font-weight")}}, {{cssxref("font-style")}}).
 
-Font characteristics set using `font-variation-settings` will always override those set using the corresponding basic font properties, e.g. `font-weight`, no matter where they appear in the cascade. In some browsers, this is currently only true when the {{cssxref("@font-face")}} declaration includes a {{cssxref("@font-face/font-weight", "font-weight")}} range.
+Font characteristics set using `font-variation-settings` will always override those set using the corresponding basic font properties, e.g., `font-weight`, no matter where they appear in the cascade. In some browsers, this is currently only true when the {{cssxref("@font-face")}} declaration includes a {{cssxref("@font-face/font-weight", "font-weight")}} range.
 
 ### Registered and custom axes
 
@@ -87,7 +125,7 @@ Custom axes can be anything the font designer wants to vary in their font, for e
 > [!NOTE]
 > Registered axis tags are identified using lower-case tags, whereas custom axes should be given upper-case tags. Note that font designers aren't forced to follow this practice in any way, and some won't. The important takeaway here is that axis tags are case-sensitive.
 
-To use variable fonts on your operating system, you need to make sure that it is up to date. For example Linux OSes need the latest Linux Freetype version, and macOS before 10.13 does not support variable fonts. If your operating system is not up to date, you will not be able to use variable fonts in web pages or the Firefox Developer Tools.
+To use variable fonts on your operating system, you need to make sure that it is up to date. For example Linux OSes need the latest Linux FreeType version, and macOS before 10.13 does not support variable fonts. If your operating system is not up to date, you will not be able to use variable fonts in web pages or the Firefox Developer Tools.
 
 ## Formal definition
 
@@ -99,7 +137,7 @@ To use variable fonts on your operating system, you need to make sure that it is
 
 ## Examples
 
-You can find a number of other variable font examples in our [Variable fonts guide](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide).
+You can find a number of other variable font examples in our [Variable fonts](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide) guide.
 
 ### Controlling variable font weight (wght)
 

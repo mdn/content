@@ -19,7 +19,7 @@ Firefox 55 was released on August 8, 2017. This article lists key changes that a
 
 ### HTML
 
-- Elements on which [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) has been set to `true` now use {{htmlelement("div")}} elements to separate different lines of text, to give Firefox parity with other modern browsers ([Firefox bug 1297414](https://bugzil.la/1297414)). See [Differences in markup generation](/en-US/docs/Web/HTML/Global_attributes/contenteditable#differences_in_markup_generation) for more details.
+- Elements on which [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) has been set to `true` now use {{htmlelement("div")}} elements to separate different lines of text, to give Firefox parity with other modern browsers ([Firefox bug 1297414](https://bugzil.la/1297414)). See [Differences in markup generation](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable#differences_in_markup_generation) for more details.
 - Enable `dom.forms.datetime` by default on Nightly ([Firefox bug 1366188](https://bugzil.la/1366188)).
 
 ### CSS
@@ -29,7 +29,7 @@ Firefox 55 was released on August 8, 2017. This article lists key changes that a
 - Implemented the {{cssxref("text-justify")}} property ([Firefox bug 1343512](https://bugzil.la/1343512), [Firefox bug 276079](https://bugzil.la/276079)).
 - \[css-grid] {{cssxref("fit-content")}} unexpectedly reserves space for full clamp size in {{cssxref("repeat", "repeat()")}} ([Firefox bug 1359060](https://bugzil.la/1359060)).
 - The {{cssxref("float")}} / {{cssxref("clear")}} logical values — `inline-start` and `inline-end` — which were previously implemented but preffed off in release channels, are now available in all channels by default ([Firefox bug 1253919](https://bugzil.la/1253919)).
-- The `layout.css.variables.enabled` preference has been removed completely meaning that the [CSS variables](/en-US/docs/Web/CSS/Using_CSS_custom_properties) feature is enabled all the time and can no longer be disabled ([Firefox bug 1312328](https://bugzil.la/1312328)).
+- The `layout.css.variables.enabled` preference has been removed completely meaning that the [CSS variables](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) feature is enabled all the time and can no longer be disabled ([Firefox bug 1312328](https://bugzil.la/1312328)).
 - Implemented the proprietary `-moz-context-properties` property ([Firefox bug 1058040](https://bugzil.la/1058040)).
 - Zero (0) angle value without degree unit is not correctly interpreted in {{cssxref("gradient/linear-gradient")}} ([Firefox bug 1363292](https://bugzil.la/1363292)).
 - The {{cssxref("::cue")}} pseudo-element is now supported; it matches on text cues presented within a media element ([Firefox bug 1318542](https://bugzil.la/1318542)).
@@ -41,7 +41,7 @@ Firefox 55 was released on August 8, 2017. This article lists key changes that a
 ### JavaScript
 
 - The {{jsxref("SharedArrayBuffer")}} and {{jsxref("Atomics")}} objects are now enabled by default. See [A Taste of JavaScript's New Parallel Primitives](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/) for an introduction to JavaScript Shared Memory and Atomics.
-- The rest operator (`...`) is now supported in [object destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) and the spread operator (`...`) now works in [object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#spread_in_object_literals) (Stage 3 ECMAScript proposal: [Object Rest/Spread Properties](https://github.com/tc39/proposal-object-rest-spread), [Firefox bug 1339395](https://bugzil.la/1339395)).
+- The rest operator (`...`) is now supported in [object destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) and the spread operator (`...`) now works in [object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#spread_in_object_literals) (Stage 3 ECMAScript proposal: [Object Rest/Spread Properties](https://github.com/tc39/proposal-object-rest-spread), [Firefox bug 1339395](https://bugzil.la/1339395)).
 - [Async generator methods](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions#async_generator_methods) are now supported ([Firefox bug 1353693](https://bugzil.la/1353693)).
 - The {{jsxref("String.prototype.toLocaleLowerCase()")}} and {{jsxref("String.prototype.toLocaleUpperCase()")}} methods now support an optional `locale` parameter to specify a language tag for locale-specific case mappings ([Firefox bug 1318403](https://bugzil.la/1318403)).
 - The {{jsxref("Intl/Collator", "Intl.Collator")}} object now supports the `caseFirst` option ([Firefox bug 866473](https://bugzil.la/866473)).
@@ -91,7 +91,7 @@ Firefox 55 was released on August 8, 2017. This article lists key changes that a
 
 #### Service Workers/Push
 
-- Messages sent to service worker contexts (e.g. as the event object of {{domxref("ServiceWorkerGlobalScope.message_event","onmessage")}} are now represented by {{domxref("MessageEvent")}} objects, for consistency with other web messaging features.
+- Messages sent to service worker contexts (e.g., as the event object of {{domxref("ServiceWorkerGlobalScope.message_event","onmessage")}} are now represented by {{domxref("MessageEvent")}} objects, for consistency with other web messaging features.
 - The {{domxref("PushManager.subscribe()")}} method now accepts {{jsxref("ArrayBuffer")}}s and Base64-encoded strings as `applicationServerKey` values ([Firefox bug 1337348](https://bugzil.la/1337348)).
 
 #### Web Audio API
@@ -138,12 +138,12 @@ Firefox 55 was released on August 8, 2017. This article lists key changes that a
 
 ### HTML
 
-- The `xml:base` attribute can no longer be used to set the base URL for paths appearing in the [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute, for example —
+- The `xml:base` attribute can no longer be used to set the base URL for paths appearing in the [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute, for example —
 
   `<div xml:base="https://example.com/" style="background:url(picture.jpg)"></div>` ([Firefox bug 1350521](https://bugzil.la/1350521)).
 
-- The {{htmlelement("style")}} element's [`scoped`](/en-US/docs/Web/HTML/Element/style#scoped) attribute has been hidden behind a pref (`layout.css.scoped-style.enabled`) in content documents in Firefox 55+, as no other browsers support it.
-- Support for the obscure `MSThemeCompatible` value of the {{htmlelement("meta")}} element's [`http-equiv`](/en-US/docs/Web/HTML/Element/meta#http-equiv) attribute has been removed from Gecko. No other modern browsers support it, and it was causing compatibility problems ([Firefox bug 966240](https://bugzil.la/966240)).
+- The {{htmlelement("style")}} element's [`scoped`](/en-US/docs/Web/HTML/Reference/Elements/style#scoped) attribute has been hidden behind a pref (`layout.css.scoped-style.enabled`) in content documents in Firefox 55+, as no other browsers support it.
+- Support for the obscure `MSThemeCompatible` value of the {{htmlelement("meta")}} element's [`http-equiv`](/en-US/docs/Web/HTML/Reference/Elements/meta#http-equiv) attribute has been removed from Gecko. No other modern browsers support it, and it was causing compatibility problems ([Firefox bug 966240](https://bugzil.la/966240)).
 
 ### CSS
 

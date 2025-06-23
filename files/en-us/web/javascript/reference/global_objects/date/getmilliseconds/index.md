@@ -1,5 +1,6 @@
 ---
 title: Date.prototype.getMilliseconds()
+short-title: getMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getMilliseconds
@@ -9,7 +10,15 @@ browser-compat: javascript.builtins.Date.getMilliseconds
 
 The **`getMilliseconds()`** method of {{jsxref("Date")}} instances returns the milliseconds for this date according to local time.
 
-{{EmbedInteractiveExample("pages/js/date-getmilliseconds.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.getMilliseconds()", "shorter")}}
+
+```js interactive-example
+const moonLanding = new Date("July 20, 69 00:20:18");
+moonLanding.setMilliseconds(123);
+
+console.log(moonLanding.getMilliseconds());
+// Expected output: 123
+```
 
 ## Syntax
 

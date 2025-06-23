@@ -30,21 +30,11 @@ Shared memory can be created and updated simultaneously in workers or the main t
 
 ### Security requirements
 
-Shared memory and high-resolution timers were effectively [disabled at the start of 2018](https://blog.mozilla.org/security/2018/01/03/mitigations-landing-new-class-timing-attack/) in light of [Spectre](<https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)>). In 2020, a new, secure approach has been standardized to re-enable shared memory.
+Shared memory and high-resolution timers were effectively [disabled at the start of 2018](https://blog.mozilla.org/security/2018/01/03/mitigations-landing-new-class-timing-attack/) in light of [Spectre](<https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)>).
+In 2020, a new, secure approach has been standardized to re-enable shared memory.
 
-As a baseline requirement, your document needs to be in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
-
-For top-level documents, two headers need to be set to cross-origin isolate your site:
-
-- [`Cross-Origin-Opener-Policy`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) with `same-origin` as value (protects your origin from attackers)
-- [`Cross-Origin-Embedder-Policy`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) with `require-corp` or `credentialless` as value (protects victims from your origin)
-
-```http
-Cross-Origin-Opener-Policy: same-origin
-Cross-Origin-Embedder-Policy: require-corp
-```
-
-To check if cross origin isolation has been successful, you can test against the {{domxref("Window.crossOriginIsolated")}} property or the {{domxref("WorkerGlobalScope.crossOriginIsolated")}} property available to window and worker contexts:
+To use shared memory your document must be in a [secure context](/en-US/docs/Web/Security/Secure_Contexts) and {{domxref("Window.crossOriginIsolated","cross-origin isolated","","nocode")}}.
+You can use the {{domxref("Window.crossOriginIsolated")}} and {{domxref("WorkerGlobalScope.crossOriginIsolated")}} properties to check if the document is cross-origin isolated:
 
 ```js
 const myWorker = new Worker("worker.js");
@@ -58,31 +48,27 @@ if (crossOriginIsolated) {
 }
 ```
 
-With these two headers set, `postMessage()` no longer throws for `SharedArrayBuffer` objects and shared memory across threads is therefore available.
-
-Nested documents and dedicated workers need to set the [`Cross-Origin-Embedder-Policy`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) header as well, with the same value. No further changes are needed for same-origin nested documents and subresources. Same-site (but cross-origin) nested documents and subresources need to set the [`Cross-Origin-Resource-Policy`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy) header with `same-site` as value. And their cross-origin (and cross-site) counterparts need to set the same header with `cross-origin` as value. Note that setting the [`Cross-Origin-Resource-Policy`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy) header to any other value than `same-origin` opens up the resource to potential attacks, such as [Spectre](<https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)>).
-
-Note that the [`Cross-Origin-Opener-Policy`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) header limits your ability to retain a reference to popups. Direct access between two top-level window contexts essentially only work if they are same-origin and carry the same two headers with the same two values.
+When cross-origin isolated, `postMessage()` no longer throws for `SharedArrayBuffer` objects, and shared memory across threads is therefore available.
 
 ### API availability
 
 Depending on whether the above security measures are taken, the various memory-sharing APIs have different availabilities:
 
 - The `Atomics` object is always available.
-- `SharedArrayBuffer` objects are in principle always available, but unfortunately the constructor on the global object is hidden, unless the two headers mentioned above are set, for compatibility with web content. There is hope that this restriction can be removed in the future. [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) can still be used to get an instance.
+- `SharedArrayBuffer` objects are in principle always available, but unfortunately the constructor on the global object is hidden, unless the two headers mentioned above are set, for compatibility with web content. There is hope that this restriction can be removed in the future. [`WebAssembly.Memory`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory) can still be used to get an instance.
 - Unless the two headers mentioned above are set, the various `postMessage()` APIs will throw for `SharedArrayBuffer` objects. If they are set, `postMessage()` on `Window` objects and dedicated workers will function and allow for memory sharing.
 
 ### WebAssembly shared memory
 
-[`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) objects can be created with the [`shared`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/Memory#shared) constructor flag. When this flag is set to `true`, the constructed `Memory` object can be shared between workers via `postMessage()`, just like `SharedArrayBuffer`, and the backing [`buffer`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/buffer) of the `Memory` object is a `SharedArrayBuffer`. Therefore, the requirements listed above for sharing a `SharedArrayBuffer` between workers also apply to sharing a `WebAssembly.Memory`.
+[`WebAssembly.Memory`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory) objects can be created with the [`shared`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory/Memory#shared) constructor flag. When this flag is set to `true`, the constructed `Memory` object can be shared between workers via `postMessage()`, just like `SharedArrayBuffer`, and the backing [`buffer`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory/buffer) of the `Memory` object is a `SharedArrayBuffer`. Therefore, the requirements listed above for sharing a `SharedArrayBuffer` between workers also apply to sharing a `WebAssembly.Memory`.
 
-The WebAssembly Threads proposal also defines a new set of [atomic](https://github.com/WebAssembly/threads/blob/master/proposals/threads/Overview.md#atomic-memory-accesses) instructions. Just as `SharedArrayBuffer` and its methods are unconditionally enabled (and only sharing between threads is gated on the new headers), the WebAssembly atomic instructions are also unconditionally allowed.
+The WebAssembly Threads proposal also defines a new set of [atomic](https://github.com/WebAssembly/threads/blob/main/proposals/threads/Overview.md#atomic-memory-accesses) instructions. Just as `SharedArrayBuffer` and its methods are unconditionally enabled (and only sharing between threads is gated on the new headers), the WebAssembly atomic instructions are also unconditionally allowed.
 
 ### Growing SharedArrayBuffers
 
 `SharedArrayBuffer` objects can be made growable by including the `maxByteLength` option when calling the {{jsxref("SharedArrayBuffer/SharedArrayBuffer", "SharedArrayBuffer()")}} constructor. You can query whether a `SharedArrayBuffer` is growable and what its maximum size is by accessing its {{jsxref("SharedArrayBuffer/growable", "growable")}} and {{jsxref("SharedArrayBuffer/maxByteLength", "maxByteLength")}} properties, respectively. You can assign a new size to a growable `SharedArrayBuffer` with a {{jsxref("SharedArrayBuffer/grow", "grow()")}} call. New bytes are initialized to 0.
 
-These features make growing `SharedArrayBuffer`s more efficient — otherwise, you have to make a copy of the buffer with a new size. It also gives JavaScript parity with WebAssembly in this regard (Wasm linear memory can be resized with [`WebAssembly.Memory.prototype.grow()`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/grow)).
+These features make growing `SharedArrayBuffer`s more efficient — otherwise, you have to make a copy of the buffer with a new size. It also gives JavaScript parity with WebAssembly in this regard (Wasm linear memory can be resized with [`WebAssembly.Memory.prototype.grow()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory/grow)).
 
 For security reasons, `SharedArrayBuffer`s cannot be reduced in size, only grown.
 

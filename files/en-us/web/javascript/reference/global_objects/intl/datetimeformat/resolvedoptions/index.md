@@ -1,5 +1,6 @@
 ---
 title: Intl.DateTimeFormat.prototype.resolvedOptions()
+short-title: resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.DateTimeFormat.resolvedOptions
@@ -9,7 +10,21 @@ browser-compat: javascript.builtins.Intl.DateTimeFormat.resolvedOptions
 
 The **`resolvedOptions()`** method of {{jsxref("Intl.DateTimeFormat")}} instances returns a new object with properties reflecting the options computed during initialization of this `DateTimeFormat` object.
 
-{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-resolvedoptions.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat.prototype.resolvedOptions()")}}
+
+```js interactive-example
+const region1 = new Intl.DateTimeFormat("zh-CN", { timeZone: "UTC" });
+const options1 = region1.resolvedOptions();
+
+console.log(options1.locale);
+// Expected output: "zh-CN"
+
+console.log(options1.calendar);
+// Expected output: "gregory"
+
+console.log(options1.numberingSystem);
+// Expected output: "latn"
+```
 
 ## Syntax
 
@@ -28,15 +43,15 @@ A new object with properties reflecting the options computed during the initiali
 - `locale`
   - : The BCP 47 language tag for the locale actually used, determined by the [locale negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) process. Only the `ca`, `hc`, and `nu` Unicode extension keys, if requested, may be included in the output.
 - `calendar`
-  - : The value provided for this property in the `options` argument, or using the Unicode extension key `"ca"`, with default filled in as needed. It is a supported [calendar type](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getCalendars#supported_calendar_types) for this locale. The default is locale dependent.
+  - : The value provided for this property in the `options` argument, or using the Unicode extension key `"ca"`, with default filled in as needed. It is a supported [calendar type](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types) for this locale. The default is locale dependent.
 - `numberingSystem`
-  - : The value provided for this property in the `options` argument, or using the Unicode extension key `"nu"`, with default filled in as needed. It is a supported [numbering system](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getNumberingSystems#supported_numbering_system_types) for this locale. The default is locale dependent.
+  - : The value provided for this property in the `options` argument, or using the Unicode extension key `"nu"`, with default filled in as needed. It is a supported [numbering system](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_numbering_system_types) for this locale. The default is locale dependent.
 - `timeZone`
 
-  - : The value provided for this property in the `options` argument, with default filled in as needed. It is a canonicalized [IANA time zone name](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getTimeZones). The default is the runtime's default time zone.
+  - : The value provided for this property in the `options` argument, with default filled in as needed. It is an [IANA time zone name](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets). The default is the runtime's default time zone.
 
     > [!NOTE]
-    > While the IANA database changes from time to time, the Unicode CLDR database (which browsers use) keeps old time zone names for stability purposes. All browsers canonicalize time zone names, but in different directions. For example, `new Intl.DateTimeFormat("en-US", { timeZone: "Europe/Kiev" }).resolvedOptions().timeZone` and `new Intl.DateTimeFormat("en-US", { timeZone: "Europe/Kyiv" }).resolvedOptions().timeZone` will return the same string in the same browser, but maybe different strings in different browsers. See {{jsxref("Intl/Locale/getTimeZones", "Intl.Locale.prototype.getTimeZones")}} for more information.
+    > The standardization of `Temporal` requires browsers to use the same identifier as originally specified, without canonicalization to a different alias. See [time zones and offsets](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets) for more information.
 
 - `hourCycle` {{optional_inline}}
   - : The value provided for this property in the `options` argument, or using the Unicode extension key `"hc"`, with default filled in as needed. If `hour12` was provided in the `options`, then that overrides other `hourCycle` settings. It is only present if the resolved options also include `hour` or `timeStyle`. It is either `"h11"`, `"h12"`, `"h23"`, or `"h24"`. The default is locale dependent, although `"h24"` is never a default.

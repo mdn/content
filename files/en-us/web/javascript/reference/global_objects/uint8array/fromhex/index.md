@@ -1,5 +1,6 @@
 ---
 title: Uint8Array.fromHex()
+short-title: fromHex()
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array/fromHex
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Uint8Array.fromHex
@@ -69,6 +70,7 @@ console.log(bytes); // Uint8Array [ 202, 254, 208, 13 ]
 ## See also
 
 - [Polyfill of `Uint8Array.fromHex` in `core-js`](https://github.com/zloirock/core-js#uint8array-to--from-base64-and-hex)
+- [es-shims polyfill of `Uint8Array.fromHex`](https://www.npmjs.com/package/es-arraybuffer-base64)
 - {{jsxref("Uint8Array")}}
 - {{jsxref("Uint8Array.prototype.setFromHex()")}}
 - {{jsxref("Uint8Array.prototype.toHex()")}}

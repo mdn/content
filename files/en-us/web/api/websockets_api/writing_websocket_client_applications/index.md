@@ -66,7 +66,7 @@ const exampleSocket = new WebSocket("wss://www.example.com/socketserver", [
 
 Once the connection is established (that is, `readyState` is `OPEN`), {{domxref("WebSocket.protocol", "exampleSocket.protocol")}} will tell you which protocol the server selected.
 
-Establishing a WebSocket relies on the [HTTP Upgrade mechanism](/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism), so the request for the protocol upgrade is implicit when we address the web server as `ws://www.example.com` or `wss://www.example.com`.
+Establishing a WebSocket relies on the [HTTP Upgrade mechanism](/en-US/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism), so the request for the protocol upgrade is implicit when we address the web server as `ws://www.example.com` or `wss://www.example.com`.
 
 ## Sending data to the server
 

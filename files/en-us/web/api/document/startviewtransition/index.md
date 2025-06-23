@@ -6,11 +6,11 @@ page-type: web-api-instance-method
 browser-compat: api.Document.startViewTransition
 ---
 
-{{APIRef("View Transitions API")}}
+{{APIRef("View Transition API")}}
 
-The **`startViewTransition()`** method of the {{domxref("Document")}} interface starts a new same-document (SPA) [view transition](/en-US/docs/Web/API/View_Transitions_API) and returns a {{domxref("ViewTransition")}} object to represent it.
+The **`startViewTransition()`** method of the {{domxref("Document")}} interface starts a new same-document (SPA) [view transition](/en-US/docs/Web/API/View_Transition_API) and returns a {{domxref("ViewTransition")}} object to represent it.
 
-When `startViewTransition()` is invoked, a sequence of steps is followed as explained in [The view transition process](/en-US/docs/Web/API/View_Transitions_API/Using#the_view_transition_process).
+When `startViewTransition()` is invoked, a sequence of steps is followed as explained in [The view transition process](/en-US/docs/Web/API/View_Transition_API/Using#the_view_transition_process).
 
 ## Syntax
 
@@ -32,7 +32,7 @@ A {{domxref("ViewTransition")}} object instance.
 
 ### Basic usage
 
-In our [Basic SPA View Transitions demo](https://mdn.github.io/dom-examples/view-transitions/spa/), the `updateView()` function handles both browsers that do and don't support the View Transitions API. In supporting browsers, we invoke `startViewTransition()` to trigger the view transition process without worrying about the return value.
+In our [Basic SPA View Transitions demo](https://mdn.github.io/dom-examples/view-transitions/spa/), the `updateView()` function handles both browsers that do and don't support the View Transition API. In supporting browsers, we invoke `startViewTransition()` to trigger the view transition process without worrying about the return value.
 
 ```js
 function updateView(event) {
@@ -71,4 +71,4 @@ function updateView(event) {
 
 ## See also
 
-- [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/)
+- [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/)

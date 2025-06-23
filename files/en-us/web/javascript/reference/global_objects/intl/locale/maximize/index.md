@@ -1,5 +1,6 @@
 ---
 title: Intl.Locale.prototype.maximize()
+short-title: maximize()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/maximize
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.Locale.maximize
@@ -11,7 +12,22 @@ The **`maximize()`** method of {{jsxref("Intl.Locale")}} instances gets the
 most likely values for the language, script, and region of this locale based on
 existing values.
 
-{{EmbedInteractiveExample("pages/js/intl-locale-prototype-maximize.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Locale.prototype.maximize()")}}
+
+```js interactive-example
+const english = new Intl.Locale("en");
+const korean = new Intl.Locale("ko");
+const arabic = new Intl.Locale("ar");
+
+console.log(english.maximize().baseName);
+// Expected output: "en-Latn-US"
+
+console.log(korean.maximize().baseName);
+// Expected output: "ko-Kore-KR"
+
+console.log(arabic.maximize().baseName);
+// Expected output: "ar-Arab-EG"
+```
 
 ## Syntax
 

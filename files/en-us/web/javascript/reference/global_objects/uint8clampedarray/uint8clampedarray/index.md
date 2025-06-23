@@ -1,5 +1,6 @@
 ---
 title: Uint8ClampedArray() constructor
+short-title: Uint8ClampedArray()
 slug: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray/Uint8ClampedArray
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Uint8ClampedArray.Uint8ClampedArray

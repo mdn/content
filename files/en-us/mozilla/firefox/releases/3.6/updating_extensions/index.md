@@ -25,7 +25,7 @@ The DOM Level 2 views to HTML and XHTML documents are now unified per HTML 5.
 - `document.createElementNS(null, "FOO")` no longer creates an HTML element node in HTML documents. `document.createElement("FOO")`
   or `document.createElementNS("http://www.w3.org/1999/xhtml", "foo")` continue
   to work in HTML documents.
-- The [`name`](/en-US/docs/Web/XPath/Functions/name) and the [`local-name`](/en-US/docs/Web/XPath/Functions/local-name) functions in XPath returns the name of HTML elements in lower case. Previously, in HTML documents, they returned it in upper case.
+- The [`name`](/en-US/docs/Web/XML/XPath/Reference/Functions/name) and the [`local-name`](/en-US/docs/Web/XML/XPath/Reference/Functions/local-name) functions in XPath returns the name of HTML elements in lower case. Previously, in HTML documents, they returned it in upper case.
 
 The most probable upgrade problem is the pattern `if (elt.localName === "FOO")`.
 
@@ -35,7 +35,7 @@ The most probable upgrade problem is the pattern `if (elt.localName === "FOO")`.
 
 `if (elt.localName === "img" && elt.namespaceURI === "http://www.w3.org/1999/xhtml")`
 
-#### Firefox 3.5 and 3.6, only extension-supplied text/html without foreign (e.g. SVG) script-inserted elements
+#### Firefox 3.5 and 3.6, only extension-supplied text/html without foreign (e.g., SVG) script-inserted elements
 
 `if (elt.tagName === "IMG")`
 

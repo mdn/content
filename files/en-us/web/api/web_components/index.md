@@ -66,7 +66,7 @@ The basic approach for implementing a web component generally looks something li
 
   - : The following extensions are defined:
 
-    - The [`is`](/en-US/docs/Web/HTML/Global_attributes/is) global HTML attribute
+    - The [`is`](/en-US/docs/Web/HTML/Reference/Global_attributes/is) global HTML attribute
       - : Allows you to specify that a standard HTML element should behave like a registered custom built-in element.
     - The "is" option of the {{domxref("Document.createElement()")}} method
       - : Allows you to create an instance of a standard HTML element that behaves like a given registered custom built-in element.
@@ -92,7 +92,7 @@ The basic approach for implementing a web component generally looks something li
   - : Pseudo-elements relating specifically to custom elements:
 
     - {{cssxref("::part")}}
-      - : Represents any element within a [shadow tree](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) that has a matching [`part`](/en-US/docs/Web/HTML/Global_attributes/part) attribute.
+      - : Represents any element within a [shadow tree](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) that has a matching [`part`](/en-US/docs/Web/HTML/Reference/Global_attributes/part) attribute.
 
 ### Shadow DOM
 
@@ -110,7 +110,7 @@ The basic approach for implementing a web component generally looks something li
   - : Additions to the `Node` interface relevant to shadow DOM:
 
     - The {{domxref("Node.getRootNode()")}} method returns the context object's root, which optionally includes the shadow root if it is available.
-    - The {{domxref("Node.isConnected")}} property returns a boolean indicating whether or not the Node is connected (directly or indirectly) to the context object, e.g. the {{domxref("Document")}} object in the case of the normal DOM, or the {{domxref("ShadowRoot")}} in the case of a shadow DOM.
+    - The {{domxref("Node.isConnected")}} property returns a boolean indicating whether or not the Node is connected (directly or indirectly) to the context object, e.g., the {{domxref("Document")}} object in the case of the normal DOM, or the {{domxref("ShadowRoot")}} in the case of a shadow DOM.
 
 - {{domxref("Event")}} extensions
 
@@ -127,7 +127,7 @@ The basic approach for implementing a web component generally looks something li
   - : Contains an HTML fragment that is not rendered when a containing document is initially loaded, but can be displayed at runtime using JavaScript, mainly used as the basis of custom element structures. The associated DOM interface is {{domxref("HTMLTemplateElement")}}.
 - {{htmlelement("slot")}}
   - : A placeholder inside a web component that you can fill with your own markup, which lets you create separate DOM trees and present them together. The associated DOM interface is {{domxref("HTMLSlotElement")}}.
-- The [`slot`](/en-US/docs/Web/HTML/Global_attributes/slot) global HTML attribute
+- The [`slot`](/en-US/docs/Web/HTML/Reference/Global_attributes/slot) global HTML attribute
   - : Assigns a slot in a shadow DOM shadow tree to an element.
 - {{domxref("Element.assignedSlot")}}
   - : A read-only attribute which returns a reference to the {{htmlelement("slot")}} in which this element is inserted.

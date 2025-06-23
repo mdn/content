@@ -8,9 +8,9 @@ browser-compat: api.HTMLInputElement.formTarget
 
 {{APIRef("HTML DOM")}}
 
-The **`formTarget`** property of the {{domxref("HTMLInputElement")}} interface is the tab, window, or iframe where the response of the submitted {{HtmlElement("form")}} is to be displayed. It reflects the value of the {{HTMLElement("input")}} element's [`formtarget`](/en-US/docs/Web/HTML/Element/input#formtarget) attribute.
+The **`formTarget`** property of the {{domxref("HTMLInputElement")}} interface is the tab, window, or iframe where the response of the submitted {{HtmlElement("form")}} is to be displayed. It reflects the value of the {{HTMLElement("input")}} element's [`formtarget`](/en-US/docs/Web/HTML/Reference/Elements/input#formtarget) attribute.
 
-This property is valid only for [`submit`](/en-US/docs/Web/HTML/Element/input/submit) and [`image`](/en-US/docs/Web/HTML/Element/input/image) `<input>` elements.
+This property is valid only for [`submit`](/en-US/docs/Web/HTML/Reference/Elements/input/submit) and [`image`](/en-US/docs/Web/HTML/Reference/Elements/input/image) `<input>` elements.
 
 Its value overrides the {{domxref("HTMLFormElement.target", "target")}} property of the {{domxref("HTMLFormElement")}} interface if the form is submitted via the input. This property can be retrieved or set. If not set, the value is the empty string (`""`).
 
@@ -39,6 +39,6 @@ inputElement.formTarget = "_blank";
 - {{domxref("HTMLInputElement.formNoValidate")}}
 - {{domxref("HTMLInputElement.formMethod")}}
 - {{domxref("HTMLFormElement.target")}}
-- [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit)
-- [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image)
-- [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data)
+- [`<input type="submit">`](/en-US/docs/Web/HTML/Reference/Elements/input/submit)
+- [`<input type="image">`](/en-US/docs/Web/HTML/Reference/Elements/input/image)
+- [Sending form data](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)

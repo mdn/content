@@ -17,7 +17,25 @@ const GeneratorFunction = function* () {}.constructor;
 
 `GeneratorFunction` is a subclass of {{jsxref("Function")}}.
 
-{{EmbedInteractiveExample("pages/js/functionasterisk-function.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: GeneratorFunction", "taller")}}
+
+```js interactive-example
+const GeneratorFunction = function* () {}.constructor;
+
+const foo = new GeneratorFunction(`
+  yield 'a';
+  yield 'b';
+  yield 'c';
+`);
+
+let str = "";
+for (const val of foo()) {
+  str += val;
+}
+
+console.log(str);
+// Expected output: "abc"
+```
 
 ## Constructor
 

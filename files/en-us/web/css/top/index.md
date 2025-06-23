@@ -9,7 +9,57 @@ browser-compat: css.properties.top
 
 The **`top`** [CSS](/en-US/docs/Web/CSS) property sets the vertical position of a [positioned element](/en-US/docs/Web/CSS/position). This {{glossary("inset properties", "inset property")}} has no effect on non-positioned elements.
 
-{{EmbedInteractiveExample("pages/css/top.html")}}
+{{InteractiveExample("CSS Demo: top")}}
+
+```css interactive-example-choice
+top: 0;
+```
+
+```css interactive-example-choice
+top: 4em;
+```
+
+```css interactive-example-choice
+top: 10%;
+```
+
+```css interactive-example-choice
+top: 20px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container">
+    <div id="example-element">I am absolutely positioned.</div>
+    <p>
+      As much mud in the streets as if the waters had but newly retired from the
+      face of the earth, and it would not be wonderful to meet a Megalosaurus,
+      forty feet long or so, waddling like an elephantine lizard up Holborn
+      Hill.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 0.75em solid;
+  padding: 0.75em;
+  text-align: left;
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+}
+
+#example-element {
+  background-color: #264653;
+  border: 4px solid #ffb500;
+  color: white;
+  position: absolute;
+  width: 140px;
+  height: 60px;
+}
+```
 
 The effect of `top` depends on how the element is positioned (i.e., the value of the {{cssxref("position")}} property):
 
@@ -31,7 +81,7 @@ When both `top` and {{cssxref("bottom")}} values are specified, there are three 
 top: 3px;
 top: 2.4em;
 top: anchor(bottom);
-top: calc(anchor(--myAnchor 50%) + 10px);
+top: anchor-size(--myAnchor self-block, 10%);
 
 /* <percentage>s of the height of the containing block */
 top: 10%;
@@ -51,11 +101,11 @@ top: unset;
 
 - {{cssxref("&lt;length&gt;")}}
 
-  - : A negative, null, or positive {{cssxref("&lt;length&gt;")}} that represents:
+  - : A negative, null, or positive {{cssxref("&lt;length&gt;")}}:
 
-    - for _absolutely positioned elements_, the distance to the top edge of the containing block.
-    - for [_anchor-positioned elements_](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#using_inset_properties_with_anchor_function_values), the {{cssxref("anchor()")}} function resolves to a {{cssxref("&lt;length&gt;")}} value relative to the position of the associated _anchor element_'s top or bottom edge.
-    - for _relatively positioned elements_, the distance that the element is moved below its normal position.
+    - for _absolutely positioned elements_, it represents the distance to the top edge of the containing block.
+    - for _anchor-positioned elements_, the {{cssxref("anchor()")}} function resolves to a {{cssxref("&lt;length&gt;")}} value relative to the position of the associated _anchor element_'s top or bottom edge (see [Using inset properties with `anchor()` function values](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#using_inset_properties_with_anchor_function_values)), and the {{cssxref("anchor-size()")}} function resolves to a {{cssxref("&lt;length&gt;")}} value relative to the associated anchor element's width or height (see [Setting element position based on anchor size](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#setting_element_position_based_on_anchor_size)).
+    - for _relatively positioned elements_, it represents the distance that the element is moved below its normal position.
 
 - {{cssxref("&lt;percentage&gt;")}}
   - : A {{cssxref("&lt;percentage&gt;")}} of the containing block's height.
@@ -65,9 +115,6 @@ top: unset;
 
     - for _absolutely positioned elements_, the position of the element is based on the {{Cssxref("bottom")}} property, while `height: auto` is treated as a height based on the content; or if `bottom` is also `auto`, the element is positioned where it should vertically be positioned if it were a static element.
     - for _relatively positioned elements_, the distance of the element from its normal position is based on the {{Cssxref("bottom")}} property; or if `bottom` is also `auto`, the element is not moved vertically at all.
-
-- `inherit`
-  - : Specifies that the value is the same as the computed value from its parent element (which might not be its containing block). This computed value is then handled as if it were a {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, or the `auto` keyword.
 
 ## Formal definition
 

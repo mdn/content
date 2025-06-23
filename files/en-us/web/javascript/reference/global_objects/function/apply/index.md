@@ -1,5 +1,6 @@
 ---
 title: Function.prototype.apply()
+short-title: apply()
 slug: Web/JavaScript/Reference/Global_Objects/Function/apply
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Function.apply
@@ -9,7 +10,21 @@ browser-compat: javascript.builtins.Function.apply
 
 The **`apply()`** method of {{jsxref("Function")}} instances calls this function with a given `this` value, and `arguments` provided as an array (or an [array-like object](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)).
 
-{{EmbedInteractiveExample("pages/js/function-apply.html")}}
+{{InteractiveExample("JavaScript Demo: Function.prototype.apply()")}}
+
+```js interactive-example
+const numbers = [5, 6, 2, 3, 7];
+
+const max = Math.max.apply(null, numbers);
+
+console.log(max);
+// Expected output: 7
+
+const min = Math.min.apply(null, numbers);
+
+console.log(min);
+// Expected output: 2
+```
 
 ## Syntax
 
@@ -100,14 +115,14 @@ let min = Math.min.apply(null, numbers);
 
 // vs. loop based algorithm
 max = -Infinity;
-min = +Infinity;
+min = Infinity;
 
-for (let i = 0; i < numbers.length; i++) {
-  if (numbers[i] > max) {
-    max = numbers[i];
+for (const n of numbers) {
+  if (n > max) {
+    max = n;
   }
-  if (numbers[i] < min) {
-    min = numbers[i];
+  if (n < min) {
+    min = n;
   }
 }
 ```

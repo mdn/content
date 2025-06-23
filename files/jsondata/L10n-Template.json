@@ -72,19 +72,22 @@
     "fr": "Non standard",
     "ja": "非標準",
     "ko": "비표준",
+    "pt-BR": "Não padrão",
     "ru": "Не стандартно",
     "zh-CN": "非标准"
   },
 
   "non_standard_header_copy": {
-    "de": "Diese Funktion ist nicht standardisiert und befindet sich nicht auf dem Weg zur Standardisierung. Verwenden Sie sie nicht auf Produktionsseiten, die dem Web ausgesetzt sind: Sie funktioniert nicht für alle Benutzer. Es kann auch große Inkompatibilitäten zwischen Implementierungen geben, und das Verhalten kann sich in Zukunft ändern.",
-    "en-US": "This feature is non-standard and is not on a standards track. Do not use it on production sites facing the Web: it will not work for every user. There may also be large incompatibilities between implementations and the behavior may change in the future.",
-    "es": "Esta característica no es parte de los estándares. No la uses en sitios Web en producción: no funcionará para todos los usuarios. Podrían haber también incompatibilidades considerables entre distintas implementaciones y el comportamiento podría cambiar en el futuro.",
-    "fr": "Cette fonctionnalité n'est ni standard, ni en voie de standardisation. Ne l'utilisez pas pour des sites accessibles sur le Web : elle ne fonctionnera pas pour tout utilisateur. Il peut également y avoir d'importantes incompatibilités entre les implémentations et son comportement peut être modifié dans le futur.",
-    "ja": "この機能は標準ではなく、標準化の予定もありません。公開されているウェブサイトには使用しないでください。ユーザーによっては使用できないことがあります。実装ごとに大きな差があることもあり、将来は振る舞いが変わるかもしれません。",
-    "ko": "이 기능은 비표준이므로 실제 프로덕션에서 사용하지 마세요. 모든 사용자 환경에서 작동하지 않을 수 도 있으며, 미래에 호환성 문제가 생길 수 있습니다.",
-    "ru": "Эта возможность не является стандартной и стандартизировать её пока никто не собирается. Не используйте её на сайтах, смотрящих во внешний мир: она будет работать не у всех пользователей. Также могут присутствовать большие несовместимости между реализациями и её поведение может в будущем измениться.",
-    "zh-CN": "该特性是非标准的，请尽量不要在生产环境中使用它！"
+    "de": "Diese Funktion ist nicht standardisiert. Wir raten davon ab, nicht-standardisierte Funktionen auf produktiven Webseiten zu verwenden, da sie nur von bestimmten Browsern unterstützt werden und sich in Zukunft ändern oder entfernt werden können. Unter Umständen kann sie jedoch eine geeignete Option sein, wenn es keine standardisierte Alternative gibt.",
+    "en-US": "This feature is not standardized. We do not recommend using non-standard features in production, as they have limited browser support, and may change or be removed. However, they can be a suitable alternative in specific cases where no standard option exists.",
+    "es": "Esta función no está estandarizada. No recomendamos usar funciones no estándar en producción, ya que tienen un soporte limitado en los navegadores y pueden cambiar o eliminarse. Sin embargo, pueden ser una alternativa adecuada en casos específicos donde no exista una opción estándar.",
+    "fr": "Cette fonctionnalité n'est pas standardisée. Nous déconseillons d'utiliser des fonctionnalités non standard en production, car leur prise en charge par les navigateurs est limitée, et elles peuvent être modifiées ou supprimées. Toutefois, elles peuvent constituer une alternative appropriée dans certains cas où aucune option standard n'existe.",
+    "ja": "この機能は標準化されていません。非標準の機能はブラウザーの対応が限られ、将来的に変更または削除される可能性があるため、本番環境での使用は推奨されません。ただし、標準の選択肢が存在しない特定のケースでは、有効な代替手段となる場合があります。",
+    "ko": "이 기능은 표준화되어 있지 않습니다. 비표준 기능은 브라우저 지원이 제한적이며 변경되거나 제거될 수 있으므로 프로덕션 환경에서 사용하는 것은 권장되지 않습니다. 그러나 표준 옵션이 없는 특정 상황에서는 적절한 대안이 될 수 있습니다.",
+    "pt-BR": "Este recurso não é padronizado. Não recomendamos o uso de recursos não padronizados em produção, pois eles têm suporte limitado nos navegadores e podem mudar ou ser removidos. No entanto, podem ser uma alternativa viável em casos específicos onde não exista uma opção padrão.",
+    "ru": "Эта функция не стандартизирована. Мы не рекомендуем использовать нестандартные функции в действующих проектах, так как их поддержка браузерами ограничена, а поведение может измениться или быть удалено. Тем не менее, в некоторых случаях, когда нет стандартного решения, они могут быть подходящей альтернативой.",
+    "zh-CN": "该特性尚未标准化。我们不建议在生产环境中使用非标准特性，因为它们在浏览器中的支持有限，且可能发生变化或被移除。不过，在没有标准选项的特定情况下，它们可以作为合适的替代方案。",
+    "zh-TW": "此功能尚未標準化。我們不建議在生產環境中使用非標準功能，因為它們的瀏覽器支援有限，且可能變更或被移除。然而，在沒有標準選項的特定情況下，它們可以作為合適的替代方案。"
   },
 
   "secure_context_label": {
@@ -92,7 +95,9 @@
     "en-US": "Secure context",
     "es": "Contexto seguro",
     "fr": "Contexte sécurisé",
+    "ko": "보안 컨텍스트",
     "ja": "安全なコンテキスト用",
+    "ko": "보안 컨텍스트",
     "zh-CN": "安全上下文"
   },
 
@@ -101,7 +106,9 @@
     "en-US": "This feature is available only in secure contexts (HTTPS)",
     "es": "Esta función está disponible solo en contextos seguros (HTTPS)",
     "fr": "Cette fonctionnalité est uniquement disponible dans des contextes sécurisés (HTTPS)",
+    "ko": "이 기능은 보안 컨텍스트 (HTTPS)에서만 사용할 수 있습니다",
     "ja": "この機能は安全なコンテキスト (HTTPS) でのみ利用できます",
+    "ko": "이 기능은 보안 컨텍스트 (HTTPS)에서만 사용할 수 있습니다",
     "zh-CN": "此功能仅在安全上下文（HTTPS）中可用"
   },
 
@@ -110,7 +117,9 @@
     "en-US": "This feature is available only in <a href='/en-US/docs/Web/Security/Secure_Contexts'>secure contexts</a> (HTTPS), in some or all <a href='#browser_compatibility'>supporting browsers</a>.",
     "es": "Esta función está disponible solo en <a href='/es/docs/Web/Security/Secure_Contexts'>contextos seguros</a> (HTTPS), en algunos o todos los <a href='#browser_compatibility'>navegadores que lo soportan</a>.",
     "fr": "Cette fonctionnalité est uniquement disponible dans des <a href='/fr/docs/Web/Security/Secure_Contexts'>contextes sécurisés</a> (HTTPS), pour certains <a href='#compatibilité_des_navigateurs'>navigateurs qui la prennent en charge</a>.",
+    "ko": "이 기능은 일부 또는 모든 <a href='#브라우저_호환성'>지원 브라우저</a>의 <a href='/ko/docs/Web/Security/Secure_Contexts'>보안 컨텍스트</a> (HTTPS)에서만 사용할 수 있습니다.",
     "ja": "この機能は一部またはすべての<a href='#browser_compatibility'>対応しているブラウザー</a>において、<a href='/ja/docs/Web/Security/Secure_Contexts'>安全なコンテキスト</a> (HTTPS) でのみ利用できます。",
+    "ko": "이 기능은 일부 또는 모든 <a href='#브라우저_호환성'>지원 브라우저</a>의 <a href='/ko/docs/Web/Security/Secure_Contexts'>보안 컨텍스트</a> (HTTPS)에서만 사용할 수 있습니다.",
     "zh-CN": "此项功能仅在一些<a href='#浏览器兼容性'>支持的浏览器</a>的<a href='/zh-CN/docs/Web/Security/Secure_Contexts'>安全上下文</a>（HTTPS）中可用。"
   },
 
@@ -119,7 +128,7 @@
     "en-US": "Try it",
     "fr": "Exemple interactif",
     "ja": "試してみましょう",
-    "ko": "시도해보기",
+    "ko": "시도해 보기",
     "ru": "Интерактивный пример",
     "pt-BR": "Experimente",
     "es": "Pruébalo",
@@ -419,5 +428,9 @@
     "ru": "Обзор",
     "zh-CN": "概述",
     "zh-TW": "概述"
+  },
+  "sources_prefix": {
+    "de": "Quellen: ",
+    "en-US": "Sources: "
   }
 }

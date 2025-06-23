@@ -3,12 +3,10 @@ title: "GPURenderPassEncoder: drawIndirect() method"
 short-title: drawIndirect()
 slug: Web/API/GPURenderPassEncoder/drawIndirect
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPURenderPassEncoder.drawIndirect
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`drawIndirect()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface draws primitives using parameters read from a {{domxref("GPUBuffer")}}.
@@ -57,7 +55,7 @@ The following criteria must be met when calling **`drawIndirect()`**, otherwise 
 ## Examples
 
 ```js
-// ...
+// …
 
 // Create GPURenderPassEncoder
 const passEncoder = commandEncoder.beginRenderPass(renderPassDescriptor);
@@ -89,7 +87,7 @@ passEncoder.end();
 // End frame by passing array of GPUCommandBuffers to command queue for execution
 device.queue.submit([commandEncoder.finish()]);
 
-// ...
+// …
 ```
 
 ## Specifications

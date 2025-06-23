@@ -7,7 +7,7 @@ browser-compat: css.types.sqrt
 
 {{CSSRef}}
 
-The **`sqrt()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is an exponential function that returns the [square root](https://en.wikipedia.org/wiki/Square_root) of a number.
+The **`sqrt()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) is an exponential function that returns the [square root](https://en.wikipedia.org/wiki/Square_root) of a number.
 
 The function `pow(x, 0.5)` is equivalent to `sqrt(x)`.
 
@@ -35,7 +35,7 @@ Returns a {{cssxref("&lt;number&gt;")}} which is the square root of `x`.
 - If `x` is `0⁻`, the result is `0⁻`.
 - If `x` is less than `0`, the result is `NaN`.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 
@@ -58,7 +58,7 @@ This example shows how you can use the `sqrt()` function to calculate sizes.
 
 #### CSS
 
-Here we are using [CSS custom properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties) to define the sizes to be used. First, we declare the first size (`--size-0`), which is then used to calculate the other sizes.
+Here we are using [CSS custom properties](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) to define the sizes to be used. First, we declare the first size (`--size-0`), which is then used to calculate the other sizes.
 
 - `--size-1` is calculated by multiplying the value of `--size-0` (50px) by the square root of 4 (2), which results in 100px.
 - `--size-2` is calculated by multiplying the value of `--size-0` (50px) by the square root of 9 (3), which results in 150px.

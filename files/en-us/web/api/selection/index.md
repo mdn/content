@@ -22,9 +22,9 @@ A user may make a selection from left to right (in document order) or right to l
 - {{DOMxRef("Selection.direction")}} {{ReadOnlyInline}}
   - : A string describing the direction of the current selection.
 - {{DOMxRef("Selection.focusNode")}} {{ReadOnlyInline}}
-  - : Returns the {{DOMxRef("Node")}} in which the selection ends. Can return `null` if selection never existed in the document (for example, in an `iframe` that was never clicked on).
+  - : Returns the {{DOMxRef("Node")}} in which the selection ends. Can return `null` if selection never existed in the document (e.g., an iframe that was never clicked on).
 - {{DOMxRef("Selection.focusOffset")}} {{ReadOnlyInline}}
-  - : Returns a number representing the offset of the selection's anchor within the `focusNode`. If `focusNode` is a text node, this is the number of characters within `focusNode` preceding the focus. If `focusNode` is an element, this is the number of child nodes of the `focusNode` preceding the focus.
+  - : Returns a number representing the offset of the selection's focus within the `focusNode`. If `focusNode` is a text node, this is the number of characters within `focusNode` preceding the focus. If `focusNode` is an element, this is the number of child nodes of the `focusNode` preceding the focus.
 - {{DOMxRef("Selection.isCollapsed")}} {{ReadOnlyInline}}
   - : Returns a Boolean indicating whether the selection's start and end points are at the same position.
 - {{DOMxRef("Selection.rangeCount")}} {{ReadOnlyInline}}
@@ -50,7 +50,7 @@ A user may make a selection from left to right (in document order) or right to l
   - : Removes all ranges from the selection, leaving the {{domxref("Selection.anchorNode", "anchorNode")}} and {{domxref("Selection.focusNode","focusNode")}} properties equal to `null` and nothing selected.
 - {{DOMxRef("Selection.extend()")}}
   - : Moves the focus of the selection to a specified point.
-- {{DOMxRef("Selection.getComposedRanges()")}} {{experimental_inline}}
+- {{DOMxRef("Selection.getComposedRanges()")}}
   - : Returns an array of {{DOMxRef("StaticRange")}} objects, each that represents a selection that might cross shadow DOM boundaries.
 - {{DOMxRef("Selection.getRangeAt()")}}
   - : Returns a {{DOMxRef("Range")}} object representing one of the ranges currently selected.
@@ -67,7 +67,7 @@ A user may make a selection from left to right (in document order) or right to l
 - {{DOMxRef("Selection.setPosition()")}}
   - : Collapses the current selection to a single point.
 - {{DOMxRef("Selection.toString()")}}
-  - : Returns a string currently being represented by the selection object, i.e. the currently selected text.
+  - : Returns a string currently being represented by the selection object, i.e., the currently selected text.
 
 ## Notes
 
@@ -94,7 +94,7 @@ const range = selObj.getRangeAt(0);
 - `selObj` is a Selection object
 - `range` is a {{DOMxRef("Range")}} object
 
-As the [Selection API specification notes](https://www.w3.org/TR/selection-api/#h_note_15), the Selection API was initially created by Netscape and allowed multiple ranges (for instance, to allow the user to select a column from a {{HTMLElement("table")}}). However, browsers other than Gecko did not implement multiple ranges, and the specification also requires the selection to always have a single range.
+As the [Selection API specification notes](https://w3c.github.io/selection-api/#h-note-13), the Selection API was initially created by Netscape and allowed multiple ranges (for instance, to allow the user to select a column from a {{HTMLElement("table")}}). However, browsers other than Gecko did not implement multiple ranges, and the specification also requires the selection to always have a single range.
 
 ### Selection and input focus
 
@@ -144,7 +144,7 @@ Other key terms used in this section.
 - anchor
   - : The anchor of a selection is the beginning point of the selection. When making a selection with a mouse, the anchor is where in the document the mouse button is initially pressed. As the user changes the selection using the mouse or the keyboard, the anchor does not move.
 - editing host
-  - : An editable element (e.g., an HTML element with [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) set, or the HTML child of a document that has {{DOMxRef("Document.designMode", "designMode")}} enabled).
+  - : An editable element (e.g., an HTML element with [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) set, or the HTML child of a document that has {{DOMxRef("Document.designMode", "designMode")}} enabled).
 - focus of a selection
 
   - : The _focus_ of a selection is the end point of the selection. When making a selection with a mouse, the focus is where in the document the mouse button is released. As the user changes the selection using the mouse or the keyboard, the focus is the end of the selection that moves.

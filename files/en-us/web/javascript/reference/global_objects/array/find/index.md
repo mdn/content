@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.find()
+short-title: find()
 slug: Web/JavaScript/Reference/Global_Objects/Array/find
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.find
@@ -18,7 +19,16 @@ If no values satisfy the testing function, {{jsxref("undefined")}} is returned.
 - If you need to find if any element satisfies the provided testing function, use {{jsxref("Array/some", "some()")}}.
 - If you need to find all elements that satisfy the provided testing function, use {{jsxref("Array/filter", "filter()")}}.
 
-{{EmbedInteractiveExample("pages/js/array-find.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.find()", "shorter")}}
+
+```js interactive-example
+const array1 = [5, 12, 8, 130, 44];
+
+const found = array1.find((element) => element > 10);
+
+console.log(found);
+// Expected output: 12
+```
 
 ## Syntax
 
@@ -86,9 +96,9 @@ const result = inventory.find(({ name }) => name === "cherries");
 console.log(result); // { name: 'cherries', quantity: 5 }
 ```
 
-### Find a prime number in an array
+### Find the first prime number in an array
 
-The following example finds an element in the array that is a prime number (or returns {{jsxref("undefined")}} if there is no prime number):
+The following example returns the first element in the array that is a prime number, or {{jsxref("undefined")}} if there is no prime number.
 
 ```js
 function isPrime(element, index, array) {
@@ -134,6 +144,7 @@ const array = [0, 1, , , , 5, 6];
 // Shows all indexes, not just those with assigned values
 array.find((value, index) => {
   console.log("Visited index", index, "with value", value);
+  return false;
 });
 // Visited index 0 with value 0
 // Visited index 1 with value 1
@@ -152,6 +163,7 @@ array.find((value, index) => {
   }
   // Element 5 is still visited even though deleted
   console.log("Visited index", index, "with value", value);
+  return false;
 });
 // Deleting array[5] with value 5
 // Visited index 0 with value 0
@@ -190,6 +202,7 @@ console.log(Array.prototype.find.call(arrayLike, (x) => !Number.isInteger(x)));
 ## See also
 
 - [Polyfill of `Array.prototype.find` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims polyfill of `Array.prototype.find`](https://www.npmjs.com/package/array.prototype.find)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.findIndex()")}}

@@ -1,5 +1,6 @@
 ---
 title: RegExp[Symbol.species]
+short-title: "[Symbol.species]"
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.species
 page-type: javascript-static-accessor-property
 browser-compat: javascript.builtins.RegExp.@@species
@@ -11,8 +12,6 @@ The **`RegExp[Symbol.species]`** static accessor property returns the constructo
 
 > [!WARNING]
 > The existence of `[Symbol.species]` allows execution of arbitrary code and may create security vulnerabilities. It also makes certain optimizations much harder. Engine implementers are [investigating whether to remove this feature](https://github.com/tc39/proposal-rm-builtin-subclassing). Avoid relying on it if possible.
-
-{{EmbedInteractiveExample("pages/js/regexp-getregexp-@@species.html")}}
 
 ## Syntax
 

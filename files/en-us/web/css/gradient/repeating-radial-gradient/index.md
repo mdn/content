@@ -7,9 +7,39 @@ browser-compat: css.types.gradient.repeating-radial-gradient
 
 {{CSSRef}}
 
-The **`repeating-radial-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) creates an image consisting of repeating gradients that radiate from an origin. It is similar to {{cssxref("gradient/radial-gradient", "radial-gradient()")}} and takes the same arguments, but it repeats the color stops infinitely in all directions so as to cover its entire container, similar to {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}. The function's result is an object of the {{cssxref("&lt;gradient&gt;")}} data type, which is a special kind of {{cssxref("&lt;image&gt;")}}.
+The **`repeating-radial-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) creates an image consisting of repeating gradients that radiate from an origin. It is similar to {{cssxref("gradient/radial-gradient", "radial-gradient()")}} and takes the same arguments, but it repeats the color stops infinitely in all directions so as to cover its entire container, similar to {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}. The function's result is an object of the {{cssxref("&lt;gradient&gt;")}} data type, which is a special kind of {{cssxref("&lt;image&gt;")}}.
 
-{{EmbedInteractiveExample("pages/css/function-repeating-radial-gradient.html")}}
+{{InteractiveExample("CSS Demo: repeating-radial-gradient()")}}
+
+```css interactive-example-choice
+background: repeating-radial-gradient(#e66465, #9198e5 20%);
+```
+
+```css interactive-example-choice
+background: repeating-radial-gradient(closest-side, #3f87a6, #ebf8e1, #f69d3c);
+```
+
+```css interactive-example-choice
+background: repeating-radial-gradient(
+  circle at 100%,
+  #333,
+  #333 10px,
+  #eee 10px,
+  #eee 20px
+);
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-height: 100%;
+}
+```
 
 With each repetition, the positions of the color stops are shifted by a multiple of the dimensions of the basic radial gradient (the distance between the last color stop and the first). Thus, the position of each ending color stop coincides with a starting color stop; if the color values are different, this will result in a sharp visual transition, which can be mitigated by repeating the first color as the last color.
 
@@ -55,9 +85,9 @@ repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%)
 - `<color-stop>`
   - : A color-stop's {{cssxref("&lt;color&gt;")}} value, followed by an optional stop position (either a {{cssxref("&lt;percentage&gt;")}} or a {{cssxref("&lt;length&gt;")}} along the gradient's axis). A percentage of `0%`, or a length of `0`, represents the center of the gradient; the value `100%` represents the intersection of the ending shape with the virtual gradient ray. Percentage values in between are linearly positioned on the virtual gradient ray.
 
-### Formal syntax
+## Formal syntax
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Examples
 

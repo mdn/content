@@ -1,10 +1,10 @@
 ---
 title: Features restricted to secure contexts
+short-title: Restricted features
 slug: Web/Security/Secure_Contexts/features_restricted_to_secure_contexts
 page-type: guide
+sidebar: security
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
 This reference lists the web platform features available only in secure contexts — see [Secure Contexts](/en-US/docs/Web/Security/Secure_Contexts) for a definition and more details.
 
@@ -19,7 +19,7 @@ This section lists APIs that specifications make available only in secure contex
 - {{domxref("Badging API", "", "", "nocode")}}
 - {{domxref("Barcode Detection API", "", "", "nocode")}}
 - {{domxref("Battery Status API", "", "", "nocode")}}
-- [`Cache-Control: immutable`](/en-US/docs/Web/HTTP/Headers/Cache-Control)
+- [`Cache-Control: immutable`](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control)
 - {{domxref("Contact Picker API", "", "", "nocode")}}
 - {{domxref("Content Index API", "", "", "nocode")}}
 - {{domxref("Cookie Store API", "", "", "nocode")}}

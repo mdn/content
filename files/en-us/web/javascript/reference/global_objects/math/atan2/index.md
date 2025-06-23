@@ -1,5 +1,6 @@
 ---
 title: Math.atan2()
+short-title: atan2()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan2
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.atan2
@@ -9,7 +10,22 @@ browser-compat: javascript.builtins.Math.atan2
 
 The **`Math.atan2()`** static method returns the angle in the plane (in radians) between the positive x-axis and the ray from (0, 0) to the point (x, y), for `Math.atan2(y, x)`.
 
-{{EmbedInteractiveExample("pages/js/math-atan2.html")}}
+{{InteractiveExample("JavaScript Demo: Math.atan2()")}}
+
+```js interactive-example
+function calcAngleDegrees(x, y) {
+  return (Math.atan2(y, x) * 180) / Math.PI;
+}
+
+console.log(calcAngleDegrees(5, 5));
+// Expected output: 45
+
+console.log(calcAngleDegrees(10, 10));
+// Expected output: 45
+
+console.log(calcAngleDegrees(0, 10));
+// Expected output: 90
+```
 
 ## Syntax
 

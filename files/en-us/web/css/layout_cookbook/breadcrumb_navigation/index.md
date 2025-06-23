@@ -20,13 +20,13 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground:
 
 ```html live-sample___breadcrumb-example
 <nav aria-label="Breadcrumb" class="breadcrumb">
-  <ul>
+  <ol>
     <li><a href="#">Home</a></li>
     <li><a href="#">Category</a></li>
     <li><a href="#">Sub Category</a></li>
     <li><a href="#">Type</a></li>
     <li><span aria-current="page">Product</span></li>
-  </ul>
+  </ol>
 </nav>
 ```
 
@@ -39,7 +39,7 @@ body {
   padding: 0 0.5rem;
 }
 
-.breadcrumb ul {
+.breadcrumb ol {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
@@ -70,13 +70,13 @@ body {
 
 ## Choices made
 
-To display list items inline, we use [flexbox layout](/en-US/docs/Learn/CSS/CSS_layout/Flexbox), thus demonstrating how a line of CSS can give us our navigation. The separators are added using [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content). You could change these to any separator that you like.
+To display list items inline, we use [flexbox layout](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox), thus demonstrating how a line of CSS can give us our navigation. The separators are added using [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content). You could change these to any separator that you like.
 
 ## Accessibility concerns
 
-We used the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) and [`aria-current`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-current) attributes to help assistive technology users understand what this navigation is and where the current page is in the structure. See the related links for more information.
+We used the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) and [`aria-current`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-current) attributes to help assistive technology users understand what this navigation is and where the current page is in the structure. See the related links for more information.
 
-Be aware that the separator arrows `→` added via the {{cssxref("content")}} CSS property in the example above are exposed to assistive technologies (AT), including screen readers and braille displays. For a quieter solution, use a decorative {{HTMLElement("img")}} in your HTML with an empty `alt` attribute. An ARIA [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles) set to [`none`](/en-US/docs/Web/Accessibility/ARIA/Roles/none_role) or [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) will also prevent the image from being exposed to AT.
+Be aware that the separator arrows `→` added via the {{cssxref("content")}} CSS property in the example above are exposed to assistive technologies (AT), including screen readers and braille displays. For a quieter solution, use a decorative {{HTMLElement("img")}} in your HTML with an empty `alt` attribute. An ARIA [`role`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) set to [`none`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/none_role) or [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) will also prevent the image from being exposed to AT.
 
 Alternatively, silence the [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) by including an empty string as alternative text, preceded by a slash (`/`); for example, `content: url("arrow.png") / "";`.
 

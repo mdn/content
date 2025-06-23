@@ -63,6 +63,7 @@ Events have three functions:
         - "audible"
         - "discarded"
         - "favIconUrl"
+        - "groupId"
         - "hidden"
         - "isArticle"
         - "mutedInfo"
@@ -96,6 +97,8 @@ Lists the changes to the state of the tab that is updated. To learn more about t
   - : `boolean`. Whether the tab is discarded. A discarded tab is one whose content has been unloaded from memory but is visible in the tab strip. Its content gets reloaded the next time it's activated.
 - `favIconUrl` {{optional_inline}}
   - : `string`. The tab's new favicon URL. Not included when a tab loses its favicon (navigating from a page with a favicon to a page without one). Check `favIconUrl` in [tab](#tab) instead.
+- `groupId` {{optional_inline}}
+  - : `integer`. The ID of the group the tabs are in or `-1` ({{WebExtAPIRef("tabGroups.TAB_GROUP_ID_NONE")}}) for ungrouped tabs.
 - `hidden` {{optional_inline}}
   - : `boolean`. True if the tab is {{WebExtAPIRef("tabs.hide()", "hidden")}}.
 - `isArticle` {{optional_inline}}
@@ -141,11 +144,11 @@ browser.tabs.onUpdated.addListener(handleUpdated);
 
 ### Filtering examples
 
-Log changes only to tabs whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by `https://developer.mozilla.org/*` or `https://mozilla.social/@mdn`:
+Log changes only to tabs whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by `https://developer.mozilla.org/*` or `https://mastodon.social/@mdn`:
 
 ```js
 const pattern1 = "https://developer.mozilla.org/*";
-const pattern2 = "https://mozilla.social/@mdn";
+const pattern2 = "https://mastodon.social/@mdn";
 
 const filter = {
   urls: [pattern1, pattern2],
@@ -176,11 +179,11 @@ function handleUpdated(tabId, changeInfo, tabInfo) {
 browser.tabs.onUpdated.addListener(handleUpdated, filter);
 ```
 
-Combine both the previous filters, log only when the `pinned` property of tabs changes for tabs whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by `https://developer.mozilla.org/*` or `https://mozilla.social/@mdn`:
+Combine both the previous filters, log only when the `pinned` property of tabs changes for tabs whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by `https://developer.mozilla.org/*` or `https://mastodon.social/@mdn`:
 
 ```js
 const pattern1 = "https://developer.mozilla.org/*";
-const pattern2 = "https://mozilla.social/@mdn";
+const pattern2 = "https://mastodon.social/@mdn";
 
 const filter = {
   urls: [pattern1, pattern2],
@@ -196,11 +199,11 @@ function handleUpdated(tabId, changeInfo, tabInfo) {
 browser.tabs.onUpdated.addListener(handleUpdated, filter);
 ```
 
-Log changes only when the `pinned` property of tabs changes for tabs whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by `https://developer.mozilla.org/*` or `https://mozilla.social/@mdn` where the tab was part of the current browser window when the update event fired:
+Log changes only when the `pinned` property of tabs changes for tabs whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by `https://developer.mozilla.org/*` or `https://mastodon.social/@mdn` where the tab was part of the current browser window when the update event fired:
 
 ```js
 const pattern1 = "https://developer.mozilla.org/*";
-const pattern2 = "https://mozilla.social/@mdn";
+const pattern2 = "https://mastodon.social/@mdn";
 
 const filter = {
   urls: [pattern1, pattern2],

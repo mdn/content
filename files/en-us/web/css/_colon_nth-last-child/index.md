@@ -1,5 +1,5 @@
 ---
-title: ":nth-last-child()"
+title: :nth-last-child()
 slug: Web/CSS/:nth-last-child
 page-type: css-pseudo-class
 browser-compat: css.selectors.nth-last-child
@@ -9,7 +9,36 @@ browser-compat: css.selectors.nth-last-child
 
 The **`:nth-last-child()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on their position among a group of siblings, counting from the end.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-nth-last-child.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :nth-last-child", "tabbed-shorter")}}
+
+```css interactive-example
+p {
+  font-weight: bold;
+}
+
+li:nth-last-child(-n + 3) {
+  border: 2px solid orange;
+  margin-top: 1px;
+}
+
+li:nth-last-child(even) {
+  background-color: lightyellow;
+}
+```
+
+```html interactive-example
+<p>Eight deadliest wildfires:</p>
+<ol reversed>
+  <li>Matheson Fire</li>
+  <li>Miramichi Fire</li>
+  <li>1997 Indonesian fires</li>
+  <li>Thumb Fire</li>
+  <li>Great Hinckley Fire</li>
+  <li>Cloquet Fire</li>
+  <li>Kursha-2 Fire</li>
+  <li>Peshtigo Fire</li>
+</ol>
+```
 
 ## Syntax
 
@@ -53,7 +82,8 @@ By passing a selector argument, we can select the **nth-last** element that matc
 > This is different from moving the selector outside of the function, like:
 
 ```css
-li.important: nth-last-child(-n + 3);
+li.important:nth-last-child(-n + 3) {
+}
 ```
 
 This selector applies a style to list items if they are also within the last three children.

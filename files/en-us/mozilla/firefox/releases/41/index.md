@@ -44,7 +44,7 @@ Highlights:
 
 - {{HTMLElement("a")}} without an `href` attribute is no longer classified as interactive content. Clicking it inside {{HTMLElement("label")}} will activate labelled content ([Firefox bug 1167816](https://bugzil.la/1167816)).
 - SVG icons are now supported for site icons, that is favicons and shortcut icons ([Firefox bug 366324](https://bugzil.la/366324)).
-- The [`crossorigin`](/en-US/docs/Web/HTML/Element/link#crossorigin) attribute is now supported for [\<link rel='preconnect'>](/en-US/docs/Web/HTML/Element/link) ([Firefox bug 1174152](https://bugzil.la/1174152)).
+- The [`crossorigin`](/en-US/docs/Web/HTML/Reference/Elements/link#crossorigin) attribute is now supported for [\<link rel='preconnect'>](/en-US/docs/Web/HTML/Reference/Elements/link) ([Firefox bug 1174152](https://bugzil.la/1174152)).
 - The picture element does not react to resize/viewport changes ([Firefox bug 1135812](https://bugzil.la/1135812)).
 
 ### JavaScript
@@ -57,7 +57,7 @@ Highlights:
 - {{jsxref("Functions/Default_parameters", "Destructured parameters with default value assignment", "#Destructured_parameter_with_default_value_assignment", 1)}} are now supported ([Firefox bug 1018628](https://bugzil.la/1018628)).
 - Per ES2015, curly braces are required for [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions). Syntax without them will fail from now on ([Firefox bug 1150855](https://bugzil.la/1150855)).
 - [Method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) (except for generator methods) are not constructable anymore ([Firefox bug 1059908](https://bugzil.la/1059908) and [Firefox bug 1166950](https://bugzil.la/1166950)).
-- As part of ES2015 specification compliance, parenthesized [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) patterns, like `([a, b]) = [1, 2]` or `({a, b}) = { a: 1, b: 2 }`, are now considered invalid and will throw a {{jsxref("SyntaxError")}}. See [Jeff Walden's blog post](https://whereswalden.com/2015/06/20/new-changes-to-make-spidermonkeys-and-firefoxs-parsing-of-destructuring-patterns-more-spec-compliant/) for more details.
+- As part of ES2015 specification compliance, parenthesized [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) patterns, like `([a, b]) = [1, 2]` or `({a, b}) = { a: 1, b: 2 }`, are now considered invalid and will throw a {{jsxref("SyntaxError")}}. See [Jeff Walden's blog post](https://whereswalden.com/2015/06/20/new-changes-to-make-spidermonkeys-and-firefoxs-parsing-of-destructuring-patterns-more-spec-compliant/) for more details.
 - The [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) syntax has been added ([Firefox bug 1141865](https://bugzil.la/1141865)).
 
 ### Interfaces/APIs/DOM
@@ -138,8 +138,8 @@ Mathematical formulas require special fonts. So far, these fonts were hard-coded
 
 ## Security
 
-- The [CSP](/en-US/docs/Web/HTTP/CSP) 1.1 `manifest-src` [directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) is now supported ([Firefox bug 1089255](https://bugzil.la/1089255)).
-- Previous versions of Firefox incorrectly expected the [Content Security Policy](/en-US/docs/Web/HTTP/CSP) [referrer](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#referrer) directive's value `origin-when-cross-origin` to be spelled `origin-when-crossorigin`. This has been corrected to include the missing dash character.
+- The [CSP](/en-US/docs/Web/HTTP/Guides/CSP) 1.1 `manifest-src` [directive](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) is now supported ([Firefox bug 1089255](https://bugzil.la/1089255)).
+- Previous versions of Firefox incorrectly expected the [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) [referrer](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#referrer) directive's value `origin-when-cross-origin` to be spelled `origin-when-crossorigin`. This has been corrected to include the missing dash character.
 
 ## Changes for add-on and Mozilla developers
 

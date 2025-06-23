@@ -1,5 +1,6 @@
 ---
 title: Reflect.setPrototypeOf()
+short-title: setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/setPrototypeOf
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.setPrototypeOf
@@ -9,7 +10,22 @@ browser-compat: javascript.builtins.Reflect.setPrototypeOf
 
 The **`Reflect.setPrototypeOf()`** static method is like {{jsxref("Object.setPrototypeOf()")}} but returns a {{jsxref("Boolean")}}. It sets the prototype (i.e., the internal `[[Prototype]]` property) of a specified object.
 
-{{EmbedInteractiveExample("pages/js/reflect-setprototypeof.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.setPrototypeOf()")}}
+
+```js interactive-example
+const object1 = {};
+
+console.log(Reflect.setPrototypeOf(object1, Object.prototype));
+// Expected output: true
+
+console.log(Reflect.setPrototypeOf(object1, null));
+// Expected output: true
+
+const object2 = {};
+
+console.log(Reflect.setPrototypeOf(Object.freeze(object2), null));
+// Expected output: false
+```
 
 ## Syntax
 

@@ -1,5 +1,6 @@
 ---
 title: RegExp.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/toString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.toString
@@ -9,7 +10,24 @@ browser-compat: javascript.builtins.RegExp.toString
 
 The **`toString()`** method of {{jsxref("RegExp")}} instances returns a string representing this regular expression.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-tostring.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.toString()", "taller")}}
+
+```js interactive-example
+console.log(new RegExp("a+b+c"));
+// Expected output: /a+b+c/
+
+console.log(new RegExp("a+b+c").toString());
+// Expected output: "/a+b+c/"
+
+console.log(new RegExp("bar", "g").toString());
+// Expected output: "/bar/g"
+
+console.log(new RegExp("\n", "g").toString());
+// Expected output (if your browser supports escaping): "/\n/g"
+
+console.log(new RegExp("\\n", "g").toString());
+// Expected output: "/\n/g"
+```
 
 ## Syntax
 

@@ -10,9 +10,47 @@ browser-compat: css.properties.flex-basis
 The **`flex-basis`** [CSS](/en-US/docs/Web/CSS) property sets the initial main size of a {{glossary("flex item")}}. It sets the size of the content box unless otherwise set with {{Cssxref("box-sizing")}}.
 
 > [!NOTE]
-> It is recommended to use the {{cssxref("flex")}} shorthand instead of separate `flex-grow`, `flex-shrink`, and `flex-basis` declarations. We have separated them here as this document is about one of the shorthand components: the `flex-basis` property.
+> It is recommended to use the {{cssxref("flex")}} shorthand with a keyword value like `auto` or `initial` instead of setting `flex-basis` on its own. The [keyword values](/en-US/docs/Web/CSS/flex#values) expand to reliable combinations of {{cssxref("flex-grow")}}, {{cssxref("flex-shrink")}}, and `flex-basis`, which help to achieve the commonly desired flex behaviors.
 
-{{EmbedInteractiveExample("pages/css/flex-basis.html")}}
+{{InteractiveExample("CSS Demo: flex-basis")}}
+
+```css interactive-example-choice
+flex-basis: auto;
+```
+
+```css interactive-example-choice
+flex-basis: 0;
+```
+
+```css interactive-example-choice
+flex-basis: 200px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">Item One</div>
+  <div>Item Two</div>
+  <div>Item Three</div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  border: 1px solid #c5c5c5;
+  width: auto;
+  max-height: 300px;
+  display: flex;
+}
+
+.default-example > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  margin: 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+```
 
 In this example, the {{cssxref("flex-grow")}} and {{cssxref("flex-shrink")}} properties are both set to `1` on all three items, indicating that the flex item can grow and shrink from the initial `flex-basis`.
 
@@ -176,7 +214,7 @@ This example demonstrates the difference between a `flex-basis` of `0` versus a 
 
 #### HTML
 
-We include two same-structure flex containers. These which will be styled similarly, except for their `flex-basis` values. The containers each have two children: a heading `<div>` and a `<section>`. The `<section>` element has a content `<div>` child, which will not be set as a flex item but will be given a height.
+We include two same-structure flex containers, which will be styled similarly except for their `flex-basis` values. The containers each have two children: a heading `<div>` and a `<section>`. The `<section>` element has a content `<div>` child, which will not be set as a flex item but will be given a height.
 
 ```html
 <div class="container basis-0">
@@ -197,7 +235,7 @@ We include two same-structure flex containers. These which will be styled simila
 
 #### CSS
 
-We style the containers as inline flex containers that will appear side by side to better enable comparing them. We set the `flex-direction` to the column. The first container's flex items have a `flex-basis` value of `0` and the second container's flex item have a `flex-basis` value of `0%`. Neither the flex containers nor their flex items have a height explicitly set, but the heights of `section` elements can not exceed `200px` and their children have height `300px`.
+We style the containers as inline flex containers that will appear side by side to better enable comparing them. We set the `flex-direction` to `column`. The first container's flex items have a `flex-basis` value of `0`, while the second container's flex items have a `flex-basis` value of `0%`. Neither the flex containers nor their flex items have a height explicitly set, but the heights of `section` elements cannot exceed `200px` and their children have a height of `300px`.
 
 ```css
 .container {

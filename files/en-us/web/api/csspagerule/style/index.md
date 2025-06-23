@@ -9,11 +9,11 @@ browser-compat: api.CSSPageRule.style
 {{APIRef("CSSOM")}}
 
 The **`style`** read-only property of the {{domxref("CSSPageRule")}} interface returns a {{domxref("CSSPageDescriptors")}} object.
-This represents a [CSS declaration block](/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block) for a CSS {{cssxref("@page")}} [at-rule](/en-US/docs/Web/CSS/At-rule), and exposes style information and various style-related methods and properties for the page.
+This represents a [CSS declaration block](/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block) for a CSS {{cssxref("@page")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule), and exposes style information and various style-related methods and properties for the page.
 
 ## Value
 
-A {{domxref("CSSPageDescriptors")}} object with properties that match the associated {{cssxref("@page")}} [at-rule](/en-US/docs/Web/CSS/At-rule).
+A {{domxref("CSSPageDescriptors")}} object with properties that match the associated {{cssxref("@page")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule).
 
 > [!NOTE]
 > Earlier versions of the specification defined this property as a {{domxref("CSSStyleDeclaration")}}.
@@ -74,26 +74,26 @@ We then iterate through the rules defined for the live example and match any tha
 For the matching objects we then log the `style` and all its values.
 
 ```js
-for (let i = 0; i < myRules.length; i++) {
-  if (myRules[i] instanceof CSSPageRule) {
-    log(`${myRules[i].style}`);
-    log(`margin: ${myRules[i].style.margin}`);
+for (const rule of myRules) {
+  if (rule instanceof CSSPageRule) {
+    log(`${rule.style}`);
+    log(`margin: ${rule.style.margin}`);
 
     // Access properties using CamelCase properties
-    log(`marginTop: ${myRules[i].style.marginTop}`);
-    log(`marginRight: ${myRules[i].style.marginRight}`);
-    log(`marginBottom: ${myRules[i].style.marginBottom}`);
-    log(`marginLeft: ${myRules[i].style.marginLeft}`);
-    log(`pageOrientation: ${myRules[i].style.pageOrientation}`);
+    log(`marginTop: ${rule.style.marginTop}`);
+    log(`marginRight: ${rule.style.marginRight}`);
+    log(`marginBottom: ${rule.style.marginBottom}`);
+    log(`marginLeft: ${rule.style.marginLeft}`);
+    log(`pageOrientation: ${rule.style.pageOrientation}`);
 
     // Access properties using snake-case properties
-    log(`margin-top: ${myRules[i].style["margin-top"]}`);
-    log(`margin-right: ${myRules[i].style["margin-right"]}`);
-    log(`margin-left: ${myRules[i].style["margin-left"]}`);
-    log(`margin-bottom: ${myRules[i].style["margin-bottom"]}`);
-    log(`page-orientation: ${myRules[i].style["page-orientation"]}`);
+    log(`margin-top: ${rule.style["margin-top"]}`);
+    log(`margin-right: ${rule.style["margin-right"]}`);
+    log(`margin-left: ${rule.style["margin-left"]}`);
+    log(`margin-bottom: ${rule.style["margin-bottom"]}`);
+    log(`page-orientation: ${rule.style["page-orientation"]}`);
 
-    log(`size: ${myRules[i].style.size}`);
+    log(`size: ${rule.style.size}`);
     log("\n");
   }
 }

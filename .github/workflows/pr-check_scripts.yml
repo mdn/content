@@ -10,6 +10,9 @@ on:
       - yarn.lock
       - .github/workflows/pr-check_scripts.yml
 
+# No GITHUB_TOKEN permissions, as we only use it to increase API limit.
+permissions: {}
+
 jobs:
   up-to-date-check:
     runs-on: ubuntu-latest
@@ -110,6 +113,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - run: yarn content --help
+
+      - run: yarn content fix-redirects en-US
+
+      - run: yarn content validate-redirects en-US
 
   build:
     runs-on: ubuntu-latest

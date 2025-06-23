@@ -15,7 +15,7 @@ You currently need a polyfill to render IMSC on the web. imscJS is a good choice
 First you need to embed the imscJS library:
 
 ```html
-<script src="https://unpkg.com/imsc@1.1.0-beta.2/build/umd/imsc.all.min.js">
+<script src="https://unpkg.com/imsc@1.1.0-beta.2/build/umd/imsc.all.min.js"></script>
 ```
 
 Once the imscJS library is loaded, it can be used to render an IMSC document in three distinct steps, explained in the below sections.
@@ -137,7 +137,7 @@ What happens is the following:
 
 To map this into HTML we need at least two cues: one that represents the text "Hello" from second 1-2 and the other representing the text "Hello world!" from second 2-3.
 
-But this is a simplified easy scenario. Imagine that you have 5 more words accumulating. They may have all the same end time but different start times. Or imagine you have a subtitle in a different location (e.g. representing a different speaker). This subtitle is shown in parallel to the other subtitle but the accumulating words may have different start times and therefore different intervals.
+But this is a simplified easy scenario. Imagine that you have 5 more words accumulating. They may have all the same end time but different start times. Or imagine you have a subtitle in a different location (e.g., representing a different speaker). This subtitle is shown in parallel to the other subtitle but the accumulating words may have different start times and therefore different intervals.
 
 Luckily in IMSC and imscJS this scenario is quite easy to cover, because IMSC has a mechanism of stateless subtitle rendering.
 
@@ -273,7 +273,7 @@ This has the effect that pointer events are going "through" the overlay (see [re
 
 The caption user interface problem is a bit harder to solve. Although we can listen to events, activating a track using the caption user interface will also activate the rendering of corresponding WebVTT. As we are using VTTCues for IMSC rendering, this can course undesired presentation behavior. The text property of the VTTCue has always the empty string as value but in some browser this may lead nonetheless to the rendering of artifacts.
 
-the best solution is to building your own custom controls. Find out how in our [Creating a cross-browser video player](/en-US/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player) tutorial.
+the best solution is to building your own custom controls. Find out how in our [Creating a cross-browser video player](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player) tutorial.
 
 <section id="Quick_links">
   <ol>

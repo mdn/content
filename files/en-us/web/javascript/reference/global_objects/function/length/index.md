@@ -1,5 +1,6 @@
 ---
 title: "Function: length"
+short-title: length
 slug: Web/JavaScript/Reference/Global_Objects/Function/length
 page-type: javascript-instance-data-property
 browser-compat: javascript.builtins.Function.length
@@ -9,7 +10,19 @@ browser-compat: javascript.builtins.Function.length
 
 The **`length`** data property of a {{jsxref("Function")}} instance indicates the number of parameters expected by the function.
 
-{{EmbedInteractiveExample("pages/js/function-length.html")}}
+{{InteractiveExample("JavaScript Demo: Function: length")}}
+
+```js interactive-example
+function func1() {}
+
+function func2(a, b) {}
+
+console.log(func1.length);
+// Expected output: 0
+
+console.log(func2.length);
+// Expected output: 2
+```
 
 ## Value
 
@@ -19,10 +32,10 @@ A number.
 
 ## Description
 
-A {{jsxref("Function")}} object's `length` property indicates how many arguments the function expects, i.e. the number of formal parameters:
+A {{jsxref("Function")}} object's `length` property indicates how many arguments the function expects, i.e., the number of formal parameters:
 
 - Only parameters before the first one with a [default value](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) are counted.
-- A [destructuring pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) counts as a single parameter.
+- A [destructuring pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) counts as a single parameter.
 - The [rest parameter](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) is excluded.
 
 By contrast, {{jsxref("Functions/arguments/length", "arguments.length")}} is local to a function and provides the number of arguments actually passed to the function.

@@ -1,5 +1,5 @@
 ---
-title: "-webkit-text-stroke-color"
+title: -webkit-text-stroke-color
 slug: Web/CSS/-webkit-text-stroke-color
 page-type: css-property
 browser-compat: css.properties.-webkit-text-stroke-color

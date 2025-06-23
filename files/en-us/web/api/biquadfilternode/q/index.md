@@ -10,11 +10,16 @@ browser-compat: api.BiquadFilterNode.Q
 
 The `Q` property of the {{ domxref("BiquadFilterNode") }} interface is an [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}, a double representing a [Q factor](https://en.wikipedia.org/wiki/Q_factor), or _quality factor_.
 
-It is a dimensionless value with a default value of `1` and a nominal range of `0.0001` to `1000`.
-
 ## Value
 
-An {{domxref("AudioParam")}}.
+An {{domxref("AudioParam")}}. Its {{domxref("AudioParam/defaultValue", "defaultValue")}} is `1`, and its {{domxref("AudioParam/minValue", "minValue")}} and {{domxref("AudioParam/maxValue", "maxValue")}} are ±(2<sup>128</sup> - 2<sup>104</sup>), or approximately ±3.403e38. This is the range of single-precision floating-point numbers.
+
+Its actual value range depends on the filter's {{domxref("BiquadFilterNode/type", "type")}}:
+
+- For `lowpass` and `highpass`, the `Q` value is interpreted to be in dB. For these filters the value range is [-Q, Q]
+  where Q is the largest value for which 10<sup>Q/20</sup> does not overflow the bound above. This is approximately 770.63678.
+- For `bandpass`, `notch`, `allpass`, and `peaking`, the `Q` value is related to the bandwidth of the filter and should be positive, but there's no stricter maximum than the above.
+- It is not used for `lowshelf` and `highshelf` filters.
 
 > [!NOTE]
 > Though the `AudioParam` returned is read-only, the value it represents is not.
@@ -27,14 +32,14 @@ For more complete applied examples/information, check out our [Voice-change-O-ma
 ```js
 const audioCtx = new AudioContext();
 
-//set up the different audio nodes we will use for the app
+// Set up the different audio nodes we will use for the app
 const analyser = audioCtx.createAnalyser();
 const distortion = audioCtx.createWaveShaper();
 const gainNode = audioCtx.createGain();
 const biquadFilter = audioCtx.createBiquadFilter();
 const convolver = audioCtx.createConvolver();
 
-// connect the nodes together
+// Connect the nodes together
 
 source = audioCtx.createMediaStreamSource(stream);
 source.connect(analyser);

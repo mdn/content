@@ -115,6 +115,13 @@ Firefox and Chrome include a Proxy API. However, the design of these two APIs is
 - **In Chrome**: Proxy settings are defined in a [`proxy.ProxyConfig`](https://developer.chrome.com/docs/extensions/reference/api/proxy#type-ProxyConfig) object. Depending on Chrome's proxy settings, the settings may contain [`proxy.ProxyRules`](https://developer.chrome.com/docs/extensions/reference/api/proxy#type-ProxyRules) or a [`proxy.PacScript`](https://developer.chrome.com/docs/extensions/reference/api/proxy#type-PacScript). Proxies are set using the [proxy.settings](https://developer.chrome.com/docs/extensions/reference/api/proxy#property-settings) property.
   See [chrome.proxy](https://developer.chrome.com/docs/extensions/reference/api/proxy) for more information on the API.
 
+#### Sidebar API
+
+Firefox and Chrome provide incompatible APIs for working with a [sidebar](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars).
+
+- **In Firefox (and Opera)**: a sidebar is specified with the [`sidebar_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest key and manipulated with the {{WebExtAPIRef("sidebarAction")}} API.
+- **In Chrome**: an initial sidebar can be specified with the `side_panel` manifest key. The [`sidePanel` API](https://developer.chrome.com/docs/extensions/reference/api/sidePanel) then enables panels to be manipulated.
+
 #### Tabs API
 
 When using `tabs.executeScript()` or `tabs.insertCSS()`:

@@ -55,41 +55,39 @@ This example shows how you might put the needed information from `PushSubscripti
 
 ```js
 // Get a PushSubscription object
-const pushSubscription = await serviceWorkerRegistration.pushManager.subscribe();
+const pushSubscription =
+  await serviceWorkerRegistration.pushManager.subscribe();
 
 // Create an object containing the information needed by the app server
 const subscriptionObject = {
   endpoint: pushSubscription.endpoint,
   keys: {
-    p256dh: pushSubscription.getKeys('p256dh'),
-    auth: pushSubscription.getKeys('auth'),
+    p256dh: pushSubscription.getKey("p256dh"),
+    auth: pushSubscription.getKey("auth"),
   },
   encoding: PushManager.supportedContentEncodings,
   /* other app-specific data, such as user identity */
 };
 
 // Stringify the object an post to the app server
-fetch(`https://example.com/push/`, {
+fetch("https://example.com/push/", {
   method: "post",
-  body: JSON.stringify(pushSubscription);
+  body: JSON.stringify(subscriptionObject),
 });
 ```
 
 ### Unsubscribing from a push manager
 
 ```js
-navigator.serviceWorker.ready.then((reg) => {
-  reg.pushManager.getSubscription().then((subscription) => {
-    subscription
-      .unsubscribe()
-      .then((successful) => {
-        // You've successfully unsubscribed
-      })
-      .catch((e) => {
-        // Unsubscribing failed
-      });
+navigator.serviceWorker.ready
+  .then((reg) => reg.pushManager.getSubscription())
+  .then((subscription) => subscription.unsubscribe())
+  .then((successful) => {
+    // You've successfully unsubscribed
+  })
+  .catch((e) => {
+    // Unsubscribing failed
   });
-});
 ```
 
 ## Specifications

@@ -45,7 +45,7 @@ matchAll(request, options)
     - `ignoreVary`
       - : A boolean value that when set to
         `true` tells the matching operation not to perform `VARY`
-        header matching — i.e. if the URL matches you will get a match regardless of the
+        header matching — i.e., if the URL matches you will get a match regardless of the
         {{domxref("Response")}} object having a `VARY` header or not. It
         defaults to `false`.
 
@@ -66,11 +66,12 @@ The following example retrieves all responses in the `v1` cache matching the URL
 It then logs the number of matching responses.
 
 ```js
-caches.open("v1").then((cache) => {
-  cache.matchAll("/", { ignoreSearch: true }).then((responses) => {
+caches
+  .open("v1")
+  .then((cache) => cache.matchAll("/", { ignoreSearch: true }))
+  .then((responses) => {
     console.log(`Found ${responses.length} matching responses`);
   });
-});
 ```
 
 ## Specifications

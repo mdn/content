@@ -3,12 +3,10 @@ title: "GPUDevice: createBindGroupLayout() method"
 short-title: createBindGroupLayout()
 slug: Web/API/GPUDevice/createBindGroupLayout
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUDevice.createBindGroupLayout
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`createBindGroupLayout()`** method of the
 {{domxref("GPUDevice")}} interface creates a {{domxref("GPUBindGroupLayout")}} that defines the structure and purpose of related GPU resources such as buffers that will be used in a pipeline, and is used as a template when creating {{domxref("GPUBindGroup")}}s.
@@ -42,11 +40,7 @@ An entry object includes the following properties:
     - `GPUShaderStage.FRAGMENT`: The bind group entry will be accessible to fragment shaders.
     - `GPUShaderStage.VERTEX`: The bind group entry will be accessible to vertex shaders.
 
-    Note that multiple stages can be specified by separating values with pipe symbols, for example:
-
-    ```js
-    visibility: GPUShaderStage.FRAGMENT | GPUShaderStage.VERTEX;
-    ```
+    Note that multiple stages can be specified by separating values with [bitwise OR](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR), for example: `GPUShaderStage.FRAGMENT | GPUShaderStage.VERTEX`.
 
 - "Resource layout object"
   - : An object that defines the required binding resource type and structure of the {{domxref("GPUBindGroup")}} entry corresponding to this entry. This property can be one of `buffer`, `externalTexture`, `sampler`, `storageTexture`, or `texture`, the object structures of which are described in the next section.
@@ -169,7 +163,7 @@ The following criteria must be met when calling **`createBindGroupLayout()`**, o
 Our [basic compute demo](https://mdn.github.io/dom-examples/webgpu-compute-demo/) shows an example of creating a bind group layout and then using that as a template when creating a bind group.
 
 ```js
-// ...
+// …
 
 const bindGroupLayout = device.createBindGroupLayout({
   entries: [
@@ -195,7 +189,7 @@ const bindGroup = device.createBindGroup({
   ],
 });
 
-// ...
+// …
 ```
 
 ## Specifications

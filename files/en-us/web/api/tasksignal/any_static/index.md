@@ -29,7 +29,7 @@ TaskSignal.any(signals, init)
   - : Contains optional configuration parameters. Currently only one property is defined:
     - `priority` {{optional_inline}}
       - : One of the following:
-        - A string which is one of `user-blocking`, `user-visible` and `background`.
+        - A [priority](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities) string which is one of `user-blocking`, `user-visible` and `background`.
         - A {{domxref("TaskSignal")}}.
 
 ### Return value
@@ -41,7 +41,7 @@ A `TaskSignal` instance. It will be aborted when the first signal passed into `s
 - Its {{domxref("TaskSignal.priority", "priority")}} property will be determined by the `priority` parameter:
 
   - If the `priority` parameter was a string, it will be the value of the string.
-  - If the `priority` parameter was a `TaskSignal`, it will be the value of that signal's `priority`.
+  - If the `priority` parameter was a `TaskSignal`, it will be the value of that signal's {{domxref("TaskSignal/priority","priority")}}.
 
 ## Examples
 
@@ -76,7 +76,7 @@ try {
   });
   const body = await res.blob();
   // Do something with downloaded content
-  // ...
+  // …
 } catch (e) {
   if (e.name === "AbortError") {
     // Cancelled by the user

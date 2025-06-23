@@ -10,6 +10,9 @@ on:
       - "**/*.mjs"
       - .github/workflows/pr-check_javascript.yml
 
+# No GITHUB_TOKEN permissions, as we only use it to increase API limit.
+permissions: {}
+
 jobs:
   lint-js:
     runs-on: ubuntu-latest

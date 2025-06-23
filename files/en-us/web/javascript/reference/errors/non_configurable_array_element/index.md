@@ -8,7 +8,7 @@ page-type: javascript-error
 
 The JavaScript exception "can't delete non-configurable array element" occurs when it
 was attempted to [shorten the length](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length#shortening_an_array)
-of an array, but one of the array's elements is [non-configurable](/en-US/docs/Web/JavaScript/Data_structures#properties).
+of an array, but one of the array's elements is [non-configurable](/en-US/docs/Web/JavaScript/Guide/Data_structures#properties).
 
 ## Message
 
@@ -25,7 +25,7 @@ TypeError: Unable to delete property. (Safari)
 ## What went wrong?
 
 It was attempted to [shorten the length](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length#shortening_an_array)
-of an array, but one of the array's elements is [non-configurable](/en-US/docs/Web/JavaScript/Data_structures#properties).
+of an array, but one of the array's elements is [non-configurable](/en-US/docs/Web/JavaScript/Guide/Data_structures#properties).
 When shortening an array, the elements beyond the new array length will be deleted,
 which failed in this situation.
 
@@ -94,7 +94,7 @@ copy.length = 1;
 
 ## See also
 
-- [\[\[Configurable\]\]](/en-US/docs/Web/JavaScript/Data_structures#properties)
+- [\[\[Configurable\]\]](/en-US/docs/Web/JavaScript/Guide/Data_structures#properties)
 - {{jsxref("Array/length", "length")}}
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.seal()")}}

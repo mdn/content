@@ -12,4 +12,4 @@ If correctly implemented, this delay in asset loading is seamless to the user ex
 
 ## See also
 
-- [Lazy loading](/en-US/docs/Web/Performance/Lazy_loading)
+- [Lazy loading](/en-US/docs/Web/Performance/Guides/Lazy_loading)

@@ -1,5 +1,6 @@
 ---
 title: Atomics.exchange()
+short-title: exchange()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/exchange
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.exchange
@@ -9,7 +10,21 @@ browser-compat: javascript.builtins.Atomics.exchange
 
 The **`Atomics.exchange()`** static method exchanges a given value at a given position in the array and returns the old value at that position. This atomic operation guarantees that no other write happens between the read of the old value and the write of the new value.
 
-{{EmbedInteractiveExample("pages/js/atomics-exchange.html")}}
+{{InteractiveExample("JavaScript Demo: Atomics.exchange()")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 5;
+
+console.log(Atomics.load(uint8, 0));
+// Expected output: 5
+
+Atomics.exchange(uint8, 0, 2); // Returns 5
+console.log(Atomics.load(uint8, 0));
+// Expected output: 2
+```
 
 ## Syntax
 

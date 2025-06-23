@@ -1,5 +1,5 @@
 ---
-title: "::view-transition-old"
+title: ::view-transition-old()
 slug: Web/CSS/::view-transition-old
 page-type: css-pseudo-element
 browser-compat: css.selectors.view-transition-old
@@ -7,9 +7,9 @@ browser-compat: css.selectors.view-transition-old
 
 {{CSSRef}}
 
-The **`::view-transition-old`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the "old" view state of a view transition — a static snapshot of the old view, before the transition.
+The **`::view-transition-old()`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the "old" view state of a view transition — a static snapshot of the old view, before the transition.
 
-During a view transition, `::view-transition-old` is included in the associated pseudo-element tree as explained in [The view transition pseudo-element tree](/en-US/docs/Web/API/View_Transitions_API/Using#the_view_transition_pseudo-element_tree), provided there's an "old" view state to represent. It is only ever a child of a {{cssxref("::view-transition-image-pair")}}, and never has any children.
+During a view transition, `::view-transition-old()` is included in the associated pseudo-element tree as explained in [The view transition pseudo-element tree](/en-US/docs/Web/API/View_Transition_API/Using#the_view_transition_pseudo-element_tree), provided there's an "old" view state to represent. It is only ever a child of a {{cssxref("::view-transition-image-pair()")}}, and never has any children.
 
 It is a replaced element and therefore can be manipulated with properties such as {{cssxref("object-fit")}} and {{cssxref("object-position")}}. It has natural dimensions equal to the content's size.
 
@@ -46,24 +46,26 @@ The following default styling is included in the UA stylesheet:
 ```
 
 > [!NOTE]
-> Additional view transition styles are also setup to animate `::view-transition-old`. These are dynamically generated during the view transition; see the specification [setup transition pseudo-elements](https://drafts.csswg.org/css-view-transitions-1/#setup-transition-pseudo-elements) and [update pseudo-element styles](https://drafts.csswg.org/css-view-transitions-1/#update-pseudo-element-styles) sections for more details.
+> Additional view transition styles are also setup to animate `::view-transition-old()`. These are dynamically generated during the view transition; see the specification [setup transition pseudo-elements](https://drafts.csswg.org/css-view-transitions-1/#setup-transition-pseudo-elements) and [update pseudo-element styles](https://drafts.csswg.org/css-view-transitions-1/#update-pseudo-element-styles) sections for more details.
 
 ## Syntax
 
 ```css-nolint
-::view-transition-old(<pt-name-selector>) {
+::view-transition-old([ <pt-name-selector> <pt-class-selector>? ] | <pt-class-selector>) {
   /* ... */
 }
 ```
 
-`<pt-name-selector>` can be one of the following values:
+### Parameters
 
 - `*`
-  - : Causes the pseudo-element to match all view transition groups.
+  - : The universal selector (`*`) selects all view transition groups on a page.
 - `root`
   - : Causes the pseudo-element to match the default `root` view transition snapshot group created by the user agent to contain the view transition for the overall page. This group includes any element not assigned to its own specific view transition snapshot group via the {{cssxref("view-transition-name")}} property.
-- {{cssxref("custom-ident")}}
-  - : Causes the pseudo-element to match a specific view transition snapshot group created by assigning the given {{cssxref("custom-ident")}} to an element via the {{cssxref("view-transition-name")}} property.
+- `<pt-name-selector>`
+  - : The {{cssxref("custom-ident")}} set as the value of the {{cssxref("view-transition-name")}} property.
+- `<pt-class-selector>`
+  - : The {{cssxref("custom-ident")}} set as the value of the {{cssxref("view-transition-class")}} property preceded by a period (`.`).
 
 ## Examples
 
@@ -117,5 +119,5 @@ figcaption {
 
 ## See also
 
-- [View Transitions API](/en-US/docs/Web/API/View_Transitions_API)
-- [Smooth transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/)
+- [View Transition API](/en-US/docs/Web/API/View_Transition_API)
+- [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/)

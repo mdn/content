@@ -3,12 +3,10 @@ title: "GPURenderPassEncoder: endOcclusionQuery() method"
 short-title: endOcclusionQuery()
 slug: Web/API/GPURenderPassEncoder/endOcclusionQuery
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPURenderPassEncoder.endOcclusionQuery
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`endOcclusionQuery()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface ends an active occlusion query previously started with {{domxref("GPURenderPassEncoder.beginOcclusionQuery", "beginOcclusionQuery()")}}.
@@ -31,12 +29,12 @@ None ({{jsxref("Undefined")}}).
 
 The following criteria must be met when calling **`endOcclusionQuery()`**, otherwise a {{domxref("GPUValidationError")}} is generated and the {{domxref("GPURenderPassEncoder")}} becomes invalid:
 
-- An occlusion query is active for this render pass (i.e. via a previous `beginOcclusionQuery()` call).
+- An occlusion query is active for this render pass (i.e., via a previous `beginOcclusionQuery()` call).
 
 ## Examples
 
 ```js
-// ...
+// …
 
 // Create a query set to hold the occlusion queries
 const querySet = device.createQuerySet({
@@ -71,7 +69,7 @@ passEncoder.draw(3);
 // End the occlusion query
 passEncoder.endOcclusionQuery();
 
-// ...
+// …
 ```
 
 ## Specifications

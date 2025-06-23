@@ -1,5 +1,6 @@
 ---
 title: Object.fromEntries()
+short-title: fromEntries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.fromEntries
@@ -9,7 +10,19 @@ browser-compat: javascript.builtins.Object.fromEntries
 
 The **`Object.fromEntries()`** static method transforms a list of key-value pairs into an object.
 
-{{EmbedInteractiveExample("pages/js/object-fromentries.html")}}
+{{InteractiveExample("JavaScript Demo: Object.fromEntries()")}}
+
+```js interactive-example
+const entries = new Map([
+  ["foo", "bar"],
+  ["baz", 42],
+]);
+
+const obj = Object.fromEntries(entries);
+
+console.log(obj);
+// Expected output: Object { foo: "bar", baz: 42 }
+```
 
 ## Syntax
 
@@ -98,6 +111,7 @@ console.log(object2);
 ## See also
 
 - [Polyfill of `Object.fromEntries` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [es-shims polyfill of `Object.fromEntries`](https://www.npmjs.com/package/object.fromentries)
 - {{jsxref("Object.entries()")}}
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.values()")}}

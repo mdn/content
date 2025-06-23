@@ -1,5 +1,5 @@
 ---
-title: ":read-write"
+title: :read-write
 slug: Web/CSS/:read-write
 page-type: css-pseudo-class
 browser-compat: css.selectors.read-write
@@ -9,7 +9,38 @@ browser-compat: css.selectors.read-write
 
 The **`:read-write`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element (such as `input` or `textarea`) that is editable by the user.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-read-write.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :read-write", "tabbed-shorter")}}
+
+```css interactive-example
+label,
+input[type="submit"] {
+  display: block;
+  margin-top: 1em;
+}
+
+*:read-write {
+  background-color: ivory;
+  border: 2px solid darkorange;
+  border-radius: 5px;
+}
+```
+
+```html interactive-example
+<p>Please fill in your details:</p>
+
+<form>
+  <label for="email">Email Address:</label>
+  <input id="email" name="email" type="email" value="test@example.com" />
+
+  <label for="note">Short note about yourself:</label>
+  <textarea id="note" name="note">Don't be shy</textarea>
+
+  <label for="pic">Your picture:</label>
+  <input id="pic" name="pic" type="file" />
+
+  <input type="submit" value="Submit form" />
+</form>
+```
 
 ## Syntax
 
@@ -50,7 +81,7 @@ You can find the full source code at [readonly-confirmation.html](https://github
 
 ### Styling read-write non-form controls
 
-This selector doesn't just select {{htmlElement("input")}}/{{htmlElement("textarea")}} elements — it will select _any_ element that can be edited by the user, such as a {{htmlelement("p")}} element with [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) set on it.
+This selector doesn't just select {{htmlElement("input")}}/{{htmlElement("textarea")}} elements — it will select _any_ element that can be edited by the user, such as a {{htmlelement("p")}} element with [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) set on it.
 
 ```html
 <p contenteditable>This paragraph is editable; it is read-write.</p>
@@ -88,4 +119,4 @@ p:read-write {
 ## See also
 
 - {{cssxref(":read-only")}}
-- HTML [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute
+- HTML [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) attribute

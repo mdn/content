@@ -44,7 +44,7 @@ send(body)
 
     If no value is specified for the body, a default value of `null` is used.
 
-The best way to send binary content (e.g. in file uploads) is by using
+The best way to send binary content (e.g., in file uploads) is by using
 a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}} or a {{domxref("Blob")}} object
 in conjunction with the `send()` method.
 

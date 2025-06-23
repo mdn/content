@@ -12,7 +12,7 @@ This article provides information about the changes in Firefox 109 that will aff
 
 ### HTML
 
-- The {{HTMLElement("input/range", "range")}} element supports the [`list`](/en-US/docs/Web/HTML/Element/input/range#list) attribute, which links via an id to a {{HTMLElement("datalist")}} to allow Firefox to display tick marks along the range.
+- The {{HTMLElement("input/range", "range")}} element supports the [`list`](/en-US/docs/Web/HTML/Reference/Elements/input/range#list) attribute, which links via an id to a {{HTMLElement("datalist")}} to allow Firefox to display tick marks along the range.
 
 ### CSS
 
@@ -31,14 +31,14 @@ No notable changes.
   ([Firefox bug 1803790](https://bugzil.la/1803790)).
 
 - The `SVGGraphicsElement.nearestViewportElement` and `SVGGraphicsElement.farthestViewportElement` attributes have been disabled by default in nightly and early beta builds (behind preference `svg.nearestAndFarthestViewportElement.enabled`).
-  [`SVGElement.viewportElement`](/en-US/docs/Web/API/SVGElement#svgelement.viewportelement) can be used as an alternative to `SVGGraphicsElement.nearestViewportElement`.
+  [`SVGElement.viewportElement`](/en-US/docs/Web/API/SVGElement/viewportElement) can be used as an alternative to `SVGGraphicsElement.nearestViewportElement`.
   They have been removed from the SVG2 specification and are likely to be removed entirely from Firefox in a future release.
   ([Firefox bug 1133174](https://bugzil.la/1133174)).
 
 ### HTTP
 
 - The `'unsafe-hashes'` value for {{HTTPHeader("Content-Security-Policy")}} source directives is now supported.
-  For more information, see [CSP unsafe-hashes](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_hashes) ([Firefox bug 1343950](https://bugzil.la/1343950)).
+  For more information, see [CSP unsafe-hashes](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#unsafe_hashes) ([Firefox bug 1343950](https://bugzil.la/1343950)).
 
 ### APIs
 

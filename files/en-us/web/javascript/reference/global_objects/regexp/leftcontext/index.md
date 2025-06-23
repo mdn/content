@@ -1,5 +1,6 @@
 ---
 title: RegExp.leftContext ($`)
+short-title: leftContext ($`)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/leftContext
 page-type: javascript-static-accessor-property
 status:

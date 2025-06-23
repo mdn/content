@@ -1,5 +1,6 @@
 ---
 title: Generator.prototype.next()
+short-title: next()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/next
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Generator.next
@@ -40,6 +41,11 @@ An {{jsxref("Object")}} with two properties:
     - `false` if the generator is able to produce more values.
 - `value`
   - : Any JavaScript value yielded or returned by the generator.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if the generator is already running.
 
 ## Examples
 

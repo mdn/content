@@ -50,7 +50,7 @@ Flags are special parameters that can change the way a regular expression is int
 | `d`  | Generate indices for substring matches.                                                       | {{jsxref("RegExp/hasIndices", "hasIndices")}}   |
 | `g`  | Global search.                                                                                | {{jsxref("RegExp/global", "global")}}           |
 | `i`  | Case-insensitive search.                                                                      | {{jsxref("RegExp/ignoreCase", "ignoreCase")}}   |
-| `m`  | Allows `^` and `$` to match next to newline characters.                                       | {{jsxref("RegExp/multiline", "multiline")}}     |
+| `m`  | Makes `^` and `$` match the start and end of each line instead of those of the entire string. | {{jsxref("RegExp/multiline", "multiline")}}     |
 | `s`  | Allows `.` to match newline characters.                                                       | {{jsxref("RegExp/dotAll", "dotAll")}}           |
 | `u`  | "Unicode"; treat a pattern as a sequence of Unicode code points.                              | {{jsxref("RegExp/unicode", "unicode")}}         |
 | `v`  | An upgrade to the `u` mode with more Unicode features.                                        | {{jsxref("RegExp/unicodeSets", "unicodeSets")}} |

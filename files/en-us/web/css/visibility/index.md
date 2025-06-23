@@ -9,7 +9,51 @@ browser-compat: css.properties.visibility
 
 The **`visibility`** [CSS](/en-US/docs/Web/CSS) property shows or hides an element without changing the layout of a document. The property can also hide rows or columns in a {{HTMLElement("table")}}.
 
-{{EmbedInteractiveExample("pages/css/visibility.html")}}
+{{InteractiveExample("CSS Demo: visibility")}}
+
+```css interactive-example-choice
+visibility: visible;
+```
+
+```css interactive-example-choice
+visibility: hidden;
+```
+
+```css interactive-example-choice
+visibility: collapse;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">Hide me</div>
+    <div>Item 2</div>
+    <div>Item 3</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  padding: 0.75em;
+  width: 80%;
+  max-height: 300px;
+  display: flex;
+}
+
+.example-container > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  margin: 10px;
+  flex: 1;
+}
+
+#example-element {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid rebeccapurple;
+}
+```
 
 To both hide an element _and remove it from the document layout_, set the {{cssxref("display")}} property to `none` instead of using `visibility`.
 
@@ -36,7 +80,7 @@ The `visibility` property is specified as one of the keyword values listed below
 - `visible`
   - : The element box is visible.
 - `hidden`
-  - : The element box is invisible (not drawn), but still affects layout as normal. Descendants of the element will be visible if they have `visibility` set to `visible`. The element cannot receive focus (such as when navigating through [tab indexes](/en-US/docs/Web/HTML/Global_attributes/tabindex)).
+  - : The element box is invisible (not drawn), but still affects layout as normal. Descendants of the element will be visible if they have `visibility` set to `visible`. The element cannot receive focus (such as when navigating through [tab indexes](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex)).
 - `collapse`
 
   - : The `collapse` keyword has different effects for different elements:
@@ -47,7 +91,7 @@ The `visibility` property is specified as one of the keyword values listed below
 
 ## Accessibility
 
-Using a `visibility` value of `hidden` on an element will remove it from the [accessibility tree](/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis). This will cause the element and all its descendant elements to no longer be announced by screen reading technology.
+Using a `visibility` value of `hidden` on an element will remove it from the [accessibility tree](/en-US/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis). This will cause the element and all its descendant elements to no longer be announced by screen reading technology.
 
 ## Interpolation
 
@@ -56,7 +100,7 @@ When animated, visibility values are interpolated between _visible_ and _not-vis
 ## Notes
 
 - Support for `visibility: collapse` is missing or partially incorrect in some modern browsers. It may not be correctly treated like `visibility: hidden` on elements other than table rows and columns.
-- When applied to table rows, if the table contains cells ({{htmlelement("td")}} {{htmlelement("tr")}} elements) that span both visible and collapsed rows, the cell may render in unexpected ways. If the spanning cell is defined in a collapsed row, browsers do not render the table cell, as if the cells in subsequent rows were present with `visibility: collapse` applied. When the cell is defined in a visible row and spans a collapsed row, the cell contents are not reflowed, but the presentation of the cell itself varies by browser. Most browsers reduce the block size of the cell by the block size of the hidden row. This means the contents may be larger than the cell in the block-size direction. Depending on the browser, the overflowing contents are either cropped, as if `overflow: hidden` were set, while the content bleeds into the subsequent row in other browsers as if `overflow: visible` were set. In other browsers, the cell is rendered as if the row were not collapsed, with all the other cells in the row hidden as if `visibility: collapse` were set on individual cells rather than the row itself.
+- When applied to table rows, if the table contains cells ({{htmlelement("td")}} and {{htmlelement("th")}} elements) that span both visible and collapsed rows, the cell may render in unexpected ways. If the spanning cell is defined in a collapsed row, browsers do not render the table cell, as if the cells in subsequent rows were present with `visibility: collapse` applied. When the cell is defined in a visible row and spans a collapsed row, the cell contents are not reflowed, but the presentation of the cell itself varies by browser. Most browsers reduce the block size of the cell by the block size of the hidden row. This means the contents may be larger than the cell in the block-size direction. Depending on the browser, the overflowing contents are either cropped, as if `overflow: hidden` were set, while the content bleeds into the subsequent row in other browsers as if `overflow: visible` were set. In other browsers, the cell is rendered as if the row were not collapsed, with all the other cells in the row hidden as if `visibility: collapse` were set on individual cells rather than the row itself.
 - `visibility: collapse` may change the layout of a table if the table has nested tables within the cells that are collapsed, unless `visibility: visible` is specified explicitly on nested tables.
 
 ## Formal definition
@@ -149,3 +193,4 @@ td {
 ## See also
 
 - {{cssxref("display")}}
+- SVG {{SVGAttr("visibility")}} attribute

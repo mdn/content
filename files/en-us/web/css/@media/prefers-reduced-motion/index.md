@@ -15,7 +15,7 @@ The **`prefers-reduced-motion`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-
 Such animations can trigger discomfort for those with [vestibular motion disorders](https://www.a11yproject.com/posts/understanding-vestibular-disorders/). Animations such as scaling or panning large objects can be vestibular motion triggers.
 
 ```css
-@media (prefers-reduced-motion) {
+@media (prefers-reduced-motion: reduce) {
   /* styles to apply if a user's device settings are set to reduced motion */
 }
 ```
@@ -25,7 +25,7 @@ Such animations can trigger discomfort for those with [vestibular motion disorde
 - `no-preference`
   - : Indicates that a user has made no preference known on the device. This keyword value evaluates as false.
 - `reduce`
-  - : Indicates that a user has enabled the setting on their device for reduced motion. This keyword value evaluates as true.
+  - : Indicates that a user has enabled the setting on their device for reduced motion. The `reduce` keyword value evaluates as true; therefore, `@media (prefers-reduced-motion)` is equivalent to `@media (prefers-reduced-motion: reduce)`.
 
 ## User preferences
 
@@ -46,7 +46,7 @@ For Firefox, the `reduce` request is honoured if:
 
 ## Examples
 
-This example uses a scaling animation for the purpose of demonstrating `prefers-reduced-motion`. If you enable the setting for reducing motion in the accessibility preferences on your device, the `prefers-reduced-motion` media query will detect your preference and the CSS within the reduced motion rules, with the same [specificity](/en-US/docs/Web/CSS/Specificity) but coming later in the [CSS source order](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#source_order), will take precedence. As a result, the [animation](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) on the box will tone down to the `dissolve` animation, which is a more muted animation that is not a vestibular motion trigger.
+This example uses a scaling animation for the purpose of demonstrating `prefers-reduced-motion`. If you enable the setting for reducing motion in the accessibility preferences on your device, the `prefers-reduced-motion` media query will detect your preference and the CSS within the reduced motion rules, with the same [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity) but coming later in the [CSS source order](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#source_order), will take precedence. As a result, the [animation](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) on the box will tone down to the `dissolve` animation, which is a more muted animation that is not a vestibular motion trigger.
 
 ### Toning down the animation scaling
 
@@ -65,7 +65,7 @@ This example uses a scaling animation for the purpose of demonstrating `prefers-
 }
 
 /* Tone down the animation to avoid vestibular motion triggers. */
-@media (prefers-reduced-motion) {
+@media (prefers-reduced-motion: reduce) {
   .animation {
     animation: dissolve 4s linear infinite both;
     background-color: green;
@@ -131,6 +131,6 @@ You can enable the setting for reducing motion on [your device](#user_preference
 
 ## See also
 
-- {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}} HTTP Header [User Agent Client Hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints)
+- {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}} HTTP Header [User Agent Client Hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client_hints)
 - [An introduction to the reduced motion media query](https://css-tricks.com/introduction-reduced-motion-media-query/) on CSS-Tricks (2019)
 - [Responsive design for motion](https://webkit.org/blog/7551/responsive-design-for-motion/) on WebKit Blog (2017)

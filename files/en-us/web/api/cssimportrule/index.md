@@ -7,7 +7,7 @@ browser-compat: api.CSSImportRule
 
 {{APIRef("CSSOM")}}
 
-The **`CSSImportRule`** interface represents an {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/At-rule).
+The **`CSSImportRule`** interface represents an {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule).
 
 {{InheritanceDiagram}}
 

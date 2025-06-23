@@ -31,7 +31,7 @@ You can let the user download to a location of their choice by specifying the `s
 
 The downloads API also provides features to cancel, pause, resume, erase, and remove downloads; search for downloaded files in the download manager; show downloaded files in the computer's file manager; and open a file in an associated application.
 
-To use this API, you need to have the `"downloads"` [API permission](/en-US/docs/Web/API/Permissions#api_permissions) specified in your [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
+To use this API, you need to have the `"downloads"` [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) specified in your [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
 
 Example: [Latest download](https://github.com/mdn/webextensions-examples/tree/main/latest-download)
 API reference: [downloads API](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads)
@@ -42,7 +42,7 @@ If you want to work with a file from the user's computer one option is to let th
 
 Example: [Imagify](https://github.com/mdn/webextensions-examples/tree/main/imagify)
 Guide: [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)
-API references: [HTML input element](/en-US/docs/Web/HTML/Element/input/file) | [DOM File API](/en-US/docs/Web/API/File)
+API references: [HTML input element](/en-US/docs/Web/HTML/Reference/Elements/input/file) | [DOM File API](/en-US/docs/Web/API/File)
 
 > [!NOTE]
 > If you want to access or process all the files in a selected folder, you can do so using `<input type="file" webkitdirectory="true"/>` to select the folder and return all the files it contains.

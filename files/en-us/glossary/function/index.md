@@ -65,7 +65,7 @@ function loop(x) {
 // Arrow function
 const loop2 = (x) => {
   if (x >= 10) return;
-  loop(x + 1);
+  loop2(x + 1);
 };
 ```
 
@@ -87,9 +87,9 @@ Function expressions, named or anonymous, can be called immediately.
 
 Declared functions can't be called immediately this way, because IIFEs must be function _expressions_.
 
-```js example-bad
+```js-nolint example-bad
 function foo() {
-  console.log('Hello Foo');
+  console.log("Hello Foo");
 }();
 ```
 

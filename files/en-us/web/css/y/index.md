@@ -1,5 +1,5 @@
 ---
-title: "y"
+title: y
 slug: Web/CSS/y
 page-type: css-property
 browser-compat: css.properties.y

@@ -1,5 +1,5 @@
 ---
-title: "-webkit-text-security"
+title: -webkit-text-security
 slug: Web/CSS/-webkit-text-security
 page-type: css-property
 status:
@@ -29,9 +29,7 @@ browser-compat: css.properties.-webkit-text-security
 
 ## Formal syntax
 
-```plain
--webkit-text-security = circle | disc | square | none
-```
+{{CSSSyntaxRaw(`-webkit-text-security = circle | disc | square | none`)}}
 
 ## Examples
 

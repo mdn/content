@@ -1,6 +1,6 @@
 ---
 title: "HTMLObjectElement: getSVGDocument() method"
-short-title: getSVGDocument
+short-title: getSVGDocument()
 slug: Web/API/HTMLObjectElement/getSVGDocument
 page-type: web-api-instance-method
 browser-compat: api.HTMLObjectElement.getSVGDocument
@@ -10,7 +10,13 @@ browser-compat: api.HTMLObjectElement.getSVGDocument
 
 The **`getSVGDocument()`** method of the {{domxref("HTMLObjectElement")}} interface returns the {{domxref("Document")}} object of the embedded SVG.
 
-## Value
+## Syntax
+
+```js-nolint
+getSVGDocument()
+```
+
+### Return value
 
 A {{domxref("Document")}}.
 

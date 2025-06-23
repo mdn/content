@@ -8,7 +8,23 @@ page-type: guide
 
 Assertions include boundaries, which indicate the beginnings and endings of lines and words, and other patterns indicating in some way that a match is possible (including look-ahead, look-behind, and conditional expressions).
 
-{{EmbedInteractiveExample("pages/js/regexp-assertions.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: RegExp Assertions", "taller")}}
+
+```js interactive-example
+const text = "A quick fox";
+
+const regexpLastWord = /\w+$/;
+console.log(text.match(regexpLastWord));
+// Expected output: Array ["fox"]
+
+const regexpWords = /\b\w+\b/g;
+console.log(text.match(regexpWords));
+// Expected output: Array ["A", "quick", "fox"]
+
+const regexpFoxQuality = /\w+(?= fox)/;
+console.log(text.match(regexpFoxQuality));
+// Expected output: Array ["quick"]
+```
 
 ## Types
 
@@ -253,8 +269,8 @@ In this example, we match fruit names containing a word that ends in "en" or "ed
 const fruitsWithDescription = ["Red apple", "Orange orange", "Green Avocado"];
 
 // Select descriptions that contains 'en' or 'ed' words endings:
-const enEdSelection = fruitsWithDescription.filter((descr) =>
-  /(en|ed)\b/.test(descr),
+const enEdSelection = fruitsWithDescription.filter((description) =>
+  /(?:en|ed)\b/.test(description),
 );
 
 console.log(enEdSelection); // [ 'Red apple', 'Green Avocado' ]

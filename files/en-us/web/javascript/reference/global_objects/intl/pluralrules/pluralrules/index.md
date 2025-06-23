@@ -1,5 +1,6 @@
 ---
 title: Intl.PluralRules() constructor
+short-title: Intl.PluralRules()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Intl.PluralRules.PluralRules
@@ -34,7 +35,7 @@ new Intl.PluralRules(locales, options)
         - `"cardinal"` (default)
           - : For cardinal numbers (referring to the quantity of things).
         - `"ordinal"`
-          - : For ordinal number (referring to the ordering or ranking of things, e.g. "1st", "2nd", "3rd" in English).
+          - : For ordinal number (referring to the ordering or ranking of things, e.g., "1st", "2nd", "3rd" in English).
 
     `Intl.PluralRules` also supports the `Intl.NumberFormat()` [digit options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#digit_options) (see `Intl.NumberFormat()` for details):
 
@@ -59,7 +60,7 @@ new Intl.PluralRules(locales, options)
 ### Basic usage
 
 In basic use without specifying a locale, a formatted string in the default locale and with default options is returned.
-This is useful to distinguish between singular and plural forms, e.g. "dog" and "dogs".
+This is useful to distinguish between singular and plural forms, e.g., "dog" and "dogs".
 
 ```js
 const pr = new Intl.PluralRules();
@@ -73,7 +74,7 @@ pr.select(2); // 'other' if in US English locale
 
 ### Using options
 
-The results can be customized using the `options` argument, which has one property called `type` which you can set to `ordinal`. This is useful to figure out the ordinal indicator, e.g. "1st", "2nd", "3rd", "4th", "42nd",
+The results can be customized using the `options` argument, which has one property called `type` which you can set to `ordinal`. This is useful to figure out the ordinal indicator, e.g., "1st", "2nd", "3rd", "4th", "42nd",
 and so forth.
 
 ```js

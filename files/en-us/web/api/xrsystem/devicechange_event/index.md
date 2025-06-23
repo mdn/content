@@ -19,13 +19,13 @@ A **`devicechange`** event is fired on an {{DOMxRef("XRSystem")}} object wheneve
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("devicechange", (event) => {});
+```js-nolint
+addEventListener("devicechange", (event) => { })
 
-ondevicechange = (event) => {};
+ondevicechange = (event) => { }
 ```
 
-If the use of WebXR has been blocked by an `xr-spatial-tracking` [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy), `devicechange` events will not fire.
+If the use of WebXR has been blocked by an `xr-spatial-tracking` [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy), `devicechange` events will not fire.
 
 ## Event type
 

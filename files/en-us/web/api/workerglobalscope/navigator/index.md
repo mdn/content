@@ -16,7 +16,7 @@ A {{domxref("WorkerNavigator")}} object.
 
 ## Examples
 
-If you call the following
+If you call the following:
 
 ```js
 console.log(navigator);

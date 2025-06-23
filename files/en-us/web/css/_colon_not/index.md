@@ -1,5 +1,5 @@
 ---
-title: ":not()"
+title: :not()
 slug: Web/CSS/:not
 page-type: css-pseudo-class
 browser-compat: css.selectors.not
@@ -9,7 +9,35 @@ browser-compat: css.selectors.not
 
 The **`:not()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents elements that do not match a list of selectors. Since it prevents specific items from being selected, it is known as the _negation pseudo-class_.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-not.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :not", "tabbed-shorter")}}
+
+```css interactive-example
+p:not(.irrelevant) {
+  font-weight: bold;
+}
+
+p > strong,
+p > b.important {
+  color: crimson;
+}
+
+p > :not(strong, b.important) {
+  color: darkmagenta;
+}
+```
+
+```html interactive-example
+<p>
+  <b>Mars</b> is one of the most Earth-like planets. <b>Mars</b> day is almost
+  the same as an Earth day, only <strong>37 minutes</strong> longer.
+</p>
+
+<p class="irrelevant">
+  <b class="important">NASA</b>'s Jet <del>Momentum</del> Propulsion Laboratory
+  is designing mission concepts to survive the <b>Venus</b> extreme temperatures
+  and atmospheric pressure.
+</p>
+```
 
 The `:not()` pseudo-class has a number of [quirks, tricks, and unexpected results](#description) that you should be aware of before using it.
 
@@ -28,7 +56,7 @@ The `:not()` pseudo-class requires a [selector list](/en-US/docs/Web/CSS/CSS_sel
 There are several unusual effects and outcomes when using `:not()` that you should keep in mind when using it:
 
 - Useless selectors can be written using this pseudo-class. For example, `:not(*)` matches any element which is not an element, which is obviously nonsense, so the accompanying rule will never be applied.
-- This pseudo-class can increase the [specificity](/en-US/docs/Web/CSS/Specificity) of a rule. For example, `#foo:not(#bar)` will match the same element as the simpler `#foo`, but has the higher specificity of two `id` selectors.
+- This pseudo-class can increase the [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity) of a rule. For example, `#foo:not(#bar)` will match the same element as the simpler `#foo`, but has the higher specificity of two `id` selectors.
 - The specificity of the `:not()` pseudo-class is replaced by the specificity of the most specific selector in its comma-separated argument of selectors; providing the same specificity as if it had been written [`:not(:is(argument))`](/en-US/docs/Web/CSS/:is).
 - `:not(.foo)` will match anything that isn't `.foo`, _including {{HTMLElement("html")}} and {{HTMLElement("body")}}._
 - This selector will match everything that is "not an X". This may be surprising when used with [descendant combinators](/en-US/docs/Web/CSS/Descendant_combinator), since there are multiple paths to select a target element. For instance, `body :not(table) a` will still apply to links inside a {{HTMLElement("table")}}, since {{HTMLElement("tr")}}, {{HTMLElement("tbody")}}, {{HTMLElement("th")}}, {{HTMLElement("td")}}, {{HTMLElement("caption")}}, etc. can all match the `:not(table)` part of the selector. To avoid this, you can use `body a:not(table a)` instead, which will only apply to links that are not descendants of a table.
@@ -151,7 +179,7 @@ If `:invalid-pseudo-class` was a valid selector, the first two rules above would
 ## See also
 
 - [Pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes)
-- [Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+- [Learn: Pseudo-classes and pseudo-elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
 - Other functional CSS pseudo-classes:
 
   - {{cssxref(":has", ":has()")}}

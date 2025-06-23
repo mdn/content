@@ -1,5 +1,6 @@
 ---
 title: BigInt.prototype.toLocaleString()
+short-title: toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.BigInt.toLocaleString
@@ -7,11 +8,25 @@ browser-compat: javascript.builtins.BigInt.toLocaleString
 
 {{JSRef}}
 
-The **`toLocaleString()`** method of {{jsxref("BigInt")}} values returns a string with a language-sensitive representation of this BigInt. In implementations with [`Intl.NumberFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) support, this method simply calls `Intl.NumberFormat`.
+The **`toLocaleString()`** method of {{jsxref("BigInt")}} values returns a string with a language-sensitive representation of this BigInt. In implementations with [`Intl.NumberFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) support, this method delegates to `Intl.NumberFormat`.
 
 Every time `toLocaleString` is called, it has to perform a search in a big database of localization strings, which is potentially inefficient. When the method is called many times with the same arguments, it is better to create a {{jsxref("Intl.NumberFormat")}} object and use its {{jsxref("Intl/NumberFormat/format", "format()")}} method, because a `NumberFormat` object remembers the arguments passed to it and may decide to cache a slice of the database, so future `format` calls can search for localization strings within a more constrained context.
 
-{{EmbedInteractiveExample("pages/js/bigint-tolocalestring.html")}}
+{{InteractiveExample("JavaScript Demo: BigInt.prototype.toLocaleString()")}}
+
+```js interactive-example
+const bigint = 123456789123456789n;
+
+// German uses period for thousands
+console.log(bigint.toLocaleString("de-DE"));
+// Expected output: "123.456.789.123.456.789"
+
+// Request a currency format
+console.log(
+  bigint.toLocaleString("de-DE", { style: "currency", currency: "EUR" }),
+);
+// Expected output: "123.456.789.123.456.789,00 €"
+```
 
 ## Syntax
 

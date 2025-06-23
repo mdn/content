@@ -1,5 +1,6 @@
 ---
 title: Array.prototype[Symbol.iterator]()
+short-title: "[Symbol.iterator]()"
 slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.@@iterator
@@ -11,7 +12,20 @@ The **`[Symbol.iterator]()`** method of {{jsxref("Array")}} instances implements
 
 The initial value of this property is the same function object as the initial value of the {{jsxref("Array.prototype.values")}} property.
 
-{{EmbedInteractiveExample("pages/js/array-prototype-@@iterator.html")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype[Symbol.iterator]()")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+const iterator1 = array1[Symbol.iterator]();
+
+for (const value of iterator1) {
+  console.log(value);
+}
+
+// Expected output: "a"
+// Expected output: "b"
+// Expected output: "c"
+```
 
 ## Syntax
 

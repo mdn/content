@@ -1,5 +1,6 @@
 ---
 title: Aligning items in a flex container
+short-title: Aligning flex items
 slug: Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
 page-type: guide
 ---
@@ -96,7 +97,6 @@ In the example below, the value of `align-items` is `stretch`. Try the other val
 
 .box div {
   width: 100px;
-  height: 100px;
   background-color: rgb(96 139 168 / 0.2);
   border: 2px solid rgb(96 139 168);
   border-radius: 5px;
@@ -190,7 +190,7 @@ You can try this out in the example below, which has a flex container with `flex
 
 ## Aligning content on the cross axis with the `align-content` property
 
-So far, we have focused on aligning items or an individual items inside the area defined by a {{glossary("flex_container")}} containing a single line of flex items. When flex items are allowed to wrap across multiple lines, the {{cssxref("align-content")}} property can be used to control the distribution of space between the lines, also known as **packing flex lines**.
+So far, we have focused on aligning items or individual items inside the area defined by a {{glossary("flex container")}} containing a single line of flex items. When flex items are allowed to wrap across multiple lines, the {{cssxref("align-content")}} property can be used to control the distribution of space between the lines, also known as **packing flex lines**.
 
 For `align-content` to have an effect, the cross axis dimension (the height in this case) of the flex container must be greater than needed to display the items. It then works on all the items as a set. The `align-content` values dictate what happens with the extra available space and the alignment of the entire set of items within it.
 
@@ -307,7 +307,7 @@ In our initial example with `display: flex` on the container, the items display 
 
 ![Three items, each 100 pixels wide in a 500 pixel container. The available space is at the end of the items.](align6.png)
 
-The `baseline` values aren't relevant in this dimension. Otherwise, `justify-content` property accepts the same values as `align-content`.
+The `baseline` values aren't relevant in this dimension. Otherwise, the `justify-content` property accepts the same values as `align-content`.
 
 - `justify-content: flex-start`
 - `justify-content: flex-end`
@@ -514,7 +514,7 @@ In this live example, the flex items are arranged in a row with the basic flex v
 To create a gap between flex items, use the {{cssxref("gap")}}, {{cssxref("column-gap")}}, and {{cssxref("row-gap")}} properties. The {{cssxref("column-gap")}} property creates gaps between items in a row. The {{cssxref("row-gap")}} property creates gaps between flex lines when you have {{cssxref("flex-wrap")}} set to `wrap`.
 
 The {{cssxref("gap")}} property is a shorthand that sets both `row-gap` and `column-gap`.
-The gap between flex items or between flex line depends on the direction. If the {{cssxref("flex-direction")}} property creates rows, the first value defines the gap between flex lines, and the second value defines the gap between items within each line. With columns (when `flex-direction` is set to `column` or `column-reverse`), the first value defines the gap between flex items, and the second value defines the gaps between flex lines.
+The gaps between flex items or flex lines depend on the direction. If the {{cssxref("flex-direction")}} property creates rows, the first value defines the gap between flex lines, and the second value defines the gap between items within each line. With columns (when `flex-direction` is set to `column` or `column-reverse`), the first value defines the gap between flex items, and the second value defines the gaps between flex lines.
 
 ```html live-sample___gap
 <div class="box">

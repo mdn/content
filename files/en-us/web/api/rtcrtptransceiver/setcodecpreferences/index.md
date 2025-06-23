@@ -19,13 +19,13 @@ This ensures that the array is ordered as required, does not contain any unsuppo
 
 The specified set of codecs will be used for all future connections that include this transceiver until this method is called again.
 
-When preparing to open an {{domxref("RTCPeerConnection")}} the codecs should be set using `setCodecParameters()` _before_ calling either {{domxref("RTCPeerConnection.createOffer()")}} or {{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}}, as these initiate the negotiation (and will use codec parameters from the {{Glossary("user agent", "user agent's")}} default configuration by default).
+When preparing to open an {{domxref("RTCPeerConnection")}} the codecs should be set using `setCodecPreferences()` _before_ calling either {{domxref("RTCPeerConnection.createOffer()")}} or {{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}}, as these initiate the negotiation (and will use codec parameters from the {{Glossary("user agent", "user agent's")}} default configuration by default).
 
-The codecs can be changed when you have an ongoing communication, but you need to first call `setCodecParameters()` and then kick off a new negotiation.
+The codecs can be changed when you have an ongoing communication, but you need to first call `setCodecPreferences()` and then kick off a new negotiation.
 A WebRTC application will already have code for this in the [`negotiationneeded` event handler](/en-US/docs/Web/API/RTCPeerConnection/negotiationneeded_event).
-Note however that at time of writing the event is not automatically fired when you call `setCodecParameters()`, so you will have to call `onnegotiationneeded` yourself.
+Note however that at time of writing the event is not automatically fired when you call `setCodecPreferences()`, so you will have to call `onnegotiationneeded` yourself.
 
-A guide to codecs supported by WebRTC—and each codec's positive and negative characteristics—can be found in [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs).
+A guide to codecs supported by WebRTC—and each codec's positive and negative characteristics—can be found in [Codecs used by WebRTC](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs).
 
 ## Syntax
 
@@ -37,7 +37,7 @@ setCodecPreferences(codecs)
 
 - `codecs`
 
-  - : An array of objects, each providing the parameters for one of the transceiver's supported [media codecs](/en-US/docs/Web/Media/Formats/WebRTC_codecs), ordered by preference.
+  - : An array of objects, each providing the parameters for one of the transceiver's supported [media codecs](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs), ordered by preference.
     If `codecs` is empty, the codec configurations are all returned to the user agent's defaults.
 
     > [!NOTE]
@@ -63,7 +63,7 @@ setCodecPreferences(codecs)
       - : A string indicating the codec's MIME media type and subtype, specified as a string of the form `"type/subtype"`.
         The MIME type strings used by RTP differ from those used elsewhere.
         IANA maintains a [registry of valid MIME types](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-2).
-        Also see [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs) for details about potential codecs that might be referenced here.
+        Also see [Codecs used by WebRTC](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs) for details about potential codecs that might be referenced here.
 
     - `sdpFmtpLine` {{optional_inline}}
 
@@ -137,6 +137,6 @@ transceiver.setCodecPreferences(sortedCodecs); // <---
 
 - [setCodecPreferences is now in all browsers!](https://blog.mozilla.org/webrtc/cross-browser-support-for-choosing-webrtc-codecs/) on blog.mozilla.org (2024)
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs)
+- [Codecs used by WebRTC](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs)
 - [Introduction to the Real-time Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
 - [Web media technologies](/en-US/docs/Web/Media)

@@ -1,5 +1,6 @@
 ---
 title: Error.prototype.stack
+short-title: stack
 slug: Web/JavaScript/Reference/Global_Objects/Error/stack
 page-type: javascript-instance-data-property
 status:
@@ -66,6 +67,8 @@ Error
     at filename.js:13:1
 ```
 
+V8 provides the non-standard [stack trace API](https://v8.dev/docs/stack-trace-api) for customizing the stack trace, including {{jsxref("Error.captureStackTrace()")}}, {{jsxref("Error.stackTraceLimit")}}, and `Error.prepareStackTrace()`. Other engines support this API to varying extents.
+
 Different engines set this value at different times. Most modern engines set it when the {{jsxref("Error")}} object is created. This means you can get the full call stack information within a function using the following:
 
 ```js
@@ -75,8 +78,6 @@ function foo() {
 ```
 
 Without having to throw an error and then catch it.
-
-In V8, the non-standard `Error.captureStackTrace()`, `Error.stackTraceLimit`, and `Error.prepareStackTrace()` APIs can be used to customize the stack trace. Read the [Stack trace API](https://v8.dev/docs/stack-trace-api) in the V8 docs for more information.
 
 Stack frames can be things other than explicit function calls, too. For example, event listeners, timeout jobs, and promise handlers all begin their own call chain. Source code within {{jsxref("Global_Objects/eval", "eval()")}} and {{jsxref("Function")}} constructor calls also appear in the stack:
 

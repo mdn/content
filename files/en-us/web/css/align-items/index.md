@@ -9,7 +9,51 @@ browser-compat: css.properties.align-items
 
 The [CSS](/en-US/docs/Web/CSS) **`align-items`** property sets the {{cssxref("align-self")}} value on all direct children as a group. In flexbox, it controls the alignment of items on the {{glossary("cross axis")}}. In grid layout, it controls the alignment of items on the block axis within their {{glossary("grid areas")}}.
 
-{{EmbedInteractiveExample("pages/css/align-items.html")}}
+{{InteractiveExample("CSS Demo: align-items")}}
+
+```css interactive-example-choice
+align-items: stretch;
+```
+
+```css interactive-example-choice
+align-items: center;
+```
+
+```css interactive-example-choice
+align-items: start;
+```
+
+```css interactive-example-choice
+align-items: end;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  width: 200px;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 80px;
+  grid-gap: 10px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 The interactive example below demonstrates some of the values for `align-items` using grid and flex layout.
 
@@ -34,7 +78,9 @@ align-items: anchor-center;
 /* Baseline alignment */
 align-items: baseline;
 align-items: first baseline;
-align-items: last baseline; /* Overflow alignment (for positional alignment only) */
+align-items: last baseline;
+
+/* Overflow alignment (for positional alignment only) */
 align-items: safe center;
 align-items: unsafe center;
 
@@ -55,7 +101,7 @@ align-items: unset;
     - In absolutely-positioned layouts, the keyword behaves like `start` on _replaced_ absolutely-positioned boxes, and as `stretch` on _all other_ absolutely-positioned boxes.
     - In static position of absolutely-positioned layouts, the keyword behaves as `stretch`.
     - For flex items, the keyword behaves as `stretch`.
-    - For grid items, this keyword leads to a behavior similar to the one of `stretch`, except for boxes with an {{glossary("aspect ratio")}} or an intrinsic sizes where it behaves like `start`.
+    - For grid items, this keyword leads to a behavior similar to the one of `stretch`, except for boxes with an {{glossary("aspect ratio")}} or an intrinsic size where it behaves like `start`.
     - The property doesn't apply to block-level boxes, and to table cells.
 
 - `center`
@@ -98,7 +144,7 @@ align-items: unset;
 
   - : Used alongside an alignment keyword. Regardless of the relative sizes of the item and alignment container and whether overflow which causes data loss might happen, the given alignment value is honored.
 
-There are also two values that were defined for flexbox, as they are base on [flex model axes](/en-US/docs/Learn/CSS/CSS_layout/Flexbox#the_flex_model) concepts, that work in grid layouts as well:
+There are also two values that were defined for flexbox, as they are base on [flex model axes](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox#the_flex_model) concepts, that work in grid layouts as well:
 
 - `flex-start`
 
@@ -288,7 +334,7 @@ display.addEventListener("change", (evt) => {
 - {{cssxref("place-items")}} shorthand
 - [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
 - [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-- [Box alignment in CSS grid layouts](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+- [Box alignment in grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
 - [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module
 - [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
 - [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module

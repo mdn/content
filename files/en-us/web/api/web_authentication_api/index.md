@@ -9,17 +9,15 @@ browser-compat: api.PublicKeyCredential
 
 The Web Authentication API (WebAuthn) is an extension of the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API) that enables strong authentication with public key cryptography, enabling passwordless authentication and secure multi-factor authentication (MFA) without SMS texts.
 
-> **Note:** [Passkeys](https://passkeys.dev/) are a significant use case for web authentication; see [Create a passkey for passwordless logins](https://web.dev/articles/passkey-registration) and [Sign in with a passkey through form autofill](https://web.dev/articles/passkey-form-autofill) for implementation details. See also [Google Identity > Passwordless login with passkeys](https://developers.google.com/identity/passkeys).
-
 ## WebAuthn concepts and usage
 
 WebAuthn uses [asymmetric (public-key) cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography) instead of passwords or SMS texts for registering, authenticating, and [multi-factor authentication](https://en.wikipedia.org/wiki/Multi-factor_authentication) with websites. This has some benefits:
 
 - **Protection against phishing:** An attacker who creates a fake login website can't login as the user because the signature changes with the [origin](/en-US/docs/Glossary/Origin) of the website.
 - **Reduced impact of data breaches:** Developers don't need to hash the public key, and if an attacker gets access to the public key used to verify the authentication, it can't authenticate because it needs the private key.
-- **Invulnerable to password attacks:** Some users might reuse passwords, and an attacker may obtain the user's password for another website (e.g. via a data breach). Also, text passwords are much easier to brute-force than a digital signature.
+- **Invulnerable to password attacks:** Some users might reuse passwords, and an attacker may obtain the user's password for another website (e.g., via a data breach). Also, text passwords are much easier to brute-force than a digital signature.
 
-Many websites already have pages that allow users to register new accounts or sign into an existing account, and WebAuthn acts as a replacement or enhancement for the authentication part of the system. It extends the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API), abstracting communication between the user agent and an authenticator and providing the following new functionality:
+Many websites already have pages that allow users to register new accounts or log into an existing account, and WebAuthn acts as a replacement or enhancement for the authentication part of the system. It extends the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API), abstracting communication between the user agent and an authenticator and providing the following new functionality:
 
 - When {{domxref("CredentialsContainer.create()", "navigator.credentials.create()")}} is used with the `publicKey` option, the user agent creates new credentials via an authenticator — either for registering a new account or for associating a new asymmetric key pair with an existing account.
   - When registering a new account, these credentials are stored on a server (also referred to as a service or a [relying party](https://en.wikipedia.org/wiki/Relying_party)) and can be subsequently used to log a user in.
@@ -49,15 +47,15 @@ To illustrate how the credential creation process works, let's describe the typi
    ```js
    let credential = await navigator.credentials.create({
      publicKey: {
-       challenge: new Uint8Array([117, 61, 252, 231, 191, 241, ...]),
+       challenge: new Uint8Array([117, 61, 252, 231, 191, 241 /* … */]),
        rp: { id: "acme.com", name: "ACME Corporation" },
        user: {
          id: new Uint8Array([79, 252, 83, 72, 214, 7, 89, 26]),
          name: "jamiedoe",
-         displayName: "Jamie Doe"
+         displayName: "Jamie Doe",
        },
-       pubKeyCredParams: [ {type: "public-key", alg: -7} ]
-     }
+       pubKeyCredParams: [{ type: "public-key", alg: -7 }],
+     },
    });
    ```
 
@@ -65,20 +63,20 @@ To illustrate how the credential creation process works, let's describe the typi
 
 3. After the authenticator obtains user consent, it generates a key pair and returns the public key and optional signed attestation to the web app. This is provided when the {{jsxref("Promise")}} returned by the `create()` call fulfills, in the form of a {{domxref("PublicKeyCredential")}} object instance (the {{domxref("PublicKeyCredential.response")}} property contains the attestation information).
 
-4. The web app forwards the {{domxref("PublicKeyCredential")}} to the server, again using an appropriate mechanism.
+4. The web app forwards the {{domxref("PublicKeyCredential")}} to the relying party server, again using an appropriate mechanism.
 
-5. The server stores the public key, coupled with the user identity, to remember the credential for future authentications. During this process, it performs a series of checks to ensure that the registration was complete and not tampered with. These include:
+5. The relying party server stores the public key, coupled with the user identity, to remember the credential for future authentications. During this process, it performs a series of checks to ensure that the registration was complete and not tampered with. These include:
 
    1. Verifying that the challenge is the same as the challenge that was sent.
    2. Ensuring that the origin was the origin expected.
-   3. Validating that the signature and attestation are using the correct certificate chain for the specific model of the authenticator used to generated the key par in the first place.
+   3. Validating that the signature and attestation are using the correct certificate chain for the specific model of the authenticator used to generate the key pair in the first place.
 
 > [!WARNING]
 > Attestation provides a way for a relying party to determine the provenance of an authenticator. Relying parties should not attempt to maintain allowlists of authenticators.
 
 ### Authenticating a user
 
-After a user has registered with WebAuthn, they can authenticate (i.e., login) with the service. The authentication flow looks similar to the registration flow, the main differences being that authentication:
+After a user has registered with WebAuthn, they can authenticate (login) with the service. The authentication flow looks similar to the registration flow, the main differences being that authentication:
 
 1. Doesn't require user or relying party information
 2. Creates an assertion using the previously-generated key pair for the service, rather than the authenticator's key pair.
@@ -94,14 +92,16 @@ A typical authentication flow is as follows:
    ```js
    let credential = await navigator.credentials.get({
      publicKey: {
-       challenge: new Uint8Array([139, 66, 181, 87, 7, 203, ...]),
+       challenge: new Uint8Array([139, 66, 181, 87, 7, 203 /* … */]),
        rpId: "acme.com",
-       allowCredentials: [{
-         type: "public-key",
-         id: new Uint8Array([64, 66, 25, 78, 168, 226, 174, ...])
-       }],
+       allowCredentials: [
+         {
+           type: "public-key",
+           id: new Uint8Array([64, 66, 25, 78, 168, 226, 174 /* … */]),
+         },
+       ],
        userVerification: "required",
-     }
+     },
    });
    ```
 
@@ -117,17 +117,84 @@ A typical authentication flow is as follows:
 
 5. Once verified by the server, the authentication flow is considered successful.
 
+### Discoverable credentials and conditional mediation
+
+**Discoverable credentials** are retrieved from an authenticator — _discovered_ by the browser — to offer as login options when the user is logging in to a relying party web app. In contrast, non-discoverable credentials are provided by the relying party server for the browser to offer as login options.
+
+Discoverable credential IDs and associated metadata such as [user names](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#name_2) and [display names](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#displayname) are stored in a client-side authenticator such as a browser password manager, authenticator app, or hardware solution such as a YubiKey. Having this information available in the authenticator means that the user can log in conveniently without having to supply credentials, and the relying party does not have to provide a [`credentialId`](/en-US/docs/Web/API/PublicKeyCredentialRequestOptions#id) when asserting it (although it can do if desired; if the credential is asserted by the RP then the non-discoverable workflow is followed).
+
+A discoverable credential is created via a [`create()`](/en-US/docs/Web/API/CredentialsContainer/create) call with a specified [`residentKey`](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#residentkey). The `credentialId`, user metadata, and public key for the new credential is stored by the authenticator as discussed above, but also returned to the web app and stored on the RP server.
+
+In order to authenticate, the RP server calls [`get()`](/en-US/docs/Web/API/CredentialsContainer/get) with **conditional mediation** specified, that is [`mediation`](/en-US/docs/Web/API/CredentialsContainer/get#mediation) set to `conditional`, an empty [`allowCredentials`](/en-US/docs/Web/API/PublicKeyCredentialRequestOptions#allowcredentials) list (meaning only discoverable credentials can be shown), and a challenge.
+
+Conditional mediation results in discoverable credentials found in the authenticator being presented to the user in a non-modal UI along with an indication of the origin requesting credentials, rather than a modal dialog. In practice, this means autofilling available credentials in your login forms. The metadata stored in discoverable credentials can be displayed to help users choose a credential when logging in. To display discoverable credentials in your login forms, you also need to include [`autocomplete="webauthn"`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete#webauthn) on your form fields.
+
+To reiterate, the relying party doesn't tell the authenticator what credentials to offer to the user — instead, the authenticator supplies the list it has available. Once the user selects a credential, the authenticator uses it to sign the challenge with the associated private key, and the browser returns the signed challenge and its `credentialId` to the RP server.
+
+The subsequent authentication process on the RP server is the same as for non-discoverable credentials.
+
+> [!NOTE]
+> You can check whether conditional mediation is available on a specific user agent by calling the {{domxref("PublicKeyCredential.isConditionalMediationAvailable()")}} method.
+
+[Passkeys](https://passkeys.dev/) are a significant use case for discoverable credentials; see [Create a passkey for passwordless logins](https://web.dev/articles/passkey-registration) and [Sign in with a passkey through form autofill](https://web.dev/articles/passkey-form-autofill) for implementation details. See also [Discoverable credentials deep dive](https://web.dev/articles/webauthn-discoverable-credentials) for more general information on discoverable credentials.
+
+When conditional mediation is used for authentication, the prevent silent access flag (see {{domxref("CredentialsContainer.preventSilentAccess()")}}) is treated as being `true` regardless of its actual value: the conditional behavior always involves user mediation of some sort if applicable credentials are discovered.
+
+> [!NOTE]
+> If no credentials are discovered, the non-modal dialog will not be visible, and the user agent can prompt the user to take action in a way that depends on the type of credential (for example, to insert a device containing credentials).
+
+#### Discoverable credential synchronization methods
+
+It is possible for the information stored in a user's authenticator about a discoverable credential to go out sync with the relying party's server. This might happen when the user deletes a credential or modifies their user/display name on the RP web app without updating the authenticator.
+
+The API provides methods to allow the relying party server to signal changes to the authenticator, so it can update its stored credentials:
+
+- {{domxref("PublicKeyCredential.signalAllAcceptedCredentials_static", "PublicKeyCredential.signalAllAcceptedCredentials()")}}: Signals to the authenticator all of the valid credential IDs that the RP server still holds for a particular user.
+- {{domxref("PublicKeyCredential.signalCurrentUserDetails_static", "PublicKeyCredential.signalCurrentUserDetails()")}}: Signals to the authenticator that a particular user has updated their user name and/or display name on the RP server.
+- {{domxref("PublicKeyCredential.signalUnknownCredential_static", "PublicKeyCredential.signalUnknownCredential()")}}: Signals to the authenticator that a credential ID was not recognized by the RP server.
+
+It may seem like `signalUnknownCredential()` and `signalAllAcceptedCredentials()` have similar purposes, so what situation should each one be used in?
+
+- `signalAllAcceptedCredentials()` should be called after every successful sign-in, and when the user is logged in and you want to update the state of their credentials. It must only be called when a user is authenticated, as it shares the entire list of `credentialId`s for a given user. This would cause a privacy leak if the user is not authenticated.
+- `signalUnknownCredential()` should be called after an unsuccessful login, to signal to the authenticator that the `credentialId` of the selected credential cannot be validated, and should be removed. The method can safely be called when the user is not authenticated as it passes a single `credentialId` to the authenticator — the one the client just tried to authenticate with — and no user information.
+
+### Customizing workflows based on client capabilities
+
+The signup and login workflows can be customized based on the capabilities of the WebAuthn client (browser). The {{domxref("PublicKeyCredential.getClientCapabilities_static", "PublicKeyCredential.getClientCapabilities()")}} static method can be used to query those capabilities; it returns an object where each key refers to a WebAuthn capability or extension, and each value is a boolean indicating support for that feature.
+
+This can be used, for example, to check:
+
+- Client support for various authenticators such as passkeys or biometric user verification.
+- Whether the client [supports methods to keep relying party and authenticator credentials in sync](#discoverable_credential_synchronization_methods).
+- Whether the client allows a single passkey to be used on different websites with the same origin.
+
+The code below shows how you might use `getClientCapabilities()` to check if the client supports authenticators that offer biometric user verification.
+Note that the actual actions performed depend on your site.
+For sites that _require_ biometric authentication, you might replace the login UI with a message indicating that biometric authentication is needed, and the user should try a different browser or device.
+
+```js
+async function checkIsUserVerifyingPlatformAuthenticatorAvailable() {
+  const capabilities = await PublicKeyCredential.getClientCapabilities();
+  // Check the capability: userVerifyingPlatformAuthenticator
+  if (capabilities.userVerifyingPlatformAuthenticator) {
+    // Perform actions if biometric support is available
+  } else {
+    // Perform actions if biometric support is not available.
+  }
+}
+```
+
 ## Controlling access to the API
 
-The availability of WebAuthn can be controlled using a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy), specifying two directives in particular:
+The availability of WebAuthn can be controlled using a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy), specifying two directives in particular:
 
 - {{httpheader("Permissions-Policy/publickey-credentials-create", "publickey-credentials-create")}}: Controls the availability of {{domxref("CredentialsContainer.create", "navigator.credentials.create()")}} with the `publicKey` option.
 - {{httpheader("Permissions-Policy/publickey-credentials-get", "publickey-credentials-get")}}: Controls the availability of {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} with the `publicKey` option.
 
 Both directives have a default allowlist value of `"self"`, meaning that by default these methods can be used in top-level document contexts.
 In addition, `get()` can be used in nested browsing contexts loaded from the same origin as the top-most document.
-`get()` and `create()` can be used in nested browsing contexts loaded from the different origins to the top-most document (i.e. in cross-origin `<iframes>`), if allowed by the [`publickey-credentials-get`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/publickey-credentials-get) and [`publickey-credentials-create`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/publickey-credentials-create) `Permission-Policy` directives, respectively.
-For cross-origin `create()` calls, where the permission was granted by [`allow=` on an iframe](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#iframes), the frame must also have {{glossary("Transient activation")}}.
+`get()` and `create()` can be used in nested browsing contexts loaded from the different origins to the top-most document (i.e., in cross-origin `<iframes>`), if allowed by the [`publickey-credentials-get`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/publickey-credentials-get) and [`publickey-credentials-create`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/publickey-credentials-create) `Permission-Policy` directives, respectively.
+For cross-origin `create()` calls, where the permission was granted by [`allow=` on an iframe](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy#iframes), the frame must also have {{glossary("Transient activation")}}.
 
 > [!NOTE]
 > Where a policy forbids use of these methods, the {{jsxref("Promise", "promises", "", 1)}} returned by them will reject with a `NotAllowedError` {{domxref("DOMException")}}.
@@ -190,7 +257,7 @@ If you wish to authenticate with `get()` or `create()` in an `<iframe>`, there a
 - {{domxref("AuthenticatorResponse")}}
   - : The base interface for {{domxref("AuthenticatorAttestationResponse")}} and {{domxref("AuthenticatorAssertionResponse")}}.
 - {{domxref("PublicKeyCredential")}}
-  - : Provides information about a public key / private key pair, which is a credential for logging in to a service using an un-phishable and data-breach resistant asymmetric key pair instead of a password. Obtained when the {{jsxref("Promise")}} returned via a {{domxref("CredentialsContainer.create", "create()")}} or {{domxref("CredentialsContainer.get", "get()")}} call fulfills.
+  - : Provides information about a public key / private key pair, which is a credential for logging into a service using an un-phishable and data-breach resistant asymmetric key pair instead of a password. Obtained when the {{jsxref("Promise")}} returned via a {{domxref("CredentialsContainer.create", "create()")}} or {{domxref("CredentialsContainer.get", "get()")}} call fulfills.
 
 ## Extensions to other interfaces
 

@@ -8,7 +8,19 @@ page-type: guide
 
 Character classes distinguish kinds of characters such as, for example, distinguishing between letters and digits.
 
-{{EmbedInteractiveExample("pages/js/regexp-character-classes.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp Character classes")}}
+
+```js interactive-example
+const chessStory = "He played the King in a8 and she moved her Queen in c2.";
+const regexpCoordinates = /\w\d/g;
+console.log(chessStory.match(regexpCoordinates));
+// Expected output: Array [ 'a8', 'c2']
+
+const moods = "happy 🙂, confused 😕, sad 😢";
+const regexpEmoticons = /[\u{1F600}-\u{1F64F}]/gu;
+console.log(moods.match(regexpEmoticons));
+// Expected output: Array ['🙂', '😕', '😢']
+```
 
 ## Types
 
@@ -314,7 +326,7 @@ Character classes distinguish kinds of characters such as, for example, distingu
 
 ### Looking for a series of digits
 
-In this example, we match a sequence of 4 digits with `\d{4}`. `\b` indicates a [word boundary](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions) (i.e. do not start or end matching in the middle of a number sequence).
+In this example, we match a sequence of 4 digits with `\d{4}`. `\b` indicates a [word boundary](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions) (i.e., do not start or end matching in the middle of a number sequence).
 
 ```js
 const randomData = "015 354 8787 687351 3512 8735";
@@ -328,7 +340,7 @@ See more examples in the [character class escape](/en-US/docs/Web/JavaScript/Ref
 
 ### Looking for a word (from the latin alphabet) starting with A
 
-In this example, we match a word starting with the letter A. `\b` indicates a [word boundary](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions) (i.e. do not start matching in the middle of a word). `[aA]` indicates the letter "a" or "A". `\w+` indicates any character _from the Latin alphabet_, multiple times (`+` is a [quantifier](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)). Note that because we already match until there are no more word characters, an end `\b` boundary is not necessary.
+In this example, we match a word starting with the letter A. `\b` indicates a [word boundary](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions) (i.e., do not start matching in the middle of a word). `[aA]` indicates the letter "a" or "A". `\w+` indicates any character _from the Latin alphabet_, multiple times (`+` is a [quantifier](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)). Note that because we already match until there are no more word characters, an end `\b` boundary is not necessary.
 
 ```js
 const aliceExcerpt =

@@ -1,5 +1,6 @@
 ---
 title: Object.setPrototypeOf()
+short-title: setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.setPrototypeOf
@@ -14,7 +15,20 @@ The **`Object.setPrototypeOf()`** static method sets the prototype (i.e., the in
 >
 > Because this feature is a part of the language, it is still the burden on engine developers to implement that feature performantly (ideally). Until engine developers address this issue, if you are concerned about performance, you should avoid setting the `[[Prototype]]` of an object. Instead, create a new object with the desired `[[Prototype]]` using {{jsxref("Object.create()")}}.
 
-{{EmbedInteractiveExample("pages/js/object-setprototypeof.html")}}
+{{InteractiveExample("JavaScript Demo: Object.setPrototypeOf()")}}
+
+```js interactive-example
+const obj = {};
+const parent = { foo: "bar" };
+
+console.log(obj.foo);
+// Expected output: undefined
+
+Object.setPrototypeOf(obj, parent);
+
+console.log(obj.foo);
+// Expected output: "bar"
+```
 
 ## Syntax
 
@@ -45,7 +59,7 @@ The specified object.
 
 `Object.setPrototypeOf()` is generally considered the proper way to set the prototype of an object. You should always use it in favor of the deprecated [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) accessor.
 
-If the `obj` parameter is not an object (e.g. number, string, etc.), this method does nothing — without coercing it to an object or attempting to set its prototype — and directly returns `obj` as a primitive value. If `prototype` is the same value as the prototype of `obj`, then `obj` is directly returned, without causing a `TypeError` even when `obj` has immutable prototype.
+If the `obj` parameter is not an object (e.g., number, string, etc.), this method does nothing — without coercing it to an object or attempting to set its prototype — and directly returns `obj` as a primitive value. If `prototype` is the same value as the prototype of `obj`, then `obj` is directly returned, without causing a `TypeError` even when `obj` has immutable prototype.
 
 For security concerns, there are certain built-in objects that are designed to have an _immutable prototype_. This prevents prototype pollution attacks, especially [proxy-related ones](https://github.com/tc39/ecma262/issues/272). The core language only specifies `Object.prototype` as an immutable prototype exotic object, whose prototype is always `null`. In browsers, [`window`](/en-US/docs/Web/API/Window) and [`location`](/en-US/docs/Web/API/Window/location) are two other very common examples.
 
@@ -100,7 +114,7 @@ console.log(superMan.fly());
 console.log(superMan.speak());
 ```
 
-The similarity between classical inheritance (with classes) and pseudoclassical inheritance (with constructors' `prototype` property) as done above is mentioned in [Inheritance chains](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#building_longer_inheritance_chains).
+The similarity between classical inheritance (with classes) and pseudoclassical inheritance (with constructors' `prototype` property) as done above is mentioned in [Inheritance chains](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#building_longer_inheritance_chains).
 
 Since function constructors' [`prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) property is writable, you can reassign it to a new object created with [`Object.create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create#classical_inheritance_with_object.create) to achieve the same inheritance chain as well. There are caveats to watch out when using `create()`, such as remembering to re-add the [`constructor`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) property.
 
@@ -139,5 +153,5 @@ Subclassing without `extends` is mentioned in [ES-6 subclassing](https://hacks.m
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.getPrototypeOf()")}}
 - [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
-- [Inheritance chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#building_longer_inheritance_chains)
+- [Inheritance chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#building_longer_inheritance_chains)
 - [ES6 In Depth: Subclassing](https://hacks.mozilla.org/2015/08/es6-in-depth-subclassing/) on hacks.mozilla.org (2015)

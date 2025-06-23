@@ -2,12 +2,10 @@
 title: anchor-name
 slug: Web/CSS/anchor-name
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.anchor-name
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{CSSRef}}
 
 The **`anchor-name`** [CSS](/en-US/docs/Web/CSS) property enables defining an element as an **anchor element** by giving it one or more identifying **anchor names**. Each name can then be set as the value of a positioned element's {{cssxref("position-anchor")}} property to associate it with the anchor.
 
@@ -40,19 +38,19 @@ anchor-name: unset;
 
 ## Description
 
-To position an element relative to an anchor element, the positioned element requires three features: an association, a position, and a location. The `anchor-name` and {{cssxref("position-anchor")}} properties provide the association.
+To position an element relative to an anchor element, the positioned element requires three features: an association, a position, and a location. The `anchor-name` and {{cssxref("position-anchor")}} properties provide an explicit association.
 
 The anchor element accepts one or more `<dashed-ident>` anchor names set on it via the `anchor-name` property. When one of those names is then set as the value of the `position-anchor` property of an element that has its {{cssxref("position")}} set to `absolute` or `fixed`, the two elements are associated. The two elements become tethered by setting a location on the associated element relative to the anchor, making it an "anchor-positioned" element.
 
 If multiple anchor elements have the same anchor name set on them, and that name is referenced by the `position-anchor` property value of a positioned element, that positioned element will be associated with the last anchor element with that anchor name in the source order.
 
-Anchor positioning changes the [containing block](/en-US/docs/Web/CSS/Containing_block) of anchor-positioned elements, making its `position` relative to its anchor rather than to the nearest positioned ancestor element.
+Anchor positioning changes the [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) of anchor-positioned elements, making its `position` relative to its anchor rather than to the nearest positioned ancestor element.
 
 To tether and place a positioned element in a specific location relative to an anchor element, an anchor positioning feature is needed, such as the {{cssxref("anchor()")}} function (set within an {{glossary("inset properties", "inset property's")}} value) or the {{cssxref("position-area")}} property.
 
 You cannot associate a positioned element with an anchor element if the anchor is hidden, such as with {{cssxref("display", "display: none")}} or {{cssxref("visibility", "visibility: hidden")}}, or if the anchor is part of the [skipped contents](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#skips_its_contents) of another element due to it having {{cssxref("content-visibility", "content-visibility: hidden")}} set on it.
 
-The `anchor-name` property is supported on all elements that generate a principal box. This means that [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), including generated content created using {{cssxref("::before")}} and {{cssxref("::after")}}, and UI features like the [`range` input](/en-US/docs/Web/HTML/Element/input/range) thumb ({{cssxref("::-webkit-slider-thumb")}}) can be anchor elements. Pseudo elements are implicitly anchored to the same element as the pseudo-element's originating element, unless otherwise specified.
+The `anchor-name` property is supported on all elements that generate a principal box. This means that [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), including generated content created using {{cssxref("::before")}} and {{cssxref("::after")}}, and UI features like the [`range` input](/en-US/docs/Web/HTML/Reference/Elements/input/range) thumb ({{cssxref("::-webkit-slider-thumb")}}) can be anchor elements. Pseudo elements are implicitly anchored to the same element as the pseudo-element's originating element, unless otherwise specified.
 
 For more information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide.
 
@@ -172,7 +170,7 @@ This example demonstrates how you can associate multiple positioned elements wit
 
 #### HTML
 
-The HTML is the same as for the previous example, except this time we have multiple positioned element `<div>`s with different [`id`](/en-US/docs/Web/HTML/Global_attributes/id)s to identify them.
+The HTML is the same as for the previous example, except this time we have multiple positioned element `<div>`s with different [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id)s to identify them.
 
 ```html
 <p>
@@ -386,6 +384,6 @@ Scroll the page to see how both of the infoboxes are tethered to the anchor.
 ## See also
 
 - {{cssxref("position-anchor")}}
-- HTML [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute
+- HTML [`anchor`](/en-US/docs/Web/HTML/Reference/Global_attributes/anchor) attribute
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide

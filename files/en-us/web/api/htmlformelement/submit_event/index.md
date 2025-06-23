@@ -15,22 +15,22 @@ Note that the `submit` event fires on the `<form>` element itself, and not on an
 The `submit` event fires when:
 
 - the user clicks a {{Glossary("submit button")}},
-- the user presses <kbd>Enter</kbd> while editing a field (e.g. {{HtmlElement('input/text', '&lt;input type="text"&gt;')}}) in a form,
+- the user presses <kbd>Enter</kbd> while editing a field (e.g., {{HtmlElement('input/text', '&lt;input type="text"&gt;')}}) in a form,
 - a script calls the {{domxref("HTMLFormElement.requestSubmit()", "form.requestSubmit()")}} method
 
 However, the event is _not_ sent to the form when a script calls the {{domxref("HTMLFormElement.submit()", "form.submit()")}} method directly.
 
 > [!NOTE]
-> Trying to submit a form that does not pass [validation](/en-US/docs/Learn/Forms/Form_validation) triggers an {{domxref("HTMLInputElement/invalid_event", "invalid")}} event. In this case, the validation prevents form submission, and thus there is no `submit` event.
+> Trying to submit a form that does not pass [validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation) triggers an {{domxref("HTMLInputElement/invalid_event", "invalid")}} event. In this case, the validation prevents form submission, and thus there is no `submit` event.
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("submit", (event) => {});
+```js-nolint
+addEventListener("submit", (event) => { })
 
-onsubmit = (event) => {};
+onsubmit = (event) => { }
 ```
 
 ## Event type
@@ -76,7 +76,7 @@ form.addEventListener("submit", logSubmit);
 
 ### Result
 
-{{EmbedLiveSample("Examples")}}
+{{EmbedLiveSample("Examples", "", "", "", "", "", "", "allow-forms")}}
 
 ## Specifications
 

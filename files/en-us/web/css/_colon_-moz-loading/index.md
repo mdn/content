@@ -1,5 +1,5 @@
 ---
-title: ":-moz-loading"
+title: :-moz-loading
 slug: Web/CSS/:-moz-loading
 page-type: css-pseudo-class
 status:
@@ -27,8 +27,7 @@ The **`:-moz-loading`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/We
 
 ```css
 :-moz-loading {
-  background-color: #aaa;
-  background-image: url(loading-animation.gif) center no-repeat;
+  background: url(loading-animation.gif) center no-repeat;
 }
 ```
 

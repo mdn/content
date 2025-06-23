@@ -1,5 +1,6 @@
 ---
 title: String.prototype.toWellFormed()
+short-title: toWellFormed()
 slug: Web/JavaScript/Reference/Global_Objects/String/toWellFormed
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.toWellFormed
@@ -87,5 +88,6 @@ console.log(encodeURI(illFormed.toWellFormed())); // "https://example.com/search
 ## See also
 
 - [Polyfill of `String.prototype.toWellFormed` in `core-js`](https://github.com/zloirock/core-js#well-formed-unicode-strings)
+- [es-shims polyfill of `String.prototype.toWellFormed`](https://www.npmjs.com/package/string.prototype.towellformed)
 - {{jsxref("String.prototype.isWellFormed()")}}
 - {{jsxref("String.prototype.normalize()")}}

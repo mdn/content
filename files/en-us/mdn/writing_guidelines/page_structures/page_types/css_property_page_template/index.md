@@ -2,9 +2,8 @@
 title: CSS property page template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_property_page_template
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 > **Note:** _Remove this note block before publishing._
 >
@@ -21,10 +20,11 @@ page-type: mdn-writing-guide
 > slug: Web/CSS/NameOfTheProperty
 > page-type: css-property OR css-shorthand-property
 > status:
->   - experimental
 >   - deprecated
+>   - experimental
 >   - non-standard
 > browser-compat: css.properties.NameOfTheProperty
+> sidebar: cssref
 > ---
 > ```
 >
@@ -33,13 +33,16 @@ page-type: mdn-writing-guide
 >     For example, the [`background-color`](/en-US/docs/Web/CSS/background-color) property has a title of _background-color_.
 > - **slug**
 >   - : The `slug` value is the end of the URL path after `https://developer.mozilla.org/en-US/docs/`. This will be formatted as `Web/CSS/NameOfTheProperty`.
->     For example, the slug for the [`background-color`](/en-US/docs/Web/CSS/background-color) property is `Web/CSS/background-color`. For a multi-word component such as `Getting_started` in a slug, the slug should use an underscore as in `/en-US/docs/Learn/HTML/Getting_started`.
+>     For example, the slug for the [`background-color`](/en-US/docs/Web/CSS/background-color) property is `Web/CSS/background-color`. For a multi-word component such as `Getting_started` in a slug, the slug should use an underscore as in `/en-US/docs/Learn_web_development/Core/Structuring_content`.
 > - **page-type**
 >   - : The `page-type` value for CSS properties is `css-property`. For a shorthand CSS property, the value is `css-shorthand-property`. For example, the `page-type` value for the [animation](/en-US/docs/Web/CSS/animation) property is `css-shorthand-property` because it is a shorthand property, whereas the `page-type` value for the [animation-delay](/en-US/docs/Web/CSS/animation-delay) property is `css-property`.
 > - **status**
->   - : Flags describing the status of this feature. An array which may contain one or more of the following: `experimental`, `deprecated`, `non-standard`. This key should not be set manually: it is set automatically based on values in the browser compatibility data for the feature. See ["How to add or update feature statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses).
+>   - : Flags describing the status of this feature. An array which may contain one or more of the following: `experimental`, `deprecated`, `non-standard`. This key should not be set manually: it is set automatically based on values in the browser compatibility data for the feature. See ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
 > - **browser-compat**
 >   - : Replace the placeholder value <code>css.properties.NameOfTheProperty</code> with the query string for the property in the [Browser compat data repo](https://github.com/mdn/browser-compat-data/tree/main/css/properties). Check the _Other macros in the page_ section of this note block to see how this key-value is used to generate content for the _Specifications_ and _Browser compatibility_ sections.
+> - **sidebar**
+>   - : This is `cssref` for all CSS guide and reference pages.
+>     See [Page structures: Sidebars](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars) for details.
 >
 > ---
 >
@@ -54,11 +57,8 @@ page-type: mdn-writing-guide
 > - `\{{Non-standard_Header}}` — this generates a **Non-standard** banner that indicates that the feature is not part of any specification.
 >
 > You should update or delete the following macros according to the advice below:
->
-> - `\{{CSSRef}}`: This macro must be present on every CSS property page. It generates a suitable CSS sidebar, depending on the tags included on the page.
->   Remember to remove the `\{{MDNSidebar}}` macro when you use this template.
->
-> Do not provide status header macros manually. Refer to the section ["How to add or update feature statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses) to add these statuses to the page.
+
+> Do not provide status header macros manually. Refer to the section ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated) to add these statuses to the page.
 >
 > Samples of the **Experimental**, **Deprecated**, and **Non-standard** banners are shown right after this note block.
 >
@@ -75,16 +75,16 @@ page-type: mdn-writing-guide
 >
 > _Remember to remove this note block before publishing._
 
-{{CSSRef}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 Begin the content on the page with an introductory paragraph, which names the property and says what it does.
 This should ideally be one or two short sentences.
 
 ## Try it
 
-_This title is auto-generated by the macro `\{{EmbedInteractiveExample}}`._
-
-This section is for interactive examples added using the `\{{EmbedInteractiveExample}}` macro. You create these examples in the [mdn/interactive-examples repository](https://github.com/mdn/interactive-examples/blob/main/CONTRIBUTING.md). See the [Interactive examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples#interactive_examples) section in our _Writing guidelines_ for more information.
+This section is generated by the `InteractiveExample` macro.
+This includes the "Try it" section title and the code editor.
+See the [Interactive examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples#interactive_examples) section in our _Writing guidelines_ for more information.
 
 ## Constituent properties
 
@@ -107,6 +107,9 @@ Include one term and definition for each subvalue.
   - : Include a description of the subvalue, its data type, and what it represents.
 - `subvalue2`
   - : Include a description of the subvalue, its data type, and what it represents.
+
+> [!WARNING]
+> Do not add [inline status macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#feature_status_icons_in_definition_lists) on CSS pages.
 
 ## Description
 

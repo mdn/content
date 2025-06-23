@@ -1,5 +1,6 @@
 ---
 title: Math.SQRT2
+short-title: SQRT2
 slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT2
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Math.SQRT2
@@ -9,7 +10,16 @@ browser-compat: javascript.builtins.Math.SQRT2
 
 The **`Math.SQRT2`** static data property represents the square root of 2, approximately 1.414.
 
-{{EmbedInteractiveExample("pages/js/math-sqrt2.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Math.SQRT2", "shorter")}}
+
+```js interactive-example
+function getRoot2() {
+  return Math.SQRT2;
+}
+
+console.log(getRoot2());
+// Expected output: 1.4142135623730951
+```
 
 ## Value
 

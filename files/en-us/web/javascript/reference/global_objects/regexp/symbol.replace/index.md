@@ -1,5 +1,6 @@
 ---
 title: RegExp.prototype[Symbol.replace]()
+short-title: "[Symbol.replace]()"
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.@@replace
@@ -9,7 +10,20 @@ browser-compat: javascript.builtins.RegExp.@@replace
 
 The **`[Symbol.replace]()`** method of {{jsxref("RegExp")}} instances specifies how [`String.prototype.replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace) and [`String.prototype.replaceAll()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll) should behave when the regular expression is passed in as the pattern.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-@@replace.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype[Symbol.replace]()")}}
+
+<!-- cSpell:ignore tball -->
+
+```js interactive-example
+class RegExp1 extends RegExp {
+  [Symbol.replace](str) {
+    return RegExp.prototype[Symbol.replace].call(this, str, "#!@?");
+  }
+}
+
+console.log("football".replace(new RegExp1("foo")));
+// Expected output: "#!@?tball"
+```
 
 ## Syntax
 
@@ -58,7 +72,7 @@ for (let i = 0; i < 5; i++) {
 // baa 1
 ```
 
-When the regex is sticky and global, it would still perform sticky matches — i.e. it would fail to match any occurrences beyond the `lastIndex`.
+When the regex is sticky and global, it would still perform sticky matches — i.e., it would fail to match any occurrences beyond the `lastIndex`.
 
 ```js
 console.log("aa-a".replace(/a/gy, "b")); // "bb-a"
@@ -82,8 +96,8 @@ This method can be used in almost the same way as {{jsxref("String.prototype.rep
 ```js
 const re = /-/g;
 const str = "2016-01-01";
-const newstr = re[Symbol.replace](str, ".");
-console.log(newstr); // 2016.01.01
+const newStr = re[Symbol.replace](str, ".");
+console.log(newStr); // 2016.01.01
 ```
 
 ### Using `[Symbol.replace]()` in subclasses
@@ -108,8 +122,8 @@ class MyRegExp extends RegExp {
 
 const re = new MyRegExp("\\d", "", 3);
 const str = "01234567";
-const newstr = str.replace(re, "#"); // String.prototype.replace calls re[Symbol.replace]().
-console.log(newstr); // ###34567
+const newStr = str.replace(re, "#"); // String.prototype.replace calls re[Symbol.replace]().
+console.log(newStr); // ###34567
 ```
 
 ## Specifications

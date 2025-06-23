@@ -13,12 +13,14 @@ By default, an extension can receive messages from any other extension. However,
 
 To send a message that is received by the `onMessageExternal` listener, use {{WebExtAPIRef("runtime.sendMessage()")}}, passing the ID of the recipient in the `extensionId` parameter.
 
-Along with the message itself, the listener is passed:
+Along with the message, the listener is passed:
 
-- a `sender` object giving details about the message sender
+- a `sender` object with details about the message sender.
 - a `sendResponse` function that the listener can use to send a response back to the sender.
 
 This API can't be used in a content script.
+
+See {{WebExtAPIRef("runtime.onMessage")}} for additional information on receiving messages and sending responses, as well as examples of the various options for sending responses.
 
 ## Syntax
 
@@ -46,27 +48,28 @@ Events have three functions:
   - : The function called when this event occurs. The function is passed these arguments:
 
     - `message`
-      - : `object`. The message itself. This is a JSON-ifiable object.
+      - : `object`. The message. This is a JSON-ifiable object.
     - `sender`
       - : A {{WebExtAPIRef('runtime.MessageSender')}} object representing the sender of the message.
     - `sendResponse`
 
-      - : A function to call, at most once, to send a response to the message. The function takes a single argument, which may be any JSON-ifiable object. This argument is passed back to the message sender.
+      - : A function to call, at most once, to send a response to the message. The function takes one argument, which is a JSON-ifiable object. This argument is passed back to the message sender.
 
-        If you have more than one `onMessageExternal` listener in the same document, then only one may send a response.
+        If you have more than one `onMessageExternal` listener in the same document, then only one can send a response.
 
-        To send a response synchronously, call `sendResponse` before the listener function returns. To send a response asynchronously, do one of these:
+        To send a response synchronously, call `sendResponse()` before the listener function returns.
 
-        - keep a reference to the `sendResponse` argument and return `true` from the listener function. You can then call `sendResponse` after the listener function has returned.
-        - return a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) from the listener function and resolve the promise when the response is ready.
+        To send a response asynchronously, use one of these options:
 
-## Browser compatibility
+        - Return a {{jsxref("Promise")}} from the listener function and resolve the promise when the response is ready. This is the preferred approach.
+        - Keep a reference to the `sendResponse()` argument and return `true` from the listener function. You then call `sendResponse()` after the listener function returns.
 
-{{Compat}}
+          > [!NOTE]
+          > Promise as a return value is not supported in Chrome until [Chrome bug 1185241](https://crbug.com/1185241) is resolved. As an alternative, return `true` and use `sendResponse` [as described for `runtime.onMessage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#sending_an_asynchronous_response_using_sendresponse).
 
 ## Examples
 
-In this example the extension "blue\@mozilla.org" sends a message to the extension "red\@mozilla.org":
+In this example, the extension "blue\@mozilla.org" sends a message to the extension "red\@mozilla.org":
 
 ```js
 // sender: browser.runtime.id === "blue@mozilla.org"
@@ -89,6 +92,10 @@ browser.runtime.onMessageExternal.addListener(handleMessage);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onMessageExternal) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.

@@ -50,7 +50,7 @@ A {{jsxref("Promise")}} that resolves with an instance of {{domxref("SerialPort"
 
 - `SecurityError` {{domxref("DOMException")}}
   - : The returned `Promise` rejects with this error in either of the following situations:
-    - A {{httpheader('Permissions-Policy/serial','serial')}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) blocks the use of this feature.
+    - A {{httpheader('Permissions-Policy/serial','serial')}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) blocks the use of this feature.
     - A user permission prompt was denied.
 - `NotFoundError` {{domxref("DOMException")}}
   - : The returned `Promise` rejects with this exception if the user does not select a port when prompted.
@@ -95,7 +95,7 @@ connectBtn.addEventListener("click", () => {
 
 ### Allow the user to select custom RFCOMM-based services
 
-Although most devices expose SPP-based communication through the standardized Bluetooth Classic Serial Port Profile, some use custom RFCOMM-based services. These devices have a Service Class ID that is not in the standard Bluetooth UUID range.
+Although most devices expose SPP-based communication through the standardized Bluetooth Classic Serial Port Profile, some use custom radio frequency communication (RFCOMM) based services. These devices have a Service Class ID that is not in the standard Bluetooth UUID range.
 
 You need to pass the `allowedBluetoothServiceClassIds` list to `requestPort()` to access these custom RFCOMM-based services:
 

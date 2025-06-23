@@ -3,12 +3,10 @@ title: "GPUTexture: createView() method"
 short-title: createView()
 slug: Web/API/GPUTexture/createView
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUTexture.createView
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`createView()`** method of the
 {{domxref("GPUTexture")}} interface creates a {{domxref("GPUTextureView")}} representing a specific view of the `GPUTexture`.
@@ -88,6 +86,12 @@ createView(descriptor)
 
         If `mipLevelCount` is omitted, it will be given a value of {{domxref("GPUTexture.mipLevelCount")}} - `baseMipLevel`.
 
+    - `usage` {{optional_inline}}
+
+      - : A set of {{glossary("bitwise flags")}} representing a subset of the source texture's usage flags (available in the {{domxref("GPUTexture.usage")}} property) that are compatible with the chosen view format. This can be used to restrict the allowed view usage in cases where the view format is incompatible with certain usages. The available usage flags are listed in the [`GPUTexture.usage` value table](/en-US/docs/Web/API/GPUTexture/usage#value).
+
+        The default value is `0`, which represents the source texture's full set of usage flags. If the view's [`format`](#format) doesn't support all of the texture's usages, the default will fail, and the view's usage must be specified explicitly.
+
 ### Return value
 
 A {{domxref("GPUTextureView")}} object instance.
@@ -123,8 +127,11 @@ The following criteria must be met when calling **`createView()`**, otherwise a 
   - `"3d"`
     - {{domxref("GPUTexture.dimension")}} is `"3d"`
     - `arrayLayerCount` is 1
+- The view's [`format`](#format) supports all of the usages specified in the [`usage`](#usage) property.
 
 ## Examples
+
+### Typical `createView()` usage
 
 In the WebGPU Samples [Cubemap demo](https://webgpu.github.io/webgpu-samples/samples/cubemap/), you will see multiple examples of how `createView()` is used, both as to create a view `resource` for a {{domxref("GPUDevice.createBindGroup()")}} call, and to provide a `view` in the `depthStencilAttachment` object of a {{domxref("GPUCommandEncoder.beginRenderPass()")}} descriptor.
 
@@ -170,12 +177,33 @@ const renderPassDescriptor: GPURenderPassDescriptor = {
   },
 };
 
-// ...
+// …
 
 const commandEncoder = device.createCommandEncoder();
 const passEncoder = commandEncoder.beginRenderPass(renderPassDescriptor);
 
-// ...
+// …
+```
+
+### `createView()` with usage restriction
+
+In this snippet, we create a texture and then create a view that has its usage restricted via the `usage` property.
+
+```js
+const texture = myDevice.createTexture({
+  size: [4, 4],
+  format: "rgba8unorm",
+  usage:
+    GPUTextureUsage.RENDER_ATTACHMENT |
+    GPUTextureUsage.TEXTURE_BINDING |
+    GPUTextureUsage.STORAGE_BINDING,
+  viewFormats: ["rgba8unorm-srgb"],
+});
+
+const view = texture.createView({
+  format: "rgba8unorm-srgb",
+  usage: GPUTextureUsage.RENDER_ATTACHMENT, // Restrict allowed usage
+});
 ```
 
 ## Specifications

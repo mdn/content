@@ -3,12 +3,10 @@ title: "GPUCommandEncoder: beginRenderPass() method"
 short-title: beginRenderPass()
 slug: Web/API/GPUCommandEncoder/beginRenderPass
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUCommandEncoder.beginRenderPass
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`beginRenderPass()`** method of the
 {{domxref("GPUCommandEncoder")}} interface starts encoding a render pass, returning a {{domxref("GPURenderPassEncoder")}} that can be used to control rendering.
@@ -39,14 +37,15 @@ beginRenderPass(descriptor)
 
       - : An array of objects defining where and when timestamp query values will be written for this pass. These objects have the following properties:
 
-        - `location`: An enumerated value specifying when the timestamp will be executed. Available values are:
-          - `"beginning"`: The timestamp is executed along with the other encoded commands in the compute pass once the corresponding {{domxref("GPUCommandBuffer")}} is submitted.
-          - `"end"`: The timestamp is executed as part of a separate list of timestamp attachments once the pass ends.
-        - `queryIndex`: A number specifying the index position in the `querySet` that the timestamp will be written to.
-        - `querySet`: The {{domxref("GPUQuerySet")}} that the timestamp will be written to.
+        - `querySet`
+          - : A {{domxref("GPUQuerySet")}} of type `"timestamp"` that the timestamp query results will be written to.
+        - `beginningOfPassWriteIndex`
+          - : A number specifying the query index in `querySet` where the timestamp at the beginning of the render pass will be written. This is optional - if not defined, no timestamp will be written for the beginning of the pass.
+        - `endOfPassWriteIndex`
+          - : A number specifying the query index in `querySet` where the timestamp at the end of the render pass will be written. This is optional - if not defined, no timestamp will be written for the end of the pass.
 
         > [!NOTE]
-        > The `timestamp-query` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) needs to be enabled to use timestamp queries.
+        > The `timestamp-query` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) needs to be enabled to use timestamp queries. Timestamp query values are written in nanoseconds, but how the value is determined is implementation-defined.
 
 ### Color attachment object structure
 
@@ -56,24 +55,9 @@ Color attachment objects can have the following properties:
 
   - : A color value to clear the `view` texture to, prior to executing the render pass. This value is ignored if `loadOp` is not set to `"clear"`. `clearValue` takes an array or object representing the four color components `r`, `g`, `b`, and `a` as decimals.
 
-    What follows is a sample array:
+    For example, you can pass an array like `[0.0, 0.5, 1.0, 1.0]`, or its equivalent object `{ r: 0.0, g: 0.5, b: 1.0, a: 1.0 }`.
 
-    ```js
-    clearValue: [0.0, 0.5, 1.0, 1.0];
-    ```
-
-    The object equivalent would look like this:
-
-    ```js
-    clearValue: {
-      r: 0.0,
-      g: 0.5,
-      b: 1.0,
-      a: 1.0
-    }
-    ```
-
-    If `clearValue` is omitted, it defaults to `{r: 0, g: 0, b: 0, a: 0}`.
+    If `clearValue` is omitted, it defaults to `{ r: 0, g: 0, b: 0, a: 0 }`.
 
 - `depthSlice` {{optional_inline}}
 
@@ -170,7 +154,7 @@ General:
 
 For color attachment objects
 
-- The `view` is renderable, and the `view`'s format (i.e. specified in the descriptor of the originating {{domxref("GPUTexture.createView()")}} call) is a color renderable format.
+- The `view` is renderable, and the `view`'s format (i.e., specified in the descriptor of the originating {{domxref("GPUTexture.createView()")}} call) is a color renderable format.
 - If `resolveTarget` is provided:
   - The `view`'s originating {{domxref("GPUTexture")}}'s {{domxref("GPUTexture.sampleCount", "sampleCount")}} is greater than 1.
   - The `resolveTarget`'s originating {{domxref("GPUTexture")}}'s {{domxref("GPUTexture.sampleCount", "sampleCount")}} is 1.
@@ -192,16 +176,13 @@ For depth/stencil attachment objects:
 For timestamp queries:
 
 - The `timestamp-query` {{domxref("GPUSupportedFeatures", "feature", "", "nocode")}} is enabled in the {{domxref("GPUDevice")}}.
-- No two `timestampWrites` objects have the same `location`. In effect, this means that you can only run two timestamp queries per render pass.
-- For each timestamp query, the `querySet` {{domxref("GPUQuerySet.type")}} is `"timestamp"`, and the `queryIndex` value is less than the {{domxref("GPUQuerySet.count")}}.
-- No two `timestampWrites` objects have the same `queryIndex` and `querySet` pair.
 
 ## Examples
 
 In our [basic render demo](https://mdn.github.io/dom-examples/webgpu-render-demo/), a number of commands are recorded via a {{domxref("GPUCommandEncoder")}}. These commands originate from the {{domxref("GPURenderPassEncoder")}} created via `beginRenderPass()` :
 
 ```js
-// ...
+// …
 
 // Create GPUCommandEncoder
 const commandEncoder = device.createCommandEncoder();
@@ -233,7 +214,7 @@ passEncoder.end();
 
 device.queue.submit([commandEncoder.finish()]);
 
-// ...
+// …
 ```
 
 ## Specifications

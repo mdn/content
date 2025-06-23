@@ -1,0 +1,25 @@
+# Do not add comments to this file. They will be lost.
+
+sidebar:
+  - type: section
+    link: /Web/WebDriver
+    title: WebDriver
+  - type: section
+    link: /Web/WebDriver/Reference
+  - link: /Web/WebDriver/Reference/Timeouts
+    title: Timeouts
+  - type: listSubPages
+    path: /Web/WebDriver/Reference/Commands
+    link: /Web/WebDriver/Reference/Commands
+    details: open
+    code: true
+  - type: listSubPages
+    path: /Web/WebDriver/Reference/Capabilities
+    link: /Web/WebDriver/Reference/Capabilities
+    details: open
+    code: true
+  - type: listSubPages
+    path: /Web/WebDriver/Reference/Errors
+    link: /Web/WebDriver/Reference/Errors
+    details: open
+    code: true

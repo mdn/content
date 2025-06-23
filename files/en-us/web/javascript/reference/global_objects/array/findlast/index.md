@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.findLast()
+short-title: findLast()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLast
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.findLast
@@ -20,7 +21,16 @@ If you need to find:
   Again, it checks each element for equality with the value instead of using a testing function.
 - if any element satisfies the provided testing function, use {{jsxref("Array/some", "some()")}}.
 
-{{EmbedInteractiveExample("pages/js/array-findlast.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.findLast()", "shorter")}}
+
+```js interactive-example
+const array1 = [5, 12, 50, 130, 44];
+
+const found = array1.findLast((element) => element > 45);
+
+console.log(found);
+// Expected output: 130
+```
 
 ## Syntax
 
@@ -79,7 +89,7 @@ console.log(inventory.findLast(isNotEnough));
 
 #### Using arrow function and destructuring
 
-The previous example might be written using an arrow function and [object destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring):
+The previous example might be written using an arrow function and [object destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring#object_destructuring):
 
 ```js
 const inventory = [
@@ -145,6 +155,7 @@ const array = [0, 1, , , , 5, 6];
 // Shows all indexes, not just those with assigned values
 array.findLast((value, index) => {
   console.log(`Visited index ${index} with value ${value}`);
+  return false;
 });
 // Visited index 6 with value 6
 // Visited index 5 with value 5
@@ -163,6 +174,7 @@ array.findLast((value, index) => {
   }
   // Element 5 is still visited even though deleted
   console.log(`Visited index ${index} with value ${value}`);
+  return false;
 });
 // Deleting array[5] with value 5
 // Visited index 6 with value 6
@@ -202,6 +214,7 @@ console.log(
 ## See also
 
 - [Polyfill of `Array.prototype.findLast` in `core-js`](https://github.com/zloirock/core-js#array-find-from-last)
+- [es-shims polyfill of `Array.prototype.findLast`](https://www.npmjs.com/package/array.prototype.findlast)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}

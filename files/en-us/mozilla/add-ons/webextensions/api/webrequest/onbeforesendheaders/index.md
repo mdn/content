@@ -63,7 +63,7 @@ Events have three functions:
   - : The function called when this event occurs. The function is passed this argument:
 
     - `details`
-      - : `object`. Details of the request. This includes request headers if you have included `"requestHeaders"` in `extraInfoSpec`. See the [details](#details_2) section for more information.
+      - : `object`. Details of the request. This includes request headers if you have included `"requestHeaders"` in `extraInfoSpec`. See the [details](#details) section for more information.
 
     Returns: {{WebExtAPIRef('webRequest.BlockingResponse')}}. If `"blocking"` is specified in the `extraInfoSpec` parameter, the event listener should return a `BlockingResponse` object, and can set its `requestHeaders` property.
 
@@ -149,9 +149,9 @@ Events have three functions:
   - : `object`. The type of tracking associated with the request, if the request is classified by [Firefox Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop). This is an object with these properties:
 
     - `firstParty`
-      - : `array` of `strings`. Classification flags for the request's first party.
+      - : `array` of `string`. Classification flags for the request's first party.
     - `thirdParty`
-      - : `array` of `strings`. Classification flags for the request or its window hierarchy's third parties.
+      - : `array` of `string`. Classification flags for the request or its window hierarchy's third parties.
 
     The classification flags include:
 

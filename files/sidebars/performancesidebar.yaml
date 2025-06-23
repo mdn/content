@@ -1,0 +1,39 @@
+# Do not add comments to this file. They will be lost.
+
+sidebar:
+  - type: section
+    link: /Web/Performance
+  - type: section
+    link: /Web/Performance/Guides
+  - /Web/Performance/Guides/Fundamentals
+  - /Web/Performance/Guides/How_browsers_work
+  - /Web/Performance/Guides/Understanding_latency
+  - /Web/Performance/Guides/How_long_is_too_long
+  - /Web/Performance/Guides/dns-prefetch
+  - /Web/Performance/Guides/Navigation_and_resource_timings
+  - /Web/Performance/Guides/Optimizing_startup_performance
+  - /Web/Performance/Guides/Critical_rendering_path
+  - /Web/Performance/Guides/Lazy_loading
+  - /Web/Performance/Guides/Speculative_loading
+  - /Web/Performance/Guides/Performance_budgets
+  - /Web/Performance/Guides/Rum-vs-Synthetic
+  - /Web/Performance/Guides/CSS_JavaScript_animation_performance
+  - /Web/Performance/Guides/Animation_performance_and_frame_rate
+  - type: section
+    title: Tutorials
+  - type: listSubPages
+    path: /Learn_web_development/Extensions/Performance
+    includeParent: true
+    title: Learn web performance
+    details: closed
+  - type: section
+    title: Reference
+  - type: listSubPages
+    path: /Web/API/Performance_API
+    includeParent: true
+    title: Performance APIs
+    details: open
+  - type: section
+    title: Related APIs
+  - /Web/API/Beacon_API
+  - /Web/API/Intersection_Observer_API

@@ -27,5 +27,5 @@ An {{domxref("HTMLFormElement")}} or `null`.
 - {{domxref("HTMLButtonElement")}}
 - {{domxref("HTMLFormElement")}}
 - {{HTMLElement("button")}}
-- HTML [`form`](/en-US/docs/Web/HTML/Element/button#form) attribute
-- [HTML forms guide](/en-US/docs/Learn/Forms)
+- HTML [`form`](/en-US/docs/Web/HTML/Reference/Elements/button#form) attribute
+- [HTML forms guide](/en-US/docs/Learn_web_development/Extensions/Forms)

@@ -63,7 +63,7 @@ We then create a {{domxref("ShadowRoot")}} and pass the sheet object to the {{do
 const node = document.createElement("div");
 const shadow = node.attachShadow({ mode: "open" });
 
-//Adopt the sheet into the shadow DOM
+// Adopt the sheet into the shadow DOM
 shadow.adoptedStyleSheets = [sheet];
 ```
 
@@ -88,6 +88,7 @@ For more examples see {{domxref("ShadowRoot.adoptedStyleSheets")}}.
 
 ## See also
 
+- {{domxref("Document.adoptedStyleSheets")}}
 - [Constructable Stylesheets](https://web.dev/articles/constructable-stylesheets) (web.dev)
 - [Using the Shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
 - [construct-style-sheets-polyfill](https://www.npmjs.com/package/construct-style-sheets-polyfill)

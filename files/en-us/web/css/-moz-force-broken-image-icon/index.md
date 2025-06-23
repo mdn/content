@@ -1,5 +1,5 @@
 ---
-title: "-moz-force-broken-image-icon"
+title: -moz-force-broken-image-icon
 slug: Web/CSS/-moz-force-broken-image-icon
 page-type: css-property
 status:
@@ -17,7 +17,7 @@ The **`-moz-force-broken-image-icon`** extended CSS property can be used to forc
 ### Values
 
 - {{cssxref("&lt;integer&gt;")}}
-  - : A value of `1` means that the broken image icon is shown even if the image has an [`alt`](/en-US/docs/Web/HTML/Element/img#alt) attribute. When the value `0` is used, the image will act as usual and only display the `alt` attribute.
+  - : A value of `1` means that the broken image icon is shown even if the image has an [`alt`](/en-US/docs/Web/HTML/Reference/Elements/img#alt) attribute. When the value `0` is used, the image will act as usual and only display the `alt` attribute.
 
 > [!NOTE]
 > Even if the value is set to `1` the `alt` attribute will still be displayed, alongside the broken image icon.
@@ -28,9 +28,7 @@ The **`-moz-force-broken-image-icon`** extended CSS property can be used to forc
 
 ## Formal syntax
 
-```plain
--moz-force-broken-image-icon = {{cssxref("&lt;integer&gt;")}}
-```
+{{CSSSyntaxRaw(`-moz-force-broken-image-icon = <integer>`)}}
 
 ## Examples
 
@@ -55,7 +53,7 @@ img {
 {{EmbedLiveSample('Examples','125','125')}}
 
 > [!NOTE]
-> Unless the image has a specified height and width the alt attribute will not be displayed if `-moz-force-broken-image-icon` is set to `1`.
+> The alt text may not be visible if `-moz-force-broken-image-icon` is set to `1` and the image has no (or too small) `height` or `width` set.
 
 ## Notes
 

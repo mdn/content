@@ -44,7 +44,7 @@ The `"module-name"` may be followed by a set of [import attributes](/en-US/docs/
 
 ## Description
 
-`import` declarations can only be present in modules, and only at the top-level (i.e. not inside blocks, functions, etc.). If an `import` declaration is encountered in non-module contexts (for example, `<script>` tags without `type="module"`, `eval`, `new Function`, which all have "script" or "function body" as parsing goals), a `SyntaxError` is thrown. To load modules in non-module contexts, use the [dynamic import](/en-US/docs/Web/JavaScript/Reference/Operators/import) syntax instead.
+`import` declarations can only be present in modules, and only at the top-level (i.e., not inside blocks, functions, etc.). If an `import` declaration is encountered in non-module contexts (for example, `<script>` tags without `type="module"`, `eval`, `new Function`, which all have "script" or "function body" as parsing goals), a `SyntaxError` is thrown. To load modules in non-module contexts, use the [dynamic import](/en-US/docs/Web/JavaScript/Reference/Operators/import) syntax instead.
 
 All imported bindings cannot be in the same scope as any other declaration, including {{jsxref("Statements/let", "let")}}, {{jsxref("Statements/const", "const")}}, {{jsxref("Statements/class", "class")}}, {{jsxref("Statements/function", "function")}}, {{jsxref("Statements/var", "var")}}, and `import` declaration.
 
@@ -166,7 +166,7 @@ import * as myModule from "/modules/my-module.js";
 
 ### Module specifier resolution
 
-The ECMAScript specification does not define how module specifiers are resolved and leaves it to the host environment (e.g. browsers, Node.js, Deno). Browser behavior is specified by [the HTML spec](https://html.spec.whatwg.org/multipage/webappapis.html#resolve-a-module-specifier), and this has become the _de facto_ baseline for all environments.
+The ECMAScript specification does not define how module specifiers are resolved and leaves it to the host environment (e.g., browsers, Node.js, Deno). Browser behavior is specified by [the HTML spec](https://html.spec.whatwg.org/multipage/webappapis.html#resolve-a-module-specifier), and this has become the _de facto_ baseline for all environments.
 
 There are three types of specifiers widely recognized, as implemented by the HTML spec, Node, and many others:
 
@@ -191,7 +191,7 @@ Absolute specifiers can be any kind of [URL](/en-US/docs/Web/URI) that resolve t
 
 - [HTTP URLs](/en-US/docs/Web/HTTP) are always supported on the web since most scripts already have HTTP URLs. It's supported natively by Deno (which initially predicated its entire module system on HTTP URLs), but it only has experimental support in Node via [custom HTTPS loaders](https://nodejs.org/api/module.html#import-from-https).
 - `file:` URLs are supported by many non-browser runtimes such as Node, since scripts there already have `file:` URLs, but they are not supported by browsers due to security reasons.
-- [Data URLs](/en-US/docs/Web/URI/Schemes/data) are supported by many runtimes including browsers, Node, Deno, etc. They are useful for embedding small modules directly into the source code. Supported [MIME types](/en-US/docs/Web/HTTP/MIME_types) are those that designate importable source code, such as `text/javascript` for JavaScript, `application/json` for JSON modules, `application/wasm` for WebAssembly modules, etc. (They may still require [import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with).)
+- [Data URLs](/en-US/docs/Web/URI/Reference/Schemes/data) are supported by many runtimes including browsers, Node, Deno, etc. They are useful for embedding small modules directly into the source code. Supported [MIME types](/en-US/docs/Web/HTTP/Guides/MIME_types) are those that designate importable source code, such as `text/javascript` for JavaScript, `application/json` for JSON modules, `application/wasm` for WebAssembly modules, etc. (They may still require [import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with).)
 
   ```js
   // HTTP URLs

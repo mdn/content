@@ -7,7 +7,7 @@ browser-compat: javascript.classes.public_class_fields
 
 {{jsSidebar("Classes")}}
 
-**Public fields** are writable, enumerable, and configurable properties. As such, unlike their private counterparts, they participate in prototype inheritance.
+**Public fields** are writable, enumerable, and configurable properties defined on each class instance or class constructor.
 
 ## Syntax
 
@@ -177,7 +177,7 @@ const instance2 = new DerivedWithConstructor(); // Logs 1
 
 ### Using class fields
 
-Class fields cannot depend on arguments of the constructor, so field initializers usually evaluate to the same value for each instance (unless the same expression can evaluate to different values each time, such as {{jsxref("Date.now()")}} or object initializers).
+Class fields cannot depend on arguments of the constructor, so field initializers usually evaluate to the same value for each instance (unless the same expression can evaluate to different values each time, such as {{jsxref("Math.random()")}} or object initializers).
 
 ```js example-bad
 class Person {

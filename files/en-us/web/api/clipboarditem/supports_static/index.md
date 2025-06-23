@@ -23,7 +23,7 @@ supports(type)
 
 - `type`
 
-  - : A string, indicating the {{Glossary("MIME type")}} to test.
+  - : A string indicating the {{Glossary("MIME type")}} to test.
 
     These MIME types are always supported:
 
@@ -45,10 +45,10 @@ supports(type)
 
 ### Writing an image to the clipboard
 
-The following example fetches an SVG image to a blob, and then writes it to the clipboard.
+The following example fetches an SVG image, represents it as a {{domxref("Blob")}}, and then writes it to the clipboard.
 
 We use `supports()` to check whether the `"image/svg+xml"` MIME type is supported by the clipboard before fetching the image and writing it using {{domxref("clipboard.write()")}}.
-We also wrap the whole function body in [`try..catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) statement to catch any other errors, such as `ClipboardItem` itself not being supported.
+We also wrap the whole function body in a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) statement to catch any other errors, such as `ClipboardItem` itself not being supported.
 
 ```js
 async function writeClipImg() {

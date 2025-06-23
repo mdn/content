@@ -1,5 +1,6 @@
 ---
 title: Float16Array() constructor
+short-title: Float16Array()
 slug: Web/JavaScript/Reference/Global_Objects/Float16Array/Float16Array
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Float16Array.Float16Array

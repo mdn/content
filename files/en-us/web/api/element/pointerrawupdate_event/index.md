@@ -3,30 +3,31 @@ title: "Element: pointerrawupdate event"
 short-title: pointerrawupdate
 slug: Web/API/Element/pointerrawupdate_event
 page-type: web-api-event
-status:
-  - experimental
 browser-compat: api.Element.pointerrawupdate_event
 ---
 
-{{APIRef}}{{SeeCompatTable}}{{secureContext_header}}
+{{APIRef}}{{secureContext_header}}
 
-The **`pointerrawupdate`** {{DOMxRef('PointerEvent')}} is fired when a pointer changes any properties that don't fire {{domxref('Element/pointerdown_event', 'pointerdown')}} or {{domxref('Element/pointerup_event', 'pointerup')}} events.
+The **`pointerrawupdate`** event is fired when a pointer changes any properties that don't fire {{domxref('Element/pointerdown_event', 'pointerdown')}} or {{domxref('Element/pointerup_event', 'pointerup')}} events.
 See {{domxref('Element/pointermove_event', 'pointermove')}} for a list of these properties.
 
 The `pointerrawupdate` event may have coalesced events if there is already another `pointerrawupdate` event with the same pointer ID that hasn't been dispatched in the event loop.
-For information on coalesced events, see the {{domxref("PointerEvent.getCoalescedEvents")}} documentation.
+For information on coalesced events, see the {{domxref("PointerEvent.getCoalescedEvents()")}} documentation.
 
-Listeners for `pointerrawupdate` events should only be added if your JavaScript needs high-frequency events and can handle them as quickly as they are dispatched.
-For most use cases, other pointer event types should suffice as there may be performance implications to adding listeners for `pointerrawupdate` events.
+`pointerrawupdate` is intended for applications that require high-precision input handling and cannot achieve smooth interaction using coalesced [`pointermove`](/en-US/docs/Web/API/Element/pointermove_event) events alone.
+However, because listening to `pointerrawupdate` events can affect performance, you should add these listeners only if your JavaScript needs high-frequency events and can handle them as quickly as they are dispatched.
+For most use cases, other pointer event types should suffice.
+
+This event [bubbles](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling) and is [composed](/en-US/docs/Web/API/Event/composed), but is not [cancelable](/en-US/docs/Web/API/Event/cancelable) and has no default action.
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("pointerrawupdate", (event) => {});
+```js-nolint
+addEventListener("pointerrawupdate", (event) => { })
 
-onpointerrawupdate = (event) => {};
+onpointerrawupdate = (event) => { }
 ```
 
 ## Event type
@@ -56,11 +57,11 @@ _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref
 - {{domxref('PointerEvent.tangentialPressure')}} {{ReadOnlyInline}}
   - : The normalized tangential pressure of the pointer input (also known as barrel pressure or [cylinder stress](https://en.wikipedia.org/wiki/Cylinder_stress)) in the range `-1` to `1`, where `0` is the neutral position of the control.
 - {{domxref('PointerEvent.tiltX')}} {{ReadOnlyInline}}
-  - : The plane angle (in degrees, in the range of `-90` to `90`) between the Y–Z plane and the plane containing both the pointer (e.g. pen stylus) axis and the Y axis.
+  - : The plane angle (in degrees, in the range of `-90` to `90`) between the Y–Z plane and the plane containing both the pointer (e.g., pen stylus) axis and the Y axis.
 - {{domxref('PointerEvent.tiltY')}} {{ReadOnlyInline}}
-  - : The plane angle (in degrees, in the range of `-90` to `90`) between the X–Z plane and the plane containing both the pointer (e.g. pen stylus) axis and the X axis.
+  - : The plane angle (in degrees, in the range of `-90` to `90`) between the X–Z plane and the plane containing both the pointer (e.g., pen stylus) axis and the X axis.
 - {{domxref('PointerEvent.twist')}} {{ReadOnlyInline}}
-  - : The clockwise rotation of the pointer (e.g. pen stylus) around its major axis in degrees, with a value in the range `0` to `359`.
+  - : The clockwise rotation of the pointer (e.g., pen stylus) around its major axis in degrees, with a value in the range `0` to `359`.
 - {{domxref('PointerEvent.pointerType')}} {{ReadOnlyInline}}
   - : Indicates the device type that caused the event (mouse, pen, touch, etc.).
 - {{domxref('PointerEvent.isPrimary')}} {{ReadOnlyInline}}

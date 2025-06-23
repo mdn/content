@@ -1,5 +1,6 @@
 ---
 title: Date.prototype.toLocaleDateString()
+short-title: toLocaleDateString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.toLocaleDateString
@@ -7,11 +8,30 @@ browser-compat: javascript.builtins.Date.toLocaleDateString
 
 {{JSRef}}
 
-The **`toLocaleDateString()`** method of {{jsxref("Date")}} instances returns a string with a language-sensitive representation of the date portion of this date in the local timezone. In implementations with [`Intl.DateTimeFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) support, this method simply calls `Intl.DateTimeFormat`.
+The **`toLocaleDateString()`** method of {{jsxref("Date")}} instances returns a string with a language-sensitive representation of the date portion of this date in the local timezone. In implementations with [`Intl.DateTimeFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) support, this method delegates to `Intl.DateTimeFormat`.
 
 Every time `toLocaleString` is called, it has to perform a search in a big database of localization strings, which is potentially inefficient. When the method is called many times with the same arguments, it is better to create a {{jsxref("Intl.DateTimeFormat")}} object and use its {{jsxref("Intl/DateTimeFormat/format", "format()")}} method, because a `DateTimeFormat` object remembers the arguments passed to it and may decide to cache a slice of the database, so future `format` calls can search for localization strings within a more constrained context.
 
-{{EmbedInteractiveExample("pages/js/date-tolocaledatestring.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.toLocaleDateString()", "taller")}}
+
+```js interactive-example
+const event = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+const options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+
+console.log(event.toLocaleDateString("de-DE", options));
+// Expected output (varies according to local timezone): Donnerstag, 20. Dezember 2012
+
+console.log(event.toLocaleDateString("ar-EG", options));
+// Expected output (varies according to local timezone): الخميس، ٢٠ ديسمبر، ٢٠١٢
+
+console.log(event.toLocaleDateString(undefined, options));
+// Expected output (varies according to local timezone and default locale): Thursday, December 20, 2012
+```
 
 ## Syntax
 

@@ -1,5 +1,5 @@
 ---
-title: "-moz-float-edge"
+title: -moz-float-edge
 slug: Web/CSS/-moz-float-edge
 page-type: css-property
 status:
@@ -38,10 +38,7 @@ The non-standard **`-moz-float-edge`** [CSS](/en-US/docs/Web/CSS) property speci
 
 ## Formal syntax
 
-```plain
--moz-float-edge =
-  content-box | margin-box
-```
+{{CSSSyntaxRaw(`-moz-float-edge = content-box | margin-box`)}}
 
 ## Examples
 

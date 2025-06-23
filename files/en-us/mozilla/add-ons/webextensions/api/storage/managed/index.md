@@ -37,6 +37,9 @@ storageItem.then((res) => {
 });
 ```
 
+> [!NOTE]
+> In Firefox, a browser restart is required to load changes to the JSON manifest or policy into managed storage. In other browsers, the loading of changes is dynamic.
+
 ## Methods
 
 The `managed` object implements the methods defined on the {{WebExtAPIRef("storage.StorageArea")}} type:

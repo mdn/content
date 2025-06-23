@@ -9,8 +9,6 @@ browser-compat: webextensions.api.tabs.query
 
 Gets all tabs that have the specified properties, or all tabs if no properties are specified.
 
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
-
 ## Syntax
 
 ```js-nolint
@@ -39,6 +37,8 @@ let querying = browser.tabs.query(queryInfo)
       - : `boolean`. Whether the tabs are in the current window.
     - `discarded` {{optional_inline}}
       - : `boolean`. Whether the tabs are discarded. A discarded tab is one whose content has been unloaded from memory, but is still visible in the tab strip. Its content gets reloaded the next time it's activated.
+    - `groupId` {{optional_inline}}
+      - : `integer`. The ID of the tab group the tabs are in or `-1` ({{WebExtAPIRef("tabGroups.TAB_GROUP_ID_NONE")}}) for ungrouped tabs. For more information on tab groups, see {{WebExtAPIRef("tabGroups")}}.
     - `hidden` {{optional_inline}}
       - : `boolean`. Whether the tabs are hidden.
     - `highlighted` {{optional_inline}}
@@ -64,7 +64,7 @@ let querying = browser.tabs.query(queryInfo)
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an `array` of `{{WebExtAPIRef('tabs.Tab')}}` objects, containing information about each matching tab.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an `array` of {{WebExtAPIRef('tabs.Tab')}} objects, containing information about each matching tab.
 
 If any error occurs, the promise will be rejected with an error message.
 

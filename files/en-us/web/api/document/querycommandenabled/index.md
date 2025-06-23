@@ -17,7 +17,7 @@ or not the specified editor command is enabled by the browser.
 ## Syntax
 
 ```js-nolint
-document.queryCommandEnabled(command)
+queryCommandEnabled(command)
 ```
 
 ### Parameters

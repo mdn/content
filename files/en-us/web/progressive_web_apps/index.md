@@ -2,9 +2,8 @@
 title: Progressive web apps
 slug: Web/Progressive_web_apps
 page-type: landing-page
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 A **progressive web app** (PWA) is an app that's built using web platform technologies, but that provides a user experience like that of a platform-specific app.
 
@@ -12,7 +11,8 @@ Like a website, a PWA can run on multiple platforms and devices from a single co
 
 ## Guides
 
-These guides give conceptual explanations of different aspects of PWAs. They're intended to help you understand what kinds of things are possible with PWAs, and to provide enough pointers to help you understand how to achieve them.
+The [PWA guides](/en-US/docs/Web/Progressive_web_apps/Guides) provide conceptual explanations of different aspects of PWAs.
+They're intended to help you understand what kinds of things are possible with PWAs, and to provide enough pointers to help you understand how to achieve them.
 
 - [What is a progressive web app?](/en-US/docs/Web/Progressive_web_apps/Guides/What_is_a_progressive_web_app)
   - : An introduction to PWAs, comparing them with traditional websites and with platform-specific apps, and outlining their main features.
@@ -29,7 +29,7 @@ These guides give conceptual explanations of different aspects of PWAs. They're 
 
 ## How to
 
-These guides give concrete detailed instructions for how to implement specific PWA features.
+The [PWA how-tos](/en-US/docs/Web/Progressive_web_apps/How_to) provide detailed instructions on implementing specific PWA features.
 
 - [Create a standalone app](/en-US/docs/Web/Progressive_web_apps/How_to/Create_a_standalone_app)
   - : Describes how to specify that a PWA should be launched in its own dedicated window when it is launched, rather than a browser tab.
@@ -50,7 +50,7 @@ These guides give concrete detailed instructions for how to implement specific P
 
 ## Tutorials
 
-In these tutorials, you'll build a PWA from scratch. Tutorials walk through the steps of creating an app, from start to finish, explaining how the different features of the app are implemented.
+Build a PWA from scratch using these [PWA Tutorials](/en-US/docs/Web/Progressive_web_apps/Tutorials), which walk through the steps from start to finish, explaining how the different features of the app are implemented along the way.
 
 - [Creating your first PWA](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker)
   - : This novice-level tutorial walks through the creation of a PWA to track menstrual cycles. Lessons include a walk through of the HTML, CSS, and JavaScript required to create a fully functional web app, setting up a testing environment, and complete explanations guiding the learner through upgrading the web app into a PWA; including developing and inspecting a manifest, adding a service worker, and using the service worker to delete stale caches.
@@ -59,11 +59,11 @@ In these tutorials, you'll build a PWA from scratch. Tutorials walk through the 
 
 ## Reference
 
-Reference documentation for the web technologies you will use to build a PWA.
+Our [PWA reference](/en-US/docs/Web/Progressive_web_apps/Reference) lists all features documented on MDN that you'll need to build a PWA.
 
 ### Web app manifest
 
-- [Web app manifest members](/en-US/docs/Web/Manifest)
+- [Web app manifest members](/en-US/docs/Web/Progressive_web_apps/Manifest)
   - : Developers can use web app manifest members to describe a PWA, customize its appearance, and more deeply integrate it into the operating system.
 
 ### Service Worker APIs

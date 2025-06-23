@@ -1,5 +1,6 @@
 ---
 title: Intl.Locale() constructor
+short-title: Intl.Locale()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Intl.Locale.Locale
@@ -9,7 +10,24 @@ browser-compat: javascript.builtins.Intl.Locale.Locale
 
 The **`Intl.Locale()`** constructor creates {{jsxref("Intl.Locale")}} objects.
 
-{{EmbedInteractiveExample("pages/js/intl-locale.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Locale() constructor")}}
+
+```js interactive-example
+const korean = new Intl.Locale("ko", {
+  script: "Kore",
+  region: "KR",
+  hourCycle: "h23",
+  calendar: "gregory",
+});
+
+const japanese = new Intl.Locale("ja-Jpan-JP-u-ca-japanese-hc-h12");
+
+console.log(korean.baseName, japanese.baseName);
+// Expected output: "ko-Kore-KR" "ja-Jpan-JP"
+
+console.log(korean.hourCycle, japanese.hourCycle);
+// Expected output: "h23" "h12"
+```
 
 ## Syntax
 
@@ -33,11 +51,11 @@ new Intl.Locale(tag, options)
     - `region`
       - : The region. Any syntactically valid string following the [`unicode_region_subtag`](https://unicode.org/reports/tr35/#unicode_region_subtag) grammar (either 2 letters or 3 digits) is accepted, but the implementation only recognizes certain kinds.
     - `calendar`
-      - : The calendar. Any syntactically valid string following the [`type`](https://unicode.org/reports/tr35/#Unicode_locale_identifier) grammar (one or more segments of 3–8 alphanumerals, joined by hyphens) is accepted, but the implementation only recognizes certain kinds, which are listed in [`Intl.Locale.prototype.getCalendars`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getCalendars#supported_calendar_types).
+      - : The calendar. Any syntactically valid string following the [`type`](https://unicode.org/reports/tr35/#Unicode_locale_identifier) grammar (one or more segments of 3–8 alphanumerals, joined by hyphens) is accepted, but the implementation only recognizes certain kinds, which are listed in [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types).
     - `collation`
-      - : The collation. Any syntactically valid string following the `type` grammar is accepted, but the implementation only recognizes certain kinds, which are listed in [`Intl.Locale.prototype.getCollations`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getCollations#supported_collation_types).
+      - : The collation. Any syntactically valid string following the `type` grammar is accepted, but the implementation only recognizes certain kinds, which are listed in [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_collation_types).
     - `numberingSystem`
-      - : The numbering system. Any syntactically valid string following the `type` grammar is accepted, but the implementation only recognizes certain kinds, which are listed in [`Intl.Locale.prototype.getNumberingSystems`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getNumberingSystems#supported_numbering_system_types).
+      - : The numbering system. Any syntactically valid string following the `type` grammar is accepted, but the implementation only recognizes certain kinds, which are listed in [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_numbering_system_types).
     - `caseFirst`
       - : The case-first sort option. Possible values are `"upper"`, `"lower"`, or `"false"`.
     - `hourCycle`

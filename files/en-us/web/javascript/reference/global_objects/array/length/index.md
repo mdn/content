@@ -1,5 +1,6 @@
 ---
 title: "Array: length"
+short-title: length
 slug: Web/JavaScript/Reference/Global_Objects/Array/length
 page-type: javascript-instance-data-property
 browser-compat: javascript.builtins.Array.length
@@ -9,7 +10,14 @@ browser-compat: javascript.builtins.Array.length
 
 The **`length`** data property of an {{jsxref("Array")}} instance represents the number of elements in that array. The value is an unsigned, 32-bit integer that is always numerically greater than the highest index in the array.
 
-{{EmbedInteractiveExample("pages/js/array-length.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array: length", "shorter")}}
+
+```js interactive-example
+const clothing = ["shoes", "shirts", "socks", "sweaters"];
+
+console.log(clothing.length);
+// Expected output: 4
+```
 
 ## Value
 
@@ -42,7 +50,7 @@ The array object observes the `length` property, and automatically syncs the `le
 
 - Setting `length` to a value smaller than the current length truncates the array — elements beyond the new `length` are deleted.
 - Setting any array index (a nonnegative integer smaller than 2<sup>32</sup>) beyond the current `length` extends the array — the `length` property is increased to reflect the new highest index.
-- Setting `length` to an invalid value (e.g. a negative number or a non-integer) throws a `RangeError` exception.
+- Setting `length` to an invalid value (e.g., a negative number or a non-integer) throws a `RangeError` exception.
 
 When `length` is set to a bigger value than the current length, the array is extended by adding [empty slots](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), not actual `undefined` values. Empty slots have some special interactions with array methods; see [array methods and empty slots](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#array_methods_and_empty_slots).
 

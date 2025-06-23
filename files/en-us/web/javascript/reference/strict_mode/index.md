@@ -10,7 +10,7 @@ spec-urls: https://tc39.es/ecma262/multipage/strict-mode-of-ecmascript.html
 > [!NOTE]
 > Sometimes you'll see the default, non-strict mode referred to as _[sloppy mode](/en-US/docs/Glossary/Sloppy_mode)_. This isn't an official term, but be aware of it, just in case.
 
-JavaScript's strict mode is a way to _opt in_ to a restricted variant of JavaScript, thereby implicitly opting-out of "[sloppy mode](/en-US/docs/Glossary/Sloppy_mode)". Strict mode isn't just a subset: it _intentionally_ has different semantics from normal code. Browsers not supporting strict mode will run strict mode code with different behavior from browsers that do, so don't rely on strict mode without feature-testing for support for the relevant aspects of strict mode. Strict mode code and non-strict mode code can coexist, so scripts can opt into strict mode incrementally.
+JavaScript's strict mode is a way to _opt in_ to a restricted variant of JavaScript, thereby implicitly opting-out of "[sloppy mode](/en-US/docs/Glossary/Sloppy_mode)". Strict mode isn't just a subset: it _intentionally_ has different semantics from normal code. Strict mode code and non-strict mode code can coexist, so scripts can opt into strict mode incrementally.
 
 Strict mode makes several changes to normal JavaScript semantics:
 
@@ -20,7 +20,7 @@ Strict mode makes several changes to normal JavaScript semantics:
 
 ## Invoking strict mode
 
-Strict mode applies to _entire scripts_ or to _individual functions_. It doesn't apply to [block statements](/en-US/docs/Web/JavaScript/Reference/Statements/block) enclosed in `{}` braces; attempting to apply it to such contexts does nothing. [`eval`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) code, [`Function`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function) code, [event handler](/en-US/docs/Web/HTML/Attributes#event_handler_attributes) attributes, strings passed to {{domxref("Window.setTimeout", "setTimeout()")}}, and related functions are either function bodies or entire scripts, and invoking strict mode in them works as expected.
+Strict mode applies to _entire scripts_ or to _individual functions_. It doesn't apply to [block statements](/en-US/docs/Web/JavaScript/Reference/Statements/block) enclosed in `{}` braces; attempting to apply it to such contexts does nothing. [`eval`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) code, [`Function`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function) code, [event handler](/en-US/docs/Web/HTML/Reference/Attributes#event_handler_attributes) attributes, strings passed to {{domxref("Window.setTimeout", "setTimeout()")}}, and related functions are either function bodies or entire scripts, and invoking strict mode in them works as expected.
 
 ### Strict mode for scripts
 
@@ -50,7 +50,7 @@ function myNotStrictFunction() {
 }
 ```
 
-The `"use strict"` directive can only be applied to the body of functions with simple parameters. Using `"use strict"` in functions with [rest](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), or [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) parameters is a [syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Strict_non_simple_params).
+The `"use strict"` directive can only be applied to the body of functions with simple parameters. Using `"use strict"` in functions with [rest](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), or [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) parameters is a [syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Strict_non_simple_params).
 
 ```js-nolint example-bad
 function sum(a = 1, b = 2) {
@@ -160,7 +160,7 @@ fixed.newProp = "ohai"; // TypeError
 
 #### Failing to delete object properties
 
-Attempts to [delete](/en-US/docs/Web/JavaScript/Reference/Operators/delete) a non-configurable or otherwise undeletable (e.g. it's intercepted by a proxy's [`deleteProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty) handler which returns `false`) property throw in strict mode (where before the attempt would have no effect):
+Attempts to [delete](/en-US/docs/Web/JavaScript/Reference/Operators/delete) a non-configurable or otherwise undeletable (e.g., it's intercepted by a proxy's [`deleteProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty) handler which returns `false`) property throw in strict mode (where before the attempt would have no effect):
 
 ```js
 "use strict";
@@ -362,9 +362,9 @@ Similarly, [`arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/a
 
 ```js
 "use strict";
-const f = function () {
+function f() {
   return arguments.callee;
-};
+}
 f(); // throws a TypeError
 ```
 
@@ -409,7 +409,7 @@ These errors are good, because they reveal plain errors or bad practices. They o
 JavaScript used to silently fail in contexts where what was done should be an error. Strict mode throws in such cases. If your code base contains such cases, testing will be necessary to be sure nothing is broken. You can screen for such errors at the function granularity level.
 
 - Assigning to an undeclared variable throws a {{jsxref("ReferenceError")}}. This used to set a property on the global object, which is rarely the expected effect. If you really want to set a value to the global object, explicitly assign it as a property on `globalThis`.
-- Failing to assign to an object's property (e.g. it's read-only) throws a {{jsxref("TypeError")}}. In sloppy mode, this would silently fail.
+- Failing to assign to an object's property (e.g., it's read-only) throws a {{jsxref("TypeError")}}. In sloppy mode, this would silently fail.
 - Deleting a non-deletable property throws a {{jsxref("TypeError")}}. In sloppy mode, this would silently fail.
 - Accessing [`arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee), [`strictFunction.caller`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/caller), or [`strictFunction.arguments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/arguments) throws a {{jsxref("TypeError")}} if the function is in strict mode. If you are using `arguments.callee` to call the function recursively, you can use a named function expression instead.
 

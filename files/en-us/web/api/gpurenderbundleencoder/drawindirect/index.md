@@ -3,12 +3,10 @@ title: "GPURenderBundleEncoder: drawIndirect() method"
 short-title: drawIndirect()
 slug: Web/API/GPURenderBundleEncoder/drawIndirect
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPURenderBundleEncoder.drawIndirect
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`drawIndirect()`** method of the
 {{domxref("GPURenderBundleEncoder")}} interface draws primitives using parameters read from a {{domxref("GPUBuffer")}}.
@@ -60,7 +58,7 @@ The following criteria must be met when calling **`drawIndirect()`**, otherwise 
 ## Examples
 
 ```js
-// ...
+// …
 
 // Create GPURenderBundleEncoder
 const bundleEncoder = device.createRenderBundleEncoder(descriptor);
@@ -89,7 +87,7 @@ bundleEncoder.drawIndirect(drawValues, 0);
 // End the bundle recording
 const renderBundle = bundleEncoder.finish();
 
-// ...
+// …
 ```
 
 ## Specifications

@@ -1,5 +1,6 @@
 ---
 title: Object.defineProperties()
+short-title: defineProperties()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.defineProperties
@@ -10,7 +11,22 @@ browser-compat: javascript.builtins.Object.defineProperties
 The **`Object.defineProperties()`** static method defines new or
 modifies existing properties directly on an object, returning the object.
 
-{{EmbedInteractiveExample("pages/js/object-defineproperties.html")}}
+{{InteractiveExample("JavaScript Demo: Object.defineProperties()")}}
+
+```js interactive-example
+const object1 = {};
+
+Object.defineProperties(object1, {
+  property1: {
+    value: 42,
+    writable: true,
+  },
+  property2: {},
+});
+
+console.log(object1.property1);
+// Expected output: 42
+```
 
 ## Syntax
 
@@ -103,6 +119,7 @@ Object.defineProperties(obj, {
 ## See also
 
 - [Polyfill of `Object.defineProperties` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [es-shims polyfill of `Object.defineProperties`](https://www.npmjs.com/package/object.defineproperties)
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.keys()")}}
-- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)

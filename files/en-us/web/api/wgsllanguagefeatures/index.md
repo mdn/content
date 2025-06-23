@@ -2,12 +2,10 @@
 title: WGSLLanguageFeatures
 slug: Web/API/WGSLLanguageFeatures
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.WGSLLanguageFeatures
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`WGSLLanguageFeatures`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} is a [setlike](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) object that reports the [WGSL language extensions](https://gpuweb.github.io/gpuweb/wgsl/#language-extension) supported by the WebGPU implementation.
 
@@ -48,22 +46,22 @@ The following WGSL language extensions are defined at [WGSL language extensions]
 
 The following property is available to all read-only [setlike](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) objects:
 
-- {{jsxref("Set.prototype.size", "size")}} {{Experimental_Inline}}
+- {{jsxref("Set.prototype.size", "size")}}
   - : Returns the number of values in the set.
 
 ## Instance methods
 
 The following methods are available to all read-only [setlike](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) objects:
 
-- {{jsxref("Set.prototype.has()", "has()")}} {{Experimental_Inline}}
+- {{jsxref("Set.prototype.has()", "has()")}}
   - : Returns a boolean asserting whether or not an element with the given value is present in the set.
-- {{jsxref("Set.prototype.values()", "values()")}} {{Experimental_Inline}}
+- {{jsxref("Set.prototype.values()", "values()")}}
   - : Returns a new iterator object that yields **values** for each element in the set in insertion order.
-- {{jsxref("Set.prototype.keys()", "keys()")}} {{Experimental_Inline}}
+- {{jsxref("Set.prototype.keys()", "keys()")}}
   - : An alias for {{jsxref("Set.prototype.values()", "values()")}}.
-- {{jsxref("Set.prototype.entries()", "entries()")}} {{Experimental_Inline}}
+- {{jsxref("Set.prototype.entries()", "entries()")}}
   - : Returns a new iterator object that contains **an array of `[value, value]`** for each element in the set in insertion order.
-- {{jsxref("Set.prototype.forEach()", "forEach()")}} {{Experimental_Inline}}
+- {{jsxref("Set.prototype.forEach()", "forEach()")}}
   - : Calls the provided callback function once for each value present in the set in insertion order.
 
 ## Examples
@@ -94,7 +92,7 @@ for (const value of valueIterator) {
   console.log(value);
 }
 
-// ...
+// …
 ```
 
 ## Specifications

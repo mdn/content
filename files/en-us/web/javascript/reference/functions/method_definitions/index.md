@@ -9,7 +9,18 @@ browser-compat: javascript.functions.method_definitions
 
 **Method definition** is a shorter syntax for defining a function property in an object initializer. It can also be used in [classes](/en-US/docs/Web/JavaScript/Reference/Classes).
 
-{{EmbedInteractiveExample("pages/js/functions-definitions.html")}}
+{{InteractiveExample("JavaScript Demo: Method definitions")}}
+
+```js interactive-example
+const obj = {
+  foo() {
+    return "bar";
+  },
+};
+
+console.log(obj.foo());
+// Expected output: "bar"
+```
 
 ## Syntax
 
@@ -158,14 +169,14 @@ const bar = {
   foo1() {
     return 1;
   },
-  ["foo" + 2]() {
+  ["foo".toUpperCase()]() {
     return 2;
   },
 };
 
 console.log(bar.foo0()); // 0
 console.log(bar.foo1()); // 1
-console.log(bar.foo2()); // 2
+console.log(bar.FOO()); // 2
 ```
 
 ### Generator methods

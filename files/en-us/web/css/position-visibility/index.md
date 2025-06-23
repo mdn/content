@@ -46,7 +46,7 @@ The `position-visibility` property can be used to `always` show the anchor-posit
 
 When an element is hidden due to `position-visibility`, it is referred to as **strongly hidden**. This means that it will act as though it and its descendant elements have a {{cssxref("visibility")}} value of `hidden` set, regardless of what their actual visibility value is.
 
-`position-visibility` should only be used in situations in which hiding the positioned element altogether is preferred. In most cases, it makes more sense to attempt to change the placement of positioned elements when they start to overflow, to keep them on-screen and usable. This can be done with the {{cssxref("position-try-fallbacks")}} property and {{cssxref("@position-try")}} at-rule. See the [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide for more information.
+`position-visibility` should only be used in situations in which hiding the positioned element altogether is preferred. In most cases, it makes more sense to attempt to change the placement of positioned elements when they start to overflow, to keep them on-screen and usable. This can be done with the {{cssxref("position-try-fallbacks")}} property and {{cssxref("@position-try")}} at-rule. See the [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide for more information.
 
 ## Formal definition
 
@@ -143,7 +143,7 @@ We specify two {{htmlelement("div")}} elements; an anchor element with a class o
 </form>
 ```
 
-The HTML also includes filler text to make the content taller than the viewport so scrolling is required. We've also included a {{htmlelement("fieldset")}} with a group of [radio inputs](/en-US/docs/Web/HTML/Element/input/radio) with different `position-visibility` values. The markup for these is not shown for the sake of brevity.
+The HTML also includes filler text to make the content taller than the viewport so scrolling is required. We've also included a {{htmlelement("fieldset")}} with a group of [radio inputs](/en-US/docs/Web/HTML/Reference/Elements/input/radio) with different `position-visibility` values. The markup for these is not shown for the sake of brevity.
 
 #### CSS
 
@@ -236,4 +236,4 @@ Select different `position-visibility` values and then scroll the page up and do
 - {{cssxref("position-area")}}
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide
-- [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide
+- [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide

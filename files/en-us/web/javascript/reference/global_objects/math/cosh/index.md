@@ -1,5 +1,6 @@
 ---
 title: Math.cosh()
+short-title: cosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cosh
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.cosh
@@ -15,7 +16,21 @@ The **`Math.cosh()`** static method returns the hyperbolic cosine of a number. T
 </math>
 <!-- prettier-ignore-end -->
 
-{{EmbedInteractiveExample("pages/js/math-cosh.html")}}
+{{InteractiveExample("JavaScript Demo: Math.cosh()")}}
+
+```js interactive-example
+console.log(Math.cosh(0));
+// Expected output: 1
+
+console.log(Math.cosh(1));
+// Expected output: 1.543080634815244 (approximately)
+
+console.log(Math.cosh(-1));
+// Expected output: 1.543080634815244 (approximately)
+
+console.log(Math.cosh(2));
+// Expected output: 3.7621956910836314
+```
 
 ## Syntax
 
@@ -60,6 +75,7 @@ Math.cosh(Infinity); // Infinity
 ## See also
 
 - [Polyfill of `Math.cosh` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [es-shims polyfill of `Math.cosh`](https://www.npmjs.com/package/math.cosh)
 - {{jsxref("Math.acosh()")}}
 - {{jsxref("Math.asinh()")}}
 - {{jsxref("Math.atanh()")}}

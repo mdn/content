@@ -7,9 +7,34 @@ browser-compat: css.at-rules.layer
 
 {{CSSRef}}
 
-The **`@layer`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) is used to declare a cascade layer and can also be used to define the order of precedence in case of multiple cascade layers.
+The **`@layer`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) is used to declare a cascade layer and can also be used to define the order of precedence in case of multiple cascade layers.
 
-{{EmbedInteractiveExample("pages/tabbed/at-rule-layer.html", "tabbed-standard")}}
+{{InteractiveExample("CSS Demo: @layer", "tabbed-standard")}}
+
+```css interactive-example
+@layer module, state;
+
+@layer state {
+  .alert {
+    background-color: brown;
+  }
+  p {
+    border: medium solid limegreen;
+  }
+}
+
+@layer module {
+  .alert {
+    border: medium solid violet;
+    background-color: yellow;
+    color: white;
+  }
+}
+```
+
+```html interactive-example
+<p class="alert">Beware of the zombies</p>
+```
 
 ## Syntax
 
@@ -213,7 +238,7 @@ In the following example, two layers are created with no rules applied, then CSS
 - {{domxref("CSSLayerStatementRule")}}
 - [`!important`](/en-US/docs/Web/CSS/important)
 - [`revert-layer`](/en-US/docs/Web/CSS/revert-layer)
-- [Introducing the CSS cascade](/en-US/docs/Web/CSS/Cascade)
-- [Cascade, specificity, and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-- [Cascade layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers)
+- [Introducing the CSS cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade)
+- [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
+- [Learn: Cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 - [The future of CSS: Cascade layers](https://www.bram.us/2021/09/15/the-future-of-css-cascade-layers-css-at-layer/) on bram.us (2021)

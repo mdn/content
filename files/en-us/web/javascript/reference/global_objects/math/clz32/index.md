@@ -1,5 +1,6 @@
 ---
 title: Math.clz32()
+short-title: clz32()
 slug: Web/JavaScript/Reference/Global_Objects/Math/clz32
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.clz32
@@ -9,7 +10,21 @@ browser-compat: javascript.builtins.Math.clz32
 
 The **`Math.clz32()`** static method returns the number of leading zero bits in the 32-bit binary representation of a number.
 
-{{EmbedInteractiveExample("pages/js/math-clz32.html")}}
+{{InteractiveExample("JavaScript Demo: Math.clz32()")}}
+
+```js interactive-example
+// 00000000000000000000000000000001
+console.log(Math.clz32(1));
+// Expected output: 31
+
+// 00000000000000000000000000000100
+console.log(Math.clz32(4));
+// Expected output: 29
+
+// 00000000000000000000001111101000
+console.log(Math.clz32(1000));
+// Expected output: 22
+```
 
 ## Syntax
 
@@ -32,7 +47,7 @@ The number of leading zero bits in the 32-bit binary representation of `x`.
 
 If `x` is not a number, it will be converted to a number first, then converted to a 32-bit unsigned integer.
 
-If the converted 32-bit unsigned integer is `0`, `32` is returned, because all bits are `0`. If the most significant bit is `1` (i.e. the number is greater than or equal to 2<sup>31</sup>), `0` is returned.
+If the converted 32-bit unsigned integer is `0`, `32` is returned, because all bits are `0`. If the most significant bit is `1` (i.e., the number is greater than or equal to 2<sup>31</sup>), `0` is returned.
 
 This function is particularly useful for systems that compile to JS, like [Emscripten](https://emscripten.org/).
 
@@ -153,5 +168,6 @@ const { ctrz, ctron } = countTrailsMethods;
 ## See also
 
 - [Polyfill of `Math.clz32` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [es-shims polyfill of `Math.clz32`](https://www.npmjs.com/package/math.clz32)
 - {{jsxref("Math")}}
 - {{jsxref("Math.imul")}}

@@ -55,7 +55,7 @@ If the flex value is set using the element's `flex` attribute, then the style is
 
 To make XUL elements in a containing box the same size, set the containing box's `equalsize` attribute to the value `always`. This attribute does not have a corresponding CSS property.
 
-A trick to make all content elements in a containing box the same size, is to give them all a fixed size (e.g. `height: 0`), and the same `box-flex` value greater than zero (e.g. `-moz-box-flex: 1`).
+A trick to make all content elements in a containing box the same size, is to give them all a fixed size (e.g., `height: 0`), and the same `box-flex` value greater than zero (e.g., `-moz-box-flex: 1`).
 
 ## Formal definition
 
@@ -63,47 +63,36 @@ A trick to make all content elements in a containing box the same size, is to gi
 
 ## Formal syntax
 
-```plain
-box-flex =
-  <number>
-```
+{{CSSSyntaxRaw(`box-flex = <number>`)}}
 
 ## Examples
 
 ### Setting box-flex
 
 ```html
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8" />
-    <title>-moz-box-flex example</title>
-    <style>
-      div.example {
-        display: -moz-box;
-        display: -webkit-box;
-        border: 1px solid black;
-        width: 100%;
-      }
-      div.example > p:nth-child(1) {
-        -moz-box-flex: 1; /* Mozilla */
-        -webkit-box-flex: 1; /* WebKit */
-        border: 1px solid black;
-      }
-      div.example > p:nth-child(2) {
-        -moz-box-flex: 0; /* Mozilla */
-        -webkit-box-flex: 0; /* WebKit */
-        border: 1px solid black;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="example">
-      <p>I will expand to fill extra space</p>
-      <p>I will not expand</p>
-    </div>
-  </body>
-</html>
+<div class="example">
+  <p>I will expand to fill extra space</p>
+  <p>I will not expand</p>
+</div>
+```
+
+```css
+div.example {
+  display: -moz-box;
+  display: -webkit-box;
+  border: 1px solid black;
+  width: 100%;
+}
+div.example > p:nth-child(1) {
+  -moz-box-flex: 1; /* Mozilla */
+  -webkit-box-flex: 1; /* WebKit */
+  border: 1px solid black;
+}
+div.example > p:nth-child(2) {
+  -moz-box-flex: 0; /* Mozilla */
+  -webkit-box-flex: 0; /* WebKit */
+  border: 1px solid black;
+}
 ```
 
 ## Specifications

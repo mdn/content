@@ -183,6 +183,7 @@ function myCoolPromiseAPI(/* …, */ { signal }) {
     // If the signal is already aborted, immediately throw in order to reject the promise.
     if (signal.aborted) {
       reject(signal.reason);
+      return;
     }
 
     // Perform the main purpose of the API

@@ -10,4 +10,4 @@ The [**CSS Object Model (CSSOM)**](/en-US/docs/Web/API/CSS_Object_Model) is a se
 
 ## See also
 
-- [Populating the page: how browsers work](/en-US/docs/Web/Performance/How_browsers_work)
+- [Populating the page: how browsers work](/en-US/docs/Web/Performance/Guides/How_browsers_work)

@@ -1,5 +1,6 @@
 ---
 title: Math.random()
+short-title: random()
 slug: Web/JavaScript/Reference/Global_Objects/Math/random
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.random
@@ -11,7 +12,22 @@ The **`Math.random()`** static method returns a floating-point, pseudo-random nu
 
 > **Note:** `Math.random()` _does not_ provide cryptographically secure random numbers. Do not use them for anything related to security. Use the Web Crypto API instead, and more precisely the {{domxref("Crypto.getRandomValues()")}} method.
 
-{{EmbedInteractiveExample("pages/js/math-random.html")}}
+{{InteractiveExample("JavaScript Demo: Math.random()")}}
+
+```js interactive-example
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+console.log(getRandomInt(3));
+// Expected output: 0, 1 or 2
+
+console.log(getRandomInt(1));
+// Expected output: 0
+
+console.log(Math.random());
+// Expected output: a number from 0 to <1
+```
 
 ## Syntax
 

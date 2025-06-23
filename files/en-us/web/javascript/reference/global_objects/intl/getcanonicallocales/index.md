@@ -1,5 +1,6 @@
 ---
 title: Intl.getCanonicalLocales()
+short-title: getCanonicalLocales()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/getCanonicalLocales
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Intl.getCanonicalLocales
@@ -11,7 +12,23 @@ The **`Intl.getCanonicalLocales()`** static method returns an array
 containing the canonical locale names. Duplicates will be omitted and elements will be
 validated as structurally valid language tags.
 
-{{EmbedInteractiveExample("pages/js/intl-getcanonicallocales.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.getCanonicalLocales()")}}
+
+```js interactive-example
+console.log(Intl.getCanonicalLocales("EN-US"));
+// Expected output: Array ["en-US"]
+
+console.log(Intl.getCanonicalLocales(["EN-US", "Fr"]));
+// Expected output: Array ["en-US", "fr"]
+
+try {
+  Intl.getCanonicalLocales("EN_US");
+} catch (err) {
+  console.log(err.toString());
+  // Expected output (Firefox/Safari): RangeError: invalid language tag: "EN_US"
+  // Expected output (Chrome): RangeError: Incorrect locale information provided
+}
+```
 
 ## Syntax
 

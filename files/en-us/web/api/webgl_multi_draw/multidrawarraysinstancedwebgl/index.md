@@ -23,7 +23,7 @@ multiDrawArraysInstancedWEBGL(mode,
     firstsList, firstsOffset,
     countsList, countsOffset,
     instanceCountsList, instanceCountsOffset,
-    drawCount);
+    drawCount)
 ```
 
 ### Parameters

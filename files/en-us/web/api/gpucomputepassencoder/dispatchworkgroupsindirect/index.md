@@ -3,15 +3,13 @@ title: "GPUComputePassEncoder: dispatchWorkgroupsIndirect() method"
 short-title: dispatchWorkgroupsIndirect()
 slug: Web/API/GPUComputePassEncoder/dispatchWorkgroupsIndirect
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUComputePassEncoder.dispatchWorkgroupsIndirect
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`dispatchWorkgroupsIndirect()`** method of the
-{{domxref("GPUComputePassEncoder")}} interface dispatches a grid of workgroups, defined by the parameters of a {{domxref("GPUBuffer")}}, to perform the work being done by the current {{domxref("GPUComputePipeline")}} (i.e. set via {{domxref("GPUComputePassEncoder.setPipeline()")}}).
+{{domxref("GPUComputePassEncoder")}} interface dispatches a grid of workgroups, defined by the parameters of a {{domxref("GPUBuffer")}}, to perform the work being done by the current {{domxref("GPUComputePipeline")}} (i.e., set via {{domxref("GPUComputePassEncoder.setPipeline()")}}).
 
 ## Syntax
 
@@ -70,7 +68,7 @@ var<storage, read_write> output: array<f32>;
 
 `;
 
-// ...
+// …
 
 // Create GPUCommandEncoder to encode commands to issue to the GPU
 const commandEncoder = device.createCommandEncoder();
@@ -111,7 +109,7 @@ commandEncoder.copyBufferToBuffer(
 // End frame by passing array of command buffers to command queue for execution
 device.queue.submit([commandEncoder.finish()]);
 
-// ...
+// …
 ```
 
 ## Specifications

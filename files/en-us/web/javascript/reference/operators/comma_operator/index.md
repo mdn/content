@@ -9,7 +9,21 @@ browser-compat: javascript.operators.comma
 
 The **comma (`,`)** operator evaluates each of its operands (from left to right) and returns the value of the last operand. This is commonly used to provide multiple updaters to a [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for) loop's afterthought.
 
-{{EmbedInteractiveExample("pages/js/expressions-commaoperators.html")}}
+{{InteractiveExample("JavaScript Demo: Comma (,) operator")}}
+
+```js interactive-example
+let x = 1;
+
+x = (x++, x);
+
+console.log(x);
+// Expected output: 2
+
+x = (2, 3);
+
+console.log(x);
+// Expected output: 3
+```
 
 ## Syntax
 
@@ -24,9 +38,9 @@ expr1, expr2, expr3/* , … */
 
 ## Description
 
-You can use the comma operator when you want to include multiple expressions in a location that requires a single expression. The most common usage of this operator is to supply multiple updaters in a `for` loop.
+You can use the comma operator when you want to include multiple expressions in a location that requires a single expression. The most common usage of this operator is to supply multiple updaters in a `for` loop. For an idiom allowing multiple _statements_ in a location that requires a single expression, you may use an [IIFE](/en-US/docs/Glossary/IIFE).
 
-Because all expressions except the last are evaluated and then discarded, these expressions must have side effects to be useful. Common expressions that have side effects are assignments, function calls, and [`++`](/en-US/docs/Web/JavaScript/Reference/Operators/Increment) and [`--`](/en-US/docs/Web/JavaScript/Reference/Operators/Decrement) operators. Others may also have side effects if they invoke [getters](/en-US/docs/Web/JavaScript/Reference/Functions/get) or trigger [type coercions](/en-US/docs/Web/JavaScript/Data_structures#type_coercion).
+Because all expressions except the last are evaluated and then discarded, these expressions must have side effects to be useful. Common expressions that have side effects are assignments, function calls, and [`++`](/en-US/docs/Web/JavaScript/Reference/Operators/Increment) and [`--`](/en-US/docs/Web/JavaScript/Reference/Operators/Decrement) operators. Others may also have side effects if they invoke [getters](/en-US/docs/Web/JavaScript/Reference/Functions/get) or trigger [type coercions](/en-US/docs/Web/JavaScript/Guide/Data_structures#type_coercion).
 
 The comma operator has the lowest [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence) of all operators. If you want to incorporate a comma-joined expression into a bigger expression, you must parenthesize it.
 
@@ -148,3 +162,4 @@ globalThis.isDirectEval = false;
 ## See also
 
 - [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for)
+- [IIFE](/en-US/docs/Glossary/IIFE)

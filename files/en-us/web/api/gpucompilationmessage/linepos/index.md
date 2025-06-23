@@ -3,12 +3,10 @@ title: "GPUCompilationMessage: linePos property"
 short-title: linePos
 slug: Web/API/GPUCompilationMessage/linePos
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.GPUCompilationMessage.linePos
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`linePos`** read-only property of the
 {{domxref("GPUCompilationMessage")}} interface is a number representing the position in the code line that the message corresponds to. This could be an exact point, or the start of the relevant substring.
@@ -28,16 +26,13 @@ Note that:
 ## Examples
 
 ```js
-  // ...
-  const shaderModule = device.createShaderModule({
-    code: shaders,
-  });
+const shaderModule = device.createShaderModule({
+  code: shaders,
+});
 
-  const shaderInfo = await shaderModule.getCompilationInfo();
-  const firstMessage = shaderInfo.messages[0];
-  console.log(firstMessage.linePos);
-  // ...
-}
+const shaderInfo = await shaderModule.getCompilationInfo();
+const firstMessage = shaderInfo.messages[0];
+console.log(firstMessage.linePos);
 ```
 
 See the main [`GPUCompilationInfo` page](/en-US/docs/Web/API/GPUCompilationInfo#examples) for a more detailed example.

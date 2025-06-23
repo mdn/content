@@ -1,5 +1,6 @@
 ---
 title: Date.prototype.toLocaleString()
+short-title: toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.toLocaleString
@@ -7,11 +8,23 @@ browser-compat: javascript.builtins.Date.toLocaleString
 
 {{JSRef}}
 
-The **`toLocaleString()`** method of {{jsxref("Date")}} instances returns a string with a language-sensitive representation of this date in the local timezone. In implementations with [`Intl.DateTimeFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) support, this method simply calls `Intl.DateTimeFormat`.
+The **`toLocaleString()`** method of {{jsxref("Date")}} instances returns a string with a language-sensitive representation of this date in the local timezone. In implementations with [`Intl.DateTimeFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) support, this method delegates to `Intl.DateTimeFormat`.
 
 Every time `toLocaleString` is called, it has to perform a search in a big database of localization strings, which is potentially inefficient. When the method is called many times with the same arguments, it is better to create a {{jsxref("Intl.DateTimeFormat")}} object and use its {{jsxref("Intl/DateTimeFormat/format", "format()")}} method, because a `DateTimeFormat` object remembers the arguments passed to it and may decide to cache a slice of the database, so future `format` calls can search for localization strings within a more constrained context.
 
-{{EmbedInteractiveExample("pages/js/date-tolocalestring.html")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.toLocaleString()")}}
+
+```js interactive-example
+const event = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+
+// British English uses day-month-year order and 24-hour time without AM/PM
+console.log(event.toLocaleString("en-GB", { timeZone: "UTC" }));
+// Expected output: "20/12/2012, 03:00:00"
+
+// Korean uses year-month-day order and 12-hour time with AM/PM
+console.log(event.toLocaleString("ko-KR", { timeZone: "UTC" }));
+// Expected output: "2012. 12. 20. 오전 3:00:00"
+```
 
 ## Syntax
 

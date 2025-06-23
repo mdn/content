@@ -239,9 +239,9 @@ The background elements also have `playbackRate`s that are impacted when you cli
 When animating elements, a common use case is to persist the final state of the animation, after the animation has finished. One method sometimes used for this is to set the animation's [fill mode](/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#fill) to `forwards`. However, it is not recommended to use fill modes to persist the effect of an animation indefinitely, for two reasons:
 
 - The browser has to maintain the state of the animation while it is still active, so the animation continues to consume resources even though it is no longer animating. Note that this is somewhat alleviated by the browser [automatically removing filling animations](#automatically_removing_filling_animations).
-- Styles applied by animations have a [higher precedence in the cascade](/en-US/docs/Web/CSS/Cascade#cascading_order) than specified styles, so it can be difficult to override them when needed.
+- Styles applied by animations have a [higher precedence in the cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade#cascading_order) than specified styles, so it can be difficult to override them when needed.
 
-A better approach is to use the {{domxref("Animation.commitStyles()")}} method. This writes the computed values of the animation's current styles into its target element's [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute, after which the element can be restyled normally.
+A better approach is to use the {{domxref("Animation.commitStyles()")}} method. This writes the computed values of the animation's current styles into its target element's [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute, after which the element can be restyled normally.
 
 ## Automatically removing filling animations
 

@@ -14,10 +14,10 @@ The **`animationstart`** event is fired when a [CSS Animation](/en-US/docs/Web/C
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("animationstart", (event) => {});
+```js-nolint
+addEventListener("animationstart", (event) => { })
 
-onanimationstart = (event) => {};
+onanimationstart = (event) => { }
 ```
 
 ## Event type

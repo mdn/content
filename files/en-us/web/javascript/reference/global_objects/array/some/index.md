@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.some()
+short-title: some()
 slug: Web/JavaScript/Reference/Global_Objects/Array/some
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.some
@@ -11,7 +12,17 @@ The **`some()`** method of {{jsxref("Array")}} instances tests whether
 at least one element in the array passes the test implemented by the provided
 function. It returns true if, in the array, it finds an element for which the provided function returns true; otherwise it returns false. It doesn't modify the array.
 
-{{EmbedInteractiveExample("pages/js/array-some.html")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.some()")}}
+
+```js interactive-example
+const array = [1, 2, 3, 4, 5];
+
+// Checks whether an element is even
+const even = (element) => element % 2 === 0;
+
+console.log(array.some(even));
+// Expected output: true
+```
 
 ## Syntax
 
@@ -169,6 +180,7 @@ console.log(Array.prototype.some.call(arrayLike, (x) => typeof x === "number"));
 ## See also
 
 - [Polyfill of `Array.prototype.some` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims polyfill of `Array.prototype.some`](https://www.npmjs.com/package/array.prototype.some)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.every()")}}

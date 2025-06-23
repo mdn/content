@@ -12,7 +12,7 @@ page-type: firefox-release-notes
 
 ### Developer Tools
 
-- [User-agent spoofing](/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent) from the [Responsive mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html)
+- [User-agent spoofing](/en-US/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent) from the [Responsive mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html)
 - [Retaining paths panel](https://firefox-source-docs.mozilla.org/devtools-user/memory/dominators_view/index.html#retaining-paths-panel) in memory tool
 - [Service workers](/en-US/docs/Web/API/ServiceWorker) and [Push API](/en-US/docs/Web/API/Push_API) debugging
 
@@ -51,7 +51,7 @@ _No change._
 
 - The new ES2017 {{jsxref("Object.values()")}} and {{jsxref("Object.entries()")}} methods have been implemented ([Firefox bug 1232639](https://bugzil.la/1232639)).
 - The deprecated, old Proxy API (`Proxy.create` and `Proxy.createFunction`) now presents a deprecation warning in the console and will be removed in a future version. Use the standard {{jsxref("Proxy")}} object instead ([Firefox bug 892903](https://bugzil.la/892903)).
-- Support for the deprecated non-standard `flags` argument of `String.prototype.`{{jsxref("String.prototype.match", "match")}}/{{jsxref("String.prototype.search", "search")}}/{{jsxref("String.prototype.replace", "replace")}} has been dropped in non-release builds ([Firefox bug 1245801](https://bugzil.la/1245801)).
+- Support for the deprecated non-standard `flags` argument of {{jsxref("String.prototype.match")}}/{{jsxref("String.prototype.search", "search")}}/{{jsxref("String.prototype.replace", "replace")}} has been dropped in non-release builds ([Firefox bug 1245801](https://bugzil.la/1245801)).
 - As per the new ES2016 specification, the {{jsxref("Proxy")}} enumerate trap for [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) statements has been removed ([Firefox bug 1246318](https://bugzil.la/1246318)).
 - The {{jsxref("Array.prototype.indexOf()")}} and {{jsxref("Array.prototype.lastIndexOf()")}} methods (and their {{jsxref("TypedArray")}} equivalents) have been updated to never return `-0` as per the ECMAScript specification ([Firefox bug 1242043](https://bugzil.la/1242043)).
 

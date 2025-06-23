@@ -1,5 +1,5 @@
 ---
-title: Variable fonts guide
+title: Variable fonts
 slug: Web/CSS/CSS_fonts/Variable_fonts_guide
 page-type: guide
 ---
@@ -9,7 +9,7 @@ page-type: guide
 **Variable fonts** are an evolution of the OpenType font specification that enables many different variations of a typeface to be incorporated into a single file, rather than having a separate font file for every width, weight, or style. They let you access all the variations contained in a given font file via CSS and a single {{cssxref("@font-face")}} reference. This article will give you all you need to know to get you started using variable fonts.
 
 > [!NOTE]
-> To use variable fonts on your operating system, you need to make sure that it is up to date. For example, Linux OSes need the latest Linux Freetype version, and macOS prior to High Sierra (10.13) does not support variable fonts. If your operating system is not up to date, you will not be able to use variable fonts in web pages or the Firefox Developer Tools.
+> To use variable fonts on your operating system, you need to make sure that it is up to date. For example, Linux OSes need the latest Linux FreeType version, and macOS prior to High Sierra (10.13) does not support variable fonts. If your operating system is not up to date, you will not be able to use variable fonts in web pages or the Firefox Developer Tools.
 
 ## Variable Fonts: what they are, and how they differ
 
@@ -29,7 +29,7 @@ This allows for common typographic techniques such as setting different size hea
 
 #### A note about font families, weights, and variants
 
-You might notice that we have been talking about having a specific font file for every weight and style (i.e. bold and italic and bold italic), rather than relying upon the browser to synthesize them. The reason for this is that most typefaces have very specific designs for bolder weights and italics that often include completely different characters (lower-case 'a' and 'g's are often quite different in italics, for example). To most accurately reflect the typeface design and avoid differences between browsers and how they may or may not synthesize the different styles, it's more accurate to load the specific font files where needed when using a non-variable font.
+You might notice that we have been talking about having a specific font file for every weight and style (i.e., bold and italic and bold italic), rather than relying upon the browser to synthesize them. The reason for this is that most typefaces have very specific designs for bolder weights and italics that often include completely different characters (lower-case 'a' and 'g's are often quite different in italics, for example). To most accurately reflect the typeface design and avoid differences between browsers and how they may or may not synthesize the different styles, it's more accurate to load the specific font files where needed when using a non-variable font.
 
 You may also find that some variable fonts come split into two files: one for uprights and all their variations, and one containing the italic variations. This is sometimes done to reduce the overall file size in cases where the italics aren't needed or used. In all cases, it is still possible to link them with a common {{cssxref("font-family")}} name so you can call them using the same `font-family` and appropriate {{cssxref("font-style")}}.
 
@@ -58,7 +58,7 @@ In this section we'll demonstrate the five registered axes defined with examples
 
    `wght` (weight) is a registered axis, and `GRAD` (grade) is a custom one.
 
-2. If you have set values using `font-variation-settings` and want to change one of those values, you must redeclare all of them (in the same way as when you set OpenType font features using {{cssxref("font-feature-settings")}}). You can work around this limitation by using [CSS Custom Properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties) (CSS variables) for the individual values, and modifying the value of an individual custom property. Example code follows at the end of the guide.
+2. If you have set values using `font-variation-settings` and want to change one of those values, you must redeclare all of them (in the same way as when you set OpenType font features using {{cssxref("font-feature-settings")}}). You can work around this limitation by using [CSS Custom Properties](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) (CSS variables) for the individual values, and modifying the value of an individual custom property. Example code follows at the end of the guide.
 
 ### Weight
 
@@ -272,6 +272,8 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground.
 <div>
   <p class="p1">Italic</p>
   <span>(font-style: italic)</span>
+  <p class=".p1-no-synthesis">Italic</p>
+  <span>(font-style: italic; font-synthesis: none)</span>
 </div>
 <div>
   <p class="p2">Italic</p>
@@ -320,16 +322,20 @@ p {
 ```
 
 ```css live-sample___variable-fonts-italic-example
-/* italic range is 0 or 1 */
+/* font-style: italic, with and without font-synthesis */
 .p1 {
-  font-synthesis: none;
   font-style: italic;
+}
+
+.p1-no-synthesis {
+  font-style: italic;
+  font-synthesis: none;
 }
 
 /* italic range is 0 or 1 */
 .p2 {
-  font-synthesis: none;
   font-variation-settings: "ital" 1;
+  font-synthesis: none;
 }
 
 /* Adjust with slider & custom property */
@@ -396,7 +402,7 @@ In the following live example, you can adjust the slant.
 ```css hidden live-sample___slant-example
 @font-face {
   font-family: "SlantFont";
-  font-style: oblique -15 15;
+  font-style: oblique -15deg 15deg;
   src: url("https://mdn.github.io/shared-assets/fonts/font_with_slant_axis.woff2")
     format("woff2");
 }
@@ -655,11 +661,12 @@ The basic syntax is the same, but the font technology can be specified, and allo
     format("woff2-variations");
   font-weight: 125 950;
   font-stretch: 75% 125%;
+
   font-style: normal;
 }
 ```
 
-In this case, the `normal` value indicates that this font file should be used when in a style rule the `font-family` property is `MyVariableFontName` and the [font-style](/en-US/docs/Web/CSS/font-style) property is `normal`. The `oblique 0deg` and `oblique 0deg 20deg` values, because of the `0deg`, also indicate the font has normal upright glyphs.
+In this case, the `font-style: normal` declaration indicates that this font file should be used when `font-family` is set to `MyVariableFontName` and [`font-style`](/en-US/docs/Web/CSS/font-style) is set to `normal`. As an alternative, you could use `font-style: oblique 0deg` or `font-style: oblique 0deg 20deg` to indicate that the font has normal upright glyphs (indicated by `0deg`).
 
 #### Example for a font that contains only italics and no upright characters
 
@@ -670,11 +677,12 @@ In this case, the `normal` value indicates that this font file should be used wh
     format("woff2-variations");
   font-weight: 125 950;
   font-stretch: 75% 125%;
+
   font-style: italic;
 }
 ```
 
-In this case, the `italic` value indicates that this font file should be used when in a style rule the `font-family` property is `MyVariableFontName` and the [font-style](/en-US/docs/Web/CSS/font-style) property is `italic`. The `oblique 14deg` value also indicates the font has italic glyphs.
+In this case, the `font-style: italic` declaration indicates that this font file should be used when `font-family` is set to `MyVariableFontName` and [`font-style`](/en-US/docs/Web/CSS/font-style) is set to `italic`. As an alternative, you could use `font-style: oblique 14deg` to indicate that the font has italic glyphs.
 
 #### Example for a font that contains an oblique (slant) axis
 
@@ -685,6 +693,7 @@ In this case, the `italic` value indicates that this font file should be used wh
     format("woff2-variations");
   font-weight: 125 950;
   font-stretch: 75% 125%;
+
   font-style: oblique 0deg 12deg;
 }
 ```
@@ -692,10 +701,10 @@ In this case, the `italic` value indicates that this font file should be used wh
 In this case, the `oblique 0deg 12deg` value indicates that this font file should be used when in a style rule the `font-family` property is `MyVariableFontName` and the [font-style](/en-US/docs/Web/CSS/font-style) property is oblique with an angle between zero and 12 degrees inclusive.
 
 > [!NOTE]
-> Not all browsers have implemented the full syntax for font format, so test carefully. All browsers that support variable fonts will still render them if you set the format to just the file format, rather than format-variations (i.e. `woff2` instead of `woff2-variations`), but it's best to use the proper syntax if possible.
+> Not all browsers have implemented the full syntax for font format, so test carefully. All browsers that support variable fonts will still render them if you set the format to just the file format, rather than format-variations (i.e., `woff2` instead of `woff2-variations`), but it's best to use the proper syntax if possible.
 
 > [!NOTE]
-> Supplying value ranges for `font-weight`, `font-stretch`, and `font-style` will keep the browser from attempting to render an axis outside that range if you are using the appropriate attribute (i.e. `font-weight` or `font-stretch`), but will not block you from supplying an invalid value via `font-variation-settings`, so use with care.
+> Supplying value ranges for `font-weight`, `font-stretch`, and `font-style` will keep the browser from attempting to render an axis outside that range if you are using the appropriate attribute (i.e., `font-weight` or `font-stretch`), but will not block you from supplying an invalid value via `font-variation-settings`, so use with care.
 
 ## Working with older browsers
 
@@ -842,7 +851,7 @@ body {
 - [W3C GitHub issue queue](https://github.com/w3c/csswg-drafts/issues)
 - [Microsoft Open Type Variations introduction](https://learn.microsoft.com/en-us/typography/opentype/spec/otvaroverview)
 - [Microsoft OpenType Design-Variation Axis Tag Registry](https://learn.microsoft.com/en-us/typography/opentype/spec/dvaraxisreg)
-- [Wakamai Fondue](https://wakamaifondue.com/) (a site that will tell you what your font can do via a simple drag-and-drop inspection interface)
+- [Wakamai Fondue](https://wakamaifondue.com/) (a site that will tell you what your font can do via a drag-and-drop inspection interface)
 - [Axis Praxis](https://www.axis-praxis.org/) (the original variable fonts playground site)
 - [V-Fonts.com](https://v-fonts.com/) (a catalog of variable fonts and where to get them)
 - [Font Playground](https://play.typedetail.com/) (another playground for variable fonts with some very unique approaches to user interface)

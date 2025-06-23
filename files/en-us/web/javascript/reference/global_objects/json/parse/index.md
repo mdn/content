@@ -1,5 +1,6 @@
 ---
 title: JSON.parse()
+short-title: parse()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/parse
 page-type: javascript-static-method
 browser-compat: javascript.builtins.JSON.parse
@@ -9,7 +10,18 @@ browser-compat: javascript.builtins.JSON.parse
 
 The **`JSON.parse()`** static method parses a JSON string, constructing the JavaScript value or object described by the string. An optional _reviver_ function can be provided to perform a transformation on the resulting object before it is returned.
 
-{{EmbedInteractiveExample("pages/js/json-parse.html")}}
+{{InteractiveExample("JavaScript Demo: JSON.parse()")}}
+
+```js interactive-example
+const json = '{"result":true, "count":42}';
+const obj = JSON.parse(json);
+
+console.log(obj.count);
+// Expected output: 42
+
+console.log(obj.result);
+// Expected output: true
+```
 
 ## Syntax
 
@@ -57,9 +69,9 @@ Similar to the `replacer` parameter of {{jsxref("JSON.stringify()")}}, for array
 If you return another value from `reviver`, that value will completely replace the originally parsed value. This even applies to the root value. For example:
 
 ```js
-const transformedObj1 = JSON.parse('[1,5,{"s":1}]', (key, value) => {
-  return typeof value === "object" ? undefined : value;
-});
+const transformedObj1 = JSON.parse('[1,5,{"s":1}]', (key, value) =>
+  typeof value === "object" ? undefined : value,
+);
 
 console.log(transformedObj1); // undefined
 ```
@@ -139,7 +151,7 @@ console.log(jsonText);
 // [[1,"one"],[2,"two"],[3,"three"]]
 
 const map2 = JSON.parse(jsonText, (key, value) =>
-  Array.isArray(value) ? new Map(value) : value,
+  Array.isArray(value) && value.every(Array.isArray) ? new Map(value) : value,
 );
 
 console.log(map2);

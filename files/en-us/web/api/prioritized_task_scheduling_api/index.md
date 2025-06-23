@@ -219,8 +219,15 @@ function yield() {
 Note that the examples below use `myLog()` to write to a text area.
 The code for the log area and method is generally hidden to not distract from more relevant code.
 
-```html hidden
-<textarea id="log" style="min-height: 20px; width: 95%"></textarea>
+```html
+<textarea id="log"></textarea>
+```
+
+```css hidden
+#log {
+  min-height: 20px;
+  width: 95%;
+}
 ```
 
 ```js
@@ -238,11 +245,18 @@ Check whether prioritized task scheduling is supported by testing for the `sched
 The code below prints "Feature: Supported" if the API is supported on this browser.
 
 ```html hidden
-<textarea id="log" style="min-height: 20px; width: 95%"></textarea>
+<textarea id="log"></textarea>
+```
+
+```css hidden
+#log {
+  min-height: 20px;
+  width: 95%;
+}
 ```
 
 ```js hidden
-//hidden logger code - simplifies example
+// hidden logger code - simplifies example
 let log = document.getElementById("log");
 function myLog(text) {
   log.textContent += `${text}\n`;
@@ -266,7 +280,14 @@ Tasks are posted using {{domxref('Scheduler.postTask()')}}, specifying a callbac
 The method returns a {{jsxref("Promise")}} that resolves with the return value of the callback function, or rejects with either an abort error or an error thrown in the function.
 
 ```html hidden
-<textarea id="log" style="min-height: 100px; width: 95%"></textarea>
+<textarea id="log"></textarea>
+```
+
+```css hidden
+#log {
+  min-height: 100px;
+  width: 95%;
+}
 ```
 
 ```js hidden
@@ -364,7 +385,14 @@ if ("scheduler" in this) {
 ```
 
 ```html hidden
-<textarea id="log" style="min-height: 120px; width: 95%"></textarea>
+<textarea id="log"></textarea>
+```
+
+```css hidden
+#log {
+  min-height: 120px;
+  width: 95%;
+}
 ```
 
 The output below shows that the tasks are executed in priority order, and then declaration order.
@@ -387,7 +415,14 @@ The event handler uses {{domxref('TaskPriorityChangeEvent.previousPriority', 'pr
 The task is then posted, passing in the signal, and then we immediately change the priority to `background` by calling {{domxref("TaskController.setPriority()")}} on the controller.
 
 ```html hidden
-<textarea id="log" style="min-height: 70px; width: 95%"></textarea>
+<textarea id="log"></textarea>
+```
+
+```css hidden
+#log {
+  min-height: 70px;
+  width: 95%;
+}
 ```
 
 ```js hidden
@@ -429,7 +464,14 @@ Tasks can be aborted using either {{domxref("TaskController")}} and {{domxref("A
 The only difference is that you must use {{domxref("TaskController")}} if you also want to set the task priority.
 
 ```html hidden
-<textarea id="log" style="min-height: 50px; width: 95%"></textarea>
+<textarea id="log"></textarea>
+```
+
+```css hidden
+#log {
+  min-height: 50px;
+  width: 95%;
+}
 ```
 
 ```js hidden
@@ -472,7 +514,14 @@ This effectively adds the task to the prioritized queue on a timeout, as might b
 The `delay` is the minimum amount of time before the task is added to the scheduler; it may be longer.
 
 ```html hidden
-<textarea id="log" style="min-height: 50px; width: 95%"></textarea>
+<textarea id="log"></textarea>
+```
+
+```css hidden
+#log {
+  min-height: 50px;
+  width: 95%;
+}
 ```
 
 ```js hidden

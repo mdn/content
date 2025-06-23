@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.sort()
+short-title: sort()
 slug: Web/JavaScript/Reference/Global_Objects/Array/sort
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.sort
@@ -7,14 +8,26 @@ browser-compat: javascript.builtins.Array.sort
 
 {{JSRef}}
 
-The **`sort()`** method of {{jsxref("Array")}} instances sorts the elements of an array _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_ and returns the reference to the same array, now sorted. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values.
+The **`sort()`** method of {{jsxref("Array")}} instances sorts the elements of an array _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_ and returns the reference to the same array, now sorted. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code unit values.
 
 The time and space complexity of the sort cannot be guaranteed as it depends on the
 implementation.
 
 To sort the elements in an array without mutating the original array, use {{jsxref("Array/toSorted", "toSorted()")}}.
 
-{{EmbedInteractiveExample("pages/js/array-sort.html")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.sort()")}}
+
+```js interactive-example
+const months = ["March", "Jan", "Feb", "Dec"];
+months.sort();
+console.log(months);
+// Expected output: Array ["Dec", "Feb", "Jan", "March"]
+
+const array1 = [1, 30, 4, 21, 100000];
+array1.sort();
+console.log(array1);
+// Expected output: Array [1, 100000, 21, 30, 4]
+```
 
 ## Syntax
 
@@ -71,11 +84,11 @@ elements are sorted according to the return value of the compare function (all
 `undefined` elements are sorted to the end of the array, with no call to
 `compareFn`).
 
-| `compareFn(a, b)` return value | sort order                         |
-| ------------------------------ | ---------------------------------- |
-| > 0                            | sort `a` after `b`, e.g. `[b, a]`  |
-| < 0                            | sort `a` before `b`, e.g. `[a, b]` |
-| === 0                          | keep original order of `a` and `b` |
+| `compareFn(a, b)` return value | sort order                          |
+| ------------------------------ | ----------------------------------- |
+| > 0                            | sort `a` after `b`, e.g., `[b, a]`  |
+| < 0                            | sort `a` before `b`, e.g., `[a, b]` |
+| === 0                          | keep original order of `a` and `b`  |
 
 So, the compare function has the following form:
 
@@ -184,7 +197,7 @@ items.sort((a, b) => {
 
 ### Sorting non-ASCII characters
 
-For sorting strings with non-{{Glossary("ASCII")}} characters, i.e. strings with accented characters
+For sorting strings with non-{{Glossary("ASCII")}} characters, i.e., strings with accented characters
 (e, é, è, a, ä, etc.), strings from languages other than English, use
 {{jsxref("String.prototype.localeCompare()")}}. This function can compare those characters so they
 appear in the right order.
@@ -211,9 +224,7 @@ temporary array to achieve the right order.
 const data = ["delta", "alpha", "charlie", "bravo"];
 
 // temporary array holds objects with position and sort-value
-const mapped = data.map((v, i) => {
-  return { i, value: someSlowOperation(v) };
-});
+const mapped = data.map((v, i) => ({ i, value: someSlowOperation(v) }));
 
 // sorting the mapped array containing the reduced values
 mapped.sort((a, b) => {
@@ -243,7 +254,7 @@ sorted[0] = 10;
 console.log(numbers[0]); // 10
 ```
 
-In case you want `sort()` to not mutate the original array, but return a [shallow-copied](/en-US/docs/Glossary/Shallow_copy) array like other array methods (e.g. [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)) do, use the {{jsxref("Array/toSorted", "toSorted()")}} method. Alternatively, you can do a shallow copy before calling `sort()`, using the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) or [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
+In case you want `sort()` to not mutate the original array, but return a [shallow-copied](/en-US/docs/Glossary/Shallow_copy) array like other array methods (e.g., [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)) do, use the {{jsxref("Array/toSorted", "toSorted()")}} method. Alternatively, you can do a shallow copy before calling `sort()`, using the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) or [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
 
 ```js
 const numbers = [3, 1, 4, 1, 5];

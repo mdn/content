@@ -11,7 +11,7 @@ Pixel data for an image.
 
 ## Type
 
-An [`ImageData`](/en-US/docs/Web/API/ImageData) object, e.g. from a {{htmlelement("canvas")}} element.
+An [`ImageData`](/en-US/docs/Web/API/ImageData) object, e.g., from a {{htmlelement("canvas")}} element.
 
 ## Browser compatibility
 

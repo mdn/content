@@ -8,7 +8,7 @@ browser-compat: api.ElementInternals.ariaSort
 
 {{APIRef("Web Components")}}
 
-The **`ariaSort`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-sort) attribute, which indicates if items in a table or grid are sorted in ascending or descending order.
+The **`ariaSort`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-sort) attribute, which indicates if items in a table or grid are sorted in ascending or descending order.
 
 > [!NOTE]
 > Setting aria attributes on `ElementInternals` allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the [Accessibility Object Model explainer](https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object).
@@ -31,7 +31,14 @@ A string with one of the following values:
 In this example the value of `ariaSort` is set to "ascending".
 
 ```js
-this.internals_.ariaSort = "ascending";
+class CustomControl extends HTMLElement {
+  constructor() {
+    super();
+    this.internals_ = this.attachInternals();
+    this.internals_.ariaSort = "ascending";
+  }
+  // …
+}
 ```
 
 ## Specifications
@@ -44,4 +51,4 @@ this.internals_.ariaSort = "ascending";
 
 ## See also
 
-- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)
+- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)

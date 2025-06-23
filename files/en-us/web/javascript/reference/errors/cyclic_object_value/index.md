@@ -32,7 +32,7 @@ hence {{jsxref("JSON.stringify()")}} doesn't try to solve them and fails accordi
 
 ### Circular references
 
-In a circular structure like the following
+In a circular structure like the following:
 
 ```js
 const circularReference = { otherData: 123 };
@@ -46,7 +46,7 @@ JSON.stringify(circularReference);
 // TypeError: cyclic object value
 ```
 
-To serialize circular references you can use a library that supports them (e.g. [cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js))
+To serialize circular references you can use a library that supports them (e.g., [cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js))
 or implement a solution by yourself, which will require finding and replacing (or
 removing) the cyclic references by serializable values.
 

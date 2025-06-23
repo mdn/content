@@ -19,7 +19,7 @@ Regardless of the type of camera, we would always need information regarding its
 
 - `x` and `y`: The current position of the camera. In this implementation, we are assuming that `(x,y)` points to the top left corner of visible portion of the map.
 - `width` and `height`: The size of the camera's viewport.
-- `maxX` and `maxY`: The limit for the camera's position — The lower limit will nearly always be (0,0), and in this case the upper limit is equal to the size of the world minus the size of the camera's viewport.
+- `maxX` and `maxY`: The limit for the camera's position — The lower limit will nearly always be `(0,0)`, and in this case the upper limit is equal to the size of the world minus the size of the camera's viewport.
 
 ## Rendering the map
 

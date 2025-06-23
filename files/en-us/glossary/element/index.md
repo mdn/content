@@ -14,6 +14,6 @@ Elements and {{glossary("tag", "tags")}} are _not_ the same things. Tags begin o
 
 ## See also
 
-- [Getting started with HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
+- [Basic HTML Syntax](/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax)
 - [Defining custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements)
 - The {{domxref("Element")}} interface, representing an element in the DOM.

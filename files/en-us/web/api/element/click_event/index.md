@@ -12,7 +12,7 @@ An element receives a **`click`** event when any of the following occurs:
 
 - A pointing-device button (such as a mouse's primary button) is both pressed and released while the pointer is located inside the element.
 - A touch gesture is performed on the element.
-- Any user interaction that is equivalent to a click, such as pressing the <kbd>Space</kbd> key or <kbd>Enter</kbd> key while the element is focused. Note that this only applies to elements with a default key event handler, and therefore, excludes other elements that have been made focusable by setting the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute.
+- Any user interaction that is equivalent to a click, such as pressing the <kbd>Space</kbd> key or <kbd>Enter</kbd> key while the element is focused. Note that this only applies to elements with a default key event handler, and therefore, excludes other elements that have been made focusable by setting the [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) attribute.
 
 If the button is pressed on one element and the pointer is moved outside the element before the button is released, the event is fired on the most specific ancestor element that contained both elements.
 
@@ -24,10 +24,10 @@ The event is a device-independent event — meaning it can be activated by touch
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("click", (event) => {});
+```js-nolint
+addEventListener("click", (event) => { })
 
-onclick = (event) => {};
+onclick = (event) => { }
 ```
 
 ## Event type
@@ -37,7 +37,7 @@ A {{domxref("PointerEvent")}}. Inherits from {{domxref("MouseEvent")}}.
 {{InheritanceDiagram("PointerEvent")}}
 
 > [!NOTE]
-> In earlier versions of the specification the event type for this event was a {{domxref("MouseEvent")}}, and this is still the type passed in Firefox and Safari.
+> In earlier versions of the specification, the event type for this event was a {{domxref("MouseEvent")}}. Check [browser compatibility](#browser_compatibility) for more information.
 
 ## Event properties
 
@@ -58,11 +58,11 @@ _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref
 - {{domxref('PointerEvent.tangentialPressure')}} {{ReadOnlyInline}}
   - : The normalized tangential pressure of the pointer input (also known as barrel pressure or [cylinder stress](https://en.wikipedia.org/wiki/Cylinder_stress)) in the range `-1` to `1`, where `0` is the neutral position of the control.
 - {{domxref('PointerEvent.tiltX')}} {{ReadOnlyInline}}
-  - : The plane angle (in degrees, in the range of `-90` to `90`) between the Y–Z plane and the plane containing both the pointer (e.g. pen stylus) axis and the Y axis.
+  - : The plane angle (in degrees, in the range of `-90` to `90`) between the Y–Z plane and the plane containing both the pointer (e.g., pen stylus) axis and the Y axis.
 - {{domxref('PointerEvent.tiltY')}} {{ReadOnlyInline}}
-  - : The plane angle (in degrees, in the range of `-90` to `90`) between the X–Z plane and the plane containing both the pointer (e.g. pen stylus) axis and the X axis.
+  - : The plane angle (in degrees, in the range of `-90` to `90`) between the X–Z plane and the plane containing both the pointer (e.g., pen stylus) axis and the X axis.
 - {{domxref('PointerEvent.twist')}} {{ReadOnlyInline}}
-  - : The clockwise rotation of the pointer (e.g. pen stylus) around its major axis in degrees, with a value in the range `0` to `359`.
+  - : The clockwise rotation of the pointer (e.g., pen stylus) around its major axis in degrees, with a value in the range `0` to `359`.
 - {{domxref('PointerEvent.pointerType')}} {{ReadOnlyInline}}
   - : Indicates the device type that caused the event (mouse, pen, touch, etc.).
 - {{domxref('PointerEvent.isPrimary')}} {{ReadOnlyInline}}
@@ -108,7 +108,7 @@ Try making rapid, repeated clicks on the button to increase the click count. If 
 
 ## See also
 
-- [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
+- [Learn: Introduction to events](/en-US/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Element/auxclick_event", "auxclick")}}
 - {{domxref("Element/contextmenu_event", "contextmenu")}}
 - {{domxref("Element/dblclick_event", "dblclick")}}

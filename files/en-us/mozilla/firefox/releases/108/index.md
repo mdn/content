@@ -12,14 +12,14 @@ This article provides information about the changes in Firefox 108 that will aff
 
 ### HTML
 
-- The {{HTMLElement("source")}} element supports [`height`](/en-US/docs/Web/HTML/Element/source#height) & [`width`](/en-US/docs/Web/HTML/Element/source#width) attributes when it is a child of a {{HTMLElement("picture")}} element.
+- The {{HTMLElement("source")}} element supports [`height`](/en-US/docs/Web/HTML/Reference/Elements/source#height) & [`width`](/en-US/docs/Web/HTML/Reference/Elements/source#width) attributes when it is a child of a {{HTMLElement("picture")}} element.
   This functionality can be configured via the `dom.picture_source_dimension_attributes.enabled` preference which is now set to `true` by default ([Firefox bug 1795953](https://bugzil.la/1795953)).
 
 ### CSS
 
-- [Trigonometric functions](/en-US/docs/Web/CSS/CSS_Functions#trigonometric_functions) are now enabled with the `layout.css.trig.enabled` preference set to `true` by default.
+- [Trigonometric functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#trigonometric_functions) are now enabled with the `layout.css.trig.enabled` preference set to `true` by default.
   This allows the use of `sin()`, `cos()`, `tan()`, `asin()`, `acos()`, `atan()`, and `atan2()` functions ([Firefox bug 1774589](https://bugzil.la/1774589), [Firefox bug 1787070](https://bugzil.la/1787070)).
-- CSS [`<calc-constant>`](/en-US/docs/Web/CSS/calc-keyword) type is implemented to allow for well-known constants such as `pi` and `e` within [math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions) ([Firefox bug 1682444](https://bugzil.la/1682444), [Firefox bug 1787070](https://bugzil.la/1787070)).
+- CSS [`<calc-constant>`](/en-US/docs/Web/CSS/calc-keyword) type is implemented to allow for well-known constants such as `pi` and `e` within [math functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#math_functions) ([Firefox bug 1682444](https://bugzil.la/1682444), [Firefox bug 1787070](https://bugzil.la/1787070)).
 - Container query length units are now supported via the `layout.css.container-queries.enabled` preference, which is set to `false` by default.
   Setting this preference to `true` allows the use of `cqw`, `cqh`, `cqi`, `cqb`, `cqmin`, and `cqmax` units of length which are relative to the size of a query container.
   For more information on these units, see the [CSS Container Queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries#container_query_length_units) documentation ([Firefox bug 1744231](https://bugzil.la/1744231)).
@@ -31,16 +31,16 @@ No notable changes
 
 ### HTTP
 
-- [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) HTTP header directives [`style-src-elem`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src-elem) and [`style-src-attr`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src-attr) are now supported.
+- [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) HTTP header directives [`style-src-elem`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src-elem) and [`style-src-attr`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src-attr) are now supported.
   A server can use these to specify valid sources for stylesheet `<style>` elements and `<link>` elements with `rel="stylesheet"`, and for styles applied to individual elements, respectively ([Firefox bug 1529338](https://bugzil.la/1529338)).
-- [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) HTTP header directives [`script-src-elem`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-elem) and [`script-src-attr`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-attr) are now supported.
+- [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) HTTP header directives [`script-src-elem`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src-elem) and [`script-src-attr`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src-attr) are now supported.
   A server can use these to specify valid sources for JavaScript `<script>` elements, and for inline script event handlers like `onclick`, respectively ([Firefox bug 1529337](https://bugzil.la/1529337)).
-- [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) violation reports now include `effective-directive` and `status-code` properties.
-  For more information, see [Violation report syntax](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri#violation_report_syntax) ([Firefox bug 1192684](https://bugzil.la/1192684)).
+- [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) violation reports now include `effective-directive` and `status-code` properties.
+  For more information, see [Violation report syntax](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-uri#violation_report_syntax) ([Firefox bug 1192684](https://bugzil.la/1192684)).
 
 ### APIs
 
-- [Import maps](/en-US/docs/Web/HTML/Element/script/type/importmap) are now supported.
+- [Import maps](/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap) are now supported.
   Import maps provide flexibility and additional control over how browsers resolve module specifiers when importing [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules).
   ([Firefox bug 1795647](https://bugzil.la/1795647)).
 

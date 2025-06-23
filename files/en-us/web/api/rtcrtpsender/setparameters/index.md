@@ -73,7 +73,7 @@ setParameters(parameters)
         <!-- spec defines following in RTCRtpParameters -->
     - `codecs`
 
-      - : An array of objects describing the [media codecs](/en-US/docs/Web/Media/Formats/WebRTC_codecs) from which the sender will choose.
+      - : An array of objects describing the [media codecs](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs) from which the sender will choose.
         This parameter cannot be changed once initially set.
 
         Each codec object in the array may have the following properties: <!-- RTCRtpCodecParameters -->
@@ -95,7 +95,7 @@ setParameters(parameters)
           - : A string indicating the codec's MIME media type and subtype, specified as a string of the form `"type/subtype"`.
             The MIME type strings used by RTP differ from those used elsewhere.
             IANA maintains a [registry of valid MIME types](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-2).
-            Also see [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs) for details about potential codecs that might be referenced here.
+            Also see [Codecs used by WebRTC](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs) for details about potential codecs that might be referenced here.
 
         - `payloadType`
 
@@ -190,11 +190,7 @@ async function setVideoParams(sender, height, bitrate) {
   const params = sender.getParameters();
 
   // If encodings is null, create it
-
-  if (!params.encodings) {
-    params.encodings = [{}];
-  }
-
+  params.encodings ??= [{}];
   params.encodings[0].scaleResolutionDownBy = Math.max(scaleRatio, 1);
   params.encodings[0].maxBitrate = bitrate;
   await sender.setParameters(params);
@@ -228,5 +224,5 @@ This code will cleanly fall back and work the normal way if the browser fully im
 ## See also
 
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs)
+- [Codecs used by WebRTC](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs)
 - [Web media technologies](/en-US/docs/Web/Media)

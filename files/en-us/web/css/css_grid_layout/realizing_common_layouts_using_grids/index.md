@@ -1,20 +1,21 @@
 ---
 title: Realizing common layouts using grids
+short-title: Common grid layouts
 slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
 page-type: guide
 ---
 
 {{CSSRef}}
 
-To round off this set of guides to CSS grid layout, we're going to walk through a few different layouts, which demonstrate some of the different techniques you can use when designing with grid layout. We will look at an example using [grid-template-areas](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas), a typical 12-column flexible grid system, and also a product listing using auto-placement. As you can see from this set of examples, there is often more than one way to achieve the result you want with grid layout. Choose the method you find most helpful for the problems that you are solving and the designs that you need to implement.
+To round off this [set of CSS grid layout guides](/en-US/docs/Web/CSS/CSS_grid_layout#guides), we're going to walk through a few different layouts, which demonstrate some of the techniques you can use when designing with grid layout. We will look at an example using {{cssxref("grid-template-areas")}}, a 12-column flexible grid system, and also a product listing using auto-placement. As you can see from this set of examples, there is often more than one way to get the results you want with CSS grid layout. Choose the method you find most helpful for the problems that you are solving and the designs that you need to implement.
 
 ## A responsive layout with 1 to 3 fluid columns using `grid-template-areas`
 
 Many websites are a variation of this type of layout, with content, sidebars, a header and a footer. In a responsive design, you may want to display the layout as a single column, adding a sidebar at a certain breakpoint and then bring in a three-column layout for wider screens.
 
-![Image of the three different layouts created by redefining our grid at two breakpoints.](11-responsive-areas.png)
+![three different layouts created by redefining the grid at two breakpoints.](11-responsive-areas.png)
 
-We're going to create this layout using the _named template areas_ that we learned about in the guide _[Grid template areas](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)_.
+We're going to create this layout using the _named template areas_ that we learned about in the [Grid template areas](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas) guide.
 
 The markup is a container with elements inside for a header, footer, main content, navigation, sidebar, and a block to place advertising.
 
@@ -70,7 +71,7 @@ nav ul {
 </div>
 ```
 
-As we are using {{cssxref("grid-template-areas")}} to create the layout. Outside of any media queries we need to name the areas. We name areas using the {{cssxref("grid-area")}} property.
+As we are using {{cssxref("grid-template-areas")}} to create the layout, we need to name the areas outside of any [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries). We name areas using the {{cssxref("grid-area")}} property.
 
 ```css
 .main-head {
@@ -93,7 +94,7 @@ As we are using {{cssxref("grid-template-areas")}} to create the layout. Outside
 }
 ```
 
-This will not create any layout, however the items now have names we can use to do so. Staying outside of any media queries we're now going to set up the layout for the mobile width. Here we're keeping everything in source order, trying to avoid any disconnect between the source and display as described in the guide _[Grid layout and accessibility](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)_. We've not defined any column or row tracks but this layout dictates a single column, and rows will be created as needed for each of the items in the implicit grid.
+This does not create a layout. Rather, the items now have names we can use to do so. Staying outside of any media queries we're now going to set up the layout for the mobile width. Here we're keeping everything in source order to avoid any disconnect between the source and display as described in the [Grid layout and accessibility](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility) guide. We've not explicitly defined any column or row tracks; this layout dictates a single column and creates rows as needed for each item in the implicit grid.
 
 ```css
 .wrapper {
@@ -109,7 +110,7 @@ This will not create any layout, however the items now have names we can use to 
 }
 ```
 
-With our mobile layout in place, we can now proceed to add a [media query](/en-US/docs/Web/CSS/CSS_media_queries) to adapt this layout for bigger screens with enough real estate to display two columns.
+With our mobile layout in place, we can now proceed to add a {{cssxref("@media")}} query to adapt this layout for bigger screens with enough real estate to display two columns.
 
 ```css
 @media (min-width: 500px) {
@@ -128,9 +129,9 @@ With our mobile layout in place, we can now proceed to add a [media query](/en-U
 }
 ```
 
-You can see the layout taking shape in the value of {{cssxref("grid-template-areas")}}. The `header` spans over two column tracks, as does the `nav`. In the third row track we have the `sidebar` alongside the `content`. In the fourth row track I have chosen to place my `ad` content – so it appears under the sidebar, then the `footer` next to it under the content. We're using a flexbox on the navigation to display it in a row spaced out.
+You can see the layout taking shape in the value of {{cssxref("grid-template-areas")}}. The `header` spans over two column tracks, as does the `nav`. In the third row track, we place the `sidebar` alongside the `content`. We place the `ad` content in the fourth row track so it appears under the sidebar. The `footer` is next to it under the content. We use [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) on the navigation to evenly space the navigation items in a row.
 
-We can now add a final breakpoint to move to a three-column layout.
+We can now add a final breakpoint for wider screens able to display a three-column layout.
 
 ```css
 @media (min-width: 700px) {
@@ -148,17 +149,17 @@ We can now add a final breakpoint to move to a three-column layout.
 }
 ```
 
-The three-column layout has two `1fr` unit side columns and a middle column that has `4fr` as the track size. This means that the available space in the container is split into 6 and assigned in proportion to our three tracks – one part each to the side columns and 4 parts to the center.
+The three-column layout has two `1fr` unit side columns and a middle column that has `4fr` as the track size. This means the available space in the container is split into six parts and assigned in proportion to our three tracks – one part each to the side columns and four parts to the center.
 
-In this layout we're displaying the `nav` in the left column, alongside the `content`. In the right column we have the `sidebar` and underneath it the advertisements (`ad`). The `footer` now spans right across the bottom of the layout. I then use a flexbox to display the navigation as a column.
+In this layout, we're displaying the `nav` in the left column, alongside the `content`. In the right column we have the `sidebar` and underneath it the advertisements (`ad`). The `footer` now spans across the entire bottom of the layout. Again, we use flexbox to display the navigation, but this time we display it as a column instead of a row.
 
-{{ EmbedLiveSample('A_responsive_layout_with_1_to_3_fluid_columns_using_grid-template-areas', '800', '500') }}
+{{ EmbedLiveSample('A_responsive_layout_with_1_to_3_fluid_columns_using_grid-template-areas', '800', '570') }}
 
-This is a simple example but demonstrates how we can use a grid layout to rearrange our layout for different breakpoints. In particular we're changing the location of that `ad` block, as appropriate in my different column setups. I find this named areas method very helpful at a prototyping stage, it is easy to play around with the location of elements. You could always begin to use grid in this way for prototyping, even if you can't rely on it fully in production due to the browsers that visit your site.
+This basic example demonstrates how to rearrange a grid layout across different breakpoints. In particular, we're changing the location of the `ad` block as appropriate in our different column setups. This named areas method can be very helpful, especially at the prototyping stage. You may find it easier to use names rather than numbers when playing with the location of elements on the grid.
 
 ## A flexible 12-column layout
 
-If you have been working with one of the many frameworks or grid systems you may be accustomed to laying out your site on a 12- or 16-column flexible grid. We can create this type of system using CSS grid layout. As a simple example, let's create a 12-column flexible grid that has 12 `1fr`-unit column tracks, they all have a start line named `col-start`. This means that we will have twelve grid lines named `col-start`.
+CSS frameworks and grid systems commonly use 12- or 16-column flexible grids. We can create this type of system using CSS grid layout. As an example, let's create a 12-column flexible grid with 12 `1fr`-unit column tracks, each with a start line named `col-start`. This means that we will have twelve grid lines named `col-start`.
 
 ```css hidden
 .wrapper {
@@ -185,7 +186,7 @@ If you have been working with one of the many frameworks or grid systems you may
 }
 ```
 
-To demonstrate how this grid system works I have four child elements inside my wrapper.
+To demonstrate how this grid system works, we have four child elements inside a wrapper.
 
 ```html
 <div class="wrapper">
@@ -200,7 +201,7 @@ To demonstrate how this grid system works I have four child elements inside my w
 </div>
 ```
 
-We can then place these on the grid using the named lines, and also the span keyword.
+We can then place these on the grid using the named lines, and also the `span` keyword.
 
 ```css
 .item1 {
@@ -222,17 +223,17 @@ We can then place these on the grid using the named lines, and also the span key
 
 {{ EmbedLiveSample('A_flexible_12-column_layout', '800', '400') }}
 
-As described in the [guide to named lines](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines), we are using the named line to place our item. As we have 12 lines all with the same name we use the name, and then the index of the line. You could also use the line index itself if you prefer and avoid using named lines at all.
+As described in the [using named grid lines guide](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines), we are using the named lines to place our items. As we have 12 lines all with the same name, we use the name and the index of the line. If you prefer, you can use the line index itself and avoid using named lines.
 
-Rather than setting the end line number, I have chosen to say how many tracks this element should span, using the `span` keyword. I like this approach as when working with a multiple-column layout system we usually think of blocks in terms of the number of tracks of the grid they span, and adjust that for different breakpoints. To see how the blocks align themselves to the tracks, use the [Firefox grid inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html). It clearly demonstrates how our items are placed.
+Rather than setting the end line number, we define how many tracks this element should span using the `span` keyword. When working with a multiple-column layout system, this method may be more intuitive for those who think of blocks in terms of the number of tracks of the grid they span, then adjusting for different breakpoints. To see how the blocks align themselves to the tracks, use the grid inspector in your browser developer tools; it likely clearly demonstrates how the items are placed.
 
-![Showing the items placed on the grid with grid tracks highlighted.](11-grid-inspector-12col.png)
+![Showing the items placed on the grid with grid tracks highlighted in Firefox developer tools.](11-grid-inspector-12col.png)
 
-There are some key differences with how a grid layout works over the grid systems you may have used previously. As you can see, we do not need to add any markup to create a row, grid systems need to do this to stop elements popping up into the row above. With CSS grid layout, we can place things into rows, with no danger of them rising up into the row above if it is left empty. Due to this _strict_ column and row placement we can also easily leave white space in our layout. We also don't need special classes to pull or push things, to indent them into the grid. All we need to do is specify the start and end line for the item.
+We don't need to add any markup to create a row. CSS framework grid systems often did this to stop elements popping up into the row above for browsers that don't support CSS grid layout. However, this point is now moot — all modern browsers have supported CSS grid layout for a long time. CSS grids allow us to place items into rows, with no danger of them rising up into the row above if it is left empty. Due to this _strict_ column and row placement, we can also easily leave white space in our layout. We also don't need special classes to indent items into the grid. All we need to do is specify the start and end line for the item.
 
 ## Building a layout using the 12-column system
 
-To see how this layout method works in practice, we can create the same layout that we created with {{cssxref("grid-template-areas")}}, this time using the 12-column grid system. Let's start with the same markup as used for the grid template areas example.
+To see how this layout method works in practice, we can create the same layout we created with {{cssxref("grid-template-areas")}}, this time using the 12-column grid system. Let's start with the same markup as used for the grid template areas example.
 
 ```css hidden
 * {
@@ -286,7 +287,7 @@ nav ul {
 </div>
 ```
 
-We can then set up our grid, as for the example 12-column layout above.
+We set up our grid as we did for the 12-column layout example above.
 
 ```css
 .wrapper {
@@ -296,9 +297,9 @@ We can then set up our grid, as for the example 12-column layout above.
 }
 ```
 
-We are once again going to make this a responsive layout, this time however using named lines. Every breakpoint will use a 12-column grid, however the number of tracks that items will span changes depending on the size of the screen.
+We are again going to make this a responsive layout, this time using named lines. Every breakpoint will use a 12-column grid. However, the number of tracks items will span will change depending on the size of the screen.
 
-We start mobile first, and all we want for the narrowest screens is for the items to remain in source order, and all span right across the grid.
+We start {{glossary("mobile first")}}. For the narrowest screens, we want the items to remain in source order and all span across the entire grid.
 
 ```css
 .wrapper > * {
@@ -306,9 +307,9 @@ We start mobile first, and all we want for the narrowest screens is for the item
 }
 ```
 
-At the next breakpoint we want to move to a two-column layout. Our header and navigation still span the full grid, so we do not need to specify any positioning for them. The sidebar is starting on the first column line named col-start, spanning 3 lines. It goes after row line 3, as the header and navigation are in the first two row tracks.
+At the next breakpoint, we want a two-column layout. Our header and navigation still span the full grid, so we do not need to specify any positioning for them. The sidebar is starting on the first column line named `col-start`, spanning 3 lines. It goes after row line 3, as the header and navigation are in the first two row tracks.
 
-The ad panel is below the sidebar, so starts at grid row line 4. Then we have the content and footer starting at col-start 4 and spanning 9 tracks taking them to the end of the grid.
+The `ad` panel is below the sidebar, starting at grid row line 4. Then we have the content and footer starting at col-start 4 and spanning nine tracks, taking both to the end of the grid.
 
 ```css
 @media (min-width: 500px) {
@@ -331,7 +332,7 @@ The ad panel is below the sidebar, so starts at grid row line 4. Then we have th
 }
 ```
 
-Finally we go to the three-column version of this layout. The header continues to span right across the grid, but now the navigation moves down to become the first sidebar, with the content and then the sidebar next to it. The footer now also spans across the full layout.
+Finally, for screens larger than our largest breakpoint, we define a three-column version of this layout. The header continues to span right across the grid, but now the navigation moves down to become the first sidebar, with the content and then the sidebar next to it. The footer now also spans across the full layout.
 
 ```css
 @media (min-width: 700px) {
@@ -360,19 +361,21 @@ Finally we go to the three-column version of this layout. The header continues t
 }
 ```
 
-{{ EmbedLiveSample('Building_a_layout_using_the_12-column_system', '800', '450') }}
+{{ EmbedLiveSample('Building_a_layout_using_the_12-column_system', '800', '570') }}
 
-Once again the [Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) is useful to help us see how our layout has taken shape.
+Once again, check the grid inspector in your browser developer tools to see how the layout has taken shape.
 
 ![Showing the layout with grid tracks highlighted by the grid inspector.](11-grid-inspector-12col-layout.png)
 
-Something to note as we create this layout is that we haven't needed to explicitly position every element on the grid at each breakpoint. We have been able to inherit the placement set up for earlier breakpoints – an advantage of working "mobile first". We are also able to take advantage of grid auto-placement. By keeping elements in a logical order, auto-placement does quite a lot of work for us in placing items onto the grid. In the final example in this guide we will create a layout that entirely relies on auto-placement.
+Something to note as we created this layout is that we didn't need to explicitly position every element on the grid at each breakpoint. We inherited the placement set up for earlier breakpoints – an advantage of working "mobile first". We also took advantage of grid auto-placement. By keeping elements in a logical order, auto-placement does quite a lot of work for us in placing items onto the grid.
 
 ## A product listing with auto-placement
 
-Many layouts are essentially sets of "cards" – product listings, image galleries, and so on. A grid can make it very easy to create these listings in a way that is responsive without needing to add [media queries](/en-US/docs/Web/CSS/CSS_media_queries) to make it so. In this next example I'm combining CSS grid and flexbox layouts to make a simple product listing layout.
+In this last example in this guide, we create a layout that entirely relies on auto-placement.
 
-The markup for my listing is an unordered list of items. Each item contains a heading, some text of varying height, and a call to action link.
+Many layouts are essentially sets of "cards" – product listings, image galleries, and so on. A grid enables creating these listings in a way that is responsive without needing to add [media queries](/en-US/docs/Web/CSS/CSS_media_queries). In this example, we combine CSS grid and flexbox layouts to make a basic product listing layout.
+
+The markup for the listing is an unordered list of items. Each item contains a heading, some text of varying height, and a call to action link.
 
 ```html
 <ul class="listing">
@@ -456,7 +459,7 @@ h2 {
 }
 ```
 
-We are going to create a grid with a flexible number of flexible columns. I want them never to become smaller than 200 pixels, and then to share any available remaining space equally – so we always get equal width column tracks. We achieve this with the `minmax()` function in our repeat notation for track sizing.
+We create a grid with a flexible number of flexible columns. We want them to be at least 200 pixels wide and share any available remaining space equally – so we always get equal-width column tracks. We achieve this with the {{cssxref("minmax()")}} function in our {{cssxref("repeat")}} notation for track sizing.
 
 ```css
 .listing {
@@ -468,9 +471,9 @@ We are going to create a grid with a flexible number of flexible columns. I want
 }
 ```
 
-As soon as we add this CSS, the items start to lay out as a grid. If we make the window smaller or wider the number of column tracks changes – without us needing to add breakpoints using media queries and redefine the grid.
+When we add this CSS, the items will be laid out as a grid. If we make the window smaller or wider, the number of column tracks changes – without media queries adding breakpoints and without needing to redefine the grid.
 
-We can then tidy up the internals of the boxes using a little touch of flexbox. I set the list item to `display: flex` and the `flex-direction` to `column`. We can then use an auto margin on the `.cta` to push this bar down to the bottom of the box.
+We can tidy up the internals of the boxes using a touch of flexbox. We set the list item to `display: flex` and the {{cssxref("flex-direction")}} to `column`. We can then use an auto margin on the `.cta` to push this bar down to the bottom of the box.
 
 ```css
 .listing li {
@@ -480,8 +483,8 @@ We can then tidy up the internals of the boxes using a little touch of flexbox. 
   flex-direction: column;
 }
 .listing .cta {
-  margin-top: auto;
-  border-top: 1px solid #ffe066;
+  margin-block-start: auto;
+  border-block-start: 1px solid #ffe066;
   padding: 10px;
   text-align: center;
 }
@@ -490,17 +493,17 @@ We can then tidy up the internals of the boxes using a little touch of flexbox. 
 }
 ```
 
-This is really one of the key reasons someone would use flexbox rather than grid, if he/she's just aligning or distributing something in a single dimension, that's a flexbox use case.
+This is one of the key reasons to use flexbox rather than CSS grid layout. If you're aligning or distributing content in a single dimension, that's a flexbox use case.
 
 {{ EmbedLiveSample('A_product_listing_with_auto-placement', '800', '900') }}
 
 ## Preventing gaps with the dense keyword
 
-This is all looking fairly complete now, however we sometimes have these cards which contain far more content than the others. It might be nice to cause those to span two tracks, and then they won't be so tall. We have a class of `wide` on my larger item, and we add a rule {{cssxref("grid-column-end")}} with a value of `span 2`. Now when grid encounters this item, it will assign it two tracks. At some breakpoints, this means that we'll get a gap in the grid – where there isn't space to lay out a two-track item.
+This is all looking fairly complete now. However, we sometimes have cards that contain far more content than the others. It might be nice to make those span two tracks, then they won't be so tall. We add a `wide` class on the larger item, and add a rule giving it a {{cssxref("grid-column-end")}} with a value of `span 2`. When this item is encountered, it will be assigned to two tracks. This means that, at some breakpoints, we'll get a gap in the grid – where there isn't enough space to lay out a two-track item.
 
 ![The layout has gaps as there is not space to lay out a two track item.](11-grid-auto-flow-sparse.png)
 
-We can cause a grid to backfill those gaps by setting {{cssxref("grid-auto-flow", "grid-auto-flow: dense")}} on the grid container. Take care when doing this however as it does take items away from their logical source order. You should only do this if your items do not have a set order – and be aware of the [issues](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility#visual_not_logical_re-ordering) of the tab order following the source and not your reordered display.
+We can make the grid backfill those gaps by setting {{cssxref("grid-auto-flow", "grid-auto-flow: dense")}} on the grid container. Take care when doing this as it can cause items to be taken out of their logical source order. You should only do this if your items do not have a set order. Additionally, be aware of the [accessibility and re-ordering issues](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility#visual_not_logical_re-ordering) resulting from the tab order following the source and not your reordered display.
 
 ```html hidden
 <ul class="listing">
@@ -572,8 +575,8 @@ h2 {
   flex-direction: column;
 }
 .listing .cta {
-  margin-top: auto;
-  border-top: 1px solid #ffe066;
+  margin-block-start: auto;
+  border-block-start: 1px solid #ffe066;
   padding: 10px;
   text-align: center;
 }
@@ -598,14 +601,14 @@ h2 {
 
 {{ EmbedLiveSample('Preventing_gaps_with_the_dense_keyword', '800', '900') }}
 
-This technique of using auto-placement with some rules applied to certain items is very useful, and can help you to deal with content that is being output by a CMS for example, where you have repeated items and can perhaps add a class to certain ones as they are rendered into the HTML.
+Using auto-placement with some rules applied to certain items is very useful and can help with content you can't control, such as CMS output, where you have repeated items and can use [structural pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#tree-structural_pseudo-classes) to target them.
 
 ## Further exploration
 
-The best way to learn to use grid layout is to continue to build examples like the ones we have covered here. Pick something that you normally build using your framework of choice, or using floats, and see if you can build it using grid. Don't forget to find examples that are impossible to build with current methods. That might mean taking inspiration from magazines or other non-web sources. Grid Layout opens up possibilities that we have not had before, we don't need to be tied to the same old layouts to use it.
+CSS grid layout provides so many possibilities. The best way to learn to use grid layout is to continue to build examples like the ones we have covered here. Pick a layout from a responsive site you like and see if you can build it using grid. You can even take inspiration from magazines or other non-web sources.
 
 - [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout)
-- [CSS Layout: Grids](/en-US/docs/Learn/CSS/CSS_layout/Grids)
+- [CSS Layout: Grids](/en-US/docs/Learn_web_development/Core/CSS_layout/Grids)
 - [A complete guide to CSS grid](https://css-tricks.com/snippets/css/complete-guide-grid/) on CSS-Tricks (2023)
 - [Grid by example](https://gridbyexample.com/)
 - [CSS grid website layout examples](https://www.quackit.com/css/grid/examples/css_grid_website_layout_examples.cfm) on quackit.com

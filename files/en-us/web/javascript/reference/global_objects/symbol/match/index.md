@@ -1,5 +1,6 @@
 ---
 title: Symbol.match
+short-title: match
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/match
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.match
@@ -11,7 +12,23 @@ The **`Symbol.match`** static data property represents the [well-known symbol](/
 
 For more information, see [`RegExp.prototype[Symbol.match]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match) and {{jsxref("String.prototype.match()")}}.
 
-{{EmbedInteractiveExample("pages/js/symbol-match.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Symbol.match", "taller")}}
+
+```js interactive-example
+const regexp1 = /foo/;
+// console.log('/foo/'.startsWith(regexp1));
+// Expected output (Chrome): Error: First argument to String.prototype.startsWith must not be a regular expression
+// Expected output (Firefox): Error: Invalid type: first can't be a Regular Expression
+// Expected output (Safari): Error: Argument to String.prototype.startsWith cannot be a RegExp
+
+regexp1[Symbol.match] = false;
+
+console.log("/foo/".startsWith(regexp1));
+// Expected output: true
+
+console.log("/baz/".endsWith(regexp1));
+// Expected output: false
+```
 
 ## Value
 

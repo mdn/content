@@ -14,7 +14,15 @@ the `||` operator actually returns the value of one of the specified
 operands, so if this operator is used with non-Boolean values, it will return a
 non-Boolean value.
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-or.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Logical OR (||) operator", "shorter")}}
+
+```js interactive-example
+const a = 3;
+const b = -2;
+
+console.log(a > 0 || b > 0);
+// Expected output: true
+```
 
 ## Syntax
 
@@ -41,7 +49,7 @@ Examples of expressions that can be converted to false are:
 
 Even though the `||` operator can be used with operands that are not Boolean
 values, it can still be considered a boolean operator since its return value can always
-be converted to a [boolean primitive](/en-US/docs/Web/JavaScript/Data_structures#boolean_type).
+be converted to a [boolean primitive](/en-US/docs/Web/JavaScript/Guide/Data_structures#boolean_type).
 To explicitly convert its return value (or any expression in general) to the
 corresponding boolean value, use a double {{jsxref("Operators/Logical_NOT", "NOT operator", "", 1)}} or the {{jsxref("Boolean/Boolean", "Boolean()")}}
 constructor.

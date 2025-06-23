@@ -15,10 +15,10 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 - The HTML5 {{ HTMLElement("progress") }} element, which lets you create a progress bar, is now supported.
 - The parsing of the HTML5 {{ HTMLElement("track") }} element, which specifies text tracks for media elements, is now supported. This element should appear in the DOM now, though its behavior is still not implemented.
 - The {{ HTMLElement("iframe") }} element is now clipped correctly by its container when the container's corners have been rounded using the {{ cssxref("border-radius") }} property.
-- {{ HTMLElement("form") }} elements' text {{ HTMLElement("input") }} fields no longer support the XUL [`maxwidth`](/en-US/docs/XUL/Property/maxwidth) property; this was never intentional, and is in violation of the HTML specification. You should instead use the [`size`](/en-US/docs/Web/HTML/Element/input#size) attribute to set the maximum width of input fields.
+- {{ HTMLElement("form") }} elements' text {{ HTMLElement("input") }} fields no longer support the XUL [`maxwidth`](/en-US/docs/XUL/Property/maxwidth) property; this was never intentional, and is in violation of the HTML specification. You should instead use the [`size`](/en-US/docs/Web/HTML/Reference/Elements/input#size) attribute to set the maximum width of input fields.
 - The {{ HTMLElement("canvas") }} {{ domxref("CanvasRenderingContext2d") }} properties `fillStyle` and `strokeStyle` used to ignore garbage included after a valid color definition; now this is correctly treated as an error. For example, "red blue" as a color used to be treated as "red", when it should have been ignored.
 - The width and height of {{ HTMLElement("canvas") }} elements can now properly be set to 0px; previously, these were getting arbitrarily set to 300px when you tried to do that.
-- Support for the HTML [custom data attributes](/en-US/docs/Web/HTML/Global_attributes/data-*) (`data-*`) has been added. The DOM {{ domxref("HTMLElement/dataset", "dataset") }} property allows to access them.
+- Support for the HTML [custom data attributes](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*) (`data-*`) has been added. The DOM {{ domxref("HTMLElement/dataset", "dataset") }} property allows to access them.
 - When a {{ HTMLElement("textarea") }} element receives focus, the text insertion point is now placed, by default, at the beginning of the text rather than at the end. This makes Firefox's behavior consistent with other browsers.
 
 ### CSS
@@ -34,7 +34,7 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 - {{ cssxref("-moz-orient", "-moz-orient") }}
   - : A new (currently Mozilla-specific) property which lets you control the vertical or horizontal orientation of certain elements (particularly {{ HTMLElement("progress") }}).
 - {{ cssxref("::-moz-progress-bar") }}
-  - : A Mozilla-specific pseudo-element that lets you style the area of an {{ HTMLElement("progress") }} element representing the completed portion of a task.
+  - : A Mozilla-specific pseudo-element that lets you style the area of a {{ HTMLElement("progress") }} element representing the completed portion of a task.
 
 #### Other changes
 
@@ -72,7 +72,7 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 - DOM views, which we never documented, have been removed. This was a bit of implementation detail that was unnecessarily complicating things, so we got rid of it. If you notice this change, you're probably doing something wrong.
 - The `EventTarget` function [`addEventListener()`](/en-US/docs/XPCOM_Interface_Reference/nsIDOMEventTarget)'s `useCapture` parameter is now optional, as it is in WebKit (and as per the latest version of the specification).
 - The `mozResponseArrayBuffer` property of the [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) object has been replaced with the `responseType` and `response` properties.
-- The {{ domxref("HTMLElement/dataset", "dataset") }} property has been added to the [`HTMLElement`](/en-US/docs/Web/API/HTMLElement) interface allowing access to the [`data-*` global attributes](/en-US/docs/Web/HTML/Global_attributes/data-*) of an element.
+- The {{ domxref("HTMLElement/dataset", "dataset") }} property has been added to the [`HTMLElement`](/en-US/docs/Web/API/HTMLElement) interface allowing access to the [`data-*` global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*) of an element.
 - The {{ domxref("CustomEvent") }} interface has been implemented. (see [Firefox bug 427537](https://bugzil.la/427537))
 - For security reasons, `data:` and `javascript:` URLs no longer inherit the security context of the current page when the user enters them in the location bar; instead, a new, empty, security context is created. This means that script loaded by entering `javascript:` URLs in the location bar no longer has access to DOM methods and the like, for example. These URLs continue to work as before when used by script, however.
 
@@ -84,7 +84,7 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 ### SVG
 
 - The {{ SVGAttr("pathLength") }} attribute is now supported.
-- SVG patterns, gradients, and filters now work correctly when loaded from [`data:` URLs](/en-US/docs/Web/URI/Schemes/data).
+- SVG patterns, gradients, and filters now work correctly when loaded from [`data:` URLs](/en-US/docs/Web/URI/Reference/Schemes/data).
 
 ### MathML
 

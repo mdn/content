@@ -1,5 +1,6 @@
 ---
-title: Introduction to the CSS basic box model
+title: Introduction to the CSS box model
+short-title: Introduction
 slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 page-type: guide
 ---
@@ -28,7 +29,7 @@ The thickness of the padding is determined by the {{cssxref("padding-top")}}, {{
 
 The **border area**, bounded by the border edge, extends the padding area to include the element's borders. Its dimensions are the _border-box width_ and the _border-box height_.
 
-The thickness of the borders are determined by the {{cssxref("border-width")}} and shorthand {{cssxref("border")}} properties. If the {{cssxref("box-sizing")}} property is set to `border-box`, the border area's size can be explicitly defined with the {{cssxref("width")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}, {{ cssxref("height") }}, {{cssxref("min-height")}}, and {{cssxref("max-height")}} properties. When there is a background ({{cssxref("background-color")}} or {{cssxref("background-image")}}) set on a box, it extends to the outer edge of the border (i.e. extends underneath the border in z-ordering). This default behavior can be altered with the {{cssxref("background-clip")}} CSS property.
+The thickness of the borders are determined by the {{cssxref("border-width")}} and shorthand {{cssxref("border")}} properties. If the {{cssxref("box-sizing")}} property is set to `border-box`, the border area's size can be explicitly defined with the {{cssxref("width")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}, {{ cssxref("height") }}, {{cssxref("min-height")}}, and {{cssxref("max-height")}} properties. When there is a background ({{cssxref("background-color")}} or {{cssxref("background-image")}}) set on a box, it extends to the outer edge of the border (i.e., extends underneath the border in z-ordering). This default behavior can be altered with the {{cssxref("background-clip")}} CSS property.
 
 ## Margin area
 
@@ -40,23 +41,23 @@ Finally, note that for non-replaced inline elements, the amount of space taken u
 
 ## See also
 
-- [Layout and the containing block](/en-US/docs/Web/CSS/Containing_block)
-- [Introducing the CSS Cascade](/en-US/docs/Web/CSS/Cascade)
-- [Cascade, specificity, and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [Layout and the containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block)
+- [Introducing the CSS Cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade)
+- [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - CSS key concepts:
-  - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
-  - [At-rules](/en-US/docs/Web/CSS/At-rule)
-  - [Comments](/en-US/docs/Web/CSS/Comments)
-  - [Specificity](/en-US/docs/Web/CSS/Specificity)
-  - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
-  - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
-  - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
+  - [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
+  - [At-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule)
+  - [Comments](/en-US/docs/Web/CSS/CSS_syntax/Comments)
+  - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
+  - [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
+  - [Layout modes](/en-US/docs/Glossary/Layout_mode)
+  - [Visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Values
-    - [Initial values](/en-US/docs/Web/CSS/initial_value)
-    - [Computed values](/en-US/docs/Web/CSS/computed_value)
-    - [Used values](/en-US/docs/Web/CSS/used_value)
-    - [Actual values](/en-US/docs/Web/CSS/actual_value)
-  - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
-  - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
-  - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+    - [Initial values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value)
+    - [Computed values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value)
+    - [Used values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value)
+    - [Actual values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value)
+  - [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [Shorthand properties](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+  - {{glossary("Replaced elements")}}

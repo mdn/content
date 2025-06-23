@@ -2,14 +2,12 @@
 title: animation-range-end
 slug: Web/CSS/animation-range-end
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.animation-range-end
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
-The **`animation-range-end`** [CSS](/en-US/docs/Web/CSS) property is used to set the end of an animation's attachment range along its timeline, i.e. where along the timeline an animation will end.
+The **`animation-range-end`** [CSS](/en-US/docs/Web/CSS) property is used to set the end of an animation's attachment range along its timeline, i.e., where along the timeline an animation will end.
 
 The `animation-range-end` and {{cssxref("animation-range-start")}} properties can also be set using the [`animation-range`](/en-US/docs/Web/CSS/animation-range) shorthand property.
 

@@ -7,7 +7,7 @@ browser-compat: api.MediaList
 
 {{APIRef("CSSOM")}}
 
-The **`MediaList`** interface represents the media queries of a stylesheet, e.g. those set using a {{htmlelement("link")}} element's `media` attribute.
+The **`MediaList`** interface represents the media queries of a stylesheet, e.g., those set using a {{htmlelement("link")}} element's `media` attribute.
 
 > **Note:** `MediaList` is a live list; updating the list using properties or methods listed below will immediately update the behavior of the document.
 
@@ -26,6 +26,8 @@ The **`MediaList`** interface represents the media queries of a stylesheet, e.g.
   - : Removes a media query from the `MediaList`.
 - {{domxref("MediaList.item()")}}
   - : A getter that returns a string representing a media query as text, given the media query's index value inside the `MediaList`. This method can also be called using the bracket (`[]`) syntax.
+- {{domxref("MediaList.toString()")}}
+  - : Returns a string representation of this media list in the same format as the object's {{domxref("MediaList.mediaText")}} property.
 
 ## Examples
 

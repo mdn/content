@@ -1,5 +1,5 @@
 ---
-title: ":where()"
+title: :where()
 slug: Web/CSS/:where
 page-type: css-pseudo-class
 browser-compat: css.selectors.where
@@ -9,9 +9,52 @@ browser-compat: css.selectors.where
 
 The **`:where()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) function takes a selector list as its argument, and selects any element that can be selected by one of the selectors in that list.
 
-The difference between `:where()` and {{CSSxRef(":is", ":is()")}} is that `:where()` always has 0 [specificity](/en-US/docs/Web/CSS/Specificity), whereas `:is()` takes on the specificity of the most specific selector in its arguments.
+The difference between `:where()` and {{CSSxRef(":is", ":is()")}} is that `:where()` always has 0 [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity), whereas `:is()` takes on the specificity of the most specific selector in its arguments.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-where.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :where", "tabbed-shorter")}}
+
+```css interactive-example
+ol {
+  list-style-type: upper-alpha;
+  color: darkblue;
+}
+
+/* Not applied to ol, because of lower specificity */
+:where(ol, ul, menu:unsupported) :where(ol, ul) {
+  color: green;
+}
+
+:where(ol, ul) :where(ol, ul) ol {
+  list-style-type: lower-greek;
+  color: chocolate;
+}
+```
+
+```html interactive-example
+<ol>
+  <li>Saturn</li>
+  <li>
+    <ul>
+      <li>Mimas</li>
+      <li>Enceladus</li>
+      <li>
+        <ol>
+          <li>Voyager</li>
+          <li>Cassini</li>
+        </ol>
+      </li>
+      <li>Tethys</li>
+    </ul>
+  </li>
+  <li>Uranus</li>
+  <li>
+    <ol>
+      <li>Titania</li>
+      <li>Oberon</li>
+    </ol>
+  </li>
+</ol>
+```
 
 ## Syntax
 

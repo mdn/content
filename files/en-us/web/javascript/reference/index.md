@@ -62,6 +62,7 @@ If you are new to JavaScript, start with the [guide](/en-US/docs/Web/JavaScript/
 - {{jsxref("BigInt")}}
 - {{jsxref("Math")}}
 - {{jsxref("Date")}}
+- {{jsxref("Temporal")}}
 
 ### Text processing
 
@@ -294,7 +295,7 @@ If you are new to JavaScript, start with the [guide](/en-US/docs/Web/JavaScript/
 - {{jsxref("Operators/Logical_AND_assignment", "&amp;&amp;=")}}
 - {{jsxref("Operators/Logical_OR_assignment", "||=")}}
 - {{jsxref("Operators/Nullish_coalescing_assignment", "??=")}}
-- [`[a, b] = arr`, `{ a, b } = obj`](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+- [`[a, b] = arr`, `{ a, b } = obj`](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring)
 
 ### Yield operators
 
@@ -357,8 +358,10 @@ If you are new to JavaScript, start with the [guide](/en-US/docs/Web/JavaScript/
 
 ## Additional reference pages
 
+- [JavaScript technologies overview](/en-US/docs/Web/JavaScript/Reference/JavaScript_technologies_overview)
+- [Execution model](/en-US/docs/Web/JavaScript/Reference/Execution_model)
 - {{jsxref("Lexical_grammar", "Lexical grammar", "", 1)}}
-- [Data types and data structures](/en-US/docs/Web/JavaScript/Data_structures)
+- [Data types and data structures](/en-US/docs/Web/JavaScript/Guide/Data_structures)
 - [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
 - [Trailing commas](/en-US/docs/Web/JavaScript/Reference/Trailing_commas)
 - [Errors](/en-US/docs/Web/JavaScript/Reference/Errors)

@@ -1,5 +1,5 @@
 ---
-title: ":has-slotted"
+title: :has-slotted
 slug: Web/CSS/:has-slotted
 page-type: css-pseudo-class
 browser-compat: css.selectors.has-slotted
@@ -9,7 +9,8 @@ browser-compat: css.selectors.has-slotted
 
 The **`:has-slotted`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches when the content of a {{HTMLElement("slot")}} element is not empty or not using the default value (see [Using templates and slots](/en-US/docs/Web/API/Web_components/Using_templates_and_slots) for more information).
 
-> [!NOTE] Even a single whitespace text node is sufficient to make `:has-slotted` apply.
+> [!NOTE]
+> Even a single whitespace text node is sufficient to make `:has-slotted` apply.
 
 This only works when used inside CSS placed within a [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM).
 
@@ -56,9 +57,9 @@ This example has two `<slot>` elements, one of which has been assigned some cont
 
 ### Result
 
-The `<slot>` element that has been assigned content matched the `:has-slotted` pseudo-class and has the `color` value of `rebbecapurple` applied.
+The `<slot>` element that has been assigned content matched the `:has-slotted` pseudo-class and has the `color` value of `rebeccapurple` applied.
 
-{{EmbedLiveSample("simple_example",100,300)}}
+{{EmbedLiveSample("simple_example",100,70)}}
 
 ## Specifications
 

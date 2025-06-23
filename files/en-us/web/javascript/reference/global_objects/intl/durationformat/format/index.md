@@ -1,5 +1,6 @@
 ---
 title: Intl.DurationFormat.prototype.format()
+short-title: format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/format
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.DurationFormat.format
@@ -18,7 +19,7 @@ format(duration)
 ### Parameters
 
 - `duration`
-  - : The duration object to be formatted. It should include some or all of the following properties: `months`, `weeks`, `days`, `hours`, `minutes`, `seconds`, `milliseconds`, `microseconds`, `nanoseconds`.
+  - : The duration object to be formatted. It should include some or all of the following properties: `years`, `months`, `weeks`, `days`, `hours`, `minutes`, `seconds`, `milliseconds`, `microseconds`, `nanoseconds`. Each property's value should be an integer, and their signs should be consistent. This can be a {{jsxref("Temporal.Duration")}} object; see the {{jsxref("Temporal.Duration")}} documentation for more information about these properties.
 
 ### Return value
 
@@ -128,5 +129,4 @@ new Intl.DurationFormat("en", { style: "digital", fractionalDigits: 3 }).format(
 ## See also
 
 - {{jsxref("Intl.DurationFormat")}}
-- {{jsxref("Intl.supportedValuesOf()")}}
-- {{jsxref("Intl")}}
+- {{jsxref("Temporal.Duration")}}

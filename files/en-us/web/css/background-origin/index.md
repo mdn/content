@@ -9,7 +9,40 @@ browser-compat: css.properties.background-origin
 
 The **`background-origin`** [CSS](/en-US/docs/Web/CSS) property sets the background's origin: from the border start, inside the border, or inside the padding.
 
-{{EmbedInteractiveExample("pages/css/background-origin.html")}}
+{{InteractiveExample("CSS Demo: background-origin")}}
+
+```css interactive-example-choice
+background-origin: border-box;
+background-repeat: no-repeat;
+```
+
+```css interactive-example-choice
+background-origin: padding-box;
+background-repeat: no-repeat;
+```
+
+```css interactive-example-choice
+background-origin: content-box;
+background-repeat: no-repeat;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">This is the content of the element.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-image: url("/shared-assets/images/examples/leopard.jpg");
+  color: #d73611;
+  text-shadow: 2px 2px black;
+  padding: 20px;
+  border: 10px dashed #333;
+  font-size: 2em;
+  font-weight: bold;
+}
+```
 
 Note that `background-origin` is ignored when {{cssxref("background-attachment")}} is `fixed`.
 
@@ -36,7 +69,7 @@ The `background-origin` property is specified as one of the keyword values liste
 - `border-box`
   - : The background is positioned relative to the border box.
 - `padding-box`
-  - : The background is positioned relative to the padding box.
+  - : The background is positioned relative to the padding box. Default value.
 - `content-box`
   - : The background is positioned relative to the content box.
 
@@ -74,7 +107,8 @@ The `background-origin` property is specified as one of the keyword values liste
 
 ```css
 div {
-  background-image: url("logo.jpg"), url("main-back.png"); /* Applies two images to the background */
+  background-image:
+    url("logo.jpg"), url("main-back.png"); /* Applies two images to the background */
   background-position:
     top right,
     0px 0px;
@@ -90,7 +124,8 @@ In this example the box has a thick dotted border. The first gradient uses the `
 .box {
   margin: 10px 0;
   color: #fff;
-  background: linear-gradient(
+  background:
+    linear-gradient(
       90deg,
       rgb(131 58 180 / 100%) 0%,
       rgb(253 29 29 / 60%) 60%,

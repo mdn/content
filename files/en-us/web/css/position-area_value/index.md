@@ -7,7 +7,7 @@ browser-compat: css.properties.position-area
 
 {{CSSRef}}
 
-The **`<position-area>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) defines the cell or spanned cells of a **position-area grid**, a 3x3 grid whose center cell is an anchor element.
+The **`<position-area>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) defines the cell or spanned cells of a **position-area grid**, a 3x3 grid whose center cell is an anchor element.
 
 The `<position-area>` keyword values can be set as the value of the {{cssxref("position-area")}} property to place an anchor-positioned element in a specific location relative to its associated anchor element.
 
@@ -39,7 +39,7 @@ Position areas work on the concept of a **position-area grid**, a 3x3 grid of ti
 
 ![The position-area grid, as described below](position-area.png)
 
-When used as the value of a positioned element's `position-area` property, the dimensions of the center tile are defined by the [containing block](/en-US/docs/Web/CSS/Containing_block) of the element's default anchor element. The dimensions of the grid's outer edge are defined by the positioned element's containing block. Logical keyterms are generally based on the writing mode and direction of the containing block, except for the `self-*` keyterms, which are calculated from the writing mode of the anchor-positioned element.
+When used as the value of a positioned element's `position-area` property, the dimensions of the center tile are defined by the [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) of the element's default anchor element. The dimensions of the grid's outer edge are defined by the positioned element's containing block. Logical keyterms are generally based on the writing mode and direction of the containing block, except for the `self-*` keyterms, which are calculated from the writing mode of the anchor-positioned element.
 
 The grid tiles are broken up into rows and columns:
 
@@ -88,7 +88,7 @@ The different types of keywords that can be used include:
 - [Coordinate grid keywords](#coordinate_grid_keywords)
 
 > [!NOTE]
-> Generally, you can't mix different types in one value, e.g. physical and logical. To do so results in invalid values. For example, `position-area: bottom inline-end` is not a valid value because it mixes physical and logical keywords.
+> Generally, you can't mix different types in one value, e.g., physical and logical. To do so results in invalid values. For example, `position-area: bottom inline-end` is not a valid value because it mixes physical and logical keywords.
 
 ## Physical grid keywords
 
@@ -144,7 +144,7 @@ If only a single physical keyword is specified in the `position-area` value, the
 
 ## Logical grid keywords
 
-The logical grid keywords specify an area of the position area grid using logical values. With these values, the position and direction are affected by {{cssxref("writing-mode")}} and {{cssxref("direction")}} settings on either the element's [containing block](/en-US/docs/Web/CSS/Containing_block) or, in the case of the `self` keywords, the positioned element itself. There are two types of logical keywords; generic and explicit.
+The logical grid keywords specify an area of the position area grid using logical values. With these values, the position and direction are affected by {{cssxref("writing-mode")}} and {{cssxref("direction")}} settings on either the element's [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) or, in the case of the `self` keywords, the positioned element itself. There are two types of logical keywords; generic and explicit.
 
 ### Generic logical row and column keywords
 
@@ -269,7 +269,7 @@ If only a single logical `<position-area>` keyword is specified, the other value
 
 ## Coordinate grid keywords
 
-These keywords specify the cells of the `position-area` grid using x- and y-coordinate values. Its position/direction will be affected by {{cssxref("writing-mode")}} and/or {{cssxref("direction")}} settings on either an element's [containing block](/en-US/docs/Web/CSS/Containing_block) or, in the case of the `self` keywords, the element itself.
+These keywords specify the cells of the `position-area` grid using x- and y-coordinate values. Its position/direction will be affected by {{cssxref("writing-mode")}} and/or {{cssxref("direction")}} settings on either an element's [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) or, in the case of the `self` keywords, the element itself.
 
 However, the grid cells are defined according to physical axes rather than block/inline directions:
 
@@ -386,5 +386,5 @@ For detailed information on anchor features and usage, see the [CSS anchor posit
 - {{cssxref("position-anchor")}}
 - [`anchor()`](/en-US/docs/Web/CSS/anchor) function
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide
-- [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide
+- [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module

@@ -45,4 +45,4 @@ Use CSS {{cssxref("vertical-align")}} instead, which takes precedence, as demons
 ## See also
 
 - {{cssxref("vertical-align")}}
-- [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
+- [Learn: Styling tables](/en-US/docs/Learn_web_development/Core/Styling_basics/Tables)

@@ -9,7 +9,23 @@ browser-compat: javascript.regular_expressions.unicode_character_class_escape
 
 A **unicode character class escape** is a kind of [character class escape](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape) that matches a set of characters specified by a Unicode property. It's only supported in [Unicode-aware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode). When the [`v`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) flag is enabled, it can also be used to match finite-length strings.
 
-{{EmbedInteractiveExample("pages/js/regexp-unicode-property-escapes.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Regex Unicode character class escape", "taller")}}
+
+```js interactive-example
+const sentence = "A ticket to 大阪 costs ¥2000 👌.";
+
+const regexpEmojiPresentation = /\p{Emoji_Presentation}/gu;
+console.log(sentence.match(regexpEmojiPresentation));
+// Expected output: Array ["👌"]
+
+const regexpNonLatin = /\P{Script_Extensions=Latin}+/gu;
+console.log(sentence.match(regexpNonLatin));
+// Expected output: Array [" ", " ", " 大阪 ", " ¥2000 👌."]
+
+const regexpCurrencyOrPunctuation = /\p{Sc}|\p{P}/gu;
+console.log(sentence.match(regexpCurrencyOrPunctuation));
+// Expected output: Array ["¥", "."]
+```
 
 ## Syntax
 
@@ -39,6 +55,8 @@ A **unicode character class escape** is a kind of [character class escape](/en-U
 `\p` and `\P` are only supported in [Unicode-aware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode). In Unicode-unaware mode, they are [identity escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape) for the `p` or `P` character.
 
 Every Unicode character has a set of properties that describe it. For example, the character [`a`](https://util.unicode.org/UnicodeJsps/character.jsp?a=0061) has the `General_Category` property with value `Lowercase_Letter`, and the `Script` property with value `Latn`. The `\p` and `\P` escape sequences allow you to match a character based on its properties. For example, `a` can be matched by `\p{Lowercase_Letter}` (the `General_Category` property name is optional) as well as `\p{Script=Latn}`. `\P` creates a _complement class_ that consists of code points without the specified property.
+
+When the [`i`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase) flag is set, `\P` character classes are handled slightly differently in `u` and `v` modes. In `u` mode, case-folding happens after subtraction; in `v` mode, case-folding happens before subtraction. More concretely, in `u` mode, `\P{property}` matches `caseFold(allCharacters - charactersWithProperty)`. This means `/\P{Lowercase_Letter}/iu` still matches `"a"`, because `A` is not a `Lowercase_Letter`. In `v` mode, `\P{property}` matches `caseFold(allCharacters) - caseFold(charactersWithProperty)`. This means `/\P{Lowercase_Letter}/iv` does not match `"a"`, because `A` is not even in the set of all case-folded Unicode characters. See also [complement classes and case-insensitive matching](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#complement_classes_and_case-insensitive_matching).
 
 To compose multiple properties, use the [character set intersection](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v-mode_character_class) syntax enabled with the `v` flag, or see [pattern subtraction and intersection](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion#pattern_subtraction_and_intersection).
 

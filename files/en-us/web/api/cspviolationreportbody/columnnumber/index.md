@@ -8,7 +8,7 @@ browser-compat: api.CSPViolationReportBody.columnNumber
 
 {{APIRef("Reporting API")}}
 
-The **`columnNumber`** read-only property of the {{domxref("CSPViolationReportBody")}} interface indicates the column number in the source file that triggered the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) violation.
+The **`columnNumber`** read-only property of the {{domxref("CSPViolationReportBody")}} interface indicates the column number in the source file that triggered the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) violation.
 
 Note that the browser extracts the value from _the global object_ of the file that triggered the violation.
 If the resource that triggers the CSP violation is not loaded, the value will be `null`.
@@ -28,7 +28,7 @@ This example triggers a CSP violation using an inline script, and reports the vi
 
 #### HTML
 
-The HTML file below uses the [`<meta>`](/en-US/docs/Web/HTML/Element/meta) element to set the {{httpheader('Content-Security-Policy')}} `default-src` to `self`, which allows scripts and other resources to be loaded from the same origin, but does not allow inline scripts to be executed.
+The HTML file below uses the [`<meta>`](/en-US/docs/Web/HTML/Reference/Elements/meta) element to set the {{httpheader('Content-Security-Policy')}} `default-src` to `self`, which allows scripts and other resources to be loaded from the same origin, but does not allow inline scripts to be executed.
 The document also includes an inline script, which should therefore trigger a CSP violation.
 
 ```html
@@ -83,7 +83,7 @@ Note that while there might be multiple reports in the returned array, for brevi
 
 #### Results
 
-You can try this out using a [local server](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server).
+You can try this out using a [local server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server).
 Copy the above code into `test/index.html` and `test/main.js` and run the server in the root directory.
 Assuming the address of the local server is `http://127.0.0.1:9999`, you can then load the HTML file from `http://127.0.0.1:9999/test/` (or `http://127.0.0.1:9999/test/index.html`).
 

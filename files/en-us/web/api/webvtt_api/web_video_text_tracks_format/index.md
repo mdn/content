@@ -142,7 +142,7 @@ This is the third
 
 A cue timing indicates the time interval when the cue is shown. It has a start and end time, represented by timestamps. The end time must be greater than the start time, and the start time must be greater than or equal to all previous start times.
 
-Cues may have overlapping timings, unless the WebVTT file is being used for chapters ({{HTMLElement("track")}} [`kind`](/en-US/docs/Web/HTML/Element/track#kind) is `chapters`).
+Cues may have overlapping timings, unless the WebVTT file is being used for chapters ({{HTMLElement("track")}} [`kind`](/en-US/docs/Web/HTML/Reference/Elements/track#kind) is `chapters`).
 
 Each cue timing contains five components:
 
@@ -290,7 +290,7 @@ Older browser versions may support only the following subset of named character 
 ### Cue payload text tags
 
 A number of tags, such as `<b>`, can be used for marking up and styling text within a cue.
-However, if the WebVTT file is used in a {{HTMLElement("track")}} element where the attribute [`kind`](/en-US/docs/Web/HTML/Element/track#kind) is `chapters` then you cannot use tags.
+However, if the WebVTT file is used in a {{HTMLElement("track")}} element where the attribute [`kind`](/en-US/docs/Web/HTML/Reference/Elements/track#kind) is `chapters` then you cannot use tags.
 
 - Timestamp tag
 
@@ -474,7 +474,7 @@ For example, the following `STYLE` block would match all cue text and color it y
 
 ```plain
 STYLE
-cue {
+::cue {
   color: yellow;
 }
 ```
@@ -487,16 +487,16 @@ For example, the following block would match cue payload text marked up with `la
 
 ```plain
 STYLE
-cue(c),
-cue(i),
-cue(b),
-cue(u),
-cue(ruby),
-cue(rt),
-cue(v) {
+::cue(c),
+::cue(i),
+::cue(b),
+::cue(u),
+::cue(ruby),
+::cue(rt),
+::cue(v) {
   color: red;
 }
-cue(lang) {
+::cue(lang) {
   color: yellow;
 }
 ```

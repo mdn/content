@@ -15,8 +15,8 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 - The {{ domxref("HTMLHeadElement") }} `profile` property has been removed, this property has been deprecated since Gecko 2.0.
 - The {{ domxref("HTMLImageElement") }} `x` and `y` properties have been removed.
 - The {{ domxref("HTMLSelectElement") }} `add()` method `before` parameter is now optional.
-- The {{ HTMLElement("body") }} element's [`background`](/en-US/docs/Web/HTML/Element/body#background) attribute is no longer resolved as a URI; this is in compliance with the current HTML specification.
-- The {{ HTMLElement("option") }} element's [`label`](/en-US/docs/Web/HTML/Element/option#label) attribute now reflects the value of the element's text content if the attribute isn't specified.
+- The {{ HTMLElement("body") }} element's [`background`](/en-US/docs/Web/HTML/Reference/Elements/body#background) attribute is no longer resolved as a URI; this is in compliance with the current HTML specification.
+- The {{ HTMLElement("option") }} element's [`label`](/en-US/docs/Web/HTML/Reference/Elements/option#label) attribute now reflects the value of the element's text content if the attribute isn't specified.
 
 #### Canvas
 
@@ -45,7 +45,7 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 - The top-level {{ MathMLElement("math") }} element now accepts any attributes of the {{ MathMLElement("mstyle") }} element.
 - Support for [Asana Math](https://www.ctan.org/tex-archive/fonts/Asana-Math/) fonts has been added.
 - The `medium` line thickness of fraction bars in {{ MathMLElement("mfrac") }} elements has been corrected to match the default thickness.
-- [Names for negative spaces](</en-US/docs/Web/MathML/Values#constants_(namedspaces)>) are now supported.
+- [Names for negative spaces](</en-US/docs/Web/MathML/Reference/Values#constants_(namedspaces)>) are now supported.
 
 ### DOM
 

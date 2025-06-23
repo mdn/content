@@ -18,7 +18,7 @@ Any valid JavaScript value.
 
 ```js
 window.addEventListener("error", (ev) => {
-  console.log("The error instance: " + ev.error);
+  console.log(`The error instance: ${ev.error}`);
 });
 ```
 

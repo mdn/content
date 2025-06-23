@@ -43,16 +43,25 @@ browser.alarms.create(
     - `periodInMinutes` {{optional_inline}}
       - : `double`. If this is specified, the alarm will fire again every `periodInMinutes` after its initial firing. If you specify this value you may omit both `when` and `delayInMinutes`, and the alarm will then fire initially after `periodInMinutes`. If `periodInMinutes` is not specified, the alarm will only fire once.
 
+### Return value
+
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with no arguments.
+
 ## Examples
 
 Create a one-time delay-based alarm with "" for the name:
 
 ```js
-const delayInMinutes = 5;
+function onAdded() {
+  console.log("Alarm Added!");
+}
 
-browser.alarms.create({
+let delayInMinutes = 5;
+
+let addingAlarm = browser.alarms.create({
   delayInMinutes,
 });
+addingAlarm.then(onAdded);
 ```
 
 Create a periodic delay-based alarm named "my-periodic-alarm":

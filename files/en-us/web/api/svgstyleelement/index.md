@@ -25,7 +25,7 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 
 - {{domxref("SVGStyleElement.title")}}
 
-  - : A string corresponding to the [`title`](/en-US/docs/Web/SVG/Element/style#title) attribute of the given element.
+  - : A string corresponding to the [`title`](/en-US/docs/Web/SVG/Reference/Element/style#title) attribute of the given element.
 
 - {{domxref("SVGStyleElement.sheet")}} {{ReadOnlyInline}}
 
@@ -119,7 +119,7 @@ This example demonstrates how to get and set the properties of a style element, 
 
 ### HTML
 
-The HTML contains an SVG definition for a [`<circle>`](/en-US/docs/Web/SVG/Element/circle) with a [`<style>`](/en-US/docs/Web/SVG/Element/style) element, along with an HTML [`<button>`](/en-US/docs/Web/HTML/Element/button) element that will be used to enable and disable the style, and an HTML [`<textarea>`](/en-US/docs/Web/HTML/Element/button) element for logging the property values.
+The HTML contains an SVG definition for a [`<circle>`](/en-US/docs/Web/SVG/Reference/Element/circle) with a [`<style>`](/en-US/docs/Web/SVG/Reference/Element/style) element, along with an HTML [`<button>`](/en-US/docs/Web/HTML/Reference/Elements/button) element that will be used to enable and disable the style, and an HTML [`<textarea>`](/en-US/docs/Web/HTML/Reference/Elements/button) element for logging the property values.
 
 ```html
 <button>Disable</button>
@@ -158,7 +158,7 @@ This is called after initialization, whenever the frame resizes, and if the butt
 const log = document.getElementById("log");
 
 function setLogText() {
-  //Log current values of properties
+  // Log current values of properties
   log.value = `style.media: ${style.media} (frame width: ${window.innerWidth})\n`; // 'all' by default
   log.value += `style.title: ${style.title}\n`; // no default value
   log.value += `style.disabled: ${style.disabled}\n`; // 'false' by default

@@ -34,8 +34,8 @@ properties:
 
 - `fmt`
 
-  - : A text string that indicates the format of the attStmt. The [WebAuthn specification defines a number of formats](https://www.w3.org/TR/webauthn/#defined-attestation-formats); however, formats may also be defined
-    in other specifications and registered in an [IANA registry](https://www.w3.org/TR/webauthn/#sctn-att-fmt-reg). Formats
+  - : A text string that indicates the format of the attStmt. The [WebAuthn specification defines a number of formats](https://w3c.github.io/webauthn/#sctn-defined-attestation-formats); however, formats may also be defined
+    in other specifications and registered in an [IANA registry](https://w3c.github.io/webauthn/#sctn-att-fmt-reg). Formats
     defined by WebAuthn are:
 
     - `"packed"`
@@ -47,11 +47,11 @@ properties:
 
 - `attStmt`
   - : An attestation statement that is of the format defined by `"fmt"`. For
-    now, [see the WebAuthn specification for details on each format](https://www.w3.org/TR/webauthn/#defined-attestation-formats).
+    now, [see the WebAuthn specification for details on each format](https://w3c.github.io/webauthn/#sctn-defined-attestation-formats).
 
 ## Examples
 
-See [Creating a public key credential using the WebAuthn API](/en-US/docs/Web/API/CredentialsContainer/create#creating_a_public_key_credential_using_the_webauthn_api) for a detailed example.
+See [Creating a public key credential](/en-US/docs/Web/API/CredentialsContainer/create#creating_a_public_key_credential) for a detailed example.
 
 ## Specifications
 

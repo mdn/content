@@ -11,7 +11,23 @@ The **`function*`** keyword can be used to define a generator function inside an
 
 You can also define generator functions using the [`function*` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function*).
 
-{{EmbedInteractiveExample("pages/js/expressions-functionasteriskexpression.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: function* expression", "taller")}}
+
+```js interactive-example
+const foo = function* () {
+  yield "a";
+  yield "b";
+  yield "c";
+};
+
+let str = "";
+for (const val of foo()) {
+  str += val;
+}
+
+console.log(str);
+// Expected output: "abc"
+```
 
 ## Syntax
 

@@ -8,7 +8,7 @@ browser-compat: api.HTMLButtonElement.formAction
 
 {{APIRef("HTML DOM")}}
 
-The **`formAction`** property of the {{domxref("HTMLButtonElement")}} interface is the URL of the program that is executed on the server when the form that owns this control is submitted. It reflects the value of the `<button>`'s [`formaction`](/en-US/docs/Web/HTML/Element/button#formaction) attribute.
+The **`formAction`** property of the {{domxref("HTMLButtonElement")}} interface is the URL of the program that is executed on the server when the form that owns this control is submitted. It reflects the value of the `<button>`'s [`formaction`](/en-US/docs/Web/HTML/Reference/Elements/button#formaction) attribute.
 
 The value overrides the {{domxref("HTMLFormElement.action", "action")}} property of the {{domxref("HTMLFormElement")}} interface if the form is submitted via the button. This property can be retrieved or set.
 
@@ -36,4 +36,4 @@ btnEl.formAction = "/cgi-bin/publish";
 - {{domxref("HTMLButtonElement.formMethod")}}
 - {{domxref("HTMLButtonElement.formNoValidate")}}
 - {{domxref("HTMLButtonElement.formTarget")}}
-- [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data)
+- [Sending form data](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)

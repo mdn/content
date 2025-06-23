@@ -8,7 +8,7 @@ browser-compat: api.CSPViolationReportBody.referrer
 
 {{APIRef("Reporting API")}}
 
-The **`referrer`** read-only property of the {{domxref("CSPViolationReportBody")}} interface is a string that represents the URL of the referring page of the resource who's [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) was violated.
+The **`referrer`** read-only property of the {{domxref("CSPViolationReportBody")}} interface is a string that represents the URL of the referring page of the resource who's [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) was violated.
 
 The referrer is the page that caused the page with the CSP violation to be loaded. For example, if we followed a link to a page with a CSP violation, the `referrer` is the page that we navigated from.
 
@@ -47,7 +47,7 @@ This page just contains a link to another page `../report_sample/index.html`.
 ```
 
 The `../report_sample/index.html` HTML file is defined below.
-This uses the [`<meta>`](/en-US/docs/Web/HTML/Element/meta) element to set the {{httpheader('Content-Security-Policy')}} `script-src-elem` to `self`, which allows scripts to be loaded from the same domain, but does not allow inline scripts to be executed.
+This uses the [`<meta>`](/en-US/docs/Web/HTML/Reference/Elements/meta) element to set the {{httpheader('Content-Security-Policy')}} `script-src-elem` to `self`, which allows scripts to be loaded from the same domain, but does not allow inline scripts to be executed.
 The document also includes an inline script, which will trigger a CSP violation.
 
 ```html

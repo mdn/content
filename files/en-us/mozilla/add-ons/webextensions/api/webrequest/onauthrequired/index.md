@@ -33,7 +33,7 @@ The listener can respond in one of four ways:
 
     - in addListener, pass `"asyncBlocking"` in Chrome and Firefox or `"blocking"` in Firefox in the `extraInfoSpec` parameter
     - If `"blocking"` is provided, the extension can return a `webRequest.BlockingResponse` object or a Promise that resolves to a `webRequest.BlockingResponse` object
-    - If `"asyncBlocking"` is provided, the event listener function receives a `asyncCallback` function as its second parameter. `asyncCallback`can be called asynchronously and takes a`webRequest.BlockingResponse` object as its only parameter
+    - If `"asyncBlocking"` is provided, the event listener function receives a `asyncCallback` function as its second parameter. `asyncCallback` can be called asynchronously and takes a `webRequest.BlockingResponse` object as its only parameter
 
       > [!NOTE]
       > Chrome does not support a Promise as a return value ([Chromium issue 1510405](https://crbug.com/1510405)). For alternatives, see [the return value of the `listener`](#listener).
@@ -84,7 +84,7 @@ Events have three functions:
   - : The function called when this event occurs. The function is passed these arguments:
 
     - `details`
-      - : `object`. Details about the request. See the [details](#details_2) section for more information.
+      - : `object`. Details about the request. See the [details](#details) section for more information.
     - `asyncCallback` {{optional_inline}}
 
       - : A function to call, at most once, to asynchronously modify the request object.
@@ -158,7 +158,7 @@ Events have three functions:
     - `proxyDNS`
       - : `boolean`. True if the proxy performs domain name resolution based on the hostname supplied, meaning that the client should not do its own DNS lookup.
     - `failoverTimeout`
-      - : `integer`. Failover timeout in seconds. If the connection fails to connect the proxy server after this number of seconds, the next proxy server in the array returned from [FindProxyForURL()](</en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy#findproxyforurl()_return_value>) is used.
+      - : `integer`. Failover timeout in seconds. If the connection fails to connect the proxy server after this number of seconds, the next proxy server in the array returned from [FindProxyForURL()](/en-US/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file) is used.
 
 - `realm` {{optional_inline}}
   - : `string`. The authentication [realm](https://datatracker.ietf.org/doc/html/rfc1945#section-11) provided by the server, if there is one.
@@ -167,7 +167,7 @@ Events have three functions:
 - `responseHeaders` {{optional_inline}}
   - : {{WebExtAPIRef('webRequest.HttpHeaders')}}. The HTTP response headers received with this response.
 - `scheme`
-  - : `string`. The authentication scheme: `"basic"` or `"digest`".
+  - : `string`. The authentication scheme: `"basic"` or `"digest"`.
 - `statusCode`
   - : `integer`. Standard HTTP status code returned by the server.
 - `statusLine`
@@ -187,9 +187,9 @@ Events have three functions:
   - : `object`. The type of tracking associated with the request, if the request is classified by [Firefox Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop). This is an object with these properties:
 
     - `firstParty`
-      - : `array` of `strings`. Classification flags for the request's first party.
+      - : `array` of `string`. Classification flags for the request's first party.
     - `thirdParty`
-      - : `array` of `strings`. Classification flags for the request or its window hierarchy's third parties.
+      - : `array` of `string`. Classification flags for the request or its window hierarchy's third parties.
 
     The classification flags include:
 
@@ -304,13 +304,12 @@ function provideCredentialsAsync(requestDetails) {
   if (pendingRequests.includes(requestDetails.requestId)) {
     console.log(`bad credentials for: ${requestDetails.requestId}`);
     return { cancel: true };
-  } else {
-    pendingRequests.push(requestDetails.requestId);
-    console.log(`providing credentials for: ${requestDetails.requestId}`);
-    // we can return a promise that will be resolved
-    // with the stored credentials
-    return browser.storage.local.get(null);
   }
+  pendingRequests.push(requestDetails.requestId);
+  console.log(`providing credentials for: ${requestDetails.requestId}`);
+  // we can return a promise that will be resolved
+  // with the stored credentials
+  return browser.storage.local.get(null);
 }
 
 browser.webRequest.onAuthRequired.addListener(

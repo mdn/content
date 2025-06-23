@@ -83,7 +83,7 @@ _No changes._
 
 #### DOM events
 
-- CSS transition ([Firefox bug 1530239](https://bugzil.la/1530239)) and animation ([Firefox bug 1531605](https://bugzil.la/1531605)) events now fire on disabled (e.g. form) elements.
+- CSS transition ([Firefox bug 1530239](https://bugzil.la/1530239)) and animation ([Firefox bug 1531605](https://bugzil.la/1531605)) events now fire on disabled (e.g., form) elements.
 - {{domxref("InputEvent.data")}} and {{domxref("InputEvent.dataTransfer")}} have been implemented ([Firefox bug 998941](https://bugzil.la/998941)).
 - The `insertFromPasteAsQuotation` {{domxref("InputEvent.inputType")}} value is now supported ([Firefox bug 1532527](https://bugzil.la/1532527)).
 
@@ -93,7 +93,7 @@ _No changes._
 
 #### Media, Web Audio, and WebRTC
 
-- The [AV1 video codec](/en-US/docs/Web/Media/Formats/Video_codecs#av1) is now supported on Linux.
+- The [AV1 video codec](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#av1) is now supported on Linux.
 - [dav1d](https://code.videolan.org/videolan/dav1d) is now the default media decoder for [AV1](https://aomediacodec.github.io/av1-spec/av1-spec.pdf) (see for example [Firefox bug 1533742](https://bugzil.la/1533742) and [Firefox bug 1535038](https://bugzil.la/1535038)).
 - Calling {{domxref("RTCPeerConnection.addTrack()")}} without specifying any streams to which to add the new track now works as expected: it adds a streamless track to the connection. Each peer is responsible for managing the association between the track and any stream on its end ([Firefox bug 1231414](https://bugzil.la/1231414)).
 - The {{domxref("MediaDeviceInfo.groupId")}} property is now implemented ([Firefox bug 1213453](https://bugzil.la/1213453)). While it has existed in Firefox since Firefox 39, it did not actually gather related devices together into the same group IDs.
@@ -133,7 +133,7 @@ _No changes._
 
 ### API changes
 
-- Using the `proxy.settings.set()` method to change `{{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}}` values will throw an exception unless the extension was granted private window access by the user ([Firefox bug 1525447](https://bugzil.la/1525447)).
+- Using the `proxy.settings.set()` method to change {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} values will throw an exception unless the extension was granted private window access by the user ([Firefox bug 1525447](https://bugzil.la/1525447)).
 
 ### Manifest changes
 

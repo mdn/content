@@ -29,13 +29,13 @@ A recipe consists of:
 
 ## Steps to publish a recipe
 
-To create a recipe and add it to the CSS Layout Cookbook, follow these steps:
+To create a recipe and add it to the CSS layout cookbook, follow these steps:
 
 1. [Build a pattern](#1._build_a_pattern)
 2. [Create a live example](#2._create_a_live_example)
 3. [Create a downloadable version](#3._create_a_downloadable_version)
-4. [Open a pull request](#4._open_a_pull_request_with_your_example)
-5. [Add your content to MDN](#5._create_your_page)
+4. [Open a pull request with your example](#4._open_a_pull_request_with_your_example)
+5. [Create your page](#5._create_your_page)
 
 ### 1. Build a pattern
 
@@ -59,7 +59,7 @@ The important parts of this template are as follows:
 
 - The editable CSS from the second `<head>` block must also be copied into the `playable-css` section.
 
-A simple working example is [center.html](https://github.com/mdn/css-examples/blob/main/css-cookbook/center.html), which is embedded on the page [Center an element](/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element). You can use this to see how to add the various bits correctly.
+A working example is [center.html](https://github.com/mdn/css-examples/blob/main/css-cookbook/center.html), which is embedded on the page [Center an element](/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element). You can use this to see how to add the various bits correctly.
 
 If you've forked the repo and have our CSS and JavaScript files with your example, opening your live example in a browser should display everything working exactly as it would appear on an MDN page.
 

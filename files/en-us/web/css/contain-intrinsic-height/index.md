@@ -43,7 +43,7 @@ The following values may be specified for an element.
 
 ## Description
 
-The property is commonly applied alongside elements that can trigger size containment, such as [`contain: size`](/en-US/docs/Web/CSS/contain) and [`content-visibility`](/en-US/docs/Web/CSS/content-visibility), and may also be set using the [`contain-intrinsic-size`](/en-US/docs/Web/CSS/contain-intrinsic-size) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties).
+The property is commonly applied alongside elements that can trigger size containment, such as [`contain: size`](/en-US/docs/Web/CSS/contain) and [`content-visibility`](/en-US/docs/Web/CSS/content-visibility), and may also be set using the [`contain-intrinsic-size`](/en-US/docs/Web/CSS/contain-intrinsic-size) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties).
 
 Size containment allows a user agent to lay out an element as though it had a fixed size, preventing unnecessary reflows by avoiding the re-rendering of child elements to determine the actual size (thereby improving user experience).
 By default, size containment treats elements as though they had no contents, and may collapse the layout in the same way as if the contents had no height (or width).

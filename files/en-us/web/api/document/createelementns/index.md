@@ -23,17 +23,20 @@ createElementNS(namespaceURI, qualifiedName, options)
 ### Parameters
 
 - `namespaceURI`
-  - : A string that specifies the [namespace URI](https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI) to associate with the element.
-    The {{DOMxRef("element.namespaceURI", "namespaceURI")}} property of the created element is initialized with the value of _namespaceURI_.
-    See [Valid Namespace URIs](#important_namespace_uris).
+  - : A string that specifies the {{DOMxRef("element.namespaceURI", "namespaceURI")}} to associate with the element. Some important namespace URIs are:
+    - [HTML](/en-US/docs/Web/HTML)
+      - : `http://www.w3.org/1999/xhtml`
+    - [SVG](/en-US/docs/Web/SVG)
+      - : `http://www.w3.org/2000/svg`
+    - [MathML](/en-US/docs/Web/MathML)
+      - : `http://www.w3.org/1998/Math/MathML`
 - `qualifiedName`
   - : A string that specifies the type of element to be created.
     The {{DOMxRef("node.nodeName", "nodeName")}} property of the created element is initialized with the value of _qualifiedName_.
 - `options` {{Optional_Inline}}
 
   - : An optional `ElementCreationOptions` object containing a single property named `is`, whose value is the tag name for a custom element previously defined using `customElements.define()`.
-    For backwards compatibility with previous versions of the [Custom Elements specification](https://www.w3.org/TR/custom-elements/),
-    some browsers will allow you to pass a string here instead of an object, where the string's value is the custom element's tag name.
+    For backwards compatibility, some browsers allow you to pass a string here instead of an object, where the string's value is the custom element's tag name.
     See [Extending native HTML elements](https://web.dev/articles/web-components) for more information on how to use this parameter.
 
     The new element will be given an `is` attribute whose value is the custom element's tag name. Custom elements are an experimental feature only available in some browsers.
@@ -45,18 +48,9 @@ The new {{DOMxRef("Element")}}.
 ### Exceptions
 
 - `NamespaceError` {{domxref("DOMException")}}
-  - : Thrown if the [`namespaceURI`](#namespaceuri) value is not a valid [namespace URI](https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI).
+  - : Thrown if the [`namespaceURI`](#namespaceuri) value is not a valid namespace URI.
 - `InvalidCharacterError` {{domxref("DOMException")}}
-  - : Thrown if the [`qualifiedName`](#qualifiedname) value is not a valid [XML name](https://www.w3.org/TR/REC-xml/#dt-name); for example, it starts with a number, hyphen, or period, or contains characters other than alphanumeric characters, underscores, hyphens, or periods.
-
-## Important Namespace URIs
-
-- [HTML](/en-US/docs/Web/HTML)
-  - : `http://www.w3.org/1999/xhtml`
-- [SVG](/en-US/docs/Web/SVG)
-  - : `http://www.w3.org/2000/svg`
-- [MathML](/en-US/docs/Web/MathML)
-  - : `http://www.w3.org/1998/Math/MathML`
+  - : Thrown if the [`qualifiedName`](#qualifiedname) value is not a valid [XML name](https://www.w3.org/TR/xml/#dt-name); for example, it starts with a number, hyphen, or period, or contains characters other than alphanumeric characters, underscores, hyphens, or periods.
 
 ## Examples
 
@@ -71,19 +65,20 @@ elements from two different namespaces within a single document:
       title="||Working with elements||"
       onload="init()">
 
-<script type="application/javascript"><![CDATA[
- let container;
- let newDiv;
- let textNode;
+<script><![CDATA[
+let container;
+let newDiv;
+let textNode;
 
- function init(){
-   container = document.getElementById("ContainerBox");
-   newDiv = document.createElementNS("http://www.w3.org/1999/xhtml", "div");
-   textNode = document.createTextNode("This is text that was constructed dynamically with createElementNS and createTextNode then inserted into the document using appendChild.");
-   newDiv.appendChild(textNode);
-   container.appendChild(newDiv);
- }
-
+function init() {
+  container = document.getElementById("ContainerBox");
+  newDiv = document.createElementNS("http://www.w3.org/1999/xhtml", "div");
+  textNode = document.createTextNode(
+    "This is text that was constructed dynamically with createElementNS and createTextNode then inserted into the document using appendChild.",
+  );
+  newDiv.appendChild(textNode);
+  container.appendChild(newDiv);
+}
 ]]></script>
 
  <vbox id="ContainerBox" flex="1">
@@ -113,4 +108,3 @@ elements from two different namespaces within a single document:
 - {{DOMxRef("document.createElement()")}}
 - {{DOMxRef("document.createTextNode()")}}
 - {{DOMxRef("Element.namespaceURI")}}
-- [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114/)

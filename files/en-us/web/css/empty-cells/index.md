@@ -9,7 +9,50 @@ browser-compat: css.properties.empty-cells
 
 The **`empty-cells`** [CSS](/en-US/docs/Web/CSS) property sets whether borders and backgrounds appear around {{htmlelement("table")}} cells that have no visible content.
 
-{{EmbedInteractiveExample("pages/css/empty-cells.html")}}
+{{InteractiveExample("CSS Demo: empty-cells")}}
+
+```css interactive-example-choice
+empty-cells: show;
+```
+
+```css interactive-example-choice
+empty-cells: hide;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <table class="transition-all" id="example-element">
+    <tr>
+      <th>Client Name</th>
+      <th>Age</th>
+    </tr>
+    <tr>
+      <td></td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <td>Louise Q.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Owen B.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Stan L.</td>
+      <td>71</td>
+    </tr>
+  </table>
+</section>
+```
+
+```css interactive-example
+th,
+td {
+  border: 2px solid #a19;
+  padding: 0.25rem 0.5rem;
+}
+```
 
 This property has an effect only when the {{cssxref("border-collapse")}} property is `separate`.
 
@@ -108,5 +151,5 @@ th {
 ## See also
 
 - {{cssxref("border-collapse")}}
-- [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
+- [Learn: Styling tables](/en-US/docs/Learn_web_development/Core/Styling_basics/Tables)
 - [CSS table](/en-US/docs/Web/CSS/CSS_table) module

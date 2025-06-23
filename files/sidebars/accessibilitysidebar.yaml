@@ -3,71 +3,73 @@
 sidebar:
   - type: section
     link: /Web/Accessibility
-    title: Accessibility
-  - title: Guides
-    details: closed
-    children:
-      - /Web/Accessibility/Information_for_Web_authors
-      - /Web/Accessibility/Accessibility:_What_users_can_to_to_browse_safely
-      - /Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
-      - /Web/Accessibility/Keyboard-navigable_JavaScript_widgets
-      - /Web/Accessibility/Mobile_accessibility_checklist
-      - /Web/Accessibility/Understanding_WCAG
-      - /Web/Accessibility/Cognitive_accessibility
-      - /Web/Accessibility/Accessibility_and_Spacial_Patterns
-      - /Web/Accessibility/Understanding_Colors_and_Luminance
-      - /Web/Accessibility/Seizure_disorders
-  - title: Learn
-    details: closed
-    children:
-      - /Learn/Accessibility/
-      - /Learn/Accessibility/What_is_accessibility
-      - /Learn/Accessibility/HTML
-      - /Learn/Accessibility/CSS_and_JavaScript
-      - /Learn/Accessibility/WAI-ARIA_basics
-      - /Learn/Accessibility/Multimedia
-      - /Learn/Accessibility/Mobile
-      - /Learn/Accessibility/Accessibility_troubleshooting
-  - type: listSubPages
-    path: /Web/Accessibility/Understanding_WCAG
-    title: WCAG
-    details: closed
   - type: section
-    link: Web/Accessibility/ARIA
-    title: ARIA
-  - title: ARIA_guides
+    link: /Web/Accessibility/Guides
+  - /Web/Accessibility/Guides/Information_for_Web_authors
+  - /Web/Accessibility/Guides/Browsing_safely
+  - /Web/Accessibility/Guides/Accessible_web_applications_and_widgets
+  - /Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets
+  - /Web/Accessibility/Guides/Mobile_accessibility_checklist
+  - /Web/Accessibility/Guides/Cognitive_accessibility
+  - /Web/Accessibility/Guides/Accessibility_and_Spatial_Patterns
+  - /Web/Accessibility/Guides/Colors_and_Luminance
+  - /Web/Accessibility/Guides/Seizure_disorders
+  - type: listSubPages
+    path: /Web/Accessibility/Guides/Understanding_WCAG
+    link: /Web/Accessibility/Guides/Understanding_WCAG
+    title: Understanding WCAG
+    details: closed
+  - link: /Learn_web_development/Core/Accessibility
+    title: Beginners
     details: closed
     children:
-      - /Web/Accessibility/ARIA/ARIA_Guides
-      - /Web/Accessibility/ARIA/ARIA_Live_Regions
-      - /Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
-      - /Web/Accessibility/ARIA/ARIA_Techniques
-      - /Web/Accessibility/ARIA/Multipart_labels
-      - /Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs
-  - type: listSubPages
-    path: /Web/Accessibility/ARIA/attributes
-    title: ARIA states and properties
+      - /Learn_web_development/Core/Accessibility/What_is_accessibility
+      - /Learn_web_development/Core/Accessibility/Tooling
+      - /Learn_web_development/Core/Accessibility/HTML
+      - /Learn_web_development/Core/Accessibility/CSS_and_JavaScript
+      - /Learn_web_development/Core/Accessibility/WAI-ARIA_basics
+      - /Learn_web_development/Core/Accessibility/Multimedia
+      - /Learn_web_development/Core/Accessibility/Mobile
+      - /Learn_web_development/Core/Accessibility/Accessibility_troubleshooting
+  - type: section
+    link: /Web/Accessibility/ARIA
+    title: ARIA
+  - link: /Web/Accessibility/ARIA/Guides
+    title: ARIA_guides
     details: closed
+    children:
+      - /Web/Accessibility/ARIA/Guides/Live_regions
+      - /Web/Accessibility/ARIA/Guides/Screen_Reader_Implementors
+      - /Web/Accessibility/ARIA/Guides/Techniques
+      - /Web/Accessibility/ARIA/Guides/Multipart_labels
+  - type: section
+    link: /Web/Accessibility/ARIA/How_to
+  - /Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs
+  - type: section
+    link: /Web/Accessibility/ARIA/Reference
+    title: ARIA reference
   - type: listSubPages
-    path: /Web/Accessibility/ARIA/roles
-    title: ARIA roles
+    path: /Web/Accessibility/ARIA/Reference/Attributes
+    link: /Web/Accessibility/ARIA/Reference/Attributes
     details: closed
+    code: true
+  - type: listSubPages
+    path: /Web/Accessibility/ARIA/Reference/Roles
+    link: /Web/Accessibility/ARIA/Reference/Roles
+    details: closed
+    code: true
 l10n:
+  de:
+    ARIA: ARIA
+    ARIA_guides: ARIA-Anleitungen
   en-US:
-    Accessibility: Accessibility
-    Guides: Guides
-    Learn: Learn accessibility
+    Beginners: Tutorials for beginners
     ARIA: ARIA
     ARIA_guides: ARIA guides
-    ARIA states and properties: ARIA states and properties
-    ARIA roles: ARIA roles
-    WCAG: WCAG
+  ja:
+    Beginners: 初心者向けチュートリアル
+    ARIA: ARIA
+    ARIA_guides: ARIA ガイド
   zh-CN:
-    Accessibility: 无障碍
-    Guides: 指南
-    Learn: 学习无障碍
     ARIA: ARIA
     ARIA_guides: ARIA 指南
-    ARIA states and properties: ARIA 状态及属性
-    ARIA roles: ARIA 角色
-    WCAG: WCAG

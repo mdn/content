@@ -1,5 +1,6 @@
 ---
 title: RegExp.prototype.test()
+short-title: test()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/test
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.test
@@ -16,7 +17,29 @@ set (e.g., `/foo/g` or `/foo/y`). They store a
 internally, `test()` can be used to iterate over multiple matches in a string
 of text (with capture groups).
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-test.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.test()", "taller")}}
+
+```js interactive-example
+const str = "table football";
+
+const regex = /fo+/;
+const globalRegex = /fo+/g;
+
+console.log(regex.test(str));
+// Expected output: true
+
+console.log(globalRegex.lastIndex);
+// Expected output: 0
+
+console.log(globalRegex.test(str));
+// Expected output: true
+
+console.log(globalRegex.lastIndex);
+// Expected output: 9
+
+console.log(globalRegex.test(str));
+// Expected output: false
+```
 
 ## Syntax
 

@@ -1,5 +1,6 @@
 ---
 title: Intl.PluralRules.prototype.resolvedOptions()
+short-title: resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/resolvedOptions
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.PluralRules.resolvedOptions
@@ -9,7 +10,21 @@ browser-compat: javascript.builtins.Intl.PluralRules.resolvedOptions
 
 The **`resolvedOptions()`** method of {{jsxref("Intl.PluralRules")}} instances returns a new object with properties reflecting the options computed during initialization of this `PluralRules` object.
 
-{{EmbedInteractiveExample("pages/js/intl-pluralrules-prototype-resolvedoptions.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.PluralRules.prototype.resolvedOptions()")}}
+
+```js interactive-example
+const pluralRules1 = new Intl.PluralRules("uk");
+const options1 = pluralRules1.resolvedOptions();
+
+const pluralRules2 = new Intl.PluralRules("bn");
+const options2 = pluralRules2.resolvedOptions();
+
+console.log(options1.pluralCategories);
+// Expected output: Array ["few", "many", "one", "other"]
+
+console.log(options2.pluralCategories);
+// Expected output: Array ["one", "other"]
+```
 
 ## Syntax
 
@@ -64,9 +79,9 @@ console.log(usedOptions.pluralCategories); // Array ["one", "other"]
 console.log(usedOptions.type); // "cardinal"
 console.log(usedOptions.minimumIntegerDigits); // 1
 console.log(usedOptions.minimumFractionDigits); // undefined (maximumSignificantDigits is set)
-console.log(usedOptions.maximumFractionDigits); //undefined (maximumSignificantDigits is set)
+console.log(usedOptions.maximumFractionDigits); // undefined (maximumSignificantDigits is set)
 console.log(usedOptions.minimumSignificantDigits); // 1
-console.log(usedOptions.maximumSignificantDigits); //2
+console.log(usedOptions.maximumSignificantDigits); // 2
 console.log(usedOptions.roundingIncrement); // 1
 console.log(usedOptions.roundingMode); // "halfExpand"
 console.log(usedOptions.roundingPriority); // "auto"

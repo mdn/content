@@ -1,5 +1,5 @@
 ---
-title: "-moz-orient"
+title: -moz-orient
 slug: Web/CSS/-moz-orient
 page-type: css-property
 status:
@@ -32,10 +32,7 @@ The `-moz-orient` property is specified as one of the keyword values chosen from
 
 ## Formal syntax
 
-```plain
--moz-orient =
-  inline | block | horizontal | vertical
-```
+{{CSSSyntaxRaw(`-moz-orient = inline | block | horizontal | vertical`)}}
 
 ## Examples
 

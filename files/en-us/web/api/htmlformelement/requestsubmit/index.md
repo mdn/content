@@ -24,9 +24,9 @@ requestSubmit(submitter)
 
   - : A {{Glossary("submit button")}} that is a member of the form.
 
-    If the `submitter` specifies `form*` attributes, they [will override](/en-US/docs/Glossary/Submit_button#overriding_the_forms_behavior) the form's submission behavior (e.g. `formmethod="POST"`).
+    If the `submitter` specifies `form*` attributes, they [will override](/en-US/docs/Glossary/Submit_button#overriding_the_forms_behavior) the form's submission behavior (e.g., `formmethod="POST"`).
 
-    If the `submitter` has a `name` attribute or is an `{{HtmlElement('input/image', '&lt;input type="image"&gt;')}}`, its data [will be included](/en-US/docs/Glossary/Submit_button#form_data_entries) in the form submission (e.g. `btnName=btnValue`).
+    If the `submitter` has a `name` attribute or is an `{{HtmlElement('input/image', '&lt;input type="image"&gt;')}}`, its data [will be included](/en-US/docs/Glossary/Submit_button#form_data_entries) in the form submission (e.g., `btnName=btnValue`).
 
     If you omit the `submitter` parameter, the form element itself is used as the submitter.
 
@@ -41,7 +41,7 @@ None ({{jsxref("undefined")}}).
 - `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if the specified `submitter` isn't a member of the form on
     which `requestSubmit()` was called. The submitter must be either a
-    descendant of the form element or must have a [`form`](/en-US/docs/Web/HTML/Element/input#form)
+    descendant of the form element or must have a [`form`](/en-US/docs/Web/HTML/Reference/Elements/input#form)
     attribute referring to the form.
 
 ## Usage notes

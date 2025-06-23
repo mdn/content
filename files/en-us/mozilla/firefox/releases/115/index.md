@@ -12,13 +12,13 @@ This article provides information about the changes in Firefox 115 that affect d
 
 ### HTML
 
-- The [`modulepreload`](/en-US/docs/Web/HTML/Attributes/rel/modulepreload) keyword for the [`rel`](/en-US/docs/Web/HTML/Element/link#rel) attribute of the {{HTMLElement("link")}} element is now supported.
+- The [`modulepreload`](/en-US/docs/Web/HTML/Reference/Attributes/rel/modulepreload) keyword for the [`rel`](/en-US/docs/Web/HTML/Reference/Elements/link#rel) attribute of the {{HTMLElement("link")}} element is now supported.
   This allows early (and asynchronous) fetching of [module scripts](/en-US/docs/Web/JavaScript/Guide/Modules) and their dependencies in parallel, which are then stored in the document's module map ([Firefox bug 1425310](https://bugzil.la/1425310)).
 
 ### CSS
 
 - The CSS {{cssxref("animation-composition")}} property is now supported by default. You can use this property to specify the composite operation to use when multiple animations affect the same property simultaneously. ([Firefox bug 1823862](https://bugzil.la/1823862)).
-- The `supports-conditions` in the CSS {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/At-rule) `supports()` function is now supported by default. This feature allows stylesheets to be imported only if the specified feature is supported in the user's browser. ([Firefox bug 1830779](https://bugzil.la/1830779)).
+- The `supports-conditions` in the CSS {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) `supports()` function is now supported by default. This feature allows stylesheets to be imported only if the specified feature is supported in the user's browser. ([Firefox bug 1830779](https://bugzil.la/1830779)).
 
 ### JavaScript
 
@@ -30,7 +30,7 @@ This article provides information about the changes in Firefox 115 that affect d
 
 ### HTTP
 
-- The [`Sec-Purpose`](/en-US/docs/Web/HTTP/Headers/Sec-Purpose) HTTP {{Glossary("Fetch metadata request header", "fetch metadata request header")}} is now included in requests to {{Glossary("Prefetch")}} resources.
+- The [`Sec-Purpose`](/en-US/docs/Web/HTTP/Reference/Headers/Sec-Purpose) HTTP {{Glossary("Fetch metadata request header", "fetch metadata request header")}} is now included in requests to {{Glossary("Prefetch")}} resources.
   This allows servers to provide any special handling that might be needed, such as adjusting the caching expiry for the request ([Firefox bug 1836328](https://bugzil.la/1836328)).
 
 ### APIs

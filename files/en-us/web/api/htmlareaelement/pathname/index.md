@@ -13,6 +13,8 @@ string containing an initial `'/'` followed by the path of
 the URL not including the query string or fragment (or the empty string if there is no
 path).
 
+The pathname is {{Glossary("Percent-encoding", "percent-encoded")}} when setting but not percent-decoded when read.
+
 ## Value
 
 A string.

@@ -8,11 +8,11 @@ browser-compat: api.Clipboard.write
 
 {{APIRef("Clipboard API")}} {{securecontext_header}}
 
-The **`write()`** method of the {{domxref("Clipboard")}} interface writes arbitrary data to the clipboard, such as images, fulfilling the returned {{jsxref("Promise")}} on completion.
+The **`write()`** method of the {{domxref("Clipboard")}} interface writes arbitrary {{domxref("ClipboardItem")}} data such as images and text to the clipboard, fulfilling the returned {{jsxref("Promise")}} on completion.
 This can be used to implement cut and copy functionality.
 
 The method can in theory write arbitrary data (unlike {{domxref("Clipboard.writeText", "writeText()")}}, which can only write text).
-Browsers commonly support writing text, HTML, and PNG image data — see [browser compatibility](#browser_compatibility) for more information.
+Browsers commonly support writing text, HTML, and PNG image data.
 
 ## Syntax
 
@@ -55,21 +55,17 @@ button.addEventListener("click", () => setClipboard("<empty clipboard>"));
 
 async function setClipboard(text) {
   const type = "text/plain";
-  const blob = new Blob([text], { type });
-  const data = [new ClipboardItem({ [type]: blob })];
-  await navigator.clipboard.write(data);
+  const clipboardItemData = {
+    [type]: text,
+  };
+  const clipboardItem = new ClipboardItem(clipboardItemData);
+  await navigator.clipboard.write([clipboardItem]);
 }
 ```
 
-The `setClipboard()` method begins by creating a new a {{domxref("Blob")}} object.
-This object is required to construct a {{domxref("ClipboardItem")}} object which is sent to the clipboard.
-The {{domxref("Blob")}} constructor takes in the content we want to copy and its type.
-This {{domxref("Blob")}} object can be derived from many sources; for example, a [canvas](/en-US/docs/Web/API/HTMLCanvasElement).
+The `setClipboard()` function specifies a `"text/plain"` MIME type in the `type` constant, then specifies a `clipboardItemData` object with a single property — its key is the MIME type, and its value is the passed in text that we want to write to the clipboard. We then construct a new {{domxref("ClipboardItem")}} object into which the `clipboardItemData` object is passed.
 
-Next, we create a new {{domxref("ClipboardItem")}} object into which the blob will be placed for sending to the clipboard.
-The key of the object passed to the {{domxref("ClipboardItem")}} constructor indicates the content type, the value indicates the content.
-Then `write()` is called with `await`.
-A `try..catch` block could be used to catch any errors writing the data.
+Finally, `write()` is called with `await` to write the data to the clipboard.
 
 ### Write canvas contents to the clipboard
 
@@ -129,8 +125,7 @@ async function getBlobFromCanvas(canvas) {
 
 Next we set up our canvas and add an event listener for the `click` event.
 
-When you click the blue rectangle the code first checks if the clipboard supports data of type `"image/png"`.
-If so, the canvas displaying the rectangle is copied into a blob, and then the blob is added to a `ClipboardItem` and then written to the clipboard.
+When you click the blue rectangle, the canvas displaying the rectangle is copied into a blob, and then the blob is added to a `ClipboardItem` and then written to the clipboard.
 
 ```js
 const canvas = document.getElementById("canvas");
@@ -144,26 +139,21 @@ canvas.addEventListener("click", copyCanvasContentsToClipboard);
 const target = document.getElementById("target");
 
 async function copyCanvasContentsToClipboard() {
-  if (ClipboardItem.supports("image/png")) {
-    // Copy canvas to blob
-    try {
-      const blob = await getBlobFromCanvas(canvas);
-      // Create ClipboardItem with blob and it's type, and add to an array
-      const data = [new ClipboardItem({ [blob.type]: blob })];
-      // Write the data to the clipboard
-      await navigator.clipboard.write(data);
-      log("Copied");
-    } catch (error) {
-      log(error);
-    }
-  } else {
-    log("image/png is not supported");
+  // Copy canvas to blob
+  try {
+    const blob = await getBlobFromCanvas(canvas);
+    // Create ClipboardItem with blob and it's type, and add to an array
+    const data = [new ClipboardItem({ [blob.type]: blob })];
+    // Write the data to the clipboard
+    await navigator.clipboard.write(data);
+    log("Copied");
+  } catch (error) {
+    log(error);
   }
 }
 ```
 
-Note that clipboard support for PNG files is a mandatory part of the specification, so we don't actually need the check using {{domxref("ClipboardItem.supports_static", "ClipboardItem.supports()")}} above (it always returns `true`).
-The check would be more useful in cases where we're fetching an optional file type, or a resource where we don't know the type in advance.
+Note that if you are fetching a less-common file type or a resource that you don't know the type in advance, you may want to use {{domxref("ClipboardItem.supports_static", "ClipboardItem.supports()")}} to check if the file type is supported, and provide a good error message to the user in case it isn't.
 
 We then define an event listener for [`paste` events](/en-US/docs/Web/API/Element/paste_event) on then element where we want to display the clipboard contents as an image.
 The [FileReader API](/en-US/docs/Web/API/FileReader) allows us to read the blob using the [`readAsDataUrl`](/en-US/docs/Web/API/FileReader/readAsDataURL) method and create an `<img>` element with the canvas contents:

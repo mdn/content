@@ -36,7 +36,7 @@ _No changes._
 
 - CSS parsing has been parallelized ([Firefox bug 1346988](https://bugzil.la/1346988)).
 - Support for {{cssxref("font-variation-settings")}} and {{cssxref("font-optical-sizing")}} has been enabled by default ([Firefox bug 1447163](https://bugzil.la/1447163)).
-- The `grid-gap`, `grid-row-gap`, and `grid-column-gap` properties have been renamed to {{cssxref("gap")}}, {{cssxref("row-gap")}}, and {{cssxref("column-gap")}}, as they are no longer grid-specific ([Firefox bug 1398482](https://bugzil.la/1398482)). See [Box alignment; Gaps between boxes](/en-US/docs/Web/CSS/CSS_box_alignment#gaps_between_boxes) for additional details. The old names have been kept as aliases for web compatibility purposes.
+- The `grid-gap`, `grid-row-gap`, and `grid-column-gap` properties have been renamed to {{cssxref("gap")}}, {{cssxref("row-gap")}}, and {{cssxref("column-gap")}}, as they are no longer grid-specific ([Firefox bug 1398482](https://bugzil.la/1398482)). See [Box alignment; Gaps between boxes](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment#gaps_between_boxes) for additional details. The old names have been kept as aliases for web compatibility purposes.
 - The {{cssxref("flex-basis")}} `content` value is now supported ([Firefox bug 1105111](https://bugzil.la/1105111)).
 - Percentage values of {{cssxref("column-gap")}} are now supported in [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout) ([Firefox bug 1398537](https://bugzil.la/1398537)).
 - The CSS {{cssxref(":host")}} pseudo-class is now supported; this selects a custom element from inside its shadow DOM ([Firefox bug 992245](https://bugzil.la/992245)).
@@ -103,7 +103,7 @@ _No changes._
 
 ### HTTP
 
-- The cookie directive `SameSite` has been implemented. See [Set-Cookie](/en-US/docs/Web/HTTP/Headers/Set-Cookie) and [HTTP cookies](/en-US/docs/Web/HTTP/Cookies) ([Firefox bug 795346](https://bugzil.la/795346)).
+- The cookie directive `SameSite` has been implemented. See [Set-Cookie](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie) and [HTTP cookies](/en-US/docs/Web/HTTP/Guides/Cookies) ([Firefox bug 795346](https://bugzil.la/795346)).
 
 ### Networking
 
@@ -144,7 +144,7 @@ _No changes._
 
 ### SVG
 
-- The deprecated (and never properly implemented) {{domxref("SVGViewElement")}}`.viewTarget` property has been removed ([Firefox bug 1455763](https://bugzil.la/1455763)).
+- The deprecated (and never properly implemented) `SVGViewElement.viewTarget` property has been removed ([Firefox bug 1455763](https://bugzil.la/1455763)).
 - The following deprecated properties have been removed from {{domxref("SVGSVGElement")}} ([Firefox bug 1133172](https://bugzil.la/1133172)):
 
   - `pixelUnitToMillimeterX`

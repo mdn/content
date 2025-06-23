@@ -10,7 +10,7 @@ page-type: glossary-definition
 
 All fetch directives fall back to {{CSP("default-src")}}. That means, if a fetch directive is absent in the CSP header, the user agent will look for the `default-src` directive.
 
-See [Fetch directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directives) for a complete list.
+See [Fetch directives](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directives) for a complete list.
 
 ## See also
 
@@ -20,7 +20,7 @@ See [Fetch directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#fetc
   - {{Glossary("Document directive")}}
   - {{Glossary("Navigation directive")}}
 - Reference
-  - <https://www.w3.org/TR/CSP/#directives-fetch>
+  - [Fetch directives](https://w3c.github.io/webappsec-csp/#directives-fetch) specification
   - {{HTTPHeader("Content-Security-Policy/upgrade-insecure-requests", "upgrade-insecure-requests")}}
   - {{HTTPHeader("Content-Security-Policy/block-all-mixed-content", "block-all-mixed-content")}}
   - {{HTTPHeader("Content-Security-Policy")}}

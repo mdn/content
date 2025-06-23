@@ -3,22 +3,21 @@ title: "CycleTracker: Manifest and iconography"
 short-title: Manifest and iconography
 slug: Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file
 page-type: tutorial-chapter
+sidebar: pwasidebar
 ---
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality", "Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
 
-{{PWASidebar}}
-
 A PWA manifest file is a JSON file that provides information about the features of that app to make it look and behave like a native app when installed on the user's device. The manifest contains metadata for your app, including its name, icons, and presentational directives.
 
-While according to the spec, all of the manifest keys, or members, are optional, some browsers, operating systems, and app distributors have [require specific members](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#required_manifest_members) for a web app to be a PWA. By including a name or short name, the start URL, an icon meeting some minimum requirements, and the type of application viewport in which the PWA should be viewed, your app will meet the manifest requirements of a PWA.
+While, according to the spec, all of the manifest keys (or members) are optional, some browsers, operating systems, and app distributors have [specific required members](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#required_manifest_members) for a web app to be a PWA. By including a name or short name, the start URL, an icon meeting some minimum requirements, and the type of application viewport in which the PWA should be viewed, your app will meet the manifest requirements of a PWA.
 
 A minimalist manifest file for our menstrual cycle tracking app could look like this:
 
-```js
+```json
 {
   "short_name": "CT",
-  "start_url" : "/",
+  "start_url": "/",
   "icons": [
     {
       "src": "icon-512.png",
@@ -35,14 +34,14 @@ Before saving the manifest file and linking to it from our HTML file, we can dev
 
 To identify your PWA, the JSON must include a `name` or `short_name` member, or both, to define the PWA name. It can also include a `description`.
 
-- [`name`](/en-US/docs/Web/Manifest/name)
+- [`name`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/name)
   - : The name of the PWA. This is the name used when the operating system lists applications, as the label next to the application icon, etc.
-- [`short_name`](/en-US/docs/Web/Manifest/short_name)
+- [`short_name`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/short_name)
   - : The name of the PWA displayed to the user if there isn't enough space to display the `name`. It is used as the label for icons on phone screens, including in the "Add to Home Screen" dialog on iOS.
 
 When both the `name` and `short_name` are present, the `name` is used in most instances, with the `short_name` used when there is a limited space to display the application name.
 
-- [`description`](/en-US/docs/Web/Manifest/description)
+- [`description`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/description)
   - : Explanation of what the application does. It provides an {{glossary("accessible description")}} of the application's purpose and function.
 
 ### Task
@@ -51,7 +50,7 @@ Write the first few lines of your manifest file. You can use the text below, or 
 
 ### Example solution
 
-```js
+```json
 {
   "name": "CycleTracker: Period Tracking app",
   "short_name": "CT",
@@ -63,20 +62,20 @@ Write the first few lines of your manifest file. You can use the text below, or 
 
 The appearance, or presentation, of a PWA's installed and offline experiences are defined in the manifest. Presentation manifest members include `start_url` and `display`, and members which can be used to [customize your app colors](/en-US/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors), including `theme_color` and `background_color`.
 
-- [`start_url`](/en-US/docs/Web/Manifest/start_url)
+- [`start_url`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/start_url)
 
   - : The start page when a user launches the PWA.
 
-- [`display`](/en-US/docs/Web/Manifest/display)
+- [`display`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display)
   - : Controls the app's display mode including `fullscreen`, `standalone`, which displays the [PWA as a standalone application](/en-US/docs/Web/Progressive_web_apps/How_to/Create_a_standalone_app), `minimal-ui`, which is similar to a standalone view but with UI elements for controlling navigation, and `browser`, which opens the app in a regular browser view.
 
-There is also an [`orientation`](/en-US/docs/Web/Manifest/orientation) member that defines the PWA's default orientation as `portrait` or `landscape`. As our app works well in both orientations, we'll omit this member.
+There is also an [`orientation`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/orientation) member that defines the PWA's default orientation as `portrait` or `landscape`. As our app works well in both orientations, we'll omit this member.
 
 ### Colors
 
-- [`theme_color`](/en-US/docs/Web/Manifest/theme_color)
+- [`theme_color`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/theme_color)
   - : The default [color of operating system and browser UI elements](/en-US/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors#define_a_theme_color) such as the status bar on some mobile experiences and the application title bar on desktop operating systems.
-- [`background_color`](/en-US/docs/Web/Manifest/background_color)
+- [`background_color`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/background_color)
   - : A placeholder color to be displayed as the [background of the app](/en-US/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors#customize_the_app_window_background_color) until the CSS is loaded. To create a smooth transition between app launch and load, it is recommended to use the [`<color>`](/en-US/docs/Web/CSS/color_value) declared as the app's [`background-color`](/en-US/docs/Web/CSS/background-color) color.
 
 ### Task
@@ -89,7 +88,7 @@ As the example application is a single page, we can use `"/"` as the `start_url`
 
 In [our CSS](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS#css_content), the `background-color: #efe;` is set on the `body` element selector. We use `#eeffee` to ensure a smooth transition from placeholder appearance to app load.
 
-```js
+```json
 {
   "name": "...",
   "short_name": "...",
@@ -105,9 +104,9 @@ In [our CSS](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_an
 
 PWA icons help users identify your app, make it more visually appealing, and improve discoverability. The PWA app icon appears on home screens, app launchers, or app store search results. The size of the rendered icon and the file requirements varies depending on where it is displayed and by whom. The manifest is where you define your images.
 
-Within the manifest JSON object, the `icons` member specifies an array of one or more icon objects for use in different contexts, each with a `src` and `sizes` member, and optional `type` and `purpose` members. Each icon object's `src` list the source of a single image file. The `sizes` member provides a list of space-separated sizes for which that particular image should be used or the keyword `any`; the value is the same as the {{HTMLElement("link")}} element's [`sizes`](/en-US/docs/Web/HTML/Element/link#sizes) attribute. The `type` member lists the image's MIME type.
+Within the manifest JSON object, the `icons` member specifies an array of one or more icon objects for use in different contexts, each with a `src` and `sizes` member, and optional `type` and `purpose` members. Each icon object's `src` list the source of a single image file. The `sizes` member provides a list of space-separated sizes for which that particular image should be used or the keyword `any`; the value is the same as the {{HTMLElement("link")}} element's [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/link#sizes) attribute. The `type` member lists the image's MIME type.
 
-```js
+```json
 {
   "name": "MyApp",
   "icons": [
@@ -134,7 +133,7 @@ Within the manifest JSON object, the `icons` member specifies an array of one or
 
 All icons should have the same look and feel to ensure users recognize your PWA, but the larger the icon, the greater the detail it can contain. While all icon files are squares, some operating systems render different shapes, cutting sections off, or "masking" the icon, to meet the UI, or shrinking and centering the icon with a background if the icon is not maskable. The [safe zone](/en-US/docs/Web/Progressive_web_apps/How_to/Define_app_icons#support_masking), the area that will render okay if the icon is masked as a circle, is the inner 80% of the image file. Icons are labeled as safe to be masked by the `purpose` member which, when set to `maskable`, defines the [icon as adaptive](https://web.dev/articles/maskable-icon).
 
-In Safari, and therefor for iOS and iPadOS, if you include the [non-standard `apple-touch-icon`](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site) in the {{HTMLElement("head")}} of the HTML document via {{HTMLElement("link")}}, they will take precedence over manifest-declared icons.
+In Safari, and therefor for iOS and iPadOS, if you include the [non-standard `apple-touch-icon`](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#adding_custom_icons_to_your_site) in the {{HTMLElement("head")}} of the HTML document via {{HTMLElement("link")}}, they will take precedence over manifest-declared icons.
 
 ### Task
 
@@ -164,7 +163,7 @@ img {
 
 ### Example solution
 
-```js
+```json
 {
   "name": "...",
   "short_name": "...",
@@ -174,7 +173,7 @@ img {
   "background_color": "...",
   "display": "...",
   "icons": [
-        {
+    {
       "src": "circle.ico",
       "sizes": "48x48"
     },
@@ -207,7 +206,7 @@ PWAs require a manifest file to be linked from the app's HTML document. We have 
 <link rel="manifest" href="cycletracker.json" />
 ```
 
-The `<link>` element is most commonly used to link to stylesheets and, with PWAs, the required manifest file, but is also used to [establish site icons](/en-US/docs/Web/HTML/Attributes/rel#icon) (both "favicon" style icons and icons for the home screen and apps on mobile devices) among other things.
+The `<link>` element is most commonly used to link to stylesheets and, with PWAs, the required manifest file, but is also used to [establish site icons](/en-US/docs/Web/HTML/Reference/Attributes/rel#icon) (both "favicon" style icons and icons for the home screen and apps on mobile devices) among other things.
 
 ```html
 <link rel="icon" href="icons/circle.svg" />

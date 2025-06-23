@@ -19,8 +19,6 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
 
 - {{domxref("WorkerGlobalScope.caches")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns the {{domxref("CacheStorage")}} object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
-- {{domxref("console")}} {{ReadOnlyInline}} {{Non-standard_inline}}
-  - : Returns the {{domxref("console")}} associated with the worker.
 - {{domxref("WorkerGlobalScope.crossOriginIsolated")}} {{ReadOnlyInline}}
   - : Returns a boolean value that indicates whether the website is in a cross-origin isolation state.
 - {{domxref("WorkerGlobalScope.crypto")}} {{ReadOnlyInline}}
@@ -32,7 +30,7 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
 - {{domxref("WorkerGlobalScope.isSecureContext")}} {{ReadOnlyInline}}
   - : Returns a boolean indicating whether the current context is secure (`true`) or not (`false`).
 - {{domxref("WorkerGlobalScope.location")}} {{ReadOnlyInline}}
-  - : Returns the {{domxref("WorkerLocation")}} associated with the worker. It is a specific location object, mostly a subset of the {{domxref("Location")}} for browsing scopes, but adapted to workers.r.
+  - : Returns the {{domxref("WorkerLocation")}} associated with the worker. It is a specific location object, mostly a subset of the {{domxref("Location")}} for browsing scopes, but adapted to workers.
 - {{domxref("WorkerGlobalScope.navigator")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("WorkerNavigator")}} associated with the worker. It is a specific navigator object, mostly a subset of the {{domxref("Navigator")}} for browsing scopes, but adapted to workers.
 - {{domxref("WorkerGlobalScope.origin")}} {{ReadOnlyInline}}
@@ -61,7 +59,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
 - {{domxref("WorkerGlobalScope.createImageBitmap()")}}
   - : Accepts a variety of different image sources, and returns a {{jsxref("Promise")}} which resolves to an {{domxref("ImageBitmap")}}. Optionally the source is cropped to the rectangle of pixels originating at _(sx, sy)_ with width sw, and height sh.
 - {{domxref("WorkerGlobalScope.dump()")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : Allows you to write a message to stdout — i.e. in your terminal. This is the same as Firefox's {{domxref("window.dump")}}, but for workers.
+  - : Allows you to write a message to stdout — i.e., in your terminal. This is the same as Firefox's {{domxref("window.dump")}}, but for workers.
 - {{domxref("WorkerGlobalScope.fetch()")}}
   - : Starts the process of fetching a resource from the network.
 - {{domxref("WorkerGlobalScope.importScripts()")}}
@@ -90,7 +88,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
 - {{domxref("WorkerGlobalScope/rejectionhandled_event", "rejectionhandled")}}
   - : Fired on handled {{jsxref("Promise")}} rejection events.
 - {{domxref("WorkerGlobalScope/securitypolicyviolation_event", "securitypolicyviolation")}}
-  - : Fired when a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) is violated.
+  - : Fired when a [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) is violated.
 - {{domxref("WorkerGlobalScope/unhandledrejection_event", "unhandledrejection")}}
   - : Fired on unhandled {{jsxref("Promise")}} rejection events.
 

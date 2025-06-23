@@ -2,9 +2,8 @@
 title: CSS module landing page template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_module_landing_page_template
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 > **Note:** _Remember to remove this note block before publishing._
 >
@@ -23,6 +22,7 @@ page-type: mdn-writing-guide
 > spec-urls:
 >   - url1
 >   - url2
+> sidebar: cssref
 > ---
 > ```
 >
@@ -45,13 +45,9 @@ page-type: mdn-writing-guide
 >     - https://drafts.fxtf.org/filter-effects-1/
 >     ```
 >
-> ---
->
-> **Top-of-page macros**
->
-> The `\{{CSSRef}}` macro call appears at the top of the content section (immediately after the page front matter).
-> This macro must be present on every CSS module landing page. It generates a suitable CSS sidebar, depending on the tags included on the page.
-> Remove the `\{{MDNSidebar}}` macro when you use this template.
+> - **sidebar**
+>   - : This is `cssref` for all CSS guide and reference pages.
+>     See [Page structures: Sidebars](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars) for details.
 >
 > ---
 >

@@ -28,7 +28,7 @@ btoa(stringToEncode)
 ### Parameters
 
 - `stringToEncode`
-  - : The _binary string_ to encode.
+  - : The _binary string_ to encode. Strings in JavaScript are encoded as UTF-16, so this means each character must have a code point less than 256, representing one byte of data.
 
 ### Return value
 
@@ -127,7 +127,7 @@ await dataUrlToBytes("data:application/octet-stream;base64,AAEC"); // Uint8Array
 ## See also
 
 - [A polyfill of `btoa`](https://github.com/zloirock/core-js#base64-utility-methods) is available in [`core-js`](https://github.com/zloirock/core-js)
-- [`data` URLs](/en-US/docs/Web/URI/Schemes/data)
+- [`data` URLs](/en-US/docs/Web/URI/Reference/Schemes/data)
 - {{domxref("WorkerGlobalScope.btoa()")}}: the same method, but in worker scopes.
 - {{domxref("Window.atob()")}}
 - {{jsxref("Uint8Array.prototype.toBase64()")}}

@@ -9,9 +9,35 @@ browser-compat: css.properties.font-kerning
 
 The **`font-kerning`** [CSS](/en-US/docs/Web/CSS) property sets the use of the kerning information stored in a font.
 
-{{EmbedInteractiveExample("pages/css/font-kerning.html")}}
+{{InteractiveExample("CSS Demo: font-kerning")}}
 
-_Kerning_ defines how letters are spaced. In _well-kerned_ fonts, this feature makes character spacing more uniform and pleasant to read than it would otherwise be.
+```css interactive-example-choice
+font-kerning: auto;
+```
+
+```css interactive-example-choice
+font-kerning: normal;
+```
+
+```css interactive-example-choice
+font-kerning: none;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    “We took Tracy to see ‘THE WATERFALL’ in W. Virginia.”
+  </div>
+</section>
+```
+
+```css interactive-example
+section {
+  font-family: serif;
+}
+```
+
+_Kerning_ affects how letters are spaced. In _well-kerned_ fonts, this feature makes character spacing more uniform and pleasant to read by reducing white space between certain character combinations.
 
 In the image below, for instance, the examples on the left do not use kerning, while the ones on the right do:
 

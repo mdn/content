@@ -22,7 +22,7 @@ Values of this type are objects. They contain these properties:
 - `id`
   - : `number`. An ID that uniquely identifies a rule within a ruleset. Mandatory and should be >= 1.
 - `priority` {{optional_inline}}
-  - : `number`. Rule priority. Defaults to 1. When specified, should be >= 1. See [Matching precedents](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#matching_precedents) for details on how priority affects which rules are applied.
+  - : `number`. Rule priority. Defaults to 1. When specified, should be >= 1. See [Matching precedence](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#matching_precedence) for details on how priority affects which rules are applied.
 
 {{WebExtExamples("h2")}}
 

@@ -59,8 +59,8 @@ let creating = browser.tabs.create(
         For security reasons, in Firefox, this may not be a privileged URL. So passing any of the following URLs will fail:
 
         - chrome: URLs
-        - [javascript: URLs](/en-US/docs/Web/URI/Schemes/javascript)
-        - [data: URLs](/en-US/docs/Web/URI/Schemes/data)
+        - [javascript: URLs](/en-US/docs/Web/URI/Reference/Schemes/javascript)
+        - [data: URLs](/en-US/docs/Web/URI/Reference/Schemes/data)
         - file: URLs (i.e., files on the filesystem. However, to use a file packaged inside the extension, see below)
         - privileged about: URLs (for example, `about:config`, `about:addons`, `about:debugging`). Non-privileged URLs (e.g., `about:blank`) are allowed.
         - The New Tab page (`about:newtab`) can be opened if no value for URL is provided.

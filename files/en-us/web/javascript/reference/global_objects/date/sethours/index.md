@@ -1,5 +1,6 @@
 ---
 title: Date.prototype.setHours()
+short-title: setHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setHours
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setHours
@@ -9,7 +10,21 @@ browser-compat: javascript.builtins.Date.setHours
 
 The **`setHours()`** method of {{jsxref("Date")}} instances changes the hours, minutes, seconds, and/or milliseconds for this date according to local time.
 
-{{EmbedInteractiveExample("pages/js/date-sethours.html")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.setHours()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30");
+event.setHours(20);
+
+console.log(event);
+// Expected output: "Tue Aug 19 1975 20:15:30 GMT+0200 (CEST)"
+// Note: your timezone may vary
+
+event.setHours(20, 21, 22);
+
+console.log(event);
+// Expected output: "Tue Aug 19 1975 20:21:22 GMT+0200 (CEST)"
+```
 
 ## Syntax
 

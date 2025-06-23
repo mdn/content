@@ -20,11 +20,11 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLTableCellElement.cellIndex")}} {{ReadOnlyInline}}
   - : A number representing the cell's position in the {{domxref("HTMLTableRowElement.cells", "cells")}} collection of the {{HTMLElement("tr")}} the cell is contained within. If the cell doesn't belong to a `<tr>`, it returns `-1`.
 - {{domxref("HTMLTableCellElement.colSpan")}}
-  - : A positive number indicating the number of columns this cell must span; this lets the cell occupy space across multiple columns of the table. It reflects the [`colspan`](/en-US/docs/Web/HTML/Element/td#colspan) attribute.
+  - : A positive number indicating the number of columns this cell must span; this lets the cell occupy space across multiple columns of the table. It reflects the [`colspan`](/en-US/docs/Web/HTML/Reference/Elements/td#colspan) attribute.
 - {{domxref("HTMLTableCellElement.headers")}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMTokenList")}} describing a list of `id` of {{HTMLElement("th")}} elements that represent headers associated with the cell. It reflects the [`headers`](/en-US/docs/Web/HTML/Element/td#headers) attribute.
+  - : A {{domxref("DOMTokenList")}} describing a list of `id` of {{HTMLElement("th")}} elements that represent headers associated with the cell. It reflects the [`headers`](/en-US/docs/Web/HTML/Reference/Elements/td#headers) attribute.
 - {{domxref("HTMLTableCellElement.rowSpan")}}
-  - : A positive number indicating the number of rows this cell must span; this lets a cell occupy space across multiple rows of the table. It reflects the [`rowspan`](/en-US/docs/Web/HTML/Element/td#rowspan) attribute.
+  - : A positive number indicating the number of rows this cell must span; this lets a cell occupy space across multiple rows of the table. It reflects the [`rowspan`](/en-US/docs/Web/HTML/Reference/Elements/td#rowspan) attribute.
 - {{domxref("HTMLTableCellElement.scope")}}
   - : A string indicating the scope of a {{HTMLElement("th")}} cell. Possible values for `scope` are: `col`, `colgroup`, `row`, `rowgroup`, or the empty string (`""`).
 
@@ -38,23 +38,23 @@ _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}
 > These properties have been deprecated and should no longer be used. They are documented primarily to help understand older code bases.
 
 - {{domxref("HTMLTableCellElement.align")}} {{deprecated_inline}}
-  - : A string containing the value of the [`align`](/en-US/docs/Web/HTML/Element/td#align) attribute, if present, or empty string if not set. It can be used to set the alignment of the element's contents to the surrounding context of `"left"`, `"right"`, and `"center"`. Use the CSS {{cssxref("text-align")}} property instead.
+  - : A string containing the value of the [`align`](/en-US/docs/Web/HTML/Reference/Elements/td#align) attribute, if present, or empty string if not set. It can be used to set the alignment of the element's contents to the surrounding context of `"left"`, `"right"`, and `"center"`. Use the CSS {{cssxref("text-align")}} property instead.
 - {{domxref("HTMLTableCellElement.axis")}} {{deprecated_inline}}
-  - : A string containing a name grouping cells in virtual. It reflects the obsolete [`axis`](/en-US/docs/Web/HTML/Element/td#axis) attribute.
+  - : A string containing a name grouping cells in virtual. It reflects the obsolete [`axis`](/en-US/docs/Web/HTML/Reference/Elements/td#axis) attribute.
 - {{domxref("HTMLTableCellElement.bgColor")}} {{deprecated_inline}}
-  - : A string containing the background color of the cells. It reflects the obsolete [`bgColor`](/en-US/docs/Web/HTML/Element/td#bgcolor) attribute.
+  - : A string containing the background color of the cells. It reflects the obsolete [`bgColor`](/en-US/docs/Web/HTML/Reference/Elements/td#bgcolor) attribute.
 - {{domxref("HTMLTableCellElement.ch")}} {{deprecated_inline}}
-  - : A string containing one single character. This character is the one to align all the cells of a column on. It reflects the [`char`](/en-US/docs/Web/HTML/Element/td#char) and defaults to the decimal points associated with the language, e.g. `'.'` for English, or `','` for French. This property was optional and was not very well supported.
+  - : A string containing one single character. This character is the one to align all the cells of a column on. It reflects the [`char`](/en-US/docs/Web/HTML/Reference/Elements/td#char) and defaults to the decimal points associated with the language, e.g., `'.'` for English, or `','` for French. This property was optional and was not very well supported.
 - {{domxref("HTMLTableCellElement.chOff")}} {{deprecated_inline}}
   - : A string containing an integer indicating how many characters must be left at the right (for left-to-right scripts; or at the left for right-to-left scripts) of the character defined by `HTMLTableCellElement.ch`. This property was optional and was not very well supported.
 - {{domxref("HTMLTableCellElement.height")}} {{deprecated_inline}}
-  - : A string containing a length of pixel of the hinted height of the cell. It reflects the obsolete [`height`](/en-US/docs/Web/HTML/Element/td#height) attribute.
+  - : A string containing a length of pixel of the hinted height of the cell. It reflects the obsolete [`height`](/en-US/docs/Web/HTML/Reference/Elements/td#height) attribute.
 - {{domxref("HTMLTableCellElement.noWrap")}} {{deprecated_inline}}
   - : A boolean value reflecting the `nowrap` attribute and indicating if cell content can be broken into several lines.
 - {{domxref("HTMLTableCellElement.vAlign")}} {{deprecated_inline}}
-  - : A string representing an enumerated value indicating how the content of the cell must be vertically aligned. It reflects the [`valign`](/en-US/docs/Web/HTML/Element/td#valign) attribute and can have one of the following values: `"top"`, `"middle"`, `"bottom"`, or `"baseline"`. Use the CSS {{cssxref("vertical-align")}} property instead.
+  - : A string representing an enumerated value indicating how the content of the cell must be vertically aligned. It reflects the [`valign`](/en-US/docs/Web/HTML/Reference/Elements/td#valign) attribute and can have one of the following values: `"top"`, `"middle"`, `"bottom"`, or `"baseline"`. Use the CSS {{cssxref("vertical-align")}} property instead.
 - {{domxref("HTMLTableCellElement.width")}} {{deprecated_inline}}
-  - : A string specifying the number of pixels wide the cell should be drawn, if possible. This property reflects the also obsolete [`width`](/en-US/docs/Web/HTML/Element/td#width) attribute. Use the CSS {{cssxref("width")}} property instead.
+  - : A string specifying the number of pixels wide the cell should be drawn, if possible. This property reflects the also obsolete [`width`](/en-US/docs/Web/HTML/Reference/Elements/td#width) attribute. Use the CSS {{cssxref("width")}} property instead.
 
 ## Specifications
 

@@ -9,7 +9,7 @@ browser-compat: api.RTCStatsReport.type_inbound-rtp
 
 The **`RTCInboundRtpStreamStats`** dictionary of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) is used to report statistics related to the receiving end of an RTP stream on the local end of the {{domxref("RTCPeerConnection")}}.
 
-The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} returned by {{domxref("RTCPeerConnection.getStats()")}} or {{domxref("RTCRtpReceiver.getStats()")}} until you find a report with the [`type`](#type) of `inbound-rtp`.
+The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} returned by {{domxref("RTCPeerConnection.getStats()")}} or {{domxref("RTCRtpReceiver.getStats()")}} until you find a report with the [`type`](/en-US/docs/Web/API/RTCInboundRtpStreamStats/type) of `inbound-rtp`.
 
 ## Instance properties
 
@@ -25,7 +25,10 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : A long integer value indicating the total number of frames of video which have been correctly decoded so far for this media source. This is the number of frames that would have been rendered if none were dropped. _Only valid for video streams._
 - {{domxref("RTCInboundRtpStreamStats.lastPacketReceivedTimestamp", "lastPacketReceivedTimestamp")}}
   - : A {{domxref("DOMHighResTimeStamp")}} indicating the time at which the last packet was received for this source.
-    The [`timestamp`](#timestamp) property, on the other hand, indicates the time at which the statistics object was generated.
+    The [`timestamp`](/en-US/docs/Web/API/RTCInboundRtpStreamStats/timestamp) property, on the other hand, indicates the time at which the statistics object was generated.
+- {{domxref("RTCInboundRtpStreamStats.mid", "mid")}}
+  - : A string that uniquely identifies the pairing of source and destination of the transceiver's stream.
+    This is the value of the corresponding {{domxref("RTCRtpTransceiver.mid")}} unless that is null, in which case the statistic property is not present.
 - {{domxref("RTCInboundRtpStreamStats.nackCount", "nackCount")}}
   - : An integer value indicating the total number of Negative ACKnowledgement (NACK) packets this receiver has sent.
 - {{domxref("RTCInboundRtpStreamStats.packetsDuplicated", "packetsDuplicated")}}
@@ -42,7 +45,7 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : An integer indicating the number of times the receiver sent a Slice Loss Indication (SLI) frame to the sender to tell it that one or more consecutive (in terms of scan order) video macroblocks have been lost or corrupted. Available only for video streams.
 - `trackIdentifier`
   - : A string that contains the {{domxref("MediaStreamTrack.id", "id")}} value of the `MediaStreamTrack` associated with the inbound stream.
-- {{domxref("RTCInboundRtpStreamStats.trackId", "trackId")}} {{deprecated_inline}}
+- `trackId` {{deprecated_inline}}
   - : A string which identifies the statistics object representing the receiving track; this object is one of two types: {{domxref("RTCReceiverAudioTrackAttachmentStats")}} or {{domxref("RTCReceiverVideoTrackAttachmentStats")}}. This ID is stable across multiple calls to `getStats()`.
 
 ### Statistics measured at the receiver of an RTP stream
@@ -98,8 +101,6 @@ The following properties are common to all WebRTC statistics objects.
   - : A {{domxref("DOMHighResTimeStamp")}} object indicating the time at which the sample was taken for this statistics object.
 - {{domxref("RTCInboundRtpStreamStats.type", "type")}}
   - : A string with the value `"inbound-rtp"`, indicating the type of statistics that the object contains.
-
-## Examples
 
 ## Specifications
 

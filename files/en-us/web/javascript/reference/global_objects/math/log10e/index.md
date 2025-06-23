@@ -1,5 +1,6 @@
 ---
 title: Math.LOG10E
+short-title: LOG10E
 slug: Web/JavaScript/Reference/Global_Objects/Math/LOG10E
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Math.LOG10E
@@ -9,7 +10,16 @@ browser-compat: javascript.builtins.Math.LOG10E
 
 The **`Math.LOG10E`** static data property represents the base 10 logarithm of [e](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/E), approximately 0.434.
 
-{{EmbedInteractiveExample("pages/js/math-log10e.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Math.LOG10E", "shorter")}}
+
+```js interactive-example
+function getLog10e() {
+  return Math.LOG10E;
+}
+
+console.log(getLog10e());
+// Expected output: 0.4342944819032518
+```
 
 ## Value
 

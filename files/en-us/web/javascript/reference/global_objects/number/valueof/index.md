@@ -1,5 +1,6 @@
 ---
 title: Number.prototype.valueOf()
+short-title: valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Number/valueOf
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Number.valueOf
@@ -9,7 +10,20 @@ browser-compat: javascript.builtins.Number.valueOf
 
 The **`valueOf()`** method of {{jsxref("Number")}} values returns the value of this number.
 
-{{EmbedInteractiveExample("pages/js/number-valueof.html")}}
+{{InteractiveExample("JavaScript Demo: Number.prototype.valueOf()")}}
+
+```js interactive-example
+const numObj = new Number(42);
+console.log(typeof numObj);
+// Expected output: "object"
+
+const num = numObj.valueOf();
+console.log(num);
+// Expected output: 42
+
+console.log(typeof num);
+// Expected output: "number"
+```
 
 ## Syntax
 

@@ -9,7 +9,24 @@ browser-compat: javascript.operators.yield
 
 The **`yield`** operator is used to pause and resume a [generator function](/en-US/docs/Web/JavaScript/Reference/Statements/function*).
 
-{{EmbedInteractiveExample("pages/js/expressions-yield.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: yield operator", "taller")}}
+
+```js interactive-example
+function* foo(index) {
+  while (index < 2) {
+    yield index;
+    index++;
+  }
+}
+
+const iterator = foo(0);
+
+console.log(iterator.next().value);
+// Expected output: 0
+
+console.log(iterator.next().value);
+// Expected output: 1
+```
 
 ## Syntax
 
@@ -56,8 +73,8 @@ The following code is the declaration of an example generator function.
 ```js
 function* countAppleSales() {
   const saleList = [3, 7, 5];
-  for (let i = 0; i < saleList.length; i++) {
-    yield saleList[i];
+  for (const sale of saleList) {
+    yield sale;
   }
 }
 ```

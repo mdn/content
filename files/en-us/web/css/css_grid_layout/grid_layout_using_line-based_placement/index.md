@@ -1,22 +1,19 @@
 ---
 title: Grid layout using line-based placement
+short-title: Using line-based placement
 slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 page-type: guide
 ---
 
 {{CSSRef}}
 
-In the [article covering the basic concepts of grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout), we started to look at how to position items on a grid using line numbers. In this article, we will fully explore how this fundamental feature of the specification works.
+In the [basic concepts of grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout) guide, we took a brief look at positioning items on a grid using line numbers. In this guide, we will fully explore how this fundamental feature of the specification works.
 
-Starting your exploration of grid with numbered lines is the most logical place to begin because when you use grid layout, you always have numbered lines. The lines are numbered for columns and rows, and are indexed from 1. Note that grid is indexed according to the writing mode of the document. In a left to right language such as English line 1 is on the left-hand side of the grid. If you are working in a right-to-left language such as Arabic then line 1 will be the far right of the grid. We will learn more about the interaction between writing modes and grids in a later guide.
+Starting your exploration of grid with numbered lines is the most logical place to begin because when you use grid layout, you always have numbered lines. The lines are numbered for columns and rows, and are indexed from `1`. Note that grid is indexed according to the writing mode of the document. In a left-to-right language, such as English, line 1 is on the left-hand side of the grid. If you are working in a right-to-left language, such as Arabic, then line 1 will be on the right-hand of the grid. We will learn more about the interaction between writing modes and grids in the [grids, logical values, and writing modes](/en-US/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes) guide.
 
 ## A basic example
 
-As a very simple example we can take a grid with 3 column tracks and 3 row tracks. This gives us 4 lines in each dimension.
-
-Inside our grid container, we have four child elements. If we do not place these on to the grid in any way they will lay out according to the auto-placement rules, one item in each of the first four cells. If you use the [Firefox grid highlighter](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) you can see how the grid has defined columns and rows.
-
-![Our grid highlighted in DevTools](highlighted_grid.png)
+As a basic example, we create a grid with 3 column tracks and 3 row tracks. This gives us 4 lines in each dimension.
 
 ```css hidden
 * {
@@ -46,6 +43,8 @@ Inside our grid container, we have four child elements. If we do not place these
 }
 ```
 
+Inside our grid container, we include four child elements.
+
 ```html
 <div class="wrapper">
   <div class="box1">One</div>
@@ -57,9 +56,13 @@ Inside our grid container, we have four child elements. If we do not place these
 
 {{ EmbedLiveSample('A_basic_example', '300', '330') }}
 
+If we do not place these onto the grid in any way, they will lay out according to the auto-placement rules, one item in each of the first four cells. You can inspect the grid with your browser developer tools to see how the grid defines columns and rows.
+
+![The example grid highlighted in DevTools](highlighted_grid.png)
+
 ## Positioning items by line number
 
-We can use line-based placement to control where these items sit on the grid. We would like the first item to start on the far left of the grid and span a single column track. It should also start on the first row line, at the top of the grid and span to the fourth row line.
+We can use line-based placement to control where these items sit on the grid. We can use the {{cssxref("grid-column-start")}} and {{cssxref("grid-column-end")}} properties to make the first item start on the far left of the grid and span a single column track. With {{cssxref("grid-row-start")}} and {{cssxref("grid-row-end")}}, we make the item start on the first row line at the top of the grid, and span to the fourth row line.
 
 ```css
 .box1 {
@@ -70,9 +73,9 @@ We can use line-based placement to control where these items sit on the grid. We
 }
 ```
 
-As you position some items, other items on the grid will continue to be laid out using the auto-placement rules. We will take a proper look at how these work in a later guide but you can see as you work that grid is laying out un-placed items into empty cells of the grid.
+As you position some items, other items on the grid will continue to be laid out using the auto-placement rules. This behavior is explained in the [Auto-placement in grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout) guide. For now, observe how the grid is laying out un-placed items into empty cells of the grid.
 
-Addressing each item individually we can place all four items spanning row and column tracks. Note that we can leave cells empty if we wish. One of the very nice things about grid layout is the ability to have white space in our designs without having to push things around using margins to prevent floats from rising up into the space we have left.
+Addressing each item individually using the same properties but with different values, we place all four items, spanning row and column tracks.
 
 ```css hidden
 * {
@@ -135,9 +138,11 @@ Addressing each item individually we can place all four items spanning row and c
 
 {{ EmbedLiveSample('Positioning_items_by_line_number', '300', '330') }}
 
+Note that we can leave cells empty if we wish. One of the very nice things about grid layout is the ability to have white space in our designs without any hacks.
+
 ## The `grid-column` and `grid-row` shorthands
 
-We have quite a lot of code here to position each item. It should come as no surprise to know there is a [shorthand](/en-US/docs/Web/CSS/Shorthand_properties). The {{cssxref("grid-column-start")}} and {{cssxref("grid-column-end")}} properties can be combined into {{cssxref("grid-column")}}, {{cssxref("grid-row-start")}} and {{cssxref("grid-row-end")}} into {{cssxref("grid-row")}}.
+The previous example had quite a lot of code to position each item. It should come as no surprise to know there is a [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties). The {{cssxref("grid-column-start")}} and {{cssxref("grid-column-end")}} properties can be combined into {{cssxref("grid-column")}}, {{cssxref("grid-row-start")}} and {{cssxref("grid-row-end")}} into {{cssxref("grid-row")}}. In this example, we replicate the above example using these shorthand properties:
 
 ```css hidden
 * {
@@ -315,12 +320,12 @@ Our shorthand would look like the following code, with no forward slash and seco
 
 ## The `grid-area` property
 
-We can take things a step further and define each area with a single property – {{cssxref("grid-area")}}. The order of the values for grid-area are as follows.
+We can take things a step further and define each area with a single property – {{cssxref("grid-area")}}. The order of the values for `grid-area` is as follows.
 
-- grid-row-start
-- grid-column-start
-- grid-row-end
-- grid-column-end
+– {{cssxref("grid-row-start")}}
+– {{cssxref("grid-column-start")}}
+– {{cssxref("grid-row-end")}}
+– {{cssxref("grid-column-end")}}
 
 ```css hidden
 * {
@@ -371,20 +376,22 @@ We can take things a step further and define each area with a single property �
 
 {{ EmbedLiveSample('The_grid-area_property', '300', '330') }}
 
-This order of values for `grid-area` can seem a little strange, it is the opposite of the direction in which we specify margins and padding as a shorthand for example. It may help to realize that this is due to grid using the flow-relative directions defined in the CSS Writing Modes specification. We will explore how grids work with writing modes in a later article however we have the concept of four flow-relative directions:
+This order of values for `grid-area` can seem a little strange — it is the opposite of the direction in which we specify margins and padding as a shorthand, for example. It may help to realize that this is due to CSS grid layout using the flow-relative directions defined in [CSS writing modes](/en-US/docs/Web/CSS/CSS_writing_modes). We explore how grids work with writing modes in [grids, logical values, and writing modes](/en-US/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes). For now, consider the concept of four {{glossary("Flow relative values", "flow-relative")}} directions:
 
-- block-start
-- block-end
-- inline-start
-- inline-end
+- `block-start`
+- `block-end`
+- `inline-start`
+- `inline-end`
 
-We are working in English, a left-to-right language. Our block-start is the top row line of the grid container, block-end is the final row line of the container. Our inline-start is the left-hand column line as inline-start is always the point from which text would be written in the current writing mode, inline-end is the final column line of our grid.
+We are working in English, a left-to-right language. Our `block-start` is the top row line of the grid container, `block-end` is the final row line of the container. Our `inline-start` is the left-hand column line as `inline-start` is always the point from which text would be written in the current writing mode, while `inline-end` is the final column line of our grid.
 
-When we specify our grid area using the `grid-area` property we first define both start lines `block-start` and `inline-start`, then both end lines `block-end` and `inline-end`. This seems unusual at first as we are used to the physical properties of top, right, bottom and left but makes more sense if you start to think of websites as being multi-directional in writing mode.
+When we specify our grid area using the `grid-area` property we first define both start lines `block-start` and `inline-start`, then both end lines `block-end` and `inline-end`. This seems unusual at first as we are used to the {{glossary("physical properties")}} of `top`, `right`, `bottom`, and `left`, but it makes more sense if you start to think of websites as being multi-directional in different writing modes.
 
 ## Counting backwards
 
-We can also count backwards from the block and inline end of the grid, for English that would be the right-hand column line and final row line. These lines can be addressed as `-1`, and you can count back from there – so the second last line is `-2`. It is worth noting that the final line is the final line of the _explicit grid_, the grid defined by `grid-template-columns` and `grid-template-rows`, and does not take into account any rows or columns added in the _implicit grid_ outside of that.
+We can also count backwards from the block and inline ends of the grid, for English that would be the right-hand column line and final row line. The last lines of the explicit grid can be addressed as `-1`, and you can count back from there – so the second to last line is `-2`.
+
+Do note that negative values are relevant only to the explicit grid. The final line is the final line of the grid defined by `grid-template-columns` and `grid-template-rows`, and does not take into account any rows or columns added in the _implicit grid_ outside of that.
 
 In this next example, we have flipped the layout we were working with by working from the right and bottom of our grid when placing the items.
 
@@ -461,12 +468,7 @@ Being able to address the start and end lines of the grid is useful as you can t
 
 ## Gutters or Alleys
 
-The CSS grid specification includes the ability to add gutters between column and row tracks with the {{cssxref("column-gap")}} and {{cssxref("row-gap")}} properties. These specify a gap that acts much like the {{cssxref("column-gap")}} property in multi-column layout.
-
-> [!NOTE]
-> When grid first shipped in browsers the {{cssxref("column-gap")}}, {{cssxref("row-gap")}} and {{cssxref("gap")}} properties were prefixed with the `grid-` prefix as `grid-column-gap`, `grid-row-gap` and `grid-gap` respectively.
->
-> Browsers are updating their rendering engines to remove this prefix, however the prefixed versions will be maintained as aliases, making them safe to use.
+CSS grid includes the ability to add gutters between column and row tracks with the {{cssxref("column-gap")}} and {{cssxref("row-gap")}} properties, or {{cssxref("gap")}} shorthand.
 
 Gaps only appear between tracks of the grid, they do not add space to the top and bottom, left or right of the container. We can add gaps to our earlier example by using these properties on the grid container.
 
@@ -543,11 +545,11 @@ The two properties can also be expressed as a shorthand, {{cssxref("gap")}}. If 
 }
 ```
 
-In terms of line-based positioning of items, the gap acts as if the line has gained extra width. Anything starting at that line starts after the gap and you cannot address the gap or place anything into it. If you want gutters that act more like regular tracks you can of course define a track for the purpose instead.
+In terms of line-based positioning of items, the gap acts as if the line has gained extra width. Anything starting at that line starts after the gap and you cannot address the gap or place anything into it. If you want gutters that act more like regular tracks you can define a track for that purpose.
 
 ## Using the `span` keyword
 
-In addition to specifying the start and end lines by number, you can specify a start line and then the number of tracks you would like the area to span.
+In addition to specifying the start and end lines by number, you can specify a start line and then the number of tracks you would like the area to span using the `span` keyword.
 
 ```css hidden
 * {
@@ -622,6 +624,6 @@ In the second example, we specify the end row line we want the item to finish at
 }
 ```
 
-To become familiar with line based positioning in grid try to build a few common layouts by placing items onto grids with varying numbers of columns. Remember that if you do not place all of the items, any leftover items will be placed according to auto-placement rules. This may result in the layout you want, but if something is appearing somewhere unexpected, check that you have set a position for it.
+To become familiar with line based positioning in grid, try to build a few common layouts by placing items onto grids with varying numbers of columns. Remember that if you do not place all of the items, any leftover items will be placed according to auto-placement rules. This may result in the layout you want, but if something is appearing somewhere unexpected, check that you have set a position for it.
 
-Also, remember that items on the grid can overlap each other when you place them explicitly like this. That can create some nice effects, however you can also end up with things overlapping incorrectly if you specify the wrong start or end line. The [Firefox grid highlighter](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) can be very useful as you learn, especially if your grid is quite complicated.
+Also, remember that items on the grid can overlap when you place them explicitly like this. Overlapping items can create some nice effects, however, you can also end up with incorrect overlapping if you specify the wrong start or end line. Inspecting grids with your browser developer tools can be very helpful for identifying such problems as you learn, especially if your grid is quite complicated.

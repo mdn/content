@@ -3,12 +3,10 @@ title: "GPUComputePassEncoder: setBindGroup() method"
 short-title: setBindGroup()
 slug: Web/API/GPUComputePassEncoder/setBindGroup
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUComputePassEncoder.setBindGroup
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`setBindGroup()`** method of the
 {{domxref("GPUComputePassEncoder")}} interface sets the {{domxref("GPUBindGroup")}} to use for subsequent compute commands, for a given index.
@@ -29,7 +27,7 @@ setBindGroup(index, bindGroup, dynamicOffsets, dynamicOffsetsStart,
 - `bindGroup`
   - : The {{domxref("GPUBindGroup")}} to use for subsequent compute commands, or `null`, in which case any previously-set bind group in the given slot is unset.
 - `dynamicOffsets` {{optional_inline}}
-  - : A value specifying the offset, in bytes, for each entry in `bindGroup` with `hasDynamicOffset: true` set (i.e. in the descriptor of the {{domxref("GPUDevice.createBindGroupLayout()")}} call that created the {{domxref("GPUBindGroupLayout")}} object that the `bindGroup` is based on). This value can be:
+  - : A value specifying the offset, in bytes, for each entry in `bindGroup` with `hasDynamicOffset: true` set (i.e., in the descriptor of the {{domxref("GPUDevice.createBindGroupLayout()")}} call that created the {{domxref("GPUBindGroupLayout")}} object that the `bindGroup` is based on). This value can be:
     - An array of numbers specifying the different offsets.
     - A {{jsxref("Uint32Array")}} containing numbers specifying the offsets.
 
@@ -70,7 +68,7 @@ In our [basic compute demo](https://mdn.github.io/dom-examples/webgpu-compute-de
 ```js
 const BUFFER_SIZE = 1000;
 
-// ...
+// …
 
 // Create GPUCommandEncoder to encode commands to issue to the GPU
 const commandEncoder = device.createCommandEncoder();
@@ -98,7 +96,7 @@ commandEncoder.copyBufferToBuffer(
 // End frame by passing array of command buffers to command queue for execution
 device.queue.submit([commandEncoder.finish()]);
 
-// ...
+// …
 ```
 
 ### Unset bind group

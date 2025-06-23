@@ -7,7 +7,7 @@ page-type: guide
 
 {{CSSRef}}
 
-With [CSS](/en-US/docs/Web/CSS), there are lots of ways to add color to your [HTML](/en-US/docs/Web/HTML) [elements](/en-US/docs/Web/HTML/Element) to create the look you want. This guide is a primer introducing how CSS can be used to apply colors to HTML elements. This guide includes [lists of the CSS properties that set color in their values](#properties_that_can_have_color) and how to use colors both [in stylesheets](#specifying_colors_as_values_in_stylesheets) and [in other ways](#other_ways_to_use_color).
+With [CSS](/en-US/docs/Web/CSS), there are lots of ways to add color to your [HTML](/en-US/docs/Web/HTML) [elements](/en-US/docs/Web/HTML/Reference/Elements) to create the look you want. This guide is a primer introducing how CSS can be used to apply colors to HTML elements. This guide includes [lists of the CSS properties that set color in their values](#properties_that_can_have_color) and how to use colors both [in stylesheets](#specifying_colors_as_values_in_stylesheets) and [in other ways](#other_ways_to_use_color).
 
 > [!NOTE]
 > It is important to [use colors wisely](/en-US/docs/Web/CSS/CSS_colors/Using_color_wisely). Always select appropriate colors, ensuring the contrast between text and the background is sufficient to ensure legibility, and always keep the needs of people with differing visual capabilities in mind.
@@ -26,7 +26,7 @@ Whenever an element is rendered, these properties are used to determine the colo
 
 - {{cssxref("color")}}
 
-  - : The color to use when drawing the text and any [text decorations](/en-US/docs/Learn/CSS/Styling_text/Fundamentals#font_style_font_weight_text_transform_and_text_decoration) (such as the addition of under- or overlines, strike-through lines, and so forth.
+  - : The color to use when drawing the text and any [text decorations](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals#font_style_font_weight_text_transform_and_text_decoration) (such as the addition of under- or overlines, strike-through lines, and so forth.
 
 - {{cssxref("background-color")}}
 
@@ -34,7 +34,7 @@ Whenever an element is rendered, these properties are used to determine the colo
 
 - {{cssxref("text-shadow")}}
 
-  - : Configures a shadow effect to apply to text. Among the options for the shadow is the shadow's base color (which is then blurred and blended with the background based on the other parameters). See [Text drop shadows](/en-US/docs/Learn/CSS/Styling_text/Fundamentals#text_drop_shadows) to learn more.
+  - : Configures a shadow effect to apply to text. Among the options for the shadow is the shadow's base color (which is then blurred and blended with the background based on the other parameters). See [Text drop shadows](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals#text_drop_shadows) to learn more.
 
 - {{cssxref("text-decoration-color")}}
 
@@ -46,7 +46,7 @@ Whenever an element is rendered, these properties are used to determine the colo
 
 - {{cssxref("caret-color")}}
 
-  - : The color to use when drawing the {{Glossary("caret")}} (sometimes referred to as the text input cursor) within the element. This is only useful in elements that are editable, such as {{HTMLElement("input")}} and {{HTMLElement("textarea")}} or elements whose HTML [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute is set to `true`.
+  - : The color to use when drawing the {{Glossary("caret")}} (sometimes referred to as the text input cursor) within the element. This is only useful in elements that are editable, such as {{HTMLElement("input")}} and {{HTMLElement("textarea")}} or elements whose HTML [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) attribute is set to `true`.
 
 ### Boxes
 
@@ -70,11 +70,11 @@ Every element is a box with some sort of content, and has a background and a bor
 
 - {{cssxref("outline-color")}}
 
-  - : The color to use when drawing an outline around the outside of the element. This outline is different from the border in that it doesn't get space set aside for it in the document. Outlines do not participate in the [box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model), overlapping other content. Outlines are generally used as focus indicators, indicating which element currently has focus and will receive keyboard input events.
+  - : The color to use when drawing an outline around the outside of the element. This outline is different from the border in that it doesn't get space set aside for it in the document. Outlines do not participate in the [box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model), overlapping other content. Outlines are generally used as focus indicators, indicating which element currently has focus and will receive keyboard input events.
 
 ### Borders
 
-Any element can have a [border](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) drawn around it. A basic element border is a line drawn around the edges of the element's content. See [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model) to learn about the relationship between elements and their borders, and the article [Styling borders using CSS](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) to learn more about applying styles to borders.
+Any element can have a border drawn around it. A basic element border is a line drawn around the edges of the element's content. See [The box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model) to learn about the relationship between elements and their borders, and the article [Styling borders using CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders) to learn more about applying styles to borders.
 
 You can use the {{cssxref("border")}} shorthand property, which lets you configure everything about the border in one shot (including non-color features of borders, such as its [width](/en-US/docs/Web/CSS/border-width), [style](/en-US/docs/Web/CSS/border-style) (solid, dashed, etc.), and so forth.
 
@@ -169,7 +169,7 @@ The `.boxLeft` class, used to style the box on the left, sets up the color of th
   background-color: hwb(270deg 63% 13%);
   outline: 4px dashed #6e1478;
   color: hsl(0deg 100% 100%);
-  text-decoration: underline;
+  text-decoration-line: underline;
   text-decoration-style: wavy;
   text-decoration-color: #8f8;
   text-decoration: underline wavy #8f8;
@@ -210,5 +210,4 @@ CSS isn't the only web technology that supports color. Other examples include:
 - [CSS color values](/en-US/docs/Web/CSS/CSS_colors/Color_values) guide
 - [Using color wisely](/en-US/docs/Web/CSS/CSS_colors/Using_color_wisely)
 - [CSS color module](/en-US/docs/Web/CSS/CSS_colors)
-- [Drawing graphics](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Graphics on the web](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#other_graphics_on_the_web)
+- [Drawing graphics](/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics)

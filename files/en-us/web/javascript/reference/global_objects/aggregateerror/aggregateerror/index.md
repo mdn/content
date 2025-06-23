@@ -1,5 +1,6 @@
 ---
 title: AggregateError() constructor
+short-title: AggregateError()
 slug: Web/JavaScript/Reference/Global_Objects/AggregateError/AggregateError
 page-type: javascript-constructor
 browser-compat: javascript.builtins.AggregateError.AggregateError
@@ -61,4 +62,5 @@ try {
 ## See also
 
 - [Polyfill of `AggregateError` in `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
+- [es-shims polyfill of `AggregateError`](https://www.npmjs.com/package/es-aggregate-error)
 - {{jsxref("Promise.any")}}

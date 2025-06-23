@@ -13,7 +13,7 @@ The **`gamma`** read-only property of the {{domxref("DeviceMotionEventRotationRa
 ## Value
 
 A `double` indicating the rate of rotation around the Y axis, in degrees per second.
-See [Accelerometer values explained](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation#accelerometer_values_explained) for details.
+See [Orientation and motion data explained](/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained) for details.
 
 ## Specifications
 

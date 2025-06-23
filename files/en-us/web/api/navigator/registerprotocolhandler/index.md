@@ -14,7 +14,7 @@ For example, this API lets webmail sites open `mailto:` URLs, or VoIP sites open
 
 To register a protocol handler, a website calls `registerProtocolHandler()`, passing in the protocol to register and a template URL.
 
-When the user activates a link that uses the registered protocol, the browser will insert the [`href`](/en-US/docs/Web/HTML/Element/a#href) from the activated link into the URL template supplied during handler registration, and navigate the current page to the resulting URL.
+When the user activates a link that uses the registered protocol, the browser will insert the [`href`](/en-US/docs/Web/HTML/Reference/Elements/a#href) from the activated link into the URL template supplied during handler registration, and navigate the current page to the resulting URL.
 
 The browser may ask the user to confirm that they want the page to be allowed to handle the protocol, either when the protocol is registered or when the user activates the link.
 

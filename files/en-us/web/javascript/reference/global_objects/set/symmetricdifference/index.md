@@ -1,5 +1,6 @@
 ---
 title: Set.prototype.symmetricDifference()
+short-title: symmetricDifference()
 slug: Web/JavaScript/Reference/Global_Objects/Set/symmetricDifference
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.symmetricDifference
@@ -65,6 +66,7 @@ console.log(evens.symmetricDifference(squares)); // Set(5) { 2, 6, 8, 1, 9 }
 ## See also
 
 - [Polyfill of `Set.prototype.symmetricDifference` in `core-js`](https://github.com/zloirock/core-js#new-set-methods)
+- [es-shims polyfill of `Set.prototype.symmetricDifference`](https://www.npmjs.com/package/set.prototype.symmetricdifference)
 - {{jsxref("Set.prototype.difference()")}}
 - {{jsxref("Set.prototype.intersection()")}}
 - {{jsxref("Set.prototype.isDisjointFrom()")}}

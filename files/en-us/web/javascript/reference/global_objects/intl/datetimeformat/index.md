@@ -9,7 +9,30 @@ browser-compat: javascript.builtins.Intl.DateTimeFormat
 
 The **`Intl.DateTimeFormat`** object enables language-sensitive date and time formatting.
 
-{{EmbedInteractiveExample("pages/js/intl-datetimeformat.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat", "taller")}}
+
+```js interactive-example
+const date = new Date(Date.UTC(2020, 11, 20, 3, 23, 16, 738));
+// Results below assume UTC timezone - your results may vary
+
+// Specify default date formatting for language (locale)
+console.log(new Intl.DateTimeFormat("en-US").format(date));
+// Expected output: "12/20/2020"
+
+// Specify default date formatting for language with a fallback language (in this case Indonesian)
+console.log(new Intl.DateTimeFormat(["ban", "id"]).format(date));
+// Expected output: "20/12/2020"
+
+// Specify date and time format using "style" options (i.e. full, long, medium, short)
+console.log(
+  new Intl.DateTimeFormat("en-GB", {
+    dateStyle: "full",
+    timeStyle: "long",
+    timeZone: "Australia/Sydney",
+  }).format(date),
+);
+// Expected output: "Sunday, 20 December 2020 at 14:23:16 GMT+11"
+```
 
 ## Constructor
 
@@ -129,7 +152,7 @@ console.log(new Intl.DateTimeFormat("en-AU", options).format(date));
 // "2:00:00 pm AEDT"
 
 // sometimes you want to be very precise
-options.fractionalSecondDigits = 3; //number digits for fraction-of-seconds
+options.fractionalSecondDigits = 3; // number digits for fraction-of-seconds
 console.log(new Intl.DateTimeFormat("en-AU", options).format(date));
 // "2:00:00.200 pm AEDT"
 
@@ -186,3 +209,13 @@ console.log(usedOptions.timeZone);
 
 - [Polyfill of `Intl.DateTimeFormat` in FormatJS](https://formatjs.github.io/docs/polyfills/intl-datetimeformat/)
 - {{jsxref("Intl")}}
+- {{jsxref("Date.prototype.toLocaleString()")}}
+- {{jsxref("Date.prototype.toLocaleDateString()")}}
+- {{jsxref("Date.prototype.toLocaleTimeString()")}}
+- {{jsxref("Temporal/Instant/toLocaleString", "Temporal.Instant.prototype.toLocaleString()")}}
+- {{jsxref("Temporal/PlainDate/toLocaleString", "Temporal.PlainDate.prototype.toLocaleString()")}}
+- {{jsxref("Temporal/PlainDateTime/toLocaleString", "Temporal.PlainDateTime.prototype.toLocaleString()")}}
+- {{jsxref("Temporal/PlainTime/toLocaleString", "Temporal.PlainTime.prototype.toLocaleString()")}}
+- {{jsxref("Temporal/PlainYearMonth/toLocaleString", "Temporal.PlainYearMonth.prototype.toLocaleString()")}}
+- {{jsxref("Temporal/PlainMonthDay/toLocaleString", "Temporal.PlainMonthDay.prototype.toLocaleString()")}}
+- {{jsxref("Temporal/ZonedDateTime/toLocaleString", "Temporal.ZonedDateTime.prototype.toLocaleString()")}}

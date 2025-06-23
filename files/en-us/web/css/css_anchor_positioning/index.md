@@ -49,7 +49,7 @@ In addition, the specification provides CSS-only mechanisms to:
 
 ### HTML attributes
 
-- [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) {{non-standard_inline}}
+- [`anchor`](/en-US/docs/Web/HTML/Reference/Global_attributes/anchor) {{non-standard_inline}}
 
 ### Interfaces
 
@@ -63,7 +63,7 @@ In addition, the specification provides CSS-only mechanisms to:
 
   - : An introductory guide to fundamental anchor positioning concepts, including associating, positioning, and sizing elements relative to their anchor.
 
-- [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)
+- [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)
 
   - : A guide to the mechanisms CSS anchor positioning provides to prevent anchor-positioned elements from overflowing their containing elements or the viewport, including position try fallback options and conditionally hiding elements.
 
@@ -80,8 +80,15 @@ In addition, the specification provides CSS-only mechanisms to:
   - {{cssxref("inline-size")}}
   - {{cssxref("min-block-size")}}
   - {{cssxref("min-inline-size")}}
+  - {{cssxref("block-size")}}
   - {{cssxref("max-block-size")}}
   - {{cssxref("max-inline-size")}}
+  - {{cssxref("margin-block")}}
+  - {{cssxref("margin-block-end")}}
+  - {{cssxref("margin-block-start")}}
+  - {{cssxref("margin-inline")}}
+  - {{cssxref("margin-inline-end")}}
+  - {{cssxref("margin-inline-start")}}
   - [Inset properties](/en-US/docs/Glossary/Inset_properties) glossary term
 - [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module:
   - {{cssxref("top")}}
@@ -95,7 +102,11 @@ In addition, the specification provides CSS-only mechanisms to:
   - {{cssxref("min-height")}}
   - {{cssxref("max-width")}}
   - {{cssxref("max-height")}}
-  - {{cssxref("block-size")}}
+  - {{cssxref("margin")}}
+  - {{cssxref("margin-bottom")}}
+  - {{cssxref("margin-left")}}
+  - {{cssxref("margin-right")}}
+  - {{cssxref("margin-top")}}
 - [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module:
   - {{cssxref("align-items")}}
   - {{cssxref("align-self")}}
@@ -110,6 +121,7 @@ In addition, the specification provides CSS-only mechanisms to:
 
 ## See also
 
-- [Learn: CSS positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning)
+- [CSS scroll anchoring](/en-US/docs/Web/CSS/CSS_scroll_anchoring) module
+- [Learn: CSS positioning](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning)
 - [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module
-- [Sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+- [Learn: Sizing items in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Sizing)

@@ -2,16 +2,14 @@
 title: timeline-scope
 slug: Web/CSS/timeline-scope
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.timeline-scope
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{CSSRef}}
 
 The **`timeline-scope`** [CSS](/en-US/docs/Web/CSS) property modifies the scope of a named animation timeline.
 
-By default, a named timeline (i.e. declared using {{cssxref("scroll-timeline-name")}} or {{cssxref("view-timeline-name")}}) can only be set as the controlling timeline of a direct descendant element (i.e. by setting {{cssxref("animation-timeline")}} on it with the timeline name as its value). This is the timeline's default "scope".
+By default, a named timeline (i.e., declared using {{cssxref("scroll-timeline-name")}} or {{cssxref("view-timeline-name")}}) can only be set as the controlling timeline of a direct descendant element (i.e., by setting {{cssxref("animation-timeline")}} on it with the timeline name as its value). This is the timeline's default "scope".
 
 `timeline-scope` is given the name of a timeline defined on a descendant element; this causes the scope of the timeline to be increased to the element that `timeline-scope` is set on and any of its descendants. In other words, that element and any of its descendant elements can now be controlled using that timeline.
 
@@ -33,7 +31,7 @@ Allowed values for `timeline-scope` are:
   - : There is no change in timeline scope.
 - `<dashed-ident>`
 
-  - : Specifies the name of an existing named timeline (i.e. declared using {{cssxref("scroll-timeline-name")}} or {{cssxref("view-timeline-name")}}) defined on a descendant element. This causes the timeline scope to be increased to the element that `timeline-scope` is set on and any of its descendants.
+  - : Specifies the name of an existing named timeline (i.e., declared using {{cssxref("scroll-timeline-name")}} or {{cssxref("view-timeline-name")}}) defined on a descendant element. This causes the timeline scope to be increased to the element that `timeline-scope` is set on and any of its descendants.
 
     > **Note:** [`<dashed-ident>`](/en-US/docs/Web/CSS/custom-ident) values must start with `--`, which helps to avoid name clashes with standard CSS keywords.
 

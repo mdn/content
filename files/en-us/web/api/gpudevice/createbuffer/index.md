@@ -3,12 +3,10 @@ title: "GPUDevice: createBuffer() method"
 short-title: createBuffer()
 slug: Web/API/GPUDevice/createBuffer
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUDevice.createBuffer
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`createBuffer()`** method of the
 {{domxref("GPUDevice")}} interface creates a {{domxref("GPUBuffer")}} in which to store raw data to use in GPU operations.
@@ -39,11 +37,7 @@ createBuffer(descriptor)
 
       - : The {{glossary("Bitwise flags", "bitwise flags")}} representing the allowed usages for the `GPUBuffer`. The possible values are in the [`GPUBuffer.usage` value table](/en-US/docs/Web/API/GPUBuffer/usage#value).
 
-        Note that multiple possible usages can be specified by separating values with pipe symbols, for example:
-
-        ```js
-        usage: GPUBufferUsage.COPY_SRC | GPUBufferUsage.MAP_WRITE;
-        ```
+        Note that multiple possible usages can be specified by separating values with [bitwise OR](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR), for example: `GPUBufferUsage.COPY_SRC | GPUBufferUsage.MAP_WRITE`.
 
 ### Return value
 

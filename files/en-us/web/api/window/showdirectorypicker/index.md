@@ -18,6 +18,7 @@ select a directory.
 
 ```js-nolint
 showDirectoryPicker()
+showDirectoryPicker(options)
 ```
 
 ### Parameters
@@ -34,7 +35,7 @@ showDirectoryPicker()
       - : A string that defaults to `"read"` for read-only access or `"readwrite"` for read
         and write access to the directory.
     - `startIn` {{optional_inline}}
-      - : A `FileSystemHandle` or a well known directory (`"desktop"`, `"documents"`,
+      - : A {{domxref("FileSystemHandle")}} or a well known directory (`"desktop"`, `"documents"`,
         `"downloads"`, `"music"`, `"pictures"`, or `"videos"`) to open the dialog in.
 
 ### Return value

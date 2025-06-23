@@ -1,5 +1,6 @@
 ---
 title: Number.prototype.toLocaleString()
+short-title: toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Number.toLocaleString
@@ -7,11 +8,26 @@ browser-compat: javascript.builtins.Number.toLocaleString
 
 {{JSRef}}
 
-The **`toLocaleString()`** method of {{jsxref("Number")}} values returns a string with a language-sensitive representation of this number. In implementations with [`Intl.NumberFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) support, this method simply calls `Intl.NumberFormat`.
+The **`toLocaleString()`** method of {{jsxref("Number")}} values returns a string with a language-sensitive representation of this number. In implementations with [`Intl.NumberFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) support, this method delegates to `Intl.NumberFormat`.
 
 Every time `toLocaleString` is called, it has to perform a search in a big database of localization strings, which is potentially inefficient. When the method is called many times with the same arguments, it is better to create a {{jsxref("Intl.NumberFormat")}} object and use its {{jsxref("Intl/NumberFormat/format", "format()")}} method, because a `NumberFormat` object remembers the arguments passed to it and may decide to cache a slice of the database, so future `format` calls can search for localization strings within a more constrained context.
 
-{{EmbedInteractiveExample("pages/js/number-tolocalestring.html")}}
+{{InteractiveExample("JavaScript Demo: Number.prototype.toLocaleString()")}}
+
+```js interactive-example
+function eArabic(x) {
+  return x.toLocaleString("ar-EG");
+}
+
+console.log(eArabic(123456.789));
+// Expected output: "١٢٣٬٤٥٦٫٧٨٩"
+
+console.log(eArabic("123456.789"));
+// Expected output: "123456.789"
+
+console.log(eArabic(NaN));
+// Expected output: "ليس رقم"
+```
 
 ## Syntax
 

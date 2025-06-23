@@ -11,7 +11,7 @@ The **`console`** object provides access to the debugging console (e.g., the [We
 
 Implementations of the console API may differ between runtimes. In particular, some console methods may work differently or not work at all in some online editors and IDEs. To see the behavior described in this documentation, try the methods in your browser's developer tools, although even here, there are some differences between browsers.
 
-The `console` object can be accessed from any global object. {{domxref("Window")}} on browsing scopes and {{domxref("WorkerGlobalScope")}} as specific variants in workers via the property console. It's exposed as {{domxref("Window.console")}}, and can be referenced as `console`. For example:
+The `console` object is available in any global scope. For example:
 
 ```js
 console.log("Failed to open the specified link");
@@ -127,7 +127,7 @@ console.info("My first car was a", car, ". The object is:", someObject);
 The output will look like this:
 
 ```plain
-My first car was a Dodge Charger. The object is: {str:"Some text", id:5}
+My first car was a Dodge Charger . The object is: {str:"Some text", id:5}
 ```
 
 #### Using string substitutions

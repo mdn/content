@@ -9,7 +9,143 @@ browser-compat: css.properties.transform-origin
 
 The **`transform-origin`** [CSS](/en-US/docs/Web/CSS) property sets the origin for an element's transformations.
 
-{{EmbedInteractiveExample("pages/css/transform-origin.html")}}
+{{InteractiveExample("CSS Demo: transform-origin")}}
+
+```css interactive-example-choice
+transform-origin: center;
+```
+
+```css interactive-example-choice
+transform-origin: top left;
+```
+
+```css interactive-example-choice
+transform-origin: 50px 50px;
+```
+
+```css interactive-example-choice
+/* 3D rotation with z-axis origin */
+transform-origin: bottom right 60px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-container">
+    <div id="example-element">Rotate me!</div>
+    <img
+      alt=""
+      id="crosshair"
+      src="/shared-assets/images/examples/crosshair.svg"
+      width="24px" />
+    <div id="static-element"></div>
+  </div>
+</section>
+```
+
+```css interactive-example
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(30deg);
+  }
+}
+
+@keyframes rotate3d {
+  from {
+    transform: rotate3d(0, 0, 0, 0);
+  }
+
+  to {
+    transform: rotate3d(1, 2, 0, 60deg);
+  }
+}
+
+#example-container {
+  width: 160px;
+  height: 160px;
+  position: relative;
+}
+
+#example-element {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  background: #f7ebee;
+  color: #000000;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+#example-element.rotate {
+  animation: rotate 1s forwards;
+}
+
+#example-element.rotate3d {
+  animation: rotate3d 1s forwards;
+}
+
+#crosshair {
+  width: 24px;
+  height: 24px;
+  opacity: 0;
+  position: absolute;
+}
+
+#static-element {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border: dotted 3px #ff1100;
+}
+```
+
+```js interactive-example
+"use strict";
+
+window.addEventListener("load", () => {
+  function update() {
+    const selected = document.querySelector(".selected");
+
+    /* Restart the animation
+           https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Tips */
+    el.className = "";
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        el.className =
+          el.style.transformOrigin.split(" ")[2] === "60px"
+            ? "rotate3d"
+            : "rotate";
+      });
+    });
+
+    const transformOrigin = getComputedStyle(el).transformOrigin;
+    const pos = transformOrigin.split(/\s+/);
+    crosshair.style.left = `calc(${pos[0]} - 12px)`;
+    crosshair.style.top = `calc(${pos[1]} - 12px)`;
+  }
+
+  const crosshair = document.getElementById("crosshair");
+  const el = document.getElementById("example-element");
+
+  const observer = new MutationObserver(() => {
+    update();
+  });
+
+  observer.observe(el, {
+    attributes: true,
+    attributeFilter: ["style"],
+  });
+
+  update();
+  crosshair.style.opacity = "1";
+});
+```
 
 The transform origin is the point around which a transformation is applied. For example, the transform origin of the [`rotate()`](/en-US/docs/Web/CSS/transform-function/rotate) function is the center of rotation.
 
@@ -70,7 +206,7 @@ transform-origin: revert-layer;
 transform-origin: unset;
 ```
 
-The `transform-origin` property may be specified using one, two, or three values, where each value represents an offset. Offsets that are not explicitly defined are reset to their corresponding [initial values](/en-US/docs/Web/CSS/initial_value).
+The `transform-origin` property may be specified using one, two, or three values, where each value represents an offset. Offsets that are not explicitly defined are reset to their corresponding [initial values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value).
 
 If a single {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} value is defined, it represents the horizontal offset.
 
@@ -120,7 +256,7 @@ The keywords are convenience shorthands and match the following {{cssxref("&lt;p
 {{CSSInfo}}
 
 > [!NOTE]
-> The initial value of `transform-origin` is `0 0` for all SVG elements except for root `<svg>` elements and `<svg>` elements that are a direct child of a [foreignObject](/en-US/docs/Web/SVG/Element/foreignObject), and whose `transform-origin` is `50% 50%`, like other CSS elements. See the [SVG transform-origin](/en-US/docs/Web/SVG/Attribute/transform-origin) attribute for more information.
+> The initial value of `transform-origin` is `0 0` for all SVG elements except for root `<svg>` elements and `<svg>` elements that are a direct child of a [foreignObject](/en-US/docs/Web/SVG/Reference/Element/foreignObject), and whose `transform-origin` is `50% 50%`, like other CSS elements. See the [SVG transform-origin](/en-US/docs/Web/SVG/Reference/Attribute/transform-origin) attribute for more information.
 
 ## Formal syntax
 
@@ -320,4 +456,5 @@ transform-origin: 100% -30%;
 ## See also
 
 - [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- SVG {{SVGAttr("transform-origin")}} attribute
 - <https://css-tricks.com/almanac/properties/t/transform-origin/>

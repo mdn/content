@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.reduce()
+short-title: reduce()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.reduce
@@ -11,7 +12,21 @@ The **`reduce()`** method of {{jsxref("Array")}} instances executes a user-suppl
 
 The first time that the callback is run there is no "return value of the previous calculation". If supplied, an initial value may be used in its place. Otherwise the array element at index 0 is used as the initial value and iteration starts from the next element (index 1 instead of index 0).
 
-{{EmbedInteractiveExample("pages/js/array-reduce.html")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.reduce()")}}
+
+```js interactive-example
+const array1 = [1, 2, 3, 4];
+
+// 0 + 1 + 2 + 3 + 4
+const initialValue = 0;
+const sumWithInitial = array1.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  initialValue,
+);
+
+console.log(sumWithInitial);
+// Expected output: 10
+```
 
 ## Syntax
 
@@ -391,6 +406,7 @@ In cases where `reduce()` is the best choice, documentation and semantic variabl
 ## See also
 
 - [Polyfill of `Array.prototype.reduce` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims polyfill of `Array.prototype.reduce`](https://www.npmjs.com/package/array.prototype.reduce)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.map()")}}

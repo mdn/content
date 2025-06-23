@@ -15,8 +15,8 @@ objects representing the media element's text tracks, in the same order as in
 the list of text tracks.
 
 You can detect when tracks are added to and removed from an
-[`<audio>`](/en-US/docs/Web/HTML/Element/audio) or
-[`<video>`](/en-US/docs/Web/HTML/Element/video) element
+[`<audio>`](/en-US/docs/Web/HTML/Reference/Elements/audio) or
+[`<video>`](/en-US/docs/Web/HTML/Reference/Elements/video) element
 using the `addtrack` and `removetrack` events. However, these
 events aren't sent directly to the media element itself. Instead, they're sent to the
 track list object of the [`HTMLMediaElement`](/en-US/docs/Web/API/HTMLMediaElement)
@@ -41,8 +41,8 @@ information about the track.
 ## Examples
 
 We start with a
-[`<video>`](/en-US/docs/Web/HTML/Element/video) that has
-several [`<track>`](/en-US/docs/Web/HTML/Element/track)
+[`<video>`](/en-US/docs/Web/HTML/Reference/Elements/video) that has
+several [`<track>`](/en-US/docs/Web/HTML/Reference/Elements/track)
 children
 
 ```html

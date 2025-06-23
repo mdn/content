@@ -21,7 +21,7 @@ This article provides information about the changes in Firefox 83 that will affe
 ### HTML/XML
 
 - The `crossorigin` attribute is now supported for `<link rel=icon>` ([Firefox bug 1661075](https://bugzil.la/1661075)).
-- The `displaystyle` [attribute](/en-US/docs/Web/MathML/Attribute) is now implemented for all MathML elements ([Firefox bug 1666075](https://bugzil.la/1666075)).
+- The `displaystyle` [attribute](/en-US/docs/Web/MathML/Reference/Attribute) is now implemented for all MathML elements ([Firefox bug 1666075](https://bugzil.la/1666075)).
 
 ### CSS
 
@@ -43,7 +43,7 @@ _No changes._
 ### WebDriver conformance (Marionette)
 
 - We've removed preliminary support for `WebDriver:SwitchToShadowRoot`, which hasn't been added to the WebDriver specification yet ([Firefox bug 1662468](https://bugzil.la/1662468)).
-- We fixed a bug in `WebDriver:Back` and `WebDriver:Forward` that caused Marionette to hang when the navigation was triggered from within an [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) that gets removed ([Firefox bug 1672758](https://bugzil.la/1672758)).
+- We fixed a bug in `WebDriver:Back` and `WebDriver:Forward` that caused Marionette to hang when the navigation was triggered from within an [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe) that gets removed ([Firefox bug 1672758](https://bugzil.la/1672758)).
 
 ## Changes for add-on developers
 

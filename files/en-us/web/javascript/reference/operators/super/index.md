@@ -11,7 +11,43 @@ The **`super`** keyword is used to access properties on an object literal or cla
 
 The `super.prop` and `super[expr]` expressions are valid in any [method definition](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) in both [classes](/en-US/docs/Web/JavaScript/Reference/Classes) and [object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer). The `super(...args)` expression is valid in class constructors.
 
-{{EmbedInteractiveExample("pages/js/expressions-super.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: super expression", "taller")}}
+
+```js interactive-example
+class Foo {
+  constructor(name) {
+    this.name = name;
+  }
+
+  getNameSeparator() {
+    return "-";
+  }
+}
+
+class FooBar extends Foo {
+  constructor(name, index) {
+    super(name);
+    this.index = index;
+  }
+
+  // Does not get called
+  getNameSeparator() {
+    return "/";
+  }
+
+  getFullName() {
+    return this.name + super.getNameSeparator() + this.index;
+  }
+}
+
+const firstFooBar = new FooBar("foo", 1);
+
+console.log(firstFooBar.name);
+// Expected output: "foo"
+
+console.log(firstFooBar.getFullName());
+// Expected output: "foo-1"
+```
 
 ## Syntax
 
@@ -175,7 +211,7 @@ obj2.method2(); // Logs "method 1"
 
 ### Methods that read super.prop do not behave differently when bound to other objects
 
-Accessing `super.x` behaves like `Reflect.get(Object.getPrototypeOf(objectLiteral), "x", this)`, which means the property is always seeked on the object literal/class declaration's prototype, and unbinding and re-binding a method won't change the reference of `super`.
+Accessing `super.x` behaves like `Reflect.get(Object.getPrototypeOf(objectLiteral), "x", this)`, which means the property is always sought on the object literal/class declaration's prototype, and unbinding and re-binding a method won't change the reference of `super`.
 
 ```js
 class Base {

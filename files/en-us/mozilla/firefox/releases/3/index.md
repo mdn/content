@@ -22,7 +22,7 @@ If you're a developer trying to get a handle on all the new features in Firefox 
   - : You can now draw text in a canvas using a non-standardized API supported by Firefox 3.
 - [Transform support for canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations#transforms)
   - : Firefox now supports the `transform()` and `setTransform()` methods on canvases.
-- [Using microformats](/en-US/docs/Web/HTML/microformats)
+- [Using microformats](/en-US/docs/Web/HTML/Guides/Microformats)
   - : Firefox now has APIs for working with microformats.
 - [Drag and drop events](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
   - : Firefox 3 supports new events that are sent to the source node for a drag operation when the drag begins and ends.
@@ -36,11 +36,11 @@ If you're a developer trying to get a handle on all the new features in Firefox 
   - : Firefox 3 offers a number of new features in Firefox 3's DOM implementation, including support for several Internet Explorer extensions to the DOM.
 - [JavaScript 1.8 support](/en-US/docs/New_in_JavaScript_1.8)
   - : Firefox 3 offers JavaScript 1.8.
-- [EXSLT support](/en-US/docs/Web/EXSLT)
-  - : Firefox 3 provides support for a substantial subset of the [EXSLT](/en-US/docs/Web/EXSLT) extensions to [XSLT](/en-US/docs/Web/XSLT).
+- [EXSLT support](/en-US/docs/Web/XML/EXSLT)
+  - : Firefox 3 provides support for a substantial subset of the [EXSLT](/en-US/docs/Web/XML/EXSLT) extensions to [XSLT](/en-US/docs/Web/XML/XSLT).
 - [SVG improvements in Firefox 3](/en-US/docs/Mozilla/Firefox/Releases/3/SVG_improvements)
   - : SVG support in Firefox 3 has been upgraded significantly, with support for over two dozen new filters, several new elements and attributes, and other improvements.
-- [Animated PNG graphics](/en-US/docs/Web/Media/Formats/Image_types#apng_animated_portable_network_graphics)
+- [Animated PNG graphics](/en-US/docs/Web/Media/Guides/Formats/Image_types#apng_animated_portable_network_graphics)
   - : Firefox 3 supports the animated PNG (APNG) image format.
 
 ### For XUL and extension developers
@@ -54,7 +54,7 @@ If you're a developer trying to get a handle on all the new features in Firefox 
 - [Templates in Firefox 3](/en-US/docs/Templates_in_Firefox_3)
   - : Templates have been significantly improved in Firefox 3. The key improvement allows the use of custom query processors to allow data sources other than RDF to be used.
 - [Securing updates](/en-US/docs/Extension_Versioning,_Update_and_Compatibility#securing_updates)
-  - : In order to provide a more secure add-on upgrade path for users, add-ons are now required to provide a secure method for obtaining updates before they can be installed. Add-ons hosted at [AMO](https://addons.mozilla.org) automatically provide this. Any add-ons installed that do not provide a secure update method when the user upgrades to Firefox 3 will be automatically disabled. Firefox will however continue to check for updates to the extension over the insecure path and attempt to install any update offered (installation will fail if the update also fails to provide a secure update method).
+  - : In order to provide a more secure add-on upgrade path for users, add-ons are now required to provide a secure method for obtaining updates before they can be installed. Add-ons hosted at [AMO](https://addons.mozilla.org/) automatically provide this. Any add-ons installed that do not provide a secure update method when the user upgrades to Firefox 3 will be automatically disabled. Firefox will however continue to check for updates to the extension over the insecure path and attempt to install any update offered (installation will fail if the update also fails to provide a secure update method).
 - [Places migration guide](/en-US/docs/Places_Developer_Guide)
   - : An article about how to update an existing extension to use the Places API.
 - [Download Manager improvements in Firefox 3](/en-US/docs/Download_Manager_improvements_in_Firefox_3)

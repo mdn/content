@@ -7,9 +7,51 @@ browser-compat: css.properties.place-self
 
 {{CSSRef}}
 
-The **`place-self`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) allows you to align an individual item in both the block and inline directions at once (i.e. the {{cssxref("align-self")}} and {{cssxref("justify-self")}} properties). This property applies to block-level boxes, absolutely-positioned boxes, and grid items. If the second value is not present, the first value is also used for it.
+The **`place-self`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) allows you to align an individual item in both the block and inline directions at once (i.e., the {{cssxref("align-self")}} and {{cssxref("justify-self")}} properties). This property applies to block-level boxes, absolutely-positioned boxes, and grid items. If the second value is not present, the first value is also used for it.
 
-{{EmbedInteractiveExample("pages/css/place-self.html")}}
+{{InteractiveExample("CSS Demo: place-self")}}
+
+```css interactive-example-choice
+place-self: stretch center;
+```
+
+```css interactive-example-choice
+place-self: center start;
+```
+
+```css interactive-example-choice
+place-self: start end;
+```
+
+```css interactive-example-choice
+place-self: end center;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">One</div>
+    <div>Two</div>
+    <div>Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  width: 220px;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 80px;
+  grid-gap: 10px;
+}
+
+.example-container > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 ## Constituent properties
 
@@ -58,7 +100,7 @@ place-self: unset;
     - In absolutely-positioned layouts, the keyword behaves like `start` on _replaced_ absolutely-positioned boxes, and as `stretch` on _all other_ absolutely-positioned boxes.
     - In static position of absolutely-positioned layouts, the keyword behaves as `stretch`.
     - For flex items, the keyword behaves as `stretch`.
-    - For grid items, this keyword leads to a behavior similar to the one of `stretch`, except for boxes with an {{glossary("aspect ratio")}} or an intrinsic sizes where it behaves like `start`.
+    - For grid items, this keyword leads to a behavior similar to the one of `stretch`, except for boxes with an {{glossary("aspect ratio")}} or an intrinsic size where it behaves like `start`.
     - The property doesn't apply to block-level boxes, and to table cells.
 
 - `self-start`
@@ -91,7 +133,7 @@ place-self: unset;
 
 ### Basic demonstration
 
-In the following example we have a simple 2 x 2 grid layout. Initially the grid container has [`justify-items`](/en-US/docs/Web/CSS/justify-items) and [`align-items`](/en-US/docs/Web/CSS/align-items) values of `stretch` — the defaults — which causes the grid items to stretch across the entire width of their cells.
+In the following example we have a 2 x 2 grid layout. Initially the grid container has [`justify-items`](/en-US/docs/Web/CSS/justify-items) and [`align-items`](/en-US/docs/Web/CSS/align-items) values of `stretch` — the defaults — which causes the grid items to stretch across the entire width of their cells.
 
 The second, third, and fourth grid items are then given different values of `place-self`, to show how these override the default placements. These values cause the grid items to span only as wide/tall as their content width/height, and align in different positions across their cells, in the block and inline directions.
 
@@ -168,5 +210,5 @@ span {
 - {{cssxref("justify-self")}}
 - [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
 - [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-- [Box alignment in CSS grid layouts](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+- [Box alignment in grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
 - [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module

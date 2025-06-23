@@ -2,10 +2,12 @@
 title: font-stretch
 slug: Web/CSS/@font-face/font-stretch
 page-type: css-at-rule-descriptor
+status:
+  - deprecated
 browser-compat: css.at-rules.font-face.font-stretch
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{deprecated_header}}
 
 The **`font-stretch`** CSS descriptor allows authors to specify a normal, condensed, or expanded face for the fonts specified in the {{cssxref("@font-face")}} at-rule.
 
@@ -111,7 +113,7 @@ For TrueType or OpenType variable fonts, the "wdth" variation is used to impleme
 
 People with dyslexia and other cognitive conditions may have difficulty reading fonts that are too condensed, especially if the font has a [low contrast color ratio](/en-US/docs/Web/CSS/color#accessibility).
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
 ## Formal definition
@@ -120,7 +122,7 @@ People with dyslexia and other cognitive conditions may have difficulty reading 
 
 ## Formal syntax
 
-{{csssyntax}}
+{{CSSSyntax("font-width")}}
 
 ## Examples
 

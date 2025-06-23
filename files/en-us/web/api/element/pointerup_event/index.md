@@ -10,14 +10,16 @@ browser-compat: api.Element.pointerup_event
 
 The `pointerup` event is fired when a pointer is no longer active. Remember that it is possible to get a [`pointercancel`](/en-US/docs/Web/API/Element/pointercancel_event) event instead.
 
+This behavior is different from {{domxref("Element/mouseup_event", "mouseup")}} events. When using a physical mouse, `mouseup` events fire whenever any button on a mouse is released. `pointerup` events fire only upon the last button release; previous button releases, while other buttons are held down, don't fire `pointerup` events.
+
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("pointerup", (event) => {});
+```js-nolint
+addEventListener("pointerup", (event) => { })
 
-onpointerup = (event) => {};
+onpointerup = (event) => { }
 ```
 
 ## Event type
@@ -47,11 +49,11 @@ _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref
 - {{domxref('PointerEvent.tangentialPressure')}} {{ReadOnlyInline}}
   - : The normalized tangential pressure of the pointer input (also known as barrel pressure or [cylinder stress](https://en.wikipedia.org/wiki/Cylinder_stress)) in the range `-1` to `1`, where `0` is the neutral position of the control.
 - {{domxref('PointerEvent.tiltX')}} {{ReadOnlyInline}}
-  - : The plane angle (in degrees, in the range of `-90` to `90`) between the Y–Z plane and the plane containing both the pointer (e.g. pen stylus) axis and the Y axis.
+  - : The plane angle (in degrees, in the range of `-90` to `90`) between the Y–Z plane and the plane containing both the pointer (e.g., pen stylus) axis and the Y axis.
 - {{domxref('PointerEvent.tiltY')}} {{ReadOnlyInline}}
-  - : The plane angle (in degrees, in the range of `-90` to `90`) between the X–Z plane and the plane containing both the pointer (e.g. pen stylus) axis and the X axis.
+  - : The plane angle (in degrees, in the range of `-90` to `90`) between the X–Z plane and the plane containing both the pointer (e.g., pen stylus) axis and the X axis.
 - {{domxref('PointerEvent.twist')}} {{ReadOnlyInline}}
-  - : The clockwise rotation of the pointer (e.g. pen stylus) around its major axis in degrees, with a value in the range `0` to `359`.
+  - : The clockwise rotation of the pointer (e.g., pen stylus) around its major axis in degrees, with a value in the range `0` to `359`.
 - {{domxref('PointerEvent.pointerType')}} {{ReadOnlyInline}}
   - : Indicates the device type that caused the event (mouse, pen, touch, etc.).
 - {{domxref('PointerEvent.isPrimary')}} {{ReadOnlyInline}}
@@ -101,3 +103,4 @@ para.onpointerup = (event) => {
   - {{domxref('Element/pointerout_event', 'pointerout')}}
   - {{domxref('Element/pointerleave_event', 'pointerleave')}}
   - {{domxref('Element/pointerrawupdate_event', 'pointerrawupdate')}}
+  - {{domxref("Element/mouseup_event", "mouseup")}}

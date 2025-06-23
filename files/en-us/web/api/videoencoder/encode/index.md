@@ -27,19 +27,19 @@ encode(frame, options)
     - `keyFrame` {{optional_inline}}
       - : A {{jsxref("boolean")}}, defaulting to `false` giving the user agent flexibility to decide if this frame should be encoded as a key frame. If `true` this indicates that the given frame must be encoded as a key frame.
     - `vp9` {{optional_inline}}
-      - : Encode options for the [VP9](/en-US/docs/Web/Media/Formats/Video_codecs#vp9) codec.
+      - : Encode options for the [VP9](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#vp9) codec.
         - `quantizer`
           - : Frame quantizer value 0 to 63. Only effective if {{domxref("VideoEncoder")}} was configured with `quantizer` bitrate mode.
     - `av1` {{optional_inline}}
-      - : Encode options for the [AV1](/en-US/docs/Web/Media/Formats/Video_codecs#av1) codec.
+      - : Encode options for the [AV1](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#av1) codec.
         - `quantizer`
           - : Frame quantizer value 0 to 63. Only effective if {{domxref("VideoEncoder")}} was configured with `quantizer` bitrate mode.
     - `avc` {{optional_inline}}
-      - : Encode options for the [AVC (H.264)](/en-US/docs/Web/Media/Formats/Video_codecs#avc_h.264) codec.
+      - : Encode options for the [AVC (H.264)](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#avc_h.264) codec.
         - `quantizer`
           - : Frame quantizer value 0 to 51. Only effective if {{domxref("VideoEncoder")}} was configured with `quantizer` bitrate mode.
     - `hevc` {{optional_inline}}
-      - : Encode options for the [HEVC (H.265)](/en-US/docs/Web/Media/Formats/Video_codecs#hevc_h.265) codec.
+      - : Encode options for the [HEVC (H.265)](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#hevc_h.265) codec.
         - `quantizer`
           - : Frame quantizer value 0 to 51. Only effective if {{domxref("VideoEncoder")}} was configured with `quantizer` bitrate mode.
 
@@ -85,7 +85,7 @@ if (codec.includes("vp09")) {
   encodeOptions.av1 = { quantizer: qp };
 } else if (codec.includes("avc")) {
   encodeOptions.avc = { quantizer: qp };
-} else if (codec.includes("hvc1" || codec.includes("hev1"))) {
+} else if (codec.includes("hvc1") || codec.includes("hev1")) {
   encodeOptions.hevc = { quantizer: qp };
 }
 

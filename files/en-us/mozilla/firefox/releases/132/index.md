@@ -21,13 +21,16 @@ No notable changes
 
 #### Removals
 
-- The [`-moz-user-modify`](/en-US/docs/Web/CSS/user-modify) CSS property has been removed. This property has been deprecated in favour of the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) global attribute. ([Firefox bug 1920118](https://bugzil.la/1920118)).
+- The [`-moz-user-modify`](/en-US/docs/Web/CSS/user-modify) CSS property has been removed. This property has been deprecated in favor of the [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) global attribute. ([Firefox bug 1920118](https://bugzil.la/1920118)).
 
 ### JavaScript
 
 - The [`(?ims-ims:...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Modifier) regular expression modifiers allow you to make changes to only take effect in a specific part of a regex pattern. ([Firefox bug 1913752](https://bugzil.la/1913752) & [Firefox bug 1899813](https://bugzil.la/1899813)).
 
 ### HTTP
+
+- The [default/document value](/en-US/docs/Web/HTTP/Guides/Content_negotiation/List_of_default_Accept_values#default_values) of the HTTP {{httpheader("Accept")}} header was changed to `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`.
+  This removes image MIME types that sometimes caused compatibility issues, and aligns with the fetch specification and Safari. ([Firefox bug 1917177](https://bugzil.la/1917177)).
 
 #### Removals
 
@@ -36,7 +39,7 @@ No notable changes
 
 ### Privacy
 
-- All [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies) are now blocked in [Strict Enhanced Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop#w_strict-enhanced-tracking-protection). ([Firefox bug 1918037](https://bugzil.la/1918037)).
+- All [third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies) are now blocked in [Strict Enhanced Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop#w_strict-enhanced-tracking-protection). ([Firefox bug 1918037](https://bugzil.la/1918037)).
 
 ### APIs
 
@@ -44,6 +47,7 @@ No notable changes
 - The {{domxref("Notification.silent")}} property is now supported, which controls whether system notifications should be silent. When `silent: true` is specified in the {{domxref("Notification.Notification", "Notification()")}} constructor, the resulting system notification is issued without accompanying sounds or vibrations, regardless of device settings ([Firefox bug 1809028](https://bugzil.la/1809028)).
 - The `fetchpriority` attribute of the {{htmlelement("link")}}, {{htmlelement("script")}}, and {{htmlelement("img")}} elements, the `fetchPriority` property of the {{domxref("HTMLLinkElement")}}, {{domxref("HTMLScriptElement")}}, and {{domxref("HTMLImageElement")}} interfaces, the [`options.priority`](/en-US/docs/Web/API/RequestInit#priority) parameter passed to the [`Request()` constructor](/en-US/docs/Web/API/Request/Request), and the `fetchpriority` directive in the HTTP {{httpheader("Link")}} header, are now supported. These allow developers to provide a hint about the relative priority for fetching a particular resource compared to other resources of the same type, and can be used alongside other ways of setting the priority, such as preloading. ([Firefox bug 1854077](https://bugzil.la/1854077)).
 - The {{domxref("CSSNestedDeclarations")}} interface and associated {{domxref("CSSNestedDeclarations.style")}} property are now supported ([Firefox bug 1918408](https://bugzil.la/1918408)).
+- The `microphone` and `camera` [permissions](/en-US/docs/Web/API/Permissions_API) can now be used in the {{domxref("Permissions.query()")}} method to test whether access to the corresponding hardware has been granted, denied, or still requires user approval. ([Firefox bug 1609427](https://bugzil.la/1609427) and [Firefox bug 1915222](https://bugzil.la/1915222)).
 
 #### Media, WebRTC, and Web Audio
 
@@ -77,12 +81,12 @@ These features are newly shipped in Firefox 132 but are disabled by default. To 
 
   The global {{domxref('Window.fetch','fetch()')}} method has a [`keepalive`](/en-US/docs/Web/API/RequestInit#keepalive) initialization option. When `keepalive` is set to `true`, the browser will not abort the associated request if the page that initiated it is unloaded before the request is complete.
 
-  This enables a fetch request to function as an alternative to {{domxref("Navigator.sendBeacon()")}} when sending analytics at the end of a session, which has some advantages (you can use HTTP methods other than [`POST`](/en-US/docs/Web/HTTP/Methods/POST), customize request properties, and access the server response via the fetch {{jsxref("Promise")}} fulfillment). It is also available in [service workers](/en-US/docs/Web/API/Service_Worker_API). ([Firefox bug 1906952](https://bugzil.la/1906952)).
+  This enables a fetch request to function as an alternative to {{domxref("Navigator.sendBeacon()")}} when sending analytics at the end of a session, which has some advantages (you can use HTTP methods other than [`POST`](/en-US/docs/Web/HTTP/Reference/Methods/POST), customize request properties, and access the server response via the fetch {{jsxref("Promise")}} fulfillment). It is also available in [service workers](/en-US/docs/Web/API/Service_Worker_API). ([Firefox bug 1906952](https://bugzil.la/1906952)).
 
 - **`CloseWatcher`**: <code>dom.closewatcher.enabled</code>.
   The {{domxref("CloseWatcher")}} interface enables developers to implement components that can be closed using device-native mechanisms, in the same way as built-in components. For example, on Android you can close a dialog using the back button: this interface allows you to similarly close a custom sidebar. ([Firefox bug 1888729](https://bugzil.la/1888729)).
 
-- **`Promise.try()`**: <code>javascript.options.experimental.promise_try</code>. {{jsxref("Promise.try()")}} is a convenience method that takes a callback of any kind (returns or throws, synchronously or asynchronously) and wraps its result in a {{jsxref("Promise")}} so that promise semantics (e.g. {{jsxref("Promise.then", ".then()")}}, {{jsxref("Promise.catch", ".catch()")}}) can be used to handle it ([Firefox bug 1905364](https://bugzil.la/1905364)).
+- **`Promise.try()`**: <code>javascript.options.experimental.promise_try</code>. {{jsxref("Promise.try()")}} is a convenience method that takes a callback of any kind (returns or throws, synchronously or asynchronously) and wraps its result in a {{jsxref("Promise")}} so that promise semantics (e.g., {{jsxref("Promise.then", ".then()")}}, {{jsxref("Promise.catch", ".catch()")}}) can be used to handle it ([Firefox bug 1905364](https://bugzil.la/1905364)).
 
 - **`JSON.parse` with source**: <code>javascript.options.experimental.json_parse_with_source</code>. The [`JSON.parse` source text access proposal](https://github.com/tc39/proposal-json-parse-with-source) extends `JSON.parse` behavior to provide features to mitigate issues around loss of precision when converting values such as large floats and date values between JavaScript values and JSON text ([Firefox bug 1913085](https://bugzil.la/1913085), [Firefox bug 1925334](https://bugzil.la/1925334)). Specifically, the following features are now available:
   - The `JSON.parse()` [`reviver` parameter `context` argument](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#the_reviver_parameter): Provides access to the original JSON source text that was parsed.

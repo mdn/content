@@ -9,7 +9,39 @@ browser-compat: css.properties.font-size
 
 The **`font-size`** [CSS](/en-US/docs/Web/CSS) property sets the size of the font. Changing the font size also updates the sizes of the font size-relative {{cssxref("&lt;length&gt;")}} units, such as `em`, `ex`, and so forth.
 
-{{EmbedInteractiveExample("pages/css/font-size.html")}}
+{{InteractiveExample("CSS Demo: font-size")}}
+
+```css interactive-example-choice
+font-size: 1.2rem;
+```
+
+```css interactive-example-choice
+font-size: x-small;
+```
+
+```css interactive-example-choice
+font-size: smaller;
+```
+
+```css interactive-example-choice
+font-size: 12px;
+```
+
+```css interactive-example-choice
+font-size: 80%;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
 
 ## Syntax
 
@@ -163,7 +195,7 @@ In this example, the words "outer inner outer" are all displayed at 25.6px (assu
 
 ### Ex
 
-Like the `em` unit, an element's `font-size` set using the `ex` unit is computed or dynamic. It behaves in exactly the same way, except that when setting the `font-size` property using `ex` units, the `font-size` equals the x-height of the [first available font](https://www.w3.org/TR/css-fonts-3/#first-available-font) used on the page. The number value multiplies the element's inherited `font-size` and the `font-size` compounds relatively.
+Like the `em` unit, an element's `font-size` set using the `ex` unit is computed or dynamic. It behaves in exactly the same way, except that when setting the `font-size` property using `ex` units, the `font-size` equals the x-height of the [first available font](https://drafts.csswg.org/css-fonts/#first-available-font) used on the page. The number value multiplies the element's inherited `font-size` and the `font-size` compounds relatively.
 
 See the W3C Editor's Draft for a more detailed description of [font-relative length units](https://drafts.csswg.org/css-values-4/#font-relative-length) such as `ex`.
 
@@ -224,4 +256,5 @@ See the W3C Editor's Draft for a more detailed description of [font-relative len
 - {{cssxref("font-weight")}}
 - {{cssxref("math-depth")}}
 - {{cssxref("math-style")}}
-- [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
+- SVG {{SVGAttr("font-size")}} attribute
+- [Learn: Fundamental text and font styling](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals)

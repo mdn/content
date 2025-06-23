@@ -1,5 +1,6 @@
 ---
 title: Iterator.prototype.find()
+short-title: find()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/find
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Iterator.find
@@ -75,6 +76,7 @@ console.log(seq.next()); // { value: undefined, done: true }
 ## See also
 
 - [Polyfill of `Iterator.prototype.find` in `core-js`](https://github.com/zloirock/core-js#iterator-helpers)
+- [es-shims polyfill of `Iterator.prototype.find`](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Iterator.prototype.every()")}}
 - {{jsxref("Iterator.prototype.some()")}}

@@ -11,7 +11,23 @@ The **`async function*`** keywords can be used to define an async generator func
 
 You can also define async generator functions using the [`async function*` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*).
 
-{{EmbedInteractiveExample("pages/js/expressions-async-function-asterisk.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: async function* expression", "taller")}}
+
+```js interactive-example
+async function joinAll(generator) {
+  let str = "";
+  for await (const val of generator()) {
+    str += val;
+  }
+  return str;
+}
+joinAll(async function* () {
+  yield await Promise.resolve("a");
+  yield await Promise.resolve("b");
+  yield await Promise.resolve("c");
+}).then((str) => console.log(str));
+// Expected output: "abc"
+```
 
 ## Syntax
 

@@ -3,6 +3,12 @@ on:
   schedule:
     - cron: "49 11,23 * * *"
 
+permissions:
+  # Label issues.
+  issues: write
+  # Label pull requests.
+  pull-requests: write
+
 jobs:
   idle:
     uses: mdn/workflows/.github/workflows/idle.yml@main

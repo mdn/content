@@ -41,9 +41,9 @@ Among the things added to `Document` by the HTML standard are:
 
 - Support for accessing various information provided by the {{Glossary("HTTP")}} headers when loading the page, such as the {{DOMxRef("Document/location", "location", "", "1")}} from which the document was loaded, {{DOMxRef("Document/cookie", "cookies", "", "1")}}, {{DOMxRef("Document/lastModified", "modification date", "", "1")}}, {{DOMxRef("Document/referrer", "referring site", "", "1")}}, and so forth.
 - Access to lists of elements in the document's {{HTMLElement("head")}} block and {{DOMxRef("Document/body", "body", "", "1")}}, as well as lists of the {{DOMxRef("Document/images", "images", "", "1")}}, {{DOMxRef("Document/links", "links", "", "1")}}, {{DOMxRef("Document/scripts", "scripts", "", "1")}}, etc. contained in the document.
-- Support for interacting with the user by examining {{DOMxRef("Document/hasFocus", "focus", "", "1")}} and by executing commands on [editable content](/en-US/docs/Web/HTML/Global_attributes/contenteditable).
+- Support for interacting with the user by examining {{DOMxRef("Document/hasFocus", "focus", "", "1")}} and by executing commands on [editable content](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable).
 - Event handlers for document events defined by the HTML standard to allow access to {{DOMxRef("MouseEvent", "mouse", "", "1")}} and {{DOMxRef("KeyboardEvent", "keyboard", "", "1")}} events, {{DOMxRef("HTML_Drag_and_Drop_API", "drag and drop", "", "1")}}, {{DOMxRef("HTMLMediaElement", "media control", "", "1")}}, and more.
-- Event handlers for events that can be delivered to both elements and documents; these presently include only {{DOMxRef("HTMLElement/copy_event", "copy", "", "1")}}, {{DOMxRef("HTMLElement/cut_event", "cut", "", "1")}}, and {{DOMxRef("HTMLElement/paste_event", "paste", "", "1")}} actions.
+- Event handlers for events that can be delivered to both elements and documents; these presently include only {{DOMxRef("Element/copy_event", "copy")}}, {{DOMxRef("Element/cut_event", "cut")}}, and {{DOMxRef("Element/paste_event", "paste")}} actions.
 
 ### HTML element interfaces
 
@@ -59,7 +59,7 @@ The overall inheritance for HTML element classes looks like this:
 
 ![Hierarchy of interfaces for HTML elements](html-dom-hierarchy.svg)
 
-As such, an element inherits the properties and methods of all of its ancestors. For example, consider a {{HTMLElement("a")}} element, which is represented in the DOM by an object of type {{domxref("HTMLAnchorElement")}}. The element, then, includes the anchor-specific properties and methods described in that class's documentation, but also those defined by {{domxref("HTMLElement")}} and {{domxref("Element")}}, as well as from {{domxref("Node")}} and, finally, {{domxref("EventTarget")}}.
+As such, an element inherits the properties and methods of all of its ancestors. For example, consider an {{HTMLElement("a")}} element, which is represented in the DOM by an object of type {{domxref("HTMLAnchorElement")}}. The element, then, includes the anchor-specific properties and methods described in that class's documentation, but also those defined by {{domxref("HTMLElement")}} and {{domxref("Element")}}, as well as from {{domxref("Node")}} and, finally, {{domxref("EventTarget")}}.
 
 Each level defines a key aspect of the utility of the element. From `Node`, the element inherits concepts surrounding the ability for the element to be contained by another element, and to contain other elements itself. Of special importance is what is gained by inheriting from `EventTarget`: the ability to receive and handle events such as mouse clicks, play and pause events, and so forth.
 
@@ -307,7 +307,7 @@ const sendButton = document.getElementById("sendButton");
 
 sendButton.disabled = true;
 // [note: this is disabled since it causes this article to always load with this example focused and scrolled into view]
-//nameField.focus();
+// nameField.focus();
 
 nameField.addEventListener("input", (event) => {
   const elem = event.target;
@@ -364,10 +364,10 @@ The HTML for the form looks like this:
 
 ### References
 
-- [HTML elements reference](/en-US/docs/Web/HTML/Element)
-- [HTML attribute reference](/en-US/docs/Web/HTML/Attributes)
+- [HTML elements reference](/en-US/docs/Web/HTML/Reference/Elements)
+- [HTML attribute reference](/en-US/docs/Web/HTML/Reference/Attributes)
 - {{DOMxRef("Document_Object_Model", "Document Object Model (DOM)", "", "1")}} reference
 
 ### Guides
 
-- [Manipulating documents](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents): A beginner's guide to manipulating the DOM.
+- [DOM scripting introduction](/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting)

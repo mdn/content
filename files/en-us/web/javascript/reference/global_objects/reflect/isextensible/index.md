@@ -1,5 +1,6 @@
 ---
 title: Reflect.isExtensible()
+short-title: isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/isExtensible
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.isExtensible
@@ -9,7 +10,24 @@ browser-compat: javascript.builtins.Reflect.isExtensible
 
 The **`Reflect.isExtensible()`** static method is like {{jsxref("Object.isExtensible()")}}. It determines if an object is extensible (whether it can have new properties added to it).
 
-{{EmbedInteractiveExample("pages/js/reflect-isextensible.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Reflect.isExtensible()", "taller")}}
+
+```js interactive-example
+const object1 = {};
+
+console.log(Reflect.isExtensible(object1));
+// Expected output: true
+
+Reflect.preventExtensions(object1);
+
+console.log(Reflect.isExtensible(object1));
+// Expected output: false
+
+const object2 = Object.seal({});
+
+console.log(Reflect.isExtensible(object2));
+// Expected output: false
+```
 
 ## Syntax
 
@@ -48,7 +66,7 @@ See also {{jsxref("Object.isExtensible()")}}.
 const empty = {};
 Reflect.isExtensible(empty); // true
 
-// ...but that can be changed.
+// … but that can be changed.
 Reflect.preventExtensions(empty);
 Reflect.isExtensible(empty); // false
 

@@ -16,7 +16,7 @@ The **`adoptedStyleSheets`** property of the {{domxref("Document")}} interface i
 The same constructed stylesheets can also be shared with one or more {{domxref("ShadowRoot")}} instances using the [`ShadowRoot.adoptedStyleSheets`](/en-US/docs/Web/API/ShadowRoot/adoptedStyleSheets) property.
 Changing an adopted stylesheet will affect all the objects that adopt it.
 
-Stylesheets in the property are evaluated along with the document's other stylesheets using the [CSS cascade algorithm](/en-US/docs/Web/CSS/Cascade).
+Stylesheets in the property are evaluated along with the document's other stylesheets using the [CSS cascade algorithm](/en-US/docs/Web/CSS/CSS_cascade/Cascade).
 Where the resolution of rules considers stylesheet order, `adoptedStyleSheets` are assumed to be ordered after those in [`Document.styleSheets`](/en-US/docs/Web/API/Document/styleSheets).
 
 Only stylesheets created using the [`CSSStyleSheet()` constructor](/en-US/docs/Web/API/CSSStyleSheet/CSSStyleSheet) within the context of the current {{domxref("Document")}} may be adopted.
@@ -48,7 +48,7 @@ const sheet = new CSSStyleSheet();
 sheet.replaceSync("a { color: red; }");
 
 // Apply the stylesheet to a document
-document.adoptedStyleSheets = [sheet];
+document.adoptedStyleSheets.push(sheet);
 ```
 
 We can append a new rule to the stylesheet using {{domxref("CSSStyleSheet.insertRule()")}}.
@@ -56,19 +56,6 @@ We can append a new rule to the stylesheet using {{domxref("CSSStyleSheet.insert
 ```js
 sheet.insertRule("* { background-color: blue; }");
 // The document will now have blue background.
-```
-
-### Append a new stylesheet
-
-To append a whole new stylesheet to the `adoptedStyleSheets` property we have to create and assign a new combined array.
-This is demonstrated below using spread-syntax:
-
-```js
-const extraSheet = new CSSStyleSheet();
-extraSheet.replaceSync("p { color: green; }");
-
-// Combine the existing sheets and new one
-document.adoptedStyleSheets = [...document.adoptedStyleSheets, extraSheet];
 ```
 
 ## Sharing a stylesheet with a shadow DOM
@@ -80,7 +67,7 @@ We can share a stylesheet to a shadow root in a similar way.
 const node = document.createElement("div");
 const shadow = node.attachShadow({ mode: "open" });
 
-//Adopt the same sheet into the shadow DOM
+// Adopt the same sheet into the shadow DOM
 shadow.adoptedStyleSheets = [sheet];
 ```
 

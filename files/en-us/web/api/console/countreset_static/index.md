@@ -2,7 +2,7 @@
 title: "console: countReset() static method"
 short-title: countReset()
 slug: Web/API/console/countReset_static
-page-type: web-api-instance-method
+page-type: web-api-static-method
 browser-compat: api.console.countReset_static
 ---
 

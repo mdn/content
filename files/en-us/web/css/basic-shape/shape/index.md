@@ -2,14 +2,12 @@
 title: shape()
 slug: Web/CSS/basic-shape/shape
 page-type: css-function
-status:
-  - experimental
 browser-compat: css.types.basic-shape.shape
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
-The **`shape()`** [CSS function](/en-US/docs/Web/CSS/CSS_Functions) is used to define a shape for the {{cssxref("clip-path")}} and {{cssxref("offset-path")}} properties. It combines an initial starting point with a series of shape commands that define the path of the shape. The `shape()` function is a member of the {{cssxref("&lt;basic-shape&gt;")}} data type.
+The **`shape()`** [CSS function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) is used to define a shape for the {{cssxref("clip-path")}} and {{cssxref("offset-path")}} properties. It combines an initial starting point with a series of shape commands that define the path of the shape. The `shape()` function is a member of the {{cssxref("&lt;basic-shape&gt;")}} data type.
 
 ## Syntax
 
@@ -24,7 +22,10 @@ offset-path: shape(from 10px 10px, move by 10px 5px, line by 20px 40%, close);
 offset-path: shape(from 10px 10px, hline by 50px, vline to 5rem);
 
 /* <curve-command> */
-offset-path: shape(from 10px 10px, curve to 80px 80px via 160px 1px 20% 16px);
+offset-path: shape(
+  from 10px 10px,
+  curve to 80px 80px with 160px 1px / 20% 16px
+);
 
 /* <smooth-command> */
 offset-path: shape(from 10px 10px, smooth to 100px 50pt);
@@ -47,16 +48,17 @@ offset-path: shape(
 
 clip-path: shape(
   evenodd from 10px 10px,
-  curve to 60px 20% via 40px 0,
+  curve to 60px 20% with 40px 0,
   smooth to 90px 0,
-  curve by -20px 60% via 10% 40px 20% 20px,
-  smooth by -40% -10px via -10px 70px
+  curve by -20px 60% with 10% 40px / 20% 20px,
+  smooth by -40% -10px with -10px 70px,
+  close
 );
 ```
 
 ### Parameters
 
-- [`<fill-rule>`](/en-US/docs/Web/SVG/Attribute/fill-rule) {{optional_inline}}
+- [`<fill-rule>`](/en-US/docs/Web/SVG/Reference/Attribute/fill-rule) {{optional_inline}}
 
   - : Specifies how overlapping regions of a shape should be filled. The possible values include:
 
@@ -72,7 +74,7 @@ clip-path: shape(
 
 - `<shape-command>`
 
-  - : Specifies a list of one or more comma-separated commands that define the shape, using syntax similar to [SVG path commands](/en-US/docs/Web/SVG/Attribute/d#path_commands). Commands include `<move-command>`, `<line-command>`, `<hv-line-command>`, `<curve-command>`, `<smooth-command>`, `<arc-command>`, and `close`. Each command's starting point is the previous command's ending point, with the first point of the shape defined by the [`from <coordinate-pair>`](#from_coordinate-pair) parameter.
+  - : Specifies a list of one or more comma-separated commands that define the shape, using syntax similar to [SVG path commands](/en-US/docs/Web/SVG/Reference/Attribute/d#path_commands). Commands include `<move-command>`, `<line-command>`, `<hv-line-command>`, `<curve-command>`, `<smooth-command>`, `<arc-command>`, and `close`. Each command's starting point is the previous command's ending point, with the first point of the shape defined by the [`from <coordinate-pair>`](#from_coordinate-pair) parameter.
 
     The syntax of most shape commands is a keyword providing a directive, such as `move` or `line`, followed by the `by` or `to` keyword, and a set of coordinates.
 
@@ -85,25 +87,25 @@ clip-path: shape(
 
     The following `<shape-command>`s can be specified: `<move-command>`, `<line-command>`, `<hv-line-command>`, `<curve-command>`, `<smooth-command>`, `<arc-command>`, and `close`.
 
-    `<move-command>`: Specified as `move [by | to] <coordinate-pair>`. This command adds a [MoveTo command](/en-US/docs/Web/SVG/Attribute/d#moveto_path_commands) to the list of shape commands. It draws nothing. Rather, it specifies the starting position for the next command. The `by` or `to` keyword specifies whether the `<coordinate-pair>` point is relative or absolute, respectively. If the `<move-command>` follows the `close` command, it identifies the starting point of the next shape or subpath.
+    `<move-command>`: Specified as `move [by | to] <coordinate-pair>`. This command adds a [MoveTo command](/en-US/docs/Web/SVG/Reference/Attribute/d#moveto_path_commands) to the list of shape commands. It draws nothing. Rather, it specifies the starting position for the next command. The `by` or `to` keyword specifies whether the `<coordinate-pair>` point is relative or absolute, respectively. If the `<move-command>` follows the `close` command, it identifies the starting point of the next shape or subpath.
 
-    `<line-command>`: Specified as `line [by | to] <coordinate-pair>`. This command adds a [LineTo command](/en-US/docs/Web/SVG/Attribute/d#lineto_path_commands) to the list of shape commands. It draws a straight line from the command's starting point to its ending point. The `by` or `to` keyword specifies whether the ending point specified by `<coordinate-pair>` is relative or absolute, respectively.
+    `<line-command>`: Specified as `line [by | to] <coordinate-pair>`. This command adds a [LineTo command](/en-US/docs/Web/SVG/Reference/Attribute/d#lineto_path_commands) to the list of shape commands. It draws a straight line from the command's starting point to its ending point. The `by` or `to` keyword specifies whether the ending point specified by `<coordinate-pair>` is relative or absolute, respectively.
 
-    `<hv-line-command>`: Specified as `[hline | vline] [by | to] <length-percentage>`. This command adds a horizontal (`hline`) or vertical (`vline`) [LineTo command](/en-US/docs/Web/SVG/Attribute/d#lineto_path_commands) to the list of shape commands. With `hline`, a horizontal line is drawn from the command's starting point `to` or `by` the `x` position defined by `<length-percentage>`. With `vline`, a vertical line is drawn from the command's starting point `to` or `by` the `y` position defined by `<length-percentage>`. The `by` or `to` keyword determines the relative or absolute ending point, respectively. This command is equivalent to `<line-command>` with one coordinate value set by the single `<length-percentage>` and the other coordinate value remaining unchanged from its starting command.
+    `<hv-line-command>`: Specified as `[hline | vline] [by | to] <length-percentage>`. This command adds a horizontal (`hline`) or vertical (`vline`) [LineTo command](/en-US/docs/Web/SVG/Reference/Attribute/d#lineto_path_commands) to the list of shape commands. With `hline`, a horizontal line is drawn from the command's starting point `to` or `by` the `x` position defined by `<length-percentage>`. With `vline`, a vertical line is drawn from the command's starting point `to` or `by` the `y` position defined by `<length-percentage>`. The `by` or `to` keyword determines the relative or absolute ending point, respectively. This command is equivalent to `<line-command>` with one coordinate value set by the single `<length-percentage>` and the other coordinate value remaining unchanged from its starting command.
 
-    `<curve-command>`: Specified as `curve [by | to] <coordinate-pair> via <coordinate-pair> [<coordinate-pair>]`. This command adds a [Bézier curve command](/en-US/docs/Web/SVG/Attribute/d#cubic_bézier_curve) to the list of shape commands. The `by` or `to` keyword determines whether the ending point of the curve, specified by the first `<coordinate-pair>`, is relative or absolute, respectively. The `via` keyword specifies the control points of the Bézier curve.
+    `<curve-command>`: Specified as `curve [by | to] <coordinate-pair> with <coordinate-pair> [/ <coordinate-pair>]`. This command adds a [Bézier curve command](/en-US/docs/Web/SVG/Reference/Attribute/d#cubic_bézier_curve) to the list of shape commands. The `by` or `to` keyword determines whether the ending point of the curve, specified by the first `<coordinate-pair>`, is relative or absolute, respectively. The `with` keyword specifies the control points of the Bézier curve.
 
-    - If only a single `<coordinate-pair>` is provided, the command draws a [quadratic Bézier curve](/en-US/docs/Web/SVG/Attribute/d#quadratic_bézier_curve), which is defined by three points (the start point, control point, and end point).
+    - If only a single `<coordinate-pair>` is provided, the command draws a [quadratic Bézier curve](/en-US/docs/Web/SVG/Reference/Attribute/d#quadratic_bézier_curve), which is defined by three points (the start point, control point, and end point).
     - If two `<coordinate-pair>` values are provided, the command draws a cubic Bézier curve, which is defined by four points (the start point, two control points, and the end point).
 
-    `<smooth-command>`: Specified as `smooth [by | to] <coordinate-pair> [via <coordinate-pair>]`. This command adds a smooth [Bézier curve command](/en-US/docs/Web/SVG/Attribute/d#cubic_bézier_curve) to the list of shape commands. The `by` or `to` keyword determines whether the ending point of the curve, specified by the first `<coordinate-pair>`, is relative or absolute, respectively.
+    `<smooth-command>`: Specified as `smooth [by | to] <coordinate-pair> [with <coordinate-pair>]`. This command adds a smooth [Bézier curve command](/en-US/docs/Web/SVG/Reference/Attribute/d#cubic_bézier_curve) to the list of shape commands. The `by` or `to` keyword determines whether the ending point of the curve, specified by the first `<coordinate-pair>`, is relative or absolute, respectively.
 
-    - If `via <coordinate-pair>` is omitted, the command draws a smooth quadratic Bézier curve, which uses the previous control point and the current endpoint to define the curve.
-    - If the optional `via` keyword is included, it specifies the control points of the curve through `<coordinate-pair>`, drawing a smooth cubic Bézier curve defined by the previous control point, the current control point, and the current endpoint.
+    - If `with <coordinate-pair>` is omitted, the command draws a smooth quadratic Bézier curve, which uses the previous control point and the current endpoint to define the curve.
+    - If the optional `with` keyword is included, it specifies the control points of the curve through `<coordinate-pair>`, drawing a smooth cubic Bézier curve defined by the previous control point, the current control point, and the current endpoint.
 
     Smooth curves ensure a continuous transition from the shape, while quadratic curves do not. Smooth quadratic curves maintain a seamless transition using a single control point, whereas smooth cubic curves provide a more refined transition using two control points.
 
-    `<arc-command>`: Specified as `arc [by | to] <coordinate-pair> of <length-percentage> [<length-percentage>] [<arc-sweep> | <arc-size> | rotate <angle>]`. This command adds an [elliptical arc curve command](/en-US/docs/Web/SVG/Attribute/d#elliptical_arc_curve) to the list of shape commands. It draws an elliptical arc between a starting point and an ending point. The `by` or `to` keyword determines whether the ending point of the curve, specified by the first `<coordinate-pair>`, is relative or absolute, respectively.
+    `<arc-command>`: Specified as `arc [by | to] <coordinate-pair> of <length-percentage> [<length-percentage>] [<arc-sweep> | <arc-size> | rotate <angle>]`. This command adds an [elliptical arc curve command](/en-US/docs/Web/SVG/Reference/Attribute/d#elliptical_arc_curve) to the list of shape commands. It draws an elliptical arc between a starting point and an ending point. The `by` or `to` keyword determines whether the ending point of the curve, specified by the first `<coordinate-pair>`, is relative or absolute, respectively.
 
     The elliptical arc curve command defines two possible ellipses, which intersect both the starting and ending points, and each can be traced clockwise or counterclockwise, resulting in four possible arcs depending on the arc size, direction, and angle. The `of` keyword specifies the size of the ellipse from which the arc is taken: the first `<length-percentage>` provides the horizontal radius of the ellipse, and the second `<length-percentage>` provides the vertical radius.
 
@@ -121,18 +123,18 @@ clip-path: shape(
     - If the horizontal and vertical radii don't describe an ellipse large enough to intersect both the starting point and ending points (after rotation by the specified `<angle>`), the radii are scaled up uniformly until the ellipse is just large enough to intersect both points.
     - If the starting and ending points of the arc lie on exactly opposite sides of the ellipse, there is only one possible ellipse and two possible arcs. In this case, `<arc-sweep>` specifies the arc to choose, and `<arc-size>` has no effect.
 
-    `close`: Adds a [ClosePath command](/en-US/docs/Web/SVG/Attribute/d#closepath) to the list of shape commands, drawing a straight line from the current position (end of the last command) to the first point in the path defined in the `from <coordinate-pair>` parameter. To close the shape without drawing a line, include a `<move-command>` with the originating coordinates before the close command. If the `close` command is immediately followed by a `<move-command>`, it defines the starting point of the next shape or subpath.
+    `close`: Adds a [ClosePath command](/en-US/docs/Web/SVG/Reference/Attribute/d#closepath) to the list of shape commands, drawing a straight line from the current position (end of the last command) to the first point in the path defined in the `from <coordinate-pair>` parameter. To close the shape without drawing a line, include a `<move-command>` with the originating coordinates before the close command. If the `close` command is immediately followed by a `<move-command>`, it defines the starting point of the next shape or subpath.
 
 ## Description
 
 The `shape()` function allows you to define complex shapes. It is similar to the {{cssxref("basic-shape/path","path()")}} shape function in several ways:
 
 - The `<fill-rule>` parameter in the `shape()` function works exactly like the same parameter in the `path()` function.
-- The `shape()` function requires specifying one or more `<shape-command>`s, where each command uses an underlying [path command](/en-US/docs/Web/SVG/Attribute/d#path_commands), such as [MoveTo](/en-US/docs/Web/SVG/Attribute/d#moveto_path_commands), [LineTo](/en-US/docs/Web/SVG/Attribute/d#lineto_path_commands), and [ClosePath](/en-US/docs/Web/SVG/Attribute/d#closepath).
+- The `shape()` function requires specifying one or more `<shape-command>`s, where each command uses an underlying [path command](/en-US/docs/Web/SVG/Reference/Attribute/d#path_commands), such as [MoveTo](/en-US/docs/Web/SVG/Reference/Attribute/d#moveto_path_commands), [LineTo](/en-US/docs/Web/SVG/Reference/Attribute/d#lineto_path_commands), and [ClosePath](/en-US/docs/Web/SVG/Reference/Attribute/d#closepath).
 
 However, `shape()` offers several advantages over using `path()`:
 
-- `shape()` uses standard CSS syntax, making it easier to create and modify shapes directly in your stylesheet. In comparison, `path()` uses the [SVG path](/en-US/docs/Web/SVG/Element/path) syntax, which is less intuitive for those not familiar with SVG.
+- `shape()` uses standard CSS syntax, making it easier to create and modify shapes directly in your stylesheet. In comparison, `path()` uses the [SVG path](/en-US/docs/Web/SVG/Reference/Element/path) syntax, which is less intuitive for those not familiar with SVG.
 - `shape()` supports a variety of CSS units, including percentages, `rem`, and `em`. `path()`, on the other hand, defines shapes as a single string and limits units to `px`.
 - `shape()` also allows the use of CSS math functions, like {{cssxref("calc")}}, {{cssxref("max")}}, and {{cssxref("abs")}}, providing more versatility when defining shapes.
 
@@ -205,7 +207,7 @@ body {
 .shape1 {
   offset-path: shape(
     from 30% 60px,
-    curve to 180px 180px via 90px 190px,
+    curve to 180px 180px with 90px 190px,
     close,
     move by 0px 150px,
     hline by 40%
@@ -292,19 +294,20 @@ body {
   clip-path: shape(from 0% 0%, line to 100% 0%, line to 50% 100%, close);
 }
 
-/* Clipping region with curves and smooth transitions and a box */
+/* A Heart clipping region using curve and arc transitions
+   and a box using hline and vline transitions */
 .shape2 {
   clip-path: shape(
-    from 10px 10px,
-    curve to 60px 20% via 40px 0,
-    smooth to 90px 0,
-    curve by -20px 60% via 10% 40px 20% 20px,
-    smooth by -40% -10px via -10px 70px,
+    from 20px 70px,
+    arc to 100px 70px of 1% cw,
+    arc to 180px 70px of 1% cw,
+    curve to 100px 190px with 180px 130px,
+    curve to 20px 70px with 20px 130px,
     close,
-    move to 100px 100px,
-    hline by 50px,
-    vline by 50px,
-    hline by -50px,
+    move to 150px 150px,
+    hline by 40px,
+    vline by 40px,
+    hline by -40px,
     close
   );
 }

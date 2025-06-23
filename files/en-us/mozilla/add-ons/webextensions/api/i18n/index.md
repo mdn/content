@@ -7,25 +7,29 @@ browser-compat: webextensions.api.i18n
 
 {{AddonSidebar}}
 
-Functions to internationalize your extension. You can use these APIs to get localized strings from locale files packaged with your extension, find out the browser's current language, and find out the value of its [Accept-Language header](/en-US/docs/Web/HTTP/Content_negotiation#the_accept-language_header).
+Functions to internationalize your extension. You can use these APIs to get localized strings from locale files packaged with your extension, find out the browser's current language, and find out the value of its [Accept-Language header](/en-US/docs/Web/HTTP/Guides/Content_negotiation#the_accept-language_header).
 
 See the [Internationalization](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization) page for a guide on using this API.
 
 ## Types
 
 - {{WebExtAPIRef("i18n.LanguageCode")}}
-  - : A [language tag](https://www.rfc-editor.org/rfc/rfc9110.html#name-language-tags) such as `"en-US"` or "`fr`".
+  - : A [language tag](https://www.rfc-editor.org/rfc/rfc9110.html#name-language-tags) such as `"en-US"` or `"fr"`.
 
 ## Functions
 
-- {{WebExtAPIRef("i18n.getAcceptLanguages()")}}
-  - : Gets the [accept-languages](/en-US/docs/Web/HTTP/Content_negotiation#the_accept-language_header) of the browser. This is different from the locale used by the browser. To get the locale, use {{WebExtAPIRef('i18n.getUILanguage')}}.
-- {{WebExtAPIRef("i18n.getMessage()")}}
-  - : Gets the localized string for the specified message.
-- {{WebExtAPIRef("i18n.getUILanguage()")}}
-  - : Gets the UI language of the browser. This is different from {{WebExtAPIRef('i18n.getAcceptLanguages')}} which returns the preferred user languages.
 - {{WebExtAPIRef("i18n.detectLanguage()")}}
   - : Detects the language of the provided text using the [Compact Language Detector](https://github.com/CLD2Owners/cld2).
+- {{WebExtAPIRef("i18n.getMessage()")}}
+  - : Gets the localized string for the specified message.
+- {{WebExtAPIRef("i18n.getAcceptLanguages()")}}
+  - : Gets the [accept-languages](/en-US/docs/Web/HTTP/Guides/Content_negotiation#the_accept-language_header) of the browser. This is different from the locale used by the browser. To get the locale, use {{WebExtAPIRef('i18n.getUILanguage')}}.
+- {{WebExtAPIRef("i18n.getUILanguage()")}}
+  - : Gets the UI language of the browser. This is different from {{WebExtAPIRef('i18n.getAcceptLanguages')}} which returns the preferred user languages.
+- {{WebExtAPIRef("i18n.getPreferredSystemLanguages()")}}
+  - : Returns the preferred locales of the operating system.
+- {{WebExtAPIRef("i18n.getSystemUILanguage()")}}
+  - : Returns the current UI locale of the operating system.
 
 ## Browser compatibility
 

@@ -13,8 +13,6 @@ Async generator methods always yield {{jsxref("Promise")}} objects.
 
 `AsyncGenerator` is a subclass of the hidden {{jsxref("AsyncIterator")}} class.
 
-{{EmbedInteractiveExample("pages/js/expressions-async-function-asterisk.html", "taller")}}
-
 ## Constructor
 
 There's no JavaScript entity that corresponds to the `AsyncGenerator` constructor. Instances of `AsyncGenerator` must be returned from [async generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*):
@@ -67,7 +65,7 @@ The following example iterates over an async generator, logging values 1–6 to 
 // An async task. Pretend it's doing something more useful
 // in practice.
 function delayedValue(time, value) {
-  return new Promise((resolve /*, reject*/) => {
+  return new Promise((resolve /*, reject */) => {
     setTimeout(() => resolve(value), time);
   });
 }

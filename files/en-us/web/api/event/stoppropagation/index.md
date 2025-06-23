@@ -19,7 +19,7 @@ see {{domxref("Event.stopImmediatePropagation", "stopImmediatePropagation()")}}.
 ## Syntax
 
 ```js-nolint
-event.stopPropagation()
+stopPropagation()
 ```
 
 ### Parameters

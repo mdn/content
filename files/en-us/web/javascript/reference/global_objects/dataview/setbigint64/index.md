@@ -1,5 +1,6 @@
 ---
 title: DataView.prototype.setBigInt64()
+short-title: setBigInt64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setBigInt64
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.setBigInt64
@@ -9,7 +10,21 @@ browser-compat: javascript.builtins.DataView.setBigInt64
 
 The **`setBigInt64()`** method of {{jsxref("DataView")}} instances takes a BigInt and stores it as a 64-bit signed integer in the 8 bytes starting at the specified byte offset of this `DataView`. There is no alignment constraint; multi-byte values may be stored at any offset within bounds.
 
-{{EmbedInteractiveExample("pages/js/dataview-setbigint64.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.prototype.setBigInt64()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+// Highest possible BigInt value that fits in a signed 64-bit integer
+const max = 2n ** (64n - 1n) - 1n;
+
+const view = new DataView(buffer);
+view.setBigInt64(1, max);
+
+console.log(view.getBigInt64(1));
+// Expected output: 9223372036854775807n
+```
 
 ## Syntax
 

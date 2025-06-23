@@ -1,5 +1,6 @@
 ---
 title: DataView.prototype.setFloat64()
+short-title: setFloat64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setFloat64
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.setFloat64
@@ -9,7 +10,18 @@ browser-compat: javascript.builtins.DataView.setFloat64
 
 The **`setFloat64()`** method of {{jsxref("DataView")}} instances takes a number and stores it as a 64-bit floating point number in the 8 bytes starting at the specified byte offset of this `DataView`. There is no alignment constraint; multi-byte values may be stored at any offset within bounds.
 
-{{EmbedInteractiveExample("pages/js/dataview-setfloat64.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.prototype.setFloat64()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setFloat64(1, Math.PI);
+
+console.log(view.getFloat64(1));
+// Expected output: 3.141592653589793
+```
 
 ## Syntax
 

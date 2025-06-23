@@ -16,10 +16,10 @@ This event is not cancelable.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("transitionstart", (event) => {});
+```js-nolint
+addEventListener("transitionstart", (event) => { })
 
-ontransitionstart = (event) => {};
+ontransitionstart = (event) => { }
 ```
 
 ## Event type
@@ -105,8 +105,8 @@ transition.addEventListener("transitionend", () => {
 
 The difference is that:
 
-- transitionrun fires when the transition is created (i.e. at the start of any delay).
-- transitionstart fires when the actual animation has begun (i.e. at the end of any delay).
+- transitionrun fires when the transition is created (i.e., at the start of any delay).
+- transitionstart fires when the actual animation has begun (i.e., at the end of any delay).
 
 ## Specifications
 

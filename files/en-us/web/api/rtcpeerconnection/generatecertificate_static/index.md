@@ -19,7 +19,7 @@ RTCPeerConnection.generateCertificate(keygenAlgorithm)
 ### Parameters
 
 - `keygenAlgorithm`
-  - : A [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) {{domxref("AlgorithmIdentifier")}} string or an {{domxref("CryptoKey/algorithm","Algorithm")}} -subclassed object specifying an algorithm to use when creating the certificate's key.
+  - : A [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) algorithm identifier string or object. See {{domxref("SubtleCrypto.generateKey()")}} for details on the format of the object.
 
 > **Note:** `generateCertificate()` is a static method, so it is always called on the `RTCPeerConnection` interface itself, not an instance thereof.
 
@@ -107,7 +107,7 @@ RTCPeerConnection.generateCertificate("ECDSA");
 
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
 - [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API)
-- [Website security](/en-US/docs/Learn/Server-side/First_steps/Website_security)
+- [Website security](/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security)
 - [Web security](/en-US/docs/Web/Security)
 - {{Glossary("Symmetric-key cryptography")}}
 - {{DOMxRef("Crypto")}}

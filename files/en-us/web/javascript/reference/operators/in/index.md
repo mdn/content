@@ -11,7 +11,22 @@ The **`in`** operator returns `true` if the specified property is in the specifi
 
 The `in` operator cannot be used to search for values in other collections. To test if a certain value exists in an array, use {{jsxref("Array.prototype.includes()")}}. For sets, use {{jsxref("Set.prototype.has()")}}.
 
-{{EmbedInteractiveExample("pages/js/expressions-inoperator.html")}}
+{{InteractiveExample("JavaScript Demo: in operator")}}
+
+```js interactive-example
+const car = { make: "Honda", model: "Accord", year: 1998 };
+
+console.log("make" in car);
+// Expected output: true
+
+delete car.make;
+if ("make" in car === false) {
+  car.make = "Suzuki";
+}
+
+console.log(car.make);
+// Expected output: "Suzuki"
+```
 
 ## Syntax
 
@@ -30,13 +45,13 @@ prop in object
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if `object` is not an object (i.e. a primitive).
+  - : Thrown if `object` is not an object (i.e., a primitive).
 
 ## Description
 
 The `in` operator tests if a string or symbol property is present in an object or its prototype chain. If you want to check for only _non-inherited_ properties, use {{jsxref("Object.hasOwn()")}} instead.
 
-A property may be present in an object but have value `undefined`. Therefore, `x in obj` is not the same as `obj.x !== undefined`. To make `in` return `false` after a property is added, use the [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) operator instead of setting that property's value to `undefined`.
+A property may be present in an object but have value `undefined`. Therefore, `"x" in obj` is not the same as `obj.x !== undefined`. To make `in` return `false` after a property is added, use the [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) operator instead of setting that property's value to `undefined`.
 
 You can also use the `in` operator to check whether a particular [private class field or method](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) has been defined in an object. The operator returns `true` if the property is defined, and `false` otherwise. This is known as a _branded check_, because it returns `true` if and only if the object was created with that class constructor, after which you can safely access other private properties as well.
 
@@ -283,4 +298,4 @@ For more examples, see [Private properties](/en-US/docs/Web/JavaScript/Reference
 - [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete)
 - {{jsxref("Object.hasOwn()")}}
 - {{jsxref("Reflect.has()")}}
-- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)

@@ -7,10 +7,36 @@ browser-compat: css.types.transform-function.skewX
 
 {{CSSRef}}
 
-The **`skewX()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a transformation that skews an element in the
+The **`skewX()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a transformation that skews an element in the
 horizontal direction on the 2D plane. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-{{EmbedInteractiveExample("pages/css/function-skewX.html")}}
+{{InteractiveExample("CSS Demo: skewX()")}}
+
+```css interactive-example-choice
+transform: skewX(0);
+```
+
+```css interactive-example-choice
+transform: skewX(35deg);
+```
+
+```css interactive-example-choice
+transform: skewX(-0.06turn);
+```
+
+```css interactive-example-choice
+transform: skewX(0.352rad);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 This transformation is a shear mapping ([transvection](https://en.wikipedia.org/wiki/Shear_mapping)) that distorts
 each point within an element by a certain angle in the horizontal direction. The abscissa (horizontal, x-coordinate) of each point is
@@ -68,6 +94,10 @@ skewX(a)
     </tr>
   </tbody>
 </table>
+
+## Formal syntax
+
+{{CSSSyntax}}
 
 ## Examples
 

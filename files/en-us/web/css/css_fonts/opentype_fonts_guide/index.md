@@ -1,5 +1,6 @@
 ---
-title: OpenType font features guide
+title: OpenType font features
+short-title: OpenType features
 slug: Web/CSS/CSS_fonts/OpenType_fonts_guide
 page-type: guide
 ---
@@ -304,10 +305,6 @@ font-variant-alternates: styleset(alt-g);
 ```
 
 and notice that the lower case 'a' reverts to its regular form and the lower case 'g's changes instead.
-
-#### More about alternates
-
-- <https://www.w3.org/TR/css-fonts-4/#propdef-font-variant-alternates>
 
 ### Ligatures
 
@@ -1113,7 +1110,7 @@ checkBox2.addEventListener("change", () => {
 
 ## Font feature settings
 
-{{cssxref("font-feature-settings")}} is the 'low level syntax' that allows explicit access to every named available OpenType feature. This gives a lot of control but has some disadvantages in how it impacts inheritance and — as mentioned above — if you wish to change one setting, you have to redeclare the entire string (unless you're using [CSS custom properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties) to set the values). Because of this, it's best to use the standard properties shown above wherever possible.
+{{cssxref("font-feature-settings")}} is the 'low level syntax' that allows explicit access to every named available OpenType feature. This gives a lot of control but has some disadvantages in how it impacts inheritance and — as mentioned above — if you wish to change one setting, you have to redeclare the entire string (unless you're using [CSS custom properties](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) to set the values). Because of this, it's best to use the standard properties shown above wherever possible.
 
 There are a huge number of possible features. You can see examples of a number of them above, and there are several resources available for finding more of them.
 
@@ -1173,7 +1170,7 @@ For example, small caps can be set several ways, but if you want to ensure that 
 ### W3C Specifications
 
 - [Font Feature Properties in CSS Fonts Module Level 3](https://drafts.csswg.org/css-fonts-3/#font-rend-props)
-- [font-variant-alternatives in CSS Fonts Module Level 4](https://www.w3.org/TR/css-fonts-4/#propdef-font-variant-alternates)
+- [font-variant-alternatives in CSS Fonts Module Level 4](https://drafts.csswg.org/css-fonts-4/#propdef-font-variant-alternates)
 
 ### Other resources
 

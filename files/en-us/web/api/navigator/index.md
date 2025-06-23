@@ -31,9 +31,11 @@ _Doesn't inherit any properties._
   - : Returns the {{domxref("CredentialsContainer")}} interface which exposes methods to request credentials and notify the user agent when interesting events occur such as successful sign in or sign out.
 - {{domxref("Navigator.deviceMemory")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns the amount of device memory in gigabytes. This value is an approximation given by rounding to the nearest power of 2 and dividing that number by 1024.
+- {{domxref("Navigator.devicePosture")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns the browser's {{domxref("DevicePosture")}} object, which allows developers to query the device's current posture (that is, whether the viewport is in a flat or folded state) and run code in response to posture changes.
 - {{domxref("Navigator.geolocation")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Geolocation")}} object allowing accessing the location of the device.
-- {{domxref("Navigator.gpu")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
+- {{domxref("Navigator.gpu")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns the {{domxref("GPU")}} object for the current browsing context. The entry point for the {{domxref("WebGPU_API", "WebGPU API", "", "nocode")}}.
 - {{domxref("Navigator.hardwareConcurrency")}} {{ReadOnlyInline}}
   - : Returns the number of logical processor cores available.
@@ -49,7 +51,7 @@ _Doesn't inherit any properties._
   - : Returns an array of strings representing the languages known to the user, by order of preference.
 - {{domxref("Navigator.locks")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a {{domxref("LockManager")}} object that provides methods for requesting a new {{domxref('Lock')}} object and querying for an existing {{domxref('Lock')}} object.
-- {{domxref("Navigator.login")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
+- {{domxref("Navigator.login")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Provides access to the browser's {{domxref("NavigatorLogin")}} object, which a federated identity provider (IdP) can use to set a user's login status when they sign into or out of the IdP. See [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API) for more details.
 - {{domxref("Navigator.maxTouchPoints")}} {{ReadOnlyInline}}
   - : Returns the maximum number of simultaneous touch contact points are supported by the current device.
@@ -97,7 +99,7 @@ _Doesn't inherit any properties._
 ### Non-standard properties
 
 - {{domxref("Navigator.buildID")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
-  - : Returns the build identifier of the browser. In modern browsers this property now returns a fixed timestamp as a privacy measure, e.g. `20181001000000` in Firefox 64 onwards.
+  - : Returns the build identifier of the browser. In modern browsers this property now returns a fixed timestamp as a privacy measure, e.g., `20181001000000` in Firefox 64 onwards.
 - {{domxref("Navigator.globalPrivacyControl")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a boolean indicating a user's consent to their information being shared or sold.
 - {{domxref("Navigator.standalone")}} {{Non-standard_Inline}}
@@ -141,7 +143,7 @@ _Doesn't inherit any method._
 - {{domxref("Navigator.clearAppBadge()")}} {{SecureContext_Inline}}
   - : Clears a badge on the current app's icon and returns a {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
 - {{domxref("Navigator.deprecatedReplaceInURN()")}} {{Experimental_Inline}}
-  - : Substitutes specified strings inside the mapped URL corresponding to a given opaque URN or `FencedFrameConfig`'s internal `url` property. This method has been made available as a temporary measure (hence "deprecated") to enable that substitution for fenced frame URLs, helping ad tech providers to migrate existing implementations across to [privacy sandbox](https://developers.google.com/privacy-sandbox) APIs.
+  - : Substitutes specified strings inside the mapped URL corresponding to a given opaque URN or `FencedFrameConfig`'s internal `url` property. This method has been made available as a temporary measure (hence "deprecated") to enable that substitution for fenced frame URLs, helping ad tech providers to migrate existing implementations across to [privacy sandbox](https://privacysandbox.google.com/) APIs.
 - {{domxref("Navigator.getAutoplayPolicy()")}} {{Experimental_Inline}}
   - : Returns a value indicating whether the specified media element, audio context, or media feature "type" is allowed to autoplay.
 - {{domxref("Navigator.getBattery()")}} {{SecureContext_Inline}}

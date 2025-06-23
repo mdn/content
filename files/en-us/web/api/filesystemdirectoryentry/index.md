@@ -32,17 +32,17 @@ function onFs(fs) {
     "Documents",
     { create: true },
     (directoryEntry) => {
-      //directoryEntry.isFile === false
-      //directoryEntry.isDirectory === true
-      //directoryEntry.name === 'Documents'
-      //directoryEntry.fullPath === '/Documents'
+      // directoryEntry.isFile === false
+      // directoryEntry.isDirectory === true
+      // directoryEntry.name === 'Documents'
+      // directoryEntry.fullPath === '/Documents'
     },
     onError,
   );
 }
 
 // Opening a file system with temporary storage
-window.requestFileSystem(TEMPORARY, 1024 * 1024 /*1MB*/, onFs, onError);
+window.requestFileSystem(TEMPORARY, 1024 * 1024 /* 1MB */, onFs, onError);
 ```
 
 ## Instance properties
@@ -73,7 +73,6 @@ _This interface inherits methods from its parent interface, {{domxref("FileSyste
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemDirectoryReader")}}
 - {{domxref("FileSystemEntry")}}
 - {{domxref("FileSystemFileEntry")}}

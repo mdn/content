@@ -1,5 +1,6 @@
 ---
 title: Iterator.prototype.reduce()
+short-title: reduce()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/reduce
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Iterator.reduce
@@ -76,6 +77,7 @@ console.log(
 ## See also
 
 - [Polyfill of `Iterator.prototype.reduce` in `core-js`](https://github.com/zloirock/core-js#iterator-helpers)
+- [es-shims polyfill of `Iterator.prototype.reduce`](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Iterator.prototype.map()")}}
 - {{jsxref("Iterator.prototype.flatMap()")}}

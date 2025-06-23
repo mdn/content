@@ -1,5 +1,6 @@
 ---
 title: Generator.prototype.return()
+short-title: return()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/return
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Generator.return
@@ -33,6 +34,11 @@ An {{jsxref("Object")}} with two properties:
     - `false` if the generator function's control flow hasn't reached the end and can produce more values. This can only happen if the `return` is captured in a [`try...finally`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally_block) and there are more `yield` expressions in the `finally` block.
 - `value`
   - : The value that is given as an argument, or, if the `yield` expression is wrapped in a [`try...finally`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally_block), the value yielded/returned from the `finally` block.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if the generator is already running.
 
 ## Description
 

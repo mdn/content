@@ -6,7 +6,7 @@ page-type: guide
 
 {{GamesSidebar}}
 
-**PlayCanvas** is a popular 3D WebGL game engine, originally created by Will Eastcott and Dave Evans. It is [open sourced on GitHub](https://github.com/playcanvas/engine), with an [editor](https://developer.playcanvas.com/en/user-manual/designer/) available online and good [documentation](https://developer.playcanvas.com/en/). The online editor is free for public projects with up to two team members, but there are also [paid plans](https://playcanvas.com/plans) if you'd like to run a commercial private project with more developers.
+**PlayCanvas** is a popular 3D WebGL game engine, originally created by Will Eastcott and Dave Evans. It is [open sourced on GitHub](https://github.com/playcanvas/engine), with an [editor](https://developer.playcanvas.com/user-manual/editor/) available online and good [documentation](https://developer.playcanvas.com/en/). The online editor is free for public projects with up to two team members, but there are also [paid plans](https://playcanvas.com/plans) if you'd like to run a commercial private project with more developers.
 
 ![PlayCanvas website.](playcanvas-cover.png)
 

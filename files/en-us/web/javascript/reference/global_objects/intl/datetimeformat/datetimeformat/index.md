@@ -1,5 +1,6 @@
 ---
 title: Intl.DateTimeFormat() constructor
+short-title: Intl.DateTimeFormat()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Intl.DateTimeFormat.DateTimeFormat
@@ -9,7 +10,30 @@ browser-compat: javascript.builtins.Intl.DateTimeFormat.DateTimeFormat
 
 The **`Intl.DateTimeFormat()`** constructor creates {{jsxref("Intl.DateTimeFormat")}} objects.
 
-{{EmbedInteractiveExample("pages/js/intl-datetimeformat.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat() constructor", "taller")}}
+
+```js interactive-example
+const date = new Date(Date.UTC(2020, 11, 20, 3, 23, 16, 738));
+// Results below assume UTC timezone - your results may vary
+
+// Specify default date formatting for language (locale)
+console.log(new Intl.DateTimeFormat("en-US").format(date));
+// Expected output: "12/20/2020"
+
+// Specify default date formatting for language with a fallback language (in this case Indonesian)
+console.log(new Intl.DateTimeFormat(["ban", "id"]).format(date));
+// Expected output: "20/12/2020"
+
+// Specify date and time format using "style" options (i.e. full, long, medium, short)
+console.log(
+  new Intl.DateTimeFormat("en-GB", {
+    dateStyle: "full",
+    timeStyle: "long",
+    timeZone: "Australia/Sydney",
+  }).format(date),
+);
+// Expected output: "Sunday, 20 December 2020 at 14:23:16 GMT+11"
+```
 
 ## Syntax
 
@@ -51,9 +75,9 @@ Intl.DateTimeFormat(locales, options)
 - `localeMatcher`
   - : The locale matching algorithm to use. Possible values are `"lookup"` and `"best fit"`; the default is `"best fit"`. For information about this option, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
 - `calendar`
-  - : The calendar to use, such as `"chinese"`, `"gregory"`, `"persian"`, and so on. For a list of supported calendar types, see [`Intl.Locale.prototype.getCalendars()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getCalendars#supported_calendar_types). This option can also be set through the `ca` Unicode extension key; if both are provided, this `options` property takes precedence.
+  - : The calendar to use, such as `"chinese"`, `"gregory"`, `"persian"`, and so on. For a list of supported calendar types, see [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types). This option can also be set through the `ca` Unicode extension key; if both are provided, this `options` property takes precedence.
 - `numberingSystem`
-  - : The numbering system to use for number formatting, such as `"arab"`, `"hans"`, `"mathsans"`, and so on. For a list of supported numbering system types, see [`Intl.Locale.prototype.getNumberingSystems()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getNumberingSystems#supported_numbering_system_types). This option can also be set through the `nu` Unicode extension key; if both are provided, this `options` property takes precedence.
+  - : The numbering system to use for number formatting, such as `"arab"`, `"hans"`, `"mathsans"`, and so on. For a list of supported numbering system types, see [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_numbering_system_types). This option can also be set through the `nu` Unicode extension key; if both are provided, this `options` property takes precedence.
 - `hour12`
   - : Whether to use 12-hour time (as opposed to 24-hour time). Possible values are `true` and `false`; the default is locale dependent. When `true`, this option sets `hourCycle` to either `"h11"` or `"h12"`, depending on the locale. When `false`, it sets `hourCycle` to `"h23"`. `hour12` overrides both the `hc` locale extension tag and the `hourCycle` option, should either or both of those be present.
 - `hourCycle`
@@ -70,7 +94,7 @@ Intl.DateTimeFormat(locales, options)
     - `"short"`
       - : E.g., `Thu`
     - `"narrow"`
-      - : E.g., `T`. Two weekdays may have the same narrow style for some locales (e.g. `Tuesday`'s narrow style is also `T`).
+      - : E.g., `T`. Two weekdays may have the same narrow style for some locales (e.g., `Tuesday`'s narrow style is also `T`).
 - `era`
   - : The representation of the era. Possible values are:
     - `"long"`
@@ -92,7 +116,7 @@ Intl.DateTimeFormat(locales, options)
     - `"short"`
       - : E.g., `Mar`
     - `"narrow"`
-      - : E.g., `M`). Two months may have the same narrow style for some locales (e.g. `May`'s narrow style is also `M`).
+      - : E.g., `M`). Two months may have the same narrow style for some locales (e.g., `May`'s narrow style is also `M`).
 - `day`
   - : The representation of the day. Possible values are `"numeric"` and `"2-digit"`.
 - `dayPeriod`
@@ -131,30 +155,47 @@ Intl.DateTimeFormat(locales, options)
     > [!NOTE]
     > Timezone display may fall back to another format if a required string is unavailable. For example, the non-location formats should display the timezone without a specific country/city location like "Pacific Time", but may fall back to a timezone like "Los Angeles Time".
 
-The default value for each date-time component option is {{jsxref("undefined")}}, but if all component properties are {{jsxref("undefined")}}, then `year`, `month`, and `day` default to `"numeric"`. If any of the date-time component options is specified, then `dateStyle` and `timeStyle` must be `undefined`.
+##### Date-time component default values
+
+If any of the date-time component options are specified, then `dateStyle` and `timeStyle` must be `undefined`. If all date-time component options and `dateStyle`/`timeStyle` are `undefined`, some default options for date-time components are set, which depend on the object that the formatting method was called with:
+
+- When formatting {{jsxref("Temporal.PlainDate")}} and {{jsxref("Date")}}, `year`, `month`, and `day` default to `"numeric"`.
+- When formatting {{jsxref("Temporal.PlainTime")}}, `hour`, `minute`, and `second` default to `"numeric"`.
+- When formatting {{jsxref("Temporal.PlainYearMonth")}}, `year` and `month` default to `"numeric"`.
+- When formatting {{jsxref("Temporal.PlainMonthDay")}}, `month` and `day` default to `"numeric"`.
+- When formatting {{jsxref("Temporal.PlainDateTime")}} and {{jsxref("Temporal.Instant")}}, `year`, `month`, `day`, `hour`, `minute`, and `second` default to `"numeric"`.
+
+##### Format matching
+
+Implementations are required to support displaying at least the following subsets of date-time components:
+
+- `weekday`, `year`, `month`, `day`, `hour`, `minute`, `second`
+- `weekday`, `year`, `month`, `day`
+- `year`, `month`, `day`
+- `year`, `month`
+- `month`, `day`
+- `hour`, `minute`, `second`
+- `hour`, `minute`
+
+The date-time component styles requested might not directly correspond to a valid format supported by the locale, so the format matcher allows you to specify how to match the requested styles to the closest supported format.
 
 - `formatMatcher`
-
-  - : The format matching algorithm to use. Possible values are `"basic"` and `"best fit"`; the default is `"best fit"`. Implementations are required to support displaying at least the following subsets of date-time components:
-
-    - `weekday`, `year`, `month`, `day`, `hour`, `minute`, `second`
-    - `weekday`, `year`, `month`, `day`
-    - `year`, `month`, `day`
-    - `year`, `month`
-    - `month`, `day`
-    - `hour`, `minute`, `second`
-    - `hour`, `minute`
-
-    Implementations may support other subsets, and requests will be negotiated against all available subset-representation combinations to find the best match. The algorithm for `"best fit"` is implementation-defined, and `"basic"` is [defined by the spec](https://tc39.es/ecma402/#sec-basicformatmatcher). This option is only used when both `dateStyle` and `timeStyle` are `undefined` (so that each date-time component's format is individually customizable).
+  - : The format matching algorithm to use. Possible values are `"basic"` and `"best fit"`; the default is `"best fit"`. The algorithm for `"best fit"` is implementation-defined, and `"basic"` is [defined by the spec](https://tc39.es/ecma402/#sec-basicformatmatcher). This option is only used when both `dateStyle` and `timeStyle` are `undefined` (so that each date-time component's format is individually customizable).
 
 #### Style shortcuts
 
 - `dateStyle`
-  - : The [date formatting style](https://cldr.unicode.org/translation/date-time/date-time-patterns#h.aa5zjyepm6vh) to use. Possible values are `"full"`, `"long"`, `"medium"`, and `"short"`. It expands to styles for `weekday`, `day`, `month`, `year`, and `era`, with the exact combination of values depending on the locale.
+  - : The [date formatting style](https://cldr.unicode.org/translation/date-time/date-time-patterns#h.aa5zjyepm6vh) to use. Possible values are `"full"`, `"long"`, `"medium"`, and `"short"`. It expands to styles for `weekday`, `day`, `month`, `year`, and `era`, with the exact combination of values depending on the locale. When formatting objects such as {{jsxref("Temporal.PlainDate")}}, {{jsxref("Temporal.PlainYearMonth")}}, and {{jsxref("Temporal.PlainMonthDay")}}, `dateStyle` will resolve to only those fields relevant to the object.
 - `timeStyle`
   - : The [time formatting style](https://cldr.unicode.org/translation/date-time/date-time-patterns#h.588vo3awdscu) to use. Possible values are `"full"`, `"long"`, `"medium"`, and `"short"`. It expands to styles for `hour`, `minute`, `second`, and `timeZoneName`, with the exact combination of values depending on the locale.
 
-> **Note:** `dateStyle` and `timeStyle` can be used with each other, but not with other date-time component options (e.g. `weekday`, `hour`, `month`, etc.).
+> **Note:** `dateStyle` and `timeStyle` can be used with each other, but not with other date-time component options (e.g., `weekday`, `hour`, `month`, etc.).
+
+You can format different object types depending on which of the style shortcut options you include:
+
+- If the `dateStyle` is specified, then you can format {{jsxref("Temporal.PlainDate")}}, {{jsxref("Temporal.PlainYearMonth")}}, and {{jsxref("Temporal.PlainMonthDay")}} objects.
+- If the `timeStyle` is specified, then you can format {{jsxref("Temporal.PlainTime")}} objects.
+- If either `dateStyle` or `timeStyle` is specified, then you can format {{jsxref("Temporal.PlainDateTime")}} and {{jsxref("Date")}} objects.
 
 ### Return value
 
@@ -182,7 +223,7 @@ console.log(Object.getOwnPropertyDescriptors(formatter));
 // }
 ```
 
-Note that there's only one actual `Intl.DateTimeFormat` instance here: the one hidden in `[Symbol(IntlLegacyConstructedSymbol)]`. Calling the [`format()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format) and [`resolvedOptions()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions) methods on `formatter` would correctly use the options stored in that instance, but calling all other methods (e.g. [`formatRange()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRange)) would fail: "TypeError: formatRange method called on incompatible Object", because those methods don't consult the hidden instance's options.
+Note that there's only one actual `Intl.DateTimeFormat` instance here: the one hidden in `[Symbol(IntlLegacyConstructedSymbol)]`. Calling the [`format()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format) and [`resolvedOptions()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions) methods on `formatter` would correctly use the options stored in that instance, but calling all other methods (e.g., [`formatRange()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRange)) would fail: "TypeError: formatRange method called on incompatible Object", because those methods don't consult the hidden instance's options.
 
 This behavior, called `ChainDateTimeFormat`, does not happen when `Intl.DateTimeFormat()` is called without `new` but with `this` set to anything else that's not an `instanceof Intl.DateTimeFormat`. If you call it directly as `Intl.DateTimeFormat()`, the `this` value is [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl), and a new `Intl.DateTimeFormat` instance is created normally.
 

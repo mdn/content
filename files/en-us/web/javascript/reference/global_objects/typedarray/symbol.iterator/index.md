@@ -1,5 +1,6 @@
 ---
 title: TypedArray.prototype[Symbol.iterator]()
+short-title: "[Symbol.iterator]()"
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.@@iterator
@@ -11,7 +12,20 @@ The **`[Symbol.iterator]()`** method of {{jsxref("TypedArray")}} instances imple
 
 The initial value of this property is the same function object as the initial value of the {{jsxref("TypedArray.prototype.values")}} property.
 
-{{EmbedInteractiveExample("pages/js/typedarray-prototype-@@iterator.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.prototype[Symbol.iterator]()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 30]);
+const iterator1 = uint8[Symbol.iterator]();
+
+for (const value of iterator1) {
+  console.log(value);
+}
+
+// Expected output: 10
+// Expected output: 20
+// Expected output: 30
+```
 
 ## Syntax
 

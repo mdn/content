@@ -1,5 +1,6 @@
 ---
 title: Math.asinh()
+short-title: asinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/asinh
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.asinh
@@ -15,7 +16,21 @@ The **`Math.asinh()`** static method returns the inverse hyperbolic sine of a nu
 </math>
 <!-- prettier-ignore-end -->
 
-{{EmbedInteractiveExample("pages/js/math-asinh.html")}}
+{{InteractiveExample("JavaScript Demo: Math.asinh()")}}
+
+```js interactive-example
+console.log(Math.asinh(1));
+// Expected output: 0.881373587019543
+
+console.log(Math.asinh(0));
+// Expected output: 0
+
+console.log(Math.asinh(-1));
+// Expected output: -0.881373587019543
+
+console.log(Math.asinh(2));
+// Expected output: 1.4436354751788103
+```
 
 ## Syntax
 
@@ -60,6 +75,7 @@ Math.asinh(Infinity); // Infinity
 ## See also
 
 - [Polyfill of `Math.asinh` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [es-shims polyfill of `Math.asinh`](https://www.npmjs.com/package/math.asinh)
 - {{jsxref("Math.acosh()")}}
 - {{jsxref("Math.atanh()")}}
 - {{jsxref("Math.cosh()")}}

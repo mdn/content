@@ -2,9 +2,8 @@
 title: What is a progressive web app?
 slug: Web/Progressive_web_apps/Guides/What_is_a_progressive_web_app
 page-type: guide
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 A progressive web app (PWA) is an app that's built using web platform technologies, but that provides a user experience like that of a platform-specific app.
 
@@ -74,14 +73,14 @@ Because PWAs are websites, they have the same basic features as any other websit
 
 Beyond that, a PWA has some additional features:
 
-- A [web app manifest](/en-US/docs/Web/Manifest) file, which, at a minimum, provides information that the browser needs to install the PWA, such as the app name and icon.
+- A [web app manifest](/en-US/docs/Web/Progressive_web_apps/Manifest) file, which, at a minimum, provides information that the browser needs to install the PWA, such as the app name and icon.
 - Optionally, a [service worker](/en-US/docs/Web/API/Service_Worker_API) to provide an offline experience.
 
 #### Web app manifest
 
 A PWA must have a web app manifest, and the [manifest must include enough information for the browser to install the PWA](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#the_web_app_manifest).
 
-The manifest can define many other aspects of the PWA's appearance, such as [theme color](/en-US/docs/Web/Manifest/theme_color) and [background color](/en-US/docs/Web/Manifest/background_color), and its behavior, including its ability to [act as a share target](/en-US/docs/Web/Manifest/share_target) for data from other apps or to [handle particular file types](/en-US/docs/Web/Manifest/file_handlers).
+The manifest can define many other aspects of the PWA's appearance, such as [theme color](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/theme_color) and [background color](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/background_color), and its behavior, including its ability to [act as a share target](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/share_target) for data from other apps or to [handle particular file types](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/file_handlers).
 
 #### Service worker
 

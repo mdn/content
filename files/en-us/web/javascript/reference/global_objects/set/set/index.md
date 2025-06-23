@@ -1,5 +1,6 @@
 ---
 title: Set() constructor
+short-title: Set()
 slug: Web/JavaScript/Reference/Global_Objects/Set/Set
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Set.Set
@@ -9,7 +10,20 @@ browser-compat: javascript.builtins.Set.Set
 
 The **`Set()`** constructor creates {{jsxref("Set")}} objects.
 
-{{EmbedInteractiveExample("pages/js/set-prototype-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: Set() constructor")}}
+
+```js interactive-example
+const set1 = new Set([1, 2, 3, 4, 5]);
+
+console.log(set1.has(1));
+// Expected output: true
+
+console.log(set1.has(5));
+// Expected output: true
+
+console.log(set1.has(6));
+// Expected output: false
+```
 
 ## Syntax
 
@@ -60,4 +74,5 @@ mySet.add(o);
 ## See also
 
 - [Polyfill of `Set` in `core-js`](https://github.com/zloirock/core-js#set)
+- [es-shims polyfill of `Set`](https://www.npmjs.com/package/es-set)
 - {{jsxref("Set")}}

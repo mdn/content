@@ -3,15 +3,16 @@ title: CSS overflow
 slug: Web/CSS/CSS_overflow
 page-type: css-module
 spec-urls:
-  - https://drafts.csswg.org/css-overflow-3
-  - https://drafts.csswg.org/css-overflow-4
+  - https://drafts.csswg.org/css-overflow/
+  - https://drafts.csswg.org/css-overflow-4/
+  - https://drafts.csswg.org/css-overflow-5/
 ---
 
 {{CSSRef}}
 
 The **CSS overflow** module properties enable you to handle scrollable overflow in visual media.
 
-Overflow happens when the content in an element box extends past one or more of the box's edges. **Scrollable overflow** is the content that appears outside the element box for which you might want to add a scrolling mechanism. CSS overflow properties let you control what happens when content overflows an element box.
+Overflow happens when the content in an element box extends past one or more of the box's edges. **Scrollable overflow** is the content that appears outside the element box for which you might want to add a scrolling mechanism. CSS overflow properties let you control what happens when content overflows an element box, including creating carousels without JavaScript.
 
 Painting effects that overflow the content but do not participate in the CSS box model do not affect layout. This type of overflow is also known as {{Glossary("ink overflow")}}. Examples of ink overflows include box shadows, border images, text decoration, overhanging glyphs, and outlines. Ink overflows do not extend the scrollable overflow region.
 
@@ -216,8 +217,9 @@ A link is included in the content box above to demonstrate the effects of keyboa
 
 ## Reference
 
-### CSS properties
+### Properties
 
+- {{CSSxRef("line-clamp")}}
 - {{CSSxRef("overflow")}} shorthand
 - {{CSSxRef("overflow-block")}}
 - {{CSSxRef("overflow-clip-margin")}}
@@ -225,12 +227,19 @@ A link is included in the content box above to demonstrate the effects of keyboa
 - {{CSSxRef("overflow-x")}}
 - {{CSSxRef("overflow-y")}}
 - {{CSSxRef("scroll-behavior")}}
+- {{cssxref("scroll-marker-group")}}
 - {{CSSxRef("scrollbar-gutter")}}
 - {{CSSxRef("text-overflow")}}
-- {{CSSxRef("-webkit-line-clamp")}}
 
 > [!NOTE]
-> The CSS overflow module level 4 introduces the `block-ellipsis`, `continue`, `line-clamp`, and `max-lines` properties. These have not yet been implemented.
+> The CSS Overflow Module Level 4 introduces the `block-ellipsis`, `continue`, `max-lines`, `overflow-clip-margin-block`, `overflow-clip-margin-block-end`, `overflow-clip-margin-block-start`, `overflow-clip-margin-bottom`, `overflow-clip-margin-inline`, `overflow-clip-margin-inline-end`, `overflow-clip-margin-inline-start`, `overflow-clip-margin-left`, `overflow-clip-margin-right`, and `overflow-clip-margin-top` properties. These have not yet been implemented.
+
+### Selectors and pseudo-elements
+
+- {{cssxref("::scroll-button()")}}
+- {{cssxref("::scroll-marker")}}
+- {{cssxref("::scroll-marker-group")}}
+- {{cssxref(":target-current")}}
 
 ### Data types
 
@@ -238,13 +247,16 @@ A link is included in the content box above to demonstrate the effects of keyboa
 
 ## Guides
 
-- [Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
-  - : CSS building block: learn what overflow is and how to manage it.
+- [Learn: Overflowing content](/en-US/docs/Learn_web_development/Core/Styling_basics/Overflow)
+  - : Learn what overflow is and how to manage it.
+- [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels)
+  - : Create pure-CSS carousel UI features using scroll buttons, scroll markers, and generated columns.
 - [Creating a named scroll progress timeline animation](/en-US/docs/Web/CSS/scroll-timeline-name#creating_a_named_scroll_progress_timeline_animation)
   - : The CSS scroll timeline {{cssxref('scroll-timeline-name')}} and {{cssxref('scroll-timeline-axis')}} properties, along with the {{cssxref('scroll-timeline')}} shorthand, create animations tied to the scroll offset of a scroll container.
 
 ## Related concepts
 
+- {{cssxref("::column")}}
 - {{CSSxRef("scrollbar-width")}} CSS property
 - {{CSSxRef("scrollbar-color")}} CSS property
 - {{CSSxRef("scrollbar-gutter")}} CSS property
@@ -256,7 +268,7 @@ A link is included in the content box above to demonstrate the effects of keyboa
 - {{cssxref("scroll-snap-type")}} CSS property
 - {{cssxref("text-overflow")}} CSS property
 - {{CSSxRef("::-webkit-scrollbar")}} pseudo-element
-- [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role) ARIA role
+- [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role) ARIA role
 - Element {{domxref("Element.scroll", "scroll()")}} method
 - Element {{domxref("Element.scrollBy", "scrollBy()")}} method
 - Element {{domxref("Element.scrollIntoView", "scrollIntoView()")}} method

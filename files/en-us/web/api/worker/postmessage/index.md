@@ -48,15 +48,12 @@ The following code snippet shows the creation of a {{domxref("Worker")}} object 
 ```js
 const myWorker = new Worker("worker.js");
 
-first.onchange = () => {
-  myWorker.postMessage([first.value, second.value]);
-  console.log("Message posted to worker");
-};
-
-second.onchange = () => {
-  myWorker.postMessage([first.value, second.value]);
-  console.log("Message posted to worker");
-};
+[first, second].forEach((input) => {
+  input.onchange = () => {
+    myWorker.postMessage([first.value, second.value]);
+    console.log("Message posted to worker");
+  };
+});
 ```
 
 For a full example, see our [simple worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker) ([run example](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)).
@@ -74,7 +71,7 @@ This minimum example has `main` create an `ArrayBuffer` and transfer it to `myWo
 const myWorker = new Worker("myWorker.js");
 
 // listen for myWorker to transfer the buffer back to main
-myWorker.addEventListener("message", function handleMessageFromWorker(msg) {
+myWorker.addEventListener("message", (msg) => {
   console.log("message from worker received in main:", msg);
 
   const bufTransferredBackFromWorker = msg.data;
@@ -106,7 +103,7 @@ console.log(
 
 ```js
 // listen for main to transfer the buffer to myWorker
-self.onmessage = function handleMessageFromMain(msg) {
+self.onmessage = (msg) => {
   console.log("message from main received in worker:", msg);
 
   const bufTransferredFromMain = msg.data;

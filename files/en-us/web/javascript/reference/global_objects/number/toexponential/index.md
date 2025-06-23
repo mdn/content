@@ -1,5 +1,6 @@
 ---
 title: Number.prototype.toExponential()
+short-title: toExponential()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toExponential
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Number.toExponential
@@ -10,7 +11,22 @@ browser-compat: javascript.builtins.Number.toExponential
 The **`toExponential()`** method of {{jsxref("Number")}} values returns a string representing
 this number in exponential notation.
 
-{{EmbedInteractiveExample("pages/js/number-toexponential.html")}}
+{{InteractiveExample("JavaScript Demo: Number.prototype.toExponential()")}}
+
+```js interactive-example
+function expo(x, f) {
+  return Number.parseFloat(x).toExponential(f);
+}
+
+console.log(expo(123456, 2));
+// Expected output: "1.23e+5"
+
+console.log(expo("123456"));
+// Expected output: "1.23456e+5"
+
+console.log(expo("oink"));
+// Expected output: "NaN"
+```
 
 ## Syntax
 
@@ -79,6 +95,7 @@ console.log((77).toExponential()); // 7.7e+1
 ## See also
 
 - [Polyfill of `Number.prototype.toExponential` with many bug fixes in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
+- [es-shims polyfill of `Number.prototype.toExponential`](https://www.npmjs.com/package/number.prototype.toexponential)
 - {{jsxref("Number.prototype.toFixed()")}}
 - {{jsxref("Number.prototype.toPrecision()")}}
 - {{jsxref("Number.prototype.toString()")}}

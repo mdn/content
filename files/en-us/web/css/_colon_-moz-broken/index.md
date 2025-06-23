@@ -1,5 +1,5 @@
 ---
-title: ":-moz-broken"
+title: :-moz-broken
 slug: Web/CSS/:-moz-broken
 page-type: css-pseudo-class
 status:

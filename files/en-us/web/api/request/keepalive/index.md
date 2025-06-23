@@ -11,7 +11,7 @@ browser-compat: api.Request.keepalive
 The **`keepalive`** read-only property of the {{domxref("Request")}} interface contains the request's `keepalive` setting (`true` or `false`), which indicates whether the browser will keep the associated request alive if the page that initiated it is unloaded before the request is complete.
 
 This enables a {{domxref('Window.fetch','fetch()')}} request to, for example, send analytics at the end of a session even if the user navigates away from or closes the page.
-This has some advantages over using {{domxref("Navigator.sendBeacon()")}} for the same purpose, including allowing you to use HTTP methods other than [`POST`](/en-US/docs/Web/HTTP/Methods/POST), customize request properties, and access the server response via the fetch {{jsxref("Promise")}} fulfillment.
+This has some advantages over using {{domxref("Navigator.sendBeacon()")}} for the same purpose, including allowing you to use HTTP methods other than [`POST`](/en-US/docs/Web/HTTP/Reference/Methods/POST), customize request properties, and access the server response via the fetch {{jsxref("Promise")}} fulfillment.
 It is also available in [service workers](/en-US/docs/Web/API/Service_Worker_API).
 
 ## Value
@@ -44,5 +44,5 @@ let myKeepAlive = myRequest.keepalive; // true
 ## See also
 
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

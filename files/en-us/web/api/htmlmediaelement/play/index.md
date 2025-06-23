@@ -44,7 +44,7 @@ thrown). Possible errors include:
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Provided if the user agent (browser) or operating system doesn't allow playback of media in the
     current context or situation. The browser may require the user to explicitly start
-    media playback by clicking a "play" button, for example because of a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+    media playback by clicking a "play" button, for example because of a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
 - `NotSupportedError` {{domxref("DOMException")}}
   - : Provided if the media source (which may be specified as a {{domxref("MediaStream")}},
     {{domxref("MediaSource")}}, {{domxref("Blob")}}, or {{domxref("File")}}, for example)
@@ -73,7 +73,7 @@ UI based on whether the returned promise is fulfilled or rejected. See the
 > returned promise is resolved. Be sure your code doesn't expect an immediate response.
 
 For even more in-depth information about autoplay and autoplay blocking, see our
-article [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide).
+article [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Guides/Autoplay).
 
 ## Examples
 
@@ -134,6 +134,6 @@ You can [try out or remix this example in real time on Glitch](https://media-pla
 ## See also
 
 - [Web media technologies](/en-US/docs/Web/Media)
-- Learning: [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide)
+- Learning: [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
+- [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Guides/Autoplay)
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

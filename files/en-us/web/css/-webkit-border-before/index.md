@@ -1,5 +1,5 @@
 ---
-title: "-webkit-border-before"
+title: -webkit-border-before
 slug: Web/CSS/-webkit-border-before
 page-type: css-shorthand-property
 status:
@@ -60,10 +60,7 @@ The standard-track equivalent of this property is {{cssxref("border-block-start"
 
 ## Formal syntax
 
-```plain
--webkit-border-before =
-  <'border-width'> || <'border-style'> || <color>
-```
+{{CSSSyntaxRaw(`-webkit-border-before = <'border-width'> || <'border-style'> || <color>`)}}
 
 ## Examples
 

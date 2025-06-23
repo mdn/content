@@ -1,5 +1,6 @@
 ---
 title: Map.prototype.delete()
+short-title: delete()
 slug: Web/JavaScript/Reference/Global_Objects/Map/delete
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Map.delete
@@ -10,7 +11,19 @@ browser-compat: javascript.builtins.Map.delete
 The **`delete()`** method of {{jsxref("Map")}} instances removes the specified element from this map by
 key.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-delete.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.delete()")}}
+
+```js interactive-example
+const map1 = new Map();
+map1.set("bar", "foo");
+
+console.log(map1.delete("bar"));
+// Expected result: true
+// True indicates successful removal
+
+console.log(map1.has("bar"));
+// Expected result: false
+```
 
 ## Syntax
 

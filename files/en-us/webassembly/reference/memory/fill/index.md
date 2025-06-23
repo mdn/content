@@ -3,11 +3,12 @@ title: "fill: Wasm text instruction"
 short-title: fill
 slug: WebAssembly/Reference/Memory/Fill
 page-type: webassembly-instruction
-browser-compat: webassembly.multiMemory
+browser-compat:
+  - webassembly.bulk-memory-operations
+  - webassembly.multiMemory
 spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-memory
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`fill`** [memory instruction](/en-US/docs/WebAssembly/Reference/Memory) sets all bytes in a memory region to a given byte.
 
@@ -18,7 +19,7 @@ It traps (exception) if the indicated memory region is out of bounds.
 
 Fill within default memory
 
-```wasm
+```wat
 ;; Fill region at offset/range in default memory with 255
 i32.const 200 ;; The pointer to the region to update
 i32.const 255 ;; The value to set each byte to (must be < 256)
@@ -31,7 +32,7 @@ memory.fill ;; Fill default memory
 
 Fill specified memory (if multi-memory supported)
 
-```wasm
+```wat
 ;; Fill specific memory referenced by its index
 i32.const 200 ;; The pointer to the region to update
 i32.const 255 ;; The value to set each byte to (must be < 256)
@@ -60,8 +61,7 @@ memory.fill (memory $memoryName) ;; Fill memory with name "$memoryName"
 
 ## Browser compatibility
 
-> [!NOTE]
-> Memory support in Wasm modules matches the [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) JavaScript API.
-> The [multiMemory](#webassembly.multimemory) key indicates versions in which `store` can be used with a specified memory.
-
 {{Compat}}
+
+> [!NOTE]
+> The `multiMemory` compatibility table indicates versions in which `fill` can be used with a specified memory.

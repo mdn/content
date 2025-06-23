@@ -29,7 +29,8 @@ div {
   position: relative;
   width: 400px;
   height: 400px;
-  background-image: linear-gradient(
+  background-image:
+    linear-gradient(
       115deg,
       transparent 48%,
       brown,
@@ -128,11 +129,11 @@ The CSS generated content module introduces six yet-to-be implemented CSS functi
 
 ## Guides
 
-- ["How to" guide for generated content](/en-US/docs/Learn/CSS/Howto/Generated_content)
+- ["How to" guide for generated content](/en-US/docs/Learn_web_development/Howto/Solve_CSS_problems/Generated_content)
 
   - : Learn how to add text or image content to a document using the {{cssxref("content")}} property.
 
-- [Create fancy boxes with generated content](/en-US/docs/Learn/CSS/Howto/Create_fancy_boxes)
+- [Create fancy boxes with generated content](/en-US/docs/Learn_web_development/Howto/Solve_CSS_problems/Create_fancy_boxes)
 
   - : Example of styling generated content for visual effects.
 
@@ -151,6 +152,12 @@ The CSS generated content module introduces six yet-to-be implemented CSS functi
   - {{cssxref("counter-increment")}} property
   - {{cssxref("counter-reset")}} property
 
+- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
+
+  - {{cssxref("::scroll-button()")}} pseudo-element
+  - {{cssxref("::scroll-marker")}} pseudo-element
+  - {{cssxref(":target-current")}} pseudo-class
+
 - [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module
 
   - {{cssxref("attr", "attr()")}} function
@@ -165,4 +172,4 @@ The CSS generated content module introduces six yet-to-be implemented CSS functi
 
 - [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module
 - [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
-- [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+- {{glossary("Replaced elements")}}

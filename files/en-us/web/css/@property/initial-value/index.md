@@ -7,7 +7,7 @@ browser-compat: css.at-rules.property.initial-value
 
 {{CSSRef}}
 
-The **`initial-value`** descriptor of the {{cssxref("@property")}} [at-rule](/en-US/docs/Web/CSS/At-rule) specifies the initial value for the registered [CSS custom property](/en-US/docs/Web/CSS/--*).
+The **`initial-value`** descriptor of the {{cssxref("@property")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) specifies the initial value for the registered [CSS custom property](/en-US/docs/Web/CSS/--*).
 It is a required descriptor unless the {{cssxref("@property/syntax", "syntax")}} descriptor value is the universal syntax (`*`).
 If required but missing or invalid, the entire `@property` rule is invalid and ignored.
 

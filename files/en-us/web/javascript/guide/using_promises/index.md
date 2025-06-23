@@ -200,7 +200,7 @@ async function logIngredients() {
 }
 ```
 
-Note how the code looks exactly like synchronous code, except for the `await` keywords in front of promises. One of the only tradeoffs is that it may be easy to forget the [`await`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) keyword, which can only be fixed when there's a type mismatch (e.g. trying to use a promise as a value).
+Note how the code looks exactly like synchronous code, except for the `await` keywords in front of promises. One of the only tradeoffs is that it may be easy to forget the [`await`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) keyword, which can only be fixed when there's a type mismatch (e.g., trying to use a promise as a value).
 
 `async`/`await` builds on promises — for example, `doSomething()` is the same function as before, so there's minimal refactoring needed to change from promises to `async`/`await`. You can read more about the `async`/`await` syntax in the [async functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) and [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) references.
 
@@ -293,7 +293,7 @@ async function main() {
 
 ### Chaining after a catch
 
-It's possible to chain _after_ a failure, i.e. a `catch`, which is useful to accomplish new actions even after an action failed in the chain. Read the following example:
+It's possible to chain _after_ a failure, i.e., a `catch`, which is useful to accomplish new actions even after an action failed in the chain. Read the following example:
 
 ```js
 doSomething()
@@ -313,7 +313,6 @@ doSomething()
 This will output the following text:
 
 ```plain
-Initial
 Do that
 Do this, no matter what happened before
 ```
@@ -484,7 +483,7 @@ console.log(value); // 1 or 2?
 
 On the other hand, promises are a form of [inversion of control](https://en.wikipedia.org/wiki/Inversion_of_control) — the API implementor does not control when the callback gets called. Instead, the job of maintaining the callback queue and deciding when to call the callbacks is delegated to the promise implementation, and both the API user and API developer automatically gets strong semantic guarantees, including:
 
-- Callbacks added with [`then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) will never be invoked before the [completion of the current run](/en-US/docs/Web/JavaScript/Event_loop#run-to-completion) of the JavaScript event loop.
+- Callbacks added with [`then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) will never be invoked before the [completion of the current run](/en-US/docs/Web/JavaScript/Reference/Execution_model#run-to-completion) of the JavaScript event loop.
 - These callbacks will be invoked even if they were added _after_ the success or failure of the asynchronous operation that the promise represents.
 - Multiple callbacks may be added by calling [`then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) several times. They will be invoked one after another, in the order in which they were inserted.
 
@@ -496,7 +495,7 @@ console.log(1);
 // Logs: 1, 2
 ```
 
-Instead of running immediately, the passed-in function is put on a microtask queue, which means it runs later (only after the function which created it exits, and when the JavaScript execution stack is empty), just before control is returned to the event loop; i.e. pretty soon:
+Instead of running immediately, the passed-in function is put on a microtask queue, which means it runs later (only after the function which created it exits, and when the JavaScript execution stack is empty), just before control is returned to the event loop; i.e., pretty soon:
 
 ```js
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));

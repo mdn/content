@@ -1,5 +1,5 @@
 ---
-title: "::grammar-error"
+title: ::grammar-error
 slug: Web/CSS/::grammar-error
 page-type: css-pseudo-element
 browser-compat: css.selectors.grammar-error
@@ -68,3 +68,4 @@ In this example, eventual supporting browsers should highlight any flagged gramm
 ## See also
 
 - {{cssxref("::spelling-error")}}
+- {{cssxref("text-decoration-line")}}

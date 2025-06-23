@@ -7,7 +7,7 @@ browser-compat: css.at-rules.font-face.font-weight
 
 {{CSSRef}}
 
-The **`font-weight`** CSS {{cssxref("@font-face")}} descriptor enables authors to specify a single font weight, or a range of font weights, for the font specified in a {{cssxref("@font-face")}} at-rule. This is then used by the browser to select the appropriate font when a CSS rule sets a desired {{cssxref("font-weight", "font weight")}}.
+The **`font-weight`** CSS {{cssxref("@font-face")}} descriptor enables authors to specify a single font weight, or a range of font weights, for the font specified in a {{cssxref("@font-face")}} at-rule. This is then used by the browser to select the appropriate font when a CSS rule sets a desired [font weight](/en-US/docs/Web/CSS/font-weight).
 
 Typically, a developer will want to use fonts from a single font family in a range of different weights. With traditional, or _static_ fonts, a single font file contains characters from a font family in a specific weight and style: for example, "Helvetica bold italic". To enable displaying light, regular, bold, or extra-bold fonts when the `font-weight` property calls a specific weight, you can define multiple {{cssxref("@font-face")}} at-rules for the same family (all with the same {{cssxref("@font-face/font-family", "font-family")}} descriptor value), one for each weight or range of weights.
 
@@ -74,7 +74,7 @@ For TrueType or OpenType variable fonts, the "wght" variation is used to impleme
 
 People experiencing low vision conditions may have difficulty reading text set with a `font-weight` value of `100` (Thin/Hairline) or `200` (Extra Light), especially if the font has a [low contrast color ratio](/en-US/docs/Web/CSS/color#accessibility).
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
 ## Formal definition
@@ -161,7 +161,7 @@ The other three declarations use the light, bold, and extra-bold versions of the
 - the bold font is associated with the range 500-700
 - the extra-bold font is associated with the range 700-1000
 
-The CSS [cascade](/en-US/docs/Web/CSS/Cascade) ensures that the three latter declarations override parts of the the range that was set in the `FiraSans-Regular` declaration.
+The CSS [cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) ensures that the three latter declarations override parts of the range that was set in the `FiraSans-Regular` declaration.
 
 ```css
 @font-face {
@@ -234,7 +234,7 @@ We include a variable font, ["League Mono"](https://www.theleagueofmoveabletype.
 
 #### HTML
 
-We include a paragraph with `<output>` initially set to `400`, as that is the the default font-weight for unstyled paragraph text. This paragraph is nestled between two other paragraphs, so you can compare rendered versus declared font weight values.
+We include a paragraph with `<output>` initially set to `400`, as that is the default font-weight for unstyled paragraph text. This paragraph is nestled between two other paragraphs, so you can compare rendered versus declared font weight values.
 
 We include an {{htmlelement("input/range")}} of type `range`, nested in a {{htmlelement("label")}}, setting the `step` to `50`.
 
@@ -243,7 +243,7 @@ We include an {{htmlelement("input/range")}} of type `range`, nested in a {{html
 <p id="example">LeagueMono, font-weight: <output>400</output> (example)</p>
 <p>LeagueMono, font-weight: 700 (comparison)</p>
 <label
-  >Change the font size:
+  >Change the font weight:
   <input type="range" min="50" max="1000" step="50" value="400" />
 </label>
 ```

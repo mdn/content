@@ -48,11 +48,11 @@ The specification also defines the `::details-content` and `::search-text` pseud
 
   - : Alphabetical list of pseudo-elements defined by all the CSS specifications and WebVTT.
 
-- [Building blocks: Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+- [Learn: Pseudo-classes and pseudo-elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
 
   - : Part of CSS building blocks section on selectors. This article defines what a pseudo-element is and how it can be combined with pseudo-classes and be used for generating content with `::before` and `::after` pseudo-elements.
 
-- [How to create fancy boxes using pseudo-elements](/en-US/docs/Learn/CSS/Howto/Create_fancy_boxes#pseudo-elements)
+- [How to create fancy boxes using pseudo-elements](/en-US/docs/Learn_web_development/Howto/Solve_CSS_problems/Create_fancy_boxes#pseudo-elements)
 
   - : Example of styling generated content using `::before` and `::after` pseudo-elements for visual effects.
 
@@ -64,6 +64,17 @@ The specification also defines the `::details-content` and `::search-text` pseud
 
   - {{cssxref("::cue")}}
   - {{cssxref("::cue", "::cue()")}}
+
+- [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout) module
+
+  - {{cssxref("::column")}}
+
+- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
+
+  - {{cssxref("::scroll-button()")}}
+  - {{cssxref("::scroll-marker")}}
+  - {{cssxref("::scroll-marker-group")}}
+  - {{cssxref(":target-current")}}
 
 - [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
 
@@ -94,7 +105,7 @@ The specification also defines the `::details-content` and `::search-text` pseud
   - [Pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes)
   - [Universal selectors](/en-US/docs/Web/CSS/Universal_selectors)
 
-- [`placeholder`](/en-US/docs/Web/HTML/Element/input#placeholder) attribute of the `<input>` element
+- [`placeholder`](/en-US/docs/Web/HTML/Reference/Elements/input#placeholder) attribute of the `<input>` element
 - [`:placeholder-shown`](/en-US/docs/Web/CSS/:placeholder-shown) selector
 
 - [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content)
@@ -102,7 +113,7 @@ The specification also defines the `::details-content` and `::search-text` pseud
   - {{cssxref("content")}} property
   - {{cssxref("quotes")}} property
 
-- [Text fragments](/en-US/docs/Web/URI/Fragment/Text_fragments)
+- [Text fragments](/en-US/docs/Web/URI/Reference/Fragment/Text_fragments)
 
 - {{DOMXref("AnimationEvent.pseudoElement")}} property
 - {{DOMXref("KeyframeEffect.pseudoElement")}} property
@@ -114,7 +125,7 @@ The specification also defines the `::details-content` and `::search-text` pseud
 
 ## See also
 
-- [Specificity](/en-US/docs/Web/CSS/Specificity)
+- [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
 - [CSS shadow-parts](/en-US/docs/Web/CSS/CSS_shadow_parts) module
 - [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module

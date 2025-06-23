@@ -1,5 +1,6 @@
 ---
 title: Object.prototype.hasOwnProperty()
+short-title: hasOwnProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Object.hasOwnProperty
@@ -14,7 +15,21 @@ it).
 > **Note:** {{jsxref("Object.hasOwn()")}} is recommended over
 > `hasOwnProperty()`, in browsers where it is supported.
 
-{{EmbedInteractiveExample("pages/js/object-prototype-hasownproperty.html")}}
+{{InteractiveExample("JavaScript Demo: Object.prototype.hasOwnProperty()")}}
+
+```js interactive-example
+const object1 = {};
+object1.property1 = 42;
+
+console.log(object1.hasOwnProperty("property1"));
+// Expected output: true
+
+console.log(object1.hasOwnProperty("toString"));
+// Expected output: false
+
+console.log(object1.hasOwnProperty("hasOwnProperty"));
+// Expected output: false
+```
 
 ## Syntax
 
@@ -182,8 +197,8 @@ external object's `hasOwnProperty()`.
 ## See also
 
 - {{jsxref("Object.hasOwn()")}}
-- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Operators/in", "in")}}
-- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)

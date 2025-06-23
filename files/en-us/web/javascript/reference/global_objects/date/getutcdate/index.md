@@ -1,5 +1,6 @@
 ---
 title: Date.prototype.getUTCDate()
+short-title: getUTCDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDate
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getUTCDate
@@ -9,7 +10,18 @@ browser-compat: javascript.builtins.Date.getUTCDate
 
 The **`getUTCDate()`** method of {{jsxref("Date")}} instances returns the day of the month for this date according to universal time.
 
-{{EmbedInteractiveExample("pages/js/date-getutcdate.html")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.getUTCDate()")}}
+
+```js interactive-example
+const date1 = new Date("August 19, 1975 23:15:30 GMT+11:00");
+const date2 = new Date("August 19, 1975 23:15:30 GMT-11:00");
+
+console.log(date1.getUTCDate());
+// Expected output: 19
+
+console.log(date2.getUTCDate());
+// Expected output: 20
+```
 
 ## Syntax
 

@@ -11,7 +11,7 @@ browser-compat: api.VRDisplay.depthNear
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-The **`depthNear`** property of the {{domxref("VRDisplay")}} interface gets and sets the z-depth defining the near plane of the [eye view frustum](https://en.wikipedia.org/wiki/Viewing_frustum), i.e. the nearest viewable boundary of the scene.
+The **`depthNear`** property of the {{domxref("VRDisplay")}} interface gets and sets the z-depth defining the near plane of the [eye view frustum](https://en.wikipedia.org/wiki/Viewing_frustum), i.e., the nearest viewable boundary of the scene.
 
 > [!NOTE]
 > This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).

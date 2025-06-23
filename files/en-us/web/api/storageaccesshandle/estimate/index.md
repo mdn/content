@@ -1,5 +1,5 @@
 ---
-title: "StorageAccessHandle: estimate() property"
+title: "StorageAccessHandle: estimate() method"
 short-title: estimate()
 slug: Web/API/StorageAccessHandle/estimate
 page-type: web-api-instance-method
@@ -14,7 +14,7 @@ browser-compat: api.StorageAccessHandle.estimate
 ## Syntax
 
 ```js-nolint
-handle.estimate()
+estimate()
 ```
 
 ### Parameters

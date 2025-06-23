@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.at()
+short-title: at()
 slug: Web/JavaScript/Reference/Global_Objects/Array/at
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.at
@@ -9,7 +10,21 @@ browser-compat: javascript.builtins.Array.at
 
 The **`at()`** method of {{jsxref("Array")}} instances takes an integer value and returns the item at that index, allowing for positive and negative integers. Negative integers count back from the last item in the array.
 
-{{EmbedInteractiveExample("pages/js/array-at.html")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.at()")}}
+
+```js interactive-example
+const array1 = [5, 12, 8, 130, 44];
+
+let index = 2;
+
+console.log(`An index of ${index} returns ${array1.at(index)}`);
+// Expected output: "An index of 2 returns 8"
+
+index = -2;
+
+console.log(`An index of ${index} returns ${array1.at(index)}`);
+// Expected output: "An index of -2 returns 130"
+```
 
 ## Syntax
 
@@ -108,6 +123,7 @@ console.log(Array.prototype.at.call(arrayLike, 2)); // undefined
 ## See also
 
 - [Polyfill of `Array.prototype.at` in `core-js`](https://github.com/zloirock/core-js#relative-indexing-method)
+- [es-shims polyfill of `Array.prototype.at`](https://www.npmjs.com/package/array.prototype.at)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.findIndex()")}}

@@ -10,7 +10,7 @@ browser-compat: api.Window.scrollsnapchanging_event
 
 {{APIRef}}{{SeeCompatTable}}
 
-The **`scrollsnapchanging`** event of the {{domxref("Window")}} interface is fired on the `window` when the browser determines a new scroll snap target is pending, i.e. it will be selected when the current scroll gesture ends.
+The **`scrollsnapchanging`** event of the {{domxref("Window")}} interface is fired on the `window` when the browser determines a new scroll snap target is pending, i.e., it will be selected when the current scroll gesture ends.
 
 This event works in much the same way as the {{domxref("Element")}} interface's [`scrollsnapchanging`](/en-US/docs/Web/API/Element/scrollsnapchanging_event) event, except that the overall HTML document has to be set as the scroll snap container (i.e., {{cssxref("scroll-snap-type")}} is set on the {{htmlelement("html")}} element).
 
@@ -18,10 +18,10 @@ This event works in much the same way as the {{domxref("Element")}} interface's 
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("scrollsnapchanging", (event) => {});
+```js-nolint
+addEventListener("scrollsnapchanging", (event) => { })
 
-onscrollsnapchanging = (event) => {};
+onscrollsnapchanging = (event) => { }
 ```
 
 ## Event type

@@ -1,5 +1,6 @@
 ---
 title: String.prototype.startsWith()
+short-title: startsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/startsWith
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.startsWith
@@ -9,7 +10,17 @@ browser-compat: javascript.builtins.String.startsWith
 
 The **`startsWith()`** method of {{jsxref("String")}} values determines whether this string begins with the characters of a specified string, returning `true` or `false` as appropriate.
 
-{{EmbedInteractiveExample("pages/js/string-startswith.html")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.startsWith()")}}
+
+```js interactive-example
+const str1 = "Saturday night plans";
+
+console.log(str1.startsWith("Sat"));
+// Expected output: true
+
+console.log(str1.startsWith("Sat", 3));
+// Expected output: false
+```
 
 ## Syntax
 
@@ -61,6 +72,7 @@ console.log(str.startsWith("not to be", 10)); // true
 ## See also
 
 - [Polyfill of `String.prototype.startsWith` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims polyfill of `String.prototype.startsWith`](https://www.npmjs.com/package/string.prototype.startswith)
 - {{jsxref("String.prototype.endsWith()")}}
 - {{jsxref("String.prototype.includes()")}}
 - {{jsxref("String.prototype.indexOf()")}}

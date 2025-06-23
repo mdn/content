@@ -10,7 +10,7 @@ browser-compat: api.PerformanceLongTaskTiming.attribution
 
 {{SeeCompatTable}}{{APIRef("Performance API")}}
 
-The **`attribution`** readonly property of the {{domxref("PerformanceLongTaskTiming")}} interface returns an array of {{domxref('TaskAttributionTiming')}} objects.
+The **`attribution`** read-only property of the {{domxref("PerformanceLongTaskTiming")}} interface returns an array of {{domxref('TaskAttributionTiming')}} objects.
 
 ## Value
 

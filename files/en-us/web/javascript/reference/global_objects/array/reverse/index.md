@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.reverse()
+short-title: reverse()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reverse
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.reverse
@@ -11,7 +12,21 @@ The **`reverse()`** method of {{jsxref("Array")}} instances reverses an array _[
 
 To reverse the elements in an array without mutating the original array, use {{jsxref("Array/toReversed", "toReversed()")}}.
 
-{{EmbedInteractiveExample("pages/js/array-reverse.html")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.reverse()")}}
+
+```js interactive-example
+const array1 = ["one", "two", "three"];
+console.log("array1:", array1);
+// Expected output: "array1:" Array ["one", "two", "three"]
+
+const reversed = array1.reverse();
+console.log("reversed:", reversed);
+// Expected output: "reversed:" Array ["three", "two", "one"]
+
+// Careful: reverse is destructive -- it changes the original array.
+console.log("array1:", array1);
+// Expected output: "array1:" Array ["three", "two", "one"]
+```
 
 ## Syntax
 
@@ -64,7 +79,7 @@ reversed[0] = 5;
 console.log(numbers[0]); // 5
 ```
 
-In case you want `reverse()` to not mutate the original array, but return a [shallow-copied](/en-US/docs/Glossary/Shallow_copy) array like other array methods (e.g. [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)) do, use the {{jsxref("Array/toReversed", "toReversed()")}} method. Alternatively, you can do a shallow copy before calling `reverse()`, using the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) or [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
+In case you want `reverse()` to not mutate the original array, but return a [shallow-copied](/en-US/docs/Glossary/Shallow_copy) array like other array methods (e.g., [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)) do, use the {{jsxref("Array/toReversed", "toReversed()")}} method. Alternatively, you can do a shallow copy before calling `reverse()`, using the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) or [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
 
 ```js
 const numbers = [3, 2, 4, 1, 5];
@@ -111,6 +126,7 @@ console.log(Array.prototype.reverse.call(arrayLike));
 ## See also
 
 - [Polyfill of `Array.prototype.reverse` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims polyfill of `Array.prototype.reverse`](https://www.npmjs.com/package/array.prototype.reverse)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.join()")}}

@@ -2,9 +2,8 @@
 title: Information contained in a WebIDL file
 slug: MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 When writing documentation about an API, the sources of information are many: the specifications describe what should be implemented as well as the model, and the implementations describe what has actually been put in the browsers. WebIDL files are a very condensed way of giving a lot, but not all, of the information about the API. This document provides a reference to help understand WebIDL syntax.
 
@@ -359,13 +358,13 @@ The name of the method is `canPlayType`, and we will refer to it as `HTMLMediaEl
 
 ### Parameters
 
-```js
+```webidl
 TextTrack addTextTrack(TextTrackKind kind,
                        optional DOMString label = "",
                        optional DOMString language = "");
 ```
 
-The parameters of a method are listed in the Syntax section of the method sub-page. They are listed in the WebIDL in order, between the parenthesis, as a comma-separated list. Each parameter has a name (indicated above) and a type (e.g. a `'?'` means that the `null` value is valid.) If marked `optional`, the parameter is optional to include in a method call and must have the \\{{OptionalInline}} flag included when it is listed in the Syntax section. The parameter's default value is listed after the equality sign (`'='`).
+The parameters of a method are listed in the Syntax section of the method sub-page. They are listed in the WebIDL in order, between the parenthesis, as a comma-separated list. Each parameter has a name (indicated above) and a type (e.g., a `'?'` means that the `null` value is valid.) If marked `optional`, the parameter is optional to include in a method call and must have the \\{{optional_inline}} flag included when it is listed in the Syntax section. The parameter's default value is listed after the equality sign (`'='`).
 
 Parameter types may have special behaviors described using extended attributes (like `[LegacyNullToEmptyString]`). Here is the list of such attributes, and the addition you have to do in the prose:
 

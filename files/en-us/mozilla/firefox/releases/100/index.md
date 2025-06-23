@@ -40,11 +40,11 @@ No notable changes.
 ### WebAssembly
 
 - WebAssembly now supports exceptions that can be thrown and caught in either WebAssembly or JavaScript (or some other runtime), crossing between the environment boundaries if not handled.
-  The JavaScript representations of WebAssembly exceptions are [WebAssembly.Exception](/en-US/docs/WebAssembly/JavaScript_interface/Exception) and [WebAssembly.Tag](/en-US/docs/WebAssembly/JavaScript_interface/Tag) ([Firefox bug 1759217](https://bugzil.la/1759217)).
+  The JavaScript representations of WebAssembly exceptions are [WebAssembly.Exception](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception) and [WebAssembly.Tag](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Tag) ([Firefox bug 1759217](https://bugzil.la/1759217)).
 
 ### WebDriver conformance (Marionette)
 
-- Added support for user prompts (e.g. `alert`) on Android ([Firefox bug 1708105](https://bugzil.la/1708105)).
+- Added support for user prompts (e.g., `alert`) on Android ([Firefox bug 1708105](https://bugzil.la/1708105)).
 
 ## Changes for add-on developers
 

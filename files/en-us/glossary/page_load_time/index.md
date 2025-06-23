@@ -18,6 +18,6 @@ While page load time 'sounds' like the perfect web performance metric, it isn't.
 
 ## See also
 
-- [Navigation and resource timing](/en-US/docs/Web/Performance/Navigation_and_resource_timings)
+- [Navigation and resource timing](/en-US/docs/Web/Performance/Guides/Navigation_and_resource_timings)
 - {{domxref("PerformanceNavigationTiming")}}
 - {{domxref("PerformanceResourceTiming")}},

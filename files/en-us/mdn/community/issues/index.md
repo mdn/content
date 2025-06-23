@@ -1,13 +1,11 @@
 ---
-title: Guidelines to open and work on issues
+title: Creating and working on issues
 slug: MDN/Community/Issues
 page-type: mdn-community-guide
+sidebar: mdnsidebar
 ---
 
-{{MDNSidebar}}
-
 As a contributor, you can [report](#guidelines_for_reporting_an_issue) and [work](#guidelines_for_working_on_an_issue) on issues.
-
 After you report an issue, the issue gets triaged. Issue [triaging](#guidelines_for_triaging_issues) is typically done by people assigned the role of a maintainer or an owner.
 
 ## General guidelines for participation
@@ -16,9 +14,10 @@ While reporting an issue or participating in a conversation in an issue, always 
 
 Do the following:
 
-- Before filing an issue, consider if you need to [discuss](/en-US/docs/MDN/Community/Communication_channels#chat_rooms) it with the staff/community. Use discussions to gain different viewpoints and to converge on an agreed-upon course of action. This helps to keep issues focused and productive.
-- After filing an issue, try to fix the problem yourself. Read our [contribution guide](https://github.com/mdn/content/blob/main/CONTRIBUTING.md) to learn more.
 - If you have a question, you can ask it in the [MDN Web Docs chat rooms](/en-US/docs/MDN/Community/Communication_channels#chat_rooms) instead of filing an issue.
+- If there's many ways to fix a problem, consider if you need to [discuss](/en-US/docs/MDN/Community/Communication_channels#chat_rooms) it with the staff/community.
+  Use discussions to gain different viewpoints and to converge on an agreed-upon course of action. This helps to keep issues focused and productive.
+- After filing an issue, try to fix the problem yourself. There's a guide about [Pull request submission and reviews](/en-US/docs/MDN/Community/Pull_requests) that covers everything you need to know about the contribution process.
 
 Avoid doing the following:
 
@@ -26,57 +25,46 @@ Avoid doing the following:
 - Opening lots of issues asking vague questions.
 - Asking questions without trying to solve the problem yourself first.
 
+If you want to suggest new documentation or ways to improve the website, see [Proposing new content or features](/en-US/docs/MDN/Community/Issues/Content_suggestions_feature_proposals).
+
 ## Guidelines for reporting an issue
 
 [Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues) are used to track bugs. An issue must be a single actionable task or a collection of related actionable tasks and must have a clear outcome.
 
 ### Before filing an issue
 
-If you think you've found a bug with the content on MDN Web Docs or with the look and feel of the website, search the current open issues in the [relevant repository](/en-US/docs/MDN/Community/Contributing/Our_repositories) and make sure nobody else has reported the issue.
+If you think you've found a bug with the content on MDN Web Docs or with the look and feel of the website, search the current open issues in the [relevant repository](/en-US/docs/MDN/Community/Our_repositories) and make sure nobody else has reported the issue.
 
 ### Reporting an issue
 
-- Depending on the type of problem you've discovered, report it by filing an issue on one of the followings:
+Depending on the type of problem you've discovered, you can report it by filing an issue on one of the main [MDN GitHub repositories](/en-US/docs/MDN/Community/Our_repositories).
+If the information you provide in the issue is incomplete, you might be asked to provide more details during the [issue triaging process](#review_the_issue_for_completeness_of_information).
 
-  - [documentation](https://github.com/mdn/content/issues/new/choose)
-  - [translation](https://github.com/mdn/translated-content/issues/new/choose)
-  - the website's [look and feel](https://github.com/mdn/yari/issues/new/choose)
-  - the "Try it" [interactive example](https://github.com/mdn/interactive-examples/issues/new/choose) section
-  - [DOM examples](https://github.com/mdn/dom-examples/issues)
-  - [Learning area](https://github.com/mdn/learning-area/issues)
-  - the [browser compatibility](https://github.com/mdn/browser-compat-data/issues/new/choose) information
+Here are some hints for opening issues:
 
 - Choose the appropriate category to report the issue. For example, to report a content bug, use the [Content issue](https://github.com/mdn/content/issues/new?assignees=&labels=needs+triage&template=content-bug.yml) template in the `mdn/content` repository.
-
 - Provide sufficient information while reporting the issue:
-
   - **Issue title** must convey succinctly the _required action_.
-
   - **Issue description** must clearly describe the bug and the action required to resolve the issue. It must also list the task or sub-tasks to be completed to resolve the issue. Some other guidelines include:
     - Use the description field to indicate the status of the task or sub-tasks by using checklists.
-    - Update the status of a task in the issue description instead of commenting on the issue. Use [task lists](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-task-lists) in the description if an issue has multiple parts. This helps others who may otherwise need to scroll through comments on the issue to determine the status of various tasks.
+    - Update the status of a task in the issue description instead of commenting on the issue. Use [task lists](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-tasklists) in the description if an issue has multiple parts. This helps others who may otherwise need to scroll through comments on the issue to determine the status of various tasks.
     - Comments in an issue should be limited to details or context that help resolve the issue.
-
-- If the information you provide in the issue is incomplete, then you might be contacted later during the [issue triaging process](#review_the_issue_for_completeness_of_information).
-
 - If you find yourself in one of the following situations, move the conversation to [MDN's discussion on GitHub](https://github.com/orgs/mdn/discussions):
-
   - A discussion needs to take place to clarify an issue.
   - A discussion begins after opening the issue.
   - The issue has no clear consensus on its resolution.
   - The requirements for completing the task expand while it's being resolved or the work is unclear.
-
-- For minor and small bugs, you can [make the changes yourself](#fixing_issues_yourself) and submit a pull request.
+- For minor bugs, you can [make the changes yourself](#fixing_issues_yourself) and submit a pull request.
 
 ### Creating a task list issue
 
-If the issue you're opening is not to report a bug but to perform a series of tasks, you can create the issue as a [task list](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-task-lists).
+If the issue you're opening is not to report a bug but to perform a series of tasks, you can create the issue as a [task list](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-tasklists).
 Explain the context or reason for performing the tasks in the description.
 Ensure that you list all the actionable tasks as a checklist.
 
 For example:
 
-```markdown
+```md
 // Issue title
 Ensure sections follow the order defined in the CSS property template
 
@@ -119,24 +107,24 @@ These are the general steps for working on an issue:
 
 ### Fixing issues yourself
 
-If you spot a bug — whether it's a problem with the website's look and feel or an error in documentation — you can try to fix it yourself. Learn how you can contribute by going through our [contribution guide](https://github.com/mdn/content/blob/main/CONTRIBUTING.md).
+If you spot a bug — whether it's a problem with the website's look and feel or an error in documentation — you can try to fix it yourself in a [pull request](/en-US/docs/MDN/Community/Pull_requests).
+If the bug is small (such as a typo or a minor sentence improvement) or involves a quick fix, you can submit a pull request with the appropriate changes.
 
-If the bug is small, such as a typo or a minor sentence improvement, or involves an uncontroversial fix, submit a pull request with the changes.
-
-For all other type of bugs, begin by [opening the issue](#guidelines_for_reporting_an_issue). Add a comment about your intent to work on the issue and if possible, describe your proposed solution or steps to fix the issue.
-Wait for the issue to be triaged, so that the MDN Web Docs team can verify that the issue is legit and approves your proposed solution.
+For any other type of bug, begin by [opening an issue](#guidelines_for_reporting_an_issue).
+Add a comment about your intent to work on the issue and, if possible, describe your proposed solution or steps to fix it.
 
 > [!NOTE]
-> If you open a pull request before the issue has been triaged, your time and effort might go waste if the linked issue is deemed invalid or the solution does not match the one expected by the MDN Web Docs team.
-> After the issue is triaged, assign the issue to yourself.
+> Your time and effort might go waste if you open a pull request without opening an issue first.
+> Wait for the issue to be triaged, so that the MDN Web Docs team can verify that the issue is legit and approve your proposed solution.
 
 Using the [guidelines on working on an issue](#guidelines_for_working_on_an_issue), try to fix the problem by updating the appropriate source, such as:
 
-- The MDN Web Docs content (in English) in the [content](https://github.com/mdn/content) repository
-- The MDN Web Docs translated content in the [translated-content](https://github.com/mdn/translated-content) repository
-- The MDN Web Docs website look and feel in the [yari](https://github.com/mdn/yari) repository
+- The MDN Web Docs **content** (in English) in the [mdn/content](https://github.com/mdn/content) repository
+- The MDN Web Docs **translated content** in the [mdn/translated-content](https://github.com/mdn/translated-content) repository
+- The MDN Web Docs **frontend** in the [mdn/yari](https://github.com/mdn/yari) repository
 
 Each repository includes useful information to guide you on how to contribute.
+For more information, see [our main GitHub repositories](/en-US/docs/MDN/Community/Our_repositories).
 
 ## Guidelines for triaging issues
 

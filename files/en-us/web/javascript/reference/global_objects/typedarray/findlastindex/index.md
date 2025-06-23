@@ -1,5 +1,6 @@
 ---
 title: TypedArray.prototype.findLastIndex()
+short-title: findLastIndex()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/findLastIndex
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.findLastIndex
@@ -9,7 +10,18 @@ browser-compat: javascript.builtins.TypedArray.findLastIndex
 
 The **`findLastIndex()`** method of {{jsxref("TypedArray")}} instances iterates the typed array in reverse order and returns the index of the first element that satisfies the provided testing function. If no elements satisfy the testing function, -1 is returned. This method has the same algorithm as {{jsxref("Array.prototype.findLastIndex()")}}.
 
-{{EmbedInteractiveExample("pages/js/typedarray-findlastindex.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.prototype.findLastIndex()")}}
+
+```js interactive-example
+function isNegative(element /*, index, array */) {
+  return element < 0;
+}
+
+const int8 = new Int8Array([10, -20, 30, -40, 50]);
+
+console.log(int8.findLastIndex(isNegative));
+// Expected output: 3
+```
 
 ## Syntax
 

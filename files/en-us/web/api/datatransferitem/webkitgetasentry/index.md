@@ -153,11 +153,11 @@ dropzone.addEventListener(
     event.preventDefault();
     listing.textContent = "";
 
-    for (let i = 0; i < items.length; i++) {
-      let item = items[i].webkitGetAsEntry();
+    for (const item of items) {
+      const entry = item.webkitGetAsEntry();
 
-      if (item) {
-        scanFiles(item, listing);
+      if (entry) {
+        scanFiles(entry, listing);
       }
     }
   },
@@ -192,7 +192,6 @@ You can see how this works by trying it out below. Find some files and directori
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("DataTransferItem")}}
 - {{domxref("FileSystemEntry")}}, {{domxref("FileSystemFileEntry")}}, and {{domxref("FileSystemDirectoryEntry")}}
 - Events: {{domxref("HTMLElement/dragover_event", "dragover")}} and {{domxref("HTMLElement/drop_event", "drop")}}

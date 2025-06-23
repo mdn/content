@@ -28,9 +28,9 @@ encodingInfo(configuration)
       - : The type of media being tested. This takes one of two values:
 
         - `record`
-          - : Represents a configuration for recording of media, e.g. using {{domxref("MediaRecorder")}}.
+          - : Represents a configuration for recording of media, e.g., using {{domxref("MediaRecorder")}}.
         - `webrtc`
-          - : Represents a configuration meant to be transmitted over electronic means (e.g. using {{domxref("RTCPeerConnection")}}). **Note:** Firefox uses `transmission` for this type, and `webrtc` does not work.
+          - : Represents a configuration meant to be transmitted over electronic means (e.g., using {{domxref("RTCPeerConnection")}}). **Note:** Firefox uses `transmission` for this type, and `webrtc` does not work.
         - `transmission` {{non-standard_inline}}
           - : The synonym of `webrtc` to be used in Firefox.
 
@@ -40,7 +40,7 @@ encodingInfo(configuration)
         This has the following properties: <!-- VideoConfiguration in the spec -->
 
         - `contentType`
-          - : String containing a valid video MIME type, and (optionally) a [`codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter).
+          - : String containing a valid video MIME type, and (optionally) a [`codecs` parameter](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter).
         - `width`
           - : The width of the video.
         - `height`
@@ -56,7 +56,7 @@ encodingInfo(configuration)
         This has the following properties: <!-- AudioConfiguration in the spec -->
 
         - `contentType`
-          - : String containing a valid audio MIME type, and (optionally) a [`codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter).
+          - : String containing a valid audio MIME type, and (optionally) a [`codecs` parameter](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter).
         - `channels`
           - : The number of channels used by the audio track.
         - `bitrate`
@@ -89,7 +89,7 @@ All supported audio codecs are reported to be power efficient.
 ## Examples
 
 ```js
-//Create media configuration to be tested
+// Create media configuration to be tested
 const mediaConfig = {
   type: "record", // or 'transmission'
   video: {

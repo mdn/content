@@ -1,5 +1,6 @@
 ---
 title: ArrayBuffer.prototype.transfer()
+short-title: transfer()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/transfer
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.ArrayBuffer.transfer
@@ -116,7 +117,8 @@ buffer3.transfer(20); // RangeError: Invalid array buffer length
 
 ## See also
 
-- [Polyfill of `ArrayBuffer.prototype.transfer()` in `core-js`](https://github.com/zloirock/core-js#arraybufferprototypetransfer-and-friends)
+- [Polyfill of `ArrayBuffer.prototype.transfer` in `core-js`](https://github.com/zloirock/core-js#arraybufferprototypetransfer-and-friends)
+- [es-shims polyfill of `ArrayBuffer.prototype.transfer`](https://www.npmjs.com/package/arraybuffer.prototype.transfer)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("ArrayBuffer.prototype.detached")}}
 - {{jsxref("ArrayBuffer.prototype.transferToFixedLength()")}}

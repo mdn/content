@@ -63,7 +63,7 @@ The **`PublicKeyCredentialCreationOptions`** dictionary represents the object pa
 
     - `residentKey` {{optional_inline}}
 
-      - : A string that specifies the extent to which the relying party desires to create a **client-side discoverable credential** (i.e., one that is usable in authentication requests where the relying party does not provide credential IDs — {{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}} is called with an empty `allowCredentials` value). The alternative is a **server-side credential**, where the relying party must provide credential IDs in the `get()` `allowCredentials` value.
+      - : A string that specifies the extent to which the relying party desires to create a client-side [discoverable credential](/en-US/docs/Web/API/Web_Authentication_API#discoverable_credentials_and_conditional_mediation) (that is, one that is usable in authentication requests where the relying party does not provide credential IDs — {{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}} is called with an empty `allowCredentials` value). The alternative is a **server-side credential**, where the relying party must provide credential IDs in the `get()` `allowCredentials` value.
         Possible values are:
 
         - `"discouraged"`
@@ -71,7 +71,7 @@ The **`PublicKeyCredentialCreationOptions`** dictionary represents the object pa
         - `"preferred"`
           - : The relying party strongly prefers creation of a client-side discoverable credential, but will accept a server-side credential. The user agent should guide the user through setting up user verification, if needed, to create a discoverable credential. This takes precedence over the `userVerification` setting.
         - `"required"`
-          - : The relying party requires a client-side discoverable credential. If one cannot be created, an error is thrown.
+          - : The relying party requires a client-side discoverable credential. If one cannot be created, a `NotAllowedError` {{domxref("DOMException")}} is thrown. See the [`create()` exceptions list](/en-US/docs/Web/API/CredentialsContainer/create#exceptions) for more details.
 
         If omitted, `residentKey` defaults to `"required"` if `requireResidentKey` is `true`, otherwise the default value is `"discouraged"`.
 
@@ -125,7 +125,7 @@ The **`PublicKeyCredentialCreationOptions`** dictionary represents the object pa
 
       - : A number that is equal to a [COSE Algorithm Identifier](https://www.iana.org/assignments/cose/cose.xhtml#algorithms), representing the cryptographic algorithm to use for this credential type. It is recommended that relying parties that wish to support a wide range of authenticators should include at least the following values in the provided choices:
 
-        - `-8`: Ed25519
+        - `-8`: EdDSA
         - `-7`: ES256
         - `-257`: RS256
 
@@ -155,7 +155,7 @@ The **`PublicKeyCredentialCreationOptions`** dictionary represents the object pa
         If omitted, `id` defaults to the document origin — which would be `login.example.com` in the above example.
 
     - `name`
-      - : A string representing the name of the relying party (e.g. `"Facebook"`). This is the name the user will be presented with when creating or validating a WebAuthn operation.
+      - : A string representing the name of the relying party (e.g., `"Facebook"`). This is the name the user will be presented with when creating or validating a WebAuthn operation.
 
 - `timeout` {{optional_inline}}
 
@@ -174,7 +174,7 @@ The **`PublicKeyCredentialCreationOptions`** dictionary represents the object pa
       - : An {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, or {{jsxref("DataView")}} representing a unique ID for the user account. This value has a maximum length of 64 bytes, and is not intended to be displayed to the user.
 
     - `name`
-      - : A string providing a human-friendly identifier for the user's account, to help distinguish between different accounts with similar `displayName`s. This could be an email address (such as `"john.doe@example.com"`), phone number (for example `"+12345678901"`), or some other kind of user account identifier (for example `"johndoe667"`).
+      - : A string providing a human-friendly identifier for the user's account, to help distinguish between different accounts with similar `displayName`s. This could be an email address (such as `"john.doe@example.com"`), phone number (for example `"+12345678901"`), or some other kind of user account identifier (for example `"JohnDoe667"`).
 
 - `hints` {{optional_inline}}
 

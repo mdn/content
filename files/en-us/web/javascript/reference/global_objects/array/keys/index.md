@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.keys()
+short-title: keys()
 slug: Web/JavaScript/Reference/Global_Objects/Array/keys
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.keys
@@ -9,7 +10,20 @@ browser-compat: javascript.builtins.Array.keys
 
 The **`keys()`** method of {{jsxref("Array")}} instances returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the keys for each index in the array.
 
-{{EmbedInteractiveExample("pages/js/array-keys.html")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.keys()")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+const iterator = array1.keys();
+
+for (const key of iterator) {
+  console.log(key);
+}
+
+// Expected output: 0
+// Expected output: 1
+// Expected output: 2
+```
 
 ## Syntax
 
@@ -72,6 +86,7 @@ for (const entry of Array.prototype.keys.call(arrayLike)) {
 ## See also
 
 - [Polyfill of `Array.prototype.keys` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims polyfill of `Array.prototype.keys`](https://www.npmjs.com/package/array.prototype.keys)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.entries()")}}

@@ -56,11 +56,11 @@ Firefox includes two features to prevent tracking: [dynamic partitioning](#stora
 From Firefox 103, dynamic partitioning is the default feature used. However, if the user or an extension turns on first-party isolation, it takes precedence over dynamic partitioning.
 
 > [!NOTE]
-> When private browsing uses dynamic partitioning, normal browsing may not be partitioning cookies. See [Status of partitioning in Firefox](/en-US/docs/Web/Privacy/State_Partitioning#status_of_partitioning_in_firefox), for details.
+> When private browsing uses dynamic partitioning, normal browsing may not be partitioning cookies. See [Status of partitioning in Firefox](/en-US/docs/Web/Privacy/Guides/State_Partitioning#status_of_partitioning_in_firefox), for details.
 
 ### Storage partitioning
 
-When using [dynamic partitioning](/en-US/docs/Web/Privacy/State_Partitioning#dynamic_partitioning), Firefox partitions the storage accessible to JavaScript APIs by top-level site while providing appropriate access to unpartitioned storage to enable common use cases. This feature is being rolled out progressively. See [Status of partitioning in Firefox](/en-US/docs/Web/Privacy/State_Partitioning#status_of_partitioning_in_firefox), for implementation details.
+When using [dynamic partitioning](/en-US/docs/Web/Privacy/Guides/State_Partitioning#dynamic_partitioning), Firefox partitions the storage accessible to JavaScript APIs by top-level site while providing appropriate access to unpartitioned storage to enable common use cases. This feature is being rolled out progressively. See [Status of partitioning in Firefox](/en-US/docs/Web/Privacy/Guides/State_Partitioning#status_of_partitioning_in_firefox), for implementation details.
 
 Storage partitions are keyed by the schemeful URL of the top-level {{glossary("Site","website")}} and, when dynamic partitioning is active, the key value is available through the `partitionKey.topLevelSite` property in the cookies API, for example, `partitionKey: {topLevelSite: "http://site"}`.
 

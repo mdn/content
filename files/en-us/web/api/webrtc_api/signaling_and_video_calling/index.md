@@ -82,7 +82,7 @@ When starting the signaling process, an **offer** is created by the user initiat
 - `sdp`
   - : The SDP (Session Description Protocol) string describing the local end of the connection from the perspective of the sender (or the remote end of the connection from the receiver's point of view).
 
-At this point, the two participants know which [codecs](/en-US/docs/Web/Media/Formats/WebRTC_codecs) and [codec parameters](/en-US/docs/Web/Media/Formats/codecs_parameter) are to be used for this call. They still don't know how to transmit the media data itself though. This is where {{Glossary('ICE', 'Interactive Connectivity Establishment (ICE)')}} comes in.
+At this point, the two participants know which [codecs](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs) and [codec parameters](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter) are to be used for this call. They still don't know how to transmit the media data itself though. This is where {{Glossary('ICE', 'Interactive Connectivity Establishment (ICE)')}} comes in.
 
 ### Exchanging ICE candidates
 
@@ -138,7 +138,7 @@ When each peer's ICE layer begins to send candidates, it enters into an exchange
 
 Each side sends candidates to the other as it receives them from their local ICE layer; there is no taking turns or batching of candidates. As soon as the two peers agree upon one candidate that they can both use to exchange the media, media begins to flow. Each peer continues to send candidates until it runs out of options, even after the media has already begun to flow. This is done in hopes of identifying even better options than the one initially selected.
 
-If conditions change (for example, the network connection deteriorates), one or both peers might suggest switching to a lower-bandwidth media resolution, or to an alternative codec. That triggers a new exchange of candidates, after which another media format and/or codec change may take place. In the guide [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs) you can learn more about the codecs which WebRTC requires browsers to support, which additional codecs are supported by which browsers, and how to choose the best codecs to use.
+If conditions change (for example, the network connection deteriorates), one or both peers might suggest switching to a lower-bandwidth media resolution, or to an alternative codec. That triggers a new exchange of candidates, after which another media format and/or codec change may take place. In the guide [Codecs used by WebRTC](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs) you can learn more about the codecs which WebRTC requires browsers to support, which additional codecs are supported by which browsers, and how to choose the best codecs to use.
 
 Optionally, see {{RFC(8445, "Interactive Connectivity Establishment")}}, [section 2.3 ("Negotiating Candidate Pairs and Concluding ICE")](https://datatracker.ietf.org/doc/html/rfc5245#section-2.3) if you want greater understanding of how this process is completed inside the ICE layer. You should note that candidates are exchanged and media starts to flow as soon as the ICE layer is satisfied. This is all taken care of behind the scenes. Our role is to send the candidates, back and forth, through the signaling server.
 
@@ -157,9 +157,13 @@ The HTML for our client needs a location for video to be presented. This require
   <div class="camera-box">
     <video id="received_video" autoplay></video>
     <video id="local_video" autoplay muted></video>
-    <button id="hangup-button" onclick="hangUpCall();" disabled>Hang Up</button>
+    <button id="hangup-button" disabled>Hang Up</button>
   </div>
 </div>
+```
+
+```js
+document.getElementById("hangup-button").addEventListener("click", hangUpCall);
 ```
 
 The page structure defined here is using {{HTMLElement("div")}} elements, giving us full control over the page layout by enabling the use of CSS. We'll skip layout detail in this guide, but [take a look at the CSS](https://github.com/mdn/samples-server/blob/master/s/webrtc-from-chat/chat.css) on GitHub to see how we handled it. Take note of the two {{HTMLElement("video")}} elements, one for your self-view, one for the connection, and the {{HTMLElement("button")}} element.
@@ -689,7 +693,7 @@ Another obvious improvement would be to add a "ringing" feature, so that instead
 
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
 - [Web media technologies](/en-US/docs/Web/Media)
-- [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
+- [Guide to media types and formats on the web](/en-US/docs/Web/Media/Guides/Formats)
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API)
 - [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API)

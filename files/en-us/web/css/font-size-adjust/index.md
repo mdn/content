@@ -146,7 +146,7 @@ In `C`, notice that only one value is specified for the `font-size-adjust` prope
 
 ### Determining the aspect value of a font
 
-For a given font, the same content in two side-by-side [`<span>`](/en-US/docs/Web/HTML/Element/span) elements can be used to determine the font's aspect value. If the same font size is used for content in both spans, the spans will match when the `font-size-adjust` value in one span is accurate for the given font.
+For a given font, the same content in two side-by-side [`<span>`](/en-US/docs/Web/HTML/Reference/Elements/span) elements can be used to determine the font's aspect value. If the same font size is used for content in both spans, the spans will match when the `font-size-adjust` value in one span is accurate for the given font.
 
 In the example below, there are three pairs of side-by-side `<span>` elements, each containing the letter "b". The goal is to adjust the `font-size-adjust` property for the right `<span>` in each pair until the borders around the two letters align. The resulting `font-size-adjust` value can be considered the aspect value for the font.
 
@@ -229,4 +229,5 @@ span {
 - {{cssxref("font-size")}}
 - {{cssxref("font-weight")}}
 - {{cssxref("@font-face/size-adjust", "size-adjust")}} `@font-face` descriptor
-- [Learn: Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
+- SVG {{SVGAttr("font-size-adjust")}} attribute
+- [Learn: Fundamental text and font styling](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals)

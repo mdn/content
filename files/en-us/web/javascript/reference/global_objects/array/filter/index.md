@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.filter()
+short-title: filter()
 slug: Web/JavaScript/Reference/Global_Objects/Array/filter
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.filter
@@ -9,7 +10,16 @@ browser-compat: javascript.builtins.Array.filter
 
 The **`filter()`** method of {{jsxref("Array")}} instances creates a [shallow copy](/en-US/docs/Glossary/Shallow_copy) of a portion of a given array, filtered down to just the elements from the given array that pass the test implemented by the provided function.
 
-{{EmbedInteractiveExample("pages/js/array-filter.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.filter()", "shorter")}}
+
+```js interactive-example
+const words = ["spray", "elite", "exuberant", "destruction", "present"];
+
+const result = words.filter((word) => word.length > 6);
+
+console.log(result);
+// Expected output: Array ["exuberant", "destruction", "present"]
+```
 
 ## Syntax
 
@@ -139,7 +149,7 @@ The `array` argument is useful if you want to access another element in the arra
 ```js
 const names = ["JC63", "Bob132", "Ursula89", "Ben96"];
 const greatIDs = names
-  .map((name) => parseInt(name.match(/[0-9]+/)[0], 10))
+  .map((name) => parseInt(name.match(/\d+/)[0], 10))
   .filter((id, idx, arr) => {
     // Without the arr argument, there's no way to easily access the
     // intermediate array without saving it to a variable.
@@ -188,6 +198,7 @@ console.log(Array.prototype.filter.call(arrayLike, (x) => x <= "b"));
 ## See also
 
 - [Polyfill of `Array.prototype.filter` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims polyfill of `Array.prototype.filter`](https://www.npmjs.com/package/array.prototype.filter)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.forEach()")}}

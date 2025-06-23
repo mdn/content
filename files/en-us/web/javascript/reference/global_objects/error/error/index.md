@@ -1,5 +1,6 @@
 ---
 title: Error() constructor
+short-title: Error()
 slug: Web/JavaScript/Reference/Global_Objects/Error/Error
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Error.Error
@@ -98,6 +99,7 @@ console.log("cause" in error3); // false
 ## See also
 
 - [Polyfill of `Error` with `cause` support in `core-js`](https://github.com/zloirock/core-js#ecmascript-error)
+- [es-shims polyfill of Error `cause`](https://www.npmjs.com/package/error-cause)
 - {{jsxref("Statements/throw", "throw")}}
 - {{jsxref("Statements/try...catch", "try...catch")}}
 - [Error causes](https://v8.dev/features/error-cause) on v8.dev (2021)

@@ -38,7 +38,7 @@ observe(target, options)
         - `border-box`
           - : Size of the box border area as defined in CSS.
         - `device-pixel-content-box`
-          - : The size of the content area as defined in CSS, in device pixels, before applying any CSS transforms on the element or its ancestors.
+          - : The size of the content area as defined in CSS, in {{glossary("device pixel", "device pixels")}}, before applying any CSS transforms on the element or its ancestors.
 
 ### Return value
 

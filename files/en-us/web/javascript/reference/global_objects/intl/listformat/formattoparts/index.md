@@ -1,5 +1,6 @@
 ---
 title: Intl.ListFormat.prototype.formatToParts()
+short-title: formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/formatToParts
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.ListFormat.formatToParts
@@ -7,11 +8,31 @@ browser-compat: javascript.builtins.Intl.ListFormat.formatToParts
 
 {{JSRef}}
 
-The **`formatToParts()`** method of {{jsxref("Intl.ListFormat")}} instances
-returns an {{jsxref("Array")}} of objects representing the different components that
-can be used to format a list of values in a locale-aware fashion.
+The **`formatToParts()`** method of {{jsxref("Intl.ListFormat")}} instances returns an array of objects representing each part of the formatted string that would be returned by {{jsxref("Intl/ListFormat/format", "format()")}}. It is useful for building custom strings from the locale-specific tokens.
 
-{{EmbedInteractiveExample("pages/js/intl-listformat-prototype-formattoparts.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Intl.listformat.prototype.formatToParts()", "taller")}}
+
+```js interactive-example
+const vehicles = ["Motorcycle", "Bus", "Car"];
+
+const formatterEn = new Intl.ListFormat("en", {
+  style: "long",
+  type: "conjunction",
+});
+
+const formatterFr = new Intl.ListFormat("fr", {
+  style: "long",
+  type: "conjunction",
+});
+
+const partValuesEn = formatterEn.formatToParts(vehicles).map((p) => p.value);
+const partValuesFr = formatterFr.formatToParts(vehicles).map((p) => p.value);
+
+console.log(partValuesEn);
+// Expected output: "["Motorcycle", ", ", "Bus", ", and ", "Car"]"
+console.log(partValuesFr);
+// Expected output: "["Motorcycle", ", ", "Bus", " et ", "Car"]"
+```
 
 ## Syntax
 
@@ -22,31 +43,20 @@ formatToParts(list)
 ### Parameters
 
 - `list`
-  - : An iterable object, such as an {{jsxref("Array")}}, to be formatted according to a locale.
+  - : An iterable object, such as an Array, containing strings. Omitting it results in formatting the empty array, which could be slightly confusing, so it is advisable to always explicitly pass a list.
 
 ### Return value
 
-An {{jsxref("Array")}} of components which contains the formatted parts from the list.
+An {{jsxref("Array")}} of objects containing the formatted list in parts. Each object has two properties, `type` and `value`, each containing a string. The string concatenation of `value`, in the order provided, will result in the same string as {{jsxref("Intl/ListFormat/format", "format()")}}. The `type` may be one of the following:
 
-## Description
-
-Whereas {{jsxref("Intl/ListFormat/format", "Intl.ListFormat.prototype.format()")}} returns a string being the formatted version
-of the list (according to the given locale and style options),
-`formatToParts()` returns an array of the different components of the
-formatted string.
-
-Each element of the resulting array has two properties: `type` and
-`value`. The `type` property may be either
-`"element"`, which refers to a value from the list, or
-`"literal"` which refers to a linguistic construct. The `value`
-property gives the content, as a string, of the token.
-
-The locale and style options used for formatting are given when constructing the
-{{jsxref("Intl.ListFormat")}} instance.
+- `literal`
+  - : Any string that's a part of the format pattern; for example `", "`, `", and"`, etc.
+- `element`
+  - : An element of the list, exactly as provided.
 
 ## Examples
 
-### Using formatToParts
+### Using formatToParts()
 
 ```js
 const fruits = ["Apple", "Orange", "Pineapple"];
@@ -77,6 +87,3 @@ console.table(myListFormat.formatToParts(fruits));
 
 - {{jsxref("Intl.ListFormat")}}
 - {{jsxref("Intl/ListFormat/format", "Intl.ListFormat.prototype.format()")}}
-- {{jsxref("Intl/RelativeTimeFormat/formatToParts", "Intl.RelativeTimeFormat.prototype.formatToParts()")}}
-- {{jsxref("Intl/NumberFormat/formatToParts", "Intl.NumberFormat.prototype.formatToParts()")}}
-- {{jsxref("Intl/DateTimeFormat/formatToParts", "Intl.DateTimeFormat.prototype.formatToParts()")}}

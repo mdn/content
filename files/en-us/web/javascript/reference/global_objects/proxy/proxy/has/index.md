@@ -1,5 +1,6 @@
 ---
 title: handler.has()
+short-title: has()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.has
@@ -9,7 +10,33 @@ browser-compat: javascript.builtins.Proxy.handler.has
 
 The **`handler.has()`** method is a trap for the `[[HasProperty]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as the {{jsxref("Operators/in", "in")}} operator.
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-has.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.has()", "taller")}}
+
+```js interactive-example
+const handler1 = {
+  has(target, key) {
+    if (key[0] === "_") {
+      return false;
+    }
+    return key in target;
+  },
+};
+
+const monster1 = {
+  _secret: "easily scared",
+  eyeCount: 4,
+};
+
+const proxy1 = new Proxy(monster1, handler1);
+console.log("eyeCount" in proxy1);
+// Expected output: true
+
+console.log("_secret" in proxy1);
+// Expected output: false
+
+console.log("_secret" in monster1);
+// Expected output: true
+```
 
 ## Syntax
 

@@ -16,7 +16,8 @@ The **`reload()`** method of the
 ## Syntax
 
 ```js-nolint
-navigate(options)
+reload()
+reload(options)
 ```
 
 ### Parameters
@@ -56,7 +57,7 @@ async function handleReload() {
   }).finished;
 
   // Update application state
-  // ...
+  // …
 }
 ```
 
@@ -69,7 +70,7 @@ async function handleReload() {
   }).finished;
 
   // Update application state
-  // ...
+  // …
 }
 ```
 

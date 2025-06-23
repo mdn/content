@@ -9,7 +9,41 @@ browser-compat: css.properties.height
 
 The **`height`** [CSS](/en-US/docs/Web/CSS) property specifies the height of an element. By default, the property defines the height of the [content area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content_area). If {{cssxref("box-sizing")}} is set to `border-box`, however, it instead determines the height of the [border area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border_area).
 
-{{EmbedInteractiveExample("pages/css/height.html")}}
+{{InteractiveExample("CSS Demo: height")}}
+
+```css interactive-example-choice
+height: 150px;
+```
+
+```css interactive-example-choice
+height: 6em;
+```
+
+```css interactive-example-choice
+height: 75%;
+```
+
+```css interactive-example-choice
+height: auto;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the height.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 The {{cssxref("min-height")}} and {{cssxref("max-height")}} properties override `height`.
 
@@ -36,7 +70,6 @@ height: min-content;
 height: fit-content;
 height: fit-content(20em);
 height: auto;
-height: minmax(min-content, anchor-size(width));
 height: stretch;
 
 /* Global values */
@@ -52,7 +85,7 @@ height: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : Defines the height as a distance value.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : Defines the height as a percentage of the [containing block](/en-US/docs/Web/CSS/Containing_block)'s height.
+  - : Defines the height as a percentage of the [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block)'s height.
 - `auto`
   - : The browser will calculate and select a height for the specified element.
 - `max-content`
@@ -60,21 +93,17 @@ height: unset;
 - `min-content`
   - : The intrinsic minimum height.
 - `fit-content`
-  - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e. `min(max-content, max(min-content, stretch))`.
+  - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e., `min(max-content, max(min-content, stretch))`.
 - `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
-  - : Uses the fit-content formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, <length-percentage>))`.
+  - : Uses the fit-content formula with the available space replaced by the specified argument, i.e., `min(max-content, max(min-content, <length-percentage>))`.
 - `stretch`
-
-  - : Sets the height of the element's [margin box](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#parts_of_a_box) to the height of its [containing block](/en-US/docs/Web/CSS/Containing_block#identifying_the_containing_block). It attempts to make the margin box fill the available space in the containing block, so in a way behaving similar to `100%` but applying the resulting size to the margin box rather than the box determined by [box-sizing](/en-US/docs/Web/CSS/box-sizing).
-
-    > [!NOTE]
-    > To check aliases used by browsers for the `stretch` value and its implementation status, see the [Browser compatibility](#browser_compatibility) section.
+  - : Sets the height of the element's [margin box](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#parts_of_a_box) to the height of its [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block#identifying_the_containing_block). It attempts to make the margin box fill the available space in the containing block, so in a way behaving similar to `100%` but applying the resulting size to the margin box rather than the box determined by [box-sizing](/en-US/docs/Web/CSS/box-sizing).
 
 ## Accessibility
 
 Ensure that elements set with a `height` aren't truncated and/or don't obscure other content when the page is zoomed to increase text size.
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ## Formal definition
@@ -130,6 +159,55 @@ div {
 
 {{EmbedLiveSample('Setting_height_using_pixels_and_percentages', 'auto', 240)}}
 
+### Stretch height to fill the containing block
+
+#### HTML
+
+```html
+<div class="parent">
+  <div class="child">text</div>
+</div>
+
+<div class="parent">
+  <div class="child stretch">stretch</div>
+</div>
+```
+
+#### CSS
+
+```css hidden
+@supports not (height: stretch) {
+  .parent {
+    display: none !important;
+  }
+
+  body::after {
+    content: "Your browser doesn't support the `stretch` value yet.";
+  }
+}
+```
+
+```css
+.parent {
+  height: 150px;
+  margin: 1rem;
+  border: solid;
+}
+
+.child {
+  margin: 1rem;
+  background: #0999;
+}
+
+.stretch {
+  height: stretch;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Stretch height to fill the containing block', 'auto', 380)}}
+
 ## Specifications
 
 {{Specifications}}
@@ -147,5 +225,6 @@ div {
 - {{cssxref("anchor-size()")}}
 - {{cssxref("clamp", "clamp()")}}
 - {{cssxref("clamp", "minmax()")}}
-- [Introduction to the CSS basic box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- SVG {{SVGAttr("height")}} attribute
+- [Introduction to the CSS box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module

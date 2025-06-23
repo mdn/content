@@ -7,7 +7,7 @@ browser-compat: api.CSSKeyframeRule
 
 {{APIRef("CSSOM")}}
 
-The **`CSSKeyframeRule`** interface describes an object representing a set of styles for a given keyframe. It corresponds to the contents of a single keyframe of a {{cssxref("@keyframes")}} [at-rule](/en-US/docs/Web/CSS/At-rule).
+The **`CSSKeyframeRule`** interface describes an object representing a set of styles for a given keyframe. It corresponds to the contents of a single keyframe of a {{cssxref("@keyframes")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule).
 
 {{InheritanceDiagram}}
 

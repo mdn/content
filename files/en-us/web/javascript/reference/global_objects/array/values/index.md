@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.values()
+short-title: values()
 slug: Web/JavaScript/Reference/Global_Objects/Array/values
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.values
@@ -9,7 +10,20 @@ browser-compat: javascript.builtins.Array.values
 
 The **`values()`** method of {{jsxref("Array")}} instances returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that iterates the value of each item in the array.
 
-{{EmbedInteractiveExample("pages/js/array-values.html")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.values()")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+const iterator = array1.values();
+
+for (const value of iterator) {
+  console.log(value);
+}
+
+// Expected output: "a"
+// Expected output: "b"
+// Expected output: "c"
+```
 
 ## Syntax
 
@@ -173,6 +187,7 @@ for (const entry of Array.prototype.values.call(arrayLike)) {
 ## See also
 
 - [Polyfill of `Array.prototype.values` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims polyfill of `Array.prototype.values`](https://www.npmjs.com/package/array.prototype.values)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.entries()")}}

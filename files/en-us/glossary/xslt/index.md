@@ -13,4 +13,4 @@ XSLT has its own processor that accepts XML input, or any format convertible to 
 ## See also
 
 - [XSLT](https://en.wikipedia.org/wiki/XSLT) on Wikipedia
-- [XSLT documentation on MDN](/en-US/docs/Web/XSLT)
+- [XSLT documentation on MDN](/en-US/docs/Web/XML/XSLT)

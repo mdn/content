@@ -1,5 +1,6 @@
 ---
 title: BigInt.asUintN()
+short-title: asUintN()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/asUintN
 page-type: javascript-static-method
 browser-compat: javascript.builtins.BigInt.asUintN
@@ -9,7 +10,22 @@ browser-compat: javascript.builtins.BigInt.asUintN
 
 The **`BigInt.asUintN()`** static method truncates a `BigInt` value to the given number of least significant bits and returns that value as an unsigned integer.
 
-{{EmbedInteractiveExample("pages/js/bigint-asuintn.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: BigInt.asUintN()", "taller")}}
+
+```js interactive-example
+const U64_CEIL = 2n ** 64n;
+
+console.log(BigInt.asUintN(64, U64_CEIL - 1n));
+// 18446744073709551615n (2n ** 64n - 1n, the maximum non-wrapping value)
+console.log(BigInt.asUintN(64, U64_CEIL));
+// 0n (wraps to zero)
+console.log(BigInt.asUintN(64, U64_CEIL + 1n));
+// 1n
+console.log(BigInt.asUintN(64, U64_CEIL * 2n));
+// 0n (wraps on multiples)
+console.log(BigInt.asUintN(64, U64_CEIL * -42n));
+// 0n (also wraps on negative multiples)
+```
 
 ## Syntax
 
@@ -26,7 +42,7 @@ BigInt.asUintN(bits, bigint)
 
 ### Return value
 
-The value of `bigint` modulo 2^`bits`, as an unsigned integer.
+The value of `bigint` modulo `2 ** bits`, as an unsigned integer.
 
 ### Exceptions
 

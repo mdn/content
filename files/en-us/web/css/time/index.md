@@ -7,7 +7,7 @@ browser-compat: css.types.time
 
 {{CSSRef}}
 
-The **`<time>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a time value expressed in seconds or milliseconds. It is used in {{cssxref("animation")}}, {{cssxref("transition")}}, and related properties.
+The **`<time>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a time value expressed in seconds or milliseconds. It is used in {{cssxref("animation")}}, {{cssxref("transition")}}, and related properties.
 
 ## Syntax
 
@@ -58,4 +58,4 @@ The `<time>` data type consists of a {{cssxref("&lt;number&gt;")}} followed by o
 ## See also
 
 - {{cssxref("&lt;time-percentage&gt;")}}
-- [CSS Values and Units](/en-US/docs/Web/CSS/CSS_Values_and_Units)
+- [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module

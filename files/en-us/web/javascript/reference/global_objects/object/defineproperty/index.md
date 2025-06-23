@@ -1,5 +1,6 @@
 ---
 title: Object.defineProperty()
+short-title: defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.defineProperty
@@ -9,7 +10,22 @@ browser-compat: javascript.builtins.Object.defineProperty
 
 The **`Object.defineProperty()`** static method defines a new property directly on an object, or modifies an existing property on an object, and returns the object.
 
-{{EmbedInteractiveExample("pages/js/object-defineproperty.html")}}
+{{InteractiveExample("JavaScript Demo: Object.defineProperty()")}}
+
+```js interactive-example
+const object1 = {};
+
+Object.defineProperty(object1, "property1", {
+  value: 42,
+  writable: false,
+});
+
+object1.property1 = 77;
+// Throws an error in strict mode
+
+console.log(object1.property1);
+// Expected output: 42
+```
 
 ## Syntax
 
@@ -65,7 +81,7 @@ An **accessor descriptor** also has the following optional keys:
 - `set`
   - : A function which serves as a setter for the property, or {{jsxref("undefined")}} if there is no setter. When the property is assigned, this function is called with one argument (the value being assigned to the property) and with `this` set to the object through which the property is assigned. **Defaults to {{jsxref("undefined")}}.**
 
-If a descriptor doesn't have any of the `value`, `writable`, `get`, and `set` keys, it is treated as a data descriptor. If a descriptor has both \[`value` or `writable`] and \[`get` or `set`] keys, an exception is thrown.
+If a descriptor doesn't have any of the `value`, `writable`, `get`, and `set` keys, it is treated as a data descriptor. If a descriptor is both a data descriptor (because it has `value` or `writable`) and an accessor descriptor (because it has `get` or `set`), an exception is thrown.
 
 These attributes are not necessarily the descriptor's own properties. Inherited properties will be considered as well. In order to ensure these defaults are preserved, you might freeze existing objects in the descriptor object's prototype chain upfront, specify all options explicitly, or create a [`null`-prototype object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects).
 
@@ -86,29 +102,9 @@ Object.defineProperty(obj, "key2", {
   value: "static",
 });
 
-// 3. Recycling same object
-function withValue(value) {
-  const d =
-    withValue.d ||
-    (withValue.d = {
-      enumerable: false,
-      writable: false,
-      configurable: false,
-      value,
-    });
-
-  // avoiding duplicate operation for assigning value
-  if (d.value !== value) d.value = value;
-
-  return d;
-}
-// and
-Object.defineProperty(obj, "key", withValue("static"));
-
-// if freeze is available, prevents adding or
-// removing the object prototype properties
+// 3. Prevents adding or removing the object prototype properties
 // (value, get, set, enumerable, writable, configurable)
-(Object.freeze || Object)(Object.prototype);
+Object.freeze(Object.prototype);
 ```
 
 When the property already exists, `Object.defineProperty()` attempts to modify the property according to the values in the descriptor and the property's current configuration.
@@ -203,7 +199,7 @@ console.log(o.a); // 37; the assignment didn't work
 
 #### Enumerable attribute
 
-The `enumerable` property attribute defines whether the property is considered by {{jsxref("Object.assign()")}} or the [spread](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) operator. For non-{{jsxref("Symbol")}} properties, it also defines whether it shows up in a {{jsxref("Statements/for...in", "for...in")}} loop and {{jsxref("Object.keys()")}} or not. For more information, see [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties).
+The `enumerable` property attribute defines whether the property is considered by {{jsxref("Object.assign()")}} or the [spread](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) operator. For non-{{jsxref("Symbol")}} properties, it also defines whether it shows up in a {{jsxref("Statements/for...in", "for...in")}} loop and {{jsxref("Object.keys()")}} or not. For more information, see [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties).
 
 ```js
 const o = {};
@@ -501,7 +497,7 @@ console.log(MyClass.prototype.y); // 1
 
 ## See also
 
-- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.defineProperties()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}

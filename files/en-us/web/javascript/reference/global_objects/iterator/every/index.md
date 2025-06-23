@@ -1,5 +1,6 @@
 ---
 title: Iterator.prototype.every()
+short-title: every()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/every
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Iterator.every
@@ -75,6 +76,7 @@ console.log(seq.next()); // { value: undefined, done: true }
 ## See also
 
 - [Polyfill of `Iterator.prototype.every` in `core-js`](https://github.com/zloirock/core-js#iterator-helpers)
+- [es-shims polyfill of `Iterator.prototype.every`](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Iterator.prototype.find()")}}
 - {{jsxref("Iterator.prototype.some()")}}

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ViewTransition.ready
 ---
 
-{{APIRef("View Transitions API")}}
+{{APIRef("View Transition API")}}
 
 The **`ready`** read-only property of the
 {{domxref("ViewTransition")}} interface is a {{jsxref("Promise")}} that fulfills once the pseudo-element tree is created and the transition animation is about to start.
@@ -93,4 +93,4 @@ This animation also requires the following CSS, to turn off the default CSS anim
 
 ## See also
 
-- [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/)
+- [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/)

@@ -1,5 +1,5 @@
 ---
-title: "-webkit-touch-callout"
+title: -webkit-touch-callout
 slug: Web/CSS/-webkit-touch-callout
 page-type: css-property
 status:
@@ -41,10 +41,7 @@ When a target is touched and held on iOS, Safari displays a callout information 
 
 ## Formal syntax
 
-```plain
--webkit-touch-callout =
-  default | none
-```
+{{CSSSyntaxRaw(`-webkit-touch-callout = default | none`)}}
 
 ## Examples
 

@@ -74,7 +74,7 @@ Adding the cube to the scene is done by adding a simple [`<a-box>`](https://afra
 ```
 
 It contains a few parameters already defined: `color`, `position` and `rotation` — these are fairly obvious, and define the base color of the cube, the position inside the 3D scene, and the rotation of the cube.
-The distance values (e.g. for the cube y position) are unitless, and can basically be anything you deem suitable for your scene — millimeters, meters, feet, or miles — it's up to you.
+The distance values (e.g., for the cube y position) are unitless, and can basically be anything you deem suitable for your scene — millimeters, meters, feet, or miles — it's up to you.
 
 ### Adding a background: Sky box
 
@@ -288,23 +288,6 @@ Everything is rendered properly and animating — congratulations on building yo
       dur: 2000; loop: true; easing: linear;">
   </a-entity>
 </a-scene>
-
-<script>
-  const scene = document.querySelector("a-scene");
-  const cylinder = document.createElement("a-cylinder");
-  cylinder.setAttribute("color", "#FF9500");
-  cylinder.setAttribute("height", "2");
-  cylinder.setAttribute("radius", "0.75");
-  cylinder.setAttribute("position", "3 1 0");
-  scene.appendChild(cylinder);
-  let t = 0;
-  function render() {
-    t += 0.01;
-    requestAnimationFrame(render);
-    cylinder.setAttribute("position", "3 " + (Math.sin(t * 2) + 1) + " 0");
-  }
-  render();
-</script>
 ```
 
 ```css hidden live-sample___a-frame-animation
@@ -315,6 +298,23 @@ body {
   height: 100%;
   font-size: 0;
 }
+```
+
+```js live-sample___a-frame-animation
+const scene = document.querySelector("a-scene");
+const cylinder = document.createElement("a-cylinder");
+cylinder.setAttribute("color", "#FF9500");
+cylinder.setAttribute("height", "2");
+cylinder.setAttribute("radius", "0.75");
+cylinder.setAttribute("position", "3 1 0");
+scene.appendChild(cylinder);
+let t = 0;
+function render() {
+  t += 0.01;
+  requestAnimationFrame(render);
+  cylinder.setAttribute("position", `3 ${Math.sin(t * 2) + 1} 0`);
+}
+render();
 ```
 
 {{embedlivesample("a-frame-animation", "", "400px")}}

@@ -22,7 +22,7 @@ This article provides information about the changes in Firefox 66 that will affe
 
 #### Removals
 
-- The `x-moz-errormessage` attribute has been removed from the {{HTMLElement("input")}} element ([Firefox bug 1513890](https://bugzil.la/1513890)). You should use the [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) API to implement custom validation messages instead.
+- The `x-moz-errormessage` attribute has been removed from the {{HTMLElement("input")}} element ([Firefox bug 1513890](https://bugzil.la/1513890)). You should use the [constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation) API to implement custom validation messages instead.
 
 ### CSS
 
@@ -87,7 +87,7 @@ No changes.
 
 #### Media, Web Audio, and WebRTC
 
-- The new [AV1 video codec](/en-US/docs/Web/Media/Formats/Video_codecs#av1) is now enabled by default on both macOS and Windows (for Intel processors). Linux support will come in Firefox 67 ([Firefox bug 1521181](https://bugzil.la/1521181), [Firefox bug 1452146](https://bugzil.la/1452146), and [Firefox bug 1534814](https://bugzil.la/1534814)).
+- The new [AV1 video codec](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#av1) is now enabled by default on both macOS and Windows (for Intel processors). Linux support will come in Firefox 67 ([Firefox bug 1521181](https://bugzil.la/1521181), [Firefox bug 1452146](https://bugzil.la/1452146), and [Firefox bug 1534814](https://bugzil.la/1534814)).
 - The {{domxref("MediaDevices")}} method {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}, available as `navigator.mediaDevices.getDisplayMedia()`, has been added and synchronized with the specification. This method lets you capture a screen or part of a screen as a {{domxref("MediaStream")}} for manipulation or sharing ([Firefox bug 1321221](https://bugzil.la/1321221)).
 - As a step toward eventually deprecating the Firefox-specific {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}-based method for capturing screen and window contents, the non-standard `mediaSource` constraint now treats the values `screen` and `window` identically. Both now present a list of both screens and windows for the user to choose from ([Firefox bug 1474376](https://bugzil.la/1474376)).
 - `RTCOutboundRtpStreamStats.qpSum` has been added. This measures the total of the Quantization Parameter values for every frame sent or received on the video track. The higher this number, the more compressed the stream probably is ([Firefox bug 1347070](https://bugzil.la/1347070)).

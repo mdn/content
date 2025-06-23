@@ -196,26 +196,22 @@ Finally, we set up a couple of variables for other items:
 - `statusRefreshScheduled` is used to track whether or not we've already scheduled an update of the status display box for the upcoming frame, so that we only do it once per frame
 
 ```js hidden
-requestIdleCallback =
-  requestIdleCallback ||
-  ((handler) => {
-    const startTime = Date.now();
+window.requestIdleCallback ||= (handler) => {
+  const startTime = Date.now();
 
-    return setTimeout(() => {
-      handler({
-        didTimeout: false,
-        timeRemaining() {
-          return Math.max(0, 50.0 - (Date.now() - startTime));
-        },
-      });
-    }, 1);
-  });
+  return setTimeout(() => {
+    handler({
+      didTimeout: false,
+      timeRemaining() {
+        return Math.max(0, 50.0 - (Date.now() - startTime));
+      },
+    });
+  }, 1);
+};
 
-cancelIdleCallback =
-  cancelIdleCallback ||
-  ((id) => {
-    clearTimeout(id);
-  });
+window.cancelIdleCallback ||= (id) => {
+  clearTimeout(id);
+};
 ```
 
 #### Managing the task queue
@@ -235,9 +231,7 @@ function enqueueTask(taskHandler, taskData) {
 
   totalTaskCount++;
 
-  if (!taskHandle) {
-    taskHandle = requestIdleCallback(runTaskQueue, { timeout: 1000 });
-  }
+  taskHandle ||= requestIdleCallback(runTaskQueue, { timeout: 1000 });
 
   scheduleStatusRefresh();
 }
@@ -358,10 +352,7 @@ The `log()` function adds the specified text to the log. Since we don't know at 
 
 ```js
 function log(text) {
-  if (!logFragment) {
-    logFragment = document.createDocumentFragment();
-  }
-
+  logFragment ??= document.createDocumentFragment();
   const el = document.createElement("div");
   el.textContent = text;
   logFragment.appendChild(el);
@@ -370,7 +361,9 @@ function log(text) {
 
 First, we create a {{domxref("DocumentFragment")}} object named `logFragment` if one doesn't currently exist. This element is a pseudo-DOM into which we can insert elements without immediately changing the main DOM itself.
 
-We then create a new {{HTMLElement("div")}} element and set its contents to match the input `text`. Then we append the new element to the end of the pseudo-DOM in `logFragment`. `logFragment` will accumulate log entries until the next time `updateDisplay()` is called because the DOM for the changes.
+We then create a new {{HTMLElement("div")}} element and set its contents to match the input `text`.
+Then we append the new element to the end of the pseudo-DOM in `logFragment`.
+`logFragment` will accumulate log entries until the next time `updateDisplay()` is called, once the DOM is ready for the changes.
 
 ### Running tasks
 

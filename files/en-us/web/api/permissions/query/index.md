@@ -141,7 +141,15 @@ async function processPermissions() {
 // Query a single permission in a try...catch block and return result
 async function getPermission(permission) {
   try {
-    const result = await navigator.permissions.query({ name: permission });
+    let result;
+    if (permission === "top-level-storage-access") {
+      result = await navigator.permissions.query({
+        name: permission,
+        requestedOrigin: window.location.origin,
+      });
+    } else {
+      result = await navigator.permissions.query({ name: permission });
+    }
     return `${permission}: ${result.state}`;
   } catch (error) {
     return `${permission} (not supported)`;

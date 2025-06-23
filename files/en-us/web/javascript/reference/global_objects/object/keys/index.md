@@ -1,5 +1,6 @@
 ---
 title: Object.keys()
+short-title: keys()
 slug: Web/JavaScript/Reference/Global_Objects/Object/keys
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.keys
@@ -9,7 +10,18 @@ browser-compat: javascript.builtins.Object.keys
 
 The **`Object.keys()`** static method returns an array of a given object's own enumerable string-keyed property names.
 
-{{EmbedInteractiveExample("pages/js/object-keys.html")}}
+{{InteractiveExample("JavaScript Demo: Object.keys()")}}
+
+```js interactive-example
+const object1 = {
+  a: "some string",
+  b: 42,
+  c: false,
+};
+
+console.log(Object.keys(object1));
+// Expected output: Array ["a", "b", "c"]
+```
 
 ## Syntax
 
@@ -92,7 +104,8 @@ console.log(Object.keys(100)); // []
 ## See also
 
 - [Polyfill of `Object.keys` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
-- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [es-shims polyfill of `Object.keys`](https://www.npmjs.com/package/object-key)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.entries()")}}
 - {{jsxref("Object.values()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}

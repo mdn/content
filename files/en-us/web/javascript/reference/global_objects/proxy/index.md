@@ -96,7 +96,7 @@ The following terms are used when talking about the functionality of proxies.
 - [handler](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy#handler_functions)
   - : The object passed as the second argument to the `Proxy` constructor. It contains the traps which define the behavior of the proxy.
 - trap
-  - : The function that define the behavior for the corresponding [object internal method](#object_internal_methods). (This is analogous to the concept of _traps_ in operating systems.)
+  - : The function that defines the behavior for the corresponding [object internal method](#object_internal_methods). (This is analogous to the concept of _traps_ in operating systems.)
 - target
   - : Object which the proxy virtualizes. It is often used as storage backend for the proxy. Invariants (semantics that remain unchanged) regarding object non-extensibility or non-configurable properties are verified against the target.
 - invariants
@@ -104,9 +104,9 @@ The following terms are used when talking about the functionality of proxies.
 
 ### Object internal methods
 
-[Objects](/en-US/docs/Web/JavaScript/Data_structures#objects) are collections of properties. However, the language doesn't provide any machinery to _directly_ manipulate data stored in the object — rather, the object defines some internal methods specifying how it can be interacted with. For example, when you read `obj.x`, you may expect the following to happen:
+[Objects](/en-US/docs/Web/JavaScript/Guide/Data_structures#objects) are collections of properties. However, the language doesn't provide any machinery to _directly_ manipulate data stored in the object — rather, the object defines some internal methods specifying how it can be interacted with. For example, when you read `obj.x`, you may expect the following to happen:
 
-- The `x` property is searched up the [prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) until it is found.
+- The `x` property is searched up the [prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) until it is found.
 - If `x` is a data property, the property descriptor's `value` attribute is returned.
 - If `x` is an accessor property, the getter is invoked, and the return value of the getter is returned.
 

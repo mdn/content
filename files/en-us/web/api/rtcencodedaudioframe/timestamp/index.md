@@ -11,7 +11,7 @@ browser-compat: api.RTCEncodedAudioFrame.timestamp
 
 {{APIRef("WebRTC")}}{{AvailableInWorkers("window_and_dedicated")}}{{deprecated_header}}{{non-standard_header}}
 
-The readonly **`timestamp`** property of the {{domxref("RTCEncodedAudioFrame")}} interface indicates the time at which frame sampling started.
+The **`timestamp`** read-only property of the {{domxref("RTCEncodedAudioFrame")}} interface indicates the time at which frame sampling started.
 
 ## Value
 

@@ -17,7 +17,7 @@ removes a child node from the DOM and returns the removed node.
 > It can still be reused later in the code.
 >
 > If the return value of `removeChild()` is not stored, and no other reference is kept,
-> it will be [automatically deleted](/en-US/docs/Web/JavaScript/Memory_management) from memory after a short time.
+> it will be [automatically deleted](/en-US/docs/Web/JavaScript/Guide/Memory_management) from memory after a short time.
 
 Unlike {{domxref("Node.cloneNode()")}} the return value preserves the `EventListener` objects associated with it.
 
@@ -108,8 +108,8 @@ const child = document.getElementById("child");
 // This first call correctly removes the node
 const garbage = parent.removeChild(child);
 
-// Throws NotFoundError
-garbage = parent.removeChild(child);
+// Second call throws NotFoundError
+parent.removeChild(child);
 ```
 
 ## Specifications

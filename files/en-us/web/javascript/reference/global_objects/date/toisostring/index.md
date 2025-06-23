@@ -1,5 +1,6 @@
 ---
 title: Date.prototype.toISOString()
+short-title: toISOString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toISOString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.toISOString
@@ -9,7 +10,17 @@ browser-compat: javascript.builtins.Date.toISOString
 
 The **`toISOString()`** method of {{jsxref("Date")}} instances returns a string representing this date in the [date time string format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format), a _simplified_ format based on [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601), which is always 24 or 27 characters long (`YYYY-MM-DDTHH:mm:ss.sssZ` or `±YYYYYY-MM-DDTHH:mm:ss.sssZ`, respectively). The timezone is always UTC, as denoted by the suffix `Z`.
 
-{{EmbedInteractiveExample("pages/js/date-toisostring.html")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.toISOString()")}}
+
+```js interactive-example
+const event = new Date("05 October 2011 14:48 UTC");
+console.log(event.toString());
+// Expected output: "Wed Oct 05 2011 16:48:00 GMT+0200 (CEST)"
+// Note: your timezone may vary
+
+console.log(event.toISOString());
+// Expected output: "2011-10-05T14:48:00.000Z"
+```
 
 ## Syntax
 

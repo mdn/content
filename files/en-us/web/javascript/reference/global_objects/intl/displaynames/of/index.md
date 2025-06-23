@@ -1,5 +1,6 @@
 ---
 title: Intl.DisplayNames.prototype.of()
+short-title: of()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/of
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.DisplayNames.of
@@ -9,7 +10,20 @@ browser-compat: javascript.builtins.Intl.DisplayNames.of
 
 The **`of()`** method of {{jsxref("Intl.DisplayNames")}} instances receives a code and returns a string based on the locale and options provided when instantiating this `Intl.DisplayNames` object.
 
-{{EmbedInteractiveExample("pages/js/intl-displaynames.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.DisplayNames.prototype.of()")}}
+
+```js interactive-example
+const regionNamesInEnglish = new Intl.DisplayNames(["en"], { type: "region" });
+const regionNamesInTraditionalChinese = new Intl.DisplayNames(["zh-Hant"], {
+  type: "region",
+});
+
+console.log(regionNamesInEnglish.of("US"));
+// Expected output: "United States"
+
+console.log(regionNamesInTraditionalChinese.of("US"));
+// Expected output: "美國"
+```
 
 ## Syntax
 

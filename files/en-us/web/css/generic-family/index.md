@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-fonts/#generic-font-families
 
 {{CSSRef}}
 
-The **`<generic-family>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents the keyword values for generic font families used in the {{cssxref("font")}} shorthand and {{cssxref("font-family")}} longhand properties. The `<generic-family>` represents one or more locally-installed fonts belonging to that category of fonts.
+The **`<generic-family>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents the keyword values for generic font families used in the {{cssxref("font")}} shorthand and {{cssxref("font-family")}} longhand properties. The `<generic-family>` represents one or more locally-installed fonts belonging to that category of fonts.
 
 ## Syntax
 
@@ -34,11 +34,11 @@ The `<generic-family>` {{glossary("enumerated")}} type is specified using one of
 
 - `cursive`
 
-  - : Glyphs in cursive fonts generally have either joining strokes or other cursive characteristics beyond those of italic typefaces. The glyphs are partially or completely connected, and the result looks more like handwritten pen or brush writing than printed letter work. Example cursive fonts include Brush Script MT, Brush Script Std, Lucida Calligraphy, Lucida Handwriting, and Apple Chancery.
+  - : Glyphs in cursive fonts generally use a cursive script or other handwriting style, and the result looks more like handwritten pen or brush writing than printed typesetting. CSS uses the term "cursive" to apply to a font for any script, including those that do not have joining strokes. Example cursive fonts include Brush Script MT, Brush Script Std, Lucida Calligraphy, Lucida Handwriting, and Apple Chancery.
 
 - `fantasy`
 
-  - : Fantasy fonts are primarily decorative fonts that contain playful representations of characters. Example fantasy fonts include Papyrus, Herculanum, Party LET, Curlz MT, and Harrington.
+  - : Fantasy fonts are primarily decorative fonts that contain playful representations of characters. Example fantasy fonts include Papyrus, Herculanum, Party LET, Curlz MT, Harrington, and Comic Sans MS.
 
 - `system-ui`
 

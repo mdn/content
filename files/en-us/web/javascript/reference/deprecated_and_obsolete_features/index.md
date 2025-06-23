@@ -34,7 +34,7 @@ console.log("b");
 // Logs "a" and "b"
 ```
 
-`<!--` and `-->` both act like `//`, i.e. starting line comments. `-->` is only valid at the start of a line (to avoid ambiguity with a postfix decrement followed by a greater than operator), while `<!--` can occur anywhere in the line.
+`<!--` and `-->` both act like `//`, i.e., starting line comments. `-->` is only valid at the start of a line (to avoid ambiguity with a postfix decrement followed by a greater than operator), while `<!--` can occur anywhere in the line.
 
 ### RegExp
 
@@ -100,19 +100,19 @@ The [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) statement is 
 
 Initializers in `var` declarations of [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops headers are deprecated and produce [syntax errors](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer) in strict mode. The initializer expression is evaluated and assigned to the variable, but the value would be immediately reassigned on the first iteration of the loop.
 
-Normally, the `catch` block of a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) statement cannot contain any variable declaration with the same name as the variables bound in the `catch()`. An extension grammar allows the `catch` block to contain a [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var) declared variable with the same name as the `catch`-bound identifier, but only if the `catch` binding is a simple identifier, not a [destructuring pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment). However, this variable's initialization and assignment would only act on the `catch`-bound identifier, instead of the upper scope variable, and the behavior could be confusing.
+Normally, the `catch` block of a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) statement cannot contain any variable declaration with the same name as the variables bound in the `catch()`. An extension grammar allows the `catch` block to contain a [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var) declared variable with the same name as the `catch`-bound identifier, but only if the `catch` binding is a simple identifier, not a [destructuring pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring). However, this variable's initialization and assignment would only act on the `catch`-bound identifier, instead of the upper scope variable, and the behavior could be confusing.
 
 ```js
 var a = 2;
 try {
-  throw 42;
+  throw new Error();
 } catch (a) {
   var a = 1; // This 1 is assigned to the caught `a`, not the outer `a`.
 }
 console.log(a); // 2
 
 try {
-  throw 42;
+  throw new Error();
   // Note: identifier changed to `err` to avoid conflict with
   // the inner declaration of `a`.
 } catch (err) {

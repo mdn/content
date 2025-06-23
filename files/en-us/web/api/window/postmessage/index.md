@@ -159,7 +159,7 @@ window.addEventListener("message", (event) => {
   // message is to call postMessage on event.source and provide
   // event.origin as the targetOrigin.
   event.source.postMessage(
-    "hi there yourself! the secret response " + "is: rheeeeet!",
+    "hi there yourself! the secret response is: rheeeeet!",
     event.origin,
   );
 });
@@ -177,7 +177,7 @@ The value of the `origin` property of the dispatched event is not affected by th
 
 For IDN host names only, the value of the `origin` property is not consistently Unicode or punycode; for greatest compatibility check for both the IDN and punycode values when using this property if you expect messages from IDN sites. This value will eventually be consistently IDN, but for now you should handle both IDN and punycode forms.
 
-The value of the `origin` property when the sending window contains a [`javascript:`](/en-US/docs/Web/URI/Schemes/javascript) or [`data:`](/en-US/docs/Web/URI/Schemes/data) URL is the origin of the script that loaded the URL.
+The value of the `origin` property when the sending window contains a [`javascript:`](/en-US/docs/Web/URI/Reference/Schemes/javascript) or [`data:`](/en-US/docs/Web/URI/Reference/Schemes/data) URL is the origin of the script that loaded the URL.
 
 ### Using window\.postMessage in extensions {{Non-standard_inline}}
 

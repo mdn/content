@@ -1,5 +1,6 @@
 ---
 title: Promise.race()
+short-title: race()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/race
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Promise.race
@@ -9,7 +10,23 @@ browser-compat: javascript.builtins.Promise.race
 
 The **`Promise.race()`** static method takes an iterable of promises as input and returns a single {{jsxref("Promise")}}. This returned promise settles with the eventual state of the first promise that settles.
 
-{{EmbedInteractiveExample("pages/js/promise-race.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Promise.race()", "taller")}}
+
+```js interactive-example
+const promise1 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 500, "one");
+});
+
+const promise2 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 100, "two");
+});
+
+Promise.race([promise1, promise2]).then((value) => {
+  console.log(value);
+  // Both resolve, but promise2 is faster
+});
+// Expected output: "two"
+```
 
 ## Syntax
 
@@ -28,7 +45,7 @@ A {{jsxref("Promise")}} that **asynchronously settles** with the eventual state 
 
 ## Description
 
-The `Promise.race()` method is one of the [promise concurrency](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#promise_concurrency) methods. It's useful when you want the first async task to complete, but do not care about its eventual state (i.e. it can either succeed or fail).
+The `Promise.race()` method is one of the [promise concurrency](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#promise_concurrency) methods. It's useful when you want the first async task to complete, but do not care about its eventual state (i.e., it can either succeed or fail).
 
 If the iterable contains one or more non-promise values and/or an already settled promise, then `Promise.race()` will settle to the first of these values found in the iterable.
 
@@ -43,9 +60,9 @@ function sleep(time, value, state) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (state === "fulfill") {
-        return resolve(value);
+        resolve(value);
       } else {
-        return reject(new Error(value));
+        reject(new Error(value));
       }
     }, time);
   });
@@ -193,7 +210,9 @@ In this function, if `promise` is pending, the second value, `pendingState`, whi
 ```js
 const p1 = new Promise((res) => setTimeout(() => res(100), 100));
 const p2 = new Promise((res) => setTimeout(() => res(200), 200));
-const p3 = new Promise((res, rej) => setTimeout(() => rej(300), 100));
+const p3 = new Promise((res, rej) =>
+  setTimeout(() => rej(new Error("failed")), 100),
+);
 
 async function getStates() {
   console.log(await promiseState(p1));
@@ -216,11 +235,11 @@ setTimeout(() => {
 // After waiting for 100ms:
 // { status: 'fulfilled', value: 100 }
 // { status: 'pending' }
-// { status: 'rejected', reason: 300 }
+// { status: 'rejected', reason: Error: failed }
 ```
 
 > [!NOTE]
-> The `promiseState` function still runs asynchronously, because there is no way to synchronously get a promise's value (i.e. without `then()` or `await`), even when it is already settled. However, `promiseState()` always fulfills within one tick and never actually waits for any promise's settlement.
+> The `promiseState` function still runs asynchronously, because there is no way to synchronously get a promise's value (i.e., without `then()` or `await`), even when it is already settled. However, `promiseState()` always fulfills within one tick and never actually waits for any promise's settlement.
 
 ### Comparison with Promise.any()
 

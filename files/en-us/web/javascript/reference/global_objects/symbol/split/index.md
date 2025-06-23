@@ -1,5 +1,6 @@
 ---
 title: Symbol.split
+short-title: split
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.split
@@ -11,7 +12,24 @@ The **`Symbol.split`** static data property represents the [well-known symbol](/
 
 For more information, see [`RegExp.prototype[Symbol.split]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split) and {{jsxref("String.prototype.split()")}}.
 
-{{EmbedInteractiveExample("pages/js/symbol-split.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Symbol.split", "taller")}}
+
+```js interactive-example
+class Split1 {
+  constructor(value) {
+    this.value = value;
+  }
+  [Symbol.split](string) {
+    const index = string.indexOf(this.value);
+    return `${this.value}${string.substring(0, index)}/${string.substring(
+      index + this.value.length,
+    )}`;
+  }
+}
+
+console.log("foobar".split(new Split1("foo")));
+// Expected output: "foo/bar"
+```
 
 ## Value
 

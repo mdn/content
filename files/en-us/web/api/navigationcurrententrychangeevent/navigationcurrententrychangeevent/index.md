@@ -21,13 +21,17 @@ new NavigationCurrentEntryChangeEvent(type, init)
 ### Parameters
 
 - `type`
-  - : A string representing the type of event. In the case of `NavigationCurrentEntryChangeEvent` this is always `event`.
+  - : A string representing the type of event.
 - `init`
-  - : An object containing the following properties:
-    - `destination`
+  - : An object that, _in addition to the properties defined in {{domxref("Event/Event", "Event()")}}_, has the following properties:
+    - `from`
       - : A {{domxref("NavigationHistoryEntry")}} object representing the location being navigated to.
     - `navigationType` {{optional_inline}}
       - : The type of the navigation that resulted in the change. Possible values are `push`, `reload`, `replace`, and `traverse`. Defaults to `null`.
+
+### Return value
+
+A new {{domxref("NavigationCurrentEntryChangeEvent")}} object.
 
 ## Examples
 

@@ -1,5 +1,5 @@
 ---
-title: DOMMatrix (WebKitCSSMatrix)
+title: DOMMatrix
 slug: Web/API/DOMMatrix
 page-type: web-api-interface
 browser-compat: api.DOMMatrix
@@ -8,10 +8,9 @@ browser-compat: api.DOMMatrix
 {{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 The **`DOMMatrix`** interface represents 4×4 matrices, suitable for 2D and 3D operations including rotation and translation. It is a mutable version of the {{domxref("DOMMatrixReadOnly")}} interface.
+The interface is available inside [web workers](/en-US/docs/Web/API/Web_Workers_API).
 
 **`WebKitCSSMatrix`** and **`SVGMatrix`** are aliases to **`DOMMatrix`**.
-
-This interface should be available inside [web workers](/en-US/docs/Web/API/Web_Workers_API), though some implementations don't allow it yet.
 
 {{InheritanceDiagram}}
 
@@ -24,10 +23,6 @@ This interface should be available inside [web workers](/en-US/docs/Web/API/Web_
 
 _This interface inherits properties from {{domxref("DOMMatrixReadOnly")}}, though some of these properties are altered to be mutable._
 
-- `is2D` {{ReadOnlyInline}}
-  - : A Boolean flag whose value is `true` if the matrix was initialized as a 2D matrix. If `false`, the matrix is 3D.
-- `isIdentity` {{ReadOnlyInline}}
-  - : A Boolean whose value is `true` if the matrix is the [identity matrix](https://en.wikipedia.org/wiki/Identity_matrix). The identity matrix is one in which every value is `0` _except_ those on the main diagonal from top-left to bottom-right corner (in other words, where the offsets in each direction are equal).
 - `m11`, `m12`, `m13`, `m14`, `m21`, `m22`, `m23`, `m24`, `m31`, `m32`, `m33`, `m34`, `m41`, `m42`, `m43`, `m44`
   - : Double-precision floating-point values representing each component of a 4×4 matrix, where `m11` through `m14` are the first column, `m21` through `m24` are the second column, and so forth.
 - `a`, `b`, `c`, `d`, `e`, `f`
@@ -48,11 +43,11 @@ _This interface inherits properties from {{domxref("DOMMatrixReadOnly")}}, thoug
 _This interface includes the following methods, as well as the methods it inherits from {{domxref("DOMMatrixReadOnly")}}._
 
 - {{domxref("DOMMatrix.invertSelf()")}}
-  - : Modifies the matrix by inverting it. If the matrix can't be inverted, its components are all set to `NaN`, and [`is2D`](/en-US/docs/Web/API/DOMMatrixReadOnly#is2d) returns `false`.
+  - : Modifies the matrix by inverting it. If the matrix can't be inverted, its components are all set to `NaN`, and [`is2D`](/en-US/docs/Web/API/DOMMatrixReadOnly/is2D) returns `false`.
 - {{domxref("DOMMatrix.multiplySelf()")}}
   - : Modifies the matrix by post-multiplying it with the specified `DOMMatrix`. This is equivalent to the dot product `A⋅B`, where matrix `A` is the source matrix and `B` is the matrix given as an input to the method. Returns itself.
 - {{domxref("DOMMatrix.preMultiplySelf()")}}
-  - : Modifies the matrix by pre-multiplying it with the specified `DOMMatrix`. This is equivalent to the dot product `B⋅A`, where matrix `A` is the source matrix and `B` is the matrix given as an input to the method. Returns itself.
+  - : Modifies the matrix by pre-multiplying it with the specified `DOMMatrix`. Returns itself.
 - {{domxref("DOMMatrix.translateSelf()")}}
   - : Modifies the matrix by applying the specified vector. The default vector is `[0, 0, 0]`. Returns itself.
 - {{domxref("DOMMatrix.scaleSelf()")}}
@@ -76,11 +71,11 @@ _This interface includes the following methods, as well as the methods it inheri
 
 _This interface inherits methods from {{domxref("DOMMatrixReadOnly")}}._
 
-- {{domxref("DOMMatrix.fromFloat32Array", "fromFloat32Array()")}}
+- {{domxref("DOMMatrix.fromFloat32Array_static", "fromFloat32Array()")}}
   - : Creates a new mutable `DOMMatrix` object given an array of single-precision (32-bit) floating-point values. If the array has six values, the result is a 2D matrix; if the array has 16 values, the result is a 3D matrix. Otherwise, a {{jsxref("TypeError")}} exception is thrown.
-- {{domxref("DOMMatrix.fromFloat64Array", "fromFloat64Array()")}}
+- {{domxref("DOMMatrix.fromFloat64Array_static", "fromFloat64Array()")}}
   - : Creates a new mutable `DOMMatrix` object given an array of double-precision (64-bit) floating-point values. If the array has six values, the result is a 2D matrix; if the array has 16 values, the result is a 3D matrix. Otherwise, a {{jsxref("TypeError")}} exception is thrown.
-- {{domxref("DOMMatrix.fromMatrix", "fromMatrix()")}}
+- {{domxref("DOMMatrix.fromMatrix_static", "fromMatrix()")}}
   - : Creates a new mutable `DOMMatrix` object given an existing matrix or an object which provides the values for its properties.
 
 ## Usage notes
@@ -107,4 +102,5 @@ The `DOMMatrix` interface is designed with the intent that it will be used for a
 
 ## See also
 
-- Its non-modifiable counterpart, {{domxref("DOMMatrixReadOnly")}}
+- {{domxref("DOMMatrixReadOnly.is2D")}}
+- {{domxref("DOMMatrixReadOnly.isIdentity")}}

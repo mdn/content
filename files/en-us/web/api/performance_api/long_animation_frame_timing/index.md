@@ -78,7 +78,7 @@ Beyond the standard data returned by a {{domxref("PerformanceEntry")}} entry, th
 - {{domxref("PerformanceLongAnimationFrameTiming.blockingDuration", "blockingDuration")}}
   - : A {{domxref("DOMHighResTimeStamp")}} indicating the total time in milliseconds for which the main thread was blocked from responding to high priority tasks, such as user input. This is calculated by taking all the [long tasks](/en-US/docs/Web/API/PerformanceLongTaskTiming#description) within the LoAF that have a `duration` of more than `50ms`, subtracting `50ms` from each, adding the rendering time to the longest task time, and summing the results.
 - {{domxref("PerformanceLongAnimationFrameTiming.firstUIEventTimestamp", "firstUIEventTimestamp")}}
-  - : A {{domxref("DOMHighResTimeStamp")}} indicating the time of the first UI event — such as a mouse or keyboard event — to be queued during the current animation frame.
+  - : A {{domxref("DOMHighResTimeStamp")}} indicating the time of the first UI event — such as a mouse or keyboard event — to be processed during the current animation frame. Note this timestamp can be before the start of this animation frame if there was a delay between the event happening and it being processed.
 - {{domxref("PerformanceLongAnimationFrameTiming.renderStart", "renderStart")}}
   - : A {{domxref("DOMHighResTimeStamp")}} indicating the start time of the rendering cycle, which includes {{domxref("Window.requestAnimationFrame()")}} callbacks, style and layout calculation, {{domxref("ResizeObserver")}} callbacks, and {{domxref("IntersectionObserver")}} callbacks.
 - {{domxref("PerformanceLongAnimationFrameTiming.styleAndLayoutStart", "styleAndLayoutStart")}}
@@ -97,12 +97,12 @@ Beyond the standard data returned by a {{domxref("PerformanceEntry")}} entry, th
       - : A {{domxref("DOMHighResTimeStamp")}} indicating the total time, in milliseconds, spent by the script on "pausing" synchronous operations (for example, {{domxref("Window.alert()")}} calls or synchronous {{domxref("XMLHttpRequest")}}s).
     - {{domxref("PerformanceScriptTiming.sourceCharPosition", "script.sourceCharPosition")}}, {{domxref("PerformanceScriptTiming.sourceFunctionName", "script.sourceFunctionName")}}, and {{domxref("PerformanceScriptTiming.sourceURL", "script.sourceURL")}}
 
-      - : Values representing the script character position, function name, and script URL, respectively. It is important to note that the reported function name will be the "entry point" of the script (i.e. the top level of the stack), and not any specific slow sub-function.
+      - : Values representing the script character position, function name, and script URL, respectively. It is important to note that the reported function name will be the "entry point" of the script (i.e., the top level of the stack), and not any specific slow sub-function.
 
         For example, if an event handler calls a top-level function, which in turn calls a slow sub-function, the `source*` fields will report the top-level function's name and location, not the slow sub-function. This is because of performance reasons — a full stack trace is costly.
 
     - {{domxref("PerformanceScriptTiming.windowAttribution", "script.windowAttribution")}} an {{domxref("PerformanceScriptTiming.window", "script.window")}}
-      - : An enumerated value describing the relationship of the container (i.e. either the top-level document or and {{htmlelement("iframe")}}) this script was executed in to the top-level document, and a reference to its {{domxref("Window")}} object.
+      - : An enumerated value describing the relationship of the container (i.e., either the top-level document or and {{htmlelement("iframe")}}) this script was executed in to the top-level document, and a reference to its {{domxref("Window")}} object.
 
     > [!NOTE]
     > Script attribution is provided only for scripts running in the main thread of a page, including same-origin `<iframe>`s. However, cross-origin `<iframe>`s, [web workers](/en-US/docs/Web/API/Web_Workers_API), [service workers](/en-US/docs/Web/API/Service_Worker_API), and [extension](/en-US/docs/Mozilla/Add-ons/WebExtensions) code will not have script attribution in long animation frames, even if they impact the duration of one.

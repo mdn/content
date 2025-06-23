@@ -14,10 +14,10 @@ The `touchend` event fires when one or more touch points are removed from the to
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("touchend", (event) => {});
+```js-nolint
+addEventListener("touchend", (event) => { })
 
-ontouchend = (event) => {};
+ontouchend = (event) => { }
 ```
 
 ## Event type

@@ -9,7 +9,22 @@ browser-compat: javascript.builtins.NaN
 
 The **`NaN`** global property is a value representing Not-A-Number.
 
-{{EmbedInteractiveExample("pages/js/globalprops-nan.html")}}
+{{InteractiveExample("JavaScript Demo: NaN")}}
+
+```js interactive-example
+function sanitize(x) {
+  if (isNaN(x)) {
+    return NaN;
+  }
+  return x;
+}
+
+console.log(sanitize("1"));
+// Expected output: "1"
+
+console.log(sanitize("NotANumber"));
+// Expected output: NaN
+```
 
 ## Value
 
@@ -25,11 +40,11 @@ In modern browsers, `NaN` is a non-configurable, non-writable property. Even whe
 
 There are five different types of operations that return `NaN`:
 
-- Failed number conversion (e.g. explicit ones like `parseInt("blabla")`, `Number(undefined)`, or implicit ones like `Math.abs(undefined)`)
-- Math operation where the result is not a real number (e.g. `Math.sqrt(-1)`)
-- Indeterminate form (e.g. `0 * Infinity`, `1 ** Infinity`, `Infinity / Infinity`, `Infinity - Infinity`)
-- A method or expression whose operand is or gets coerced to `NaN` (e.g. `7 ** NaN`, `7 * "blabla"`) — this means `NaN` is contagious
-- Other cases where an invalid value is to be represented as a number (e.g. an invalid [Date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) `new Date("blabla").getTime()`, `"".charCodeAt(1)`)
+- Failed number conversion (e.g., explicit ones like `parseInt("blabla")`, `Number(undefined)`, or implicit ones like `Math.abs(undefined)`)
+- Math operation where the result is not a real number (e.g., `Math.sqrt(-1)`)
+- Indeterminate form (e.g., `0 * Infinity`, `1 ** Infinity`, `Infinity / Infinity`, `Infinity - Infinity`)
+- A method or expression whose operand is or gets coerced to `NaN` (e.g., `7 ** NaN`, `7 * "blabla"`) — this means `NaN` is contagious
+- Other cases where an invalid value is to be represented as a number (e.g., an invalid [Date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) `new Date("blabla").getTime()`, `"".charCodeAt(1)`)
 
 `NaN` and its behaviors are not invented by JavaScript. Its semantics in floating point arithmetic (including that `NaN !== NaN`) are specified by [IEEE 754](https://en.wikipedia.org/wiki/Double_precision_floating-point_format). `NaN`'s behaviors include:
 
@@ -85,7 +100,7 @@ arr.includes(NaN); // true
 arr.findIndex((n) => Number.isNaN(n)); // 2
 ```
 
-For more information about `NaN` and its comparison, see [Equality comparison and sameness](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness).
+For more information about `NaN` and its comparison, see [Equality comparison and sameness](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness).
 
 ### Observably distinct NaN values
 

@@ -92,7 +92,7 @@ const options = {
 const req = new Request("flowers.jpg", options);
 
 fetch(req).then((response) => {
-  // ...
+  // …
 });
 ```
 
@@ -100,7 +100,7 @@ Note that you could also pass `options` into the `fetch` call to get the same ef
 
 ```js
 fetch(req, options).then((response) => {
-  // ...
+  // …
 });
 ```
 
@@ -138,5 +138,5 @@ const copy = new Request(req);
 ## See also
 
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

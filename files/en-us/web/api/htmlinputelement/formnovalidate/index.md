@@ -8,9 +8,9 @@ browser-compat: api.HTMLInputElement.formNoValidate
 
 {{APIRef("HTML DOM")}}
 
-The **`formNoValidate`** property of the {{domxref("HTMLInputElement")}} interface is a boolean value indicating if the {{htmlelement("form")}} will bypass [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) when submitted via the {{htmlelement("input")}}. It reflects the `<input>` element's [`formnovalidate`](/en-US/docs/Web/HTML/Element/input#formnovalidate) attribute.
+The **`formNoValidate`** property of the {{domxref("HTMLInputElement")}} interface is a boolean value indicating if the {{htmlelement("form")}} will bypass [constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation) when submitted via the {{htmlelement("input")}}. It reflects the `<input>` element's [`formnovalidate`](/en-US/docs/Web/HTML/Reference/Elements/input#formnovalidate) attribute.
 
-This property is valid only for [`submit`](/en-US/docs/Web/HTML/Element/input/submit) and [`image`](/en-US/docs/Web/HTML/Element/input/image) `<input>` elements.
+This property is valid only for [`submit`](/en-US/docs/Web/HTML/Reference/Elements/input/submit) and [`image`](/en-US/docs/Web/HTML/Reference/Elements/input/image) `<input>` elements.
 
 Its value overrides the {{domxref("HTMLFormElement.noValidate", "noValidate")}} property of the {{domxref("HTMLFormElement")}} interface if the form is submitted via the input. This property can be retrieved or set.
 
@@ -41,10 +41,10 @@ console.log(inputElement.formNoValidate);
 - {{domxref("HTMLInputElement.formEnctype")}}
 - {{domxref("HTMLInputElement.formMethod")}}
 - {{domxref("HTMLInputElement.formTarget")}}
-- [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit)
-- [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image)
+- [`<input type="submit">`](/en-US/docs/Web/HTML/Reference/Elements/input/submit)
+- [`<input type="image">`](/en-US/docs/Web/HTML/Reference/Elements/input/image)
 - {{HTMLElement("form")}}
 - {{domxref("HTMLFormElement.noValidate")}}
 - {{domxref("HTMLButtonElement.formNoValidate")}}
-- [Learn: Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
-- [Guide: Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
+- [Learn: Client-side form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- [Guide: Constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation)

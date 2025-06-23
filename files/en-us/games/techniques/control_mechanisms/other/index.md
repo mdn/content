@@ -170,6 +170,7 @@ There's even a [Cylon.js-supported Makey Button functionality](https://cylonjs.c
 
 ```js
 const Cylon = require("cylon");
+
 Cylon.robot({
   connections: {
     arduino: { adaptor: "firmata", port: "/dev/ttyACM0" },

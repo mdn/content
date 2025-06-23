@@ -12,7 +12,21 @@ browser-compat: javascript.builtins.eval
 
 The **`eval()`** function evaluates JavaScript code represented as a string and returns its completion value. The source is parsed as a script.
 
-{{EmbedInteractiveExample("pages/js/globalprops-eval.html")}}
+{{InteractiveExample("JavaScript Demo: eval()")}}
+
+```js interactive-example
+console.log(eval("2 + 2"));
+// Expected output: 4
+
+console.log(eval(new String("2 + 2")));
+// Expected output: 2 + 2
+
+console.log(eval("2 + 2") === eval("4"));
+// Expected output: true
+
+console.log(eval("2 + 2") === eval(new String("2 + 2")));
+// Expected output: false
+```
 
 ## Syntax
 
@@ -192,7 +206,7 @@ Consider this code:
 function looseJsonParse(obj) {
   return eval(`(${obj})`);
 }
-console.log(looseJsonParse("{ a: 4 - 1, b: function () {}, c: new Date() }"));
+console.log(looseJsonParse("{ a: 4 - 1, b: function () {}, c: new Map() }"));
 ```
 
 Simply using indirect eval and forcing strict mode can make the code much better:
@@ -201,22 +215,22 @@ Simply using indirect eval and forcing strict mode can make the code much better
 function looseJsonParse(obj) {
   return eval?.(`"use strict";(${obj})`);
 }
-console.log(looseJsonParse("{ a: 4 - 1, b: function () {}, c: new Date() }"));
+console.log(looseJsonParse("{ a: 4 - 1, b: function () {}, c: new Map() }"));
 ```
 
 The two code snippets above may seem to work the same way, but they do not; the first one using direct eval suffers from multiple problems.
 
-- It is a great deal slower, due to more scope inspections. Notice `c: new Date()` in the evaluated string. In the indirect eval version, the object is being evaluated in the global scope, so it is safe for the interpreter to assume that `Date` refers to the global `Date()` constructor instead of a local variable called `Date`. However, in the code using direct eval, the interpreter cannot assume this. For example, in the following code, `Date` in the evaluated string doesn't refer to `window.Date()`.
+- It is a great deal slower, due to more scope inspections. Notice `c: new Map()` in the evaluated string. In the indirect eval version, the object is being evaluated in the global scope, so it is safe for the interpreter to assume that `Map` refers to the global `Map()` constructor instead of a local variable called `Map`. However, in the code using direct eval, the interpreter cannot assume this. For example, in the following code, `Map` in the evaluated string doesn't refer to `window.Map()`.
 
   ```js
   function looseJsonParse(obj) {
-    function Date() {}
+    class Map {}
     return eval(`(${obj})`);
   }
-  console.log(looseJsonParse(`{ a: 4 - 1, b: function () {}, c: new Date() }`));
+  console.log(looseJsonParse(`{ a: 4 - 1, b: function () {}, c: new Map() }`));
   ```
 
-  Thus, in the `eval()` version of the code, the browser is forced to make the expensive lookup call to check to see if there are any local variables called `Date()`.
+  Thus, in the `eval()` version of the code, the browser is forced to make the expensive lookup call to check to see if there are any local variables called `Map()`.
 
 - If not using strict mode, `var` declarations within the `eval()` source becomes variables in the surrounding scope. This leads to hard-to-debug issues if the string is acquired from external input, especially if there's an existing variable with the same name.
 - Direct eval can read and mutate bindings in the surrounding scope, which may lead to external input corrupting local data.
@@ -233,24 +247,16 @@ The difference between `eval()` and `Function()` is that the source string passe
 The `Function()` constructor is useful if you wish to create local bindings within your eval source, by passing the variables as parameter bindings.
 
 ```js
-function Date(n) {
-  return [
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-    "Sunday",
-  ][n % 7 || 0];
+function add(a, b) {
+  return a + b;
 }
-function runCodeWithDateFunction(obj) {
-  return Function("Date", `"use strict";return (${obj});`)(Date);
+function runCodeWithAddFunction(obj) {
+  return Function("add", `"use strict";return (${obj});`)(add);
 }
-console.log(runCodeWithDateFunction("Date(5)")); // Saturday
+console.log(runCodeWithAddFunction("add(5, 7)")); // 12
 ```
 
-Both `eval()` and `Function()` implicitly evaluate arbitrary code, and are forbidden in strict [CSP](/en-US/docs/Web/HTTP/CSP) settings. There are also additional safer (and faster!) alternatives to `eval()` or `Function()` for common use-cases.
+Both `eval()` and `Function()` implicitly evaluate arbitrary code, and are forbidden in strict [CSP](/en-US/docs/Web/HTTP/Guides/CSP) settings. There are also additional safer (and faster!) alternatives to `eval()` or `Function()` for common use-cases.
 
 #### Using bracket accessors
 
@@ -330,7 +336,7 @@ elt.addEventListener("click", () => {
 });
 ```
 
-[Closures](/en-US/docs/Web/JavaScript/Closures) are also helpful as a way to create parameterized functions without concatenating strings.
+[Closures](/en-US/docs/Web/JavaScript/Guide/Closures) are also helpful as a way to create parameterized functions without concatenating strings.
 
 #### Using JSON
 
@@ -338,7 +344,7 @@ If the string you're calling `eval()` on contains data (for example, an array: `
 
 Note that since JSON syntax is limited compared to JavaScript syntax, many valid JavaScript literals will not parse as JSON. For example, trailing commas are not allowed in JSON, and property names (keys) in object literals must be enclosed in quotes. Be sure to use a JSON serializer to generate strings that will be later parsed as JSON.
 
-Passing carefully constrained data instead of arbitrary code is a good idea in general. For example, an extension designed to scrape contents of web-pages could have the scraping rules defined in [XPath](/en-US/docs/Web/XPath) instead of JavaScript code.
+Passing carefully constrained data instead of arbitrary code is a good idea in general. For example, an extension designed to scrape contents of web-pages could have the scraping rules defined in [XPath](/en-US/docs/Web/XML/XPath) instead of JavaScript code.
 
 ## Examples
 

@@ -1,5 +1,6 @@
 ---
 title: Math.sqrt()
+short-title: sqrt()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sqrt
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.sqrt
@@ -15,7 +16,22 @@ The **`Math.sqrt()`** static method returns the square root of a number. That is
 </math>
 <!-- prettier-ignore-end -->
 
-{{EmbedInteractiveExample("pages/js/math-sqrt.html")}}
+{{InteractiveExample("JavaScript Demo: Math.sqrt()")}}
+
+```js interactive-example
+function calcHypotenuse(a, b) {
+  return Math.sqrt(a * a + b * b);
+}
+
+console.log(calcHypotenuse(3, 4));
+// Expected output: 5
+
+console.log(calcHypotenuse(5, 12));
+// Expected output: 13
+
+console.log(calcHypotenuse(0, 0));
+// Expected output: 0
+```
 
 ## Syntax
 

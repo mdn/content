@@ -8,20 +8,21 @@ browser-compat: api.Window.storage_event
 
 {{APIRef}}
 
-The **`storage`** event of the {{domxref("Window")}} interface fires when a storage area (`localStorage` or `sessionStorage`) has been modified in the context of another document.
+The **`storage`** event of the {{domxref("Window")}} interface fires when another document that shares the same storage area (either {{domxref("Window/localStorage", "localStorage")}} or {{domxref("Window/sessionStorage", "sessionStorage")}}) as the current window updates that storage area. The event is _not_ fired on the window that made the change.
+
+- For `localStorage`, the event is fired in all other {{Glossary("browsing context", "browsing contexts")}} that are in the same origin as the initiating document. This includes other tabs with the same origin.
+- For `sessionStorage`, the event is fired in all other {{Glossary("browsing context", "browsing contexts")}} that are in the same origin and the same top-level browsing context as the initiating document. This only includes embedded iframes, if any, in the same tab, and not other tabs.
 
 This event is not cancelable and does not bubble.
-
-> [!NOTE]
-> This won't work on the same {{Glossary("browsing context")}} that is making the changes — it is really a way for other browsing contexts on the domain using the storage to sync any changes that are made. Browsing contexts on other domains can't access the same storage objects.
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("storage", (event) => {});
-onstorage = (event) => {};
+```js-nolint
+addEventListener("storage", (event) => { })
+
+onstorage = (event) => { }
 ```
 
 ## Event type

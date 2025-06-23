@@ -12,12 +12,6 @@ The **`HTMLElement.accessKeyLabel`**
 read-only property returns a string containing the element's
 browser-assigned access key (if any); otherwise it returns an empty string.
 
-## Syntax
-
-```js-nolint
-label = element.accessKeyLabel
-```
-
 ## Example
 
 ### JavaScript
@@ -55,5 +49,5 @@ btn.onclick = () => {
 ## See also
 
 - {{domxref("HTMLElement.accessKey")}}
-- The [accesskey](/en-US/docs/Web/HTML/Global_attributes/accesskey) global
+- The [accesskey](/en-US/docs/Web/HTML/Reference/Global_attributes/accesskey) global
   attribute.

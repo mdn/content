@@ -7,7 +7,7 @@ page-type: guide
 {{FirefoxSidebar}}
 
 > [!WARNING]
-> These notes are for developers of screen readers. Developers should use the [ARIA live regions developer documentation](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions).
+> These notes are for developers of screen readers. Developers should use the [ARIA live regions developer documentation](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions).
 
 Firefox 3 contains important improvements to the way the Mozilla engine exposes live changes in a document.
 
@@ -41,7 +41,7 @@ For any mutation event in a page, the author can get the following object attrib
 | `member-of`           | If `container-atomic=true`, points to an ancestor accessible object (thus it is actually an accessible relation, not object attribute) | Not in atomic region if not provided | `aria-atomic` on ancestor element      | Points to the root of the atomic container that this object is in. This will always be an ancestor of the current object.                                                                                                                                                                                                    |
 | `event-from-input`    | `"true" \| "false"` (described more below)                                                                                             | Browser could not calculate this     | Does not require author's cooperation. | Was the root cause of this event explicit user input?                                                                                                                                                                                                                                                                        |
 
-The "container-" prefix is so named because the attribute describes what the final computed property of similar name is for that node. This means that the AT does not need to traverse up the parent chain to get this information. At this time, for properties where the `container-`_name_ attribute has not been set, the AT must have code to fall back on the default value as defined in the W3C spec.
+The "container-" prefix is so named because the attribute describes what the final computed property of similar name is for that node. This means that the AT does not need to traverse up the parent chain to get this information. At this time, for properties where the `container-*` attribute has not been set, the AT must have code to fall back on the default value as defined in the W3C spec.
 
 ## Determining if event was from user input
 
@@ -66,4 +66,4 @@ Everything else, including focus changes, timer callbacks, XMLHttpRequest callba
 
 ## What Should Screen Readers Present?
 
-Please read the live region section of the [WAI-ARIA Screen Reader Implementor's Guide](/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide#live_regions).
+Please read the live region section of the [WAI-ARIA Screen Reader Implementor's Guide](/en-US/docs/Web/Accessibility/ARIA/Guides/Screen_Reader_Implementors#live_regions).

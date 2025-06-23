@@ -9,7 +9,28 @@ browser-compat: css.properties.text-orientation
 
 The **`text-orientation`** [CSS](/en-US/docs/Web/CSS) property sets the orientation of the text characters in a line. It only affects text in vertical mode (when {{cssxref("writing-mode")}} is not `horizontal-tb`). It is useful for controlling the display of languages that use vertical script, and also for making vertical table headers.
 
-{{EmbedInteractiveExample("pages/css/text-orientation.html")}}
+{{InteractiveExample("CSS Demo: text-orientation")}}
+
+```css interactive-example-choice
+writing-mode: vertical-rl;
+text-orientation: mixed;
+```
+
+```css interactive-example-choice
+writing-mode: vertical-rl;
+text-orientation: upright;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    <p>
+      In another moment down went Alice after it, never once considering how in
+      the world she was to get out again.
+    </p>
+  </div>
+</section>
+```
 
 ## Syntax
 

@@ -85,7 +85,7 @@ pattern.test(input2); // false
 Imagine you are finding all variable declarations called `foo` or `bar` (because they are bad names). The word may appear in any case, but you know the keyword is always lowercase, so you can do this:
 
 ```js
-const pattern = /(?:var|let|const) (?i:foo|bar)\b/i;
+const pattern = /(?:var|let|const) (?i:foo|bar)\b/;
 
 pattern.test("let foo;"); // true
 pattern.test("const BAR = 1;"); // true

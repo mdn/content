@@ -1,5 +1,6 @@
 ---
 title: Symbol.search
+short-title: search
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/search
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.search
@@ -11,7 +12,21 @@ The **`Symbol.search`** static data property represents the [well-known symbol](
 
 For more information, see [`RegExp.prototype[Symbol.search]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search) and {{jsxref("String.prototype.search()")}}.
 
-{{EmbedInteractiveExample("pages/js/symbol-search.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.search")}}
+
+```js interactive-example
+class Search1 {
+  constructor(value) {
+    this.value = value;
+  }
+  [Symbol.search](string) {
+    return string.indexOf(this.value);
+  }
+}
+
+console.log("foobar".search(new Search1("bar")));
+// Expected output: 3
+```
 
 ## Value
 
@@ -24,7 +39,7 @@ The well-known symbol `Symbol.search`.
 ### Custom string search
 
 ```js
-class caseInsensitiveSearch {
+class CaseInsensitiveSearch {
   constructor(value) {
     this.value = value.toLowerCase();
   }
@@ -33,7 +48,7 @@ class caseInsensitiveSearch {
   }
 }
 
-console.log("foobar".search(new caseInsensitiveSearch("BaR"))); // 3
+console.log("foobar".search(new CaseInsensitiveSearch("BaR"))); // 3
 ```
 
 ## Specifications

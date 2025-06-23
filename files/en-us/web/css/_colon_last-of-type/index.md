@@ -1,5 +1,5 @@
 ---
-title: ":last-of-type"
+title: :last-of-type
 slug: Web/CSS/:last-of-type
 page-type: css-pseudo-class
 browser-compat: css.selectors.last-of-type
@@ -7,9 +7,37 @@ browser-compat: css.selectors.last-of-type
 
 {{CSSRef}}
 
-The **`:last-of-type`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents the last element of its type among a group of sibling elements.
+The **`:last-of-type`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents the last element of its type (tag name) among a group of sibling elements.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-last-of-type.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :last-of-type", "tabbed-shorter")}}
+
+```css interactive-example
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 3px;
+}
+
+dd:last-of-type {
+  border: 2px solid orange;
+}
+```
+
+```html interactive-example
+<dl>
+  <dt>Vegetables:</dt>
+  <dd>1. Tomatoes</dd>
+  <dd>2. Cucumbers</dd>
+  <dd>3. Mushrooms</dd>
+  <dt>Fruits:</dt>
+  <dd>4. Apples</dd>
+  <dd>5. Mangos</dd>
+  <dd>6. Pears</dd>
+  <dd>7. Oranges</dd>
+</dl>
+```
 
 ## Syntax
 

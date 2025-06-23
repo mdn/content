@@ -1,5 +1,6 @@
 ---
 title: String.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/String/toString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.toString
@@ -9,7 +10,17 @@ browser-compat: javascript.builtins.String.toString
 
 The **`toString()`** method of {{jsxref("String")}} values returns this string value.
 
-{{EmbedInteractiveExample("pages/js/string-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.toString()")}}
+
+```js interactive-example
+const stringObj = new String("foo");
+
+console.log(stringObj);
+// Expected output: String { "foo" }
+
+console.log(stringObj.toString());
+// Expected output: "foo"
+```
 
 ## Syntax
 

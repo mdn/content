@@ -128,17 +128,17 @@ In other words, it should be the same text you would use in a textual button to 
 For example, in the snippet of HTML below, a toolbar which uses icon images as link labels provides `alt` attributes for each giving a textual label to use instead of the icon when the icons cannot be or are intentionally not used.
 
 ```html
-<li class="toolbar" aria-role="toolbar">
-  <a href="songs.html" aria-role="button">
+<li class="toolbar" role="toolbar">
+  <a href="songs.html" role="button">
     <img src="songicon.svg" alt="Songs" />
   </a>
-  <a href="albums.html" aria-role="button">
+  <a href="albums.html" role="button">
     <img src="albumicon.svg" alt="Albums"
   /></a>
-  <a href="artists.html" aria-role="button">
+  <a href="artists.html" role="button">
     <img src="artisticon.svg" alt="Artists" />
   </a>
-  <a href="playlists.html" aria-role="button">
+  <a href="playlists.html" role="button">
     <img src="playlisticon.svg" alt="Playlists" />
   </a>
 </li>
@@ -147,7 +147,7 @@ For example, in the snippet of HTML below, a toolbar which uses icon images as l
 ### Images containing diagrams or maps
 
 When an image contains information presented as a diagram, chart, graph, or map, the `alt` text should provide the same information, at least in summary form.
-This is true whether the /me image is in a bitmapped format such as [PNG](/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics) or [JPEG](/en-US/docs/Web/Media/Formats/Image_types#jpeg_joint_photographic_experts_group_image) or in a vector format like [SVG](/en-US/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics).
+This is true whether the /me image is in a bitmapped format such as [PNG](/en-US/docs/Web/Media/Guides/Formats/Image_types#png_portable_network_graphics) or [JPEG](/en-US/docs/Web/Media/Guides/Formats/Image_types#jpeg_joint_photographic_experts_group_image) or in a vector format like [SVG](/en-US/docs/Web/Media/Guides/Formats/Image_types#svg_scalable_vector_graphics).
 
 - For a map, the `alt` text could be directions to the place indicated by the map, similarly to how you would explain it verbally.
 - For a chart, the text could describe the items in the chart and their values.
@@ -178,7 +178,7 @@ Note the use of the `alt` attribute on the {{HTMLElement("img")}}, providing a g
   <img
     src="https://www.bitstampede.com/mdn-test/new-page.svg"
     alt="New Page!"
-    class="pageinfo-badge" />
+    class="page-info-badge" />
   <p class="contents">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis orci
     ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac neque
@@ -199,7 +199,7 @@ The main feature of the CSS here is the use of {{cssxref("clip-path")}} and {{cs
   max-width: 500px;
 }
 
-.pageinfo-badge {
+.page-info-badge {
   width: 9em;
   padding-right: 1em;
   float: left;

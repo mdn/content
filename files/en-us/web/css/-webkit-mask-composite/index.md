@@ -1,5 +1,5 @@
 ---
-title: "-webkit-mask-composite"
+title: -webkit-mask-composite
 slug: Web/CSS/-webkit-mask-composite
 page-type: css-property
 status:
@@ -69,10 +69,7 @@ The **`-webkit-mask-composite`** property specifies the manner in which multiple
 
 ## Formal syntax
 
-```plain
--webkit-mask-composite =
-  <composite-style>#
-```
+{{CSSSyntaxRaw(`-webkit-mask-composite = <composite-style>#`)}}
 
 ## Examples
 

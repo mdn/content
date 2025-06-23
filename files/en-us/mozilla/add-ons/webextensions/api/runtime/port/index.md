@@ -89,7 +89,7 @@ Values of this type are objects. They contain the following properties:
 - `postMessage`
   - : `function`. Send a message to the other end. This takes one argument, which is a serializable value (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)) representing the message to send. It will be delivered to any script listening to the port's `onMessage` event, or to the native application if this port is connected to a native application.
 - `sender` {{optional_inline}}
-  - : {{WebExtAPIRef('runtime.MessageSender')}}. Contains information about the sender of the message. This property will only be present on ports passed to `onConnect`/`onConnectExternal` listeners.
+  - : {{WebExtAPIRef('runtime.MessageSender')}}. Contains information about the sender of the message. Only present on ports passed to the {{WebExtAPIRef('runtime.onConnect')}}, {{WebExtAPIRef('runtime.onConnectExternal')}}, or {{WebExtAPIRef("runtime.onUserScriptConnect")}} listeners.
 
 ## Lifecycle
 

@@ -1,5 +1,5 @@
 ---
-title: "-webkit-text-stroke"
+title: -webkit-text-stroke
 slug: Web/CSS/-webkit-text-stroke
 page-type: css-shorthand-property
 browser-compat: css.properties.-webkit-text-stroke
@@ -12,7 +12,6 @@ The **`-webkit-text-stroke`** [CSS](/en-US/docs/Web/CSS) property specifies the 
 ```css
 /* Width and color values */
 -webkit-text-stroke: 4px navy;
-text-stroke: 4px navy;
 
 /* Global values */
 -webkit-text-stroke: inherit;

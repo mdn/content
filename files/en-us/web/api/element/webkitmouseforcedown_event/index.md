@@ -18,10 +18,10 @@ After a {{domxref("Element.mousedown_event", "mousedown")}} event has been fired
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("webkitmouseforcedown", (event) => {});
+```js-nolint
+addEventListener("webkitmouseforcedown", (event) => { })
 
-onwebkitmouseforcedown = (event) => {};
+onwebkitmouseforcedown = (event) => { }
 ```
 
 ## Event type
@@ -92,7 +92,7 @@ _Not part of any specification._ Apple has [a description at the Mac Developer L
 
 ## See also
 
-- [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
+- [Learn: Introduction to events](/en-US/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Element/webkitmouseforcewillbegin_event", "webkitmouseforcewillbegin")}}
 - {{domxref("Element/webkitmouseforceup_event", "webkitmouseforceup")}}
 - {{domxref("Element/webkitmouseforcechanged_event", "webkitmouseforcechanged")}}

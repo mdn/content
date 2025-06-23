@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.findIndex()
+short-title: findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.findIndex
@@ -12,7 +13,16 @@ If no elements satisfy the testing function, -1 is returned.
 
 See also the {{jsxref("Array/find", "find()")}} method, which returns the first element that satisfies the testing function (rather than its index).
 
-{{EmbedInteractiveExample("pages/js/array-findindex.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.findIndex()", "shorter")}}
+
+```js interactive-example
+const array1 = [5, 12, 8, 130, 44];
+
+const isLargeNumber = (element) => element > 13;
+
+console.log(array1.findIndex(isLargeNumber));
+// Expected output: 3
+```
 
 ## Syntax
 
@@ -48,7 +58,7 @@ The `findIndex()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Globa
 
 ## Examples
 
-### Find the index of a prime number in an array
+### Find the index of the first prime number in an array
 
 The following example returns the index of the first element in the array that is a prime number, or `-1` if there is no prime number.
 
@@ -123,6 +133,7 @@ console.log(
 ## See also
 
 - [Polyfill of `Array.prototype.findIndex` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims polyfill of `Array.prototype.findIndex`](https://www.npmjs.com/package/array.prototype.findindex)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}

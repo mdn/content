@@ -9,7 +9,68 @@ browser-compat: css.properties.clip-path
 
 The **`clip-path`** [CSS](/en-US/docs/Web/CSS) property creates a clipping region that sets what part of an element should be shown. Parts that are inside the region are shown, while those outside are hidden.
 
-{{EmbedInteractiveExample("pages/css/clip-path.html")}}
+{{InteractiveExample("CSS Demo: clip-path")}}
+
+```css interactive-example-choice
+clip-path: circle(40%);
+```
+
+```css interactive-example-choice
+clip-path: ellipse(130px 140px at 10% 20%);
+```
+
+```css interactive-example-choice
+clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+```
+
+```css interactive-example-choice
+clip-path: path("M 0 200 L 0,75 A 5,5 0,0,1 150,75 L 200 200 z");
+```
+
+```css interactive-example-choice
+clip-path: rect(5px 145px 160px 5px round 20%);
+```
+
+```css interactive-example-choice
+clip-path: xywh(0 5px 100% 75% round 15% 0);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <img
+      class="transition-all"
+      id="example-element"
+      src="/shared-assets/images/examples/balloon-small.jpg"
+      width="150" />
+    We had agreed, my companion and I, that I should call for him at his house,
+    after dinner, not later than eleven o’clock. This athletic young Frenchman
+    belongs to a small set of Parisian sportsmen, who have taken up “ballooning”
+    as a pastime. After having exhausted all the sensations that are to be found
+    in ordinary sports, even those of “automobiling” at a breakneck speed, the
+    members of the “Aéro Club” now seek in the air, where they indulge in all
+    kinds of daring feats, the nerve-racking excitement that they have ceased to
+    find on earth.
+  </div>
+</section>
+```
+
+```css interactive-example
+section {
+  align-items: flex-start;
+}
+
+.example-container {
+  text-align: left;
+  padding: 20px;
+}
+
+#example-element {
+  float: left;
+  width: 150px;
+  margin: 20px;
+}
+```
 
 ## Syntax
 
@@ -38,6 +99,7 @@ clip-path: path(
   "M0.5,1 C0.5,1,0,0.7,0,0.3 A0.25,0.25,1,1,1,0.5,0.3 A0.25,0.25,1,1,1,1,0.3 C1,0.7,0.5,1,0.5,1 Z"
 );
 clip-path: rect(5px 5px 160px 145px round 20%);
+clip-path: shape(from 0% 0%, line to 100% 0%, line to 50% 100%, close);
 clip-path: xywh(0 5px 100% 75% round 15% 0);
 
 /* Box and shape values combined */
@@ -101,7 +163,7 @@ The `clip-path` property is specified as one or a combination of the values list
   - : No clipping path is created.
 
 > [!NOTE]
-> A computed value other than **`none`** results in the creation of a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) the same way that CSS {{cssxref("opacity")}} does for values other than `1`.
+> A computed value other than **`none`** results in the creation of a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context) the same way that CSS {{cssxref("opacity")}} does for values other than `1`.
 
 ## Formal definition
 
@@ -113,481 +175,176 @@ The `clip-path` property is specified as one or a combination of the values list
 
 ## Examples
 
-### Comparison of HTML and SVG
+### Shapes and geometry boxes
 
-```html hidden
-<svg class="defs">
+In this example, two triangles are created by defining a `polygon()` as the clip path on {{htmlelement("div")}} elements. Each one has a solid colored background and a thick {{cssxref("border")}}. The second `<div>` element has its reference box set to `content-box`:
+
+#### HTML
+
+```html live-sample___shapes1 live-sample___shapes2 live-sample___shapes3
+<div></div>
+<div></div>
+```
+
+#### CSS
+
+```css hidden live-sample___shapes1 live-sample___shapes2 live-sample___shapes3
+body {
+  display: flex;
+  gap: 20px;
+  flex-flow: row wrap;
+}
+```
+
+```css live-sample___shapes1 live-sample___shapes2 live-sample___shapes3
+div {
+  height: 200px;
+  width: 200px;
+  box-sizing: border-box;
+  background-color: rebeccapurple;
+  border: 20px solid magenta;
+
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+div:last-of-type {
+  clip-path: content-box polygon(50% 0, 100% 100%, 0 100%);
+}
+```
+
+#### Results
+
+{{EmbedLiveSample("shapes1", "", "230")}}
+
+For the first triangle, we didn't specify a reference box; it therefore defaults to `border-box`, with the 0% and 100% positions located on the outside edge of the border. In the second example, we set the `<geometry-box>` to `content-box`, meaning the reference box for the basic shape is the outer edge of the content area, which is inside the padding box. Because our example has no `padding`, this is the inner edge of the border.
+
+### `shape()` versus `path()` functions
+
+Expanding on the previous example, we create the same triangle with different `<basic-shape>` values, demonstrating how the {{cssxref("basic-shape/shape", "shape()")}} and {{cssxref("basic-shape/path", "path()")}} functions can also be used to create clipping paths, with `shape()` being a more flexible solution.
+
+We use `path()` to define the first element's clipping path, and `shape()` for the second, both using the default `border-box` as their reference box:
+
+```css live-sample___shapes2 live-sample___shapes3
+div {
+  clip-path: path("M100 0 L200 200 L0 200 Z");
+}
+
+div:last-of-type {
+  clip-path: shape(from 50% 0, line to 100% 100%, line to 0 100%, close);
+}
+```
+
+As a result, the path defined with the shape() function grows with the element, whereas the path() version does not:
+
+{{EmbedLiveSample("shapes2", "", "230")}}
+
+Because the `shape()` function allows using {{cssxref("percentage")}} values (and [custom properties](/en-US/docs/Web/CSS/--*) too), it is more robust.
+
+We'll demonstrate this by increasing the size of the underlying element:
+
+```css live-sample___shapes3
+div {
+  width: 250px;
+  height: 250px;
+}
+```
+
+{{EmbedLiveSample("shapes3", "", "280")}}
+
+The visibility, or at least partial visibility, of the four border sides in the clip path example defined by the `shape()` function is due to the percentage values allowing the path to grow with the element. In the `path()` version, the element grew, but not the shape. As a result, the top and left borders are partially visible while the right and bottom borders are clipped out.
+
+### SVG as clip source
+
+In this example, we define SVG {{svgElement("clipPath")}} elements to use as a `clip-path` source.
+
+#### HTML
+
+We include two {{htmlElement("div")}} elements and an `<svg>` element containing two `<clipPath>` elements. One `<clipPath>` contains four {{svgElement("rect")}} elements that together define window panes, leaving a cross of blank space in the middle, and the other contains two crossing `<rect>` elements.
+
+```html
+<svg height="0" width="0">
   <defs>
-    <clipPath id="myPath" clipPathUnits="objectBoundingBox">
-      <path
-        d="M0.5,1 C0.5,1,0,0.7,0,0.3 A0.25,0.25,1,1,1,0.5,0.3 A0.25,0.25,1,1,1,1,0.3 C1,0.7,0.5,1,0.5,1 Z" />
+    <clipPath id="window">
+      <rect y="0" x="0" width="80" height="80" />
+      <rect y="0" x="120" width="80" height="80" />
+      <rect y="120" x="0" width="80" height="80" />
+      <rect y="120" x="120" width="80" height="80" />
+    </clipPath>
+    <clipPath id="cross">
+      <rect y="0" x="80" width="40" height="200" />
+      <rect y="80" x="0" width="200" height="40" />
     </clipPath>
   </defs>
 </svg>
 
-<div class="grid">
-  <div class="col">
-    <div class="note">clip-path: none</div>
-    <div class="row">
-      <div class="cell">
-        <span>HTML</span>
-        <div class="container">
-          <p class="none">I LOVE<br /><em>clipping</em></p>
-        </div>
-      </div>
-      <div class="cell">
-        <span>SVG</span>
-        <div class="container view-box">
-          <svg viewBox="0 0 192 192">
-            <g class="none">
-              <rect x="24" y="24" width="144" height="144" />
-              <text x="96" y="91">I LOVE</text>
-              <text x="96" y="109" class="em">clipping</text>
-            </g>
-          </svg>
-        </div>
-      </div>
-    </div>
-
-    <div class="note">
-      clip-path: url(#myPath)<br /><br />
-      Assuming the following clipPath definition:
-      <pre>
-&lt;svg&gt;
-  &lt;clipPath id="myPath" clipPathUnits="objectBoundingBox"&gt;
-    &lt;path d="M0.5,1
-      C 0.5,1,0,0.7,0,0.3
-      A 0.25,0.25,1,1,1,0.5,0.3
-      A 0.25,0.25,1,1,1,1,0.3
-      C 1,0.7,0.5,1,0.5,1 Z" /&gt;
-  &lt;/clipPath&gt;
-&lt;/svg&gt;</pre
-      >
-    </div>
-    <div class="row">
-      <div class="cell">
-        <span>HTML</span>
-        <div class="container">
-          <p class="svg">I LOVE<br /><em>clipping</em></p>
-        </div>
-      </div>
-      <div class="cell">
-        <span>SVG</span>
-        <div class="container view-box">
-          <svg viewBox="0 0 192 192">
-            <g class="svg">
-              <rect x="24" y="24" width="144" height="144" />
-              <text x="96" y="91">I LOVE</text>
-              <text x="96" y="109" class="em">clipping</text>
-            </g>
-          </svg>
-        </div>
-      </div>
-    </div>
-
-    <div class="note">
-      clip-path: path('M15,45 A30,30,0,0,1,75,45 A30,30,0,0,1,135,45
-      Q135,90,75,130 Q15,90,15,45 Z')
-    </div>
-    <div class="row">
-      <div class="cell">
-        <span>HTML</span>
-        <div class="container">
-          <p class="svg2">I LOVE<br /><em>clipping</em></p>
-        </div>
-      </div>
-      <div class="cell">
-        <span>SVG</span>
-        <div class="container view-box">
-          <svg viewBox="0 0 192 192">
-            <g class="svg2">
-              <rect x="24" y="24" width="144" height="144" />
-              <text x="96" y="91">I LOVE</text>
-              <text x="96" y="109" class="em">clipping</text>
-            </g>
-          </svg>
-        </div>
-      </div>
-    </div>
-
-    <div class="note">clip-path: circle(25%)</div>
-    <div class="row">
-      <div class="cell">
-        <span>HTML</span>
-        <div class="container">
-          <p class="shape1">I LOVE<br /><em>clipping</em></p>
-        </div>
-      </div>
-      <div class="cell">
-        <span>SVG</span>
-        <div class="container view-box">
-          <svg viewBox="0 0 192 192">
-            <g class="shape1">
-              <rect x="24" y="24" width="144" height="144" />
-              <text x="96" y="91">I LOVE</text>
-              <text x="96" y="109" class="em">clipping</text>
-            </g>
-          </svg>
-        </div>
-      </div>
-    </div>
-
-    <div class="note">clip-path: circle(25% at 25% 25%)</div>
-    <div class="row">
-      <div class="cell">
-        <span>HTML</span>
-        <div class="container">
-          <p class="shape2">I LOVE<br /><em>clipping</em></p>
-        </div>
-      </div>
-      <div class="cell">
-        <span>SVG</span>
-        <div class="container view-box">
-          <svg viewBox="0 0 192 192">
-            <g class="shape2">
-              <rect x="24" y="24" width="144" height="144" />
-              <text x="96" y="91">I LOVE</text>
-              <text x="96" y="109" class="em">clipping</text>
-            </g>
-          </svg>
-        </div>
-      </div>
-    </div>
-
-    <div class="note">clip-path: fill-box circle(25% at 25% 25%)</div>
-    <div class="row">
-      <div class="cell">
-        <span>HTML</span>
-        <div class="container">
-          <p class="shape3">I LOVE<br /><em>clipping</em></p>
-        </div>
-      </div>
-      <div class="cell">
-        <span>SVG</span>
-        <div class="container view-box">
-          <svg viewBox="0 0 192 192">
-            <g class="shape3">
-              <rect x="24" y="24" width="144" height="144" />
-              <text x="96" y="91">I LOVE</text>
-              <text x="96" y="109" class="em">clipping</text>
-            </g>
-          </svg>
-        </div>
-      </div>
-    </div>
-
-    <div class="note">clip-path: stroke-box circle(25% at 25% 25%)</div>
-    <div class="row">
-      <div class="cell">
-        <span>HTML</span>
-        <div class="container">
-          <p class="shape4">I LOVE<br /><em>clipping</em></p>
-        </div>
-      </div>
-      <div class="cell">
-        <span>SVG</span>
-        <div class="container view-box">
-          <svg viewBox="0 0 192 192">
-            <g class="shape4">
-              <rect x="24" y="24" width="144" height="144" />
-              <text x="96" y="91">I LOVE</text>
-              <text x="96" y="109" class="em">clipping</text>
-            </g>
-          </svg>
-        </div>
-      </div>
-    </div>
-
-    <div class="note">clip-path: view-box circle(25% at 25% 25%)</div>
-    <div class="row">
-      <div class="cell">
-        <span>HTML</span>
-        <div class="container">
-          <p class="shape5">I LOVE<br /><em>clipping</em></p>
-        </div>
-      </div>
-      <div class="cell">
-        <span>SVG</span>
-        <div class="container view-box">
-          <svg viewBox="0 0 192 192">
-            <g class="shape5">
-              <rect x="24" y="24" width="144" height="144" />
-              <text x="96" y="91">I LOVE</text>
-              <text x="96" y="109" class="em">clipping</text>
-            </g>
-          </svg>
-        </div>
-      </div>
-    </div>
-
-    <div class="note">clip-path: margin-box circle(25% at 25% 25%)</div>
-    <div class="row">
-      <div class="cell">
-        <span>HTML</span>
-        <div class="container">
-          <p class="shape6">I LOVE<br /><em>clipping</em></p>
-        </div>
-      </div>
-      <div class="cell">
-        <span>SVG</span>
-        <div class="container view-box">
-          <svg viewBox="0 0 192 192">
-            <g class="shape6">
-              <rect x="24" y="24" width="144" height="144" />
-              <text x="96" y="91">I LOVE</text>
-              <text x="96" y="109" class="em">clipping</text>
-            </g>
-          </svg>
-        </div>
-      </div>
-    </div>
-
-    <div class="note">clip-path: border-box circle(25% at 25% 25%)</div>
-    <div class="row">
-      <div class="cell">
-        <span>HTML</span>
-        <div class="container">
-          <p class="shape7">I LOVE<br /><em>clipping</em></p>
-        </div>
-      </div>
-      <div class="cell">
-        <span>SVG</span>
-        <div class="container view-box">
-          <svg viewBox="0 0 192 192">
-            <g class="shape7">
-              <rect x="24" y="24" width="144" height="144" />
-              <text x="96" y="91">I LOVE</text>
-              <text x="96" y="109" class="em">clipping</text>
-            </g>
-          </svg>
-        </div>
-      </div>
-    </div>
-
-    <div class="note">clip-path: padding-box circle(25% at 25% 25%)</div>
-    <div class="row">
-      <div class="cell">
-        <span>HTML</span>
-        <div class="container">
-          <p class="shape8">I LOVE<br /><em>clipping</em></p>
-        </div>
-      </div>
-      <div class="cell">
-        <span>SVG</span>
-        <div class="container view-box">
-          <svg viewBox="0 0 192 192">
-            <g class="shape8">
-              <rect x="24" y="24" width="144" height="144" />
-              <text x="96" y="91">I LOVE</text>
-              <text x="96" y="109" class="em">clipping</text>
-            </g>
-          </svg>
-        </div>
-      </div>
-    </div>
-
-    <div class="note">clip-path: content-box circle(25% at 25% 25%)</div>
-    <div class="row">
-      <div class="cell">
-        <span>HTML</span>
-        <div class="container">
-          <p class="shape9">I LOVE<br /><em>clipping</em></p>
-        </div>
-      </div>
-      <div class="cell">
-        <span>SVG</span>
-        <div class="container view-box">
-          <svg viewBox="0 0 192 192">
-            <g class="shape9">
-              <rect x="24" y="24" width="144" height="144" />
-              <text x="96" y="91">I LOVE</text>
-              <text x="96" y="109" class="em">clipping</text>
-            </g>
-          </svg>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<div class="window">Window</div>
+<div class="cross">Cross</div>
 ```
+
+#### CSS
+
+We use [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) to allow our elements to sit side-by-side with a gap between them, if there is space available. We define a {{cssxref("gradient/conic-gradient", "conic-gradient()")}} background image on both `<div>` elements, providing an interesting visual to clip, along with a {{cssxref("border")}}.
 
 ```css
-html,
 body {
-  height: 100%;
-  box-sizing: border-box;
-  background: #eee;
-}
-
-.grid {
-  width: 100%;
-  height: 100%;
   display: flex;
-  font: 1em monospace;
+  gap: 20px;
+  flex-flow: row wrap;
+  font: 2em sans-serif;
 }
 
-.row {
-  display: flex;
-  flex: 1 auto;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.col {
-  flex: 1 auto;
-}
-
-.cell {
-  margin: 0.5em;
-  padding: 0.5em;
-  background-color: #fff;
-  overflow: hidden;
-  text-align: center;
-  flex: 1;
-}
-
-.note {
-  background: #fff3d4;
-  padding: 1em;
-  margin: 0.5em 0.5em 0;
-  font: 0.8em sans-serif;
-  text-align: left;
-  white-space: nowrap;
-}
-
-.note + .row .cell {
-  margin-top: 0;
-}
-
-.container {
-  display: inline-block;
-  border: 1px dotted grey;
-  position: relative;
-}
-
-.container::before {
-  content: "margin";
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  font: italic 0.6em sans-serif;
-}
-
-.view-box {
-  box-shadow:
-    1rem 1rem 0 #efefef inset,
-    -1rem -1rem 0 #efefef inset;
-}
-
-.container.view-box::after {
-  content: "view-box";
-  position: absolute;
-  left: 1.1rem;
-  top: 1.1rem;
-  font: italic 0.6em sans-serif;
-}
-
-.cell span {
-  display: block;
-  margin-bottom: 0.5em;
-}
-
-p {
-  font-family: sans-serif;
-  background: #000;
-  color: pink;
-  margin: 2em;
-  padding: 3em 1em;
-  border: 1em solid pink;
-  width: 6em;
-}
-
-.none {
-  clip-path: none;
-}
-.svg {
-  clip-path: url(#myPath);
-}
-.svg2 {
-  clip-path: path(
-    "M15,45 A30,30,0,0,1,75,45 A30,30,0,0,1,135,45 Q135,90,75,130 Q15,90,15,45 Z"
+div {
+  width: 200px;
+  height: 200px;
+  background-image: conic-gradient(
+    at center,
+    rebeccapurple,
+    green,
+    lightblue,
+    rebeccapurple
   );
-}
-.shape1 {
-  clip-path: circle(25%);
-}
-.shape2 {
-  clip-path: circle(25% at 25% 25%);
-}
-.shape3 {
-  clip-path: fill-box circle(25% at 25% 25%);
-}
-.shape4 {
-  clip-path: stroke-box circle(25% at 25% 25%);
-}
-.shape5 {
-  clip-path: view-box circle(25% at 25% 25%);
-}
-.shape6 {
-  clip-path: margin-box circle(25% at 25% 25%);
-}
-.shape7 {
-  clip-path: border-box circle(25% at 25% 25%);
-}
-.shape8 {
-  clip-path: padding-box circle(25% at 25% 25%);
-}
-.shape9 {
-  clip-path: content-box circle(25% at 25% 25%);
-}
 
-.defs {
-  width: 0;
-  height: 0;
-  margin: 0;
-}
-
-pre {
-  margin-bottom: 0;
-}
-
-svg {
-  margin: 1em;
-  font-family: sans-serif;
-  width: 192px;
-  height: 192px;
-}
-
-svg rect {
-  stroke: pink;
-  stroke-width: 16px;
-}
-
-svg text {
-  fill: pink;
-  text-anchor: middle;
-}
-
-svg text.em {
-  font-style: italic;
+  border: 5px solid;
+  box-sizing: border-box;
 }
 ```
 
-{{EmbedLiveSample("Comparison_of_HTML_and_SVG", "100%", "800px")}}
+We then set the `id` of the `<clipPath>` as the `<clip-source>`. We center the text in the `cross` example vertically using {{cssxref("align-content")}}, as otherwise the text would be clipped, as is happening in the `window` example.
 
-### Complete example
+```css
+.window {
+  clip-path: url(#window);
+}
+
+.cross {
+  clip-path: url(#cross);
+  align-content: center;
+}
+```
+
+#### Results
+
+{{EmbedLiveSample("SVG as clip source", "", "230")}}
+
+The elements, including their border and text, are clipped, with only the parts overlapping the `<clipPath>` elements being drawn to the page.
+
+### The various value types
+
+This example demonstrates the various values of the `clip-path` property clipping an HTML {{htmlelement("img")}}.
 
 #### HTML
 
+The HTML includes an `<img>` that will be clipped, a star-shaped `<clipPath>`, and a {{htmlelement("select")}} element to choose a `clip-path` property value from.
+
 ```html
-<img id="clipped" src="mdn.svg" alt="MDN logo" />
+<img
+  id="clipped"
+  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+  alt="Pride flag" />
 <svg height="0" width="0">
   <defs>
-    <clipPath id="cross">
-      <rect y="110" x="137" width="90" height="90" />
-      <rect x="0" y="110" width="90" height="90" />
-      <rect x="137" y="0" width="90" height="90" />
-      <rect x="0" y="0" width="90" height="90" />
+    <clipPath id="star">
+      <path d="M100,0 42,180 196,70 4,70 158,180z" />
     </clipPath>
   </defs>
 </svg>
@@ -595,9 +352,9 @@ svg text.em {
 <select id="clipPath">
   <option value="none">none</option>
   <option value="circle(100px at 110px 100px)">circle</option>
-  <option value="url(#cross)" selected>cross</option>
+  <option value="url(#star)" selected>star</option>
   <option value="inset(20px round 20px)">inset</option>
-  <option value="rect(10px 10px 180px 220px round 20px)">rect</option>
+  <option value="rect(20px 150px 200px 20px round 10%)">rect</option>
   <option value="xywh(0 20% 90% 67% round 0 0 5% 5px)">xywh</option>
   <option value="path('M 0 200 L 0,110 A 110,90 0,0,1 240,100 L 200 340 z')">
     path
@@ -605,25 +362,50 @@ svg text.em {
 </select>
 ```
 
+```html hidden
+<pre id="log"></pre>
+```
+
 #### CSS
+
+The initial rendering includes the star as the `clip-path` source.
 
 ```css
 #clipped {
   margin-bottom: 20px;
-  clip-path: url(#cross);
+  clip-path: url(#star);
 }
 ```
 
-```js hidden
+#### JavaScript
+
+When you select a new option from the `<select>` menu, an event handler updates the value of the `clip-path` set on the `<img>`.
+
+```js
 const clipPathSelect = document.getElementById("clipPath");
 clipPathSelect.addEventListener("change", (evt) => {
-  document.getElementById("clipped").style.clipPath = evt.target.value;
+  const path = evt.target.value;
+  document.getElementById("clipped").style.clipPath = path;
+  log(`clip-path: ${path};`);
 });
+```
+
+```js hidden
+function log(text) {
+  const logElement = document.querySelector("#log");
+  logElement.innerText = `${text}`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
 ```
 
 #### Result
 
-{{EmbedLiveSample("Complete_example", 230, 250)}}
+{{EmbedLiveSample("Complete_example", 230, 300)}}
+
+Select different options to change the `clip-path` value.
+
+> [!NOTE]
+> While it is possible to define a path of text, if you want to clip a background image to text rather than a shape, see the {{cssxref("background-clip")}} property.
 
 ## Specifications
 
@@ -635,10 +417,11 @@ clipPathSelect.addEventListener("change", (evt) => {
 
 ## See also
 
-- [Shapes in clipping and masking – and how to use them](https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/)
-- CSS properties: {{cssxref("mask")}}, {{cssxref("filter")}}
-- [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
-- SVG attributes:
-
-  - {{SVGAttr("clip-path")}}
-  - {{SVGAttr("clip-rule")}}
+- {{CSSxRef("clip-rule")}}
+- {{CSSxRef("mask")}}
+- {{CSSxRef("filter")}}
+- {{cssxref("background-clip")}}
+- [Introduction to CSS clipping](/en-US/docs/Web/CSS/CSS_masking/Clipping)
+- [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
+- SVG {{SVGAttr("clip-path")}} attribute
+- [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)

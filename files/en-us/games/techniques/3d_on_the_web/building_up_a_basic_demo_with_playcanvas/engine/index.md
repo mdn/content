@@ -148,7 +148,7 @@ The code above assign a dark grey ambient light for the whole scene. The box loo
 
 ## Material
 
-This example uses a material called [Standard material](https://api.playcanvas.com/classes/Engine.StandardMaterial.html), which is the main, general purpose material that is most often used for rendering.
+This example uses a material called [Standard material](https://api.playcanvas.com/engine/classes/StandardMaterial.html), which is the main, general purpose material that is most often used for rendering.
 Add the following lines to your code:
 
 ```js
@@ -208,7 +208,7 @@ boxMaterial.diffuse.set(0, 0.58, 0.86);
 boxMaterial.update();
 box.model.model.meshInstances[0].material = boxMaterial;
 
-window.addEventListener("resize", function () {
+window.addEventListener("resize", () => {
   app.resizeCanvas(canvas.width, canvas.height);
 });
 ```
@@ -393,7 +393,7 @@ cone.model.model.meshInstances[0].material = coneMaterial;
 
 // Animate shapes
 let timer = 0;
-app.on("update", function (deltaTime) {
+app.on("update", (deltaTime) => {
   timer += deltaTime;
   box.rotate(deltaTime * 10, deltaTime * 20, deltaTime * 3);
   cylinder.setLocalScale(1, Math.abs(Math.sin(timer)), 1);

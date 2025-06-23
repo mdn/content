@@ -155,7 +155,7 @@ typeof Symbol.iterator === "symbol";
 Some things to note when working with type conversion of Symbols.
 
 - When trying to convert a Symbol to a number, a {{jsxref("TypeError")}} will be thrown
-  (e.g. `+sym` or `sym | 0`).
+  (e.g., `+sym` or `sym | 0`).
 - When using loose equality, `Object(sym) == sym` returns `true`.
 - `Symbol("foo") + "bar"` throws a {{jsxref("TypeError")}} (can't convert Symbol to string). This prevents you from silently creating a new string property name from a Symbol, for example.
 - The ["safer" `String(sym)` conversion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_conversion) works like a call to {{jsxref("Symbol.prototype.toString()")}} with Symbols, but note that `new String(sym)` will throw.
@@ -212,5 +212,5 @@ obj[Object(sym)]; // still 1
 
 - [Polyfill of `Symbol` in `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
 - {{jsxref("Operators/typeof", "typeof")}}
-- [JavaScript data types and data structures](/en-US/docs/Web/JavaScript/Data_structures)
+- [JavaScript data types and data structures](/en-US/docs/Web/JavaScript/Guide/Data_structures)
 - [ES6 In Depth: Symbols](https://hacks.mozilla.org/2015/06/es6-in-depth-symbols/) on hacks.mozilla.org (2015)

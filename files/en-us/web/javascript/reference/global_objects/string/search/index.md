@@ -1,5 +1,6 @@
 ---
 title: String.prototype.search()
+short-title: search()
 slug: Web/JavaScript/Reference/Global_Objects/String/search
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.search
@@ -9,7 +10,20 @@ browser-compat: javascript.builtins.String.search
 
 The **`search()`** method of {{jsxref("String")}} values executes a search for a match between a regular expression and this string, returning the index of the first match in the string.
 
-{{EmbedInteractiveExample("pages/js/string-search.html")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.search()")}}
+
+```js interactive-example
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+// Anything not a word character, whitespace or apostrophe
+const regex = /[^\w\s']/g;
+
+console.log(paragraph.search(regex));
+// Expected output: 41
+
+console.log(paragraph[paragraph.search(regex)]);
+// Expected output: "!"
+```
 
 ## Syntax
 

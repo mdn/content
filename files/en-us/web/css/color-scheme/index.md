@@ -16,9 +16,34 @@ The **`color-scheme`** [CSS](/en-US/docs/Web/CSS) property allows an element to 
 
 Component authors must use the [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media feature to support the color schemes on the rest of the elements.
 
-Common choices for operating system color schemes are "light" and "dark", or "day mode" and "night mode". When a user selects one of these color schemes, the operating system makes adjustments to the user interface. This includes [form controls](/en-US/docs/Learn/Forms), [scrollbars](/en-US/docs/Web/CSS/CSS_scrollbars_styling), and the used values of [CSS system colors](/en-US/docs/Web/CSS/system-color).
+Common choices for operating system color schemes are "light" and "dark", or "day mode" and "night mode". When a user selects one of these color schemes, the operating system makes adjustments to the user interface. This includes [form controls](/en-US/docs/Learn_web_development/Extensions/Forms), [scrollbars](/en-US/docs/Web/CSS/CSS_scrollbars_styling), and the used values of [CSS system colors](/en-US/docs/Web/CSS/system-color).
 
-{{EmbedInteractiveExample("pages/css/color-scheme.html")}}
+{{InteractiveExample("CSS Demo: color-scheme")}}
+
+```css interactive-example-choice
+color-scheme: normal;
+```
+
+```css interactive-example-choice
+color-scheme: dark;
+```
+
+```css interactive-example-choice
+color-scheme: light;
+```
+
+```html interactive-example
+<section class="default-example container" id="default-example">
+  <textarea id="example-element">Text Area</textarea>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 50%;
+}
+```
 
 ## Syntax
 
@@ -42,7 +67,7 @@ The `color-scheme` property's value must be one of the following keywords.
 ### Values
 
 - `normal`
-  - : Indicates that the element can be rendered using the page's [color scheme](/en-US/docs/Web/HTML/Element/meta/name#color-scheme) settings. If the page does not have a color scheme set, the element is rendered using the page's default color settings.
+  - : Indicates that the element can be rendered using the page's [color scheme](/en-US/docs/Web/HTML/Reference/Elements/meta/name/color-scheme) settings. If the page does not have a color scheme set, the element is rendered using the page's default color settings.
 - `light`
   - : Indicates that the element can be rendered using the operating system _light_ color scheme.
 - `dark`
@@ -87,6 +112,8 @@ footer {
 }
 ```
 
+Along with the above CSS, also include the [`<meta name="color-scheme">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/color-scheme) HTML {{HTMLElement("meta")}} tag in the {{htmlelement("head")}}, before any CSS style information, to inform user agents about the preferred color scheme, helping prevent unwanted screen flashes during the page load.
+
 ### Styling based on color schemes
 
 To style elements based on color scheme preferences, use the [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media query. The example below opts in the entire page to using both light and dark operating system color schemes via the `color-scheme` property, and then uses `prefers-color-scheme` to specify the desired foreground and background colors for individual elements in those color schemes.
@@ -111,7 +138,7 @@ To style elements based on color scheme preferences, use the [`prefers-color-sch
 }
 ```
 
-Alternatively, use the [`light-dark()`](/en-US/docs/Web/CSS/color_value/light-dark) [`<color>` function](/en-US/docs/Web/CSS/CSS_Functions#color_functions) to set the foreground and background colors for the different color schemes using a more compact code structure:
+Alternatively, use the [`light-dark()`](/en-US/docs/Web/CSS/color_value/light-dark) [`<color>` function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#color_functions) to set the foreground and background colors for the different color schemes using a more compact code structure:
 
 ```css
 :root {

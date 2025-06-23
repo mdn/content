@@ -1,5 +1,6 @@
 ---
 title: Iterator.prototype.some()
+short-title: some()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/some
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Iterator.some
@@ -52,8 +53,7 @@ const isEven = (x) => x % 2 === 0;
 console.log(fibonacci().some(isEven)); // true
 
 const isNegative = (x) => x < 0;
-const isPositive = (x) => x > 0;
-console.log(fibonacci().take(10).some(isPositive)); // false
+console.log(fibonacci().take(10).some(isNegative)); // false
 console.log(fibonacci().some(isNegative)); // Never completes
 ```
 
@@ -76,6 +76,7 @@ console.log(seq.next()); // { value: undefined, done: true }
 ## See also
 
 - [Polyfill of `Iterator.prototype.some` in `core-js`](https://github.com/zloirock/core-js#iterator-helpers)
+- [es-shims polyfill of `Iterator.prototype.some`](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Iterator.prototype.every()")}}
 - {{jsxref("Iterator.prototype.find()")}}

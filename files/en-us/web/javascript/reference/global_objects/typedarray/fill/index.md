@@ -1,5 +1,6 @@
 ---
 title: TypedArray.prototype.fill()
+short-title: fill()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/fill
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.fill
@@ -9,7 +10,16 @@ browser-compat: javascript.builtins.TypedArray.fill
 
 The **`fill()`** method of {{jsxref("TypedArray")}} instances changes all elements within a range of indices in a typed array to a static value. It returns the modified typed array. This method has the same algorithm as {{jsxref("Array.prototype.fill()")}}.
 
-{{EmbedInteractiveExample("pages/js/typedarray-fill.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.prototype.fill()", "shorter")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([0, 0, 0, 0]);
+// Value, start position, end position
+uint8.fill(4, 1, 3);
+
+console.log(uint8);
+// Expected output: Uint8Array [0, 4, 4, 0]
+```
 
 ## Syntax
 

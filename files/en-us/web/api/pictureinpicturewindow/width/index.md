@@ -10,13 +10,7 @@ browser-compat: api.PictureInPictureWindow.width
 
 The read-only **`width`** property of the {{domxref("PictureInPictureWindow")}} interface returns the width of the floating video window in pixels.
 
-## Syntax
-
-```js-nolint
-pictureInPictureWindow.width
-```
-
-### Value
+## Value
 
 An integer value indicating the width of the floating video window in pixels if the Picture-in-Picture window is open. Otherwise, it returns `0`.
 

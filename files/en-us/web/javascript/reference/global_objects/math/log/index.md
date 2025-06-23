@@ -1,5 +1,6 @@
 ---
 title: Math.log()
+short-title: log()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.log
@@ -15,7 +16,21 @@ The **`Math.log()`** static method returns the natural logarithm (base [e](/en-U
 </math>
 <!-- prettier-ignore-end -->
 
-{{EmbedInteractiveExample("pages/js/math-log.html")}}
+{{InteractiveExample("JavaScript Demo: Math.log()")}}
+
+```js interactive-example
+function getBaseLog(x, y) {
+  return Math.log(y) / Math.log(x);
+}
+
+// 2 x 2 x 2 = 8
+console.log(getBaseLog(2, 8));
+// Expected output: 3
+
+// 5 x 5 x 5 x 5 = 625
+console.log(getBaseLog(5, 625));
+// Expected output: 4
+```
 
 ## Syntax
 
@@ -55,7 +70,7 @@ Math.log(Infinity); // Infinity
 
 ### Using Math.log() with a different base
 
-The following function returns the logarithm of `y` with base `x` (i.e. <math><semantics><mrow><msub><mo>log</mo><mi>x</mi></msub><mi>y</mi></mrow><annotation encoding="TeX">\log_x y</annotation></semantics></math>):
+The following function returns the logarithm of `y` with base `x` (i.e., <math><semantics><mrow><msub><mo>log</mo><mi>x</mi></msub><mi>y</mi></mrow><annotation encoding="TeX">\log_x y</annotation></semantics></math>):
 
 ```js
 function getBaseLog(x, y) {

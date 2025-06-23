@@ -1,5 +1,6 @@
 ---
 title: Math.log2()
+short-title: log2()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log2
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.log2
@@ -15,7 +16,21 @@ The **`Math.log2()`** static method returns the base 2 logarithm of a number. Th
 </math>
 <!-- prettier-ignore-end -->
 
-{{EmbedInteractiveExample("pages/js/math-log2.html")}}
+{{InteractiveExample("JavaScript Demo: Math.log2()")}}
+
+```js interactive-example
+console.log(Math.log2(3));
+// Expected output: 1.584962500721156
+
+console.log(Math.log2(2));
+// Expected output: 1
+
+console.log(Math.log2(1));
+// Expected output: 0
+
+console.log(Math.log2(0));
+// Expected output: -Infinity
+```
 
 ## Syntax
 

@@ -7,14 +7,30 @@ name: PR review companion
 
 on:
   workflow_run:
-    workflows: ["PR Test"]
+    workflows: ["PR Test", "PR Test Legacy"]
     types:
       - completed
 
+  workflow_call:
+    secrets:
+      GCP_PROJECT_NAME:
+        required: true
+      WIP_PROJECT_ID:
+        required: true
+
+permissions:
+  # Download artifact.
+  actions: read
+  # Post comment in pull request.
+  pull-requests: write
+  # Authenticate with GCP.
+  id-token: write
+
 jobs:
   review:
+    environment: review
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    if: github.event.workflow_run.conclusion == 'success'
     steps:
       - name: "Download artifact"
         uses: actions/download-artifact@v4
@@ -26,91 +42,76 @@ jobs:
           run-id: ${{ github.event.workflow_run.id }}
 
       - name: Check for artifacts
-        if: ${{ hashFiles('build/') != '' }}
+        id: check
+        if: hashFiles('build/') != ''
         run: |
-          echo "HAS_ARTIFACT=true" >> "$GITHUB_ENV"
+          echo "HAS_ARTIFACT=true" >> "$GITHUB_OUTPUT"
+          PR_NUMBER=`cat build/NR | tr -dc '0-9'`
+          echo "PR_NUMBER=$PR_NUMBER" >> "$GITHUB_OUTPUT"
+          echo "PREFIX=pr$PR_NUMBER" >> "$GITHUB_OUTPUT"
 
-      - uses: actions/checkout@v4
-        if: ${{ env.HAS_ARTIFACT }}
+      - name: Authenticate with GCP
+        if: steps.check.outputs.HAS_ARTIFACT
+        uses: google-github-actions/auth@v2
         with:
-          repository: mdn/yari
-          path: yari
+          token_format: access_token
+          service_account: deploy-mdn-review-content@${{ secrets.GCP_PROJECT_NAME }}.iam.gserviceaccount.com
+          workload_identity_provider: projects/${{ secrets.WIP_PROJECT_ID }}/locations/global/workloadIdentityPools/github-actions/providers/github-actions
 
-      - name: Install Python
-        if: ${{ env.HAS_ARTIFACT }}
-        id: setup-python
-        uses: actions/setup-python@v5
+      - name: Setup gcloud
+        if: steps.check.outputs.HAS_ARTIFACT
+        uses: google-github-actions/setup-gcloud@v2
+
+      - name: Upload to GCS
+        if: steps.check.outputs.HAS_ARTIFACT
+        uses: google-github-actions/upload-cloud-storage@v2
         with:
-          python-version: "3.10"
+          path: "build"
+          destination: "${{ vars.GCP_BUCKET_NAME }}/${{ steps.check.outputs.PREFIX }}"
+          resumable: false
+          headers: |-
+            cache-control: no-store
+          parent: false
+          concurrency: 500
+          process_gcloudignore: false
 
-      # See https://www.peterbe.com/plog/install-python-poetry-github-actions-faster
-      - name: Load cached ~/.local
-        if: ${{ env.HAS_ARTIFACT }}
-        uses: actions/cache@v4
+      - name: Checkout (mdn/content)
+        uses: actions/checkout@v4
+        if: steps.check.outputs.HAS_ARTIFACT
         with:
-          path: ~/.local
-          # the trailing number is used to increase for getting
-          # a different cache key when this file changes
-          key: dotlocal-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-0
+          path: content
 
-      - name: Install Python poetry
-        if: ${{ env.HAS_ARTIFACT }}
-        uses: snok/install-poetry@v1.4
+      - name: Setup (mdn/content)
+        uses: actions/setup-node@v4
+        if: steps.check.outputs.HAS_ARTIFACT
         with:
-          virtualenvs-create: true
-          virtualenvs-in-project: true
+          node-version-file: "content/.nvmrc"
 
-      - name: Load cached venv
-        if: ${{ env.HAS_ARTIFACT }}
-        id: cached-poetry-dependencies
-        uses: actions/cache@v4
-        with:
-          path: yari/deployer/.venv
-          # the trailing number is used to increase for getting
-          # a different cache key when this file changes
-          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}-${{ steps.setup-python.outputs.python-version }}-0
+      - name: Install (mdn/content)
+        if: steps.check.outputs.HAS_ARTIFACT
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        working-directory: content
+        run: yarn --frozen-lockfile
 
-      - name: Install poetry dependencies
-        if: ${{ env.HAS_ARTIFACT && steps.cached-poetry-dependencies.outputs.cache-hit != 'true' }}
-        run: |
-          cd yari/deployer
-          poetry install --no-interaction --no-root
-
-      - name: Install Deployer
-        if: ${{ env.HAS_ARTIFACT }}
-        run: |
-          cd yari/deployer
-          poetry install --no-interaction
-
-      - name: Deploy and analyze built content
-        if: ${{ env.HAS_ARTIFACT }}
+      - name: Analyze PR build
+        if: steps.check.outputs.HAS_ARTIFACT
         env:
           BUILD_OUT_ROOT: ${{ github.workspace }}/build
-
-          DEPLOYER_BUCKET_NAME: mdn-content-dev
-          AWS_ACCESS_KEY_ID: ${{ secrets.DEPLOYER_DEV_AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.DEPLOYER_DEV_AWS_SECRET_ACCESS_KEY }}
-          DEPLOYER_LOG_EACH_SUCCESSFUL_UPLOAD: false
-
+          PREFIX: ${{ steps.check.outputs.PREFIX }}
+          PR_NUMBER: ${{ steps.check.outputs.PR_NUMBER }}
+        working-directory: content
         run: |
-          PR_NUMBER=`cat build/NR`
-
           echo "Pull request:"
           echo "https://github.com/mdn/content/pull/$PR_NUMBER"
 
-          cd yari/deployer
-
-          poetry run deployer upload \
-            --prefix="pr$PR_NUMBER" \
-            --default-cache-control 0 \
-            "$BUILD_OUT_ROOT"
-
-          poetry run deployer analyze-pr-build \
-            --prefix="pr$PR_NUMBER" \
+          node scripts/analyze-pr-build.js \
+            --prefix="$PREFIX" \
             --analyze-flaws \
             --analyze-dangerous-content \
-            --github-token="${{secrets.GITHUB_TOKEN}}" \
+            --github-token="${{ secrets.GITHUB_TOKEN }}" \
             --repo=$GITHUB_REPOSITORY \
-            --pr-number=$PR_NUMBER \
+            --pr-number="$PR_NUMBER" \
             --diff-file=$BUILD_OUT_ROOT/DIFF \
             $BUILD_OUT_ROOT

@@ -1,5 +1,6 @@
 ---
 title: Object.getOwnPropertyDescriptors()
+short-title: getOwnPropertyDescriptors()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.getOwnPropertyDescriptors
@@ -10,7 +11,21 @@ browser-compat: javascript.builtins.Object.getOwnPropertyDescriptors
 The **`Object.getOwnPropertyDescriptors()`** static method returns all
 own property descriptors of a given object.
 
-{{EmbedInteractiveExample("pages/js/object-getownpropertydescriptors.html")}}
+{{InteractiveExample("JavaScript Demo: Object.getOwnPropertyDescriptors()")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+const descriptors1 = Object.getOwnPropertyDescriptors(object1);
+
+console.log(descriptors1.property1.writable);
+// Expected output: true
+
+console.log(descriptors1.property1.value);
+// Expected output: 42
+```
 
 ## Syntax
 
@@ -100,5 +115,6 @@ subclass.prototype = Object.create(superclass.prototype, {
 ## See also
 
 - [Polyfill of `Object.getOwnPropertyDescriptors` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [es-shims polyfill of `Object.getOwnPropertyDescriptors`](https://www.npmjs.com/package/object.getownpropertydescriptors)
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}
 - {{jsxref("Object.defineProperty()")}}

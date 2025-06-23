@@ -1,5 +1,6 @@
 ---
 title: RegExp() constructor
+short-title: RegExp()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
 page-type: javascript-constructor
 browser-compat: javascript.builtins.RegExp.RegExp
@@ -11,7 +12,21 @@ The **`RegExp()`** constructor creates {{jsxref("RegExp")}} objects.
 
 For an introduction to regular expressions, read the [Regular Expressions chapter](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) in the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide).
 
-{{EmbedInteractiveExample("pages/js/regexp-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp() constructor")}}
+
+```js interactive-example
+const regex1 = /\w+/;
+const regex2 = new RegExp("\\w+");
+
+console.log(regex1);
+// Expected output: /\w+/
+
+console.log(regex2);
+// Expected output: /\w+/
+
+console.log(regex1 === regex2);
+// Expected output: false
+```
 
 ## Syntax
 

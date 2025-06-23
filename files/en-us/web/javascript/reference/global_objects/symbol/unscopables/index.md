@@ -1,5 +1,6 @@
 ---
 title: Symbol.unscopables
+short-title: unscopables
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.unscopables
@@ -9,7 +10,22 @@ browser-compat: javascript.builtins.Symbol.unscopables
 
 The **`Symbol.unscopables`** static data property represents the [well-known symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `Symbol.unscopables`. The {{jsxref("Statements/with", "with")}} statement looks up this symbol on the scope object for a property containing a collection of properties that should not become bindings within the `with` environment.
 
-{{EmbedInteractiveExample("pages/js/symbol-unscopables.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.unscopables")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+object1[Symbol.unscopables] = {
+  property1: true,
+};
+
+with (object1) {
+  console.log(property1);
+  // Expected output: Error: property1 is not defined
+}
+```
 
 ## Value
 

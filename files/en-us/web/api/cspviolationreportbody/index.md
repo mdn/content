@@ -14,11 +14,11 @@ CSP violations are thrown when the webpage attempts to load a resource that viol
 CSP violation reports are returned in the [reports](/en-US/docs/Web/API/ReportingObserver/ReportingObserver#reports) parameter of {{domxref("ReportingObserver")}} callbacks that have a `type` of `"csp-violation"`.
 The `body` property of those reports is an instance of `CSPViolationReportBody`.
 
-CSP violation reports may also be sent as JSON objects to the endpoint specified in the [`report-to`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-to) policy directive of the {{HTTPHeader("Content-Security-Policy")}} header.
+CSP violation reports may also be sent as JSON objects to the endpoint specified in the [`report-to`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-to) policy directive of the {{HTTPHeader("Content-Security-Policy")}} header.
 These reports similarly have a `type` of `"csp-violation"`, and a `body` property containing a serialization of an instance of this interface.
 
 > [!NOTE]
-> CSP violation reports sent by the Reporting API, when an endpoint is specified using the CSP [`report-to`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-to) directive, are similar (but not identical) to the "CSP report" [JSON objects](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri#violation_report_syntax) sent when endpoints are specified using the [`report-uri`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri) directive.
+> CSP violation reports sent by the Reporting API, when an endpoint is specified using the CSP [`report-to`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-to) directive, are similar (but not identical) to the "CSP report" [JSON objects](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-uri#violation_report_syntax) sent when endpoints are specified using the [`report-uri`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-uri) directive.
 > The Reporting API and `report-to` directive are intended to replace the older report format and the `report-uri` directive.
 
 {{InheritanceDiagram}}
@@ -70,7 +70,7 @@ First, we will set our {{HTTPHeader("Content-Security-Policy")}} header in the H
 Content-Security-Policy: default-src 'self';
 ```
 
-or in the HTML [`<meta>`](/en-US/docs/Web/HTML/Element/meta) element:
+or in the HTML [`<meta>`](/en-US/docs/Web/HTML/Reference/Elements/meta) element:
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
@@ -105,23 +105,23 @@ observer.observe();
 Above we log the each violation report object and a JSON-string version of the object, which might look similar to the object below.
 Note that the `body` is an instance of the `CSPViolationReportBody` and the `type` is `"csp-violation"`.
 
-```js
+```json
 {
-    "type": "csp-violation",
-    "url": "http://127.0.0.1:9999/",
-    "body": {
-        "sourceFile": null,
-        "lineNumber": null,
-        "columnNumber": null,
-        "documentURL": "http://127.0.0.1:9999/",
-        "referrer": "",
-        "blockedURL": "https://apis.google.com/js/platform.js",
-        "effectiveDirective": "script-src-elem",
-        "originalPolicy": "default-src 'self';",
-        "sample": "",
-        "disposition": "enforce",
-        "statusCode": 200
-    }
+  "type": "csp-violation",
+  "url": "http://127.0.0.1:9999/",
+  "body": {
+    "sourceFile": null,
+    "lineNumber": null,
+    "columnNumber": null,
+    "documentURL": "http://127.0.0.1:9999/",
+    "referrer": "",
+    "blockedURL": "https://apis.google.com/js/platform.js",
+    "effectiveDirective": "script-src-elem",
+    "originalPolicy": "default-src 'self';",
+    "sample": "",
+    "disposition": "enforce",
+    "statusCode": 200
+  }
 }
 ```
 

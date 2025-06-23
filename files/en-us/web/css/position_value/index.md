@@ -7,7 +7,7 @@ browser-compat: css.types.position
 
 {{CSSRef}}
 
-The **`<position>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) denotes a two-dimensional coordinate used to set a location relative to an element box. It is used in the {{cssxref("background-position")}}, {{cssxref("object-position")}}, {{cssxref("mask-position")}} {{cssxref("offset-position")}}, {{cssxref("offset-anchor")}} and {{cssxref("transform-origin")}} properties.
+The **`<position>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) denotes a two-dimensional coordinate used to set a location relative to an element box. It is used in the {{cssxref("background-position")}}, {{cssxref("object-position")}}, {{cssxref("mask-position")}} {{cssxref("offset-position")}}, {{cssxref("offset-anchor")}} and {{cssxref("transform-origin")}} properties.
 
 > [!NOTE]
 > The final position described by the `<position>` value does not need to be inside the element's box.
@@ -84,8 +84,8 @@ bottom top
 
 ## See also
 
-- [CSS Values and Units](/en-US/docs/Web/CSS/CSS_Values_and_Units)
-- [CSS Values and Units introduction](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module
+- [Learn: CSS Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - {{cssxref("background-position")}}
 - {{cssxref("gradient/radial-gradient", "radial-gradient()")}}
 - {{cssxref("gradient/conic-gradient", "conic-gradient()")}}

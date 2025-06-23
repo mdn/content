@@ -1,5 +1,6 @@
 ---
 title: Math.exp()
+short-title: exp()
 slug: Web/JavaScript/Reference/Global_Objects/Math/exp
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.exp
@@ -15,7 +16,21 @@ The **`Math.exp()`** static method returns [e](/en-US/docs/Web/JavaScript/Refere
 </math>
 <!-- prettier-ignore-end -->
 
-{{EmbedInteractiveExample("pages/js/math-exp.html")}}
+{{InteractiveExample("JavaScript Demo: Math.exp()")}}
+
+```js interactive-example
+console.log(Math.exp(0));
+// Expected output: 1
+
+console.log(Math.exp(1));
+// Expected output: 2.718281828459 (approximately)
+
+console.log(Math.exp(-1));
+// Expected output: 0.36787944117144233
+
+console.log(Math.exp(2));
+// Expected output: 7.38905609893065
+```
 
 ## Syntax
 

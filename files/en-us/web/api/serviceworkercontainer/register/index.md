@@ -35,7 +35,7 @@ register(scriptURL, options)
 
 - `scriptURL`
   - : The URL of the service worker script.
-    The registered service worker file needs to have a valid [JavaScript MIME type](/en-US/docs/Web/HTTP/MIME_types#textjavascript).
+    The registered service worker file needs to have a valid [JavaScript MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types#textjavascript).
 - `options` {{optional_inline}}
 
   - : An object containing registration options. Currently available options are:
@@ -44,12 +44,12 @@ register(scriptURL, options)
 
       - : A string representing a URL that defines a service worker's registration scope; that is, what range of URLs a service worker can control.
 
-        This is usually specified as a URL that is relative to the base URL of the site (e.g. `/some/path/`), so that the resolved scope is the same irrespective of what page the registration code is called from.
-        By default, the `scope` value for a service worker registration is set to the directory where the service worker script is located (by resolving `./` against `scriptURL`).
+        This is usually specified as a URL that is relative to the base URL of the site (e.g., `/some/path/`), so that the resolved scope is the same irrespective of what page the registration code is called from.
+        The default `scope` for a service worker registration is the directory where the service worker script is located (resolving `./` against `scriptURL`).
 
-        The scope must specify documents that are in the same directory or more deeply nested than the service worker (if you need a broader scope, this can be permitted via the HTTP `Service-Worker-Allowed` header).
-
-        See the [Examples](#examples) section for more information on how it works.
+        The scope should be used to specify documents that are in the same directory or more deeply nested than the service worker.
+        If you need a broader scope, this can be permitted via the HTTP {{HTTPHeader("Service-Worker-Allowed")}} header.
+        See the [Examples](#examples) section for information on broadening the default scope of a service worker.
 
     - `type`
 
@@ -95,11 +95,11 @@ A {{jsxref("Promise")}} that resolves with a {{domxref("ServiceWorkerRegistratio
 
 ## Examples
 
-The examples described here should be taken together to get a better understanding of how service workers scope applies to a page.
+The examples below should be read together to understand how service worker scope applies to a page.
 
 ### Register a service worker with default scope
 
-The following example uses the default value of `scope` (by omitting it), which sets it to be the same location as the script URL.
+The following example uses the default value of `scope` by omitting it, which sets it to be the same location as the script URL.
 
 Suppose the service worker code is at `example.com/sw.js`, and the registration code at `example.com/index.html`.
 The service worker code will control `example.com/index.html`, as well as pages underneath it, like `example.com/product/description.html`.
@@ -121,13 +121,13 @@ if ("serviceWorker" in navigator) {
 }
 ```
 
-Note that we have registered the scriptURL relative to the site root rather than the current page.
+Note that we have registered the `scriptURL` relative to the site root rather than the current page.
 This allows the same registration code to be used from any page.
 
 ### Register a service worker with an explicit default scope
 
 The code below is almost identical, except we have specified the scope explicitly using `{ scope: "/" }`.
-Again, we've specified the scope as site-relative so the same registration code can be used from anywhere in the site.
+We've specified the scope as site-relative so the same registration code can be used from anywhere in the site.
 
 ```js
 if ("serviceWorker" in navigator) {
@@ -145,7 +145,7 @@ if ("serviceWorker" in navigator) {
 }
 ```
 
-This scope happens to be the same as the default scope, so the registration applies to exactly the same pages as the example above.
+This scope is the same as the default scope, so the registration applies to exactly the same pages as the previous example.
 Note that if we were to run this code after the previous example, browsers should recognize that we're updating an existing registration rather than a new one.
 
 ### Register a service worker using page-relative URLs
@@ -153,7 +153,7 @@ Note that if we were to run this code after the previous example, browsers shoul
 There is nothing to stop you from using page-relative URLs except that this makes it harder to move your pages around, and it is easy to accidentally create unwanted registrations if you do so.
 
 In this example the service worker code is at `example.com/product/sw.js`, and the registration code at `example.com/product/description.html`.
-We're using URLs that are relative to the current directory for the scriptURL and the scope, where the current directory is the base URL of the page that is calling `register()` (`example.com/product/`).
+We're using URLs that are relative to the current directory for the `scriptURL` and the `scope`, where the current directory is the base URL of the page that is calling `register()` (`example.com/product/`).
 The service worker applies to resources under `example.com/product/`.
 
 ```js
@@ -174,9 +174,8 @@ if ("serviceWorker" in navigator) {
 
 ### Using Service-Worker-Allowed to increase service worker scope
 
-There is frequent confusion surrounding the meaning and use of _scope_.
-A service worker can't have a scope broader than its own location, unless the server specifies a broader maximum scope in a [Service-Worker-Allowed](https://w3c.github.io/ServiceWorker/#service-worker-allowed) header on the service worker script.
-Therefore you should use the `scope` option when you need a _narrower_ scope than the default.
+A service worker can't have a scope broader than its own location, unless the server specifies a broader maximum scope in a {{HTTPHeader("Service-Worker-Allowed")}} header on the service worker script.
+Use the `scope` option when you need a _narrower_ scope than the default.
 
 The following code, if included in `example.com/index.html`, at the root of a site, would only apply to resources under `example.com/product`.
 
@@ -196,8 +195,8 @@ if ("serviceWorker" in navigator) {
 }
 ```
 
-As noted above, servers can change the default maximum scope by setting the `Service-Worker-Allowed` header on the service worker script.
-In this case, the `scope` option should specify a scope narrower than the header value, but potentially larger than the service worker's location.
+As noted above, servers can change the default scope by setting the `Service-Worker-Allowed` header on the service worker script.
+This allows the `scope` option to be set outside the path defined by the service worker's location.
 
 The following code, if included in `example.com/product/index.html`, would apply to all resources under `example.com` if the server set the `Service-Worker-Allowed` header to `/` or `https://example.com/` when serving `sw.js`. If the server doesn't set the header, the service worker registration will fail, as the requested `scope` is too broad.
 
@@ -233,3 +232,4 @@ if ("serviceWorker" in navigator) {
 - [ServiceWorkerRegistration: `unregister()` method](/en-US/docs/Web/API/ServiceWorkerRegistration/unregister)
 - [Service worker API](/en-US/docs/Web/API/Service_Worker_API)
 - [Using service workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- {{HTTPHeader("Service-Worker-Allowed")}} HTTP header

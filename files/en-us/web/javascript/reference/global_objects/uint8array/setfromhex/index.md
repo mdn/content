@@ -1,5 +1,6 @@
 ---
-title: Uint8Array.setFromHex()
+title: Uint8Array.prototype.setFromHex()
+short-title: setFromHex()
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array/setFromHex
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Uint8Array.setFromHex
@@ -94,7 +95,8 @@ console.log(uint8Array);
 
 ## See also
 
-- [Polyfill of `Uint8Array.setFromHex` in `core-js`](https://github.com/zloirock/core-js#uint8array-to--from-base64-and-hex)
+- [Polyfill of `Uint8Array.prototype.setFromHex` in `core-js`](https://github.com/zloirock/core-js#uint8array-to--from-base64-and-hex)
+- [es-shims polyfill of `Uint8Array.prototype.setFromHex`](https://www.npmjs.com/package/es-arraybuffer-base64)
 - {{jsxref("Uint8Array")}}
 - {{jsxref("Uint8Array.fromHex()")}}
 - {{jsxref("Uint8Array.prototype.toHex()")}}

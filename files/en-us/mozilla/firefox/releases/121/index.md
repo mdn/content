@@ -12,15 +12,15 @@ This article provides information about the changes in Firefox 121 that affect d
 
 ### HTML
 
-- [Lazy loading](/en-US/docs/Web/Performance/Lazy_loading) of `<iframe>` elements is now supported, allowing developers to hint that particular `<iframe>` elements should only be loaded when (and if) they become visible. This can speed up initial load time by reducing the resources that need to be fetched on page load (some `<iframe>` elements may not need to be fetched at all).
-  The hint can be provided via the [`loading`](/en-US/docs/Web/HTML/Element/iframe#loading) attribute on the [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) element, or in JavaScript using {{domxref("HTMLIFrameElement.loading")}}.
+- [Lazy loading](/en-US/docs/Web/Performance/Guides/Lazy_loading) of `<iframe>` elements is now supported, allowing developers to hint that particular `<iframe>` elements should only be loaded when (and if) they become visible. This can speed up initial load time by reducing the resources that need to be fetched on page load (some `<iframe>` elements may not need to be fetched at all).
+  The hint can be provided via the [`loading`](/en-US/docs/Web/HTML/Reference/Elements/iframe#loading) attribute on the [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe) element, or in JavaScript using {{domxref("HTMLIFrameElement.loading")}}.
   ([Firefox bug 1622090](https://bugzil.la/1622090)).
 
 ### CSS
 
 - The {{CSSXRef("text-wrap")}} property has been updated with support for the values `balance` and `stable`. The `balance` value is used for short blocks of content, such as headings, and will make sure that the content is balanced and easy to read when spread over multiple lines. The `stable` value makes sure that editable content does not reflow while the user is editing it ([Firefox bug 1731541](https://bugzil.la/1731541)).
-- The {{cssxref(":has", ":has()")}} selector, commonly referred to as the _parent selector_, is now supported. It allows developers to apply styles to an element based on related elements, e.g. `li:has(ul)` will match a list which contains a sub-list, or `h1:has(+ p)` will match a heading with a paragraph directly after it.
-- The [`text-indent`](/en-US/docs/Web/CSS/text-indent) CSS property now supports the [`each-line`](/en-US/docs/Web/CSS/text-indent#each-line) and [`hanging`](/en-US/docs/Web/CSS/text-indent#hanging) property values ([Firefox bug 784648](https://bugzil.la/784648)), allowing developers to more easily specify certain text indentation styles. Additionally, developers can now combine multiple `text-indent` property values for more creativity, e.g. `text-indent: 3em hanging each-line`.
+- The {{cssxref(":has", ":has()")}} selector, commonly referred to as the _parent selector_, is now supported. It allows developers to apply styles to an element based on related elements, e.g., `li:has(ul)` will match a list which contains a sub-list, or `h1:has(+ p)` will match a heading with a paragraph directly after it.
+- The [`text-indent`](/en-US/docs/Web/CSS/text-indent) CSS property now supports the [`each-line`](/en-US/docs/Web/CSS/text-indent#each-line) and [`hanging`](/en-US/docs/Web/CSS/text-indent#hanging) property values ([Firefox bug 784648](https://bugzil.la/784648)), allowing developers to more easily specify certain text indentation styles. Additionally, developers can now combine multiple `text-indent` property values for more creativity, e.g., `text-indent: 3em hanging each-line`.
 
 ### JavaScript
 
@@ -28,9 +28,9 @@ This article provides information about the changes in Firefox 121 that affect d
 
 - {{jsxref("Date.parse()")}} now accepts several additional date formats:
 
-  - Year > 9999 for `YYYY-MMM-DD` format (e.g. `19999-Jan-01`) ([Firefox bug 1858851](https://bugzil.la/1858851))
-  - `MMM-DD-YYYY` (e.g. `Jan-01-1970`) ([Firefox bug 1863489](https://bugzil.la/1863489))
-  - Milliseconds for non-ISO date formats (e.g. `Jan 1 1970 10:00:00.050`) ([Firefox bug 1863125](https://bugzil.la/1863125))
+  - Year > 9999 for `YYYY-MMM-DD` format (e.g., `19999-Jan-01`) ([Firefox bug 1858851](https://bugzil.la/1858851))
+  - `MMM-DD-YYYY` (e.g., `Jan-01-1970`) ([Firefox bug 1863489](https://bugzil.la/1863489))
+  - Milliseconds for non-ISO date formats (e.g., `Jan 1 1970 10:00:00.050`) ([Firefox bug 1863125](https://bugzil.la/1863125))
   - Day of week at the beginning of formats which were being rejected, such as:
 
     - `Wed, 1970-01-01`
@@ -49,7 +49,7 @@ This article provides information about the changes in Firefox 121 that affect d
 
 #### DOM
 
-- {{domxref("HTMLInputElement.showPicker()")}} now works for [`<input type="week">`](/en-US/docs/Web/HTML/Element/input/month) and [`<input type="month">`](/en-US/docs/Web/HTML/Element/input/month) elements on Android ([Firefox bug 1853797](https://bugzil.la/161853797)).
+- {{domxref("HTMLInputElement.showPicker()")}} now works for [`<input type="week">`](/en-US/docs/Web/HTML/Reference/Elements/input/month) and [`<input type="month">`](/en-US/docs/Web/HTML/Reference/Elements/input/month) elements on Android ([Firefox bug 1853797](https://bugzil.la/161853797)).
 
 ### WebAssembly
 

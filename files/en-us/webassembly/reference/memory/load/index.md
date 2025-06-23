@@ -3,11 +3,12 @@ title: "load: Wasm text instruction"
 short-title: load
 slug: WebAssembly/Reference/Memory/Load
 page-type: webassembly-instruction
-browser-compat: webassembly.multiMemory
+browser-compat:
+  - webassembly.api.Memory
+  - webassembly.multiMemory
 spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-memory
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`load`** [memory instructions](/en-US/docs/WebAssembly/Reference/Memory) are used to load a number from a memory onto the stack.
 
@@ -16,13 +17,43 @@ For the integer numbers, there are separate instruction variants for loading a n
 For example, you can load an unsigned 8-bit number and convert it into an i32 using `i32.load8_u`.
 All the variants are [listed below](#instructions_and_opcodes).
 
-{{EmbedInteractiveExample("pages/wat/load.html", "tabbed-taller")}}
+{{InteractiveExample("Wat Demo: load", "tabbed-taller")}}
+
+```wat interactive-example
+(module
+
+  (memory $memory 1)
+  (export "memory" (memory $memory))
+
+  (func (export "load_first_item_in_mem") (param $num i32) (result i32)
+    i32.const 0
+
+    ;; load first item in memory and return the result
+    i32.load
+  )
+
+)
+```
+
+```js interactive-example
+const url = "{%wasm-url%}";
+const result = await WebAssembly.instantiateStreaming(fetch(url));
+const load_first_item_in_mem = result.instance.exports.load_first_item_in_mem;
+const memory = result.instance.exports.memory;
+
+const dataView = new DataView(memory.buffer);
+// Store 30 at the beginning of memory
+dataView.setUint32(0, 30, true);
+
+console.log(load_first_item_in_mem(100));
+// Expected output: 30
+```
 
 ## Syntax
 
 Load from default memory
 
-```wasm
+```wat
 ;; Load from default memory at offset specified by value on top of stack
 i32.const 0 ;; Stack variable containing memory offset (0) of number to be loaded.
 i32.load    ;; Load from specified offset in default memory
@@ -33,7 +64,7 @@ i32.load    ;; Load from specified offset in default memory
 
 Load from specified memory (if multi-memory supported)
 
-```wasm
+```wat
 ;; Load from memory specified by index
 i32.const 0 ;; offset in memory to load from (0)
 i32.load (memory 1) ;; load from memory index 1
@@ -74,7 +105,7 @@ We can load from this memory by adding a variable specifying the offset in the d
 
 The code below shows a WAT file that demonstrates this:
 
-```wasm
+```wat
 (module
   ;; Define memory named $memory and export
   (memory $memory 1)  ;; First memory declared is default, with index 0
@@ -120,7 +151,7 @@ If you don't specify a particular memory the default memory with index 0 is used
 
 The module below shows how you might directly reference a memory by index.
 
-```wasm
+```wat
 (module
   ;; Define memory for the module
   (memory $memory0 1)  ;; First (default) memory with memory index 0 (and 1 page)
@@ -138,7 +169,7 @@ The module below shows how you might directly reference a memory by index.
 
 The body of the function could also have been written using any of the following options:
 
-```wasm
+```wat
 i32.const 0
 i32.load (memory $memory1)  ;; referencing memory by name
 
@@ -150,7 +181,7 @@ i32.load (memory $memory1)  ;; referencing memory by name
 We didn't use the default memory in the example.
 But you can also choose to specify this index if you want:
 
-```wasm
+```wat
 i32.const 0
 i32.load (memory 0)  ;; referencing memory by index
 
@@ -168,8 +199,7 @@ The WAT files could be loaded using the same JavaScript code as the first exampl
 
 ## Browser compatibility
 
-> [!NOTE]
-> Memory support in Wasm modules matches the [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) JavaScript API.
-> The [multiMemory](#webassembly.multimemory) key indicates versions in which `load` can be used with a specified memory.
-
 {{Compat}}
+
+> [!NOTE]
+> The `multiMemory` compatibility table indicates versions in which `load` can be used with a specified memory.

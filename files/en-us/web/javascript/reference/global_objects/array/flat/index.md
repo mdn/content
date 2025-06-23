@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.flat()
+short-title: flat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flat
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.flat
@@ -10,7 +11,25 @@ browser-compat: javascript.builtins.Array.flat
 The **`flat()`** method of {{jsxref("Array")}} instances creates a new array with all sub-array
 elements concatenated into it recursively up to the specified depth.
 
-{{EmbedInteractiveExample("pages/js/array-flat.html")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.flat()")}}
+
+```js interactive-example
+const arr1 = [0, 1, 2, [3, 4]];
+
+console.log(arr1.flat());
+// expected output: Array [0, 1, 2, 3, 4]
+
+const arr2 = [0, 1, [2, [3, [4, 5]]]];
+
+console.log(arr2.flat());
+// expected output: Array [0, 1, 2, Array [3, Array [4, 5]]]
+
+console.log(arr2.flat(2));
+// expected output: Array [0, 1, 2, 3, Array [4, 5]]
+
+console.log(arr2.flat(Infinity));
+// expected output: Array [0, 1, 2, 3, 4, 5]
+```
 
 ## Syntax
 
@@ -103,6 +122,7 @@ console.log(Array.prototype.flat.call(arrayLike));
 ## See also
 
 - [Polyfill of `Array.prototype.flat` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims polyfill of `Array.prototype.flat`](https://www.npmjs.com/package/array.prototype.flat)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.concat()")}}

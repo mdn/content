@@ -1,5 +1,6 @@
 ---
 title: RegExp.prototype.unicodeSets
+short-title: unicodeSets
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.RegExp.unicodeSets
@@ -8,6 +9,19 @@ browser-compat: javascript.builtins.RegExp.unicodeSets
 {{JSRef}}
 
 The **`unicodeSets`** accessor property of {{jsxref("RegExp")}} instances returns whether or not the `v` flag is used with this regular expression.
+
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.unicodeSets")}}
+
+```js interactive-example
+const regex1 = /[\p{Lowercase}&&\p{Script=Greek}]/;
+const regex2 = /[\p{Lowercase}&&\p{Script=Greek}]/v;
+
+console.log(regex1.unicodeSets);
+// Expected output: false
+
+console.log(regex2.unicodeSets);
+// Expected output: true
+```
 
 ## Description
 

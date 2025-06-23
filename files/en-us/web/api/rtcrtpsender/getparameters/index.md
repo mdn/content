@@ -72,7 +72,7 @@ An object indicating the current configuration of the sender. <!-- RTCRtpSendPar
     <!-- spec defines following in RTCRtpParameters -->
 - `codecs`
 
-  - : An array of objects describing the [media codecs](/en-US/docs/Web/Media/Formats/WebRTC_codecs) that the sender has set as enabled, and is prepared to use.
+  - : An array of objects describing the [media codecs](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs) that the sender has set as enabled, and is prepared to use.
     This parameter cannot be changed once initially set.
 
     Each codec object in the array may have the following properties: <!-- RTCRtpCodecParameters -->
@@ -94,7 +94,7 @@ An object indicating the current configuration of the sender. <!-- RTCRtpSendPar
       - : A string indicating the codec's MIME media type and subtype, specified as a string of the form `"type/subtype"`.
         The MIME type strings used by RTP differ from those used elsewhere.
         IANA maintains a [registry of valid MIME types](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-2).
-        Also see [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs) for details about potential codecs that might be referenced here.
+        Also see [Codecs used by WebRTC](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs) for details about potential codecs that might be referenced here.
 
     - `payloadType`
 

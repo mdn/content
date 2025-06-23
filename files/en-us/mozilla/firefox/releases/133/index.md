@@ -12,7 +12,7 @@ This article provides information about the changes in Firefox 133 that affect d
 
 ### HTML
 
-- The [`viewport <meta>` tag](/en-US/docs/Web/HTML/Viewport_meta_tag) now supports the [`interactive-widgets`](/en-US/docs/Web/HTML/Viewport_meta_tag#the_effect_of_interactive_ui_widgets) attribute, this influences the size of the viewport when common UI widgets, such as virtual keyboards, are added to the screen. ([Firefox bug 1831649](https://bugzil.la/1831649) and [Firefox bug 1920755](https://bugzil.la/1920755)).
+- The [`viewport <meta>` tag](/en-US/docs/Web/HTML/Guides/Viewport_meta_element) now supports the [`interactive-widget`](/en-US/docs/Web/HTML/Guides/Viewport_meta_element#the_effect_of_interactive_ui_widgets) attribute, this influences the size of the viewport when common UI widgets, such as virtual keyboards, are added to the screen. ([Firefox bug 1831649](https://bugzil.la/1831649) and [Firefox bug 1920755](https://bugzil.la/1920755)).
 
 ### CSS
 
@@ -37,11 +37,11 @@ No notable changes
 - The [`keepalive`](/en-US/docs/Web/API/RequestInit#keepalive) initialization option to the global {{domxref('Window.fetch','fetch()')}} method and the [`Request()` constructor](/en-US/docs/Web/API/Request/Request#options) are now supported, along with the {{domxref("Request.keepalive")}} property. `keepalive` can be set to `true` to prevent the browser from aborting the associated request if the page that initiated it is unloaded before the request is complete.
   This might be used, for example, to send analytics at the end of a session, even if the user navigates away from or closes the page.
 
-  Using `fetch()` with `keepalive` has some advantages over using {{domxref("Navigator.sendBeacon()")}} for the same purpose, such as allowing the use of HTTP methods other than [`POST`](/en-US/docs/Web/HTTP/Methods/POST), customizable request properties, and access the server response via the fetch {{jsxref("Promise")}} fulfillment. It is also available in [service workers](/en-US/docs/Web/API/Service_Worker_API). ([Firefox bug 1906952](https://bugzil.la/1906952), [Firefox bug 1923044](https://bugzil.la/1923044)).
+  Using `fetch()` with `keepalive` has some advantages over using {{domxref("Navigator.sendBeacon()")}} for the same purpose, such as allowing the use of HTTP methods other than [`POST`](/en-US/docs/Web/HTTP/Reference/Methods/POST), customizable request properties, and access the server response via the fetch {{jsxref("Promise")}} fulfillment. It is also available in [service workers](/en-US/docs/Web/API/Service_Worker_API). ([Firefox bug 1906952](https://bugzil.la/1906952), [Firefox bug 1923044](https://bugzil.la/1923044)).
 
 - The [`onwaitingforkey`](/en-US/docs/Web/API/HTMLMediaElement/waitingforkey_event) content attribute can now be specified on {{htmlelement("audio")}}/{{htmlelement("video")}} elements to set an inline event handler for the `waitingforkey` event. ([Firefox bug 1925952](https://bugzil.la/1925952)).
 - {{domxref("ServiceWorkerContainer")}} is now exposed in all worker contexts via {{domxref("WorkerNavigator.serviceWorker")}}, allowing workers to inspect and manage the {{domxref("ServiceWorkerRegistration","service worker registrations","","nocode")}} associated with the current origin. Previously `ServiceWorkerContainer` was only available in the main thread, via {{domxref("Navigator.serviceWorker")}}. ([Firefox bug 1113522](https://bugzil.la/1113522)).
-- The [`name`](/en-US/docs/Web/API/PerformanceNavigationTiming#performanceentry.name) property of `PerformanceNavigationTiming` now omits [text fragments](/en-US/docs/Web/URI/Fragment/Text_fragments) from the returned URL, matching the specification. This kind of {{domxref("PerformanceResourceTiming")}} object is returned by {{domxref("Performance.getEntries()")}} for entries with an {{domxref("PerformanceEntry/entryType", "entryType")}} of `navigation`. ([Firefox bug 1919565](https://bugzil.la/1919565)).
+- The [`name`](/en-US/docs/Web/API/PerformanceNavigationTiming#performanceentry.name) property of `PerformanceNavigationTiming` now omits [text fragments](/en-US/docs/Web/URI/Reference/Fragment/Text_fragments) from the returned URL, matching the specification. This kind of {{domxref("PerformanceResourceTiming")}} object is returned by {{domxref("Performance.getEntries()")}} for entries with an {{domxref("PerformanceEntry/entryType", "entryType")}} of `navigation`. ([Firefox bug 1919565](https://bugzil.la/1919565)).
 
 #### Removals
 
@@ -68,6 +68,7 @@ No notable changes
 
 - {{WebExtAPIRef("cookies.get")}} now orders cookies according to the [5.4 The Cookie Header section of the HTTP State Management Mechanism (RFC 6265)](https://datatracker.ietf.org/doc/html/rfc6265#section-5.4). This impacts call results when a cookie has variants with different path components. Previously, the earliest created cookie was matched by {{WebExtAPIRef("cookies.get")}}, {{WebExtAPIRef("cookies.remove")}}, {{WebExtAPIRef("cookies.set")}}, and {{WebExtAPIRef("cookies.getAll")}}. After this change, the cookie with the longest matching path is returned. ([Firefox bug 1798655](https://bugzil.la/1798655))
 - Fixed a bug in the {{WebExtAPIRef("declarativeNetRequest")}} API that prevented rule registration after a browser restart ([Firefox bug 1921353](https://bugzil.la/1921353)). This bug affected extensions that rely on {{WebExtAPIRef("declarativeNetRequest.updateDynamicRules")}} or {{WebExtAPIRef("declarativeNetRequest.updateEnabledRulesets")}}. This fix has also been backported to Firefox ESR 128.5 and Firefox ESR 115.18.
+- Fixed a bug that prevented [`window.close()`](/en-US/docs/Web/API/Window/close) called from a [sidebar](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars) from closing the sidebar.
 
 ## Experimental web features
 
@@ -75,7 +76,7 @@ These features are newly shipped in Firefox 133 but are disabled by default. To 
 
 - **contenteditable plaintext-only value:** `dom.element.contenteditable.plaintext-only.enabled`.
 
-  The `plaintext-only` value of the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) global attribute indicates that the element is editable; rich text formatting is disabled and any formatting in pasted text is automatically stripped. ([Firefox bug 1922723](https://bugzil.la/1922723).)
+  The `plaintext-only` value of the [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) global attribute indicates that the element is editable; rich text formatting is disabled and any formatting in pasted text is automatically stripped. ([Firefox bug 1922723](https://bugzil.la/1922723).)
 
 - **:has-slotted CSS pseudo-class:** `layout.css.has-slotted-selector.enabled`.
 

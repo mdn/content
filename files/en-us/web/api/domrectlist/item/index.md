@@ -14,12 +14,12 @@ The {{domxref("DOMRectList")}} method
 ## Syntax
 
 ```js-nolint
-rectList.item(index)
+item(index)
 ```
 
 ### Parameters
 
-- index
+- `index`
   - : A zero-based integer representing the position of the `DOMRect` in the `DOMRectList` to retrieve.
 
 ### Return value

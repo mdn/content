@@ -1,5 +1,6 @@
 ---
 title: GeneratorFunction.prototype.prototype
+short-title: prototype
 slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction/prototype
 page-type: javascript-instance-data-property
 spec-urls:
@@ -41,7 +42,7 @@ console.log(proto(gen) === genFunc.prototype); // true
 console.log(proto(proto(gen)) === GeneratorFunctionPrototype.prototype); // true
 ```
 
-The following diagram illustrates the prototype chain of a generator function and its instances. Each hollow arrow indicates an inheritance relationship (i.e. a prototype link), and each solid arrow indicates a property relationship. Note that there's no way to access `genFunc` from `gen` — they only have an `instanceof` relationship.
+The following diagram illustrates the prototype chain of a generator function and its instances. Each hollow arrow indicates an inheritance relationship (i.e., a prototype link), and each solid arrow indicates a property relationship. Note that there's no way to access `genFunc` from `gen` — they only have an `instanceof` relationship.
 
 ![The inheritance diagram of generators and generator functions](https://mdn.github.io/shared-assets/images/diagrams/javascript/generatorfunction/prototype-chain.svg)
 
@@ -55,5 +56,5 @@ The following diagram illustrates the prototype chain of a generator function an
 - [`function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function*)
 - {{jsxref("AsyncGeneratorFunction")}}
 - {{jsxref("GeneratorFunction")}}
-- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
 - [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)

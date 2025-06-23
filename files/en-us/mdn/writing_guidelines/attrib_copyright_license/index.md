@@ -2,11 +2,10 @@
 title: Attribution and copyright licensing
 slug: MDN/Writing_guidelines/Attrib_copyright_license
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
 
-{{MDNSidebar}}
-
-MDN Web Doc's content is available free of charge and is available under various open-source licenses.
+MDN Web Docs content is available free of charge and is available under various open-source licenses.
 
 ## Using MDN Web Docs content
 
@@ -17,11 +16,15 @@ This section covers the types of content we provide and the copyrights and licen
 > [!NOTE]
 > The content on MDN Web Docs has been prepared with the contributions of authors from both inside and outside Mozilla. Unless otherwise indicated, the content is available under the terms of the [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA), v2.5 or any later version.
 
-Your reuse of the content here is published under the same license as the original content—CC-BY-SA v2.5 or any later version. When reusing the content on MDN Web Docs, you need to ensure that attribution is given to the original content as well as to "Mozilla Contributors". Include a hyperlink (online) or URL (in print) to the specific page of the content being sourced. For example, to provide attribution for _this_ article, you can write:
+Your reuse of the content here is published under the same license as the original content – CC-BY-SA v2.5 or any later version.
+When reusing the content on MDN Web Docs, you need to ensure that [attribution is given](https://creativecommons.org/licenses/by/2.5/deed.en#ref-appropriate-credit) to the material as well as to "Mozilla Contributors".
+Good attribution is the **title** of the document, with a hyperlink (online) or URL (in print) to the specific page of the content being sourced, and any modifications you've made briefly described.
+For example, to provide attribution for this page, you can write:
 
-> [Attributions and copyright licensing](/en-US/docs/MDN/Writing_guidelines/Attrib_copyright_license) by [Mozilla Contributors](/en-US/docs/MDN/Community/Roles_teams#contributor) is licensed under [CC-BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/). <!--need to revisit the contributors.txt link-->
+> ["Attributions and copyright licensing"](/en-US/docs/MDN/Writing_guidelines/Attrib_copyright_license) by Mozilla Contributors, licensed under [CC-BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/).
 
-In the above example, "Mozilla Contributors" links to the history of the cited page. See [Recommended practices for attribution](https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution) for further explanation.
+You may also want to link "Mozilla Contributors" to a `contributors.txt` file linked in the page footer you're referencing for a list of authors, if reasonable.
+See [Recommended practices for attribution](https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution) for more details.
 
 ### Code samples
 
@@ -52,7 +55,7 @@ In general, we do not approve of copying content from other sources and putting 
 MDN should be made up of original content wherever possible.
 If we receive a pull request and discover that it contains plagiarized content, we will close it and request that the submitter resubmit the change with the content rewritten into their own words.
 
-### If you want to reuse or republish content
+### Reusing or republishing your content on MDN
 
 > [!NOTE]
 > Unless there is a good reason to republish the content, we will probably say "no".

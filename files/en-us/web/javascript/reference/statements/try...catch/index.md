@@ -9,7 +9,17 @@ browser-compat: javascript.statements.try_catch
 
 The **`try...catch`** statement is comprised of a `try` block and either a `catch` block, a `finally` block, or both. The code in the `try` block is executed first, and if it throws an exception, the code in the `catch` block will be executed. The code in the `finally` block will always be executed before control flow exits the entire construct.
 
-{{EmbedInteractiveExample("pages/js/statement-trycatch.html")}}
+{{InteractiveExample("JavaScript Demo: try...catch statement")}}
+
+```js interactive-example
+try {
+  nonExistentFunction();
+} catch (error) {
+  console.error(error);
+  // Expected output: ReferenceError: nonExistentFunction is not defined
+  // (Note: the exact output may be browser-dependent)
+}
+```
 
 ## Syntax
 
@@ -59,7 +69,7 @@ You can also use the `try` statement to handle JavaScript exceptions. See the [J
 
 When an exception is thrown in the `try` block, `exceptionVar` (i.e., the `e` in `catch (e)`) holds the exception value. You can use this {{Glossary("binding")}} to get information about the exception that was thrown. This {{Glossary("binding")}} is only available in the `catch` block's {{Glossary("Scope", "scope")}}.
 
-It doesn't need to be a single identifier. You can use a [destructuring pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) to assign multiple identifiers at once.
+It doesn't need to be a single identifier. You can use a [destructuring pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) to assign multiple identifiers at once.
 
 ```js
 try {
@@ -153,7 +163,7 @@ When a `catch` block is used, the `catch` block is executed when any exception i
 
 ```js
 try {
-  throw "myException"; // generates an exception
+  throw new Error("My exception"); // generates an exception
 } catch (e) {
   // statements to handle any exceptions
   logMyErrors(e); // pass exception object to error handler

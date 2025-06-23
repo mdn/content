@@ -23,12 +23,14 @@ sidebar:
       - /Mozilla/Add-ons/WebExtensions/Internationalization
       - /Mozilla/Add-ons/WebExtensions/Content_Security_Policy
       - /Mozilla/Add-ons/WebExtensions/Native_messaging
+      - /Mozilla/Add-ons/WebExtensions/Native_manifests
+      - /Mozilla/Add-ons/WebExtensions/User_actions
       - /Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations
       - /Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
-  - title: WebExtensions#User_Interface
+  - link: /Mozilla/Add-ons/WebExtensions/user_interface
+    title: WebExtensions#User_Interface
     details: closed
     children:
-      - /Mozilla/Add-ons/WebExtensions/user_interface
       - /Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
       - /Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
       - /Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
@@ -38,6 +40,8 @@ sidebar:
       - /Mozilla/Add-ons/WebExtensions/user_interface/Notifications
       - /Mozilla/Add-ons/WebExtensions/user_interface/Omnibox
       - /Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
+      - /Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
+      - /Mozilla/Add-ons/WebExtensions/user_interface/Popups
   - title: WebExtensions#How_to
     details: closed
     children:
@@ -58,8 +62,10 @@ sidebar:
     title: WebExtensions#API
   - type: listSubPages
     path: /Mozilla/Add-ons/WebExtensions/manifest.json
+    link: /Mozilla/Add-ons/WebExtensions/manifest.json
     title: WebExtensions#manifest.json
     details: closed
+    code: true
   - title: extension_workshop
     details: closed
     children:
@@ -83,6 +89,22 @@ sidebar:
       - link: https://chat.mozilla.org/#/room/%23addons:mozilla.org
         title: Chat
 l10n:
+  de:
+    WebExtensions#Getting_started: Erste Schritte
+    WebExtensions#Concepts: Konzepte
+    WebExtensions#User_Interface: Benutzeroberfläche
+    WebExtensions#How_to: Anleitungen
+    WebExtensions#API: JavaScript-APIs
+    WebExtensions#manifest.json: Manifest-Schlüssel
+    extension_workshop: Erweiterungs-Workshop
+    extension_workshop_develop: Entwickeln
+    extension_workshop_publish: Veröffentlichen
+    extension_workshop_manage: Verwalten
+    extension_workshop_enterprise: Unternehmen
+    Channels: Kanäle
+    Blog: Add-ons Blog
+    Forums: Add-ons Forum
+    Chat: Add-ons Chat
   en-US:
     WebExtensions#Getting_started: Getting started
     WebExtensions#Concepts: Concepts
@@ -200,7 +222,6 @@ l10n:
     WebExtensions#Concepts: Основные понятия
     WebExtensions#User_Interface: Пользовательский интерфейс
     WebExtensions#How_to: How to
-    WebExtensions#Firefox_workflow: Firefox workflow
     WebExtensions#API: Обзор JavaScript API
     WebExtensions#manifest.json: Manifest keys
     extension_workshop: Extension Workshop

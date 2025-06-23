@@ -9,7 +9,22 @@ browser-compat: javascript.functions.arguments
 
 **`arguments`** is an array-like object accessible inside [functions](/en-US/docs/Web/JavaScript/Guide/Functions) that contains the values of the arguments passed to that function.
 
-{{EmbedInteractiveExample("pages/js/functions-arguments.html")}}
+{{InteractiveExample("JavaScript Demo: The arguments object")}}
+
+```js interactive-example
+function func1(a, b, c) {
+  console.log(arguments[0]);
+  // Expected output: 1
+
+  console.log(arguments[1]);
+  // Expected output: 2
+
+  console.log(arguments[2]);
+  // Expected output: 3
+}
+
+func1(1, 2, 3);
+```
 
 ## Description
 
@@ -31,9 +46,12 @@ The `arguments` object is useful for functions called with more arguments than t
 ```js
 function longestString() {
   let longest = "";
-  for (let i = 0; i < arguments.length; i++) {
-    if (arguments[i].length > longest.length) {
-      longest = arguments[i];
+  if (arguments.length === 0) {
+    throw new TypeError("At least one string is required");
+  }
+  for (const arg of arguments) {
+    if (arg.length > longest.length) {
+      longest = arg;
     }
   }
   return longest;
@@ -66,7 +84,7 @@ function func2(a) {
 func2(10); // 99
 ```
 
-Non-strict functions that _are_ passed [rest](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), or [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) parameters will not sync new values assigned to parameters in the function body with the `arguments` object. Instead, the `arguments` object in non-strict functions with complex parameters will always reflect the values passed to the function when the function was called.
+Non-strict functions that _are_ passed [rest](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), or [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) parameters will not sync new values assigned to parameters in the function body with the `arguments` object. Instead, the `arguments` object in non-strict functions with complex parameters will always reflect the values passed to the function when the function was called.
 
 ```js
 function funcWithDefault(a = 55) {
@@ -155,7 +173,7 @@ myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
 
 ### Defining a function that creates HTML lists
 
-This example defines a function that creates a string containing HTML for a list. The only formal argument for the function is a string that is `"u"` if the list is to be [unordered (bulleted)](/en-US/docs/Web/HTML/Element/ul), or `"o"` if the list is to be [ordered (numbered)](/en-US/docs/Web/HTML/Element/ol). The function is defined as follows:
+This example defines a function that creates a string containing HTML for a list. The only formal argument for the function is a string that is `"u"` if the list is to be [unordered (bulleted)](/en-US/docs/Web/HTML/Reference/Elements/ul), or `"o"` if the list is to be [ordered (numbered)](/en-US/docs/Web/HTML/Reference/Elements/ol). The function is defined as follows:
 
 ```js
 function list(type) {

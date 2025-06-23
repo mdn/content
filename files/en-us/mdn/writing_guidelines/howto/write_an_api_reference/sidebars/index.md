@@ -2,9 +2,8 @@
 title: API reference sidebars
 slug: MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 You are able to include a custom sidebar on API reference pages it so that it displays links to related Interfaces, tutorials, and other resources relevant just to that API.
 This article explains how.
@@ -15,7 +14,7 @@ You need to take the following three steps to create your API sidebar:
 
 1. Create your API reference pages.
 2. Add an entry for your particular API into the [`GroupData.json`](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) file.
-3. Use the [`APIRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/APIRef.ejs) macro to insert the sidebar into each page you want to display it on.
+3. Use the [`APIRef`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/api_list_specs.rs) macro to insert the sidebar into each page you want to display it on.
 
 Let's run through each of these steps in turn.
 The example we'll refer to in this article is the [Fetch API](/en-US/docs/Web/API/Fetch_API).
@@ -91,7 +90,7 @@ These are all technically optional, but it is strongly encouraged that instead o
    If there are a huge number of events, you might want to consider only listing the most popular ones, or putting them first in the list.
    For example, `"Document: selectionchange"` is part of the [Selection API](/en-US/docs/Web/API/Selection_API) but `Document` is not, so we add the event to the array and it will be linked from the [Selection API](/en-US/docs/Web/API/Selection_API) topic.
 6. `"guides"` — the value is an array of strings, each that addresses a guide topic that explain how to use the API.
-   The strings contain the part of the guide's URL address after the language path: i.e. the `/docs/...` part of the guide URL.
+   The strings contain the part of the guide's URL address after the language path: i.e., the `/docs/...` part of the guide URL.
    For example, to link to the topic "Using Fetch" at `https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch`, the guide array would contain "/docs/Web/API/Fetch_API/Using_Fetch".
 7. `"dictionaries"` — an array of strings listing all of the dictionaries which are part of the API.
    Generally, only dictionaries used by more than one property or method should be listed here, unless they are of special significance or are likely to require being referenced from multiple pages.
@@ -115,11 +114,11 @@ Pages under the top-level API are crawled each time the sidebar is rendered, and
 Sub-members are automatically decorated with warning icons based on tags as well.
 Decorations are added for experimental ("Experimental" tag), non-standard ("Non Standard" or "Non-standard" tag), or deprecated ("Deprecated" tag) sub-members.
 
-Further information about tag-based processing is available [in the APIRef source](https://github.com/mdn/yari/blob/main/kumascript/macros/APIRef.ejs).
+Further information about tag-based processing is available [in the APIRef source](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/api_list_specs.rs).
 
 ## Inserting the sidebar
 
-Once you've added an entry for your API into `GroupData.json`, submitted it as a pull request and had the change accepted into the main repo, you can include it in your API reference pages using the [`APIRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/APIRef.ejs) macro, which takes the name you used for your API in GroupData as a parameter.
+Once you've added an entry for your API into `GroupData.json`, submitted it as a pull request and had the change accepted into the main repo, you can include it in your API reference pages using the [`APIRef`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/api_list_specs.rs) macro, which takes the name you used for your API in GroupData as a parameter.
 As an example, the [WebVR API](/en-US/docs/Web/API/WebVR_API)'s sidebar is included in its pages with the following:
 
 ```plain

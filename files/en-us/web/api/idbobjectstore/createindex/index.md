@@ -46,7 +46,7 @@ createIndex(indexName, keyPath, options)
       - : Allows you to specify a locale for the index.
         Any sorting operations performed on the data via key ranges will then obey sorting rules of that locale.
         You can specify its value in one of three ways:
-        - `string`: A string containing a specific locale code, e.g. `en-US`, or `pl`.
+        - `string`: A string containing a specific locale code, e.g., `en-US`, or `pl`.
         - `auto`: The platform default locale will be used (may be changed by user agent settings).
         - `null` or `undefined`: If no locale is specified, normal JavaScript sorting will be used — not locale-aware.
 
@@ -64,13 +64,13 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
   - : Thrown if the provided key path is a sequence, and `multiEntry` is set to `true` in the `objectParameters` object.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if:
-    - The method was not called from a `versionchange` transaction mode callback, i.e. from inside a {{domxref("IDBOpenDBRequest.upgradeneeded_event", "onupgradeneeded")}} handler.
+    - The method was not called from a `versionchange` transaction mode callback, i.e., from inside a {{domxref("IDBOpenDBRequest.upgradeneeded_event", "onupgradeneeded")}} handler.
     - The object store has been deleted.
 - `SyntaxError` {{domxref("DOMException")}}
-  - : Thrown if the provided `keyPath` is not a <a href="https://www.w3.org/TR/IndexedDB/#dfn-valid-key-path">valid key path</a>.
+  - : Thrown if the provided `keyPath` is not a [valid key path](https://w3c.github.io/IndexedDB/#valid-key-path).
 - `TransactionInactiveError` {{domxref("DOMException")}}
   - : Thrown if the transaction this {{domxref("IDBObjectStore")}}
-    belongs to is not active (e.g. has been deleted or removed.) In Firefox
+    belongs to is not active (e.g., has been deleted or removed.) In Firefox
     previous to version 41, an `InvalidStateError` was raised in
     this case as well, which was misleading; this has now been fixed (see
     [Firefox bug 1176165](https://bugzil.la/1176165).)

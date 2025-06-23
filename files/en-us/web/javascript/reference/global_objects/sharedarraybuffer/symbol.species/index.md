@@ -1,5 +1,6 @@
 ---
 title: SharedArrayBuffer[Symbol.species]
+short-title: "[Symbol.species]"
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Symbol.species
 page-type: javascript-static-accessor-property
 browser-compat: javascript.builtins.SharedArrayBuffer.@@species
@@ -39,7 +40,7 @@ Because of this polymorphic implementation, `[Symbol.species]` of derived subcla
 
 ```js
 class SubArrayBuffer extends SharedArrayBuffer {}
-SubArrayBuffer[Symbol.species] === SharedArrayBuffer; // true
+SubArrayBuffer[Symbol.species] === SubArrayBuffer; // true
 ```
 
 When calling array buffer methods that do not mutate the existing array but return a new array buffer instance (for example, [`slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice)), the array's `constructor[Symbol.species]` will be accessed. The returned constructor will be used to construct the return value of the array buffer method.

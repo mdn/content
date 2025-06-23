@@ -1,5 +1,6 @@
 ---
 title: Map.prototype[Symbol.iterator]()
+short-title: "[Symbol.iterator]()"
 slug: Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Map.@@iterator
@@ -11,7 +12,22 @@ The **`[Symbol.iterator]()`** method of {{jsxref("Map")}} instances implements t
 
 The initial value of this property is the same function object as the initial value of the {{jsxref("Map.prototype.entries")}} property.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-@@iterator.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype[Symbol.iterator]()")}}
+
+```js interactive-example
+const map1 = new Map();
+
+map1.set("0", "foo");
+map1.set(1, "bar");
+
+const iterator1 = map1[Symbol.iterator]();
+
+for (const item of iterator1) {
+  console.log(item);
+}
+// Expected output: Array ["0", "foo"]
+// Expected output: Array [1, "bar"]
+```
 
 ## Syntax
 

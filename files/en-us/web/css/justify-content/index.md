@@ -11,7 +11,55 @@ The [CSS](/en-US/docs/Web/CSS) **`justify-content`** property defines how the br
 
 The interactive example below demonstrates some `justify-content` values using grid layout.
 
-{{EmbedInteractiveExample("pages/css/justify-content.html")}}
+{{InteractiveExample("CSS Demo: justify-content")}}
+
+```css interactive-example-choice
+justify-content: start;
+```
+
+```css interactive-example-choice
+justify-content: center;
+```
+
+```css interactive-example-choice
+justify-content: space-between;
+```
+
+```css interactive-example-choice
+justify-content: space-around;
+```
+
+```css interactive-example-choice
+justify-content: space-evenly;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  width: 220px;
+  display: grid;
+  grid-template-columns: 60px 60px;
+  grid-auto-rows: 40px;
+  row-gap: 10px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 ## Syntax
 
@@ -34,7 +82,7 @@ justify-content: space-around;
 justify-content: space-evenly;
 justify-content: stretch;
 
-/* Overflow alignment */
+/* Overflow alignment (for positional alignment only)*/
 justify-content: safe center;
 justify-content: unsafe center;
 
@@ -58,12 +106,12 @@ justify-content: unset;
 
 - `flex-start`
 
-  - : The items are packed flush to each other toward the edge of the alignment container depending on the flex container's main-start side.
+  - : The items are packed flush to each other toward the start edge of the alignment container on the flex container's main-start side.
     This only applies to flex layout items. For items that are not children of a flex container, this value is treated like `start`.
 
 - `flex-end`
 
-  - : The items are packed flush to each other toward the edge of the alignment container depending on the flex container's main-end side.
+  - : The items are packed flush to each other at the end edge of the alignment container on the flex container's main-end side.
     This only applies to flex layout items. For items that are not children of a flex container, this value is treated like `end`.
 
 - `center`
@@ -72,7 +120,7 @@ justify-content: unset;
 
 - `left`
 
-  - : The items are packed flush with each other toward the left edge of the alignment container. When the property's horizontal axis is not parallel with the inline axis, such as when [`flex-direction: column;`](/en-US/docs/Web/CSS/flex-direction) is set, this value behaves like `start`.
+  - : The items are packed flush to each other toward the left edge of the alignment container. When the property's horizontal axis is not parallel with the inline axis, such as when [`flex-direction: column;`](/en-US/docs/Web/CSS/flex-direction) is set, this value behaves like `start`.
 
 - `right`
 
@@ -393,5 +441,5 @@ Select different keywords from the drop-down menu to visualize the different `ju
 
 - [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
 - [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-- [Box alignment in CSS grid layouts](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+- [Box alignment in grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
 - [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module

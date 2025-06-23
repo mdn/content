@@ -92,7 +92,7 @@ Here we look at how the runtime functions in slightly more detail.
 
 ### Event loops
 
-Each agent is driven by an [event loop](/en-US/docs/Web/JavaScript/Event_loop), which is repeatedly processed. During each iteration, it runs at most one pending JavaScript task, then any pending microtasks, then performs any needed rendering and painting before looping again.
+Each agent is driven by an [event loop](/en-US/docs/Web/JavaScript/Reference/Execution_model), which is repeatedly processed. During each iteration, it runs at most one pending JavaScript task, then any pending microtasks, then performs any needed rendering and painting before looping again.
 
 Your website or app's code runs in the same **{{Glossary("thread")}}**, sharing the same **event loop**, as the user interface of the web browser itself. This is the **{{Glossary("main thread")}}**, and in addition to running your site's main code body, it handles receiving and dispatching user and other events, rendering and painting web content, and so forth.
 
@@ -136,7 +136,7 @@ When multiple programs and multiple code objects within those programs start to 
 
 The use of [web workers](/en-US/docs/Web/API/Web_Workers_API), which allow the main script to run other scripts in new threads, help to alleviate this problem. A well-designed website or app uses workers to perform any complex or lengthy operations, leaving the main thread to do as little work as possible beyond updating, laying out, and rendering the web page.
 
-This is further alleviated by using [asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous) techniques such as {{jsxref("Global_Objects/Promise", "promises", "", 1)}} to allow the main code to continue to run while waiting for the results of a request. However, code running at a more fundamental level—such as code comprising a library or framework—may need a way to schedule code to be run at a safe time while still executing on the main thread, independent of the results of any single request or task.
+This is further alleviated by using [asynchronous JavaScript](/en-US/docs/Learn_web_development/Extensions/Async_JS) techniques such as {{jsxref("Global_Objects/Promise", "promises", "", 1)}} to allow the main code to continue to run while waiting for the results of a request. However, code running at a more fundamental level—such as code comprising a library or framework—may need a way to schedule code to be run at a safe time while still executing on the main thread, independent of the results of any single request or task.
 
 Microtasks are another solution to this problem, providing a finer degree of access by making it possible to schedule code to run before the next iteration of the event loop begins, instead of having to wait until the next one.
 
@@ -146,8 +146,7 @@ The microtask queue has been around for a while, but it's historically been used
 
 - [Microtask guide](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide)
 - {{domxref("Window.queueMicrotask()")}}
-- [The Event Loop](/en-US/docs/Web/JavaScript/Event_loop)
-- [Asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous)
-  - [Introducing asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing)
-  - [Cooperative asynchronous JavaScript: Timeouts and intervals](/en-US/docs/Learn/JavaScript/Asynchronous)
-  - [Graceful asynchronous programming with Promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises)
+- [The Event Loop](/en-US/docs/Web/JavaScript/Reference/Execution_model)
+- [Asynchronous JavaScript](/en-US/docs/Learn_web_development/Extensions/Async_JS)
+  - [Introducing asynchronous JavaScript](/en-US/docs/Learn_web_development/Extensions/Async_JS/Introducing)
+  - [Graceful asynchronous programming with Promises](/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises)

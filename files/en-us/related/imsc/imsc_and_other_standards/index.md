@@ -8,15 +8,15 @@ IMSC is the result of an international effort to bring together popular profiles
 
 ## IMSC spec genealogy
 
-[TTML Profiles for Internet Media Subtitles and Captions](https://www.w3.org/TR/ttml-imsc/all/) (or IMSC) is a constrained version of the Timed Text Markup Language for worldwide subtitles and captions family of specifications.
+[TTML Profiles for Internet Media Subtitles and Captions](https://w3c.github.io/imsc/imsc1/spec/ttml-ww-profiles.html) (or IMSC) is a constrained version of the Timed Text Markup Language for worldwide subtitles and captions family of specifications.
 
-IMSC was designed to be a practical application of SMPTE-TT ([SMPTE ST 2052-1](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7291854)), which is designated as a safe-harbor format by the [FCC](https://www.law.cornell.edu/cfr/text/47/79.103). As a result, most SMPTE-TT documents should render correctly using IMSC renderers (see [the limitations](https://www.w3.org/TR/ttml-imsc1.0.1/#smpte-tt-smpte-st-2052-1)), and the conversion guidelines from CTA 608/708 to SMPTE-TT ([SMPTE RP 2052-10](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7289645) and [SMPTE RP 2052-11](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7290363)) are also applicable to IMSC.
+IMSC was designed to be a practical application of SMPTE-TT ([SMPTE ST 2052-1](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7291854)), which is designated as a safe-harbor format by the [FCC](https://www.law.cornell.edu/cfr/text/47/79.103). As a result, most SMPTE-TT documents should render correctly using IMSC renderers (see [the limitations](https://w3c.github.io/imsc/imsc1/spec/ttml-ww-profiles.html#smpte-tt-smpte-st-2052-1)), and the conversion guidelines from CTA 608/708 to SMPTE-TT ([SMPTE RP 2052-10](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7289645) and [SMPTE RP 2052-11](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7290363)) are also applicable to IMSC.
 
-IMSC is also a syntactic superset of both [SDP-US](https://www.w3.org/TR/ttml10-sdp-us/) and [EBU-TT-D](https://tech.ebu.ch/publications/tech3380), such that documents that conform to either of these two formats are valid IMSC documents and can be rendered by IMSC renderers — see [Compatibility with other TTML-based specifications](https://www.w3.org/TR/2018/REC-ttml-imsc1.0.1-20180424/#interop-examples) for more details.
+IMSC is also a syntactic superset of both [SDP-US](https://www.w3.org/TR/ttml10-sdp-us/) and [EBU-TT-D](https://tech.ebu.ch/publications/tech3380), such that documents that conform to either of these two formats are valid IMSC documents and can be rendered by IMSC renderers — see [Compatibility with other TTML-based specifications](https://w3c.github.io/imsc/imsc1/spec/ttml-ww-profiles.html#interop-examples) for more details.
 
-IMSC traces its origins to the CFF-TT format, and [CFF-TT documents](https://www.w3.org/TR/ttml-imsc1.1/#cff-tt) can be converted to IMSC relatively easily.
+IMSC traces its origins to the CFF-TT format, and [CFF-TT documents](https://w3c.github.io/imsc/imsc1/spec/ttml-ww-profiles.html#cff-tt) can be converted to IMSC relatively easily.
 
-IMSC is unrelated to [WebVTT](https://www.w3.org/TR/webvtt1/), and does not use the same syntax. [Basic conversion guidelines](https://www.w3.org/TR/webvtt1/) exist.
+IMSC is unrelated to [WebVTT](https://w3c.github.io/webvtt/), and does not use the same syntax.
 
 ## Active IMSC versions
 

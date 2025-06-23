@@ -1,5 +1,6 @@
 ---
 title: Number.prototype.toFixed()
+short-title: toFixed()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toFixed
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Number.toFixed
@@ -9,7 +10,22 @@ browser-compat: javascript.builtins.Number.toFixed
 
 The **`toFixed()`** method of {{jsxref("Number")}} values returns a string representing this number using [fixed-point notation](https://en.wikipedia.org/wiki/Fixed-point_arithmetic) with the specified number of decimal places.
 
-{{EmbedInteractiveExample("pages/js/number-tofixed.html")}}
+{{InteractiveExample("JavaScript Demo: Number.toFixed()")}}
+
+```js interactive-example
+function financial(x) {
+  return Number.parseFloat(x).toFixed(2);
+}
+
+console.log(financial(123.456));
+// Expected output: "123.46"
+
+console.log(financial(0.004));
+// Expected output: "0.00"
+
+console.log(financial("1.23e+5"));
+// Expected output: "123000.00"
+```
 
 ## Syntax
 
@@ -74,7 +90,7 @@ numObj.toFixed(6); // '12345.678900'; additional zeros
 // it rounds up as it's less than Number.EPSILON away from 2.45.
 // This literal actually encodes the same number value as 2.45
 
-(6.02 * 10 ** 23).toFixed(50); // 6.019999999999999e+23; large numbers still use exponential notation
+(6.02 * 10 ** 23).toFixed(50); // '6.019999999999999e+23'; large numbers still use exponential notation
 ```
 
 ### Using toFixed() with negative numbers
@@ -82,7 +98,7 @@ numObj.toFixed(6); // '12345.678900'; additional zeros
 Because member access has higher [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence) than unary minus, you need to group the negative number expression to get a string.
 
 ```js-nolint
--2.34.toFixed(1); // -2.3, a number
+-2.34.toFixed(1); // -2.3; a number
 (-2.34).toFixed(1); // '-2.3'
 ```
 

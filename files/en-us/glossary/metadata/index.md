@@ -10,6 +10,6 @@ page-type: glossary-definition
 
 ## See also
 
-- [Learn: metadata](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#metadata_the_meta_element)
+- [Learn: metadata](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#metadata_the_meta_element)
 - [metadata](https://en.wikipedia.org/wiki/Metadata) on Wikipedia
 - The {{htmlelement("meta")}} element on MDN

@@ -3,12 +3,10 @@ title: "HTMLElement: autocorrect property"
 short-title: autocorrect
 slug: Web/API/HTMLElement/autocorrect
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.HTMLElement.autocorrect
 ---
 
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+{{APIRef("HTML DOM")}}
 
 The **`autocorrect`** property of the {{domxref("HTMLElement")}} interface controls whether or not autocorrection of editable text is enabled for spelling and/or punctuation errors.
 
@@ -16,7 +14,7 @@ The specific autocorrection behavior, including which words are substituted, dep
 For example, on macOS a user agent might rely on [registered replacement text and punctuation](https://support.apple.com/en-vn/guide/mac-help/mh35735/mac).
 Other devices and browsers may use a different approach.
 
-The property reflects the value of the [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) HTML global attribute.
+The property reflects the value of the [`autocorrect`](/en-US/docs/Web/HTML/Reference/Global_attributes/autocorrect) HTML global attribute.
 
 ## Value
 
@@ -30,7 +28,7 @@ This example shows how you can enable and disable autocorrection.
 
 #### HTML
 
-The HTML markup defines a toggle button and an {{htmlelement("input")}} element of [`type="search"`](/en-US/docs/Web/HTML/Element/input/search).
+The HTML markup defines a toggle button and an {{htmlelement("input")}} element of [`type="search"`](/en-US/docs/Web/HTML/Reference/Elements/input/search).
 Note that if auto-correction is supported, it will be enabled by default.
 
 ```html
@@ -108,4 +106,4 @@ When the autocorrect is enabled, and if the implementation has the appropriate s
 
 ## See also
 
-- [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes/autocapitalize) HTML global attribute
+- [`autocapitalize`](/en-US/docs/Web/HTML/Reference/Global_attributes/autocapitalize) HTML global attribute

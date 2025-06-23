@@ -1,5 +1,6 @@
 ---
 title: Reflect.getOwnPropertyDescriptor()
+short-title: getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/getOwnPropertyDescriptor
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.getOwnPropertyDescriptor
@@ -9,7 +10,22 @@ browser-compat: javascript.builtins.Reflect.getOwnPropertyDescriptor
 
 The **`Reflect.getOwnPropertyDescriptor()`** static method is like {{jsxref("Object.getOwnPropertyDescriptor()")}}. It returns a property descriptor of the given property if it exists on the object, {{jsxref("undefined")}} otherwise.
 
-{{EmbedInteractiveExample("pages/js/reflect-getownpropertydescriptor.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.getOwnPropertyDescriptor()")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+console.log(Reflect.getOwnPropertyDescriptor(object1, "property1").value);
+// Expected output: 42
+
+console.log(Reflect.getOwnPropertyDescriptor(object1, "property2"));
+// Expected output: undefined
+
+console.log(Reflect.getOwnPropertyDescriptor(object1, "property1").writable);
+// Expected output: true
+```
 
 ## Syntax
 

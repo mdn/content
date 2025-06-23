@@ -7,7 +7,7 @@ browser-compat: css.at-rules.scope
 
 {{CSSRef}}
 
-The **`@scope`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) enables you to select elements in specific DOM subtrees, targeting elements precisely without writing overly-specific selectors that are hard to override, and without coupling your selectors too tightly to the DOM structure.
+The **`@scope`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) enables you to select elements in specific DOM subtrees, targeting elements precisely without writing overly-specific selectors that are hard to override, and without coupling your selectors too tightly to the DOM structure.
 
 In JavaScript, `@scope` can be accessed via the CSS object model interface {{DOMxRef("CSSScopeRule")}}.
 
@@ -19,7 +19,7 @@ The `@scope` at-rule contains one or more rulesets (termed **scoped style rules*
 
    ```css
    @scope (scope root) to (scope limit) {
-     rulesets
+     /* … */
    }
    ```
 
@@ -29,17 +29,19 @@ The `@scope` at-rule contains one or more rulesets (termed **scoped style rules*
    <parent-element>
      <style>
        @scope {
-         rulesets
+         /* rulesets */
        }
      </style>
    </parent-element>
    ```
 
+   It is also possible to combine an inline `@scope` with a scope limit selector, as in `@scope to (scope limit) { ... }`.
+
 ## Description
 
 A complex web document might include components such as headers, footers, news articles, maps, media players, ads, and others. As complexity increases, effectively managing the styling for these components becomes more of a concern, and effective scoping of styles helps us manage this complexity. Let's consider the following DOM tree:
 
-```plain-nolint
+```plain
 body
 └─ article.feature
    ├─ section.article-hero
@@ -80,6 +82,8 @@ The `.article-body` scope root selector defines the upper bound of the DOM tree 
 
 > [!NOTE]
 > This kind of scoping — with an upper and lower bound — is commonly referred to as a **donut scope**.
+
+The scope's upper bound is inclusive and its lower bound is exclusive. To change this behavior, you can combine either selector with a universal child selector. For example, `@scope (scope root) to (scope limit > *)` would make both bounds inclusive, `@scope (scope root > *) to (scope limit)` would make both bounds exclusive, while `@scope (scope root > *) to (scope limit > *)` would give an exclusive upper bound and an inclusive lower bound.
 
 If you want to select all images inside a `<section>` with a class of `article-body`, you can omit the scope limit:
 
@@ -132,11 +136,17 @@ The three rules in the following block are all equivalent in what they select:
 
 ```css
 @scope (.feature) {
-  img { ... }
+  img {
+    /* … */
+  }
 
-  :scope img { ... }
+  :scope img {
+    /* … */
+  }
 
-  & img { ... }
+  & img {
+    /* … */
+  }
 }
 ```
 
@@ -146,14 +156,18 @@ The three rules in the following block are all equivalent in what they select:
 
   ```css
   /* figure is only a limit when it is a direct child of the :scope */
-  @scope (.article-body) to (:scope > figure) { ... }
+  @scope (.article-body) to (:scope > figure) {
+    /* … */
+  }
   ```
 
 - A scope limit can reference elements outside the scope root using `:scope`. For example:
 
   ```css
   /* figure is only a limit when the :scope is inside .feature */
-  @scope (.article-body) to (.feature :scope figure) { ... }
+  @scope (.article-body) to (.feature :scope figure) {
+    /* … */
+  }
   ```
 
 - Scoped style rules can't escape the subtree. Selections like `:scope + p` are invalid because that selection would be outside the subtree.
@@ -176,7 +190,9 @@ Including a ruleset inside a `@scope` block does not affect the specificity of i
 ```css
 @scope (.article-body) {
   /* img has a specificity of 0-0-1, as expected */
-  img { ... }
+  img {
+    /* … */
+  }
 }
 ```
 
@@ -185,7 +201,9 @@ However, if you decide to explicitly prepend the `:scope` pseudo-class to your s
 ```css
 @scope (.article-body) {
   /* :scope img has a specificity of 0-1-0 + 0-0-1 = 0-1-1 */
-  :scope img { ... }
+  :scope img {
+    /* … */
+  }
 }
 ```
 
@@ -193,7 +211,9 @@ When using the `&` selector inside a `@scope` block, `&` represents the scope ro
 
 ```css
 @scope (figure, #primary) {
-  & img { ... }
+  & img {
+    /* … */
+  }
 }
 ```
 
@@ -206,10 +226,14 @@ When using the `&` selector inside a `@scope` block, `&` represents the scope ro
 ```css
 @scope (.feature) {
   /* Selects a .feature inside the matched root .feature */
-  & & { ... }
+  & & {
+    /* … */
+  }
 
   /* Doesn't work */
-  :scope :scope { ... }
+  :scope :scope {
+    /* … */
+  }
 }
 ```
 
@@ -278,7 +302,7 @@ To fix this, you can use `@scope` as follows:
 Now the innermost paragraph is correctly colored black. This is because it is only one DOM tree hierarchy level away from the `.light-theme` scope root, but two levels away from the `.dark-theme` scope root. Therefore, the light style wins.
 
 > [!NOTE]
-> Scoping proximity overrules source order but is itself overridden by other, higher-priority criteria such as [importance](/en-US/docs/Web/CSS/important), [layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers), and [specificity](/en-US/docs/Web/CSS/Specificity).
+> Scoping proximity overrules source order but is itself overridden by other, higher-priority criteria such as [importance](/en-US/docs/Web/CSS/important), [layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers), and [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity).
 
 ## Formal syntax
 
@@ -423,8 +447,8 @@ img {
 
 In our CSS, we have two `@scope` blocks:
 
-- The first `@scope` block defines its scope root as elements with a class of `.feature` (in this case, the outer `<div>` only), demonstrating how `@scope` can be used to theme a specific HTML subset.
-- The second `@scope` block also defines its scope root as elements with a class of `.feature`, but in addition defines a scope limit of `figure`. This ensures that contained rulesets will only be applied to matching elements within the scope root (`<div class="figure"> ... </div>` in this case) that **are not** nested inside descendant `<figure>` elements. This `@scope` block contains a single ruleset that styles `<img>` elements with a thick black border and a golden background color.
+- The first `@scope` block defines its scope root as elements with a class of `.feature` (in this case, the outer `<article>` only), demonstrating how `@scope` can be used to theme a specific HTML subset.
+- The second `@scope` block also defines its scope root as elements with a class of `.feature`, but also defines a scope limit of `figure`. This ensures that contained rulesets will only be applied to matching elements within the scope root (`<article class="feature"> ... </article>` in this case) that **are not** nested inside descendant `<figure>` elements. This `@scope` block contains a single ruleset that styles `<img>` elements with a thick black border and a golden background color.
 
 ```css
 /* Scoped CSS */

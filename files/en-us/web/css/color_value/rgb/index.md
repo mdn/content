@@ -15,7 +15,37 @@ spec-urls:
 
 The **`rgb()`** functional notation expresses a color in the {{glossary("RGB", "sRGB")}} {{glossary("color space")}} according to its red, green, and blue components. An optional alpha component represents the color's transparency.
 
-{{EmbedInteractiveExample("pages/css/function-rgb.html")}}
+{{InteractiveExample("CSS Demo: rgb()")}}
+
+```css interactive-example-choice
+background: rgb(31 120 50);
+```
+
+```css interactive-example-choice
+background: rgb(30% 20% 50%);
+```
+
+```css interactive-example-choice
+background: rgb(255 122 127 / 80%);
+```
+
+```css interactive-example-choice
+background: rgb(255 122 127 / 0.2);
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-width: 100%;
+  min-height: 100%;
+  padding: 10%;
+}
+```
 
 ## Syntax
 
@@ -120,7 +150,7 @@ This example:
 The final output color is the equivalent of `rgb(255 80 80)` in the sRGB color space — `color(srgb 1 0.313726 0.313726)`.
 
 > [!NOTE]
-> As mentioned above, if the output color is using a different color model to the origin color, the origin color is converted to the same model or space as the output color in the background so that it can be represented in a way that is compatible (i.e. using the same channels).
+> As mentioned above, if the output color is using a different color model to the origin color, the origin color is converted to the same model or space as the output color in the background so that it can be represented in a way that is compatible (i.e., using the same channels).
 
 In the examples we've seen so far in this section, the alpha channels have not been explicitly specified for either the origin or output colors. When the output color alpha channel is not specified, it defaults to the same value as the origin color alpha channel. When the origin color alpha channel is not specified (and it is not a relative color), it defaults to `1`. Therefore, the origin and output alpha channel values are `1` for the above examples.
 
@@ -143,9 +173,9 @@ rgb(from hsl(0 100% 50%) calc(r/2) calc(g + 25) calc(b + 175) / calc(alpha - 0.1
 > [!NOTE]
 > Because the origin color channel values are resolved to `<number>` values, you have to add numbers to them when using them in calculations, even in cases where a channel would normally accept `<percentage>`, `<angle>`, or other value types. Adding a `<percentage>` to a `<number>`, for example, doesn't work.
 
-### Formal syntax
+## Formal syntax
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Examples
 

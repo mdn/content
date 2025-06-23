@@ -15,7 +15,7 @@ The **`updateInkTrailStartPoint()`** method of the {{domxref("DelegatedInkTrailP
 ## Syntax
 
 ```js-nolint
-requestPresenter(event, style)
+updateInkTrailStartPoint(event, style)
 ```
 
 ### Parameters
@@ -90,7 +90,7 @@ canvas.addEventListener("pointermove", async (evt) => {
   const pointSize = 10;
   ctx.fillStyle = style.color;
   ctx.fillRect(evt.pageX, evt.pageY, pointSize, pointSize);
-  if (move_cnt == 20) {
+  if (move_cnt === 20) {
     const r = getRandomInt(0, 255);
     const g = getRandomInt(0, 255);
     const b = getRandomInt(0, 255);

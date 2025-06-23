@@ -28,7 +28,7 @@ JavaScript allows trailing commas wherever a comma-separated list of values is a
 
 In all these cases, the trailing comma is entirely optional and doesn't change the program's semantics in any way.
 
-It is particular useful when adding, removing, or reordering items in a list that spans multiple lines, because it reduces the number of lines that need to be changed, which helps with both editing and reviewing the diff.
+It is particularly useful when adding, removing, or reordering items in a list that spans multiple lines, because it reduces the number of lines that need to be changed, which helps with both editing and reviewing the diff.
 
 ```diff
   [
@@ -45,7 +45,7 @@ It is particular useful when adding, removing, or reordering items in a list tha
 
 #### Arrays
 
-JavaScript ignores trailing commas in arrays literals:
+JavaScript ignores trailing commas in array literals:
 
 ```js-nolint
 const arr = [
@@ -134,7 +134,7 @@ function f(...p,) {} // SyntaxError: parameter after rest parameter
 
 ### Trailing commas in destructuring
 
-A trailing comma is also allowed on the left-hand side when using [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment):
+A trailing comma is also allowed within a [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) pattern:
 
 ```js-nolint
 // array destructuring with trailing comma
@@ -148,7 +148,7 @@ const o = {
 const { p, q, } = o;
 ```
 
-Again, when using a rest element, a {{jsxref("SyntaxError")}} will be thrown:
+However, a trailing comma is not allowed after the rest element, if present
 
 ```js-nolint example-bad
 const [a, ...b,] = [1, 2, 3];

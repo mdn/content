@@ -85,7 +85,7 @@ canvas.addEventListener("pointermove", async (evt) => {
   const pointSize = 10;
   ctx.fillStyle = style.color;
   ctx.fillRect(evt.pageX, evt.pageY, pointSize, pointSize);
-  if (move_cnt == 20) {
+  if (move_cnt === 20) {
     const r = getRandomInt(0, 255);
     const g = getRandomInt(0, 255);
     const b = getRandomInt(0, 255);
@@ -96,7 +96,7 @@ canvas.addEventListener("pointermove", async (evt) => {
       `rgb(${r} ${g} ${b} / 60%)`;
   }
   move_cnt += 1;
-  await presenter.updateInkTrailStartPoint(evt, style);
+  (await presenter).updateInkTrailStartPoint(evt, style);
 });
 
 window.addEventListener("pointerdown", () => {

@@ -10,7 +10,12 @@ browser-compat: api.HTMLButtonElement.popoverTargetElement
 
 The **`popoverTargetElement`** property of the {{domxref("HTMLButtonElement")}} interface gets and sets the popover element to control via a button.
 
-It is the JavaScript equivalent of the [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) HTML attribute.
+It is the JavaScript equivalent of the [`popovertarget`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget) HTML attribute.
+
+Establishing a relationship between a popover and its invoker button using the `popoverTargetElement` property has two additional useful effects:
+
+- The browser creates an implicit [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) and [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) relationship between popover and invoker, and places the popover in a logical position in the keyboard focus navigation order when shown. This makes the popover more accessible to keyboard and assistive technology (AT) users (see also [Popover accessibility features](/en-US/docs/Web/API/Popover_API/Using#popover_accessibility_features)).
+- The browser creates an implicit anchor reference between the two, making it very convenient to position popovers relative to their controls using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). See [Popover anchor positioning](/en-US/docs/Web/API/Popover_API/Using#popover_anchor_positioning) for more details.
 
 ## Value
 
@@ -24,7 +29,7 @@ This example shows the basic use of the popover API, setting a `<div>` element a
 The `popover` attribute is set to [`"manual"`](/en-US/docs/Web/API/Popover_API/Using#using_manual_popover_state), so the popover must be closed using a button, and not "light dismissed" by selecting outside the popover area.
 
 First we define an HTML `<button>` element that we will use to show and hide the popover, and a `<div>` that will be the popover.
-In this case we don't set the [`popovertargetaction`](/en-US/docs/Web/HTML/Element/button#popovertargetaction) HTML attribute on the `<button>` or the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute on the `<div>`, as we will be doing so programmatically.
+In this case we don't set the [`popovertargetaction`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertargetaction) HTML attribute on the `<button>` or the [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) attribute on the `<div>`, as we will be doing so programmatically.
 
 ```html
 <button id="toggleBtn">Toggle popover</button>
@@ -40,7 +45,7 @@ const toggleBtn = document.getElementById("toggleBtn");
 
 // Check for popover API support.
 function supportsPopover() {
-  return HTMLElement.prototype.hasOwnProperty("popover");
+  return Object.hasOwn(HTMLElement.prototype, "popover");
 }
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: "::-webkit-meter-bar"
+title: ::-webkit-meter-bar
 slug: Web/CSS/::-webkit-meter-bar
 page-type: css-pseudo-element
 status:
@@ -19,10 +19,6 @@ The **`::-webkit-meter-bar`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US
   /* ... */
 }
 ```
-
-## Specifications
-
-Not part of any standard.
 
 ## Examples
 
@@ -79,6 +75,10 @@ if (is_safari) {
 ### Result
 
 {{ EmbedLiveSample('Examples') }}
+
+## Specifications
+
+Not part of any standard.
 
 ## Browser compatibility
 

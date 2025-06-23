@@ -1,5 +1,5 @@
 ---
-title: ":placeholder-shown"
+title: :placeholder-shown
 slug: Web/CSS/:placeholder-shown
 page-type: css-pseudo-class
 browser-compat: css.selectors.placeholder-shown
@@ -7,9 +7,40 @@ browser-compat: css.selectors.placeholder-shown
 
 {{CSSRef}}
 
-The **`:placeholder-shown`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element that is currently displaying [placeholder text](/en-US/docs/Web/HTML/Element/input#placeholder).
+The **`:placeholder-shown`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element that is currently displaying [placeholder text](/en-US/docs/Web/HTML/Reference/Elements/input#placeholder).
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-placeholder-shown.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :placeholder-shown", "tabbed-shorter")}}
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+input:placeholder-shown {
+  background-color: ivory;
+  border: 2px solid darkorange;
+  border-radius: 5px;
+}
+```
+
+```html interactive-example
+<form>
+  <label for="name">Full Name:</label>
+  <input id="name" name="name" type="text" />
+
+  <label for="email">Email Address:</label>
+  <input id="email" name="email" type="email" placeholder="name@example.com" />
+
+  <label for="age">Your age:</label>
+  <input
+    id="age"
+    name="age"
+    type="number"
+    value="18"
+    placeholder="You must be 18+" />
+</form>
+```
 
 ## Syntax
 
@@ -134,4 +165,4 @@ input.student-id:placeholder-shown {
 
 - The {{CSSxRef("::placeholder")}} pseudo-element styles the placeholder _itself_.
 - Related HTML elements: {{HTMLElement("input")}}, {{HTMLElement("textarea")}}
-- [HTML forms](/en-US/docs/Learn/Forms)
+- [HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms)

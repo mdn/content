@@ -41,14 +41,19 @@ Besides the generic `Error` constructor, there are other core error constructors
 - {{jsxref("Error/Error", "Error()")}}
   - : Creates a new `Error` object.
 
+## Static properties
+
+- {{jsxref("Error.stackTraceLimit")}} {{non-standard_inline}}
+  - : A non-standard numerical property that limits how many stack frames to include in an error stack trace.
+
 ## Static methods
 
-- `Error.captureStackTrace()` {{non-standard_inline}}
-  - : A non-standard V8 function that creates the {{jsxref("Error/stack", "stack")}} property on an Error instance.
-- `Error.stackTraceLimit` {{non-standard_inline}}
-  - : A non-standard V8 numerical property that limits how many stack frames to include in an error stacktrace.
+- {{jsxref("Error.captureStackTrace()")}}
+  - : A non-standard function that creates the {{jsxref("Error/stack", "stack")}} property on the provided object.
+- {{jsxref("Error.isError()")}}
+  - : Returns `true` if the argument is an error, or `false` otherwise.
 - `Error.prepareStackTrace()` {{non-standard_inline}} {{optional_inline}}
-  - : A non-standard V8 function that, if provided by user code, is called by the V8 JavaScript engine for thrown exceptions, allowing the user to provide custom formatting for stacktraces.
+  - : A non-standard function that, if provided by user code, is called by the JavaScript engine for thrown exceptions, allowing the user to provide custom formatting for stack traces. See the [V8 Stack Trace API](https://v8.dev/docs/stack-trace-api#customizing-stack-traces) docs.
 
 ## Instance properties
 
@@ -117,7 +122,7 @@ try {
 
 ### Differentiate between similar errors
 
-Sometimes a block of code can fail for reasons that require different handling, but which throw very similar errors (i.e. with the same type and message).
+Sometimes a block of code can fail for reasons that require different handling, but which throw very similar errors (i.e., with the same type and message).
 
 If you don't have control over the original errors that are thrown, one option is to catch them and throw new `Error` objects that have more specific messages.
 The original error should be passed to the new `Error` in the constructor's [`options`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error#options) parameter as its `cause` property. This ensures that the original error and stack trace are available to higher-level try/catch blocks.
@@ -187,7 +192,7 @@ class CustomError extends Error {
     // Pass remaining arguments (including vendor specific ones) to parent constructor
     super(...params);
 
-    // Maintains proper stack trace for where our error was thrown (only available on V8)
+    // Maintains proper stack trace for where our error was thrown (non-standard)
     if (Error.captureStackTrace) {
       Error.captureStackTrace(this, CustomError);
     }
@@ -205,7 +210,7 @@ try {
   console.error(e.name); // CustomError
   console.error(e.foo); // baz
   console.error(e.message); // bazMessage
-  console.error(e.stack); // stacktrace
+  console.error(e.stack); // stack trace
 }
 ```
 
@@ -220,6 +225,7 @@ try {
 ## See also
 
 - [Polyfill of `Error` with `cause` support in `core-js`](https://github.com/zloirock/core-js#ecmascript-error)
+- [es-shims polyfill of Error `cause`](https://www.npmjs.com/package/error-cause)
 - {{jsxref("Statements/throw", "throw")}}
 - {{jsxref("Statements/try...catch", "try...catch")}}
 - [Stack trace API](https://v8.dev/docs/stack-trace-api) in the V8 docs

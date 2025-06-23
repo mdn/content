@@ -60,7 +60,7 @@ Any newline characters inserted in the source are part of the template literal.
 Using normal strings, you would have to use the following syntax in order to get multi-line strings:
 
 ```js
-console.log("string text line 1\n" + "string text line 2");
+console.log("string text line 1\nstring text line 2");
 // "string text line 1
 // string text line 2"
 ```
@@ -84,7 +84,7 @@ string text line 2`);
 
 ### String interpolation
 
-Without template literals, when you want to combine output from expressions with strings, you'd [concatenate them](/en-US/docs/Learn/JavaScript/First_steps/Strings#concatenation_using) using the [addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) `+`:
+Without template literals, when you want to combine output from expressions with strings, you'd [concatenate them](/en-US/docs/Learn_web_development/Core/Scripting/Strings#concatenation_using) using the [addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) `+`:
 
 ```js
 const a = 5;
@@ -287,7 +287,7 @@ Array.from(str).join(",");
 // "H,i,\\,n,5,!"
 ```
 
-`String.raw` functions like an "identity" tag if the literal doesn't contain any escape sequences. In case you want an actual identity tag that always works as if the literal is untagged, you can make a custom function that passes the "cooked" (i.e. escape sequences are processed) literal array to `String.raw`, pretending they are raw strings.
+`String.raw` functions like an "identity" tag if the literal doesn't contain any escape sequences. In case you want an actual identity tag that always works as if the literal is untagged, you can make a custom function that passes the "cooked" (i.e., escape sequences are processed) literal array to `String.raw`, pretending they are raw strings.
 
 ```js
 const identity = (strings, ...values) =>
@@ -366,7 +366,7 @@ const bad = `bad escape sequence: \unicode`;
 
 ## See also
 
-- [Text formatting](/en-US/docs/Web/JavaScript/Guide/Text_formatting) guide
+- [Numbers and strings](/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings) guide
 - {{jsxref("String")}}
 - {{jsxref("String.raw()")}}
 - [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)

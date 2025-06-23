@@ -1,5 +1,6 @@
 ---
 title: TypedArray.prototype.find()
+short-title: find()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/find
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.find
@@ -9,7 +10,18 @@ browser-compat: javascript.builtins.TypedArray.find
 
 The **`find()`** method of {{jsxref("TypedArray")}} instances returns the first element in the provided typed array that satisfies the provided testing function. If no values satisfy the testing function, {{jsxref("undefined")}} is returned. This method has the same algorithm as {{jsxref("Array.prototype.find()")}}.
 
-{{EmbedInteractiveExample("pages/js/typedarray-find.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.prototype.find()")}}
+
+```js interactive-example
+function isNegative(element, index, array) {
+  return element < 0;
+}
+
+const int8 = new Int8Array([10, 0, -10, 20, -30, 40, -50]);
+
+console.log(int8.find(isNegative));
+// Expected output: -10
+```
 
 ## Syntax
 
@@ -42,9 +54,9 @@ See {{jsxref("Array.prototype.find()")}} for more details. This method is not ge
 
 ## Examples
 
-### Find a prime number in a typed array
+### Find the first prime number in a typed array
 
-The following example finds an element in the typed array that is a prime number (or returns {{jsxref("undefined")}} if there is no prime number).
+The following example returns the first element in the typed array that is a prime number, or {{jsxref("undefined")}} if there is no prime number.
 
 ```js
 function isPrime(element, index, array) {

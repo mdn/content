@@ -1,5 +1,6 @@
 ---
 title: Set.prototype.isSubsetOf()
+short-title: isSubsetOf()
 slug: Web/JavaScript/Reference/Global_Objects/Set/isSubsetOf
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.isSubsetOf
@@ -86,6 +87,7 @@ console.log(set2.isSubsetOf(set1)); // true
 ## See also
 
 - [Polyfill of `Set.prototype.isSubsetOf` in `core-js`](https://github.com/zloirock/core-js#new-set-methods)
+- [es-shims polyfill of `Set.prototype.isSubsetOf`](https://www.npmjs.com/package/set.prototype.issubsetof)
 - {{jsxref("Set.prototype.difference()")}}
 - {{jsxref("Set.prototype.intersection()")}}
 - {{jsxref("Set.prototype.isDisjointFrom()")}}

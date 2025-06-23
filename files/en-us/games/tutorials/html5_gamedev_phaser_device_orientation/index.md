@@ -20,7 +20,7 @@ By the end of the tutorial you will have a fully functional demo game: [Cyber Or
 
 ## Starting with the project
 
-You can see [Cyber Orb source code](https://github.com/EnclaveGames/Cyber-Orb) on GitHub. The folder structure is quite straightforward: the starting point is the `index.html` file where we initialize the framework and set up an {{htmlelement("canvas")}} to render the game on.
+You can see [Cyber Orb source code](https://github.com/EnclaveGames/Cyber-Orb) on GitHub. The folder structure is quite straightforward: the starting point is the `index.html` file where we initialize the framework and set up a {{htmlelement("canvas")}} to render the game on.
 
 ![Screenshot of the GitHub repository with the Cyber Orb game code, listing the folders and the files in the main structure.](cyber-orb-github.png)
 
@@ -28,7 +28,7 @@ You can open the index file in your favorite browser to launch the game and try 
 
 - `img`: All the images that we will use in the game.
 - `src`: The JavaScript files with all the source code of the game defined inside.
-- `audio:` The sound files used in the game.
+- `audio`: The sound files used in the game.
 
 ## Setting up the Canvas
 
@@ -313,12 +313,16 @@ window.addEventListener("deviceorientation", this.handleOrientation, true);
 We're adding an event listener to the `"deviceorientation"` event and binding the `handleOrientation` function which looks like this:
 
 ```js
-handleOrientation(e) {
-  const x = e.gamma;
-  const y = e.beta;
-  Ball._player.body.velocity.x += x;
-  Ball._player.body.velocity.y += y;
-},
+Ball.Game.prototype = {
+  // …
+  handleOrientation(e) {
+    const x = e.gamma;
+    const y = e.beta;
+    Ball._player.body.velocity.x += x;
+    Ball._player.body.velocity.y += y;
+  },
+  // …
+};
 ```
 
 The more you tilt the device, the more force is applied to the ball, therefore the faster it moves (the velocity is higher).
@@ -363,8 +367,7 @@ for (let i = 0; i < this.maxLevels; i++) {
   const newLevel = this.add.group();
   newLevel.enableBody = true;
   newLevel.physicsBodyType = Phaser.Physics.ARCADE;
-  for (let e = 0; e < this.levelData[i].length; e++) {
-    const item = this.levelData[i][e];
+  for (const item of this.levelData[i]) {
     newLevel.create(item.x, item.y, `element-${item.t}`);
   }
   newLevel.setAll("body.immovable", true);
@@ -378,13 +381,17 @@ First, `add.group()` is used to create a new group of items. Then the `ARCADE` b
 The objects are stored in the `this.levels` array, which is by default invisible. To load specific levels, we make sure the previous levels are hidden, and show the current one:
 
 ```js
-showLevel(level) {
-  const lvl = level | this.level;
-  if (this.levels[lvl - 2]) {
-    this.levels[lvl - 2].visible = false;
-  }
-  this.levels[lvl - 1].visible = true;
-}
+Ball.Game.prototype = {
+  // …
+  showLevel(level) {
+    const lvl = level | this.level;
+    if (this.levels[lvl - 2]) {
+      this.levels[lvl - 2].visible = false;
+    }
+    this.levels[lvl - 1].visible = true;
+  },
+  // …
+};
 ```
 
 Thanks to that the game gives the player a challenge - now they have to roll the ball across the play area and guide it through the labyrinth built from the blocks. It's just an example of loading the levels, and there are only 5 of them just to showcase the idea, but you can work on expanding that on your own.
@@ -481,11 +488,15 @@ this.time.events.loop(Phaser.Timer.SECOND, this.updateCounter, this);
 This loop, also in the `create` function, will execute the `updateCounter` function every single second from the beginning of the game, so we can apply the changes accordingly. This is how the complete `updateCounter` function looks:
 
 ```js
-updateCounter() {
-  this.timer++;
-  this.timerText.setText(`Time: ${this.timer}`);
-  this.totalTimeText.setText(`Total time: ${this.totalTimer+this.timer}`);
-},
+Ball.Game.prototype = {
+  // …
+  updateCounter() {
+    this.timer++;
+    this.timerText.setText(`Time: ${this.timer}`);
+    this.totalTimeText.setText(`Total time: ${this.totalTimer + this.timer}`);
+  },
+  // …
+};
 ```
 
 As you can see we're incrementing the `this.timer` variable and updating the content of the text objects with the current values on each iteration, so the player sees the elapsed time.
@@ -501,26 +512,32 @@ this.physics.arcade.overlap(this.ball, this.hole, this.finishLevel, null, this);
 This works similarly to the `collide` method explained earlier. When the ball overlaps with the hole (instead of colliding), the `finishLevel` function is executed:
 
 ```js
-finishLevel() {
-  if (this.level >= this.maxLevels) {
-    this.totalTimer += this.timer;
-    alert(`Congratulations, game completed!\nTotal time of play: ${this.totalTimer} seconds!`);
-    this.game.state.start('MainMenu');
-  } else {
-    alert(`Congratulations, level ${this.level} completed!`);
-    this.totalTimer += this.timer;
-    this.timer = 0;
-    this.level++;
-    this.timerText.setText(`Time: ${this.timer}`);
-    this.totalTimeText.setText(`Total time: ${this.totalTimer}`);
-    this.levelText.setText(`Level: ${this.level} / ${this.maxLevels}`);
-    this.ball.body.x = this.ballStartPos.x;
-    this.ball.body.y = this.ballStartPos.y;
-    this.ball.body.velocity.x = 0;
-    this.ball.body.velocity.y = 0;
-    this.showLevel();
-  }
-},
+Ball.Game.prototype = {
+  // …
+  finishLevel() {
+    if (this.level >= this.maxLevels) {
+      this.totalTimer += this.timer;
+      alert(
+        `Congratulations, game completed!\nTotal time of play: ${this.totalTimer} seconds!`,
+      );
+      this.game.state.start("MainMenu");
+    } else {
+      alert(`Congratulations, level ${this.level} completed!`);
+      this.totalTimer += this.timer;
+      this.timer = 0;
+      this.level++;
+      this.timerText.setText(`Time: ${this.timer}`);
+      this.totalTimeText.setText(`Total time: ${this.totalTimer}`);
+      this.levelText.setText(`Level: ${this.level} / ${this.maxLevels}`);
+      this.ball.body.x = this.ballStartPos.x;
+      this.ball.body.y = this.ballStartPos.y;
+      this.ball.body.velocity.x = 0;
+      this.ball.body.velocity.y = 0;
+      this.showLevel();
+    }
+  },
+  // …
+};
 ```
 
 If the current level is equal to the maximum number of levels (in this case 5), then the game is finished — you'll get a congratulations message along with the number of seconds elapsed through the whole game, and a button to press that takes you to the main menu.

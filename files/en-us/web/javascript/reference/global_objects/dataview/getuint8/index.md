@@ -1,5 +1,6 @@
 ---
 title: DataView.prototype.getUint8()
+short-title: getUint8()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getUint8
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.getUint8
@@ -9,7 +10,18 @@ browser-compat: javascript.builtins.DataView.getUint8
 
 The **`getUint8()`** method of {{jsxref("DataView")}} instances reads 1 byte at the specified byte offset of this `DataView` and interprets it as an 8-bit unsigned integer.
 
-{{EmbedInteractiveExample("pages/js/dataview-getuint8.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.prototype.getUint8()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setUint8(1, 255); // Max unsigned 8-bit integer
+
+console.log(view.getUint8(1));
+// Expected output: 255
+```
 
 ## Syntax
 

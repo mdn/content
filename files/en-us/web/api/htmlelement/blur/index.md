@@ -31,16 +31,17 @@ None ({{jsxref("undefined")}}).
 #### HTML
 
 ```html
-<input type="text" id="sampleText" value="Sample Text" /> <br /><br />
-<button type="button" onclick="focusInput()">Click me to gain focus</button>
+<input type="text" id="sampleText" value="Sample Text" /><br /><br />
+<button type="button">Click me to gain focus</button>
 ```
 
 #### JavaScript
 
 ```js
-function focusInput() {
-  const textField = document.getElementById("sampleText");
+const textField = document.getElementById("sampleText");
+const button = document.querySelector("button");
 
+function focusInput() {
   textField.focus();
 
   // The input will lose focus after 3 seconds
@@ -48,6 +49,8 @@ function focusInput() {
     textField.blur();
   }, 3000);
 }
+
+button.addEventListener("click", focusInput);
 ```
 
 #### Result

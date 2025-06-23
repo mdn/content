@@ -22,9 +22,9 @@ For example, a smartphone might have a standard panel in its lock screen that pr
 
 - {{domxref("MediaSession.setActionHandler", "setActionHandler()")}}
   - : Sets an action handler for a media session action, such as play or pause.
-- {{domxref("MediaSession.setCameraActive", "setCameraActive()")}} {{Experimental_Inline}}
+- {{domxref("MediaSession.setCameraActive", "setCameraActive()")}}
   - : Indicates to the user agent whether the user's camera is considered to be active.
-- {{domxref("MediaSession.setMicrophoneActive", "setMicrophoneActive()")}} {{Experimental_Inline}}
+- {{domxref("MediaSession.setMicrophoneActive", "setMicrophoneActive()")}}
   - : Indicates to the user agent whether the user's microphone is considered to be currently muted.
 - {{domxref("MediaSession.setPositionState", "setPositionState()")}}
   - : Sets the current playback position and speed of the media currently being presented.

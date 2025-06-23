@@ -31,7 +31,7 @@ createWriter(successCallback, errorCallback)
 - `errorCallback` {{optional_inline}}
   - : If provided, this must be a method which is called when an error occurs while trying
     to create the {{domxref("FileWriter")}}. This callback receives as input a
-    {{domxref("FileError")}} object describing the error.
+    {{domxref("DOMException")}} object describing the error.
 
 ### Return value
 
@@ -50,7 +50,7 @@ function writeToFileEntry(entry, text) {
 
       fileWriter.write(data);
     },
-    (fileError) => {
+    (error) => {
       /* do whatever to handle the error */
     },
   );
@@ -73,4 +73,3 @@ This feature is not part of any specification anymore. It is no longer on track 
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)

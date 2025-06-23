@@ -44,6 +44,8 @@ The `wait()` and `notify()` methods are modeled on Linux futexes ("fast user-spa
   - : Notifies agents that are waiting on the specified index of the array. Returns the number of agents that were notified.
 - {{jsxref("Atomics.or()")}}
   - : Computes a bitwise OR on the value at the specified index of the array with the provided value. Returns the old value at that index.
+- {{jsxref("Atomics.pause()")}}
+  - : Provides a micro-wait primitive that hints to the CPU that the caller is spinning while waiting on access to a shared resource. This allows the system to reduce the resources allocated to the core (such as power) or thread, without yielding the current thread.
 - {{jsxref("Atomics.store()")}}
   - : Stores a value at the specified index of the array. Returns the value.
 - {{jsxref("Atomics.sub()")}}
@@ -51,7 +53,7 @@ The `wait()` and `notify()` methods are modeled on Linux futexes ("fast user-spa
 - {{jsxref("Atomics.wait()")}}
   - : Verifies that the specified index of the array still contains a value and sleeps awaiting or times out. Returns either `"ok"`, `"not-equal"`, or `"timed-out"`. If waiting is not allowed in the calling agent then it throws an exception. (Most browsers will not allow `wait()` on the browser's main thread.)
 - {{jsxref("Atomics.waitAsync()")}}
-  - : Waits asynchronously (i.e. without blocking, unlike `Atomics.wait`) on a shared memory location and returns an object representing the result of the operation.
+  - : Waits asynchronously (i.e., without blocking, unlike `Atomics.wait`) on a shared memory location and returns an object representing the result of the operation.
 - {{jsxref("Atomics.xor()")}}
   - : Computes a bitwise XOR on the value at the specified index of the array with the provided value. Returns the old value at that index.
 
@@ -104,7 +106,9 @@ const sab = new SharedArrayBuffer(1024);
 const int32 = new Int32Array(sab);
 ```
 
-A reading thread is sleeping and waiting on location 0 which is expected to be 0. As long as that is true, it will not go on. However, once the writing thread has stored a new value, it will be notified by the writing thread and return the new value (123).
+A reading thread is sleeping and waiting on location 0 because the provided value matches what is stored at the provided index.
+The reading thread will not move on until the writing thread has called `Atomics.notify()` on position 0 of the provided typed array.
+Note that if, after being woken up, the value of location 0 has not been changed by the writing thread, the reading thread will **not** go back to sleep, but will continue on.
 
 ```js
 Atomics.wait(int32, 0, 0);

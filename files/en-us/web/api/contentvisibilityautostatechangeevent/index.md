@@ -11,9 +11,9 @@ The **`ContentVisibilityAutoStateChangeEvent`** interface is the event object fo
 
 While the element is not relevant (between the start and end events), the user agent skips an element's rendering, including layout and painting.
 This can significantly improve page rendering speed.
-The {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} event provides a way for an app's code to also start or stop rendering processes (e.g. drawing on a {{htmlelement("canvas")}}) when they are not needed, thereby conserving processing power.
+The {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} event provides a way for an app's code to also start or stop rendering processes (e.g., drawing on a {{htmlelement("canvas")}}) when they are not needed, thereby conserving processing power.
 
-Note that even when hidden from view, element contents will remain semantically relevant (e.g. to assistive technology users), so this signal should not be used to skip significant semantic DOM updates.
+Note that even when hidden from view, element contents will remain semantically relevant (e.g., to assistive technology users), so this signal should not be used to skip significant semantic DOM updates.
 
 {{InheritanceDiagram}}
 

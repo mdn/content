@@ -7,7 +7,7 @@ browser-compat: css.types.round
 
 {{CSSRef}}
 
-The **`round()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) returns a rounded number based on a selected rounding strategy.
+The **`round()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) returns a rounded number based on a selected rounding strategy.
 
 Authors should use a [custom CSS property](/en-US/docs/Web/CSS/--*) (e.g., `--my-property`) for the rounding value, interval, or both; using the `round()` function is redundant if these have known values.
 
@@ -48,7 +48,7 @@ The `valueToRound` is rounded according to the rounding strategy, to the nearest
 
 - `roundingInterval`
   - : The rounding interval.
-    This is a {{CSSxREF("&lt;number&gt;")}}, {{CSSxREF("&lt;dimension&gt;")}}, or {{CSSxREF("&lt;percentage&gt;")}}, or a mathematical expression that resolves to one of those values.
+    This is a {{CSSxREF("&lt;number&gt;")}}, {{CSSxREF("&lt;dimension&gt;")}}, or {{CSSxREF("&lt;percentage&gt;")}}, or a mathematical expression that resolves to one of those values. If `valueToRound` is a {{CSSxREF("&lt;number&gt;")}}, `roundingInterval` may be omitted and defaults to `1`. Otherwise, omitting it results in an invalid expression.
 
 ### Return value
 
@@ -66,7 +66,7 @@ The value of `valueToRound`, rounded to the nearest lower or higher integer mult
 - The argument calculations can resolve to {{CSSxREF("&lt;number&gt;")}}, {{CSSxREF("&lt;dimension&gt;")}}, or {{CSSxREF("&lt;percentage&gt;")}}, but must have the same type, or else the function is invalid; the result will have the same type as the arguments.
 - If `valueToRound` is exactly equal to an integer multiple of `roundingInterval`, `round()` resolves to `valueToRound` exactly (preserving whether `valueToRound` is `0⁻` or `0⁺`, if relevant). Otherwise, there are two integer multiples of `roundingInterval` that are potentially "closest" to `valueToRound`, lower `roundingInterval` which is closer to `−∞` and upper `roundingInterval` which is closer to `+∞`.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 
@@ -113,7 +113,6 @@ div.box {
   width: 100px;
   height: 100px;
   background: lightblue;
-  padding: 5px;
   --rounding-interval: 25px;
 }
 ```

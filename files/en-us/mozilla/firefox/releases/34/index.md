@@ -46,7 +46,7 @@ _No change._
 
 - The ES2015 syntax for [computed property names on object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names) has been implemented ([Firefox bug 924688](https://bugzil.la/924688)).
 
-  - This includes [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) and [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set) method names as well ([Firefox bug 1048384](https://bugzil.la/1048384)) and can also be used with [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#computed_object_property_names_and_destructuring).
+  - This includes [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) and [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set) method names as well ([Firefox bug 1048384](https://bugzil.la/1048384)) and can also be used with [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring#computed_object_property_names_and_destructuring).
 
 - The ES2015 [shorthand syntax for defining methods](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) on objects has been implemented ([Firefox bug 924672](https://bugzil.la/924672)).
 - The ES2015 `Object` method {{jsxref("Object.assign", "Object.assign()")}} has been implemented ([Firefox bug 937855](https://bugzil.la/937855)).
@@ -60,8 +60,8 @@ _No change._
 - The experimental {{jsxref("TypedArray.prototype.move()")}} method (only available in former Nightly and Aurora channels) has been replaced with the now implemented standard ES2015 {{jsxref("TypedArray.prototype.copyWithin()")}} method ([Firefox bug 1021379](https://bugzil.la/1021379)).
 - In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), setting a [duplicate property name in object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#duplicate_property_names) will no longer throw a `SyntaxError` as per ES2015 specification ([Firefox bug 1041128](https://bugzil.la/1041128)).
 - In regular expressions (including `String.replace`), the matched text for a capturing group is now `undefined` instead of the empty string when that capturing group didn't get consulted because quantifiers prevented its exercise (see [Firefox bug 369778](https://bugzil.la/369778) and [this example code](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#firefox-specific_notes)). Note that due to web compatibility, RegExp.$N will still return an empty string ([Firefox bug 1053944](https://bugzil.la/1053944)).
-- The ES2015 [spread operator](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) is now supported in [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) ([Firefox bug 933276](https://bugzil.la/933276)).
-- [Destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) now uses iterator protocol instead of array-like protocol ([Firefox bug 933276](https://bugzil.la/933276)).
+- The ES2015 [spread operator](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) is now supported in [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) ([Firefox bug 933276](https://bugzil.la/933276)).
+- [Destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) now uses iterator protocol instead of array-like protocol ([Firefox bug 933276](https://bugzil.la/933276)).
 - {{jsxref("Proxy.revocable()")}} has been implemented ([Firefox bug 978279](https://bugzil.la/978279)).
 
 ### Interfaces/APIs/DOM

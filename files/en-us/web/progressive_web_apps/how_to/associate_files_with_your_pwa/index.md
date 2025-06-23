@@ -2,9 +2,8 @@
 title: Associate files with your PWA
 slug: Web/Progressive_web_apps/How_to/Associate_files_with_your_PWA
 page-type: how-to
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 On a device, files are usually associated with apps, so when the user opens the file, the operating system launches the appropriate app and passes the file to it. For example, HTML files are often opened in a web browser, text files in a text editor, and videos in a video player.
 
@@ -12,7 +11,7 @@ Progressive Web Apps can participate in this feature, so when the user clicks on
 
 There are two parts to adding support for file handling:
 
-- Declare support for certain file types using the [`file_handlers`](/en-US/docs/Web/Manifest/file_handlers) web app manifest member.
+- Declare support for certain file types using the [`file_handlers`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/file_handlers) web app manifest member.
 - Handling files using the {{domxref("LaunchQueue")}} interface.
 
 > [!NOTE]
@@ -20,7 +19,7 @@ There are two parts to adding support for file handling:
 
 ## Declaring support for file types
 
-To declare support for particular file types, include the [`file_handlers`](/en-US/docs/Web/Manifest/file_handlers) member in your [manifest file](/en-US/docs/Web/Manifest).
+To declare support for particular file types, include the [`file_handlers`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/file_handlers) member in your [manifest file](/en-US/docs/Web/Progressive_web_apps/Manifest).
 
 The `file_handlers` member is an array of file handler objects. Each file handler object has two mandatory properties, `action` and `accept`.
 
@@ -95,7 +94,7 @@ Note that the code checks that `launchQueue` exists before using it, to ensure t
 
 ## See also
 
-- [`file_handlers`](/en-US/docs/Web/Manifest/file_handlers) manifest member
+- [`file_handlers`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/file_handlers) manifest member
 - {{domxref("LaunchQueue")}} interface
 - [File System API](/en-US/docs/Web/API/File_System_API)
 - [File API](/en-US/docs/Web/API/File_API)

@@ -1,5 +1,6 @@
 ---
 title: TypedArray.from()
+short-title: from()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/from
 page-type: javascript-static-method
 browser-compat: javascript.builtins.TypedArray.from
@@ -12,7 +13,14 @@ The **`TypedArray.from()`** static method creates a new
 from an array-like or iterable object. This method is nearly the same as
 {{jsxref("Array.from()")}}.
 
-{{EmbedInteractiveExample("pages/js/typedarray-from.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.from()", "shorter")}}
+
+```js interactive-example
+const uint16 = Int16Array.from("12345");
+
+console.log(uint16);
+// Expected output: Int16Array [1, 2, 3, 4, 5]
+```
 
 ## Syntax
 

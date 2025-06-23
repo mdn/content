@@ -1,5 +1,5 @@
 ---
-title: ":scope"
+title: :scope
 slug: Web/CSS/:scope
 page-type: css-pseudo-class
 browser-compat: css.selectors.scope
@@ -150,7 +150,7 @@ document.getElementById("results").textContent = Array.prototype.map
 
 #### Result
 
-The scope of `context` is the element with the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of `context`. The selected elements are the `<div>` elements that are direct children of that context — `element-1` and `element-2` — but not their descendants.
+The scope of `context` is the element with the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) of `context`. The selected elements are the `<div>` elements that are direct children of that context — `element-1` and `element-2` — but not their descendants.
 
 {{ EmbedLiveSample('Using :scope in JavaScript') }}
 
@@ -164,7 +164,7 @@ The scope of `context` is the element with the [`id`](/en-US/docs/Web/HTML/Globa
 
 ## See also
 
-- The {{cssxref("@scope")}} [at-rule](/en-US/docs/Web/CSS/At-rule)
+- The {{cssxref("@scope")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule)
 - The {{cssxref(":root")}} [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes)
 - [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 - {{domxref("Element.querySelector()")}} and {{domxref("Element.querySelectorAll()")}}

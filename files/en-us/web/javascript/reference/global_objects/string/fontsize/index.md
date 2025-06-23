@@ -1,5 +1,6 @@
 ---
 title: String.prototype.fontsize()
+short-title: fontsize()
 slug: Web/JavaScript/Reference/Global_Objects/String/fontsize
 page-type: javascript-instance-method
 status:
@@ -71,5 +72,6 @@ document.getElementById("yourElemId").style.fontSize = "7pt";
 ## See also
 
 - [Polyfill of `String.prototype.fontsize` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims polyfill of `String.prototype.fontsize`](https://www.npmjs.com/package/es-string-html-methods)
 - [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods)
 - {{HTMLElement("font")}}

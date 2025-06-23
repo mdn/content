@@ -1,5 +1,6 @@
 ---
 title: Intl.NumberFormat.supportedLocalesOf()
+short-title: supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/supportedLocalesOf
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Intl.NumberFormat.supportedLocalesOf
@@ -9,7 +10,16 @@ browser-compat: javascript.builtins.Intl.NumberFormat.supportedLocalesOf
 
 The **`Intl.NumberFormat.supportedLocalesOf()`** static method returns an array containing those of the provided locales that are supported in number formatting without having to fall back to the runtime's default locale.
 
-{{EmbedInteractiveExample("pages/js/intl-numberformat-supportedlocalesof.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Intl.NumberFormat.supportedLocalesOf()", "shorter")}}
+
+```js interactive-example
+const locales1 = ["ban", "id-u-co-pinyin", "de-ID"];
+const options1 = { localeMatcher: "lookup" };
+
+console.log(Intl.NumberFormat.supportedLocalesOf(locales1, options1));
+// Expected output: Array ["id-u-co-pinyin", "de-ID"]
+// (Note: the exact output may be browser-dependent)
+```
 
 ## Syntax
 

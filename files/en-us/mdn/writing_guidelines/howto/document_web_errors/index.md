@@ -1,10 +1,10 @@
 ---
 title: How to document web errors
+short-title: Document errors
 slug: MDN/Writing_guidelines/Howto/Document_web_errors
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 The [JavaScript error reference](/en-US/docs/Web/JavaScript/Reference/Errors) on MDN Web Docs is a project to help web developers with errors occurring in the [Developer Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html). For this project, we need to write more error documentation on MDN Web Docs so that we can add more links to the tools where the messages are thrown. This article explains how to document the web errors.
 

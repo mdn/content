@@ -4,393 +4,135 @@ sidebar:
   - type: section
     link: /Web/HTML
   - type: section
-    link: /Learn/HTML
-    title: Tutorials
-  - link: /Learn/Getting_started_with_the_web/HTML_basics
-    title: HTML_basics
-  - title: Introduction_to_HTML
-    details: closed
-    children:
-      - link: /Learn/HTML/Introduction_to_HTML
-        title: Introduction_to_HTML_overview
-      - link: /Learn/HTML/Introduction_to_HTML/Getting_started
-        title: Getting_started_with_HTML
-      - link: /Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
-        title: Whats_in_the_head_metadata_in_HTML
-      - link: /Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
-        title: HTML_text_fundamentals
-      - link: /Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
-        title: Creating_hyperlinks
-      - link: /Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
-        title: Advanced_text_formatting
-      - link: /Learn/HTML/Introduction_to_HTML/Document_and_website_structure
-        title: Document_and_website_structure
-      - link: /Learn/HTML/Introduction_to_HTML/Debugging_HTML
-        title: Debugging_HTML
-      - link: /Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
-        title: Assessment_Marking_up_a_letter
-      - link: /Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
-        title: Assessment_Structuring_a_page_of_content
-  - title: Multimedia_and_embedding
-    details: closed
-    children:
-      - link: /Learn/HTML/Multimedia_and_embedding
-        title: Multimedia_and_embedding_overview
-      - link: /Learn/HTML/Multimedia_and_embedding/Images_in_HTML
-        title: Images_in_HTML
-      - link: /Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
-        title: Video_and_audio_content
-      - link: /Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
-        title: From_object_to_iframe_other_embedding_technologies
-      - link: /Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
-        title: Adding_vector_graphics_to_the_web
-      - link: /Learn/HTML/Multimedia_and_embedding/Responsive_images
-        title: Responsive_images
-      - link: /Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
-        title: Assessment_Mozilla_splash_page
-  - title: HTML_tables
-    details: closed
-    children:
-      - link: /Learn/HTML/Tables
-        title: HTML_tables_overview
-      - link: /Learn/HTML/Tables/Basics
-        title: HTML_table_basics
-      - link: /Learn/HTML/Tables/Advanced
-        title: HTML_table_advanced_features_and_accessibility
-      - link: /Learn/HTML/Tables/Structuring_planet_data
-        title: Assessment_Structuring_planet_data
+    link: /Web/HTML/Guides
+    title: Guides
+  - /Web/HTML/Guides/Content_categories
+  - /Web/HTML/Guides/Comments
+  - /Web/HTML/Guides/Date_and_time_formats
+  - /Web/HTML/Guides/Constraint_validation
+  - /Web/HTML/Guides/Viewport_meta_element
+  - /Web/HTML/Guides/Responsive_images
+  - /Web/HTML/Guides/Microdata
+  - /Web/HTML/Guides/Microformats
+  - /Web/HTML/Guides/Quirks_mode_and_standards_mode
+  - /Web/HTML/Guides/Cheatsheet
+  - type: section
+    link: /Web/HTML/How_to
+  - /Web/HTML/How_to/Define_terms_with_HTML
+  - /Web/HTML/How_to/Use_data_attributes
+  - /Web/HTML/How_to/CORS_enabled_image
+  - /Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image
+  - /Web/HTML/How_to/Author_fast-loading_HTML_pages
+  - /Web/HTML/How_to/Add_JavaScript_to_your_web_page
   - type: section
     link: /Web/HTML/Reference
     title: Reference
   - type: listSubPages
-    path: /Web/HTML/Element
+    path: /Web/HTML/Reference/Elements
+    link: /Web/HTML/Reference/Elements
     title: HTML_Elements
     details: closed
+    code: true
   - type: listSubPages
-    path: /Web/HTML/Global_attributes
-    title: Global_attributes
-    details: closed
-  - type: listSubPages
-    path: /Web/HTML/Attributes
+    path: /Web/HTML/Reference/Attributes
+    link: /Web/HTML/Reference/Attributes
     title: Attributes
     details: closed
+    code: true
   - type: listSubPages
-    path: /Web/HTML/Element/input
-    title: Input_types
+    path: /Web/HTML/Reference/Global_attributes
+    link: /Web/HTML/Reference/Global_attributes
+    title: Global_attributes
     details: closed
-  - type: section
-    title: Guides
-  - children:
-      - link: /Web/HTML/Content_categories
-        title: Content_categories
-      - link: /Glossary/Block-level_content
-        title: Block-level_elements
-      - link: /Glossary/Inline-level_content
-        title: Inline_elements
-      - link: /Web/HTML/Quirks_Mode_and_Standards_Mode
-        title: Quirks_Mode_and_Standards_Mode
-      - link: /Web/HTML/Date_and_time_formats
-        title: Date_and_time_formats
-      - link: /Web/HTML/Constraint_validation
-        title: Constraint_validation
-      - link: /Web/HTML/Microdata
-        title: Microdata
-      - link: /Web/HTML/microformats
-        title: Microformats
-      - link: /Web/HTML/Viewport_meta_tag
-        title: Viewport_meta_tag
-      - link: /Web/HTML/CORS_enabled_image
-        title: Allowing_cross-origin_images_and_canvas
+    code: true
+  - title: Attributes_element
+    details: closed
+    children:
+      - type: listSubPages
+        path: /Web/HTML/Reference/Elements/input
+        tags: html-attribute-value
+        title: Input_types
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Web/HTML/Reference/Elements/script/type
+        tags: html-attribute-value
+        link: /Web/HTML/Reference/Elements/script/type
+        title: Script_types
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Web/HTML/Reference/Elements/meta/name
+        depth: 2
+        link: /Web/HTML/Reference/Elements/meta/name
+        details: closed
+        code: true
+  - title: Attribute_values
+    details: closed
+    children:
+      - type: listSubPages
+        path: /Web/HTML/Reference/Attributes/rel
+        title: Rel_keywords
+        details: closed
+        code: true
 l10n:
+  de:
+    Reference: Referenzen
+    HTML_Elements: Elemente
+    Global_attributes: Globale Attribute
+    Attributes: Attribute
+    Input_types: <code>&lt;input&gt;</code>-Typen
+    Guides: Anleitungen
   en-US:
-    Tutorials: Tutorials
-    HTML_basics: HTML basics
-    Introduction_to_HTML: Introduction to HTML
-    Introduction_to_HTML_overview: Introduction to HTML overview
-    Getting_started_with_HTML: Getting started with HTML
-    Whats_in_the_head_metadata_in_HTML: What's in the head? Metadata in HTML
-    HTML_text_fundamentals: HTML text fundamentals
-    Creating_hyperlinks: Creating hyperlinks
-    Advanced_text_formatting: Advanced text formatting
-    Document_and_website_structure: Document and website structure
-    Debugging_HTML: Debugging HTML
-    Assessment_Marking_up_a_letter: "Assessment: Marking up a letter"
-    Assessment_Structuring_a_page_of_content: "Assessment: Structuring a page of content"
-    Multimedia_and_embedding: Multimedia and embedding
-    Multimedia_and_embedding_overview: Multimedia and embedding overview
-    Images_in_HTML: Images in HTML
-    Video_and_audio_content: Video and audio content
-    From_object_to_iframe_other_embedding_technologies: From object to iframe — other embedding technologies
-    Adding_vector_graphics_to_the_web: Adding vector graphics to the web
-    Responsive_images: Responsive images
-    Assessment_Mozilla_splash_page: "Assessment: Mozilla splash page"
-    HTML_tables: HTML tables
-    HTML_tables_overview: HTML tables overview
-    HTML_table_basics: HTML table basics
-    HTML_table_advanced_features_and_accessibility: HTML table advanced features and accessibility
-    Assessment_Structuring_planet_data: "Assessment: Structuring planet data"
-    Reference: References
-    HTML_Elements: HTML elements
+    Reference: Reference
+    HTML_Elements: Elements
     Global_attributes: Global attributes
     Attributes: Attributes
-    Input_types: <code>&lt;input&gt;</code> types
+    Attributes_element: Attributes by element
+    Attribute_values: Attribute values
+    Input_types: <code>&lt;input&gt;</code> type
+    Script_types: <code>&lt;script&gt;</code> type
+    Rel_keywords: <code>rel</code> keywords
     Guides: Guides
-    Content_categories: Content categories
-    Allowing_cross-origin_images_and_canvas: Allowing cross-origin use of images and canvas
-    Block-level_elements: Block-level elements
-    Inline_elements: Inline elements
-    Date_and_time_formats: Date and time formats used in HTML
-    Constraint_validation: Constraint validation
-    Microdata: Microdata
-    Microformats: Microformats
-    Quirks_Mode_and_Standards_Mode: Quirks Mode and Standards Mode
-    Viewport_meta_tag: Viewport meta tag
   fr:
-    Tutorials: Tutoriels
-    HTML_basics: Notions élémentaires de HTML
-    Introduction_to_HTML: Introduction à HTML
-    Introduction_to_HTML_overview: Aperçu de l'introduction à HTML
-    Getting_started_with_HTML: Débuter en HTML
-    Whats_in_the_head_metadata_in_HTML: Les métadonnées en HTML avec <head>
-    HTML_text_fundamentals: Notions fondamentales de HTML pour le texte
-    Creating_hyperlinks: Créer des hyperliens
-    Advanced_text_formatting: Formatage avancé du texte
-    Document_and_website_structure: Structure d'un site et d'un document web
-    Debugging_HTML: Déboguer du HTML
-    Assessment_Marking_up_a_letter: "Évaluation : baliser une lettre"
-    Assessment_Structuring_a_page_of_content: "Évaluation : structurer une page de contenu"
-    Multimedia_and_embedding: Multimédia et intégration
-    Multimedia_and_embedding_overview: Aperçu pour le multimédia et l'intégration
-    Images_in_HTML: Images en HTML
-    Video_and_audio_content: Contenu audio et vidéo
-    From_object_to_iframe_other_embedding_technologies: Des objets aux iframes, les autres technologies d'intégration
-    Adding_vector_graphics_to_the_web: Ajouter des graphiques vectoriels sur le Web
-    Responsive_images: Images responsives
-    Assessment_Mozilla_splash_page: "Évaluation : page d'accueil Mozilla"
-    HTML_tables: Tableaux HTML
-    HTML_tables_overview: Aperçu des tableaux HTML
-    HTML_table_basics: Bases des tableaux HTML
-    HTML_table_advanced_features_and_accessibility: Fonctionnalités avancées et accessibilité des tableaux HTML
-    Assessment_Structuring_planet_data: "Évaluation : structurer les données des planètes"
     Reference: Références
-    HTML_Elements: Éléments HTML
+    HTML_Elements: Éléments
     Global_attributes: Attributs universels
     Attributes: Attributs
     Input_types: Types <code>&lt;input&gt;</code>
     Guides: Guides
-    Content_categories: Catégories de contenu
-    Allowing_cross-origin_images_and_canvas: Autoriser les images et canevas provenant d'autres origines
-    Block-level_elements: Éléments de bloc
-    Inline_elements: Éléments en ligne
-    Date_and_time_formats: Formats de date et d'heure utilisés en HTML
-    Microdata: Microdonnées
-    microformats: Microformats
-    Quirks_Mode_and_Standards_Mode: Mode quirks et mode standard
-    Viewport_meta_tag: Utilisation de la balise meta viewport pour contrôler la mise en page sur mobile
   ja:
-    Tutorials: チュートリアル
-    HTML_basics: HTML の基本
-    Introduction_to_HTML: HTML 入門
-    Introduction_to_HTML_overview: HTML 入門の概要
-    Getting_started_with_HTML: HTML を始めよう
-    Whats_in_the_head_metadata_in_HTML: ヘッド部には何が入る? HTML のメタデータ
-    HTML_text_fundamentals: HTML テキストの基礎
-    Creating_hyperlinks: ハイパーリンクの作成
-    Advanced_text_formatting: 高度なテキスト整形
-    Document_and_website_structure: 文書とウェブサイトの構造
-    Debugging_HTML: HTML のデバッグ
-    Assessment_Marking_up_a_letter: "評価課題: 手紙のマークアップ"
-    Assessment_Structuring_a_page_of_content: "評価課題: コンテンツのページの構造化"
-    Multimedia_and_embedding: マルチメディアとその埋め込み
-    Multimedia_and_embedding_overview: マルチメディアとその埋め込みの概要
-    Images_in_HTML: HTML の画像
-    Video_and_audio_content: 動画と音声のコンテンツ
-    From_object_to_iframe_other_embedding_technologies: object から iframe まで — その他の埋め込み技術
-    Adding_vector_graphics_to_the_web: ウェブへのベクターグラフィックの追加
-    Responsive_images: レスポンシブ画像
-    Assessment_Mozilla_splash_page: "評価課題: Mozilla のスプラッシュページ"
-    HTML_tables: HTML の表
-    HTML_tables_overview: HTML の表の概要
-    HTML_table_basics: HTML の表の基本
-    HTML_table_advanced_features_and_accessibility: HTML 表の高度な機能とアクセシビリティ
-    Assessment_Structuring_planet_data: "評価課題: 太陽系の惑星データの構造化"
     Reference: リファレンス
-    HTML_Elements: HTML 要素
+    HTML_Elements: 要素
     Global_attributes: グローバル属性
+    Attributes: 属性
     Input_types: <code>&lt;input&gt;</code> 型
-    Documentation: ドキュメント
-    Useful_lists: 有用なリスト
-    Index: 前ページの索引
-    Contribute: 協力
-    The_MDN_project: MDN プロジェクト
-    Content_categories: コンテンツカテゴリー
-    Constraint_validation: 制約検証
+    Guides: ガイド
   ko:
-    Tutorials: "자습서:"
-    HTML_basics: HTML 기초
-    Introduction_to_HTML: HTML 입문서
-    Introduction_to_HTML_overview: HTML 소개
-    Getting_started_with_HTML: HTML 시작하기
-    Whats_in_the_head_metadata_in_HTML: head 태그에는 무엇이 있을까? HTML의 메타데이터
-    HTML_text_fundamentals: HTML 텍스트
-    Creating_hyperlinks: 하이퍼링크 만들기
-    Advanced_text_formatting: 고급 텍스트 서식
-    Document_and_website_structure: 문서와 웹사이트 구조
-    Debugging_HTML: HTML 디버깅
-    Assessment_Marking_up_a_letter: "과제: 문서 마크업 하기"
-    Assessment_Structuring_a_page_of_content: "과제: 페이지 내용 구조화하기"
-    Multimedia_and_embedding: 멀티미디어와 임베딩
-    Multimedia_and_embedding_overview: 멀티미디어와 임베딩 소개
-    Images_in_HTML: HTML의 이미지
-    Video_and_audio_content: 비디오와 오디오 컨텐츠
-    From_object_to_iframe_other_embedding_technologies: object에서 iframe - 다른 임베딩 기술
-    Adding_vector_graphics_to_the_web: 벡터 그래픽 추가하기
-    Responsive_images: 반응형 이미지
-    Assessment_Mozilla_splash_page: "과제: Mozilla 페이지 만들기"
-    HTML_tables: HTML 테이블
-    HTML_tables_overview: HTML 테이블 소개
-    HTML_table_basics: HTML 테이블 기초
-    HTML_table_advanced_features_and_accessibility: HTML 테이블 고급 기능과 접근성
-    Assessment_Structuring_planet_data: "과제: 행성 데이터 만들기"
     Reference: "참고서:"
-    HTML_Elements: HTML 요소
+    HTML_Elements: 요소
     Global_attributes: 전역 속성
     Attributes: 속성
     Input_types: <code>&lt;input&gt;</code> types
     Guides: "안내서:"
-    Allowing_cross-origin_images_and_canvas: cross-origin이 가능한 이미지와 캔버스
-    Block-level_elements: 블록 단위 요소
-    Inline_elements: 인라인 요소
-    Date_and_time_formats: HTML의 날짜와 시간 형식
-    Microdata: Microdata
-    Microformats: Microformats
-    Quirks_Mode_and_Standards_Mode: 쿼크모드와 표준모드
-    Viewport_meta_tag: 뷰포트 메타 태그
   pt-BR:
-    Tutorials: Tutoriais
-    HTML_basics: O básico de HTML
-    Introduction_to_HTML: Introdução ao HTML
-    Introduction_to_HTML_overview: Visão geral da Introdução ao HTML
-    Getting_started_with_HTML: Iniciando com HTML
-    Whats_in_the_head_metadata_in_HTML: O que está na "head"? Metadados em HTML
-    HTML_text_fundamentals: Fundamentos de textos HTML
-    Creating_hyperlinks: Criando hiperlinks
-    Advanced_text_formatting: Formatação avançada de textos
-    Document_and_website_structure: Estrutura do Documento e do Site
-    Debugging_HTML: Depurando HTML
-    Assessment_Marking_up_a_letter: "Avaliação: Melhorando uma carta"
-    Assessment_Structuring_a_page_of_content: "Avaliação: Estruturando uma página de conteúdos"
-    Multimedia_and_embedding: Multimídia e incorporação
-    Multimedia_and_embedding_overview: Visão geral sobre Multimídia e incorporação
-    Images_in_HTML: Trabalhando com imagens em HTML
-    Video_and_audio_content: Conteúdos com vídeo e áudio
-    From_object_to_iframe_other_embedding_technologies: De objeto a iframe — outras tecnologias de incorporação
-    Adding_vector_graphics_to_the_web: Adicionando gráficos vetoriais à Web
-    Responsive_images: Imagens responsivas
-    Assessment_Mozilla_splash_page: 'Avaliação: Página "splash" da Mozilla'
-    HTML_tables: Tabelas HTML
-    HTML_tables_overview: Visão geral sobre tabelas HTML
-    HTML_table_basics: O básico sobre Tabelas HTML
-    HTML_table_advanced_features_and_accessibility: Funcionalidades avançadas e acessibilidade de Tabelas HTML
-    Assessment_Structuring_planet_data: "Avaliação: Estruturação dos dados do planenta"
     Reference: Referências
-    HTML_Elements: Elementos HTML
+    HTML_Elements: Elementos
     Global_attributes: Atributos globais
     Attributes: Atributos
     Input_types: Tipos de <code>&lt;input&gt;</code>
     Guides: Guides
-    Content_categories: Categorias de conteúdo
-    Allowing_cross-origin_images_and_canvas: CORS habilitar imagens
-    Block-level_elements: Elementos block-level
-    Inline_elements: Elementos inline
-    Date_and_time_formats: Date and time formats used in HTML
-    Microdata: Microdata
-    microformats: Microformatos
-    Quirks_Mode_and_Standards_Mode: Quirks Mode e Standards Mode
-    Viewport_meta_tag: Viewport meta tag
   ru:
-    Tutorials: Уроки
-    HTML_basics: Основы HTML
-    Introduction_to_HTML: Введение в HTML
-    Introduction_to_HTML_overview: Введение в HTML
-    Getting_started_with_HTML: Начало работы с HTML
-    Whats_in_the_head_metadata_in_HTML: Что внутри "head"? Метаданные в HTML
-    HTML_text_fundamentals: Основы редактирования текста в HTML
-    Creating_hyperlinks: Создание гиперссылок
-    Advanced_text_formatting: Продвинутое форматирование текста
-    Document_and_website_structure: Структура документа и веб-сайта
-    Debugging_HTML: Отладка HTML
-    Assessment_Marking_up_a_letter: "Задание: Выделение символа"
-    Assessment_Structuring_a_page_of_content: "Задание: Структура страницы"
-    Multimedia_and_embedding: Мультимедиа и встраивание
-    Multimedia_and_embedding_overview: Мультимедиа и встраивание
-    Images_in_HTML: Изображения в HTML
-    Video_and_audio_content: Видео и аудио контент
-    From_object_to_iframe_other_embedding_technologies: От object до iframe — другие технологии встраивания
-    Adding_vector_graphics_to_the_web: Добавление векторный графики в Веб
-    Responsive_images: Отзывчивые изображения
-    Assessment_Mozilla_splash_page: "Задание: Страница о Mozilla"
-    HTML_tables: HTML таблицы
-    HTML_tables_overview: HTML таблицы
-    HTML_table_basics: HTML таблицы основы
-    HTML_table_advanced_features_and_accessibility: HTML таблицы продвинутые возможности и доступность
-    Assessment_Structuring_planet_data: "Задание: Структурирование данных о планетах"
     Reference: Справочники
-    HTML_Elements: HTML элементы
+    HTML_Elements: элементы
     Global_attributes: Глобальные атрибуты
     Attributes: Aтрибуты
     Input_types: Типы <code>&lt;input&gt;</code>
     Guides: Путеводитель
-    Content_categories: Категории контента
-    Allowing_cross-origin_images_and_canvas: Разрешение использования изображений из разных источников и canvas
-    Block-level_elements: Блочные элементы
-    Inline_elements: Строчные элементы
-    Date_and_time_formats: Date and time formats used in HTML
-    Constraint_validation: Валидация ограничений
-    Microdata: Microdata
-    microformats: Microformats
-    Quirks_Mode_and_Standards_Mode: Режим совместимости (Quirks Mode) и стандартный режим (Standards Mode)
-    Viewport_meta_tag: Viewport meta tag
   zh-CN:
-    Tutorials: 教程
-    HTML_basics: HTML 基础
-    Introduction_to_HTML: HTML 介绍
-    Introduction_to_HTML_overview: HTML 概述
-    Getting_started_with_HTML: 开始学习 HTML
-    Whats_in_the_head_metadata_in_HTML: head 标签里面有什么？HTML 中的元数据
-    HTML_text_fundamentals: HTML 文本基础
-    Creating_hyperlinks: 建立超链接
-    Advanced_text_formatting: 高级文本格式
-    Document_and_website_structure: 文档和网站架构
-    Debugging_HTML: HTML 调试
-    Assessment_Marking_up_a_letter: 测验：标记信件
-    Assessment_Structuring_a_page_of_content: 测验：构建网页内容
-    Multimedia_and_embedding: 多媒体与嵌入
-    Multimedia_and_embedding_overview: 多媒体与嵌入概述
-    Images_in_HTML: HTML 中的图片
-    Video_and_audio_content: 视频和音频内容
-    From_object_to_iframe_other_embedding_technologies: 从 object 到 iframe——其他嵌入技术
-    Adding_vector_graphics_to_the_web: 为 web 新增矢量图
-    Responsive_images: 响应式图片
-    Assessment_Mozilla_splash_page: 测验：Mozilla 醒目页面
-    HTML_tables: HTML 表格
-    HTML_tables_overview: HTML 表格概述
-    HTML_table_basics: HTML 表格基础
-    HTML_table_advanced_features_and_accessibility: HTML 高级表格特性和无障碍
-    Assessment_Structuring_planet_data: 测验：构建行星数据
-    Reference: 参考：
+    Reference: 参考
     HTML_Elements: HTML 元素
     Global_attributes: 全局属性
     Attributes: 属性
     Input_types: <code>&lt;input&gt;</code> 类型
-    Guides: 指南：
-    Content_categories: 内容分类
-    Allowing_cross-origin_images_and_canvas: 允许图片和 canvas 跨源使用
-    Block-level_elements: 块级元素
-    Inline_elements: 行级元素
-    Date_and_time_formats: HTML 中使用的日期与时间格式
-    Constraint_validation: 约束验证
-    Microdata: 微数据
-    Microformats: 微格式
-    Quirks_Mode_and_Standards_Mode: 怪异模式和标准模式
-    Viewport_meta_tag: Viewport meta 标签
+    Guides: 指南

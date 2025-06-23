@@ -9,7 +9,26 @@ browser-compat: javascript.builtins.parseInt
 
 The **`parseInt()`** function parses a string argument and returns an integer of the specified [radix](https://en.wikipedia.org/wiki/Radix) (the base in mathematical numeral systems).
 
-{{EmbedInteractiveExample("pages/js/globalprops-parseint.html")}}
+{{InteractiveExample("JavaScript Demo: parseInt()")}}
+
+```js interactive-example
+console.log(parseInt("123"));
+// 123 (default base-10)
+console.log(parseInt("123", 10));
+// 123 (explicitly specify base-10)
+console.log(parseInt("   123 "));
+// 123 (whitespace is ignored)
+console.log(parseInt("077"));
+// 77 (leading zeros are ignored)
+console.log(parseInt("1.9"));
+// 1 (decimal part is truncated)
+console.log(parseInt("ff", 16));
+// 255 (lower-case hexadecimal)
+console.log(parseInt("0xFF", 16));
+// 255 (upper-case hexadecimal with "0x" prefix)
+console.log(parseInt("xyz"));
+// NaN (input can't be converted to an integer)
+```
 
 ## Syntax
 
@@ -58,13 +77,13 @@ For radices above `10`, letters of the English alphabet indicate numerals greate
 
 `parseInt` understands exactly two signs: `+` for positive, and `-` for negative. It is done as an initial step in the parsing after whitespace is removed. If no signs are found, the algorithm moves to the following step; otherwise, it removes the sign and runs the number-parsing on the rest of the string.
 
-If `parseInt` encounters a character that is not a numeral in the specified `radix`, it ignores it and all succeeding characters and returns the integer value parsed up to that point. For example, although `1e3` technically encodes an integer (and will be correctly parsed to the integer `1000` by [`parseFloat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat)), `parseInt("1e3", 10)` returns `1`, because `e` is not a valid numeral in base 10. Because `.` is not a numeral either, the return value will always be an integer.
+If `parseInt` encounters a character in the input string that is not a valid numeral in the specified `radix`, it ignores it and all succeeding characters and returns the integer value parsed up to that point. For example, `parseInt("2", 2)` returns `NaN` because `2` is not a valid numeral in the binary number system. Likewise, although `1e3` technically encodes an integer (and will be correctly parsed to the integer `1000` by [`parseFloat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat)), `parseInt("1e3", 10)` returns `1`, because `e` is not a valid numeral in base 10. Because `.` is not a numeral either, the return value will always be an integer.
 
 If the first character cannot be converted to a number with the radix in use, `parseInt` returns `NaN`. Leading whitespace is allowed.
 
 For arithmetic purposes, the `NaN` value is not a number in any radix. You can call the [`Number.isNaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN) function to determine if the result of `parseInt` is `NaN`. If `NaN` is passed on to arithmetic operations, the operation result will also be `NaN`.
 
-Because large numbers use the `e` character in their string representation (e.g. `6.022e23` for 6.022 × 10<sup>23</sup>), using `parseInt` to truncate numbers will produce unexpected results when used on very large or very small numbers. `parseInt` should _not_ be used as a substitute for {{jsxref("Math.trunc()")}}.
+Because large numbers use the `e` character in their string representation (e.g., `6.022e23` for 6.022 × 10<sup>23</sup>), using `parseInt` to truncate numbers will produce unexpected results when used on very large or very small numbers. `parseInt` should _not_ be used as a substitute for {{jsxref("Math.trunc()")}}.
 
 To convert a number to its string literal in a particular radix, use [`thatNumber.toString(radix)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString).
 

@@ -1,5 +1,6 @@
 ---
 title: String.prototype[Symbol.iterator]()
+short-title: "[Symbol.iterator]()"
 slug: Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.@@iterator
@@ -9,7 +10,22 @@ browser-compat: javascript.builtins.String.@@iterator
 
 The **`[Symbol.iterator]()`** method of {{jsxref("String")}} values implements the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) and allows strings to be consumed by most syntaxes expecting iterables, such as the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and {{jsxref("Statements/for...of", "for...of")}} loops. It returns a [string iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) that yields the Unicode code points of the string value as individual strings.
 
-{{EmbedInteractiveExample("pages/js/string-prototype-@@iterator.html")}}
+{{InteractiveExample("JavaScript Demo: String.prototype[Symbol.iterator]()")}}
+
+```js interactive-example
+const str = "The quick red fox jumped over the lazy dog's back.";
+
+const iterator = str[Symbol.iterator]();
+let theChar = iterator.next();
+
+while (!theChar.done && theChar.value !== " ") {
+  console.log(theChar.value);
+  theChar = iterator.next();
+  // Expected output: "T"
+  //                  "h"
+  //                  "e"
+}
+```
 
 ## Syntax
 
@@ -84,6 +100,6 @@ console.log(strIter.next().value); // "\uD835\uDC68"
 ## See also
 
 - [Polyfill of `String.prototype[Symbol.iterator]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- [Text formatting](/en-US/docs/Web/JavaScript/Guide/Text_formatting) guide
+- [Numbers and strings](/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings) guide
 - {{jsxref("Symbol.iterator")}}
 - [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)

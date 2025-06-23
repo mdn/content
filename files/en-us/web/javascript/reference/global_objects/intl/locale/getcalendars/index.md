@@ -1,5 +1,6 @@
 ---
 title: Intl.Locale.prototype.getCalendars()
+short-title: getCalendars()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getCalendars
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.Locale.getCalendars
@@ -26,50 +27,7 @@ None.
 
 An array of strings representing all calendars commonly used for the `Locale`, sorted in descending preference. If the `Locale` already has a [`calendar`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar), then the returned array contains that single value.
 
-Below is a list of the supported calendar era types.
-
-### Supported calendar types
-
-- `buddhist`
-  - : Thai Buddhist calendar
-- `chinese`
-  - : Traditional Chinese calendar
-- `coptic`
-  - : Coptic calendar
-- `dangi`
-  - : Traditional Korean calendar
-- `ethioaa`
-  - : Ethiopic calendar, Amete Alem (epoch approx. 5493 B.C.E)
-- `ethiopic`
-  - : Ethiopic calendar, Amete Mihret (epoch approx, 8 C.E.)
-- `gregory`
-  - : Gregorian calendar
-- `hebrew`
-  - : Traditional Hebrew calendar
-- `indian`
-  - : Indian calendar
-- `islamic`
-  - : Islamic calendar
-- `islamic-umalqura`
-  - : Islamic calendar, Umm al-Qura
-- `islamic-tbla`
-  - : Islamic calendar, tabular (intercalary years [2,5,7,10,13,16,18,21,24,26,29] - astronomical epoch)
-- `islamic-civil`
-  - : Islamic calendar, tabular (intercalary years [2,5,7,10,13,16,18,21,24,26,29] - civil epoch)
-- `islamic-rgsa`
-  - : Islamic calendar, Saudi Arabia sighting
-- `iso8601`
-  - : ISO calendar (Gregorian calendar using the ISO 8601 calendar week rules)
-- `japanese`
-  - : Japanese Imperial calendar
-- `persian`
-  - : Persian calendar
-- `roc`
-  - : Civil (algorithmic) Arabic calendar
-- `islamicc`
-  - : Civil (algorithmic) Arabic calendar
-    > [!WARNING]
-    > The `islamicc` calendar key has been deprecated. Please use `islamic-civil`.
+For a list of supported calendar types, see [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types).
 
 ## Examples
 

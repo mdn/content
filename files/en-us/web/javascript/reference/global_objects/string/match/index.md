@@ -1,5 +1,6 @@
 ---
 title: String.prototype.match()
+short-title: match()
 slug: Web/JavaScript/Reference/Global_Objects/String/match
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.match
@@ -9,7 +10,16 @@ browser-compat: javascript.builtins.String.match
 
 The **`match()`** method of {{jsxref("String")}} values retrieves the result of matching this string against a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_expressions).
 
-{{EmbedInteractiveExample("pages/js/string-match.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.match()", "shorter")}}
+
+```js interactive-example
+const paragraph = "The quick brown fox jumps over the lazy dog. It barked.";
+const regex = /[A-Z]/g;
+const found = paragraph.match(regex);
+
+console.log(found);
+// Expected output: Array ["T", "I"]
+```
 
 ## Syntax
 
@@ -76,7 +86,7 @@ The following example demonstrates the use of the global flag and ignore-case fl
 
 ```js
 const str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-const regexp = /[A-E]/gi;
+const regexp = /[a-e]/gi;
 const matches = str.match(regexp);
 
 console.log(matches);
@@ -126,17 +136,15 @@ When the `regexp` parameter is a string or a number, it is implicitly converted 
 
 ```js
 const str1 =
-  "NaN means not a number. Infinity contains -Infinity and +Infinity in JavaScript.";
+  "All numbers except NaN satisfy <= Infinity and >= -Infinity in JavaScript.";
 const str2 =
   "My grandfather is 65 years old and My grandmother is 63 years old.";
 const str3 = "The contract was declared null and void.";
 str1.match("number"); // "number" is a string. returns ["number"]
 str1.match(NaN); // the type of NaN is the number. returns ["NaN"]
 str1.match(Infinity); // the type of Infinity is the number. returns ["Infinity"]
-str1.match(+Infinity); // returns ["Infinity"]
 str1.match(-Infinity); // returns ["-Infinity"]
 str2.match(65); // returns ["65"]
-str2.match(+65); // A number with a positive sign. returns ["65"]
 str3.match(null); // returns ["null"]
 ```
 
@@ -163,6 +171,7 @@ console.log("123".match("1\\.3")); // null
 ## See also
 
 - [Polyfill of `String.prototype.match` in `core-js` with fixes and implementation of modern behavior like `Symbol.match` support](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) guide
 - {{jsxref("String.prototype.matchAll()")}}
 - {{jsxref("RegExp")}}
 - {{jsxref("RegExp.prototype.exec()")}}

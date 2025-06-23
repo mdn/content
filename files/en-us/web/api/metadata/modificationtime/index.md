@@ -67,7 +67,6 @@ This feature has been removed from all specification and is not in the process o
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("Metadata")}}
 - {{domxref("FileSystemEntry.getMetadata()")}}
 - {{domxref("FileSystemFileEntry")}}

@@ -17,13 +17,13 @@ This article provides information about the changes in Firefox 60 that will affe
 ### Developer tools
 
 - In the CSS Pane rules view (see [Examine and edit CSS](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html)), the keyboard shortcuts for precise value increments (increase/decrease by 0.1) have changed from `Alt` + `Up`/`Down` to `Ctrl` + `Up`/`Down` on Linux and Windows, to avoid clashes with default OS-level shortcuts (see [Firefox bug 1413314](https://bugzil.la/1413314)).
-- Also in the CSS Pane rules view, [CSS variable names](/en-US/docs/Web/CSS/Using_CSS_custom_properties) will now auto-complete ([Firefox bug 1422635](https://bugzil.la/1422635)). If you enter `var(` into a property value and then type a dash (`-`), any variables you have declared in your CSS will then appear in an autocomplete list.
+- Also in the CSS Pane rules view, [CSS variable names](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) will now auto-complete ([Firefox bug 1422635](https://bugzil.la/1422635)). If you enter `var(` into a property value and then type a dash (`-`), any variables you have declared in your CSS will then appear in an autocomplete list.
 - In [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html), a _Reload when…_ dropdown has been added to allow users to enable/disable automatic page reloads when touch simulation is toggled, or simulated user agent is changed. See [Controlling page reload behavior](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html#controlling-page-reload-behavior) for more details ([Firefox bug 1428816](https://bugzil.la/1428816)).
 - The `view_source.tab` preference has been removed so you can no longer toggle [View Source](https://firefox-source-docs.mozilla.org/devtools-user/view_source/index.html) mode between appearing in a new tab or new window. Page sources will always appear in new tabs from now on ([Firefox bug 1418403](https://bugzil.la/1418403)).
 
 ### HTML
 
-Pressing the Enter key in `designMode` and `contenteditable` now inserts `<div>` elements when the caret is in an inline element or text node which is a child of a block level editing host — instead of inserting `<br>` elements like it used to. If you want to use the old behavior on your app, you can do it with `document.execCommand()`. See [Differences in markup generation](/en-US/docs/Web/HTML/Global_attributes/contenteditable#differences_in_markup_generation) for more details (also see [Firefox bug 1430551](https://bugzil.la/1430551)).
+Pressing the Enter key in `designMode` and `contenteditable` now inserts `<div>` elements when the caret is in an inline element or text node which is a child of a block level editing host — instead of inserting `<br>` elements like it used to. If you want to use the old behavior on your app, you can do it with `document.execCommand()`. See [Differences in markup generation](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable#differences_in_markup_generation) for more details (also see [Firefox bug 1430551](https://bugzil.la/1430551)).
 
 ### CSS
 
@@ -38,7 +38,7 @@ _No changes._
 
 - ECMAScript 2015 modules have been enabled by default in ([Firefox bug 1438139](https://bugzil.la/1438139)). See [ES6 In Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) and [ES modules: A cartoon deep dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/) for more information, or consult MDN reference docs:
 
-  - [`<script src="main.js" type="module">`](/en-US/docs/Web/HTML/Element/script#type) and [`<script nomodule src="fallback.js">`](/en-US/docs/Web/HTML/Element/script#nomodule)
+  - [`<script src="main.js" type="module">`](/en-US/docs/Web/HTML/Reference/Elements/script/type) and [`<script nomodule src="fallback.js">`](/en-US/docs/Web/HTML/Reference/Elements/script#nomodule)
   - [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) and [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) statements.
 
 - The {{jsxref("Array.prototype.values()")}} method has been added again ([Firefox bug 1420101](https://bugzil.la/1420101)). Make sure your code doesn't have any custom implementation of this method.

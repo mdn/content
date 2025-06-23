@@ -7,7 +7,7 @@ browser-compat: css.types.tan
 
 {{CSSRef}}
 
-The **`tan()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is a trigonometric function that returns the tangent of a number, which is a value between `−infinity` and `infinity`. The function contains a single calculation that must resolve to either a {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}} by interpreting the result of the argument as radians.
+The **`tan()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) is a trigonometric function that returns the tangent of a number, which is a value between `−infinity` and `infinity`. The function contains a single calculation that must resolve to either a {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}} by interpreting the result of the argument as radians.
 
 ## Syntax
 
@@ -41,7 +41,7 @@ The tangent of an `angle` will always return a number between `−∞` and `+∞
 - If `angle` is `0⁻`, the result is `0⁻`.
 - If `angle` is one of the asymptote values (such as `90deg`, `270deg`, etc.), the result is _explicitly undefined_. Authors _must not_ rely on `tan()` returning any particular value for these inputs.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 

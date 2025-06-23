@@ -56,6 +56,10 @@
       "inh": "",
       "impl": []
     },
+    "AnimationTrigger": {
+      "inh": "",
+      "impl": []
+    },
     "AnimationWorkletGlobalScope": {
       "inh": "WorkletGlobalScope",
       "impl": []
@@ -109,14 +113,6 @@
       "impl": []
     },
     "AudioProcessingEvent": {
-      "inh": "Event",
-      "impl": []
-    },
-    "AudioRenderCapacity": {
-      "inh": "EventTarget",
-      "impl": []
-    },
-    "AudioRenderCapacityEvent": {
       "inh": "Event",
       "impl": []
     },
@@ -420,6 +416,10 @@
       "inh": "EventTarget",
       "impl": []
     },
+    "CommandEvent": {
+      "inh": "Event",
+      "impl": []
+    },
     "Comment": {
       "inh": "CharacterData",
       "impl": []
@@ -478,6 +478,10 @@
     },
     "CrashReportBody": {
       "inh": "ReportBody",
+      "impl": []
+    },
+    "CreateMonitor": {
+      "inh": "EventTarget",
       "impl": []
     },
     "Credential": {
@@ -550,6 +554,14 @@
     },
     "CSSFontPaletteValuesRule": {
       "inh": "CSSRule",
+      "impl": []
+    },
+    "CSSFunctionDeclarations": {
+      "inh": "CSSRule",
+      "impl": []
+    },
+    "CSSFunctionDescriptors": {
+      "inh": "CSSStyleDeclaration",
       "impl": []
     },
     "CSSFunctionRule": {
@@ -1276,10 +1288,6 @@
       "inh": "",
       "impl": []
     },
-    "GamepadTouch": {
-      "inh": "",
-      "impl": []
-    },
     "Geolocation": {
       "inh": "",
       "impl": []
@@ -1932,6 +1940,10 @@
       "inh": "",
       "impl": []
     },
+    "IntegrityPolicyViolationReportBody": {
+      "inh": "ReportBody",
+      "impl": []
+    },
     "InterestGroupBiddingAndScoringScriptRunnerGlobalScope": {
       "inh": "InterestGroupScriptRunnerGlobalScope",
       "impl": []
@@ -1997,6 +2009,10 @@
       "impl": []
     },
     "KHR_parallel_shader_compile": {
+      "inh": "",
+      "impl": []
+    },
+    "LanguageDetector": {
       "inh": "",
       "impl": []
     },
@@ -2324,6 +2340,10 @@
       "inh": "",
       "impl": []
     },
+    "NavigatorLogin": {
+      "inh": "",
+      "impl": []
+    },
     "NavigatorManagedData": {
       "inh": "EventTarget",
       "impl": []
@@ -2632,6 +2652,10 @@
       "inh": "MouseEvent",
       "impl": []
     },
+    "PointerTimeline": {
+      "inh": "AnimationTimeline",
+      "impl": []
+    },
     "PopStateEvent": {
       "inh": "Event",
       "impl": []
@@ -2696,6 +2720,14 @@
       "inh": "",
       "impl": []
     },
+    "PrivateAttribution": {
+      "inh": "",
+      "impl": []
+    },
+    "PrivateAttributionAggregationServices": {
+      "inh": "",
+      "impl": []
+    },
     "ProcessingInstruction": {
       "inh": "CharacterData",
       "impl": []
@@ -2713,6 +2745,10 @@
       "impl": []
     },
     "ProtectedAudience": {
+      "inh": "",
+      "impl": []
+    },
+    "ProtectedAudienceUtilities": {
       "inh": "",
       "impl": []
     },
@@ -2845,6 +2881,10 @@
       "impl": []
     },
     "RestrictionTarget": {
+      "inh": "",
+      "impl": []
+    },
+    "Rewriter": {
       "inh": "",
       "impl": []
     },
@@ -3068,12 +3108,36 @@
       "inh": "",
       "impl": []
     },
+    "SharedStorageAppendMethod": {
+      "inh": "SharedStorageModifierMethod",
+      "impl": []
+    },
+    "SharedStorageClearMethod": {
+      "inh": "SharedStorageModifierMethod",
+      "impl": []
+    },
+    "SharedStorageDeleteMethod": {
+      "inh": "SharedStorageModifierMethod",
+      "impl": []
+    },
+    "SharedStorageModifierMethod": {
+      "inh": "",
+      "impl": []
+    },
+    "SharedStorageSetMethod": {
+      "inh": "SharedStorageModifierMethod",
+      "impl": []
+    },
     "SharedStorageWorklet": {
       "inh": "Worklet",
       "impl": []
     },
     "SharedStorageWorkletGlobalScope": {
       "inh": "WorkletGlobalScope",
+      "impl": []
+    },
+    "SharedStorageWorkletNavigator": {
+      "inh": "",
       "impl": []
     },
     "SharedWorker": {
@@ -3096,14 +3160,6 @@
       "inh": "EventTarget",
       "impl": []
     },
-    "SpeechGrammar": {
-      "inh": "",
-      "impl": []
-    },
-    "SpeechGrammarList": {
-      "inh": "",
-      "impl": []
-    },
     "SpeechRecognition": {
       "inh": "EventTarget",
       "impl": []
@@ -3118,6 +3174,14 @@
     },
     "SpeechRecognitionEvent": {
       "inh": "Event",
+      "impl": []
+    },
+    "SpeechRecognitionPhrase": {
+      "inh": "",
+      "impl": []
+    },
+    "SpeechRecognitionPhraseList": {
+      "inh": "",
       "impl": []
     },
     "SpeechRecognitionResult": {
@@ -3205,6 +3269,10 @@
       "impl": []
     },
     "SubtleCrypto": {
+      "inh": "",
+      "impl": []
+    },
+    "Summarizer": {
       "inh": "",
       "impl": []
     },
@@ -3484,6 +3552,10 @@
       "inh": "SVGGeometryElement",
       "impl": []
     },
+    "SVGPathSegment": {
+      "inh": "",
+      "impl": []
+    },
     "SVGPatternElement": {
       "inh": "SVGElement",
       "impl": []
@@ -3718,6 +3790,10 @@
     },
     "TransitionEvent": {
       "inh": "Event",
+      "impl": []
+    },
+    "Translator": {
+      "inh": "",
       "impl": []
     },
     "TreeWalker": {
@@ -4080,6 +4156,10 @@
       "inh": "",
       "impl": []
     },
+    "WebTransportDatagramsWritable": {
+      "inh": "WritableStream",
+      "impl": []
+    },
     "WebTransportError": {
       "inh": "DOMException",
       "impl": []
@@ -4169,6 +4249,10 @@
       "impl": []
     },
     "WritableStreamDefaultWriter": {
+      "inh": "",
+      "impl": []
+    },
+    "Writer": {
       "inh": "",
       "impl": []
     },

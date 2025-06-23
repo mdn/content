@@ -1,12 +1,13 @@
 ---
 title: CSS nesting at-rules
+short-title: Nesting at-rules
 slug: Web/CSS/CSS_nesting/Nesting_at-rules
 page-type: guide
 ---
 
 {{CSSRef}}
 
-Any [at-rule](/en-US/docs/Web/CSS/At-rule) whose body contains style rules can be nested inside another style rule using CSS nesting. Style rules nested inside at-rules take their nesting selector definition from the nearest ancestor style rule. Properties can be directly included inside a nested at-rule, acting as if they were nested in a `& {...}` block.
+Any [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) whose body contains style rules can be nested inside another style rule using CSS nesting. Style rules nested inside at-rules take their nesting selector definition from the nearest ancestor style rule. Properties can be directly included inside a nested at-rule, acting as if they were nested in a `& {...}` block.
 
 ## at-rules that can be nested
 
@@ -15,6 +16,7 @@ Any [at-rule](/en-US/docs/Web/CSS/At-rule) whose body contains style rules can b
 - {{cssxref('@layer')}}
 - {{cssxref('@scope')}}
 - {{cssxref('@container')}}
+- {{cssxref('@starting-style')}}
 
 ## Examples
 

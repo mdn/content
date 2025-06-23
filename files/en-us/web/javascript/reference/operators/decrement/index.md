@@ -9,7 +9,21 @@ browser-compat: javascript.operators.decrement
 
 The **decrement (`--`)** operator decrements (subtracts one from) its operand and returns the value before or after the decrement, depending on where the operator is placed.
 
-{{EmbedInteractiveExample("pages/js/expressions-decrement.html")}}
+{{InteractiveExample("JavaScript Demo: Decrement (--) operator")}}
+
+```js interactive-example
+let x = 3;
+const y = x--;
+
+console.log(`x:${x}, y:${y}`);
+// Expected output: "x:2, y:3"
+
+let a = 3;
+const b = --a;
+
+console.log(`a:${a}, b:${b}`);
+// Expected output: "a:2, b:2"
+```
 
 ## Syntax
 
@@ -20,13 +34,13 @@ x--
 
 ## Description
 
-The `--` operator is overloaded for two types of operands: number and [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). It first [coerces the operand to a numeric value](/en-US/docs/Web/JavaScript/Data_structures#numeric_coercion) and tests the type of it. It performs BigInt decrement if the operand becomes a BigInt; otherwise, it performs number decrement.
+The `--` operator is overloaded for two types of operands: number and [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). It first [coerces the operand to a numeric value](/en-US/docs/Web/JavaScript/Guide/Data_structures#numeric_coercion) and tests the type of it. It performs BigInt decrement if the operand becomes a BigInt; otherwise, it performs number decrement.
 
 If used postfix, with operator after operand (for example, `x--`), the decrement operator decrements and returns the value before decrementing.
 
 If used prefix, with operator before operand (for example, `--x`), the decrement operator decrements and returns the value after decrementing.
 
-The decrement operator can only be applied on operands that are references (variables and object properties; i.e. valid [assignment targets](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment)). `--x` itself evaluates to a value, not a reference, so you cannot chain multiple decrement operators together.
+The decrement operator can only be applied on operands that are references (variables and object properties; i.e., valid [assignment targets](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment)). `--x` itself evaluates to a value, not a reference, so you cannot chain multiple decrement operators together.
 
 ```js-nolint example-bad
 --(--x); // SyntaxError: Invalid left-hand side expression in prefix operation

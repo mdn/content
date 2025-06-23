@@ -27,5 +27,5 @@ A string.
 
 ## See also
 
-- [`dir`](/en-US/docs/Web/HTML/Global_attributes/dir) global
+- [`dir`](/en-US/docs/Web/HTML/Reference/Global_attributes/dir) global
   attribute

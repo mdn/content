@@ -24,7 +24,7 @@ browser-compat: webextensions.manifest.options_ui
     <tr>
       <th scope="row">Example</th>
       <td>
-        <pre class="brush: json;">
+        <pre class="brush: json">
 "options_ui": {
   "page": "options/options.html"
 }</pre
@@ -77,7 +77,7 @@ The `options_ui` key is an object with the following contents:
           </ul>
         <div class="notecard warning">
           <p>
-            Do not set <code>browser_style</code> to true: its not support in Manifest V3 from Firefox 118. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration">Manifest V3 migration for <code>browser_style</code></a>.
+            Do not set <code>browser_style</code> to true: it's not supported in Manifest V3, from Firefox 118. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration">Manifest V3 migration for <code>browser_style</code></a>.
           </p>
         </div>
         <p>

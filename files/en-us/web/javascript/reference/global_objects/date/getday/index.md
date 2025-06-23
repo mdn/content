@@ -1,5 +1,6 @@
 ---
 title: Date.prototype.getDay()
+short-title: getDay()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getDay
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getDay
@@ -9,7 +10,16 @@ browser-compat: javascript.builtins.Date.getDay
 
 The **`getDay()`** method of {{jsxref("Date")}} instances returns the day of the week for this date according to local time, where 0 represents Sunday. For the day of the month, see {{jsxref("Date.prototype.getDate()")}}.
 
-{{EmbedInteractiveExample("pages/js/date-getday.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.getDay()", "shorter")}}
+
+```js interactive-example
+const birthday = new Date("August 19, 1975 23:15:30");
+const day1 = birthday.getDay();
+// Sunday - Saturday : 0 - 6
+
+console.log(day1);
+// Expected output: 2
+```
 
 ## Syntax
 

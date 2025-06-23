@@ -40,4 +40,4 @@ A developer would not use this constructor manually. A new `PageRevealEvent` obj
 
 ## See also
 
-- [View Transitions API](/en-US/docs/Web/API/View_Transitions_API)
+- [View Transition API](/en-US/docs/Web/API/View_Transition_API)

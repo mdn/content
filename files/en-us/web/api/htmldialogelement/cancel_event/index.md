@@ -18,10 +18,10 @@ When a `<dialog>` is dismissed with the <kbd>Esc</kbd> key, both the `cancel` an
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("cancel", (event) => {});
+```js-nolint
+addEventListener("cancel", (event) => { })
 
-oncancel = (event) => {};
+oncancel = (event) => { }
 ```
 
 ## Event type
@@ -36,7 +36,7 @@ A generic {{domxref("Event")}}.
 
 ```html
 <dialog class="example-dialog">
-  <button class="close" type="reset">Close</button>
+  <button class="close">Close</button>
 </dialog>
 
 <button class="open-dialog">Open dialog</button>

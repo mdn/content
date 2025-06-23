@@ -28,7 +28,7 @@ See also [Firefox 79: The safe return of shared memory, new tooling, and platfor
 
 #### Other tools
 
-- The new [Application panel](https://firefox-source-docs.mozilla.org/devtools-user/application/index.html) is now available, which initially provides inspection and debugging support for [service workers](/en-US/docs/Web/API/Service_Worker_API) and [web app manifests](/en-US/docs/Web/Manifest).
+- The new [Application panel](https://firefox-source-docs.mozilla.org/devtools-user/application/index.html) is now available, which initially provides inspection and debugging support for [service workers](/en-US/docs/Web/API/Service_Worker_API) and [web app manifests](/en-US/docs/Web/Progressive_web_apps/Manifest).
 - The Messages tab of the Network Monitor has been merged with the [Responses tab](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html#response-tab). ([Firefox bug 1636421](https://bugzil.la/1636421))
 - The Accessibility Inspector is automatically turned on when you access its tab; you no longer need to explicitly enable it. ([Firefox bug 1602075](https://bugzil.la/1602075))
 - In [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html#controlling-responsive-design-mode), when touch simulation is enabled, mouse-drag events are now interpreted as touch-drag or swipe events. ([Firefox bug 1621781](https://bugzil.la/1621781))
@@ -36,8 +36,8 @@ See also [Firefox 79: The safe return of shared memory, new tooling, and platfor
 
 ### HTML
 
-- The [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) element's `sandbox` attribute now supports the `allow-top-navigation-by-user-activation` token ([Firefox bug 1359867](https://bugzil.la/1359867)).
-- Setting `target="_blank"` on [`<a>`](/en-US/docs/Web/HTML/Element/a) and [`<area>`](/en-US/docs/Web/HTML/Element/area) elements implicitly provides the same behavior as also setting `rel="noopener"` ([Firefox bug 1522083](https://bugzil.la/1522083)).
+- The [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe) element's `sandbox` attribute now supports the `allow-top-navigation-by-user-activation` token ([Firefox bug 1359867](https://bugzil.la/1359867)).
+- Setting `target="_blank"` on [`<a>`](/en-US/docs/Web/HTML/Reference/Elements/a) and [`<area>`](/en-US/docs/Web/HTML/Reference/Elements/area) elements implicitly provides the same behavior as also setting `rel="noopener"` ([Firefox bug 1522083](https://bugzil.la/1522083)).
 
 ### CSS
 
@@ -86,9 +86,9 @@ See also [Firefox 79: The safe return of shared memory, new tooling, and platfor
 
 ### WebAssembly
 
-- [WebAssembly Bulk memory operations](/en-US/docs/WebAssembly/Understanding_the_text_format#bulk_memory_operations) are now shipped ([Firefox bug 1528294](https://bugzil.la/1528294)).
-- [WebAssembly Reference types](/en-US/docs/WebAssembly/Understanding_the_text_format#reference_types) are now shipped ([Firefox bug 1637884](https://bugzil.la/1637884)).
-- [WebAssembly Threads](/en-US/docs/WebAssembly/Understanding_the_text_format#webassembly_threads) (Shared memory & Atomics) are now shipped ([Firefox bug 1389458](https://bugzil.la/1389458), [Firefox bug 1648685](https://bugzil.la/1648685)).
+- [WebAssembly Bulk memory operations](/en-US/docs/WebAssembly/Guides/Understanding_the_text_format#bulk_memory_operations) are now shipped ([Firefox bug 1528294](https://bugzil.la/1528294)).
+- [WebAssembly Reference types](/en-US/docs/WebAssembly/Guides/Understanding_the_text_format#reference_types) are now shipped ([Firefox bug 1637884](https://bugzil.la/1637884)).
+- [WebAssembly Threads](/en-US/docs/WebAssembly/Guides/Understanding_the_text_format#webassembly_threads) (Shared memory & Atomics) are now shipped ([Firefox bug 1389458](https://bugzil.la/1389458), [Firefox bug 1648685](https://bugzil.la/1648685)).
 
 ## Changes for add-on developers
 

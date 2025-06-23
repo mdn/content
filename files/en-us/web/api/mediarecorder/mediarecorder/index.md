@@ -14,7 +14,7 @@ creates a new {{domxref("MediaRecorder")}} object that will record a specified
 
 The object can optionally be configured to record
 using a specific media container (file type), and, further, can specify the exact codec
-and codec configuration(s) to use by specifying [the `codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter).
+and codec configuration(s) to use by specifying [the `codecs` parameter](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter).
 
 ## Syntax
 
@@ -36,7 +36,7 @@ new MediaRecorder(stream, options)
     - `mimeType` {{optional_inline}}
       - : A MIME type specifying the format for the resulting
         media; you may specify the container format (the browser will select its preferred
-        codecs for audio and/or video), or you may [use the `codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter) and/or the `profiles` parameter to
+        codecs for audio and/or video), or you may [use the `codecs` parameter](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter) and/or the `profiles` parameter to
         provide detailed information about which codecs to use and how to configure them.
         Applications can check in advance if a `mimeType` is supported by the
         {{Glossary("user agent")}} by calling

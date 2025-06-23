@@ -1,5 +1,6 @@
 ---
 title: Math.log10()
+short-title: log10()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log10
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.log10
@@ -15,7 +16,21 @@ The **`Math.log10()`** static method returns the base 10 logarithm of a number. 
 </math>
 <!-- prettier-ignore-end -->
 
-{{EmbedInteractiveExample("pages/js/math-log10.html")}}
+{{InteractiveExample("JavaScript Demo: Math.log10()")}}
+
+```js interactive-example
+console.log(Math.log10(100000));
+// Expected output: 5
+
+console.log(Math.log10(2));
+// Expected output: 0.3010299956639812
+
+console.log(Math.log10(1));
+// Expected output: 0
+
+console.log(Math.log10(0));
+// Expected output: -Infinity
+```
 
 ## Syntax
 
@@ -63,6 +78,7 @@ Math.log10(Infinity); // Infinity
 ## See also
 
 - [Polyfill of `Math.log10` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [es-shims polyfill of `Math.log10`](https://www.npmjs.com/package/math.log10)
 - {{jsxref("Math.exp()")}}
 - {{jsxref("Math.log()")}}
 - {{jsxref("Math.log1p()")}}

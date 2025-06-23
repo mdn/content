@@ -47,11 +47,13 @@ const obj2 = {
   ["__proto__"]: {},
   __proto__,
   __proto__() {},
-  get __proto__() {},
+  get __proto__() {
+    return 1;
+  },
 };
 ```
 
 ## See also
 
 - [Object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
-- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)

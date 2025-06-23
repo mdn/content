@@ -13,4 +13,4 @@ The XInclude mechanism is not supported natively by any major browsers.
 ## See also
 
 - [XInclude standard](https://www.w3.org/TR/xinclude-11/)
-- [`XPath`](/en-US/docs/Web/XPath)
+- [`XPath`](/en-US/docs/Web/XML/XPath)

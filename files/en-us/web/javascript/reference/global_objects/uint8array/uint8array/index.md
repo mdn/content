@@ -1,5 +1,6 @@
 ---
 title: Uint8Array() constructor
+short-title: Uint8Array()
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array/Uint8Array
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Uint8Array.Uint8Array

@@ -7,7 +7,7 @@ browser-compat: api.XSLTProcessor
 
 {{APIRef("XSLT")}}
 
-An **`XSLTProcessor`** applies an [XSLT](/en-US/docs/Web/XSLT) stylesheet transformation to an XML document to
+An **`XSLTProcessor`** applies an [XSLT](/en-US/docs/Web/XML/XSLT) stylesheet transformation to an XML document to
 produce a new XML document as output. It has methods to load the XSLT stylesheet, to
 manipulate `<xsl:param>` parameter values, and to apply the
 transformation to documents.
@@ -21,7 +21,7 @@ transformation to documents.
 
 - {{domxref("XSLTProcessor.importStylesheet()")}}
   - : Imports the XSLT stylesheet.
-    If the given node is a document node, you can pass in a full XSL Transform or a [literal result element transform](https://www.w3.org/TR/xslt/#result-element-stylesheet);
+    If the given node is a document node, you can pass in a full XSL Transform or a [literal result element transform](https://www.w3.org/TR/xslt-30/#literal-result-element);
     otherwise, it must be an `<xsl:stylesheet>` or `<xsl:transform>` element.
 - {{domxref("XSLTProcessor.transformToFragment()")}}
   - : Transforms the node source by applying the XSLT stylesheet imported using the {{domxref("XSLTProcessor.importStylesheet()")}} function.
@@ -61,7 +61,7 @@ async function init() {
   xsltProcessor.importStylesheet(xslStylesheet);
 
   // process the file
-  // ...
+  // …
 }
 ```
 
@@ -103,7 +103,7 @@ const fragment = xsltProcessor.transformToFragment(xmlRef, document);
 
 ### Basic Example
 
-The basic example will load an XML file and apply a XSL transformation on it. These are the same files used in the [Generating HTML](/en-US/docs/Web/API/XSLTProcessor/Generating_HTML) example. The XML file describes an article and the XSL file formats the information for display.
+The basic example will load an XML file and apply a XSL transformation on it. These are the same files used in the [Generating HTML](/en-US/docs/Web/API/Document_Object_Model/Transforming_with_XSLT#generating_html) example. The XML file describes an article and the XSL file formats the information for display.
 
 #### XML
 
@@ -328,7 +328,8 @@ async function sort() {
 
 ## See also
 
-- [XSLT](/en-US/docs/Web/XSLT)
-- [What kind of language is XSLT?](https://developer.ibm.com/technologies/web-development/) at [IBM developer](https://developer.ibm.com/)
+- [XSLT](/en-US/docs/Web/XML/XSLT)
+- [Transforming with XSLT](/en-US/docs/Web/API/Document_Object_Model/Transforming_with_XSLT)
+- [Chapter 15 of the XML 1.1 Bible: XSL Transformations](https://www.ibiblio.org/xml/books/bible3/chapters/ch15.html)
 - [XSLT Tutorial](https://zvon.org/xxl/XSLTutorial/Books/Book1/index.html) at [zvon.org](https://zvon.org/)
 - [XPath Tutorial](https://zvon.org/xxl/XPathTutorial/General/examples.html) at [zvon.org](https://zvon.org/)

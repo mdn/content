@@ -128,4 +128,4 @@ svg {
 
 - {{SVGElement("linearGradient")}}
 - {{SVGElement("radialGradient")}}
-- {{SVGAttr("color-interpolation")}}
+- SVG {{SVGAttr("color-interpolation")}} attribute

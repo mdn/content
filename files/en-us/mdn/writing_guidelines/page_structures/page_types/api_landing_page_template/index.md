@@ -2,9 +2,8 @@
 title: API landing page template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_landing_page_template
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 > **Note:** _Remove this whole explanatory note before publishing_
 >
@@ -21,8 +20,8 @@ page-type: mdn-writing-guide
 > slug: Web/API/NameOfTheAPI_API
 > page-type: web-api-overview
 > status:
->   - experimental
 >   - deprecated
+>   - experimental
 >   - non-standard
 > ---
 > ```
@@ -38,7 +37,7 @@ page-type: mdn-writing-guide
 > - **page-type**
 >   - : The `page-type` key for Web/API landing pages is always `web-api-overview`.
 > - **status**
->   - : Flags describing the status of this feature. An array which may contain one or more of the following: `experimental`, `deprecated`, `non-standard`. This key should not be set manually: it is set automatically based on values in the browser compatibility data for the feature. See ["How to add or update feature statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses).
+>   - : Flags describing the status of this feature. An array which may contain one or more of the following: `experimental`, `deprecated`, `non-standard`. This key should not be set manually: it is set automatically based on values in the browser compatibility data for the feature. See ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
 >
 > ---
 >
@@ -60,14 +59,13 @@ page-type: mdn-writing-guide
 >   If it is, then you should also fill in an entry for it in the [Features restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts) page.
 > - `\{{AvailableInWorkers}}` — this generates a **Available In Workers** note that indicates that the technology is available in [worker context](/en-US/docs/Web/API/Web_Workers_API).
 >   If it is only available in window context, then you can remove the macro call.
->   If it is also available or only available in worker context, then you may also need to passing an parameter to it due to its availability (see [\\{{AvailableInWorkers}} macros source code](https://github.com/mdn/yari/blob/main/kumascript/macros/AvailableInWorkers.ejs) for all available values), you may also need to fill in an entry for it in the [Web APIs available in workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#supported_web_apis) page.
+>   If it is also available or only available in worker context, then you may also need to passing an parameter to it due to its availability (see [\\{{AvailableInWorkers}} macros source code](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs) for all available values), you may also need to fill in an entry for it in the [Web APIs available in workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#web_apis_available_in_workers) page.
 > - `\{{APIRef("GroupDataName")}}` — this generates the left-hand reference sidebar showing quick reference links related to the current page.
 >   For example, every page in the [WebVR API](/en-US/docs/Web/API/WebVR_API) has the same sidebar, which points to the other pages in the API.
 >   To generate the correct sidebar for your API, you need to add a `GroupData` entry to our GitHub repo, and include the entry's name inside the macro call in place of _GroupDataName_.
 >   See our [API reference sidebars](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars) guide for information on how to do this.
-> - Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
 >
-> Do not provide status header macros manually. Refer to the section ["How to add or update feature statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses) to add these statuses to the page.
+> Do not provide status header macros manually. Refer to the section ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated) to add these statuses to the page.
 >
 > Samples of the **Secure context**, **Available in workers**, **Experimental**, **Deprecated**, and **Non-standard** banners are shown right after this note block.
 >
@@ -105,8 +103,8 @@ In this section, describe the API's purpose and usage cases in a bit more detail
 What problems does it solve? What concepts does it involve? How do you use it, from a high-level perspective?
 
 Don't go into a lot of detail in this section, and don't include code examples.
-If there are a lot of concepts to explain around this API, you should explain them in a separate "Fundamentals" or "Concepts" article (e.g. [Fundamentals of WebXR](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals)).
-For a practical usage guide with code examples, you should include a "Usage…" article in your API docs (e.g. [Using the WebVR API](/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API)).
+If there are a lot of concepts to explain around this API, you should explain them in a separate "Fundamentals" or "Concepts" article (e.g., [Fundamentals of WebXR](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals)).
+For a practical usage guide with code examples, you should include a "Usage…" article in your API docs (e.g., [Using the WebVR API](/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API)).
 
 To help improve content discoverability and {{Glossary("SEO")}}, keep the following tips in mind:
 

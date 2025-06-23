@@ -1,5 +1,6 @@
 ---
 title: Date.prototype.setUTCHours()
+short-title: setUTCHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCHours
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setUTCHours
@@ -9,7 +10,22 @@ browser-compat: javascript.builtins.Date.setUTCHours
 
 The **`setUTCHours()`** method of {{jsxref("Date")}} instances changes the hours, minutes, seconds, and/or milliseconds for this date according to universal time.
 
-{{EmbedInteractiveExample("pages/js/date-setutchours.html")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.setUTCHours()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30 GMT-3:00");
+
+console.log(event.toUTCString());
+// Expected output: "Wed, 20 Aug 1975 02:15:30 GMT"
+
+console.log(event.getUTCHours());
+// Expected output: 2
+
+event.setUTCHours(23);
+
+console.log(event.toUTCString());
+// Expected output: "Wed, 20 Aug 1975 23:15:30 GMT"
+```
 
 ## Syntax
 

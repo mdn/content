@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.toString
@@ -10,7 +11,14 @@ browser-compat: javascript.builtins.Array.toString
 The **`toString()`** method of {{jsxref("Array")}} instances returns a string representing the
 specified array and its elements.
 
-{{EmbedInteractiveExample("pages/js/array-tostring.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.toString()", "shorter")}}
+
+```js interactive-example
+const array1 = [1, 2, "a", "1a"];
+
+console.log(array1.toString());
+// Expected output: "1,2,a,1a"
+```
 
 ## Syntax
 

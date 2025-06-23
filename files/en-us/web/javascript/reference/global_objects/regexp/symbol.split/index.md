@@ -1,5 +1,6 @@
 ---
 title: RegExp.prototype[Symbol.split]()
+short-title: "[Symbol.split]()"
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.@@split
@@ -9,7 +10,22 @@ browser-compat: javascript.builtins.RegExp.@@split
 
 The **`[Symbol.split]()`** method of {{jsxref("RegExp")}} instances specifies how [`String.prototype.split`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) should behave when the regular expression is passed in as the separator.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-@@split.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype[Symbol.split]()")}}
+
+```js interactive-example
+class RegExp1 extends RegExp {
+  [Symbol.split](str, limit) {
+    const result = RegExp.prototype[Symbol.split].call(this, str, limit);
+    return result.map((x) => `(${x})`);
+  }
+}
+
+console.log("2016-01-02".split(new RegExp1("-")));
+// Expected output: Array ["(2016)", "(01)", "(02)"]
+
+console.log("2016-01-02".split(/-/));
+// Expected output: Array ["2016", "01", "02"]
+```
 
 ## Syntax
 

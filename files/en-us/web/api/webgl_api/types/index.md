@@ -64,7 +64,7 @@ These types are used within a {{domxref("WebGLRenderingContext")}}.
     <tr>
       <td><code>GLsizei</code></td>
       <td><code>long</code></td>
-      <td>Used for sizes (e.g. width and height of the drawing buffer).</td>
+      <td>Used for sizes (e.g., width and height of the drawing buffer).</td>
     </tr>
     <tr>
       <td><code>GLintptr</code></td>

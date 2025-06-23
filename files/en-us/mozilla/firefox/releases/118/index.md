@@ -17,9 +17,9 @@ This article provides information about the changes in Firefox 118 that affect d
 ### CSS
 
 - The {{cssxref("font-synthesis-position")}} property and `position` value for {{cssxref("font-synthesis")}} shorthand property are now supported. These allow subscript and superscript typefaces to be disabled for fonts that do not have glyphs for them when using {{cssxref("font-variant-position")}} ([Firefox bug 1849010](https://bugzil.la/1849010)).
-- Multiple CSS [math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions) are now supported: [`abs()`](/en-US/docs/Web/CSS/abs), [`sign()`](/en-US/docs/Web/CSS/sign), [`round()`](/en-US/docs/Web/CSS/round), [`mod()`](/en-US/docs/Web/CSS/mod), [`rem()`](/en-US/docs/Web/CSS/rem), [`pow()`](/en-US/docs/Web/CSS/pow), [`sqrt()`](/en-US/docs/Web/CSS/sqrt), [`hypot()`](/en-US/docs/Web/CSS/hypot), [`log()`](/en-US/docs/Web/CSS/log), and [`exp()`](/en-US/docs/Web/CSS/exp) (Firefox bug [1814589](https://bugzil.la/1814589)).
+- Multiple CSS [math functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#math_functions) are now supported: [`abs()`](/en-US/docs/Web/CSS/abs), [`sign()`](/en-US/docs/Web/CSS/sign), [`round()`](/en-US/docs/Web/CSS/round), [`mod()`](/en-US/docs/Web/CSS/mod), [`rem()`](/en-US/docs/Web/CSS/rem), [`pow()`](/en-US/docs/Web/CSS/pow), [`sqrt()`](/en-US/docs/Web/CSS/sqrt), [`hypot()`](/en-US/docs/Web/CSS/hypot), [`log()`](/en-US/docs/Web/CSS/log), and [`exp()`](/en-US/docs/Web/CSS/exp) (Firefox bug [1814589](https://bugzil.la/1814589)).
 - A new keyword `from-font` in the CSS property [`font-size-adjust`](/en-US/docs/Web/CSS/font-size-adjust) enables picking the desired `<font-metric>` from the first available font (Firefox bug [1708240](https://bugzil.la/1708240)).
-- The CSS property [`transform-box`](/en-US/docs/Web/CSS/transform-box) now supports the values `content-box` and `stroke-box`. For the reference box, the `content-box` value uses the [content box](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#parts_of_a_box) and the `stroke-box` value uses the stroke bounding box that contains an SVG's shape (Firefox bug [1819464](https://bugzil.la/1819464)).
+- The CSS property [`transform-box`](/en-US/docs/Web/CSS/transform-box) now supports the values `content-box` and `stroke-box`. For the reference box, the `content-box` value uses the [content box](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#parts_of_a_box) and the `stroke-box` value uses the stroke bounding box that contains an SVG's shape (Firefox bug [1819464](https://bugzil.la/1819464)).
 - The CSS property [`font-size-adjust`](/en-US/docs/Web/CSS/font-size-adjust) supports the keyword `from-font` that enables picking the desired `<font-metric>` from the first available font (Firefox bug [1708240](https://bugzil.la/1708240)).
 
 ### JavaScript
@@ -28,12 +28,12 @@ No notable changes.
 
 ### HTTP
 
-- The HTTP [`Permissions-Policy`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy) header's [`publickey-credentials-get`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/publickey-credentials-get) directive is now supported, which can be used to enable the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) interface for retrieving public-key credentials in a cross-origin iframe ([Firefox bug 1460986](https://bugzil.la/1460986)).
+- The HTTP [`Permissions-Policy`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy) header's [`publickey-credentials-get`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/publickey-credentials-get) directive is now supported, which can be used to enable the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) interface for retrieving public-key credentials in a cross-origin iframe ([Firefox bug 1460986](https://bugzil.la/1460986)).
 
 ### MathML
 
-- The [`<semantics>`](/en-US/docs/Web/MathML/Element/semantics) and [`<maction>`](/en-US/docs/Web/MathML/Element/maction) elements only render the first child element by default now. The `mathml.legacy_maction_and_semantics_implementations.disabled` preference has been removed (Firefox bug [1788223](https://bugzil.la/1788223)).
-- All values of the [`mathvariant`](/en-US/docs/Web/MathML/Element/mi#mathvariant) attribute other than `normal` are now deprecated. Additionally, the attribute's use is now limited to the `<mi>` element (Firefox bug [1845461](https://bugzil.la/1845461)).
+- The [`<semantics>`](/en-US/docs/Web/MathML/Reference/Element/semantics) and [`<maction>`](/en-US/docs/Web/MathML/Reference/Element/maction) elements only render the first child element by default now. The `mathml.legacy_maction_and_semantics_implementations.disabled` preference has been removed (Firefox bug [1788223](https://bugzil.la/1788223)).
+- All values of the [`mathvariant`](/en-US/docs/Web/MathML/Reference/Element/mi#mathvariant) attribute other than `normal` are now deprecated. Additionally, the attribute's use is now limited to the `<mi>` element (Firefox bug [1845461](https://bugzil.la/1845461)).
 
 ### APIs
 
@@ -58,7 +58,7 @@ No notable changes.
 
 #### Marionette
 
-- Added support for all the [Web Authentication extension commands](https://www.w3.org/TR/webauthn-2/#sctn-automation), which allow users to authenticate themselves by Public Key Credentials ([Firefox bug 1846574](https://bugzil.la/1846574))
+- Added support for all the [Web Authentication extension commands](https://w3c.github.io/webauthn/#sctn-automation), which allow users to authenticate themselves by Public Key Credentials ([Firefox bug 1846574](https://bugzil.la/1846574))
 
 ## Changes for add-on developers
 

@@ -1,5 +1,5 @@
 ---
-title: "-webkit-transition"
+title: -webkit-transition
 slug: Web/CSS/@media/-webkit-transition
 page-type: css-media-feature
 status:
@@ -32,7 +32,7 @@ Apple has [a description in Safari CSS Reference](https://developer.apple.com/li
 
 ### Use @supports instead
 
-Do not use the `-webkit-transition` media feature. Instead, test for transition support using the CSS {{cssxref("@supports")}} [at-rule](/en-US/docs/Web/CSS/At-rule), like this:
+Do not use the `-webkit-transition` media feature. Instead, test for transition support using the CSS {{cssxref("@supports")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule), like this:
 
 ```css
 @supports (transition: initial) {

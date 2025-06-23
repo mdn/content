@@ -2,14 +2,12 @@
 title: animation-range
 slug: Web/CSS/animation-range
 page-type: css-shorthand-property
-status:
-  - experimental
 browser-compat: css.properties.animation-range
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
-The **`animation-range`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) is used to set the start and end of an animation's attachment range along its timeline, i.e. where along the timeline an animation will start and end.
+The **`animation-range`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) is used to set the start and end of an animation's attachment range along its timeline, i.e., where along the timeline an animation will start and end.
 
 ## Constituent properties
 
@@ -204,7 +202,7 @@ Last, an animation is specified on the element that animates its opacity and sca
   }
 
   to {
-    opacity: 1,
+    opacity: 1;
     transform: scaleX(1);
   }
 }

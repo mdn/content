@@ -7,7 +7,7 @@ browser-compat: css.at-rules.starting-style
 
 {{CSSRef}}
 
-The **`@starting-style`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) is used to define starting values for properties set on an element that you want to transition from when the element receives its first style update, i.e. when an element is first displayed on a previously loaded page.
+The **`@starting-style`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) is used to define starting values for properties set on an element that you want to transition from when the element receives its first style update, i.e., when an element is first displayed on a previously loaded page.
 
 ## Syntax
 
@@ -17,18 +17,19 @@ The `@starting-style` at rule can be used in two ways:
 
    ```css
    @starting-style {
-     rulesets
+     /* rulesets */
    }
    ```
 
 2. Nested within an existing ruleset, in which case it contains one or more declarations defining starting property values for the elements already selected by that ruleset:
 
    ```css
-   selector { /* existing ruleset */
+   selector {
+     /* existing ruleset */
      /* ... */
 
      @starting-style {
-       declarations
+       /* declarations */
      }
    }
    ```
@@ -64,7 +65,7 @@ To specify the starting values of the popover's properties that will be animated
 ```
 
 > [!NOTE]
-> The `@starting-style` at-rule and the "original rule" have the same {{cssxref("specificity")}}. To ensure that starting styles get applied, include the `@starting-style` at-rule _after_ the "original rule". If you specify the `@starting-style` at-rule before the "original rule", the original styles will override the starting styles.
+> The `@starting-style` at-rule and the "original rule" have the same [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity). To ensure that starting styles get applied, include the `@starting-style` at-rule _after_ the "original rule". If you specify the `@starting-style` at-rule before the "original rule", the original styles will override the starting styles.
 
 To specify the starting style for the popover using the nested method, you can nest the `@starting-style` block inside the "original rule":
 
@@ -88,7 +89,7 @@ In effect, there are three style states to manage in these situations — starti
 
 ## Formal syntax
 
-{{csssyntax}}
+{{CSSSyntaxRaw(`@starting-style = @starting-style { <rule-list> }`)}}
 
 ## Examples
 
@@ -213,7 +214,7 @@ In this example, a [popover](/en-US/docs/Web/API/Popover_API) is animated using 
 
 #### HTML
 
-The HTML contains a {{htmlelement("div")}} element declared as a popover using the [popover](/en-US/docs/Web/HTML/Global_attributes/popover) attribute and a {{htmlelement("button")}} element designated as the popover's display control using its [popovertarget](/en-US/docs/Web/HTML/Element/button#popovertarget) attribute.
+The HTML contains a {{htmlelement("div")}} element declared as a popover using the [popover](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) attribute and a {{htmlelement("button")}} element designated as the popover's display control using its [popovertarget](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget) attribute.
 
 ```html
 <button popovertarget="mypopover">Show the popover</button>
@@ -305,7 +306,7 @@ The code renders as follows:
 > Because popovers change from `display: none` to `display: block` each time they are shown, the popover transitions from its `@starting-style` styles to its `[popover]:popover-open` styles every time the entry transition occurs. When the popover closes, it transitions from its `[popover]:popover-open` state to the default `[popover]` state.
 
 > [!NOTE]
-> You can find an example that demonstrates transitioning a {{htmlelement("dialog")}} element and its backdrop as it is shown and hidden on the `<dialog>` reference page — see [Transitioning dialog elements](/en-US/docs/Web/HTML/Element/dialog#transitioning_dialog_elements).
+> You can find an example that demonstrates transitioning a {{htmlelement("dialog")}} element and its backdrop as it is shown and hidden on the `<dialog>` reference page — see [Transitioning dialog elements](/en-US/docs/Web/HTML/Reference/Elements/dialog#transitioning_dialog_elements).
 
 ### Transitioning elements on DOM addition and removal
 

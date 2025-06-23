@@ -2,7 +2,7 @@
 title: "console: groupCollapsed() static method"
 short-title: groupCollapsed()
 slug: Web/API/console/groupCollapsed_static
-page-type: web-api-instance-method
+page-type: web-api-static-method
 browser-compat: api.console.groupCollapsed_static
 ---
 

@@ -15,7 +15,7 @@ on the {{domxref("RTCDataChannel")}}. Values allowed by the
 {{domxref("WebSocket.binaryType")}} property are also permitted here:
 `blob` if {{domxref("Blob")}} objects are being used or
 `arraybuffer` if {{jsxref("ArrayBuffer")}} objects are being used. The
-default is `blob`.
+default is `arraybuffer`.
 
 When a binary message is received on the data channel, the resulting
 {{DOMxRef("RTCDataChannel.message_event", "message")}} event's {{domxref("MessageEvent.data")}} property is an object of

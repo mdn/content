@@ -10,9 +10,9 @@ browser-compat: api.CSSImportRule.href
 
 The read-only **`href`** property of the
 {{domxref("CSSImportRule")}} interface returns the URL specified by the
-{{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/At-rule).
+{{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule).
 
-The resolved URL will be the [`href`](/en-US/docs/Web/HTML/Element/link#href) attribute of the
+The resolved URL will be the [`href`](/en-US/docs/Web/HTML/Reference/Elements/link#href) attribute of the
 associated stylesheet.
 
 ## Value
@@ -30,8 +30,8 @@ first item in the list of CSS rules will be a `CSSImportRule`. The
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].href); //returns style.css
+const myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0].href); // 'style.css'
 ```
 
 ## Specifications

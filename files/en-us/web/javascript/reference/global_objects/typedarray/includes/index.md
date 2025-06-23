@@ -1,5 +1,6 @@
 ---
 title: TypedArray.prototype.includes()
+short-title: includes()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/includes
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.includes
@@ -9,7 +10,18 @@ browser-compat: javascript.builtins.TypedArray.includes
 
 The **`includes()`** method of {{jsxref("TypedArray")}} instances determines whether a typed array includes a certain value among its entries, returning `true` or `false` as appropriate. This method has the same algorithm as {{jsxref("Array.prototype.includes()")}}.
 
-{{EmbedInteractiveExample("pages/js/typedarray-includes.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.prototype.includes()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
+
+console.log(uint8.includes(20));
+// Expected output: true
+
+// Check from position 3
+console.log(uint8.includes(20, 3));
+// Expected output: false
+```
 
 ## Syntax
 

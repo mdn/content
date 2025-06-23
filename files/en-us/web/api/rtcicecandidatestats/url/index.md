@@ -3,7 +3,7 @@ title: "RTCIceCandidateStats: url property"
 short-title: url
 slug: Web/API/RTCIceCandidateStats/url
 page-type: web-api-instance-property
-browser-compat: api.RTCIceCandidateStats.url
+browser-compat: api.RTCStatsReport.type_local-candidate.url
 ---
 
 {{APIRef("WebRTC")}}

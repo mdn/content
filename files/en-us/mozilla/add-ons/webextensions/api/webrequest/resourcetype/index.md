@@ -24,7 +24,9 @@ Values of this type are strings. Possible values are:
 - `image`
   - : Resources loaded to be rendered as image, except for `imageset` on browsers that support that type (see browser compatibility below).
 - `imageset`
-  - : Images loaded by a {{HTMLElement("picture")}} element or given in an `<img>` element's [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute.
+  - : Images loaded by a {{HTMLElement("picture")}} element or given in an `<img>` element's [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset) attribute.
+- `json`
+  - : JSON modules loaded through an [import statement](/en-US/docs/Web/JavaScript/Reference/Statements/import).
 - `main_frame`
   - : Top-level documents loaded into a tab.
 - `media`
@@ -39,7 +41,7 @@ Values of this type are strings. Possible values are:
   - : Requests sent by plugins.
 - `ping`
 
-  - : Requests sent to the URL given in a hyperlink's [`ping`](/en-US/docs/Web/HTML/Element/a#ping) attribute, when the hyperlink is followed.
+  - : Requests sent to the URL given in a hyperlink's [`ping`](/en-US/docs/Web/HTML/Reference/Elements/a#ping) attribute, when the hyperlink is followed.
 
     Browsers that don't have a dedicated `beacon` type (see browser compatibility below), also label requests sent through the Beacon API as `ping`.
 
@@ -52,7 +54,7 @@ Values of this type are strings. Possible values are:
 - `sub_frame`
   - : Documents loaded into an {{HTMLElement("iframe")}} or {{HTMLElement("frame")}} element.
 - `web_manifest`
-  - : [Web App Manifests](/en-US/docs/Web/Manifest) loaded for websites that can be installed to the homescreen.
+  - : [Web App Manifests](/en-US/docs/Web/Progressive_web_apps/Manifest) loaded for websites that can be installed to the homescreen.
 - `websocket`
   - : Requests initiating a connection to a server through the [WebSocket API](/en-US/docs/Web/API/WebSockets_API).
 - `xml_dtd`
@@ -60,7 +62,7 @@ Values of this type are strings. Possible values are:
 - `xmlhttprequest`
   - : Requests sent by an {{domxref("XMLHttpRequest")}} object or through the [Fetch API](/en-US/docs/Web/API/Fetch_API).
 - `xslt`
-  - : [XSLT](/en-US/docs/Web/XSLT) stylesheets loaded for transforming an XML document.
+  - : [XSLT](/en-US/docs/Web/XML/XSLT) stylesheets loaded for transforming an XML document.
 - `other`
   - : Resources that aren't covered by any other available type.
 

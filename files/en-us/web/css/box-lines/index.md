@@ -53,14 +53,11 @@ The `box-lines` property is specified as one of the keyword values listed below.
 
 ## Formal syntax
 
-```plain
-box-lines =
-  single | multiple
-```
+{{CSSSyntaxRaw(`box-lines = single | multiple`)}}
 
 ## Examples
 
-### Simple usage example
+### Basic usage example
 
 In the original version of the spec, `box-lines` allowed you to specify that you wanted your flex container's children to wrap onto multiple lines. This was only supported in WebKit-based browsers, with a prefix.
 

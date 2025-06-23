@@ -26,7 +26,7 @@ querySelectorAll(selectors)
     must be a valid CSS selector string; if it isn't, a `SyntaxError` exception
     is thrown.
 
-    Note that the HTML specification does not require attribute values to be valid CSS identifiers. If a [`class`](/en-US/docs/Web/HTML/Global_attributes/class) or [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute value is not a valid CSS identifier, then you must escape it before using it in a selector, either by calling {{domxref("CSS.escape_static", "CSS.escape()")}} on the value, or using one of the techniques described in [Escaping characters](/en-US/docs/Web/CSS/ident#escaping_characters). See [Escaping attribute values](#escaping_attribute_values) for an example.
+    Note that the HTML specification does not require attribute values to be valid CSS identifiers. If a [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class) or [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attribute value is not a valid CSS identifier, then you must escape it before using it in a selector, either by calling {{domxref("CSS.escape_static", "CSS.escape()")}} on the value, or using one of the techniques described in [Escaping characters](/en-US/docs/Web/CSS/ident#escaping_characters). See [Escaping attribute values](#escaping_attribute_values) for an example.
 
 ### Return value
 
@@ -105,7 +105,7 @@ highlightedItems.forEach((userItem) => {
 
 ### Escaping attribute values
 
-This example shows that if an HTML document contains an [`id`](/en-US/docs/Web/HTML/Global_attributes/id) which is not a valid [CSS identifier](/en-US/docs/Web/CSS/ident), then we must escape the attribute value before using it in `querySelectorAll()`.
+This example shows that if an HTML document contains an [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) which is not a valid [CSS identifier](/en-US/docs/Web/CSS/ident), then we must escape the attribute value before using it in `querySelectorAll()`.
 
 #### HTML
 
@@ -193,7 +193,7 @@ Clicking the first button gives an error, while the second and third buttons wor
 - [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 - [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) in the CSS
   Guide
-- [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors) in the MDN Learning Area
+- [Attribute selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors) in the MDN Learning Area
 - {{domxref("Element.querySelector()")}} and {{domxref("Element.querySelectorAll()")}}
 - {{domxref("Document.querySelector()")}}
 - {{domxref("DocumentFragment.querySelector()")}} and

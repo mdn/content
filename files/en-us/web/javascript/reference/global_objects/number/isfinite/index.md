@@ -1,5 +1,6 @@
 ---
 title: Number.isFinite()
+short-title: isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isFinite
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Number.isFinite
@@ -9,7 +10,18 @@ browser-compat: javascript.builtins.Number.isFinite
 
 The **`Number.isFinite()`** static method determines whether the passed value is a finite number — that is, it checks that a given value is a number, and the number is neither positive {{jsxref("Infinity")}}, negative `Infinity`, nor {{jsxref("NaN")}}.
 
-{{EmbedInteractiveExample("pages/js/number-isfinite.html")}}
+{{InteractiveExample("JavaScript Demo: Number.isFinite()")}}
+
+```js interactive-example
+console.log(Number.isFinite(1 / 0));
+// Expected output: false
+
+console.log(Number.isFinite(10 / 5));
+// Expected output: true
+
+console.log(Number.isFinite(0 / 0));
+// Expected output: false
+```
 
 ## Syntax
 
@@ -61,5 +73,6 @@ Number.isFinite(null); // false
 ## See also
 
 - [Polyfill of `Number.isFinite` in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
+- [es-shims polyfill of `Number.isFinite`](https://www.npmjs.com/package/number.isfinite)
 - {{jsxref("Number")}}
 - {{jsxref("isFinite()")}}

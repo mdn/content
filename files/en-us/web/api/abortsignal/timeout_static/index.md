@@ -10,8 +10,7 @@ browser-compat: api.AbortSignal.timeout_static
 
 The **`AbortSignal.timeout()`** static method returns an {{domxref("AbortSignal")}} that will automatically abort after a specified time.
 
-The signal aborts with a `TimeoutError` {{domxref("DOMException")}} on timeout, or with `AbortError` {{domxref("DOMException")}} due to pressing a browser stop button (or some other inbuilt "stop" operation).
-This allows UIs to differentiate timeout errors, which typically require user notification, from user-triggered aborts that do not.
+The signal aborts with a `TimeoutError` {{domxref("DOMException")}} on timeout.
 
 The timeout is based on active rather than elapsed time, and will effectively be paused if the code is running in a suspended worker, or while the document is in a back-forward cache ("[bfcache](https://web.dev/articles/bfcache)").
 
@@ -49,8 +48,10 @@ try {
   // …
 } catch (err) {
   if (err.name === "TimeoutError") {
+    // This exception is from the abort signal
     console.error("Timeout: It took more than 5 seconds to get the result!");
   } else if (err.name === "AbortError") {
+    // This exception is from the fetch itself
     console.error(
       "Fetch aborted by user action (browser stop button, closing tab, etc.",
     );

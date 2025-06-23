@@ -1,5 +1,6 @@
 ---
 title: Intl.Collator.prototype.compare()
+short-title: compare()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.Collator.compare
@@ -10,7 +11,22 @@ browser-compat: javascript.builtins.Intl.Collator.compare
 The **`compare()`** method of {{jsxref("Intl.Collator")}} instances compares two
 strings according to the sort order of this collator object.
 
-{{EmbedInteractiveExample("pages/js/intl-collator-prototype-compare.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Collator.prototype.compare()")}}
+
+```js interactive-example
+const enCollator = new Intl.Collator("en");
+const deCollator = new Intl.Collator("de");
+const svCollator = new Intl.Collator("sv");
+
+console.log(enCollator.compare("z", "a") > 0);
+// Expected output: true
+
+console.log(deCollator.compare("z", "ä") > 0);
+// Expected output: true
+
+console.log(svCollator.compare("z", "ä") > 0);
+// Expected output: false
+```
 
 ## Syntax
 

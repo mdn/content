@@ -1,5 +1,6 @@
 ---
 title: Math.tanh()
+short-title: tanh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tanh
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.tanh
@@ -15,7 +16,21 @@ The **`Math.tanh()`** static method returns the hyperbolic tangent of a number. 
 </math>
 <!-- prettier-ignore-end -->
 
-{{EmbedInteractiveExample("pages/js/math-tanh.html")}}
+{{InteractiveExample("JavaScript Demo: Math.tanh()")}}
+
+```js interactive-example
+console.log(Math.tanh(-1));
+// Expected output: -0.7615941559557649
+
+console.log(Math.tanh(0));
+// Expected output: 0
+
+console.log(Math.tanh(Infinity));
+// Expected output: 1
+
+console.log(Math.tanh(1));
+// Expected output: 0.7615941559557649
+```
 
 ## Syntax
 

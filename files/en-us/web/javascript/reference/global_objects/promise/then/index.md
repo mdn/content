@@ -1,5 +1,6 @@
 ---
 title: Promise.prototype.then()
+short-title: then()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/then
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Promise.then
@@ -9,7 +10,18 @@ browser-compat: javascript.builtins.Promise.then
 
 The **`then()`** method of {{jsxref("Promise")}} instances takes up to two arguments: callback functions for the fulfilled and rejected cases of the `Promise`. It stores the callbacks within the promise it is called on and immediately returns another {{jsxref("Promise")}} object, allowing you to [chain](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining) calls to other promise methods.
 
-{{EmbedInteractiveExample("pages/js/promise-then.html")}}
+{{InteractiveExample("JavaScript Demo: Promise.prototype.then()")}}
+
+```js interactive-example
+const promise1 = new Promise((resolve, reject) => {
+  resolve("Success!");
+});
+
+promise1.then((value) => {
+  console.log(value);
+  // Expected output: "Success!"
+});
+```
 
 ## Syntax
 
@@ -97,7 +109,7 @@ p1.then(
 
 ```js
 Promise.resolve(1).then(2).then(console.log); // 1
-Promise.reject(1).then(2, 2).then(console.log, console.log); // 1
+Promise.reject(new Error("failed")).then(2, 2).then(console.log, console.log); // Error: failed
 ```
 
 ### Chaining
@@ -203,7 +215,7 @@ Promise.resolve()
 In all other cases, the returned promise eventually fulfills. In the following example, the first `then()` returns `42` wrapped in a fulfilled Promise, even though the previous Promise in the chain was rejected.
 
 ```js
-Promise.reject()
+Promise.reject(new Error("Oh no!"))
   .then(
     () => 99,
     () => 42,
@@ -226,10 +238,8 @@ function rejectLater(resolve, reject) {
 }
 
 const p1 = Promise.resolve("foo");
-const p2 = p1.then(() => {
-  // Return promise here, that will be resolved to 10 after 1 second
-  return new Promise(resolveLater);
-});
+// Return promise here, that will be resolved to 10 after 1 second
+const p2 = p1.then(() => new Promise(resolveLater));
 p2.then(
   (v) => {
     console.log("resolved", v); // "resolved", 10
@@ -240,10 +250,8 @@ p2.then(
   },
 );
 
-const p3 = p1.then(() => {
-  // Return promise here, that will be rejected with 'Error' after 1 second
-  return new Promise(rejectLater);
-});
+// Return promise here, that will be rejected with 'Error' after 1 second
+const p3 = p1.then(() => new Promise(rejectLater));
 p3.then(
   (v) => {
     // not called

@@ -48,7 +48,7 @@ No changes
 
 #### Media, WebRTC, and Web Audio
 
-- Access to audio output devices, like speakers and headphones, is now protected by the [speaker-selection](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) feature policy ([Firefox bug 1577199](https://bugzil.la/1577199)).
+- Access to audio output devices, like speakers and headphones, is now protected by the [speaker-selection](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/speaker-selection) feature policy ([Firefox bug 1577199](https://bugzil.la/1577199)).
 
 ### WebDriver conformance (Marionette)
 

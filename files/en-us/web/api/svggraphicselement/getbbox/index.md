@@ -50,7 +50,7 @@ getBBox(options)
 
 ### Return value
 
-The returned value is a {{domxref("SVGRect")}} object, which defines the bounding box.
+The returned value is an {{domxref("SVGRect")}} object, which defines the bounding box.
 This value is irrespective of any transformation attribute applied to it or the parent
 elements.
 

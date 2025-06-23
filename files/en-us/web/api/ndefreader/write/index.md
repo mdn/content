@@ -36,7 +36,7 @@ write(message, options)
     - `lang` {{optional_inline}}
       - : A valid language tag according to {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
     - `mediaType` {{optional_inline}}
-      - : A valid [MIME type](/en-US/docs/Web/HTTP/MIME_types).
+      - : A valid [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types).
     - `recordType`
 
       - : A string indicating the type of data stored in `data`. It must be one of the following values:
@@ -46,7 +46,7 @@ write(message, options)
         - `"empty"`
           - : An empty {{domxref("NDEFRecord")}}.
         - `"mime"`
-          - : A valid [MIME type](/en-US/docs/Web/HTTP/MIME_types).
+          - : A valid [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types).
         - `"smart-poster"`
           - : A smart poster as defined by the [NDEF-SMARTPOSTER](https://w3c.github.io/web-nfc/#bib-ndef-smartposter) specification.
         - `"text"`
@@ -134,7 +134,8 @@ ndef.onreading = (event) => console.log("We read a tag!");
 function write(data, { timeout } = {}) {
   return new Promise((resolve, reject) => {
     const controller = new AbortController();
-    controller.signal.onabort = () => reject("Time is up, bailing out!");
+    controller.signal.onabort = () =>
+      reject(new Error("Time is up, bailing out!"));
     setTimeout(() => controller.abort(), timeout);
 
     ndef.addEventListener(
