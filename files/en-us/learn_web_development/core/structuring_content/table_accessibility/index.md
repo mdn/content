@@ -37,7 +37,7 @@ In the previous article, we looked at one of the most important features for mak
 
 ## Recap: Tables for visually impaired users
 
-Let's recap briefly on how we use data tables. A table can be a handy tool, for giving us quick access to data and allowing us to look up different values. For example, it takes only a short glance at the table below to find out how many rings were sold in Gent during August 2016. To understand its information, we make visual associations between the data in this table and its column and/or row headers.
+Let's recap briefly on how we use data tables. A table can be a handy tool, for giving us quick access to data and allowing us to look up different values. For example, it takes only a short glance at the table below to find out how many rings were sold in Ghent during August 2016. To understand its information, we make visual associations between the data in this table and its column and/or row headers.
 
 <table>
   <caption>Items Sold August 2016</caption>
@@ -66,7 +66,7 @@ Let's recap briefly on how we use data tables. A table can be a handy tool, for 
       <td>23</td>
     </tr>
     <tr>
-      <th scope="row">Gent</th>
+      <th scope="row">Ghent</th>
       <td>46</td>
       <td>18</td>
       <td>50</td>
@@ -434,7 +434,7 @@ The first finished HTML example should look something like this:
       <td>23</td>
     </tr>
     <tr>
-      <th scope="row">Gent</th>
+      <th scope="row">Ghent</th>
       <td>46</td>
       <td>18</td>
       <td>50</td>
@@ -502,12 +502,12 @@ While the second one should look like this:
       <td headers="antwerp belgium accessories rings">23</td>
     </tr>
     <tr>
-      <th id="gent" headers="belgium">Gent</th>
-      <td headers="gent belgium clothes trousers">46</td>
-      <td headers="gent belgium clothes skirts">18</td>
-      <td headers="gent belgium clothes dresses">50</td>
-      <td headers="gent belgium accessories bracelets">61</td>
-      <td headers="gent belgium accessories rings">15</td>
+      <th id="ghent" headers="belgium">Ghent</th>
+      <td headers="ghent belgium clothes trousers">46</td>
+      <td headers="ghent belgium clothes skirts">18</td>
+      <td headers="ghent belgium clothes dresses">50</td>
+      <td headers="ghent belgium accessories bracelets">61</td>
+      <td headers="ghent belgium accessories rings">15</td>
     </tr>
     <tr>
       <th id="brussels" headers="belgium">Brussels</th>
