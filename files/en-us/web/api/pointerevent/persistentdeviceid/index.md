@@ -31,7 +31,7 @@ An integer, or `0` if the device generating the `PointerEvent` could not be iden
 Assuming the following HTML:
 
 ```html
-<canvas id="inking-surface" width="300" height="200"></canvas>
+<canvas id="inking-surface" width="1280" height="720"></canvas>
 ```
 
 The following JavaScript assigns a different inking color to up to three unique pointers interacting with a canvas:
