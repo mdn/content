@@ -23,7 +23,6 @@ let updatedRulesets = browser.declarativeNetRequest.updateEnabledRulesets(
 ### Parameters
 
 - `options`
-
   - : An object detailing the rulesets to activate or deactivate in the extension's static rulesets.
     - `disableRulesetIds` {{optional_inline}}
       - : An array of `string`. IDs of static Rulesets to deactivated.

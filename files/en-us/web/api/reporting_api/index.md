@@ -106,7 +106,6 @@ These HTTP response headers define the endpoints where reports are sent.
 Report endpoints can be set for the following reports using the `report-to` directive on the corresponding headers:
 
 - CSP Violations
-
   - : {{CSP("report-to")}} on {{HTTPHeader("Content-Security-Policy")}} or {{HTTPHeader("Content-Security-Policy-Report-Only")}}.
 
 ## Examples

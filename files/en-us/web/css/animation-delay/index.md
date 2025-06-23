@@ -134,7 +134,6 @@ animation-delay: unset;
 ### Values
 
 - {{cssxref("&lt;time&gt;")}}
-
   - : The time offset, from the moment at which the animation is applied to the element, at which the animation should begin. This may be specified in either seconds (`s`) or milliseconds (`ms`). The unit is required.
 
     A positive value indicates that the animation should begin after the specified amount of time has elapsed. A value of `0s`, which is the default, indicates that the animation should begin as soon as it's applied.

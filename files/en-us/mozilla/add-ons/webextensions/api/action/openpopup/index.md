@@ -25,9 +25,7 @@ browser.action.openPopup(
 ### Parameters
 
 - `details` {{optional_inline}}
-
   - : An object with the following properties:
-
     - `windowId` {{optional_inline}}
       - : `integer`. Window to open the popup for. Defaults to the current window.
 

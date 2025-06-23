@@ -186,7 +186,6 @@ In general, the only time {{jsxref("Object.is")}}'s special behavior towards zer
 Here's a non-exhaustive list of built-in methods and operators that might cause a distinction between `-0` and `+0` to manifest itself in your code:
 
 - [`-` (unary negation)](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-
   - : Consider the following example:
 
     ```js

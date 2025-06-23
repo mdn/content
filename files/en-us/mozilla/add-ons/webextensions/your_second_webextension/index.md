@@ -14,7 +14,6 @@ To implement this, we will:
 
 - **define a [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button), which is a button attached to the Firefox toolbar**.
   For the button we'll supply:
-
   - an icon, called "beasts-32.png"
   - a popup to open when the button is pressed. The popup will include HTML, CSS, and JavaScript.
 
@@ -84,7 +83,6 @@ Now create a new file called "manifest.json", and give it the following contents
 - [`icons`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) is optional, but recommended: it allows you to specify an icon for the extension, that will be shown in the Add-ons Manager.
 - [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) lists permissions the extension needs. We're just asking for the [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) here.
 - [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) specifies the toolbar button. We're supplying three pieces of information here:
-
   - `default_icon` is mandatory, and points to the icon for the button
   - `default_title` is optional, and will be shown in a tooltip
   - `default_popup` is used if you want a popup to be shown when the user clicks the button. We do, so we've included this key and made it point to an HTML file included with the extension.

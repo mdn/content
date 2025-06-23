@@ -235,7 +235,6 @@ draw();
 Finally, the following transformation methods allow modifications directly to the transformation matrix.
 
 - {{domxref("CanvasRenderingContext2D.transform", "transform(a, b, c, d, e, f)")}}
-
   - : Multiplies the current transformation matrix with the matrix described by its arguments. The transformation matrix is described by:
 
     <!-- prettier-ignore-start -->

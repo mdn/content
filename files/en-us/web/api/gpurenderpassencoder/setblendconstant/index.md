@@ -20,7 +20,6 @@ setBlendConstant(color)
 ### Parameters
 
 - `color`
-
   - : An object or array representing the color to use when blending — the `r`, `g`, `b`, and `a` components are represented as floating point numbers between 0.0 and 1.0.
 
     What follows is an object example:

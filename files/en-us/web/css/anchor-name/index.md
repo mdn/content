@@ -30,7 +30,6 @@ anchor-name: unset;
 ### Values
 
 - `none`
-
   - : The default value. Setting `anchor-name: none` on an element means that it is not defined as an anchor element. If the element was previously defined as an anchor and associated with a positioned element, setting `anchor-name: none` disassociates the two.
 
 - {{cssxref("dashed-ident")}}

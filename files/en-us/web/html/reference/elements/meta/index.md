@@ -28,9 +28,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 - `content`
   - : This attribute contains the value for the [`http-equiv`](#http-equiv) or [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta/name) attribute, depending on which is used.
 - `http-equiv`
-
   - : Defines a pragma directive. The attribute's name, short for `http-equivalent`, is because all the allowed values are names of particular HTTP headers:
-
     - `content-security-policy`
       - : Allows page authors to define a [content policy](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) for the current page. Content policies mostly specify allowed server origins and script endpoints which help guard against cross-site scripting attacks.
         See {{HTTPHeader("Content-Security-Policy")}} for more information.
@@ -42,9 +40,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     - `x-ua-compatible`
       - : If specified, the `content` attribute must have the value `"IE=edge"`. User agents are required to ignore this pragma.
     - `refresh`
-
       - : This instruction specifies:
-
         - The number of seconds until the page should be reloaded - if the [`content`](#content) attribute's value is a non-negative integer.
         - The number of seconds until the page should redirect to another - if the [`content`](#content) attribute's value is a non-negative integer followed by `;url=` and a valid URL.
 

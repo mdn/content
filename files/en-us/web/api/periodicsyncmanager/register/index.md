@@ -26,9 +26,7 @@ register(tag, options)
 - `tag`
   - : A unique {{jsxref('String')}} identifier.
 - `options` {{optional_inline}}
-
   - : An {{jsxref('Object')}} containing the following optional data:
-
     - `minInterval`
       - : The minimum interval time, in milliseconds, at which
         the periodic sync should occur.

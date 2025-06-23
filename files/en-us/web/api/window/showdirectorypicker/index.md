@@ -24,9 +24,7 @@ showDirectoryPicker(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An object containing options, which are as follows:
-
     - `id` {{optional_inline}}
       - : By specifying an ID, the browser can remember different directories for different
         IDs. If the same ID is used for another picker, the picker opens in the same

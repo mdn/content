@@ -49,7 +49,6 @@ _This interface inherits properties from its ancestors, {{DOMxRef("MouseEvent")}
 - {{DOMxRef("WheelEvent.deltaZ")}} {{ReadOnlyInline}}
   - : Returns a `double` representing the scroll amount for the z-axis.
 - {{DOMxRef("WheelEvent.deltaMode")}} {{ReadOnlyInline}}
-
   - : Returns an `unsigned long` representing the unit of the `delta*` values' scroll amount. Permitted values are:
 
     | Constant                     | Value  | Description                                                                                                                                                  |

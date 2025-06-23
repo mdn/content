@@ -22,9 +22,7 @@ let getting = browser.history.getVisits(
 ### Parameters
 
 - `details`
-
   - : An object with the following properties:
-
     - `url`
       - : `string`. The URL for which to retrieve visit information.
 

@@ -82,7 +82,6 @@ Next, you should configure your server to map the .pac filename extension to the
 These functions can be used in building the PAC file:
 
 - Hostname based conditions
-
   - [`isPlainHostName()`](#isplainhostname)
   - [`dnsDomainIs()`](#dnsdomainis)
   - [`localHostOrDomainIs()`](#localhostordomainis)
@@ -90,28 +89,23 @@ These functions can be used in building the PAC file:
   - [`isInNet()`](#isinnet)
 
 - Related utility functions
-
   - [`dnsResolve()`](#dnsresolve)
   - [`convert_addr()`](#convert_addr)
   - [`myIpAddress()`](#myipaddress)
   - [`dnsDomainLevels()`](#dnsdomainlevels)
 
 - URL/hostname based conditions
-
   - [`shExpMatch()`](#shexpmatch)
 
 - Time based conditions
-
   - [`weekdayRange()`](#weekdayrange)
   - [`dateRange()`](#daterange)
   - [`timeRange()`](#timerange)
 
 - Logging utility
-
   - [`alert()`](#alert)
 
 - There was one associative array (object) already defined, because at the time JavaScript code was unable to define it by itself:
-
   - `ProxyConfig.bindings` {{deprecated_inline}}
 
 > [!NOTE]

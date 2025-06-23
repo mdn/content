@@ -30,7 +30,6 @@ Highlights:
 - `position: fixed;` now always creates a new stacking context ([Firefox bug 1179288](https://bugzil.la/1179288)).
 - The support of {{cssxref('@font-face/unicode-range', 'unicode-range')}} has been enabled by default ([Firefox bug 1119062](https://bugzil.la/1119062)).
 - Our experimental implementation of CSS Writing Modes has been updated to reflect the latest specification:
-
   - The value `sideways` of the {{cssxref("text-orientation")}} property has been implemented and `sideways-right` has been made an alias of it ([Firefox bug 1193488](https://bugzil.la/1193488)).
   - The value `sideways-rl` and `sideways-lr` of the {{cssxref("writing-mode")}} property ([Firefox bug 1193488](https://bugzil.la/1193488) and [Firefox bug 1193519](https://bugzil.la/1193519)).
 
@@ -39,7 +38,6 @@ Highlights:
 - Though not supported, the properties {{cssxref("@page/marks")}}, {{cssxref("orphans")}}, {{cssxref("page")}}, {{cssxref("size")}}, and {{cssxref("widows")}}, were parsed and {{cssxref("@supports")}} was incorrectly reporting them as supported; this has been fixed and the properties are not parsed anymore, nor marked as supported ([Firefox bug 1215702](https://bugzil.la/1215702)).
 - The internal value `-moz-mac-unified-toolbar` has been removed from the possible values for the {{cssxref("appearance")}} property ([Firefox bug 1206468](https://bugzil.la/1206468)).
 - Several `-webkit` prefixed properties and values have been added for web compatibility, behind the preference `layout.css.prefixes.webkit`, defaulting to `false` ([Firefox bug 837211](https://bugzil.la/837211)):
-
   - `-webkit-animation`
   - `-webkit-animation-delay`
   - `-webkit-animation-direction`
@@ -113,7 +111,6 @@ Highlights:
 #### Canvas
 
 - A new experimental {{domxref("OffscreenCanvas")}} API that allows rendering contexts (such as [WebGL](/en-US/docs/Web/API/WebGL_API)) to run in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) has been implemented. To use this experimental API set `gfx.offscreencanvas.enabled` to `true` in about:config ([Firefox bug 709490](https://bugzil.la/709490)). This API includes:
-
   - The {{domxref("OffscreenCanvas")}} interface,
   - {{domxref("HTMLCanvasElement.transferControlToOffscreen()")}}, and
   - {{domxref("WebGLRenderingContext.commit()")}}.
@@ -144,7 +141,6 @@ Highlights:
 #### WebRTC
 
 - WebRTC interfaces have been _unprefixed_ ([Firefox bug 1155923](https://bugzil.la/1155923)). In particular:
-
   - `mozRTCPeerConnection` is now {{domxref("RTCPeerConnection")}}.
   - `mozRTCIceCandidate` is now {{domxref("RTCIceCandidate")}}.
   - `mozRTCSessionDescription` is now {{domxref("RTCSessionDescription")}}.

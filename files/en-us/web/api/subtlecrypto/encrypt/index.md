@@ -22,7 +22,6 @@ encrypt(algorithm, key, data)
 ### Parameters
 
 - `algorithm`
-
   - : An object specifying the [algorithm](#supported_algorithms) to be used and any extra parameters if required:
     - To use [RSA-OAEP](#rsa-oaep), pass an {{domxref("RsaOaepParams")}} object.
     - To use [AES-CTR](#aes-ctr), pass an {{domxref("AesCtrParams")}} object.

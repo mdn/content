@@ -75,56 +75,44 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
 ### New Extension Developer Features
 
 - Hidden referrer column for history
-
   - : Extensions can now access the referer information for pages stored in the browser history. This feature can be used to provide alternate history views and other useful functionality. [Firefox bug 128398](https://bugzil.la/128398)
 
 - API for prioritizing HTTP connections
-
   - : The Mozilla networking library now supports the prioritization of connections to a specific server using `nsISupportsPriority`. [Firefox bug 278531](https://bugzil.la/278531)
 
 - API for managing user and UA stylesheets
-
   - : Extensions can now register stylesheet URIs as additional user and UA stylesheets. This means extensions no longer have to try to edit `userContent.css` to add styling (say for XBL binding attachment) to web pages. See [Using the Stylesheet Service](/en-US/docs/Archive/Add-ons/Using_the_Stylesheet_Service).
 
 - API for configuring proxies
-
   - : It is now possible for extensions to easily override the proxy configuration without affecting user-visible preferences. See `nsIProtocolProxyService`, `nsIProtocolProxyFilter`, and `nsIProtocolProxyCallback`. [Firefox bug 282442](https://bugzil.la/282442)
 
 - Dynamic Overlays
-
   - : Loading of XUL overlays after the document has been displayed is now supported. See `nsIDOMXULDocument`. [Firefox bug 282103](https://bugzil.la/282103)
 
 - ECMAScript for XML (E4X)
-
   - : The Mozilla JavaScript engine now supports ECMAScript for XML (E4X), a draft ECMA standard that adds native XML datatypes to the language and provides operators for common XML operations. See [the ECMA specification](https://ecma-international.org/publications-and-standards/standards/ecma-357/). [Firefox bug 246441](https://bugzil.la/246441)
 
 - Translucent Windows (Windows/Linux)
-
   - : On Windows and Linux, XUL windows with a transparent background are now supported. This allows whatever is below the window to shine through the window background.
 
 - Adding tokens to the User-Agent string
-
   - : It is now possible for applications, extensions, and vendors to all add tokens to the User-Agent string (using default preferences) without overwriting each other.
     See [documentation](/en-US/docs/Web/HTTP/Reference/Headers/User-Agent). [Firefox bug 274928](https://bugzil.la/274928)
 
 - Toolkit chrome registry
-
   - : Chrome registration has been significantly improved to use simple plaintext chrome registration manifests, and no longer keeps the chrome.rdf/overlayinfo cache.
     See [Chrome Registration](/en-US/docs/Mozilla/Chrome_Registration).
 
 - Extension Manager
-
   - : Following are the new features:
     - It is now possible to have Extensions outside the profile and application Extensions directories.
     - Installing extensions can now be done by dropping an XPI into the profile or application Extensions directory.
     - Uninstalling an Extension now involves deleting its folder from the profile or application Extensions directory.
 
 - New Preferences bindings
-
   - : These [new bindings](https://forums.mozillazine.org/viewtopic.php?t=263028) make it easier to create preferences windows for extensions. The new preferences windows support instant-apply behavior, which is enabled by default on Mac and Linux.
 
 - API for implementing new command-line switches
-
   - : An API has been introduced so that extensions can easily handle complex command-line flags. This API will be stable and frozen for 1.1. See the interfaces `nsICommandLine` and `nsICommandLineHandler`.
 
 - XTF Support

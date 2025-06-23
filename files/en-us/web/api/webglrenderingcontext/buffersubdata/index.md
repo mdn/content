@@ -22,19 +22,15 @@ bufferSubData(target, offset, srcData)
 ### Parameters
 
 - `target`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
-
     - `gl.ARRAY_BUFFER`
       - : Buffer containing vertex attributes, such as
         vertex coordinates, texture coordinate data, or vertex color data.
     - `gl.ELEMENT_ARRAY_BUFFER`
-
       - : Buffer used for element indices.
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
     the following values are available additionally:
-
     - `gl.COPY_READ_BUFFER`
       - : Buffer for copying from one buffer object to another.
     - `gl.COPY_WRITE_BUFFER`

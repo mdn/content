@@ -36,7 +36,6 @@ See the [Obtaining a StyleSheet](#obtaining_a_stylesheet) section for the variou
 _Inherits properties from its parent, {{domxref("StyleSheet")}}._
 
 - {{domxref("CSSStyleSheet.cssRules")}} {{ReadOnlyInline}}
-
   - : Returns a live {{domxref("CSSRuleList")}} which maintains an up-to-date list of the {{domxref("CSSRule")}} objects that comprise the stylesheet.
 
     > [!NOTE]
@@ -70,7 +69,6 @@ _These properties are legacy properties as introduced by Microsoft; these are ma
 _These methods are legacy methods as introduced by Microsoft; these are maintained for compatibility with existing sites._
 
 - {{domxref("CSSStyleSheet.addRule", "addRule()")}} {{Deprecated_Inline}}
-
   - : Adds a new rule to the stylesheet given the selector to which the style applies and the style block to apply to the matching elements.
 
     This differs from {{domxref("CSSStyleSheet.insertRule", "insertRule()")}}, which takes the textual representation of the entire rule as a single string.

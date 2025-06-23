@@ -157,7 +157,6 @@ The component groupings are as follows:
 
 - The main input / "new-todo" (red in the image)
 - The containing body of the todo list + the `mark-all-complete` button (purple in the image)
-
   - The `mark-all-complete button`, explicitly highlighted for reasons given below (yellow in the image)
   - Each todo is an individual component (green in the image)
 

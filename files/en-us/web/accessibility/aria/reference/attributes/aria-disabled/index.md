@@ -89,7 +89,6 @@ If you used just CSS to style the disabled state using an attribute selector, th
 ## Values
 
 - `true`
-
   - : The element is disabled
 
 - `false`

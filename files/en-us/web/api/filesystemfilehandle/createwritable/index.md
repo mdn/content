@@ -24,9 +24,7 @@ createWritable(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An object with the following properties:
-
     - `keepExistingData` {{optional_inline}}
       - : A {{jsxref('Boolean')}}. Default `false`.
         When set to `true` if the file exists, the existing file is first copied to the temporary file.

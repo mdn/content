@@ -44,9 +44,7 @@ The text's characters are drawn from the starting point in the given direction; 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `dir`
-
   - : The direction in which text should be rendered in this element's contents. Possible values are:
-
     - `ltr`: Indicates that the text should go in a left-to-right direction.
     - `rtl`: Indicates that the text should go in a right-to-left direction.
 

@@ -142,9 +142,7 @@ Some combination—but not necessarily all—of the following properties will ex
 These constraints apply to the `video` property of the object passed into {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} to obtain a stream for screen sharing.
 
 - {{domxref("MediaTrackConstraints.displaySurface", "displaySurface")}}
-
   - : A [`ConstrainDOMString`](#constraindomstring) which specifies the types of display surface that may be selected by the user. This may be a single one of the following strings, or a list of them to allow multiple source surfaces:
-
     - `browser`
       - : The stream contains the contents of a single browser tab selected by the user.
     - `monitor`
@@ -153,7 +151,6 @@ These constraints apply to the `video` property of the object passed into {{domx
       - : The stream contains a single window selected by the user for sharing.
 
 - {{domxref("MediaTrackConstraints.logicalSurface", "logicalSurface")}}
-
   - : A [`ConstrainBoolean`](#constrainboolean) value which may contain a single Boolean value or a set of them, indicating whether or not to allow the user to choose source surfaces which do not directly correspond to display areas. These may include backing buffers for windows to allow capture of window contents that are hidden by other windows in front of them, or buffers containing larger documents that need to be scrolled through to see the entire contents in their windows.
 
 - {{domxref("MediaTrackConstraints.suppressLocalAudioPlayback", "suppressLocalAudioPlayback")}} {{Experimental_Inline}}
