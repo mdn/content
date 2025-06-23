@@ -1,5 +1,6 @@
 ---
 title: RegExp.prototype.sticky
+short-title: sticky
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.RegExp.sticky

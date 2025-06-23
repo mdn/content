@@ -57,13 +57,10 @@ The `<textarea>` element also accepts several attributes common to form `<input>
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - [`autocapitalize`](/en-US/docs/Web/HTML/Reference/Global_attributes/autocapitalize)
-
   - : Controls whether inputted text is automatically capitalized and, if so, in what manner.
 
 - [`autocomplete`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete)
-
   - : Controls whether entered text can be automatically completed by the browser. Possible values are:
-
     - `off`: The user must explicitly enter a value into this field for every use, or the document provides its own auto-completion method; the browser does not automatically complete the entry.
     - `on`: The browser can automatically complete the value based on values that the user has entered during previous uses.
     - [`<token-list>`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete#token_list_tokens): An ordered set of space-separated autofill detail tokens, optionally preceded by a sectioning token, a billing or shipping grouping token, and/or a token identifying the type of recipient.
@@ -71,10 +68,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     `<textarea>` elements that don't specify the `autocomplete` attribute inherit the `autocomplete` `on` or `off` status set on the `<textarea>`'s form owner. The form owner is either the {{HTMLElement("form")}} element that this `<textarea>` element is a descendant of or the form element whose `id` is specified by the `form` attribute of the input element. For more information, see the [`autocomplete`](/en-US/docs/Web/HTML/Reference/Elements/form#autocomplete) attribute in {{HTMLElement("form")}}.
 
 - [`autocorrect`](/en-US/docs/Web/HTML/Reference/Global_attributes/autocorrect)
-
   - : Controls whether automatic spelling correction and processing of text is enabled while the user is editing this `textarea`.
     Permitted values are:
-
     - `on`
       - : Enable automatic spelling correction and text substitutions.
     - `off`
@@ -98,7 +93,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 - `name`
   - : The name of the control.
 - [`placeholder`](/en-US/docs/Web/HTML/Reference/Attributes/placeholder)
-
   - : A hint to the user of what can be entered in the control. Carriage returns or line-feeds within the placeholder text must be treated as line breaks when rendering the hint.
 
     > [!NOTE]
@@ -111,17 +105,13 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 - `rows`
   - : The number of visible text lines for the control. If it is specified, it must be a positive integer. If it is not specified, the default value is 2.
 - [`spellcheck`](/en-US/docs/Web/HTML/Reference/Global_attributes/spellcheck)
-
   - : Specifies whether the `<textarea>` is subject to spell-checking by the underlying browser/OS. The value can be:
-
     - `true`: Indicates that the element needs to have its spelling and grammar checked.
     - `default` : Indicates that the element is to act according to a default behavior, possibly based on the parent element's own `spellcheck` value.
     - `false` : Indicates that the element should not be spell-checked.
 
 - `wrap`
-
   - : Indicates how the control should wrap the value for form submission. Possible values are:
-
     - `hard`: The browser automatically inserts line breaks (CR+LF) so that each line is no longer than the width of the control; the [`cols`](#cols) attribute must be specified for this to take effect
     - `soft`: The browser ensures that all line breaks in the entered value are a `CR+LF` pair, but no additional line breaks are added to the value.
     - `off` {{non-standard_inline}}: Like `soft` but changes appearance to `white-space: pre` so line segments exceeding `cols` are not wrapped and the `<textarea>` becomes horizontally scrollable.

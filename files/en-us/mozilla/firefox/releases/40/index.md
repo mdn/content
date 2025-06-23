@@ -151,7 +151,6 @@ _No change._
 
 - The `nsIClassInfo.implementationLanguage` attribute has been removed, along with the `nsClassInfo::GetImplementationLanguage()` function.
 - The following XPCOM interfaces have been removed; you should use the standard HTML interfaces instead:
-
   - `nsIDOMHTMLBRElement`
   - `nsIDOMDivElement`
   - `nsIDOMHTMLHeadingElement`

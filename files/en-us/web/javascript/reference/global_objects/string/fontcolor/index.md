@@ -1,5 +1,6 @@
 ---
 title: String.prototype.fontcolor()
+short-title: fontcolor()
 slug: Web/JavaScript/Reference/Global_Objects/String/fontcolor
 page-type: javascript-instance-method
 status:

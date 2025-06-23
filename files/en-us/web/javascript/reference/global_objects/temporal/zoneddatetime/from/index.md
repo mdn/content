@@ -1,5 +1,6 @@
 ---
 title: Temporal.ZonedDateTime.from()
+short-title: from()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/from
 page-type: javascript-static-method
 status:

@@ -1,5 +1,6 @@
 ---
 title: Temporal.ZonedDateTime.prototype.since()
+short-title: since()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/since
 page-type: javascript-instance-method
 status:

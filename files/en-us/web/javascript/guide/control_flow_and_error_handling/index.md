@@ -214,7 +214,6 @@ JavaScript evaluates the above switch statement as follows:
   associated statements.
 - If no matching label is found, the program looks for the optional
   `default` clause:
-
   - If a `default` clause is found, the program transfers control to that
     clause, executing the associated statements.
   - If no `default` clause is found, the program resumes execution at the

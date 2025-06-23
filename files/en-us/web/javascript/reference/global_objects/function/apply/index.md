@@ -1,5 +1,6 @@
 ---
 title: Function.prototype.apply()
+short-title: apply()
 slug: Web/JavaScript/Reference/Global_Objects/Function/apply
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Function.apply

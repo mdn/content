@@ -1,5 +1,6 @@
 ---
 title: String.prototype.split()
+short-title: split()
 slug: Web/JavaScript/Reference/Global_Objects/String/split
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.split

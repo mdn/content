@@ -1,5 +1,6 @@
 ---
 title: String.prototype.substr()
+short-title: substr()
 slug: Web/JavaScript/Reference/Global_Objects/String/substr
 page-type: javascript-instance-method
 status:

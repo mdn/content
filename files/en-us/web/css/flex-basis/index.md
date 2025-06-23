@@ -88,7 +88,6 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
 ### Values
 
 - `<'width'>`
-
   - : Any of the following units:
     - {{cssxref("&lt;length&gt;")}} sets an absolute value.
     - {{cssxref("&lt;percentage&gt;")}} sets a percentage of the width or height of the containing block's content area. Percentage values of `flex-basis` are resolved against the flex container. If the flex container's size is indefinite, the used value for `flex-basis` is `content`.
@@ -98,7 +97,6 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
     - {{cssxref("fit-content")}} sets the maximum possible size of a containing block's content area, bounded by the `min-content` and `max-content` values, and calculated based on the content of the current element.
 
 - `content`
-
   - : Indicates automatic sizing, based on the flex item's content.
 
 ## Formal definition

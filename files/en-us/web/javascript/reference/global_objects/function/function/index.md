@@ -1,5 +1,6 @@
 ---
 title: Function() constructor
+short-title: Function()
 slug: Web/JavaScript/Reference/Global_Objects/Function/Function
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Function.Function
@@ -37,7 +38,6 @@ Function(arg1, arg2, /* …, */ argN, functionBody)
 ### Parameters
 
 - `arg1`, …, `argN` {{optional_inline}}
-
   - : Names to be used by the function as formal argument names. Each must be a string that corresponds to a valid JavaScript parameter (any of plain [identifier](/en-US/docs/Glossary/Identifier), [rest parameter](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), or [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) parameter, optionally with a [default](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)), or a list of such strings separated with commas.
 
     As the parameters are parsed in the same way as function expressions, whitespace and comments are accepted. For example: `"x", "theValue = 42", "[a, b] /* numbers */"` — or `"x, theValue = 42, [a, b] /* numbers */"`. (`"x, theValue = 42", "[a, b]"` is also correct, though very confusing to read.)

@@ -117,11 +117,8 @@ The properties are as follows:
     - `"version"`
       - : A string representing the version of the API used to generate the report.
 - `"aggregation_service_payloads"`
-
   - : An array of objects representing payload objects containing the histogram contributions used by the aggregation service to assemble the data contained in the report. Currently, only a single payload is supported per report, configured by the browser. In the future multiple, customizable payloads may be supported. Each payload object can contain the following properties:
-
     - `"payload"`
-
       - : A [CBOR](https://cbor.io/) map encrypted via [HPKE](https://datatracker.ietf.org/doc/rfc9180/) and then [base64](/en-US/docs/Glossary/Base64)-encoded, with the following structure (using JSON for notation only):
 
         ```json
@@ -339,7 +336,6 @@ To use debug reports, you need to:
    ```
 
 4. Set up appropriate endpoints to receive the debug reports you want to generate. Debug reports are sent to three separate endpoints in the reporting origin:
-
    - Endpoint for event-level success debug reports: `<reporting-origin>/.well-known/attribution-reporting/debug/report-event-attribution`
    - Endpoint for aggregatable success debug reports: `<reporting-origin>/.well-known/attribution-reporting/debug/report-aggregate-attribution`
    - Endpoint for verbose debug reports: `<reporting-origin>/.well-known/attribution-reporting/debug/verbose`

@@ -1,5 +1,6 @@
 ---
 title: Math.ceil()
+short-title: ceil()
 slug: Web/JavaScript/Reference/Global_Objects/Math/ceil
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.ceil

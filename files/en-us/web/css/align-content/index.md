@@ -113,7 +113,6 @@ align-content: unset;
   - : The items are packed flush to each other against the edge of the alignment container depending on the flex container's cross-end side.
     This only applies to flex layout items. For items that are not children of a flex container, this value is treated like `end`.
 - `baseline`, `first baseline`, `last baseline`
-
   - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box's first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
 
     ![the baseline is the line upon which most letters "sit" and below which descenders extend.](410px-typography_line_terms.svg.png)

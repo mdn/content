@@ -22,9 +22,7 @@ Document.parseHTML(input, options)
 - `input`
   - : A string defining HTML to be sanitized and injected into the shadow root.
 - `options` {{optional_inline}}
-
   - : An options object with the following optional parameters:
-
     - `sanitizer`
       - : A {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} object which defines what elements of the input will be allowed or removed, or the string `"default"` for the default sanitizer configuration.
         Note that generally a `"Sanitizer` is expected to be more efficient than a `SanitizerConfig` if the configuration is to reused.
@@ -37,9 +35,7 @@ A {{domxref("Document")}}.
 ### Exceptions
 
 - `TypeError`
-
   - : This is thrown if `options.sanitizer` is passed a:
-
     - non-normalized {{domxref("SanitizerConfig")}} (one that includes both "allowed" and "removed" configuration settings).
     - string that does not have the value `"default"`.
     - value that is not a {{domxref("Sanitizer")}}, {{domxref("SanitizerConfig")}}, or string.

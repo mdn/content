@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainDate.prototype.withCalendar()
+short-title: withCalendar()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/withCalendar
 page-type: javascript-instance-method
 status:

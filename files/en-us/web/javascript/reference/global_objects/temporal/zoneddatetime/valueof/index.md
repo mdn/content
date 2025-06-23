@@ -1,5 +1,6 @@
 ---
 title: Temporal.ZonedDateTime.prototype.valueOf()
+short-title: valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/valueOf
 page-type: javascript-instance-method
 status:

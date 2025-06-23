@@ -241,7 +241,6 @@ console.log(MY_ARRAY); // ['HTML', 'CSS', 'JAVASCRIPT'];
 The latest ECMAScript standard defines eight data types:
 
 - Seven data types that are {{Glossary("Primitive", "primitives")}}:
-
   1. {{Glossary("Boolean")}}. `true` and `false`.
   2. {{Glossary("null")}}. A special keyword denoting a null value. (Because JavaScript is case-sensitive, `null` is not the same as `Null`, `NULL`, or any other variant.)
   3. {{Glossary("undefined")}}. A top-level property whose value is not defined.

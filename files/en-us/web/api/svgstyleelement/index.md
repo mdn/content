@@ -16,19 +16,15 @@ The **`SVGStyleElement`** interface corresponds to the SVG {{SVGElement("style")
 _This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
 - {{domxref("SVGStyleElement.type")}} {{deprecated_inline}}
-
   - : A string corresponding to the {{SVGAttr("type")}} attribute of the given element.
 
 - {{domxref("SVGStyleElement.media")}}
-
   - : A string corresponding to the {{SVGAttr("media")}} attribute of the given element.
 
 - {{domxref("SVGStyleElement.title")}}
-
   - : A string corresponding to the [`title`](/en-US/docs/Web/SVG/Reference/Element/style#title) attribute of the given element.
 
 - {{domxref("SVGStyleElement.sheet")}} {{ReadOnlyInline}}
-
   - : Returns the {{domxref("CSSStyleSheet")}} object associated with the given element, or `null` if there is none.
 
 - {{domxref("SVGStyleElement.disabled")}}

@@ -16,7 +16,6 @@ It clones by recursing through the input object while maintaining a map of previ
 - {{jsxref("Function")}} objects cannot be duplicated by the structured clone algorithm; attempting to throws a `DataCloneError` exception.
 - Cloning DOM nodes likewise throws a `DataCloneError` exception.
 - Certain object properties are not preserved:
-
   - The `lastIndex` property of {{jsxref("RegExp")}} objects is not preserved.
   - Property descriptors, setters, getters, and similar metadata-like features are not duplicated.
     For example, if an object is marked readonly with a [property descriptor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor), it will be read/write in the duplicate, since that's the default.

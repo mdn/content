@@ -29,10 +29,8 @@ new File(fileBits, fileName, options)
 - `fileName`
   - : A string representing the file name or the path to the file.
 - `options` {{optional_inline}}
-
   - : An options object containing optional attributes for the file. Available options are
     as follows:
-
     - `type` {{optional_inline}}
       - : A string representing the MIME type of the
         content that will be put into the file. Defaults to a value of `""`.

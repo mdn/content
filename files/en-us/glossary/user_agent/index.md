@@ -25,5 +25,4 @@ A typical user agent string looks like this: `"Mozilla/5.0 (Windows NT 10.0; Win
 - Related glossary terms:
   - {{Glossary("Browser")}}
 - HTTP Headers
-
   - {{HTTPHeader("User-agent")}}

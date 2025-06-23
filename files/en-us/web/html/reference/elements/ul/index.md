@@ -39,16 +39,13 @@ li li {
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `compact` {{Deprecated_inline}}
-
   - : This Boolean attribute hints that the list should be rendered in a compact style. The interpretation of this attribute depends on the {{glossary("user agent")}}, and it doesn't work in all browsers.
 
     > [!WARNING]
     > Do not use this attribute, as it has been deprecated: use [CSS](/en-US/docs/Web/CSS) instead. To give a similar effect as the `compact` attribute, the CSS property {{cssxref("line-height")}} can be used with a value of `80%`.
 
 - `type` {{Deprecated_inline}}
-
   - : This attribute sets the bullet style for the list. The values defined under HTML3.2 and the transitional version of HTML 4.0/4.01 are:
-
     - `circle`
     - `disc`
     - `square`
@@ -219,7 +216,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
 - Other list-related HTML Elements: {{HTMLElement("ol")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}}
 - CSS properties that may be specially useful to style the `<ul>` element:
-
   - the {{CSSxRef("list-style")}} property, to choose the way the ordinal displays.
   - [CSS counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), to handle complex nested lists.
   - the {{CSSxRef("line-height")}} property, to simulate the deprecated [`compact`](#compact) attribute.

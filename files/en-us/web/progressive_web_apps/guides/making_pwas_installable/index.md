@@ -84,7 +84,7 @@ If your app meets the installability prerequisites, you can package it and distr
 
 - [How to publish a PWA to the Google Play Store](https://chromeos.dev/en/publish/pwa-in-play)
 - [How to publish a PWA to the Microsoft Store](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/microsoft-store)
-- [How to publish a PWA to the Meta Quest Store](https://developers.meta.com/horizon/documentation/web/pwa-submit-app/)
+- [How to publish a PWA to the Meta Quest Store](https://developers.meta.com/horizon/resources/publish-submit/)
 
 The [PWABuilder](https://docs.pwabuilder.com/#/builder/quick-start) is a tool to simplify the process of packaging and publishing a PWA for various app stores. It supports the Google Play Store, Microsoft Store, Meta Quest Store, and iOS App Store.
 

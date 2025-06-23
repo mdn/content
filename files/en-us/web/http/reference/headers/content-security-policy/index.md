@@ -42,7 +42,6 @@ where `<policy-directive>` consists of:
 Fetch directives control the locations from which certain resource types may be loaded.
 
 - {{CSP("child-src")}}
-
   - : Defines the valid sources for [web workers](/en-US/docs/Web/API/Web_Workers_API) and nested browsing contexts loaded using elements such as
     {{HTMLElement("frame")}} and {{HTMLElement("iframe")}}.
 
@@ -51,7 +50,6 @@ Fetch directives control the locations from which certain resource types may be 
 - {{CSP("connect-src")}}
   - : Restricts the URLs which can be loaded using script interfaces.
 - {{CSP("default-src")}}
-
   - : Serves as a fallback for the other {{Glossary("Fetch directive", "fetch directives")}}.
 
     [Fallback](#fallbacks) for all other fetch directives.
@@ -75,7 +73,6 @@ Fetch directives control the locations from which certain resource types may be 
 - {{CSP("prefetch-src")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Specifies valid sources to be prefetched or prerendered.
 - {{CSP("script-src")}}
-
   - : Specifies valid sources for JavaScript and WebAssembly resources.
 
     [Fallback](#fallbacks) for `script-src-elem` and `script-src-attr`.
@@ -85,7 +82,6 @@ Fetch directives control the locations from which certain resource types may be 
 - {{CSP("script-src-attr")}}
   - : Specifies valid sources for JavaScript inline event handlers.
 - {{CSP("style-src")}}
-
   - : Specifies valid sources for stylesheets.
 
     [Fallback](#fallbacks) for `style-src-elem` and `style-src-attr`.
@@ -145,7 +141,6 @@ for example.
 Reporting directives control the destination URL for CSP violation reports in `Content-Security-Policy` and {{HTTPHeader("Content-Security-Policy-Report-Only")}}.
 
 - {{CSP("report-to")}}
-
   - : Provides the browser with a token identifying the reporting endpoint or group of endpoints to send CSP violation information to.
     The endpoints that the token represents are provided through other HTTP headers, such as {{HTTPHeader("Reporting-Endpoints")}} and {{HTTPHeader("Report-To")}} {{deprecated_inline}}.
 
@@ -173,7 +168,6 @@ Reporting directives control the destination URL for CSP violation reports in `C
 ### Deprecated directives
 
 - {{CSP("block-all-mixed-content")}} {{deprecated_inline}}
-
   - : Prevents loading any assets using HTTP when the page is loaded using HTTPS.
 
 - {{CSP("report-uri")}} {{deprecated_inline}}

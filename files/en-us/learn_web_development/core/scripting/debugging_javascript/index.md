@@ -252,7 +252,6 @@ function inchesToMeters(num) {
 4. Load the example in a browser and look at the devtools JavaScript console. You should see a value of `1.78` logged to it.
 
 5. So this works fine in isolation. But what happens if the provided data is missing or not correct? Try out these scenarios:
-
    - If you change the `height` value to `"70"` (that is, `70` expressed as a string), the example should ... still work fine. This is because the calculation on the first line of the string coerces the value into a number data type. This is OK in a simple case like this, but in more complex code the wrong data can lead to all kind of bugs, some of them subtle and hard to detect!
    - If you change `height` to a value that can't be coerced to a number, like `"70 inches"` or `["Bob", 70]`, or {{jsxref("NaN")}}, the example should return the result as `NaN`. This could cause all kind of problems, for example if you want to include the user's height somewhere in the website user interface.
    - If you remove the `height` value altogether (comment it out by adding `//` at the start of the line), the console will show an error along the lines of "Uncaught ReferenceError: height is not defined", the likes of which could bring your application grinding to a halt.
@@ -324,7 +323,6 @@ Let's use `try...catch` in our code.
    ```
 
 2. Save and refresh, and you should now see two things:
-
    - The error message and call stack as before, but this time, without a label of "uncaught", or "unhandled".
    - The logged message "Insert code to handle the error".
 

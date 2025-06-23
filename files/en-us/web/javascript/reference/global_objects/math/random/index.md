@@ -1,5 +1,6 @@
 ---
 title: Math.random()
+short-title: random()
 slug: Web/JavaScript/Reference/Global_Objects/Math/random
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.random

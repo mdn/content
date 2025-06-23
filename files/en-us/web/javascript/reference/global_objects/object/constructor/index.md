@@ -1,5 +1,6 @@
 ---
 title: Object.prototype.constructor
+short-title: constructor
 slug: Web/JavaScript/Reference/Global_Objects/Object/constructor
 page-type: javascript-instance-data-property
 browser-compat: javascript.builtins.Object.constructor

@@ -1,5 +1,6 @@
 ---
 title: Uint32Array() constructor
+short-title: Uint32Array()
 slug: Web/JavaScript/Reference/Global_Objects/Uint32Array/Uint32Array
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Uint32Array.Uint32Array

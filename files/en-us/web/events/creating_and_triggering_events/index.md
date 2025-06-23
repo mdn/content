@@ -28,8 +28,6 @@ elem.dispatchEvent(event);
 
 The above code example uses the [EventTarget.dispatchEvent()](/en-US/docs/Web/API/EventTarget/dispatchEvent) method.
 
-This constructor is supported in most modern browsers. For a more verbose approach, see [the old-fashioned way](#the_old-fashioned_way) below.
-
 ### Adding custom data – CustomEvent()
 
 To add more data to the event object, the [CustomEvent](/en-US/docs/Web/API/CustomEvent) interface exists and the **detail** property can be used to pass custom data.
@@ -47,28 +45,39 @@ function eventHandler(e) {
 }
 ```
 
-### The old-fashioned way
+### Adding custom data – subclassing Event
 
-The older approach to creating events uses APIs inspired by Java. The following shows an example with {{domxref("document.createEvent()")}}:
+The [`Event`](/en-US/docs/Web/API/Event) interface can also be subclassed. This is particularly useful for reuse, or for more complex custom data, or even adding methods to the event.
 
 ```js
-// Create the event.
-const event = document.createEvent("Event");
+class BuildEvent extends Event {
+  #buildTime;
 
-// Define that the event name is 'build'.
-event.initEvent("build");
+  constructor(buildTime) {
+    super("build");
+    this.#buildTime = buildTime;
+  }
 
-// Listen for the event.
-elem.addEventListener(
-  "build",
-  (e) => {
-    // e.target matches elem
-  },
-  false,
-);
+  get buildTime() {
+    return this.#buildTime;
+  }
+}
+```
 
-// target can be any Element or other EventTarget.
-elem.dispatchEvent(event);
+The above code example defines a `BuildEvent` class with a read-only property, and a fixed event type.
+
+The event could then be created as follows:
+
+```js
+const event = new BuildEvent(elem.dataset.time);
+```
+
+The additional data can then be accessed in the event listeners using the custom properties:
+
+```js
+function eventHandler(e) {
+  console.log(`The time is: ${e.buildTime}`);
+}
 ```
 
 ### Event bubbling

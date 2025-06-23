@@ -1,5 +1,6 @@
 ---
 title: Intl.Locale() constructor
+short-title: Intl.Locale()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Intl.Locale.Locale

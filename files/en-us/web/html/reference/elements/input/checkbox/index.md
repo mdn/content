@@ -74,14 +74,12 @@ If the `value` attribute was omitted, the default value for the checkbox is `on`
 In addition to the [common attributes](/en-US/docs/Web/HTML/Reference/Elements/input#attributes) shared by all {{HTMLElement("input")}} elements, `checkbox` inputs support the following attributes.
 
 - `checked`
-
   - : A [boolean](/en-US/docs/Glossary/Boolean/HTML) attribute indicating whether this checkbox is checked by default (when the page loads). It does _not_ indicate whether this checkbox is currently checked: if the checkbox's state is changed, this content attribute does not reflect the change. (Only the {{domxref("HTMLInputElement")}}'s `checked` IDL attribute is updated.)
     > [!NOTE]
     > Unlike other input controls, a checkbox's value is only included in the submitted data if the checkbox is currently `checked`. If it is, then the value of the checkbox's `value` attribute is reported as the input's value, or `on` if no `value` is set.
     > Unlike other browsers, Firefox by default [persists the dynamic checked state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the [`autocomplete`](/en-US/docs/Web/HTML/Reference/Elements/input#autocomplete) attribute to control this feature.
 
 - `value`
-
   - : The `value` attribute is one which all {{HTMLElement("input")}}s share; however, it serves a special purpose for inputs of type `checkbox`: when a form is submitted, only checkboxes which are currently checked are submitted to the server, and the reported value is the value of the `value` attribute. If the `value` is not otherwise specified, it is the string `on` by default. This is demonstrated in the section [Value](#value) above.
 
 ## Using checkbox inputs
