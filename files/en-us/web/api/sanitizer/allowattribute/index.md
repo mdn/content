@@ -34,7 +34,7 @@ allowAttribute(attribute)
     - `namespace` {{optional_inline}}
       - : A string containing the namespace of the attribute, which defaults to `null`.
 
-### Returns
+### Return value
 
 None (`undefined`).
 

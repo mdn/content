@@ -37,7 +37,7 @@ The [`evaluate()`](/en-US/docs/Web/API/Document/evaluate) method takes a total o
 - `resultType`: A [constant](#xpathresult_defined_constants) that specifies the desired result type to be returned as a result of the evaluation. The most commonly passed constant is `XPathResult.ANY_TYPE` which will return the results of the XPath expression as the most natural type. There is a section in the appendix which contains a full list of the [available constants](#xpathresult_defined_constants). They are explained below in the section "[Specifying the Return Type](#specifying_the_return_type)."
 - `result`: If an existing `XPathResult` object is specified, it will be reused to return the results. Specifying `null` will create a new `XPathResult` object.
 
-### Return Value
+### Return value
 
 Returns an {{domxref("XPathResult")}} object of the type [specified](#specifying_the_return_type) in the `resultType` parameter.
 

@@ -62,8 +62,6 @@ The `fit-content()` function can also be used as laid out box size for {{cssxref
 
 ## Syntax
 
-The `fit-content()` function accepts a `<length>` or a `<percentage>` as an argument.
-
 ```css
 /* <length> values */
 fit-content(200px)

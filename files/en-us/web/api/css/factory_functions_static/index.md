@@ -3,6 +3,7 @@ title: CSS numeric factory functions
 slug: Web/API/CSS/factory_functions_static
 page-type: web-api-static-method
 browser-compat: api.CSS
+spec-urls: https://drafts.css-houdini.org/css-typed-om/
 ---
 
 {{APIRef("CSSOM")}}
@@ -64,6 +65,15 @@ CSS.dppx(number)
 // <flex>
 CSS.fr(number)
 ```
+
+### Parameters
+
+- `number`
+  - : A number to be used in the CSS unit value.
+
+### Return value
+
+A {{domxref("CSSUnitValue")}} object with the specified numeric value and unit.
 
 ## Examples
 

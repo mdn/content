@@ -26,7 +26,7 @@ setComments(allow);
 
   - : `true` if comments are allowed, and `false` if they are to be removed.
 
-### Returns
+### Return value
 
 None (`undefined`).
 

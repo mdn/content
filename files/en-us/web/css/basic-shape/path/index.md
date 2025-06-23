@@ -50,16 +50,11 @@ clip-path: path(
 
 ## Syntax
 
-When used in {{cssxref("offset-path")}} or {{cssxref("d")}}:
-
 ```css
-path(<string>)
-```
+path("M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80")
 
-When used in {{cssxref("clip-path")}}:
-
-```css
-path( [<fill-rule>,]? <string> )
+/* When used in clip-path only */
+path(evenodd,"M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80")
 ```
 
 ### Parameters
@@ -86,13 +81,6 @@ Returns a {{cssxref("basic-shape")}} value.
 {{csssyntax}}
 
 ## Examples
-
-### Examples of correct values for path()
-
-```css
-path("M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80");
-path(evenodd,"M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80");
-```
 
 ### Using a `path()` function as an `offset-path` value
 

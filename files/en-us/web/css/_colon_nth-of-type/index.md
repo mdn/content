@@ -41,15 +41,17 @@ dd:nth-of-type(even) {
 
 ## Syntax
 
-The `nth-of-type` pseudo-class is specified with a single argument, which represents the pattern for matching elements.
-
-See {{Cssxref(":nth-child")}} for a more detailed explanation of its syntax.
-
 ```css-nolint
 :nth-of-type(<An+B> | even | odd) {
   /* ... */
 }
 ```
+
+### Parameters
+
+The `:nth-of-type()` pseudo-class is specified with a single argument, which represents the pattern for matching elements.
+
+See {{Cssxref(":nth-child")}} for a more detailed explanation of its syntax.
 
 ## Examples
 

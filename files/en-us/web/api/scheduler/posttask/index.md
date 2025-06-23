@@ -62,7 +62,7 @@ postTask(callback, options)
         The actual delay may be higher than specified, but will not be less.
         The default delay is 0.
 
-### Return Value
+### Return value
 
 Returns a {{jsxref("Promise")}} that is resolved with the return value of the `callback` function, or which may be rejected with the `signal`'s abort reason ({{domxref("AbortSignal.reason")}}).
 The promise may also be rejected with an error thrown by the callback during execution.

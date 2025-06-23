@@ -40,6 +40,10 @@ initCustomEvent(type, canBubble, cancelable, detail)
 - `detail`
   - : Any data that will be available to the handler through the {{domxref("CustomEvent.detail")}} property.
 
+### Return value
+
+None (`undefined`).
+
 ## Specifications
 
 {{Specifications}}

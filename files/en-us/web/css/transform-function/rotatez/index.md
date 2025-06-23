@@ -50,9 +50,6 @@ The axis of rotation passes through an origin, defined by the {{ cssxref("transf
 
 ## Syntax
 
-The amount of rotation created by `rotateZ()` is specified by an {{cssxref("&lt;angle&gt;")}}. If
-positive, the movement will be clockwise; if negative, it will be counter-clockwise.
-
 ```css
 rotateZ(a)
 ```
