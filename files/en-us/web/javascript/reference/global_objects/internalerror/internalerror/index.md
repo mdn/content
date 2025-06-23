@@ -1,5 +1,6 @@
 ---
 title: InternalError() constructor
+short-title: InternalError()
 slug: Web/JavaScript/Reference/Global_Objects/InternalError/InternalError
 page-type: javascript-constructor
 status:

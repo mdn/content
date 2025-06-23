@@ -1,5 +1,6 @@
 ---
 title: Uint8Array.prototype.toBase64()
+short-title: toBase64()
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array/toBase64
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Uint8Array.toBase64

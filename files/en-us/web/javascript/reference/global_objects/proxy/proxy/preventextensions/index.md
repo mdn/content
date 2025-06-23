@@ -1,5 +1,6 @@
 ---
 title: handler.preventExtensions()
+short-title: preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/preventExtensions
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.preventExtensions

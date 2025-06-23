@@ -58,7 +58,7 @@ The `<repeat-style>` values include:
 
 - `space`
 
-  - : The mask image is repeated as many times as possible without clipping. If the element's origin size is at least twice the size as the mask image's size in the associated dimension, the {{cssxref("mask-position")}} property is ignored and the first and last images are positioned at the edges of the mask origin container. If the the mask origin box is not an exact multiple of the mask image's size, whitespace is distributed evenly between the repeated mask images.
+  - : The mask image is repeated as many times as possible without clipping. If the element's origin size is at least twice the size as the mask image's size in the associated dimension, the {{cssxref("mask-position")}} property is ignored and the first and last images are positioned at the edges of the mask origin container. If the mask origin box is not an exact multiple of the mask image's size, whitespace is distributed evenly between the repeated mask images.
 
     If the origin box size is less than twice the mask image's size in the given dimension, only one mask image can be displayed. In this case, the image is positioned as defined by the `mask-position` property, which defaults to `0% 0%`. The mask image will only be clipped if the mask image is larger than the mask origin box.
 

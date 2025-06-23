@@ -1,5 +1,6 @@
 ---
 title: Float64Array() constructor
+short-title: Float64Array()
 slug: Web/JavaScript/Reference/Global_Objects/Float64Array/Float64Array
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Float64Array.Float64Array

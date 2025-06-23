@@ -117,7 +117,7 @@ Below are two example menu implementations.
 
 To progressively enhance this navigation widget that is by default accessible, the class to hide the `menu` and the inclusion of `tabindex="-1"` on the interactive menuitem content should be added with JavaScript on load.
 
-When including a "menu" for site navigation, do not use the `menu` role. Rather, for the main site navigation use the native HTML {{HTMLElement('nav')}} element or simply a list of links. The `menu` role should be reserved for composite widgets requiring focus management. See [ARIA practices for disclosure navigation](https://www.w3.org/TR/wai-aria-practices-1.2/examples/disclosure/disclosure-navigation.html) for an explanation and additional examples.
+When including a "menu" for site navigation, do not use the `menu` role. Rather, for the main site navigation use the native HTML {{HTMLElement('nav')}} element or simply a list of links. The `menu` role should be reserved for composite widgets requiring focus management. See [ARIA practices for disclosure navigation](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/examples/disclosure-navigation/) for an explanation and additional examples.
 
 ### Example 2: menubar submenu option picker
 

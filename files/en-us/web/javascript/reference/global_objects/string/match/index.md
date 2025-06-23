@@ -1,5 +1,6 @@
 ---
 title: String.prototype.match()
+short-title: match()
 slug: Web/JavaScript/Reference/Global_Objects/String/match
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.match

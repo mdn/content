@@ -23,7 +23,7 @@ If you are not using a flex or grid layout, then your content is laid out using 
   - : How flow layout works if you use a different writing mode, such as vertical text.
 - [Flow layout and overflow](/en-US/docs/Web/CSS/CSS_display/Flow_layout_and_overflow)
   - : Understanding and managing overflow.
-- [Introduction to the CSS basic box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [Introduction to the CSS box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - : Understanding the box model is a CSS fundamental; this guide explains how it works.
 - [Mastering margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - : Find out why you sometimes end up with less margin than you expect, due to margin collapsing in normal flow.

@@ -1,5 +1,5 @@
 ---
-title: Variable fonts guide
+title: Variable fonts
 slug: Web/CSS/CSS_fonts/Variable_fonts_guide
 page-type: guide
 ---

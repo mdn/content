@@ -3,12 +3,10 @@ title: "GPUAdapter: isFallbackAdapter property"
 short-title: isFallbackAdapter
 slug: Web/API/GPUAdapter/isFallbackAdapter
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.GPUAdapter.isFallbackAdapter
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`isFallbackAdapter`** read-only property of the
 {{domxref("GPUAdapter")}} interface returns `true` if the adapter is a [fallback adapter](/en-US/docs/Web/API/GPU/requestAdapter#fallback_adapters), and `false` if not.

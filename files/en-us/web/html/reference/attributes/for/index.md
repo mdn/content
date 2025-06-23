@@ -63,7 +63,7 @@ firstNameEl.addEventListener("input", updateOutput);
 lastNameEl.addEventListener("input", updateOutput);
 ```
 
-## Usage
+## Usage notes
 
 When used as an attribute of `<label>`, the `for` attribute has a value which is the `id` of the form element it relates to.
 

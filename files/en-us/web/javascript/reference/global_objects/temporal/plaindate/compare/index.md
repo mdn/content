@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainDate.compare()
+short-title: compare()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/compare
 page-type: javascript-static-method
 status:

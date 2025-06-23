@@ -1,5 +1,6 @@
 ---
 title: List of default Accept values
+short-title: Default Accept values
 slug: Web/HTTP/Guides/Content_negotiation/List_of_default_Accept_values
 page-type: guide
 ---

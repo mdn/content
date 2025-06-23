@@ -2,7 +2,7 @@
 title: Firefox 141 for developers
 short-title: Firefox 141 (Nightly)
 slug: Mozilla/Firefox/Releases/141
-page-type: active-fx-release
+page-type: firefox-release-notes-active
 sidebar: firefoxsidebar
 ---
 
@@ -14,6 +14,9 @@ Firefox 141 is the current [Nightly version of Firefox](https://www.mozilla.org/
 ### Developer Tools
 
 ### HTML
+
+- The HTML [`webkitdirectory`](/en-US/docs/Web/HTML/Reference/Elements/input/file#webkitdirectory) attribute and the corresponding {{domxref("HTMLInputElement.webkitdirectory")}} property are now supported on Firefox Android.
+  The attribute can be set to indicate that an [`<input type="file">`](/en-US/docs/Web/HTML/Reference/Elements/input/file) element should offer selection of directories instead of files. ([Firefox bug 1887878](https://bugzil.la/1887878)).
 
 #### Removals
 
@@ -58,6 +61,8 @@ Firefox 141 is the current [Nightly version of Firefox](https://www.mozilla.org/
 #### Marionette
 
 ## Changes for add-on developers
+
+- Adds the {{WebExtAPIRef('i18n.getPreferredSystemLanguages')}} method to retrieve the preferred locales of the operating system. This complements {{WebExtAPIRef('i18n.getAcceptLanguages')}} which return details of the locales set in the browser. ([Firefox bug 1888486](https://bugzil.la/1888486))
 
 ### Removals
 

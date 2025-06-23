@@ -1,5 +1,6 @@
 ---
 title: Array.of()
+short-title: of()
 slug: Web/JavaScript/Reference/Global_Objects/Array/of
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Array.of

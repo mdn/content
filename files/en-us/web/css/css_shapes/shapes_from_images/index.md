@@ -1,5 +1,6 @@
 ---
 title: Shapes from images
+short-title: Image-based shapes
 slug: Web/CSS/CSS_shapes/Shapes_from_images
 page-type: guide
 ---

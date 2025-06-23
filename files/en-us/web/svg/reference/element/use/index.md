@@ -9,28 +9,9 @@ sidebar: svgref
 The **`<use>`** element takes nodes from within an SVG document, and duplicates them somewhere else.
 The effect is the same as if the nodes were deeply cloned into a non-exposed DOM, then pasted where the `<use>` element is, much like cloned {{HTMLElement("template")}} elements.
 
-## Example
+## Usage context
 
-The following example shows how to use the `<use>` element to draw a circle with a different fill and stroke color.
-In the last circle, `stroke="red"` will be ignored because stroke was already set on `myCircle`.
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg">
-  <circle id="myCircle" cx="5" cy="5" r="4" stroke="blue" />
-  <use href="#myCircle" x="10" fill="blue" />
-  <use href="#myCircle" x="20" fill="white" stroke="red" />
-</svg>
-```
-
-{{EmbedLiveSample('Example', 200, 200)}}
+{{SVGInfo}}
 
 ## Attributes
 
@@ -53,6 +34,33 @@ svg {
 
 > [!NOTE]
 > Starting with SVG2, `x`, `y`, `width`, and `height` are _Geometry Properties_, meaning those attributes can also be used as CSS properties for that element.
+
+## DOM Interface
+
+This element implements the {{domxref("SVGUseElement")}} interface.
+
+## Example
+
+The following example shows how to use the `<use>` element to draw a circle with a different fill and stroke color.
+In the last circle, `stroke="red"` will be ignored because stroke was already set on `myCircle`.
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg">
+  <circle id="myCircle" cx="5" cy="5" r="4" stroke="blue" />
+  <use href="#myCircle" x="10" fill="blue" />
+  <use href="#myCircle" x="20" fill="white" stroke="red" />
+</svg>
+```
+
+{{EmbedLiveSample('Example', 200, 200)}}
 
 ## Usage notes
 
@@ -93,13 +101,9 @@ Check the [Browser compatibility](#browser_compatibility) table for browser supp
 
 ### Loading resources from data URIs via `<use>`
 
-Loading resources with data URIs in the `href` attribute is deprecated for security reasons. This applies to `<use href="data:...` and also when setting `href` by using the [`set`](/en-US/docs/Web/SVG/Reference/Element/set) or [`setAttribute`](/en-US/docs/Web/API/Element/setAttribute) method.
+Loading resources with data URIs in the `href` attribute is deprecated for security reasons. This applies to `<use href="data:..."` and also when setting `href` by using the [`set`](/en-US/docs/Web/SVG/Reference/Element/set) or [`setAttribute`](/en-US/docs/Web/API/Element/setAttribute) method.
 
 Again, check the [Browser compatibility](#browser_compatibility) table for browser support.
-
-## Usage context
-
-{{SVGInfo}}
 
 ## Specifications
 

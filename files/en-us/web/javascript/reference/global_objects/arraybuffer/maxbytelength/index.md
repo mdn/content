@@ -1,5 +1,6 @@
 ---
 title: ArrayBuffer.prototype.maxByteLength
+short-title: maxByteLength
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/maxByteLength
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.ArrayBuffer.maxByteLength

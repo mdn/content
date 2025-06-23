@@ -73,8 +73,6 @@ In addition to the attributes listed above, the following non-standard attribute
 
 The Boolean `webkitdirectory` attribute, if present, indicates that only directories should be available to be selected by the user in the file picker interface. See {{domxref("HTMLInputElement.webkitdirectory")}} for additional details and examples.
 
-Though originally implemented only for WebKit-based browsers, `webkitdirectory` is also usable in Firefox. However, even though it has relatively broad support, it is still not standard and should not be used unless you have no alternative.
-
 ## Unique file type specifiers
 
 A **unique file type specifier** is a string that describes a type of file that may be selected by the user in an {{HTMLElement("input")}} element of type `file`. Each unique file type specifier may take one of the following forms:
@@ -483,7 +481,7 @@ The example looks like this; have a play:
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>
-      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">no corresponding role</a></td>
+      <td><a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role">no corresponding role</a></td>
     </tr>
   </tbody>
 </table>

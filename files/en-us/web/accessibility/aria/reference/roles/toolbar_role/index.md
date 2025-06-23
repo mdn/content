@@ -86,7 +86,7 @@ When the toolbar has focus within it, provide visual cues. When an element withi
 
 ## Examples
 
-[Toolbar example from <abbr>W3C</abbr>, the World Wide Web Consortium](https://www.w3.org/TR/wai-aria-practices-1.2/examples/toolbar/toolbar.html)
+[Toolbar example from ARIA Authoring Practices Guide (APG)](https://www.w3.org/WAI/ARIA/apg/patterns/toolbar/)
 
 ## Accessibility concerns
 
