@@ -152,8 +152,6 @@ img {
 }
 ```
 
-We define a custom property `--box-size` which we use to adjust the view box size. Decreasing the size of the view box gives a zoom-in effect. Increasing the view box size gives a zoom-out effect. The {{cssxref("basic-shape/xywh","xywh()")}} function accepts an offset point and size of the view box as parameters. The view box's offset point, the focal point in our zoom effects, is set at `(500px, 30px)`, which is the top left corner of the right eye of the leopard.
-
 ### JavaScript
 
 ```js
