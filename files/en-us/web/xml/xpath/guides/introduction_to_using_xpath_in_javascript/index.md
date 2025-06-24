@@ -29,7 +29,6 @@ The [`evaluate()`](/en-US/docs/Web/API/Document/evaluate) method takes a total o
 - `xpathExpression`: A string containing the XPath expression to be evaluated.
 - `contextNode`: A node in the document against which the `xpathExpression` should be evaluated, including any and all of its child nodes. The [document](/en-US/docs/Web/API/Document) node is the most commonly used.
 - `namespaceResolver`: A function that will be passed any namespace prefixes contained within `xpathExpression` which returns a string representing the namespace URI associated with that prefix. This enables conversion between the prefixes used in the XPath expressions and the possibly different prefixes used in the document. The function can be either:
-
   - A {{domxref("Node")}}, which provides a {{domxref("Node.lookupNamespaceURI")}} method that resolves the namespace prefix.
   - `null`, which can be used for HTML documents or when no namespace prefixes are used. Note that, if the `xpathExpression` contains a namespace prefix, this will result in a `DOMException` being thrown with the code `NAMESPACE_ERR`.
   - A custom user-defined function. See the [Using a User Defined Namespace Resolver](#implementing_a_user_defined_namespace_resolver) section in the appendix for details.

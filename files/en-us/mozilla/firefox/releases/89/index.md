@@ -47,7 +47,6 @@ _No changes._
 #### Removals
 
 - The following sensor events and their associated handlers have been removed (primarily for better compatibility with other major browser engines, and to address concerns related to privacy leaks):
-
   - `DeviceProximityEvent` and its event handler `window.ondeviceproximity` ([Firefox bug 1699707](https://bugzil.la/1699707)).
   - `UserProximityEvent` and its event handler `window.onuserproximity`) ([Firefox bug 1699707](https://bugzil.la/1699707)).
   - `DeviceLightEvent` and its event handler `window.ondevicelight` ([Firefox bug 1701824](https://bugzil.la/1701824)).

@@ -20,7 +20,6 @@ In Window contexts, this value represents the time when navigation has started. 
 A high resolution timestamp which considered to be the beginning of the current document's lifetime. It's calculated like this:
 
 - If the script's {{Glossary("global object")}} is a {{domxref("Window")}}, the time origin is determined as follows:
-
   - If the current {{domxref("Document")}} is the first one loaded in the `Window`, the time origin is the time at which the browser context was created.
   - If during the process of unloading the previous document which was loaded in the window, a confirmation dialog was displayed to let the user confirm whether or not to leave the previous page, the time origin is the time at which the user confirmed that navigating to the new page was acceptable.
   - If neither of the above determines the time origin, then the time origin is the time at which the navigation responsible for creating the window's current `Document` took place.

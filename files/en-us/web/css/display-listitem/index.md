@@ -54,7 +54,6 @@ A single value of `list-item` will cause the element to behave like a list item.
 ## See also
 
 - {{CSSxRef("display")}}
-
   - {{CSSxRef("&lt;display-outside&gt;")}}
   - {{CSSxRef("&lt;display-inside&gt;")}}
   - {{CSSxRef("&lt;display-internal&gt;")}}

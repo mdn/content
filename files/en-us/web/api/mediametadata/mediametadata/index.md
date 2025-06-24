@@ -21,9 +21,7 @@ new MediaMetadata(metadata)
 ### Parameters
 
 - `metadata` {{optional_inline}}
-
   - : The metadata parameters are as follows:
-
     - `album` {{optional_inline}}
       - : The name of the album, or collection, containing the media to be played. It defaults to the empty string (`""`).
     - `artist` {{optional_inline}}

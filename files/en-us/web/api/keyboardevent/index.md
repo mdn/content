@@ -108,18 +108,15 @@ The following constants identify which part of the keyboard the key event origin
 _This interface also inherits properties of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}._
 
 - {{domxref("KeyboardEvent.altKey")}} {{ReadOnlyInline}}
-
   - : Returns a boolean value that is `true` if the <kbd>Alt</kbd> (<kbd>Option</kbd> or <kbd>⌥</kbd> on macOS) key was active when the key event was generated.
 
 - {{domxref("KeyboardEvent.code")}} {{ReadOnlyInline}}
-
   - : Returns a string with the code value of the physical key represented by the event.
 
     > [!WARNING]
     > This ignores the user's keyboard layout, so that if the user presses the key at the "Y" position in a QWERTY keyboard layout (near the middle of the row above the home row), this will always return "KeyY", even if the user has a QWERTZ keyboard (which would mean the user expects a "Z" and all the other properties would indicate a "Z") or a Dvorak keyboard layout (where the user would expect an "F"). If you want to display the correct keystrokes to the user, you can use {{domxref("Keyboard.getLayoutMap()")}}.
 
 - {{domxref("KeyboardEvent.ctrlKey")}} {{ReadOnlyInline}}
-
   - : Returns a boolean value that is `true` if the <kbd>Ctrl</kbd> key was active when the key event was generated.
 
 - {{domxref("KeyboardEvent.isComposing")}} {{ReadOnlyInline}}
@@ -129,23 +126,19 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 - {{domxref("KeyboardEvent.location")}} {{ReadOnlyInline}}
   - : Returns a number representing the location of the key on the keyboard or other input device. A list of the constants identifying the locations is shown above in [Keyboard locations](#keyboard_locations).
 - {{domxref("KeyboardEvent.metaKey")}} {{ReadOnlyInline}}
-
   - : Returns a boolean value that is `true` if the <kbd>Meta</kbd> key (on Mac keyboards, the <kbd>⌘ Command</kbd> key; on Windows keyboards, the Windows key (<kbd>⊞</kbd>)) was active when the key event was generated.
 
 - {{domxref("KeyboardEvent.repeat")}} {{ReadOnlyInline}}
   - : Returns a boolean value that is `true` if the key is being held down such that it is automatically repeating.
 - {{domxref("KeyboardEvent.shiftKey")}} {{ReadOnlyInline}}
-
   - : Returns a boolean value that is `true` if the <kbd>Shift</kbd> key was active when the key event was generated.
 
 ### Obsolete properties
 
 - {{domxref("KeyboardEvent.charCode")}} {{Deprecated_inline}} {{ReadOnlyInline}}
-
   - : Returns a number representing the Unicode reference number of the key; this property is used only by the `keypress` event. For keys whose `char` property contains multiple characters, this is the Unicode value of the first character in that property. In Firefox 26 this returns codes for printable characters.
 
 - {{domxref("KeyboardEvent.keyCode")}} {{deprecated_inline}} {{ReadOnlyInline}}
-
   - : Returns a number representing a system and implementation dependent numerical code identifying the unmodified value of the pressed key.
 
 - {{domxref("KeyboardEvent.keyIdentifier")}} {{Non-standard_inline}} {{deprecated_inline}} {{ReadOnlyInline}}
@@ -156,7 +149,6 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 _This interface also inherits methods of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}._
 
 - {{domxref("KeyboardEvent.getModifierState()")}}
-
   - : Returns a boolean value indicating if a modifier key such as <kbd>Alt</kbd>, <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, or <kbd>Meta</kbd>, was pressed when the event was created.
 
 ### Obsolete methods

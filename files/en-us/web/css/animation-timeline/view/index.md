@@ -47,9 +47,7 @@ animation-timeline: view(x 200px auto);
 ### Parameters
 
 - axis
-
   - : The scrollbar axis value can be any one of the following:
-
     - `block`
       - : The scrollbar on the block axis of the scroll container, which is the axis in the direction perpendicular to the flow of text within a line.
         For horizontal writing modes, such as standard English, this is the same as `y`, while for vertical writing modes, it is the same as `x`. This is the default value.
@@ -62,9 +60,7 @@ animation-timeline: view(x 200px auto);
       - : The scrollbar on the horizontal axis of the scroll container.
 
 - inset
-
   - : The inset value can be one or two values, which can be either `auto` or a {{cssxref("length-percentage")}}. It specifies an inset (positive) or outset (negative) adjustment of the [scrollport](/en-US/docs/Glossary/Scroll_container#scrollport). The inset is used to determine whether the element is in view which determines the length of the animation timeline. In other words, the animation lasts as long as the element is in the inset-adjusted view.
-
     - start
       - : Inward offset from beginning of the scrollport.
     - end

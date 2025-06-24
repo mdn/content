@@ -43,7 +43,6 @@ transition-duration: mod(20s / 2, 3000ms * 2); /* 4s */
 The `mod(dividend, divisor)` function accepts two comma-separated values as its parameters. Both parameters must have the same type, [number](/en-US/docs/Web/CSS/number), [dimension](/en-US/docs/Web/CSS/dimension), or {{cssxref("percentage")}}, for the function to be valid. While the units in the two parameters don't need to be the same, they do need of the same dimension type, such as {{cssxref("length")}}, {{cssxref("angle")}}, {{cssxref("time")}}, or {{cssxref("frequency")}} to be valid.
 
 - `dividend`
-
   - : A calculation that resolves to a {{CSSxREF("&lt;number&gt;")}}, {{CSSxREF("&lt;dimension&gt;")}}, or {{CSSxREF("&lt;percentage&gt;")}} representing the dividend.
 
 - `divisor`

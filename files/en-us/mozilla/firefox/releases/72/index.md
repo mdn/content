@@ -41,7 +41,6 @@ _No changes._
 
 - CSS Shadow Parts are now enabled. This includes the [`part` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/part) and [`::part` pseudo-element](/en-US/docs/Web/CSS/::part), which allow shadow hosts to selectively expose chosen elements from their shadow tree to the outside page for styling purposes ([Firefox bug 1559074](https://bugzil.la/1559074)).
 - [CSS Motion Path](/en-US/docs/Web/CSS/CSS_motion_path) has been shipped ([Firefox bug 1582554](https://bugzil.la/1582554), also see the [Intent to Ship](https://groups.google.com/forum/#!topic/mozilla.dev.platform/nOOIRsuxvuc)). This includes:
-
   - {{cssxref("offset")}}
   - {{cssxref("offset-path")}}
   - {{cssxref("offset-anchor")}}
@@ -70,13 +69,11 @@ _No changes._
 #### DOM
 
 - The [Geolocation API](/en-US/docs/Web/API/Geolocation_API) has had some interface name updates, as per recent spec changes ([Firefox bug 1575144](https://bugzil.la/1575144)):
-
   - `Coordinates` has been changed to {{domxref("GeolocationCoordinates")}}.
   - `Position` has been changed to {{domxref("GeolocationPosition")}}.
   - `PositionError` has been changed to {{domxref("GeolocationPositionError")}}.
 
 - A number of properties have been updated to use standard stringifiers ([Firefox bug 824857](https://bugzil.la/824857)):
-
   - {{domxref("DOMTokenList.value")}}
   - {{domxref("HTMLAnchorElement.href")}}
   - {{domxref("Location.href")}}

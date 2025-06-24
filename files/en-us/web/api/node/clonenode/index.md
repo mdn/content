@@ -40,7 +40,6 @@ cloneNode(deep)
 ### Parameters
 
 - `deep` {{optional_inline}}
-
   - : If `true`, then the node and its whole subtree,
     including text that may be in child {{domxref("Text")}} nodes,
     is also copied.

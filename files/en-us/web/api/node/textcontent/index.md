@@ -50,7 +50,6 @@ important differences:
 - `textContent` returns every element in the node. In contrast,
   `innerText` is aware of styling and won't return the text of "hidden"
   elements.
-
   - Moreover, since `innerText` takes CSS styles into account,
     reading the value of `innerText` triggers a
     {{glossary("reflow")}} to ensure up-to-date computed styles. (Reflows can

@@ -188,7 +188,6 @@ You can also combine multiple media queries into a single rule by separating the
   - : Used for combining multiple media features together into a single media query, requiring each chained feature to return `true` for the query to be `true`.
     It is also used for joining media features with media types.
 - `not`
-
   - : Used to negate a media query, returning `true` if the query would otherwise return `false`.
     If present in a comma-separated list of queries, it will only negate the specific query to which it is applied.
 

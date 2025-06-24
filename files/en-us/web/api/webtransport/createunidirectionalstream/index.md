@@ -31,9 +31,7 @@ createUnidirectionalStream(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An object that may have the following properties:
-
     - `sendOrder` {{optional_inline}}
       - : A integer value specifying the send priority of this stream relative to other streams for which the value has been set.
         Queued bytes are sent first for streams that have a higher value.

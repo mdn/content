@@ -52,23 +52,18 @@ The alignment of text and inline-level content is defined in [CSS text module](/
 ## Guides
 
 - [Box alignment overview](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment)
-
   - : Overview of the general concepts found in the CSS box alignment module.
 
 - [Box alignment in flexbox](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
-
   - : How box alignment works in the context of flexbox.
 
 - [Box alignment in CSS grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
-
   - : How box alignment works in the context of grid layout.
 
 - [Box alignment in multiple-column layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_multi-column_layout)
-
   - : How box alignment works in the context of multi-column layout.
 
 - [Box alignment for block, absolutely positioned and table layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables)
-
   - : How box alignment works in the context of block layout, including floated, positioned, and table elements.
 
 ## Related concepts

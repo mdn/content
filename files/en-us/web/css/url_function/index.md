@@ -69,7 +69,6 @@ url(https://example.com/image.png)
 ### Values
 
 - `<string>`
-
   - : A string specifying a URL, which is a relative or absolute address, or pointer, to the web resource to be included, or a data URL. You can also use a hash URL to reference the ID of an [SVG shape](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes) or an [SVG filter](/en-US/docs/Web/SVG/Reference/Element/filter).
 
     The quotes are generally optional—they are required if the URL includes parentheses, whitespace, or quotes (unless these characters are escaped), or if the address includes control characters above 0x7e. Normal string syntax rules apply: double quotes cannot occur inside double quotes and single quotes cannot occur inside single quotes unless escaped.

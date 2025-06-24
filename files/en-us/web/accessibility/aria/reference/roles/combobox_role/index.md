@@ -53,19 +53,15 @@ Every `combobox` must have an accessible name. If using an {{HTMLElement('input'
 ### Keyboard interactions
 
 - <kbd>Down Arrow</kbd>
-
   - : Moves focus to the next option, or to the first option if none was selected.
 
 - <kbd>Alt</kbd> + <kbd>Down Arrow</kbd> (Optional)
-
   - : If the popup is available but not displayed, displays the popup without moving focus.
 
 - <kbd>Up Arrow</kbd>
-
   - : Moves focus to the previous option. Moving focus to the first option if focus was originally on the last option.
 
 - <kbd>Alt</kbd> + <kbd>Up Arrow</kbd> (Optional)
-
   - : If the popup has focus, returns focus to the combobox, otherwise it closes the popup.
 
 - <kbd>Enter</kbd>

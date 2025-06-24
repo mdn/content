@@ -118,7 +118,6 @@ grid-template: unset;
 - `<'grid-template-rows'> / <'grid-template-columns'>`
   - : Sets {{cssxref("grid-template-rows")}} and {{cssxref("grid-template-columns")}} to the specified values, and sets {{cssxref("grid-template-areas")}} to `none`.
 - `[ <line-names>? <string> <track-size>? <line-names>? ]+ [ / <explicit-track-list> ]?`
-
   - : Sets {{cssxref("grid-template-areas")}} to the strings listed, {{cssxref("grid-template-rows")}} to the track sizes following each string (filling in `auto` for any missing sizes), and splicing in the named lines defined before/after each size, and {{cssxref("grid-template-columns")}} to the track listing specified after the slash (or `none`, if not specified).
 
     > [!NOTE]

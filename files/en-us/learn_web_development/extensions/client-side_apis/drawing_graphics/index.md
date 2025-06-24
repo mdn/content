@@ -253,7 +253,6 @@ Let's draw an equilateral triangle on the canvas.
    First we draw a line across to (150, 50) — our path now goes 100 pixels to the right along the x axis.
 
    Second, we work out the height of our equilateral triangle, using a bit of simple trigonometry. Basically, we are drawing the triangle pointing downwards. The angles in an equilateral triangle are always 60 degrees; to work out the height we can split it down the middle into two right-angled triangles, which will each have angles of 90 degrees, 60 degrees, and 30 degrees. In terms of the sides:
-
    - The longest side is called the **hypotenuse**
    - The side next to the 60 degree angle is called the **adjacent** — which we know is 50 pixels, as it is half of the line we just drew.
    - The side opposite the 60 degree angle is called the **opposite**, which is the height of the triangle we want to calculate.
@@ -295,7 +294,6 @@ Now let's look at how to draw a circle in canvas. This is accomplished using the
    ```
 
    The pattern here is very similar, but with two differences:
-
    - We have set the last parameter of `arc()` to `true`, meaning that the arc is drawn counterclockwise, which means that even though the arc is specified as starting at -45 degrees and ending at 45 degrees, we draw the arc around the 270 degrees not inside this portion. If you were to change `true` to `false` and then re-run the code, only the 90 degree slice of the circle would be drawn.
    - Before calling `fill()`, we draw a line to the center of the circle. This means that we get the rather nice Pac-Man-style cutout rendered. If you removed this line (try it!) then re-ran the code, you'd get just an edge of the circle chopped off between the start and end point of the arc. This illustrates another important point of the canvas — if you try to fill an incomplete path (i.e., one that is not closed), the browser fills in a straight line between the start and end point and then fills it in.
 
@@ -378,7 +376,6 @@ It is possible to render external images onto your canvas. These can be simple i
    ```js
    ctx.drawImage(image, 20, 20, 185, 175, 50, 50, 185, 175);
    ```
-
    - The first parameter is the image reference, as before.
    - Parameters 2 and 3 define the coordinates of the top left corner of the area you want to cut out of the loaded image, relative to the top-left corner of the image itself. Nothing to the left of the first parameter or above the second will be drawn.
    - Parameters 4 and 5 define the width and height of the area we want to cut out from the original image we loaded.
@@ -454,7 +451,6 @@ Let's build an example.
    ```
 
    So on each iteration, we:
-
    - Set the `fillStyle` to be a shade of slightly transparent purple, which changes each time based on the value of `length`. As you'll see later the length gets smaller each time the loop runs, so the effect here is that the color gets brighter with each successive triangle drawn.
    - Begin the path.
    - Move the pen to a coordinate of `(moveOffset, moveOffset)`; This variable defines how far we want to move each time we draw a new triangle.
@@ -584,7 +580,6 @@ Now let's create our own simple animation — we'll get a character from a certa
    ```
 
    As you can see:
-
    - We specify `image` as the image to embed.
    - Parameters 2 and 3 specify the top-left corner of the slice to cut out of the source image, with the X value as `sprite` multiplied by 102 (where `sprite` is the sprite number between 0 and 5) and the Y value always 0.
    - Parameters 4 and 5 specify the size of the slice to cut out — 102 pixels by 148 pixels.
@@ -737,7 +732,6 @@ Let's look at an example of how to create something with a WebGL library. We'll 
    ```
 
    The [`PerspectiveCamera()`](https://threejs.org/docs/index.html#api/en/cameras/PerspectiveCamera) constructor takes four arguments:
-
    - The field of view: How wide the area in front of the camera is that should be visible onscreen, in degrees.
    - The {{glossary("aspect ratio")}}: Usually, this is the ratio of the scene's width divided by the scene's height. Using another value will distort the scene (which might be what you want, but usually isn't).
    - The near plane: How close to the camera objects can be before we stop rendering them to the screen. Think about how when you move your fingertip closer and closer to the space between your eyes, eventually you can't see it anymore.
@@ -777,7 +771,6 @@ Let's look at an example of how to create something with a WebGL library. We'll 
    ```
 
    There's a bit more to take in here, so let's go through it in stages:
-
    - We first create a `cube` global variable so we can access our cube from anywhere in the code.
    - Next, we create a new [`TextureLoader`](https://threejs.org/docs/index.html#api/en/loaders/TextureLoader) object, then call `load()` on it. `load()` takes two parameters in this case (although it can take more): the texture we want to load (our PNG), and a function that will run when the texture has loaded.
    - Inside this function we use properties of the [`texture`](https://threejs.org/docs/index.html#api/en/textures/Texture) object to specify that we want a 2 x 2 repeat of the image wrapped around all sides of the cube. Next, we create a new [`BoxGeometry`](https://threejs.org/docs/index.html#api/en/geometries/BoxGeometry) object and a new [`MeshLambertMaterial`](https://threejs.org/docs/index.html#api/en/materials/MeshLambertMaterial) object, and bring them together in a [`Mesh`](https://threejs.org/docs/index.html#api/en/objects/Mesh) to create our cube. An object typically requires a geometry (what shape it is) and a material (what its surface looks like).

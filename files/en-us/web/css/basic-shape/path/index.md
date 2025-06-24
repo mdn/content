@@ -60,9 +60,7 @@ path(evenodd,"M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80")
 ### Parameters
 
 - [`<fill-rule>`](/en-US/docs/Web/SVG/Reference/Attribute/fill-rule) {{optional_inline}}
-
   - : Defines what parts of the path are inside the shape. The possible values include:
-
     - `nonzero`: A point is considered inside the shape if a ray drawn from the point crosses more left-to-right than right-to-left path segments, resulting in a non-zero count. This is the default value when `<fill-rule>` is omitted.
 
     - `evenodd`: A point is considered to be inside the shape if a ray drawn from the point crosses an odd number of path segments. This means that for each time the ray enters the shape, it has not exited an equal number of times, indicating an odd count of entries without corresponding exits.

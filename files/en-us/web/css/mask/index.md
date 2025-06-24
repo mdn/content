@@ -57,9 +57,7 @@ mask: unset;
 ### Values
 
 - `<mask-layer>`
-
   - : One or more comma-separated mask layers, consisting of the following components:
-
     - `<mask-reference>`
       - : Sets the mask image source. See {{cssxref("mask-image")}}.
     - `<masking-mode>`

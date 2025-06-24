@@ -73,9 +73,7 @@ For example:
 ### Values
 
 - `<container-condition>`
-
   - : An optional `<container-name>` and a `<container-query>`. Styles defined in the `<stylesheet>` are applied if the condition is true.
-
     - `<container-name>`
       - : Optional. The name of the container that the styles will be applied to when the query evaluates to true, specified as an {{cssxref("ident")}}.
     - `<container-query>`
@@ -156,23 +154,18 @@ The `<container-condition>` can include one or more boolean size queries, each w
 ```
 
 - `aspect-ratio`
-
   - : The {{cssxref("aspect-ratio")}} of the container calculated as the width to the height of the container expressed as a {{cssxref("ratio")}} value.
 
 - `block-size`
-
   - : The {{cssxref("block-size")}} of the container expressed as a {{cssxref("length")}} value.
 
 - `height`
-
   - : The height of the container expressed as a {{cssxref("length")}} value.
 
 - `inline-size`
-
   - : The {{cssxref("inline-size")}} of the container expressed as a {{cssxref("length")}} value.
 
 - `orientation`
-
   - : The [orientation](/en-US/docs/Web/CSS/@media/orientation) of the container, either `landscape` or `portrait`.
 
 - `width`
@@ -197,9 +190,7 @@ Scroll-state container descriptors are specified inside the `<container-conditio
 Supported keywords for scroll-state container descriptors include physical and {{glossary("flow relative values")}}
 
 - `scrollable`
-
   - : Queries whether the container can be scrolled in the given direction via user-initiated scrolling, such as by dragging the scrollbar or using a trackpad gesture. In other words, is there overflowing content in the given direction that can be scrolled to? Valid `scrollable` values include the following keywords:
-
     - `none`
       - : The container is not a {{glossary("scroll container")}} or otherwise cannot be scrolled in any direction.
     - `top`
@@ -238,9 +229,7 @@ Supported keywords for scroll-state container descriptors include physical and {
     ```
 
 - `snapped`
-
   - : Queries whether the container is, or will be, snapped to a [scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) container ancestor along the given axis. Valid `snapped` values include the following keywords:
-
     - `none`
       - : The container is not a scroll [snap target](/en-US/docs/Glossary/Scroll_snap#snap_target) for its ancestor scroll container. When implementing a `snapped: none` query, containers that _are_ snap targets for the scroll container will _not_ have the `@container` styles applied, whereas non-snap targets _will_ have the styles applied.
     - `x`
@@ -267,9 +256,7 @@ Supported keywords for scroll-state container descriptors include physical and {
     ```
 
 - `stuck`
-
   - : Queries whether a container with a {{cssxref("position")}} value of [`sticky`](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning#sticky_positioning) is stuck to an edge of its scrolling container ancestor. Valid `stuck` values include the following keywords:
-
     - `none`
       - : The container is not stuck to any edges of its container. Note that `none` queries will match even if the container does not have `position: sticky` set on it.
     - `top`

@@ -31,9 +31,7 @@ In implementations that support the [`Intl.DateTimeFormat` API](/en-US/docs/Web/
 - `locales` {{optional_inline}}
   - : A string with a BCP 47 language tag, or an array of such strings. Corresponds to the [`locales`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#locales) parameter of the `Intl.DateTimeFormat()` constructor.
 - `options` {{optional_inline}}
-
   - : An object adjusting the output format. Corresponds to the [`options`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options) parameter of the `Intl.DateTimeFormat()` constructor. If this date-time's calendar is not `"iso8601"`, the `calendar` option must be provided with the same value; otherwise, if this date-time's calendar is `"iso8601"`, the `calendar` option can be any value. The `timeZone` option must not be provided, as it is automatically set to be the date-time's {{jsxref("Temporal/ZonedDateTime/timeZoneId", "timeZoneId")}}. Regarding the [date-time component options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#date-time_component_options) and the style shortcuts (`dateStyle` and `timeStyle`), the options should follow one of these forms:
-
     - Provide none of them: `year`, `month`, `day`, `hour`, `minute`, and `second` will default to `"numeric"`.
     - Provide at least one of `dateStyle` or `timeStyle`: the date-time components will be set according to the specified style and the locale.
     - Provide some date-time component options. Only the specified date-time components will be included in the output.

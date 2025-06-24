@@ -67,10 +67,8 @@ Content-Type: multipart/form-data; boundary=ExampleBoundaryString
 ## Directives
 
 - `<media-type>`
-
   - : The [media type](/en-US/docs/Web/HTTP/Guides/MIME_types) of the resource or data.
     May contain the following parameters:
-
     - **`charset`**: Indicates the {{Glossary("character encoding")}} standard used.
       The value is case insensitive but lowercase is preferred.
     - **`boundary`**: For multipart entities, the `boundary` parameter is required.

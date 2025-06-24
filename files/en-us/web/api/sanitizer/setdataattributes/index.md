@@ -23,7 +23,6 @@ setDataAttributes(allow);
 ### Parameters
 
 - `allow`
-
   - : `true` if data attributes are allowed, and `false` if they are to be removed.
 
 ### Return value
