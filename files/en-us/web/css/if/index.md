@@ -141,7 +141,7 @@ div {
 }
 ```
 
-Note that an `if()` function is still valid if it contains only an `else : <value>` pair, or nothing at all:
+Note that an `if()` function is still valid if it contains only an `else : <value>` pair, or nothing at all. The following property values are both valid:
 
 ```css
 background-color: if(else: yellow);
