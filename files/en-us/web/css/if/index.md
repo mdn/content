@@ -396,7 +396,7 @@ section {
 }
 ```
 
-Next, we target the `<h2>` element's {{cssxref("::before")}} pseudo-element, setting its {{cssxref("content")}} property to contain an apple emoji., but only if `--show-apple:true` is set (we did this earlier in our HTML). We achieve this using an `if()` function with a style query if condition:
+Next, we target the `<h2>` element's {{cssxref("::before")}} pseudo-element, setting its {{cssxref("content")}} property to an apple emoji, but only if `--show-apple: true` is set (we did this earlier with an inline {{htmlelement("style")}} in our HTML). We achieve this using an `if()` function with a [style query](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#style_queries_for_custom_properties) `<if-test>`:
 
 ```css-nolint live-sample___basic
 h2::before {
