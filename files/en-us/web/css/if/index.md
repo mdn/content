@@ -63,7 +63,6 @@ The parameters are:
   - : A keyword representing an `<if-condition>` that always evaluates to true.
 
 - `<value>`
-
   - : A property value.
 
 ### Return value
