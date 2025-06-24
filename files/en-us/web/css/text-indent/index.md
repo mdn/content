@@ -248,7 +248,6 @@ p {
 
 - [Learn to style HTML using CSS](/en-US/docs/Learn_web_development/Core/Styling_basics)
 - Related CSS properties:
-
   - [`text-justify`](/en-US/docs/Web/CSS/text-justify)
   - [`text-orientation`](/en-US/docs/Web/CSS/text-orientation)
   - [`text-overflow`](/en-US/docs/Web/CSS/text-overflow)

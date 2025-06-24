@@ -114,7 +114,8 @@ output
     └── 5
 ```
 
-> **Note:** `mp4-dash-encode.py` does not display ffmpeg error messages. You can see it by specifying the `-d` option.
+> [!NOTE]
+> `mp4-dash-encode.py` does not display ffmpeg error messages. You can see it by specifying the `-d` option.
 
 > [!NOTE]
 > If `"Invalid duration specification for force_key_frames: 'expr:eq(mod(n"` is displayed as an error message, modify `mp4-dash-encode.py` and remove two `"'"` from `"-force_key_frames 'expr:eq(mod(n,%d),0)'"`.

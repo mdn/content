@@ -74,33 +74,26 @@ There are plans to further extend possible queries by adding the generalized con
 ## Guides
 
 - [Using CSS feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
-
   - : Selectively applying CSS rules after checking browser support for the specified properties and values via feature queries.
 
 - [Using CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-
   - : Introduces media queries, their syntax, and the operators and media features that are used to construct media query expressions.
 
 - [Supporting older browsers: feature queries](/en-US/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers#feature_queries)
-
   - : How to use feature queries to target CSS based on the browser's level of support for web features.
 
 - [Browser feature detection: CSS `@supports`](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection#supports)
-
   - : A look at JavaScript and CSS feature detection, including CSS `@supports`.
 
 - [Using container scroll-state queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)
-
   - : Using container scroll-state queries, with an example of each type.
 
 ## Related concepts
 
 - [CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
-
   - {{cssxref("@import")}} at-rule
 
 - [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
-
   - [`<media-feature>`](/en-US/docs/Web/CSS/@media#media_features)
   - [`<media-type>`](/en-US/docs/Web/CSS/@media#media_types)
   - [`<media-condition>`](/en-US/docs/Web/CSS/@media#logical_operators)
@@ -108,7 +101,6 @@ There are plans to further extend possible queries by adding the generalized con
   - [CSS logical operators](/en-US/docs/Web/CSS/@media#logical_operators) (`not`, `or`, and `and`)
 
 - [CSSOM view](/en-US/docs/Web/CSS/CSSOM_view) module
-
   - {{domxref("CSS")}} API
   - {{domxref("CSSGroupingRule")}} API
   - {{domxref("MediaQueryList")}} API
@@ -117,7 +109,6 @@ There are plans to further extend possible queries by adding the generalized con
     - {{domxref("MediaList.mediaText")}} property
 
 - [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax) module
-
   - {{cssxref("@charset")}} declaration
   - {{cssxref("at-rule")}} term
   - [`invalid`](/en-US/docs/Web/CSS/CSS_syntax/Error_handling) term
@@ -125,7 +116,6 @@ There are plans to further extend possible queries by adding the generalized con
   - [style rule](/en-US/docs/Web/API/CSSStyleRule) term
 
 - [CSS namespaces](/en-US/docs/Web/CSS/CSS_namespaces) module
-
   - {{cssxref("@namespace")}} at-rule
 
 ## Specifications

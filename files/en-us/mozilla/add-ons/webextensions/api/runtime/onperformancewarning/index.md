@@ -31,13 +31,9 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `details`
-
       - : `object`. An object with the following properties:
-
         - `category`
           - : {{WebExtAPIRef("runtime.OnPerformanceWarningCategory")}}. The category of the warning.
         - `severity`

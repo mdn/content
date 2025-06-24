@@ -16,7 +16,6 @@ The `Serial` interface of the [Web Serial API](/en-US/docs/Web/API/Web_Serial_AP
 ## Instance methods
 
 - {{domxref("Serial.requestPort()")}} {{Experimental_Inline}}
-
   - : Returns a {{jsxref("Promise")}} that resolves with an instance of {{domxref("SerialPort")}} representing the device chosen by the user. This method must be called via [transient activation](/en-US/docs/Glossary/Transient_activation).
 
 - {{domxref("Serial.getPorts()")}} {{Experimental_Inline}}

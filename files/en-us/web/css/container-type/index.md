@@ -37,25 +37,21 @@ container-type: unset;
 
 ### Values
 
-The `container-type` property can take a single value from the list below, or two values — one of which must be `scroll-state` and the other can be `inline-size` or `size`. In other words, an element an be established as a size query container, a scroll-state query container, both, or neither.
+The `container-type` property can take a single value from the list below, or two values — one must be `scroll-state` and the other can be `inline-size` or `size`. In other words, an element can be established as a size query container, a scroll-state query container, both, or neither.
 
 - `inline-size`
-
   - : Establishes a query container for dimensional queries on the [inline axis](/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#block_and_inline_dimensions) of the container.
     Applies layout, style, and inline-size containment to the element.
 
     Inline size containment is applied to the element. The inline size of the element can be [computed in isolation](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#size_containment), ignoring the child elements (see [Using CSS containment](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment)).
 
 - `normal`
-
   - : Default value. The element is not a query container for any container size queries, but remains a query container for [container style queries](/en-US/docs/Web/CSS/@container#container_style_queries).
 
 - `scroll-state`
-
   - : Establishes a query container for scroll-state queries on the container. In this case, the size of the element is not computed in isolation; no containment is applied.
 
 - `size`
-
   - : Establishes a query container for container size queries in both the [inline and block](/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#block_and_inline_dimensions) dimensions.
     Applies layout containment, style containment, and size containment to the container.
 

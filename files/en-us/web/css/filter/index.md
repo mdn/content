@@ -116,7 +116,6 @@ The `filter` property is specified as `none` or one or more of the functions lis
 When the `filter` property values contains multiple functions, the filters are applied in order.
 
 - {{cssxref("filter-function/blur", "blur()")}}
-
   - : Applies a Gaussian blur to the input image.
 
     ```css
@@ -124,7 +123,6 @@ When the `filter` property values contains multiple functions, the filters are a
     ```
 
 - {{cssxref("filter-function/brightness", "brightness()")}}
-
   - : Applies a linear multiplier to the input image, making it appear more or less bright. Values are linear multipliers on the effect, with `0%` creating a completely black image, `100%` having no effect, and values over `100%` brightening the image.
 
     ```css
@@ -132,7 +130,6 @@ When the `filter` property values contains multiple functions, the filters are a
     ```
 
 - {{cssxref("filter-function/contrast", "contrast()")}}
-
   - : Adjusts the contrast of the input image. A value of `0%` makes the image grey, `100%` has no effect, and values over `100%` create a contrast.
 
     ```css
@@ -140,7 +137,6 @@ When the `filter` property values contains multiple functions, the filters are a
     ```
 
 - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-
   - : Applies the parameter `<shadow>` as a drop shadow, following the contours of the image. The shadow syntax is similar to `<box-shadow>` (defined in the [CSS backgrounds and borders module](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders)), with the exception that the `inset` keyword and `spread` parameter are not allowed. As with all `filter` property values, any filters after the `drop-shadow()` are applied to the shadow.
 
     ```css
@@ -148,7 +144,6 @@ When the `filter` property values contains multiple functions, the filters are a
     ```
 
 - {{cssxref("filter-function/grayscale", "grayscale()")}}
-
   - : Converts the image to grayscale. A value of `100%` is completely grayscale. The initial value of `0%` leaves the input unchanged. Values between `0%` and `100%` produce linear multipliers on the effect.
 
     ```css
@@ -156,7 +151,6 @@ When the `filter` property values contains multiple functions, the filters are a
     ```
 
 - {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
-
   - : Applies a hue rotation. The `<angle>` value defines the number of degrees around the hue color circle at which the input samples will be adjusted. A value of `0deg` leaves the input unchanged.
 
     ```css
@@ -164,7 +158,6 @@ When the `filter` property values contains multiple functions, the filters are a
     ```
 
 - {{cssxref("filter-function/invert", "invert()")}}
-
   - : Inverts the samples in the input image. A value of `100%` completely inverts the image. A value of `0%` leaves the input unchanged. Values between `0%` and `100%` have linear multipliers on the effect.
 
     ```css
@@ -172,7 +165,6 @@ When the `filter` property values contains multiple functions, the filters are a
     ```
 
 - {{cssxref("filter-function/opacity", "opacity()")}}
-
   - : Applies transparency. `0%` makes the image completely transparent and `100%` leaves the image unchanged.
 
     ```css
@@ -180,7 +172,6 @@ When the `filter` property values contains multiple functions, the filters are a
     ```
 
 - {{cssxref("filter-function/saturate", "saturate()")}}
-
   - : Saturates the image, with `0%` being completely unsaturated, `100%` leaving the image unchanged, and values of over `100%` increasing saturation.
 
     ```css
@@ -188,7 +179,6 @@ When the `filter` property values contains multiple functions, the filters are a
     ```
 
 - {{cssxref("filter-function/sepia", "sepia()")}}
-
   - : Converts the image to sepia, with a value of `100%` making the image completely sepia and `0%` making no change.
 
     ```css

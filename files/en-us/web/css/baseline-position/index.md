@@ -22,11 +22,9 @@ The `first` and `last` values give a box a baseline alignment preference, defaul
 The `<baseline-position>` enumerated value type is specified using an optional `first` or `last` modifier with the `baseline` value. If a box does not belong to a shared alignment context, then the fallback alignment is used. The fallback alignment is also used to align the baseline-sharing group within its {{glossary("alignment container")}}.
 
 - `baseline`
-
   - : Computes to `first baseline`, as defined below.
 
 - `first baseline`
-
   - : Aligns the alignment baseline of the box's first baseline set with the corresponding baseline of its baseline-sharing group. The fallback alignment is `safe self-start` for self-alignment or `safe start` for content distribution.
 
 - `last baseline`

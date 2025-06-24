@@ -14,34 +14,26 @@ Enables extensions to get, set, and remove cookies, and be notified when they ch
 For an extension to use this API, it must specify the `"cookies"` [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) in its [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file and [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for any sites whose cookies it wants to access. The extension can get, set, or remove any cookies that can be read, written, or deleted by a URL matching the host permissions. For example:
 
 - `http://*.example.com/`
-
   - : An extension with this host permission can:
-
     - Read a non-secure cookie for `www.example.com` with any path.
     - Write a secure or non-secure cookie for `www.example.com` with any path.
 
     It can _not_:
-
     - Read a secure cookie for `www.example.com`.
 
 - `http://www.example.com/`
-
   - : An extension with this host permission can:
-
     - Read a non-secure cookie for `www.example.com` with any path.
     - Read a non-secure cookie for `.example.com` with any path.
     - Write a secure or non-secure cookie for `www.example.com` with any path.
     - Write a secure or non-secure cookie for `.example.com` with any path.
 
     It can _not_:
-
     - Read or write a cookie for `foo.example.com`.
     - Read or write a cookie for `foo.www.example.com`.
 
 - `*://*.example.com/`
-
   - : An extension with this host permission can:
-
     - Read or write a secure or non-secure cookie for `www.example.com` with any path.
 
 ## Tracking protection

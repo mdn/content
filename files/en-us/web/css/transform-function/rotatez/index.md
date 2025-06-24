@@ -40,7 +40,8 @@ transform: rotateZ(3.142rad);
 
 The axis of rotation passes through an origin, defined by the {{ cssxref("transform-origin") }} CSS property.
 
-> **Note:** `rotateZ(a)` is equivalent to
+> [!NOTE]
+> `rotateZ(a)` is equivalent to
 > `rotate(a)` or
 > `rotate3d(0, 0, 1, a)`.
 

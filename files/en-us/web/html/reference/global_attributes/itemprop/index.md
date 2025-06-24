@@ -277,13 +277,11 @@ A property is an unordered set of unique tokens that are case-sensitive and repr
 **Tokens** are either strings or URL's. An item is called a **typed item** if it is a URL. Otherwise, it is a string. Strings cannot contain a period or a colon (see below).
 
 1. If the item is a typed item it must be either:
-
    1. A defined property name, or
    2. A valid URL, which refers to the vocabulary definition, or
    3. A valid URL that is used as a proprietary item property name (i.e., one not defined in a public specification), or
 
 2. If the item is not a typed item it must be:
-
    1. A string that contains no `.` (U+002E FULL STOP) characters and no `:` characters (U+003A COLON) and is used as a proprietary item property name (again, one not defined in a public specification).
 
 > [!NOTE]
@@ -294,35 +292,27 @@ A property is an unordered set of unique tokens that are case-sensitive and repr
 The property value of a name-value pair is as given for the first matching case in the following list:
 
 - If the element has an `itemscope` attribute
-
   - The value is the **item** created by the element
 
 - If the element is a `meta` element
-
   - The value is the value of the element's `content` attribute
 
 - If the element is an `audio`, `embed`, `iframe`, `img`, `source`, `track`, or `video` element
-
   - The value is the resulting URL string that results from parsing the value of the element's src attribute relative to the node document (part of the [Microdata DOM API](/en-US/docs/Web/HTML/Guides/Microdata)) of the element at the time the attribute is set
 
 - If the element is an `a`, `area`, or `link` element
-
   - The value is the resulting URL string that results from parsing the value of the element's href attribute relative to the node document of the element at the time the attribute is set
 
 - If the element is an `object` element
-
   - The value is the resulting URL string that results from parsing the value of the element's data attribute relative to the node document of the element at the time the attribute is set
 
 - If the element is a `data` element
-
   - The value is the value of the element's value attribute
 
 - If the element is a `meter` element
-
   - The value is the value of the element's `value` attribute
 
 - If the element is a `time` element
-
   - The value is the element's `datetime` value
 
 Otherwise
@@ -432,7 +422,6 @@ This example uses microdata attributes to represent the following structured dat
 
 - [Other different global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes)
 - Other microdata related global attributes:
-
   - [`itemid`](/en-US/docs/Web/HTML/Reference/Global_attributes/itemid)
   - [`itemref`](/en-US/docs/Web/HTML/Reference/Global_attributes/itemref)
   - [`itemscope`](/en-US/docs/Web/HTML/Reference/Global_attributes/itemscope)

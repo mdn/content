@@ -18,7 +18,6 @@ events.Event.removeListener(listener)
 ### Parameters
 
 - `listener`
-
   - : `function`. The listener to remove.
 
 ## Browser compatibility

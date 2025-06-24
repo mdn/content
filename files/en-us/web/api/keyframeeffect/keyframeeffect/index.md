@@ -27,9 +27,7 @@ The multi-argument constructor (see above) creates a completely new {{domxref("K
 - `keyframes`
   - : A [keyframes object](/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats) or `null`.
 - `options` {{optional_inline}}
-
   - : Either an integer representing the animation's duration (in milliseconds), or an object containing one or more of the following:
-
     - `delay` {{optional_inline}}
       - : The number of milliseconds to delay the start of the animation. Defaults to 0.
     - `direction` {{optional_inline}}
@@ -47,11 +45,9 @@ The multi-argument constructor (see above) creates a completely new {{domxref("K
     - `iterations` {{optional_inline}}
       - : The number of times the animation should repeat. Defaults to `1`, and can also take a value of {{jsxref("Infinity")}} to make it repeat for as long as the element exists.
     - `composite` {{optional_inline}}
-
       - : Determines how values are combined between this animation and other, separate
         animations that do not specify their own specific composite operation. Defaults to
         `replace`.
-
         - `add` dictates an additive effect, where each successive iteration
           builds on the last. For instance with `transform`, a
           `translateX(-200px)` would not override an earlier

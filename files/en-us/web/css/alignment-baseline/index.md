@@ -50,31 +50,24 @@ alignment-baseline: unset;
 ### Values
 
 - `baseline`
-
   - : Use the {{cssxref("dominant-baseline")}} value of the parent.
 
 - `alphabetic`
-
   - : Used in writing Latin, Cyrillic, Greek, and many other scripts; matches the box's alphabetic baseline to that of its parent, corresponding to the bottom of most, but not all characters.
 
 - `central`
-
   - : Matches the box's central baseline to the central baseline of its parent, corresponding to the ideographic central baseline, halfway between the ideographic-under and ideographic-over baselines.
 
 - `ideographic`
-
   - : Matches the box's ideographic character face under-side baseline to that of its parent, with the derived baseline-table constructed using the ideographic baseline-table in the font.
 
 - `mathematical`
-
   - : Matches the box's mathematical baseline to that of its parent, corresponding to the center baseline around which mathematical characters are designed.
 
 - `middle`
-
   - : Aligns the vertical midpoint of the box with the baseline of the parent box plus half the x-height of the parent. Uses the x-middle baselines; except under [`text-orientation: upright;`](/en-US/docs/Web/CSS/text-orientation) (where the alphabetic and x-height baselines are essentially meaningless), in which case it uses the `central` baseline instead.
 
 - `text-bottom`
-
   - : Matches the bottom of the box to the top of the parent's content area, using the line-under edge of an inline's content box.
 
 - `text-top`

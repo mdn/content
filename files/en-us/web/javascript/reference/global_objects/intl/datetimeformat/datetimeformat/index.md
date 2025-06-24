@@ -47,16 +47,15 @@ Intl.DateTimeFormat(locales)
 Intl.DateTimeFormat(locales, options)
 ```
 
-> **Note:** `Intl.DateTimeFormat()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `Intl.DateTimeFormat` instance. However, there's a special behavior when it's called without `new` and the `this` value is another `Intl.DateTimeFormat` instance; see [Return value](#return_value).
+> [!NOTE]
+> `Intl.DateTimeFormat()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `Intl.DateTimeFormat` instance. However, there's a special behavior when it's called without `new` and the `this` value is another `Intl.DateTimeFormat` instance; see [Return value](#return_value).
 
 ### Parameters
 
 - `locales` {{optional_inline}}
-
   - : A string with a BCP 47 language tag or an {{jsxref("Intl.Locale")}} instance, or an array of such locale identifiers. The runtime's default locale is used when `undefined` is passed or when none of the specified locale identifiers is supported. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 
     The following Unicode extension keys are allowed:
-
     - `nu`
       - : See [`numberingSystem`](#numberingsystem).
     - `ca`
@@ -67,7 +66,6 @@ Intl.DateTimeFormat(locales, options)
     These keys can also be set with `options` (as listed below). When both are set, the `options` property takes precedence.
 
 - `options` {{optional_inline}}
-
   - : An object. For ease of reading, the property list is broken into sections based on their purposes, including [locale options](#locale_options), [date-time component options](#date-time_component_options), and [style shortcuts](#style_shortcuts).
 
 #### Locale options
@@ -120,7 +118,6 @@ Intl.DateTimeFormat(locales, options)
 - `day`
   - : The representation of the day. Possible values are `"numeric"` and `"2-digit"`.
 - `dayPeriod`
-
   - : The formatting style used for day periods like "in the morning", "am", "noon", "n" etc. Possible values are
     `"narrow"`, `"short"`, and `"long"`.
 
@@ -136,9 +133,7 @@ Intl.DateTimeFormat(locales, options)
 - `fractionalSecondDigits`
   - : The number of digits used to represent fractions of a second (any additional digits are truncated). Possible values are from `1` to `3`.
 - `timeZoneName`
-
   - : The localized representation of the time zone name. Possible values are:
-
     - `"long"`
       - : Long localized form (e.g., `Pacific Standard Time`, `Nordamerikanische Westküsten-Normalzeit`)
     - `"short"`
@@ -189,7 +184,8 @@ The date-time component styles requested might not directly correspond to a vali
 - `timeStyle`
   - : The [time formatting style](https://cldr.unicode.org/translation/date-time/date-time-patterns#h.588vo3awdscu) to use. Possible values are `"full"`, `"long"`, `"medium"`, and `"short"`. It expands to styles for `hour`, `minute`, `second`, and `timeZoneName`, with the exact combination of values depending on the locale.
 
-> **Note:** `dateStyle` and `timeStyle` can be used with each other, but not with other date-time component options (e.g., `weekday`, `hour`, `month`, etc.).
+> [!NOTE]
+> `dateStyle` and `timeStyle` can be used with each other, but not with other date-time component options (e.g., `weekday`, `hour`, `month`, etc.).
 
 You can format different object types depending on which of the style shortcut options you include:
 
