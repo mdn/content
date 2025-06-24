@@ -3,7 +3,7 @@ title: Integrity-Policy-Report-Only header
 short-title: Integrity-Policy-Report-Only
 slug: Web/HTTP/Reference/Headers/Integrity-Policy-Report-Only
 page-type: http-header
-browser-compat: http.headers.IntegrityPolicyReportOnly
+browser-compat: http.headers.Integrity-Policy-Report-Only
 ---
 
 {{HTTPSidebar}}
@@ -13,6 +13,7 @@ The HTTP **`Integrity-Policy-Report-Only`** response header allows website admin
 Reports may be generated for requests on specified [request destinations](/en-US/docs/Web/API/Request/destination) that omit integrity metadata, or that are made in [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode.
 For reports to be sent to a reporting endpoint, the `Integrity-Policy-Report-Only` header must specify a valid reporting endpoint name that matches an endpoint declared using the {{HTTPHeader("Reporting-Endpoints")}} header.
 Reports are generated using the [Reporting API](/en-US/docs/Web/API/Reporting_API), and may also be observed in the page for which the integrity policy is being reported, using a [ReportingObserver](/en-US/docs/Web/API/ReportingObserver).
+The format of the report body is given by the {{domxref("IntegrityViolationReportBody")}} dictionary (a JSON-serialized form of this body is sent in POSTs to reporting server endpoints).
 
 The header allow developers to test [integrity policies](/en-US/docs/Web/Security/Subresource_Integrity#integrity_policy) and fix any content issues before eventually deploying an {{HTTPHeader("Integrity-Policy")}} header to enforce the policy.
 

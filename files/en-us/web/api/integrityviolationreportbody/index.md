@@ -4,7 +4,7 @@ slug: Web/API/IntegrityViolationReportBody
 page-type: web-api-interface
 status:
   - experimental
-browser-compat: http.headers.IntegrityPolicy
+browser-compat: http.headers.Integrity-Policy
 spec-urls: https://w3c.github.io/webappsec-subresource-integrity/#report-violations
 ---
 

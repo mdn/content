@@ -3,7 +3,7 @@ title: Integrity-Policy header
 short-title: Integrity-Policy
 slug: Web/HTTP/Reference/Headers/Integrity-Policy
 page-type: http-header
-browser-compat: http.headers.IntegrityPolicy
+browser-compat: http.headers.Integrity-Policy
 ---
 
 {{HTTPSidebar}}
@@ -14,6 +14,7 @@ When set the user agent will block requests on specified [request destinations](
 
 Violation reports may also be sent to if the header includes a reporting endpoint name that matches an endpoint declared using the {{HTTPHeader("Reporting-Endpoints")}} header.
 Reports are generated using the [Reporting API](/en-US/docs/Web/API/Reporting_API), and may also be observed in the page for which the integrity policy is being enforced, using a [ReportingObserver](/en-US/docs/Web/API/ReportingObserver).
+The format of the report body is given by the {{domxref("IntegrityViolationReportBody")}} dictionary (a JSON-serialized form of this body is sent in POSTs to reporting server endpoints).
 
 This helps guard against content manipulation of fetched subresources.
 
