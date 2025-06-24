@@ -39,10 +39,8 @@ The HTML specification defines the following set of `http-equiv` values:
 - `default-style`
   - : Sets the name of the default [CSS style sheet](/en-US/docs/Web/CSS) set.
 - `refresh`
-
   - : Equivalent to the {{httpheader("Refresh")}} HTTP header.
     This instruction specifies:
-
     - The number of seconds until the page should be reloaded if the `content` attribute is a non-negative integer.
     - The number of seconds until the page should redirect to another URL if the `content` attribute is a non-negative integer followed by `;url=` and a valid URL.
 
