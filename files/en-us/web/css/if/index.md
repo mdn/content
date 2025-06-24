@@ -310,7 +310,7 @@ You can also use the `if()` function to set just one component in a multi-compon
 ```css-nolint
 border: 3px solid
   if(
-    supports(color: lch(77.7% 0 0)): 3px solid lch(77.7% 0 0) ; else: #c0c0c0
+    supports(color: lch(77.7% 0 0)): 3px solid lch(77.7% 0 0); else: #c0c0c0;
   );
 ```
 
