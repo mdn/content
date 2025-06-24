@@ -12,7 +12,7 @@ The **`selectedCandidatePairChanges`** property of the {{domxref("RTCTransportSt
 
 ## Value
 
-A positive integer that is initially zero and increases whenever a candidate pair selected or lost.
+A positive integer that is initially zero and increases whenever a candidate pair is selected or lost.
 
 ## Specifications
 
