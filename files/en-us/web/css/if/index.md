@@ -285,7 +285,7 @@ Feature queries are really useful inside `if()` statements when you need to vary
 
 ### Providing fallback values
 
-`if()` statements do not gracefully degrade; explicit fallbacks need to be provided for non-supporting browsers.
+The `if()` statement does not gracefully degrade; an explicit fallback needs to be provided for non-supporting browsers.
 
 For example, in this case we provide a static {{cssxref("padding")}} value for browsers that don't support `if()`. Browsers that do support `if()` will override the first declaration with the second one, which sets a padding value dynamically depending on whether the `--size: 2xl` custom property is set.
 
