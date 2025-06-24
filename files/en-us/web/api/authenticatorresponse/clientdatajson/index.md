@@ -46,7 +46,8 @@ After the `clientDataJSON` object is converted from an
     Should this property be absent, it would indicate that the client does not support
     token binding.
 
-    > **Note:** `tokenBinding` is deprecated as of Level 3 of the spec, but the field is reserved so that it won't be reused for a different purpose.
+    > [!NOTE]
+    > `tokenBinding` is deprecated as of Level 3 of the spec, but the field is reserved so that it won't be reused for a different purpose.
 
 - `topOrigin` {{optional_inline}}
   - : Contains the fully qualified top-level origin of the relying party. It is set only if it `crossOrigin` is `true`.

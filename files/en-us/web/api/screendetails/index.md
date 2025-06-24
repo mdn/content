@@ -13,7 +13,8 @@ The **`ScreenDetails`** interface of the [Window Management API](/en-US/docs/Web
 
 This information is accessed via the {{domxref("Window.getScreenDetails()")}} method.
 
-> **Note:** `ScreenDetails` is a live object, meaning that it updates as the available screens change. You can therefore keep querying the same object to get updated values, rather than repeatedly calling `getScreenDetails()`.
+> [!NOTE]
+> `ScreenDetails` is a live object, meaning that it updates as the available screens change. You can therefore keep querying the same object to get updated values, rather than repeatedly calling `getScreenDetails()`.
 
 {{InheritanceDiagram}}
 
@@ -27,7 +28,8 @@ _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 - {{domxref("ScreenDetails.screens", "screens")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : An array of {{domxref("ScreenDetailed")}} objects, each one representing detailed information about one specific screen available to the user's device.
 
-    > **Note:** `screens` only includes "extended" displays, not those that mirror another display.
+    > [!NOTE]
+    > `screens` only includes "extended" displays, not those that mirror another display.
 
 ## Events
 

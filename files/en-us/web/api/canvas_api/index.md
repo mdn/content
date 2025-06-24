@@ -55,7 +55,8 @@ ctx.fillRect(10, 10, 150, 100);
 > [!NOTE]
 > The interfaces related to the `WebGLRenderingContext` are referenced under [WebGL](/en-US/docs/Web/API/WebGL_API).
 
-> **Note:** {{domxref("OffscreenCanvas")}} is also available in web workers.
+> [!NOTE]
+> {{domxref("OffscreenCanvas")}} is also available in web workers.
 
 {{domxref("CanvasCaptureMediaStreamTrack")}} is a related interface.
 

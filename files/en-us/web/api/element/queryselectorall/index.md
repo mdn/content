@@ -122,7 +122,8 @@ highlightedItems.forEach((userItem) => {
 });
 ```
 
-> **Note:** `NodeList` is not a genuine array, that is to say it doesn't
+> [!NOTE]
+> `NodeList` is not a genuine array, that is to say it doesn't
 > have array methods like `slice`, `some`, `map`, etc. To convert it into an array, try
 > `Array.from(nodeList)`.
 

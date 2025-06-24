@@ -40,7 +40,8 @@ _This interface doesn't implement any specific methods, but inherits methods fro
 
 To dynamically create an SVG style element (`SVGStyleElement`), you need to use [`Document.createElementNS()`](/en-US/docs/Web/API/Document/createElementNS), specifying a `style` element in the SVG namespace.
 
-> **Note:** [`Document.createElement()`](/en-US/docs/Web/API/Document/createElement) can't be used to create SVG style elements (it returns an [`HTMLStyleElement`](/en-US/docs/Web/API/HTMLStyleElement)).
+> [!NOTE]
+> [`Document.createElement()`](/en-US/docs/Web/API/Document/createElement) can't be used to create SVG style elements (it returns an [`HTMLStyleElement`](/en-US/docs/Web/API/HTMLStyleElement)).
 
 Given the following SVG element:
 

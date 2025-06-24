@@ -265,9 +265,11 @@ For example:
 }
 ```
 
-> **Note:** `"source_type"` is an automatically populated field available on the source's `"filter_data"`.
+> [!NOTE]
+> `"source_type"` is an automatically populated field available on the source's `"filter_data"`.
 
-> **Note:** `not_filters`, which filters with negation, is also supported.
+> [!NOTE]
+> `not_filters`, which filters with negation, is also supported.
 
 In this context, `filters` can be an object or an array of objects. When a list is specified, only one dictionary has to match for the trigger to be considered.
 

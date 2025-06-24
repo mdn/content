@@ -102,7 +102,8 @@ The `depthStencil` object can contain the following properties:
 - `stencilWriteMask` {{optional_inline}}
   - : A bitmask controlling which `depthStencilAttachment` stencil value bits are written to when performing stencil operations. If omitted, `stencilWriteMask` defaults to `0xFFFFFFFF`.
 
-> **Note:** `depthStencilAttachment` values are specified during {{domxref("GPUCommandEncoder.beginRenderPass()")}} calls, when the {{domxref("GPURenderPipeline")}} is actually used to perform a render pass.
+> [!NOTE]
+> `depthStencilAttachment` values are specified during {{domxref("GPUCommandEncoder.beginRenderPass()")}} calls, when the {{domxref("GPURenderPipeline")}} is actually used to perform a render pass.
 
 ### `fragment` object structure
 
@@ -219,7 +220,8 @@ The `multisample` object can contain the following properties:
 - `mask` {{optional_inline}}
   - : A bitmask that determines which samples are written to. If omitted, `mask` defaults to `0xFFFFFFFF`.
 
-> **Note:** `colorAttachment` and `depthStencilAttachment` values are specified during {{domxref("GPUCommandEncoder.beginRenderPass()")}} calls, when the {{domxref("GPURenderPipeline")}} is actually used to perform a render pass.
+> [!NOTE]
+> `colorAttachment` and `depthStencilAttachment` values are specified during {{domxref("GPUCommandEncoder.beginRenderPass()")}} calls, when the {{domxref("GPURenderPipeline")}} is actually used to perform a render pass.
 
 ### `primitive` object structure
 

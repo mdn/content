@@ -47,7 +47,8 @@ new URL(url, base)
 
 Here are some examples of using the constructor.
 
-> **Note:** [Resolving relative references to a URL](/en-US/docs/Web/API/URL_API/Resolving_relative_references) provides additional examples demonstrating how different `url` and `base` values are resolved to a final absolute URL.
+> [!NOTE]
+> [Resolving relative references to a URL](/en-US/docs/Web/API/URL_API/Resolving_relative_references) provides additional examples demonstrating how different `url` and `base` values are resolved to a final absolute URL.
 
 ```js
 // Base URLs:

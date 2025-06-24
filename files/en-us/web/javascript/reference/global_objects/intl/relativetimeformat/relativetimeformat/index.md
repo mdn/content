@@ -18,7 +18,8 @@ new Intl.RelativeTimeFormat(locales)
 new Intl.RelativeTimeFormat(locales, options)
 ```
 
-> **Note:** `Intl.RelativeTimeFormat()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Intl.RelativeTimeFormat()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

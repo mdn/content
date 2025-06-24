@@ -30,7 +30,8 @@ When considering whether to use `browser_style: true`, test your extension with 
 > [!WARNING]
 > When `browser_style: true` is included in your web extension's manifest, text selection in your extension's UI is disabled except in input controls. If this causes a problem, include `browser_style:false` instead.
 
-> **Note:** **Google Chrome** and **Opera** use `chrome_style` instead of `browser_style` in Manifest V2. So for cross-browser extensions you need to add both keys. `chrome_style` is not available in Manifest V3.
+> [!NOTE]
+> **Google Chrome** and **Opera** use `chrome_style` instead of `browser_style` in Manifest V2. So for cross-browser extensions you need to add both keys. `chrome_style` is not available in Manifest V3.
 
 In Firefox, the stylesheet can be seen at `chrome://browser/content/extension.css`. The extra stylesheet at `chrome://browser/content/extension-mac.css` is also included on macOS.
 

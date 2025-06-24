@@ -20,7 +20,8 @@ new Temporal.PlainDate(year, month, day)
 new Temporal.PlainDate(year, month, day, calendar)
 ```
 
-> **Note:** `Temporal.PlainDate()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Temporal.PlainDate()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

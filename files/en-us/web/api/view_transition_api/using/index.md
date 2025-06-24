@@ -297,7 +297,8 @@ figcaption {
 
 This works because, by default, `::view-transition-group()` transitions `width` and `height` between the old and new views with a smooth scale. We just needed to set a fixed `height` on both states to make it work.
 
-> **Note:** [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/) contains several other customization examples.
+> [!NOTE]
+> [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/) contains several other customization examples.
 
 ## Controlling view transitions with JavaScript
 

@@ -46,7 +46,8 @@ match(request, options)
 A {{jsxref("Promise")}} that resolves with the first {{domxref("BackgroundFetchRecord")}} that matches
 the request or {{jsxref("undefined")}} if no match is found.
 
-> **Note:** `BackgroundFetchRegistration.match()` is basically identical to
+> [!NOTE]
+> `BackgroundFetchRegistration.match()` is basically identical to
 > {{domxref("BackgroundFetchRegistration.matchAll()")}}, except that rather than resolving with an array of
 > all matching records, it resolves with the first matching record only.
 

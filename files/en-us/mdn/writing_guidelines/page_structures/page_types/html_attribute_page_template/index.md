@@ -10,7 +10,8 @@ HTML attributes fall into two categories: **element-specific attributes**, which
 Note that most element-specific attributes don't need standalone articles if the attribute list in the element reference is sufficient to describe its behavior.
 Only add an article if the attribute has enough nuance to deserve its own examples, or it is a global attribute.
 
-> **Note:** _Remove this whole explanatory note before publishing_
+> [!NOTE]
+> _Remove this whole explanatory note before publishing_
 >
 > ---
 >

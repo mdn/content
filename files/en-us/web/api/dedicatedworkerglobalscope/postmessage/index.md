@@ -62,7 +62,8 @@ In the main script, `onmessage` would have to be called on a `Worker object`, wh
 
 For a full example, see our [Basic dedicated worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker) ([run dedicated worker](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)).
 
-> **Note:** `postMessage()` can only send a single object at once. As seen above, if you want to pass multiple values you can send an array.
+> [!NOTE]
+> `postMessage()` can only send a single object at once. As seen above, if you want to pass multiple values you can send an array.
 
 ## Specifications
 

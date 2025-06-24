@@ -19,7 +19,8 @@ The following types of timelines can be set via `animation-timeline`:
   - A _named view progress timeline_ is one where the subject is explicitly named using the {{cssxref("view-timeline-name")}} property (or the {{cssxref("view-timeline")}} shorthand property). The name is then linked to the element to animate by specifying it as the value of that element's `animation-timeline` property. This is a key point — with named view progress timelines, the element to animate does not have to be the same as the subject.
   - An _anonymous view progress timeline_ is one where the subject is given a {{cssxref("animation-timeline/view", "view()")}} function as an `animation-timeline` value, causing it to be animated based on its position inside its nearest parent scroller.
 
-> **Note:** `animation-timeline` is included in the {{cssxref("animation")}} shorthand as a reset-only value. This means that including `animation` resets a previously-declared `animation-timeline` value to `auto`, but a specific value cannot be set via `animation`. When creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations), you need to declare `animation-timeline` after declaring any `animation` shorthand for it to take effect.
+> [!NOTE]
+> `animation-timeline` is included in the {{cssxref("animation")}} shorthand as a reset-only value. This means that including `animation` resets a previously-declared `animation-timeline` value to `auto`, but a specific value cannot be set via `animation`. When creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations), you need to declare `animation-timeline` after declaring any `animation` shorthand for it to take effect.
 
 <!-- {{EmbedInteractiveExample("pages/css/animation-name.html")}} -->
 
@@ -183,7 +184,8 @@ The HTML for the example is shown below.
 The CSS below defines a square that rotates in alternate directions according to the timeline provided by the `animation-timeline` property.
 In this case, the timeline is provided by `scroll(block nearest)`, which means that it will select the scrollbar in the block direction of the nearest ancestor element that has scrollbars; in this case the vertical scrollbar of the "container" element.
 
-> **Note:** `block` and `nearest` are actually the default parameter values, so we could have used just `scroll()`.
+> [!NOTE]
+> `block` and `nearest` are actually the default parameter values, so we could have used just `scroll()`.
 
 ```css
 #square {

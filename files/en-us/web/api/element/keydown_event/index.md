@@ -101,7 +101,8 @@ eventTarget.addEventListener("keydown", (event) => {
 });
 ```
 
-> **Note:** `compositionstart` may fire _after_ `keydown` when typing the first character that opens up the IME, and `compositionend` may fire _before_ `keydown` when typing the last character that closes the IME. In these cases, `isComposing` is false even when the event is part of composition. However, {{domxref("KeyboardEvent.keyCode")}} is still `229` in these cases, so it's still advisable to check `keyCode` as well, although it's deprecated.
+> [!NOTE]
+> `compositionstart` may fire _after_ `keydown` when typing the first character that opens up the IME, and `compositionend` may fire _before_ `keydown` when typing the last character that closes the IME. In these cases, `isComposing` is false even when the event is part of composition. However, {{domxref("KeyboardEvent.keyCode")}} is still `229` in these cases, so it's still advisable to check `keyCode` as well, although it's deprecated.
 
 ## Specifications
 

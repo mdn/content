@@ -189,7 +189,8 @@ To use each plugin, you need to first install it via npm, then require any depen
    npm install --save-dev gulp-htmltidy
    ```
 
-   > **Note:** `--save-dev` adds the package as a dependency to your project. If you look in your project's `package.json` file, you'll see an entry for it in the `devDependencies` property.
+   > [!NOTE]
+   > `--save-dev` adds the package as a dependency to your project. If you look in your project's `package.json` file, you'll see an entry for it in the `devDependencies` property.
 
 2. Add the following dependency to `gulpfile.mjs`:
 

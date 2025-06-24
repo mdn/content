@@ -15,7 +15,8 @@ The following types are used to specify a constraint for a property. They allow 
 
 To learn more about how constraints work, see [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints).
 
-> **Note:** `min` and `exact` values are not permitted in constraints used in {{domxref("MediaDevices.getDisplayMedia()")}} calls — they produce a `TypeError` — but they are allowed in constraints used in {{domxref("MediaStreamTrack.applyConstraints()")}} calls.
+> [!NOTE]
+> `min` and `exact` values are not permitted in constraints used in {{domxref("MediaDevices.getDisplayMedia()")}} calls — they produce a `TypeError` — but they are allowed in constraints used in {{domxref("MediaStreamTrack.applyConstraints()")}} calls.
 
 ### ConstrainBoolean
 

@@ -80,7 +80,8 @@ In case of an error, for example if a property is non-writable, a
 {{jsxref("TypeError")}} is raised, and the `target` object is
 changed if any properties are added before the error is raised.
 
-> **Note:** `Object.assign()` does not throw on [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}} sources.
+> [!NOTE]
+> `Object.assign()` does not throw on [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}} sources.
 
 ## Examples
 
