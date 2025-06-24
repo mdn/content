@@ -305,7 +305,7 @@ border: if(
 );
 ```
 
-You can also use the `if()` function to set just one component in a multi-component shorthand. Here we use the `if()` function to  determine the {{cssxref("border-color")}} component only:
+You can also use the `if()` function to set just one component in a multi-component shorthand. Here we use the `if()` function to determine the {{cssxref("border-color")}} component only:
 
 ```css-nolint
 border: 3px solid
