@@ -180,11 +180,6 @@ Writers can use the [GFM alerts syntax](https://docs.github.com/en/get-started/w
 
 Notes and warnings will add a localized **Note:** or **Warning:** to the beginning of the output, while callouts will not. This makes callouts a good choice when an author wants to provide a custom title.
 
-> [!WARNING]
-> In the older MDN syntax, the type was localized and added to the first paragraph in bold text, i.e., `**Note:** Foo bar` instead of `[!NOTE] ⏎ Foo bar`.
->
-> The older syntax is still supported for migration purposes. Avoid using it in new documentation.
-
 Multiple lines are produced by an empty block quote line in the same way as normal paragraphs. Further, multiple lines without a space are also treated like normal Markdown lines, and concatenated.
 
 The blockquote can contain code blocks or other block elements.
