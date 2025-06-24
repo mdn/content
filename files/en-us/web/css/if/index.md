@@ -14,53 +14,58 @@ The **`if()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Val
 ## Syntax
 
 ```css-nolint
-/* Style query condition */
-background-color: if(style(--scheme: dark): black;);
-padding: if(style(--size: 2xl): 1em; else: 0.25em;);
+/* Single <if-test> */
+if(style(--scheme: dark): #eee;)
+if(media(print): #000;)
+if(media(width > 700px): 0 auto;)
+if(supports(color: lch(7.1% 60.23 300.16)): lch(7.1% 60.23 300.16);)
 
-/* Media query condition */
-background: if(media(print): white; else: black;);
-margin: if(media(max-width: 700px): 0 auto ; else: 20px auto 0;);
-
-/* Feature query condition */
-color: if(
+/* <if-test> with else */
+if(style(--size: 2xl): 1em; else: 0.25em;)
+if(media(print): white; else: black;)
+if(media(width < 700px): 0 auto ; else: 20px auto)
+if(
   supports(color: lch(7.1% 60.23 300.16)): lch(7.1% 60.23 300.16);
   else: #03045e;
-);
-border: if(
+)
+if(
   supports(color: lch(77.7% 0 0)): 3px solid lch(77.7% 0 0);
   else: 3px solid #c0c0c0;
-);
+)
 
-/* Multiple tests */
-background-image: if(
-  style(--scheme: ice): linear-gradient(to left, #caf0f8, white, #caf0f8);
-  style(--scheme: fire): linear-gradient(to left, #ffc971, white, #ffc971);
+/* Multiple <if-test>s */
+if(
+  style(--scheme: ice): linear-gradient(#caf0f8, white, #caf0f8);
+  style(--scheme: fire): linear-gradient(#ffc971, white, #ffc971);
   else: none;
-);
+)
 
-/* Partial value */
-border: 3px solid if(
-  supports(color: lch(77.7% 0 0)): lch(77.7% 0 0);
-  else: #c0c0c0;
-);
+/* <if-test> within a shorthand */
+3px yellow if(
+  style(--color: green): dashed;
+  style(--color: yellow): inset;
+  else: solid;
+)
 ```
 
 ### Parameters
 
-The `if()` function's syntax is as follows:
+The parameter is a semi-colon–separated list of `<if-branch>`es. Each `<if-branch>` is an `<if-condition>` followed by a colon and a `<value>`:
 
 ```plain
-if([[<if-condition> : <value>;] | [else : <value>;]]*)
+<if-branch> = <if-condition> : <value>;
 ```
 
-The parameters are:
+- `<if-condition>`
 
-- `<if-test>`
-  - : A [style query](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#container_style_queries), [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), or [feature query](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries).
+  - : An `<if-test>` or the `else` keyword.
 
-- `else`
-  - : A keyword representing an `<if-condition>` that always evaluates to true.
+    - `<if-test>`
+
+      - : A [style query](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#container_style_queries), [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), or [feature query](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries).
+
+    - `else`
+      - : A keyword representing an `<if-condition>` that always evaluates to true.
 
 - `<value>`
   - : A property value.
@@ -79,15 +84,15 @@ The return value is calculated as follows:
 
 1. The `<if-condition>` expressions are evaluated, in the order they appear in the function.
 2. The first `<if-condition>` that evaluates to `true` has its associated `<value>` returned.
-3. If none of the conditions evaluate to true, {{glossary("guaranteed_invalid_value", "guaranteed-invalid")}} is returned, in which case the property retains its initial value.
+3. If no `<if-condition>` evaluates to `true`, the function returns a {{glossary("guaranteed_invalid_value", "&lt;guaranteed-invalid&gt:")}}. This behaves as invalid or `false` if the `if()` function is used in a value statement that has a fallback, such as a [custom property](/en-US/docs/Web/CSS/--*) or an {{cssxref("anchor()")}} function.
 
 For example:
 
 ```css-nolint
 div {
   background-image: if(
-    style(--scheme: ice): linear-gradient(to left, #caf0f8, white, #caf0f8);
-    style(--scheme: fire): linear-gradient(to left, #ffc971, white, #ffc971);
+    style(--scheme: ice): linear-gradient(#caf0f8, white, #caf0f8);
+    style(--scheme: fire): linear-gradient(#ffc971, white, #ffc971);
     else: none;
   );
 }
@@ -96,7 +101,7 @@ div {
 In this case, we are setting a different {{cssxref("background-image")}} {{cssxref("linear-gradient()")}} value on {{htmlelement("div")}} elements depending on whether a `--scheme` [custom property](/en-US/docs/Web/CSS/--*) is set to `ice` or `fire`. If neither value is set, the `else` value comes into play, and the `background-image` property is set to `none`.
 
 > [!NOTE]
-> Each condition must be separated from its associated value with a colon, and each `<if-condition> : <value>` pair must be separated with a semi-colon.
+> Each condition must be separated from its associated value with a colon, and each `<if-condition> : <value>` pair must be separated with a semi-colon. The semi-colon is optional for the last `<if-condition> : <value>` pair.
 
 > [!WARNING]
 > There must be no space between the `if` and the opening parenthesis (`(`). If there is, the whole declaration is invalid.
@@ -107,32 +112,26 @@ If a single `<if-condition>` or `<value>` is invalid, it does not invalidate the
 
 You can include multiple `else : <value>` pairs inside an `if()` function, in any position. However, in most cases, a single `else : <value>` pair at the end of the semi-colon-separated list is used to provide the default value that is always returned if none of the `<if-test>`s evaluate to true.
 
-If you include an `else : <value>` pair before any `<if-test> : <value>` pairs, the later conditions are not evaluated because the `else` always evaluates to `true`. The following `if()` always returns `none`:
+If you include an `else : <value>` pair before any `<if-test> : <value>` pairs, the later conditions are not evaluated because the `else` always evaluates to `true`. The following `if()` therefore always returns `none`, and the two `<if-test> : <value>` pairs are never evaluated:
 
 ```css-nolint
 div {
   background-image: if(
     else: none;
-    /* Never considered */
-    style(--scheme: ice): linear-gradient(to left, #caf0f8, white, #caf0f8);
-    /* Never considered */
-    style(--scheme: fire): linear-gradient(to left, #ffc971, white, #ffc971)
+    style(--scheme: ice): linear-gradient(#caf0f8, white, #caf0f8);
+    style(--scheme: fire): linear-gradient(#ffc971, white, #ffc971)
   );
 }
 ```
 
-One circumstance in which you might want to put an `else : <value>` in a position other than the end of the values list is when a value is not behaving as expected, and you are trying to debug it. For example:
+One circumstance in which you might want to put an `else : <value>` in a position other than the end of the values list is when a value is not behaving as expected, and you are trying to debug it. In the following example, we are trying to work out whether the first `<if-test> : <value>` pair is working properly. If it isn't, the `else : <value>` pair returns a value of `url("debug.png")` to display an image indicating that the first `<if-test> : <value>` pair needs fixing. The last two `<if-test> : <value>` pairs are again never evaluated.
 
 ```css-nolint
 div {
   background-image: if(
-    /* Is this one not working? */
-    style(--scheme: ice): linear-gradient(to left, #caf0f8, white, #caf0f8);
-    /* Not working indicator image */
+    style(--scheme: ice): linear-gradient(#caf0f8, white, #caf0f8);
     else: url("debug.png");
-    /* Never considered */
-    style(--scheme: fire): linear-gradient(to left, #ffc971, white, #ffc971);
-    /* Never considered */
+    style(--scheme: fire): linear-gradient(#ffc971, white, #ffc971);
     else: none;
   );
 }
@@ -153,18 +152,18 @@ An `<if-test>` accepts one of three query types. This section looks at each one 
 
 #### Style queries
 
-A [container style query](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#container_style_queries) `<if-test>` allows you to test whether a particular property value is set on an element, and apply a value to a different property as a result. We walked through several style query examples earlier on; let's look at another example:
+A [style query](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#container_style_queries) `<if-test>` allows you to test whether a particular property value is set on an element, and apply a value to a different property as a result. We walked through several style query examples earlier on; let's look at another example:
 
 ```css-nolint
 background-image: if(
-  style(--scheme: ice): linear-gradient(to left, #caf0f8, white, #caf0f8);
+  style(--scheme: ice): linear-gradient(#caf0f8, white, #caf0f8);
   else: none;
 );
 ```
 
 If the `--scheme` custom property is set to a value of `ice` on the same element, the provided `linear-gradient()` value is returned. If not, then `none` is returned.
 
-Using style queries inside `if()` statements has an advantage over using style queries via {{cssxref("@container")}} — you can target an element with styles directly, based on whether a custom property is set on it, rather than having to check set styles on a container parent element.
+Using style queries inside `if()` statements has an advantage over {{cssxref("@container")}} queries — you can target an element with styles directly, based on whether a custom property is set on it, rather than having to check set styles on a container parent element.
 
 You can also use `and`, `or`, or `not` logic inside style queries. For example:
 
@@ -182,7 +181,7 @@ background-color: if(
 );
 ```
 
-`@container` does have some advantages — you can only set single property values at a time with `if()`, whereas `@container` queries can be used to conditionally apply whole sets of rules. The two approaches are complementary, and have different uses.
+A `@container` query does have some advantages — you can only set single property values at a time with `if()` style queries, whereas `@container` queries can be used to conditionally apply whole sets of rules. The two approaches are complementary, and have different uses.
 
 Note that container style queries currently don't support regular CSS properties, just CSS custom properties. So for example, the following won't work:
 
@@ -194,9 +193,9 @@ if(
 
 #### Media queries
 
-[Media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) if conditions can be used to set a value for a property depending on whether a media query test returns true.
+A [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) `<if-test>` can be used to set a value for a property depending on whether a media query test returns true.
 
-You can use media types. For example, the following `<if-condition> : <value>` pair returns a value of `white` on print media, while the `else` clause causes `#eee` to be returned on non-print media.
+You can use media types. For example, the following `<if-test> : <value>` pair returns a value of `white` on print media, while the `else` clause causes `#eee` to be returned on non-print media.
 
 ```css-nolint
 background-color: if(
@@ -237,7 +236,7 @@ When you want to set multiple declarations or rules based on one media query, a 
 
 #### Feature queries
 
-[Feature query](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries) if conditions can be used to set a value for a property depending on whether the browser supports a particular property value.
+A [feature query](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries) `<if-test>` can be used to set a value for a property depending on whether the browser supports a particular property value.
 
 For example, the following returns an {{cssxref("color_value/lch()")}} color if `lch()` colors are supported, or an {{cssxref("color_value/rgb()")}} color if not:
 
@@ -248,12 +247,12 @@ color: if(
 )
 ```
 
-Selector support queries also work. The following will return a value of `0` if the browser supports the `h2 > p` selector, or `initial` if not:
+Selector support queries also work. The following will return a value of `1em` if the browser supports the {{cssxref(":buffering")}} pseudo-class, or `initial` if not:
 
 ```css-nolint
 margin-top: if(
-  supports(selector(h2 + p)): 0;
-  else: initial
+  supports(selector(:buffering)): 1em;
+  else: initial;
 )
 ```
 
@@ -261,24 +260,16 @@ You can also use `and`, `or`, or `not` logic inside feature queries. For example
 
 ```css-nolint
 margin-top: if(
-  supports((selector(h2 + p)) and (color: blue)): 0;
+  supports((selector(:buffering)) and (color: blue)): 1em;
 );
 
 margin-top: if(
-  supports((selector(h2 + p)) or (color: not-a-color)): 0;
+  supports((selector(:buffering)) or (color: not-a-color)): 1em;
 );
 
 margin-top: if(
-  supports(not selector(h2 + p)): 0;
+  supports(not selector(:buffering)): 1em;
 );
-```
-
-Interestingly, support queries for a property without a value don't work, for example:
-
-```css-nolint
-margin: if(
-  supports(justify-content): 0;
-)
 ```
 
 Feature queries are really useful inside `if()` statements when you need to vary a single property value based on support for a particular value or a separate property. When you want to set multiple declarations or rules based on one feature query, a regular {{cssxref("@supports")}} construct is better. The two approaches are complementary, and have different uses.
@@ -293,6 +284,9 @@ For example, in this case we provide a static {{cssxref("padding")}} value for b
 padding: 1em;
 padding: if(style(--size: 2xl): 1em; else: 0.25em);
 ```
+
+> [!NOTE]
+> Remember to include the `else` condition. In `if()`-supporting browsers, if no `else` value were included and `--size` was not equal to `2xl`, the padding would be set to `initial`.
 
 ### Whole and partial values
 
@@ -316,26 +310,35 @@ border: 3px solid
 
 ### Nesting if() functions
 
-Because an `if()` function can take the place of whole or partial property values, it is possible to nest multiple `if()` functions.
+Because an `if()` function can take the place of whole property values or individual components, it is possible to nest multiple `if()` functions, and nest `if()` functions inside other functions such as {{cssxref("calc()")}}.
 
 For example, in this declaration we are using `if()` to set a `color` property value depending on various conditions. We have an outer `if()` function that returns a particular value depending on whether the `--scheme` custom property is set to `ice` or `fire` (with an `else` value of `black` that is returned if neither of the conditions return true).
 
-However, the two if condition values are also `if()` functions. These inner `if()` functions return an `lch()` color value if the browser supports `lch()`, or a hex value otherwise.
+However, the two `<value>`s are also `if()` functions. These inner `if()` functions return a light color value if the user prefers a dark color scheme (determined using the [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media query), and a dark color value otherwise.
 
 ```css-nolint
 color: if(
   style(--scheme: ice):
     if(
-      supports(color: lch(7.1% 60.23 300.16)): lch(7.1% 60.23 300.16);
-      else: #03045e
+      media(prefers-color-scheme: dark): #caf0f8;
+      else: #03045e;
     );
   style(--scheme: fire):
     if(
-      supports(color: lch(21.38% 44.22 40.66)): lch(21.38% 44.22 40.66);
-      else: #621708
+      media(prefers-color-scheme: dark): #ffc971;
+      else: #621708;
     );
   else: black
 );
+```
+
+In the next example, we set the `width` property equal to a `calc()` function that subtracts `50px` from a percentage of the parent element's width. The percentage is represented by an `if()` function, which test whether the `--scheme: wide` custom property is set. If so, the percentage is `70%`, so the outer function resolves to `calc(70% - 50px)`. If not, the percentage is `50%`, so the outer function resolves to `calc(50% - 50px)`.
+
+```css-nolint
+width: calc(if(
+    style(--scheme: wide): 70%;
+    else: 50%;
+  ) - 50px);
 ```
 
 ## Formal syntax
@@ -346,7 +349,7 @@ color: if(
 
 ### Basic `if()` usage
 
-In this example, we'll show basic usage of each of the three types of CSS if condition.
+In this example, we'll show basic usage of each of the three types of `<if-test>`.
 
 #### HTML
 
@@ -406,7 +409,7 @@ h2::before {
 }
 ```
 
-Finally, we target the `<h2>` element itself. We use a feature query if condition to test whether the browser supports `lch()` colors, and set the {{cssxref("color")}} property to an `lch()` color if so, or a hex equivalent if not.
+Finally, we target the `<h2>` element itself. We use a feature query `<if-test>` to test whether the browser supports `lch()` colors, and set the {{cssxref("color")}} property to an `lch()` color if so, or a hex equivalent if not.
 
 ```css-nolint live-sample___basic
 h2 {
@@ -482,7 +485,7 @@ selectElem.addEventListener("change", () => {
 
 ### CSS
 
-In our CSS, we start by giving the `<body>` element a {{cssxref("max-width")}} of `700px`. We then center it on the screen using `auto` {{cssxref("margin")}} values. However, we use an `if()` function with a media query if condition to set the value to `0 auto` if the viewport width is less than `700px`, and `20px auto 0` if it is wider. This means that on wide screens, we get a bit of margin at the top of the content, but it is removed on narrow screens, where it looks a bit weird.
+In our CSS, we start by giving the `<body>` element a {{cssxref("max-width")}} of `700px`. We then center it on the screen using `auto` {{cssxref("margin")}} values. However, we use an `if()` function with a media query `<if-test>` to set the top margin component inside the `margin` shorthand to `0` if the viewport width is less than `700px`, and `20px` if it is wider. This means that on wide screens, we get a bit of margin at the top of the content, but it is removed on narrow screens, where it looks a bit weird.
 
 ```css hidden live-sample___color-scheme
 * {
@@ -512,13 +515,13 @@ article h2 {
 body {
   max-width: 700px;
   margin: if(
-    media(width < 700px): 0 auto;
-    else: 20px auto 0;
-  );
+    media(width < 700px): 0;
+    else: 20px;
+  ) auto 0;
 }
 ```
 
-We then set the `--scheme` custom property to match the `<article>` element's `class` name. The class will be by our JavaScript when a new value is selected in our `<select>` element. You'll see the significance of the custom element value in the next CSS block.
+We then set the `--scheme` custom property to match the `<article>` element's `class` name. The class will set by our JavaScript when a new value is selected in our `<select>` element. You'll see the significance of the custom element value in the next CSS block.
 
 ```css live-sample___color-scheme
 .ice {
@@ -532,7 +535,7 @@ We then set the `--scheme` custom property to match the `<article>` element's `c
 
 Here we can start to see the real power of CSS `if()` functions combined with custom properties. We use `if()` functions to set our `--color1` and `--color2` custom properties to different color values depending on the value of the `--scheme` custom property. We then use the `--color1` and `--color2` values in our `<article>` element's {{cssxref("color")}}, {{cssxref("border")}}, and {{cssxref("background-image")}} properties, and our `<aside>` element's `color` and `background-color` properties.
 
-We are controlling our entire color scheme via custom properties, with different values set via `if() functions.`
+We are controlling our entire color scheme via custom properties, with different values set via `if()` functions.
 
 ```css-nolint live-sample___color-scheme
 article {
