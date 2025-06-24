@@ -19,7 +19,7 @@ using name1 = value1, name2 = value2, /* …, */ nameN = valueN;
 - `nameN`
   - : The name of the variable to declare. Each must be a legal JavaScript [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) and _not_ a [destructuring binding pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring).
 - `valueN`
-  - : Initial value of the variable. It can be any legal expression but its value must be either `null`, `undefined`, or an object with an `[Symbol.dispose]()` method.
+  - : Initial value of the variable. It can be any legal expression but its value must be either `null`, `undefined`, or an object with a `[Symbol.dispose]()` method.
 
 ## Description
 
@@ -128,7 +128,7 @@ function example() {
 }
 ```
 
-Here, we _alias_ a `const`-declared resource to a `using`-declared resource, so that the resource is only disposed when the callback is called once. You can also do the following, but it may be more error-prone in a more complex situation, combined with error handling:
+Here, we _alias_ a `const`-declared resource to a `using`-declared resource, so that the resource is only disposed after the callback is called; note that if it is never called then the resource will never be cleaned up. You can also do the following, but it may be more error-prone in a more complex situation, combined with error handling:
 
 ```js
 function example() {

@@ -112,7 +112,7 @@ You see how a seemingly benign task of calling `releaseLock` can quickly lead to
 
 ## The `using` and `await using` declarations
 
-The solution we have is two special kinds of variable declaration: {{jsxref("Statements/using", "using")}} and {{jsxref("Statements/await_using", "await using")}}. They are similar to `const`, but they automatically release the resource when the variable goes out of scope. Using the same example as above, we can rewrite it as:
+The solution we have is two special kinds of variable declaration: {{jsxref("Statements/using", "using")}} and {{jsxref("Statements/await_using", "await using")}}. They are similar to `const`, but they automatically release the resource when the variable goes out of scope as long as the resource is _disposable_. Using the same example as above, we can rewrite it as:
 
 ```js
 {
@@ -128,9 +128,9 @@ The solution we have is two special kinds of variable declaration: {{jsxref("Sta
 > [!NOTE]
 > At the time of writing, {{domxref("ReadableStreamDefaultReader")}} does not implement the disposable protocol. This is a hypothetical example.
 
-First, notice the extra braces around the code. This creates a new [block scope](/en-US/docs/Web/JavaScript/Reference/Statements/block) for the `using` declarations. Resources declared with `using` are automatically freed when they go out of the scope of `using`, which, in this case, is whenever we are exiting the block, either because all statements have executed, or because an error was encountered somewhere.
+First, notice the extra braces around the code. This creates a new [block scope](/en-US/docs/Web/JavaScript/Reference/Statements/block) for the `using` declarations. Resources declared with `using` are automatically freed when they go out of the scope of `using`, which, in this case, is whenever we are exiting the block, either because all statements have executed, or because an error or `return`/`break`/`continue` was encountered somewhere.
 
-This means `using` can only be used in a scope that has a clear lifetime—namely, it cannot be used at the top level of a script, because the lifetime of the script is the lifetime of the page, which practically means the resource can never be freed if the page never unloads (and unloading a page causes all remaining resources to be collected anyway). However, you can use it at the top level of a [module](/en-US/docs/Web/JavaScript/Guide/Modules), because the module scope ends when the module finishes executing.
+This means `using` can only be used in a scope that has a clear lifetime—namely, it cannot be used at the top level of a script, because variables at the top level of a script are in scope for all future scripts on the page, which practically means the resource can never be freed if the page never unloads. However, you can use it at the top level of a [module](/en-US/docs/Web/JavaScript/Guide/Modules), because the module scope ends when the module finishes executing.
 
 Now we know _when_ `using` does cleanup. But _how_ is it done? `using` requires the resource to implement the _disposable_ protocol. An object is disposable if it has the [`[Symbol.dispose]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/dispose) method. This method is called with no arguments to perform cleanup. For example, in the reader case, the `[Symbol.dispose]` property can be a simple alias or wrapper of `releaseLock`:
 
@@ -152,7 +152,7 @@ MyReader.prototype[Symbol.dispose] = MyReader.prototype.releaseLock;
 
 Through the disposable protocol, `using` can dispose all resources in a consistent fashion without understanding what type of resource it is.
 
-Every scope has a list of resources associated with it, in the order they were declared. When the scope exits, the resources are disposed in reverse order, by calling their `[Symbol.dispose]()` method. For example, in the example above, `reader1` is declared before `reader2`, so `reader2` is disposed first, then `reader1`. This is consistent with the `try...finally` pattern, and respects possible dependencies between resources.
+Every scope has a list of resources associated with it, in the order they were declared. When the scope exits, the resources are disposed in reverse order, by calling their `[Symbol.dispose]()` method. For example, in the example above, `reader1` is declared before `reader2`, so `reader2` is disposed first, then `reader1`. Errors thrown when attempting to dispose one resource will not prevent disposal of other resources. This is consistent with the `try...finally` pattern, and respects possible dependencies between resources.
 
 `await using` is very similar to `using`. The syntax tells you that an `await` happens somewhere—not when the resource is declared, but actually when it's disposed. `await using` requires the resource to be _async disposable_, which means it has an [`[Symbol.asyncDisposable]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/asyncDispose) method. This method is called with no arguments and returns a promise that resolves when the cleanup is done. This is useful when the cleanup is asynchronous, such as `filehandle.close()`, in which case the result of the disposal can only be known asynchronously.
 
@@ -167,11 +167,13 @@ Every scope has a list of resources associated with it, in the order they were d
 
 Because `await using` requires doing an `await`, it is only permitted in contexts where `await` is, which includes inside `async` functions and top-level `await` in modules.
 
+Resources are cleaned up sequentially, not concurrently: the return value of one resource's `[Symbol.asyncDispose]()` method will be `await`ed before the next resource's `[Symbol.asyncDispose]()` method is called.
+
 Some things to note:
 
 - `using` and `await using` are _opt in_. If you declare your resource using `let`, `const`, or `var`, no automatic disposal happens, just like any other non-disposable values.
-- `using` and `await using` require the resource to be disposable (or async disposable). If the resource does not have the `[Symbol.dispose]()` or `[Symbol.asyncDispose]()` method, you will get a `TypeError` at the line of declaration. The resource can be `null` or `undefined`, however, allowing you to conditionally acquire resources.
-- Like `const`, `using` and `await using` variables cannot be re-assigned, but its properties can be changed. However, the `[Symbol.dispose]()`/`[Symbol.asyncDispose]()` method is already saved at the time of declaration, so changing the method after the declaration does not affect the cleanup.
+- `using` and `await using` require the resource to be disposable (or async disposable). If the resource does not have the `[Symbol.dispose]()` or `[Symbol.asyncDispose]()` method respectively, you will get a `TypeError` at the line of declaration. The resource can be `null` or `undefined`, however, allowing you to conditionally acquire resources.
+- Like `const`, `using` and `await using` variables cannot be re-assigned, although the properties of the objects they hold can be changed. However, the `[Symbol.dispose]()`/`[Symbol.asyncDispose]()` method is already saved at the time of declaration, so changing the method after the declaration does not affect the cleanup.
 - There are some gotchas when conflating scopes with resource lifetime. See [`using`](/en-US/docs/Web/JavaScript/Reference/Statements/using#examples) for a few examples.
 
 ## The `DisposableStack` and `AsyncDisposableStack` objects
@@ -199,7 +201,7 @@ if (someCondition) {
 }
 ```
 
-However, this means all logic has to be written inside the `if` or `else`, causing a lot of duplication. What we want to do is to acquire and register the resource in one scope but dispose it in another. We can use a {{jsxref("DisposableStack")}} for this purpose.
+However, this means all logic has to be written inside the `if` or `else`, causing a lot of duplication. What we want to do is to acquire and register the resource in one scope but dispose it in another. We can use a {{jsxref("DisposableStack")}} for this purpose, which is an object which holds a collection of disposable resources and which itself is disposable:
 
 ```js
 {
@@ -245,6 +247,8 @@ Yet another use case is when you have a disposal action to perform but it's not 
 }
 ```
 
+`AsyncDisposableStack` is like `DisposableStack`, but for use with async disposable resources. Its `use()` method expects an async disposable, its `adopt()` method expects an async cleanup function, and its `dispose()` method expects an async callback. It provides a `[Symbol.asyncDispose]()` method. You can still pass it sync resources if you have a mix of both sync and async.
+
 The reference for {{jsxref("DisposableStack")}} contains more examples and details.
 
 ## Error handling
@@ -287,7 +291,7 @@ readUntil(stream, "b")
   });
 ```
 
-So, `using` does not swallow an errors: all errors that occur are still thrown out, but the resources get closed right before that. Now, what happens if the resource cleanup itself also throws an error? Let's use a more contrived example:
+So, `using` does not swallow an errors: all errors that occur are still thrown, but the resources get closed right before that. Now, what happens if the resource cleanup itself also throws an error? Let's use a more contrived example:
 
 ```js
 class MyReader {

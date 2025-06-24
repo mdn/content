@@ -36,7 +36,7 @@ When the variable is first declared, a _disposer_ is retrieved from the object. 
 
 When the variable goes out of scope, the disposer is called and awaited. If the scope contains multiple {{jsxref("Statements/using", "using")}} or `await using` declarations, all disposers are run in sequence in the reverse order of declaration, regardless of the type of declaration. All disposers are guaranteed to run (much like the `finally` block in {{jsxref("Statements/try...catch", "try...catch...finally")}}). All errors thrown during disposal, including the initial error that caused the scope exit (if applicable), are all aggregated inside one {{jsxref("SuppressedError")}}, with each earlier exception as the `suppressed` property and the later exception as the `error` property. This `SuppressedError` is thrown after disposal is complete.
 
-The variable is allowed to have value `null` or `undefined`, so the resource can be optionally present. As long as one `await using` variable is declared in this scope, at least one `await` is guaranteed to happen on scope exit, even if the variable actually has value `null` or `undefined`. This prevents the disposal to end synchronously, causing timing issues (see [control flow effects of `await`](/en-US/docs/Web/JavaScript/Reference/Operators/await#control_flow_effects_of_await)).
+The variable is allowed to have value `null` or `undefined`, so the resource can be optionally present. As long as one `await using` variable is declared in this scope, at least one `await` is guaranteed to happen on scope exit, even if the variable actually has value `null` or `undefined`. This prevents the disposal from happening synchronously, causing timing issues (see [control flow effects of `await`](/en-US/docs/Web/JavaScript/Reference/Operators/await#control_flow_effects_of_await)).
 
 `await using` ties resource management to lexical scopes, which is both convenient and sometimes confusing. See below for some examples where it may not behave how you expect. If you want to hand-manage resource disposal, while maintaining the same error handling guarantees, you can use {{jsxref("AsyncDisposableStack")}} instead.
 
@@ -174,7 +174,7 @@ Promise.resolve().then(() => console.log("Microtask done"));
 // Microtask done
 ```
 
-For a more realistic example, consider two calls to a function in parallel:
+For a more realistic example, consider two concurrent calls to a function:
 
 ```js
 class Resource {
