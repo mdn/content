@@ -300,6 +300,6 @@ function updateZoomButtonState() {
 
 The finished demo renders like this:
 
-{{EmbedLiveSample("surface-control-demo", , "500px", , , , "captured-surface-control")}}
+{{EmbedLiveSample("surface-control-demo", , "500px", , , , "display-capture; captured-surface-control")}}
 
 EDITORIAL: The demo works, but when you scroll the captured display surface, it crashes the browser tab.
