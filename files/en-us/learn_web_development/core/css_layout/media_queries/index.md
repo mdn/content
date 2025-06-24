@@ -563,7 +563,7 @@ If you look at the HTML source in the above example, you'll see the following el
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 ```
 
-This is the [viewport meta tag](/en-US/docs/Web/HTML/Guides/Viewport_meta_element) — it exists as a way to control how mobile browsers render content, making sure they respect your media queries. The one above tells mobile browsers "don't render the content with a 980 pixel viewport — render it using the real device width instead, and set a default initial scale level for better consistency." The media queries will then kick in as expected.
+This is the [`viewport`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport) meta tag — it exists as a way to control how mobile browsers render content, making sure they respect your media queries. The one above tells mobile browsers "don't render the content with a 980-pixel viewport — render it using the real device width instead, and set a default initial scale level for better consistency." The media queries will then kick in as expected.
 
 For more information on why this is needed, see [The viewport meta tag](/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design#the_viewport_meta_tag) section in the previous article.
 

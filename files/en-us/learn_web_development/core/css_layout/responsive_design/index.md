@@ -471,7 +471,7 @@ If you look at the HTML source of a responsive page, you will usually see the fo
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 ```
 
-This [viewport](/en-US/docs/Web/HTML/Guides/Viewport_meta_element) meta tag tells mobile browsers that they should set the width of the viewport to the device's width, and scale the document to 100% of its intended size, which shows the document at the mobile-optimized size that you intended.
+This [`viewport`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport) meta tag tells mobile browsers that they should set the width of the viewport to the device's width, and scale the document to 100% of its intended size, which shows the document at the mobile-optimized size that you intended.
 
 Why is this needed? Because mobile browsers tend to lie about their viewport width.
 
