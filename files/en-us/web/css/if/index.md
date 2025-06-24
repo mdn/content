@@ -136,7 +136,7 @@ div {
     /* Never considered */
     style(--scheme: fire): linear-gradient(to left, #ffc971, white, #ffc971);
     /* Never considered */
-    else: none
+    else: none;
   );
 }
 ```
