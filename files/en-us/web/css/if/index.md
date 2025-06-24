@@ -110,7 +110,7 @@ If a single `<if-condition>` or `<value>` is invalid, it does not invalidate the
 
 You can include multiple `else : <value>` pairs inside an `if()` function, in any position. However, in most cases, a single `else : <value>` pair at the end of the semi-colon-separated list is used to provide the default value that is always returned if none of the `<if-test>`s evaluate to true.
 
-If you included it before the `<if-condition> : <value>` pairs, the `else` would evaluate to true, and none of the later pairs would be considered. The following example `if()` always returns `none`:
+If you include an `else : <value>` pair before any `<if-test> : <value>` pairs, the later conditions are not evaluated because the `else` always evaluates to `true`. The following `if()` always returns `none`:
 
 ```css-nolint
 div {
