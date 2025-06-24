@@ -149,7 +149,7 @@ These functions are not useful. They were included to demonstrate their validity
 
 ### Types of if-tests
 
-An `<if-condition>` can be one of three different types. This section looks at each on in detail.
+An `<if-test>` accepts one of three query types. This section looks at each one in detail.
 
 #### Style queries
 
