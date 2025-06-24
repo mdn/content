@@ -154,7 +154,7 @@ However, these functions are not useful. The {{cssxref("background-color")}} val
 background-color: yellow;
 ```
 
-### Types of if condition
+### Types of if-tests
 
 An `<if-condition>` can be one of three different types. This section looks at each on in detail.
 
