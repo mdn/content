@@ -576,7 +576,7 @@ aside {
 
 Finally, we use `if()` functions in a couple more places:
 
-- We set our `<h1>` element's {{cssxref("font-size")}} to be `calc(3rem + 2vw)` if the viewport is wider than `700px`, and `3rem` if not. This means that the font sizes dynamically with the viewport on wider screens, but stays the same on narrow screens.
+- We set our `<h1>` element's {{cssxref("font-size")}} to be `calc(3rem + 2vw)` if the viewport is wider than `700px`, and `3rem` otherwise. This means the font size updates dynamically with viewport width changes on wider screens, but stays the same on narrow screens.
 - We set a suitable emoji as the {{cssxref("content")}} of our `<h1>` element's {{cssxref("::before")}} pseudo-class, depending on the value of the `--scheme` custom property.
 
 ```css-nolint live-sample___color-scheme
