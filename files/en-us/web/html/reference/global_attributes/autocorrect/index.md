@@ -1,5 +1,6 @@
 ---
-title: autocorrect
+title: HTML autocorrect global attribute
+short-title: autocorrect
 slug: Web/HTML/Reference/Global_attributes/autocorrect
 page-type: html-attribute
 browser-compat: html.global_attributes.autocorrect
@@ -27,11 +28,9 @@ Explicitly setting the attribute overrides the default.
 Possible values are:
 
 - `on` or `""` (the empty string)
-
   - : Enable automatic correction of spelling and punctuation errors.
 
 - `off`
-
   - : Disable automatic correction of editable text.
 
 The {{htmlelement("input")}} element types that don't support auto-correction always have the `off` state: [`password`](/en-US/docs/Web/HTML/Reference/Elements/input/password), [`email`](/en-US/docs/Web/HTML/Reference/Elements/input/email) and [`url`](/en-US/docs/Web/HTML/Reference/Elements/input/url).

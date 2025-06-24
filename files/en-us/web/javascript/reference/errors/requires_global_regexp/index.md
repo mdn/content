@@ -49,7 +49,7 @@ If you intend to do global matching/replacement: either add the `g` flag, or con
 const existingPattern = /./;
 const newPattern = new RegExp(
   existingPattern.source,
-  existingPattern.flags + "g",
+  `${existingPattern.flags}g`,
 );
 "abc".replaceAll(newPattern, "f"); // "fff"
 ```

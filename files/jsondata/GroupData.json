@@ -898,6 +898,23 @@
         "HTMLElement: drop"
       ]
     },
+    "HTML Sanitizer API": {
+      "overview": ["HTML Sanitizer API"],
+      "guides": [
+        "/docs/Web/API/HTML_Sanitizer_API/Using_the_HTML_Sanitizer_API"
+      ],
+      "interfaces": ["Sanitizer", "SanitizerConfig"],
+      "methods": [
+        "Element.setHTMLUnsafe()",
+        "Element.setHTML()",
+        "ShadowRoot.setHTMLUnsafe()",
+        "ShadowRoot.setHTML()",
+        "Document.parseHTMLUnsafe_static()",
+        "Document.parseHTML_static()"
+      ],
+      "properties": [],
+      "events": []
+    },
     "Idle Detection API": {
       "overview": ["Idle Detection API"],
       "interfaces": ["IdleDetector"],
@@ -1560,6 +1577,14 @@
       "properties": ["Response.body"],
       "events": []
     },
+    "Summarizer API": {
+      "overview": ["Summarizer API"],
+      "guides": ["/docs/Web/API/Summarizer_API/Using"],
+      "interfaces": ["Summarizer", "CreateMonitor"],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "SVG": {
       "overview": ["SVG API"],
       "guides": ["/docs/Web/SVG"],
@@ -1700,6 +1725,14 @@
         "Element: touchmove",
         "Element: touchcancel"
       ]
+    },
+    "Translator and Language Detector APIs": {
+      "overview": ["Translator and Language Detector APIs"],
+      "guides": ["/docs/Web/API/Translator_and_Language_Detector_APIs/Using"],
+      "interfaces": ["CreateMonitor", "LanguageDetector", "Translator"],
+      "methods": [],
+      "properties": [],
+      "events": []
     },
     "Trusted Types API": {
       "overview": ["Trusted Types API"],
@@ -1867,7 +1900,6 @@
         "/docs/Web/API/Web_Audio_API/Using_AudioWorklet",
         "/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode",
         "/docs/Web/API/Web_Audio_API/Simple_synth",
-        "/docs/Web/API/Web_Audio_API/Tools",
         "/docs/Web/API/Web_Audio_API/Using_IIR_filters",
         "/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API",
         "/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics"

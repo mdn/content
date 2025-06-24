@@ -88,19 +88,15 @@ The `font-weight` property is specified using either a `<font-weight-absolute>` 
 ### Values
 
 - `normal`
-
   - : Normal font weight. Same as `400`.
 
 - `bold`
-
   - : Bold font weight. Same as `700`.
 
 - `<number>`
-
   - : A {{cssxref("&lt;number&gt;")}} value between 1 and 1000, both values included. Higher numbers represent weights that are bolder than (or as bold as) lower numbers. This allows fine-grain control for [variable fonts](#variable_fonts). For non-variable fonts, if the exact specified weight is unavailable, a [fallback weight](#fallback_weights) algorithm is used — numeric values that are divisible by 100 correspond to common weight names, as described in the [Common weight name mapping](#common_weight_name_mapping) section below.
 
 - `lighter`
-
   - : One relative font weight lighter than the parent element. Note that only four font weights are considered for relative weight calculation; see the [Meaning of relative weights](#meaning_of_relative_weights) section below.
 
 - `bolder`
@@ -111,7 +107,6 @@ The `font-weight` property is specified using either a `<font-weight-absolute>` 
 If the exact weight given is unavailable, then the following rule is used to determine the weight actually rendered:
 
 - If the target weight given is between `400` and `500` inclusive:
-
   - Look for available weights between the target and `500`, in ascending order.
   - If no match is found, look for available weights less than the target, in descending order.
   - If no match is found, look for available weights greater than `500`, in ascending order.
@@ -229,9 +224,8 @@ This demo loads with `font-weight: 500;` set. Change the value of the `font-weig
 .sample {
   text-transform: uppercase;
   font-weight: 500;
-  font:
-    1.5rem "MutatorSans",
-    sans-serif;
+  font-size: 1.5rem;
+  font-family: "MutatorSans", sans-serif;
 }
 ```
 

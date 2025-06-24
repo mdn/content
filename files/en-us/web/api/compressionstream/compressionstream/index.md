@@ -19,9 +19,7 @@ new CompressionStream(format)
 ### Parameters
 
 - `format`
-
   - : One of the following allowed compression formats:
-
     - `"gzip"`
       - : Compresses the stream using the [GZIP](https://www.rfc-editor.org/rfc/rfc1952) format.
     - `"deflate"`

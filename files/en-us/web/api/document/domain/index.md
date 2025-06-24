@@ -21,7 +21,7 @@ A string.
 ### Exceptions
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
+  - : The document is forbidden from setting its domain, for example it is sandboxed or has an opaque origin. See [Failures section](#failures) for details.
 
 ## Examples
 
@@ -118,8 +118,6 @@ blanket exposure of all data caused by `document.domain`.
 The setter will throw a `SecurityError` {{domxref("DOMException")}} in
 several cases:
 
-- The {{httpheader('Permissions-Policy/document-domain','document-domain')}}
-  {{HTTPHeader("Permissions-Policy")}} is disabled.
 - The document is inside a sandboxed {{htmlelement("iframe")}}.
 - The document has no {{glossary("browsing context")}}.
 - The document's [effective domain](https://html.spec.whatwg.org/multipage/origin.html#concept-origin-effective-domain) is `null`.

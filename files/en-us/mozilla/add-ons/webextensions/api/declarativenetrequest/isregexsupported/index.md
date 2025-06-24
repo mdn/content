@@ -20,7 +20,6 @@ let count = browser.declarativeNetRequest.isRegexSupported(
 ### Parameters
 
 - `regexOptions`
-
   - : An object containing the regular expression to check.
     - `isCaseSensitive` {{optional_inline}}
       - : `boolean` Whether the regex specified is case sensitive. Default is `true`.

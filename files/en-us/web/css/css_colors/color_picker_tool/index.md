@@ -18,7 +18,7 @@ When you select a color, it gets displayed in four standard CSS color formats. C
 
 {{EmbedGHLiveSample("css-examples/modules/colors.html", '100%', 450)}}
 
-The generated color values can be used anywhere the {{cssxref("color_value", "&lt;color&gt")}} data type is supported in CSS.
+The generated color values can be used anywhere the {{cssxref("color_value", "&lt;color&gt;")}} data type is supported in CSS.
 
 ## See also
 

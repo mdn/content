@@ -154,9 +154,8 @@ const value = (() => {
   const randomValue = Math.random();
   if (randomValue > 0.5) {
     return "heads";
-  } else {
-    return "tails";
   }
+  return "tails";
 })();
 ```
 

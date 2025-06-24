@@ -37,7 +37,7 @@ In the previous article, we looked at one of the most important features for mak
 
 ## Recap: Tables for visually impaired users
 
-Let's recap briefly on how we use data tables. A table can be a handy tool, for giving us quick access to data and allowing us to look up different values. For example, it takes only a short glance at the table below to find out how many rings were sold in Gent during August 2016. To understand its information, we make visual associations between the data in this table and its column and/or row headers.
+Let's recap briefly on how we use data tables. A table can be a handy tool, for giving us quick access to data and allowing us to look up different values. For example, it takes only a short glance at the table below to find out how many rings were sold in Ghent during August 2016. To understand its information, we make visual associations between the data in this table and its column and/or row headers.
 
 <table>
   <caption>Items Sold August 2016</caption>
@@ -66,7 +66,7 @@ Let's recap briefly on how we use data tables. A table can be a handy tool, for 
       <td>23</td>
     </tr>
     <tr>
-      <th scope="row">Gent</th>
+      <th scope="row">Ghent</th>
       <td>46</td>
       <td>18</td>
       <td>50</td>
@@ -101,12 +101,10 @@ Let's recap briefly on how we use data tables. A table can be a handy tool, for 
   </tbody>
 </table>
 
-But what if you cannot make those visual associations? How then can you read a table like the above? Visually impaired people often use a screen reader that reads out information on web pages to them. This is no problem when you're reading plain text but interpreting a table can be quite a challenge for a blind person. Nevertheless, with the proper markup we can replace visual associations by programmatic ones.
+But what if you cannot make those visual associations? How then can you read a table like the above? Visually impaired people often use a [screen reader](/en-US/docs/Glossary/Screen_reader) that reads out information on web pages to them. This is no problem when you're reading plain text but interpreting a table can be quite a challenge for a blind person. Nevertheless, with the proper markup we can replace visual associations by programmatic ones.
 
 > [!NOTE]
 > There are around 253 Million people living with Visual Impairment according to [WHO data in 2017](https://www.who.int/en/news-room/fact-sheets/detail/blindness-and-visual-impairment).
-
-This section of the article provides further techniques for making tables as accessible as possible.
 
 ### Using column and row headers
 
@@ -135,16 +133,41 @@ A caption is placed directly beneath the `<table>` tag.
 > [!NOTE]
 > The [`summary`](/en-US/docs/Web/HTML/Reference/Elements/table#summary) attribute can also be used on the `<table>` element to provide a description — this is also read out by screen readers. We'd recommend using the `<caption>` element instead, however, as `summary` is deprecated and can't be read by sighted users (it doesn't appear on the page).
 
-### Active learning: Adding a caption
+### Table caption practice
 
-Let's try this out, using a language teacher's school timetable as an example.
+At this point we'll get you to try out adding a caption to an HTML table, using a language teacher's school timetable as an example.
 
 1. Make a local copy of our [timetable-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/timetable-fixed.html) file.
 2. Add a suitable caption for the table.
 3. Save your code and open it in a browser to see what it looks like.
 
-> [!NOTE]
-> You can find our version on GitHub — see [timetable-caption.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/timetable-caption.html) ([see it live also](https://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html)).
+<details>
+<summary>Click here to show the solution</summary>
+
+Your finished HTML should look something like this:
+
+```html
+<table>
+  <caption>
+    Florence's weekly lesson timetable
+  </caption>
+  <colgroup>
+    <col span="2" />
+    <col style="background-color: #97DB9A;" />
+    <col style="width: 42px;" />
+    <col style="background-color: #97DB9A;" />
+    <col style="background-color: #DCC48E; border: 4px solid #C1437A;" />
+    <col span="2" style="width: 42px;" />
+  </colgroup>
+  <tr>
+    <!-- Rest of code omitted for brevity -->
+  </tr>
+</table>
+```
+
+You can find this code on GitHub at [timetable-caption.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/timetable-caption.html) ([see it running live also](https://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html)).
+
+</details>
 
 ## Adding structure with \<thead>, \<tbody>, and \<tfoot>
 
@@ -158,11 +181,12 @@ To use them, they should be included in the following order:
 - The `<tbody>` element needs to wrap the main part of the table content that isn't the table header or footer.
 - The `<tfoot>` element needs to wrap the part of the table that is the footer — this might be a final row with items in the previous rows summed, for example.
 
-> **Note:** `<tbody>` is always included in every table, implicitly if you don't specify it in your code. To check this, open up one of your previous examples that doesn't include `<tbody>` and look at the HTML code in your [browser developer tools](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) — you will see that the browser has added this tag for you. You might wonder why you ought to bother including it at all — you should, because it gives you more control over your table structure and styling.
+> [!NOTE]
+> `<tbody>` is always included in every table, implicitly if you don't specify it in your code. To check this, open up one of your previous examples that doesn't include `<tbody>` and look at the HTML code in your [browser developer tools](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) — you will see that the browser has added this tag for you. You might wonder why you ought to bother including it at all — you should, because it gives you more control over your table structure and styling.
 
-### Active learning: Adding table structure
+### Adding structure to a spending record table
 
-Let's put these new elements into action.
+Let's get you to put these new elements into action.
 
 1. First of all, make a local copy of [spending-record.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/spending-record.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/minimal-table.css) in a new folder.
 2. Try putting the obvious headers row inside a `<thead>` element, the "SUM" row inside a `<tfoot>` element, and the rest of the content inside a `<tbody>` element.
@@ -180,17 +204,72 @@ Let's put these new elements into action.
    }
    ```
 
+   > [!NOTE]
+   > We don't expect you to fully understand the CSS right now. You'll learn more about this when you go through our CSS modules (starting with [CSS Styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics), which includes an article specifically on [styling tables](/en-US/docs/Learn_web_development/Core/Styling_basics/Tables)).
+
 5. Save and refresh, and have a look at the result. If the `<tbody>` and `<tfoot>` elements weren't in place, you'd have to write much more complicated selectors/rules to apply the same styling.
 
-> [!NOTE]
-> We don't expect you to fully understand the CSS right now. You'll learn more about this when you go through our CSS modules ([CSS Styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics) is a good place to start; we also have an article specifically on [styling tables](/en-US/docs/Learn_web_development/Core/Styling_basics/Tables)).
+<details>
+<summary>Click here to show the solution</summary>
 
-Your finished table should look something like the following:
+Your finished HTML should look something like this:
 
-{{ EmbedGHLiveSample('learning-area/html/tables/advanced/spending-record-finished.html', '100%', 400) }}
+```html
+<table>
+  <caption>
+    How I chose to spend my money
+  </caption>
+  <thead>
+    <tr>
+      <th>Purchase</th>
+      <th>Location</th>
+      <th>Date</th>
+      <th>Evaluation</th>
+      <th>Cost (€)</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td colspan="4">SUM</td>
+      <td>118</td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>Haircut</td>
+      <td>Hairdresser</td>
+      <td>12/09</td>
+      <td>Great idea</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <td>Lasagna</td>
+      <td>Restaurant</td>
+      <td>12/09</td>
+      <td>Regrets</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>Shoes</td>
+      <td>Shoe shop</td>
+      <td>13/09</td>
+      <td>Big regrets</td>
+      <td>65</td>
+    </tr>
+    <tr>
+      <td>Toothpaste</td>
+      <td>Supermarket</td>
+      <td>13/09</td>
+      <td>Good</td>
+      <td>5</td>
+    </tr>
+  </tbody>
+</table>
+```
 
-> [!NOTE]
-> You can also find it on GitHub as [spending-record-finished.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/spending-record-finished.html) ([see it live here](https://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html)).
+You can find the complete code on GitHub at [spending-record-finished.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/spending-record-finished.html) ([see it running live also](https://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html)).
+
+</details>
 
 ## The `scope` attribute
 
@@ -312,14 +391,160 @@ In this example:
 > [!NOTE]
 > This method creates very precise associations between headers and data cells but it uses **a lot** more markup and does not leave any room for errors. The `scope` approach is usually sufficient for most tables.
 
-## Active learning: playing with scope and headers
+## Playing with scope and headers
 
-1. For this final exercise, we'd like you to first make local copies of [items-sold.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/items-sold.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/minimal-table.css), in a new directory.
-2. Now try adding in the appropriate `scope` attributes to make this table more accessible.
-3. Finally, try making another copy of the starter files, and this time make the table more accessible by creating precise and explicit associations using `id` and `headers` attributes.
+For this final exercise, we will get you to try using scope and headers on the sample table we introduced above.
 
-> [!NOTE]
-> You can check your work against our finished examples — see [items-sold-scope.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/items-sold-scope.html) ([also see this live](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html)) and [items-sold-headers.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/items-sold-headers.html) ([see this live too](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html)).
+1. First make local copies of [items-sold.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/items-sold.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/minimal-table.css), in a new directory.
+2. Try adding in the appropriate `scope` attributes to make this table more accessible.
+3. Making another copy of the starter files in another local directory
+4. This time make the table more accessible by creating precise and explicit associations using `id` and `headers` attributes.
+
+<details>
+<summary>Click here to show the solution</summary>
+
+The first finished HTML example should look something like this:
+
+```html
+<table>
+  <caption>
+    Items Sold August 2016
+  </caption>
+  <thead>
+    <tr>
+      <td colspan="2" rowspan="2"></td>
+      <th colspan="3" scope="colgroup">Clothes</th>
+      <th colspan="2" scope="colgroup">Accessories</th>
+    </tr>
+    <tr>
+      <th scope="col">Trousers</th>
+      <th scope="col">Skirts</th>
+      <th scope="col">Dresses</th>
+      <th scope="col">Bracelets</th>
+      <th scope="col">Rings</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="3" scope="rowgroup">Belgium</th>
+      <th scope="row">Antwerp</th>
+      <td>56</td>
+      <td>22</td>
+      <td>43</td>
+      <td>72</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <th scope="row">Ghent</th>
+      <td>46</td>
+      <td>18</td>
+      <td>50</td>
+      <td>61</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th scope="row">Brussels</th>
+      <td>51</td>
+      <td>27</td>
+      <td>38</td>
+      <td>69</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <th rowspan="2" scope="rowgroup">The Netherlands</th>
+      <th scope="row">Amsterdam</th>
+      <td>89</td>
+      <td>34</td>
+      <td>69</td>
+      <td>85</td>
+      <td>38</td>
+    </tr>
+    <tr>
+      <th scope="row">Utrecht</th>
+      <td>80</td>
+      <td>12</td>
+      <td>43</td>
+      <td>36</td>
+      <td>19</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+While the second one should look like this:
+
+```html
+<table>
+  <caption>
+    Items Sold August 2016
+  </caption>
+  <thead>
+    <tr>
+      <td colspan="2" rowspan="2"></td>
+      <th colspan="3" id="clothes">Clothes</th>
+      <th colspan="2" id="accessories">Accessories</th>
+    </tr>
+    <tr>
+      <th id="trousers" headers="clothes">Trousers</th>
+      <th id="skirts" headers="clothes">Skirts</th>
+      <th id="dresses" headers="clothes">Dresses</th>
+      <th id="bracelets" headers="accessories">Bracelets</th>
+      <th id="rings" headers="accessories">Rings</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="3" id="belgium">Belgium</th>
+      <th id="antwerp" headers="belgium">Antwerp</th>
+      <td headers="antwerp belgium clothes trousers">56</td>
+      <td headers="antwerp belgium clothes skirts">22</td>
+      <td headers="antwerp belgium clothes dresses">43</td>
+      <td headers="antwerp belgium accessories bracelets">72</td>
+      <td headers="antwerp belgium accessories rings">23</td>
+    </tr>
+    <tr>
+      <th id="ghent" headers="belgium">Ghent</th>
+      <td headers="ghent belgium clothes trousers">46</td>
+      <td headers="ghent belgium clothes skirts">18</td>
+      <td headers="ghent belgium clothes dresses">50</td>
+      <td headers="ghent belgium accessories bracelets">61</td>
+      <td headers="ghent belgium accessories rings">15</td>
+    </tr>
+    <tr>
+      <th id="brussels" headers="belgium">Brussels</th>
+      <td headers="brussels belgium clothes trousers">51</td>
+      <td headers="brussels belgium clothes skirts">27</td>
+      <td headers="brussels belgium clothes dresses">38</td>
+      <td headers="brussels belgium accessories bracelets">69</td>
+      <td headers="brussels belgium accessories rings">28</td>
+    </tr>
+    <tr>
+      <th rowspan="2" id="netherlands">The Netherlands</th>
+      <th id="amsterdam" headers="netherlands">Amsterdam</th>
+      <td headers="amsterdam netherlands clothes trousers">89</td>
+      <td headers="amsterdam netherlands clothes skirts">34</td>
+      <td headers="amsterdam netherlands clothes dresses">69</td>
+      <td headers="amsterdam netherlands accessories bracelets">85</td>
+      <td headers="amsterdam netherlands accessories rings">38</td>
+    </tr>
+    <tr>
+      <th id="utrecht" headers="netherlands">Utrecht</th>
+      <td headers="utrecht netherlands clothes trousers">80</td>
+      <td headers="utrecht netherlands clothes skirts">12</td>
+      <td headers="utrecht netherlands clothes dresses">43</td>
+      <td headers="utrecht netherlands accessories bracelets">36</td>
+      <td headers="utrecht netherlands accessories rings">19</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+You can also find the finished examples on GitHub:
+
+- For the first example, see [items-sold-scope.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/items-sold-scope.html) ([see this running live also](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html)).
+- For the second example, see [items-sold-headers.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/items-sold-headers.html) ([see this running live also](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html)).
+
+</details>
 
 ## Summary
 

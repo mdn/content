@@ -1,5 +1,6 @@
 ---
-title: DNT
+title: DNT header
+short-title: DNT
 slug: Web/HTTP/Reference/Headers/DNT
 page-type: http-header
 status:
@@ -61,7 +62,7 @@ navigator.doNotTrack; // "0", "1" or null
 
 ## Specifications
 
-Part of the discontinued [Tracking Preference Expression (DNT)](https://www.w3.org/TR/tracking-dnt/#dnt-header-field) specification.
+Part of the discontinued [Tracking Preference Expression (DNT)](https://w3c.github.io/dnt/drafts/tracking-dnt.html#dnt-header-field) specification.
 
 ## Browser compatibility
 

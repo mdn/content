@@ -1,5 +1,6 @@
 ---
 title: Function.prototype.apply()
+short-title: apply()
 slug: Web/JavaScript/Reference/Global_Objects/Function/apply
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Function.apply
@@ -114,14 +115,14 @@ let min = Math.min.apply(null, numbers);
 
 // vs. loop based algorithm
 max = -Infinity;
-min = +Infinity;
+min = Infinity;
 
-for (let i = 0; i < numbers.length; i++) {
-  if (numbers[i] > max) {
-    max = numbers[i];
+for (const n of numbers) {
+  if (n > max) {
+    max = n;
   }
-  if (numbers[i] < min) {
-    min = numbers[i];
+  if (n < min) {
+    min = n;
   }
 }
 ```

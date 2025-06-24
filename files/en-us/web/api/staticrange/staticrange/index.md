@@ -25,10 +25,8 @@ new StaticRange(rangeSpec)
 ### Parameters
 
 - `rangeSpec`
-
   - : The required `rangeSpec` parameter is an object
     containing the four following properties:
-
     - `startContainer`
       - : The {{domxref("Node")}} in which the starting point of the range is located.
     - `startOffset`

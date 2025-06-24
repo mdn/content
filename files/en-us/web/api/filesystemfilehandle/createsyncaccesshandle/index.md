@@ -25,9 +25,7 @@ createSyncAccessHandle(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An object with the following properties:
-
     - `mode` {{optional_inline}} {{non-standard_inline}}
       - : A string specifying the locking mode for the access handle. The default value is `"readwrite"`.
         Possible values are:
@@ -199,14 +197,14 @@ onmessage = function (e) {
     accessHandle.read(dataView, { at: 0 });
 
     // Log the current file contents to the console
-    console.log("File contents: " + textDecoder.decode(dataView));
+    console.log(`File contents: ${textDecoder.decode(dataView)}`);
 
     // Flush the changes
     accessHandle.flush();
   }
 
   // Log the size of the file to the console
-  console.log("Size: " + size);
+  console.log(`Size: ${size}`);
 };
 ```
 

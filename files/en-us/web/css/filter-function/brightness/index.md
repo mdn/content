@@ -112,7 +112,7 @@ p {
 
 {{EmbedLiveSample('Applying_brightness_using_the_backdrop_filter_property', '100%', '280')}}
 
-In this example, the colors in the area behind the `<p>` element shift linearly. If the `backdrop-filter` property was set to `brightness(0%)`, the `<div>` area with the `<p>` element would have been black and hidden the image behind. At `brightness(100%)`, the `<div>` area color would be the same as the input `#d4d5b2`, and the image behind would be completely transparent. With the brightness set to `150%` as in this example, the colors in the image behind are getting hidden by the brightness of the `<div>` element.`
+In this example, the colors in the area behind the `<p>` element shift linearly. If the `backdrop-filter` property was set to `brightness(0%)`, the `<div>` area with the `<p>` element would have been black and hidden the image behind. At `brightness(100%)`, the `<div>` area color would be the same as the input `#d4d5b2`, and the image behind would be completely transparent. With the brightness set to `150%` as in this example, the colors in the image behind are getting hidden by the brightness of the `<div>` element.
 
 ### Applying brightness using the filter property
 

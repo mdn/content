@@ -64,4 +64,3 @@ window.addEventListener("devicemotion", handleMotionEvent, true);
 ## See also
 
 - {{domxref("Window.deviceorientation_event", "deviceorientation")}}
-- [DeviceOrientation Event](https://www.w3.org/TR/orientation-event/#devicemotion)

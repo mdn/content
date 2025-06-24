@@ -84,6 +84,7 @@
       "p",
       "pre",
       "q",
+      "scrim-inline",
       "section",
       "semantics",
       "strong",
@@ -284,7 +285,7 @@
       {
         "name": "gfm-alert",
         "message": "Use the GFM syntax: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#notes_warnings_and_callouts",
-        "searchPattern": "/^ *> \\*\\*(Note|Warning|Callout):\\*\\*(?! [[{`_*])/gm",
+        "searchPattern": "/^ *> \\*\\*(Note|Warning|Callout):\\*\\*/gm",
         "searchScope": "text",
       },
       {

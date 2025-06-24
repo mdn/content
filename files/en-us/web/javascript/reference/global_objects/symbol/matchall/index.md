@@ -1,5 +1,6 @@
 ---
 title: Symbol.matchAll
+short-title: matchAll
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/matchAll
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.matchAll
@@ -14,7 +15,7 @@ For more information, see [`RegExp.prototype[Symbol.matchAll]()`](/en-US/docs/We
 {{InteractiveExample("JavaScript Demo: Symbol.matchAll")}}
 
 ```js interactive-example
-const re = /[0-9]+/g;
+const re = /\d+/g;
 const str = "2016-01-02|2019-03-07";
 const result = re[Symbol.matchAll](str);
 
@@ -37,7 +38,7 @@ const str = "2016-01-02|2019-03-07";
 
 const numbers = {
   *[Symbol.matchAll](str) {
-    for (const n of str.matchAll(/[0-9]+/g)) yield n[0];
+    for (const n of str.matchAll(/\d+/g)) yield n[0];
   },
 };
 

@@ -44,7 +44,8 @@ A hardware-agnostic representation of input devices that can target a specific c
 
 Pointer capture allows the events for a pointer to be retargeted to a particular element other than the normal hit test result of the pointer's location. See [capturing the pointer](#capturing_the_pointer) for an example.
 
-> **Note:** _Pointer capture_ is different from [_pointer lock_](/en-US/docs/Web/API/Pointer_Lock_API), which physically prevents the pointer from leaving a region.
+> [!NOTE]
+> _Pointer capture_ is different from [_pointer lock_](/en-US/docs/Web/API/Pointer_Lock_API), which physically prevents the pointer from leaving a region.
 
 ### pointer event
 
@@ -336,16 +337,6 @@ The {{cssxref("touch-action")}} CSS property is used to specify whether or not t
 
 A value of `auto` means the browser is free to apply its default touch behavior (to the specified region) and the value of `none` disables the browser's default touch behavior for the region. The values `pan-x` and `pan-y`, mean that touches that begin on the specified region are only for horizontal and vertical scrolling, respectively. The value `manipulation` means the browser may consider touches that begin on the element are only for scrolling and zooming.
 
-In the following example, the browser's default touch behavior is disabled for the `div` element.
-
-```html
-<html lang="en">
-  <body>
-    <div style="touch-action:none;">Can't touch this…</div>
-  </body>
-</html>
-```
-
 In the following example, default touch behavior is disabled for some `button` elements.
 
 ```css
@@ -392,16 +383,8 @@ Some additional values have been defined for the CSS {{cssxref("touch-action")}}
 
 ## See also
 
-### Demos and examples
-
-- [Touch/pointer tests and demos (by Patrick H. Lauke)](https://patrickhlauke.github.io/touch/)
-
-### Community
-
+- [Touch Events](/en-US/docs/Web/API/Touch_events)
 - [Pointer Events Working Group](https://github.com/w3c/pointerevents)
 - [Mail list](https://lists.w3.org/Archives/Public/public-pointer-events/)
 - [W3C #pointerevents IRC channel](irc://irc.w3.org:6667/)
-
-### Related topics and resources
-
-- [Touch Events Standard](https://www.w3.org/TR/touch-events/)
+- [Touch/pointer tests and demos](https://patrickhlauke.github.io/touch/) by Patrick H. Lauke

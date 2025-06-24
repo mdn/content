@@ -1,5 +1,6 @@
 ---
 title: "Error: lineNumber"
+short-title: lineNumber
 slug: Web/JavaScript/Reference/Global_Objects/Error/lineNumber
 page-type: javascript-instance-data-property
 status:

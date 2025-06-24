@@ -47,11 +47,9 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed one argument, which is a {{WebExtAPIRef("proxy.RequestDetails")}} object containing details of the request.
 
     The listener can return any of:
-
     - a {{WebExtAPIRef("proxy.ProxyInfo")}} object.
     - an array of {{WebExtAPIRef("proxy.ProxyInfo")}} objects.
     - a `Promise` that resolves to a `ProxyInfo` object.

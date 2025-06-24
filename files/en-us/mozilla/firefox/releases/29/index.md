@@ -46,15 +46,12 @@ _See the [Mozilla Hacks blog post](https://hacks.mozilla.org/2014/02/css-source-
 
 - New ECMAScript 2015 String methods: {{jsxref("String.prototype.codePointAt()")}} and {{jsxref("String.prototype.fromCodePoint()")}} have been implemented ([Firefox bug 918879](https://bugzil.la/918879)).
 - The [ECMAScript Internationalization API (ECMA-402)](https://402.ecma-international.org/1.0/) has been implemented and is now enabled by default in Firefox Desktop ([Firefox bug 853301](https://bugzil.la/853301)):
-
   - New objects in the new {{jsxref("Intl")}} object namespace:
-
     - {{jsxref("Intl/Collator", "Intl.Collator")}}
     - {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
     - {{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}
 
   - The following methods of {{jsxref("String")}}, {{jsxref("Number")}} and {{jsxref("Date")}} have been updated to include the `locales` and `options` arguments per ECMA-402:
-
     - {{jsxref("String.prototype.localeCompare()")}}
     - {{jsxref("Number.prototype.toLocaleString()")}}
     - {{jsxref("Date.prototype.toLocaleString()")}}
@@ -81,7 +78,7 @@ _See the [Mozilla Hacks blog post](https://hacks.mozilla.org/2014/02/css-source-
 - The deprecated `Window.pkcs11` property has been removed; it was returning `null` since Firefox 3.0.14. ([Firefox bug 964964](https://bugzil.la/964964))
 - The {{domxref("Node.cloneNode()")}} and {{domxref("Document.importNode()")}} methods take the Boolean `deep` argument. Until now, if omitted, these methods acted as if the value of `deep` was `true`. But this behavior has been changed as per the latest spec, and if omitted, the methods will act as if the value was `false`. ([Firefox bug 937461](https://bugzil.la/937461))
 - `Window._content` is no longer available to Web content ([Firefox bug 946564](https://bugzil.la/946564)).
-- {{domxref("HTMLAnchorElement/port", "URLUtils.port")}} behavior has been slightly changed: set to `''` will set it to the default port associated with the protocol, and `0` to `0.` ([Firefox bug 930450](https://bugzil.la/930450))
+- {{domxref("HTMLAnchorElement/port", "URLUtils.port")}} behavior has been slightly changed: set to `''` will set it to the default port associated with the protocol, and `0` to `0`. ([Firefox bug 930450](https://bugzil.la/930450))
 - {{domxref("Document.referrer")}} is now based on the incumbent script ([Firefox bug 887928](https://bugzil.la/887928)).
 - The [Gamepad API](/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API) is enabled by default ([Firefox bug 878828](https://bugzil.la/878828)).
 - The `CanvasRenderingContext2D.drawSystemFocusRing()` method got renamed to {{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}} ([Firefox bug 959820](https://bugzil.la/959820)).

@@ -3,12 +3,10 @@ title: "GPUDevice: createBindGroup() method"
 short-title: createBindGroup()
 slug: Web/API/GPUDevice/createBindGroup
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUDevice.createBindGroup
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`createBindGroup()`** method of the
 {{domxref("GPUDevice")}} interface creates a {{domxref("GPUBindGroup")}} based on a {{domxref("GPUBindGroupLayout")}} that defines a set of resources to be bound together in a group and how those resources are used in shader stages.
@@ -32,7 +30,7 @@ createBindGroup(descriptor)
             - `GPUBufferBinding` (which wraps a {{domxref("GPUBuffer")}}; see [GPUBufferBinding objects](#gpubufferbinding_objects) for a definition)
             - {{domxref("GPUExternalTexture")}}
             - {{domxref("GPUSampler")}}
-            - {{domxref("GPUTextureView")}}
+            - {{domxref("GPUTextureView")}}; can be used in place of a `GPUExternalTexture` provided it is compatible (a 2D format with a single subresource, that is, [`dimension: "2d"`](/en-US/docs/Web/API/GPUTexture/createView#dimension)).
     - `label` {{optional_inline}}
       - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
     - `layout`

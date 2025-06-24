@@ -1,5 +1,6 @@
 ---
 title: Date.prototype.setSeconds()
+short-title: setSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setSeconds

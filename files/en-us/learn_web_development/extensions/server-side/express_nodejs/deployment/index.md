@@ -8,7 +8,8 @@ sidebar: learnsidebar
 
 {{PreviousMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/forms", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
-Now you've created (and tested) an awesome [LocalLibrary](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website) website, you're going to want to install it on a public web server so that it can be accessed by library staff and members over the Internet. This article provides an overview of how you might go about finding a host to deploy your website, and what you need to do in order to get your site ready for production.
+Now that you've created and tested a sample website using Express, it's time to deploy it to a web server so people can access it over the public internet.
+This page explains how to host an Express project and outlines what you need to get it ready for production.
 
 <table>
   <tbody>
@@ -128,6 +129,7 @@ Replace the line with the following code that uses `process.env.MONGODB_URI` to 
 ```js
 // Set up mongoose connection
 const mongoose = require("mongoose");
+
 mongoose.set("strictQuery", false);
 
 const dev_db_url =
@@ -174,7 +176,7 @@ exports.author_update_get = asyncHandler(async (req, res, next) => {
     return next(err);
   }
 
-  res.render("author_form", { title: "Update Author", author: author });
+  res.render("author_form", { title: "Update Author", author });
 });
 ```
 
@@ -287,11 +289,11 @@ Then add the module to the middleware chain with the `use()` method.
 ```js
 const compression = require("compression");
 const helmet = require("helmet");
+const RateLimit = require("express-rate-limit");
 
 const app = express();
 
 // Set up rate limiter: maximum of twenty requests per minute
-const RateLimit = require("express-rate-limit");
 const limiter = RateLimit({
   windowMs: 1 * 60 * 1000, // 1 minute
   max: 20,
@@ -360,7 +362,6 @@ The steps are:
 1. Visit <https://github.com/> and create an account.
 2. Once you are logged in, click the **+** link in the top toolbar and select **New repository**.
 3. Fill in all the fields on this form. While these are not compulsory, they are strongly recommended.
-
    - Enter a new repository name (e.g., _express-locallibrary-tutorial_), and description (e.g., "Local Library website written in Express (Node)".
    - Choose **Node** in the _Add .gitignore_ selection list.
    - Choose your preferred license in the _Add license_ selection list.
@@ -471,7 +472,6 @@ We are choosing to use Glitch for several reasons:
 - The skills and concepts you will learn when using Glitch are transferrable.
 - The service and plan limitations do not really impact us using Glitch for the tutorial.
   For example:
-
   - The starter plan only offers 1000 "project hours" per month, which is reset monthly.
     This is used when you're actively editing the site or if someone is accessing it.
     If no one is accessing or editing the site it will sleep.
@@ -789,16 +789,13 @@ That's the end of this tutorial on setting up Express apps in production, and al
 - [Production best practices: performance and reliability](https://expressjs.com/en/advanced/best-practice-performance.html) (Express docs)
 - [Production Best Practices: Security](https://expressjs.com/en/advanced/best-practice-security.html) (Express docs)
 - Railway Docs
-
   - [CLI](https://docs.railway.com/guides/cli)
 
 - DigitalOcean
-
   - [Express](https://www.digitalocean.com/community/tutorials?q=express) tutorials
   - [Node.js](https://www.digitalocean.com/community/tutorials?q=node.js) tutorials
 
 - Heroku
-
   - [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs) (Heroku docs)
   - [Deploying Node.js Applications on Heroku](https://devcenter.heroku.com/articles/deploying-nodejs) (Heroku docs)
   - [Heroku Node.js Support](https://devcenter.heroku.com/articles/nodejs-support) (Heroku docs)

@@ -1,5 +1,6 @@
 ---
-title: Forwarded
+title: Forwarded header
+short-title: Forwarded
 slug: Web/HTTP/Reference/Headers/Forwarded
 page-type: http-header
 spec-urls: https://datatracker.ietf.org/doc/html/rfc7239
@@ -46,10 +47,8 @@ This can be done by adding a new `Forwarded` header to the end of the header blo
 ## Directives
 
 - `by` {{optional_inline}}
-
   - : The interface where the request came in to the proxy server.
     The identifier can be:
-
     - an obfuscated identifier (such as "hidden" or "secret").
       This should be treated as the default.
     - an IP address (v4 or v6, optionally with a port, and ipv6 quoted and enclosed in square brackets)

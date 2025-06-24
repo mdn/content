@@ -1,5 +1,6 @@
 ---
-title: "CSP: script-src"
+title: "Content-Security-Policy: script-src directive"
+short-title: script-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/script-src
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.script-src
@@ -41,7 +42,6 @@ This directive may have one of the following values:
 - `'none'`
   - : No resources of this type may be loaded. The single quotes are mandatory.
 - `<source-expression-list>`
-
   - : A space-separated list of _source expression_ values. Resources of this type may be loaded if they match any of the given source expressions. For this directive, any of the source expression values listed in [Fetch directive syntax](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax) are applicable.
 
 ## Examples
@@ -217,7 +217,6 @@ If a page has a CSP header and `'unsafe-eval'` isn't specified with the `script-
 - {{jsxref("Global_Objects/eval", "eval()")}}
 - {{jsxref("Function", "Function()")}}
 - When passing a string literal like to methods like: `setTimeout("alert(\"Hello World!\");", 500);`
-
   - {{domxref("Window.setTimeout", "setTimeout()")}}
   - {{domxref("Window.setInterval", "setInterval()")}}
   - {{domxref("Window.setImmediate", "setImmediate()")}}

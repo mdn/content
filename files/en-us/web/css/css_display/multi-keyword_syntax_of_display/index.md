@@ -1,5 +1,6 @@
 ---
 title: Using the multi-keyword syntax with CSS display
+short-title: Using multi-keyword syntax
 slug: Web/CSS/CSS_display/multi-keyword_syntax_of_display
 page-type: guide
 ---
@@ -151,7 +152,7 @@ The elements that we should focus on are the "parent", "child", and "sibling" `<
 What's notable about this layout is that there is no content between the parent and child elements, and the child element has a top margin applied.
 You might expect the top margin to effectively push the child element down within the parent element, but what happens instead is something called [_margin collapse_](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing).
 In this case, the margin of the child element extends well above the parent's bounding box and pushes the parent element further down the page.
-This is easier to see if you inspect the box model of the child element [in your browser's developer tools](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#use_browser_devtools_to_view_the_box_model).
+This is easier to see if you inspect the box model of the child element [in your browser's developer tools](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#using_browser_devtools_to_view_the_box_model).
 
 Change the selected option in the `<select>` element to see the effect of different `display` values.
 You can use any value with `flow-root` to create a new formatting context for the parent, making the child element margin relative to its parent's outer edge and avoiding the margin collapse.
@@ -159,9 +160,9 @@ Changing between `display: flow-root` and `display: block flow-root` will achiev
 
 ```js hidden
 function changeDisplayType() {
-  var parentDiv = document.getElementById("parent");
-  var siblingDiv = document.getElementById("sibling");
-  var displayType = document.getElementById("displayType").value;
+  const parentDiv = document.getElementById("parent");
+  const siblingDiv = document.getElementById("sibling");
+  const displayType = document.getElementById("displayType").value;
 
   parentDiv.style.display = displayType;
   siblingDiv.style.display = displayType;
@@ -263,16 +264,16 @@ An element with `display: inline-block` however, will also contain floats. It co
 
 The single values of `display` are described in the specification as legacy values, and currently you gain no benefit from using the multi-keyword versions, as there is a direct mapping for each multi-keyword version to a legacy version, as demonstrated in the table above.
 
-To deal with single values of `display` [the specification](https://www.w3.org/TR/css-display-3/#outer-role) explains what to do if only the outer value of `block` or `inline` is used:
+To deal with single values of `display` [the specification](https://drafts.csswg.org/css-display/#outer-role) explains what to do if only the outer value of `block` or `inline` is used:
 
 > "If a `<display-outside>` value is specified but `<display-inside>` is omitted, the element's inner display type defaults to flow."
 
 This means that the behavior is exactly as it is in a single value world. If you specify `display: block` or `display: inline`, that changes the outer display value of the box but any children continue in normal flow.
-If only an inner value of `flex`, `grid`, or `flow-root` is specified then [the specification](https://www.w3.org/TR/css-display-3/#inner-model) explains that the outer value should be set to `block`:
+If only an inner value of `flex`, `grid`, or `flow-root` is specified then [the specification](https://drafts.csswg.org/css-display/#inner-model) explains that the outer value should be set to `block`:
 
 > "If a `<display-inside>` value is specified but `<display-outside>` is omitted, the element's outer display type defaults to block—except for ruby, which defaults to inline."
 
-Finally, we have some legacy [pre-composed inline-level values](https://www.w3.org/TR/css-display-3/#legacy-display) of:
+Finally, we have some legacy [pre-composed inline-level values](https://drafts.csswg.org/css-display/#legacy-display) of:
 
 - `inline-block`
 - `inline-table`

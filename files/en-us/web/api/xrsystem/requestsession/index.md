@@ -28,9 +28,7 @@ requestSession(mode, options)
 ### Parameters
 
 - `mode`
-
   - : A {{jsxref("String")}} defining the XR session mode. The supported modes are:
-
     - {{Experimental_Inline}} `immersive-ar`: The session's output will be given exclusive access to the immersive device,
       but the rendered content will be blended with the real-world environment.
       The session's {{DOMxRef("XRSession.environmentBlendMode", "environmentBlendMode")}} indicates the method
@@ -45,7 +43,6 @@ requestSession(mode, options)
       available on any {{Glossary("user agent")}} offering WebXR API support.
 
 - `options` {{Optional_Inline}}
-
   - : An object to configure the {{domxref("XRSession")}}. If none are included, the device will use a default feature configuration for all options.
     - `requiredFeatures` {{Optional_Inline}}: An array of values which the returned {{domxref("XRSession")}}
       _must_ support. See [Session features](#session_features) below.

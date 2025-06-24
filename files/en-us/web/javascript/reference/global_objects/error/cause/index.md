@@ -1,5 +1,6 @@
 ---
 title: "Error: cause"
+short-title: cause
 slug: Web/JavaScript/Reference/Global_Objects/Error/cause
 page-type: javascript-instance-data-property
 browser-compat: javascript.builtins.Error.cause

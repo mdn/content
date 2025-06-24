@@ -18,7 +18,7 @@ The value of `this` in JavaScript depends on how a function is invoked (runtime 
 ```js interactive-example
 const test = {
   prop: 42,
-  func: function () {
+  func() {
     return this.prop;
   },
 };
@@ -261,7 +261,8 @@ In the global execution context (outside of any functions or classes; may be ins
 
 At the top level of a script, `this` refers to {{jsxref("globalThis")}} whether in strict mode or not. This is generally the same as the global object — for example, if the source is put inside an HTML [`<script>`](/en-US/docs/Web/HTML/Reference/Elements/script) element and executed as a script, `this === window`.
 
-> **Note:** `globalThis` is generally the same concept as the global object (i.e., adding properties to `globalThis` makes them global variables) — this is the case for browsers and Node — but hosts are allowed to provide a different value for `globalThis` that's unrelated to the global object.
+> [!NOTE]
+> `globalThis` is generally the same concept as the global object (i.e., adding properties to `globalThis` makes them global variables) — this is the case for browsers and Node — but hosts are allowed to provide a different value for `globalThis` that's unrelated to the global object.
 
 ```js
 // In web browsers, the window object is also the global object:

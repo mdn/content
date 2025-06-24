@@ -1,5 +1,6 @@
 ---
 title: Intl.NumberFormat.prototype.formatToParts()
+short-title: formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatToParts
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.NumberFormat.formatToParts

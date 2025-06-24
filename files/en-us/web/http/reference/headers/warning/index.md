@@ -1,5 +1,6 @@
 ---
-title: Warning
+title: Warning header
+short-title: Warning
 slug: Web/HTTP/Reference/Headers/Warning
 page-type: http-header
 status:
@@ -44,9 +45,7 @@ Warning: <warn-code> <warn-agent> <warn-text> [<warn-date>]
 ## Directives
 
 - `<warn-code>`
-
   - : A three-digit warning number. The first digit indicates whether the `Warning` is required to be deleted from a stored response after validation.
-
     - `1xx` warn-codes describe the freshness or validation status of the response and will be deleted by a cache after successful validation.
     - `2xx` warn-codes describe some aspect of the representation that is not rectified by a validation and will not be deleted by a cache after validation unless a full response is sent.
 

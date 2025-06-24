@@ -144,7 +144,7 @@ stripTags("<p><em>lorem</em> <strong>ipsum</strong></p>"); // 'lorem ipsum'
 ```
 
 > [!WARNING]
-> This is for demonstration only — it doesn't handle `>` in attribute values. Use a proper HTML sanitizer instead.
+> This is for demonstration only — it doesn't handle `>` in attribute values. Use a proper HTML sanitizer like the [HTML sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) instead.
 
 ### Locating Markdown paragraphs
 

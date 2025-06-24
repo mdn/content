@@ -28,13 +28,9 @@ decodingInfo(configuration)
 ### Parameters
 
 - `configuration`
-
   - : An object with a property `type`, _either_ a `video` or `audio` property containing a configuration of the appropriate type, and optionally a `keySystemConfiguration` when decoding media encrypted with a key system: <!-- MediaDecodingConfiguration in the spec -->
-
     - `type`
-
       - : The type of media being tested. This takes one of three values:
-
         - `file`
           - : Represents a configuration that is meant to be used for a plain file playback.
         - `media-source`
@@ -43,10 +39,8 @@ decodingInfo(configuration)
           - : Represents a configuration that is meant to be received using {{domxref("RTCPeerConnection")}} (not allowed when `keySystemConfiguration` is set).
 
     - `video`
-
       - : Configuration object for a video media source.
         This has the following properties: <!-- VideoConfiguration in the spec -->
-
         - `contentType`
           - : String containing a valid video MIME type, and (optionally) a [`codecs` parameter](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter).
         - `width`
@@ -59,10 +53,8 @@ decodingInfo(configuration)
           - : The number of frames making up one second of video playback.
 
     - `audio`
-
       - : Configuration object for an audio media source.
         This has the following properties: <!-- AudioConfiguration in the spec -->
-
         - `contentType`
           - : String containing a valid audio MIME type, and (optionally) a [`codecs` parameter](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter).
         - `channels`
@@ -73,29 +65,24 @@ decodingInfo(configuration)
           - : The number of audio samples making up one second of the audio file.
 
     - `keySystemConfiguration` {{optional_inline}}
-
       - : Object specifying the key system configuration for encrypted media.
 
-        > **Note:** [`Navigator.requestMediaKeySystemAccess()`](/en-US/docs/Web/API/Navigator/requestMediaKeySystemAccess) takes arrays some of the same data types in its `supportedConfigurations` argument.
+        > [!NOTE]
+        > [`Navigator.requestMediaKeySystemAccess()`](/en-US/docs/Web/API/Navigator/requestMediaKeySystemAccess) takes arrays some of the same data types in its `supportedConfigurations` argument.
 
         If specified, the [`type`](#type) must be `media-source` or `file` (not `webrtc`).
         This has the following properties: <!-- MediaCapabilitiesKeySystemConfiguration in the spec -->
-
         - `keySystem`
-
           - : A string identifying the media key system.
             For example `org.w3.clearkey` or `com.widevine.alpha`.
 
         - `initDataType` {{optional_inline}}
-
           - : A string indicating the data type name the initialization data format, such as `"cenc"`, `"keyids"` and `"webm"`.
-            Allowed names are defined in the [Encrypted Media Extensions Initialization Data Format Registry](https://www.w3.org/TR/eme-initdata-registry/).
+            Allowed names are defined in the [Encrypted Media Extensions Initialization Data Format Registry](https://w3c.github.io/encrypted-media/format-registry/initdata/).
 
         - `distinctiveIdentifier` {{optional_inline}}
-
           - : A string indicating whether the implementation may use "distinctive identifiers" (or distinctive permanent identifiers) for any operations associated with any object created from this configuration.
             The allowed values are:
-
             - `required`
               - : The returned object must support this feature.
             - `optional`
@@ -105,10 +92,8 @@ decodingInfo(configuration)
               - : The returned object must not support or use this feature.
 
         - `persistentState` {{optional_inline}}
-
           - : A string indicating whether the returned object must be able to persist session data or any other type of state.
             The allowed values are:
-
             - `required`
               - : The returned object must support this feature.
             - `optional`
@@ -119,10 +104,8 @@ decodingInfo(configuration)
                 Only "temporary" sessions may be created when persistent state is not allowed.
 
         - `sessionTypes` {{optional_inline}}
-
           - : An array of strings indicating the session types that must be supported.
             Permitted values include:
-
             - `temporary`
               - : A session for which the license, key(s) and record of or data related to the session are not persisted.
                 The application does not need to manage such storage.
@@ -132,10 +115,8 @@ decodingInfo(configuration)
                 A record of the license and associated keys persists even if the license is destroyed, providing an attestation that the license and key(s) it contains are no longer usable by the client.
 
         - `audio` {{optional_inline}}
-
           - : The audio key system track configuration associated with the [`audio` configuration](#audio) above.
             If set, then the [`audio` configuration](#audio) must also be set.
-
             - `encryptionScheme`
               - : The encryption scheme associated with the content type, such as `cenc`, `cbcs`, `cbcs-1-9`.
                 This value should be set by an application (it defaults to `null`, indicating that any encryption scheme may be used).
@@ -144,10 +125,8 @@ decodingInfo(configuration)
                 The empty string indicates that any ability to decrypt and decode the content type is acceptable.
 
         - `video` {{optional_inline}}
-
           - : The video key system track configuration associated with the [`video` configuration](#video) above.
             If set, then the [`video` configuration](#video) must also be set.
-
             - `encryptionScheme`
               - : The encryption scheme associated with the content type, such as `cenc`, `cbcs`, `cbcs-1-9`.
                 This value should be set by an application (it defaults to `null`, indicating that any encryption scheme may be used).
@@ -174,11 +153,9 @@ All supported audio codecs report `powerEfficient` as true.
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-
   - : Thrown if the `configuration` passed to the `decodingInfo()` method is invalid, either because the type is not video or audio, the `contentType` is not a valid codec MIME type, the media decoding configuration is not a valid value for the `type` (file, media-source, or webrtc), or any other error in the media configuration passed to the method, including omitting any values.
 
 - `InvalidStateError` {{domxref("DOMException")}}
-
   - : The method is called in a worker when [`configuration.keySystemConfiguration`](#keysystemconfiguration) is defined.
 
 - `SecurityError` {{domxref("DOMException")}}

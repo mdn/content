@@ -69,7 +69,7 @@ function parseLog(entry) {
     entry,
   ).groups;
   return `${author} committed on ${new Date(
-    parseInt(timestamp) * 1000,
+    parseInt(timestamp, 10) * 1000,
   ).toLocaleString()}`;
 }
 

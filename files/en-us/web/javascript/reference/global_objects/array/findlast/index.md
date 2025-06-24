@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.findLast()
+short-title: findLast()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLast
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.findLast
@@ -154,6 +155,7 @@ const array = [0, 1, , , , 5, 6];
 // Shows all indexes, not just those with assigned values
 array.findLast((value, index) => {
   console.log(`Visited index ${index} with value ${value}`);
+  return false;
 });
 // Visited index 6 with value 6
 // Visited index 5 with value 5
@@ -172,6 +174,7 @@ array.findLast((value, index) => {
   }
   // Element 5 is still visited even though deleted
   console.log(`Visited index ${index} with value ${value}`);
+  return false;
 });
 // Deleting array[5] with value 5
 // Visited index 6 with value 6

@@ -2,12 +2,10 @@
 title: ScrollTimeline
 slug: Web/API/ScrollTimeline
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.ScrollTimeline
 ---
 
-{{APIRef("Web Animations")}}{{SeeCompatTable}}
+{{APIRef("Web Animations")}}
 
 The **`ScrollTimeline`** interface of the {{domxref("Web Animations API", "Web Animations API", "", "nocode")}} represents a scroll progress timeline (see [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) for more details).
 
@@ -17,16 +15,16 @@ Pass a `ScrollTimeline` instance to the {{domxref("Animation.Animation", "Animat
 
 ## Constructor
 
-- {{domxref("ScrollTimeline.ScrollTimeline", "ScrollTimeline()")}} {{Experimental_Inline}}
+- {{domxref("ScrollTimeline.ScrollTimeline", "ScrollTimeline()")}}
   - : Creates a new `ScrollTimeline` object instance.
 
 ## Instance properties
 
 _This interface also inherits the properties of its parent, {{domxref("AnimationTimeline")}}._
 
-- {{domxref("ScrollTimeline.source", "source")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("ScrollTimeline.source", "source")}} {{ReadOnlyInline}}
   - : Returns a reference to the scrollable element (_scroller_) whose scroll position is driving the progress of the timeline and therefore the animation.
-- {{domxref("ScrollTimeline.axis", "axis")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("ScrollTimeline.axis", "axis")}} {{ReadOnlyInline}}
   - : Returns an enumerated value representing the scroll axis that is driving the progress of the timeline.
 
 ## Instance methods

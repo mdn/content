@@ -1,5 +1,6 @@
 ---
-title: Sec-WebSocket-Version
+title: Sec-WebSocket-Version header
+short-title: Sec-WebSocket-Version
 slug: Web/HTTP/Reference/Headers/Sec-WebSocket-Version
 page-type: http-header
 browser-compat: http.headers.Sec-WebSocket-Version

@@ -53,19 +53,15 @@ Every `combobox` must have an accessible name. If using an {{HTMLElement('input'
 ### Keyboard interactions
 
 - <kbd>Down Arrow</kbd>
-
   - : Moves focus to the next option, or to the first option if none was selected.
 
 - <kbd>Alt</kbd> + <kbd>Down Arrow</kbd> (Optional)
-
   - : If the popup is available but not displayed, displays the popup without moving focus.
 
 - <kbd>Up Arrow</kbd>
-
   - : Moves focus to the previous option. Moving focus to the first option if focus was originally on the last option.
 
 - <kbd>Alt</kbd> + <kbd>Up Arrow</kbd> (Optional)
-
   - : If the popup has focus, returns focus to the combobox, otherwise it closes the popup.
 
 - <kbd>Enter</kbd>
@@ -111,5 +107,4 @@ Every `combobox` must have an accessible name. If using an {{HTMLElement('input'
 - [ARIA: `list` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/list_role)
 - [ARIA: `listitem` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listitem_role)
 - [ARIA Best Practices – Combobox](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/)
-- [ARIA Role Model – Combobox](https://www.w3.org/TR/wai-aria-1.2/#combobox)
 - [Accessible combobox module](https://dequelabs.github.io/combobo/demo/) examples by Deque

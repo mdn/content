@@ -59,21 +59,18 @@ clip-path: shape(
 ### Parameters
 
 - [`<fill-rule>`](/en-US/docs/Web/SVG/Reference/Attribute/fill-rule) {{optional_inline}}
-
   - : Specifies how overlapping regions of a shape should be filled. The possible values include:
-
     - `nonzero`: A point is considered inside the shape if a ray drawn from the point crosses more left-to-right than right-to-left path segments, resulting in a non-zero count. This is the default value when `<fill-rule>` is omitted.
 
     - `evenodd`: A point is considered to be inside the shape if a ray drawn from the point crosses an odd number of path segments. This means that for each time the ray enters the shape, it has not exited an equal number of times, indicating an odd count of entries without corresponding exits.
 
-    > **Warning:** `<fill-rule>` is not supported in {{cssxref("offset-path")}} and using it invalidates the property.
+    > [!WARNING]
+    > `<fill-rule>` is not supported in {{cssxref("offset-path")}} and using it invalidates the property.
 
 - `from <coordinate-pair>`
-
   - : Defines the starting point of the first `<shape-command>` as a pair of coordinates that are measured from the top-left corner of the [reference box](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes#the_reference_box). The coordinates are specified as space-separated `<x> <y>` {{cssxref("&lt;length-percentage&gt;")}} values representing the left offset and top offset, respectively. Percentage values are relative to the width and height of the element's reference box, respectively. Add a comma after this parameter.
 
 - `<shape-command>`
-
   - : Specifies a list of one or more comma-separated commands that define the shape, using syntax similar to [SVG path commands](/en-US/docs/Web/SVG/Reference/Attribute/d#path_commands). Commands include `<move-command>`, `<line-command>`, `<hv-line-command>`, `<curve-command>`, `<smooth-command>`, `<arc-command>`, and `close`. Each command's starting point is the previous command's ending point, with the first point of the shape defined by the [`from <coordinate-pair>`](#from_coordinate-pair) parameter.
 
     The syntax of most shape commands is a keyword providing a directive, such as `move` or `line`, followed by the `by` or `to` keyword, and a set of coordinates.
@@ -94,12 +91,10 @@ clip-path: shape(
     `<hv-line-command>`: Specified as `[hline | vline] [by | to] <length-percentage>`. This command adds a horizontal (`hline`) or vertical (`vline`) [LineTo command](/en-US/docs/Web/SVG/Reference/Attribute/d#lineto_path_commands) to the list of shape commands. With `hline`, a horizontal line is drawn from the command's starting point `to` or `by` the `x` position defined by `<length-percentage>`. With `vline`, a vertical line is drawn from the command's starting point `to` or `by` the `y` position defined by `<length-percentage>`. The `by` or `to` keyword determines the relative or absolute ending point, respectively. This command is equivalent to `<line-command>` with one coordinate value set by the single `<length-percentage>` and the other coordinate value remaining unchanged from its starting command.
 
     `<curve-command>`: Specified as `curve [by | to] <coordinate-pair> with <coordinate-pair> [/ <coordinate-pair>]`. This command adds a [Bézier curve command](/en-US/docs/Web/SVG/Reference/Attribute/d#cubic_bézier_curve) to the list of shape commands. The `by` or `to` keyword determines whether the ending point of the curve, specified by the first `<coordinate-pair>`, is relative or absolute, respectively. The `with` keyword specifies the control points of the Bézier curve.
-
     - If only a single `<coordinate-pair>` is provided, the command draws a [quadratic Bézier curve](/en-US/docs/Web/SVG/Reference/Attribute/d#quadratic_bézier_curve), which is defined by three points (the start point, control point, and end point).
     - If two `<coordinate-pair>` values are provided, the command draws a cubic Bézier curve, which is defined by four points (the start point, two control points, and the end point).
 
     `<smooth-command>`: Specified as `smooth [by | to] <coordinate-pair> [with <coordinate-pair>]`. This command adds a smooth [Bézier curve command](/en-US/docs/Web/SVG/Reference/Attribute/d#cubic_bézier_curve) to the list of shape commands. The `by` or `to` keyword determines whether the ending point of the curve, specified by the first `<coordinate-pair>`, is relative or absolute, respectively.
-
     - If `with <coordinate-pair>` is omitted, the command draws a smooth quadratic Bézier curve, which uses the previous control point and the current endpoint to define the curve.
     - If the optional `with` keyword is included, it specifies the control points of the curve through `<coordinate-pair>`, drawing a smooth cubic Bézier curve defined by the previous control point, the current control point, and the current endpoint.
 
@@ -110,13 +105,11 @@ clip-path: shape(
     The elliptical arc curve command defines two possible ellipses, which intersect both the starting and ending points, and each can be traced clockwise or counterclockwise, resulting in four possible arcs depending on the arc size, direction, and angle. The `of` keyword specifies the size of the ellipse from which the arc is taken: the first `<length-percentage>` provides the horizontal radius of the ellipse, and the second `<length-percentage>` provides the vertical radius.
 
     Specify the following parameters to choose which of the four arcs to use:
-
     - `<arc-sweep>`: Indicates whether the desired arc is the one traced around the ellipse clockwise (`cw`) or counterclockwise (`ccw`). If omitted, this defaults to `ccw`.
     - `<arc-size>`: Indicates whether the desired arc is the larger (`large`) or smaller (`small`) of the two arcs. If omitted, this defaults to `small`.
     - `<angle>`: Specifies the angle, in degrees, by which to rotate the ellipse relative to the x-axis. A positive angle rotates the ellipse clockwise, and a negative angle rotates it counterclockwise. If omitted, this defaults to `0deg`.
 
     Special situations are handled as follows:
-
     - If only one `<length-percentage>` is provided, the same value is used for both the horizontal and vertical radii, effectively creating a circle. In this case, `<arc-size>` and `<angle>` have no affect.
     - If either radius is zero, the command is equivalent to a `<line-command>` to the ending point.
     - If either radius is negative, its absolute value is used instead.

@@ -304,13 +304,15 @@ The `Document` interface for HTML documents inherit from the {{DOMxRef("HTMLDocu
   - : Returns the current value of the current range for a formatting command.
 - {{DOMxRef("Document.write()")}} {{deprecated_inline}}
   - : Writes text in a document.
-- {{DOMxRef("Document.writeln()")}}
+- {{DOMxRef("Document.writeln()")}} {{deprecated_inline}}
   - : Writes a line of text in a document.
 
 ## Static methods
 
 _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventTarget")}} interfaces._
 
+- {{domxref("Document/parseHTML_static", "Document.parseHTML()")}}
+  - : Creates a new `Document` object from a string of HTML in an XSS-safe manner with sanitization.
 - {{domxref("Document/parseHTMLUnsafe_static", "Document.parseHTMLUnsafe()")}}
   - : Creates a new `Document` object from a string of HTML without performing sanitization.
     The string may contain declarative shadow roots.

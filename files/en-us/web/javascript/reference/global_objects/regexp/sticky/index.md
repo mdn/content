@@ -1,5 +1,6 @@
 ---
 title: RegExp.prototype.sticky
+short-title: sticky
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.RegExp.sticky
@@ -13,7 +14,7 @@ The **`sticky`** accessor property of {{jsxref("RegExp")}} instances returns whe
 
 ```js interactive-example
 const str1 = "table football";
-const regex1 = new RegExp("foo", "y");
+const regex1 = /foo/y;
 
 regex1.lastIndex = 6;
 

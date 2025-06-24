@@ -19,9 +19,7 @@ unsubscribe(subscriptions)
 ### Parameters
 
 - `subscriptions`
-
   - : An object list, each object containing:
-
     - `name`
       - : A string with the name of a cookie.
     - `url`

@@ -1,5 +1,6 @@
 ---
 title: Object.create()
+short-title: create()
 slug: Web/JavaScript/Reference/Global_Objects/Object/create
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.create
@@ -14,7 +15,7 @@ The **`Object.create()`** static method creates a new object, using an existing 
 ```js interactive-example
 const person = {
   isHuman: false,
-  printIntroduction: function () {
+  printIntroduction() {
     console.log(`My name is ${this.name}. Am I human? ${this.isHuman}`);
   },
 };

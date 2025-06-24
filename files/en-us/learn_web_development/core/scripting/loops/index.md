@@ -240,7 +240,6 @@ Here we have:
 
 1. The keyword `for`, followed by some parentheses.
 2. Inside the parentheses we have three items, separated by semicolons:
-
    1. An **initializer** — this is usually a variable set to a number, which is incremented to count the number of times the loop has run.
       It is also sometimes referred to as a **counter variable**.
    2. A **condition** — this defines when the loop should stop looping.
@@ -435,7 +434,6 @@ btn.addEventListener("click", () => {
 3. We store the value entered into the text input in a variable called `searchName`, before then emptying the text input and focusing it again, ready for the next search.
    Note that we also run the [`toLowerCase()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase) method on the string, so that searches will be case-insensitive.
 4. Now on to the interesting part, the `for...of` loop:
-
    1. Inside the loop, we first split the current contact at the colon character, and store the resulting two values in an array called `splitContact`.
    2. We then use a conditional statement to test whether `splitContact[0]` (the contact's name, again lower-cased with [`toLowerCase()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase)) is equal to the inputted `searchName`.
       If it is, we enter a string into the paragraph to report what the contact's number is, and use `break` to end the loop.
@@ -593,13 +591,11 @@ Specifically, we want you to:
 - Loop from 10 down to 0. We've provided you with an initializer — `let i = 10;`.
 - For each iteration, create a new paragraph and append it to the output `<div>`, which we've selected using `const output = document.querySelector('.output');`.
   In comments, we've provided you with three code lines that need to be used somewhere inside the loop:
-
   - `const para = document.createElement('p');` — creates a new paragraph.
   - `output.appendChild(para);` — appends the paragraph to the output `<div>`.
   - `para.textContent =` — makes the text inside the paragraph equal to whatever you put on the right-hand side, after the equals sign.
 
 - Different iteration numbers require different text to be put in the paragraph for that iteration (you'll need a conditional statement and multiple `para.textContent =` lines):
-
   - If the number is 10, print "Countdown 10" to the paragraph.
   - If the number is 0, print "Blast off!" to the paragraph.
   - For any other number, print just the number to the paragraph.
@@ -670,7 +666,7 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function () {
+reset.addEventListener("click", () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
@@ -678,7 +674,7 @@ reset.addEventListener("click", function () {
   updateCode();
 });
 
-solution.addEventListener("click", function () {
+solution.addEventListener("click", () => {
   if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
     solution.value = "Hide solution";
@@ -770,7 +766,6 @@ Specifically, we want you to:
 
 - Write a loop that will iterate through the `people` array.
 - During each loop iteration, check if the current array item is equal to "Phil" or "Lola" using a conditional statement:
-
   - If it is, concatenate the array item to the end of the `refused` paragraph's `textContent`, followed by a comma and a space.
   - If it isn't, concatenate the array item to the end of the `admitted` paragraph's `textContent`, followed by a comma and a space.
 
@@ -851,7 +846,7 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function () {
+reset.addEventListener("click", () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
@@ -859,7 +854,7 @@ reset.addEventListener("click", function () {
   updateCode();
 });
 
-solution.addEventListener("click", function () {
+solution.addEventListener("click", () => {
   if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
     solution.value = "Hide solution";

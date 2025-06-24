@@ -22,7 +22,7 @@ The CORS mechanism supports secure cross-origin requests and data transfers betw
 This [cross-origin sharing standard](https://fetch.spec.whatwg.org/#http-cors-protocol) can enable cross-origin HTTP requests for:
 
 - Invocations of `fetch()` or `XMLHttpRequest`, as discussed above.
-- Web Fonts (for cross-domain font usage in `@font-face` within CSS), [so that servers can deploy TrueType fonts that can only be loaded cross-origin and used by websites that are permitted to do so.](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)
+- Web Fonts (for cross-domain font usage in `@font-face` within CSS), as described in the [font fetching requirements](https://drafts.csswg.org/css-fonts/#font-fetching-requirements), so that servers can deploy TrueType fonts that can only be loaded cross-origin and used by websites that are permitted to do so.
 - [WebGL textures](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
 - Images/video frames drawn to a canvas using {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}}.
 - [CSS Shapes from images.](/en-US/docs/Web/CSS/CSS_shapes/Shapes_from_images)
@@ -50,13 +50,11 @@ The motivation is that the {{HTMLElement("form")}} element from HTML 4.0 (which 
 A _simple request_ is one that **meets all the following conditions**:
 
 - One of the allowed methods:
-
   - {{HTTPMethod("GET")}}
   - {{HTTPMethod("HEAD")}}
   - {{HTTPMethod("POST")}}
 
 - Apart from the headers automatically set by the user agent (for example, {{HTTPHeader("Connection")}}, {{HTTPHeader("User-Agent")}}, or the {{glossary("Forbidden request header", "forbidden request headers")}}), the only headers which are allowed to be manually set are the [CORS-safelisted request-headers](/en-US/docs/Glossary/CORS-safelisted_request_header), which are:
-
   - {{HTTPHeader("Accept")}}
   - {{HTTPHeader("Accept-Language")}}
   - {{HTTPHeader("Content-Language")}}
@@ -64,7 +62,6 @@ A _simple request_ is one that **meets all the following conditions**:
   - {{HTTPHeader("Range")}} (only with a [single range header value](https://fetch.spec.whatwg.org/#simple-range-header-value); e.g., `bytes=256-` or `bytes=127-255`)
 
 - The only type/subtype combinations allowed for the {{Glossary("MIME type","media type")}} specified in the {{HTTPHeader("Content-Type")}} header are:
-
   - `application/x-www-form-urlencoded`
   - `multipart/form-data`
   - `text/plain`
@@ -500,7 +497,6 @@ Examples of this usage can be [found above](#preflighted_requests).
 - [How to run Chrome browser without CORS](https://alfilatov.com/posts/run-chrome-without-cors/)
 - [Using CORS with All (Modern) Browsers](https://www.telerik.com/blogs/using-cors-with-all-modern-browsers)
 - [Stack Overflow answer with "how to" info for dealing with common problems](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141):
-
   - How to avoid the CORS preflight
   - How to use a CORS proxy to get around _"No Access-Control-Allow-Origin header"_
   - How to fix _"Access-Control-Allow-Origin header must not be the wildcard"_

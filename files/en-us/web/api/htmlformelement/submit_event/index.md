@@ -76,7 +76,7 @@ form.addEventListener("submit", logSubmit);
 
 ### Result
 
-{{EmbedLiveSample("Examples")}}
+{{EmbedLiveSample("Examples", "", "", "", "", "", "", "allow-forms")}}
 
 ## Specifications
 

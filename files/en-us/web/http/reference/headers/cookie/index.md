@@ -1,5 +1,6 @@
 ---
-title: Cookie
+title: Cookie header
+short-title: Cookie
 slug: Web/HTTP/Reference/Headers/Cookie
 page-type: http-header
 browser-compat: http.headers.Cookie

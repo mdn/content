@@ -1,5 +1,6 @@
 ---
-title: Priority
+title: Priority header
+short-title: Priority
 slug: Web/HTTP/Reference/Headers/Priority
 page-type: http-header
 browser-compat: http.headers.Priority
@@ -50,7 +51,6 @@ Priority: u=<priority>, i
 ## Directives
 
 - `u=<priority>`
-
   - : The "urgency" (`u`) parameter specifies a priority value `<priority>` for the resource.
     The value is an integer between 0 and 7 inclusive, in descending order of priority (0 is the highest urgency).
     The default priority value for requests is 3.
@@ -65,7 +65,6 @@ Priority: u=<priority>, i
     The absence of the `Priority` header in the response indicates that the server chosen not to modify the client priority.
 
 - `i`
-
   - : The incremental (`i`) directive, if present, indicates than an HTTP response can be processed incrementally.
 
     Resources that can be processed incrementally are those where the recipient can potentially do something useful as soon as a chunk arrives, rather than waiting for the complete resource to be available.

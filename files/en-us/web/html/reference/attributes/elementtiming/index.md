@@ -13,7 +13,7 @@ This attribute may be applied to {{htmlelement("img")}}, {{SVGElement("image")}}
 
 In the DOM, this attribute is reflected as {{domxref("Element.elementTiming")}}.
 
-## Usage
+## Usage notes
 
 The value given for `elementtiming` becomes an identifier for the observed element.
 

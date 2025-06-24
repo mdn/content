@@ -16,7 +16,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("animate")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
-- {{SVGElement("discard")}}
 - {{SVGElement("set")}}
 
 ## animate, animateMotion, animateTransform, set
@@ -45,17 +44,14 @@ The `<begin-value-list>` is a semicolon-separated list of values. Each value can
 - `<offset-value>`
   - : This value defines a [clock-value](/en-US/docs/Web/SVG/Guides/Content_type#clock-value) that represents a point in time relative to the beginning of the SVG document (usually the {{domxref("Window/load_event", "load")}} or {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event). Negative values are valid.
 - `<syncbase-value>`
-
   - : This value defines a _syncbase_ and an optional offset from that _syncbase_. The element's animation start time is defined relative to the begin or active end of another animation.
 
     A valid syncbase-value consists of an ID reference to another animation element followed by a dot and either `begin` or `end` to identify whether to synchronize with the beginning or active end of the referenced animation element. An optional offset value as defined in `<offset-value>` can be appended.
 
 - `<event-value>`
-
   - : This value defines an event and an optional offset that determines the time at which the element's animation should begin. The animation start time is defined relative to the time that the specified event is fired.
 
     A valid event-value consists of an element ID followed by a dot and one of the supported events for that element. All valid events (not necessarily supported by all elements) are defined by the DOM and HTML specifications. Those are:
-
     - {{domxref("Element/focus_event", "focus")}}
     - {{domxref("Element/blur_event", "blur")}}
     - {{domxref("Element/focusin_event", "focusin")}}
@@ -93,19 +89,16 @@ The `<begin-value-list>` is a semicolon-separated list of values. Each value can
     An optional offset value as defined in `<offset-value>` can be appended.
 
 - `<repeat-value>`
-
   - : This value defines a qualified repeat event. The element animation start time is defined relative to the time that the repeat event is raised with the specified iteration value.
 
     A valid repeat value consists of an element ID followed by a dot and the function `repeat()` with an integer value specifying the number of repetitions as parameter. An optional offset value as defined in `<offset-value>` can be appended.
 
 - `<accessKey-value>`
-
   - : This value defines an access key that should trigger the animation. The element animation will begin when the user presses the specified key.
 
     A valid accessKey-value consists of the function `accessKey()` with the character to be input as parameter. An optional offset value as defined in `<offset-value>` can be appended.
 
 - `<wallclock-sync-value>`
-
   - : This value defines the animation start time as a real-world clock time.
 
     A valid wallclock-sync-value consists of the function `wallclock()` with a time value as parameter. The time syntax is based upon the syntax defined in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html).

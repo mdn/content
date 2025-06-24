@@ -380,9 +380,9 @@ Octal number syntax uses a leading zero followed by a lowercase or uppercase Lat
 Hexadecimal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "X" (`0x` or `0X`). Any character after the `0x` that is outside the range (0123456789ABCDEF) will terminate the literal sequence.
 
 ```js-nolint
-0xFFFFFFFFFFFFFFFFF // 295147905179352830000
-0x123456789ABCDEF   // 81985529216486900
-0XA                 // 10
+0xFFFFFFFFFFFFF // 4503599627370495
+0xabcdef123456  // 188900967593046
+0XA             // 10
 ```
 
 #### BigInt literal

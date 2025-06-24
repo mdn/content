@@ -146,7 +146,7 @@ For example:
 https://username:password@www.example.com:80/
 ```
 
-When included, the username and password are put between the `://` characters and the authority, with a colon between the two and an ampersand (`@`) at the end.
+When included, the username and password are put between the `://` characters and the authority, with a colon between the two and an at sign (`@`) at the end.
 
 A username and password can be included in the URL when accessing websites that use the [HTTP authentication](/en-US/docs/Web/HTTP/Guides/Authentication) security mechanism, to immediately sign in to a website and bypass the username/password dialog box that would otherwise appear to enter your credentials into.
 

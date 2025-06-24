@@ -62,69 +62,46 @@ There are three attributes provided by the {{DOMxRef("File")}} object that conta
 The following example shows a possible use of the `size` property:
 
 ```html
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8" />
-    <title>File(s) size</title>
-  </head>
+<form name="uploadForm">
+  <div>
+    <input id="uploadInput" type="file" multiple />
+    <label for="fileNum">Selected files:</label>
+    <output id="fileNum">0</output>;
+    <label for="fileSize">Total size:</label>
+    <output id="fileSize">0</output>
+  </div>
+  <div><input type="submit" value="Send file" /></div>
+</form>
+```
 
-  <body>
-    <form name="uploadForm">
-      <div>
-        <input id="uploadInput" type="file" multiple />
-        <label for="fileNum">Selected files:</label>
-        <output id="fileNum">0</output>;
-        <label for="fileSize">Total size:</label>
-        <output id="fileSize">0</output>
-      </div>
-      <div><input type="submit" value="Send file" /></div>
-    </form>
+```js
+const uploadInput = document.getElementById("uploadInput");
+uploadInput.addEventListener(
+  "change",
+  () => {
+    // Calculate total size
+    let numberOfBytes = 0;
+    for (const file of uploadInput.files) {
+      numberOfBytes += file.size;
+    }
 
-    <script>
-      const uploadInput = document.getElementById("uploadInput");
-      uploadInput.addEventListener(
-        "change",
-        () => {
-          // Calculate total size
-          let numberOfBytes = 0;
-          for (const file of uploadInput.files) {
-            numberOfBytes += file.size;
-          }
+    // Approximate to the closest prefixed unit
+    const units = ["B", "KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB"];
+    const exponent = Math.min(
+      Math.floor(Math.log(numberOfBytes) / Math.log(1024)),
+      units.length - 1,
+    );
+    const approx = numberOfBytes / 1024 ** exponent;
+    const output =
+      exponent === 0
+        ? `${numberOfBytes} bytes`
+        : `${approx.toFixed(3)} ${units[exponent]} (${numberOfBytes} bytes)`;
 
-          // Approximate to the closest prefixed unit
-          const units = [
-            "B",
-            "KiB",
-            "MiB",
-            "GiB",
-            "TiB",
-            "PiB",
-            "EiB",
-            "ZiB",
-            "YiB",
-          ];
-          const exponent = Math.min(
-            Math.floor(Math.log(numberOfBytes) / Math.log(1024)),
-            units.length - 1,
-          );
-          const approx = numberOfBytes / 1024 ** exponent;
-          const output =
-            exponent === 0
-              ? `${numberOfBytes} bytes`
-              : `${approx.toFixed(3)} ${
-                  units[exponent]
-                } (${numberOfBytes} bytes)`;
-
-          document.getElementById("fileNum").textContent =
-            uploadInput.files.length;
-          document.getElementById("fileSize").textContent = output;
-        },
-        false,
-      );
-    </script>
-  </body>
-</html>
+    document.getElementById("fileNum").textContent = uploadInput.files.length;
+    document.getElementById("fileSize").textContent = output;
+  },
+  false,
+);
 ```
 
 ## Using hidden file input elements using the click() method
@@ -134,13 +111,14 @@ You can hide the admittedly ugly file {{HTMLElement("input")}} element and prese
 Consider this HTML:
 
 ```html
-<input
-  type="file"
-  id="fileElem"
-  multiple
-  accept="image/*"
-  style="display:none" />
+<input type="file" id="fileElem" multiple accept="image/*" />
 <button id="fileSelect" type="button">Select some files</button>
+```
+
+```css
+#fileElem {
+  display: none;
+}
 ```
 
 The code that handles the `click` event can look like this:
@@ -251,9 +229,7 @@ Let's say you're developing the next great photo-sharing website and want to use
 
 ```js
 function handleFiles(files) {
-  for (let i = 0; i < files.length; i++) {
-    const file = files[i];
-
+  for (const file of files) {
     if (!file.type.startsWith("image/")) {
       continue;
     }
@@ -301,16 +277,17 @@ This example uses object URLs to display image thumbnails. In addition, it displ
 The HTML that presents the interface looks like this:
 
 ```html
-<input
-  type="file"
-  id="fileElem"
-  multiple
-  accept="image/*"
-  style="display:none" />
+<input type="file" id="fileElem" multiple accept="image/*" />
 <a href="#" id="fileSelect">Select some files</a>
 <div id="fileList">
   <p>No files selected!</p>
 </div>
+```
+
+```css
+#fileElem {
+  display: none;
+}
 ```
 
 This establishes our file {{HTMLElement("input")}} element as well as a link that invokes the file picker (since we keep the file input hidden to prevent that less-than-attractive user interface from being displayed). This is explained in the section [Using hidden file input elements using the click() method](#using_hidden_file_input_elements_using_the_click_method), as is the method that invokes the file picker.
@@ -344,16 +321,16 @@ function handleFiles() {
   } else {
     const list = document.createElement("ul");
     fileList.appendChild(list);
-    for (let i = 0; i < this.files.length; i++) {
+    for (const file of this.files) {
       const li = document.createElement("li");
       list.appendChild(li);
 
       const img = document.createElement("img");
-      img.src = URL.createObjectURL(this.files[i]);
+      img.src = URL.createObjectURL(file);
       img.height = 60;
       li.appendChild(img);
       const info = document.createElement("span");
-      info.textContent = `${this.files[i].name}: ${this.files[i].size} bytes`;
+      info.textContent = `${file.name}: ${file.size} bytes`;
       li.appendChild(info);
     }
   }
@@ -367,7 +344,6 @@ If the {{DOMxRef("FileList")}} object passed to `handleFiles()` is empty, we set
 1. A new unordered list ({{HTMLElement("ul")}}) element is created.
 2. The new list element is inserted into the {{HTMLElement("div")}} block by calling its {{DOMxRef("Node.appendChild()")}} method.
 3. For each {{DOMxRef("File")}} in the {{DOMxRef("FileList")}} represented by `files`:
-
    1. Create a new list item ({{HTMLElement("li")}}) element and insert it into the list.
    2. Create a new image ({{HTMLElement("img")}}) element.
    3. Set the image's source to a new object URL representing the file, using {{DOMxref("URL.createObjectURL_static", "URL.createObjectURL()")}} to create the blob URL.
@@ -397,8 +373,8 @@ Continuing with the code that built the thumbnails in the previous example, reca
 function sendFiles() {
   const imgs = document.querySelectorAll(".obj");
 
-  for (let i = 0; i < imgs.length; i++) {
-    new FileUpload(imgs[i], imgs[i].file);
+  for (const img of imgs) {
+    new FileUpload(img, img.file);
   }
 }
 ```
@@ -416,13 +392,12 @@ function FileUpload(img, file) {
   const xhr = new XMLHttpRequest();
   this.xhr = xhr;
 
-  const self = this;
   this.xhr.upload.addEventListener(
     "progress",
     (e) => {
       if (e.lengthComputable) {
         const percentage = Math.round((e.loaded * 100) / e.total);
-        self.ctrl.update(percentage);
+        this.ctrl.update(percentage);
       }
     },
     false,
@@ -431,8 +406,8 @@ function FileUpload(img, file) {
   xhr.upload.addEventListener(
     "load",
     (e) => {
-      self.ctrl.update(100);
-      const canvas = self.ctrl.ctx.canvas;
+      this.ctrl.update(100);
+      const canvas = this.ctrl.ctx.canvas;
       canvas.parentNode.removeChild(canvas);
     },
     false,

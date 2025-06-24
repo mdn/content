@@ -51,7 +51,7 @@ Alternatively, you can use {{domxref("PerformanceEntry.startTime", "startTime")}
 If you use `startTime`, you can flag any inaccuracies by checking if `renderTime` was used:
 
 ```js
-const isAccurateLCP = entry.renderTime ? true : false;
+const isAccurateLCP = Boolean(entry.renderTime);
 ```
 
 ## Specifications

@@ -173,12 +173,12 @@ Next, if supported connect the webcam source to the video element:
 if (navigator.mediaDevices) {
   navigator.mediaDevices
     .getUserMedia({ video: true, audio: false })
-    .then(function onSuccess(stream) {
+    .then((stream) => {
       const video = document.getElementById("webcam");
       video.autoplay = true;
       video.srcObject = stream;
     })
-    .catch(function onError() {
+    .catch(() => {
       alert(
         "There has been a problem retrieving the streams - are you running on file:/// or did you disallow access?",
       );
@@ -199,7 +199,7 @@ The main mechanism is outlined below:
 ```js
 navigator.mediaDevices
   .getUserMedia({ audio: true })
-  .then(function onSuccess(stream) {
+  .then((stream) => {
     const recorder = new MediaRecorder(stream);
 
     const data = [];
@@ -218,7 +218,7 @@ navigator.mediaDevices
       rec.stop();
     }, 5000);
   })
-  .catch(function onError(error) {
+  .catch((error) => {
     console.log(error.message);
   });
 ```

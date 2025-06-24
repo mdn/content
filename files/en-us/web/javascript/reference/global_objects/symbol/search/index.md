@@ -1,5 +1,6 @@
 ---
 title: Symbol.search
+short-title: search
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/search
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.search
@@ -38,7 +39,7 @@ The well-known symbol `Symbol.search`.
 ### Custom string search
 
 ```js
-class caseInsensitiveSearch {
+class CaseInsensitiveSearch {
   constructor(value) {
     this.value = value.toLowerCase();
   }
@@ -47,7 +48,7 @@ class caseInsensitiveSearch {
   }
 }
 
-console.log("foobar".search(new caseInsensitiveSearch("BaR"))); // 3
+console.log("foobar".search(new CaseInsensitiveSearch("BaR"))); // 3
 ```
 
 ## Specifications

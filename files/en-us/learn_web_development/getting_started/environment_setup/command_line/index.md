@@ -112,7 +112,6 @@ Although there's a great wealth of tools available from the command line, if you
 Enough talk — let's start looking at some terminal commands! Out of the box, here are just a few of the things the command line can do, along with the names of relevant tools in each case:
 
 - Navigate your computer's file system along with base-level tasks such as create, copy, rename, and delete:
-
   - Move around your directory (folder) structure: `cd`
   - Create directories: `mkdir`
   - Create files (and modify their metadata): `touch`
@@ -139,21 +138,21 @@ When you visit the command line you will inevitably need to navigate to a partic
 
 The `cd` command lets you Change Directory. Technically, cd isn't a program but a built-in. This means your operating system provides it out of the box, and also that you can't accidentally delete it — thank goodness! You don't need to worry too much about whether a command is built-in or not, but bear in mind that built-ins appear on all unix-based systems.
 
-To change the directory, you type `cd` into your terminal, followed by the directory you want to move to. Assuming the directory is inside your home directory, you can use `cd Desktop` (see the screenshots below).
+1. To change the directory, type `cd` into your terminal, followed by the directory you want to move to. Assuming the directory is inside your home directory, you can use `cd Desktop` (see the screenshots below).
 
-![results of the cd Desktop command being run in a variety of windows terminals - the terminal location moves into the desktop](win-terminals-cd.png)
+   ![results of the cd Desktop command being run in a variety of windows terminals - the terminal location moves into the desktop](win-terminals-cd.png)
 
-Try typing this into your system's terminal:
+2. Try typing this into your system's terminal:
 
-```bash
-cd Desktop
-```
+   ```bash
+   cd Desktop
+   ```
 
-If you want to move back up to the previous directory, you can use two dots:
+3. To move back up to the previous directory, you can use two dots. Type this now:
 
-```bash
-cd ..
-```
+   ```bash
+   cd ..
+   ```
 
 > [!NOTE]
 > A very useful terminal shortcut is using the <kbd>tab</kbd> key to autocomplete names that you know are present, rather than having to type out the whole thing. For example, after typing the above two commands, try typing `cd D` and pressing <kbd>tab</kbd> — it should autocomplete the directory name `Desktop` for you, provided it is present in the current directory. Bear this in mind as you move forward.
@@ -238,9 +237,10 @@ We've alluded to this before, but to be clear — you need to be careful with th
 Let's say you had 1000 text files in a directory, and you wanted to go through them all and only delete the ones that have a certain substring inside the filename. If you are not careful, then you might end up deleting something important, losing you a load of your work in the process.
 One good habit to get into is to write your terminal command out inside a text editor, figure out how you think it should look, and then make a backup copy of your directory and try running the command on that first, to test it.
 
-Another good tip — if you're not comfortable trying terminal commands out on your own machine, a nice safe place to try them is over at [Glitch.com](https://glitch.com/). Along with being a great place to try out web development code, the projects also give you access to a terminal, so you can run all these commands directly in that terminal, safe in the knowledge that you won't break your own machine.
+If you're not comfortable trying terminal commands out on your own machine, there are hosted online terminals available that provide safe places to practice entering commands, without risking breaking your own machine:
 
-![a double screenshot showing the glitch.com home page, and the glitch terminal emulator](glitch.png)
+- Our learning partner, [Scrimba](https://scrimba.com/home?via=mdn), features a terminal for entering commands in their learning environment. A great place to see this in action is their [Command Line Basics](https://scrimba.com/command-line-basics-c08b87ogl0/~05hu?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> course, which also provides a fun interactive introduction to navigating around the file tree and manipulating files and directories via the terminal.
+- [Glitch.com](https://glitch.com/) is a great place to try out web development code, and Glitch projects also include a terminal for running commands.
 
 A great resource for getting a quick overview of specific terminal commands is [tldr.sh](https://tldr.sh/). This is a community-driven documentation service, similar to MDN, but specific to terminal commands.
 
@@ -280,38 +280,31 @@ The pipe operator can _connect_ these inputs and outputs together, allowing us t
 
 Let's go through something a bit more complicated.
 
-We will first try to fetch the contents of MDN's "fetch" page using the `curl` command (which can be used to request content from URLs), from `https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch`.
-Try it now:
+1. We will first try to fetch the contents of MDN's "fetch" page using the `curl` command (which can be used to request content from URLs), from `https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch`. Try it now:
 
-```bash
-curl https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch
-```
+   ```bash
+   curl https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch
+   ```
 
-You won't get an output because the page has been redirected (to [/Web/API/fetch](/en-US/docs/Web/API/Window/fetch)).
-We need to explicitly tell `curl` to follow redirects using the `-L` flag.
+   You won't get an output because the page has been redirected (to [/Web/API/fetch](/en-US/docs/Web/API/Window/fetch)). We need to explicitly tell `curl` to follow redirects using the `-L` flag.
 
-Let's also look at the headers that `developer.mozilla.org` returns using `curl`'s `-I` flag, and print all the location redirects it sends to the terminal, by piping the output of `curl` into `grep` (we will ask `grep` to return all the lines that contain the word "location").
+2. Let's also look at the headers that `developer.mozilla.org` returns using `curl`'s `-I` flag, and print all the location redirects it sends to the terminal, by piping the output of `curl` into `grep` (we will ask `grep` to return all the lines that contain the word "location"). Try running the following (you'll see that there is just one redirect before we reach the final page):
 
-Try running the following (you'll see that there is just one redirect before we reach the final page):
+   ```bash
+   curl https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch -L -I | grep location
+   ```
 
-```bash
-curl https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch -L -I | grep location
-```
+   Your output should look something like this (`curl` will first output some download counters and suchlike):
 
-Your output should look something like this (`curl` will first output some download counters and suchlike):
+   ```bash
+   location: /en-US/docs/Web/API/Window/fetch
+   ```
 
-```bash
-location: /en-US/docs/Web/API/Window/fetch
-```
+3. Although contrived, we could take this result a little further and transform the `location:` line contents, adding the base origin to the start of each one so that we get complete URLs printed out. For that, we'll add `awk` to the mix (which is a programming language akin to JavaScript or Ruby or Python, just a lot older!). Try running this:
 
-Although contrived, we could take this result a little further and transform the `location:` line contents, adding the base origin to the start of each one so that we get complete URLs printed out.
-For that, we'll add `awk` to the mix (which is a programming language akin to JavaScript or Ruby or Python, just a lot older!).
-
-Try running this:
-
-```bash
-curl https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch -L -I | grep location | awk '{ print "https://developer.mozilla.org" $2 }'
-```
+   ```bash
+   curl https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch -L -I | grep location | awk '{ print "https://developer.mozilla.org" $2 }'
+   ```
 
 Your final output should look something like this:
 
@@ -378,19 +371,17 @@ Prettier can:
 
 For this article, we will install Prettier locally, as suggested in the [Prettier installation guide](https://prettier.io/docs/install.html).
 
-Once you've installed node, open up the terminal and run the following command to install Prettier (we will explain what `--save-dev` does in the next article):
+1. Once you've installed node, open up the terminal and run the following command to install Prettier (we will explain what `--save-dev` does in the next article):
 
-```bash
-npm install --save-dev prettier
-```
+   ```bash
+   npm install --save-dev prettier
+   ```
 
-You can now run the file locally using the [npx](https://docs.npmjs.com/cli/commands/npx/) tool.
-Running the command without any arguments, as with many other commands, will offer up usage and help information.
-Try this now:
+2. You can now run the file locally using the [npx](https://docs.npmjs.com/cli/commands/npx/) tool. Running the command without any arguments, as with many other commands, will offer up usage and help information. Try this now:
 
-```bash
-npx prettier
-```
+   ```bash
+   npx prettier
+   ```
 
 Your output should look something like this:
 
@@ -415,59 +406,57 @@ It'll help you to understand better how the tool is intended to be used.
 
 Let's have a quick play with Prettier, so you can see how it works.
 
-First of all, create a new directory somewhere on your file system that is easy to find. Maybe a directory called `prettier-test` on your `Desktop`.
+1. First of all, create a new directory somewhere on your file system that is easy to find. Maybe a directory called `prettier-test` on your `Desktop`.
 
-Now save the following code in a new file called `index.js`, inside your test directory:
+2. Now save the following code in a new file called `index.js`, inside your test directory:
 
-```js-nolint
-const myObj = {
-a:1,b:{c:2}}
-function printMe(obj){console.log(obj.b.c)}
-printMe(myObj)
-```
+   ```js-nolint
+   const myObj = {
+   a:1,b:{c:2}}
+   function printMe(obj){console.log(obj.b.c)}
+   printMe(myObj)
+   ```
 
-We can run Prettier against a codebase to just check if our code wants adjusting. `cd` into your directory, and try running this command:
+3. We can run Prettier against a codebase to just check if our code wants adjusting. `cd` into your directory, and try running this command:
 
-```bash
-npx prettier --check index.js
-```
+   ```bash
+   npx prettier --check index.js
+   ```
 
-You should get an output along the lines of:
+   You should get an output along the lines of:
 
-```bash
-Checking formatting...
-index.js
-Code style issues found in the above file(s). Forgot to run Prettier?
-```
+   ```bash
+   Checking formatting...
+   index.js
+   Code style issues found in the above file(s). Forgot to run Prettier?
+   ```
 
-So, there's some code styles that can be fixed. No problem. Adding the `--write` option to the `prettier` command will fix those up, leaving us to focus on actually writing useful code.
+4. So, there's some code styles that can be fixed. No problem. Adding the `--write` option to the `prettier` command will fix those up, leaving us to focus on actually writing useful code. Now try running this version of the command:
 
-Now try running this version of the command:
+   ```bash
+   npx prettier --write index.js
+   ```
 
-```bash
-npx prettier --write index.js
-```
+   You'll get an output like this:
 
-You'll get an output like this
+   ```bash
+   Checking formatting...
+   index.js
+   Code style issues fixed in the above file(s).
+   ```
 
-```bash
-Checking formatting...
-index.js
-Code style issues fixed in the above file(s).
-```
+   But more importantly, if you look back at your JavaScript file you'll find it has been reformatted to something like this:
 
-But more importantly, if you look back at your JavaScript file you'll find it has been reformatted to something like this:
-
-```js
-const myObj = {
-  a: 1,
-  b: { c: 2 },
-};
-function printMe(obj) {
-  console.log(obj.b.c);
-}
-printMe(myObj);
-```
+   ```js
+   const myObj = {
+     a: 1,
+     b: { c: 2 },
+   };
+   function printMe(obj) {
+     console.log(obj.b.c);
+   }
+   printMe(myObj);
+   ```
 
 Depending on your workflow (or the workflow that you pick) you can make this an automated part of your process. Automation is really where tools excel; our personal preference is the kind of automation that "just happens" without having to configure anything.
 

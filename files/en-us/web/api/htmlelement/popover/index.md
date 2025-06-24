@@ -17,13 +17,11 @@ It reflects the value of the [`popover`](/en-US/docs/Web/HTML/Reference/Global_a
 An enumerated value; possible values are:
 
 - `"auto"`
-
   - : [`auto`](/en-US/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss) popovers can be "light dismissed" — this means that you can hide the popover by clicking outside it or pressing the <kbd>Esc</kbd> key.
 
     Usually, only one `auto` popover can be shown at a time — showing a second popover when one is already shown will hide the first one. The exception to this rule is when you have nested auto popovers. See [Nested popovers](/en-US/docs/Web/API/Popover_API/Using#nested_popovers) for more details.
 
 - `"hint"` {{experimental_inline}}
-
   - : [`hint`](/en-US/docs/Web/API/Popover_API/Using#using_hint_popover_state) popovers do not close `auto` popovers when they are displayed, but will close other hint popovers.
     They can be light dismissed and will respond to close requests.
 
@@ -31,7 +29,6 @@ An enumerated value; possible values are:
     Clicking a button to open a `hint` popover would cause an open `auto` popover to light-dismiss.
 
 - `"manual"`
-
   - : [`manual`](/en-US/docs/Web/API/Popover_API/Using#using_manual_popover_state) popovers cannot be "light dismissed" and are not automatically closed. Popovers must explicitly be displayed and closed using declarative show/hide/toggle buttons or JavaScript. Multiple independent `manual` popovers can be shown simultaneously.
 
 ## Examples
@@ -42,7 +39,7 @@ You can use the `popover` attribute to feature detect the [Popover API](/en-US/d
 
 ```js
 function supportsPopover() {
-  return HTMLElement.prototype.hasOwnProperty("popover");
+  return Object.hasOwn(HTMLElement.prototype, "popover");
 }
 ```
 

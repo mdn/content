@@ -16,7 +16,7 @@ A matrix convolution is based on an n-by-m matrix (the convolution kernel) which
 </math>
 <!-- prettier-ignore-end -->
 
-where "orderX" and "orderY" represent the X and Y values for the [`order`](https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementOrderAttribute) attribute, "targetX" represents the value of the [`targetX`](https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementTargetXAttribute) attribute, "targetY" represents the value of the [`targetY`](https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementTargetYAttribute) attribute, "kernelMatrix" represents the value of the [`kernelMatrix`](https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementKernelMatrixAttribute) attribute, "divisor" represents the value of the [`divisor`](https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementDivisorAttribute) attribute, and "bias" represents the value of the [`bias`](https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementBiasAttribute) attribute.
+where "orderX" and "orderY" represent the X and Y values for the [`order`](/en-US/docs/Web/SVG/Reference/Attribute/order) attribute, and the other variables refer to the [`targetX`](/en-US/docs/Web/SVG/Reference/Attribute/targetX), [`targetY`](/en-US/docs/Web/SVG/Reference/Attribute/targetY), [`kernelMatrix`](/en-US/docs/Web/SVG/Reference/Attribute/kernelMatrix), [`divisor`](/en-US/docs/Web/SVG/Reference/Attribute/divisor), and [`bias`](/en-US/docs/Web/SVG/Reference/Attribute/bias) attributes.
 
 Note in the above formulas that the values in the kernel matrix are applied such that the kernel matrix is rotated 180 degrees relative to the source and destination images in order to match convolution theory as described in many computer graphics textbooks.
 
@@ -38,7 +38,7 @@ and you define a 3-by-3 convolution kernel as follows:
 7 8 9
 ```
 
-Let's focus on the color value at the second row and second column of the image (source pixel value is 120). Assuming the simplest case (where the input image's pixel grid aligns perfectly with the kernel's pixel grid) and assuming default values for attributes ['divisor'](https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementDivisorAttribute), ['targetX'](https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementTargetXAttribute) and ['targetY'](https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementTargetYAttribute), then resulting color value will be:
+Let's focus on the color value at the second row and second column of the image (source pixel value is 120). Assuming the simplest case (where the input image's pixel grid aligns perfectly with the kernel's pixel grid) and assuming default values for attributes [`divisor`](/en-US/docs/Web/SVG/Reference/Attribute/divisor), [`targetX`](/en-US/docs/Web/SVG/Reference/Attribute/targetX) and [`targetY`](/en-US/docs/Web/SVG/Reference/Attribute/targetY), then resulting color value will be:
 
 ```plain
 (9*0   + 8*20  + 7*40 +

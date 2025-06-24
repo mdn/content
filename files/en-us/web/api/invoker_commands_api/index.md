@@ -80,9 +80,9 @@ Historically creating these kinds of controls has required JavaScript event list
 const myImg = document.getElementById("my-img");
 
 myImg.addEventListener("command", (event) => {
-  if (event.command == "--rotate-left") {
+  if (event.command === "--rotate-left") {
     myImg.style.rotate = "-90deg";
-  } else if (event.command == "--rotate-right") {
+  } else if (event.command === "--rotate-right") {
     myImg.style.rotate = "90deg";
   }
 });

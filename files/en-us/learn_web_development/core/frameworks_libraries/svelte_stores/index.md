@@ -121,18 +121,18 @@ Let's now create our `Alert` component and see how we can read values from the s
 
    ```svelte
    <script>
-     import { alert } from '../stores.js'
-     import { onDestroy } from 'svelte'
+     import { alert } from "../stores.js";
+     import { onDestroy } from "svelte";
 
-     let alertContent = ''
+     let alertContent = "";
 
-     const unsubscribe = alert.subscribe((value) => alertContent = value)
+     const unsubscribe = alert.subscribe((value) => (alertContent = value));
 
-     onDestroy(unsubscribe)
+     onDestroy(unsubscribe);
    </script>
 
    {#if alertContent}
-   <div on:click={() => alertContent = ''}>
+   <div on:click={() => (alertContent = "")}>
      <p>{ alertContent }</p>
    </div>
    {/if}
@@ -236,11 +236,11 @@ And `$myStore` will be fully reactive. This also applies to your own custom stor
 
    ```svelte
    <script>
-     import { alert } from '../stores.js'
+     import { alert } from "../stores.js";
    </script>
 
    {#if $alert}
-   <div on:click={() => $alert = ''}>
+   <div on:click={() => $alert = ""}>
      <p>{ $alert }</p>
    </div>
    {/if}
@@ -420,7 +420,8 @@ First we need some way for our `Todos` component to give back the updated to-dos
    <Todos bind:todos />
    ```
 
-   > **Note:** `<Todos bind:todos />` is just a shortcut for `<Todos bind:todos={todos} />`.
+   > [!NOTE]
+   > `<Todos bind:todos />` is just a shortcut for `<Todos bind:todos={todos} />`.
 
 3. Go back to your app, try adding some to-dos, then go to your developer tools web console. You'll see that every modification we make to our to-dos is reflected in the `todos` array defined in `App.svelte` thanks to the `bind` directive.
 
@@ -451,7 +452,7 @@ So let's start by using a regular writable store to save our to-dos.
      $todos = [
        { id: 1, name: "Create a Svelte starter app", completed: true },
        { id: 2, name: "Create your first component", completed: true },
-       { id: 3, name: "Complete the rest of the tutorial", completed: false }
+       { id: 3, name: "Complete the rest of the tutorial", completed: false },
      ];
    </script>
 
@@ -515,6 +516,7 @@ Usually you don't implement stores from scratch; instead you'd use the writable 
 
 ```js
 import { writable } from "svelte/store";
+
 function myStore() {
   const { subscribe, set, update } = writable(0);
 
@@ -567,7 +569,7 @@ Moreover, because web storage only supports saving string values, we will have t
 
      return {
        subscribe,
-       set: (value) => {
+       set(value) {
          localStorage.setItem(key, toString(value)); // save also to local storage as a string
          return set(value);
        },
@@ -575,7 +577,6 @@ Moreover, because web storage only supports saving string values, we will have t
      };
    };
    ```
-
    - Our `localStore` will be a function that when executed initially reads its content from web storage, and returns an object with three methods: `subscribe()`, `set()`, and `update()`.
    - When we create a new `localStore`, we'll have to specify the key of the web storage and an initial value. We then check if the value exists in web storage and, if not, we create it.
    - We use the [`localStorage.getItem(key)`](/en-US/docs/Web/API/Storage/getItem) and [`localStorage.setItem(key, value)`](/en-US/docs/Web/API/Storage/setItem) methods to read and write information to web storage, and the [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) and `toObj()` (which uses [`JSON.parse()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)) helper functions to convert the values.
@@ -608,10 +609,10 @@ Moreover, because web storage only supports saving string values, we will have t
 
    ```svelte
    <script>
-     import Todos from './components/Todos.svelte'
-     import Alert from './components/Alert.svelte'
+     import Todos from "./components/Todos.svelte";
+     import Alert from "./components/Alert.svelte";
 
-     import { todos } from './stores.js'
+     import { todos } from "./stores.js";
    </script>
 
    <Alert />

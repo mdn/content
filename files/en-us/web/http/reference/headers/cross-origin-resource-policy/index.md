@@ -1,5 +1,6 @@
 ---
-title: Cross-Origin-Resource-Policy
+title: Cross-Origin-Resource-Policy (CORP) header
+short-title: Cross-Origin-Resource-Policy
 slug: Web/HTTP/Reference/Headers/Cross-Origin-Resource-Policy
 page-type: http-header
 browser-compat: http.headers.Cross-Origin-Resource-Policy
@@ -33,11 +34,9 @@ Cross-Origin-Resource-Policy: same-site | same-origin | cross-origin
 ### Directives
 
 - `same-site`
-
   - : Resources can only be loaded from the same site.
 
 - `same-origin`
-
   - : Resources can only be loaded from the same origin.
 
 - `cross-origin`

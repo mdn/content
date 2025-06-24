@@ -1,5 +1,6 @@
 ---
 title: Reflect.set()
+short-title: set()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/set
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.set

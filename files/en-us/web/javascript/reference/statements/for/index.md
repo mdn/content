@@ -15,7 +15,7 @@ The **`for`** statement creates a loop that consists of three optional expressio
 let str = "";
 
 for (let i = 0; i < 9; i++) {
-  str = str + i;
+  str += i;
 }
 
 console.log(str);
@@ -30,13 +30,11 @@ for (initialization; condition; afterthought)
 ```
 
 - `initialization` {{optional_inline}}
-
   - : An expression (including [assignment expressions](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment)) or variable declaration evaluated once before the loop begins. Typically used to initialize a counter variable. This expression may optionally declare new variables with `var` or `let` keywords. Variables declared with `var` are not local to the loop, i.e., they are in the same scope the `for` loop is in. Variables declared with `let` are local to the statement.
 
     The result of this expression is discarded.
 
 - `condition` {{optional_inline}}
-
   - : An expression to be evaluated before each loop iteration. If this expression [evaluates to true](/en-US/docs/Glossary/Truthy), `statement` is executed. If the expression [evaluates to false](/en-US/docs/Glossary/Falsy), execution exits the loop and goes to the first statement after the `for` construct.
 
     This conditional test is optional. If omitted, the condition always evaluates to true.

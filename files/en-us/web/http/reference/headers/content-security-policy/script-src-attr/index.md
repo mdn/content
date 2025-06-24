@@ -1,5 +1,6 @@
 ---
-title: "CSP: script-src-attr"
+title: "Content-Security-Policy: script-src-attr directive"
+short-title: script-src-attr
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/script-src-attr
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.script-src-attr
@@ -45,9 +46,7 @@ This directive may have one of the following values:
 - `'none'`
   - : No resources of this type may be loaded. The single quotes are mandatory.
 - `<source-expression-list>`
-
   - : A space-separated list of _source expression_ values. Resources of this type may be loaded if they match any of the given source expressions. For this directive, the following source expression values are applicable:
-
     - [`'unsafe-hashes'`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-hashes)
     - [`'unsafe-inline'`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-inline)
     - [`'report-sample'`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#report-sample)

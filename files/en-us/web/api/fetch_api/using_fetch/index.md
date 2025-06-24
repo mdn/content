@@ -193,7 +193,6 @@ const response = await fetch(`https://example.org/login?${params}`);
 Whether a request can be made cross-origin or not is determined by the value of the {{domxref("RequestInit", "", "mode")}} option. This may take one of three values: `cors`, `same-origin`, or `no-cors`.
 
 - For fetch requests the default value of `mode` is `cors`, meaning that if the request is cross-origin then it will use the [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS) mechanism. This means that:
-
   - if the request is a [simple request](/en-US/docs/Web/HTTP/Guides/CORS#simple_requests), then the request will always be sent, but the server must respond with the correct {{httpheader("Access-Control-Allow-Origin")}} header or the browser will not share the response with the caller.
   - if the request is not a simple request, then the browser will send a [preflighted request](/en-US/docs/Web/HTTP/Guides/CORS#preflighted_requests) to check that the server understands CORS and allows the request, and the real request will not be sent unless the server responds to the preflighted request with the appropriate CORS headers.
 
@@ -494,17 +493,16 @@ async function* makeTextFileLineIterator(fileURL) {
   const response = await fetch(fileURL);
   const reader = response.body.pipeThrough(new TextDecoderStream()).getReader();
 
-  let { value: chunk, done: readerDone } = await reader.read();
-  chunk = chunk || "";
+  let { value: chunk = "", done: readerDone } = await reader.read();
 
-  const newline = /\r?\n/gm;
+  const newline = /\r?\n/g;
   let startIndex = 0;
 
   while (true) {
     const result = newline.exec(chunk);
     if (!result) {
       if (readerDone) break;
-      const remainder = chunk.substr(startIndex);
+      const remainder = chunk.slice(startIndex);
       ({ value: chunk, done: readerDone } = await reader.read());
       chunk = remainder + (chunk || "");
       startIndex = newline.lastIndex = 0;

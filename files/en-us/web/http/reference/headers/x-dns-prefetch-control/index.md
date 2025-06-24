@@ -1,5 +1,6 @@
 ---
-title: X-DNS-Prefetch-Control
+title: X-DNS-Prefetch-Control header
+short-title: X-DNS-Prefetch-Control
 slug: Web/HTTP/Reference/Headers/X-DNS-Prefetch-Control
 page-type: http-header
 status:

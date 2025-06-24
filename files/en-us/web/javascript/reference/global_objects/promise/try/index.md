@@ -1,5 +1,6 @@
 ---
 title: Promise.try()
+short-title: try()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/try
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Promise.try
