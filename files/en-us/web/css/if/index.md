@@ -145,11 +145,7 @@ background-color: if(else: yellow);
 background-image: if();
 ```
 
-However, these functions are not useful. The {{cssxref("background-color")}} value will always be set to `yellow`, and the `background-image` will retain its initial value. You would be better off setting the first property to just `yellow`, and not setting the second property at all:
-
-```css
-background-color: yellow;
-```
+These functions are not useful. They were included to demonstrate their validity. In this case, the {{cssxref("background-color")}} value will always be set to `yellow` and the `background-image` will be set to its initial value. You would be better off setting the `background-color` directly to `yellow`, and the `background-image` to  `initial` or `none`.
 
 ### Types of if-tests
 
