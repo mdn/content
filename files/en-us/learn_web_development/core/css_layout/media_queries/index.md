@@ -504,7 +504,7 @@ If you view the layout in Responsive Design Mode in DevTools, or narrow your bro
 
 ### Creating a two-column layout for medium widths
 
-Drag the window wider until you can see that the line lengths are becoming quite long; at this point you've got space for the navigation to display in a horizontal line. This is where we'll add our first media query. We'll use ems, as this will mean that if the user has increased their text size, the breakpoint will happen at a similar line-length but wider viewport, than someone with a smaller text size.
+Drag the window wider until you can see that the line lengths are becoming quite long; at this point you've got space for the navigation to display in a horizontal line. This is where we'll add our first media query. We'll use `em` units, as this will mean that if the user has increased their text size, the breakpoint will happen at a similar line-length but wider viewport, than someone with a smaller text size.
 
 Add the following to the bottom of your CSS:
 
