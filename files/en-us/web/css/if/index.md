@@ -70,7 +70,7 @@ The parameters are:
 
 ### Return value
 
-A value, or {{glossary("guaranteed_invalid_value", "guaranteed-invalid")}}, in which case the property retains its initial value.
+A value or {{glossary("guaranteed_invalid_value", "guaranteed-invalid")}}.
 
 ## Description
 
