@@ -81,7 +81,7 @@ The `if()` function can be used inside the value of any property, and can contai
 The return value is calculated as follows:
 
 1. The `<if-condition>` expressions are evaluated, in the order they appear in the function.
-2. The first `<if-condition>` that evaluates to true, or `else` that appears, has its associated `<value>` returned.
+2. The first `<if-condition>` that evaluates to `true` has its associated `<value>` returned.
 3. If none of the conditions evaluate to true, {{glossary("guaranteed_invalid_value", "guaranteed-invalid")}} is returned, in which case the property retains its initial value.
 
 For example:
