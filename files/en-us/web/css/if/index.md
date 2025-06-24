@@ -60,7 +60,6 @@ The parameters are:
   - : A [style query](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#container_style_queries), [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), or [feature query](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries).
 
 - `else`
-
   - : A keyword representing an `<if-condition>` that always evaluates to true.
 
 - `<value>`
