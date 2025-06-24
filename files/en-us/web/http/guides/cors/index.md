@@ -492,6 +492,7 @@ Examples of this usage can be [found above](#preflighted_requests).
 
 ## See also
 
+- [Access-Control-Allow-Origin header](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
 - [CORS errors](/en-US/docs/Web/HTTP/Guides/CORS/Errors)
 - [Enable CORS: I want to add CORS support to my server](https://enable-cors.org/server.html)
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)

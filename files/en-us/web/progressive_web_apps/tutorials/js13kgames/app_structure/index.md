@@ -105,6 +105,7 @@ for (const game of games) {
     .replace(/AUTHOR/g, game.author)
     .replace(/WEBSITE/g, game.website)
     .replace(/GITHUB/g, game.github)
+    .replace("<a href='http://'></a>", "-")
     .replace("<a href='http:///'></a>", "-");
   content += entry;
 }

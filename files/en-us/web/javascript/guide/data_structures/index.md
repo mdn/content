@@ -20,7 +20,7 @@ foo = "bar"; // foo is now a string
 foo = true; // foo is now a boolean
 ```
 
-JavaScript is also a [weakly typed](https://en.wikipedia.org/wiki/Strong_and_weak_typing) language, which means it allows implicit type conversion when an operation involves mismatched types, instead of throwing type errors.
+JavaScript is also a [weakly typed](https://en.wikipedia.org/wiki/Strong_and_weak_typing) language, which means it allows implicit type conversion when an operation involves mismatched types, instead of throwing type errors. This can lead to unexpected results and subtle bugs, particularly when working with mixed or ambiguous types. This behaviour is illustrated in the following example:
 
 ```js
 const foo = 42; // foo is a number
@@ -28,7 +28,7 @@ const result = foo + "1"; // JavaScript coerces foo to a string, so it can be co
 console.log(result); // 421
 ```
 
-Implicit coercions are very convenient, but can create subtle bugs when conversions happen where they are not expected, or where they are expected to happen in the other direction (for example, string to number instead of number to string). For [symbols](#symbol_type) and [BigInts](#bigint_type), JavaScript has intentionally disallowed certain implicit type conversions.
+For [symbols](#symbol_type) and [BigInts](#bigint_type), JavaScript has intentionally disallowed certain implicit type conversions.
 
 ## Primitive values
 

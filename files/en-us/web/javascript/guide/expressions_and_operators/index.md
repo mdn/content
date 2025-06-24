@@ -118,6 +118,14 @@ In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode#converting_mis
 
 It is an error to assign values to unmodifiable properties or to properties of an expression without properties (`null` or `undefined`).
 
+Curiously, the following example doesn't throw an error:
+
+```js
+const val = 0;
+console.log(val.x); // undefined.
+```
+This happens because trying to read a non-existent property in a primitive is valid.
+
 ### Destructuring
 
 For more complex assignments, the [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) syntax is a JavaScript expression that makes it possible to extract data from arrays or objects using a syntax that mirrors the construction of array and

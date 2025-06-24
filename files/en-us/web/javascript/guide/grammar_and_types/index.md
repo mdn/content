@@ -36,7 +36,7 @@ The source text of JavaScript script gets scanned from left to right, and is con
 The syntax of **comments** is the same as in C++ and in many other languages:
 
 ```js
-// a one line comment
+// a one-line comment
 
 /* this is a longer,
  * multi-line comment
