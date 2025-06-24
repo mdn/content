@@ -91,7 +91,7 @@ div {
   background-image: if(
     style(--scheme: ice): linear-gradient(to left, #caf0f8, white, #caf0f8);
     style(--scheme: fire): linear-gradient(to left, #ffc971, white, #ffc971);
-    else: none
+    else: none;
   );
 }
 ```
