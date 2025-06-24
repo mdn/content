@@ -116,7 +116,6 @@ perspective(d)
 ### Values
 
 - _d_
-
   - : Is a {{cssxref("&lt;length&gt;")}} representing the distance from the user to the z=0 plane. The z=0 plane is the plane where everything appears in a 2-dimensional view, or the screen. Values smaller than `1px` (including zero) are clamped to `1px`. Negative values are syntax errors.
 
     Values other than `none` cause elements with positive z positions to appear larger, and elements with negative z positions to appear smaller. Elements with z positions equal to or larger than the perspective value disappear as though they are behind the user. Large values of perspective represent a small transformation; small values of `perspective()` represent a large transformation; `perspective(none)` represents perspective from infinite distance and no transformation.
