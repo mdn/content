@@ -199,7 +199,6 @@ If you're an absolute beginner at programming then you'll probably choose your f
 >    - Click on the Documentation menu links (named things like "Documentation, Guide, API Reference, Getting Started", etc.).
 >    - Can you see topics showing how to set up URL routing, templates, and databases/models?
 >    - Are the documents clear?
->
 > 2. Navigate to mailing lists for each site (accessible from Community links).
 >    - How many questions have been posted in the last few days
 >    - How many have responses?
