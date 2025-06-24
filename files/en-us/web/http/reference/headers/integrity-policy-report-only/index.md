@@ -14,11 +14,7 @@ Reports may be generated for requests on specified [request destinations](/en-US
 For reports to be sent to a reporting endpoint, the `Integrity-Policy-Report-Only` header must specify a valid reporting endpoint name that matches an endpoint declared using the {{HTTPHeader("Reporting-Endpoints")}} header.
 Reports are generated using the [Reporting API](/en-US/docs/Web/API/Reporting_API), and may also be observed in the page for which the integrity policy is being reported, using a [ReportingObserver](/en-US/docs/Web/API/ReportingObserver).
 
-<<<<<<< HEAD
 The header allow developers to test [integrity policies](/en-US/docs/Web/Security/Subresource_Integrity#integrity_policy) and fix any content issues before eventually deploying an {{HTTPHeader("Integrity-Policy")}} header to enforce the policy.
-=======
-This helps make developers aware of content manipulation of fetched subresources, and allows them to test [integrity policies](/en-US/docs/Web/Security/Subresource_Integrity#integrity_policy) and eventually deploy an {{HTTPHeader("Integrity-Policy")}} header without breakage.
->>>>>>> 058ea025eb (Update files/en-us/web/http/reference/headers/integrity-policy-report-only/index.md)
 
 <table class="properties">
   <tbody>
@@ -39,27 +35,18 @@ This helps make developers aware of content manipulation of fetched subresources
 Integrity-Policy-Report-Only: blocked-destinations=(<destination>),sources=(<source>),endpoints=(<endpoint>)
 ```
 
-<<<<<<< HEAD
 The header values are defined as structured field dictionaries with the following keys:
-=======
-The header values are defined as [structured field dictionaries](https://www.rfc-editor.org/rfc/rfc8941.html#name-dictionaries) with the following keys:
->>>>>>> 6e2645a5e8 (Removed spurious explanation)
 
 - `blocked-destinations`
-
   - : A list of [request destinations](/en-US/docs/Web/API/Request/destination) that must include valid integrity metadata.
     Allowed values are:
-
     - `script`
       - : Script resources.
 
 - `sources` {{optional_inline}}
-
   - : A list of integrity sources that must include integrity metadata.
     Allowed values are:
-
     - `inline`
-
       - : The integrity metadata source is inline to the content, such as the [integrity attribute](/en-US/docs/Web/API/HTMLScriptElement/integrity).
         This is the default.
 
