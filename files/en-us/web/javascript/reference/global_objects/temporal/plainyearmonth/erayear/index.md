@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainYearMonth.prototype.eraYear
+short-title: eraYear
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth/eraYear
 page-type: javascript-instance-accessor-property
 status:

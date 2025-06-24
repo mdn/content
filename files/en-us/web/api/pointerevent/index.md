@@ -70,7 +70,6 @@ The `PointerEvent` interface has several event types. To determine which event f
 - {{domxref('Element/pointerenter_event', 'pointerenter')}}
   - : This event is fired when a pointing device is moved into the hit test boundaries of an element or one of its descendants, including as a result of a `pointerdown` event from a device that does not support hover (see `pointerdown`). This event type is similar to `pointerover`, but differs in that it does not bubble.
 - {{domxref('Element/pointerdown_event', 'pointerdown')}}
-
   - : The event is fired when a pointer becomes _active_. For mouse, it is fired when the device transitions from no buttons pressed to at least one button pressed. For touch, it is fired when physical contact is made with the digitizer. For pen, it is fired when the stylus makes physical contact with the digitizer.
 
     > [!NOTE]

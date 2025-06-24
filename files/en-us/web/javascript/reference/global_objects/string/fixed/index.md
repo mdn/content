@@ -1,5 +1,6 @@
 ---
 title: String.prototype.fixed()
+short-title: fixed()
 slug: Web/JavaScript/Reference/Global_Objects/String/fixed
 page-type: javascript-instance-method
 status:

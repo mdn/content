@@ -1,5 +1,6 @@
 ---
 title: String.prototype.lastIndexOf()
+short-title: lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.lastIndexOf
@@ -32,13 +33,10 @@ lastIndexOf(searchString, position)
 ### Parameters
 
 - `searchString`
-
   - : Substring to search for. All values are [coerced to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion), so omitting it or passing `undefined` causes `lastIndexOf()` to search for the string `"undefined"`, which is rarely what you want.
 
 - `position` {{optional_inline}}
-
   - : The method returns the index of the last occurrence of the specified substring at a position less than or equal to `position`, which defaults to `Infinity`. If `position` is greater than the length of the calling string, the method searches the entire string. If `position` is less than `0`, the behavior is the same as for `0` — that is, the method looks for the specified substring only at index `0`.
-
     - `'hello world hello'.lastIndexOf('world', 4)` returns `-1` — because, while the substring `world` does occurs at index `6`, that position is not less than or equal to `4`.
 
     - `'hello world hello'.lastIndexOf('hello', 99)` returns `12` — because the last occurrence of `hello` at a position less than or equal to `99` is at position `12`.

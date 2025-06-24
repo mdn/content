@@ -1,5 +1,6 @@
 ---
 title: Function.prototype.caller
+short-title: caller
 slug: Web/JavaScript/Reference/Global_Objects/Function/caller
 page-type: javascript-instance-accessor-property
 status:

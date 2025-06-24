@@ -1,5 +1,6 @@
 ---
 title: TypedArray.prototype.lastIndexOf()
+short-title: lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/lastIndexOf
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.lastIndexOf

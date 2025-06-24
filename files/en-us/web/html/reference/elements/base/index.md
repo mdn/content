@@ -24,9 +24,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
     Absolute and relative URLs are allowed.
     [`data:`](/en-US/docs/Web/URI/Reference/Schemes/data) and [`javascript:`](/en-US/docs/Web/URI/Reference/Schemes/javascript) URLs are not allowed.
 - `target`
-
   - : A **keyword** or **author-defined name** of the default {{Glossary("browsing context")}} to show the results of navigation from {{HTMLElement("a")}}, {{HTMLElement("area")}}, or {{HTMLElement("form")}} elements without explicit `target` attributes. The following keywords have special meanings:
-
     - `_self` (default): Show the result in the current browsing context.
     - `_blank`: Show the result in a new, unnamed browsing context.
     - `_parent`: Show the result in the parent browsing context of the current one, if the current page is inside a frame. If there is no parent, acts the same as `_self`.

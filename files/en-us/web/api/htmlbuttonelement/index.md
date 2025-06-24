@@ -43,9 +43,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLButtonElement.popoverTargetElement")}}
   - : Gets and sets the popover element to control via a button. The JavaScript equivalent of the [`popovertarget`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget) HTML attribute.
 - {{domxref("HTMLButtonElement.type")}}
-
   - : A string indicating the behavior of the button. This is an enumerated attribute with the following possible values:
-
     - `submit`: The button submits the form. This is the default value if the attribute is not specified, or if it is dynamically changed to an empty or invalid value.
     - `reset`: The button resets the form.
     - `button`: The button does nothing.

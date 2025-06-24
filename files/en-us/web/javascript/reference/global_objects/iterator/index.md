@@ -146,7 +146,6 @@ These properties are defined on `Iterator.prototype` and shared by all `Iterator
 - {{jsxref("Object/constructor", "Iterator.prototype.constructor")}}
   - : The constructor function that created the instance object. For `Iterator` instances, the initial value is the {{jsxref("Iterator/Iterator", "Iterator")}} constructor.
 - `Iterator.prototype[Symbol.toStringTag]`
-
   - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Iterator"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
     > [!NOTE]

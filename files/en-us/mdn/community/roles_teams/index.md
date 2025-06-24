@@ -317,7 +317,6 @@ The teams in the [MDN GitHub organization](https://github.com/orgs/mdn/teams) in
 - `@OWD`: Contributors from the Open Web Docs non-profit organization
 - `@sre`: Site reliability engineers who support MDN Web Docs
 - `@yari-content`: The umbrella team for all MDN Web Docs content reviewers
-
   - There is a subteam for the different topic areas — accessibility, Add-ons, CSS, HTML, HTTP, JavaScript, SVG, Web API, and WebAssembly. For example, there's `@yari-content-css` and `@yari-content-svg`.
   - There are also subteams for different languages — Brazilian Portuguese, Chinese, French, Japanese, Korean, Russian, and Spanish. For example, there's `@yari-content-fr` and `@yari-content-ko`.
 

@@ -101,9 +101,7 @@ The `shape-outside` property is specified using the values from the list below, 
 - `none`
   - : The float area is unaffected. Inline content wraps around the element's margin box, like usual.
 - `<shape-box>`
-
   - : The float area is computed according to the shape of a float element's edges (as defined by the [CSS box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)). This can be `margin-box`, `border-box`, `padding-box`, or `content-box`. The shape includes any curvature created by the {{cssxref("border-radius")}} property (behavior which is similar to {{cssxref("background-clip")}}).
-
     - `margin-box`
       - : Defines the shape enclosed by the outside margin edge. The corner radii of this shape are determined by the corresponding {{cssxref("border-radius")}} and {{cssxref("margin")}} values. If the `border-radius / margin` ratio is `1` or more, then the margin box corner radius is `border-radius + margin`. If the ratio is less than `1`, then the margin box corner radius is `border-radius + (margin * (1 + (ratio - 1) ^ 3))`.
     - `border-box`

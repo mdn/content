@@ -17,7 +17,6 @@ The `launch_handler` member defines values that control the launch of a web appl
 `launch_handler` objects may contain the following values:
 
 - `client_mode` {{experimental_inline}}
-
   - : A string, or comma-separated array of strings, which specifies the context in which the app should be loaded when launched. If an array of strings is provided, the first valid value is used.
     Possible values are:</p>
     - `auto`

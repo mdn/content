@@ -1,5 +1,6 @@
 ---
 title: Symbol.match
+short-title: match
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/match
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.match

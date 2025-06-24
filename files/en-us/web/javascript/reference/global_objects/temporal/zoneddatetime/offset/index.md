@@ -1,5 +1,6 @@
 ---
 title: Temporal.ZonedDateTime.prototype.offset
+short-title: offset
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/offset
 page-type: javascript-instance-accessor-property
 status:

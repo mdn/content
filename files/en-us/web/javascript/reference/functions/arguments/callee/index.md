@@ -1,5 +1,6 @@
 ---
 title: arguments.callee
+short-title: callee
 slug: Web/JavaScript/Reference/Functions/arguments/callee
 page-type: javascript-instance-data-property
 status:

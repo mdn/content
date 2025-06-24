@@ -18,9 +18,7 @@ Values of this type are objects. They contain the following properties:
 - `quality` {{optional_inline}}
   - : `integer`. When format is `"jpeg"`, this controls the quality of the resulting image. It is a number between 0 and 100, which is converted to a value between 0 and 1 and then used as the `encoderOptions` argument to [`HTMLCanvasElement.toDataURL()`](/en-US/docs/Web/API/HTMLCanvasElement/toDataURL). If it is omitted, 92 is used. As quality is decreased, the resulting image will have more visual artifacts, and the number of bytes needed to store it will decrease. This value is ignored for PNG images.
 - `rect` {{optional_inline}}
-
   - : An `object` specifying the area of the document to capture, in CSS pixels, relative to the page. All properties default to `0`. The properties are:
-
     - `x`: The coordinate of the left side of the rectangle.
     - `y`: The coordinate of the top side of the rectangle.
     - `width`: The width of the rectangle.

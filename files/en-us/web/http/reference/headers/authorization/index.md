@@ -58,7 +58,6 @@ Authorization: Digest username=<username>,
 ## Directives
 
 - `<auth-scheme>`
-
   - : The [Authentication scheme](/en-US/docs/Web/HTTP/Guides/Authentication#authentication_schemes) that defines how the credentials are encoded.
     Some of the more common types are (case-insensitive): [`Basic`](/en-US/docs/Web/HTTP/Guides/Authentication#basic_authentication_scheme), `Digest`, `Negotiate` and `AWS4-HMAC-SHA256`.
 
@@ -71,7 +70,6 @@ Generally, you will need to check the relevant specifications for these (keys fo
 ### Basic authentication
 
 - `<credentials>`
-
   - : The credentials, encoded according to the specified scheme.
 
     > [!NOTE]

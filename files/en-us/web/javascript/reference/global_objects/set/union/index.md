@@ -1,5 +1,6 @@
 ---
 title: Set.prototype.union()
+short-title: union()
 slug: Web/JavaScript/Reference/Global_Objects/Set/union
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.union

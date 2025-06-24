@@ -26,10 +26,8 @@ getDirectoryHandle(name, options)
   - : A string representing the {{domxref('FileSystemHandle.name')}} of
     the subdirectory you wish to retrieve.
 - `options` {{optional_inline}}
-
   - : An optional object containing options for the retrieved subdirectory. Options are as
     follows:
-
     - `create` {{optional_inline}}
       - : A boolean value, which defaults to `false`. When
         set to `true` if the directory is not found, one with the specified

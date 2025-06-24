@@ -28,31 +28,25 @@ allowElement(element)
 ### Parameters
 
 - `element`
-
   - : A string indicating the name of the allowed element, or an object with the following properties:
-
     - `name`
       - : A string containing the name of the element.
     - `namespace` {{optional_inline}}
       - : A string containing the namespace of the element.
         The default namespace is `"http://www.w3.org/1999/xhtml"`.
     - `attributes` {{optional_inline}}
-
       - : An array indicating the attributes to allow on this (allowed) element when sanitizing HTML.
 
         Each attribute can be specified by name (a string), or as a object with the following properties:
-
         - `name`
           - : A string containing the name of the attribute.
         - `namespace` {{optional_inline}}
           - : A string containing the namespace of the attribute, which defaults to `null`.
 
     - `removeAttributes` {{optional_inline}}
-
       - : An array indicating the attributes to remove on this (allowed) element when sanitizing HTML.
 
         Each attribute can be specified by name (a string), or as a object with the following properties:
-
         - `name`
           - : A string containing the name of the attribute.
         - `namespace` {{optional_inline}}
@@ -156,7 +150,7 @@ function log(text) {
 The code first creates a new `Sanitizer` object that initially allows {{htmlelement("div")}} elements (removing attributes other than `id`) and also replaced {{htmlelement("span")}} elements with any child elements.
 
 It then calls `allowElement()`, firstly to add a {{htmlelement("div")}} element that removes `style` attributes.
-Since the `<div>` element is already allowed, it is removed from the [`elements` configuration](/en-US/docs/Web/API/SanitizerConfig#elements) and the `<div>` element definition is is appended.
+Since the `<div>` element is already allowed, it is removed from the [`elements` configuration](/en-US/docs/Web/API/SanitizerConfig#elements) and the `<div>` element definition is appended.
 
 A {{htmlelement("span")}} element is then added to the allow list, which removes it from the [`replaceWithChildrenElements` configuration list](/en-US/docs/Web/API/SanitizerConfig#replacewithchildrenelements).
 

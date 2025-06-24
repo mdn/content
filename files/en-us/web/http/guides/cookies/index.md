@@ -170,14 +170,12 @@ The `Domain` and `Path` attributes define the _scope_ of a cookie: what URLs the
   ```
 
   The `%x2F` ("/") character is considered a directory separator, and subdirectories match as well. For example, if you set `Path=/docs`, these request paths match:
-
   - `/docs`
   - `/docs/`
   - `/docs/Web/`
   - `/docs/Web/HTTP`
 
   But these request paths don't:
-
   - `/`
   - `/docsets`
   - `/fr/docs`

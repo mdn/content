@@ -305,7 +305,6 @@ In a large, complex website, a lot of planning can go into this process, but for
 The process might look like this:
 
 1. You'll have a few elements common to most (if not all) pages — such as the navigation menu, and the footer content. If your site is for a business, for example, it's a good idea to have your contact information available in the footer on each page. Note down what you want to have common to every page. For example:
-
    - Header:
      - Title and logo
      - Site language chooser
@@ -316,7 +315,6 @@ The process might look like this:
 
 2. Next, draw a rough sketch of what you might want the structure of each page to look like (it might look like our simple website above). Note what each block is going to be.![A simple diagram of a sample site structure, with a header, main content area, two optional sidebars, and footer](site-structure.png)
 3. Now, brainstorm all the other (not common to every page) content you want to have on your website. For example:
-
    - Flights
    - Accommodation
    - Transport
@@ -331,7 +329,6 @@ The process might look like this:
    - Buy holidays
 
 4. Next, try to sort all these content items into groups, to give you an idea of what parts might live together on different pages. This is very similar to a technique called {{glossary("Card sorting")}}.
-
    - Search
      - Flights
      - Accommodation

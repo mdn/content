@@ -24,10 +24,8 @@ texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, fo
 ### Parameters
 
 - `target`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target) of the active texture.
     Possible values:
-
     - `gl.TEXTURE_3D`: A three-dimensional texture.
     - `gl.TEXTURE_2D_ARRAY`: A two-dimensional array texture.
 
@@ -47,9 +45,7 @@ texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, fo
 - `depth`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the depth of the texture.
 - `format`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the format of the texel data. Possible values:
-
     - `gl.ALPHA`: Discards the red, green and blue components and reads the
       alpha component.
     - `gl.RGB`: Discards the alpha components and reads the red, green and
@@ -84,9 +80,7 @@ texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, fo
     - `gl.RGBA8UI`
 
 - `type`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the data type of the texel data. Possible values:
-
     - `gl.UNSIGNED_BYTE`: 8 bits per channel for `gl.RGBA`
     - `gl.UNSIGNED_SHORT_5_6_5`: 5 red bits, 6 green bits, 5 blue bits.
     - `gl.UNSIGNED_SHORT_4_4_4_4`: 4 red bits, 4 green bits, 4 blue bits, 4
@@ -108,9 +102,7 @@ texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, fo
       [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null))
 
 - `pixels`
-
   - : One of the following objects can be used as a pixel source for the texture:
-
     - {{jsxref("Uint8Array")}} (must be used if `type` is `gl.UNSIGNED_BYTE`)
     - {{jsxref("Uint16Array")}} (must be used if `type` is either
       `gl.UNSIGNED_SHORT_5_6_5`, `gl.UNSIGNED_SHORT_4_4_4_4`,
@@ -123,7 +115,6 @@ texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, fo
     - {{domxref("HTMLVideoElement")}}
 
 - `srcData`
-
   - : A {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object.
 
 - `offset`

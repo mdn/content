@@ -1,5 +1,6 @@
 ---
 title: DataView.prototype.setBigUint64()
+short-title: setBigUint64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setBigUint64
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.setBigUint64

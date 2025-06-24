@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.flat()
+short-title: flat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flat
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.flat

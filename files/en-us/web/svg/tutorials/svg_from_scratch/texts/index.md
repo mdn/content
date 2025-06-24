@@ -56,7 +56,6 @@ The `tspan` element has the following custom attributes:
 - `x`
   - : Sets a new absolute `x` coordinate for the containing text. This overwrites the default current text position. The attribute may also contain a list of numbers that are one by one applied to the single characters of the `tspan` element.
 - `dx`
-
   - : Starts drawing the text with a horizontal offset `dx` from the default current position. Here, too, you may provide a list of values that are applied to consecutive characters, hence piling up the offset over time.
 
     Likewise, there are **`y`** and **`dy`** for vertical displacement.

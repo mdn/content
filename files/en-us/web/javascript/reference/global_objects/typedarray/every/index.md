@@ -1,5 +1,6 @@
 ---
 title: TypedArray.prototype.every()
+short-title: every()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/every
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.every

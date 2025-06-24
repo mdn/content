@@ -1,5 +1,6 @@
 ---
 title: RegExp.prototype.source
+short-title: source
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/source
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.RegExp.source

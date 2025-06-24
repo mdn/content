@@ -13,7 +13,6 @@ There are instances in which Firefox doesn't cache pages. Below are some common 
 - the page uses an `unload` or `beforeunload` handler;
 - the page sets "cache-control: no-store".
 - the site is HTTPS and page sets at least one of:
-
   - "Cache-Control: no-cache"
   - "Pragma: no-cache"
   - with "Expires: 0" or "Expires" with a date value in the past relative to the value of the "Date" header (unless "Cache-Control: max-age=" is also specified);

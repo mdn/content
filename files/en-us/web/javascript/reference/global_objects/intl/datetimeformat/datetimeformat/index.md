@@ -1,5 +1,6 @@
 ---
 title: Intl.DateTimeFormat() constructor
+short-title: Intl.DateTimeFormat()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Intl.DateTimeFormat.DateTimeFormat
@@ -51,11 +52,9 @@ Intl.DateTimeFormat(locales, options)
 ### Parameters
 
 - `locales` {{optional_inline}}
-
   - : A string with a BCP 47 language tag or an {{jsxref("Intl.Locale")}} instance, or an array of such locale identifiers. The runtime's default locale is used when `undefined` is passed or when none of the specified locale identifiers is supported. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 
     The following Unicode extension keys are allowed:
-
     - `nu`
       - : See [`numberingSystem`](#numberingsystem).
     - `ca`
@@ -66,7 +65,6 @@ Intl.DateTimeFormat(locales, options)
     These keys can also be set with `options` (as listed below). When both are set, the `options` property takes precedence.
 
 - `options` {{optional_inline}}
-
   - : An object. For ease of reading, the property list is broken into sections based on their purposes, including [locale options](#locale_options), [date-time component options](#date-time_component_options), and [style shortcuts](#style_shortcuts).
 
 #### Locale options
@@ -119,7 +117,6 @@ Intl.DateTimeFormat(locales, options)
 - `day`
   - : The representation of the day. Possible values are `"numeric"` and `"2-digit"`.
 - `dayPeriod`
-
   - : The formatting style used for day periods like "in the morning", "am", "noon", "n" etc. Possible values are
     `"narrow"`, `"short"`, and `"long"`.
 
@@ -135,9 +132,7 @@ Intl.DateTimeFormat(locales, options)
 - `fractionalSecondDigits`
   - : The number of digits used to represent fractions of a second (any additional digits are truncated). Possible values are from `1` to `3`.
 - `timeZoneName`
-
   - : The localized representation of the time zone name. Possible values are:
-
     - `"long"`
       - : Long localized form (e.g., `Pacific Standard Time`, `Nordamerikanische Westküsten-Normalzeit`)
     - `"short"`

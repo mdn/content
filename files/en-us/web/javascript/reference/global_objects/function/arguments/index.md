@@ -1,5 +1,6 @@
 ---
 title: Function.prototype.arguments
+short-title: arguments
 slug: Web/JavaScript/Reference/Global_Objects/Function/arguments
 page-type: javascript-instance-accessor-property
 status:
