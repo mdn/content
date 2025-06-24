@@ -12,29 +12,28 @@ spec-urls: https://w3c.github.io/webappsec-subresource-integrity/#report-violati
 
 The `IntegrityViolationReportBody` dictionary is an extension of the [Reporting API](/en-US/docs/Web/API/Reporting_API) that represents the body of an [Integrity Policy](/en-US/docs/Web/HTTP/Reference/Headers/Integrity-Policy) violation report.
 
-Integrity violation reports have a {{domxref("Report.type","type")}} of `"integrity-violation"`, a {{domxref("Report.url","url")}} indicating the document that contains the violation, and a {{domxref("Report.body","body")}} property that is an object matching this dictionary.
+Integrity violation reports can be reported to [reporting server endpoints](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints) or via a {{domxref("ReportingObserver")}}.
+They have a {{domxref("Report.type","type")}} of `"integrity-violation"`, a {{domxref("Report.url","url")}} indicating the document that contains the violation, and a {{domxref("Report.body","body")}} property that is an object matching this dictionary.
 
 {{InheritanceDiagram}}
 
 ## Instance properties
 
-_Also inherits properties from its parent interface, {{DOMxRef("ReportBody")}}._
-
-- {{domxref("IntegrityViolationReportBody.blockedURL")}} {{ReadOnlyInline}}
-  - : A string representing the URL of the resource that caused the violation, such as a script that omitted the integrity attribute.
-- {{domxref("IntegrityViolationReportBody.documentURL")}} {{ReadOnlyInline}}
-  - : A string representing the URL of the resource that included the violation.
-- {{domxref("IntegrityViolationReportBody.destination")}} {{ReadOnlyInline}}
-  - : A string indicating the [`Request.destination`](/en-US/docs/Web/API/Request/destination#script) of the resource in violation.
-    This will currently be `"script"`.
-- {{domxref("IntegrityViolationReportBody.reportOnly")}} {{ReadOnlyInline}}
-  - : A boolean indicating whether the violation is enforced or reported.
+- `blockedURL` {{ReadOnlyInline}}
+  - : A string representing the URL of the resource blocked by an enforced integrity policy (or just reported for a [reportOnly](#reportonly) policy).
+- `documentURL` {{ReadOnlyInline}}
+  - : A string representing the URL of the document that is attempting to load the resource.
+- `destination` {{ReadOnlyInline}}
+  - : A string indicating the [`Request.destination`](/en-US/docs/Web/API/Request/destination#script) of the resource that was blocked.
+    This can currently only be: `"script"`.
+- `reportOnly` {{ReadOnlyInline}}
+  - : A boolean: `false` if the policy was enforced, and `true` if the violation was only reported.
 
 ## Description
 
 Integrity Policy violations are reported when a document attempts to load a resource that does not meet the [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity) guarantees of a policy set using either {{httpheader("Integrity-Policy")}} or {{httpheader("Integrity-Policy-Report-Only")}} HTTP headers.
 
-Specifically, a report is sent when a document attempts to load a [request destination](/en-US/docs/Web/API/Request/destination) listed in the policy that does not have valid integrity metadata, or to make a request in [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode.
+Specifically, a report is sent when a document attempts to load a {{htmlelement("script")}} resource (or other [request destination](/en-US/docs/Web/API/Request/destination) listed in the policy) that does not have valid integrity metadata, or to make a request in [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode.
 
 Violation reports maybe obtained in a violating document using a {{domxref("ReportingObserver")}} callback (defined in the {{domxref("ReportingObserver/ReportingObserver","ReportingObserver()")}} constructor), filtering on report objects that have a `type` of `"integrity-violation"`.
 
@@ -66,17 +65,15 @@ We could also/alternatively omit the `cross-origin` attribute so the request is 
   crossorigin="anonymous"></script>
 ```
 
-::: note
-A script that complies with the policy might look like this:
-
-```html
-<script
-  src="https://example.com/example-framework.js"
-  integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
-  crossorigin="anonymous"></script>
-```
-
-:::
+> [!NOTE]
+> A script that complies with the policy might look like this:
+>
+> ```html
+> <script
+>   src="https://example.com/example-framework.js"
+>   integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
+>   crossorigin="anonymous"></script>
+> ```
 
 In order to get violations within the page, we construct a new {{domxref("ReportingObserver")}} object to listen for reports with the type `"integrity-violation"`, passing a callback that will receive and log the reports.
 This code needs to be loaded before the script that causes the violation, in the same page:
@@ -92,7 +89,7 @@ const observer = new ReportingObserver(
   {
     types: ["integrity-violation"],
     buffered: true,
-  },
+  }
 );
 
 observer.observe();
@@ -138,7 +135,7 @@ Just to differ from the previous example, here we send the request in `no-cors` 
 The violation report will then be sent to the indicated endpoint as a JSON file.
 As you can see from the example below, the `type` is `"integrity-violation"` and the `body` property is a serialization of this `IntegrityViolationReportBody` object:
 
-The in this case would look the same as our JSON report in the previous example.
+The report in this case would look the same as our JSON report in the previous example.
 
 ```json
 {
