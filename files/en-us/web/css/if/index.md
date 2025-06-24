@@ -281,9 +281,7 @@ margin: if(
 )
 ```
 
-Feature queries are really useful inside `if()` statements when you need to vary a single property value based on support for a particular property: value combination.
-
-When you want to set multiple declarations or rules based on one feature query, a regular {{cssxref("@supports")}} construct is needed. The two approaches are complementary, and have different uses.
+Feature queries are really useful inside `if()` statements when you need to vary a single property value based on support for a particular value or a separate property. When you want to set multiple declarations or rules based on one feature query, a regular {{cssxref("@supports")}} construct is better. The two approaches are complementary, and have different uses.
 
 ### Providing fallback values
 
