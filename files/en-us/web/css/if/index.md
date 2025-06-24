@@ -25,24 +25,24 @@ margin: if(media(max-width: 700px): 0 auto ; else: 20px auto 0);
 /* Feature query condition */
 color: if(
   supports(color: lch(7.1% 60.23 300.16)): lch(7.1% 60.23 300.16);
-  else: #03045e
+  else: #03045e;
 );
 border: if(
   supports(color: lch(77.7% 0 0)): 3px solid lch(77.7% 0 0);
-  else: 3px solid #c0c0c0
+  else: 3px solid #c0c0c0;
 );
 
 /* Multiple tests */
 background-image: if(
   style(--scheme: ice): linear-gradient(to left, #caf0f8, white, #caf0f8);
   style(--scheme: fire): linear-gradient(to left, #ffc971, white, #ffc971);
-  else: none
+  else: none;
 );
 
 /* Partial value */
 border: 3px solid if(
   supports(color: lch(77.7% 0 0)): lch(77.7% 0 0);
-  else: #c0c0c0
+  else: #c0c0c0;
 );
 ```
 
