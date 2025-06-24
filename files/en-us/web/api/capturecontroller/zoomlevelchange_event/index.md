@@ -39,6 +39,14 @@ A generic {{domxref("Event")}}.
 When a captured display surface's zoom level changes, a `zoomlevelchange` event fires on the controller, which can be used to run an event handler such as the following. This writes the updated zoom percentage to an output element of some kind.
 
 ```js
+// Create controller and start capture
+const controller = new CaptureController();
+videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia({
+  controller,
+});
+
+// ...
+
 controller.addEventListener(
   "zoomlevelchange",
   () => (outputElem.textContent = `${controller.zoomLevel}%`),

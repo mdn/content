@@ -40,12 +40,26 @@ A {{jsxref("Promise")}} that fulfills with {{jsxref("undefined")}}.
 The following snippet adds an event listener to a button so that when it is clicked, the `decreaseZoom()` function is called. This in turn calls the `decreaseZoomLevel()` method, zooming the captured surface out.
 
 ```js
+// Create controller and start capture
+const controller = new CaptureController();
+videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia({
+  controller,
+});
+
+// ...
+
 decBtn.addEventListener("click", decreaseZoom);
 
 async function decreaseZoom() {
-  controller.decreaseZoomLevel();
+  try {
+    controller.decreaseZoomLevel();
+  } catch (e) {
+    console.log(e);
+  }
 }
 ```
+
+It is generally a best practice to call `decreaseZoomLevel()` from within a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block because the zoom level could be changed asynchronously by an entity other than the application, which might lead to an error being thrown. For example, the user might directly interact with the captured surface to zoom in or out.
 
 See [Using the Captured Surface Control API](/en-US/docs/Web/API/Screen_Capture_API/Captured_Surface_Control) for a full working example.
 

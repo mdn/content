@@ -221,7 +221,7 @@ In the next section of our script, we wire up our zoom buttons to appropriate `c
 
 - "Zoom out" button: `decreaseZoom()`. This calls the {{domxref("CaptureController.decreaseZoomLevel()")}} method, zooming the captured surface out.
 - "Zoom in" button: `increaseZoom()`. This calls the {{domxref("CaptureController.increaseZoomLevel()")}} method, zooming the captured surface in.
-- "Reset zoom" button: `resetZoom()`. This calls the {{domxref("CaptureController.resetZoomLevel()")}} method, resetting the captured surface to its starting zoom factor.
+- "Reset zoom" button: `resetZoom()`. This calls the {{domxref("CaptureController.resetZoomLevel()")}} method, resetting the captured surface to its starting zoom factor, which is `100`.
 
 ```js live-sample___surface-control-demo
 decBtn.addEventListener("click", decreaseZoom);
@@ -229,17 +229,28 @@ incBtn.addEventListener("click", increaseZoom);
 resetBtn.addEventListener("click", resetZoom);
 
 async function decreaseZoom() {
-  controller.decreaseZoomLevel();
+  try {
+    controller.decreaseZoomLevel();
+  } catch (e) {
+    console.log(e);
+  }
 }
 
 async function increaseZoom() {
-  controller.increaseZoomLevel();
+  try {
+    controller.increaseZoomLevel();
+  } catch (e) {
+    console.log(e);
+  }
 }
 
 async function resetZoom() {
   controller.resetZoomLevel();
 }
 ```
+
+> [!NOTE]
+> It is generally a best practice to call `decreaseZoomLevel()` and `increaseZoomLevel()` from within a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block because the zoom level could be changed asynchronously by an entity other than the application, which might lead to an error being thrown. For example, the user might directly interact with the captured surface to zoom in or out.
 
 When the zoom changes, the controller's {{domxref("CaptureController.zoomlevelchange_event", "zoomlevelchange")}} event fires, which causes the code we saw earlier in the `startCapture()` function to run, writing the updated zoom percentage to the `<output>` element and running the `updateZoomButtonState()` function to stop the user from zooming in and out too far.
 

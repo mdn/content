@@ -35,22 +35,16 @@ An array of numbers representing the different zoom percentages that the capture
 
 ### Basic `getSupportedZoomLevels()` usage
 
-In our live demo, shown in [Using the Captured Surface Control API](/en-US/docs/Web/API/Screen_Capture_API/Captured_Surface_Control), when the zoom changes, the controller's {{domxref("CaptureController.zoomlevelchange_event", "zoomlevelchange")}} event fires. This causes the event handler function seen below to run, which writes the updated zoom percentage (available in the {{domxref("CaptureController.zoomLevel")}} property) to the `<output>` element, and runs the `updateZoomButtonState()` function:
-
-```js
-controller.addEventListener("zoomlevelchange", () => {
-  outputElem.textContent = `${controller.zoomLevel}%`;
-  updateZoomButtonState();
-});
-```
-
-We also grab the supported zoom levels of the captured display surface by running `getSupportedZoomLevels()`, storing the resulting array in a variable called `zoomLevels`:
+In our live demo, shown in [Using the Captured Surface Control API](/en-US/docs/Web/API/Screen_Capture_API/Captured_Surface_Control), we grab the supported zoom levels of the captured display surface by running `getSupportedZoomLevels()`, storing the resulting array in a variable called `zoomLevels`:
 
 ```js
 const zoomLevels = controller.getSupportedZoomLevels();
 ```
 
-The `updateZoomButtonState()` function definition can be seen in the next code snippet. The problem this solves is that, if you try to zoom out below the minimum supported zoom level, or zoom in above the maximum supported zoom level, {{domxref("CaptureController.decreaseZoomLevel", "decreaseZoomLevel()")}}/{{domxref("CaptureController.increaseZoomLevel", "increaseZoomLevel()")}} will throw an `InvalidStateError` {{domxref("DOMException")}}.
+This is later used in a function called `updateZoomButtonState()`. The problem this solves is that, if you try to zoom out below the minimum supported zoom level, or zoom in above the maximum supported zoom level, {{domxref("CaptureController.decreaseZoomLevel", "decreaseZoomLevel()")}}/{{domxref("CaptureController.increaseZoomLevel", "increaseZoomLevel()")}} will throw an `InvalidStateError` {{domxref("DOMException")}}.
+
+> [!NOTE]
+> It is generally a best practice to call `decreaseZoomLevel()` and `increaseZoomLevel()` from within a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block because the zoom level could be changed asynchronously by an entity other than the application, which might lead to an error being thrown. For example, the user might directly interact with the captured surface to zoom in or out.
 
 The `updateZoomButtonState()` function avoids this issue by first making sure both the "Zoom out" and "Zoom in" buttons are enabled. It then does two checks:
 

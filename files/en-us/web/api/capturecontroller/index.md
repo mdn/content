@@ -34,7 +34,7 @@ A `CaptureController` object is associated with a capture session by passing it 
 - {{ domxref("CaptureController.increaseZoomLevel", "increaseZoomLevel()") }} {{Experimental_Inline}}
   - : Increases the captured display surface's zoom percentage to the next level up.
 - {{ domxref("CaptureController.resetZoomLevel", "resetZoomLevel()") }} {{Experimental_Inline}}
-  - : Resets the captured display surface's zoom percentage to its initial level.
+  - : Resets the captured display surface's zoom percentage to its initial level, which is `100`.
 - {{ domxref("CaptureController.setFocusBehavior", "setFocusBehavior()") }} {{Experimental_Inline}}
   - : Controls whether the captured tab or window will be focused or whether the focus will remain with the tab containing the capturing app.
 

@@ -45,7 +45,7 @@ See [Using the Element Capture and Region Capture APIs](/en-US/docs/Web/API/Scre
 
 #### Controlling the captured screen area
 
-The Captured Surface Control API allows the capturing application to provide limited control over the captured display surface, for example zooming and scrolling its contents.
+The **Captured Surface Control API** allows the capturing application to provide limited control over the captured display surface, for example zooming and scrolling its contents.
 
 See [Using the Captured Surface Control API](/en-US/docs/Web/API/Screen_Capture_API/Captured_Surface_Control) to learn more.
 

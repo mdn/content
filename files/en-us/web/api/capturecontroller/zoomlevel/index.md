@@ -21,9 +21,17 @@ A number representing the current zoom percentage of the captured display surfac
 
 ### Basic `zoomLevel` usage
 
-When a captured display surface's zoom level changes, a {{domxref("CaptureController.zoomlevelchange_event", "zoomlevelchange")}} event fires on the controller, which can be used to run an event handler such as the following. This writes the updated zoom percentage to an output element of some kind.
+In our live demo, shown in [Using the Captured Surface Control API](/en-US/docs/Web/API/Screen_Capture_API/Captured_Surface_Control), we use the `zoomLevel` property inside an event handler function for the controller's {{domxref("CaptureController.zoomlevelchange_event", "zoomlevelchange")}} event. When the event fires, the updated `zoomLevel` percentage is written to an `<output>` element.
 
 ```js
+// Create controller and start capture
+const controller = new CaptureController();
+videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia({
+  controller,
+});
+
+// ...
+
 controller.addEventListener(
   "zoomlevelchange",
   () => (outputElem.textContent = `${controller.zoomLevel}%`),
