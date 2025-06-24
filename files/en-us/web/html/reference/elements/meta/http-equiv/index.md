@@ -8,7 +8,7 @@ browser-compat: html.elements.meta.http-equiv
 
 {{HTMLSidebar}}
 
-The **`http-equiv`** attribute of the {{htmlelement("meta")}} element allows you to provide pragma directives in document metadata, which are instructions for the browser that could otherwise be given by an HTTP header.
+The **`http-equiv`** attribute of the {{htmlelement("meta")}} element allows you to provide processing instructions for the browser that could otherwise be given in an HTTP header.
 The metadata is _document-level metadata_ that applies to the whole page.
 
 When a `<meta>` element has a `http-equiv` attribute, a [`content`](/en-US/docs/Web/HTML/Reference/Attributes/content) attribute defines the corresponding `http-equiv` value.
