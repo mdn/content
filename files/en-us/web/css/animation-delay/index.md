@@ -143,7 +143,8 @@ animation-delay: unset;
 > [!NOTE]
 > When you specify multiple comma-separated values on an `animation-*` property, they are applied to the animations in the order in which the {{cssxref("animation-name")}}s appear. For situations where the number of animations and `animation-*` property values do not match, see [Setting multiple animation property values](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values).
 
-> **Note:** `animation-delay` has no effect on [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations).
+> [!NOTE]
+> `animation-delay` has no effect on [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations).
 
 ## Formal definition
 

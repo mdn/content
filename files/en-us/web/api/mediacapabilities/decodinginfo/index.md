@@ -67,7 +67,8 @@ decodingInfo(configuration)
     - `keySystemConfiguration` {{optional_inline}}
       - : Object specifying the key system configuration for encrypted media.
 
-        > **Note:** [`Navigator.requestMediaKeySystemAccess()`](/en-US/docs/Web/API/Navigator/requestMediaKeySystemAccess) takes arrays some of the same data types in its `supportedConfigurations` argument.
+        > [!NOTE]
+        > [`Navigator.requestMediaKeySystemAccess()`](/en-US/docs/Web/API/Navigator/requestMediaKeySystemAccess) takes arrays some of the same data types in its `supportedConfigurations` argument.
 
         If specified, the [`type`](#type) must be `media-source` or `file` (not `webrtc`).
         This has the following properties: <!-- MediaCapabilitiesKeySystemConfiguration in the spec -->

@@ -278,7 +278,8 @@ Property pages must have the following sections:
    - For other properties
      - : The **`InterfaceName.property`** property is a \\{{domxref("type")}} that…
 
-   > **Note:** `InterfaceName.property` should be in `<code>`, and should additionally be in bold (`<strong>`) the first time it's used.
+   > [!NOTE]
+   > `InterfaceName.property` should be in `<code>`, and should additionally be in bold (`<strong>`) the first time it's used.
 
 5. **Value**: The Value section will contain a description of the property's value. This should contain the data type of the property, and what it represents. For an example, see {{domxref("SpeechRecognition.grammars")}}
 
@@ -309,7 +310,8 @@ Method pages need the following sections:
    - The beginning of the first sentence must follow the following structure:
      - : The **`InterfaceName.method()`** method interface …
 
-   > **Note:** `InterfaceName.method()` should be in `<code>`, and should also be in bold (`<strong>`) the first time it's used.
+   > [!NOTE]
+   > `InterfaceName.method()` should be in `<code>`, and should also be in bold (`<strong>`) the first time it's used.
 
 5. **Syntax**: The syntax section should include a 2–3 line example — usually just construction of the interface, then calling of the interface method.
    - The syntax should be of the form:

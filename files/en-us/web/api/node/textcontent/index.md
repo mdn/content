@@ -11,7 +11,8 @@ browser-compat: api.Node.textContent
 The **`textContent`** property of the {{domxref("Node")}}
 interface represents the text content of the node and its descendants.
 
-> **Note:** `textContent` and {{domxref("HTMLElement.innerText")}} are easily confused,
+> [!NOTE]
+> `textContent` and {{domxref("HTMLElement.innerText")}} are easily confused,
 > but the two properties are [different in important ways](#differences_from_innertext).
 
 ## Value

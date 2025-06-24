@@ -51,7 +51,8 @@ They are called radio buttons because they look and operate in a similar manner 
 
 ![Shows what radio buttons looked like in the olden days.](old-radio.jpg)
 
-> **Note:** [Checkboxes](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) are similar to radio buttons, but with an important distinction: radio buttons are designed for selecting one value out of a set, whereas checkboxes let you turn individual values on and off. Where multiple controls exist, radio buttons allow one to be selected out of them all, whereas checkboxes allow multiple values to be selected.
+> [!NOTE]
+> [Checkboxes](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) are similar to radio buttons, but with an important distinction: radio buttons are designed for selecting one value out of a set, whereas checkboxes let you turn individual values on and off. Where multiple controls exist, radio buttons allow one to be selected out of them all, whereas checkboxes allow multiple values to be selected.
 
 ## Value
 

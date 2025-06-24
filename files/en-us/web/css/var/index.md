@@ -73,7 +73,8 @@ The syntax of the fallback, like that of custom properties, allows commas. For e
 - `<declaration-value>`
   - : The custom property's fallback value, which is used in case the custom property is not defined or equals a [CSS-wide keyword](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types#css-wide_keywords). This value may contain any character except some characters with special meaning like newlines, unmatched closing brackets, i.e., `)`, `]`, or `}`, top-level semicolons, or exclamation marks. The fallback value can itself be a custom property using the `var()` syntax. If the fallback value is omitted, and the custom property is not defined, the `var()` function resolves to an [invalid value](#invalid_values).
 
-    > **Note:** `var(--a,)` is valid, specifying that if the `--a` custom property is not defined or equals a [CSS-wide keyword](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types#css-wide_keywords), the `var()` should be replaced with nothing.
+    > [!NOTE]
+    > `var(--a,)` is valid, specifying that if the `--a` custom property is not defined or equals a [CSS-wide keyword](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types#css-wide_keywords), the `var()` should be replaced with nothing.
 
 ## Formal syntax
 

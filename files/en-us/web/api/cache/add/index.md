@@ -23,7 +23,8 @@ fetch(url).then((response) => {
 
 For more complex operations, you'll need to use {{domxref("Cache.put","Cache.put()")}} directly.
 
-> **Note:** `add()` will overwrite any key/value pair previously stored in the cache that matches the request.
+> [!NOTE]
+> `add()` will overwrite any key/value pair previously stored in the cache that matches the request.
 
 ## Syntax
 

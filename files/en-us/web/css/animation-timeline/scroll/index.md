@@ -90,7 +90,8 @@ The HTML for the example is shown below.
 The CSS below defines a square that rotates in alternate directions according to the timeline provided by the `animation-timeline` property.
 In this case, the timeline is provided by `scroll(block nearest)`, which means that it will select the scrollbar in the block direction of the nearest ancestor element that has scrollbars; in this case the vertical scrollbar of the "container" element.
 
-> **Note:** `block` and `nearest` are actually the default parameter values, so we could have used just `scroll()`.
+> [!NOTE]
+> `block` and `nearest` are actually the default parameter values, so we could have used just `scroll()`.
 
 ```css
 #square {

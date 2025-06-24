@@ -522,7 +522,8 @@ The full example looks like this:
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/readonly-confirmation.html", '100%', 660)}}
 
-> **Note:** `:enabled` and `:read-write` are two more pseudo-classes that you'll probably rarely use, given that they describe the default states of input elements.
+> [!NOTE]
+> `:enabled` and `:read-write` are two more pseudo-classes that you'll probably rarely use, given that they describe the default states of input elements.
 
 ## Radio and checkbox states — checked, default, indeterminate
 

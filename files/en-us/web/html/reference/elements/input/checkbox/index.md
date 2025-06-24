@@ -40,7 +40,8 @@ input {
 }
 ```
 
-> **Note:** [Radio buttons](/en-US/docs/Web/HTML/Reference/Elements/input/radio) are similar to checkboxes, but with an important distinction — [same-named radio buttons](/en-US/docs/Web/HTML/Reference/Elements/input/radio#defining_a_radio_group) are grouped into a set in which only one radio button can be selected at a time, whereas checkboxes allow you to turn single values on and off. Where multiple same-named controls exist, radio buttons allow one to be selected out of them all, whereas checkboxes allow multiple values to be selected.
+> [!NOTE]
+> [Radio buttons](/en-US/docs/Web/HTML/Reference/Elements/input/radio) are similar to checkboxes, but with an important distinction — [same-named radio buttons](/en-US/docs/Web/HTML/Reference/Elements/input/radio#defining_a_radio_group) are grouped into a set in which only one radio button can be selected at a time, whereas checkboxes allow you to turn single values on and off. Where multiple same-named controls exist, radio buttons allow one to be selected out of them all, whereas checkboxes allow multiple values to be selected.
 
 ## Value
 

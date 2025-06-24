@@ -148,7 +148,8 @@ When calling `tabs.remove()`:
 
   - If an extension wants to redirect a public (e.g., HTTPS) URL to an [extension page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages), the extension's `manifest.json` file must contain a [`web_accessible_resources`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) key with the URL of the extension page.
 
-    > **Note:** _Any_ website may link or redirect to that URL, and extensions should treat any input (POST data, for example) as if it came from an untrusted source, as a normal web page should.
+    > [!NOTE]
+    > _Any_ website may link or redirect to that URL, and extensions should treat any input (POST data, for example) as if it came from an untrusted source, as a normal web page should.
 
   - Some of the `browser.webRequest.*` APIs allow for returning Promises that resolves `webRequest.BlockingResponse` asynchronously.
 

@@ -18,7 +18,8 @@ using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) o
 those assigned to element properties (e.g., `node.onclick = someFunction`).
 Additionally, for a {{HTMLElement("canvas")}} element, the painted image is not copied.
 
-> **Warning:** `cloneNode()` may lead to duplicate element IDs in a document!
+> [!WARNING]
+> `cloneNode()` may lead to duplicate element IDs in a document!
 >
 > If the original node has an `id` attribute, and the clone
 > will be placed in the same document, then you should modify the clone's ID to be
