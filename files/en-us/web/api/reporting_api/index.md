@@ -112,13 +112,13 @@ These HTTP response headers define the endpoints where reports are sent.
 
 Report endpoints can be set for the following reports using the {{CSP("report-to")}} directive on the corresponding headers:
 
-- CSP Violations
+- CSP violations
   - : {{HTTPHeader("Content-Security-Policy")}} or {{HTTPHeader("Content-Security-Policy-Report-Only")}}.
 
 Report endpoints can be set for the following reports using the [`endpoints`](/en-US/docs/Web/HTTP/Reference/Headers/Integrity-Policy#endpoints) field in a structured dictionary on the corresponding headers:
 
-- Integrity-Policy Violations
-  - : {{httpheader("Integrity-Policy")}} or {{httpheader("Integrity-Policy-Report-Only")}}
+- Integrity-Policy violations
+  - : {{httpheader("Integrity-Policy")}} or {{httpheader("Integrity-Policy-Report-Only")}}.
 
 ## Examples
 

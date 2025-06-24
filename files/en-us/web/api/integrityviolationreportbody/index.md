@@ -25,20 +25,20 @@ They have a {{domxref("Report.type","type")}} of `"integrity-violation"`, a {{do
   - : A string representing the URL of the document that is attempting to load the resource.
 - `destination` {{ReadOnlyInline}}
   - : A string indicating the [`Request.destination`](/en-US/docs/Web/API/Request/destination#script) of the resource that was blocked.
-    This can currently only be: `"script"`.
+    This can currently only be `"script"`.
 - `reportOnly` {{ReadOnlyInline}}
   - : A boolean: `false` if the policy was enforced, and `true` if the violation was only reported.
 
 ## Description
 
-Integrity Policy violations are reported when a document attempts to load a resource that does not meet the [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity) guarantees of a policy set using either {{httpheader("Integrity-Policy")}} or {{httpheader("Integrity-Policy-Report-Only")}} HTTP headers.
+Integrity Policy violations are reported when a document attempts to load a resource that does not meet the [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity) guarantees of a policy set using either the {{httpheader("Integrity-Policy")}} or {{httpheader("Integrity-Policy-Report-Only")}} HTTP headers.
 
 Specifically, a report is sent when a document attempts to load a {{htmlelement("script")}} resource (or other [request destination](/en-US/docs/Web/API/Request/destination) listed in the policy) that does not have valid integrity metadata, or to make a request in [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode.
 
-Violation reports maybe obtained in a violating document using a {{domxref("ReportingObserver")}} callback (defined in the {{domxref("ReportingObserver/ReportingObserver","ReportingObserver()")}} constructor), filtering on report objects that have a `type` of `"integrity-violation"`.
+Violation reports may be obtained in a violating document using a {{domxref("ReportingObserver")}} callback (defined in the {{domxref("ReportingObserver/ReportingObserver","ReportingObserver()")}} constructor), filtering on report objects that have a `type` of `"integrity-violation"`.
 
-Violation reports may also be sent as a JSON objects in a POST to the [`endpoints`](/en-US/docs/Web/HTTP/Reference/Headers/Integrity-Policy#endpoints) specified in the {{httpheader("Integrity-Policy")}} and {{httpheader("Integrity-Policy-Report-Only")}} headers.
-The JSON report objects are a serialization of the reports returned in the {{domxref("ReportingObserver")}}, and therefore also have a `type` of `"integrity-violation"`, and a `body` property that is a serialization of this interface.
+Violation reports may also be sent as JSON objects in `POST` requests to the [`endpoints`](/en-US/docs/Web/HTTP/Reference/Headers/Integrity-Policy#endpoints) specified in the {{httpheader("Integrity-Policy")}} and {{httpheader("Integrity-Policy-Report-Only")}} headers.
+The JSON report objects are a serialization of the reports returned in the {{domxref("ReportingObserver")}}, and therefore also have a `type` of `"integrity-violation"`, and a `body` property that is a serialization of this object.
 Note that endpoint values set in the policy must map to identifiers set using the {{HTTPHeader("Reporting-Endpoints")}} header.
 
 ## Examples
@@ -48,16 +48,16 @@ Note that endpoint values set in the policy must map to identifiers set using th
 This example shows how you can obtain Integrity Policy violation reports using a {{domxref("ReportingObserver")}}.
 
 First we set a page's integrity policy using the {{httpheader("Integrity-Policy")}}.
-The policy below reports and blocks resource loading of any {{htmlelement("script")}} or {{domxref("HTMLScriptElement")}} that does not specify an `integrity` attribute, or when a script resource is requested in [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode.
+The policy below reports and blocks resource loading of any {{htmlelement("script")}} element or {{domxref("HTMLScriptElement")}} object that does not specify an `integrity` attribute, or when a script resource is requested in [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode.
 Note that for this example we're only interested in reporting the violations using the API, so we're omitting the reporting endpoints:
 
 ```http
 Integrity-Policy: blocked-destinations=(script)
 ```
 
-Next assume that our page includes the following element to load a script.
+Next, we'll assume that our page includes the following element to load a script.
 Because we want to trigger a violation, it omits the `integrity` attribute used to check the script matches our expected version.
-We could also/alternatively omit the `cross-origin` attribute so the request is sent in `no-cors` mode.
+We could also omit the `cross-origin` attribute so the request is sent in `no-cors` mode.
 
 ```html
 <script
@@ -75,7 +75,7 @@ We could also/alternatively omit the `cross-origin` attribute so the request is 
 >   crossorigin="anonymous"></script>
 > ```
 
-In order to get violations within the page, we construct a new {{domxref("ReportingObserver")}} object to listen for reports with the type `"integrity-violation"`, passing a callback that will receive and log the reports.
+To observe violations within the page, we construct a new {{domxref("ReportingObserver")}} object to listen for reports with the type `"integrity-violation"`, passing a callback that will receive and log the reports.
 This code needs to be loaded before the script that causes the violation, in the same page:
 
 ```js
@@ -95,7 +95,7 @@ const observer = new ReportingObserver(
 observer.observe();
 ```
 
-Above we log the each violation report object and a JSON-string version of the object, which might look similar to the object below.
+Above, we log each violation report object and a JSON-string version of the object, which might look similar to the object below.
 
 ```json
 {
@@ -116,7 +116,7 @@ Configuring a web page to send an Integrity Policy violation report to a [report
 
 The main difference is that we need to specify one or more reporting endpoints where we want the reports to be sent, using the {{httpheader("Reporting-Endpoints")}} response header, and then reference these in the `endpoints` field when setting the policy.
 
-You can see this below, where we first define two endpoints `integrity-endpoint` and `backup-integrity-endpoint`, and then reference them in our policy:
+You can see this below, where we first define two endpoints — `integrity-endpoint` and `backup-integrity-endpoint` — and then reference them in our policy:
 
 ```http
 Reporting-Endpoints: integrity-endpoint=https://example.com/integrity, backup-integrity-endpoint=https://report-provider.example/integrity
