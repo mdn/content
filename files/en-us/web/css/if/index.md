@@ -177,15 +177,15 @@ You can also use `and`, `or`, or `not` logic inside style queries. For example:
 
 ```css-nolint
 background-color: if(
-  style((--scheme: dark) or (--scheme: very-dark)): black
+  style((--scheme: dark) or (--scheme: very-dark)): black;
 );
 
 background-color: if(
-  style((--scheme: dark) and (--contrast: hi)): black
+  style((--scheme: dark) and (--contrast: hi)): black;
 );
 
 background-color: if(
-  not style(--scheme: light): black
+  not style(--scheme: light): black;
 );
 ```
 
