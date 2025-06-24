@@ -379,19 +379,7 @@ Several general notes about the table:
       </td>
     </tr>
     <tr>
-      <td rowspan="2">11: additive operators</td>
-      <td rowspan="2">left-to-right</td>
-      <td>
-        {{jsxref("Operators/Addition", "Addition", "", 1)}}<br><code>x + y</code>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{jsxref("Operators/Subtraction", "Subtraction", "", 1)}}<br><code>x - y</code>
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="3">10: bitwise shift</td>
+      <td rowspan="3">11: bitwise shift</td>
       <td rowspan="3">left-to-right</td>
       <td>
         {{jsxref("Operators/Left_shift", "Left shift", "", 1)}}<br><code>x &#x3C;&#x3C; y</code>
@@ -405,6 +393,18 @@ Several general notes about the table:
     <tr>
       <td>
         {{jsxref("Operators/Unsigned_right_shift", "Unsigned right shift", "", 1)}}<br><code>x >>> y</code>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="2">10: additive operators</td>
+      <td rowspan="2">left-to-right</td>
+      <td>
+        {{jsxref("Operators/Addition", "Addition", "", 1)}}<br><code>x + y</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{jsxref("Operators/Subtraction", "Subtraction", "", 1)}}<br><code>x - y</code>
       </td>
     </tr>
     <tr>
