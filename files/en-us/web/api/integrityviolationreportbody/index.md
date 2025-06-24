@@ -89,7 +89,7 @@ const observer = new ReportingObserver(
   {
     types: ["integrity-violation"],
     buffered: true,
-  }
+  },
 );
 
 observer.observe();
