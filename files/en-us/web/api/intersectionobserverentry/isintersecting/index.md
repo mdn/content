@@ -8,7 +8,7 @@ browser-compat: api.IntersectionObserverEntry.isIntersecting
 
 {{APIRef("Intersection Observer API")}}
 
-The *`isIntersecting`** read-only property of the {{domxref("IntersectionObserverEntry")}} interface is a Boolean value which is `true` if the target element intersects with the intersection observer's root.
+The **`isIntersecting`** read-only property of the {{domxref("IntersectionObserverEntry")}} interface is a Boolean value which is `true` if the target element intersects with the intersection observer's root.
 
 If this is `true`, then, the `IntersectionObserverEntry` describes a transition into a state of intersection; if it's `false`, then you know the transition is from intersecting to not-intersecting.
 
