@@ -232,7 +232,6 @@ Plan carefully what you are actually going to record, and practice the steps a f
   In a short DevTools video for example, it is a good idea to start by opening the DevTools to allow the viewer to get oriented.
 - Consider what your actions are, slow down, and make them obvious.
   Whenever you have to perform an action (say, click an icon), take it slow and make it obvious. So, for example:
-
   - Move the mouse over the icon.
   - Highlight or zoom (not always, depending on whether it feels needed).
   - Pause for a beat.

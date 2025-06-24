@@ -65,49 +65,49 @@ for await (const conn of Deno.listen({ port: 80 })) {
 
 ### Client
 
-Create an `index.html` file. This file will contain a script that will ping the server every five seconds after a connection has been made.
+Create an `index.html` file. This file will invoke a script that will ping the server every five seconds after a connection has been made. It should also contain the following markup:
 
 ```html
-<!doctype html>
 <h2>WebSocket Test</h2>
 <p>Sends a ping every five seconds</p>
 <div id="output"></div>
-<script>
-  const wsUri = "ws://127.0.0.1/";
-  const output = document.querySelector("#output");
-  const websocket = new WebSocket(wsUri);
-  let pingInterval;
+```
 
-  function writeToScreen(message) {
-    output.insertAdjacentHTML("afterbegin", `<p>${message}</p>`);
-  }
+```js
+const wsUri = "ws://127.0.0.1/";
+const output = document.querySelector("#output");
+const websocket = new WebSocket(wsUri);
+let pingInterval;
 
-  function sendMessage(message) {
-    writeToScreen(`SENT: ${message}`);
-    websocket.send(message);
-  }
+function writeToScreen(message) {
+  output.insertAdjacentHTML("afterbegin", `<p>${message}</p>`);
+}
 
-  websocket.onopen = (e) => {
-    writeToScreen("CONNECTED");
+function sendMessage(message) {
+  writeToScreen(`SENT: ${message}`);
+  websocket.send(message);
+}
+
+websocket.onopen = (e) => {
+  writeToScreen("CONNECTED");
+  sendMessage("ping");
+  pingInterval = setInterval(() => {
     sendMessage("ping");
-    pingInterval = setInterval(() => {
-      sendMessage("ping");
-    }, 5000);
-  };
+  }, 5000);
+};
 
-  websocket.onclose = (e) => {
-    writeToScreen("DISCONNECTED");
-    clearInterval(pingInterval);
-  };
+websocket.onclose = (e) => {
+  writeToScreen("DISCONNECTED");
+  clearInterval(pingInterval);
+};
 
-  websocket.onmessage = (e) => {
-    writeToScreen(`RECEIVED: ${e.data}`);
-  };
+websocket.onmessage = (e) => {
+  writeToScreen(`RECEIVED: ${e.data}`);
+};
 
-  websocket.onerror = (e) => {
-    writeToScreen(`ERROR: ${e.data}`);
-  };
-</script>
+websocket.onerror = (e) => {
+  writeToScreen(`ERROR: ${e.data}`);
+};
 ```
 
 ## Running the code

@@ -19,7 +19,8 @@ This method must be called to set the event
 before it is dispatched, using {{ domxref("EventTarget.dispatchEvent()") }}.
 Once dispatched, it doesn't do anything anymore.
 
-> **Note:** _Do not use this method anymore as it is deprecated._
+> [!NOTE]
+> _Do not use this method anymore as it is deprecated._
 > Instead use specific event constructors, like {{domxref("Event.Event", "Event()")}}.
 > The page on [Creating and triggering events](/en-US/docs/Web/Events/Creating_and_triggering_events) gives more information about the way to use these.
 

@@ -1,5 +1,6 @@
 ---
 title: Date.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.toString

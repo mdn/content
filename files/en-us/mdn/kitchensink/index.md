@@ -428,7 +428,6 @@ The [`AvailableInWorkers`](https://github.com/mdn/rari/blob/main/crates/rari-doc
 <!---->
 
 - [MDN Web Docs Glossary](/en-US/docs/Glossary):
-
   - {{Glossary("XMLHttpRequest", "XHR")}}
 
 - [AJAX](https://en.wikipedia.org/wiki/AJAX) on Wikipedia

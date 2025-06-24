@@ -61,7 +61,6 @@ text-decoration-skip-ink: unset;
 - `auto`
   - : The default — the browser _may_ interrupt underlines and overlines so that they do not touch or closely approach a glyph. That is, they are interrupted where they would otherwise cross over a glyph.
 - `all`
-
   - : The browser _must_ interrupt underlines and overlines so that they do not touch or closely approach a glyph. This can be helpful with certain Chinese, Japanese, or Korean (CJK) fonts, where the `auto` behavior might not create interruptions.
 
     ![An example of "text-decoration-skip-ink".](decoration-skip-ink.png)

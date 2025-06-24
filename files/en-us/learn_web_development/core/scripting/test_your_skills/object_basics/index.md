@@ -41,7 +41,6 @@ In our next task, we want you to have a go at creating your own object literal t
 - `formed`: A number representing the year the band formed.
 - `split`: A number representing the year the band split up, or `false` if they are still together.
 - `albums`: An array representing the albums released by the band. Each array item should be an object containing the following members:
-
   - `name`: A string representing the name of the album.
   - `released`: A number representing the year the album was released.
 

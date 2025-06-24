@@ -74,18 +74,15 @@ The source of the suggested values is generally up to the browser; typically val
 The attribute value is either the keyword `off` or `on`, or a space-separated `<token-list>` that describes the meaning of the autocompletion value.
 
 - `off`
-
   - : The browser is not permitted to automatically enter or select a value for this field. It is possible that the document or application provides its own autocomplete feature, or that security concerns require that the field's value not be automatically entered.
 
     > [!NOTE]
     > In most modern browsers, setting `autocomplete` to `"off"` will not prevent a password manager from asking the user if they would like to save username and password information, or from automatically filling in those values in a site's login form. See [Managing autofill for login fields](/en-US/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion#managing_autofill_for_login_fields).
 
 - `on`
-
   - : The browser is allowed to automatically complete the input. No guidance is provided as to the type of data expected in the field, so the browser may use its own judgement.
 
 - `<token-list>`
-
   - : An ordered set of [space-separated tokens](#token_list_tokens) consisting of autofill detail tokens preceded by optional sectioning and either billing or shipping grouping tokens. Phone numbers, email addresses, and messaging protocol tokens are preceded by a token identifying the type of recipient.
 
 See the [WHATWG Standard](https://html.spec.whatwg.org/multipage/forms.html#autofill) for more detailed information.
@@ -139,7 +136,6 @@ The tokens that identify the type of recipient include:
 The token or group of tokens for telephone numbers or a number's component parts, phone extensions, email addresses, or instant messaging protocols.
 
 - `tel`
-
   - : A full telephone number, including the country code. If you need to break the phone number up into its components, you can use these values for those fields:
     - `tel-country-code`
       - : The country code, such as "1" for the United States, Canada, and other areas in North America and parts of the Caribbean.
@@ -162,9 +158,7 @@ The token or group of tokens for telephone numbers or a number's component parts
 When the form field is not a phone number, email address, or instant messaging protocol, the space-separated list of tokens is not preceded by a contact type:
 
 - `name`
-
   - : The field expects the value to be a person's full name. Using `name` rather than breaking the name down into its components is generally preferred because it avoids dealing with the wide diversity of human names and how they are structured; however, you can use the following `autocomplete` values if you do need to break the name down into its components:
-
     - `honorific-prefix`
       - : The prefix or title, such as "Mrs.", "Mr.", "Miss", "Ms.", "Dr.", or "Mlle.".
     - `given-name`
@@ -208,7 +202,6 @@ When the form field is not a phone number, email address, or instant messaging p
 - `country-name`
   - : A country or territory name.
 - `postal-code`
-
   - : A postal code (in the United States, this is the ZIP code).
 
 - `cc-name`

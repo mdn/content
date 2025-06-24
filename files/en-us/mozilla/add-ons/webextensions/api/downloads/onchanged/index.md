@@ -33,9 +33,7 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. This function will be passed this argument:
-
     - `downloadDelta`
       - : An `object` representing the {{WebExtAPIRef('downloads.DownloadItem')}} object that changed, and the status of all the properties that changed in it. See the [downloadDelta](#downloaddelta_2) section for more details.
 

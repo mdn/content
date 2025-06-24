@@ -1,5 +1,6 @@
 ---
 title: JSON.parse()
+short-title: parse()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/parse
 page-type: javascript-static-method
 browser-compat: javascript.builtins.JSON.parse

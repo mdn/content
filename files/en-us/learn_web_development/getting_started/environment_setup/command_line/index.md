@@ -112,7 +112,6 @@ Although there's a great wealth of tools available from the command line, if you
 Enough talk — let's start looking at some terminal commands! Out of the box, here are just a few of the things the command line can do, along with the names of relevant tools in each case:
 
 - Navigate your computer's file system along with base-level tasks such as create, copy, rename, and delete:
-
   - Move around your directory (folder) structure: `cd`
   - Create directories: `mkdir`
   - Create files (and modify their metadata): `touch`

@@ -20,9 +20,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLOListElement.start")}}
   - : A `long` value reflecting the [`start`](/en-US/docs/Web/HTML/Reference/Elements/ol#start) and defining the value of the first number of the first element of the list.
 - {{domxref("HTMLOListElement.type")}}
-
   - : A string value reflecting the [`type`](/en-US/docs/Web/HTML/Reference/Elements/ol#type) and defining the kind of marker to be used to display. It can have the following values:
-
     - `'1'` meaning that decimal numbers are used: `1`, `2`, `3`, `4`, `5`, …
     - `'a'` meaning that the lowercase latin alphabet is used: `a`, `b`, `c`, `d`, `e`, …
     - `'A'` meaning that the uppercase latin alphabet is used: `A`, `B`, `C`, `D`, `E`, …

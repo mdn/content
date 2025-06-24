@@ -25,9 +25,7 @@ new CSSStyleSheet(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An object containing the following:
-
     - `baseURL` {{optional_inline}}
       - : A string containing the `baseURL` used to resolve relative URLs in the stylesheet.
     - `media` {{optional_inline}}

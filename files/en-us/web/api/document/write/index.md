@@ -116,7 +116,7 @@ For the purposes of demonstration, here we implement a rudimentary "sanitizer" t
 
 ```js
 const policy = trustedTypes.createPolicy("docPolicy", {
-  createHTML: (string) => {
+  createHTML(string) {
     return string
       .replace("<script", "&lt;script")
       .replace("</script", "&lt;/script");

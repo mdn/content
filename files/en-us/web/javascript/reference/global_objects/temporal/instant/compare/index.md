@@ -1,5 +1,6 @@
 ---
 title: Temporal.Instant.compare()
+short-title: compare()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Instant/compare
 page-type: javascript-static-method
 status:

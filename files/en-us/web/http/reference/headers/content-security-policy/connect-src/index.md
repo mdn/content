@@ -20,7 +20,8 @@ loaded using script interfaces. The following APIs are controlled by this direct
 - {{domxref("EventSource")}}
 - {{domxref("Navigator.sendBeacon()")}}
 
-> **Note:** `connect-src 'self'` does not resolve to websocket
+> [!NOTE]
+> `connect-src 'self'` does not resolve to websocket
 > schemes in all browsers, more info in this [issue](https://github.com/w3c/webappsec-csp/issues/7).
 
 <table class="properties">
@@ -55,9 +56,7 @@ This directive may have one of the following values:
 - `'none'`
   - : No resources of this type may be loaded. The single quotes are mandatory.
 - `<source-expression-list>`
-
   - : A space-separated list of _source expression_ values. Resources of this type may be loaded if they match any of the given source expressions. For this directive, the following source expression values are applicable:
-
     - [`<host-source>`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#host-source)
     - [`<scheme-source>`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#scheme-source)
     - [`'self'`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#self)

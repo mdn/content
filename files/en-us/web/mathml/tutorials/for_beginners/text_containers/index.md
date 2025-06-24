@@ -162,7 +162,8 @@ One typographic convention in mathematics is to use italic letters for variables
 
 {{ EmbedLiveSample('Automatic italicization of <mi>', 700, 50) }}
 
-> **Note:** [This table from MathML Core](https://w3c.github.io/mathml-core/#italic-mappings) provide the exhaustive list of characters that are subject to italicization, together with the corresponding italic characters.
+> [!NOTE]
+> [This table from MathML Core](https://w3c.github.io/mathml-core/#italic-mappings) provide the exhaustive list of characters that are subject to italicization, together with the corresponding italic characters.
 
 ## Reverting automatic italicization of \<mi>
 

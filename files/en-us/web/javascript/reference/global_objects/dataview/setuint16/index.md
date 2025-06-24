@@ -1,5 +1,6 @@
 ---
 title: DataView.prototype.setUint16()
+short-title: setUint16()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setUint16
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.setUint16

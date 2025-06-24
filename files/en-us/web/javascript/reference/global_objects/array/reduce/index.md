@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.reduce()
+short-title: reduce()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.reduce

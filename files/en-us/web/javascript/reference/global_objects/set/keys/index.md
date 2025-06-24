@@ -1,5 +1,6 @@
 ---
 title: Set.prototype.keys()
+short-title: keys()
 slug: Web/JavaScript/Reference/Global_Objects/Set/keys
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.keys

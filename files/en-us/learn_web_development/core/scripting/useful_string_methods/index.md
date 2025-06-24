@@ -161,7 +161,8 @@ browserType.slice(2); // "zilla"
 
 This returns `"zilla"` — this is because the character position of 2 is the letter `"z"`, and because you didn't include a second parameter, the substring that was returned was all of the remaining characters in the string.
 
-> **Note:** `slice()` has other options too; study the {{jsxref("String.prototype.slice()", "slice()")}} page to see what else you can find out.
+> [!NOTE]
+> `slice()` has other options too; study the {{jsxref("String.prototype.slice()", "slice()")}} page to see what else you can find out.
 
 ## Changing case
 

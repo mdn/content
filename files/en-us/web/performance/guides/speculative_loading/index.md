@@ -137,7 +137,8 @@ Many browsers now implement some form of [cache partitioning](https://developer.
 
 Would not be accessible from `https://aggregator.example/`.
 
-> **Note:** `<link rel="prefetch">` is functionally equivalent to a {{domxref("Window/fetch", "fetch()")}} call with a `priority: "low"` option set on it, except that the former will generally have an even lower priority, and it will have a [`Sec-Purpose: prefetch`](/en-US/docs/Web/HTTP/Reference/Headers/Sec-Purpose) header set on the request.
+> [!NOTE]
+> `<link rel="prefetch">` is functionally equivalent to a {{domxref("Window/fetch", "fetch()")}} call with a `priority: "low"` option set on it, except that the former will generally have an even lower priority, and it will have a [`Sec-Purpose: prefetch`](/en-US/docs/Web/HTTP/Reference/Headers/Sec-Purpose) header set on the request.
 
 > [!NOTE]
 > The fetch request for a `prefetch` operation results in an HTTP Request that includes the HTTP header [`Sec-Purpose: prefetch`](/en-US/docs/Web/HTTP/Reference/Headers/Sec-Purpose). A server might use this header to change the cache timeouts for the resources, or perform other special handling.

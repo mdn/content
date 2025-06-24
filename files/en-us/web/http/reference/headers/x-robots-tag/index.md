@@ -13,12 +13,12 @@ The **`X-Robots-Tag`** {{Glossary("response header")}} defines how {{glossary("C
 While not part of any specification, it is a de-facto standard method for communicating with search bots, web crawlers, and similar user agents.
 Search-related crawlers use the rules from the `X-Robots-Tag` header to adjust how to present web pages or other resources in search results.
 
-Indexing rules defined via `<meta name="robots">` elements and `X-Robots-Tag` headers are discovered when a URL is crawled.
+Indexing rules are defined in a `X-Robots-Tag` header or a [`<meta name="robots">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/robots) HTML element (often called a "robots tag") and are discovered when a URL is crawled.
 Specifying indexing rules in a HTTP header is useful for non-HTML documents like images, PDFs, or other media.
 
 > [!NOTE]
-> Only cooperative robots follow these rules, and a crawler still needs to access the resource to read headers and meta elements (see [Interaction with robots.txt](#interaction_with_robots.txt)).
-> If you want to prevent bandwidth consumption by crawlers, a restrictive {{Glossary("robots.txt")}} file is more effective than indexing rules as it blocks resources from being crawled entirely.
+> Only cooperative robots follow these rules, and a crawler first needs to access the resource to read headers and meta elements (see [Interaction with robots.txt](#interaction_with_robots.txt)).
+> If you want to prevent bandwidth consumption by crawlers, a restrictive {{Glossary("robots.txt")}} file is more effective than indexing rules as it blocks resources from being crawled.
 
 <table class="properties">
   <tbody>
@@ -103,7 +103,6 @@ Any of the following indexing rules may be used:
   - : Do not index images on this page.
     If omitted, images on the page may be indexed and shown in search results.
 - `unavailable_after: <date/time>`
-
   - : Requests not to show this page in search results after the specified `<date/time>`.
     Ignored if no valid `<date/time>` is specified.
     A date must be specified in a format such as {{RFC("822")}}, {{RFC("850")}}, or ISO 8601.
@@ -191,7 +190,9 @@ Not part of any current specification.
 
 ## See also
 
-- {{Glossary("Robots.txt")}}
+- {{Glossary("robots.txt")}}
 - {{Glossary("Search engine")}}
+- [`<meta name="robots">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/robots) HTML element ("robots tag")
+- [robots.txt configuration](/en-US/docs/Web/Security/Practical_implementation_guides/Robots_txt) security guide
 - {{RFC("9309", "Robots Exclusion Protocol")}}
 - [Using the X-Robots-Tag HTTP header](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag#xrobotstag) on developers.google.com

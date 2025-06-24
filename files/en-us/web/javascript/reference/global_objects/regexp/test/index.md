@@ -1,5 +1,6 @@
 ---
 title: RegExp.prototype.test()
+short-title: test()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/test
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.test

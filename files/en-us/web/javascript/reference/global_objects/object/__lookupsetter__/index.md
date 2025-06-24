@@ -1,5 +1,6 @@
 ---
 title: Object.prototype.__lookupSetter__()
+short-title: __lookupSetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__
 page-type: javascript-instance-method
 status:

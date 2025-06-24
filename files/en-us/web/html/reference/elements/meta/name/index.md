@@ -27,7 +27,6 @@ For example, the following `<meta>` tag provides a `description` as metadata for
 The HTML specification defines the following set of standard metadata names:
 
 - `application-name`
-
   - : Browsers may use this to identify the application running in the web page.
     It is different from the {{HTMLElement("title")}} element, which may contain an application (or website) name, but a `<title>` may add contextual information like a document name or a status.
     Individual pages shouldn't define their own, unique `application-name`.

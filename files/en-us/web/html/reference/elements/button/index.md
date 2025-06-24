@@ -55,13 +55,10 @@ By default, HTML buttons are presented in a style resembling the platform the {{
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `autofocus`
-
   - : This Boolean attribute specifies that the button should have input [focus](/en-US/docs/Web/API/HTMLElement/focus) when the page loads. **Only one element in a document can have this attribute.**
 
 - `command`
-
   - : Specifies the action to be performed on an element being controlled by a control `<button>`, specified via the `commandfor` attribute. The possible values are:
-
     - `"show-modal"`
       - : The button will show a {{htmlelement("dialog")}} as modal. If the dialog is already modal, no action will be taken. This is a declarative equivalent of calling the [`.showModal()`](/en-US/docs/Web/API/HTMLDialogElement/showModal) method on the dialog element.
     - `"close"`
@@ -82,7 +79,6 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
 - [`disabled`](/en-US/docs/Web/HTML/Reference/Attributes/disabled)
   - : This Boolean attribute prevents the user from interacting with the button: it cannot be pressed or focused.
 - `form`
-
   - : The {{HTMLElement("form")}} element to associate the button with (its _form owner_). The value of this attribute must be the `id` of a `<form>` in the same document. (If this attribute is not set, the `<button>` is associated with its ancestor `<form>` element, if any.)
 
     This attribute lets you associate `<button>` elements to `<form>`s anywhere in the document, not just inside a `<form>`. It can also override an ancestor `<form>` element.
@@ -90,9 +86,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
 - `formaction`
   - : The URL that processes the information submitted by the button. Overrides the [`action`](/en-US/docs/Web/HTML/Reference/Elements/form#action) attribute of the button's form owner. Does nothing if there is no form owner.
 - `formenctype`
-
   - : If the button is a submit button (it's inside/associated with a `<form>` and doesn't have `type="button"`), specifies how to encode the form data that is submitted. Possible values:
-
     - `application/x-www-form-urlencoded`: The default if the attribute is not used.
     - `multipart/form-data`: Used to submit {{HTMLElement("input")}} elements with their [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attributes set to `file`.
     - `text/plain`: Specified as a debugging aid; shouldn't be used for real form submission.
@@ -100,9 +94,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
     If this attribute is specified, it overrides the [`enctype`](/en-US/docs/Web/HTML/Reference/Elements/form#enctype) attribute of the button's form owner.
 
 - `formmethod`
-
   - : If the button is a submit button (it's inside/associated with a `<form>` and doesn't have `type="button"`), this attribute specifies the [HTTP method](/en-US/docs/Web/HTTP/Reference/Methods) used to submit the form. Possible values:
-
     - `post`: The data from the form are included in the body of the HTTP request when sent to the server. Use when the form contains information that shouldn't be public, like login credentials.
     - `get`: The form data are appended to the form's `action` URL, with a `?` as a separator, and the resulting URL is sent to the server. Use this method when the form [has no side effects](/en-US/docs/Glossary/Idempotent), like search forms.
     - `dialog`: This method is used to indicate that the button closes the [dialog](/en-US/docs/Web/HTML/Reference/Elements/dialog) with which it is associated, and does not transmit the form data at all.
@@ -110,35 +102,27 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
     If specified, this attribute overrides the [`method`](/en-US/docs/Web/HTML/Reference/Elements/form#method) attribute of the button's form owner.
 
 - `formnovalidate`
-
   - : If the button is a submit button, this Boolean attribute specifies that the form is not to be [validated](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation) when it is submitted. If this attribute is specified, it overrides the [`novalidate`](/en-US/docs/Web/HTML/Reference/Elements/form#novalidate) attribute of the button's form owner.
 
     This attribute is also available on [`<input type="image">`](/en-US/docs/Web/HTML/Reference/Elements/input/image) and [`<input type="submit">`](/en-US/docs/Web/HTML/Reference/Elements/input/submit) elements.
 
 - `formtarget`
-
   - : If the button is a submit button, this attribute is an author-defined name or standardized, underscore-prefixed keyword indicating where to display the response from submitting the form. This is the `name` of, or keyword for, a _browsing context_ (a tab, window, or {{HTMLElement("iframe")}}). If this attribute is specified, it overrides the [`target`](/en-US/docs/Web/HTML/Reference/Elements/form#target) attribute of the button's form owner. The following keywords have special meanings:
-
     - `_self`: Load the response into the same browsing context as the current one. This is the default if the attribute is not specified.
     - `_blank`: Load the response into a new unnamed browsing context — usually a new tab or window, depending on the user's browser settings.
     - `_parent`: Load the response into the parent browsing context of the current one. If there is no parent, this option behaves the same way as `_self`.
     - `_top`: Load the response into the top-level browsing context (that is, the browsing context that is an ancestor of the current one, and has no parent). If there is no parent, this option behaves the same way as `_self`.
 
 - `name`
-
   - : The name of the button, submitted as a pair with the button's `value` as part of the form data, when that button is used to submit the form.
 
 - `popovertarget`
-
   - : Turns a `<button>` element into a popover control button; takes the ID of the popover element to control as its value. Establishing a relationship between a popover and its invoker button using the `popovertarget` attribute has two additional useful effects:
-
     - The browser creates an implicit [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) and [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) relationship between popover and invoker, and places the popover in a logical position in the keyboard focus navigation order when shown. This makes the popover more accessible to keyboard and assistive technology (AT) users (see also [Popover accessibility features](/en-US/docs/Web/API/Popover_API/Using#popover_accessibility_features)).
     - The browser creates an implicit anchor reference between the two, making it very convenient to position popovers relative to their controls using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). See [Popover anchor positioning](/en-US/docs/Web/API/Popover_API/Using#popover_anchor_positioning) for more details.
 
 - `popovertargetaction`
-
   - : Specifies the action to be performed on a popover element being controlled by a control `<button>`. Possible values are:
-
     - `"hide"`
       - : The button will hide a shown popover. If you try to hide an already hidden popover, no action will be taken.
     - `"show"`
@@ -147,9 +131,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
       - : The button will toggle a popover between showing and hidden. If the popover is hidden, it will be shown; if the popover is showing, it will be hidden. If `popovertargetaction` is omitted, `"toggle"` is the default action that will be performed by the control button.
 
 - `type`
-
   - : The default behavior of the button. Possible values are:
-
     - `submit`: The button submits the form data to the server. This is the default if the attribute is not specified for buttons associated with a `<form>`, or if the attribute is an empty or invalid value.
     - `reset`: The button resets all the controls to their initial values, like [\<input type="reset">](/en-US/docs/Web/HTML/Reference/Elements/input/reset). (This behavior tends to annoy users.)
     - `button`: The button has no default behavior, and does nothing when pressed by default. It can have client-side scripts listen to the element's events, which are triggered when the events occur.

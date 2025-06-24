@@ -78,7 +78,6 @@ The report JSON object has a single top-level property, `"csp-report"`, which co
 - `referrer` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : The referrer of the document in which the violation occurred.
 - `script-sample`
-
   - : The first 40 characters of the inline script, event handler, or style that caused the violation.
     Violations originating from external files are not included in the report.
 

@@ -322,7 +322,8 @@ In normal template literals, [the escape sequences in string literals](/en-US/do
 - `\u` not followed by `{` and followed by fewer than four hex digits (including none); for example `\uz`
 - `\u{}` enclosing an invalid Unicode code point — it contains a non-hex digit, or its value is greater than `10FFFF`; for example `\u{110000}` and `\u{z}`
 
-> **Note:** `\` followed by other characters, while they may be useless since nothing is escaped, are not syntax errors.
+> [!NOTE]
+> `\` followed by other characters, while they may be useless since nothing is escaped, are not syntax errors.
 
 However, this is problematic for tagged templates, which, in addition to the "cooked" literal, also have access to the raw literals (escape sequences are preserved as-is).
 
