@@ -153,7 +153,7 @@ An `<if-test>` accepts one of three query types. This section looks at each one 
 
 #### Style queries
 
-[Container style query](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#container_style_queries) if conditions allow you to test whether a particular property value is set on an element, and apply a value to a different property as a result. We walked through a style query example earlier on; let's look at another example:
+A [container style query](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#container_style_queries) `<if-test>` allows you to test whether a particular property value is set on an element, and apply a value to a different property as a result. We walked through several style query examples earlier on; let's look at another example:
 
 ```css-nolint
 background-image: if(
