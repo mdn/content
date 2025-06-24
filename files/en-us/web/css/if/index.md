@@ -15,8 +15,8 @@ The **`if()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Val
 
 ```css-nolint
 /* Style query condition */
-background-color: if(style(--scheme: dark): black);
-padding: if(style(--size: 2xl): 1em; else: 0.25em);
+background-color: if(style(--scheme: dark): black;);
+padding: if(style(--size: 2xl): 1em; else: 0.25em;);
 
 /* Media query condition */
 background: if(media(print): white; else: black);
