@@ -1,20 +1,18 @@
 ---
 title: Firefox 140 for developers
-short-title: Firefox 140 (Beta)
+short-title: Firefox 140 (Stable)
 slug: Mozilla/Firefox/Releases/140
 page-type: firefox-release-notes-active
 sidebar: firefoxsidebar
 ---
 
-This article provides information about the changes in Firefox 140 that affect developers. Firefox 140 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [June 24, 2025](https://whattrainisitnow.com/release/?version=140).
+This article provides information about the changes in Firefox 140 that affect developers. Firefox 140 was released on [June 24, 2025](https://whattrainisitnow.com/release/?version=140).
 
 ## Changes for web developers
 
-### Developer Tools
-
 ### HTML
 
-#### Removals
+No notable changes.
 
 ### CSS
 
@@ -28,21 +26,11 @@ This article provides information about the changes in Firefox 140 that affect d
 
 ### JavaScript
 
-#### Removals
+No notable changes.
 
 ### SVG
 
 - The SVG {{SVGAttr("fetchpriority")}} attribute is now supported for the SVG {{SVGElement("feimage")}}, {{SVGElement("image")}}, and {{SVGElement("script")}} elements. It allows you to hint to the browser about the relative priority of an external resource. This works the same way as the `fetchpriority` attribute for the HTML {{HTMLElement("img", "", "#fetchpriority")}} and {{HTMLElement("script", "", "#fetchpriority")}} elements. ([Firefox bug 1847712](https://bugzil.la/1847712)).
-
-#### Removals
-
-### HTTP
-
-#### Removals
-
-### Security
-
-#### Removals
 
 ### APIs
 
@@ -64,15 +52,9 @@ This article provides information about the changes in Firefox 140 that affect d
   Because listening to this event may impact performance, you should avoid using it for other use cases.
   ([Firefox bug 1550462](https://bugzil.la/1550462)).
 
-#### Media, WebRTC, and Web Audio
-
 #### Removals
 
 - The {{domxref("MutationEvent")}} interface and its associated events (`DOMSubtreeModified`, `DOMNodeInserted`, `DOMNodeRemoved`, `DOMCharacterDataModified`, `DOMAttrModified`) have been removed. ([Firefox bug 1963043](https://bugzil.la/1963043)).
-
-### WebAssembly
-
-#### Removals
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -93,13 +75,9 @@ This article provides information about the changes in Firefox 140 that affect d
 
 - Support added for `unspecified` in {{WebExtAPIRef("cookies.SameSiteStatus")}}. In addition, `unspecified` is now the default value for `sameSite` in {{WebExtAPIRef("cookies.set()")}}. ([Firefox bug 1550032](https://bugzil.la/1550032))
 
-### Removals
-
-### Other
-
 ## Experimental web features
 
-These features are shipping in Firefox 140 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+These features shipped in Firefox 140 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 
 - **`Notification.maxActions`** (Nightly): `dom.webnotifications.actions.enabled`
 
