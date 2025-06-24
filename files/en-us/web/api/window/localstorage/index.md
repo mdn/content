@@ -27,7 +27,7 @@ A {{DOMxRef("Storage")}} object which can be used to access the current origin's
 
 ## Description
 
-The keys and the values stored with `localStorage` are _always_ in the UTF-16 string format, which uses two bytes per character. As with objects, integer keys are automatically converted to strings.
+The keys and the values stored with `localStorage` are in the {{glossary("UTF-16")}} string format. As with objects, integer keys are automatically converted to strings.
 
 `localStorage` data **is specific to the protocol of the document**. In particular, for a site loaded over HTTP (e.g., `http://example.com`), `localStorage` returns a different object than `localStorage` for the corresponding site loaded over HTTPS (e.g., `https://example.com`).
 

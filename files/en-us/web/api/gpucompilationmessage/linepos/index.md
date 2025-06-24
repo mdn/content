@@ -15,7 +15,7 @@ The **`linePos`** read-only property of the
 
 A number.
 
-To be precise, `linePos` is the number of UTF-16 code units from the beginning of the line to the exact point or start of the relevant substring that the message corresponds to.
+To be precise, `linePos` is the number of {{glossary("UTF-16", "UTF-16 code units")}} from the beginning of the line to the exact point or start of the relevant substring that the message corresponds to.
 
 Note that:
 
