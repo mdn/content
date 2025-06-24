@@ -60,7 +60,7 @@ request.onsuccess = (event) => {
 };
 ```
 
-Which of the two functions, `onsuccess()` or `onerror()`, gets called? If everything succeeds, the `onsuccess()` function is triggered, receiving the success event as its argument, where the target property is the `request` object. Otherwise, if there was any problem, the `onerror()` function is triggered with the error event as its argument.
+If the request succeeds, the {{domxref("IDBRequest.success_event", "success")}} event is fired, and the function assigned to `onsuccess` is called. If the request fails,  the {{domxref("IDBRequest.error_event", "error")}} event is fired, and the function assigned to `onerror` is called.
 
 The IndexedDB API is designed to minimize the need for error handling, so you're not likely to see many error events (at least, not once you're used to the API!). In the case of opening a database, however, there are some common conditions that generate error events. The most likely problem is that the user decided not to give your web app permission to create a database. One of the main design goals of IndexedDB is to allow large amounts of data to be stored for offline use. (To learn more about how much storage you can have for each browser, see [How much data can be stored? on the Browser storage quotas and eviction criteria page](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#how_much_data_can_be_stored).)
 
