@@ -107,7 +107,6 @@ You can specify
   - : Controls whether or not the document is permitted to use the [Captured Surface Control API](/en-US/docs/Web/API/Screen_Capture_API/Captured_Surface_Control). When this policy is disabled, the promise returned by the API's main methods will reject with a `NotAllowedError` {{DOMxRef("DOMException")}} if permission is not obtained.
 
 - {{httpheader('Permissions-Policy/compute-pressure','compute-pressure')}} {{Experimental_Inline}}
-
   - : Controls access to the [Compute Pressure API](/en-US/docs/Web/API/Compute_Pressure_API).
 
 - {{httpheader('Permissions-Policy/cross-origin-isolated','cross-origin-isolated')}} {{Experimental_Inline}}
