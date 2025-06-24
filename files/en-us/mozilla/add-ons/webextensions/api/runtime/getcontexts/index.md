@@ -20,7 +20,6 @@ let gettingContexts = await browser.runtime.getContexts(
 ### Parameters
 
 - `filter`
-
   - : An object containing criteria to match returned contexts against. Matching contexts must match all specified filters. If the object is empty, all contexts are returned.
     - `contextIds` {{optional_inline}}
       - : An array of `string`. The IDs of contexts to return.

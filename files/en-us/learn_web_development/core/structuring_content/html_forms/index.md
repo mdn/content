@@ -147,7 +147,7 @@ This is rendered as follows:
 
 {{EmbedLiveSample("form-anatomy", "100%", "200", , , , , "allow-forms")}}
 
-If you click click "Sign me up!" immediately, you'll see a validation error because no data was entered. If you fill out the fields with a name and email address then click "Sign me up!", you'll see a `404` error message.
+If you click "Sign me up!" immediately, you'll see a validation error because no data was entered. If you fill out the fields with a name and email address then click "Sign me up!", you'll see a `404` error message.
 
 We'll explain why later on. Before moving on, copy the previous HTML code listing into a new HTML file using your [code editor](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors) and open it in a new browser tab.
 

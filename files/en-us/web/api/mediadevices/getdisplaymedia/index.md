@@ -26,7 +26,6 @@ getDisplayMedia(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An optional object specifying requirements for the returned {{domxref("MediaStream")}}. The options for `getDisplayMedia()` work in the same as the [constraints](/en-US/docs/Web/API/MediaDevices/getUserMedia#parameters) for the {{domxref("MediaDevices.getUserMedia()")}} method, although in that case only `audio` and `video` can be specified. The list of possible option properties for `getDisplayMedia()` is as follows:
     - `video` {{optional_inline}}
       - : A boolean or a {{domxref("MediaTrackConstraints")}} instance; the default value is `true`. If this option is omitted or set to `true`, the returned {{domxref("MediaStream")}} will contain a video track. Since `getDisplayMedia()` requires a video track, if this option is set to `false` the promise will reject with a `TypeError`.
@@ -35,7 +34,6 @@ getDisplayMedia(options)
     - `controller` {{Experimental_Inline}} {{optional_inline}}
       - : A {{domxref("CaptureController")}} object instance containing methods that can be used to further manipulate the capture session if included.
     - `monitorTypeSurfaces` {{Experimental_Inline}} {{optional_inline}}
-
       - : An enumerated value specifying whether the browser should offer entire screens in the screen capture options presented to the user alongside tab and window options. This option is intended to protect companies from leakage of private information through employee error when using video conferencing apps. Possible values are `include`, which hints that the browser should include screen options, and `exclude`, which hints that they should be excluded. A default value is not mandated by the spec; see the [Browser compatibility](#browser_compatibility) section for browser-specific defaults.
 
         > [!NOTE]

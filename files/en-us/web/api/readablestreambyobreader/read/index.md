@@ -40,9 +40,7 @@ read(view, options)
 - `view`
   - : The view that data is to be read into.
 - `options` {{optional_inline}}
-
   - : Options are as follows:
-
     - `min`
       - : The minimum number of elements to read before the promise will fulfill while the stream is active.
         If not given, the promise will resolve with at least one element, up to the maximum size of the view.

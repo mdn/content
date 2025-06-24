@@ -25,9 +25,7 @@ replaceElementWithChildren(element)
 ### Parameters
 
 - `element`
-
-  - : A string indicating the name of the element to be be replaced, or an object with the following properties:
-
+  - : A string indicating the name of the element to be replaced, or an object with the following properties:
     - `name`
       - : A string containing the name of the element.
     - `namespace` {{optional_inline}}

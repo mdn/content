@@ -1,5 +1,6 @@
 ---
 title: Temporal.Duration.prototype.seconds
+short-title: seconds
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/seconds
 page-type: javascript-instance-accessor-property
 status:

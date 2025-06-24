@@ -22,7 +22,6 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLSourceElement.sizes")}}
   - : A string representing image sizes between breakpoints
 - {{domxref("HTMLSourceElement.src")}}
-
   - : A string reflecting the [`src`](/en-US/docs/Web/HTML/Reference/Elements/source#src) HTML attribute, containing the URL for the media resource. The {{domxref("HTMLSourceElement.src")}} property has a meaning only when the associated {{HTMLElement("source")}} element is nested in a media element that is a {{htmlelement("video")}} or an {{htmlelement("audio")}} element. It has no meaning and is ignored when it is nested in a {{HTMLElement("picture")}} element.
 
     > [!NOTE]

@@ -40,7 +40,6 @@ additive-symbols:
 The descriptor accepts a comma-separated list of _additive tuples_ with each tuple consisting of the following two values separated by a space:
 
 - {{cssxref("integer")}}
-
   - : A non-negative integer values specifying the integer weight of the associated symbol value of the tuple.
 
 - [`<symbol>`](/en-US/docs/Web/CSS/@counter-style/symbols#symbol)

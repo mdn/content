@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainYearMonth.prototype.daysInYear
+short-title: daysInYear
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth/daysInYear
 page-type: javascript-instance-accessor-property
 status:

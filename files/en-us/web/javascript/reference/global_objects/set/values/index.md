@@ -1,5 +1,6 @@
 ---
 title: Set.prototype.values()
+short-title: values()
 slug: Web/JavaScript/Reference/Global_Objects/Set/values
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.values

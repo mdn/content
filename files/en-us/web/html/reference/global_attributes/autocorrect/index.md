@@ -28,11 +28,9 @@ Explicitly setting the attribute overrides the default.
 Possible values are:
 
 - `on` or `""` (the empty string)
-
   - : Enable automatic correction of spelling and punctuation errors.
 
 - `off`
-
   - : Disable automatic correction of editable text.
 
 The {{htmlelement("input")}} element types that don't support auto-correction always have the `off` state: [`password`](/en-US/docs/Web/HTML/Reference/Elements/input/password), [`email`](/en-US/docs/Web/HTML/Reference/Elements/input/email) and [`url`](/en-US/docs/Web/HTML/Reference/Elements/input/url).

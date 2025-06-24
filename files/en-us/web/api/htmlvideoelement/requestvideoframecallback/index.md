@@ -19,15 +19,11 @@ requestVideoFrameCallback(callback)
 ### Parameters
 
 - `callback`
-
   - : The callback function that runs when a new video frame is sent to the compositor. This contains two parameters:
-
     - `now`
       - : A {{domxref("DOMHighResTimeStamp")}} representing the time when the callback was called.
     - `metadata`
-
       - : An object containing the following properties:
-
         - `expectedDisplayTime`
           - : A {{domxref("DOMHighResTimeStamp")}} representing the time when the browser expects the frame to be visible.
         - `height`
@@ -45,7 +41,6 @@ requestVideoFrameCallback(callback)
           - : A number, in media pixels, representing the width of the video frame (the visible decoded pixels, without aspect ratio adjustments).
 
         Additional metadata properties may be available within `requestVideoFrameCallback()` callbacks used in {{domxref("WebRTC_API", "WebRTC", "", "nocode")}} applications:
-
         - `captureTime`
           - : A {{domxref("DOMHighResTimeStamp")}} representing the time when the frame was captured. This applies to video frames coming from a local or remote source. For a remote source, the capture time is estimated using clock synchronization and RTCP sender reports to convert RTP timestamps to capture time.
         - `receiveTime`
@@ -53,7 +48,8 @@ requestVideoFrameCallback(callback)
         - `rtpTimestamp`
           - : A number representing the RTP timestamp associated with this video frame.
 
-> **Note:** `width` and `height` may differ from {{domxref("HTMLVideoElement.videoWidth")}} and {{domxref("HTMLVideoElement.videoHeight")}} in certain cases (for example, an anamorphic video may have rectangular pixels).
+> [!NOTE]
+> `width` and `height` may differ from {{domxref("HTMLVideoElement.videoWidth")}} and {{domxref("HTMLVideoElement.videoHeight")}} in certain cases (for example, an anamorphic video may have rectangular pixels).
 
 ### Return value
 

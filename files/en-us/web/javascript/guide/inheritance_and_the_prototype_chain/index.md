@@ -573,7 +573,8 @@ However, you should set the prototype during creation if possible, because setti
 
 All objects inherit the [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) setter, which can be used to set the `[[Prototype]]` of an existing object (if the `__proto__` key is not overridden on the object).
 
-> **Warning:** `Object.prototype.__proto__` accessors are **non-standard** and deprecated. You should almost always use `Object.setPrototypeOf` instead.
+> [!WARNING]
+> `Object.prototype.__proto__` accessors are **non-standard** and deprecated. You should almost always use `Object.setPrototypeOf` instead.
 
 ```js
 const obj = {};

@@ -27,7 +27,6 @@ Media queries are case-insensitive.
   The type is optional (assumed to be `all`) except when using the `only` logical operator.
 
 - [Media features](/en-US/docs/Web/CSS/@media#media_features) describe a specific characteristic of the {{glossary("user agent")}}, output device, or environment:
-
   - {{cssxref("@media/any-hover", "any-hover")}}
   - {{cssxref("@media/any-pointer", "any-pointer")}}
   - {{cssxref("@media/aspect-ratio", "aspect-ratio")}}

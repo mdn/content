@@ -1,5 +1,6 @@
 ---
 title: TypedArray.prototype.forEach()
+short-title: forEach()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/forEach
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.forEach

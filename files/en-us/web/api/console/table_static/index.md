@@ -20,7 +20,6 @@ console.table(data, columns)
 ### Parameters
 
 - `data`
-
   - : The data to display. This must be either an array or an object. Each item in the array, or property in the object, is represented by a row in the table. The first column in the table is labeled `(index)` and its values are the array indices or the property names.
 
     If the elements in the array, or properties in the object, are themselves arrays or objects, then their items or properties are enumerated in the row, one per column.

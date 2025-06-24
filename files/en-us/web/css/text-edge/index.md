@@ -32,7 +32,6 @@ The `<text-edge>` data type is composed of one or two keywords representing spec
 ### Single keyword values
 
 - `text`
-
   - : The font's over and under edges are its text-over baseline/text-under baseline: this includes the font's ascenders and descenders but excludes the [half-leading](/en-US/docs/Glossary/Leading) set on the text.
 
     > [!NOTE]

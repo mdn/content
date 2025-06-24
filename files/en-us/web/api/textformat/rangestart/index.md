@@ -23,7 +23,14 @@ A {{jsxref("Number")}}.
 The following example shows how to use the `textformatupdate` event's `rangeStart` and `rangeEnd` properties to determine the range of text that needs to be formatted. Note that the event listener callback in this example is only called when using an IME window to compose text.
 
 ```html
-<div id="editor" style="height:200px;background:#eee;"></div>
+<div id="editor"></div>
+```
+
+```css hidden
+#editor {
+  height: 200px;
+  background: #eee;
+}
 ```
 
 ```js

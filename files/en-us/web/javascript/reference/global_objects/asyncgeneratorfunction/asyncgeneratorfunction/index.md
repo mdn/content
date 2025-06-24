@@ -1,5 +1,6 @@
 ---
 title: AsyncGeneratorFunction() constructor
+short-title: AsyncGeneratorFunction()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction/AsyncGeneratorFunction
 page-type: javascript-constructor
 browser-compat: javascript.builtins.AsyncGeneratorFunction.AsyncGeneratorFunction
@@ -31,7 +32,8 @@ AsyncGeneratorFunction(arg1, arg2, functionBody)
 AsyncGeneratorFunction(arg1, arg2, /* …, */ argN, functionBody)
 ```
 
-> **Note:** `AsyncGeneratorFunction()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `AsyncGeneratorFunction` instance.
+> [!NOTE]
+> `AsyncGeneratorFunction()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `AsyncGeneratorFunction` instance.
 
 ### Parameters
 

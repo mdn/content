@@ -165,7 +165,7 @@ body {
 
 The infobox is given fixed positioning, a {{cssxref("position-anchor")}} property that references the anchor's `anchor-name`, to associate the two together, and it is tethered to the anchor's top-left corner using a `position-area`.
 
-We include a `position-try-fallbacks` list (and re-declare it with the `position-try` shorthand incase the longhand property name is not yet supported), providing two predefined position-try fallback options to prevent it from overflowing when the anchor gets near the edge of the viewport, by flipping it along the inline or block axis of the anchor.
+We include a `position-try-fallbacks` list (and re-declare it with the `position-try` shorthand in case the longhand property name is not yet supported), providing two predefined position-try fallback options to prevent it from overflowing when the anchor gets near the edge of the viewport, by flipping it along the inline or block axis of the anchor.
 
 ```css hidden
 .infobox {

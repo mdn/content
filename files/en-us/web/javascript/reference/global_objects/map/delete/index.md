@@ -1,5 +1,6 @@
 ---
 title: Map.prototype.delete()
+short-title: delete()
 slug: Web/JavaScript/Reference/Global_Objects/Map/delete
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Map.delete

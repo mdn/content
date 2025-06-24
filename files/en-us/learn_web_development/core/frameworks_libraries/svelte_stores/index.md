@@ -420,7 +420,8 @@ First we need some way for our `Todos` component to give back the updated to-dos
    <Todos bind:todos />
    ```
 
-   > **Note:** `<Todos bind:todos />` is just a shortcut for `<Todos bind:todos={todos} />`.
+   > [!NOTE]
+   > `<Todos bind:todos />` is just a shortcut for `<Todos bind:todos={todos} />`.
 
 3. Go back to your app, try adding some to-dos, then go to your developer tools web console. You'll see that every modification we make to our to-dos is reflected in the `todos` array defined in `App.svelte` thanks to the `bind` directive.
 
@@ -576,7 +577,6 @@ Moreover, because web storage only supports saving string values, we will have t
      };
    };
    ```
-
    - Our `localStore` will be a function that when executed initially reads its content from web storage, and returns an object with three methods: `subscribe()`, `set()`, and `update()`.
    - When we create a new `localStore`, we'll have to specify the key of the web storage and an initial value. We then check if the value exists in web storage and, if not, we create it.
    - We use the [`localStorage.getItem(key)`](/en-US/docs/Web/API/Storage/getItem) and [`localStorage.setItem(key, value)`](/en-US/docs/Web/API/Storage/setItem) methods to read and write information to web storage, and the [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) and `toObj()` (which uses [`JSON.parse()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)) helper functions to convert the values.

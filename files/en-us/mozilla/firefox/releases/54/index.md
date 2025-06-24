@@ -50,7 +50,6 @@ Firefox 54 was released on June 13, 2017. This article lists key changes that ar
 - The {{domxref("Client.type")}} property has been implemented (see [Firefox bug 1339844](https://bugzil.la/1339844)).
 - {{domxref("Clients.matchAll()")}} now returns {{domxref("Client")}} objects in most recently focused order (see [Firefox bug 1266747](https://bugzil.la/1266747)).
 - Some changes have been made to the observed behavior when the {{domxref("Request.Request","Request()")}} constructor is passed an existing {{domxref("Request")}} object instance to make a new instance. The following new behaviors are designed to retain security while making the constructor less likely to throw exceptions:
-
   - If this object exists on another origin to the constructor call, the {{domxref("Request.referrer")}} is stripped out.
   - If this object has a {{domxref("Request.mode")}} of `navigate`, the `mode` value is converted to `same-origin`.
 

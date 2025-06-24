@@ -23,11 +23,9 @@ new URLPattern(input, baseURL, options)
 ### Parameters
 
 - `input`
-
   - : The input pattern that will be used for matching. This can either be a
     string, or an object providing patterns for each URL part
     individually. The object members can be any of:
-
     - `protocol`
     - `username`
     - `password`

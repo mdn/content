@@ -43,7 +43,6 @@ _No changes._
 #### New APIs
 
 - The {{domxref("PerformanceNavigationTiming")}} API has been implemented ([Firefox bug 1263722](https://bugzil.la/1263722)).
-
   - Gecko has also been given a pref that can be used to disable the interface if required — `dom.enable_performance_navigation_timing`, defaulting to `true` ([Firefox bug 1403926](https://bugzil.la/1403926)).
 
 #### DOM
@@ -65,7 +64,6 @@ _No changes._
 #### Canvas and WebGL
 
 - Support for prefixed WebGL extensions has been removed ([Firefox bug 1403413](https://bugzil.la/1403413)):
-
   - For `MOZ_WEBGL_compressed_texture_atc` use `WEBGL_compressed_texture_atc` instead.
   - For `MOZ_WEBGL_compressed_texture_pvrtc` use {{domxref("WEBGL_compressed_texture_pvrtc")}} instead.
   - For `MOZ_WEBGL_compressed_texture_s3tc` use {{domxref("WEBGL_compressed_texture_s3tc")}} instead.
@@ -101,7 +99,6 @@ _No changes._
 ### CSS
 
 - The following proprietary Mozilla system metric pseudo-classes are no longer available to web content ([Firefox bug 1396066](https://bugzil.la/1396066)):
-
   - `:-moz-system-metric(images-in-menus)`
   - `:-moz-system-metric(mac-graphite-theme)`
   - `:-moz-system-metric(scrollbar-end-backward)`
@@ -113,7 +110,6 @@ _No changes._
   - `:-moz-system-metric(windows-default-theme)`
 
 - The following proprietary Mozilla media features are no longer available to web content ([Firefox bug 1396066](https://bugzil.la/1396066)):
-
   - `-moz-color-picker-available`
   - `-moz-is-glyph`
   - `-moz-mac-graphite-theme`
@@ -158,21 +154,17 @@ _No changes._
 ### WebExtensions
 
 - [browserSettings](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings)
-
   - [browserSettings.webNotificationsDisabled](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/webNotificationsDisabled) has been implemented (bug 1364942)
 
 - [browsingData](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData)
-
   - [browsingData.localStorage](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData/removeLocalStorage) now supports deleting localStorage by host (bug 1388428)
 
 - [pkcs11](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pkcs11) API to manage security devices (Bug 1357391)
 - privacy
-
   - first party isolation can now be toggled though firstPartyIsolate (bug 1409045)
   - resist fingerprinting pref can now be toggle through resistFingerprinting (bug [1397611)](https://bugzil.la/1397611)
 
 - tabs
-
   - [`tabs.discard`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/discard) has been implemented (Bug 1322485)
   - isArticle, isInReaderMode properties of Tab implemented (Bug 1381992)
   - [`toggleReaderMode()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode) method implemented (Bug 1381992)
@@ -180,14 +172,12 @@ _No changes._
   - tabs.onUpdated now notifies when entering/exiting reader mode (Bug 1402921)
 
 - theme
-
   - [`getCurrent()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme/getCurrent) method to obtain current theme properties (Bug [1349944](https://bugzil.la/1349944))
   - onUpdated method to receive WebExtension theme updates (Bug [1349944](https://bugzil.la/1349944))
   - colors.bookmark_text now supported as alias of colors.toolbar_text (Bug [1412595](https://bugzil.la/1412595))
   - colors.toolbar_top_separator, colors.toolbar_bottom_separator and colors.toolbar_vertical_separator implemented (Bug [1347190)](https://bugzil.la/1347190)
 
 - webRequest
-
   - [webRequest.onBeforeRequest](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest) now includes a "frameAncestors" parameter
 
 ## Older versions

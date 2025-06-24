@@ -1,5 +1,6 @@
 ---
 title: Int8Array() constructor
+short-title: Int8Array()
 slug: Web/JavaScript/Reference/Global_Objects/Int8Array/Int8Array
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Int8Array.Int8Array
@@ -22,7 +23,8 @@ new Int8Array(buffer, byteOffset)
 new Int8Array(buffer, byteOffset, length)
 ```
 
-> **Note:** `Int8Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Int8Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

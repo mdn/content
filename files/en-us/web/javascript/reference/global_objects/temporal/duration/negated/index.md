@@ -1,5 +1,6 @@
 ---
 title: Temporal.Duration.prototype.negated()
+short-title: negated()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/negated
 page-type: javascript-instance-method
 status:

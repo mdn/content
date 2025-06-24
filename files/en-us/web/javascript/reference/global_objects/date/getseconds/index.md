@@ -1,5 +1,6 @@
 ---
 title: Date.prototype.getSeconds()
+short-title: getSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getSeconds

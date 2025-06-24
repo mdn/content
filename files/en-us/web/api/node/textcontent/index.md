@@ -11,7 +11,8 @@ browser-compat: api.Node.textContent
 The **`textContent`** property of the {{domxref("Node")}}
 interface represents the text content of the node and its descendants.
 
-> **Note:** `textContent` and {{domxref("HTMLElement.innerText")}} are easily confused,
+> [!NOTE]
+> `textContent` and {{domxref("HTMLElement.innerText")}} are easily confused,
 > but the two properties are [different in important ways](#differences_from_innertext).
 
 ## Value
@@ -50,7 +51,6 @@ important differences:
 - `textContent` returns every element in the node. In contrast,
   `innerText` is aware of styling and won't return the text of "hidden"
   elements.
-
   - Moreover, since `innerText` takes CSS styles into account,
     reading the value of `innerText` triggers a
     {{glossary("reflow")}} to ensure up-to-date computed styles. (Reflows can

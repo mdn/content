@@ -32,7 +32,6 @@ createObjectStore(name, options)
   - : The name of the new object store to be created. Note that it is possible to create
     an object store with an empty name.
 - `options` {{optional_inline}}
-
   - : An options object whose attributes are optional parameters to the method. It
     includes the following properties:
     - `keyPath` {{optional_inline}}

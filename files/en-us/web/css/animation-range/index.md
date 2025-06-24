@@ -58,9 +58,7 @@ One or two values representing the [`animation-range-start`](/en-US/docs/Web/CSS
 - `<length-percentage>`
   - : A length or percentage value measured from the beginning of the timeline.
 - `<timeline-range-name>`
-
   - : A specific named timeline range inside the overall timeline. Possible values are:
-
     - `cover`
       - : Represents the full range of a _named view progress timeline_ (see [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) for more details), from the point where the subject element first starts to enter the scroll port's view progress visibility range (0% progress) to the point where it has completely left it (100% progress).
     - `contain`

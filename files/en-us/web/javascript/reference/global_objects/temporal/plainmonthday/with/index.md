@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainMonthDay.prototype.with()
+short-title: with()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainMonthDay/with
 page-type: javascript-instance-method
 status:

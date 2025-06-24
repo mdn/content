@@ -1,5 +1,6 @@
 ---
 title: Uint8Array.fromHex()
+short-title: fromHex()
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array/fromHex
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Uint8Array.fromHex
@@ -20,9 +21,7 @@ Uint8Array.fromHex(string)
 ### Parameters
 
 - `string`
-
   - : A hexadecimal string encoding bytes to convert to a `Uint8Array`. The string must:
-
     - Have an even number of characters because two characters encode one byte.
     - Only contain characters in the hexadecimal alphabet, which includes 0–9 and A–F (case-insensitive).
     - Not contain whitespace (unlike {{jsxref("Uint8Array.prototype.setFromBase64()")}}).

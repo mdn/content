@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainDate.from()
+short-title: from()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/from
 page-type: javascript-static-method
 status:
@@ -21,15 +22,12 @@ Temporal.PlainDate.from(info, options)
 ### Parameters
 
 - `info`
-
   - : One of the following:
-
     - A {{jsxref("Temporal.PlainDate")}} instance, which creates a copy of the instance.
     - A {{jsxref("Temporal.PlainDateTime")}} instance, which provides the calendar date in the same fashion as {{jsxref("Temporal/PlainDateTime/toPlainDate", "Temporal.PlainDateTime.prototype.toPlainDate()")}}.
     - A {{jsxref("Temporal.ZonedDateTime")}} instance, which provides the calendar date in the same fashion as {{jsxref("Temporal/ZonedDateTime/toPlainDate", "Temporal.ZonedDateTime.prototype.toPlainDate()")}}.
     - An [RFC 9557](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate#rfc_9557_format) string containing a date and optionally a calendar.
     - An object containing the following properties (in the order they are retrieved and validated):
-
       - `calendar` {{optional_inline}}
         - : A string that corresponds to the {{jsxref("Temporal/PlainDate/calendarId", "calendarId")}} property. See [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types) for a list of commonly supported calendar types. Defaults to `"iso8601"`. All other properties are interpreted in this calendar system (unlike the {{jsxref("Temporal/PlainDate/PlainDate", "Temporal.PlainDate()")}} constructor, which interprets the values in the ISO calendar system).
       - `day`

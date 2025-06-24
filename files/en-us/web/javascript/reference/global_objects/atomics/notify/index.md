@@ -1,5 +1,6 @@
 ---
 title: Atomics.notify()
+short-title: notify()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/notify
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.notify

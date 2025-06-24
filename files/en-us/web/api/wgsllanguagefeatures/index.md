@@ -21,22 +21,17 @@ The `WGSLLanguageFeatures` object is accessed via the {{domxref("GPU.wgslLanguag
 The following WGSL language extensions are defined at [WGSL language extensions](https://gpuweb.github.io/gpuweb/wgsl/#language-extension) in the WGSL specification. Bear in mind that the exact set of features available will vary across implementations and physical devices, and may change over time.
 
 - `packed_4x8_integer_dot_product`
-
   - : Allows **DP4a** (Dot Product of 4 Elements and Accumulate) GPU instructions to be used via your WGSL code. These efficiently perform 8-bit integer dot products to accelerate computation, saving memory and network bandwidth and improving performance compared with the equivalent `f32` versions. They are commonly used in machine learning models in inferencing, within AI frameworks.
 
     Specifically, when `packed_4x8_integer_dot_product` is available, WGSL code can use:
-
     - 32-bit integer scalars packing 4-component vectors of 8-bit integers to be used as inputs to dot product instructions (via the `dot4U8Packed()` and `dot4I8Packed()` built-in functions).
     - Packing and unpacking instructions with packed 4-component vectors of 8-bit integers (via built-in functions such as `pack4xI8()` and `pack4xI8Clamp()`).
 
 - `readonly_and_readwrite_storage_textures`
-
   - : When available, allows the `"read-only"` and `"read-write"` [`storageTexture.access`](/en-US/docs/Web/API/GPUDevice/createBindGroupLayout#access) values to be set when specifying storage texture bind group entry types in a bind group layout. These enable WGSL code to read storage textures, and read/write storage textures, respectively.
 
 - `unrestricted_pointer_parameters`
-
   - : Loosens restrictions on pointers being passed to WGSL functions. When available, the following are allowed:
-
     - Parameter pointers to storage, uniform, and workgroup address spaces being passed to user-declared functions.
     - Pointers to structure members and array elements being passed to user-declared functions.
 

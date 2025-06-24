@@ -80,7 +80,7 @@ The injected strings in this example don't actually contain any harmful elements
 
 ```js
 const policy = trustedTypes.createPolicy("docPolicy", {
-  createHTML: (string) => {
+  createHTML(string) {
     return string
       .replace("<script", "&lt;script")
       .replace("</script", "&lt;/script");
