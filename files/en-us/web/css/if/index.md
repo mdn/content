@@ -108,7 +108,7 @@ If a single `<if-condition>` or `<value>` is invalid, it does not invalidate the
 
 ### Frequency and position of `else : <value>` pairs
 
-It is possible to include as many `else : <value>` pairs as you want inside an `if()` function, in whatever positions you want. However, in most cases it makes sense to use a single `else : <value>` pair at the end of your values list to provide a default value that is always returned if none of the supplied conditions evaluate to true.
+You can include multiple `else : <value>` pairs inside an `if()` function, in any position. However, in most cases, a single `else : <value>` pair at the end of the semi-colon-separated list is used to provide the default value that is always returned if none of the `<if-test>`s evaluate to true.
 
 If you included it before the `<if-condition> : <value>` pairs, the `else` would evaluate to true, and none of the later pairs would be considered. The following example `if()` always returns `none`:
 
