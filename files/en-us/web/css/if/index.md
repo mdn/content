@@ -19,8 +19,8 @@ background-color: if(style(--scheme: dark): black;);
 padding: if(style(--size: 2xl): 1em; else: 0.25em;);
 
 /* Media query condition */
-background: if(media(print): white; else: black);
-margin: if(media(max-width: 700px): 0 auto ; else: 20px auto 0);
+background: if(media(print): white; else: black;);
+margin: if(media(max-width: 700px): 0 auto ; else: 20px auto 0;);
 
 /* Feature query condition */
 color: if(
