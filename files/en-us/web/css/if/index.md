@@ -539,7 +539,7 @@ Next up, we set the `--scheme` custom property to a different value on our `<art
 }
 ```
 
-Here we can start to see the real power of CSS `if()` functions combined with custom properties. We are using `if()` functions to set our `--color1` and `--color2` custom properties to different color values depending on the value set for the `--scheme` custom property. We then use the `--color1` and `--color2` values in our `<article>` element's {{cssxref("color")}}, {{cssxref("border")}}, and {{cssxref("background-image")}} properties, and our `<aside>` element's `color` and `background-color` properties.
+Here we can start to see the real power of CSS `if()` functions combined with custom properties. We use `if()` functions to set our `--color1` and `--color2` custom properties to different color values depending on the value of the `--scheme` custom property. We then use the `--color1` and `--color2` values in our `<article>` element's {{cssxref("color")}}, {{cssxref("border")}}, and {{cssxref("background-image")}} properties, and our `<aside>` element's `color` and `background-color` properties.
 
 We are controlling our entire color scheme via custom properties, with different values set via `if() functions.`
 
