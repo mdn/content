@@ -37,7 +37,7 @@ container-type: unset;
 
 ### Values
 
-The `container-type` property can take a single value from the list below, or two values — one of which must be `scroll-state` and the other can be `inline-size` or `size`. In other words, an element an be established as a size query container, a scroll-state query container, both, or neither.
+The `container-type` property can take a single value from the list below, or two values — one of which must be `scroll-state` and the other can be `inline-size` or `size`. In other words, an element can be established as a size query container, a scroll-state query container, both, or neither.
 
 - `inline-size`
   - : Establishes a query container for dimensional queries on the [inline axis](/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#block_and_inline_dimensions) of the container.
