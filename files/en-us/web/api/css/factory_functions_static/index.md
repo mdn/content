@@ -3,7 +3,7 @@ title: CSS numeric factory functions
 slug: Web/API/CSS/factory_functions_static
 page-type: web-api-static-method
 browser-compat: api.CSS
-spec-urls: https://drafts.css-houdini.org/css-typed-om/
+spec-urls: https://drafts.css-houdini.org/css-typed-om/#numeric-factory
 ---
 
 {{APIRef("CSSOM")}}
