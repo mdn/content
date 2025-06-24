@@ -318,7 +318,7 @@ border: 3px solid
 
 Because an `if()` function can take the place of whole or partial property values, it is possible to nest multiple `if()` functions.
 
-For example, in this declaration we are using `if()` to set a `color` property value depending on various conditions. We have an outer `if()` function that returns a particular value depending on whether the `--scheme` custom property is set to `ice` or `fire` (with an `else` value of `black` that is returned if neither of the other conditions return true).
+For example, in this declaration we are using `if()` to set a `color` property value depending on various conditions. We have an outer `if()` function that returns a particular value depending on whether the `--scheme` custom property is set to `ice` or `fire` (with an `else` value of `black` that is returned if neither of the conditions return true).
 
 However, the two if condition values are also `if()` functions. These inner `if()` functions return an `lch()` color value if the browser supports `lch()`, or a hex value otherwise.
 
