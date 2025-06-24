@@ -376,7 +376,6 @@ It is possible to render external images onto your canvas. These can be simple i
    ```js
    ctx.drawImage(image, 20, 20, 185, 175, 50, 50, 185, 175);
    ```
-
    - The first parameter is the image reference, as before.
    - Parameters 2 and 3 define the coordinates of the top left corner of the area you want to cut out of the loaded image, relative to the top-left corner of the image itself. Nothing to the left of the first parameter or above the second will be drawn.
    - Parameters 4 and 5 define the width and height of the area we want to cut out from the original image we loaded.
