@@ -527,7 +527,7 @@ body {
 }
 ```
 
-Next up, we set the `--scheme` custom property to a different value on our `<article>` element depending on the `class` name set on it by our JavaScript when a new value is selected in our `<select>` element. You'll see the significance of this in the next CSS block.
+We then set the `--scheme` custom property to match the `<article>` element's `class` name. The class will be by our JavaScript when a new value is selected in our `<select>` element. You'll see the significance of the custom element value in the next CSS block.
 
 ```css live-sample___color-scheme
 .ice {
