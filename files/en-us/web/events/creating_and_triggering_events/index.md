@@ -171,7 +171,7 @@ function simulateClick() {
   <ol>
     <li><a href="/en-US/docs/Learn_web_development/Core/Scripting/Events">Introduction to events</a></li>
     <li><a href="/en-US/docs/Web/Events">Event reference</a></li>
-    <li><a href="/en-US/docs/Web/Events/Creating_and_triggering_events">Event reference</a></li>
+    <li><a href="/en-US/docs/Web/Events/Creating_and_triggering_events">Creating and triggering events</a></li>
     <li><a href="/en-US/docs/Web/Events/Event_handlers">Event handlers (overview)</a></li>
   </ol>
 </section>
