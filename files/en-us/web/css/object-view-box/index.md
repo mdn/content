@@ -88,7 +88,6 @@ object-fit: unset;
 ### Values
 
 - `none`
-
   - : The default. The element does not have a view box.
 
 - [`<basic-shape-rect>`](/en-US/docs/Web/CSS/basic-shape#basic-shape-rect)
