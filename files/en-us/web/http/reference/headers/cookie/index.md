@@ -44,8 +44,7 @@ Cookies with the same name can coexist if they are set with different `Path`, `D
 
 However, if a cookie is set with the same name, path, domain, and partitioning context as an existing one, it will overwrite that cookie.
 
-{{Note("Some browsers isolate cookies by [partitioned contexts](https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie#partitioned_cookies), which can lead to cookies with the same name behaving independently based on their partition.")}}
-
+{{Note("Some browsers isolate cookies by [partitioned contexts](/en-US/docs/Web/API/Document/cookie#partitioned_cookies), which can lead to cookies with the same name behaving independently based on their partition.")}}
 
 ## Directives
 
