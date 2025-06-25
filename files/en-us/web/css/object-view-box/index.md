@@ -7,7 +7,7 @@ browser-compat: css.properties.object-view-box
 
 {{CSSRef}}
 
-The **`object-view-box`** [CSS](/en-US/docs/Web/CSS) property defines a rectangle within the content of a {{glossary("replaced elements", "replaced element")}}. It treats that rectangle as the viewable area (view box). It appears as if you zoomed in on part of an image. It works similarly to {{SVGAttr("viewBox")}} attribute in SVG.
+The **`object-view-box`** [CSS](/en-US/docs/Web/CSS) property defines a rectangle as a viewable area (view box) within a {{glossary("replaced elements", "replaced element")}} enabling the the content of element to be zoomed or panned. It works similarly to the SVG {{SVGAttr("viewBox")}} attribute.
 
 {{InteractiveExample("CSS Demo: object-view-box")}}
 
@@ -36,7 +36,8 @@ object-view-box: none;
   <img
     class="transition-all"
     id="example-element"
-    src="/shared-assets/images/examples/plumeria-146x200.jpg" />
+    src="/shared-assets/images/examples/plumeria-146x200.jpg"
+    alt="A close up of red flowers and buds on a branch." />
 </section>
 ```
 
@@ -88,10 +89,10 @@ object-fit: unset;
 
 - `none`
 
-  - : No view box is specified. It makes the entire content visible.
+  - : The default. The element does not have a view box.
 
 - [`<basic-shape-rect>`](/en-US/docs/Web/CSS/basic-shape#basic-shape-rect)
-  - : Specifies a view box for the element using a {{cssxref("basic-shape/inset","inset()")}}, {{cssxref("basic-shape/xywh","xywh()")}}, or {{cssxref("basic-shape/rect","rect()")}} function.
+  - : A {{cssxref("basic-shape/inset","inset()")}}, {{cssxref("basic-shape/xywh","xywh()")}}, or {{cssxref("basic-shape/rect","rect()")}} function specifying a view box for an element with a natural dimensions (replaced elements). Resolves to `none` otherwise.
 
 ## Formal definition
 
@@ -105,11 +106,11 @@ object-fit: unset;
 
 ### Live zoom in using object-view-box property
 
-In this example, users can zoom in on an image of a leopard, with the eye of the leopard being the focal point.
+In this example, we display part of a large image of a leopard. Users can zoom the image in and out, with the eye of the leopard being the focal point.
 
 ### HTML
 
-We include an {{htmlelement("img")}} and a [`range`](Web/HTML/Reference/Elements/input/range) {{htmlelement("input")}} element, associating a {{htmlelement("label")}} with the `<input>` .
+We include an {{htmlelement("img")}} and a [`range`](Web/HTML/Reference/Elements/input/range) {{htmlelement("input")}} element, associating a {{htmlelement("label")}} with the `<input>` . The natural dimensions of the original image is `1244px` by `416px` tall, with an {{glossary("aspect ratio")}} of `3:1`.
 
 ```html
 <img
@@ -143,11 +144,8 @@ input {
 ```
 
 ```css
-:root {
-  --box-size: 350px;
-}
-
 img {
+  --box-size: 150px;
   width: 450px;
   height: 350px;
   object-view-box: xywh(500px 30px var(--box-size) var(--box-size));
@@ -158,14 +156,12 @@ img {
 
 ```js
 const zoom = document.getElementById("box-size");
-const root = document.documentElement;
 
 function update() {
-  root.style.setProperty("--box-size", `${500 - zoom.value}px`);
+  zoom.style.setProperty("--box-size", `${500 - zoom.value}px`);
 }
 
 zoom.addEventListener("input", update);
-update();
 ```
 
 ### Result
