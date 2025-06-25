@@ -14,11 +14,9 @@ The **`<calc-sum>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/
 The `<calc-sum>` type defines two numeric values and one of the following [arithmetic operators](/en-US/docs/Learn_web_development/Core/Scripting/Math#arithmetic_operators) between them.
 
 - `+`
-
   - : Adds two numbers together.
 
 - `-`
-
   - : Subtracts the right number from the left.
 
 ### Formal syntax

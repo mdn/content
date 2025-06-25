@@ -25,9 +25,7 @@ let gettingPopup = browser.action.getPopup(
 ### Parameters
 
 - `details`
-
   - : An object with the following properties:
-
     - `tabId` {{optional_inline}}
       - : `integer`. The tab whose popup to get.
     - `windowId` {{optional_inline}}

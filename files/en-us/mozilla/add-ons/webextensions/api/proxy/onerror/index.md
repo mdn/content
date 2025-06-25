@@ -33,9 +33,7 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `newState`
       - : `Object`. An [Error](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) object representing the error.
 

@@ -493,7 +493,8 @@ In addition, we should mention test results/reporting — we've been reporting r
 
 4. You should include the `--no-timeouts` flag to make sure your tests don't end up failing because of Mocha's arbitrary timeout (which is 3 seconds).
 
-> **Note:** [saucelabs-sample-test-frameworks](https://github.com/saucelabs-sample-test-frameworks) contains several useful examples showing how to set up different combinations of test/assertion tools.
+> [!NOTE]
+> [saucelabs-sample-test-frameworks](https://github.com/saucelabs-sample-test-frameworks) contains several useful examples showing how to set up different combinations of test/assertion tools.
 
 ## Running remote tests
 

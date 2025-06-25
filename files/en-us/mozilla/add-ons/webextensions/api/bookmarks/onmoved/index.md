@@ -34,9 +34,7 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed these arguments:
-
     - `id`
       - : `string`. ID of the item that was moved.
     - `moveInfo`

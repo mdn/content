@@ -44,7 +44,8 @@ A hardware-agnostic representation of input devices that can target a specific c
 
 Pointer capture allows the events for a pointer to be retargeted to a particular element other than the normal hit test result of the pointer's location. See [capturing the pointer](#capturing_the_pointer) for an example.
 
-> **Note:** _Pointer capture_ is different from [_pointer lock_](/en-US/docs/Web/API/Pointer_Lock_API), which physically prevents the pointer from leaving a region.
+> [!NOTE]
+> _Pointer capture_ is different from [_pointer lock_](/en-US/docs/Web/API/Pointer_Lock_API), which physically prevents the pointer from leaving a region.
 
 ### pointer event
 

@@ -45,15 +45,12 @@ The CSS box model module defines physical (or "page relative") properties such a
 ## Guides
 
 - [Introduction to the CSS box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-
   - : Explains one of the fundamental concepts of CSS: the box model. This model defines how CSS lays out elements, including their content, padding, border, and margin areas.
 
 - [Mastering margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-
   - : Sometimes, two adjacent margins are collapsed into one. This article describes the rules that govern when and why this happens, and how to control it.
 
 - [Visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
-
   - : Explains the visual formatting model.
 
 ## Related concepts

@@ -23,7 +23,8 @@ new Uint8Array(buffer, byteOffset)
 new Uint8Array(buffer, byteOffset, length)
 ```
 
-> **Note:** `Uint8Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Uint8Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

@@ -78,7 +78,6 @@ These features are newly shipped in Firefox 122 but are disabled by default. To 
   The {{htmlelement("template")}} element now supports a `shadowrootmode` attribute which can be set to either `open` or `closed`, the same values as the `mode` option of the {{domxref("Element.attachShadow()", "attachShadow()")}} method. It allows the creation of a shadow DOM subtree declaratively. ([Firefox bug 1712140](https://bugzil.la/1712140))
 
 - **Clonable option and property for shadow DOM.**
-
   - The {{domxref("Element.attachShadow()")}} method now supports the `clonable` boolean option that specifies whether the created shadow root is clonable: the default value is `false` but when set to `true`, the shadow host cloned with {{domxref("Node.cloneNode()")}} or {{domxref("Document.importNode()")}} will include shadow root in the copy.
   - The {{domxref("ShadowRoot")}} interface now supports the {{domxref("ShadowRoot.clonable", "clonable")}} read-only property. It returns `true` if the shadow root is clonable, and `false` otherwise. It always returns `true` for shadow roots created via declarative shadow DOM.
 

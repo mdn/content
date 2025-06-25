@@ -22,9 +22,7 @@ let gettingTitle = browser.pageAction.getTitle(
 ### Parameters
 
 - `details`
-
   - : `object`.
-
     - `tabId`
       - : `integer`. The ID of the tab containing the page action whose title you want to get.
 

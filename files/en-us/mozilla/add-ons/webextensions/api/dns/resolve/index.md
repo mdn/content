@@ -25,9 +25,7 @@ let resolving = browser.dns.resolve(
 - `hostname`
   - : `string`. The hostname to resolve.
 - `flags` {{optional_inline}}
-
   - : `array` of `string`. Flags to modify the way the hostname is resolved. Any omitted flags default to `false`. You can pass zero or more of the following flags:
-
     - `"allow_name_collisions"`: Allow name collision results which are normally filtered out.
     - `"bypass_cache"`: Suppresses the internal DNS lookup cache.
     - `"canonical_name"`: The canonical name of the specified host will be queried.

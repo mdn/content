@@ -74,9 +74,7 @@ border-right-width: unset;
 ### Values
 
 - `<line-width>`
-
   - : Defines the width of the border, either as an explicit nonnegative {{cssxref("&lt;length&gt;")}} or a keyword. If it's a keyword, it must be one of the following values:
-
     - `thin`
     - `medium`
     - `thick`

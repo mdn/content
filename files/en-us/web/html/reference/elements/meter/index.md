@@ -31,7 +31,6 @@ label {
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `value`
-
   - : The current numeric value. This must be between the minimum and maximum values (`min` attribute and `max` attribute) if they are specified. If unspecified or malformed, the value is `0`. If specified, but not within the range given by the `min` attribute and `max` attribute, the value is equal to the nearest end of the range.
 
     > [!NOTE]

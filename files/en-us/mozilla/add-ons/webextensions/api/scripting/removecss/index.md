@@ -27,9 +27,7 @@ await browser.scripting.removeCSS(
 ### Parameters
 
 - `details`
-
   - : An object describing the CSS to remove and where to remove it from. It contains the following properties:
-
     - `css` {{optional_inline}}
       - : `string`. A string containing the CSS to inject. Either `css` or `files` must be specified and must match the stylesheet inserted through {{WebExtAPIRef("scripting.insertCSS()")}}.
     - `files` {{optional_inline}}

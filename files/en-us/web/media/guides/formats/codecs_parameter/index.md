@@ -588,7 +588,6 @@ Thus, the syntaxes for each of the supported codecs look like this:
 - `mp4v.oo[.V]` (MPEG-4 video)
   - : Here, `oo` is again the OTI describing the contents more precisely, while `V` is the one-digit _video_ OTI.
 - `avc1[.PPCCLL]` (AVC video)
-
   - : `PPCCLL` are six hexadecimal digits specifying the profile number (`PP`), constraint set flags (`CC`), and level (`LL`). See [AVC profiles](#avc_profiles) for the possible values of `PP`.
 
     The constraint set flags byte is comprised of one-bit Boolean flags, with the most significant bit being referred to as flag 0 (or `constraint_set0_flag`, in some resources), and each successive bit being numbered one higher. Currently, only flags 0 through 2 are used; the other five bits _must_ be zero. The meanings of the flags vary depending on the profile being used.

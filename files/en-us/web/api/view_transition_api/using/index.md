@@ -19,7 +19,6 @@ Let's walk through the process by which a view transition works:
      > An active view transition has an associated {{domxref("ViewTransition")}} instance (for example, returned by `startViewTransition()` in the case of same-document (SPA) transitions). The `ViewTransition` object includes several promises, allowing you to run code in response to different parts of the view transition process being reached. See [Controlling view transitions with JavaScript](#controlling_view_transitions_with_javascript) for more information.
 2. On the current (old page) view, the API captures static image **snapshots** of elements that have a {{cssxref("view-transition-name")}} declared on them.
 3. The view change occurs:
-
    - In the case of same-document transitions (SPAs), the callback passed to `startViewTransition()` is invoked, which causes the DOM to change.
 
      When the callback has run successfully, the {{domxref("ViewTransition.updateCallbackDone")}} promise fulfills, allowing you to respond to the DOM updating.
@@ -298,7 +297,8 @@ figcaption {
 
 This works because, by default, `::view-transition-group()` transitions `width` and `height` between the old and new views with a smooth scale. We just needed to set a fixed `height` on both states to make it work.
 
-> **Note:** [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/) contains several other customization examples.
+> [!NOTE]
+> [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/) contains several other customization examples.
 
 ## Controlling view transitions with JavaScript
 
@@ -308,7 +308,6 @@ The `ViewTransition` can be accessed like so:
 
 1. In the case of same-document (SPA) transitions, the {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} method returns the `ViewTransition` associated with the transition.
 2. In the case of cross-document (MPA) transitions:
-
    - A {{domxref("Window.pageswap_event", "pageswap")}} event is fired when a document is about to be unloaded due to a navigation. Its event object ({{domxref("PageSwapEvent")}}) provides access to the `ViewTransition` via the {{domxref("PageSwapEvent.viewTransition")}} property, as well as a {{domxref("NavigationActivation")}} via {{domxref("PageSwapEvent.activation")}} containing the navigation type and current and destination document history entries.
      > [!NOTE]
      > If the navigation has a cross-origin URL anywhere in the redirect chain, the `activation` property returns `null`.

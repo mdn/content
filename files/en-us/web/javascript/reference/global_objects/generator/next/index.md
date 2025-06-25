@@ -23,7 +23,6 @@ next(value)
 ### Parameters
 
 - `value` {{optional_inline}}
-
   - : The value to send to the generator.
 
     The value will be assigned as a result of a `yield` expression. For

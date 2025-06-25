@@ -21,7 +21,6 @@ pad: "+" 5;
 The descriptor accepts the following two values, which are separated by a space and can be specified in any order:
 
 - {{cssxref("integer")}}
-
   - : Specifies the minimum length that all marker representations must reach. The value must be non-negative. In the case of the `pad` descriptor, this value is also known as the _pad length_.
 
 - [`<symbol>`](/en-US/docs/Web/CSS/@counter-style/symbols#symbol)

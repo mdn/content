@@ -43,7 +43,8 @@ the function is the identity transform. The scaling is not isotropic, and the an
 `scaleY(-1)` defines an [axial symmetry](https://en.wikipedia.org/wiki/Axial_symmetry), with a horizontal axis passing through the origin (as specified by the {{cssxref("transform-origin")}}
 property).
 
-> **Note:** `scaleY(sy)` is equivalent to
+> [!NOTE]
+> `scaleY(sy)` is equivalent to
 > `scale(1, sy)` or
 > `scale3d(1, sy, 1)`.
 >

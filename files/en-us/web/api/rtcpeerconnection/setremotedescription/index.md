@@ -31,9 +31,7 @@ setRemoteDescription(sessionDescription, successCallback, errorCallback)
 ### Parameters
 
 - `sessionDescription`
-
   - : An object which specifies the remote peer's current offer or answer. It should contain the following properties:
-
     - `type`
       - : A string indicating the type of the session description. See {{domxref("RTCSessionDescription.type")}}.
     - `sdp` {{optional_inline}}

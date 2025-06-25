@@ -204,7 +204,8 @@ Note how the code looks exactly like synchronous code, except for the `await` ke
 
 `async`/`await` builds on promises — for example, `doSomething()` is the same function as before, so there's minimal refactoring needed to change from promises to `async`/`await`. You can read more about the `async`/`await` syntax in the [async functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) and [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) references.
 
-> **Note:** `async`/`await` has the same concurrency semantics as normal promise chains. `await` within one async function does not stop the entire program, only the parts that depend on its value, so other async jobs can still run while the `await` is pending.
+> [!NOTE]
+> `async`/`await` has the same concurrency semantics as normal promise chains. `await` within one async function does not stop the entire program, only the parts that depend on its value, so other async jobs can still run while the `await` is pending.
 
 ## Error handling
 

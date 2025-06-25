@@ -40,7 +40,6 @@ Highlights:
 ### JavaScript
 
 - The following new ECMAScript 2015 built-in methods got implemented:
-
   - {{jsxref("Array.from()")}} ([Firefox bug 904723](https://bugzil.la/904723)),
   - {{jsxref("Array.prototype.copyWithin()")}} ([Firefox bug 934423](https://bugzil.la/934423)),
   - {{jsxref("Number.isSafeInteger()")}} ([Firefox bug 1003764](https://bugzil.la/1003764)).

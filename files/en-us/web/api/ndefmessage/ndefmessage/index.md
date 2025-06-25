@@ -21,9 +21,7 @@ new NDEFMessage(records)
 ### Parameters
 
 - `records`
-
   - : An array of objects with the following members:
-
     - `data` {{optional_inline}}
       - : Contains the data to be transmitted; one of a string, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, or an array of nested records.
     - `encoding` {{optional_inline}}

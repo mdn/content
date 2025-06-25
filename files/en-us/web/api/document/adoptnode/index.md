@@ -30,7 +30,8 @@ The copied `importedNode` in the scope of the importing document.
 After calling this method, `importedNode` and
 `externalNode` are the same object.
 
-> **Note:** `importedNode`'s
+> [!NOTE]
+> `importedNode`'s
 > {{domxref("Node.parentNode")}} is `null`, since it has not yet been
 > inserted into the document tree!
 

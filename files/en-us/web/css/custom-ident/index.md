@@ -54,15 +54,12 @@ To prevent ambiguity, each property that uses `<custom-ident>` forbids the use o
 - {{CSSxRef("counter-reset")}}, {{CSSxRef("counter-increment")}}
   - : Forbids the global CSS values (`unset`, `initial`, and `inherit`), as well as `none`.
 - {{CSSxRef("@counter-style")}}, {{CSSxRef("list-style-type")}}
-
   - : Forbids the global CSS values (`unset`, `initial`, and `inherit`), as well as the values:
-
     - `none`
     - `inline`
     - `outside`
 
     Also, quite a few predefined values are implemented by the different browsers:
-
     - `disc`
     - `circle`
     - `square`

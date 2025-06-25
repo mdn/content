@@ -24,9 +24,7 @@ Document.parseHTMLUnsafe(input, options)
 - `input`
   - : A string or {{domxref("TrustedHTML")}} instance defining HTML to be parsed.
 - `options` {{optional_inline}}
-
   - : An options object with the following optional parameters:
-
     - `sanitizer` {{optional_inline}}
       - : A {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} object which defines what elements of the input will be allowed or removed.
         Note that generally a `"Sanitizer` is expected than the to be more efficient than a `SanitizerConfig` if the configuration is to reused.
@@ -39,9 +37,7 @@ A {{domxref("Document")}}.
 ### Exceptions
 
 - `TypeError`
-
   - : This is thrown if:
-
     - `html` is passed a string when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are [enforced by a CSP](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) and no default policy is defined.
     - `options.sanitizer` is passed a:
       - value that is not a {{domxref("Sanitizer")}}, {{domxref("SanitizerConfig")}}, or string.
