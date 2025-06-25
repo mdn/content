@@ -33,6 +33,20 @@ Cookie: name=value
 Cookie: name=value; name2=value2; name3=value3
 ```
 
+## Usage notes
+
+### Duplicate cookie names
+
+Cookies with the same name can coexist if they are set with different `Path`, `Domain`, or `Partitioned` attributes. For example, the following two `Set-Cookie` headers are valid and create distinct cookies:
+
+- `Set-Cookie: sessionId=abc123; Path=/app1`
+- `Set-Cookie: sessionId=xyz789; Path=/app2`
+
+However, if a cookie is set with the same name, path, domain, and partitioning context as an existing one, it will overwrite that cookie.
+
+{{Note("Some browsers isolate cookies by [partitioned contexts](https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie#partitioned_cookies), which can lead to cookies with the same name behaving independently based on their partition.")}}
+
+
 ## Directives
 
 - `<cookie-list>`
