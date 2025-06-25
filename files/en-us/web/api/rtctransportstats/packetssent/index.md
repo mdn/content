@@ -3,10 +3,12 @@ title: "RTCTransportStats: packetsSent property"
 short-title: packetsSent
 slug: Web/API/RTCTransportStats/packetsSent
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.RTCStatsReport.type_transport.packetsSent
 ---
 
-{{APIRef("WebRTC")}}
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 The **`packetsSent`** property of the {{domxref("RTCTransportStats")}} dictionary indicates the total number of packets sent over this transport.
 
