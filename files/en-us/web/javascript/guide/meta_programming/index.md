@@ -40,7 +40,7 @@ The following terms are used when talking about the functionality of proxies.
   - : The methods that provide property access. (This is analogous to the concept of _traps_ in operating systems.)
 - target
   - : Object which the proxy virtualizes. It is often used as storage backend for the proxy. Invariants (semantics that remain unchanged) regarding object non-extensibility or non-configurable properties are verified against the target.
-- invariants
+- {{Glossary("invariant", "invariants")}}
   - : Semantics that remain unchanged when implementing custom operations are called _invariants_. If you violate the invariants of a handler, a {{jsxref("TypeError")}} will be thrown.
 
 ## Handlers and traps
