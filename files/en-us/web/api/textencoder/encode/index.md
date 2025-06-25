@@ -8,7 +8,7 @@ browser-compat: api.TextEncoder.encode
 
 {{APIRef("Encoding API")}}{{AvailableInWorkers}}
 
-The **`TextEncoder.encode()`** method takes a string as input, and returns a {{jsxref("Global_Objects/Uint8Array", "Uint8Array")}} containing the text given in parameters encoded with the specific method for that {{domxref("TextEncoder")}} object.
+The **`TextEncoder.encode()`** method takes a string as input, and returns a {{jsxref("Global_Objects/Uint8Array", "Uint8Array")}} containing the string encoded using the {{glossary("UTF-8")}} character encoding system.
 
 ## Syntax
 
@@ -23,12 +23,12 @@ encode(string)
 
 ### Return value
 
-A {{jsxref("Uint8Array")}} object.
+A {{jsxref("Uint8Array")}} object containing the UTF-8 encoding of the input string.
 
 ## Examples
 
 ```html
-<p class="source">This is a sample paragraph.</p>
+<p class="source">Sample paragraph.</p>
 <p class="result">Encoded result:</p>
 ```
 
@@ -39,8 +39,8 @@ const string = sourcePara.textContent;
 
 const textEncoder = new TextEncoder();
 
-let encoded = textEncoder.encode(string);
-resultPara.textContent += encoded;
+const encoded = textEncoder.encode(string);
+resultPara.textContent = `${resultPara.textContent} ${encoded}`;
 ```
 
 {{EmbedLiveSample('Examples')}}

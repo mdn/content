@@ -6,11 +6,9 @@ page-type: guide
 
 {{DefaultAPISidebar("Encoding API")}}
 
-The constructors for the [Encoding API](/en-US/docs/Web/API/Encoding_API) interfaces {{domxref("TextDecoder")}} and {{domxref("TextDecoderStream")}} can be passed an optional `label`, representing the encoding to be used.
-The default is `UTF-8`.
+The constructors for the [Encoding API](/en-US/docs/Web/API/Encoding_API) interfaces {{domxref("TextDecoder")}} and {{domxref("TextDecoderStream")}} can be passed an optional `label` argument, which identifies the encoding system to be used.
 
-The following table lists all encoding names and labels that user agents must support, as defined in the Encoding Spec.
-These are generally applicable anywhere character encodings are used.
+The following table lists all encoding labels that user agents must support, along with the encoding system that the label identifies. Note that most encoding systems have more than one label.
 
 <table class="no-markdown">
   <thead>
