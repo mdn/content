@@ -33,11 +33,9 @@ mask-mode: unset;
 The `mask-mode` property can take multiple comma-separated `<masking-mode>` keyword values, including:
 
 - `alpha`
-
   - : Indicates that the alpha (transparency) values of the mask image should be used.
 
 - `luminance`
-
   - : Indicates that the [luminance (brightness)](#understanding_luminance) values of the mask image should be used.
 
 - `match-source`

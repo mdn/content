@@ -53,17 +53,14 @@ with the first `<repeat-style>` value being the horizontal repetition value and 
 The `<repeat-style>` values include:
 
 - `repeat`
-
   - : The image is repeated as much as needed to cover the whole mask painting area. Mask images along the edges are clipped when the size of the [mask origin box](/en-US/docs/Web/CSS/mask-origin) is not an exact multiple of the mask image's size.
 
 - `space`
-
   - : The mask image is repeated as many times as possible without clipping. If the element's origin size is at least twice the size as the mask image's size in the associated dimension, the {{cssxref("mask-position")}} property is ignored and the first and last images are positioned at the edges of the mask origin container. If the mask origin box is not an exact multiple of the mask image's size, whitespace is distributed evenly between the repeated mask images.
 
     If the origin box size is less than twice the mask image's size in the given dimension, only one mask image can be displayed. In this case, the image is positioned as defined by the `mask-position` property, which defaults to `0% 0%`. The mask image will only be clipped if the mask image is larger than the mask origin box.
 
 - `round`
-
   - : The mask image is repeated as many times as possible in its original dimensions. If the size of the mask origin box is not an exact multiple of the mask image's size, all mask images will be rescaled, [shrinking or stretching](#rounded_repetitions) to ensure no repetitions are clipped.
 
 - `no-repeat`
@@ -109,7 +106,6 @@ The one-value syntax is a shorthand for the full two-value syntax:
 </table>
 
 - `repeat-x`
-
   - : The equivalent of `repeat no-repeat`. The image is repeated in the horizontal direction as many times as needed to cover the width of the mask painting area. Mask images along the right or left edges, or both depending on the {{cssxref("mask-position")}} value, will be clipped if the width of the mask origin box is not an exact multiple of the mask image's width.
 
 - `repeat-y`
