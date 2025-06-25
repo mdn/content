@@ -58,15 +58,15 @@
     "yaml": "^2.8.0"
   },
   "devDependencies": {
-    "cspell": "9.1.1",
+    "cspell": "9.1.2",
     "cspell-group-by-file-reporter": "^1.0.1",
-    "jest": "^30.0.2",
+    "jest": "^30.0.3",
     "lefthook": "^1.11.14",
     "markdownlint-cli2": "0.18.1",
     "markdownlint-rule-search-replace": "1.2.0",
     "node-html-parser": "^7.0.1",
     "parse-diff": "^0.11.1",
-    "prettier": "3.6.0",
+    "prettier": "3.6.1",
     "yaml": "^2.8.0",
     "yargs": "^18.0.0"
   },

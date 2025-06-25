@@ -285,7 +285,7 @@ function draw() {
 
 const runButton = document.getElementById("runButton");
 runButton.addEventListener("click", () => {
-  startGame();
+  draw();
   runButton.disabled = true;
 });
 ```
