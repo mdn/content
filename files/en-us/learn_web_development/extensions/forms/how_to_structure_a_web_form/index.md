@@ -134,7 +134,7 @@ Let's consider this example:
 <!-- So this: -->
 <!--<div>
   <label for="username">Name:</label>
-  <input type="text" name="username" />
+  <input id="username" type="text" name="username" required />
   <label for="username"><span aria-label="required">*</span></label>
 </div>-->
 
@@ -142,7 +142,7 @@ Let's consider this example:
 <!--<div>
   <label for="username">
     <span>Name:</span>
-    <input id="username" type="text" name="username" />
+    <input id="username" type="text" name="username" required />
     <span aria-label="required">*</span>
   </label>
 </div>-->
@@ -150,7 +150,7 @@ Let's consider this example:
 <!-- But this is probably best: -->
 <div>
   <label for="username">Name: <span aria-label="required">*</span></label>
-  <input id="username" type="text" name="username" />
+  <input id="username" type="text" name="username" required />
 </div>
 ```
 
