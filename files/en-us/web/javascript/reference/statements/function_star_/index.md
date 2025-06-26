@@ -234,18 +234,6 @@ function* f() {}
 const obj = new f(); // throws "TypeError: f is not a constructor
 ```
 
-### Generator defined in an expression
-
-```js
-const foo = function* () {
-  yield 10;
-  yield 20;
-};
-
-const bar = foo();
-console.log(bar.next()); // {value: 10, done: false}
-```
-
 ### Generator example
 
 ```js
