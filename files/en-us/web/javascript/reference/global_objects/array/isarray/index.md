@@ -1,5 +1,6 @@
 ---
 title: Array.isArray()
+short-title: isArray()
 slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Array.isArray

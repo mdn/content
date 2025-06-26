@@ -189,7 +189,6 @@ As a result, you need to be careful to check the answers they give you, and not 
 - If your code is returning a specific error message, try entering the error into a search engine or AI prompt. Other people will probably have already tackled the same error in the past and recorded solutions publicly somewhere.
 - If possible, stick with recommended sites like MDN and [StackOverflow](https://stackoverflow.com/).
 - There are many advanced search techniques you can use in search engines that will give you better results than just typing a plain search term. Typing in a plain search term such as `ant fish cheese` will return results that contain any combination of those words. However, most search engines support variations of the following syntax patterns:
-
   - Typing in `"ant fish cheese"` (with the quotes) will only return results that contain that exact phrase.
   - `ant cheese -fish` will return results that contain `ant` and/or `cheese` but not `fish`.
   - `ant OR cheese` will only return results with one term or the other, not both. From our testing, this one only seemed to work effectively in Google.

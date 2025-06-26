@@ -63,7 +63,6 @@ checkbox.addEventListener("click", () => {
 ## See also
 
 - Related event handlers
-
   - {{domxref("Element.click_event", "Element.onclick")}}
   - {{domxref("Element.dblclick_event", "Element.ondblclick")}}
   - {{domxref("Element.auxclick_event", "Element.onauxclick")}}

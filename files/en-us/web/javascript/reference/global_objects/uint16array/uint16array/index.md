@@ -1,5 +1,6 @@
 ---
 title: Uint16Array() constructor
+short-title: Uint16Array()
 slug: Web/JavaScript/Reference/Global_Objects/Uint16Array/Uint16Array
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Uint16Array.Uint16Array
@@ -22,7 +23,8 @@ new Uint16Array(buffer, byteOffset)
 new Uint16Array(buffer, byteOffset, length)
 ```
 
-> **Note:** `Uint16Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Uint16Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

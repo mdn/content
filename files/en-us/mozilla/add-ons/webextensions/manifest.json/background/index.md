@@ -149,7 +149,7 @@ The `background` key can also contain this optional property:
             <code>document</code> requests that the browser use the extension's background scripts as documents, if supported.
           </li>
           <li>
-            <code>service_worker</code> requests that the the browser run the extension's background scripts as service workers, if supported.
+            <code>service_worker</code> requests that the browser run the extension's background scripts as service workers, if supported.
           </li>
         </ul>
         <p>Chrome only supports service workers, so it ignores this key. If omitted, Firefox and Safari run background scripts as documents. Safari uses a service worker context if the extension specifies <code>scripts</code> and <code>preferred_environment</code> is set to <code>service_worker</code>.</p>

@@ -76,7 +76,7 @@ function log(text) {
 
 #### JavaScript
 
-The code first creates a new `Sanitizer` object that that allows the safe element {{htmlelement("p")}}, the unsafe elements {{htmlelement("script")}} and {{htmlelement("iframe")}}, and the unsafe `onwebkitanimationend` event handler attribute.
+The code first creates a new `Sanitizer` object that allows the safe element {{htmlelement("p")}}, the unsafe elements {{htmlelement("script")}} and {{htmlelement("iframe")}}, and the unsafe `onwebkitanimationend` event handler attribute.
 
 The code then calls `removeUnsafe()` on the sanitizer and logs its configuration.
 

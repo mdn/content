@@ -33,7 +33,8 @@ There are two parts to using the FedCM API, which are covered in the linked guid
 1. [IdP integration with FedCM](/en-US/docs/Web/API/FedCM_API/IDP_integration) — what an identity provider needs to provide so that an RP can integrate with it.
 2. [RP federated sign-in](/en-US/docs/Web/API/FedCM_API/RP_sign-in) — the FedCM functionality an RP needs to use to sign a user in using their IdP account. A FedCM sign-in request is initiated using the {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} method.
 
-> **Note:** [Google Sign In](https://developers.google.com/identity/gsi/web/guides/overview) is an example of an IdP that already supports FedCM. [Migrate to FedCM](https://developers.google.com/identity/gsi/web/guides/fedcm-migration) provides instructions for RPs wishing to migrate existing apps using Google Sign In to federated sign-in.
+> [!NOTE]
+> [Google Sign In](https://developers.google.com/identity/gsi/web/guides/overview) is an example of an IdP that already supports FedCM. [Migrate to FedCM](https://developers.google.com/identity/gsi/web/guides/fedcm-migration) provides instructions for RPs wishing to migrate existing apps using Google Sign In to federated sign-in.
 
 ## Permissions Policy integration and `<iframe>` support
 

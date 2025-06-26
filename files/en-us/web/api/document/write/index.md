@@ -64,7 +64,7 @@ The passed objects may be {{domxref("TrustedHTML")}} instances or strings.
 It is much safer to pass only {{domxref("TrustedHTML")}} objects into this method, and to [enforce](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) this using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
 The guarantees that the input has been passed through a transformation function, which has the chance to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input to remove potentially dangerous markup, such as {{htmlelement("script")}} elements and event handler attributes.
 
-Because `document.write()` writes to the document **stream**, calling `document.write()` on a closed (loaded) document (without first calling {{domxref("document.open()")}}) automatically calls {{domxref("document.open()")}}, which will [clear the document](/en-US/docs/Web/API/Document/open#description).
+Because `document.write()` writes to the document **stream**, calling `document.write()` on a closed (loaded) document (without first calling {{domxref("document.open()")}}) automatically calls {{domxref("document.open()")}}, which will clear the document.
 
 The exception is that if the `document.write()` call is embedded within an inline HTML `<script>` tag, then it will not automatically call `document.open()`:
 
@@ -116,7 +116,7 @@ For the purposes of demonstration, here we implement a rudimentary "sanitizer" t
 
 ```js
 const policy = trustedTypes.createPolicy("docPolicy", {
-  createHTML: (string) => {
+  createHTML(string) {
     return string
       .replace("<script", "&lt;script")
       .replace("</script", "&lt;/script");

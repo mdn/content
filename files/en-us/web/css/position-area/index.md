@@ -2,12 +2,10 @@
 title: position-area
 slug: Web/CSS/position-area
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.position-area
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`position-area`** [CSS](/en-US/docs/Web/CSS) property enables an anchor-positioned element to be positioned relative to the edges of its associated anchor element by placing the positioned element on one or more tiles of an implicit 3x3 grid, where the anchoring element is the center cell.
 
@@ -63,11 +61,9 @@ position-area: unset;
 The property value is two `<position-area>` keyterms, or the keyword `none`. If only one `<position-area>` keyterm is provided, the second keyterm is implied.
 
 - [`<position-area>`](/en-US/docs/Web/CSS/position-area_value)
-
   - : Specifies the area of the position area grid on which to place selected positioned elements.
 
 - `none`
-
   - : No position area is set.
 
 ## Description

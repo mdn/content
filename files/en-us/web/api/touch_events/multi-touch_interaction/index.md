@@ -58,21 +58,21 @@ const tpCache = [];
 Event handlers are registered for all four touch event types. The {{domxref("Element/touchend_event", "touchend")}} and {{domxref("Element/touchcancel_event", "touchcancel")}} event types use the same handler.
 
 ```js
-function set_handlers(name) {
+function setHandlers(name) {
   // Install event handlers for the given element
   const el = document.getElementById(name);
-  el.ontouchstart = start_handler;
-  el.ontouchmove = move_handler;
+  el.addEventListener("touchstart", startHandler);
+  el.addEventListener("touchmove", moveHandler);
   // Use same handler for touchcancel and touchend
-  el.ontouchcancel = end_handler;
-  el.ontouchend = end_handler;
+  el.addEventListener("touchcancel", endHandler);
+  el.addEventListener("touchend", endHandler);
 }
 
 function init() {
-  set_handlers("target1");
-  set_handlers("target2");
-  set_handlers("target3");
-  set_handlers("target4");
+  setHandlers("target1");
+  setHandlers("target2");
+  setHandlers("target3");
+  setHandlers("target4");
 }
 ```
 
@@ -83,7 +83,7 @@ This function provides very basic support for 2-touch horizontal move/pinch/zoom
 ```js
 // This is a very basic 2-touch move/pinch/zoom handler that does not include
 // error handling, only handles horizontal moves, etc.
-function handle_pinch_zoom(ev) {
+function handlePinchZoom(ev) {
   if (ev.targetTouches.length === 2 && ev.changedTouches.length === 2) {
     // Check if the two target touches are the same ones that started
     // the 2-touch
@@ -120,7 +120,7 @@ function handle_pinch_zoom(ev) {
 The {{domxref("Element/touchstart_event", "touchstart")}} event handler caches touch points to support 2-touch gestures. It also calls {{domxref("Event.preventDefault","preventDefault()")}} to keep the browser from applying further event handling (for example, mouse event emulation).
 
 ```js
-function start_handler(ev) {
+function startHandler(ev) {
   // If the user makes simultaneous touches, the browser will fire a
   // separate touchstart event for each touch point. Thus if there are
   // three simultaneous touches, the first touchstart event will have
@@ -134,7 +134,7 @@ function start_handler(ev) {
     }
   }
   if (logEvents) log("touchStart", ev, true);
-  update_background(ev);
+  updateBackground(ev);
 }
 ```
 
@@ -143,7 +143,7 @@ function start_handler(ev) {
 The {{domxref("Element/touchmove_event", "touchmove")}} handler calls {{domxref("Event.preventDefault","preventDefault()")}} for the same reason mentioned above, and invokes the pinch/zoom handler.
 
 ```js
-function move_handler(ev) {
+function moveHandler(ev) {
   // Note: if the user makes more than one "simultaneous" touches, most browsers
   // fire at least one touchmove event and some will fire several touch moves.
   // Consequently, an application might want to "ignore" some touch moves.
@@ -156,14 +156,14 @@ function move_handler(ev) {
   // To avoid too much color flashing many touchmove events are started,
   // don't update the background if two touch points are active
   if (!(ev.touches.length === 2 && ev.targetTouches.length === 2))
-    update_background(ev);
+    updateBackground(ev);
 
   // Set the target element's border to dashed to give a clear visual
   // indication the element received a move event.
   ev.target.style.border = "dashed";
 
   // Check this event for 2-touch Move/Pinch/Zoom gesture
-  handle_pinch_zoom(ev);
+  handlePinchZoom(ev);
 }
 ```
 
@@ -172,7 +172,7 @@ function move_handler(ev) {
 The {{domxref("Element/touchend_event", "touchend")}} handler restores the event target's background color back to its original color.
 
 ```js
-function end_handler(ev) {
+function endHandler(ev) {
   ev.preventDefault();
   if (logEvents) log(ev.type, ev, false);
   if (ev.targetTouches.length === 0) {
@@ -194,10 +194,9 @@ The application uses {{HTMLElement("div")}} elements for the touch areas and pro
 <div id="target4">Tap, Hold or Swipe me 4</div>
 
 <!-- UI for logging/debugging -->
-<button id="log" onclick="enableLog(event);">Start/Stop event logging</button>
-<button id="clearlog" onclick="clearLog(event);">Clear the log</button>
-<p></p>
-<output></output>
+<button id="toggle-log">Start/Stop event logging</button>
+<button id="clear-log">Clear the log</button>
+<output id="output"></output>
 ```
 
 ### Miscellaneous functions
@@ -209,7 +208,7 @@ These functions support the application but aren't directly involved with the ev
 The background color of the touch areas will change as follows: no touch is `white`; one touch is `yellow`; two simultaneous touches is `pink`, and three or more simultaneous touches is `lightblue`. See [touch move handler](#touch_move_handler) for information about the background color changing when a 2-finger move/pinch/zoom is detected.
 
 ```js
-function update_background(ev) {
+function updateBackground(ev) {
   // Change background color based on the number simultaneous touches
   // in the event's targetTouches list:
   //   yellow - one tap (or hold)
@@ -236,31 +235,35 @@ function update_background(ev) {
 The functions are used to log event activity to the application window, to support debugging and learning about the event flow.
 
 ```js
-function enableLog(ev) {
+const output = document.getElementById("output");
+
+function toggleLog(ev) {
   logEvents = !logEvents;
 }
 
+document.getElementById("toggle-log").addEventListener("click", toggleLog);
+
 function log(name, ev, printTargetIds) {
-  const o = document.getElementsByTagName("output")[0];
   let s =
     `${name}: touches = ${ev.touches.length} ; ` +
     `targetTouches = ${ev.targetTouches.length} ; ` +
     `changedTouches = ${ev.changedTouches.length}`;
-  o.innerText += `${s}\n`;
+  output.innerText += `${s}\n`;
 
   if (printTargetIds) {
     s = "";
     for (const touch of ev.targetTouches) {
       s += `... id = ${touch.identifier}\n`;
     }
-    o.innerText += s;
+    output.innerText += s;
   }
 }
 
 function clearLog(event) {
-  const o = document.getElementsByTagName("output")[0];
-  o.textContent = "";
+  output.textContent = "";
 }
+
+document.getElementById("clear-log").addEventListener("click", clearLog);
 ```
 
 ## See also

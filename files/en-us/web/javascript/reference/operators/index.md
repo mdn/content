@@ -129,7 +129,8 @@ A comparison operator compares its operands and returns a boolean value based on
 - {{jsxref("Operators/in", "in")}}
   - : The `in` operator determines whether an object has a given property.
 
-> **Note:** `=>` is not an operator, but the notation for [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+> [!NOTE]
+> `=>` is not an operator, but the notation for [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 ### Equality operators
 

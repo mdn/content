@@ -94,9 +94,7 @@ place-self: unset;
 - `auto`
   - : Computes to the parent's {{cssxref("align-items")}} value.
 - `normal`
-
   - : The effect of this keyword is dependent of the layout mode we are in:
-
     - In absolutely-positioned layouts, the keyword behaves like `start` on _replaced_ absolutely-positioned boxes, and as `stretch` on _all other_ absolutely-positioned boxes.
     - In static position of absolutely-positioned layouts, the keyword behaves as `stretch`.
     - For flex items, the keyword behaves as `stretch`.

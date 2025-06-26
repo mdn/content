@@ -178,11 +178,9 @@ Controlling exposure to the page is key to ensuring that someone susceptible to 
 
 If you believe you may have an image or animation that may cause seizures, control access to it by first displaying a warning about the content, and then putting it in a location where the user must opt in to it, such as clicking a button, or ensuring that the link to the page has a distinct and obvious warning.
 
-Consider using metadata such as `<meta name="robots" content="noindex, nofollow">` so that the page is not indexed by search engines.
-
-#### Do Not Index, Do Not Follow
-
-By not indexing the page, the likelihood that users will stumble upon it via search will be reduced.
+Consider setting crawl directives for search engines to hint that they shouldn't include potentially harmful resources in their search indexes.
+You can do this using metadata in a [`<meta name="robots">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/robots) element with restrictive rules like `noindex, nofollow`.
+By not indexing the page (`noindex`) and not following links on the page (`nofollow`), the likelihood that users will stumble upon it via search will be reduced:
 
 ```html
 <html lang="en">
@@ -191,6 +189,12 @@ By not indexing the page, the likelihood that users will stumble upon it via sea
     <meta name="robots" content="noindex, nofollow" />
   </head>
 </html>
+```
+
+For non-HTML resources, you can set crawl directives in a {{httpheader("X-Robots-Tag")}} HTTP response header:
+
+```http
+X-Robots-Tag: noindex
 ```
 
 ### Animated GIFs
@@ -353,9 +357,7 @@ Normally, higher contrast is a good thing when it comes to accessibility. The gr
 The contrast ratio is defined in [WCAG 2.2](https://w3c.github.io/wcag/guidelines/22/) as follows:
 
 - _contrast ratio_
-
   - : (L1 + 0.05) / (L2 + 0.05), where
-
     - L1 is the [relative luminance](https://w3c.github.io/wcag/guidelines/22/#dfn-relative-luminance) of the lighter of the colors, and
     - L2 is the [relative luminance](https://w3c.github.io/wcag/guidelines/22/#dfn-relative-luminance) of the darker of the colors.
 

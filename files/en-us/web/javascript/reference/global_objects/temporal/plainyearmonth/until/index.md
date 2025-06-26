@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainYearMonth.prototype.until()
+short-title: until()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth/until
 page-type: javascript-instance-method
 status:

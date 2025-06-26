@@ -20,7 +20,6 @@ let ruleIds = await browser.declarativeNetRequest.getDisabledRuleIds(
 ### Parameters
 
 - `options`
-
   - : An object containing details of the ruleset to return disabled rules for.
     - `rulesetId`
       - : `string` The ID of the static ruleset to query.

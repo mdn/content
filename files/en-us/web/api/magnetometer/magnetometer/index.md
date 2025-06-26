@@ -24,9 +24,7 @@ new Magnetometer(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : Options are as follows:
-
     - `frequency` {{optional_inline}}
       - : The desired number of times per second a sample should
         be taken, meaning the number of times per second that the

@@ -1,5 +1,6 @@
 ---
 title: handler.set()
+short-title: set()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.set

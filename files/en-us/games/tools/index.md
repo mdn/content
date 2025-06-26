@@ -15,9 +15,7 @@ On this page, you can find links to our game development tools articles, which e
 - [Firefox Profiler](https://profiler.firefox.com/docs/#/)
   - : The Firefox Profiler lets you profile your code to help figure out where your performance issues are so that you can make your game run at top speed.
 - Toolchain for developing and debugging games
-
   - : How does this differ from normal web app debugging? What specialist tools are available? A lot of this is going to be covered by Will in [tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html), but here we should provide a kind of practical toolchain tutorial for debugging games, with links to Will's stuff:
-
     - Basic tools overview
     - [Shader editor](https://firefox-source-docs.mozilla.org/devtools-user/shader_editor/index.html)
     - Performance tools (still in production, estimated early 2014)

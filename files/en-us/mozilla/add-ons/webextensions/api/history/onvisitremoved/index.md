@@ -35,13 +35,9 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `removed`
-
       - : `object`. Details of the removal. This is an object containing two properties: a boolean `allHistory` and an array `urls`.
-
         - If this event is firing because all history was cleared, `allHistory` will be `true` and `urls` will be an empty array.
         - Otherwise, `allHistory` will be `false` and `urls` will contain one item, which is the URL of the removed page.
 

@@ -68,7 +68,8 @@ Either way, the browser stores a URL containing the target location of the conte
 > [!NOTE]
 > Support is provided for opaque URNs in `<iframe>`s to ease migration of existing implementations over to [privacy sandbox](https://privacysandbox.google.com/) APIs. This support is intended to be temporary and will be removed in the future as adoption grows.
 
-> **Note:** `FencedFrameConfig` has a {{domxref("FencedFrameConfig.setSharedStorageContext", "setSharedStorageContext()")}} method that is used to pass in data from the embedding document to the `<fencedframe>`'s shared storage. It could for example be accessed in a {{domxref("Worklet")}} via the `<fencedframe>` and used to generate a report. See the [Shared Storage API](https://privacysandbox.google.com/private-advertising/shared-storage) for more details.
+> [!NOTE]
+> `FencedFrameConfig` has a {{domxref("FencedFrameConfig.setSharedStorageContext", "setSharedStorageContext()")}} method that is used to pass in data from the embedding document to the `<fencedframe>`'s shared storage. It could for example be accessed in a {{domxref("Worklet")}} via the `<fencedframe>` and used to generate a report. See the [Shared Storage API](https://privacysandbox.google.com/private-advertising/shared-storage) for more details.
 
 ### Accessing fenced frame functionality on the `Fence` object
 

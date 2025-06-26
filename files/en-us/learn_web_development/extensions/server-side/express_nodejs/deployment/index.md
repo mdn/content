@@ -362,7 +362,6 @@ The steps are:
 1. Visit <https://github.com/> and create an account.
 2. Once you are logged in, click the **+** link in the top toolbar and select **New repository**.
 3. Fill in all the fields on this form. While these are not compulsory, they are strongly recommended.
-
    - Enter a new repository name (e.g., _express-locallibrary-tutorial_), and description (e.g., "Local Library website written in Express (Node)".
    - Choose **Node** in the _Add .gitignore_ selection list.
    - Choose your preferred license in the _Add license_ selection list.
@@ -473,7 +472,6 @@ We are choosing to use Glitch for several reasons:
 - The skills and concepts you will learn when using Glitch are transferrable.
 - The service and plan limitations do not really impact us using Glitch for the tutorial.
   For example:
-
   - The starter plan only offers 1000 "project hours" per month, which is reset monthly.
     This is used when you're actively editing the site or if someone is accessing it.
     If no one is accessing or editing the site it will sleep.
@@ -791,16 +789,13 @@ That's the end of this tutorial on setting up Express apps in production, and al
 - [Production best practices: performance and reliability](https://expressjs.com/en/advanced/best-practice-performance.html) (Express docs)
 - [Production Best Practices: Security](https://expressjs.com/en/advanced/best-practice-security.html) (Express docs)
 - Railway Docs
-
   - [CLI](https://docs.railway.com/guides/cli)
 
 - DigitalOcean
-
   - [Express](https://www.digitalocean.com/community/tutorials?q=express) tutorials
   - [Node.js](https://www.digitalocean.com/community/tutorials?q=node.js) tutorials
 
 - Heroku
-
   - [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs) (Heroku docs)
   - [Deploying Node.js Applications on Heroku](https://devcenter.heroku.com/articles/deploying-nodejs) (Heroku docs)
   - [Heroku Node.js Support](https://devcenter.heroku.com/articles/nodejs-support) (Heroku docs)

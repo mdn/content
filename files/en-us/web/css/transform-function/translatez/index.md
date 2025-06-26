@@ -105,7 +105,8 @@ In the above interactive examples, [`perspective: 550px;`](/en-US/docs/Web/CSS/p
 create a 3D space) and [`transform-style: preserve-3d;`](/en-US/docs/Web/CSS/transform-style)
 (so the children, the 6 sides of the cube, are also positioned in the 3D space), have been set on the cube.
 
-> **Note:** `translateZ(tz)` is equivalent to
+> [!NOTE]
+> `translateZ(tz)` is equivalent to
 > `translate3d(0, 0, tz)`.
 
 ## Syntax

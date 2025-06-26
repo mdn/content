@@ -39,9 +39,7 @@ This directive may have one of the following values:
 - `'none'`
   - : No base URI may be set using a `<base>` element. The single quotes are mandatory.
 - `<source-expression-list>`
-
   - : A space-separated list of _source expression_ values. A `<base>` element may set a base URI if its value matches any of the given source expressions. For this directive, the following source expression values are applicable:
-
     - [`<host-source>`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#host-source)
     - [`<scheme-source>`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#scheme-source)
     - [`'self'`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#self)

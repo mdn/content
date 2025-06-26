@@ -24,7 +24,6 @@ page-type: firefox-release-notes
 ### HTML
 
 - The {{HTMLElement("details")}} and {{HTMLElement("summary")}} elements have been activated by default on Nightly and Aurora (DevTools), but not on Beta or Release:
-
   - The default style for these elements has been adapted to match the spec ([Firefox bug 1258657](https://bugzil.la/1258657)).
   - The `toggle` event is now sent to the {{HTMLElement("details")}} element when this one is opened or closed ([Firefox bug 1225412](https://bugzil.la/1225412)).
 
@@ -33,12 +32,10 @@ page-type: firefox-release-notes
 ### CSS
 
 - The {{cssxref("calc", "calc()")}} has been improved to be closer to the specification:
-
   - {{cssxref("calc", "calc()")}} is now supported on the {{cssxref("line-height")}} property ([Firefox bug 594933](https://bugzil.la/594933)).
   - Added support for nested CSS {{cssxref("calc", "calc()")}} ([Firefox bug 968761](https://bugzil.la/968761)).
 
 - Our experimental implementation of CSS grids has been updated:
-
   - Fragmentation for grid layout has been implemented ([Firefox bug 1144096](https://bugzil.la/1144096)).
   - \[css-grid] Percentage tracks are now treated as `auto` if grid container size is indefinite ([Firefox bug 1264607](https://bugzil.la/1264607)).
   - {{HTMLElement("fieldset")}} now supports grid and flex layouts ([Firefox bug 1230207](https://bugzil.la/1230207)).
@@ -49,7 +46,6 @@ page-type: firefox-release-notes
 - Support for the experimental {{cssxref("print-color-adjust", "color-adjust")}} property has been added, allowing pages to specify that background colors and images should be printed ([Firefox bug 1209273](https://bugzil.la/1209273)).
 - The {{cssxref("::first-letter")}} pseudo-element now also matches punctuation characters of type Pd that precede or immediately follow the actual first letter; this is a new requirement of CSS Pseudo-element module level 4 ([Firefox bug 1260366](https://bugzil.la/1260366)).
 - Several `-webkit` prefixed properties and values have been added for web compatibility, behind the preference `layout.css.prefixes.webkit`, defaulting to `false`:
-
   - {{cssxref("-webkit-text-fill-color")}} ([Firefox bug 1247777](https://bugzil.la/1247777)).
   - {{cssxref("-webkit-text-stroke")}}, {{cssxref("-webkit-text-stroke-color")}}, {{cssxref("-webkit-text-stroke-width")}} ([Firefox bug 1248708](https://bugzil.la/1248708)).
   - `-webkit-background-clip` (as background-clip) text value ([Firefox bug 759568](https://bugzil.la/759568)).
@@ -93,7 +89,6 @@ page-type: firefox-release-notes
 - {{domxref("Document.scrollingElement")}} got enabled by default ([Firefox bug 1265032](https://bugzil.la/1265032)).
 - `Node.localName`, `Node.namespaceURI` and `Node.prefix` were moved to the {{domxref("Element")}} and {{domxref("Attr")}} APIs ([Firefox bug 1055776](https://bugzil.la/1055776)).
 - Per the latest specification, the values of {{domxref("KeyboardEvent.code")}} returned for the following keys have been changed see ([Firefox bug 1264150](https://bugzil.la/1264150)):
-
   - `"OSLeft"` and `"OSRight"` are now `"MetaLeft"` and `"MetaRight"`.
   - `"VolumeDown"`, `"VolumeUp"`, and `"VolumeMute"` are now `"AudioVolumeDown"`, `"AudioVolumeUp"`, and `"AudioVolumeMute"`.
   - `"IntlHash"` has been removed.

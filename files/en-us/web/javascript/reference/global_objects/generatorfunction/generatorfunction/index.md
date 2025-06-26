@@ -1,5 +1,6 @@
 ---
 title: GeneratorFunction() constructor
+short-title: GeneratorFunction()
 slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction/GeneratorFunction
 page-type: javascript-constructor
 browser-compat: javascript.builtins.GeneratorFunction.GeneratorFunction
@@ -31,7 +32,8 @@ GeneratorFunction(arg1, arg2, functionBody)
 GeneratorFunction(arg1, arg2, /* …, */ argN, functionBody)
 ```
 
-> **Note:** `GeneratorFunction()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `GeneratorFunction` instance.
+> [!NOTE]
+> `GeneratorFunction()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `GeneratorFunction` instance.
 
 ### Parameters
 

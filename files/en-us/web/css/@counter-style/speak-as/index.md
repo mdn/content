@@ -26,9 +26,7 @@ speak-as: <counter-style-name>;
 ### Values
 
 - `auto`
-
   - : If the value of `speak-as` is specified as `auto`, then the effective value of `speak-as` will be determined based on the value of the {{cssxref("@counter-style/system", "system")}} descriptor:
-
     - If the value of `system` is `alphabetic`, the effective value of `speak-as` will be `spell-out`.
     - If `system` is `cyclic`, the effective value of `speak-as` will be `bullets`.
     - If `system` is `extends`, the value of `speak-as` will be the same as if `speak-as: auto` is specified on the extended style.

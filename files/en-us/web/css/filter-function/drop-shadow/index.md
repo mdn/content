@@ -70,7 +70,6 @@ The `drop-shadow()` function accepts a parameter of type `<shadow>` (defined in 
 ### Parameters
 
 - `<color>` {{optional_inline}}
-
   - : Specifies the color for the shadow. If not specified, the value of the {{cssxref("color")}} property defined in the parent element is used.
 
 - `<length>`

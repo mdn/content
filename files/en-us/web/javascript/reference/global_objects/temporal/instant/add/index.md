@@ -1,5 +1,6 @@
 ---
 title: Temporal.Instant.prototype.add()
+short-title: add()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Instant/add
 page-type: javascript-instance-method
 status:

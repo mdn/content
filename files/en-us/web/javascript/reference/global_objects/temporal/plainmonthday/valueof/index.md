@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainMonthDay.prototype.valueOf()
+short-title: valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainMonthDay/valueOf
 page-type: javascript-instance-method
 status:

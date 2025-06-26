@@ -46,7 +46,14 @@ When creating your own custom editable region by using the {{domxref("EditContex
 In the following example, the `textformatupdate` event is used to log the various formats that the IME composition window wants to apply to text ranges in the editable element. Note that the event listener callback in this example is only called when using an IME window to compose text.
 
 ```html
-<div id="editor" style="height:200px;background:#eee;"></div>
+<div id="editor"></div>
+```
+
+```css hidden
+#editor {
+  height: 200px;
+  background: #eee;
+}
 ```
 
 ```js

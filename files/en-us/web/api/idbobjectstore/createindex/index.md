@@ -34,7 +34,6 @@ createIndex(indexName, keyPath, options)
 - `keyPath`
   - : The key path for the index to use. Note that it is possible to create an index with an empty `keyPath`, and also to pass in a sequence (array) as a `keyPath`.
 - `options` {{optional_inline}}
-
   - : An object which can include the following
     properties:
     - `unique`

@@ -58,7 +58,6 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 ## Attributes
 
 - `<cookie-name>=<cookie-value>`
-
   - : Defines the cookie name and its value.
     A cookie definition begins with a name-value pair.
 
@@ -79,7 +78,6 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     > They must be set with the `secure` flag, must be from a secure page (HTTPS), must not have a domain specified, and the path must be `/`.
 
 - `Domain=<domain-value>` {{optional_inline}}
-
   - : Defines the host to which the cookie will be sent.
 
     Only the current domain can be set as the value, or a domain of a higher order, unless it is a public suffix. Setting the domain will make the cookie available to it, as well as to all its subdomains.
@@ -91,7 +89,6 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     Multiple host/domain values are _not_ allowed, but if a domain _is_ specified, then subdomains are always included.
 
 - `Expires=<date>` {{optional_inline}}
-
   - : Indicates the maximum lifetime of the cookie as an HTTP-date timestamp.
     See {{HTTPHeader("Date")}} for the required formatting.
 
@@ -108,27 +105,22 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     Note that the specification explains how the attribute should be parsed, but does not indicate if/how the value should be corrected by the recipient.
 
 - `HttpOnly` {{optional_inline}}
-
   - : Forbids JavaScript from accessing the cookie, for example, through the {{domxref("Document.cookie")}} property.
     Note that a cookie that has been created with `HttpOnly` will still be sent with JavaScript-initiated requests, for example, when calling {{domxref("XMLHttpRequest.send()")}} or {{domxref("Window/fetch", "fetch()")}}.
     This mitigates attacks against cross-site scripting ({{Glossary("Cross-site_scripting", "XSS")}}).
 
 - `Max-Age=<number>` {{optional_inline}}
-
   - : Indicates the number of seconds until the cookie expires. A zero or negative number will expire the cookie immediately. If both `Expires` and `Max-Age` are set, `Max-Age` has precedence.
 
 - `Partitioned` {{optional_inline}}
-
   - : Indicates that the cookie should be stored using partitioned storage.
     Note that if this is set, the [`Secure` directive](#secure) must also be set.
     See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies) for more details.
 
 - `Path=<path-value>` {{optional_inline}}
-
   - : Indicates the path that _must_ exist in the requested URL for the browser to send the `Cookie` header.
 
     The forward slash (`/`) character is interpreted as a directory separator, and subdirectories are matched as well. For example, for `Path=/docs`,
-
     - the request paths `/docs`, `/docs/`, `/docs/Web/`, and `/docs/Web/HTTP` will all match.
     - the request paths `/`, `/docsets`, `/fr/docs` will not match.
 
@@ -137,21 +129,15 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     > It is not intended as a security measure, and [does not protect](/en-US/docs/Web/API/Document/cookie#security) against unauthorized reading of the cookie from a different path.
 
 - `SameSite=<samesite-value>` {{optional_inline}}
-
   - : Controls whether or not a cookie is sent with cross-site requests: that is, requests originating from a different {{glossary("site")}}, including the scheme, from the site that set the cookie. This provides some protection against certain cross-site attacks, including {{Glossary("CSRF", "cross-site request forgery (CSRF)")}} attacks.
 
     The possible attribute values are:
-
     - `Strict`
-
       - : Send the cookie only for requests originating from the same {{glossary("site")}} that set the cookie.
 
     - `Lax`
-
       - : Send the cookie only for requests originating from the same {{glossary("site")}} that set the cookie, and for cross-site requests that meet both of the following criteria:
-
         - The request is a top-level navigation: this essentially means that the request causes the URL shown in the browser's address bar to change.
-
           - This would exclude, for example, requests made using the {{domxref("Window.fetch()", "fetch()")}} API, or requests for subresources from {{htmlelement("img")}} or {{htmlelement("script")}} elements, or navigations inside {{htmlelement("iframe")}} elements.
 
           - It would include requests made when the user clicks a link in the top-level browsing context from one site to another, or an assignment to {{domxref("Document.location", "document.location")}}, or a {{htmlelement("form")}} submission.
@@ -164,12 +150,10 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
         > When `Lax` is applied as a default, a more permissive version is used. In this more permissive version, cookies are also included in {{httpmethod("POST")}} requests, as long as they were set no more than two minutes before the request was made.
 
     - `None`
-
       - : Send the cookie with both cross-site and same-site requests.
         The `Secure` attribute must also be set when using this value.
 
 - `Secure` {{optional_inline}}
-
   - : Indicates that the cookie is sent to the server only when a request is made with the `https:` scheme (except on localhost), and therefore, is more resistant to [man-in-the-middle](/en-US/docs/Glossary/MitM) attacks.
 
     > [!NOTE]

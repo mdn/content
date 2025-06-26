@@ -1,5 +1,6 @@
 ---
 title: Math.cosh()
+short-title: cosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cosh
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.cosh

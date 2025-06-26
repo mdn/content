@@ -36,9 +36,7 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed these arguments:
-
     - `tabId`
       - : `integer`. The ID of the tab that has become active.
     - `selectInfo`

@@ -65,15 +65,15 @@ In addition to the [global attributes](/en-US/docs/Web/HTML/Reference/Global_att
 
 ### maxlength
 
-The maximum string length (measured in UTF-16 code units) that the user can enter into the password field. This must be an integer value of 0 or higher. If no `maxlength` is specified, or an invalid value is specified, the password field has no maximum length. This value must also be greater than or equal to the value of `minlength`.
+The maximum string length (measured in {{glossary("UTF-16", "UTF-16 code units")}}) that the user can enter into the password field. This must be an integer value of 0 or higher. If no `maxlength` is specified, or an invalid value is specified, the password field has no maximum length. This value must also be greater than or equal to the value of `minlength`.
 
-The input will fail [constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation) if the length of the text entered into the field is greater than `maxlength` UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.
+The input will fail [constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation) if the length of the text entered into the field is greater than `maxlength` {{glossary("UTF-16", "UTF-16 code units")}} long. Constraint validation is only applied when the value is changed by the user.
 
 ### minlength
 
-The minimum string length (measured in UTF-16 code units) that the user can enter into the password entry field. This must be a non-negative integer value smaller than or equal to the value specified by `maxlength`. If no `minlength` is specified, or an invalid value is specified, the password input has no minimum length.
+The minimum string length (measured in {{glossary("UTF-16", "UTF-16 code units")}}) that the user can enter into the password entry field. This must be a non-negative integer value smaller than or equal to the value specified by `maxlength`. If no `minlength` is specified, or an invalid value is specified, the password input has no minimum length.
 
-The input will fail [constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation) if the length of the text entered into the field is fewer than `minlength` UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.
+The input will fail [constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation) if the length of the text entered into the field is fewer than `minlength` {{glossary("UTF-16", "UTF-16 code units")}} long. Constraint validation is only applied when the value is changed by the user.
 
 ### pattern
 

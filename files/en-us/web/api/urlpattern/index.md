@@ -2,12 +2,10 @@
 title: URLPattern
 slug: Web/API/URLPattern
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.URLPattern
 ---
 
-{{APIRef("URL Pattern API")}}{{SeeCompatTable}} {{AvailableInWorkers}}
+{{APIRef("URL Pattern API")}} {{AvailableInWorkers}}
 
 The **`URLPattern`** interface of the {{domxref("URL Pattern API", "", "", "nocode")}} matches URLs or parts of URLs against a pattern. The pattern can contain capturing groups that extract parts of the matched URL.
 
@@ -16,42 +14,42 @@ page: {{domxref("URL Pattern API", "", "", "nocode")}}.
 
 ## Constructor
 
-- {{domxref("URLPattern.URLPattern", "URLPattern()")}} {{Experimental_Inline}}
+- {{domxref("URLPattern.URLPattern", "URLPattern()")}}
   - : Returns a new `URLPattern` object based on the given pattern and base URL.
 
 ## Instance properties
 
-- {{domxref("URLPattern.hash", "hash")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("URLPattern.hash", "hash")}} {{ReadOnlyInline}}
   - : A string containing a pattern to match the _hash_ part
     of a URL.
-- {{domxref("URLPattern.hostname", "hostname")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("URLPattern.hostname", "hostname")}} {{ReadOnlyInline}}
   - : A string containing a pattern to match the _hostname_
     part of a URL.
-- {{domxref("URLPattern.password", "password")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("URLPattern.password", "password")}} {{ReadOnlyInline}}
   - : A string containing a pattern to match the _password_
     part of a URL.
-- {{domxref("URLPattern.pathname", "pathname")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("URLPattern.pathname", "pathname")}} {{ReadOnlyInline}}
   - : A string containing a pattern to match the _pathname_
     part of a URL.
-- {{domxref("URLPattern.port", "port")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("URLPattern.port", "port")}} {{ReadOnlyInline}}
   - : A string containing a pattern to match the _port_ part
     of a URL.
-- {{domxref("URLPattern.protocol", "protocol")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("URLPattern.protocol", "protocol")}} {{ReadOnlyInline}}
   - : A string containing a pattern to match the _protocol_
     part of a URL.
-- {{domxref("URLPattern.search", "search")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("URLPattern.search", "search")}} {{ReadOnlyInline}}
   - : A string containing a pattern to match the _search_ part
     of a URL.
-- {{domxref("URLPattern.username","username")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("URLPattern.username","username")}} {{ReadOnlyInline}}
   - : A string containing a pattern to match the _username_
     part of a URL.
 
 ## Instance methods
 
-- {{domxref("URLPattern.exec", "exec()")}} {{Experimental_Inline}}
+- {{domxref("URLPattern.exec", "exec()")}}
   - : Returns an object with the matched parts of the URL or `null` if the URL
     does not match.
-- {{domxref("URLPattern.test", "test()")}} {{Experimental_Inline}}
+- {{domxref("URLPattern.test", "test()")}}
   - : Returns `true` if the URL matches the given pattern, `false` otherwise.
 
 ## Specifications

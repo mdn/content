@@ -40,7 +40,8 @@ transform: rotateY(3.142rad);
 
 The axis of rotation passes through an origin, defined by the {{ cssxref("transform-origin") }} CSS property.
 
-> **Note:** `rotateY(a)` is equivalent to
+> [!NOTE]
+> `rotateY(a)` is equivalent to
 > `rotate3d(0, 1, 0, a)`.
 
 > [!NOTE]

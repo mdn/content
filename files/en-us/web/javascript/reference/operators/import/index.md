@@ -42,7 +42,8 @@ Returns a promise which:
   - In a web-based module system (browsers, for example), if the network request fails (not connected to the Internet, CORS issue, etc.) or an HTTP error occurs (404, 500, etc.).
 - If evaluation of the referenced module throws, rejects with the thrown error.
 
-> **Note:** `import()` never synchronously throws an error.
+> [!NOTE]
+> `import()` never synchronously throws an error.
 
 ## Description
 

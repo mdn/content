@@ -1,5 +1,6 @@
 ---
 title: Temporal.ZonedDateTime.prototype.timeZoneId
+short-title: timeZoneId
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/timeZoneId
 page-type: javascript-instance-accessor-property
 status:

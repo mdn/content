@@ -64,7 +64,6 @@ body {
 ### Values
 
 - {{cssxref("&lt;length&gt;")}}
-
   - : A positive {{cssxref("&lt;length&gt;")}} value. For most font-relative units (such as `em` and `ex`), the font size is relative to the parent element's font size.
 
 - {{cssxref("&lt;percentage&gt;")}}

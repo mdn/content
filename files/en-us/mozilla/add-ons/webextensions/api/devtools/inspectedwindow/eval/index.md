@@ -48,9 +48,7 @@ let evaluating = browser.devtools.inspectedWindow.eval(
 - `expression`
   - : `string`. The JavaScript expression to evaluate. The string must evaluate to an object that can be represented as JSON, or an exception will be thrown. For example, `expression` must not evaluate to a function.
 - `options` {{optional_inline}}
-
   - : `object`. Options for the function (Note that Firefox does not yet support this options), as follows:
-
     - `frameURL` {{optional_inline}}
       - : `string`. The URL of the frame in which to evaluate the expression. If this is omitted, the expression is evaluated in the main frame of the window.
     - `useContentScriptContext` {{optional_inline}}
@@ -67,12 +65,10 @@ If no error occurred, element 0 will contain the result of evaluating the expres
 If an error occurred, element 0 will be `undefined`, and element 1 will contain an object giving details about the error. Two different sorts of errors are distinguished:
 
 - errors encountered evaluating the JavaScript (for example, syntax errors in the expression). In this case, element 1 will contain:
-
   - a boolean property `isException`, set to `true`
   - a string property `value`, giving more details.
 
 - other errors (for example, an expression that evaluates to an object that can't be represented as JSON). In this case, element 1 will contain:
-
   - a boolean property `isError`, set to `true`
   - a string property `code` containing an error code.
 

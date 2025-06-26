@@ -28,7 +28,6 @@ This article provides information about the changes in Firefox 128 that affect d
 
 - Resizable {{jsxref("ArrayBuffer")}} and growable {{jsxref("SharedArrayBuffer")}} are now supported, allowing the size of buffers to be changed without having to allocate a new buffer and copy data into it ([Firefox bug 1884150](https://bugzil.la/1884150)).
   The relevant methods and properties are:
-
   - Grow {{jsxref("SharedArrayBuffer")}} using the {{jsxref("SharedArrayBuffer.prototype.grow()")}} method.
     The maximum allowed size of the buffer is specified using the `options.maxByteLength` parameter to the [`SharedArrayBuffer()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer#maxbytelength).
     The {{jsxref("SharedArrayBuffer.prototype.growable")}} and {{jsxref("SharedArrayBuffer.prototype.maxByteLength")}} properties indicate whether the buffer can grow, and its maximum allowed size, respectively.
