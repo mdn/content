@@ -159,7 +159,7 @@ For more information, refer to the [CORS documentation](/en-US/docs/Web/HTTP/Gui
 - {{HTTPHeader("Integrity-Policy")}}
   - : Ensures that all resources the user agent loads (of a certain type) have [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity) guarantees.
 - {{HTTPHeader("Integrity-Policy-Report-Only")}}
-  - : Report on resources that the user agent loads that would violate [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity) guarantees if the integrity policy was enforced (using the `Integrity-Policy` header).
+  - : Reports on resources that the user agent loads that would violate [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity) guarantees if the integrity policy were enforced (using the `Integrity-Policy` header).
 
 ## Message body information
 
