@@ -17,8 +17,6 @@ Once an eligible query container has been selected for an element, each containe
 
 ## Syntax
 
-The `@container` at-rule has the following syntax:
-
 ```plain
 @container <container-condition># {
   <stylesheet>

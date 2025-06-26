@@ -18,6 +18,10 @@ To invert a matrix without mutating it, see {{domxref("DOMMatrixReadOnly.inverse
 invertSelf()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{domxref("DOMMatrix")}}.
