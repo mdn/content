@@ -145,7 +145,6 @@ The **`PublicKeyCredentialCreationOptions`** dictionary represents the object pa
   - : An array of strings providing hints as to what authentication UI the user-agent should provide for the user.
 
     The values can be any of the following:
-
     - `"security-key"`
       - : Authentication requires a separate dedicated physical device to provide the key.
     - `"client-device"`
