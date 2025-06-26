@@ -32,7 +32,6 @@ Such animations can trigger discomfort for those with [vestibular motion disorde
 For Firefox, the `reduce` request is honoured if:
 
 - In GTK/GNOME: Settings > Accessibility > Seeing > Reduced animation is turned on.
-
   - In older versions of GNOME, GNOME Tweaks > General tab (or Appearance, depending on version) > Animations is turned off.
   - Alternatively, add `gtk-enable-animations = false` to the `[Settings]` block of [the GTK 3 configuration file](https://wiki.archlinux.org/title/GTK#Configuration).
 

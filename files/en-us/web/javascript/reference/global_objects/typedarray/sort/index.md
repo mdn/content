@@ -30,16 +30,13 @@ sort(compareFn)
 ### Parameters
 
 - `compareFn` {{optional_inline}}
-
   - : A function that determines the order of the elements. The function is called with the following arguments:
-
     - `a`
       - : The first element for comparison.
     - `b`
       - : The second element for comparison.
 
     It should return a number where:
-
     - A negative value indicates that `a` should come before `b`.
     - A positive value indicates that `a` should come after `b`.
     - Zero or `NaN` indicates that `a` and `b` are considered equal.

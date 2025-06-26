@@ -22,7 +22,8 @@ AggregateError(errors, message)
 AggregateError(errors, message, options)
 ```
 
-> **Note:** `AggregateError()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `AggregateError` instance.
+> [!NOTE]
+> `AggregateError()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `AggregateError` instance.
 
 ### Parameters
 

@@ -171,7 +171,6 @@ To implement the score counter, follow the following steps:
    ```
 
 3. In your JavaScript, make the following updates:
-
    - Create a variable that stores a reference to the paragraph.
    - Keep a count of the number of balls on screen in some way.
    - Increment the count and display the updated number of balls each time a ball is added to the scene.

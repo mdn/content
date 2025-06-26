@@ -22,9 +22,7 @@ let deletingUrl = browser.history.deleteUrl(
 ### Parameters
 
 - `details`
-
   - : `object`. Object containing the URL whose visits to remove.
-
     - `url`
       - : `string`. The URL whose visits should be removed.
 

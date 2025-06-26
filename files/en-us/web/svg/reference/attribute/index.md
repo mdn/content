@@ -70,6 +70,7 @@ Below is a list of all of the attributes available in SVG along with links to re
 
 ### F
 
+- {{SVGAttr("fetchpriority")}}
 - {{SVGAttr("fill")}}
 - {{SVGAttr("fill-opacity")}}
 - {{SVGAttr("fill-rule")}}
@@ -295,7 +296,6 @@ Below is a list of all of the attributes available in SVG along with links to re
 ### Generic attributes
 
 - Core attributes
-
   - {{SVGAttr("id")}}
   - {{SVGAttr("class")}}
   - {{SVGAttr("style")}}

@@ -26,9 +26,7 @@ This article provides information about the changes in Firefox 120 that affect d
 ### JavaScript
 
 - {{jsxref("Date.parse()")}} now accepts several additional date formats:
-
   - Numeric dashed dates which do not meet the formal ISO standard are now accepted ([Firefox bug 1557650](https://bugzil.la/1557650)), including:
-
     - `"01-12-1999"` (month first)
     - `"1999-1-5"` (single-digit month or day)
     - `"10000-01-12"` (year > 9999)
@@ -38,7 +36,6 @@ This article provides information about the changes in Firefox 120 that affect d
     These dates will be parsed with behavior typical of other non-ISO dates, such as local time zone and month rollover (April 31 rolls over to May 1 since April 31 doesn't exist).
 
   - Requirements for characters directly following numbers have been loosened to accept new formats ([Firefox bug 449921](https://bugzil.la/449921)), including:
-
     - `"DDMonYYYY"`
     - `"Mon.DD.YYYY"`
     - `"DD.Mon.YYYY"`

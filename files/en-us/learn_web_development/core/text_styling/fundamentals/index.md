@@ -329,19 +329,16 @@ You would need to set its `em` value to 20/24, or 0.83333333 `em`. The maths can
 CSS provides four common properties to alter the visual weight/emphasis of text:
 
 - {{cssxref("font-style")}}: Used to turn italic text on or off. Possible values are as follows (you'll rarely use this, unless you want to turn some italic styling off for some reason):
-
   - `normal`: Sets the text to the normal font (turns existing italics off).
   - `italic`: Sets the text to use the italic version of the font, if available; if not, it will simulate italics with oblique instead.
   - `oblique`: Sets the text to use a simulated version of an italic font, created by slanting the normal version.
 
 - {{cssxref("font-weight")}}: Sets how bold the text is. This has many values available in case you have many font variants available (such as _-light_, _-normal_, _-bold_, _-extrabold_, _-black_, etc.), but realistically you'll rarely use any of them except for `normal` and `bold`:
-
   - `normal`, `bold`: Normal and bold font weight.
   - `lighter`, `bolder`: Sets the current element's boldness to be one step lighter or heavier than its parent element's boldness.
   - `100` – `900`: Numeric boldness values that provide finer grained control than the above keywords, if needed.
 
 - {{cssxref("text-transform")}}: Allows you to set your font to be transformed. Values include:
-
   - `none`: Prevents any transformation.
   - `uppercase`: Transforms all text to capitals.
   - `lowercase`: Transforms all text to lower case.
@@ -349,7 +346,6 @@ CSS provides four common properties to alter the visual weight/emphasis of text:
   - `full-width`: Transforms all glyphs to be written inside a fixed-width square, similar to a monospace font, allowing aligning of, e.g., Latin characters along with Asian language glyphs (like Chinese, Japanese, Korean).
 
 - {{cssxref("text-decoration")}}: Sets/unsets text decorations on fonts (you'll mainly use this to unset the default underline on links when styling them). Available values are:
-
   - `none`: Unsets any text decorations already present.
   - `underline`: Underlines the text.
   - `overline`: Gives the text an overline.

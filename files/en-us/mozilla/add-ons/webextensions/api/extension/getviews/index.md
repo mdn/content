@@ -27,9 +27,7 @@ let windows = browser.extension.getViews(
 ### Parameters
 
 - `fetchProperties` {{optional_inline}}
-
   - : An object with the following properties:
-
     - `type` {{optional_inline}}
       - : `string`. An {{WebExtAPIRef('extension.ViewType')}} indicating the type of view to get. If omitted, this function returns all views.
     - `windowId` {{optional_inline}}

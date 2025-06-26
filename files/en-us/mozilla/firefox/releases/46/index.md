@@ -29,7 +29,6 @@ Highlights:
 ### CSS
 
 - Our implementation of CSS Grids has been updated:
-
   - The keywords `auto-fill` and `auto-fit` are now allowed in the `repeat()` function ([Firefox bug 1118820](https://bugzil.la/1118820)).
   - The `true` value has been renamed to `unsafe`; this affects the properties {{cssxref("justify-content")}}, {{cssxref("align-content")}}, {{cssxref("justify-self")}}, {{cssxref("align-self")}}, {{cssxref("justify-items")}} and {{cssxref("align-items")}} ([Firefox bug 1230478](https://bugzil.la/1230478)).
 
@@ -100,7 +99,6 @@ _No change._
 
 - The asynchronous {{domxref("FileReader")}} is now available in Web workers ([Firefox bug 901097](https://bugzil.la/901097)).
 - Our experimental implementation of [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) has been updated:
-
   - The `AnimationEffectTimingReadOnly` dictionary and {{domxref("AnimationEffect/getTiming", "AnimationEffectReadOnly.timing")}} have been implemented ([Firefox bug 1214536](https://bugzil.la/1214536)).
 
 - The [Permissions API](/en-US/docs/Web/API/Permissions_API) has now been enabled by default, for all release versions, not just Nightly as it previously was ([Firefox bug 1221106](https://bugzil.la/1221106).)

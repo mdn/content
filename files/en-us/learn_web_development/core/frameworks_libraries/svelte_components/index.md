@@ -323,7 +323,6 @@ We still have to implement functionality to allow us to edit existing to-dos. We
    ```
 
 2. We have to decide what events our `Todo` component will emit:
-
    - We could emit different events for the status toggle and editing of the name (for example, `updateTodoStatus` and `updateTodoName`).
    - Or we could take a more generic approach and emit a single `update` event for both operations.
 

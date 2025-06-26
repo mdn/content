@@ -299,7 +299,6 @@ Here we have:
 At this point, we want you to practice writing some slightly more substantial HTML content. To do this, you've got a couple of options — you can create the HTML on your local computer, or use the MDN Playground like in the previous examples.
 
 - To do it on your local machine:
-
   1. Copy the HTML page example listed in the previous section and paste it into a new file in your code editor.
   2. Make the changes to the page outlined in the instructions below.
   3. Save the file as `index.html` then load it in a new browser tab to see the results.

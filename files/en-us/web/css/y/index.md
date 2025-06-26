@@ -32,11 +32,9 @@ y: unset;
 The {{cssxref("length")}} and {{cssxref("percentage")}} values denote the y-axis coordinate position of the top left corner of the SVG element.
 
 - {{cssxref("length")}}
-
   - : As an absolute or relative length, it can be expressed in any unit allowed by the CSS {{cssxref("&lt;length&gt;")}} data type.
 
 - {{cssxref("percentage")}}
-
   - : Percentages refer to the height of the SVG {{SVGAttr("viewBox")}}, if declared, otherwise, the percentage refers to the height of the current SVG viewport.
 
 ## Formal definition

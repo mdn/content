@@ -149,7 +149,6 @@ To make a method available to the `ToDoForm` component, we need to add it to the
 3. When you run this, the app still posts the data to the server, causing a refresh. Since we're doing all of our processing on the client, there's no server to handle the postback. We also lose all local state on page refresh. To prevent the browser from posting to the server, we need to stop the event's default action while bubbling up through the page ([`Event.preventDefault()`](/en-US/docs/Web/API/Event/preventDefault), in vanilla JavaScript). Vue has a special syntax called **event modifiers** that can handle this for us right in our template.
 
    Modifiers are appended to the end of an event with a dot like so: `@event.modifier`. Here is a list of event modifiers:
-
    - `.stop`: Stops the event from propagating. Equivalent to [`Event.stopPropagation()`](/en-US/docs/Web/API/Event/stopPropagation) in regular JavaScript events.
    - `.prevent`: Prevents the event's default behavior. Equivalent to [`Event.preventDefault()`](/en-US/docs/Web/API/Event/preventDefault).
    - `.self`: Triggers the handler only if the event was dispatched from this exact element.

@@ -22,7 +22,6 @@ getBindGroupLayout(index)
 ### Parameters
 
 - `index`
-
   - : A number representing the index of the {{domxref("GPUBindGroupLayout")}} to return.
 
 ### Return value

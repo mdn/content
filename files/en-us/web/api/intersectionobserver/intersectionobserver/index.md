@@ -26,20 +26,16 @@ new IntersectionObserver(callback, options)
 ### Parameters
 
 - `callback`
-
   - : A function which is called when the percentage of the target element is visible crosses a threshold.
     The callback receives as input two parameters:
-
     - `entries`
       - : An array of {{domxref("IntersectionObserverEntry")}} objects, each representing one threshold which was crossed, either becoming more or less visible than the percentage specified by that threshold. You should not assume the number of entries, because multiple threshold-crossing events may be reported in a single callback invocation. The entries are dispatched using a queue, so they should be ordered by the time they were generated, but you should preferably use {{domxref("IntersectionObserverEntry.time")}} to correctly order them.
     - `observer`
       - : The {{domxref("IntersectionObserver")}} for which the callback is being invoked.
 
 - `options` {{optional_inline}}
-
   - : An optional object which customizes the observer. All properties are optional.
     You can provide any combination of the following options:
-
     - `root`
       - : An {{domxref("Element")}} or {{domxref("Document")}} object which is an ancestor of the intended target, whose bounding rectangle will be considered the viewport.
         Any part of the target not visible in the visible area of the `root` is not considered visible. If not specified, the observer uses the document's

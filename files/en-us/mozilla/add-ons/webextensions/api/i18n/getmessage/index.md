@@ -23,14 +23,11 @@ browser.i18n.getMessage(
 ### Parameters
 
 - `messageName`
-
   - : `string`. The name of the message, as specified in the messages.json file. If the message can't be found in messages.json:
-
     - Firefox returns "" and logs an error.
     - Chrome returns "" and does not log an error.
 
 - `substitutions` {{optional_inline}}
-
   - : `string` or `array` of `string`. A single substitution string, or an array of substitution strings.
 
     In Chrome, if you supply more than 9 substitution strings, `getMessage()` will return `undefined`.

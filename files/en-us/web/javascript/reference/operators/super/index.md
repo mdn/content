@@ -65,7 +65,8 @@ super[expression]
 
 The `super` keyword can be used in two ways: as a "function call" (`super(...args)`), or as a "property lookup" (`super.prop` and `super[expr]`).
 
-> **Note:** `super` is a keyword and these are special syntactic constructs. `super` is not a variable that points to the prototype object. Attempting to read `super` itself is a {{jsxref("SyntaxError")}}.
+> [!NOTE]
+> `super` is a keyword and these are special syntactic constructs. `super` is not a variable that points to the prototype object. Attempting to read `super` itself is a {{jsxref("SyntaxError")}}.
 >
 > ```js-nolint example-bad
 > const child = {

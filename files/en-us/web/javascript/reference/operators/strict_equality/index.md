@@ -45,7 +45,6 @@ The strict equality operators (`===` and `!==`) provide the [IsStrictlyEqual](/e
   return `true`.
 - If either operand is `NaN`, return `false`.
 - Otherwise, compare the two operand's values:
-
   - Numbers must have the same numeric values. `+0` and `-0`
     are considered to be the same value.
   - Strings must have the same characters in the same order.

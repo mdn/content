@@ -31,9 +31,7 @@ In implementations that support the [`Intl.DateTimeFormat` API](/en-US/docs/Web/
 - `locales` {{optional_inline}}
   - : A string with a BCP 47 language tag, or an array of such strings. Corresponds to the [`locales`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#locales) parameter of the `Intl.DateTimeFormat()` constructor.
 - `options` {{optional_inline}}
-
   - : An object adjusting the output format. Corresponds to the [`options`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options) parameter of the `Intl.DateTimeFormat()` constructor. The `calendar` option must be provided with the same value as this month-day's calendar. Regarding the [date-time component options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#date-time_component_options) and the style shortcuts (`dateStyle` and `timeStyle`), the options should follow one of these forms:
-
     - Provide none of them: `month` and `day` will default to `"numeric"`.
     - Provide `dateStyle` only: it expands to `month` and `day` formats.
     - Provide some date-time component options, where at least one of them is `month` or `day`. Only the specified date components will be included in the output.

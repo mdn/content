@@ -225,7 +225,8 @@ Links are very important — they are what makes the web a web! To add a link, w
 
 You might get unexpected results if you omit the `https://` or `http://` part, called the _protocol_, at the beginning of the web address. After making a link, click it to make sure it is sending you where you wanted it to.
 
-> **Note:** `href` might appear like a rather obscure choice for an attribute name at first. It stands for _**h**ypertext **ref**erence_.
+> [!NOTE]
+> `href` might appear like a rather obscure choice for an attribute name at first. It stands for _**h**ypertext **ref**erence_.
 
 Add a link to your page now, if you haven't already done so.
 

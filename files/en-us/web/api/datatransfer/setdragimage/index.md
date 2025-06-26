@@ -32,7 +32,6 @@ setDragImage(imgElement, xOffset, yOffset)
 ### Parameters
 
 - `imgElement`
-
   - : An image {{domxref("Element")}} element to use for the drag feedback image.
 
     If {{domxref("Element")}} is an img element, then set the drag data store bitmap to
