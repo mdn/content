@@ -127,7 +127,6 @@ The **`PublicKeyCredentialCreationOptions`** dictionary represents the object pa
       - : A string representing the name of the relying party (e.g., `"Facebook"`). This is the name the user will be presented with when creating or validating a WebAuthn operation.
 
 - `timeout` {{optional_inline}}
-
   - : A numerical hint, in milliseconds, which indicates the time the calling web app is willing to wait for the creation operation to complete. This hint may be overridden by the browser.
 
 - `user`
