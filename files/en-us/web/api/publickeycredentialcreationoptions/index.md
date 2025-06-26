@@ -132,7 +132,6 @@ The **`PublicKeyCredentialCreationOptions`** dictionary represents the object pa
 - `user`
   - : An object describing the user account for which the credential is generated. It can contain the following properties:
     - `displayName`
-
       - : A string providing a human-friendly user display name (example: `"Maria Sanchez"`), which will have been set by user during initial registration with the relying party.
 
     - `id`
