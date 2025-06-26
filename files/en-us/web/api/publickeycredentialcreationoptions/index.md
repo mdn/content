@@ -142,7 +142,6 @@ The **`PublicKeyCredentialCreationOptions`** dictionary represents the object pa
       - : A string providing a human-friendly identifier for the user's account, to help distinguish between different accounts with similar `displayName`s. This could be an email address (such as `"elaina.sanchez@example.com"`), phone number (for example `"+12345678901"`), or some other kind of user account identifier (for example `"ElainaSanchez667"`).
 
 - `hints` {{optional_inline}}
-
   - : An array of strings providing hints as to what authentication UI the user-agent should provide for the user.
 
     The values can be any of the following:
