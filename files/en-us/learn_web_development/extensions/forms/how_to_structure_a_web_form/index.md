@@ -132,25 +132,25 @@ Let's consider this example:
 <p>Required fields are followed by <span aria-label="required">*</span>.</p>
 
 <!-- So this: -->
-<!--div>
+<!--<div>
   <label for="username">Name:</label>
-  <input id="username" type="text" name="username" required>
+  <input type="text" name="username" />
   <label for="username"><span aria-label="required">*</span></label>
-</div-->
+</div>-->
 
 <!-- would be better done like this: -->
-<!--div>
+<!--<div>
   <label for="username">
     <span>Name:</span>
-    <input id="username" type="text" name="username" required>
+    <input id="username" type="text" name="username" />
     <span aria-label="required">*</span>
   </label>
-</div-->
+</div>-->
 
 <!-- But this is probably best: -->
 <div>
   <label for="username">Name: <span aria-label="required">*</span></label>
-  <input id="username" type="text" name="username" required />
+  <input id="username" type="text" name="username" />
 </div>
 ```
 
