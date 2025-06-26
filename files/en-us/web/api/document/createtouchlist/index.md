@@ -24,7 +24,7 @@ createTouchList(touch1, touch2, /* …, */ touchN)
 ### Parameters
 
 - `touch1`, …, `touchN`
-  - : Zero or more {{DOMxRef("Touch")}} objects. **Note:** Firefox also
+  - : Zero or more {{DOMxRef("Touch")}} objects. Firefox also
     accepts an [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of
     {{DOMxRef("Touch")}} objects.
 
