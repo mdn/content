@@ -230,7 +230,7 @@ As a best practice, also provide a {{htmlelement("title")}} for the document tha
 
 Provide descriptive text for all contentful (that is, non-decorative) images and image-like elements. This includes SVG images, {{htmlelement("img")}}, {{htmlelement("canvas")}}, {{htmlelement("map")}}, and {{htmlelement("area")}} elements, as well as {{htmlelement("input")}} elements where `type=image` and {{htmlelement("object")}} elements where the `type` starts with `image/`. The typical way to do this is with the `alt` attribute, but for the {{htmlelement("canvas")}} element the `aria-label` attribute is needed instead. Be sure that the description conveys what is shown in the image.
 
-For `alt` attributes on images which *are* purely decorative, an empty value can be used to signal to accessibility tools that the element should be ignored.
+For `alt` attributes on images which _are_ purely decorative, an empty value can be used to signal to accessibility tools that the element should be ignored.
 
 ### Example
 
