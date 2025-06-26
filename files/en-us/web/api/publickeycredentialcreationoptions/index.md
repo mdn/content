@@ -130,7 +130,6 @@ The **`PublicKeyCredentialCreationOptions`** dictionary represents the object pa
   - : A numerical hint, in milliseconds, which indicates the time the calling web app is willing to wait for the creation operation to complete. This hint may be overridden by the browser.
 
 - `user`
-
   - : An object describing the user account for which the credential is generated. It can contain the following properties:
 
     - `displayName`
