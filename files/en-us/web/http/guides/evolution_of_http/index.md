@@ -112,9 +112,10 @@ Etag: "547fa7e369ef56031dd3bff2ace9fc0832eb251a"
 Keep-Alive: timeout=5, max=1000
 Last-Modified: Tue, 19 Jul 2016 00:59:33 GMT
 Server: Apache
+Transfer-Encoding: chunked
 Vary: Cookie, Accept-Encoding
 
-(content content of 3077 bytes)
+(content)
 
 GET /static/img/header-background.png HTTP/1.1
 Host: developer.mozilla.org
@@ -134,7 +135,7 @@ Date: Thu, 31 Mar 2016 13:34:46 GMT
 Last-Modified: Wed, 21 Oct 2015 18:27:50 GMT
 Server: Apache
 
-(image)
+(image content of 3077 bytes)
 ```
 
 HTTP/1.1 was first published as {{rfc(2068)}} in January 1997.
