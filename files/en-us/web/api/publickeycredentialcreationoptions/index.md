@@ -135,7 +135,6 @@ The **`PublicKeyCredentialCreationOptions`** dictionary represents the object pa
       - : A string providing a human-friendly user display name (example: `"Maria Sanchez"`), which will have been set by user during initial registration with the relying party.
 
     - `id`
-
       - : An {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, or {{jsxref("DataView")}} representing a unique ID for the user account. This value has a maximum length of 64 bytes, and is not intended to be displayed to the user.
 
     - `name`
