@@ -32,8 +32,6 @@ For example, it can be used by a client to upgrade a connection from HTTP/1.1 to
 
 ## Syntax
 
-A comma-separated list of one or more protocols:
-
 ```http
 Upgrade: <protocol>[/<protocol_version>]
 Upgrade: <protocol>[/<protocol_version>], …, <protocolN>[/<protocol_versionN>]
