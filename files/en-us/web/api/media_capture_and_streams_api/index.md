@@ -22,7 +22,7 @@ It provides the interfaces and methods for working with the streams and their co
 
 ## Concepts and usage
 
-The API is based on the manipulation of a {{domxref("MediaStream")}} object representing a flux of audio- or video-related data. See an example in [Get the media stream](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos#the_startup_function).
+The API is based on the manipulation of a {{domxref("MediaStream")}} object representing a flux of audio- or video-related data. See an example in [Get the media stream](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos#demo).
 
 A `MediaStream` consists of zero or more {{domxref("MediaStreamTrack")}} objects, representing various audio or video **tracks**. Each `MediaStreamTrack` may have one or more **channels**. The channel represents the smallest unit of a media stream, such as an audio signal associated with a given speaker, like _left_ or _right_ in a stereo audio track.
 
