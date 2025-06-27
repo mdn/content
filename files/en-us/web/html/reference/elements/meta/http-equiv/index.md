@@ -58,7 +58,7 @@ These include:
 
 > [!WARNING]
 > Unrecognized headers or invalid values are ignored by the browser.
-> For this reason, **do not set security headers** other than `Content-Security-Policy` using `<meta http-equiv=`, as this can lead to a false sense of security.
+> **Do not set other security headers** using `<meta http-equiv=`, as this can lead to a false sense of security.
 > Some browsers may process headers that are not listed above, but this behavior varies across implementations.
 
 ## Accessibility concerns
@@ -109,4 +109,6 @@ The `content="3;url=https://www.mozilla.org"` attribute will redirect page to `h
 
 ## See also
 
+- [`<meta name="referrer">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/referrer)
 - [Metadata: the `<meta>` element](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#metadata_the_meta_element)
+- [Preventing attacks using `<meta>`](https://almanac.httparchive.org/en/2022/security#preventing-attacks-using-meta) httparchive.org (2022)
