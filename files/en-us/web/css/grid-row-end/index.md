@@ -89,7 +89,6 @@ grid-row-end: unset;
 - `auto`
   - : Is a keyword indicating that the property contributes nothing to the grid item's placement, indicating auto-placement, an automatic span, or a default span of `1`.
 - `<custom-ident>`
-
   - : If there is a named line with the name '\<custom-ident>-end', it contributes the first such line to the grid item's placement.
 
     > [!NOTE]
@@ -100,7 +99,6 @@ grid-row-end: unset;
     The `<custom-ident>` cannot take the `span` and `auto` values.
 
 - `<integer> && <custom-ident>?`
-
   - : Contributes the nth grid line to the grid item's placement. If a negative integer is given, it instead counts in reverse, starting from the end edge of the explicit grid.
 
     If a name is given as a \<custom-ident>, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines are assumed to have that name for the purpose of finding this position.
@@ -108,7 +106,6 @@ grid-row-end: unset;
     An {{cssxref("integer")}} value of `0` is invalid.
 
 - `span && [ <integer> || <custom-ident> ]`
-
   - : Contributes a grid span to the grid item's placement such that the row end edge of the grid item's grid area is n lines from the start edge.
 
     If a name is given as a \<custom-ident>, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines on the side of the explicit grid corresponding to the search direction are assumed to have that name for the purpose of counting this span.

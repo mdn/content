@@ -1,5 +1,6 @@
 ---
 title: Object.keys()
+short-title: keys()
 slug: Web/JavaScript/Reference/Global_Objects/Object/keys
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.keys

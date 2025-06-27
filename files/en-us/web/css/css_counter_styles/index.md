@@ -30,7 +30,6 @@ No properties are defined in this module
 ### At-rules and descriptors
 
 - {{cssxref("@counter-style")}}
-
   - {{cssxref("@counter-style/system","system")}}
   - {{cssxref("@counter-style/symbols", "symbols")}}
   - {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}

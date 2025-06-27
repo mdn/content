@@ -40,7 +40,6 @@ More details in [this post](https://hacks.mozilla.org/2013/12/split-console-pret
 ### JavaScript
 
 - ECMAScript 2015 implementation continues:
-
   - New `Array` methods have been implemented: {{jsxref("Array.prototype.entries()")}} and {{jsxref("Array.prototype.keys()")}} ([Firefox bug 894658](https://bugzil.la/894658)).
 
 - A bug causing that {{jsxref("Object.getOwnPropertyNames()")}} did not see unresolved properties of {{jsxref("Error")}} objects has been fixed ([Firefox bug 724768](https://bugzil.la/724768)).

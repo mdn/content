@@ -73,7 +73,6 @@ svg {
 </table>
 
 - `<number>`
-
   - : This value defines the scale factor for the displacement.
 
     When the value of this attribute is `0`, this operation has no effect on the source image.

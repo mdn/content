@@ -1,5 +1,6 @@
 ---
 title: RegExp.prototype[Symbol.replace]()
+short-title: "[Symbol.replace]()"
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.@@replace

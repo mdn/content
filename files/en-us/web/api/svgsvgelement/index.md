@@ -38,24 +38,19 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
 - {{domxref("SVGSVGElement.useCurrentView")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : The initial view (i.e., before magnification and panning) of the current innermost SVG document fragment can be either the "standard" view, i.e., based on attributes on the {{SVGElement("svg")}} element such as {{SVGAttr("viewBox")}} or on a "custom" view (i.e., a hyperlink into a particular {{SVGElement("view")}} or other element). If the initial view is the "standard" view, then this attribute is `false`. If the initial view is a "custom" view, then this attribute is `true`.
 - {{domxref("SVGSVGElement.currentView")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-
   - : An {{domxref("SVGViewSpec")}} defining the initial view (i.e., before magnification and panning) of the current innermost SVG document fragment. The meaning depends on the situation: If the initial view was a "standard" view, then:
-
     - the values for {{SVGAttr("viewBox")}}, {{SVGAttr("preserveAspectRatio")}} and {{SVGAttr("zoomAndPan")}} within {{SVGAttr("currentView")}} will match the values for the corresponding DOM attributes that are on `SVGSVGElement` directly
     - the value for {{SVGAttr("transform")}} within {{SVGAttr("currentView")}} will be `null`
 
     If the initial view was a link into a {{SVGElement("view")}} element, then:
-
     - the values for {{SVGAttr("viewBox")}}, {{SVGAttr("preserveAspectRatio")}} and {{SVGAttr("zoomAndPan")}} within {{SVGAttr("currentView")}} will correspond to the corresponding attributes for the given {{SVGElement("view")}} element
     - the value for {{SVGAttr("transform")}} within {{SVGAttr("currentView")}} will be `null`
 
     If the initial view was a link into another element (i.e., other than a {{SVGElement("view")}}), then:
-
     - the values for {{SVGAttr("viewBox")}}, {{SVGAttr("preserveAspectRatio")}} and {{SVGAttr("zoomAndPan")}} within {{SVGAttr("currentView")}} will match the values for the corresponding DOM attributes that are on `SVGSVGElement` directly for the closest ancestor {{SVGElement("svg")}} element
     - the values for {{SVGAttr("transform")}} within {{SVGAttr("currentView")}} will be `null`
 
     If the initial view was a link into the SVG document fragment using an SVG view specification fragment identifier (i.e., `#svgView(…)`), then:
-
     - the values for {{SVGAttr("viewBox")}}, {{SVGAttr("preserveAspectRatio")}}, {{SVGAttr("zoomAndPan")}}, {{SVGAttr("transform")}} within {{SVGAttr("currentView")}} will correspond to the values from the SVG view specification fragment identifier
 
 - {{domxref("SVGSVGElement.currentScale")}}
@@ -68,7 +63,6 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
 _This interface also inherits methods from its parent, {{domxref("SVGGraphicsElement")}}._
 
 - {{domxref("SVGSVGElement.suspendRedraw()")}} {{Deprecated_Inline}}
-
   - : Takes a time-out value which indicates that redraw shall not occur until:
 
     the corresponding `unsuspendRedraw()` call has been made, an `unsuspendRedrawAll()` call has been made, or its timer has timed out.

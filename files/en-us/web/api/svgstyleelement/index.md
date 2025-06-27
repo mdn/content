@@ -16,19 +16,15 @@ The **`SVGStyleElement`** interface corresponds to the SVG {{SVGElement("style")
 _This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
 - {{domxref("SVGStyleElement.type")}} {{deprecated_inline}}
-
   - : A string corresponding to the {{SVGAttr("type")}} attribute of the given element.
 
 - {{domxref("SVGStyleElement.media")}}
-
   - : A string corresponding to the {{SVGAttr("media")}} attribute of the given element.
 
 - {{domxref("SVGStyleElement.title")}}
-
   - : A string corresponding to the [`title`](/en-US/docs/Web/SVG/Reference/Element/style#title) attribute of the given element.
 
 - {{domxref("SVGStyleElement.sheet")}} {{ReadOnlyInline}}
-
   - : Returns the {{domxref("CSSStyleSheet")}} object associated with the given element, or `null` if there is none.
 
 - {{domxref("SVGStyleElement.disabled")}}
@@ -44,7 +40,8 @@ _This interface doesn't implement any specific methods, but inherits methods fro
 
 To dynamically create an SVG style element (`SVGStyleElement`), you need to use [`Document.createElementNS()`](/en-US/docs/Web/API/Document/createElementNS), specifying a `style` element in the SVG namespace.
 
-> **Note:** [`Document.createElement()`](/en-US/docs/Web/API/Document/createElement) can't be used to create SVG style elements (it returns an [`HTMLStyleElement`](/en-US/docs/Web/API/HTMLStyleElement)).
+> [!NOTE]
+> [`Document.createElement()`](/en-US/docs/Web/API/Document/createElement) can't be used to create SVG style elements (it returns an [`HTMLStyleElement`](/en-US/docs/Web/API/HTMLStyleElement)).
 
 Given the following SVG element:
 

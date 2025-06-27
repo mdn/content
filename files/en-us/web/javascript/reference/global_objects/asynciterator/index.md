@@ -23,7 +23,8 @@ Currently, the only built-in JavaScript async iterator is the {{jsxref("AsyncGen
 
 Each of these async iterators have a distinct prototype object, which defines the `next()` method used by the particular async iterator. All of these prototype objects inherit from `AsyncIterator.prototype`, which provides an [`[Symbol.asyncIterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator) method that returns the async iterator object itself, making the async iterator also [async iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols).
 
-> **Note:** `AsyncIterator.prototype` does not implement [`[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator), so async iterators are not [sync iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) by default.
+> [!NOTE]
+> `AsyncIterator.prototype` does not implement [`[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator), so async iterators are not [sync iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) by default.
 
 ## Instance methods
 

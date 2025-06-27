@@ -115,16 +115,12 @@ You can also check color contrast on the fly using Firefox's Developer Tools —
 ## Related WCAG success criteria
 
 - [1.4.3 Minimum contrast (AA)](https://w3c.github.io/wcag/guidelines/22/#contrast-minimum)
-
   - : The color contrast between background and foreground content should be at a minimum level to ensure legibility:
-
     - Text and its background should have a contrast ratio of at least 4.5:1.
     - Heading (or just larger) text should have a ratio of at least 3:1. Larger text is defined as at least 18pt, or 14pt bold.
 
 - [1.4.6 Enhanced contrast (AAA)](https://w3c.github.io/wcag/guidelines/22/#contrast-enhanced)
-
   - : This follows, and builds on, criterion 1.4.3.
-
     - Text and its background should have a contrast ratio of at least 7:1.
     - Heading (or just larger) text should have a ratio of at least 4.5:1.
 

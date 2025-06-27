@@ -58,10 +58,8 @@ procedure announces error conditions by rejecting the `Promise` it has
 returned. The rejection handler receives one of the following exception values:_
 
 - {{jsxref("TypeError")}}
-
   - : The `TypeError` exception may be delivered in any of the following
     situations:
-
     - The document containing the element isn't fully active; that is, it's not the
       current active document.
     - The element is not contained by a document.

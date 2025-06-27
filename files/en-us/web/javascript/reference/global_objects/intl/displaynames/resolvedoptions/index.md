@@ -1,5 +1,6 @@
 ---
 title: Intl.DisplayNames.prototype.resolvedOptions()
+short-title: resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/resolvedOptions
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.DisplayNames.resolvedOptions

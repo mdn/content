@@ -27,7 +27,6 @@ URL.parse(url, base)
     If `url` is a relative reference, `base` is required, and is used to resolve the final URL.
     If `url` is an absolute URL, a given `base` will not be used to create the resulting URL.
 - `base` {{optional_inline}}
-
   - : A string representing the base URL to use in cases where `url` is a relative URL.
     If not specified, it defaults to `undefined`.
 

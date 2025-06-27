@@ -489,6 +489,7 @@ nsIURL
 nsIXSLT
 nsPIDOMWindow
 nsresult
+nums
 OEM_CUSEL
 OEM_ENLW
 oggz

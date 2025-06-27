@@ -45,15 +45,12 @@ The specification also defines the `::details-content` and `::search-text` pseud
 ## Guides
 
 - [CSS pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements)
-
   - : Alphabetical list of pseudo-elements defined by all the CSS specifications and WebVTT.
 
 - [Learn: Pseudo-classes and pseudo-elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
-
   - : Part of CSS building blocks section on selectors. This article defines what a pseudo-element is and how it can be combined with pseudo-classes and be used for generating content with `::before` and `::after` pseudo-elements.
 
 - [How to create fancy boxes using pseudo-elements](/en-US/docs/Learn_web_development/Howto/Solve_CSS_problems/Create_fancy_boxes#pseudo-elements)
-
   - : Example of styling generated content using `::before` and `::after` pseudo-elements for visual effects.
 
 ## Related concepts
@@ -61,34 +58,28 @@ The specification also defines the `::details-content` and `::search-text` pseud
 - {{cssxref("::backdrop")}}
 
 - Web Video Text Tracks Format (WebVTT) cues:
-
   - {{cssxref("::cue")}}
   - {{cssxref("::cue", "::cue()")}}
 
 - [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout) module
-
   - {{cssxref("::column")}}
 
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
-
   - {{cssxref("::scroll-button()")}}
   - {{cssxref("::scroll-marker")}}
   - {{cssxref("::scroll-marker-group")}}
   - {{cssxref(":target-current")}}
 
 - [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
-
   - {{CSSXref(":host")}}
   - {{CSSXref(":host_function", ":host()")}}
   - {{CSSXref(":host-context", ":host-context()")}}
   - {{CSSXref("::slotted", "::slotted()")}}
 
 - [CSS shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) module
-
   - {{CSSXref("::part")}}
 
 - [CSS view transitions](/en-US/docs/Web/CSS/CSS_view_transitions) module
-
   - {{cssxref("::view-transition")}} {{Experimental_Inline}}
   - {{cssxref("::view-transition-image-pair()")}} {{Experimental_Inline}}
   - {{cssxref("::view-transition-group()")}} {{Experimental_Inline}}
@@ -96,7 +87,6 @@ The specification also defines the `::details-content` and `::search-text` pseud
   - {{cssxref("::view-transition-old()")}} {{Experimental_Inline}}
 
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors)
-
   - [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors)
   - [Combinators](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#combinators)
   - [Class selectors](/en-US/docs/Web/CSS/Class_selectors)
@@ -109,7 +99,6 @@ The specification also defines the `::details-content` and `::search-text` pseud
 - [`:placeholder-shown`](/en-US/docs/Web/CSS/:placeholder-shown) selector
 
 - [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content)
-
   - {{cssxref("content")}} property
   - {{cssxref("quotes")}} property
 

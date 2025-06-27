@@ -1,5 +1,6 @@
 ---
 title: String.prototype.codePointAt()
+short-title: codePointAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/codePointAt
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.codePointAt

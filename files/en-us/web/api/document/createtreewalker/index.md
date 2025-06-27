@@ -21,11 +21,9 @@ createTreeWalker(root, whatToShow, filter)
 ### Parameters
 
 - `root`
-
   - : A {{domxref("Node")}} representing the root of the `TreeWalker` object, which is the initial value of {{domxref("TreeWalker.currentNode")}}.
 
 - `whatToShow` {{optional_inline}}
-
   - : An `unsigned long` representing a bitmask created by combining the constant properties of [`NodeFilter`](https://dom.spec.whatwg.org/#interface-nodefilter). It is a convenient way of filtering for certain types of node. It defaults to `0xFFFFFFFF`, representing the `NodeFilter.SHOW_ALL` constant.
 
     | Constant                                                 | Numerical value | Description                                       |
@@ -48,9 +46,7 @@ createTreeWalker(root, whatToShow, filter)
     > Since the parent of any `Attr` node is always `null`, {{DOMXref("TreeWalker.nextNode()")}} and {{DOMXref("TreeWalker.previousNode()")}} will never return an `Attr` node. To traverse `Attr` nodes, use {{DOMXref("Element.attributes")}} instead.
 
 - `filter` {{optional_inline}}
-
   - : A callback function or an object with an `acceptNode()` method, which returns `NodeFilter.FILTER_ACCEPT`, `NodeFilter.FILTER_REJECT`, or `NodeFilter.FILTER_SKIP`. The function or method will be called for each node in the subtree based at `root` which is accepted as included by the `whatToShow` flag to determine whether or not to include it in the list of iterable nodes:
-
     - If the return value is `NodeFilter.FILTER_ACCEPT`, this node is included.
     - If the return value is `NodeFilter.FILTER_REJECT`, any node in the subtree based at this node is not included.
     - If the return value is `NodeFilter.FILTER_SKIP`, this node is not included.

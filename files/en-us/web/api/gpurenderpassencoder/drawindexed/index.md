@@ -3,12 +3,10 @@ title: "GPURenderPassEncoder: drawIndexed() method"
 short-title: drawIndexed()
 slug: Web/API/GPURenderPassEncoder/drawIndexed
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPURenderPassEncoder.drawIndexed
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`drawIndexed()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface draws indexed primitives based on the vertex and index buffers provided by {{domxref("GPURenderPassEncoder.setVertexBuffer", "setVertexBuffer()")}} and {{domxref("GPURenderPassEncoder.setIndexBuffer", "setIndexBuffer()")}}.

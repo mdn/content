@@ -1,5 +1,6 @@
 ---
 title: String.prototype.match()
+short-title: match()
 slug: Web/JavaScript/Reference/Global_Objects/String/match
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.match
@@ -29,7 +30,6 @@ match(regexp)
 ### Parameters
 
 - `regexp`
-
   - : A regular expression object, or any object that has a [`Symbol.match`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/match) method.
 
     If `regexp` is not a `RegExp` object and does not have a `Symbol.match` method, it is implicitly converted to a {{jsxref("RegExp")}} by using `new RegExp(regexp)`.

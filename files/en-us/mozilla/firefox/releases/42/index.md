@@ -45,7 +45,6 @@ Highlights:
 - Images with an [`id`](/en-US/docs/Web/HTML/Reference/Elements/img#id) are no more listed as property of the {{domxref("Window")}} interface: `<img id="login">` isn't accessible as `window.login` anymore. This behavior was introduced in Firefox 26 and has been removed to match a later change in the spec. ([Firefox bug 959992](https://bugzil.la/959992))
 - {{domxref('MouseEvent.offsetX')}} and {{domxref('MouseEvent.offsetY')}} have been added ([Firefox bug 69787](https://bugzil.la/69787)).
 - The {{domxref("HTMLInputElement")}} interface has been experimentally extended to handle the upload of directories ([Firefox bug 1164310](https://bugzil.la/1164310)). These four members can be exposed by setting the `dom.input.dirpicker` preference to `true`:
-
   - `HTMLInputElement.directory`
   - `HTMLInputElement.isFilesAndDirectoriesSupported`
   - `HTMLInputElement.getFilesAndDirectories()`

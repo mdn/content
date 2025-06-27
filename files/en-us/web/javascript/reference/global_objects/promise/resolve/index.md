@@ -1,5 +1,6 @@
 ---
 title: Promise.resolve()
+short-title: resolve()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Promise.resolve

@@ -1,5 +1,6 @@
 ---
 title: Intl.Locale.prototype.getCalendars()
+short-title: getCalendars()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getCalendars
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.Locale.getCalendars

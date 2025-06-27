@@ -18,11 +18,9 @@ let querying = browser.tabs.query(queryInfo)
 ### Parameters
 
 - `queryInfo`
-
   - : `object`. The `query()` function gets the tabs whose properties match the properties included here.
 
     See the {{WebExtAPIRef("tabs.Tab")}} documentation to learn more about these properties.
-
     - `active` {{optional_inline}}
       - : `boolean`. Whether the tabs are active in their windows.
     - `attention` {{optional_inline}}

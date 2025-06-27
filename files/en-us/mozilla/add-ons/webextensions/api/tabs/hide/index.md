@@ -35,7 +35,6 @@ let hiding = browser.tabs.hide(
 ### Parameters
 
 - `tabIds`
-
   - : `integer` or `array` of `integer`. The IDs of the tab or tabs to hide.
 
     If any of these tabs are not eligible for being hidden, they will not be hidden, but the call will still succeed and eligible tabs will still be hidden. For example, if you pass `[1, 3]`, and `1` identifies the active tab, then only `3` will be hidden.

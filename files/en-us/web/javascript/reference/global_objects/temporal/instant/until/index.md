@@ -1,5 +1,6 @@
 ---
 title: Temporal.Instant.prototype.until()
+short-title: until()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Instant/until
 page-type: javascript-instance-method
 status:

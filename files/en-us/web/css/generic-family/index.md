@@ -21,51 +21,39 @@ The **`<generic-family>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/We
 The `<generic-family>` {{glossary("enumerated")}} type is specified using one of the values listed below:
 
 - `serif`
-
   - : A serif is a small line or stroke attached to the end of a larger stroke in a letter. In serif fonts, glyphs have finishing strokes, flared or tapering ends. Examples include Lucida Bright, Lucida Fax, Palatino, Palatino Linotype, Palladio, and URW Palladio.
 
 - `sans-serif`
-
   - : A font without serifs; glyphs have plain stroke endings, without ornamentation. Example sans-serif fonts include Open Sans, Fira Sans, Lucida Sans, Lucida Sans Unicode, Trebuchet MS, Liberation Sans, and Nimbus Sans L.
 
 - `monospace`
-
   - : All glyphs have the same fixed width. Example monospace fonts include Fira Mono, DejaVu Sans Mono, Menlo, Consolas, Liberation Mono, Monaco, and Lucida Console.
 
 - `cursive`
-
-  - : Glyphs in cursive fonts generally use a cursive script or other handwriting style, and the result looks more like handwritten pen or brush writing than printed letterwork. CSS uses the term "cursive" to apply to a font for any script, including those that do not have joining strokes. Example cursive fonts include Brush Script MT, Brush Script Std, Lucida Calligraphy, Lucida Handwriting, and Apple Chancery.
+  - : Glyphs in cursive fonts generally use a cursive script or other handwriting style, and the result looks more like handwritten pen or brush writing than printed typesetting. CSS uses the term "cursive" to apply to a font for any script, including those that do not have joining strokes. Example cursive fonts include Brush Script MT, Brush Script Std, Lucida Calligraphy, Lucida Handwriting, and Apple Chancery.
 
 - `fantasy`
-
   - : Fantasy fonts are primarily decorative fonts that contain playful representations of characters. Example fantasy fonts include Papyrus, Herculanum, Party LET, Curlz MT, Harrington, and Comic Sans MS.
 
 - `system-ui`
-
   - : Glyphs are taken from the default user interface font on a given platform. Because typographic traditions vary widely across the world, this generic family is provided for typefaces that don't map cleanly into the others.
 
 - `ui-serif`
-
   - : The default user interface serif font. See the definition of `serif` above.
 
 - `ui-sans-serif`
-
   - : The default user interface sans-serif font. See the definition of `sans-serif` above.
 
 - `ui-monospace`
-
   - : The default user interface monospace font. See the definition of `monospace` above.
 
 - `ui-rounded`
-
   - : The default user interface font that has rounded features.
 
 - `math`
-
   - : Fonts for displaying mathematical expressions, for example superscript and subscript, brackets that cross several lines, nesting expressions, and double-struck glyphs with distinct meanings.
 
 - `emoji`
-
   - : Fonts that are specifically designed to render emoji.
 
 - `fangsong`

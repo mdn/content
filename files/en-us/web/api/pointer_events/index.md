@@ -44,7 +44,8 @@ A hardware-agnostic representation of input devices that can target a specific c
 
 Pointer capture allows the events for a pointer to be retargeted to a particular element other than the normal hit test result of the pointer's location. See [capturing the pointer](#capturing_the_pointer) for an example.
 
-> **Note:** _Pointer capture_ is different from [_pointer lock_](/en-US/docs/Web/API/Pointer_Lock_API), which physically prevents the pointer from leaving a region.
+> [!NOTE]
+> _Pointer capture_ is different from [_pointer lock_](/en-US/docs/Web/API/Pointer_Lock_API), which physically prevents the pointer from leaving a region.
 
 ### pointer event
 
@@ -66,7 +67,7 @@ The {{domxref("PointerEvent")}} interface extends the {{domxref("MouseEvent")}} 
   - : Represents the angle between a transducer (a pointer or stylus) axis and the X-Y plane of a device screen.
 - {{ domxref('PointerEvent.azimuthAngle', 'azimuthAngle')}} {{ReadOnlyInline}}
   - : Represents the angle between the Y-Z plane and the plane containing both the transducer (a pointer or stylus) axis and the Y axis.
-- {{domxref('PointerEvent.persistentDeviceId')}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxref('PointerEvent.persistentDeviceId')}} {{ReadOnlyInline}}
   - : A unique identifier for the pointing device generating the `PointerEvent`.
 - {{ domxref('PointerEvent.pointerId','pointerId')}} {{ReadOnlyInline}}
   - : A unique identifier for the pointer causing the event.

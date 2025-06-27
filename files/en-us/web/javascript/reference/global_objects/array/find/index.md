@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.find()
+short-title: find()
 slug: Web/JavaScript/Reference/Global_Objects/Array/find
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.find

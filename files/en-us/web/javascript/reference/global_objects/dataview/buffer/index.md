@@ -1,5 +1,6 @@
 ---
 title: DataView.prototype.buffer
+short-title: buffer
 slug: Web/JavaScript/Reference/Global_Objects/DataView/buffer
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.DataView.buffer

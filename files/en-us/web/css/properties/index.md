@@ -44,7 +44,7 @@ Standard properties defined by CSS specifications include the following:
 
 ### Misc
 
-- {{CSSxRef("--_star_", "--* custom properties (CSS variables)")}}
+- [Custom properties (`--*`): CSS variables](/en-US/docs/Web/CSS/--*)
 
 ### A
 

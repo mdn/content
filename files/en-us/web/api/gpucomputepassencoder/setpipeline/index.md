@@ -3,12 +3,10 @@ title: "GPUComputePassEncoder: setPipeline() method"
 short-title: setPipeline()
 slug: Web/API/GPUComputePassEncoder/setPipeline
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUComputePassEncoder.setPipeline
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`setPipeline()`** method of the
 {{domxref("GPUComputePassEncoder")}} interface sets the {{domxref("GPUComputePipeline")}} to use for this compute pass.

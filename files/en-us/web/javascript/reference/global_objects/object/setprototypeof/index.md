@@ -1,5 +1,6 @@
 ---
 title: Object.setPrototypeOf()
+short-title: setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.setPrototypeOf

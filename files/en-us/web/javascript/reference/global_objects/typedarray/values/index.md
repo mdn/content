@@ -1,5 +1,6 @@
 ---
 title: TypedArray.prototype.values()
+short-title: values()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/values
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.values

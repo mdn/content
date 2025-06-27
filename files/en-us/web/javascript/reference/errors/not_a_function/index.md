@@ -32,14 +32,12 @@ There are many built-in functions in need of a (callback) function. You will hav
 provide a function in order to have these methods working properly:
 
 - When working with {{jsxref("Array")}} or {{jsxref("TypedArray")}} objects:
-
   - {{jsxref("Array.prototype.every()")}}, {{jsxref("Array.prototype.some()")}},
     {{jsxref("Array.prototype.forEach()")}}, {{jsxref("Array.prototype.map()")}},
     {{jsxref("Array.prototype.filter()")}}, {{jsxref("Array.prototype.reduce()")}},
     {{jsxref("Array.prototype.reduceRight()")}}, {{jsxref("Array.prototype.find()")}}
 
 - When working with {{jsxref("Map")}} and {{jsxref("Set")}} objects:
-
   - {{jsxref("Map.prototype.forEach()")}} and {{jsxref("Set.prototype.forEach()")}}
 
 ## Examples

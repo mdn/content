@@ -77,7 +77,6 @@ As demonstrated by the above code snippet, there are two different places to fin
 1. You can find the results of client (user agent) extension processing by calling the {{domxref("PublicKeyCredential.getClientExtensionResults()")}} method. This returns a {{jsxref("Map", "map")}}, with each entry being an extensions' identifier string as the key, and the output from the processing of the extension by the client as the value. In the example above, if the browser supported the `credProps` extension and it was processed correctly, the `myClientExtResults` map object would contain one entry, `"credProps"`, with a value of `{ rk: true }`. This would verify that the created credential is indeed discoverable.
 
 2. You can find the results of authenticator extension processing in the authenticator data for the operation:
-
    - In the case of `PublicKeyCredential`s returned from successful `create()` calls, this can be returned via a call to {{domxref("AuthenticatorAttestationResponse.getAuthenticatorData", "publicKeyCredential.response.getAuthenticatorData()")}}.
    - In the case of `PublicKeyCredential`s returned from successful `get()` calls, this can be found in the {{domxref("AuthenticatorAssertionResponse.authenticatorData", "publicKeyCredential.response.authenticatorData")}} property.
 
@@ -447,16 +446,16 @@ As an example of such a workflow, in each session you pass two salts: the `first
 In subsequent sessions the `second` salt is moved to the position of the `first` salt, so the lifetime where a particular salt can be usefully compromised is bounded.
 
 ```js
-{
+({
   extensions: {
     prf: {
       eval: {
-        first: currentSessionKey /* salt for current session */,
-        second: nextSessionKey /* salt for next session */,
+        first: currentSessionKey, // salt for current session
+        second: nextSessionKey, // salt for next session
       },
     },
   },
-};
+});
 ```
 
 The `create()` call may reject with the following exceptions:
@@ -472,13 +471,20 @@ This is an object that maps {{glossary("Base64")}} URL-encoded credential IDs to
 In other words, this allows you to specify values to evaluate for different credentials.
 
 ```js
-{
+({
   extensions: {
     prf: {
-      evalByCredential: {"<credentialId>": {first: bufferOne, second: bufferTwo}, ..., "<credentialId>": {first: anotherBufferOne, second: anotherBufferTwo} }
+      evalByCredential: {
+        "<credentialId>": { first: bufferOne, second: bufferTwo },
+        // …
+        "<credentialId2>": {
+          first: anotherBufferOne,
+          second: anotherBufferTwo,
+        },
+      },
     },
   },
-};
+});
 ```
 
 The `get()` call may reject with the following exceptions:
@@ -493,12 +499,12 @@ The `get()` call may reject with the following exceptions:
 A successful `create()` call provides the following extension output if the registered credential supports using the PRF when creating credentials.
 
 ```js
-{
+({
   prf: {
     enabled: true, // PRF can be used when creating credentials.
-    results: {first: outputBuffer1, second: outputBuffer2}
+    results: { first: outputBuffer1, second: outputBuffer2 },
   },
-};
+});
 ```
 
 The `enabled` property indicates whether the PRF can be used when creating credentials.
@@ -507,31 +513,31 @@ The `first` and `second` properties contain the result of evaluating `first` and
 If the authenticator doesn't support using the PRF on creation, the output on `create()` will look like this:
 
 ```js
-{
+({
   prf: {
     enabled: false, // PRF cannot be used when creating credentials.
   },
-};
+});
 ```
 
 A `get()` returns a same `prf` object with the same structure as `create()`, except that it omits the `enabled` key.
 The object contains PRF values that correspond to the inputs for the credential that was selected by the user.
 
 ```js
-{
+({
   prf: {
-    results: {first: outputBuffer1, second: outputBuffer2}
+    results: { first: outputBuffer1, second: outputBuffer2 },
   },
-};
+});
 ```
 
 Note that `enabled` is only present as an output for `create()`, and indicates if PRF is supported by the authenticator when a credential is created.
 If the authenticator doesn't support PRF at all, the result for the `get()` call will be:
 
 ```js
-{
+({
   prf: {},
-};
+});
 ```
 
 ## Specifications

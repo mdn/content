@@ -1,5 +1,6 @@
 ---
 title: Intl.Locale.prototype.getTimeZones()
+short-title: getTimeZones()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getTimeZones
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.Locale.getTimeZones

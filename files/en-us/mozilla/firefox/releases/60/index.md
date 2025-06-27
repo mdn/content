@@ -37,7 +37,6 @@ _No changes._
 ### JavaScript
 
 - ECMAScript 2015 modules have been enabled by default in ([Firefox bug 1438139](https://bugzil.la/1438139)). See [ES6 In Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) and [ES modules: A cartoon deep dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/) for more information, or consult MDN reference docs:
-
   - [`<script src="main.js" type="module">`](/en-US/docs/Web/HTML/Reference/Elements/script/type) and [`<script nomodule src="fallback.js">`](/en-US/docs/Web/HTML/Reference/Elements/script#nomodule)
   - [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) and [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) statements.
 
@@ -139,7 +138,6 @@ Theme API:
 - headerURL is now optional
 - When creating a browser [theme](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme), any {{cssxref("text-shadow")}} applied to the header text is removed if no `headerURL` is specified (see [Firefox bug 1404688](https://bugzil.la/1404688)).
 - New properties are supported:
-
   - **tab_line**
   - **tab_selected**
   - **popup**

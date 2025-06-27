@@ -31,7 +31,6 @@ lighting-color: unset;
 ### Values
 
 - {{cssxref("color_value", "&lt;color>")}}
-
   - : The lighting's color. This can be any valid CSS {{cssxref("color_value", "&lt;color>")}} value.
 
 ## Formal definition
