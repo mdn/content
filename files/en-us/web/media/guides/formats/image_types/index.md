@@ -193,8 +193,8 @@ They're also commonly used for the animated portions of web browsers' user inter
     <tr>
       <th scope="row">Specification</th>
       <td>
-        <a href="https://wiki.mozilla.org/APNG_Specification"
-          >wiki.mozilla.org/APNG_Specification</a
+        <a href="https://www.w3.org/TR/PNG/"
+          >W3C PNG Specification (Third Edition)</a
         >
       </td>
     </tr>
