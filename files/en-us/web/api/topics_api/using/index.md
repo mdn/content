@@ -68,6 +68,7 @@ The following features all serve a dual purpose — they return the user's top t
   ```html
   <iframe browsingtopics src="ad-tech1.example"> ... </iframe>
   ```
+
   - Programmatically by setting the equivalent {{domxref("HTMLIFrameElement.browsingTopics")}} property to `true`:
 
   ```js
