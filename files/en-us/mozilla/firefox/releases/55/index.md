@@ -2,9 +2,8 @@
 title: Firefox 55 for developers
 slug: Mozilla/Firefox/Releases/55
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 55 was released on August 8, 2017. This article lists key changes that are useful for web developers.
 

@@ -2,9 +2,8 @@
 title: Firefox 69 for developers
 slug: Mozilla/Firefox/Releases/69
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 69 that will affect developers. Firefox 69 was released on September 3, 2019.
 

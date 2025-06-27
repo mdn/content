@@ -2,9 +2,8 @@
 title: Firefox 7 for developers
 slug: Mozilla/Firefox/Releases/7
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 7 shipped on September 27, 2011. This article provides information about the changes that affect developers — both of web content and of Firefox add-ons.
 

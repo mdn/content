@@ -2,9 +2,8 @@
 title: Firefox 90 for developers
 slug: Mozilla/Firefox/Releases/90
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 90 that will affect developers. Firefox 90 was released on July 13th, 2021.
 

@@ -2,9 +2,8 @@
 title: Firefox 109 for developers
 slug: Mozilla/Firefox/Releases/109
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 109 that will affect developers. Firefox 109 was released on January 17, 2023.
 
