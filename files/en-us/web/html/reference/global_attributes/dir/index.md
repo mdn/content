@@ -55,7 +55,7 @@ This attribute is mandatory for the {{ HTMLElement("bdo") }} element where it ha
 
 This attribute is _not_ inherited by the {{ HTMLElement("bdi") }} element. If not set, its value is `auto`.
 
-Browsers might allow users to change the directionality of {{ HTMLElement("input") }} and {{ HTMLElement("textarea") }}s in order to assist with authoring content. Chrome and Safari provide a directionality option in the contextual menu of input fields. In recent versions of Firefox on Windows, pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd> inside a <code>&lt;textarea&gt;</code> toggles text direction and also updates the <code>dir</code> attribute value.
+Browsers might allow users to change the directionality of {{ HTMLElement("input") }} and {{ HTMLElement("textarea") }}s in order to assist with authoring content. Chrome and Safari provide a directionality option in the contextual menu of input fields. In recent versions of Firefox on Windows, pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd> inside a `<textarea>` toggles text direction and also updates the`dir` attribute value.
 
 ## Specifications
 
