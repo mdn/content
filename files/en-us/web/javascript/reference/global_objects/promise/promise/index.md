@@ -132,7 +132,7 @@ The `resolve` function has the following behaviors:
 
 - If it's called with the same value as the newly created promise (the promise it's "tethered to"), the promise is rejected with a {{jsxref("TypeError")}}.
 - If it's called with a non-[thenable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) value (a primitive, or an object whose `then` property is not callable, including when the property is not present), the promise is immediately fulfilled with that value.
-- If it's called with a thenable value (including another `Promise` instance), then the thenable's `then` method is saved and called in the future (it's always called asynchronously). The `then` method will be called with two callbacks, which are two new functions with the exact same behaviors as the `resolveFunc` and `rejectFunc` passed to the `executor` function. If calling the `then` method throws, then the current promise is rejected with the thrown error.
+- If it's called with a thenable value (including another `Promise` instance), then the thenable's `then` method is saved and called in the future (it's always called asynchronously). The `then` method will be called with two callbacks, which are two new functions with the exact same behaviors as the `resolveFunc` and `rejectFunc` passed to the `executor` function. If calling the `then` method throws an error, then the current promise is rejected with the thrown error.
 
 In the last case, it means code like:
 
