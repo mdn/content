@@ -148,7 +148,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
 - `window[0]`, `window[1]`, etc.
   - : Returns a reference to the `window` object in the frames. See {{domxref("Window.frames")}} for more details.
 - Named properties
-  - : Some elements in the document are also exposed as properties:
+  - : Some elements in the document are also exposed as window properties:
     - For each {{HTMLElement("embed")}}, {{HTMLElement("form")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, and {{HTMLElement("object")}} element, its `name` (if non-empty) is exposed. For example, if the document contains `<form name="my-form">`, then `window["my-form"]` returns a reference to that element.
     - For each HTML element, its `id` (if non-empty) is exposed.
 
