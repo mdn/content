@@ -38,7 +38,8 @@ open(url, target, windowFeatures)
 
         See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 
-        > **Note:** `open()` calls cannot be used to register an attribution trigger.
+        > [!NOTE]
+        > `open()` calls cannot be used to register an attribution trigger.
 
     - `popup`
       - : By default, `window.open` opens the page in a new tab. If `popup` is set to true, it requests that a minimal popup window be used. The UI features included in the popup window will be automatically decided by the browser, generally including an address bar only. If `popup` is present and set to false, a new tab is still opened.

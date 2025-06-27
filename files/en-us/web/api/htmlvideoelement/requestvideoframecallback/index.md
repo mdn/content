@@ -48,7 +48,8 @@ requestVideoFrameCallback(callback)
         - `rtpTimestamp`
           - : A number representing the RTP timestamp associated with this video frame.
 
-> **Note:** `width` and `height` may differ from {{domxref("HTMLVideoElement.videoWidth")}} and {{domxref("HTMLVideoElement.videoHeight")}} in certain cases (for example, an anamorphic video may have rectangular pixels).
+> [!NOTE]
+> `width` and `height` may differ from {{domxref("HTMLVideoElement.videoWidth")}} and {{domxref("HTMLVideoElement.videoHeight")}} in certain cases (for example, an anamorphic video may have rectangular pixels).
 
 ### Return value
 

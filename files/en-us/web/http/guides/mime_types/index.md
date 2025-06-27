@@ -126,7 +126,8 @@ This is the default for binary files. As it means _unknown binary_ file, browser
 
 This is the default for textual files. Even if it really means "unknown textual file," browsers assume they can display it.
 
-> **Note:** `text/plain` does not mean "any kind of textual data."
+> [!NOTE]
+> `text/plain` does not mean "any kind of textual data."
 > If they expect a specific kind of textual data, they will likely not consider it a match.
 > Specifically if they download a `text/plain` file from a {{HTMLElement("link")}} element declaring a CSS file, they will not recognize it as a valid CSS file if presented with `text/plain`.
 > The CSS mime type `text/css` must be used.

@@ -8,7 +8,8 @@ page-type: glossary-definition
 
 The **global object** in JavaScript is an {{glossary("object")}} which represents the {{glossary("global scope")}}.
 
-> **Note:** _Globally available objects_, which are objects in the {{glossary("global scope")}}, are sometimes also referred to as global objects, but strictly speaking, there is only one global object per environment.
+> [!NOTE]
+> _Globally available objects_, which are objects in the {{glossary("global scope")}}, are sometimes also referred to as global objects, but strictly speaking, there is only one global object per environment.
 
 In each JavaScript environment, there's always a global object defined. The global object's interface depends on the execution context in which the script is running. For example:
 

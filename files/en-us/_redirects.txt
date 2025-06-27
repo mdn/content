@@ -5213,7 +5213,7 @@
 /en-US/docs/Learn/CSS/CSS_layout/Introduction	/en-US/docs/Learn_web_development/Core/CSS_layout/Introduction
 /en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods	/en-US/docs/Learn_web_development/Core/CSS_layout/Legacy_Layout_Methods
 /en-US/docs/Learn/CSS/CSS_layout/Media_queries	/en-US/docs/Learn_web_development/Core/CSS_layout/Media_queries
-/en-US/docs/Learn/CSS/CSS_layout/Multicol_skills	/en-US/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Multicolumn
+/en-US/docs/Learn/CSS/CSS_layout/Multicol_skills	/en-US/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout
 /en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout	/en-US/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout
 /en-US/docs/Learn/CSS/CSS_layout/Normal_Flow	/en-US/docs/Learn_web_development/Core/CSS_layout/Introduction
 /en-US/docs/Learn/CSS/CSS_layout/Position_skills	/en-US/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Position
@@ -5764,8 +5764,9 @@
 /en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox_skills	/en-US/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Flexbox
 /en-US/docs/Learn_web_development/Core/CSS_layout/Floats_skills	/en-US/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Floats
 /en-US/docs/Learn_web_development/Core/CSS_layout/Grid_skills	/en-US/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Grid
-/en-US/docs/Learn_web_development/Core/CSS_layout/Multicol_skills	/en-US/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Multicolumn
+/en-US/docs/Learn_web_development/Core/CSS_layout/Multicol_skills	/en-US/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout
 /en-US/docs/Learn_web_development/Core/CSS_layout/Position_skills	/en-US/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Position
+/en-US/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Multicolumn	/en-US/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout
 /en-US/docs/Learn_web_development/Core/CSS_layout/rwd_skills	/en-US/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Responsive_design
 /en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Arrays	/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Arrays
 /en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Conditionals	/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Conditionals

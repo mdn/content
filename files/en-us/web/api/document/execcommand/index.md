@@ -138,7 +138,8 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 
 A boolean value that is `false` if the command is unsupported or disabled.
 
-> **Note:** `document.execCommand()` only returns
+> [!NOTE]
+> `document.execCommand()` only returns
 > `true` if it is invoked as part of a user interaction. You can't use it to
 > verify browser support before calling a command.
 

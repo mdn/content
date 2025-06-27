@@ -509,10 +509,6 @@ body {
 
 {{ EmbedLiveSample('Setting_break-inside', '100%', 1100) }}
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Multicol](/en-US/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Multicolumn).
-
 ## Summary
 
 You now know how to use the basic features of multiple-column layout, another tool at your disposal when choosing a layout method for the designs you're building.

@@ -111,7 +111,8 @@ for (const item of mySet) {
 
 You can create an {{jsxref("Array")}} from a Set using {{jsxref("Array.from")}} or the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax). Also, the `Set` constructor accepts an `Array` to convert in the other direction.
 
-> **Note:** `Set` objects store _unique values_—so any duplicate elements from an Array are deleted when converting!
+> [!NOTE]
+> `Set` objects store _unique values_—so any duplicate elements from an Array are deleted when converting!
 
 ```js
 Array.from(mySet);

@@ -21,7 +21,8 @@ To output new lines, you must escape them with a line feed character such as `\A
 
 However, to get new lines, you must also set the {{cssxref("white-space")}} property to appropriate value.
 
-> **Note:** {{glossary("character reference", "Character references")}} (such as `&nbsp;` or `&#8212;`) cannot be used in a CSS `<string>`.
+> [!NOTE]
+> {{glossary("character reference", "Character references")}} (such as `&nbsp;` or `&#8212;`) cannot be used in a CSS `<string>`.
 
 ## Examples
 

@@ -49,7 +49,8 @@ match(request, options)
 A {{jsxref("Promise")}} that resolves to the first {{domxref("Response")}} that matches
 the request or to {{jsxref("undefined")}} if no match is found.
 
-> **Note:** `Cache.match()` is basically identical to
+> [!NOTE]
+> `Cache.match()` is basically identical to
 > {{domxref("Cache.matchAll()")}}, except that rather than resolving with an array of
 > all matching responses, it resolves with the first matching response only (that is,
 > `response[0]`).

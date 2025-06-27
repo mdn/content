@@ -59,7 +59,8 @@ The `BigInt.asUintN` method truncates a `BigInt` value to the given number of bi
 ===>      1001 (base 2) = 9n
 ```
 
-> **Note:** `BigInt` values are always encoded as two's complement in binary.
+> [!NOTE]
+> `BigInt` values are always encoded as two's complement in binary.
 
 Unlike similar language APIs such as {{jsxref("Number.prototype.toExponential()")}}, `asUintN` is a static property of {{jsxref("BigInt")}}, so you always use it as `BigInt.asUintN()`, rather than as a method of a BigInt value. Exposing `asUintN()` as a "standard library function" allows [interop with asm.js](https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs).
 
