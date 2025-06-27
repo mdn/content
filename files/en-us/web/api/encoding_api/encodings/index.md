@@ -6,9 +6,9 @@ page-type: guide
 
 {{DefaultAPISidebar("Encoding API")}}
 
-The constructors for the [Encoding API](/en-US/docs/Web/API/Encoding_API) interfaces {{domxref("TextDecoder")}} and {{domxref("TextDecoderStream")}} can be passed an optional `label` argument, which identifies the encoding system to be used.
+The constructors for the [Encoding API](/en-US/docs/Web/API/Encoding_API) interfaces {{domxref("TextDecoder")}} and {{domxref("TextDecoderStream")}} can be passed an optional `label` argument, which identifies the encoding to be used.
 
-The following table lists all encoding labels that user agents must support, along with the encoding system that the label identifies. Note that most encoding systems have more than one label.
+The following table lists all encoding labels that user agents must support, along with the encoding that the label identifies. Note that most encodings have more than one label.
 
 <table class="no-markdown">
   <thead>
