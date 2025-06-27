@@ -99,7 +99,7 @@ The following terms are used when talking about the functionality of proxies.
   - : The function that defines the behavior for the corresponding [object internal method](#object_internal_methods). (This is analogous to the concept of _traps_ in operating systems.)
 - target
   - : Object which the proxy virtualizes. It is often used as storage backend for the proxy. Invariants (semantics that remain unchanged) regarding object non-extensibility or non-configurable properties are verified against the target.
-- invariants
+- {{Glossary("invariant", "invariants")}}
   - : Semantics that remain unchanged when implementing custom operations. If your trap implementation violates the invariants of a handler, a {{jsxref("TypeError")}} will be thrown.
 
 ### Object internal methods
