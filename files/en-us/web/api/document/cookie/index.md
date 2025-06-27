@@ -31,7 +31,6 @@ document.cookie = newCookie;
 In the code above, `newCookie` is a string of form `key=value`, specifying the cookie to set/update. Note that you can only set/update a single cookie at a time using this method. Consider also that:
 
 - Any of the following cookie attribute values can optionally follow the key-value pair, each preceded by a semicolon separator:
-
   - `;domain=domain` (e.g., `example.com` or `subdomain.example.com`): The host to which the cookie will be sent.
     If not specified, this defaults to the host portion of the current document location and the cookie is not available on subdomains.
     If a domain is specified, subdomains are always included.
@@ -56,7 +55,6 @@ In the code above, `newCookie` is a string of form `key=value`, specifying the c
   - `;path=path`: The value of the cookie's `Path` attribute (See [Define where cookies are sent](/en-US/docs/Web/HTTP/Guides/Cookies#define_where_cookies_are_sent) for more information).
 
   - `;samesite`: The `SameSite` attribute of a {{httpheader("Set-Cookie")}} header can be set by a server to specify when the cookie will be sent. Possible values are `lax`, `strict` or `none` (see also [Controlling third-party cookies with `SameSite`](/en-US/docs/Web/HTTP/Guides/Cookies#controlling_third-party_cookies_with_samesite)).
-
     - The `lax` value will send the cookie for all same-site requests and top-level navigation GET requests.
       This is sufficient for user tracking, but it will prevent many [Cross-Site Request Forgery](/en-US/docs/Glossary/CSRF) (CSRF) attacks.
       This is the default value in modern browsers.
@@ -68,7 +66,6 @@ In the code above, `newCookie` is a string of form `key=value`, specifying the c
 
 - The cookie value string can use {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}} to ensure that the string does not contain any commas, semicolons, or whitespace (which are disallowed in cookie values).
 - Some user agent implementations support the following cookie prefixes:
-
   - `__Secure-` Signals to the browser that it should only include the cookie in requests transmitted over a secure channel.
   - `__Host-` Signals to the browser that in addition to the restriction to only use the cookie from a secure origin, the scope of the cookie is limited to a path attribute passed down by the server.
     If the server omits the path attribute the "directory" of the request URI is used.

@@ -50,9 +50,7 @@ It can be used with the [`prefer_related_applications`](/en-US/docs/Web/Progress
 ### Values
 
 - `related_applications`
-
   - : An array of objects, each representing a platform-specific native application related to the web app. Each object must include a `platform` property and at least one of either a `url` or an `id` (or both).
-
     - `platform`
       - : A string that identifies the platform on which the application can be found.
         Examples include `amazon` (Amazon App Store), `play` (Google Play Store), and `windows` (Windows Store).

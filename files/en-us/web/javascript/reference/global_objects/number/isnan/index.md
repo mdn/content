@@ -1,5 +1,6 @@
 ---
 title: Number.isNaN()
+short-title: isNaN()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isNaN
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Number.isNaN

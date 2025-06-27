@@ -1,5 +1,6 @@
 ---
 title: TypedArray.prototype.join()
+short-title: join()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/join
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.join

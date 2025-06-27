@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainTime.prototype.subtract()
+short-title: subtract()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime/subtract
 page-type: javascript-instance-method
 status:

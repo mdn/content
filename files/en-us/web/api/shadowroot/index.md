@@ -7,7 +7,7 @@ browser-compat: api.ShadowRoot
 
 {{APIRef('Shadow DOM')}}
 
-The **`ShadowRoot`** interface of the Shadow DOM API is the root node of a DOM subtree that is rendered separately from a document's main DOM tree.
+The **`ShadowRoot`** interface of the [Shadow DOM API](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) is the root node of a DOM subtree that is rendered separately from a document's main DOM tree.
 
 You can retrieve a reference to an element's shadow root using its {{domxref("Element.shadowRoot")}} property, provided it was created using {{domxref("Element.attachShadow()")}} with the `mode` option set to `open`.
 
@@ -57,6 +57,8 @@ You can retrieve a reference to an element's shadow root using its {{domxref("El
   - : Returns the topmost element at the specified coordinates.
 - {{domxref("ShadowRoot.elementsFromPoint()")}} {{Non-standard_Inline}}
   - : Returns an array of all elements at the specified coordinates.
+- {{DOMxRef("ShadowRoot.setHTML()")}}
+  - : Provides an XSS-safe method to parse and sanitize a string of HTML into a {{domxref("DocumentFragment")}}, which then replaces the existing tree in the shadow DOM.
 - {{DOMxRef("ShadowRoot.setHTMLUnsafe()")}}
   - : Parses a string of HTML into a document fragment, without sanitization, which then replaces the shadowroot's original subtree. The HTML string may include declarative shadow roots, which would be parsed as template elements the HTML was set using [`ShadowRoot.innerHTML`](/en-US/docs/Web/API/ShadowRoot/innerHTML).
 
@@ -117,3 +119,8 @@ div {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Using the shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
+- [Web components](/en-US/docs/Web/API/Web_components)

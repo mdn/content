@@ -89,15 +89,12 @@ The `margin-left` property is specified as the keyword `auto`, or a `<length>`, 
 ### Values
 
 - {{cssxref("&lt;length&gt;")}}
-
   - : The size of the margin as a fixed value.
-
     - For _anchor-positioned elements_, the {{cssxref("anchor-size()")}} function resolves to a {{cssxref("&lt;length&gt;")}} value relative to the associated _anchor element_'s width or height (see [Setting element margin based on anchor size](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#setting_element_margin_based_on_anchor_size)).
 
 - {{cssxref("&lt;percentage&gt;")}}
   - : The size of the margin as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block).
 - `auto`
-
   - : The left margin receives a share of the unused horizontal space, as determined mainly by the layout mode that is used. If the values of `margin-left` and `margin-right` are both `auto`, the calculated space is evenly distributed. This table summarizes the different cases:
 
     <table class="standard-table">

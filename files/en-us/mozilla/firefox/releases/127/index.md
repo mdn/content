@@ -21,7 +21,6 @@ This article provides information about the changes in Firefox 127 that affect d
 ### JavaScript
 
 - The following [`Set`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) methods are now supported ([Firefox bug 1868423](https://bugzil.la/1868423)):
-
   - [`Set.prototype.intersection()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/intersection) — Returns a new set containing elements in both this set and the given set.
   - [`Set.prototype.union()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/union) — Returns a new set containing all elements in this set and the given set.
   - [`Set.prototype.difference()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/difference) — Returns a new set containing elements in this set but not in the given set.
@@ -32,7 +31,7 @@ This article provides information about the changes in Firefox 127 that affect d
 
 ### SVG
 
-- The [`lh` and `rlh`](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#line_height_units) line height units, first supported in CSS [in Firefox 120](/en-US/docs/Mozilla/Firefox/Releases/120#css), are now supported in SVG as well. They can be used both in CSS property values `stroke-width: 0.5lh` and SVG attributes values `stroke-width="0.5lh"`. ([Firefox bug 1892089](https://bugzil.la/1892089)).
+- The [`lh`](/en-US/docs/Web/CSS/length#lh) and [`rlh`](/en-US/docs/Web/CSS/length#rlh) line height units, first supported in CSS [in Firefox 120](/en-US/docs/Mozilla/Firefox/Releases/120#css), are now supported in SVG as well. They can be used both in CSS property values `stroke-width: 0.5lh` and SVG attributes values `stroke-width="0.5lh"`. ([Firefox bug 1892089](https://bugzil.la/1892089)).
 
 ### Security
 

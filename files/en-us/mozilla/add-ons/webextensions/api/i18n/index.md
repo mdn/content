@@ -18,14 +18,18 @@ See the [Internationalization](/en-US/docs/Mozilla/Add-ons/WebExtensions/Interna
 
 ## Functions
 
-- {{WebExtAPIRef("i18n.getAcceptLanguages()")}}
-  - : Gets the [accept-languages](/en-US/docs/Web/HTTP/Guides/Content_negotiation#the_accept-language_header) of the browser. This is different from the locale used by the browser. To get the locale, use {{WebExtAPIRef('i18n.getUILanguage')}}.
-- {{WebExtAPIRef("i18n.getMessage()")}}
-  - : Gets the localized string for the specified message.
-- {{WebExtAPIRef("i18n.getUILanguage()")}}
-  - : Gets the UI language of the browser. This is different from {{WebExtAPIRef('i18n.getAcceptLanguages')}} which returns the preferred user languages.
 - {{WebExtAPIRef("i18n.detectLanguage()")}}
   - : Detects the language of the provided text using the [Compact Language Detector](https://github.com/CLD2Owners/cld2).
+- {{WebExtAPIRef("i18n.getMessage()")}}
+  - : Gets the localized string for the specified message.
+- {{WebExtAPIRef("i18n.getAcceptLanguages()")}}
+  - : Gets the [accept-languages](/en-US/docs/Web/HTTP/Guides/Content_negotiation#the_accept-language_header) of the browser. This is different from the locale used by the browser. To get the locale, use {{WebExtAPIRef('i18n.getUILanguage')}}.
+- {{WebExtAPIRef("i18n.getUILanguage()")}}
+  - : Gets the UI language of the browser. This is different from {{WebExtAPIRef('i18n.getAcceptLanguages')}} which returns the preferred user languages.
+- {{WebExtAPIRef("i18n.getPreferredSystemLanguages()")}}
+  - : Returns the preferred locales of the operating system.
+- {{WebExtAPIRef("i18n.getSystemUILanguage()")}}
+  - : Returns the current UI locale of the operating system.
 
 ## Browser compatibility
 

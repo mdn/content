@@ -25,9 +25,7 @@ createSyncAccessHandle(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An object with the following properties:
-
     - `mode` {{optional_inline}} {{non-standard_inline}}
       - : A string specifying the locking mode for the access handle. The default value is `"readwrite"`.
         Possible values are:

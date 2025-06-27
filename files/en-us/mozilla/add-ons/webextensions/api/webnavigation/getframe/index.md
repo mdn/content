@@ -22,9 +22,7 @@ let gettingFrame = browser.webNavigation.getFrame(
 ### Parameters
 
 - `details`
-
   - : `object`. Information about the frame to retrieve information about.
-
     - `tabId`
       - : `integer`. The ID of the tab in which the frame is.
     - `processId` {{optional_inline}} {{deprecated_inline}}

@@ -1,5 +1,6 @@
 ---
-title: itemid
+title: HTML itemid global attribute
+short-title: itemid
 slug: Web/HTML/Reference/Global_attributes/itemid
 page-type: html-attribute
 spec-urls: https://html.spec.whatwg.org/multipage/microdata.html#attr-itemid
@@ -77,7 +78,6 @@ This example uses microdata attributes to represent the following structured dat
 
 - All [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 - Other microdata related global attributes:
-
   - [`itemprop`](/en-US/docs/Web/HTML/Reference/Global_attributes/itemprop)
   - [`itemref`](/en-US/docs/Web/HTML/Reference/Global_attributes/itemref)
   - [`itemscope`](/en-US/docs/Web/HTML/Reference/Global_attributes/itemscope)

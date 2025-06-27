@@ -41,9 +41,7 @@ The `hanging-punctuation` property may be specified with one, two, or three spac
 - `none`
   - : No character hangs.
 - `first`
-
   - : An opening bracket or quote at the start of the first formatted line of an element hangs. This applies to:
-
     - all characters in the Unicode categories [Ps](https://unicodeplus.com/category/Ps), [Pf](https://unicodeplus.com/category/Pf), [Pi](https://unicodeplus.com/category/Pi)
     - the quote marks `U+0027` APOSTROPHE (`'`) and `U+0022` QUOTATION MARK (`"`).
 

@@ -242,7 +242,7 @@ filter: drop-shadow(16px 16px 20px red) invert(75%);
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a>
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role">No corresponding role</a>
       </td>
     </tr>
     <tr>
@@ -428,7 +428,6 @@ The [`AvailableInWorkers`](https://github.com/mdn/rari/blob/main/crates/rari-doc
 <!---->
 
 - [MDN Web Docs Glossary](/en-US/docs/Glossary):
-
   - {{Glossary("XMLHttpRequest", "XHR")}}
 
 - [AJAX](https://en.wikipedia.org/wiki/AJAX) on Wikipedia

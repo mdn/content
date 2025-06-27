@@ -41,7 +41,8 @@ There are two different ways to format keyframes:
    );
    ```
 
-   > **Note:** `offset` values, if provided, must be between 0.0 and 1.0 (inclusive) and arranged in ascending order.
+   > [!NOTE]
+   > `offset` values, if provided, must be between 0.0 and 1.0 (inclusive) and arranged in ascending order.
 
    It is not necessary to specify an offset for every keyframe. Keyframes without a specified offset will be evenly spaced between adjacent keyframes.
 

@@ -106,39 +106,30 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 The following attributes are deprecated and should not be used. They are documented below for reference when updating existing code and for historical interest only.
 
 - `align` {{deprecated_inline}}
-
   - : Specifies the horizontal alignment of the table within its parent element. The possible {{Glossary("enumerated")}} values are `left`, `center`, and `right`. Use the {{cssxref("margin-inline-start")}} and {{cssxref("margin-inline-end")}} CSS properties instead, as this attribute is deprecated.
 
 - `bgcolor` {{deprecated_inline}}
-
-  - : Defines the background color of the table. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a `#`, or a [color keyword](/en-US/docs/Web/CSS/named-color). Other CSS {{cssxref("color_value", "&lt;color&gt")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
+  - : Defines the background color of the table. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a `#`, or a [color keyword](/en-US/docs/Web/CSS/named-color). Other CSS {{cssxref("color_value", "&lt;color&gt;")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
 
 - `border` {{deprecated_inline}}
-
   - : Defines, as a non-negative integer value (in pixels), the size of the frame surrounding the table. If set to `0`, the [`frame`](#frame) attribute is set to void. Use the {{cssxref("border")}} CSS property instead, as this attribute is deprecated.
 
 - `cellpadding` {{deprecated_inline}}
-
   - : Defines the space between the content of a cell and its border. This attribute is obsolete: instead of using it, apply the {{cssxref("padding")}} CSS property to the {{HTMLElement("th")}} and {{HTMLElement("td")}} elements.
 
 - `cellspacing` {{deprecated_inline}}
-
   - : Defines the size of the space between two cells. This attribute is obsolete: instead of using it, set the {{cssxref("border-spacing")}} CSS property on the `<table>` element. Note that this has no effect if the `<table>` element's {{cssxref("border-collapse")}} CSS property is set to `collapse`.
 
 - `frame` {{deprecated_inline}}
-
   - : Defines which side of the frame surrounding the table must be displayed. The possible {{Glossary("enumerated")}} values are `void`, `above`, `below`, `hsides`, `vsides`, `lhs`, `rhs`, `box` and `border`. Use the {{cssxref("border-style")}} and {{cssxref("border-width")}} CSS properties instead, as this attribute is deprecated.
 
 - `rules` {{deprecated_inline}}
-
   - : Defines where rules (borders) are displayed in the table. The possible {{Glossary("enumerated")}} values are `none` (default value), `groups` ({{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, and {{HTMLElement("tfoot")}} elements), `rows` (horizontal lines), `cols` (vertical lines), and `all` (border around every cell). Use the {{cssxref("border")}} CSS property on the appropriate table-related elements, as well as on the `<table>` itself, instead, as this attribute is deprecated.
 
 - `summary` {{deprecated_inline}}
-
   - : Defines an alternative text that summarizes the content of the table. Use the {{htmlelement("caption")}} element instead, as this attribute is deprecated.
 
 - `width` {{deprecated_inline}}
-
   - : Specifies the width of the table. Use the {{cssxref("width")}} CSS property instead, as this attribute is deprecated.
 
     > [!NOTE]

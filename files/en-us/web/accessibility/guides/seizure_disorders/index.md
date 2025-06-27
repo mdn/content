@@ -64,7 +64,7 @@ Certain colors, and/or combinations of colors, also matter. ["Certain Colors Mor
 
 [WCAG 2.3.1 general flash and red flash thresholds](https://www.w3.org/WAI/WCAG21/Understanding/three-flashes-or-below-threshold.html) are defined as follows:
 
-- A **general flash** is defined as a pair of opposing changes in [relative luminance](https://www.w3.org/TR/WCAG21/#dfn-relative-luminance) of 10% or more of the maximum relative luminance where the relative luminance of the darker image is below 0.80, and where "a pair of opposing changes" is an increase followed by a decrease, or a decrease followed by an increase;
+- A **general flash** is defined as a pair of opposing changes in [relative luminance](https://w3c.github.io/wcag/guidelines/22/#dfn-relative-luminance) of 10% or more of the maximum relative luminance where the relative luminance of the darker image is below 0.80, and where "a pair of opposing changes" is an increase followed by a decrease, or a decrease followed by an increase;
 - A **red flash** is defined as any pair of opposing transitions involving a saturated red.
 
 These standards are based on earlier research. In 2004, The Epilepsy Foundation of America convened a workshop developed a [consensus](https://pubmed.ncbi.nlm.nih.gov/16146438/) on photosensitive seizures, stating _"A flash is a potential hazard if it has luminance at least 20 cd/m<sup>2</sup>, occurs at a frequency of least 3 Hz, and occupies a solid visual angle of at least 0.006 steradians (about 10% of the central visual field or 25% of screen area at typical viewing distances)."_ The transition to or from a saturated red is important and constitutes a risk on its own: "_Irrespective of luminance, a transition to or from a saturated red is also considered a risk._"
@@ -178,11 +178,9 @@ Controlling exposure to the page is key to ensuring that someone susceptible to 
 
 If you believe you may have an image or animation that may cause seizures, control access to it by first displaying a warning about the content, and then putting it in a location where the user must opt in to it, such as clicking a button, or ensuring that the link to the page has a distinct and obvious warning.
 
-Consider using metadata such as `<meta name="robots" content="noindex, nofollow">` so that the page is not indexed by search engines.
-
-#### Do Not Index, Do Not Follow
-
-By not indexing the page, the likelihood that users will stumble upon it via search will be reduced.
+Consider setting crawl directives for search engines to hint that they shouldn't include potentially harmful resources in their search indexes.
+You can do this using metadata in a [`<meta name="robots">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/robots) element with restrictive rules like `noindex, nofollow`.
+By not indexing the page (`noindex`) and not following links on the page (`nofollow`), the likelihood that users will stumble upon it via search will be reduced:
 
 ```html
 <html lang="en">
@@ -191,6 +189,12 @@ By not indexing the page, the likelihood that users will stumble upon it via sea
     <meta name="robots" content="noindex, nofollow" />
   </head>
 </html>
+```
+
+For non-HTML resources, you can set crawl directives in a {{httpheader("X-Robots-Tag")}} HTTP response header:
+
+```http
+X-Robots-Tag: noindex
 ```
 
 ### Animated GIFs
@@ -208,7 +212,7 @@ With animated GIFs, ensure animation is inactive until the user chooses to activ
 
 As in the case of animated GIFs, the user must push a button or check a box in order to start the animation. There are many ways to do this, such as NOT adding the [`autoplay`](/en-US/docs/Web/API/HTMLMediaElement/autoplay) attribute to `<video controls>`, or setting {{CSSxRef('animation-play-state')}} to `paused` as an initial state. To see a powerful example of how this can actually work see the article by Kirupa, ["Toggling Animations On and Off"](https://www.kirupa.com/html5/toggling_animations_on_off.htm). Kirupa uses the `animation-play-state` in concert with {{CSSxRef('transition')}}, {{CSSxRef('transform')}}, and [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) to create a very accessible experience under the user's control.
 
-[`animation-play-state`](https://www.w3.org/TR/css-animations-1/#animation-play-state) is a CSS property that sets whether an animation is running or paused.
+[`animation-play-state`](/en-US/docs/Web/CSS/animation-play-state) is a CSS property that sets whether an animation is running or paused.
 
 ```css
 div {
@@ -338,7 +342,7 @@ An example of a format that has no controls available to the user is a gif file.
 
 #### Set user expectations
 
-Give users a heads-up as to what will happen before they click on that link. Describe the animation that is to follow. See [WCAG 2.1 Success Criterion 3.2.5 Change on Request](https://www.w3.org/TR/WCAG21/#change-on-request).
+Give users a heads-up as to what will happen before they click on that link. Describe the animation that is to follow. See [WCAG 2.2 Success Criterion 3.2.5 Change on Request](https://w3c.github.io/wcag/guidelines/22/#change-on-request).
 
 #### Keep it small
 
@@ -350,14 +354,12 @@ If you are designing for a game or VR that uses an ocular mask, **or CAN be used
 
 Normally, higher contrast is a good thing when it comes to accessibility. The greater the contrast of a text color to its background (technically called _luminosity contrast ratio,_ according to W3.org's page on [Colors with Good Contrast](https://www.w3.org/WAI/perspective-videos/contrast/), the easier such content is to read. Users with low vision are especially appreciative of efforts to ensure high contrast of text against its background. When the content is animated, however, **_reducing_** contrast is actually a way to reduce the likelihood that the animated content will cause seizures. Drop the contrast ratio if three flashes within one second are detected.
 
-The contrast ratio is defined in [WCAG 2.1](https://www.w3.org/TR/WCAG21/) as follows:
+The contrast ratio is defined in [WCAG 2.2](https://w3c.github.io/wcag/guidelines/22/) as follows:
 
 - _contrast ratio_
-
   - : (L1 + 0.05) / (L2 + 0.05), where
-
-    - L1 is the [relative luminance](https://www.w3.org/TR/WCAG21/#dfn-relative-luminance) of the lighter of the colors, and
-    - L2 is the [relative luminance](https://www.w3.org/TR/WCAG21/#dfn-relative-luminance) of the darker of the colors.
+    - L1 is the [relative luminance](https://w3c.github.io/wcag/guidelines/22/#dfn-relative-luminance) of the lighter of the colors, and
+    - L2 is the [relative luminance](https://w3c.github.io/wcag/guidelines/22/#dfn-relative-luminance) of the darker of the colors.
 
 It's best if you can adjust the contrast before it is uploaded or published to the web. For videos and animated GIFs, the Adobe Suite of products is a phenomenal resource for traditional images. Also for images, an online tool available is pinetools.com's [Brightness and contrast online](https://pinetools.com/brightness-contrast-image). If you intend to make animated GIFs, for example, start with one that has a lower contrast ratio.
 
@@ -548,12 +550,6 @@ The requirement for the `literal` property is taken from [WAI-Adapt: Help and Su
 
 **Requirement:** Some users cannot understand non-literal text and icons such as metaphors, idioms etc. The `literal` property is intended to identify text or images as non-literal and allows the author to explain non-literal text and images to users.
 
-#### Transitions (for CSS and SVG)
-
-The following is from the [Web Animations model](https://www.w3.org/TR/web-animations-1/) CSSWG.org drafts
-
-The Web Animations model is intended to provide the features necessary for expressing [CSS Transitions](https://drafts.csswg.org/web-animations/#biblio-css-transitions-1), [CSS Animations](https://drafts.csswg.org/web-animations/#biblio-css-animations-1), and [SVG](https://drafts.csswg.org/web-animations/#biblio-svg11).
-
 ## See also
 
 ### MDN
@@ -612,16 +608,13 @@ Along with the Harding tool, is generally recognized to be one of the two "gold 
 
 ### W3C
 
-- [CSS Color Module Level 3](https://www.w3.org/TR/css-color-3/)
-- [WAI-Adapt Explainer](https://w3c.github.io/adapt/). Working Draft
+- [WAI-Adapt Explainer](https://w3c.github.io/adapt/)
 - [WAI-Adapt: Tools Module](https://www.w3.org/TR/adapt-tools/) Working Draft
 - [Three Flashes or Below Threshold Understanding SC 2.3.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/seizure-does-not-violate.html) Understanding WCAG 2.0 (Older, but contains some explanations of references made in the WCAG 2.1 criteria)
 - [Three Flashes or Below Threshold Understanding Success Criterion 2.3.1](https://www.w3.org/WAI/WCAG21/Understanding/three-flashes-or-below-threshold.html) Understanding WCAG 2.1
 - [Understanding Success Criteria 1.4.3: Contrast (Minimum)](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html)
 - [Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/)
-- [Web Animations Model](https://www.w3.org/TR/web-animations-1/) W3C Working Draft
-- [Web Content Accessibility Guidelines (WCAG) 2.0](https://www.w3.org/TR/WCAG20/#relativeluminancedef) definition of relative luminance
-- [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21/)
+- [Web Content Accessibility Guidelines (WCAG) 2.2](https://w3c.github.io/wcag/guidelines/22/#dfn-relative-luminance) definition of relative luminance
 
 ## Contributors
 

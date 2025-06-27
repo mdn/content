@@ -21,7 +21,7 @@ A string.
 
 ### Setting the theme color for dark mode
 
-The following example creates a new `<meta>` element with a `name` attribute set to [`theme-color`](/en-US/docs/Web/HTML/Reference/Elements/meta/name#standard_metadata_names_defined_in_the_html_specification).
+The following example creates a new `<meta>` element with a `name` attribute set to [`theme-color`](/en-US/docs/Web/HTML/Reference/Elements/meta/name#meta_names_defined_in_the_html_specification).
 The `content` attribute is set to `#3c790a`, the `media` attribute is set to `prefers-color-scheme: dark`, and the element is appended to the document `<head>`.
 When a user has specified a dark mode in their operating system, the `media` property can be used to set a different `theme-color`:
 

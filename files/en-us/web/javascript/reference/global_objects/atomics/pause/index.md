@@ -1,5 +1,6 @@
 ---
 title: Atomics.pause()
+short-title: pause()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/pause
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.pause

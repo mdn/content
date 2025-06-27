@@ -85,7 +85,8 @@ You can specify an expiration date or time period after which the cookie should 
   Set-Cookie: id=a3fWa; Max-Age=2592000
   ```
 
-  > **Note:** `Expires` has been available for longer than `Max-Age`, however `Max-Age` is less error-prone, and takes precedence when both are set. The rationale behind this is that when you set an `Expires` date and time, they're relative to the client the cookie is being set on. If the server is set to a different time, this could cause errors.
+  > [!NOTE]
+  > `Expires` has been available for longer than `Max-Age`, however `Max-Age` is less error-prone, and takes precedence when both are set. The rationale behind this is that when you set an `Expires` date and time, they're relative to the client the cookie is being set on. If the server is set to a different time, this could cause errors.
 
 - _Session_ cookies — cookies without a `Max-Age` or `Expires` attribute – are deleted when the current session ends. The browser defines when the "current session" ends, and some browsers use _session restoring_ when restarting. This can cause session cookies to last indefinitely.
 
@@ -170,14 +171,12 @@ The `Domain` and `Path` attributes define the _scope_ of a cookie: what URLs the
   ```
 
   The `%x2F` ("/") character is considered a directory separator, and subdirectories match as well. For example, if you set `Path=/docs`, these request paths match:
-
   - `/docs`
   - `/docs/`
   - `/docs/Web/`
   - `/docs/Web/HTTP`
 
   But these request paths don't:
-
   - `/`
   - `/docsets`
   - `/fr/docs`

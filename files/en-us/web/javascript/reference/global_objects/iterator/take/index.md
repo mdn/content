@@ -1,5 +1,6 @@
 ---
 title: Iterator.prototype.take()
+short-title: take()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/take
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Iterator.take

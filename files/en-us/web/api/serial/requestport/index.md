@@ -28,9 +28,7 @@ requestPort(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An object with the following properties:
-
     - `filters` {{optional_inline}}
       - : A list of objects containing vendor, product, or Bluetooth service class IDs used to filter the specific device types made available for the user to request a connection to. If no filters are specified, the user is presented with a list of every available device to choose from. Filters can contain the following values:
         - `bluetoothServiceClassId` {{optional_inline}}

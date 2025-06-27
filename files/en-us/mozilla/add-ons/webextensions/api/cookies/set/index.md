@@ -24,9 +24,7 @@ let setting = browser.cookies.set(
 ### Parameters
 
 - `details`
-
   - : An `object` containing the details of the cookie you wish to set. It can have these properties:
-
     - `domain` {{optional_inline}}
       - : A `string` representing the domain of the cookie. If omitted, the cookie becomes a host-only cookie.
     - `expirationDate` {{optional_inline}}
@@ -38,9 +36,7 @@ let setting = browser.cookies.set(
     - `name` {{optional_inline}}
       - : A `string` representing the name of the cookie. If omitted, this is empty by default.
     - `partitionKey` {{optional_inline}}
-
       - : An `object` representing the [storage partition](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#storage_partitioning) to set the cookie in. Include this object to set a cookie in partitioned storage. This object contains:
-
         - `topLevelSite` {{optional_inline}}
           - : A `string` representing the first-party URL of the top-level site storage partition containing the cookie.
 

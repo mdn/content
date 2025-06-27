@@ -101,7 +101,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 The following attributes are deprecated and should not be used. They are documented below for reference when updating existing code and for historical interest only.
 
 - `align` {{deprecated_inline}}
-
   - : Specifies on which side of the table the caption should be displayed. The possible {{Glossary("enumerated", "enumerated")}} values are `left`, `top`, `right`, or `bottom`. Use the {{cssxref("caption-side")}} and {{cssxref("text-align")}} CSS properties instead, as this attribute is deprecated.
 
 ## Usage notes

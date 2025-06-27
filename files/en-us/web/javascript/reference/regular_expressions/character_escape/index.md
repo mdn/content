@@ -24,7 +24,8 @@ A **character escape** represents a character that may not be able to be conveni
 \u{HHH}
 ```
 
-> **Note:** `,` is not part of the syntax.
+> [!NOTE]
+> `,` is not part of the syntax.
 
 ### Parameters
 

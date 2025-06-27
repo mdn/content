@@ -1,5 +1,6 @@
 ---
 title: Math.floor()
+short-title: floor()
 slug: Web/JavaScript/Reference/Global_Objects/Math/floor
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.floor

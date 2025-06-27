@@ -968,7 +968,7 @@ It's not generally useful for strictly bitmap or photographic images, although i
     </tr>
     <tr>
       <th scope="row">Specification</th>
-      <td><a href="https://www.w3.org/TR/SVG2">w3.org/TR/SVG2</a></td>
+      <td><a href="https://svgwg.org/svg2-draft/">Scalable Vector Graphics (SVG) 2</a></td>
     </tr>
     <tr>
       <th scope="row">Browser compatibility</th>

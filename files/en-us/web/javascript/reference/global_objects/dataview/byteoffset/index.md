@@ -1,5 +1,6 @@
 ---
 title: DataView.prototype.byteOffset
+short-title: byteOffset
 slug: Web/JavaScript/Reference/Global_Objects/DataView/byteOffset
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.DataView.byteOffset

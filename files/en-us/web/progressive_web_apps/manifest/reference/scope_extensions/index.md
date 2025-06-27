@@ -2,9 +2,13 @@
 title: scope_extensions
 slug: Web/Progressive_web_apps/Manifest/Reference/scope_extensions
 page-type: web-manifest-member
+status:
+  - experimental
 browser-compat: manifests.webapp.scope_extensions
 sidebar: pwasidebar
 ---
+
+{{SeeCompatTable}}
 
 The `scope_extensions` manifest member is used to extend the scope of a web app to include other origins. This allows multiple domains to be presented as a single web app.
 
@@ -22,9 +26,7 @@ The `scope_extensions` manifest member is used to extend the scope of a web app 
 ### Values
 
 - `scope_extensions`
-
   - : An array of objects each containing the following properties:
-
     - `type`
       - : A string defining the type of scope extension. This is currently always `origin`, but future extensions may add other types.
     - `origin`

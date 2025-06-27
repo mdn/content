@@ -8,7 +8,7 @@ page-type: guide
 
 Matrices can be used to represent transformations of objects in space, and are used for performing many key types of computation when constructing images and visualizing data on the Web. This article explores how to create matrices and how to use them with [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) and the `matrix3d` transform type.
 
-While this article uses [CSS](/en-US/docs/Web/CSS) to simplify explanations, matrices are a core concept used by many different technologies including [WebGL](/en-US/docs/Web/API/WebGL_API), the [WebXR](/en-US/docs/Web/API/WebXR_Device_API) (VR and AR) API, and [GLSL shaders](/en-US/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders). This article is also available as an [MDN content kit](https://github.com/gregtatum/mdn-matrix-math). The live examples use a collection of [utility functions](https://github.com/gregtatum/mdn-webgl) available under a global object named `MDN`.
+While this article uses [CSS](/en-US/docs/Web/CSS) to simplify explanations, matrices are a core concept used by many different technologies including [WebGL](/en-US/docs/Web/API/WebGL_API), the [WebXR](/en-US/docs/Web/API/WebXR_Device_API) (VR and AR) API, and [GLSL shaders](/en-US/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders).
 
 ## Transformation matrices
 
@@ -18,7 +18,8 @@ Let's begin by considering the **identity matrix**. This is a special transforma
 
 The identity matrix looks like this in JavaScript:
 
-```js-nolint
+```js
+// prettier-ignore
 const identityMatrix = [
   1, 0, 0, 0,
   0, 1, 0, 0,
@@ -46,7 +47,7 @@ The `w` component has some additional uses that are out of scope for this articl
 
 In our example code we have defined a function to multiply a matrix and a point — `multiplyMatrixAndPoint()`:
 
-```js
+```js live-sample___translation_matrix_ex live-sample___scale_matrix_ex live-sample___rotation_matrix_ex live-sample___matrix_composition_ex
 // point • matrix
 function multiplyMatrixAndPoint(matrix, point) {
   // Give a simple variable name to each part of the matrix, a column and row number
@@ -123,7 +124,7 @@ Returning the same point is not very useful, but there are other types of matric
 
 In addition to multiplying a matrix and a point together, you can also multiply two matrices together. The function from above can be re-used to help out in this process:
 
-```js
+```js live-sample___translation_matrix_ex live-sample___scale_matrix_ex live-sample___rotation_matrix_ex live-sample___matrix_composition_ex
 // matrixB • matrixA
 function multiplyMatrices(matrixA, matrixB) {
   // Slice the second matrix up into rows
@@ -147,14 +148,33 @@ function multiplyMatrices(matrixA, matrixB) {
     result3[0], result3[1], result3[2], result3[3],
   ];
 }
+
+function multiplyArrayOfMatrices(matrices) {
+  if (matrices.length === 1) {
+    return matrices[0];
+  }
+  return matrices.reduce((result, matrix) => multiplyMatrices(result, matrix));
+}
 ```
 
 Let's look at this function in action:
 
 ```js
-const someMatrix = [4, 0, 0, 0, 0, 3, 0, 0, 0, 0, 5, 0, 4, 8, 4, 1];
+// prettier-ignore
+const someMatrix = [
+  4, 0, 0, 0,
+  0, 3, 0, 0,
+  0, 0, 5, 0,
+  4, 8, 4, 1,
+];
 
-const identityMatrix = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1];
+// prettier-ignore
+const identityMatrix = [
+  1, 0, 0, 0,
+  0, 1, 0, 0,
+  0, 0, 1, 0,
+  0, 0, 0, 1,
+];
 
 // Returns a new array equivalent to someMatrix
 const someMatrixResult = multiplyMatrices(identityMatrix, someMatrix);
@@ -169,12 +189,16 @@ A **translation matrix** is based upon the identity matrix, and is used in 3D gr
 
 You can't actually drink the coffee using only a translation matrix, because to drink it, you have to be able to tilt or rotate the cup to pour the coffee into your mouth. We'll look at the type of matrix (cleverly called a **[rotation matrix](#rotation_matrix)**) you use to do this later.
 
-```js
-const x = 50;
-const y = 100;
-const z = 0;
-
-const translationMatrix = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, x, y, z, 1];
+```js live-sample___translation_matrix_ex live-sample___matrix_composition_ex
+function translate(x, y, z) {
+  // prettier-ignore
+  return [
+    1, 0, 0, 0,
+    0, 1, 0, 0,
+    0, 0, 1, 0,
+    x, y, z, 1,
+  ];
+}
 ```
 
 Place the distances along the three axes in the corresponding positions in the translation matrix, then multiply it by the point or matrix you need to move through 3D space.
@@ -183,34 +207,79 @@ Place the distances along the three axes in the corresponding positions in the t
 
 A really easy way to start using a matrix is to use the CSS {{cssxref("transform-function/matrix3d","matrix3d()")}} {{cssxref("transform")}}. First we'll set up a simple {{htmlelement("div")}} with some content. The style is not shown, but it's set to a fixed width and height and is centered on the page. The `<div>` has a transition set for the transform so that matrix is animated in making it easy to see what is being done.
 
-```html
+```html live-sample___translation_matrix_ex live-sample___scale_matrix_ex live-sample___rotation_matrix_ex live-sample___matrix_composition_ex
+<div class="transformable ghost">
+  <h2>Move me with a matrix</h2>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+</div>
+
 <div id="move-me" class="transformable">
   <h2>Move me with a matrix</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
 </div>
+```
+
+```css hidden live-sample___translation_matrix_ex live-sample___scale_matrix_ex live-sample___rotation_matrix_ex live-sample___matrix_composition_ex
+.transformable {
+  width: 200px;
+  height: 200px;
+  overflow-y: scroll;
+  background: #4cc;
+  padding: 10px;
+  border: 2px solid #333;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -100px;
+  margin-top: -100px;
+  transition: transform 500ms;
+}
+.transformable h2 {
+  margin-top: 0;
+}
+.ghost {
+  opacity: 0.1;
+  pointer-events: none;
+}
 ```
 
 Finally, for each example, we will generate a 4×4 matrix, then update the `<div>`'s style to have a transform applied to it, set to a `matrix3d`. Bear in mind that even though the matrix is made up of 4 rows and 4 columns, it collapses into a single line of 16 values. Matrices are always stored in one-dimensional lists in JavaScript.
 
-```js
+```js live-sample___translation_matrix_ex live-sample___scale_matrix_ex live-sample___rotation_matrix_ex live-sample___matrix_composition_ex
 // Create the matrix3d style property from a matrix array
 function matrixArrayToCssMatrix(array) {
   return `matrix3d(${array.join(",")})`;
 }
 
-// Grab the DOM element
 const moveMe = document.getElementById("move-me");
 
-// Returns a result like: "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 50, 100, 0, 1);"
-const matrix3dRule = matrixArrayToCssMatrix(translationMatrix);
-
-// Set the transform
-moveMe.style.transform = matrix3dRule;
+function setTransform(matrix) {
+  moveMe.style.transform = matrixArrayToCssMatrix(matrix);
+}
 ```
 
-[View on JSFiddle](https://jsfiddle.net/tatumcreative/g24mgw6y/)
+For one example, we use the `translate()` function from the [translation matrix](#translation_matrix) section above to move the `<div>` down 100 pixels and to the right 50 pixels. The `z` value is set to 0, so it doesn't move in the third dimension.
 
-![An example of matrix translation](matrix-translation.jpg)
+```js live-sample___translation_matrix_ex
+const translationMatrix = translate(50, 100, 0);
+setTransform(translationMatrix);
+```
+
+{{EmbedLiveSample("translation_matrix_ex", "", 350)}}
 
 ## Scale matrix
 
@@ -218,17 +287,24 @@ A **scale matrix** makes something larger or smaller in one or more of the three
 
 The amount of change to apply to each of the width, height, and depth is placed diagonally starting at the top-left corner and making their way down toward the bottom-right.
 
-```js
-const w = 1.5; // width  (x)
-const h = 0.7; // height (y)
-const d = 1; // depth  (z)
-
-const scaleMatrix = [w, 0, 0, 0, 0, h, 0, 0, 0, 0, d, 0, 0, 0, 0, 1];
+```js live-sample___scale_matrix_ex live-sample___matrix_composition_ex
+function scale(x, y, z) {
+  // prettier-ignore
+  return [
+    x, 0, 0, 0,
+    0, y, 0, 0,
+    0, 0, z, 0,
+    0, 0, 0, 1,
+  ];
+}
 ```
 
-[View on JSFiddle](https://jsfiddle.net/tatumcreative/fndd6e1b/)
+```js live-sample___scale_matrix_ex
+const scaleMatrix = scale(1.5, 0.7, 1);
+setTransform(scaleMatrix);
+```
 
-![An example of matrix scaling](matrix-scale.jpg)
+{{EmbedLiveSample("scale_matrix_ex", "", 350)}}
 
 ## Rotation matrix
 
@@ -252,35 +328,13 @@ const transformedPoint = [
 ];
 ```
 
-It is possible to encode these type of steps into a matrix, and do it for each of the `x`, `y`, and `z` dimensions. Below is the representation of a counterclockwise rotation about the Z axis in a left-handed coordinate system:
+It is possible to encode these type of steps into a matrix, and do it for each of the `x`, `y`, and `z` dimensions. Here are a set of functions that return rotation matrices for rotating around each of the three axes. One big note is that there is no perspective applied, so it might not feel very 3D yet. The flatness is equivalent to when a camera zooms in really close onto an object in the distance — the sense of perspective disappears.
 
-```js
+```js live-sample___rotation_matrix_ex live-sample___matrix_composition_ex
 const sin = Math.sin;
 const cos = Math.cos;
 
-// NOTE: There is no perspective in these transformations, so a rotation
-//       at this point will only appear to only shrink the div
-
-const a = Math.PI * 0.3; // Rotation amount in radians
-
-// Rotate around Z axis
-// prettier-ignore
-const rotateZMatrix = [
-  cos(a), -sin(a), 0, 0,
-  sin(a), cos(a), 0, 0,
-  0, 0, 1, 0,
-  0, 0, 0, 1,
-];
-```
-
-[View on JSFiddle](https://jsfiddle.net/tatumcreative/9vr2dorz/)
-
-![An example of matrix rotation.](matrix-rotation.jpg)
-
-Here are a set of functions that return rotation matrices for rotating around each of the three axes. One big note is that there is no perspective applied, so it might not feel very 3D yet. The flatness is equivalent to when a camera zooms in really close onto an object in the distance — the sense of perspective disappears.
-
-```js
-function rotateAroundXAxis(a) {
+function rotateX(a) {
   // prettier-ignore
   return [
     1, 0, 0, 0,
@@ -290,7 +344,7 @@ function rotateAroundXAxis(a) {
   ];
 }
 
-function rotateAroundYAxis(a) {
+function rotateY(a) {
   // prettier-ignore
   return [
     cos(a), 0, sin(a), 0,
@@ -300,7 +354,7 @@ function rotateAroundYAxis(a) {
   ];
 }
 
-function rotateAroundZAxis(a) {
+function rotateZ(a) {
   // prettier-ignore
   return [
     cos(a), -sin(a), 0, 0,
@@ -311,7 +365,12 @@ function rotateAroundZAxis(a) {
 }
 ```
 
-[View on JSFiddle](https://jsfiddle.net/tatumcreative/tk072doc/)
+```js live-sample___rotation_matrix_ex
+const rotateZMatrix = rotateZ(Math.PI * 0.3);
+setTransform(rotateZMatrix);
+```
+
+{{EmbedLiveSample("rotation_matrix_ex", "", 350)}}
 
 ## Matrix composition
 
@@ -327,28 +386,28 @@ transformation = rotate * translate * scale
 
 ### Composing multiple transformations
 
-The function that we will be using to compose our matrices is `multiplyArrayOfMatrices()`, which is part of the set of [utility functions](https://github.com/gregtatum/mdn-webgl) introduced near the top of this article. It takes an array of matrices and multiplies them together, returning the result. In WebGL shader code, this is built into the language and the `*` operator can be used. Additionally this example uses `scale()` and `translate()` functions, which return matrices as defined above.
+The function that we will be using to compose our matrices is `multiplyArrayOfMatrices()`, which is part of the set of utility functions introduced near the top of this article. It takes an array of matrices and multiplies them together, returning the result. In WebGL shader code, this is built into the language and the `*` operator can be used.
 
-```js
-const transformMatrix = MDN.multiplyArrayOfMatrices([
-  rotateAroundZAxis(Math.PI * 0.5), // Step 3: rotate around 90 degrees
+```js live-sample___matrix_composition_ex
+const transformMatrix = multiplyArrayOfMatrices([
+  rotateZ(Math.PI * 0.5), // Step 3: rotate around 90 degrees
   translate(0, 200, 0), // Step 2: move down 200 pixels
   scale(0.8, 0.8, 0.8), // Step 1: scale down
 ]);
+
+setTransform(transformMatrix);
 ```
 
-[View on JSFiddle](https://jsfiddle.net/tatumcreative/qxxg3yvc/)
-
-![An example of matrix composition](matrix-composition.jpg)
+{{EmbedLiveSample("matrix_composition_ex", "", 350)}}
 
 Finally, a fun step to show how matrices work is to reverse the steps to bring the matrix back to the original identity matrix.
 
 ```js
-const transformMatrix = MDN.multiplyArrayOfMatrices([
+const transformMatrix = multiplyArrayOfMatrices([
   scale(1.25, 1.25, 1.25), // Step 6: scale back up
   translate(0, -200, 0), // Step 5: move back up
-  rotateAroundZAxis(-Math.PI * 0.5), // Step 4: rotate back
-  rotateAroundZAxis(Math.PI * 0.5), // Step 3: rotate around 90 degrees
+  rotateZ(-Math.PI * 0.5), // Step 4: rotate back
+  rotateZ(Math.PI * 0.5), // Step 3: rotate around 90 degrees
   translate(0, 200, 0), // Step 2: move down 200 pixels
   scale(0.8, 0.8, 0.8), // Step 1: scale down
 ]);

@@ -154,6 +154,13 @@ For more information, refer to the [CORS documentation](/en-US/docs/Web/HTTP/Gui
   - : States the wish for a {{HTTPHeader("Repr-Digest")}} header.
     It is the `Repr-` analogue of {{HTTPHeader("Want-Content-Digest")}}.
 
+## Integrity policy
+
+- {{HTTPHeader("Integrity-Policy")}}
+  - : Ensures that all resources the user agent loads (of a certain type) have [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity) guarantees.
+- {{HTTPHeader("Integrity-Policy-Report-Only")}}
+  - : Reports on resources that the user agent loads that would violate [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity) guarantees if the integrity policy were enforced (using the `Integrity-Policy` header).
+
 ## Message body information
 
 - {{HTTPHeader("Content-Length")}}
@@ -503,7 +510,7 @@ See the [Topics API](/en-US/docs/Web/API/Topics_API) documentation for more info
 - {{HTTPHeader("X-DNS-Prefetch-Control")}} {{non-standard_inline}}
   - : Controls DNS prefetching, a feature by which browsers proactively perform domain name resolution on both links that the user may choose to follow as well as URLs for items referenced by the document, including images, CSS, JavaScript, and so forth.
 - {{HTTPHeader("X-Robots-Tag")}} {{non-standard_inline}}
-  - : The [`X-Robots-Tag`](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag) HTTP header is used to indicate how a web page is to be indexed within public search engine results. The header is effectively equivalent to `<meta name="robots" content="…">`.
+  - : The [`X-Robots-Tag`](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag) HTTP header is used to indicate how a web page is to be indexed within public search engine results. The header is equivalent to [`<meta name="robots">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/robots) elements.
 
 ## Deprecated headers
 

@@ -61,7 +61,7 @@ The problem here is that visually they work, but screen readers can't make any s
 
 ### Enter WAI-ARIA
 
-[WAI-ARIA](https://www.w3.org/TR/wai-aria/) (Web Accessibility Initiative - Accessible Rich Internet Applications) is a specification written by the W3C, defining a set of additional HTML attributes that can be applied to elements to provide additional semantics and improve accessibility wherever it is lacking. There are three main features defined in the spec:
+[WAI-ARIA](https://w3c.github.io/aria/) (Web Accessibility Initiative - Accessible Rich Internet Applications) is a specification written by the W3C, defining a set of additional HTML attributes that can be applied to elements to provide additional semantics and improve accessibility wherever it is lacking. There are three main features defined in the spec:
 
 - [Roles](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles)
   - : These define what an element is or does. Many of these are so-called landmark roles, which largely duplicate the semantic value of structural elements, such as `role="navigation"` ({{htmlelement("nav")}}), `role="banner"` (document {{htmlelement("header")}}), `role="complementary"` ({{htmlelement("aside")}}) or , `role="search"` ({{htmlelement("search")}}). Some other roles describe different page structures that do not have elements with that match those roles, such as `role="tablist"`, and `role="tabpanel"`, which are commonly found in UIs.
@@ -73,9 +73,9 @@ The problem here is that visually they work, but screen readers can't make any s
 An important point about WAI-ARIA attributes is that they don't affect anything about the web page, except for the information exposed by the browser's accessibility APIs (where screen readers get their information from). WAI-ARIA doesn't affect webpage structure, the DOM, etc., although the attributes can be useful for selecting elements by CSS.
 
 > [!NOTE]
-> You can find a useful list of all the ARIA roles and their uses, with links to further information, in the WAI-ARIA spec — see [Definition of Roles](https://www.w3.org/TR/wai-aria-1.1/#role_definitions) — on this site — see [ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles).
+> You can find a useful list of all the ARIA roles and their uses, with links to further information, in the WAI-ARIA spec — see [Definition of Roles](https://w3c.github.io/aria/#role_definitions) — on this site — see [ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles).
 >
-> The spec also contains a list of all the properties and states, with links to further information — see [Definitions of States and Properties (all `aria-*` attributes)](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def).
+> The spec also contains a list of all the properties and states, with links to further information — see [Definitions of States and Properties (all `aria-*` attributes)](https://w3c.github.io/aria/#state_prop_def).
 
 ### Where is WAI-ARIA supported?
 
@@ -126,7 +126,7 @@ See our section on [testing screen readers](/en-US/docs/Learn_web_development/Co
 
 ### Signposts/Landmarks
 
-WAI-ARIA adds the [`role` attribute](https://www.w3.org/TR/wai-aria-1.1/#role_definitions) to browsers, which allows you to add extra semantic value to elements on your site wherever they are needed. The first major area in which this is useful is providing information for screen readers so that their users can find common page elements. This example has the following structure:
+WAI-ARIA adds the [`role` attribute](https://w3c.github.io/aria/#role_definitions) to browsers, which allows you to add extra semantic value to elements on your site wherever they are needed. The first major area in which this is useful is providing information for screen readers so that their users can find common page elements. This example has the following structure:
 
 ```html live-sample___aria-website-no-roles
 <header>
@@ -1234,7 +1234,7 @@ This article has by no means covered all that's available in WAI-ARIA, but it sh
 
 - [Aria states and properties](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes): All `aria-*` attributes
 - [WAI-ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles): Categories of ARIA roles and the roles covered on MDN
-- [ARIA in HTML](https://www.w3.org/TR/html-aria/) on W3C: A specification that defines, for each HTML feature, the accessibility (ARIA) semantics implicitly applied on it by the browser and the WAI-ARIA features you may set on it if extra semantics are required
+- [ARIA in HTML](https://w3c.github.io/html-aria/) on W3C: A specification that defines, for each HTML feature, the accessibility (ARIA) semantics implicitly applied on it by the browser and the WAI-ARIA features you may set on it if extra semantics are required
 - [Deque university code library](https://dequeuniversity.com/library/): A library of really useful and practical examples showing complex UI controls made accessible using WAI-ARIA features
 - [WAI-ARIA authoring practices](https://www.w3.org/WAI/ARIA/apg/) on W3C: A very detailed design pattern from the W3C, explaining how to implement different types of complex UI control whilst making them accessible using WAI-ARIA features
 

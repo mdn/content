@@ -1,5 +1,6 @@
 ---
 title: Object.freeze()
+short-title: freeze()
 slug: Web/JavaScript/Reference/Global_Objects/Object/freeze
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.freeze

@@ -50,7 +50,6 @@ Firefox 21 was released on May 14, 2013. This article lists key changes that are
 ### Networking
 
 - We continue to update our CSP implementation to match the CSP 1.0 spec, which reached Candidate Recommendation:
-
   - Support for the spec-compliant `Content-Security-Policy` HTTP header (in addition to the experimental `X-Content-Security-Policy`) has been added ([Firefox bug 783049](https://bugzil.la/783049)).
     > [!NOTE]
     > The patch for this new header landed in Firefox 21, it is disabled on builds ([Firefox bug 842657](https://bugzil.la/842657)).
@@ -65,9 +64,7 @@ Firefox 21 was released on May 14, 2013. This article lists key changes that are
 - `resource:///modules/` and `resource://gre/modules/` are no longer identical ([Firefox bug 755724](https://bugzil.la/755724)). This change was made because of work on the metro version of Firefox. If you load modules using `resource:///modules/`, you should check if you now want to use `resource://gre/modules/` instead. Note that some modules also moved from Firefox to Toolkit ([Firefox bug 840287](https://bugzil.la/840287) and [Firefox bug 811548](https://bugzil.la/811548) moved `NewTabUtils.jsm` and the thumbnail modules, respectively).
 - The Add-on SDK is now included in Firefox ([Firefox bug 731779](https://bugzil.la/731779))
 - History API saw numerous deprecated API being removed:
-
   - Replaced by `mozIAsyncFavicons`:
-
     - `nsIFaviconService::setFaviconUrlForPage`
     - `nsIFaviconService::setFaviconData`
     - `nsIFaviconService::getFaviconData`
@@ -77,33 +74,27 @@ Firefox 21 was released on May 14, 2013. This article lists key changes that are
     - `nsIFaviconService::getFaviconDataAsDataURL`
 
   - Replaced by `mozIAsyncLivemarks`:
-
     - `nsILivemarkService::*`
     - `PlacesUtils.itemIsLivemark`
     - `PlacesUtils.nodeIsLivemarkContainer`
     - `PlacesUtils.nodeIsLivemarkItem`
 
   - Removed only third argument:
-
     - `PlacesUIUtils.showBookmarkDialog`
 
   - No more implemented by Places, use `mozIAsyncHistory` instead:
-
     - `nsIGlobalHistory2::addURI`
     - `nsIGlobalHistory2::isVisited`
     - `nsIGlobalHistory2::setPageTitle`
 
   - No more needed, use `onDeleteURI` or `onItemRemoved`:
-
     - `nsINavHistoryObserver::OnBeforeDeleteURI`
     - `nsINavBookmarkObserver::OnBeforeItemRemoved`
 
   - Never implemented properly:
-
     - `nsINavHistoryFullVisitResultNode`
 
   - Deprecated, use `mozIAsyncHistory::updatePlaces` instead:
-
     - `nsINavHistoryService::AddVisit`
 
 - Added `nsIHttpChannel.redirectTo` to enable redirecting HTTP channels without fragile hacks.

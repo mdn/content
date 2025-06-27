@@ -6168,15 +6168,6 @@
       "rachelandrew"
     ]
   },
-  "Learn_web_development/Core/CSS_layout/Test_your_skills/Multicolumn": {
-    "modified": "2020-07-16T22:27:35.746Z",
-    "contributors": [
-      "jpfkd",
-      "MelchiorIm3Tal",
-      "chrisdavidmills",
-      "rachelandrew"
-    ]
-  },
   "Learn_web_development/Core/CSS_layout/Test_your_skills/Position": {
     "modified": "2020-07-16T22:27:34.985Z",
     "contributors": [
@@ -7511,6 +7502,10 @@
     "modified": "2020-08-29T02:34:36.621Z",
     "contributors": ["SnakeWhisperer", "onurbasturk", "chrisdavidmills"]
   },
+  "Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video": {
+    "modified": "2020-11-20T14:20:14.413Z",
+    "contributors": ["philou", "gdsimoes", "chrisdavidmills"]
+  },
   "Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics": {
     "modified": "2020-08-27T05:38:52.761Z",
     "contributors": ["SnakeWhisperer", "chrisdavidmills"]
@@ -7522,10 +7517,6 @@
   "Learn_web_development/Core/Structuring_content/Test_your_skills/Links": {
     "modified": "2020-08-28T04:26:18.208Z",
     "contributors": ["SnakeWhisperer", "chrisdavidmills", "onurbasturk"]
-  },
-  "Learn_web_development/Core/Structuring_content/Test_your_skills/Multimedia_and_embedding": {
-    "modified": "2020-11-20T14:20:14.413Z",
-    "contributors": ["philou", "gdsimoes", "chrisdavidmills"]
   },
   "Learn_web_development/Core/Structuring_content/Webpage_metadata": {
     "modified": "2020-09-28T22:06:13.983Z",
@@ -7878,17 +7869,9 @@
     "modified": "2020-07-16T22:29:34.677Z",
     "contributors": ["jpfkd", "sakthivelsekar33", "blueblots", "rachelandrew"]
   },
-  "Learn_web_development/Core/Styling_basics/Test_your_skills/Tables": {
-    "modified": "2020-10-03T15:51:56.524Z",
-    "contributors": ["JennyDC", "blueblots", "rachelandrew"]
-  },
   "Learn_web_development/Core/Styling_basics/Test_your_skills/Values": {
     "modified": "2020-10-03T15:56:43.195Z",
     "contributors": ["JennyDC", "blueblots", "rachelandrew"]
-  },
-  "Learn_web_development/Core/Styling_basics/Test_your_skills/Writing_modes": {
-    "modified": "2020-07-16T22:29:33.477Z",
-    "contributors": ["blueblots", "rachelandrew"]
   },
   "Learn_web_development/Core/Styling_basics/Values_and_units": {
     "modified": "2020-09-27T15:04:48.072Z",
@@ -41220,6 +41203,10 @@
       "Enn"
     ]
   },
+  "Web/API/HTML_Sanitizer_API": {
+    "modified": "2020-12-13T12:18:13.088Z",
+    "contributors": ["Rumyra"]
+  },
   "Web/API/HashChangeEvent": {
     "modified": "2020-10-15T21:29:11.207Z",
     "contributors": [
@@ -56617,6 +56604,14 @@
       "Sheppy",
       "Jeremie"
     ]
+  },
+  "Web/API/Sanitizer": {
+    "modified": "2020-12-13T12:17:05.573Z",
+    "contributors": ["Rumyra"]
+  },
+  "Web/API/Sanitizer/Sanitizer": {
+    "modified": "2020-12-13T12:21:15.482Z",
+    "contributors": ["Rumyra"]
   },
   "Web/API/Screen": {
     "modified": "2020-10-15T21:29:41.001Z",

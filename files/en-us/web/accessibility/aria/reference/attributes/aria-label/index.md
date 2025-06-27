@@ -38,7 +38,8 @@ document.querySelector("button").addEventListener("click", () => {
 });
 ```
 
-> **Note:** `aria-label` is intended for naming elements where the implicit or explicit role does not prohibit naming. It is strongly recommended to prioritize the use of `aria-labelledby` over `aria-label` if a visible label exists for the element to reference and receive its name from.
+> [!NOTE]
+> `aria-label` is intended for naming elements where the implicit or explicit role does not prohibit naming. It is strongly recommended to prioritize the use of `aria-labelledby` over `aria-label` if a visible label exists for the element to reference and receive its name from.
 
 Most content has an accessible name generated from its immediate wrapping element's text content. Accessible names can also be created by certain attributes or associated elements.
 

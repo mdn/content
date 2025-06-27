@@ -1,5 +1,6 @@
 ---
 title: Math.atan2()
+short-title: atan2()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan2
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.atan2

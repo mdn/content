@@ -62,7 +62,6 @@ In order for data to get back and forth, we need the following things:
 - **DNS**: The **Domain Name System** (DNS) is like an address book for websites. When you type a web address in your browser, the browser looks at the DNS to find the website's IP address — the actual address the server is located at — before it can retrieve the website (see [DNS explained](#dns_explained) below for more information). The browser needs to find out which server the website lives on, so it can send HTTP messages to the right place (see below). This is like looking up the address of the shop before you visit it.
 - **HTTP**: **Hypertext Transfer Protocol** (HTTP) is an application {{Glossary("Protocol", "protocol")}} that defines a language for clients and servers to speak to each other. This is like the language you use to order your goods. See [HTTP basics](#http_basics) below.
 - **Files**: A website is made up of many different files, which are like the different goods you buy from the shop. These files come in two main types:
-
   - **Code**: Websites are built primarily from HTML, CSS, and JavaScript — the different programming languages websites are written in, which the browser interprets and assembles into a web page to display to a user.
   - **Assets**: This is a collective term for all the other items that appear on a website — such as images, music, video, Word documents, and PDFs — that aren't code that the browser interprets.
 
@@ -86,13 +85,11 @@ This is called an {{Glossary("IP Address", "IP address")}}, and it represents a 
 
 Websites can be reached directly via their IP addresses. You can use a DNS lookup tool to find the IP address of a website.
 
-> [!CALLOUT]
->
-> **Try it out**
->
-> 1. Go to the [NsLookup.io DNS lookup tool](https://www.nslookup.io/website-to-ip-lookup/), type in `developer.mozilla.org`, and press the button.
-> 2. In the results screen, copy the IP Address (the IPv4 address) to your system clipboard.
-> 3. Open a new browser tab, paste the IP Address into the address bar and press <kbd>Enter</kbd>/<kbd>Return</kbd>. You should see MDN load up, proving that the IP address points to it.
+Let's look up the MDN IP address now, and prove that it points to the same place as the web address:
+
+1. Go to the [NsLookup.io DNS lookup tool](https://www.nslookup.io/website-to-ip-lookup/), type in `developer.mozilla.org`, and press the button.
+2. In the results screen, copy the IP Address (the IPv4 address) to your system clipboard.
+3. Open a new browser tab, paste the IP Address into the address bar and press <kbd>Enter</kbd>/<kbd>Return</kbd>. You should see MDN load up, proving that the IP address points to it.
 
 ## Packets explained
 
@@ -173,7 +170,6 @@ The main parts of the URL are:
 - `developer.mozilla.org`
   - : The [**domain name**](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name) of the URL, which represents the top-level location of the server you are connecting to. In this case, the web address you typed in is equal to the domain name, but this is not always the case — you could choose to type in a more complicated web address. Note that the `developer` part is a **subdomain** (distinct content area) of Mozilla's `mozilla.org` domain. There are other subdomains on Mozilla's site that host distinct content — see [support.mozilla.org](https://support.mozilla.org/) and [bugzilla.mozilla.org](https://bugzilla.mozilla.org/), for example.
 - `/en-US/`
-
   - : The **path** to the resource on the server that you are accessing. MDN keeps all its US English content in a folder called `en-US`, which is what this URL is pointing to.
 
     If you have your browser set up to prefer English content by default, then this is the URL you will be redirected to when you type in `developer.mozilla.org`. If you have your browser set up to prefer a different language that MDN supports, such as French, you will be redirected to a different URL, such as `https://developer.mozilla.org/fr/` instead. This isn't available to every website by default; the MDN developers have set MDN up like this to allow people to easily access the language they prefer.

@@ -1,5 +1,6 @@
 ---
 title: Set.prototype.isDisjointFrom()
+short-title: isDisjointFrom()
 slug: Web/JavaScript/Reference/Global_Objects/Set/isDisjointFrom
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.isDisjointFrom

@@ -1,5 +1,6 @@
 ---
 title: Date.prototype.setYear()
+short-title: setYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setYear
 page-type: javascript-instance-method
 status:

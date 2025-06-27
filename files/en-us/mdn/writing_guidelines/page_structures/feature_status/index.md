@@ -55,17 +55,14 @@ browser-compat: api.feature
 The following macros are used to render the status banners in page headers:
 
 - `\{{Deprecated_Header}}`
-
   - : For `deprecated` status. It generates a **Deprecated status** banner:
     {{deprecated_header}}
 
 - `\{{SeeCompatTable}}`
-
   - : For `experimental` status. It generates an **Experimental status** banner:
     {{SeeCompatTable}}
 
 - `\{{Non-standard_Header}}`
-
   - : For `non-standard` status. It generates a **Non-Standard status** banner:
     {{Non-standard_Header}}
 

@@ -1,5 +1,6 @@
 ---
 title: BigInt.asIntN()
+short-title: asIntN()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/asIntN
 page-type: javascript-static-method
 browser-compat: javascript.builtins.BigInt.asIntN
@@ -66,7 +67,8 @@ If the leading bit of the remaining number is `1`, the result is negative. For e
 ===>      1001 (base 2) = -7n
 ```
 
-> **Note:** `BigInt` values are always encoded as two's complement in binary.
+> [!NOTE]
+> `BigInt` values are always encoded as two's complement in binary.
 
 Unlike similar language APIs such as {{jsxref("Number.prototype.toExponential()")}}, `asIntN` is a static property of {{jsxref("BigInt")}}, so you always use it as `BigInt.asIntN()`, rather than as a method of a BigInt value. Exposing `asIntN()` as a "standard library function" allows [interop with asm.js](https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs).
 
