@@ -20,8 +20,8 @@ For example, the following `<meta>` tag tells the browser to refresh the page af
 
 ## Value
 
-The attribute's name is short for `http-equivalent` because the allowed values are names of equivalent HTTP headers.
-The HTML specification defines the following set of `http-equiv` values:
+Only a subset of the HTTP headers are supported as `http-equiv` values.
+These include:
 
 - `content-language` {{deprecated_inline}}
   - : Sets a default language for the document used by assistive technologies or styling by the browser.
