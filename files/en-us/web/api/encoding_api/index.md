@@ -12,7 +12,7 @@ spec-urls: https://encoding.spec.whatwg.org/
 
 {{DefaultAPISidebar("Encoding API")}}{{AvailableInWorkers}}
 
-The **Encoding API** enables web developers to work with text that is represented in {{Glossary("character encoding")}} systems other than the {{glossary("UTF-16")}} system used internally by JavaScript strings, in particular the {{glossary("UTF-8")}} system that is used for most documents on the web.
+The **Encoding API** enables web developers to work with text that is represented in {{Glossary("character encoding", "character encodings")}} systems other than the encoding used internally by JavaScript strings, in particular the {{glossary("UTF-8")}} system that is used for most documents on the web.
 
 It provides two mechanisms:
 
