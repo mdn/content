@@ -125,7 +125,7 @@ _The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDo
 - Named properties
   - : Some elements in the document are also exposed as properties:
     - For each {{HTMLElement("embed")}}, {{HTMLElement("form")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, and {{HTMLElement("object")}} element, its `name` (if non-empty) is exposed.
-      For example, if the document contains `<form name="my_form">`, then `document["my_form"]` and `document.my_form` both return a reference to that element.
+      For example, if the document contains `<form name="my_form">`, then `document["my_form"]` (and its equivalent `document.my_form`) returns a reference to that element.
     - For each {{HTMLElement("object")}} element, its `id` (if non-empty) is exposed.
     - For each {{HTMLElement("img")}} element with non-empty `name`, its `id` (if non-empty) is exposed.
 
