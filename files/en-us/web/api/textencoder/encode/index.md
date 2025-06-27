@@ -8,7 +8,7 @@ browser-compat: api.TextEncoder.encode
 
 {{APIRef("Encoding API")}}{{AvailableInWorkers}}
 
-The **`TextEncoder.encode()`** method takes a string as input, and returns a {{jsxref("Global_Objects/Uint8Array", "Uint8Array")}} containing the string encoded using the {{glossary("UTF-8")}} character encoding system.
+The **`TextEncoder.encode()`** method takes a string as input, and returns a {{jsxref("Global_Objects/Uint8Array", "Uint8Array")}} containing the string {{glossary("character encoding", "encoded")}} using {{glossary("UTF-8")}}.
 
 ## Syntax
 

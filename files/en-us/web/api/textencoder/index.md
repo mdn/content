@@ -7,7 +7,7 @@ browser-compat: api.TextEncoder
 
 {{APIRef("Encoding API")}}{{AvailableInWorkers}}
 
-The **`TextEncoder`** interface enables you to encode a JavaScript string using the {{glossary("UTF-8")}} character encoding system.
+The **`TextEncoder`** interface enables you to {{glossary("character encoding", "encode")}} a JavaScript string using {{glossary("UTF-8")}}.
 
 ## Constructor
 

@@ -7,7 +7,7 @@ browser-compat: api.TextDecoder
 
 {{APIRef("Encoding API")}}{{AvailableInWorkers}}
 
-The **`TextDecoder`** interface represents a decoder for a specific text encoding, such as `UTF-8`, `ISO-8859-2`, or `GBK`. A decoder takes an array of binary data as input and returns a JavaScript string.
+The **`TextDecoder`** interface represents a decoder for a specific text encoding, such as `UTF-8`, `ISO-8859-2`, or `GBK`. A decoder takes an array of bytes as input and returns a JavaScript string.
 
 ## Constructor
 
@@ -30,7 +30,7 @@ _The `TextDecoder` interface doesn't inherit any properties._
 _The `TextDecoder` interface doesn't inherit any methods_.
 
 - {{DOMxRef("TextDecoder.decode()")}}
-  - : Decodes the given binary data into a JavaScript string and returns it.
+  - : Decodes the given bytes into a JavaScript string and returns it.
 
 ## Examples
 
