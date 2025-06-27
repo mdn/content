@@ -81,7 +81,7 @@ Intl.DateTimeFormat(locales, options)
 - `hourCycle`
   - : The hour cycle to use. Possible values are `"h11"`, `"h12"`, `"h23"`, and `"h24"`. This option can also be set through the `hc` Unicode extension key; if both are provided, this `options` property takes precedence.
 - `timeZone`
-  - : The time zone to use. Time zone names correspond to the Zone and Link names of the [IANA Time Zone Database](https://www.iana.org/time-zones), such as `"UTC"`, `"Asia/Shanghai"`, `"Asia/Kolkata"`, and `"America/New_York"`. Additionally, time zones can be given as UTC offsets in the format "Etc/GMT∓hh", "±hh:mm", "±hhmm", or "±hh", for example as `"Etc/GMT+8"`, `"+01:00"`, `"-2359"`, or `"+23"`. The default is the runtime's default time zone.
+  - : The time zone to use. Can be any [IANA time zone name](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets), including named identifiers such as `"UTC"`, `"America/New_York"`, and `"Etc/GMT+8"`, and offset identifiers such as `"+01:00"`, `"-2359"`, and `"+23"`.
 
 #### Date-time component options
 
