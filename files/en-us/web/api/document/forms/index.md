@@ -13,10 +13,12 @@ The **`forms`** read-only property of the {{domxref("Document")}} interface retu
 > [!NOTE]
 > Similarly, you can access a list of a form's component user input elements using the {{domxref("HTMLFormElement.elements")}} property.
 
-Named `<form>` elements are also exposed as properties of the `document` object itself.
-For example, `document["login-form"]` and `document.forms["login-form"]` can both access the form named `login-form`. Relying on this behavior is dangerous and discouraged.
-It can lead to unexpected conflicts with some existing or future APIs in the browser.
-For example, if browsers introduce a new `document` property with the same name as your form, then the same code will no longer be able to access the form element. Always use `document.forms` instead.
+> [!WARNING]
+> Though you can access named `<form>` elements as properties of the `document` object itself, relying on this behavior is dangerous and discouraged.
+> For example, `document["login-form"]` and `document.forms["login-form"]` can both access the form named `login-form`. 
+> However, using `document["login-form"]` can lead to unexpected conflicts with existing or future APIs in the browser.
+> For example, if a browser introduces a built-in `document["login-form"]` property in the future, your code will no longer be able to access your form element.
+> To avoid such conflicts, always use `document.forms` to access named forms.
 
 ## Value
 
