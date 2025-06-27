@@ -10,7 +10,7 @@ page-type: glossary-definition
 
 ## Historical context
 
-Early SPAs could not change the [path](/en-US/docs/Web/URI/Reference/Path) part of the URL without reloading the page. To work around this, developers used **hash-based SPA routing**, which stores the route in the "[fragment](https://developer.mozilla.org/en-US/docs/Web/URI/Reference/Fragment)", the part of the URL that follows the symbol `#`. Common patterns included `#/profile` and `#!/profile`. Applications continually checked [`window.location.hash`](/en-US/docs/Web/API/Location/hash) (or listened for the [`hashchange`](/en-US/docs/Web/API/Window/hashchange_event) event when it was supported later) to detect fragment changes during user navigation; the SPA then updated the view whenever the fragment changed.
+Early SPAs could not change the [path](/en-US/docs/Web/URI/Reference/Path) part of the URL without reloading the page. To work around this, developers used **hash-based SPA routing**, which stores the route in the "[fragment](/en-US/docs/Web/URI/Reference/Fragment)", the part of the URL that follows the symbol `#`. Common patterns included `#/profile` and `#!/profile`. Applications continually checked [`window.location.hash`](/en-US/docs/Web/API/Location/hash) (or listened for the [`hashchange`](/en-US/docs/Web/API/Window/hashchange_event) event when it was supported later) to detect fragment changes during user navigation; the SPA then updated the view whenever the fragment changed.
 
 ## Limitations
 
