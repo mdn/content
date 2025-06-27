@@ -11,7 +11,7 @@ browser-compat: html.elements.meta.http-equiv
 The **`http-equiv`** attribute of the {{htmlelement("meta")}} element allows you to provide processing instructions for the browser that could otherwise be given in an HTTP header.
 The metadata is _document-level metadata_ that applies to the whole page.
 
-When a `<meta>` element has a `http-equiv` attribute, a [`content`](/en-US/docs/Web/HTML/Reference/Attributes/content) attribute defines the corresponding `http-equiv` value.
+When a `<meta>` element has an `http-equiv` attribute, a [`content`](/en-US/docs/Web/HTML/Reference/Attributes/content) attribute defines the corresponding `http-equiv` value.
 For example, the following `<meta>` tag tells the browser to refresh the page after 5 minutes:
 
 ```html
