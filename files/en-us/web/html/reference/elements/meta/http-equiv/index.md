@@ -56,6 +56,11 @@ These include:
     User agents now ignore this pragma.
     The name derives from the `X-UA-Compatible` HTTP header.
 
+> [!WARNING]
+> Unrecognized headers or invalid values are ignored by the browser.
+> For this reason, **do not set security headers** other than `Content-Security-Policy` using `<meta http-equiv=`, as this can lead to a false sense of security.
+> Some browsers may process headers that are not listed above, but this behavior varies across implementations.
+
 ## Accessibility concerns
 
 Pages set with a `http-equiv="Refresh"` value run the risk of having the refresh interval being too short.
