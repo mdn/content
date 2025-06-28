@@ -191,11 +191,11 @@ p.a = 37; // Operation forwarded to the target
 console.log(target.a); // 37 (The operation has been properly forwarded!)
 ```
 
-Note that while this "no-op" works for plain JavaScript objects, it does not work for native objects, such as DOM elements, [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) objects, or anything that has internal slots. See [no private property forwarding](#no_private_property_forwarding) for more information.
+Note that while this "no-op" works for plain JavaScript objects, it does not work for native objects, such as DOM elements, [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) objects, or anything that has internal slots. See [no private field forwarding](#no_private_field_forwarding) for more information.
 
-### No private property forwarding
+### No private field forwarding
 
-A proxy is still another object with a different identity — it's a _proxy_ that operates between the wrapped object and the outside. As such, the proxy does not have direct access to the original object's [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties).
+A proxy is still another object with a different identity — it's a _proxy_ that operates between the wrapped object and the outside. As such, the proxy does not have direct access to the original object's [private elements](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements).
 
 ```js
 class Secret {

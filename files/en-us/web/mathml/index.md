@@ -77,7 +77,7 @@ The following demos mix MathML with other Web technologies to produce advanced c
 - [Pell's equation](https://people.igalia.com/fwang/pell-bigint-mathml/)
   - : A JavaScript program to solve Pell's equation using [`BigInt`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt).
 - [Lovelace's program for Bernoulli numbers](https://people.igalia.com/fwang/lovelace-jsclass-mathml/)
-  - : An emulator for Ada Lovelace's program to calculate Bernoulli numbers, using [Private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties).
+  - : An emulator for Ada Lovelace's program to calculate Bernoulli numbers, using [Private elements](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements).
 
 ## Getting help from the community
 
