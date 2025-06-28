@@ -185,7 +185,6 @@ fetch("https://example.com/", {
           fetch("https://example.com", {
             method: "POST",
             body: stream,
-            // Missing: duplex: "half"
           });
         </pre>
       </td>
