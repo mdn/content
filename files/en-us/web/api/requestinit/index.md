@@ -90,7 +90,7 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
 - `duplex` {{optional_inline}} {{experimental_inline}}
   - : Controls duplex behavior of the request. If this is present it must have the value `half`, meaning that the browser must send the entire request before processing the response.
 
-    This option must be present when [`body`](/en-US/docs/Web/API/RequestInit#body) is a {{domxref("ReadableStream")}}.
+    This option must be present when [`body`](#body) is a {{domxref("ReadableStream")}}.
 
 - `headers` {{optional_inline}}
   - : Any headers you want to add to your request, contained
