@@ -111,8 +111,11 @@ The following example returns the last element in the array that is a prime numb
 
 ```js
 function isPrime(element) {
-  if (element % 2 === 0 || element < 2) {
+  if (element < 2) {
     return false;
+  }
+  if (element % 2 === 0) {
+    return element === 2;
   }
   for (let factor = 3; factor <= Math.sqrt(element); factor += 2) {
     if (element % factor === 0) {
@@ -122,6 +125,7 @@ function isPrime(element) {
   return true;
 }
 
+console.log([2, 4, 6, 8, 9, 12].findLast(isPrime)); // 2
 console.log([4, 6, 8, 12].findLast(isPrime)); // undefined, not found
 console.log([4, 5, 7, 8, 9, 11, 12].findLast(isPrime)); // 11
 ```
