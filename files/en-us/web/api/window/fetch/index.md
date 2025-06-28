@@ -181,12 +181,10 @@ fetch("https://example.com/", {
       </td>
       <td>
         <pre class="brush: js">
-          // Missing or invalid duplex with ReadableStream
           const stream = new ReadableStream({ /* ... */ });
           fetch("https://example.com", {
             method: "POST",
             body: stream,
-            // Missing: duplex: "half"
           });
         </pre>
       </td>
