@@ -77,7 +77,7 @@ Sec-WebSocket-Extensions: extensions
 For example:
 
 ```http
-Sec-WebSocket-Extensions: superspeed, colormode; depth=16
+Sec-WebSocket-Extensions: superspeed; colormode; depth=16
 ```
 
 #### {{HTTPHeader("Sec-WebSocket-Key")}}
