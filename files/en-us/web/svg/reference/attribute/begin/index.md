@@ -252,7 +252,7 @@ The `<begin-value-list>` is a semicolon-separated list of values. Each value can
   <!-- trigger -->
   <rect
     id="startButton"
-    style="cursor:pointer;"
+    cursor="pointer"
     x="19.5"
     y="62.5"
     rx="5"
@@ -262,7 +262,7 @@ The `<begin-value-list>` is a semicolon-separated list of values. Each value can
     stroke="black"
     stroke-width="1" />
 
-  <text x="60" y="80" text-anchor="middle" style="pointer-events:none;">
+  <text x="60" y="80" text-anchor="middle" pointer-events="none">
     Click me.
   </text>
 
@@ -368,7 +368,7 @@ The `<begin-value-list>` is a semicolon-separated list of values. Each value can
   </rect>
 
   <!-- trigger -->
-  <text x="60" y="80" text-anchor="middle" style="pointer-events:none;">
+  <text x="60" y="80" text-anchor="middle" pointer-events="none">
     Hit the "s" key
   </text>
 

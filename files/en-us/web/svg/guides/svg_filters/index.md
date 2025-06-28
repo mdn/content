@@ -20,7 +20,7 @@ This element has different attributes that help us create the clipping region. B
   </filter>
 </defs>
 
-<g id="ghost" style="filter: url(#drop-shadow);">
+<g id="ghost" filter="url(#drop-shadow)">
   <!--Ghost drawing in here-->
 </g>
 ```
