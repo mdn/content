@@ -49,7 +49,68 @@ For example, set the list item width dynamically based on the `<li>` elements or
 
 ```css
 li {
-  width: calc(sibling-index() * 100px);
+  width: calc(sibling-index() * 50px);
+  background-color: #faa;
+}
+```
+
+### Ordered List
+
+Now let's create an alternative ordered list using `sibling-index()`.
+
+#### HTML
+
+```html
+<nav arial-label="Ordered list">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+</nav>
+```
+
+#### CSS
+
+```css
+div {
+  --list-index: sibling-index();
+  display: flex;
+  gap: 1ch;
+}
+
+div::before {
+  content: var(--list-index);
+}
+```
+
+## Tree Counting Entrance Animation
+
+Combining `sibling-index()` with CSS animations open new posibilities:
+
+```html
+<ul>
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
+  <li>Four</li>
+</ul>
+```
+
+#### CSS
+
+```css
+li {
+  animation-name: fade;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: backwards;
+  animation-delay: calc(1s * sibling-index());
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 ```
 
