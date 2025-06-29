@@ -83,9 +83,11 @@ div::before {
 }
 ```
 
-## Tree Counting Entrance Animation
+### Tree Counting Entrance Animation
 
 Combining `sibling-index()` with CSS animations open new posibilities:
+
+#### HTML
 
 ```html
 <ul>
@@ -109,8 +111,12 @@ li {
 }
 
 @keyframes fade {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 ```
 
