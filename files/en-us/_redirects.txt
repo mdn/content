@@ -13848,7 +13848,8 @@
 /en-US/docs/Web/JavaScript/Reference/Classes/Class_elements	/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields
 /en-US/docs/Web/JavaScript/Reference/Classes/Class_fields	/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields
 /en-US/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks	/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks
-/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields	/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties
+/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields	/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements
+/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties	/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements
 /en-US/docs/Web/JavaScript/Reference/Code_comments	/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Comments
 /en-US/docs/Web/JavaScript/Reference/Data_types	/en-US/docs/Web/JavaScript/Guide/Data_structures
 /en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
