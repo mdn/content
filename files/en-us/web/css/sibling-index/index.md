@@ -67,4 +67,4 @@ li {
 
 ## See also
 
-- {{CSSxRef("sibling-count")}}
+- {{CSSxRef("sibling-count", "sibling-count()")}}

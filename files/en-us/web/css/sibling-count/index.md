@@ -66,4 +66,4 @@ ul {
 
 ## See also
 
-- {{CSSxRef("sibling-index")}}
+- {{CSSxRef("sibling-index", "sibling-index()")}}
