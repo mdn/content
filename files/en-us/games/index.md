@@ -47,3 +47,37 @@ For a list of web game examples, see our list of [Tutorials](/en-US/docs/Games/T
   - : Games category on the Mozilla Hacks blog containing interesting gamedev related articles.
 - [Games section on wiki.mozilla.org](https://wiki.mozilla.org/Platform/Games)
   - : A wiki page with information about Mozilla's involvement in platform games.
+
+## Best Practices for Web Game Performance
+
+Optimizing your game's performance is crucial for providing a smooth and enjoyable experience for players. Here are some best practices to help you get the most out of web technologies:
+
+### 1. Minimize Draw Calls
+- Batch rendering operations when possible.
+- Use texture atlases to reduce the number of textures bound per frame.
+
+### 2. Optimize Asset Loading
+- Compress images, audio, and other assets.
+- Use lazy loading and preload critical assets.
+- Consider using service workers for caching.
+
+### 3. Efficient JavaScript
+- Avoid memory leaks by cleaning up unused objects and event listeners.
+- Use web workers for heavy computations to keep the main thread responsive.
+- Profile your code using browser developer tools and the [Firefox Profiler](https://profiler.firefox.com/docs/#/).
+
+### 4. Leverage Hardware Acceleration
+- Use WebGL for graphics-intensive games.
+- Prefer CSS transforms and opacity for animations.
+
+### 5. Responsive Design
+- Ensure your game works well on different screen sizes and input types.
+- Test on both desktop and mobile devices.
+
+### 6. Monitor and Test Performance
+- Regularly test your game on various browsers and devices.
+- Use tools like [Lighthouse](https://developers.google.com/web/tools/lighthouse) and browser devtools for audits.
+
+For more in-depth resources, see:
+- [MDN Performance documentation](https://developer.mozilla.org/en-US/docs/Web/Performance)
+- [Web Performance Optimization](https://web.dev/performance/)
