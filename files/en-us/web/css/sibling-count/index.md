@@ -7,7 +7,7 @@ browser-compat: css.types.sibling-count
 
 {{CSSRef}}
 
-The **`sibling-count()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) represents an integer of the total number of direct child DOM elements on the element it is used.
+The **`sibling-count()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) represents an integer of the total number of direct child DOM elements on the element it is used. In other words, the `sibling-count()` function returns the number of child elements of a parent element.
 
 > [!NOTE]
 > The {{CSSxRef("counter()")}} function provides a similar result but it returns a `<string>`, while `sibling-count()` returns an `<integer>` which can be used for calculations.
@@ -20,7 +20,7 @@ The **`sibling-count()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/
 
 ### Parameters
 
-The `sibling-count()` function doesn't accepts parameters.
+The `sibling-count()` function doesn't accept parameters.
 
 ### Return value
 

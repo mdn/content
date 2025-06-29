@@ -7,7 +7,7 @@ browser-compat: css.types.sibling-index
 
 {{CSSRef}}
 
-The **`sibling-index()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) represents an integer of current element in the DOM tree on which the notation is used among its siblings. In other words, the `sibling-index()` selector returns a number of the child element according to its position among all the sibling elements within a parent element.
+The **`sibling-index()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) represents an integer of the current element in the DOM tree on which the notation is used among its siblings. The function returns the contextual child index as a number. In other words, the `sibling-index()` function returns a number of the child element according to its position among all the sibling elements within a parent element.
 
 > [!NOTE]
 > Like the {{CSSxRef(":nth-child()")}} pseudo-class, `sibling-index()` starts from 1, not 0.
