@@ -40,10 +40,10 @@ For example, set the number of columns based on the number `<li>` elements in a 
 
 ```html
 <ul>
-	<li>One</li>
-	<li>Two</li>
-	<li>Three</li>
-	<li>Four</li>
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
+  <li>Four</li>
 </ul>
 ```
 
