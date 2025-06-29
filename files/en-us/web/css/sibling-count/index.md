@@ -26,10 +26,6 @@ The `sibling-count()` function doesn't accepts parameters.
 
 A number representing the total number of direct child DOM elements.
 
-## Formal syntax
-
-{{CSSSyntax}}
-
 ## Examples
 
 ### Dynamic column count

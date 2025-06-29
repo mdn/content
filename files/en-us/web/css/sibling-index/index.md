@@ -28,10 +28,6 @@ The `sibling-index()` function doesn't accept parameters.
 
 A number representing the current element in the DOM tree among its siblings.
 
-## Formal syntax
-
-{{CSSSyntax}}
-
 ## Examples
 
 ### Dynamic list width
