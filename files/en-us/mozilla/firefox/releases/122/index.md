@@ -2,9 +2,8 @@
 title: Firefox 122 for developers
 slug: Mozilla/Firefox/Releases/122
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 122 that affect developers. Firefox 122 was released on [January 23, 2024](https://whattrainisitnow.com/release/?version=122).
 

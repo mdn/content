@@ -2,9 +2,8 @@
 title: Firefox 52 for developers
 slug: Mozilla/Firefox/Releases/52
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 52 was released on March 7, 2017. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 

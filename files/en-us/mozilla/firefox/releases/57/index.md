@@ -2,9 +2,8 @@
 title: Firefox 57 (Quantum) for developers
 slug: Mozilla/Firefox/Releases/57
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 57 (a.k.a. Firefox Quantum) that will affect developers. Firefox 57 was released on November 14, 2017.
 

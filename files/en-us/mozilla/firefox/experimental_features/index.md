@@ -3,9 +3,8 @@ title: Experimental features in Firefox
 short-title: Experimental features
 slug: Mozilla/Firefox/Experimental_features
 page-type: guide
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This page lists Firefox's experimental and partially-implemented features, including evolving or proposed web platform standards.
 Each entry below includes information about the builds in which a feature is included (Nightly, Beta, Developer Edition, or Release), whether it is activated by default or not, and the name of the **preference** you can use to activate or configure the feature.

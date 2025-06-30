@@ -2,9 +2,8 @@
 title: Firefox 125 for developers
 slug: Mozilla/Firefox/Releases/125
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 125 that affect developers. Firefox 125 was released on [April 16, 2024](https://whattrainisitnow.com/release/?version=125).
 

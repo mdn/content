@@ -2,9 +2,8 @@
 title: Firefox 62 for developers
 slug: Mozilla/Firefox/Releases/62
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 62 that will affect developers. Firefox 62 was released on September 5, 2018.
 

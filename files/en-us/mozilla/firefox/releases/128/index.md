@@ -2,9 +2,8 @@
 title: Firefox 128 for developers
 slug: Mozilla/Firefox/Releases/128
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 128 that affect developers. Firefox 128 was released on [July 9, 2024](https://whattrainisitnow.com/release/?version=128).
 

@@ -2,9 +2,8 @@
 title: Firefox 126 for developers
 slug: Mozilla/Firefox/Releases/126
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 126 that affect developers. Firefox 126 was released on [May 14, 2024](https://whattrainisitnow.com/release/?version=126).
 

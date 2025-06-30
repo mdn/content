@@ -2,9 +2,8 @@
 title: Firefox 67 for developers
 slug: Mozilla/Firefox/Releases/67
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 67 that will affect developers. Firefox 67 was released on May 21, 2019.
 

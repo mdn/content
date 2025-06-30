@@ -2,9 +2,8 @@
 title: Firefox 3.5 for developers
 slug: Mozilla/Firefox/Releases/3.5
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 [Firefox 3.5](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-us/firefox/3.5/releasenotes/) (_released June 30, 2009)_ introduces a number of new features, as well as additional and improved support for a wide variety of web standards. This article offers an extensive list, with links to articles covering the major improvements.
 

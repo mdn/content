@@ -2,9 +2,8 @@
 title: Firefox 75 for developers
 slug: Mozilla/Firefox/Releases/75
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 75 that will affect developers. Firefox 75 was released on April 7, 2020.
 

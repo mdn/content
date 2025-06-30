@@ -2,9 +2,8 @@
 title: Firefox 37 for developers
 slug: Mozilla/Firefox/Releases/37
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 37 was released on March 31st, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 

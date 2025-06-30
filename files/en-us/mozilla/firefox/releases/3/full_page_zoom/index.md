@@ -2,9 +2,8 @@
 title: Full page zoom
 slug: Mozilla/Firefox/Releases/3/Full_page_zoom
 page-type: guide
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Full page zoom (or just fullZoom) is a new feature in [Firefox 3](/en-US/docs/Mozilla/Firefox/Releases/3).
 

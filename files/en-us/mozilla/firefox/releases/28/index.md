@@ -2,9 +2,8 @@
 title: Firefox 28 for developers
 slug: Mozilla/Firefox/Releases/28
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 28 was released on March 18, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 

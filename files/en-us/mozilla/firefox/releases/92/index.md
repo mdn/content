@@ -2,9 +2,8 @@
 title: Firefox 92 for developers
 slug: Mozilla/Firefox/Releases/92
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 92 that will affect developers. Firefox 92 was released on September 7, 2021.
 

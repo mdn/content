@@ -2,9 +2,8 @@
 title: Firefox 45 for developers
 slug: Mozilla/Firefox/Releases/45
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 To test the latest developer features of Firefox, install Firefox Developer Edition Firefox 45 was released on March 8, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 

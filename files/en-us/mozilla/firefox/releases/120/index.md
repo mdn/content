@@ -2,9 +2,8 @@
 title: Firefox 120 for developers
 slug: Mozilla/Firefox/Releases/120
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 120 that affect developers. Firefox 120 was released on [November 21, 2023](https://whattrainisitnow.com/release/?version=120).
 

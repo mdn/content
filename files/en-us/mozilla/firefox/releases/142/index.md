@@ -3,7 +3,7 @@ title: Firefox 142 for developers
 short-title: Firefox 142 (Nightly)
 slug: Mozilla/Firefox/Releases/142
 page-type: firefox-release-notes-active
-sidebar: firefoxsidebar
+sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 142 that affect developers.

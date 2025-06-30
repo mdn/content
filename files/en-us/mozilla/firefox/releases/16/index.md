@@ -2,9 +2,8 @@
 title: Firefox 16 for developers
 slug: Mozilla/Firefox/Releases/16
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 16 shipped on October 9, 2012. This article lists key changes that are useful for not only Web developers to know about, but also Firefox and Gecko developers as well as add-on developers.
 

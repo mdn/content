@@ -2,9 +2,8 @@
 title: Firefox 58 for developers
 slug: Mozilla/Firefox/Releases/58
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 58 that will affect developers. Firefox 58 was released on January 23, 2018.
 

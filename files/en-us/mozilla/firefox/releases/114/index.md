@@ -2,9 +2,8 @@
 title: Firefox 114 for developers
 slug: Mozilla/Firefox/Releases/114
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 114 that affect developers. Firefox 114 was released on June 06, 2023.
 

@@ -2,9 +2,8 @@
 title: Firefox 133 for developers
 slug: Mozilla/Firefox/Releases/133
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 133 that affect developers. Firefox 133 was released on [November 26, 2024](https://whattrainisitnow.com/release/?version=133).
 

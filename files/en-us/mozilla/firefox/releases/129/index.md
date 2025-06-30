@@ -2,9 +2,8 @@
 title: Firefox 129 for developers
 slug: Mozilla/Firefox/Releases/129
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 129 that affect developers. Firefox 129 was released on [August 6, 2024](https://whattrainisitnow.com/release/?version=129).
 

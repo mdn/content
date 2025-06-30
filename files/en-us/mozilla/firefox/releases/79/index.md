@@ -2,9 +2,8 @@
 title: Firefox 79 for developers
 slug: Mozilla/Firefox/Releases/79
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 79 that will affect developers. Firefox 79 was released on July 28, 2020.
 

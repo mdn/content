@@ -2,9 +2,8 @@
 title: Firefox 135 for developers
 slug: Mozilla/Firefox/Releases/135
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 135 that affect developers. Firefox 135 was released on [February 4, 2025](https://whattrainisitnow.com/release/?version=135).
 
