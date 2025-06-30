@@ -16,7 +16,7 @@ Reason: CORS request did not succeed
 
 The {{Glossary("HTTP")}} request which makes use of CORS failed because the HTTP connection failed at either the network or protocol level. The error is not directly related to CORS, but is a fundamental network error of some kind.
 
-In many cases, it is caused by a browser plugin (e.g., an ad blocker or privacy protector) blocking the request.
+In many cases, it is caused by a browser plugin (e.g., an ad blocker or privacy protector like Facebook Container) blocking the request.
 
 Other possible causes include:
 
