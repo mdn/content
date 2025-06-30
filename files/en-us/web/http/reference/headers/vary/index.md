@@ -29,8 +29,6 @@ The same `Vary` header value should be used on all responses for a given URL, in
 
 ## Syntax
 
-Either `*` as a wildcard, or one or more header names in a comma-separated list:
-
 ```http
 Vary: *
 Vary: <header-name>, …, <header-nameN>

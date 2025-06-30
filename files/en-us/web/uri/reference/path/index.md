@@ -12,12 +12,12 @@ It contains data, usually organized in hierarchical form, to identify a resource
 
 ## Syntax
 
-A path consists of a sequence of path segments separated by a slash (`/`) character:
-
-```plain
+```url
 http://example.com:80<path>
 urn:<path>
 ```
+
+The path can contain nearly all characters, except `?` and `#` (which start the [query](/en-US/docs/Web/URI/Reference/Path) and [fragment](/en-US/docs/Web/URI/Reference/Fragment) respectively), and other characters reserved by the URI scheme. Some schemes (known as _hierarchical schemes_) further parse the path as a sequence of segments separated by slash (`/`) characters; others treat it as a single opaque string.
 
 ## Description
 

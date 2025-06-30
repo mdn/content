@@ -30,8 +30,6 @@ Some implementations may send unsolicited `Repr-Digest` headers without requirin
 
 ## Syntax
 
-A comma-separated list of one or more hashing algorithms:
-
 ```http
 Want-Repr-Digest: <algorithm>=<preference>
 Want-Repr-Digest: <algorithm>=<preference>, …, <algorithmN>=<preferenceN>

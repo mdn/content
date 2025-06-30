@@ -36,16 +36,8 @@ The sub-protocol selected by the server is made available to the web application
 
 ## Syntax
 
-Request:
-
 ```http
 Sec-WebSocket-Protocol: <sub-protocols>
-```
-
-Response:
-
-```http
-Sec-WebSocket-Protocol: <selected-sub-protocol>
 ```
 
 ## Directives
@@ -53,6 +45,8 @@ Sec-WebSocket-Protocol: <selected-sub-protocol>
 - `<sub-protocols>`
   - : A comma-separated list of sub-protocol names, in the order of preference.
     The sub-protocols may be selected from the [IANA WebSocket Subprotocol Name Registry](https://www.iana.org/assignments/websocket/websocket.xml#subprotocol-name), or may be a custom name jointly understood by the client and the server.
+
+    As a response header, this should be a single sub-protocol selected by the server.
 
 ## Examples
 

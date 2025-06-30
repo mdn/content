@@ -52,7 +52,7 @@ There are plans to further extend possible queries by adding the generalized con
 
 ### data types
 
-- [`<container-name>`](/en-US/docs/Web/CSS/@container#values)
+- [`<container-name>`](/en-US/docs/Web/CSS/@container#container-name)
 - [`<style-feature>`](/en-US/docs/Web/CSS/@container#container_style_queries)
 - [Container relative `<length>` units](/en-US/docs/Web/CSS/length#container_query_length_units)
 - [`<media-query>`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax)

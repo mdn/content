@@ -34,16 +34,8 @@ The request header is automatically added by the browser based on its own capabi
 
 ## Syntax
 
-Request
-
 ```http
 Sec-WebSocket-Extensions: <extensions>
-```
-
-Response
-
-```http
-Sec-WebSocket-Extensions: <selected-extension>
 ```
 
 ## Directives

@@ -9,21 +9,17 @@ browser-compat: css.at-rules.counter-style
 
 The **`@counter-style`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) lets you extend predefined list styles and define your own counter styles that are not part of the predefined set of styles. The `@counter-style` rule contains [descriptors](#descriptors) defining how the counter value is converted into a string representation.
 
+While CSS provides many useful predefined counter styles, the `@counter-style` at-rule offers an open-ended method for creating counters. This at-rule caters to the needs of worldwide typography by allowing authors to define their own counter styles when the predefined styles don't fit their requirements.
+
+## Syntax
+
 ```css
 @counter-style thumbs {
   system: cyclic;
   symbols: "\1F44D";
   suffix: " ";
 }
-
-ul {
-  list-style: thumbs;
-}
 ```
-
-While CSS provides many useful predefined counter styles, the `@counter-style` at-rule offers an open-ended method for creating counters. This at-rule caters to the needs of worldwide typography by allowing authors to define their own counter styles when the predefined styles don't fit their requirements.
-
-## Syntax
 
 The `@counter-style` at-rule is identified by a [counter style name](#counter_style_name), and the style of the named counter can be fine-tuned using a `<declaration-list>` consisting of one or more [descriptors](#descriptors) and their values.
 

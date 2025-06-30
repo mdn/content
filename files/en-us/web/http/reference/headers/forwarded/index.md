@@ -34,12 +34,11 @@ The alternative and de-facto standard versions of this header are the {{HTTPHead
 
 ## Syntax
 
-The syntax for the forwarding header from a single proxy is shown below.
-Directives are `key=value` pairs, separated by a semicolon.
-
 ```http
 Forwarded: by=<identifier>;for=<identifier>;host=<host>;proto=<http|https>
 ```
+
+Directives are `key=value` pairs, separated by a semicolon.
 
 If there are multiple proxy servers between the client and server, they may each specify their own forwarding information.
 This can be done by adding a new `Forwarded` header to the end of the header block, or by appending the information to the end of the last `Forwarded` header in a comma-separated list.

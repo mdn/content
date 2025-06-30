@@ -30,8 +30,6 @@ The added security is provided only if the user accessing the document is using 
 
 ## Syntax
 
-There are two possible directives for `X-Frame-Options`:
-
 ```http
 X-Frame-Options: DENY
 X-Frame-Options: SAMEORIGIN
@@ -39,12 +37,10 @@ X-Frame-Options: SAMEORIGIN
 
 ### Directives
 
-If you specify `DENY`, not only will the browser attempt to load the page in a frame fail when loaded from other sites, attempts to do so will fail when loaded from the same site. On the other hand, if you specify `SAMEORIGIN`, you can still use the page in a frame as long as the site including it in a frame is the same as the one serving the page.
-
 - `DENY`
-  - : The page cannot be displayed in a frame, regardless of the site attempting to do so.
+  - : The page cannot be displayed in a frame, regardless of the site attempting to do so. Not only will the browser attempt to load the page in a frame fail when loaded from other sites, attempts to do so will fail when loaded from the same site.
 - `SAMEORIGIN`
-  - : The page can only be displayed if all ancestor frames are same origin to the page itself.
+  - : The page can only be displayed if all ancestor frames are same origin to the page itself. You can still use the page in a frame as long as the site including it in a frame is the same as the one serving the page.
 - `ALLOW-FROM origin` {{deprecated_inline}}
   - : This is an obsolete directive. Modern browsers that encounter response headers with this directive will ignore the header completely. The {{HTTPHeader("Content-Security-Policy")}} HTTP header has a {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} directive which you should use instead.
 

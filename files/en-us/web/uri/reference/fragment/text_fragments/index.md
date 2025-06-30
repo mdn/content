@@ -34,13 +34,11 @@ If the ID is changed or removed, the document fragment is ignored, and the link 
 
 ## Syntax
 
-In a similar manner to document fragments, text fragments are appended onto a URL after a hash symbol (`#`). The syntax however is a bit different:
-
 ```url
 https://example.com#:~:text=[prefix-,]textStart[,textEnd][,-suffix]
 ```
 
-The key parts to understand are as follows:
+Text fragments are a kind of URL fragment, and is written after the `#`. The key parts to understand are as follows:
 
 - `:~:`
   - : Otherwise known as _the fragment directive_, this sequence of characters tells the browser that what comes next is one or more user-agent instructions, which are stripped from the URL during loading so that author scripts cannot directly interact with them. User-agent instructions are also called directives.

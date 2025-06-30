@@ -34,6 +34,10 @@ The HTTP **`Cache-Control`** header holds _directives_ (instructions) in both re
 
 ## Syntax
 
+```http
+Cache-Control: <directive>, <directive>, ...
+```
+
 Cache directives follow these rules:
 
 - Caching directives are case-insensitive. However, lowercase is recommended because some implementations do not recognize uppercase directives.

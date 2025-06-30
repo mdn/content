@@ -35,8 +35,6 @@ Specifying indexing rules in a HTTP header is useful for non-HTML documents like
 
 ## Syntax
 
-One or more indexing rules as a comma-separated list:
-
 ```http
 X-Robots-Tag: <indexing-rule>
 X-Robots-Tag: <indexing-rule>, …, <indexing-ruleN>

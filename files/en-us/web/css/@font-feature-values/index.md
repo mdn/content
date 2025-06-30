@@ -53,8 +53,6 @@ Each `@font-feature-values` block contains a list of either feature value blocks
   }
 }
 
-…
-
 /* Apply the at-rules with a single declaration */
 .nice-look {
   font-variant-alternates: styleset(nice-style);

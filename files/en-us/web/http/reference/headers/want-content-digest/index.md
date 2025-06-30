@@ -30,8 +30,6 @@ Some implementations may send unsolicited `Content-Digest` headers without requi
 
 ## Syntax
 
-A comma-separated list of one or more hashing algorithms:
-
 ```http
 Want-Content-Digest: <algorithm>=<preference>
 Want-Content-Digest: <algorithm>=<preference>, …, <algorithmN>=<preferenceN>
