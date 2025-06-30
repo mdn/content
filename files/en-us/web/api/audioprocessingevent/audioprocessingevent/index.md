@@ -6,9 +6,7 @@ page-type: web-api-constructor
 status:
   - deprecated
 browser-compat: api.AudioProcessingEvent.AudioProcessingEvent
-sidebar:
-  - apiref:
-      - Web Audio API
+sidebar: apiref
 ---
 
 {{Deprecated_header}}
