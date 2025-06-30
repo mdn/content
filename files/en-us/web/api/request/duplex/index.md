@@ -16,7 +16,8 @@ The **`duplex`** read-only property of the {{domxref("Request")}} interface retu
 
 A string with the following possible value:
 
-- `"half"`: The browser must send the entire request before processing the response. This is required when the request body is a {{domxref("ReadableStream")}}.
+- `"half"`
+  - : The browser must send the entire request before processing the response.
 
 If not specified when creating the request, the value will be `undefined`.
 
