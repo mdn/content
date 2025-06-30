@@ -304,4 +304,7 @@ body > img {
 - {{cssxref("mask")}} shorthand
 - {{cssxref("mask-type")}}
 - {{cssxref("mask-mode")}}
+- [Introduction to CSS masking](/en-US/docs/Web/CSS/CSS_masking/Masking)
+- [CSS `mask` properties](/en-US/docs/Web/CSS/CSS_masking/Mask_properties)
+- [Declaring multiple masks](/en-US/docs/Web/CSS/CSS_masking/Multiple_masks)
 - [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
