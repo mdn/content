@@ -6,7 +6,9 @@ page-type: web-api-instance-property
 status:
   - deprecated
 browser-compat: api.AudioProcessingEvent.inputBuffer
-sidebar: apiref
+sidebar:
+  - apiref:
+      - Web Audio API
 ---
 
 {{Deprecated_header}}

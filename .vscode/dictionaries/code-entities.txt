@@ -39,6 +39,7 @@ animalfound
 anonid
 apacheconf
 apachectl
+apiref
 appcache
 APPCOMMAND
 APPCOMMAND_MEDIA_PREVIOUSTRACK
