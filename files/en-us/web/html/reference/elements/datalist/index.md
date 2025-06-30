@@ -109,7 +109,7 @@ When `value` attributes are included on `<option>` elements provided for a datal
 
 {{EmbedLiveSample("Range_type", 600, 70)}}
 
-> [!Note]
+> [!NOTE]
 > The `label` attribute is intended to provide labels for tick marks, as defined in the [HTML Standard](<https://html.spec.whatwg.org/multipage/input.html#range-state-(type=range)>). However, current browser support varies; labels might not be displayed visually or as tooltips.
 
 ### Color type
