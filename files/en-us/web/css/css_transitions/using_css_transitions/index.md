@@ -40,10 +40,8 @@ You can control the individual components of the transition with the following s
 
 The `transition` shorthand CSS syntax is written as follows:
 
-```css
-div {
-  transition: <property> <duration> <timing-function> <delay>;
-}
+```plain
+transition: <property> <duration> <timing-function> <delay>;
 ```
 
 ## Examples

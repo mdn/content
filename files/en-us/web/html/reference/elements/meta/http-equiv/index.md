@@ -30,7 +30,7 @@ These include:
 - `content-type`
   - : Declares the document's [media type (MIME type)](/en-US/docs/Web/HTTP/Guides/MIME_types) and character encoding.
     The `content` attribute must be `"text/html; charset=utf-8"` if specified.
-    This is equivalent to a `<meta>` element with the [`charset`](#charset) attribute specified and carries the same restriction on placement within the document.
+    This is equivalent to a `<meta>` element with the [`charset`](/en-US/docs/Web/HTML/Reference/Elements/meta#charset) attribute specified and carries the same restriction on placement within the document.
     Can only be used in documents served with a `text/html` media type — not in documents served with an XML (`application/xml` or `application/xhtml+xml`) type.
     See the {{httpheader("Content-Type")}} HTTP header.
 - `content-security-policy`
@@ -67,8 +67,8 @@ Pages set with a `http-equiv="Refresh"` value run the risk of having the refresh
 People navigating with the aid of assistive technology such as a screen reader may be unable to read through and understand the page's content before being automatically redirected.
 Abrupt, unannounced page updates may also be disorienting for people experiencing low vision conditions.
 
-- [MDN Understanding WCAG, Guideline 2.2 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.—_enough_time_provide_users_enough_time_to_read_and_use_content)
-- [MDN Understanding WCAG, Guideline 3.2 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable#guideline_3.—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
+- [MDN Understanding WCAG, Guideline 2.2 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.2_—_enough_time_provide_users_enough_time_to_read_and_use_content)
+- [MDN Understanding WCAG, Guideline 3.2 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
 - [Understanding Success Criterion 2.2.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html)
 - [Understanding Success Criterion 2.2.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-postponed.html)
 - [Understanding Success Criterion 3.2.5 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-no-extreme-changes-context.html)
