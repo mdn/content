@@ -153,7 +153,7 @@ function fn() {} // Function declaration
 const obj = { key: "value" }; // Object keys
 // Class declaration
 class C {
-  #priv = "value"; // Private property
+  #priv = "value"; // Private field
 }
 lbl: console.log(1); // Label
 ```
@@ -179,7 +179,7 @@ Not all places accept the full range of identifiers. Certain syntaxes, such as f
 function import() {} // Illegal: import is a reserved word.
 ```
 
-Most notably, private properties and object properties allow reserved words.
+Most notably, private elements and object properties allow reserved words.
 
 ```js
 const obj = { import: "value" }; // Legal despite `import` being reserved
@@ -566,7 +566,7 @@ Some [JavaScript statements](/en-US/docs/Web/JavaScript/Reference/Statements)' s
 - [`do...while`](/en-US/docs/Web/JavaScript/Reference/Statements/do...while)
 - [`continue`](/en-US/docs/Web/JavaScript/Reference/Statements/continue), [`break`](/en-US/docs/Web/JavaScript/Reference/Statements/break), [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return), [`throw`](/en-US/docs/Web/JavaScript/Reference/Statements/throw)
 - [`debugger`](/en-US/docs/Web/JavaScript/Reference/Statements/debugger)
-- Class field declarations ([public](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) or [private](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties))
+- Class field declarations ([public](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) or [private](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements))
 - [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import), [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export)
 
 However, to make the language more approachable and convenient, JavaScript is able to automatically insert semicolons when consuming the token stream, so that some invalid token sequences can be "fixed" to valid syntax. This step happens after the program text has been parsed to tokens according to the lexical grammar. There are three cases when semicolons are automatically inserted:
