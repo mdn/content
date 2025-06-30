@@ -9,7 +9,7 @@ browser-compat: javascript.statements.const
 
 The **`const`** declaration declares block-scoped local variables. The value of a constant can't be changed through reassignment using the [assignment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment), but if a constant is an [object](/en-US/docs/Web/JavaScript/Guide/Data_structures#objects), its properties can be added, updated, or removed.
 
-{{InteractiveExample("JavaScript Demo: Statement - Const")}}
+{{InteractiveExample("JavaScript Demo: const declaration")}}
 
 ```js interactive-example
 const number = 42;
@@ -61,7 +61,7 @@ const FOO; // SyntaxError: Missing initializer in const declaration
 
 The `const` declaration creates an immutable reference to a value. It does _not_ mean the value it holds is immutable — just that the variable identifier cannot be reassigned. For instance, in the case where the content is an object, this means the object's contents (e.g., its properties) can be altered. You should understand `const` declarations as "create a variable whose _identity_ remains constant", not "whose _value_ remains constant" — or, "create immutable {{Glossary("binding", "bindings")}}", not "immutable values".
 
-Many style guides (including [MDN's](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript#variable_declarations)) recommend using `const` over {{jsxref("Statements/let", "let")}} whenever a variable is not reassigned in its scope. This makes the intent clear that a variable's type (or value, in the case of a primitive) can never change. Others may prefer `let` for non-primitives that are mutated.
+Many style guides (including [MDN's](/en-US/docs/MDN/Writing_guidelines/Code_style_guide/JavaScript#variable_declarations)) recommend using `const` over {{jsxref("Statements/let", "let")}} whenever a variable is not reassigned in its scope. This makes the intent clear that a variable's type (or value, in the case of a primitive) can never change. Others may prefer `let` for non-primitives that are mutated.
 
 The list that follows the `const` keyword is called a _{{Glossary("binding")}} list_ and is separated by commas, where the commas are _not_ [comma operators](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator) and the `=` signs are _not_ [assignment operators](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment). Initializers of later variables can refer to earlier variables in the list.
 
@@ -75,7 +75,7 @@ Constants can be declared with uppercase or lowercase, but a common convention i
 // define MY_FAV as a constant and give it the value 7
 const MY_FAV = 7;
 
-console.log("my favorite number is: " + MY_FAV);
+console.log(`my favorite number is: ${MY_FAV}`);
 ```
 
 ```js-nolint example-bad

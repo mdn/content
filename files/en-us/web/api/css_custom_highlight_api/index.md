@@ -178,9 +178,7 @@ query.addEventListener("input", () => {
 
   // Iterate over all text nodes and find matches.
   const ranges = allTextNodes
-    .map((el) => {
-      return { el, text: el.textContent.toLowerCase() };
-    })
+    .map((el) => ({ el, text: el.textContent.toLowerCase() }))
     .map(({ text, el }) => {
       const indices = [];
       let startPos = 0;
@@ -237,5 +235,5 @@ The result is shown below. Type text within the search field to highlight matche
 ## See also
 
 - [CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web](https://css-tricks.com/css-custom-highlight-api-early-look/)
-- HTML [`contentEditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute
+- HTML [`contentEditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) attribute
 - CSS {{cssxref("pseudo-elements")}}

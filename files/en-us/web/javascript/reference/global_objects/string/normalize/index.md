@@ -1,5 +1,6 @@
 ---
 title: String.prototype.normalize()
+short-title: normalize()
 slug: Web/JavaScript/Reference/Global_Objects/String/normalize
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.normalize
@@ -10,7 +11,7 @@ browser-compat: javascript.builtins.String.normalize
 The **`normalize()`** method of {{jsxref("String")}} values returns the Unicode Normalization
 Form of this string.
 
-{{InteractiveExample("JavaScript Demo: String.normalize()", "taller")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.normalize()", "taller")}}
 
 ```js interactive-example
 const name1 = "\u0041\u006d\u00e9\u006c\u0069\u0065";
@@ -44,13 +45,11 @@ normalize(form)
 ### Parameters
 
 - `form` {{optional_inline}}
-
   - : One of `"NFC"`, `"NFD"`, `"NFKC"`, or
     `"NFKD"`, specifying the Unicode Normalization Form. If omitted or
     {{jsxref("undefined")}}, `"NFC"` is used.
 
     These values have the following meanings:
-
     - `"NFC"`
       - : Canonical Decomposition, followed by Canonical Composition.
     - `"NFD"`

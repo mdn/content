@@ -27,7 +27,6 @@ Highlights:
 ### CSS
 
 - Support for laying out vertical scripts has been activated by default ([Firefox bug 1138384](https://bugzil.la/1138384)). That means that the following CSS properties are now available:
-
   - Choosing the direction of writing: {{cssxref("writing-mode")}}.
   - Controlling orientation of characters: {{cssxref("text-orientation")}}.
   - Direction-independent equivalents of {{cssxref("width")}} and {{cssxref("height")}}: {{cssxref("block-size")}} and {{cssxref("inline-size")}}.
@@ -44,7 +43,7 @@ Highlights:
 
 - {{HTMLElement("a")}} without an `href` attribute is no longer classified as interactive content. Clicking it inside {{HTMLElement("label")}} will activate labelled content ([Firefox bug 1167816](https://bugzil.la/1167816)).
 - SVG icons are now supported for site icons, that is favicons and shortcut icons ([Firefox bug 366324](https://bugzil.la/366324)).
-- The [`crossorigin`](/en-US/docs/Web/HTML/Element/link#crossorigin) attribute is now supported for [\<link rel='preconnect'>](/en-US/docs/Web/HTML/Element/link) ([Firefox bug 1174152](https://bugzil.la/1174152)).
+- The [`crossorigin`](/en-US/docs/Web/HTML/Reference/Elements/link#crossorigin) attribute is now supported for [\<link rel='preconnect'>](/en-US/docs/Web/HTML/Reference/Elements/link) ([Firefox bug 1174152](https://bugzil.la/1174152)).
 - The picture element does not react to resize/viewport changes ([Firefox bug 1135812](https://bugzil.la/1135812)).
 
 ### JavaScript
@@ -65,7 +64,6 @@ Highlights:
 #### HTML Editing API
 
 - Cut, copy and paste commands handling has been revamped and now allow programmatic copying and cutting from JS for Web content:
-
   - With the `'paste'` command as argument, {{domxref("Document.queryCommandSupported()")}} now returns `false` if has insufficient privileges to actually perform the action ([Firefox bug 1161721](https://bugzil.la/1161721)).
   - With the `'cut'` or `'copy'` command as argument, {{domxref("Document.queryCommandSupported()")}} now returns `true` if called within the context of a user-initiated or privileged code ([Firefox bug 1162952](https://bugzil.la/1162952)).
   - With the `'cut'` or `'copy'` command as argument, {{domxref("Document.execCommand()")}} now works, but only within the context of user-initiated or privileged code ([Firefox bug 1012662](https://bugzil.la/1012662)).
@@ -90,7 +88,6 @@ Highlights:
 #### Service Workers
 
 - Improvement to our experimental [Service Worker](/en-US/docs/Web/API/Service_Worker_API) implementation:
-
   - {{domxref("ServiceWorkerGlobalScope.skipWaiting()")}} has been implemented ([Firefox bug 1131352](https://bugzil.la/1131352)).
   - {{domxref("Clients.claim()")}} has been added ([Firefox bug 1130684](https://bugzil.la/1130684)).
   - The other functional events of Service Workers have been made to inherit from {{domxref("ExtendableEvent")}}, giving them access to the {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} method ([Firefox bug 1160527](https://bugzil.la/1160527)).
@@ -138,8 +135,8 @@ Mathematical formulas require special fonts. So far, these fonts were hard-coded
 
 ## Security
 
-- The [CSP](/en-US/docs/Web/HTTP/CSP) 1.1 `manifest-src` [directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) is now supported ([Firefox bug 1089255](https://bugzil.la/1089255)).
-- Previous versions of Firefox incorrectly expected the [Content Security Policy](/en-US/docs/Web/HTTP/CSP) [referrer](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#referrer) directive's value `origin-when-cross-origin` to be spelled `origin-when-crossorigin`. This has been corrected to include the missing dash character.
+- The [CSP](/en-US/docs/Web/HTTP/Guides/CSP) 1.1 `manifest-src` [directive](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) is now supported ([Firefox bug 1089255](https://bugzil.la/1089255)).
+- Previous versions of Firefox incorrectly expected the [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) [referrer](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#referrer) directive's value `origin-when-cross-origin` to be spelled `origin-when-crossorigin`. This has been corrected to include the missing dash character.
 
 ## Changes for add-on and Mozilla developers
 

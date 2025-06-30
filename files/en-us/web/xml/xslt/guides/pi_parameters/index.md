@@ -25,7 +25,7 @@ Note that these PIs have no effect when transformation is done using the `XSLTPr
 
 The attributes in the `xslt-param` and `xslt-param-namespace` PIs are parsed using the rules defined in [xml-stylesheet](https://www.w3.org/TR/xml-stylesheet/). Any unrecognized attributes must be ignored. Parsing of any attribute must not fail due to the presence of an unrecognized attribute as long as that attribute follows the syntax in `xml-stylesheet`.
 
-Both the `xslt-param` and the `xslt-param-namespace` PIs must appear in the prolog of the document, i.e. before the first element tag. All PIs in the prolog must be honored, both ones occurring before and ones occurring after any `xml-stylesheet` PIs.
+Both the `xslt-param` and the `xslt-param-namespace` PIs must appear in the prolog of the document, i.e., before the first element tag. All PIs in the prolog must be honored, both ones occurring before and ones occurring after any `xml-stylesheet` PIs.
 
 If there are multiple `xml-stylesheet` PIs the parameters apply to all stylesheets as a consequence of that all stylesheets are imported into a single stylesheet per the XSLT spec.reference? Note that multiple `xml-stylesheet` XSLT PIs are not supported in Firefox currently.
 
@@ -34,7 +34,7 @@ If there are multiple `xml-stylesheet` PIs the parameters apply to all styleshee
 The `xslt-param` PI supports 4 attributes:
 
 - `name`
-  - : The local-name part of the parameter name. No syntax checking is done on the attribute, however if it is not a valid [NCName](https://www.w3.org/TR/REC-xml-names/#NT-NCName) it will never match any parameter in the stylesheet.
+  - : The local-name part of the parameter name. No syntax checking is done on the attribute, however if it is not a valid [NCName](https://www.w3.org/TR/xml-names/#NT-NCName) it will never match any parameter in the stylesheet.
 - `namespace`
   - : The namespace of the parameter name. No syntax checking is done on the attribute.
 - `value`

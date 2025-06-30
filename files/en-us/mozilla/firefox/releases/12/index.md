@@ -53,7 +53,7 @@ Firefox 12 was shipped on April 24, 2012. This page summarizes the changes in Fi
 
 ### MathML
 
-- To control the directionality of MathML formulas, the `dir` attribute is now supported on the {{MathMLElement("math")}}, {{MathMLElement("mrow")}}, and {{MathMLElement("mstyle")}} elements as well as on [MathML Token Elements](/en-US/docs/Web/MathML/Element#token_elements). This is particularly important for some [Arabic mathematical notations](https://www.w3.org/TR/arabic-math/).
+- To control the directionality of MathML formulas, the `dir` attribute is now supported on the {{MathMLElement("math")}}, {{MathMLElement("mrow")}}, and {{MathMLElement("mstyle")}} elements as well as on [MathML Token Elements](/en-US/docs/Web/MathML/Reference/Element#token_elements). This is particularly important for some [Arabic mathematical notations](https://www.w3.org/TR/arabic-math/).
 - The alignment attribute `align` defined in MathML3 has been implemented for {{MathMLElement("munder")}}, {{MathMLElement("mover")}}, and {{MathMLElement("munderover")}}.
 
 ### Networking

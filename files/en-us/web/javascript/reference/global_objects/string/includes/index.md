@@ -1,5 +1,6 @@
 ---
 title: String.prototype.includes()
+short-title: includes()
 slug: Web/JavaScript/Reference/Global_Objects/String/includes
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.includes
@@ -9,7 +10,7 @@ browser-compat: javascript.builtins.String.includes
 
 The **`includes()`** method of {{jsxref("String")}} values performs a case-sensitive search to determine whether a given string may be found within this string, returning `true` or `false` as appropriate.
 
-{{InteractiveExample("JavaScript Demo: String.includes()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.includes()", "shorter")}}
 
 ```js interactive-example
 const sentence = "The quick brown fox jumps over the lazy dog.";

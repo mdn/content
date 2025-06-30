@@ -1,5 +1,6 @@
 ---
-title: aria-modal
+title: "ARIA: aria-modal attribute"
+short-title: aria-modal
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-modal
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-modal
@@ -27,7 +28,7 @@ Ensure the modal is controllable using only its descendant elements. If a modal 
 
 When a modal element is displayed, authors **should** mark all other contents as inert (such as "inert subtrees" in HTML). Disabled content is not inert content. Inert content cannot be interacted with using both normal and specialized browsing modes such as caret browsing, which allow an assistive technology user to explore a page in detail. This includes disabled content, whose content may provide meaning.
 
-The [`inert`](/en-US/docs/Web/HTML/Global_attributes/inert) attribute is a boolean attribute that indicates, by its presence, that the element and all its shadow-including descendants are to be made inert. Until [`HTMLElement.inert`](/en-US/docs/Web/API/HTMLElement/inert) is fully supported, content can be [made inert with JavaScript](https://samthor.au/2021/inert/).
+The [`inert`](/en-US/docs/Web/HTML/Reference/Global_attributes/inert) attribute is a boolean attribute that indicates, by its presence, that the element and all its shadow-including descendants are to be made inert. Until [`HTMLElement.inert`](/en-US/docs/Web/API/HTMLElement/inert) is fully supported, content can be [made inert with JavaScript](https://samthor.au/2021/inert/).
 
 Including `aria-modal="true"` on a [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role) or [`alertdialog`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role), removes the requirement of putting [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden) on background content, as the `aria-modal` informs assistive technologies that content outside a dialog is inert. Note that while support for the {{HTMLElement("dialog")}} element is good, thoroughly testing your implementation is vitally important.
 
@@ -46,14 +47,20 @@ If a dialog is not modal — there is no inert background and focus isn't confin
     <div id="dialog_desc">
       <p>Are you sure you want to delete this file?</p>
     </div>
-    <button type="button" onclick="closeDialog(this)">
-      No. Close this popup.
-    </button>
-    <button type="button" onclick="deleteFile(this)">
-      Yes. Delete the file.
-    </button>
+    <button id="close-btn" type="button">No. Close this popup.</button>
+    <button id="confirm-btn" type="button">Yes. Delete the file.</button>
   </div>
 </div>
+```
+
+```js
+document.getElementById("close-btn").addEventListener("click", () => {
+  closeDialog();
+});
+
+document.getElementById("confirm-btn").addEventListener("click", (event) => {
+  deleteFile();
+});
 ```
 
 This partial example includes an `alertdialog` nested in a full-screen, non-scrollable backdrop.
@@ -98,5 +105,5 @@ Inherits into roles:
 - HTML {{HTMLElement("dialog")}} element
 - [`alertdialog` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role)
 - [`dialog` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role)
-- HTML [`inert` global attribute](/en-US/docs/Web/HTML/Global_attributes/inert)
+- HTML [`inert` global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/inert)
 - HTMLElement API [`inert`](/en-US/docs/Web/API/HTMLElement/inert) property

@@ -34,7 +34,7 @@ console.log("b");
 // Logs "a" and "b"
 ```
 
-`<!--` and `-->` both act like `//`, i.e. starting line comments. `-->` is only valid at the start of a line (to avoid ambiguity with a postfix decrement followed by a greater than operator), while `<!--` can occur anywhere in the line.
+`<!--` and `-->` both act like `//`, i.e., starting line comments. `-->` is only valid at the start of a line (to avoid ambiguity with a postfix decrement followed by a greater than operator), while `<!--` can occur anywhere in the line.
 
 ### RegExp
 
@@ -105,14 +105,14 @@ Normally, the `catch` block of a [`try...catch`](/en-US/docs/Web/JavaScript/Refe
 ```js
 var a = 2;
 try {
-  throw 42;
+  throw new Error();
 } catch (a) {
   var a = 1; // This 1 is assigned to the caught `a`, not the outer `a`.
 }
 console.log(a); // 2
 
 try {
-  throw 42;
+  throw new Error();
   // Note: identifier changed to `err` to avoid conflict with
   // the inner declaration of `a`.
 } catch (err) {

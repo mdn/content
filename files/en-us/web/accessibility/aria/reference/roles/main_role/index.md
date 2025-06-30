@@ -1,5 +1,6 @@
 ---
 title: "ARIA: main role"
+short-title: main
 slug: Web/Accessibility/ARIA/Reference/Roles/main_role
 page-type: aria-role
 spec-urls:
@@ -32,11 +33,9 @@ The {{HTMLElement('main')}} element has a role of `main`. Developers should use 
 ### Associated ARIA roles, states, and properties
 
 - [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns)
-
   - : The `aria-owns` attribute establishes relationships in the accessibility layer that aren't present in the DOM. Documents and applications can be nested in the DOM, which may lead to having more than one main element as DOM descendants. If this is the case, include `aria-owns` to identify the relationship of the main to its document or application ancestor.
 
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) or `aria-labelledby`
-
   - : Identify the accessible name with [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) if a visible header is present. Otherwise, including an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) can be helpful for orienting assistive technology users, especially in single-page applications where main content changes happen without generating a page load event.
 
 ## Example
@@ -60,7 +59,7 @@ The {{HTMLElement('main')}} element has a role of `main`. Developers should use 
 
 The `main` [landmark role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles#3._landmark_roles) should only be used once per document.
 
-If a document contains two `main` roles, say updating page content when triggered by JavaScript, the inactive `main` role's presence should be removed from assistive technology via techniques such as toggling the [`hidden` attribute](/en-US/docs/Web/HTML/Global_attributes/hidden).
+If a document contains two `main` roles, say updating page content when triggered by JavaScript, the inactive `main` role's presence should be removed from assistive technology via techniques such as toggling the [`hidden` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden).
 
 ```html
 <main>
@@ -86,7 +85,7 @@ Using the {{HTMLElement('main')}} element will automatically communicate a secti
 
 Skip navigation, also known as "skipnav", is a technique that allows an assistive technology user to quickly bypass large sections of repeated content (main navigation, info banners, etc.). This allows the user to access the main content of the page faster.
 
-Adding an [`id` attribute](/en-US/docs/Web/HTML/Global_attributes/id) to the element with a declaration of `role="main"` allows it to be a target of a skip navigation link users.
+Adding an [`id` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/id) to the element with a declaration of `role="main"` allows it to be a target of a skip navigation link users.
 
 ```html
 <body>
@@ -123,7 +122,7 @@ Which is the equivalent of:
 ## See also
 
 - The {{HTMLElement('main')}} element
-- [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements)
+- [Using HTML sections and outlines](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements)
 - [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://www.tpgi.com/using-wai-aria-landmarks-2013/)
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
 - [The main element | HTML5 Doctor](https://html5doctor.com/the-main-element/)

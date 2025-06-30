@@ -1,5 +1,6 @@
 ---
 title: DataView() constructor
+short-title: DataView()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/DataView
 page-type: javascript-constructor
 browser-compat: javascript.builtins.DataView.DataView
@@ -9,7 +10,7 @@ browser-compat: javascript.builtins.DataView.DataView
 
 The **`DataView()`** constructor creates {{jsxref("DataView")}} objects.
 
-{{InteractiveExample("JavaScript Demo: DataView Constructor")}}
+{{InteractiveExample("JavaScript Demo: DataView() constructor")}}
 
 ```js interactive-example
 // Create an ArrayBuffer with a size in bytes
@@ -32,7 +33,8 @@ new DataView(buffer, byteOffset)
 new DataView(buffer, byteOffset, byteLength)
 ```
 
-> **Note:** `DataView()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `DataView()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

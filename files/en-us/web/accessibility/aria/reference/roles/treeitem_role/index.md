@@ -1,5 +1,6 @@
 ---
 title: "ARIA: treeitem role"
+short-title: treeitem
 slug: Web/Accessibility/ARIA/Reference/Roles/treeitem_role
 page-type: aria-role
 spec-urls:
@@ -27,7 +28,7 @@ Each parent node should include the [`aria-expanded`](/en-US/docs/Web/Accessibil
 > [!NOTE]
 > ARIA tree views use navigation more similar to native applications than to web applications and are navigated primarily with arrow keys on the keyboard instead of the <kbd>Tab</kbd>. This form of navigation is not common for most browser content, though normal and expected for native applications. For this reason, consider alternative options to address the functionality you need before creating a tree view.
 
-Any element with a `treeitem` role must be nested in, or owned by, an element with role `tree`. Tree items can be a child of `tree`, `treeitem`, or an element with role `group` that is contained in, or owned by, an element with role `tree` or `treeitem`. If a `treeitem` is not nested within a `tree`, or nested in a `group` that is owned by a `tree`, include the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of the `treeitem` in the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns) attribute value on the owning `tree`, `treeitem` or `group` element.
+Any element with a `treeitem` role must be nested in, or owned by, an element with role `tree`. Tree items can be a child of `tree`, `treeitem`, or an element with role `group` that is contained in, or owned by, an element with role `tree` or `treeitem`. If a `treeitem` is not nested within a `tree`, or nested in a `group` that is owned by a `tree`, include the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) of the `treeitem` in the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns) attribute value on the owning `tree`, `treeitem` or `group` element.
 
 Trees can be "single-select", allowing users to choose just one `treeitem` for an action, or "multi-select", where users are able to select more than one `treeitem` nodes for an action. In both cases, to be keyboard accessible, focus must be managed for all tree descendants.
 
@@ -224,7 +225,7 @@ The following is how one might mark up a directory listing of web development co
 
 The above provides the semantics for a tree view, but does not provide any of the interactivity. That must be added in with JavaScript.
 
-If the tree items aren't by default focusable, JavaScript can be used [`tabIndex="-1"`](/en-US/docs/Web/HTML/Global_attributes/tabindex) to all the treeitems except the one that should receive focus when the user tabs into the tree which should be set to `tabIndex="0"`.
+If the tree items aren't by default focusable, JavaScript can be used [`tabIndex="-1"`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) to all the treeitems except the one that should receive focus when the user tabs into the tree which should be set to `tabIndex="0"`.
 
 All the keyboard functionality in Keyboard interactions and all pointer events need to be programmed, including focus management, going up and down the tree, expanding and collapsing parent nodes, and selection management.
 
@@ -233,5 +234,3 @@ If the tree has more than 7 tree items, including type ahead functionality is re
 ## Specifications
 
 {{Specifications}}
-
-## See also

@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainDateTime.prototype.withCalendar()
+short-title: withCalendar()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime/withCalendar
 page-type: javascript-instance-method
 status:
@@ -22,7 +23,7 @@ withCalendar(calendar)
 ### Parameters
 
 - `calendar`
-  - : A string that corresponds to the {{jsxref("Temporal/PlainDateTime/calendarId", "calendarId")}} property.
+  - : A string that corresponds to the {{jsxref("Temporal/PlainDateTime/calendarId", "calendarId")}} property. See [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types) for a list of commonly supported calendar types.
 
 ### Return value
 
@@ -41,8 +42,8 @@ A new `Temporal.PlainDateTime` object, representing the date-time specified by t
 
 ```js
 const dt = Temporal.PlainDateTime.from("2021-07-01T12:34:56");
-const newDT = dt.withCalendar("islamic");
-console.log(newDT.toLocaleString("en-US", { calendar: "islamic" }));
+const newDT = dt.withCalendar("islamic-umalqura");
+console.log(newDT.toLocaleString("en-US", { calendar: "islamic-umalqura" }));
 // 11/21/1442 AH, 12:34:56 PM
 ```
 

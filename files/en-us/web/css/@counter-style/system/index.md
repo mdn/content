@@ -39,37 +39,30 @@ This may take one of three forms:
 The values include:
 
 - `cyclic`
-
   - : Cycles through the list of symbols provided in the [`symbols`](/en-US/docs/Web/CSS/@counter-style/symbols) descriptor. Once the end of the list is reached, the cycle will loop back to the beginning and start over. This value is useful both for basic bullet styles with just one symbol and for styles with multiple symbols. At least one symbol must be specified in the `symbols` descriptor, otherwise the counter style is not valid.
 
 - `numeric`
-
   - : Interprets the counter symbols as digits in a [place-value numbering system](https://en.wikipedia.org/wiki/Positional_notation). The numeric system is similar to the `alphabetic` system, described above. The main difference is that in the `alphabetic` system, the first counter symbol given in the `symbols` descriptor is interpreted as `1`, the next as `2`, and so on. However, in the numeric system, the first counter symbol is interpreted as 0, the next as `1`, then `2`, and so on.
 
     At least two counter symbols must be specified in the `symbols` descriptor or the counter style is not valid.
 
 - `alphabetic`
-
   - : Interprets the specified symbols as digits, to an alphabetic numbering system. If the characters `"a"` to `"z"` are specified as symbols in a counter style, with the `alphabetic` system, then the first 26 counter representations will be `"a"`, `"b"` up to `"z"`. Until this point, the behavior is the same as that of the `symbolic` system, described above. However, after `"z"`, it will continue as `"aa"`, `"ab"`, `"ac"`…
 
     The `symbols` descriptor must contain at least two symbols or the counter style is not valid. The first counter symbol provided in the `symbols` descriptor is interpreted as `1`, the next as `2`, and so on. This system is also defined strictly over positive counter values.
 
 - `symbolic`
-
   - : Cycles through the symbols provided in the `symbols` descriptor list repeatedly, doubling, tripling, and so on, the symbols on each successive pass through the list. For example, if two symbols "◽" and "◾" are specified in the `symbols` descriptor, on each successive pass, they will become "◽◽" and "◾◾", then "◽◽◽" and "◾◾◾", and so on in subsequent passes. At least one symbol must be specified in the `symbols` descriptor, otherwise the counter style is not valid. This counter system works for positive counter values only.
 
 - `additive`
-
   - : Used to represent "sign-value" numbering systems, such as Roman numerals, which rather than reuse digits in different positions to obtain different values, define additional digits for larger values. The value of a number in such a system can be found out by adding the digits in the number.
 
     An additional descriptor called `additive-symbols` must be specified with at least one _additive tuple_, or else the counter style rule will not be valid. An additive tuple is similar to a composite counter symbol, which is made up of two parts: a normal counter symbol and a non-negative integer weight. The additive tuples must be specified in the descending order of their weights or the system is invalid.
 
 - `fixed` or `fixed <integer>`
-
   - : Defines a finite set of symbols, iterating once through the list of symbols provided in the `symbols` descriptor. Once the specified symbols have been iterated through, the fallback counter style is used. This keyword value is useful in cases where the counter style values are finite. At least one symbol must be specified in the `symbols` descriptor, otherwise the counter style is not valid. The `fixed` keyword can be followed by an optional {{cssxref("&lt;integer&gt;")}} value. If specified, the `<integer>` value indicates the item in the list that will get the first symbol from the list of symbols. If omitted, the default value of `integer` is `1`, which gives the first item in the list the first symbol.
 
 - `extends`
-
   - : Extends the algorithm of another browser- or author-defined counter style by allowing the alteration of some aspects of the extended counter style. Any unspecified descriptors and their values are inherited from the extended counter style specified. If the counter style name specified with `extends` is not yet defined, the `decimal` counter style will be extended by default.
 
     It must not contain a `symbols` or `additive-symbols` descriptor, otherwise the counter style rule will be invalid. If one or more counter styles definitions form a cycle with their `extends` values, the browser will treat all the participating counter styles as extending from the `decimal` style.
@@ -299,7 +292,7 @@ This example renders a list using Roman numerals. Notice that a `range` is speci
 
 #### HTML
 
-We use the [`start`](/en-US/docs/Web/HTML/Element/ol#start) attribute on the {{HTMLElement("ol")}} element to demonstrate that counting doesn't need to start at `1`. Additionally, we use the [`value`](/en-US/docs/Web/HTML/Element/li#value) attribute on the fifth {{HTMLElement("li")}} element to demonstrate that the counters you define using `@counter-style` behave just like native counters.
+We use the [`start`](/en-US/docs/Web/HTML/Reference/Elements/ol#start) attribute on the {{HTMLElement("ol")}} element to demonstrate that counting doesn't need to start at `1`. Additionally, we use the [`value`](/en-US/docs/Web/HTML/Reference/Elements/li#value) attribute on the fifth {{HTMLElement("li")}} element to demonstrate that the counters you define using `@counter-style` behave just like native counters.
 
 ```html
 <ol start="48">

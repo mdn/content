@@ -1,10 +1,12 @@
 ---
 title: CSS performance optimization
+short-title: Performant CSS
 slug: Learn_web_development/Extensions/Performance/CSS
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/html", "Learn_web_development/Extensions/Performance/business_case_for_performance", "Learn_web_development/Extensions/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/html", "Learn_web_development/Extensions/Performance/business_case_for_performance", "Learn_web_development/Extensions/Performance")}}
 
 When developing a website, you need to consider how the browser is handling the CSS on your site. To mitigate any performance issues that CSS might be causing, you should optimize it. For example, you should optimize the CSS to mitigate [render-blocking](/en-US/docs/Glossary/Render_blocking) and minimize the number of required reflows. This article walks you through key CSS performance optimization techniques.
 
@@ -98,7 +100,7 @@ To optimize the CSSOM construction and improve page performance, you can do one 
 
 - **Cut down on image HTTP requests with CSS sprites**: [CSS sprites](https://css-tricks.com/css-sprites/) is a technique that places several small images (such as icons) that you want to use on your site into a single image file, and then uses different {{cssxref("background-position")}} values to display the chunk of image that you want to show in each different place. This can dramatically cut down on the number of HTTP requests needed to fetch the images.
 
-- **Preload important assets**: You can use [`rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload) to turn {{htmlelement("link")}} elements into preloaders for critical assets. This includes CSS files, fonts, and images:
+- **Preload important assets**: You can use [`rel="preload"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/preload) to turn {{htmlelement("link")}} elements into preloaders for critical assets. This includes CSS files, fonts, and images:
 
   ```html
   <link rel="preload" href="style.css" as="style" />
@@ -153,7 +155,7 @@ To further improve performance, you should consider moving animation work off th
 - 3D transform animations such as [`transform: translateZ()`](/en-US/docs/Web/CSS/transform) and [`rotate3d()`](/en-US/docs/Web/CSS/transform-function/rotate3d).
 - Elements with certain other properties animated such as [`position: fixed`](/en-US/docs/Web/CSS/position).
 - Elements with [`will-change`](/en-US/docs/Web/CSS/will-change) applied (see the section below).
-- Certain elements that are rendered in their own layer, including [`<video>`](/en-US/docs/Web/HTML/Element/video), [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas), and [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe).
+- Certain elements that are rendered in their own layer, including [`<video>`](/en-US/docs/Web/HTML/Reference/Elements/video), [`<canvas>`](/en-US/docs/Web/HTML/Reference/Elements/canvas), and [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe).
 
 Animation on the GPU can result in improved performance, especially on mobile. However, moving animations to GPU is not always that simple. Read [CSS GPU Animation: Doing It Right](https://www.smashingmagazine.com/2016/12/gpu-animation-doing-it-right/) (smashingmagazine.com, 2016) for a very useful and detailed analysis.
 
@@ -161,7 +163,8 @@ Animation on the GPU can result in improved performance, especially on mobile. H
 
 Browsers may set up optimizations before an element is actually changed. These kinds of optimizations can increase the responsiveness of a page by doing potentially expensive work before it is required. The CSS [`will-change`](/en-US/docs/Web/CSS/will-change) property hints to browsers how an element is expected to change.
 
-> **Note:** `will-change` is intended to be used as a last resort to try to deal with existing performance problems. It should not be used to anticipate performance problems.
+> [!NOTE]
+> `will-change` is intended to be used as a last resort to try to deal with existing performance problems. It should not be used to anticipate performance problems.
 
 ```css
 .element {
@@ -171,7 +174,7 @@ Browsers may set up optimizations before an element is actually changed. These k
 
 ## Optimizing for render blocking
 
-CSS can scope styles to particular conditions with media queries. Media queries are important for a responsive web design and help us optimize a critical rendering path. The browser blocks rendering until it parses all of these styles but will not block rendering on styles it knows it will not use, such as the print stylesheets. By splitting the CSS into multiple files based on media queries, you can prevent render blocking during download of unused CSS. To create a non-blocking CSS link, move the not-immediately used styles, such as print styles, into separate file, add a [`<link>`](/en-US/docs/Web/HTML/Element/link) to the HTML mark up, and add a media query, in this case stating it's a print stylesheet.
+CSS can scope styles to particular conditions with media queries. Media queries are important for a responsive web design and help us optimize a critical rendering path. The browser blocks rendering until it parses all of these styles but will not block rendering on styles it knows it will not use, such as the print stylesheets. By splitting the CSS into multiple files based on media queries, you can prevent render blocking during download of unused CSS. To create a non-blocking CSS link, move the not-immediately used styles, such as print styles, into separate file, add a [`<link>`](/en-US/docs/Web/HTML/Reference/Elements/link) to the HTML mark up, and add a media query, in this case stating it's a print stylesheet.
 
 ```html
 <!-- Loading and parsing styles.css is render-blocking -->
@@ -229,7 +232,7 @@ This is more likely to be beneficial if your `font-family` declaration is hidden
 
 You can also consider:
 
-- Using [`rel="preconnect"`](/en-US/docs/Web/HTML/Attributes/rel/preconnect) to make an early connection with the font provider. See [Preconnect to critical third-party origins](https://web.dev/articles/font-best-practices#preconnect_to_critical_third-party_origins) for details.
+- Using [`rel="preconnect"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/preconnect) to make an early connection with the font provider. See [Preconnect to critical third-party origins](https://web.dev/articles/font-best-practices#preconnect_to_critical_third-party_origins) for details.
 - Using the [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API) to customize the font loading behavior via JavaScript.
 
 ### Loading only the glyphs you need

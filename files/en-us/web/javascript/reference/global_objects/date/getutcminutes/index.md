@@ -1,5 +1,6 @@
 ---
 title: Date.prototype.getUTCMinutes()
+short-title: getUTCMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMinutes
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getUTCMinutes
@@ -9,7 +10,7 @@ browser-compat: javascript.builtins.Date.getUTCMinutes
 
 The **`getUTCMinutes()`** method of {{jsxref("Date")}} instances returns the minutes for this date according to universal time.
 
-{{InteractiveExample("JavaScript Demo: Date.getUTCMinutes()")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.getUTCMinutes()")}}
 
 ```js interactive-example
 const date1 = new Date("1 January 2000 03:15:30 GMT+07:00");

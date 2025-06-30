@@ -1,5 +1,6 @@
 ---
 title: Date.prototype.toDateString()
+short-title: toDateString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toDateString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.toDateString
@@ -9,7 +10,7 @@ browser-compat: javascript.builtins.Date.toDateString
 
 The **`toDateString()`** method of {{jsxref("Date")}} instances returns a string representing the date portion of this date interpreted in the local timezone.
 
-{{InteractiveExample("JavaScript Demo: Date.toDateString()")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.toDateString()")}}
 
 ```js interactive-example
 const event = new Date(1993, 6, 28, 14, 39, 7);
@@ -50,7 +51,7 @@ For example: "Thu Jan 01 1970".
 - If you only want to get the _time_ part, use {{jsxref("Date/toTimeString", "toTimeString()")}}.
 - If you want to get both the date and time, use {{jsxref("Date/toString", "toString()")}}.
 - If you want to make the date interpreted as UTC instead of local timezone, use {{jsxref("Date/toUTCString", "toUTCString()")}}.
-- If you want to format the date in a more user-friendly format (e.g. localization), use {{jsxref("Date/toLocaleDateString", "toLocaleDateString()")}}.
+- If you want to format the date in a more user-friendly format (e.g., localization), use {{jsxref("Date/toLocaleDateString", "toLocaleDateString()")}}.
 
 ## Examples
 

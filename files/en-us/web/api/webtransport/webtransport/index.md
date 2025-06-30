@@ -23,9 +23,7 @@ new WebTransport(url, options)
   - : A string representing the URL of the HTTP/3 server to connect to.
     The scheme must be HTTPS, and the port number needs to be explicitly specified.
 - `options` {{optional_inline}}
-
   - : An object that may have the following properties:
-
     - `allowPooling` {{optional_inline}}
       - : A boolean value.
         If `true`, the network connection for this {{domxref("WebTransport")}} can be shared with a pool of other HTTP/3 sessions.
@@ -39,7 +37,6 @@ new WebTransport(url, options)
         If `true`, the connection cannot be established over HTTP/2 if an HTTP/3 connection is not possible.
         By default the value is `false`.
     - `serverCertificateHashes` {{optional_inline}}
-
       - : An array of objects, each defining the hash value of a server certificate along with the name of the algorithm that was used to generate it.
         This option is only supported for transports using dedicated connections (`allowPooling` is `false`).
 
@@ -61,9 +58,7 @@ new WebTransport(url, options)
         A user agent may add further requirements; these will be listed in the [browser compatibility](#browser_compatibility) section if known.
 
         Each object in the array has the following properties:
-
         - `algorithm`
-
           - : A string with the value: `sha-256` (case-insensitive).
             Note that this string represents the algorithm to use to verify the hash, and that any hash using an unknown algorithm will be ignored.
             At time of writing, `SHA-256` is the only hash algorithm listed in the specification.
@@ -129,7 +124,7 @@ async function useTransport(url) {
   const transport = await initTransport(url);
 
   // Use the transport object to send and receive data
-  // ...
+  // …
 
   // When done, close the transport
   await closeTransport(transport);

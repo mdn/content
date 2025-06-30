@@ -1,10 +1,10 @@
 ---
 title: "Challenge: Adding features to our bouncing balls demo"
+short-title: "Challenge: Bouncing balls features"
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
@@ -58,18 +58,22 @@ The `Ball` constructor should define a new property called `exists`, which is us
 The `collisionDetect()` method of the `Ball` class needs a small update. A ball needs to be considered for collision detection only if the `exists` property is `true`. So, replace the existing `collisionDetect()` code with the following code:
 
 ```js
-collisionDetect() {
-  for (const ball of balls) {
-    if (!(this === ball) && ball.exists) {
-      const dx = this.x - ball.x;
-      const dy = this.y - ball.y;
-      const distance = Math.sqrt(dx * dx + dy * dy);
+class Ball {
+  // …
+  collisionDetect() {
+    for (const ball of balls) {
+      if (!(this === ball) && ball.exists) {
+        const dx = this.x - ball.x;
+        const dy = this.y - ball.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
 
-      if (distance < this.size + ball.size) {
-        ball.color = this.color = randomRGB();
+        if (distance < this.size + ball.size) {
+          ball.color = this.color = randomRGB();
+        }
       }
     }
   }
+  // …
 }
 ```
 
@@ -167,7 +171,6 @@ To implement the score counter, follow the following steps:
    ```
 
 3. In your JavaScript, make the following updates:
-
    - Create a variable that stores a reference to the paragraph.
    - Keep a count of the number of balls on screen in some way.
    - Increment the count and display the updated number of balls each time a ball is added to the scene.

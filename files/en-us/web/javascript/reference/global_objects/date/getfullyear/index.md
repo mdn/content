@@ -1,5 +1,6 @@
 ---
 title: Date.prototype.getFullYear()
+short-title: getFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getFullYear
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getFullYear
@@ -11,7 +12,7 @@ The **`getFullYear()`** method of {{jsxref("Date")}} instances returns the year 
 
 Use this method instead of the {{jsxref("Date/getYear", "getYear()")}} method.
 
-{{InteractiveExample("JavaScript Demo: Date.getFullYear()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.getFullYear()", "shorter")}}
 
 ```js interactive-example
 const moonLanding = new Date("July 20, 69 00:20:18");

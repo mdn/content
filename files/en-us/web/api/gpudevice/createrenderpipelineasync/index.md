@@ -3,12 +3,10 @@ title: "GPUDevice: createRenderPipelineAsync() method"
 short-title: createRenderPipelineAsync()
 slug: Web/API/GPUDevice/createRenderPipelineAsync
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUDevice.createRenderPipelineAsync
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`createRenderPipelineAsync()`** method of the
 {{domxref("GPUDevice")}} interface returns a {{jsxref("Promise")}} that fulfills with a {{domxref("GPURenderPipeline")}}, which can control the vertex and fragment shader stages and be used in a {{domxref("GPURenderPassEncoder")}} or {{domxref("GPURenderBundleEncoder")}}, once the pipeline can be used without any stalling.
@@ -42,7 +40,7 @@ A validation error can occur if any of the following are false:
 
 - For `depthStencil` objects:
   - `format` is a [`depth-or-stencil`](https://gpuweb.github.io/gpuweb/#depth-or-stencil-format) format.
-  - The [`depthBias`](#depthbias), [`depthBiasClamp`](#depthbiasclamp), and [`depthBiasSlopeScale`](#depthbiasslopescale) properties are set to <code>0</code> for line and point topologies, i.e., if [`topology`](#topology) is set to `"line-list"`, `"line-strip"`, or `"point-list"`.
+  - The [`depthBias`](/en-US/docs/Web/API/GPUDevice/createRenderPipeline#depthbias), [`depthBiasClamp`](/en-US/docs/Web/API/GPUDevice/createRenderPipeline#depthbiasclamp), and [`depthBiasSlopeScale`](/en-US/docs/Web/API/GPUDevice/createRenderPipeline#depthbiasslopescale) properties are set to <code>0</code> for line and point topologies, i.e., if [`topology`](/en-US/docs/Web/API/GPUDevice/createRenderPipeline#topology) is set to `"line-list"`, `"line-strip"`, or `"point-list"`.
   - If `depthWriteEnabled` is `true` or `depthCompare` is not `"always"`, `format` has a depth component.
   - If `stencilFront` or `stencilBack`'s properties are not at their default values, `format` has a stencil component.
 - For `fragment` objects:
@@ -66,7 +64,7 @@ The following example shows a basic example of the construction of a valid rende
 
 ```js
 async function init() {
-  // ...
+  // …
 
   const vertexBuffers = [
     {
@@ -111,7 +109,7 @@ async function init() {
   const renderPipeline =
     await device.createRenderPipelineAsync(pipelineDescriptor);
 
-  // ...
+  // …
 }
 ```
 

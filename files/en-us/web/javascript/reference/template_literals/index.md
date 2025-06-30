@@ -60,7 +60,7 @@ Any newline characters inserted in the source are part of the template literal.
 Using normal strings, you would have to use the following syntax in order to get multi-line strings:
 
 ```js
-console.log("string text line 1\n" + "string text line 2");
+console.log("string text line 1\nstring text line 2");
 // "string text line 1
 // string text line 2"
 ```
@@ -287,7 +287,7 @@ Array.from(str).join(",");
 // "H,i,\\,n,5,!"
 ```
 
-`String.raw` functions like an "identity" tag if the literal doesn't contain any escape sequences. In case you want an actual identity tag that always works as if the literal is untagged, you can make a custom function that passes the "cooked" (i.e. escape sequences are processed) literal array to `String.raw`, pretending they are raw strings.
+`String.raw` functions like an "identity" tag if the literal doesn't contain any escape sequences. In case you want an actual identity tag that always works as if the literal is untagged, you can make a custom function that passes the "cooked" (i.e., escape sequences are processed) literal array to `String.raw`, pretending they are raw strings.
 
 ```js
 const identity = (strings, ...values) =>
@@ -322,7 +322,8 @@ In normal template literals, [the escape sequences in string literals](/en-US/do
 - `\u` not followed by `{` and followed by fewer than four hex digits (including none); for example `\uz`
 - `\u{}` enclosing an invalid Unicode code point — it contains a non-hex digit, or its value is greater than `10FFFF`; for example `\u{110000}` and `\u{z}`
 
-> **Note:** `\` followed by other characters, while they may be useless since nothing is escaped, are not syntax errors.
+> [!NOTE]
+> `\` followed by other characters, while they may be useless since nothing is escaped, are not syntax errors.
 
 However, this is problematic for tagged templates, which, in addition to the "cooked" literal, also have access to the raw literals (escape sequences are preserved as-is).
 

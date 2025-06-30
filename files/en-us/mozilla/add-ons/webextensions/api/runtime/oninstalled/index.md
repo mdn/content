@@ -33,13 +33,9 @@ Events have three functions:
 ### Parameters
 
 - `function`
-
   - : The function called when this event occurs. The function is passed these arguments:
-
     - `details`
-
       - : An object with the following properties:
-
         - `id` {{optional_inline}}
           - : `string`. The ID of the imported shared module extension that updated. This is present only if the `reason` value is `shared_module_update`.
         - `previousVersion` {{optional_inline}}

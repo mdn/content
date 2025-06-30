@@ -1,5 +1,6 @@
 ---
 title: Number.NaN
+short-title: NaN
 slug: Web/JavaScript/Reference/Global_Objects/Number/NaN
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Number.NaN
@@ -13,7 +14,6 @@ The **`Number.NaN`** static data property represents Not-A-Number, which is equi
 
 ```js interactive-example
 function clean(x) {
-  // eslint-disable-next-line use-isnan
   if (x === Number.NaN) {
     // Can never be true
     return null;

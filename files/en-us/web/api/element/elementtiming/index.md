@@ -10,7 +10,7 @@ browser-compat: api.Element.elementTiming
 
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
-The **`elementTiming`** property of the {{domxref("Element")}} interface identifies elements for observation in the {{domxref("PerformanceElementTiming")}} API. The `elementTiming` property reflects the value of the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute.
+The **`elementTiming`** property of the {{domxref("Element")}} interface identifies elements for observation in the {{domxref("PerformanceElementTiming")}} API. The `elementTiming` property reflects the value of the [`elementtiming`](/en-US/docs/Web/HTML/Reference/Attributes/elementtiming) attribute.
 
 ## Value
 
@@ -20,7 +20,7 @@ A string.
 
 ### Logging the value of `elementTiming`
 
-In this example, adding the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute to the {{HTMLElement("img")}} element sets the image to be observed.
+In this example, adding the [`elementtiming`](/en-US/docs/Web/HTML/Reference/Attributes/elementtiming) attribute to the {{HTMLElement("img")}} element sets the image to be observed.
 
 ```html
 <img
@@ -50,4 +50,4 @@ For a more complete example on how to use the Element Timing API, see {{domxref(
 ## See also
 
 - {{domxref("PerformanceElementTiming")}}
-- [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) HTML attribute
+- [`elementtiming`](/en-US/docs/Web/HTML/Reference/Attributes/elementtiming) HTML attribute

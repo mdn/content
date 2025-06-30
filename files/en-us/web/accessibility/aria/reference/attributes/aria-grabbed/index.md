@@ -1,5 +1,6 @@
 ---
-title: aria-grabbed
+title: "ARIA: aria-grabbed attribute"
+short-title: aria-grabbed
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-grabbed
 page-type: aria-attribute
 status:
@@ -12,7 +13,7 @@ The `aria-grabbed` state indicates an element's "grabbed" state in a drag-and-dr
 
 ## Description
 
-Text selections, images, and links can be dragged by default. Setting the global [`draggable="true"`](/en-US/docs/Web/HTML/Global_attributes/draggable) attribute, part of HTML5's [Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API), with a [`dragstart` event handler](/en-US/docs/Web/API/HTMLElement/dragstart_event), means any DOM node can be made draggable as well.
+Text selections, images, and links can be dragged by default. Setting the global [`draggable="true"`](/en-US/docs/Web/HTML/Reference/Global_attributes/draggable) attribute, part of HTML5's [Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API), with a [`dragstart` event handler](/en-US/docs/Web/API/HTMLElement/dragstart_event), means any DOM node can be made draggable as well.
 
 The `aria-grabbed` attribute was used to indicate if an element is in a "grabbed" state in a drag-and-drop operation with `aria-grabbed="true"` or if that the element is grabbable, but not currently grabbed with `aria-grabbed="false"`.
 
@@ -45,7 +46,7 @@ Used in **ALL** [roles](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles)
 ## See also
 
 - [`aria-dropeffect`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-dropeffect)
-- [HTML global `draggable` attribute](/en-US/docs/Web/HTML/Global_attributes/draggable)
+- [HTML global `draggable` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/draggable)
 - HTML [Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 - {{domxref('dataTransfer')}}
 - {{domxref('DataTransfer.dropEffect')}}

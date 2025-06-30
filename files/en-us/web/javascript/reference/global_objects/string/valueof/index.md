@@ -1,5 +1,6 @@
 ---
 title: String.prototype.valueOf()
+short-title: valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/valueOf
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.valueOf
@@ -9,7 +10,7 @@ browser-compat: javascript.builtins.String.valueOf
 
 The **`valueOf()`** method of {{jsxref("String")}} values returns this string value.
 
-{{InteractiveExample("JavaScript Demo: String.valueOf()")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.valueOf()")}}
 
 ```js interactive-example
 const stringObj = new String("foo");

@@ -1,5 +1,6 @@
 ---
 title: Temporal.ZonedDateTime.prototype.toPlainDateTime()
+short-title: toPlainDateTime()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/toPlainDateTime
 page-type: javascript-instance-method
 status:

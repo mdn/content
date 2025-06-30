@@ -23,7 +23,6 @@ To make use of the Bookmarks API, you need to ask for the `"bookmarks"` permissi
 The Bookmarks API lets your extension do the things users can do with bookmarks and includes functions for:
 
 - Basic bookmark item manipulation, offering:
-
   - add ({{WebExtAPIRef("bookmarks.create")}}).
   - retrieve ({{WebExtAPIRef("bookmarks.get")}}).
   - update ({{WebExtAPIRef("bookmarks.update")}}).
@@ -33,14 +32,12 @@ The Bookmarks API lets your extension do the things users can do with bookmarks 
 
 - Obtaining a list of recently added bookmarks ({{WebExtAPIRef("bookmarks.getRecent")}}).
 - Bookmark folder tree manipulation to:
-
   - get tree information ({{WebExtAPIRef("bookmarks.getTree")}}, {{WebExtAPIRef("bookmarks.getChildren")}}, and {{WebExtAPIRef("bookmarks.getSubTree")}}).
   - add branches ({{WebExtAPIRef("bookmarks.create")}}).
   - delete nodes ({{WebExtAPIRef("bookmarks.removeTree")}}).
   - move nodes ({{WebExtAPIRef("bookmarks.move")}}).
 
 - Listening for bookmarks (or bookmark tree folders) events that:
-
   - add ({{WebExtAPIRef("bookmarks.onCreated")}}).
   - change ({{WebExtAPIRef("bookmarks.onChanged")}}).
   - move ({{WebExtAPIRef("bookmarks.onMoved")}}).
@@ -48,7 +45,6 @@ The Bookmarks API lets your extension do the things users can do with bookmarks 
   - remove ({{WebExtAPIRef("bookmarks.onRemoved")}}).
 
 - Listening for bookmark imports, which can be used to suspend other bookmark processing while an import is in progress:
-
   - import started ({{WebExtAPIRef("bookmarks.onImportBegan")}}).
   - import finished ({{WebExtAPIRef("bookmarks.onImportEnded")}}).
 
@@ -145,7 +141,7 @@ function isSupportedProtocol(urlString) {
 If the protocol is one supported by bookmarks, the extension determines if the tab's URL is already bookmarked and if it is, calls `updateIcon()`:
 
 ```js
-      let searching = browser.bookmarks.search({url: currentTab.url});
+      let searching = browser.bookmarks.search({ url: currentTab.url });
       searching.then((bookmarks) => {
         currentBookmark = bookmarks[0];
         updateIcon();

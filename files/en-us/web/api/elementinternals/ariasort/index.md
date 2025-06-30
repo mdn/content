@@ -31,7 +31,14 @@ A string with one of the following values:
 In this example the value of `ariaSort` is set to "ascending".
 
 ```js
-this.internals_.ariaSort = "ascending";
+class CustomControl extends HTMLElement {
+  constructor() {
+    super();
+    this.internals_ = this.attachInternals();
+    this.internals_.ariaSort = "ascending";
+  }
+  // …
+}
 ```
 
 ## Specifications

@@ -12,6 +12,8 @@ The **`width`** property returns and sets the width of an {{domxref("OffscreenCa
 
 ## Value
 
+A positive integer representing the width of the offscreen canvas in CSS pixels.
+
 ## Examples
 
 Creating a new offscreen canvas and returning or setting the width of the offscreen canvas:

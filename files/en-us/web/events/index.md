@@ -5,9 +5,9 @@ page-type: landing-page
 spec-urls: https://html.spec.whatwg.org/multipage/indices.html#events-2
 ---
 
-[Events](/en-US/docs/Learn_web_development/Core/Scripting/Events) are fired to notify code of "interesting changes" that may affect code execution. These can arise from user interactions such as using a mouse or resizing a window, changes in the state of the underlying environment (e.g. low battery or media events from the operating system), and other causes.
+[Events](/en-US/docs/Learn_web_development/Core/Scripting/Events) are fired to notify code of "interesting changes" that may affect code execution. These can arise from user interactions such as using a mouse or resizing a window, changes in the state of the underlying environment (e.g., low battery or media events from the operating system), and other causes.
 
-Each event is represented by an object that is based on the {{domxref("Event")}} interface, and may have additional custom fields and/or functions to provide information about what happened. The documentation for every event has a table (near the top) that includes a link to the associated event interface, and other relevant information. A full list of the different event types is given in [Event > Interfaces based on Event](/en-US/docs/Web/API/Event#introduction).
+Each event is represented by an object that is based on the {{domxref("Event")}} interface, and may have additional custom fields and/or functions to provide information about what happened. The documentation for every event has a table (near the top) that includes a link to the associated event interface, and other relevant information. A full list of the different event types is given in [Event > Interfaces based on Event](/en-US/docs/Web/API/Event#interfaces_based_on_event).
 
 This topic provides an index to the main _sorts_ of events you might be interested in (animation, clipboard, workers etc.) along with the main classes that implement those sorts of events.
 
@@ -29,7 +29,7 @@ This topic provides an index to the main _sorts_ of events you might be interest
           >.
         </p>
         <p>
-          Used to respond to changes in animation status (e.g. when an animation
+          Used to respond to changes in animation status (e.g., when an animation
           starts or ends).
         </p>
       </td>
@@ -460,8 +460,8 @@ This topic provides an index to the main _sorts_ of events you might be interest
         <a href="/en-US/docs/Web/API/TextTrackList#events"
           ><code>TextTrackList</code></a
         >,
-        <a href="/en-US/docs/Web/HTML/Element/audio#events">Element/audio</a>,
-        <a href="/en-US/docs/Web/HTML/Element/video#events">Element/video</a>.
+        <a href="/en-US/docs/Web/HTML/Reference/Elements/audio#events">Element/audio</a>,
+        <a href="/en-US/docs/Web/HTML/Reference/Elements/video#events">Element/video</a>.
       </td>
     </tr>
     <tr>
@@ -668,7 +668,7 @@ This topic provides an index to the main _sorts_ of events you might be interest
         </p>
         <p>
           Provides notification events from interacting with a touch sensitive
-          screen (i.e. using a finger or stylus). Not related to the
+          screen (i.e., using a finger or stylus). Not related to the
           <a href="/en-US/docs/Web/API/Force_Touch_events#events"
             >Force Touch API</a
           >.
@@ -696,7 +696,7 @@ This topic provides an index to the main _sorts_ of events you might be interest
             <strong>Warning:</strong> The
             <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> (and
             associated
-            <a href="/en-US/docs/Web/API/Window#webvr_events"
+            <a href="/en-US/docs/Web/API/WebVR_API#window_events"
               ><code>Window</code> events</a
             >) are deprecated.
           </p>
@@ -827,5 +827,8 @@ This topic provides an index to the main _sorts_ of events you might be interest
 <section id="Quick_links">
   <ol>
     <li><a href="/en-US/docs/Learn_web_development/Core/Scripting/Events">Introduction to events</a></li>
-  </ol>{{ListSubpages}}
+    <li><a href="/en-US/docs/Web/Events">Event reference</a></li>
+    <li><a href="/en-US/docs/Web/Events/Creating_and_triggering_events">Creating and triggering events</a></li>
+    <li><a href="/en-US/docs/Web/Events/Event_handlers">Event handlers (overview)</a></li>
+  </ol>
 </section>

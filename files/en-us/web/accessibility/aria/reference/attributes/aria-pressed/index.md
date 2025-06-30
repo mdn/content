@@ -1,5 +1,6 @@
 ---
-title: aria-pressed
+title: "ARIA: aria-pressed attribute"
+short-title: aria-pressed
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-pressed
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-pressed
@@ -58,8 +59,8 @@ Used in roles:
 
 ## See also
 
-- [`<input type="button">`](/en-US/docs/Web/HTML/Element/input/button)
-- [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit)
+- [`<input type="button">`](/en-US/docs/Web/HTML/Reference/Elements/input/button)
+- [`<input type="submit">`](/en-US/docs/Web/HTML/Reference/Elements/input/submit)
 - {{HTMLElement('button')}}
 - [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked)
 - [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected)

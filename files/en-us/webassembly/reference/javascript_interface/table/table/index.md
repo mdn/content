@@ -18,9 +18,7 @@ new WebAssembly.Table(tableDescriptor, value)
 ### Parameters
 
 - `tableDescriptor`
-
   - : An object that can contain the following members:
-
     - `element`
       - : A string representing the type of value to be stored in the table. This can have a value of `"anyfunc"` (functions) or `"externref"` (host references).
     - `initial`
@@ -29,7 +27,6 @@ new WebAssembly.Table(tableDescriptor, value)
       - : The maximum number of elements the WebAssembly Table is allowed to grow to.
 
 - `value` {{optional_inline}}
-
   - : The element to fill the newly-allocated space with.
 
 ### Exceptions
@@ -77,7 +74,7 @@ const importObject = {
 
 Next, we load and instantiate a WebAssembly module. The `table2.wasm` module defines a table containing two functions. The first function returns 42, and the second returns 83:
 
-```wasm
+```wat
 (module
     (import "js" "tbl" (table 2 anyfunc))
     (func $f42 (result i32) i32.const 42)
@@ -142,6 +139,6 @@ console.log(myObject === table.get(2)); // true
 
 ## See also
 
-- [WebAssembly](/en-US/docs/WebAssembly) overview page
+- [WebAssembly](/en-US/docs/WebAssembly) overview
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Guides/Concepts)
 - [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Guides/Using_the_JavaScript_API)

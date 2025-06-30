@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.entries()
+short-title: entries()
 slug: Web/JavaScript/Reference/Global_Objects/Array/entries
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.entries
@@ -9,7 +10,7 @@ browser-compat: javascript.builtins.Array.entries
 
 The **`entries()`** method of {{jsxref("Array")}} instances returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the key/value pairs for each index in the array.
 
-{{InteractiveExample("JavaScript Demo: Array.entries()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.entries()")}}
 
 ```js interactive-example
 const array1 = ["a", "b", "c"];

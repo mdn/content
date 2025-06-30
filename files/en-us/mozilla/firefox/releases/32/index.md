@@ -6,6 +6,8 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
+Firefox 32 was released on September 2, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
+
 ## Changes for Web developers
 
 ### Developer Tools
@@ -32,13 +34,12 @@ Highlights:
 
 ### HTML
 
-- Experimentally implemented, behind a pref, {{HTMLElement("img")}} [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) property, To activate it set `dom.image.srcset.enable` to `true` ([Firefox bug 870021](https://bugzil.la/870021)).
-- [**id**](/en-US/docs/Web/HTML/Global_attributes/id) and [**class**](/en-US/docs/Web/HTML/Global_attributes/class) are now true [global attributes](/en-US/docs/Web/HTML/Global_attributes) and also apply to XML elements, in a namespace or not ([Firefox bug 741295](https://bugzil.la/741295)).
+- Experimentally implemented, behind a pref, {{HTMLElement("img")}} [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset) property, To activate it set `dom.image.srcset.enable` to `true` ([Firefox bug 870021](https://bugzil.la/870021)).
+- [**id**](/en-US/docs/Web/HTML/Reference/Global_attributes/id) and [**class**](/en-US/docs/Web/HTML/Reference/Global_attributes/class) are now true [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes) and also apply to XML elements, in a namespace or not ([Firefox bug 741295](https://bugzil.la/741295)).
 
 ### JavaScript
 
 - The following new ECMAScript 2015 built-in methods got implemented:
-
   - {{jsxref("Array.from()")}} ([Firefox bug 904723](https://bugzil.la/904723)),
   - {{jsxref("Array.prototype.copyWithin()")}} ([Firefox bug 934423](https://bugzil.la/934423)),
   - {{jsxref("Number.isSafeInteger()")}} ([Firefox bug 1003764](https://bugzil.la/1003764)).
@@ -74,18 +75,18 @@ _No change._
 - New constraints for [WebRTC](/en-US/docs/Glossary/WebRTC)'s {{domxref("NavigatorUserMedia.getUserMedia", "getUserMedia()")}}, `width`, `height`, and `framerate`, have been added, to limit stream dimensions and frame rate ([Firefox bug 907352](https://bugzil.la/907352)):
 
   ```js
-  {
+  const constraints = {
     mandatory: {
       width: { min: 640 },
       height: { min: 480 },
     },
     optional: [
       { width: 650 },
-      { width: { min: 650 }},
+      { width: { min: 650 } },
       { frameRate: 60 },
-      { width: { max: 800 }},
-    ]
-  }
+      { width: { max: 800 } },
+    ],
+  };
   ```
 
 - WebRTC methods which previously used callback functions as input parameters are now also available using JavaScript [promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).

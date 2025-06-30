@@ -15,7 +15,8 @@ A **backreference** refers to the submatch of a previous [capturing group](/en-U
 \N
 ```
 
-> **Note:** `N` is not a literal character.
+> [!NOTE]
+> `N` is not a literal character.
 
 ### Parameters
 

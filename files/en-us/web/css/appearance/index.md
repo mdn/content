@@ -51,6 +51,7 @@ appearance: none;
 appearance: auto;
 appearance: menulist-button;
 appearance: textfield;
+appearance: base-select;
 
 /* Global values */
 appearance: inherit;
@@ -70,20 +71,22 @@ For the following keywords, the user agent selects the appropriate styling based
 Some examples are provided, but the list is not exhaustive.
 
 - `none`
-
   - : If the element is a widget (native form control), it will be forced to use a standardized primitive appearance instead of a platform-native or operating system specific appearance, supporting the usual rules of CSS. This value has no effect on non-widget elements, including replaced elements like {{htmlelement("img")}} and {{htmlelement("video")}}.
 
 - `auto`
-
   - : Acts as `none` on elements with no special styling.
 
-- `<compat-special>`
+- `base-select`
+  - : Opts the {{htmlelement("select")}} element and the {{cssxref("::picker()", "::picker(select)")}} pseudo-element into the browser-defined default (base) styles and behavior for [customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select).
 
+    > [!NOTE]
+    > The specification currently defines the `base` value, which is intended to apply base browser styles more generally for UI elements they are available for. However, this is not currently supported in any browser.
+
+- `<compat-special>`
   - : One of `menulist-button` or `textfield`.
     Both of these values are equivalent to `auto` on elements with no special styling.
 
 - `<compat-auto>`
-
   - : Possible values are `button`, `checkbox`, `listbox`, `menulist`, `meter`, `progress-bar`, `push-button`, `radio`, `searchfield`, `slider-horizontal`, `square-button`, and `textarea`.
     Keywords which are the equivalent of `auto` for maintaining compatibility with older browsers.
 
@@ -239,6 +242,25 @@ select.none {
 #### Result
 
 {{EmbedLiveSample("Apply_custom_styling", 1050, 100)}}
+
+### Basic custom select usage
+
+To opt-in to custom select functionality, the `<select>` element and its picker both need to have an `appearance` value of `base-select` set on them:
+
+```css
+select,
+::picker(select) {
+  appearance: base-select;
+}
+```
+
+You could then, for example, remove the picker's default black {{cssxref("border")}}:
+
+```css
+::picker(select) {
+  border: none;
+}
+```
 
 ## Specifications
 

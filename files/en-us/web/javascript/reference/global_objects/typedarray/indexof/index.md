@@ -1,5 +1,6 @@
 ---
 title: TypedArray.prototype.indexOf()
+short-title: indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/indexOf
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.indexOf
@@ -9,7 +10,7 @@ browser-compat: javascript.builtins.TypedArray.indexOf
 
 The **`indexOf()`** method of {{jsxref("TypedArray")}} instances returns the first index at which a given element can be found in the typed array, or -1 if it is not present. This method has the same algorithm as {{jsxref("Array.prototype.indexOf()")}}.
 
-{{InteractiveExample("JavaScript Demo: TypedArray.indexOf()")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.prototype.indexOf()")}}
 
 ```js interactive-example
 const uint8 = new Uint8Array([10, 20, 30, 40, 50]);

@@ -22,11 +22,9 @@ new ReportingObserver(callback, options)
 ### Parameters
 
 - `callback`
-
-  - : A callback function that runs when the observer starts to collect reports (i.e. via
+  - : A callback function that runs when the observer starts to collect reports (i.e., via
     {{domxref("ReportingObserver.observe()")}}). The callback function is given two
     parameters:
-
     - `reports`
       - : A sequence of {{domxref("Report")}} objects representing
         the reports collected in the observer's report queue. This is probably the most
@@ -36,9 +34,7 @@ new ReportingObserver(callback, options)
         object, allowing for recursive report collection, etc.
 
 - `options` {{optional_inline}}
-
   - : An object allowing you to set the options for creating the object. The available options are:
-
     - `types`
       - : An array of strings representing the types of report to be
         collected by this observer. Available types include `deprecation`,

@@ -1,5 +1,6 @@
 ---
 title: Temporal.ZonedDateTime.prototype.dayOfWeek
+short-title: dayOfWeek
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/dayOfWeek
 page-type: javascript-instance-accessor-property
 status:

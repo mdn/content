@@ -16,7 +16,7 @@ to this element until the mouse button is released or {{domxref("document.releas
 
 > [!WARNING]
 > This interface never had much cross-browser
-> support and you probably looking for {{domxref("element.setPointerCapture")}} instead,
+> support and you are probably looking for {{domxref("element.setPointerCapture")}} instead,
 > from the Pointer Events API.
 
 ## Syntax
@@ -41,56 +41,43 @@ In this example, the current mouse coordinates are drawn while you mouse around 
 clicking and holding down on an element.
 
 ```html
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Mouse Capture Example</title>
-    <style>
-      #myButton {
-        border: solid black 1px;
-        color: black;
-        padding: 2px;
-        box-shadow: black 2px 2px;
-      }
-    </style>
+<p>This is an example of how to use mouse capture on elements in Gecko 2.0.</p>
+<p><a id="myButton" href="#">Test Me</a></p>
+<div id="output">No events yet</div>
+```
 
-    <script>
-      function init() {
-        const btn = document.getElementById("myButton");
-        if (btn.setCapture) {
-          btn.addEventListener("mousedown", mouseDown, false);
-          btn.addEventListener("mouseup", mouseUp, false);
-        } else {
-          document.getElementById("output").textContent =
-            "Sorry, there appears to be no setCapture support on this browser";
-        }
-      }
+```css
+#myButton {
+  border: solid black 1px;
+  color: black;
+  padding: 2px;
+  box-shadow: black 2px 2px;
+}
+```
 
-      function mouseDown(e) {
-        e.target.setCapture();
-        e.target.addEventListener("mousemove", mouseMoved, false);
-      }
+```js
+function mouseDown(e) {
+  e.target.setCapture();
+  e.target.addEventListener("mousemove", mouseMoved, false);
+}
 
-      function mouseUp(e) {
-        e.target.removeEventListener("mousemove", mouseMoved, false);
-      }
+function mouseUp(e) {
+  e.target.removeEventListener("mousemove", mouseMoved, false);
+}
 
-      function mouseMoved(e) {
-        const output = document.getElementById("output");
-        output.textContent = `Position: ${e.clientX}, ${e.clientY}`;
-      }
-    </script>
-  </head>
-  <body onload="init()">
-    <p>
-      This is an example of how to use mouse capture on elements in Gecko 2.0.
-    </p>
-    <p><a id="myButton" href="#">Test Me</a></p>
-    <div id="output">No events yet</div>
-  </body>
-</html>
+function mouseMoved(e) {
+  const output = document.getElementById("output");
+  output.textContent = `Position: ${e.clientX}, ${e.clientY}`;
+}
+
+const btn = document.getElementById("myButton");
+if (btn.setCapture) {
+  btn.addEventListener("mousedown", mouseDown, false);
+  btn.addEventListener("mouseup", mouseUp, false);
+} else {
+  document.getElementById("output").textContent =
+    "Sorry, there appears to be no setCapture support on this browser";
+}
 ```
 
 [View Live Examples](https://mdn.dev/archives/media/samples/domref/mousecapture.html)

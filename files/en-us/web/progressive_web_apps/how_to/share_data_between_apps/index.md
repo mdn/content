@@ -2,9 +2,8 @@
 title: Share data between apps
 slug: Web/Progressive_web_apps/How_to/Share_data_between_apps
 page-type: how-to
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 Application sharing is the ability of one application to pass information or data to another application on the same device. This feature is useful for users as it allows them to share information between two applications without the need for these applications to have prior knowledge of each other.
 
@@ -184,7 +183,7 @@ Here is a web app manifest example using the `share_target` member:
 
 When your app is selected by the user to handle another apps' shared content, your app is launched and the shared content is passed to it in a similar way to that in which {{htmlelement("form")}} elements are submitted.
 
-In the previous web app manifest code example, when the ChattyBox app is selected as a target, it is launched by making an HTTP [`GET`](/en-US/docs/Web/HTTP/Methods/GET) request at the `/share-handler` URL, with the shared data passed as request parameters named `description` and `link`.
+In the previous web app manifest code example, when the ChattyBox app is selected as a target, it is launched by making an HTTP [`GET`](/en-US/docs/Web/HTTP/Reference/Methods/GET) request at the `/share-handler` URL, with the shared data passed as request parameters named `description` and `link`.
 
 The `GET` request will look like this: `/shared-handler?description=...&link=...`.
 
@@ -200,7 +199,7 @@ For more information, see the example [Receive share data using GET](/en-US/docs
 
 ### Handling shared files
 
-In the previous example, text data was handled as a `GET` request. However, handling files requires the use of a [`POST`](/en-US/docs/Web/HTTP/Methods/POST) request with a `multipart/form-data` [encoding type](/en-US/docs/Web/API/HTMLFormElement/enctype).
+In the previous example, text data was handled as a `GET` request. However, handling files requires the use of a [`POST`](/en-US/docs/Web/HTTP/Reference/Methods/POST) request with a `multipart/form-data` [encoding type](/en-US/docs/Web/API/HTMLFormElement/enctype).
 
 The following code snippet shows how a PWA can be configured to accept different types of shared files:
 
@@ -240,7 +239,7 @@ The following code snippet shows how a PWA can be configured to accept different
 }
 ```
 
-As this example shows, each file object in the `files` property must have a `name` property and an `accept` property. The `accept` property must specify the accepted [MIME types](/en-US/docs/Web/HTTP/MIME_types) or file extensions.
+As this example shows, each file object in the `files` property must have a `name` property and an `accept` property. The `accept` property must specify the accepted [MIME types](/en-US/docs/Web/HTTP/Guides/MIME_types) or file extensions.
 
 When the app is selected by the user to handle a shared file (or files), the app is launched with a `POST` request at the `/share-file-handler` URL, with encoded form data.
 
@@ -289,4 +288,4 @@ For more information, see the [receiving shared files](/en-US/docs/Web/Progressi
 - [`share_target` manifest member](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/share_target)
 - [Integrate with the OS sharing UI with the Web Share API](https://web.dev/articles/web-share) on web.dev
 - [Receiving shared data with the Web Share Target API](https://developer.chrome.com/docs/capabilities/web-apis/web-share-target) on developer.chrome.com
-- [Share content with other apps](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/share) on microsoft.com
+- [Share content with other apps](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps/how-to/share) on microsoft.com

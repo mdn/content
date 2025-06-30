@@ -1,5 +1,6 @@
 ---
 title: Stacking without the z-index property
+short-title: Stacking without z-index
 slug: Web/CSS/CSS_positioned_layout/Stacking_without_z-index
 page-type: guide
 ---
@@ -110,9 +111,8 @@ div {
 
 ## See also
 
-- [Stacking floating elements](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements): How floating elements are handled with stacking.
-- [Using z-index](/en-US/docs/Web/CSS/CSS_positioned_layout/Using_z-index): How to use `z-index` to change default stacking.
-- [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context): Notes on the stacking context.
-- [Stacking context example 1](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1): 2-level HTML hierarchy, z-index on the last level
-- [Stacking context example 2](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2): 2-level HTML hierarchy, z-index on all levels
-- [Stacking context example 3](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3): 3-level HTML hierarchy, z-index on the second level
+- [Understanding z-index](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
+- [Using z-index](/en-US/docs/Web/CSS/CSS_positioned_layout/Using_z-index)
+- [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
+- [Stacking floating elements](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements)
+- [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module

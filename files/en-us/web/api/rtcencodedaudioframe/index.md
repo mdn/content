@@ -33,7 +33,7 @@ The `transform()` method shows how this might be read, modified using a fictiona
 
 ```js
 addEventListener("rtctransform", (event) => {
-  const async transform = new TransformStream({
+  const transform = new TransformStream({
     async transform(encodedFrame, controller) {
       // Reconstruct the original frame.
       const view = new DataView(encodedFrame.data);
@@ -42,7 +42,7 @@ addEventListener("rtctransform", (event) => {
       const newData = new ArrayBuffer(encodedFrame.data.byteLength);
       const newView = new DataView(newData);
 
-      //Encrypt frame bytes using the encryptFunction() method (not shown)
+      // Encrypt frame bytes using the encryptFunction() method (not shown)
       for (let i = 0; i < encodedFrame.data.byteLength; ++i) {
         const encryptedByte = encryptFunction(~view.getInt8(i));
         newView.setInt8(i, encryptedByte);

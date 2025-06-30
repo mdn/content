@@ -1,5 +1,6 @@
 ---
 title: Promise.prototype.catch()
+short-title: catch()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/catch
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Promise.catch
@@ -9,7 +10,7 @@ browser-compat: javascript.builtins.Promise.catch
 
 The **`catch()`** method of {{jsxref("Promise")}} instances schedules a function to be called when the promise is rejected. It immediately returns another {{jsxref("Promise")}} object, allowing you to [chain](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining) calls to other promise methods. It is a shortcut for {{jsxref("Promise/then", "then(undefined, onRejected)")}}.
 
-{{InteractiveExample("JavaScript Demo: Promise.catch()")}}
+{{InteractiveExample("JavaScript Demo: Promise.prototype.catch()")}}
 
 ```js interactive-example
 const promise1 = new Promise((resolve, reject) => {
@@ -102,10 +103,10 @@ p1.then((value) => {
 // The following behaves the same as above
 p1.then((value) => {
   console.log(value); // "Success!"
-  return Promise.reject("oh, no!");
+  return Promise.reject(new Error("oh, no!"));
 })
   .catch((e) => {
-    console.error(e); // "oh, no!"
+    console.error(e); // Error: oh, no!
   })
   .then(
     () => console.log("after a catch the chain is restored"), // "after a catch the chain is restored"

@@ -64,7 +64,6 @@ A radial gradient is specified by indicating the center of the gradient (where t
 - `<ending-shape>`
   - : The gradient's ending-shape. The value can be `circle` (meaning that the gradient's shape is a circle with a constant radius) or `ellipse` (meaning that the shape is an axis-aligned ellipse). If unspecified, it defaults to `ellipse`.
 - `<size>`
-
   - : Determines the size of the gradient's ending shape. If omitted it defaults to farthest-corner. It can be given explicitly or by keyword. For the purpose of the keyword definitions, consider the gradient box edges as extending infinitely in both directions, rather than being finite line segments.
 
     Both circle and ellipse gradients accept the following keywords for their `<size>`:
@@ -111,7 +110,7 @@ Color-stop points are positioned on a _virtual gradient ray_ that extends horizo
 
 ## Examples
 
-### Simple gradient
+### Basic gradient
 
 ```html hidden
 <div class="radial-gradient"></div>
@@ -130,7 +129,7 @@ Color-stop points are positioned on a _virtual gradient ray_ that extends horizo
 }
 ```
 
-{{EmbedLiveSample('Simple_gradient', 120, 120)}}
+{{EmbedLiveSample('Basic_gradient', 120, 120)}}
 
 ### Non-centered gradient
 

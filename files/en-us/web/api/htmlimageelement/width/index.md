@@ -29,8 +29,8 @@ screen or printer:
 ## Examples
 
 In this example, two different sizes are provided for an image of a clock using the
-[`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute. One is 200px wide and the other is 400px
-wide. The [`sizes`](/en-US/docs/Web/HTML/Element/img#sizes) attribute is used to specify the width at
+[`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset) attribute. One is 200px wide and the other is 400px
+wide. The [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes) attribute is used to specify the width at
 which the image should be drawn given the viewport's width.
 
 ### HTML
@@ -41,11 +41,11 @@ drawn at 400px.
 ```html
 <p>Image width: <span class="size">?</span>px (resize to update)</p>
 <img
-  src="/en-US/docs/Web/HTML/Element/img/clock-demo-200px.png"
+  src="/en-US/docs/Web/HTML/Reference/Elements/img/clock-demo-200px.png"
   alt="Clock"
   srcset="
-    /en-US/docs/Web/HTML/Element/img/clock-demo-200px.png 200w,
-    /en-US/docs/Web/HTML/Element/img/clock-demo-400px.png 400w
+    /en-US/docs/Web/HTML/Reference/Elements/img/clock-demo-200px.png 200w,
+    /en-US/docs/Web/HTML/Reference/Elements/img/clock-demo-400px.png 400w
   "
   sizes="(max-width: 400px) 200px, 400px" />
 ```

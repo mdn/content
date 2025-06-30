@@ -10,7 +10,7 @@ In {{Glossary("CSP")}}, **document directives** are used in a {{HTTPHeader("Cont
 
 Document directives don't fall back to the {{CSP("default-src")}} directive.
 
-See [Document directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#document_directives) for a complete list.
+See [Document directives](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#document_directives) for a complete list.
 
 ## See also
 
@@ -20,7 +20,7 @@ See [Document directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#d
   - {{Glossary("Fetch directive")}}
   - {{Glossary("Navigation directive")}}
 - Reference
-  - <https://www.w3.org/TR/CSP/#directives-document>
+  - [Document directives](https://w3c.github.io/webappsec-csp/#directives-document) specification
   - {{HTTPHeader("Content-Security-Policy/upgrade-insecure-requests", "upgrade-insecure-requests")}}
   - {{HTTPHeader("Content-Security-Policy/block-all-mixed-content", "block-all-mixed-content")}}
   - {{HTTPHeader("Content-Security-Policy")}}

@@ -1,5 +1,6 @@
 ---
 title: Intl.Collator() constructor
+short-title: Intl.Collator()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Intl.Collator.Collator
@@ -9,7 +10,7 @@ browser-compat: javascript.builtins.Intl.Collator.Collator
 
 The **`Intl.Collator()`** constructor creates {{jsxref("Intl.Collator")}} objects.
 
-{{InteractiveExample("JavaScript Demo: Intl.Collator")}}
+{{InteractiveExample("JavaScript Demo: Intl.Collator() constructor")}}
 
 ```js interactive-example
 console.log(["Z", "a", "z", "ä"].sort(new Intl.Collator("de").compare));
@@ -38,16 +39,15 @@ Intl.Collator(locales)
 Intl.Collator(locales, options)
 ```
 
-> **Note:** `Intl.Collator()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `Intl.Collator` instance.
+> [!NOTE]
+> `Intl.Collator()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `Intl.Collator` instance.
 
 ### Parameters
 
 - `locales` {{optional_inline}}
-
   - : A string with a BCP 47 language tag or an {{jsxref("Intl.Locale")}} instance, or an array of such locale identifiers. The runtime's default locale is used when `undefined` is passed or when none of the specified locale identifiers is supported. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 
     The following Unicode extension keys are allowed:
-
     - `co`
       - : See [`collation`](#collation).
     - `kn`
@@ -58,9 +58,7 @@ Intl.Collator(locales, options)
     These keys can also be set with `options` (as listed below). When both are set, the `options` property takes precedence.
 
 - `options` {{optional_inline}}
-
   - : An object containing the following properties, in the order they are retrieved (all of them are optional):
-
     - `usage`
       - : Whether the comparison is for sorting a list of strings or fuzzy (for the Latin script diacritic-insensitive and case-insensitive) filtering a list of strings by key. Possible values are:
         - `"sort"` (default)
@@ -76,9 +74,7 @@ Intl.Collator(locales, options)
     - `caseFirst`
       - : Whether upper case or lower case should sort first. Possible values are `"upper"`, `"lower"`, and `"false"` (use the locale's default); the default is `"false"`. This option can also be set through the `kf` Unicode extension key; if both are provided, this `options` property takes precedence.
     - `sensitivity`
-
       - : Which differences in the strings should lead to non-zero result values. Possible values are:
-
         - `"base"`
           - : Only strings that differ in base letters compare as unequal. Examples: a ≠ b, a = á, a = A. In the Unicode collation algorithm, this is equivalent to the primary strength level.
         - `"accent"`

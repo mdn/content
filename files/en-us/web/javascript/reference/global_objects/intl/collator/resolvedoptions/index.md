@@ -1,5 +1,6 @@
 ---
 title: Intl.Collator.prototype.resolvedOptions()
+short-title: resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/resolvedOptions
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.Collator.resolvedOptions
@@ -9,7 +10,7 @@ browser-compat: javascript.builtins.Intl.Collator.resolvedOptions
 
 The **`resolvedOptions()`** method of {{jsxref("Intl.Collator")}} instances returns a new object with properties reflecting the options computed during initialization of this `Collator` object.
 
-{{InteractiveExample("JavaScript Demo: Intl.Collator.prototype.resolvedOptions")}}
+{{InteractiveExample("JavaScript Demo: Intl.Collator.prototype.resolvedOptions()")}}
 
 ```js interactive-example
 const numberDe = new Intl.NumberFormat("de-DE");

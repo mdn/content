@@ -1,5 +1,6 @@
 ---
 title: Using CSS transitions
+short-title: Using transitions
 slug: Web/CSS/CSS_transitions/Using_CSS_transitions
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-transitions/
@@ -39,10 +40,8 @@ You can control the individual components of the transition with the following s
 
 The `transition` shorthand CSS syntax is written as follows:
 
-```css
-div {
-  transition: <property> <duration> <timing-function> <delay>;
-}
+```plain
+transition: <property> <duration> <timing-function> <delay>;
 ```
 
 ## Examples

@@ -8,23 +8,30 @@ page-type: glossary-definition
 
 **Base64** is a group of similar [binary-to-text encoding](https://en.wikipedia.org/wiki/Binary-to-text_encoding) schemes that represent binary data in an {{glossary("ASCII")}} string format by transforming it into a radix-64 representation. The term _Base64_ originates from a specific [MIME content transfer encoding](https://en.wikipedia.org/wiki/MIME#Content-Transfer-Encoding).
 
-When the term "Base64" is used on its own to refer to a specific {{glossary("algorithm")}}, it typically refers to the version of Base64 outlined in [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648), section 4, which uses the following alphabet to represent the radix-64 digits, alongside `=` as a padding character:
-
-```plain
-ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
-```
-
-A common variant is "Base64 URL safe", which omits the padding and replaces `+/` with `-_` to avoid characters that might cause problems in {{glossary("URL")}} path segments or query parameters. You don't need this encoding if you are not putting the data in a path segment or query parameter — for example, [data URLs](/en-US/docs/Web/URI/Reference/Schemes/data) have neither and can use the standard Base64 encoding.
-
 Base64 encoding schemes are commonly used to encode binary data for storage or transfer over media that can only deal with ASCII text (or some superset of ASCII that still falls short of accepting arbitrary binary data). This ensures that the data remains intact without modification during transport. Common applications of Base64 include:
 
 - Email via [MIME](https://en.wikipedia.org/wiki/MIME)
 - Storing complex data in [XML](/en-US/docs/Web/XML)
 - Encoding binary data so that it can be included in a [`data:` URL](/en-US/docs/Web/URI/Reference/Schemes/data)
 
+## Base64 characters
+
+When the term "Base64" is used on its own to refer to a specific {{glossary("algorithm")}}, it typically refers to the version of Base64 outlined in {{rfc("4648", "", 4)}}, which uses the following alphabet to represent the radix-64 digits, alongside `=` as a padding character:
+
+```plain
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
+```
+
+## URL and filename safe Base64
+
+A common variant of this definition allows only characters that are safe to use in filenames and {{glossary("URL")}} values.
+This version, defined in {{rfc("4648", "", 5)}}, omits the padding and replaces `+` and `/` with `-` and `_`.
+
+You don't need this encoding if you are not putting the data in a path segment or query parameter — for example, [data URLs](/en-US/docs/Web/URI/Reference/Schemes/data) have neither and can use the standard Base64 encoding.
+
 ## Encoded size increase
 
-Each Base64 digit represents 6 bits of data. So, three 8-bit bytes of the input string/binary file (3×8 bits = 24 bits) can be represented by four 6-bit Base64 digits (4×6 = 24 bits).
+Each Base64 digit represents 6 bits of data (64 = 2<sup>6</sup>). So, three 8-bit bytes of the input string/binary file (3×8 bits = 24 bits) can be represented by four 6-bit Base64 digits (4×6 = 24 bits).
 
 This means that the Base64 version of a string or file is typically roughly a third larger than its source (the exact size increase depends on various factors, such as the absolute length of the string, its length modulo 3, and whether padding characters are used).
 

@@ -65,22 +65,19 @@ aspect-ratio: revert-layer;
 aspect-ratio: unset;
 ```
 
-This property is specified as one or both of the keyword auto or a `<ratio>`. If both are given, and the element is a [replaced element](/en-US/docs/Web/CSS/Replaced_element), such as [`<img>`](/en-US/docs/Web/HTML/Element/img), then the given ratio is used until the content is loaded. After the content is loaded, the `auto` value is applied, so the intrinsic aspect ratio of the loaded content is used.
+This property is specified as one or both of the keyword auto or a `<ratio>`. If both are given, and the element is a {{ glossary("replaced elements", "replaced element")}}, such as [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img), then the given ratio is used until the content is loaded. After the content is loaded, the `auto` value is applied, so the intrinsic aspect ratio of the loaded content is used.
 
 If the element is not a replaced element, then the given `ratio` is used.
 
 ### Values
 
 - `auto`
-
-  - : [Replaced elements](/en-US/docs/Web/CSS/Replaced_element) with an intrinsic aspect ratio use _that_ aspect ratio, otherwise the box has no preferred aspect ratio. Size calculations involving intrinsic aspect ratio always work with the content box dimensions.
+  - : {{glossary("Replaced elements")}} with an intrinsic aspect ratio use _that_ aspect ratio, otherwise the box has no preferred aspect ratio. Size calculations involving intrinsic aspect ratio always work with the content box dimensions.
 
 - {{cssxref("&lt;ratio&gt;")}}
-
   - : The box's preferred aspect ratio is the specified ratio of `width` / `height`. If `height` and the preceding slash character are omitted, `height` defaults to `1`. Size calculations involving preferred aspect ratio work with the dimensions of the box specified by `box-sizing`.
 
 - `auto && <ratio>`
-
   - : When both `auto` and a `<ratio>` are specified together, `auto` is used if the element is a replaced element with a natural aspect ratio, like an `<img>` element. Otherwise, the specified ratio of `width` / `height` is used as the preferred aspect ratio.
 
 ## Formal definition

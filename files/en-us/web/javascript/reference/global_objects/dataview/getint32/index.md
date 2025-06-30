@@ -1,5 +1,6 @@
 ---
 title: DataView.prototype.getInt32()
+short-title: getInt32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getInt32
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.getInt32
@@ -9,7 +10,7 @@ browser-compat: javascript.builtins.DataView.getInt32
 
 The **`getInt32()`** method of {{jsxref("DataView")}} instances reads 4 bytes starting at the specified byte offset of this `DataView` and interprets them as a 32-bit signed integer. There is no alignment constraint; multi-byte values may be fetched from any offset within bounds.
 
-{{InteractiveExample("JavaScript Demo: DataView.getInt32()")}}
+{{InteractiveExample("JavaScript Demo: DataView.prototype.getInt32()")}}
 
 ```js interactive-example
 // Create an ArrayBuffer with a size in bytes

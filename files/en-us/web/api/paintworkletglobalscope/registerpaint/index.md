@@ -74,13 +74,11 @@ The first step in using a paintworklet is defining the paint worklet using the
 `registerPaint()` function, as done above. To use it, you register it with
 the `CSS.paintWorklet.addModule()` method:
 
-```html
-<script>
-  CSS.paintWorklet.addModule("checkboardWorklet.js");
-</script>
+```js
+CSS.paintWorklet.addModule("checkboardWorklet.js");
 ```
 
-You can then use the `{{cssxref('image/paint', 'paint()')}}` CSS function in your
+You can then use the {{cssxref('image/paint', 'paint()')}} CSS function in your
 CSS anywhere an {{cssxref('&lt;image&gt;')}} value is valid.
 
 ```css

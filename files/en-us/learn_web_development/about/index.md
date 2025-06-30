@@ -2,9 +2,8 @@
 title: About Learn web development
 slug: Learn_web_development/About
 page-type: landing-page
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 MDN Learn web development aims to teach the fundamental skills and knowledge that a front-end web developer should have for employability and longevity in today's web industry. It embodies the values we think the web should have — accessibility, sustainability, usability, performance, and community. We would love educators, developers, and students to use this resource and champion these values in their work, in their teachings, and in the products they build.
 
@@ -23,7 +22,7 @@ In addition, Mozilla talks to industry professionals every day, and we regularly
 - Gaps in the knowledge of how browsers fundamentally work, how they surface information, and the interactivity you get for free. This causes solutions to be overcomplicated and often inaccessible.
 - Limited problem-solving, teamwork, research, and other vital soft skills.
 
-As a result, we created a curriculum to help guide people towards learning a better skillset, making them more employable, and enabling them to build a better, more accessible, more responsible web of tomorrow. We want them to have the best possible chance of success. We [launched the MDN Curriculum in early 2024](/en-US/blog/mdn-curriculum-launch/).
+As a result, we created a curriculum to help guide people towards learning a better skill set, making them more employable, and enabling them to build a better, more accessible, more responsible web of tomorrow. We want them to have the best possible chance of success. We [launched the MDN Curriculum in early 2024](/en-US/blog/mdn-curriculum-launch/).
 
 However, we quickly received feedback that users found it confusing having two learning resources on MDN, with the curriculum/learning pathway in one place and the learning content in another place. as a result, we [merged the Curriculum into the learning area in December 2024](/en-US/docs/Learn_web_development/Changelog#december_2024).
 
@@ -116,7 +115,7 @@ We intend to do this in Q2 each year, to give educators time over Q2/Q3 to imple
 
 #### How does MDN know Scrimba's courses are high quality and follow best practices?
 
-Scrimba already had a great reputation before we started talking to them about a partnership. However, we didn't just take the community's word for it. We did an extensive review of Scrimba's [Frontend Developer Career Path](https://v2.scrimba.com/the-frontend-developer-career-path-c0j:details?via=mdn) (FDCP) and provided them with feedback on possible improvements, focusing on increasing coverage of best practices and conformance to our [Core modules](/en-US/docs/Learn_web_development/Core). Scrimba implemented all of our feedback, and the FDCP is even better than it was before. Now that it conforms to our Curriculum Core, we are confident it aligns with MDN standards.
+Scrimba already had a great reputation before we started talking to them about a partnership. However, we didn't just take the community's word for it. We did an extensive review of Scrimba's [Frontend Developer Career Path](https://scrimba.com/the-frontend-developer-career-path-c0j:details?via=mdn) (FDCP) and provided them with feedback on possible improvements, focusing on increasing coverage of best practices and conformance to our [Core modules](/en-US/docs/Learn_web_development/Core). Scrimba implemented all of our feedback, and the FDCP is even better than it was before. Now that it conforms to our Curriculum Core, we are confident it aligns with MDN standards.
 
 #### Is MDN sharing user data with Scrimba?
 

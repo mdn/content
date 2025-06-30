@@ -1,5 +1,6 @@
 ---
 title: Intl.NumberFormat.prototype.formatToParts()
+short-title: formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatToParts
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.NumberFormat.formatToParts
@@ -9,7 +10,7 @@ browser-compat: javascript.builtins.Intl.NumberFormat.formatToParts
 
 The **`formatToParts()`** method of {{jsxref("Intl.NumberFormat")}} instances returns an array of objects representing each part of the formatted string that would be returned by {{jsxref("Intl/NumberFormat/format", "format()")}}. It is useful for building custom strings from the locale-specific tokens.
 
-{{InteractiveExample("JavaScript Demo: Intl.NumberFormat.prototype.formatToParts")}}
+{{InteractiveExample("JavaScript Demo: Intl.NumberFormat.prototype.formatToParts()")}}
 
 ```js interactive-example
 const amount = 654321.987;

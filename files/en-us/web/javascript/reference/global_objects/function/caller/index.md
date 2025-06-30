@@ -1,5 +1,6 @@
 ---
 title: Function.prototype.caller
+short-title: caller
 slug: Web/JavaScript/Reference/Global_Objects/Function/caller
 page-type: javascript-instance-accessor-property
 status:
@@ -63,9 +64,8 @@ The following code checks the value a function's `caller` property.
 function myFunc() {
   if (myFunc.caller === null) {
     return "The function was called from the top!";
-  } else {
-    return `This function's caller was ${myFunc.caller}`;
   }
+  return `This function's caller was ${myFunc.caller}`;
 }
 ```
 

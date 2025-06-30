@@ -1,5 +1,6 @@
 ---
 title: Number.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Number.toString
@@ -9,20 +10,20 @@ browser-compat: javascript.builtins.Number.toString
 
 The **`toString()`** method of {{jsxref("Number")}} values returns a string representing this number value.
 
-{{InteractiveExample("JavaScript Demo: Number.toString()")}}
+{{InteractiveExample("JavaScript Demo: Number.prototype.toString()")}}
 
 ```js interactive-example
-function hexColour(c) {
+function hexColor(c) {
   if (c < 256) {
     return Math.abs(c).toString(16);
   }
   return 0;
 }
 
-console.log(hexColour(233));
+console.log(hexColor(233));
 // Expected output: "e9"
 
-console.log(hexColour("11"));
+console.log(hexColor("11"));
 // Expected output: "b"
 ```
 
@@ -113,7 +114,7 @@ const hex = "CAFEBABE";
 const bin = parseInt(hex, 16).toString(2); // "11001010111111101011101010111110"
 ```
 
-Beware of loss of precision: if the original number string is too large (larger than [`Number.MAX_SAFE_INTEGER`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER), for example), you should use a [`BigInt`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) instead. However, the `BigInt` constructor only has support for strings representing number literals (i.e. strings starting with `0b`, `0o`, `0x`). In case your original radix is not one of binary, octal, decimal, or hexadecimal, you may need to hand-write your radix converter, or use a library.
+Beware of loss of precision: if the original number string is too large (larger than [`Number.MAX_SAFE_INTEGER`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER), for example), you should use a [`BigInt`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) instead. However, the `BigInt` constructor only has support for strings representing number literals (i.e., strings starting with `0b`, `0o`, `0x`). In case your original radix is not one of binary, octal, decimal, or hexadecimal, you may need to hand-write your radix converter, or use a library.
 
 ## Specifications
 

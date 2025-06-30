@@ -2,9 +2,8 @@
 title: What is JavaScript?
 slug: Learn_web_development/Core/Scripting/What_is_JavaScript
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting")}}
 
@@ -89,12 +88,15 @@ Try clicking on the text label to see what happens.
 
 JavaScript can do a lot more than that — let's explore what in more detail.
 
+> [!NOTE]
+> Before moving on, why not jump in and get your hands dirty with a challenge from Scrimba at this early stage? Check out [Render a welcome message](https://scrimba.com/learn-javascript-c0v/~0n?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>. If you don't know how to write this code, don't worry at all; you could try doing some web searches to find some answers, or view the solution at the end of the scrim.
+
 ## So what can it really do?
 
 The core client-side JavaScript language consists of some common programming features that allow you to do things like:
 
 - Store useful values inside variables. In the above example for instance, we ask for a new name to be entered then store that name in a variable called `name`.
-- Operations on pieces of text (known as "strings" in programming). In the above example we take the string "Player 1: " and join it to the `name` variable to create the complete text label, e.g. "Player 1: Chris".
+- Operations on pieces of text (known as "strings" in programming). In the above example we take the string "Player 1: " and join it to the `name` variable to create the complete text label, e.g., "Player 1: Chris".
 - Running code in response to certain events occurring on a web page. We used a {{domxref("Element/click_event", "click")}} event in our example above to detect when the label is clicked and then run the code that updates the text label.
 - And much more!
 
@@ -201,7 +203,7 @@ JavaScript can also be used as a server-side language, for example in the popula
 ### Dynamic versus static code
 
 The word **dynamic** is used to describe both client-side JavaScript, and server-side languages — it refers to the ability to update the display of a web page/app to show different things in different circumstances, generating new content as required.
-Server-side code dynamically generates new content on the server, e.g. pulling data from a database, whereas client-side JavaScript dynamically generates new content inside the browser on the client, e.g. creating a new HTML table, filling it with data requested from the server, then displaying the table in a web page shown to the user.
+Server-side code dynamically generates new content on the server, e.g., pulling data from a database, whereas client-side JavaScript dynamically generates new content inside the browser on the client, e.g., creating a new HTML table, filling it with data requested from the server, then displaying the table in a web page shown to the user.
 The meaning is slightly different in the two contexts, but related, and both approaches (server-side and client-side) usually work together.
 
 A web page with no dynamically updating content is referred to as **static** — it just shows the same content all the time.
@@ -210,6 +212,9 @@ A web page with no dynamically updating content is referred to as **static** —
 
 JavaScript is applied to your HTML page in a similar manner to CSS.
 Whereas CSS uses {{htmlelement("link")}} elements to apply external stylesheets and {{htmlelement("style")}} elements to apply internal stylesheets to HTML, JavaScript only needs one friend in the world of HTML — the {{htmlelement("script")}} element. Let's learn how this works.
+
+> [!NOTE]
+> Scrimba's [Setting up our JavaScript file](https://scrimba.com/learn-javascript-c0v/~03?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> interactive tutorial walks through a couple of different ways to add JavaScript to your HTML.
 
 ### Internal JavaScript
 
@@ -347,7 +352,6 @@ There are a few different strategies to make sure your JavaScript only runs afte
 - In the internal JavaScript example above, the script element is placed at the bottom of the body of the document, and therefore only run after the rest of the HTML body is parsed.
 - In the external JavaScript example above, the script element is placed in the head of the document, before the HTML body is parsed. But because we're using `<script type="module">`, the code is treated as a [module](/en-US/docs/Web/JavaScript/Guide/Modules) and the browser waits for all HTML to be processed before executing JavaScript modules. (You could also place external scripts at the bottom of the body. But if there is a lot of HTML and the network is slow, it may take a lot of time before the browser can even start fetching and loading the script, so placing external scripts in the head is usually better.)
 - If you still want to use non-module scripts in the document head, which could block the whole page from displaying, and could cause errors because it executes before the HTML is parsed:
-
   - For external scripts, you should add the `defer` (or if you don't need the HTML to be ready, the `async`) attribute on the {{htmlelement("script")}} element.
   - For internal scripts, you should wrap the code in a [`DOMContentLoaded` event listener](/en-US/docs/Web/API/Document/DOMContentLoaded_event).
 

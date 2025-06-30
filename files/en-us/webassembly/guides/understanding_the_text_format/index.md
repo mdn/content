@@ -16,7 +16,7 @@ In both the binary and textual formats, the fundamental unit of code in WebAssem
 
 First, let's see what an S-expression looks like. Each node in the tree goes inside a pair of parentheses — `( ... )`. The first label inside the parenthesis tells you what type of node it is, and after that there is a space-separated list of either attributes or child nodes. So that means the WebAssembly S-expression:
 
-```wasm
+```wat
 (module (memory 1) (func))
 ```
 
@@ -26,7 +26,7 @@ represents a tree with the root node "module" and two child nodes, a "memory" no
 
 Let's start with the simplest, shortest possible Wasm module.
 
-```wasm
+```wat
 (module)
 ```
 
@@ -34,7 +34,7 @@ This module is totally empty, but is still a valid module.
 
 If we convert our module to binary now (see [Converting WebAssembly text format to Wasm](/en-US/docs/WebAssembly/Guides/Text_format_to_Wasm)), we'll see just the 8 byte module header described in the [binary format](https://webassembly.github.io/spec/core/binary/modules.html#binary-module):
 
-```wasm
+```plain
 0000000: 0061 736d              ; WASM_BINARY_MAGIC
 0000004: 0100 0000              ; WASM_BINARY_VERSION
 ```
@@ -45,7 +45,7 @@ Ok, that's not very interesting, let's add some executable code to this module.
 
 All code in a webassembly module is grouped into functions, which have the following pseudocode structure:
 
-```wasm
+```wat
 ( func <signature> <locals> <body> )
 ```
 
@@ -72,7 +72,7 @@ The number types are:
 
 A single parameter is written `(param i32)` and the return type is written `(result i32)`, hence a binary function that takes two 32-bit integers and returns a 64-bit float would be written like this:
 
-```wasm
+```wat
 (func (param i32) (param i32) (result f64) ...)
 ```
 
@@ -84,7 +84,7 @@ Locals/parameters can be read and written by the body of the function with the `
 
 The `local.get`/`local.set` commands refer to the item to be got/set by its numeric index: parameters are referred to first, in order of their declaration, followed by locals in order of their declaration. So given the following function:
 
-```wasm
+```wat
 (func (param i32) (param f32) (local f64)
   local.get 0
   local.get 1
@@ -97,7 +97,7 @@ There is another issue here — using numeric indices to refer to items can be c
 
 Thus, you could rewrite our previous signature like so:
 
-```wasm
+```wat
 (func (param $p1 i32) (param $p2 f32) (local $loc f64) …)
 ```
 
@@ -111,7 +111,7 @@ For example, `local.get` is defined to push the value of the local it read onto 
 
 When a function is called, it starts with an empty stack which is gradually filled up and emptied as the body's instructions are executed. So for example, after executing the following function:
 
-```wasm
+```wat
 (func (param $p i32)
   (result i32)
   local.get $p
@@ -127,7 +127,7 @@ The WebAssembly validation rules ensure the stack matches exactly: if you declar
 
 As mentioned before, the function body is a list of instructions that are followed as the function is called. Putting this together with what we have already learned, we can finally define a module containing our own simple function:
 
-```wasm
+```wat
 (module
   (func (param $lhs i32) (param $rhs i32) (result i32)
     local.get $lhs
@@ -145,13 +145,13 @@ Our function won't do very much on its own — now we need to call it. How do we
 
 Like locals, functions are identified by an index by default, but for convenience, they can be named. Let's start by doing this — first, we'll add a name preceded by a dollar sign, just after the `func` keyword:
 
-```wasm
+```wat
 (func $add …)
 ```
 
 Now we need to add an export declaration — this looks like so:
 
-```wasm
+```wat
 (export "add" (func $add))
 ```
 
@@ -159,7 +159,7 @@ Here, `add` is the name the function will be identified by in JavaScript whereas
 
 So our final module (for now) looks like this:
 
-```wasm
+```wat
 (module
   (func $add (param $lhs i32) (param $rhs i32) (result i32)
     local.get $lhs
@@ -190,7 +190,7 @@ Now we've covered the real basics, let's move on to look at some more advanced f
 
 The `call` instruction calls a single function, given its index or name. For example, the following module contains two functions — one just returns the value 42, the other returns the result of calling the first plus one:
 
-```wasm
+```wat
 (module
   (func $getAnswer (result i32)
     i32.const 42)
@@ -200,13 +200,14 @@ The `call` instruction calls a single function, given its index or name. For exa
     i32.add))
 ```
 
-> **Note:** `i32.const` just defines a 32-bit integer and pushes it onto the stack. You could swap out the `i32` for any of the other available types, and change the value of the const to whatever you like (here we've set the value to `42`).
+> [!NOTE]
+> `i32.const` just defines a 32-bit integer and pushes it onto the stack. You could swap out the `i32` for any of the other available types, and change the value of the const to whatever you like (here we've set the value to `42`).
 
 In this example you'll notice an `(export "getAnswerPlus1")` section, declared just after the `func` statement in the second function — this is a shorthand way of declaring that we want to export this function, and defining the name we want to export it as.
 
 This is functionally equivalent to including a separate function statement outside the function, elsewhere in the module in the same manner as we did before, e.g.:
 
-```wasm
+```wat
 (export "getAnswerPlus1" (func $functionName))
 ```
 
@@ -222,7 +223,7 @@ WebAssembly.instantiateStreaming(fetch("call.wasm")).then((obj) => {
 
 We have already seen JavaScript calling WebAssembly functions, but what about WebAssembly calling JavaScript functions? WebAssembly doesn't actually have any built-in knowledge of JavaScript, but it does have a general way to import functions that can accept either JavaScript or Wasm functions. Let's look at an example:
 
-```wasm
+```wat
 (module
   (import "console" "log" (func $log (param i32)))
   (func (export "logIt")
@@ -265,7 +266,7 @@ WebAssembly has the ability to create global variable instances, accessible from
 
 In WebAssembly text format, it looks something like this (see [global.wat](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/global.wat) in our GitHub repo; also see [global.html](https://mdn.github.io/webassembly-examples/js-api-examples/global.html) for a live JavaScript example):
 
-```wasm
+```wat
 (module
   (global $g (import "js" "global") (mut i32))
   (func (export "getGlobal") (result i32)
@@ -307,7 +308,7 @@ The method will only fail if it cannot allocate the _initial_ size.
 > You can now have [multiple_memories](#multiple_memories) when supported by the browser.
 > Code that doesn't use multiple memories does not need to change!
 
-To demonstrate some of this behaviour, let's consider the case where we want to work with a string in our WebAssembly code.
+To demonstrate some of this behavior, let's consider the case where we want to work with a string in our WebAssembly code.
 A string is just a sequence of bytes somewhere inside this linear memory.
 Assuming we've written a suitable string of bytes to WebAssembly memory, we can pass that string to JavaScript by sharing the memory, the offset of the string within the memory, and some way of indicating the length.
 
@@ -335,7 +336,7 @@ WebAssembly.instantiateStreaming(
 
 Within our WebAssembly file we import this memory. Using the WebAssembly text format, the `import` statement is written as follows:
 
-```wasm
+```wat
 (import "js" "mem" (memory 1))
 ```
 
@@ -354,7 +355,7 @@ Since we own the entire linear memory, we can just write the string contents int
 Data sections allow a string of bytes to be written at a given offset at instantiation time and are similar to the `.data` sections in native executable formats.
 Here we're writing the data to the default memory (which we do not need to specify) at offset 0:
 
-```wasm
+```wat
 (module
   (import "js" "mem" (memory 1))
   ;; ...
@@ -377,7 +378,7 @@ This is exported from the module so that it can be called from JavaScript.
 
 Our final WebAssembly module (in text format) looks like this.
 
-```wasm
+```wat
 (module
   (import "console" "log" (func $log (param i32 i32)))
   (import "js" "mem" (memory 1))
@@ -442,7 +443,7 @@ To show how this works in more detail, we'll extend the previous example to writ
 The code below shows how we first import two memory instances, using the same approach as in the previous example.
 To show how you can create memory within the WebAssembly module, we've created a third memory instance named `$mem2` in the module and _exported_ it.
 
-```wasm
+```wat
 (module
   ;; ...
 
@@ -458,10 +459,10 @@ To show how you can create memory within the WebAssembly module, we've created a
 ```
 
 The three memory instances are automatically assigned an instance based on their order of creation.
-The code below shows how we can specify this index (e.g. `(memory 1)`) in the `data` instruction to choose the memory we want to write a string to (you can use the same approach for all other memory instructions, such as `load` and `grow`).
+The code below shows how we can specify this index (e.g., `(memory 1)`) in the `data` instruction to choose the memory we want to write a string to (you can use the same approach for all other memory instructions, such as `load` and `grow`).
 Here we write a string that indicates each memory type.
 
-```wasm
+```wat
   (data (memory 0) (i32.const 0) "Memory 0 data")
   (data (memory 1) (i32.const 0) "Memory 1 data")
   (data (memory 2) (i32.const 0) "Memory 2 data")
@@ -478,7 +479,7 @@ We also log all three memory instances.
 
 The complete module is shown below:
 
-```wasm
+```wat
 (module
   (import "console" "log" (func $log (param i32 i32 i32)))
 
@@ -560,9 +561,9 @@ const importObject = {
 
 WebAssembly.instantiateStreaming(fetch("multi-memory.wasm"), importObject).then(
   (obj) => {
-    //Get exported memory
+    // Get exported memory
     memory2 = obj.instance.exports.memory2;
-    //Log memory
+    // Log memory
     obj.instance.exports.logAllMemory();
   },
 );
@@ -601,7 +602,7 @@ The solution was to store function references in a table and pass around table i
 
 So how do we place Wasm functions in our table? Just like `data` sections can be used to initialize regions of linear memory with bytes, `elem` sections can be used to initialize regions of tables with functions:
 
-```wasm
+```wat
 (module
   (table 2 funcref)
   (elem (i32.const 0) $f1 $f2)
@@ -624,25 +625,25 @@ So how do we place Wasm functions in our table? Just like `data` sections can be
 In JavaScript, the equivalent calls to create such a table instance would look something like this:
 
 ```js
-function () {
+function module() {
   // table section
-  const tbl = new WebAssembly.Table({initial: 2, element: "anyfunc"});
+  const tbl = new WebAssembly.Table({ initial: 2, element: "anyfunc" });
 
   // function sections:
-  const f1 = ... /* some imported WebAssembly function */
-  const f2 = ... /* some imported WebAssembly function */
+  const f1 = () => 42; /* some imported WebAssembly function */
+  const f2 = () => 13; /* some imported WebAssembly function */
 
   // elem section
   tbl.set(0, f1);
   tbl.set(1, f2);
-};
+}
 ```
 
 #### Using the table
 
 Moving on, now we've defined the table we need to use it somehow. Let's use this section of code to do so:
 
-```wasm
+```wat
 (type $return_i32 (func (result i32))) ;; if this was f32, type checking would fail
 (func (export "callByIndex") (param $i i32) (result i32)
   local.get $i
@@ -656,7 +657,7 @@ Moving on, now we've defined the table we need to use it somehow. Let's use this
 
 You could also declare the `call_indirect` parameter explicitly during the command call instead of before it, like this:
 
-```wasm
+```wat
 (call_indirect (type $return_i32) (local.get $i))
 ```
 
@@ -666,13 +667,13 @@ So, back to the typechecking. Since WebAssembly is type checked, and the `funcre
 
 So what links the `call_indirect` to the table we are calling? The answer is that there is only one table allowed right now per module instance, and that is what `call_indirect` is implicitly calling. In the future, when multiple tables are allowed, we would also need to specify a table identifier of some kind, along the lines of
 
-```wasm
+```wat
 call_indirect $my_spicy_table (type $i32_to_void)
 ```
 
 The full module all together looks like this, and can be found in our [wasm-table.wat](https://github.com/mdn/webassembly-examples/blob/main/understanding-text-format/wasm-table.wat) example file:
 
-```wasm
+```wat
 (module
   (table 2 funcref)
   (func $f1 (result i32)
@@ -715,7 +716,7 @@ Our `.wat` examples look like so:
 
 `shared0.wat`:
 
-```wasm
+```wat
 (module
   (import "js" "memory" (memory 1))
   (import "js" "table" (table 1 funcref))
@@ -728,7 +729,7 @@ Our `.wat` examples look like so:
 
 `shared1.wat`:
 
-```wasm
+```wat
 (module
   (import "js" "memory" (memory 1))
   (import "js" "table" (table 1 funcref))
@@ -753,7 +754,7 @@ These work as follows:
 > [!NOTE]
 > The above expressions again pop values from the stack implicitly, but you could declare these explicitly inside the command calls instead, for example:
 >
-> ```wasm
+> ```wat
 > (i32.store (i32.const 0) (i32.const 42))
 > (call_indirect (type $void_to_i32) (i32.const 0))
 > ```
@@ -838,7 +839,7 @@ Another more recent addition to the language is WebAssembly multi-value, meaning
 
 At the time of writing (June 2020) this is at an early stage, and the only multi-value instructions available are calls to functions that themselves return multiple values. For example:
 
-```wasm
+```wat
 (module
   (func $get_two_numbers (result i32 i32)
     i32.const 1
@@ -884,7 +885,7 @@ memory.buffer; // returns SharedArrayBuffer
 
 Over in the text format, you can create a shared memory using the `shared` keyword, like this:
 
-```wasm
+```wat
 (memory 1 2 shared)
 ```
 

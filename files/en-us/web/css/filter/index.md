@@ -97,26 +97,21 @@ filter: revert-layer;
 filter: unset;
 ```
 
-With a function, use the following:
+### Referencing an SVG filter
 
-```css-nolint
-filter: <filter-function> [<filter-function>]* | none;
-```
-
-You can use `url()` to reference an [SVG filter element](/en-US/docs/Web/SVG/Element/filter). For a reference to an SVG {{SVGElement("filter")}} element, use the following syntax:
+You can use `url()` to reference an [SVG filter element](/en-US/docs/Web/SVG/Reference/Element/filter). For a reference to an SVG {{SVGElement("filter")}} element, use the following syntax:
 
 ```css
-filter: url(file.svg#filter-element-id);
+filter: url("file.svg#filter-element-id");
 ```
 
-## Functions
+### Functions
 
 The `filter` property is specified as `none` or one or more of the functions listed below. If the parameter for any function is invalid, the function returns `none`. Except where noted, the functions that take a value expressed with a percent sign (as in `34%`) also accept the value expressed as decimal (as in `0.34`).
 
 When the `filter` property values contains multiple functions, the filters are applied in order.
 
 - {{cssxref("filter-function/blur", "blur()")}}
-
   - : Applies a Gaussian blur to the input image.
 
     ```css
@@ -124,7 +119,6 @@ When the `filter` property values contains multiple functions, the filters are a
     ```
 
 - {{cssxref("filter-function/brightness", "brightness()")}}
-
   - : Applies a linear multiplier to the input image, making it appear more or less bright. Values are linear multipliers on the effect, with `0%` creating a completely black image, `100%` having no effect, and values over `100%` brightening the image.
 
     ```css
@@ -132,7 +126,6 @@ When the `filter` property values contains multiple functions, the filters are a
     ```
 
 - {{cssxref("filter-function/contrast", "contrast()")}}
-
   - : Adjusts the contrast of the input image. A value of `0%` makes the image grey, `100%` has no effect, and values over `100%` create a contrast.
 
     ```css
@@ -140,7 +133,6 @@ When the `filter` property values contains multiple functions, the filters are a
     ```
 
 - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-
   - : Applies the parameter `<shadow>` as a drop shadow, following the contours of the image. The shadow syntax is similar to `<box-shadow>` (defined in the [CSS backgrounds and borders module](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders)), with the exception that the `inset` keyword and `spread` parameter are not allowed. As with all `filter` property values, any filters after the `drop-shadow()` are applied to the shadow.
 
     ```css
@@ -148,7 +140,6 @@ When the `filter` property values contains multiple functions, the filters are a
     ```
 
 - {{cssxref("filter-function/grayscale", "grayscale()")}}
-
   - : Converts the image to grayscale. A value of `100%` is completely grayscale. The initial value of `0%` leaves the input unchanged. Values between `0%` and `100%` produce linear multipliers on the effect.
 
     ```css
@@ -156,7 +147,6 @@ When the `filter` property values contains multiple functions, the filters are a
     ```
 
 - {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
-
   - : Applies a hue rotation. The `<angle>` value defines the number of degrees around the hue color circle at which the input samples will be adjusted. A value of `0deg` leaves the input unchanged.
 
     ```css
@@ -164,7 +154,6 @@ When the `filter` property values contains multiple functions, the filters are a
     ```
 
 - {{cssxref("filter-function/invert", "invert()")}}
-
   - : Inverts the samples in the input image. A value of `100%` completely inverts the image. A value of `0%` leaves the input unchanged. Values between `0%` and `100%` have linear multipliers on the effect.
 
     ```css
@@ -172,7 +161,6 @@ When the `filter` property values contains multiple functions, the filters are a
     ```
 
 - {{cssxref("filter-function/opacity", "opacity()")}}
-
   - : Applies transparency. `0%` makes the image completely transparent and `100%` leaves the image unchanged.
 
     ```css
@@ -180,7 +168,6 @@ When the `filter` property values contains multiple functions, the filters are a
     ```
 
 - {{cssxref("filter-function/saturate", "saturate()")}}
-
   - : Saturates the image, with `0%` being completely unsaturated, `100%` leaving the image unchanged, and values of over `100%` increasing saturation.
 
     ```css
@@ -188,14 +175,13 @@ When the `filter` property values contains multiple functions, the filters are a
     ```
 
 - {{cssxref("filter-function/sepia", "sepia()")}}
-
   - : Converts the image to sepia, with a value of `100%` making the image completely sepia and `0%` making no change.
 
     ```css
     filter: sepia(100%);
     ```
 
-## Combining functions
+### Combining functions
 
 You may combine any number of functions to manipulate the rendering. The filters are applied in the order declared. The following example enhances the contrast and brightness of the image:
 
@@ -289,4 +275,4 @@ The filters are applied in order. This is why the drop shadows are not the same 
 - SVG {{SVGAttr("filter")}} attribute
 - CSS [compositing and blending](/en-US/docs/Web/CSS/CSS_compositing_and_blending) module, including the CSS {{cssxref("background-blend-mode")}} and {{cssxref("mix-blend-mode")}} properties.
 - [SVG](/en-US/docs/Web/SVG), including the SVG {{SVGElement("filter")}} element and SVG {{SVGAttr("filter")}} attribute.
-- [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)

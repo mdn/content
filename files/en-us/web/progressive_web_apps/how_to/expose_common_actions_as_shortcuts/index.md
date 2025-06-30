@@ -2,9 +2,8 @@
 title: Expose common app actions as shortcuts
 slug: Web/Progressive_web_apps/How_to/Expose_common_actions_as_shortcuts
 page-type: how-to
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 Many operating systems support showing shortcut menus, or jump-list, when the user right-clicks or long-presses an app icon. For example, on Windows, right-clicking on any pinned program in the taskbar shows a list of program-specific actions and recently opened files:
 
@@ -71,4 +70,4 @@ All other shortcut object properties are optional, but you should consider provi
 
 - [`shortcuts` manifest member](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/shortcuts)
 - [Get things done quickly with app shortcuts](https://web.dev/articles/app-shortcuts) on web.dev (2022)
-- [Define app shortcuts](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/shortcuts) on learn.microsoft.com (2023)
+- [Define app shortcuts](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps/how-to/shortcuts) on learn.microsoft.com (2023)

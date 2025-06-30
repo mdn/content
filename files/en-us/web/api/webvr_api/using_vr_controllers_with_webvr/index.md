@@ -15,7 +15,7 @@ Many WebVR hardware setups feature controllers that go along with the headset. T
 
 ## The WebVR API
 
-The [WebVR API](/en-US/docs/Web/API/WebVR_API) is a nascent, but very interesting new feature of the web platform that allows developers to create web-based virtual reality experiences. It does this by providing access to VR headsets connected to your computer as {{domxref("VRDisplay")}} objects, which can be manipulated to start and stop presentation to the display, queried for movement data (e.g. orientation and position) that can be used to update the display on each frame of the animation loop, and more.
+The [WebVR API](/en-US/docs/Web/API/WebVR_API) is a nascent, but very interesting new feature of the web platform that allows developers to create web-based virtual reality experiences. It does this by providing access to VR headsets connected to your computer as {{domxref("VRDisplay")}} objects, which can be manipulated to start and stop presentation to the display, queried for movement data (e.g., orientation and position) that can be used to update the display on each frame of the animation loop, and more.
 
 Before you read this article, you should really be familiar with the basics of the WebVR API already — go and read [Using the WebVR API](/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API) first, if you haven't already done so, which also details browser support and required hardware setup.
 
@@ -25,7 +25,7 @@ The [Gamepad API](/en-US/docs/Web/API/Gamepad_API) is a fairly well-supported AP
 
 You can find more about basic Gamepad API usage in [Using the Gamepad API](/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API), and [Implementing controls using the Gamepad API](/en-US/docs/Games/Techniques/Controls_Gamepad_API).
 
-However, in this article we will mainly be concentrating on some of the new features provided by the [Gamepad Extensions](https://w3c.github.io/gamepad/extensions.html) API, which allows access to advanced controller information such as position and orientation data, control over haptic actuators (e.g. vibration hardware), and more. This API is very new, and currently is only supported and enabled by default in Firefox 55+ Beta/Nightly channels.
+However, in this article we will mainly be concentrating on some of the new features provided by the [Gamepad Extensions](https://w3c.github.io/gamepad/extensions.html) API, which allows access to advanced controller information such as position and orientation data, control over haptic actuators (e.g., vibration hardware), and more. This API is very new, and currently is only supported and enabled by default in Firefox 55+ Beta/Nightly channels.
 
 ## Types of controller
 
@@ -110,7 +110,6 @@ Gamepad can return position info: ${gp.pose.hasPosition}
 Gamepad can return orientation info: ${gp.pose.hasOrientation}`;
     listItem.insertBefore(
       document.createElement("strong"),
-      }),
       listItem.firstChild,
     ).textContent = `Gamepad ${gp.index}`;
     list.appendChild(listItem);
@@ -140,8 +139,8 @@ At the end of our example we first include the `removeGamepads()` function:
 ```js
 function removeGamepads() {
   const gpLi = document.querySelectorAll(".gamepad");
-  for (let i = 0; i < gpLi.length; i++) {
-    list.removeChild(gpLi[i]);
+  for (const li of gpLi) {
+    list.removeChild(li);
   }
   reportGamepads();
 }

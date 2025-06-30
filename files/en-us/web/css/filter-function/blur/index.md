@@ -35,8 +35,6 @@ filter: blur(1.5rem);
 
 ## Syntax
 
-The `blur()` function applies a Gaussian blur to the elements on which it is applied.
-
 ```css
 blur(radius)
 ```

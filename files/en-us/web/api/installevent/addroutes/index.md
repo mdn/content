@@ -21,31 +21,26 @@ addRoutes(routerRules)
 ### Parameters
 
 - `routerRules`
-
   - : A single object, or an array of one or more objects, representing rules for how certain resources should be fetched. Each `routerRules` object contains the following properties:
-
     - `condition`
-
       - : An object defining one or more conditions that specify which resources should match this rule. The following properties can be included; if multiple properties are used, a resource must meet all specified conditions to match the rule.
         - `not` {{optional_inline}}
           - : A `condition` object defining conditions that must explicitly **not** be met to match the rule. Conditions defined inside a `not` condition are mutually exclusive with other conditions.
         - `or` {{optional_inline}}
           - : An array of `condition` objects. One set of these defined conditions must be met to match the rule. Conditions defined inside an `or` condition are mutually exclusive with other conditions.
         - `requestMethod` {{optional_inline}}
-          - : A string representing the [HTTP method](/en-US/docs/Web/HTTP/Methods) a request should be sent by for it to match the rule, such as `"get"`, `"put"`, or `"head"`.
+          - : A string representing the [HTTP method](/en-US/docs/Web/HTTP/Reference/Methods) a request should be sent by for it to match the rule, such as `"get"`, `"put"`, or `"head"`.
         - `requestMode` {{optional_inline}}
           - : A string representing the [mode](/en-US/docs/Web/API/Request/mode) a request should have for it to match the rule, for example `"same-origin"`, `"no-cors"`, or `"cors"`.
         - `requestDestination` {{optional_inline}}
-          - : A string representing the [destination](/en-US/docs/Web/API/Request/destination) of a request, i.e. what content type should be requested, for it to match the rule. Examples include `"audio"`, `"document"`, `"script"`, and `"worker"`.
+          - : A string representing the [destination](/en-US/docs/Web/API/Request/destination) of a request, i.e., what content type should be requested, for it to match the rule. Examples include `"audio"`, `"document"`, `"script"`, and `"worker"`.
         - `runningStatus` {{optional_inline}}
           - : An enumerated value representing the required running status of the service worker for a request to match the rule. Values can be `"running"` or `"not-running"`.
         - `urlPattern` {{optional_inline}}
           - : A {{domxref("URLPattern")}} instance, or a `URLPattern()` constructor [`input`](/en-US/docs/Web/API/URLPattern/URLPattern#input) pattern representing the URLs that match the rule.
 
     - `source`
-
       - : An enumerated value or an object specifying the source from which matching resources will be loaded. Possible enumerated values are:
-
         - `"cache"`
           - : Resources will be loaded from a browser {{domxref("Cache")}}.
         - `"fetch-event"`
@@ -86,7 +81,7 @@ addEventListener("install", (event) => {
 
 ### Route form post requests to the network
 
-In the following example, [`POST`](/en-US/docs/Web/HTTP/Methods/POST) requests to a form are sent directly to the network and bypass the service worker:
+In the following example, [`POST`](/en-US/docs/Web/HTTP/Reference/Methods/POST) requests to a form are sent directly to the network and bypass the service worker:
 
 ```js
 addEventListener("install", (event) => {

@@ -16,10 +16,10 @@ For example, this event could be fired after a user finishes entering a Chinese 
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("compositionend", (event) => {});
+```js-nolint
+addEventListener("compositionend", (event) => { })
 
-oncompositionend = (event) => {};
+oncompositionend = (event) => { }
 ```
 
 ## Event type

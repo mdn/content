@@ -1,5 +1,6 @@
 ---
 title: Temporal.Duration.compare()
+short-title: compare()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/compare
 page-type: javascript-static-method
 status:
@@ -31,7 +32,7 @@ Temporal.Duration.compare(duration1, duration2, options)
 
 ### Return value
 
-Returns `-1` if `duration1` is shorter than `duration2`, `0` if they are equal, and `1` if `duration1` is longer.
+Returns `-1` if `duration1` is shorter than `duration2`, `0` if they are equal, and `1` if `duration1` is longer than `duration2`.
 
 ### Exceptions
 

@@ -1,5 +1,6 @@
 ---
 title: "ARIA: comment role"
+short-title: comment
 slug: Web/Accessibility/ARIA/Reference/Roles/comment_role
 page-type: aria-role
 sidebar: accessibilitysidebar
@@ -81,10 +82,8 @@ It's possible to nest comments inside one another, like so:
 
 ## Accessibility concerns
 
-None
+None.
 
 ## Specifications
 
 Will be part of WAI-ARIA 1.3, which is still being drafted.
-
-## See also

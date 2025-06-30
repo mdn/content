@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.copyWithin()
+short-title: copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.copyWithin
@@ -9,7 +10,7 @@ browser-compat: javascript.builtins.Array.copyWithin
 
 The **`copyWithin()`** method of {{jsxref("Array")}} instances shallow copies part of this array to another location in the same array and returns this array without modifying its length.
 
-{{InteractiveExample("JavaScript Demo: Array.copyWithin()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.copyWithin()")}}
 
 ```js interactive-example
 const array1 = ["a", "b", "c", "d", "e"];
@@ -47,7 +48,7 @@ copyWithin(target, start, end)
   - : Zero-based index at which to end copying elements from, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion). `copyWithin()` copies up to but not including `end`.
     - Negative index counts back from the end of the array — if `-array.length <= end < 0`, `end + array.length` is used.
     - If `end < -array.length`, `0` is used.
-    - If `end >= array.length` or `end` is omitted, `array.length` is used, causing all elements until the end to be copied.
+    - If `end >= array.length` or `end` is omitted or `undefined`, `array.length` is used, causing all elements until the end to be copied.
     - If `end` implies a position before or at the position that `start` implies, nothing is copied.
 
 ### Return value

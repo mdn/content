@@ -1,5 +1,6 @@
 ---
-title: Syntax
+title: "Introduction to CSS syntax: declarations, rulesets, and statements"
+short-title: Introduction
 slug: Web/CSS/CSS_syntax/Syntax
 page-type: guide
 ---
@@ -34,7 +35,7 @@ A CSS declaration block is visualized in the diagram below.
 ![Within a CSS block, encompassed in braces, semicolons separate declarations, with the final semicolon being optional but recommended as good practice.](declaration-block.png)
 
 > [!NOTE]
-> The content of a CSS declaration block, that is a list of semicolon-separated declarations, without the initial and closing braces, can be put inside an HTML [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute.
+> The content of a CSS declaration block, that is a list of semicolon-separated declarations, without the initial and closing braces, can be put inside an HTML [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute.
 
 ## CSS rulesets
 
@@ -83,8 +84,8 @@ There is another group of statements – the **nested statements**. These are st
 - [Cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade)
 - [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
 - Values
-  - [Initial values](/en-US/docs/Web/CSS/CSS_cascade/initial_value)
-  - [Computed values](/en-US/docs/Web/CSS/CSS_cascade/computed_value)
-  - [Used values](/en-US/docs/Web/CSS/CSS_cascade/used_value)
-  - [Actual values](/en-US/docs/Web/CSS/CSS_cascade/actual_value)
+  - [Initial values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value)
+  - [Computed values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value)
+  - [Used values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value)
+  - [Actual values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value)
 - [Shorthand properties](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties)

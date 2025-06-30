@@ -1,5 +1,6 @@
 ---
-title: "Handling overflow: try fallbacks and conditional hiding"
+title: Fallback options and conditional hiding for overflow
+short-title: Handling overflow
 slug: Web/CSS/CSS_anchor_positioning/Try_options_hiding
 page-type: guide
 ---
@@ -265,7 +266,7 @@ The `descriptor-list` defines the property values for that individual custom try
 
 - {{cssxref("position-area")}}
 - [Inset properties](/en-US/docs/Glossary/Inset_properties)
-- Margin properties (e.g. {{cssxref("margin-left")}}, {{cssxref("margin-block-start")}})
+- Margin properties (e.g., {{cssxref("margin-left")}}, {{cssxref("margin-block-start")}})
 - [self-alignment](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center) properties
 - Sizing properties ({{cssxref("width")}}, {{cssxref("block-size")}}, etc.)
 - {{cssxref("position-anchor")}}

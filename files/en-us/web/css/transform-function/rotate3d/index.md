@@ -13,7 +13,7 @@ fixed axis in 3D space, without deforming it. Its result is a {{cssxref("&lt;tra
 {{InteractiveExample("CSS Demo: rotate3d()")}}
 
 ```css interactive-example-choice
-transform: rotate3d(0);
+transform: rotate3d(0, 0, 0, 0);
 ```
 
 ```css interactive-example-choice
@@ -107,11 +107,6 @@ the null vector, \[0, 0, 0], will cause the rotation to be ignored, but without 
 > not commutative. In other words, the order in which the rotations are applied impacts the result.
 
 ## Syntax
-
-The amount of rotation created by `rotate3d()` is specified by three {{cssxref("&lt;number&gt;")}}s and
-one {{cssxref("&lt;angle&gt;")}}. The `<number>`s represent the x-, y-, and z-coordinates of the
-vector denoting the axis of rotation. The `<angle>` represents the angle of rotation; if positive,
-the movement will be clockwise; if negative, it will be counter-clockwise.
 
 ```css
 rotate3d(x, y, z, a)

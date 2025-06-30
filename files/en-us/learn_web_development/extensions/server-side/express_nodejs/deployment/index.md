@@ -1,12 +1,15 @@
 ---
 title: "Express Tutorial Part 7: Deploying to production"
+short-title: "7: Deploying"
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/forms", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
+{{PreviousMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/forms", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
-Now you've created (and tested) an awesome [LocalLibrary](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website) website, you're going to want to install it on a public web server so that it can be accessed by library staff and members over the Internet. This article provides an overview of how you might go about finding a host to deploy your website, and what you need to do in order to get your site ready for production.
+Now that you've created and tested a sample website using Express, it's time to deploy it to a web server so people can access it over the public internet.
+This page explains how to host an Express project and outlines what you need to get it ready for production.
 
 <table>
   <tbody>
@@ -42,12 +45,12 @@ This tutorial provides some guidance on your options for choosing a hosting site
 The production environment is the environment provided by the server computer where you will run your website for external consumption. The environment includes:
 
 - Computer hardware on which the website runs.
-- Operating system (e.g. Linux or Windows).
+- Operating system (e.g., Linux or Windows).
 - Programming language runtime and framework libraries on top of which your website is written.
 - Web server infrastructure, possibly including a web server, reverse proxy, load balancer, etc.
 - Databases on which your website is dependent.
 
-The server computer could be located on your premises and connected to the Internet by a fast link, but it is far more common to use a computer that is hosted "in the cloud". What this actually means is that your code is run on some remote computer (or possibly a "virtual" computer) in your hosting company's data center(s). The remote server will usually offer some guaranteed level of computing resources (e.g. CPU, RAM, storage memory, etc.) and Internet connectivity for a certain price.
+The server computer could be located on your premises and connected to the Internet by a fast link, but it is far more common to use a computer that is hosted "in the cloud". What this actually means is that your code is run on some remote computer (or possibly a "virtual" computer) in your hosting company's data center(s). The remote server will usually offer some guaranteed level of computing resources (e.g., CPU, RAM, storage memory, etc.) and Internet connectivity for a certain price.
 
 This sort of remotely accessible computing/networking hardware is referred to as _Infrastructure as a Service (IaaS)_. Many IaaS vendors provide options to preinstall a particular operating system, onto which you must install the other components of your production environment. Other vendors allow you to select more fully-featured environments, perhaps including a complete Node setup.
 
@@ -74,9 +77,9 @@ Some of the things to consider when choosing a host:
 - Level of support for scaling horizontally (adding more machines) and vertically (upgrading to more powerful machines) and the costs of doing so.
 - The locations where the supplier has data centers, and hence where access is likely to be fastest.
 - The host's historical uptime and downtime performance.
-- Tools provided for managing the site — are they easy to use and are they secure (e.g. SFTP vs. FTP).
+- Tools provided for managing the site — are they easy to use and are they secure (e.g., SFTP vs. FTP).
 - Inbuilt frameworks for monitoring your server.
-- Known limitations. Some hosts will deliberately block certain services (e.g. email). Others offer only a certain number of hours of "live time" in some price tiers, or only offer a small amount of storage.
+- Known limitations. Some hosts will deliberately block certain services (e.g., email). Others offer only a certain number of hours of "live time" in some price tiers, or only offer a small amount of storage.
 - Additional benefits. Some providers will offer free domain names and support for TLS certificates that you would otherwise have to pay for.
 - Whether the "free" tier you're relying on expires over time, and whether the cost of migrating to a more expensive tier means you would have been better off using some other service in the first place!
 
@@ -126,6 +129,7 @@ Replace the line with the following code that uses `process.env.MONGODB_URI` to 
 ```js
 // Set up mongoose connection
 const mongoose = require("mongoose");
+
 mongoose.set("strictQuery", false);
 
 const dev_db_url =
@@ -152,7 +156,7 @@ This change can be made either by using `export`, an environment file, or the OS
 
 ### Log appropriately
 
-Logging calls can have an impact on a high-traffic website. In a production environment, you may need to log website activity (e.g. tracking traffic or logging API calls) but you should attempt to minimize the amount of logging added for debugging purposes.
+Logging calls can have an impact on a high-traffic website. In a production environment, you may need to log website activity (e.g., tracking traffic or logging API calls) but you should attempt to minimize the amount of logging added for debugging purposes.
 
 One way to minimize "debug" logging in production is to use a module like [debug](https://www.npmjs.com/package/debug) that allows you to control what logging is performed by setting an environment variable.
 For example, the code fragment below shows how you might set up "author" logging.
@@ -172,7 +176,7 @@ exports.author_update_get = asyncHandler(async (req, res, next) => {
     return next(err);
   }
 
-  res.render("author_form", { title: "Update Author", author: author });
+  res.render("author_form", { title: "Update Author", author });
 });
 ```
 
@@ -262,7 +266,7 @@ app.use(
 
 We normally might have just inserted `app.use(helmet());` to add the _subset_ of the security-related headers that make sense for most sites.
 However in the [LocalLibrary base template](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template) we include some bootstrap and jQuery scripts.
-These violate the helmet's _default_ [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP), which does not allow loading of cross-site scripts.
+These violate the helmet's _default_ [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP), which does not allow loading of cross-site scripts.
 To allow these scripts to be loaded we modify the helmet configuration so that it sets CSP directives to allow script loading from the indicated domains.
 For your own server you can add/disable specific headers as needed by following the [instructions for using helmet here](https://www.npmjs.com/package/helmet).
 
@@ -285,11 +289,11 @@ Then add the module to the middleware chain with the `use()` method.
 ```js
 const compression = require("compression");
 const helmet = require("helmet");
+const RateLimit = require("express-rate-limit");
 
 const app = express();
 
 // Set up rate limiter: maximum of twenty requests per minute
-const RateLimit = require("express-rate-limit");
 const limiter = RateLimit({
   windowMs: 1 * 60 * 1000, // 1 minute
   max: 20,
@@ -358,8 +362,7 @@ The steps are:
 1. Visit <https://github.com/> and create an account.
 2. Once you are logged in, click the **+** link in the top toolbar and select **New repository**.
 3. Fill in all the fields on this form. While these are not compulsory, they are strongly recommended.
-
-   - Enter a new repository name (e.g. _express-locallibrary-tutorial_), and description (e.g. "Local Library website written in Express (Node)".
+   - Enter a new repository name (e.g., _express-locallibrary-tutorial_), and description (e.g., "Local Library website written in Express (Node)".
    - Choose **Node** in the _Add .gitignore_ selection list.
    - Choose your preferred license in the _Add license_ selection list.
    - Check **Initialize this repository with a README**.
@@ -376,7 +379,7 @@ The steps are:
 
 Now that the repository ("repo") is created on GitHub we are going to want to clone (copy) it to our local computer:
 
-1. Install _git_ for your local computer (you can find versions for different platforms [here](https://git-scm.com/downloads)).
+1. Install _git_ for your local computer ([official Git download guide](https://git-scm.com/downloads)).
 2. Open a command prompt/terminal and clone your repo using the URL you copied above:
 
    ```bash
@@ -469,14 +472,13 @@ We are choosing to use Glitch for several reasons:
 - The skills and concepts you will learn when using Glitch are transferrable.
 - The service and plan limitations do not really impact us using Glitch for the tutorial.
   For example:
-
   - The starter plan only offers 1000 "project hours" per month, which is reset monthly.
     This is used when you're actively editing the site or if someone is accessing it.
     If no one is accessing or editing the site it will sleep.
   - The starter plan environment has a limited amount of container RAM and storage space.
     There is more than enough for the tutorial, in particular because our database is hosted elsewhere.
   - Custom domains are not well supported (at time of writing).
-  - Other limitations can be found in the [Glitch technical restrictions page](https://help.glitch.com/hc/en-us/articles/16287495313293-Technical-Restrictions).
+  - Other limitations can be found in the [Glitch technical restrictions page](https://help.glitch.com/s/article/Technical-Restrictions).
 
 While Glitch is appropriate for hosting this demonstration, you should take the time to determine if it is [suitable for your own website](#choosing_a_hosting_provider).
 
@@ -486,9 +488,9 @@ Glitch provides a web-based interface in which you can create projects from star
 As you make changes, the project is built and run in its own isolated and independent virtualized container.
 
 How this all works "under the hood" is a mystery — Glitch doesn't say.
-What is clear is that as long as you create a fairly standard nodejs web application (for example, using `package.json` for your dependencies), and don't consume more resources than listed in the [technical restrictions](https://help.glitch.com/hc/en-us/articles/16287495313293-Technical-Restrictions), your application should "just work".
+What is clear is that as long as you create a fairly standard nodejs web application (for example, using `package.json` for your dependencies), and don't consume more resources than listed in the [technical restrictions](https://help.glitch.com/s/article/Technical-Restrictions), your application should "just work".
 
-Once the application is running, it can be configured for production using [private data](https://help.glitch.com/hc/en-us/articles/16287550167437-Adding-Private-Data) supplied in a `.env` file.
+Once the application is running, it can be configured for production using [private data](https://help.glitch.com/s/article/Adding-Private-Data) supplied in a `.env` file.
 The values in the secret data are read by the application as environment variables, which, as you will recall from a previous section, is how we configured our application to get its database URL.
 Note that the variables are _secret_: the `.env` should not be included in your GitHub repository.
 
@@ -576,7 +578,7 @@ The site updates as you enter values into the editor.
 
 > [!NOTE]
 > We didn't create this file.
-> It is intended for [private data](https://help.glitch.com/hc/en-us/articles/16287550167437-Adding-Private-Data) and was created automatically on import to Glitch.
+> It is intended for [private data](https://help.glitch.com/s/article/Adding-Private-Data) and was created automatically on import to Glitch.
 > It is never exported or copied.
 
 ### Other configuration variables
@@ -787,16 +789,13 @@ That's the end of this tutorial on setting up Express apps in production, and al
 - [Production best practices: performance and reliability](https://expressjs.com/en/advanced/best-practice-performance.html) (Express docs)
 - [Production Best Practices: Security](https://expressjs.com/en/advanced/best-practice-security.html) (Express docs)
 - Railway Docs
-
   - [CLI](https://docs.railway.com/guides/cli)
 
 - DigitalOcean
-
   - [Express](https://www.digitalocean.com/community/tutorials?q=express) tutorials
   - [Node.js](https://www.digitalocean.com/community/tutorials?q=node.js) tutorials
 
 - Heroku
-
   - [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs) (Heroku docs)
   - [Deploying Node.js Applications on Heroku](https://devcenter.heroku.com/articles/deploying-nodejs) (Heroku docs)
   - [Heroku Node.js Support](https://devcenter.heroku.com/articles/nodejs-support) (Heroku docs)

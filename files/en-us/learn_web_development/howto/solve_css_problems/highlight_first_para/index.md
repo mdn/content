@@ -1,10 +1,10 @@
 ---
 title: How to highlight the first paragraph
+short-title: Highlight the first paragraph
 slug: Learn_web_development/Howto/Solve_CSS_problems/Highlight_first_para
 page-type: learn-faq
+sidebar: learn-how-to
 ---
-
-{{LearnSidebar}}
 
 In this guide you can find out how to highlight the first paragraph inside a container.
 

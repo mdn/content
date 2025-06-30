@@ -7,7 +7,7 @@ browser-compat: webextensions.api.downloads.onCreated
 
 {{AddonSidebar}}
 
-The **`onCreated()`** event of the {{WebExtAPIRef("downloads")}} API fires when a download begins, i.e. when {{WebExtAPIRef("downloads.download()")}} is successfully invoked.
+The **`onCreated()`** event of the {{WebExtAPIRef("downloads")}} API fires when a download begins, i.e., when {{WebExtAPIRef("downloads.download()")}} is successfully invoked.
 
 The listener is passed the {{WebExtAPIRef('downloads.DownloadItem')}} object in question as a parameter.
 
@@ -33,9 +33,7 @@ Events have three functions:
 ### Parameters
 
 - `function`
-
   - : The function called when this event occurs. This function is passed this argument:
-
     - `downloadItem`
       - : The {{WebExtAPIRef('downloads.DownloadItem')}} object in question.
 

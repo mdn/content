@@ -9,7 +9,7 @@ browser-compat: javascript.statements.continue
 
 The **`continue`** statement terminates execution of the statements in the current iteration of the current or labeled loop, and continues execution of the loop with the next iteration.
 
-{{InteractiveExample("JavaScript Demo: Statement - Continue")}}
+{{InteractiveExample("JavaScript Demo: continue statement")}}
 
 ```js interactive-example
 let text = "";
@@ -18,7 +18,7 @@ for (let i = 0; i < 10; i++) {
   if (i === 3) {
     continue;
   }
-  text = text + i;
+  text += i;
 }
 
 console.log(text);
@@ -86,7 +86,7 @@ checkIAndJ: while (i < 4) {
     console.log(`j: ${j}`);
     j -= 1;
 
-    if (j % 2 === 0) continue checkJ;
+    if (j % 2 === 0) continue;
     console.log(`${j} is odd.`);
   }
   console.log(`i = ${i}`);

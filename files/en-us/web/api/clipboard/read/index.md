@@ -23,11 +23,8 @@ read(formats)
 ### Parameters
 
 - `formats` {{optional_inline}}
-
   - : An optional object with the following properties:
-
     - `unsanitized` {{optional_inline}}
-
       - : An {{jsxref("Array")}} of strings containing MIME types of data formats that should not be sanitized when reading from the clipboard.
 
         Certain browsers may sanitize the clipboard data when it is read, to prevent malicious content from being pasted into the document. For example, Chrome (and other Chromium-based browsers) sanitizes HTML data by stripping `<script>` tags and other potentially dangerous content. Use the `unsanitized` array to specify a list of MIME types that should not be sanitized.
@@ -199,7 +196,7 @@ const destinationDiv = document.querySelector("#destination");
 destinationDiv.addEventListener("click", pasteData);
 
 async function pasteData() {
-  destinationDiv.innerText = ""; //Clear inner text
+  destinationDiv.innerText = ""; // Clear inner text
   try {
     const clipboardContents = await navigator.clipboard.read();
     for (const item of clipboardContents) {
@@ -208,8 +205,7 @@ async function pasteData() {
         mimeTypeElement.innerText = `MIME type: ${mimeType}`;
         destinationDiv.appendChild(mimeTypeElement);
         if (mimeType === "image/png") {
-          const pngImage = new Image(); // Image constructor
-          pngImage.src = "image1.png";
+          const pngImage = new Image();
           pngImage.alt = "PNG image from clipboard";
           const blob = await item.getType("image/png");
           pngImage.src = URL.createObjectURL(blob);
@@ -248,7 +244,7 @@ Notes:
 
 - Even though the butterfly image is a JPG file, when read from the clipboard it is a PNG.
 - If prompted, you will need to grant permission in order to paste the image.
-- This may not work on chromium browsers as the sample frame is not granted the [Permissions-Policy](/en-US/docs/Web/HTTP/Headers/Permissions-Policy) `clipboard-read` and `clipboard-write` permissions ([required by Chromium browsers](/en-US/docs/Web/API/Clipboard_API#security_considerations)).
+- This may not work on chromium browsers as the sample frame is not granted the [Permissions-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy) `clipboard-read` and `clipboard-write` permissions ([required by Chromium browsers](/en-US/docs/Web/API/Clipboard_API#security_considerations)).
 
 ### Reading unsanitized HTML from the clipboard
 

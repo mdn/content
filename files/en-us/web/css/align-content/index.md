@@ -57,7 +57,7 @@ align-content: space-around;
 }
 ```
 
-This property has no effect on single line flex containers (i.e. ones with `flex-wrap: nowrap`).
+This property has no effect on single line flex containers (i.e., ones with `flex-wrap: nowrap`).
 
 ## Syntax
 
@@ -113,7 +113,6 @@ align-content: unset;
   - : The items are packed flush to each other against the edge of the alignment container depending on the flex container's cross-end side.
     This only applies to flex layout items. For items that are not children of a flex container, this value is treated like `end`.
 - `baseline`, `first baseline`, `last baseline`
-
   - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box's first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
 
     ![the baseline is the line upon which most letters "sit" and below which descenders extend.](410px-typography_line_terms.svg.png)
@@ -134,7 +133,7 @@ align-content: unset;
   - : Used alongside an alignment keyword. Regardless of the relative sizes of the item and alignment container and whether overflow which causes data loss might happen, the given alignment value is honored.
 
 > [!NOTE]
-> The `<content-distribution>` values (`space-between`, `space-around`, `space-evenly`, and `stretch`) have no effect in [block layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables#align-content_and_justify-content) as all the content in that block is treated as a single [alignment-subject](/en-US/docs/Glossary/Alignment_Subject)
+> The `<content-distribution>` values (`space-between`, `space-around`, `space-evenly`, and `stretch`) have no effect in [block layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables#align-content_and_justify-content) as all the content in that block is treated as a single [alignment-subject](/en-US/docs/Glossary/Alignment_Subject).
 
 ## Formal definition
 
@@ -152,10 +151,6 @@ In this example, you can switch between three different {{cssxref("display")}} p
 
 #### HTML
 
-```html-nolint hidden
-<div class="wrapper">
-```
-
 ```html
 <section>
   <div class="olive">Olive</div>
@@ -167,46 +162,45 @@ In this example, you can switch between three different {{cssxref("display")}} p
 </section>
 ```
 
-```html-nolint hidden
+```html hidden
 <fieldset class="controls">
-    <legend>Controls</legend>
-    <div class="row">
-      <label for="display">display: </label>
-      <select id="display">
-        <option value="block" selected>block</option>
-        <option value="flex">flex</option>
-        <option value="grid">grid</option>
-      </select>
-    </div>
-    <div class="row">
-      <label for="alignContent">align-content: </label>
-      <select id="alignContent">
-        <option value="normal" selected>normal</option>
-        <option value="start">start</option>
-        <option value="center">center</option>
-        <option value="end">end</option>
-        <option value="flex-start">flex-start</option>
-        <option value="flex-end">flex-end</option>
-        <option value="space-between">space-between</option>
-        <option value="space-around">space-around</option>
-        <option value="space-evenly">space-evenly</option>
-      </select>
-    </div>
-    <p>CSS applied</p>
-    <pre>
+  <legend>Controls</legend>
+  <div class="row">
+    <label for="display">display: </label>
+    <select id="display">
+      <option value="block" selected>block</option>
+      <option value="flex">flex</option>
+      <option value="grid">grid</option>
+    </select>
+  </div>
+  <div class="row">
+    <label for="alignContent">align-content: </label>
+    <select id="alignContent">
+      <option value="normal" selected>normal</option>
+      <option value="start">start</option>
+      <option value="center">center</option>
+      <option value="end">end</option>
+      <option value="flex-start">flex-start</option>
+      <option value="flex-end">flex-end</option>
+      <option value="space-between">space-between</option>
+      <option value="space-around">space-around</option>
+      <option value="space-evenly">space-evenly</option>
+    </select>
+  </div>
+  <p>CSS applied</p>
+  <pre>
 section {
   display: <span id="displayStyle">block</span>;
   align-content: <span id="align">normal</span>
 }
-    </pre>
-  </fieldset>
-</div>
+  </pre>
+</fieldset>
 ```
 
 #### CSS
 
 ```css hidden
-.wrapper {
+body {
   font-size: 1.25rem;
   display: flex;
   gap: 1rem;
@@ -295,5 +289,5 @@ In [block layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_a
 - [Box alignment in grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
 - [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment)
 - [Block and inline layout in normal flow](/en-US/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)
-- [Block-level_content](/en-US/docs/Glossary/Block-level_content)
+- [Block-level content](/en-US/docs/Glossary/Block-level_content)
 - {{CSSXRef("display")}}

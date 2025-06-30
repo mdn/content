@@ -8,7 +8,7 @@ IMSC (TTML Profiles for Internet Media Subtitles and Captions) is a file format 
 
 ## Concepts and usage
 
-IMSC is standardized by the W3C, and used around the world by content producers (e.g. 20th Century Fox), online services (e.g. Netflix), and traditional broadcasters (e.g. the BBC). Many platforms and players support it, e.g. iOS devices and the dashJS player.
+IMSC is standardized by the W3C, and used around the world by content producers (e.g., 20th Century Fox), online services (e.g., Netflix), and traditional broadcasters (e.g., the BBC). Many platforms and players support it, e.g., iOS devices and the dashJS player.
 
 IMSC supports a wide range of world languages and scripts, and rich styling. In addition to text-based subtitles, IMSC also supports PNG subtitles.
 
@@ -114,7 +114,7 @@ In contrast to IMSC, which uses markup, WebVTT uses a combination of CSS and pla
 
 ## Reference
 
-- [TTML Profiles for Internet Media Subtitles and Captions](https://www.w3.org/TR/ttml-imsc/all/)
+- [TTML Profiles for Internet Media Subtitles and Captions](https://w3c.github.io/imsc/imsc1/spec/ttml-ww-profiles.html)
 
 ## Tools
 

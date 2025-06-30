@@ -2,9 +2,8 @@
 title: Mobile accessibility
 slug: Learn_web_development/Core/Accessibility/Mobile
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/Multimedia","Learn_web_development/Core/Accessibility/Accessibility_troubleshooting", "Learn_web_development/Core/Accessibility")}}
 
@@ -54,7 +53,7 @@ Let's look at the main two: TalkBack on Android and VoiceOver on iOS.
 
 The TalkBack screen reader is built into the Android operating system.
 
-To turn it on, look up what phone model and Android version you have, and then look up where the TalkBack menu is. It tends to differ widely between Android versions and even between different phone models. Some phone manufacturers (e.g. Samsung) don't even have TalkBack in newer phones, and instead opted for their own screen reader.
+To turn it on, look up what phone model and Android version you have, and then look up where the TalkBack menu is. It tends to differ widely between Android versions and even between different phone models. Some phone manufacturers (e.g., Samsung) don't even have TalkBack in newer phones, and instead opted for their own screen reader.
 
 When you've found the TalkBack menu, press the slider switch to turn TalkBack on. Follow any additional on-screen prompts that you are presented with.
 
@@ -105,7 +104,6 @@ For example, with TalkBack turned on:
 1. Open your web browser.
 2. Activate the URL bar.
 3. Enter a web page that has a bunch of headings on it, such as the front page of bbc.co.uk. To enter the text of the URL:
-
    - Select the URL bar by swiping left/right till you get to it, and then double-tapping.
    - Hold your finger down on the virtual keyboard until you get the character you want, and then release your finger to type it. Repeat for each character.
    - Once you've finished, find the Enter key and press it.
@@ -148,7 +146,6 @@ When VoiceOver is turned on, you have a navigation feature called the Rotor avai
 
 1. Twist two fingers around on the screen like you are turning a dial. Each option will be read aloud as you twist further around. You can go back and forth to cycle through the options.
 2. Once you've found the option you want:
-
    - Release your fingers to select it.
    - If it is an option you can iterate the value of (such as Volume or Speaking Rate), you can do a swipe up or down to increase or decrease the value of the selected item.
 
@@ -161,7 +158,6 @@ Let's have a go at web browsing with VoiceOver:
 1. Open your web browser.
 2. Activate the URL bar.
 3. Enter a web page that has a bunch of headings on it, such as the front page of bbc.co.uk. To enter the text of the URL:
-
    - Select the URL bar by swiping left/right until you get to it, and then double-tapping.
    - For each character, hold your finger down on the virtual keyboard until you get the character you want, and then release your finger to select it. Double-tap to type it.
    - Once you've finished, find the Enter key and press it.
@@ -169,7 +165,6 @@ Let's have a go at web browsing with VoiceOver:
 4. Swipe left and right to move between items on the page. You can double-tap an item to select it (e.g., follow a link).
 5. By default, the selected Rotor option will be Speaking Rate; you can currently swipe up and down to increase or decrease the speaking rate.
 6. Now turn two fingers around the screen like a dial to show the rotor and move between its options. Here are a few examples of the options available:
-
    - _Speaking Rate_: Change the speaking rate.
    - _Containers_: Move between different semantic containers on the page.
    - _Headings_: Move between headings on the page.
@@ -226,8 +221,8 @@ We've provided a simple example that shows how to use the mouse and touch events
 
 In particular, the most common problems that need to be addressed for mobile are:
 
-- Suitability of layouts for mobile devices. A multi-column layout won't work as well on a narrow screen, for example, and the text size may need to be increased so it is legible. Such issues can be solved by creating a responsive layout using technologies such as [media queries](/en-US/docs/Web/CSS/CSS_media_queries), [viewport](/en-US/docs/Web/HTML/Viewport_meta_tag), and [flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox).
-- Conserving image sizes downloaded. In general, small-screen devices won't need images that are as large as their desktop counterparts, and they are more likely to be on slow network connections. Therefore, it is wise to serve smaller images to narrow screen devices as appropriate. You can handle this using [responsive image techniques](/en-US/docs/Web/HTML/Responsive_images).
+- Suitability of layouts for mobile devices. A multi-column layout won't work as well on a narrow screen, for example, and the text size may need to be increased so it is legible. Such issues can be solved by creating a responsive layout using technologies such as [media queries](/en-US/docs/Web/CSS/CSS_media_queries), [viewport](/en-US/docs/Web/HTML/Guides/Viewport_meta_element), and [flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox).
+- Conserving image sizes downloaded. In general, small-screen devices won't need images that are as large as their desktop counterparts, and they are more likely to be on slow network connections. Therefore, it is wise to serve smaller images to narrow screen devices as appropriate. You can handle this using [responsive image techniques](/en-US/docs/Web/HTML/Guides/Responsive_images).
 - Thinking about high resolutions. Many mobile devices have high-resolution screens, and therefore need higher-resolution images so that the display can continue to look crisp and sharp. Again, you can serve images as appropriate using responsive image techniques. In addition, many image requirements can be fulfilled using the SVG vector images format, which is well-supported across browsers today. SVG has a small file size and will stay sharp regardless of whatever size is being displayed (see [Including vector graphics in HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML) for more details).
 
 > [!NOTE]
@@ -239,7 +234,7 @@ There are other important issues to consider when making sites more accessible o
 
 #### Not disabling zoom
 
-Using [viewport](/en-US/docs/Web/HTML/Viewport_meta_tag), it is possible to disable zoom. Always ensure resizing is enabled, and set the width to the device's width in the {{htmlelement("head")}}:
+Using [viewport](/en-US/docs/Web/HTML/Guides/Viewport_meta_element), it is possible to disable zoom. Always ensure resizing is enabled, and set the width to the device's width in the {{htmlelement("head")}}:
 
 ```html
 <meta name="viewport" content="width=device-width; user-scalable=yes" />

@@ -22,15 +22,13 @@ let getting = browser.history.getVisits(
 ### Parameters
 
 - `details`
-
   - : An object with the following properties:
-
     - `url`
       - : `string`. The URL for which to retrieve visit information.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) will be fulfilled with an array of `{{WebExtAPIRef('history.VisitItem')}}` objects each representing a visit to the given URL. Visits are sorted in reverse chronological order.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) will be fulfilled with an array of {{WebExtAPIRef('history.VisitItem')}} objects each representing a visit to the given URL. Visits are sorted in reverse chronological order.
 
 ## Browser compatibility
 

@@ -1,5 +1,6 @@
 ---
 title: CSS container queries
+short-title: Container queries
 slug: Web/CSS/CSS_containment/Container_queries
 page-type: guide
 ---
@@ -20,7 +21,7 @@ This article provides an introduction to using container queries, specifically f
 
 ## Using container size queries
 
-Container queries test elements based on their container type. To use container size queries, you need to declare a **containment context** on an element so that the browser knows you might want to query the dimensions of this container later.
+While container queries apply styles based on the container type, container size queries apply styles specifically based on the container's dimensions. To use container size queries, you need to declare a **containment context** on an element so that the browser knows you might want to query the dimensions of this container later.
 To do this, use the {{cssxref("container-type")}} property with a value of `size`, `inline-size`, or `normal`.
 
 These values have the following effects:
@@ -118,6 +119,8 @@ For more information on this property, see the {{Cssxref("container")}} referenc
 When applying styles to a container using container queries, you can use container query length units.
 These units specify a length relative to the dimensions of a query container.
 Components that use units of length relative to their container are more flexible to use in different containers without having to recalculate concrete length values.
+
+If no eligible container is available for the query, the container query length unit defaults to the [small viewport unit](/en-US/docs/Web/CSS/length#small_viewport_units) for that axis (`sv*`).
 
 The container query length units are:
 

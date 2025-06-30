@@ -20,7 +20,8 @@ new Temporal.PlainDate(year, month, day)
 new Temporal.PlainDate(year, month, day, calendar)
 ```
 
-> **Note:** `Temporal.PlainDate()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Temporal.PlainDate()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -31,7 +32,7 @@ new Temporal.PlainDate(year, month, day, calendar)
 - `day`
   - : A number, truncated to an integer, representing the day of the month in the ISO calendar system.
 - `calendar` {{optional_inline}}
-  - : A string representing the [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars) to use. Note that irrespective of the `calendar`, the `year`, `month`, and `day` must be in the ISO 8601 calendar system. Defaults to `"iso8601"`.
+  - : A string representing the [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars) to use. See [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types) for a list of commonly supported calendar types. Defaults to `"iso8601"`. Note that irrespective of the `calendar`, the `year`, `month`, and `day` must be in the ISO 8601 calendar system.
 
 ### Return value
 

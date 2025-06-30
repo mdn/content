@@ -43,9 +43,9 @@ In the following example a middle C note is sent immediately, followed by a note
 
 ```js
 function sendMiddleC(midiAccess, portID) {
-  const noteOnMessage = [0x90, 60, 0x7f]; // note on middle C, full velocity
+  const noteOnMessage = [0x90, 60, 0x7f]; // Note on middle C, full velocity
   const output = midiAccess.outputs.get(portID);
-  output.send(noteOnMessage); //omitting the timestamp means send immediately.
+  output.send(noteOnMessage); // Omitting the timestamp means send immediately.
   output.send([0x80, 60, 0x40], window.performance.now() + 1000.0); // timestamp = now + 1000ms.
 }
 ```

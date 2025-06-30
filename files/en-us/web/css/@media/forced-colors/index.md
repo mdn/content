@@ -18,7 +18,7 @@ The `forced-colors` media feature indicates whether or not the browser is curren
 - `none`
   - : Forced colors mode is not active; the page's colors are not being forced into a limited palette.
 - `active`
-  - : Indicates that forced colors mode is active. The browser provides the color palette to authors through the [CSS system color](/en-US/docs/Web/CSS/system-color) keywords and, if appropriate, triggers the appropriate value of [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) so that authors can adapt the page. The browser selects the value for `prefers-color-scheme` based on the lightness of the `Canvas` system color (see the [color adjust spec](https://www.w3.org/TR/css-color-adjust-1/#forced) for more details).
+  - : Indicates that forced colors mode is active. The browser provides the color palette to authors through the [CSS system color](/en-US/docs/Web/CSS/system-color) keywords and, if appropriate, triggers the appropriate value of [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) so that authors can adapt the page. The browser selects the value for `prefers-color-scheme` based on the lightness of the `Canvas` system color (see the [color adjust spec](https://drafts.csswg.org/css-color-adjust-1/#forced) for more details).
 
 ## Usage notes
 
@@ -36,8 +36,8 @@ These browser-specified values are selected from the set of system colors — th
 - {{cssxref("outline-color")}}
 - {{cssxref("column-rule-color")}}
 - {{cssxref("-webkit-tap-highlight-color")}}
-- [SVG fill attribute](/en-US/docs/Web/SVG/Attribute/fill)
-- [SVG stroke attribute](/en-US/docs/Web/SVG/Attribute/stroke)
+- [SVG fill attribute](/en-US/docs/Web/SVG/Reference/Attribute/fill)
+- [SVG stroke attribute](/en-US/docs/Web/SVG/Reference/Attribute/stroke)
 
 Additionally the following properties have special behavior in forced colors mode:
 

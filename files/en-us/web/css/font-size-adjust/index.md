@@ -40,9 +40,7 @@ The `font-size-adjust` property takes as its value the keyword `none`, one (`<nu
 - `none`
   - : No adjustment is applied to the `font-size` value for the fallback font.
 - `<font-metric>` {{optional_inline}}
-
   - : Specifies the first-choice font metric to use for adjusting the font size of the fallback font. This parameter accepts one of the keywords listed below. It is an optional parameter, and `ex-height` is used if no `<font-metric>` is specified.
-
     - `ex-height`
       - : Uses the ratio of x-height (height of lowercase "x" in a font) to font size (aspect value) to adjust the fallback font size. This keyword value is used to normalize lowercase letters across fonts.
     - `cap-height`
@@ -55,7 +53,6 @@ The `font-size-adjust` property takes as its value the keyword `none`, one (`<nu
       - : Uses the ratio of the advance height (vertical space taken up by a character in a font) of the character "水" (CJK water ideograph, U+6C34) to font size. This keyword value is used to normalize vertical wide pitch of fonts, particularly those that include CJK characters.
 
 - {{cssxref("&lt;number&gt;")}}
-
   - : Adjusts the font size used depending on the specified `<font-metric>`. When no `<font-metric>` is specified (in which case the default value `ex-height` is used), the `<number>` value adjusts the font size of the fallback font so that its x-height is the specified multiple of the font size. This value should generally match the aspect value (ratio of x-height to font size) of the first-choice font. This means that the first-choice font, when available, will display consistently across browsers, regardless of their support for `font-size-adjust`.
 
     When a `<font-metric>` value is specified, the `<number>` value adjusts the font size as per the chosen `<font-metric>` to maintain a consistent appearance for the specified font metric across different fonts.
@@ -146,7 +143,7 @@ In `C`, notice that only one value is specified for the `font-size-adjust` prope
 
 ### Determining the aspect value of a font
 
-For a given font, the same content in two side-by-side [`<span>`](/en-US/docs/Web/HTML/Element/span) elements can be used to determine the font's aspect value. If the same font size is used for content in both spans, the spans will match when the `font-size-adjust` value in one span is accurate for the given font.
+For a given font, the same content in two side-by-side [`<span>`](/en-US/docs/Web/HTML/Reference/Elements/span) elements can be used to determine the font's aspect value. If the same font size is used for content in both spans, the spans will match when the `font-size-adjust` value in one span is accurate for the given font.
 
 In the example below, there are three pairs of side-by-side `<span>` elements, each containing the letter "b". The goal is to adjust the `font-size-adjust` property for the right `<span>` in each pair until the borders around the two letters align. The resulting `font-size-adjust` value can be considered the aspect value for the font.
 

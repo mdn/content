@@ -83,7 +83,7 @@ function addElement() {
 ### Web component example
 
 > [!NOTE]
-> Check the [browser compatibility](#browser_compatibility) section for support, and the [`is`](/en-US/docs/Web/HTML/Global_attributes/is) attribute reference for caveats on implementation reality of custom built-in elements.
+> Check the [browser compatibility](#browser_compatibility) section for support, and the [`is`](/en-US/docs/Web/HTML/Reference/Global_attributes/is) attribute reference for caveats on implementation reality of custom built-in elements.
 
 The following example snippet is taken from our [expanding-list-web-component](https://github.com/mdn/web-components-examples/tree/main/expanding-list-web-component) example ([see it live also](https://mdn.github.io/web-components-examples/expanding-list-web-component/)). In this case, our custom element extends the {{domxref("HTMLUListElement")}}, which represents the {{htmlelement("ul")}} element.
 
@@ -109,10 +109,10 @@ If we wanted to create an instance of this element programmatically, we'd use a 
 let expandingList = document.createElement("ul", { is: "expanding-list" });
 ```
 
-The new element will be given an [`is`](/en-US/docs/Web/HTML/Global_attributes/is) attribute whose value is the custom element's tag name.
+The new element will be given an [`is`](/en-US/docs/Web/HTML/Reference/Global_attributes/is) attribute whose value is the custom element's tag name.
 
 > [!NOTE]
-> For backwards compatibility with previous versions of the [Custom Elements specification](https://www.w3.org/TR/custom-elements/), some browsers will allow you to pass a string here instead of an object, where the string's value is the custom element's tag name.
+> For backwards compatibility, some browsers will allow you to pass a string here instead of an object, where the string's value is the custom element's tag name.
 
 ## Specifications
 

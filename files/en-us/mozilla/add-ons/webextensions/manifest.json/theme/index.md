@@ -202,12 +202,13 @@ These properties define the colors used for different parts of the browser. They
 
 All these properties can be specified as either a string containing any valid [CSS color string](/en-US/docs/Web/CSS/color_value) (including hexadecimal), or an RGB array, such as `"tab_background_text": [ 107 , 99 , 23 ]`.
 
-> **Note:** [In Chrome, colors may only be specified as RGB arrays](#chrome_compatibility).
+> [!NOTE]
+> [In Chrome, colors may only be specified as RGB arrays](#chrome_compatibility).
 >
 > In Firefox for Android colors can be specified using:
 >
 > - full hexadecimal notation, that is #RRGGBB only. _alpha_ and shortened syntax, as in #RGB\[A], are not supported.
-> - [Functional notation](/en-US/docs/Web/CSS/color_value#rgb_syntax_variations) (RGB arrays) for themes targeting Firefox 68.2 or later.
+> - [Functional notation](/en-US/docs/Web/CSS/color_value) (RGB arrays) for themes targeting Firefox 68.2 or later.
 >
 > Colors for Firefox for Android themes cannot be specified using color names.
 

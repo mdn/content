@@ -1,5 +1,6 @@
 ---
 title: Date.prototype.getUTCSeconds()
+short-title: getUTCSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCSeconds
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getUTCSeconds
@@ -9,7 +10,7 @@ browser-compat: javascript.builtins.Date.getUTCSeconds
 
 The **`getUTCSeconds()`** method of {{jsxref("Date")}} instances returns the seconds in the specified date according to universal time.
 
-{{InteractiveExample("JavaScript Demo: Date.getUTCSeconds()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.getUTCSeconds()", "shorter")}}
 
 ```js interactive-example
 const moonLanding = new Date("July 20, 1969, 20:18:04 UTC");

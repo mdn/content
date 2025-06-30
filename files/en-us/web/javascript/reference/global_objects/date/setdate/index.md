@@ -1,5 +1,6 @@
 ---
 title: Date.prototype.setDate()
+short-title: setDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setDate
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setDate
@@ -9,7 +10,7 @@ browser-compat: javascript.builtins.Date.setDate
 
 The **`setDate()`** method of {{jsxref("Date")}} instances changes the day of the month for this date according to local time.
 
-{{InteractiveExample("JavaScript Demo: Date.setDate()")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.setDate()")}}
 
 ```js interactive-example
 const event = new Date("August 19, 1975 23:15:30");

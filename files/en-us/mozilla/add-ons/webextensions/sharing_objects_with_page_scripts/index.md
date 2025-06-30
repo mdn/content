@@ -251,10 +251,8 @@ Reflect.defineProperty(
   ev.wrappedJSObject,
   "propC",
   {
-    get: exportFunction(() => {
-      // getters must be exported like regular functions
-      return "propC";
-    }, window),
+    // getters must be exported like regular functions
+    get: exportFunction(() => "propC", window),
   },
 );
 

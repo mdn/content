@@ -20,8 +20,8 @@ This article provides information about the changes in Firefox 75 that will affe
 
 ### HTML
 
-- The [`loading`](/en-US/docs/Web/HTML/Element/img#loading) attribute of the {{HTMLElement("img")}} element has now been implemented. This string value can be used to specify that the image should be [lazily loaded](/en-US/docs/Web/Performance/Guides/Lazy_loading), by setting its value to `lazy` ([Firefox bug 1542784](https://bugzil.la/1542784)).
-- The value of the [`<style>`](/en-US/docs/Web/HTML/Element/style) element's `type` attribute is now restricted to `text/css` only, as per the spec ([Firefox bug 1614329](https://bugzil.la/1614329)).
+- The [`loading`](/en-US/docs/Web/HTML/Reference/Elements/img#loading) attribute of the {{HTMLElement("img")}} element has now been implemented. This string value can be used to specify that the image should be [lazily loaded](/en-US/docs/Web/Performance/Guides/Lazy_loading), by setting its value to `lazy` ([Firefox bug 1542784](https://bugzil.la/1542784)).
+- The value of the [`<style>`](/en-US/docs/Web/HTML/Reference/Elements/style) element's `type` attribute is now restricted to `text/css` only, as per the spec ([Firefox bug 1614329](https://bugzil.la/1614329)).
 
 ### CSS
 
@@ -59,7 +59,6 @@ New [ARIA](/en-US/docs/Web/Accessibility/ARIA) roles and attributes are now expo
 Firefox 75 sees numerous additions to the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API):
 
 - [Implicit to/from keyframes](/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats#implicit_tofrom_keyframes) are now supported, as is automatically removing filling animations that have been replaced by other indefinitely filling animations ([Firefox bug 1618773](https://bugzil.la/1618773)). This includes enabling of support for:
-
   - [`Animation.commitStyles()`](/en-US/docs/Web/API/Animation/commitStyles)
   - [`Animation.onremove`](/en-US/docs/Web/API/Animation/remove_event)
   - [`Animation.persist()`](/en-US/docs/Web/API/Animation/persist)
@@ -78,7 +77,7 @@ _No changes._
 
 ### Security
 
-- [CSP](/en-US/docs/Web/HTTP/CSP) nonces from non-script sources, such as CSS selectors, and `.getAttribute("nonce")` calls, are now hidden. Instead, check the [`.nonce`](/en-US/docs/Web/API/HTMLElement/nonce) property to access nonces from scripts ([Firefox bug 1374612](https://bugzil.la/1374612)).
+- [CSP](/en-US/docs/Web/HTTP/Guides/CSP) nonces from non-script sources, such as CSS selectors, and `.getAttribute("nonce")` calls, are now hidden. Instead, check the [`.nonce`](/en-US/docs/Web/API/HTMLElement/nonce) property to access nonces from scripts ([Firefox bug 1374612](https://bugzil.la/1374612)).
 
 ### Plugins
 
@@ -99,7 +98,6 @@ _No changes._
 ### API changes
 
 - We've added some new settings in {{WebExtAPIRef("browserSettings")}} ([Firefox bug 1286953](https://bugzil.la/1286953)):
-
   - {{WebExtAPIRef("browserSettings.zoomSiteSpecific")}} to control whether zooming is on a per-site or per-tab basis
   - {{WebExtAPIRef("browserSettings.zoomFullPage")}} to control whether zoom is applied to the entire page or to text only.
 

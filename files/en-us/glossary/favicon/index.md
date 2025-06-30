@@ -16,9 +16,9 @@ They are used to improve user experience and enforce brand consistency. When a f
 
 ## See also
 
-- [Favicon](https://en.wikipedia.org/wiki/Favicon) on Wikipedia
-- The [link rel="icon"](/en-US/docs/Web/HTML/Attributes/rel#icon) element documentation, used to add a favicon to a page.
-- Tools
-
+- Using [`<link rel="icon">`](/en-US/docs/Web/HTML/Reference/Attributes/rel#icon) to add a favicon to a page
+- [Adding custom icons to your site](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#adding_custom_icons_to_your_site)
+- Tools:
   - [Free favicon generator](https://favicon.io/)
   - [Favicon.ico and & app icon generator](https://www.favicon-generator.org/)
+- [Favicon](https://en.wikipedia.org/wiki/Favicon) on Wikipedia

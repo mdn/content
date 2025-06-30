@@ -1,5 +1,6 @@
 ---
 title: "ARIA: tree role"
+short-title: tree
 slug: Web/Accessibility/ARIA/Reference/Roles/tree_role
 page-type: aria-role
 spec-urls:
@@ -236,5 +237,3 @@ The alternative multi-selection model is a modifier key model in which moving fo
 ## Specifications
 
 {{Specifications}}
-
-## See also

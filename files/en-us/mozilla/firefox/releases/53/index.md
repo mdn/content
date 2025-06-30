@@ -59,7 +59,7 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 
 ### DOM
 
-- The {{domxref("HTMLAnchorElement/pathname", "pathname")}} and {{domxref("HTMLAnchorElement/search", "search")}} properties of links (like for {{HTMLElement("a")}} and {{HTMLELement("link")}} elements' interfaces previously returned the wrong parts of the URL. For example, for a URL of `http://z.com/x?a=true&b=false`, `pathname` would return "`/x?a=true&b=false"` and `search` would return "", rather than "`/x`" and "`?a=true&b=false"` respectively. This has now been fixed ([Firefox bug 1310483](https://bugzil.la/1310483)).
+- The {{domxref("HTMLAnchorElement/pathname", "pathname")}} and {{domxref("HTMLAnchorElement/search", "search")}} properties of links (like for {{HTMLElement("a")}} and {{HTMLELement("link")}} elements' interfaces previously returned the wrong parts of the URL. For example, for a URL of `http://z.com/x?a=true&b=false`, `pathname` would return `"/x?a=true&b=false"` and `search` would return `""`, rather than `"/x"` and `"?a=true&b=false"` respectively. This has now been fixed ([Firefox bug 1310483](https://bugzil.la/1310483)).
 - The {{domxref("URLSearchParams.URLSearchParams", "URLSearchParams()")}} constructor now accepts a string or sequence of strings as an init object ([Firefox bug 1330678](https://bugzil.la/1330678)).
 - The {{domxref("Selection.setBaseAndExtent()")}} method of the [Selection API](/en-US/docs/Web/API/Selection) is now implemented (see [Firefox bug 1321623](https://bugzil.la/1321623)).
 - The ["fakepath"](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly) addition to `file` type {{htmlelement("input")}} `values` has been implemented in Gecko, giving it parity with other browsers (see [Firefox bug 1274596](https://bugzil.la/1274596)).
@@ -105,7 +105,6 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 ### HTTP/Networking
 
 - Gecko now has a pref available in `about:config` to allow users to set their default {{HTTPHeader("Referrer-Policy")}} — `network.http.referer.userControlPolicy` ([Firefox bug 1304623](https://bugzil.la/1304623)). Possible values are:
-
   - 0 — `no-referrer`
   - 1 — `same-origin`
   - 2 — `strict-origin-when-cross-origin`

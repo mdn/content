@@ -1,5 +1,6 @@
 ---
 title: SharedArrayBuffer.prototype.slice()
+short-title: slice()
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.SharedArrayBuffer.slice
@@ -9,7 +10,7 @@ browser-compat: javascript.builtins.SharedArrayBuffer.slice
 
 The **`slice()`** method of {{jsxref("SharedArrayBuffer")}} instances returns a new `SharedArrayBuffer` whose contents are a copy of this `SharedArrayBuffer`'s bytes from `start`, inclusive, up to `end`, exclusive. If either `start` or `end` is negative, it refers to an index from the end of the array, as opposed to from the beginning.
 
-{{InteractiveExample("JavaScript Demo: SharedArrayBuffer.slice()")}}
+{{InteractiveExample("JavaScript Demo: SharedArrayBuffer.prototype.slice()")}}
 
 ```js interactive-example
 // Create a SharedArrayBuffer with a size in bytes
@@ -43,7 +44,7 @@ slice(start, end)
   - : Zero-based index at which to end extraction, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion). `slice()` extracts up to but not including `end`.
     - Negative index counts back from the end of the buffer — if `-buffer.length <= end < 0`, `end + buffer.length` is used.
     - If `end < -buffer.length`, `0` is used.
-    - If `end >= buffer.length` or `end` is omitted, `buffer.length` is used, causing all elements until the end to be extracted.
+    - If `end >= buffer.length` or `end` is omitted or `undefined`, `buffer.length` is used, causing all elements until the end to be extracted.
     - If `end` implies a position before or at the position that `start` implies, an empty buffer is returned.
 
 ### Return value

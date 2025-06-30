@@ -55,7 +55,7 @@ transform-origin: bottom right 60px;
 
 @keyframes rotate3d {
   from {
-    transform: rotate3d(0);
+    transform: rotate3d(0, 0, 0, 0);
   }
 
   to {
@@ -206,23 +206,20 @@ transform-origin: revert-layer;
 transform-origin: unset;
 ```
 
-The `transform-origin` property may be specified using one, two, or three values, where each value represents an offset. Offsets that are not explicitly defined are reset to their corresponding [initial values](/en-US/docs/Web/CSS/CSS_cascade/initial_value).
+The `transform-origin` property may be specified using one, two, or three values, where each value represents an offset. Offsets that are not explicitly defined are reset to their corresponding [initial values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value).
 
 If a single {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} value is defined, it represents the horizontal offset.
 
 If two or more values are defined and either no value is a keyword, or the only used keyword is `center`, then the first value represents the horizontal offset and the second represents the vertical offset.
 
 - One-value syntax:
-
   - The value must be a {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}}, or one of the keywords `left`, `center`, `right`, `top`, and `bottom`.
 
 - Two-value syntax:
-
   - One value must be a {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}}, or one of the keywords `left`, `center`, and `right`.
   - The other value must be a {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}}, or one of the keywords `top`, `center`, and `bottom`.
 
 - Three-value syntax:
-
   - The first two values are the same as for the two-value syntax.
   - The third value must be a {{cssxref("&lt;length&gt;")}}. It always represents the Z offset.
 
@@ -256,7 +253,7 @@ The keywords are convenience shorthands and match the following {{cssxref("&lt;p
 {{CSSInfo}}
 
 > [!NOTE]
-> The initial value of `transform-origin` is `0 0` for all SVG elements except for root `<svg>` elements and `<svg>` elements that are a direct child of a [foreignObject](/en-US/docs/Web/SVG/Element/foreignObject), and whose `transform-origin` is `50% 50%`, like other CSS elements. See the [SVG transform-origin](/en-US/docs/Web/SVG/Attribute/transform-origin) attribute for more information.
+> The initial value of `transform-origin` is `0 0` for all SVG elements except for root `<svg>` elements and `<svg>` elements that are a direct child of a [foreignObject](/en-US/docs/Web/SVG/Reference/Element/foreignObject), and whose `transform-origin` is `50% 50%`, like other CSS elements. See the [SVG transform-origin](/en-US/docs/Web/SVG/Reference/Attribute/transform-origin) attribute for more information.
 
 ## Formal syntax
 

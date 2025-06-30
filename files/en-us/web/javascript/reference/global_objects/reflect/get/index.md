@@ -1,5 +1,6 @@
 ---
 title: Reflect.get()
+short-title: get()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/get
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.get
@@ -80,7 +81,7 @@ const obj2 = new Proxy(
   { p: 1 },
   {
     get(t, k, r) {
-      return k + "bar";
+      return `${k}bar`;
     },
   },
 );
@@ -91,7 +92,7 @@ const obj3 = new Proxy(
   { p: 1, foo: 2 },
   {
     get(t, prop, receiver) {
-      return receiver[prop] + "bar";
+      return `${receiver[prop]}bar`;
     },
   },
 );

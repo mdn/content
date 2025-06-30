@@ -57,7 +57,7 @@ Listen to this event using {{domxref("EventTarget/addEventListener()", "addEvent
   - : Fired on a payment app's service worker to check whether it is ready to handle a payment. Specifically, it is fired when the merchant website calls the {{domxref("PaymentRequest.PaymentRequest", "PaymentRequest()")}} constructor.
 - {{domxref("ServiceWorkerGlobalScope/contentdelete_event", "contentdelete")}} {{Experimental_Inline}}
   - : Occurs when an item is removed from the {{domxref("ContentIndex")}}.
-- {{domxref("ServiceWorkerGlobalScope/cookiechange_event", "cookiechange")}} {{Experimental_Inline}}
+- {{domxref("ServiceWorkerGlobalScope/cookiechange_event", "cookiechange")}}
   - : Fired when a cookie change has occurred that matches the service worker's cookie change subscription list.
 - {{domxref("ServiceWorkerGlobalScope/fetch_event", "fetch")}}
   - : Occurs when a {{domxref("WorkerGlobalScope/fetch", "fetch()")}} is called.
@@ -80,7 +80,7 @@ Listen to this event using {{domxref("EventTarget/addEventListener()", "addEvent
 - {{domxref("ServiceWorkerGlobalScope/push_event", "push")}}
   - : Occurs when a server push notification is received.
 - {{domxref("ServiceWorkerGlobalScope/pushsubscriptionchange_event", "pushsubscriptionchange")}}
-  - : Occurs when a push subscription has been invalidated, or is about to be invalidated (e.g. when a push service sets an expiration time).
+  - : Occurs when a push subscription has been invalidated, or is about to be invalidated (e.g., when a push service sets an expiration time).
 
 ## Examples
 

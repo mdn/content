@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainYearMonth.compare()
+short-title: compare()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth/compare
 page-type: javascript-static-method
 status:
@@ -11,7 +12,8 @@ browser-compat: javascript.builtins.Temporal.PlainYearMonth.compare
 
 The **`Temporal.PlainYearMonth.compare()`** static method returns a number (-1, 0, or 1) indicating whether the first year-month comes before, is the same as, or comes after the second year-month. It is equivalent to comparing their underlying ISO 8601 dates. Two year-months from different calendars may be considered equal if they start on the same ISO date.
 
-> **Note:** `PlainYearMonth` objects keep track of a reference ISO day, which is also used in the comparison. This day is automatically set when using the {{jsxref("Temporal/PlainYearMonth/from", "Temporal.PlainYearMonth.from()")}} method, but can be set manually using the {{jsxref("Temporal/PlainYearMonth/PlainYearMonth", "Temporal.PlainYearMonth()")}} constructor, causing two equivalent year-months to be considered different if they have different reference days. For this reason, you should avoid using the constructor directly and prefer the `from()` method.
+> [!NOTE]
+> `PlainYearMonth` objects keep track of a reference ISO day, which is also used in the comparison. This day is automatically set when using the {{jsxref("Temporal/PlainYearMonth/from", "Temporal.PlainYearMonth.from()")}} method, but can be set manually using the {{jsxref("Temporal/PlainYearMonth/PlainYearMonth", "Temporal.PlainYearMonth()")}} constructor, causing two equivalent year-months to be considered different if they have different reference days. For this reason, you should avoid using the constructor directly and prefer the `from()` method.
 
 ## Syntax
 
@@ -28,7 +30,7 @@ Temporal.PlainYearMonth.compare(yearMonth1, yearMonth2)
 
 ### Return value
 
-Returns `-1` if `yearMonth1` comes before `yearMonth2`, `0` if they are the same, and `1` if `yearMonth2` comes after. They are compared by their underlying date values (usually the first day of the month), ignoring their calendars.
+Returns `-1` if `yearMonth1` comes before `yearMonth2`, `0` if they are the same, and `1` if `yearMonth1` comes after `yearMonth2`. They are compared by their underlying date values (usually the first day of the month), ignoring their calendars.
 
 ## Examples
 
@@ -50,7 +52,7 @@ const ym1 = Temporal.PlainYearMonth.from({ year: 2021, month: 8 });
 const ym2 = Temporal.PlainYearMonth.from({
   year: 2021,
   month: 8,
-  calendar: "islamic",
+  calendar: "islamic-umalqura",
 });
 const ym3 = Temporal.PlainYearMonth.from({
   year: 2021,
@@ -58,7 +60,7 @@ const ym3 = Temporal.PlainYearMonth.from({
   calendar: "hebrew",
 });
 console.log(ym1.toString()); // "2021-08"
-console.log(ym2.toString()); // "2582-12-18[u-ca=islamic]"
+console.log(ym2.toString()); // "2582-12-17[u-ca=islamic-umalqura]"
 console.log(ym3.toString()); // "-001739-04-06[u-ca=hebrew]"
 console.log(Temporal.PlainYearMonth.compare(ym1, ym2)); // -1
 console.log(Temporal.PlainYearMonth.compare(ym1, ym3)); // 1
@@ -74,14 +76,14 @@ const months = [
   Temporal.PlainYearMonth.from({
     year: 2021,
     month: 8,
-    calendar: "islamic",
+    calendar: "islamic-umalqura",
   }),
   Temporal.PlainYearMonth.from({ year: 2021, month: 8, calendar: "hebrew" }),
 ];
 
 months.sort(Temporal.PlainYearMonth.compare);
 console.log(months.map((d) => d.toString()));
-// [ "-001739-04-06[u-ca=hebrew]", "2021-08", "2582-12-18[u-ca=islamic]" ]
+// [ "-001739-04-06[u-ca=hebrew]", "2021-08", "2582-12-17[u-ca=islamic-umalqura]" ]
 ```
 
 ## Specifications

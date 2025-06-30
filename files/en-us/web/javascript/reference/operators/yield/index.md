@@ -9,7 +9,7 @@ browser-compat: javascript.operators.yield
 
 The **`yield`** operator is used to pause and resume a [generator function](/en-US/docs/Web/JavaScript/Reference/Statements/function*).
 
-{{InteractiveExample("JavaScript Demo: Expressions - yield", "taller")}}
+{{InteractiveExample("JavaScript Demo: yield operator", "taller")}}
 
 ```js interactive-example
 function* foo(index) {
@@ -73,8 +73,8 @@ The following code is the declaration of an example generator function.
 ```js
 function* countAppleSales() {
   const saleList = [3, 7, 5];
-  for (let i = 0; i < saleList.length; i++) {
-    yield saleList[i];
+  for (const sale of saleList) {
+    yield sale;
   }
 }
 ```

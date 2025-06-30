@@ -12,7 +12,7 @@ There's no strict right or wrong way when writing creative code. As long as you 
 
 There are four main ways to load sound with the Web Audio API and it can be a little confusing as to which one you should use.
 
-When working with files, you are looking at either grabbing the file from an {{domxref("HTMLMediaElement")}} (i.e. an {{htmlelement("audio")}} or {{htmlelement("video")}} element), or you're looking to fetch the file and decode it into a buffer. Both are legitimate ways of working, however, it's more common to use the former when you are working with full-length tracks, and the latter when working with shorter, more sample-like tracks.
+When working with files, you are looking at either grabbing the file from an {{domxref("HTMLMediaElement")}} (i.e., an {{htmlelement("audio")}} or {{htmlelement("video")}} element), or you're looking to fetch the file and decode it into a buffer. Both are legitimate ways of working, however, it's more common to use the former when you are working with full-length tracks, and the latter when working with shorter, more sample-like tracks.
 
 Media elements have streaming support out of the box. The audio will start playing when the browser determines it can load the rest of the file before playing finishes. You can see an example of how to use this with the Web Audio API in the [Using the Web Audio API tutorial](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API).
 
@@ -28,7 +28,7 @@ The Web Audio API specification is constantly evolving and like most things on t
 
 There's the [`standardized-audio-context`](https://github.com/chrisguttandin/standardized-audio-context) npm package, which creates API functionality consistently across browsers, filling holes as they are found. It's constantly in development and endeavors to keep up with the current specification.
 
-There is also the option of libraries, of which there are a few depending on your use case. For a good all-rounder, [howler.js](https://howlerjs.com/) is a good choice. It has cross-browser support and, provides a useful subset of functionality. Although it doesn't harness the full gamut of filters and other effects the Web Audio API comes with, you can do most of what you'd want to do.
+There is also the option of libraries, of which there are a few depending on your use case. For a good all-rounder, [howler.js](https://howlerjs.com/) is a good choice. It has cross-browser support and provides a useful subset of functionality. Although it doesn't harness the full gamut of filters and other effects the Web Audio API comes with, you can do most of what you'd want to do.
 
 If you are looking for sound creation or a more instrument-based option, [tone.js](https://tonejs.github.io/) is a great library. It provides advanced scheduling capabilities, synths, and effects, and intuitive musical abstractions built on top of the Web Audio API.
 
@@ -82,9 +82,9 @@ You might instead be working with an {{domxref("OfflineAudioContext")}}, in whic
 
 If your website or application contains sound, you should allow the user control over it, otherwise again, it will become annoying. This can be achieved by play/stop and volume/mute controls. The [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API) tutorial goes over how to do this.
 
-If you have buttons that switch audio on and off, using the ARIA [`role="switch"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role) attribute on them is a good option for signalling to assistive technology what the button's exact purpose is, and therefore making the app more accessible. There's a [demo of how to use it here](https://codepen.io/Wilto/pen/ZoGoQm?editors=1100).
+Some controls you may find useful are: {{HTMLElement("button")}} elements for play/pause, {{HTMLElement("select")}} elements for selecting options like playback speed, [`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) elements for toggling mute, and [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range) elements for volume control and inputting other number values.
 
-As you work with a lot of changing values within the Web Audio API and will want to provide users with control over these, the [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range) is often a good choice of control to use. It's a good option as you can set minimum and maximum values, as well as increments with the [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute.
+All the common considerations about form accessibility apply. When using {{HTMLElement("button")}} elements, you should ensure that they have a clear [label](/en-US/docs/Web/HTML/Reference/Elements/label). This will help screen readers and other assistive technologies to understand the purpose of the button. If you have buttons that switch audio on and off, using the ARIA [`role="switch"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role) attribute on them is a good option for signalling to assistive technology what the button's exact purpose is, and therefore making the app more accessible.
 
 ## Setting AudioParam values
 

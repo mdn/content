@@ -17,8 +17,6 @@ Once an eligible query container has been selected for an element, each containe
 
 ## Syntax
 
-The `@container` at-rule has the following syntax:
-
 ```plain
 @container <container-condition># {
   <stylesheet>
@@ -75,9 +73,7 @@ For example:
 ### Values
 
 - `<container-condition>`
-
   - : An optional `<container-name>` and a `<container-query>`. Styles defined in the `<stylesheet>` are applied if the condition is true.
-
     - `<container-name>`
       - : Optional. The name of the container that the styles will be applied to when the query evaluates to true, specified as an {{cssxref("ident")}}.
     - `<container-query>`
@@ -146,29 +142,30 @@ The `<container-condition>` queries include [size](#size_container_descriptors) 
 The `<container-condition>` can include one or more boolean size queries, each within a set of parentheses. A size query includes a size descriptor, a value, and — depending on the descriptor — a comparison operator. The syntax for including multiple conditions is the same as for [`@media`](/en-US/docs/Web/CSS/@media) size feature queries.
 
 ```css
-@container (min-width: 400px) { ... }
-@container (orientation: landscape) and (width > 400px) { ... }
-@container (15em <= block-size <= 30em) { ... }
+@container (min-width: 400px) {
+  /* … */
+}
+@container (orientation: landscape) and (width > 400px) {
+  /* … */
+}
+@container (15em <= block-size <= 30em) {
+  /* … */
+}
 ```
 
 - `aspect-ratio`
-
   - : The {{cssxref("aspect-ratio")}} of the container calculated as the width to the height of the container expressed as a {{cssxref("ratio")}} value.
 
 - `block-size`
-
   - : The {{cssxref("block-size")}} of the container expressed as a {{cssxref("length")}} value.
 
 - `height`
-
   - : The height of the container expressed as a {{cssxref("length")}} value.
 
 - `inline-size`
-
   - : The {{cssxref("inline-size")}} of the container expressed as a {{cssxref("length")}} value.
 
 - `orientation`
-
   - : The [orientation](/en-US/docs/Web/CSS/@media/orientation) of the container, either `landscape` or `portrait`.
 
 - `width`
@@ -179,17 +176,21 @@ The `<container-condition>` can include one or more boolean size queries, each w
 Scroll-state container descriptors are specified inside the `<container-condition>` within a set of parentheses following the `scroll-state` keyword, for example:
 
 ```css
-@container scroll-state(scrollable: top) { ... }
-@container scroll-state(stuck: inline-end) { ... }
-@container scroll-state(snapped: both) { ... }
+@container scroll-state(scrollable: top) {
+  /* … */
+}
+@container scroll-state(stuck: inline-end) {
+  /* … */
+}
+@container scroll-state(snapped: both) {
+  /* … */
+}
 ```
 
 Supported keywords for scroll-state container descriptors include physical and {{glossary("flow relative values")}}
 
 - `scrollable`
-
   - : Queries whether the container can be scrolled in the given direction via user-initiated scrolling, such as by dragging the scrollbar or using a trackpad gesture. In other words, is there overflowing content in the given direction that can be scrolled to? Valid `scrollable` values include the following keywords:
-
     - `none`
       - : The container is not a {{glossary("scroll container")}} or otherwise cannot be scrolled in any direction.
     - `top`
@@ -222,13 +223,13 @@ Supported keywords for scroll-state container descriptors include physical and {
     To evaluate whether a container is scrollable, without being concerned about the direction, use the `none` value with the `not` operator:
 
     ```css
-    @container not scroll-state(scrollable: none) { ... }
+    @container not scroll-state(scrollable: none) {
+      /* … */
+    }
     ```
 
 - `snapped`
-
   - : Queries whether the container is, or will be, snapped to a [scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) container ancestor along the given axis. Valid `snapped` values include the following keywords:
-
     - `none`
       - : The container is not a scroll [snap target](/en-US/docs/Glossary/Scroll_snap#snap_target) for its ancestor scroll container. When implementing a `snapped: none` query, containers that _are_ snap targets for the scroll container will _not_ have the `@container` styles applied, whereas non-snap targets _will_ have the styles applied.
     - `x`
@@ -242,20 +243,20 @@ Supported keywords for scroll-state container descriptors include physical and {
     - `both`
       - : The container is both a horizontal and vertical scroll snap target for its ancestor scroll container and is snapping to its ancestor in both directions. The container won't match if it is only snapping to its ancestor along the horizontal _or_ vertical axis. It needs to be both.
 
-    To evaluate a container with a non-`none` `snapped` scroll-state query, it must be a container with a scroll container ancestor having a {{cssxref("scroll-snap-type")}} value other than `none`. A `snapped: none` query will will match even when there is no scroll container ancestor.
+    To evaluate a container with a non-`none` `snapped` scroll-state query, it must be a container with a scroll container ancestor having a {{cssxref("scroll-snap-type")}} value other than `none`. A `snapped: none` query will match even when there is no scroll container ancestor.
 
     Evaluations occur when [`scrollsnapchanging`](/en-US/docs/Web/API/Element/scrollsnapchanging_event) events fire on the scroll snap container. If the test passes, the rules inside the `@container` block are applied to descendants of the container.
 
     To evaluate whether a container is a snap target, without being concerned about the direction, use the `none` value with the `not` operator:
 
     ```css
-    @container not scroll-state(snapped: none) { ... }
+    @container not scroll-state(snapped: none) {
+      /* … */
+    }
     ```
 
 - `stuck`
-
   - : Queries whether a container with a {{cssxref("position")}} value of [`sticky`](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning#sticky_positioning) is stuck to an edge of its scrolling container ancestor. Valid `stuck` values include the following keywords:
-
     - `none`
       - : The container is not stuck to any edges of its container. Note that `none` queries will match even if the container does not have `position: sticky` set on it.
     - `top`
@@ -280,19 +281,25 @@ Supported keywords for scroll-state container descriptors include physical and {
     It is possible for two values from opposite axes to match at the same time:
 
     ```css
-    @container scroll-state((stuck: top) and (stuck: left)) { ... }
+    @container scroll-state((stuck: top) and (stuck: left)) {
+      /* … */
+    }
     ```
 
     However, two values from opposite edges will never match at the same time:
 
     ```css
-    @container scroll-state((stuck: left) and (stuck: right)) { ... }
+    @container scroll-state((stuck: left) and (stuck: right)) {
+      /* … */
+    }
     ```
 
     To evaluate whether a container is stuck, without being concerned about the direction, use the `none` value with the `not` operator:
 
     ```css
-    @container not scroll-state(stuck: none) { ... }
+    @container not scroll-state(stuck: none) {
+      /* … */
+    }
     ```
 
 ## Formal syntax
@@ -320,11 +327,11 @@ You can then use the `@container` at-rule to apply styles to the element with th
 ```js hidden
 const post = document.querySelector(".post");
 const span = document.createElement("span");
-span.textContent = ".post width: " + post.clientWidth + "px";
+span.textContent = `.post width: ${post.clientWidth}px`;
 post.parentNode.insertBefore(span, post.nextSibling);
 // update on resize
 window.addEventListener("resize", () => {
-  span.textContent = ".post width: " + post.clientWidth + "px";
+  span.textContent = `.post width: ${post.clientWidth}px`;
 });
 ```
 
@@ -437,7 +444,7 @@ A style feature without a value evaluates to true if the computed value is diffe
 
 If the `<style-feature>` passed as the `style()` function's argument is a declaration, the style query evaluates to true if the declaration's value is the same as the computed value of that property for the container being queried. Otherwise, it resolves to false.
 
-The following container query checks if the {{cssxref("computed_value")}} of the container element's `--accent-color` is `blue`:
+The following container query checks if the [computed value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value) of the container element's `--accent-color` is `blue`:
 
 ```css
 @container style(--accent-color: blue) {

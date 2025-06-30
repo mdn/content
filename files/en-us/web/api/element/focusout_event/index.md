@@ -18,9 +18,12 @@ The `focusout` event is not cancelable.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}.
 
-```js
-addEventListener("focusout", (event) => {});
+```js-nolint
+addEventListener("focusout", (event) => { })
 ```
+
+> [!NOTE]
+> There is no `onfocusout` event handler property for this event.
 
 ## Event type
 

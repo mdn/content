@@ -42,22 +42,11 @@ The `<filter-function>` data type is specified using one of the filter functions
 
 ### Filter function comparison
 
-This example provides a simple graphic, along with a select menu to allow you to choose between the different types of filter function, and a slider to allow you to vary the values used inside the filter function. Updating the controls updates the filter effect in real time, allowing you to investigate the effects of different filters.
+This example provides a graphic, a select menu to allow you to choose between the different types of filter function, and a slider to allow you to vary the values used inside the filter function. Updating the controls updates the filter effect in real time, allowing you to investigate the effects of different filters.
 
-```css
-div {
-  width: 100%;
-  height: 512px;
-  background: url(fx-nightly-512.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  filter: <filter-function>(<value>);
-}
-```
+The dropdown selects the function name, and the slider sets the parameter value for that function. For `drop-shadow`, the value is used for both the horizontal and vertical offsets, and the radius is set to half the value.
 
-Where the `<filter-function>` is the filter you select from the drop down and the `<value>` is the values you set with the slider:
-
-```html live-sample___filter-functions
+```html hidden live-sample___filter-functions
 <div></div>
 <ul>
   <li>
@@ -82,11 +71,11 @@ Where the `<filter-function>` is the filter you select from the drop down and th
 </ul>
 ```
 
-```css live-sample___filter-functions
+```css hidden live-sample___filter-functions
 div {
   width: 100%;
   height: 512px;
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/fx-nightly-512.png);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/fx-nightly-512.png");
   background-repeat: no-repeat;
   background-position: center center;
 }

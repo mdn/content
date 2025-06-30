@@ -1,5 +1,6 @@
 ---
-title: aria-rowspan
+title: "ARIA: aria-rowspan attribute"
+short-title: aria-rowspan
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-rowspan
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-rowspan
@@ -48,6 +49,6 @@ Inherited into roles:
 
 ## See also
 
-- The [`rowspan`](/en-US/docs/Web/HTML/Element/td#rowspan) attribute on {{HTMLElement('td')}}
+- The [`rowspan`](/en-US/docs/Web/HTML/Reference/Elements/td#rowspan) attribute on {{HTMLElement('td')}}
 - [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindex)
 - [`aria-colspan`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colspan)

@@ -24,13 +24,10 @@ let getting = browser.cookies.getAll(
 ### Parameters
 
 - `details`
-
   - : An `object` containing details that are used to match cookies to retrieve. Included properties are as follows (see [Cookie type](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies/Cookie#type) for more information on these):
-
     - `domain` {{optional_inline}}
       - : A `string` representing a domain that cookies must be associated with (they can be associated either with this exact domain or one of its subdomains).
     - `firstPartyDomain` {{optional_inline}}
-
       - : A `string` representing the first-party domain with which the cookie to retrieve is associated.
 
         This property must be supplied if the browser has first-party isolation enabled. If you pass `null`, cookies with any value for `firstPartyDomain` and cookies that do not have `firstPartyDomain` set are included in the results. See [First-party isolation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation).
@@ -38,15 +35,12 @@ let getting = browser.cookies.getAll(
     - `name` {{optional_inline}}
       - : A `string` representing a name that the cookies must have.
     - `partitionKey` {{optional_inline}}
-
       - : An `object` defining which [storage partitions](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#storage_partitioning) to return cookies from:
-
         - If omitted, only cookies from unpartitioned storage are returned.
-        - If included without `topLevelSite', all cookies from partitioned and unpartitioned storage are returned.
-        - If included with the specified `topLevelSite', cookies from the specified partition storage are returned.
+        - If included without `topLevelSite`, all cookies from partitioned and unpartitioned storage are returned.
+        - If included with the specified `topLevelSite`, cookies from the specified partition storage are returned.
 
         This object contains:
-
         - `topLevelSite` {{optional_inline}}
           - : A `string` representing the first-party URL of the top-level site storage partition containing the cookies.
 
@@ -63,7 +57,7 @@ let getting = browser.cookies.getAll(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with an array of `{{WebExtAPIRef('cookies.Cookie')}}` objects that match the properties given in the `details` parameter. Only unexpired cookies are returned. The cookies returned are sorted by path length, longest to shortest. If multiple cookies have the same path length, those with the earliest creation time are first.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with an array of {{WebExtAPIRef('cookies.Cookie')}} objects that match the properties given in the `details` parameter. Only unexpired cookies are returned. The cookies returned are sorted by path length, longest to shortest. If multiple cookies have the same path length, those with the earliest creation time are first.
 
 > [!NOTE]
 > Before Firefox 133, Firefox returned the cookie sorted by creation time, with the earliest creation time first.

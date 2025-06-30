@@ -1,5 +1,6 @@
 ---
 title: Atomics.notify()
+short-title: notify()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/notify
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.notify
@@ -31,13 +32,12 @@ Atomics.notify(typedArray, index, count)
 
 ### Return value
 
-- Returns the number of woken up agents.
-- Returns `0`, if a non-shared {{jsxref("ArrayBuffer")}} object is used.
+Returns the number of woken up agents, or `0` if `typedArray` is a view on a non-shared {{jsxref("ArrayBuffer")}}.
 
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if `typedArray` is not an {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} that views a {{jsxref("SharedArrayBuffer")}}.
+  - : Thrown if `typedArray` is not an {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}}.
 - {{jsxref("RangeError")}}
   - : Thrown if `index` is out of bounds in the `typedArray`.
 

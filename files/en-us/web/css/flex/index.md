@@ -102,22 +102,18 @@ flex: unset;
 The `flex` property may be specified using one, two, or three values.
 
 - **One-value syntax:** the value must be one of:
-
   - a valid value for {{cssxref("&lt;flex-grow&gt;")}}: then, in all the browsers, the shorthand expands to `flex: <flex-grow> 1 0%`. However the specification says it should expand to `flex: <flex-grow> 1 0`.
   - a valid value for {{cssxref("&lt;flex-basis&gt;")}}: then the shorthand expands to `flex: 1 1 <flex-basis>`.
   - the keyword `none` or one of the global keywords.
 
 - **Two-value syntax:**
-
   - The first value must be a valid value for {{cssxref("flex-grow")}}.
 
   - The second value must be one of:
-
     - a valid value for {{cssxref("flex-shrink")}}: then, in all the browsers, the shorthand expands to `flex: <flex-grow> <flex-shrink> 0%`.
     - a valid value for {{cssxref("flex-basis")}}: then the shorthand expands to `flex: <flex-grow> 1 <flex-basis>`.
 
 - **Three-value syntax:** the values must be in the following order:
-
   1. a valid value for {{cssxref("flex-grow")}}.
   2. a valid value for {{cssxref("flex-shrink")}}.
   3. a valid value for {{cssxref("flex-basis")}}.
@@ -262,7 +258,7 @@ This example shows how a flex item with `flex: auto` grows to absorb any free sp
 ```css hidden
 body * {
   padding: 1rem;
-  text-select: none;
+  user-select: none;
   box-sizing: border-box;
   font-family: Consolas, Arial, sans-serif;
 }
@@ -301,8 +297,8 @@ flexAutoItem.addEventListener("click", () => {
 
 The flex container contains two flex items:
 
-- The `#flex-auto` item has a `flex` value of [`auto`](#auto). The `auto` value expands to `1 1 auto`, i.e. the item is allowed to expand.
-- The `#default` item has no `flex` value set so it defaults to the [`initial`](#initial) value. The `initial` value expands to `0 1 auto`, i.e. the item is not allowed to expand.
+- The `#flex-auto` item has a `flex` value of `auto`. The `auto` value expands to `1 1 auto`, i.e., the item is allowed to expand.
+- The `#default` item has no `flex` value set so it defaults to the `initial` value. The `initial` value expands to `0 1 auto`, i.e., the item is not allowed to expand.
 
 The `#default` item takes up as much space as its width requires, but does not expand to take up any more space. All the remaining space is taken up by the `#flex-auto` item.
 

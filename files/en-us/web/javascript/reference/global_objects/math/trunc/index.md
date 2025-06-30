@@ -1,5 +1,6 @@
 ---
 title: Math.trunc()
+short-title: trunc()
 slug: Web/JavaScript/Reference/Global_Objects/Math/trunc
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.trunc

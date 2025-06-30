@@ -30,17 +30,13 @@ browser.sidebarAction.setPanel(
 ### Parameters
 
 - `details`
-
   - : `object`. An object with the following properties:
-
     - `panel`
-
       - : `string` or `null`. The panel to load into the sidebar, specified as a URL pointing to an HTML document, or `null`, or an empty string.
 
-        This can point to a file packaged within the extension (for example, created using {{WebExtAPIRef("runtime.getURL")}}), or a remote document (e.g. `https://example.org/`). It must be a valid URL.
+        This can point to a file packaged within the extension (for example, created using {{WebExtAPIRef("runtime.getURL")}}), or a remote document (e.g., `https://example.org/`). It must be a valid URL.
 
         If `panel` is `null` or `""`, then a previously set panel will be removed, so that:
-
         - If `tabId` is specified, and the tab has a tab-specific panel set, then the tab will inherit the panel from the window it belongs to.
         - If `windowId` is specified, and the window has a window-specific panel set, then the window will inherit the global panel.
         - Otherwise, the global panel will be reset to the manifest panel.

@@ -33,22 +33,17 @@ getAutoplayPolicy(context)
 The method must be called with one (and only one) of the following three parameters:
 
 - `type` {{optional_inline}}
-
   - : A string indicating the media playing _feature_ for which the broad autoplay policy is required.
 
     The supported values are:
-
     - `mediaelement`
-
       - : Get the broad autoplay policy for media elements in the document.
         Media elements are [`HTMLMediaElement`](/en-US/docs/Web/API/HTMLMediaElement) derived objects such as [`HTMLAudioElement`](/en-US/docs/Web/API/HTMLAudioElement) and [`HTMLVideoElement`](/en-US/docs/Web/API/HTMLVideoElement), and their corresponding tags {{HTMLElement("audio")}} and {{HTMLElement("video")}}.
 
     - `audiocontext`
-
       - : Get the broad autoplay policy for [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) players in the document.
 
 - `element` {{optional_inline}}
-
   - : A specific media element.
     This must be an [`HTMLMediaElement`](/en-US/docs/Web/API/HTMLMediaElement), including derived elements such as [`HTMLVideoElement`](/en-US/docs/Web/API/HTMLVideoElement) and [`HTMLAudioElement`](/en-US/docs/Web/API/HTMLAudioElement).
 
@@ -81,7 +76,7 @@ Once the user has interacted with the page/site, on some browsers individual ite
 ## Description
 
 "Autoplay" refers to any feature that causes content to begin to play without the user specifically requesting that playback begin.
-This includes the `autoplay` attribute in the HTML [`<video>`](/en-US/docs/Web/HTML/Element/video#autoplay) and [`<audio>`](/en-US/docs/Web/HTML/Element/audio#autoplay) elements, and using JavaScript code to start playback without any user interaction.
+This includes the `autoplay` attribute in the HTML [`<video>`](/en-US/docs/Web/HTML/Reference/Elements/video#autoplay) and [`<audio>`](/en-US/docs/Web/HTML/Reference/Elements/audio#autoplay) elements, and using JavaScript code to start playback without any user interaction.
 
 User agents commonly block autoplay, or only allow inaudible content to autoplay, because unexpected sounds when a page first loads can result in a jarring and unpleasant user experience.
 The mechanisms used to determine whether content can autoplay or not, or only play for inaudible content, differ between user agents.
@@ -160,7 +155,7 @@ If the autoplay policy is "allowed-muted", the video will be muted to allow it t
 
 #### HTML
 
-The HTML below has a `div` element that is used as a reporting log, and also displays a [`<video>`](/en-US/docs/Web/HTML/Element/video) that has the [`autoplay`](/en-US/docs/Web/API/HTMLMediaElement/autoplay) attribute.
+The HTML below has a `div` element that is used as a reporting log, and also displays a [`<video>`](/en-US/docs/Web/HTML/Reference/Elements/video) that has the [`autoplay`](/en-US/docs/Web/API/HTMLMediaElement/autoplay) attribute.
 This should not be muted by default, and should play automatically if autoplay is not blocked.
 
 ```html
@@ -233,7 +228,7 @@ If the autoplay policy is "allowed-muted", the video will be muted to allow it t
 
 #### HTML
 
-The HTML below has a `div` element that is used as a reporting log, and also displays a [`<video>`](/en-US/docs/Web/HTML/Element/video) that has the [`autoplay`](/en-US/docs/Web/API/HTMLMediaElement/autoplay) attribute.
+The HTML below has a `div` element that is used as a reporting log, and also displays a [`<video>`](/en-US/docs/Web/HTML/Reference/Elements/video) that has the [`autoplay`](/en-US/docs/Web/API/HTMLMediaElement/autoplay) attribute.
 This should not be muted by default, and should play automatically if autoplay is not blocked.
 
 ```html
@@ -269,7 +264,7 @@ if (!navigator.getAutoplayPolicy) {
     "navigator.getAutoplayPolicy() not supported. It may or may not autoplay, depending on the browser!";
 } else {
   // Here we pass in the HTMLVideoElement to check
-  log.textContent = `navigator.getAutoplayPolicy(video) == ${navigator.getAutoplayPolicy(
+  log.textContent = `navigator.getAutoplayPolicy(video) === ${navigator.getAutoplayPolicy(
     "mediaelement",
   )}`;
 

@@ -77,7 +77,7 @@ As with any interpolation involving colors, gradients are calculated in the alph
 
 ### Linear gradient example
 
-A simple linear gradient.
+A linear gradient.
 
 ```html hidden
 <div class="linear-gradient">Linear gradient</div>
@@ -109,7 +109,7 @@ div {
 
 ### Radial gradient example
 
-A simple radial gradient.
+A radial gradient.
 
 ```html hidden
 <div class="radial-gradient">Radial gradient</div>
@@ -132,7 +132,7 @@ div {
 
 ### Conic gradient example
 
-A simple conic gradient example. Note that this isn't supported widely across browser as of yet.
+A conic gradient example.
 
 ```html hidden
 <div class="conic-gradient">Conic gradient</div>
@@ -155,7 +155,7 @@ div {
 
 ### Repeating gradient examples
 
-Simple repeating linear and radial gradient examples.
+Repeating linear and radial gradient examples.
 
 ```html hidden
 <div class="linear-repeat"></div>

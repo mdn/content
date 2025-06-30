@@ -1,5 +1,6 @@
 ---
 title: Object.defineProperty()
+short-title: defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.defineProperty
@@ -54,9 +55,7 @@ Property descriptors present in objects come in two main flavors: data descripto
 Both data and accessor descriptors are objects. They share the following optional keys (please note: the **defaults** mentioned here are in the case of defining properties using `Object.defineProperty()`):
 
 - `configurable`
-
   - : when this is set to `false`,
-
     - the type of this property cannot be changed between data property and accessor property, and
     - the property may not be deleted, and
     - other attributes of its descriptor cannot be changed (however, if it's a data descriptor with `writable: true`, the `value` can be changed, and `writable` can be changed to `false`).
@@ -80,7 +79,7 @@ An **accessor descriptor** also has the following optional keys:
 - `set`
   - : A function which serves as a setter for the property, or {{jsxref("undefined")}} if there is no setter. When the property is assigned, this function is called with one argument (the value being assigned to the property) and with `this` set to the object through which the property is assigned. **Defaults to {{jsxref("undefined")}}.**
 
-If a descriptor doesn't have any of the `value`, `writable`, `get`, and `set` keys, it is treated as a data descriptor. If a descriptor has both \[`value` or `writable`] and \[`get` or `set`] keys, an exception is thrown.
+If a descriptor doesn't have any of the `value`, `writable`, `get`, and `set` keys, it is treated as a data descriptor. If a descriptor is both a data descriptor (because it has `value` or `writable`) and an accessor descriptor (because it has `get` or `set`), an exception is thrown.
 
 These attributes are not necessarily the descriptor's own properties. Inherited properties will be considered as well. In order to ensure these defaults are preserved, you might freeze existing objects in the descriptor object's prototype chain upfront, specify all options explicitly, or create a [`null`-prototype object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects).
 
@@ -101,29 +100,9 @@ Object.defineProperty(obj, "key2", {
   value: "static",
 });
 
-// 3. Recycling same object
-function withValue(value) {
-  const d =
-    withValue.d ||
-    (withValue.d = {
-      enumerable: false,
-      writable: false,
-      configurable: false,
-      value,
-    });
-
-  // avoiding duplicate operation for assigning value
-  if (d.value !== value) d.value = value;
-
-  return d;
-}
-// and
-Object.defineProperty(obj, "key", withValue("static"));
-
-// if freeze is available, prevents adding or
-// removing the object prototype properties
+// 3. Prevents adding or removing the object prototype properties
 // (value, get, set, enumerable, writable, configurable)
-(Object.freeze || Object)(Object.prototype);
+Object.freeze(Object.prototype);
 ```
 
 When the property already exists, `Object.defineProperty()` attempts to modify the property according to the values in the descriptor and the property's current configuration.

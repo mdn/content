@@ -11,7 +11,7 @@ The **`super`** keyword is used to access properties on an object literal or cla
 
 The `super.prop` and `super[expr]` expressions are valid in any [method definition](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) in both [classes](/en-US/docs/Web/JavaScript/Reference/Classes) and [object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer). The `super(...args)` expression is valid in class constructors.
 
-{{InteractiveExample("JavaScript Demo: Expressions - super", "taller")}}
+{{InteractiveExample("JavaScript Demo: super expression", "taller")}}
 
 ```js interactive-example
 class Foo {
@@ -65,7 +65,8 @@ super[expression]
 
 The `super` keyword can be used in two ways: as a "function call" (`super(...args)`), or as a "property lookup" (`super.prop` and `super[expr]`).
 
-> **Note:** `super` is a keyword and these are special syntactic constructs. `super` is not a variable that points to the prototype object. Attempting to read `super` itself is a {{jsxref("SyntaxError")}}.
+> [!NOTE]
+> `super` is a keyword and these are special syntactic constructs. `super` is not a variable that points to the prototype object. Attempting to read `super` itself is a {{jsxref("SyntaxError")}}.
 >
 > ```js-nolint example-bad
 > const child = {
@@ -311,7 +312,7 @@ class Extended extends Base {
 Extended.getName(); // Logs "Extended"
 ```
 
-This is especially important when interacting with [static private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties#private_static_fields).
+This is especially important when interacting with [static private elements](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements#private_static_fields).
 
 ### Setting super.prop sets the property on this instead
 

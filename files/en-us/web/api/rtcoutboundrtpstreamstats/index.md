@@ -9,7 +9,7 @@ browser-compat: api.RTCStatsReport.type_outbound-rtp
 
 The **`RTCOutboundRtpStreamStats`** dictionary of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) is used to report metrics and statistics related to an outbound {{Glossary("RTP")}} stream being sent by an {{domxref("RTCRtpSender")}}.
 
-The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} returned by {{domxref("RTCPeerConnection.getStats()")}} or {{domxref("RTCRtpSender.getStats()")}} until you find a report with the [`type`](#type) of `outbound-rtp`.
+The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} returned by {{domxref("RTCPeerConnection.getStats()")}} or {{domxref("RTCRtpSender.getStats()")}} until you find a report with the [`type`](/en-US/docs/Web/API/RTCOutboundRtpStreamStats/type) of `outbound-rtp`.
 
 ## Instance properties
 
@@ -111,8 +111,6 @@ The following properties are common to all WebRTC statistics objects.
   - : A {{domxref("DOMHighResTimeStamp")}} object indicating the time at which the sample was taken for this statistics object.
 - {{domxref("RTCOutboundRtpStreamStats.type", "type")}}
   - : A string with the value `"outbound-rtp"`, indicating the type of statistics that the object contains.
-
-## Examples
 
 ## Specifications
 

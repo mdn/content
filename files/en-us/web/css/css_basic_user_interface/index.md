@@ -111,7 +111,7 @@ Click "Play" in the example above to see or edit the code for the animation in t
 ## Related concepts
 
 - CSS [`cursor`](/en-US/docs/Web/CSS/cursor) property
-- SVG [`cursor`](/en-US/docs/Web/SVG/Attribute/cursor) attribute
+- SVG [`cursor`](/en-US/docs/Web/SVG/Reference/Attribute/cursor) attribute
 - CSS {{CSSxRef(":focus")}}, {{CSSxRef(":focus-within")}}, and {{CSSxRef(":focus-visible")}} pseudoclasses
 - {{DOMXref("CaretPosition")}} Interface
 

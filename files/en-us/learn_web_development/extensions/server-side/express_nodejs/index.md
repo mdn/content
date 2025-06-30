@@ -2,13 +2,16 @@
 title: Express web framework (Node.js/JavaScript)
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs
 page-type: learn-module
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}
-
-{{NextMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
+{{NextMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction", "Learn_web_development/Extensions/Server-side")}}
 
 Express is a popular unopinionated web framework, written in JavaScript and hosted within the Node.js runtime environment. This module explains some of the key benefits of the framework, how to set up your development environment and how to perform common web development and deployment tasks.
+
+> [!WARNING]
+> The Express documentation and tutorial are written for Express version 4, while the latest version is Express 5.
+> We plan to update the documentation in the second half of 2025.
 
 ## Prerequisites
 
@@ -52,4 +55,4 @@ All existing tutorials are listed above, but if you would like to extend this mo
 
 An assessment for the module would also make a wonderful addition!
 
-{{NextMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
+{{NextMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction", "Learn_web_development/Extensions/Server-side")}}

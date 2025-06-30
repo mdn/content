@@ -42,12 +42,11 @@ _No changes._
 #### DOM
 
 - {{domxref("PerformanceEventTiming")}} is now enabled by default ([Firefox bug 1701029](https://bugzil.la/1701029)).
-- The content of {{htmlelement("input")}} and {{htmlelement("textarea")}} elements can now be manipulated using {{domxref("Document.execCommand()")}} commands by default, preserving edit history and providing parity with other browsers, without [`contentEditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) or any lengthy workarounds required ([Firefox bug 1220696](https://bugzil.la/1220696)).
+- The content of {{htmlelement("input")}} and {{htmlelement("textarea")}} elements can now be manipulated using {{domxref("Document.execCommand()")}} commands by default, preserving edit history and providing parity with other browsers, without [`contentEditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) or any lengthy workarounds required ([Firefox bug 1220696](https://bugzil.la/1220696)).
 
 #### Removals
 
 - The following sensor events and their associated handlers have been removed (primarily for better compatibility with other major browser engines, and to address concerns related to privacy leaks):
-
   - `DeviceProximityEvent` and its event handler `window.ondeviceproximity` ([Firefox bug 1699707](https://bugzil.la/1699707)).
   - `UserProximityEvent` and its event handler `window.onuserproximity`) ([Firefox bug 1699707](https://bugzil.la/1699707)).
   - `DeviceLightEvent` and its event handler `window.ondevicelight` ([Firefox bug 1701824](https://bugzil.la/1701824)).

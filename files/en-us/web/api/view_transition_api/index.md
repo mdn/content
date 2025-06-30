@@ -24,7 +24,7 @@ However, creating view transitions on the web has historically been difficult:
   - Stop accidental user interactions with the old content from causing problems.
   - Remove the old content once the transition is complete.
     Accessibility issues like loss of reading position, focus confusion, and strange live region announcement behavior can also result from having the new and old content both present in the DOM at once.
-- Cross-document view transitions (i.e. across navigations between different pages in MPAs) have historically been impossible.
+- Cross-document view transitions (i.e., across navigations between different pages in MPAs) have historically been impossible.
 
 The View Transition API provides an easy way of handling the required view changes and transition animations for both the above use cases.
 
@@ -35,7 +35,7 @@ See [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Usin
 ## Interfaces
 
 - {{domxref("ViewTransition")}}
-  - : Represents a view transition, and provides functionality to react to the transition reaching different states (e.g. ready to run the animation, or animation finished) or skip the transition altogether.
+  - : Represents a view transition, and provides functionality to react to the transition reaching different states (e.g., ready to run the animation, or animation finished) or skip the transition altogether.
 
 ## Extensions to other interfaces
 
@@ -52,7 +52,7 @@ See [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Usin
 
 ## HTML additions
 
-- [`<link rel="expect">`](/en-US/docs/Web/HTML/Attributes/rel#expect)
+- [`<link rel="expect">`](/en-US/docs/Web/HTML/Reference/Attributes/rel#expect)
   - : Identifies the most critical content in the associated document for the user's initial view of the page. Document rendering will be blocked until the critical content has been parsed, ensuring a consistent first paint — and therefore, view transition — across all supporting browsers.
 
 ## CSS additions
@@ -65,27 +65,30 @@ See [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Usin
 ### Properties
 
 - {{cssxref("view-transition-name")}}
-  - : Provides the selected element with a separate identifying name and causes it to participate in a separate view transition from the root view transition — or no view transition if the `none` value is specified.
+  - : Specifies the view transition snapshot that selected elements will participate in, which enables an element to be animated separately from the rest of the page during a view transition.
+- {{cssxref("view-transition-class")}}
+  - : Provides an additional method of styling selected elements that have a `view-transition-name`.
 
 ### Pseudo-elements
 
 - {{cssxref("::view-transition")}}
   - : The root of the view transitions overlay, which contains all view transitions and sits over the top of all other page content.
-- {{cssxref("::view-transition-group", "::view-transition-group()")}}
+- {{cssxref("::view-transition-group()")}}
   - : The root of a single view transition.
-- {{cssxref("::view-transition-image-pair", "::view-transition-image-pair()")}}
+- {{cssxref("::view-transition-image-pair()")}}
   - : The container for a view transition's old and new views — before and after the transition.
-- {{cssxref("::view-transition-old", "::view-transition-old()")}}
+- {{cssxref("::view-transition-old()")}}
   - : A static snapshot of the old view, before the transition.
-- {{cssxref("::view-transition-new", "::view-transition-new()")}}
+- {{cssxref("::view-transition-new()")}}
   - : A live representation of the new view, after the transition.
 
 ## Examples
 
 - [Basic View Transitions SPA demo](https://mdn.github.io/dom-examples/view-transitions/spa/): A basic image gallery demo with view transitions, featuring separate animations between old and new images, and old and new captions.
 - [Basic View Transitions MPA demo](https://mdn.github.io/dom-examples/view-transitions/mpa/): A sample two-page site that demonstrates usage of cross-document (MPA) view transitions, providing a custom "swipe up" transition when the two pages are navigated between.
+- [View Transitions match-element demo](https://mdn.github.io/dom-examples/view-transitions/match-element/): An SPA featuring animated list items, which demonstrates usage of the `view-transition-name` property's `match-element` value.
 - [HTTP 203 playlist](https://http203-playlist.netlify.app/): A video player demo app that features several different SPA view transitions, many of which are explained in [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/).
-- [List of Chrome DevRel team members](https://view-transitions.chrome.dev/profiles/mpa/): A basic team profile pages app that demonstrates how to use the {{domxref("Window.pagereveal_event", "pagereveal")}} and {{domxref("Window.pageswap_event", "pageswap")}} events to customize the outgoing and inbound animations of a cross-document view transition based on the "from" and "to" URLs.
+- [Chrome DevRel view transitions demos](https://view-transitions.chrome.dev/): A series of View Transition API demos.
 
 ## Specifications
 

@@ -1,5 +1,6 @@
 ---
 title: Using CSS counters
+short-title: Using counters
 slug: Web/CSS/CSS_counter_styles/Using_CSS_counters
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-lists/#auto-numbering
@@ -76,6 +77,10 @@ The value of a counter can be displayed using either the {{cssxref("counter", "c
 For example, the following declaration uses `counter()` to prefix each `h3` heading with the text `Section <number>:`, where `<number>` is the value of the count in decimal (the default display style):
 
 ```css
+body {
+  counter-reset: section; /* Set a counter named 'section', and its initial value is 0. */
+}
+
 h3::before {
   counter-increment: section; /* Increment the value of section counter by 1 */
   content: "Section " counter(section) ": "; /* Display counter value in default style (decimal) */
@@ -145,7 +150,7 @@ The counter value is decreased by specifying a negative value for {{cssxref("cou
 
 ### Counter inheritance and propagation
 
-Each element or pseudo-element has a set of counters in the scope of that element. Initial counters in the set are received from the element's parent and the preceding sibling. The counter values are received from the last descendent of the previous sibling, the last sibling, or the parent.
+Each element or pseudo-element has a set of counters in the scope of that element. Initial counters in the set are received from the element's parent and the preceding sibling. The counter values are received from the last descendant of the previous sibling, the last sibling, or the parent.
 
 When an element declares a counter, the counter is nested inside the counter with the same name received from the parent. If the parent doesn't have a counter with the same name then the counter is added to the element's counters set as it is. A counter with the same name received from the previous sibling is removed from the counters set.
 

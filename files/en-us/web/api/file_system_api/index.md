@@ -47,26 +47,21 @@ The origin private file system (OPFS) is a storage endpoint provided as part of 
 The following are some possible use cases:
 
 - Apps with persistent uploader
-
   - When a file or directory is selected for upload, you can copy the file into a local sandbox and upload a chunk at a time.
   - The app can restart uploads after an interruption, such as the browser being closed or crashing, connectivity getting interrupted, or the computer getting shut down.
 
 - Video game or other apps with lots of media assets
-
   - The app downloads one or several large tarballs and expands them locally into a directory structure.
   - The app pre-fetches assets in the background, so the user can go to the next task or game level without waiting for a download.
 
 - Audio or photo editor with offline access or local cache (great for performance and speed)
-
   - The app can write to files in place (for example, overwriting just the ID3/EXIF tags and not the entire file).
 
 - Offline video viewer
-
   - The app can download large files (>1GB) for later viewing.
   - The app can access partially downloaded files (so that you can watch the first chapter of your DVD, even if the app is still downloading the rest of the content or if the app didn't complete the download because you had to run to catch a train).
 
 - Offline web mail client
-
   - The client downloads attachments and stores them locally.
   - The client caches attachments for later upload.
 
@@ -103,7 +98,7 @@ Read our [Origin private file system](/en-US/docs/Web/API/File_System_API/Origin
 - {{domxref("Window.showSaveFilePicker()")}}
   - : Shows a file picker that allows a user to save a file.
 - {{domxref("DataTransferItem.getAsFileSystemHandle()")}}
-  - : Returns a {{domxref('FileSystemFileHandle')}} if the dragged item is a file, or a {{domxref('FileSystemDirectoryHandle')}} if the dragged item is a directory.
+  - : Returns a {{jsxref('Promise')}} that fulfills with a {{domxref('FileSystemFileHandle')}} if the dragged item is a file, or fulfills with a {{domxref('FileSystemDirectoryHandle')}} if the dragged item is a directory.
 - {{domxref("StorageManager.getDirectory()")}}
   - : Used to obtain a reference to a {{domxref("FileSystemDirectoryHandle")}} object allowing access to a directory and its contents, stored in the [origin private file system](/en-US/docs/Web/API/File_System_API/Origin_private_file_system). Returns a {{jsxref('Promise')}} that fulfills with a {{domxref("FileSystemDirectoryHandle")}} object.
 

@@ -2,10 +2,9 @@
 title: theme_color
 slug: Web/Progressive_web_apps/Manifest/Reference/theme_color
 page-type: web-manifest-member
-browser-compat: html.manifest.theme_color
+browser-compat: manifests.webapp.theme_color
+sidebar: pwasidebar
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 The `theme_color` member is used to specify the default color for your web application's user interface.
 This color may be applied to various browser UI elements, such as the toolbar, address bar, and status bar.
@@ -27,7 +26,6 @@ It can be particularly noticeable in contexts like the task switcher or when the
 ### Values
 
 - `theme_color`
-
   - : A string that specifies a valid [color value](/en-US/docs/Web/CSS/color_value).
 
     > [!NOTE]
@@ -44,7 +42,7 @@ Choose a `theme_color` that aligns with your app's brand guidelines, as this can
 In browsers that support `theme_color`, the value specified in the manifest file serves as the default theme color for your web app across all pages where the manifest is applied.
 You can override this default in the following ways:
 
-- Using the [`theme-color`](/en-US/docs/Web/HTML/Element/meta/name/theme-color) value of the `name` attribute in the HTML `<meta>` element: You can specify a theme color for a web page that's different from the manifest `theme_color` specified for your app. This enables you to set different theme colors for individual pages within your app.
+- Using the [`theme-color`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/theme-color) value of the `name` attribute in the HTML `<meta>` element: You can specify a theme color for a web page that's different from the manifest `theme_color` specified for your app. This enables you to set different theme colors for individual pages within your app.
 
   ```html
   <meta name="theme-color" content="#9370DB" />

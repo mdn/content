@@ -37,7 +37,7 @@ True for an expression that evaluates to false; false for an expression that eva
 
 ## Specifications
 
-[XPath 1.0 4.3](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-not)
+[XPath 1.0 4.3](https://www.w3.org/TR/xpath-10/#function-not)
 
 ## Gecko support
 

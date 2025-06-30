@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.push()
+short-title: push()
 slug: Web/JavaScript/Reference/Global_Objects/Array/push
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.push
@@ -10,7 +11,7 @@ browser-compat: javascript.builtins.Array.push
 The **`push()`** method of {{jsxref("Array")}} instances adds the specified elements to the end of
 an array and returns the new length of the array.
 
-{{InteractiveExample("JavaScript Demo: Array.push()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.push()")}}
 
 ```js interactive-example
 const animals = ["pigs", "goats", "sheep"];

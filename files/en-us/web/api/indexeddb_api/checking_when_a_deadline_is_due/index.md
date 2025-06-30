@@ -34,8 +34,16 @@ When the form's submit button is pressed, we run the `addData()` function, which
 function addData(e) {
   e.preventDefault();
 
-  if (!title.value || !hours.value || !minutes.value || !day.value || !month.value || !year.value) {
-    note.appendChild(document.createElement("li")).textContent = "Data not submitted — form incomplete.";
+  if (
+    !title.value ||
+    !hours.value ||
+    !minutes.value ||
+    !day.value ||
+    !month.value ||
+    !year.value
+  ) {
+    note.appendChild(document.createElement("li")).textContent =
+      "Data not submitted — form incomplete.";
     return;
   }
 ```
@@ -43,17 +51,17 @@ function addData(e) {
 In this segment, we check to see if the form fields have all been filled in. If not, we drop a message into our developer notifications pane (see the bottom left of the app UI) to tell the user what is going on, and exit out of the function. This step is mainly for browsers that don't support HTML form validation (I have used the `required` attribute in my HTML to force validation, in those that do.)
 
 ```js
-   else {
+  else {
     const newItem = [
       {
         taskTitle: title.value,
-        hours    : hours.value,
-        minutes  : minutes.value,
-        day      : day.value,
-        month    : month.value,
-        year     : year.value,
-        notified : "no"
-      }
+        hours: hours.value,
+        minutes: minutes.value,
+        day: day.value,
+        month: month.value,
+        year: year.value,
+        notified: "no",
+      },
     ];
 
     // open a read/write db transaction, ready for adding the data
@@ -84,8 +92,8 @@ In this section we create an object called `newItem` that stores the data in the
 
 ```js
     request.onsuccess = (event) => {
-
-      note.appendChild(document.createElement("li")).textContent = "New item added to database.";
+      note.appendChild(document.createElement("li")).textContent =
+        "New item added to database.";
 
       title.value = "";
       hours.value = null;
@@ -102,7 +110,7 @@ This next section creates a log message to say the new item addition is successf
 ```js
   // update the display of data to show the newly added item, by running displayData() again.
   displayData();
-};
+}
 ```
 
 Last of all, we run the `displayData()` function, which updates the display of data in the app to show the new task that was just entered.
@@ -129,7 +137,9 @@ const yearCheck = now.getFullYear();
 The `Date` object has a number of methods to extract various parts of the date and time inside it. Here we fetch the current minutes (gives an easy numerical value), hours (gives an easy numerical value), day of the month (`getDate()` is needed for this, as `getDay()` returns the day of the week, 1-7), month (returns a number from 0-11, see below), and year (`getFullYear()` is needed; `getYear()` is deprecated, and returns a weird value that is not much use to anyone!)
 
 ```js
-  const objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
+  const objectStore = db
+    .transaction(["toDoList"], "readwrite")
+    .objectStore("toDoList");
 
   objectStore.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
@@ -178,7 +188,7 @@ if (
 
 With the current time and date segments that we want to check against the IndexedDB stored values all assembled, it is time to perform the checks. We want all the values to match before we show the user some kind of notification to tell them their deadline is up.
 
-The `+` operator in this case converts numbers with leading zeros into their non leading zero equivalents, e.g. 09 -> 9. This is needed because JavaScript `Date` number values never have leading zeros, but our data might.
+The `+` operator in this case converts numbers with leading zeros into their non leading zero equivalents, e.g., 09 -> 9. This is needed because JavaScript `Date` number values never have leading zeros, but our data might.
 
 The `notified === "no"` check is designed to make sure you will only get one notification per to-do item. When a notification is fired for each item object, its `notification` property is set to `"yes"` so this check will not pass on the next iteration, via the following code inside the `createNotification()` function (read [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB) for an explanation):
 
@@ -187,7 +197,9 @@ The `notified === "no"` check is designed to make sure you will only get one not
     // notification won't be set off on it again
 
     // first open up a transaction as usual
-    const objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
+    const objectStore = db
+      .transaction(["toDoList"], "readwrite")
+      .objectStore("toDoList");
 
     // get the to-do list object that has this title as its title
     const request = objectStore.get(title);
@@ -205,7 +217,7 @@ The `notified === "no"` check is designed to make sure you will only get one not
       // when this new request succeeds, run the displayData() function again to update the display
       requestUpdate.onsuccess = () => {
         displayData();
-      }
+      };
 ```
 
 If the checks all match, we then run the `createNotification()` function to provide a notification to the user.

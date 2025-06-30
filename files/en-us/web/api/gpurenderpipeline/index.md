@@ -2,12 +2,10 @@
 title: GPURenderPipeline
 slug: Web/API/GPURenderPipeline
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.GPURenderPipeline
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPURenderPipeline`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents a pipeline that controls the vertex and fragment shader stages and can be used in a {{domxref("GPURenderPassEncoder")}} or {{domxref("GPURenderBundleEncoder")}}.
 
@@ -17,13 +15,13 @@ A `GPURenderPipeline` object instance can be created using the {{domxref("GPUDev
 
 ## Instance properties
 
-- {{domxref("GPURenderPipeline.label", "label")}} {{Experimental_Inline}}
+- {{domxref("GPURenderPipeline.label", "label")}}
   - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
 
 ## Instance methods
 
-- {{domxref("GPURenderPipeline.getBindGroupLayout", "getBindGroupLayout()")}} {{Experimental_Inline}}
-  - : Returns the pipeline's {{domxref("GPUBindGroupLayout")}} object with the given index (i.e. included in the originating {{domxref("GPUDevice.createRenderPipeline()")}} or {{domxref("GPUDevice.createRenderPipelineAsync()")}} call's pipeline layout).
+- {{domxref("GPURenderPipeline.getBindGroupLayout", "getBindGroupLayout()")}}
+  - : Returns the pipeline's {{domxref("GPUBindGroupLayout")}} object with the given index (i.e., included in the originating {{domxref("GPUDevice.createRenderPipeline()")}} or {{domxref("GPUDevice.createRenderPipelineAsync()")}} call's pipeline layout).
 
 ## Examples
 
@@ -35,7 +33,7 @@ A `GPURenderPipeline` object instance can be created using the {{domxref("GPUDev
 Our [basic render demo](https://mdn.github.io/dom-examples/webgpu-render-demo/) provides an example of the construction of a valid render pipeline descriptor object, which is then used to create a `GPURenderPipeline` via a `createRenderPipeline()` call.
 
 ```js
-// ...
+// …
 
 const vertexBuffers = [
   {
@@ -79,7 +77,7 @@ const pipelineDescriptor = {
 
 const renderPipeline = device.createRenderPipeline(pipelineDescriptor);
 
-// ...
+// …
 ```
 
 ## Specifications

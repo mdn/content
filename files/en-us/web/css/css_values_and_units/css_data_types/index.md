@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-values/
 
 {{CSSRef}}
 
-**CSS data types** define typical values (including keywords and units) accepted by CSS properties and functions. They are a special kind of [component value type](https://www.w3.org/TR/css3-values/#component-types).
+**CSS data types** define typical values (including keywords and units) accepted by CSS properties and functions. They are a special kind of [component value type](https://drafts.csswg.org/css-values/#component-types).
 
 The most commonly-used types are defined in the [CSS Values and Units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module. This module also defines [functional notations](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions), which allow for more complex types or processing. Other types are defined in the specifications to which they apply.
 
@@ -15,13 +15,7 @@ Below you will find a reference to the types that you are most likely to come ac
 
 ## Syntax
 
-```css
-selector {
-  property: <unit-data-type>;
-}
-```
-
-In formal CSS syntax, data types are denoted by a keyword placed between the angle brackets `<` and `>`.
+In formal CSS syntax, data types are denoted by a keyword placed between the angle brackets `<` and `>`. They don't correspond to any tangible CSS code entity.
 
 ## Textual data types
 
@@ -52,7 +46,7 @@ These types include keywords and identifiers as well as strings, and URLs.
 
 ## Numeric data types
 
-These data types are used to indicate quantities, indexes, and positions. The majority of these are defined in the Values and Units specification, however additional types are described in other specifications where they are specific to that specification alone — for example the `fr` unit in [CSS grid layout](https://www.w3.org/TR/css-grid-1/#fr-unit).
+These data types are used to indicate quantities, indexes, and positions. The majority of these are defined in the Values and Units specification, however additional types are described in other specifications where they are specific to that specification alone — for example the `fr` unit in [CSS grid layout](https://drafts.csswg.org/css-grid-1/#fr-unit).
 
 - {{cssxref("&lt;integer&gt;")}}
   - : One or more decimal units 0 through 9.
@@ -97,7 +91,7 @@ Some CSS properties can take a dimension or a percentage value. In this case the
 
 ## Color
 
-[The CSS Color Specification](https://www.w3.org/TR/css-color-4/) defines the {{cssxref("&lt;color&gt;")}} data type, and other types which relate to color in CSS.
+[The CSS Color Specification](https://drafts.csswg.org/css-color-4/) defines the {{cssxref("&lt;color&gt;")}} data type, and other types which relate to color in CSS.
 
 - {{cssxref("&lt;color&gt;")}}
   - : Specified as a keyword or a numerical color value.
@@ -108,19 +102,19 @@ Some CSS properties can take a dimension or a percentage value. In this case the
 
 ## Images
 
-[The CSS Images Specification](https://www.w3.org/TR/css-images-3/) defines the data types which deal with images, including gradients.
+[The CSS Images Specification](https://drafts.csswg.org/css-images-3/) defines the data types which deal with images, including gradients.
 
 - {{cssxref("&lt;image&gt;")}}
   - : A URL reference to an image or a color gradient.
-- {{cssxref("&lt;color-stop-list&gt;")}}
+- `<color-stop-list>`
   - : A list of two or more color stops with optional transition information using a color hint.
-- {{cssxref("&lt;linear-color-stop&gt;")}}
+- `<linear-color-stop>`
   - : A `<color>` and a `<length-percentage>` to indicate the color stop for this part of the gradient.
-- {{cssxref("&lt;linear-color-hint&gt;")}}
+- `<linear-color-hint>`
   - : A `<length-percentage>` to indicate how the color interpolates.
-- {{cssxref("&lt;ending-shape&gt;")}}
+- `<ending-shape>`
   - : Used for radial gradients; can have a keyword value of `circle` or `ellipse`.
-- {{cssxref("&lt;size&gt;")}}
+- `<size>`
   - : Determines the size of the radial gradient's ending shape. This accepts a value of a keyword or a `<length>` but not a percentage.
 
 ## 2D positioning

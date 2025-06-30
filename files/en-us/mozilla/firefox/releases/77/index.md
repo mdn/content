@@ -17,7 +17,6 @@ This article provides information about the changes in Firefox 77 that will affe
 - Firefox Developer Edition offers a [Compatibility panel](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#compatibility-view) in the Page Inspector, to show the browsers supported by the CSS properties used on the page. ([Firefox bug 1625134](https://bugzil.la/1625134))
 - The Debugger has a [Settings menu in its toolbar](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#toolbar); the only menu option (yet) is **Disable JavaScript**. ([Firefox bug 1630957](https://bugzil.la/1630957))
 - The [Network Monitor toolbar](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/toolbar/index.html) has an **Actions** menu for managing log data ([Firefox bug 1459175](https://bugzil.la/1459175)):
-
   - **Persist Logs**
   - **Import HAR File**
   - **Save All as HAR**
@@ -29,7 +28,7 @@ This article provides information about the changes in Firefox 77 that will affe
 
 ### HTML
 
-- Firefox now displays the [label value](/en-US/docs/Web/HTML/Element/option#browser_compatibility) on an {{HTMLElement("option")}} element when the element's content is empty. ([Firefox bug 40545](https://bugzil.la/40545))
+- Firefox now displays the [label value](/en-US/docs/Web/HTML/Reference/Elements/option#browser_compatibility) on an {{HTMLElement("option")}} element when the element's content is empty. ([Firefox bug 40545](https://bugzil.la/40545))
 
 ### SVG
 
@@ -73,7 +72,7 @@ This article provides information about the changes in Firefox 77 that will affe
 ### Other
 
 - Use of the `unlimitedStorage` permission no longer results in a prompt during extension installation or update. See [Requesting the right permissions](https://extensionworkshop.com/documentation/develop/request-the-right-permissions/) for more information. ([Firefox bug 1630413](https://bugzil.la/1630413))
-- Changes related to [`SameSite` cookies](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) mean that when setting [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) to bypass tracking protection for extension pages hosts must be specified as a full domain or with wildcards. However, for Content scripts tracking protection can only be bypassed for hosts specified with a full domain.
+- Changes related to [`SameSite` cookies](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) mean that when setting [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) to bypass tracking protection for extension pages hosts must be specified as a full domain or with wildcards. However, for Content scripts tracking protection can only be bypassed for hosts specified with a full domain.
 
 ## Older versions
 

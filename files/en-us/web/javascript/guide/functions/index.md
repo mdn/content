@@ -156,9 +156,8 @@ A function can call itself. For example, here is a function that computes factor
 function factorial(n) {
   if (n === 0 || n === 1) {
     return 1;
-  } else {
-    return n * factorial(n - 1);
   }
+  return n * factorial(n - 1);
 }
 ```
 
@@ -255,8 +254,8 @@ function walkTree(node) {
     return;
   }
   // do something with node
-  for (let i = 0; i < node.childNodes.length; i++) {
-    walkTree(node.childNodes[i]);
+  for (const child of node.childNodes) {
+    walkTree(child);
   }
 }
 ```
@@ -347,7 +346,7 @@ console.log(getScore()); // "Chamakh scored 5"
 
 We also refer to the function body as a _closure_. A closure is any piece of source code (most commonly, a function) that refers to some variables, and the closure "remembers" these variables even when the scope in which these variables were declared has exited.
 
-Closures are usually illustrated with [nested functions](#nested_functions) to show that they remember variables beyond the lifetime of its parent scope; but in fact, nested functions are unnecessary. Technically speaking, all functions in JavaScript form closures—some just don't capture anything, and closures don't even have to be functions. The key ingredients for a _useful_ closure are the following:
+Closures are usually illustrated with nested functions to show that they remember variables beyond the lifetime of its parent scope; but in fact, nested functions are unnecessary. Technically speaking, all functions in JavaScript form closures—some just don't capture anything, and closures don't even have to be functions. The key ingredients for a _useful_ closure are the following:
 
 - A parent scope that defines some variables or functions. It should have a clear lifetime, which means it should finish execution at some point. Any scope that's not the global scope satisfies this requirement; this includes blocks, functions, modules, and more.
 - An inner scope defined within the parent scope, which refers to some variables or functions defined in the parent scope.

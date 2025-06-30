@@ -17,7 +17,8 @@ A **character class escape** is an escape sequence that represents a set of char
 \w, \W
 ```
 
-> **Note:** `,` is not part of the syntax.
+> [!NOTE]
+> `,` is not part of the syntax.
 
 ## Description
 

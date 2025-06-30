@@ -1,5 +1,6 @@
 ---
 title: TypedArray.prototype.entries()
+short-title: entries()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/entries
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.entries
@@ -9,7 +10,7 @@ browser-compat: javascript.builtins.TypedArray.entries
 
 The **`entries()`** method of {{jsxref("TypedArray")}} instances returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the key/value pairs for each index in the typed array. This method has the same algorithm as {{jsxref("Array.prototype.entries()")}}.
 
-{{InteractiveExample("JavaScript Demo: TypedArray.entries()")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.prototype.entries()")}}
 
 ```js interactive-example
 const uint8 = new Uint8Array([10, 20, 30, 40, 50]);

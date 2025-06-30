@@ -12,10 +12,9 @@ page-type: firefox-release-notes
 
 ### Developer Tools
 
-- [User-agent spoofing](/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent) from the [Responsive mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html)
+- [User-agent spoofing](/en-US/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent) from the [Responsive mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html)
 - [Retaining paths panel](https://firefox-source-docs.mozilla.org/devtools-user/memory/dominators_view/index.html#retaining-paths-panel) in memory tool
 - [Service workers](/en-US/docs/Web/API/ServiceWorker) and [Push API](/en-US/docs/Web/API/Push_API) debugging
-
   - [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html) dashboard for workers
   - Cached requests are now shown in [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)
   - Support for [cache storage](/en-US/docs/Web/API/Cache) in [Storage Inspector](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html)
@@ -40,7 +39,6 @@ _No change._
 - An experimental implementation of CSS Mask Image properties landed. For the moment, this will only be available on Nightly versions of Firefox.y: shorthand version of {{cssxref("mask")}}, as well as {{cssxref("mask-repeat")}}, {{cssxref("mask-position")}}, {{cssxref("mask-size")}} are now available ([Firefox bug 686281](https://bugzil.la/686281)).
 - The {{cssxref("clip-path")}} property now experimentally supports `polygon()`, `ellipse()`, and `circle()` on HTML elements (does not support [inset()](https://bugzil.la/1246762) and [path()](https://bugzil.la/1246764)), behind the pref `layout.css.clip-path-shapes.enabled` that defaults to `false` ([Firefox bug 1075457](https://bugzil.la/1075457)). Interpolation (and therefore animation) of these values is not yet supported.
 - Our still experimental grid implementation has been updated:
-
   - {{cssxref("align-content")}}: `normal` behaves now as `stretch` for grid containers ([Firefox bug 1237754](https://bugzil.la/1237754)).
   - The order of column/row values for {{cssxref('grid')}}, {{cssxref('grid-template')}}, and `grid-gap` properties has been swapped ([Firefox bug 1251999](https://bugzil.la/1251999)).
 
@@ -51,7 +49,7 @@ _No change._
 
 - The new ES2017 {{jsxref("Object.values()")}} and {{jsxref("Object.entries()")}} methods have been implemented ([Firefox bug 1232639](https://bugzil.la/1232639)).
 - The deprecated, old Proxy API (`Proxy.create` and `Proxy.createFunction`) now presents a deprecation warning in the console and will be removed in a future version. Use the standard {{jsxref("Proxy")}} object instead ([Firefox bug 892903](https://bugzil.la/892903)).
-- Support for the deprecated non-standard `flags` argument of `String.prototype.`{{jsxref("String.prototype.match", "match")}}/{{jsxref("String.prototype.search", "search")}}/{{jsxref("String.prototype.replace", "replace")}} has been dropped in non-release builds ([Firefox bug 1245801](https://bugzil.la/1245801)).
+- Support for the deprecated non-standard `flags` argument of {{jsxref("String.prototype.match")}}/{{jsxref("String.prototype.search", "search")}}/{{jsxref("String.prototype.replace", "replace")}} has been dropped in non-release builds ([Firefox bug 1245801](https://bugzil.la/1245801)).
 - As per the new ES2016 specification, the {{jsxref("Proxy")}} enumerate trap for [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) statements has been removed ([Firefox bug 1246318](https://bugzil.la/1246318)).
 - The {{jsxref("Array.prototype.indexOf()")}} and {{jsxref("Array.prototype.lastIndexOf()")}} methods (and their {{jsxref("TypedArray")}} equivalents) have been updated to never return `-0` as per the ECMAScript specification ([Firefox bug 1242043](https://bugzil.la/1242043)).
 

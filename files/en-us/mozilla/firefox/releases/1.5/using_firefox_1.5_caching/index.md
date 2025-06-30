@@ -13,14 +13,13 @@ There are instances in which Firefox doesn't cache pages. Below are some common 
 - the page uses an `unload` or `beforeunload` handler;
 - the page sets "cache-control: no-store".
 - the site is HTTPS and page sets at least one of:
-
   - "Cache-Control: no-cache"
   - "Pragma: no-cache"
   - with "Expires: 0" or "Expires" with a date value in the past relative to the value of the "Date" header (unless "Cache-Control: max-age=" is also specified);
 
-- the page is not completely loaded when the user navigates away from it or has pending network requests for other reasons (e.g. `XMLHttpRequest`));
+- the page is not completely loaded when the user navigates away from it or has pending network requests for other reasons (e.g., `XMLHttpRequest`));
 - the page has running IndexedDB transactions;
-- the top-level page contains frames (e.g. {{HTMLElement("iframe")}}) that are not cacheable for any of the reasons listed here;
+- the top-level page contains frames (e.g., {{HTMLElement("iframe")}}) that are not cacheable for any of the reasons listed here;
 - the page is in a frame and the user loads a new page within that frame (in this case, when the user navigates away from the page, the content that was last loaded into the frames is what is cached).
 
 This new caching feature changes page loading behavior, and Web authors may want to:
@@ -100,7 +99,7 @@ In this example:
       }
 
       function onPageShow() {
-        //calculate current time
+        // Calculate current time
         var currentTime = new Date();
         var year = currentTime.getFullYear();
         var month = currentTime.getMonth() + 1;
@@ -123,7 +122,7 @@ In this example:
           sec +
           ":" +
           mil;
-        document.getElementById("timefield").value = displayTime;
+        document.getElementById("time-field").value = displayTime;
       }
 
       function loadOnlyFirst() {
@@ -138,8 +137,8 @@ In this example:
       name="zipForm"
       action="http://www.example.com/formresult.html"
       method="get">
-      <label for="timefield">Date and time:</label>
-      <input type="text" id="timefield" /><br />
+      <label for="time-field">Date and time:</label>
+      <input type="text" id="time-field" /><br />
       <label for="name">Name:</label>
       <input type="text" id="name" /><br />
       <label for="address">Email address:</label>
@@ -155,31 +154,44 @@ In this example:
 In contrast, if the above page did not listen for the `pageshow` event and handled all calculations as part of the `load` event (and instead was coded as shown in the sample code fragment below), both the cursor position and date/time would be cached in Firefox 1.5 when the user navigated away from the page. When the user returned to the page, the cached date/time would display.
 
 ```html
-<script>
-function onLoad() {
-  loadOnlyFirst();
+<head>
+  <script>
+    function onLoad() {
+      loadOnlyFirst();
 
-//calculate current time
-  var currentTime= new Date();
-  var year = currentTime.getFullYear();
-  var month = currentTime.getMonth()+1;
-  var day = currentTime.getDate();
-  var hour=currentTime.getHours();
-  var min=currentTime.getMinutes();
-  var sec=currentTime.getSeconds();
-  var mil=currentTime.getMilliseconds();
-  var displayTime = (month + "/" + day + "/" + year + " " +
-    hour + ":" + min + ":" + sec + ":" + mil);
-  document.getElementById("timefield").value=displayTime;
-}
+      // Calculate current time
+      var currentTime = new Date();
+      var year = currentTime.getFullYear();
+      var month = currentTime.getMonth() + 1;
+      var day = currentTime.getDate();
+      var hour = currentTime.getHours();
+      var min = currentTime.getMinutes();
+      var sec = currentTime.getSeconds();
+      var mil = currentTime.getMilliseconds();
+      var displayTime =
+        month +
+        "/" +
+        day +
+        "/" +
+        year +
+        " " +
+        hour +
+        ":" +
+        min +
+        ":" +
+        sec +
+        ":" +
+        mil;
+      document.getElementById("time-field").value = displayTime;
+    }
 
-function loadOnlyFirst() {
-  document.zipForm.name.focus();
-}
-</script>
+    function loadOnlyFirst() {
+      document.zipForm.name.focus();
+    }
+  </script>
 </head>
 
-<body onload="onLoad();">
+<body onload="onLoad();"></body>
 ```
 
 ## Developing Firefox extensions

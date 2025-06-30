@@ -20,11 +20,9 @@ The **`<relative-size>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web
 The `<relative-size>` data type is defined using a keyword value chosen from the list below.
 
 - `smaller`
-
   - : A relative size one size smaller than the inherited size.
 
 - `larger`
-
   - : A relative size one size larger than the inherited size.
 
 ## Description

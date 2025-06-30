@@ -24,9 +24,7 @@ createWritable(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An object with the following properties:
-
     - `keepExistingData` {{optional_inline}}
       - : A {{jsxref('Boolean')}}. Default `false`.
         When set to `true` if the file exists, the existing file is first copied to the temporary file.
@@ -103,7 +101,7 @@ The two {{htmlelement("button")}} elements and text {{htmlelement("input")}} fie
 </ol>
 ```
 
-The text input field and the write text button are set to be disabled initially via the [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled) attribute — they shouldn't be used until the user has selected a file to write to.
+The text input field and the write text button are set to be disabled initially via the [`disabled`](/en-US/docs/Web/HTML/Reference/Attributes/disabled) attribute — they shouldn't be used until the user has selected a file to write to.
 
 ```css hidden
 li {

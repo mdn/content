@@ -1,5 +1,6 @@
 ---
 title: RegExp[Symbol.species]
+short-title: "[Symbol.species]"
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.species
 page-type: javascript-static-accessor-property
 browser-compat: javascript.builtins.RegExp.@@species
@@ -11,22 +12,6 @@ The **`RegExp[Symbol.species]`** static accessor property returns the constructo
 
 > [!WARNING]
 > The existence of `[Symbol.species]` allows execution of arbitrary code and may create security vulnerabilities. It also makes certain optimizations much harder. Engine implementers are [investigating whether to remove this feature](https://github.com/tc39/proposal-rm-builtin-subclassing). Avoid relying on it if possible.
-
-{{InteractiveExample("JavaScript Demo: RegExp[Symbol.species]")}}
-
-```js interactive-example
-class MyRegExp extends RegExp {
-  // Overwrite MyRegExp species to the parent RegExp constructor
-  static get [Symbol.species]() {
-    return RegExp;
-  }
-}
-
-const regex1 = new MyRegExp("foo", "g");
-
-console.log(regex1.test("football"));
-// Expected output: true
-```
 
 ## Syntax
 

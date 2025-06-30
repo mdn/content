@@ -2,9 +2,8 @@
 title: Deployment and next steps
 slug: Learn_web_development/Core/Frameworks_libraries/Svelte_deployment_next
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenu("Learn_web_development/Core/Frameworks_libraries/Svelte_TypeScript", "Learn_web_development/Core/Frameworks_libraries")}}
 
@@ -112,19 +111,19 @@ In the `dev` script we are passing the `-w` argument, which tells rollup to watc
 If we have a look at the `rollup.config.js` file, we can see that the Svelte compiler is just a rollup plugin:
 
 ```js
-import svelte from 'rollup-plugin-svelte';
+import svelte from "rollup-plugin-svelte";
 // …
-import { terser } from 'rollup-plugin-terser';
+import { terser } from "rollup-plugin-terser";
 
 const production = !process.env.ROLLUP_WATCH;
 
 export default {
-  input: 'src/main.js',
+  input: "src/main.js",
   output: {
     sourcemap: true,
-    format: 'iife',
-    name: 'app',
-    file: 'public/build/bundle.js'
+    format: "iife",
+    name: "app",
+    file: "public/build/bundle.js",
   },
   plugins: [
     svelte({
@@ -132,27 +131,37 @@ export default {
       dev: !production,
       // we'll extract any component CSS out into
       // a separate file - better for performance
-      css: (css) => {
-        css.write('public/build/bundle.css');
-      }
+      css(css) {
+        css.write("public/build/bundle.css");
+      },
     }),
+    // More plugins…
+  ],
+  // …
+};
 ```
 
 Later on in the same file you'll also see how rollup minimizes our scripts in production mode and launches a local server in development mode:
 
 ```js
+export default {
+  // …
+  plugins: [
+    // …
     // In dev mode, call `npm run start` once
     // the bundle has been generated
     !production && serve(),
 
     // Watch the `public` directory and refresh the
     // browser on changes when not in production
-    !production && livereload('public'),
+    !production && livereload("public"),
 
     // If we're building for production (npm run build
     // instead of npm run dev), minify
-    production && terser()
+    production && terser(),
   ],
+  // …
+};
 ```
 
 There are [many plugins for rollup](https://github.com/rollup/awesome) that allow you to customize its behavior. A particularly useful plugin which is also maintained by the Svelte team is [svelte-preprocess](https://github.com/sveltejs/svelte-preprocess), which pre-processes many different languages in Svelte files such as PostCSS, SCSS, Less, CoffeeScript, SASS, and TypeScript.
@@ -308,7 +317,7 @@ To understand the motivations behind Svelte, you should read [Rich Harris](https
 There are other projects related to Svelte that are worth checking out:
 
 - [Sapper](https://sapper.svelte.dev/): An application framework powered by Svelte that provides server-side rendering (SSR), code splitting, file-based routing and offline support, and more. Think of it as [Next.js](https://nextjs.org/) for Svelte. If you are planning to develop a fairly complex web application you should definitely have a look at this project.
-- [Svelte Native](https://svelte-native.technology/): A mobile application framework powered by Svelte. Think of it as [React Native](https://reactnative.dev/) for Svelte.
+- [Svelte Native](https://svelte.nativescript.org/): A mobile application framework powered by Svelte. Think of it as [React Native](https://reactnative.dev/) for Svelte.
 - [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode): The officially supported VS Code plugin for working with `.svelte` files, which we looked at in our [TypeScript article](/en-US/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_TypeScript).
 
 ### Other learning resources

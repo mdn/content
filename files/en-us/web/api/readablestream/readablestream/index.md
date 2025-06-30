@@ -23,10 +23,8 @@ new ReadableStream(underlyingSource, queuingStrategy)
 ### Parameters
 
 - `underlyingSource` {{optional_inline}}
-
   - : An object containing methods and properties that define how the constructed stream instance will behave.
     `underlyingSource` can contain the following:
-
     - `start` (controller) {{optional_inline}}
       - : This is a method, called immediately when the object is constructed. The
         contents of this method are defined by the developer, and should aim to get access
@@ -52,7 +50,7 @@ new ReadableStream(underlyingSource, queuingStrategy)
         implementation will not be continually called.
     - `cancel` (reason) {{optional_inline}}
       - : This method, also defined by the developer, will be called if the app signals
-        that the stream is to be cancelled (e.g. if {{domxref("ReadableStream.cancel()")}}
+        that the stream is to be cancelled (e.g., if {{domxref("ReadableStream.cancel()")}}
         is called). The contents should do whatever is necessary to release access to the
         stream source. If this process is asynchronous, it can return a promise to signal
         success or failure. The `reason` parameter contains a
@@ -64,7 +62,6 @@ new ReadableStream(underlyingSource, queuingStrategy)
         (bring your own buffer)/byte stream. If it is not included, the passed controller
         will be a {{domxref("ReadableStreamDefaultController")}}.
     - `autoAllocateChunkSize` {{optional_inline}}
-
       - : For byte streams, the developer can set the `autoAllocateChunkSize` with a positive integer value to turn on the stream's auto-allocation feature.
         With this is set, the stream implementation will automatically allocate a view buffer of the specified size in {{domxref("ReadableByteStreamController.byobRequest")}} when required.
 
@@ -72,10 +69,8 @@ new ReadableStream(underlyingSource, queuingStrategy)
         If not set, a default reader will still stream data, but {{domxref("ReadableByteStreamController.byobRequest")}} will always be `null` and transfers to the consumer must be via the stream's internal queues.
 
 - `queuingStrategy` {{optional_inline}}
-
   - : An object that optionally defines a queuing strategy for the stream. This takes two
     parameters:
-
     - `highWaterMark`
       - : A non-negative integer — this defines the total number of chunks that can be
         contained in the internal queue before backpressure is applied.

@@ -32,7 +32,7 @@ HTML allows us to specify subtitles for a video using the {{ htmlelement("track"
 
 ### WebVTT
 
-The files that contain the actual subtitle data are simple text files that follow a specified format, in this case the [Web Video Text Tracks](/en-US/docs/Web/API/WebVTT_API) (WebVTT) format. The [WebVTT specification](https://w3c.github.io/webvtt/) is still being worked on, but major parts of it are stable so we can use it today.
+The files that contain the actual subtitle data are text files that follow a specified format, in this case the [Web Video Text Tracks](/en-US/docs/Web/API/WebVTT_API) (WebVTT) format. The [WebVTT specification](https://w3c.github.io/webvtt/) is still being worked on, but major parts of it are stable so we can use it today.
 
 Video providers (such as the [Blender Foundation](https://www.blender.org/about/foundation/)) provide captions and subtitles in a text format with their videos, but they're usually in the SubRip Text (SRT) format. These can be easily converted to WebVTT using an online converter.
 
@@ -106,7 +106,6 @@ No image is used for the captions button, so it is styled as:
 .controls button[data-state="subtitles"] {
   height: 85%;
   text-indent: 0;
-  font-size: 16px;
   font-size: 1rem;
   font-weight: bold;
   color: #666;
@@ -134,8 +133,8 @@ const subtitles = document.getElementById("subtitles");
 We also initially turn off all subtitles, in case the browser turns any of them on by default:
 
 ```js
-for (let i = 0; i < video.textTracks.length; i++) {
-  video.textTracks[i].mode = "hidden";
+for (const track of video.textTracks) {
+  track.mode = "hidden";
 }
 ```
 
@@ -158,12 +157,12 @@ if (video.textTracks) {
   subtitlesMenu = df.appendChild(document.createElement("ul"));
   subtitlesMenu.className = "subtitles-menu";
   subtitlesMenu.appendChild(createMenuItem("subtitles-off", "", "Off"));
-  for (let i = 0; i < video.textTracks.length; i++) {
+  for (const track of video.textTracks) {
     subtitlesMenu.appendChild(
       createMenuItem(
-        `subtitles-${video.textTracks[i].language}`,
-        video.textTracks[i].language,
-        video.textTracks[i].label,
+        `subtitles-${track.language}`,
+        track.language,
+        track.label,
       ),
     );
   }
@@ -194,13 +193,13 @@ function createMenuItem(id, lang, label) {
 
     // Find the language to activate
     const lang = button.getAttribute("lang");
-    for (let i = 0; i < video.textTracks.length; i++) {
+    for (const track of video.textTracks) {
       // For the 'subtitles-off' button, the first condition will never match so all will subtitles be turned off
-      if (video.textTracks[i].language === lang) {
-        video.textTracks[i].mode = "showing";
+      if (track.language === lang) {
+        track.mode = "showing";
         button.setAttribute("data-state", "active");
       } else {
-        video.textTracks[i].mode = "hidden";
+        track.mode = "hidden";
       }
     }
     subtitlesMenu.style.display = "none";

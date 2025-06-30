@@ -1,5 +1,6 @@
 ---
 title: TypedArray.prototype.byteLength
+short-title: byteLength
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/byteLength
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.TypedArray.byteLength
@@ -9,7 +10,7 @@ browser-compat: javascript.builtins.TypedArray.byteLength
 
 The **`byteLength`** accessor property of {{jsxref("TypedArray")}} instances returns the length (in bytes) of this typed array.
 
-{{InteractiveExample("JavaScript Demo: TypedArray.byteLength", "shorter")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.prototype.byteLength", "shorter")}}
 
 ```js interactive-example
 // Create an ArrayBuffer with a size in bytes

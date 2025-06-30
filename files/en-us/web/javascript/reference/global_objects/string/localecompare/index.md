@@ -1,5 +1,6 @@
 ---
 title: String.prototype.localeCompare()
+short-title: localeCompare()
 slug: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.localeCompare
@@ -11,7 +12,7 @@ The **`localeCompare()`** method of {{jsxref("String")}} values returns a number
 
 When comparing large numbers of strings, such as in sorting large arrays, it is better to create an {{jsxref("Intl.Collator")}} object and use the function provided by its {{jsxref("Intl/Collator/compare", "compare()")}} method.
 
-{{InteractiveExample("JavaScript Demo: String.localeCompare()")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.localeCompare()")}}
 
 ```js interactive-example
 const a = "réservé"; // With accents, lowercase
@@ -40,13 +41,11 @@ In implementations that support the [`Intl.Collator` API](/en-US/docs/Web/JavaSc
 - `compareString`
   - : The string against which the `referenceStr` is compared. All values are [coerced to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion), so omitting it or passing `undefined` causes `localeCompare()` to compare against the string `"undefined"`, which is rarely what you want.
 - `locales` {{optional_inline}}
-
   - : A string with a BCP 47 language tag, or an array of such strings. Corresponds to the [`locales`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#locales) parameter of the `Intl.Collator()` constructor.
 
     In implementations without `Intl.Collator` support, this parameter is ignored and the host's locale is usually used.
 
 - `options` {{optional_inline}}
-
   - : An object adjusting the output format. Corresponds to the [`options`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#options) parameter of the `Intl.Collator()` constructor.
 
     In implementations without `Intl.Collator` support, this parameter is ignored.

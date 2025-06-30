@@ -7,7 +7,7 @@ browser-compat: api.HTMLLinkElement
 
 {{ APIRef("HTML DOM") }}
 
-The **`HTMLLinkElement`** interface represents reference information for external resources and the relationship of those resources to a document and vice versa (corresponds to [`<link>`](/en-US/docs/Web/HTML/Element/link) element; not to be confused with [`<a>`](/en-US/docs/Web/HTML/Element/a), which is represented by [`HTMLAnchorElement`](/en-US/docs/Web/API/HTMLAnchorElement)). This object inherits all of the properties and methods of the {{domxref("HTMLElement")}} interface.
+The **`HTMLLinkElement`** interface represents reference information for external resources and the relationship of those resources to a document and vice versa (corresponds to [`<link>`](/en-US/docs/Web/HTML/Reference/Elements/link) element; not to be confused with [`<a>`](/en-US/docs/Web/HTML/Reference/Elements/a), which is represented by [`HTMLAnchorElement`](/en-US/docs/Web/API/HTMLAnchorElement)). This object inherits all of the properties and methods of the {{domxref("HTMLElement")}} interface.
 
 {{InheritanceDiagram}}
 
@@ -16,11 +16,11 @@ The **`HTMLLinkElement`** interface represents reference information for externa
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLLinkElement.as")}}
-  - : A string representing the type of content being loaded by the HTML link when [`rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload) or [`rel="modulepreload"`](/en-US/docs/Web/HTML/Attributes/rel/modulepreload).
+  - : A string representing the type of content being loaded by the HTML link when [`rel="preload"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/preload) or [`rel="modulepreload"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/modulepreload).
 - {{domxref("HTMLLinkElement.blocking")}}
   - : A string indicating that certain operations should be blocked on the fetching of an external resource. It reflects the `blocking` attribute of the {{HTMLElement("link")}} element.
 - {{domxref("HTMLLinkElement.crossOrigin")}}
-  - : A string that corresponds to the CORS setting for this link element. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for details.
+  - : A string that corresponds to the CORS setting for this link element. See [CORS settings attributes](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) for details.
 - {{domxref("HTMLLinkElement.disabled")}}
   - : A boolean value which represents whether the link is disabled; currently only used with style sheet links.
 - {{domxref("HTMLLinkElement.fetchPriority")}}
@@ -29,18 +29,22 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : A string representing the URI for the target resource.
 - {{domxref("HTMLLinkElement.hreflang")}}
   - : A string representing the language code for the linked resource.
+- {{domxref("HTMLLinkElement.imageSizes")}}
+  - : A string reflecting the [`imagesizes`](/en-US/docs/Web/HTML/Reference/Elements/link#imagesizes) HTML attribute; a list of comma-separated image conditions and sizes.
+- {{domxref("HTMLLinkElement.imageSrcset")}}
+  - : A string reflecting the [`imagesrcset`](/en-US/docs/Web/HTML/Reference/Elements/link#imagesrcset) HTML attribute; a comma-separated list of image candidate strings.
 - {{domxref("HTMLLinkElement.integrity")}}
   - : A string that contains inline metadata that a browser can use to verify that a fetched resource has been delivered without unexpected manipulation. It reflects the `integrity` attribute of the {{HTMLElement("link")}} element.
 - {{domxref("HTMLLinkElement.media")}}
   - : A string representing a list of one or more media formats to which the resource applies. It reflects the `media` attribute of the {{HTMLElement("link")}} element.
 - {{domxref("HTMLLinkElement.referrerPolicy")}}
-  - : A string that reflects the [`referrerpolicy`](/en-US/docs/Web/HTML/Element/link#referrerpolicy) HTML attribute indicating which referrer to use.
+  - : A string that reflects the [`referrerpolicy`](/en-US/docs/Web/HTML/Reference/Elements/link#referrerpolicy) HTML attribute indicating which referrer to use.
 - {{domxref("HTMLLinkElement.rel")}}
   - : A string representing the forward relationship of the linked resource from the document to the resource.
 - {{domxref("HTMLLinkElement.relList")}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMTokenList")}} that reflects the [`rel`](/en-US/docs/Web/HTML/Element/link#rel) HTML attribute, as a list of tokens.
+  - : A {{domxref("DOMTokenList")}} that reflects the [`rel`](/en-US/docs/Web/HTML/Reference/Elements/link#rel) HTML attribute, as a list of tokens.
 - {{domxref("HTMLLinkElement.sizes")}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMTokenList")}} that reflects the [`sizes`](/en-US/docs/Web/HTML/Element/link#sizes) HTML attribute, as a list of tokens.
+  - : A {{domxref("DOMTokenList")}} that reflects the [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/link#sizes) HTML attribute, as a list of tokens.
 - {{domxref("HTMLLinkElement.sheet")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("StyleSheet")}} object associated with the given element, or `null` if there is none.
 - {{domxref("HTMLLinkElement.type")}}
@@ -51,7 +55,6 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLLinkElement.charset")}} {{deprecated_inline}}
   - : A string representing the character encoding for the target resource.
 - {{domxref("HTMLLinkElement.rev")}} {{deprecated_inline}}
-
   - : A string representing the reverse relationship of the linked resource from the resource to the document.
 
     > [!NOTE]

@@ -20,7 +20,7 @@ WCAG is broadly broken down into four principles — major things that web conte
 Each of the links below will take you to pages that further expand on these areas, giving you practical advice on how to write your web content so it conforms to the success criteria outlined in the WCAG 2 four guiding principles.
 
 - [Perceivable](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable): Users must be able to perceive it in some way, using one or more of their senses.
-- [Operable](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable): Users must be able to control UI elements (e.g. buttons must be clickable in some way — mouse, keyboard, voice command, etc.).
+- [Operable](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable): Users must be able to control UI elements (e.g., buttons must be clickable in some way — mouse, keyboard, voice command, etc.).
 - [Understandable](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable): The content must be understandable to its users.
 - [Robust](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Robust): The content must be developed using well-adopted web standards that will work across different browsers, now and in the future.
 
@@ -41,4 +41,4 @@ This introductory documentation is intended to provide practical information to 
 - [WCAG text labels and names](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Text_labels_and_names)
 - [WCAG keyboard accessibility](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Keyboard)
 - [WCAG Overview](https://www.w3.org/WAI/standards-guidelines/wcag/)
-- [WCAG 2.2](https://www.w3.org/TR/WCAG22/)
+- [WCAG 2.2](https://w3c.github.io/wcag/guidelines/22/)

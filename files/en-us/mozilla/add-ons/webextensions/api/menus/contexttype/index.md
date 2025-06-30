@@ -18,17 +18,16 @@ Values of this type are strings. The item is displayed when the given context ap
 - action
   - : Applies when the user context-clicks your browser action in a Manifest V3 extension. The maximum number of items that can be added to the top-level browser action context menu is {{WebExtAPIRef("menus.ACTION_MENU_TOP_LEVEL_LIMIT")}}, but you can add any number of items to submenus.
 - audio
-  - : Applies when the user context-clicks an [audio](/en-US/docs/Web/HTML/Element/audio) element.
+  - : Applies when the user context-clicks an [audio](/en-US/docs/Web/HTML/Reference/Elements/audio) element.
 - bookmark
-
   - : Applies when the user context-clicks a bookmark item in the bookmarks toolbar, bookmarks menu, bookmarks sidebar (<kbd>Ctrl</kbd>+<kbd>B</kbd>) and the Library window (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>). The latter two are supported as of Firefox 66. Requires the "bookmarks" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) in the manifest.
 
 - browser_action
   - : Applies when the user context-clicks your browser action in a Manifest V2 extension. The maximum number of items that can be added to the top-level browser action context menu is {{WebExtAPIRef("menus.ACTION_MENU_TOP_LEVEL_LIMIT")}}, but you can add any number of items to submenus.
 - editable
-  - : Applies when the user context-clicks an editable element, like a [textarea](/en-US/docs/Web/HTML/Element/textarea).
+  - : Applies when the user context-clicks an editable element, like a [textarea](/en-US/docs/Web/HTML/Reference/Elements/textarea).
 - frame
-  - : Applies when the user context-clicks in a nested [iframe](/en-US/docs/Web/HTML/Element/iframe).
+  - : Applies when the user context-clicks in a nested [iframe](/en-US/docs/Web/HTML/Reference/Elements/iframe).
 - image
   - : Applies when the user context-clicks an image.
 - link
@@ -38,11 +37,10 @@ Values of this type are strings. The item is displayed when the given context ap
 - page_action
   - : Applies when the user context-clicks your page action. The maximum number of items that can be added to the top-level page action context menu is {{WebExtAPIRef("menus.ACTION_MENU_TOP_LEVEL_LIMIT")}}, but you can add any number of items to submenus.
 - password
-  - : Applies when the user context-clicks on a [password input element](/en-US/docs/Web/HTML/Element/input/password).
+  - : Applies when the user context-clicks on a [password input element](/en-US/docs/Web/HTML/Reference/Elements/input/password).
 - selection
   - : Applies when part of the page is selected.
 - tab
-
   - : Applies when the user context-clicks on a tab (specifically, this refers to the tab-strip or other user interface element enabling the user to switch from one browser tab to another, not to the page itself).
 
     From Firefox 63, clicking the menu item on a tab grants the [activeTab](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) permission for the tab clicked, even if that isn't the currently active tab.
@@ -50,7 +48,7 @@ Values of this type are strings. The item is displayed when the given context ap
 - tools_menu
   - : The item will be added to the browser's tools menu. Note that this is only available if you access `ContextType` through the `menus` namespace. It is not available if you access it through the `contextMenus` namespace.
 - video
-  - : Applies when the user context-clicks a [video](/en-US/docs/Web/HTML/Element/video) element.
+  - : Applies when the user context-clicks a [video](/en-US/docs/Web/HTML/Reference/Elements/video) element.
 
 Note that "launcher" is not supported.
 

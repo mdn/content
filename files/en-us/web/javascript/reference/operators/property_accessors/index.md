@@ -9,22 +9,22 @@ browser-compat: javascript.operators.property_accessors
 
 **Property accessors** provide access to an object's properties by using the dot notation or the bracket notation.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Property accessors", "taller")}}
+{{InteractiveExample("JavaScript Demo: Property accessors", "taller")}}
 
 ```js interactive-example
 const person1 = {};
-person1["firstname"] = "Mario";
-person1["lastname"] = "Rossi";
+person1["firstName"] = "Mario";
+person1["lastName"] = "Rossi";
 
-console.log(person1.firstname);
+console.log(person1.firstName);
 // Expected output: "Mario"
 
 const person2 = {
-  firstname: "John",
-  lastname: "Doe",
+  firstName: "John",
+  lastName: "Doe",
 };
 
-console.log(person2["lastname"]);
+console.log(person2["lastName"]);
 // Expected output: "Doe"
 ```
 
@@ -59,7 +59,7 @@ console.log(object.$1); // 'foo'
 
 ```js-nolint example-bad
 const object = {};
-object.1 = 'bar'; // SyntaxError
+object.1 = "bar"; // SyntaxError
 console.log(object.1); // SyntaxError
 ```
 
@@ -85,7 +85,7 @@ If you use a method for a numeric literal, and the numeric literal has no expone
 // because 77. === 77.0, no ambiguity
 ```
 
-In addition, [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) can only be accessed using dot notation within the class that defines them.
+In addition, [private elements](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) can only be accessed using dot notation within the class that defines them.
 
 ### Bracket notation
 

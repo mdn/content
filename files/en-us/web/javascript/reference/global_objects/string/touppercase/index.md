@@ -1,5 +1,6 @@
 ---
 title: String.prototype.toUpperCase()
+short-title: toUpperCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.toUpperCase
@@ -9,7 +10,7 @@ browser-compat: javascript.builtins.String.toUpperCase
 
 The **`toUpperCase()`** method of {{jsxref("String")}} values returns this string converted to uppercase.
 
-{{InteractiveExample("JavaScript Demo: String.toUpperCase()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.toUpperCase()", "shorter")}}
 
 ```js interactive-example
 const sentence = "The quick brown fox jumps over the lazy dog.";

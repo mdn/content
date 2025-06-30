@@ -11,24 +11,6 @@ The **`Generator`** object is returned by a {{jsxref("Statements/function*", "ge
 
 `Generator` is a subclass of the hidden {{jsxref("Iterator")}} class.
 
-{{InteractiveExample("JavaScript Demo: Expressions - function* expression", "taller")}}
-
-```js interactive-example
-const foo = function* () {
-  yield "a";
-  yield "b";
-  yield "c";
-};
-
-let str = "";
-for (const val of foo()) {
-  str = str + val;
-}
-
-console.log(str);
-// Expected output: "abc"
-```
-
 ## Constructor
 
 There's no JavaScript entity that corresponds to the `Generator` constructor. Instances of `Generator` must be returned from [generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*):
@@ -54,10 +36,10 @@ There's only a hidden object which is the prototype object shared by all objects
 These properties are defined on `Generator.prototype` and shared by all `Generator` instances.
 
 - {{jsxref("Object/constructor", "Generator.prototype.constructor")}}
-
   - : The constructor function that created the instance object. For `Generator` instances, the initial value is [`GeneratorFunction.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction).
 
-    > **Note:** `Generator` objects do not store a reference to the generator function that created them.
+    > [!NOTE]
+    > `Generator` objects do not store a reference to the generator function that created them.
 
 - `Generator.prototype[Symbol.toStringTag]`
   - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Generator"`. This property is used in {{jsxref("Object.prototype.toString()")}}.

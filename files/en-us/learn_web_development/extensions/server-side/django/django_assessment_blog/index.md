@@ -1,19 +1,21 @@
 ---
-title: "Assessment: DIY Django mini blog"
+title: "Challenge: DIY Django mini blog"
+short-title: "Challenge: Django blog"
 slug: Learn_web_development/Extensions/Server-side/Django/django_assessment_blog
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Server-side/Django/web_application_security", "Learn_web_development/Extensions/Server-side/Django")}}
+{{PreviousMenu("Learn_web_development/Extensions/Server-side/Django/web_application_security", "Learn_web_development/Extensions/Server-side/Django")}}
 
-In this assessment you'll use the Django knowledge you've picked up in the [Django Web Framework (Python)](/en-US/docs/Learn_web_development/Extensions/Server-side/Django) module to create a very basic blog.
+In this challenge, you'll use the Django knowledge you've picked up in the [Django Web Framework (Python)](/en-US/docs/Learn_web_development/Extensions/Server-side/Django) module to create a very basic blog.
 
 <table>
   <tbody>
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Before attempting this assessment you should have already worked through all the articles in this module.
+        Before attempting this challenge, you should have already worked through all the articles in this module.
       </td>
     </tr>
     <tr>
@@ -100,7 +102,7 @@ The pages that need to be displayed, their URLs, and other requirements, are lis
           </li>
           <li>
             Blog posts and comments need only display plain text.
-            There is no need to support any sort of HTML markup (e.g. links, images, bold/italic, etc.).
+            There is no need to support any sort of HTML markup (e.g., links, images, bold/italic, etc.).
           </li>
         </ul>
       </td>
@@ -185,11 +187,11 @@ The pages that need to be displayed, their URLs, and other requirements, are lis
 In addition you should write some basic tests to verify:
 
 - All model fields have the correct label and length.
-- All models have the expected object name (e.g. `__str__()` returns the expected value).
-- Models have the expected URL for individual Blog and Comment records (e.g. `get_absolute_url()` returns the expected URL).
-- The BlogListView (all-blog page) is accessible at the expected location (e.g. /blog/blogs)
-- The BlogListView (all-blog page) is accessible at the expected named URL (e.g. 'blogs')
-- The BlogListView (all-blog page) uses the expected template (e.g. the default)
+- All models have the expected object name (e.g., `__str__()` returns the expected value).
+- Models have the expected URL for individual Blog and Comment records (e.g., `get_absolute_url()` returns the expected URL).
+- The BlogListView (all-blog page) is accessible at the expected location (e.g., /blog/blogs)
+- The BlogListView (all-blog page) is accessible at the expected named URL (e.g., 'blogs')
+- The BlogListView (all-blog page) uses the expected template (e.g., the default)
 - The BlogListView paginates records by 5 (at least on the first page)
 
 > [!NOTE]
@@ -246,7 +248,6 @@ The following sections describe what you need to do.
 
 1. Create a skeleton project and web application for the site (as described in [Django Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website)). You might use 'diyblog' for the project name and 'blog' for the application name.
 2. Create models for the Blog posts, Comments, and any other objects needed. When thinking about your design, remember:
-
    - Each comment will have only one blog, but a blog may have many comments.
    - Blog posts and comments must be sorted by post date.
    - Not every user will necessarily be a blog author though any user may be a commenter.
@@ -267,12 +268,10 @@ Some general hints:
 1. The index page can be implemented as a basic function view and template (just like for the locallibrary).
 2. The list view for blog posts and bloggers, and the detail view for blog posts can be created using the [generic list and detail views](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Generic_views).
 3. The list of blog posts for a particular author can be created by using a generic blog list view and filtering for blog objects that match the specified author.
-
    - You will have to implement `get_queryset(self)` to do the filtering (much like in our library class `LoanedBooksAllListView`) and get the author information from the URL.
    - You will also need to pass the name of the author to the page in the context. To do this in a class-based view you need to implement `get_context_data()` (discussed below).
 
 4. The _add comment_ form can be created using a function-based view (and associated model and form) or using a generic `CreateView`. If you use a `CreateView` (recommended) then:
-
    - You will also need to pass the name of the blog post to the comment page in the context (implement `get_context_data()` as discussed below).
    - The form should only display the comment "description" for user entry (date and associated blog post should not be editable). Since they won't be in the form itself, your code will need to set the comment's author in the `form_valid()` function so it can be saved into the model ([as described here](https://docs.djangoproject.com/en/5.0/topics/class-based-views/generic-editing/#models-and-request-user) — Django docs). In that same function we set the associated blog. A possible implementation is shown below (`pk` is a blog id passed in from the URL/URL configuration).
 
@@ -307,7 +306,7 @@ class SomeView(generic.ListView):
 
 ## Assessment
 
-The assessment for this task is [available on GitHub here](https://github.com/mdn/django-diy-blog/blob/main/MarkingGuide.md). This assessment is primarily based on how well your application meets the requirements we listed above, though there are some parts of the assessment that check your code uses appropriate models, and that you have written at least some test code.
+The assessment for this challenge is [available on GitHub here](https://github.com/mdn/django-diy-blog/blob/main/MarkingGuide.md). This assessment is primarily based on how well your application meets the requirements we listed above, though there are some parts that check your code uses appropriate models, and that you have written at least some test code.
 When you're done, you can check out [the finished example](https://github.com/mdn/django-diy-blog) which reflects a "full marks" project.
 
 Once you've completed this module you've also finished all the MDN content for learning basic Django server-side website programming! We hope you enjoyed this module and feel you have a good grasp of the basics!

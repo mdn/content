@@ -1,10 +1,12 @@
 ---
 title: "Express Tutorial Part 4: Routes and controllers"
+short-title: "4: Routes and controllers"
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/routes
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 In this tutorial we'll set up routes (URL handling code) with "dummy" handler functions for all the resource endpoints that we'll eventually need in the [LocalLibrary](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website) website. On completion we'll have a modular structure for our route handling code, which we can extend with real handler functions in the following articles. We'll also have a really good understanding of how to create modular routes using Express!
 
@@ -66,15 +68,16 @@ First we create routes for a wiki in a module named **wiki.js**. The code first 
 // wiki.js - Wiki route module.
 
 const express = require("express");
+
 const router = express.Router();
 
 // Home page route.
-router.get("/", function (req, res) {
+router.get("/", (req, res) => {
   res.send("Wiki home page");
 });
 
 // About page route.
-router.get("/about", function (req, res) {
+router.get("/about", (req, res) => {
   res.send("About this wiki");
 });
 
@@ -88,6 +91,7 @@ To use the router module in our main app file we first `require()` the route mod
 
 ```js
 const wiki = require("./wiki.js");
+
 // …
 app.use("/wiki", wiki);
 ```
@@ -99,7 +103,7 @@ The two routes defined in our wiki route module are then accessible from `/wiki/
 Our module above defines a couple of typical route functions. The "about" route (reproduced below) is defined using the `Router.get()` method, which responds only to HTTP GET requests. The first argument to this method is the URL path while the second is a callback function that will be invoked if an HTTP GET request with the path is received.
 
 ```js
-router.get("/about", function (req, res) {
+router.get("/about", (req, res) => {
   res.send("About this wiki");
 });
 ```
@@ -133,15 +137,15 @@ The route paths define the endpoints at which requests can be made. The examples
 
 Route paths can also be string patterns. String patterns use a form of regular expression syntax to define _patterns_ of endpoints that will be matched. The syntax is listed below (note that the hyphen (`-`) and the dot (`.`) are interpreted literally by string-based paths):
 
-- `?` : The endpoint must have 0 or 1 of the preceding character (or group), e.g. a route path of `'/ab?cd'` will match endpoints `acd` or `abcd`.
-- `+` : The endpoint must have 1 or more of the preceding character (or group), e.g. a route path of `'/ab+cd'` will match endpoints `abcd`, `abbcd`, `abbbcd`, and so on.
+- `?` : The endpoint must have 0 or 1 of the preceding character (or group), e.g., a route path of `'/ab?cd'` will match endpoints `acd` or `abcd`.
+- `+` : The endpoint must have 1 or more of the preceding character (or group), e.g., a route path of `'/ab+cd'` will match endpoints `abcd`, `abbcd`, `abbbcd`, and so on.
 - `*` : The endpoint may have an arbitrary string where the `*` character is placed. E.g. a route path of `'/ab*cd'` will match endpoints `abcd`, `abXcd`, `abSOMErandomTEXTcd`, and so on.
-- `()` : Grouping match on a set of characters to perform another operation on, e.g. `'/ab(cd)?e'` will perform a `?`-match on the group `(cd)` — it will match `abe` and `abcde`.
+- `()` : Grouping match on a set of characters to perform another operation on, e.g., `'/ab(cd)?e'` will perform a `?`-match on the group `(cd)` — it will match `abe` and `abcde`.
 
 The route paths can also be JavaScript [regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions). For example, the route path below will match `catfish` and `dogfish`, but not `catflap`, `catfishhead`, and so on. Note that the path for a regular expression uses regular expression syntax (it is not a quoted string as in the previous cases).
 
 ```js
-app.get(/.*fish$/, function (req, res) {
+app.get(/.*fish$/, (req, res) => {
   // …
 });
 ```
@@ -185,7 +189,7 @@ router.get("/about", (req, res, next) => {
     if (err) {
       return next(err);
     }
-    //Successful, so render
+    // Successful, so render
     res.render("about_view", { title: "About", list: queryResults });
   });
 });
@@ -205,7 +209,7 @@ In order for the framework to properly handle exceptions, they must be caught, a
 Re-imagining the simple example from the previous section with `About.find().exec()` as a database query that returns a promise, we might write the route function inside a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block like this:
 
 ```js
-exports.get("/about", async function (req, res, next) {
+exports.get("/about", async (req, res, next) => {
   try {
     const successfulResult = await About.find({}).exec();
     res.render("about_view", { title: "About", list: successfulResult });
@@ -238,18 +242,18 @@ exports.get(
 The URLs that we're ultimately going to need for our pages are listed below, where _object_ is replaced by the name of each of our models (book, bookinstance, genre, author), _objects_ is the plural of object, and _id_ is the unique instance field (`_id`) that is given to each Mongoose model instance by default.
 
 - `catalog/` — The home/index page.
-- `catalog/<objects>/` — The list of all books, bookinstances, genres, or authors (e.g. /`catalog/books/`, /`catalog/genres/`, etc.)
-- `catalog/<object>/<id>` — The detail page for a specific book, bookinstance, genre, or author with the given `_id` field value (e.g. `/catalog/book/584493c1f4887f06c0e67d37)`.
-- `catalog/<object>/create` — The form to create a new book, bookinstance, genre, or author (e.g. `/catalog/book/create)`.
-- `catalog/<object>/<id>/update` — The form to update a specific book, bookinstance, genre, or author with the given `_id` field value (e.g. `/catalog/book/584493c1f4887f06c0e67d37/update)`.
-- `catalog/<object>/<id>/delete` — The form to delete a specific book, bookinstance, genre, or author with the given `_id` field value (e.g. `/catalog/book/584493c1f4887f06c0e67d37/delete)`.
+- `catalog/<objects>/` — The list of all books, bookinstances, genres, or authors (e.g., /`catalog/books/`, /`catalog/genres/`, etc.)
+- `catalog/<object>/<id>` — The detail page for a specific book, bookinstance, genre, or author with the given `_id` field value (e.g., `/catalog/book/584493c1f4887f06c0e67d37)`.
+- `catalog/<object>/create` — The form to create a new book, bookinstance, genre, or author (e.g., `/catalog/book/create)`.
+- `catalog/<object>/<id>/update` — The form to update a specific book, bookinstance, genre, or author with the given `_id` field value (e.g., `/catalog/book/584493c1f4887f06c0e67d37/update)`.
+- `catalog/<object>/<id>/delete` — The form to delete a specific book, bookinstance, genre, or author with the given `_id` field value (e.g., `/catalog/book/584493c1f4887f06c0e67d37/delete)`.
 
 The first home page and list pages don't encode any additional information. While the results returned will depend on the model type and the content in the database, the queries run to get the information will always be the same (similarly the code run for object creation will always be similar).
 
-By contrast the other URLs are used to act on a specific document/model instance—these encode the identity of the item in the URL (shown as `<id>` above). We'll use path parameters to extract the encoded information and pass it to the route handler (and in a later article we'll use this to dynamically determine what information to get from the database). By encoding the information in our URL we only need one route for every resource of a particular type (e.g. one route to handle the display of every single book item).
+By contrast the other URLs are used to act on a specific document/model instance—these encode the identity of the item in the URL (shown as `<id>` above). We'll use path parameters to extract the encoded information and pass it to the route handler (and in a later article we'll use this to dynamically determine what information to get from the database). By encoding the information in our URL we only need one route for every resource of a particular type (e.g., one route to handle the display of every single book item).
 
 > [!NOTE]
-> Express allows you to construct your URLs any way you like — you can encode information in the body of the URL as shown above or use URL `GET` parameters (e.g. `/book/?id=6`). Whichever approach you use, the URLs should be kept clean, logical and readable ([check out the W3C advice here](https://www.w3.org/Provider/Style/URI)).
+> Express allows you to construct your URLs any way you like — you can encode information in the body of the URL as shown above or use URL `GET` parameters (e.g., `/book/?id=6`). Whichever approach you use, the URLs should be kept clean, logical and readable ([check out the W3C advice here](https://www.w3.org/Provider/Style/URI)).
 
 Next we create our route handler callback functions and route code for all the above URLs.
 
@@ -260,7 +264,7 @@ Before we define our routes, we'll first create all the dummy/skeleton callback 
 Start by creating a folder for our controllers in the project root (**/controllers**) and then create separate controller files/modules for handling each of the models:
 
 ```plain
-/express-locallibrary-tutorial  //the project root
+/express-locallibrary-tutorial  # the project root
   /controllers
     authorController.js
     bookController.js
@@ -494,7 +498,7 @@ The skeleton already has a **./routes** folder containing routes for the _index_
 Create another route file — **catalog.js** — inside this folder, as shown.
 
 ```plain
-/express-locallibrary-tutorial //the project root
+/express-locallibrary-tutorial # the project root
   /routes
     index.js
     users.js
@@ -505,13 +509,14 @@ Open **/routes/catalog.js** and copy in the code below:
 
 ```js
 const express = require("express");
-const router = express.Router();
 
 // Require controller modules.
 const book_controller = require("../controllers/bookController");
 const author_controller = require("../controllers/authorController");
 const genre_controller = require("../controllers/genreController");
 const book_instance_controller = require("../controllers/bookinstanceController");
+
+const router = express.Router();
 
 /// BOOK ROUTES ///
 
@@ -573,7 +578,7 @@ router.get("/authors", author_controller.author_list);
 // GET request for creating a Genre. NOTE This must come before route that displays Genre (uses id).
 router.get("/genre/create", genre_controller.genre_create_get);
 
-//POST request for creating Genre.
+// POST request for creating Genre.
 router.post("/genre/create", genre_controller.genre_create_post);
 
 // GET request to delete Genre.
@@ -644,7 +649,7 @@ module.exports = router;
 The module requires Express and then uses it to create a `Router` object. The routes are all set up on the router, which is then exported.
 
 The routes are defined either using `.get()` or `.post()` methods on the router object. All the paths are defined using strings (we don't use string patterns or regular expressions).
-Routes that act on some specific resource (e.g. book) use path parameters to get the object id from the URL.
+Routes that act on some specific resource (e.g., book) use path parameters to get the object id from the URL.
 
 The handler functions are all imported from the controller modules we created in the previous section.
 
@@ -656,7 +661,7 @@ Open **/routes/index.js** and replace the existing route with the function below
 
 ```js
 // GET home page.
-router.get("/", function (req, res) {
+router.get("/", (req, res) => {
   res.redirect("/catalog");
 });
 ```
@@ -672,9 +677,9 @@ We do this in `app.js`.
 Open **app.js** and require the catalog route below the other routes (add the third line shown below, underneath the other two that should be already present in the file):
 
 ```js
-var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/users");
-const catalogRouter = require("./routes/catalog"); //Import routes for "catalog" area of site
+const indexRouter = require("./routes/index");
+const usersRouter = require("./routes/users");
+const catalogRouter = require("./routes/catalog"); // Import routes for "catalog" area of site
 ```
 
 Next, add the catalog route to the middleware stack below the other routes (add the third line shown below, underneath the other two that should be already present in the file):

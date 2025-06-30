@@ -173,7 +173,7 @@ Live Regions are well supported. The Paciello Group, in 2014, posted [informatio
 
 ### Basic examples: `aria-atomic`
 
-As an illustration of `aria-atomic`, consider a site with a simple clock, showing hours and minutes. The clock is updated each minute, with the new remaining time overwriting the current content.
+As an illustration of `aria-atomic`, consider a site with a basic clock, showing hours and minutes. The clock is updated each minute, with the new remaining time overwriting the current content.
 
 ```html
 <div id="clock" role="timer" aria-live="polite">
@@ -202,7 +202,7 @@ The first time the function executes, the entirety of the string that is added w
 
 One way around this would be to first clear all the contents of the live region (in this case, set the `innerHTML` of both `<span id="clock-hours">` and `<span id="clock-mins">` to be empty), and then inject the new content. However, this can sometimes be unreliable, as it's dependent on the exact timing of these two updates.
 
-`aria-atomic="true"` ensures that each time the live region is updated, the entirety of the content is announced in full (e.g. "17:34").
+`aria-atomic="true"` ensures that each time the live region is updated, the entirety of the content is announced in full (e.g., "17:34").
 
 ```html
 <div id="clock" role="timer" aria-live="polite" aria-atomic="true">…</div>
@@ -213,7 +213,7 @@ Another example of `aria-atomic` - an update/notification made as a result of a 
 ```html
 <div id="date-input">
   <label for="year">Year:</label>
-  <input type="text" id="year" value="1990" onblur="change(event)" />
+  <input type="text" id="year" value="1990" />
 </div>
 
 <div id="date-output" aria-atomic="true" aria-live="polite">
@@ -230,10 +230,10 @@ function change(event) {
     case "year":
       yearOut.textContent = event.target.value;
       break;
-    default:
-      return;
   }
 }
+
+document.getElementById("year").addEventListener("blur", change);
 ```
 
 Without `aria-atomic="true"` the screen reader announces only the changed value of year. With `aria-atomic="true"`, the screen reader announces "The set year is: _changed value_"

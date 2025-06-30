@@ -12,7 +12,7 @@ Use this **CSS reference** to browse an [alphabetical index](#index) of all of t
 
 ### Style rule syntax
 
-```css
+```plain
 style-rule ::=
     selectors-list {
       properties-list
@@ -21,7 +21,7 @@ style-rule ::=
 
 Where:
 
-```css
+```plain
 selectors-list ::=
     selector[:pseudo-class] [::pseudo-element]
     [, selectors-list]
@@ -44,7 +44,7 @@ div.menu-bar li:hover > ul {
 }
 ```
 
-For a beginner-level introduction to the syntax of selectors, see our [guide on CSS Selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors). Be aware that any [syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax) error in a rule definition invalidates the entire rule. Invalid rules are ignored by the browser. Note that CSS rule definitions are entirely ({{Glossary("ASCII")}}) [text-based](https://www.w3.org/TR/css-syntax-3/#intro), whereas DOM-CSS / CSSOM (the rule management system) is [object-based](https://www.w3.org/TR/cssom/#introduction).
+For a beginner-level introduction to the syntax of selectors, see our [guide on CSS Selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors). Be aware that any [syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax) error in a rule definition invalidates the entire rule. Invalid rules are ignored by the browser. Note that CSS rule definitions are entirely (Unicode) [text-based](https://drafts.csswg.org/css-syntax/#intro), whereas DOM-CSS / CSSOM (the rule management system) is [object-based](https://drafts.csswg.org/cssom/#introduction).
 
 ### At-rule syntax
 
@@ -123,23 +123,23 @@ Combinators are selectors that establish a relationship between two or more simp
 
 ### Values
 
-- [Actual value](/en-US/docs/Web/CSS/CSS_cascade/actual_value)
-- [Computed value](/en-US/docs/Web/CSS/CSS_cascade/computed_value)
-- [Initial value](/en-US/docs/Web/CSS/CSS_cascade/initial_value)
-- [Resolved value](/en-US/docs/Web/CSS/resolved_value)
-- [Specified value](/en-US/docs/Web/CSS/CSS_cascade/specified_value)
-- [Used value](/en-US/docs/Web/CSS/CSS_cascade/used_value)
+- [Actual value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value)
+- [Computed value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value)
+- [Initial value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value)
+- [Resolved value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#resolved_value)
+- [Specified value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#specified_value)
+- [Used value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value)
 
 ### Layout
 
 - [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
 - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - [Containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block)
-- [Layout mode](/en-US/docs/Web/CSS/Layout_mode)
+- [Layout mode](/en-US/docs/Glossary/Layout_mode)
 - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-- [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+- {{glossary("Replaced elements")}}
 - [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
-- [Visual formatting model](/en-US/docs/Web/CSS/Visual_formatting_model)
+- [Visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
 
 ## DOM-CSS / CSSOM
 
@@ -167,4 +167,4 @@ Combinators are selectors that establish a relationship between two or more simp
 
 ## External Links
 
-- [CSS Indices (w3.org)](https://www.w3.org/TR/CSS/#indices)
+- [CSS Indices (w3.org)](https://www.w3.org/TR/css/#indices)

@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.reduce()
+short-title: reduce()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.reduce
@@ -11,7 +12,7 @@ The **`reduce()`** method of {{jsxref("Array")}} instances executes a user-suppl
 
 The first time that the callback is run there is no "return value of the previous calculation". If supplied, an initial value may be used in its place. Otherwise the array element at index 0 is used as the initial value and iteration starts from the next element (index 1 instead of index 0).
 
-{{InteractiveExample("JavaScript Demo: Array.reduce()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.reduce()")}}
 
 ```js interactive-example
 const array1 = [1, 2, 3, 4];

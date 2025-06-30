@@ -6,7 +6,7 @@ page-type: javascript-error
 
 {{jsSidebar("Errors")}}
 
-The JavaScript exception "getting private setter-only property" occurs when reading the value of a [private property](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) for which only a [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set) is defined.
+The JavaScript exception "getting private setter-only property" occurs when reading the value of a [private element](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) for which only a [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set) is defined.
 
 ## Message
 
@@ -22,11 +22,11 @@ TypeError: Trying to access an undefined private getter (Safari)
 
 ## What went wrong?
 
-There is an attempt to get the value of a private property for which only a [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set) is specified. Unlike normal objects, where an undefined getter just means the property would always return undefined, for private properties, this is an error.
+There is an attempt to get the value of a private element for which only a [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set) is specified. Unlike normal objects, where an undefined getter just means the property would always return undefined, for private elements, this is an error.
 
 ## Examples
 
-### Private property with no getter
+### Private element with no getter
 
 Here, `#name` has no getter, so trying to read it using `this.#name` will throw an error.
 
@@ -43,9 +43,9 @@ const person = new Person();
 console.log(person.name);
 ```
 
-It's not usual for a private property to have a setter without a getter. Either add a getter or refactor your program so the setter can be removed too.
+It's not usual for a private element to have a setter without a getter. Either add a getter or refactor your program so the setter can be removed too.
 
 ## See also
 
-- [Private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties)
+- [Private elements](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements)
 - [`set`](/en-US/docs/Web/JavaScript/Reference/Functions/set)

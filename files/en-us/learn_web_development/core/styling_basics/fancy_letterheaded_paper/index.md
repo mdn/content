@@ -1,10 +1,10 @@
 ---
 title: "Challenge: Creating fancy letterheaded paper"
+short-title: "Challenge: Fancy letterhead"
 slug: Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension", "Learn_web_development/Core/Styling_basics/Cool-looking_box", "Learn_web_development/Core/Styling_basics")}}
 
@@ -31,7 +31,6 @@ You have been given the files needed to create a letterheaded paper template. Yo
 
 - Apply the CSS to the HTML.
 - Add a background declaration to the letter that:
-
   - Fixes the top image to the top of the letter
   - Fixes the bottom image to the bottom of the letter
   - Adds a semi-transparent gradient over the top of both of the previous backgrounds that gives the letter a bit of texture. Make it slightly dark right near the top and bottom, but completely transparent for a large part of the center.

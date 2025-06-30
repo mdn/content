@@ -1,5 +1,6 @@
 ---
 title: Iterator.from()
+short-title: from()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/from
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Iterator.from

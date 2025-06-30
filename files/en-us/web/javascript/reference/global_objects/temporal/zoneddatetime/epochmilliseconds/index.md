@@ -1,5 +1,6 @@
 ---
 title: Temporal.ZonedDateTime.prototype.epochMilliseconds
+short-title: epochMilliseconds
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/epochMilliseconds
 page-type: javascript-instance-accessor-property
 status:
@@ -40,7 +41,7 @@ Alternatively, use the {{jsxref("Temporal/ZonedDateTime/ZonedDateTime", "Tempora
 
 ```js
 const epochMilliseconds = 1627821296789;
-const epochNanoseconds = BigInt(epochMilliseconds) * 1e6n;
+const epochNanoseconds = BigInt(epochMilliseconds) * 1_000_000n;
 const zdt = new Temporal.ZonedDateTime(epochNanoseconds, "UTC");
 console.log(zdt.toString()); // 2021-08-01T12:34:56.789+00:00[UTC]
 ```

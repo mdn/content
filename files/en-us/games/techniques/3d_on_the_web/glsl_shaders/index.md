@@ -1,5 +1,5 @@
 ---
-title: GLSL Shaders
+title: GLSL shaders
 slug: Games/Techniques/3D_on_the_web/GLSL_Shaders
 page-type: guide
 ---
@@ -50,14 +50,14 @@ Here's the HTML structure we will use.
     <meta charset="utf-8" />
     <title>MDN Games: Shaders demo</title>
     <style>
-      body {
+      html,
+      body,
+      canvas {
         margin: 0;
         padding: 0;
-        font-size: 0;
-      }
-      canvas {
         width: 100%;
         height: 100%;
+        font-size: 0;
       }
     </style>
     <script src="three.min.js"></script>

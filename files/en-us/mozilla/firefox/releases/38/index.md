@@ -31,7 +31,6 @@ Highlights:
 - The predefined style {{cssxref("list-style-type", "ethiopic-numeric")}} now uses a space, instead of a dot, as the suffix to match a recent change to the spec ([Firefox bug 1120721](https://bugzil.la/1120721)).
 - CSS transitions on generated content (with {{cssxref("::before")}} and {{cssxref("::after")}}) on both an inline and the block that splits them now start as expected by the specification ([Firefox bug 1110277](https://bugzil.la/1110277)).
 - The implementation of CSS Logical Properties made big progress. The following properties are available behind the `layout.css.vertical-text.enabled` flag (`false` by default):
-
   - Direction-independent equivalents of {{cssxref("width")}} and {{cssxref("height")}}: {{cssxref("block-size")}} and {{cssxref("inline-size")}} ([Firefox bug 1117983](https://bugzil.la/1117983)).
   - Direction-independent equivalents of {{cssxref("min-width")}} and {{cssxref("min-height")}}: {{cssxref("min-block-size")}} and {{cssxref("min-inline-size")}} ([Firefox bug 1117983](https://bugzil.la/1117983)).
   - Direction-independent equivalents of {{cssxref("max-width")}} and {{cssxref("max-height")}}: {{cssxref("max-block-size")}} and {{cssxref("max-block-size")}} ([Firefox bug 1117983](https://bugzil.la/1117983)).
@@ -54,7 +53,6 @@ Highlights:
 - {{jsxref("Functions/set", "Setter")}} with a {{jsxref("Functions/rest_parameters", "rest parameter", "", 1)}} is now a {{jsxref("SyntaxError")}} ([Firefox bug 1089632](https://bugzil.la/1089632)).
 - The {{jsxref("Function/name", "name")}} property of functions is configurable now ([Firefox bug 1084019](https://bugzil.la/1084019)).
 - Several {{jsxref("Array")}} methods have been implemented for [typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) as well:
-
   - The {{jsxref("TypedArray.of", "of()")}} and {{jsxref("TypedArray.from", "from()")}} methods ([Firefox bug 896608](https://bugzil.la/896608)).
   - The {{jsxref("TypedArray.forEach", "forEach()")}} method ([Firefox bug 1107645](https://bugzil.la/1107645)).
   - The {{jsxref("TypedArray.filter", "filter()")}} and {{jsxref("TypedArray.map", "map()")}} methods ([Firefox bug 1121936](https://bugzil.la/1121936)).
@@ -66,9 +64,9 @@ Highlights:
 - Warning is shown when {{jsxref("Map")}}/{{jsxref("Set")}}/{{jsxref("WeakMap")}} constructor is called without {{jsxref("Operators/new", "new")}} ([Firefox bug 1108930](https://bugzil.la/1108930)).
 - The {{jsxref("WeakMap.get", "get")}}, {{jsxref("WeakMap.has", "has")}}, and {{jsxref("WeakMap.delete", "delete")}} methods of {{jsxref("WeakMap")}} objects no longer throw when the `key` parameter is not an object ([Firefox bug 1127827](https://bugzil.la/1127827)).
 - The optional and non-standard second `fallback` parameter for {{jsxref("WeakMap.prototype.get()")}} has been removed ([Firefox bug 1127827](https://bugzil.la/1127827)).
-- When defining a [generator method](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions), "`set`" and "`get`" are no longer invalid names ([Firefox bug 1073809](https://bugzil.la/1073809)).
+- When defining a [generator method](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions), `set` and `get` are no longer invalid names ([Firefox bug 1073809](https://bugzil.la/1073809)).
 - {{jsxref("RegExp.prototype.source")}} now returns "(?:)" instead of an empty string for empty regular expressions ([Firefox bug 1130798](https://bugzil.la/1130798)).
-- {{jsxref("RegExp.prototype.source")}} and {{jsxref("RegExp.prototype.toString()")}} now escape regular expression patterns properly (e.g. line terminators, "\n") ([Firefox bug 1130860](https://bugzil.la/1130860)).
+- {{jsxref("RegExp.prototype.source")}} and {{jsxref("RegExp.prototype.toString()")}} now escape regular expression patterns properly (e.g., line terminators, "\n") ([Firefox bug 1130860](https://bugzil.la/1130860)).
 - The {{jsxref("Regexp")}} {{jsxref("Regexp.global", "global")}}, {{jsxref("Regexp.ignoreCase", "ignoreCase")}}, {{jsxref("Regexp.multiline", "multiline")}}, and {{jsxref("Regexp.sticky", "sticky")}} properties are now prototype accessor properties rather than own data properties of `RegExp` instances ([Firefox bug 1120169](https://bugzil.la/1120169)).
 - The {{jsxref("RegExp.prototype.source")}} property is now prototype accessor property rather than own data property of `RegExp` instances ([Firefox bug 1120169](https://bugzil.la/1120169)). Available only in non-Release version, due to [Firefox bug 1150297](https://bugzil.la/1150297).
 - {{jsxref("Function.prototype.toString()")}} now throws for {{jsxref("Proxy")}} objects ([Firefox bug 1100936](https://bugzil.la/1100936)).
@@ -107,7 +105,7 @@ _No change._
 
 ## Security
 
-- In Firefox, the [`autocomplete`](/en-US/docs/Web/HTML/Element/input#autocomplete)`=false` attribute is now ignored when dealing with a login form ([Firefox bug 1025703](https://bugzil.la/1025703)). This is intended to encourage the use of more secure passwords by allowing password manager tools to work more reliably.
+- In Firefox, the [`autocomplete=false`](/en-US/docs/Web/HTML/Reference/Elements/input#autocomplete) attribute is now ignored when dealing with a login form ([Firefox bug 1025703](https://bugzil.la/1025703)). This is intended to encourage the use of more secure passwords by allowing password manager tools to work more reliably.
 - RC4 is now disabled when using TLS, except for a few specifically allowed websites. This whitelist is an interim measure until those sites are fixed ([Firefox bug 1124039](https://bugzil.la/1124039)). This fallback is controlled by the `security.tls.unrestricted_rc4_fallback` preference, `true` by default for the moment ([Firefox bug 1138882](https://bugzil.la/1138882)).
 - Websites needing to fall back to an insecure version of TLS in order to work are now in a hardcoded whitelist which will shrink over time ([Firefox bug 1114816](https://bugzil.la/1114816)). The whitelist can be disabled by setting `security.tls.insecure_fallback_hosts.use_static_list` to `false`.
 

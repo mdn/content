@@ -69,11 +69,11 @@ Together, they add up to 16 possible combinations. To divide the reference more 
   - : Public instance field
 - [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static)
   - : Public static method, getter, setter, and field
-- [Private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties)
+- [Private elements](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements)
   - : Everything that's private
 
 > [!NOTE]
-> Private properties have the restriction that all property names declared in the same class must be unique. All other public properties do not have this restriction — you can have multiple public properties with the same name, and the last one overwrites the others. This is the same behavior as in [object initializers](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#duplicate_property_names).
+> Private elements have the restriction that all private names declared in the same class must be unique. All other public properties do not have this restriction — you can have multiple public properties with the same name, and the last one overwrites the others. This is the same behavior as in [object initializers](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#duplicate_property_names).
 
 In addition, there are two special class element syntaxes: [`constructor`](#constructor) and [static initialization blocks](#static_initialization_blocks), with their own references.
 
@@ -180,13 +180,13 @@ class Rectangle {
 }
 ```
 
-Class fields are similar to object properties, not variables, so we don't use keywords such as `const` to declare them. In JavaScript, [private properties](#private_properties_2) use a special identifier syntax, so modifier keywords like `public` and `private` should not be used either.
+Class fields are similar to object properties, not variables, so we don't use keywords such as `const` to declare them. In JavaScript, [private elements](#private_elements) use a special identifier syntax, so modifier keywords like `public` and `private` should not be used either.
 
 As seen above, the fields can be declared with or without a default value. Fields without default values default to `undefined`. By declaring fields up-front, class definitions become more self-documenting, and the fields are always present, which help with optimizations.
 
 See [public class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) for more information.
 
-#### Private properties
+#### Private elements
 
 Using private fields, the definition can be refined as below.
 
@@ -206,7 +206,9 @@ By defining things that are not visible outside of the class, you ensure that yo
 
 Private fields can only be declared up-front in a field declaration. They cannot be created later through assigning to them, the way that normal properties can.
 
-For more information, see [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties).
+Private methods and accessors can also be defined using the same syntax as their public counterparts, but with the identifier starting with `#`.
+
+For more information, see [private elements](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements).
 
 ### Inheritance
 

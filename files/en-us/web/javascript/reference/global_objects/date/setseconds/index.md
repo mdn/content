@@ -1,5 +1,6 @@
 ---
 title: Date.prototype.setSeconds()
+short-title: setSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setSeconds
@@ -9,7 +10,7 @@ browser-compat: javascript.builtins.Date.setSeconds
 
 The **`setSeconds()`** method of {{jsxref("Date")}} instances changes the seconds and/or milliseconds for this date according to local time.
 
-{{InteractiveExample("JavaScript Demo: Date.setSeconds()")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.setSeconds()")}}
 
 ```js interactive-example
 const event = new Date("August 19, 1975 23:15:30");

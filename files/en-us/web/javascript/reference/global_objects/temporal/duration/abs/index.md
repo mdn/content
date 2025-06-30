@@ -1,5 +1,6 @@
 ---
 title: Temporal.Duration.prototype.abs()
+short-title: abs()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/abs
 page-type: javascript-instance-method
 status:

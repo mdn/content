@@ -50,10 +50,7 @@ font-smooth: unset;
 
 ## Formal syntax
 
-```plain
-font-smooth =
-  auto | never | always | <absolute-size> | <length>
-```
+{{CSSSyntaxRaw(`font-smooth = auto | never | always | <absolute-size> | <length>`)}}
 
 ## Examples
 
@@ -106,5 +103,5 @@ Not part of any standard.
 
 ## See also
 
-- [Please Stop "Fixing" Font Smoothing – UsabilityPost](https://usabilitypost.com/2012/11/05/stop-fixing-font-smoothing/)
-- [Laissez-faire font smoothing and anti-aliasing](https://www.zachleat.com/web/font-smooth/)
+- [Please Stop "Fixing" Font Smoothing](https://usabilitypost.com/2012/11/05/stop-fixing-font-smoothing/) by Dmitry Fadeyev (2012)
+- [Laissez-faire font smoothing and anti-aliasing](https://www.zachleat.com/web/font-smooth/) by Zach Leatherman (2017)

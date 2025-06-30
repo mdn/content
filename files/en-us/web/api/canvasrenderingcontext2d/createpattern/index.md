@@ -23,10 +23,8 @@ createPattern(image, repetition)
 ### Parameters
 
 - `image`
-
   - : An image to be used as the pattern's image.
     It can be any of the following:
-
     - {{domxref("HTMLImageElement")}} ({{HTMLElement("img")}})
     - {{domxref("SVGImageElement")}} ({{SVGElement("image")}})
     - {{domxref("HTMLVideoElement")}} ({{HTMLElement("video")}}, by using the capture of the video)
@@ -36,10 +34,8 @@ createPattern(image, repetition)
     - {{domxref("VideoFrame")}}
 
 - `repetition`
-
   - : A string indicating how to repeat the pattern's image.
     Possible values are:
-
     - `"repeat"` (both directions)
     - `"repeat-x"` (horizontal only)
     - `"repeat-y"` (vertical only)

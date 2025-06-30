@@ -32,7 +32,7 @@ Let's start by looking at the key bits of the HTML. There's a little more than t
 </div>
 ```
 
-We present our main interface in two columns. On the left is a start button and a {{HTMLElement("video")}} element which displays the video preview; this is the video the user's camera sees. Note that the [`autoplay`](/en-US/docs/Web/HTML/Element/video#autoplay) attribute is used so that as soon as the stream starts to arrive from the camera, it immediately gets displayed, and the [`muted`](/en-US/docs/Web/HTML/Element/video#muted) attribute is specified to ensure that the sound from the user's microphone isn't output to their speakers, causing an ugly feedback loop.
+We present our main interface in two columns. On the left is a start button and a {{HTMLElement("video")}} element which displays the video preview; this is the video the user's camera sees. Note that the [`autoplay`](/en-US/docs/Web/HTML/Reference/Elements/video#autoplay) attribute is used so that as soon as the stream starts to arrive from the camera, it immediately gets displayed, and the [`muted`](/en-US/docs/Web/HTML/Reference/Elements/video#muted) attribute is specified to ensure that the sound from the user's microphone isn't output to their speakers, causing an ugly feedback loop.
 
 ```html
 <div class="right">
@@ -43,7 +43,7 @@ We present our main interface in two columns. On the left is a start button and 
 </div>
 ```
 
-On the right we see a stop button and the `<video>` element which will be used to play back the recorded video. Notice that the playback panel doesn't have autoplay set (so the playback doesn't start as soon as media arrives), and it has [`controls`](/en-US/docs/Web/HTML/Element/video#controls) set, which tells it to show the user controls to play, pause, and so forth.
+On the right we see a stop button and the `<video>` element which will be used to play back the recorded video. Notice that the playback panel doesn't have autoplay set (so the playback doesn't start as soon as media arrives), and it has [`controls`](/en-US/docs/Web/HTML/Reference/Elements/video#controls) set, which tells it to show the user controls to play, pause, and so forth.
 
 Below the playback element is a button for downloading the recorded video.
 
@@ -211,7 +211,9 @@ startButton.addEventListener(
         downloadButton.href = stream;
         preview.captureStream =
           preview.captureStream || preview.mozCaptureStream;
-        return new Promise((resolve) => (preview.onplaying = resolve));
+        return new Promise((resolve) => {
+          preview.onplaying = resolve;
+        });
       })
       .then(() => startRecording(preview.captureStream(), recordingTimeMS))
       .then((recordedChunks) => {
@@ -241,9 +243,9 @@ When a {{domxref("Element/click_event", "click")}} event occurs, here's what hap
 - {{domxref("MediaDevices.getUserMedia")}} is called to request a new {{domxref("MediaStream")}} that has both video and audio tracks. This is the stream we'll record.
 - When the Promise returned by `getUserMedia()` is resolved, the preview {{HTMLElement("video")}} element's {{domxref("HTMLMediaElement.srcObject","srcObject")}} property is set to be the input stream, which causes the video being captured by the user's camera to be displayed in the preview box. Since the `<video>` element is muted, the audio won't play. The "Download" button's link is then set to refer to the stream as well. Then, we arrange for `preview.captureStream()` to call `preview.mozCaptureStream()` so that our code will work on Firefox, on which the {{domxref("HTMLMediaElement.captureStream()")}} method is prefixed. Then a new {{jsxref("Promise")}} which resolves when the preview video starts to play is created and returned.
 - When the preview video begins to play, we know there's media to record, so we respond by calling the [`startRecording()`](#starting_media_recording) function we created earlier, passing in the preview video stream (as the source media to be recorded) and `recordingTimeMS` as the number of milliseconds of media to record. As mentioned before, `startRecording()` returns a {{jsxref("Promise")}} whose resolution handler is called (receiving as input an array of {{domxref("Blob")}} objects containing the chunks of recorded media data) once recording has completed.
-- The recording process's resolution handler receives as input an array of media data `Blob`s locally known as `recordedChunks`. The first thing we do is merge the chunks into a single {{domxref("Blob")}} whose MIME type is `"video/webm"` by taking advantage of the fact that the {{domxref("Blob.Blob", "Blob()")}} constructor concatenates arrays of objects into one object. Then {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} is used to create a URL that references the blob; this is then made the value of the recorded video playback element's [`src`](/en-US/docs/Web/HTML/Element/video#src) attribute (so that you can play the video from the blob) as well as the target of the download button's link.
+- The recording process's resolution handler receives as input an array of media data `Blob`s locally known as `recordedChunks`. The first thing we do is merge the chunks into a single {{domxref("Blob")}} whose MIME type is `"video/webm"` by taking advantage of the fact that the {{domxref("Blob.Blob", "Blob()")}} constructor concatenates arrays of objects into one object. Then {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} is used to create a URL that references the blob; this is then made the value of the recorded video playback element's [`src`](/en-US/docs/Web/HTML/Reference/Elements/video#src) attribute (so that you can play the video from the blob) as well as the target of the download button's link.
 
-  Then the download button's [`download`](/en-US/docs/Web/HTML/Element/a#download) attribute is set. While the `download` attribute can be a Boolean, you can also set it to a string to use as the name for the downloaded file. So by setting the download link's `download` attribute to "RecordedVideo.webm", we tell the browser that clicking the button should download a file named `"RecordedVideo.webm"` whose contents are the recorded video.
+  Then the download button's [`download`](/en-US/docs/Web/HTML/Reference/Elements/a#download) attribute is set. While the `download` attribute can be a Boolean, you can also set it to a string to use as the name for the downloaded file. So by setting the download link's `download` attribute to "RecordedVideo.webm", we tell the browser that clicking the button should download a file named `"RecordedVideo.webm"` whose contents are the recorded video.
 
 - The size and type of the recorded media are output to the log area below the two videos and the download button.
 - The `catch()` for all the `Promise`s outputs the error to the logging area by calling our `log()` function.

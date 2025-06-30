@@ -1,10 +1,10 @@
 ---
 title: "Challenge: Fundamental layout comprehension"
+short-title: "Challenge: Fundamental layout"
 slug: Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/Scripting", "Learn_web_development/Core/CSS_layout")}}
 
@@ -12,7 +12,7 @@ If you have worked through this module then you will have already covered the ba
 
 ## Starting point
 
-You can download the HTML, CSS, and a set of six images [here](https://github.com/mdn/learning-area/tree/main/css/css-layout/fundamental-layout-comprehension).
+You can download the HTML, CSS, and a set of six images [in our learning-area repo](https://github.com/mdn/learning-area/tree/main/css/css-layout/fundamental-layout-comprehension).
 
 Save the HTML document and stylesheet into a directory on your computer, and add the images into a folder named `images`. Opening the `index.html` file in a browser should give you a page with basic styling but no layout, which should look something like the image below.
 

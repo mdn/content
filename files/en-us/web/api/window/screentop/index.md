@@ -12,7 +12,8 @@ The **`Window.screenTop`** read-only property returns the
 vertical distance, in CSS pixels, from the top border of the user's browser viewport to
 the top side of the screen.
 
-> **Note:** `screenTop` is an alias of the older
+> [!NOTE]
+> `screenTop` is an alias of the older
 > {{domxref("Window.screenY")}} property. `screenTop` was originally
 > supported only in IE but was introduced everywhere due to popularity.
 

@@ -2,9 +2,9 @@
 title: Starting our Svelte to-do list app
 slug: Learn_web_development/Core/Frameworks_libraries/Svelte_Todo_list_beginning
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started","Learn_web_development/Core/Frameworks_libraries/Svelte_variables_props", "Learn_web_development/Core/Frameworks_libraries")}}
 
 Now that we have a basic understanding of how things work in Svelte, we can start building our example app: a to-do list. In this article we will first have a look at the desired functionality of our app, and then we'll create a `Todos.svelte` component and put static markup and styles in place, leaving everything ready to start developing our to-do list app features, which we'll go on to in subsequent articles.
@@ -354,28 +354,32 @@ You can tell Svelte to ignore this warning for the next block of markup with a [
 If you want to globally disable this warning, you can add this `onwarn` handler to your `rollup.config.js` file inside the configuration for the `Svelte` plugin, like this:
 
 ```js
-plugins: [
-  svelte({
-    dev: !production,
-    css: (css) => {
-      css.write("public/build/bundle.css");
-    },
-    // Warnings are normally passed straight to Rollup. You can
-    // optionally handle them here, for example to squelch
-    // warnings with a particular code
-    onwarn: (warning, handler) => {
-      // e.g. I don't care about screen readers -> please DON'T DO THIS!!!
-      if (warning.code === "a11y-missing-attribute") {
-        return;
-      }
-
-      // let Rollup handle all other warnings normally
-      handler(warning);
-    },
-  }),
-
+export default {
   // …
-];
+  plugins: [
+    svelte({
+      dev: !production,
+      css(css) {
+        css.write("public/build/bundle.css");
+      },
+      // Warnings are normally passed straight to Rollup. You can
+      // optionally handle them here, for example to squelch
+      // warnings with a particular code
+      onwarn(warning, handler) {
+        // e.g. I don't care about screen readers -> please DON'T DO THIS!!!
+        if (warning.code === "a11y-missing-attribute") {
+          return;
+        }
+
+        // let Rollup handle all other warnings normally
+        handler(warning);
+      },
+    }),
+
+    // …
+  ],
+  // …
+};
 ```
 
 By design, these warnings are implemented in the compiler itself, and not as a plug-in that you may choose to add to your project. The idea is to check for a11y issues in your markup by default and let you opt out of specific warnings.
@@ -518,7 +522,6 @@ body {
   height: 1px;
   width: 1px;
   overflow: hidden;
-  clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
   white-space: nowrap;
 }
@@ -604,7 +607,7 @@ body {
 }
 .filters {
   width: 100%;
-  margin: unset auto;
+  margin: unset;
 }
 /* Todo item styles */
 .todo {

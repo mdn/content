@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainDateTime.compare()
+short-title: compare()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime/compare
 page-type: javascript-static-method
 status:
@@ -26,7 +27,7 @@ Temporal.PlainDateTime.compare(dateTime1, dateTime2)
 
 ### Return value
 
-Returns `-1` if `dateTime1` comes before `dateTime2`, `0` if they are the same, and `1` if `dateTime2` comes after. They are compared by their underlying date and time values, ignoring their calendars.
+Returns `-1` if `dateTime1` comes before `dateTime2`, `0` if they are the same, and `1` if `dateTime1` comes after `dateTime2`. They are compared by their underlying date and time values, ignoring their calendars.
 
 ## Examples
 
@@ -49,7 +50,7 @@ const dt2 = Temporal.PlainDateTime.from({
   year: 2021,
   month: 8,
   day: 1,
-  calendar: "islamic",
+  calendar: "islamic-umalqura",
 });
 const dt3 = Temporal.PlainDateTime.from({
   year: 2021,
@@ -58,7 +59,7 @@ const dt3 = Temporal.PlainDateTime.from({
   calendar: "hebrew",
 });
 console.log(dt1.toString()); // "2021-08-01T00:00:00"
-console.log(dt2.toString()); // "2582-12-17T00:00:00[u-ca=islamic]"
+console.log(dt2.toString()); // "2582-12-17T00:00:00[u-ca=islamic-umalqura]"
 console.log(dt3.toString()); // "-001739-04-06T00:00:00[u-ca=hebrew]"
 console.log(Temporal.PlainDateTime.compare(dt1, dt2)); // -1
 console.log(Temporal.PlainDateTime.compare(dt1, dt3)); // 1

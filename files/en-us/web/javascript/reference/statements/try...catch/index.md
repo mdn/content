@@ -9,7 +9,7 @@ browser-compat: javascript.statements.try_catch
 
 The **`try...catch`** statement is comprised of a `try` block and either a `catch` block, a `finally` block, or both. The code in the `try` block is executed first, and if it throws an exception, the code in the `catch` block will be executed. The code in the `finally` block will always be executed before control flow exits the entire construct.
 
-{{InteractiveExample("JavaScript Demo: Statement - Try...Catch")}}
+{{InteractiveExample("JavaScript Demo: try...catch statement")}}
 
 ```js interactive-example
 try {
@@ -163,7 +163,7 @@ When a `catch` block is used, the `catch` block is executed when any exception i
 
 ```js
 try {
-  throw "myException"; // generates an exception
+  throw new Error("My exception"); // generates an exception
 } catch (e) {
   // statements to handle any exceptions
   logMyErrors(e); // pass exception object to error handler

@@ -1,5 +1,6 @@
 ---
 title: Date.prototype.setUTCMilliseconds()
+short-title: setUTCMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMilliseconds
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setUTCMilliseconds
@@ -9,7 +10,7 @@ browser-compat: javascript.builtins.Date.setUTCMilliseconds
 
 The **`setUTCMilliseconds()`** method of {{jsxref("Date")}} instances changes the milliseconds for this date according to universal time.
 
-{{InteractiveExample("JavaScript Demo: Date.setUTCMilliseconds()")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.setUTCMilliseconds()")}}
 
 ```js interactive-example
 const date1 = new Date("2018-01-24T12:38:29.069Z");

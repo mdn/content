@@ -135,7 +135,7 @@ Content scripts and background scripts can't directly access each other's state.
       <td>
         <code
           ><a
-            href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime#sendmessage()"
+            href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage"
             >browser.runtime.sendMessage()</a
           ></code
         >
@@ -162,7 +162,7 @@ Content scripts and background scripts can't directly access each other's state.
       <td>
         <code
           ><a
-            href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime#onmessage"
+            href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage"
             >browser.runtime.onMessage</a
           ></code
         >
@@ -253,13 +253,11 @@ browser.runtime.sendMessage({
 - [`runtime.sendMessage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage)
 - [`runtime.onMessage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)
 - Examples using `content_scripts`:
-
   - [borderify](https://github.com/mdn/webextensions-examples/tree/main/borderify)
   - [emoji-substitution](https://github.com/mdn/webextensions-examples/tree/main/emoji-substitution)
   - [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n)
   - [page-to-extension-messaging](https://github.com/mdn/webextensions-examples/tree/main/page-to-extension-messaging)
 
 - Examples using `tabs.executeScript()`:
-
   - [beastify](https://github.com/mdn/webextensions-examples/tree/main/beastify)
   - [context-menu-copy-link-with-types](https://github.com/mdn/webextensions-examples/tree/main/context-menu-copy-link-with-types)

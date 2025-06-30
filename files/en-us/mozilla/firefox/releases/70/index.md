@@ -17,7 +17,7 @@ This article provides information about the changes in Firefox 70 that will affe
 - In the [Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) you can now set breakpoints for [DOM Mutation](https://firefox-source-docs.mozilla.org/devtools-user/debugger/break_on_dom_mutation/index.html), so execution will pause when a node or its attributes are changed or when a node is removed from the DOM ([Firefox bug 1576219](https://bugzil.la/1576219)).
 - The Debugger now shows an overlay on the page when it is paused, with basic stepping buttons to let you step and continue ([Firefox bug 1574646](https://bugzil.la/1574646)).
 - The Debugger now shows sources that already got discarded by the engine (usually scripts that execute once during page load), so you can properly set breakpoints to debug when they execute next ([Firefox bug 1572280](https://bugzil.la/1572280)).
-- The Debugger's [scopes panel](https://firefox-source-docs.mozilla.org/devtools-user/debugger/using_the_debugger_map_scopes_feature/index.html) grouping has been simplified, consolidating additional scopes previously shown above the top level function (e.g. blocks created by [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with), or [`if`/`else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)) ([Firefox bug 1448166](https://bugzil.la/1448166))
+- The Debugger's [scopes panel](https://firefox-source-docs.mozilla.org/devtools-user/debugger/using_the_debugger_map_scopes_feature/index.html) grouping has been simplified, consolidating additional scopes previously shown above the top level function (e.g., blocks created by [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with), or [`if`/`else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)) ([Firefox bug 1448166](https://bugzil.la/1448166))
 - The Debugger now retains the currently selected and expanded variables in the [scopes panel](https://firefox-source-docs.mozilla.org/devtools-user/debugger/using_the_debugger_map_scopes_feature/index.html) while stepping ([Firefox bug 1405402](https://bugzil.la/1405402)).
 - The Debugger now handles stepping over async functions correctly, making [asynchronous function](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) debugging easier ([Firefox bug 1570178](https://bugzil.la/1570178)).
 - When debugging in [Container sessions](https://support.mozilla.org/en-US/kb/containers) (useful for testing different logins), the sources in the debugger are now shown correctly ([Firefox bug 1375036](https://bugzil.la/1375036)).
@@ -33,7 +33,6 @@ This article provides information about the changes in Firefox 70 that will affe
 ### HTML
 
 - Firefox can now suggest securely-generated passwords to the user in the following situations:
-
   - An {{HTMLelement("input")}} element has the `autocomplete="new-password"` attribute value.
   - The user opens the context menu on any password input element, even if it is not intended for new passwords.
 
@@ -42,7 +41,6 @@ This article provides information about the changes in Firefox 70 that will affe
 - Opacity values like for {{cssxref("opacity")}} or {{SVGAttr("stop-opacity")}} can now be percentages ([Firefox bug 1562086](https://bugzil.la/1562086)).
 - {{cssxref("grid-auto-columns")}} and {{cssxref("grid-auto-rows")}} now accept multiple track-size values ([Firefox bug 1339672](https://bugzil.la/1339672)).
 - A number of text-related CSS properties have been enabled by default ([Firefox bug 1573631](https://bugzil.la/1573631)):
-
   - {{cssxref("text-decoration-thickness")}}.
   - {{cssxref("text-underline-offset")}}.
   - {{cssxref("text-decoration-skip-ink")}}. The default value is `auto`, which means that by default underlines and overlines are now interrupted where they would otherwise cross over a {{Glossary("glyph")}}.
@@ -74,7 +72,7 @@ This article provides information about the changes in Firefox 70 that will affe
 - [Numeric separators](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_separators) are now supported ([Firefox bug 1435818](https://bugzil.la/1435818)).
 - The {{jsxref("Intl/RelativeTimeFormat/formatToParts", "Intl.RelativeTimeFormat.formatToParts()")}} method has been implemented ([Firefox bug 1473229](https://bugzil.la/1473229)).
 - The {{jsxref("BigInt.prototype.toLocaleString()")}} method has been updated to work with the `locales` and `options` parameters per the ECMAScript 402 Intl API. Also, {{jsxref("Intl/NumberFormat/format", "Intl.NumberFormat.format()")}} and {{jsxref("Intl/NumberFormat/formatToParts", "Intl.NumberFormat.formatToParts()")}} now accept {{jsxref("BigInt")}} values ([Firefox bug 1543677](https://bugzil.la/1543677)).
-- Per the latest ECMAScript specification, a leading zero is now never allowed for [BigInt literals](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#bigint_literal), making `08n` and `09n` invalid similar to the existing error when legacy octal numbers like `07n` are used. Always use a leading zero with the letter "o" (lowercase or uppercase) for octal `BigInt` numbers (i.e. `0o755n` instead of `0755n`). See [Firefox bug 1568619](https://bugzil.la/1568619).
+- Per the latest ECMAScript specification, a leading zero is now never allowed for [BigInt literals](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#bigint_literal), making `08n` and `09n` invalid similar to the existing error when legacy octal numbers like `07n` are used. Always use a leading zero with the letter "o" (lowercase or uppercase) for octal `BigInt` numbers (i.e., `0o755n` instead of `0755n`). See [Firefox bug 1568619](https://bugzil.la/1568619).
 - The Unicode extension key "nu" is now supported for the {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}} constructor and the {{jsxref("Intl/RelativeTimeFormat/resolvedOptions", "Intl.RelativeTimeFormat.resolvedOptions()")}} method now also returns `numberingSystem` ([Firefox bug 1521819](https://bugzil.la/1521819)).
 
 ### APIs
@@ -92,7 +90,6 @@ This article provides information about the changes in Firefox 70 that will affe
 - The {{domxref("RTCPeerConnection.setRemoteDescription()")}} method can now be called with no parameters. This is another "perfect negotiation" update ([Firefox bug 1568292](https://bugzil.la/1568292)).
 - {{domxref("MediaTrackSupportedConstraints.groupId")}} is now supported, and returns `true` since the {{domxref("MediaTrackConstraints.groupId")}} property is now supported ([Firefox bug 1561254](https://bugzil.la/1561254)).
 - Several new Web Audio API features have been implemented/updated:
-
   - {{domxref("AudioContext.getOutputTimestamp()")}} implemented ([Firefox bug 1324545](https://bugzil.la/1324545)).
   - {{domxref("AudioContext.baseLatency")}} and {{domxref("AudioContext.outputLatency")}} implemented ([Firefox bug 1324552](https://bugzil.la/1324552)).
   - {{domxref("MediaElementAudioSourceNode.mediaElement")}} and {{domxref("MediaStreamAudioSourceNode.mediaStream")}} implemented ([Firefox bug 1350973](https://bugzil.la/1350973)).
@@ -106,7 +103,7 @@ This article provides information about the changes in Firefox 70 that will affe
 
 - The default referrer policy for third-party tracking resources is now `strict-origin-when-cross-origin` when [Enhanced Tracking Protection](/en-US/docs/Web/Privacy/Guides/Firefox_tracking_protection) is turned on ([Firefox bug 1569996](https://bugzil.la/1569996)).
 - The size of the {{httpheader("Referer")}} request header is now limited to 4 KB (4,096 bytes). If an overly long referer exceeds the defined limit, only the origin part will be sent ([Firefox bug 1557346](https://bugzil.la/1557346)).
-- The [HTTP cache](/en-US/docs/Web/HTTP/Caching) is now partitioned per the top-level document's origin ([Firefox bug 1536058](https://bugzil.la/1536058)).
+- The [HTTP cache](/en-US/docs/Web/HTTP/Guides/Caching) is now partitioned per the top-level document's origin ([Firefox bug 1536058](https://bugzil.la/1536058)).
 
 #### Removals
 
@@ -124,7 +121,6 @@ This article provides information about the changes in Firefox 70 that will affe
 
 - Added a new parameter to the [`topSites.get()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/topSites/get) method that causes the method to return the list of pages that appear when the user opens a new tab ([Firefox bug 1568617](https://bugzil.la/1568617)).
 - The [`privacy.network`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy/network) property's `webRTCIPHandlingPolicy` sub-property's permitted values have been amended (in [Firefox bug 1452713](https://bugzil.la/1452713)) to match the behavior seen in Chrome as follows:
-
   - `disable_non_proxied_udp` previously prevented the use of WebRTC if no proxy was configured. Now a proxy is always used if one is configured, but otherwise a non-proxied connection is permitted.
   - `proxy_only` can be used to provide the old behavior; this has the effect of only allowing ICE negotiation over TURN on TCP using a proxy; no other connections are allowed.
 
@@ -136,7 +132,6 @@ The following [theme](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/th
 
 - `images` property `headerURL`, themes should now use `theme_frame`.
 - `colors` properties:
-
   - `accentcolor`, themes should now use `frame`.
   - `textcolor`, themes should now use `tab_background_text`.
 

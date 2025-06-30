@@ -1,5 +1,6 @@
 ---
 title: Date.now()
+short-title: now()
 slug: Web/JavaScript/Reference/Global_Objects/Date/now
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Date.now
@@ -19,9 +20,9 @@ console.log("starting timer...");
 // Expected output: "starting timer..."
 
 setTimeout(() => {
-  const millis = Date.now() - start;
+  const ms = Date.now() - start;
 
-  console.log(`seconds elapsed = ${Math.floor(millis / 1000)}`);
+  console.log(`seconds elapsed = ${Math.floor(ms / 1000)}`);
   // Expected output: "seconds elapsed = 2"
 }, 2000);
 ```

@@ -24,15 +24,15 @@ A string representing the local part of the element's qualified name.
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:svg="http://www.w3.org/2000/svg">
 <head>
-  <script type="application/javascript"><![CDATA[
-  function test() {
-    const text = document.getElementById('text');
-    const circle = document.getElementById('circle');
+  <script><![CDATA[
+function test() {
+  const text = document.getElementById("text");
+  const circle = document.getElementById("circle");
 
-    text.value = "<svg:circle> has:\n" +
-                 "localName = '" + circle.localName + "'\n" +
-                 "namespaceURI = '" + circle.namespaceURI + "'";
-  }
+  text.value = `<svg:circle> has:
+localName = "${circle.localName}"
+namespaceURI = "${circle.namespaceURI}"`;
+}
   ]]></script>
 </head>
 <body onload="test()">
@@ -51,16 +51,16 @@ A string representing the local part of the element's qualified name.
 The local name of a node is that part of the node's qualified name that comes after the
 colon. Qualified names are typically used in XML as part of the namespace(s) of the
 particular XML documents. For example, in the qualified name
-`ecomm:partners`, `partners` is the local name and
-`ecomm` is the prefix:
+`comm:partners`, `partners` is the local name and
+`comm` is the prefix:
 
 ```xml
-<ecomm:business id="soda_shop" type="brick_n_mortar" xmlns:ecomm="http://example.com/ecomm">
-  <ecomm:partners>
-    <ecomm:partner id="1001">Tony's Syrup Warehouse
-    </ecomm:partner>
-  </ecomm:partner>
-</ecomm:business>
+<comm:business id="soda_shop" type="brick_n_mortar" xmlns:comm="http://example.com/comm">
+  <comm:partners>
+    <comm:partner id="1001">Tony's Syrup Warehouse
+    </comm:partner>
+  </comm:partner>
+</comm:business>
 ```
 
 > [!NOTE]

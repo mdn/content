@@ -1,10 +1,10 @@
 ---
 title: Publishing your website
+short-title: Publishing
 slug: Learn_web_development/Getting_started/Your_first_website/Publishing_your_website
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Web_standards", "Learn_web_development/Getting_started/Your_first_website")}}
 
@@ -77,6 +77,7 @@ There are a number of web apps that emulate a website development environment, a
 
 Try playing with some of these examples to find out which one works best for you:
 
+- [Scrimba](https://scrimba.com/new?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
 - [JSFiddle](https://jsfiddle.net/)
 - [Glitch](https://glitch.com/)
 - [JS Bin](https://jsbin.com/)

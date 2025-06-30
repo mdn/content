@@ -39,6 +39,8 @@ white-space: collapse;
 white-space: preserve nowrap;
 ```
 
+<!-- cSpell:ignore stept -->
+
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div id="example-element">

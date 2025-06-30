@@ -118,7 +118,7 @@ The list below denotes the codecs most commonly used on the web and which contai
 
 There are two general categories of factors that affect the encoded audio which is output by an audio codec's encoder: details about the source audio's format and contents, and the codec and its configuration during the encoding process.
 
-For each factor that affects the encoded audio, there is a simple rule that is nearly always true: because the fidelity of digital audio is determined by the granularity and precision of the samples taken to convert it into a data stream, the more data used to represent the digital version of the audio, the more closely the sampled sound will match the source material.
+For each factor that affects the encoded audio, there is a rule that is nearly always true: because the fidelity of digital audio is determined by the granularity and precision of the samples taken to convert it into a data stream, the more data used to represent the digital version of the audio, the more closely the sampled sound will match the source material.
 
 ### The effect of source audio format on encoded audio output
 
@@ -718,7 +718,7 @@ The **G.711** specification, published by the International Telecommunications U
 
 G.711 is not a high fidelity codec, but is instead optimized to support a wide range of voice levels (from whisper to shout) while maintaining high intelligibility and low computational complexity. G.711 uses a logarithmic companding algorithm which provides 14 bits of dynamic range in an 8-bit sample. It uses a sampling rate of 8000 samples/sec, corresponding to a bitrate of 64000 bps.
 
-There are two flavors of G.711 which indicate the exact mathematical equation for the algorithm: [µ-law](https://en.wikipedia.org/wiki/M-law) (commonly used in North America and Japan) and [A-law](https://en.wikipedia.org/wiki/A-law) (common in the rest of the world). There is no substantial quality difference between the two laws, and it is simple to transcode audio from one to the other. Nevertheless, it is important to specify which law is in use in any replay application or file format. A-law audio will replay poorly if mistakenly uncompressed with the µ-law algorithm, and vice versa.
+There are two flavors of G.711 which indicate the exact mathematical equation for the algorithm: [µ-law](https://en.wikipedia.org/wiki/M-law) (commonly used in North America and Japan) and [A-law](https://en.wikipedia.org/wiki/A-law) (common in the rest of the world). There is no substantial quality difference between the two laws, and it is possible to transcode audio from one to the other. Nevertheless, it is important to specify which law is in use in any replay application or file format. A-law audio will replay poorly if mistakenly uncompressed with the µ-law algorithm, and vice versa.
 
 This codec is required to be supported by all [WebRTC](/en-US/docs/Web/API/WebRTC_API) solutions because it is simple, easy to implement, widely-used, and broadly compatible across all modern computing platforms.
 

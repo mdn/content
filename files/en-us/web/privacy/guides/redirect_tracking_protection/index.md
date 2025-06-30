@@ -21,10 +21,9 @@ Redirect trackers work by forcing you to make an imperceptible and momentary sto
 
 An origin will be cleared if it fulfills the following conditions:
 
-1. It has stored cookies or accessed other site storage (e.g. [localStorage](/en-US/docs/Web/API/Web_Storage_API), [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), or the [Cache API](/en-US/docs/Web/API/CacheStorage)) within the last 72 hours. Since cookies are per-host, we will clear both the `http` and `https` origin variants of a cookie host.
+1. It has stored cookies or accessed other site storage (e.g., [localStorage](/en-US/docs/Web/API/Web_Storage_API), [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), or the [Cache API](/en-US/docs/Web/API/CacheStorage)) within the last 72 hours. Since cookies are per-host, we will clear both the `http` and `https` origin variants of a cookie host.
 2. The origin is [classified as a tracker](/en-US/docs/Web/Privacy/Guides/Storage_Access_Policy#tracking_protection_explained) in our Tracking Protection list.
 3. No origin with the same base domain ({{Glossary("eTLD", "eTLD+1")}}) has a user-interaction permission.
-
    - This permission is granted to an origin for 45 days once a user interacts with a top-level document from that origin. "Interacting" includes scrolling.
    - Although this permission is stored on a per-origin level, we will check whether any origin with the same base domain has it, to avoid breaking sites with subdomains and a corresponding cookie setup.
 
@@ -38,9 +37,9 @@ Firefox will clear the [following data](https://searchfox.org/mozilla-central/re
 - DOM Quota Storage (localStorage, IndexedDB, ServiceWorkers, DOM Cache, etc.)
 - DOM Push notifications
 - Reporting API Reports
-- Security Settings (i.e. HSTS)
+- Security Settings (i.e., HSTS)
 - EME Media Plugin Data
-- Plugin Data (e.g. Flash)
+- Plugin Data (e.g., Flash)
 - Media Devices
 - Storage Access permissions granted to the origin
 - HTTP Authentication Tokens
@@ -49,7 +48,7 @@ Firefox will clear the [following data](https://searchfox.org/mozilla-central/re
 > [!NOTE]
 > Even though we're clearing all of this data, we currently only flag origins for clearing when they use cookies or other site storage.
 
-Storage clearing ignores origin attributes. This means that storage will be cleared across [containers](https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers) and isolated storage (i.e. from [First-Party Isolation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation)).
+Storage clearing ignores origin attributes. This means that storage will be cleared across [containers](https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers) and isolated storage (i.e., from [First-Party Isolation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation)).
 
 ## How frequently is data cleared?
 
@@ -82,4 +81,4 @@ WebKit first shipped redirect tracking protection in [ITP 2.0](https://webkit.or
 
 - The list of origins to be cleared in Firefox is based on our [tracking protection list](/en-US/docs/Web/Privacy/Guides/Storage_Access_Policy#tracking_protection_explained); WebKit relies on ITP's classification.
 - Firefox's definition of "interaction" includes user scrolling when visiting the origin as a first party; WebKit's does not.
-- Firefox will not clear data for an origin if it has received interaction as a first party in the last 45 days of calendar time; WebKit's interaction window is 30 days of browser use (e.g. days in which the user has had at least one interaction with Safari).
+- Firefox will not clear data for an origin if it has received interaction as a first party in the last 45 days of calendar time; WebKit's interaction window is 30 days of browser use (e.g., days in which the user has had at least one interaction with Safari).

@@ -59,9 +59,9 @@ First we implement a handler for the {{domxref("DedicatedWorkerGlobalScope.rtctr
 addEventListener("rtctransform", (event) => {
   let transform;
   // Select a transform based on passed options
-  if (event.transformer.options.name == "senderTransform")
+  if (event.transformer.options.name === "senderTransform")
     transform = createSenderTransform(); // A TransformStream
-  else if (event.transformer.options.name == "receiverTransform")
+  else if (event.transformer.options.name === "receiverTransform")
     transform = createReceiverTransform(); // A TransformStream
   else return;
 
@@ -97,7 +97,7 @@ The worker can then get the port from the `rtctransform` event fired at the glob
 let messagePort;
 addEventListener("rtctransform", (event) => {
   messagePort = event.transformer.options.port;
-  // ... other transformer code
+  // … other transformer code
 });
 ```
 
@@ -113,10 +113,10 @@ channel.port1.postMessage(encryptionKeyBuffer, [encryptionKeyBuffer]);
 The worker would listen for the `message` event to get the key:
 
 ```js
-  messagePort.addEventListener("message", (event) => {
-    const encryptionKeyBuffer = event.data;
-    // ... Use the encryptionKeyBuffer for encryption or any other purpose
-  };
+messagePort.addEventListener("message", (event) => {
+  const encryptionKeyBuffer = event.data;
+  // … Use the encryptionKeyBuffer for encryption or any other purpose
+});
 ```
 
 See [message channel](/en-US/docs/Web/API/Channel_Messaging_API) for more information and examples.

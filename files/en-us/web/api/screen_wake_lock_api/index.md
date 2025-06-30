@@ -38,11 +38,10 @@ The Screen Wake Lock API should be used to keep the screen on to benefit usabili
 ### Extensions to other interfaces
 
 - {{domxref("Navigator.wakeLock")}} {{ReadOnlyInline}}
-
   - : Returns a {{domxref("WakeLock")}} object instance, from which all other functionality can be accessed.
 
-- [`Permissions-Policy: screen-wake-lock`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/screen-wake-lock)
-  - : Access to the API is gated by the [`Permissions-Policy`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy) directive `screen-wake-lock`.
+- [`Permissions-Policy: screen-wake-lock`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/screen-wake-lock)
+  - : Access to the API is gated by the [`Permissions-Policy`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy) directive `screen-wake-lock`.
     See [Security considerations](#security_considerations) below.
 
 ## Examples
@@ -125,9 +124,9 @@ You can find the [complete code on GitHub here](https://github.com/mdn/dom-examp
 
 ## Security considerations
 
-Access to the Screen Wake Lock API is controlled by the [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) directive {{HTTPHeader("Permissions-Policy/screen-wake-lock","screen-wake-lock")}}.
+Access to the Screen Wake Lock API is controlled by the [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) directive {{HTTPHeader("Permissions-Policy/screen-wake-lock","screen-wake-lock")}}.
 
-When using the [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy), the default allowlist for `screen-wake-lock` is `self`.
+When using the [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy), the default allowlist for `screen-wake-lock` is `self`.
 This allows lock wake usage in same-origin nested frames but prevents third-party content from using locks.
 Third party usage can be enabled by the server first setting the `Permissions-Policy` header to grant permission a particular third party origin.
 
@@ -138,7 +137,7 @@ Permissions-Policy: screen-wake-lock=(self b.example.com)
 Then the `allow="screen-wake-lock"` attribute must be added the frame container element for sources from that origin:
 
 ```html
-<iframe src="https://b.example.com" allow="screen-wake-lock"/></iframe>
+<iframe src="https://b.example.com" allow="screen-wake-lock"></iframe>
 ```
 
 Browsers may also block the screen lock in a particular document for an implementation specific reason, such as a user or platform setting.

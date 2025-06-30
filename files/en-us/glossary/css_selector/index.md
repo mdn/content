@@ -34,7 +34,7 @@ div.warning {
 }
 ```
 
-The selectors here are `"p"` (which applies the color green to the text inside any {{HTMLElement("p")}} element), `"div.warning"` (which makes any {{HTMLElement("div")}} element with the [class](/en-US/docs/Web/HTML/Global_attributes/class) `"warning"` look like a warning box), and `"#customized"`, which sets the base font of the element with the ID `"customized"` to 16-pixel tall Lucida Grande or one of a few fallback fonts.
+The selectors here are `"p"` (which applies the color green to the text inside any {{HTMLElement("p")}} element), `"div.warning"` (which makes any {{HTMLElement("div")}} element with the [class](/en-US/docs/Web/HTML/Reference/Global_attributes/class) `"warning"` look like a warning box), and `"#customized"`, which sets the base font of the element with the ID `"customized"` to 16-pixel tall Lucida Grande or one of a few fallback fonts.
 
 We can then apply this CSS to some HTML, such as:
 
@@ -62,7 +62,6 @@ The resulting page content is styled like this:
 
 - [Learn more about CSS selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) in our introduction to CSS.
 - Basic selectors
-
   - [Type selectors](/en-US/docs/Web/CSS/Type_selectors) `elementname`
   - [Class selectors](/en-US/docs/Web/CSS/Class_selectors) `.classname`
   - [ID selectors](/en-US/docs/Web/CSS/ID_selectors) `#idname`
@@ -71,17 +70,14 @@ The resulting page content is styled like this:
   - [State selectors](/en-US/docs/Web/CSS/Pseudo-classes) `a:active, a:visited`
 
 - Grouping selectors
-
   - [Selector list](/en-US/docs/Web/CSS/Selector_list) `A, B`
 
 - Combinators
-
   - [Next-sibling selectors](/en-US/docs/Web/CSS/Next-sibling_combinator) `A + B`
   - [Subsequent-sibling selectors](/en-US/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
   - [Child selectors](/en-US/docs/Web/CSS/Child_combinator) `A > B`
   - [Descendant selectors](/en-US/docs/Web/CSS/Descendant_combinator) `A B`
 
 - Pseudo
-
   - [Pseudo classes](/en-US/docs/Web/CSS/Pseudo-classes) `:`
   - [Pseudo elements](/en-US/docs/Web/CSS/Pseudo-elements) `::`

@@ -1,10 +1,9 @@
 ---
 title: "ARIA: alert role"
+short-title: alert
 slug: Web/Accessibility/ARIA/Reference/Roles/alert_role
 page-type: aria-role
-spec-urls:
-  - https://w3c.github.io/aria/#alert
-  - https://www.w3.org/TR/wai-aria-1.2/#alert
+spec-urls: https://w3c.github.io/aria/#alert
 sidebar: accessibilitysidebar
 ---
 
@@ -27,7 +26,7 @@ The `alert` role is added to the node containing an alert message, **not** the e
 > [!WARNING]
 > Because of its intrusive nature, the `alert` role must be used sparingly and only in situations where the user's immediate attention is required.
 
-The [`alert`](https://www.w3.org/TR/wai-aria-1.1/#alert) role is of the five [live region](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions) roles. Dynamic changes that are less urgent should use a less aggressive method, such as including `aria-live="polite"` or using an other live region role like [`status`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/status_role). If the user is expected to close the alert, then the [`alertdialog`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role) role should be used instead.
+The [`alert`](https://w3c.github.io/aria/#alert) role is of the five [live region](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions) roles. Dynamic changes that are less urgent should use a less aggressive method, such as including `aria-live="polite"` or using an other live region role like [`status`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/status_role). If the user is expected to close the alert, then the [`alertdialog`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role) role should be used instead.
 
 The most important thing to know about the `alert` role is that it's for content that is dynamically displayed, not for content that appears on page load. It is perfect for situations such as when a user fills out a form and JavaScript is used to add an error message - the alert would immediately read out the message. It should not be used on HTML that the user hasn't interacted with. For example, if a page loads with multiple visible alerts scattered throughout, the alert role should not be used, as the messages were not dynamically triggered.
 
@@ -64,7 +63,7 @@ document
 
 ### Example 2: Dynamically changing the content inside an element with an alert role
 
-Using JavaScript, you can dynamically change the content _inside_ the element with `role="alert"`. Note that if you need to fire the same alert multiple times (i.e. the content you're dynamically inserting is the same as before), this generally won't be seen as a change and will _not_ lead to an announcement. For this reason, it's usually best to briefly "clear" the contents of the alert container before then injecting the alert message.
+Using JavaScript, you can dynamically change the content _inside_ the element with `role="alert"`. Note that if you need to fire the same alert multiple times (i.e., the content you're dynamically inserting is the same as before), this generally won't be seen as a change and will _not_ lead to an announcement. For this reason, it's usually best to briefly "clear" the contents of the alert container before then injecting the alert message.
 
 ```html
 <div id="alertContainer" role="alert"></div>
@@ -75,7 +74,7 @@ Using JavaScript, you can dynamically change the content _inside_ the element wi
 document.getElementById("alertContainer").textContent = "";
 // inject the new alert message
 document.getElementById("alertContainer").textContent =
-  "Your session will expire in " + expiration + " minutes";
+  `Your session will expire in ${expiration} minutes`;
 ```
 
 ### Example 3: Visually hidden alert container for screen reader notifications

@@ -19,10 +19,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("repeatEvent", (event) => {});
+```js-nolint
+addEventListener("repeatEvent", (event) => { })
 
-onrepeat = (event) => {};
+onrepeat = (event) => { }
 ```
 
 ## Event type
@@ -108,6 +108,6 @@ animateElem.onrepeat = () => {
 
 ## See also
 
-- [SVG animation with SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL)
+- [SVG animation with SMIL](/en-US/docs/Web/SVG/Guides/SVG_animation_with_SMIL)
 - {{domxref("SVGAnimationElement.beginEvent_event", "beginEvent")}} event
 - {{domxref("SVGAnimationElement.endEvent_event", "endEvent")}} event

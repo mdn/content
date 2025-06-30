@@ -31,13 +31,11 @@ None.
 - `count`
   - : Specifies what in the source tree should be numbered sequentially. It uses an XPath expression.
 - `level`
-
   - : Defines how levels of the source tree should be considered in generating sequential numbers. It has three valid values: `single`, `multiple`, and `any`. The default value is `single`:
-
     - `single`
       - : Numbers sibling nodes sequentially, as in the items in a list. The processor goes to the first node in the [`ancestor-or-self`](/en-US/docs/Web/XML/XPath/Reference/Axes#ancestor-or-self) axis that matches the `count` attribute and then counts that node plus all its preceding siblings (stopping when it reaches a match to the `from` attribute, if there is one) that also match the `count` attribute. If no match is found, the sequence will be an empty list.
     - `multiple`
-      - : Numbers nodes as a composite sequence that reflects the hierarchic position of the node, e.g. 1.2.2.5. (The nested format can be specified with the `format` attribute, e.g. A.1.1). The processor looks at all [`ancestors`](/en-US/docs/Web/XML/XPath/Reference/Axes#ancestor) of the current node and the current node itself, stopping when it reaches a match for the `from` attribute, if there is one. For each node in this list that matches the `count` attribute, the processor counts how many preceding matching siblings it has, and adds one for the node itself. If no match is found, the sequence will be an empty list.
+      - : Numbers nodes as a composite sequence that reflects the hierarchic position of the node, e.g., 1.2.2.5. (The nested format can be specified with the `format` attribute, e.g., A.1.1). The processor looks at all [`ancestors`](/en-US/docs/Web/XML/XPath/Reference/Axes#ancestor) of the current node and the current node itself, stopping when it reaches a match for the `from` attribute, if there is one. For each node in this list that matches the `count` attribute, the processor counts how many preceding matching siblings it has, and adds one for the node itself. If no match is found, the sequence will be an empty list.
     - `any` (Not supported at this time.)
       - : Numbers all matching nodes, regardless of level, sequentially. The [`ancestor`](/en-US/docs/Web/XML/XPath/Reference/Axes#ancestor), [`self`](/en-US/docs/Web/XML/XPath/Reference/Axes#self), and [`preceding`](/en-US/docs/Web/XML/XPath/Reference/Axes#preceding) axes are all considered. The processor starts at the current node and proceeds in reverse document order, stopping if it reaches a match to any `from` attribute. If no match to the `count` attribute is found, the sequence will be an empty list. This level is not supported at this time.
 
@@ -46,9 +44,7 @@ None.
 - `value`
   - : Applies a given format to a number. This is a quick way to format a user-supplied number (as opposed to a node sequence number) in any of the standard `<xsl:number>` formats.
 - `format`
-
   - : Defines the format of the generated number:
-
     - `format="1"`
       - : `1 2 3 . . .` (This is the only format supported at this time)
     - `format="01"`
@@ -67,7 +63,7 @@ None.
 - `letter-value`
   - : Disambiguates between numbering sequences that use letters. Some languages have more than one numbering system that use letters. If both systems begin with the same token, ambiguity can arise. This attribute can have the value `alphabetic` or `traditional`. The default is `alphabetic`.
 - `grouping-separator`
-  - : Specifies what character should be used as the group (e.g. thousands) separator. The default is the comma (`,`).
+  - : Specifies what character should be used as the group (e.g., thousands) separator. The default is the comma (`,`).
 - `grouping-size`
   - : Indicates the number of digits that make up a numeric group. The default value is `3`.
 

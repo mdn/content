@@ -1,5 +1,6 @@
 ---
 title: TypedArray.prototype.every()
+short-title: every()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/every
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.every
@@ -9,7 +10,7 @@ browser-compat: javascript.builtins.TypedArray.every
 
 The **`every()`** method of {{jsxref("TypedArray")}} instances tests whether all elements in the typed array pass the test implemented by the provided function. It returns a Boolean value. This method has the same algorithm as {{jsxref("Array.prototype.every()")}}.
 
-{{InteractiveExample("JavaScript Demo: TypedArray.every()")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.prototype.every()")}}
 
 ```js interactive-example
 function isNegative(element, index, array) {

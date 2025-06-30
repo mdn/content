@@ -11,7 +11,7 @@ page-type: firefox-release-notes
 ### Security
 
 - Mixed content blocking. Firefox will no longer load non-secure (http) resources on secure (https) pages ([Firefox bug 834836](https://bugzil.la/834836)).
-- The standard syntax of [CSP](/en-US/docs/Web/HTTP/CSP) 1.0 policies are now implemented and enforced by default.
+- The standard syntax of [CSP](/en-US/docs/Web/HTTP/Guides/CSP) 1.0 policies are now implemented and enforced by default.
 
 ### Developer Tools
 
@@ -22,7 +22,7 @@ page-type: firefox-release-notes
 ### HTML
 
 - The `<blink>` element support is now completely dropped. The `<blink>` tag now implements the {{domxref("HTMLUnknownElement")}} interface ([Firefox bug 857820](https://bugzil.la/857820)).
-- The `range` type of the {{HTMLElement("input")}} element ([`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range)) has been switched on by default ([Firefox bug 841950](https://bugzil.la/841950)).
+- The `range` type of the {{HTMLElement("input")}} element ([`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range)) has been switched on by default ([Firefox bug 841950](https://bugzil.la/841950)).
 
 ### JavaScript
 

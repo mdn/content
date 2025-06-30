@@ -1,5 +1,6 @@
 ---
 title: String.prototype.repeat()
+short-title: repeat()
 slug: Web/JavaScript/Reference/Global_Objects/String/repeat
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.repeat
@@ -10,7 +11,7 @@ browser-compat: javascript.builtins.String.repeat
 The **`repeat()`** method of {{jsxref("String")}} values constructs and returns a new string
 which contains the specified number of copies of this string, concatenated together.
 
-{{InteractiveExample("JavaScript Demo: String.repeat()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.repeat()", "shorter")}}
 
 ```js interactive-example
 const mood = "Happy! ";
@@ -28,9 +29,7 @@ repeat(count)
 ### Parameters
 
 - `count`
-  - : An integer between `0` and
-    {{jsxref("Number/POSITIVE_INFINITY", "+Infinity")}}, indicating the
-    number of times to repeat the string.
+  - : An integer between `0` and {{jsxref("Number/POSITIVE_INFINITY", "Infinity")}}, indicating the number of times to repeat the string.
 
 ### Return value
 

@@ -20,7 +20,7 @@ This article provides information about the changes in Firefox 62 that will affe
 - If the option to "Select an iframe as the currently targeted document" is checked, the icon will appear in the toolbar while the Settings tab is displayed, even if the current page doesn't include any iframes ([Firefox bug 1456069](https://bugzil.la/1456069)).
 - The [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)'s [Cookies tab](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#cookies) now shows the cookie `samesite` attribute ([Firefox bug 1452715](https://bugzil.la/1452715)).
 - [Responsive design mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) now works inside container tabs ([Firefox bug 1306975](https://bugzil.la/1306975)).
-- When {{Glossary("CORS")}} errors occur and are reported on the console, Firefox now provides a link to the corresponding page in our [CORS error documentation](/en-US/docs/Web/HTTP/CORS/Errors) ([Firefox bug 1475391](https://bugzil.la/1475391)).
+- When {{Glossary("CORS")}} errors occur and are reported on the console, Firefox now provides a link to the corresponding page in our [CORS error documentation](/en-US/docs/Web/HTTP/Guides/CORS/Errors) ([Firefox bug 1475391](https://bugzil.la/1475391)).
 - Create a screenshot of the current page (with an optional filename) from the Console tab ([Firefox bug 1464461](https://bugzil.la/1464461)) using the following command:
 
   ```bash
@@ -98,7 +98,7 @@ _No changes._
 
 - The `userproximity` and `deviceproximity` events, as well as the `UserProximityEvent` and `DeviceProximityEvent` interfaces, have been disabled by default behind the `device.sensors.proximity.enabled` preference ([Firefox bug 1462308](https://bugzil.la/1462308)).
 - The `devicelight` event of type `DeviceLightEvent` has been disabled by default behind the `device.sensors.ambientLight.enabled` preference ([Firefox bug 1462308](https://bugzil.la/1462308)).
-- The `DOMSubtreeModified` and `DOMAttrModified` [mutation events](/en-US/docs/Web/API/MutationEvent) are no longer thrown when the [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute is changed via the CSSOM ([Firefox bug 1460295](https://bugzil.la/1460295).
+- The `DOMSubtreeModified` and `DOMAttrModified` [mutation events](/en-US/docs/Web/API/MutationEvent) are no longer thrown when the [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute is changed via the CSSOM ([Firefox bug 1460295](https://bugzil.la/1460295).
 - Support for {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}} has been removed ([Firefox bug 1408301](https://bugzil.la/1408301)).
 - Support for {{domxref("CSSValue")}}, {{domxref("CSSPrimitiveValue")}}, and {{domxref("CSSValueList")}} has been removed ([Firefox bug 1459871](https://bugzil.la/1459871)).
 - {{domxref("window.getComputedStyle()")}} no longer returns `null` when called on a `Window` which has no presentation ([Firefox bug 1467722](https://bugzil.la/1467722)).
@@ -152,7 +152,6 @@ _No changes._
 
 - New `open_at_install` property of the [`sidebar_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest key enables extensions to control whether their sidebars should open automatically on install or not ([Firefox bug 1460910](https://bugzil.la/1460910)).
 - Changes to the `browser_style` property of various manifest keys:
-
   - In [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) and [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) it defaults to `false`.
   - In [`sidebar_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) and [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) it defaults to `true`.
 

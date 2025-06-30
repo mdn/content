@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.some()
+short-title: some()
 slug: Web/JavaScript/Reference/Global_Objects/Array/some
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.some
@@ -11,7 +12,7 @@ The **`some()`** method of {{jsxref("Array")}} instances tests whether
 at least one element in the array passes the test implemented by the provided
 function. It returns true if, in the array, it finds an element for which the provided function returns true; otherwise it returns false. It doesn't modify the array.
 
-{{InteractiveExample("JavaScript Demo: Array.some()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.some()")}}
 
 ```js interactive-example
 const array = [1, 2, 3, 4, 5];

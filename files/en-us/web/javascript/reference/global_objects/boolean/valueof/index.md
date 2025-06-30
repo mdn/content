@@ -1,5 +1,6 @@
 ---
 title: Boolean.prototype.valueOf()
+short-title: valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Boolean.valueOf
@@ -10,7 +11,7 @@ browser-compat: javascript.builtins.Boolean.valueOf
 The **`valueOf()`** method of {{jsxref("Boolean")}} values returns the primitive value of a
 {{jsxref("Boolean")}} object.
 
-{{InteractiveExample("JavaScript Demo: Boolean.valueOf()")}}
+{{InteractiveExample("JavaScript Demo: Boolean.prototype.valueOf()")}}
 
 ```js interactive-example
 const x = new Boolean();

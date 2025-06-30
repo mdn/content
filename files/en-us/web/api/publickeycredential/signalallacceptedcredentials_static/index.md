@@ -3,12 +3,10 @@ title: "PublicKeyCredential: signalAllAcceptedCredentials() static method"
 short-title: signalAllAcceptedCredentials()
 slug: Web/API/PublicKeyCredential/signalAllAcceptedCredentials_static
 page-type: web-api-static-method
-status:
-  - experimental
 browser-compat: api.PublicKeyCredential.signalAllAcceptedCredentials_static
 ---
 
-{{APIRef("Web Authentication API")}}{{securecontext_header}}{{seecompattable}}
+{{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 The **`signalAllAcceptedCredentials()`** static method of the {{domxref("PublicKeyCredential")}} interface signals to the authenticator all of the valid [credential IDs](/en-US/docs/Web/API/PublicKeyCredentialRequestOptions#id) that the [relying party](https://en.wikipedia.org/wiki/Relying_party) (RP) server still holds for a particular user.
 
@@ -73,7 +71,7 @@ if (PublicKeyCredential.signalAllAcceptedCredentials) {
     allAcceptedCredentialIds: [
       // A list of base64url-encoded credential IDs
       "vI0qOggiE3OT01ZRWBYz5l4MEgU0c7PmAA",
-      // ...
+      // …
     ],
   });
 }

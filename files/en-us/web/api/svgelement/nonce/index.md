@@ -8,7 +8,7 @@ browser-compat: api.SVGElement.nonce
 
 {{APIRef("SVG")}}
 
-The **`nonce`** property of the {{DOMxRef("SVGElement")}} interface returns the nonce that is used by [Content Security Policy](/en-US/docs/Web/HTTP/CSP) to determine whether a given fetch will be allowed to proceed.
+The **`nonce`** property of the {{DOMxRef("SVGElement")}} interface returns the nonce that is used by [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) to determine whether a given fetch will be allowed to proceed.
 
 ## Value
 
@@ -49,6 +49,6 @@ svg[nonce~="whatever"] {
 ## See also
 
 - {{domxref("HTMLElement.nonce")}} a similar method for HTML elements.
-- [`nonce` global attribute](/en-US/docs/Web/HTML/Global_attributes/nonce)
-- [Content Security Policy](/en-US/docs/Web/HTTP/CSP)
+- [`nonce` global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/nonce)
+- [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP)
 - CSP: {{CSP("script-src")}}

@@ -28,7 +28,6 @@ requestMediaKeySystemAccess(keySystem, supportedConfigurations)
   - : A string identifying the key system.
     For example `com.example.some-system` or `org.w3.clearkey`.
 - `supportedConfigurations`
-
   - : A non-empty {{jsxref('Array')}} of objects conforming to the object returned by {{domxref("MediaKeySystemAccess.getConfiguration")}}.
     The first element with a satisfiable configuration will be used.
 
@@ -36,20 +35,17 @@ requestMediaKeySystemAccess(keySystem, supportedConfigurations)
 
     > [!NOTE]
     > Either `videoCapabilities` or `audioCapabilities` may be empty, but not both!
-
     - `label` {{optional_inline}}
       - : An optional label for the configuration, which defaults to `""`.
         This label is preserved for configurations fetched using {{domxref("MediaKeySystemAccess.getConfiguration")}}
     - `initDataTypes`
       - : An array of strings that indicate the data type names for the supported initialization data formats (default to an empty array).
-        These names are names like `"cenc"`, `"keyids"` and `"webm"` that are defined in the [Encrypted Media Extensions Initialization Data Format Registry](https://www.w3.org/TR/eme-initdata-registry/).
+        These names are names like `"cenc"`, `"keyids"` and `"webm"` that are defined in the [Encrypted Media Extensions Initialization Data Format Registry](https://w3c.github.io/encrypted-media/format-registry/initdata/).
     - `audioCapabilities`
-
       - : An array of supported audio capabilities.
         If the array is empty the content type does not support audio capabilities.
 
         Each object in the array has the following properties:
-
         - `contentType`
           - : A string indicating the media MIME-type of the media resource, such as `"audio/mp4;codecs=\"mp4a.40.2\"`.
             Note that the empty string is invalid, and that if the MIME-type definition includes parameters, such as `codecs`, these must also be included.
@@ -61,15 +57,12 @@ requestMediaKeySystemAccess(keySystem, supportedConfigurations)
             The empty string indicates that any ability to decrypt and decode the content type is acceptable.
 
     - `videoCapabilities`
-
       - : An array of supported video capabilities.
         The objects in the array have the same form as those in `audioCapabilities`.
 
     - `distinctiveIdentifier`
-
       - : A string indicating whether the implementation may use "distinctive identifiers" (or distinctive permanent identifiers) for any operations associated with any object created from this configuration.
         The allowed values are:
-
         - `required`
           - : The returned object must support this feature.
         - `optional`
@@ -79,16 +72,13 @@ requestMediaKeySystemAccess(keySystem, supportedConfigurations)
           - : The returned object must not support or use this feature.
 
     - `persistentState`
-
       - : A string indicating whether the returned object must be able to persist session data or any other type of state.
         The values are the same as for `distinctiveIdentifier` and have the same meaning: `required`, `optional` (default), `not-allowed`.
         Only "temporary" sessions may be created when persistent state is not allowed.
 
     - `sessionTypes`
-
       - : An array of strings indicating the session types that must be supported.
         Permitted values include:
-
         - `temporary`
           - : A session for which the license, key(s) and record of or data related to the session are not persisted.
             The application does not need to manage such storage.
@@ -108,7 +98,7 @@ In case of an error, the returned {{jsxref('Promise')}} is rejected with a {{dom
 - `NotSupportedError` {{domxref("DOMException")}}
   - : Either the specified `keySystem` isn't supported by the platform or the browser, or none of the configurations specified by `supportedConfigurations` can be satisfied (if, for example, none of the `codecs` specified in `contentType` are available).
 - `SecurityError` {{domxref("DOMException")}}
-  - : Use of this feature was blocked by [`Permissions-Policy: encrypted-media`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/encrypted-media).
+  - : Use of this feature was blocked by [`Permissions-Policy: encrypted-media`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/encrypted-media).
 - {{jsxref("TypeError")}}
   - : Either `keySystem` is an empty string or the `supportedConfigurations` array is empty.
 

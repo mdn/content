@@ -2,7 +2,9 @@
 title: CSS display
 slug: Web/CSS/CSS_display
 page-type: css-module
-spec-urls: https://drafts.csswg.org/css-display/
+spec-urls:
+  - https://drafts.csswg.org/css-display/
+  - https://drafts.csswg.org/css-display-4/
 ---
 
 {{CSSRef}}
@@ -16,6 +18,8 @@ The **CSS display** module defines how the CSS formatting box tree is generated 
 - {{CSSxRef("display")}}
 - {{CSSxRef("order")}}
 - {{CSSxRef("visibility")}}
+- {{cssxref("reading-flow")}}
+- {{cssxref("reading-order")}}
 
 ### Data types
 
@@ -32,12 +36,9 @@ The **CSS display** module defines how the CSS formatting box tree is generated 
 - [Block formatting context (BFC)](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
 - {{glossary("Block-level content")}}
 - [Containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block)
-- {{glossary("Flex")}}
 - [Flow layout](/en-US/docs/Web/CSS/CSS_display/Flow_layout)
-- {{glossary("Grid")}}
-- [Inline formatting context](/en-US/docs/Web/CSS/Inline_formatting_context)
-- {{glossary("Inline-level content")}}
-- [Replaced element](/en-US/docs/Web/CSS/Replaced_element)
+- {{glossary("Reading order")}}
+- {{glossary("Replaced elements")}}
 - {{glossary("Ruby")}}
 
 ## Guides
@@ -59,13 +60,19 @@ The **CSS display** module defines how the CSS formatting box tree is generated 
 
 ### Properties
 
-- {{cssxref("transition-behavior")}}
 - {{cssxref("overflow")}}
+- {{cssxref("transition-behavior")}}
+
+### Glossary and terms
+
+- {{glossary("Flex")}}
+- {{glossary("Grid")}}
+- [Inline formatting context](/en-US/docs/Web/CSS/CSS_inline_layout/Inline_formatting_context)
+- {{glossary("Inline-level content")}}
 
 ### Guides
 
 - [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
-
   - [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
   - [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
   - [Controlling ratios of flex items along the main axis](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
@@ -95,4 +102,4 @@ The **CSS display** module defines how the CSS formatting box tree is generated 
 - [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
 - [CSS ruby layout](/en-US/docs/Web/CSS/CSS_ruby_layout) module
 - [CSS table](/en-US/docs/Web/CSS/CSS_table) module
-- [Visual formatting model](/en-US/docs/Web/CSS/Visual_formatting_model)
+- [Visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)

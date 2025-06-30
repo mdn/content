@@ -17,7 +17,7 @@ const GeneratorFunction = function* () {}.constructor;
 
 `GeneratorFunction` is a subclass of {{jsxref("Function")}}.
 
-{{InteractiveExample("JavaScript Demo: GeneratorFunction()", "taller")}}
+{{InteractiveExample("JavaScript Demo: GeneratorFunction", "taller")}}
 
 ```js interactive-example
 const GeneratorFunction = function* () {}.constructor;
@@ -30,7 +30,7 @@ const foo = new GeneratorFunction(`
 
 let str = "";
 for (const val of foo()) {
-  str = str + val;
+  str += val;
 }
 
 console.log(str);

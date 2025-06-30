@@ -2,7 +2,7 @@
 title: <baseline-position>
 slug: Web/CSS/baseline-position
 page-type: css-type
-browser-compat: css.types.baseline-position
+spec-urls: https://drafts.csswg.org/css-align/#typedef-baseline-position
 ---
 
 {{CSSRef}}
@@ -22,11 +22,9 @@ The `first` and `last` values give a box a baseline alignment preference, defaul
 The `<baseline-position>` enumerated value type is specified using an optional `first` or `last` modifier with the `baseline` value. If a box does not belong to a shared alignment context, then the fallback alignment is used. The fallback alignment is also used to align the baseline-sharing group within its {{glossary("alignment container")}}.
 
 - `baseline`
-
   - : Computes to `first baseline`, as defined below.
 
 - `first baseline`
-
   - : Aligns the alignment baseline of the box's first baseline set with the corresponding baseline of its baseline-sharing group. The fallback alignment is `safe self-start` for self-alignment or `safe start` for content distribution.
 
 - `last baseline`
@@ -35,10 +33,6 @@ The `<baseline-position>` enumerated value type is specified using an optional `
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

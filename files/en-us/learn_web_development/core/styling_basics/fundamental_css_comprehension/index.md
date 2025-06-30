@@ -1,10 +1,10 @@
 ---
 title: "Challenge: Fundamental CSS comprehension"
+short-title: "Challenge: Business card"
 slug: Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper", "Learn_web_development/Core/Styling_basics")}}
 
@@ -38,7 +38,6 @@ Taking care of the selectors and rulesets provided in the CSS resource file:
 
 - Next up, we'd like you to look at the four selectors, and calculate the specificity for each one. Write these down somewhere where they can be found later on, such as in a comment at the top of your CSS.
 - Now it's time to put the right selector on the right rule set! You've got four pairs of selector and ruleset to match in your CSS resources. Do this now, and add them to your CSS file. You need to:
-
   - Give the main card container a fixed width/height, solid background color, border, and border-radius (rounded corners!), amongst other things.
   - Give the header a background gradient that goes from darker to lighter, plus rounded corners that fit in with the rounded corners set on the main card container.
   - Give the footer a background gradient that goes from lighter to darker, plus rounded corners that fit in with the rounded corners set on the main card container.

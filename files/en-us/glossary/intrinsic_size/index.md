@@ -14,7 +14,7 @@ For example, the minimum intrinsic size of the inline {{htmlelement("span")}} el
 
 Intrinsic size has the same meaning for images as for text — the size at which the images are displayed if no CSS is applied to change the rendering.
 
-Pixel density and resolution affect intrinsic size. By default, images are assumed to have a "1x" pixel density (1 device pixel = 1 CSS pixel), in which case the intrinsic size is simply the pixel height and width. An image's intrinsic size and resolution can be explicitly specified in its {{Glossary("EXIF")}} data. Image pixel density may also be set for images using the [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute. Note that, if both mechanisms are used, the `srcset` value is applied "over" the EXIF value.
+Pixel density and resolution affect intrinsic size. By default, images are assumed to have a "1x" pixel density (1 device pixel = 1 CSS pixel), in which case the intrinsic size is simply the pixel height and width. An image's intrinsic size and resolution can be explicitly specified in its {{Glossary("EXIF")}} data. Image pixel density may also be set for images using the [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset) attribute. Note that, if both mechanisms are used, the `srcset` value is applied "over" the EXIF value.
 
 Intrinsic sizes and how they are calculated are defined in the [CSS sizing module](/en-US/docs/Web/CSS/CSS_box_sizing).
 
@@ -68,4 +68,4 @@ The opposite of _intrinsic size_ is **_extrinsic size_**, which is based on the 
 - {{cssxref("aspect-ratio")}}
 - {{cssxref("calc-size()")}}
 - [CSS box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) module
-- [CSS sizing specification: intrinsic sizes](https://www.w3.org/TR/css-sizing-3/#intrinsic-sizes)
+- [CSS Box Sizing Module Level 3](https://drafts.csswg.org/css-sizing-3/#intrinsic-sizes) specification

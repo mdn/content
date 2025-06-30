@@ -130,7 +130,7 @@ document.getElementById("select").onchange = (event) => {
 console.log(document.getElementById("div"));
 ```
 
-{{ EmbedLiveSample('Examples', "330", "350") }}
+{{ EmbedLiveSample('try_out_different_blend_modes', "330", "350") }}
 
 ## Specifications
 

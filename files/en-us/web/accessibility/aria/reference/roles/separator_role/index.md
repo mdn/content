@@ -1,5 +1,6 @@
 ---
 title: "ARIA: separator role"
+short-title: separator
 slug: Web/Accessibility/ARIA/Reference/Roles/separator_role
 page-type: aria-role
 spec-urls:
@@ -8,7 +9,7 @@ spec-urls:
 sidebar: accessibilitysidebar
 ---
 
-The `separator` role indicates the element is a divider that separates and distinguishes sections of content or groups of menuitems. The implicit ARIA role the native thematic break {{HTMLElement('hr')}} element is `separator`.
+The `separator` role indicates the element is a divider that separates and distinguishes sections of content or groups of menuitems. The implicit ARIA role of the native thematic break {{HTMLElement('hr')}} element is `separator`.
 
 ## Description
 
@@ -86,19 +87,15 @@ From the assistive technology user's perspective, the heading does not exist sin
 ### Associated WAI-ARIA roles, states, and properties
 
 - [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation) (default is horizontal for separator)
-
   - : By default, the divider for `separator` roles is assumed to be horizontal. The value can be included and set to horizontal, undefined (the default for other roles unless otherwise specified), or vertical.
 
 - [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow)
-
   - : If the separator is focusable and has a known value, the `aria-valuenow` defines the current value. If not focusable or the value is unknown, do not include this attribute.
 
 - [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin) (default is 0)
-
   - : If the separator is focusable, and the minimum value is not 0, include the minimum value with `aria-valuemin`. If the
 
 - [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax) (default is 100)
-
   - : If the separator is focusable, and the maximum value is not 100, include `aria-valuemax` with a value equal to or larger than `aria-valuemin`.
 
 - [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext)

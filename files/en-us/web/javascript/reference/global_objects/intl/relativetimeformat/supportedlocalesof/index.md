@@ -1,5 +1,6 @@
 ---
 title: Intl.RelativeTimeFormat.supportedLocalesOf()
+short-title: supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/supportedLocalesOf
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Intl.RelativeTimeFormat.supportedLocalesOf
@@ -9,7 +10,7 @@ browser-compat: javascript.builtins.Intl.RelativeTimeFormat.supportedLocalesOf
 
 The **`Intl.RelativeTimeFormat.supportedLocalesOf()`** static method returns an array containing those of the provided locales that are supported in relative time formatting without having to fall back to the runtime's default locale.
 
-{{InteractiveExample("JavaScript Demo: Intl.RelativeTimeFormat.supportedLocalesOf", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Intl.RelativeTimeFormat.supportedLocalesOf()", "shorter")}}
 
 ```js interactive-example
 const locales1 = ["ban", "id-u-co-pinyin", "de-ID"];

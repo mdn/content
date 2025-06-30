@@ -1,5 +1,6 @@
 ---
 title: WeakSet() constructor
+short-title: WeakSet()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/WeakSet
 page-type: javascript-constructor
 browser-compat: javascript.builtins.WeakSet.WeakSet
@@ -16,7 +17,8 @@ new WeakSet()
 new WeakSet(iterable)
 ```
 
-> **Note:** `WeakSet()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `WeakSet()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

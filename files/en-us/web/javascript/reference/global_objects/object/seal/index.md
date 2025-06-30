@@ -1,5 +1,6 @@
 ---
 title: Object.seal()
+short-title: seal()
 slug: Web/JavaScript/Reference/Global_Objects/Object/seal
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.seal
@@ -51,7 +52,7 @@ to accessor or vice versa, will fail, either silently or by throwing a
 {{jsxref("TypeError")}} (most commonly, although not exclusively, when in
 {{jsxref("Strict_mode", "strict mode", "", 1)}} code).
 
-[Private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) do not have the concept of property descriptors. Private properties cannot be added or removed from the object, whether the object is sealed or not.
+[Private elements](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) are not properties and do not have the concept of property descriptors. Private elements cannot be added or removed from the object, whether the object is sealed or not.
 
 The prototype chain remains untouched. However, due to the effect of [preventing extensions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions), the `[[Prototype]]` cannot be reassigned.
 
@@ -98,7 +99,7 @@ obj.quaxxor = "the friendly duck";
 delete obj.foo;
 // silently doesn't delete the property
 
-// ...and in strict mode such attempts
+// … and in strict mode such attempts
 // will throw TypeErrors.
 function fail() {
   "use strict";

@@ -34,7 +34,7 @@ Firefox 51 was released on January 24, 2017. This article lists key changes that
 - {{jsxref("Statements/const", "const")}} and {{jsxref("Statements/let", "let")}} are now fully ES2015-compliant ([Firefox bug 950547](https://bugzil.la/950547)).
 - Using {{jsxref("Statements/const", "const")}} in [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loops now has a fresh binding for each iteration and no longer throws a {{jsxref("SyntaxError")}} ([Firefox bug 1101653](https://bugzil.la/1101653)).
 - The deprecated [`for each...in`](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#statements_2) loop now presents a warning in the console ([Firefox bug 1293205](https://bugzil.la/1293205)). Please migrate your code to use the standardized [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop.
-- [Generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*) can't have a [label](/en-US/docs/Web/JavaScript/Reference/Statements/label) anymore and "`let`" as a label name is disallowed now ([Firefox bug 1288459](https://bugzil.la/1288459)).
+- [Generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*) can't have a [label](/en-US/docs/Web/JavaScript/Reference/Statements/label) anymore and `let` as a label name is disallowed now ([Firefox bug 1288459](https://bugzil.la/1288459)).
 - Deprecated [legacy generator functions](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features) will now throw when used in [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) ([Firefox bug 1199296](https://bugzil.la/1199296)).
 - The `next()` method of the [iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol) will now throw a {{jsxref("TypeError")}} if the returned value is not an object ([Firefox bug 1016936](https://bugzil.la/1016936)).
 - Child-indexed pseudo-class selectors should match without a parent ([Firefox bug 1300374](https://bugzil.la/1300374)).
@@ -47,10 +47,8 @@ Firefox 51 was released on January 24, 2017. This article lists key changes that
 ### WebGL
 
 - [WebGL 2](/en-US/docs/Web/API/WebGL_API) is now enabled by default. See [webglsamples.org/WebGL2Samples](https://webglsamples.org/WebGL2Samples/) for a few demos.
-
   - WebGL 2 provides the {{domxref("WebGL2RenderingContext")}} interface that brings OpenGL ES 3.0 to the {{HTMLElement("canvas")}} element.
   - New features include:
-
     - [3D textures](/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D),
     - [Sampler objects](/en-US/docs/Web/API/WebGLSampler),
     - [Uniform Buffer objects](/en-US/docs/Web/API/WebGL2RenderingContext#uniform_buffer_objects),
@@ -67,7 +65,6 @@ Firefox 51 was released on January 24, 2017. This article lists key changes that
 ### IndexedDB v2
 
 - [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) version 2 implementation is now complete:
-
   - Supports for the new {{domxref("IDBObjectStore.getKey()")}} method has been added ([Firefox bug 1271506](https://bugzil.la/1271506)).
   - Supports for {{domxref("IDBCursor.continuePrimaryKey()")}} method has been added ([Firefox bug 1271505](https://bugzil.la/1271505)).
   - Binary keys are now supported ([Firefox bug 1271500](https://bugzil.la/1271500)).
@@ -94,7 +91,7 @@ Firefox 51 was released on January 24, 2017. This article lists key changes that
 - Scripts served with an `image/*`, `video/*`, `audio/*` or `text/csv` MIME type are now blocked and are not loaded or executed. This happen when they are declared using {{HTMLElement("script")}}, or loaded via {{domxref("WorkerGlobalScope.importScripts()")}}, {{domxref("Worker.Worker","Worker()")}}, {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} ([Firefox bug 1229267](https://bugzil.la/1229267) and [Firefox bug 1288361](https://bugzil.la/1288361)).
 - Support for SHA-1 certificates from publicly-trusted certificate authorities has been removed ([Firefox bug 1302140](https://bugzil.la/1302140)). See also [Phasing Out SHA-1 on the Public Web](https://blog.mozilla.org/security/2016/10/18/phasing-out-sha-1-on-the-public-web/) for more information.
 - New WoSign and StartCom certificates will no longer be accepted ([Firefox bug 1309707](https://bugzil.la/1309707)), see [Distrusting New WoSign and StartCom Certificates](https://blog.mozilla.org/security/2016/10/24/distrusting-new-wosign-and-startcom-certificates/) for more information.
-- The [PAC](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file) `FindProxyForURL(url, host)` function now strips paths and queries from https\:// URLs to avoid information leakage (see [Firefox bug 1255474](https://bugzil.la/1255474) and [CVE-2017-5384](https://nvd.nist.gov/vuln/detail/CVE-2017-5384)).
+- The [PAC](/en-US/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file) `FindProxyForURL(url, host)` function now strips paths and queries from https\:// URLs to avoid information leakage (see [Firefox bug 1255474](https://bugzil.la/1255474) and [CVE-2017-5384](https://nvd.nist.gov/vuln/detail/CVE-2017-5384)).
 
 ### XHR
 
@@ -131,7 +128,7 @@ Firefox 51 was released on January 24, 2017. This article lists key changes that
 
 ### Security
 
-- When login pages (i.e., those containing an [`<input type="password">`](/en-US/docs/Web/HTML/Element/input/password) field) are created so that they would be submitted insecurely, Firefox displays a crossed-out lock icon in the address bar to warn users ([Firefox bug 1319119](https://bugzil.la/1319119)). See [Insecure passwords](/en-US/docs/Web/Security/Insecure_passwords) for more details.
+- When login pages (i.e., those containing an [`<input type="password">`](/en-US/docs/Web/HTML/Reference/Elements/input/password) field) are created so that they would be submitted insecurely, Firefox displays a crossed-out lock icon in the address bar to warn users ([Firefox bug 1319119](https://bugzil.la/1319119)). See [Insecure passwords](/en-US/docs/Web/Security/Insecure_passwords) for more details.
 
 ### Removals
 
@@ -144,7 +141,6 @@ Firefox 51 was released on January 24, 2017. This article lists key changes that
 ### WebExtensions
 
 - New APIs:
-
   - {{WebExtAPIRef("idle.queryState()")}} ([Firefox bug 1299846](https://bugzil.la/1299846))
   - {{WebExtAPIRef("idle.onStateChanged")}} ([Firefox bug 1299775](https://bugzil.la/1299775))
   - {{WebExtAPIRef("management.getSelf()")}} ([Firefox bug 1283116](https://bugzil.la/1283116))
@@ -162,7 +158,6 @@ Firefox 51 was released on January 24, 2017. This article lists key changes that
 
 - The [`multiprocessCompatible` property of `install.rdf`](/en-US/docs/Mozilla/Add-ons/Install_Manifests#multiprocesscompatible) must now be explicitly set to `false` to prevent multiprocess from being enabled in Firefox when the add-on is installed.
 - The Mozilla-specific Social API has been substantially changed (largely to remove APIs no longer used), as follows:
-
   - The `MozSocial` interface and the `Navigator.mozSocial` property which supports it have been removed.
   - The Social Bookmarks API has been removed.
   - The Social chat functionality has been removed.

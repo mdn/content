@@ -14,7 +14,7 @@ The act of a function calling itself, recursion is used to solve problems that c
 
 The following Python code defines a function that takes a number, prints it, and then calls itself again with the number's value -1. It keeps going until the number is equal to 0, in which case it stops.
 
-```py
+```python
 def recurse(x):
    if x > 0:
        print(x)
@@ -25,6 +25,7 @@ recurse(10)
 
 The output will look like this:
 
+```plain
 10
 9
 8
@@ -35,6 +36,7 @@ The output will look like this:
 3
 2
 1
+```
 
 ### Recursion is limited by stack size
 
@@ -58,9 +60,8 @@ console.log(getMaxCallStackSize(0));
 const factorial = (n) => {
   if (n === 0) {
     return 1;
-  } else {
-    return n * factorial(n - 1);
   }
+  return n * factorial(n - 1);
 };
 console.log(factorial(10));
 // 3628800

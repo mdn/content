@@ -27,11 +27,9 @@ offset-path: ray(45deg);
 The parameters can be specified in any order.
 
 - [`<angle>`](/en-US/docs/Web/CSS/angle)
-
   - : Specifies the direction in which the line segment extends from the offset starting position. The angle `0deg` lies on the y-axis pointing up, and positive angles increase in the clockwise direction.
 
 - `<size>`
-
   - : Specifies the length of the line segment, which is the distance between {{cssxref("offset-distance")}} `0%` and `100%`, relative to the containing box. This is an optional parameter (`closest-side` is used if no `<size>` is specified). It accepts one of the following keyword values:
 
     `closest-side`: Distance between the ray's starting point and the closest side of the [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) of the element. If the ray's starting point lies on an edge of the containing block, the length of the line segment is zero. If the ray's starting point is outside the containing block, the edge of the containing block is considered to extend to infinity. This is the default value.
@@ -45,7 +43,6 @@ The parameters can be specified in any order.
     `sides`: Distance between the ray's starting point and the point where the line segment intersects the containing block's boundary. If the starting point is on or outside the containing block's boundary, the length of the line segment is zero.
 
 - `contain`
-
   - : Reduces the length of the line segment so that the element stays within the containing block even at `offset-distance: 100%`. Specifically, the segment's length is reduced by half the width or half the height of the element's border box, whichever is greater, and never less than zero. This is an optional parameter.
 
 - `at <position>`
@@ -226,10 +223,10 @@ body {
 }
 
 .container {
-   transform-style: preserve-3d;
-   width: 150px;
-   height: 100px;
-   border: 2px dotted green;
+  transform-style: preserve-3d;
+  width: 150px;
+  height: 100px;
+  border: 2px dotted green;
 }
 
 .shape {
@@ -263,12 +260,15 @@ body {
 }
 
 @keyframes move {
-  0%, 20% {
+  0%,
+  20% {
     offset-distance: 0%;
   }
-  80%, 100% {
+  80%,
+  100% {
     offset-distance: 100%;
   }
+}
 ```
 
 ```html hidden
@@ -294,8 +294,10 @@ body {
   </div>
 </div>
 
-<pre>offset-path: ray(120deg sides contain);
-offset-rotate: 0deg;</pre>
+<pre>
+offset-path: ray(120deg sides contain);
+offset-rotate: 0deg;
+</pre>
 
 <div>
   <div class="container">
@@ -305,7 +307,8 @@ offset-rotate: 0deg;</pre>
 
 <pre>
   offset-position: auto;
-  offset-path: ray(120deg closest-corner)</pre>
+  offset-path: ray(120deg closest-corner);
+</pre>
 
 <div>
   <div class="container">
@@ -315,8 +318,8 @@ offset-rotate: 0deg;</pre>
 
 <pre>
   offset-position: auto;
-  offset-path: ray(120deg farthest-corner)</pre>
-</div>
+  offset-path: ray(120deg farthest-corner);
+</pre>
 ```
 
 #### Result
