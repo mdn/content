@@ -48,6 +48,7 @@ The containers below support extended codec options in their `codecs` parameters
 
 - [3GP](#iso_base_media_file_format_mp4_quicktime_and_3gp)
 - [AV1](#av1)
+- [HEVC](#hevc_mp4_quicktime_matroska)
 - [ISO BMFF](#iso_base_media_file_format_mp4_quicktime_and_3gp)
 - [MPEG-4](#iso_base_media_file_format_mp4_quicktime_and_3gp)
 - [QuickTime](#iso_base_media_file_format_mp4_quicktime_and_3gp)
@@ -594,6 +595,9 @@ Thus, the syntaxes for each of the supported codecs look like this:
 
     The level is a fixed-point number, so a value of `14` (decimal 20) means level 2.0 while a value of `3D` (decimal 61) means level 6.1. Generally speaking, the higher the level number, the more bandwidth the stream will use and the higher the maximum video dimensions are supported.
 
+- `avc3[.PPCCLL]` (Variable resolution AVC)
+  - : The `avc3` codec parameters have the same syntax as the `avc1` codec parameters.
+
 #### AVC profiles
 
 The following are the AVC profiles and their profile numbers for use in the `codecs` parameter, as well as the value to specify for the constraints component, `CC`.
@@ -897,6 +901,36 @@ The Audio Object Types are defined in ISO/IEC 14496-3 subpart 1, section 1.5.1. 
     </tr>
   </tbody>
 </table>
+
+### HEVC: MP4, Quicktime, Matroska
+
+The [High Efficiency Video Coding](https://en.wikipedia.org/wiki/High_Efficiency_Video_Coding) format, also known as H.265 and MPEG-H Part 2, can be included in the [MP4](/en-US/docs/Web/Media/Guides/Formats/Containers#mpeg-4_mp4) (`video/mp4`), [Quicktime](/en-US/docs/Web/Media/Guides/Formats/Containers#quicktime) (`video/quicktime`), and [Matroska](https://en.wikipedia.org/wiki/Matroska) (`video/matroska`) containers.
+
+Use of HEVC is generally described using a supporting MIME type with the `codecs` parameter appended; syntax examples are as follows:
+
+```plain
+video/mp4;codecs=hvc1.1.6.L186.B0,mp4a.40.2
+video/mp4;codecs=hvc1.1.6.L186.B0,opus
+video/mp4;codecs=hev1.1.6.L186.B0,mp4a.40.2
+video/mp4;codecs=hev1.1.6.L186.B0,opus
+```
+
+The syntax for the `codecs` value starts with the codec's four-character identifier, followed by:
+
+- A single digit...
+- A single digit...
+- A four-character...
+- A two-character...
+
+With each one separated by a period (`.`), followed by the Object Type Indication (OTI) value for the specific data format. For most codecs, the OTI is a two-digit hexadecimal number; however, it's six hexadecimal digits for [AVC (H.264)](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#avc_h.264).
+
+The syntaxes for each of the supported codecs look like this:
+
+- `hvc1[.A.B.CCCC.DD]` (HEVC video)
+  - : xxx
+
+- `hev1[.A.B.CCCC.DD]` (Variable resolution HEVC)
+  - : The `hev1` codec parameters have the same syntax as the `hvc1` codec parameters.
 
 ### WebM
 
