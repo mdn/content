@@ -25,7 +25,7 @@ setDataAttributes(allow);
 - `allow`
   - : `true` if data attributes are allowed, and `false` if they are to be removed.
 
-### Returns
+### Return value
 
 None (`undefined`).
 

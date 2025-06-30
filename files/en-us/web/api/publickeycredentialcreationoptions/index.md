@@ -95,7 +95,7 @@ The **`PublicKeyCredentialCreationOptions`** dictionary represents the object pa
 
     Extensions are optional and different browsers may recognize different extensions. Processing extensions is always optional for the client: if a browser does not recognize a given extension, it will just ignore it. For information on using extensions, and which ones are supported by which browsers, see [Web Authentication extensions](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions).
 
-- `hints` {{optional_inline}}
+- `hints` {{optional_inline}} {{experimental_inline}}
   - : An array of strings providing hints as to what UI the browser should provide for the user to create a public key credential.
 
     The strings can be any of the following:

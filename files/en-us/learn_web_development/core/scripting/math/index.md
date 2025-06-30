@@ -399,7 +399,7 @@ Open the above example in the MDN Playground by clicking the **"Play"** button, 
 
 - Change the line that calculates `x` so the box is still `50px` wide, but the 50 is calculated using the numbers 43 and 7 and an arithmetic operator.
 - Change the line that calculates `y` so the box is `75px` high, but the 75 is calculated using the numbers 25 and 3 and an arithmetic operator.
-- Change the line that calculates `x` so the box is `100px` wide, but the 150 is calculated using three numbers and the subtraction and division operators.
+- Change the line that calculates `x` so the box is `100px` wide, but the 100 is calculated using three numbers and the subtraction and division operators.
 - Change the line that calculates `y` so the box is `200px` high, but the 200 is calculated using the numbers 2 and `x`, and the multiplication operator.
 
 Don't worry if you mess the code up. You can always press the Reset button and start again.

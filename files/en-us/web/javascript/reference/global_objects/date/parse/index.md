@@ -44,7 +44,7 @@ A number representing the [timestamp](/en-US/docs/Web/JavaScript/Reference/Globa
 
 This function is useful for setting date values based on string values, for example in conjunction with the {{jsxref("Date/setTime", "setTime()")}} method.
 
-The formats that `parse()` can handle are not explicitly specified, but there are a few invariants:
+The formats that `parse()` can handle are not explicitly specified, but there are a few {{Glossary("invariant", "invariants")}}:
 
 - The [date time string format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format) (produced by {{jsxref("Date/toISOString", "toISOString()")}}) must be supported.
 - If `x` is any Date whose milliseconds amount is zero, then `x.valueOf()` should be equal to any of the following: `Date.parse(x.toString())`, `Date.parse(x.toUTCString())`, `Date.parse(x.toISOString())`. This means the formats produced by {{jsxref("Date/toString", "toString()")}} and {{jsxref("Date/toUTCString", "toUTCString()")}} should be supported too.
