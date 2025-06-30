@@ -10,7 +10,7 @@ page-type: guide
 
 ## Syntax
 
-```css
+```plain
 selector {
   property: function([argument]? [, argument]!);
 }

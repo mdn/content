@@ -27,7 +27,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 - `charset`
   - : This attribute declares the document's character encoding. If the attribute is present, its value must be an ASCII case-insensitive match for the string `"utf-8"`, because UTF-8 is the only valid encoding for HTML5 documents. `<meta>` elements which declare a character encoding must be located entirely within the first 1024 bytes of the document.
 - [`content`](/en-US/docs/Web/HTML/Reference/Attributes/content)
-  - : This attribute contains the value for the [`http-equiv`](#http-equiv) or [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta/name) attribute, depending on which is used.
+  - : This attribute contains the value for the [`http-equiv`](/en-US/docs/Web/HTML/Reference/Elements/meta/http-equiv) or [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta/name) attribute, depending on which is used.
 - [`http-equiv`](/en-US/docs/Web/HTML/Reference/Elements/meta/http-equiv)
   - : Defines a pragma directive, which are instructions for the browser for processing the document.
     The attribute's name is short for `http-equivalent` because the allowed values are names of equivalent HTTP headers.
@@ -98,7 +98,7 @@ The `content="3;url=https://www.mozilla.org"` attribute will redirect page to `h
             <code>&#x3C;meta charset></code>,
             <code>&#x3C;meta http-equiv></code>: a
             {{HTMLElement("head")}} element. If the
-            <a href="#http-equiv"><code>http-equiv</code></a> is not an
+            <a href="/en-US/docs/Web/HTML/Reference/Elements/meta/http-equiv"><code>http-equiv</code></a> is not an
             encoding declaration, it can also be inside a
             {{HTMLElement("noscript")}} element, itself inside a
             <code>&#x3C;head></code> element.

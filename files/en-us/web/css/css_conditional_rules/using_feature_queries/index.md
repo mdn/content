@@ -16,7 +16,7 @@ CSS feature queries are part of the [CSS conditional rules](/en-US/docs/Web/CSS/
 
 A feature query consists of the `@supports` at-rule followed by the support condition or a `supports()` function and declaration parameter within an `@import` at-rule declaration:
 
-```css
+```plain
 /* `@supports` at-rule */
 @supports <support-condition> {
   /* CSS rules to apply */
