@@ -24,7 +24,7 @@ Typically, the server will use the contents of HTTP cookies to determine whether
 Cookies are mainly used for three purposes:
 
 - **Session management**: User sign-in status, shopping cart contents, game scores, or any other user session-related details that the server needs to remember.
-- **Personalization**: User preferences such as display language and UI theme.
+- **Personalization**: User preferences, such as display language and UI theme.
 - **Tracking**: Recording and analyzing user behavior.
 
 ### Data storage

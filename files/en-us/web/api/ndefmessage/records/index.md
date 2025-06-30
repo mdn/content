@@ -29,18 +29,26 @@ ndefReaderInst.onreading = (event) => {
     console.log(`Record type:  ${record.recordType}`);
     console.log(`MIME type:    ${record.mediaType}`);
     console.log(`Record id:    ${record.id}`);
+
     switch (record.recordType) {
       case "text":
-        // TODO: Read text record with record data, lang, and encoding.
+        const textDecoder = new TextDecoder(record.encoding || "utf-8");
+        const text = textDecoder.decode(record.data);
+        console.log(`Text:         ${text}`);
         break;
+
       case "url":
-        // TODO: Read URL record with record data.
+        const urlDecoder = new TextDecoder("utf-8");
+        const url = urlDecoder.decode(record.data);
+        console.log(`URL:          ${url}`);
         break;
+
       default:
-      // TODO: Handle other records with record data.
+        console.log("Other record data:", record.data);
     }
   }
 };
+
 ```
 
 ## Specifications

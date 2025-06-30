@@ -23,7 +23,7 @@ The HTTP protocol used in those early phases was very simple. It was later dubbe
 
 ## HTTP/0.9 – The one-line protocol
 
-The initial version of HTTP had no version number; it was later called 0.9 to differentiate it from later versions. HTTP/0.9 was extremely simple: requests consisted of a single line and started with the only possible method {{HTTPMethod("GET")}} followed by the path to the resource. The full URL wasn't included as the protocol, server, and port weren't necessary once connected to the server.
+The initial version of HTTP had no version number; it was later called 0.9 to differentiate it from later versions. HTTP/0.9 was extremely simple: requests consisted of a single line and started with the only possible method {{HTTPMethod("GET")}}, followed by the path to the resource. The full URL wasn't included as the protocol, server, and port weren't necessary once connected to the server.
 
 ```http
 GET /my-page.html
