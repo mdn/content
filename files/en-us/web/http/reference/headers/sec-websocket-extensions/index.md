@@ -12,7 +12,7 @@ spec-urls: https://datatracker.ietf.org/doc/html/rfc6455#section-11.3.2
 The HTTP **Sec-WebSocket-Extensions** {{glossary("request header", "request")}} and {{glossary("response header")}} is used in the [WebSocket](/en-US/docs/Web/API/WebSockets_API) opening [handshake](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#the_websocket_handshake) to negotiate a protocol extension used by the client and server.
 
 In a request the header specifies one or more extensions that the web application would like to use, in order of preference.
-These can be added as in multiple headers, or as comma separate values added to a single header.
+These can be added as in multiple headers, or as semicolon separate values added to a single header.
 
 In a response the header can only appear once, where it specifies the extension selected by the server from the client's preferences.
 This value must be the first extension that the server supports from the list provided in the request header.
@@ -49,7 +49,7 @@ Sec-WebSocket-Extensions: <selected-extension>
 ## Directives
 
 - `<extensions>`
-  - : A comma-separated list of extensions to request (or for the server to agree to support).
+  - : A semicolon-separated list of extensions to request (or for the server to agree to support).
     These should be selected from the [IANA WebSocket Extension Name Registry](https://www.iana.org/assignments/websocket/websocket.xml#extension-name).
     Extensions which take parameters delineate them with semicolons.
 
