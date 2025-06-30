@@ -101,6 +101,10 @@ There are many ways to create a new React application. We're going to use Vite t
 
 It's possible to [add React to an existing project](https://react.dev/learn/add-react-to-an-existing-project) by copying some [`<script>`](/en-US/docs/Web/HTML/Reference/Elements/script) elements into an HTML file, but using Vite will allow you to spend more time building your app and less time fussing with setup.
 
+> [!NOTE]
+> You can start writing React code without doing _any_ local setup by working through Scrimba's [First React Code](https://scrimba.com/learn-react-c0e/~03uo?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> scrim.
+> Feel free to give it a try before continuing.
+
 ### Requirements
 
 In order to use Vite, you need to have [Node.js](https://nodejs.org/en/) installed. As of Vite 5.0, at least Node version 18 or later is required, and it's a good idea to run the latest long term support (LTS) version when you can. As of 24th October 2023, Node 20 is the latest LTS version. Node includes npm (the Node package manager).
@@ -209,8 +213,8 @@ Let's open `src/App.jsx`, since our browser is prompting us to edit it. This fil
 
 ```jsx
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
+import reactLogo from "./assets/react.svg";
 import "./App.css";
 
 function App() {
@@ -253,8 +257,8 @@ The `import` statements at the top of the file allow `App.jsx` to use code that 
 
 ```jsx
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
+import reactLogo from "./assets/react.svg";
 import "./App.css";
 ```
 
@@ -340,7 +344,8 @@ We then import our `App()` function and `index.css`, which holds global styles t
 
 We then call the `createRoot()` function, which defines the root node of our application. This takes as an argument the DOM element inside which we want our React app to be rendered. In this case, that's the DOM element with an ID of `root`. Finally, we chain the `render()` method onto the `createRoot()` call, passing it the JSX expression that we want to render inside our root. By writing `<App />` as this JSX expression, we're telling React to call the `App()` _function_, which renders the `App` _component_ inside the root node.
 
-> **Note:** `<App />` is rendered inside a special `<React.StrictMode>` component. This component helps developers catch potential problems in their code.
+> [!NOTE]
+> `<App />` is rendered inside a special `<React.StrictMode>` component. This component helps developers catch potential problems in their code.
 
 You can read up on these React APIs, if you'd like:
 
@@ -416,7 +421,7 @@ The curly braces around `subject` are another feature of JSX's syntax. The curly
 
 ```jsx-nolint
 {/* Hello, React :)! */}
-<h1>Hello, {subject + ' :)'}!</h1>
+<h1>Hello, {`${subject} :)`}!</h1>
 {/* Hello, REACT */}
 <h1>Hello, {subject.toUpperCase()}</h1>
 {/* Hello, 4! */}

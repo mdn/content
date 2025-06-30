@@ -1,5 +1,6 @@
 ---
 title: Intl.Segmenter.prototype.resolvedOptions()
+short-title: resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/resolvedOptions
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.Segmenter.resolvedOptions

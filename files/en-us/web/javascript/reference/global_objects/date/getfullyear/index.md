@@ -1,5 +1,6 @@
 ---
 title: Date.prototype.getFullYear()
+short-title: getFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getFullYear
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getFullYear

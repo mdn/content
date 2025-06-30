@@ -13,14 +13,12 @@ This article provides information about the changes in Firefox 67 that will affe
 ### Developer tools
 
 - Debugger updates:
-
   - [Column breakpoints](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/set_a_breakpoint/index.html) allow you to select the specific point (or column) in a line of code where you want the debugger to break ([Firefox bug 1528417](https://bugzil.la/1528417)).
   - [Log points](https://firefox-source-docs.mozilla.org/devtools-user/debugger/set_a_logpoint/index.html) allow you to log specific information to the console during code execution without pausing execution and without the need to change the code.
   - The [map scopes feature](https://firefox-source-docs.mozilla.org/devtools-user/debugger/using_the_debugger_map_scopes_feature/index.html) allows you to view the variables from the original source.
   - You can [debug worker](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers#debugging_worker_threads) threads directly in the debugger.
 
 - [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) updates:
-
   - Navigate details in the console using the keyboard ([Firefox bug 1424159](https://bugzil.la/1424159)).
   - Cmd + K will now clear the console of its contents on macOS ([Firefox bug 1532939](https://bugzil.la/1532939)).
   - When the user clears the console, the error messages cache is cleared as well ([Firefox bug 717611](https://bugzil.la/717611)).
@@ -31,7 +29,6 @@ This article provides information about the changes in Firefox 67 that will affe
   - When the user has filtered the contents of the console, an icon will be added to the filter text box to clear the filter ([Firefox bug 1525821](https://bugzil.la/1525821)).
 
 - [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) enhancements:
-
   - The [Header](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html#headers) panel of the Network monitor will now display a notification for resources belonging to a known tracker ([Firefox bug 1485416](https://bugzil.la/1485416)).
   - In the Network monitor [request columns](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#network-request-columns), you can control the visible columns and column sorting. The context menu now includes a command to restore the list sort parameters to the default ([Firefox bug 1454962](https://bugzil.la/1454962)).
   - You can change the [width of the columns](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#network-request-columns) in the Network Monitor to suit your workflow ([Firefox bug 1358414](https://bugzil.la/1358414)).
@@ -39,13 +36,11 @@ This article provides information about the changes in Firefox 67 that will affe
 #### Removals
 
 - The following Developer Tools panels have been removed (see [Deprecated tools](https://firefox-source-docs.mozilla.org/devtools-user/deprecated_tools/index.html) for details):
-
   - Canvas debugger ([Firefox bug 1403938](https://bugzil.la/1403938)).
   - Shader editor ([Firefox bug 1342237](https://bugzil.la/1342237)).
   - WebAudio editor ([Firefox bug 1403944](https://bugzil.la/1403944)).
 
 - The following Developer Tools have been deprecated (see [Deprecated tools](https://firefox-source-docs.mozilla.org/devtools-user/deprecated_tools/index.html) for details):
-
   - WebIDE ([Firefox bug 1539462](https://bugzil.la/1539462)).
   - Connect… page ([Firefox bug 1539462](https://bugzil.la/1539462)).
 

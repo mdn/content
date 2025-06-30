@@ -1,5 +1,6 @@
 ---
 title: Temporal.Duration.prototype.add()
+short-title: add()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/add
 page-type: javascript-instance-method
 status:

@@ -1,5 +1,6 @@
 ---
 title: Date.prototype.valueOf()
+short-title: valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Date/valueOf
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.valueOf

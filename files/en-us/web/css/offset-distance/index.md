@@ -67,7 +67,6 @@ offset-distance: unset;
 ```
 
 - {{cssxref('&lt;length-percentage&gt;')}}
-
   - : A length that specifies how far the element is along the path (defined with {{cssxref('offset-path')}}).
 
     100% represents the total length of the path (when the `offset-path` is defined as a basic shape or `path()`).

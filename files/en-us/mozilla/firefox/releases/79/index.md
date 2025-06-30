@@ -50,13 +50,11 @@ See also [Firefox 79: The safe return of shared memory, new tooling, and platfor
 ### JavaScript
 
 - {{jsxref("SharedArrayBuffer")}} has been re-enabled in a post-Spectre-safe manner. It is available to cross-origin isolated sites ([Firefox bug 1619649](https://bugzil.la/1619649)).
-
   - To cross-origin isolate your site, you need to set the new {{HTTPHeader("Cross-Origin-Embedder-Policy")}} (COEP) and {{HTTPHeader("Cross-Origin-Opener-Policy")}} (COOP) headers.
 
 - {{jsxref("Promise.any()")}} is now available ([Firefox bug 1599769](https://bugzil.la/1599769)).
 - {{jsxref("WeakRef")}} objects have been implemented ([Firefox bug 1639246](https://bugzil.la/1639246)).
 - [Logical assignment operators](https://github.com/tc39/proposal-logical-assignment) are now supported ([Firefox bug 1639591](https://bugzil.la/1639591))
-
   - [Logical nullish assignment (`??=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)
   - [Logical AND assignment (`&&=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)
   - [Logical OR assignment (`||=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)

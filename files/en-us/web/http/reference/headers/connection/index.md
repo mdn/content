@@ -1,5 +1,6 @@
 ---
-title: Connection
+title: Connection header
+short-title: Connection
 slug: Web/HTTP/Reference/Headers/Connection
 page-type: http-header
 browser-compat: http.headers.Connection

@@ -3,10 +3,12 @@ title: "Summarizer: create() static method"
 short-title: create()
 slug: Web/API/Summarizer/create_static
 page-type: web-api-static-method
+status:
+  - experimental
 browser-compat: api.Summarizer.create_static
 ---
 
-{{APIRef("Summarizer API")}}{{securecontext_header}}
+{{APIRef("Summarizer API")}}{{securecontext_header}}{{SeeCompatTable}}
 
 The **`create()`** static method of the {{domxref("Summarizer")}} interface creates a new `Summarizer` instance from which to generate summaries.
 
@@ -23,13 +25,11 @@ Summarizer.create(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An object specifying configuration options for the `Summarizer`. Possible values include:
-
     - `expectedInputLanguages`
       - : An array of strings specifying the expected languages of the input text, which should be valid [BCP 47 language tags](https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags) (as specified in [RFC 5646](https://datatracker.ietf.org/doc/html/rfc5646)). Defaults to `["en"]`.
     - `expectedContextLanguages`
-      - : An array of strings specifying the expected languages of any provided context strings (either the [`sharedContext`](#sharedContext) passed to the `Summarizer`, or a `context` specified during a {{domxref("Summarizer.summarize", "summarize()")}} or {{domxref("Summarizer.summarizeStreaming", "summarizeStreaming()")}} call), which should be valid BCP 47 language tags. Defaults to `["en"]`.
+      - : An array of strings specifying the expected languages of any provided context strings (either the [`sharedContext`](#sharedcontext) passed to the `Summarizer`, or a `context` specified during a {{domxref("Summarizer.summarize", "summarize()")}} or {{domxref("Summarizer.summarizeStreaming", "summarizeStreaming()")}} call), which should be valid BCP 47 language tags. Defaults to `["en"]`.
     - `format`
       - : An enumerated value specifying the text {{domxref("Summarizer.format", "format")}} you want summaries returned in. Defaults to `markdown`.
     - `length`
@@ -66,7 +66,7 @@ A {{jsxref("Promise")}} that fulfills with a `Summarizer` object instance.
 const summarizer = await Summarizer.create({
   sharedContext:
     "A general summary to help a user decide if the text is worth reading",
-  type: "tl;dr",
+  type: "tldr",
   length: "short",
   format: "markdown",
   expectedInputLanguages: ["en-US"],

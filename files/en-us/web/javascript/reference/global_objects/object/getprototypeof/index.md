@@ -1,5 +1,6 @@
 ---
 title: Object.getPrototypeOf()
+short-title: getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.getPrototypeOf

@@ -42,7 +42,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 - `height`
   - : The height of the displayed resource, as in {{cssxref("&lt;integer&gt;")}} in {{glossary("CSS pixel", "CSS pixels")}}.
 - `name`
-  - : The name of valid browsing context (HTML5), or the name of the control (HTML 4).
+  - : The name of valid browsing context (HTML5), or the name of the control (HTML 4). The name becomes a property of the {{domxref("Window")}} and {{domxref("Document")}} objects, containing a reference to the embedded window or the element itself.
 - `standby` {{deprecated_inline}}
   - : A message that the browser can show while loading the object's implementation and data.
 - `type`
@@ -112,7 +112,7 @@ If the video in the example fails to load, the user will be provided with an ima
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a>
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role">No corresponding role</a>
       </td>
     </tr>
     <tr>

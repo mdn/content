@@ -76,7 +76,6 @@ font-variant-east-asian: unset;
 - `ruby`
   - : This keyword forces the use of special glyphs for ruby characters. As these are usually smaller, font creators often designs specific forms, usually slightly bolder to improve the contrast. This keyword corresponds to the OpenType values `ruby`.
 - `<east-asian-variant-values>`
-
   - : These values specify a set of logographic glyph variants which should be used for display. Possible values are:
 
     | Keyword       | Standard defining the glyphs                                                | OpenType equivalent |
@@ -89,9 +88,7 @@ font-variant-east-asian: unset;
     | `traditional` | None, use the traditional Chinese glyphs                                    | `trad`              |
 
 - `<east-asian-width-values>`
-
   - : These values control the sizing of figures used for East Asian characters. Two values are possible:
-
     - `proportional-width` activating the set of East Asian characters which vary in width. It corresponds to the OpenType values `pwid`.
     - `full-width` activating the set of East Asian characters which are all of the same, roughly square, width metric. It corresponds to the OpenType values `fwid`.
 
@@ -114,7 +111,7 @@ This example require font "Yu Gothic" installed in your OS, other fonts may not 
 ```html
 <table>
   <thead></thead>
-  <tbody style="border:0;">
+  <tbody>
     <tr>
       <th>normal/jis78:</th>
       <td>麹町</td>
@@ -137,6 +134,10 @@ This example require font "Yu Gothic" installed in your OS, other fonts may not 
 #### CSS
 
 ```css
+tbody {
+  border: 0;
+}
+
 td {
   font-family: "Yu Gothic";
   font-size: 20px;

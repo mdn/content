@@ -137,7 +137,7 @@ It then loops through all the buttons assigning them their image and creating an
 ```js
 for (let i = 0; i < bgBtns.length; i++) {
   let imgName = bgBtns[i].getAttribute("class");
-  let bgImg = "url('images/" + imgName + ".png')";
+  let bgImg = `url('images/${imgName}.png')`;
   bgBtns[i].style.backgroundImage = bgImg;
 
   bgBtns[i].onclick = (e) => {

@@ -1,5 +1,6 @@
 ---
 title: RegExp.prototype.unicodeSets
+short-title: unicodeSets
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.RegExp.unicodeSets
@@ -12,8 +13,8 @@ The **`unicodeSets`** accessor property of {{jsxref("RegExp")}} instances return
 {{InteractiveExample("JavaScript Demo: RegExp.prototype.unicodeSets")}}
 
 ```js interactive-example
-const regex1 = new RegExp("[\\p{Lowercase}&&\\p{Script=Greek}]");
-const regex2 = new RegExp("[\\p{Lowercase}&&\\p{Script=Greek}]", "v");
+const regex1 = /[\p{Lowercase}&&\p{Script=Greek}]/;
+const regex2 = /[\p{Lowercase}&&\p{Script=Greek}]/v;
 
 console.log(regex1.unicodeSets);
 // Expected output: false

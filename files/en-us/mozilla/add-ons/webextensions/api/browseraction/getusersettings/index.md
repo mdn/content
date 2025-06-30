@@ -26,9 +26,7 @@ This function takes no parameters.
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with an object with these properties:
 
 - `userSettings`
-
   - : An object containing the user-specified settings for the browser action with these properties:
-
     - `isOnToolbar` {{optional_inline}}
       - : `boolean`. Whether the user has pinned the action's icon to the browser UI. This setting does not indicate whether the action icon is visible. The icon's visibility depends on the size of the browser window and the layout of the browser UI.
 

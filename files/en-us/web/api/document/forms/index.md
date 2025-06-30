@@ -8,19 +8,20 @@ browser-compat: api.Document.forms
 
 {{APIRef("DOM")}}
 
-The **`forms`** read-only property of
-the {{domxref("Document")}} interface returns an {{domxref("HTMLCollection")}} listing
-all the {{HTMLElement("form")}} elements contained in the document.
+The **`forms`** read-only property of the {{domxref("Document")}} interface returns an {{domxref("HTMLCollection")}} listing all the {{HTMLElement("form")}} elements contained in the document.
 
 > [!NOTE]
-> Similarly, you can access a list of a form's component user
-> input elements using the {{domxref("HTMLFormElement.elements")}} property.
+> Similarly, you can access a list of a form's component user input elements using the {{domxref("HTMLFormElement.elements")}} property.
+
+Named `<form>` elements are also exposed as properties of the `document` object itself.
+For example, `document["login-form"]` and `document.forms["login-form"]` can both access the form named `login-form`. Relying on this behavior is dangerous and discouraged.
+It can lead to unexpected conflicts with some existing or future APIs in the browser.
+For example, if browsers introduce a new `document` property with the same name as your form, then the same code will no longer be able to access the form element. Always use `document.forms` instead.
 
 ## Value
 
-An {{domxref("HTMLCollection")}} object listing all of the document's forms. Each item
-in the collection is a {{domxref("HTMLFormElement")}} representing a single
-`<form>` element.
+An {{domxref("HTMLCollection")}} object listing all of the document's forms.
+Each item in the collection is a {{domxref("HTMLFormElement")}} representing a single `<form>` element.
 
 If the document has no forms, the returned collection is empty, with a length of zero.
 
@@ -29,35 +30,25 @@ If the document has no forms, the returned collection is empty, with a length of
 ### Getting form information
 
 ```html
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>document.forms example</title>
-  </head>
+<form id="robby">
+  <input type="button" value="robby's form" />
+</form>
 
-  <body>
-    <form id="robby">
-      <input
-        type="button"
-        onclick="alert(document.forms[0].id);"
-        value="robby's form" />
-    </form>
+<form id="dave">
+  <input type="button" value="dave's form" />
+</form>
 
-    <form id="dave">
-      <input
-        type="button"
-        onclick="alert(document.forms[1].id);"
-        value="dave's form" />
-    </form>
+<form id="paul">
+  <input type="button" value="paul's form" />
+</form>
+```
 
-    <form id="paul">
-      <input
-        type="button"
-        onclick="alert(document.forms[2].id);"
-        value="paul's form" />
-    </form>
-  </body>
-</html>
+```js
+document.querySelectorAll("input[type=button]").forEach((button, i) => {
+  button.addEventListener("click", (event) => {
+    console.log(document.forms[i].id);
+  });
+});
 ```
 
 ### Getting an element from within a form
@@ -70,26 +61,17 @@ const selectFormElement = document.forms[index].elements[index];
 ### Named form access
 
 ```html
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>document.forms example</title>
-  </head>
+<form name="login">
+  <input name="email" type="email" />
+  <input name="password" type="password" />
+  <button type="submit">Log in</button>
+</form>
+```
 
-  <body>
-    <form name="login">
-      <input name="email" type="email" />
-      <input name="password" type="password" />
-      <button type="submit">Log in</button>
-    </form>
-
-    <script>
-      const loginForm = document.forms.login; // Or document.forms['login']
-      loginForm.elements.email.placeholder = "test@example.com";
-      loginForm.elements.password.placeholder = "password";
-    </script>
-  </body>
-</html>
+```js
+const loginForm = document.forms.login; // Or document.forms['login']
+loginForm.elements.email.placeholder = "test@example.com";
+loginForm.elements.password.placeholder = "password";
 ```
 
 ## Specifications

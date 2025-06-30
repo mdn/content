@@ -106,7 +106,6 @@ This property may be specified as a single `<font-stretch-css3>` keyword value o
 - `semi-expanded`, `expanded`, `extra-expanded`, `ultra-expanded`
   - : Specifies a more expanded font face than normal, with `ultra-expanded` as the most expanded.
 - `<percentage>`
-
   - : A {{cssxref("&lt;percentage&gt;")}} value between 50% and 200% (inclusive). Negative values are not allowed for this property.
 
 ### Keyword to numeric mapping

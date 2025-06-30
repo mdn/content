@@ -3,12 +3,10 @@ title: "PointerEvent: persistentDeviceId property"
 short-title: persistentDeviceId
 slug: Web/API/PointerEvent/persistentDeviceId
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.PointerEvent.persistentDeviceId
 ---
 
-{{ APIRef("Pointer Events") }}{{SeeCompatTable}}
+{{ APIRef("Pointer Events") }}
 
 The **`persistentDeviceId`** read-only property of the
 {{domxref("PointerEvent")}} interface is a unique identifier for the pointing device generating the `PointerEvent`. This provides a secure, reliable way to identify multiple pointing devices (such as pens) interacting with the screen simultaneously.
@@ -41,7 +39,7 @@ const colorYellow = 2;
 const colors = [colorBlue, colorGreen, colorYellow];
 
 const pointerToColorMap = new Map();
-const colorAssignmentIndex = 0;
+let colorAssignmentIndex = 0;
 
 const canvas = document.querySelector("#inking-surface");
 

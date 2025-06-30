@@ -1,5 +1,6 @@
 ---
 title: Math.imul()
+short-title: imul()
 slug: Web/JavaScript/Reference/Global_Objects/Math/imul
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.imul

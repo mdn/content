@@ -1,5 +1,6 @@
 ---
 title: arguments.callee
+short-title: callee
 slug: Web/JavaScript/Reference/Functions/arguments/callee
 page-type: javascript-instance-data-property
 status:
@@ -20,7 +21,8 @@ A reference to the currently executing function.
 
 {{js_property_attributes(1, 0, 1)}}
 
-> **Note:** `callee` is a data property only in non-strict functions with simple parameters (in which case the `arguments` object is also [auto-syncing](/en-US/docs/Web/JavaScript/Reference/Functions/arguments#assigning_to_indices)). Otherwise, it is an accessor property whose getter and setter both throw a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `callee` is a data property only in non-strict functions with simple parameters (in which case the `arguments` object is also [auto-syncing](/en-US/docs/Web/JavaScript/Reference/Functions/arguments#assigning_to_indices)). Otherwise, it is an accessor property whose getter and setter both throw a {{jsxref("TypeError")}}.
 
 ## Description
 
@@ -59,10 +61,8 @@ did not. To get around this `arguments.callee` was added so you could do
 However, the design of `arguments.callee` has multiple issues. The first problem is that the recursive call will get a different `this` value. For example:
 
 ```js
-const global = this;
-
-const sillyFunction = function (recursed) {
-  if (this !== global) {
+function sillyFunction(recursed) {
+  if (this !== globalThis) {
     console.log("This is:", this);
   } else {
     console.log("This is the global");
@@ -71,7 +71,7 @@ const sillyFunction = function (recursed) {
   if (!recursed) {
     return arguments.callee(true);
   }
-};
+}
 
 sillyFunction();
 // This is the global

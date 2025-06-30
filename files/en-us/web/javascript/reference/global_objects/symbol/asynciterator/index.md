@@ -1,5 +1,6 @@
 ---
 title: Symbol.asyncIterator
+short-title: asyncIterator
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.asyncIterator

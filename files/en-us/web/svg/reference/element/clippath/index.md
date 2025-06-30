@@ -10,6 +10,20 @@ The **`<clipPath>`** [SVG](/en-US/docs/Web/SVG) element defines a clipping path,
 
 A clipping path restricts the region to which paint can be applied. Conceptually, parts of the drawing that lie outside of the region bounded by the clipping path are not drawn.
 
+## Usage context
+
+{{svginfo}}
+
+## Attributes
+
+- {{SVGAttr("clipPathUnits")}}
+  - : Defines the coordinate system for the contents of the `<clipPath>` element.
+    _Value type_: `userSpaceOnUse` | `objectBoundingBox`; _Default value_: `userSpaceOnUse`; _Animatable_: **yes**
+
+## DOM Interface
+
+This element implements the {{domxref("SVGClipPathElement")}} interface.
+
 ## Example
 
 ```css hidden
@@ -66,16 +80,6 @@ svg {
 A clipping path is conceptually equivalent to a custom viewport for the referencing element. Thus, it affects the _rendering_ of an element, but not the element's _inherent geometry_. The bounding box of a clipped element (meaning, an element which references a `<clipPath>` element via a {{SVGAttr("clip-path")}} property, or a child of the referencing element) must remain the same as if it were not clipped.
 
 By default, {{cssxref("pointer-events")}} are not dispatched on clipped regions. For example, a circle with a radius of `10` which is clipped to a circle with a radius of `5` will not receive "click" events outside the smaller radius.
-
-## Attributes
-
-- {{SVGAttr("clipPathUnits")}}
-  - : Defines the coordinate system for the contents of the `<clipPath>` element.
-    _Value type_: `userSpaceOnUse` | `objectBoundingBox`; _Default value_: `userSpaceOnUse`; _Animatable_: **yes**
-
-## Usage context
-
-{{svginfo}}
 
 ## Specifications
 

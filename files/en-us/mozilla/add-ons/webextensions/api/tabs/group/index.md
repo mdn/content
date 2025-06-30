@@ -14,6 +14,8 @@ If a call moves tabs out of tab groups and any of those tab groups become empty,
 > [!NOTE]
 > The `tabs.group()` method is not the only way to group tabs. A tab also joins a tab group when {{WebExtAPIRef("tabs.move")}} places it between tabs that are part of a tab group.
 
+For more information on tab groups, see {{WebExtAPIRef("tabGroups")}}.
+
 ## Syntax
 
 ```js-nolint
@@ -25,18 +27,14 @@ let grouping = browser.tabs.group(
 ### Parameters
 
 - `options`
-
   - : An object containing details about the tab grouping.
-
     - `createProperties` {{optional_inline}}
-
       - : `object`. Configuration details for a new group. Cannot be used if `groupId` is specified.
-
         - `windowId` {{optional_inline}}
           - : `integer`. The window of the new group. Defaults to the [current window](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/getCurrent).
 
     - `groupId` {{optional_inline}}
-      - : `integer`. The ID of the group to add the tabs to. If not specified, a new group is created.
+      - : `integer`. The ID of the group to add the tabs to. If not specified, a group is created.
     - `tabIds`
       - : `integer` or `array` of `integer`. The tab ID or list of tab IDs to add to the group. Must contain at least one tab ID.
 
@@ -60,7 +58,7 @@ const groupId = await browser.tabs.group({
 const tab3 = await browser.tabs.create({});
 await browser.tabs.group({
   tabIds: tab3.id,
-  groupId: groupId,
+  groupId,
 });
 ```
 

@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainDateTime.prototype.month
+short-title: month
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime/month
 page-type: javascript-instance-accessor-property
 status:

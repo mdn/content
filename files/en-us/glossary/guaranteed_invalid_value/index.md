@@ -14,4 +14,4 @@ When a [custom property](/en-US/docs/Web/CSS/--*)'s value is the guaranteed-inva
 
 - CSS {{CSSXref("initial")}}
 - CSS {{CSSXref("var")}}
-- [CSS Custom Properties for Cascading Variables Module Level 1 Specification](https://www.w3.org/TR/css-variables-1/#guaranteed-invalid)
+- [CSS Custom Properties for Cascading Variables Module Level 1](https://drafts.csswg.org/css-variables/#guaranteed-invalid) specification

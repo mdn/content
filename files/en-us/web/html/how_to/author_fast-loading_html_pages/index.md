@@ -110,7 +110,7 @@ use non-nested tables or divs as in
 </table>
 ```
 
-See also: [CSS flexible box layout](https://www.w3.org/TR/css-flexbox-1/) and [CSS grid layout](https://www.w3.org/TR/css-grid-1/) specifications.
+See also: [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) and [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) modules.
 
 ### Minify and compress SVG assets
 
@@ -163,9 +163,7 @@ Note: Even though these attributes do help a lot the first time a page is loaded
 ## Example page structure
 
 - `{{htmlelement('html')}}`
-
   - `{{htmlelement('head')}}`
-
     - `{{htmlelement('link')}}`
 
       CSS files required for page appearance. Minimize the number of files for performance while keeping unrelated CSS in separate files for maintenance.
@@ -179,7 +177,6 @@ Note: Even though these attributes do help a lot the first time a page is loaded
   - `{{htmlelement('body')}}`
 
     User visible page content in small chunks (`{{htmlelement('header')}}`/ `{{htmlelement('main')}}/` `{{htmlelement('table')}}`) that can be displayed without waiting for the full page to download.
-
     - `{{htmlelement('script')}}`
 
       Any scripts which will be used to perform interactivity. Interaction scripts typically can only run after the page has completely loaded and all necessary objects have been initialized. There is no need to load these scripts before the page content. That only slows down the initial appearance of the page load.

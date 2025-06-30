@@ -1,5 +1,6 @@
 ---
 title: RegExp.prototype.unicode
+short-title: unicode
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/unicode
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.RegExp.unicode
@@ -12,8 +13,8 @@ The **`unicode`** accessor property of {{jsxref("RegExp")}} instances returns wh
 {{InteractiveExample("JavaScript Demo: RegExp.prototype.unicode")}}
 
 ```js interactive-example
-const regex1 = new RegExp("\\u{61}");
-const regex2 = new RegExp("\\u{61}", "u");
+const regex1 = /\u{61}/;
+const regex2 = /\u{61}/u;
 
 console.log(regex1.unicode);
 // Expected output: false

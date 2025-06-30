@@ -25,10 +25,8 @@ Highlights:
 ### CSS
 
 - Our experimental implementation of CSS Fonts Level 3 progresses. Newly implemented features are:
-
   - the fallback algorithm of {{cssxref("font-variant-position")}}, creating synthetic alternates for missing glyphs, based on the subscript and superscript metrics supplied by the font ([Firefox bug 1024804](https://bugzil.la/1024804)).
   - The `layout.css.font-features.enabled` preference has been removed, meaning the following properties have been activated by default:
-
     - The CSS Font Level 3 version of {{cssxref("font-variant")}} which is now a shorthand property.
     - The longhand properties {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-ligatures")}}, and {{cssxref("font-variant-alternates")}}.
     - The properties {{cssxref("font-kerning")}} and {{cssxref("font-synthesis")}}
@@ -45,7 +43,6 @@ _No change._
 ### JavaScript
 
 - The ES2015 syntax for [computed property names on object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names) has been implemented ([Firefox bug 924688](https://bugzil.la/924688)).
-
   - This includes [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) and [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set) method names as well ([Firefox bug 1048384](https://bugzil.la/1048384)) and can also be used with [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring#computed_object_property_names_and_destructuring).
 
 - The ES2015 [shorthand syntax for defining methods](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) on objects has been implemented ([Firefox bug 924672](https://bugzil.la/924672)).
@@ -53,7 +50,6 @@ _No change._
 - ES2015 [template strings](/en-US/docs/Web/JavaScript/Reference/Template_literals) and the {{jsxref("String.raw()")}} method are now supported ([Firefox bug 1038259](https://bugzil.la/1038259), [Firefox bug 1039774](https://bugzil.la/1039774)).
 - A new ES2015 object {{jsxref("WeakSet")}} has been added ([Firefox bug 792439](https://bugzil.la/792439)).
 - ES2015 [Symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) (only available in the Nightly channel) have been updated to conform with recent specification changes ([Firefox bug 1042602](https://bugzil.la/1042602)):
-
   - When trying to convert a symbol to a number, a [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError) will be thrown now.
   - When using loose equality, `Object(sym) == sym` returns `true` now.
 
@@ -75,7 +71,6 @@ _No change._
 - The {{domxref("MediaStreamTrack.stop()")}} method has been added ([Firefox bug 1057955](https://bugzil.la/1057955)).
 - Our experimental implementation of EME continues. The `MediaKeySession.getUsableKeyIds()` method has been added ([Firefox bug 1057171](https://bugzil.la/1057171)).
 - Regarding [WebRTC](/en-US/docs/Web/API/WebRTC_API):
-
   - an experiment implementation of `RTPSender` and `RTPReceiver` working with {{domxref("RTCPeerConnection")}} has landed ([Firefox bug 1032835](https://bugzil.la/1032835)).
   - application window sharing has been added to {{domxref("Navigator.getUserMedia()")}} ([Firefox bug 1036653](https://bugzil.la/1036653)) and {{domxref("MediaTrackConstraintSet")}} now supports `browserWindow` and `scrollWithPage` allowing to chose the tab of a window that has to be shared without showing the tab chooser dialog ([Firefox bug 1041700](https://bugzil.la/1041700)).
   - `"browser"` is now an accepted value of MediaSourceEnum, used to define constraints ([Firefox bug 1041493](https://bugzil.la/1041493)).

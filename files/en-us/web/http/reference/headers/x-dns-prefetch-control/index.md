@@ -1,5 +1,6 @@
 ---
-title: X-DNS-Prefetch-Control
+title: X-DNS-Prefetch-Control header
+short-title: X-DNS-Prefetch-Control
 slug: Web/HTTP/Reference/Headers/X-DNS-Prefetch-Control
 page-type: http-header
 status:
@@ -73,7 +74,7 @@ loaded over {{glossary("HTTPS")}}. On Firefox, this can be changed by setting th
 ### Turning on and off prefetching
 
 You can either send the `X-DNS-Prefetch-Control` header server-side, or from
-individual documents, using the [`http-equiv`](/en-US/docs/Web/HTML/Reference/Elements/meta#http-equiv) attribute on
+individual documents, using the [`http-equiv`](/en-US/docs/Web/HTML/Reference/Elements/meta/http-equiv) attribute on
 the {{HTMLElement("meta")}} element, like this:
 
 ```html

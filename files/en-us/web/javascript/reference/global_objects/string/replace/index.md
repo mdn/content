@@ -1,5 +1,6 @@
 ---
 title: String.prototype.replace()
+short-title: replace()
 slug: Web/JavaScript/Reference/Global_Objects/String/replace
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.replace
@@ -17,7 +18,7 @@ const paragraph = "I think Ruth's dog is cuter than your dog!";
 console.log(paragraph.replace("Ruth's", "my"));
 // Expected output: "I think my dog is cuter than your dog!"
 
-const regex = /Dog/i;
+const regex = /dog/i;
 console.log(paragraph.replace(regex, "ferret"));
 // Expected output: "I think Ruth's ferret is cuter than your dog!"
 ```
@@ -120,7 +121,7 @@ function replacer(match, p1, p2, p3, offset, string) {
   // p1 is non-digits, p2 digits, and p3 non-alphanumerics
   return [p1, p2, p3].join(" - ");
 }
-const newString = "abc12345#$*%".replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
+const newString = "abc12345#$*%".replace(/(\D*)(\d*)(\W*)/, replacer);
 console.log(newString); // abc - 12345 - #$*%
 ```
 

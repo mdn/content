@@ -33,10 +33,16 @@ This element implements the {{domxref("HTMLElement")}} interface.
 ## Example 2 (CSS alternative)
 
 ```html
-<div style="text-align:center">
+<div class="center">
   This text will be centered.
   <p>So will this paragraph.</p>
 </div>
+```
+
+```css
+.center {
+  text-align: center;
+}
 ```
 
 ### Result
@@ -46,10 +52,16 @@ This element implements the {{domxref("HTMLElement")}} interface.
 ## Example 3 (CSS alternative)
 
 ```html
-<p style="text-align:center">
+<p class="center">
   This line will be centered.<br />
   And so will this line.
 </p>
+```
+
+```css
+.center {
+  text-align: center;
+}
 ```
 
 ### Result

@@ -75,7 +75,6 @@ Firefox 55 was released on August 8, 2017. This article lists key changes that a
 
 - The [Selection API](/en-US/docs/Web/API/Selection) has been updated so that it has parity with other browsers in terms of how editing hosts are given focus when the selection moves inside them ([Firefox bug 1318312](https://bugzil.la/1318312)). See [Behavior of Selection API in terms of editing host focus changes](/en-US/docs/Web/API/Selection#behavior_of_selection_api_in_terms_of_editing_host_focus_changes) for more details.
 - The {{domxref("Selection")}} API has been updated to match some recent spec changes ([Firefox bug 1359371](https://bugzil.la/1359371)):
-
   - The {{domxref("Selection.collapse", "collapse()")}} and {{domxref("Selection.extend", "extend()")}} methods' `offset` parameter is now optional.
   - The {{domxref("Selection.collapse", "collapse()")}} method's `node` parameter is now nullable.
   - The {{domxref("Selection.containsNode", "containsNode()")}} method's `partialContainment` parameter is now optional.
@@ -143,7 +142,7 @@ Firefox 55 was released on August 8, 2017. This article lists key changes that a
   `<div xml:base="https://example.com/" style="background:url(picture.jpg)"></div>` ([Firefox bug 1350521](https://bugzil.la/1350521)).
 
 - The {{htmlelement("style")}} element's [`scoped`](/en-US/docs/Web/HTML/Reference/Elements/style#scoped) attribute has been hidden behind a pref (`layout.css.scoped-style.enabled`) in content documents in Firefox 55+, as no other browsers support it.
-- Support for the obscure `MSThemeCompatible` value of the {{htmlelement("meta")}} element's [`http-equiv`](/en-US/docs/Web/HTML/Reference/Elements/meta#http-equiv) attribute has been removed from Gecko. No other modern browsers support it, and it was causing compatibility problems ([Firefox bug 966240](https://bugzil.la/966240)).
+- Support for the obscure `MSThemeCompatible` value of the {{htmlelement("meta")}} element's [`http-equiv`](/en-US/docs/Web/HTML/Reference/Elements/meta/http-equiv) attribute has been removed from Firefox. No other modern browsers support it, and it was causing compatibility problems ([Firefox bug 966240](https://bugzil.la/966240)).
 
 ### CSS
 

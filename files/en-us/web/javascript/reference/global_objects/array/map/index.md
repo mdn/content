@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.map()
+short-title: map()
 slug: Web/JavaScript/Reference/Global_Objects/Array/map
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.map
@@ -198,9 +199,10 @@ products.forEach((product) => {
 Or, if you want to create a new array instead:
 
 ```js
-const productsWithPrice = products.map((product) => {
-  return { ...product, price: 100 };
-});
+const productsWithPrice = products.map((product) => ({
+  ...product,
+  price: 100,
+}));
 ```
 
 ### Using the third argument of callbackFn

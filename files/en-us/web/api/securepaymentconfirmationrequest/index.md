@@ -16,7 +16,7 @@ An instance of this dictionary must be passed into the {{domxref("PaymentRequest
 - `challenge`
   - : An {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, or {{jsxref("DataView")}} provided by the relying party's server and used as a [cryptographic challenge](https://en.wikipedia.org/wiki/Challenge%E2%80%93response_authentication). This value will be signed by the authenticator and the signature will be sent back as part of {{domxref("AuthenticatorAttestationResponse.attestationObject")}}. This helps prevent replay attacks.
 - `credentialIds`
-  - : A list of {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, or {{jsxref("DataView")}}. These [Credential IDs](https://www.w3.org/TR/webauthn-2/#credential-id) represent Web Authentication credentials that have been registered with the relying party for authenticating during a payment with the associated `instrument`.
+  - : A list of {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, or {{jsxref("DataView")}}. These [Credential IDs](https://w3c.github.io/webauthn/#credential-id) represent Web Authentication credentials that have been registered with the relying party for authenticating during a payment with the associated `instrument`.
 - `extensions` {{optional_inline}}
   - : Any [WebAuthn extensions](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions) that should be used for the passed credential(s). The caller does not need to specify the [`payment` extension](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#payment); this is added automatically.
 - `instrument`

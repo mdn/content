@@ -19,11 +19,9 @@ configure(config)
 ### Parameters
 
 - `config`
-
   - : A dictionary object containing the following members:
-
     - `codec`
-      - : A string containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry). See ["codecs" parameter](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter#codec_options_by_container) for details on codec string construction.
+      - : A string containing a [valid codec string](https://w3c.github.io/webcodecs/codec_registry.html#audio-codec-registry). See ["codecs" parameter](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter#codec_options_by_container) for details on codec string construction.
     - `sampleRate`
       - : An integer representing the number of frame samples per second.
     - `numberOfChannels`
@@ -31,13 +29,10 @@ configure(config)
     - `bitrate` {{optional_inline}}
       - : An integer representing the bitrate.
     - `bitrateMode` {{optional_inline}}
-
       - : An enumerated value that defines the bitrate mode the encoder should use. Possible values are:
-
         - `"constant"`
           - : Forces an audio encoder to maintain the same bitrate, regardless of the audio content. This can be useful when a predictable bandwidth consumption is preferable.
         - `"variable"` (default)
-
           - : Allows an audio encoder to increase or lower its bitrate according to the content of the audio it is encoding, in order to preserve bandwidth/binary-size, while still maintaining a target quality. For example, an encoder might lower its bitrate when encoding silence, and revert to a full bitrate when encoding speech.
 
         Specific codec encoder implementations may use slightly different terminology (for example, CBR vs VBR for Opus), but they should all map to the general concept of "constant" versus "variable" bitrate.
@@ -99,7 +94,7 @@ The following example creates a new {{domxref("AudioEncoder")}} and configures i
 ```js
 const init = {
   output: handleOutput,
-  error: (e) => {
+  error(e) {
     console.log(e.message);
   },
 };
@@ -123,7 +118,7 @@ The following example creates a new {{domxref("AudioEncoder")}} and configures i
 ```js
 const init = {
   output: handleOutput,
-  error: (e) => {
+  error(e) {
     console.log(e.message);
   },
 };

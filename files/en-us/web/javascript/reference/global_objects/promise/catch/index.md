@@ -1,5 +1,6 @@
 ---
 title: Promise.prototype.catch()
+short-title: catch()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/catch
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Promise.catch
@@ -102,10 +103,10 @@ p1.then((value) => {
 // The following behaves the same as above
 p1.then((value) => {
   console.log(value); // "Success!"
-  return Promise.reject("oh, no!");
+  return Promise.reject(new Error("oh, no!"));
 })
   .catch((e) => {
-    console.error(e); // "oh, no!"
+    console.error(e); // Error: oh, no!
   })
   .then(
     () => console.log("after a catch the chain is restored"), // "after a catch the chain is restored"

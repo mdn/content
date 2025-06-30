@@ -17,7 +17,6 @@ This article provides information about the changes in Firefox 77 that will affe
 - Firefox Developer Edition offers a [Compatibility panel](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#compatibility-view) in the Page Inspector, to show the browsers supported by the CSS properties used on the page. ([Firefox bug 1625134](https://bugzil.la/1625134))
 - The Debugger has a [Settings menu in its toolbar](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#toolbar); the only menu option (yet) is **Disable JavaScript**. ([Firefox bug 1630957](https://bugzil.la/1630957))
 - The [Network Monitor toolbar](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/toolbar/index.html) has an **Actions** menu for managing log data ([Firefox bug 1459175](https://bugzil.la/1459175)):
-
   - **Persist Logs**
   - **Import HAR File**
   - **Save All as HAR**

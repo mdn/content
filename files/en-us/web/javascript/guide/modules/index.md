@@ -43,12 +43,10 @@ modules/
 The modules directory's two modules are described below:
 
 - `canvas.js` — contains functions related to setting up the canvas:
-
   - `create()` — creates a canvas with a specified `width` and `height` inside a wrapper [`<div>`](/en-US/docs/Web/HTML/Reference/Elements/div) with a specified ID, which is itself appended inside a specified parent element. Returns an object containing the canvas's 2D context and the wrapper's ID.
   - `createReportList()` — creates an unordered list appended inside a specified wrapper element, which can be used to output report data into. Returns the list's ID.
 
 - `square.js` — contains:
-
   - `name` — a constant containing the string 'square'.
   - `draw()` — draws a square on a specified canvas, with a specified size, position, and color. Returns an object containing the square's size, position, and color.
   - `reportArea()` — writes a square's area to a specific report list, given its length.
@@ -150,8 +148,8 @@ reportPerimeter(square1.length, reportList);
 Above we saw how a browser can import a module using a module specifier that is either an absolute URL, or a relative URL that is resolved using the base URL of the document:
 
 ```js
-import { name as squareName, draw } from "./shapes/square.js";
 import { name as circleName } from "https://example.com/shapes/circle.js";
+import { name as squareName, draw } from "./shapes/square.js";
 ```
 
 [Import maps](/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap) allow developers to instead specify almost any text they want in the module specifier when importing a module; the map provides a corresponding value that will replace the text when the module URL is resolved.
@@ -493,18 +491,18 @@ Inside your `import` and `export` statement's curly braces, you can use the keyw
 So for example, both of the following would do the same job, albeit in a slightly different way:
 
 ```js
-// inside module.js
+// -- module.js --
 export { function1 as newFunctionName, function2 as anotherNewFunctionName };
 
-// inside main.js
+// -- main.js --
 import { newFunctionName, anotherNewFunctionName } from "./modules/module.js";
 ```
 
 ```js
-// inside module.js
+// -- module.js --
 export { function1, function2 };
 
-// inside main.js
+// -- main.js --
 import {
   function1 as newFunctionName,
   function2 as anotherNewFunctionName,

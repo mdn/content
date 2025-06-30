@@ -1,5 +1,6 @@
 ---
-title: "Permissions-Policy: publickey-credentials-create"
+title: "Permissions-Policy: publickey-credentials-create directive"
+short-title: publickey-credentials-create
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/publickey-credentials-create
 page-type: http-permissions-policy-directive
 status:

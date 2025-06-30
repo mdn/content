@@ -1,5 +1,6 @@
 ---
 title: "Function: name"
+short-title: name
 slug: Web/JavaScript/Reference/Global_Objects/Function/name
 page-type: javascript-instance-data-property
 browser-compat: javascript.builtins.Function.name
@@ -91,14 +92,14 @@ const someFunction = function someFunctionName() {};
 someFunction.name; // "someFunctionName"
 ```
 
-Anonymous function expressions created using the keyword `function` or arrow functions would have `""` (an empty string) as their name.
+Anonymous function expressions, created using either the `function` keyword or the arrow function syntax, have `""` (an empty string) as their name by default.
 
 ```js
 (function () {}).name; // ""
 (() => {}).name; // ""
 ```
 
-However, such cases are rare — usually, in order to refer to the expression elsewhere, the function expression is attached to an identifier when it's created (such as in a variable declaration). In such cases, the name can be inferred, as the following few subsections demonstrate.
+However, such cases are rare — usually, in order to call the function elsewhere, the function expression is associated with an identifier. The name of an anonymous function expression can be inferred within certain syntactic contexts, including: [variable declaration, method](#variable_declaration_and_method), [initializer, and default value](#initializer_and_default_value).
 
 One practical case where the name cannot be inferred is a function returned from another function:
 
@@ -177,7 +178,9 @@ When using [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get) and [`set
 
 ```js
 const o = {
-  get foo() {},
+  get foo() {
+    return 1;
+  },
   set foo(x) {},
 };
 
@@ -215,7 +218,7 @@ o[sym1].name; // "[foo]"
 o[sym2].name; // "[]"
 ```
 
-### Private property
+### Private fields and methods
 
 Private fields and private methods have the hash (`#`) as part of their names.
 

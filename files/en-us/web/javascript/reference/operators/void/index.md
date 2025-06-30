@@ -119,7 +119,8 @@ value is {{jsxref("undefined")}}. The `void` operator can be used to return
 </a>
 ```
 
-> **Note:** `javascript:` pseudo protocol is discouraged over
+> [!NOTE]
+> `javascript:` pseudo protocol is discouraged over
 > other alternatives, such as unobtrusive event handlers.
 
 ### Non-leaking Arrow Functions

@@ -33,9 +33,7 @@ getComposedRanges(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An object with the following properties, all optional:
-
     - `shadowRoots` {{optional_inline}}
       - : An array of {{domxref("ShadowRoot")}} objects.
         If a selection endpoint is within one of the provided shadow roots, the range will be able to return nodes within its corresponding Shadow DOM tree.
@@ -59,7 +57,7 @@ It allows you to select text that is defined in different nodes in the DOM, and 
 
 #### HTML
 
-The HTML defines some text nodes with some `<span>` elements to which we'll attach a shadow root using JavScript.
+The HTML defines some text nodes with some `<span>` elements to which we'll attach a shadow root using JavaScript.
 We also add some buttons for copying and applying the selection using a number of different methods.
 
 ```html

@@ -1,5 +1,6 @@
 ---
 title: Float16Array() constructor
+short-title: Float16Array()
 slug: Web/JavaScript/Reference/Global_Objects/Float16Array/Float16Array
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Float16Array.Float16Array
@@ -22,7 +23,8 @@ new Float16Array(buffer, byteOffset)
 new Float16Array(buffer, byteOffset, length)
 ```
 
-> **Note:** `Float16Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Float16Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

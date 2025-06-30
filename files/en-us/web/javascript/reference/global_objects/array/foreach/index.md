@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.forEach()
+short-title: forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.forEach

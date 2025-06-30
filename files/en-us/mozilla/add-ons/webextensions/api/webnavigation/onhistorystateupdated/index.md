@@ -7,7 +7,7 @@ browser-compat: webextensions.api.webNavigation.onHistoryStateUpdated
 
 {{AddonSidebar}}
 
-Fired when the page used the [>history API](/en-US/docs/Web/API/History_API/Working_with_the_History_API) to update the URL displayed in the browser's location bar. All future events for this frame will use the updated URL.
+Fired when the page used the [history API](/en-US/docs/Web/API/History_API/Working_with_the_History_API) to update the URL displayed in the browser's location bar. All future events for this frame will use the updated URL.
 
 ## Syntax
 
@@ -34,9 +34,7 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `details`
       - : `object`. Details about the navigation event. See the [details](#details) section for more information.
 

@@ -82,17 +82,15 @@ caption {
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `abbr`
-  - : A short, abbreviated description of the header cell's content provided as an alternative label to use for the header cell when referencing the cell in other contexts. Some user-agents, such as speech readers, may present this description before the content itself.
+  - : A short, abbreviated description of the header cell's content provided as an alternative label to use for the header cell when referencing the cell in other contexts. Some user-agents, such as screen readers, may present this description before the content itself.
 - `colspan`
   - : A non-negative integer value indicating how many columns the header cell spans or extends. The default value is `1`. User agents dismiss values higher than 1000 as incorrect, defaulting such values to `1`.
 - `headers`
   - : A list of space-separated strings corresponding to the `id` attributes of the `<th>` elements that provide the headers for this header cell.
 - `rowspan`
-  - : A non-negative integer value indicating how many rows the header cell spans or extends. The default value is `1`; if its value is set to `0`, the header cell will extends to the end of the table grouping section ({{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, even if implicitly defined), that the `<th>` belongs to. Values higher than `65534` are clipped at `65534`.
+  - : A non-negative integer value indicating how many rows the header cell spans or extends. The default value is `1`; if its value is set to `0`, the header cell will extend to the end of the table grouping section ({{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, even if implicitly defined), that the `<th>` belongs to. Values higher than `65534` are clipped at `65534`.
 - `scope`
-
   - : Defines the cells that the header (defined in the `<th>`) element relates to. Possible {{Glossary("enumerated", "enumerated")}} values are:
-
     - `row`: the header relates to all cells of the row it belongs to;
     - `col`: the header relates to all cells of the column it belongs to;
     - `rowgroup`: the header belongs to a rowgroup and relates to all of its cells;
@@ -105,35 +103,27 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 The following attributes are deprecated and should not be used. They are documented below for reference when updating existing code and for historical interest only.
 
 - `align` {{deprecated_inline}}
-
   - : Specifies the horizontal alignment of the header cell. The possible {{Glossary("enumerated")}} values are `left`, `center`, `right`, `justify`, and `char`. When supported, the `char` value aligns the textual content on the character defined in the [`char`](#char) attribute and the offset defined by the [`charoff`](#charoff) attribute. Use the {{cssxref("text-align")}} CSS property instead, as this attribute is deprecated.
 
 - `axis` {{deprecated_inline}}
-
   - : Contains a list of space-separated strings, each corresponding to the `id` attribute of a group of cells that the header cell applies to. Use the [`scope`](#scope) attribute instead, as this attribute is deprecated.
 
 - `bgcolor` {{deprecated_inline}}
-
-  - : Defines the background color of the header cell. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a `#`, or a [color keyword](/en-US/docs/Web/CSS/named-color). Other CSS {{cssxref("color_value", "&lt;color&gt")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
+  - : Defines the background color of the header cell. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a `#`, or a [color keyword](/en-US/docs/Web/CSS/named-color). Other CSS {{cssxref("color_value", "&lt;color&gt;")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
 
 - `char` {{deprecated_inline}}
-
   - : Does nothing. It was originally intended to specify the alignment of the content to a character of the header cell. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored.
 
 - `charoff` {{deprecated_inline}}
-
   - : Does nothing. It was originally intended to specify the number of characters to offset the header cell content from the alignment character specified by the [`char`](#char) attribute.
 
 - `height` {{deprecated_inline}}
-
   - : Defines a recommended header cell height. Use the {{cssxref("height")}} CSS property instead, as this attribute is deprecated.
 
 - `valign` {{deprecated_inline}}
-
   - : Specifies the vertical alignment of the header cell. The possible {{Glossary("enumerated")}} values are `baseline`, `bottom`, `middle`, and `top`. Use the {{cssxref("vertical-align")}} CSS property instead, as this attribute is deprecated.
 
 - `width` {{deprecated_inline}}
-
   - : Defines a recommended header cell width. Use the {{cssxref("width")}} CSS property instead, as this attribute is deprecated.
 
 ## Usage notes

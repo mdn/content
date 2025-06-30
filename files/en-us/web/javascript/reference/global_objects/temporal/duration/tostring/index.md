@@ -1,5 +1,6 @@
 ---
 title: Temporal.Duration.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/toString
 page-type: javascript-instance-method
 status:

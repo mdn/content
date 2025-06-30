@@ -46,7 +46,6 @@ You can use this attribute with the following SVG elements:
 - `super`
   - : The dominant-baseline is shifted to the default position for superscripts.
 - `<length-percentage>`
-
   - : A length value raises (positive value) or lowers (negative value) the dominant-baseline of the parent text content element by the specified length.
 
     A percentage value raises (positive value) or lowers (negative value) the dominant-baseline of the parent text content element by the specified percentage of the {{SVGAttr("line-height")}}.

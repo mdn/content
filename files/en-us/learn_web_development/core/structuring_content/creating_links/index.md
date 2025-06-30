@@ -72,6 +72,9 @@ This gives us the following result:
 
 I'm creating a link to [the Mozilla homepage](https://www.mozilla.org/en-US/).
 
+> [!NOTE]
+> Scrimba's [Anchor tags](https://scrimba.com/learn-html-and-css-c0p/~0a?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> scrim provides an interactive demonstration of how to create links using HTML, plus a challenge to get you creating your own links.
+
 ### Block level links
 
 As mentioned before, almost any content can be made into a link, even {{Glossary("Block/CSS", "block-level elements")}}.
@@ -137,13 +140,80 @@ This gives us the following result and hovering over the link displays the title
 > A link title is only revealed on mouse hover, which means that people relying on keyboard controls or touchscreens to navigate web pages will have difficulty accessing title information.
 > If a title's information is truly important to the usability of the page, then you should present it in a manner that will be accessible to all users, for example by putting it in the regular text.
 
-### Active learning: creating your own example link
+### Creating your own example links
 
-Create an HTML document using your local code editor and our [getting started template](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html).
+OK, now it's your turn!
 
-- Inside the HTML body, add one or more paragraphs or other types of content you already know about.
-- Change some of the content into links.
-- Include title attributes.
+1. Click **"Play"** in the code block below to edit the example in the MDN Playground, or make a copy of our [getting started template](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html) and copy the below code into there.
+2. Link the "Red squirrel" and "Eastern gray squirrel" text to Wikipedia pages that describe the relevant species. Give each link a `title` attribute equal to the species' scientific name.
+3. Link the "Wikipedia Squirrel page" text to the main Wikipedia page for squirrels.
+
+If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the code block.
+
+```html live-sample___links-1
+<h1>Squirrels</h1>
+
+<p>
+  Squirrels are commonly thought of as tree-dwelling mammals, but the squirrel
+  family extends far beyond that to include ground-dwelling rodents such as
+  chipmunks and prairie dogs, and flying squirrels.
+</p>
+
+<p>Two of the most common and best-known squirrel species are the:</p>
+
+<ul>
+  <li>Red squirrel</li>
+  <li>Eastern gray squirrel</li>
+</ul>
+
+<p>
+  For a good starting point on squirrel information, see the Wikipedia Squirrel
+  page.
+</p>
+```
+
+{{ EmbedLiveSample('links-1', "100%", 280) }}
+
+<details>
+<summary>Click here to show the solution</summary>
+
+Your finished HTML should look like this:
+
+```html
+<h1>Squirrels</h1>
+
+<p>
+  Squirrels are commonly thought of as tree-dwelling mammals, but the squirrel
+  family extends far beyond that to include ground-dwelling rodents such as
+  chipmunks and prairie dogs, and flying squirrels.
+</p>
+
+<p>Two of the most common and best-known squirrel species are the:</p>
+
+<ul>
+  <li>
+    <a
+      href="https://en.wikipedia.org/wiki/Red_squirrel"
+      title="Sciurus vulgaris">
+      Red squirrel
+    </a>
+  </li>
+  <li>
+    <a
+      href="https://en.wikipedia.org/wiki/Eastern_gray_squirrel"
+      title="Sciurus carolinensis">
+      Eastern gray squirrel
+    </a>
+  </li>
+</ul>
+
+<p>
+  For a good starting point on squirrel information, see the
+  <a href="https://en.wikipedia.org/wiki/Squirrel">Wikipedia Squirrel page</a>.
+</p>
+```
+
+</details>
 
 ## A quick primer on URLs and paths
 
@@ -325,7 +395,7 @@ A common approach is to open external links in new tabs and internal links in th
 Some designers prefer to open all links in the same tab.
 If you do open links in new tabs, then it is recommended that you provide cues for these links, such as an icon next to the link text.
 
-## Active learning: creating a navigation menu
+## Creating a navigation menu
 
 For this exercise, we'd like you to link some pages together with a navigation menu to create a multipage website. This is one common way in which a website is created — the same page structure is used on every page, including the same navigation menu, so when links are clicked it gives the impression that you are staying in the same place, and different content is being brought up.
 

@@ -11,34 +11,9 @@ The **`<radialGradient>`** [SVG](/en-US/docs/Web/SVG) element lets authors defin
 > [!NOTE]
 > Don't be confused with CSS {{cssxref('gradient/radial-gradient', 'radial-gradient()')}} as CSS gradients can only apply to HTML elements where SVG gradient can only apply to SVG elements.
 
-## Example
+## Usage context
 
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg
-  viewBox="0 0 10 10"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
-  <defs>
-    <radialGradient id="myGradient">
-      <stop offset="10%" stop-color="gold" />
-      <stop offset="95%" stop-color="red" />
-    </radialGradient>
-  </defs>
-
-  <!-- using my radial gradient -->
-  <circle cx="5" cy="5" r="4" fill="url('#myGradient')" />
-</svg>
-```
-
-{{EmbedLiveSample('Example', 150, '100%')}}
+{{svginfo}}
 
 ## Attributes
 
@@ -76,9 +51,38 @@ svg {
   - : An [\<IRI>](/en-US/docs/Web/SVG/Guides/Content_type#iri) reference to another `<radialGradient>` element that will be used as a template.
     _Value type_: [**\<IRI>**](/en-US/docs/Web/SVG/Guides/Content_type#iri); _Default value_: none; _Animatable_: **yes**
 
-## Usage context
+## DOM Interface
 
-{{svginfo}}
+This element implements the {{domxref("SVGRadialGradientElement")}} interface.
+
+## Example
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg
+  viewBox="0 0 10 10"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <radialGradient id="myGradient">
+      <stop offset="10%" stop-color="gold" />
+      <stop offset="95%" stop-color="red" />
+    </radialGradient>
+  </defs>
+
+  <!-- using my radial gradient -->
+  <circle cx="5" cy="5" r="4" fill="url('#myGradient')" />
+</svg>
+```
+
+{{EmbedLiveSample('Example', 150, '100%')}}
 
 ## Specifications
 

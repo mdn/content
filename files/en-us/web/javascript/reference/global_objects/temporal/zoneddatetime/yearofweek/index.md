@@ -1,5 +1,6 @@
 ---
 title: Temporal.ZonedDateTime.prototype.yearOfWeek
+short-title: yearOfWeek
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/yearOfWeek
 page-type: javascript-instance-accessor-property
 status:

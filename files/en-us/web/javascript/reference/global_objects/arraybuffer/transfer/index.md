@@ -1,5 +1,6 @@
 ---
 title: ArrayBuffer.prototype.transfer()
+short-title: transfer()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/transfer
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.ArrayBuffer.transfer

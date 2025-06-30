@@ -105,7 +105,6 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 ### HTTP/Networking
 
 - Gecko now has a pref available in `about:config` to allow users to set their default {{HTTPHeader("Referrer-Policy")}} — `network.http.referer.userControlPolicy` ([Firefox bug 1304623](https://bugzil.la/1304623)). Possible values are:
-
   - 0 — `no-referrer`
   - 1 — `same-origin`
   - 2 — `strict-origin-when-cross-origin`

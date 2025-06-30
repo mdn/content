@@ -1,5 +1,6 @@
 ---
 title: Map.prototype.clear()
+short-title: clear()
 slug: Web/JavaScript/Reference/Global_Objects/Map/clear
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Map.clear

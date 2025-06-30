@@ -1,5 +1,6 @@
 ---
-title: Refresh
+title: Refresh header
+short-title: Refresh
 slug: Web/HTTP/Reference/Headers/Refresh
 page-type: http-header
 browser-compat: http.headers.Refresh
@@ -8,7 +9,7 @@ browser-compat: http.headers.Refresh
 {{HTTPSidebar}}
 
 The HTTP **`Refresh`** {{Glossary("response header")}} directs a web browser to either refresh or redirect the page when a specified amount of time has passed after the page was fully loaded.
-It is exactly equivalent to using [`<meta http-equiv="refresh" content="...">`](/en-US/docs/Web/HTML/Reference/Elements/meta#http-equiv) in HTML.
+It is exactly equivalent to using [`<meta http-equiv="refresh" content="...">`](/en-US/docs/Web/HTML/Reference/Elements/meta/http-equiv) in HTML.
 
 > [!NOTE]
 > Even though it's present in the HTTP response, the `Refresh` header is still handled by the HTML loading machinery and happens after HTTP or JavaScript redirects. See [redirection order of precedence](/en-US/docs/Web/HTTP/Guides/Redirections#order_of_precedence) for more information.

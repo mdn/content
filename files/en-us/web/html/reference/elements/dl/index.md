@@ -44,7 +44,10 @@ dd {
 
 ## Attributes
 
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
+This element also accepts the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
+
+- `compact` {{Deprecated_inline}}
+  - : This Boolean attribute hints that the list should be rendered in a compact style. The interpretation of this attribute is browser-specific. Use [CSS](/en-US/docs/Web/CSS) instead: to give a similar effect as the `compact` attribute, the CSS property {{cssxref("line-height")}} can be used with a value of `80%`.
 
 ## Accessibility
 
@@ -233,7 +236,7 @@ To change the indentation of a description term, use the [CSS](/en-US/docs/Web/C
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >No corresponding role</a
         >
       </td>

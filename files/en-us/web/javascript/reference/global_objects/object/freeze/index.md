@@ -1,5 +1,6 @@
 ---
 title: Object.freeze()
+short-title: freeze()
 slug: Web/JavaScript/Reference/Global_Objects/Object/freeze
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.freeze
@@ -52,7 +53,7 @@ that are objects can still be modified, unless they are also frozen. As an objec
 array can be frozen; after doing so, its elements cannot be altered and no elements can
 be added to or removed from the array.
 
-[Private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) do not have the concept of property descriptors. Freezing an object with private properties does not prevent the values of these private properties from being changed. (Freezing objects is usually meant as a security measure against external code, but external code cannot access private properties anyway.) Private properties cannot be added or removed from the object, whether the object is frozen or not.
+[Private elements](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) are not properties and do not have the concept of property descriptors. Freezing an object with private elements does not prevent the values of these private elements from being changed. (Freezing objects is usually meant as a security measure against external code, but external code cannot access private elements anyway.) Private elements cannot be added or removed from the object, whether the object is frozen or not.
 
 `freeze()` returns the same object that was passed into the function. It
 _does not_ create a frozen copy.

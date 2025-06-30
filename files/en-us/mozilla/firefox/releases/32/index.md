@@ -6,6 +6,8 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
+Firefox 32 was released on September 2, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
+
 ## Changes for Web developers
 
 ### Developer Tools
@@ -38,7 +40,6 @@ Highlights:
 ### JavaScript
 
 - The following new ECMAScript 2015 built-in methods got implemented:
-
   - {{jsxref("Array.from()")}} ([Firefox bug 904723](https://bugzil.la/904723)),
   - {{jsxref("Array.prototype.copyWithin()")}} ([Firefox bug 934423](https://bugzil.la/934423)),
   - {{jsxref("Number.isSafeInteger()")}} ([Firefox bug 1003764](https://bugzil.la/1003764)).

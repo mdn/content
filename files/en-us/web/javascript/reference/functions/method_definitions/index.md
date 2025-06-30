@@ -155,7 +155,7 @@ const instance = new SubClass();
 console.log(instance.subPublicMethod()); // "hello world"
 ```
 
-Static methods and private methods use similar syntaxes, which are described in the [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static) and [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) pages.
+Static methods and private methods use similar syntaxes, which are described in the [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static) and [private elements](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) pages.
 
 ### Computed property names
 
@@ -169,14 +169,14 @@ const bar = {
   foo1() {
     return 1;
   },
-  ["foo" + 2]() {
+  ["foo".toUpperCase()]() {
     return 2;
   },
 };
 
 console.log(bar.foo0()); // 0
 console.log(bar.foo1()); // 1
-console.log(bar.foo2()); // 2
+console.log(bar.FOO()); // 2
 ```
 
 ### Generator methods

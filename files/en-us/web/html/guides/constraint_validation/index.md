@@ -444,7 +444,6 @@ The {{cssxref(':valid')}} and {{cssxref(':invalid')}} [pseudo-classes](/en-US/do
 The following items can help with controlling the text of a constraint violation:
 
 - The `setCustomValidity(message)` method on the following elements:
-
   - {{HTMLElement("fieldset")}}. Note: Setting a custom validity message on fieldset elements will not prevent form submission in most browsers.
   - {{HTMLElement("input")}}
   - {{HTMLElement("output")}}

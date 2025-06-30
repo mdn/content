@@ -1,5 +1,6 @@
 ---
-title: ETag
+title: ETag header
+short-title: ETag
 slug: Web/HTTP/Reference/Headers/ETag
 page-type: http-header
 browser-compat: http.headers.ETag

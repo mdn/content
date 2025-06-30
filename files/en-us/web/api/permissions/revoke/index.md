@@ -26,24 +26,20 @@ revoke(permissionDescriptor)
 ### Parameters
 
 - `permissionDescriptor`
-
   - : An object that sets options for the `revoke` operation.
     The available options for this descriptor depend on the permission type.
 
     All permissions have a name:
-
     - `name`
       - : A string containing the name of the API whose permissions you want to query.
         The returned {{jsxref("Promise")}} will reject with a {{jsxref("TypeError")}} if the permission name is not supported by the browser.
 
     For the `push` permissions you can also specify:
-
     - `userVisibleOnly` {{optional_inline}}
       - : (Push only, not supported in Firefox — see the Browser Support section below) Indicates whether you want to show a notification for every message or be able to send silent push notifications.
         The default is `false`.
 
     For the `midi` permission you can also specify:
-
     - `sysex` {{optional_inline}}
       - : Indicates whether you need and/or receive system exclusive messages.
         The default is `false`.

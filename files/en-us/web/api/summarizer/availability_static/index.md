@@ -3,10 +3,12 @@ title: "Summarizer: availability() static method"
 short-title: availability()
 slug: Web/API/Summarizer/availability_static
 page-type: web-api-static-method
+status:
+  - experimental
 browser-compat: api.Summarizer.availability_static
 ---
 
-{{APIRef("Summarizer API")}}{{securecontext_header}}
+{{APIRef("Summarizer API")}}{{securecontext_header}}{{SeeCompatTable}}
 
 The **`availability()`** static method of the {{domxref("Summarizer")}} interface returns an enumerated value that indicates whether the browser AI model supports (or will support) a given `Summarizer` configuration.
 
@@ -20,13 +22,11 @@ Summarizer.availability(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An options object specifying a possible configuration for a `Summarizer`. Possible values include:
-
     - `expectedInputLanguages`
       - : An array of strings equal to [BCP 47 language tags](https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags) (as specified in [RFC 5646](https://datatracker.ietf.org/doc/html/rfc5646)) specifying the expected languages of the input text. Defaults to `["en"]`.
     - `expectedContextLanguages`
-      - : An array of strings equal to BCP 47 language tags specifying the expected languages of any provided context strings (either the [`sharedContext`](#sharedContext) passed to the `Summarizer`, or a `context` specified during a {{domxref("Summarizer.summarize", "summarize()")}} or {{domxref("Summarizer.summarizeStreaming", "summarizeStreaming()")}} call). Defaults to `["en"]`.
+      - : An array of strings equal to BCP 47 language tags specifying the expected languages of any provided context strings (either the [`sharedContext`](/en-US/docs/Web/API/Summarizer/create_static#sharedcontext) passed to the `Summarizer`, or a `context` specified during a {{domxref("Summarizer.summarize", "summarize()")}} or {{domxref("Summarizer.summarizeStreaming", "summarizeStreaming()")}} call). Defaults to `["en"]`.
     - `format`
       - : An enumerated value specifying the text {{domxref("Summarizer.format", "format")}} you want summaries returned in. Defaults to `markdown`.
     - `length`
@@ -65,27 +65,28 @@ Possible values include:
 ### Basic `availability()` usage
 
 ```js
-const options = {
-  sharedContext: "This is a scientific article",
-  type: "key-points",
-  format: "markdown",
-  length: "medium",
-};
+async function getSummarizer() {
+  const options = {
+    sharedContext: "This is a scientific article",
+    type: "key-points",
+    format: "markdown",
+    length: "medium",
+  };
 
-const availability = await Summarizer.availability(options);
-let summarizer;
-if (availability === "unavailable") {
-  // The Summarizer API isn't usable
-  return;
-} else if (availability === "available") {
-  // The Summarizer API can be used immediately
-  summarizer = await Summarizer.create(options);
-} else {
+  const availability = await Summarizer.availability(options);
+  if (availability === "unavailable") {
+    // The Summarizer API isn't usable
+    return undefined;
+  } else if (availability === "available") {
+    // The Summarizer API can be used immediately
+    return Summarizer.create(options);
+  }
   // The Summarizer API can be used after the model is downloaded
-  summarizer = await Summarizer.create(options);
+  const summarizer = await Summarizer.create(options);
   summarizer.addEventListener("downloadprogress", (e) => {
     console.log(`Downloaded ${e.loaded * 100}%`);
   });
+  return summarizer;
 }
 ```
 
