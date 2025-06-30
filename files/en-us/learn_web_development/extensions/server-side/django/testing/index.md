@@ -616,7 +616,7 @@ class LoanedBookInstancesByUserListViewTest(TestCase):
         test_user2.save()
 
         # Create a book
-        test_author = Author.objects.create(first_name='John', last_name='Smith')
+        test_author = Author.objects.create(first_name='Dominique', last_name='Rousseau')
         test_genre = Genre.objects.create(name='Fantasy')
         test_language = Language.objects.create(name='English')
         test_book = Book.objects.create(
@@ -797,7 +797,7 @@ class RenewBookInstancesViewTest(TestCase):
         test_user2.save()
 
         # Create a book
-        test_author = Author.objects.create(first_name='John', last_name='Smith')
+        test_author = Author.objects.create(first_name='Dominique', last_name='Rousseau')
         test_genre = Genre.objects.create(name='Fantasy')
         test_language = Language.objects.create(name='English')
         test_book = Book.objects.create(

@@ -64,7 +64,7 @@ if (PublicKeyCredential.signalCurrentUserDetails) {
     rpId: "example.com",
     userId: "M2YPl-KGnA8", // base64url-encoded user ID
     name: "a.new.email.address@example.com", // username
-    displayName: "John Doe",
+    displayName: "Maria Sanchez",
   });
 } else {
   // Encourage the user to update their details in the authenticator
