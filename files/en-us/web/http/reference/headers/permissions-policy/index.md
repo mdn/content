@@ -94,6 +94,9 @@ You can specify
 - {{httpheader('Permissions-Policy/camera', 'camera')}} {{experimental_inline}}
   - : Controls whether the current document is allowed to use video input devices. When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} will reject with a `NotAllowedError` {{DOMxRef("DOMException")}}.
 
+- {{HTTPHeader('Permissions-Policy/captured-surface-control', 'captured-surface-control')}} {{experimental_inline}}
+  - : Controls whether or not the document is permitted to use the [Captured Surface Control API](/en-US/docs/Web/API/Screen_Capture_API/Captured_Surface_Control). When this policy is disabled, the promise returned by the API's main methods will reject with a `NotAllowedError` {{DOMxRef("DOMException")}} if permission is not obtained.
+
 - {{httpheader('Permissions-Policy/compute-pressure','compute-pressure')}} {{Experimental_Inline}}
   - : Controls access to the [Compute Pressure API](/en-US/docs/Web/API/Compute_Pressure_API).
 
