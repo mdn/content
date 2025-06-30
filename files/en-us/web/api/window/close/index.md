@@ -11,10 +11,12 @@ browser-compat: api.Window.close
 The **`Window.close()`** method closes the current window, or
 the window on which it was called.
 
-This method can only be called on windows that were opened by a script using the
-{{domxref("Window.open()")}} method, or on top-level windows that have a single history entry. If the window doesn't match these requirements, an error
-similar to this one appears in the console:
-`Scripts may not close windows that were not opened by script.`
+This method can only be successfully called on windows that are considered _script-closable_. This generally includes:
+
+- Windows opened using {{domxref("Window.open()")}}
+- Windows opened via web content, such as links (`<a target="_blank">`) or forms (`<form target="_blank">`), without user modifier actions
+
+Windows opened by browser UI actions — such as right-click → Open in new tab, Ctrl+Click, Shift+Click, or middle-click — are not script-closable. Calling `close()` on such windows will result in an error message like: `Scripts may not close windows that were not opened by script.`
 
 Note also that `close()` has no effect when called on {{domxref("Window")}}
 objects returned by
