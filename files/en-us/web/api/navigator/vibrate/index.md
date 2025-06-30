@@ -17,6 +17,8 @@ If the method was unable to vibrate because of invalid parameters, it will retur
 `false`, else it returns `true`. If the pattern leads to a too
 long vibration, it is truncated: the max length depends on the implementation.
 
+On some Android devices, `navigator.vibrate()` will not work if the device is in **Silent Mode** or **Do Not Disturb (DND)** mode. Ensure these modes are disabled and vibration is enabled in your system settings.
+
 ## Syntax
 
 ```js-nolint
