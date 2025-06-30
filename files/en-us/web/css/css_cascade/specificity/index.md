@@ -347,14 +347,12 @@ If styles are coming from a stylesheet you can't edit or don't understand and yo
 
 When two selectors from different layers match the same element, origin and importance take precedence; the specificity of the selector in the losing stylesheet is irrelevant.
 
-```html
-<style>
-  @import "TW.css" layer();
-  p,
-  p * {
-    font-size: 1rem;
-  }
-</style>
+```css
+@import "TW.css" layer();
+p,
+p * {
+  font-size: 1rem;
+}
 ```
 
 In the above example, all paragraph text, including the nested content, will be `1rem` no matter how many class names the paragraphs have that match the TW stylesheet.
@@ -378,10 +376,8 @@ If you're unable to remove `!important` flags from an authors style sheet, the o
 1. Create a separate, short style sheet containing only important declarations specifically overriding any important declarations you were unable to remove.
 2. Import this stylesheet as the first import in your CSS using `layer()`, including the `@import` statement, before linking to other stylesheets. This is to ensure that the important overrides is imported as the first layer.
 
-```html
-<style>
-  @import "importantOverrides.css" layer();
-</style>
+```css
+@import "importantOverrides.css" layer();
 ```
 
 #### Method 2

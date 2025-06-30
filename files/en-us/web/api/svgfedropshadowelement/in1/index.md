@@ -44,14 +44,14 @@ In this example, two {{SVGElement("feDropShadow")}} elements are defined in a fi
     y="20"
     width="100"
     height="100"
-    style="fill:red;"
+    fill="red"
     filter="url(#drop-shadow-filter)" />
   <!-- Circle with blue shadow -->
   <circle
     cx="100"
     cy="100"
     r="50"
-    style="fill:blue;"
+    fill="blue"
     filter="url(#drop-shadow-filter)" />
 </svg>
 ```

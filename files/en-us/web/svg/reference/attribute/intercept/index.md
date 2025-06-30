@@ -87,14 +87,14 @@ svg {
     width="200"
     height="200"
     fill="url(#gradient)"
-    style="filter: url(#componentTransfer1);" />
+    filter="url(#componentTransfer1)" />
   <rect
-    x="0"
+    x="220"
     y="0"
     width="200"
     height="200"
     fill="url(#gradient)"
-    style="filter: url(#componentTransfer2); transform: translateX(220px);" />
+    filter="url(#componentTransfer2)" />
 </svg>
 ```
 

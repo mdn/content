@@ -41,13 +41,8 @@ svg {
     <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="50" />
   </filter>
 
-  <circle cx="100" cy="100" r="80" style="filter: url(#displacementFilter);" />
-  <circle
-    cx="100"
-    cy="100"
-    r="80"
-    style="filter: url(#displacementFilter2);
-  transform: translateX(240px);" />
+  <circle cx="100" cy="100" r="80" filter="url(#displacementFilter)" />
+  <circle cx="340" cy="100" r="80" filter="url(#displacementFilter2)" />
 </svg>
 ```
 

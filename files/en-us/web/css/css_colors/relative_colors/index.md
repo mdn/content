@@ -430,7 +430,7 @@ The full HTML is included below for reference. The most interesting parts are as
       </fieldset>
     </div>
   </form>
-  <div id="container" class="comp" style="--base-color: #ff0000;">
+  <div id="container" class="comp">
     <div></div>
     <div></div>
     <div></div>
@@ -493,6 +493,8 @@ fieldset {
   width: 100vw;
   height: 250px;
   box-sizing: border-box;
+  /* Default value */
+  --base-color: #ff0000;
 }
 
 #container div {

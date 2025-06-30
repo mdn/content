@@ -159,14 +159,17 @@ You can use any value with `flow-root` to create a new formatting context for th
 Changing between `display: flow-root` and `display: block flow-root` will achieve the same effect as the single-value `flow-root` keyword.
 
 ```js hidden
-function changeDisplayType() {
-  const parentDiv = document.getElementById("parent");
-  const siblingDiv = document.getElementById("sibling");
-  const displayType = document.getElementById("displayType").value;
+const parentDiv = document.getElementById("parent");
+const siblingDiv = document.getElementById("sibling");
+const displayTypeSelect = document.getElementById("displayType");
+const displayType = displayTypeSelect.value;
 
+function changeDisplayType() {
   parentDiv.style.display = displayType;
   siblingDiv.style.display = displayType;
 }
+
+displayTypeSelect.addEventListener("change", changeDisplayType);
 ```
 
 ```css hidden
@@ -207,7 +210,7 @@ p {
 ```html hidden
 <div id="controls">
   <label for="displayType">display:</label>
-  <select id="displayType" onchange="changeDisplayType()">
+  <select id="displayType">
     <option value="block">block</option>
     <option value="flow-root">flow-root</option>
     <option value="block flow-root">block flow-root</option>

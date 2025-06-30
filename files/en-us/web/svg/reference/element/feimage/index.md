@@ -40,7 +40,7 @@ This element implements the {{domxref("SVGFEImageElement")}} interface.
     </filter>
   </defs>
 
-  <rect x="10%" y="10%" width="80%" height="80%" style="filter:url(#image);" />
+  <rect x="10%" y="10%" width="80%" height="80%" filter="url(#image)" />
 </svg>
 ```
 

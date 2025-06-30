@@ -54,13 +54,7 @@ svg {
   </radialGradient>
 
   <rect x="0" y="0" width="200" height="200" fill="url(#gradient1)" />
-  <rect
-    x="0"
-    y="0"
-    width="200"
-    height="200"
-    fill="url(#gradient2)"
-    style="transform: translateX(220px);" />
+  <rect x="220" y="0" width="200" height="200" fill="url(#gradient2)" />
 </svg>
 ```
 
