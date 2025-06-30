@@ -110,7 +110,7 @@ GET /en-US/ HTTP/2
 Host: developer.mozilla.org
 ```
 
-The response sent by the server might looks something like this:
+The response sent by the server might look something like this:
 
 ```http
 HTTP/2 200
