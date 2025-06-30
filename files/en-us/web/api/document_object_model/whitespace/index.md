@@ -2,9 +2,10 @@
 title: How whitespace is handled by HTML, CSS, and in the DOM
 slug: Web/API/Document_Object_Model/Whitespace
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - DOM
 ---
-
-{{DefaultAPISidebar("DOM")}}
 
 The presence of whitespace in the [DOM](/en-US/docs/Web/API/Document_Object_Model) can cause layout problems and make manipulation of the content tree difficult in unexpected ways, depending on where it is located. This article explores when difficulties can occur, and looks at what can be done to mitigate resulting problems.
 

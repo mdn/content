@@ -3,9 +3,10 @@ title: Picture-in-Picture API
 slug: Web/API/Picture-in-Picture_API
 page-type: web-api-overview
 browser-compat: api.PictureInPictureWindow
+sidebar:
+  - defaultapisidebar:
+      - Picture-in-Picture API
 ---
-
-{{DefaultAPISidebar("Picture-in-Picture API")}}
 
 The **Picture-in-Picture API** allow websites to create a floating, always-on-top video window. This allows users to continue consuming media while they interact with other sites or applications on their device.
 

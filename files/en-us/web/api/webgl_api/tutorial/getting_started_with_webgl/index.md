@@ -2,9 +2,12 @@
 title: Getting started with WebGL
 slug: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - WebGL
 ---
 
-{{DefaultAPISidebar("WebGL")}} {{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}
+{{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}
 
 [WebGL](/en-US/docs/Web/API/WebGL_API) enables web content to use an API based on [OpenGL ES](https://www.khronos.org/opengles/) 2.0 to perform 2D and 3D rendering in an HTML [`canvas`](/en-US/docs/Web/API/Canvas_API) in browsers that support it without the use of plug-ins.
 

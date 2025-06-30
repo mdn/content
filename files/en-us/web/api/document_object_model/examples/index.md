@@ -2,9 +2,10 @@
 title: Examples of web and XML development using the DOM
 slug: Web/API/Document_Object_Model/Examples
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - DOM
 ---
-
-{{DefaultAPISidebar("DOM")}}
 
 This chapter provides some longer examples of web and XML development using the DOM. Wherever possible, the examples use common APIs, tricks, and patterns in JavaScript for manipulating the document object.
 

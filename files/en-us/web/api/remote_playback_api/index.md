@@ -4,9 +4,10 @@ slug: Web/API/Remote_Playback_API
 page-type: web-api-overview
 browser-compat: api.RemotePlayback
 spec-urls: https://w3c.github.io/remote-playback/
+sidebar:
+  - defaultapisidebar:
+      - Remote Playback API
 ---
-
-{{DefaultAPISidebar("Remote Playback API")}}
 
 The **Remote Playback API** extends the {{domxref("HTMLMediaElement")}} to enable the control of media played on a remote device.
 

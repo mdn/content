@@ -3,9 +3,10 @@ title: Using WebRTC Encoded Transforms
 slug: Web/API/WebRTC_API/Using_Encoded_Transforms
 page-type: guide
 browser-compat: api.RTCRtpReceiver.transform
+sidebar:
+  - defaultapisidebar:
+      - WebRTC
 ---
-
-{{DefaultAPISidebar("WebRTC")}}
 
 WebRTC Encoded Transforms provide a mechanism to inject a high performance [Stream API](/en-US/docs/Web/API/Streams_API) for modifying encoded video and audio frame into the incoming and outgoing WebRTC pipelines.
 This enables use cases such as end-to-end encryption of encoded frames by third-party code.

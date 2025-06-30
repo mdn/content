@@ -2,9 +2,10 @@
 title: Determining the dimensions of elements
 slug: Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - CSSOM
 ---
-
-{{DefaultAPISidebar("CSSOM")}}
 
 There are several properties you can look at in order to determine the width and height of elements, and it can be tricky to determine which is the right one for your needs. This article is designed to help you make that decision. Note that all these properties are read-only. If you want to set the width and height of an element, use {{CSSxRef("width")}} and {{CSSxRef("height")}} or the overriding {{CSSxRef("min-width")}} and {{CSSxRef("max-width")}}, and {{CSSxRef("min-height")}} and {{CSSxRef("max-height")}} properties.
 

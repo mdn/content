@@ -2,9 +2,10 @@
 title: Web Animations API Concepts
 slug: Web/API/Web_Animations_API/Web_Animations_API_Concepts
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - Web Animations
 ---
-
-{{DefaultAPISidebar("Web Animations")}}
 
 The Web Animations API (WAAPI) provides JavaScript developers access to the browser's animation engine and describes how animations should be implemented across browsers. This article will introduce you to the important concepts behind the WAAPI, providing you with a theoretical understanding of how it works so you can use it effectively. To learn how to put the API to use, check out its sister article, [Using the Web Animations API](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API).
 

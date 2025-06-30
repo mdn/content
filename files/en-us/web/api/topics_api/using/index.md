@@ -4,9 +4,10 @@ slug: Web/API/Topics_API/Using
 page-type: web-api-overview
 status:
   - non-standard
+sidebar:
+  - defaultapisidebar:
+      - Topics API
 ---
-
-{{DefaultAPISidebar("Topics API")}}
 
 > [!WARNING]
 > This feature is currently opposed by two browser vendors. See the [Standards positions](/en-US/docs/Web/API/Topics_API#standards_positions) section below for details of opposition.

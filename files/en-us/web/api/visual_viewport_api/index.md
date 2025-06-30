@@ -6,9 +6,10 @@ browser-compat:
   - api.VisualViewport
   - api.Window.visualViewport
 spec-urls: https://drafts.csswg.org/cssom-view/#visualViewport
+sidebar:
+  - defaultapisidebar:
+      - Visual Viewport
 ---
-
-{{DefaultAPISidebar("Visual Viewport")}}
 
 The **Visual Viewport API** provides an explicit mechanism for querying and modifying the properties of the window's {{Glossary("visual viewport")}}. The visual viewport is the visual portion of a screen excluding on-screen keyboards, areas outside of a pinch-zoom area, or any other on-screen artifact that doesn't scale with the dimensions of a page.
 

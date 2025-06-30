@@ -4,9 +4,12 @@ slug: Web/API/Trusted_Types_API
 page-type: web-api-overview
 browser-compat: api.trustedTypes
 spec-urls: https://w3c.github.io/trusted-types/dist/spec/
+sidebar:
+  - defaultapisidebar:
+      - Trusted Types API
 ---
 
-{{DefaultAPISidebar("Trusted Types API")}}{{AvailableInWorkers}}
+{{AvailableInWorkers}}
 
 The **Trusted Types API** gives web developers a way to ensure that input has been passed through a user-specified transformation function before being passed to an API that might execute that input. This can help to protect against client-side [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks. Most commonly the transformation function [sanitizes](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input.
 

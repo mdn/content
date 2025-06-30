@@ -10,9 +10,10 @@ spec-urls:
   - https://w3c.github.io/mediacapture-screen-share/
   - https://screen-share.github.io/element-capture/
   - https://w3c.github.io/mediacapture-region/
+sidebar:
+  - defaultapisidebar:
+      - Screen Capture API
 ---
-
-{{DefaultAPISidebar("Screen Capture API")}}
 
 The Screen Capture API introduces additions to the existing Media Capture and Streams API to let the user select a screen or portion of a screen (such as a window) to capture as a media stream. This stream can then be recorded or shared with others over the network.
 

@@ -3,9 +3,12 @@ title: Web Crypto API
 slug: Web/API/Web_Crypto_API
 page-type: web-api-overview
 browser-compat: api.Crypto
+sidebar:
+  - defaultapisidebar:
+      - Web Crypto API
 ---
 
-{{DefaultAPISidebar("Web Crypto API")}}{{securecontext_header}}{{AvailableInWorkers}}
+{{securecontext_header}}{{AvailableInWorkers}}
 
 The **Web Crypto API** is an interface allowing a script to use cryptographic primitives in order to build systems using cryptography.
 

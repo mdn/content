@@ -3,9 +3,12 @@ title: WebGPU API
 slug: Web/API/WebGPU_API
 page-type: web-api-overview
 browser-compat: api.GPU
+sidebar:
+  - defaultapisidebar:
+      - WebGPU API
 ---
 
-{{DefaultAPISidebar("WebGPU API")}}{{securecontext_header}}
+{{securecontext_header}}
 
 The **WebGPU API** enables web developers to use the underlying system's GPU (Graphics Processing Unit) to carry out high-performance computations and draw complex images that can be rendered in the browser.
 

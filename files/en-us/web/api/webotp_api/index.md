@@ -3,9 +3,12 @@ title: WebOTP API
 slug: Web/API/WebOTP_API
 page-type: web-api-overview
 spec-urls: https://wicg.github.io/web-otp/
+sidebar:
+  - defaultapisidebar:
+      - WebOTP API
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("WebOTP API")}}
+{{securecontext_header}}
 
 The **WebOTP API** provides a streamlined user experience for web apps to verify that a phone number belongs to a user when using it as a sign-in factor. WebOTP is an extension of the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API).
 

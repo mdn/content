@@ -2,9 +2,12 @@
 title: Using device orientation with 3D transforms
 slug: Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - Device Orientation Events
 ---
 
-{{DefaultAPISidebar("Device Orientation Events")}}{{securecontext_header}}
+{{securecontext_header}}
 
 This article provides tips on how to use device orientation information in tandem with CSS 3D transforms.
 

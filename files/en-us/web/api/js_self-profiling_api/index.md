@@ -6,9 +6,12 @@ status:
   - experimental
 browser-compat: api.Profiler
 spec-urls: https://wicg.github.io/js-self-profiling/
+sidebar:
+  - defaultapisidebar:
+      - JS Self-Profiling API
 ---
 
-{{DefaultAPISidebar("JS Self-Profiling API")}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The JS Self-Profiling API enables a website to run a sampling profiler, to understand where it is spending JavaScript execution time.
 

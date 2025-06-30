@@ -2,9 +2,10 @@
 title: Identity provider integration with FedCM
 slug: Web/API/FedCM_API/IDP_integration
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - FedCM API
 ---
-
-{{DefaultAPISidebar("FedCM API")}}
 
 This article details all the steps an identity provider (IdP) needs to take to integrate with the Federated Credential Management (FedCM) API.
 

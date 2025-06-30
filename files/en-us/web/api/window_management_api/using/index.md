@@ -2,9 +2,10 @@
 title: Using the Window Management API
 slug: Web/API/Window_Management_API/Using
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - Window Management API
 ---
-
-{{DefaultAPISidebar("Window Management API")}}
 
 This guide explains how to use the [Window Management API](/en-US/docs/Web/API/Window_Management_API). The example code seen below is taken from our [Multi-window learning environment](https://mdn.github.io/dom-examples/window-management-api/) example (see the [source code](https://github.com/mdn/dom-examples/tree/main/window-management-api)).
 

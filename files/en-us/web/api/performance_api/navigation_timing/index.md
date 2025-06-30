@@ -2,9 +2,10 @@
 title: Navigation timing
 slug: Web/API/Performance_API/Navigation_timing
 page-type: web-api-overview
+sidebar:
+  - defaultapisidebar:
+      - Performance API
 ---
-
-{{DefaultAPISidebar("Performance API")}}
 
 Navigation Timing is part of the Performance API and provides metrics associated with navigating from one page to another. For example, you can determine how much time it takes to load or unload a document, or log the time it took until {{Glossary("DOM")}} construction has finished and interaction with the DOM is possible.
 

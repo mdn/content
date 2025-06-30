@@ -3,9 +3,12 @@ title: Web Authentication API
 slug: Web/API/Web_Authentication_API
 page-type: web-api-overview
 browser-compat: api.PublicKeyCredential
+sidebar:
+  - defaultapisidebar:
+      - Web Authentication API
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Web Authentication API")}}
+{{securecontext_header}}
 
 The Web Authentication API (WebAuthn) is an extension of the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API) that enables strong authentication with public key cryptography, enabling passwordless authentication and secure multi-factor authentication (MFA) without SMS texts.
 

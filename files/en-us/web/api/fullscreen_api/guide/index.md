@@ -5,9 +5,10 @@ page-type: guide
 browser-compat:
   - api.Document.fullscreenEnabled
   - api.Document.fullscreen
+sidebar:
+  - defaultapisidebar:
+      - Fullscreen API
 ---
-
-{{DefaultAPISidebar("Fullscreen API")}}
 
 This article demonstrates how to use the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) to place a given element into fullscreen mode, as well as how to detect when the browser enters or exits fullscreen mode.
 

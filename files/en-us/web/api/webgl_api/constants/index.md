@@ -5,9 +5,10 @@ page-type: guide
 spec-urls:
   - https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14
   - https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7
+sidebar:
+  - defaultapisidebar:
+      - WebGL
 ---
-
-{{DefaultAPISidebar("WebGL")}}
 
 The [WebGL API](/en-US/docs/Web/API/WebGL_API) provides several constants that are passed into or returned by functions. All constants are of type {{domxref("WebGL_API/Types", "GLenum")}}.
 

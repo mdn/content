@@ -2,9 +2,10 @@
 title: Signaling and video calling
 slug: Web/API/WebRTC_API/Signaling_and_video_calling
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - WebRTC
 ---
-
-{{DefaultAPISidebar("WebRTC")}}
 
 [WebRTC](/en-US/docs/Web/API/WebRTC_API) allows real-time, peer-to-peer, media exchange between two devices. A connection is established through a discovery and negotiation process called **signaling**. This tutorial will guide you through building a two-way video-call.
 

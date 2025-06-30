@@ -2,9 +2,10 @@
 title: Sending and Receiving Binary Data
 slug: Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - XMLHttpRequest API
 ---
-
-{{DefaultAPISidebar("XMLHttpRequest API")}}
 
 ## Receiving binary data
 

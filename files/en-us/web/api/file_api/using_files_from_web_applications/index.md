@@ -2,9 +2,12 @@
 title: Using files from web applications
 slug: Web/API/File_API/Using_files_from_web_applications
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - File API
 ---
 
-{{DefaultAPISidebar("File API")}}{{AvailableInWorkers}}
+{{AvailableInWorkers}}
 
 Using the File API, web content can ask the user to select local files and then read the contents of those files. This selection can be done by either using an HTML `{{HTMLElement("input/file", '&lt;input type="file"&gt;')}}` element or by drag and drop.
 

@@ -2,9 +2,10 @@
 title: Resolving relative references to a URL
 slug: Web/API/URL_API/Resolving_relative_references
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - URL API
 ---
-
-{{DefaultAPISidebar("URL API")}}
 
 The [`URL()` constructor](/en-US/docs/Web/API/URL/URL) or the {{domxref("URL.parse_static", "URL.parse()")}} static method of the [URL API](/en-US/docs/Web/API/URL_API) can be used to resolve a relative reference and a base URL to an absolute URL.
 

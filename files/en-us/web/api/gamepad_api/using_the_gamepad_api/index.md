@@ -3,9 +3,10 @@ title: Using the Gamepad API
 slug: Web/API/Gamepad_API/Using_the_Gamepad_API
 page-type: guide
 browser-compat: api.Gamepad
+sidebar:
+  - defaultapisidebar:
+      - Gamepad API
 ---
-
-{{DefaultAPISidebar("Gamepad API")}}
 
 HTML provides the necessary components for rich, interactive game development. Technologies like `<canvas>`, WebGL, `<audio>`, and `<video>`, along with JavaScript implementations, support tasks that provide similar, if not the same, features as native code. The Gamepad API allows developers and designers to access and use gamepads and other game controllers.
 

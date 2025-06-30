@@ -2,9 +2,10 @@
 title: Controlling multiple parameters with ConstantSourceNode
 slug: Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - Web Audio API
 ---
-
-{{DefaultAPISidebar("Web Audio API")}}
 
 This article demonstrates how to use a {{domxref("ConstantSourceNode")}} to link multiple parameters together so they share the same value, which can be changed by setting the value of the {{domxref("ConstantSourceNode.offset")}} parameter.
 

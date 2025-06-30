@@ -2,9 +2,10 @@
 title: Recommended Drag Types
 slug: Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - HTML Drag and Drop API
 ---
-
-{{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 The HTML Drag and Drop API supports dragging various types of data, including plain text, URLs, HTML code, files, etc. The document describes best practices for common draggable data types.
 

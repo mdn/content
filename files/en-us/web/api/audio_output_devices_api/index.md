@@ -10,9 +10,12 @@ browser-compat:
   - api.HTMLMediaElement.sinkId
   - http.headers.Permissions-Policy.speaker-selection
 spec-urls: https://w3c.github.io/mediacapture-output/
+sidebar:
+  - defaultapisidebar:
+      - Audio Output Devices API
 ---
 
-{{DefaultAPISidebar("Audio Output Devices API")}}{{securecontext_header}}{{SeeCompatTable}}
+{{securecontext_header}}{{SeeCompatTable}}
 
 The **Audio Output Devices API** allows web applications to prompt users about what output device should be used for audio playback.
 

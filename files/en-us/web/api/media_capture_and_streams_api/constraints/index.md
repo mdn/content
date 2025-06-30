@@ -3,9 +3,10 @@ title: Capabilities, constraints, and settings
 slug: Web/API/Media_Capture_and_Streams_API/Constraints
 page-type: guide
 browser-compat: api.MediaDevices.getSupportedConstraints
+sidebar:
+  - defaultapisidebar:
+      - Media Capture and Streams
 ---
-
-{{DefaultAPISidebar("Media Capture and Streams")}}
 
 This article discusses the twin concepts of **constraints** and **capabilities**, as well as media settings, and includes an example we call the [Constraint Exerciser](#example_constraint_exerciser). The Constraint Exerciser lets you experiment with the results of different constraint sets being applied to the audio and video tracks coming from the computer's A/V input devices (such as its webcam and microphone).
 

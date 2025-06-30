@@ -2,9 +2,10 @@
 title: Communication with embedded frames
 slug: Web/API/Fenced_frame_API/Communication_with_embedded_frames
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - Fenced Frame API
 ---
-
-{{DefaultAPISidebar("Fenced Frame API")}}
 
 This article provides information on how communication differs between an embedder and content embedded inside different types of frame (i.e., an {{htmlelement("iframe")}} and a {{htmlelement("fencedframe")}}), and how passed data can be stored.
 

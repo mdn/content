@@ -6,9 +6,10 @@ browser-compat:
   - api.VTTCue
   - api.TextTrack
   - api.VTTRegion
+sidebar:
+  - defaultapisidebar:
+      - WebVTT
 ---
-
-{{DefaultAPISidebar("WebVTT")}}
 
 **Web Video Text Tracks** (**WebVTT**) are text tracks providing specific text "cues" that are time-aligned with other media, such as video or audio tracks. The **WebVTT API** provides functionality to define and manipulate these text tracks.
 The WebVTT API is primarily used for displaying subtitles or captions that overlay with video content, but it has other uses: providing chapter information for easier navigation and generic metadata that needs to be time-aligned with audio or video content.

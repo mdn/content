@@ -2,9 +2,10 @@
 title: High precision timing
 slug: Web/API/Performance_API/High_precision_timing
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - Performance API
 ---
-
-{{DefaultAPISidebar("Performance API")}}
 
 The Performance API allows high precision measurements that are based on time in potential sub-millisecond resolution and a stable monotonic clock that is not subject to system clock skew or adjustments.
 The high resolution timers are needed for accurate benchmarking instead of the less precise and non-monotonic {{jsxref("Date")}} timestamps.

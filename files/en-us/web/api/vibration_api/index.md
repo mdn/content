@@ -4,9 +4,10 @@ slug: Web/API/Vibration_API
 page-type: web-api-overview
 browser-compat: api.Navigator.vibrate
 spec-urls: https://w3c.github.io/vibration/
+sidebar:
+  - defaultapisidebar:
+      - Vibration API
 ---
-
-{{DefaultAPISidebar("Vibration API")}}
 
 Most modern mobile devices include vibration hardware, which lets software code provide physical feedback to the user by causing the device to shake. The **Vibration API** offers Web apps the ability to access this hardware, if it exists, and does nothing if the device doesn't support it.
 

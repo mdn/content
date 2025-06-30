@@ -5,9 +5,10 @@ page-type: web-api-overview
 browser-compat:
   - api.Window.localStorage
   - api.Window.sessionStorage
+sidebar:
+  - defaultapisidebar:
+      - Web Storage API
 ---
-
-{{DefaultAPISidebar("Web Storage API")}}
 
 The **Web Storage API** provides mechanisms by which browsers can store key/value pairs, in a much more intuitive fashion than using {{glossary("cookie", "cookies")}}.
 

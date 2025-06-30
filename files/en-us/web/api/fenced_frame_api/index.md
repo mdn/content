@@ -5,9 +5,12 @@ page-type: web-api-overview
 status:
   - experimental
 browser-compat: html.elements.fencedframe
+sidebar:
+  - defaultapisidebar:
+      - Fenced Frame API
 ---
 
-{{SeeCompatTable}}{{DefaultAPISidebar("Fenced Frame API")}}
+{{SeeCompatTable}}
 
 > [!WARNING]
 > This feature is currently opposed by one browser vendor.

@@ -5,9 +5,12 @@ page-type: guide
 status:
   - experimental
 browser-compat: api.PerformanceNavigationTiming.notRestoredReasons
+sidebar:
+  - defaultapisidebar:
+      - Performance API
 ---
 
-{{DefaultAPISidebar("Performance API")}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The {{domxref("PerformanceNavigationTiming.notRestoredReasons")}} property reports information on why the current document was blocked from using the {{Glossary("bfcache")}} on navigation. Developers can use this information to identify pages that need updates to make them bfcache-compatible, thereby improving site performance.
 

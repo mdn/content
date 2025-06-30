@@ -7,9 +7,10 @@ browser-compat:
   - api.TouchEvent
   - api.TouchList
 spec-urls: https://w3c.github.io/touch-events/
+sidebar:
+  - defaultapisidebar:
+      - Touch Events
 ---
-
-{{DefaultAPISidebar("Touch Events")}}
 
 To provide quality support for touch-based user interfaces, touch events offer the ability to interpret finger (or stylus) activity on touch screens or trackpads.
 

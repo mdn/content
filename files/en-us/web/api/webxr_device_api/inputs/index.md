@@ -2,9 +2,12 @@
 title: Inputs and input sources
 slug: Web/API/WebXR_Device_API/Inputs
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - WebXR Device API
 ---
 
-{{DefaultAPISidebar("WebXR Device API")}}{{SecureContext_Header}}
+{{SecureContext_Header}}
 
 A full WebXR experience isn't just about showing the user a wholly virtual scene or augmenting reality by adding to or altering the world around them. In order to make an experience that's fulfilling and engaging, the user needs to be able to interact with it. To that end, WebXR provides support for a variety of kinds of input devices.
 

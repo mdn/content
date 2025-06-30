@@ -2,9 +2,12 @@
 title: Scissor animation
 slug: Web/API/WebGL_API/By_example/Scissor_animation
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - WebGL
 ---
 
-{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Web/API/WebGL_API/By_example/Boilerplate_1","Web/API/WebGL_API/By_example/Raining_rectangles")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Boilerplate_1","Web/API/WebGL_API/By_example/Raining_rectangles")}}
 
 A simple WebGL example in which we have some animation fun using scissoring and clearing operations.
 

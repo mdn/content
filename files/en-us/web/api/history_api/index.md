@@ -3,9 +3,10 @@ title: History API
 slug: Web/API/History_API
 page-type: web-api-overview
 browser-compat: api.History
+sidebar:
+  - defaultapisidebar:
+      - History API
 ---
-
-{{DefaultAPISidebar("History API")}}
 
 The **History API** provides access to the browser's session history (not to be confused with [WebExtensions history](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history)) through the {{DOMxRef("Window.history","history")}} global object. It exposes useful methods and properties that let you navigate back and forth through the user's history, and manipulate the contents of the history stack.
 

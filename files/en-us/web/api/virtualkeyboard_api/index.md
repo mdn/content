@@ -5,9 +5,12 @@ page-type: web-api-overview
 status:
   - experimental
 browser-compat: api.VirtualKeyboard
+sidebar:
+  - defaultapisidebar:
+      - VirtualKeyboard API
 ---
 
-{{SeeCompatTable}}{{DefaultAPISidebar("VirtualKeyboard API")}}{{securecontext_header}}
+{{SeeCompatTable}}{{securecontext_header}}
 
 The VirtualKeyboard API provides developers control over the layout of their applications when the on-screen virtual keyboard appears and disappears on devices such as tablets, mobile phones, or other devices where a hardware keyboard may not be available.
 

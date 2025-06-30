@@ -2,9 +2,10 @@
 title: Using microtasks in JavaScript with queueMicrotask()
 slug: Web/API/HTML_DOM_API/Microtask_guide
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - HTML DOM
 ---
-
-{{DefaultAPISidebar("HTML DOM")}}
 
 A **microtask** is a short function which is executed after the function or program which created it exits _and_ only if the [JavaScript execution stack](/en-US/docs/Web/JavaScript/Reference/Execution_model#stack_and_execution_contexts) is empty, but before returning control to the event loop being used by the {{Glossary("user agent")}} to drive the script's execution environment.
 

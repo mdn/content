@@ -2,9 +2,12 @@
 title: Using the Document Picture-in-Picture API
 slug: Web/API/Document_Picture-in-Picture_API/Using
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - Document Picture-in-Picture API
 ---
 
-{{SeeCompatTable}}{{DefaultAPISidebar("Document Picture-in-Picture API")}}{{securecontext_header}}
+{{SeeCompatTable}}{{securecontext_header}}
 
 This guide provides a walkthrough of typical usage of the {{domxref("Document Picture-in-Picture API", "Document Picture-in-Picture API", "", "nocode")}}.
 

@@ -2,9 +2,10 @@
 title: Working with the History API
 slug: Web/API/History_API/Working_with_the_History_API
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - History API
 ---
-
-{{DefaultAPISidebar("History API")}}
 
 The History API enables a website to interact with the browser's session history: that is, the list of pages that the user has visited in a given window. As the user visits new pages, for example by clicking links, those new pages are added to the session history. The user can also move back and forth through the history using the browser's "Back" and "Forward" buttons.
 

@@ -2,9 +2,10 @@
 title: Lifetime of a WebRTC session
 slug: Web/API/WebRTC_API/Session_lifetime
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - WebRTC
 ---
-
-{{DefaultAPISidebar("WebRTC")}}
 
 WebRTC lets you build peer-to-peer communication of arbitrary data, audio, or video—or any combination thereof—into a browser application. In this article, we'll look at the lifetime of a WebRTC session, from establishing the connection all the way through closing the connection when it's no longer needed.
 

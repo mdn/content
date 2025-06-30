@@ -2,9 +2,10 @@
 title: Checking when a deadline is due
 slug: Web/API/IndexedDB_API/Checking_when_a_deadline_is_due
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - IndexedDB
 ---
-
-{{DefaultAPISidebar("IndexedDB")}}
 
 In this article we look at a complex example involving checking the current time and date against a deadline stored via IndexedDB. The main complication here is checking the stored deadline info (month, hour, day, etc.) against the current time and date taken from a [Date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object.
 

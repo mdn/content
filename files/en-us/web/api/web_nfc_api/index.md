@@ -5,9 +5,12 @@ page-type: web-api-overview
 status:
   - experimental
 browser-compat: api.NDEFReader
+sidebar:
+  - defaultapisidebar:
+      - Web NFC API
 ---
 
-{{DefaultAPISidebar("Web NFC API")}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The Web NFC API allows exchanging data over NFC via light-weight NFC Data Exchange Format (NDEF) messages.
 

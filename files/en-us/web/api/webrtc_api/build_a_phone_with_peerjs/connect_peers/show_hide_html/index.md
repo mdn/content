@@ -2,9 +2,10 @@
 title: Showing and hiding HTML
 slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Show_hide_html
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - WebRTC
 ---
-
-{{DefaultAPISidebar("WebRTC")}}
 
 {{PreviousMenuNext("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Get_microphone_permission", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Create_a_peer_connection")}}
 

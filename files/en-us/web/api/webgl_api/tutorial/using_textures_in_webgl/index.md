@@ -2,9 +2,12 @@
 title: Using textures in WebGL
 slug: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - WebGL
 ---
 
-{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
+{{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
 
 Now that our sample program has a rotating 3D cube, let's map a texture onto it instead of having its faces be solid colors.
 

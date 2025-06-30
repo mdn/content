@@ -2,9 +2,10 @@
 title: Credential types
 slug: Web/API/Credential_Management_API/Credential_types
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - Credential Management API
 ---
-
-{{DefaultAPISidebar("Credential Management API")}}
 
 The Credential Management API enables a website to create, store, and retrieve the {{glossary("credential", "credentials")}} that allow a user to securely log in. It supports four different types of credentials:
 

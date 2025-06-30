@@ -2,9 +2,10 @@
 title: Using Service Workers
 slug: Web/API/Service_Worker_API/Using_Service_Workers
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - Service Workers API
 ---
-
-{{DefaultAPISidebar("Service Workers API")}}
 
 This article provides information on getting started with service workers, including basic architecture, registering a service worker, the installation and activation process for a new service worker, updating your service worker, cache control and custom responses, all in the context of an app with offline functionality.
 

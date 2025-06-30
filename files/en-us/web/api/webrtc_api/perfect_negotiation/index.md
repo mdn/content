@@ -2,9 +2,10 @@
 title: "Establishing a connection: The WebRTC perfect negotiation pattern"
 slug: Web/API/WebRTC_API/Perfect_negotiation
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - WebRTC
 ---
-
-{{DefaultAPISidebar("WebRTC")}}
 
 This article introduces WebRTC **perfect negotiation**, describing how it works and why it's the recommended way to negotiate a WebRTC connection between peers, and provides sample code to demonstrate the technique.
 

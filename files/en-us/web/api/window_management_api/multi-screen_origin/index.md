@@ -2,9 +2,10 @@
 title: Multi-screen origin
 slug: Web/API/Window_Management_API/Multi-screen_origin
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - Window Management API
 ---
-
-{{DefaultAPISidebar("Window Management API")}}
 
 The [Window Management API](/en-US/docs/Web/API/Window_Management_API) introduces the concept of the **multi-screen origin** — this is the (0,0) coordinate of the host operating system (OS)'s virtual screen arrangement, around which all available screens and windows are positioned. The multi-screen origin is the top-left corner of the OS primary screen by convention, although the spec stipulates that it could be any arbitrary point within the virtual screen arrangement.
 

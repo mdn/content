@@ -3,9 +3,10 @@ title: Using the MediaStream Recording API
 slug: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API
 page-type: guide
 browser-compat: api.MediaRecorder
+sidebar:
+  - defaultapisidebar:
+      - MediaStream Recording
 ---
-
-{{DefaultAPISidebar("MediaStream Recording")}}
 
 The [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API) makes it easy to record audio and/or video streams. When used with {{domxref("MediaDevices.getUserMedia()","navigator.mediaDevices.getUserMedia()")}}, it provides an easy way to record from the user's input devices and instantly use the result in web apps.
 

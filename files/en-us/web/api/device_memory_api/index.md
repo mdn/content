@@ -7,9 +7,12 @@ browser-compat:
   - api.WorkerNavigator.deviceMemory
   - http.headers.Device-Memory
 spec-urls: https://www.w3.org/TR/device-memory/
+sidebar:
+  - defaultapisidebar:
+      - Device Memory API
 ---
 
-{{DefaultAPISidebar("Device Memory API")}}{{securecontext_header}}{{AvailableInWorkers}}
+{{securecontext_header}}{{AvailableInWorkers}}
 
 The capabilities of a client device largely depend on the amount of available RAM. Traditionally, developers had to use heuristics and either benchmark a device or infer device capabilities based on other factors like the device manufacturer or User Agent strings.
 

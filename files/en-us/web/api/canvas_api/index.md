@@ -3,9 +3,10 @@ title: Canvas API
 slug: Web/API/Canvas_API
 page-type: web-api-overview
 browser-compat: html.elements.canvas
+sidebar:
+  - defaultapisidebar:
+      - Canvas API
 ---
-
-{{DefaultAPISidebar("Canvas API")}}
 
 The **Canvas API** provides a means for drawing graphics via [JavaScript](/en-US/docs/Web/JavaScript) and the [HTML](/en-US/docs/Web/HTML) {{HtmlElement("canvas")}} element. Among other things, it can be used for animation, game graphics, data visualization, photo manipulation, and real-time video processing.
 

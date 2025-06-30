@@ -19,9 +19,12 @@ spec-urls:
   - https://wicg.github.io/performance-measure-memory/
   - https://html.spec.whatwg.org/multipage/interaction.html#the-visibilitystateentry-interface
   - https://html.spec.whatwg.org/multipage/nav-history-apis.html#the-notrestoredreasons-interface
+sidebar:
+  - defaultapisidebar:
+      - Performance API
 ---
 
-{{DefaultAPISidebar("Performance API")}}{{AvailableInWorkers}}
+{{AvailableInWorkers}}
 
 The Performance API is a group of standards used to measure the performance of web applications.
 

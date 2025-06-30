@@ -2,9 +2,10 @@
 title: Relying party federated sign-in
 slug: Web/API/FedCM_API/RP_sign-in
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - FedCM API
 ---
-
-{{DefaultAPISidebar("FedCM API")}}
 
 This article describes the process by which a relying party (RP) can use the [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API) to perform a federated sign-in via an identity provider (IdP).
 

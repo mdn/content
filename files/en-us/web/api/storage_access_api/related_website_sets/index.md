@@ -5,9 +5,10 @@ page-type: guide
 status:
   - non-standard
 spec-urls: https://wicg.github.io/first-party-sets/
+sidebar:
+  - defaultapisidebar:
+      - Storage Access API
 ---
-
-{{DefaultAPISidebar("Storage Access API")}}
 
 > [!WARNING]
 > This feature is currently opposed by two browser vendors. See the [Standards positions](#standards_positions) section below for details of opposition.

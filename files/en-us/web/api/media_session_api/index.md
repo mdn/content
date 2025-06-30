@@ -3,9 +3,10 @@ title: Media Session API
 slug: Web/API/Media_Session_API
 page-type: web-api-overview
 browser-compat: api.MediaSession
+sidebar:
+  - defaultapisidebar:
+      - Media Session API
 ---
-
-{{DefaultAPISidebar("Media Session API")}}
 
 The **Media Session API** provides a way to customize media notifications. It does this by providing metadata for display by the user agent for the media your web app is playing.
 

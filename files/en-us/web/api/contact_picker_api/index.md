@@ -5,9 +5,12 @@ page-type: web-api-overview
 status:
   - experimental
 browser-compat: api.ContactsManager
+sidebar:
+  - defaultapisidebar:
+      - Contact Picker API
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Contact Picker API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{SeeCompatTable}}
 
 The Contact Picker API allows users to select entries from their contact list and share limited details of the selected entries with a website or application.
 

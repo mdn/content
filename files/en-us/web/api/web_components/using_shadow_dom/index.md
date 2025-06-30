@@ -2,9 +2,10 @@
 title: Using shadow DOM
 slug: Web/API/Web_components/Using_shadow_DOM
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - Web Components
 ---
-
-{{DefaultAPISidebar("Web Components")}}
 
 An important aspect of custom elements is encapsulation, because a custom element, by definition, is a piece of reusable functionality: it might be dropped into any web page and be expected to work. So it's important that code running in the page should not be able to accidentally break a custom element by modifying its internal implementation. Shadow DOM enables you to attach a DOM tree to an element, and have the internals of this tree hidden from JavaScript and CSS running in the page.
 

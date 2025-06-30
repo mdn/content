@@ -9,9 +9,12 @@ browser-compat:
   - api.Navigator.userAgentData
   - api.WorkerNavigator.userAgentData
 spec-urls: https://wicg.github.io/ua-client-hints/
+sidebar:
+  - defaultapisidebar:
+      - User-Agent Client Hints API
 ---
 
-{{DefaultAPISidebar("User-Agent Client Hints API")}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **User-Agent Client Hints API** extends [Client Hints](/en-US/docs/Web/HTTP/Guides/Client_hints) to provide a way of exposing browser and platform information via User-Agent response and request headers, and a JavaScript API.
 

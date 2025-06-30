@@ -6,9 +6,12 @@ status:
   - experimental
 browser-compat: api.Summarizer
 spec-urls: https://webmachinelearning.github.io/writing-assistance-apis/#summarizer-api
+sidebar:
+  - defaultapisidebar:
+      - Summarizer API
 ---
 
-{{SeeCompatTable}}{{DefaultAPISidebar("Summarizer API")}}
+{{SeeCompatTable}}
 
 The **Summarizer API** summarizes a given body of text via a browser's internal AI model (which may differ between browsers).
 

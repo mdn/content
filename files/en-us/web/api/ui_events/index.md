@@ -3,9 +3,10 @@ title: UI Events
 slug: Web/API/UI_Events
 page-type: web-api-overview
 spec-urls: https://w3c.github.io/uievents/
+sidebar:
+  - defaultapisidebar:
+      - UI Events
 ---
-
-{{DefaultAPISidebar("UI Events")}}
 
 ## Concepts and Usage
 

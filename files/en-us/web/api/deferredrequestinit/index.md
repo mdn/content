@@ -5,9 +5,12 @@ page-type: web-api-interface
 status:
   - experimental
 browser-compat: api.Window.fetchLater
+sidebar:
+  - defaultapisidebar:
+      - fetchLater API
 ---
 
-{{DefaultAPISidebar("fetchLater API")}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`DeferredRequestInit`** dictionary of the [`fetchLater()` API](/en-US/docs/Web/API/fetchLater_API) represents the set of options that can be used to configure a deferred fetch request.
 

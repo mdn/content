@@ -2,9 +2,10 @@
 title: Using the CSS Typed Object Model
 slug: Web/API/CSS_Typed_OM_API/Guide
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - CSS Typed Object Model API
 ---
-
-{{DefaultAPISidebar("CSS Typed Object Model API")}}
 
 The **[CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)** exposes CSS values as typed JavaScript objects to allow their performant manipulation.
 

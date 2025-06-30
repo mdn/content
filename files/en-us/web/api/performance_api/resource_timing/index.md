@@ -2,9 +2,10 @@
 title: Resource timing
 slug: Web/API/Performance_API/Resource_timing
 page-type: web-api-overview
+sidebar:
+  - defaultapisidebar:
+      - Performance API
 ---
-
-{{DefaultAPISidebar("Performance API")}}
 
 Resource Timing is part of the Performance API and enables retrieving and analyzing detailed network timing data for the loading of an application's resources. An application can use the timing metrics to determine, for example, the length of time it takes to load a specific resource (such as an image or a script) either implicitly as part of page load or explicitly from JavaScript, for example using the {{domxref("Window/fetch", "fetch()")}} API.
 

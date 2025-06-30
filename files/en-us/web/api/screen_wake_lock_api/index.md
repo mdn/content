@@ -6,9 +6,12 @@ browser-compat:
   - api.WakeLock
   - api.WakeLockSentinel
 spec-urls: https://w3c.github.io/screen-wake-lock/
+sidebar:
+  - defaultapisidebar:
+      - Screen Wake Lock API
 ---
 
-{{DefaultAPISidebar("Screen Wake Lock API")}}{{securecontext_header}}
+{{securecontext_header}}
 
 The **Screen Wake Lock API** provides a way to prevent devices from dimming or locking the screen when an application needs to keep running.
 

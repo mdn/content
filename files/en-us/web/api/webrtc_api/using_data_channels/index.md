@@ -2,9 +2,10 @@
 title: Using WebRTC data channels
 slug: Web/API/WebRTC_API/Using_data_channels
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - WebRTC
 ---
-
-{{DefaultAPISidebar("WebRTC")}}
 
 In this guide, we'll examine how to add a data channel to a peer connection, which can then be used to securely exchange arbitrary data; that is, any kind of data we wish, in any format we choose.
 

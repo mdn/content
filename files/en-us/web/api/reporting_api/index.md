@@ -8,9 +8,12 @@ spec-urls:
   - https://w3c.github.io/webappsec-csp/#cspviolationreportbody
   - https://wicg.github.io/deprecation-reporting/#deprecationreportbody
   - https://wicg.github.io/intervention-reporting/#intervention-report
+sidebar:
+  - defaultapisidebar:
+      - Reporting API
 ---
 
-{{DefaultAPISidebar("Reporting API")}}{{AvailableInWorkers}}
+{{AvailableInWorkers}}
 
 The Reporting API provides a generic reporting mechanism for web applications to use to make reports available based on various platform features (for example [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP), [Permissions-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy), or feature deprecation reports) in a consistent manner.
 

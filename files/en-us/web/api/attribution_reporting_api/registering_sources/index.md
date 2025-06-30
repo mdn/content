@@ -4,9 +4,12 @@ slug: Web/API/Attribution_Reporting_API/Registering_sources
 page-type: guide
 status:
   - experimental
+sidebar:
+  - defaultapisidebar:
+      - Attribution Reporting API
 ---
 
-{{SeeCompatTable}}{{DefaultAPISidebar("Attribution Reporting API")}}
+{{SeeCompatTable}}
 
 This article explains how to register attribution sources when using the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API).
 

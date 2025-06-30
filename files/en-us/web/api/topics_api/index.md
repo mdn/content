@@ -6,9 +6,12 @@ status:
   - experimental
   - non-standard
 browser-compat: api.Document.browsingTopics
+sidebar:
+  - defaultapisidebar:
+      - Topics API
 ---
 
-{{DefaultAPISidebar("Topics API")}}{{SeeCompatTable}}{{non-standard_header}}
+{{SeeCompatTable}}{{non-standard_header}}
 
 > [!WARNING]
 > This feature is currently opposed by two browser vendors.

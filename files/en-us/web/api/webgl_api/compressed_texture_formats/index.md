@@ -2,9 +2,10 @@
 title: Compressed texture formats
 slug: Web/API/WebGL_API/Compressed_texture_formats
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - WebGL
 ---
-
-{{DefaultAPISidebar("WebGL")}}
 
 The WebGL API provides methods to use compressed texture formats. These are useful to increase texture detail while limiting the additional video memory necessary. By default, no compressed formats are available: a corresponding compressed texture format extension must first be enabled.
 

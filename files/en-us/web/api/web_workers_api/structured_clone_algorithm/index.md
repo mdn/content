@@ -2,9 +2,10 @@
 title: The structured clone algorithm
 slug: Web/API/Web_Workers_API/Structured_clone_algorithm
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - Web Workers API
 ---
-
-{{DefaultAPISidebar("Web Workers API") }}
 
 The **structured clone algorithm** copies complex JavaScript objects.
 It is used internally when invoking {{DOMxRef("WorkerGlobalScope.structuredClone", "structuredClone()")}}, to transfer data between [Workers](/en-US/docs/Web/API/Worker) via {{domxref("Worker.postMessage()", "postMessage()")}}, storing objects with [IndexedDB](/en-US/docs/Glossary/IndexedDB), or copying objects for [other APIs](#see_also).

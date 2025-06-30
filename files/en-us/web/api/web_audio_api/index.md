@@ -3,9 +3,10 @@ title: Web Audio API
 slug: Web/API/Web_Audio_API
 page-type: web-api-overview
 browser-compat: api.AudioContext
+sidebar:
+  - defaultapisidebar:
+      - Web Audio API
 ---
-
-{{DefaultAPISidebar("Web Audio API")}}
 
 The Web Audio API provides a powerful and versatile system for controlling audio on the Web, allowing developers to choose audio sources, add effects to audio, create audio visualizations, apply spatial effects (such as panning) and much more.
 

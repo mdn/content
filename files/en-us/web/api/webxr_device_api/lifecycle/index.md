@@ -2,9 +2,10 @@
 title: WebXR application life cycle
 slug: Web/API/WebXR_Device_API/Lifecycle
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - WebXR Device API
 ---
-
-{{DefaultAPISidebar("WebXR Device API")}}
 
 In this guide, we'll get a birds-eye view of what's involved in creating and driving a WebXR application, without diving down to the code level in detail. This serves as preparation for the next few articles in these WebXR guides, which cover [starting up and shutting down](/en-US/docs/Web/API/WebXR_Device_API/Startup_and_shutdown) a WebXR session, [geometry](/en-US/docs/Web/API/WebXR_Device_API/Geometry), [simulating cameras](/en-US/docs/Web/API/WebXR_Device_API/Cameras), [spatial tracking](/en-US/docs/Web/API/WebXR_Device_API/Spatial_tracking), and more.
 

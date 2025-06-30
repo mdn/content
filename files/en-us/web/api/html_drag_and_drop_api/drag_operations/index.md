@@ -2,9 +2,10 @@
 title: Drag operations
 slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - HTML Drag and Drop API
 ---
-
-{{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 The following describes the steps that occur during a drag and drop operation.
 

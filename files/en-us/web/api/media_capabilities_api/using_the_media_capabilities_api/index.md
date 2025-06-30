@@ -3,9 +3,10 @@ title: Using the Media Capabilities API
 slug: Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API
 page-type: guide
 browser-compat: api.MediaCapabilities
+sidebar:
+  - defaultapisidebar:
+      - Media Capabilities API
 ---
-
-{{DefaultAPISidebar("Media Capabilities API")}}
 
 The [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API) provides several key features to help you better decide how to handle media, but also to determine how well media is being handled, in real time.
 

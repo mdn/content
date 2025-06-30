@@ -2,9 +2,10 @@
 title: IndexedDB key characteristics and basic terminology
 slug: Web/API/IndexedDB_API/Basic_Terminology
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - IndexedDB
 ---
-
-{{DefaultAPISidebar("IndexedDB")}}
 
 This article describes the key characteristics of IndexedDB, and introduces some essential terminology relevant to understanding the IndexedDB API.
 

@@ -2,9 +2,12 @@
 title: Finale
 slug: Web/API/Canvas_API/Tutorial/Finale
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - Canvas API
 ---
 
-{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}
 
 Congratulations! You finished the [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial)! This knowledge will help you to make great 2D graphics on the web.
 

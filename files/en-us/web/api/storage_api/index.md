@@ -3,9 +3,12 @@ title: Storage API
 slug: Web/API/Storage_API
 page-type: web-api-overview
 browser-compat: api.StorageManager
+sidebar:
+  - defaultapisidebar:
+      - Storage
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Storage")}} {{AvailableInWorkers}}
+{{securecontext_header}} {{AvailableInWorkers}}
 
 The [Storage Standard](https://storage.spec.whatwg.org/) defines a shared storage system designed to be used by all APIs and technologies that websites can use to store data in a user's browser.
 

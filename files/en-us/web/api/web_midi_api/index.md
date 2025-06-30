@@ -7,9 +7,12 @@ browser-compat:
   - http.headers.Permissions-Policy.midi
   - api.Permissions.permission_midi
 spec-urls: https://webaudio.github.io/web-midi-api/
+sidebar:
+  - defaultapisidebar:
+      - Web MIDI API
 ---
 
-{{DefaultAPISidebar("Web MIDI API")}}{{SecureContext_Header}}
+{{SecureContext_Header}}
 
 The Web MIDI API connects to and interacts with Musical Instrument Digital Interface (MIDI) Devices.
 

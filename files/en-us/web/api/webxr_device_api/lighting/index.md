@@ -2,9 +2,10 @@
 title: Lighting a WebXR setting
 slug: Web/API/WebXR_Device_API/Lighting
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - WebXR Device API
 ---
-
-{{DefaultAPISidebar("WebXR Device API")}}
 
 Because the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) relies on other technologies—namely, [WebGL](/en-US/docs/Web/API/WebGL_API) and frameworks based upon it—to perform all rendering, texturing, and lighting of a scene, the same general lighting concepts apply to WebXR settings or scenes as to any other WebGL-generated display.
 

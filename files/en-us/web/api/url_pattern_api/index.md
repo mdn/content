@@ -4,9 +4,12 @@ slug: Web/API/URL_Pattern_API
 page-type: web-api-overview
 browser-compat: api.URLPattern
 spec-urls: https://urlpattern.spec.whatwg.org/
+sidebar:
+  - defaultapisidebar:
+      - URL Pattern API
 ---
 
-{{DefaultAPISidebar("URL Pattern API")}} {{AvailableInWorkers}}
+{{AvailableInWorkers}}
 
 The **URL Pattern API** defines a syntax that is used to create URL pattern
 matchers. These patterns can be matched against URLs or individual URL

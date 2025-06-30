@@ -5,9 +5,10 @@ page-type: web-api-overview
 browser-compat:
   - api.CSSPropertyRule
   - api.CSS.registerProperty_static
+sidebar:
+  - defaultapisidebar:
+      - CSS Properties and Values API
 ---
-
-{{DefaultAPISidebar("CSS Properties and Values API")}}
 
 The **CSS Properties and Values API** — part of the [CSS Houdini](/en-US/docs/Web/API/Houdini_APIs) umbrella of APIs — allows developers to explicitly define their [CSS custom properties](/en-US/docs/Web/CSS/--*), allowing for property type checking, default values, and properties that do or do not inherit their value.
 

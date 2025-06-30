@@ -2,9 +2,12 @@
 title: Boilerplate 1
 slug: Web/API/WebGL_API/By_example/Boilerplate_1
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - WebGL
 ---
 
-{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Web/API/WebGL_API/By_example/Canvas_size_and_WebGL","Web/API/WebGL_API/By_example/Scissor_animation")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Canvas_size_and_WebGL","Web/API/WebGL_API/By_example/Scissor_animation")}}
 
 This example describes repeated pieces of code that will be hidden from now on, as well as defining a JavaScript utility function to make WebGL initialization easier.
 

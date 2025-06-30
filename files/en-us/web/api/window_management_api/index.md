@@ -6,9 +6,12 @@ status:
   - experimental
 browser-compat: api.Window.getScreenDetails
 spec-urls: https://w3c.github.io/window-management/
+sidebar:
+  - defaultapisidebar:
+      - Window Management API
 ---
 
-{{SeeCompatTable}}{{DefaultAPISidebar("Window Management API")}}
+{{SeeCompatTable}}
 
 The **Window Management API** allows you to get detailed information on the displays connected to your device and more easily place windows on specific screens, paving the way towards more effective multi-screen applications.
 

@@ -5,9 +5,12 @@ page-type: web-api-overview
 status:
   - experimental
 browser-compat: api.Sanitizer
+sidebar:
+  - defaultapisidebar:
+      - HTML Sanitizer API
 ---
 
-{{DefaultAPISidebar("HTML Sanitizer API")}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **HTML Sanitizer API** allows developers to take strings of HTML and filter out unwanted elements, attributes, and other HTML entities when they are inserted into the DOM or a shadow DOM.
 

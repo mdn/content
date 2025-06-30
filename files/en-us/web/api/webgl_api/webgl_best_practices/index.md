@@ -2,9 +2,10 @@
 title: WebGL best practices
 slug: Web/API/WebGL_API/WebGL_best_practices
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - WebGL
 ---
-
-{{DefaultAPISidebar("WebGL")}}
 
 WebGL is a complicated API, and it's often not obvious what the recommended ways to use it are. This page tackles recommendations across the spectrum of expertise, and not only highlights dos and don'ts, but also details _why_. You can rely on this document to guide your choice of approach, and ensure you're on the right track no matter what browser or hardware your users run.
 

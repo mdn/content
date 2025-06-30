@@ -2,9 +2,10 @@
 title: Taking still photos with getUserMedia()
 slug: Web/API/Media_Capture_and_Streams_API/Taking_still_photos
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - Media Capture and Streams
 ---
-
-{{DefaultAPISidebar("Media Capture and Streams")}}
 
 This article shows how to use [`navigator.mediaDevices.getUserMedia()`](/en-US/docs/Web/API/MediaDevices/getUserMedia) to access the camera on a computer or mobile phone with `getUserMedia()` support and take a photo with it.
 

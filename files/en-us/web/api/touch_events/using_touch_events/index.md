@@ -2,9 +2,10 @@
 title: Using Touch Events
 slug: Web/API/Touch_events/Using_Touch_Events
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - Touch Events
 ---
-
-{{DefaultAPISidebar("Touch Events")}}
 
 Today, most Web content is designed for keyboard and mouse input. However, devices with touch screens (especially portable devices) are mainstream and Web applications can either directly process touch-based input by using [touch events](/en-US/docs/Web/API/TouchEvent) or the application can use _interpreted mouse events_ for the application input. A disadvantage to using mouse events is that they do not support concurrent user input, whereas touch events support multiple simultaneous inputs (possibly at different locations on the touch surface), thus enhancing user experiences.
 

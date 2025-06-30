@@ -5,9 +5,12 @@ page-type: web-api-overview
 status:
   - experimental
 browser-compat: api.BarcodeDetector
+sidebar:
+  - defaultapisidebar:
+      - Barcode Detection API
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Barcode Detection API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
+{{securecontext_header}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The Barcode Detection API detects linear and two-dimensional barcodes in images.
 

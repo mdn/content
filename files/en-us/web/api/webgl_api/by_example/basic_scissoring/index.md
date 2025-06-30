@@ -2,9 +2,12 @@
 title: Basic scissoring
 slug: Web/API/WebGL_API/By_example/Basic_scissoring
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - WebGL
 ---
 
-{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Web/API/WebGL_API/By_example/Color_masking","Web/API/WebGL_API/By_example/Canvas_size_and_WebGL")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Color_masking","Web/API/WebGL_API/By_example/Canvas_size_and_WebGL")}}
 
 In this example, we see how to draw rectangles and squares using WebGL scissoring operations. Scissoring establishes a clipping region outside which drawing will not occur.
 

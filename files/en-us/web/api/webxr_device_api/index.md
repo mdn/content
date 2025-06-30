@@ -16,9 +16,12 @@ spec-urls:
   - https://immersive-web.github.io/hit-test/
   - https://immersive-web.github.io/layers/
   - https://immersive-web.github.io/lighting-estimation/
+sidebar:
+  - defaultapisidebar:
+      - WebXR Device API
 ---
 
-{{DefaultAPISidebar("WebXR Device API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{SecureContext_Header}}{{SeeCompatTable}}
 
 **WebXR** is a group of standards which are used together to support rendering 3D scenes to hardware designed for presenting virtual worlds (**virtual reality**, or **VR**), or for adding graphical imagery to the real world, (**augmented reality**, or **AR**). The **WebXR Device API** implements the core of the WebXR feature set, managing the selection of output devices, render the 3D scene to the chosen device at the appropriate frame rate, and manage motion vectors created using input controllers.
 

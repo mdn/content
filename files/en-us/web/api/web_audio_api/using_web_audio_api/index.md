@@ -2,9 +2,10 @@
 title: Using the Web Audio API
 slug: Web/API/Web_Audio_API/Using_Web_Audio_API
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - Web Audio API
 ---
-
-{{DefaultAPISidebar("Web Audio API")}}
 
 Let's take a look at getting started with the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API). We'll briefly look at some concepts, then study a simple boombox example that allows us to load an audio track, play and pause it, and change its volume and stereo panning.
 

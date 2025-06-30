@@ -4,9 +4,10 @@ slug: Web/API/Popover_API/Using
 page-type: guide
 status:
   - experimental
+sidebar:
+  - defaultapisidebar:
+      - Popover API
 ---
-
-{{DefaultAPISidebar("Popover API")}}
 
 The **Popover API** provides developers with a standard, consistent, flexible mechanism for displaying popover content on top of other page content. Popover content can be controlled either declaratively using HTML attributes, or via JavaScript. This article provides a detailed guide to using all of its features.
 

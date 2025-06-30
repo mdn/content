@@ -2,9 +2,10 @@
 title: Using the CSS Painting API
 slug: Web/API/CSS_Painting_API/Guide
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - CSS Painting API
 ---
-
-{{DefaultAPISidebar("CSS Painting API")}}
 
 The [CSS Paint API](/en-US/docs/Web/API/CSS_Painting_API) is designed to enable developers to programmatically define images which can then be used anywhere a CSS image can be invoked, such as CSS {{cssxref("background-image")}}, {{cssxref("border-image")}}, {{cssxref("mask-image")}}, etc.
 

@@ -2,9 +2,10 @@
 title: Building an Internet-Connected Phone with PeerJS
 slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - WebRTC
 ---
-
-{{DefaultAPISidebar("WebRTC")}}
 
 {{NextMenu("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Setup")}}
 

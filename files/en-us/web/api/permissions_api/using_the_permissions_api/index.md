@@ -2,9 +2,10 @@
 title: Using the Permissions API
 slug: Web/API/Permissions_API/Using_the_Permissions_API
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - Permissions API
 ---
-
-{{DefaultAPISidebar("Permissions API")}}
 
 This article provides a basic guide to using the [Permissions API](/en-US/docs/Web/API/Permissions_API), which provides a programmatic way to query the status of API permissions attributed to the current context.
 

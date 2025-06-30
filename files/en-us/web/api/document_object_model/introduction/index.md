@@ -3,9 +3,10 @@ title: Introduction to the DOM
 slug: Web/API/Document_Object_Model/Introduction
 page-type: guide
 spec-urls: https://dom.spec.whatwg.org/
+sidebar:
+  - defaultapisidebar:
+      - DOM
 ---
-
-{{DefaultAPISidebar("DOM")}}
 
 The **Document Object Model** (_DOM_) is the data representation of the objects
 that comprise the structure and content of a document on the web.

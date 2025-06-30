@@ -3,9 +3,12 @@ title: Payment Request API
 slug: Web/API/Payment_Request_API
 page-type: web-api-overview
 browser-compat: api.PaymentRequest
+sidebar:
+  - defaultapisidebar:
+      - Payment Request API
 ---
 
-{{DefaultAPISidebar("Payment Request API")}}{{securecontext_header}}
+{{securecontext_header}}
 
 The **Payment Request API** provides a consistent user experience for merchants and users. It is not a new way of paying for things; instead, it's a way for users to select their preferred way of paying for things and make that information available to a merchant.
 

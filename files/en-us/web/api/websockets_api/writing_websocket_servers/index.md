@@ -2,9 +2,10 @@
 title: Writing WebSocket servers
 slug: Web/API/WebSockets_API/Writing_WebSocket_servers
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - WebSockets API
 ---
-
-{{DefaultAPISidebar("WebSockets API")}}
 
 A WebSocket server is nothing more than an application listening on any port of a TCP server that follows a specific protocol. Creating a custom server can seem overwhelming if you have never done it before. It can actually be quite straightforward to implement a basic WebSocket server on your platform of choice, though.
 

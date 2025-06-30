@@ -2,9 +2,12 @@
 title: Clearing with colors
 slug: Web/API/WebGL_API/By_example/Clearing_with_colors
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - WebGL
 ---
 
-{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Web/API/WebGL_API/By_example/Detect_WebGL","Web/API/WebGL_API/By_example/Clearing_by_clicking")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Detect_WebGL","Web/API/WebGL_API/By_example/Clearing_by_clicking")}}
 
 An example showing how to clear a WebGL rendering context to a solid color.
 

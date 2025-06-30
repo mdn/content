@@ -5,9 +5,12 @@ page-type: web-api-overview
 status:
   - experimental
 browser-compat: api.SharedStorage
+sidebar:
+  - defaultapisidebar:
+      - Shared Storage API
 ---
 
-{{SeeCompatTable}}{{DefaultAPISidebar("Shared Storage API")}}
+{{SeeCompatTable}}
 
 > [!WARNING]
 > This feature is currently opposed by one browser vendor.

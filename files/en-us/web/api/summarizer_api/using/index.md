@@ -2,9 +2,10 @@
 title: Using the Summarizer API
 slug: Web/API/Summarizer_API/Using
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - Summarizer API
 ---
-
-{{DefaultAPISidebar("Summarizer API")}}
 
 The [Summarizer API](/en-US/docs/Web/API/Summarizer_API) provides an asynchronous ({{jsxref("Promise")}}-based) mechanism for a website to feed a body of text into the browser's own internal AI model and request that it returns a summary of the text based on specified options. This article explains how to use the fundamentals of the Summarizer API.
 

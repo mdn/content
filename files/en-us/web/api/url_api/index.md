@@ -6,9 +6,12 @@ browser-compat:
   - api.URL
   - api.URLSearchParams
 spec-urls: https://url.spec.whatwg.org/#api
+sidebar:
+  - defaultapisidebar:
+      - URL API
 ---
 
-{{DefaultAPISidebar("URL API")}} {{AvailableInWorkers}}
+{{AvailableInWorkers}}
 
 The URL API is a component of the URL standard, which defines what constitutes a valid {{Glossary("URL", "Uniform Resource Locator")}} and the API that accesses and manipulates URLs. The URL standard also defines concepts such as domains, hosts, and IP addresses, and also attempts to describe in a standard way the legacy `application/x-www-form-urlencoded` {{Glossary("MIME type")}} used to submit web forms' contents as a set of key/value pairs.
 

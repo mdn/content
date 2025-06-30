@@ -2,9 +2,10 @@
 title: Using the Web Animations API
 slug: Web/API/Web_Animations_API/Using_the_Web_Animations_API
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - Web Animations
 ---
-
-{{DefaultAPISidebar("Web Animations")}}
 
 The Web Animations API lets us construct animations and control their playback with JavaScript. This article will start you off in the right direction with fun demos and tutorials featuring Alice in Wonderland.
 

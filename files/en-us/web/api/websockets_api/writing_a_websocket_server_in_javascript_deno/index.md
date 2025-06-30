@@ -2,9 +2,10 @@
 title: Writing a WebSocket server in JavaScript (Deno)
 slug: Web/API/WebSockets_API/Writing_a_WebSocket_server_in_JavaScript_Deno
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - WebSockets API
 ---
-
-{{DefaultAPISidebar("WebSockets API")}}
 
 This example shows you how to create a WebSocket API server using Deno, with an accompanying web page.
 

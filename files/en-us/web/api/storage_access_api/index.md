@@ -11,9 +11,10 @@ browser-compat:
 spec-urls:
   - https://privacycg.github.io/storage-access/
   - https://privacycg.github.io/saa-non-cookie-storage/
+sidebar:
+  - defaultapisidebar:
+      - Storage Access API
 ---
-
-{{DefaultAPISidebar("Storage Access API")}}
 
 The Storage Access API provides a way for cross-site content loaded in a third-party context (i.e., embedded in an {{htmlelement("iframe")}}) to gain access to [third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies) and [unpartitioned state](/en-US/docs/Web/Privacy/Guides/State_Partitioning#state_partitioning) that it would typically only have access to in a first-party context (i.e., when loaded directly in a browser tab).
 

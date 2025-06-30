@@ -8,9 +8,12 @@ browser-compat:
   - api.TextEncoderStream
   - api.TextDecoderStream
 spec-urls: https://encoding.spec.whatwg.org/
+sidebar:
+  - defaultapisidebar:
+      - Encoding API
 ---
 
-{{DefaultAPISidebar("Encoding API")}}{{AvailableInWorkers}}
+{{AvailableInWorkers}}
 
 The **Encoding API** enables web developers to work with text that is represented in {{Glossary("character encoding", "character encodings")}} systems other than the encoding used internally by JavaScript strings. In particular, it enables developers to convert text between JavaScript strings and the {{glossary("UTF-8")}} encoding that is used for most documents on the web.
 

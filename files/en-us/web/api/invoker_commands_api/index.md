@@ -6,9 +6,10 @@ browser-compat:
   - api.CommandEvent
   - api.HTMLButtonElement.commandForElement
   - api.HTMLButtonElement.command
+sidebar:
+  - defaultapisidebar:
+      - Invoker Commands API
 ---
-
-{{DefaultAPISidebar("Invoker Commands API")}}
 
 The **Invoker Commands API** provides a way to declaratively assign behaviors to buttons, allowing control of interactive elements when the button is enacted (clicked or invoked via a keypress, such as the spacebar or return key).
 

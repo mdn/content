@@ -5,9 +5,12 @@ page-type: web-api-overview
 status:
   - experimental
 browser-compat: api.InputDeviceCapabilities
+sidebar:
+  - defaultapisidebar:
+      - Input Device Capabilities API
 ---
 
-{{DefaultAPISidebar("Input Device Capabilities API")}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The InputDeviceCapabilities API provides details about the underlying sources of input events. The API attempts to describe how the device behaves rather than what it is. For example, the first version of the API indicates whether a device fires touch events rather than whether it is a touch screen.
 

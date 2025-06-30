@@ -5,9 +5,12 @@ page-type: web-api-overview
 browser-compat:
   - api.ReadableStream
   - api.WritableStream
+sidebar:
+  - defaultapisidebar:
+      - Streams
 ---
 
-{{DefaultAPISidebar("Streams")}}{{AvailableInWorkers}}
+{{AvailableInWorkers}}
 
 The Streams API allows JavaScript to programmatically access streams of data received over the network and process them as desired by the developer.
 

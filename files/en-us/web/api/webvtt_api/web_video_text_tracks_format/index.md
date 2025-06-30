@@ -4,9 +4,10 @@ slug: Web/API/WebVTT_API/Web_Video_Text_Tracks_Format
 page-type: guide
 browser-compat: html.elements.track
 spec-urls: https://w3c.github.io/webvtt/
+sidebar:
+  - defaultapisidebar:
+      - WebVTT
 ---
-
-{{DefaultAPISidebar("WebVTT")}}
 
 <!-- need to add info on region block -->
 

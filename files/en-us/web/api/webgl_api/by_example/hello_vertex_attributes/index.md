@@ -2,9 +2,12 @@
 title: Hello vertex attributes
 slug: Web/API/WebGL_API/By_example/Hello_vertex_attributes
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - WebGL
 ---
 
-{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Web/API/WebGL_API/By_example/Hello_GLSL","Web/API/WebGL_API/By_example/Textures_from_code")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Hello_GLSL","Web/API/WebGL_API/By_example/Textures_from_code")}}
 
 This WebGL example demonstrates how to combine shader programming and user interaction by sending user input to the shader using vertex attributes.
 

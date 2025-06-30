@@ -2,9 +2,10 @@
 title: Houdini APIs
 slug: Web/API/Houdini_APIs
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - Houdini API
 ---
-
-{{DefaultAPISidebar("Houdini API")}}
 
 Houdini is a set of low-level APIs that exposes parts of the CSS engine,
 giving developers the power to extend CSS by hooking into the styling and layout process of a browser's rendering engine.

@@ -2,9 +2,10 @@
 title: Multi-touch interaction
 slug: Web/API/Pointer_events/Multi-touch_interaction
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - Pointer Events
 ---
-
-{{DefaultAPISidebar("Pointer Events")}}
 
 Pointer events extend DOM input events to support various pointing input devices such as pen/stylus and touch screens as well as mouse. The _pointer_ is a hardware-agnostic device that can target a specific set of screen coordinates. Having a single event model for pointers can simplify creating websites, applications and provide a good user experience regardless of the user's hardware.
 

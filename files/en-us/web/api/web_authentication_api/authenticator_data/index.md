@@ -2,9 +2,10 @@
 title: Authenticator data
 slug: Web/API/Web_Authentication_API/Authenticator_data
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - Web Authentication API
 ---
-
-{{DefaultAPISidebar("Web Authentication API")}}
 
 The authenticator data structure contains information from the authenticator about the processing of a credential creation or authentication request — such as the Relying Party ID Hash (`rpIdHash`), a signature counter, test of user presence, user verification flags, and any extensions processed by the authenticator. This page explains what is contained in the data structure.
 

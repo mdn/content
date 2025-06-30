@@ -3,9 +3,10 @@ title: Selection API
 slug: Web/API/Selection_API
 page-type: web-api-overview
 spec-urls: https://w3c.github.io/selection-api/#selection-interface
+sidebar:
+  - defaultapisidebar:
+      - Selection API
 ---
-
-{{DefaultAPISidebar("Selection API")}}
 
 > [!NOTE]
 > This API is _not available_ in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (not exposed via {{domxref("WorkerNavigator")}}).

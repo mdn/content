@@ -2,9 +2,10 @@
 title: User timing
 slug: Web/API/Performance_API/User_timing
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - Performance API
 ---
-
-{{DefaultAPISidebar("Performance API")}}
 
 User Timing is part of the Performance API and allows you to measure the performance of applications using [high-precision timestamps](/en-US/docs/Web/API/DOMHighResTimeStamp) that are part of the browser's performance timeline.
 There are two types of timing performance entries:

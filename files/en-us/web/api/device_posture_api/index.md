@@ -5,9 +5,12 @@ page-type: web-api-overview
 status:
   - experimental
 browser-compat: api.DevicePosture
+sidebar:
+  - defaultapisidebar:
+      - Device Posture API
 ---
 
-{{DefaultAPISidebar("Device Posture API")}}{{seecompattable}}
+{{seecompattable}}
 
 The **Device Posture API** allows developers to create user interfaces that adapt to a foldable device's posture and respond to posture changes.
 

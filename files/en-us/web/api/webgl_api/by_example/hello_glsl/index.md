@@ -2,9 +2,12 @@
 title: Hello GLSL
 slug: Web/API/WebGL_API/By_example/Hello_GLSL
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - WebGL
 ---
 
-{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Web/API/WebGL_API/By_example/Raining_rectangles","Web/API/WebGL_API/By_example/Hello_vertex_attributes")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Raining_rectangles","Web/API/WebGL_API/By_example/Hello_vertex_attributes")}}
 
 This WebGL example demonstrates a very basic GLSL shader program that draws a solid color square.
 

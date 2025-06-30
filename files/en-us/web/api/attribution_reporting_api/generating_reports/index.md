@@ -4,9 +4,12 @@ slug: Web/API/Attribution_Reporting_API/Generating_reports
 page-type: guide
 status:
   - experimental
+sidebar:
+  - defaultapisidebar:
+      - Attribution Reporting API
 ---
 
-{{SeeCompatTable}}{{DefaultAPISidebar("Attribution Reporting API")}}
+{{SeeCompatTable}}
 
 This article explains how [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) reports are generated — both attribution reports and debug reports — and how you can control the generated reports. This includes handling noise, prioritizing reports, filtering reports, and generating debug reports.
 

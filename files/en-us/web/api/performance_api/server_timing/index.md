@@ -2,9 +2,10 @@
 title: Server timing
 slug: Web/API/Performance_API/Server_timing
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - Performance API
 ---
-
-{{DefaultAPISidebar("Performance API")}}
 
 Server-Timing is a part of the Performance API and allows servers to communicate metrics about the request-response cycle to the user agent. You can collect this information and act on server-side metrics in the same way as all the other metrics processed with the Performance API.
 

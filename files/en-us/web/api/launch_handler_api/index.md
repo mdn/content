@@ -5,9 +5,12 @@ page-type: web-api-overview
 status:
   - experimental
 browser-compat: api.Window.launchQueue
+sidebar:
+  - defaultapisidebar:
+      - Launch Handler API
 ---
 
-{{SeeCompatTable}}{{DefaultAPISidebar("Launch Handler API")}}
+{{SeeCompatTable}}
 
 The **Launch Handler API** allows developers to control how a [progressive web app](/en-US/docs/Web/Progressive_web_apps) (PWA) is launched — for example if it uses an existing window or creates a new one, and how the app's target launch URL is handled.
 

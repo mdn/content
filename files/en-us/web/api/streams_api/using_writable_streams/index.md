@@ -2,9 +2,10 @@
 title: Using writable streams
 slug: Web/API/Streams_API/Using_writable_streams
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - Streams
 ---
-
-{{DefaultAPISidebar("Streams")}}
 
 As a JavaScript developer, programmatically writing data to a stream is very useful! This article explains the [Streams API](/en-US/docs/Web/API/Streams_API)'s writable stream functionality.
 

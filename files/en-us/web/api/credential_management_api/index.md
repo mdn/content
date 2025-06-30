@@ -8,9 +8,12 @@ browser-compat:
   - api.FederatedCredential
   - api.PasswordCredential
 spec-urls: https://w3c.github.io/webappsec-credential-management/
+sidebar:
+  - defaultapisidebar:
+      - Credential Management API
 ---
 
-{{DefaultAPISidebar("Credential Management API")}}{{securecontext_header}}
+{{securecontext_header}}
 
 The Credential Management API enables a website to create, store, and retrieve {{glossary("credential", "credentials")}}. A credential is an item which enables a system to make an {{glossary("authentication")}} decision: for example, to decide whether to sign a user into an account. We can think of it as a piece of evidence that a user presents to a website to demonstrate that they really are the person they are claiming to be.
 

@@ -2,9 +2,10 @@
 title: Fundamentals of WebXR
 slug: Web/API/WebXR_Device_API/Fundamentals
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - WebXR Device API
 ---
-
-{{DefaultAPISidebar("WebXR Device API")}}
 
 WebXR, with the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) at its core, provides the functionality needed to bring both augmented and virtual reality (AR and VR) to the web. Together, these technologies are referred to as **mixed reality (MR)** or **cross reality (XR)**. Mixed reality is a large and complex subject, with much to learn and many other APIs to bring together to create an engaging experience for users.
 

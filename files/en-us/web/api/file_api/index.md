@@ -3,9 +3,12 @@ title: File API
 slug: Web/API/File_API
 page-type: web-api-overview
 spec-urls: https://w3c.github.io/FileAPI/
+sidebar:
+  - defaultapisidebar:
+      - File API
 ---
 
-{{DefaultAPISidebar("File API")}}{{AvailableInWorkers}}
+{{AvailableInWorkers}}
 
 ## Concepts and Usage
 

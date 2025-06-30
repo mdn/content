@@ -2,9 +2,10 @@
 title: Using templates and slots
 slug: Web/API/Web_components/Using_templates_and_slots
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - Web Components
 ---
-
-{{DefaultAPISidebar("Web Components")}}
 
 This article explains how you can use the {{htmlelement("template")}} and {{htmlelement("slot")}} elements to create a flexible template that can then be used to populate the shadow DOM of a web component.
 

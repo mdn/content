@@ -6,9 +6,12 @@ browser-compat:
   - api.SyncManager
   - api.ServiceWorkerGlobalScope.sync_event
 spec-urls: https://wicg.github.io/background-sync/spec/
+sidebar:
+  - defaultapisidebar:
+      - Background Sync
 ---
 
-{{DefaultAPISidebar("Background Sync")}}{{Securecontext_Header}}{{AvailableInWorkers}}
+{{Securecontext_Header}}{{AvailableInWorkers}}
 
 The **Background Synchronization API** enables a web app to defer tasks so that they can be run in a [service worker](/en-US/docs/Web/API/Service_Worker_API) once the user has a stable network connection.
 

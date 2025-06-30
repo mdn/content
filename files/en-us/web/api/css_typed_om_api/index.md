@@ -7,9 +7,10 @@ browser-compat:
   - api.StylePropertyMap
   - api.CSSUnparsedValue
   - api.CSSKeywordValue
+sidebar:
+  - defaultapisidebar:
+      - CSS Typed Object Model API
 ---
-
-{{DefaultAPISidebar("CSS Typed Object Model API")}}
 
 The CSS Typed Object Model API simplifies CSS property manipulation by exposing CSS values as typed JavaScript objects rather than strings. This not only simplifies CSS manipulation, but also lessens the negative impact on performance as compared to {{domxref('HTMLElement.style')}}.
 

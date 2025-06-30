@@ -5,9 +5,12 @@ page-type: web-api-overview
 status:
   - experimental
 browser-compat: api.Window.documentPictureInPicture
+sidebar:
+  - defaultapisidebar:
+      - Document Picture-in-Picture API
 ---
 
-{{SeeCompatTable}}{{DefaultAPISidebar("Document Picture-in-Picture API")}}{{securecontext_header}}
+{{SeeCompatTable}}{{securecontext_header}}
 
 The **Document Picture-in-Picture API** makes it possible to open an always-on-top window that can be populated with arbitrary HTML content — for example a video with custom controls or a set of streams showing the participants of a video conference call. It extends the earlier [Picture-in-Picture API for `<video>`](/en-US/docs/Web/API/Picture-in-Picture_API), which specifically enables an HTML {{htmlelement("video")}} element to be put into an always-on-top window.
 

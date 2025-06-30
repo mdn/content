@@ -2,9 +2,10 @@
 title: Using WebGL extensions
 slug: Web/API/WebGL_API/Using_Extensions
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - WebGL
 ---
-
-{{DefaultAPISidebar("WebGL")}}
 
 WebGL, like its sister APIs (OpenGL and OpenGL ES), supports extensions. A complete list of extensions is available in the [khronos webgl extension registry](https://registry.khronos.org/webgl/extensions/).
 

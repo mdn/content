@@ -8,9 +8,12 @@ browser-compat:
   - api.ContentIndex
   - api.ServiceWorkerRegistration.index
 spec-urls: https://wicg.github.io/content-index/spec/
+sidebar:
+  - defaultapisidebar:
+      - Content Index API
 ---
 
-{{DefaultAPISidebar("Content Index API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
+{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **Content Index API** allows developers to register their offline enabled content with the browser.
 

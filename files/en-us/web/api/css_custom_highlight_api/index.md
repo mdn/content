@@ -7,9 +7,10 @@ browser-compat:
   - api.HighlightRegistry
   - css.selectors.highlight
 spec-urls: https://drafts.csswg.org/css-highlight-api-1/
+sidebar:
+  - defaultapisidebar:
+      - CSS Custom Highlight API
 ---
-
-{{DefaultAPISidebar("CSS Custom Highlight API")}}
 
 The CSS Custom Highlight API provides a mechanism for styling arbitrary text ranges on a document by using JavaScript to create the ranges, and CSS to style them.
 

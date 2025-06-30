@@ -2,9 +2,10 @@
 title: Background audio processing using AudioWorklet
 slug: Web/API/Web_Audio_API/Using_AudioWorklet
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - Web Audio API
 ---
-
-{{DefaultAPISidebar("Web Audio API")}}
 
 This article explains how to create an audio worklet processor and use it in a Web Audio application.
 

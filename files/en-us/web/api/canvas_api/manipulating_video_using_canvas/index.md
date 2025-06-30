@@ -2,9 +2,10 @@
 title: Manipulating video using canvas
 slug: Web/API/Canvas_API/Manipulating_video_using_canvas
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - Canvas API
 ---
-
-{{DefaultAPISidebar("Canvas API")}}
 
 By combining the capabilities of the [`video`](/en-US/docs/Web/HTML/Reference/Elements/video) element with a [`canvas`](/en-US/docs/Web/HTML/Reference/Elements/canvas), you can manipulate video data in real time to incorporate a variety of visual effects to the video being displayed. This tutorial demonstrates how to perform chroma-keying (also known as the "green screen effect") using JavaScript code.
 

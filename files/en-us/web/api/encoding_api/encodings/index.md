@@ -2,9 +2,10 @@
 title: Encoding API Encodings
 slug: Web/API/Encoding_API/Encodings
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - Encoding API
 ---
-
-{{DefaultAPISidebar("Encoding API")}}
 
 The constructors for the [Encoding API](/en-US/docs/Web/API/Encoding_API) interfaces {{domxref("TextDecoder")}} and {{domxref("TextDecoderStream")}} can be passed an optional `label` argument, which identifies the encoding to be used.
 

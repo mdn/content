@@ -3,9 +3,10 @@ title: Web Workers API
 slug: Web/API/Web_Workers_API
 page-type: web-api-overview
 spec-urls: https://html.spec.whatwg.org/multipage/workers.html#workers
+sidebar:
+  - defaultapisidebar:
+      - Web Workers API
 ---
-
-{{DefaultAPISidebar("Web Workers API")}}
 
 **Web Workers** makes it possible to run a script operation in a background thread separate from the main execution thread of a web application. The advantage of this is that laborious processing can be performed in a separate thread, allowing the main (usually the UI) thread to run without being blocked/slowed down.
 

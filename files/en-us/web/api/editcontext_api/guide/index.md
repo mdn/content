@@ -2,9 +2,10 @@
 title: Using the EditContext API
 slug: Web/API/EditContext_API/Guide
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - EditContext API
 ---
-
-{{DefaultAPISidebar("EditContext API")}}
 
 The **[EditContext API](/en-US/docs/Web/API/EditContext_API)** can be used to build rich text editors on the web that support advanced text input experiences, such as {{glossary("Input Method Editor")}} (IME) composition, emoji picker, or any other platform-specific editing-related UI surfaces.
 

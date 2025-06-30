@@ -16,9 +16,12 @@ spec-urls:
   - https://w3c.github.io/ambient-light/
   - https://w3c.github.io/gyroscope/
   - https://w3c.github.io/magnetometer/
+sidebar:
+  - defaultapisidebar:
+      - Sensor API
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Sensor API")}}
+{{securecontext_header}}
 
 The **Sensor APIs** are a set of interfaces built to a common design that expose device sensors in a consistent way to the web platform.
 

@@ -2,9 +2,10 @@
 title: Web audio spatialization basics
 slug: Web/API/Web_Audio_API/Web_audio_spatialization_basics
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - Web Audio API
 ---
-
-{{DefaultAPISidebar("Web Audio API")}}
 
 As if its extensive variety of sound processing (and other) options wasn't enough, the Web Audio API also includes facilities to allow you to emulate the difference in sound as a listener moves around a sound source, for example panning as you move around a sound source inside a 3D game.
 The official term for this is **spatialization**, and this article will cover the basics of how to implement such a system.

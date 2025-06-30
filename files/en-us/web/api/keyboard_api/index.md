@@ -10,9 +10,12 @@ browser-compat:
 spec-urls:
   - https://wicg.github.io/keyboard-lock/
   - https://wicg.github.io/keyboard-map/
+sidebar:
+  - defaultapisidebar:
+      - Keyboard API
 ---
 
-{{SeeCompatTable}}{{DefaultAPISidebar("Keyboard API")}}
+{{SeeCompatTable}}
 
 The Keyboard API provides methods for working with a physical keyboard that is attached to a device running a browser.
 

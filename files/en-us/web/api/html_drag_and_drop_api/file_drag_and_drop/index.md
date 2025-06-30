@@ -2,9 +2,10 @@
 title: File drag and drop
 slug: Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - HTML Drag and Drop API
 ---
-
-{{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 HTML Drag and Drop interfaces enable web applications to drag and drop files on a web page. This document describes how an application can accept one or more files that are dragged from the underlying platform's _file manager_ and dropped on a web page.
 

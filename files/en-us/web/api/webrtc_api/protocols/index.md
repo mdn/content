@@ -2,9 +2,10 @@
 title: Introduction to WebRTC protocols
 slug: Web/API/WebRTC_API/Protocols
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - WebRTC
 ---
-
-{{DefaultAPISidebar("WebRTC")}}
 
 This article introduces the protocols on top of which the WebRTC API is built.
 

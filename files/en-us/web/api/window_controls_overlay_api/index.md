@@ -6,9 +6,12 @@ status:
   - experimental
 browser-compat: api.WindowControlsOverlay
 spec-urls: https://wicg.github.io/window-controls-overlay/
+sidebar:
+  - defaultapisidebar:
+      - Window Controls Overlay API
 ---
 
-{{DefaultAPISidebar("Window Controls Overlay API")}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The Window Controls Overlay API gives Progressive Web Apps installed on desktop operating systems the ability to hide the default window title bar and display their own content
 over the full surface area of the app window, turning the control buttons (maximize, minimize, and close) into an overlay.

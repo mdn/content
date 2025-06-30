@@ -2,9 +2,10 @@
 title: Profile anatomy and format
 slug: Web/API/JS_Self-Profiling_API/Profile_content_and_format
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - JS Self-Profiling API
 ---
-
-{{DefaultAPISidebar("JS Self-Profiling API")}}
 
 In this page we'll describe how to interpret a profile captured using the Self-Profiling API.
 

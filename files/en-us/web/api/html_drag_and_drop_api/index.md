@@ -3,9 +3,10 @@ title: HTML Drag and Drop API
 slug: Web/API/HTML_Drag_and_Drop_API
 page-type: web-api-overview
 spec-urls: https://html.spec.whatwg.org/multipage/dnd.html
+sidebar:
+  - defaultapisidebar:
+      - HTML Drag and Drop API
 ---
-
-{{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 **HTML Drag and Drop** interfaces enable applications to use drag-and-drop features in browsers.
 

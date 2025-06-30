@@ -2,9 +2,10 @@
 title: Using the Document Object Model
 slug: Web/API/Document_Object_Model/Using_the_Document_Object_Model
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - DOM
 ---
-
-{{DefaultAPISidebar("DOM")}}
 
 The _Document Object Model_ (DOM) is an API for manipulating DOM trees of HTML and XML documents (among other tree-like documents). This API is at the root of the description of a page and serves as a base for scripting on the web.
 

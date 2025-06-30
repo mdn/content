@@ -2,9 +2,10 @@
 title: Attribute reflection
 slug: Web/API/Document_Object_Model/Reflected_attributes
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - DOM
 ---
-
-{{DefaultAPISidebar("DOM")}}
 
 An {{glossary("attribute")}} extends an {{glossary("HTML")}}, {{glossary("XML")}}, {{glossary("SVG")}} or other {{glossary("element")}}, changing its behavior or providing metadata.
 

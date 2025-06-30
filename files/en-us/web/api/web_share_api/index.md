@@ -6,9 +6,12 @@ browser-compat:
   - api.Navigator.share
   - api.Navigator.canShare
 spec-urls: https://w3c.github.io/web-share/
+sidebar:
+  - defaultapisidebar:
+      - Web Share API
 ---
 
-{{DefaultAPISidebar("Web Share API")}}{{securecontext_header}}
+{{securecontext_header}}
 
 The **Web Share API** provides a mechanism for sharing text, links, files, and other content to an arbitrary _share target_ selected by the user.
 

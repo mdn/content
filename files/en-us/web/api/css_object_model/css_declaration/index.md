@@ -3,9 +3,10 @@ title: CSS Declaration
 slug: Web/API/CSS_Object_Model/CSS_Declaration
 page-type: guide
 spec-urls: https://drafts.csswg.org/cssom/#css-declarations
+sidebar:
+  - defaultapisidebar:
+      - CSSOM
 ---
-
-{{DefaultAPISidebar("CSSOM")}}
 
 A **CSS declaration** is an abstract concept not exposed as an object in the DOM. It represents a CSS property and value pairing.
 

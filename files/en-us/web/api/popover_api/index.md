@@ -6,9 +6,10 @@ browser-compat:
   - api.HTMLElement.popover
   - api.HTMLElement.beforetoggle_event.popover_elements
   - api.HTMLElement.toggle_event.popover_elements
+sidebar:
+  - defaultapisidebar:
+      - Popover API
 ---
-
-{{DefaultAPISidebar("Popover API")}}
 
 The **Popover API** provides developers with a standard, consistent, flexible mechanism for displaying popover content on top of other page content. Popover content can be controlled either declaratively using HTML attributes, or via JavaScript.
 

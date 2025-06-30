@@ -2,9 +2,10 @@
 title: Targeting and hit detection
 slug: Web/API/WebXR_Device_API/Targeting
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - WebXR Device API
 ---
-
-{{DefaultAPISidebar("WebXR Device API")}}
 
 ## Virtual object hit testing
 

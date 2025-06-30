@@ -6,9 +6,12 @@ status:
   - experimental
 browser-compat: api.Window.queryLocalFonts
 spec-urls: https://wicg.github.io/local-font-access/
+sidebar:
+  - defaultapisidebar:
+      - Local Font Access API
 ---
 
-{{SeeCompatTable}}{{DefaultAPISidebar("Local Font Access API")}}
+{{SeeCompatTable}}
 
 The **Local Font Access API** provides a mechanism to access the user's locally installed font data — this includes higher-level details such as names, styles, and families, as well as the raw bytes of the underlying font files.
 

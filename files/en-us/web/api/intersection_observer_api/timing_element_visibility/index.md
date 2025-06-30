@@ -2,9 +2,10 @@
 title: Timing element visibility with the Intersection Observer API
 slug: Web/API/Intersection_Observer_API/Timing_element_visibility
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - Intersection Observer API
 ---
-
-{{DefaultAPISidebar("Intersection Observer API")}}
 
 In this article, we'll build a mock blog which has a number of ads interspersed among the contents of the page, then use the [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API) to track how much time each ad is visible to the user. When an ad exceeds one minute of visible time, it will be replaced with a new one.
 

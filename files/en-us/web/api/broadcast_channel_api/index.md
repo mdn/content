@@ -3,9 +3,12 @@ title: Broadcast Channel API
 slug: Web/API/Broadcast_Channel_API
 page-type: web-api-overview
 browser-compat: api.BroadcastChannel
+sidebar:
+  - defaultapisidebar:
+      - Broadcast Channel API
 ---
 
-{{DefaultAPISidebar("Broadcast Channel API")}} {{AvailableInWorkers}}
+{{AvailableInWorkers}}
 
 The **Broadcast Channel API** allows basic communication between {{glossary("browsing context", "browsing contexts")}} (that is, _windows_, _tabs_, _frames_, or _iframes_) and workers on the same {{glossary("origin")}}.
 

@@ -6,9 +6,12 @@ spec-urls:
   - https://w3c.github.io/payment-request/
   - https://w3c.github.io/payment-method-id/
   - https://w3c.github.io/webauthn/
+sidebar:
+  - defaultapisidebar:
+      - Payment Request API
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Payment Request API")}}
+{{securecontext_header}}
 
 Secure Payment Confirmation (SPC), available through the Payment Request API, provides a mechanism for strong customer authentication during checkout, thereby protecting against online payment fraud.
 

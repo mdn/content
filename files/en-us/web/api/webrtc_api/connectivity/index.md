@@ -2,9 +2,10 @@
 title: WebRTC connectivity
 slug: Web/API/WebRTC_API/Connectivity
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - WebRTC
 ---
-
-{{DefaultAPISidebar("WebRTC")}}
 
 This article describes how the various WebRTC-related protocols interact with one another in order to create a connection and transfer data and/or media among peers.
 

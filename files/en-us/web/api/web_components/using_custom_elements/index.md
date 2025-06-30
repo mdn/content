@@ -2,9 +2,10 @@
 title: Using custom elements
 slug: Web/API/Web_components/Using_custom_elements
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - Web Components
 ---
-
-{{DefaultAPISidebar("Web Components")}}
 
 One of the key features of web components is the ability to create _custom elements_: that is, HTML elements whose behavior is defined by the web developer, that extend the set of elements available in the browser.
 

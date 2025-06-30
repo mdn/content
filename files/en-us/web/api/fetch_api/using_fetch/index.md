@@ -2,9 +2,10 @@
 title: Using the Fetch API
 slug: Web/API/Fetch_API/Using_Fetch
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - Fetch API
 ---
-
-{{DefaultAPISidebar("Fetch API")}}
 
 The [Fetch API](/en-US/docs/Web/API/Fetch_API) provides a JavaScript interface for making HTTP requests and processing the responses.
 

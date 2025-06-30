@@ -2,9 +2,12 @@
 title: Insertable Streams for MediaStreamTrack API
 slug: Web/API/Insertable_Streams_for_MediaStreamTrack_API
 page-type: web-api-overview
+sidebar:
+  - defaultapisidebar:
+      - Insertable Streams for MediaStreamTrack API
 ---
 
-{{DefaultAPISidebar("Insertable Streams for MediaStreamTrack API")}}{{SeeCompatTable}}{{AvailableInWorkers("dedicated")}}
+{{SeeCompatTable}}{{AvailableInWorkers("dedicated
 
 The **Insertable Streams for MediaStreamTrack API** provides a way to process the video frames of a {{domxref("MediaStreamTrack")}} as they are consumed.
 

@@ -2,9 +2,10 @@
 title: Performance data
 slug: Web/API/Performance_API/Performance_data
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - Performance API
 ---
-
-{{DefaultAPISidebar("Performance API")}}
 
 The Performance API measures and exposes performance data that can be collected as performance metrics for your web application. It provides methods to observe aspects of application performance. It doesn't provide performance data analysis, or visualizations. However, the Performance API is integrated well with developer tools in browsers and its data is often sent to analytics end points and libraries to record performance metrics which help you to evaluate the data to find performance bottlenecks affecting your users.
 

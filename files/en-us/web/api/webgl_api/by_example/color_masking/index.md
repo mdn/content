@@ -2,9 +2,12 @@
 title: Color masking
 slug: Web/API/WebGL_API/By_example/Color_masking
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - WebGL
 ---
 
-{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Web/API/WebGL_API/By_example/Simple_color_animation","Web/API/WebGL_API/By_example/Basic_scissoring")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Simple_color_animation","Web/API/WebGL_API/By_example/Basic_scissoring")}}
 
 This WebGL example modifies random colors by applying color masking to limit the range of displayed colors to specific shades.
 

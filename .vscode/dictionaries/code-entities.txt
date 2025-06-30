@@ -148,6 +148,7 @@ currentscreenchange
 cwrap
 daala
 dangi
+defaultapisidebar
 deviceproximity
 devtools.aboutdebugging
 devtools.errorconsole

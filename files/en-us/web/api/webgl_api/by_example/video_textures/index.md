@@ -2,9 +2,12 @@
 title: Video textures
 slug: Web/API/WebGL_API/By_example/Video_textures
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - WebGL
 ---
 
-{{DefaultAPISidebar("WebGL")}}{{Previous("Web/API/WebGL_API/By_example/Textures_from_code")}}
+{{Previous("Web/API/WebGL_API/By_example/Textures_from_code")}}
 
 This example demonstrates how to use video files as textures for WebGL surfaces.
 

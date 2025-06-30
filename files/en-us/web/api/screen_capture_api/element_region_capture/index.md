@@ -2,9 +2,10 @@
 title: Using the Element Capture and Region Capture APIs
 slug: Web/API/Screen_Capture_API/Element_Region_Capture
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - Screen Capture API
 ---
-
-{{DefaultAPISidebar("Screen Capture API")}}
 
 This guide provides a walkthrough of typical usage of the Element Capture and Region Capture APIs, showing how to use them and the problem they solve.
 

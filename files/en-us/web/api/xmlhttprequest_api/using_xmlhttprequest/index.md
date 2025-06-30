@@ -3,9 +3,10 @@ title: Using XMLHttpRequest
 slug: Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 page-type: guide
 browser-compat: api.XMLHttpRequest
+sidebar:
+  - defaultapisidebar:
+      - XMLHttpRequest API
 ---
-
-{{DefaultAPISidebar("XMLHttpRequest API")}}
 
 In this guide, we'll take a look at how to use {{domxref("XMLHttpRequest")}} to issue [HTTP](/en-US/docs/Web/HTTP) requests in order to exchange data between the website and a server.
 

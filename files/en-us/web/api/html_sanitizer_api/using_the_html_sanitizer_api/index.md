@@ -2,9 +2,10 @@
 title: Using the HTML Sanitizer API
 slug: Web/API/HTML_Sanitizer_API/Using_the_HTML_Sanitizer_API
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - HTML Sanitizer API
 ---
-
-{{DefaultAPISidebar("HTML Sanitizer API")}}
 
 The [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) provides methods that allow developers to safely inject untrusted HTML into an {{domxref("Element")}}, a {{domxref("ShadowRoot")}}, or a {{domxref("Document")}}.
 The API also gives developers the flexibility to further restrict or expand what HTML entities are allowed if needed.

@@ -2,9 +2,10 @@
 title: Keyframe Formats
 slug: Web/API/Web_Animations_API/Keyframe_Formats
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - Web Animations
 ---
-
-{{DefaultAPISidebar("Web Animations")}}
 
 {{domxref("Element.animate()")}}, {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}}, and {{domxref("KeyframeEffect.setKeyframes()")}} all accept objects formatted to represent a set of keyframes. There are several options to this format, which are explained below.
 

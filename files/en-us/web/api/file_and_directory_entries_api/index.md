@@ -3,9 +3,10 @@ title: File and Directory Entries API
 slug: Web/API/File_and_Directory_Entries_API
 page-type: web-api-overview
 browser-compat: api.FileSystem
+sidebar:
+  - defaultapisidebar:
+      - File and Directory Entries API
 ---
-
-{{DefaultAPISidebar("File and Directory Entries API")}}
 
 The File and Directory Entries API provides a way to process directories and file lists provided by the user via a form input or a drag-and-drop operation. It is a more advanced version of the [File API](/en-US/docs/Web/API/File), which allows you to work with a single file. It was originally intended to support a full virtual file system, but now only supports read operations on user-provided data.
 

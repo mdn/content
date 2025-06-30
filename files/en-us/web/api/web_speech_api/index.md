@@ -5,9 +5,10 @@ page-type: web-api-overview
 browser-compat:
   - api.SpeechRecognition
   - api.SpeechSynthesis
+sidebar:
+  - defaultapisidebar:
+      - Web Speech API
 ---
-
-{{DefaultAPISidebar("Web Speech API")}}
 
 The **Web Speech API** enables you to incorporate voice data into web apps.
 The Web Speech API has two parts: `SpeechSynthesis` (Text-to-Speech), and `SpeechRecognition` (Asynchronous Speech Recognition.)

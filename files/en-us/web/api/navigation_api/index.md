@@ -10,9 +10,12 @@ browser-compat:
   - api.NavigationHistoryEntry
   - api.NavigationTransition
 spec-urls: https://html.spec.whatwg.org/multipage/nav-history-apis.html#navigation-api
+sidebar:
+  - defaultapisidebar:
+      - Navigation API
 ---
 
-{{SeeCompatTable}}{{DefaultAPISidebar("Navigation API")}}
+{{SeeCompatTable}}
 
 The **Navigation API** provides the ability to initiate, intercept, and manage browser navigation actions. It can also examine an application's history entries. This is a successor to previous web platform features such as the {{domxref("History API", "", "", "nocode")}} and {{domxref("window.location")}}, which solves their shortcomings and is specifically aimed at the needs of {{glossary("SPA", "single-page applications (SPAs)")}}.
 

@@ -3,9 +3,12 @@ title: Server-sent events
 slug: Web/API/Server-sent_events
 page-type: web-api-overview
 spec-urls: https://html.spec.whatwg.org/multipage/server-sent-events.html#server-sent-events
+sidebar:
+  - defaultapisidebar:
+      - Server Sent Events
 ---
 
-{{DefaultAPISidebar("Server Sent Events")}}{{AvailableInWorkers}}
+{{AvailableInWorkers}}
 
 Traditionally, a web page has to send a request to the server to receive new data; that is, the page requests data from the server. With server-sent events, it's possible for a server to send new data to a web page at any time, by pushing messages to the web page. These incoming messages can be treated as _[Events](/en-US/docs/Web/API/Event) + data_ inside the web page.
 

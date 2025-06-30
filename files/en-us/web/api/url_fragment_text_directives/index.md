@@ -6,9 +6,10 @@ browser-compat:
   - api.Document.fragmentDirective
   - api.FragmentDirective
   - css.selectors.target-text
+sidebar:
+  - defaultapisidebar:
+      - URL Fragment Text Directives
 ---
-
-{{DefaultAPISidebar("URL Fragment Text Directives")}}
 
 The **URL fragment text directives** API allows web apps to interact with _text fragments_ in the URL. [Text fragments](/en-US/docs/Web/URI/Reference/Fragment/Text_fragments) allow linking directly to a specific portion of text in a web document, without requiring the author to annotate it with an ID, using a particular syntax in the URL fragment.
 

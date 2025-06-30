@@ -2,9 +2,12 @@
 title: Detect WebGL
 slug: Web/API/WebGL_API/By_example/Detect_WebGL
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - WebGL
 ---
 
-{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Web/API/WebGL_API/By_example","Web/API/WebGL_API/By_example/Clearing_with_colors")}}
+{{PreviousNext("Web/API/WebGL_API/By_example","Web/API/WebGL_API/By_example/Clearing_with_colors")}}
 
 This example demonstrates how to detect a {{Glossary("WebGL")}} rendering context and reports the result to the user.
 

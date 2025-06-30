@@ -2,9 +2,10 @@
 title: Storage quotas and eviction criteria
 slug: Web/API/Storage_API/Storage_quotas_and_eviction_criteria
 page-type: guide
+sidebar:
+  - defaultapisidebar:
+      - Storage
 ---
-
-{{DefaultAPISidebar("Storage")}}
 
 Web developers can use a number of technologies to store data in the user's browser (i.e., on the local disk of the device the user is using to view the website).
 

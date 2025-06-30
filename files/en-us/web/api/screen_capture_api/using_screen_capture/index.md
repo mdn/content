@@ -3,9 +3,10 @@ title: Using the Screen Capture API
 slug: Web/API/Screen_Capture_API/Using_Screen_Capture
 page-type: guide
 browser-compat: api.MediaDevices.getDisplayMedia
+sidebar:
+  - defaultapisidebar:
+      - Screen Capture API
 ---
-
-{{DefaultAPISidebar("Screen Capture API")}}
 
 In this article, we will examine how to use the Screen Capture API and its {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} method to capture part or all of a screen for streaming, recording, or sharing during a [WebRTC](/en-US/docs/Web/API/WebRTC_API) conference session.
 
