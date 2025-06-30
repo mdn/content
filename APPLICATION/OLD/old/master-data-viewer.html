@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>⚡ Spec‑Matrix — Master Data Viewer</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="data:," />
+  <!-- JSON Tree Viewer -->
+  <link rel="stylesheet" href="https://unpkg.com/jsoneditor@9.10.4/dist/jsoneditor.min.css">
+  <script defer src="https://unpkg.com/jsoneditor@9.10.4/dist/jsoneditor.min.js"></script>
+  <style>
+    :root{--bg:#121212;--fg:#e0e0e0;--accent:#30c46f;--err:#ff496c;--master:#9b59b6}
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;background:var(--bg);color:var(--fg);font:14px/1.45 system-ui,Segoe UI,Roboto,Arial,sans-serif;display:flex;flex-direction:column}
+    header{display:flex;align-items:center;gap:.6rem;padding:.6rem 1rem;background:#1e1e1e;border-bottom:1px solid #333;flex-wrap:wrap}
+    .header-title{font-weight:700;font-size:1.1rem;color:var(--master)}
+    .header-divider{color:#666;margin:0 .3rem}
+    button{appearance:none;border:0;border-radius:4px;padding:.45rem .9rem;font-weight:600;cursor:pointer;background:var(--accent);color:#000;font-size:.85rem}
+    button:disabled{opacity:.5;cursor:not-allowed}
+    button.secondary{background:#333;color:var(--fg)}
+    .export-buttons{display:flex;gap:.4rem}
+    .export-json{background:#2d5aa0;color:#fff}
+    .export-json:hover{background:#1e3f73}
+    .export-xml{background:#e67e22;color:#fff}
+    .export-xml:hover{background:#d35400}
+    .view-options{display:flex;gap:.4rem;align-items:center;margin-left:auto}
+    .view-options label{font-size:.8rem;color:#999}
+    .view-options select{background:#333;color:var(--fg);border:1px solid #555;border-radius:4px;padding:.3rem;font-size:.8rem}
+    #panel{flex:1;overflow:auto;padding:1rem}
+    .hidden{display:none}
+    #status{font-size:.85rem;color:#999}
+    .back-link{color:var(--accent);text-decoration:none;font-size:.9rem}
+    .back-link:hover{text-decoration:underline}
+    #jsoneditor{height:calc(100vh - 120px);border:1px solid #333;border-radius:4px}
+    .loading{text-align:center;padding:2rem;color:#999}
+    .stats{background:#1a1a1a;border:1px solid #333;border-radius:4px;padding:1rem;margin-bottom:1rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
+    .stat-item{text-align:center}
+    .stat-number{font-size:1.5rem;font-weight:700;color:var(--accent)}
+    .stat-label{font-size:.8rem;color:#999;margin-top:.2rem}
+    .progress{background:#333;border-radius:4px;height:4px;margin:.5rem 0;overflow:hidden}
+    .progress-bar{background:var(--accent);height:100%;transition:width .3s ease}
+  </style>
+</head>
+<body>
+<header>
+  <a href="index-enhanced.html" class="back-link">← Back</a>
+  <span class="header-divider">|</span>
+  <span class="header-title">Master Data Viewer</span>
+  <button id="btnLoad">Load Master Data</button>
+  <div class="export-buttons hidden">
+    <button id="btnExportJSON" class="export-json">Export JSON</button>
+    <button id="btnExportXML" class="export-xml">Export XML</button>
+  </div>
+  <div class="view-options hidden">
+    <label for="viewMode">View:</label>
+    <select id="viewMode">
+      <option value="tree">Tree View</option>
+      <option value="code">Code View</option>
+    </select>
+  </div>
+  <span id="status">Ready to load master data</span>
+</header>
+<div id="panel">
+  <div id="stats" class="stats hidden"></div>
+  <div id="jsoneditor"></div>
+</div>
+
+<script>
+if(!window.__MasterDataViewer){
+  window.__MasterDataViewer=true;
+  window.addEventListener('DOMContentLoaded',()=>{
+    const qs=id=>document.getElementById(id);
+    const btnLoad=qs('btnLoad');
+    const btnExportJSON=qs('btnExportJSON');
+    const btnExportXML=qs('btnExportXML');
+    const viewMode=qs('viewMode');
+    const status=qs('status');
+    const statsDiv=qs('stats');
+    const exportButtons=document.querySelector('.export-buttons');
+    const viewOptions=document.querySelector('.view-options');
+
+    // Data URLs
+    const URLS = {
+      cssProperties: 'https://raw.githubusercontent.com/mdn/data/main/css/properties.json',
+      cssWebkit: 'https://raw.githubusercontent.com/WebKit/WebKit/main/Source/WebCore/css/CSSProperties.json',
+      cssAtRules: 'https://raw.githubusercontent.com/mdn/data/main/css/at-rules.json',
+      cssFunctions: 'https://raw.githubusercontent.com/mdn/data/main/css/functions.json',
+      cssSelectors: 'https://raw.githubusercontent.com/mdn/data/main/css/selectors.json',
+      bcd: 'https://unpkg.com/@mdn/browser-compat-data/data.json'
+    };
+
+    let masterData = null;
+    let editor = null;
+
+    const show=el=>el.classList.remove('hidden');
+    const hide=el=>el.classList.add('hidden');
+    const setStatus=txt=>status.textContent=txt;
+
+    async function safeParse(text){
+      const slice=text.trim();
+      const first=slice.indexOf('{');
+      const last=slice.lastIndexOf('}');
+      if(first===-1||last===-1)throw new Error('No JSON object found');
+      const body=slice.substring(first,last+1);
+      try{return JSON.parse(body);}catch(e){
+        const JSON5=await import('https://cdn.jsdelivr.net/npm/json5/+esm');
+        return JSON5.parse(body);
+      }
+    }
+
+    async function fetchJSON(url, name){
+      setStatus(`Fetching ${name}...`);
+      const res=await fetch(url);
+      if(!res.ok)throw new Error(`HTTP ${res.status} ${url}`);
+      const text=await res.text();
+      return safeParse(text);
+    }
+
+    function formatFormalDefinition(prop) {
+      const items = [];
+      if(prop.initial) items.push({label: 'Initial value', value: prop.initial});
+      if(prop.appliesto) items.push({label: 'Applies to', value: prop.appliesto});
+      if(prop.inherited !== undefined) items.push({label: 'Inherited', value: prop.inherited ? 'yes' : 'no'});
+      if(prop.computed) items.push({label: 'Computed value', value: prop.computed});
+      if(prop.animationType) items.push({label: 'Animation type', value: prop.animationType});
+      if(prop.percentages) items.push({label: 'Percentages', value: prop.percentages});
+      if(prop.media) items.push({label: 'Media', value: prop.media});
+      if(prop.groups && prop.groups.length) items.push({label: 'Groups', value: prop.groups.join(', ')});
+      
+      return items.reduce((acc, item) => {
+        acc[item.label] = item.value;
+        return acc;
+      }, {});
+    }
+
+    function processCSS(mdnProps, webkit, atRules, functions, selectors) {
+      const css = {
+        properties: [],
+        atRules: [],
+        functions: [],
+        selectors: []
+      };
+
+      // Process CSS Properties
+      for(const [name, md] of Object.entries(mdnProps)){
+        const w = webkit.properties?.[name] ?? {};
+        const st = w.status ?? {};
+        
+        const formalDef = {
+          syntax: md.syntax || '',
+          media: md.media || w.media || '',
+          inherited: md.inherited ?? w.inherited ?? false,
+          animationType: w.animationType || md.animationType || '',
+          percentages: md.percentages || w.percentages || '',
+          groups: md.groups || [],
+          initial: md.initial || w.initial || '',
+          appliesto: md.appliesto || w.appliesto || '',
+          computed: md.computed || w.computed || '',
+          order: md.order || w.order || '',
+          stacking: md.stacking || w.stacking || false
+        };
+        
+        css.properties.push({
+          name,
+          type: 'property',
+          status: (st.status || md.status || '').toLowerCase(),
+          deprecated: st.status==='obsolete' || md.status==='obsolete',
+          mdn: 'https://developer.mozilla.org' + (md.mdn_url || '/en-US/docs/Web/CSS/' + name),
+          formalDefinition: formatFormalDefinition(formalDef),
+          ...formalDef
+        });
+      }
+
+      // Process CSS At-Rules
+      for(const [name, rule] of Object.entries(atRules)){
+        css.atRules.push({
+          name: '@' + name,
+          type: 'at-rule',
+          syntax: rule.syntax || '',
+          descriptors: rule.descriptors ? Object.keys(rule.descriptors) : [],
+          interfaces: rule.interfaces || [],
+          status: (rule.status || '').toLowerCase(),
+          deprecated: rule.status === 'obsolete',
+          mdn: 'https://developer.mozilla.org' + (rule.mdn_url || '/en-US/docs/Web/CSS/@' + name)
+        });
+      }
+
+      // Process CSS Functions
+      for(const [name, func] of Object.entries(functions)){
+        css.functions.push({
+          name: name + '()',
+          type: 'function',
+          syntax: func.syntax || '',
+          returnType: func.return_type || '',
+          status: (func.status || '').toLowerCase(),
+          deprecated: func.status === 'obsolete',
+          mdn: 'https://developer.mozilla.org' + (func.mdn_url || '/en-US/docs/Web/CSS/' + name)
+        });
+      }
+
+      // Process CSS Selectors
+      for(const [name, selector] of Object.entries(selectors)){
+        css.selectors.push({
+          name,
+          type: 'selector',
+          syntax: selector.syntax || '',
+          specificity: selector.specificity || '',
+          status: (selector.status || '').toLowerCase(),
+          deprecated: selector.status === 'obsolete',
+          mdn: 'https://developer.mozilla.org' + (selector.mdn_url || '/en-US/docs/Web/CSS/' + name)
+        });
+      }
+
+      return css;
+    }
+
+    function processHTML(htmlData) {
+      const html = {
+        elements: [],
+        globalAttributes: []
+      };
+
+      if(htmlData.elements) {
+        for(const [name, element] of Object.entries(htmlData.elements)){
+          const compat = element.__compat || {};
+          
+          const supportSummary = [];
+          if(compat.support) {
+            for(const [browser, support] of Object.entries(compat.support)) {
+              if(support && support.version_added) {
+                supportSummary.push(`${browser}: ${support.version_added}`);
+              }
+            }
+          }
+          
+          html.elements.push({
+            name: `<${name}>`,
+            type: 'element',
+            description: compat.description || '',
+            mdn: compat.mdn_url ? `https://developer.mozilla.org${compat.mdn_url}` : `https://developer.mozilla.org/en-US/docs/Web/HTML/Element/${name}`,
+            status: compat.status?.experimental ? 'experimental' : compat.status?.deprecated ? 'deprecated' : 'standard',
+            deprecated: compat.status?.deprecated || false,
+            experimental: compat.status?.experimental || false,
+            standardTrack: compat.status?.standard_track || false,
+            specUrl: compat.spec_url ? (Array.isArray(compat.spec_url) ? compat.spec_url[0] : compat.spec_url) : '',
+            browserSupport: supportSummary
+          });
+        }
+      }
+
+      if(htmlData.global_attributes) {
+        for(const [name, attr] of Object.entries(htmlData.global_attributes)){
+          const compat = attr.__compat || {};
+          
+          const supportSummary = [];
+          if(compat.support) {
+            for(const [browser, support] of Object.entries(compat.support)) {
+              if(support && support.version_added) {
+                supportSummary.push(`${browser}: ${support.version_added}`);
+              }
+            }
+          }
+          
+          html.globalAttributes.push({
+            name,
+            type: 'global_attribute',
+            description: compat.description || '',
+            mdn: compat.mdn_url ? `https://developer.mozilla.org${compat.mdn_url}` : `https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/${name}`,
+            status: compat.status?.experimental ? 'experimental' : compat.status?.deprecated ? 'deprecated' : 'standard',
+            deprecated: compat.status?.deprecated || false,
+            experimental: compat.status?.experimental || false,
+            standardTrack: compat.status?.standard_track || false,
+            specUrl: compat.spec_url ? (Array.isArray(compat.spec_url) ? compat.spec_url[0] : compat.spec_url) : '',
+            browserSupport: supportSummary
+          });
+        }
+      }
+
+      return html;
+    }
+
+    function processJavaScript(jsData) {
+      const javascript = {
+        builtins: [],
+        statements: [],
+        operators: [],
+        functions: [],
+        classes: [],
+        grammar: []
+      };
+
+      function processJSObject(obj, path = '', category = 'builtins') {
+        for(const [name, item] of Object.entries(obj)){
+          if(name === '__compat') {
+            const compat = item;
+            
+            const supportSummary = [];
+            if(compat.support) {
+              for(const [browser, support] of Object.entries(compat.support)) {
+                if(support && support.version_added) {
+                  supportSummary.push(`${browser}: ${support.version_added}`);
+                }
+              }
+            }
+            
+            javascript[category].push({
+              name: path || name,
+              type: category.slice(0, -1), // Remove 's' from category name
+              description: compat.description || '',
+              mdn: compat.mdn_url ? `https://developer.mozilla.org${compat.mdn_url}` : `https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/${path}`,
+              status: compat.status?.experimental ? 'experimental' : compat.status?.deprecated ? 'deprecated' : 'standard',
+              deprecated: compat.status?.deprecated || false,
+              experimental: compat.status?.experimental || false,
+              standardTrack: compat.status?.standard_track || false,
+              specUrl: compat.spec_url ? (Array.isArray(compat.spec_url) ? compat.spec_url[0] : compat.spec_url) : '',
+              browserSupport: supportSummary
+            });
+          } else if(typeof item === 'object' && item !== null) {
+            const newPath = path ? `${path}.${name}` : name;
+            processJSObject(item, newPath, category);
+          }
+        }
+      }
+
+      if(jsData.builtins) processJSObject(jsData.builtins, '', 'builtins');
+      if(jsData.statements) processJSObject(jsData.statements, '', 'statements');
+      if(jsData.operators) processJSObject(jsData.operators, '', 'operators');
+      if(jsData.functions) processJSObject(jsData.functions, '', 'functions');
+      if(jsData.classes) processJSObject(jsData.classes, '', 'classes');
+      if(jsData.grammar) processJSObject(jsData.grammar, '', 'grammar');
+
+      return javascript;
+    }
+
+    function createStats(data) {
+      const stats = {
+        'CSS Properties': data.css.properties.length,
+        'CSS At-Rules': data.css.atRules.length,
+        'CSS Functions': data.css.functions.length,
+        'CSS Selectors': data.css.selectors.length,
+        'HTML Elements': data.html.elements.length,
+        'HTML Global Attributes': data.html.globalAttributes.length,
+        'JS Built-ins': data.javascript.builtins.length,
+        'JS Statements': data.javascript.statements.length,
+        'JS Operators': data.javascript.operators.length,
+        'JS Functions': data.javascript.functions.length,
+        'JS Classes': data.javascript.classes.length,
+        'JS Grammar': data.javascript.grammar.length
+      };
+
+      const total = Object.values(stats).reduce((sum, count) => sum + count, 0);
+
+      statsDiv.innerHTML = Object.entries(stats).map(([label, count]) => `
+        <div class="stat-item">
+          <div class="stat-number">${count.toLocaleString()}</div>
+          <div class="stat-label">${label}</div>
+        </div>
+      `).join('') + `
+        <div class="stat-item">
+          <div class="stat-number">${total.toLocaleString()}</div>
+          <div class="stat-label">Total Entries</div>
+        </div>
+      `;
+
+      show(statsDiv);
+    }
+
+    function initializeEditor(data) {
+      const container = document.getElementById('jsoneditor');
+      
+      const options = {
+        mode: 'tree',
+        modes: ['tree', 'code'],
+        search: true,
+        history: true,
+        navigationBar: true,
+        statusBar: true,
+        mainMenuBar: false,
+        onModeChange: function(newMode, oldMode) {
+          viewMode.value = newMode;
+        }
+      };
+
+      editor = new JSONEditor(container, options);
+      editor.set(data);
+      
+      show(exportButtons);
+      show(viewOptions);
+    }
+
+    function exportJSON() {
+      if(!masterData) return;
+      
+      const dataStr = JSON.stringify(masterData, null, 2);
+      const blob = new Blob([dataStr], {type: 'application/json'});
+      const url = URL.createObjectURL(blob);
+      
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `web-platform-master-data-${new Date().toISOString().split('T')[0]}.json`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
+    function jsonToXML(obj, rootName = 'root') {
+      function escapeXML(str) {
+        return String(str)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&apos;');
+      }
+
+      function convertValue(value, key) {
+        if (value === null || value === undefined) {
+          return `<${key} />`;
+        }
+        
+        if (typeof value === 'object') {
+          if (Array.isArray(value)) {
+            return value.map(item => convertValue(item, key.slice(0, -1) || 'item')).join('');
+          } else {
+            const content = Object.entries(value)
+              .map(([k, v]) => convertValue(v, k))
+              .join('');
+            return `<${key}>${content}</${key}>`;
+          }
+        } else {
+          return `<${key}>${escapeXML(value)}</${key}>`;
+        }
+      }
+
+      const xmlContent = convertValue(obj, rootName);
+      return `<?xml version="1.0" encoding="UTF-8"?>\n${xmlContent}`;
+    }
+
+    function exportXML() {
+      if(!masterData) return;
+      
+      const xmlStr = jsonToXML(masterData, 'webPlatformData');
+      const blob = new Blob([xmlStr], {type: 'application/xml'});
+      const url = URL.createObjectURL(blob);
+      
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `web-platform-master-data-${new Date().toISOString().split('T')[0]}.xml`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
+    async function loadMasterData() {
+      btnLoad.disabled = true;
+      try {
+        setStatus('Loading all data sources...');
+        
+        // Load all data sources in parallel
+        const [cssProps, cssWebkit, cssAtRules, cssFunctions, cssSelectors, bcd] = await Promise.all([
+          fetchJSON(URLS.cssProperties, 'CSS Properties'),
+          fetchJSON(URLS.cssWebkit, 'WebKit Properties'),
+          fetchJSON(URLS.cssAtRules, 'CSS At-Rules'),
+          fetchJSON(URLS.cssFunctions, 'CSS Functions'),
+          fetchJSON(URLS.cssSelectors, 'CSS Selectors'),
+          fetchJSON(URLS.bcd, 'Browser Compatibility Data')
+        ]);
+
+        setStatus('Processing and aggregating data...');
+        
+        // Process each data type
+        const css = processCSS(cssProps, cssWebkit, cssAtRules, cssFunctions, cssSelectors);
+        const html = processHTML(bcd.html);
+        const javascript = processJavaScript(bcd.javascript);
+
+        // Create master data structure
+        masterData = {
+          webPlatformData: {
+            metadata: {
+              generatedAt: new Date().toISOString(),
+              version: '1.0.0',
+              description: 'Comprehensive Web Platform Data including CSS, HTML, and JavaScript specifications'
+            },
+            css,
+            html,
+            javascript
+          }
+        };
+
+        // Create statistics display
+        createStats(masterData.webPlatformData);
+        
+        // Initialize JSON editor
+        initializeEditor(masterData);
+        
+        setStatus(`Master data loaded successfully (${Object.values(masterData.webPlatformData.css).flat().length + Object.values(masterData.webPlatformData.html).flat().length + Object.values(masterData.webPlatformData.javascript).flat().length} total entries)`);
+        
+      } catch(e) {
+        console.error(e);
+        setStatus('Error: ' + e.message);
+        btnLoad.disabled = false;
+      }
+    }
+
+    // Event listeners
+    btnLoad.addEventListener('click', loadMasterData);
+    btnExportJSON.addEventListener('click', exportJSON);
+    btnExportXML.addEventListener('click', exportXML);
+    viewMode.addEventListener('change', () => {
+      if(editor) {
+        editor.setMode(viewMode.value);
+      }
+    });
+  });
+}
+</script>
+</body>
+</html>
+

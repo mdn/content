@@ -7,3 +7,4 @@ _githistory.json
 .DS_Store
 .idea
 *.log
+node_modules

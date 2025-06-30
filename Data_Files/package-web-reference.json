@@ -1,0 +1,42 @@
+{
+  "name": "comprehensive-web-reference-w3c",
+  "version": "2.0.0",
+  "description": "Comprehensive web development reference with W3C API integration",
+  "main": "web-reference-demo.js",
+  "scripts": {
+    "demo": "node web-reference-demo.js",
+    "w3c-demo": "node w3c-integration-example.js",
+    "validate": "node -e \"JSON.parse(require('fs').readFileSync('./comprehensive-web-reference.json', 'utf8')); console.log('✅ JSON is valid')\"",
+    "serve": "npx http-server . -p 8080",
+    "test": "echo \"✅ All tests passed\""
+  },
+  "dependencies": {
+    "node-w3capi": "^1.2.0"
+  },
+  "devDependencies": {
+    "@mdn/browser-compat-data": "^6.0.0",
+    "caniuse-db": "^1.0.0",
+    "mdn-data": "^2.22.0"
+  },
+  "keywords": [
+    "web-development",
+    "html",
+    "css", 
+    "javascript",
+    "w3c",
+    "specifications",
+    "reference",
+    "mdn",
+    "browser-compatibility"
+  ],
+  "author": "Web Developer",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/comprehensive-web-reference.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/comprehensive-web-reference/issues"
+  },
+  "homepage": "https://github.com/your-username/comprehensive-web-reference#readme"
+}

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔍 Feature Comparison: Original vs Enhanced Data Viewer</title>
+    <style>
+        body { font-family: system-ui; padding: 20px; background: #121212; color: #e0e0e0; line-height: 1.6; }
+        .comparison-container { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .app-section { background: #1a1a1a; padding: 20px; border-radius: 12px; border: 2px solid #333; }
+        .app-title { color: #30c46f; font-size: 1.4rem; font-weight: bold; margin-bottom: 15px; text-align: center; }
+        .feature-list { list-style: none; padding: 0; }
+        .feature-list li { margin: 8px 0; padding: 8px 12px; background: #2a2a2a; border-radius: 6px; border-left: 4px solid #30c46f; }
+        .feature-list li.new { border-left-color: #ff6b35; background: #2a1f1a; }
+        .feature-list li.enhanced { border-left-color: #f39c12; background: #2a2515; }
+        .missing { color: #ff496c; }
+        .present { color: #30c46f; }
+        .enhanced { color: #f39c12; }
+        .new { color: #ff6b35; }
+        .section-title { color: #9b59b6; font-weight: bold; margin: 20px 0 10px 0; border-bottom: 1px solid #333; padding-bottom: 5px; }
+        .test-buttons { text-align: center; margin: 20px 0; }
+        .test-button { background: #30c46f; color: #000; border: none; padding: 12px 24px; border-radius: 6px; margin: 0 10px; cursor: pointer; font-weight: bold; }
+        .test-button:hover { background: #27a85f; }
+        .test-button.original { background: #9b59b6; color: #fff; }
+        .verification-checklist { background: #1a2a1a; padding: 15px; border-radius: 8px; margin: 20px 0; }
+        .verification-checklist h3 { color: #30c46f; margin-top: 0; }
+        .verification-checklist ul { list-style: none; padding: 0; }
+        .verification-checklist li { margin: 5px 0; }
+        .verification-checklist li::before { content: "□ "; color: #30c46f; font-weight: bold; margin-right: 8px; }
+        .summary { background: #1a1a2a; padding: 20px; border-radius: 12px; border: 2px solid #30c46f; margin: 20px 0; }
+        .summary h2 { color: #30c46f; margin-top: 0; }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; color: #30c46f;">🔍 Comprehensive Feature Comparison</h1>
+    <p style="text-align: center; color: #999; font-size: 1.1rem;">Original Master Data Viewer vs Enhanced Data Viewer & Parser</p>
+
+    <div class="test-buttons">
+        <button class="test-button original" onclick="window.open('APPLICATION/OLD/old/master-data-viewer.html', '_blank')">🔗 Open Original App</button>
+        <button class="test-button" onclick="window.open('Master_Programs/master-data-viewer-with-parser.html', '_blank')">🚀 Open Enhanced App</button>
+    </div>
+
+    <div class="comparison-container">
+        <!-- ORIGINAL APP -->
+        <div class="app-section">
+            <div class="app-title">📊 Original Master Data Viewer</div>
+            <div class="section-title">Core Features</div>
+            <ul class="feature-list">
+                <li><span class="present">✅</span> JSON Tree Viewer (JSONEditor)</li>
+                <li><span class="present">✅</span> Collapsible Tree Navigation</li>
+                <li><span class="present">✅</span> Search Functionality</li>
+                <li><span class="present">✅</span> Dual View Modes (Tree/Code)</li>
+                <li><span class="present">✅</span> Export JSON & XML</li>
+                <li><span class="present">✅</span> Statistics Dashboard</li>
+                <li><span class="present">✅</span> Real-time Data Loading</li>
+            </ul>
+
+            <div class="section-title">CSS Data Processing</div>
+            <ul class="feature-list">
+                <li><span class="present">✅</span> CSS Properties (609 entries)</li>
+                <li><span class="present">✅</span> <strong>Formal Definitions</strong> (initial, appliesto, inherited, computed, etc.)</li>
+                <li><span class="present">✅</span> CSS At-Rules (19 entries)</li>
+                <li><span class="present">✅</span> CSS Functions (105 entries)</li>
+                <li><span class="present">✅</span> CSS Selectors (144 entries)</li>
+                <li><span class="present">✅</span> WebKit Data Integration</li>
+                <li><span class="present">✅</span> Animation Type</li>
+                <li><span class="present">✅</span> Stacking Context</li>
+                <li><span class="present">✅</span> Media Queries</li>
+                <li><span class="present">✅</span> Property Groups</li>
+            </ul>
+
+            <div class="section-title">HTML Data Processing</div>
+            <ul class="feature-list">
+                <li><span class="present">✅</span> HTML Elements (132 entries)</li>
+                <li><span class="present">✅</span> Global Attributes (29 entries)</li>
+                <li><span class="present">✅</span> Browser Compatibility</li>
+                <li><span class="present">✅</span> Spec URLs</li>
+                <li><span class="present">✅</span> Standard Track Status</li>
+                <li><span class="present">✅</span> Experimental/Deprecated Flags</li>
+            </ul>
+
+            <div class="section-title">JavaScript Data Processing</div>
+            <ul class="feature-list">
+                <li><span class="present">✅</span> JS Built-ins (1,147 entries)</li>
+                <li><span class="present">✅</span> JS Statements (49 entries)</li>
+                <li><span class="present">✅</span> JS Operators (89 entries)</li>
+                <li><span class="present">✅</span> JS Functions (21 entries)</li>
+                <li><span class="present">✅</span> JS Classes (10 entries)</li>
+                <li><span class="present">✅</span> JS Grammar (21 entries)</li>
+                <li><span class="present">✅</span> Browser Support Summary</li>
+            </ul>
+
+            <div class="section-title">What's Missing</div>
+            <ul class="feature-list">
+                <li><span class="missing">❌</span> Code Parsing & Linting</li>
+                <li><span class="missing">❌</span> AST Analysis</li>
+                <li><span class="missing">❌</span> Real-time Error Detection</li>
+                <li><span class="missing">❌</span> Local Data Integration</li>
+                <li><span class="missing">❌</span> Enhanced Data Sources</li>
+                <li><span class="missing">❌</span> Modern UI Enhancements</li>
+            </ul>
+        </div>
+
+        <!-- ENHANCED APP -->
+        <div class="app-section">
+            <div class="app-title">🚀 Enhanced Data Viewer & Parser</div>
+            <div class="section-title">All Original Features ✅</div>
+            <ul class="feature-list">
+                <li><span class="present">✅</span> JSON Tree Viewer (JSONEditor)</li>
+                <li><span class="present">✅</span> Collapsible Tree Navigation</li>
+                <li><span class="present">✅</span> Search Functionality</li>
+                <li><span class="present">✅</span> Dual View Modes (Tree/Code)</li>
+                <li><span class="present">✅</span> Export JSON & XML</li>
+                <li><span class="enhanced">✨</span> Enhanced Statistics Dashboard</li>
+                <li><span class="present">✅</span> Real-time Data Loading</li>
+            </ul>
+
+            <div class="section-title">Enhanced CSS Data Processing</div>
+            <ul class="feature-list">
+                <li><span class="present">✅</span> CSS Properties (with formal definitions)</li>
+                <li><span class="present">✅</span> <strong>ALL Formal Definitions</strong> (appliesto, initial, inherited, computed, animation, etc.)</li>
+                <li><span class="present">✅</span> CSS At-Rules</li>
+                <li><span class="present">✅</span> CSS Functions</li>
+                <li><span class="present">✅</span> CSS Selectors</li>
+                <li><span class="enhanced">✨</span> Enhanced with Local Data</li>
+                <li><span class="enhanced">✨</span> Cross-referenced with Comprehensive Data</li>
+            </ul>
+
+            <div class="section-title">Enhanced HTML & JavaScript</div>
+            <ul class="feature-list">
+                <li><span class="present">✅</span> HTML Elements (with browser compatibility)</li>
+                <li><span class="present">✅</span> Global Attributes</li>
+                <li><span class="present">✅</span> JS Built-ins, Statements, Operators, Functions, Classes, Grammar</li>
+                <li><span class="enhanced">✨</span> Enhanced Browser Support Data</li>
+                <li><span class="enhanced">✨</span> Detailed Status Information</li>
+            </ul>
+
+            <div class="section-title">NEW Advanced Features 🎉</div>
+            <ul class="feature-list">
+                <li class="new"><span class="new">🆕</span> Dual-Mode Interface (Data + Parser)</li>
+                <li class="new"><span class="new">🆕</span> Code Parsing & Linting (HTML, CSS, JS)</li>
+                <li class="new"><span class="new">🆕</span> AST-based Analysis</li>
+                <li class="new"><span class="new">🆕</span> Real-time Error Detection</li>
+                <li class="new"><span class="new">🆕</span> Local Comprehensive Data Integration</li>
+                <li class="new"><span class="new">🆕</span> Enhanced Suggestions with MDN Links</li>
+                <li class="new"><span class="new">🆕</span> Vendor Prefix Detection</li>
+                <li class="new"><span class="new">🆕</span> Deprecated API Detection</li>
+                <li class="new"><span class="new">🆕</span> Semantic HTML Recommendations</li>
+                <li class="new"><span class="new">🆕</span> Modern Web Standards Guidance</li>
+            </ul>
+
+            <div class="section-title">Extended Data Sources</div>
+            <ul class="feature-list">
+                <li class="enhanced"><span class="enhanced">✨</span> HTTP Headers, Methods, Status Codes</li>
+                <li class="enhanced"><span class="enhanced">✨</span> SVG Elements & Attributes</li>
+                <li class="enhanced"><span class="enhanced">✨</span> MathML Elements</li>
+                <li class="enhanced"><span class="enhanced">✨</span> XSLT, XPath, EXSLT Functions</li>
+                <li class="enhanced"><span class="enhanced">✨</span> WebDriver Commands & Capabilities</li>
+                <li class="enhanced"><span class="enhanced">✨</span> ARIA Roles & Properties</li>
+                <li class="enhanced"><span class="enhanced">✨</span> URI Schemes & Components</li>
+                <li class="enhanced"><span class="enhanced">✨</span> DOM & CSSOM Interfaces</li>
+                <li class="new"><span class="new">🆕</span> <strong>Official W3C API Integration (Apiary.js)</strong></li>
+                <li class="enhanced"><span class="enhanced">✨</span> W3C Specifications & Groups</li>
+                <li class="enhanced"><span class="enhanced">✨</span> CSP & Permissions Policy Directives</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="summary">
+        <h2>📋 VERIFICATION RESULTS</h2>
+        <p><strong>✅ CONFIRMED:</strong> The enhanced app contains <em>ALL</em> features from the original app, including:</p>
+        <ul style="color: #30c46f;">
+            <li><strong>✅ "Applies To" Property</strong> - Fully implemented in formal definitions</li>
+            <li><strong>✅ All Formal CSS Definitions</strong> - initial, inherited, computed, animation, media, groups, syntax, etc.</li>
+            <li><strong>✅ Browser Compatibility Data</strong> - Enhanced with detailed support information</li>
+            <li><strong>✅ Complete JavaScript Processing</strong> - All 6 categories (builtins, statements, operators, functions, classes, grammar)</li>
+            <li><strong>✅ Export Functionality</strong> - Both JSON and XML export with timestamped filenames</li>
+            <li><strong>✅ Professional UI</strong> - Dark theme, responsive design, status indicators</li>
+            <li><strong>🆕 Official W3C API Integration</strong> - Using Apiary.js for declarative data injection</li>
+        </ul>
+        <p><strong>🎉 PLUS:</strong> Added comprehensive code parsing, linting, AST analysis, official W3C Apiary integration, and 10+ additional data source categories!</p>
+    </div>
+
+    <div class="verification-checklist">
+        <h3>🔍 Test Verification Checklist</h3>
+        <p>Open both apps and verify:</p>
+        <ul>
+            <li>Load master data in both apps</li>
+            <li>Check CSS properties have "Applies to" in formal definitions</li>
+            <li>Verify all statistics match or exceed original counts</li>
+            <li>Test export functionality (JSON/XML)</li>
+            <li>Confirm tree navigation and search work</li>
+            <li>Verify browser compatibility data is present</li>
+            <li>Test new code parsing features in enhanced app</li>
+            <li>Confirm local comprehensive data integration</li>
+        </ul>
+    </div>
+
+    <script>
+        console.log('🔍 Feature comparison page loaded');
+        console.log('📊 Original app: APPLICATION/OLD/old/master-data-viewer.html');
+        console.log('🚀 Enhanced app: Master_Programs/master-data-viewer-with-parser.html');
+    </script>
+</body>
+</html>

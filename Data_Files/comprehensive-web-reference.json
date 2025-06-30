@@ -1,0 +1,1030 @@
+{
+  "metadata": {
+    "version": "2.0.0",
+    "last_updated": "2025-06-28",
+    "sources": [
+      "MDN Web Docs",
+      "W3C Specifications",
+      "WHATWG Living Standards",
+      "CSS Working Group",
+      "TC39 ECMAScript"
+    ],
+    "api_integrations": {
+      "w3c_api": {
+        "endpoint": "https://api.w3.org/",
+        "supported_queries": [
+          "specifications",
+          "groups", 
+          "users",
+          "functions",
+          "services"
+        ]
+      },
+      "mdn_compat": {
+        "package": "@mdn/browser-compat-data",
+        "version": "latest"
+      }
+    }
+  },
+  "specifications": {
+    "html": {
+      "title": "HTML Living Standard",
+      "url": "https://html.spec.whatwg.org/",
+      "organization": "WHATWG",
+      "status": "Living Standard",
+      "w3c_shortname": "html",
+      "latest_version": "2025",
+      "editors": ["Ian Hickson", "Simon Pieters", "Anne van Kesteren"],
+      "working_groups": ["Web Hypertext Application Technology Working Group"]
+    },
+    "css": {
+      "title": "Cascading Style Sheets",
+      "url": "https://www.w3.org/Style/CSS/",
+      "organization": "W3C",
+      "status": "Recommendation",
+      "modules": {
+        "css3-selectors": {
+          "title": "Selectors Level 3",
+          "status": "Recommendation",
+          "url": "https://www.w3.org/TR/css3-selectors/"
+        },
+        "css-flexbox": {
+          "title": "CSS Flexible Box Layout Module",
+          "status": "Recommendation", 
+          "url": "https://www.w3.org/TR/css-flexbox-1/"
+        },
+        "css-grid": {
+          "title": "CSS Grid Layout Module",
+          "status": "Recommendation",
+          "url": "https://www.w3.org/TR/css-grid-1/"
+        }
+      },
+      "working_groups": ["CSS Working Group"]
+    },
+    "ecmascript": {
+      "title": "ECMAScript Language Specification",
+      "url": "https://tc39.es/ecma262/",
+      "organization": "TC39",
+      "status": "Standard",
+      "latest_version": "ES2025",
+      "working_groups": ["TC39"]
+    },
+    "dom": {
+      "title": "DOM Living Standard",
+      "url": "https://dom.spec.whatwg.org/",
+      "organization": "WHATWG",
+      "status": "Living Standard",
+      "w3c_shortname": "dom"
+    }
+  },
+  "browser_compatibility": {
+    "support_matrix": {
+      "chrome": { "engine": "Blink", "prefix": "-webkit-" },
+      "firefox": { "engine": "Gecko", "prefix": "-moz-" },
+      "safari": { "engine": "WebKit", "prefix": "-webkit-" },
+      "edge": { "engine": "Blink", "prefix": "-webkit-" },
+      "ie": { "engine": "Trident", "prefix": "-ms-", "deprecated": true }
+    },
+    "feature_queries": {
+      "css": "@supports (display: grid)",
+      "javascript": "if ('fetch' in window)"
+    }
+  },
+  "html": {
+    "specification_compliance": {
+      "w3c_html5": "https://www.w3.org/TR/html52/",
+      "whatwg_html": "https://html.spec.whatwg.org/",
+      "validation": "https://validator.w3.org/"
+    },
+    "elements": {
+      "basic": {
+        "html": {
+          "description": "Root element of HTML document",
+          "children": ["head", "body"],
+          "attributes": ["lang", "dir", "class", "id"],
+          "global_attributes": true
+        },
+        "head": {
+          "description": "Document metadata container",
+          "children": ["title", "meta", "link", "style", "script", "base"],
+          "attributes": ["class", "id"],
+          "global_attributes": true
+        },
+        "body": {
+          "description": "Document content container",
+          "children": ["div", "span", "p", "h1", "h2", "h3", "h4", "h5", "h6", "a", "img", "ul", "ol", "li", "form", "input", "button", "section", "article", "header", "footer", "nav", "aside"],
+          "attributes": ["onload", "onunload", "class", "id"],
+          "global_attributes": true
+        },
+        "title": {
+          "description": "Document title",
+          "children": [],
+          "self_closing": false,
+          "text_content": true
+        }
+      },
+      "content": {
+        "div": {
+          "description": "Generic container element",
+          "children": "any",
+          "attributes": ["class", "id", "style"],
+          "global_attributes": true,
+          "display": "block"
+        },
+        "span": {
+          "description": "Generic inline container",
+          "children": "inline_content",
+          "attributes": ["class", "id", "style"],
+          "global_attributes": true,
+          "display": "inline"
+        },
+        "p": {
+          "description": "Paragraph element",
+          "children": "inline_content",
+          "attributes": ["class", "id", "style"],
+          "global_attributes": true,
+          "display": "block"
+        },
+        "h1": { "description": "Heading level 1", "display": "block", "children": "inline_content" },
+        "h2": { "description": "Heading level 2", "display": "block", "children": "inline_content" },
+        "h3": { "description": "Heading level 3", "display": "block", "children": "inline_content" },
+        "h4": { "description": "Heading level 4", "display": "block", "children": "inline_content" },
+        "h5": { "description": "Heading level 5", "display": "block", "children": "inline_content" },
+        "h6": { "description": "Heading level 6", "display": "block", "children": "inline_content" },
+        "a": {
+          "description": "Anchor/hyperlink element",
+          "children": "inline_content",
+          "attributes": ["href", "target", "rel", "download", "hreflang"],
+          "global_attributes": true,
+          "display": "inline"
+        },
+        "img": {
+          "description": "Image element",
+          "children": [],
+          "self_closing": true,
+          "attributes": ["src", "alt", "width", "height", "loading", "srcset", "sizes"],
+          "global_attributes": true,
+          "display": "inline-block"
+        }
+      },
+      "lists": {
+        "ul": {
+          "description": "Unordered list",
+          "children": ["li"],
+          "attributes": ["type"],
+          "global_attributes": true,
+          "display": "block"
+        },
+        "ol": {
+          "description": "Ordered list",
+          "children": ["li"],
+          "attributes": ["type", "start", "reversed"],
+          "global_attributes": true,
+          "display": "block"
+        },
+        "li": {
+          "description": "List item",
+          "children": "any",
+          "attributes": ["value"],
+          "global_attributes": true,
+          "display": "list-item"
+        }
+      },
+      "forms": {
+        "form": {
+          "description": "Form container",
+          "children": ["input", "button", "textarea", "select", "label", "fieldset", "legend"],
+          "attributes": ["action", "method", "enctype", "target", "novalidate", "autocomplete"],
+          "global_attributes": true,
+          "display": "block"
+        },
+        "input": {
+          "description": "Input control",
+          "children": [],
+          "self_closing": true,
+          "attributes": ["type", "name", "value", "placeholder", "required", "disabled", "readonly", "maxlength", "minlength", "pattern", "autocomplete"],
+          "global_attributes": true,
+          "display": "inline-block"
+        },
+        "button": {
+          "description": "Button element",
+          "children": "inline_content",
+          "attributes": ["type", "name", "value", "disabled", "form"],
+          "global_attributes": true,
+          "display": "inline-block"
+        }
+      },
+      "semantic": {
+        "header": { "description": "Header section", "display": "block", "children": "any" },
+        "footer": { "description": "Footer section", "display": "block", "children": "any" },
+        "nav": { "description": "Navigation section", "display": "block", "children": "any" },
+        "aside": { "description": "Sidebar content", "display": "block", "children": "any" },
+        "section": { "description": "Generic section", "display": "block", "children": "any" },
+        "article": { "description": "Standalone content", "display": "block", "children": "any" },
+        "main": { "description": "Main content", "display": "block", "children": "any" }
+      }
+    },
+    "global_attributes": [
+      "class", "id", "style", "title", "lang", "dir", "data-*", 
+      "contenteditable", "draggable", "hidden", "spellcheck", "tabindex",
+      "accesskey", "autocapitalize", "autofocus", "translate"
+    ],
+    "input_types": [
+      "text", "password", "email", "url", "tel", "number", "range", 
+      "date", "datetime-local", "time", "month", "week", "color",
+      "checkbox", "radio", "file", "submit", "reset", "button", "hidden"
+    ]
+  },
+  "css": {
+    "specification_compliance": {
+      "css_2_1": "https://www.w3.org/TR/CSS21/",
+      "css_3": "https://www.w3.org/Style/CSS/current-work",
+      "css_4": "https://www.w3.org/Style/CSS/current-work",
+      "working_group": "https://www.w3.org/Style/CSS/members"
+    },
+    "w3c_modules": {
+      "selectors": {
+        "level_3": {
+          "url": "https://www.w3.org/TR/css3-selectors/",
+          "status": "Recommendation",
+          "editors": ["Tantek Çelik", "Elika J. Etemad", "Daniel Glazman"]
+        },
+        "level_4": {
+          "url": "https://www.w3.org/TR/selectors-4/",
+          "status": "Working Draft",
+          "new_features": [":is()", ":where()", ":has()"]
+        }
+      },
+      "flexbox": {
+        "level_1": {
+          "url": "https://www.w3.org/TR/css-flexbox-1/",
+          "status": "Recommendation",
+          "browser_support": "universal"
+        }
+      },
+      "grid": {
+        "level_1": {
+          "url": "https://www.w3.org/TR/css-grid-1/",
+          "status": "Recommendation",
+          "browser_support": "universal"
+        },
+        "level_2": {
+          "url": "https://www.w3.org/TR/css-grid-2/",
+          "status": "Working Draft",
+          "new_features": ["subgrid"]
+        }
+      },
+      "animations": {
+        "level_1": {
+          "url": "https://www.w3.org/TR/css-animations-1/",
+          "status": "Working Draft"
+        }
+      },
+      "transitions": {
+        "level_1": {
+          "url": "https://www.w3.org/TR/css-transitions-1/",
+          "status": "Working Draft"
+        }
+      }
+    },
+    "selectors": {
+      "basic": {
+        "element": { "syntax": "element", "example": "div", "description": "Selects all elements of specified type" },
+        "class": { "syntax": ".class", "example": ".container", "description": "Selects elements with specified class" },
+        "id": { "syntax": "#id", "example": "#header", "description": "Selects element with specified ID" },
+        "universal": { "syntax": "*", "example": "*", "description": "Selects all elements" }
+      },
+      "combinators": {
+        "descendant": { "syntax": "A B", "example": "div p", "description": "Selects B inside A" },
+        "child": { "syntax": "A > B", "example": "div > p", "description": "Selects B that is direct child of A" },
+        "adjacent_sibling": { "syntax": "A + B", "example": "h1 + p", "description": "Selects B immediately after A" },
+        "general_sibling": { "syntax": "A ~ B", "example": "h1 ~ p", "description": "Selects B that are siblings of A" }
+      },
+      "pseudo_classes": {
+        "hover": { "syntax": ":hover", "description": "Element being hovered" },
+        "focus": { "syntax": ":focus", "description": "Element with focus" },
+        "active": { "syntax": ":active", "description": "Element being activated" },
+        "visited": { "syntax": ":visited", "description": "Visited links" },
+        "first_child": { "syntax": ":first-child", "description": "First child element" },
+        "last_child": { "syntax": ":last-child", "description": "Last child element" },
+        "nth_child": { "syntax": ":nth-child(n)", "description": "Nth child element" },
+        "not": { "syntax": ":not(selector)", "description": "Elements that don't match selector" }
+      },
+      "pseudo_elements": {
+        "before": { "syntax": "::before", "description": "Insert content before element" },
+        "after": { "syntax": "::after", "description": "Insert content after element" },
+        "first_line": { "syntax": "::first-line", "description": "First line of text" },
+        "first_letter": { "syntax": "::first-letter", "description": "First letter of text" }
+      },
+      "attribute": {
+        "exists": { "syntax": "[attribute]", "example": "[href]", "description": "Elements with attribute" },
+        "equals": { "syntax": "[attribute=value]", "example": "[type=text]", "description": "Exact attribute value" },
+        "contains": { "syntax": "[attribute*=value]", "example": "[class*=nav]", "description": "Attribute contains value" },
+        "starts": { "syntax": "[attribute^=value]", "example": "[href^=https]", "description": "Attribute starts with value" },
+        "ends": { "syntax": "[attribute$=value]", "example": "[src$=.jpg]", "description": "Attribute ends with value" }
+      }
+    },
+    "properties": {
+      "layout": {
+        "display": {
+          "values": ["block", "inline", "inline-block", "flex", "grid", "none", "table", "table-cell"],
+          "description": "How element is displayed",
+          "default": "block"
+        },
+        "position": {
+          "values": ["static", "relative", "absolute", "fixed", "sticky"],
+          "description": "Positioning method",
+          "default": "static"
+        },
+        "top": { "values": ["<length>", "<percentage>", "auto"], "description": "Top offset" },
+        "right": { "values": ["<length>", "<percentage>", "auto"], "description": "Right offset" },
+        "bottom": { "values": ["<length>", "<percentage>", "auto"], "description": "Bottom offset" },
+        "left": { "values": ["<length>", "<percentage>", "auto"], "description": "Left offset" },
+        "z-index": { "values": ["<integer>", "auto"], "description": "Stacking order" }
+      },
+      "box_model": {
+        "width": { "values": ["<length>", "<percentage>", "auto", "min-content", "max-content"], "description": "Element width" },
+        "height": { "values": ["<length>", "<percentage>", "auto", "min-content", "max-content"], "description": "Element height" },
+        "margin": { "values": ["<length>", "<percentage>", "auto"], "description": "Outer spacing" },
+        "margin-top": { "values": ["<length>", "<percentage>", "auto"], "description": "Top margin" },
+        "margin-right": { "values": ["<length>", "<percentage>", "auto"], "description": "Right margin" },
+        "margin-bottom": { "values": ["<length>", "<percentage>", "auto"], "description": "Bottom margin" },
+        "margin-left": { "values": ["<length>", "<percentage>", "auto"], "description": "Left margin" },
+        "padding": { "values": ["<length>", "<percentage>"], "description": "Inner spacing" },
+        "padding-top": { "values": ["<length>", "<percentage>"], "description": "Top padding" },
+        "padding-right": { "values": ["<length>", "<percentage>"], "description": "Right padding" },
+        "padding-bottom": { "values": ["<length>", "<percentage>"], "description": "Bottom padding" },
+        "padding-left": { "values": ["<length>", "<percentage>"], "description": "Left padding" },
+        "border": { "values": ["<border-width> <border-style> <color>"], "description": "Element border" },
+        "border-width": { "values": ["<length>", "thin", "medium", "thick"], "description": "Border thickness" },
+        "border-style": { "values": ["solid", "dashed", "dotted", "double", "groove", "ridge", "inset", "outset", "none"], "description": "Border style" },
+        "border-color": { "values": ["<color>"], "description": "Border color" },
+        "border-radius": { "values": ["<length>", "<percentage>"], "description": "Rounded corners" }
+      },
+      "flexbox": {
+        "flex-direction": { "values": ["row", "row-reverse", "column", "column-reverse"], "description": "Flex main axis direction" },
+        "flex-wrap": { "values": ["nowrap", "wrap", "wrap-reverse"], "description": "Flex item wrapping" },
+        "justify-content": { "values": ["flex-start", "flex-end", "center", "space-between", "space-around", "space-evenly"], "description": "Main axis alignment" },
+        "align-items": { "values": ["stretch", "flex-start", "flex-end", "center", "baseline"], "description": "Cross axis alignment" },
+        "flex": { "values": ["<number>", "none", "auto"], "description": "Flex grow, shrink, basis" },
+        "flex-grow": { "values": ["<number>"], "description": "Flex grow factor" },
+        "flex-shrink": { "values": ["<number>"], "description": "Flex shrink factor" },
+        "flex-basis": { "values": ["<length>", "<percentage>", "auto"], "description": "Initial flex item size" }
+      },
+      "grid": {
+        "grid-template-columns": { "values": ["<track-list>", "none"], "description": "Grid column tracks" },
+        "grid-template-rows": { "values": ["<track-list>", "none"], "description": "Grid row tracks" },
+        "grid-gap": { "values": ["<length>", "<percentage>"], "description": "Grid gap spacing" },
+        "grid-column": { "values": ["<line>", "span <number>"], "description": "Grid column placement" },
+        "grid-row": { "values": ["<line>", "span <number>"], "description": "Grid row placement" },
+        "justify-items": { "values": ["start", "end", "center", "stretch"], "description": "Grid item horizontal alignment" },
+        "align-items": { "values": ["start", "end", "center", "stretch"], "description": "Grid item vertical alignment" }
+      },
+      "typography": {
+        "font-family": { "values": ["<family-name>", "serif", "sans-serif", "monospace", "cursive", "fantasy"], "description": "Font typeface" },
+        "font-size": { "values": ["<length>", "<percentage>", "xx-small", "x-small", "small", "medium", "large", "x-large", "xx-large"], "description": "Text size" },
+        "font-weight": { "values": ["normal", "bold", "bolder", "lighter", "100-900"], "description": "Text thickness" },
+        "font-style": { "values": ["normal", "italic", "oblique"], "description": "Text style" },
+        "text-align": { "values": ["left", "right", "center", "justify"], "description": "Text horizontal alignment" },
+        "text-decoration": { "values": ["none", "underline", "overline", "line-through"], "description": "Text decoration" },
+        "text-transform": { "values": ["none", "capitalize", "uppercase", "lowercase"], "description": "Text case transformation" },
+        "line-height": { "values": ["<number>", "<length>", "<percentage>", "normal"], "description": "Line spacing" },
+        "letter-spacing": { "values": ["<length>", "normal"], "description": "Character spacing" },
+        "word-spacing": { "values": ["<length>", "normal"], "description": "Word spacing" }
+      },
+      "colors_backgrounds": {
+        "color": { "values": ["<color>"], "description": "Text color" },
+        "background-color": { "values": ["<color>", "transparent"], "description": "Background color" },
+        "background-image": { "values": ["<url>", "none", "<gradient>"], "description": "Background image" },
+        "background-repeat": { "values": ["repeat", "repeat-x", "repeat-y", "no-repeat"], "description": "Background repetition" },
+        "background-position": { "values": ["<position>", "left", "center", "right", "top", "bottom"], "description": "Background position" },
+        "background-size": { "values": ["<length>", "<percentage>", "auto", "cover", "contain"], "description": "Background size" },
+        "opacity": { "values": ["<number>"], "description": "Element transparency" }
+      },
+      "transitions_animations": {
+        "transition": { "values": ["<property> <duration> <timing-function> <delay>"], "description": "CSS transitions" },
+        "transition-property": { "values": ["<property>", "all", "none"], "description": "Properties to transition" },
+        "transition-duration": { "values": ["<time>"], "description": "Transition duration" },
+        "transition-timing-function": { "values": ["ease", "linear", "ease-in", "ease-out", "ease-in-out", "cubic-bezier()"], "description": "Transition timing" },
+        "animation": { "values": ["<name> <duration> <timing-function> <delay> <iteration-count> <direction> <fill-mode>"], "description": "CSS animations" },
+        "animation-name": { "values": ["<keyframes-name>", "none"], "description": "Animation keyframes" },
+        "animation-duration": { "values": ["<time>"], "description": "Animation duration" },
+        "animation-iteration-count": { "values": ["<number>", "infinite"], "description": "Animation repetitions" }
+      }
+    },
+    "units": {
+      "length": {
+        "px": { "type": "absolute", "description": "Pixels" },
+        "em": { "type": "relative", "description": "Relative to font size" },
+        "rem": { "type": "relative", "description": "Relative to root font size" },
+        "vh": { "type": "viewport", "description": "Viewport height percentage" },
+        "vw": { "type": "viewport", "description": "Viewport width percentage" },
+        "%": { "type": "relative", "description": "Percentage of parent" },
+        "pt": { "type": "absolute", "description": "Points" },
+        "cm": { "type": "absolute", "description": "Centimeters" },
+        "mm": { "type": "absolute", "description": "Millimeters" },
+        "in": { "type": "absolute", "description": "Inches" }
+      },
+      "color": {
+        "hex": { "syntax": "#RRGGBB or #RGB", "example": "#ff0000" },
+        "rgb": { "syntax": "rgb(r, g, b)", "example": "rgb(255, 0, 0)" },
+        "rgba": { "syntax": "rgba(r, g, b, a)", "example": "rgba(255, 0, 0, 0.5)" },
+        "hsl": { "syntax": "hsl(h, s%, l%)", "example": "hsl(0, 100%, 50%)" },
+        "hsla": { "syntax": "hsla(h, s%, l%, a)", "example": "hsla(0, 100%, 50%, 0.5)" },
+        "named": { "example": "red, blue, green, black, white, etc." }
+      }
+    },
+    "at_rules": {
+      "@media": { "description": "Media queries for responsive design", "syntax": "@media (condition) { rules }" },
+      "@keyframes": { "description": "Define animation keyframes", "syntax": "@keyframes name { from/to or % }" },
+      "@import": { "description": "Import external stylesheets", "syntax": "@import url();" },
+      "@font-face": { "description": "Define custom fonts", "syntax": "@font-face { font-family: name; src: url(); }" }
+    }
+  },
+  "javascript": {
+    "specification_compliance": {
+      "ecmascript_2025": "https://tc39.es/ecma262/",
+      "tc39_proposals": "https://github.com/tc39/proposals",
+      "working_group": "TC39 Technical Committee",
+      "test_suite": "https://github.com/tc39/test262"
+    },
+    "ecmascript_versions": {
+      "es5": {
+        "year": 2009,
+        "features": ["strict mode", "JSON", "Object methods"],
+        "browser_support": "universal"
+      },
+      "es6_es2015": {
+        "year": 2015,
+        "features": ["let/const", "arrow functions", "classes", "modules", "promises"],
+        "browser_support": "modern"
+      },
+      "es2016": {
+        "year": 2016,
+        "features": ["Array.prototype.includes", "Exponentiation operator"],
+        "browser_support": "modern"
+      },
+      "es2017": {
+        "year": 2017,
+        "features": ["async/await", "Object.values/entries", "String padding"],
+        "browser_support": "modern"
+      },
+      "es2018": {
+        "year": 2018,
+        "features": ["Rest/Spread properties", "Async iteration", "RegExp improvements"],
+        "browser_support": "modern"
+      },
+      "es2019": {
+        "year": 2019,
+        "features": ["Array.flat/flatMap", "Object.fromEntries", "String.trimStart/trimEnd"],
+        "browser_support": "modern"
+      },
+      "es2020": {
+        "year": 2020,
+        "features": ["BigInt", "Dynamic import", "Nullish coalescing", "Optional chaining"],
+        "browser_support": "modern"
+      },
+      "es2021": {
+        "year": 2021,
+        "features": ["String.replaceAll", "Promise.any", "Logical assignment operators"],
+        "browser_support": "modern"
+      },
+      "es2022": {
+        "year": 2022,
+        "features": ["Top-level await", "Private class fields", "Array.at()"],
+        "browser_support": "modern"
+      },
+      "es2023": {
+        "year": 2023,
+        "features": ["Array.findLast()", "Hashbang grammar", "Array.toSorted()"],
+        "browser_support": "cutting-edge"
+      },
+      "es2024": {
+        "year": 2024,
+        "features": ["Object.groupBy()", "Promise.withResolvers()", "ArrayBuffer.prototype.transfer()"],
+        "browser_support": "cutting-edge"
+      },
+      "es2025": {
+        "year": 2025,
+        "features": ["TBD - In development"],
+        "browser_support": "experimental"
+      }
+    },
+    "tc39_proposal_stages": {
+      "stage_0": "Strawperson - Initial idea",
+      "stage_1": "Proposal - Formal proposal with champion",
+      "stage_2": "Draft - Initial spec text",
+      "stage_3": "Candidate - Complete spec, implementation feedback",
+      "stage_4": "Finished - Ready for inclusion in next ECMAScript edition"
+    },
+    "web_apis": {
+      "dom_api": {
+        "specification": "https://dom.spec.whatwg.org/",
+        "organization": "WHATWG",
+        "status": "Living Standard"
+      },
+      "fetch_api": {
+        "specification": "https://fetch.spec.whatwg.org/",
+        "organization": "WHATWG", 
+        "status": "Living Standard"
+      },
+      "web_workers": {
+        "specification": "https://html.spec.whatwg.org/multipage/workers.html",
+        "organization": "WHATWG",
+        "status": "Living Standard"
+      },
+      "service_workers": {
+        "specification": "https://w3c.github.io/ServiceWorker/",
+        "organization": "W3C",
+        "status": "Working Draft"
+      },
+      "web_components": {
+        "custom_elements": "https://html.spec.whatwg.org/multipage/custom-elements.html",
+        "shadow_dom": "https://dom.spec.whatwg.org/#shadow-trees",
+        "html_templates": "https://html.spec.whatwg.org/multipage/scripting.html#the-template-element"
+      }
+    },
+    "data_types": {
+      "primitive": {
+        "string": { "description": "Text data", "example": "'hello' or \"world\"" },
+        "number": { "description": "Numeric data", "example": "42, 3.14, -7" },
+        "boolean": { "description": "True/false values", "example": "true, false" },
+        "undefined": { "description": "Declared but not assigned", "example": "let x; // x is undefined" },
+        "null": { "description": "Intentional absence of value", "example": "let x = null;" },
+        "symbol": { "description": "Unique identifier", "example": "Symbol('id')" },
+        "bigint": { "description": "Large integers", "example": "123n" }
+      },
+      "reference": {
+        "object": { "description": "Collection of key-value pairs", "example": "{ key: value }" },
+        "array": { "description": "Ordered list of values", "example": "[1, 2, 3]" },
+        "function": { "description": "Reusable code block", "example": "function name() {}" },
+        "date": { "description": "Date and time objects", "example": "new Date()" },
+        "regexp": { "description": "Regular expressions", "example": "/pattern/flags" }
+      }
+    },
+    "operators": {
+      "arithmetic": {
+        "+": "Addition",
+        "-": "Subtraction", 
+        "*": "Multiplication",
+        "/": "Division",
+        "%": "Modulus",
+        "**": "Exponentiation",
+        "++": "Increment",
+        "--": "Decrement"
+      },
+      "comparison": {
+        "==": "Equal (type coercion)",
+        "===": "Strict equal",
+        "!=": "Not equal (type coercion)",
+        "!==": "Strict not equal",
+        ">": "Greater than",
+        "<": "Less than",
+        ">=": "Greater than or equal",
+        "<=": "Less than or equal"
+      },
+      "logical": {
+        "&&": "Logical AND",
+        "||": "Logical OR",
+        "!": "Logical NOT",
+        "??": "Nullish coalescing"
+      },
+      "assignment": {
+        "=": "Basic assignment",
+        "+=": "Addition assignment",
+        "-=": "Subtraction assignment",
+        "*=": "Multiplication assignment",
+        "/=": "Division assignment",
+        "%=": "Modulus assignment"
+      }
+    },
+    "control_structures": {
+      "conditionals": {
+        "if": { "syntax": "if (condition) { code }", "description": "Execute if condition is true" },
+        "else": { "syntax": "if (condition) { code } else { code }", "description": "Execute if condition is false" },
+        "else_if": { "syntax": "if (condition) { } else if (condition) { }", "description": "Multiple conditions" },
+        "switch": { "syntax": "switch (value) { case x: break; default: }", "description": "Multiple value checks" },
+        "ternary": { "syntax": "condition ? value1 : value2", "description": "Inline conditional" }
+      },
+      "loops": {
+        "for": { "syntax": "for (init; condition; increment) { code }", "description": "Traditional for loop" },
+        "while": { "syntax": "while (condition) { code }", "description": "Loop while condition is true" },
+        "do_while": { "syntax": "do { code } while (condition)", "description": "Execute once, then loop" },
+        "for_in": { "syntax": "for (key in object) { code }", "description": "Iterate object properties" },
+        "for_of": { "syntax": "for (value of iterable) { code }", "description": "Iterate iterable values" },
+        "break": { "description": "Exit loop early" },
+        "continue": { "description": "Skip to next iteration" }
+      }
+    },
+    "functions": {
+      "declaration": { "syntax": "function name(params) { return value; }", "description": "Function declaration" },
+      "expression": { "syntax": "const name = function(params) { return value; };", "description": "Function expression" },
+      "arrow": { "syntax": "const name = (params) => { return value; };", "description": "Arrow function" },
+      "arrow_short": { "syntax": "const name = param => value;", "description": "Arrow function shorthand" },
+      "iife": { "syntax": "(function() { code })();", "description": "Immediately Invoked Function Expression" },
+      "callback": { "description": "Function passed as argument to another function" },
+      "closure": { "description": "Function with access to outer scope variables" },
+      "higher_order": { "description": "Function that takes or returns other functions" }
+    },
+    "objects_arrays": {
+      "object_creation": {
+        "literal": { "syntax": "const obj = { key: value };", "description": "Object literal" },
+        "constructor": { "syntax": "const obj = new Object();", "description": "Object constructor" },
+        "create": { "syntax": "const obj = Object.create(prototype);", "description": "Object.create method" }
+      },
+      "object_methods": {
+        "Object.keys()": "Get object keys array",
+        "Object.values()": "Get object values array", 
+        "Object.entries()": "Get key-value pairs array",
+        "Object.assign()": "Copy properties to object",
+        "hasOwnProperty()": "Check if property exists",
+        "Object.freeze()": "Make object immutable",
+        "Object.seal()": "Prevent adding/removing properties"
+      },
+      "array_creation": {
+        "literal": { "syntax": "const arr = [1, 2, 3];", "description": "Array literal" },
+        "constructor": { "syntax": "const arr = new Array(length);", "description": "Array constructor" },
+        "from": { "syntax": "Array.from(iterable);", "description": "Create from iterable" },
+        "of": { "syntax": "Array.of(elements);", "description": "Create from arguments" }
+      },
+      "array_methods": {
+        "mutating": {
+          "push()": "Add to end",
+          "pop()": "Remove from end", 
+          "unshift()": "Add to beginning",
+          "shift()": "Remove from beginning",
+          "splice()": "Add/remove at index",
+          "sort()": "Sort array",
+          "reverse()": "Reverse array"
+        },
+        "non_mutating": {
+          "concat()": "Join arrays",
+          "slice()": "Extract portion",
+          "indexOf()": "Find index",
+          "includes()": "Check if contains",
+          "join()": "Convert to string"
+        },
+        "iteration": {
+          "forEach()": "Execute function for each element",
+          "map()": "Transform each element",
+          "filter()": "Filter elements by condition",
+          "reduce()": "Reduce to single value",
+          "find()": "Find first matching element",
+          "some()": "Check if any match condition",
+          "every()": "Check if all match condition"
+        }
+      }
+    },
+    "dom_api": {
+      "selection": {
+        "getElementById()": "Select by ID",
+        "getElementsByClassName()": "Select by class name",
+        "getElementsByTagName()": "Select by tag name",
+        "querySelector()": "Select first match (CSS selector)",
+        "querySelectorAll()": "Select all matches (CSS selector)"
+      },
+      "manipulation": {
+        "innerHTML": "Get/set HTML content",
+        "textContent": "Get/set text content",
+        "setAttribute()": "Set attribute",
+        "getAttribute()": "Get attribute",
+        "removeAttribute()": "Remove attribute",
+        "classList.add()": "Add CSS class",
+        "classList.remove()": "Remove CSS class",
+        "classList.toggle()": "Toggle CSS class",
+        "style.property": "Set inline styles"
+      },
+      "creation": {
+        "createElement()": "Create new element",
+        "createTextNode()": "Create text node",
+        "appendChild()": "Add child element",
+        "insertBefore()": "Insert before element",
+        "removeChild()": "Remove child element",
+        "replaceChild()": "Replace child element"
+      },
+      "events": {
+        "addEventListener()": "Add event listener",
+        "removeEventListener()": "Remove event listener",
+        "preventDefault()": "Prevent default behavior",
+        "stopPropagation()": "Stop event bubbling",
+        "event.target": "Element that triggered event",
+        "event.currentTarget": "Element with event listener"
+      }
+    },
+    "async": {
+      "promises": {
+        "creation": { "syntax": "new Promise((resolve, reject) => {})", "description": "Create promise" },
+        "then": { "syntax": ".then(value => {})", "description": "Handle success" },
+        "catch": { "syntax": ".catch(error => {})", "description": "Handle error" },
+        "finally": { "syntax": ".finally(() => {})", "description": "Always execute" },
+        "Promise.all()": "Wait for all promises",
+        "Promise.race()": "Wait for first promise",
+        "Promise.resolve()": "Create resolved promise",
+        "Promise.reject()": "Create rejected promise"
+      },
+      "async_await": {
+        "async_function": { "syntax": "async function name() {}", "description": "Async function declaration" },
+        "await": { "syntax": "const result = await promise;", "description": "Wait for promise" },
+        "try_catch": { "syntax": "try { await promise; } catch (error) {}", "description": "Error handling" }
+      },
+      "fetch_api": {
+        "basic": { "syntax": "fetch(url)", "description": "Make HTTP request" },
+        "with_options": { "syntax": "fetch(url, { method, headers, body })", "description": "Request with options" },
+        "json": { "syntax": "response.json()", "description": "Parse JSON response" },
+        "text": { "syntax": "response.text()", "description": "Get text response" }
+      }
+    },
+    "es6_features": {
+      "variables": {
+        "let": "Block-scoped variable",
+        "const": "Block-scoped constant",
+        "template_literals": "String with ${expressions}"
+      },
+      "destructuring": {
+        "array": { "syntax": "const [a, b] = array;", "description": "Extract array values" },
+        "object": { "syntax": "const { key } = object;", "description": "Extract object properties" },
+        "nested": { "syntax": "const { nested: { key } } = object;", "description": "Nested destructuring" }
+      },
+      "spread_rest": {
+        "spread_array": { "syntax": "[...array]", "description": "Spread array elements" },
+        "spread_object": { "syntax": "{ ...object }", "description": "Spread object properties" },
+        "rest_params": { "syntax": "function(...args)", "description": "Rest parameters" }
+      },
+      "modules": {
+        "export": { "syntax": "export const name = value;", "description": "Named export" },
+        "export_default": { "syntax": "export default value;", "description": "Default export" },
+        "import": { "syntax": "import { name } from 'module';", "description": "Named import" },
+        "import_default": { "syntax": "import name from 'module';", "description": "Default import" },
+        "import_all": { "syntax": "import * as name from 'module';", "description": "Import all" }
+      },
+      "classes": {
+        "declaration": { "syntax": "class Name { constructor() {} method() {} }", "description": "Class declaration" },
+        "inheritance": { "syntax": "class Child extends Parent {}", "description": "Class inheritance" },
+        "super": { "syntax": "super()", "description": "Call parent constructor/method" },
+        "static": { "syntax": "static method() {}", "description": "Static method" }
+      }
+    }
+  },
+  "w3c_api_integration": {
+    "installation": {
+      "server_side": "npm install node-w3capi",
+      "client_side": "requirejs(['w3capi'], function(w3capi) {});"
+    },
+    "usage_examples": {
+      "list_all_groups": "w3capi.groups().fetch(handler)",
+      "get_specification": "w3capi.specification('SVG11').fetch(handler)",
+      "get_spec_editors": "w3capi.specification('SVG11').version('20030114').editors.fetch(handler)",
+      "get_latest_version": "w3capi.specification('SVG11').latest().fetch(handler)",
+      "get_group_info": "w3capi.group(54381).fetch(handler)",
+      "get_group_chairs": "w3capi.group(54381).chairs().fetch(handler)",
+      "get_user_info": "w3capi.user('user_id').fetch(handler)"
+    },
+    "api_endpoints": {
+      "specifications": {
+        "list_all": "/specifications",
+        "get_single": "/specifications/{shortname}",
+        "get_versions": "/specifications/{shortname}/versions",
+        "get_version": "/specifications/{shortname}/versions/{version}",
+        "get_editors": "/specifications/{shortname}/versions/{version}/editors",
+        "get_deliverers": "/specifications/{shortname}/versions/{version}/deliverers"
+      },
+      "groups": {
+        "list_all": "/groups",
+        "get_single": "/groups/{id}",
+        "get_chairs": "/groups/{id}/chairs",
+        "get_services": "/groups/{id}/services",
+        "get_specifications": "/groups/{id}/specifications",
+        "get_team_contacts": "/groups/{id}/teamcontacts",
+        "get_users": "/groups/{id}/users",
+        "get_charters": "/groups/{id}/charters",
+        "get_charter": "/groups/{id}/charters/{charter_id}",
+        "get_participations": "/groups/{id}/participations"
+      },
+      "users": {
+        "get_single": "/users/{id}",
+        "get_by_github": "/users?type=github&id={github_id}",
+        "get_affiliations": "/users/{id}/affiliations",
+        "get_groups": "/users/{id}/groups",
+        "get_participations": "/users/{id}/participations",
+        "get_specifications": "/users/{id}/specifications"
+      }
+    },
+    "response_formats": {
+      "default": "application/json",
+      "embedded": "?embed=true for embedded content",
+      "paging": "Automatically handled by node-w3capi"
+    }
+  },
+  "accessibility": {
+    "wcag_guidelines": {
+      "wcag_2_1": {
+        "url": "https://www.w3.org/TR/WCAG21/",
+        "status": "Recommendation",
+        "levels": ["A", "AA", "AAA"],
+        "principles": [
+          "Perceivable",
+          "Operable", 
+          "Understandable",
+          "Robust"
+        ]
+      },
+      "wcag_2_2": {
+        "url": "https://www.w3.org/TR/WCAG22/",
+        "status": "Recommendation",
+        "new_criteria": ["Focus Not Obscured", "Dragging Movements", "Target Size"]
+      }
+    },
+    "aria": {
+      "specification": "https://www.w3.org/TR/wai-aria-1.2/",
+      "roles": ["button", "link", "heading", "navigation", "main", "banner", "contentinfo"],
+      "properties": ["aria-label", "aria-describedby", "aria-expanded", "aria-hidden"],
+      "states": ["aria-checked", "aria-disabled", "aria-selected", "aria-pressed"]
+    },
+    "html_semantics": {
+      "landmarks": ["header", "nav", "main", "aside", "footer"],
+      "headings": ["h1", "h2", "h3", "h4", "h5", "h6"],
+      "form_labels": ["label", "aria-label", "aria-labelledby"]
+    }
+  },
+  "performance": {
+    "web_vitals": {
+      "core_web_vitals": {
+        "lcp": {
+          "name": "Largest Contentful Paint",
+          "good": "< 2.5s",
+          "poor": "> 4.0s"
+        },
+        "fid": {
+          "name": "First Input Delay", 
+          "good": "< 100ms",
+          "poor": "> 300ms"
+        },
+        "cls": {
+          "name": "Cumulative Layout Shift",
+          "good": "< 0.1",
+          "poor": "> 0.25"
+        }
+      },
+      "other_metrics": {
+        "fcp": "First Contentful Paint",
+        "ttfb": "Time to First Byte",
+        "tti": "Time to Interactive"
+      }
+    },
+    "optimization_techniques": {
+      "html": ["Minimize DOM depth", "Use semantic elements", "Optimize images"],
+      "css": ["Minimize unused CSS", "Use CSS containment", "Optimize animations"],
+      "javascript": ["Code splitting", "Tree shaking", "Lazy loading", "Web Workers"]
+    }
+  },
+  "security": {
+    "web_security_standards": {
+      "csp": {
+        "name": "Content Security Policy",
+        "specification": "https://www.w3.org/TR/CSP3/",
+        "directives": ["default-src", "script-src", "style-src", "img-src"]
+      },
+      "cors": {
+        "name": "Cross-Origin Resource Sharing",
+        "specification": "https://fetch.spec.whatwg.org/#http-cors-protocol",
+        "headers": ["Access-Control-Allow-Origin", "Access-Control-Allow-Methods"]
+      },
+      "hsts": {
+        "name": "HTTP Strict Transport Security",
+        "specification": "https://tools.ietf.org/html/rfc6797",
+        "header": "Strict-Transport-Security"
+      }
+    }
+  },
+  "common_patterns": {
+  "common_patterns": {
+    "responsive_design": {
+      "mobile_first": "@media (min-width: 768px) { /* tablet+ styles */ }",
+      "desktop_first": "@media (max-width: 767px) { /* mobile styles */ }",
+      "breakpoints": {
+        "mobile": "320px - 767px",
+        "tablet": "768px - 1023px", 
+        "desktop": "1024px+",
+        "common_breakpoints": {
+          "xs": "0px",
+          "sm": "576px", 
+          "md": "768px",
+          "lg": "992px",
+          "xl": "1200px",
+          "xxl": "1400px"
+        }
+      },
+      "viewport_units": {
+        "vw": "Viewport width",
+        "vh": "Viewport height", 
+        "vmin": "Smaller of vw or vh",
+        "vmax": "Larger of vw or vh"
+      },
+      "fluid_typography": "clamp(1rem, 2.5vw, 2rem)",
+      "container_queries": "@container (min-width: 300px) { /* styles */ }"
+    },
+    "form_validation": {
+      "html5": {
+        "attributes": ["required", "pattern", "min", "max", "minlength", "maxlength"],
+        "input_types": ["email", "url", "tel", "number", "date"],
+        "example": "<input type='email' required pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$'>"
+      },
+      "javascript": {
+        "basic": "addEventListener('submit', validate)",
+        "constraint_validation_api": "input.setCustomValidity('Custom error message')",
+        "form_data_api": "new FormData(form)",
+        "validation_example": "form.addEventListener('submit', (e) => { if (!form.checkValidity()) e.preventDefault(); })"
+      },
+      "css_pseudo_classes": {
+        "valid": ":valid { border-color: green; }",
+        "invalid": ":invalid { border-color: red; }",
+        "required": ":required { border-left: 3px solid blue; }",
+        "optional": ":optional { opacity: 0.8; }"
+      }
+    },
+    "ajax_patterns": {
+      "fetch_api": {
+        "get": "fetch('/api/data').then(r => r.json())",
+        "post": "fetch('/api/data', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(data) })",
+        "error_handling": "fetch(url).then(r => { if (!r.ok) throw new Error('Network error'); return r.json(); })",
+        "async_await": "const data = await fetch(url).then(r => r.json());"
+      },
+      "request_options": {
+        "method": "GET | POST | PUT | DELETE | PATCH",
+        "headers": "{ 'Content-Type': 'application/json', 'Authorization': 'Bearer token' }",
+        "body": "JSON.stringify(data) | FormData | URLSearchParams",
+        "credentials": "same-origin | include | omit",
+        "cache": "default | no-store | reload | no-cache | force-cache"
+      }
+    },
+    "modern_css_patterns": {
+      "custom_properties": {
+        "declaration": ":root { --primary-color: #007bff; }",
+        "usage": "color: var(--primary-color, #0066cc);",
+        "dynamic": "element.style.setProperty('--primary-color', newColor);"
+      },
+      "logical_properties": {
+        "margin": "margin-inline-start, margin-inline-end, margin-block-start, margin-block-end",
+        "padding": "padding-inline, padding-block",
+        "border": "border-inline-start, border-block-end"
+      },
+      "modern_layouts": {
+        "css_grid": "display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));",
+        "flexbox": "display: flex; justify-content: space-between; align-items: center;",
+        "aspect_ratio": "aspect-ratio: 16 / 9;",
+        "object_fit": "object-fit: cover; object-position: center;"
+      }
+    },
+    "progressive_enhancement": {
+      "feature_detection": {
+        "css": "@supports (display: grid) { /* grid styles */ }",
+        "javascript": "if ('serviceWorker' in navigator) { /* use service worker */ }",
+        "modernizr": "if (Modernizr.webp) { /* use WebP images */ }"
+      },
+      "graceful_degradation": {
+        "css_fallbacks": "background: #ff0000; background: linear-gradient(to right, #ff0000, #00ff00);",
+        "font_stacks": "font-family: 'CustomFont', Arial, sans-serif;",
+        "polyfills": "if (!Array.prototype.includes) { /* polyfill */ }"
+      }
+    }
+  },
+  "tools_and_workflows": {
+    "build_tools": {
+      "bundlers": ["Webpack", "Vite", "Rollup", "Parcel", "esbuild"],
+      "task_runners": ["npm scripts", "Gulp", "Grunt"],
+      "css_processors": ["Sass", "Less", "Stylus", "PostCSS"],
+      "javascript_compilers": ["Babel", "TypeScript", "SWC"]
+    },
+    "testing": {
+      "unit_testing": ["Jest", "Mocha", "Jasmine", "Vitest"],
+      "integration_testing": ["Cypress", "Playwright", "Puppeteer"],
+      "accessibility_testing": ["axe-core", "WAVE", "Lighthouse"],
+      "performance_testing": ["Lighthouse", "WebPageTest", "Chrome DevTools"]
+    },
+    "linting_formatting": {
+      "javascript": ["ESLint", "JSHint", "Prettier"],
+      "css": ["stylelint", "CSScomb", "Prettier"],
+      "html": ["HTMLHint", "W3C Validator"]
+    }
+  },
+  "resources": {
+    "documentation": {
+      "mdn": "https://developer.mozilla.org/",
+      "w3c": "https://www.w3.org/TR/",
+      "whatwg": "https://spec.whatwg.org/",
+      "caniuse": "https://caniuse.com/",
+      "css_tricks": "https://css-tricks.com/"
+    },
+    "validators": {
+      "html": "https://validator.w3.org/",
+      "css": "https://jigsaw.w3.org/css-validator/",
+      "accessibility": "https://wave.webaim.org/",
+      "performance": "https://pagespeed.web.dev/"
+    },
+    "browser_support": {
+      "caniuse_api": "https://caniuse.com/api",
+      "browserslist": "https://browsersl.ist/",
+      "mdn_compat_data": "@mdn/browser-compat-data"
+    }
+  }
+}

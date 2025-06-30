@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Comprehensive Data Viewer Functionality</title>
+    <style>
+        body { font-family: system-ui; padding: 20px; background: #121212; color: #e0e0e0; }
+        .test-section { margin: 20px 0; padding: 15px; background: #1a1a1a; border-radius: 8px; }
+        .test-title { color: #30c46f; font-weight: bold; margin-bottom: 10px; }
+        .test-sample { background: #2a2a2a; padding: 10px; border-radius: 4px; font-family: monospace; margin: 10px 0; }
+        .deprecated { color: #ff496c; }
+        .modern { color: #30c46f; }
+        .vendor-prefix { color: #f39c12; }
+        button { background: #30c46f; color: #000; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; margin: 5px; }
+        button:hover { background: #27a85f; }
+        a { color: #30c46f; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>🚀 Comprehensive Web Platform Data Viewer & Parser - Test Suite</h1>
+    
+    <div class="test-section">
+        <div class="test-title">📊 Test Instructions</div>
+        <p>Open the <a href="Master_Programs/master-data-viewer-with-parser.html" target="_blank">Comprehensive Data Viewer</a> and:</p>
+        <ol>
+            <li><strong>Load Data:</strong> Click "Load Platform Data" button</li>
+            <li><strong>Verify Statistics:</strong> Check that statistics show comprehensive data including local reference</li>
+            <li><strong>Test Code Parser:</strong> Switch to "Code Parser & Linter" tab and test with samples below</li>
+            <li><strong>Verify Integration:</strong> Ensure local comprehensive data is being used for enhanced linting</li>
+        </ol>
+        <button onclick="window.open('Master_Programs/master-data-viewer-with-parser.html', '_blank')">🚀 Open Data Viewer</button>
+    </div>
+
+    <div class="test-section">
+        <div class="test-title">🌐 HTML Test Samples (Copy & Paste into HTML tab)</div>
+        
+        <h4>❌ Deprecated Elements (Should trigger errors):</h4>
+        <div class="test-sample deprecated">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Deprecated HTML Test&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;marquee&gt;This is deprecated!&lt;/marquee&gt;
+  &lt;blink&gt;Also deprecated&lt;/blink&gt;
+  &lt;center&gt;Use CSS instead&lt;/center&gt;
+  &lt;font color="red"&gt;Use CSS for styling&lt;/font&gt;
+  &lt;div style="display: -webkit-flex;"&gt;Vendor prefix&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </div>
+
+        <h4>✅ Modern Semantic HTML (Should suggest improvements):</h4>
+        <div class="test-sample modern">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Modern HTML Test&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;&lt;h1&gt;Page Title&lt;/h1&gt;&lt;/header&gt;
+  &lt;nav&gt;&lt;a href="#"&gt;Navigation&lt;/a&gt;&lt;/nav&gt;
+  &lt;main&gt;
+    &lt;article&gt;
+      &lt;h2&gt;Article Title&lt;/h2&gt;
+      &lt;p&gt;Content here&lt;/p&gt;
+    &lt;/article&gt;
+  &lt;/main&gt;
+  &lt;footer&gt;Footer content&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </div>
+    </div>
+
+    <div class="test-section">
+        <div class="test-title">🎨 CSS Test Samples (Copy & Paste into CSS tab)</div>
+        
+        <h4>⚠️ Vendor Prefixes (Should trigger warnings):</h4>
+        <div class="test-sample vendor-prefix">
+/* Vendor prefix test */
+.container {
+  display: -webkit-flex;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  zoom: 1; /* IE-specific */
+}
+
+.experimental {
+  container-type: inline-size;
+  backdrop-filter: blur(10px);
+}
+        </div>
+
+        <h4>✅ Modern CSS (Should show good practices):</h4>
+        <div class="test-sample modern">
+/* Modern CSS patterns */
+:root {
+  --primary-color: #30c46f;
+  --spacing: 1rem;
+}
+
+.modern-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing);
+  container-type: inline-size;
+}
+
+.modern-card {
+  background: var(--primary-color);
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+}
+
+@container (min-width: 300px) {
+  .modern-card {
+    padding: var(--spacing);
+  }
+}
+        </div>
+    </div>
+
+    <div class="test-section">
+        <div class="test-title">⚡ JavaScript Test Samples (Copy & Paste into JS tab)</div>
+        
+        <h4>❌ Deprecated APIs (Should trigger errors):</h4>
+        <div class="test-sample deprecated">
+// Deprecated JavaScript patterns
+document.write('This is deprecated!');
+
+// Legacy event handling
+event.returnValue = false;
+
+// Old-style AJAX
+var xhr = new XMLHttpRequest();
+xhr.open('GET', '/api/data', false); // Synchronous
+
+// Vendor-prefixed APIs
+if (window.webkitRequestAnimationFrame) {
+  window.webkitRequestAnimationFrame(animate);
+}
+        </div>
+
+        <h4>✅ Modern JavaScript (Should show best practices):</h4>
+        <div class="test-sample modern">
+// Modern JavaScript patterns
+const fetchData = async () => {
+  try {
+    const response = await fetch('/api/data');
+    if (!response.ok) throw new Error('Network error');
+    return await response.json();
+  } catch (error) {
+    console.error('Failed to fetch data:', error);
+  }
+};
+
+// Modern DOM manipulation
+const createElement = (tag, props = {}, children = []) => {
+  const element = document.createElement(tag);
+  Object.assign(element, props);
+  children.forEach(child => element.appendChild(child));
+  return element;
+};
+
+// Modern event handling
+document.addEventListener('click', (event) => {
+  event.preventDefault();
+  console.log('Modern event handling');
+});
+
+// Modern APIs
+const observer = new ResizeObserver(entries => {
+  entries.forEach(entry => {
+    console.log('Element resized:', entry.target);
+  });
+});
+        </div>
+    </div>
+
+    <div class="test-section">
+        <div class="test-title">🔍 Expected Results</div>
+        <ul>
+            <li><strong>Data Loading:</strong> Should show "Local Reference Data: ✅ Loaded" in statistics</li>
+            <li><strong>HTML Analysis:</strong> Should detect deprecated elements and suggest semantic alternatives</li>
+            <li><strong>CSS Analysis:</strong> Should identify vendor prefixes and deprecated properties</li>
+            <li><strong>JS Analysis:</strong> Should flag deprecated methods and suggest modern alternatives</li>
+            <li><strong>Enhanced Suggestions:</strong> Should provide detailed suggestions using comprehensive data</li>
+            <li><strong>Total Entries:</strong> Should show thousands of entries from multiple data sources</li>
+        </ul>
+    </div>
+
+    <div class="test-section">
+        <div class="test-title">📋 Verification Checklist</div>
+        <ul>
+            <li>□ Local comprehensive data loads successfully</li>
+            <li>□ Statistics show multiple data source categories</li>
+            <li>□ HTML linting detects deprecated elements</li>
+            <li>□ CSS linting identifies vendor prefixes</li>
+            <li>□ JavaScript linting flags deprecated APIs</li>
+            <li>□ Enhanced suggestions use comprehensive data</li>
+            <li>□ JSON viewer displays complete data structure</li>
+            <li>□ Export functionality works (JSON/XML)</li>
+            <li>□ Cross-referencing provides MDN links</li>
+            <li>□ AST analysis provides detailed insights</li>
+        </ul>
+    </div>
+
+    <script>
+        console.log('📋 Test page loaded. Open the data viewer to test functionality.');
+        
+        // Add copy-to-clipboard functionality
+        document.querySelectorAll('.test-sample').forEach(sample => {
+            sample.style.cursor = 'pointer';
+            sample.title = 'Click to copy';
+            sample.addEventListener('click', () => {
+                navigator.clipboard.writeText(sample.textContent.trim()).then(() => {
+                    const originalBg = sample.style.background;
+                    sample.style.background = '#30c46f';
+                    setTimeout(() => {
+                        sample.style.background = originalBg;
+                    }, 200);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

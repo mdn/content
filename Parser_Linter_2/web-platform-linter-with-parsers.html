@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>⚡ Spec‑Matrix — Web Platform Linter & Parser</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="data:," />
+  
+  <!-- Include parser libraries -->
+  <script src="https://unpkg.com/acorn@8.11.3/dist/acorn.js"></script>
+  <script src="https://unpkg.com/css-tree@2.3.1/dist/csstree.umd.js"></script>
+  
+  <style>
+    :root{--bg:#121212;--fg:#e0e0e0;--accent:#30c46f;--css:#563d7c;--html:#e34c26;--js:#f1e05a;--error:#e74c3c;--warning:#f39c12;--info:#3498db;--success:#27ae60}
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;background:var(--bg);color:var(--fg);font:14px/1.5 system-ui,Segoe UI,Roboto,Arial,sans-serif}
+    body{display:flex;flex-direction:column;padding:1rem}
+    .header{text-align:center;margin-bottom:2rem}
+    h1{font-size:2rem;margin:0 0 .5rem;background:linear-gradient(45deg,var(--css),var(--html),var(--js));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .subtitle{color:#999;margin-bottom:1rem}
+    .main-container{display:flex;gap:1rem;height:calc(100vh - 120px);min-height:600px}
+    .input-section{flex:1;display:flex;flex-direction:column}
+    .results-section{flex:1;display:flex;flex-direction:column}
+    .tabs{display:flex;border-bottom:1px solid #333;margin-bottom:1rem}
+    .tab{background:none;border:none;color:#999;padding:.75rem 1rem;cursor:pointer;border-bottom:2px solid transparent;transition:all .2s}
+    .tab.active{color:var(--fg);border-bottom-color:var(--accent)}
+    .tab:hover{color:var(--fg)}
+    .tab-content{display:none;flex:1}
+    .tab-content.active{display:flex;flex-direction:column}
+    .code-input{width:100%;height:100%;background:#1a1a1a;border:1px solid #333;border-radius:4px;padding:1rem;color:var(--fg);font-family:Monaco,Consolas,'Courier New',monospace;font-size:13px;line-height:1.4;resize:none;outline:none}
+    .code-input:focus{border-color:var(--accent)}
+    .controls{display:flex;gap:1rem;margin-bottom:1rem;align-items:center}
+    .btn{background:var(--accent);color:#000;border:none;padding:.5rem 1rem;border-radius:4px;cursor:pointer;font-weight:600;transition:all .2s}
+    .btn:hover{background:#27a85f}
+    .btn:disabled{background:#333;color:#666;cursor:not-allowed}
+    .status{color:#999;font-size:.9rem}
+    .results-container{flex:1;background:#1a1a1a;border:1px solid #333;border-radius:4px;padding:1rem;overflow-y:auto}
+    .result-item{margin-bottom:1rem;padding:1rem;border-radius:4px;border-left:4px solid}
+    .result-item.error{background:#2c1810;border-left-color:var(--error)}
+    .result-item.warning{background:#2c2410;border-left-color:var(--warning)}
+    .result-item.info{background:#102c2c;border-left-color:var(--info)}
+    .result-item.success{background:#1a2c1a;border-left-color:var(--success)}
+    .result-header{display:flex;align-items:center;gap:.5rem;margin-bottom:.5rem}
+    .result-type{font-size:.8rem;font-weight:600;padding:.2rem .5rem;border-radius:3px;text-transform:uppercase}
+    .result-type.error{background:var(--error);color:#fff}
+    .result-type.warning{background:var(--warning);color:#000}
+    .result-type.info{background:var(--info);color:#fff}
+    .result-type.success{background:var(--success);color:#fff}
+    .result-title{font-weight:600}
+    .result-description{color:#ccc;margin-bottom:.5rem}
+    .result-code{background:#0f0f0f;border:1px solid #333;border-radius:3px;padding:.5rem;font-family:Monaco,Consolas,'Courier New',monospace;font-size:12px;margin:.5rem 0}
+    .result-suggestion{background:#1a2c1a;border:1px solid var(--success);border-radius:3px;padding:.5rem;margin-top:.5rem}
+    .result-suggestion-title{font-weight:600;color:var(--success);margin-bottom:.25rem}
+    .result-link{color:var(--accent);text-decoration:none}
+    .result-link:hover{text-decoration:underline}
+    .stats{display:flex;gap:1rem;margin-bottom:1rem;font-size:.9rem}
+    .stat{display:flex;align-items:center;gap:.25rem}
+    .stat-count{font-weight:600}
+    .empty-state{text-align:center;color:#666;padding:2rem}
+    .loading{text-align:center;color:var(--accent);padding:2rem}
+    @media(max-width:1024px){
+      .main-container{flex-direction:column;height:auto}
+      .input-section,.results-section{min-height:300px}
+    }
+  </style>
+</head>
+<body>
+<div class="header">
+  <h1>⚡ Spec‑Matrix Linter & Parser</h1>
+  <p class="subtitle">Analyze your HTML, CSS, and JavaScript code for deprecated, experimental, and browser-specific features</p>
+  <a href="index-final.html" style="color:var(--accent);text-decoration:none">← Back to Data Viewers</a>
+</div>
+
+<div class="main-container">
+  <div class="input-section">
+    <div class="controls">
+      <button class="btn" id="analyzeBtn">Analyze Code</button>
+      <button class="btn" id="clearBtn" style="background:#666">Clear All</button>
+      <span class="status" id="status">Ready to analyze</span>
+    </div>
+    
+    <div class="tabs">
+      <button class="tab active" data-tab="html">HTML</button>
+      <button class="tab" data-tab="css">CSS</button>
+      <button class="tab" data-tab="js">JavaScript</button>
+    </div>
+    
+    <div class="tab-content active" id="html-tab">
+      <textarea class="code-input" id="htmlInput" placeholder="Paste your HTML code here..."><!DOCTYPE html>
+<html>
+<head>
+  <title>Sample Page</title>
+</head>
+<body>
+  <marquee>This is deprecated!</marquee>
+  <div style="display: -webkit-flex;">Vendor prefix</div>
+  <input type="email" required>
+  <blink>Also deprecated</blink>
+</body>
+</html></textarea>
+    </div>
+    
+    <div class="tab-content" id="css-tab">
+      <textarea class="code-input" id="cssInput" placeholder="Paste your CSS code here...">/* Sample CSS with issues */
+.container {
+  display: -webkit-flex; /* Vendor prefix */
+  -webkit-user-select: none; /* Browser specific */
+  zoom: 1; /* IE-specific property */
+}
+
+.experimental {
+  container-type: inline-size; /* Experimental feature */
+  backdrop-filter: blur(10px); /* Check browser support */
+}</textarea>
+    </div>
+    
+    <div class="tab-content" id="js-tab">
+      <textarea class="code-input" id="jsInput" placeholder="Paste your JavaScript code here...">// Sample JavaScript with issues
+document.write('This is deprecated!');
+
+// Experimental feature
+const observer = new ResizeObserver(() => {});
+
+// Browser-specific
+if (window.webkitRequestAnimationFrame) {
+  window.webkitRequestAnimationFrame(animate);
+}
+
+// Deprecated method
+event.returnValue = false;</textarea>
+    </div>
+  </div>
+  
+  <div class="results-section">
+    <div class="stats" id="stats" style="display:none">
+      <div class="stat">
+        <span class="stat-count" id="errorCount">0</span>
+        <span style="color:var(--error)">Errors</span>
+      </div>
+      <div class="stat">
+        <span class="stat-count" id="warningCount">0</span>
+        <span style="color:var(--warning)">Warnings</span>
+      </div>
+      <div class="stat">
+        <span class="stat-count" id="infoCount">0</span>
+        <span style="color:var(--info)">Info</span>
+      </div>
+    </div>
+    
+    <div class="results-container" id="results">
+      <div class="empty-state">
+        Click "Analyze Code" to start linting your code
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Global variables for master data and linting results
+let webPlatformData = null;
+let lintingResults = [];
+
+// Tab switching functionality
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    
+    tab.classList.add('active');
+    document.getElementById(tab.dataset.tab + '-tab').classList.add('active');
+  });
+});
+
+// Clear functionality
+document.getElementById('clearBtn').addEventListener('click', () => {
+  document.getElementById('htmlInput').value = '';
+  document.getElementById('cssInput').value = '';
+  document.getElementById('jsInput').value = '';
+  document.getElementById('results').innerHTML = '<div class="empty-state">Click "Analyze Code" to start linting your code</div>';
+  document.getElementById('stats').style.display = 'none';
+  document.getElementById('status').textContent = 'Ready to analyze';
+  lintingResults = [];
+});
+
+// Load master data function
+async function loadMasterData() {
+  if (webPlatformData) return webPlatformData;
+  
+  try {
+    // Load CSS data
+    const cssResponse = await fetch('https://raw.githubusercontent.com/mdn/data/master/css/properties.json');
+    const cssData = await cssResponse.json();
+    
+    // Load HTML data (simplified for demo)
+    const htmlData = {
+      elements: {
+        'marquee': { status: 'deprecated', mdn_url: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/marquee' },
+        'blink': { status: 'deprecated', mdn_url: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blink' },
+        'center': { status: 'deprecated', mdn_url: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/center' }
+      }
+    };
+    
+    // Load JavaScript data (simplified for demo)
+    const jsData = {
+      methods: {
+        'document.write': { status: 'deprecated', mdn_url: 'https://developer.mozilla.org/en-US/docs/Web/API/Document/write' },
+        'event.returnValue': { status: 'deprecated', mdn_url: 'https://developer.mozilla.org/en-US/docs/Web/API/Event/returnValue' }
+      }
+    };
+    
+    webPlatformData = {
+      css: cssData,
+      html: htmlData,
+      javascript: jsData
+    };
+    
+    return webPlatformData;
+  } catch (error) {
+    console.error('Failed to load master data:', error);
+    return null;
+  }
+}
+
+// HTML parsing and linting
+function lintHTML(htmlCode) {
+  const results = [];
+  
+  try {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(htmlCode, 'text/html');
+    
+    // Check for deprecated elements
+    const deprecatedElements = ['marquee', 'blink', 'center', 'font', 'big', 'small'];
+    
+    deprecatedElements.forEach(tagName => {
+      const elements = doc.querySelectorAll(tagName);
+      elements.forEach(element => {
+        results.push({
+          type: 'error',
+          category: 'HTML',
+          title: `Deprecated HTML Element: <${tagName}>`,
+          description: `The <${tagName}> element is deprecated and should not be used.`,
+          code: element.outerHTML,
+          suggestion: getHTMLSuggestion(tagName),
+          mdn_url: `https://developer.mozilla.org/en-US/docs/Web/HTML/Element/${tagName}`
+        });
+      });
+    });
+    
+    // Check for vendor prefixes in inline styles
+    const elementsWithStyle = doc.querySelectorAll('[style]');
+    elementsWithStyle.forEach(element => {
+      const style = element.getAttribute('style');
+      if (style.includes('-webkit-') || style.includes('-moz-') || style.includes('-ms-')) {
+        results.push({
+          type: 'warning',
+          category: 'HTML',
+          title: 'Vendor Prefix in Inline Style',
+          description: 'Vendor prefixes in inline styles may not be necessary in modern browsers.',
+          code: `style="${style}"`,
+          suggestion: 'Consider using standard CSS properties or moving styles to a CSS file.',
+          mdn_url: 'https://developer.mozilla.org/en-US/docs/Glossary/Vendor_Prefix'
+        });
+      }
+    });
+    
+  } catch (error) {
+    results.push({
+      type: 'error',
+      category: 'HTML',
+      title: 'HTML Parsing Error',
+      description: `Failed to parse HTML: ${error.message}`,
+      code: '',
+      suggestion: 'Check your HTML syntax for errors.',
+      mdn_url: ''
+    });
+  }
+  
+  return results;
+}
+
+// CSS parsing and linting
+function lintCSS(cssCode) {
+  const results = [];
+  
+  try {
+    const ast = csstree.parse(cssCode);
+    
+    csstree.walk(ast, function(node) {
+      if (node.type === 'Declaration') {
+        const property = node.property;
+        
+        // Check for vendor prefixes
+        if (property.startsWith('-webkit-') || property.startsWith('-moz-') || property.startsWith('-ms-')) {
+          results.push({
+            type: 'info',
+            category: 'CSS',
+            title: 'Vendor Prefix Detected',
+            description: `CSS property "${property}" uses vendor prefix which may not be needed in modern browsers.`,
+            code: `${property}: ${csstree.generate(node.value)};`,
+            suggestion: `Consider using the standard property: "${property.replace(/^-\w+-/, '')}"`,
+            mdn_url: 'https://developer.mozilla.org/en-US/docs/Glossary/Vendor_Prefix'
+          });
+        }
+        
+        // Check for deprecated properties
+        const deprecatedProperties = ['zoom', 'filter', 'behavior'];
+        if (deprecatedProperties.includes(property)) {
+          results.push({
+            type: 'warning',
+            category: 'CSS',
+            title: `Deprecated CSS Property: ${property}`,
+            description: `The "${property}" property is deprecated or non-standard.`,
+            code: `${property}: ${csstree.generate(node.value)};`,
+            suggestion: getCSSPropertySuggestion(property),
+            mdn_url: `https://developer.mozilla.org/en-US/docs/Web/CSS/${property}`
+          });
+        }
+        
+        // Check for experimental properties
+        const experimentalProperties = ['container-type', 'container-name', 'backdrop-filter'];
+        if (experimentalProperties.includes(property)) {
+          results.push({
+            type: 'info',
+            category: 'CSS',
+            title: `Experimental CSS Property: ${property}`,
+            description: `The "${property}" property is experimental and may have limited browser support.`,
+            code: `${property}: ${csstree.generate(node.value)};`,
+            suggestion: 'Check browser compatibility before using in production.',
+            mdn_url: `https://developer.mozilla.org/en-US/docs/Web/CSS/${property}`
+          });
+        }
+      }
+    });
+    
+  } catch (error) {
+    results.push({
+      type: 'error',
+      category: 'CSS',
+      title: 'CSS Parsing Error',
+      description: `Failed to parse CSS: ${error.message}`,
+      code: '',
+      suggestion: 'Check your CSS syntax for errors.',
+      mdn_url: ''
+    });
+  }
+  
+  return results;
+}
+
+// JavaScript parsing and linting
+function lintJavaScript(jsCode) {
+  const results = [];
+  
+  try {
+    const ast = acorn.parse(jsCode, { ecmaVersion: 2022, sourceType: 'script' });
+    
+    // Simple AST traversal for demonstration
+    function walk(node) {
+      if (node.type === 'CallExpression') {
+        // Check for deprecated methods
+        if (node.callee.type === 'MemberExpression') {
+          const objectName = node.callee.object.name;
+          const propertyName = node.callee.property.name;
+          const fullMethod = `${objectName}.${propertyName}`;
+          
+          if (fullMethod === 'document.write') {
+            results.push({
+              type: 'error',
+              category: 'JavaScript',
+              title: 'Deprecated Method: document.write()',
+              description: 'document.write() is deprecated and can cause security issues.',
+              code: 'document.write(...)',
+              suggestion: 'Use modern DOM manipulation: element.innerHTML or element.textContent',
+              mdn_url: 'https://developer.mozilla.org/en-US/docs/Web/API/Document/write'
+            });
+          }
+        }
+      }
+      
+      if (node.type === 'MemberExpression') {
+        // Check for deprecated properties
+        if (node.property.name === 'returnValue' && node.object.name === 'event') {
+          results.push({
+            type: 'warning',
+            category: 'JavaScript',
+            title: 'Deprecated Property: event.returnValue',
+            description: 'event.returnValue is deprecated. Use event.preventDefault() instead.',
+            code: 'event.returnValue = false',
+            suggestion: 'Use event.preventDefault() for modern browsers.',
+            mdn_url: 'https://developer.mozilla.org/en-US/docs/Web/API/Event/returnValue'
+          });
+        }
+      }
+      
+      // Recursively walk child nodes
+      for (const key in node) {
+        if (node[key] && typeof node[key] === 'object') {
+          if (Array.isArray(node[key])) {
+            node[key].forEach(child => {
+              if (child && typeof child === 'object') walk(child);
+            });
+          } else {
+            walk(node[key]);
+          }
+        }
+      }
+    }
+    
+    walk(ast);
+    
+  } catch (error) {
+    results.push({
+      type: 'error',
+      category: 'JavaScript',
+      title: 'JavaScript Parsing Error',
+      description: `Failed to parse JavaScript: ${error.message}`,
+      code: '',
+      suggestion: 'Check your JavaScript syntax for errors.',
+      mdn_url: ''
+    });
+  }
+  
+  return results;
+}
+
+// Helper functions for suggestions
+function getHTMLSuggestion(tagName) {
+  const suggestions = {
+    'marquee': 'Use CSS animations with @keyframes and the animation property.',
+    'blink': 'Use CSS animations or the text-decoration-style property.',
+    'center': 'Use CSS text-align: center or flexbox for centering.',
+    'font': 'Use CSS font-family, font-size, and color properties.',
+    'big': 'Use CSS font-size property.',
+    'small': 'Use CSS font-size property.'
+  };
+  return suggestions[tagName] || 'Use modern HTML5 elements and CSS for styling.';
+}
+
+function getCSSPropertySuggestion(property) {
+  const suggestions = {
+    'zoom': 'Use CSS transform: scale() for scaling elements.',
+    'filter': 'Use CSS filter property (modern syntax) for visual effects.',
+    'behavior': 'Use JavaScript for interactive behaviors.'
+  };
+  return suggestions[property] || 'Use modern CSS properties for better browser support.';
+}
+
+// Display results function
+function displayResults(results) {
+  const resultsContainer = document.getElementById('results');
+  const statsContainer = document.getElementById('stats');
+  
+  if (results.length === 0) {
+    resultsContainer.innerHTML = '<div class="empty-state">✅ No issues found! Your code looks good.</div>';
+    statsContainer.style.display = 'none';
+    return;
+  }
+  
+  // Count results by type
+  const counts = { error: 0, warning: 0, info: 0 };
+  results.forEach(result => counts[result.type]++);
+  
+  // Update stats
+  document.getElementById('errorCount').textContent = counts.error;
+  document.getElementById('warningCount').textContent = counts.warning;
+  document.getElementById('infoCount').textContent = counts.info;
+  statsContainer.style.display = 'flex';
+  
+  // Generate HTML for results
+  const resultsHTML = results.map(result => `
+    <div class="result-item ${result.type}">
+      <div class="result-header">
+        <span class="result-type ${result.type}">${result.type}</span>
+        <span class="result-title">${result.title}</span>
+      </div>
+      <div class="result-description">${result.description}</div>
+      ${result.code ? `<div class="result-code">${escapeHtml(result.code)}</div>` : ''}
+      ${result.suggestion ? `
+        <div class="result-suggestion">
+          <div class="result-suggestion-title">Suggestion:</div>
+          ${result.suggestion}
+          ${result.mdn_url ? `<br><a href="${result.mdn_url}" class="result-link" target="_blank">Learn more on MDN</a>` : ''}
+        </div>
+      ` : ''}
+    </div>
+  `).join('');
+  
+  resultsContainer.innerHTML = resultsHTML;
+}
+
+// Utility function to escape HTML
+function escapeHtml(text) {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
+}
+
+// Main analyze function
+document.getElementById('analyzeBtn').addEventListener('click', async () => {
+  const analyzeBtn = document.getElementById('analyzeBtn');
+  const status = document.getElementById('status');
+  
+  analyzeBtn.disabled = true;
+  status.textContent = 'Loading master data...';
+  
+  try {
+    // Load master data
+    await loadMasterData();
+    
+    status.textContent = 'Analyzing code...';
+    
+    // Get input code
+    const htmlCode = document.getElementById('htmlInput').value;
+    const cssCode = document.getElementById('cssInput').value;
+    const jsCode = document.getElementById('jsInput').value;
+    
+    // Perform linting
+    lintingResults = [];
+    
+    if (htmlCode.trim()) {
+      lintingResults.push(...lintHTML(htmlCode));
+    }
+    
+    if (cssCode.trim()) {
+      lintingResults.push(...lintCSS(cssCode));
+    }
+    
+    if (jsCode.trim()) {
+      lintingResults.push(...lintJavaScript(jsCode));
+    }
+    
+    // Display results
+    displayResults(lintingResults);
+    
+    status.textContent = `Analysis complete - Found ${lintingResults.length} issue${lintingResults.length !== 1 ? 's' : ''}`;
+    
+  } catch (error) {
+    console.error('Analysis failed:', error);
+    status.textContent = 'Analysis failed';
+    document.getElementById('results').innerHTML = `
+      <div class="result-item error">
+        <div class="result-header">
+          <span class="result-type error">Error</span>
+          <span class="result-title">Analysis Failed</span>
+        </div>
+        <div class="result-description">An error occurred during analysis: ${error.message}</div>
+      </div>
+    `;
+  } finally {
+    analyzeBtn.disabled = false;
+  }
+});
+</script>
+</body>
+</html>
+
