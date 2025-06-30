@@ -57,9 +57,9 @@ These include:
     The name derives from the `X-UA-Compatible` HTTP header.
 
 > [!WARNING]
-> Unrecognized headers or invalid values are ignored by the browser.
-> **Do not set other security headers** using `<meta http-equiv=`, as this can lead to a false sense of security.
-> Some browsers may process headers that are not listed above, but this behavior varies across implementations.
+> Some browsers process additional headers that are not listed above.
+> Since unrecognized headers or invalid values are ignored, this can lead to inconsistent behavior across browser implementations.
+> In particular, **Do not set other security headers** using `<meta http-equiv=`, as this can lead to a false sense of security!
 
 ## Accessibility concerns
 
