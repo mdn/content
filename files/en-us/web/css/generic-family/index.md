@@ -11,7 +11,7 @@ The **`<generic-family>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/We
 
 ## Syntax
 
-## Values
+### Values
 
 The `<generic-family>` {{glossary("enumerated")}} type is specified using one of the values listed below:
 
