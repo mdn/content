@@ -577,6 +577,7 @@ Moreover, because web storage only supports saving string values, we will have t
      };
    };
    ```
+
    - Our `localStore` will be a function that when executed initially reads its content from web storage, and returns an object with three methods: `subscribe()`, `set()`, and `update()`.
    - When we create a new `localStore`, we'll have to specify the key of the web storage and an initial value. We then check if the value exists in web storage and, if not, we create it.
    - We use the [`localStorage.getItem(key)`](/en-US/docs/Web/API/Storage/getItem) and [`localStorage.setItem(key, value)`](/en-US/docs/Web/API/Storage/setItem) methods to read and write information to web storage, and the [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) and `toObj()` (which uses [`JSON.parse()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)) helper functions to convert the values.

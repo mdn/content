@@ -40,9 +40,10 @@ Array(arrayLength)
 - `arrayLength`
   - : If the only argument passed to the `Array` constructor is an integer
     between 0 and 2<sup>32</sup> - 1 (inclusive), this returns a new JavaScript array with
-    its `length` property set to that number (**Note:** this
-    implies an array of `arrayLength` empty slots, not slots with actual
-    `undefined` values — see [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)).
+    its `length` property set to that number.
+
+    > [!NOTE]
+    > This implies an array of `arrayLength` empty slots, not slots with actual `undefined` values — see [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)).
 
 ### Exceptions
 

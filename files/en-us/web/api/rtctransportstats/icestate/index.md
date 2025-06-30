@@ -3,10 +3,12 @@ title: "RTCTransportStats: iceState property"
 short-title: iceState
 slug: Web/API/RTCTransportStats/iceState
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.RTCStatsReport.type_transport.iceState
 ---
 
-{{APIRef("WebRTC")}}
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 The **`iceState`** property of the {{domxref("RTCTransportStats")}} dictionary is a string that indicates the current ICE state of the underlying {{domxref("RTCIceTransport")}}.
 

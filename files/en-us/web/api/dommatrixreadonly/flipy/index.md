@@ -16,6 +16,10 @@ The **`flipY()`** method of the {{domxref("DOMMatrixReadOnly")}} interface creat
 flipY()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix).
