@@ -97,19 +97,15 @@ filter: revert-layer;
 filter: unset;
 ```
 
-With a function, use the following:
-
-```css-nolint
-filter: <filter-function> [<filter-function>]* | none;
-```
+### Referencing an SVG filter
 
 You can use `url()` to reference an [SVG filter element](/en-US/docs/Web/SVG/Reference/Element/filter). For a reference to an SVG {{SVGElement("filter")}} element, use the following syntax:
 
 ```css
-filter: url(file.svg#filter-element-id);
+filter: url("file.svg#filter-element-id");
 ```
 
-## Functions
+### Functions
 
 The `filter` property is specified as `none` or one or more of the functions listed below. If the parameter for any function is invalid, the function returns `none`. Except where noted, the functions that take a value expressed with a percent sign (as in `34%`) also accept the value expressed as decimal (as in `0.34`).
 
@@ -185,7 +181,7 @@ When the `filter` property values contains multiple functions, the filters are a
     filter: sepia(100%);
     ```
 
-## Combining functions
+### Combining functions
 
 You may combine any number of functions to manipulate the rendering. The filters are applied in the order declared. The following example enhances the contrast and brightness of the image:
 
