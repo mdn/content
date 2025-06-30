@@ -38,20 +38,6 @@ const request = new Request("/upload", {
 console.log(request.duplex); // "half"
 ```
 
-### Handling missing duplex with ReadableStream
-
-```js
-try {
-  // This will throw if duplex is missing with ReadableStream
-  const invalidRequest = new Request("/upload", {
-    method: "POST",
-    body: new ReadableStream(),
-  });
-} catch (err) {
-  console.error(err); // TypeError: Failed to construct 'Request'
-}
-```
-
 ## Specifications
 
 {{Specifications}}
