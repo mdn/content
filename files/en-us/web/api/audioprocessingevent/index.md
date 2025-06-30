@@ -5,9 +5,12 @@ page-type: web-api-interface
 status:
   - deprecated
 browser-compat: api.AudioProcessingEvent
+sidebar:
+  - apiref:
+      - Web Audio API
 ---
 
-{{APIRef("Web Audio API")}}{{deprecated_header}}
+{{deprecated_header}}
 
 The `AudioProcessingEvent` interface of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) represents events that occur when a {{domxref("ScriptProcessorNode")}} input buffer is ready to be processed.
 

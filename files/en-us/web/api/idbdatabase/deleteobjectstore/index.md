@@ -4,9 +4,12 @@ short-title: deleteObjectStore()
 slug: Web/API/IDBDatabase/deleteObjectStore
 page-type: web-api-instance-method
 browser-compat: api.IDBDatabase.deleteObjectStore
+sidebar:
+  - apiref:
+      - IndexedDB
 ---
 
-{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
+{{AvailableInWorkers}}
 
 The **`deleteObjectStore()`** method of the
 {{domxref("IDBDatabase")}} interface destroys the object store with the given name in

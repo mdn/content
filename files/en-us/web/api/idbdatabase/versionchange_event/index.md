@@ -4,9 +4,10 @@ short-title: versionchange
 slug: Web/API/IDBDatabase/versionchange_event
 page-type: web-api-event
 browser-compat: api.IDBDatabase.versionchange_event
+sidebar:
+  - apiref:
+      - IndexedDB
 ---
-
-{{APIRef("IndexedDB")}}
 
 The `versionchange` event is fired when a database structure change ([`upgradeneeded`](/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event) event send on an [`IDBOpenDBRequest`](/en-US/docs/Web/API/IDBOpenDBRequest) or [`IDBFactory.deleteDatabase`](/en-US/docs/Web/API/IDBFactory/deleteDatabase)) was requested elsewhere (most probably in
 another window/tab on the same computer).

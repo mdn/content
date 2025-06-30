@@ -4,9 +4,12 @@ short-title: version
 slug: Web/API/IDBDatabase/version
 page-type: web-api-instance-property
 browser-compat: api.IDBDatabase.version
+sidebar:
+  - apiref:
+      - IndexedDB
 ---
 
-{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
+{{AvailableInWorkers}}
 
 The **`version`** property of the {{domxref("IDBDatabase")}}
 interface is a 64-bit integer

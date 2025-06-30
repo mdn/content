@@ -4,9 +4,12 @@ short-title: close()
 slug: Web/API/IDBDatabase/close
 page-type: web-api-instance-method
 browser-compat: api.IDBDatabase.close
+sidebar:
+  - apiref:
+      - IndexedDB
 ---
 
-{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
+{{AvailableInWorkers}}
 
 The **`close()`** method of the {{domxref("IDBDatabase")}}
 interface returns immediately and closes the connection in a separate thread.

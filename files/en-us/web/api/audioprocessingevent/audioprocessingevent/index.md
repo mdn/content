@@ -6,9 +6,10 @@ page-type: web-api-constructor
 status:
   - deprecated
 browser-compat: api.AudioProcessingEvent.AudioProcessingEvent
+sidebar: apiref
 ---
 
-{{APIRef}}{{Deprecated_header}}
+{{Deprecated_header}}
 
 The **`AudioProcessingEvent()`** constructor creates a new {{domxref("AudioProcessingEvent")}} object.
 

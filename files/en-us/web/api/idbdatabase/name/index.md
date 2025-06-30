@@ -4,9 +4,12 @@ short-title: name
 slug: Web/API/IDBDatabase/name
 page-type: web-api-instance-property
 browser-compat: api.IDBDatabase.name
+sidebar:
+  - apiref:
+      - IndexedDB
 ---
 
-{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
+{{AvailableInWorkers}}
 
 The **`name`** read-only property of the
 `IDBDatabase` interface is a string that contains the

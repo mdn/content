@@ -6,9 +6,10 @@ page-type: web-api-instance-property
 status:
   - deprecated
 browser-compat: api.AudioProcessingEvent.inputBuffer
+sidebar: apiref
 ---
 
-{{APIRef}}{{Deprecated_header}}
+{{Deprecated_header}}
 
 The **`inputBuffer`** read-only property of the {{domxref("AudioProcessingEvent")}} interface represents the input buffer of an audio processing event.
 

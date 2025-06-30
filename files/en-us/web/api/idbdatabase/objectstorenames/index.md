@@ -4,9 +4,12 @@ short-title: objectStoreNames
 slug: Web/API/IDBDatabase/objectStoreNames
 page-type: web-api-instance-property
 browser-compat: api.IDBDatabase.objectStoreNames
+sidebar:
+  - apiref:
+      - IndexedDB
 ---
 
-{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
+{{AvailableInWorkers}}
 
 The **`objectStoreNames`** read-only property of the
 {{domxref("IDBDatabase")}} interface is a {{ domxref("DOMStringList") }} containing a

@@ -3,9 +3,12 @@ title: IDBDatabase
 slug: Web/API/IDBDatabase
 page-type: web-api-interface
 browser-compat: api.IDBDatabase
+sidebar:
+  - apiref:
+      - IndexedDB
 ---
 
-{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
+{{AvailableInWorkers}}
 
 The **`IDBDatabase`** interface of the IndexedDB API provides a [connection to a database](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#database_connection); you can use an `IDBDatabase` object to open a [transaction](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#transaction) on your database then create, manipulate, and delete objects (data) in that database. The interface provides the only way to get and manage versions of the database.
 

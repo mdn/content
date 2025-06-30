@@ -4,9 +4,12 @@ short-title: createObjectStore()
 slug: Web/API/IDBDatabase/createObjectStore
 page-type: web-api-instance-method
 browser-compat: api.IDBDatabase.createObjectStore
+sidebar:
+  - apiref:
+      - IndexedDB
 ---
 
-{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
+{{AvailableInWorkers}}
 
 The **`createObjectStore()`** method of the
 {{domxref("IDBDatabase")}} interface creates and returns a new {{domxref("IDBObjectStore")}}.

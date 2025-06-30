@@ -6,9 +6,10 @@ page-type: web-api-instance-property
 status:
   - deprecated
 browser-compat: api.AudioProcessingEvent.outputBuffer
+sidebar: apiref
 ---
 
-{{APIRef}}{{Deprecated_header}}
+{{Deprecated_header}}
 
 The **`outputBuffer`** read-only property of the {{domxref("AudioProcessingEvent")}} interface represents the output buffer of an audio processing event.
 

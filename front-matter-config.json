@@ -33,14 +33,28 @@
         "description": "Sidebar navigation(s) to show, defined as YAML in /files/en-us/sidebars",
         "type": ["array", "string"],
         "items": {
-          "type": "string",
-          "enum": [
-            "mediasidebar",
-            "urlsidebar",
-            "xmlsidebar",
-            "xpathsidebar",
-            "xsltsidebar",
-            "exsltsidebar"
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "mediasidebar",
+                "urlsidebar",
+                "xmlsidebar",
+                "xpathsidebar",
+                "xsltsidebar",
+                "exsltsidebar"
+              ]
+            },
+            {
+              "type": "object",
+              "propertyNames": {
+                "enum": ["apiref"]
+              },
+              "additionalProperties": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            }
           ]
         }
       },
