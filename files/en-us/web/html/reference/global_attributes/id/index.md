@@ -8,7 +8,7 @@ browser-compat: html.global_attributes.id
 
 {{HTMLSidebar("Global_attributes")}}
 
-The **`id`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) defines an identifier (ID) which must be unique in the whole document.
+The **`id`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) defines an identifier (ID) that must be unique within the entire document.
 
 {{InteractiveExample("HTML Demo: id", "tabbed-shorter")}}
 
@@ -47,20 +47,22 @@ Also, not all valid ID attribute values are valid JavaScript identifiers. For ex
 
 The purpose of the ID attribute is to identify a single element when linking (using a [fragment identifier](/en-US/docs/Web/URI/Reference/Fragment)), scripting, or styling (with {{glossary("CSS")}}).
 
-Elements with ID attributes are available as global properties. The property name is the ID attribute, and the property value is the element. For example, given markup like:
+You can access elements with ID attributes as global properties of the `window` object, where the property name is the ID value, and the property value is the corresponding element. For example, given this markup:
 
 ```html
 <p id="preamble"></p>
 ```
 
-You could access the paragraph element in JavaScript using code like:
+You can access this paragraph element in JavaScript using the following code:
 
 ```js
 const content = window.preamble.textContent;
 ```
 
 > [!WARNING]
-> Relying on this behavior is dangerous and discouraged. It can lead to unexpected conflicts with some existing or future APIs in the browser. For example, if browsers introduce a new global property named `preamble`, then the same code will no longer be able to access the HTML element. Use `document.getElementById()` or `document.querySelector()` instead.
+> Relying on the `window["id-value"]` or `window.idValue` pattern is dangerous and discouraged because it can lead to unexpected conflicts with existing or future APIs in the browser.
+> For example, if a browser introduces a built-in global property named `preamble` in the future, your code may no longer be able to access the HTML element.
+> To avoid such conflicts, always use `document.getElementById()` or `document.querySelector()` to access elements by ID.
 
 ## Specifications
 
