@@ -36,7 +36,8 @@ Only certain types of {{HTMLElement("input")}} support this behavior, and it can
 
 Each `<option>` element should have a `value` attribute, which represents a suggestion to be entered into the input. It can also have a `label` attribute, or, missing that, some text content, which may be displayed by the browser instead of `value` (Firefox), or in addition to `value` (Chrome and Safari, as supplemental text). The exact content of the drop-down menu depends on the browser, but when clicked, content entered into control field will always come from the `value` attribute.
 
-> **Note:** `<datalist>` is not a replacement for {{HTMLElement("select")}}. A `<datalist>` does not represent an input itself; it is a list of suggested values for an associated control. The control can still accept any value that passes validation, even if it is not in this suggestion list.
+> [!NOTE]
+> `<datalist>` is not a replacement for {{HTMLElement("select")}}. A `<datalist>` does not represent an input itself; it is a list of suggested values for an associated control. The control can still accept any value that passes validation, even if it is not in this suggestion list.
 
 ## Attributes
 

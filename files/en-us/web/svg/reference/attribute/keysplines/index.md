@@ -78,7 +78,6 @@ svg {
 The attribute value is a semicolon-separated list of control point descriptions.
 
 - `<control-point>`
-
   - : Each control point description is a set of four values: `x1 y1 x2 y2`, describing the Bézier control points for one time segment. The {{SVGAttr("keyTimes")}} values that define the associated segment are the Bézier "anchor points", and the `keySplines` values are the control points. Thus, there must be one fewer sets of control points than there are {{SVGAttr("keyTimes")}}.
 
     The values of `x1 y1 x2 y2` must all be in the range 0 to 1.

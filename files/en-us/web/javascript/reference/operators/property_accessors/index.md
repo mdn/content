@@ -85,7 +85,7 @@ If you use a method for a numeric literal, and the numeric literal has no expone
 // because 77. === 77.0, no ambiguity
 ```
 
-In addition, [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) can only be accessed using dot notation within the class that defines them.
+In addition, [private elements](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) can only be accessed using dot notation within the class that defines them.
 
 ### Bracket notation
 

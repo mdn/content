@@ -26,11 +26,8 @@ None.
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with an object with the result of the update request.
 
 - `result`
-
   - : An object with the following properties:
-
     - `status`
-
       - : {{WebExtAPIRef('runtime.RequestUpdateCheckStatus')}}. The result of the update check.
 
     - `version` {{optional_inline}}

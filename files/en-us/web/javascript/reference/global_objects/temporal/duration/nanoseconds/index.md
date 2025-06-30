@@ -1,5 +1,6 @@
 ---
 title: Temporal.Duration.prototype.nanoseconds
+short-title: nanoseconds
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/nanoseconds
 page-type: javascript-instance-accessor-property
 status:

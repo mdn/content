@@ -6168,15 +6168,6 @@
       "rachelandrew"
     ]
   },
-  "Learn_web_development/Core/CSS_layout/Test_your_skills/Multicolumn": {
-    "modified": "2020-07-16T22:27:35.746Z",
-    "contributors": [
-      "jpfkd",
-      "MelchiorIm3Tal",
-      "chrisdavidmills",
-      "rachelandrew"
-    ]
-  },
   "Learn_web_development/Core/CSS_layout/Test_your_skills/Position": {
     "modified": "2020-07-16T22:27:34.985Z",
     "contributors": [
@@ -102182,7 +102173,7 @@
       "kscarfone"
     ]
   },
-  "Web/JavaScript/Reference/Classes/Private_properties": {
+  "Web/JavaScript/Reference/Classes/Private_elements": {
     "modified": "2020-12-03T08:29:17.673Z",
     "contributors": [
       "chrisdavidmills",

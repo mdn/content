@@ -141,7 +141,7 @@ class ChildClass extends ParentClass {
 console.log(new ChildClass()); // TypeError: Derived constructors may only return object or undefined
 ```
 
-If the parent class constructor returns an object, that object will be used as the `this` value for the derived class when further initializing [class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields). This trick is called ["return overriding"](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties#returning_overriding_object), which allows a derived class's fields (including [private](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) ones) to be defined on unrelated objects.
+If the parent class constructor returns an object, that object will be used as the `this` value for the derived class when further initializing [class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields). This trick is called ["return overriding"](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements#returning_overriding_object), which allows a derived class's fields (including [private](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) ones) to be defined on unrelated objects.
 
 ### Subclassing built-ins
 

@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainDate.prototype.toPlainYearMonth()
+short-title: toPlainYearMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/toPlainYearMonth
 page-type: javascript-instance-method
 status:

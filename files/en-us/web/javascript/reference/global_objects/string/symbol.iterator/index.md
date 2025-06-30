@@ -1,5 +1,6 @@
 ---
 title: String.prototype[Symbol.iterator]()
+short-title: "[Symbol.iterator]()"
 slug: Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.@@iterator

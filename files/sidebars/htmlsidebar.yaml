@@ -67,6 +67,7 @@ sidebar:
         link: /Web/HTML/Reference/Elements/meta/name
         details: closed
         code: true
+      - link: /Web/HTML/Reference/Elements/meta/http-equiv
   - title: Attribute_values
     details: closed
     children:

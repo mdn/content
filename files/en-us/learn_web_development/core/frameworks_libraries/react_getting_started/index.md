@@ -344,7 +344,8 @@ We then import our `App()` function and `index.css`, which holds global styles t
 
 We then call the `createRoot()` function, which defines the root node of our application. This takes as an argument the DOM element inside which we want our React app to be rendered. In this case, that's the DOM element with an ID of `root`. Finally, we chain the `render()` method onto the `createRoot()` call, passing it the JSX expression that we want to render inside our root. By writing `<App />` as this JSX expression, we're telling React to call the `App()` _function_, which renders the `App` _component_ inside the root node.
 
-> **Note:** `<App />` is rendered inside a special `<React.StrictMode>` component. This component helps developers catch potential problems in their code.
+> [!NOTE]
+> `<App />` is rendered inside a special `<React.StrictMode>` component. This component helps developers catch potential problems in their code.
 
 You can read up on these React APIs, if you'd like:
 

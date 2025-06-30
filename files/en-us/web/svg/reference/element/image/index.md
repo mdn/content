@@ -45,7 +45,7 @@ SVG files displayed with `<image>` are [treated as an image](/en-US/docs/Web/SVG
 - {{SVGAttr("decoding")}}
   - : Provides a hint to the browser as to whether it should perform image decoding synchronously or asynchronously.
     _Value type_: `async | sync | auto`; _Default value_: `auto`; _Animatable_: **yes**
-- {{SVGAttr("fetchpriority")}}
+- {{SVGAttr("fetchpriority")}} {{experimental_inline}} {{non-standard_inline}}
   - : Provides a hint of the relative priority to use when fetching an external image.
     Allowed values:
     - `high`

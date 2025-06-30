@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.toLocaleString()
+short-title: toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.toLocaleString
@@ -70,7 +71,7 @@ prices.toLocaleString("ja-JP", { style: "currency", currency: "JPY" });
 
 ### List separators
 
-The list separator is not affected by the `locales` parameter. To configure it, use {{jsxref("Intl.Locale")}} instead.
+The list separator is not affected by the `locales` parameter. To configure it, use {{jsxref("Intl.ListFormat")}} instead.
 
 ```js
 const nums = [8888, 9999];

@@ -1,5 +1,6 @@
 ---
 title: BigInt() constructor
+short-title: BigInt()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/BigInt
 page-type: javascript-constructor
 browser-compat: javascript.builtins.BigInt.BigInt
@@ -15,7 +16,8 @@ The **`BigInt()`** function returns primitive values of type BigInt.
 BigInt(value)
 ```
 
-> **Note:** `BigInt()` can only be called without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to construct it with `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `BigInt()` can only be called without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to construct it with `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

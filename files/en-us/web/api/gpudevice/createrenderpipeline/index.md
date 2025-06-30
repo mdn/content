@@ -51,9 +51,7 @@ The `depthStencil` object can contain the following properties:
 - `depthBiasSlopeScale` {{optional_inline}}
   - : A number representing a depth bias that scales with the fragment's slope. If omitted, `depthBiasSlopeScale` defaults to 0.
 - `depthCompare` {{optional_inline}}
-
   - : An enumerated value specifying the comparison operation used to test fragment depths against `depthStencilAttachment` depth values. Possible values are:
-
     - `"never"`: Comparison tests never pass.
     - `"less"`: A provided value passes the comparison test if it is less than the sampled value.
     - `"equal"`: A provided value passes the comparison test if it is equal to the sampled value.
@@ -66,7 +64,6 @@ The `depthStencil` object can contain the following properties:
     `depthCompare` is not required if the specified `format` does not have a depth component, or if the comparison operation is not used.
 
 - `depthWriteEnabled` {{optional_inline}}
-
   - : A boolean. A value of `true` specifies that the {{domxref("GPURenderPipeline")}} can modify `depthStencilAttachment` depth values after creation. Setting it to `false` means it cannot.
 
     `depthWriteEnabled` is not required if the specified `format` does not have a depth component.
@@ -74,15 +71,11 @@ The `depthStencil` object can contain the following properties:
 - `format`
   - : An enumerated value specifying the `depthStencilAttachment` format that the {{domxref("GPURenderPipeline")}} will be compatible with. See the specification's [Texture Formats](https://gpuweb.github.io/gpuweb/#enumdef-gputextureformat) section for all the available `format` values.
 - `stencilBack` {{optional_inline}}
-
   - : An object that defines how stencil comparisons and operations are performed for back-facing primitives. Its properties can include:
-
     - `compare` {{optional_inline}}
       - : An enumerated value specifying the comparison operation used when testing fragments against `depthStencilAttachment` stencil values. Possible values are the same as for the `depthCompare` property; see above. If omitted, `compare` defaults to `"always"`.
     - `depthFailOp` {{optional_inline}}
-
       - : An enumerated value specifying the stencil operation performed if the fragment depth comparison described by `depthCompare` fails. Possible values are:
-
         - `"decrement-clamp"`: Decrement the current render state stencil value, clamping it to 0.
         - `"decrement-wrap"`: Decrement the current render state stencil value, wrapping it to the maximum representable value of the `depthStencilAttachment`'s stencil aspect if the value goes below 0.
         - `"invert"`: Bitwise-invert the current render state stencil value.
@@ -109,14 +102,14 @@ The `depthStencil` object can contain the following properties:
 - `stencilWriteMask` {{optional_inline}}
   - : A bitmask controlling which `depthStencilAttachment` stencil value bits are written to when performing stencil operations. If omitted, `stencilWriteMask` defaults to `0xFFFFFFFF`.
 
-> **Note:** `depthStencilAttachment` values are specified during {{domxref("GPUCommandEncoder.beginRenderPass()")}} calls, when the {{domxref("GPURenderPipeline")}} is actually used to perform a render pass.
+> [!NOTE]
+> `depthStencilAttachment` values are specified during {{domxref("GPUCommandEncoder.beginRenderPass()")}} calls, when the {{domxref("GPURenderPipeline")}} is actually used to perform a render pass.
 
 ### `fragment` object structure
 
 The `fragment` object contains an array of objects, each of which can contain the following properties:
 
 - `constants` {{optional_inline}}
-
   - : A sequence of record types, with the structure `(id, value)`, representing override values for [WGSL constants that can be overridden in the pipeline](https://gpuweb.github.io/gpuweb/#typedefdef-gpupipelineconstantvalue). These behave like [ordered maps](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map). In each case, the `id` is a key used to identify or select the record, and the `constant` is an enumerated value representing a WGSL.
 
     Depending on which constant you want to override, the `id` may take the form of the numeric ID of the constant, if one is specified, or otherwise the constant's identifier name.
@@ -138,7 +131,6 @@ The `fragment` object contains an array of objects, each of which can contain th
     ```
 
 - `entryPoint` {{optional_inline}}
-
   - : The name of the function in the `module` that this stage will use to perform its work. The corresponding shader function must have the `@fragment` attribute to be identified as this entry point. See [Entry Point Declaration](https://gpuweb.github.io/gpuweb/wgsl/#entry-point-decl) for more information.
 
     You can omit the `entryPoint` property if your shader code contains a single function with the `@fragment` attribute set — the browser will use this as the default entry point. If `entryPoint` is omitted and the browser cannot determine a default entry point, a {{domxref("GPUValidationError")}} is generated and the resulting {{domxref("GPURenderPipeline")}} will be invalid.
@@ -146,24 +138,17 @@ The `fragment` object contains an array of objects, each of which can contain th
 - `module`
   - : A {{domxref("GPUShaderModule")}} object containing the [WGSL](https://gpuweb.github.io/gpuweb/wgsl/) code that this programmable stage will execute.
 - `targets`
-
   - : an array of objects representing color states that represent configuration details for the colors output by the fragment shader stage. These objects can include the following properties:
-
     - `blend` {{optional_inline}}
-
       - : A object that describes a blend mode to be applied to the output color. `blend` has two properties:
-
         - `alpha`
           - : Describes the alpha channel value.
         - `color`
           - : Describes the color value.
 
         `alpha` and `color` both take an object as a value that can include the following properties:
-
         - `dstFactor` {{optional_inline}}
-
           - : An enumerated value that defines the blend factor operation to be performed on values from the target attachment. Possible values are:
-
             - `"constant"`
             - `"dst"`
             - `"dst-alpha"`
@@ -188,9 +173,7 @@ The `fragment` object contains an array of objects, each of which can contain th
             > The `dual-source-blending` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) needs to be enabled for the `src1`, `one-minus-src1`, `src1-alpha`, and `one-minus-src1-alpha` blend factor operations to be used successfully. If not, a {{domxref("GPUValidationError")}} is generated.
 
         - `operation` {{optional_inline}}
-
           - : An enumerated value that defines the algorithm used to combine source and destination blend factors, to calculate the final values written to the target attachment components. Possible values are:
-
             - `"add"`
             - `"max"`
             - `"min"`
@@ -206,16 +189,13 @@ The `fragment` object contains an array of objects, each of which can contain th
         > For a detailed explanation of the algorithms defined by each `dstFactor`/`srcFactor` and `operation` enumerated value, see the [Blend State](https://gpuweb.github.io/gpuweb/#blend-state) section of the specification.
 
     - `format`
-
       - : An enumerated value specifying the required format for output colors. See the specification's [Texture Formats](https://gpuweb.github.io/gpuweb/#enumdef-gputextureformat) section for all the available `format` values.
 
         > [!NOTE]
         > For the `r32float`, `rg32float`, and `rgba32float` formats to be used with [blending](#blend), the `float32-blendable` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) must be available in the device.
 
     - `writeMask` {{optional_inline}}
-
       - : One or more {{glossary("bitwise flags")}} defining the write mask to apply to the color target state. Possible flag values are:
-
         - `GPUColorWrite.RED`
         - `GPUColorWrite.GREEN`
         - `GPUColorWrite.BLUE`
@@ -233,7 +213,6 @@ The `multisample` object can contain the following properties:
 - `alphaToCoverageEnabled` {{optional_inline}}
   - : A boolean. A value of `true` indicates that a fragment's alpha channel should be used to generate a sample coverage mask. If omitted, `alphaToCoverageEnabled` defaults to `false`.
 - `count` {{optional_inline}}
-
   - : A number that defines the number of samples per pixel. The pipeline will be compatible only with attachment textures (`colorAttachment`s and `depthStencilAttachment`s) with matching `sampleCounts` (see {{domxref("GPUTexture")}}).
 
     If omitted, `count` defaults to 1.
@@ -241,16 +220,15 @@ The `multisample` object can contain the following properties:
 - `mask` {{optional_inline}}
   - : A bitmask that determines which samples are written to. If omitted, `mask` defaults to `0xFFFFFFFF`.
 
-> **Note:** `colorAttachment` and `depthStencilAttachment` values are specified during {{domxref("GPUCommandEncoder.beginRenderPass()")}} calls, when the {{domxref("GPURenderPipeline")}} is actually used to perform a render pass.
+> [!NOTE]
+> `colorAttachment` and `depthStencilAttachment` values are specified during {{domxref("GPUCommandEncoder.beginRenderPass()")}} calls, when the {{domxref("GPURenderPipeline")}} is actually used to perform a render pass.
 
 ### `primitive` object structure
 
 The `primitive` object can contain the following properties:
 
 - `cullMode` {{optional_inline}}
-
   - : An enumerated value that defines which polygon orientation will be culled, if any. Possible values are:
-
     - `"back"`: Back-facing polygons are culled.
     - `"front"`: Front-facing polygons are culled.
     - `"none"`: No polygons are culled.
@@ -258,9 +236,7 @@ The `primitive` object can contain the following properties:
     If omitted, `cullMode` defaults to `"none"`.
 
 - `frontFace` {{optional_inline}}
-
   - : An enumerated value that defines which polygons are considered front-facing. Possible values are:
-
     - `"ccw"`: Polygons with vertices whose framebuffer coordinates are given in counter-clockwise order.
     - `"cw"`: Polygons with vertices whose framebuffer coordinates are given in clockwise order.
 
@@ -270,18 +246,14 @@ The `primitive` object can contain the following properties:
     > The `frontFace` and `cullMode` values have no effect on the `"point-list"`, `"line-list"`, or `"line-strip"` topologies.
 
 - `stripIndexFormat` {{optional_inline}}
-
   - : An enumerated value that determines the index buffer format and primitive restart value in the case of pipelines with strip topologies (`"line-strip"` or `"triangle-strip"`). The primitive restart value specifies which index value indicates that a new primitive should be started rather than continuing to construct the strip with the prior indexed vertices. Possible values are:
-
     - `"uint16"`: Indicates a byte size of 2 and a primitive restart value of `0xFFFF`.
     - `"uint32"`: Indicates a byte size of 4 and a primitive restart value of `0xFFFFFFFF`.
 
     GPU primitive states that specify a strip primitive topology must specify a strip index format if they are used for indexed draws (for example, via {{domxref("GPURenderPassEncoder.drawIndexed()")}}) so that the primitive restart value that will be used is known at pipeline creation time. Pipelines with list primitive topologies (`"line-list"`, `"point-list"`, or `"triangle-list"`) should not specify a `stripIndexFormat` value. They will instead use the index format passed to, for example, {{domxref("GPURenderPassEncoder.setIndexBuffer()")}} when doing indexed rendering.
 
 - `topology` {{optional_inline}}
-
   - : An enumerated value that defines the type of primitive to be constructed from the specified `vertex` inputs. Possible values are:
-
     - `"line-list"`: Each consecutive pair of two vertices defines a line primitive.
     - `"line-strip"`: Each vertex after the first defines a line primitive between it and the previous vertex.
     - `"point-list"`: Each vertex defines a point primitive.
@@ -291,7 +263,6 @@ The `primitive` object can contain the following properties:
     If omitted, `topology` defaults to `"triangle-list"`.
 
 - `unclippedDepth` {{optional_inline}}
-
   - : A boolean. A value of `true` indicates that depth clipping is disabled. If omitted, `unclippedDepth` defaults to `false`. Note that to control depth clipping, the `depth-clip-control` {{domxref("GPUSupportedFeatures", "feature", "", "nocode")}} must be enabled in the {{domxref("GPUDevice")}}.
 
     > [!NOTE]
@@ -302,7 +273,6 @@ The `primitive` object can contain the following properties:
 The `vertex` object can contain the following properties:
 
 - `constants` {{optional_inline}}
-
   - : A sequence of record types, with the structure `(id, value)`, representing override values for [WGSL constants that can be overridden in the pipeline](https://gpuweb.github.io/gpuweb/#typedefdef-gpupipelineconstantvalue). These behave like [ordered maps](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map). In each case, the `id` is a key used to identify or select the record, and the `constant` is an enumerated value representing a WGSL.
 
     Depending on which constant you want to override, the `id` may take the form of the numeric ID of the constant, if one is specified, or otherwise the constant's identifier name.
@@ -324,7 +294,6 @@ The `vertex` object can contain the following properties:
     ```
 
 - `entryPoint` {{optional_inline}}
-
   - : The name of the function in the `module` that this stage will use to perform its work. The corresponding shader function must have the `@vertex` attribute to be identified as this entry point. See [Entry Point Declaration](https://gpuweb.github.io/gpuweb/wgsl/#entry-point-decl) for more information.
 
     You can omit the `entryPoint` property if your shader code contains a single function with the `@vertex` attribute set — the browser will use this as the default entry point. If `entryPoint` is omitted and the browser cannot determine a default entry point, a {{domxref("GPUValidationError")}} is generated and the resulting {{domxref("GPURenderPipeline")}} will be invalid.
@@ -332,9 +301,7 @@ The `vertex` object can contain the following properties:
 - `module`
   - : A {{domxref("GPUShaderModule")}} object containing the [WGSL](https://gpuweb.github.io/gpuweb/wgsl/) code that this programmable stage will execute.
 - `buffers` {{optional_inline}}
-
   - : An array of objects, each representing the expected layout of a vertex buffer used in the pipeline. Each object can contain the following properties:
-
     - `arrayStride`
       - : A number representing the stride, in bytes, between the different structures (e.g., vertices) inside the buffer.
     - `attributes`
@@ -346,9 +313,7 @@ The `vertex` object can contain the following properties:
         - `shaderLocation`
           - : The numeric location associated with this attribute, which will correspond with a [`@location`](https://gpuweb.github.io/gpuweb/wgsl/#input-output-locations) attribute declared in the WGSL code of the associated {{domxref("GPUShaderModule")}} referenced in the `vertex` object's `module` property.
     - `stepMode` {{optional_inline}}
-
       - : An enumerated value that defines whether the separate structures inside the buffer represent vertices or instances. Possible values are:
-
         - `"instance"`: Each structure is an instance — the address is advanced by `arrayStride` for each instance.
         - `"vertex"`: Each structure is a vertex — the address is advanced by `arrayStride` for each vertex, and reset between instances.
 

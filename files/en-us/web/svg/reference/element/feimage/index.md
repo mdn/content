@@ -15,17 +15,7 @@ The **`<feImage>`** [SVG](/en-US/docs/Web/SVG) filter primitive fetches image da
 ## Attributes
 
 - {{SVGAttr("crossorigin")}}
-- {{SVGAttr("fetchpriority")}}
-  - : Provides a hint of the relative priority to use when fetching an external image.
-    Allowed values:
-    - `high`
-      - : Fetches the external image at a high priority relative to other external resources.
-    - `low`
-      - : Fetches the external image at a low priority relative to other external resources.
-    - `auto`
-      - : Doesn't set a preference for the fetch priority.
-        It is used if no value or an invalid value is set.
-        This is the default.
+- {{SVGAttr("fetchpriority")}} {{experimental_inline}}
 - {{SVGAttr("preserveAspectRatio")}}
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}
 

@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.pop()
+short-title: pop()
 slug: Web/JavaScript/Reference/Global_Objects/Array/pop
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.pop

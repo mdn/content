@@ -69,10 +69,12 @@ The `mask-border-width` property may be specified using one, two, three, or four
 
 ### Basic usage
 
-This property doesn't appear to be supported anywhere yet. When it eventually starts to be supported, it will serve to define the width of the border mask — setting this to a different value to [`mask-border-slice`](/en-US/docs/Web/CSS/mask-border-slice) will cause the slices to be scaled to fit the border mask.
+`mask-border-width` defines the width of the border mask — setting this to a different value to [`mask-border-slice`](/en-US/docs/Web/CSS/mask-border-slice) will cause the slices to be scaled to fit the border mask.
 
 ```css
-mask-border-width: 30 fill;
+/* Final mask scaled down to 20px wide */
+mask-border-slice: 30px;
+mask-border-width: 20px;
 ```
 
 Chromium-based browsers support an outdated version of this property — `mask-box-image-width` — with a prefix:

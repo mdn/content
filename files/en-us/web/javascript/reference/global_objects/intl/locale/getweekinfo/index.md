@@ -1,5 +1,6 @@
 ---
 title: Intl.Locale.prototype.getWeekInfo()
+short-title: getWeekInfo()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getWeekInfo
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.Locale.getWeekInfo

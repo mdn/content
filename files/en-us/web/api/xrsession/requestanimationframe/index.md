@@ -42,11 +42,9 @@ requestAnimationFrame(animationFrameCallback)
 ### Parameters
 
 - `animationFrameCallback`
-
   - : A function which is called before the next repaint in order to allow you to update
     and render the XR scene based on elapsed time, animation, user input changes, and so
     forth. The callback receives as input two parameters:
-
     - `time`
       - : A {{domxref("DOMHighResTimeStamp")}} indicating the time offset at which the
         updated viewer state was received from the WebXR device.

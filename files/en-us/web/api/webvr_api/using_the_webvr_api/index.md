@@ -16,7 +16,6 @@ The WebVR API is a fantastic addition to the web developer's toolkit, allowing W
 To get started, you need:
 
 - Supporting VR hardware.
-
   - The cheapest option is to use a mobile device, supporting browser, and device mount (e.g., Google Cardboard). This won't be quite as good an experience as dedicated hardware, but you won't need to purchase a powerful computer or dedicated VR display.
   - Dedicated hardware can be costly, but it does provide a better experience. The most WebVR-compatible hardware at the moment is the HTC VIVE, and The Oculus Rift. The front page of [webvr.info](https://webvr.info/) has some further useful information about available hardware, and what browser support them.
 

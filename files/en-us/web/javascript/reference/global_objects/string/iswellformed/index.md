@@ -1,5 +1,6 @@
 ---
 title: String.prototype.isWellFormed()
+short-title: isWellFormed()
 slug: Web/JavaScript/Reference/Global_Objects/String/isWellFormed
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.isWellFormed

@@ -176,9 +176,7 @@ Features include:
 - [`poster`](/en-US/docs/Web/HTML/Reference/Elements/video#poster)
   - : The URL of an image which will be displayed before the video is played. It is intended to be used for a splash screen or advertising screen.
 - [`preload`](/en-US/docs/Web/HTML/Reference/Elements/video#preload)
-
   - : Used for buffering large files; it can take one of three values:
-
     - `"none"` does not buffer the file
     - `"auto"` buffers the media file
     - `"metadata"` buffers only the metadata for the file
