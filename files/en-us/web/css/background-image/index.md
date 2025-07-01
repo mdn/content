@@ -29,7 +29,7 @@ background-image:
 
 ```css interactive-example-choice
 background-image:
-  linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
+  linear-gradient(rgb(0 0 255 / 0.5), rgb(255 255 0 / 0.5)),
   url("/shared-assets/images/examples/lizard.png");
 ```
 

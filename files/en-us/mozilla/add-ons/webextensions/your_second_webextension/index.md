@@ -136,7 +136,7 @@ The HTML file looks like this:
 
 ```html
 <!doctype html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="choose_beast.css" />

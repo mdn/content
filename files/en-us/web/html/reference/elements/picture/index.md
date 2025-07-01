@@ -66,7 +66,7 @@ If the {{HTMLElement("source")}}'s media condition evaluates to `false`, the bro
 
 ```html
 <picture>
-  <source srcset="mdn-logo-wide.png" media="(min-width: 600px)" />
+  <source srcset="mdn-logo-wide.png" media="(width >= 600px)" />
   <img src="mdn-logo-narrow.png" alt="MDN" />
 </picture>
 ```

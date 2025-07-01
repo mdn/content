@@ -11,24 +11,12 @@ browser-compat: api.Document.cookie
 The {{domxref("Document")}} property `cookie` lets you read and write [cookies](/en-US/docs/Web/HTTP/Guides/Cookies) associated with the document.
 It serves as a getter and setter for the actual values of the cookies.
 
-## Syntax
+## Value
 
-### Read all cookies accessible from this location
-
-```js
-allCookies = document.cookie;
-```
-
-In the code above `allCookies` is a string containing a semicolon-separated list of all cookies (i.e., `key=value` pairs).
+A string containing a semicolon-separated list of all cookies (i.e., `key=value` pairs).
 Note that each _key_ and _value_ may be surrounded by whitespace (space and tab characters): in fact, {{RFC(6265)}} mandates a single space after each semicolon, but some user agents may not abide by this.
 
-### Write a new cookie
-
-```js
-document.cookie = newCookie;
-```
-
-In the code above, `newCookie` is a string of form `key=value`, specifying the cookie to set/update. Note that you can only set/update a single cookie at a time using this method. Consider also that:
+You can also assign to this property a string of the form `"key=value"`, specifying the cookie to set/update. Note that you can only set/update a single cookie at a time using this method. Consider also that:
 
 - Any of the following cookie attribute values can optionally follow the key-value pair, each preceded by a semicolon separator:
   - `;domain=domain` (e.g., `example.com` or `subdomain.example.com`): The host to which the cookie will be sent.
@@ -316,27 +304,27 @@ Read more about [Cookies and Security](https://humanwhocodes.com/blog/2009/05/12
 - [RFC 2965](https://datatracker.ietf.org/doc/html/rfc2965) (Section 5.3, "Implementation Limits") specifies that there should be **no maximum length** of a cookie's key or value size, and encourages implementations to support **arbitrarily large cookies**.
   Each browser's implementation maximum will necessarily be different, so consult individual browser documentation.
 
-The reason for the [syntax](#syntax) of the `document.cookie` accessor property is due to the client-server nature of cookies, which differs from other client-client storage methods (like, for instance, [localStorage](/en-US/docs/Web/API/Web_Storage_API)):
+The reason for the asymmetry between getting and setting the `document.cookie` accessor property is due to the client-server nature of cookies, which differs from other client-client storage methods (like, for instance, [localStorage](/en-US/docs/Web/API/Web_Storage_API)):
 
-### The server tells the client to store a cookie
+- The server tells the client to store a cookie:
 
-```bash
-HTTP/1.0 200 OK
-Content-type: text/html
-Set-Cookie: cookie_name1=cookie_value1
-Set-Cookie: cookie_name2=cookie_value2; expires=Sun, 16 Jul 3567 06:23:41 GMT
+  ```http
+  HTTP/1.0 200 OK
+  Content-type: text/html
+  Set-Cookie: cookie_name1=cookie_value1
+  Set-Cookie: cookie_name2=cookie_value2; expires=Sun, 16 Jul 3567 06:23:41 GMT
 
-[content of the page here]
-```
+  [content of the page here]
+  ```
 
-### The client sends back to the server its cookies previously stored
+- The client sends back to the server its cookies previously stored:
 
-```bash
-GET /sample_page.html HTTP/1.1
-Host: www.example.org
-Cookie: cookie_name1=cookie_value1; cookie_name2=cookie_value2
-Accept: */*
-```
+  ```http
+  GET /sample_page.html HTTP/1.1
+  Host: www.example.org
+  Cookie: cookie_name1=cookie_value1; cookie_name2=cookie_value2
+  Accept: */*
+  ```
 
 ## Specifications
 

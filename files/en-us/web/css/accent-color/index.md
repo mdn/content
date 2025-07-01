@@ -20,11 +20,11 @@ accent-color: #74992e;
 ```
 
 ```css interactive-example-choice
-accent-color: rgb(255, 255, 128);
+accent-color: rgb(255 255 128);
 ```
 
 ```css interactive-example-choice
-accent-color: hsl(250, 100%, 34%);
+accent-color: hsl(250 100% 34%);
 ```
 
 ```html interactive-example

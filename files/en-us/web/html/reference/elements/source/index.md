@@ -98,7 +98,7 @@ This example demonstrates how to offer an alternate source file for viewports ab
 
 ```html
 <video controls>
-  <source src="foo-large.webm" media="(min-width: 800px)" />
+  <source src="foo-large.webm" media="(width >= 800px)" />
   <source src="foo.webm" />
   I'm sorry; your browser doesn't support HTML video.
 </video>
@@ -112,8 +112,8 @@ In this example, two `<source>` elements are included within {{HTMLElement("pict
 
 ```html
 <picture>
-  <source srcset="mdn-logo-wide.png" media="(min-width: 800px)" />
-  <source srcset="mdn-logo-medium.png" media="(min-width: 600px)" />
+  <source srcset="mdn-logo-wide.png" media="(width >= 800px)" />
+  <source srcset="mdn-logo-medium.png" media="(width >= 600px)" />
   <img src="mdn-logo-narrow.png" alt="MDN Web Docs" />
 </picture>
 ```
@@ -129,17 +129,17 @@ A [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) allow
 <picture>
   <source
     srcset="landscape.png"
-    media="(min-width: 1000px)"
+    media="(width >= 1000px)"
     width="1000"
     height="400" />
   <source
     srcset="square.png"
-    media="(min-width: 800px)"
+    media="(width >= 800px)"
     width="800"
     height="800" />
   <source
     srcset="portrait.png"
-    media="(min-width: 600px)"
+    media="(width >= 600px)"
     width="600"
     height="800" />
   <img

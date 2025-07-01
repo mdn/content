@@ -226,7 +226,7 @@ This example demonstrates how the {{domxref("window.getComputedStyle")}} method 
 ```css
 #d1 {
   margin-left: 10px;
-  background-color: rgb(173, 216, 230);
+  background-color: rgb(173 216 230);
   height: 20px;
   max-width: 20px;
 }

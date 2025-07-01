@@ -22,11 +22,11 @@ text-decoration-color: #21ff21;
 ```
 
 ```css interactive-example-choice
-text-decoration-color: rgb(255, 90, 255);
+text-decoration-color: rgb(255 90 255);
 ```
 
 ```css interactive-example-choice
-text-decoration-color: hsl(70, 100%, 40%);
+text-decoration-color: hsl(70 100% 40%);
 ```
 
 ```css interactive-example-choice
