@@ -1595,10 +1595,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-6.0.24.tgz#232e792809adf6cc0a62314008733dd38effb158"
   integrity sha512-Z26Qu1EyLb9cQuEP7nB/0W9EsTvDtJpYkOVPf4hWiyIA/qTgqwDoMPzh5azkz2uhUlSYY6TAokR+2TT7958urg==
 
-"@mdn/fred@0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@mdn/fred/-/fred-0.0.4.tgz#25bf89e0eee7bc619e702a541071c981c78dbed5"
-  integrity sha512-zzgbsoPNJ5dO58Ylp3qmE8FvAhn+/PKE5G+R8+WNvJMnQdhmhMqcvrcQ9RFlE66PIEo5L+RUFxdaGRorqhnLWQ==
+"@mdn/fred@0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@mdn/fred/-/fred-0.0.5.tgz#26483c5ac833e80a904355f4851d8e0633c9e981"
+  integrity sha512-cynrZgTj1udnONlkjMjH82CBreLL8IWgxOW6Y8KXVlb1d+F3Slk7MJ9imiENNFcfFZkwRFsuoip3zd1+FDXh4A==
   dependencies:
     "@codemirror/lang-css" "^6.3.1"
     "@codemirror/lang-html" "^6.4.9"
@@ -3731,20 +3731,7 @@ concat-stream@^1.4.7:
     readable-stream "^2.2.2"
     typedarray "^0.0.6"
 
-concurrently@^9.1.2:
-  version "9.1.2"
-  resolved "https://registry.yarnpkg.com/concurrently/-/concurrently-9.1.2.tgz#22d9109296961eaee773e12bfb1ce9a66bc9836c"
-  integrity sha512-H9MWcoPsYddwbOGM6difjVwVZHl63nwMEwDJG/L7VGtuaJhb12h2caPG2tVPWs7emuYix252iGfqOyrz1GczTQ==
-  dependencies:
-    chalk "^4.1.2"
-    lodash "^4.17.21"
-    rxjs "^7.8.1"
-    shell-quote "^1.8.1"
-    supports-color "^8.1.1"
-    tree-kill "^1.2.2"
-    yargs "^17.7.2"
-
-concurrently@^9.2.0:
+concurrently@^9.1.2, concurrently@^9.2.0:
   version "9.2.0"
   resolved "https://registry.yarnpkg.com/concurrently/-/concurrently-9.2.0.tgz#233e3892ceb0b5db9fd49e9c8c739737a7b638b5"
   integrity sha512-IsB/fiXTupmagMW4MNp2lx2cdSN2FfZq78vF90LBB+zZHArbIQZjQtzXCiXnvTxCZSvXanTqFLWBjw2UkLx1SQ==
