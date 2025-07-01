@@ -25,7 +25,7 @@ formatRange(startRange, endRange)
 
 ### Return value
 
-A string representing the given range of numbers formatted according to the locale and formatting options of this {{jsxref("Intl.NumberFormat")}} object.
+A string representing the given range of numbers formatted according to the locale and formatting options of this {{jsxref("Intl.NumberFormat")}} object. If the start and end values are formatted to the same string, the output will only contain a single value, possibly prefixed with an "approximately equals" symbol (e.g., "~$3"). The insertion of this symbol only depends on the locale settings, and is inserted even when `startRange === endRange`.
 
 ### Exceptions
 
