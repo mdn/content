@@ -59,7 +59,7 @@ ruby-overhang: unset;
 
 ## Description
 
-The `ruby-overhang` property controls whether the ruby annotation text box (`<rt>`)  may overlap adjacent text outside the `<ruby>` container box. 
+The `ruby-overhang` property controls whether the ruby annotation text box (`<rt>`) may overlap adjacent text outside the `<ruby>` container box.
 
 When ruby annotation text is not allowed to overhang &mdash; when `ruby-overhang: none` is set on the `<ruby>` element &mdash; that element behaves like a traditional inline box, as if its {{cssxref("display")}} property were set to `inline` with only its own contents rendered within its boundaries and adjacent elements not crossing the boundary box.
 
@@ -77,7 +77,7 @@ By default, the content of the nested `<rt>` element is allowed to overhang, so 
 
 ### Ruby overhanging base text
 
-This examples demonstrates both values of the `ruby-overhang` property. 
+This examples demonstrates both values of the `ruby-overhang` property.
 We include two paragraphs with identical `<ruby>` content and structures, other than their class names.
 
 ```html
@@ -93,6 +93,7 @@ We include two paragraphs with identical `<ruby>` content and structures, other 
 ```
 
 A red `outline` of `1px` helps highlight the text annotation of {{htmlelement("rt")}} elements. The first paragraph has `ruby-overhang: auto` and the second has `ruby-overhang: none`.
+
 ```css
 p {
   font-size: 40px;
