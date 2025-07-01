@@ -171,7 +171,7 @@ button {
   display: block;
   padding: 1rem;
   border-radius: 3rem;
-  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.19);
+  box-shadow: 0 0 15px 4px rgb(0 0 0 / 0.19);
   border: none;
   width: 50%;
 }

@@ -384,7 +384,7 @@ canvas {
   width: 100%;
   height: 100%;
   font-size: 0;
-  color: rgba(204, 204, 204, 1);
+  color: rgb(204 204 204);
 }
 ```
 
