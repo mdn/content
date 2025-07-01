@@ -95,7 +95,7 @@ div {
 }
 ```
 
-In this case, we are setting a different {{cssxref("background-image")}} {{cssxref("linear-gradient()")}} value on {{htmlelement("div")}} elements depending on whether a `--scheme` [custom property](/en-US/docs/Web/CSS/--*) is set to `ice` or `fire`. If neither value is set, the `else` value comes into play, and the `background-image` property is set to `none`.
+In this case, we are setting a different {{cssxref("linear-gradient()")}} as the {{cssxref("background-image")}} on {{htmlelement("div")}} elements, depending on whether a `--scheme` [custom property](/en-US/docs/Web/CSS/--*) is set to `ice` or `fire`. If `--scheme` doesn't exist, or it exists and is set to any other value, the `else` value comes into play, and the `background-image` property is set to `none`.
 
 > [!NOTE]
 > Each condition must be separated from its associated value with a colon, and each `<if-condition> : <value>` pair must be separated with a semi-colon. The semi-colon is optional for the last `<if-condition> : <value>` pair.
@@ -103,13 +103,13 @@ In this case, we are setting a different {{cssxref("background-image")}} {{cssxr
 > [!WARNING]
 > There must be no space between the `if` and the opening parenthesis (`(`). If there is, the whole declaration is invalid.
 
-If a single `<if-condition>` or `<value>` is invalid, it does not invalidate the entire `if()` function; instead, the parser moves on to the next `<if-condition> : <value>` pair.
+If a single `<if-condition>` or `<value>` is invalid, it does not invalidate the entire `if()` function; instead, the parser moves on to the next `<if-condition> : <value>` pair. If no `<if-condition>` nor `<value>` is valid, the function returns {{glossary("guaranteed_invalid_value", "guaranteed-invalid")}}.
 
 ### Frequency and position of `else : <value>` pairs
 
 You can include multiple `else : <value>` pairs inside an `if()` function, in any position. However, in most cases, a single `else : <value>` pair at the end of the semi-colon-separated list is used to provide the default value that is always returned if none of the `<if-test>`s evaluate to true.
 
-If you include an `else : <value>` pair before any `<if-test> : <value>` pairs, the later conditions are not evaluated because the `else` always evaluates to `true`. The following `if()` therefore always returns `none`, and the two `<if-test> : <value>` pairs are never evaluated:
+If you include an `else : <value>` pair before any `<if-test> : <value>` pairs, the conditions that follow it are not evaluated because `else` always evaluates to `true`. The following `if()` therefore always returns `none`, and the two `<if-test> : <value>` pairs are never evaluated:
 
 ```css-nolint
 div {
@@ -121,7 +121,7 @@ div {
 }
 ```
 
-One circumstance in which you might want to put an `else : <value>` in a position other than the end of the values list is when a value is not behaving as expected, and you are trying to debug it. In the following example, we are trying to work out whether the first `<if-test> : <value>` pair is working properly. If it isn't, the `else : <value>` pair returns a value of `url("debug.png")` to display an image indicating that the first `<if-test> : <value>` pair needs fixing. The last two `<if-test> : <value>` pairs are again never evaluated.
+Debugging a value that is not behaving as expected is one case where you might want to put an `else : <value>` in a position other than the end of the value list. In the following example, we are trying to work out whether the first `<if-test> : <value>` pair is working properly. If it isn't, the `else : <value>` pair returns a value of `url("debug.png")` to display an image indicating that the first `<if-test> : <value>` pair needs fixing. The last two `<if-test> : <value>` pairs are again never evaluated.
 
 ```css-nolint
 div {
@@ -182,7 +182,7 @@ A `@container` query does have some advantages — you can only set single prope
 
 Note that container style queries currently don't support regular CSS properties, just CSS custom properties. For example, the following won't work:
 
-```css-nolint
+```css-nolint example-bad
 if(
   background-color: if(style(color: white): black;);
 )
@@ -296,18 +296,18 @@ border: if(
 );
 ```
 
-You can also use the `if()` function to set just one component in a multi-component shorthand. Here we use the `if()` function to determine the {{cssxref("border-color")}} component only:
+However, we could use the `if()` function to determine the {{cssxref("border-color")}} component only:
 
 ```css-nolint
 border: 3px solid
   if(
-    supports(color: lch(77.7% 0 0)): 3px solid lch(77.7% 0 0); else: #c0c0c0;
+    supports(color: lch(77.7% 0 0)): lch(77.7% 0 0); else: #c0c0c0;
   );
 ```
 
 ### Nesting if() functions
 
-Because an `if()` function can take the place of whole property values or individual components, it is possible to nest multiple `if()` functions, and nest `if()` functions inside other functions such as {{cssxref("calc()")}}.
+Because an `if()` function can take the place of whole property values or individual components, it is possible to nest `if()` functions within other `if()` functions, and inside other functions such as {{cssxref("calc()")}}.
 
 For example, in this declaration we are using `if()` to set a `color` property value depending on various conditions. We have an outer `if()` function that returns a particular value depending on whether the `--scheme` custom property is set to `ice` or `fire` (with an `else` value of `black` that is returned if neither of the conditions return true).
 
