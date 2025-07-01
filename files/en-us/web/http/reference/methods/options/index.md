@@ -4,9 +4,8 @@ short-title: OPTIONS
 slug: Web/HTTP/Reference/Methods/OPTIONS
 page-type: http-method
 browser-compat: http.methods.OPTIONS
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The **`OPTIONS`** HTTP method requests permitted communication options for a given URL or server.
 This can be used to test the allowed HTTP methods for a request, or to determine whether a request would succeed when making a CORS preflighted request.

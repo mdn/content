@@ -3,9 +3,8 @@ title: 507 Insufficient Storage
 slug: Web/HTTP/Reference/Status/507
 page-type: http-status-code
 spec-urls: https://www.rfc-editor.org/rfc/rfc4918#section-11.5
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`507 Insufficient Storage`** [server error response](/en-US/docs/Web/HTTP/Reference/Status#server_error_responses) status code indicates that an action could not be performed because the server does not have enough available storage to successfully complete the request.
 

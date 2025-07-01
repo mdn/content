@@ -7,9 +7,10 @@ status:
   - deprecated
   - non-standard
 browser-compat: http.headers.Width
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{Deprecated_Header}}{{SecureContext_header}}{{Non-standard_Header}}
+{{Deprecated_Header}}{{SecureContext_header}}{{Non-standard_Header}}
 
 > [!WARNING]
 > The `Width` header was removed from the client hints specification in [draft-ietf-httpbis-client-hints-07](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-07). The proposed replacement is [`Sec-CH-Width`](https://wicg.github.io/responsive-image-client-hints/#sec-ch-width) (Responsive Image Client Hints).
