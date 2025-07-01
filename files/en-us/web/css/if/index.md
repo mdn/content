@@ -350,7 +350,7 @@ In this example, we'll show basic usage of each of the three types of `<if-test>
 
 #### HTML
 
-Our HTML features a {{htmlelement("section")}} element with two {{htmlelement("article")}} elements inside it, containing `<h2>` [headings](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements). The `<section>` has a custom property set on it inside a [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute — `--show-apple:true` — which we use later on to conditionally set a property value.
+Our HTML features a {{htmlelement("section")}} element with two {{htmlelement("article")}} elements inside it, containing `<h2>` [headings](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements). The `<section>` has a custom property set on it inside its [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute — `--show-apple:true` — which we use later on to conditionally set a property value.
 
 ```html live-sample___basic
 <section style="--show-apple:true">
