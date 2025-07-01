@@ -109,9 +109,6 @@ in that dimension. A value of 1 has no effect.
 
 ## Syntax
 
-The `scale3d()` function is specified with three values, which represent the amount of scaling to be
-applied in each direction.
-
 ```css
 scale3d(sx, sy, sz)
 ```

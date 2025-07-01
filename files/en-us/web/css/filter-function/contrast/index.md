@@ -161,7 +161,7 @@ The SVG {{SVGElement("filter")}} element is used to define custom filter effects
   viewBox="0 0 240 151"
   height="0"
   width="0"
-  style="overflow: visible"
+  overflow="visible"
   color-interpolation-filters="sRGB">
   <filter id="contrast">
     <feComponentTransfer>
