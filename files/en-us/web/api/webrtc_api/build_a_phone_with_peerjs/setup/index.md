@@ -104,8 +104,8 @@ So let's get started by setting up the basis for our WebRTC-powered phone app.
 
 ```css
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
