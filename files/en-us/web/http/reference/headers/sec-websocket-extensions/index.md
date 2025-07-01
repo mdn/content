@@ -50,7 +50,7 @@ Sec-WebSocket-Extensions: <selected-extension>
 ## Directives
 
 - `<extensions>`
-  - : A semicolon-separated list of extensions to request (or for the server to agree to support).
+  - : A comma-separated list of extensions to request (or for the server to agree to support).
     These are commonly selected from the [IANA WebSocket Extension Name Registry](https://www.iana.org/assignments/websocket/websocket.xml#extension-name) (custom extensions may also be used).
     Extensions which take parameters delineate them with semicolons.
 
