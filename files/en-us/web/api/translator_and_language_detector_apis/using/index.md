@@ -347,9 +347,8 @@ async function handleTranslation(e) {
   if (formData.get("translateLanguage") === detectedLanguage) {
     translateOutput.innerHTML = `<span class="error">Input language and translation language are the same.</span>`;
     return;
-  } else {
-    translateOutput.innerHTML = "";
   }
+  translateOutput.innerHTML = "";
 ```
 
 If the test passes, we open a [`try { ... }`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block. We start by checking the availability of the model for translating between the detected input and chosen output languages using the {{domxref("Translator.availability_static", "availability()")}} method:

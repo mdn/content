@@ -65,7 +65,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
   width="600"
   height="140">
   <img
-    src="/mdn/shared-assets/blob/main/images/examples/flowers.jpg"
+    src="/shared-assets/images/examples/flowers.jpg"
     alt="Some beautiful flowers" />
 </object>
 ```
