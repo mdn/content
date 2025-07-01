@@ -480,7 +480,7 @@ selectElem.addEventListener("change", () => {
 
 ### CSS
 
-In our CSS, we start by giving the `<body>` element a {{cssxref("max-width")}} of `700px`. We then center it on the screen using `auto` {{cssxref("margin")}} values. However, we use an `if()` function with a media query `<if-test>` to set the top margin component inside the `margin` shorthand to `0` if the viewport width is less than `700px`, and `20px` if it is wider. This means that on wide screens, we get a bit of margin at the top of the content, but it is removed on narrow screens, where it looks a bit weird.
+In our CSS, we give the `<body>` element a {{cssxref("max-width")}} of `700px` and center it using `auto` {{cssxref("margin")}} values. However, we use an `if()` function with a media query `<if-test>` to set the {{cssxref("margin-top")}} component inside the `margin` shorthand to `0` if the viewport's width is less than `700px`, and `20px` if it is wider. This means that on wide screens we get a bit of margin at the top of the content, but this is removed on narrow screens, where it looks a bit weird.
 
 ```css hidden live-sample___color-scheme
 * {
