@@ -18,7 +18,7 @@
   },
   "type": "module",
   "scripts": {
-    "info:fred": "node -e \"process.stderr.write('\\n🐥 This command is using a preview of fred: https://github.com/mdn/fred\\n🐞 Please report any issues here:  https://github.com/mdn/fred/issues/new?template=bug.yml\\n\\n')\"",
+    "info:fred": "node -e \"process.stderr.write('\\n🐥 This is a preview of fred: https://github.com/mdn/fred\\n🐞 Please report any issues here:  https://github.com/mdn/fred/issues/new?template=bug.yml\\n\\n')\"",
     "info:rari": "node -e \"process.stderr.write('\\n🐥 This command is now using rari: https://github.com/mdn/rari\\n🐞 Please report any issues here:  https://github.com/mdn/rari/issues/new?template=bug.yml\\n\\n')\"",
     "build": "yarn -s info:rari && env-cmd --silent cross-env CONTENT_ROOT=files BUILD_OUT_ROOT=build rari-build",
     "content": "yarn -s info:rari && env-cmd --silent cross-env CONTENT_ROOT=files rari-tool",
