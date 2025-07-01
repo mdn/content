@@ -467,7 +467,7 @@ Our HTML contains an {{htmlelement("article")}} element with some content inside
 
 ### JavaScript
 
-Next, let's look at our minimal JavaScript. This adds a [`change`](/en-US/docs/Web/API/HTMLElement/change_event) event listener to the `<select>` element. When a new value is selected, our script sets the `<article>` element's [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class) attribute to equal that value.
+Our JavaScript adds a [`change`](/en-US/docs/Web/API/HTMLElement/change_event) event listener to the `<select>` element. When a new value is selected, our script sets the `<article>` element's [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class) attribute to equal that value.
 
 ```js live-sample___color-scheme
 const articleElem = document.querySelector("article");
