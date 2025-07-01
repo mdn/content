@@ -16,7 +16,7 @@ A client can specify a URL with this method, or an asterisk (`*`) to refer to th
   <tbody>
     <tr>
       <th scope="row">Request has body</th>
-      <td>No</td>
+      <td>May</td>
     </tr>
     <tr>
       <th scope="row">Successful response has body</th>
