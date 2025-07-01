@@ -36,36 +36,63 @@ getContext(contextType, contextAttributes)
     > These implementations have not reached test suite conformance, or the graphic drivers situation on the platform is not yet stable.
     > The [Khronos Group](https://www.khronos.org/) certifies WebGL implementations under certain [conformance rules](https://registry.khronos.org/webgl/sdk/tests/CONFORMANCE_RULES.txt).
 
-- `contextAttributes`
+- `contextAttributes` {{optional_inline}}
   - : You can use several context attributes when creating your rendering context, for example:
 
     ```js
-    offscreen.getContext("webgl", { antialias: false, depth: false });
+    const gl = canvas.getContext("webgl", {
+      antialias: false,
+      depth: false,
+    });
     ```
 
     2d context attributes:
     - `alpha`
-      - : Boolean that indicates if the canvas contains an alpha channel. If set to `false`, the browser now knows that the backdrop is always opaque, which can speed up drawing of transparent content and images then.
+      - : A boolean value that indicates if the canvas contains an alpha channel. If set to `false`, the browser now knows that the backdrop is always opaque, which can speed up drawing of transparent content and images.
+    - `colorSpace` {{optional_inline}}
+      - : Specifies the color space of the rendering context. Possible values are:
+        - `"srgb"` selects the [sRGB color space](https://en.wikipedia.org/wiki/SRGB). This is the default value.
+        - `"display-p3"` selects the [display-p3 color space](https://en.wikipedia.org/wiki/DCI-P3).
+    - `colorType`  {{optional_inline}}
+      - : Specifies the color type of the rendering context. Possible values are:
+        - `"unorm8"` sets the color channels to 8 bit unsigned values. This is the default value.
+        - `"float16"` sets the color channels to 16-bit floating-point values.
+    - `desynchronized`
+      - : A boolean value that hints the user agent to reduce the latency by desynchronizing the canvas paint cycle from the event loop.
     - `willReadFrequently`
-      - : Boolean that indicates whether or not a lot of read-back operations are planned.
-        This will force the use of a software (instead of hardware accelerated) 2D canvas and can save memory when calling {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}} frequently.
-        In Firefox this option is only available if the flag `gfx.canvas.willReadFrequently.enable` is set to `true` (which, by default, is only the case for B2G/Firefox OS).
+      - : A boolean value that indicates whether or not a lot of read-back operations are planned. This will force the use of a software (instead of hardware accelerated) 2D canvas and can save memory when calling {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}} frequently.
 
     WebGL context attributes:
     - `alpha`
-      - : Boolean that indicates if the canvas contains an alpha buffer.
+      - : A boolean value that indicates if the canvas contains an alpha buffer.
     - `depth`
-      - : Boolean that indicates that the drawing buffer is requested to have a depth buffer of at least 16 bits.
+      - : A boolean value that indicates that the drawing buffer is requested to have a depth buffer of at least 16 bits.
     - `stencil`
-      - : Boolean that indicates that the drawing buffer is requested to have a stencil buffer of at least 8 bits.
+      - : A boolean value that indicates that the drawing buffer is requested to have a stencil buffer of at least 8 bits.
+    - `desynchronized`
+      - : A boolean value that hints the user agent to reduce the latency by desynchronizing the canvas paint cycle from the event loop.
     - `antialias`
-      - : Boolean that indicates whether or not to perform anti-aliasing if possible.
+      - : A boolean value that indicates whether or not to perform anti-aliasing if possible.
+    - `failIfMajorPerformanceCaveat`
+      - : A boolean value that indicates if a context will be created if the system performance is low or if no hardware GPU is available.
+    - `powerPreference`
+      - : A hint to the user agent indicating what configuration of GPU is suitable for the WebGL context. Possible values are:
+        - `"default"`
+          - : Let the user agent decide which GPU configuration is most suitable. This is the default value.
+        - `"high-performance"`
+          - : Prioritizes rendering performance over power consumption.
+        - `"low-power"`
+          - : Prioritizes power saving over rendering performance.
+
     - `premultipliedAlpha`
-      - : Boolean that indicates that the page compositor will assume the drawing buffer contains colors with pre-multiplied alpha.
+      - : A boolean value that indicates that the page compositor will assume the drawing buffer contains colors with pre-multiplied alpha.
     - `preserveDrawingBuffer`
       - : If the value is true the buffers will not be cleared and will preserve their values until cleared or overwritten by the author.
-    - `failIfMajorPerformanceCaveat`
-      - : Boolean that indicates if a context will be created if the system performance is low.
+    - `xrCompatible`
+      - : A boolean value that hints to the user agent to use a compatible graphics adapter for an [immersive XR device](/en-US/docs/Web/API/WebXR_Device_API). Setting this synchronous flag at context creation is discouraged; rather call the asynchronous {{domxref("WebGLRenderingContext.makeXRCompatible()")}} method the moment you intend to start an XR session.
+
+    > [!NOTE]
+    > The WebGPU specification does not define any specific context attributes for `getContext()`. Instead, it provides configuration options via the {{domxref("GPUCanvasContext.configure()")}} method.
 
 ### Return value
 
