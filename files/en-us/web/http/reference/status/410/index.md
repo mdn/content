@@ -35,7 +35,7 @@ HTTP/1.1 410 Gone
 Content-Type: text/html
 Content-Length: 212
 
-<html>
+<html lang="en-US">
   <head>
     <title>Promotion expired</title>
   </head>

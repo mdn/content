@@ -42,7 +42,7 @@ So let's get started by setting up the basis for our WebRTC-powered phone app.
 4. To finish the setup, you should copy the following HTML and CSS files into the root of your project folder. You can name both files `index`, so the HTML file will be `index.html` and the CSS file will be `index.css`. You won't need to modify these much in the articles that follow.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
