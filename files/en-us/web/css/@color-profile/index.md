@@ -17,6 +17,11 @@ The **`@color-profile`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CS
 }
 ```
 
+### Parameters
+
+- profile name
+  - : Either a {{cssxref("&lt;dashed-ident&gt;")}} or the identifier `device-cmyk`.
+
 ### Descriptors
 
 - `src`
