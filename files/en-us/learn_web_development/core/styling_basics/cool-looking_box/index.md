@@ -38,7 +38,7 @@ To get this assessment started, you should:
 ### HTML
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

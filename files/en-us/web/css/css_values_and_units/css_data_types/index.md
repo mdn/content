@@ -15,13 +15,7 @@ Below you will find a reference to the types that you are most likely to come ac
 
 ## Syntax
 
-```css
-selector {
-  property: <unit-data-type>;
-}
-```
-
-In formal CSS syntax, data types are denoted by a keyword placed between the angle brackets `<` and `>`.
+In formal CSS syntax, data types are denoted by a keyword placed between the angle brackets `<` and `>`. They don't correspond to any tangible CSS code entity.
 
 ## Textual data types
 

@@ -27,7 +27,7 @@ The **`id`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes
   box-shadow: 2px 2px 1px black;
 }
 
-#exciting:before {
+#exciting::before {
   content: "ℹ️";
   margin-right: 5px;
 }

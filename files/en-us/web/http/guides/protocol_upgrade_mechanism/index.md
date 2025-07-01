@@ -74,7 +74,7 @@ Sec-WebSocket-Extensions: extensions
 - `extensions`
   - : A comma-separated list of extensions to request (or agree to support). These should be selected from the [IANA WebSocket Extension Name Registry](https://www.iana.org/assignments/websocket/websocket.xml#extension-name). Extensions which take parameters do so by using semicolon delineation.
 
-For example:
+For example, this header indicates two custom extensions: `superspeed` and `colormode` (which additionally has the parameter `depth=16`):
 
 ```http
 Sec-WebSocket-Extensions: superspeed, colormode; depth=16

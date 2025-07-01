@@ -269,7 +269,7 @@ If you define a layer using [media](/en-US/docs/Web/CSS/CSS_media_queries/Using_
 ```
 
 ```css live-sample___media-order
-@media (min-width: 50em) {
+@media (width >= 50em) {
   @layer site;
 }
 

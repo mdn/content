@@ -12,7 +12,7 @@ A pure CSR app may return the following HTML content:
 
 ```html
 <!doctype html>
-<html>
+<html lang="en-US">
   <head>
     <title>My App</title>
     <script src="bundle.js"></script>

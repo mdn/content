@@ -132,13 +132,13 @@ The **`PublicKeyCredentialCreationOptions`** dictionary represents the object pa
 - `user`
   - : An object describing the user account for which the credential is generated. It can contain the following properties:
     - `displayName`
-      - : A string providing a human-friendly user display name (example: `"John Doe"`), which will have been set by user during initial registration with the relying party.
+      - : A string providing a human-friendly user display name (example: `"Maria Sanchez"`), which will have been set by user during initial registration with the relying party.
 
     - `id`
       - : An {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, or {{jsxref("DataView")}} representing a unique ID for the user account. This value has a maximum length of 64 bytes, and is not intended to be displayed to the user.
 
     - `name`
-      - : A string providing a human-friendly identifier for the user's account, to help distinguish between different accounts with similar `displayName`s. This could be an email address (such as `"john.doe@example.com"`), phone number (for example `"+12345678901"`), or some other kind of user account identifier (for example `"JohnDoe667"`).
+      - : A string providing a human-friendly identifier for the user's account, to help distinguish between different accounts with similar `displayName`s. This could be an email address (such as `"elaina.sanchez@example.com"`), phone number (for example `"+12345678901"`), or some other kind of user account identifier (for example `"ElainaSanchez667"`).
 
 - `hints` {{optional_inline}} {{experimental_inline}}
   - : An array of strings providing hints as to what authentication UI the user-agent should provide for the user.

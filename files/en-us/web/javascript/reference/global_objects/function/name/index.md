@@ -218,7 +218,7 @@ o[sym1].name; // "[foo]"
 o[sym2].name; // "[]"
 ```
 
-### Private property
+### Private fields and methods
 
 Private fields and private methods have the hash (`#`) as part of their names.
 
