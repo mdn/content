@@ -30,7 +30,7 @@ The following WGSL language extensions are defined at [WGSL language extensions]
 - `pointer_composite_access`
   - : Enables WGSL shader code to access components of complex data types using the same dot (`.`) syntax whether you're working directly with the data or with a pointer to it.
 
-    Specifically, when `pointer_composite_access` is available:
+    When `pointer_composite_access` is available:
     - If `foo` is a pointer: `foo.bar` is available as a more convenient way to write `(*foo).bar`. The asterisk (`*`) would normally be needed to turn the pointer into a "reference" that can be dereferenced, but now both pointers and references are almost interchangeable.
     - If `foo` is not a pointer: The dot (`.`) operator works exactly as you're used to for directly accessing members.
     - if `pa` is a pointer that stores the starting address of an array, then `pa[i]` gives you direct access to the memory location where the `i`th element of that array is stored.
