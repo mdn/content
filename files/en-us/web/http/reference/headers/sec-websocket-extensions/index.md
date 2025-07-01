@@ -57,7 +57,7 @@ Sec-WebSocket-Extensions: <selected-extension>
 
 ### WebSocket opening handshake
 
-The HTTP request below shows the opening handshake where a client supports the `permessage-deflate` and `client_max_window_bits` extensions.
+The HTTP request below shows the opening handshake where a client supports the `permessage-deflate` extension with `client_max_window_bits` parameter.
 
 ```http
 GET /chat HTTP/1.1
@@ -66,7 +66,7 @@ Upgrade: websocket
 Connection: Upgrade
 Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==
 Sec-WebSocket-Version: 13
-Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits, bbf-usp-protocol
 ```
 
 The request below with separate headers for each extension is equivalent:
@@ -78,8 +78,8 @@ Upgrade: websocket
 Connection: Upgrade
 Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==
 Sec-WebSocket-Version: 13
-Sec-WebSocket-Extensions: permessage-deflate
-Sec-WebSocket-Extensions: client_max_window_bits
+Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+Sec-WebSocket-Extensions: bbf-usp-protocol
 ```
 
 The response below might be sent from a server to indicate that it will support the `permessage-deflate` extension:
