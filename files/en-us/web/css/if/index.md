@@ -428,7 +428,7 @@ Note how the styling is applied. You can test out the conditional styling pretty
 
 ### Controlling a color scheme with `if()`
 
-This demo shows how you can start to have some real fun with CSS `if()` functions. Amongst other things, we use `if()` functions to conditionally set the values of a couple of custom properties to control an entire color scheme.
+This demo shows how you can start to have some real fun with CSS `if()` functions. Amongst other things, we use `if()` functions to conditionally set the values of some custom properties, enabling us to control the entire color scheme!
 
 #### HTML
 
