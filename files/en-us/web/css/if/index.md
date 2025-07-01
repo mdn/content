@@ -23,7 +23,7 @@ if(supports(color: lch(7.1% 60.23 300.16)): lch(7.1% 60.23 300.16);)
 /* <if-test> with else */
 if(style(--size: 2xl): 1em; else: 0.25em;)
 if(media(print): white; else: black;)
-if(media(width < 700px): 0 auto ; else: 20px auto)
+if(media(width < 700px): 0 auto; else: 20px auto)
 if(
   supports(color: lch(7.1% 60.23 300.16)): lch(7.1% 60.23 300.16);
   else: #03045e;
