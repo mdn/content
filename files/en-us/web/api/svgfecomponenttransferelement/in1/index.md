@@ -33,9 +33,9 @@ In this example, two {{SVGElement("feComponentTransfer")}} elements are defined 
     y="20"
     width="100"
     height="100"
-    style="fill:red;"
+    fill="red"
     filter="url(#filter1)" />
-  <circle cx="100" cy="100" r="50" style="fill:blue;" filter="url(#filter1)" />
+  <circle cx="100" cy="100" r="50" fill="blue" filter="url(#filter1)" />
 </svg>
 ```
 
