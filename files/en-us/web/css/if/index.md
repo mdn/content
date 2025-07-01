@@ -606,7 +606,6 @@ Try selecting different color scheme values to see the effect on the look and fe
 
 ## See also
 
-- [CSS values and units module](/en-US/docs/Web/CSS/CSS_values_and_units)
 - [Container style queries](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#container_style_queries)
 - [Media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [Feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
