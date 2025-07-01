@@ -95,8 +95,8 @@ This example compares all the `font-synthesis-style` values using italic and obl
   <p class="italic">This text is set to <code>italic</code></p>
 </div>
 
-<div class="fss-oblique">
-  <h2>font-synthesis-style: oblique</h2>
+<div class="fss-auto">
+  <h2>font-synthesis-style: auto</h2>
   <p class="oblique">This text is set to <code>oblique</code></p>
   <p class="italic">This text is set to <code>italic</code></p>
 </div>
@@ -135,8 +135,8 @@ p {
   font-synthesis-style: none;
 }
 
-.fss-oblique {
-  font-synthesis-style: oblique;
+.fss-auto {
+  font-synthesis-style: auto;
 }
 
 .fss-oblique-only {

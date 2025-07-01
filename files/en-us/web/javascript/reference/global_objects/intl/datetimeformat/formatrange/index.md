@@ -53,7 +53,7 @@ formatRange(startDate, endDate)
 
 ### Return value
 
-A string representing the given date range formatted according to the locale and formatting options of this {{jsxref("Intl.DateTimeFormat")}} object.
+A string representing the given date range formatted according to the locale and formatting options of this {{jsxref("Intl.DateTimeFormat")}} object. If the start and end dates are equivalent at the precision of the output, the output will only contain a single date.
 
 ## Examples
 

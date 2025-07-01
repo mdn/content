@@ -146,7 +146,6 @@ This example defines filters for each of the supported operations (`over`, `atop
 
 ```html
 <svg
-  style="width:800px; height:400px; display: inline;"
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
@@ -186,48 +185,23 @@ This example defines filters for each of the supported operations (`over`, `atop
     </filter>
   </defs>
   <g transform="translate(0,25)">
-    <circle
-      cx="90px"
-      cy="80px"
-      r="70px"
-      fill="#c00"
-      style="filter:url(#imageOver)" />
+    <circle cx="90px" cy="80px" r="70px" fill="#c00" filter="url(#imageOver)" />
     <text x="80" y="-5">over</text>
   </g>
   <g transform="translate(200,25)">
-    <circle
-      cx="90px"
-      cy="80px"
-      r="70px"
-      fill="#c00"
-      style="filter:url(#imageIn)" />
+    <circle cx="90px" cy="80px" r="70px" fill="#c00" filter="url(#imageIn)" />
     <text x="80" y="-5">in</text>
   </g>
   <g transform="translate(400,25)">
-    <circle
-      cx="90px"
-      cy="80px"
-      r="70px"
-      fill="#c00"
-      style="filter:url(#imageOut)" />
+    <circle cx="90px" cy="80px" r="70px" fill="#c00" filter="url(#imageOut)" />
     <text x="80" y="-5">out</text>
   </g>
   <g transform="translate(600,25)">
-    <circle
-      cx="90px"
-      cy="80px"
-      r="70px"
-      fill="#c00"
-      style="filter:url(#imageAtop)" />
+    <circle cx="90px" cy="80px" r="70px" fill="#c00" filter="url(#imageAtop)" />
     <text x="80" y="-5">atop</text>
   </g>
   <g transform="translate(0,240)">
-    <circle
-      cx="90px"
-      cy="80px"
-      r="70px"
-      fill="#c00"
-      style="filter:url(#imageXor)" />
+    <circle cx="90px" cy="80px" r="70px" fill="#c00" filter="url(#imageXor)" />
     <text x="80" y="-5">xor</text>
   </g>
   <g transform="translate(200,240)">
@@ -236,7 +210,7 @@ This example defines filters for each of the supported operations (`over`, `atop
       cy="80px"
       r="70px"
       fill="#c00"
-      style="filter:url(#imageArithmetic)" />
+      filter="url(#imageArithmetic)" />
     <text x="70" y="-5">arithmetic</text>
   </g>
   <g transform="translate(400,240)">
@@ -245,10 +219,18 @@ This example defines filters for each of the supported operations (`over`, `atop
       cy="80px"
       r="70px"
       fill="#c00"
-      style="filter:url(#imageLighter)" />
+      filter="url(#imageLighter)" />
     <text x="80" y="-5">lighter</text>
   </g>
 </svg>
+```
+
+```css hidden
+svg {
+  width: 800px;
+  height: 400px;
+  display: inline;
+}
 ```
 
 ### Result

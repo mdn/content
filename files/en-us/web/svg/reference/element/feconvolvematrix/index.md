@@ -95,7 +95,7 @@ This element implements the {{domxref("SVGFEConvolveMatrixElement")}} interface.
     y="0"
     height="200"
     width="200"
-    style="filter:url(#emboss);" />
+    filter="url(#emboss)" />
 </svg>
 ```
 

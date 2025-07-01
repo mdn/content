@@ -554,7 +554,7 @@ const filledRectangle = new FilledRectangle(5, 10, "blue");
 // filledRectangle ---> FilledRectangle.prototype ---> Rectangle.prototype ---> Object.prototype ---> null
 ```
 
-Classes offer the highest readability and maintainability when defining complex inheritance structures. [Private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) are a feature with no trivial replacement in prototypal inheritance. However, classes are less optimized than traditional constructor functions and are not supported in older environments.
+Classes offer the highest readability and maintainability when defining complex inheritance structures. [Private elements](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) are a feature with no trivial replacement in prototypal inheritance. However, classes are less optimized than traditional constructor functions and are not supported in older environments.
 
 ### With Object.setPrototypeOf()
 
