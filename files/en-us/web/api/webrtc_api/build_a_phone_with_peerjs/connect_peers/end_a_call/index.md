@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("WebRTC")}}
 
-{{Previous("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Answer_a_call")}}
+{{PreviousMenu("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Answer_a_call", "Web/API/WebRTC_API/Build_a_phone_with_peerjs")}}
 
 The last thing you want to do is ensure your callers have a way of ending a call.
 The most graceful way of doing this is to close the connection using the `close()` function, which you can do in an event listener for the hang up button.
@@ -52,4 +52,4 @@ Here's some useful resources related to this guide:
 - [A similar video tutorial with video](https://www.youtube.com/watch?v=OOrBcpwelPY)
 - [The code tutorial](https://github.com/SamsungInternet/WebPhone/tree/master/tutorial)
 
-{{Previous("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Answer_a_call")}}
+{{PreviousMenu("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Answer_a_call", "Web/API/WebRTC_API/Build_a_phone_with_peerjs")}}
