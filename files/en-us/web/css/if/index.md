@@ -432,7 +432,7 @@ This demo shows how you can start to have some real fun with CSS `if()` function
 
 #### HTML
 
-Our HTML contains an {{htmlelement("article")}} element with some content inside it — a top-level heading, a couple of {{htmlelement("p")}} elements, and an {{htmlelement("aside")}}. Below that we include a {{htmlelement("form")}} containing a {{htmlelement("select")}} drop-down that allows you to select a color scheme.
+Our HTML contains an {{htmlelement("article")}} element with some content inside it — a top-level heading, a couple of {{htmlelement("p")}} elements, and an {{htmlelement("aside")}}. We also include a {{htmlelement("form")}} containing a {{htmlelement("select")}} drop-down that enables selecting a color scheme.
 
 ```html-nolint live-sample___color-scheme
 <article>
