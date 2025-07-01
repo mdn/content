@@ -62,7 +62,7 @@ WebRTC data channels support buffering of outbound data. This is handled automat
 
 ## Understanding message size limits
 
-You should keep message sizes moderately small. While most modern browsers support sending messages of at least 256 kilobytes, there are downsides to sending large messages, especially when message interleaving is not available. Without message interleaving (as defined in {{rfc("8260")}}, sending a large message on one data channel can cause {{glossary("head-of-line blocking")}}, which in turn can negatively affect the latency of messages on other data channels.
+You should keep message sizes moderately small. While most modern browsers support sending messages of at least 256 kilobytes, there are downsides to sending large messages, especially when message interleaving is not available. Without message interleaving (as defined in {{rfc("8260")}}), sending a large message on one data channel can cause {{glossary("Head_of_line_blocking", "head-of-line blocking")}}, which in turn can negatively affect the latency of messages on other data channels.
 
 The maximum message size can be negotiated using the `max-message-size` SDP attribute, as defined in [RFC 8841](https://www.rfc-editor.org/rfc/rfc8841.html). This attribute allows each peer to declare the maximum size of an SCTP user message that it is willing to receive. By negotiating this value, endpoints can avoid sending messages that are larger than the other peer can handle. If the `max-message-size` attribute is not present in the SDP, a default value of 64 kilobytes is assumed. A value of 0 indicates that the endpoint can handle messages of any size, limited only by available memory.
 
