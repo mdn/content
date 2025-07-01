@@ -20,7 +20,7 @@ box-shadow: 60px -16px teal;
 ```
 
 ```css interactive-example-choice
-box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+box-shadow: 12px 12px 2px 1px rgb(0 0 255 / 0.2);
 ```
 
 ```css interactive-example-choice
