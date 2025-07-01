@@ -45,8 +45,6 @@ abbr {
 
 ## Syntax
 
-The `@media` at-rule may be placed at the top level of your code or nested inside any other conditional group at-rule.
-
 ```css
 /* At the top level of your code */
 @media screen and (min-width: 900px) {
@@ -64,6 +62,8 @@ The `@media` at-rule may be placed at the top level of your code or nested insid
   }
 }
 ```
+
+The `@media` at-rule may be placed at the top level of your code or nested inside any other conditional group at-rule.
 
 For a discussion of media query syntax, please see [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax).
 
