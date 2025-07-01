@@ -3,10 +3,12 @@ title: "VideoFrame: rotation property"
 short-title: rotation
 slug: Web/API/VideoFrame/rotation
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.VideoFrame.rotation
 ---
 
-{{APIRef("Web Codecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
+{{APIRef("Web Codecs API")}}{{AvailableInWorkers("window_and_dedicated")}}{{SeeCompatTable}}
 
 The **`rotation`** property of the {{domxref("VideoFrame")}} interface returns the rotation of the video frame.
 
