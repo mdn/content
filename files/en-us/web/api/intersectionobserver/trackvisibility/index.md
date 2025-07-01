@@ -19,7 +19,7 @@ The value is set using the [`option.trackVisibility`](/en-US/docs/Web/API/Inters
 ## Description
 
 When not tracking visibility, the observer provides notifications when the target element is scrolled into the root element's viewport.
-However this doesn't tell you if the element is visible or has compromised visibility — it might be partially covered by another element, have reduced opacity, or be distorted by a filter, transform, or other modification.
+However this doesn't tell you if the target element has compromised visibility — it might be partially covered by another element, have reduced opacity, or be distorted by a filter, transform, or other modification.
 
 When tracking visibility, only elements that the browser considers to be visible are shown as intersecting.
 The algorithm is conservative, and may omit elements that are technically visible, such as those with only a slight opacity reduction.
