@@ -58,7 +58,7 @@ Sec-WebSocket-Extensions: <selected-extension>
 
 ### WebSocket opening handshake
 
-The HTTP request below shows the opening handshake where a client supports the `permessage-deflate` extension with `client_max_window_bits` parameter.
+The HTTP request below shows the opening handshake where a client supports the `permessage-deflate` extension (with `client_max_window_bits` parameter), and the `bbf-usp-protocol` extension.
 
 ```http
 GET /chat HTTP/1.1
