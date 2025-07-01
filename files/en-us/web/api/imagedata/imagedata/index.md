@@ -36,6 +36,8 @@ new ImageData(dataArray, width, height, settings)
 - `settings` {{optional_inline}}
   - : An object with the following properties:
     - `colorSpace`: Specifies the color space of the image data. Can be set to `"srgb"` for the [sRGB color space](https://en.wikipedia.org/wiki/SRGB) or `"display-p3"` for the [display-p3 color space](https://en.wikipedia.org/wiki/DCI-P3).
+    - `pixelFormat`: Specifies the pixel format. Can be set to `"rgba-unorm8"` for RGBA with 8 bit per component unsigned normalized format, using a {{jsxref("Uint8ClampedArray")}}, or to `"rgba-float16"` for RGBA with 16 bits per component, using a {{jsxref("Float16Array")}}. Floating-point pixel values allow representing colors in arbitrarily wide gamuts and high dynamic range (HDR).
+
 - `dataArray`
   - : A {{jsxref("Uint8ClampedArray")}} containing the underlying pixel representation of the image. If no such array is given, an image with a transparent black rectangle of the specified `width` and `height` will be created.
 
@@ -46,7 +48,11 @@ A new {{domxref('ImageData')}} object.
 ### Exceptions
 
 - `IndexSizeError` {{domxref("DOMException")}}
-  - : Thrown if `array` is specified, but its length is not a multiple of `(4 * width)` or `(4 * width * height)`.
+  - : Thrown if `dataArray` is specified, but its length is not a multiple of `(4 * width)` or `(4 * width * height)`.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if `dataArray` is of type {{jsxref("Uint8ClampedArray")}} and `pixelFormat` is not set to `"rgba-unorm8"`.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if `dataArray` is of type {{jsxref("Float16Array")}} and `pixelFormat` is not set to `"rgba-float16"`.
 
 ## Examples
 
@@ -66,6 +72,16 @@ This example creates an `ImageData` object with the [display-p3 color space](htt
 
 ```js
 let imageData = new ImageData(200, 100, { colorSpace: "display-p3" });
+```
+
+### Floating-point pixel data for wide gamuts and high dynamic range (HDR)
+
+Floating-point pixel values allow representing colors in arbitrarily wide gamuts and high dynamic range (HDR). You can set the `pixelFormat` setting to `"rgba-float16"` to use RGBA values with 16 bits per component. This requires the `dataArray` to be a {{jsxref("Float16Array")}}.
+
+```js
+let floatArray = new Float16Array(4 * 200 * 200);
+let imageData = new ImageData(floatArray, 200, 200, { pixelFormat: "rgba-float16" });
+console.log(imageData.pixelFormat); // "rgba-float16"
 ```
 
 ### Initializing ImageData with an array
