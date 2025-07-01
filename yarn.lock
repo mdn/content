@@ -1595,10 +1595,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-6.0.24.tgz#232e792809adf6cc0a62314008733dd38effb158"
   integrity sha512-Z26Qu1EyLb9cQuEP7nB/0W9EsTvDtJpYkOVPf4hWiyIA/qTgqwDoMPzh5azkz2uhUlSYY6TAokR+2TT7958urg==
 
-"@mdn/fred@0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@mdn/fred/-/fred-0.0.1.tgz#64b0699c05f46613201d72297d3fa4cfb84a4501"
-  integrity sha512-jkSZBWgXtK09xyQ5u445W2tJ4QU987lXsnSKsw3ldafBDiMPkLiA1M60vRYXyCb2fc0i1+fKgGK9mQqvU8UaSA==
+"@mdn/fred@0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@mdn/fred/-/fred-0.0.4.tgz#25bf89e0eee7bc619e702a541071c981c78dbed5"
+  integrity sha512-zzgbsoPNJ5dO58Ylp3qmE8FvAhn+/PKE5G+R8+WNvJMnQdhmhMqcvrcQ9RFlE66PIEo5L+RUFxdaGRorqhnLWQ==
   dependencies:
     "@codemirror/lang-css" "^6.3.1"
     "@codemirror/lang-html" "^6.4.9"
