@@ -29,7 +29,7 @@ svg {
       fill: black;
     }
   </style>
-  <style media="all and (width >= 600px)">
+  <style media="(width >= 600px)">
     rect {
       fill: seagreen;
     }

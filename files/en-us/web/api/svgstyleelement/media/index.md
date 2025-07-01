@@ -25,7 +25,7 @@ This example demonstrates programmatically getting and setting the media propert
 
 ### HTML
 
-The HTML contains an SVG definition for a [`<circle>`](/en-US/docs/Web/SVG/Reference/Element/circle) with a [`<style>`](/en-US/docs/Web/SVG/Reference/Element/style) element that is conditional on the media query `"all and (width >= 600px)"`.
+The HTML contains an SVG definition for a [`<circle>`](/en-US/docs/Web/SVG/Reference/Element/circle) with a [`<style>`](/en-US/docs/Web/SVG/Reference/Element/style) element that is conditional on the media query `"(width >= 600px)"`.
 We also define a `button` that will be used to display the current style and change the style.
 
 ```html
@@ -67,7 +67,7 @@ addEventListener("resize", () => {
 });
 
 button.addEventListener("click", () => {
-  style.media = "all and (width >= 700px)";
+  style.media = "(width >= 700px)";
   setButtonText();
 });
 ```
