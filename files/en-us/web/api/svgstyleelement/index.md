@@ -124,7 +124,7 @@ The HTML contains an SVG definition for a [`<circle>`](/en-US/docs/Web/SVG/Refer
 <svg
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink">
-  <style id="circle_style_id" media="all and (min-width: 600px)">
+  <style id="circle_style_id" media="all and (width >= 600px)">
     circle {
       fill: gold;
       stroke: green;

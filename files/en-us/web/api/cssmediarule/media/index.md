@@ -24,7 +24,7 @@ Calling `myRules[0].media` therefore returns a {{domxref("MediaList")}}
 object representing the media query.
 
 ```css
-@media (min-width: 500px) {
+@media (width >= 500px) {
   body {
     color: blue;
   }
