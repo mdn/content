@@ -25,7 +25,7 @@ matchMedia(mediaQueryString)
 - `mediaQueryString`
   - : A string specifying the media query to parse into a {{domxref("MediaQueryList")}}.
 
-    Just like in CSS, any [media feature](/en-US/docs/Web/CSS/@media#media_features) must be wrapped in parentheses inside the expression. For example: `matchMedia("(max-width: 600px)")` works, whereas `matchMedia("max-width: 600px")` does not. Keywords for media types (`all`, `print`, `screen`) and logical operators (`and`, `or`, `not`, `only`) do not need to be wrapped in parentheses.
+    Just like in CSS, any [media feature](/en-US/docs/Web/CSS/@media#media_features) must be wrapped in parentheses inside the expression. For example: `matchMedia("(width <= 600px)")` or `matchMedia("(orientation: landscape)")` work, whereas `matchMedia("width < 600px")` or `matchMedia("orientation: landscape")` do not. Keywords for media types (`all`, `print`, `screen`) and logical operators (`and`, `or`, `not`, `only`) do not need to be wrapped in parentheses.
 
 ### Return value
 
@@ -50,7 +50,7 @@ in the article on {{domxref("Window.devicePixelRatio")}}.
 
 ## Examples
 
-This example runs the media query `(max-width: 600px)` and displays the
+This example runs the media query `(width <= 600px)` and displays the
 value of the resulting `MediaQueryList`'s `matches` property in a
 {{HTMLElement("span")}}; as a result, the output will say "true" if the viewport is less
 than or equal to 600 pixels wide, and will say "false" if the window is wider than that.
@@ -58,7 +58,7 @@ than or equal to 600 pixels wide, and will say "false" if the window is wider th
 ### JavaScript
 
 ```js
-let mql = window.matchMedia("(max-width: 600px)");
+let mql = window.matchMedia("(width <= 600px)");
 
 document.querySelector(".mq-value").innerText = mql.matches;
 ```
