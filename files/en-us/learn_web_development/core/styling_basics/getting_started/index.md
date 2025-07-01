@@ -545,7 +545,7 @@ h1 {
 
 /* Handle specific elements nested in the DOM */
 div p,
-#id:first-line {
+#id::first-line {
   background-color: red;
   border-radius: 3px;
 }

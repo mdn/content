@@ -33,7 +33,7 @@ The **`class`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attribu
   padding: 10px;
 }
 
-.editorial:before {
+.editorial::before {
   content: "Editor: ";
 }
 ```
