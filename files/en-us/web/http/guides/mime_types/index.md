@@ -123,7 +123,6 @@ In HTML, the `type` attribute for elements like `<script>` and `<style>` only su
 
 In contrast, parameters in HTTP `Content-Type` headers (e.g., `Content-Type: text/javascript; charset=utf-8`) are technically allowed. However, modern browsers assume UTF-8 by default and typically ignore the parameter, making it unnecessary in most cases.
 
-
 ### application/octet-stream
 
 This is the default for binary files. As it means _unknown binary_ file, browsers usually don't execute it, or even ask if it should be executed. They treat it as if the {{HTTPHeader("Content-Disposition")}} header was set to `attachment`, and propose a "Save As" dialog.
