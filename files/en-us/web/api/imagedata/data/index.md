@@ -38,7 +38,9 @@ If the `ImageData` object is set up for floating-point pixels, for example for h
 
 ```js
 let floatArray = new Float16Array(4 * 200 * 200);
-let imageData = new ImageData(floatArray, 200, 200, { pixelFormat: "rgba-float16" });
+let imageData = new ImageData(floatArray, 200, 200, {
+  pixelFormat: "rgba-float16",
+});
 console.log(imageData.data); // Float16Array
 ```
 

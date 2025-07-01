@@ -80,7 +80,9 @@ Floating-point pixel values allow representing colors in arbitrarily wide gamuts
 
 ```js
 let floatArray = new Float16Array(4 * 200 * 200);
-let imageData = new ImageData(floatArray, 200, 200, { pixelFormat: "rgba-float16" });
+let imageData = new ImageData(floatArray, 200, 200, {
+  pixelFormat: "rgba-float16",
+});
 console.log(imageData.pixelFormat); // "rgba-float16"
 ```
 

@@ -129,7 +129,9 @@ const context = canvas.getContext("2d");
 const imageData = context.getImageData(0, 0, 1, 1);
 console.log(imageData.pixelFormat); // "rgba-unorm8"
 
-const imageData = context.getImageData(0, 0, 1, 1, { pixelFormat: "rgba-float16" });
+const imageData = context.getImageData(0, 0, 1, 1, {
+  pixelFormat: "rgba-float16",
+});
 console.log(imageData.pixelFormat); // "rgba-float16"
 ```
 
