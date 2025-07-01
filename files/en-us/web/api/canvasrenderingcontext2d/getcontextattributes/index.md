@@ -34,7 +34,7 @@ It has the following members:
   - : Indicates the color space of the rendering context. Possible values are:
     - `srgb`: denotes the [sRGB color space](https://en.wikipedia.org/wiki/SRGB)
     - `display-p3`: denotes the [display-p3 color space](https://en.wikipedia.org/wiki/DCI-P3)
-- `colorType`  {{optional_inline}}
+- `colorType` {{optional_inline}}
   - : Indicates the color type of the rendering context. Possible values are:
     - `"unorm8"` denotes the color channels to 8 bit unsigned values. This is the default value.
     - `"float16"` denotes the color channels to 16-bit floating-point values.

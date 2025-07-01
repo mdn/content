@@ -53,7 +53,7 @@ getContext(contextType, contextAttributes)
       - : Specifies the color space of the rendering context. Possible values are:
         - `"srgb"` selects the [sRGB color space](https://en.wikipedia.org/wiki/SRGB). This is the default value.
         - `"display-p3"` selects the [display-p3 color space](https://en.wikipedia.org/wiki/DCI-P3).
-    - `colorType`  {{optional_inline}}
+    - `colorType` {{optional_inline}}
       - : Specifies the color type of the rendering context. Possible values are:
         - `"unorm8"` sets the color channels to 8 bit unsigned values. This is the default value.
         - `"float16"` sets the color channels to 16-bit floating-point values.
