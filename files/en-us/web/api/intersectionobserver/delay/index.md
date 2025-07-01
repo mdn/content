@@ -8,7 +8,7 @@ browser-compat: api.IntersectionObserver.delay
 
 {{APIRef("Intersection Observer API")}}
 
-The **`delay`** read-only property of the {{domxref("IntersectionObserver")}} interface indicates the minimum delay between notifications from this observer for a given target.
+The **`delay`** read-only property of the {{domxref("IntersectionObserver")}} interface indicates the minimum delay between notifications from this observer.
 
 The delay is used to limit the rate at which notifications should be provided when [tracking visibility](/en-US/docs/Web/API/IntersectionObserver/trackVisibility), as this is a computationally intensive operation.
 The recommendation when tracking visibility is that you set the delay to the largest tolerable value.

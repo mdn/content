@@ -18,11 +18,11 @@ The value is set using the [`option.trackVisibility`](/en-US/docs/Web/API/Inters
 
 ## Description
 
-When not tracking visibility, the observer provides notifications when the element is scrolled into the window's viewport.
-However this doesn't tell you if the element is actually visible: it might be scrolled out of view inside a scrollable container or behind another element, or it might be "effectively invisible" due to an opacity change, filter, transform, or other modification.
+When not tracking visibility, the observer provides notifications when the target element is scrolled into the root element's viewport.
+However this doesn't tell you if the element is visible or has compromised visibility — it might be partially covered by another element, have reduced opacity, or be distorted by a filter, transform, or other modification.
 
 When tracking visibility, only elements that the browser considers to be visible are shown as intersecting.
-The algorithm is conservative, and may omit elements that are technically be visible, such as those with only a slight opacity reduction.
+The algorithm is conservative, and may omit elements that are technically visible, such as those with only a slight opacity reduction.
 
 Note that the calculation of visibility is computationally expensive.
 To avoid the operation running too often, a {{domxref("IntersectionObserver/delay","delay")}} is used to limit the minimum reporting period.

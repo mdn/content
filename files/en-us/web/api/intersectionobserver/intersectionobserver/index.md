@@ -34,12 +34,12 @@ new IntersectionObserver(callback, options)
 
     You can provide any combination (or none) of the following options:
     - `delay`
-      - : A number specifying the minimum permitted delay between notifications from the observer for a given target, in milliseconds.
+      - : A number specifying the minimum permitted delay between notifications from the observer, in milliseconds.
 
-        The delay is used to limit the rate at which notifications should be provided when tracking visibility, as this is a computationally intensive operation.
+        The delay is used to limit the rate at which notifications will be provided when tracking visibility, as this is a computationally intensive operation.
         The recommendation when tracking visibility is that you set the delay to the largest tolerable value.
 
-        When [`trackVisibility`](#trackvisibility) is `true` the minimum value will be 100.
+        When [`trackVisibility`](#trackvisibility) is `true` the minimum value is 100.
         The browser will set the value to 100 if any smaller value is used, or if the value is not specified.
         The default value is 0.
 
@@ -67,6 +67,10 @@ new IntersectionObserver(callback, options)
         The default is a threshold of "0".
     - `trackVisibility`
       - : A boolean indicating whether the observer should track visibility.
+
+        When `true`, the browser will check that the target does not have compromised visibility when calculating intersections.
+        For example, that it hasn't been covered by other elements or potentially been distorted or hidden by a filter, reduced opacity, or some transform.
+
         Tracking visibility is an expensive operation, and should only be done when necessary.
         A [`delay`](#delay) should also be set when this value is `true`.
         The default is `false`.
