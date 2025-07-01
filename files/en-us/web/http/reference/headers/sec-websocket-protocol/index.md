@@ -46,7 +46,7 @@ Sec-WebSocket-Protocol: <sub-protocols>
   - : A comma-separated list of sub-protocol names, in the order of preference.
     The sub-protocols may be selected from the [IANA WebSocket Subprotocol Name Registry](https://www.iana.org/assignments/websocket/websocket.xml#subprotocol-name), or may be a custom name jointly understood by the client and the server.
 
-    As a response header, this should be a single sub-protocol selected by the server.
+    As a response header, this is a single sub-protocol that the server selected.
 
 ## Examples
 
