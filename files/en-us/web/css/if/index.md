@@ -180,7 +180,7 @@ background-color: if(
 
 A `@container` query does have some advantages — you can only set single property values at a time with `if()` style queries, whereas `@container` queries can be used to conditionally apply whole sets of rules. The two approaches are complementary, and have different uses.
 
-Note that container style queries currently don't support regular CSS properties, just CSS custom properties. So for example, the following won't work:
+Note that container style queries currently don't support regular CSS properties, just CSS custom properties. For example, the following won't work:
 
 ```css-nolint
 if(
