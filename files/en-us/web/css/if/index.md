@@ -424,7 +424,7 @@ h2 {
 Note how the styling is applied. Test out the conditional styling for the first two `if()` queries by modifying the rendered demo using your browser's devtools:
 
 - Remove the `<section>` element's `style` attribute and note how the apple emojis are no longer rendered.
-- Change the `height` attribute of the embedding `<iframe>` to `1200px`. This will change document orientation from landscape to portrait. Note how the layout changes as a result.
+- Change the `height` attribute of the embedding `<iframe>` to `1200px`. This will change the orientation from landscape to portrait. Note how the layout changes as a result.
 
 ### Controlling a color scheme with `if()`
 
