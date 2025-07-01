@@ -284,7 +284,7 @@ img {
 }
 ```
 
-```css hidden live-sample___position  live-sample___position_no-repeat
+```css hidden live-sample___position live-sample___position_no-repeat
 div::before {
   content: 'class="' attr(class) '"';
   display: block;
