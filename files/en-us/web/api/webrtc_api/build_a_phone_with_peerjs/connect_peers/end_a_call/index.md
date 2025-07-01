@@ -42,4 +42,14 @@ The most graceful way of doing this is to close the connection using the `close(
 Now we're finished with the project!
 The next step you could take is to [deploy it to a hosting provider that supports Node.js](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment) projects.
 
+## Further Reading
+
+Here's some useful resources related to this guide:
+
+- [PeerJS](https://peerjs.com/)
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
+- [PeerJS Server](https://github.com/peers/peerjs-server)
+- [A similar video tutorial with video](https://www.youtube.com/watch?v=OOrBcpwelPY)
+- [The code tutorial](https://github.com/SamsungInternet/WebPhone/tree/master/tutorial)
+
 {{Previous("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Answer_a_call")}}
