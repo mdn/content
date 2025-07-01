@@ -40,11 +40,9 @@ The most graceful way of doing this is to close the connection using the `close(
 > The way we've currently coded things means that when a connection is closed, both browsers will be updated **only** if the person who started the call presses "Hang up" first. If the person who answered the call clicks "Hang up" first, the other caller will also have to click "Hang up" to see the correct HTML.
 
 Now we're finished with the project!
-The next step you could take is to [deploy it to a hosting provider that supports Node.js](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment) projects.
+Next, you could [deploy it to a hosting provider that supports Node.js projects](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment).
 
-## Further Reading
-
-Here's some useful resources related to this guide:
+## See also
 
 - [PeerJS](https://peerjs.com/)
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)
