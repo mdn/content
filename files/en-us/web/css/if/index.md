@@ -419,8 +419,6 @@ h2 {
 
 #### Result
 
-This demo will render as follows:
-
 {{EmbedLiveSample("basic", "100%", "240")}}
 
 Note how the styling is applied. You can test out the conditional styling pretty easily for at least the first two `if()` queries by modifying the rendered demo using your browser's devtools:
