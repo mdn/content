@@ -489,12 +489,13 @@ fieldset {
 /* Palette container styling */
 
 #container {
+  /* Default value */
+  --base-color: #ff0000;
+
   display: flex;
   width: 100vw;
   height: 250px;
   box-sizing: border-box;
-  /* Default value */
-  --base-color: #ff0000;
 }
 
 #container div {
