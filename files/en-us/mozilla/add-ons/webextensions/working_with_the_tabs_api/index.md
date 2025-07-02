@@ -158,6 +158,9 @@ function listTabs() {
     let counter = 0;
 
     tabsList.textContent = "";
+    // ...
+  });
+}
 ```
 
 Next, we'll create the links for each tab:
@@ -168,24 +171,33 @@ Next, we'll create the links for each tab:
    - The link's address is set using the tab's `id`.
 
 ```js
-for (const tab of tabs) {
-  if (!tab.active && counter <= limit) {
-    const tabLink = document.createElement("a");
+function listTabs() {
+  getCurrentWindowTabs().then((tabs) => {
+    // ...
+    for (const tab of tabs) {
+      if (!tab.active && counter <= limit) {
+        const tabLink = document.createElement("a");
 
-    tabLink.textContent = tab.title || tab.id;
+        tabLink.textContent = tab.title || tab.id;
 
-    tabLink.setAttribute("href", tab.id);
-    tabLink.classList.add("switch-tabs");
-    currentTabs.appendChild(tabLink);
-  }
+        tabLink.setAttribute("href", tab.id);
+        tabLink.classList.add("switch-tabs");
+        currentTabs.appendChild(tabLink);
+      }
 
-  counter += 1;
+      counter += 1;
+    }
+    // ...
+  });
 }
 ```
 
 Finally, the document fragment is written to the `<div id="tabs-list">` element:
 
 ```js
+function listTabs() {
+  getCurrentWindowTabs().then((tabs) => {
+    // ...
     tabsList.appendChild(currentTabs);
   });
 }
@@ -196,7 +208,8 @@ Finally, the document fragment is written to the `<div id="tabs-list">` element:
 Another related example feature is the "Alert active tab" info option that dumps all the {{WebExtAPIRef("tabs.Tab")}} object properties for the active tab into an alert:
 
 ```js
-else if (e.target.id === "tabs-alert-info") {
+// Other if conditions...
+if (e.target.id === "tabs-alert-info") {
   callOnActiveTab((tab) => {
     let props = "";
     for (const item in tab) {
@@ -389,22 +402,23 @@ Let's take a look at how the zoom in is implemented.
     For the zoom in feature, this runs:
 
     ```js
-      else if (e.target.id === "tabs-add-zoom") {
-        callOnActiveTab((tab) => {
-          browser.tabs.getZoom(tab.id).then((zoomFactor) => {
-            // The maximum zoomFactor is 5, it can't go higher
-            if (zoomFactor >= MAX_ZOOM) {
-              alert("Tab zoom factor is already at max!");
-            } else {
-              let newZoomFactor = zoomFactor + ZOOM_INCREMENT;
-              // If the newZoomFactor is set to higher than the max accepted
-              // it won't change, and will never alert that it's at maximum
-              newZoomFactor = newZoomFactor > MAX_ZOOM ? MAX_ZOOM : newZoomFactor;
-              browser.tabs.setZoom(tab.id, newZoomFactor);
-            }
-          });
+    // Other if conditions...
+    if (e.target.id === "tabs-add-zoom") {
+      callOnActiveTab((tab) => {
+        browser.tabs.getZoom(tab.id).then((zoomFactor) => {
+          // The maximum zoomFactor is 5, it can't go higher
+          if (zoomFactor >= MAX_ZOOM) {
+            alert("Tab zoom factor is already at max!");
+          } else {
+            let newZoomFactor = zoomFactor + ZOOM_INCREMENT;
+            // If the newZoomFactor is set to higher than the max accepted
+            // it won't change, and does not alert that it's at maximum
+            newZoomFactor = newZoomFactor > MAX_ZOOM ? MAX_ZOOM : newZoomFactor;
+            browser.tabs.setZoom(tab.id, newZoomFactor);
+          }
         });
-      }
+      });
+    }
     ```
 
     This code uses `callOnActiveTab()` to get the details of the active tab, then {{WebExtAPIRef("tabs.getZoom")}} gets the tab's current zoom factor. The current zoom is compared to the defined maximum (`MAX_ZOOM`) and an alert issued if the tab is already at the maximum zoom. Otherwise, the zoom level is incremented but limited to the maximum zoom, then the zoom is set with {{WebExtAPIRef("tabs.getZoom")}}.
