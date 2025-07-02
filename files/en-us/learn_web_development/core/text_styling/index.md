@@ -14,7 +14,7 @@ With the basics of the CSS language covered, the next CSS topic for you to conce
 Before starting this module, you should be familiar with [HTML](/en-US/docs/Learn_web_development/Core/Structuring_content) and the [basic fundamentals of CSS](/en-US/docs/Learn_web_development/Core/Styling_basics).
 
 > [!NOTE]
-> If you are working on a computer, tablet, or another device where you can't create files, you can try an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
+> If you are working on a computer, tablet, or another device where you can't create files, you can try running the code in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 
 ## Tutorials and challenges
 

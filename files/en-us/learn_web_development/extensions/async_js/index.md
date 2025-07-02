@@ -14,7 +14,7 @@ In this module, we take a look at {{Glossary("asynchronous")}} {{Glossary("JavaS
 Asynchronous JavaScript is a fairly advanced topic, and you are advised to work through [Dynamic scripting with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting) modules before attempting this.
 
 > [!NOTE]
-> If you are working on a computer, tablet, or another device where you can't create files, you can try an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
+> If you are working on a computer, tablet, or another device where you can't create files, you can try running the code in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 
 ## Tutorials and challenges
 

@@ -15,7 +15,7 @@ Access to web content such as public services, education, e-commerce sites, and 
 You should be familiar with [HTML](/en-US/docs/Learn_web_development/Core/Structuring_content), [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics), and [JavaScript](/en-US/docs/Learn_web_development/Core/Scripting) before starting this module.
 
 > [!NOTE]
-> If you are working on a computer, tablet, or another device where you can't create files, you can try an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
+> If you are working on a computer, tablet, or another device where you can't create files, you can try running the code in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 
 ## Tutorials and challenges
 

@@ -14,7 +14,7 @@ CSS (Cascading Style Sheets) is used to style and layout web pages — for examp
 Before starting this module, you should have a basic work environment set up (as detailed in [Installing basic software](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software)), and understand how to create and manage files (as detailed in [Dealing with files](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files)). You should also be familiar with HTML (work through our [Structuring content with HTML](/en-US/docs/Learn_web_development/Core/Structuring_content) module if not).
 
 > [!NOTE]
-> If you are working on a computer, tablet, or another device where you can't create files, you can try an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
+> If you are working on a computer, tablet, or another device where you can't create files, you can try running the code in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 
 ## Tutorials and challenges
 
