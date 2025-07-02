@@ -92,50 +92,61 @@ HTTP/1.1 clarified ambiguities and introduced numerous improvements:
 - Content negotiation, including language, encoding, and type, was introduced. A client and a server could now agree on which content to exchange.
 - Thanks to the {{HTTPHeader("Host")}} header, the ability to host different domains from the same IP address allowed server collocation.
 
-A typical flow of requests, all through one single connection, looked like this:
+A typical flow of requests, all through one single connection,for example:
+
+This next example illustrates the sequence of requests sent on a single connection when loading a page in the browser. The first request returns an HTML document, and the second request is fired off when a CSS stylesheet is detected by the browser in a element.
 
 ```http
-GET /en-US/docs/Glossary/CORS-safelisted_request_header HTTP/1.1
+GET /en-US/docs/ HTTP/1.1
 Host: developer.mozilla.org
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:141.0) Gecko/20100101 Firefox/141.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Referer: https://developer.mozilla.org/en-US/docs/Glossary/CORS-safelisted_request_header
-
-HTTP/1.1 200 OK
-Connection: Keep-Alive
-Content-Encoding: gzip
-Content-Type: text/html; charset=utf-8
-Date: Wed, 20 Jul 2016 10:55:30 GMT
-Etag: "547fa7e369ef56031dd3bff2ace9fc0832eb251a"
-Keep-Alive: timeout=5, max=1000
-Last-Modified: Tue, 19 Jul 2016 00:59:33 GMT
-Server: Apache
-Vary: Cookie, Accept-Encoding
-
-(content content of 3077 bytes)
-
-GET /static/img/header-background.png HTTP/1.1
-Host: developer.mozilla.org
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Referer: https://developer.mozilla.org/en-US/docs/Glossary/CORS-safelisted_request_header
-
-HTTP/1.1 200 OK
-Age: 9578461
-Cache-Control: public, max-age=315360000
+Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
-Content-Length: 3077
-Content-Type: image/png
-Date: Thu, 31 Mar 2016 13:34:46 GMT
-Last-Modified: Wed, 21 Oct 2015 18:27:50 GMT
-Server: Apache
 
-(image)
+HTTP/1.1 200 OK
+accept-ranges: none
+content-encoding: br
+date: Tue, 01 Jul 2025 08:32:50 GMT
+expires: Tue, 01 Jul 2025 09:26:50 GMT
+cache-control: public, max-age=3600
+age: 1926
+last-modified: Sat, 28 Jun 2025 00:47:12 GMT
+etag: W/"b55394ed2f274eea5d528cf6c91e1dcf"
+content-type: text/html
+vary: Accept-Encoding
+content-length: 26178
+
+[26178 bytes of HTML]
+
+GET /static/css/main.9e7d1ce5.css HTTP/1.1
+Host: developer.mozilla.org
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:141.0) Gecko/20100101 Firefox/141.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+
+HTTP/1.1 200 OK
+content-encoding: br
+content-length: 43694
+date: Mon, 30 Jun 2025 21:13:12 GMT
+expires: Mon, 30 Jun 2025 21:47:29 GMT
+cache-control: public, max-age=31536000
+age: 42704
+last-modified: Mon, 30 Jun 2025 00:33:45 GMT
+etag: W/"d4f4d0955482844ad842986a9bcb7e8a"
+content-type: text/css
+vary: Accept-Encoding
+
+[43694 bytes of CSS]
+
+GET /static/js/main.a918a4e7.js HTTP/1.1
+Host: developer.mozilla.org
+// etc.
 ```
+
+
 
 HTTP/1.1 was first published as {{rfc(2068)}} in January 1997.
 
