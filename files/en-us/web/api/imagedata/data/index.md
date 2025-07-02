@@ -34,7 +34,7 @@ console.log(imageData.data); // Uint8ClampedArray[40000]
 console.log(imageData.data.length); // 40000
 ```
 
-If the `ImageData` object is set up for floating-point pixels, for example for high dynamic range (HDR) images, `data` will be a {{jsxref("Float16Array")}} instead.
+If the `ImageData` object is set up for floating-point pixels — for example, for high dynamic range (HDR) images —`data` will be a {{jsxref("Float16Array")}} instead.
 
 ```js
 let floatArray = new Float16Array(4 * 200 * 200);
