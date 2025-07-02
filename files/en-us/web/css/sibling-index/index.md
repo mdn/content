@@ -32,7 +32,7 @@ An integer, the position of the current element in the DOM tree's sibling order.
 
 ### Dynamic list width
 
-For example, set the list item width dynamically based on the `<li>` elements order in a list.
+This example demonstrates how to dynamically increase the width of each {{htmlelement("li")}} item in the {{htmlelement("ul")}} by `50px`.
 
 #### HTML
 
@@ -60,9 +60,13 @@ li {
 
 ### Ordered List
 
-Now let's create an alternative ordered list using `sibling-index()`.
+This example demonstrates how to create an ordered list using `sibling-index()`, without using the {{htmlelement("ol")}} element.
+
+Because not always you have the ability to change the HTML. In these cases, you so you can do that with CSS.
 
 #### HTML
+
+When you have {{htmlelement("nav")}} container and several children {{htmlelement("div")}} elements.
 
 ```html
 <nav arial-label="Ordered list">
@@ -74,6 +78,8 @@ Now let's create an alternative ordered list using `sibling-index()`.
 ```
 
 #### CSS
+
+You can transform it to a numbered list by disapling the sibling-index before each {{htmlelement("div")}} element using the {{CSSxRef("before")}} pseudo-element with the `sibling-index()` value.
 
 ```css
 div {
