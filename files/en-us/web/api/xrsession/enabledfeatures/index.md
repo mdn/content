@@ -23,18 +23,20 @@ An {{jsxref("Array")}} of strings.
 The {{domxref("XRSystem.requestSession()")}} method allows you to request XR [session features](/en-US/docs/Web/API/XRSystem/requestSession#session_features). The features can be requested either as `requiredFeatures` (the `XRSession` must support the feature), or as `optionalFeatures` (the `XRSession` may support the feature). The `enabledFeatures` property identifies which features are actually available in the session.
 
 ```js
-navigator.xr.requestSession("immersive-ar", {
-  requiredFeatures: ["local", "hit-test"],
-  optionalFeatures: ["anchors"],
-}).then((xrSession) => {
-  // Log enabledFeatures
-  console.log(xrSession.enabledFeatures);
+navigator.xr
+  .requestSession("immersive-ar", {
+    requiredFeatures: ["local", "hit-test"],
+    optionalFeatures: ["anchors"],
+  })
+  .then((xrSession) => {
+    // Log enabledFeatures
+    console.log(xrSession.enabledFeatures);
 
-  // Check if anchors can be used
-  if (xrSession.enabledFeatures.includes("anchors")) {
-    // Go ahead and set up anchors
-  }
-});
+    // Check if anchors can be used
+    if (xrSession.enabledFeatures.includes("anchors")) {
+      // Go ahead and set up anchors
+    }
+  });
 ```
 
 ## Specifications
