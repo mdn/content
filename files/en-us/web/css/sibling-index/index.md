@@ -54,6 +54,10 @@ li {
 }
 ```
 
+#### Results
+
+{{EmbedLiveSample("Dynamic list width", "300", "180")}}
+
 ### Ordered List
 
 Now let's create an alternative ordered list using `sibling-index()`.
@@ -82,6 +86,10 @@ div::before {
   content: var(--list-index);
 }
 ```
+
+#### Results
+
+{{EmbedLiveSample("Ordered List", "300", "180")}}
 
 ### Tree Counting Entrance Animation
 
@@ -119,6 +127,10 @@ li {
   }
 }
 ```
+
+#### Results
+
+{{EmbedLiveSample("Tree Counting Entrance Animation", "300", "180")}}
 
 ## Specifications
 

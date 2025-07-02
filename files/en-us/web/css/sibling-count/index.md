@@ -56,6 +56,10 @@ ul {
 }
 ```
 
+#### Results
+
+{{EmbedLiveSample("Dynamic column count", "300", "180")}}
+
 ## Specifications
 
 {{Specifications}}
