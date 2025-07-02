@@ -9,9 +9,17 @@ sidebar: learnsidebar
 The aim of this skill test is to assess whether you understand the [CSS box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model).
 
 > [!NOTE]
-> Click **"Play"** in the code blocks below to edit the examples in the MDN Playground.
+> For Tasks 1–3, click **"Play"** in the code blocks below to edit the examples in the MDN Playground.
 > You can also copy the code (click the clipboard icon) and paste it into an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 > If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+
+## Interactive challenge
+
+First of all, we are giving you a fun, interactive challenge involving margin shorthand, created by our [learning partner](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds), [Scrimba](https://scrimba.com/home).
+
+Watch the embedded scrim, and complete the tasks on the timeline (the little ghost icons) by following the instructions and editing the code. When you are done, you can resume watching the scrim to check how the teacher's solution matches up with yours.
+
+<scrim-inline url="https://scrimba.com/learn-html-and-css-c0p/~01s" scrimtitle="Margin shorthand"></scrim-inline>
 
 ## Task 1
 
