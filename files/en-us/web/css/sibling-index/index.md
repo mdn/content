@@ -56,7 +56,7 @@ li {
 
 #### Results
 
-{{EmbedLiveSample("Dynamic list width", "300", "180")}}
+{{EmbedLiveSample("Dynamic list width", "300", "100")}}
 
 ### Ordered List
 
@@ -89,7 +89,7 @@ div::before {
 
 #### Results
 
-{{EmbedLiveSample("Ordered List", "300", "180")}}
+{{EmbedLiveSample("Ordered List", "300", "100")}}
 
 ### Tree Counting Entrance Animation
 
@@ -109,6 +109,12 @@ Combining `sibling-index()` with CSS animations open new posibilities:
 #### CSS
 
 ```css
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
 li {
   animation-name: fade;
   animation-duration: 1s;
@@ -130,7 +136,7 @@ li {
 
 #### Results
 
-{{EmbedLiveSample("Tree Counting Entrance Animation", "300", "180")}}
+{{EmbedLiveSample("Tree Counting Entrance Animation", "300", "100")}}
 
 ## Specifications
 

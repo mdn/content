@@ -53,12 +53,19 @@ We set the {{cssxref("column-count")}} of the container to be equal to the quant
 ul {
   column-count: sibling-count();
   text-align: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li:nth-of-type(odd) {
+  background-color: rgb(0 0 0 / 0.05);
 }
 ```
 
 #### Results
 
-{{EmbedLiveSample("Dynamic column count", "300", "180")}}
+{{EmbedLiveSample("Dynamic column count", "300", "80")}}
 
 ## Specifications
 
