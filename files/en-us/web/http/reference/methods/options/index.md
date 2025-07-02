@@ -41,7 +41,8 @@ A client can specify a URL with this method, or an asterisk (`*`) to refer to th
   </tbody>
 </table>
 
-\* Although the [RFC 9110, section 9.3.7: OPTIONS](https://www.rfc-editor.org/rfc/rfc9110.html#section-9.3.7) does not define any semantics for an `OPTIONS` request body, it is technically allowed. Clients may include a request body with `OPTIONS` as long as they provide a valid {{HTTPHeader("Content-Type")}} header, but behavior is implementation-dependent — use it only when you know the server explicitly supports it.
+\* Although an `OPTIONS` message with a request body is technically allowed, it has no defined semantics.
+You may include a body in an `OPTIONS` message as long as you provide a valid {{HTTPHeader("Content-Type")}} header, and when you know the server expects it, as behavior is implementation-specific.
 
 ## Syntax
 
