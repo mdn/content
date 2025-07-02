@@ -11,7 +11,7 @@ browser-compat: api.Window.close
 The **`Window.close()`** method closes the current window, or
 the window on which it was called.
 
-This method can only be successfully called on windows that are considered _script-closable_. This generally includes:
+Windows are _script-closable_ if they were created by web content. This generally includes:
 
 - Windows opened using {{domxref("Window.open()")}}
 - Windows opened via web content, such as links (`<a target="_blank">`) or forms (`<form target="_blank">`), without user modifier actions
