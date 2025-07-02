@@ -77,7 +77,7 @@ The rest of this article will explain the various web platform features you migh
 For example, the following media query tests to see if the current web page is being displayed as screen media (therefore not a printed document) and the viewport is at least `80rem` wide. The `.container` rule will only be applied if these two things are true.
 
 ```css
-@media screen and (min-width: 80rem) {
+@media screen and (width >= 80rem) {
   .container {
     margin: 1em 2em;
   }
@@ -168,7 +168,7 @@ body {
 ```
 
 ```css live-sample___flex-based-rwd
-@media screen and (min-width: 600px) {
+@media screen and (width >= 600px) {
   .wrapper {
     display: flex;
   }
@@ -246,7 +246,7 @@ body {
 ```
 
 ```css live-sample___grid-based-rwd
-@media screen and (min-width: 600px) {
+@media screen and (width >= 600px) {
   .wrapper {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -299,7 +299,7 @@ h1 {
   font-size: 2rem;
 }
 
-@media (min-width: 1200px) {
+@media (width >= 1200px) {
   h1 {
     font-size: 4rem;
   }
@@ -364,7 +364,7 @@ h1 {
   background-color: #fff;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (width >= 600px) {
   .wrapper {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -450,7 +450,7 @@ h1 {
   background-color: #fff;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (width >= 600px) {
   .wrapper {
     display: grid;
     grid-template-columns: 1fr 2fr;

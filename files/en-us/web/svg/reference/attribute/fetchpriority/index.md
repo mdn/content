@@ -3,7 +3,7 @@ title: fetchpriority
 slug: Web/SVG/Reference/Attribute/fetchpriority
 page-type: svg-attribute
 browser-compat:
-  - svg.elements.feimage.fetchpriority
+  - svg.elements.feImage.fetchpriority
   - svg.elements.image.fetchpriority
   - svg.elements.script.fetchpriority
 sidebar: svgref
@@ -52,7 +52,7 @@ This example shows how to set an SVG {{SVGelement("script")}} element priority t
   width="120px"
   xmlns="http://www.w3.org/2000/svg">
   <circle id="normal" cx="5" cy="5" r="4" />
-  <script href="./color-change.js" fetchpriority="high" />
+  <script href="./color-change.js" fetchpriority="high"></script>
 </svg>
 ```
 

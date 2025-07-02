@@ -79,7 +79,7 @@ The {{cssxref("mask-border-repeat")}}, {{cssxref("mask-border-width")}}, and {{c
 
 ### Basic usage
 
-This property doesn't appear to be supported anywhere yet. When it eventually starts to be supported, it will serve to define the size of the slices taken from the source image, and used to create the border mask.
+`mask-border-slice` serves to define the size of the slices taken from the source image, and is used to create the border mask.
 
 ```css
 mask-border-slice: 30 fill;

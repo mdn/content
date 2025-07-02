@@ -6949,8 +6949,8 @@
 /en-US/docs/SVG	/en-US/docs/Web/SVG
 /en-US/docs/SVG-TEST	/en-US/docs/Web/SVG
 /en-US/docs/SVG/Attribute	/en-US/docs/Web/SVG/Reference/Attribute
-/en-US/docs/SVG/Attribute/From	/en-US/docs/Web/SVG/Reference/Attribute/From
-/en-US/docs/SVG/Attribute/To	/en-US/docs/Web/SVG/Reference/Attribute/To
+/en-US/docs/SVG/Attribute/From	/en-US/docs/Web/SVG/Reference/Attribute/from
+/en-US/docs/SVG/Attribute/To	/en-US/docs/Web/SVG/Reference/Attribute/to
 /en-US/docs/SVG/Attribute/accent-height	/en-US/docs/Web/SVG/Reference/Attribute
 /en-US/docs/SVG/Attribute/accumulate	/en-US/docs/Web/SVG/Reference/Attribute/accumulate
 /en-US/docs/SVG/Attribute/additive	/en-US/docs/Web/SVG/Reference/Attribute/additive
@@ -10594,6 +10594,7 @@
 /en-US/docs/Web/API/WebRTC_API/Architecture	/en-US/docs/Web/API/WebRTC_API/Protocols
 /en-US/docs/Web/API/WebRTC_API/Architecture/Connectivity	/en-US/docs/Web/API/WebRTC_API/Connectivity
 /en-US/docs/Web/API/WebRTC_API/Architecture/Protocols	/en-US/docs/Web/API/WebRTC_API/Protocols
+/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Deployment_and_further_reading	/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs
 /en-US/docs/Web/API/WebRTC_API/High-level_guide	/en-US/docs/Web/API/WebRTC_API
 /en-US/docs/Web/API/WebRTC_API/Interface_overview	/en-US/docs/Web/API/WebRTC_API#WebRTC_concepts_and_usage
 /en-US/docs/Web/API/WebRTC_API/Introduction	/en-US/docs/Web/API/WebRTC_API
@@ -13848,7 +13849,8 @@
 /en-US/docs/Web/JavaScript/Reference/Classes/Class_elements	/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields
 /en-US/docs/Web/JavaScript/Reference/Classes/Class_fields	/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields
 /en-US/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks	/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks
-/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields	/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties
+/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields	/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements
+/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties	/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements
 /en-US/docs/Web/JavaScript/Reference/Code_comments	/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Comments
 /en-US/docs/Web/JavaScript/Reference/Data_types	/en-US/docs/Web/JavaScript/Guide/Data_structures
 /en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
@@ -14529,10 +14531,10 @@
 /en-US/docs/Web/SVG/Attribute/Conditional_Processing	/en-US/docs/Web/SVG/Reference/Attribute
 /en-US/docs/Web/SVG/Attribute/Core	/en-US/docs/Web/SVG/Reference/Attribute
 /en-US/docs/Web/SVG/Attribute/Events	/en-US/docs/Web/SVG/Reference/Attribute
-/en-US/docs/Web/SVG/Attribute/From	/en-US/docs/Web/SVG/Reference/Attribute/From
+/en-US/docs/Web/SVG/Attribute/From	/en-US/docs/Web/SVG/Reference/Attribute/from
 /en-US/docs/Web/SVG/Attribute/Presentation	/en-US/docs/Web/SVG/Reference/Attribute
 /en-US/docs/Web/SVG/Attribute/Styling	/en-US/docs/Web/SVG/Reference/Attribute
-/en-US/docs/Web/SVG/Attribute/To	/en-US/docs/Web/SVG/Reference/Attribute/To
+/en-US/docs/Web/SVG/Attribute/To	/en-US/docs/Web/SVG/Reference/Attribute/to
 /en-US/docs/Web/SVG/Attribute/accent-height	/en-US/docs/Web/SVG/Reference/Attribute
 /en-US/docs/Web/SVG/Attribute/accumulate	/en-US/docs/Web/SVG/Reference/Attribute/accumulate
 /en-US/docs/Web/SVG/Attribute/additive	/en-US/docs/Web/SVG/Reference/Attribute/additive

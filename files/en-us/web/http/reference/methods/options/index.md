@@ -16,7 +16,7 @@ A client can specify a URL with this method, or an asterisk (`*`) to refer to th
   <tbody>
     <tr>
       <th scope="row">Request has body</th>
-      <td>No</td>
+      <td>May*</td>
     </tr>
     <tr>
       <th scope="row">Successful response has body</th>
@@ -40,6 +40,9 @@ A client can specify a URL with this method, or an asterisk (`*`) to refer to th
     </tr>
   </tbody>
 </table>
+
+\* Although an `OPTIONS` message with a request body is technically allowed, it has no defined semantics.
+You may include a body in an `OPTIONS` message as long as you provide a valid {{HTTPHeader("Content-Type")}} header, and when you know the server expects it, as behavior is implementation-specific.
 
 ## Syntax
 

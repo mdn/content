@@ -16,7 +16,7 @@ filter: drop-shadow(30px 10px 4px #4444dd);
 ```
 
 ```css interactive-example-choice
-filter: drop-shadow(0 -6mm 4mm rgb(160, 0, 210));
+filter: drop-shadow(0 -6mm 4mm rgb(160 0 210));
 ```
 
 ```css interactive-example-choice
