@@ -105,7 +105,7 @@ As such, the following network APIs and caches are **permanently** partitioned b
 - Preconnect
 - [CORS-preflight](/en-US/docs/Glossary/Preflight_request) Cache
 - WebRTC deviceID
-- [BFCache](/en-US/docs/Glossary/bfcache)
+- {{glossary("bfcache","Backward/forward cache (bfcache)")}}
 
 ## Dynamic partitioning
 
