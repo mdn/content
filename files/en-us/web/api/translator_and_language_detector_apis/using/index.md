@@ -284,7 +284,7 @@ Note that we won't show the CSS for this example, as none of it is relevant to u
 
 In our script, we start off by grabbing references to the `<form>`, `<textarea>`, submit `<button>`, translation output `<p>`, and language detection `<output>` elements. We also declare a variable called `detectedLanguage` to contain results of language detection operations.
 
-```js
+```js live-sample___translator-example
 const form = document.querySelector("form");
 const textarea = document.querySelector("textarea");
 const submitBtn = document.querySelector("button");
@@ -299,7 +299,7 @@ Next, we use the {{domxref("EventTarget.addEventListener()")}} method to listen 
 - `submit` events on the `<form>` element; when the form is submitted, the `handleTranslation()` function is called.
 - `input` events on the `<textarea>` element; when the current `<textarea>` value is changed, the `detectLanguage()` function is called.
 
-```js
+```js live-sample___translator-example
 form.addEventListener("submit", handleTranslation);
 textarea.addEventListener("input", detectLanguage);
 ```
@@ -310,7 +310,7 @@ When detecting the language of the entered text, we create a `LanguageDetector` 
 
 Finally, we set the submit button to not be disabled, so the form can be submitted to start the translation.
 
-```js
+```js live-sample___translator-example
 async function detectLanguage() {
   if (textarea.value.length > 20) {
     const detector = await LanguageDetector.create({
@@ -339,7 +339,7 @@ async function detectLanguage() {
 
 Now we define the `handleTranslation()` function. After preventing the form's default submission, we create a new {{domxref("FormData")}} object instance containing our `<form>` data name/value pairs. We then run a data validation test, checking whether the detected `<textarea>` content language is the same as the language chosen to translate into (`translateLanguage`). If it is, we print an error message inside the `<p>` with class `translate-output`.
 
-```js
+```js live-sample___translator-example
 async function handleTranslation(e) {
   e.preventDefault();
 
@@ -348,9 +348,8 @@ async function handleTranslation(e) {
   if (formData.get("translateLanguage") === detectedLanguage) {
     translateOutput.innerHTML = `<span class="error">Input language and translation language are the same.</span>`;
     return;
-  } else {
-    translateOutput.innerHTML = "";
   }
+  translateOutput.innerHTML = "";
 ```
 
 If the test passes, we open a [`try { ... }`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block. We start by checking the availability of the model for translating between the detected input and chosen output languages using the {{domxref("Translator.availability_static", "availability()")}} method:
@@ -359,7 +358,7 @@ If the test passes, we open a [`try { ... }`](/en-US/docs/Web/JavaScript/Referen
 - If it returns `available`, we create a translator using the {{domxref("Translator.create_static", "create()")}} method, passing it the detected input and chosen output languages. The required AI model is available, so we can use it immediately.
 - If it returns a different value (that is, `downloadable` or `downloading`), we run the same `create()` method call, but this time we include a `monitor` that prints out the percentage of the model downloaded to the `translate-output` `<p>` each time the {{domxref("CreateMonitor/downloadprogress_event", "downloadprogress")}} event fires.
 
-```js
+```js live-sample___translator-example
   try {
     const availability = await Translator.availability({
       sourceLanguage: detectedLanguage,
@@ -392,7 +391,7 @@ If the test passes, we open a [`try { ... }`](/en-US/docs/Web/JavaScript/Referen
 
 Next, we set the output `<p>` content to a pending message and disable the submit button before calling {{domxref("Translator.translate()")}} to perform the actual translation, passing it the `<textarea>` value. Once the translation is done, we display it inside the output `<p>` before making the submit button not disabled again.
 
-```js
+```js live-sample___translator-example
 translateOutput.textContent = "...generating translation...";
 submitBtn.disabled = true;
 
@@ -404,100 +403,7 @@ submitBtn.disabled = false;
 
 Finally, we include the `try` block's counterpart `catch() { ... }` block. If the `try` content throws any kind of exception, we display it inside the output `<p>`.
 
-```js
-  } catch (e) {
-    translateOutput.innerHTML = `<span class="error">${e}</span>`;
-  }
-}
-```
-
-```js hidden live-sample___translator-example
-const form = document.querySelector("form");
-const textarea = document.querySelector("textarea");
-const submitBtn = document.querySelector("button");
-
-const translateOutput = document.querySelector(".translate-output");
-const detectedLanguageOutput = document.querySelector(".detected-language");
-let detectedLanguage = "";
-
-form.addEventListener("submit", handleTranslation);
-textarea.addEventListener("input", detectLanguage);
-
-async function detectLanguage() {
-  if (textarea.value.length > 20) {
-    const detector = await LanguageDetector.create({
-      monitor(monitor) {
-        monitor.addEventListener("downloadprogress", (e) => {
-          console.log(`Downloaded ${e.loaded * 100}%`);
-        });
-      },
-    });
-
-    const results = await detector.detect(textarea.value);
-    detectedLanguageOutput.textContent = `Detected language: ${
-      results[0].detectedLanguage
-    }. Confidence: ${results[0].confidence.toFixed(4)}`;
-    detectedLanguage = results[0].detectedLanguage;
-
-    submitBtn.disabled = false;
-  } else {
-    detectedLanguageOutput.textContent = `Text too short to accurately detect language.`;
-    detectedLanguage = "";
-
-    submitBtn.disabled = true;
-  }
-}
-
-async function handleTranslation(e) {
-  e.preventDefault();
-
-  const formData = new FormData(form);
-
-  if (formData.get("translateLanguage") === detectedLanguage) {
-    translateOutput.innerHTML = `<span class="error">Input language and translation language are the same.</span>`;
-    return;
-  }
-  translateOutput.innerHTML = "";
-
-  try {
-    const availability = await Translator.availability({
-      sourceLanguage: detectedLanguage,
-      targetLanguage: formData.get("translateLanguage"),
-    });
-    let translator;
-
-    if (availability === "unavailable") {
-      translateOutput.innerHTML = `<span class="error">Translation not available; try a different language combination.</span>`;
-      return;
-    }
-    if (availability === "available") {
-      translator = await Translator.create({
-        sourceLanguage: detectedLanguage,
-        targetLanguage: formData.get("translateLanguage"),
-      });
-    } else {
-      translator = await Translator.create({
-        sourceLanguage: detectedLanguage,
-        targetLanguage: formData.get("translateLanguage"),
-        monitor(monitor) {
-          monitor.addEventListener("downloadprogress", (e) => {
-            translateOutput.textContent = `Downloaded ${Math.floor(
-              e.loaded * 100,
-            )}%`;
-          });
-        },
-      });
-    }
-
-    translateOutput.textContent = "...generating translation...";
-    submitBtn.disabled = true;
-
-    const translation = await translator.translate(
-      formData.get("translateText"),
-    );
-
-    translateOutput.textContent = translation;
-    submitBtn.disabled = false;
+```js live-sample___translator-example
   } catch (e) {
     translateOutput.innerHTML = `<span class="error">${e}</span>`;
   }

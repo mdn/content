@@ -90,7 +90,7 @@ To change the `width` of your screen, change the size of your browser or rotate 
 
 #### Width and height
 
-The feature we tend to detect most often in order to create responsive designs (and that has widespread browser support) is viewport width, and we can apply CSS if the viewport is above or below a certain width — or an exact width — using the `min-width`, `max-width`, and `width` media features.
+The feature we tend to detect most often in order to create responsive designs (and that has widespread browser support) is viewport width, and we can apply CSS if the viewport is above or below a certain width — or an exact width — using the `width` media feature, and prefix it with `min-` or `max-` as needed.
 
 These features are used to create layouts that respond to different screen sizes. For example, to set the body text color to red if the viewport is exactly 600 pixels, you would use the following media query.
 
@@ -235,10 +235,10 @@ As before, try testing the examples in this section by adjusting your browser wi
 
 ### "and" logic in media queries
 
-To combine media features you can use `and` in much the same way as we have used `and` above to combine a media type and feature. For example, we might want to test for a `min-width` and `orientation`. The body text will only be blue if the viewport is at least 600 pixels wide and the device is in landscape mode.
+To combine media features you can use `and` in much the same way as we have used `and` above to combine a media type and feature. For example, we might want to test for `width` and `orientation`. The body text will only be blue if the viewport is at least 600 pixels wide and the device is in landscape mode.
 
 ```css live-sample___and
-@media screen and (min-width: 600px) and (orientation: landscape) {
+@media screen and (width >= 600px) and (orientation: landscape) {
   body {
     color: blue;
   }
@@ -263,7 +263,7 @@ To combine media features you can use `and` in much the same way as we have used
 If you have a set of queries, any of which could match, then you can comma separate these queries. In the below example the text will be blue if the viewport is at least 600 pixels wide OR the device is in landscape orientation. If either of these things are true the query matches.
 
 ```css live-sample___or
-@media screen and (min-width: 600px), screen and (orientation: landscape) {
+@media screen and (width >= 600px), screen and (orientation: landscape) {
   body {
     color: blue;
   }
@@ -288,7 +288,7 @@ If you have a set of queries, any of which could match, then you can comma separ
 You can negate an entire media query by using the `not` operator. This reverses the meaning of the entire media query. Therefore in this next example the text will only be blue if the viewport is _not_ at least 600 pixels wide.
 
 ```css live-sample___not
-@media not (min-width: 600px) {
+@media not (width >= 600px) {
   body {
     color: blue;
   }
@@ -509,7 +509,7 @@ Drag the window wider until you can see that the line lengths are becoming quite
 Add the following to the bottom of your CSS:
 
 ```css
-@media screen and (min-width: 40em) {
+@media screen and (width >= 40em) {
   article {
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -535,7 +535,7 @@ Let's continue to expand the width until we feel there is enough room for the si
 Add the following to the bottom of your CSS:
 
 ```css
-@media screen and (min-width: 70em) {
+@media screen and (width >= 70em) {
   main {
     display: grid;
     grid-template-columns: 3fr 1fr;

@@ -78,5 +78,5 @@ The open Web presents incredible opportunities for developers. To take full adva
   - : Documentation for the set of web-developer tools built into Chrome.
 - [Safari Web Inspector](https://webkit.org/web-inspector/)
   - : Documentation for the set of web-developer tools built into Safari.
-- [Edge DevTools](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/landing/)
+- [Edge DevTools](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide/landing/)
   - : Documentation for the set of web-developer tools built into Edge.

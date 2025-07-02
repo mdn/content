@@ -157,7 +157,7 @@ h3 {
 Writing a container query via the {{Cssxref("@container")}} at-rule will apply styles to the elements of the container when it is wider than 400px:
 
 ```css
-@container (min-width: 400px) {
+@container (width > 400px) {
   .card {
     display: grid;
     grid-template-columns: 1fr 2fr;

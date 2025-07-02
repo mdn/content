@@ -37,7 +37,7 @@ Host: example.com
 HTTP/1.1 511 Network Authentication Required
 Content-Type: text/html
 
-<html>
+<html lang="en-US">
   <head>
     <title>Network Authentication Required</title>
     <meta http-equiv="refresh" content="10; url=https://login.example.net/">

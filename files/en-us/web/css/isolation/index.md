@@ -88,7 +88,7 @@ The `isolation` property is specified as one of the keyword values listed below.
 #### HTML
 
 ```html
-<div class="big-square ">
+<div class="big-square">
   <div class="isolation-auto">
     <div class="small-square">auto</div>
   </div>

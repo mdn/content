@@ -376,7 +376,7 @@ The `strict-dynamic` keyword is provided to help with this problem. It is a keyw
 For example, consider a document like this:
 
 ```html
-<html>
+<html lang="en-US">
   <head>
     <script
       src="./main.js"

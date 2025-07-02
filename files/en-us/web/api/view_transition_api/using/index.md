@@ -550,10 +550,10 @@ This could be achieved with the following HTML:
   rel="expect"
   href="#lead-content"
   blocking="render"
-  media="screen and (min-width: 641px)" />
+  media="screen and (width > 640px)" />
 <link
   rel="expect"
   href="#first-section"
   blocking="render"
-  media="screen and (max-width: 640px)" />
+  media="screen and (width <= 640px)" />
 ```

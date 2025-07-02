@@ -60,28 +60,28 @@ objOutput.innerHTML = strHtml;
 
 {{EmbedLiveSample("example_1_height_and_width", "", "300")}}
 
-## Example 2: Image Attributes
+## Example 2: border styles
 
 ```html
-<p>
-  <img id="img1" src="image1.gif" width="100" height="100" alt="border test" />
-</p>
+<div id="box"></div>
 
 <form name="FormName">
-  <input type="button" id="btn1" value="Make border 20px-wide" />
-  <input type="button" id="btn2" value="Make border 5px-wide" />
+  <button id="btn1">Make border 20px-wide</button>
+  <button id="btn2">Make border 5px-wide</button>
 </form>
 ```
 
 ```css
-#img1 {
+#box {
   border: 5px solid green;
+  width: 100px;
+  height: 100px;
 }
 ```
 
 ```js
 function setBorderWidth(width) {
-  document.getElementById("img1").style.borderWidth = `${width}px`;
+  document.getElementById("box").style.borderWidth = `${width}px`;
 }
 
 document.getElementById("btn1").addEventListener("click", () => {
@@ -92,7 +92,7 @@ document.getElementById("btn2").addEventListener("click", () => {
 });
 ```
 
-{{EmbedLiveSample("example_2_image_attributes", "", "200")}}
+{{EmbedLiveSample("example_2_border_styles", "", "200")}}
 
 ## Example 3: Manipulating Styles
 
@@ -227,7 +227,7 @@ This example demonstrates how the {{domxref("window.getComputedStyle")}} method 
 ```css
 #d1 {
   margin-left: 10px;
-  background-color: rgb(173, 216, 230);
+  background-color: rgb(173 216 230);
   height: 20px;
   max-width: 20px;
 }

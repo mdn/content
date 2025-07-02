@@ -7,9 +7,10 @@ sidebar:
       - WebRTC
 ---
 
-{{PreviousMenuNext("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Answer_a_call", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Deployment_and_further_reading")}}
+{{PreviousMenu("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Answer_a_call", "Web/API/WebRTC_API/Build_a_phone_with_peerjs")}}
 
-You've nearly finished! The last thing you want to do is ensure your callers have a way of ending a call. The most graceful way of doing this is to close the connection using the `close()` function, which you can do in an event listener for the hang up button.
+The last thing you want to do is ensure your callers have a way of ending a call.
+The most graceful way of doing this is to close the connection using the `close()` function, which you can do in an event listener for the hang up button.
 
 1. Add the following to the bottom of your `script.js` file:
 
@@ -39,4 +40,15 @@ You've nearly finished! The last thing you want to do is ensure your callers hav
 > [!WARNING]
 > The way we've currently coded things means that when a connection is closed, both browsers will be updated **only** if the person who started the call presses "Hang up" first. If the person who answered the call clicks "Hang up" first, the other caller will also have to click "Hang up" to see the correct HTML.
 
-{{PreviousMenuNext("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Answer_a_call", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Deployment_and_further_reading")}}
+Now we're finished with the project!
+Next, you could [deploy it to a hosting provider that supports Node.js projects](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment).
+
+## See also
+
+- [PeerJS](https://peerjs.com/)
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
+- [PeerJS Server](https://github.com/peers/peerjs-server)
+- [A similar video tutorial with video](https://www.youtube.com/watch?v=OOrBcpwelPY)
+- [The code tutorial](https://github.com/SamsungInternet/WebPhone/tree/master/tutorial)
+
+{{PreviousMenu("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Answer_a_call", "Web/API/WebRTC_API/Build_a_phone_with_peerjs")}}
