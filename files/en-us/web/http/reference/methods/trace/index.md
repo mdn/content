@@ -99,7 +99,7 @@ Accept: */*
 
 ## Browser compatibility
 
-There's no browser compat
+The browser doesn't use the `TRACE` method for user-initiated actions, so "browser compatibility" doesn't apply.
 
 ## See also
 
