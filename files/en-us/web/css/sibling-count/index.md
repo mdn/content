@@ -24,7 +24,7 @@ The `sibling-count()` function doesn't accept parameters.
 
 ### Return value
 
-An integer;  the total number of direct child DOM elements.
+An integer; the total number of direct child DOM elements.
 
 ## Examples
 
@@ -35,6 +35,7 @@ This example demonstrates setting the number of columns on a container to be equ
 #### HTML
 
 We include a {{htmlelement("ul")}} container and several {{htmlelement("li")}} elements children.
+
 ```html
 <ul>
   <li>One</li>
@@ -46,7 +47,8 @@ We include a {{htmlelement("ul")}} container and several {{htmlelement("li")}} e
 
 #### CSS
 
-We set the {{cssxref("column-count")}}  of the container to be equal to the quantity of direct children it contains. We also set every odd element to have a background-color to better demonstrate the resulting effect.
+We set the {{cssxref("column-count")}} of the container to be equal to the quantity of direct children it contains. We also set every odd element to have a background-color to better demonstrate the resulting effect.
+
 ```css
 ul {
   column-count: sibling-count();
