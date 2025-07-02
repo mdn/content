@@ -2,9 +2,8 @@
 title: DOM improvements in Firefox 3
 slug: Mozilla/Firefox/Releases/3/DOM_improvements
 page-type: guide
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 3 offers a number of improvements to the [Document Object Model](/en-US/docs/Web/API/Document_Object_Model) (DOM), especially in regard to support for extensions to the DOM added by other browsers. This article provides a list of those improvements as well as links to more detailed documentation.
 

@@ -2,9 +2,8 @@
 title: Firefox 97 for developers
 slug: Mozilla/Firefox/Releases/97
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 97 that affect developers. Firefox 97 was released on February 8, 2022.
 
