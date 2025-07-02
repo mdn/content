@@ -146,8 +146,6 @@ Host: developer.mozilla.org
 // etc.
 ```
 
-
-
 HTTP/1.1 was first published as {{rfc(2068)}} in January 1997.
 
 ## More than two decades of development
