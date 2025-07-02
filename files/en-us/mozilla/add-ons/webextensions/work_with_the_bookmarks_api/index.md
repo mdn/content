@@ -118,7 +118,7 @@ let gettingActiveTab = browser.tabs.query({
 gettingActiveTab.then(updateTab);
 ```
 
-`updateTab()` first passes the active tab's URL to `isSupportedProtocol()`. If the protocol is one supported by bookmarks, the extension determines if the tab's URL is already bookmarked and if it is, calls `updateIcon()`.
+`updateTab()` first passes the active tab's URL to `isSupportedProtocol()`. If the protocol is supported by bookmarks, the extension determines whether the tab's URL is bookmarked and, if it is, calls `updateIcon()`.
 
 ```js
 function updateTab(tabs) {

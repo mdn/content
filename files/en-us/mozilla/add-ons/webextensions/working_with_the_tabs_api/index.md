@@ -412,7 +412,7 @@ Let's take a look at how the zoom in is implemented.
           } else {
             let newZoomFactor = zoomFactor + ZOOM_INCREMENT;
             // If the newZoomFactor is set to higher than the max accepted
-            // it won't change, and will never alert that it's at maximum
+            // it won't change, and does not alert that it's at maximum
             newZoomFactor = newZoomFactor > MAX_ZOOM ? MAX_ZOOM : newZoomFactor;
             browser.tabs.setZoom(tab.id, newZoomFactor);
           }
