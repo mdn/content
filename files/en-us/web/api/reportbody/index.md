@@ -19,7 +19,7 @@ An instance of `ReportBody` is returned as the value of {{domxref("Report.body")
 
 ## Instance methods
 
-- {{domxref("ReportBody.toJSON()")}}
+- {{domxref("ReportBody.toJSON()")}} {{deprecated_inline}}
   - : A _serializer_ which returns a JSON representation of the `ReportBody` object.
 
 ## Examples
