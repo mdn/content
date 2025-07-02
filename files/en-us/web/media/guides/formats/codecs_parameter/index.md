@@ -915,21 +915,35 @@ video/mp4;codecs=hev1.1.6.L186.B0,mp4a.40.2
 video/mp4;codecs=hev1.1.6.L186.B0,opus
 ```
 
-The syntax for the `codecs` value starts with the codec's four-character identifier, followed by:
-
-- A single digit...
-- A single digit...
-- A four-character...
-- A two-character...
-
-With each one separated by a period (`.`), followed by the Object Type Indication (OTI) value for the specific data format. For most codecs, the OTI is a two-digit hexadecimal number; however, it's six hexadecimal digits for [AVC (H.264)](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#avc_h.264).
-
 The syntaxes for each of the supported codecs look like this:
 
-- `hvc1[.A.B.CCCC.DD]` (HEVC video)
-  - : xxx
+- `hvc1[.A.B.C.D]` (HEVC video)
+  - : The value starts with the codec's four-character identifier (`hvc1`), followed by four or more values separated by periods (`.`):
+    - `A`
+      - : The **`general_profile_space`**. This is encoded as one or two characters:
+        - The first character is `A`, `B`, or `C`, representing `general_profile_space` `1`, `2`, or `3`, or no character, representing `general_profile_space` `0`.
+        - The second character is a decimal number representing the `general_profile_idc`.
+          > [!NOTE]
+          > In the above examples, the value `1` means `general_profile_space === 0` (no character) and `general_profile_idc === 1`.
+    - `B`
+      - : A 32-bit value representing one or more **general profile compatibility flags** (`general_profile_compatibility_flag`), encoded in hexadecimal (leading zeroes may be omitted), and specified in reverse bit order from most to least significant. The values can range from `31` (most significant) to `0` (least significant), and are specified in [ISO/IEC 23008-2](https://www.iso.org/standard/90502.html).
 
-- `hev1[.A.B.CCCC.DD]` (Variable resolution HEVC)
+        > [!NOTE]
+        > In the above examples, the value `6` means `general_profile_compatibility_flag === 6`.
+
+    - `C`
+      - : The **`general_tier_flag`**, encoded as `L` (`general_tier_flag === 0`) or `H` (`general_tier_flag === 1`), followed by the **`general_level_idc`**, encoded as a decimal number.
+
+        > [!NOTE]
+        > In the above examples, the value `L186` means `general_tier_flag === 0` followed by `general_level_idc === 186`.
+
+    - `D`
+      - : One or more 6-byte **constraint flags**. Note that each flag is encoded as a hexadecimal number, and separated by an additional period; trailing bytes that are zero may be omitted.
+
+        > [!NOTE]
+        > In the above examples, there is only one constraint flag present — `B0`.
+
+- `hev1[.A.B.C.D]` (Variable resolution HEVC)
   - : The `hev1` codec parameters have the same syntax as the `hvc1` codec parameters.
 
 ### WebM
