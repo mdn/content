@@ -128,6 +128,7 @@ For example:
 ```
 
 In this example:
+
 - If the viewport is 600px wide or less, the slot size is 400px; otherwise, it is 800px.
 - The browser multiplies the slot size by the device pixel ratio to determine the ideal image width, then picks the closest available image from `srcset`.
 
