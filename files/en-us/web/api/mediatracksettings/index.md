@@ -104,7 +104,6 @@ Tracks containing video shared from a user's screen (regardless of whether the s
       - : The stream contains a single window selected by the user for sharing.
 
 - {{domxref("MediaTrackSettings.logicalSurface", "logicalSurface")}}
-
   - : A Boolean value which, if `true`, indicates that the video contained in the stream's video track contains a background rendering context, rather than a user-visible one. This is `false` if the video being captured is coming from a foreground (user-visible) source.
 
 - {{domxref("MediaTrackSettings.screenPixelRatio", "screenPixelRatio")}}
