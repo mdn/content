@@ -7,7 +7,7 @@ sidebar:
       - Insertable Streams for MediaStreamTrack API
 ---
 
-{{SeeCompatTable}}{{AvailableInWorkers("dedicated
+{{SeeCompatTable}}{{AvailableInWorkers("dedicated")}}
 
 The **Insertable Streams for MediaStreamTrack API** provides a way to process the video frames of a {{domxref("MediaStreamTrack")}} as they are consumed.
 

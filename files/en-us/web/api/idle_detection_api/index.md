@@ -10,7 +10,7 @@ sidebar:
       - Idle Detection API
 ---
 
-{{SeeCompatTable}}{{availableinworkers("window_and_dedicated")}}{{securecontext_header}}
+{{securecontext_header}}{{SeeCompatTable}}{{availableinworkers("window_and_dedicated")}}
 
 The Idle Detection API provides a means to detect the user's idle status, active, idle, and locked, specifically, and to be notified of changes to idle status without polling from a script.
 

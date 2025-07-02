@@ -10,9 +10,7 @@ sidebar:
       - Compute Pressure API
 ---
 
-{{SeeCompatTable}}{{AvailableInWorkers("window_and_worker_except_service
-
-{{securecontext_header}}
+{{securecontext_header}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_worker_except_service")}}
 
 The **Compute Pressure API** is a JavaScript API that enables you to observe the pressure of system resources such as the CPU.
 
