@@ -112,6 +112,7 @@ The `srcset` attribute can also be used on the `<img>` element without needing t
 The [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/source#sizes) attribute allows you to specify a set of media conditions (similar to media queries) and indicate the image display size (in CSS pixels) for each condition. This helps the browser select the most appropriate image from the `srcset` attribute, which lists images with their [intrinsic](/en-US/docs/Glossary/Intrinsic_Size) widths.
 
 When the browser loads an image, it:
+
 - Evaluates the media conditions in the `sizes` attribute from left to right.
 - Uses the first matching condition to determine the slot size (the image's display width in CSS pixels).
 - Selects the image from `srcset` whose width descriptor (`w`) is closest to the slot size and device pixel ratio.
