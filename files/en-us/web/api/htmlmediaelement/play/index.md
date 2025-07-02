@@ -83,9 +83,9 @@ This example demonstrates how to confirm that playback has begun and how to grac
 handle blocked automatic playback.
 
 Playback of video is toggled on and off by the [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) `playVideo()` function.
-It tries to play the video, and if successful, sets the class name of the `playButton` element to `"playing"`.
-If playback fails to start, the `playButton` element's class is cleared, restoring its default appearance.
-This ensures that the play button matches the actual state of playback by watching for the resolution or rejection of the {{jsxref("Promise")}} returned by `play()`.
+It tries to play the video, and if successful, sets the class name of the `playButton` (`<button>`) element to `"playing"`.
+If playback fails to start, the `playButton` element's `class` is cleared, restoring its default appearance.
+This ensures that the `playButton` matches the actual state of playback by watching for the resolution or rejection of the {{jsxref("Promise")}} returned by `play()`.
 
 When this example is executed, it begins by collecting references to the {{HTMLElement("video")}} element as well as the {{HTMLElement("button")}} used to toggle playback on and off.
 It then sets up an event handler for the {{domxref("Element/click_event", "click")}} event on the play toggle button and attempts to automatically begin playback by calling `playVideo()`.
