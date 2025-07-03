@@ -16,7 +16,7 @@ To construct a `WebSocket`, use the [`WebSocket()`](/en-US/docs/Web/API/WebSocke
 
 > [!NOTE]
 > `WebSocket` API usage may penalize user experience if the connection is not handled in a way to make it compatible with BFCache by following these best practices ([web.dev article](https://web.dev/articles/bfcache#close-open-connections)):
-> - All `WebSocket` API Connections shoudl be closed when eht `pagehide` event occurs.
+> - All `WebSocket` API connections should be closed when the `pagehide` event occurs.
 > - When the page is restored via BFCache (triggered via `pageshow` event, `event.peristed=true` case) the previously WebSocket Connection may be restarted on the same page.
 
 {{InheritanceDiagram}}
