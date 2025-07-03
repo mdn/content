@@ -2,9 +2,8 @@
 title: Firefox 64 for developers
 slug: Mozilla/Firefox/Releases/64
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 64 that will affect developers. Firefox 64 was released on December 11, 2018.
 

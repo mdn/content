@@ -2,9 +2,8 @@
 title: Firefox 132 for developers
 slug: Mozilla/Firefox/Releases/132
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 132 that affect developers. Firefox 132 was released on [October 29, 2024](https://whattrainisitnow.com/release/?version=132).
 

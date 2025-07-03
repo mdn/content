@@ -2,9 +2,8 @@
 title: Firefox 136 for developers
 slug: Mozilla/Firefox/Releases/136
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 136 that affect developers. Firefox 136 was released on [March 4, 2025](https://whattrainisitnow.com/release/?version=136).
 
