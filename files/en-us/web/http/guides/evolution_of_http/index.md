@@ -148,7 +148,7 @@ Host: developer.mozilla.org
 
 Setting up a TCP connection is an expensive part of the client-server exchange, and {{glossary("TCP slow start")}} means that longer-lived connections are faster than newly-created ones.
 HTTP/1.1 allows you to reuse a TCP connection for multiple requests and responses, so you avoid having to create a new connection for each request.
-However, clients still had to wait for each resource to download before requesting the next one ({{glossary("Head-of-line blocking")}}).
+However, clients still had to wait for each resource to download before requesting the next one ({{glossary("Head_of_line_blocking", "Head-of-line blocking")}}).
 To work around this, most browsers allow up to six TCP connections per website (or {{glossary("origin")}}).
 With six parallel connections, browsers can fetch multiple resources simultaneously using the HTTP/1.1 model, which has added significant performance improvements.
 
