@@ -92,9 +92,9 @@ HTTP/1.1 clarified ambiguities and introduced numerous improvements:
 - Content negotiation, including language, encoding, and type, was introduced. A client and a server could now agree on which content to exchange.
 - Thanks to the {{HTTPHeader("Host")}} header, the ability to host different domains from the same IP address allowed server collocation.
 
-A typical flow of requests, all through one single connection,for example:
-
-This next example illustrates the sequence of requests sent on a single connection when loading a page in the browser. The first request returns an HTML document, and the second request is fired off when a CSS stylesheet is detected by the browser in a element.
+The following example illustrates a typical sequence of HTTP/1.1 requests sent over a single persistent TCP connection, demonstrating how clients can reuse connections to load resources more efficiently.
+The first request retrieves a web page, and the server responds with an HTML document.
+The client then sends additional requests sequentially as it encounters CSS and JavaScript resources in the HTML:
 
 ```http
 GET /en-US/docs/ HTTP/1.1
@@ -143,8 +143,14 @@ vary: Accept-Encoding
 
 GET /static/js/main.a918a4e7.js HTTP/1.1
 Host: developer.mozilla.org
-// etc.
+…
 ```
+
+Setting up a TCP connection is an expensive part of the client-server exchange, and {{glossary("TCP slow start")}} means that longer-lived connections are faster than newly-created ones.
+HTTP/1.1 allows you to reuse a TCP connection for multiple requests and responses, so you avoid having to create a new connection for each request.
+However, clients still had to wait for each resource to download before requesting the next one ({{glossary("Head-of-line blocking")}}).
+To work around this, most browsers allow up to six TCP connections per website (or {{glossary("origin")}}).
+With six parallel connections, browsers can fetch multiple resources simultaneously using the HTTP/1.1 model, which has added significant performance improvements.
 
 HTTP/1.1 was first published as {{rfc(2068)}} in January 1997.
 
