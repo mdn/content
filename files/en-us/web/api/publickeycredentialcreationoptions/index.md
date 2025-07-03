@@ -104,11 +104,15 @@ The **`PublicKeyCredentialCreationOptions`** dictionary represents the object pa
     - `"client-device"`
       - : The UI should recommend using an authenticator available on the same device they are using to access the RP client to create the credential. It is analogous to the `authenticatorAttachment` [`platform`](#platform) value.
     - `"hybrid"`
-      - : The UI should recommend using a general-purpose authenticator, such as a smartphone-based authenticator app, to create the credential. This favors using a cross-device approach to handling authentication, relying on a combination of laptop and smartphone, for example. It is analogous to the `authenticatorAttachment` [`cross-platform`](#cross-platform) value.
+      - : The UI should recommend using a general-purpose authenticator, such as a smartphone-based authenticator app, to create the credential. This favors using a cross-device approach to handling authentication, relying on a combination of laptop and smartphone, for example.
+
+    The `authenticatorAttachment` [`cross-platform`](#cross-platform) value is essentially a combination of the `hints` option `security-key` and `hybrid` values — if a device doesn't have bluetooth and an RP specifies `attachment: "cross-platform"`, the resulting UI will likely be similar to the `hints: "security-key"` UI.
 
     When multiple strings are included in the array, their order denotes the order of preference, from high to low. Supporting browsers that respect the hints should use the first one that they understand.
 
-    The `hints` option provides a more flexible way to specify UI preferences for creating a credential than the [`authenticatorSelection.authenticatorAttachment`](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#authenticatorattachment) option, which completely hides the non-chosen option. Specified `hints` may contradict hints provided in both the `authenticatorAttachment` and [`transports`](#transports) options. When the provided `hints` contradict these options, the `hints` take precedence.
+    The `hints` option provides a more flexible way to specify UI preferences for creating a credential than the [`authenticatorAttachment`](#authenticatorattachment) option, which completely hides the non-chosen option. `hints` also allow indicating a preference for either security keys or hybrid, which is not possible to do with `authenticatorAttachment`.
+
+    Specified `hints` may contradict hints provided in the `authenticatorAttachment` option. When the provided `hints` contradict this option, the `hints` take precedence. `hints` may also be ignored by the browser under specific circumstances, for example if a hinted authenticator type is not usable on the user's device.
 
     For some specific code and UI examples, see [Introducing hints, Related Origin Requests and JSON serialization for WebAuthn in Chrome](https://developer.chrome.com/blog/passkeys-updates-chrome-129#hints).
 

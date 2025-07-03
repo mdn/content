@@ -54,7 +54,7 @@ It is used to request a {{domxref("PublicKeyCredential")}} provided by an {{glos
 
     When multiple strings are included in the array, their order denotes the order of preference, from high to low. Supporting browsers that respect the hints should use the first one that they understand.
 
-    The `hints` option may contradict hints provided in the [`transports`](#transports) option. When the provided `hints` contradict this option, the `hints` take precedence.
+    Specified `hints` may contradict hints provided in the [`transports`](#transports) option. When the provided `hints` contradict this option, the `hints` take precedence. `hints` may also be ignored by the browser under specific circumstances, for example if a hinted authenticator type is not usable on the user's device.
 
     For some specific code and UI examples, see [Introducing hints, Related Origin Requests and JSON serialization for WebAuthn in Chrome](https://developer.chrome.com/blog/passkeys-updates-chrome-129#hints).
 
