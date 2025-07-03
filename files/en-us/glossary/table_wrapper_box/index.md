@@ -1,5 +1,5 @@
 ---
-title: Table Wrapper Box
+title: Table wrapper box
 slug: Glossary/Table_Wrapper_Box
 page-type: glossary-definition
 ---

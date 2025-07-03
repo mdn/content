@@ -1,5 +1,5 @@
 ---
-title: Main Axis
+title: Main axis
 slug: Glossary/Main_Axis
 page-type: glossary-definition
 ---

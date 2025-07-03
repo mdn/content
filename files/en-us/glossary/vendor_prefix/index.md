@@ -1,5 +1,5 @@
 ---
-title: Vendor Prefix
+title: Vendor prefix
 slug: Glossary/Vendor_Prefix
 page-type: glossary-definition
 ---

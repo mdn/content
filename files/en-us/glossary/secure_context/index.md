@@ -1,5 +1,5 @@
 ---
-title: Secure Context
+title: Secure context
 slug: Glossary/Secure_Context
 page-type: glossary-definition
 ---

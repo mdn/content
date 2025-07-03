@@ -1,5 +1,5 @@
 ---
-title: Session Hijacking
+title: Session hijacking
 slug: Glossary/Session_Hijacking
 page-type: glossary-definition
 ---

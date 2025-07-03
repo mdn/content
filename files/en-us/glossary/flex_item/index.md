@@ -1,5 +1,5 @@
 ---
-title: Flex Item
+title: Flex item
 slug: Glossary/Flex_Item
 page-type: glossary-definition
 ---

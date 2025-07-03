@@ -1,12 +1,12 @@
 ---
-title: Progressive web apps
+title: Progressive Web Applications (PWAs)
 slug: Glossary/Progressive_web_apps
 page-type: glossary-definition
 ---
 
 {{GlossarySidebar}}
 
-Progressive web applications (PWA) are applications that are built using web platform technologies, but that provide a user experience like that of a platform-specific app.
+**Progressive web applications** (**PWAs**) are applications that are built using web platform technologies, but that provide a user experience like that of a platform-specific app.
 
 These kinds of apps enjoy all the best parts of the Web — such as discoverability via search engines, being linkable via {{Glossary("URL")}}s, and working across multiple form factors, but are progressively enhanced with modern APIs (such as [Service Workers](/en-US/docs/Web/API/Service_Worker_API) and [Push](/en-US/docs/Web/API/Push_API)).
 

@@ -1,5 +1,5 @@
 ---
-title: SQL Injection
+title: SQL injection
 slug: Glossary/SQL_Injection
 page-type: glossary-definition
 ---

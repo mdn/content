@@ -1,5 +1,5 @@
 ---
-title: Computer Programming
+title: Computer programming
 slug: Glossary/Computer_Programming
 page-type: glossary-definition
 ---
