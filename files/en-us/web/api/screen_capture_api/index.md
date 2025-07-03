@@ -78,7 +78,7 @@ The Screen Capture API adds properties to the following dictionaries defined by 
 - {{domxref("MediaTrackSettings.suppressLocalAudioPlayback")}}
   - : A boolean value, which is `true` if the audio being captured is not played out of the user's local speakers.
 - {{domxref("MediaTrackSettings.screenPixelRatio")}}
-  - : A double-precision floating point value indicating the ratio of the size of a CSS pixel on the capturing screen by the vertical size of a pixel on the captured display surface. It cannot be used as a constraint or capability.
+  - : A number representing the ratio of the physical size of a pixel on the captured display surface (displayed at its physical resolution) to the logical size of a CSS pixel on the capturing screen (displayed at its logical resolution). It cannot be used as a constraint or capability.
 
 ### MediaTrackSupportedConstraints
 
