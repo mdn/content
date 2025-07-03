@@ -34,7 +34,7 @@ Two ratios are compared using the quotients' numeric values. For example, 16/16 
 ### Use in a media query
 
 ```css
-@media screen and (min-aspect-ratio: 16/9) {
+@media screen and (aspect-ratio >= 16/9) {
   /* … */
 }
 ```

@@ -148,7 +148,7 @@ Next, let's look at our button icons:
   font-style: normal;
 }
 
-button:before {
+button::before {
   font-family: HeydingsControlsRegular;
   font-size: 20px;
   position: relative;

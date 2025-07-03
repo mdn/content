@@ -6,7 +6,7 @@ page-type: javascript-error
 
 {{jsSidebar("Errors")}}
 
-The JavaScript exception "reference to undeclared private field or method #x" occurs when a [private name](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) is used, but this private name is not declared in the class scope.
+The JavaScript exception "reference to undeclared private field or method #x" occurs when a [private name](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) is used, but this private name is not declared in the class scope.
 
 ## Message
 
@@ -48,7 +48,7 @@ class MyClass {
 }
 ```
 
-These code are probably mistakes because it's impossible for `#x` to exist on `this` if it's not declared in the class scope. Note that you cannot dynamically _add_ private properties to unrelated objects. You should either remove this code or declare the private field in the class scope.
+These code are probably mistakes because it's impossible for `#x` to exist on `this` if it's not declared in the class scope. Note that you cannot dynamically _add_ private elements to unrelated objects. You should either remove this code or declare the private field in the class scope.
 
 ```js example-good
 class MyClass {
@@ -62,4 +62,4 @@ class MyClass {
 ## See also
 
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
-- [Private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties)
+- [Private elements](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements)

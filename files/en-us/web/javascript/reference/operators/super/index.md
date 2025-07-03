@@ -312,7 +312,7 @@ class Extended extends Base {
 Extended.getName(); // Logs "Extended"
 ```
 
-This is especially important when interacting with [static private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties#private_static_fields).
+This is especially important when interacting with [static private elements](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements#private_static_fields).
 
 ### Setting super.prop sets the property on this instead
 

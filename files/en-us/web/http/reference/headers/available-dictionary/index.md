@@ -12,11 +12,11 @@ browser-compat: http.headers.Available-Dictionary
 
 The HTTP **`Available-Dictionary`** request header allows the browser to specify the best matching dictionary it has to allow the server to use {{glossary("Compression Dictionary Transport")}} for a resource request.
 
+Clients can send an `Available-Dictionary` header when they support `dcb` or `dcz` encodings. The header is a colon-surrounded base-64 encoded SHA-256 {{glossary("Hash_function", "hash")}} of the dictionary contents.
+
 See the [Compression Dictionary Transport guide](/en-US/docs/Web/HTTP/Guides/Compression_dictionary_transport) for more information.
 
 ## Syntax
-
-Clients can send an `Available-Dictionary` header when they support `dcb` or `dcz` encodings. The header is a colon-surrounded base-64 encoded SHA-256 {{glossary("Hash_function", "hash")}} of the dictionary contents.
 
 ```http
 Available-Dictionary: :<base64-hash>:

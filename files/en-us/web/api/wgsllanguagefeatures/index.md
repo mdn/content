@@ -27,6 +27,16 @@ The following WGSL language extensions are defined at [WGSL language extensions]
     - 32-bit integer scalars packing 4-component vectors of 8-bit integers to be used as inputs to dot product instructions (via the `dot4U8Packed()` and `dot4I8Packed()` built-in functions).
     - Packing and unpacking instructions with packed 4-component vectors of 8-bit integers (via built-in functions such as `pack4xI8()` and `pack4xI8Clamp()`).
 
+- `pointer_composite_access`
+  - : Enables WGSL shader code to access components of complex data types using the same dot (`.`) syntax whether you're working directly with the data or with a pointer to it.
+
+    When `pointer_composite_access` is available:
+    - If `foo` is a pointer: `foo.bar` is available as a more convenient way to write `(*foo).bar`. The asterisk (`*`) would normally be needed to turn the pointer into a "reference" that can be dereferenced, but now both pointers and references are almost interchangeable.
+    - If `foo` is not a pointer: The dot (`.`) operator works exactly as you're used to for directly accessing members.
+    - if `pa` is a pointer that stores the starting address of an array, then `pa[i]` gives you direct access to the memory location where the `i`th element of that array is stored.
+
+    See [Syntax sugar for dereferencing composites in WGSL](https://developer.chrome.com/blog/new-in-webgpu-123#syntax_sugar_for_dereferencing_composites_in_wgsl) for further details and an example.
+
 - `readonly_and_readwrite_storage_textures`
   - : When available, allows the `"read-only"` and `"read-write"` [`storageTexture.access`](/en-US/docs/Web/API/GPUDevice/createBindGroupLayout#access) values to be set when specifying storage texture bind group entry types in a bind group layout. These enable WGSL code to read storage textures, and read/write storage textures, respectively.
 

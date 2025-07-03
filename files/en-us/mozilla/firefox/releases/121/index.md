@@ -2,9 +2,8 @@
 title: Firefox 121 for developers
 slug: Mozilla/Firefox/Releases/121
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 121 that affect developers. Firefox 121 was released on [December 19, 2023](https://whattrainisitnow.com/release/?version=121).
 

@@ -66,10 +66,10 @@ In this case, the top-right corner of the mask is fully opaque, the top-left qua
 
 ```css live-sample___gradient1
 .applied-mask {
-  mask-image: conic-gradient(rgb(0 0 0 / 1) 90deg, rgba(0 0 0 / 0) 270deg);
+  mask-image: conic-gradient(rgb(0 0 0 / 1) 90deg, rgb(0 0 0 / 0) 270deg);
 }
 .mask-source {
-  background: conic-gradient(rgb(0 0 0 / 1) 90deg, rgba(0 0 0 / 0) 270deg);
+  background: conic-gradient(rgb(0 0 0 / 1) 90deg, rgb(0 0 0 / 0) 270deg);
 }
 ```
 

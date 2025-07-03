@@ -26,13 +26,11 @@ It is sent in a {{HTTPStatus("407", "407 Proxy Authentication Required")}} respo
 
 ## Syntax
 
-A comma-separated list of one or more authentication challenges:
-
 ```http
-Proxy-Authenticate: <challenge>
+Proxy-Authenticate: <challenge>, …
 ```
 
-Where a `<challenge>` is comprised of an `<auth-scheme>`, followed by an optional `<token68>` or a comma-separated list of `<auth-params>`:
+The value is a comma-separated list of challenges, where a `<challenge>` is comprised of an `<auth-scheme>`, followed by an optional `<token68>` or a comma-separated list of `<auth-params>`:
 
 ```plain
 challenge = <auth-scheme> <auth-param>, …, <auth-paramN>

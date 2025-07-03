@@ -42,7 +42,7 @@ li {
   padding-bottom: 10px;
 }
 
-li:after {
+li::after {
   content: "Data ID: " attr(data-id);
   position: absolute;
   top: -22px;
@@ -55,7 +55,7 @@ li:after {
   transition: 0.5s opacity;
 }
 
-li:hover:after {
+li:hover::after {
   opacity: 1;
 }
 ```
