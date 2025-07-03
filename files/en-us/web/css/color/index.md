@@ -28,7 +28,7 @@ color: hsl(30deg 82% 43%);
 ```
 
 ```css interactive-example-choice
-color: hsla(237deg 74% 33% / 61%);
+color: hsl(237deg 74% 33% / 61%);
 ```
 
 ```css interactive-example-choice
