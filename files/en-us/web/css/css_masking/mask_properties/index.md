@@ -246,6 +246,8 @@ In the two `<length-percentage>` syntax, the origin sides are `top` and `left`, 
 
 When offsetting using percentage values, the mask's dimension is subtracted from the element's dimension, just as is done with [percentage offsets with `background-position`](/en-US/docs/Web/CSS/background-position#regarding_percentages).
 
+### Positioning repeating mask images
+
 The `mask-position` property defines the initial position of the mask image. By "initial position", if the [mask repeats](#the_mask-repeat_property), the browser places the first mask image in the position defined by the `mask-position` property, thus defining the placement of the mask repetitions.
 
 In this example, we set the position of the first image to `bottom right`, meaning the first mask will be placed at the bottom right edge of the mask origin box. Because mask images repeat by default, the repeating masks will be positioned against the first placed mask's top and left sides.
