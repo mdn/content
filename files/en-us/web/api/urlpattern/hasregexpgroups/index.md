@@ -29,7 +29,7 @@ In the following example, a {{domxref("URLPattern")}} object is used with a grou
 const pattern = new URLPattern({ pathname: "/blog/:id(\\d+){-:title}?" });
 console.log(pattern.hasRegExpGroups); // true
 const result = pattern.exec({ pathname: "/blog/123-some-article" });
-console.log(result.pathname.groups) // {id: '123', title: 'some-article'}
+console.log(result.pathname.groups); // {id: '123', title: 'some-article'}
 ```
 
 It also works with anonymous capturing groups.
@@ -38,7 +38,7 @@ It also works with anonymous capturing groups.
 const pattern = new URLPattern({ pathname: "/blog/(\\d+)" });
 console.log(pattern.hasRegExpGroups); // true
 const result = pattern.exec({ pathname: "/blog/123" });
-console.log(result.pathname.groups) // {0: '123'}
+console.log(result.pathname.groups); // {0: '123'}
 ```
 
 For other non-capturing groups, for example when using wildcard tokes (`*`), `hasRegExpGroups` will return `false`.
@@ -47,7 +47,7 @@ For other non-capturing groups, for example when using wildcard tokes (`*`), `ha
 const pattern = new URLPattern({ pathname: "/blog/*" });
 console.log(pattern.hasRegExpGroups); // false
 const result = pattern.exec({ pathname: "/blog/123" });
-console.log(result.pathname.groups) // {0: '123'}
+console.log(result.pathname.groups); // {0: '123'}
 ```
 
 ## Specifications
