@@ -63,7 +63,7 @@
   "devDependencies": {
     "cspell": "9.1.2",
     "cspell-group-by-file-reporter": "^1.0.1",
-    "jest": "^30.0.3",
+    "jest": "^30.0.4",
     "lefthook": "^1.11.16",
     "markdownlint-cli2": "0.18.1",
     "markdownlint-rule-search-replace": "1.2.0",
