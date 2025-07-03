@@ -60,7 +60,7 @@ li {
 
 ### Ordered List
 
-This example demonstrates how to create an ordered list using `sibling-index()`, without using the {{htmlelement("ol")}} element. Always use the most semantic element for the context; this example is included to  demonstrate what can be done with CSS when you have the ability to change the HTML.
+This example demonstrates how to create an ordered list using `sibling-index()`, without using the {{htmlelement("ol")}} element. Always use the most semantic element for the context; this example is included to demonstrate what can be done with CSS when you have the ability to change the HTML.
 
 #### HTML
 
