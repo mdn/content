@@ -242,6 +242,8 @@ Mask positions can also be relative to corners other than the top left. The four
 
 In the two `<length-percentage>` syntax, the origin sides are `top` and `left`, in that order. For example, `mask-position: 10px 20px` is the equivalent of `mask-position: left 10px top 20px`. When offsetting from the top and left, the offset sides aren't required, but the order matters. With the four value syntax, you can use `mask-position` to offset the mask image from any edge combinations, such as `left 10px bottom 20px`, and the order of the sides doesn't matter, as the offset edge is defined by the keyword preceding it rather than the declaration order.
 
+### Percentage values
+
 When offsetting using percentage values, the mask's dimension is subtracted from the element's dimension, just as is done with [percentage offsets with `background-position`](/en-US/docs/Web/CSS/background-position#regarding_percentages).
 
 The `mask-position` property defines the initial position of the mask image. By "initial position", if the [mask repeats](#the_mask-repeat_property), the browser places the first mask image in the position defined by the `mask-position` property, thus defining the placement of the mask repetitions.
