@@ -186,7 +186,7 @@ The first mask layer, `url(alphaImage.png)`, references an image. As this isn't 
 
 The `linear-gradient(to right, black, transparent)` is the second mask layer and `radial-gradient(circle, white 50%, transparent 75%)` is the third. Again, these aren't `<mask>` elements, so the `match-source` value resolves to `alpha`. The masking effect of these layers is determined by the [opaqueness of the gradient mask](/en-US/docs/Web/CSS/CSS_masking/Masking#opaqueness_versus_transparency) by default.
 
-The fourth mask layer has `none` declared, meaning this layer creates no masking effect. The `.masked-element` sets `mask-mode: match-source;`. Had this instead been a comma-separated list of values, the fourth value would have applied to this `none` layer, allowing the fifth value to apply to the fifth layer.
+The fourth mask layer has `none` declared, meaning the mask for this layer is a transparent black. The `.masked-element` sets `mask-mode: match-source;`. Had the `masked-mode` instead been a comma-separated list of five different values, the fourth value would have applied to this `none` layer, allowing the fifth value to apply to the fifth layer.
 
 The fifth mask layer is comprised of an SVG {{svgelement("mask")}} element that has `svg-mask` as its [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id). While the default mask mode of the other layers is `alpha`, the default [mask type of SVG `<mask>` elements](/en-US/docs/Web/CSS/CSS_masking/Masking#svg_mask_as_mask_source) is the `mask-type` value, or, if not set, the `mask-type` attribute. If that isn't defined either, the value defaults to `luminance`. In other words, the masking effect of the `<mask>` is determined by both the brightness and transparency of the `<mask>` element's colors.
 
