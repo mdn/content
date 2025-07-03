@@ -17,16 +17,6 @@ Once an eligible query container has been selected for an element, each containe
 
 ## Syntax
 
-The `@container` at-rule has the following syntax:
-
-```plain
-@container <container-condition># {
-  <stylesheet>
-}
-```
-
-For example:
-
 ```css
 /* With a <size-query> */
 @container (width > 400px) {
@@ -72,7 +62,7 @@ For example:
 }
 ```
 
-### Values
+### Parameters
 
 - `<container-condition>`
   - : An optional `<container-name>` and a `<container-query>`. Styles defined in the `<stylesheet>` are applied if the condition is true.
@@ -80,9 +70,6 @@ For example:
       - : Optional. The name of the container that the styles will be applied to when the query evaluates to true, specified as an {{cssxref("ident")}}.
     - `<container-query>`
       - : A set of features that are evaluated against the query container when the size, [`<style-feature>`](#container_style_queries), or scroll-state of the container changes.
-
-- `<stylesheet>`
-  - : A set of CSS rules or declarations.
 
 ### Logical keywords in container queries
 
@@ -396,7 +383,7 @@ The shorthand syntax for this declaration is described in the {{cssxref("contain
 Next, target that container by adding the name to the container query:
 
 ```css
-@container summary (min-width: 400px) {
+@container summary (width >= 400px) {
   .card {
     font-size: 1.5em;
   }
@@ -411,8 +398,8 @@ It is possible to nest container queries which has the same effect.
 The following query evaluates to true and applies the declared style if the container named `summary` is wider than `400px` and has an ancestor container wider than `800px`:
 
 ```css
-@container summary (min-width: 400px) {
-  @container (min-width: 800px) {
+@container summary (width > 400px) {
+  @container (width > 800px) {
     /* <stylesheet> */
   }
 }

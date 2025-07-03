@@ -40,7 +40,7 @@ HTTP/1.1 429 Too Many Requests
 Content-Type: text/html
 Retry-After: 3600
 
-<html>
+<html lang="en-US">
   <head>
     <title>Too Many Requests</title>
   </head>

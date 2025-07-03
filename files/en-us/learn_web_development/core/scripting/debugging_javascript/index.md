@@ -205,8 +205,8 @@ HTML and CSS are permissive — errors and unrecognized features can often be ha
 
 Let's explore a common strategy for handling JavaScript errors in your code. The following sections are designed to be followed by making a copy of the below template file as `handling-errors.html` on your local machine, adding the code snippets in between the opening and closing `<script>` and `</script>` tags, then opening the file in a browser and looking at the output in the devtools JavaScript console.
 
-```html-nolint
-<!DOCTYPE html>
+```html
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -216,7 +216,6 @@ Let's explore a common strategy for handling JavaScript errors in your code. The
   <body>
     <script>
       // Code goes below this line
-
     </script>
   </body>
 </html>

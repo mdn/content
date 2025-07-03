@@ -60,7 +60,7 @@ This element implements the {{domxref("SVGFEPointLightElement")}} interface.
     y="10%"
     width="80%"
     height="80%"
-    style="filter:url(#spotlight);" />
+    filter="url(#spotlight)" />
 </svg>
 ```
 

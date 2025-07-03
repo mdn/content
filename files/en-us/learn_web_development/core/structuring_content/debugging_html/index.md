@@ -107,7 +107,7 @@ In this section, you'll study some code using the DOM inspector and see how the 
 1. First, save the following HTML file listing as `debug-example.html`, somewhere on your local machine. This demo is deliberately written with some built-in errors for us to explore.
 
    ```html-nolint
-   <!DOCTYPE html>
+   <!doctype html>
    <html lang="en-US">
      <head>
        <meta charset="utf-8">

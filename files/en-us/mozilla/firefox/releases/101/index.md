@@ -2,9 +2,8 @@
 title: Firefox 101 for developers
 slug: Mozilla/Firefox/Releases/101
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 101 that will affect developers. Firefox 101 was released on May 31, 2022.
 

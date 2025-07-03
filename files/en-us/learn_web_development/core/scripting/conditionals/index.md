@@ -607,7 +607,7 @@ h2 {
 }`;
   return `
 <!doctype html>
-<html>
+<html lang="en-US">
   <head>
     <style>${outputStyle}</style>
   </head>
@@ -798,7 +798,7 @@ function outputDocument(code) {
 
   return `
 <!doctype html>
-<html>
+<html lang="en-US">
   <head>
   </head>
   <body>

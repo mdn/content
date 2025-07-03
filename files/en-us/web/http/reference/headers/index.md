@@ -154,6 +154,13 @@ For more information, refer to the [CORS documentation](/en-US/docs/Web/HTTP/Gui
   - : States the wish for a {{HTTPHeader("Repr-Digest")}} header.
     It is the `Repr-` analogue of {{HTTPHeader("Want-Content-Digest")}}.
 
+## Integrity policy
+
+- {{HTTPHeader("Integrity-Policy")}}
+  - : Ensures that all resources the user agent loads (of a certain type) have [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity) guarantees.
+- {{HTTPHeader("Integrity-Policy-Report-Only")}}
+  - : Reports on resources that the user agent loads that would violate [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity) guarantees if the integrity policy were enforced (using the `Integrity-Policy` header).
+
 ## Message body information
 
 - {{HTTPHeader("Content-Length")}}
@@ -204,7 +211,7 @@ Range requests are useful for applications like media players that support rando
 - {{HTTPHeader("Location")}}
   - : Indicates the URL to redirect a page to.
 - {{HTTPHeader("Refresh")}}
-  - : Directs the browser to reload the page or redirect to another. Takes the same value as the `meta` element with [`http-equiv="refresh"`](/en-US/docs/Web/HTML/Reference/Elements/meta#http-equiv).
+  - : Directs the browser to reload the page or redirect to another. Takes the same value as the `meta` element with [`http-equiv="refresh"`](/en-US/docs/Web/HTML/Reference/Elements/meta/http-equiv).
 
 ## Request context
 
@@ -361,7 +368,7 @@ HTTP [Client hints](/en-US/docs/Web/HTTP/Guides/Client_hints) are a set of reque
 Servers proactively requests the client hint headers they are interested in from the client using {{HTTPHeader("Accept-CH")}}. The client may then choose to include the requested headers in subsequent requests.
 
 - {{HTTPHeader("Accept-CH")}}
-  - : Servers can advertise support for Client Hints using the `Accept-CH` header field or an equivalent HTML `<meta>` element with [`http-equiv`](/en-US/docs/Web/HTML/Reference/Elements/meta#http-equiv) attribute.
+  - : Servers can advertise support for Client Hints using the `Accept-CH` header field or an equivalent HTML `<meta>` element with [`http-equiv`](/en-US/docs/Web/HTML/Reference/Elements/meta/http-equiv) attribute.
 - {{HTTPHeader("Critical-CH")}} {{experimental_inline}}
   - : Servers use `Critical-CH` along with {{HTTPHeader("Accept-CH")}} to specify that accepted client hints are also [critical client hints](/en-US/docs/Web/HTTP/Guides/Client_hints#critical_client_hints).
 

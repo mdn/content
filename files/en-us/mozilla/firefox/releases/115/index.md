@@ -2,9 +2,8 @@
 title: Firefox 115 for developers
 slug: Mozilla/Firefox/Releases/115
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 115 that affect developers. Firefox 115 was released on July 04, 2023.
 

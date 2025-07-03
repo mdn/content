@@ -94,7 +94,7 @@ shadowRoot.appendChild(span);
 style.textContent =
   "span:hover { text-decoration: underline; }" +
   ":host-context(h1) { font-style: italic; }" +
-  ':host-context(h1):after { content: " - no links in headers!" }' +
+  ':host-context(h1)::after { content: " - no links in headers!" }' +
   ":host-context(article, aside) { color: gray; }" +
   ":host(.footer) { color : red; }" +
   ":host { background: rgb(0 0 0 / 10%); padding: 2px 5px; }";

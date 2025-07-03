@@ -52,7 +52,7 @@ padding: 5px;
 #example-element {
   height: 60px;
   margin: 2em auto;
-  background-color: rgba(81, 81, 81, 0.6);
+  background-color: rgb(81 81 81 / 0.6);
 }
 
 #example-element > p {

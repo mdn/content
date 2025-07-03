@@ -2,9 +2,8 @@
 title: Firefox 106 for developers
 slug: Mozilla/Firefox/Releases/106
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 106 that will affect developers. Firefox 106 was released on October 18, 2022.
 

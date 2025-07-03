@@ -34,6 +34,8 @@ li {
 
 This element also accepts the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
+- `compact` {{Deprecated_inline}} {{non-standard_inline}}
+  - : This Boolean attribute hints that the list should be rendered in a compact style. The interpretation of this attribute is browser-specific. Use [CSS](/en-US/docs/Web/CSS) instead: to give a similar effect as the `compact` attribute, the CSS property {{cssxref("line-height")}} can be used with a value of `80%`.
 - `reversed`
   - : This Boolean attribute specifies that the list's items are in reverse order. Items will be numbered from high to low.
 - `start`

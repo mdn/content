@@ -134,50 +134,41 @@ We also import a font from the Google Fonts service to apply to our demo's text.
 We have hidden the exact HTML code for brevity.
 
 ```html hidden
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>text-box demo</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet" />
-  </head>
-  <body>
-    <section>
-      <div>
-        <label for="box-trim">Select edge(s) to trim:</label>
-        <select id="box-trim">
-          <option>none</option>
-          <option>trim-start</option>
-          <option>trim-end</option>
-          <option selected>trim-both</option>
-        </select>
-      </div>
-      <div>
-        <label for="trim-over">Select trim over (start) value:</label>
-        <select id="trim-over">
-          <option>text</option>
-          <option selected>cap</option>
-          <option>ex</option>
-        </select>
-      </div>
-    </section>
-    <p class="display" contenteditable="">Holly Golightly</p>
-    <section>
-      <div>
-        <label for="trim-under">Select trim under (end) value:</label>
-        <select id="trim-under">
-          <option>text</option>
-          <option selected>alphabetic</option>
-        </select>
-      </div>
-    </section>
-    <output></output>
-  </body>
-</html>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+  rel="stylesheet" />
+<section>
+  <div>
+    <label for="box-trim">Select edge(s) to trim:</label>
+    <select id="box-trim">
+      <option>none</option>
+      <option>trim-start</option>
+      <option>trim-end</option>
+      <option selected>trim-both</option>
+    </select>
+  </div>
+  <div>
+    <label for="trim-over">Select trim over (start) value:</label>
+    <select id="trim-over">
+      <option>text</option>
+      <option selected>cap</option>
+      <option>ex</option>
+    </select>
+  </div>
+</section>
+<p class="display" contenteditable="">Holly Golightly</p>
+<section>
+  <div>
+    <label for="trim-under">Select trim under (end) value:</label>
+    <select id="trim-under">
+      <option>text</option>
+      <option selected>alphabetic</option>
+    </select>
+  </div>
+</section>
+<output></output>
 ```
 
 #### CSS
