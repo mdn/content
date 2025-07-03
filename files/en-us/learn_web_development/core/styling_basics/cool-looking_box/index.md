@@ -62,7 +62,7 @@ html {
 /* Your CSS below here */
 ```
 
-Alternatively, you could use an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+Alternatively, you could use an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 You could paste the HTML and fill in the CSS into one of these online editors.
 
 > [!NOTE]
