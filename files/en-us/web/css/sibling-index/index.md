@@ -26,7 +26,7 @@ The `sibling-index()` function doesn't accept parameters.
 
 ### Return value
 
-An integer, the position of the current element in the DOM tree's sibling order.
+An integer; the position of the current element in the DOM tree's sibling order.
 
 ## Examples
 
@@ -60,9 +60,7 @@ li {
 
 ### Ordered List
 
-This example demonstrates how to create an ordered list using `sibling-index()`, without using the {{htmlelement("ol")}} element.
-
-Because not always you have the ability to change the HTML. In these cases, you so you can do that with CSS.
+This example demonstrates how to create an ordered list using `sibling-index()`, without using the {{htmlelement("ol")}} element. Always use the most semantic element for the context; this example is included to  demonstrate what can be done with CSS when you have the ability to change the HTML.
 
 #### HTML
 
@@ -79,7 +77,7 @@ When you have {{htmlelement("nav")}} container and several children {{htmlelemen
 
 #### CSS
 
-You can transform it to a numbered list by disapling the sibling-index before each {{htmlelement("div")}} element using the {{CSSxRef("before")}} pseudo-element with the `sibling-index()` value.
+We make it visually appear as a numbered list by displaying the sibling-index before each {{htmlelement("div")}} element using the {{CSSxRef("before")}} pseudo-element, setting the {{cssxref("content")}} to be the integer returned by the `sibling-index()` function.
 
 ```css
 div {
