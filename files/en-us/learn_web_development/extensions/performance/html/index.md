@@ -68,13 +68,13 @@ This example provides different size images for different screen widths:
 ```html
 <img
   srcset="480w.jpg 480w, 800w.jpg 800w"
-  sizes="(max-width: 600px) 480px,
+  sizes="(width <= 600px) 480px,
          800px"
   src="800w.jpg"
   alt="Family portrait" />
 ```
 
-`srcset` provides the intrinsic size of the source images along with their filenames, and `sizes` provides media queries alongside image slot widths that need to be filled in each case. The browser then decides which images makes sense to load for each slot. As an example, if the screen width is `600px` or less, then `max-width: 600px` is true, and therefore, the slot to fill is said to be `480px`. In this case, the browser will likely choose to load the 480w.jpg file (480px-wide image). This helps with performance because browsers don't load larger images than they need.
+`srcset` provides the intrinsic size of the source images along with their filenames, and `sizes` provides media queries alongside image slot widths that need to be filled in each case. The browser then decides which images makes sense to load for each slot. As an example, if the screen width is `600px` or less, then `width <= 600px` is true, and therefore, the slot to fill is said to be `480px`. In this case, the browser will likely choose to load the 480w.jpg file (480px-wide image). This helps with performance because browsers don't load larger images than they need.
 
 This example provides different resolution images for different screen resolutions:
 
@@ -99,13 +99,13 @@ An example is as follows:
 
 ```html
 <picture>
-  <source media="(max-width: 799px)" srcset="narrow-banner-480w.jpg" />
-  <source media="(min-width: 800px)" srcset="wide-banner-800w.jpg" />
+  <source media="(width < 800px)" srcset="narrow-banner-480w.jpg" />
+  <source media="(width >= 800px)" srcset="wide-banner-800w.jpg" />
   <img src="large-banner-800w.jpg" alt="Dense forest scene" />
 </picture>
 ```
 
-The {{htmlelement("source")}} elements contain media queries inside `media` attributes. If a media query returns true, the image referenced in its `<source>` element's `srcset` attribute is loaded. In the above example, if the viewport width is `799px` or less, the `narrow-banner-480w.jpg` image is loaded. Also note how the `<picture>` element includes an `<img>` element, which provides a default image to load in the case of browsers that don't support `<picture>`.
+The {{htmlelement("source")}} elements contain media queries inside `media` attributes. If a media query returns true, the image referenced in its `<source>` element's `srcset` attribute is loaded. In the above example, if the viewport width is less than `800px`, the `narrow-banner-480w.jpg` image is loaded. Also note how the `<picture>` element includes an `<img>` element, which provides a default image to load in the case of browsers that don't support `<picture>`.
 
 Note the use of the `srcset` attribute in this example. As shown in the previous section, you can provide different resolutions for each image source.
 
@@ -115,11 +115,8 @@ Note the use of the `srcset` attribute in this example. As shown in the previous
 <video controls>
   <source src="video/smaller.mp4" type="video/mp4" />
   <source src="video/smaller.webm" type="video/webm" />
-  <source src="video/larger.mp4" type="video/mp4" media="(min-width: 800px)" />
-  <source
-    src="video/larger.webm"
-    type="video/webm"
-    media="(min-width: 800px)" />
+  <source src="video/larger.mp4" type="video/mp4" media="(width >= 800px)" />
+  <source src="video/larger.webm" type="video/webm" media="(width >= 800px)" />
 
   <!-- fallback for browsers that don't support video element -->
   <a href="video/larger.mp4">download video</a>

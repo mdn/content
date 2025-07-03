@@ -28,7 +28,7 @@ outline: thick double #32a1ce;
 ```
 
 ```css interactive-example-choice
-outline: 8px ridge rgba(170, 50, 220, 0.6);
+outline: 8px ridge rgb(170 50 220 / 0.6);
 border-radius: 2rem;
 ```
 

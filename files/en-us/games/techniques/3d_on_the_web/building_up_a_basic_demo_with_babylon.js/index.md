@@ -26,7 +26,7 @@ Alternatively, you can load Babylon.js from a CDN:
 <script src="https://cdn.babylonjs.com/v7.34.1/babylon.js"></script>
 ```
 
-If you don't want to develop locally, you can use an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+If you don't want to develop locally, you can use an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 With these editors, you can add `https://cdn.babylonjs.com/v7.34.1/babylon.js` as a JavaScript source so it's available in your code.
 
 ### HTML starter for Babylon.js
@@ -384,7 +384,7 @@ canvas {
   width: 100%;
   height: 100%;
   font-size: 0;
-  color: rgba(204, 204, 204, 1);
+  color: rgb(204 204 204);
 }
 ```
 

@@ -174,7 +174,7 @@ Bear in mind that some features are, however, known to be undetectable. In these
 We also wanted to mention the {{domxref("Window.matchMedia")}} JavaScript feature at this point too. This is a property that allows you to run media query tests inside JavaScript. It looks like this:
 
 ```js
-if (window.matchMedia("(max-width: 480px)").matches) {
+if (window.matchMedia("(width <= 480px)").matches) {
   // run JavaScript in here.
 }
 ```
@@ -182,16 +182,13 @@ if (window.matchMedia("(max-width: 480px)").matches) {
 As an example, our [Snapshot](https://github.com/chrisdavidmills/snapshot) demo makes use of it to selectively apply the Brick JavaScript library and use it to handle the UI layout, but only for the small screen layout (480px wide or less). We first use the `media` attribute to only apply the Brick CSS to the page if the page width is 480px or less:
 
 ```html
-<link
-  href="dist/brick.css"
-  rel="stylesheet"
-  media="all and (max-width: 480px)" />
+<link href="dist/brick.css" rel="stylesheet" media="(width <= 480px)" />
 ```
 
 We then use `matchMedia()` in the JavaScript several times, to only run Brick navigation functions if we are on the small screen layout (in wider screen layouts, everything can be seen at once, so we don't need to navigate between different views).
 
 ```js
-if (window.matchMedia("(max-width: 480px)").matches) {
+if (window.matchMedia("(width <= 480px)").matches) {
   deck.shuffleTo(1);
 }
 ```

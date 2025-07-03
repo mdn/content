@@ -30,7 +30,7 @@ image("image1.jpg", black);
 image("image1.jpg#xywh=40,0,20,20");
 
 /* Solid-color Images */
-image(rgba(0,0,255,.5)), url("bg-image.png");
+image(rgb(0 0 255 / 0.5)), url("bg-image.png");
 ```
 
 ### Values

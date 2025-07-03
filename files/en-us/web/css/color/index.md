@@ -20,7 +20,7 @@ color: #00a400;
 ```
 
 ```css interactive-example-choice
-color: rgb(214, 122, 127);
+color: rgb(214 122 127);
 ```
 
 ```css interactive-example-choice

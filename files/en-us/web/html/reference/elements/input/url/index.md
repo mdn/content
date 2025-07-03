@@ -314,12 +314,12 @@ input + span {
   padding: 0 0.3rem;
 }
 
-input:invalid + span:after {
+input:invalid + span::after {
   content: "✖" / "Content is not valid";
   color: red;
 }
 
-input:valid + span:after {
+input:valid + span::after {
   content: "✓" / "Content is valid";
   color: green;
 }

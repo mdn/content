@@ -294,7 +294,7 @@ Basically, the idea is to trigger JavaScript on some form field event (like **on
 
 ### Constraint combining several fields: Postal code validation
 
-The postal code format varies from one country to another. Not only do most countries allow an optional prefix with the country code (like `D-` in Germany, `F-` in France or Switzerland), but some countries have postal codes with only a fixed number of digits; others, like the UK, have more complex structures, allowing letters at some specific positions.
+The postal code format varies from one country to another. Many countries allow an optional prefix with the country code (like `D-` in Germany, `F-` in France, and `CH-` in Switzerland). Some countries use only a fixed number of digits in postal codes, while others, like the UK, have more complex formats that allow letters at some specific positions.
 
 > [!NOTE]
 > This is not a comprehensive postal code validation library, but rather a demonstration of the key concepts.

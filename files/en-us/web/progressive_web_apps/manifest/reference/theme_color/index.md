@@ -94,7 +94,7 @@ body {
 
 ```json
 {
-  "theme_color": "rgb(66, 133, 244)"
+  "theme_color": "rgb(66 133 244)"
 }
 ```
 

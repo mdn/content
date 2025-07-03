@@ -383,7 +383,7 @@ The shorthand syntax for this declaration is described in the {{cssxref("contain
 Next, target that container by adding the name to the container query:
 
 ```css
-@container summary (min-width: 400px) {
+@container summary (width >= 400px) {
   .card {
     font-size: 1.5em;
   }
@@ -398,8 +398,8 @@ It is possible to nest container queries which has the same effect.
 The following query evaluates to true and applies the declared style if the container named `summary` is wider than `400px` and has an ancestor container wider than `800px`:
 
 ```css
-@container summary (min-width: 400px) {
-  @container (min-width: 800px) {
+@container summary (width > 400px) {
+  @container (width > 800px) {
     /* <stylesheet> */
   }
 }
