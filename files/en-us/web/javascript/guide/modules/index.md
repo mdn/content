@@ -43,7 +43,6 @@ modules/
 The modules directory's two modules are described below:
 
 - `canvas.js` — contains functions related to setting up the canvas:
-
   - `create()` — creates a canvas with a specified `width` and `height` inside a wrapper [`<div>`](/en-US/docs/Web/HTML/Reference/Elements/div) with a specified ID, which is itself appended inside a specified parent element. Returns an object containing the canvas's 2D context and the wrapper's ID.
   - `createReportList()` — creates an unordered list appended inside a specified wrapper element, which can be used to output report data into. Returns the list's ID.
 
