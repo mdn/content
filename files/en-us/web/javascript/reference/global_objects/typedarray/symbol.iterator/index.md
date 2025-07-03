@@ -16,9 +16,9 @@ The initial value of this property is the same function object as the initial va
 
 ```js interactive-example
 const uint8 = new Uint8Array([10, 20, 30]);
-const iterator1 = uint8[Symbol.iterator]();
+const iterator = uint8[Symbol.iterator]();
 
-for (const value of iterator1) {
+for (const value of iterator) {
   console.log(value);
 }
 

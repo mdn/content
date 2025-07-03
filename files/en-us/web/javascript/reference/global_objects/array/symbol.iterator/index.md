@@ -15,10 +15,10 @@ The initial value of this property is the same function object as the initial va
 {{InteractiveExample("JavaScript Demo: Array.prototype[Symbol.iterator]()")}}
 
 ```js interactive-example
-const array1 = ["a", "b", "c"];
-const iterator1 = array1[Symbol.iterator]();
+const array = ["a", "b", "c"];
+const iterator = array[Symbol.iterator]();
 
-for (const value of iterator1) {
+for (const value of iterator) {
   console.log(value);
 }
 

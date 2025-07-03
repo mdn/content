@@ -21,9 +21,9 @@ MyNumberType.prototype.valueOf = function () {
   return this.number;
 };
 
-const object1 = new MyNumberType(4);
+const object = new MyNumberType(4);
 
-console.log(object1 + 3);
+console.log(object + 3);
 // Expected output: 7
 ```
 

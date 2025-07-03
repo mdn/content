@@ -15,14 +15,14 @@ The initial value of this property is the same function object as the initial va
 {{InteractiveExample("JavaScript Demo: Map.prototype[Symbol.iterator]()")}}
 
 ```js interactive-example
-const map1 = new Map();
+const map = new Map();
 
-map1.set("0", "foo");
-map1.set(1, "bar");
+map.set("0", "foo");
+map.set(1, "bar");
 
-const iterator1 = map1[Symbol.iterator]();
+const iterator = map[Symbol.iterator]();
 
-for (const item of iterator1) {
+for (const item of iterator) {
   console.log(item);
 }
 // Expected output: Array ["0", "foo"]

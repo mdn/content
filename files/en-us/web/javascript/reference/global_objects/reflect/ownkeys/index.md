@@ -13,17 +13,17 @@ The **`Reflect.ownKeys()`** static method returns an array of the `target` objec
 {{InteractiveExample("JavaScript Demo: Reflect.ownKeys()")}}
 
 ```js interactive-example
-const object1 = {
+const object = {
   property1: 42,
   property2: 13,
 };
 
-const array1 = [];
+const array = [];
 
-console.log(Reflect.ownKeys(object1));
+console.log(Reflect.ownKeys(object));
 // Expected output: Array ["property1", "property2"]
 
-console.log(Reflect.ownKeys(array1));
+console.log(Reflect.ownKeys(array));
 // Expected output: Array ["length"]
 ```
 

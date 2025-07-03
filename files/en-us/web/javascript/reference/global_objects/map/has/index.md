@@ -14,13 +14,13 @@ specified key exists in this map or not.
 {{InteractiveExample("JavaScript Demo: Map.prototype.has()")}}
 
 ```js interactive-example
-const map1 = new Map();
-map1.set("bar", "foo");
+const map = new Map();
+map.set("bar", "foo");
 
-console.log(map1.has("bar"));
+console.log(map.has("bar"));
 // Expected output: true
 
-console.log(map1.has("baz"));
+console.log(map.has("baz"));
 // Expected output: false
 ```
 

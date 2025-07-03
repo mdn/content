@@ -13,17 +13,17 @@ The **`delete()`** method of {{jsxref("Set")}} instances removes a specified val
 {{InteractiveExample("JavaScript Demo: Set.prototype.delete()")}}
 
 ```js interactive-example
-const set1 = new Set();
-set1.add({ x: 10, y: 20 }).add({ x: 20, y: 30 });
+const set = new Set();
+set.add({ x: 10, y: 20 }).add({ x: 20, y: 30 });
 
 // Delete any point with `x > 10`.
-set1.forEach((point) => {
+set.forEach((point) => {
   if (point.x > 10) {
-    set1.delete(point);
+    set.delete(point);
   }
 });
 
-console.log(set1.size);
+console.log(set.size);
 // Expected output: 1
 ```
 

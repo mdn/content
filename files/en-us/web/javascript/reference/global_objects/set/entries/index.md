@@ -13,13 +13,13 @@ The **`entries()`** method of {{jsxref("Set")}} instances returns a new _[set it
 {{InteractiveExample("JavaScript Demo: Set.prototype.entries()")}}
 
 ```js interactive-example
-const set1 = new Set();
-set1.add(42);
-set1.add("forty two");
+const set = new Set();
+set.add(42);
+set.add("forty two");
 
-const iterator1 = set1.entries();
+const iterator = set.entries();
 
-for (const entry of iterator1) {
+for (const entry of iterator) {
   console.log(entry);
   // Expected output: Array [42, 42]
   // Expected output: Array ["forty two", "forty two"]

@@ -13,10 +13,10 @@ The **`Intl.RelativeTimeFormat.supportedLocalesOf()`** static method returns an 
 {{InteractiveExample("JavaScript Demo: Intl.RelativeTimeFormat.supportedLocalesOf()", "shorter")}}
 
 ```js interactive-example
-const locales1 = ["ban", "id-u-co-pinyin", "de-ID"];
-const options1 = { localeMatcher: "lookup" };
+const locales = ["ban", "id-u-co-pinyin", "de-ID"];
+const options = { localeMatcher: "lookup" };
 
-console.log(Intl.RelativeTimeFormat.supportedLocalesOf(locales1, options1));
+console.log(Intl.RelativeTimeFormat.supportedLocalesOf(locales, options));
 // Expected output: Array ["id-u-co-pinyin", "de-ID"]
 // (Note: the exact output may be browser-dependent)
 ```

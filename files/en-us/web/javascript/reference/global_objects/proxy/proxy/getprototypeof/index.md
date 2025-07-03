@@ -13,7 +13,7 @@ The **`handler.getPrototypeOf()`** method is a trap for the `[[GetPrototypeOf]]`
 {{InteractiveExample("JavaScript Demo: handler.getPrototypeOf()", "taller")}}
 
 ```js interactive-example
-const monster1 = {
+const monster = {
   eyeCount: 4,
 };
 
@@ -27,12 +27,12 @@ const handler = {
   },
 };
 
-const proxy1 = new Proxy(monster1, handler);
+const proxy = new Proxy(monster, handler);
 
-console.log(Object.getPrototypeOf(proxy1) === monsterPrototype);
+console.log(Object.getPrototypeOf(proxy) === monsterPrototype);
 // Expected output: true
 
-console.log(Object.getPrototypeOf(proxy1).eyeCount);
+console.log(Object.getPrototypeOf(proxy).eyeCount);
 // Expected output: 2
 ```
 

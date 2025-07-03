@@ -13,16 +13,16 @@ The **`Reflect.getPrototypeOf()`** static method is like {{jsxref("Object.getPro
 {{InteractiveExample("JavaScript Demo: Reflect.getPrototypeOf()")}}
 
 ```js interactive-example
-const object1 = {
-  property1: 42,
+const object = {
+  foo: 42,
 };
 
-const proto1 = Reflect.getPrototypeOf(object1);
+const proto = Reflect.getPrototypeOf(object);
 
-console.log(proto1);
+console.log(proto);
 // Expected output: Object {  }
 
-console.log(Reflect.getPrototypeOf(proto1));
+console.log(Reflect.getPrototypeOf(proto));
 // Expected output: null
 ```
 

@@ -13,18 +13,18 @@ The **`propertyIsEnumerable()`** method of {{jsxref("Object")}} instances return
 {{InteractiveExample("JavaScript Demo: Object.prototype.propertyIsEnumerable()", "taller")}}
 
 ```js interactive-example
-const object1 = {};
-const array1 = [];
-object1.property1 = 42;
-array1[0] = 42;
+const object = {};
+const array = [];
+object.foo = 42;
+array[0] = 42;
 
-console.log(object1.propertyIsEnumerable("property1"));
+console.log(object.propertyIsEnumerable("foo"));
 // Expected output: true
 
-console.log(array1.propertyIsEnumerable(0));
+console.log(array.propertyIsEnumerable(0));
 // Expected output: true
 
-console.log(array1.propertyIsEnumerable("length"));
+console.log(array.propertyIsEnumerable("length"));
 // Expected output: false
 ```
 

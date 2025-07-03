@@ -15,12 +15,12 @@ every element in the calling array.
 {{InteractiveExample("JavaScript Demo: Array.prototype.map()")}}
 
 ```js interactive-example
-const array1 = [1, 4, 9, 16];
+const array = [1, 4, 9, 16];
 
 // Pass a function to map
-const map1 = array1.map((x) => x * 2);
+const mapped = array.map((x) => x * 2);
 
-console.log(map1);
+console.log(mapped);
 // Expected output: Array [2, 8, 18, 32]
 ```
 

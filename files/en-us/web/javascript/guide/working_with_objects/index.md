@@ -156,9 +156,9 @@ const Animal = {
   },
 };
 
-// Create new animal type called animal1
-const animal1 = Object.create(Animal);
-animal1.displayType(); // Logs: Invertebrates
+// Create new animal type called `animal`
+const animal = Object.create(Animal);
+animal.displayType(); // Logs: Invertebrates
 
 // Create new animal type called fish
 const fish = Object.create(Animal);

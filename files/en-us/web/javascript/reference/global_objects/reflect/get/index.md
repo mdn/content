@@ -13,17 +13,17 @@ The **`Reflect.get()`** static method is like the [property accessor](/en-US/doc
 {{InteractiveExample("JavaScript Demo: Reflect.get()")}}
 
 ```js interactive-example
-const object1 = {
+const object = {
   x: 1,
   y: 2,
 };
 
-console.log(Reflect.get(object1, "x"));
+console.log(Reflect.get(object, "x"));
 // Expected output: 1
 
-const array1 = ["zero", "one"];
+const array = ["zero", "one"];
 
-console.log(Reflect.get(array1, 1));
+console.log(Reflect.get(array, 1));
 // Expected output: "one"
 ```
 

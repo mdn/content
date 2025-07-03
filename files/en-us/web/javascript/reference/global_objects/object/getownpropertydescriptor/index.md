@@ -17,16 +17,16 @@ configuration.
 {{InteractiveExample("JavaScript Demo: Object.getOwnPropertyDescriptor()")}}
 
 ```js interactive-example
-const object1 = {
-  property1: 42,
+const object = {
+  foo: 42,
 };
 
-const descriptor1 = Object.getOwnPropertyDescriptor(object1, "property1");
+const descriptor = Object.getOwnPropertyDescriptor(object, "foo");
 
-console.log(descriptor1.configurable);
+console.log(descriptor.configurable);
 // Expected output: true
 
-console.log(descriptor1.value);
+console.log(descriptor.value);
 // Expected output: 42
 ```
 

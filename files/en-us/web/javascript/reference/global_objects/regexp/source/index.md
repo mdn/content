@@ -13,9 +13,9 @@ The **`source`** accessor property of {{jsxref("RegExp")}} instances returns a s
 {{InteractiveExample("JavaScript Demo: RegExp.prototype.source")}}
 
 ```js interactive-example
-const regex1 = /fooBar/gi;
+const regex = /fooBar/gi;
 
-console.log(regex1.source);
+console.log(regex.source);
 // Expected output: "fooBar"
 
 console.log(new RegExp().source);

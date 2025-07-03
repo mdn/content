@@ -15,13 +15,13 @@ See also {{jsxref("Array.prototype.reduce()")}} for left-to-right.
 {{InteractiveExample("JavaScript Demo: Array.prototype.reduceRight()")}}
 
 ```js interactive-example
-const array1 = [
+const array = [
   [0, 1],
   [2, 3],
   [4, 5],
 ];
 
-const result = array1.reduceRight((accumulator, currentValue) =>
+const result = array.reduceRight((accumulator, currentValue) =>
   accumulator.concat(currentValue),
 );
 

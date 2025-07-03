@@ -132,9 +132,9 @@ function* gen() {
   }
 }
 
-const g1 = gen();
-g1.next(); // { value: 1, done: false }
-g1.return("early return"); // { value: 'cleanup', done: true }
+const generator = gen();
+generator.next(); // { value: 1, done: false }
+generator.return("early return"); // { value: 'cleanup', done: true }
 ```
 
 ## Specifications

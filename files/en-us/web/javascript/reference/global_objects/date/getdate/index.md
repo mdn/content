@@ -14,9 +14,9 @@ The **`getDate()`** method of {{jsxref("Date")}} instances returns the day of th
 
 ```js interactive-example
 const birthday = new Date("August 19, 1975 23:15:30");
-const date1 = birthday.getDate();
+const date = birthday.getDate();
 
-console.log(date1);
+console.log(date);
 // Expected output: 19
 ```
 

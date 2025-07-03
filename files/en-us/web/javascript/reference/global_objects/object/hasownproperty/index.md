@@ -19,16 +19,16 @@ it).
 {{InteractiveExample("JavaScript Demo: Object.prototype.hasOwnProperty()")}}
 
 ```js interactive-example
-const object1 = {};
-object1.property1 = 42;
+const object = {};
+object.foo = 42;
 
-console.log(object1.hasOwnProperty("property1"));
+console.log(object.hasOwnProperty("foo"));
 // Expected output: true
 
-console.log(object1.hasOwnProperty("toString"));
+console.log(object.hasOwnProperty("toString"));
 // Expected output: false
 
-console.log(object1.hasOwnProperty("hasOwnProperty"));
+console.log(object.hasOwnProperty("hasOwnProperty"));
 // Expected output: false
 ```
 

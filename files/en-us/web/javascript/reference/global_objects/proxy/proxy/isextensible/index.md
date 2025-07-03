@@ -13,11 +13,11 @@ The **`handler.isExtensible()`** method is a trap for the `[[IsExtensible]]` [ob
 {{InteractiveExample("JavaScript Demo: handler.isExtensible()", "taller")}}
 
 ```js interactive-example
-const monster1 = {
+const monster = {
   canEvolve: true,
 };
 
-const handler1 = {
+const handler = {
   isExtensible(target) {
     return Reflect.isExtensible(target);
   },
@@ -27,20 +27,20 @@ const handler1 = {
   },
 };
 
-const proxy1 = new Proxy(monster1, handler1);
+const proxy = new Proxy(monster, handler);
 
-console.log(Object.isExtensible(proxy1));
+console.log(Object.isExtensible(proxy));
 // Expected output: true
 
-console.log(monster1.canEvolve);
+console.log(monster.canEvolve);
 // Expected output: true
 
-Object.preventExtensions(proxy1);
+Object.preventExtensions(proxy);
 
-console.log(Object.isExtensible(proxy1));
+console.log(Object.isExtensible(proxy));
 // Expected output: false
 
-console.log(monster1.canEvolve);
+console.log(monster.canEvolve);
 // Expected output: false
 ```
 

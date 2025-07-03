@@ -13,13 +13,13 @@ The **`values()`** method of {{jsxref("TypedArray")}} instances returns a new _[
 {{InteractiveExample("JavaScript Demo: TypedArray.prototype.values()")}}
 
 ```js interactive-example
-const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
-const array1 = uint8.values();
+const bytes = new Uint8Array([10, 20, 30, 40, 50]);
+const iterator = bytes.values();
 
-array1.next();
-array1.next();
+iterator.next();
+iterator.next();
 
-console.log(array1.next().value);
+console.log(iterator.next().value);
 // Expected output: 30
 ```
 

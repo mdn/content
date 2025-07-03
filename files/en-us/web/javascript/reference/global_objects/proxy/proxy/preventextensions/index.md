@@ -13,11 +13,11 @@ The **`handler.preventExtensions()`** method is a trap for the `[[PreventExtensi
 {{InteractiveExample("JavaScript Demo: handler.preventExtensions()", "taller")}}
 
 ```js interactive-example
-const monster1 = {
+const monster = {
   canEvolve: true,
 };
 
-const handler1 = {
+const handler = {
   preventExtensions(target) {
     target.canEvolve = false;
     Object.preventExtensions(target);
@@ -25,14 +25,14 @@ const handler1 = {
   },
 };
 
-const proxy1 = new Proxy(monster1, handler1);
+const proxy = new Proxy(monster, handler);
 
-console.log(monster1.canEvolve);
+console.log(monster.canEvolve);
 // Expected output: true
 
-Object.preventExtensions(proxy1);
+Object.preventExtensions(proxy);
 
-console.log(monster1.canEvolve);
+console.log(monster.canEvolve);
 // Expected output: false
 ```
 
