@@ -38,12 +38,11 @@ This is a feature designed to prevent servers from rejecting unknown user agents
 
 ## Syntax
 
-A comma separated list of brands in the user agent brand list, and their associated full version number.
-The syntax for a single entry has the following format:
-
 ```http
-Sec-CH-UA-Full-Version-List: "<brand>";v="<full version>", ...
+Sec-CH-UA-Full-Version-List: "<brand>";v="<full version>", …
 ```
+
+The value is a comma separated list of brands in the user agent brand list, and their associated full version number.
 
 ### Directives
 

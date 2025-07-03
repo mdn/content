@@ -274,7 +274,7 @@ body {
 ```html hidden
 <div>
   <div class="container">
-    <div class=" shape shape1">&mdash;</div>
+    <div class="shape shape1">&mdash;</div>
   </div>
 </div>
 

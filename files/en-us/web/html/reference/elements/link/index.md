@@ -52,10 +52,7 @@ You can also provide a media type or query inside a `media` attribute; this reso
 
 ```html
 <link href="print.css" rel="stylesheet" media="print" />
-<link
-  href="mobile.css"
-  rel="stylesheet"
-  media="screen and (max-width: 600px)" />
+<link href="mobile.css" rel="stylesheet" media="screen and (width <= 600px)" />
 ```
 
 Some interesting new performance and security features have been added to the `<link>` element too. Take this example:
@@ -354,14 +351,11 @@ this resource will then only be loaded if the media condition is true. For examp
 ```html
 <link href="print.css" rel="stylesheet" media="print" />
 <link href="mobile.css" rel="stylesheet" media="all" />
-<link
-  href="desktop.css"
-  rel="stylesheet"
-  media="screen and (min-width: 600px)" />
+<link href="desktop.css" rel="stylesheet" media="screen and (width >= 600px)" />
 <link
   href="highres.css"
   rel="stylesheet"
-  media="screen and (min-resolution: 300dpi)" />
+  media="screen and (resolution >= 300dpi)" />
 ```
 
 ### Stylesheet load events

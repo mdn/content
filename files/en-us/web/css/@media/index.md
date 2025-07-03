@@ -45,11 +45,9 @@ abbr {
 
 ## Syntax
 
-The `@media` at-rule may be placed at the top level of your code or nested inside any other conditional group at-rule.
-
 ```css
 /* At the top level of your code */
-@media screen and (min-width: 900px) {
+@media screen and (width >= 900px) {
   article {
     padding: 1rem 3rem;
   }
@@ -57,13 +55,15 @@ The `@media` at-rule may be placed at the top level of your code or nested insid
 
 /* Nested within another conditional at-rule */
 @supports (display: flex) {
-  @media screen and (min-width: 900px) {
+  @media screen and (width >= 900px) {
     article {
       display: flex;
     }
   }
 }
 ```
+
+The `@media` at-rule may be placed at the top level of your code or nested inside any other conditional group at-rule.
 
 For a discussion of media query syntax, please see [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax).
 
@@ -197,7 +197,7 @@ You can also combine multiple media queries into a single rule by separating the
 - `only`
   - : Applies a style only if an entire query matches.
     It is useful for preventing older browsers from applying selected styles.
-    When not using `only`, older browsers would interpret the query `screen and (max-width: 500px)` as `screen`, ignoring the remainder of the query, and applying its styles on all screens.
+    When not using `only`, older browsers would interpret the query `screen and (width <= 500px)` as `screen`, ignoring the remainder of the query, and applying its styles on all screens.
     If you use the `only` operator, you _must also_ specify a media type.
 - `,` (comma)
   - : Commas are used to combine multiple media queries into a single rule.
@@ -252,12 +252,6 @@ Because of this potential, a browser may opt to fudge the returned values in som
 @media screen, print {
   body {
     line-height: 1.2;
-  }
-}
-
-@media only screen and (min-width: 320px) and (max-width: 480px) and (resolution: 150dpi) {
-  body {
-    line-height: 1.4;
   }
 }
 ```

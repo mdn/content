@@ -1,6 +1,6 @@
 ---
-title: Private properties
-slug: Web/JavaScript/Reference/Classes/Private_properties
+title: Private elements
+slug: Web/JavaScript/Reference/Classes/Private_elements
 page-type: javascript-language-feature
 browser-compat:
   - javascript.classes.private_class_fields
@@ -10,9 +10,12 @@ browser-compat:
 
 {{jsSidebar("Classes")}}
 
-**Private properties** are counterparts of the regular class properties which are public, including [class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields), class methods, etc. Private properties get created by using a hash `#` prefix and cannot be legally referenced outside of the class. The privacy encapsulation of these class properties is enforced by JavaScript itself. The only way to access a private property is via [dot notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#dot_notation), and you can only do so within the class that defines the private property.
+**Private elements** are counterparts of the regular class elements which are public, including [class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields), class methods, etc. Private elements get created by using a hash `#` prefix and cannot be legally referenced outside of the class. The privacy encapsulation of these class elements is enforced by JavaScript itself. The only way to access a private element is via [dot notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#dot_notation), and you can only do so within the class that defines the private element.
 
-Private properties were not native to the language before this syntax existed. In prototypal inheritance, its behavior may be emulated with [`WeakMap`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap#emulating_private_members) objects or [closures](/en-US/docs/Web/JavaScript/Guide/Closures#emulating_private_methods_with_closures), but they can't compare to the `#` syntax in terms of ergonomics.
+Private elements were not native to the language before this syntax existed. In prototypal inheritance, its behavior may be emulated with [`WeakMap`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap#emulating_private_members) objects or [closures](/en-US/docs/Web/JavaScript/Guide/Closures#emulating_private_methods_with_closures), but they can't compare to the `#` syntax in terms of ergonomics.
+
+> [!NOTE]
+> On MDN, we avoid using the term "private property". A [property](/en-US/docs/Glossary/Property/JavaScript) in JavaScript has a string or symbol key, and has attributes like `writable`, `enumerable`, and `configurable`, but private elements have none. While private elements are accessed with the familiar dot notation, they cannot be [proxied](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy), enumerated, deleted, or interacted with using any {{jsxref("Object")}} method.
 
 ## Syntax
 
@@ -36,12 +39,12 @@ class ClassWithPrivate {
 
 There are some additional syntax restrictions:
 
-- All private identifiers declared within a class must be unique. The namespace is shared between static and instance properties. The only exception is when the two declarations define a getter-setter pair.
+- All private identifiers declared within a class must be unique. The namespace is shared between static and instance elements. The only exception is when the two declarations define a getter-setter pair.
 - The private identifier cannot be `#constructor`.
 
 ## Description
 
-Most class properties have their private counterparts:
+Most class elements have their private counterparts:
 
 - Private fields
 - Private methods
@@ -52,11 +55,11 @@ Most class properties have their private counterparts:
 - Private static getters
 - Private static setters
 
-These features are collectively called _private properties_. However, [constructors](/en-US/docs/Web/JavaScript/Reference/Classes/constructor) cannot be private in JavaScript. To prevent classes from being constructed outside of the class, you have to [use a private flag](#simulating_private_constructors).
+These features are collectively called _private elements_. However, [constructors](/en-US/docs/Web/JavaScript/Reference/Classes/constructor) cannot be private in JavaScript. To prevent classes from being constructed outside of the class, you have to [use a private flag](#simulating_private_constructors).
 
-Private properties are declared with **# names** (pronounced "hash names"), which are identifiers prefixed with `#`. The hash prefix is an inherent part of the property name — you can draw relationship with the old underscore prefix convention `_privateField` — but it's not an ordinary string property, so you can't dynamically access it with the [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation).
+Private elements are declared with **# names** (pronounced "hash names"), which are identifiers prefixed with `#`. The hash prefix is an inherent part of the property name — you can draw relationship with the old underscore prefix convention `_privateField` — but it's not an ordinary string property, so you can't dynamically access it with the [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation).
 
-It is a syntax error to refer to `#` names from outside of the class. It is also a syntax error to refer to private properties that were not declared in the class body, or to attempt to remove declared properties with [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete).
+It is a syntax error to refer to `#` names from outside of the class. It is also a syntax error to refer to private elements that were not declared in the class body, or to attempt to remove declared elements with [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete).
 
 ```js-nolint example-bad
 class ClassWithPrivateField {
@@ -75,9 +78,9 @@ instance.#privateField; // Syntax error
 JavaScript, being a dynamic language, is able to perform this compile-time check because of the special hash identifier syntax, making it different from normal properties on the syntax level.
 
 > [!NOTE]
-> Code run in the Chrome console can access private properties outside the class. This is a DevTools-only relaxation of the JavaScript syntax restriction.
+> Code run in the Chrome console can access private elements outside the class. This is a DevTools-only relaxation of the JavaScript syntax restriction.
 
-If you access a private property from an object that doesn't have the property, a {{jsxref("TypeError")}} is thrown, instead of returning `undefined` as normal properties do.
+If you access a private element from an object that doesn't have the element, a {{jsxref("TypeError")}} is thrown, instead of returning `undefined` as normal properties do.
 
 ```js example-bad
 class C {
@@ -92,9 +95,9 @@ console.log(C.getX(new C())); // undefined
 console.log(C.getX({})); // TypeError: Cannot read private member #x from an object whose class did not declare it
 ```
 
-This example also illustrates that you can access private properties within static functions too, and on externally defined instances of the class.
+This example also illustrates that you can access private elements within static functions too, and on externally defined instances of the class.
 
-You can use the [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) operator to check whether an externally defined object possesses a private property. This will return `true` if the private field or method exists, and `false` otherwise.
+You can use the [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) operator to check whether an externally defined object possesses a private element. This will return `true` if the private field or method exists, and `false` otherwise.
 
 ```js example-good
 class C {
@@ -114,9 +117,9 @@ console.log(C.getX(new C(new Date()))); // the current date and time
 console.log(C.getX({})); // "obj must be an instance of C"
 ```
 
-Note a corollary of private names being always pre-declared and non-deletable: if you found that an object possesses one private property of the current class (either from a `try...catch` or an `in` check), it must possess all other private properties. An object possessing the private properties of a class generally means it was constructed by that class (although [not always](#returning_overriding_object)).
+Note a corollary of private names being always pre-declared and non-deletable: if you found that an object possesses one private element of the current class (either from a `try...catch` or an `in` check), it must possess all other private elements. An object possessing the private elements of a class generally means it was constructed by that class (although [not always](#returning_overriding_object)).
 
-Private properties are not part of the [prototypical inheritance](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) model since they can only be accessed within the current class's body and aren't inherited by subclasses. Private properties with the same name within different classes are entirely different and do not interoperate with each other. See them as external metadata attached to each instance, managed by the class. For this reason, {{DOMxRef("Window.structuredClone", "structuredClone()")}} does not clone private properties, and {{jsxref("Object.freeze()")}} and {{jsxref("Object.seal()")}} have no effect on private properties.
+Private elements are not part of the [prototypical inheritance](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) model since they can only be accessed within the current class's body and aren't inherited by subclasses. Private elements with the same name within different classes are entirely different and do not interoperate with each other. See them as external metadata attached to each instance, managed by the class. For this reason, {{DOMxRef("Window.structuredClone", "structuredClone()")}} does not clone private elements, and {{jsxref("Object.freeze()")}} and {{jsxref("Object.seal()")}} have no effect on private elements.
 
 For more information on how and when private fields are initialized, see [public class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields).
 
@@ -185,7 +188,7 @@ console.log(obj); // In some dev tools, it shows {#stamp: 42}
 console.log(Stamper.getStamp(obj)); // 42
 console.log(obj instanceof Stamper); // false
 
-// You cannot stamp private properties twice
+// You cannot stamp private elements twice
 new Stamper(obj); // Error: Initializing an object twice is an error with private fields
 ```
 

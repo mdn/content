@@ -36,7 +36,7 @@ A convolution filter is applied to a rectangle, and the `divisor` is used to con
     y="20"
     width="100"
     height="100"
-    style="fill:lightgreen;"
+    fill="lightgreen"
     filter="url(#convolveFilterWithDivisor)" />
 </svg>
 ```

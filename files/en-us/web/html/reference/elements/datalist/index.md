@@ -93,20 +93,24 @@ Predefined values can be shown there, allowing the user to quickly fill the cont
 
 ### Range type
 
-The recommended values in the {{HTMLElement("input/range", "range")}} type will be shown as series of hash marks that the user can easily select.
+When `value` attributes are included on `<option>` elements provided for a datalist associated with a {{HTMLElement("input/range", "range")}} input type, they will be shown as a series of tick marks that the user can easily select.
 
 ```html
 <label for="tick">Tip amount:</label>
 <input type="range" list="tickmarks" min="0" max="100" id="tick" name="tick" />
 <datalist id="tickmarks">
-  <option value="0"></option>
-  <option value="10"></option>
-  <option value="20"></option>
-  <option value="30"></option>
+  <option value="0" label="0%"></option>
+  <option value="10" label="Minimum Tip"></option>
+  <option value="20" label="Standard"></option>
+  <option value="30" label="Generous"></option>
+  <option value="50" label="Very Generous"></option>
 </datalist>
 ```
 
 {{EmbedLiveSample("Range_type", 600, 70)}}
+
+> [!NOTE]
+> The `label` attribute is intended to provide labels for tick marks, as defined in the [HTML Standard](<https://html.spec.whatwg.org/multipage/input.html#range-state-(type=range)>). However, current browser support varies; labels might not be displayed visually or as tooltips.
 
 ### Color type
 

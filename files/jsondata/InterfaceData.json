@@ -1868,6 +1868,10 @@
       "inh": "Credential",
       "impl": []
     },
+    "IdentityCredentialError": {
+      "inh": "DOMException",
+      "impl": []
+    },
     "IdentityProvider": {
       "inh": "",
       "impl": []

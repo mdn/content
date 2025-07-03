@@ -152,7 +152,7 @@ const a = { x: 1, x: 2 };
 console.log(a); // {x: 2}
 ```
 
-After ES2015, duplicate property names are allowed everywhere, including [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode#duplicate_property_names). You can also have duplicate property names in [classes](/en-US/docs/Web/JavaScript/Reference/Classes). The only exception is [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties), which must be unique in the class body.
+After ES2015, duplicate property names are allowed everywhere, including [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode#duplicate_property_names). You can also have duplicate property names in [classes](/en-US/docs/Web/JavaScript/Reference/Classes). The only exception is [private elements](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements), which must be unique in the class body.
 
 ### Method definitions
 

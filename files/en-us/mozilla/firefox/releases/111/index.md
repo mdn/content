@@ -2,9 +2,8 @@
 title: Firefox 111 for developers
 slug: Mozilla/Firefox/Releases/111
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 111 that affect developers. Firefox 111 was released on March 14, 2023.
 

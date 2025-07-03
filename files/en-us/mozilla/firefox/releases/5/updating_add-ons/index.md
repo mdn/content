@@ -2,9 +2,8 @@
 title: Updating add-ons for Firefox 5
 slug: Mozilla/Firefox/Releases/5/Updating_add-ons
 page-type: guide
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides an overview of the changes you may need to make to your add-ons in order for them to work properly in Firefox 5. You can find a complete list of developer-related changes in Firefox 5 in [Firefox 5 for developers](/en-US/docs/Mozilla/Firefox/Releases/5).
 

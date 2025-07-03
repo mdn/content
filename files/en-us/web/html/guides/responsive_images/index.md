@@ -55,7 +55,7 @@ We can however use two attributes — [`srcset`](/en-US/docs/Web/HTML/Reference/
 ```html
 <img
   srcset="elva-fairy-480w.jpg 480w, elva-fairy-800w.jpg 800w"
-  sizes="(max-width: 600px) 480px,
+  sizes="(width <= 600px) 480px,
          800px"
   src="elva-fairy-800w.jpg"
   alt="Elva dressed as a fairy" />
@@ -71,7 +71,7 @@ The `srcset` and `sizes` attributes look complicated, but they're not too hard t
 
 **`sizes`** defines a set of media conditions (e.g., screen widths) and indicates what image size would be best to choose, when certain media conditions are true — these are the hints we talked about earlier. In this case, before each comma we write:
 
-1. A **media condition** (`(max-width:600px)`) — you'll learn more about these in the [CSS topic](/en-US/docs/Learn_web_development/Core/Styling_basics), but for now let's just say that a media condition describes a possible state that the screen can be in. In this case, we are saying "when the viewport width is 600 pixels or less".
+1. A **media condition** (`(width <= 600px)`) — you'll learn more about these in the [CSS topic](/en-US/docs/Learn_web_development/Core/Styling_basics), but for now let's just say that a media condition describes a possible state that the screen can be in. In this case, we are saying "when the viewport width is 600 pixels or less".
 2. A space
 3. The **width of the slot** the image will fill when the media condition is true (`480px`)
 
@@ -85,7 +85,7 @@ So, with these attributes in place, the browser will:
 3. Look at the slot size given to that media query.
 4. Load the image referenced in the `srcset` list that has the same size as the slot or, if there isn't one, the first image that is bigger than the chosen slot size.
 
-And that's it! At this point, if a supporting browser with a viewport width of 480px loads the page, the `(max-width: 600px)` media condition will be true, and so the browser chooses the `480px` slot. The `elva-fairy-480w.jpg` will be loaded, as its inherent width (`480w`) is closest to the slot size. The 800px picture is 128KB on disk, whereas the 480px version is only 63KB — a saving of 65KB. Now, imagine if this was a page that had many pictures on it. Using this technique could save mobile users a lot of bandwidth.
+And that's it! At this point, if a supporting browser with a viewport width of 480px loads the page, the `(width <= 600px)` media condition will be true, and so the browser chooses the `480px` slot. The `elva-fairy-480w.jpg` will be loaded, as its inherent width (`480w`) is closest to the slot size. The 800px picture is 128KB on disk, whereas the 480px version is only 63KB — a saving of 65KB. Now, imagine if this was a page that had many pictures on it. Using this technique could save mobile users a lot of bandwidth.
 
 > [!NOTE]
 > When testing this with a desktop browser, if the browser fails to load the narrower images when you've got its window set to the narrowest width, have a look at what the viewport is (you can approximate it by going into the browser's JavaScript console and typing in `document.querySelector('html').clientWidth`). Different browsers have minimum sizes that they'll let you reduce the window width to, and they might be wider than you'd think. When testing it with a mobile browser, you can use tools like Firefox's `about:debugging` page to inspect the page loaded on the mobile using the desktop developer tools.
@@ -138,13 +138,13 @@ Let's fix this, with {{htmlelement("picture")}}! Like [`<video>` and `<audio>`](
 
 ```html
 <picture>
-  <source media="(max-width: 799px)" srcset="elva-480w-close-portrait.jpg" />
-  <source media="(min-width: 800px)" srcset="elva-800w.jpg" />
+  <source media="(width < 800px)" srcset="elva-480w-close-portrait.jpg" />
+  <source media="(width >= 800px)" srcset="elva-800w.jpg" />
   <img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva" />
 </picture>
 ```
 
-- The `<source>` elements include a `media` attribute that contains a media condition — as with the first `srcset` example, these conditions are tests that decide which image is shown — the first one that returns true will be displayed. In this case, if the viewport width is 799px wide or less, the first `<source>` element's image will be displayed. If the viewport width is 800px or more, it'll be the second one.
+- The `<source>` elements include a `media` attribute that contains a media condition — as with the first `srcset` example, these conditions are tests that decide which image is shown — the first one that returns true will be displayed. In this case, if the viewport width is less than 800px wide, the first `<source>` element's image will be displayed. If the viewport width is 800px or more, it'll be the second one.
 - The `srcset` attributes contain the path to the image to display. Just as we saw with `<img>` above, `<source>` can take a `srcset` attribute with multiple images referenced, as well as a `sizes` attribute. So, you could offer multiple images via a `<picture>` element, but then also offer multiple resolutions of each one. Realistically, you probably won't want to do this kind of thing very often.
 - In all cases, you must provide an `<img>` element, with `src` and `alt`, right before `</picture>`, otherwise no images will appear. This provides a default case that will apply when none of the media conditions return true (you could actually remove the second `<source>` element in this example), and a fallback for browsers that don't support the `<picture>` element.
 
