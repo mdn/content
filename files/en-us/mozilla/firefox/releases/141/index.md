@@ -3,7 +3,7 @@ title: Firefox 141 for developers
 short-title: Firefox 141 (Beta)
 slug: Mozilla/Firefox/Releases/141
 page-type: firefox-release-notes-active
-sidebar: firefoxsidebar
+sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 141 that affect developers.

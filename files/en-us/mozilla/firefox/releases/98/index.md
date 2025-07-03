@@ -2,9 +2,8 @@
 title: Firefox 98 for developers
 slug: Mozilla/Firefox/Releases/98
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 98 that affect developers. Firefox 98 was released on March 8, 2022.
 

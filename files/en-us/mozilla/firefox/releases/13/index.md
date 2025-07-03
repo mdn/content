@@ -2,9 +2,8 @@
 title: Firefox 13 for developers
 slug: Mozilla/Firefox/Releases/13
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 13 was shipped on June 5, 2012. This page summarizes the changes in Firefox 13 that affect developers.
 
