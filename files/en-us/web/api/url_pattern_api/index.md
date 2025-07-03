@@ -27,6 +27,8 @@ can contain:
 - {{jsxref("RegExp")}} groups (`/books/(\\d+)`) which make arbitrarily complex
   regex matches with a few [limitations](#regex_matchers_limitations). _Note that the
   parentheses are not part of the regex but instead define their contents as a regex._
+  Some APIs prohibit the use of regular expression groups in `URLPattern` objects.
+  The {{domxref("URLPattern.hasRegExpGroups", "hasRegExpGroups")}} property indicates whether or not regular expression groups are used.
 
 You can find details about the syntax in the [pattern syntax](#pattern_syntax)
 section below.
