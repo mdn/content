@@ -10,7 +10,7 @@ browser-compat: api.URLPattern.hasRegExpGroups
 
 The **`hasRegExpGroups`** read-only property of the {{domxref("URLPattern")}} interface is a boolean indicating whether or not any of the `URLPattern` components contain [regular expression capturing groups](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences).
 
-You can use `hasRegExpGroups` property to check if a `URLPattern` object is usable with certain web platform APIs which do not allow regular expression capturing groups. For example:
+You can use the `hasRegExpGroups` property to check if a `URLPattern` object is usable with certain web platform APIs which do not allow regular expression capturing groups. For example:
 
 - The `match` directive in the {{HTTPHeader("Use-As-Dictionary")}} HTTP header prohibits regular expression capturing groups, as well as
 - the `urlPattern` condition when adding static routes using the {{domxref("InstallEvent.addRoutes()")}} method.
