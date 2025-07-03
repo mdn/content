@@ -148,7 +148,7 @@ We set different values for the `mask-mode` property for each image:
 }
 ```
 
-{{EmbedLiveSample("mode", "", "250px")}}
+{{EmbedLiveSample("mode", "", "270px")}}
 
 In the `alpha` case, only the transparency of the gradient's colors matter. Where the gradient is opaque red, the image is opaque. Where the gradient is transparent, the image is hidden. Where the gradient is 50% opaque, the image is 50% opaque. In the `luminance` case, the color's brightness matters! See [Alpha transparency versus luminance](/en-US/docs/Web/CSS/CSS_masking/Masking#alpha_transparency_versus_luminance) to learn about the equation that uses the color's R, G, B, and A channels to determine the opacity of the mask.
 
