@@ -8,18 +8,7 @@ page-type: guide
 
 You can apply **multiple backgrounds** to elements. These are layered atop one another with the first background you provide on top and the last background listed in the back. Only the last background can include a background color.
 
-Specifying multiple backgrounds is easy:
-
-```css
-.myclass {
-  background:
-    background1,
-    background2,
-    /* …, */ backgroundN;
-}
-```
-
-You can do this with both the shorthand {{ cssxref("background") }} property and the individual properties thereof except for {{ cssxref("background-color") }}. That is, the following background properties can be specified as a list, one per background: {{ cssxref("background") }}, {{ cssxref("background-attachment") }}, {{ cssxref("background-clip") }}, {{ cssxref("background-image") }}, {{ cssxref("background-origin") }}, {{ cssxref("background-position") }}, {{ cssxref("background-repeat") }}, {{ cssxref("background-size") }}.
+Multiple backgrounds are specified as a comma-separated list, such as `background: backgroun1, background2, ...`. This syntax is accepted by both the shorthand {{ cssxref("background") }} property and the individual properties thereof except for {{ cssxref("background-color") }}: {{ cssxref("background-attachment") }}, {{ cssxref("background-clip") }}, {{ cssxref("background-image") }}, {{ cssxref("background-origin") }}, {{ cssxref("background-position") }}, {{ cssxref("background-repeat") }}, {{ cssxref("background-size") }}.
 
 ## Example
 
