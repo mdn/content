@@ -104,15 +104,16 @@ applications, causing your application to temporarily exit fullscreen mode.
 
 ### Requesting fullscreen mode
 
-This example toggles the {{HTMLElement("video")}} element in and out of fullscreen mode when the <kbd>Enter</kbd> or <kbd>F</kbd> key is pressed.
+This example toggles the {{HTMLElement("video")}} element in and out of fullscreen mode when the <kbd>Enter</kbd> or <kbd>Shift</kbd> + <kbd>F</kbd> keys are pressed.
 The script checks whether the document is currently in fullscreen using {{domxref("document.fullscreenElement")}}.
 If the document is in fullscreen, it calls {{domxref("document.exitFullscreen()")}} to exit.
-Otherwise, it calls `requestFullscreen()` on the element with a `video-element` class:
+Otherwise, it calls `requestFullscreen()` on the `<video>` element:
 
 ```js
-const video = document.querySelector(".video-element");
+const video = document.querySelector("video");
 
 document.addEventListener("keydown", (event) => {
+  // Note that "F" is case-sensitive (uppercase):
   if (event.key === "Enter" || event.key === "F") {
     // Check if we're in fullscreen mode
     if (document.fullscreenElement) {
@@ -129,21 +130,17 @@ document.addEventListener("keydown", (event) => {
 
 ```html
 <p>
-  A video element below shows a time lapse of a flower blooming. You can toggle
-  full screen on and off using <kbd>Enter</kbd> or <kbd>F</kbd> key. Make sure
-  this document has
-  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/focus_event"
-    >focus</a
-  >
+  The video element below shows a time-lapse of a flower blooming. You can
+  toggle fullscreen on and off using <kbd>Enter</kbd> or <kbd>Shift</kbd> +
+  <kbd>F</kbd> (uppercase "F"). The embedded document needs to have
+  <a
+    href="https://developer.mozilla.org/en-US/docs/Web/API/Element/focus_event">
+    focus
+  </a>
   for the example to work.
 </p>
 
-<video
-  class="video-element"
-  controls
-  src="/shared-assets/videos/flower.mp4"
-  width="420"
-  loop></video>
+<video controls loop src="/shared-assets/videos/flower.mp4" width="420"></video>
 ```
 
 ```css hidden
