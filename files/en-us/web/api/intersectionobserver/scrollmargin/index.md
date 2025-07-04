@@ -24,11 +24,6 @@ A string, formatted similarly to the CSS {{cssxref("margin")}} property's value.
 The specified margin defines offsets for one or more sides of a scroll container clipping rectangle.
 If `scrollMargin` isn't specified when the object was instantiated, it defaults to the string `"0px 0px 0px 0px"`.
 
-<!--
-The string returned by this property may not match the one specified when the {{domxref("IntersectionObserver")}} was instantiated.
-The browser is permitted to alter the values.
--->
-
 ## Example
 
 ### Carousel with scroll margin

@@ -286,7 +286,7 @@ When an image element starts to intersect with the root element, the image is lo
 
 Scroll the down to display the carousel.
 The visible images should immediately load.
-If you scroll the carousel right, you should observe that the images are loaded as soon as the element becomes visible.
+If you scroll the carousel, you should observe that the images are loaded as soon as the element becomes visible.
 
 After resetting the example you can use the provided control to change the scroll margin percentage.
 If you set a positive value like 20% the clip rectangle of the scroll container will be increased by 20%, and you should observe that images are detected and loaded before they come into view.
