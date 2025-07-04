@@ -68,8 +68,8 @@ new IntersectionObserver(callback, options)
     - `trackVisibility`
       - : A boolean indicating whether the observer should track visibility.
 
-        When `true`, the browser will check that the target does not have compromised visibility when calculating intersections.
-        For example, that it hasn't been covered by other elements or potentially been distorted or hidden by a filter, reduced opacity, or some transform.
+        When `true`, the browser will check that the target does not have compromised visibility when calculating intersections;
+        for example, that it hasn't been covered by other elements or potentially been distorted or hidden by a filter, reduced opacity, or some transform.
 
         Tracking visibility is an expensive operation, and should only be done when necessary.
         A [`delay`](#delay) should also be set when this value is `true`.

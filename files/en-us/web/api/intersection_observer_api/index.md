@@ -71,7 +71,7 @@ The `options` object passed into the {{domxref("IntersectionObserver.Intersectio
 - `threshold`
   - : Either a single number or an array of numbers which indicate at what percentage of the target's visibility the observer's callback should be executed. If you only want to detect when visibility passes the 50% mark, you can use a value of 0.5. If you want the callback to run every time visibility passes another 25%, you would specify the array \[0, 0.25, 0.5, 0.75, 1]. The default is 0 (meaning as soon as even one pixel is visible, the callback will be run). A value of 1.0 means that the threshold isn't considered passed until every pixel is visible.
 - `delay`
-  - : When tracking target visibility ([trackVisibility](#trackvisibility) is `true`), this can be used to set the minimum delay in millisecond between notifications from this observer.
+  - : When tracking target visibility ([trackVisibility](#trackvisibility) is `true`), this can be used to set the minimum delay in milliseconds between notifications from this observer.
     Limiting the notification rate is desirable because the visibility calculation is computationally intensive.
     If tracking visibility, the value will be set to 100 for any value less than 100, and you should use the largest tolerable value.
     The value is 0 by default.
@@ -269,12 +269,12 @@ scrollAmount.addEventListener("input", () => {
 
 #### The intersection root and scroll margin
 
-Consider the case where you have an root element that contains nested {{glossary("scroll container","scroll containers")}}, and you want to observe intersections with a target inside one of those scrollable containers.
-Intersections with the target element start being observable, by default, when the target is visible within the area defined by the root.
-In other words, when the container is scrolled into view in the root and the target is scrolled into view within the clipping rectangle of its container.
+Consider the case where you have a root element that contains nested {{glossary("scroll container","scroll containers")}}, and you want to observe intersections with a target inside one of those scrollable containers.
+Intersections with the target element start being observable, by default, when the target is visible within the area defined by the root;
+in other words, when the container is scrolled into view in the root and the target is scrolled into view within the clipping rectangle of its container.
 
 You can use a scroll margin to start observing intersections before or after the target is scrolled into view within its scroll container.
-The margin is added to all nested scroll containers in the root, including the root element if it also a scroll container, and has the effect of either growing (positive margins) or shrinking (negative margin) the clipping region used for calculating intersections.
+The margin is added to all nested scroll containers in the root, including the root element if it is also a scroll container, and has the effect of either growing (positive margins) or shrinking (negative margin) the clipping region used for calculating intersections.
 
 > [!NOTE]
 > You could create an intersection observer on each scroll container for which you want a scroll margin, and use the root margin property to achieve a similar effect.
@@ -284,7 +284,7 @@ In the example below, we have a scrollable box and an image carousel that is ini
 An observer on the root element observes the image element targets within the carousel.
 When an image element starts to intersect with the root element, the image is loaded, the intersection is logged, and the observer is removed.
 
-Scroll the down to display the carousel.
+Scroll down to display the carousel.
 The visible images should immediately load.
 If you scroll the carousel, you should observe that the images are loaded as soon as the element becomes visible.
 
@@ -664,14 +664,14 @@ startup();
 
 By default the observer provides notifications when the target element is scrolled into the root element's viewport.
 While this is all that is needed in many situations, sometimes it is important that intersections are not reported when the target has been "visually compromised".
-For example, when measuring analytics or ad impressions, it is important that target elements are not hidden or or distorted, in whole or in part.
+For example, when measuring analytics or ad impressions, it is important that target elements are not hidden or distorted, in whole or in part.
 
 The `trackVisibility` setting tells the observer to only report intersections for targets that the browser does not consider to be visually compromised, such as by altering the opacity, or applying a filter or transform.
 The algorithm is conservative, and may omit elements that are technically visible, such as those with only a slight opacity reduction.
 
 The visibility calculation is computationally expensive and should only be used when necessary.
 When tracking visibility a {{domxref("IntersectionObserver/delay","delay")}} should also be set to limit the minimum reporting period.
-The recommendation is that you set the delay to the largest tolerable value (the minimum delay when tracking visibility is100 milliseconds).
+The recommendation is that you set the delay to the largest tolerable value (the minimum delay when tracking visibility is 100 milliseconds).
 
 #### Clipping and the intersection rectangle
 

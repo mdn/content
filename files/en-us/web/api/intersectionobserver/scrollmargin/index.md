@@ -11,7 +11,7 @@ browser-compat: api.IntersectionObserver.scrollMargin
 The **`scrollMargin`** read-only property of the {{domxref("IntersectionObserver")}} interface adds a margin to all nested {{glossary("scroll container","scroll containers")}} within the root element, including the root element if it is a scroll container.
 
 This grows or shrinks the clipping rectangle of the scrollable containers before calculating intersections.
-This lets you, for example, adjust the bounds of the scroll container so that the target element is considered visible even if a pixels are not yet displayed in the container's viewport, or to treat the target as partially hidden if an edge is too close to the edge of the container's bounding box.
+This lets you, for example, adjust the bounds of the scroll container so that the target element is considered visible even if its pixels are not yet displayed in the container's viewport, or to treat the target as partially hidden if an edge is too close to the edge of the container's bounding box.
 
 Note that if the root element is also a scrollable container, then the `scrollMargin` and {{domxref("IntersectionObserver/rootMargin","rootMargin")}} are combined to determine the effective bounding rectangle used for calculating intersections with the target.
 
@@ -165,7 +165,7 @@ function log(text) {
 }
 ```
 
-The first part of the code defines function `createImageObserver()` that we use to create `IntersectionObserver` objects and assign to the `imageObserver` variable.
+The first part of the code defines the function `createImageObserver()` that we use to create `IntersectionObserver` objects and assign to the `imageObserver` variable.
 We use a function because observer options can't be changed after construction, and we want to be able to demonstrate the effects of different `scrollMargin` values.
 
 The `IntersectionObserver` is created with no `rootMargin`, a near-zero `threshold`, and a `scrollMargin` that takes its value from the `margin` input, and that will be applied to all sides of the scroll container.
@@ -247,7 +247,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 #### Results
 
-Scroll the down to display the carousel.
+Scroll down to display the carousel.
 The visible images should immediately load.
 If you scroll the carousel right, you should observe that the images are loaded as soon as the element becomes visible.
 
