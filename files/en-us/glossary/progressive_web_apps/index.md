@@ -1,5 +1,5 @@
 ---
-title: Progressive Web Applications (PWAs)
+title: Progressive web applications (PWAs)
 slug: Glossary/Progressive_web_apps
 page-type: glossary-definition
 ---
