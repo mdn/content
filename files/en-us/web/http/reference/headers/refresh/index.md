@@ -61,7 +61,7 @@ Refresh: 5; url=https://example.com/
 ```
 
 > [!NOTE]
-> See the [`http-equiv="refresh"`](/en-US/docs/Web/HTML/Reference/Elements/meta#refresh) attribute in the HTML reference for important information about accessibility implications of automatic redirects.
+> See the [`http-equiv="refresh"`](/en-US/docs/Web/HTML/Reference/Elements/meta/http-equiv#refresh) attribute in the HTML reference for important information about accessibility implications of automatic redirects.
 
 ## Specifications
 

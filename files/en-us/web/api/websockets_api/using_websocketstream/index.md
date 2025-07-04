@@ -139,7 +139,7 @@ function writeToScreen(message) {
 }
 ```
 
-Next, we create an `if ... else` structure to feature detect `WebSocketStream` and output an informative message on non-supporting browsers:
+Next, we create an `if...else` structure to feature detect `WebSocketStream` and output an informative message on non-supporting browsers:
 
 ```js
 if (!("WebSocketStream" in self)) {
