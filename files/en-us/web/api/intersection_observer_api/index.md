@@ -277,8 +277,8 @@ You can use a scroll margin to start observing intersections before or after the
 The margin is added to all nested scroll containers in the root, including the root element if it also a scroll container, and has the effect of either growing (positive margins) or shrinking (negative margin) the clipping region used for calculating intersections.
 
 > [!NOTE]
-> You could alternatively create an intersection observer on the scroll container (instead of the root) and set a root margin.
-> Using a scroll margin on the root is more ergonomic, as in most cases you can have just one intersection observer for all nested targets.
+> You could create an intersection observer on each scroll container for which you want a scroll margin, and use the root margin property to achieve a similar effect.
+> Using a scroll margin is more ergonomic, as in most cases you can have just one intersection observer for all nested targets.
 
 In the example below, we have a scrollable box and an image carousel that is initially out of view.
 An observer on the root element observes the image element targets within the carousel.
