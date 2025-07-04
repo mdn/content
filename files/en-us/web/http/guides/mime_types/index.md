@@ -117,12 +117,6 @@ There are two multipart types:
 
 ## Important MIME types for Web developers
 
-### MIME type parameters in HTML
-
-In HTML, the `type` attribute for elements like `<script>` and `<style>` only supports the **MIME type essence** (e.g., `text/javascript`). Including parameters such as `charset=utf-8` will cause the resource to be ignored.
-
-In contrast, parameters in HTTP `Content-Type` headers (e.g., `Content-Type: text/javascript; charset=utf-8`) are technically allowed. However, modern browsers assume UTF-8 by default and typically ignore the parameter, making it unnecessary in most cases.
-
 ### application/octet-stream
 
 This is the default for binary files. As it means _unknown binary_ file, browsers usually don't execute it, or even ask if it should be executed. They treat it as if the {{HTTPHeader("Content-Disposition")}} header was set to `attachment`, and propose a "Save As" dialog.
@@ -152,11 +146,16 @@ All HTML content should be served with this type. Alternative MIME types for XHT
 
 ### text/javascript
 
-Per the [IANA Media Types registry](https://www.iana.org/assignments/media-types/media-types.xhtml#text), [RFC 9239](https://www.rfc-editor.org/rfc/rfc9239.html), and the [HTML specification](https://html.spec.whatwg.org/multipage/scripting.html#scriptingLanguages:text/javascript), JavaScript content should always be served using the MIME type `text/javascript`.
-No other MIME types are considered valid for JavaScript, and using any MIME type other than `text/javascript` may result in scripts that do not load or run.
+JavaScript content should always be served with the MIME type `text/javascript`.
+No other MIME types are considered valid for JavaScript, including the [legacy JavaScript types](#legacy_javascript_mime_types) listed below.
+Using any MIME type other than `text/javascript` may result in scripts that do not load or run.
 
-You may find some JavaScript content incorrectly served with a `charset` parameter as part of the MIME type — as an attempt to specify the character set for the script content.
-That `charset` parameter isn't valid for JavaScript content, and in most cases will result in a script failing to load.
+Note that in HTML the [`type`](/en-US/docs/Web/HTML/Reference/Elements/script/type) attribute for {{htmlelement("script")}} elements may only contain the **MIME type essence**: `text/javascript`.
+Including the parameters such as `charset=utf-8` will prevent the resource from being requested.
+In contrast, when using the HTTP {{httpheader("Content-Type")}} header you may optionally specify the `charset` parameter (browsers assume {{glossary("UTF-8")}} by default).
+When requesting a [JavaScript module](/en-US/docs/Web/JavaScript/Guide/Modules) via HTTP, if you do set the `charset` parameter then the header _must_ specify UTF-8 as shown: `Content-Type: text/javascript; charset=utf-8`.
+
+For more information see: [IANA Media Types registry](https://www.iana.org/assignments/media-types/media-types.xhtml#text), [RFC 9239](https://www.rfc-editor.org/rfc/rfc9239.html), and the [HTML specification](https://html.spec.whatwg.org/multipage/scripting.html#scriptingLanguages:text/javascript).
 
 #### Legacy JavaScript MIME types
 
