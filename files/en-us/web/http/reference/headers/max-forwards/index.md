@@ -4,9 +4,8 @@ short-title: Max-Forwards
 slug: Web/HTTP/Reference/Headers/Max-Forwards
 page-type: http-header
 spec-urls: https://httpwg.org/specs/rfc9110.html#field.max-forwards
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Max-Forwards`** {{Glossary("request header")}} is used with the {{HTTPMethod("TRACE")}} method to limit the number of nodes (usually {{Glossary("Proxy_server", "proxies")}}) that the request goes through.
 Its value is an integer indicating the _maximum amount_ of nodes it must visit.
