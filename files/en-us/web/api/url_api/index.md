@@ -71,7 +71,7 @@ The URL API is a simple one, with only a couple of interfaces to its name:
 
 ### Parsing URL parameters using the URL API
 
-You could process URL parameters by parsing a URL as a string, splitting it on certain characters or using regular expressions, but it's much easier to create a new `URL` object for this. The example below gets the document URL from [`document.location.href`](/en-US/docs/Web/API/Document/location), sorts them using {{domxref("URLSearchParams.sort()")}}, then extracts the keys using `URLSearchParams.keys`.
+You could process URL parameters by parsing a URL as a string, splitting it on certain characters or using regular expressions, but it's much easier to create a new `URL` object for this. The example below gets the document URL from [`document.location.href`](/en-US/docs/Web/API/Document/location), sorts the parameters using {{domxref("URLSearchParams.sort()")}}, then extracts the keys using `URLSearchParams.keys`.
 
 For each key in the document URL, we add rows to a {{HTMLElement("table")}} element, one for each key found in the parameters, with the first column containing the key's name, and the second column containing the value:
 
