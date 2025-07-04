@@ -559,9 +559,9 @@ There are three ways to declare a `mask-size`:
 
 The mask image can be left to its natural size, stretched, or constrained to fit the available space. The {{glossary("aspect ratio")}} of the mask image is maintained by default, but declaring two `<length-percentage>` values can distort the mask image if the ratio of the two values is not the same as the original image (`mask-repeat: round` is the other property/value pair that may distort the mask image).
 
-If the `mask-size` is set to `contain`, the mask image will be the largest size it can be while being fully contained within the mask positioning area; the mask image is resized until one dimension is the same size as the corresponding mask positioning area's dimension without overflowing the area.
+If the `mask-size` is set to `contain`, the mask image will be the largest size it can be while being fully contained within the mask positioning area. In this case, the mask image is not clipped, but rather, it is fully contained.
 
-When set to `cover`, the mask image is resized until the second dimension is the same size as the corresponding mask positioning area's dimension, overflowing the other dimension if the aspect ratio of the element and mask aren't the same. With `cover`, the mask image will be the smallest size it can be to fully cover the entire mask-positioning area, with the mask being clipped if the mask's aspect ratio differs from the aspect ratio of the mask-positioning area.
+When set to `cover`, the mask image will be the smallest size it can be to fully cover the entire mask-positioning area, with the mask being clipped if the mask's aspect ratio differs from the aspect ratio of the mask-positioning area.
 
 In other words, With `cover` and `contain`, at least one dimension of the mask will be the same size as the mask-positioning area's same dimension; the mask image either grows or shrinks so that either the width is the same width as the mask positioning area or the mask image's height is equal to the mask positioning area's height.
 
