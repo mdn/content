@@ -3,9 +3,8 @@ title: 505 HTTP Version Not Supported
 slug: Web/HTTP/Reference/Status/505
 page-type: http-status-code
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.505
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`505 HTTP Version Not Supported`** [server error response](/en-US/docs/Web/HTTP/Reference/Status#server_error_responses) status code indicates that the HTTP version used in the request is not supported by the server.
 

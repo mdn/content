@@ -2,9 +2,8 @@
 title: Firefox 107 for developers
 slug: Mozilla/Firefox/Releases/107
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 107 that will affect developers. Firefox 107 was released on November 15, 2022.
 

@@ -546,5 +546,7 @@ In addition to applying the same shape for both the `clip-shape` and `shape-outs
 - {{cssxref("shape-margin")}}
 - [Overview of shapes](/en-US/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
 - [Introduction to CSS masking](/en-US/docs/Web/CSS/CSS_masking/Masking)
+- [CSS `mask` properties](/en-US/docs/Web/CSS/CSS_masking/Mask_properties)
+- [Declaring multiple masks](/en-US/docs/Web/CSS/CSS_masking/Multiple_masks)
 - [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
 - [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) module

@@ -2,9 +2,8 @@
 title: Firefox 35 for developers
 slug: Mozilla/Firefox/Releases/35
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 35 was released on January 13th, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 

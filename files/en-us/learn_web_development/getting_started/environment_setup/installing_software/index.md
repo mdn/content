@@ -109,7 +109,7 @@ While version control tools are essential for web development teams, you don't n
 
 After you've finished developing a website or app (on your local computer, or perhaps on a development server), you'll want to put it onto a remote web server so that your users can type in the web address associated with it and view it on the web!
 
-There are various ways you can do this, from buying hosting and using an [SFTP app](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server#sftp), using a service like [GitHub Pages](https://pages.github.com/) or [Netlify](https://www.netlify.com/), or even setting up a quick demo to share with others using something like [Glitch](https://glitch.com/) or [CodePen](https://codepen.io/).
+There are various ways you can do this, from buying hosting and using an [SFTP app](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server#sftp), using a service like [GitHub Pages](https://pages.github.com/) or [Netlify](https://www.netlify.com/), or even putting together a quick demo to share with others using something like [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 
 Such a list of options might seem overwhelming, but don't worry — you don't need to know anything about publishing websites right now. We'll look at this topic many times later in the course. You'll get practical experience of it soon enough, in our [Your first website](/en-US/docs/Learn_web_development/Getting_started/Your_first_website) module.
 

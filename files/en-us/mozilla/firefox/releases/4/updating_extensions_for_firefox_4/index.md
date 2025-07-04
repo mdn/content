@@ -2,9 +2,8 @@
 title: Updating extensions for Firefox 4
 slug: Mozilla/Firefox/Releases/4/Updating_extensions_for_Firefox_4
 page-type: guide
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article offers details on changes in Firefox 4 that may impact existing extensions.
 

@@ -4,9 +4,8 @@ short-title: media-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/media-src
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.media-src
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 **`media-src`** directive specifies valid sources for loading

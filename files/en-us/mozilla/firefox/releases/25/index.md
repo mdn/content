@@ -2,9 +2,8 @@
 title: Firefox 25 for developers
 slug: Mozilla/Firefox/Releases/25
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 ## Changes for Web developers
 

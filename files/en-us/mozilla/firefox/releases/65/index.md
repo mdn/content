@@ -2,9 +2,8 @@
 title: Firefox 65 for developers
 slug: Mozilla/Firefox/Releases/65
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 65 that will affect developers. Firefox 65 was released on January 29, 2019.
 

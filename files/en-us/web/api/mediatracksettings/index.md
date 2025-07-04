@@ -98,6 +98,9 @@ Tracks containing video shared from a user's screen (regardless of whether the s
 - {{domxref("MediaTrackSettings.logicalSurface", "logicalSurface")}}
   - : A Boolean value which, if `true`, indicates that the video contained in the stream's video track contains a background rendering context, rather than a user-visible one. This is `false` if the video being captured is coming from a foreground (user-visible) source.
 
+- {{domxref("MediaTrackSettings.screenPixelRatio", "screenPixelRatio")}}
+  - : A number representing the ratio of the physical size of a pixel on the captured display surface (displayed at its physical resolution) to the logical size of a CSS pixel on the capturing screen (displayed at its logical resolution). It cannot be used as a constraint or capability.
+
 ## Specifications
 
 {{Specifications}}
