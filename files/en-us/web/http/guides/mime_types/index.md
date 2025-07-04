@@ -149,10 +149,10 @@ All HTML content should be served with this type. Alternative MIME types for XHT
 JavaScript content should always be served with the MIME type `text/javascript`.
 For historic reasons, browsers may support some [legacy JavaScript types](#legacy_javascript_mime_types) listed below, but you should not assume scripts served with any MIME type other than `text/javascript` will always load or run.
 
-Note that in HTML the [`type`](/en-US/docs/Web/HTML/Reference/Elements/script/type) attribute for {{htmlelement("script")}} elements may only contain the **MIME type essence**: `text/javascript`.
-Including the parameters such as `charset=utf-8` will prevent the resource from being requested.
-In contrast, when using the HTTP {{httpheader("Content-Type")}} header you may optionally specify the `charset` parameter (browsers assume {{glossary("UTF-8")}} by default).
-When requesting a [JavaScript module](/en-US/docs/Web/JavaScript/Guide/Modules) via HTTP, if you do set the `charset` parameter then the header _must_ specify UTF-8 as shown: `Content-Type: text/javascript; charset=utf-8`.
+Note that in HTML the [`type`](/en-US/docs/Web/HTML/Reference/Elements/script/type) attribute for {{htmlelement("script")}} elements may only contain the **JavaScript MIME type essence**: `text/javascript`.
+Including any parameter, such as `charset=utf-8`, is the same as setting the `type` to any other MIME type: the script content is treated as a data block and is not executed as JavaScript.
+(Note that setting the `type` to a JavaScript MIME type is a deprecated feature itself: you should omit the `type` in this case.)
+In contrast, when using the HTTP {{httpheader("Content-Type")}} header you may optionally specify the `charset` parameter as usual.
 
 For more information see: [IANA Media Types registry](https://www.iana.org/assignments/media-types/media-types.xhtml#text), [RFC 9239](https://www.rfc-editor.org/rfc/rfc9239.html), and the [HTML specification](https://html.spec.whatwg.org/multipage/scripting.html#scriptingLanguages:text/javascript).
 
