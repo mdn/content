@@ -147,8 +147,7 @@ All HTML content should be served with this type. Alternative MIME types for XHT
 ### text/javascript
 
 JavaScript content should always be served with the MIME type `text/javascript`.
-No other MIME types are considered valid for JavaScript, including the [legacy JavaScript types](#legacy_javascript_mime_types) listed below.
-Using any MIME type other than `text/javascript` may result in scripts that do not load or run.
+For historic reasons, browsers may support some [legacy JavaScript types](#legacy_javascript_mime_types) listed below, but you should not assume scripts served with any MIME type other than `text/javascript` will always load or run.
 
 Note that in HTML the [`type`](/en-US/docs/Web/HTML/Reference/Elements/script/type) attribute for {{htmlelement("script")}} elements may only contain the **MIME type essence**: `text/javascript`.
 Including the parameters such as `charset=utf-8` will prevent the resource from being requested.
