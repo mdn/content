@@ -6,9 +6,10 @@ page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP **`Permissions-Policy`** {{Glossary("response header")}} provides a mechanism to allow and deny the use of browser features in a document or within any {{HTMLElement("iframe")}} elements in the document.
 

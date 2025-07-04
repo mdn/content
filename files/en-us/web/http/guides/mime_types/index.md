@@ -3,9 +3,8 @@ title: Media types (MIME types)
 short-title: Media types
 slug: Web/HTTP/Guides/MIME_types
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 A **media type** (formerly known as a **Multipurpose Internet Mail Extensions or MIME type**) indicates the nature and format of a document, file, or assortment of bytes.
 MIME types are defined and standardized in IETF's {{RFC(6838)}}.

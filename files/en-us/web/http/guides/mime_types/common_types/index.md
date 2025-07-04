@@ -3,9 +3,8 @@ title: Common media types
 short-title: Common types
 slug: Web/HTTP/Guides/MIME_types/Common_types
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 This topic lists the most common MIME types with corresponding document types, ordered by their common extensions.
 

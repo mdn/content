@@ -223,9 +223,13 @@ We have three `mask-image` values, but only two `mask-origin` values. This means
 
 ## See also
 
+- {{cssxref("background-origin")}}
 - {{cssxref("mask-image")}}
 - {{cssxref("mask-position")}}
 - {{cssxref("mask-repeat")}}
 - {{cssxref("mask-size")}}
 - {{cssxref("mask")}} shorthand
+- [Introduction to CSS masking](/en-US/docs/Web/CSS/CSS_masking/Masking)
+- [CSS `mask` properties](/en-US/docs/Web/CSS/CSS_masking/Mask_properties)
+- [Declaring multiple masks](/en-US/docs/Web/CSS/CSS_masking/Multiple_masks)
 - [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module

@@ -4,9 +4,8 @@ short-title: Repr-Digest
 slug: Web/HTTP/Reference/Headers/Repr-Digest
 page-type: http-header
 spec-urls: https://datatracker.ietf.org/doc/html/rfc9530
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Repr-Digest`** {{Glossary("Request header", "request")}} and {{Glossary("Response header", "response header")}} provides a {{Glossary("hash function", "digest")}} of the selected representation of the target resource.
 It can be used validate the integrity of the whole selected representation once it has been received and reconstructed.
