@@ -904,7 +904,7 @@ The Audio Object Types are defined in ISO/IEC 14496-3 subpart 1, section 1.5.1. 
 
 ### HEVC: MP4, Quicktime, Matroska
 
-The [High Efficiency Video Coding](https://en.wikipedia.org/wiki/High_Efficiency_Video_Coding) format, also known as H.265 and MPEG-H Part 2, can be included in the [MP4](/en-US/docs/Web/Media/Guides/Formats/Containers#mpeg-4_mp4) (`video/mp4`), [Quicktime](/en-US/docs/Web/Media/Guides/Formats/Containers#quicktime) (`video/quicktime`), and [Matroska](https://en.wikipedia.org/wiki/Matroska) (`video/matroska`) containers.
+The [High Efficiency Video Coding](https://en.wikipedia.org/wiki/High_Efficiency_Video_Coding) codec, also known as H.265 and MPEG-H Part 2, can be included in the [MP4](/en-US/docs/Web/Media/Guides/Formats/Containers#mpeg-4_mp4) (`video/mp4`), [Quicktime](/en-US/docs/Web/Media/Guides/Formats/Containers#quicktime) (`video/quicktime`), and [Matroska](https://en.wikipedia.org/wiki/Matroska) (`video/matroska`) containers.
 
 Use of HEVC is generally described using a supporting MIME type with the `codecs` parameter appended; syntax examples are as follows:
 
