@@ -294,4 +294,7 @@ If all you need are shapes, clipping may suffice. But if you need fading, variab
 ## See also
 
 - [Introduction to CSS clipping](/en-US/docs/Web/CSS/CSS_masking/Clipping)
+- [Introduction to CSS masking](/en-US/docs/Web/CSS/CSS_masking/Masking)
+- [CSS `mask` properties](/en-US/docs/Web/CSS/CSS_masking/Mask_properties)
+- [Declaring multiple masks](/en-US/docs/Web/CSS/CSS_masking/Multiple_masks)
 - [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
