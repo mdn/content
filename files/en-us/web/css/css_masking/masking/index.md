@@ -23,7 +23,7 @@ With alpha masks, the color of the mask is irrelevant. Only the opacity of the m
 
 Masks can be defined using CSS gradients, raster images (such as PNGs), and SVG {{svgelement("mask")}} elements. In this guide, we introduce the various mask image types as we discuss [opaqueness and transparency](#opaqueness_versus_transparency), [luminance](#alpha_transparency_versus_luminance), and [masking versus CSS clipping](#svg_mask_as_mask_source).
 
-Each mask layer consists of a {{cssxref("mask-image")}}, which is [positioned](/en-US/docs/Web/CSS/mask-position) relative to an origin box. The mask images can be [sized](/en-US/docs/Web/CSS/mask-size), [repeated](/en-US/docs/Web/CSS/mask-repeat), and [clipped](/en-US/docs/Web/CSS/mask-clip). In cases where multiple mask images are declared, the way the [mask layers are composited](/en-US/docs/Web/CSS/mask-composite), or combined, can be set. These are discussed in the [masking properties guide](/en-US/docs/Web/CSS/CSS_masking/CSS_mask_properties).
+Each mask layer consists of a {{cssxref("mask-image")}}, which is [positioned](/en-US/docs/Web/CSS/mask-position) relative to an origin box. The mask images can be [sized](/en-US/docs/Web/CSS/mask-size), [repeated](/en-US/docs/Web/CSS/mask-repeat), and [clipped](/en-US/docs/Web/CSS/mask-clip). In cases where multiple mask images are declared, the way the [mask layers are composited](/en-US/docs/Web/CSS/mask-composite), or combined, can be set. These are discussed in the [masking properties guide](/en-US/docs/Web/CSS/CSS_masking/Mask_properties).
 
 > [!NOTE]
 > All examples will be using the following image as the underlying element upon which masks will be applied:
@@ -59,6 +59,8 @@ img {
 ```
 
 With alpha masks, the visible areas of an element are defined by the alpha-transparency of the mask applied to it. Wherever the mask is fully opaque, the element will be visible. At every pixel where the mask is fully transparent, the element too will be fully hidden. Areas of the element that are masked by a partially opaque section of a mask will be partially opaque, matching the opacity of the mask applied to it.
+
+### With gradients
 
 To demonstrate this, let's look at an example using a {{cssxref("conic-gradient")}} as the `mask-image`. CSS gradients, including conic gradients, can be used to create smooth transitions between visible and hidden areas.
 
@@ -101,6 +103,8 @@ With alpha masks, the color of the mask doesn't matter, only the transparency. I
 Note how the fully opaque mask areas reveal fully opaque element pixels, semi-transparent mask areas create semi-transparent areas, and fully transparent mask areas hide the associated areas completely.
 
 {{EmbedLiveSample("gradient2", "", "250px")}}
+
+### With imported images
 
 The previous two examples used gradients as masks and background images. The mask image doesn't have to be a CSS image. It can be an external image or an SVG.
 
