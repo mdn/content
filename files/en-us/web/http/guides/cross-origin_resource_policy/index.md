@@ -3,9 +3,8 @@ title: Cross-Origin Resource Policy (CORP)
 slug: Web/HTTP/Guides/Cross-Origin_Resource_Policy
 page-type: guide
 browser-compat: http.headers.Cross-Origin-Resource-Policy
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 **Cross-Origin Resource Policy** is a policy set by the [`Cross-Origin-Resource-Policy` HTTP header](/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Resource-Policy) that lets websites and applications opt in to protection against certain requests from other origins (such as those issued with elements like `<script>` and `<img>`), to mitigate speculative side-channel attacks, like [Spectre](<https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)>), as well as Cross-Site Script Inclusion attacks.
 

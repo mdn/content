@@ -2,9 +2,8 @@
 title: Firefox 116 for developers
 slug: Mozilla/Firefox/Releases/116
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 116 that affect developers. Firefox 116 was released on August 01, 2023.
 

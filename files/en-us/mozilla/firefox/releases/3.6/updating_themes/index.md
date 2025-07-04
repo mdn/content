@@ -2,9 +2,8 @@
 title: Updating themes for Firefox 3.6
 slug: Mozilla/Firefox/Releases/3.6/Updating_themes
 page-type: guide
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article intends to help theme authors update Firefox-3.5-compatible themes for Firefox 3.6 compatibility.
 

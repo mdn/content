@@ -4,9 +4,8 @@ short-title: Priority
 slug: Web/HTTP/Reference/Headers/Priority
 page-type: http-header
 browser-compat: http.headers.Priority
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Priority`** header indicates a client's preference for the priority order at which the response containing the requested resource should be sent, relative to other resource requests on the same connection.
 If the header is not specified in the request, a default priority is assumed.

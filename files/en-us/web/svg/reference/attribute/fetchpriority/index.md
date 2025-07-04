@@ -3,7 +3,7 @@ title: fetchpriority
 slug: Web/SVG/Reference/Attribute/fetchpriority
 page-type: svg-attribute
 browser-compat:
-  - svg.elements.feimage.fetchpriority
+  - svg.elements.feImage.fetchpriority
   - svg.elements.image.fetchpriority
   - svg.elements.script.fetchpriority
 sidebar: svgref

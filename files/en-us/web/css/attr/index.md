@@ -438,7 +438,7 @@ The cards are laid out in a flex container:
   .warning {
     padding: 1em;
     border: 1px solid #ccc;
-    background: rgba(255 255 205 / 0.8);
+    background: rgb(255 255 205 / 0.8);
     text-align: center;
     order: -1;
     margin: 1em;

@@ -3,10 +3,12 @@ title: "VideoFrame: flip property"
 short-title: flip
 slug: Web/API/VideoFrame/flip
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.VideoFrame.flip
 ---
 
-{{APIRef("Web Codecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
+{{APIRef("Web Codecs API")}}{{AvailableInWorkers("window_and_dedicated")}}{{SeeCompatTable}}
 
 The **`flip`** property of the {{domxref("VideoFrame")}} interface returns a boolean that indicates whether the `VideoFrame` is horizontally mirrored.
 

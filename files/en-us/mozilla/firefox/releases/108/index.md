@@ -2,9 +2,8 @@
 title: Firefox 108 for developers
 slug: Mozilla/Firefox/Releases/108
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 108 that will affect developers. Firefox 108 was released on December 13, 2022.
 

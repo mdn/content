@@ -3,9 +3,8 @@ title: 404 Not Found
 slug: Web/HTTP/Reference/Status/404
 page-type: http-status-code
 spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.404
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`404 Not Found`** [client error response](/en-US/docs/Web/HTTP/Reference/Status#client_error_responses) status code indicates that the server cannot find the requested resource.
 Links that lead to a 404 page are often called broken or dead links and can be subject to [link rot](https://en.wikipedia.org/wiki/Link_rot).

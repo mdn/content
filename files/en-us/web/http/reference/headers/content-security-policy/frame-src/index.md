@@ -4,9 +4,8 @@ short-title: frame-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/frame-src
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.frame-src
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 **`frame-src`** directive specifies valid sources for nested
