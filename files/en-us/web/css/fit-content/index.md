@@ -6,29 +6,42 @@ browser-compat: css.properties.width.fit-content
 sidebar: cssref
 ---
 
-The **`fit-content`** keyword is equivalent to {{cssxref("fit-content_function", "fit-content(stretch)")}}. In practice, this means that the box will use the available space, but never more than {{cssxref("max-content")}}.
-
-The `fit-content` size is calculated using the following equation, where `<available-space>` is the size of its parent or grid track in [grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout):
-
-`min(max-content, max(min-content, <available-space>))`
-
-When used as laid out box size for {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} and {{cssxref("max-height")}} the maximum and minimum sizes refer to the content size.
+The `fit-content` sizing keyword represents an element size that adapts to its content while staying within the limits of its container.
+The keyword ensures that the element is never smaller than its minimum intrinsic size ({{cssxref("min-content")}}) or larger than its maximum intrinsic size ({{cssxref("max-content")}}).
 
 The {{cssxref("interpolate-size")}} property and {{cssxref("calc-size()")}} function can be used to enable animations to and from `fit-content`.
 
 > [!NOTE]
-> The CSS Sizing specification also defines the {{cssxref("fit-content_function", "fit-content()")}} function. This page details the keyword.
+> In addition to the `fit-content` keyword, the CSS Box Sizing specification also defines the {{cssxref("fit-content_function", "fit-content()")}} function, which takes a length or percentage as an argument and behaves slightly differently.
 
 ## Syntax
 
 ```css
+/* Used as a length value */
 width: fit-content;
+height: fit-content;
+inline-size: fit-content;
 block-size: fit-content;
+
+/* Used in grid tracks */
+grid-template-columns: 200px 1fr fit-content;
 ```
+
+## Description
+
+An element with `fit-content` grows or shrinks to fit its content, but stops expanding after it reaches the size limit of its container.
+
+The `fit-content` size is calculated using the following formula, where `<available-space>` is either the size of the element's parent container or the size of the grid track in [grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout):
+
+```plain
+min(max-content, max(min-content, <available-space>))
+```
+
+When applied to sizing properties such as {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}}, and {{cssxref("max-height")}}, the calculated size refers to the content box of the element.
 
 ## Examples
 
-### Using fit-content for box sizing
+### Sizing boxes with fit-content
 
 #### HTML
 
