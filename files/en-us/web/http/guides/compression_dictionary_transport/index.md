@@ -14,9 +14,10 @@ browser-compat:
   - http.headers.Dictionary-ID
   - http.headers.Use-As-Dictionary
 spec-urls: https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-compression-dictionary
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **Compression Dictionary Transport** is a way of using a shared compression dictionary to dramatically reduce the transport size of HTTP responses.
 

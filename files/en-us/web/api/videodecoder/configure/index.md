@@ -57,6 +57,10 @@ configure(config)
         - `"prefer-software"`
     - `optimizeForLatency` {{optional_inline}}
       - : A boolean. If `true` this is a hint that the selected decoder should be optimized to minimize the number of {{domxref("EncodedVideoChunk")}} objects that have to be decoded before a {{domxref("VideoFrame")}} is output.
+    - `flip` {{optional_inline}}
+      - : A boolean. If `true`, horizontal mirroring is applied. Defaults to `false`.
+    - `rotation` {{optional_inline}}
+      - : An integer representing the rotation (0, 90, 180, or 270) in degrees clockwise. Defaults to `0`. Arbitrary numbers (including negatives) are rounded to the next quarter turn.
 
 > [!NOTE]
 > The registrations in the [WebCodecs Codec Registry](https://w3c.github.io/webcodecs/codec_registry.html#video-codec-registry) link to a specification detailing whether and how to populate the optional `description` member.

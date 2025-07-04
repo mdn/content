@@ -4,9 +4,8 @@ short-title: font-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/font-src
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.font-src
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 **`font-src`** directive specifies

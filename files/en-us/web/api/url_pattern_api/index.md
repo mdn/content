@@ -8,25 +8,23 @@ spec-urls: https://urlpattern.spec.whatwg.org/
 
 {{DefaultAPISidebar("URL Pattern API")}} {{AvailableInWorkers}}
 
-The **URL Pattern API** defines a syntax that is used to create URL pattern
-matchers. These patterns can be matched against URLs or individual URL
-components. The URL Pattern API is used by the {{domxref("URLPattern")}}
-interface.
+The **URL Pattern API** defines a syntax that is used to create URL pattern matchers.
+These patterns can be matched against URLs or individual URL components.
+The URL Pattern API is used by the {{domxref("URLPattern")}} interface.
 
 ## Concepts and usage
 
-The pattern syntax is based on the syntax from the
-[path-to-regexp](https://github.com/pillarjs/path-to-regexp) library. Patterns
-can contain:
+The pattern syntax is based on the syntax from the [path-to-regexp](https://github.com/pillarjs/path-to-regexp) library.
+Patterns can contain:
 
 - Literal strings which will be matched exactly.
 - Wildcards (`/posts/*`) that match any character.
 - Named groups (`/books/:id`) which extract a part of the matched URL.
-- Non-capturing groups (`/books{/old}?`) which make parts of a pattern optional
-  or be matched multiple times.
-- {{jsxref("RegExp")}} groups (`/books/(\\d+)`) which make arbitrarily complex
-  regex matches with a few [limitations](#regex_matchers_limitations). _Note that the
-  parentheses are not part of the regex but instead define their contents as a regex._
+- Non-capturing groups (`/books{/old}?`) which make parts of a pattern optional or be matched multiple times.
+- {{jsxref("RegExp")}} groups (`/books/(\\d+)`) which make arbitrarily complex regex matches with a few [limitations](#regex_matchers_limitations).
+  _Note that the parentheses are not part of the regex but instead define their contents as a regex._
+  Some APIs prohibit the use of regular expression groups in `URLPattern` objects.
+  The {{domxref("URLPattern.hasRegExpGroups", "hasRegExpGroups")}} property indicates whether or not regular expression groups are used.
 
 You can find details about the syntax in the [pattern syntax](#pattern_syntax)
 section below.
@@ -40,18 +38,15 @@ The URL Pattern API only has a single related interface:
 
 ## Pattern syntax
 
-The syntax for patterns is based on the
-[path-to-regexp](https://github.com/pillarjs/path-to-regexp) JavaScript library.
-This syntax is similar to the one used in
-[Ruby on Rails](https://rubyonrails.org/), or JavaScript frameworks like
-[Express](https://expressjs.com/) or [Next.js](https://nextjs.org/).
+The syntax for patterns is based on the [path-to-regexp](https://github.com/pillarjs/path-to-regexp) JavaScript library.
+This syntax is similar to the one used in [Ruby on Rails](https://rubyonrails.org/), or JavaScript frameworks like [Express](https://expressjs.com/) or [Next.js](https://nextjs.org/).
 
 ### Fixed text and capture groups
 
-Each pattern can contain a combination of fixed text and groups. The fixed text
-is a sequence of characters that is matched exactly. Groups match an arbitrary
-string based on matching rules. Each URL part has its own default rules that are
-explained below, but they can be overwritten.
+Each pattern can contain a combination of fixed text and groups.
+The fixed text is a sequence of characters that is matched exactly.
+Groups match an arbitrary string based on matching rules.
+Each URL part has its own default rules that are explained below, but they can be overwritten.
 
 ```js
 // A pattern matching some fixed text
@@ -69,18 +64,14 @@ console.log(pattern.exec("https://example.com/books/123").pathname.groups); // {
 
 ### Segment wildcard
 
-By default, a group matching the `pathname` part of the URL will match all
-characters but the forward slash (`/`). In the `hostname` part, the group will
-match all characters except the dot (`.`). In all other parts, the group will
-match all characters. The segment wildcard is non-greedy, meaning that it will
-match the shortest possible string.
+By default, a group matching the `pathname` part of the URL will match all characters but the forward slash (`/`). In the `hostname` part, the group will match all characters except the dot (`.`).
+In all other parts, the group will match all characters.
+The segment wildcard is non-greedy, meaning that it will match the shortest possible string.
 
 ### Regex matchers
 
-Instead of using the default match rules for a group, you can use a regex for
-each group by including a regex in parentheses. This regex defines the matching
-rules for the group. Below is an example of a regex matcher on a named group
-that constrains the group to only match if it contains one or more digits:
+Instead of using the default match rules for a group, you can use a regex for each group by including a regex in parentheses.
+This regex defines the matching rules for the group. Below is an example of a regex matcher on a named group that constrains the group to only match if it contains one or more digits:
 
 ```js
 const pattern = new URLPattern("/books/:id(\\d+)", "https://example.com");
@@ -181,10 +172,8 @@ Some regex patterns do not work as you may expect:
 
 ### Unnamed and named groups
 
-Groups can either be named or unnamed. Named groups are specified by prefixing
-the group name with a colon (`:`). Regexp groups that are not prefixed by a
-colon and a name are unnamed. Unnamed groups are numerically indexed in the match
-result based on their order in the pattern.
+Groups can either be named or unnamed. Named groups are specified by prefixing the group name with a colon (`:`).
+Regexp groups that are not prefixed by a colon and a name are unnamed. Unnamed groups are numerically indexed in the match result based on their order in the pattern.
 
 ```js
 // A named group
@@ -237,13 +226,10 @@ console.log(pattern.test("https://example.com/books/123/456/789")); // true
 
 ### Group delimiters
 
-Patterns can also contain group delimiters. These are pieces of a pattern that
-are surrounded by curly braces (`{}`). These group delimiters are not captured
-in the match result like capturing groups, but can still have modifiers applied
-to them, just like groups. If group delimiters are not modified by a modifier,
-they are treated as if the items in them were just part of the parent pattern.
-Group delimiters may not contain other group delimiters, but may contain any
-other pattern items (capturing groups, regex, wildcard, or fixed text).
+Patterns can also contain group delimiters. These are pieces of a pattern that are surrounded by curly braces (`{}`).
+These group delimiters are not captured in the match result like capturing groups, but can still have modifiers applied to them, just like groups.
+If group delimiters are not modified by a modifier, they are treated as if the items in them were just part of the parent pattern.
+Group delimiters may not contain other group delimiters, but may contain any other pattern items (capturing groups, regex, wildcard, or fixed text).
 
 ```js
 // A group delimiter with a ? (optional) modifier
@@ -271,14 +257,11 @@ console.log(pattern.test("https://example.com/blog/my-blog")); // false
 
 ### Automatic group prefixing in pathnames
 
-In patterns that match against the `pathname` part of a URL, groups get an
-automatic slash (`/`) prefix added if the group definition is preceded by a
-slash (`/`). This is useful for groups with modifiers, as it allows for
-repeating groups to work as expected.
+In patterns that match against the `pathname` part of a URL, groups get an automatic slash (`/`) prefix added if the group definition is preceded by a slash (`/`).
+This is useful for groups with modifiers, as it allows for repeating groups to work as expected.
 
-If you do not want automatic prefixing, you can disable it by surrounding the
-group with group delimiters (`{}`). Group delimiters do not have automatic
-prefixing behavior.
+If you do not want automatic prefixing, you can disable it by surrounding the group with group delimiters (`{}`).
+Group delimiters do not have automatic prefixing behavior.
 
 ```js
 // A pattern with an optional group, preceded by a slash
@@ -315,10 +298,9 @@ console.log(pattern.test("https://example.com/books/")); // true
 
 ### Wildcard tokens
 
-The wildcard token (`*`) is a shorthand for an unnamed capturing group that
-matches all characters zero or more times. You can place this anywhere in the
-pattern. The wildcard is greedy, meaning that it will match the longest possible
-string.
+The wildcard token (`*`) is a shorthand for an unnamed capturing group that matches all characters zero or more times.
+You can place this anywhere in the pattern.
+The wildcard is greedy, meaning that it will match the longest possible string.
 
 ```js
 // A wildcard at the end of a pattern
@@ -350,7 +332,9 @@ In this case `{foo}` gets changed to `foo`.
 
 ## Case sensitivity
 
-The URL Pattern API treats many parts of the URL as case-sensitive by default when matching. In contrast, many client-side JavaScript frameworks use case-insensitive URL matching. An `ignoreCase` option is available on the {{domxref("URLPattern.URLPattern", "URLPattern()")}} constructor to enable case-insensitive matching if desired.
+The URL Pattern API treats many parts of the URL as case-sensitive by default when matching.
+In contrast, many client-side JavaScript frameworks use case-insensitive URL matching.
+An `ignoreCase` option is available on the {{domxref("URLPattern.URLPattern", "URLPattern()")}} constructor to enable case-insensitive matching if desired.
 
 ```js
 // Case-sensitive matching by default
@@ -375,8 +359,7 @@ console.log(pattern.test("https://example.com/2022/Feb/xc44rsz")); // true
 ### Filter on a specific URL component
 
 The following example shows how a `URLPattern` filters a specific URL component.
-When the `URLPattern()` constructor is called with a structured object of
-component patterns any missing components default to the `*` wildcard value.
+When the `URLPattern()` constructor is called with a structured object of component patterns any missing components default to the `*` wildcard value.
 
 ```js
 // Construct a URLPattern that matches a specific domain and its subdomains.
@@ -406,11 +389,9 @@ console.log(pattern.test("https://cdn-example.com/foo/bar"));
 
 ### Construct a URLPattern from a full URL string
 
-The following example shows how to construct a `URLPattern` from a full URL
-string with embedded patterns. For example, a `:` can be both the URL protocol
-suffix, like `https:`, and the beginning of a named pattern group, like `:foo`.
-It "just works" if there is no ambiguity between whether a character is part of
-the URL syntax or part of the pattern syntax.
+The following example shows how to construct a `URLPattern` from a full URL string with embedded patterns.
+For example, a `:` can be both the URL protocol suffix, like `https:`, and the beginning of a named pattern group, like `:foo`.
+It "just works" if there is no ambiguity between whether a character is part of the URL syntax or part of the pattern syntax.
 
 ```js
 // Construct a URLPattern that matches URLs to CDN servers loading jpg images.
@@ -442,13 +423,10 @@ console.log(
 
 ### Constructing a URLPattern with an ambiguous URL string
 
-The following example shows how a `URLPattern` constructed from an ambiguous
-string will favor treating characters as part of the pattern syntax. In this
-case the `:` character could be the protocol component suffix or it could be the
-prefix for a named group in the pattern. The constructor chooses to treat this
-as part of the pattern and therefore determines this is a relative pathname
-pattern. Since there is no base URL the relative pathname cannot be resolved and
-it throws an error.
+The following example shows how a `URLPattern` constructed from an ambiguous string will favor treating characters as part of the pattern syntax.
+In this case the `:` character could be the protocol component suffix or it could be the prefix for a named group in the pattern.
+The constructor chooses to treat this as part of the pattern and therefore determines this is a relative pathname pattern.
+Since there is no base URL the relative pathname cannot be resolved and it throws an error.
 
 ```js
 // Throws because this is interpreted as a single relative pathname pattern
@@ -458,9 +436,8 @@ const pattern = new URLPattern("data:foo*");
 
 ### Escaping characters to disambiguate URLPattern constructor strings
 
-The following example shows how an ambiguous constructor string character can be
-escaped to be treated as a URL separator instead of a pattern character. Here
-`:` is escaped as `\\:`.
+The following example shows how an ambiguous constructor string character can be escaped to be treated as a URL separator instead of a pattern character.
+Here `:` is escaped as `\\:`.
 
 ```js
 // Constructs a URLPattern treating the `:` as the protocol suffix.
@@ -516,13 +493,11 @@ console.log(result.hostname.input); // 'example.com'
 
 ### Using base URLs in the URLPattern constructor
 
-The follow example shows how base URLs can also be used to construct the
-`URLPattern`. Note that the base URL in these cases is treated strictly as a URL
-and cannot contain any pattern syntax itself.
+The follow example shows how base URLs can also be used to construct the `URLPattern`.
+Note that the base URL in these cases is treated strictly as a URL and cannot contain any pattern syntax itself.
 
-Also, since the base URL provides a value for every component the resulting
-`URLPattern` will also have a value for every component, even if it's the empty
-string. This means you do not get the "default to wildcard" behavior.
+Also, since the base URL provides a value for every component the resulting `URLPattern` will also have a value for every component, even if it's the empty string.
+This means you do not get the "default to wildcard" behavior.
 
 ```js
 const pattern1 = new URLPattern({
@@ -552,9 +527,8 @@ try {
 
 ### Accessing matched group values
 
-The following example shows how input values that match pattern groups can later
-be accessed from the `exec()` result object. Unnamed groups are assigned index
-numbers sequentially.
+The following example shows how input values that match pattern groups can later be accessed from the `exec()` result object.
+Unnamed groups are assigned index numbers sequentially.
 
 ```js
 const pattern = new URLPattern({ hostname: "*.example.com" });
@@ -569,8 +543,7 @@ console.log(result.inputs); // [{ hostname: 'cdn.example.com' }]
 
 ### Accessing matched group values using custom names
 
-The following example shows how groups can be given custom names which can be
-used to accessed the matched value in the result object.
+The following example shows how groups can be given custom names which can be used to accessed the matched value in the result object.
 
 ```js
 // Construct a URLPattern using matching groups with custom names. These
@@ -590,8 +563,7 @@ console.log(result.inputs); // [{ pathname: '/store/wanderview/view' }]
 
 ### Custom regular expression groups
 
-The following example shows how a matching group can use a custom regular
-expression.
+The following example shows how a matching group can use a custom regular expression.
 
 ```js
 const pattern = new URLPattern({ pathname: "/(foo|bar)" });
@@ -607,8 +579,7 @@ console.log(result.pathname.groups[0]); // 'foo'
 
 ### Named group with a custom regular expression
 
-The following example shows how to use a custom regular expression with a named
-group.
+The following example shows how to use a custom regular expression with a named group.
 
 ```js
 const pattern = new URLPattern({ pathname: "/:type(foo|bar)" });
@@ -619,9 +590,8 @@ console.log(result.pathname.groups.type); // 'foo'
 
 ### Making matching groups optional
 
-The following example shows how to make a matching group optional by placing a
-`?` modifier after it. For the pathname component this also causes any preceding
-`/` character to be treated as an optional prefix to the group.
+The following example shows how to make a matching group optional by placing a `?` modifier after it.
+For the pathname component this also causes any preceding `/` character to be treated as an optional prefix to the group.
 
 ```js
 const pattern = new URLPattern({ pathname: "/product/(index.html)?" });
@@ -646,9 +616,9 @@ console.log(pattern3.test({ pathname: "/product/" })); // true
 
 ### Making matching groups repeated
 
-The following example shows how a matching group can be made repeated by placing
-`+` modifier after it. In the `pathname` component this also treats the `/`
-prefix as special. It is repeated with the group.
+The following example shows how a matching group can be made repeated by placing `+` modifier after it.
+In the `pathname` component this also treats the `/` prefix as special.
+It is repeated with the group.
 
 ```js
 const pattern = new URLPattern({ pathname: "/product/:action+" });
@@ -661,10 +631,10 @@ console.log(pattern.test({ pathname: "/product" })); // false
 
 ### Making matching groups optional and repeated
 
-The following example shows how to make a matching group that is both optional
-and repeated. Do this by placing a `*` modifier after the group. Again, the
-pathname component treats the `/` prefix as special. It both becomes optional
-and is also repeated with the group.
+The following example shows how to make a matching group that is both optional and repeated.
+Do this by placing a `*` modifier after the group.
+Again, the pathname component treats the `/` prefix as special.
+It both becomes optional and is also repeated with the group.
 
 ```js
 const pattern = new URLPattern({ pathname: "/product/:action*" });
@@ -677,9 +647,7 @@ console.log(pattern.test({ pathname: "/product" })); // true
 
 ### Using a custom prefix or suffix for an optional or repeated modifier
 
-The following example shows how curly braces can be used to denote a custom
-prefix and/or suffix to be operated on by a subsequent `?`, `*`, or `+`
-modifier.
+The following example shows how curly braces can be used to denote a custom prefix and/or suffix to be operated on by a subsequent `?`, `*`, or `+` modifier.
 
 ```js
 const pattern = new URLPattern({ hostname: "{:subdomain.}*example.com" });
@@ -695,8 +663,7 @@ console.log(result.hostname.groups.subdomain); // 'foo.bar'
 
 ### Making text optional or repeated without a matching group
 
-The following example shows how curly braces can be used to denote fixed text
-values as optional or repeated without using a matching group.
+The following example shows how curly braces can be used to denote fixed text values as optional or repeated without using a matching group.
 
 ```js
 const pattern = new URLPattern({ pathname: "/product{/}?" });
@@ -711,8 +678,7 @@ console.log(result.pathname.groups); // {}
 
 ### Using multiple components and features at once
 
-The following example shows how many features can be combined across multiple
-URL components.
+The following example shows how many features can be combined across multiple URL components.
 
 ```js
 const pattern = new URLPattern({
@@ -743,7 +709,5 @@ console.log(result.pathname.groups.action); // 'view'
 
 ## See also
 
-- A polyfill of `URLPattern` is available
-  [on GitHub](https://github.com/kenchris/urlpattern-polyfill)
-- The pattern syntax used by URLPattern is similar to the syntax used by
-  [path-to-regexp](https://github.com/pillarjs/path-to-regexp)
+- A polyfill of `URLPattern` is available [on GitHub](https://github.com/kenchris/urlpattern-polyfill)
+- The pattern syntax used by URLPattern is similar to the syntax used by [path-to-regexp](https://github.com/pillarjs/path-to-regexp)

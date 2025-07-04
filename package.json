@@ -14,10 +14,11 @@
     "url": "git+https://github.com/mdn/content.git"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "type": "module",
   "scripts": {
+    "info:fred": "node -e \"process.stderr.write('\\n🐥 This is a preview of fred: https://github.com/mdn/fred\\n🐞 Please report any issues here:  https://github.com/mdn/fred/issues/new?template=bug.yml\\n\\n')\"",
     "info:rari": "node -e \"process.stderr.write('\\n🐥 This command is now using rari: https://github.com/mdn/rari\\n🐞 Please report any issues here:  https://github.com/mdn/rari/issues/new?template=bug.yml\\n\\n')\"",
     "build": "yarn -s info:rari && env-cmd --silent cross-env CONTENT_ROOT=files BUILD_OUT_ROOT=build rari-build",
     "content": "yarn -s info:rari && env-cmd --silent cross-env CONTENT_ROOT=files rari-tool",
@@ -37,6 +38,7 @@
     "lint:typos-words-only": "cspell --no-progress --gitignore --words-only --unique --config .vscode/cspell.json \"**/*.md\"",
     "lint:yml": "prettier -c \"**/*.yml\"",
     "start": "yarn -s info:rari && yarn up-to-date-check && env-cmd --silent cross-env CONTENT_ROOT=files REACT_APP_DISABLE_AUTH=true BUILD_OUT_ROOT=build rari-server",
+    "start:fred": "yarn -s info:fred && yarn up-to-date-check && env-cmd --silent cross-env CONTENT_ROOT=files BUILD_OUT_ROOT=build NODE_ENV=production fred-server",
     "up-to-date-check": "node scripts/up-to-date-check.js",
     "jest": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
     "test:front-matter-linter": "yarn jest tests"
@@ -44,7 +46,8 @@
   "dependencies": {
     "@apideck/better-ajv-errors": "^0.3.6",
     "@caporal/core": "^2.0.7",
-    "@mdn/yari": "4.12.3",
+    "@mdn/fred": "0.0.5",
+    "@mdn/yari": "5.0.0",
     "@octokit/rest": "^22.0.0",
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
@@ -60,8 +63,8 @@
   "devDependencies": {
     "cspell": "9.1.2",
     "cspell-group-by-file-reporter": "^1.0.1",
-    "jest": "^30.0.3",
-    "lefthook": "^1.11.14",
+    "jest": "^30.0.4",
+    "lefthook": "^1.11.16",
     "markdownlint-cli2": "0.18.1",
     "markdownlint-rule-search-replace": "1.2.0",
     "node-html-parser": "^7.0.1",

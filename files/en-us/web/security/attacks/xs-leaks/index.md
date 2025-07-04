@@ -108,8 +108,8 @@ In the attack described here, the attacker uses the [Content Security Policy (CS
 - Finally, they create an {{htmlelement("iframe")}} element and set its `src` attribute to `https://admin.example.org/`.
 
 ```html
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en-US">
   <head>
     <meta
       http-equiv="Content-Security-Policy"

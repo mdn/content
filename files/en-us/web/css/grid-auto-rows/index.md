@@ -52,7 +52,7 @@ grid-auto-rows: minmax(30px, auto);
 }
 
 #example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   font-size: 22px;
 }

@@ -9,6 +9,8 @@ browser-compat: api.IntersectionObserver
 
 The Intersection Observer API provides a way to asynchronously observe changes in the intersection of a target element with an ancestor element or with a top-level document's {{Glossary("viewport")}}.
 
+## Overview
+
 Historically, detecting visibility of an element, or the relative visibility of two elements in relation to each other, has been a difficult task for which solutions have been unreliable and prone to causing the browser and the sites the user is accessing to become sluggish. As the web has matured, the need for this kind of information has grown. Intersection information is needed for many reasons, such as:
 
 - Lazy-loading of images or other content as a page is scrolled.
@@ -24,7 +26,7 @@ The Intersection Observer API lets code register a callback function that is exe
 
 One thing the Intersection Observer API can't do: trigger logic based on the exact number of pixels that overlap, or specifically on which ones they are. It only solves the common use case of "If they intersect by somewhere around _N_%, I need to do something."
 
-## Intersection observer concepts and usage
+## Concepts and usage
 
 The Intersection Observer API allows you to configure a callback that is called when either of these circumstances occur:
 
@@ -45,6 +47,7 @@ Create the intersection observer by calling its constructor and passing it a cal
 const options = {
   root: document.querySelector("#scrollArea"),
   rootMargin: "0px",
+  scrollMargin: "0px",
   threshold: 1.0,
 };
 
@@ -61,8 +64,24 @@ The `options` object passed into the {{domxref("IntersectionObserver.Intersectio
   - : The element that is used as the viewport for checking visibility of the target. Must be the ancestor of the target. Defaults to the browser viewport if not specified or if `null`.
 - `rootMargin`
   - : Margin around the root. A string of one to four values similar to the CSS {{cssxref("margin")}} property, e.g., `"10px 20px 30px 40px"` (top, right, bottom, left). The values can only be [absolute lengths](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#absolute_length_units) or percentages. This set of values serves to grow or shrink each side of the root element's bounding box before computing intersections. Negative values will shrink the bounding box of the root element and positive values will expand it. The default value, if not specified, is `"0px 0px 0px 0px"`.
+- `scrollMargin`
+  - : Margin around nested {{glossary("scroll container","scroll containers")}} that takes the same values/has same default as `rootMargin`.
+    The margins are applied to nested scrollable containers before computing intersections.
+    Positive values grow the clipping rectangle of the container, allowing targets to intersect before they becomes visible, while negative values shrink the clipping rectangle.
 - `threshold`
   - : Either a single number or an array of numbers which indicate at what percentage of the target's visibility the observer's callback should be executed. If you only want to detect when visibility passes the 50% mark, you can use a value of 0.5. If you want the callback to run every time visibility passes another 25%, you would specify the array \[0, 0.25, 0.5, 0.75, 1]. The default is 0 (meaning as soon as even one pixel is visible, the callback will be run). A value of 1.0 means that the threshold isn't considered passed until every pixel is visible.
+- `delay`
+  - : When tracking target visibility ([trackVisibility](#trackvisibility) is `true`), this can be used to set the minimum delay in milliseconds between notifications from this observer.
+    Limiting the notification rate is desirable because the visibility calculation is computationally intensive.
+    If tracking visibility, the value will be set to 100 for any value less than 100, and you should use the largest tolerable value.
+    The value is 0 by default.
+- `trackVisibility`
+  - : A boolean indicating whether this `IntersectionObserver` is tracking changes in a target's visibility.
+
+    When `false` the browser will report intersections when the target element scrolls into the root element's viewport.
+    When `true`, the browser will additionally check that the target is actually visible, and hasn't been covered by other elements or potentially been distorted or hidden by a filter, reduced opacity, or some transform.
+    The value is `false` by default as tracking visibility is computationally intensive.
+    If this is set, a [`delay`](#delay) should also be set.
 
 #### Intersection change callbacks
 
@@ -138,10 +157,14 @@ The **_root intersection rectangle_** is the rectangle used to check against the
 
 The root intersection rectangle can be adjusted further by setting the **root margin**, `rootMargin`, when creating the {{domxref("IntersectionObserver")}}. The values in `rootMargin` define offsets added to each side of the intersection root's bounding box to create the final intersection root bounds (which are disclosed in {{domxref("IntersectionObserverEntry.rootBounds")}} when the callback is executed). Positive values grow the box, while negative values shrink it.
 
-In the example below, we have a scrollable box and an element that's initially out of view. You can adjust the root right margin, and see that:
+The effect of growing the box using the root margin is to allow overflow targets to intersect with the root before they become visible.
+This can be used, for example, to start loading images just before they come into view, rather than at the point they become visible.
 
-- If the margin is negative, then even when the red element starts to become visible, it's still not considered intersecting with the root because the root's bounding box is shrunk.
+In the example below, we have a scrollable box and an element that's initially out of view.
+You can adjust the root right margin, and see that:
+
 - If the margin is positive, the red element is considered intersecting with the root even if it's not visible, because it's intersecting with the root's margin area.
+- If the margin is negative, then even when the red element starts to become visible, it's still not considered intersecting with the root because the root's bounding box is shrunk.
 
 ```html hidden
 <div class="demo">
@@ -224,6 +247,7 @@ function createObserver() {
   if (margin.valueAsNumber < 0) {
     marginIndicator.style.width = `${-margin.valueAsNumber}px`;
     marginIndicator.style.left = `${margin.valueAsNumber}px`;
+
     marginIndicator.style.backgroundColor = "blue";
   } else {
     marginIndicator.style.width = `${margin.valueAsNumber}px`;
@@ -241,7 +265,216 @@ scrollAmount.addEventListener("input", () => {
 });
 ```
 
-{{EmbedLiveSample("the intersection root and root margin", "", 300)}}
+{{EmbedLiveSample("the intersection root and root margin", "", 200)}}
+
+#### The intersection root and scroll margin
+
+Consider the case where you have a root element that contains nested {{glossary("scroll container","scroll containers")}}, and you want to observe intersections with a target inside one of those scrollable containers.
+Intersections with the target element start being observable, by default, when the target is visible within the area defined by the root;
+in other words, when the container is scrolled into view in the root and the target is scrolled into view within the clipping rectangle of its container.
+
+You can use a scroll margin to start observing intersections before or after the target is scrolled into view within its scroll container.
+The margin is added to all nested scroll containers in the root, including the root element if it is also a scroll container, and has the effect of either growing (positive margins) or shrinking (negative margin) the clipping region used for calculating intersections.
+
+> [!NOTE]
+> You could create an intersection observer on each scroll container for which you want a scroll margin, and use the root margin property to achieve a similar effect.
+> Using a scroll margin is more ergonomic, as in most cases you can have just one intersection observer for all nested targets.
+
+In the example below, we have a scrollable box and an image carousel that is initially out of view.
+An observer on the root element observes the image element targets within the carousel.
+When an image element starts to intersect with the root element, the image is loaded, the intersection is logged, and the observer is removed.
+
+Scroll down to display the carousel.
+The visible images should immediately load.
+If you scroll the carousel, you should observe that the images are loaded as soon as the element becomes visible.
+
+After resetting the example you can use the provided control to change the scroll margin percentage.
+If you set a positive value like 20% the clip rectangle of the scroll container will be increased by 20%, and you should observe that images are detected and loaded before they come into view.
+Similarly, a negative value will mean that the intersection is detected once images are already in view.
+
+```html hidden
+<button id="reset" type="button">Reset</button>
+```
+
+```html hidden
+<div id="root_container">
+  <p>content before (scroll down to carousel)</p>
+
+  <div class="flexcontainer">
+    <div class="carousel">
+      <img
+        data-src="ballon-portrait.jpg"
+        class="lazy-carousel-img"
+        alt="Balloon portrait" />
+      <img
+        data-src="balloon-small.jpg"
+        class="lazy-carousel-img"
+        alt="balloon-small" />
+      <img data-src="surfer.jpg" class="lazy-carousel-img" alt="surfer" />
+      <img
+        data-src="border-diamonds.png"
+        class="lazy-carousel-img"
+        alt="border-diamonds" />
+      <img data-src="fire.png" class="lazy-carousel-img" alt="fire" />
+      <img data-src="puppy-header.jpg" class="lazy-carousel-img" alt="puppy" />
+      <img data-src="moon.jpg" class="lazy-carousel-img" alt="moon" />
+      <img data-src="rhino.jpg" class="lazy-carousel-img" alt="rhino" />
+    </div>
+    <div id="marginIndicator"></div>
+  </div>
+  <p>content after</p>
+</div>
+```
+
+```html hidden
+<div class="controls">
+  <label>
+    Set the right margin of the scroll root:
+    <input id="margin" type="number" value="0" step="5" />%
+  </label>
+</div>
+```
+
+```html hidden
+<pre id="log"></pre>
+```
+
+```css hidden
+#root_container {
+  height: 250px;
+  overflow-y: auto;
+  border: solid blue;
+}
+
+.controls {
+  margin-top: 10px;
+}
+
+p {
+  height: 50vh;
+}
+
+.flexcontainer {
+  display: flex;
+}
+
+#marginIndicator {
+  position: relative;
+  height: 100px;
+  width: 1px;
+  background-color: red;
+  opacity: 0.5;
+  display: flex;
+}
+
+.carousel {
+  width: 300px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  border: solid;
+  /* outline: 200px solid rgba(0, 0, 0, 0.1); */
+}
+.carousel img {
+  scroll-snap-stop: always;
+  scroll-snap-align: start;
+  display: block;
+  width: 195px;
+  height: 99px;
+  min-width: 195px;
+  min-height: 99px;
+  margin-right: 10px;
+  background-color: #eee; /* Placeholder background */
+}
+
+#log {
+  height: 100px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+```js hidden
+const reload = document.querySelector("#reset");
+
+reload.addEventListener("click", () => {
+  window.location.reload(true);
+});
+
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = `${logElement.innerText}${text}\n`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
+```
+
+```js hidden
+let imageObserver;
+
+function createImageObserver() {
+  const carousel = document.querySelector(".carousel");
+  const lazyImages = carousel.querySelectorAll(".lazy-carousel-img");
+
+  if (imageObserver) {
+    imageObserver.disconnect();
+  }
+
+  let observerOptions = {
+    root: root_container,
+    rootMargin: "0px", // No extra margin
+    scrollMargin: `${margin.valueAsNumber}%`, // No extra margin / Can be set
+    threshold: 0.01, // Trigger when 1% of the image is visible
+  };
+
+  imageObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        log(`intersect: ${img.dataset.src}`); // Only on first intersection
+        img.src = `https://mdn.github.io/shared-assets/images/examples/${img.dataset.src}`; // Load image by setting src
+        img.classList.remove("lazy-carousel-img"); // Remove the class
+        observer.unobserve(img); // Stop observing once loaded
+      }
+    });
+  }, observerOptions);
+
+  if (margin.valueAsNumber < 0) {
+    marginIndicator.style.width = `${-margin.valueAsNumber}px`;
+    marginIndicator.style.left = `${margin.valueAsNumber}px`;
+    marginIndicator.style.backgroundColor = "blue";
+  } else {
+    marginIndicator.style.width = `${margin.valueAsNumber}px`;
+    marginIndicator.style.left = "0px";
+    marginIndicator.style.backgroundColor = "green";
+  }
+
+  lazyImages.forEach((image) => {
+    imageObserver.observe(image); // Start observing each image
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  if ("IntersectionObserver" in window) {
+    createImageObserver();
+    margin.addEventListener("input", () => {
+      createImageObserver();
+    });
+  } else {
+    // Fallback for browsers that don't support Intersection Observer
+    // Loads all images immediately if Intersection Observer is not supported.
+    lazyImages.forEach((img) => {
+      img.src = img.dataset.src;
+      img.classList.remove("lazy-carousel-img");
+    });
+    console.warn(
+      "Intersection Observer not supported. All carousel images loaded.",
+    );
+  }
+});
+```
+
+{{EmbedLiveSample("The intersection root and scroll margin","100%","500px")}}
 
 #### Thresholds
 
@@ -427,12 +660,27 @@ startup();
 
 {{EmbedLiveSample("Thresholds", 500, 500)}}
 
+#### Tracking visibility and delay
+
+By default the observer provides notifications when the target element is scrolled into the root element's viewport.
+While this is all that is needed in many situations, sometimes it is important that intersections are not reported when the target has been "visually compromised".
+For example, when measuring analytics or ad impressions, it is important that target elements are not hidden or distorted, in whole or in part.
+
+The `trackVisibility` setting tells the observer to only report intersections for targets that the browser does not consider to be visually compromised, such as by altering the opacity, or applying a filter or transform.
+The algorithm is conservative, and may omit elements that are technically visible, such as those with only a slight opacity reduction.
+
+The visibility calculation is computationally expensive and should only be used when necessary.
+When tracking visibility a {{domxref("IntersectionObserver/delay","delay")}} should also be set to limit the minimum reporting period.
+The recommendation is that you set the delay to the largest tolerable value (the minimum delay when tracking visibility is 100 milliseconds).
+
 #### Clipping and the intersection rectangle
 
 The browser computes the final intersection rectangle as follows; this is all done for you, but it can be helpful to understand these steps in order to better grasp exactly when intersections will occur.
 
-1. The target element's bounding rectangle (that is, the smallest rectangle that fully encloses the bounding boxes of every component that makes up the element) is obtained by calling {{domxref("Element.getBoundingClientRect", "getBoundingClientRect()")}} on the target. This is the largest the intersection rectangle may be. The remaining steps will remove any portions that don't intersect.
-2. Starting at the target's immediate parent block and moving outward, each containing block's clipping (if any) is applied to the intersection rectangle. A block's clipping is determined based on the intersection of the two blocks and the clipping mode (if any) specified by the {{cssxref("overflow")}} property. Setting `overflow` to anything but `visible` causes clipping to occur.
+1. The target element's bounding rectangle (that is, the smallest rectangle that fully encloses the bounding boxes of every component that makes up the element) is obtained by calling {{domxref("Element.getBoundingClientRect", "getBoundingClientRect()")}} on the target.
+   This is the largest the intersection rectangle may be. The remaining steps will remove any portions that don't intersect.
+2. Starting at the target's immediate parent block and moving outward, each containing block's clipping (if any) is applied to the intersection rectangle.
+   A block's clipping is determined based on the intersection of the two blocks and the clipping mode (if any) specified by the {{cssxref("overflow")}} property. Setting `overflow` to anything but `visible` causes clipping to occur.
 3. If one of the containing elements is the root of a nested browsing context (such as the document contained in an {{HTMLElement("iframe")}}), the intersection rectangle is clipped to the containing context's viewport, and recursion upward through the containers continues with the container's containing block. So if the top level of an `<iframe>` is reached, the intersection rectangle is clipped to the frame's viewport, then the frame's parent element is the next block recursed through toward the intersection root.
 4. When recursion upward reaches the intersection root, the resulting rectangle is mapped to the intersection root's coordinate space.
 5. The resulting rectangle is then updated by intersecting it with the [root intersection rectangle](#the_intersection_root_and_root_margin).

@@ -215,7 +215,7 @@ With this in mind, let's have a look at the `src/App.svelte` file that came with
     font-weight: 100;
   }
 
-  @media (min-width: 640px) {
+  @media (width >= 640px) {
     main {
       max-width: none;
     }
@@ -271,7 +271,7 @@ If you have experience working with CSS, the following snippet should make sense
     font-weight: 100;
   }
 
-  @media (min-width: 640px) {
+  @media (width >= 640px) {
     main {
       max-width: none;
     }

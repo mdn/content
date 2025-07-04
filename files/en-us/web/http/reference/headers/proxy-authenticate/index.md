@@ -4,9 +4,8 @@ short-title: Proxy-Authenticate
 slug: Web/HTTP/Reference/Headers/Proxy-Authenticate
 page-type: http-header
 browser-compat: http.headers.Proxy-Authenticate
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Proxy-Authenticate`** {{Glossary("response header")}} defines the [authentication](/en-US/docs/Web/HTTP/Guides/Authentication) method (or {{Glossary("Challenge", "challenge")}}) that should be used to gain access to a resource behind a {{Glossary("proxy server")}}.
 It is sent in a {{HTTPStatus("407", "407 Proxy Authentication Required")}} response so a client can identify itself to a proxy that requires authentication.
@@ -26,13 +25,11 @@ It is sent in a {{HTTPStatus("407", "407 Proxy Authentication Required")}} respo
 
 ## Syntax
 
-A comma-separated list of one or more authentication challenges:
-
 ```http
-Proxy-Authenticate: <challenge>
+Proxy-Authenticate: <challenge>, …
 ```
 
-Where a `<challenge>` is comprised of an `<auth-scheme>`, followed by an optional `<token68>` or a comma-separated list of `<auth-params>`:
+The value is a comma-separated list of challenges, where a `<challenge>` is comprised of an `<auth-scheme>`, followed by an optional `<token68>` or a comma-separated list of `<auth-params>`:
 
 ```plain
 challenge = <auth-scheme> <auth-param>, …, <auth-paramN>

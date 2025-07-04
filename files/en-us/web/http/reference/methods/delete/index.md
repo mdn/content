@@ -4,9 +4,8 @@ short-title: DELETE
 slug: Web/HTTP/Reference/Methods/DELETE
 page-type: http-method
 spec-urls: https://www.rfc-editor.org/rfc/rfc9110.html#name-delete
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The **`DELETE`** HTTP method asks the server to delete a specified resource.
 
@@ -83,7 +82,7 @@ Content-Type: text/html; charset=UTF-8
 Date: Fri, 21 Jun 2024 14:18:33 GMT
 Content-Length: 1234
 
-<html>
+<html lang="en-US">
   <body>
     <h1>File "file.html" deleted.</h1>
   </body>
@@ -98,7 +97,7 @@ Date: Wed, 26 Jun 2024 12:00:00 GMT
 Content-Type: text/html; charset=UTF-8
 Content-Length: 1234
 
-<html>
+<html lang="en-US">
   <body>
     <h1>Deletion of "file.html" accepted.</h1>
     <p>See <a href="http://example.com/tasks/123/status">the status monitor</a> for details.</p>
