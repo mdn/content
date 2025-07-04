@@ -20,14 +20,9 @@ Firefox 141 is the current [Beta version of Firefox](https://www.mozilla.org/en-
 
 ### HTML
 
-- The HTML [`webkitdirectory`](/en-US/docs/Web/HTML/Reference/Elements/input/file#webkitdirectory) attribute and the corresponding {{domxref("HTMLInputElement.webkitdirectory")}} property are now partially supported on Firefox Android.
+- The HTML [`webkitdirectory`](/en-US/docs/Web/HTML/Reference/Elements/input/file#webkitdirectory) attribute and the corresponding {{domxref("HTMLInputElement.webkitdirectory")}} property are now partially supported on Firefox Android ([Firefox bug 1887878](https://bugzil.la/1887878)).
   The attribute can be set to indicate that an [`<input type="file">`](/en-US/docs/Web/HTML/Reference/Elements/input/file) element should offer selection of directories instead of files.
-  The returned file entries for the selected folder always contain an empty string ({{domxref("File.webkitRelativePath")}}), which means that the method is not suitable for use cases where information about the directory structure is needed.
-  ([Firefox bug 1887878](https://bugzil.la/1887878), [Firefox bug 1973726](https://bugzil.la/1973726)).
-
-
-That PR LGTM, but I also agree this should be noted in the release notes. Technically, this doesn't make the feature fully useless: you'll still have the File entries for each file in a selected directory and you can access their associated content (for example, via Blobs). It essentially means you can select the content of files across an arbitrary number of folders and sub-folders, but you won't be able to preserve the directory structure. But if your use-case doesn't rely on preserving the structure, the feature may still be useful. For the purposes for which I want to use this feature, that is insufficient, but it may be sufficient for others.
-
+  The returned file entries for the selected folder always contain an empty string ({{domxref("File.webkitRelativePath")}}), which means that the method is not suitable for use cases where information about the directory structure is needed ([Firefox bug 1973726](https://bugzil.la/1973726)).
 
 <!-- #### Removals -->
 
