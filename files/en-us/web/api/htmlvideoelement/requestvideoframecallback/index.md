@@ -94,7 +94,7 @@ const startDrawing = () => {
 
   video.addEventListener("play", () => {
     if (!("requestVideoFrameCallback" in HTMLVideoElement.prototype)) {
-      return alert(
+      console.error(
         "Your browser does not support the `Video.requestVideoFrameCallback()` API.",
       );
     }
@@ -121,14 +121,32 @@ const startDrawing = () => {
     video.requestVideoFrameCallback(updateCanvas);
   };
 
-  video.src = "assets/bigbuckbunny.mp4";
+  video.src = "https://mdn.github.io/shared-assets/videos/flower.mp4";
   video.requestVideoFrameCallback(updateCanvas);
 };
 
 window.addEventListener("load", startDrawing);
 ```
 
-See [requestVideoFrameCallback Demo](https://mdn.github.io/dom-examples/requestvideoframecallback/) for a working implementation of the above code.
+```css
+video,
+canvas {
+  max-width: 49%;
+}
+```
+
+```html
+<p>
+  Start <button type="button">⏯</button> playing the video. Pause the video to read the metadata.
+  Drawing video frames on the canvas is synced with the actual video framerate.
+</p>
+<video controls playsinline></video>
+<canvas width="960" height="540"></canvas>
+<p><span id="fps-info">0</span>fps</p>
+<p><pre id="metadata-info"></pre></p>
+```
+
+{{embedlivesample("", , "540")}}
 
 ## Specifications
 
