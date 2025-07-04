@@ -2,9 +2,8 @@
 title: Firefox 81 for developers
 slug: Mozilla/Firefox/Releases/81
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 81 that will affect developers. Firefox 81 was released on September 22, 2020.
 

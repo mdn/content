@@ -2,9 +2,8 @@
 title: HTTP authentication
 slug: Web/HTTP/Guides/Authentication
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 HTTP provides a general framework for access control and authentication.
 This page is an introduction to the HTTP framework for authentication, and shows how to restrict access to your server using the HTTP "Basic" scheme.

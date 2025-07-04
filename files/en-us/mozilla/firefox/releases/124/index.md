@@ -2,9 +2,8 @@
 title: Firefox 124 for developers
 slug: Mozilla/Firefox/Releases/124
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 124 that affect developers. Firefox 124 was released on [March 19, 2024](https://whattrainisitnow.com/release/?version=124).
 
