@@ -139,7 +139,7 @@ tbody {
 }
 
 td {
-  font-family: "Yu Gothic";
+  font-family: "Yu Gothic", fantasy;
   font-size: 20px;
 }
 th {

@@ -42,7 +42,7 @@ This example first defines a few at-rules, among them two {{cssxref("@font-palet
 }
 
 .emoji {
-  font-family: "Noto Color Emoji";
+  font-family: "Noto Color Emoji", emoji;
   font-size: 3rem;
 }
 

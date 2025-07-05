@@ -408,7 +408,7 @@ In the following live example, you can adjust the slant.
 }
 
 p {
-  font-family: "SlantFont";
+  font-family: "SlantFont", sans-serif;
   display: inline-block;
   margin: 1rem;
   font-size: 4rem;

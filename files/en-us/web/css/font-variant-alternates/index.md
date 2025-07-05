@@ -103,7 +103,7 @@ We can then use that name inside `font-variant-alternates` to switch on swashes 
 }
 
 p {
-  font-family: "MonteCarlo";
+  font-family: "MonteCarlo", cursive;
   font-size: 3rem;
   margin: 0.7rem 3rem;
 }

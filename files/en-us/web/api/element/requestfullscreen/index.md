@@ -158,7 +158,6 @@ button {
 kbd {
   border: 2px solid #cdcdcd;
   border-radius: 3px;
-  box-shadow: #cdcdcd;
   box-shadow: inset 0 -1px 0 0 #cdcdcd;
   font-size: 0.825rem;
   padding: 0.25rem;

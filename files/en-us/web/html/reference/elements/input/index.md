@@ -946,7 +946,7 @@ input.custom {
   font:
     16px "Helvetica",
     "Arial",
-    "sans-serif";
+    sans-serif;
 }
 ```
 
