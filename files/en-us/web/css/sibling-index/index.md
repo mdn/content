@@ -77,7 +77,7 @@ When you have {{htmlelement("nav")}} container and several children {{htmlelemen
 
 #### CSS
 
-We make it visually appear as a numbered list by displaying the sibling-index before each {{htmlelement("div")}} element using the {{CSSxRef("before")}} pseudo-element, setting the {{cssxref("content")}} to be the integer returned by the `sibling-index()` function.
+We make it visually appear as a numbered list by displaying the sibling-index before each {{htmlelement("div")}} element using the {{CSSxRef("::before")}} pseudo-element, setting the {{CSSxRef("content")}} to be the integer returned by the `sibling-index()` function.
 
 ```css
 div {

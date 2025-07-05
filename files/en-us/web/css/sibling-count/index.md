@@ -47,7 +47,7 @@ We include a {{htmlelement("ul")}} container and several {{htmlelement("li")}} e
 
 #### CSS
 
-We set the {{cssxref("column-count")}} of the container to be equal to the quantity of direct children it contains. We also set every odd element to have a {{cssxref("background-color")}} to better demonstrate the resulting effect.
+We set the {{CSSxRef("column-count")}} of the container to be equal to the quantity of direct children it contains. We also set every odd element to have a {{CSSxRef("background-color")}} to better demonstrate the resulting effect.
 
 ```css
 ul {
