@@ -278,16 +278,18 @@ The finished demo will look something like this:
 To complete the exercise, follow the steps below, and make sure that the list behaves as described above.
 
 1. To start with, download a copy of our [shopping-list.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list.html) starting file and make a copy of it somewhere. You'll see that it has some minimal CSS, a div with a label, input, and button, and an empty list and {{htmlelement("script")}} element. You'll be making all your additions inside the script.
-2. Create three variables that hold references to the list ({{htmlelement("ul")}}), {{htmlelement("input")}}, and {{htmlelement("button")}} elements.
-3. Create a [function](/en-US/docs/Learn_web_development/Core/Scripting/Functions) that will run in response to the button being clicked.
-4. Inside the function body, start off by storing the current [value](/en-US/docs/Web/API/HTMLInputElement/value) of the input element in a variable.
-5. Next, empty the input element by setting its value to an empty string — `''`.
-6. Create three new elements — a list item ({{htmlelement('li')}}), {{htmlelement('span')}}, and {{htmlelement('button')}}, and store them in variables.
-7. Append the span and the button as children of the list item.
-8. Set the text content of the span to the input element value you saved earlier, and the text content of the button to 'Delete'.
-9. Append the list item as a child of the list.
-10. Attach an event handler to the delete button so that, when clicked, it will delete the entire list item (`<li>...</li>`).
-11. Finally, use the [`focus()`](/en-US/docs/Web/API/HTMLElement/focus) method to focus the input element ready for entering the next shopping list item.
+2. Wrap the div that contains the input and button in a form element.
+3. Create three variables that hold references to the list ({{htmlelement("ul")}}), {{htmlelement("input")}}, and {{htmlelement("button")}} elements.
+4. Create a [function](/en-US/docs/Learn_web_development/Core/Scripting/Functions) that will run in response to the button being clicked.
+5. Inside the function body, start off by calling [`preventDefault()`](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault). When combined with the form element, the user can now use the 'enter' key to submit list items. Prevent default keeps the form from refreshing the page in this situation.
+6. Next, continue by storing the current [value](/en-US/docs/Web/API/HTMLInputElement/value) of the input element in a variable.
+7. Next, empty the input element by setting its value to an empty string — `''`.
+8. Create three new elements — a list item ({{htmlelement('li')}}), {{htmlelement('span')}}, and {{htmlelement('button')}}, and store them in variables.
+9. Append the span and the button as children of the list item.
+10. Set the text content of the span to the input element value you saved earlier, and the text content of the button to 'Delete'.
+11. Append the list item as a child of the list.
+12. Attach an event handler to the delete button so that, when clicked, it will delete the entire list item (`<li>...</li>`).
+13. Finally, use the [`focus()`](/en-US/docs/Web/API/HTMLElement/focus) method to focus the input element ready for entering the next shopping list item.
 
 > [!NOTE]
 > If you get really stuck, have a look at our [finished shopping list](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list-finished.html) ([see it running live also](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html)).
