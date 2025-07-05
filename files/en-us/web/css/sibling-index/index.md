@@ -12,15 +12,15 @@ The **`sibling-index()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/
 {{InteractiveExample("CSS Demo: sibling-index()")}}
 
 ```css interactive-example-choice
-width: calc(30px * sibling-index());
+--width: calc(sibling-index() * 30px);
 ```
 
 ```css interactive-example-choice
-width: calc(20px * sibling-index());
+--width: calc(sibling-index() * 20px);
 ```
 
 ```css interactive-example-choice
-width: calc(10px * sibling-index());
+--width: calc(sibling-index() * 10px);
 ```
 
 ```html interactive-example
@@ -53,7 +53,7 @@ width: calc(10px * sibling-index());
   text-align: center;
   padding: 2px;
   border-radius: 8px;
-  width: calc(30px * sibling-index());
+  width: var(--width, calc(sibling-index() * 30px));
   color: #fff;
   background-color: hsl(
     calc(360deg / sibling-count() * sibling-index()) 50% 50%
