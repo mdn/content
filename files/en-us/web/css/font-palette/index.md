@@ -100,7 +100,7 @@ In the CSS, we import a [color font](https://www.colorfonts.wtf/) called [Nabla]
 }
 
 p {
-  font-family: "Nabla";
+  font-family: "Nabla", fantasy;
   font-size: 5rem;
   margin: 0;
   text-align: center;
