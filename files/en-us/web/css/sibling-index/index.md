@@ -55,7 +55,9 @@ width: calc(10px * sibling-index());
   border-radius: 8px;
   width: calc(30px * sibling-index());
   color: #fff;
-  background-color: hsl(calc(360deg / sibling-count() * sibling-index()) 50% 50%);
+  background-color: hsl(
+    calc(360deg / sibling-count() * sibling-index()) 50% 50%
+  );
 }
 ```
 
