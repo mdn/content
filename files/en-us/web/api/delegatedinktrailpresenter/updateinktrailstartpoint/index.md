@@ -123,7 +123,3 @@ canvas.height = window.innerHeight;
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [Enhancing Inking on the Web](https://blogs.windows.com/msedgedev/2021/08/18/enhancing-inking-on-the-web/)

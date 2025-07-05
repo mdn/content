@@ -3,9 +3,8 @@ title: 201 Created
 slug: Web/HTTP/Reference/Status/201
 page-type: http-status-code
 spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.201
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`201 Created`** [successful response](/en-US/docs/Web/HTTP/Reference/Status#successful_responses) status code indicates that the HTTP request has led to the creation of a resource.
 This status code is commonly sent as the result of a {{HTTPMethod("POST")}} request.

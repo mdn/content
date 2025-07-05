@@ -7,9 +7,10 @@ status:
   - deprecated
   - non-standard
 browser-compat: http.headers.Content-Security-Policy.prefetch-src
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{Deprecated_Header}}{{Non-standard_header}}
+{{Deprecated_Header}}{{Non-standard_header}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 **`prefetch-src`** directive specifies valid resources that may
