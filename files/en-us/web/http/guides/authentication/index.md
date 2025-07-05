@@ -153,8 +153,7 @@ Many clients also let you avoid the login prompt by using an encoded URL contain
 https://username:password@www.example.com/
 ```
 
-**The use of these URLs is deprecated**.
-In Chrome, the `username:password@` part in URLs is [removed from subresource URLs](https://codereview.chromium.org/2651943002) for security reasons. In Firefox, it is checked if the site actually requires authentication and if not, Firefox will warn the user with a prompt "You are about to log in to the site `www.example.com` with the username `username`, but the website does not require authentication. This may be an attempt to trick you." In case the site does require authentication, Firefox will still ask for user confirmation "You are about to log in to the site `www.example.com` with the username `username`." before sending the credentials to the site. Note that Firefox sends the request without credentials in both cases before showing the prompt in order to determine whether the site requires authentication.
+**The use of these URLs is deprecated across modern browsers**.
 
 ## See also
 
