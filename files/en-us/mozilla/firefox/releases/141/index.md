@@ -52,7 +52,11 @@ Firefox 141 is the current [Beta version of Firefox](https://www.mozilla.org/en-
 
 <!-- #### Removals -->
 
-<!-- ### APIs -->
+### APIs
+
+- The {{domxref("HTMLDialogElement/closedBy", "closedBy")}} attribute of the {{domxref("HTMLDialogElement")}} interface, and corresponding [`closedby`](/en-US/docs/Web/HTML/Reference/Elements/dialog#closedby) attribute of the {{htmlelement("dialog")}} element, are supported.
+  Developers can use these to specify what mechanisms are able to close the dialogs, such as user interaction outside the dialog ("light dismiss") or programmatic closing.
+  ([Firefox bug 1964078](https://bugzil.la/1964078)).
 
 <!-- #### DOM -->
 
