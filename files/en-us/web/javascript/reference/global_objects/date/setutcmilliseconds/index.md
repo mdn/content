@@ -13,14 +13,14 @@ The **`setUTCMilliseconds()`** method of {{jsxref("Date")}} instances changes th
 {{InteractiveExample("JavaScript Demo: Date.prototype.setUTCMilliseconds()")}}
 
 ```js interactive-example
-const date1 = new Date("2018-01-24T12:38:29.069Z");
+const date = new Date("2018-01-24T12:38:29.069Z");
 
-console.log(date1.getUTCMilliseconds());
+console.log(date.getUTCMilliseconds());
 // Expected output: 69
 
-date1.setUTCMilliseconds(420);
+date.setUTCMilliseconds(420);
 
-console.log(date1.getUTCMilliseconds());
+console.log(date.getUTCMilliseconds());
 // Expected output: 420
 ```
 

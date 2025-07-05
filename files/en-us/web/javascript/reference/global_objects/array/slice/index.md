@@ -215,7 +215,7 @@ function list() {
   return slice(arguments);
 }
 
-const list1 = list(1, 2, 3); // [1, 2, 3]
+const listResult = list(1, 2, 3); // [1, 2, 3]
 ```
 
 ### Using slice() on sparse arrays

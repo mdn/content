@@ -13,9 +13,9 @@ The **`handler.set()`** method is a trap for the `[[Set]]` [object internal meth
 {{InteractiveExample("JavaScript Demo: handler.set()", "taller")}}
 
 ```js interactive-example
-const monster1 = { eyeCount: 4 };
+const monster = { eyeCount: 4 };
 
-const handler1 = {
+const handler = {
   set(obj, prop, value) {
     if (prop === "eyeCount" && value % 2 !== 0) {
       console.log("Monsters must have an even number of eyes");
@@ -25,16 +25,16 @@ const handler1 = {
   },
 };
 
-const proxy1 = new Proxy(monster1, handler1);
+const proxy = new Proxy(monster, handler);
 
-proxy1.eyeCount = 1;
+proxy.eyeCount = 1;
 // Expected output: "Monsters must have an even number of eyes"
 
-console.log(proxy1.eyeCount);
+console.log(proxy.eyeCount);
 // Expected output: 4
 
-proxy1.eyeCount = 2;
-console.log(proxy1.eyeCount);
+proxy.eyeCount = 2;
+console.log(proxy.eyeCount);
 // Expected output: 2
 ```
 

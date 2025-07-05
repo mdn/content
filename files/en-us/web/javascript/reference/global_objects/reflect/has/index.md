@@ -14,17 +14,17 @@ as a function.
 {{InteractiveExample("JavaScript Demo: Reflect.has()")}}
 
 ```js interactive-example
-const object1 = {
+const object = {
   property1: 42,
 };
 
-console.log(Reflect.has(object1, "property1"));
+console.log(Reflect.has(object, "property1"));
 // Expected output: true
 
-console.log(Reflect.has(object1, "property2"));
+console.log(Reflect.has(object, "property2"));
 // Expected output: false
 
-console.log(Reflect.has(object1, "toString"));
+console.log(Reflect.has(object, "toString"));
 // Expected output: true
 ```
 

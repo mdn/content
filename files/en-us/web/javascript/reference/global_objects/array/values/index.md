@@ -13,8 +13,8 @@ The **`values()`** method of {{jsxref("Array")}} instances returns a new _[array
 {{InteractiveExample("JavaScript Demo: Array.prototype.values()")}}
 
 ```js interactive-example
-const array1 = ["a", "b", "c"];
-const iterator = array1.values();
+const array = ["a", "b", "c"];
+const iterator = array.values();
 
 for (const value of iterator) {
   console.log(value);

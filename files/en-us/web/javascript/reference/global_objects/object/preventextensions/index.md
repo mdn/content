@@ -15,17 +15,17 @@ object). It also prevents the object's prototype from being re-assigned.
 {{InteractiveExample("JavaScript Demo: Object.preventExtensions()")}}
 
 ```js interactive-example
-const object1 = {};
+const object = {};
 
-Object.preventExtensions(object1);
+Object.preventExtensions(object);
 
 try {
-  Object.defineProperty(object1, "property1", {
+  Object.defineProperty(object, "foo", {
     value: 42,
   });
 } catch (e) {
   console.log(e);
-  // Expected output: TypeError: Cannot define property property1, object is not extensible
+  // Expected output: TypeError: Cannot define property foo, object is not extensible
 }
 ```
 

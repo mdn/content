@@ -14,9 +14,9 @@ The **`containing()`** method of [`Segments`](/en-US/docs/Web/JavaScript/Referen
 
 ```js interactive-example
 const segmenterFr = new Intl.Segmenter("fr", { granularity: "word" });
-const string1 = "Que ma joie demeure";
+const string = "Que ma joie demeure";
 
-const segments = segmenterFr.segment(string1);
+const segments = segmenterFr.segment(string);
 
 console.log(segments.containing(5));
 // Expected output:

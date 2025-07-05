@@ -13,22 +13,22 @@ The **`handler.construct()`** method is a trap for the `[[Construct]]` [object i
 {{InteractiveExample("JavaScript Demo: handler.construct()", "taller")}}
 
 ```js interactive-example
-function monster1(disposition) {
+function Monster(disposition) {
   this.disposition = disposition;
 }
 
-const handler1 = {
+const handler = {
   construct(target, args) {
     console.log(`Creating a ${target.name}`);
-    // Expected output: "Creating a monster1"
+    // Expected output: "Creating a monster"
 
     return new target(...args);
   },
 };
 
-const proxy1 = new Proxy(monster1, handler1);
+const ProxiedMonster = new Proxy(Monster, handler);
 
-console.log(new proxy1("fierce").disposition);
+console.log(new ProxiedMonster("fierce").disposition);
 // Expected output: "fierce"
 ```
 

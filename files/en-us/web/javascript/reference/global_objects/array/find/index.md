@@ -22,9 +22,9 @@ If no values satisfy the testing function, {{jsxref("undefined")}} is returned.
 {{InteractiveExample("JavaScript Demo: Array.prototype.find()", "shorter")}}
 
 ```js interactive-example
-const array1 = [5, 12, 8, 130, 44];
+const array = [5, 12, 8, 130, 44];
 
-const found = array1.find((element) => element > 10);
+const found = array.find((element) => element > 10);
 
 console.log(found);
 // Expected output: 12

@@ -14,16 +14,16 @@ element with the specified key exists in this `WeakMap` or not.
 {{InteractiveExample("JavaScript Demo: WeakMap.prototype.has()")}}
 
 ```js interactive-example
-const weakmap1 = new WeakMap();
+const weakmap = new WeakMap();
 const object1 = {};
 const object2 = {};
 
-weakmap1.set(object1, "foo");
+weakmap.set(object1, "foo");
 
-console.log(weakmap1.has(object1));
+console.log(weakmap.has(object1));
 // Expected output: true
 
-console.log(weakmap1.has(object2));
+console.log(weakmap.has(object2));
 // Expected output: false
 ```
 

@@ -341,7 +341,7 @@ const obj2 = { foo: "baz", y: 13 };
 const merge = (...objects) =>
   objects.reduce((acc, cur) => ({ ...acc, ...cur }));
 
-const mergedObj1 = merge(obj1, obj2);
+const mergedObj = merge(obj1, obj2);
 // { foo: 'baz', x: 42, y: 13 }
 ```
 

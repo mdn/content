@@ -13,14 +13,14 @@ The **`entries()`** method of {{jsxref("Array")}} instances returns a new _[arra
 {{InteractiveExample("JavaScript Demo: Array.prototype.entries()")}}
 
 ```js interactive-example
-const array1 = ["a", "b", "c"];
+const array = ["a", "b", "c"];
 
-const iterator1 = array1.entries();
+const iterator = array.entries();
 
-console.log(iterator1.next().value);
+console.log(iterator.next().value);
 // Expected output: Array [0, "a"]
 
-console.log(iterator1.next().value);
+console.log(iterator.next().value);
 // Expected output: Array [1, "b"]
 ```
 

@@ -13,12 +13,12 @@ The **`startsWith()`** method of {{jsxref("String")}} values determines whether 
 {{InteractiveExample("JavaScript Demo: String.prototype.startsWith()")}}
 
 ```js interactive-example
-const str1 = "Saturday night plans";
+const str = "Saturday night plans";
 
-console.log(str1.startsWith("Sat"));
+console.log(str.startsWith("Sat"));
 // Expected output: true
 
-console.log(str1.startsWith("Sat", 3));
+console.log(str.startsWith("Sat", 3));
 // Expected output: false
 ```
 

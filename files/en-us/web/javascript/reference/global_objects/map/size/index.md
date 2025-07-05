@@ -13,13 +13,13 @@ The **`size`** accessor property of {{jsxref("Map")}} instances returns the numb
 {{InteractiveExample("JavaScript Demo: Map.prototype.size")}}
 
 ```js interactive-example
-const map1 = new Map();
+const map = new Map();
 
-map1.set("a", "alpha");
-map1.set("b", "beta");
-map1.set("g", "gamma");
+map.set("a", "alpha");
+map.set("b", "beta");
+map.set("g", "gamma");
 
-console.log(map1.size);
+console.log(map.size);
 // Expected output: 3
 ```
 

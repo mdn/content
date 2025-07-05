@@ -21,9 +21,9 @@ class Polygon {
   }
 }
 
-const poly1 = new Polygon();
+const poly = new Polygon();
 
-console.log(poly1.name);
+console.log(poly.name);
 // Expected output: "Polygon"
 ```
 

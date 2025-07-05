@@ -13,15 +13,15 @@ The **`Symbol.iterator`** static data property represents the [well-known symbol
 {{InteractiveExample("JavaScript Demo: Symbol.iterator")}}
 
 ```js interactive-example
-const iterable1 = {};
+const iterable = {};
 
-iterable1[Symbol.iterator] = function* () {
+iterable[Symbol.iterator] = function* () {
   yield 1;
   yield 2;
   yield 3;
 };
 
-console.log([...iterable1]);
+console.log([...iterable]);
 // Expected output: Array [1, 2, 3]
 ```
 

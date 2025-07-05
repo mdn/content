@@ -13,16 +13,16 @@ The **`Object.isSealed()`** static method determines if an object is [sealed](/e
 {{InteractiveExample("JavaScript Demo: Object.isSealed()")}}
 
 ```js interactive-example
-const object1 = {
-  property1: 42,
+const object = {
+  foo: 42,
 };
 
-console.log(Object.isSealed(object1));
+console.log(Object.isSealed(object));
 // Expected output: false
 
-Object.seal(object1);
+Object.seal(object);
 
-console.log(Object.isSealed(object1));
+console.log(Object.isSealed(object));
 // Expected output: true
 ```
 

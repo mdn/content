@@ -13,13 +13,13 @@ The **`Object.keys()`** static method returns an array of a given object's own e
 {{InteractiveExample("JavaScript Demo: Object.keys()")}}
 
 ```js interactive-example
-const object1 = {
+const object = {
   a: "some string",
   b: 42,
   c: false,
 };
 
-console.log(Object.keys(object1));
+console.log(Object.keys(object));
 // Expected output: Array ["a", "b", "c"]
 ```
 
