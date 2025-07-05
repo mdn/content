@@ -23,6 +23,10 @@ The **`sibling-index()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/
 --width: calc(sibling-index() * 10px);
 ```
 
+```css interactive-example-choice
+--width: 100px;
+```
+
 ```html interactive-example
 <ul id="example-element">
   <li>1</li>
