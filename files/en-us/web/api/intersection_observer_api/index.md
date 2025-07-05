@@ -70,12 +70,12 @@ The `options` object passed into the {{domxref("IntersectionObserver.Intersectio
     Positive values grow the clipping rectangle of the container, allowing targets to intersect before they becomes visible, while negative values shrink the clipping rectangle.
 - `threshold`
   - : Either a single number or an array of numbers which indicate at what percentage of the target's visibility the observer's callback should be executed. If you only want to detect when visibility passes the 50% mark, you can use a value of 0.5. If you want the callback to run every time visibility passes another 25%, you would specify the array \[0, 0.25, 0.5, 0.75, 1]. The default is 0 (meaning as soon as even one pixel is visible, the callback will be run). A value of 1.0 means that the threshold isn't considered passed until every pixel is visible.
-- `delay`
+- `delay` {{experimental_inline}}
   - : When tracking target visibility ([trackVisibility](#trackvisibility) is `true`), this can be used to set the minimum delay in milliseconds between notifications from this observer.
     Limiting the notification rate is desirable because the visibility calculation is computationally intensive.
     If tracking visibility, the value will be set to 100 for any value less than 100, and you should use the largest tolerable value.
     The value is 0 by default.
-- `trackVisibility`
+- `trackVisibility` {{experimental_inline}}
   - : A boolean indicating whether this `IntersectionObserver` is tracking changes in a target's visibility.
 
     When `false` the browser will report intersections when the target element scrolls into the root element's viewport.

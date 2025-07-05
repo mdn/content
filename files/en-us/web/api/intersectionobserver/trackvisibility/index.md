@@ -3,10 +3,12 @@ title: "IntersectionObserver: trackVisibility property"
 short-title: trackVisibility
 slug: Web/API/IntersectionObserver/trackVisibility
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.IntersectionObserver.trackVisibility
 ---
 
-{{APIRef("Intersection Observer API")}}
+{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}
 
 The **`trackVisibility`** read-only property of the {{domxref("IntersectionObserver")}} interface indicates whether the observer is tracking target visibility in addition to element intersections.
 

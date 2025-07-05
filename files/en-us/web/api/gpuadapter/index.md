@@ -17,7 +17,7 @@ A `GPUAdapter` object is requested using the {{domxref("GPU.requestAdapter()")}}
 
 - {{domxref("GPUAdapter.features", "features")}} {{ReadOnlyInline}}
   - : A {{domxref("GPUSupportedFeatures")}} object that describes additional functionality supported by the adapter.
-- {{domxref("GPUAdapter.isFallbackAdapter", "isFallbackAdapter")}} {{ReadOnlyInline}} {{deprecated_inline}}
+- {{domxref("GPUAdapter.isFallbackAdapter", "isFallbackAdapter")}} {{ReadOnlyInline}} {{deprecated_inline}} {{non-standard_inline}}
   - : A boolean value. Returns `true` if the adapter is a [fallback adapter](/en-US/docs/Web/API/GPU/requestAdapter#fallback_adapters), and `false` if not.
 - {{domxref("GPUAdapter.info", "info")}} {{ReadOnlyInline}}
   - : A {{domxref("GPUAdapterInfo")}} object containing identifying information about the adapter.
