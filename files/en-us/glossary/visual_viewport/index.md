@@ -1,12 +1,12 @@
 ---
-title: Visual Viewport
+title: Visual viewport
 slug: Glossary/Visual_Viewport
 page-type: glossary-definition
 ---
 
 {{GlossarySidebar}}
 
-The portion of the {{Glossary("viewport")}} that is currently visible is called the visual viewport. This can be smaller than the {{Glossary("layout viewport")}}, for example when the user has pinch-zoomed. The visual viewport is the visual portion of a screen excluding on-screen keyboards, areas outside of a pinch-zoom area, and any other on-screen artifact that doesn't scale with the dimensions of a page.
+The portion of the {{Glossary("viewport")}} that is currently visible is called the **visual viewport**. This can be smaller than the {{Glossary("layout viewport")}}, for example when the user has pinch-zoomed. The visual viewport is the visual portion of a screen excluding on-screen keyboards, areas outside of a pinch-zoom area, and any other on-screen artifact that doesn't scale with the dimensions of a page.
 
 ## See also
 

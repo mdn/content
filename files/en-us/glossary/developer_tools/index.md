@@ -1,5 +1,5 @@
 ---
-title: Developer Tools
+title: Developer tools
 slug: Glossary/Developer_Tools
 page-type: glossary-definition
 ---

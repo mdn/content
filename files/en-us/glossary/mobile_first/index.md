@@ -1,5 +1,5 @@
 ---
-title: Mobile First
+title: Mobile first
 slug: Glossary/Mobile_First
 page-type: glossary-definition
 ---

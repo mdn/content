@@ -1,5 +1,5 @@
 ---
-title: Bounding Box
+title: Bounding box
 slug: Glossary/Bounding_box
 page-type: glossary-definition
 ---
