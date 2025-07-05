@@ -9,6 +9,61 @@ browser-compat: css.types.sibling-index
 
 The **`sibling-index()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) returns an integer representing the position of the current element in the DOM tree relative to all its sibling elements. The returned value is the index number of the contextual child's position among all the sibling elements within a parent element, with the first child returning `1` and the last child, returning {{domxref("Element.children")}}.length.
 
+{{InteractiveExample("CSS Demo: sibling-index()")}}
+
+```css interactive-example-choice
+width: calc(30px * sibling-index());
+```
+
+```css interactive-example-choice
+width: calc(20px * sibling-index());
+```
+
+```css interactive-example-choice
+width: calc(10px * sibling-index());
+```
+
+```html interactive-example
+<ul id="example-element">
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+  <li>9</li>
+</ul>
+```
+
+```css interactive-example
+#example-element {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+#example-element > li {
+  text-align: center;
+  padding: 2px;
+  border-radius: 8px;
+
+  width: calc(30px * sibling-index());
+
+  color: #fff;
+  background-color: hsl(
+    calc(360deg / sibling-count() * sibling-index())
+    50%
+    50%
+  );
+}
+```
+
 > [!NOTE]
 > Like the {{CSSxRef(":nth-child()")}} pseudo-class, `sibling-index()` starts from 1, not 0.
 
