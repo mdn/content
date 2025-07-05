@@ -34,6 +34,7 @@ width: calc(10px * sibling-index());
   <li>7</li>
   <li>8</li>
   <li>9</li>
+  <li>10</li>
 </ul>
 ```
 
@@ -41,7 +42,7 @@ width: calc(10px * sibling-index());
 #example-element {
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,13 +53,9 @@ width: calc(10px * sibling-index());
   text-align: center;
   padding: 2px;
   border-radius: 8px;
-
   width: calc(30px * sibling-index());
-
   color: #fff;
-  background-color: hsl(
-    calc(360deg / sibling-count() * sibling-index()) 50% 50%
-  );
+  background-color: hsl(calc(360deg / sibling-count() * sibling-index()) 50% 50%);
 }
 ```
 
