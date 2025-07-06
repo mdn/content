@@ -147,13 +147,13 @@ location /status {
 
 ### Access using credentials in the URL
 
-Many clients also let you avoid the login prompt by using an encoded URL containing the username and the password like this:
+Historically some sites would allow you to login using an encoded URL containing the username and the password as shown:
 
 ```plain example-bad
 https://username:password@www.example.com/
 ```
 
-**The use of these URLs is deprecated across modern browsers**.
+This syntax is no longer allowed in modern browsers; the username and password are stripped from the request before it is sent.
 
 ## See also
 
