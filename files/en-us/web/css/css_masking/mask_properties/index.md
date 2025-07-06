@@ -17,7 +17,7 @@ CSS masks are composed of one or more mask layers, with a mask layer created for
 The minimum requirement to create a mask is a {{cssxref("mask-image")}} property set to a value other than `none`.
 The keyword `none` within a list of mask sources creates a mask layer. However, if `none` is the only value of the `mask-image` property, no masking occurs.
 
-The mask image can be a [CSS gradient](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients), an [imported image](/en-US/docs/Web/CSS/CSS_masking/Masking#with_impoorted_images) (such as a PNG, SVG, etc.), or an SVG {{svgelement("mask")}} element.
+The mask image can be a [CSS gradient](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients), an [imported image](/en-US/docs/Web/CSS/CSS_masking/Masking#with_imported_images) (such as a PNG, SVG, etc.), or an SVG {{svgelement("mask")}} element.
 
 In this example, we create five mask layers, including an imported image, two gradients, a layer with no image, and an SVG `<mask>` source as the mask image.
 
@@ -33,7 +33,7 @@ Because one of the mask images is specified as `none`, only four mask images are
 
 ### The importance of `none`
 
-The `none` layer generally has no visual effect (see the [`mask-composite` property](#the-mask-composite-property) for how it impacts the applied mask), but as each value in a comma-separated list of `mask-*` values applies to a separate mask layer, the `none` value serves an important purpose even when it doesn't change the composited mask.
+The `none` layer generally has no visual effect (see the [`mask-composite` property](#the_mask-composite_property) for how it impacts the applied mask), but as each value in a comma-separated list of `mask-*` values applies to a separate mask layer, the `none` value serves an important purpose even when it doesn't change the composited mask.
 
 This fourth layer in our five-layer structure will match the fourth value of any other comma-separated `mask-*` property values. As previously mentioned, the number of layers is determined by the number of comma-separated values in the {{cssxref("mask-image")}} property value, even if a value is `none`. Each `mask-*` value is matched up with the `mask-image` values, in order. If the number of values in a `mask-*` property differs from the number of mask layers, any excess values are ignored, or, if the property has fewer values than the number of mask layers, the values are repeated.
 

@@ -96,7 +96,7 @@ div {
 
 ### Value comparison
 
-This example demonstrates the `mask-composite` property's four `<compositing-operator>` keyword values, along with comparing the effects of [`alpha` and `luminance`](/en-US/Web/SVG/Reference/Attribute/mask-type#mask) mask modes.
+This example demonstrates the `mask-composite` property's four `<compositing-operator>` keyword values, along with comparing the effects of [`alpha` and `luminance`](/en-US/docs/Web/CSS/mask-type) mask modes.
 
 #### HTML
 
