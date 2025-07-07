@@ -297,10 +297,10 @@ Similarly, a negative value will mean that the intersection is detected once ima
 ```
 
 ```html hidden
-<div id="root_container">
+<div id="root-container">
   <p>content before (scroll down to carousel)</p>
 
-  <div class="flexcontainer">
+  <div class="flex-container">
     <div class="carousel">
       <img
         data-src="ballon-portrait.jpg"
@@ -320,7 +320,7 @@ Similarly, a negative value will mean that the intersection is detected once ima
       <img data-src="moon.jpg" class="lazy-carousel-img" alt="moon" />
       <img data-src="rhino.jpg" class="lazy-carousel-img" alt="rhino" />
     </div>
-    <div id="marginIndicator"></div>
+    <div id="margin-indicator"></div>
   </div>
   <p>content after</p>
 </div>
@@ -340,7 +340,7 @@ Similarly, a negative value will mean that the intersection is detected once ima
 ```
 
 ```css hidden
-#root_container {
+#root-container {
   height: 250px;
   overflow-y: auto;
   border: solid blue;
@@ -354,11 +354,11 @@ p {
   height: 50vh;
 }
 
-.flexcontainer {
+.flex-container {
   display: flex;
 }
 
-#marginIndicator {
+#margin-indicator {
   position: relative;
   height: 100px;
   width: 1px;
@@ -410,18 +410,19 @@ function log(text) {
 ```
 
 ```js hidden
+const rootContainer = document.getElementById("root-container");
+const marginIndicator = document.getElementById("margin-indicator");
+const carousel = document.querySelector(".carousel");
+const lazyImages = carousel.querySelectorAll(".lazy-carousel-img");
 let imageObserver;
 
 function createImageObserver() {
-  const carousel = document.querySelector(".carousel");
-  const lazyImages = carousel.querySelectorAll(".lazy-carousel-img");
-
   if (imageObserver) {
     imageObserver.disconnect();
   }
 
   let observerOptions = {
-    root: root_container,
+    root: rootContainer,
     rootMargin: "0px", // No extra margin
     scrollMargin: `${margin.valueAsNumber}%`, // No extra margin / Can be set
     threshold: 0.01, // Trigger when 1% of the image is visible
@@ -454,24 +455,22 @@ function createImageObserver() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  if ("IntersectionObserver" in window) {
+if ("IntersectionObserver" in window) {
+  createImageObserver();
+  margin.addEventListener("input", () => {
     createImageObserver();
-    margin.addEventListener("input", () => {
-      createImageObserver();
-    });
-  } else {
-    // Fallback for browsers that don't support Intersection Observer
-    // Loads all images immediately if Intersection Observer is not supported.
-    lazyImages.forEach((img) => {
-      img.src = img.dataset.src;
-      img.classList.remove("lazy-carousel-img");
-    });
-    console.warn(
-      "Intersection Observer not supported. All carousel images loaded.",
-    );
-  }
-});
+  });
+} else {
+  // Fallback for browsers that don't support Intersection Observer
+  // Loads all images immediately if Intersection Observer is not supported.
+  lazyImages.forEach((img) => {
+    img.src = img.dataset.src;
+    img.classList.remove("lazy-carousel-img");
+  });
+  console.warn(
+    "Intersection Observer not supported. All carousel images loaded.",
+  );
+}
 ```
 
 {{EmbedLiveSample("The intersection root and scroll margin","100%","500px")}}
