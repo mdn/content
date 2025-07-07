@@ -210,7 +210,7 @@ h1,
 h2,
 h3 {
   /* It is actually loaded here */
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
 }
 ```
 
