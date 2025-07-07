@@ -462,9 +462,9 @@ git checkout -b my_changes # Create a new branch
 This section provides a practical demonstration of how to install _LocalLibrary_ on [Railway](https://railway.com/).
 
 > [!NOTE]
-> MDN has migrated this project a number of hosting services that no longer offer free tiers.
+> MDN has migrated this project from a number of hosting services that no longer offer free tiers.
 > We've decided to use Railway for the current hosting option, which has an inexpensive hobby tier.
-> Most services have similar deployment methods, so the following instructions should be useful.
+> Most services have similar deployment methods, so the instructions below should help you publish your project on the platform of your choice.
 
 ### Why Railway?
 
