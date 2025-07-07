@@ -40,17 +40,17 @@ The example allows you to modify the `scrollMargin` in order to see how this cha
 <button id="reset" type="button">Reset</button>
 ```
 
-The code below defines the `root_container` {{htmlelement("div")}} element, which we will use as the root element of the intersection observer.
-This in turn contains a {{htmlelement("p")}} element that is used to push the other elements out of view "by default", a `carousel` `<div>` , and a `marginIndicator` (used to indicate the size of the margin applied to scrollable elements within the root element).
+The code below defines the `root-container` {{htmlelement("div")}} element, which we will use as the root element of the intersection observer.
+This in turn contains a {{htmlelement("p")}} element that is used to push the other elements out of view "by default", a `carousel` `<div>` , and a `margin-indicator` (used to indicate the size of the margin applied to scrollable elements within the root element).
 
 The {{htmlelement("img")}} elements within the carousel have a `data-src` attribute that contains a file name.
 In our observer code, we will use this attribute to set the `img.src` when each image starts to intersect with the root element, which will load the image.
 
 ```html
-<div id="root_container">
+<div id="root-container">
   <p>content before (scroll down to carousel)</p>
 
-  <div class="flexcontainer">
+  <div class="flex-container">
     <div class="carousel">
       <img
         data-src="ballon-portrait.jpg"
@@ -70,7 +70,7 @@ In our observer code, we will use this attribute to set the `img.src` when each 
       <img data-src="moon.jpg" class="lazy-carousel-img" alt="moon" />
       <img data-src="rhino.jpg" class="lazy-carousel-img" alt="rhino" />
     </div>
-    <div id="marginIndicator"></div>
+    <div id="margin-indicator"></div>
   </div>
   <p>content after</p>
 </div>
@@ -92,7 +92,7 @@ In our observer code, we will use this attribute to set the `img.src` when each 
 #### CSS
 
 ```css
-#root_container {
+#root-container {
   height: 250px;
   overflow-y: auto;
   border: solid blue;
@@ -102,11 +102,11 @@ p {
   height: 50vh;
 }
 
-.flexcontainer {
+.flex-container {
   display: flex;
 }
 
-#marginIndicator {
+#margin-indicator {
   position: relative;
   height: 100px;
   width: 1px;
@@ -176,18 +176,19 @@ For intersecting targets it sets the `img.src` to the name of the image to be lo
 The code at the end of the function calls {{domxref("IntersectionObserver.observe()")}} on each image to start the observer.
 
 ```js
+const rootContainer = document.getElementById("root-container");
+const marginIndicator = document.getElementById("margin-indicator");
+const carousel = document.querySelector(".carousel");
+const lazyImages = carousel.querySelectorAll(".lazy-carousel-img");
 let imageObserver;
 
 function createImageObserver() {
-  const carousel = document.querySelector(".carousel");
-  const lazyImages = carousel.querySelectorAll(".lazy-carousel-img");
-
   if (imageObserver) {
     imageObserver.disconnect();
   }
 
   let observerOptions = {
-    root: root_container,
+    root: rootContainer,
     rootMargin: "0px", // No extra margin
     scrollMargin: `${margin.valueAsNumber}px`, // No extra margin / Can be set
     threshold: 0.01, // Trigger when 1% of the image is visible
@@ -221,28 +222,26 @@ function createImageObserver() {
 }
 ```
 
-The following code waits until the page is ready, and creates the observer using `createImageObserver()` on start and whenever the `margin` input value is changed.
+The following code creates the observer using `createImageObserver()` on start and whenever the `margin` input value is changed.
 If the `IntersectionObserver` interface isn't supported, it loads all the images immediately.
 
 ```js
-document.addEventListener("DOMContentLoaded", () => {
-  if ("IntersectionObserver" in window) {
+if ("IntersectionObserver" in window) {
+  createImageObserver();
+  margin.addEventListener("input", () => {
     createImageObserver();
-    margin.addEventListener("input", () => {
-      createImageObserver();
-    });
-  } else {
-    // Fallback for browsers that don't support Intersection Observer
-    // Loads all images immediately if Intersection Observer is not supported.
-    lazyImages.forEach((img) => {
-      img.src = img.dataset.src;
-      img.classList.remove("lazy-carousel-img");
-    });
-    console.warn(
-      "Intersection Observer not supported. All carousel images loaded.",
-    );
-  }
-});
+  });
+} else {
+  // Fallback for browsers that don't support Intersection Observer
+  // Loads all images immediately if Intersection Observer is not supported.
+  lazyImages.forEach((img) => {
+    img.src = img.dataset.src;
+    img.classList.remove("lazy-carousel-img");
+  });
+  console.warn(
+    "Intersection Observer not supported. All carousel images loaded.",
+  );
+}
 ```
 
 #### Results
