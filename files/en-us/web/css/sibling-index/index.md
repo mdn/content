@@ -151,9 +151,9 @@ div::before {
 
 {{EmbedLiveSample("Ordered List", "300", "100")}}
 
-### Tree Counting Entrance Animation
+### Sequential animations
 
-Combining `sibling-index()` with CSS animations opens new possibilities. In this example, the opacity of elements in sequential order by setting an {{cssxref("animation-delay")}} based on their order in the DOM. 
+Combining `sibling-index()` with CSS animations opens new possibilities. In this example, the opacity of elements in sequential order by setting an {{cssxref("animation-delay")}} based on their order in the DOM.
 
 #### HTML
 
@@ -171,6 +171,7 @@ We include a container element with four children:
 #### CSS
 
 We apply the `fade-in` animation to each element. We use the `sibling-index()` function within a {{cssxref("calc()")}} function to set the duration of the `animation-delay` based on the source element's position in the source order. The {{cssxref("animation-fill-mode")}} applies the animation's `0%` keyframe until the `animation-duration` expires.
+
 ```css
 ul {
   list-style-type: none;
@@ -199,7 +200,7 @@ li {
 
 #### Results
 
-{{EmbedLiveSample("Tree Counting Entrance Animation", "300", "100")}}
+{{EmbedLiveSample("Sequential animations", "300", "100")}}
 
 ## Specifications
 
