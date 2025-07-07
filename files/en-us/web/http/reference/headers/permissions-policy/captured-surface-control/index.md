@@ -12,7 +12,7 @@ browser-compat: http.headers.Permissions-Policy.captured-surface-control
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `captured-surface-control` directive controls whether or not the document is permitted to use the [Captured Surface Control API](/en-US/docs/Web/API/Screen_Capture_API/Captured_Surface_Control). Specifically, the {{domxref("CaptureController.forwardWheel", "forwardWheel()")}}, {{domxref("CaptureController.increaseZoomLevel", "increaseZoomLevel()")}}, {{domxref("CaptureController.decreaseZoomLevel", "decreaseZoomLevel()")}}, and {{domxref("CaptureController.resetZoomLevel", "resetZoomLevel()")}} methods are controlled by this directive.
 
-If `captured-surface-control` is disabled in a document, the above methods will throw a `NotAllowedError` exception.
+The promise returned by the API's main methods will reject with a `NotAllowedError` {{DOMxRef("DOMException")}} if the permission is not allowed.
 
 ## Syntax
 

@@ -9,9 +9,9 @@ browser-compat: api.CaptureController
 
 {{APIRef("Screen Capture API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The **`CaptureController`** interface provides methods that can be used to further manipulate a capture session separate from its initiation via {{domxref("MediaDevices.getDisplayMedia()")}}.
+The **`CaptureController`** interface provides methods that can be used to further manipulate a captured display surface (captured via {{domxref("MediaDevices.getDisplayMedia()")}})
 
-A `CaptureController` object is associated with a capture session by passing it into a {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} call as the value of the options object's `controller` property.
+A `CaptureController` object is associated with a captured display surface by passing it into a `getDisplayMedia()` call as the value of the options object's `controller` property.
 
 ## Constructor
 
@@ -21,7 +21,7 @@ A `CaptureController` object is associated with a capture session by passing it 
 ## Instance properties
 
 - {{ domxref("CaptureController.zoomLevel", "zoomLevel") }} {{Experimental_Inline}}
-  - : The captured display surface's current zoom percentage.
+  - : The captured display surface's current zoom level.
 
 ## Instance methods
 
@@ -32,7 +32,7 @@ A `CaptureController` object is associated with a capture session by passing it 
 - {{ domxref("CaptureController.getSupportedZoomLevels", "getSupportedZoomLevels()") }} {{Experimental_Inline}}
   - : Returns the different zoom levels supported by the captured display surface.
 - {{ domxref("CaptureController.increaseZoomLevel", "increaseZoomLevel()") }} {{Experimental_Inline}}
-  - : Increases the captured display surface's zoom percentage to the next level up.
+  - : Increases the captured display surface's zoom level by one increment.
 - {{ domxref("CaptureController.resetZoomLevel", "resetZoomLevel()") }} {{Experimental_Inline}}
   - : Resets the captured display surface's zoom to its initial level, which is `100`.
 - {{ domxref("CaptureController.setFocusBehavior", "setFocusBehavior()") }} {{Experimental_Inline}}
@@ -41,7 +41,7 @@ A `CaptureController` object is associated with a capture session by passing it 
 ## Events
 
 - {{ domxref("CaptureController.zoomlevelchange_event", "zoomlevelchange") }} {{Experimental_Inline}}
-  - : Fires when the captured display surface's zoom percentage changes.
+  - : Fires when the captured display surface's zoom level changes.
 
 ## Examples
 

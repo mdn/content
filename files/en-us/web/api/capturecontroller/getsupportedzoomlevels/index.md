@@ -10,7 +10,7 @@ browser-compat: api.CaptureController.getSupportedZoomLevels
 
 {{APIRef("Screen Capture API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The {{domxref("CaptureController")}} interface's **`getSupportedZoomLevels()`** method returns the different zoom percentages that the captured display surface supports.
+The {{domxref("CaptureController")}} interface's **`getSupportedZoomLevels()`** method returns the different zoom levels that the captured display surface supports.
 
 ## Syntax
 
@@ -24,12 +24,14 @@ None.
 
 ### Return value
 
-An array of numbers representing the different zoom percentages that the captured display surface supports.
+An array of numbers representing the different zoom levels that the captured display surface supports.
 
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
   - : The capturing {{domxref("MediaStream")}} returned by the originating {{domxref("MediaDevices.getDisplayMedia()")}} call is no longer capturing, for example because the associated {{domxref("MediaStreamTrack")}} objects have had {{domxref("MediaStreamTrack.stop", "stop()")}} called on them.
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : The surface type being captured is not a browser tab.
 
 ## Examples
 

@@ -20,7 +20,7 @@ A number representing the current zoom level of the captured display surface.
 
 ### Basic `zoomLevel` usage
 
-In our live demo, shown in [Using the Captured Surface Control API](/en-US/docs/Web/API/Screen_Capture_API/Captured_Surface_Control), we use the `zoomLevel` property inside an event handler function for the controller's {{domxref("CaptureController.zoomlevelchange_event", "zoomlevelchange")}} event. When the event fires, the updated `zoomLevel` percentage is written to an `<output>` element.
+In our live demo, shown in [Using the Captured Surface Control API](/en-US/docs/Web/API/Screen_Capture_API/Captured_Surface_Control), we use the `zoomLevel` property inside an event handler function for the controller's {{domxref("CaptureController.zoomlevelchange_event", "zoomlevelchange")}} event. When the event fires, the updated `zoomLevel` is written to an `<output>` element.
 
 ```js
 // Create controller and start capture

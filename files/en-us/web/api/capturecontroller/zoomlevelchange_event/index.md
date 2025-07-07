@@ -10,7 +10,7 @@ browser-compat: api.CaptureController.zoomlevelchange_event
 
 {{APIRef("Screen Capture API")}}{{SeeCompatTable}}
 
-The **`zoomlevelchange`** event of the {{domxref("CaptureController")}} interface is fired when the captured display surface's zoom percentage changes.
+The **`zoomlevelchange`** event of the {{domxref("CaptureController")}} interface is fired when the captured display surface's zoom level changes.
 
 Specifically, this occurs when:
 
@@ -36,7 +36,7 @@ A generic {{domxref("Event")}}.
 
 ### Basic `zoomlevelchange` usage
 
-When a captured display surface's zoom level changes, a `zoomlevelchange` event fires on the controller, which can be used to run an event handler such as the following. This writes the updated zoom percentage to an output element of some kind.
+When a captured display surface's zoom level changes, a `zoomlevelchange` event fires on the controller, which can be used to run an event handler such as the following. This writes the updated zoom level to an output element of some kind.
 
 ```js
 // Create controller and start capture

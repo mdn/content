@@ -21,7 +21,7 @@ Currently these are:
 1. Zooming the captured display surface.
 2. Using mouse wheel/touchpad gestures (and other equivalents) to scroll the captured display surface.
 
-This functionality is all accessed via the {{domxref("CaptureController")}} object. To control a screen capture session, a capture controller must be passed into a {{domxref("MediaDevices.getDisplayMedia()")}} call inside its options object:
+This functionality is all accessed via the {{domxref("CaptureController")}} object. To control a captured display surface, a capture controller must be passed into a {{domxref("MediaDevices.getDisplayMedia()")}} call inside its options object:
 
 ```js
 controller = new CaptureController();
@@ -230,7 +230,7 @@ resetBtn.addEventListener("click", resetZoom);
 
 async function decreaseZoom() {
   try {
-    controller.decreaseZoomLevel();
+    await controller.decreaseZoomLevel();
   } catch (e) {
     console.log(e);
   }
@@ -238,21 +238,21 @@ async function decreaseZoom() {
 
 async function increaseZoom() {
   try {
-    controller.increaseZoomLevel();
+    await controller.increaseZoomLevel();
   } catch (e) {
     console.log(e);
   }
 }
 
 async function resetZoom() {
-  controller.resetZoomLevel();
+  await controller.resetZoomLevel();
 }
 ```
 
 > [!NOTE]
 > It is generally a best practice to call `decreaseZoomLevel()` and `increaseZoomLevel()` from within a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block because the zoom level could be changed asynchronously by an entity other than the application, which might lead to an error being thrown. For example, the user might directly interact with the captured surface to zoom in or out.
 
-When the zoom changes, the controller's {{domxref("CaptureController.zoomlevelchange_event", "zoomlevelchange")}} event fires, which causes the code we saw earlier in the `startCapture()` function to run, writing the updated zoom percentage to the `<output>` element and running the `updateZoomButtonState()` function to stop the user from zooming in and out too far.
+When the zoom changes, the controller's {{domxref("CaptureController.zoomlevelchange_event", "zoomlevelchange")}} event fires, which causes the code we saw earlier in the `startCapture()` function to run, writing the updated zoom level to the `<output>` element and running the `updateZoomButtonState()` function to stop the user from zooming in and out too far.
 
 ```js
 controller.addEventListener("zoomlevelchange", () => {
@@ -301,5 +301,3 @@ function updateZoomButtonState() {
 The finished demo renders like this:
 
 {{EmbedLiveSample("surface-control-demo", , "500px", , , , "display-capture; captured-surface-control")}}
-
-EDITORIAL: The demo works, but when you scroll the captured display surface, it crashes the browser tab.

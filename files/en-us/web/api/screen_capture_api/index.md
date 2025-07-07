@@ -34,7 +34,7 @@ See the article [Using the Screen Capture API](/en-US/docs/Web/API/Screen_Captur
 
 ### Screen capture extensions
 
-The Screen Capture API also has features that extend the capabilities available to the Screen Capture API:
+The Screen Capture API has additional features that extend its capabilities:
 
 #### Limiting the screen area captured in the stream
 
@@ -54,7 +54,7 @@ See [Using the Captured Surface Control API](/en-US/docs/Web/API/Screen_Capture_
 - {{domxref("BrowserCaptureMediaStreamTrack")}}
   - : Represents a single video track; extends the {{domxref("MediaStreamTrack")}} class with methods to limit the part of a self-capture stream (for example, a user's screen or window) that is captured.
 - {{domxref("CaptureController")}}
-  - : Provides methods that can be used to further manipulate a capture session separate from its initiation via {{domxref("MediaDevices.getDisplayMedia()")}}. A `CaptureController` object is associated with a capture session by passing it into a {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} call as the value of the options object's `controller` property.
+  - : Provides methods that can be used to further manipulate a captured display surface (captured via {{domxref("MediaDevices.getDisplayMedia()")}}). A `CaptureController` object is associated with a captured display surface by passing it into a `getDisplayMedia()` call as the value of the options object's `controller` property.
 - {{domxref("CropTarget")}}
   - : Provides a static method, {{domxref("CropTarget.fromElement_static", "fromElement()")}}, which returns a {{domxref("CropTarget")}} instance that can be used to crop a captured video track to the area in which a specified element is rendered.
 - {{domxref("RestrictionTarget")}}
@@ -98,17 +98,21 @@ The Screen Capture API adds properties to the following dictionaries defined by 
 - {{domxref("MediaTrackSupportedConstraints.suppressLocalAudioPlayback")}}
   - : A boolean, which is `true` if the current environment supports the constraint {{domxref("MediaTrackConstraints.suppressLocalAudioPlayback")}}.
 
-## Permissions Policy validation
+## Security considerations
 
-{{Glossary("User agent", "User agents")}} that support [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) (either using the HTTP {{HTTPHeader("Permissions-Policy")}} header or the {{HTMLElement("iframe")}} attribute [`allow`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allow)) can specify a desire to use the Screen Capture API using the directive {{HTTPHeader("Permissions-Policy/display-capture", "display-capture")}}:
+Websites that support [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) (either using the HTTP {{HTTPHeader("Permissions-Policy")}} header or the {{HTMLElement("iframe")}} attribute [`allow`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allow)) can specify a desire to use the Screen Capture API using the directive {{HTTPHeader("Permissions-Policy/display-capture", "display-capture")}}:
 
 ```html
 <iframe allow="display-capture" src="/some-other-document.html">…</iframe>
 ```
 
-You can also specify a desire to use the [Captured Surface Control API](/en-US/docs/Web/API/Screen_Capture_API/Captured_Surface_Control) via the {{HTTPHeader("Permissions-Policy/captured-surface-control", "captured-surface-control")}} directive. Specifically, the {{domxref("CaptureController.forwardWheel", "forwardWheel()")}}, {{domxref("CaptureController.increaseZoomLevel", "increaseZoomLevel()")}}, {{domxref("CaptureController.decreaseZoomLevel", "decreaseZoomLevel()")}}, and {{domxref("CaptureController.resetZoomLevel", "resetZoomLevel()")}} methods are controlled by this directive.
+A site can also specify a desire to use the [Captured Surface Control API](/en-US/docs/Web/API/Screen_Capture_API/Captured_Surface_Control) via the {{HTTPHeader("Permissions-Policy/captured-surface-control", "captured-surface-control")}} directive. Specifically, the {{domxref("CaptureController.forwardWheel", "forwardWheel()")}}, {{domxref("CaptureController.increaseZoomLevel", "increaseZoomLevel()")}}, {{domxref("CaptureController.decreaseZoomLevel", "decreaseZoomLevel()")}}, and {{domxref("CaptureController.resetZoomLevel", "resetZoomLevel()")}} methods are controlled by this directive.
 
 The default allowlist for both directives is `self`, which lets any content within the same origin use Screen Capture.
+
+These features are [powerful features](/en-US/docs/Web/Security#secure_contexts_and_feature_permissions), meaning that making sure they are not disallowed via a `Permissions-Policy` is not the only consideration. If they are not disallowed via a `Permissions-Policy`, the user will still be asked for permission to use the listed features via a browser prompt, which uses the [Permissions API](/en-US/docs/Web/API/Permissions_API).
+
+In addition, the specification requires that a user has recently interacted with the page to use these features — this means that [transient activation](/en-US/docs/Glossary/Transient_activation) is required, that is, the features must be invoked inside an appropriate event handler function. For example, the user must click a button to use page zooming functionality.
 
 ## Specifications
 
