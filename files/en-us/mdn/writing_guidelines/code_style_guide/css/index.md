@@ -22,9 +22,17 @@ Prettier formats all the code and keeps the style consistent. Nevertheless, ther
 
 Before diving in and writing huge chunks of CSS, plan your styles carefully. What general styles are going to be needed, what different layouts do you need to create, what specific overrides need to be created, and are they reusable? Above all, you need to try to **avoid too much overriding**. If you keep finding yourself writing styles and then cancelling them again a few rules down, you probably need to rethink your strategy.
 
-### Use flexible/relative units
+### Using modern CSS features
 
-For maximum flexibility over the widest possible range of devices, it is a good idea to size containers, padding, etc. using relative units like ems and rems or percentages and viewport units if you want them to vary depending on viewport width. You can read some more about this in our [guide to CSS values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#relative_length_units).
+You can use new features once every major browser — Chrome, Edge, Firefox, and Safari — supports them.
+
+### Follow common best practices
+
+There are some uniformly acknowledged principles that we don't need to exhaustively state here:
+
+- Don't write syntax errors that result in the property or declaration being ignored. Standard syntax that hasn't been implemented is acceptable.
+- Don't use non-standard, deprecated, or obsolete features. This extends to prefixed features: unless the standard feature is unavailable, you don't need to write the prefixed alternative. Readers who need compatibility can either add the prefixed fallback themselves or use a CSS postprocessor.
+- Don't write redundant and useless code that are common indications of bug or refactor artifacts. They include identical properties in a declaration, empty declarations, empty comments, selectors that never match anything, etc.
 
 ### Don't use preprocessors
 
@@ -38,9 +46,79 @@ In the same spirit as the previous guideline, don't write example codes on MDN W
 
 For maximum control over CSS across platforms, a lot of people used to use CSS resets to remove every style, before then building things back up themselves. This certainly has its merits, but especially in the modern world, CSS resets can be an overkill, resulting in a lot of extra time spent reimplementing things that weren't completely broken in the first place, like default margins, list styles, etc.
 
-If you really feel like you need to use a reset, consider using [normalize.css by Nicolas Gallagher](https://necolas.github.io/normalize.css/), which aims to just make things more consistent across browsers, get rid of some default annoyances that we always remove (the margins on `<body>`, for example) and fix a few bugs.
+### Pseudocode and formal syntax
 
-## !important
+Formal syntax is more front and central for CSS docs than other docs, and readers tend to understand them to some degree, so they are not forbidden. However, if your code is not syntactically well-formed CSS, do not mark it as CSS. Either mark your code block as `plain`, or use the `CSSSyntaxRaw` macro to render complete formal syntax.
+
+Furthermore, a single value is not syntactically well-formed CSS. CSS code at least requires a property and its value. If you are documenting the `rgb()` function, write this:
+
+```css example-good
+color: rgb(31 41 59);
+color: rgb(31 41 59 / 26%);
+```
+
+Don't use this style:
+
+```css example-bad
+rgb(31 41 59);
+rgb(31 41 59 / 26%);
+```
+
+## Animations
+
+### Keyframe selectors
+
+When specifying keyframes, the `0%` and `100%` selectors can also be written as `from` and `to`. If a `@keyframes` rule _only contains_ these two selectors, use `from` and `to` instead of `0%` and `100%`. This makes your code more semantic.
+
+```css example-bad
+@keyframes example {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+```
+
+```css example-good
+@keyframes example {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+```
+
+On the other hand, if your `@keyframes` rule contains more than just the start and end frames, use the `0%` and `100%` selectors for uniformity.
+
+```css example-good
+@keyframes example {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+```
+
+## Cascade, properties, and selectors
+
+### Controlling specificity
+
+If possible, avoid surprises for controlling specificity, such as using `:where()` or duplicating selectors. Consider:
+
+- Changing the order of declarations
+- Rearranging properties such that they don't override each other
+- Using ID selectors
+
+### !important
 
 `!important` is the last resort that is generally used only when you need to override something and there is no other way to do it. Using `!important` is a bad practice and you should avoid it wherever possible.
 
@@ -50,7 +128,153 @@ If you really feel like you need to use a reset, consider using [normalize.css b
 }
 ```
 
-## CSS comments
+### Ordering
+
+Generally, when two declarations target the same element(s), the one with higher specificity should come later in the stylesheet.
+
+```css example-good
+button {
+  color: blue;
+}
+
+.my-form button {
+  color: red;
+}
+```
+
+Within a declaration, prefer to have related properties (such as sizing, positioning, color, etc.) located together. Custom properties should be declared at the top, which makes the code more readable if the custom property is to be used within the same block.
+
+### Empty lines
+
+Empty lines between declaration blocks are recommended. You can remove them if consecutive declarations are highly related, such as variations of the same utility class.
+
+Empty lines between properties should be used sparingly. Only use them when each group of properties form a clear semantic block.
+
+### Shorthand properties
+
+- If _every_ constituent property of a shorthand property is specified to a non-default value, use the shorthand property instead of the constituent properties. This makes your code shorter and easier to read. Replace this:
+
+  ```css example-bad
+  margin-top: 1em;
+  margin-right: 2em;
+  margin-bottom: 1em;
+  margin-left: 2em;
+  ```
+
+  With this:
+
+  ```css example-good
+  margin: 1em 2em;
+  ```
+
+- If _some_ constituent properties of a shorthand property are specified to a non-default value, the use of the shorthand property is optional. Both of these are acceptable:
+
+  ```css example-good
+  margin-top: 1em;
+  margin-bottom: 1em;
+  ```
+
+  ```css example-good
+  margin: 1em 0;
+  ```
+
+- Use the shortest shorthand syntax available. Write this:
+
+  ```css example-good
+  margin: 1em;
+  ```
+
+  Avoid these:
+
+  ```css example-bad
+  margin: 1em 1em;
+  margin: 1em 1em 1em 1em;
+  ```
+
+- Write shorthand properties in the canonical order. Write this:
+
+  ```css example-good
+  border: 1px solid red;
+  ```
+
+  Don't write this:
+
+  ```css example-bad
+  border: solid red 1px;
+  ```
+
+- If you use the shorthand property, make sure none of its constituent properties are specified at the same time, because the longhand is ignored. Avoid this:
+
+  ```css example-bad
+  margin-top: 1em;
+  margin: 2em; /* Oops, margin-top is ignored */
+  ```
+
+### Use class selectors
+
+Generally, prefer class selectors (and use `class` instead of `id` in your HTML). They can be composed: multiple elements can use the same class, and the same class can be used for multiple elements.
+
+```css example-good
+.footnote {
+  /* ... */
+}
+```
+
+```css example-bad
+#footnote {
+  /* ... */
+}
+```
+
+ID selectors are acceptable if unique handles are required elsewhere; for example, form controls. They are also an acceptable device for controlling specificity.
+
+### Old pseudo-element selectors
+
+The `::before`, `::after`, `::first-letter`, and `::first-line` pseudo-elements can also be written with single colons. Avoid the single-colon syntax because they are conceptually pseudo-elements and not pseudo-classes.
+
+### Complex selector lists
+
+The `:is()`, `:where()`, and `:not()` pseudo-classes accept complex selector lists. Use them to shorten your selector.
+
+Write this:
+
+```css example-good
+input:not(:checked, :disabled) {
+  /* ... */
+}
+```
+
+Don't write this:
+
+```css example-bad
+input:not(:checked):not(:disabled) {
+  /* ... */
+}
+```
+
+## Colors
+
+### Choosing a notation
+
+Generally, if the specific color palette is not a concern, default to using common named colors. For example, use `black` instead of `rgb(0 0 0)` or `#000000`, and `green` instead of `chartreuse`.
+
+If a specific color is needed, default to using the `rgb()` notation. `hsl()` and other functions should only be used where the particular representation has a meaning (for example, a color wheel or a gradient). Hexadecimal notation is terser but may be less readable; it is interchangeable with `rgb()` depending on which one is more convenient for you.
+
+Whatever color function you use, always use the modern syntax: `rgb(31 41 59 / 26%)` and not the legacy comma-separated syntax. Always use the function without the `a` suffix (`rgb` instead of `rgba`), because it's shorter and doesn't require changing the name if you later decide to add an alpha channel.
+
+When using the hexadecimal notation, always use the six (or eight) digit version to avoid cognitive load: `#aabbcc` instead of `#abc`.
+
+### Color parameters
+
+For consistency, all parameters should use numbers by default, instead of percentages or degrees. This includes the alpha channel too. However, if the specific representation is meaningful (for example, animations, gradients, or calculations), then use the suitable type.
+
+If the alpha channel is `1`, omit it. Write `rgb(31 41 59)` instead of `rgb(31 41 59 / 1)`.
+
+### Choosing colors
+
+In addition to the recommendation of using common named colors, your color palette should meet our [accessibility guidelines](/en-US/docs/Web/Accessibility/Guides/Colors_and_Luminance). In particular, if the colors distinguish elements (such as a "red box" and a "blue box"), make sure that the colors are distinguishable by people with color vision deficiency.
+
+## Comments
 
 Use CSS-style comments to comment code that isn't self-documenting. Also note that you should leave a space between the asterisks and the comment.
 
@@ -69,60 +293,82 @@ h3 {
 }
 ```
 
-## Double quotes around values
+## Fonts
 
-Where quotes can or should be included, use them, and use double quotes. For example:
+### Specifying font families
 
-```css example-good
-[data-vegetable="liquid"] {
-  background-color: goldenrod;
-  background-image: url("../../media/examples/lizard.png");
+When specifying a font family, always add a generic family name as the last fallback. This ensures that if the specified font is not available, the browser displays a more suitable font than the default font. [Web-safe fonts](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals#web_safe_fonts) are exempt from this rule.
+
+```css example-bad
+body {
+  font-family: "Helvetica";
 }
 ```
 
-## Longhand vs. shorthand rules
+```css example-good
+body {
+  /* The "sans-serif" family is not needed because Arial is a web-safe font */
+  font-family: "Helvetica", "Arial";
+}
 
-Usually, when teaching the specifics of CSS syntax, it is clearer and more obvious to use longhand properties, rather than terse shorthand (unless, of course, you're explaining shorthand through the example). Remember that the point of examples on MDN Web Docs is to teach people, not to be clever or efficient. We explain here why writing with longhand rules is recommended.
+math {
+  font-family: "Latin Modern Math", "STIX Two Math", math;
+}
+```
 
-- It is often harder to understand what the shorthand is doing. In the example below, it takes a while to pick apart exactly what the {{cssxref("font")}} syntax is doing.
+### Specifying font weights
 
-  ```css
-  font: small-caps bold 2rem/1.5 sans-serif;
-  ```
+Prefer keyword values such as `normal` and `bold`, and relative weights such as `bolder` and `lighter`. Only use number values where the specific weight is desired. You should always replace `400` with `normal` and `700` with `bold`, unless for consistency with other similar declarations.
 
-  Whereas the following style is clearer:
+## Lengths
 
-  ```css
-  font-variant: small-caps;
-  font-weight: bold;
-  font-size: 2rem;
-  line-height: 1.5;
-  font-family: sans-serif;
-  ```
+### Use flexible/relative units
 
-- CSS shorthand comes with potential added pitfalls — default values are set for parts of the syntax that you don't explicitly set, which can produce unexpected resets of values you've set earlier in the cascade or other expected effects. The {{cssxref("grid")}} property, for example, sets all of the following default values for items that are not specified:
-  - {{cssxref("grid-template-rows")}}: `none`
-  - {{cssxref("grid-template-columns")}}: `none`
-  - {{cssxref("grid-template-areas")}}: `none`
-  - {{cssxref("grid-auto-rows")}}: `auto`
-  - {{cssxref("grid-auto-columns")}}: `auto`
-  - {{cssxref("grid-auto-flow")}}: `row`
-  - {{cssxref("column-gap")}}: `0`
-  - {{cssxref("row-gap")}}: `0`
-  - {{cssxref("column-gap")}}: `normal`
-  - {{cssxref("row-gap")}}: `normal`
+For maximum flexibility over the widest possible range of devices, default to relative units like `em`, `rem`, percentages, and viewport units (if you want them to vary depending on viewport width) for all lengths. You can read some more about this in our [guide to CSS values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#relative_length_units).
 
-- Some shorthands only work as expected if you include the different value components in a certain order. This is the case in CSS animations. In the example below, the expected order is written as a comment:
+Write this:
 
-  ```css
-  /* duration | timing-function | delay | iteration-count
-    direction | fill-mode | play-state | name */
-  animation: 3s ease-in 1s 2 reverse both paused slide-in;
-  ```
+```css example-good
+margin: 0.5em;
+max-width: 50%;
+```
 
-  In this example, the first value that can be parsed as a [`<time>`](/en-US/docs/Web/CSS/time) is assigned to the [`animation-duration`](/en-US/docs/Web/CSS/animation-duration) property, and the second value that can be parsed as time is assigned to [`animation-delay`](/en-US/docs/Web/CSS/animation-delay). (For more information, see [animation syntax](/en-US/docs/Web/CSS/animation#syntax) details.)
+Avoid this:
 
-## Mobile-first media queries
+```css example-bad
+margin: 20px;
+max-width: 500px;
+```
+
+## Media queries
+
+### Range syntax
+
+Use the modern range syntax instead of `min-` and `max-`. The former allows specifying exclusive ranges, allows simultaneously specifying upper and lower bounds, and is overall more concise and readable.
+
+```css example-good
+@media (width >= 480px) {
+  /* ... */
+}
+@media (600px < height < 900px) {
+  /* ... */
+}
+```
+
+```css example-bad
+@media (min-width: 480px) {
+  /* ... */
+}
+@media (min-height: 600px) and (max-height: 900px) {
+  /* ... */
+}
+```
+
+This principle extends to HTML attributes, such as the `media` attribute of `<link>` elements.
+
+If you have different alternative styles, be especially careful with your media queries. Remember that `width` and `height` can be fractional values; make sure that with every value, there is one and only one alternative style in effect.
+
+### Mobile-first media queries
 
 In a stylesheet that contains [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) styles for different target viewport sizes, first include the narrow screen/mobile styling before any other media queries are encountered. Add styling for wider viewport sizes via successive media queries. Following this rule has many advantages that are explained in [Responsive design](/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design).
 
@@ -142,30 +388,34 @@ In a stylesheet that contains [media query](/en-US/docs/Web/CSS/CSS_media_querie
 }
 ```
 
-## Selectors
+## Strings
 
-- Don't use ID selectors because they are:
-  - less flexible; you can't add more if you discover you need more than one.
-  - harder to override because they have higher specificity than classes.
-
-  ```css example-good
-  .editorial-summary {
-    /* ... */
-  }
-  ```
-
-  ```css example-bad
-  #editorial-summary {
-    /* ... */
-  }
-  ```
-
-## Value to turn off properties
-
-When turning off borders (and any other properties that can take `0` or `none` as values), use `0` rather than `none`:
+Wherever quotes are optional in the CSS syntax, use them, and use double quotes. Do this:
 
 ```css example-good
-border: 0;
+[data-vegetable="liquid"] {
+  background-image: url("../../media/examples/lizard.png");
+  font-family: "Helvetica", "Arial";
+}
+```
+
+Don't do this, because the types of characters allowed are more limited and sometimes lead to subtle syntax errors:
+
+```css-nolint example-bad
+[data-vegetable=liquid] {
+  background-image: url(../../media/examples/lizard.png);
+  font-family: Helvetica, Arial;
+}
+```
+
+With the `@import` at-rule, specify the module path as a string, not as a `url()`.
+
+```css example-good
+@import "style.css";
+```
+
+```css example-bad
+@import url("style.css");
 ```
 
 ## See also
