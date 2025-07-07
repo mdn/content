@@ -114,13 +114,13 @@ li {
 
 {{EmbedLiveSample("Dynamic list width", "300", "100")}}
 
-### Ordered List
+### Ordered list
 
-This example demonstrates how to create an ordered list using `sibling-index()`, without using the {{htmlelement("ol")}} element. Always use the most semantic element for the context; this example is included to demonstrate what can be done with CSS when you have the ability to change the HTML.
+This example demonstrates how to create an ordered list using `sibling-index()`, without using the {{htmlelement("ol")}} element. Always use the most semantic element for the context; this example is included to demonstrate what can be done with CSS when you don't have the ability to change the HTML.
 
 #### HTML
 
-When you have {{htmlelement("nav")}} container and several children {{htmlelement("div")}} elements.
+We include a {{htmlelement("nav")}} container and several children {{htmlelement("div")}} elements.
 
 ```html
 <nav arial-label="Ordered list">
@@ -153,9 +153,11 @@ div::before {
 
 ### Tree Counting Entrance Animation
 
-Combining `sibling-index()` with CSS animations open new posibilities:
+Combining `sibling-index()` with CSS animations opens new possibilities. In this example, the opacity of elements in sequential order by setting an {{cssxref("animation-delay")}} based on their order in the DOM. 
 
 #### HTML
+
+We include a container element with four children:
 
 ```html
 <ul>
@@ -168,6 +170,7 @@ Combining `sibling-index()` with CSS animations open new posibilities:
 
 #### CSS
 
+We apply the `fade-in` animation to each element. We use the `sibling-index()` function within a {{cssxref("calc()")}} function to set the duration of the `animation-delay` based on the source element's position in the source order. The {{cssxref("animation-fill-mode")}} applies the animation's `0%` keyframe until the `animation-duration` expires.
 ```css
 ul {
   list-style-type: none;
