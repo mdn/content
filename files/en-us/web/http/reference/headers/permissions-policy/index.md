@@ -92,7 +92,8 @@ You can specify
   - : Controls access to the [Topics API](/en-US/docs/Web/API/Topics_API). Where a policy specifically disallows the use of the Topics API, any attempts to call the {{domxref("Document.browsingTopics()")}} method or send a request with a {{httpheader("Sec-Browsing-Topics")}} header will fail with a `NotAllowedError` {{domxref("DOMException")}}.
 
 - {{httpheader('Permissions-Policy/camera', 'camera')}} {{experimental_inline}}
-  - : Controls whether the current document is allowed to use video input devices. When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} will reject with a `NotAllowedError` {{DOMxRef("DOMException")}}.
+  - : Controls whether the current document is allowed to use video input devices.
+    The {{jsxref("Promise")}} returned by {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} will reject with a `NotAllowedError` {{DOMxRef("DOMException")}} if the permission is not allowed.
 
 - {{HTTPHeader('Permissions-Policy/captured-surface-control', 'captured-surface-control')}} {{experimental_inline}}
   - : Controls whether or not the document is permitted to use the [Captured Surface Control API](/en-US/docs/Web/API/Screen_Capture_API/Captured_Surface_Control).
