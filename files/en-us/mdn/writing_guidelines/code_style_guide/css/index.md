@@ -252,6 +252,12 @@ input:not(:checked):not(:disabled) {
 }
 ```
 
+## Casing
+
+By default, all identifiers should be lowercase. This applies to selectors, functions, and keywords. Custom properties should use kebab-case, such as `--custom-property`.
+
+The exceptions are the keyword values defined in SVG, which for historical reasons are camelCase. They include: `currentColor`, {{cssxref("text-rendering")}} values, {{cssxref("shape-rendering")}} values, {{cssxref("pointer-events")}} values, and {{cssxref("color-interpolation-filters")}} values.
+
 ## Colors
 
 ### Choosing a notation
