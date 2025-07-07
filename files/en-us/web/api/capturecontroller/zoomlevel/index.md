@@ -14,7 +14,7 @@ The **`zoomLevel`** read-only property of the {{domxref("CaptureController")}} i
 
 ## Value
 
-A number representing the current zoom percentage of the captured display surface.
+A number representing the current zoom level of the captured display surface.
 
 ## Examples
 
