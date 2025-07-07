@@ -7,6 +7,8 @@ sidebar: webassemblysidebar
 
 The **`br_table`** statement branches to different loops, blocks, or ifs, based on an argument.
 
+You can think of if like a `switch` statement in some sense.
+
 {{InteractiveExample("Wat Demo: br_table", "tabbed-taller")}}
 
 ```wat interactive-example
