@@ -26,7 +26,7 @@ A `CaptureController` object is associated with a capture session by passing it 
 ## Instance methods
 
 - {{ domxref("CaptureController.decreaseZoomLevel", "decreaseZoomLevel()") }} {{Experimental_Inline}}
-  - : Decreases the captured display surface's zoom percentage to the next level down.
+  - : Decreases the captured display surface's zoom level by one increment.
 - {{ domxref("CaptureController.forwardWheel", "forwardWheel()") }} {{Experimental_Inline}}
   - : Starts forwarding {{domxref("Element.wheel_event", "wheel")}} events fired on the referenced element to the viewport of an associated captured display surface.
 - {{ domxref("CaptureController.getSupportedZoomLevels", "getSupportedZoomLevels()") }} {{Experimental_Inline}}
