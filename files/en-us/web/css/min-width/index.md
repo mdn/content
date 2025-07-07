@@ -53,7 +53,7 @@ The element's width is set to the value of `min-width` whenever `min-width` is l
 /* <length> value */
 min-width: 3.5em;
 min-width: anchor-size(width);
-min-width: anchor-size(--myAnchor self-inline, 200%);
+min-width: anchor-size(--my-anchor self-inline, 200%);
 
 /* <percentage> value */
 min-width: 10%;

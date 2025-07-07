@@ -420,7 +420,7 @@ Next, copy the following CSS into the newly created `<style>` element:
   left: 0;
   width: 40px;
   height: 40px;
-  border: 2px solid currentcolor;
+  border: 2px solid currentColor;
   background: transparent;
 }
 .custom-checkbox > input[type="checkbox"]:focus + label::before {

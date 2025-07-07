@@ -66,7 +66,7 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
 ### Glossary terms and keywords
 
 - {{glossary("color space")}}
-- [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword)
+- [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword)
 - {{glossary("interpolation")}}
 - {{glossary("RGB")}}
 - [`transparent`](/en-US/docs/Web/CSS/named-color#transparent)

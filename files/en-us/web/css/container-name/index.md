@@ -19,10 +19,10 @@ When a containment context is given a name, it can be specifically targeted usin
 container-name: none;
 
 /* A single name */
-container-name: myLayout;
+container-name: my-layout;
 
 /* Multiple names */
-container-name: myPageLayout myComponentLibrary;
+container-name: my-page-layout my-component-library;
 
 /* Global Values */
 container-name: inherit;

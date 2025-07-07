@@ -17,7 +17,7 @@ The **`stop-color`** [CSS](/en-US/docs/Web/CSS) property defines the color to us
 /* <color> values */
 stop-color: red;
 stop-color: hsl(120deg 75% 25% / 60%);
-stop-color: currentcolor;
+stop-color: currentColor;
 
 /* Global values */
 stop-color: inherit;

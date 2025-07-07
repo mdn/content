@@ -75,7 +75,7 @@ When both {{cssxref("top")}} and `bottom` are specified, `position` is set to `a
 /* <length> values */
 bottom: 3px;
 bottom: 2.4em;
-bottom: calc(anchor(--myAnchor 50%) + 5px);
+bottom: calc(anchor(--my-anchor 50%) + 5px);
 bottom: anchor-size(width);
 
 /* <percentage>s of the height of the containing block */

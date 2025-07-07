@@ -72,7 +72,7 @@ margin-bottom: 10px; /* An absolute length */
 margin-bottom: 1em; /* relative to the text size */
 margin-bottom: 5%; /* relative to the nearest block container's width */
 margin-bottom: anchor-size(width);
-margin-bottom: calc(anchor-size(--myAnchor self-block, 20px) / 3);
+margin-bottom: calc(anchor-size(--my-anchor self-block, 20px) / 3);
 
 /* Keyword values */
 margin-bottom: auto;
