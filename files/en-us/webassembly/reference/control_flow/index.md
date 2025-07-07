@@ -14,7 +14,7 @@ WebAssembly control flow instructions.
 - [`br_if`](/en-US/docs/WebAssembly/Reference/Control_flow/br_if)
   - : Branches to a loop, block, or if, based on a boolean condition.
 - [`br_table`](/en-US/docs/WebAssembly/Reference/Control_flow/br_table)
-  - : Branches to a loop or block.
+  - : Branches to different loops, blocks, or ifs, based on an argument.
 - [`call`](/en-US/docs/WebAssembly/Reference/Control_flow/call)
   - : Calls a function.
 - [`drop`](/en-US/docs/WebAssembly/Reference/Control_flow/Drop)
