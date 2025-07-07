@@ -10,8 +10,7 @@ browser-compat: api.CaptureController.zoomLevel
 
 {{APIRef("Screen Capture API")}}{{SeeCompatTable}}
 
-The **`zoomLevel`** read-only property of the
-{{domxref("CaptureController")}} interface returns the captured display surface's current zoom percentage.
+The **`zoomLevel`** read-only property of the {{domxref("CaptureController")}} interface returns the captured display surface's current zoom level.
 
 ## Value
 
