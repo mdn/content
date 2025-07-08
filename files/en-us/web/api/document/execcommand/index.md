@@ -10,6 +10,9 @@ browser-compat: api.Document.execCommand
 
 {{ApiRef("DOM")}}{{deprecated_header}}
 
+> [!NOTE]
+> Although the **`document.execCommand`** method is deprecated and no longer recommended for use in new projects, there are still some valid use cases that have not yet been replaced, where it remains the only practical option. For example, implementing undo/redo, changing content within the selection range, or applying rich text formatting currently have no alternatives. Developers should use it carefully and ensure compatibility across major browsers.
+
 The **`execCommand`** method implements multiple different commands. Some of them provide access to the clipboard, while others are for editing [form inputs](/en-US/docs/Web/HTML/Reference/Elements/input), [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) elements or entire documents (when switched to [design mode](/en-US/docs/Web/API/Document/designMode)).
 
 To access the clipboard, the newer [Clipboard API](/en-US/docs/Web/API/Clipboard_API) is recommended over `execCommand()`. However, there is no replacement for the editing commands: unlike direct DOM manipulation, modifications performed by `execCommand()` preserve the undo buffer (edit history).
