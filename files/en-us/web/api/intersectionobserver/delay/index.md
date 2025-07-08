@@ -3,10 +3,12 @@ title: "IntersectionObserver: delay property"
 short-title: delay
 slug: Web/API/IntersectionObserver/delay
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.IntersectionObserver.delay
 ---
 
-{{APIRef("Intersection Observer API")}}
+{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}
 
 The **`delay`** read-only property of the {{domxref("IntersectionObserver")}} interface indicates the minimum delay between notifications from this observer.
 
