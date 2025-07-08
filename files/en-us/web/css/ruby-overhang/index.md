@@ -79,6 +79,9 @@ With `auto`, the default, content may overhang, but it will not overhang if doin
 ### Ruby overhanging base text
 
 This examples demonstrates both values of the `ruby-overhang` property.
+
+#### HTML
+
 We include two paragraphs with identical `<ruby>` content and structures, other than their class names.
 
 ```html
@@ -92,6 +95,8 @@ We include two paragraphs with identical `<ruby>` content and structures, other 
   ><ruby>現<rp>(</rp><rt>げん</rt><rp>)</rp></ruby>は面白い。
 </p>
 ```
+
+#### CSS
 
 A red `outline` of `1px` helps highlight the text annotation of {{htmlelement("rt")}} elements.
 The first paragraph has `ruby-overhang: auto` and the second has `ruby-overhang: none`.
@@ -114,9 +119,11 @@ rt {
 }
 ```
 
+#### Results
+
 {{EmbedLiveSample("ruby_overhanging_base_text", , "350")}}
 
-When `ruby-overhang` is set to `none`, the annotation text is not allowed to overlap the adjacent boxes of base ruby text.
+When `ruby-overhang` is set to `none`, the annotation text is not allowed to overlap the adjacent boxes of base ruby text. If you look closely, you may notice that in the first paragraph, the red box encasing the ruby text slightly overlaps parts of non-associated `<ruby>` content, whereas in the `none` example in supporting browsers, there is no overlap between ruby content and not-associated ruby text.
 
 ## Specifications
 
