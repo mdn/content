@@ -54,16 +54,9 @@ header > time {
 
 ## Usage notes
 
-The `<header>` element serves as a [`banner` landmark](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) **only when**:
+The `<header>` element serves as a [`banner` landmark](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) **only when** it is a direct child of `<body>` and contains site-wide content such as a logo or navigation.
 
-- It's a direct child of `<body>`
-- Contains site-wide content (logo, navigation, etc.)
-
-When nested in sectioning content (`<article>`, `<section>`, `<main>`, etc.):
-
-- It loses semantic meaning (defaults to a [`generic` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role))
-- Cannot use `aria-label` or `aria-labelledby`
-- Behaves like a `<div>` for accessibility
+When nested inside sectioning content (such as `<article>`, `<section>`, or `<main>`), it loses its landmark status and behaves like a non-semantic container. See [Accessibility](#accessibility) for details.
 
 > [!WARNING]
 > **Avoid nested `<header>` for semantics**
@@ -86,7 +79,15 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Referenc
 
 ## Accessibility
 
-The `<header>` element defines a [`banner`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) landmark when its context is the {{HTMLElement('body')}} element. The HTML header element is not considered a banner landmark when it is descendant of an {{HTMLElement('article')}}, {{HTMLElement('aside')}}, {{HTMLElement('main')}}, {{HTMLElement('nav')}}, or {{HTMLElement('section')}} element.
+The `<header>` element defines a [`banner`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) landmark **only when** it is a direct child of the {{HTMLElement('body')}} element.
+
+When placed inside sectioning content such as {{HTMLElement('article')}}, {{HTMLElement('main')}}, {{HTMLElement('section')}}, {{HTMLElement('nav')}}, or {{HTMLElement('aside')}}:
+
+- It is **not** exposed as a landmark to assistive technologies
+- It receives a [`generic` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role)
+- It **cannot** be labeled with `aria-label` or `aria-labelledby`
+
+This behavior aligns with the WAI-ARIA specification and is visible in browser accessibility trees using developer tools.
 
 ## Examples
 
