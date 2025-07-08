@@ -680,7 +680,7 @@ The rest of the code is identical to that found in the earlier examples:
 
 ### Putting it all together
 
-When you take the code and add in HTML and some additional JavaScript, you have something like the following [webxr demo in the mdn/dom-examples repository](https://mdn.github.io/dom-examples/webxr/).
+When you take the code and add in HTML and some additional JavaScript, you'll have something like our [WebXR: Example with rotating object and user movement](https://mdn.github.io/dom-examples/webxr/) demo.
 Remember: as you wander around, if you get lost, just hit the <kbd>R</kbd> key to reset yourself to the beginning.
 
 A tip: if you don't have an XR device, you may be able to get some of the 3D effect if you bring your face very close to the screen, with your nose centered along the border between the left and right eye images in the canvas. By carefully focusing through the screen at the image, and slowly moving forward and backward, you should eventually be able to bring the 3D image into focus. It can take practice, and your nose may literally be touching the screen, depending on how sharp your eyesight is.
