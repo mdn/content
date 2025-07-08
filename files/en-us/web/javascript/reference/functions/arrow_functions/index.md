@@ -3,9 +3,8 @@ title: Arrow function expressions
 slug: Web/JavaScript/Reference/Functions/Arrow_functions
 page-type: javascript-language-feature
 browser-compat: javascript.functions.arrow_functions
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Functions")}}
 
 An **arrow function expression** is a compact alternative to a traditional [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function), with some semantic differences and deliberate limitations in usage:
 

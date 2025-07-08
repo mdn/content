@@ -3,9 +3,8 @@ title: "Named backreference: \\k<name>"
 slug: Web/JavaScript/Reference/Regular_expressions/Named_backreference
 page-type: javascript-language-feature
 browser-compat: javascript.regular_expressions.named_backreference
+sidebar: jssidebar
 ---
-
-{{jsSidebar}}
 
 A **named backreference** refers to the submatch of a previous [named capturing group](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group) and matches the same text as that group. For [unnamed capturing groups](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group), you need to use the normal [backreference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Backreference) syntax.
 

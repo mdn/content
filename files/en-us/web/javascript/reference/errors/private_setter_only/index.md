@@ -2,9 +2,8 @@
 title: "TypeError: getting private setter-only property"
 slug: Web/JavaScript/Reference/Errors/Private_setter_only
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "getting private setter-only property" occurs when reading the value of a [private element](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) for which only a [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set) is defined.
 

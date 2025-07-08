@@ -3,9 +3,8 @@ title: Classes
 slug: Web/JavaScript/Reference/Classes
 page-type: guide
 browser-compat: javascript.classes
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Classes")}}
 
 Classes are a template for creating objects. They encapsulate data with code to work on that data. Classes in JS are built on [prototypes](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) but also have some syntax and semantics that are unique to classes.
 
