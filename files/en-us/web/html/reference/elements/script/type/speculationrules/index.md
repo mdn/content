@@ -273,8 +273,6 @@ if (
 }
 ```
 
-You can see this in action in this [prerender demos](https://prerender-demos.glitch.me/) page.
-
 ### `where` syntax examples
 
 A document-sourced rule contains a `"where"` property, which is an object containing criteria that define which links in the document are matched. Effectively, the `"where"` object represents a test that is performed on every link on the page to see whether the speculation rule is applied to it.
