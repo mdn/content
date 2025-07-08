@@ -58,7 +58,7 @@ function log(text) {
 }
 ```
 
-We can retrieve every value of the `rel` attribute:
+We can retrieve every link type defined by `<a>` element's `rel` attribute:
 
 ```js
 // Select an SVG <a> element
