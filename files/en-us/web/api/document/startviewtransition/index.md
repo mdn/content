@@ -60,7 +60,6 @@ main {
 section {
   background-color: var(--bg);
   height: 60px;
-  width: 100%;
   border-radius: 5px;
 }
 ::view-transition-group(root) {
