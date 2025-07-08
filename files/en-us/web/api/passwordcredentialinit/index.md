@@ -78,7 +78,11 @@ The HTML declares a {{HTMLElement("form")}} containing three submittable element
 <form>
   <div>
     <label for="displayname">Enter your display name: </label>
-    <input type="text" name="displayname" id="displayname" autocomplete="name" />
+    <input
+      type="text"
+      name="displayname"
+      id="displayname"
+      autocomplete="name" />
   </div>
   <div>
     <label for="username">Enter your username: </label>
