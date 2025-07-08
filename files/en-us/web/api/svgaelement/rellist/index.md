@@ -23,6 +23,7 @@ const svgLink = document.querySelector("a");
 svgLink.relList.forEach((relEntry) => {
   console.log(relEntry);
 });
+```
 
 ## Specifications
 
@@ -38,4 +39,3 @@ svgLink.relList.forEach((relEntry) => {
 - {{domxref("SVGAElement.rel")}}
 - {{domxref("HTMLAnchorElement.relList")}}
 - {{domxref("HTMLLinkElement.relList")}}
-```
