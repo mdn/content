@@ -76,8 +76,8 @@ The availability of FedCM within `<iframe>`s enables a couple of use cases:
 
 For example code, see:
 
-- [Implement an identity solution with FedCM on the Identity Provider side](https://privacysandbox.google.com/cookies/fedcm/implement/identity-provider) on privacysandbox.google.com (2025)
-- [Implement an identity solution with FedCM on the Relying Party side](https://privacysandbox.google.com/cookies/fedcm/implement/relying-party) on privacysandbox.google.com (2025)
+- [Implement an identity solution with FedCM on the Identity Provider side](https://privacysandbox.google.com/cookies/fedcm/implement/identity-provider) on privacysandbox.google.com (2025).
+- [Implement an identity solution with FedCM on the Relying Party side](https://privacysandbox.google.com/cookies/fedcm/implement/relying-party) on privacysandbox.google.com (2025).
 
 ## Specifications
 
