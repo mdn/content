@@ -54,11 +54,27 @@ header > time {
 
 ## Usage notes
 
-The `<header>` element has an identical meaning to the site-wide [`banner`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) landmark role, unless nested within sectioning content. Then, the `<header>` element is not a landmark.
+The `<header>` element serves as a [`banner` landmark](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) **only when**:
 
-The `<header>` element can define a global site header, described as a `banner` in the accessibility tree. It usually includes a logo, company name, search feature, and possibly the global navigation or a slogan. It is generally located at the top of the page.
+- It's a direct child of `<body>`
+- Contains site-wide content (logo, navigation, etc.)
 
-Otherwise, it is a `section` in the accessibility tree, and usually contains the surrounding section's heading (an `h1` – `h6` element) and optional subheading, but this is **not** required.
+When nested in sectioning content (`<article>`, `<section>`, `<main>`, etc.):
+
+- It loses semantic meaning (defaults to a [`generic` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role))
+- Cannot use `aria-label` or `aria-labelledby`
+- Behaves like a `<div>` for accessibility
+
+> [!WARNING]
+> **Avoid nested `<header>` for semantics**
+> While valid HTML, it provides no structural meaning inside sections. Prefer:
+
+```html
+<section aria-labelledby="section-heading">
+  <h2 id="section-heading">Heading</h2>
+  <!-- Content -->
+</section>
+```
 
 ### Historical Usage
 
