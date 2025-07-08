@@ -7,9 +7,7 @@ browser-compat: html.elements.input.type_color
 
 {{HTMLSidebar}}
 
-{{HTMLElement("input")}} elements of type **`color`** provide a user interface element that lets a user specify a color, either by using a visual color picker interface or by entering the color into a text field in `#rrggbb` hexadecimal format.
-
-Only basic hexadecimal colors (without alpha channel) are allowed though CSS colors has more formats, e.g., color names, functional notations and a hexadecimal format with an alpha channel.
+{{HTMLElement("input")}} elements of type **`color`** provide a user interface element that lets a user specify a color, either by using a visual color picker interface or by entering the color into a text field in a [CSS color value](/en-US/docs/Web/CSS/color_value) format.
 
 The element's presentation may vary substantially from one browser and/or platform to another—it might be a basic textual input that automatically validates to ensure that the color information is entered in the proper format, or a platform-standard color picker, or some kind of custom color picker window.
 
@@ -24,7 +22,13 @@ The element's presentation may vary substantially from one browser and/or platfo
 </div>
 
 <div>
-  <input type="color" id="body" name="body" value="#f6b73c" />
+  <input
+    type="color"
+    id="body"
+    name="body"
+    value="oklab(50% 0.1 0.1 / 0.5)"
+    colorspace="display-p3"
+    alpha />
   <label for="body">Body</label>
 </div>
 ```
@@ -44,10 +48,22 @@ input {
 
 ## Value
 
-The [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) of an {{HTMLElement("input")}} element of type `color` is always a string which contains a 7-character string specifying an RGB color in hexadecimal format. While you can input the color in either upper- or lower-case, it will be stored in lower-case form. The value is never in any other form, and is never empty.
+A [CSS color value](/en-US/docs/Web/CSS/color_value).
 
 > [!NOTE]
-> Setting the value to anything that isn't a valid, fully-opaque, RGB color _in hexadecimal notation_ will result in the value being set to `#000000`. In particular, you can't use CSS's standardized color names, or any CSS function syntax, to set the value. This makes sense when you keep in mind that HTML and CSS are separate languages and specifications. In addition, colors with an alpha channel are not supported; specifying a color in 9-character hexadecimal notation (e.g., `#009900aa`) will also result in the color being set to `#000000`.
+> Historically, only basic hexadecimal colors (without alpha channel) were allowed. In modern browsers, any CSS color formats, e.g., color names, functional notations and a hexadecimal format with an alpha channel can be used. Non-supporting browsers fall back to `#000000` (black).
+
+## Additional attributes
+
+In addition to the [common attributes](/en-US/docs/Web/HTML/Reference/Elements/input#attributes) shared by all {{HTMLElement("input")}} elements, `color` inputs support the following attributes.
+
+- `alpha`
+  - : A [boolean](/en-US/docs/Glossary/Boolean/HTML) attribute indicating whether the color's alpha component can be manipulated by the end user and does not have to be fully opaque.
+
+- `colorspace`
+  - : A string indicating the color space of the serialized CSS color. It also hints at the desired user interface for selecting a CSS color. Possible values:
+    - `"limited-srgb"`: The SRGB color space and limited to 8-bits per component, e.g., `#123456` or `color(srgb 0 1 0 / 0.5)`.
+    - `"display-p3"`: The Display P3 color space, e.g., `color(display-p3 1.84 -0.19 0.72 / 0.6)`
 
 ## Using color inputs
 
@@ -55,15 +71,22 @@ Inputs of type `color` are simple, due to the limited number of attributes they 
 
 ### Providing a default color
 
-You can update the example above to set a default value, so that the color picker is pre-filled with the default color and the color picker (if any) will also default to that color:
+You can update the example above to set a default value, so that the color picker is pre-filled with the default color and the color picker (if any) will also default to that color.
 
 ```html
 <input type="color" value="#ff0000" />
+<input
+  type="color"
+  id="body"
+  name="body"
+  value="oklab(50% 0.1 0.1 / 0.5)"
+  colorspace="display-p3"
+  alpha />
 ```
 
 {{EmbedLiveSample("Providing_a_default_color", 700, 30)}}
 
-If you don't specify a value, the default is `#000000`, which is black. The value must be in seven-character hexadecimal notation, meaning the "#" character followed by two digits each representing red, green, and blue, like this: `#rrggbb`. If you have colors that are in any other format (such as CSS color names or CSS color functions such as `rgb()` or `hsl()` ), you'll have to convert them to hexadecimal before setting the `value`.
+If you don't specify a value or if the browser doesn't support more complex CSS color value notations, the default color `#000000` is used, which is black.
 
 ### Tracking color changes
 
@@ -189,8 +212,7 @@ The final result looks like this:
     <tr>
       <td><strong><a href="#value">Value</a></strong></td>
       <td>
-        A 7-character string specifying a
-        {{cssxref("&lt;color&gt;")}} in lower-case hexadecimal notation
+        Any CSS {{cssxref("&lt;color&gt;")}} value in any notation.
       </td>
     </tr>
     <tr>
@@ -209,7 +231,12 @@ The final result looks like this:
     </tr>
     <tr>
       <td><strong>IDL attributes</strong></td>
-      <td><code>list</code> and <code>value</code></td>
+      <td>
+        <code><a href="/en-US/docs/Web/API/HTMLInputElement/alpha">alpha</a></code>,
+        <code><a href="/en-US/docs/Web/API/HTMLInputElement/colorspace">colorspace</a></code>,
+        <code><a href="/en-US/docs/Web/API/HTMLInputElement/list">list</a></code>, and
+        <code><a href="/en-US/docs/Web/API/HTMLInputElement/value">value</a></code>
+      </td>
     </tr>
     <tr>
       <td><strong>DOM interface</strong></td>
