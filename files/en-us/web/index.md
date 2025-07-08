@@ -1,5 +1,6 @@
 ---
 title: Web technology for developers
+short-title: Web
 slug: Web
 page-type: landing-page
 ---
