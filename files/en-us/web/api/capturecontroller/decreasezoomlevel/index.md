@@ -31,7 +31,7 @@ A {{jsxref("Promise")}} that fulfills with {{jsxref("undefined")}}.
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown when
+  - : Thrown when:
     - The captured display surface is already at its minimum supported zoom level.
     - An attempt is made to invoke `forwardWheel()` without transient activation, when permission to use it has not already been granted by the user.
 - `NotAllowedError` {{domxref("DOMException")}}
