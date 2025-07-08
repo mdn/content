@@ -12,7 +12,7 @@ browser-compat: api.CaptureController.decreaseZoomLevel
 
 The {{domxref("CaptureController")}} interface's **`decreaseZoomLevel()`** method decreases the captured display surface's zoom level by one increment.
 
-The `decreaseZoomLevel()` method must be invoked via [transient activation](/en-US/docs/Glossary/Transient_activation), in which case the user is asked for permission to zoom the captured page. If the relevant permission is already `"granted"`, transient activation and permission gathering is not needed.
+The `decreaseZoomLevel()` method must be invoked via [transient activation](/en-US/docs/Glossary/Transient_activation). In addition, the user is asked for permission to share tabs when screen capture is first attempted; if the user grants permission, this also includes permission to scroll and zoom tabs. If the relevant permission is already `"granted"`, permission gathering is not needed.
 
 ## Syntax
 
@@ -33,11 +33,11 @@ A {{jsxref("Promise")}} that fulfills with {{jsxref("undefined")}}.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown when:
     - The captured display surface is already at its minimum supported zoom level.
-    - An attempt is made to invoke `forwardWheel()` without transient activation, when permission to use it has not already been granted by the user.
+    - An attempt is made to invoke `decreaseZoomLevel()` without transient activation.
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown when:
-    - A {{HTTPHeader("Permissions-Policy/captured-surface-control", "captured-surface-control")}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) is set that does not permit the page to use the Captured Surface Control API.
-    - Permission to zoom the captured display surface is explicitly denied by the user.
+    - The page's {{HTTPHeader("Permissions-Policy/captured-surface-control", "captured-surface-control")}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) does not permit the page to use the Captured Surface Control API.
+    - Permission to capture the display surface is explicitly denied by the user.
 
 ## Examples
 

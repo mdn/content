@@ -12,7 +12,7 @@ browser-compat: api.CaptureController.forwardWheel
 
 The {{domxref("CaptureController")}} interface's **`forwardWheel()`** method starts forwarding {{domxref("Element.wheel_event", "wheel")}} events fired on the referenced element to the viewport of an associated captured display surface.
 
-The `forwardWheel()` method must be invoked via [transient activation](/en-US/docs/Glossary/Transient_activation), in which case the user is asked for permission to scroll the captured page. Specifically, the only events that can successfully invoke it are `click` and `input`. If the relevant permission is already `"granted"`, transient activation and permission gathering is not needed.
+The `forwardWheel()` method must be invoked via [transient activation](/en-US/docs/Glossary/Transient_activation). Specifically, the only events that can successfully invoke it are `click` and `input`. In addition, the user is asked for permission to share tabs when screen capture is first attempted; if the user grants permission, this also includes permission to scroll and zoom tabs. If the relevant permission is already `"granted"`, transient activation and permission gathering are not needed.
 
 ## Syntax
 
@@ -38,8 +38,8 @@ A {{jsxref("Promise")}} that fulfills with {{jsxref("undefined")}}.
     - An attempt is made to invoke `forwardWheel()` without transient activation, when permission to use it has not been granted by the user.
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown when:
-    - A {{HTTPHeader("Permissions-Policy/captured-surface-control", "captured-surface-control")}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) is set that does not permit the page to use the Captured Surface Control API.
-    - Permission to forward wheel events is explicitly denied by the user.
+    - The page's {{HTTPHeader("Permissions-Policy/captured-surface-control", "captured-surface-control")}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) does not permit the page to use the Captured Surface Control API.
+    - Permission to capture the display surface is explicitly denied by the user.
 - `NotSupportedError` {{domxref("DOMException")}}
   - : The surface type being captured is not a browser tab.
 

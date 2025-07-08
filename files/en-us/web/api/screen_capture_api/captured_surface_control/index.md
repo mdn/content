@@ -44,17 +44,21 @@ In this article we will walk through the code for a basic screen sharing app tha
 
 ## A note on permissions
 
-Usage of the Captured Surface Control API can be controlled via the {{HTTPHeader("Permissions-Policy")}} {{HTTPHeader("Permissions-Policy/captured-surface-control", "captured-surface-control")}} directive, or the equivalent {{HTMLElement("iframe")}} [`allow`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allow)) attribute value:
+A website can control access to the Captured Surface Control API using the {{HTTPHeader("Permissions-Policy")}} {{HTTPHeader("Permissions-Policy/captured-surface-control", "captured-surface-control")}} directive, or the equivalent {{HTMLElement("iframe")}} [`allow`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allow) attribute value:
 
 ```html
-<iframe allow="captured-surface-control" src="/some-other-document.html"
-  >…</iframe
->
+<iframe allow="captured-surface-control" src="/some-other-document.html">
+  ...
+</iframe>
 ```
 
 Specifically, the {{domxref("CaptureController.forwardWheel", "forwardWheel()")}}, {{domxref("CaptureController.increaseZoomLevel", "increaseZoomLevel()")}}, {{domxref("CaptureController.decreaseZoomLevel", "decreaseZoomLevel()")}}, and {{domxref("CaptureController.resetZoomLevel", "resetZoomLevel()")}} methods are controlled by this directive.
 
 The default allowlist for `captured-surface-control` is `self`, which lets any content within the same origin use Captured Surface Control.
+
+In addition, if permission is granted by the policy, the user must also grant permission. This can either be explicit permission, granted by responding to a prompt, or implicit permission granted by interacting with a control that calls one of the methods ([transient activation](/en-US/docs/Glossary/Transient_activation)) when user permission has not been explicitly denied.
+
+See also [Screen Capture API > Security considerations](/en-US/docs/Web/API/Screen_Capture_API#security_considerations).
 
 ## App HTML
 
