@@ -203,9 +203,6 @@ That's a problem because later on we will be making Mongoose database queries th
 
 In order for the framework to properly handle exceptions, they must be caught, and then forwarded as errors as shown in the previous section.
 
-> [!NOTE]
-> Express 5, which is currently in beta, is expected to handle JavaScript exceptions natively.
-
 Re-imagining the simple example from the previous section with `About.find().exec()` as a database query that returns a promise, we might write the route function inside a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block like this:
 
 ```js
@@ -217,24 +214,6 @@ exports.get("/about", async (req, res, next) => {
     return next(error);
   }
 });
-```
-
-That's quite a lot of boilerplate code to add to every function.
-Instead, for this tutorial we'll use the [express-async-handler](https://www.npmjs.com/package/express-async-handler) module.
-This defines a wrapper function that hides the `try...catch` block and the code to forward the error.
-The same example is now very simple, because we only need to write code for the case where we assume success:
-
-```js
-// Import the module
-const asyncHandler = require("express-async-handler");
-
-exports.get(
-  "/about",
-  asyncHandler(async (req, res, next) => {
-    const successfulResult = await About.find({}).exec();
-    res.render("about_view", { title: "About", list: successfulResult });
-  }),
-);
 ```
 
 ## Routes needed for the LocalLibrary
