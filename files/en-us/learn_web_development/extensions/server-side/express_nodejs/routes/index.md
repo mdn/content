@@ -45,7 +45,7 @@ As we've already created the models, the main things we'll need to create are:
 
 Ultimately we might have pages to show lists and detail information for books, genres, authors and bookinstances, along with pages to create, update, and delete records. That's a lot to document in one article. Therefore most of this article will concentrate on setting up our routes and controllers to return "dummy" content. We'll extend the controller methods in our subsequent articles to work with model data.
 
-The first section below provides a brief "primer" on how to use the Express [Router](https://expressjs.com/en/4x/api.html#router) middleware. We'll then use that knowledge in the following sections when we set up the LocalLibrary routes.
+The first section below provides a brief "primer" on how to use the Express [Router](https://expressjs.com/en/5x/api.html#router) middleware. We'll then use that knowledge in the following sections when we set up the LocalLibrary routes.
 
 ## Routes primer
 
@@ -115,7 +115,7 @@ The callback takes three arguments (usually named as shown: `req`, `res`, `next`
 >
 > The router function above takes a single callback, but you can specify as many callback arguments as you want, or an array of callback functions. Each function is part of the middleware chain, and will be called in the order it is added to the chain (unless a preceding function completes the request).
 
-The callback function here calls [`send()`](https://expressjs.com/en/4x/api.html#res.send) on the response to return the string "About this wiki" when we receive a GET request with the path (`/about`). There are a [number of other response methods](https://expressjs.com/en/guide/routing.html#response-methods) for ending the request/response cycle. For example, you could call [`res.json()`](https://expressjs.com/en/4x/api.html#res.json) to send a JSON response or [`res.sendFile()`](https://expressjs.com/en/4x/api.html#res.sendFile) to send a file. The response method that we'll be using most often as we build up the library is [`render()`](https://expressjs.com/en/4x/api.html#res.render), which creates and returns HTML files using templates and data—we'll talk a lot more about that in a later article!
+The callback function here calls [`send()`](https://expressjs.com/en/5x/api.html#res.send) on the response to return the string "About this wiki" when we receive a GET request with the path (`/about`). There are a [number of other response methods](https://expressjs.com/en/guide/routing.html#response-methods) for ending the request/response cycle. For example, you could call [`res.json()`](https://expressjs.com/en/5x/api.html#res.json) to send a JSON response or [`res.sendFile()`](https://expressjs.com/en/5x/api.html#res.sendFile) to send a file. The response method that we'll be using most often as we build up the library is [`render()`](https://expressjs.com/en/5x/api.html#res.render), which creates and returns HTML files using templates and data—we'll talk a lot more about that in a later article!
 
 ### HTTP verbs
 
@@ -667,7 +667,7 @@ router.get("/", (req, res) => {
 ```
 
 > [!NOTE]
-> This is our first use of the [redirect()](https://expressjs.com/en/4x/api.html#res.redirect) response method. This redirects to the specified page, by default sending HTTP status code "302 Found". You can change the status code returned if needed, and supply either absolute or relative paths.
+> This is our first use of the [redirect()](https://expressjs.com/en/5x/api.html#res.redirect) response method. This redirects to the specified page, by default sending HTTP status code "302 Found". You can change the status code returned if needed, and supply either absolute or relative paths.
 
 ### Update app.js
 

@@ -96,7 +96,7 @@ Because the queries for document counts are independent of each other we use [`P
 The method returns a new promise that we [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) for completion (execution pauses within _this function_ at `await`).
 When all the queries complete, the promise returned by `all()` fulfills, continuing execution of the route handler function, and populating the array with the results of the database queries.
 
-We then call [`res.render()`](https://expressjs.com/en/4x/api.html#res.render), specifying a view (template) named '**index**' and objects mapping the results of the database queries to the view template.
+We then call [`res.render()`](https://expressjs.com/en/5x/api.html#res.render), specifying a view (template) named '**index**' and objects mapping the results of the database queries to the view template.
 The data is supplied as key-value pairs, and can be accessed in the template using the key.
 
 > [!NOTE]
