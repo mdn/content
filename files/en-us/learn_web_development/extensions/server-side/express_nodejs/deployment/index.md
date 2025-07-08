@@ -459,20 +459,12 @@ git checkout -b my_changes # Create a new branch
 
 ## Example: Hosting on Railway
 
-<!--
-
-- Glitch has a [free starter plan](https://glitch.com/pricing) that is _really_ free, albeit with some limitations.
-  The fact that it is affordable for all developers is really important to MDN!
--->
-
 This section provides a practical demonstration of how to install _LocalLibrary_ on [Railway](https://railway.com/).
 
 > [!NOTE]
-> MDN has migrated this project to the free tier of a number of hosting services that were subsequently withdrawn (Heroku, Railway, Glitch).
-> In order to reduce the maintenance cost, we've decided to settle on Railway, which has an inexpensive hobby tier.
->
-> If you want to find and use a free service instead you will still find the instructions below useful.
-> Most services have a similar deployment approach, and documentation to help you migrate.
+> MDN has migrated this project from a number of hosting services that no longer offer free tiers.
+> We've decided to use Railway for the current hosting option, which has an inexpensive hobby tier.
+> Most services have similar deployment methods, so the instructions below should help you publish your project on the platform of your choice.
 
 ### Why Railway?
 
