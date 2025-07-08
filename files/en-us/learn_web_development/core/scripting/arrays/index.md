@@ -272,201 +272,110 @@ Often you'll be presented with some raw data contained in a big long string, and
    dogNames.toString(); // Rocket,Flash,Bella,Slugger
    ```
 
-## Active learning: Printing those products
+## Printing those products
 
-Let's return to the example we described earlier — printing out product names and prices on an invoice, then totaling the prices and printing them at the bottom. In the editable example below there are comments containing numbers — each of these marks a place where you have to add something to the code. They are as follows:
+It's your turn. In this exercise you'll return to the example we described earlier — printing out product names and prices on an invoice, then totaling the prices and printing them at the bottom. Follow the steps below to implement the logic to do so.
 
-1. Below the `// number 1` comment are a number of strings, each one containing a product name and price separated by a colon. We'd like you to turn this into an array and store it in an array called `products`.
-2. Below the `// number 2` comment, start a `for...of()` loop to go through every item in the `products` array.
-3. Below the `// number 3` comment we want you to write a line of code that splits the current array item (`name:price`) into two separate items, one containing just the name and one containing just the price. If you are not sure how to do this, consult the [Useful string methods](/en-US/docs/Learn_web_development/Core/Scripting/Useful_string_methods) article for some help, or even better, look at the [Converting between strings and arrays](#converting_between_strings_and_arrays) section of this article.
-4. As part of the above line of code, you'll also want to convert the price from a string to a number. If you can't remember how to do this, check out the [first strings article](/en-US/docs/Learn_web_development/Core/Scripting/Strings#numbers_vs._strings).
-5. There is a variable called `total` that is created and given a value of 0 at the top of the code. Inside the loop (below `// number 4`) we want you to add a line that adds the current item price to that total in each iteration of the loop, so that at the end of the code the correct total is printed onto the invoice. You might need an [assignment operator](/en-US/docs/Learn_web_development/Core/Scripting/Math#assignment_operators) to do this.
-6. We want you to change the line just below `// number 5` so that the `itemText` variable is made equal to "current item name — $current item price", for example "Shoes — $23.99" in each case, so the correct information for each item is printed on the invoice. This is just simple string concatenation, which should be familiar to you.
-7. Finally, below the `// number 6` comment, you'll need to add a `}` to mark the end of the `for...of()` loop.
+1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
+2. Below the `// number 1` comment are a number of strings, each one containing a product name and price separated by a colon. We'd like you to turn these into an array called `products`.
+3. Below the `// number 2` comment, start a `for...of()` loop to go through every item in the `products` array.
+4. Below the `// number 3` comment we want you to write a line of code that splits the current array item (`name:price`) into two separate items, one containing just the name and one containing just the price. If you are not sure how to do this, consult the [Useful string methods](/en-US/docs/Learn_web_development/Core/Scripting/Useful_string_methods) article for some help, or even better, look at the [Converting between strings and arrays](#converting_between_strings_and_arrays) section of this article.
+5. As part of the above line of code, you'll also want to convert the price from a string to a number. If you can't remember how to do this, check out the [first strings article](/en-US/docs/Learn_web_development/Core/Scripting/Strings#numbers_vs._strings).
+6. There is a variable called `total` that is created and given a value of `0` at the top of the code. Inside the loop (below `// number 4`) we want you to add a line that adds the current item price to that total in each iteration of the loop, so that at the end of the code the correct total is printed onto the invoice. You might need an [assignment operator](/en-US/docs/Learn_web_development/Core/Scripting/Math#assignment_operators) to do this.
+7. We want you to change the line just below `// number 5` so that the `itemText` variable is made equal to "current item name — $current item price", for example "Shoes — $23.99" in each case, so the correct information for each item is printed on the invoice. This is just simple string concatenation, which should be familiar to you.
+8. Finally, below the `// number 6` comment, you'll need to add a `}` to mark the end of the `for...of()` loop.
 
-```html hidden
+If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+
+```html hidden live-sample___arrays-1
 <h2>Live output</h2>
 
-<div class="output" style="min-height: 150px;">
+<div class="output">
   <ul></ul>
 
   <p></p>
 </div>
+```
 
-<h2>Editable code</h2>
+```css hidden live-sample___arrays-1
+.output {
+  min-height: 100px;
+}
+```
 
-<p class="a11y-label">
-  Press Esc to move focus away from the code area (Tab inserts a tab character).
-</p>
-
-<textarea id="code" class="playable-code" style="height: 410px;width: 95%">
-const list = document.querySelector('.output ul');
-const totalBox = document.querySelector('.output p');
+```js live-sample___arrays-1
+const list = document.querySelector(".output ul");
+const totalBox = document.querySelector(".output p");
 let total = 0;
 list.textContent = "";
 totalBox.textContent = "";
 // number 1
-                'Underpants:6.99'
-                'Socks:5.99'
-                'T-shirt:14.99'
-                'Trousers:31.99'
-                'Shoes:23.99';
+("Underpants:6.99");
+("Socks:5.99");
+("T-shirt:14.99");
+("Trousers:31.99");
+("Shoes:23.99");
 
 // number 2
 
-  // number 3
+// number 3
 
-  // number 4
+// number 4
 
-  // number 5
-  let itemText = 0;
+// number 5
+let itemText = 0;
 
-  const listItem = document.createElement('li');
-  listItem.textContent = itemText;
-  list.appendChild(listItem);
+const listItem = document.createElement("li");
+listItem.textContent = itemText;
+list.appendChild(listItem);
 
 // number 6
 
-totalBox.textContent = 'Total: $' + total.toFixed(2);
-</textarea>
-
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
-</div>
+totalBox.textContent = "Total: $" + total.toFixed(2);
 ```
 
-```js hidden
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const solution = document.getElementById("solution");
-let code = textarea.value;
-let userEntry = textarea.value;
+{{ EmbedLiveSample("arrays-1", "100%", 200) }}
 
-function updateCode() {
-  eval(textarea.value);
-}
+<details>
+<summary>Click here to show the solution</summary>
 
-reset.addEventListener("click", () => {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = jsSolution;
-  solution.value = "Show solution";
-  updateCode();
-});
+Your finished JavaScript should look like this:
 
-solution.addEventListener("click", () => {
-  if (solution.value === "Show solution") {
-    textarea.value = solutionEntry;
-    solution.value = "Hide solution";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "Show solution";
-  }
-  updateCode();
-});
-
-const jsSolution = `const list = document.querySelector('.output ul');
-const totalBox = document.querySelector('.output p');
+```js
+const list = document.querySelector(".output ul");
+const totalBox = document.querySelector(".output p");
 let total = 0;
 list.textContent = "";
 totalBox.textContent = "";
 
 const products = [
-  'Underpants:6.99',
-  'Socks:5.99',
-  'T-shirt:14.99',
-  'Trousers:31.99',
-  'Shoes:23.99',
+  "Underpants:6.99",
+  "Socks:5.99",
+  "T-shirt:14.99",
+  "Trousers:31.99",
+  "Shoes:23.99",
 ];
 
 for (const product of products) {
-  const subArray = product.split(':');
+  const subArray = product.split(":");
   const name = subArray[0];
   const price = Number(subArray[1]);
   total += price;
-  const itemText = \`\${name} — $\${price}\`;
+  const itemText = `${name} — $${price}`;
 
-  const listItem = document.createElement('li');
+  const listItem = document.createElement("li");
   listItem.textContent = itemText;
   list.appendChild(listItem);
 }
 
-totalBox.textContent = \`Total: $\${total.toFixed(2)}\`;`;
-let solutionEntry = jsSolution;
-
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
-
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
-
-textarea.onkeydown = (event) => {
-  if (event.code === "Tab") {
-    event.preventDefault();
-    insertAtCaret("\t");
-  }
-  if (event.code === "Escape") {
-    textarea.blur();
-  }
-};
-
-function insertAtCaret(text) {
-  const scrollPos = textarea.scrollTop;
-  let caretPos = textarea.selectionStart;
-  const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
-  );
-
-  textarea.value = front + text + back;
-  caretPos += text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
-}
-
-// Update the saved userCode every time the user updates the text area code
-
-textarea.onkeyup = () => {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "Show solution") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
-  }
-  updateCode();
-};
+totalBox.textContent = `Total: $${total.toFixed(2)}`;
 ```
 
-```css hidden
-html {
-  font-family: sans-serif;
-}
+</details>
 
-h2 {
-  font-size: 16px;
-}
+## Storing the previous 5 searches
 
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
-  width: 98%;
-}
-
-body {
-  margin: 10px;
-  background-color: #f5f9fa;
-}
-```
-
-{{ EmbedLiveSample('Active_learning_Printing_those_products', '100%', 750) }}
-
-## Active learning: Top 5 searches
+Let's get you to complete another exercise, to keep the practice flowing.
 
 A good use for array methods like {{jsxref("Array.prototype.push()","push()")}} and {{jsxref("Array.prototype.pop()","pop()")}} is when you are maintaining a record of currently active items in a web app. In an animated scene for example, you might have an array of objects representing the background graphics currently displayed, and you might only want 50 displayed at once, for performance or clutter reasons. As new objects are created and added to the array, older ones can be deleted from the array to maintain the desired number.
 
@@ -475,38 +384,43 @@ In this example we're going to show a much simpler use — here we're giving you
 > [!NOTE]
 > In a real search app, you'd probably be able to click the previous search terms to return to previous searches, and it would display actual search results! We are just keeping it simple for now.
 
-To complete the app, we need you to:
+To complete the example, we need you to:
 
-1. Add a line below the `// number 1` comment that adds the current value entered into the search input to the start of the array. This can be retrieved using `searchInput.value`.
-2. Add a line below the `// number 2` comment that removes the value currently at the end of the array.
+1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
+2. Add a line below the `// number 1` comment that adds the current value entered into the search input to the start of the array. This can be retrieved using `searchInput.value`.
+3. Add a line below the `// number 2` comment that removes the value currently at the end of the array.
 
-```html hidden
-<h2>Live output</h2>
-<div class="output" style="min-height: 150px;">
-  <input type="text" /><button>Search</button>
+If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+
+```html hidden live-sample___arrays-2
+<div class="output">
+  <label for="search-box">Enter a search term: </label>
+  <input id="search-box" type="search" />
+  <button>Search</button>
 
   <ul></ul>
 </div>
+```
 
-<h2>Editable code</h2>
+```css hidden live-sample___arrays-2
+.output {
+  margin: 1rem;
+}
+```
 
-<p class="a11y-label">
-  Press Esc to move focus away from the code area (Tab inserts a tab character).
-</p>
-
-<textarea id="code" class="playable-code" style="height: 370px; width: 95%">
-const list = document.querySelector('.output ul');
-const searchInput = document.querySelector('.output input');
-const searchBtn = document.querySelector('.output button');
+```js live-sample___arrays-2
+const list = document.querySelector(".output ul");
+const searchInput = document.querySelector(".output input");
+const searchBtn = document.querySelector(".output button");
 
 list.textContent = "";
 
 const myHistory = [];
 const MAX_HISTORY = 5;
 
-searchBtn.onclick = () => {
+searchBtn.addEventListener("click", () => {
   // we will only allow a term to be entered if the search input isn't empty
-  if (searchInput.value !== '') {
+  if (searchInput.value !== "") {
     // number 1
 
     // empty the list so that we don't display duplicate entries
@@ -515,7 +429,7 @@ searchBtn.onclick = () => {
 
     // loop through the array, and display all the search terms in the list
     for (const itemText of myHistory) {
-      const listItem = document.createElement('li');
+      const listItem = document.createElement("li");
       listItem.textContent = itemText;
       list.appendChild(listItem);
     }
@@ -526,82 +440,32 @@ searchBtn.onclick = () => {
     }
 
     // empty the search input and focus it, ready for the next term to be entered
-    searchInput.value = '';
+    searchInput.value = "";
     searchInput.focus();
   }
-}
-</textarea>
-
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
-</div>
+});
 ```
 
-```css hidden
-html {
-  font-family: sans-serif;
-}
+{{ EmbedLiveSample("arrays-2", "100%", 200) }}
 
-h2 {
-  font-size: 16px;
-}
+<details>
+<summary>Click here to show the solution</summary>
 
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
-  width: 98%;
-}
+Your finished JavaScript should look like this:
 
-body {
-  margin: 10px;
-  background: #f5f9fa;
-}
-```
-
-```js hidden
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const solution = document.getElementById("solution");
-let code = textarea.value;
-let userEntry = textarea.value;
-
-function updateCode() {
-  eval(textarea.value);
-}
-
-reset.addEventListener("click", () => {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = jsSolution;
-  solution.value = "Show solution";
-  updateCode();
-});
-
-solution.addEventListener("click", () => {
-  if (solution.value === "Show solution") {
-    textarea.value = solutionEntry;
-    solution.value = "Hide solution";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "Show solution";
-  }
-  updateCode();
-});
-
-const jsSolution = `const list = document.querySelector('.output ul');
-const searchInput = document.querySelector('.output input');
-const searchBtn = document.querySelector('.output button');
+```js
+const list = document.querySelector(".output ul");
+const searchInput = document.querySelector(".output input");
+const searchBtn = document.querySelector(".output button");
 
 list.textContent = "";
 
 const myHistory = [];
 const MAX_HISTORY = 5;
 
-searchBtn.onclick = () => {
+searchBtn.addEventListener("click", () => {
   // we will only allow a term to be entered if the search input isn't empty
-  if (searchInput.value !== '') {
+  if (searchInput.value !== "") {
     myHistory.unshift(searchInput.value);
 
     // empty the list so that we don't display duplicate entries
@@ -610,7 +474,7 @@ searchBtn.onclick = () => {
 
     // loop through the array, and display all the search terms in the list
     for (const itemText of myHistory) {
-      const listItem = document.createElement('li');
+      const listItem = document.createElement("li");
       listItem.textContent = itemText;
       list.appendChild(listItem);
     }
@@ -621,60 +485,13 @@ searchBtn.onclick = () => {
     }
 
     // empty the search input and focus it, ready for the next term to be entered
-    searchInput.value = '';
+    searchInput.value = "";
     searchInput.focus();
   }
-}`;
-let solutionEntry = jsSolution;
-
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
-
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
-
-textarea.onkeydown = (event) => {
-  if (event.code === "Tab") {
-    event.preventDefault();
-    insertAtCaret("\t");
-  }
-  if (event.code === "Escape") {
-    textarea.blur();
-  }
-};
-
-function insertAtCaret(text) {
-  const scrollPos = textarea.scrollTop;
-  let caretPos = textarea.selectionStart;
-  const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
-  );
-
-  textarea.value = front + text + back;
-  caretPos += text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
-}
-
-// Update the saved userCode every time the user updates the text area code
-
-textarea.onkeyup = () => {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "Show solution") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
-  }
-  updateCode();
-};
+});
 ```
 
-{{ EmbedLiveSample('Active_learning_Top_5_searches', '100%', 700) }}
+</details>
 
 ## Test your skills!
 
