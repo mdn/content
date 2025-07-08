@@ -3,9 +3,8 @@ title: 308 Permanent Redirect
 slug: Web/HTTP/Reference/Status/308
 page-type: http-status-code
 browser-compat: http.status.308
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`308 Permanent Redirect`** [redirection response](/en-US/docs/Web/HTTP/Reference/Status#redirection_messages) status code indicates that the requested resource has been permanently moved to the URL given by the {{HTTPHeader("Location")}} header.
 

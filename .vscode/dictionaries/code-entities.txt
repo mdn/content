@@ -219,7 +219,6 @@ fgets
 filecheck
 FILLMODE_FILL_WINDOW
 finishedtransferringdata
-firefoxsidebar
 fiuv
 font.mathfont-family
 fontconfig
@@ -270,7 +269,6 @@ htdocs
 htmlsidebar
 htmlspecialchars
 HTMLWBRElement
-httpsidebar
 hvline
 iarc_rating_id
 icontains
@@ -649,6 +647,7 @@ scalethumbstart
 scalethumbtick
 scanf
 screenschange
+scrimtitle
 scrollsnapchange
 scrollsnapchanging
 scts

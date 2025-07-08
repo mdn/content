@@ -4,9 +4,8 @@ short-title: img-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/img-src
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.img-src
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} **`img-src`** directive specifies valid sources of images and favicons.
 

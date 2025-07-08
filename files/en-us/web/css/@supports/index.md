@@ -282,7 +282,9 @@ The following example applies the CSS style if the browser supports the `COLRv1`
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Spice");
 
 @supports font-tech(color-COLRv1) {
-  font-family: "Bungee Spice";
+  p {
+    font-family: "Bungee Spice", fantasy;
+  }
 }
 ```
 
@@ -305,8 +307,10 @@ The following example applies the CSS style if the browser supports the `woff2` 
 
 ```css
 @supports font-format(woff2) {
-  font-family: "Open Sans";
-  src: url("open-sans.woff2") format("woff2");
+  p {
+    font-family: "Open Sans", sans-serif;
+    src: url("open-sans.woff2") format("woff2");
+  }
 }
 ```
 

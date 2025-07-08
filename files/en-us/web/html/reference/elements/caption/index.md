@@ -77,14 +77,18 @@ tr:nth-child(odd) td {
 }
 
 .heman {
-  font: 1.4rem molot;
+  font:
+    1.4rem molot,
+    sans-serif;
   text-shadow:
     1px 1px 1px #fff,
     2px 2px 1px #000;
 }
 
 .skeletor {
-  font: 1.7rem rapscallion;
+  font:
+    1.7rem rapscallion,
+    fantasy;
   letter-spacing: 3px;
   text-shadow:
     1px 1px 0 #fff,
