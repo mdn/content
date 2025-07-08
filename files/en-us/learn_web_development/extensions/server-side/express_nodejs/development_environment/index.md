@@ -54,7 +54,7 @@ There are many [releases of Node](https://nodejs.org/en/blog/release/) — newer
 
 Generally you should use the most recent _LTS (long-term supported)_ release as this will be more stable than the "current" release while still having relatively recent features (and is still being actively maintained). You should use the _Current_ release if you need a feature that is not present in the LTS version.
 
-For _Express_ you should use the LTS release of the latest version of Node.
+For _Express_ you should use the most recent LTS release of Node.
 
 ### What about databases and other dependencies?
 
