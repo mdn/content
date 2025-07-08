@@ -28,7 +28,7 @@ In the past, the {{ domxref("Navigator.language", "window.navigator.language") }
 
 ## DOM changes
 
-The behaviors of {{domxref("Window.setTimeout()")}}, {{domxref("WorkerGlobalScope.setTimeout()")}}, {{domxref("Window.setInterval()")}} and {{domxref("WorkerGlobalScope.setInterval()")}} have changed; the minimum allowed time has changed, and [varies depending on the situation](/en-US/docs/Web/API/Window/setTimeout#minimum_delay_and_timeout_nesting). In addition, timeouts and intervals are clamped to one per second in inactive tabs (that is, tabs the user isn't currently looking at).
+The behaviors of {{domxref("Window.setTimeout()")}}, {{domxref("WorkerGlobalScope.setTimeout()")}}, {{domxref("Window.setInterval()")}} and {{domxref("WorkerGlobalScope.setInterval()")}} have changed; the minimum allowed time has changed, and [varies depending on the situation](/en-US/docs/Web/API/Window/setTimeout#reasons_for_delays_longer_than_specified). In addition, timeouts and intervals are clamped to one per second in inactive tabs (that is, tabs the user isn't currently looking at).
 
 ## JavaScript changes
 
