@@ -180,7 +180,7 @@ ul {
 }
 
 li {
-  animation-name: fade;
+  animation-name: fade-in;
   animation-duration: 1s;
   animation-iteration-count: 1;
   animation-timing-function: linear;
@@ -188,7 +188,7 @@ li {
   animation-delay: calc(1s * sibling-index());
 }
 
-@keyframes fade {
+@keyframes fade-in {
   from {
     opacity: 0;
   }
