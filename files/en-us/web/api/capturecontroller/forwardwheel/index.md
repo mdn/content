@@ -35,7 +35,7 @@ A {{jsxref("Promise")}} that fulfills with {{jsxref("undefined")}}.
   - : Thrown when:
     - The capturing {{domxref("MediaStream")}} returned by the originating {{domxref("MediaDevices.getDisplayMedia()")}} call is no longer capturing, for example because the associated {{domxref("MediaStreamTrack")}} objects have had {{domxref("MediaStreamTrack.stop", "stop()")}} called on them.
     - The application is capturing itself.
-    - An attempt is made to invoke `forwardWheel()` without transient activation, when permission to use it has not already been granted by the user.
+    - An attempt is made to invoke `forwardWheel()` without transient activation, when permission to use it has not been granted by the user.
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown when:
     - A {{HTTPHeader("Permissions-Policy/captured-surface-control", "captured-surface-control")}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) is set that does not permit the page to use the Captured Surface Control API.
