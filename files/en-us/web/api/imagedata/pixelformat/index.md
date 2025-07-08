@@ -3,10 +3,12 @@ title: "ImageData: pixelFormat property"
 short-title: pixelFormat
 slug: Web/API/ImageData/pixelFormat
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.ImageData.pixelFormat
 ---
 
-{{APIRef("Canvas API")}}{{AvailableInWorkers}}
+{{APIRef("Canvas API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The read-only **`ImageData.pixelFormat`** property is a string indicating the pixel format of the image data.
 

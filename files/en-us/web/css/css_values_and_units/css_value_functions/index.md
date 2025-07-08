@@ -347,6 +347,15 @@ The anchor positioning functions are used when positioning and sizing anchor-pos
 - {{cssxref("anchor-size", "anchor-size()")}}
   - : Returns a length relative to the size of the associated anchor element.
 
+## Tree counting functions
+
+The following functions return an integer value based on the DOM tree, rather than the flat tree like most CSS values do:
+
+- {{cssxref("sibling-index", "sibling-index()")}}
+  - : Returns an integer reflecting the position of the selected element among its siblings.
+- {{cssxref("sibling-count", "sibling-count()")}}
+  - : Returns an integer reflecting the total number of siblings, including the selected element.
+
 ## See also
 
 - [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module
