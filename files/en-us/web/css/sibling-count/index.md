@@ -2,10 +2,12 @@
 title: sibling-count()
 slug: Web/CSS/sibling-count
 page-type: css-function
+status:
+  - experimental
 browser-compat: css.types.sibling-count
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`sibling-count()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) returns an integer representing the total number of direct child DOM elements of the parent element on which it is used.
 
