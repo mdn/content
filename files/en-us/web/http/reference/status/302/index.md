@@ -3,9 +3,8 @@ title: 302 Found
 slug: Web/HTTP/Reference/Status/302
 page-type: http-status-code
 spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.302
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`302 Found`** [redirection response](/en-US/docs/Web/HTTP/Reference/Status#redirection_messages) status code indicates that the requested resource has been temporarily moved to the URL in the {{HTTPHeader("Location")}} header.
 

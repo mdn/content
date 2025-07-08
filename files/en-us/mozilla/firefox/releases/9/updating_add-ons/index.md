@@ -49,7 +49,7 @@ The `geo.wifi.*` preferences no longer have default values, although they're hon
 ## DOM changes
 
 - The long-obsolete method `Navigator.taintEnabled()` has been removed. This hasn't done anything useful in a very long time, but was often used in browser detection scripts, since it was Netscape-specific. Calling this method throws an exception starting in Firefox 9.
-- Event handlers are now implemented as standard IDL interfaces. For most cases, this won't affect you, but [there are exceptions](/en-US/docs/Web/Events/Event_handlers#event_handler_changes_in_firefox_9).
+- Event handlers are now implemented as standard IDL interfaces. For most cases, this won't affect you, unless you are setting or accessing event handlers on DOM prototype objects. Now you can't, for example, change `Window.prototype.onload`.
 
 ## Other changes that may affect binary compatibility
 

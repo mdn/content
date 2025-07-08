@@ -15,7 +15,7 @@ This article provides information about the changes in Firefox 109 that will aff
 
 ### CSS
 
-- The [`<system-color>`](/en-US/docs/Web/CSS/system-color) CSS data type now supports the values [`Mark`](/en-US/docs/Web/CSS/system-color#mark), [`MarkText`](/en-US/docs/Web/CSS/system-color#marktext), and [`ButtonBorder`](/en-US/docs/Web/CSS/system-color#buttonborder) ([Firefox bug 1638052](https://bugzil.la/1638052)).
+- The [`<system-color>`](/en-US/docs/Web/CSS/system-color) CSS data type now supports the values `Mark`, `MarkText`, and `ButtonBorder` ([Firefox bug 1638052](https://bugzil.la/1638052)).
 
 ### JavaScript
 

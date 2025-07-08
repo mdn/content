@@ -162,7 +162,9 @@ td {
     sans-serif;
 }
 #anek-malayalam td {
-  font: 90px "Anek Malayalam";
+  font:
+    90px "Anek Malayalam",
+    sans-serif;
 }
 #inconsolata td:nth-child(2),
 #anek-malayalam td:nth-child(2) {

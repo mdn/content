@@ -190,7 +190,7 @@ div {
 }
 
 p {
-  font-family: Futura;
+  font-family: Futura, sans-serif;
   font-size: 50px;
 }
 

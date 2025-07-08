@@ -3,9 +3,8 @@ title: delete
 slug: Web/JavaScript/Reference/Operators/delete
 page-type: javascript-operator
 browser-compat: javascript.operators.delete
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **`delete`** operator removes a property from an object. If the property's value is an object and there are no more references to the object, the object held by that property is eventually released automatically.
 

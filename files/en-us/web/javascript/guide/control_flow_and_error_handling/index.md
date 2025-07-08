@@ -2,9 +2,9 @@
 title: Control flow and error handling
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
 page-type: guide
+sidebar: jssidebar
 ---
 
-{{jsSidebar("JavaScript Guide")}}
 {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}
 
 JavaScript supports a compact set of statements, specifically

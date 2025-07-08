@@ -44,7 +44,7 @@ _No changes._
 
 #### Removals
 
-- All [XUL `display` values](/en-US/docs/Web/CSS/display#xul_values) with the exception of `-moz-box` and `-moz-inline-box` have been removed from non-XUL documents in [Firefox bug 1288572](https://bugzil.la/1288572).
+- All XUL `display` values with the exception of `-moz-box` and `-moz-inline-box` have been removed from non-XUL documents in [Firefox bug 1288572](https://bugzil.la/1288572).
 
 ### SVG
 

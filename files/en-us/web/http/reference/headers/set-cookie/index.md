@@ -4,9 +4,8 @@ short-title: Set-Cookie
 slug: Web/HTTP/Reference/Headers/Set-Cookie
 page-type: http-header
 browser-compat: http.headers.Set-Cookie
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Set-Cookie`** {{Glossary("response header")}} is used to send a cookie from the server to the user agent, so that the user agent can send it back to the server later.
 To send multiple cookies, multiple `Set-Cookie` headers should be sent in the same response.
