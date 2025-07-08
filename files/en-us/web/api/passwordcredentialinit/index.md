@@ -45,8 +45,8 @@ This example constructs an object literal to initialize a password credential.
 
 ```js
 const credInit = {
-  id: "serp1234",  // "username" in a typical username/password pair
-  name: "Serpentina",  // display name for credential
+  id: "serp1234", // "username" in a typical username/password pair
+  name: "Serpentina", // display name for credential
   origin: "https://example.org",
   password: "the last visible dog",
 };
