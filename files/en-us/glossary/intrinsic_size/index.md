@@ -58,10 +58,11 @@ p {
 
 ## See also
 
+- Related glossary terms:
+  - {{glossary("Extrinsic size")}}
 - CSS {{cssxref("min-content")}}, {{cssxref("max-content")}}, and {{cssxref("fit-content")}} sizing keywords
 - {{cssxref("interpolate-size")}}
 - {{cssxref("aspect-ratio")}}
 - {{cssxref("calc-size()")}}
-- Related glossary term: {{glossary("Extrinsic size")}}
 - [CSS box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) module
 - [CSS Box Sizing Module Level 3](https://drafts.csswg.org/css-sizing-3/#intrinsic-sizes) specification
