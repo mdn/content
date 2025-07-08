@@ -2,9 +2,8 @@
 title: "SyntaxError: invalid range in character class"
 slug: Web/JavaScript/Reference/Errors/Regex_invalid_range_in_character_class
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "invalid range in character class" occurs when a [character class](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class) in a regular expression uses a range, but the start of the range is greater than the end.
 
