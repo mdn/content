@@ -22,7 +22,6 @@ inspect(inspector)
 
 - `inspector` {{optional_inline}}
   - : An object or a callback function. If the provided `inspector` is an object, it can contain the following properties:
-
     - `next` {{optional_inline}}
       - : A function that is called whenever the [`Observable.subscribe()` `next()`](/en-US/docs/Web/API/Observable/subscribe#next) function is run, in other words, when a value is sent through the stream.
     - `error` {{optional_inline}}
