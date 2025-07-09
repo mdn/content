@@ -29,7 +29,7 @@ This task gives you some basic array practice:
 
 1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
 2. Create an array of three items, and store it in a variable called `myArray`. The items can be anything you want — how about your favorite foods or bands?
-3. Next, modify the first two items in the array using simple bracket notation and assignment.
+3. Next, modify the first two items in the array using bracket notation and assignment.
 4. Finally, add a new item to the beginning of the array.
 
 > [!CALLOUT]
