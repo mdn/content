@@ -286,7 +286,7 @@ So, in this example, we are setting a random background color on the button, not
 
 > [!NOTE]
 > You can use any name you like for the event object — you just need to choose a name that you can reference inside the event handler function.
-> `e`/`evt`/`event` are most commonly used by developers because they are short and easy to remember.
+> `e`, `evt`, and `event` are commonly used by developers because they are short and easy to remember.
 > It's always good to be consistent — with yourself, and with others if possible.
 
 ### Extra properties of event objects
