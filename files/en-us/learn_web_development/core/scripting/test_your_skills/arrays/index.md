@@ -65,7 +65,6 @@ p {
 const section = document.querySelector("section");
 const para1 = document.createElement("p");
 para1.textContent = `Array: ${myArray}`;
-
 section.appendChild(para1);
 ```
 
@@ -85,12 +84,7 @@ myArray[1] = "pigs";
 myArray.unshift("crocodiles");
 
 // Don't edit the code below here!
-
-const section = document.querySelector("section");
-const para1 = document.createElement("p");
-para1.textContent = `Array: ${myArray}`;
-
-section.appendChild(para1);
+// ...
 ```
 
 </details>
@@ -120,16 +114,12 @@ const myString = "Ryu+Ken+Chun-Li+Cammy+Guile+Sakura+Sagat+Juri";
 // Don't edit the code below here!
 
 const section = document.querySelector("section");
-
 const para1 = document.createElement("p");
 para1.textContent = `Array: ${myArray}`;
-
 const para2 = document.createElement("p");
 para2.textContent = `The length of the array is ${arrayLength}.`;
-
 const para3 = document.createElement("p");
 para3.textContent = `The last item in the array is "${lastItem}".`;
-
 section.appendChild(para1);
 section.appendChild(para2);
 section.appendChild(para3);
@@ -152,21 +142,7 @@ let arrayLength = myArray.length;
 let lastItem = myArray[arrayLength - 1];
 
 // Don't edit the code below here!
-
-const section = document.querySelector("section");
-
-const para1 = document.createElement("p");
-para1.textContent = `Array: ${myArray}`;
-
-const para2 = document.createElement("p");
-para2.textContent = `The length of the array is ${arrayLength}.`;
-
-const para3 = document.createElement("p");
-para3.textContent = `The last item in the array is "${lastItem}".`;
-
-section.appendChild(para1);
-section.appendChild(para2);
-section.appendChild(para3);
+// ...
 ```
 
 </details>
@@ -204,10 +180,8 @@ let myArray = [
 // Don't edit the code below here!
 
 const section = document.querySelector("section");
-
 let para1 = document.createElement("p");
 para1.textContent = myString;
-
 section.appendChild(para1);
 ```
 
@@ -243,13 +217,7 @@ myArray.forEach(function (element, index) {
 let myString = myArray.join(" - ");
 
 // Don't edit the code below here!
-
-const section = document.querySelector("section");
-
-let para1 = document.createElement("p");
-para1.textContent = myString;
-
-section.appendChild(para1);
+// ...
 ```
 
 </details>
@@ -280,10 +248,8 @@ const birds = ["Parrots", "Falcons", "Eagles", "Emus", "Caracaras", "Egrets"];
 // Don't edit the code below here!
 
 const section = document.querySelector("section");
-
 const para1 = document.createElement("p");
 para1.textContent = eBirds;
-
 section.appendChild(para1);
 ```
 
@@ -306,13 +272,7 @@ function startsWithE(bird) {
 const eBirds = birds.filter(startsWithE);
 
 // Don't edit the code below here!
-
-const section = document.querySelector("section");
-
-const para1 = document.createElement("p");
-para1.textContent = eBirds;
-
-section.appendChild(para1);
+// ...
 ```
 
 </details>

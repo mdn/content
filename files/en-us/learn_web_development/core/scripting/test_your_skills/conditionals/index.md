@@ -87,11 +87,7 @@ if (season === "summer") {
 }
 
 // Don't edit the code below here!
-
-const section = document.querySelector("section");
-const para1 = document.createElement("p");
-para1.textContent = response;
-section.appendChild(para1);
+// ...
 ```
 
 </details>
@@ -137,10 +133,8 @@ let machineActive = false;
 const section = document.querySelector("section");
 const para1 = document.createElement("p");
 const para2 = document.createElement("p");
-
 para1.textContent = `Your score is ${score}`;
 para2.textContent = response;
-
 section.appendChild(para1);
 section.appendChild(para2);
 ```
@@ -177,16 +171,7 @@ if (machineActive) {
 }
 
 // Don't edit the code below here!
-
-const section = document.querySelector("section");
-const para1 = document.createElement("p");
-const para2 = document.createElement("p");
-
-para1.textContent = `Your score is ${score}`;
-para2.textContent = response;
-
-section.appendChild(para1);
-section.appendChild(para2);
+// ...
 ```
 
 </details>
@@ -226,10 +211,8 @@ let pwdResult;
 const section = document.querySelector("section");
 const para1 = document.createElement("p");
 const para2 = document.createElement("p");
-
 para1.textContent = machineResult;
 para2.textContent = pwdResult;
-
 section.appendChild(para1);
 section.appendChild(para2);
 ```
@@ -259,16 +242,7 @@ if (machineActive) {
 }
 
 // Don't edit the code below here!
-
-const section = document.querySelector("section");
-const para1 = document.createElement("p");
-const para2 = document.createElement("p");
-
-para1.textContent = machineResult;
-para2.textContent = pwdResult;
-
-section.appendChild(para1);
-section.appendChild(para2);
+// ...
 ```
 
 </details>
