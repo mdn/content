@@ -31,8 +31,8 @@ The `Symbol.dispose` method is intended to be automatically called in a `using` 
 
 ```js
 {
-  using stack = new DisposableStack();
-  const resource = stack.use(new Resource());
+  using disposer = new DisposableStack();
+  const resource = disposer.use(new Resource());
   resource.doSomething();
   // stack is disposed here immediately before the function exits
   // which causes the resource to be disposed

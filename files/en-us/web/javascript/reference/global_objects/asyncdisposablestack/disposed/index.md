@@ -18,10 +18,10 @@ The **`disposed`** accessor property of {{jsxref("AsyncDisposableStack")}} insta
 ### Checking if a stack is disposed
 
 ```js
-const stack = new AsyncDisposableStack();
-console.log(stack.disposed); // false
-await stack.disposeAsync();
-console.log(stack.disposed); // true
+const disposer = new AsyncDisposableStack();
+console.log(disposer.disposed); // false
+await disposer.disposeAsync();
+console.log(disposer.disposed); // true
 ```
 
 ## Specifications

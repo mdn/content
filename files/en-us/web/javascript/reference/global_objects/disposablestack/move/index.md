@@ -60,23 +60,23 @@ class PluginHost {
 
   constructor() {
     // Create a DisposableStack that is disposed when the constructor exits.
-    // If construction succeeds, we move everything out of `stack` and into
+    // If construction succeeds, we move everything out of `disposer` and into
     // `#disposables` to be disposed later.
-    using stack = new DisposableStack();
+    using disposer = new DisposableStack();
 
     // Create an IPC adapter around process.send/process.on("message").
     // When disposed, it unsubscribes from process.on("message").
-    this.#channel = stack.use(new NodeProcessIpcChannelAdapter(process));
+    this.#channel = disposer.use(new NodeProcessIpcChannelAdapter(process));
 
     // Create a pseudo-websocket that sends and receives messages over
     // a NodeJS IPC channel.
-    this.#socket = stack.use(new NodePluginHostIpcSocket(this.#channel));
+    this.#socket = disposer.use(new NodePluginHostIpcSocket(this.#channel));
 
     // If we made it here, then there were no errors during construction and
-    // we can safely move the disposables out of `stack` and into `#disposables`.
-    this.#disposables = stack.move();
+    // we can safely move the disposables out of `disposer` and into `#disposables`.
+    this.#disposables = disposer.move();
 
-    // If construction failed, then `stack` would be disposed before reaching
+    // If construction failed, then `disposer` would be disposed before reaching
     // the line above. Event handlers would be removed, allowing `#channel` and
     // `#socket` to be GC'd.
   }

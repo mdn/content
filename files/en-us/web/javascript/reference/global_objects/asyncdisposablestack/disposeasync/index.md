@@ -57,13 +57,13 @@ class Resource {
 }
 
 async function doSomething() {
-  const stack = new AsyncDisposableStack();
-  const resource = stack.use(new Resource());
-  const resource2 = stack.adopt(new Resource(), (resource) =>
+  const disposer = new AsyncDisposableStack();
+  const resource = disposer.use(new Resource());
+  const resource2 = disposer.adopt(new Resource(), (resource) =>
     resource.dispose(),
   );
-  stack.defer(() => console.log("Deferred disposer"));
-  stack.disposeAsync();
+  disposer.defer(() => console.log("Deferred disposer"));
+  disposer.disposeAsync();
   // Logs in order:
   // Deferred disposer
   // Resource disposed

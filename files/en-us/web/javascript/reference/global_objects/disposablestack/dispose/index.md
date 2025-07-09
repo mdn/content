@@ -47,13 +47,13 @@ class Resource {
 }
 
 {
-  const stack = new DisposableStack();
-  const resource = stack.use(new Resource());
-  const resource2 = stack.adopt(new Resource(), (resource) =>
+  const disposer = new DisposableStack();
+  const resource = disposer.use(new Resource());
+  const resource2 = disposer.adopt(new Resource(), (resource) =>
     resource.dispose(),
   );
-  stack.defer(() => console.log("Deferred disposer"));
-  stack.dispose();
+  disposer.defer(() => console.log("Deferred disposer"));
+  disposer.dispose();
   // Logs in order:
   // Deferred disposer
   // Resource disposed

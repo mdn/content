@@ -205,15 +205,15 @@ However, this means all logic has to be written inside the `if` or `else`, causi
 
 ```js
 {
-  using stack = new DisposableStack();
+  using disposer = new DisposableStack();
   let reader;
   if (someCondition) {
-    reader = stack.use(stream.getReader());
+    reader = disposer.use(stream.getReader());
   } else {
-    reader = stack.use(stream.getReader({ mode: "byob" }));
+    reader = disposer.use(stream.getReader({ mode: "byob" }));
   }
   // Do something with reader
-  // Before scope exit, stack is disposed, which disposes reader
+  // Before scope exit, disposer is disposed, which disposes reader
 }
 ```
 
@@ -221,15 +221,15 @@ Another use case is when you have a resource that does not yet implement the dis
 
 ```js
 {
-  using stack = new DisposableStack();
+  using disposer = new DisposableStack();
   // Suppose reader does not have the [Symbol.dispose]() method,
   // then it cannot be used with using.
-  // However, we can manually pass a disposer function to stack.adopt
-  const reader = stack.adopt(stream.getReader(), (reader) =>
+  // However, we can manually pass a disposer function to disposer.adopt
+  const reader = disposer.adopt(stream.getReader(), (reader) =>
     reader.releaseLock(),
   );
   // Do something with reader
-  // Before scope exit, stack is disposed, which disposes reader
+  // Before scope exit, disposer is disposed, which disposes reader
 }
 ```
 
@@ -237,12 +237,12 @@ Yet another use case is when you have a disposal action to perform but it's not 
 
 ```js
 {
-  using stack = new DisposableStack();
-  stack.defer(() => console.log("All database connections closed"));
-  const connection1 = stack.use(openConnection());
-  const connection2 = stack.use(openConnection());
+  using disposer = new DisposableStack();
+  disposer.defer(() => console.log("All database connections closed"));
+  const connection1 = disposer.use(openConnection());
+  const connection2 = disposer.use(openConnection());
   // Do something with connection1 and connection2
-  // Before scope exit, stack is disposed, which first disposes connection1
+  // Before scope exit, disposer is disposed, which first disposes connection1
   // and connection2 and then logs the message
 }
 ```

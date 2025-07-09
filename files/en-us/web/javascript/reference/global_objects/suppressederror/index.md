@@ -29,7 +29,8 @@ These properties are defined on `SuppressedError.prototype` and shared by all `S
 - {{jsxref("Error/name", "SuppressedError.prototype.name")}}
   - : Represents the name for the type of error. For `SuppressedError.prototype.name`, the initial value is `"SuppressedError"`.
 
-> **Note:** `SuppressedError` never has the {{jsxref("Error/cause", "cause")}} property, because the semantics of `cause` overlaps with `suppressed`.
+> [!NOTE]
+> `SuppressedError` never has the {{jsxref("Error/cause", "cause")}} property, because the semantics of `cause` overlaps with `suppressed`.
 
 These properties are own properties of each `SuppressedError` instance.
 

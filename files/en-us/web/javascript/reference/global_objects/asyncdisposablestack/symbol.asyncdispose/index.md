@@ -31,10 +31,10 @@ The `Symbol.asyncDispose` method is intended to be automatically called in a `aw
 
 ```js
 async function doSomething() {
-  await using stack = new AsyncDisposableStack();
-  const resource = stack.use(new Resource());
+  await using disposer = new AsyncDisposableStack();
+  const resource = disposer.use(new Resource());
   resource.doSomething();
-  // stack is disposed here immediately before the function exits
+  // disposer is disposed here immediately before the function exits
   // which causes the resource to be disposed
 }
 ```

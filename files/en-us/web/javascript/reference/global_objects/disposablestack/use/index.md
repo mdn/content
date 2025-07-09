@@ -38,9 +38,9 @@ The primary purpose of `use()` is to register a value that implements the dispos
 You should make your resource registered as soon as it's declared. This means you should always wrap your resource acquisition expression in `use()`, instead of extracting it to a separate statement.
 
 ```js example-bad
-using stack = new DisposableStack();
+using disposer = new DisposableStack();
 const reader = stream.getReader();
-stack.use(reader);
+disposer.use(reader);
 ```
 
 ## Examples
@@ -51,8 +51,8 @@ This code consumes a {{domxref("ReadableStream")}} via a {{domxref("ReadableStre
 
 ```js
 {
-  using stack = new DisposableStack();
-  const reader = stack.use(stream.getReader());
+  using disposer = new DisposableStack();
+  const reader = disposer.use(stream.getReader());
   const { value, done } = reader.read();
   if (!done) {
     // Process the value

@@ -15,7 +15,8 @@ The **`AsyncDisposableStack()`** constructor creates {{jsxref("AsyncDisposableSt
 new AsyncDisposableStack()
 ```
 
-> **Note:** `AsyncDisposableStack()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `AsyncDisposableStack()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -30,9 +31,9 @@ A new `AsyncDisposableStack` object.
 ### Creating an AsyncDisposableStack
 
 ```js
-const stack = new AsyncDisposableStack();
-stack.defer(() => console.log("Disposed!"));
-await stack.disposeAsync();
+const disposer = new AsyncDisposableStack();
+disposer.defer(() => console.log("Disposed!"));
+await disposer.disposeAsync();
 // Logs: Disposed!
 ```
 

@@ -41,8 +41,8 @@ One use case of `defer()` is when you claim ownership of a resource that gets pa
 
 ```js
 async function consumeResource(handle) {
-  await using stack = new AsyncDisposableStack();
-  stack.defer(async () => {
+  await using disposer = new AsyncDisposableStack();
+  disposer.defer(async () => {
     await handle.close();
   });
   // Do something with handle

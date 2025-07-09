@@ -15,7 +15,8 @@ The **`DisposableStack()`** constructor creates {{jsxref("DisposableStack")}} ob
 new DisposableStack()
 ```
 
-> **Note:** `DisposableStack()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `DisposableStack()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -30,9 +31,9 @@ A new `DisposableStack` object.
 ### Creating an DisposableStack
 
 ```js
-const stack = new DisposableStack();
-stack.defer(() => console.log("Disposed!"));
-stack.dispose();
+const disposer = new DisposableStack();
+disposer.defer(() => console.log("Disposed!"));
+disposer.dispose();
 // Logs: Disposed!
 ```
 

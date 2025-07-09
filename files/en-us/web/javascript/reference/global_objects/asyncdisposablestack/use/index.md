@@ -41,11 +41,11 @@ This function reads a file (as a Node.js [`FileHandle`](https://nodejs.org/api/f
 
 ```js
 async function readFileContents(path) {
-  await using stack = new AsyncDisposableStack();
-  const handle = stack.use(fs.open(path));
+  await using disposer = new AsyncDisposableStack();
+  const handle = disposer.use(fs.open(path));
   const data = await handle.read();
   return data;
-  // The stack is disposed here, which causes handle to be closed too
+  // The disposer is disposed here, which causes handle to be closed too
 }
 ```
 

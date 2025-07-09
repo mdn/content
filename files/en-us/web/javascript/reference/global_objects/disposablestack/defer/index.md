@@ -37,8 +37,8 @@ The primary purpose of `defer()` is to register a cleanup callback that's not sp
 
 ```js
 function consumeReader(reader) {
-  using stack = new DisposableStack();
-  stack.defer(() => reader.releaseLock());
+  using disposer = new DisposableStack();
+  disposer.defer(() => reader.releaseLock());
   // Do something with reader
 }
 ```
@@ -56,9 +56,9 @@ async function requestWithLock(url, options) {
   if (isLocked) {
     return undefined;
   }
-  using stack = new DisposableStack();
+  using disposer = new DisposableStack();
   isLocked = true;
-  stack.defer(() => (isLocked = false));
+  disposer.defer(() => (isLocked = false));
   const data = await fetch(url, options).then((res) => res.json());
   return data;
 }

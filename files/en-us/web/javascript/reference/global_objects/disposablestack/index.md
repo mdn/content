@@ -16,18 +16,18 @@ A `DisposableStack` is not exactly a "stack" in terms of its interface. It has s
 You register [disposable resources](/en-US/docs/Web/JavaScript/Guide/Resource_management) to the `DisposableStack` using its {{jsxref("DisposableStack/use", "use()")}}, {{jsxref("DisposableStack/adopt", "adopt()")}}, or {{jsxref("DisposableStack/defer", "defer()")}} methods.
 
 ```js
-using stack = new DisposableStack();
-const reader = stack.use(stream.getReader());
+using disposer = new DisposableStack();
+const reader = disposer.use(stream.getReader());
 ```
 
-Then, when the `stack` goes out of scope, all resources registered to it are disposed in reverse order of registration.
+Then, when the `disposer` goes out of scope, all resources registered to it are disposed in reverse order of registration.
 
 It is good practice to _not_ extract the resource acquisition expression to a separate statement, no matter how long the expression is. You should always wrap the `use()` or `adopt()` call around the resource acquisition expression to ensure that the resource is registered to the stack immediately.
 
 ```js example-bad
-using stack = new DisposableStack();
+using disposer = new DisposableStack();
 const reader = stream.getReader();
-stack.use(reader);
+disposer.use(reader);
 ```
 
 Functionally, these two code snippets are equivalent. However, the first one is less error-prone because the resource is declared and registered in a single line. If someone puts more code between the second and third lines of the second snippet, an error could occur, causing the resource to leak.

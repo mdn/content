@@ -40,26 +40,26 @@ The primary purpose of `adopt()` is to register a value that doesn't implement t
 `adopt(value, onDispose)` is almost the same as `defer(() => onDispose(value))`, but it allows you to declare the resource and register it on the same line. This way, there's minimal chance of an error happening between the resource creation and registration, which will cause the resource to leak.
 
 ```js example-good
-using stack = new DisposableStack();
-const reader = stack.adopt(stream.getReader(), (reader) =>
+using disposer = new DisposableStack();
+const reader = disposer.adopt(stream.getReader(), (reader) =>
   reader.releaseLock(),
 );
 ```
 
 ```js example-bad
-using stack = new DisposableStack();
+using disposer = new DisposableStack();
 const reader = stream.getReader();
 // If someone adds code in between these lines and an error occurs,
 // the stream will be locked forever.
-stack.defer(() => reader.close());
+disposer.defer(() => reader.close());
 ```
 
 In the same spirit of "make your resource registered as soon as it's declared", you should always wrap your resource acquisition expression in `adopt()`, instead of extracting it to a separate statement.
 
 ```js example-bad
-using stack = new DisposableStack();
+using disposer = new DisposableStack();
 const reader = stream.getReader();
-stack.adopt(reader, (reader) => reader.close());
+disposer.adopt(reader, (reader) => reader.close());
 ```
 
 ## Examples
@@ -70,8 +70,8 @@ This code consumes a {{domxref("ReadableStream")}} via a {{domxref("ReadableStre
 
 ```js
 {
-  using stack = new DisposableStack();
-  const reader = stack.adopt(stream.getReader(), (reader) =>
+  using disposer = new DisposableStack();
+  const reader = disposer.adopt(stream.getReader(), (reader) =>
     reader.releaseLock(),
   );
   const { value, done } = reader.read();
