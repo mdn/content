@@ -21,20 +21,6 @@ Check the [Firefox Configuration Editor](https://support.mozilla.org/en-US/kb/ab
 
 ## HTML
 
-### Layout for input type="search"
-
-Layout for `input type="search"` has been updated. This causes a search field to have a clear icon once someone starts typing in it, to match other browser implementations. (See [Firefox bug 558594](https://bugzil.la/558594) for more details.)
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 81            | No                  |
-| Developer Edition | 81            | No                  |
-| Beta              | 81            | No                  |
-| Release           | 81            | No                  |
-
-- `layout.forms.input-type-search.enabled`
-  - : Set to `true` to enable.
-
 ### Toggle password display
 
 HTML password input elements ([`<input type="password">`](/en-US/docs/Web/HTML/Reference/Elements/input/password)) include an "eye" icon that can be toggled to display or obscure the password text ([Firefox bug 502258](https://bugzil.la/502258)).
@@ -49,48 +35,66 @@ HTML password input elements ([`<input type="password">`](/en-US/docs/Web/HTML/R
 - `layout.forms.reveal-password-button.enabled`
   - : Set to `true` to enable.
 
+### Layout for input type="search"
+
+Layout for `input type="search"` has been updated. This causes a search field to have a clear icon once someone starts typing in it, to match other browser implementations. (See [Firefox bug 558594](https://bugzil.la/558594) for more details.)
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 81            | No                  |
+| Developer Edition | 81            | No                  |
+| Beta              | 81            | No                  |
+| Release           | 81            | No                  |
+
+- `layout.forms.input-type-search.enabled`
+  - : Set to `true` to enable.
+
 ## CSS
 
-### Hex boxes to display stray control characters
+### `::details-content` pseudo-element
 
-This feature renders control characters (Unicode category Cc) other than _tab_ (`U+0009`), _line feed_ (`U+000A`), _form feed_ (`U+000C`), and _carriage return_ (`U+000D`) as a hex box when they are not expected. (See [Firefox bug 1099557](https://bugzil.la/1099557) for more details.)
+The CSS {{cssxref("::details-content")}} pseudo-element enables you to style the content of the {{htmlElement("details")}} element ([Firefox bug 1901037](https://bugzil.la/1901037)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 43            | Yes                 |
-| Developer Edition | 43            | No                  |
-| Beta              | 43            | No                  |
-| Release           | 43            | No                  |
+| Nightly           | 138           | No                  |
+| Developer Edition | 138           | No                  |
+| Beta              | 138           | No                  |
+| Release           | 138           | No                  |
 
-- `layout.css.control-characters.visible`
+- `layout.css.details-content.enabled`
   - : Set to `true` to enable.
 
-### initial-letter property
+### Allow pseudo-elements after element-backed pseudo-elements
 
-The {{cssxref("initial-letter")}} CSS property is part of the [CSS Inline Layout](https://drafts.csswg.org/css-inline/) specification and allows you to specify how dropped, raised, and sunken initial letters are displayed. (See [Firefox bug 1223880](https://bugzil.la/1223880) for more details.)
+Work has started on allowing [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) such as {{cssxref("::first-letter")}} and {{cssxref("::before")}} to be appended to [element-backed pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements#element-backed_pseudo-elements) such as {{cssxref("::details-content")}} and {{cssxref("::file-selector-button")}}.
+
+This will allow users to, for , example, style the first letter of the {{htmlElement("details")}} element by using the CSS selector `::details-content::first-letter` or add content before an {{HTMLElement("input") }} of [`type="file"`](/en-US/docs/Web/HTML/Reference/Elements/input/file) using the CSS selector `::file-selector-button::before`.
+
+Currently only support for `::details-content::first-letter` can be parsed, using `@supports(::details-content::first-letter)` and the preference for [::details-content pseudo-element](#details-content_pseudo-element) needs enabling for this to be tested. The `::file-selector-button` pseudo-element is not yet marked as an element-based pseudo-element so there is no current way of testing this. ([Firefox bug 1953557](https://bugzil.la/1953557)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 50            | No                  |
-| Developer Edition | 50            | No                  |
-| Beta              | 50            | No                  |
-| Release           | 50            | No                  |
+| Nightly           | 138           | No                  |
+| Developer Edition | 138           | No                  |
+| Beta              | 138           | No                  |
+| Release           | 138           | No                  |
 
-- `layout.css.initial-letter.enabled`
+- `layout.css.details-content.enabled`
   - : Set to `true` to enable.
 
-### fit-content() function
+### @scope at-rule
 
-The {{cssxref("fit-content_function", "fit-content()")}} function as it applies to {{cssxref("width")}} and other sizing properties. This function is already well-supported for CSS Grid Layout track sizing. (See [Firefox bug 1312588](https://bugzil.la/1312588) for more details.)
+The [@scope](/en-US/docs/Web/CSS/@scope) [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) allows you to select specific child elements without having to overly increase the specificity of CSS selectors ([Firefox bug 1886441](https://bugzil.la/1886441)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 91            | No                  |
-| Developer Edition | 91            | No                  |
-| Beta              | 91            | No                  |
-| Release           | 91            | No                  |
+| Nightly           | 137           | Yes                 |
+| Developer Edition | 128           | No                  |
+| Beta              | 128           | No                  |
+| Release           | 128           | No                  |
 
-- `layout.css.fit-content-function.enabled`
+- `layout.css.at-scope.enabled`
   - : Set to `true` to enable.
 
 ### Scroll-driven animations
@@ -117,33 +121,88 @@ The {{cssxref('timeline-scope')}}, {{cssxref('animation-range-start')}} and {{cs
 - `layout.css.scroll-driven-animations.enabled`
   - : Set to `true` to enable.
 
-### @scope at-rule
+### CSS Anchor Positioning
 
-The [@scope](/en-US/docs/Web/CSS/@scope) [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) allows you to select specific child elements without having to overly increase the specificity of CSS selectors ([Firefox bug 1886441](https://bugzil.la/1886441)).
+The [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module defines a number of features that allow elements to be defined as anchor elements, and for other elements to be positioned relative to anchor elements.
+This allows, for example, tooltips to be displayed alongside associated content as it scrolls through the viewport, moving as needed when it would overflow the viewport, and disappearing when the anchor moves offscreen.
+The set of features are being progressively rolled out behind a preference ([Firefox bug 1838746](https://bugzil.la/1838746)).
+
+The parts that have been implemented include [`CSSPositionTryRule`](/en-US/docs/Web/API/CSSPositionTryRule) and [`CSSPositionTryDescriptors`](/en-US/docs/Web/API/CSSPositionTryDescriptors) (Firefox 131).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 137           | Yes                 |
-| Developer Edition | 128           | No                  |
-| Beta              | 128           | No                  |
-| Release           | 128           | No                  |
+| Nightly           | 131           | No                  |
+| Developer Edition | 131           | No                  |
+| Beta              | 131           | No                  |
+| Release           | 131           | No                  |
 
-- `layout.css.at-scope.enabled`
+- `layout.css.anchor-positioning.enabled`
   - : Set to `true` to enable.
 
-### prefers-reduced-transparency media feature
+### Symmetrical `letter-spacing`
 
-The CSS [`prefers-reduced-transparency`](/en-US/docs/Web/CSS/@media/prefers-reduced-transparency) media feature lets you detect if a user has enabled the setting to minimize the amount of transparent or translucent layer effects on their device.
-See ([Firefox bug 1736914](https://bugzil.la/1736914)) for more details.
+The CSS {{cssxref("letter-spacing")}} property now splits the specified letter spacing evenly on both sides of each character. This is unlike the current behavior where spacing is added primarily to one side. This approach can improve text spacing, especially in mixed-directional text [Firefox bug 1891446](https://bugzil.la/1891446).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 113           | No                  |
-| Developer Edition | 113           | No                  |
-| Beta              | 113           | No                  |
-| Release           | 113           | No                  |
+| Nightly           | 128           | Yes                 |
+| Developer Edition | 128           | Yes                 |
+| Beta              | 127           | No                  |
+| Release           | 127           | No                  |
 
-- `layout.css.prefers-reduced-transparency.enabled`
+- `layout.css.letter-spacing.model`
+  - : Set to `true` to enable.
+
+### `calc()` color channel support in relative colors
+
+The CSS [`calc()`](/en-US/docs/Web/CSS/calc) function can now parse color channels in [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors#using_math_functions), allowing you to correctly calculate changes to colors in different color spaces or while using different functional notations [Firefox bug 1889561](https://bugzil.la/1889561).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 127           | Yes                 |
+| Developer Edition | 127           | No                  |
+| Beta              | 127           | No                  |
+| Release           | 127           | No                  |
+
+- `layout.css.relative-color-syntax.enabled`
+  - : Set to `true` to enable.
+
+### `shape()` function
+
+The CSS [`shape()`](/en-US/docs/Web/CSS/basic-shape/shape) function is a [`<basic-shape>`](/en-US/docs/Web/CSS/basic-shape) data type that enables you to define a shape in the {{cssxref("clip-path")}} and {{cssxref("offset-path")}} properties using one or more "shape commands". These commands are very similar to the [SVG path commands](/en-US/docs/Web/SVG/Reference/Attribute/d#path_commands). The `shape()` function is similar in some respects to the {{cssxref("basic-shape/path","path()")}} function, but unlike `path()`, which uses the [SVG path](/en-US/docs/Web/SVG/Reference/Element/path) syntax, `shape()` uses standard CSS syntax. This enables you to easily create and edit shapes and also allows the use of CSS math functions.
+For more details, see [Firefox bug 1823463](https://bugzil.la/1823463) for the `shape()` function support in `clip-path`, [Firefox bug 1884424](https://bugzil.la/1884424) for the function's support in `offset-path`, and [Firefox bug 1884425](https://bugzil.la/1884425) for its interpolation support.
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 126           | Yes                 |
+| Developer Edition | 126           | No                  |
+| Beta              | 126           | No                  |
+| Release           | 126           | No                  |
+
+- `layout.css.basic-shape-shape.enabled`
+  - : Set to `true` to enable.
+
+### Vendor-prefixed transform properties
+
+The `-moz-` prefixed [CSS transform](/en-US/docs/Web/CSS/CSS_transforms) properties can be disabled by setting the `layout.css.prefixes.transforms` preference to `false`. The intent is to disable these once the standard CSS zoom properties are well supported. ([Firefox bug 1886134](https://bugzil.la/1886134), [Firefox bug 1855763](https://bugzil.la/1855763)).
+
+Specifically, this preference will disable the following prefixed properties:
+
+- `-moz-backface-visibility`
+- `-moz-perspective`
+- `-moz-perspective-origin`
+- `-moz-transform`
+- `-moz-transform-origin`
+- `-moz-transform-style`
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 120           | Yes                 |
+| Developer Edition | 120           | Yes                 |
+| Beta              | 120           | Yes                 |
+| Release           | 120           | Yes                 |
+
+- `layout.css.prefixes.transforms`
   - : Set to `true` to enable.
 
 ### inverted-colors media feature
@@ -193,120 +252,76 @@ See ([Firefox bug 1808410](https://bugzil.la/1808410)) for more details.
 - `layout.css.scroll-driven-animations.enabled`
   - : Set to `true` to enable.
 
-### Vendor-prefixed transform properties
+### prefers-reduced-transparency media feature
 
-The `-moz-` prefixed [CSS transform](/en-US/docs/Web/CSS/CSS_transforms) properties can be disabled by setting the `layout.css.prefixes.transforms` preference to `false`. The intent is to disable these once the standard CSS zoom properties are well supported. ([Firefox bug 1886134](https://bugzil.la/1886134), [Firefox bug 1855763](https://bugzil.la/1855763)).
-
-Specifically, this preference will disable the following prefixed properties:
-
-- `-moz-backface-visibility`
-- `-moz-perspective`
-- `-moz-perspective-origin`
-- `-moz-transform`
-- `-moz-transform-origin`
-- `-moz-transform-style`
+The CSS [`prefers-reduced-transparency`](/en-US/docs/Web/CSS/@media/prefers-reduced-transparency) media feature lets you detect if a user has enabled the setting to minimize the amount of transparent or translucent layer effects on their device.
+See ([Firefox bug 1736914](https://bugzil.la/1736914)) for more details.
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 120           | Yes                 |
-| Developer Edition | 120           | Yes                 |
-| Beta              | 120           | Yes                 |
-| Release           | 120           | Yes                 |
+| Nightly           | 113           | No                  |
+| Developer Edition | 113           | No                  |
+| Beta              | 113           | No                  |
+| Release           | 113           | No                  |
 
-- `layout.css.prefixes.transforms`
+- `layout.css.prefers-reduced-transparency.enabled`
   - : Set to `true` to enable.
 
-### `shape()` function
+### font-variant-emoji property
 
-The CSS [`shape()`](/en-US/docs/Web/CSS/basic-shape/shape) function is a [`<basic-shape>`](/en-US/docs/Web/CSS/basic-shape) data type that enables you to define a shape in the {{cssxref("clip-path")}} and {{cssxref("offset-path")}} properties using one or more "shape commands". These commands are very similar to the [SVG path commands](/en-US/docs/Web/SVG/Reference/Attribute/d#path_commands). The `shape()` function is similar in some respects to the {{cssxref("basic-shape/path","path()")}} function, but unlike `path()`, which uses the [SVG path](/en-US/docs/Web/SVG/Reference/Element/path) syntax, `shape()` uses standard CSS syntax. This enables you to easily create and edit shapes and also allows the use of CSS math functions.
-For more details, see [Firefox bug 1823463](https://bugzil.la/1823463) for the `shape()` function support in `clip-path`, [Firefox bug 1884424](https://bugzil.la/1884424) for the function's support in `offset-path`, and [Firefox bug 1884425](https://bugzil.la/1884425) for its interpolation support.
+The CSS [`font-variant-emoji`](/en-US/docs/Web/CSS/font-variant-emoji) property allows you to set a default presentation style for displaying emojis.
+See ([Firefox bug 1461589](https://bugzil.la/1461589)) for more details.
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 126           | Yes                 |
-| Developer Edition | 126           | No                  |
-| Beta              | 126           | No                  |
-| Release           | 126           | No                  |
+| Nightly           | 108           | Yes                 |
+| Developer Edition | 108           | No                  |
+| Beta              | 108           | No                  |
+| Release           | 108           | No                  |
 
-- `layout.css.basic-shape-shape.enabled`
+- `layout.css.font-variant-emoji.enabled`
   - : Set to `true` to enable.
 
-### Symmetrical `letter-spacing`
+### fit-content() function
 
-The CSS {{cssxref("letter-spacing")}} property now splits the specified letter spacing evenly on both sides of each character. This is unlike the current behavior where spacing is added primarily to one side. This approach can improve text spacing, especially in mixed-directional text [Firefox bug 1891446](https://bugzil.la/1891446).
+The {{cssxref("fit-content_function", "fit-content()")}} function as it applies to {{cssxref("width")}} and other sizing properties. This function is already well-supported for CSS Grid Layout track sizing. (See [Firefox bug 1312588](https://bugzil.la/1312588) for more details.)
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 128           | Yes                 |
-| Developer Edition | 128           | Yes                 |
-| Beta              | 127           | No                  |
-| Release           | 127           | No                  |
+| Nightly           | 91            | No                  |
+| Developer Edition | 91            | No                  |
+| Beta              | 91            | No                  |
+| Release           | 91            | No                  |
 
-- `layout.css.letter-spacing.model`
+- `layout.css.fit-content-function.enabled`
   - : Set to `true` to enable.
 
-### `calc()` color channel support in relative colors
+### initial-letter property
 
-The CSS [`calc()`](/en-US/docs/Web/CSS/calc) function can now parse color channels in [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors#using_math_functions), allowing you to correctly calculate changes to colors in different color spaces or while using different functional notations [Firefox bug 1889561](https://bugzil.la/1889561).
+The {{cssxref("initial-letter")}} CSS property is part of the [CSS Inline Layout](https://drafts.csswg.org/css-inline/) specification and allows you to specify how dropped, raised, and sunken initial letters are displayed. (See [Firefox bug 1223880](https://bugzil.la/1223880) for more details.)
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 127           | Yes                 |
-| Developer Edition | 127           | No                  |
-| Beta              | 127           | No                  |
-| Release           | 127           | No                  |
+| Nightly           | 50            | No                  |
+| Developer Edition | 50            | No                  |
+| Beta              | 50            | No                  |
+| Release           | 50            | No                  |
 
-- `layout.css.relative-color-syntax.enabled`
+- `layout.css.initial-letter.enabled`
   - : Set to `true` to enable.
 
-### CSS Anchor Positioning
+### Hex boxes to display stray control characters
 
-The [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module defines a number of features that allow elements to be defined as anchor elements, and for other elements to be positioned relative to anchor elements.
-This allows, for example, tooltips to be displayed alongside associated content as it scrolls through the viewport, moving as needed when it would overflow the viewport, and disappearing when the anchor moves offscreen.
-The set of features are being progressively rolled out behind a preference ([Firefox bug 1838746](https://bugzil.la/1838746)).
-
-The parts that have been implemented include [`CSSPositionTryRule`](/en-US/docs/Web/API/CSSPositionTryRule) and [`CSSPositionTryDescriptors`](/en-US/docs/Web/API/CSSPositionTryDescriptors) (Firefox 131).
+This feature renders control characters (Unicode category Cc) other than _tab_ (`U+0009`), _line feed_ (`U+000A`), _form feed_ (`U+000C`), and _carriage return_ (`U+000D`) as a hex box when they are not expected. (See [Firefox bug 1099557](https://bugzil.la/1099557) for more details.)
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 131           | No                  |
-| Developer Edition | 131           | No                  |
-| Beta              | 131           | No                  |
-| Release           | 131           | No                  |
+| Nightly           | 43            | Yes                 |
+| Developer Edition | 43            | No                  |
+| Beta              | 43            | No                  |
+| Release           | 43            | No                  |
 
-- `layout.css.anchor-positioning.enabled`
-  - : Set to `true` to enable.
-
-### `::details-content` pseudo-element
-
-The CSS {{cssxref("::details-content")}} pseudo-element enables you to style the content of the {{htmlElement("details")}} element ([Firefox bug 1901037](https://bugzil.la/1901037)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 138           | No                  |
-| Developer Edition | 138           | No                  |
-| Beta              | 138           | No                  |
-| Release           | 138           | No                  |
-
-- `layout.css.details-content.enabled`
-  - : Set to `true` to enable.
-
-### Allow pseudo-elements after element-backed pseudo-elements
-
-Work has started on allowing [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) such as {{cssxref("::first-letter")}} and {{cssxref("::before")}} to be appended to [element-backed pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements#element-backed_pseudo-elements) such as {{cssxref("::details-content")}} and {{cssxref("::file-selector-button")}}.
-
-This will allow users to, for , example, style the first letter of the {{htmlElement("details")}} element by using the CSS selector `::details-content::first-letter` or add content before an {{HTMLElement("input") }} of [`type="file"`](/en-US/docs/Web/HTML/Reference/Elements/input/file) using the CSS selector `::file-selector-button::before`.
-
-Currently only support for `::details-content::first-letter` can be parsed, using `@supports(::details-content::first-letter)` and the preference for [::details-content pseudo-element](#details-content_pseudo-element) needs enabling for this to be tested. The `::file-selector-button` pseudo-element is not yet marked as an element-based pseudo-element so there is no current way of testing this. ([Firefox bug 1953557](https://bugzil.la/1953557)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 138           | No                  |
-| Developer Edition | 138           | No                  |
-| Beta              | 138           | No                  |
-| Release           | 138           | No                  |
-
-- `layout.css.details-content.enabled`
+- `layout.css.control-characters.visible`
   - : Set to `true` to enable.
 
 ### `:active-view-transition` pseudo-class
@@ -377,32 +392,49 @@ The {{domxref("CloseWatcher")}} interface allows developers to implement UI comp
 - `dom.closewatcher.enabled`
   - : Set to `true` to enable.
 
-### Trusted Types API
+### Removal of `beforescriptexecute` and `afterscriptexecute` events
 
-The [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) provides mechanisms to ensure that functions that can potentially be used as vectors for XSS attacks are only able to be called with data that has been validated or sanitized.
-
-> [!NOTE]
-> At the time of writing not enough of the API has been implemented for it to be effectively testable.
-> This note will be removed once it is ready.
-
-This subset of the API has been implemented:
-
-- {{domxref("TrustedTypePolicyFactory")}}:
-  - {{domxref("TrustedTypePolicyFactory/getAttributeType", "getAttributeType()")}} and {{domxref("TrustedTypePolicyFactory/getPropertyType", "getPropertyType()")}} ([Firefox bug 1917783](https://bugzil.la/1917783), [Firefox bug 1917784](https://bugzil.la/1917784)).
-- The {{domxref("Document.write()", "write()")}} and {{domxref("Document.writeln()","writeln()")}} methods of the {{domxref("Document")}} interface now accept {{domxref("TrustedHTML")}} objects as parameters, in addition to strings. ([Firefox bug 1906301](https://bugzil.la/1906301)).
-- The {{domxref("HTMLScriptElement.text","text")}}, {{domxref("HTMLElement.innerText","innerText")}}, and {{domxref("Node.textContent","textContent")}} properties of the {{domxref("HTMLScriptElement")}} interface now accept {{domxref("TrustedScript")}} objects a value, while {{domxref("HTMLScriptElement.src", "src")}} accepts {{domxref("TrustedScriptURL")}} values. ([Firefox bug 1905706](https://bugzil.la/1905706)).
-- The {{domxref("Window.setInterval()")}} and {{domxref("Window.setTimeout()")}} methods can be called with a {{domxref("TrustedScript")}}. ([Firefox bug 1931290](https://bugzil.la/1931290)).
-- The global [`trustedTypes`](/en-US/docs/Web/API/Window/trustedTypes) property is available for accessing the Trusted Types API.
-- The properties {{domxref("Element.innerHTML")}} and {{domxref("ShadowRoot.innerHTML")}} can be called with [trusted types](/en-US/docs/Web/API/Trusted_Types_API).
+The non-standard events [`beforescriptexecute`](/en-US/docs/Web/API/Document/beforescriptexecute_event) and [`afterscriptexecute`](/en-US/docs/Web/API/Document/afterscriptexecute_event) on the {{domxref("Document")}} interface, and [`afterscriptexecute`](/en-US/docs/Web/API/Element/afterscriptexecute_event) and [`beforescriptexecute`](/en-US/docs/Web/API/Element/beforescriptexecute_event) on the {{domxref("Element")}} interface are on the path to removal. They have been disabled in Nightly.
+([Firefox bug 1954685](https://bugzil.la/1954685)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 133           | No                  |
-| Developer Edition | 133           | No                  |
-| Beta              | 133           | No                  |
-| Release           | 133           | No                  |
+| Nightly           | 139           | No                  |
+| Developer Edition | 139           | Yes                 |
+| Beta              | 139           | Yes                 |
+| Release           | 139           | Yes                 |
 
-- `dom.security.trusted_types.enabled`
+- `dom.events.script_execute.enable`
+  - : Set to `true` to enable.
+
+### View Transition API
+
+The [View Transition API](/en-US/docs/Web/API/View_Transition_API) provides a mechanism for easily creating animated transitions between different website views. This is especially useful for [SPAs (single-page applications)](/en-US/docs/Glossary/SPA). ([Firefox bug 1950759](https://bugzil.la/1950759)).
+
+| Release channel   | Version changed | Enabled by default? |
+| ----------------- | --------------- | ------------------- |
+| Nightly           | 139             | Yes                 |
+| Developer Edition | —               | No                  |
+| Beta              | —               | No                  |
+| Release           | —               | No                  |
+
+- `dom.viewTransitions.enabled`
+  - : Set to `true` to enable.
+
+### Prioritized Task Scheduling API
+
+The [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) provides a standardized way to prioritize all tasks belonging to an application, whether they are defined in a website developer's code, or in third-party libraries and frameworks.
+From Firefox version 140 the API is both feature complete and enabled in the Nightly release.
+([Firefox bug 1734997](https://bugzil.la/1734997) and [Firefox bug 1920115](https://bugzil.la/1920115)).
+
+| Release channel   | Version changed | Enabled by default? |
+| ----------------- | --------------- | ------------------- |
+| Nightly           | 139             | Yes                 |
+| Developer Edition | 101             | No                  |
+| Beta              | 101             | No                  |
+| Release           | 101             | No                  |
+
+- `dom.enable_web_task_scheduling`
   - : Set to `true` to enable.
 
 ### HTML Sanitizer API
@@ -417,21 +449,6 @@ The [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) allow developer
 | Release           | 138           | No                  |
 
 - `dom.security.sanitizer.enabled`
-  - : Set to `true` to enable.
-
-### Removal of `beforescriptexecute` and `afterscriptexecute` events
-
-The non-standard events [`beforescriptexecute`](/en-US/docs/Web/API/Document/beforescriptexecute_event) and [`afterscriptexecute`](/en-US/docs/Web/API/Document/afterscriptexecute_event) on the {{domxref("Document")}} interface, and [`afterscriptexecute`](/en-US/docs/Web/API/Element/afterscriptexecute_event) and [`beforescriptexecute`](/en-US/docs/Web/API/Element/beforescriptexecute_event) on the {{domxref("Element")}} interface are on the path to removal. They have been disabled in Nightly.
-([Firefox bug 1954685](https://bugzil.la/1954685)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 139           | No                  |
-| Developer Edition | 139           | Yes                 |
-| Beta              | 139           | Yes                 |
-| Release           | 139           | Yes                 |
-
-- `dom.events.script_execute.enable`
   - : Set to `true` to enable.
 
 ### PerformanceEventTiming.interactionId
@@ -464,32 +481,35 @@ These contain the notification actions set with {{domxref("ServiceWorkerRegistra
 - `dom.webnotifications.actions.enabled`
   - : Set to `true` to enable.
 
-### Graphics: Canvas, WebGL, and WebGPU
+### Trusted Types API
 
-#### WebGL: Draft extensions
+The [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) provides mechanisms to ensure that functions that can potentially be used as vectors for XSS attacks are only able to be called with data that has been validated or sanitized.
 
-When this preference is enabled, any WebGL extensions currently in "draft" status which are being tested are enabled for use. Currently, there are no WebGL extensions being tested by Firefox.
+> [!NOTE]
+> At the time of writing not enough of the API has been implemented for it to be effectively testable.
+> This note will be removed once it is ready.
 
-#### WebGPU API
+This subset of the API has been implemented:
 
-The [WebGPU API](/en-US/docs/Web/API/WebGPU_API) provides low-level support for performing computation and graphics rendering using the [Graphics Processing Unit](https://en.wikipedia.org/wiki/Graphics_Processing_Unit) (GPU) of the user's device or computer.
-From version 142 this is enabled in on Windows in all contexts except service workers.
-For other platforms it is enabled in nightly.
-See [Firefox bug 1602129](https://bugzil.la/1602129) for our progress on this API.
+- {{domxref("TrustedTypePolicyFactory")}}:
+  - {{domxref("TrustedTypePolicyFactory/getAttributeType", "getAttributeType()")}} and {{domxref("TrustedTypePolicyFactory/getPropertyType", "getPropertyType()")}} ([Firefox bug 1917783](https://bugzil.la/1917783), [Firefox bug 1917784](https://bugzil.la/1917784)).
+- The {{domxref("Document.write()", "write()")}} and {{domxref("Document.writeln()","writeln()")}} methods of the {{domxref("Document")}} interface now accept {{domxref("TrustedHTML")}} objects as parameters, in addition to strings. ([Firefox bug 1906301](https://bugzil.la/1906301)).
+- The {{domxref("HTMLScriptElement.text","text")}}, {{domxref("HTMLElement.innerText","innerText")}}, and {{domxref("Node.textContent","textContent")}} properties of the {{domxref("HTMLScriptElement")}} interface now accept {{domxref("TrustedScript")}} objects a value, while {{domxref("HTMLScriptElement.src", "src")}} accepts {{domxref("TrustedScriptURL")}} values. ([Firefox bug 1905706](https://bugzil.la/1905706)).
+- The {{domxref("Window.setInterval()")}} and {{domxref("Window.setTimeout()")}} methods can be called with a {{domxref("TrustedScript")}}. ([Firefox bug 1931290](https://bugzil.la/1931290)).
+- The global [`trustedTypes`](/en-US/docs/Web/API/Window/trustedTypes) property is available for accessing the Trusted Types API.
+- The properties {{domxref("Element.innerHTML")}} and {{domxref("ShadowRoot.innerHTML")}} can be called with [trusted types](/en-US/docs/Web/API/Trusted_Types_API).
 
-| Release channel   | Version added | Enabled by default?                                |
-| ----------------- | ------------- | -------------------------------------------------- |
-| Nightly           | 141           | Yes                                                |
-| Developer Edition | 141           | No (Yes on Windows, not including service workers) |
-| Beta              | 141           | No (Yes on Windows, not including service workers) |
-| Release           | 141           | No (Yes on Windows, not including service workers) |
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 133           | No                  |
+| Developer Edition | 133           | No                  |
+| Beta              | 133           | No                  |
+| Release           | 133           | No                  |
 
-- `dom.webgpu.enabled`
-  - : Set to `true` to enable (enabled in Nightly and on Windows in all releases)
-- `dom.webgpu.service-workers.enabled`
-  - : Set to `true` to enable (enabled in Nightly)
+- `dom.security.trusted_types.enabled`
+  - : Set to `true` to enable.
 
-### Reporting API support for CSP Violations
+### Reporting API
 
 The [Reporting API](/en-US/docs/Web/API/Reporting_API) now has support for reporting [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) violations.
 
@@ -512,74 +532,38 @@ This violation report replaces a similar CSP-specific mechanism for sending viol
 - `dom.reporting.enabled`
   - : Set to `true` to enable.
 
-### WebRTC and media
+### Notifications API
 
-The following experimental features include those found in the [WebRTC API](/en-US/docs/Web/API/WebRTC_API), the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), the [Media Source Extensions API](/en-US/docs/Web/API/Media_Source_Extensions_API), the [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API), and the [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API).
+Notifications have the [`requireInteraction`](/en-US/docs/Web/API/Notification/requireInteraction) property set to true by default on Windows systems and in the Nightly release ([Firefox bug 1794475](https://bugzil.la/1794475)).
 
-#### Asynchronous SourceBuffer add and remove
-
-This adds the promise-based methods {{domxref("SourceBuffer.appendBufferAsync", "appendBufferAsync()")}} and {{domxref("SourceBuffer.removeAsync", "removeAsync()")}} for adding and removing media source buffers to the {{domxref("SourceBuffer")}} interface. See [Firefox bug 1280613](https://bugzil.la/1280613) and [Firefox bug 778617](https://bugzil.la/778617) for more information.
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 62            | No                  |
-| Developer Edition | 62            | No                  |
-| Beta              | 62            | No                  |
-| Release           | 62            | No                  |
-
-- `media.mediasource.experimental.enabled`
-  - : Set to `true` to enable.
-
-#### AVIF compliance strictness
-
-The `image.avif.compliance_strictness` preference can be used to control the _strictness_ applied when processing [AVIF](/en-US/docs/Web/Media/Guides/Formats/Image_types#avif_image) images.
-This allows Firefox users to display images that render on some other browsers, even if they are not strictly compliant.
-
-| Release channel   | Version added | Default value |
-| ----------------- | ------------- | ------------- |
-| Nightly           | 92            | 1             |
-| Developer Edition | 92            | 1             |
-| Beta              | 92            | 1             |
-| Release           | 92            | 1             |
-
-- `image.avif.compliance_strictness`
-  - : Numeric value indicating a _strictness_ level. Permitted values are:
-    - `0`: Permissive. Accept images with specification violations in both recommendations ("should" language) and requirements ("shall" language), provided they can be safely or unambiguously interpreted.
-    - `1` **(default)**: Mixed. Reject violations of requirements ("shall"), but allow violations of recommendations ("should").
-    - `2`: Strict. Reject any violations of specified requirements or recommendations.
-
-#### JPEG XL support
-
-Firefox supports [JPEG XL](https://jpeg.org/jpegxl/) images if this feature is enabled.
-See [Firefox bug 1539075](https://bugzil.la/1539075) for more details.
-
-Note that, as shown below, the feature is only available on Nightly builds (irrespective of whether the preference is set).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 90            | No                  |
-| Developer Edition | —             | —                   |
-| Beta              | —             | —                   |
-| Release           | —             | —                   |
-
-- `image.jxl.enabled`
-  - : Set to `true` to enable.
-
-### WebVR API
-
-#### WebVR API (Disabled)
-
-The deprecated [WebVR API](/en-US/docs/Web/API/WebVR_API) is on the path for removal.
-It is disabled by default on all builds [Firefox bug 1750902](https://bugzil.la/1750902).
-
-| Release channel   | Version removed | Enabled by default? |
+| Release channel   | Version changed | Enabled by default? |
 | ----------------- | --------------- | ------------------- |
-| Nightly           | 98              | No                  |
-| Developer Edition | 98              | No                  |
-| Beta              | 98              | No                  |
-| Release           | 98              | No                  |
+| Nightly           | 117             | Yes                 |
+| Developer Edition | 117             | No                  |
+| Beta              | 117             | No                  |
+| Release           | 117             | Windows only        |
 
-- `dom.vr.enabled`
+- `dom.webnotifications.requireinteraction.enabled`
+  - : Set to `true` to enable.
+
+### Graphics: Canvas, WebGL, and WebGPU
+
+#### WebGL: Draft extensions
+
+When this preference is enabled, any WebGL extensions currently in "draft" status which are being tested are enabled for use. Currently, there are no WebGL extensions being tested by Firefox.
+
+#### WebGPU API
+
+The [WebGPU API](/en-US/docs/Web/API/WebGPU_API) provides low-level support for performing computation and graphics rendering using the [Graphics Processing Unit](https://en.wikipedia.org/wiki/Graphics_Processing_Unit) (GPU) of the user's device or computer. See [Firefox bug 1602129](https://bugzil.la/1602129) for our progress on this API.
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 113           | Yes                 |
+| Developer Edition | 73            | No                  |
+| Beta              | 73            | No                  |
+| Release           | 73            | No                  |
+
+- `dom.webgpu.enabled`
   - : Set to `true` to enable.
 
 #### HTMLMediaElement properties: audioTracks and videoTracks
@@ -624,23 +608,89 @@ The `GeometryUtils` method `getBoxQuads()` returns the CSS boxes for a {{domxref
 - `layout.css.getBoxQuads.enabled`
   - : Set to `true` to enable.
 
-### Payment Request API
+### Screen Orientation API
 
-#### Primary payment handling
+The {{domxref("ScreenOrientation.lock()")}} method allows a device to be locked to a particular orientation, if supported by the device and allowed by browser pre-lock requirements.
+Typically locking the orientation is only allowed on mobile devices when the document is being displayed full screen.
+See [Firefox bug 1697647](https://bugzil.la/1697647) for more details.
 
-The [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) provides support for handling web-based payments within web content or apps. Due to a bug that came up during testing of the user interface, we have decided to postpone shipping this API while discussions over potential changes to the API are held. Work is ongoing. (See [Firefox bug 1318984](https://bugzil.la/1318984) for more details.)
+| Release channel   | Version changed | Enabled by default? |
+| ----------------- | --------------- | ------------------- |
+| Nightly           | 111             | Yes                 |
+| Developer Edition | 97              | No                  |
+| Beta              | 97              | No                  |
+| Release           | 97              | No                  |
+
+- `dom.screenorientation.allow-lock`
+  - : Set to `true` to enable.
+
+### WebVR API
+
+The deprecated [WebVR API](/en-US/docs/Web/API/WebVR_API) is on the path for removal.
+It is disabled by default on all builds [Firefox bug 1750902](https://bugzil.la/1750902).
+
+| Release channel   | Version removed | Enabled by default? |
+| ----------------- | --------------- | ------------------- |
+| Nightly           | 98              | No                  |
+| Developer Edition | 98              | No                  |
+| Beta              | 98              | No                  |
+| Release           | 98              | No                  |
+
+- `dom.vr.enabled`
+  - : Set to `true` to enable.
+
+### WebRTC and media
+
+The following experimental features include those found in the [WebRTC API](/en-US/docs/Web/API/WebRTC_API), the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), the [Media Source Extensions API](/en-US/docs/Web/API/Media_Source_Extensions_API), the [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API), and the [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API).
+
+#### AVIF compliance strictness
+
+The `image.avif.compliance_strictness` preference can be used to control the _strictness_ applied when processing [AVIF](/en-US/docs/Web/Media/Guides/Formats/Image_types#avif_image) images.
+This allows Firefox users to display images that render on some other browsers, even if they are not strictly compliant.
+
+| Release channel   | Version added | Default value |
+| ----------------- | ------------- | ------------- |
+| Nightly           | 92            | 1             |
+| Developer Edition | 92            | 1             |
+| Beta              | 92            | 1             |
+| Release           | 92            | 1             |
+
+- `image.avif.compliance_strictness`
+  - : Numeric value indicating a _strictness_ level. Permitted values are:
+    - `0`: Permissive. Accept images with specification violations in both recommendations ("should" language) and requirements ("shall" language), provided they can be safely or unambiguously interpreted.
+    - `1` **(default)**: Mixed. Reject violations of requirements ("shall"), but allow violations of recommendations ("should").
+    - `2`: Strict. Reject any violations of specified requirements or recommendations.
+
+#### JPEG XL support
+
+Firefox supports [JPEG XL](https://jpeg.org/jpegxl/) images if this feature is enabled.
+See [Firefox bug 1539075](https://bugzil.la/1539075) for more details.
+
+Note that, as shown below, the feature is only available on Nightly builds (irrespective of whether the preference is set).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 55            | No                  |
-| Developer Edition | 55            | No                  |
-| Beta              | 55            | No                  |
-| Release           | 55            | No                  |
+| Nightly           | 90            | No                  |
+| Developer Edition | —             | —                   |
+| Beta              | —             | —                   |
+| Release           | —             | —                   |
 
-- `dom.payments.request.enabled`
+- `image.jxl.enabled`
   - : Set to `true` to enable.
-- `dom.payments.request.supportedRegions`
-  - : Country codes as a comma-separated allowlist of regions (e.g., `US,CA`).
+
+#### Asynchronous SourceBuffer add and remove
+
+This adds the promise-based methods {{domxref("SourceBuffer.appendBufferAsync", "appendBufferAsync()")}} and {{domxref("SourceBuffer.removeAsync", "removeAsync()")}} for adding and removing media source buffers to the {{domxref("SourceBuffer")}} interface. See [Firefox bug 1280613](https://bugzil.la/1280613) and [Firefox bug 778617](https://bugzil.la/778617) for more information.
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 62            | No                  |
+| Developer Edition | 62            | No                  |
+| Beta              | 62            | No                  |
+| Release           | 62            | No                  |
+
+- `media.mediasource.experimental.enabled`
+  - : Set to `true` to enable.
 
 ### WebShare API
 
@@ -657,69 +707,37 @@ This feature is enabled on Android in all builds, but behind a preference on Des
 - `dom.webshare.enabled`
   - : Set to `true` to enable.
 
-### Screen Orientation API
+### Payment Request API
 
-#### ScreenOrientation.lock()
+The [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) provides support for handling web-based payments within web content or apps. Due to a bug that came up during testing of the user interface, we have decided to postpone shipping this API while discussions over potential changes to the API are held. Work is ongoing. (See [Firefox bug 1318984](https://bugzil.la/1318984) for more details.)
 
-The {{domxref("ScreenOrientation.lock()")}} method allows a device to be locked to a particular orientation, if supported by the device and allowed by browser pre-lock requirements.
-Typically locking the orientation is only allowed on mobile devices when the document is being displayed full screen.
-See [Firefox bug 1697647](https://bugzil.la/1697647) for more details.
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 55            | No                  |
+| Developer Edition | 55            | No                  |
+| Beta              | 55            | No                  |
+| Release           | 55            | No                  |
 
-| Release channel   | Version changed | Enabled by default? |
-| ----------------- | --------------- | ------------------- |
-| Nightly           | 111             | Yes                 |
-| Developer Edition | 97              | No                  |
-| Beta              | 97              | No                  |
-| Release           | 97              | No                  |
-
-- `dom.screenorientation.allow-lock`
+- `dom.payments.request.enabled`
   - : Set to `true` to enable.
-
-### Prioritized Task Scheduling API
-
-The [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) provides a standardized way to prioritize all tasks belonging to an application, whether they are defined in a website developer's code, or in third-party libraries and frameworks.
-From Firefox version 140 the API is both feature complete and enabled in the Nightly release.
-([Firefox bug 1734997](https://bugzil.la/1734997) and [Firefox bug 1920115](https://bugzil.la/1920115)).
-
-| Release channel   | Version changed | Enabled by default? |
-| ----------------- | --------------- | ------------------- |
-| Nightly           | 139             | Yes                 |
-| Developer Edition | 101             | No                  |
-| Beta              | 101             | No                  |
-| Release           | 101             | No                  |
-
-- `dom.enable_web_task_scheduling`
-  - : Set to `true` to enable.
-
-### Notifications API
-
-Notifications have the [`requireInteraction`](/en-US/docs/Web/API/Notification/requireInteraction) property set to true by default on Windows systems and in the Nightly release ([Firefox bug 1794475](https://bugzil.la/1794475)).
-
-| Release channel   | Version changed | Enabled by default? |
-| ----------------- | --------------- | ------------------- |
-| Nightly           | 117             | Yes                 |
-| Developer Edition | 117             | No                  |
-| Beta              | 117             | No                  |
-| Release           | 117             | Windows only        |
-
-- `dom.webnotifications.requireinteraction.enabled`
-  - : Set to `true` to enable.
-
-### View Transition API
-
-The [View Transition API](/en-US/docs/Web/API/View_Transition_API) provides a mechanism for easily creating animated transitions between different website views. This is especially useful for [SPAs (single-page applications)](/en-US/docs/Glossary/SPA). ([Firefox bug 1950759](https://bugzil.la/1950759)).
-
-| Release channel   | Version changed | Enabled by default? |
-| ----------------- | --------------- | ------------------- |
-| Nightly           | 139             | Yes                 |
-| Developer Edition | 139             | No                  |
-| Beta              | 139             | No                  |
-| Release           | 139             | No                  |
-
-- `dom.viewTransitions.enabled`
-  - : Set to `true` to enable.
+- `dom.payments.request.supportedRegions`
+  - : Country codes as a comma-separated allowlist of regions (e.g., `US,CA`).
 
 ## Security and privacy
+
+### Privacy Preserving Attribution API (PPA)
+
+[PPA API](https://support.mozilla.org/en-US/kb/privacy-preserving-attribution) provides an alternative to user tracking for ad attribution using the new `navigator.privateAttribution` object with `saveImpression()` and `measureConversion()` methods. Read more about PPA [in the original explainer](https://github.com/mozilla/explainers/tree/main/archive/ppa-experiment) and the [proposed spec](https://w3c.github.io/ppa/). This experiment can be enabled for websites via [origin trial](https://wiki.mozilla.org/Origin_Trials) or in the browser by setting the preference to `1`. ([Firefox bug 1900929](https://bugzil.la/1900929)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 128           | No                  |
+| Developer Edition | 128           | No                  |
+| Beta              | 128           | No                  |
+| Release           | 128           | No                  |
+
+- `dom.origin-trials.private-attribution.state`
+  - : Set to `true` to enable.
 
 ### Insecure page labeling
 
@@ -756,18 +774,18 @@ Note that supported policies can be set through the [`allow`](/en-US/docs/Web/HT
 - `dom.security.featurePolicy.header.enabled`
   - : Set to `true` to enable.
 
-### Privacy Preserving Attribution API (PPA)
+### Block plain text requests from Flash on encrypted pages
 
-[PPA API](https://support.mozilla.org/en-US/kb/privacy-preserving-attribution) provides an alternative to user tracking for ad attribution using the new `navigator.privateAttribution` object with `saveImpression()` and `measureConversion()` methods. Read more about PPA [in the original explainer](https://github.com/mozilla/explainers/tree/main/archive/ppa-experiment) and the [proposed spec](https://w3c.github.io/ppa/). This experiment can be enabled for websites via [origin trial](https://wiki.mozilla.org/Origin_Trials) or in the browser by setting the preference to `1`. ([Firefox bug 1900929](https://bugzil.la/1900929)).
+In order to help mitigate man-in-the-middle (MitM) attacks caused by Flash content on encrypted pages, a preference has been added to treat `OBJECT_SUBREQUEST`s as active content. See [Firefox bug 1190623](https://bugzil.la/1190623) for more details.
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 128           | No                  |
-| Developer Edition | 128           | No                  |
-| Beta              | 128           | No                  |
-| Release           | 128           | No                  |
+| Nightly           | 59            | No                  |
+| Developer Edition | 59            | No                  |
+| Beta              | 59            | No                  |
+| Release           | 59            | No                  |
 
-- `dom.origin-trials.private-attribution.state`
+- `security.mixed_content.block_object_subrequest`
   - : Set to `true` to enable.
 
 ## HTTP
@@ -784,22 +802,6 @@ The HTTP [`Accept`](/en-US/docs/Web/HTTP/Reference/Headers/Accept) header in [de
 | Release           | 128           | No                  |
 
 - `image.jxl.enabled`
-  - : Set to `true` to enable.
-
-### SameSite=Lax by default
-
-[`SameSite` cookies](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) have a default value of `Lax`.
-With this setting, cookies are only sent when a user is navigating to the origin site, not for cross-site subrequests to load images or frames into a third party site and so on.
-For more details see [Firefox bug 1617609](https://bugzil.la/1617609).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 69            | No                  |
-| Developer Edition | 69            | No                  |
-| Beta              | 69            | No                  |
-| Release           | 69            | No                  |
-
-- `network.cookie.sameSite.laxByDefault`
   - : Set to `true` to enable.
 
 ### Access-Control-Allow-Headers wildcard does not cover Authorization
@@ -821,9 +823,25 @@ For more details see [Firefox bug 1687364](https://bugzil.la/1687364).
 - `network.cors_preflight.authorization_covered_by_wildcard`
   - : Set to `true` to enable.
 
+### SameSite=Lax by default
+
+[`SameSite` cookies](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) have a default value of `Lax`.
+With this setting, cookies are only sent when a user is navigating to the origin site, not for cross-site subrequests to load images or frames into a third party site and so on.
+For more details see [Firefox bug 1617609](https://bugzil.la/1617609).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 69            | No                  |
+| Developer Edition | 69            | No                  |
+| Beta              | 69            | No                  |
+| Release           | 69            | No                  |
+
+- `network.cookie.sameSite.laxByDefault`
+  - : Set to `true` to enable.
+
 ## Developer tools
 
-Mozilla's developer tools are constantly evolving. We experiment with new ideas, add new features, and test them on the Nightly and Developer Edition channels before letting them go through to beta and release. The features below are the current crop of experimental developer tool features.
+Mozilla's developer tools are constantly evolving. We experiment with new ideas, add new features, and test them on the Nightly and Developer Edition channels before moving them to Beta and Release channels. This section lists the current set of experimental developer tool features.
 
 **No experimental features in this release cycle.**
 
