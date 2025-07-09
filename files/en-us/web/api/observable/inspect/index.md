@@ -21,7 +21,6 @@ inspect(inspector)
 ### Parameters
 
 - `inspector` {{optional_inline}}
-
   - : An object or a callback function. If the provided `inspector` is an object, it can contain the following properties:
 
     - `next` {{optional_inline}}
