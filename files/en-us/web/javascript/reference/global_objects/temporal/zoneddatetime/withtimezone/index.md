@@ -1,5 +1,6 @@
 ---
 title: Temporal.ZonedDateTime.prototype.withTimeZone()
+short-title: withTimeZone()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/withTimeZone
 page-type: javascript-instance-method
 status:

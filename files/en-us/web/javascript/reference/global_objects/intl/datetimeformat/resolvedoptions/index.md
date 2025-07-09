@@ -1,5 +1,6 @@
 ---
 title: Intl.DateTimeFormat.prototype.resolvedOptions()
+short-title: resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.DateTimeFormat.resolvedOptions
@@ -46,7 +47,6 @@ A new object with properties reflecting the options computed during the initiali
 - `numberingSystem`
   - : The value provided for this property in the `options` argument, or using the Unicode extension key `"nu"`, with default filled in as needed. It is a supported [numbering system](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_numbering_system_types) for this locale. The default is locale dependent.
 - `timeZone`
-
   - : The value provided for this property in the `options` argument, with default filled in as needed. It is an [IANA time zone name](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets). The default is the runtime's default time zone.
 
     > [!NOTE]
@@ -57,13 +57,11 @@ A new object with properties reflecting the options computed during the initiali
 - `hour12` {{optional_inline}}
   - : Calculated from `hourCycle`. It is only present if the resolved options also include `hour` or `timeStyle`. It is `true` if `hourCycle` is `"h11"` or `"h12"`, and `false` if `hourCycle` is `"h23"` or `"h24"`.
 - `weekday`, `era`, `year`, `month`, `day`, `dayPeriod`, `hour`, `minute`, `second`, `fractionalSecondDigits`, `timeZoneName` {{optional_inline}}
-
   - : The values resulting from format matching between the corresponding properties in the `options` argument and the available combinations and representations for date-time formatting in the selected locale. Some of these properties may not be present, indicating that the corresponding components will not be represented in formatted output. `weekday`, `era`, and `dayPeriod` are either `"narrow"`, `"short"`, or `"long"`; `year`, `day`, `hour`, `minute`, and `second` are either `"numeric"`, `"2-digit"`, or `"narrow"`; `month` is either `"numeric"`, `"2-digit"`, `"narrow"`, `"short"`, or `"long"`; `fractionalSecondDigits` is either `1`, `2`, or `3`; `timeZoneName` is either `"short"`, `"long"`, `"shortOffset"`, `"longOffset"`, `"shortGeneric"`, or `"longGeneric"`.
 
     If these properties were requested in `options`, the constructor prevents `dateStyle` and `timeStyle` from being specified, so the below group will never be present.
 
 - `dateStyle`, `timeStyle` {{optional_inline}}
-
   - : The values provided for these properties in the `options` argument. They are either `"full"`, `"long"`, `"medium"`, `"short"`, or `"none"`. Some of these properties may not be present, indicating that the corresponding components will not be represented in formatted output.
 
     If these properties were requested in `options`, the constructor prevents individual date time component options from being specified, so the above group will never be present.

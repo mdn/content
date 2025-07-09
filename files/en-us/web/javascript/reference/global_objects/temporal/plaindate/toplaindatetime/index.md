@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainDate.prototype.toPlainDateTime()
+short-title: toPlainDateTime()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/toPlainDateTime
 page-type: javascript-instance-method
 status:

@@ -38,7 +38,7 @@ _The `MediaQueryList` interface inherits methods from its parent interface, {{DO
 _The following events are delivered to `MediaQueryList` objects:_
 
 - {{DOMxRef("MediaQueryList.change_event", "change")}}
-  - : Sent to the `MediaQueryList` when the result of running the media query against the document changes. For example, if the media query is `(min-width: 400px)`, the `change` event is fired any time the width of the document's {{Glossary("viewport")}} changes such that its width moves across the 400px boundary in either direction.
+  - : Sent to the `MediaQueryList` when the result of running the media query against the document changes. For example, if the media query is `(width >= 400px)`, the `change` event is fired any time the width of the document's {{Glossary("viewport")}} changes such that its width moves across the 400px boundary in either direction.
 
 ## Examples
 
@@ -46,7 +46,7 @@ This example creates a `MediaQueryList` and then sets up a listener to detect wh
 
 ```js
 const para = document.querySelector("p");
-const mql = window.matchMedia("(max-width: 600px)");
+const mql = window.matchMedia("(width <= 600px)");
 
 function screenTest(e) {
   if (e.matches) {

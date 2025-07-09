@@ -10,7 +10,7 @@ The aim of this skill test is to assess whether you understand [how to use media
 
 > [!NOTE]
 > Because you need to test your design in multiple screen sizes, we do not have interactive editors on this page.
-> Download the code and work locally, or use an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+> Download the code and work locally, or use an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 >
 > If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 

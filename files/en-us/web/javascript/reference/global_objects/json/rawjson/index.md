@@ -1,5 +1,6 @@
 ---
 title: JSON.rawJSON()
+short-title: rawJSON()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/rawJSON
 page-type: javascript-static-method
 browser-compat: javascript.builtins.JSON.rawJSON
@@ -27,7 +28,7 @@ An object that can be used to create JSON text with the exact same content as th
 - `rawJSON`
   - : The original JSON `string` provided.
 
-Furthermore, it has a [private property](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) that marks itself as a raw JSON object. This allows it to be identified by {{jsxref("JSON.stringify()")}} and {{jsxref("JSON.isRawJSON()")}}.
+Furthermore, it has a [private field](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) that marks itself as a raw JSON object. This allows it to be identified by {{jsxref("JSON.stringify()")}} and {{jsxref("JSON.isRawJSON()")}}.
 
 ### Exceptions
 

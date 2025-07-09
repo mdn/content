@@ -1,5 +1,6 @@
 ---
 title: Iterator.prototype.flatMap()
+short-title: flatMap()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/flatMap
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Iterator.flatMap

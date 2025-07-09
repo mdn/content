@@ -3,9 +3,8 @@ title: isNaN()
 slug: Web/JavaScript/Reference/Global_Objects/isNaN
 page-type: javascript-function
 browser-compat: javascript.builtins.isNaN
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Objects")}}
 
 The **`isNaN()`** function determines whether a value is {{jsxref("NaN")}}, first converting the value to a number if necessary. Because coercion inside the `isNaN()` function can be [surprising](#description), you may prefer to use {{jsxref("Number.isNaN()")}}.
 

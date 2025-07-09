@@ -3,9 +3,8 @@ title: HTTP response status codes
 slug: Web/HTTP/Reference/Status
 page-type: landing-page
 browser-compat: http.status
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 HTTP response status codes indicate whether a specific [HTTP](/en-US/docs/Web/HTTP) request has been successfully completed.
 Responses are grouped in five classes:

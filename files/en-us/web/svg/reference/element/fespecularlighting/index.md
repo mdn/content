@@ -52,7 +52,7 @@ This element implements the {{domxref("SVGFESpecularLightingElement")}} interfac
       k3="1"
       k4="0" />
   </filter>
-  <circle cx="110" cy="110" r="100" style="filter:url(#filter)" />
+  <circle cx="110" cy="110" r="100" filter="url(#filter)" />
 </svg>
 ```
 

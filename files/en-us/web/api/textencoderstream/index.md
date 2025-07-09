@@ -25,8 +25,7 @@ The **`TextEncoderStream`** interface of the {{domxref('Encoding API','','',' ')
 
 ## Examples
 
-- [Examples of streaming structured data and HTML](https://streams.spec.whatwg.org/demos/)
-- [An example of fetch request streams which uses `TextEncoderStream` to upload the data](https://glitch.com/~fetch-request-stream).
+[Examples of streaming structured data and HTML](https://streams.spec.whatwg.org/demos/)
 
 ## Specifications
 
@@ -41,3 +40,4 @@ The **`TextEncoderStream`** interface of the {{domxref('Encoding API','','',' ')
 - {{domxref("TextDecoderStream")}}
 - [Streams API Concepts](/en-US/docs/Web/API/Streams_API/Concepts)
 - [Experimenting with the Streams API](https://deanhume.com/experimenting-with-the-streams-api/)
+- [Streaming requests with the fetch API](https://developer.chrome.com/docs/capabilities/web-apis/fetch-streaming-requests), developer.chrome.com (2020)

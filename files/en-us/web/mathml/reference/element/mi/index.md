@@ -20,14 +20,11 @@ In order to use a particular form of a character such as bold/italic, serif, san
 ## Attributes
 
 - `mathvariant`
-
   - : The only value allowed in the current specification is `normal` (case insensitive):
-
     - `normal`
       - : Use default/normal rendering, removing automatic styling of single characters to italic.
 
     Deprecated legacy values are:
-
     - `bold` {{deprecated_inline}}
       - : Try and use bold characters e.g., "𝐀".
     - `italic` {{deprecated_inline}}

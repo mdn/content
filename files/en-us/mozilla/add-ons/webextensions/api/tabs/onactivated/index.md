@@ -31,9 +31,7 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `activeInfo`
       - : `object`. ID of the tab that was made active, and ID of its window. See the [activeInfo](#activeinfo_2) section for more details.
 

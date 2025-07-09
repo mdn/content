@@ -3,7 +3,7 @@ title: HTTP reference
 short-title: Reference
 slug: Web/HTTP/Reference
 page-type: listing-page
-sidebar: httpsidebar
+sidebar: http
 ---
 
 This page lists HTTP reference documentation on MDN.

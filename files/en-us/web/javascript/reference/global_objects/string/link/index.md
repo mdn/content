@@ -1,5 +1,6 @@
 ---
 title: String.prototype.link()
+short-title: link()
 slug: Web/JavaScript/Reference/Global_Objects/String/link
 page-type: javascript-instance-method
 status:

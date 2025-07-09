@@ -33,22 +33,17 @@ getAutoplayPolicy(context)
 The method must be called with one (and only one) of the following three parameters:
 
 - `type` {{optional_inline}}
-
   - : A string indicating the media playing _feature_ for which the broad autoplay policy is required.
 
     The supported values are:
-
     - `mediaelement`
-
       - : Get the broad autoplay policy for media elements in the document.
         Media elements are [`HTMLMediaElement`](/en-US/docs/Web/API/HTMLMediaElement) derived objects such as [`HTMLAudioElement`](/en-US/docs/Web/API/HTMLAudioElement) and [`HTMLVideoElement`](/en-US/docs/Web/API/HTMLVideoElement), and their corresponding tags {{HTMLElement("audio")}} and {{HTMLElement("video")}}.
 
     - `audiocontext`
-
       - : Get the broad autoplay policy for [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) players in the document.
 
 - `element` {{optional_inline}}
-
   - : A specific media element.
     This must be an [`HTMLMediaElement`](/en-US/docs/Web/API/HTMLMediaElement), including derived elements such as [`HTMLVideoElement`](/en-US/docs/Web/API/HTMLVideoElement) and [`HTMLAudioElement`](/en-US/docs/Web/API/HTMLAudioElement).
 

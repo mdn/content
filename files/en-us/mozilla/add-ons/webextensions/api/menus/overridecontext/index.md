@@ -24,9 +24,7 @@ browser.menus.overrideContext(
 ### Parameters
 
 - `contextOptions`
-
   - : `object`. Options for how the context menus will be overridden.
-
     - `showDefaults` {{optional_inline}}
       - : `boolean`. Whether to also include default menu items in the menu.
     - `context` {{optional_inline}}

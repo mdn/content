@@ -27,9 +27,7 @@ let gettingIsOpen = browser.sidebarAction.isOpen(
 ### Parameters
 
 - `details`
-
   - : `object`. An object optionally containing the `windowId` to check.
-
     - `windowId` {{optional_inline}}
       - : `integer`. ID of a browser window to check. If omitted defaults to {{WebExtAPIRef("windows.WINDOW_ID_CURRENT")}}, which refers to the topmost browser window.
 

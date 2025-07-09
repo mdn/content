@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.filter()
+short-title: filter()
 slug: Web/JavaScript/Reference/Global_Objects/Array/filter
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.filter
@@ -74,17 +75,26 @@ The following example returns all prime numbers in the array:
 ```js
 const array = [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 
-function isPrime(num) {
-  for (let i = 2; num > i; i++) {
-    if (num % i === 0) {
+function isPrime(n) {
+  if (n < 2) {
+    return false;
+  }
+  if (n % 2 === 0) {
+    return n === 2;
+  }
+  for (let factor = 3; factor * factor <= n; factor += 2) {
+    if (n % factor === 0) {
       return false;
     }
   }
-  return num > 1;
+  return true;
 }
 
 console.log(array.filter(isPrime)); // [2, 3, 5, 7, 11, 13]
 ```
+
+> [!NOTE]
+> The `isPrime()` implementation is for demonstration only. For a real-world application, you would want to use a heavily memoized algorithm such as the [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) to avoid repeated calculations.
 
 ### Filtering invalid entries from JSON
 

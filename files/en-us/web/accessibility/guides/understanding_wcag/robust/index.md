@@ -98,7 +98,6 @@ This guideline focuses on making content as compatible as possible, not only wit
 ## See also
 
 - [WCAG](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG)
-
   1. [Perceivable](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable)
   2. [Operable](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable)
   3. [Understandable](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable)

@@ -110,7 +110,7 @@ The `outline-style` property is specified as any one of the values listed below.
 
 ### Setting outline style to auto
 
-The `auto` value indicates a custom outline style, described in [the specification](https://www.w3.org/TR/css-ui-3/#outline-style) as "typically a style \[that] is either a user interface default for the platform, or perhaps a style that is richer than can be described in detail in CSS, e.g., a rounded edge outline with semi-translucent outer pixels that appears to glow".
+The `auto` value indicates a custom outline style, described in [the specification](https://drafts.csswg.org/css-ui/#outline-style) as "typically a style \[that] is either a user interface default for the platform, or perhaps a style that is richer than can be described in detail in CSS, e.g., a rounded edge outline with semi-translucent outer pixels that appears to glow".
 
 #### HTML
 

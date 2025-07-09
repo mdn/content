@@ -10,7 +10,7 @@ We ask that you keep each discussion focused on the topic at hand instead of cov
 
 > [!NOTE]
 > Don't use GitHub Discussions to report bugs.
-> If you see something wrong on MDN Web Docs, open a GitHub issue in the [the relevant GitHub repository](/en-US/docs/MDN/Community/Our_repositories).
+> If you see something wrong on MDN Web Docs, open a GitHub issue in a relevant [MDN GitHub repository](/en-US/docs/MDN/Community/Our_repositories).
 
 If you're not sure whether to open a GitHub issue or discussion, here's what each are for:
 

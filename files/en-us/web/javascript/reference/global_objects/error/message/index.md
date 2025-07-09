@@ -1,5 +1,6 @@
 ---
 title: "Error: message"
+short-title: message
 slug: Web/JavaScript/Reference/Global_Objects/Error/message
 page-type: javascript-instance-data-property
 browser-compat: javascript.builtins.Error.message

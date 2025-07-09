@@ -22,7 +22,7 @@ writing-mode: vertical-rl;
 ```
 
 ```css interactive-example-choice
-border-inline-color: rgb(170, 50, 220, 0.6);
+border-inline-color: rgb(170 50 220 / 0.6);
 writing-mode: horizontal-tb;
 direction: rtl;
 ```

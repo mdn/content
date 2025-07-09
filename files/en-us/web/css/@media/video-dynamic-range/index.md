@@ -16,7 +16,6 @@ Some user agents, including many TVs, render video and graphics in two separate 
 The `video-dynamic-range` feature is specified as a keyword value chosen from the list below.
 
 - `standard`
-
   - : This value matches any visual device and excludes devices lacking visual capabilities. A user agent or an output device that matches `high` will also match the `standard` value.
 
 - `high`

@@ -34,7 +34,9 @@ Like other filter primitives, it handles color components in the `linearRGB` {{g
     y="40"
     width="100"
     height="100"
-    style="stroke: #000000; fill: green; filter: url(#feOffset);" />
+    stroke="black"
+    fill="green"
+    filter="url(#feOffset)" />
 </svg>
 ```
 

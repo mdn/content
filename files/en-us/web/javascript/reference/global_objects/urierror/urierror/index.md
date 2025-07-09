@@ -1,5 +1,6 @@
 ---
 title: URIError() constructor
+short-title: URIError()
 slug: Web/JavaScript/Reference/Global_Objects/URIError/URIError
 page-type: javascript-constructor
 browser-compat: javascript.builtins.URIError.URIError
@@ -25,7 +26,8 @@ URIError(message, fileName)
 URIError(message, fileName, lineNumber)
 ```
 
-> **Note:** `URIError()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `URIError` instance.
+> [!NOTE]
+> `URIError()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `URIError` instance.
 
 ### Parameters
 

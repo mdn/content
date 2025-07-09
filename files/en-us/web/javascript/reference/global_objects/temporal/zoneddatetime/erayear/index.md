@@ -1,5 +1,6 @@
 ---
 title: Temporal.ZonedDateTime.prototype.eraYear
+short-title: eraYear
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/eraYear
 page-type: javascript-instance-accessor-property
 status:

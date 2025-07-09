@@ -1,5 +1,6 @@
 ---
 title: Realizing common layouts using grids
+short-title: Common grid layouts
 slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
 page-type: guide
 ---
@@ -112,7 +113,7 @@ This does not create a layout. Rather, the items now have names we can use to do
 With our mobile layout in place, we can now proceed to add a {{cssxref("@media")}} query to adapt this layout for bigger screens with enough real estate to display two columns.
 
 ```css
-@media (min-width: 500px) {
+@media (width >= 500px) {
   .wrapper {
     grid-template-columns: 1fr 3fr;
     grid-template-areas:
@@ -133,7 +134,7 @@ You can see the layout taking shape in the value of {{cssxref("grid-template-are
 We can now add a final breakpoint for wider screens able to display a three-column layout.
 
 ```css
-@media (min-width: 700px) {
+@media (width >= 700px) {
   .wrapper {
     grid-template-columns: 1fr 4fr 1fr;
     grid-template-areas:
@@ -311,7 +312,7 @@ At the next breakpoint, we want a two-column layout. Our header and navigation s
 The `ad` panel is below the sidebar, starting at grid row line 4. Then we have the content and footer starting at col-start 4 and spanning nine tracks, taking both to the end of the grid.
 
 ```css
-@media (min-width: 500px) {
+@media (width >= 500px) {
   .side {
     grid-column: col-start / span 3;
     grid-row: 3;
@@ -334,7 +335,7 @@ The `ad` panel is below the sidebar, starting at grid row line 4. Then we have t
 Finally, for screens larger than our largest breakpoint, we define a three-column version of this layout. The header continues to span right across the grid, but now the navigation moves down to become the first sidebar, with the content and then the sidebar next to it. The footer now also spans across the full layout.
 
 ```css
-@media (min-width: 700px) {
+@media (width >= 700px) {
   .main-nav {
     grid-column: col-start / span 2;
     grid-row: 2 / 4;

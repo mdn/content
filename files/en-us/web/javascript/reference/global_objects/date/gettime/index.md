@@ -1,5 +1,6 @@
 ---
 title: Date.prototype.getTime()
+short-title: getTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getTime

@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.flatMap()
+short-title: flatMap()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.flatMap

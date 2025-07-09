@@ -3,12 +3,10 @@ title: "GPUCompilationMessage: type property"
 short-title: type
 slug: Web/API/GPUCompilationMessage/type
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.GPUCompilationMessage.type
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`type`** read-only property of the
 {{domxref("GPUCompilationMessage")}} interface is an enumerated value representing the type of the message. Each type represents a different severity level.

@@ -66,8 +66,7 @@ The {{CSSxRef("@property")}} at-rule allows you to register an advanced custom p
 - [Typed OM API Guide](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
 - [Using the CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API/Guide)
 
-## External resources
+## See also
 
-- [Interactive introduction to Houdini](https://houdini.glitch.me/)
 - [A Practical Overview of CSS Houdini](https://www.smashingmagazine.com/2020/03/practical-overview-css-houdini/)
 - [Smarter custom properties with Houdini's new API](https://web.dev/articles/css-props-and-vals)

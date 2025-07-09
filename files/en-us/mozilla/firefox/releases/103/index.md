@@ -2,9 +2,8 @@
 title: Firefox 103 for developers
 slug: Mozilla/Firefox/Releases/103
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 103 that will affect developers. Firefox 103 was released on July 26, 2022.
 

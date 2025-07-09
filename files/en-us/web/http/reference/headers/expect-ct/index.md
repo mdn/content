@@ -6,9 +6,10 @@ page-type: http-header
 status:
   - deprecated
 browser-compat: http.headers.Expect-CT
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 The `Expect-CT` {{Glossary("response header")}} lets sites opt in to reporting and/or enforcement of [Certificate Transparency](/en-US/docs/Web/Security/Certificate_Transparency) requirements.
 Certificate Transparency (CT) aims to prevent the use of misissued certificates for that site from going unnoticed.
@@ -58,19 +59,16 @@ Expect-CT: report-uri="<uri>",
 ## Directives
 
 - `max-age`
-
   - : The number of seconds after reception of the `Expect-CT` header field during which the user agent should regard the host of the received message as a known `Expect-CT` host.
 
     If a cache receives a value greater than it can represent, or if any of its subsequent calculations overflows, the cache will consider this value to be either 2,147,483,648 (2^31) or the greatest positive integer it can represent.
 
 - `report-uri="<uri>"` {{optional_inline}}
-
   - : The URI where the user agent should report `Expect-CT` failures.
 
     When present with the `enforce` directive, the configuration is referred to as an "enforce-and-report" configuration, signalling to the user agent both that compliance to the Certificate Transparency policy should be enforced _and_ that violations should be reported.
 
 - `enforce` {{optional_inline}}
-
   - : Signals to the user agent that compliance with the Certificate Transparency policy should be enforced (rather than only reporting compliance) and that the user agent should refuse future connections that violate its Certificate Transparency policy.
 
     When both the `enforce` directive and the `report-uri` directive are present, the configuration is referred to as an "enforce-and-report" configuration, signalling to the user agent both that compliance to the Certificate Transparency policy should be enforced and that violations should be reported.

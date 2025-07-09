@@ -4,9 +4,8 @@ short-title: Referer
 slug: Web/HTTP/Reference/Headers/Referer
 page-type: http-header
 browser-compat: http.headers.Referer
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Referer`** {{Glossary("request header")}} contains the absolute or partial address from which a resource has been requested.
 The `Referer` header allows a server to identify referring pages that people are visiting from or where requested resources are being used.
@@ -18,7 +17,7 @@ When you make resource requests to another domain, the `Referer` contains the ad
 The `Referer` header can contain an _origin_, _path_, and _querystring_, and may not contain [URL fragments](/en-US/docs/Web/URI/Reference/Fragment) (i.e., `#section`) or `username:password` information.
 The request's _referrer policy_ defines the data that can be included. See {{HTTPHeader("Referrer-Policy")}} for more [information](/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy#directives) and [examples](/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy#examples).
 
-The `Referer` should also be sent in requests following a {{httpheader("Refresh")}} response (or equivalent [`<meta http-equiv="refresh" content="...">`](/en-US/docs/Web/HTML/Reference/Elements/meta#http-equiv)) that causes a navigation to a new page, if permitted by the referrer policy.
+The `Referer` should also be sent in requests following a {{httpheader("Refresh")}} response (or equivalent [`<meta http-equiv="refresh" content="...">`](/en-US/docs/Web/HTML/Reference/Elements/meta/http-equiv)) that causes a navigation to a new page, if permitted by the referrer policy.
 
 > [!NOTE]
 > The header name "referer" is actually a misspelling of the word "referrer".

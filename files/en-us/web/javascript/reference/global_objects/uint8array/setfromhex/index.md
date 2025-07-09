@@ -1,5 +1,6 @@
 ---
 title: Uint8Array.prototype.setFromHex()
+short-title: setFromHex()
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array/setFromHex
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Uint8Array.setFromHex
@@ -20,9 +21,7 @@ setFromHex(string)
 ### Parameters
 
 - `string`
-
   - : A hexadecimal string encoding bytes to write into a `Uint8Array`. The string must:
-
     - Have an even number of characters because two characters encode one byte.
     - Only contain characters in the hexadecimal alphabet, which includes 0–9 and A–F (case-insensitive).
     - Not contain whitespace (unlike {{jsxref("Uint8Array.prototype.setFromBase64()")}}).

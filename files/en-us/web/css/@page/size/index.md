@@ -47,9 +47,7 @@ size: A4 portrait;
 - `<length>`
   - : Any length value (see {{cssxref("&lt;length&gt;")}}). The first value corresponds to the width of the page box and the second one corresponds to its height. If only one value is provided, it is used for both width and height.
 - `<page-size>`
-
   - : A keyword which may be any of the following values:
-
     - A5
       - : This matches the standard, ISO dimensions: 148mm x 210mm.
     - A4

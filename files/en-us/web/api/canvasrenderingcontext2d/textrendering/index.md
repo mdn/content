@@ -26,7 +26,6 @@ This one of:
   - : The browser emphasizes legibility over rendering speed and geometric precision.
     This enables kerning and optional ligatures.
 - `geometricPrecision`
-
   - : The browser emphasizes geometric precision over rendering speed and legibility.
     Certain aspects of fonts — such as kerning — don't scale linearly.
     For large scale factors, you might see less-than-beautiful text rendering, but the size is what you would expect (neither rounded up nor down to the nearest font size supported by the underlying operating system).

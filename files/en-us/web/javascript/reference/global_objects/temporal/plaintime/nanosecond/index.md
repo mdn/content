@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainTime.prototype.nanosecond
+short-title: nanosecond
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime/nanosecond
 page-type: javascript-instance-accessor-property
 status:

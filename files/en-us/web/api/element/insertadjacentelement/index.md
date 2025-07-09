@@ -21,11 +21,9 @@ insertAdjacentElement(position, element)
 ### Parameters
 
 - `position`
-
   - : A string representing the position relative to the
     `targetElement`; must match (case-insensitively) one of the following
     strings:
-
     - `'beforebegin'`: Before the
       `targetElement` itself.
     - `'afterbegin'`: Just inside the

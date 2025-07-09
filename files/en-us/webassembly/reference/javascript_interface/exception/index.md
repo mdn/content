@@ -30,7 +30,6 @@ The constructor may then return an exception with a stack trace attached to the 
 ## Instance methods
 
 - [`Exception.prototype.is()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/is)
-
   - : Tests whether the exception matches a particular tag.
 
 - [`Exception.prototype.getArg()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/getArg)

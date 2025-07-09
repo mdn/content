@@ -1,5 +1,6 @@
 ---
 title: TypedArray.prototype.with()
+short-title: with()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/with
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.with

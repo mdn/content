@@ -1,5 +1,6 @@
 ---
 title: Int32Array() constructor
+short-title: Int32Array()
 slug: Web/JavaScript/Reference/Global_Objects/Int32Array/Int32Array
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Int32Array.Int32Array
@@ -22,7 +23,8 @@ new Int32Array(buffer, byteOffset)
 new Int32Array(buffer, byteOffset, length)
 ```
 
-> **Note:** `Int32Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Int32Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

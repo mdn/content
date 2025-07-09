@@ -2,9 +2,8 @@
 title: Overview of HTTP
 slug: Web/HTTP/Guides/Overview
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 **HTTP** is a {{Glossary("protocol")}} for fetching resources such as HTML documents.
 It is the foundation of any data exchange on the Web and it is a client-server protocol, which means requests are initiated by the recipient, usually the Web browser.

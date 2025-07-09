@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainDateTime.from()
+short-title: from()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime/from
 page-type: javascript-static-method
 status:

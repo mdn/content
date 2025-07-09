@@ -1,5 +1,6 @@
 ---
 title: Array.from()
+short-title: from()
 slug: Web/JavaScript/Reference/Global_Objects/Array/from
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Array.from

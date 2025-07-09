@@ -1,5 +1,6 @@
 ---
 title: Math.hypot()
+short-title: hypot()
 slug: Web/JavaScript/Reference/Global_Objects/Math/hypot
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.hypot

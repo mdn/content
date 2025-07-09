@@ -1,5 +1,6 @@
 ---
 title: RegExp.prototype.ignoreCase
+short-title: ignoreCase
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.RegExp.ignoreCase

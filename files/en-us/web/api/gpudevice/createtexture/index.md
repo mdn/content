@@ -3,12 +3,10 @@ title: "GPUDevice: createTexture() method"
 short-title: createTexture()
 slug: Web/API/GPUDevice/createTexture
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUDevice.createTexture
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`createTexture()`** method of the
 {{domxref("GPUDevice")}} interface creates a {{domxref("GPUTexture")}} in which to store 1D, 2D, or 3D arrays of data, such as images, to use in GPU rendering operations.
@@ -22,13 +20,9 @@ createTexture(descriptor)
 ### Parameters
 
 - `descriptor`
-
   - : An object containing the following properties:
-
     - `dimension` {{optional_inline}}
-
       - : An enumerated value indicating the dimension level of the texture. Possible values are:
-
         - `"1d"`: The texture is one-dimensional.
         - `"2d"`: The texture is two-dimensional or an array of two-dimensional layers.
         - `"3d"`: The texture is three-dimensional.
@@ -36,7 +30,6 @@ createTexture(descriptor)
         `dimension` defaults to `"2d"` if the value is omitted.
 
     - `format`
-
       - : An enumerated value specifying the format of the texture. See the [Texture formats](https://gpuweb.github.io/gpuweb/#enumdef-gputextureformat) section of the specification for all the possible values.
 
         > [!NOTE]
@@ -53,13 +46,11 @@ createTexture(descriptor)
     - `sampleCount` {{optional_inline}}
       - : A number specifying the texture's sample count. To be valid, the value must be 1 or 4. If omitted, this defaults to 1. A value higher than 1 indicates a multi-sampled texture.
     - `size`
-
       - : An object or array specifying the width, height, and depth/array layer count of the texture. The width value must always be specified, while the height and depth/array layer count values are optional and will default to 1 if omitted.
 
         For example, you can pass an array like `[16, 16, 2]`, or its equivalent object `{ width: 16, height: 16, depthOrArrayLayers: 2 }`.
 
     - `usage`
-
       - : The {{glossary("Bitwise_flags", "bitwise flags")}} representing the allowed usages for the `GPUTexture`. The possible values are in the [`GPUTexture.usage` value table](/en-US/docs/Web/API/GPUTexture/usage#value).
 
         Note that multiple possible usages can be specified by separating values with [bitwise OR](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR), for example: `GPUTextureUsage.COPY_DST | GPUTextureUsage.RENDER_ATTACHMENT`.

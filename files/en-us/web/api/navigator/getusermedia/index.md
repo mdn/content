@@ -35,7 +35,6 @@ getUserMedia(constraints, successCallback, errorCallback)
     section under the modern {{domxref("MediaDevices.getUserMedia()")}} method, as well
     as the article [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints).
 - `successCallback`
-
   - : A function which is invoked when the request for media access is approved. The
     function is called with one parameter: the {{domxref("MediaStream")}} object that
     contains the media stream. Your callback can then assign the stream to the desired

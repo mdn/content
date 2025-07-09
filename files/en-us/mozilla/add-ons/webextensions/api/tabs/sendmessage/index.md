@@ -33,9 +33,7 @@ const sending = browser.tabs.sendMessage(
 - `message`
   - : `any`. An object that can be serialized (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)).
 - `options` {{optional_inline}}
-
   - : `object`.
-
     - `frameId` {{optional_inline}}
       - : `integer`. Sends the message to a specific frame identified by `frameId` instead of all frames in the tab. Whether the content script is executed in all frames depends on the `all_frames` setting in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) section of `manifest.json`.
 

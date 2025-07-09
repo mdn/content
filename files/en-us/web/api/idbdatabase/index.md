@@ -41,7 +41,6 @@ Inherits from: [EventTarget](/en-US/docs/Web/API/EventTarget)
 Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface.
 
 - [`close`](/en-US/docs/Web/API/IDBDatabase/close_event)
-
   - : An event fired when the database connection is unexpectedly closed.
 
 - [`versionchange`](/en-US/docs/Web/API/IDBDatabase/versionchange_event)

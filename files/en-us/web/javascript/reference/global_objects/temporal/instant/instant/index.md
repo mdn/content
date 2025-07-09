@@ -19,7 +19,8 @@ This constructor is exactly equivalent to calling {{jsxref("Temporal/Instant/fro
 new Temporal.Instant(epochNanoseconds)
 ```
 
-> **Note:** `Temporal.Instant()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Temporal.Instant()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

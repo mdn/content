@@ -2,9 +2,8 @@
 title: Firefox 102 for developers
 slug: Mozilla/Firefox/Releases/102
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 102 that will affect developers. Firefox 102 was released on June 28, 2022.
 

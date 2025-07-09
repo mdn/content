@@ -40,7 +40,8 @@ transform: rotateX(3.142rad);
 
 The axis of rotation passes through an origin, defined by the {{ cssxref("transform-origin") }} CSS property.
 
-> **Note:** `rotateX(a)` is equivalent to
+> [!NOTE]
+> `rotateX(a)` is equivalent to
 > `rotate3d(1, 0, 0, a)`.
 
 > [!NOTE]
@@ -48,9 +49,6 @@ The axis of rotation passes through an origin, defined by the {{ cssxref("transf
 > not commutative. In other words, the order in which the rotations are applied impacts the result.
 
 ## Syntax
-
-The amount of rotation created by `rotateX()` is specified by an {{cssxref("&lt;angle&gt;")}}. If
-positive, the movement will be clockwise; if negative, it will be counter-clockwise.
 
 ```css
 rotateX(a)

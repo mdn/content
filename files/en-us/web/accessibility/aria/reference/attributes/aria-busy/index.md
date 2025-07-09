@@ -7,7 +7,9 @@ spec-urls: https://w3c.github.io/aria/#aria-busy
 sidebar: accessibilitysidebar
 ---
 
-Used in [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions), the global `aria-busy` state indicates an element is being modified and that assistive technologies may want to wait until the changes are complete before informing the user about the update.
+The `aria-busy` attribute is a global ARIA state that indicates whether an element is currently being modified.
+It helps assistive technologies understand that changes to the content are not yet complete, and that they may want to wait before informing users of the update.
+While `aria-busy` is commonly used in [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions) to delay announcements until updates are complete, it can also be used outside of live regions—for example, in widgets or feeds—to signal ongoing changes or loading.
 
 When multiple parts of a live region need to be loaded before changes are announced to the user, set `aria-busy="true"` until loading is complete. Then set to `aria-busy="false"`. This prevents assistive technologies from announcing changes before updates are done.
 

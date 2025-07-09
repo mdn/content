@@ -1,5 +1,6 @@
 ---
-title: Introducing the CSS Cascade
+title: Introduction to the CSS cascade
+short-title: Introduction
 slug: Web/CSS/CSS_cascade/Cascade
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-cascade/
@@ -71,7 +72,8 @@ The cascade is in ascending order, meaning:
 - Important values take precedence over animations, whether declared in user, author, or user-agent styles.
 - Transitions take precedence over important values.
 
-> **Note:** **Transitions and animations**
+> [!NOTE]
+> **Transitions and animations**
 >
 > Property values set by animation {{cssxref('@keyframes')}} are more important than all normal styles (those with no [`!important`](/en-US/docs/Web/CSS/CSS_cascade/Specificity#the_!important_exception) set).
 >

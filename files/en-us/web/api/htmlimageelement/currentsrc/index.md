@@ -39,7 +39,7 @@ document.
     /en-US/docs/Web/HTML/Reference/Elements/img/clock-demo-200px.png 200w,
     /en-US/docs/Web/HTML/Reference/Elements/img/clock-demo-400px.png 400w
   "
-  sizes="(max-width: 400px) 50%, 90%" />
+  sizes="(width <= 400px) 50%, 90%" />
 ```
 
 ### JavaScript

@@ -2,12 +2,10 @@
 title: scroll-timeline
 slug: Web/CSS/scroll-timeline
 page-type: css-shorthand-property
-status:
-  - experimental
 browser-compat: css.properties.scroll-timeline
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`scroll-timeline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) is used to define a _named scroll progress timeline_, which is progressed through by scrolling a scrollable element (_scroller_) between top and bottom (or left and right). `scroll-timeline` is set on the scroller that will provide the timeline. The starting scroll position represents 0% progress and the ending scroll position represents 100% progress. If the 0% position and 100% position coincide (i.e., the scroll container has no overflow to scroll), the timeline is inactive.
 
@@ -45,12 +43,12 @@ scroll-timeline: --custom_name_for_timeline;
 
 The `scroll-timeline` shorthand property can be applied to a container element as a combination of the `<scroll-timeline-name>` and `<scroll-timeline-axis>` values. At least one of the values must be specified. If both the values are specified, the order followed must be the `<scroll-timeline-name>` value followed by the `<scroll-timeline-axis>` value.
 
-> **Note:** `<scroll-timeline-name>`s must be [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident) values, which means they must start with `--`. This helps avoid name clashes with standard CSS keywords.
+> [!NOTE]
+> `<scroll-timeline-name>`s must be [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident) values, which means they must start with `--`. This helps avoid name clashes with standard CSS keywords.
 
 ### Values
 
 - `<scroll-timeline-name>`
-
   - : See [`scroll-timeline-name`](/en-US/docs/Web/CSS/scroll-timeline-name).
 
 - `<scroll-timeline-axis>`

@@ -20,7 +20,7 @@ color: #00a400;
 ```
 
 ```css interactive-example-choice
-color: rgb(214, 122, 127);
+color: rgb(214 122 127);
 ```
 
 ```css interactive-example-choice
@@ -28,7 +28,7 @@ color: hsl(30deg 82% 43%);
 ```
 
 ```css interactive-example-choice
-color: hsla(237deg 74% 33% / 61%);
+color: hsl(237deg 74% 33% / 61%);
 ```
 
 ```css interactive-example-choice

@@ -85,7 +85,7 @@ The `container` shorthand is intended to make this simpler to define in a single
 You can then target that container by name using the {{cssxref("@container")}} at-rule:
 
 ```css
-@container sidebar (min-width: 400px) {
+@container sidebar (width >= 400px) {
   /* <stylesheet> */
 }
 ```

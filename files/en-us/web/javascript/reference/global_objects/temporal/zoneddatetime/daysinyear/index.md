@@ -1,5 +1,6 @@
 ---
 title: Temporal.ZonedDateTime.prototype.daysInYear
+short-title: daysInYear
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/daysInYear
 page-type: javascript-instance-accessor-property
 status:

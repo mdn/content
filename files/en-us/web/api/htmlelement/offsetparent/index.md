@@ -20,7 +20,8 @@ A positioned ancestor might be:
 
 If there is no positioned ancestor element, the `body` is returned.
 
-> **Note:** `offsetParent` returns `null` in the following
+> [!NOTE]
+> `offsetParent` returns `null` in the following
 > situations:
 >
 > - The element or any ancestor has the `display` property set to

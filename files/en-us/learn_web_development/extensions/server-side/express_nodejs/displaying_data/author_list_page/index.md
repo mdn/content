@@ -71,7 +71,6 @@ The genre list controller function needs to get a list of all `Genre` instances,
 
 1. You will need to edit `genre_list()` in **/controllers/genreController.js**.
 2. The implementation is almost exactly the same as the `author_list()` controller.
-
    - Sort the results by name, in ascending order.
 
 3. The template to be rendered should be named **genre_list.pug**.

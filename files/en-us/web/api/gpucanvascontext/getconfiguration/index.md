@@ -3,12 +3,10 @@ title: "GPUCanvasContext: getConfiguration() method"
 short-title: getConfiguration()
 slug: Web/API/GPUCanvasContext/getConfiguration
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUCanvasContext.getConfiguration
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`getConfiguration()`** method of the
 {{domxref("GPUCanvasContext")}} interface returns the current configuration set for the context.

@@ -1,5 +1,6 @@
 ---
 title: Temporal.Duration.prototype.total()
+short-title: total()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/total
 page-type: javascript-instance-method
 status:

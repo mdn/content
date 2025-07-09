@@ -1,5 +1,6 @@
 ---
-title: Understanding scroll anchoring
+title: Overview of scroll anchoring
+short-title: Overview
 slug: Web/CSS/CSS_scroll_anchoring/Scroll_anchoring
 page-type: guide
 browser-compat: css.properties.overflow-anchor

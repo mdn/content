@@ -22,9 +22,7 @@ let gettingFrames = browser.webNavigation.getAllFrames(
 ### Parameters
 
 - `details`
-
   - : `object`. Information about the tab to retrieve all frames from.
-
     - `tabId`
       - : `integer`. The ID of the tab.
 

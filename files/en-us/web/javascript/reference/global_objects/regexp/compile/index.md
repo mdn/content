@@ -1,5 +1,6 @@
 ---
 title: RegExp.prototype.compile()
+short-title: compile()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/compile
 page-type: javascript-instance-method
 status:

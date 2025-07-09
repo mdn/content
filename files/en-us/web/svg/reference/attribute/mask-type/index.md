@@ -60,7 +60,7 @@ svg {
 
 ## mask
 
-For {{SVGElement("mask")}}, `mask-type` defines whether the content of the mask element is treated as as luminance mask or alpha mask.
+For {{SVGElement("mask")}}, the `mask-type` defines whether the content of the mask element is treated as a luminance mask or an alpha mask.
 
 <table class="properties">
   <tbody>

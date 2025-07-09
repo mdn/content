@@ -2,9 +2,8 @@
 title: Firefox 3 for developers
 slug: Mozilla/Firefox/Releases/3
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 If you're a developer trying to get a handle on all the new features in Firefox 3, this is the perfect place to start. This article provides a list of the new articles covering features added to Firefox 3. While it doesn't necessarily cover every little change, it will help you learn about the major improvements.
 

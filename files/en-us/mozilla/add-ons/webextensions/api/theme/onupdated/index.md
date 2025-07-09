@@ -37,13 +37,9 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed these arguments:
-
     - `updateInfo`
-
       - : `object`. An object containing two properties:
-
         - `theme`
           - : `object`. If the event fired because an extension-supplied theme was removed, this is an empty object. If it fired because an extension-supplied theme was applied, then it is a {{WebExtAPIRef("theme.Theme")}} object representing the theme that was applied.
         - `windowId` {{optional_inline}}

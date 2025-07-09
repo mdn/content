@@ -28,9 +28,7 @@ let updating = browser.bookmarks.update(
 - `id`
   - : A {{jsxref("string")}} specifying the ID of the bookmark or bookmark folder to update.
 - `changes`
-
   - : An {{jsxref("object")}} specifying the changes to apply, with some combination of the following fields. Any items not specified aren't changed in the referenced bookmark or folder:
-
     - `title` {{optional_inline}}
       - : A {{jsxref("string")}} containing the new title of the bookmark, or the new name of the folder if `id` refers to a folder.
     - `url` {{optional_inline}}

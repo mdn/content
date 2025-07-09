@@ -1,5 +1,6 @@
 ---
 title: Symbol() constructor
+short-title: Symbol()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Symbol.Symbol
@@ -36,7 +37,8 @@ Symbol()
 Symbol(description)
 ```
 
-> **Note:** `Symbol()` can only be called without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to construct it with `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Symbol()` can only be called without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to construct it with `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

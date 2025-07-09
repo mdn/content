@@ -1,5 +1,6 @@
 ---
 title: Number.parseInt()
+short-title: parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseInt
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Number.parseInt
@@ -40,7 +41,6 @@ Number.parseInt(string, radix)
 - `string`
   - : The value to parse, [coerced to a string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion). Leading whitespace in this argument is ignored.
 - `radix` {{optional_inline}}
-
   - : An integer between `2` and `36` that represents the
     _radix_ (the base in mathematical numeral systems) of the
     `string`.

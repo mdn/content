@@ -1,5 +1,6 @@
 ---
 title: Date() constructor
+short-title: Date()
 slug: Web/JavaScript/Reference/Global_Objects/Date/Date
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Date.Date
@@ -40,7 +41,8 @@ new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
 Date()
 ```
 
-> **Note:** `Date()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new), but with different effects. See [Return value](#return_value).
+> [!NOTE]
+> `Date()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new), but with different effects. See [Return value](#return_value).
 
 ### Parameters
 

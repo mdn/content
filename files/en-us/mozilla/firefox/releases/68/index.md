@@ -2,9 +2,8 @@
 title: Firefox 68 for developers
 slug: Mozilla/Firefox/Releases/68
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 68 that will affect developers. Firefox 68 was released on July 9, 2019.
 
@@ -60,7 +59,6 @@ This article provides information about the changes in Firefox 68 that will affe
 ### CSS
 
 - [CSS Scroll Snapping](/en-US/docs/Web/CSS/CSS_scroll_snap) has been updated to the latest version of the specification ([Firefox bug 1312163](https://bugzil.la/1312163)) and ([Firefox bug 1544136](https://bugzil.la/1544136)), this includes:
-
   - The `scroll-padding` property ([Firefox bug 1373832](https://bugzil.la/1373832))
   - The `scroll-margin` property ([Firefox bug 1373833](https://bugzil.la/1373833))
   - The {{CSSxRef("scroll-snap-align")}} property ([Firefox bug 1373835](https://bugzil.la/1373835))

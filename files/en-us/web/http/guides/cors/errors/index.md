@@ -2,9 +2,8 @@
 title: CORS errors
 slug: Web/HTTP/Guides/CORS/Errors
 page-type: landing-page
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 [Cross-Origin Resource Sharing](/en-US/docs/Web/HTTP/Guides/CORS) ({{Glossary("CORS")}}) is a standard that allows a server to relax the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy). This is used to explicitly allow some cross-origin requests while rejecting others. For example, if a site offers an embeddable service, it may be necessary to relax certain restrictions. Setting up such a CORS configuration isn't necessarily easy and may present some challenges. In these pages, we'll look into some common CORS error messages and how to resolve them.
 

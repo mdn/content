@@ -2,9 +2,8 @@
 title: Firefox 69 for developers
 slug: Mozilla/Firefox/Releases/69
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 69 that will affect developers. Firefox 69 was released on September 3, 2019.
 
@@ -61,7 +60,7 @@ This article provides information about the changes in Firefox 69 that will affe
 - The {{cssxref("overflow-block")}} and {{cssxref("overflow-inline")}} properties have been implemented ([Firefox bug 1470695](https://bugzil.la/1470695)).
 - We added the ability to test for support of a selector when using CSS Feature Queries ({{cssxref("@supports")}}), with the `selector()` method ([Firefox bug 1513643](https://bugzil.la/1513643)).
 - The {{cssxref("user-select")}} property — which specifies whether or not the user is able to select text in the affected element — has been unprefixed ([Firefox bug 1492739](https://bugzil.la/1492739)).
-- We implemented local-specific casing behavior for Lithuanian ([Firefox bug 1322992](https://bugzil.la/1322992)), [as seen in this example](/en-US/docs/Web/CSS/text-transform#lowercase_lithuanian).
+- We implemented local-specific casing behavior for Lithuanian ([Firefox bug 1322992](https://bugzil.la/1322992)), [as seen in this example](/en-US/docs/Web/CSS/text-transform#example_using_lowercase_lithuanian).
 - We've implemented the {{cssxref("line-break")}} property of CSS Text ([Firefox bug 1011369](https://bugzil.la/1011369) and [Firefox bug 1531715](https://bugzil.la/1531715)).
 - The {{cssxref("contain")}} property — which allows developers to define that an element and its contents are mostly independent of the rest of the DOM tree — got implemented [Firefox bug 1487493](https://bugzil.la/1487493).
 

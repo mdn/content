@@ -33,16 +33,13 @@ setSelectionRange(selectionStart, selectionEnd, selectionDirection)
   - : The 0-based index of the first selected character. An index greater than the length
     of the element's value is treated as pointing to the end of the value.
 - `selectionEnd`
-
   - : The 0-based index of the character _after_ the last selected character. An
     index greater than the length of the element's value is treated as pointing to the end
     of the value. If `selectionEnd` is less than `selectionStart`, then both are treated as the value of `selectionEnd`.
 
 - `selectionDirection` {{optional_inline}}
-
   - : A string indicating the direction in which the selection is considered to have been
     performed. Possible values:
-
     - `"forward"`
     - `"backward"`
     - `"none"` if the direction is unknown or irrelevant. Default value.
@@ -65,7 +62,7 @@ the text box ("zil" in the word "Mozilla").
 
 ```html
 <input type="text" id="text-box" size="20" value="Mozilla" />
-<button onclick="selectText()">Select text</button>
+<button>Select text</button>
 ```
 
 ### JavaScript
@@ -76,6 +73,8 @@ function selectText() {
   input.focus();
   input.setSelectionRange(2, 5);
 }
+
+document.querySelector("button").addEventListener("click", selectText);
 ```
 
 ### Result

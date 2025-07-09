@@ -1,5 +1,6 @@
 ---
 title: Temporal.ZonedDateTime.compare()
+short-title: compare()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/compare
 page-type: javascript-static-method
 status:

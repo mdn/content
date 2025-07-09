@@ -3,12 +3,10 @@ title: "ViewTimeline: subject property"
 short-title: subject
 slug: Web/API/ViewTimeline/subject
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.ViewTimeline.subject
 ---
 
-{{APIRef("Web Animations")}}{{SeeCompatTable}}
+{{APIRef("Web Animations")}}
 
 The **`subject`** read-only property of the {{domxref("ViewTimeline")}} interface returns a reference to the subject element whose visibility within its nearest ancestor scrollable element (scroller) is driving the progress of the timeline.
 

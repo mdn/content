@@ -68,7 +68,6 @@ Not part of any standard.
 
 - [Mozilla CSS extensions](/en-US/docs/Web/CSS/Mozilla_Extensions)
 - Related CSS selectors:
-
   - [`:active`](/en-US/docs/Web/CSS/:active)
 
 - The {{domxref("Document.activeElement")}} property for regular DOM, and the {{domxref("ShadowRoot.activeElement")}} property for [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) roots.

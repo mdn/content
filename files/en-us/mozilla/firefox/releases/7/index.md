@@ -2,9 +2,8 @@
 title: Firefox 7 for developers
 slug: Mozilla/Firefox/Releases/7
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 7 shipped on September 27, 2011. This article provides information about the changes that affect developers — both of web content and of Firefox add-ons.
 
@@ -29,7 +28,7 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 - `toDataURL()` method now accepts a second argument to control JPEG quality.
 - Support for the non-standard `globalCompositeOperation` operations `clear` and `over` has been removed.
 - [Shadows](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#shadows) are now only drawn for `source-over` compositing operations.
-- You can now configure the fill rule used by canvas by setting the `mozFillRule` [attribute](/en-US/docs/Web/API/CanvasRenderingContext2D#attributes) on the context.
+- You can now configure the fill rule used by canvas by setting the `mozFillRule` attribute on the context.
 - Support for the experimental `mozDash`, `mozDashOffset`, `mozCurrentTransform` and `mozCurrentTransformInverse` attributes has been added.
 - Support for the non-standard methods `mozDrawText()`, `mozMeasureText()`, `mozPathText()` and `mozTextAlongPath()` has been removed.
 
@@ -45,7 +44,7 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 - The top-level {{ MathMLElement("math") }} element now accepts any attributes of the {{ MathMLElement("mstyle") }} element.
 - Support for [Asana Math](https://www.ctan.org/tex-archive/fonts/Asana-Math/) fonts has been added.
 - The `medium` line thickness of fraction bars in {{ MathMLElement("mfrac") }} elements has been corrected to match the default thickness.
-- [Names for negative spaces](</en-US/docs/Web/MathML/Reference/Values#constants_(namedspaces)>) are now supported.
+- [Names for negative spaces](/en-US/docs/Web/MathML/Reference/Values#constants) are now supported.
 
 ### DOM
 
@@ -58,7 +57,7 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 - {{ domxref("DOMTokenList.item") }} now returns `undefined` if the `index` is out of bounds, previously it returned `null`.
 - `Node.getFeature` has been removed.
 - The `HTMLInsElement` and `HTMLDelElement` interfaces have been removed, since the {{ HTMLElement("ins") }} and {{ HTMLElement("del") }} elements actually use the {{ domxref("HTMLModElement") }} interface.
-- In an effort to conform to the upcoming [DOM4](https://dom.spec.whatwg.org/) specification where {{ domxref("Attr") }} do not inherit from {{ domxref("Node") }} anymore (it did in DOM Core 1, 2 and 3), many {{ domxref("Node") }} properties and methods on the {{ domxref("Attr") }} interface are [now reporting warnings](/en-US/docs/Web/API/Attr#deprecated_properties_and_methods) as we work toward removing them in a later version.
+- In an effort to conform to the upcoming [DOM4](https://dom.spec.whatwg.org/) specification where {{ domxref("Attr") }} do not inherit from {{ domxref("Node") }} anymore (it did in DOM Core 1, 2 and 3), many {{ domxref("Node") }} properties and methods on the {{ domxref("Attr") }} interface are now reporting warnings as we work toward removing them in a later version.
 - Added support for the {{ domxref("window.deviceorientation_event", "ondeviceorientation") }} and {{ domxref("window.devicemotion_event", "ondevicemotion") }} properties on {{ domxref("window") }} objects.
 - {{ domxref("window.resizeTo") }}, {{ domxref("window.resizeBy") }}, {{ domxref("window.moveTo") }}, and {{ domxref("window.moveBy") }} no longer apply to the main window.
 

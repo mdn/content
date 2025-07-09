@@ -1,5 +1,6 @@
 ---
-title: Basic concepts of multi-column layout
+title: Basic concepts of multi-column layouts
+short-title: Basic concepts
 slug: Web/CSS/CSS_multicol_layout/Basic_concepts
 page-type: guide
 ---

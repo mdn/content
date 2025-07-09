@@ -4,9 +4,8 @@ short-title: Sec-Fetch-Dest
 slug: Web/HTTP/Reference/Headers/Sec-Fetch-Dest
 page-type: http-header
 browser-compat: http.headers.Sec-Fetch-Dest
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Sec-Fetch-Dest`** {{Glossary("fetch metadata request header")}} indicates the request's _destination_.
 That is the initiator of the original fetch request, which is where (and how) the fetched data will be used.

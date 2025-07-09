@@ -1,5 +1,6 @@
 ---
 title: RegExp.prototype.unicode
+short-title: unicode
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/unicode
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.RegExp.unicode

@@ -21,19 +21,15 @@ texStorage2D(target, levels, internalformat, width, height)
 ### Parameters
 
 - `target`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target) of the active texture.
     Possible values:
-
     - `gl.TEXTURE_2D`: A two-dimensional texture.
     - `gl.TEXTURE_CUBE_MAP`: A cube-mapped texture.
 
 - `levels`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the number of texture levels.
 - `internalformat`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the texture store format. Possible values:
-
     - `gl.R8`
     - `gl.R16F`
     - `gl.R32F`
@@ -61,7 +57,6 @@ texStorage2D(target, levels, internalformat, width, height)
     Unlike OpenGL 3.0, WebGL 2 **doesn't support** the following ETC2 and
     EAC compressed texture formats (see [section 5.37](https://registry.khronos.org/webgl/specs/latest/2.0/#5.37) in the WebGL 2 spec). You might be able to enable them via the
     {{domxref("WEBGL_compressed_texture_etc")}} extension, though.
-
     - `gl.COMPRESSED_R11_EAC`
     - `gl.COMPRESSED_SIGNED_R11_EAC`
     - `gl.COMPRESSED_RG11_EAC`

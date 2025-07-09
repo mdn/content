@@ -2,9 +2,8 @@
 title: Firefox 118 for developers
 slug: Mozilla/Firefox/Releases/118
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 118 that affect developers. Firefox 118 was released on September 26, 2023.
 

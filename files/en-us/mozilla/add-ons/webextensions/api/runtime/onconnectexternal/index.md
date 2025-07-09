@@ -35,9 +35,7 @@ Events have three functions:
 ### Parameters
 
 - `function`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `port`
       - : A {{WebExtAPIRef('runtime.Port')}} object connecting the current script to the other extension it is connecting to.
 

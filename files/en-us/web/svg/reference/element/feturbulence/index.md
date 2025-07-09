@@ -48,7 +48,7 @@ This element implements the {{domxref("SVGFETurbulenceElement")}} interface.
       yChannelSelector="G" />
   </filter>
 
-  <circle cx="100" cy="100" r="100" style="filter: url(#displacementFilter)" />
+  <circle cx="100" cy="100" r="100" filter="url(#displacementFilter)" />
 </svg>
 ```
 

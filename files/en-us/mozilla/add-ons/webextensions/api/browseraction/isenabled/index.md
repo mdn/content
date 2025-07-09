@@ -22,9 +22,7 @@ let gettingIsEnabled = browser.browserAction.isEnabled(
 ### Parameters
 
 - `details`
-
   - : `object`. An object optionally containing the `tabId` or `windowId` to check.
-
     - `tabId` {{optional_inline}}
       - : `integer`. ID of a tab to check.
     - `windowId` {{optional_inline}}

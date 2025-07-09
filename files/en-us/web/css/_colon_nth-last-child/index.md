@@ -42,34 +42,34 @@ li:nth-last-child(even) {
 
 ## Syntax
 
-The `nth-last-child` pseudo-class is specified with a single argument, which represents the pattern for matching elements, counting from the end.
-
 ```css-nolint
 :nth-last-child(<nth> [of <complex-selector-list>]?) {
   /* ... */
 }
 ```
 
-### Keyword values
+### Parameters
+
+The `:nth-last-child()` pseudo-class is specified with a single argument, which represents the pattern for matching elements, counting from the end.
+
+#### Keyword values
 
 - `odd`
   - : Represents elements whose numeric position in a series of siblings is odd: 1, 3, 5, etc., counting from the end.
 - `even`
   - : Represents elements whose numeric position in a series of siblings is even: 2, 4, 6, etc., counting from the end.
 
-### Functional notation
+#### Functional notation
 
 - `<An+B>`
-
   - : Represents elements whose numeric position in a series of siblings matches the pattern `An+B`, for every positive integer or zero value of `n`, where:
-
     - `A` is an integer step size,
     - `B` is an integer offset,
     - `n` is all nonnegative integers, starting from 0.
 
     It can be read as the `An+B`-th element of a list. The index of the first element, counting from the end, is `1`. The `A` and `B` must both have {{cssxref("&lt;integer&gt;")}} values.
 
-### The `of <selector>` syntax
+#### The `of <selector>` syntax
 
 By passing a selector argument, we can select the **nth-last** element that matches that selector. For example, the following selector matches the last three _important_ list items, which are assigned with `class="important"`.
 

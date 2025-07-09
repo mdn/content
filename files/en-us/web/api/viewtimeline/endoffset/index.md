@@ -3,12 +3,10 @@ title: "ViewTimeline: endOffset property"
 short-title: endOffset
 slug: Web/API/ViewTimeline/endOffset
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.ViewTimeline.endOffset
 ---
 
-{{APIRef("Web Animations")}}{{SeeCompatTable}}
+{{APIRef("Web Animations")}}
 
 The **`endOffset`** read-only property of the {{domxref("ViewTimeline")}} interface returns a {{domxref("CSSNumericValue")}} representing the ending (100% progress) scroll position of the timeline as an offset from the start of the overflowing section of content in the scroller.
 

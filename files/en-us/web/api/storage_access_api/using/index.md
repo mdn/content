@@ -112,7 +112,8 @@ async function handleCookieAccess() {
 }
 ```
 
-> **Note:** `requestStorageAccess()` requests are automatically denied unless the embedded content is currently processing a user gesture such as a tap or click ({{Glossary("transient activation")}}), or if permission was already granted previously. If permission was not previously granted, `requestStorageAccess()` requests must be run inside a user gesture-based event handler, as shown above.
+> [!NOTE]
+> `requestStorageAccess()` requests are automatically denied unless the embedded content is currently processing a user gesture such as a tap or click ({{Glossary("transient activation")}}), or if permission was already granted previously. If permission was not previously granted, `requestStorageAccess()` requests must be run inside a user gesture-based event handler, as shown above.
 
 ### Related website sets
 

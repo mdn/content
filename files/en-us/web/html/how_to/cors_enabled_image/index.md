@@ -38,7 +38,7 @@ The first thing we need is a server that's configured to host images with the {{
 
 Let's assume we're serving our site using [Apache](https://httpd.apache.org/). Consider the HTML5 Boilerplate [Apache server configuration file for CORS images](https://github.com/h5bp/server-configs-apache/blob/main/h5bp/cross-origin/images.conf), shown below:
 
-```xml
+```apacheconf
 <IfModule mod_setenvif.c>
   <IfModule mod_headers.c>
     <FilesMatch "\.(avifs?|bmp|cur|gif|ico|jpe?g|jxl|a?png|svgz?|webp)$">
@@ -63,9 +63,8 @@ The code that starts the download (say, when the user clicks a "Download" button
 
 ```js
 function startDownload() {
-  let imageURL =
-    "https://cdn.glitch.com/4c9ebeb9-8b9a-4adc-ad0a-238d9ae00bb5%2Fmdn_logo-only_color.svg?1535749917189";
-  let imageDescription = "The Mozilla logo";
+  let imageURL = "https://mdn.github.io/shared-assets/images/examples/mdn.svg";
+  let imageDescription = "Logo of a dinosaur in front of a map";
 
   downloadedImg = new Image();
   downloadedImg.crossOrigin = "anonymous";

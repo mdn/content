@@ -62,7 +62,6 @@ The `row-gap` and `column-gap` properties are not the only things that can cause
 
 - [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
 - Property reference
-
   - {{cssxref("column-gap")}}
   - {{cssxref("row-gap")}}
   - {{cssxref("gap")}}

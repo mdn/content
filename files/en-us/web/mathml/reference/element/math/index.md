@@ -16,9 +16,7 @@ The **`<math>`** [MathML](/en-US/docs/Web/MathML) element is the top-level MathM
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Reference/Global_attributes) as well as the following attribute:
 
 - `display`
-
   - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute specifies how the enclosed MathML markup should be rendered. It can have one of the following values:
-
     - `block`, which means that this element will be displayed in its own block outside the current span of text and with [`math-style`](/en-US/docs/Web/CSS/math-style) set to `normal`.
     - `inline`, which means that this element will be displayed inside the current span of text and with [`math-style`](/en-US/docs/Web/CSS/math-style) set to `compact`.
 

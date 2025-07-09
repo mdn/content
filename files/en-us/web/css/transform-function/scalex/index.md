@@ -43,7 +43,8 @@ the function is the identity transform. The scaling is not isotropic, and the an
 `scaleX(-1)` defines an [axial symmetry](https://en.wikipedia.org/wiki/Axial_symmetry), with a vertical axis passing through the origin (as specified by the {{cssxref("transform-origin")}}
 property).
 
-> **Note:** `scaleX(sx)` is equivalent to
+> [!NOTE]
+> `scaleX(sx)` is equivalent to
 > `scale(sx, 1)` or
 > `scale3d(sx, 1, 1)`.
 

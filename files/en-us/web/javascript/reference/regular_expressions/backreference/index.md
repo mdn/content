@@ -3,9 +3,8 @@ title: "Backreference: \\1, \\2"
 slug: Web/JavaScript/Reference/Regular_expressions/Backreference
 page-type: javascript-language-feature
 browser-compat: javascript.regular_expressions.backreference
+sidebar: jssidebar
 ---
-
-{{jsSidebar}}
 
 A **backreference** refers to the submatch of a previous [capturing group](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group) and matches the same text as that group. For [named capturing groups](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group), you may prefer to use the [named backreference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_backreference) syntax.
 
@@ -15,7 +14,8 @@ A **backreference** refers to the submatch of a previous [capturing group](/en-U
 \N
 ```
 
-> **Note:** `N` is not a literal character.
+> [!NOTE]
+> `N` is not a literal character.
 
 ### Parameters
 

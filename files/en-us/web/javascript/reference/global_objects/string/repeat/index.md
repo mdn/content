@@ -1,5 +1,6 @@
 ---
 title: String.prototype.repeat()
+short-title: repeat()
 slug: Web/JavaScript/Reference/Global_Objects/String/repeat
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.repeat

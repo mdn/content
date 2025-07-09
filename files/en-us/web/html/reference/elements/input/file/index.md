@@ -59,7 +59,8 @@ For instance, there are a number of ways Microsoft Word files can be identified,
 
 The [`capture`](/en-US/docs/Web/HTML/Reference/Attributes/capture) attribute value is a string that specifies which camera to use for capture of image or video data, if the [`accept`](/en-US/docs/Web/HTML/Reference/Attributes/accept) attribute indicates that the input should be of one of those types. A value of `user` indicates that the user-facing camera and/or microphone should be used. A value of `environment` specifies that the outward-facing camera and/or microphone should be used. If this attribute is missing, the {{Glossary("user agent")}} is free to decide on its own what to do. If the requested facing mode isn't available, the user agent may fall back to its preferred default mode.
 
-> **Note:** `capture` was previously a Boolean attribute which, if present, requested that the device's media capture device(s) such as camera or microphone be used instead of requesting a file input.
+> [!NOTE]
+> `capture` was previously a Boolean attribute which, if present, requested that the device's media capture device(s) such as camera or microphone be used instead of requesting a file input.
 
 ### multiple
 
@@ -72,8 +73,6 @@ In addition to the attributes listed above, the following non-standard attribute
 ### `webkitdirectory`
 
 The Boolean `webkitdirectory` attribute, if present, indicates that only directories should be available to be selected by the user in the file picker interface. See {{domxref("HTMLInputElement.webkitdirectory")}} for additional details and examples.
-
-Though originally implemented only for WebKit-based browsers, `webkitdirectory` is also usable in Firefox. However, even though it has relatively broad support, it is still not standard and should not be used unless you have no alternative.
 
 ## Unique file type specifiers
 
@@ -323,7 +322,8 @@ const preview = document.querySelector(".preview");
 input.style.opacity = 0;
 ```
 
-> **Note:** {{cssxref("opacity")}} is used to hide the file input instead of {{cssxref("visibility", "visibility: hidden")}} or {{cssxref("display", "display: none")}}, because assistive technology interprets the latter two styles to mean the file input isn't interactive.
+> [!NOTE]
+> {{cssxref("opacity")}} is used to hide the file input instead of {{cssxref("visibility", "visibility: hidden")}} or {{cssxref("display", "display: none")}}, because assistive technology interprets the latter two styles to mean the file input isn't interactive.
 
 Next, we add an [event listener](/en-US/docs/Web/API/EventTarget/addEventListener) to the input to listen for changes to its selected value (in this case, when files are selected). The event listener invokes our custom `updateImageDisplay()` function.
 
@@ -339,7 +339,6 @@ Whenever the `updateImageDisplay()` function is invoked, we:
 - If files _have_ been selected, we loop through each one, printing information about it into the preview `<div>`. Things to note here:
 - We use the custom `validFileType()` function to check whether the file is of the correct type (e.g., the image types specified in the `accept` attribute).
 - If it is, we:
-
   - Print out its name and file size into a list item inside the previous `<div>` (obtained from `file.name` and `file.size`). The custom `returnFileSize()` function returns a nicely-formatted version of the size in bytes/KB/MB (by default the browser reports the size in absolute bytes).
   - Generate a thumbnail preview of the image by calling {{domxref("URL/createObjectURL_static", "URL.createObjectURL(file)")}}. Then, insert the image into the list item too by creating a new {{htmlelement("img")}} and setting its [`src`](/en-US/docs/Web/HTML/Reference/Elements/img#src) to the thumbnail.
 

@@ -22,12 +22,12 @@ writing-mode: vertical-rl;
 ```
 
 ```css interactive-example-choice
-border-block-end-color: rgb(170, 50, 220, 0.6);
+border-block-end-color: rgb(170 50 220 / 0.6);
 writing-mode: horizontal-tb;
 ```
 
 ```css interactive-example-choice
-border-block-end-color: hsl(60, 90%, 50%, 0.8);
+border-block-end-color: hsl(60 90% 50% / 0.8);
 writing-mode: vertical-lr;
 ```
 

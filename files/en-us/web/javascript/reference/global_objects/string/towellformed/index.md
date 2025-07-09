@@ -1,5 +1,6 @@
 ---
 title: String.prototype.toWellFormed()
+short-title: toWellFormed()
 slug: Web/JavaScript/Reference/Global_Objects/String/toWellFormed
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.toWellFormed

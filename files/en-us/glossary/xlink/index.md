@@ -16,8 +16,7 @@ XLink is used in [SVG](/en-US/docs/Web/SVG), [MathML](/en-US/docs/Web/MathML), a
 
 ### Specifications
 
-- [XLink 1.0](https://www.w3.org/TR/xlink/)
-- [XLink 1.1](https://www.w3.org/TR/xlink11/) (currently a Working Draft)
+- [XLink 1.1](https://www.w3.org/TR/xlink/)
 
 ### See also
 

@@ -22,9 +22,7 @@ read(buffer, options)
 - `buffer`
   - : An {{jsxref("ArrayBuffer")}} or `ArrayBufferView` (such as a {{jsxref("DataView")}}) representing the buffer that the file content should be read into. Note that you cannot directly manipulate the contents of an `ArrayBuffer`. Instead, you create one of the typed array objects like an {{jsxref("Int8Array")}} or a {{jsxref("DataView")}} object which represents the buffer in a specific format, and use that to read and write the contents of the buffer.
 - `options` {{optional_inline}}
-
   - : An options object containing the following properties:
-
     - `at`
       - : A number representing the offset in bytes that the file should be read from.
 

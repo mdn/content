@@ -60,7 +60,6 @@ _In addition to the properties below, `Node` inherits properties from its parent
     node will have the `'#text'` string, or a {{DOMxRef("Document")}} node will
     have the `'#document'` string.
 - {{DOMxRef("Node.nodeType")}} {{ReadOnlyInline}}
-
   - : Returns an `unsigned short` representing the type of the node. Possible
     values are:
 

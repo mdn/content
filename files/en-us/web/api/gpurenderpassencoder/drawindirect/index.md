@@ -3,12 +3,10 @@ title: "GPURenderPassEncoder: drawIndirect() method"
 short-title: drawIndirect()
 slug: Web/API/GPURenderPassEncoder/drawIndirect
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPURenderPassEncoder.drawIndirect
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`drawIndirect()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface draws primitives using parameters read from a {{domxref("GPUBuffer")}}.
@@ -22,7 +20,6 @@ drawIndirect(indirectBuffer, indirectOffset)
 ### Parameters
 
 - `indirectBuffer`
-
   - : A {{domxref("GPUBuffer")}} containing the `vertexCount`, `instanceCount`, `firstVertex`, and `firstInstance` values needed to carry out the drawing operation. The buffer must contain a tightly packed block of four 32-bit unsigned integer values representing the values (16 bytes total), given in the same order as the arguments for {{domxref("GPURenderPassEncoder.draw()")}}. So for example:
 
     ```js

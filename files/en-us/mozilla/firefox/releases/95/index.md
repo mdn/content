@@ -2,9 +2,8 @@
 title: Firefox 95 for developers
 slug: Mozilla/Firefox/Releases/95
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 95 that will affect developers.
 Firefox 95 was released on December 7, 2021.

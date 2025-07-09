@@ -21,7 +21,6 @@ pushState(state, unused, url)
 ### Parameters
 
 - `state`
-
   - : The `state` object is a JavaScript object which is associated with the
     new history entry created by `pushState()`. Whenever the user navigates to
     the new `state`, a {{domxref("Window/popstate_event", "popstate")}} event is fired, and
@@ -34,7 +33,6 @@ pushState(state, unused, url)
     > Some browsers save `state` objects to the user's disk so they can be restored after the user restarts the browser, and impose a size limit on the serialized representation of a `state` object, and will throw an exception if you pass a `state` object whose serialized representation is larger than that size limit. So in cases where you want to ensure you have more space than what some browsers might impose, you're encouraged to use {{domxref("Window.sessionStorage", "sessionStorage")}} and/or {{domxref("Window.localStorage", "localStorage")}}.
 
 - `unused`
-
   - : This parameter exists for historical reasons, and cannot be omitted; passing an empty string is safe against future changes to the method.
 
 - `url` {{optional_inline}}

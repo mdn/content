@@ -21,7 +21,6 @@ getPathSegmentAtLength(distance)
 ### Parameters
 
 - `distance`
-
   - : A number indicating the distance along the path.
 
 ### Return value

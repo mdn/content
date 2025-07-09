@@ -165,7 +165,6 @@ With two methods we can now generate all necessary states of the IMSC rendering 
 
 - Iterate over the array we get back from `getMediaEvents()`
 - For each time event:
-
   - Create a corresponding cue.
   - Use an `onenter` event to render the ISD.
   - Use an `onexit` event to remove the rendering layer again.

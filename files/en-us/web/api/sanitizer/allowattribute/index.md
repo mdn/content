@@ -3,10 +3,12 @@ title: "Sanitizer: allowAttribute() method"
 short-title: allowAttribute()
 slug: Web/API/Sanitizer/allowAttribute
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.Sanitizer.allowAttribute
 ---
 
-{{APIRef("HTML Sanitizer API")}}
+{{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}
 
 The **`allowAttribute()`** method of the {{domxref("Sanitizer")}} interface sets an attribute to be allowed on all elements.
 
@@ -24,15 +26,13 @@ allowAttribute(attribute)
 ### Parameters
 
 - `attribute`
-
   - : A string indicating the name of the attribute to be allowed globally on elements, or an object with the following properties:
-
     - `name`
       - : A string containing the name of the attribute.
     - `namespace` {{optional_inline}}
       - : A string containing the namespace of the attribute, which defaults to `null`.
 
-### Returns
+### Return value
 
 None (`undefined`).
 

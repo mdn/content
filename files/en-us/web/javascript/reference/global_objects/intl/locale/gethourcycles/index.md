@@ -1,5 +1,6 @@
 ---
 title: Intl.Locale.prototype.getHourCycles()
+short-title: getHourCycles()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getHourCycles
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.Locale.getHourCycles

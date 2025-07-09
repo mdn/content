@@ -3,12 +3,10 @@ title: "GPURenderPassEncoder: beginOcclusionQuery() method"
 short-title: beginOcclusionQuery()
 slug: Web/API/GPURenderPassEncoder/beginOcclusionQuery
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPURenderPassEncoder.beginOcclusionQuery
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`beginOcclusionQuery()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface begins an occlusion query at the specified index of the relevant {{domxref("GPUQuerySet")}} (provided as the value of the `occlusionQuerySet` descriptor property when invoking {{domxref("GPUCommandEncoder.beginRenderPass()")}} to run the render pass).

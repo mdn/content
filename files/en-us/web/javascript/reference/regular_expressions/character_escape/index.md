@@ -3,9 +3,8 @@ title: "Character escape: \\n, \\u{...}"
 slug: Web/JavaScript/Reference/Regular_expressions/Character_escape
 page-type: javascript-language-feature
 browser-compat: javascript.regular_expressions.character_escape
+sidebar: jssidebar
 ---
-
-{{jsSidebar}}
 
 A **character escape** represents a character that may not be able to be conveniently represented in its literal form.
 
@@ -24,7 +23,8 @@ A **character escape** represents a character that may not be able to be conveni
 \u{HHH}
 ```
 
-> **Note:** `,` is not part of the syntax.
+> [!NOTE]
+> `,` is not part of the syntax.
 
 ### Parameters
 

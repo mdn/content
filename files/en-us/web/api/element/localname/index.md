@@ -39,7 +39,7 @@ namespaceURI = "${circle.namespaceURI}"`;
   <svg:svg version="1.1"
     width="100px" height="100px"
     viewBox="0 0 100 100">
-    <svg:circle cx="50" cy="50" r="30" style="fill:#aaa" id="circle"/>
+    <svg:circle cx="50" cy="50" r="30" fill="#aaa" id="circle"/>
   </svg:svg>
   <textarea id="text" rows="4" cols="55"/>
 </body>

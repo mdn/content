@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.unshift()
+short-title: unshift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/unshift
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.unshift

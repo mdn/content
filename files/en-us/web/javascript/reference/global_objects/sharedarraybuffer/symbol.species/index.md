@@ -1,5 +1,6 @@
 ---
 title: SharedArrayBuffer[Symbol.species]
+short-title: "[Symbol.species]"
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Symbol.species
 page-type: javascript-static-accessor-property
 browser-compat: javascript.builtins.SharedArrayBuffer.@@species

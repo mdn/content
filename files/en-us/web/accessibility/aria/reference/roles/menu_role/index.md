@@ -40,7 +40,6 @@ If the menu is visually persistent, consider the [`menubar`](/en-US/docs/Web/Acc
 - [`group`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role) role
   - : Menu items can be nested in a [`group`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role)
 - [`separator`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role) role
-
   - : A divider that separates and distinguishes sections of content or groups of menu items within the menu
 
 - [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) attribute

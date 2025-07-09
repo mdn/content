@@ -36,22 +36,17 @@ postTask(callback, options)
 ### Parameters
 
 - `callback`
-
   - : An callback function that implements the task.
     The return value of the callback is used to resolve the promise returned by this function.
 
 - `options` {{optional_inline}}
-
   - : Task options, including:
-
     - `priority` {{optional_inline}}
-
       - : The immutable [priority](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities) of the task.
         One of: [`"user-blocking"`](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#user-blocking), [`"user-visible"`](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#user-visible), [`"background"`](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#background).
         If set, this priority is used for the lifetime of the task and priority set on the `signal` is ignored.
 
     - `signal` {{optional_inline}}
-
       - : A {{domxref("TaskSignal")}} or {{domxref("AbortSignal")}} that can be used to abort the task (from its associated controller).
 
         If the `options.priority` parameter is set then the task priority cannot be changed, and any priority on the signal is ignored.
@@ -62,7 +57,7 @@ postTask(callback, options)
         The actual delay may be higher than specified, but will not be less.
         The default delay is 0.
 
-### Return Value
+### Return value
 
 Returns a {{jsxref("Promise")}} that is resolved with the return value of the `callback` function, or which may be rejected with the `signal`'s abort reason ({{domxref("AbortSignal.reason")}}).
 The promise may also be rejected with an error thrown by the callback during execution.

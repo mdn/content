@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainTime.prototype.until()
+short-title: until()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime/until
 page-type: javascript-instance-method
 status:

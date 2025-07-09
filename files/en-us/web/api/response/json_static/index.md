@@ -27,10 +27,8 @@ Response.json(data, options)
 - `data`
   - : The JSON data to be used as the response body.
 - `options` {{optional_inline}}
-
   - : An options object containing settings for the response, including the status code, status text, and headers.
     This is the same as the options parameter of the {{domxref("Response.Response", "Response()")}} constructor.
-
     - `status`
       - : The status code for the response, such as `200`.
     - `statusText`

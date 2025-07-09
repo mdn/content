@@ -26,7 +26,7 @@ Alternatively, you can load PlayCanvas from a CDN:
 <script src="https://cdn.jsdelivr.net/npm/playcanvas@2.2.2/build/playcanvas.min.js"></script>
 ```
 
-If you don't want to develop locally, you can use an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+If you don't want to develop locally, you can use an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 With these editors, you can add `https://cdn.babylonjs.com/babylon.js` as a JavaScript source so it's available in your code.
 
 ### HTML starter for PlayCanvas

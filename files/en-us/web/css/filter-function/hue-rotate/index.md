@@ -9,7 +9,8 @@ browser-compat: css.types.filter-function.hue-rotate
 
 The **`hue-rotate()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) rotates the [hue](https://en.wikipedia.org/wiki/Hue) of an element and its contents. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
 
-> **Note:** `hue-rotate()` is specified as a matrix operation on the RGB color. It does not actually convert the color to the HSL model, which is a non-linear operation. Therefore, it may not preserve the saturation or lightness of the original color, especially for saturated colors.
+> [!NOTE]
+> `hue-rotate()` is specified as a matrix operation on the RGB color. It does not actually convert the color to the HSL model, which is a non-linear operation. Therefore, it may not preserve the saturation or lightness of the original color, especially for saturated colors.
 
 {{InteractiveExample("CSS Demo: hue-rotate()")}}
 
@@ -40,8 +41,6 @@ filter: hue-rotate(3.142rad);
 ```
 
 ## Syntax
-
-The `hue-rotate()` function applies a color rotation to the elements on which it is applied.
 
 ```css
 hue-rotate(angle)

@@ -1,5 +1,6 @@
 ---
 title: Temporal.Duration.compare()
+short-title: compare()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/compare
 page-type: javascript-static-method
 status:

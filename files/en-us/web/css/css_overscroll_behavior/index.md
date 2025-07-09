@@ -53,7 +53,6 @@ This module defines the overscroll behavior, enabling you to specify the actions
 - {{Glossary("Scroll_container", "Scroll container")}} and [scrollport](/en-US/docs/Glossary/Scroll_container#scrollport) glossary terms
 
 - [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module:
-
   - {{cssxref("scroll-padding")}} shorthand property
   - {{cssxref("scroll-snap-type")}} property
   - {{cssxref("scroll-margin")}} shorthand property

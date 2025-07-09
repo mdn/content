@@ -1,5 +1,6 @@
 ---
 title: String.prototype.replace()
+short-title: replace()
 slug: Web/JavaScript/Reference/Global_Objects/String/replace
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.replace

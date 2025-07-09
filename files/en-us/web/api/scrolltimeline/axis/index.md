@@ -3,12 +3,10 @@ title: "ScrollTimeline: axis property"
 short-title: axis
 slug: Web/API/ScrollTimeline/axis
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.ScrollTimeline.axis
 ---
 
-{{APIRef("Web Animations")}}{{SeeCompatTable}}
+{{APIRef("Web Animations")}}
 
 The **`axis`** read-only property of the
 {{domxref("ScrollTimeline")}} interface returns an enumerated value representing the scroll axis that is driving the progress of the timeline.

@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainTime.prototype.minute
+short-title: minute
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime/minute
 page-type: javascript-instance-accessor-property
 status:

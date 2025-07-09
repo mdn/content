@@ -25,9 +25,7 @@ let duplicating = browser.tabs.duplicate(
 - `tabId`
   - : `integer`. The ID of the tab to be duplicated.
 - `duplicateProperties` {{optional_inline}}
-
   - : `object`. An object describing how the tab is duplicated. It contains the following properties:
-
     - `index` {{optional_inline}}
       - : `integer`. The position of the new tab in the window. The value is constrained to the range zero to the number of tabs in the window.
     - `active` {{optional_inline}}

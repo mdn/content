@@ -31,11 +31,9 @@ marker-mid: unset;
 ### Values
 
 - `none`
-
   - : This means no marker will be drawn at each middle vertex of the element's path.
 
 - `<marker-ref>`
-
   - : A {{cssxref("url_value", "&lt;url&gt;")}} that refers to a marker defined by an SVG {{SVGElement('marker')}} element, to be drawn at each middle vertex of the element's path. If the URL reference is invalid, no marker will be drawn at the path's middle vertices.
 
 ## Formal definition

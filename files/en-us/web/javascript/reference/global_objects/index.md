@@ -2,9 +2,8 @@
 title: Standard built-in objects
 slug: Web/JavaScript/Reference/Global_Objects
 page-type: landing-page
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Objects")}}
 
 This chapter documents all of JavaScript's standard, built-in objects, including their methods and properties.
 

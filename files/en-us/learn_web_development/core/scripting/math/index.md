@@ -247,7 +247,7 @@ If you want to override operator precedence, you can put parentheses around the 
 (num2 + num1) / (8 + 2);
 ```
 
-Try it and see.
+Try entering the previous line into the console to test this out.
 
 > [!NOTE]
 > A full list of all JavaScript operators and their precedence can be found in [Operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence).
@@ -292,7 +292,7 @@ num2;
 
 ## Assignment operators
 
-Assignment operators are operators that assign a value to a variable. We have already used the most basic one, `=`, loads of times — it assigns the variable on the left the value stated on the right:
+Assignment operators are operators that assign a value to a variable. We have already used the most basic one, `=`, many times — it assigns the variable on the left the value stated on the right:
 
 ```js
 let x = 3; // x contains the value 3
@@ -369,25 +369,40 @@ x *= y; // x now contains the value 12
 > [!NOTE]
 > There are lots of [other assignment operators available](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators), but these are the basic ones you should learn now.
 
-## Active learning: sizing a canvas box
+## Sizing a canvas box
 
 In this exercise, you will manipulate some numbers and operators to change the size of a box. The box is drawn using a browser API called the {{domxref("Canvas API", "", "", "true")}}. There is no need to worry about how this works — just concentrate on the math for now. The width and height of the box (in pixels) are defined by the variables `x` and `y`, which are initially both given a value of 50.
 
-{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/maths/editable_canvas.html", '100%', 620)}}
+```html hidden live-sample___canvas-exercise
+<canvas id="canvas" width="400" height="200"></canvas>
+<p></p>
+```
 
-**[Open in new window](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/editable_canvas.html)**
+```js live-sample___canvas-exercise
+const canvas = document.getElementById("canvas");
+const para = document.querySelector("p");
+const ctx = canvas.getContext("2d");
 
-In the editable code box above, there are two lines marked with a comment that we'd like you to update to make the box grow/shrink to certain sizes, using certain operators and/or values in each case. Let's try the following:
+// Edit the following two lines ONLY
+let x = 50;
+let y = 50;
 
-- Change the line that calculates `x` so the box is still 50px wide, but the 50 is calculated using the numbers 43 and 7 and an arithmetic operator.
-- Change the line that calculates `y` so the box is 75px high, but the 75 is calculated using the numbers 25 and 3 and an arithmetic operator.
-- Change the line that calculates `x` so the box is 250px wide, but the 250 is calculated using two numbers and the remainder (modulo) operator.
-- Change the line that calculates `y` so the box is 150px high, but the 150 is calculated using three numbers and the subtraction and division operators.
-- Change the line that calculates `x` so the box is 200px wide, but the 200 is calculated using the number 4 and an assignment operator.
-- Change the line that calculates `y` so the box is 200px high, but the 200 is calculated using the numbers 50 and 3, the multiplication operator, and the addition assignment operator.
-  Don't forget to first assign a default value to `y` (in a separate line), so the addition works as expected.
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+ctx.fillStyle = "green";
+ctx.fillRect(10, 10, x, y);
+para.textContent = `The rectangle is ${x}px wide and ${y}px high.`;
+```
 
-Don't worry if you totally mess the code up. You can always press the Reset button to get things working again. After you've answered all the above questions correctly, feel free to play with the code some more or create your own challenges.
+{{EmbedLiveSample("canvas-exercise", '100%', 300)}}
+
+Open the above example in the MDN Playground by clicking the **"Play"** button, then follow the list of instructions below to make the box grow/shrink to certain sizes, using certain operators and/or values in each case:
+
+- Change the line that calculates `x` so the box is still `50px` wide, but the 50 is calculated using the numbers 43 and 7 and an arithmetic operator.
+- Change the line that calculates `y` so the box is `75px` high, but the 75 is calculated using the numbers 25 and 3 and an arithmetic operator.
+- Change the line that calculates `x` so the box is `100px` wide, but the 100 is calculated using three numbers and the subtraction and division operators.
+- Change the line that calculates `y` so the box is `200px` high, but the 200 is calculated using the numbers 2 and `x`, and the multiplication operator.
+
+Don't worry if you mess the code up. You can always press the Reset button and start again.
 
 ## Comparison operators
 
@@ -414,12 +429,12 @@ If you try entering some of these values in a console, you'll see that they all 
 
 We'll look at how to code such logic when we look at conditional statements in a future article. For now, let's look at a quick example:
 
-```html
+```html live-sample___conditional
 <button>Start machine</button>
 <p>The machine is stopped.</p>
 ```
 
-```js
+```js live-sample___conditional
 const btn = document.querySelector("button");
 const txt = document.querySelector("p");
 
@@ -436,9 +451,7 @@ function updateBtn() {
 }
 ```
 
-{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/maths/conditional.html", '100%', 100)}}
-
-**[Open in new window](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/conditional.html)**
+{{EmbedLiveSample("conditional", '100%', 100)}}
 
 You can see the equality operator being used just inside the `updateBtn()` function. In this case, we are not testing if two mathematical expressions have the same value — we are testing whether the text content of a button contains a certain string — but it is still the same principle at work. If the button is currently saying "Start machine" when it is pressed, we change its label to "Stop machine", and update the label as appropriate. If the button is currently saying "Stop machine" when it is pressed, we swap the display back again.
 

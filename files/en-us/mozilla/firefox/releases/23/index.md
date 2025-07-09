@@ -2,9 +2,8 @@
 title: Firefox 23 for developers
 slug: Mozilla/Firefox/Releases/23
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 ## Changes for Web developers
 
@@ -31,7 +30,7 @@ page-type: firefox-release-notes
 
 ### DOM
 
-- D3E [`KeyboardEvent.key`](/en-US/docs/Web/API/KeyboardEvent#key_names_and_char_values) is now supported, but only for non-printable keys ([Firefox bug 842927](https://bugzil.la/842927)).
+- D3E [`KeyboardEvent.key`](/en-US/docs/Web/API/KeyboardEvent/key) is now supported, but only for non-printable keys ([Firefox bug 842927](https://bugzil.la/842927)).
 - The `title` attribute of {{domxref("DOMImplementation.createHTMLDocument")}} is now optional as per updated DOM specification.
 - The ability to add a sidebar panel (`window.sidebar.addPanel`) has been dropped ([Firefox bug 691647](https://bugzil.la/691647)).
 - The unprefixed {{domxref("Window.requestAnimationFrame")}} and {{domxref("Window.cancelAnimationFrame")}} methods has been added ([Firefox bug 704063](https://bugzil.la/704063)). The unprefixed {{domxref("Window.requestAnimationFrame")}} receives a {{domxref("DOMHighResTimeStamp")}} as argument; the prefixed version receives a timestamp in milliseconds ([Firefox bug 753453](https://bugzil.la/753453)).
@@ -51,7 +50,7 @@ page-type: firefox-release-notes
 
 - The blink effect for `text-decoration: blink;` has no more effect, but is still a valid value ([Firefox bug 857820](https://bugzil.la/857820)).
 - In-flow {{cssxref("::after")}} and {{cssxref("::before")}} pseudo-elements are now flex items ([Firefox bug 867454](https://bugzil.la/867454)).
-- The way to compute [viewport units](/en-US/docs/Web/CSS/length#viewport-percentage_lengths) has been changed. In conjunction with `overflow:auto`, space taken by eventual scrollbars is not subtracted from the viewport, whereas in the case of `overflow:scroll`, it is. ([Firefox bug 811403](https://bugzil.la/811403))
+- The way to compute [viewport units](/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport) has been changed. In conjunction with `overflow:auto`, space taken by eventual scrollbars is not subtracted from the viewport, whereas in the case of `overflow:scroll`, it is. ([Firefox bug 811403](https://bugzil.la/811403))
 
 ### MathML
 

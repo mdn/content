@@ -26,10 +26,8 @@ select(properties, options)
 ### Parameters
 
 - `properties`
-
   - : An array of {{jsxref('String', 'strings')}} defining what information to retrieve
     from a contact. Allowed values are as follows:
-
     - `'name'`: The contact's name.
     - `'tel'`: The telephone number(s) of the contact.
     - `'email'`: The email address of the contact.
@@ -37,9 +35,7 @@ select(properties, options)
     - `'icon'`: The avatar of the contact.
 
 - `options` {{optional_inline}}
-
   - : Options are as follows:
-
     - `multiple`
       - : A Boolean that allows multiple contacts to be selected. The default is `false`.
 

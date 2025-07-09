@@ -24,9 +24,7 @@ showSaveFilePicker(options)
 ### Parameters
 
 - `options` {{Optional_Inline}}
-
   - : An object containing options, which are as follows:
-
     - `excludeAcceptAllOption` {{Optional_Inline}}
       - : A boolean value that defaults to
         `false`. By default, the picker should include an option to not apply
@@ -42,10 +40,8 @@ showSaveFilePicker(options)
     - `suggestedName` {{Optional_Inline}}
       - : A {{jsxref('String')}}. The suggested file name.
     - `types` {{Optional_Inline}}
-
       - : An {{jsxref('Array')}} of allowed file types to save. Each
         item is an object with the following options:
-
         - `description` {{Optional_Inline}}
           - : An optional description of the category of files
             types allowed. Default to be an empty string.

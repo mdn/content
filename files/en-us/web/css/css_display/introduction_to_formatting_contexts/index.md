@@ -1,5 +1,6 @@
 ---
 title: Introduction to formatting contexts
+short-title: Formatting contexts
 slug: Web/CSS/CSS_display/Introduction_to_formatting_contexts
 page-type: guide
 ---

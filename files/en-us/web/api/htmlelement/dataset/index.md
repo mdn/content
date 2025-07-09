@@ -40,10 +40,8 @@ attributes in our article [_Using data attributes_](/en-US/docs/Web/HTML/How_to/
 ### Name conversion
 
 - `dash-style` to `camelCase` conversion
-
   - : A custom data attribute name is transformed to a key for the
     {{domxref("DOMStringMap") }} entry by the following:
-
     1. Lowercase all ASCII capital letters (`A` to
        `Z`);
     2. Remove the prefix `data-` (including the dash);
@@ -52,10 +50,8 @@ attributes in our article [_Using data attributes_](/en-US/docs/Web/HTML/How_to/
     4. Other characters (including other dashes) are left unchanged.
 
 - `camelCase` to `dash-style` conversion
-
   - : The opposite transformation, which maps a key to an attribute name, uses the
     following:
-
     1. **Restriction:** Before transformation, a dash _must not_ be
        immediately followed by an ASCII lowercase letter `a` to
        `z`;

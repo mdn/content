@@ -60,6 +60,8 @@ The resulting drawing looks like this:
 
 ### Context
 
+- {{domxref("CanvasRenderingContext2D.getContextAttributes()")}}
+  - : Returns an object containing the context attributes used by the browser. Context attributes can be requested when using {{domxref("HTMLCanvasElement.getContext()")}} to create the 2D context.
 - {{domxref("CanvasRenderingContext2D.isContextLost()")}}
   - : Returns `true` if the rendering context was lost.
 

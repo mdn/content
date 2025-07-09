@@ -2,9 +2,8 @@
 title: Firefox 31 for developers
 slug: Mozilla/Firefox/Releases/31
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 31 was released on July 22, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 

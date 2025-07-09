@@ -36,7 +36,7 @@ The `bias` property is used to adjust the brightness of the output.
     y="20"
     width="100"
     height="100"
-    style="fill:lightblue;"
+    fill="lightblue"
     filter="url(#convolveFilterWithBias)" />
 </svg>
 ```

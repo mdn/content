@@ -1,5 +1,6 @@
 ---
 title: Set.prototype.isSubsetOf()
+short-title: isSubsetOf()
 slug: Web/JavaScript/Reference/Global_Objects/Set/isSubsetOf
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.isSubsetOf

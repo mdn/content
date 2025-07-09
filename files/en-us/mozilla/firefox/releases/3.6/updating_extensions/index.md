@@ -2,9 +2,8 @@
 title: Updating extensions for Firefox 3.6
 slug: Mozilla/Firefox/Releases/3.6/Updating_extensions
 page-type: guide
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides helpful information to extension developers trying to update their extensions to work properly in Firefox 3.6.
 

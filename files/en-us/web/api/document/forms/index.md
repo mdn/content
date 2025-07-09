@@ -8,19 +8,23 @@ browser-compat: api.Document.forms
 
 {{APIRef("DOM")}}
 
-The **`forms`** read-only property of
-the {{domxref("Document")}} interface returns an {{domxref("HTMLCollection")}} listing
-all the {{HTMLElement("form")}} elements contained in the document.
+The **`forms`** read-only property of the {{domxref("Document")}} interface returns an {{domxref("HTMLCollection")}} listing all the {{HTMLElement("form")}} elements contained in the document.
 
 > [!NOTE]
-> Similarly, you can access a list of a form's component user
-> input elements using the {{domxref("HTMLFormElement.elements")}} property.
+> Similarly, you can access a list of a form's component user input elements using the {{domxref("HTMLFormElement.elements")}} property.
+
+You can also access named `<form>` elements as properties of the `document` object.
+For example, `document["login-form"]` and `document.forms["login-form"]` can both be used to access the form named `login-form`.
+
+> [!WARNING]
+> Relying on the `document["form-name"]` pattern is dangerous and discouraged because it can lead to unexpected conflicts with existing or future APIs in the browser.
+> For example, if a browser introduces a built-in `document["login-form"]` property in the future, your code may no longer be able to access the form element.
+> To avoid such conflicts, always use `document.forms` to access named forms.
 
 ## Value
 
-An {{domxref("HTMLCollection")}} object listing all of the document's forms. Each item
-in the collection is a {{domxref("HTMLFormElement")}} representing a single
-`<form>` element.
+An {{domxref("HTMLCollection")}} object listing all of the document's forms.
+Each item in the collection is a {{domxref("HTMLFormElement")}} representing a single `<form>` element.
 
 If the document has no forms, the returned collection is empty, with a length of zero.
 

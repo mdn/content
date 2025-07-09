@@ -1,5 +1,6 @@
 ---
 title: RegExp.prototype.global
+short-title: global
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/global
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.RegExp.global

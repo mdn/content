@@ -20,11 +20,11 @@ border-left-color: #32a1ce;
 ```
 
 ```css interactive-example-choice
-border-left-color: rgb(170, 50, 220, 0.6);
+border-left-color: rgb(170 50 220 / 0.6);
 ```
 
 ```css interactive-example-choice
-border-left-color: hsl(60, 90%, 50%, 0.8);
+border-left-color: hsl(60 90% 50% / 0.8);
 ```
 
 ```css interactive-example-choice

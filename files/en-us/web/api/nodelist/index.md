@@ -47,7 +47,6 @@ It's good to keep this distinction in mind when you choose how to iterate over t
 ## Instance methods
 
 - {{domxref("NodeList.item()")}}
-
   - : Returns an item in the list by its index, or `null` if the index is out-of-bounds.
 
     An alternative to accessing `nodeList[i]` (which instead returns `undefined` when `i` is out-of-bounds). This is mostly useful for non-JavaScript DOM implementations.
@@ -73,7 +72,7 @@ for (let i = 0; i < myNodeList.length; i++) {
 
 **Don't use [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) to enumerate the items in `NodeList`s**, since they will _also_ enumerate its `length` and `item` properties and cause errors if your script assumes it only has to deal with {{domxref("element")}} objects. Also, `for...in` is not guaranteed to visit the properties in any particular order.
 
-[`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loops loop over `NodeList` objects correctly:
+[`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loops over `NodeList` objects correctly:
 
 ```js
 const list = document.querySelectorAll("input[type=checkbox]");

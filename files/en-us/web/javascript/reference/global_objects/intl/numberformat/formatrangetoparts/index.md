@@ -1,5 +1,6 @@
 ---
 title: Intl.NumberFormat.prototype.formatRangeToParts()
+short-title: formatRangeToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRangeToParts
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.NumberFormat.formatRangeToParts
@@ -24,7 +25,7 @@ formatRangeToParts(startRange, endRange)
 
 ### Return value
 
-An {{jsxref("Array")}} of objects containing the formatted range in parts. Each object has three properties, `type`, `value`, and `source`, each containing a string. The string concatenation of `value`, in the order provided, will result in the same string as {{jsxref("Intl/NumberFormat/formatRange", "formatRange()")}}. The `type` may have the same values as {{jsxref("Intl/NumberFormat/formatToParts", "formatToParts()")}}. The `source` can be one of the following:
+An {{jsxref("Array")}} of objects containing the formatted range in parts. Each object has three properties, `type`, `value`, and `source`, each containing a string. The string concatenation of `value`, in the order provided, will result in the same string as {{jsxref("Intl/NumberFormat/formatRange", "formatRange()")}}. The `type` may have the same values as {{jsxref("Intl/NumberFormat/formatToParts", "formatToParts()")}}, or the additional value `"approximatelySign"` (see below). The `source` can be one of the following:
 
 - `startRange`
   - : The token is a part of the start number.
@@ -33,7 +34,7 @@ An {{jsxref("Array")}} of objects containing the formatted range in parts. Each 
 - `shared`
   - : The token is shared between the start and end; for example, the currency symbol. All literals that are part of the range pattern itself, such as the `"–"` separator, are also marked as `shared`.
 
-If the start and end numbers are equivalent, then the output has the same list of tokens as calling {{jsxref("Intl/NumberFormat/formatToParts", "formatToParts()")}} on the start number, with all tokens marked as `source: "shared"`.
+If the start and end numbers are formatted to the same string, then the output has the same list of tokens as calling {{jsxref("Intl/NumberFormat/formatToParts", "formatToParts()")}} on the start number, with all tokens marked as `source: "shared"`. In addition, the first token may be an "approximately equals" symbol (e.g., "~") with `type: "approximatelySign"`. The insertion of this symbol only depends on the locale settings, and is inserted even when `startRange === endRange`.
 
 ### Exceptions
 

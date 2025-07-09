@@ -1,5 +1,6 @@
 ---
 title: Intl.ListFormat.prototype.format()
+short-title: format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/format
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.ListFormat.format

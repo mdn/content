@@ -21,17 +21,13 @@ getRenderbufferParameter(target, pname)
 ### Parameters
 
 - `target`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target renderbuffer object. Possible values:
-
     - `gl.RENDERBUFFER`
       - : Buffer data storage for single images in a
         renderable internal format.
 
 - `pname`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the information to query. Possible values:
-
     - `gl.RENDERBUFFER_WIDTH`
       - : Returns a {{domxref("WebGL_API/Types", "GLint")}} indicating
         the width of the image of the currently bound renderbuffer.
@@ -39,11 +35,9 @@ getRenderbufferParameter(target, pname)
       - : Returns a {{domxref("WebGL_API/Types", "GLint")}} indicating
         the height of the image of the currently bound renderbuffer.
     - `gl.RENDERBUFFER_INTERNAL_FORMAT`
-
       - : Returns a {{domxref("WebGL_API/Types", "GLenum")}}
         indicating the internal format of the currently bound renderbuffer. The default is
         `gl.RGBA4`. Possible return values:
-
         - `gl.RGBA4`: 4 red bits, 4 green bits, 4 blue bits 4 alpha bits.
         - `gl.RGB565`: 5 red bits, 6 green bits, 5 blue bits.
         - `gl.RGB5_A1`: 5 red bits, 5 green bits, 5 blue bits, 1 alpha bit.
@@ -66,13 +60,11 @@ getRenderbufferParameter(target, pname)
       - : Returns a {{domxref("WebGL_API/Types", "GLint")}} that is
         the resolution size (in bits) for the depth component.
     - `gl.RENDERBUFFER_STENCIL_SIZE`
-
       - : Returns a {{domxref("WebGL_API/Types", "GLint")}} that
         is the resolution size (in bits) for the stencil component.
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
     the following value is available additionally:
-
     - `gl.RENDERBUFFER_SAMPLES`
       - : Returns a {{domxref("WebGL_API/Types", "GLint")}}
         indicating the number of samples of the image of the currently bound

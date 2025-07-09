@@ -1,5 +1,6 @@
 ---
 title: Temporal.ZonedDateTime.prototype.add()
+short-title: add()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/add
 page-type: javascript-instance-method
 status:

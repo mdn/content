@@ -45,7 +45,6 @@ On an ongoing basis, the browser will:
    Chrome places each of the 22 root topics (those without an ancestor) from the taxonomy into [one of two buckets](https://github.com/patcg-individual-drafts/topics/blob/main/topics-utility-buckets-v1.md) indicating higher or standard utility for the overall ad tech ecosystem. All descendants of the root topics inherit the same bucket assignment from their parent. The assignment of root topics to buckets is based on input about utility Google received from companies across the ecosystem.
 
 2. Select top topics for each user, at the end of each epoch:
-
    1. Chrome converts caller domain hostnames from the user's browsing history into topics.
    2. These topics are sorted first by bucket, and then by frequency (how many times they were matched in a hostname). That is, if two topics are in the same bucket but have different frequencies, the higher frequency topic is sorted higher.
    3. Chrome selects the top five topics as the user's top topics for that epoch, which are eligible to be shared with callers.
@@ -64,7 +63,6 @@ The following features all serve a dual purpose — they return the user's top t
 - You can specify a `browsingTopics: true` option in the options object of a {{domxref("Window/fetch", "fetch()")}} call to the ad tech platform.
 - You could also pass `browsingTopics: true` into the options object of a {{domxref("Request.Request", "Request()")}} constructor call, and pass the resulting {{domxref("Request")}} object into the {{domxref("Window/fetch", "fetch()")}} call.
 - You can set a `browsingtopics` attribute on the `<iframe>`, at the same time or before setting the `src` attribute to load the source. This could be done:
-
   - Declaratively on the HTML:
 
   ```html
@@ -147,11 +145,6 @@ const creative = await response.json();
 ```html
 <iframe browsingtopics src="ad-tech1.example"> ... </iframe>
 ```
-
-### Complete examples
-
-- [Topics API demo](https://topics-demo.glitch.me/): Demonstrates how `document.browsingTopics()` calls can be used to observe and then access topics ([see source code](https://glitch.com/edit/#!/topics-demo)).
-- [Topics API header demo](https://topics-fetch-demo.glitch.me/): Demonstrates a `fetch()` request with a {{httpheader("Sec-Browsing-Topics")}} header can be used to observe and then access topics ([see source code](https://glitch.com/edit/#!/topics-fetch-demo)).
 
 ## Testing hints
 

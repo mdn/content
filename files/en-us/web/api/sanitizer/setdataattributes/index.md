@@ -3,10 +3,12 @@ title: "Sanitizer: setDataAttributes() method"
 short-title: setDataAttributes()
 slug: Web/API/Sanitizer/setDataAttributes
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.Sanitizer.setDataAttributes
 ---
 
-{{APIRef("HTML Sanitizer API")}}
+{{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}
 
 The **`setDataAttributes()`** method of the {{domxref("Sanitizer")}} interface sets whether [data attributes](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*) will be allowed or removed by the sanitizer.
 
@@ -21,10 +23,9 @@ setDataAttributes(allow);
 ### Parameters
 
 - `allow`
-
   - : `true` if data attributes are allowed, and `false` if they are to be removed.
 
-### Returns
+### Return value
 
 None (`undefined`).
 

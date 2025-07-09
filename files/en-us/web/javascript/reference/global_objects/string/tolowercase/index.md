@@ -1,5 +1,6 @@
 ---
 title: String.prototype.toLowerCase()
+short-title: toLowerCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.toLowerCase

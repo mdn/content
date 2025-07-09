@@ -25,9 +25,7 @@ new DynamicsCompressorNode(context, options)
 - `context`
   - : A reference to an {{domxref("AudioContext")}}.
 - `options` {{optional_inline}}
-
   - : Options are as follows:
-
     - `attack`
       - : The amount of time (in seconds) to reduce the gain by 10dB.
         Its default value is 0.003. This parameter is k-rate. Its nominal range is \[0, 1].

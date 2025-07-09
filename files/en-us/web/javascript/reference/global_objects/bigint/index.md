@@ -279,10 +279,17 @@ These properties are defined on `BigInt.prototype` and shared by all `BigInt` in
 ### Calculating Primes
 
 ```js
-// Returns true if the passed BigInt value is a prime number
-function isPrime(p) {
-  for (let i = 2n; i * i <= p; i++) {
-    if (p % i === 0n) return false;
+function isPrime(n) {
+  if (n < 2n) {
+    return false;
+  }
+  if (n % 2n === 0n) {
+    return n === 2n;
+  }
+  for (let factor = 3n; factor * factor <= n; factor += 2n) {
+    if (n % factor === 0n) {
+      return false;
+    }
   }
   return true;
 }
@@ -306,6 +313,9 @@ function nthPrime(nth) {
 nthPrime(20n);
 // 73n
 ```
+
+> [!NOTE]
+> The `isPrime()` implementation is for demonstration only. For a real-world application, you would want to use a heavily memoized algorithm such as the [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) to avoid repeated calculations.
 
 ## Specifications
 

@@ -18,6 +18,10 @@ The **`attachedElements()`** method of the {{domxref("EditContext")}} interface 
 attachedElements()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An {{jsxref("Array")}} containing one {{domxref("HTMLElement")}} object.

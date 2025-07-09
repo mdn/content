@@ -34,13 +34,10 @@ The **`<feMergeNode>`** [SVG](/en-US/docs/Web/SVG) takes the result of another f
     y="40"
     width="100"
     height="100"
-    style="stroke: #000000; fill: green; filter: url(#feOffset);" />
-  <rect
-    x="40"
-    y="40"
-    width="100"
-    height="100"
-    style="stroke: #000000; fill: green;" />
+    stroke="black"
+    fill="green"
+    filter="url(#feOffset)" />
+  <rect x="40" y="40" width="100" height="100" stroke="black" fill="green" />
 </svg>
 ```
 

@@ -45,7 +45,14 @@ First we add some HTML elements for loading some files and displaying the SHA-25
 <label
   >Choose file(s) to hash <input type="file" id="file" name="file" multiple
 /></label>
-<output style="display:block;font-family:monospace;"></output>
+<output></output>
+```
+
+```css hidden
+output {
+  display: block;
+  font-family: monospace;
+}
 ```
 
 Next we use the SubtleCrypto interface to process them. This works by:
@@ -145,7 +152,14 @@ The code below, like our SHA256 example, can be used to generate these hashes fr
   >Choose file(s) to hash <input type="file" id="file" name="file" multiple
 /></label>
 
-<output style="display:block;font-family:monospace;"></output>
+<output></output>
+```
+
+```css hidden
+output {
+  display: block;
+  font-family: monospace;
+}
 ```
 
 ```js

@@ -79,6 +79,8 @@ li[class~="a"] {
 
 {{EmbedLiveSample("attribute", "", "200px")}}
 
+Try editing the above CSS to add a rule that selects only list items with a `class` attribute value of `ab`, and gives them a `white` text `color` and a `purple` `background-color`.
+
 ## Substring matching selectors
 
 These selectors allow for more advanced matching of substrings inside the value of your attribute. For example, if you had classes of `box-warning` and `box-error` and wanted to match everything that started with the string "box-", you could use `[class^="box-"]` to select them both (or `[class|="box"]` as described in section above).
@@ -88,8 +90,6 @@ These selectors allow for more advanced matching of substrings inside the value 
 | `[attr^=value]` | `li[class^="box-"]` | Matches elements with an _attr_ attribute, whose value begins with _value_.                        |
 | `[attr$=value]` | `li[class$="-box"]` | Matches elements with an _attr_ attribute whose value ends with _value_.                           |
 | `[attr*=value]` | `li[class*="box"]`  | Matches elements with an _attr_ attribute whose value contains _value_ anywhere within the string. |
-
-(Aside: It may help to note that `^` and `$` have long been used as _anchors_ in so-called _regular expressions_ to mean _begins with_ and _ends with_ respectively.)
 
 The next example shows usage of these selectors:
 
@@ -125,6 +125,8 @@ li[class*="a"] {
 ```
 
 {{EmbedLiveSample("attribute-substring", "", "200px")}}
+
+Try editing the above CSS to add a rule that selects only list items with a `class` attribute value that has `b` or `c` at the end of it, and gives them a `2px`-wide, `solid`, `black` `border`. You may have to use a [selector list](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#selector_lists) to solve this one.
 
 ## Summary
 

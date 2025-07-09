@@ -24,9 +24,7 @@ browser.search.query(
 ### Parameters
 
 - `queryInfo`
-
   - : `object`. An object with the following properties:
-
     - `disposition` {{optional_inline}}
       - : `string`. The location where the search results are displayed. Valid values are `CURRENT_TAB`, `NEW_TAB`, and `NEW_WINDOW`. Defaults to `CURRENT_TAB`. Cannot be specified with `tabId`.
     - `tabId` {{optional_inline}}

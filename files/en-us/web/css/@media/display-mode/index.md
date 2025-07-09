@@ -39,7 +39,7 @@ The `display-mode` feature is specified as a keyword value chosen from the list 
 ### Apply CSS if the application is in fullscreen mode
 
 ```css
-@media all and (display-mode: fullscreen) {
+@media (display-mode: fullscreen) {
   body {
     margin: 0;
     border: 5px solid black;

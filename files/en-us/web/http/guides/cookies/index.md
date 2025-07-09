@@ -2,9 +2,8 @@
 title: Using HTTP cookies
 slug: Web/HTTP/Guides/Cookies
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 A **cookie** (also known as a web cookie or browser cookie) is a small piece of data a server sends to a user's web browser. The browser may store cookies, create new cookies, modify existing ones, and send them back to the same server with later requests. Cookies enable web applications to store limited amounts of data and remember state information; by default the HTTP protocol is [stateless](/en-US/docs/Web/HTTP/Guides/Overview#http_is_stateless_but_not_sessionless).
 
@@ -85,7 +84,8 @@ You can specify an expiration date or time period after which the cookie should 
   Set-Cookie: id=a3fWa; Max-Age=2592000
   ```
 
-  > **Note:** `Expires` has been available for longer than `Max-Age`, however `Max-Age` is less error-prone, and takes precedence when both are set. The rationale behind this is that when you set an `Expires` date and time, they're relative to the client the cookie is being set on. If the server is set to a different time, this could cause errors.
+  > [!NOTE]
+  > `Expires` has been available for longer than `Max-Age`, however `Max-Age` is less error-prone, and takes precedence when both are set. The rationale behind this is that when you set an `Expires` date and time, they're relative to the client the cookie is being set on. If the server is set to a different time, this could cause errors.
 
 - _Session_ cookies — cookies without a `Max-Age` or `Expires` attribute – are deleted when the current session ends. The browser defines when the "current session" ends, and some browsers use _session restoring_ when restarting. This can cause session cookies to last indefinitely.
 
@@ -170,14 +170,12 @@ The `Domain` and `Path` attributes define the _scope_ of a cookie: what URLs the
   ```
 
   The `%x2F` ("/") character is considered a directory separator, and subdirectories match as well. For example, if you set `Path=/docs`, these request paths match:
-
   - `/docs`
   - `/docs/`
   - `/docs/Web/`
   - `/docs/Web/HTTP`
 
   But these request paths don't:
-
   - `/`
   - `/docsets`
   - `/fr/docs`

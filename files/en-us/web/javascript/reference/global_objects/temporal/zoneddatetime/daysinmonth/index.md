@@ -1,5 +1,6 @@
 ---
 title: Temporal.ZonedDateTime.prototype.daysInMonth
+short-title: daysInMonth
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/daysInMonth
 page-type: javascript-instance-accessor-property
 status:

@@ -25,9 +25,7 @@ let getting = browser.windows.get(
 - `windowId`
   - : `integer`. The ID of the window object you want returned.
 - `getInfo` {{optional_inline}}
-
   - : `object`. Contains options to filter the type of window.
-
     - `populate` {{optional_inline}}
       - : `boolean`. If `true`, the {{WebExtAPIRef('windows.Window')}} object will have a `tabs` property that contains a list of {{WebExtAPIRef('tabs.Tab')}} objects representing the tabs open in the window. The `Tab` objects only contain the `url`, `title` and `favIconUrl` properties if the extension's manifest file includes the `"tabs"` permission or a matching [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions).
     - `windowTypes` {{optional_inline}}

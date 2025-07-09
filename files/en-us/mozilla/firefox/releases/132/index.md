@@ -2,9 +2,8 @@
 title: Firefox 132 for developers
 slug: Mozilla/Firefox/Releases/132
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 132 that affect developers. Firefox 132 was released on [October 29, 2024](https://whattrainisitnow.com/release/?version=132).
 
@@ -17,7 +16,7 @@ No notable changes
 ### CSS
 
 - The {{CSSXRef("text-emphasis-position")}} property now supports the `auto` value to bring it inline with {{CSSXRef("text-underline-position")}} ([Firefox bug 1919658](https://bugzil.la/1919658)).
-- CSS now supports the [Nested declaration rule](/en-US/docs/Web/API/CSSNestedDeclarations#nested_declarations_rule), which means that nested CSS is now parsed in the correct order ([Firefox bug 1918408](https://bugzil.la/1918408)).
+- CSS now supports the [Nested declaration rule](/en-US/docs/Web/API/CSSNestedDeclarations), which means that nested CSS is now parsed in the correct order ([Firefox bug 1918408](https://bugzil.la/1918408)).
 
 #### Removals
 
@@ -71,7 +70,6 @@ These features are newly shipped in Firefox 132 but are disabled by default. To 
 - **Cookie Store API:** `dom.cookieStore.enabled`.
 
   The [Cookie Store API](/en-US/docs/Web/API/Cookie_Store_API) is a modern, {{jsxref("Promise")}}-based method of managing cookies that does not block the event loop and does not rely on {{domxref("Document")}} (it can therefore be made available to [service workers](/en-US/docs/Web/API/Service_Worker_API)). As of Firefox 132, a subset of the Cookie Store API has been implemented. ([Firefox bug 1800882](https://bugzil.la/1800882)). This includes:
-
   - The [`CookieStore`](/en-US/docs/Web/API/CookieStore) interface, but `partitioned` is not included in return values.
   - The [`CookieChangeEvent`](/en-US/docs/Web/API/CookieChangeEvent) interface, excluding `partitioned` properties.
   - The [`Window.cookieStore`](/en-US/docs/Web/API/Window/cookieStore) property.

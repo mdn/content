@@ -3,12 +3,10 @@ title: "PublicKeyCredential: signalCurrentUserDetails() static method"
 short-title: signalCurrentUserDetails()
 slug: Web/API/PublicKeyCredential/signalCurrentUserDetails_static
 page-type: web-api-static-method
-status:
-  - experimental
 browser-compat: api.PublicKeyCredential.signalCurrentUserDetails_static
 ---
 
-{{APIRef("Web Authentication API")}}{{securecontext_header}}{{seecompattable}}
+{{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 The **`signalCurrentUserDetails()`** static method of the {{domxref("PublicKeyCredential")}} interface signals to the authenticator that a particular user has updated their user name and/or display name on the [relying party](https://en.wikipedia.org/wiki/Relying_party) (RP) server.
 
@@ -66,14 +64,14 @@ if (PublicKeyCredential.signalCurrentUserDetails) {
     rpId: "example.com",
     userId: "M2YPl-KGnA8", // base64url-encoded user ID
     name: "a.new.email.address@example.com", // username
-    displayName: "John Doe",
+    displayName: "Maria Sanchez",
   });
 } else {
   // Encourage the user to update their details in the authenticator
 }
 ```
 
-For a complete example, see [WebAuthn Signal API Demo](https://signal-api-demo.glitch.me/) (see [the source code](https://glitch.com/edit/#!/signal-api-demo?path=site.js)).
+For further code examples, see [Keep passkeys consistent with credentials on your server with the Signal API](https://developer.chrome.com/docs/identity/webauthn-signal-api) on developer.chrome.com (2024).
 
 ## Specifications
 

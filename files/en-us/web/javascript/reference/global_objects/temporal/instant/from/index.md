@@ -1,5 +1,6 @@
 ---
 title: Temporal.Instant.from()
+short-title: from()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Instant/from
 page-type: javascript-static-method
 status:

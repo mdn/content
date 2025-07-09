@@ -3,12 +3,10 @@ title: "GPUDevice: createShaderModule() method"
 short-title: createShaderModule()
 slug: Web/API/GPUDevice/createShaderModule
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUDevice.createShaderModule
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`createShaderModule()`** method of the
 {{domxref("GPUDevice")}} interface creates a {{domxref("GPUShaderModule")}} from a string of [WGSL](https://gpuweb.github.io/gpuweb/wgsl/) source code.
@@ -22,13 +20,10 @@ createShaderModule(descriptor)
 ### Parameters
 
 - `descriptor`
-
   - : An object containing the following properties:
-
     - `code`
       - : A string representing the WGSL source code for the shader module.
     - `hints` {{optional_inline}}
-
       - : A sequence of record types, with the structure `("string", compilationHint)`. These behave like [ordered maps](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map). In each case, the `"string"` is a key used to identify or select the record, and the `compilationHint` is either a {{domxref("GPUPipelineLayout")}} object instance or an enumerated value of `"auto"`.
 
         The point of `hints` is to provide information about the pipeline layout as early as possible to improve performance. The idea is to maximize the amount of compilation that can be done once by `createShaderModule()`, rather than multiple times in multiple calls to {{domxref("GPUDevice.createComputePipeline()")}} and {{domxref("GPUDevice.createRenderPipeline()")}}.
@@ -39,7 +34,6 @@ createShaderModule(descriptor)
     - `label` {{optional_inline}}
       - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
     - `sourceMap` {{optional_inline}}
-
       - : A source map definition to provide developer tool integration such as source-language debugging. WGSL names (identifiers) in source maps should follow the rules defined in [WGSL identifier comparison](https://gpuweb.github.io/gpuweb/wgsl/#identifier-comparison). If defined, the source map may be interpreted as a [source-map-v3 format](https://sourcemaps.info/spec.html).
 
         > [!NOTE]

@@ -1,5 +1,6 @@
 ---
 title: RegExp.prototype.unicodeSets
+short-title: unicodeSets
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.RegExp.unicodeSets

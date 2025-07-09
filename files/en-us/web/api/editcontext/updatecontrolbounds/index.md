@@ -25,10 +25,14 @@ updateControlBounds(controlBounds)
 - `controlBounds`
   - : A {{domxref("DOMRect")}} object representing the new control bounds.
 
+### Return value
+
+None (`undefined`).
+
 ### Exceptions
 
-- If no argument is provided, a `TypeError` {{domxref("DOMException")}} is thrown.
-- If the provided argument is not a {{domxref("DOMRect")}} a `TypeError` {{domxref("DOMException")}} is thrown.
+- {{jsxref("TypeError")}}
+  - : Thrown if the method is called with no arguments or if the provided argument is not a {{domxref("DOMRect")}} object.
 
 ## Examples
 

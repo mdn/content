@@ -122,6 +122,5 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Referenc
 
 - {{HTMLElement("rt")}}
 - {{HTMLElement("rp")}}
-- {{HTMLElement("rb")}}
-- {{HTMLElement("rtc")}}
+- {{cssxref("ruby-overhang")}}
 - {{CSSxRef("text-transform")}}: full-size-kana

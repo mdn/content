@@ -40,7 +40,7 @@ overflow-wrap: break-word;
 
 ```css interactive-example
 .example-container {
-  background-color: rgba(255, 0, 200, 0.2);
+  background-color: rgb(255 0 200 / 0.2);
   border: 3px solid #663399;
   padding: 0.75em;
   width: min-content;

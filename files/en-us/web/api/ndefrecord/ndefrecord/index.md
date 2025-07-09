@@ -24,9 +24,7 @@ new NDEFRecord(options)
 ### Parameters
 
 - `options`
-
   - : An object with the following properties:
-
     - `data` {{optional_inline}}
       - : Contains the data to be transmitted. It can be a string, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, or an array of nested records.
     - `encoding` {{optional_inline}}

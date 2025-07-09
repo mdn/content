@@ -53,7 +53,7 @@ This example shows how you can change some or all of the colors in a color font.
 ```css
 @import url(https://fonts.googleapis.com/css2?family=Bungee+Spice);
 p {
-  font-family: "Bungee Spice";
+  font-family: "Bungee Spice", fantasy;
   font-size: 2rem;
 }
 @font-palette-values --Alternate {

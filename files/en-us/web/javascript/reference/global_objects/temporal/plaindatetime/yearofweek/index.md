@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainDateTime.prototype.yearOfWeek
+short-title: yearOfWeek
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime/yearOfWeek
 page-type: javascript-instance-accessor-property
 status:

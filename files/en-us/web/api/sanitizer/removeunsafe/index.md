@@ -3,10 +3,12 @@ title: "Sanitizer: removeUnsafe() method"
 short-title: removeUnsafe()
 slug: Web/API/Sanitizer/removeUnsafe
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.Sanitizer.removeUnsafe
 ---
 
-{{APIRef("HTML Sanitizer API")}}
+{{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}
 
 The **`removeUnsafe()`** method of the {{domxref("Sanitizer")}} interface configures the sanitizer configuration so that it will remove all elements, attributes, and event handler content attributes that are considered XSS-unsafe by the browser.
 
@@ -30,7 +32,7 @@ removeUnsafe()
 
 None.
 
-### Returns
+### Return value
 
 None (`undefined`).
 
@@ -74,7 +76,7 @@ function log(text) {
 
 #### JavaScript
 
-The code first creates a new `Sanitizer` object that that allows the safe element {{htmlelement("p")}}, the unsafe elements {{htmlelement("script")}} and {{htmlelement("iframe")}}, and the unsafe `onwebkitanimationend` event handler attribute.
+The code first creates a new `Sanitizer` object that allows the safe element {{htmlelement("p")}}, the unsafe elements {{htmlelement("script")}} and {{htmlelement("iframe")}}, and the unsafe `onwebkitanimationend` event handler attribute.
 
 The code then calls `removeUnsafe()` on the sanitizer and logs its configuration.
 

@@ -111,7 +111,7 @@ const sanitizer = Sanitizer({
 });
 ```
 
-You can add the elements to the `Sanitizier` using its API.
+You can add the elements to the `Sanitizer` using its API.
 Here we add the same elements to an empty sanitizer:
 
 ```js
@@ -463,7 +463,7 @@ if ("Sanitizer" in window) {
   // Define unsafe string of HTML
   const initialHTMLString =
     `<div id="mainDiv"><!-- HTML comment -->
-    <p data-paratest="true">This is a paragraph. <button onclick="alert('You clicked the button!')">Click me</button></p>
+    <p data-test="true">This is a paragraph. <button onclick="alert('You clicked the button!')">Click me</button></p>
     <p>Be <b>bold</b> and brave!</p>
     <script>alert(1)<` + "/script></div>";
 

@@ -3,12 +3,10 @@ title: "GPUBuffer: size property"
 short-title: size
 slug: Web/API/GPUBuffer/size
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.GPUBuffer.size
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`size`** read-only property of the
 {{domxref("GPUBuffer")}} interface represents the length of the `GPUBuffer`'s memory allocation, in bytes.

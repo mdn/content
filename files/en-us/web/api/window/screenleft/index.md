@@ -12,7 +12,8 @@ The **`Window.screenLeft`** read-only property returns the
 horizontal distance, in CSS pixels, from the left border of the user's browser viewport
 to the left side of the screen.
 
-> **Note:** `screenLeft` is an alias of the older
+> [!NOTE]
+> `screenLeft` is an alias of the older
 > {{domxref("Window.screenX")}} property. `screenLeft` was originally
 > supported only in IE but was introduced everywhere due to popularity.
 

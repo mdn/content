@@ -2,23 +2,20 @@
 title: XUL improvements in Firefox 3
 slug: Mozilla/Firefox/Releases/3/XUL_improvements_in_Firefox_3
 page-type: guide
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 3 provides a number of new XUL elements, as well as improvements to existing elements. While this material is documented in detail elsewhere, this article provides a convenient list of these improvements as well as links to the detailed documentation.
 
 ### New elements
 
 - Numeric controls:
-
   - The new `<scale>` element lets you create sliding scales that let the user select any value in a specified range. This widget would typically be used, for example, to create a volume control.
   - A new value, `number`, for the `type` attribute of textboxes creates a textbox in which only numbers may be entered. In addition, arrow buttons appear to one side which may be used to step through values. [More information about numeric textboxes](https://wiki.mozilla.org/XUL:Specs:NumberBox). ([Firefox bug 345510](https://bugzil.la/345510))
   - A `<spinbuttons>` element is added which can be used when creating widgets using XBL bindings. ([Firefox bug 155053](https://bugzil.la/155053))
   - Two widgets, `<datepicker>` and `<timepicker>`, can be used to allow the entry of dates and times. The datepicker is available in a number of styles by setting the `type` attribute, to allow entry with textboxes or a calendar grid. [More information about date pickers.](https://wiki.mozilla.org/XUL:Specs:DateTimePickers)
 
 - A guide has been created for menus and popups describing new features available:
-
   - A `<dropmarker>` element is added which is useful when creating menu-like widgets using XBL bindings. ([Firefox bug 348614](https://bugzil.la/348614))
   - The `<panel>` element is new and designed for popups that are not menus. They can support any type of content. The \<menupopup> element should be used for menus. Menus provide keyboard navigation and support opening and closing submenus.
 
@@ -47,7 +44,6 @@ Firefox 3 provides a number of new XUL elements, as well as improvements to exis
 - The `<textbox>` now has a `reset()` method to reset the value of the textbox to the default value. The `defaultValue` property may be used to retrieve and modify the default value of the textbox.
 - An `editor` property is now offered, which lets you get the internal `nsIEditor` for the text field.
 - `textbox` now supports a `newlines` attribute which specifies how line breaks in pasted text are handled. Possible values are:
-
   - `pasteintact` - paste everything as is
   - `pastetofirst` - (default value) paste only up to the first line break
   - `replacewithspaces` - replace line breaks with spaces

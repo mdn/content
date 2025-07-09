@@ -13,7 +13,8 @@ This method is available to all extension script contexts (content scripts, back
 
 The method only works in the document that includes the right-clicked element and the `targetElementId` expires when the user opens another context menu.
 
-> **Note:** `menus.getTargetElement` only return the requested element if called in the same context as the document that contains the element, for example using content scripts (as shown in the example below).
+> [!NOTE]
+> `menus.getTargetElement` only return the requested element if called in the same context as the document that contains the element, for example using content scripts (as shown in the example below).
 
 An extension requires the "menus" permission to use this API.
 

@@ -32,6 +32,14 @@ If a passive listener calls `preventDefault()`, nothing will happen and a consol
 preventDefault()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### Blocking default click handling

@@ -21,7 +21,6 @@ let movedTabGroup = await browser.tabGroups.move(
 ### Parameters
 
 - `groupId`
-
   - : `integer` The ID of the tab group to move.
 
 - `moveProperties`

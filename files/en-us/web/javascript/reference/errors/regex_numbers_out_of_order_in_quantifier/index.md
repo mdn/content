@@ -2,9 +2,8 @@
 title: "SyntaxError: numbers out of order in {} quantifier."
 slug: Web/JavaScript/Reference/Errors/Regex_numbers_out_of_order_in_quantifier
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "numbers out of order in {} quantifier" occurs when a [quantifier](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier) in a regular expression uses the `{n,m}` syntax but `m` is less than `n`.
 

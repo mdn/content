@@ -24,10 +24,8 @@ match(request, options)
   - : The {{domxref("Request")}} for which you are attempting to find responses in the
     {{domxref("Cache")}}. This can be a {{domxref("Request")}} object or a URL string.
 - `options` {{optional_inline}}
-
   - : An object that sets options for the `match` operation.
     The available options are:
-
     - `ignoreSearch`
       - : A boolean value that specifies whether to
         ignore the query string in the URL. For example, if set to
@@ -51,7 +49,8 @@ match(request, options)
 A {{jsxref("Promise")}} that resolves to the first {{domxref("Response")}} that matches
 the request or to {{jsxref("undefined")}} if no match is found.
 
-> **Note:** `Cache.match()` is basically identical to
+> [!NOTE]
+> `Cache.match()` is basically identical to
 > {{domxref("Cache.matchAll()")}}, except that rather than resolving with an array of
 > all matching responses, it resolves with the first matching response only (that is,
 > `response[0]`).

@@ -2,9 +2,8 @@
 title: Firefox 6 for developers
 slug: Mozilla/Firefox/Releases/6
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article provides links to information about the changes that affect developers in this release.
 

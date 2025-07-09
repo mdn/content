@@ -87,13 +87,19 @@ This example draws an image to the canvas using the `drawImage()` method.
 
 ```html
 <canvas id="canvas"></canvas>
-<div style="display:none;">
+<div class="hidden">
   <img
     id="source"
     src="https://mdn.github.io/shared-assets/images/examples/rhino.jpg"
     width="300"
     height="227" />
 </div>
+```
+
+```css hidden
+.hidden {
+  display: none;
+}
 ```
 
 #### JavaScript

@@ -114,7 +114,7 @@ In contrast to IMSC, which uses markup, WebVTT uses a combination of CSS and pla
 
 ## Reference
 
-- [TTML Profiles for Internet Media Subtitles and Captions](https://www.w3.org/TR/ttml-imsc/all/)
+- [TTML Profiles for Internet Media Subtitles and Captions](https://w3c.github.io/imsc/imsc1/spec/ttml-ww-profiles.html)
 
 ## Tools
 

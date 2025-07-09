@@ -218,6 +218,7 @@ morethanwarm
 MYAGE
 mybooks
 myclass
+myimage
 mynamespace
 myns
 mypassword
@@ -288,6 +289,7 @@ tatsoi
 testuser
 texmf
 theguardian
+thinkin
 thisisareallylongvariablenameman
 threejs
 todomvc

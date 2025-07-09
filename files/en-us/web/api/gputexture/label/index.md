@@ -3,12 +3,10 @@ title: "GPUTexture: label property"
 short-title: label
 slug: Web/API/GPUTexture/label
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.GPUTexture.label
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`label`** property of the
 {{domxref("GPUTexture")}} interface provides a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.

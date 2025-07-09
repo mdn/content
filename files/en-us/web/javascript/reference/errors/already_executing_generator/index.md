@@ -2,9 +2,8 @@
 title: "TypeError: already executing generator"
 slug: Web/JavaScript/Reference/Errors/Already_executing_generator
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "TypeError: already executing generator" occurs when a [generator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator) is continued using one of its methods (such as {{jsxref("Generator/next", "next()")}}) while executing the generator function's body itself.
 

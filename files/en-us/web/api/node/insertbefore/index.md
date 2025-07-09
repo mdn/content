@@ -41,7 +41,8 @@ insertBefore(newNode, referenceNode)
   - : The node before which `newNode` is inserted. If this is
     `null`, then `newNode` is inserted at the end of
     node's child nodes.
-    > **Note:** `referenceNode` is **not** an optional parameter.
+    > [!NOTE]
+    > `referenceNode` is **not** an optional parameter.
     > You must explicitly pass a {{domxref("Node")}} or `null`.
     > Failing to provide it or passing invalid values may [behave](https://crbug.com/419780) [differently](https://bugzil.la/119489) in different browser versions.
 
@@ -62,29 +63,29 @@ Pre-insert validity
 <div id="parentElement">
   <span id="childElement">foo bar</span>
 </div>
+```
 
-<script>
-  // Create the new node to insert
-  const newNode = document.createElement("span");
+```js
+// Create the new node to insert
+const newNode = document.createElement("span");
 
-  // Get a reference to the parent node
-  const parentDiv = document.getElementById("childElement").parentNode;
+// Get a reference to the parent node
+const parentDiv = document.getElementById("childElement").parentNode;
 
-  // Begin test case [ 1 ] : Existing childElement (all works correctly)
-  let sp2 = document.getElementById("childElement");
-  parentDiv.insertBefore(newNode, sp2);
-  // End test case [ 1 ]
+// Begin test case [ 1 ] : Existing childElement (all works correctly)
+let sp2 = document.getElementById("childElement");
+parentDiv.insertBefore(newNode, sp2);
+// End test case [ 1 ]
 
-  // Begin test case [ 2 ] : childElement is of Type undefined
-  sp2 = undefined; // Non-existent node of id "childElement"
-  parentDiv.insertBefore(newNode, sp2); // Implicit dynamic cast to type Node
-  // End test case [ 2 ]
+// Begin test case [ 2 ] : childElement is of Type undefined
+sp2 = undefined; // Non-existent node of id "childElement"
+parentDiv.insertBefore(newNode, sp2); // Implicit dynamic cast to type Node
+// End test case [ 2 ]
 
-  // Begin test case [ 3 ] : childElement is of Type "undefined" (string)
-  sp2 = "undefined"; // Non-existent node of id "childElement"
-  parentDiv.insertBefore(newNode, sp2); // Generates "Type Error: Invalid Argument"
-  // End test case [ 3 ]
-</script>
+// Begin test case [ 3 ] : childElement is of Type "undefined" (string)
+sp2 = "undefined"; // Non-existent node of id "childElement"
+parentDiv.insertBefore(newNode, sp2); // Generates "Type Error: Invalid Argument"
+// End test case [ 3 ]
 ```
 
 ### Example 2
@@ -93,19 +94,19 @@ Pre-insert validity
 <div id="parentElement">
   <span id="childElement">foo bar</span>
 </div>
+```
 
-<script>
-  // Create a new, plain <span> element
-  let sp1 = document.createElement("span");
+```js
+// Create a new, plain <span> element
+const sp1 = document.createElement("span");
 
-  // Get the reference element
-  let sp2 = document.getElementById("childElement");
-  // Get the parent element
-  let parentDiv = sp2.parentNode;
+// Get the reference element
+const sp2 = document.getElementById("childElement");
+// Get the parent element
+const parentDiv = sp2.parentNode;
 
-  // Insert the new element into before sp2
-  parentDiv.insertBefore(sp1, sp2);
-</script>
+// Insert the new element into before sp2
+parentDiv.insertBefore(sp1, sp2);
 ```
 
 > [!NOTE]
@@ -130,12 +131,12 @@ Insert an element before the first child element, using the
 
 ```js
 // Get the parent element
-let parentElement = document.getElementById("parentElement");
+const parentElement = document.getElementById("parentElement");
 // Get the parent's first child
-let theFirstChild = parentElement.firstChild;
+const theFirstChild = parentElement.firstChild;
 
 // Create a new element
-let newElement = document.createElement("div");
+const newElement = document.createElement("div");
 
 // Insert the new element before the first child
 parentElement.insertBefore(newElement, theFirstChild);

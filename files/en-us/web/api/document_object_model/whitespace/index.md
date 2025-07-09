@@ -61,7 +61,7 @@ Conserving whitespace characters in the DOM is useful in many ways, but there ar
 
 ### How does CSS process whitespace?
 
-Most whitespace characters are ignored, not all of them are. In the earlier example one of the spaces between "Hello" and "World!" still exists when the page is rendered in a browser. There are rules in the browser engine that decide which whitespace characters are useful and which aren't — these are specified at least in part in [CSS Text Module Level 3](https://www.w3.org/TR/css-text-3/), and especially the parts about the [CSS `white-space` property](https://www.w3.org/TR/css-text-3/#white-space-property) and [whitespace processing details](https://www.w3.org/TR/css-text-3/#white-space-processing), but we also offer an easier explanation below.
+Most whitespace characters are ignored, not all of them are. In the earlier example one of the spaces between "Hello" and "World!" still exists when the page is rendered in a browser. There are rules in the browser engine that decide which whitespace characters are useful and which aren't — these are specified at least in part in [CSS Text Module Level 3](https://drafts.csswg.org/css-text-3/), and especially the parts about the [CSS `white-space` property](https://drafts.csswg.org/css-text-3/#white-space-property) and [whitespace processing details](https://drafts.csswg.org/css-text-3/#white-space-processing), but we also offer an easier explanation below.
 
 #### Example
 
@@ -136,7 +136,8 @@ Inside this context, whitespace character processing can be summarized as follow
 
 This is why people visiting the web page will see the phrase "Hello World!" nicely written at the top of the page, rather than a weirdly indented "Hello" followed but an even more weirdly indented "World!" on the line below that.
 
-> **Note:** [Firefox DevTools](https://firefox-source-docs.mozilla.org/devtools-user/index.html) have supported highlighting text nodes since version 52, making it easier to see exactly what nodes whitespace characters are contained within. Pure whitespace nodes are marked with a "whitespace" label.
+> [!NOTE]
+> [Firefox DevTools](https://firefox-source-docs.mozilla.org/devtools-user/index.html) have supported highlighting text nodes since version 52, making it easier to see exactly what nodes whitespace characters are contained within. Pure whitespace nodes are marked with a "whitespace" label.
 
 ### Whitespace in block formatting contexts
 

@@ -23,13 +23,13 @@ A string.
   id="el"
   src="largeVideo.mov"
   type="video/quicktime"
-  media="screen and (min-width: 600px)" />
+  media="screen and (width >= 600px)" />
 ```
 
 ```js
 const el = document.getElementById("el");
-console.log(el.media); // Output: "screen and (min-width: 600px)"
-el.media = "(min-width: 800px)"; // Updates the media value
+console.log(el.media); // Output: "screen and (width >= 600px)"
+el.media = "(width >= 800px)"; // Updates the media value
 ```
 
 ## Specifications

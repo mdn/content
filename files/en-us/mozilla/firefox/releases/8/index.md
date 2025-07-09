@@ -2,9 +2,8 @@
 title: Firefox 8 for developers
 slug: Mozilla/Firefox/Releases/8
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 8 was released on November 8, 2011. This article provides information both for [web developers](#changes_for_web_developers) and for add-on and [Mozilla project developers](#changes_for_mozilla_and_add-on_developers) to help take full advantage of the features of this release.
 
@@ -13,7 +12,7 @@ Firefox 8 was released on November 8, 2011. This article provides information bo
 ### HTML
 
 - The {{ domxref("HTMLImageElement") }} `crossOrigin` property has been added and the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Elements/img#crossorigin) attribute has been added to the {{ HTMLElement("img") }} element. (see [Firefox bug 664299](https://bugzil.la/664299))
-- The {{ domxref("HTMLSelectElement","","add()") }} method now supports either an item or index of an item that the new item should be inserted before. Previously it only supported an item. (see [Firefox bug 666200](https://bugzil.la/666200))
+- The {{ domxref("HTMLSelectElement.add()") }} method now supports either an item or index of an item that the new item should be inserted before. Previously it only supported an item. (see [Firefox bug 666200](https://bugzil.la/666200))
 - The `HTMLIsIndexElement` constructor has been removed. No elements have implemented this interface since before Firefox 4.
 - The HTML5 "context menu" feature (`contextmenu` attribute), which lets you add custom element specific items to native context menu, is now supported (the implementation is still experimental awaiting changes in the specification; see [Firefox bug 617528](https://bugzil.la/617528)).
 - Support for the {{ domxref("HTMLElement.accessKeyLabel") }} attribute has been added to all elements.
@@ -115,7 +114,6 @@ It is no longer possible to access XPCOM objects from ChromeWorkers. XPConnect h
 ### Changes to the build system
 
 - The following build configuration options have been removed:
-
   - `--enable-timeline`
   - `--disable-storage`
   - `--necko-disk-cache`

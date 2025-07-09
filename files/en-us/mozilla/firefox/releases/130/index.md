@@ -2,9 +2,8 @@
 title: Firefox 130 for developers
 slug: Mozilla/Firefox/Releases/130
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 130 that affect developers. Firefox 130 was released on [September 3, 2024](https://whattrainisitnow.com/release/?version=130).
 
@@ -27,7 +26,7 @@ This article provides information about the changes in Firefox 130 that affect d
 
 #### Removals
 
-- {{domxref('WebGLRenderingContext.drawingBufferColorSpace')}} and [`WebGL2RenderingContext.drawingBufferColorSpace`](/en-US/docs/Web/API/WebGL2RenderingContext) were prematurely released (without an an implementation) in [Firefox 127](/en-US/docs/Mozilla/Firefox/Releases/127), and have been removed ([Firefox bug 1909559](https://bugzil.la/1909559)).
+- {{domxref('WebGLRenderingContext.drawingBufferColorSpace')}} and [`WebGL2RenderingContext.drawingBufferColorSpace`](/en-US/docs/Web/API/WebGL2RenderingContext) were prematurely released (without an implementation) in [Firefox 127](/en-US/docs/Mozilla/Firefox/Releases/127), and have been removed ([Firefox bug 1909559](https://bugzil.la/1909559)).
 
 ### WebAssembly
 

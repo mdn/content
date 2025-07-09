@@ -1,5 +1,6 @@
 ---
 title: Intl.Locale.prototype.maximize()
+short-title: maximize()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/maximize
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.Locale.maximize

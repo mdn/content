@@ -3,10 +3,12 @@ title: "Sanitizer: removeAttribute() method"
 short-title: removeAttribute()
 slug: Web/API/Sanitizer/removeAttribute
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.Sanitizer.removeAttribute
 ---
 
-{{APIRef("HTML Sanitizer API")}}
+{{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}
 
 The **`removeAttribute()`** method of the {{domxref("Sanitizer")}} interface sets an attribute to be disallowed on all elements.
 
@@ -24,15 +26,13 @@ removeAttribute(attribute)
 ### Parameters
 
 - `attribute`
-
   - : A string indicating the name of the attribute to be disallowed globally on elements, or an object with the following properties:
-
     - `name`
       - : A string containing the name of the attribute.
     - `namespace` {{optional_inline}}
       - : A string containing the namespace of the attribute, which defaults to `null`.
 
-### Returns
+### Return value
 
 None (`undefined`).
 

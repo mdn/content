@@ -1,5 +1,6 @@
 ---
 title: String.prototype.normalize()
+short-title: normalize()
 slug: Web/JavaScript/Reference/Global_Objects/String/normalize
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.normalize
@@ -44,13 +45,11 @@ normalize(form)
 ### Parameters
 
 - `form` {{optional_inline}}
-
   - : One of `"NFC"`, `"NFD"`, `"NFKC"`, or
     `"NFKD"`, specifying the Unicode Normalization Form. If omitted or
     {{jsxref("undefined")}}, `"NFC"` is used.
 
     These values have the following meanings:
-
     - `"NFC"`
       - : Canonical Decomposition, followed by Canonical Composition.
     - `"NFD"`

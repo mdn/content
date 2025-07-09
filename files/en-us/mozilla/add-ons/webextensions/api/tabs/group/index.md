@@ -27,13 +27,9 @@ let grouping = browser.tabs.group(
 ### Parameters
 
 - `options`
-
   - : An object containing details about the tab grouping.
-
     - `createProperties` {{optional_inline}}
-
       - : `object`. Configuration details for a new group. Cannot be used if `groupId` is specified.
-
         - `windowId` {{optional_inline}}
           - : `integer`. The window of the new group. Defaults to the [current window](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/getCurrent).
 

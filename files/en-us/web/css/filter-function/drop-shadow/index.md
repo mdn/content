@@ -16,7 +16,7 @@ filter: drop-shadow(30px 10px 4px #4444dd);
 ```
 
 ```css interactive-example-choice
-filter: drop-shadow(0 -6mm 4mm rgb(160, 0, 210));
+filter: drop-shadow(0 -6mm 4mm rgb(160 0 210));
 ```
 
 ```css interactive-example-choice
@@ -70,7 +70,6 @@ The `drop-shadow()` function accepts a parameter of type `<shadow>` (defined in 
 ### Parameters
 
 - `<color>` {{optional_inline}}
-
   - : Specifies the color for the shadow. If not specified, the value of the {{cssxref("color")}} property defined in the parent element is used.
 
 - `<length>`

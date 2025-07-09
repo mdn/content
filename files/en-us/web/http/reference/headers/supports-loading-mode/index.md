@@ -6,9 +6,10 @@ page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Supports-Loading-Mode
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
+{{securecontext_header}}{{SeeCompatTable}}
 
 The HTTP **`Supports-Loading-Mode`** {{Glossary("response header")}} allows a response to opt-in to being loaded in a novel, higher-risk context that it would otherwise fail to be loaded in.
 

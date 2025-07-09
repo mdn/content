@@ -22,9 +22,7 @@ let getContext = browser.contextualIdentities.query(
 ### Parameters
 
 - `details`
-
   - : `object`. An object that can be used to filter the contextual identities returned. This may contain any of the following properties:
-
     - `name` {{optional_inline}}
       - : `string`. Return only contextual identities with this name.
 

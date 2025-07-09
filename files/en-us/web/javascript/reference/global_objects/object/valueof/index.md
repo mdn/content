@@ -1,5 +1,6 @@
 ---
 title: Object.prototype.valueOf()
+short-title: valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Object.valueOf

@@ -1,5 +1,6 @@
 ---
 title: String.prototype.charAt()
+short-title: charAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/charAt
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.charAt

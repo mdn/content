@@ -22,7 +22,6 @@ WebDAV allows clients to
 
 - [WebDAV](https://en.wikipedia.org/wiki/WebDAV) on Wikipedia
 - Specifications:
-
   - {{rfc(2518)}}
   - {{rfc(3253)}}
   - {{rfc(3744)}}

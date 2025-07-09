@@ -49,8 +49,12 @@ This property is not supported by any browser yet.
 
 ## See also
 
-- {{cssxref("mask-border")}}
+- {{cssxref("mask-mode")}}
+- {{cssxref("mask-type")}}
+- [Alpha transparency versus luminance](/en-US/docs/Web/CSS/CSS_masking/Masking#alpha_transparency_versus_luminance)
+- {{cssxref("mask-border")}} shorthand
 - {{cssxref("mask-border-outset")}}
 - {{cssxref("mask-border-repeat")}}
 - {{cssxref("mask-border-source")}}
 - {{cssxref("mask-border-width")}}
+- {{cssxref("mask-mode")}}

@@ -14,17 +14,18 @@ sidebar: urlsidebar
 
 ## Syntax
 
-Data URLs are composed of four parts: a prefix (`data:`), a [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types) indicating the type of data, an optional `base64` token if non-textual, and the data itself:
-
-```plain
+```url
 data:[<media-type>][;base64],<data>
 ```
 
-The `media-type` is a [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types) string, such as `'image/jpeg'` for a JPEG image file. If omitted, defaults to `text/plain;charset=US-ASCII`
-
-If the data contains [characters defined in RFC 3986 as reserved characters](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2), or contains space characters, newline characters, or other non-printing characters, those characters must be {{Glossary("Percent-encoding", "percent-encoded")}}.
-
-If the data is textual, you can embed the text (using the appropriate entities or escapes based on the enclosing document's type). Otherwise, you can specify `base64` to embed base64-encoded binary data. You can find [a full dissection of MIME type structure](/en-US/docs/Web/HTTP/Guides/MIME_types) and [a table of common MIME types on the web](/en-US/docs/Web/HTTP/Guides/MIME_types/Common_types).
+- `data:`
+  - : The scheme of the URL.
+- `<media-type>` {{optional_inline}}
+  - : The [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types) indicating the type of data, such as `image/jpeg` for a JPEG image file. If omitted, defaults to `text/plain;charset=US-ASCII`. You can find [a full dissection of MIME type structure](/en-US/docs/Web/HTTP/Guides/MIME_types) and [a table of common MIME types on the web](/en-US/docs/Web/HTTP/Guides/MIME_types/Common_types).
+- `;base64` {{optional_inline}}
+  - : Indicates that the data should be base64-decoded; see [encoding data into base64 format](#encoding_data_into_base64_format).
+- `<data>`
+  - : The data itself. If the data contains [characters defined in RFC 3986 as reserved characters](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2), or contains space characters, newline characters, or other non-printing characters, those characters must be {{Glossary("Percent-encoding", "percent-encoded")}}. If the data is textual, you can embed the text (using the appropriate entities or escapes based on the enclosing document's type). Otherwise, you can specify `base64` to embed base64-encoded binary data.
 
 A few examples:
 

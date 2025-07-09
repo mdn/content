@@ -130,7 +130,8 @@ Servers can store and use information about clients to provide a convenient and 
 
 A deeper analysis of user habits can be used to anticipate their interests and further customize responses and notifications, for example providing a list of previously visited or popular locations you may want to look at on a map.
 
-> **Note:** [Google Maps](https://www.google.com/maps) saves your search and visit history. Frequently visited or frequently searched locations are highlighted more than others.
+> [!NOTE]
+> [Google Maps](https://www.google.com/maps) saves your search and visit history. Frequently visited or frequently searched locations are highlighted more than others.
 >
 > Google search results are optimized based on previous searches.
 >

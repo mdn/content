@@ -20,7 +20,7 @@ text-emphasis-color: red;
 ```
 
 ```css interactive-example-choice
-text-emphasis-color: rgba(90, 200, 160, 0.8);
+text-emphasis-color: rgb(90 200 160 / 0.8);
 ```
 
 ```html interactive-example

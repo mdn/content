@@ -1,5 +1,6 @@
 ---
 title: AsyncIterator.prototype[Symbol.asyncIterator]()
+short-title: "[Symbol.asyncIterator]()"
 slug: Web/JavaScript/Reference/Global_Objects/AsyncIterator/Symbol.asyncIterator
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.AsyncIterator.@@asyncIterator

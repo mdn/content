@@ -3,12 +3,10 @@ title: "URLPattern: URLPattern() constructor"
 short-title: URLPattern()
 slug: Web/API/URLPattern/URLPattern
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.URLPattern.URLPattern
 ---
 
-{{APIRef("URLPattern API")}}{{SeeCompatTable}} {{AvailableInWorkers}}
+{{APIRef("URLPattern API")}} {{AvailableInWorkers}}
 
 The **`URLPattern()`** constructor returns a new {{domxref("URLPattern")}}
 object representing the url pattern defined by the parameters.
@@ -25,11 +23,9 @@ new URLPattern(input, baseURL, options)
 ### Parameters
 
 - `input`
-
   - : The input pattern that will be used for matching. This can either be a
     string, or an object providing patterns for each URL part
     individually. The object members can be any of:
-
     - `protocol`
     - `username`
     - `password`

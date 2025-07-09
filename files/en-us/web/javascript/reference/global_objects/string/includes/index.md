@@ -1,5 +1,6 @@
 ---
 title: String.prototype.includes()
+short-title: includes()
 slug: Web/JavaScript/Reference/Global_Objects/String/includes
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.includes

@@ -22,9 +22,7 @@ let gettingPopup = browser.pageAction.getPopup(
 ### Parameters
 
 - `details`
-
   - : `object`.
-
     - `tabId`
       - : `integer`. ID of the tab whose popup you want to get.
 

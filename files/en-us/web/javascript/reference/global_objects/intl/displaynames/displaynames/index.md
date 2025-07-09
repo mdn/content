@@ -1,5 +1,6 @@
 ---
 title: Intl.DisplayNames() constructor
+short-title: Intl.DisplayNames()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Intl.DisplayNames.DisplayNames
@@ -30,7 +31,8 @@ console.log(regionNamesInTraditionalChinese.of("US"));
 new Intl.DisplayNames(locales, options)
 ```
 
-> **Note:** `Intl.DisplayNames()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Intl.DisplayNames()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

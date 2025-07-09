@@ -16,7 +16,6 @@ See [Navigation directives](/en-US/docs/Web/HTTP/Reference/Headers/Content-Secur
 
 - [Navigation directives](https://w3c.github.io/webappsec-csp/#directives-navigation) specification
 - Other kinds of directives:
-
   - {{Glossary("Fetch directive")}}
   - {{Glossary("Document directive")}}
   - {{Glossary("Reporting directive")}}

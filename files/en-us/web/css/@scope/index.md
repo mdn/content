@@ -29,7 +29,7 @@ The `@scope` at-rule contains one or more rulesets (termed **scoped style rules*
    <parent-element>
      <style>
        @scope {
-         rulesets
+         /* rulesets */
        }
      </style>
    </parent-element>

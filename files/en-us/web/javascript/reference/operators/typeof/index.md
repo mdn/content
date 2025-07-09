@@ -3,9 +3,8 @@ title: typeof
 slug: Web/JavaScript/Reference/Operators/typeof
 page-type: javascript-operator
 browser-compat: javascript.operators.typeof
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **`typeof`** operator returns a string indicating the type of the operand's value.
 

@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainDate.prototype.calendarId
+short-title: calendarId
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/calendarId
 page-type: javascript-instance-accessor-property
 status:

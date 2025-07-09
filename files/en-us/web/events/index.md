@@ -824,8 +824,16 @@ This topic provides an index to the main _sorts_ of events you might be interest
 
 {{Specifications}}
 
+## See also
+
+- [Creating and triggering events](/en-US/docs/Web/Events/Creating_and_triggering_events)
+- [Event handlers overview](/en-US/docs/Web/Events/Event_handlers)
+
 <section id="Quick_links">
   <ol>
     <li><a href="/en-US/docs/Learn_web_development/Core/Scripting/Events">Introduction to events</a></li>
-  </ol>{{ListSubpages}}
+    <li><a href="/en-US/docs/Web/Events">Event reference</a></li>
+    <li><a href="/en-US/docs/Web/Events/Creating_and_triggering_events">Creating and triggering events</a></li>
+    <li><a href="/en-US/docs/Web/Events/Event_handlers">Event handlers (overview)</a></li>
+  </ol>
 </section>

@@ -29,11 +29,11 @@ The **`class`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attribu
 }
 
 .editorial {
-  background: rgb(255, 0, 0, 0.25);
+  background: rgb(255 0 0 / 0.25);
   padding: 10px;
 }
 
-.editorial:before {
+.editorial::before {
   content: "Editor: ";
 }
 ```

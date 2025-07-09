@@ -1,5 +1,6 @@
 ---
 title: Temporal.Instant.prototype.valueOf()
+short-title: valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Instant/valueOf
 page-type: javascript-instance-method
 status:

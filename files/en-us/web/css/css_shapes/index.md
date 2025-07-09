@@ -83,20 +83,16 @@ img {
 ## Guides
 
 - [Overview of shapes](/en-US/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
-
   - : Defining basic shapes with the `shape-margin` and `clip-path` properties, and debugging basic shapes with
     Developer Tools.
 
 - [Shapes from box values](/en-US/docs/Web/CSS/CSS_shapes/From_box_values)
-
   - : Using `border-radius` curvatures and CSS box model values to create shapes.
 
 - [Basic shapes with `shape-outside`](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes)
-
   - : Creating rectangles, circles, ellipses, and polygons with CSS shapes, the reference box, and the `shape-outside` property.
 
 - [Shapes from images](/en-US/docs/Web/CSS/CSS_shapes/Shapes_from_images)
-
   - : Creating shapes from semi-transparent image files and CSS Gradients.
 
 ## Related concepts

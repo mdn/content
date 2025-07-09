@@ -33,9 +33,7 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class)
   - : A space-separated list of the classes of the element. Classes allow CSS and JavaScript to select and access specific elements via the [class selectors](/en-US/docs/Web/CSS/Class_selectors) or functions like the method {{DOMxRef("Document.getElementsByClassName()")}}.
 - [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable)
-
   - : An [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicating if the element should be editable by the user. If so, the browser modifies its widget to allow editing. The attribute must take one of the following values:
-
     - `true` or the _empty string_, which indicates that the element must be editable;
     - `false`, which indicates that the element must not be editable.
     - `plaintext-only`, which indicates the element's raw text is editable, but rich text formatting is disabled.
@@ -43,17 +41,13 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`data-*`](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*)
   - : Forms a class of attributes, called custom data attributes, that allow proprietary information to be exchanged between the [HTML](/en-US/docs/Web/HTML) and its {{glossary("DOM")}} representation that may be used by scripts. All such custom data are available via the {{DOMxRef("HTMLElement")}} interface of the element the attribute is set on. The {{DOMxRef("HTMLElement.dataset")}} property gives access to them.
 - [`dir`](/en-US/docs/Web/HTML/Reference/Global_attributes/dir)
-
   - : An enumerated attribute indicating the directionality of the element's text. It can have the following values:
-
     - `ltr`, which means _left to right_ and is to be used for languages that are written from the left to the right (like English);
     - `rtl`, which means _right to left_ and is to be used for languages that are written from the right to the left (like Arabic);
     - `auto`, which lets the user agent decide. It uses a basic algorithm as it parses the characters inside the element until it finds a character with a strong directionality, then it applies that directionality to the whole element.
 
 - [`draggable`](/en-US/docs/Web/HTML/Reference/Global_attributes/draggable)
-
   - : An enumerated attribute indicating whether the element can be dragged, using the [Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API). It can have the following values:
-
     - `true`, which indicates that the element may be dragged
     - `false`, which indicates that the element may not be dragged.
 
@@ -98,18 +92,14 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`slot`](/en-US/docs/Web/HTML/Reference/Global_attributes/slot)
   - : Assigns a slot in a [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) shadow tree to an element: An element with a `slot` attribute is assigned to the slot created by the {{HTMLElement("slot")}} element whose [`name`](/en-US/docs/Web/HTML/Reference/Elements/slot#name) attribute's value matches that `slot` attribute's value.
 - [`spellcheck`](/en-US/docs/Web/HTML/Reference/Global_attributes/spellcheck)
-
   - : An enumerated attribute defines whether the element may be checked for spelling errors. It may have the following values:
-
     - empty string or `true`, which indicates that the element should be, if possible, checked for spelling errors;
     - `false`, which indicates that the element should not be checked for spelling errors.
 
 - [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style)
   - : Contains [CSS](/en-US/docs/Web/CSS) styling declarations to be applied to the element. Note that it is recommended for styles to be defined in a separate file or files. This attribute and the {{HTMLElement("style")}} element have mainly the purpose of allowing for quick styling, for example for testing purposes.
 - [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex)
-
   - : An integer attribute indicating if the element can take input focus (is _focusable_), if it should participate to sequential keyboard navigation, and if so, at what position. It can take several values:
-
     - a _negative value_ means that the element should be focusable, but should not be reachable via sequential keyboard navigation;
     - `0` means that the element should be focusable and reachable via sequential keyboard navigation, but its relative order is defined by the platform convention;
     - a _positive value_ means that the element should be focusable and reachable via sequential keyboard navigation; the order in which the elements are focused is the increasing value of the [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex). If several elements share the same tabindex, their relative order follows their relative positions in the document.
@@ -117,23 +107,17 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`title`](/en-US/docs/Web/HTML/Reference/Global_attributes/title)
   - : Contains a text representing advisory information related to the element it belongs to. Such information can typically, but not necessarily, be presented to the user as a tooltip.
 - [`translate`](/en-US/docs/Web/HTML/Reference/Global_attributes/translate)
-
   - : An enumerated attribute that is used to specify whether an element's attribute values and the values of its {{DOMxRef("Text")}} node children are to be translated when the page is localized, or whether to leave them unchanged. It can have the following values:
-
     - empty string or `yes`, which indicates that the element will be translated.
     - `no`, which indicates that the element will not be translated.
 
 - [`virtualkeyboardpolicy`](/en-US/docs/Web/HTML/Reference/Global_attributes/virtualkeyboardpolicy) {{Experimental_Inline}}
-
   - : An {{Glossary("enumerated")}} attribute used to control the on-screen virtual keyboard behavior on devices such as tablets, mobile phones, or other devices where a hardware keyboard may not be available for elements that its content is editable (for example, it is an {{htmlelement("input")}} or {{htmlelement("textarea")}} element, or an element with the [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) attribute set).
-
     - `auto` or an _empty string_, which automatically shows the virtual keyboard when the element is focused or tapped.
     - `manual`, which decouples focus and tap on the element from the virtual keyboard's state.
 
 - [`writingsuggestions`](/en-US/docs/Web/HTML/Reference/Global_attributes/writingsuggestions)
-
   - : An {{Glossary("enumerated")}} attribute indicating if browser-provided writing suggestions should be enabled under the scope of the element or not.
-
     - `false`, which disables the browser's writing suggestions.
     - `true` or an _empty string_, which enables writing suggestions.
 

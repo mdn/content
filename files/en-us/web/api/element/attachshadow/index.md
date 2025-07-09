@@ -54,16 +54,11 @@ attachShadow(options)
 ### Parameters
 
 - `options`
-
   - : An object which contains the following fields:
-
     - `mode`
-
       - : A string specifying the _encapsulation mode_ for the shadow DOM tree.
         This can be one of:
-
         - `open`
-
           - : Elements of the shadow root are accessible from JavaScript outside the root,
             for example using {{domxref("Element.shadowRoot")}}:
 
@@ -73,7 +68,6 @@ attachShadow(options)
             ```
 
         - `closed`
-
           - : Denies access to the node(s) of a closed shadow root
             from JavaScript outside it:
 
@@ -83,24 +77,19 @@ attachShadow(options)
             ```
 
     - `clonable` {{Optional_Inline}}
-
       - : A boolean that specifies whether the shadow root is clonable: when set to `true`, the shadow host cloned with {{domxref("Node.cloneNode()")}} or {{domxref("Document.importNode()")}} will include shadow root in the copy. Its default value is `false`.
 
     - `delegatesFocus` {{Optional_Inline}}
-
       - : A boolean that, when set to `true`, specifies behavior that mitigates custom element issues around focusability.
         When a non-focusable part of the shadow DOM is clicked, the first focusable part is given focus, and the shadow host is given any available `:focus` styling. Its default value is `false`.
 
     - `serializable` {{Optional_Inline}}
-
       - : A boolean that, when set to `true`, indicates that the shadow root is serializable.
         If set, the shadow root may be serialized by calling the {{DOMxRef('Element.getHTML()')}} or {{DOMxRef('ShadowRoot.getHTML()')}} methods with the `options.serializableShadowRoots` parameter set `true`.
         Its default value is `false`.
 
     - `slotAssignment` {{Optional_inline}}
-
       - : A string specifying the _slot assignment mode_ for the shadow DOM tree. This can be one of:
-
         - `named`
           - : Elements are automatically assigned to {{HTMLElement("slot")}} elements within this shadow root. Any descendants of the host with a `slot` attribute which matches the `name` attribute of a `<slot>` within this shadow root will be assigned to that slot. Any top-level children of the host with no `slot` attribute will be assigned to a `<slot>` with no `name` attribute (the "default slot") if one is present.
         - `manual`
@@ -114,9 +103,7 @@ Returns a {{domxref("ShadowRoot")}} object.
 ### Exceptions
 
 - `NotSupportedError` {{domxref("DOMException")}}
-
   - : This error may be thrown when you try to attach a shadow root to an element:
-
     - outside the HTML namespace or that can't have a shadow attached to it.
     - where the element definition static property `disabledFeatures` has been given a value of `"shadow"`.
     - that already has a shadow root that was not created declaratively.

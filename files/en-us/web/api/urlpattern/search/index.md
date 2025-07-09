@@ -3,12 +3,10 @@ title: "URLPattern: search property"
 short-title: search
 slug: Web/API/URLPattern/search
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.URLPattern.search
 ---
 
-{{APIRef("URL Pattern API")}}{{SeeCompatTable}} {{AvailableInWorkers}}
+{{APIRef("URL Pattern API")}} {{AvailableInWorkers}}
 
 The **`search`** read-only property of the {{domxref("URLPattern")}} interface is a
 string containing the pattern used to match the search part of

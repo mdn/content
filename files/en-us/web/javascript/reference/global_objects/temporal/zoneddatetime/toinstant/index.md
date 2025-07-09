@@ -1,5 +1,6 @@
 ---
 title: Temporal.ZonedDateTime.prototype.toInstant()
+short-title: toInstant()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/toInstant
 page-type: javascript-instance-method
 status:

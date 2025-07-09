@@ -17,20 +17,21 @@ Note that [HTML drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) defin
 The _target element_ of the {{domxref("HTMLElement/drop_event", "drop")}} event needs an `ondrop` event handler. The following code snippet shows how this is done with a {{HTMLelement("div")}} element:
 
 ```html
-<div id="drop_zone" ondrop="dropHandler(event);">
+<div id="drop_zone">
   <p>Drag one or more files to this <i>drop zone</i>.</p>
 </div>
 ```
 
-Typically, an application will include a {{domxref("HTMLElement/dragover_event", "dragover")}} event handler on the drop target element and that handler will turn off the browser's default drag behavior. To add this handler, you need to include a {{domxref("HTMLElement.dragover_event","ondragover")}} event handler:
+```js
+document.getElementById("drop_zone").addEventListener("drop", dropHandler);
+```
 
-```html
-<div
-  id="drop_zone"
-  ondrop="dropHandler(event);"
-  ondragover="dragOverHandler(event);">
-  <p>Drag one or more files to this <i>drop zone</i>.</p>
-</div>
+Typically, an application will include a {{domxref("HTMLElement/dragover_event", "dragover")}} event handler on the drop target element and that handler will turn off the browser's default drag behavior. To add this handler, you need to include a {{domxref("HTMLElement.dragover_event","dragover")}} event handler:
+
+```js
+document
+  .getElementById("drop_zone")
+  .addEventListener("dragover", dragOverHandler);
 ```
 
 Lastly, an application may want to style the drop target element to visually indicate the element is a drop zone. In this example, the drop target element uses the following styling:
@@ -43,7 +44,8 @@ Lastly, an application may want to style the drop target element to visually ind
 }
 ```
 
-> **Note:** {{domxref("HTMLElement/dragstart_event", "dragstart")}} and {{domxref("HTMLElement/dragend_event", "dragend")}} events are not fired when dragging a file into the browser from the OS. To detect when OS files are dragged into the browser, use {{domxref("HTMLElement/dragenter_event", "dragenter")}} and {{domxref("HTMLElement/dragleave_event", "dragleave")}}.
+> [!NOTE]
+> {{domxref("HTMLElement/dragstart_event", "dragstart")}} and {{domxref("HTMLElement/dragend_event", "dragend")}} events are not fired when dragging a file into the browser from the OS. To detect when OS files are dragged into the browser, use {{domxref("HTMLElement/dragenter_event", "dragenter")}} and {{domxref("HTMLElement/dragleave_event", "dragleave")}}.
 > This means that it is not possible to use {{domxref("DataTransfer.setDragImage","setDragImage()")}} to apply a custom drag image/cursor overlay when dragging files from the OS — because the drag data store can only be modified in the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event. This also applies to {{domxref("DataTransfer.setData","setData()")}}.
 
 ## Process the drop

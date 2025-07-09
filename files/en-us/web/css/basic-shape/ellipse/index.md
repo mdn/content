@@ -57,9 +57,7 @@ An ellipse is essentially a squashed circle and so `ellipse()` acts in a very si
 ### Values
 
 - `<shape-radius>`
-
   - : Two radii, x and y in that order. These may be a {{cssxref("length")}}, or a {{cssxref("percentage")}} or values `closest-side` and `farthest-side`.
-
     - `closest-side`
       - : Uses the length from the center of the shape to the closest side of the reference box. For ellipses, this is the closest side in the radius dimension.
     - `farthest-side`

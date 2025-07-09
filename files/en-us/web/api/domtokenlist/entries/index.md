@@ -19,6 +19,10 @@ to go through all key/value pairs contained in this object. The values are
 entries()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 Returns an {{jsxref("Iteration_protocols","iterator")}}.

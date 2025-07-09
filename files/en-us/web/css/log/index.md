@@ -27,7 +27,6 @@ width: calc(100px * log(625, 5)); /* 400px */
 The `log(value [, base]?)` function accepts two comma-separated values as its parameters.
 
 - `value`
-
   - : A calculation which resolves to a {{cssxref("&lt;number&gt;")}} greater than or equal to 0. Representing the value to be taken the log of.
 
 - `base`

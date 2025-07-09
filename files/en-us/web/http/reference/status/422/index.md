@@ -3,9 +3,8 @@ title: 422 Unprocessable Content
 slug: Web/HTTP/Reference/Status/422
 page-type: http-status-code
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.422
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`422 Unprocessable Content`** [client error response](/en-US/docs/Web/HTTP/Reference/Status#client_error_responses) status code indicates that the server understood the content type of the request content, and the syntax of the request content was correct, but it was unable to process the contained instructions.
 

@@ -86,40 +86,15 @@ This element implements the {{domxref("SVGFEComponentTransferElement")}} interfa
     <text x="0" y="20">Default</text>
     <rect x="0" y="30" width="100%" height="20"></rect>
     <text x="0" y="70">Identity</text>
-    <rect
-      x="0"
-      y="80"
-      width="100%"
-      height="20"
-      style="filter:url(#identity)"></rect>
+    <rect x="0" y="80" width="100%" height="20" filter="url(#identity)"></rect>
     <text x="0" y="120">Table lookup</text>
-    <rect
-      x="0"
-      y="130"
-      width="100%"
-      height="20"
-      style="filter:url(#table)"></rect>
+    <rect x="0" y="130" width="100%" height="20" filter="url(#table)"></rect>
     <text x="0" y="170">Discrete table lookup</text>
-    <rect
-      x="0"
-      y="180"
-      width="100%"
-      height="20"
-      style="filter:url(#discrete)"></rect>
+    <rect x="0" y="180" width="100%" height="20" filter="url(#discrete)"></rect>
     <text x="0" y="220">Linear function</text>
-    <rect
-      x="0"
-      y="230"
-      width="100%"
-      height="20"
-      style="filter:url(#linear)"></rect>
+    <rect x="0" y="230" width="100%" height="20" filter="url(#linear)"></rect>
     <text x="0" y="270">Gamma function</text>
-    <rect
-      x="0"
-      y="280"
-      width="100%"
-      height="20"
-      style="filter:url(#gamma)"></rect>
+    <rect x="0" y="280" width="100%" height="20" filter="url(#gamma)"></rect>
   </g>
 </svg>
 ```

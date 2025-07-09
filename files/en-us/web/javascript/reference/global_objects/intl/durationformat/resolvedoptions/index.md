@@ -1,5 +1,6 @@
 ---
 title: Intl.DurationFormat.prototype.resolvedOptions()
+short-title: resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/resolvedOptions
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.DurationFormat.resolvedOptions

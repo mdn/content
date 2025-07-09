@@ -13,7 +13,8 @@ browser-compat: api.Fence.reportEvent
 The **`reportEvent()`** method of the
 {{domxref("Fence")}} interface triggers the submission of report data via a [beacon](/en-US/docs/Web/API/Beacon_API) to one or more specific URLs registered via the {{domxref("InterestGroupReportingScriptRunnerGlobalScope.registerAdBeacon", "registerAdBeacon()")}} method of the [Protected Audience API](https://privacysandbox.google.com/private-advertising/protected-audience), for the purpose of collecting ad auction results.
 
-> **Note:** {{domxref("Fence.setReportEventDataForAutomaticBeacons", "setReportEventDataForAutomaticBeacons()")}} provides similar report data submission, except in that case the submission is triggered via a navigation rather than by an explicit method call.
+> [!NOTE]
+> {{domxref("Fence.setReportEventDataForAutomaticBeacons", "setReportEventDataForAutomaticBeacons()")}} provides similar report data submission, except in that case the submission is triggered via a navigation rather than by an explicit method call.
 
 ## Syntax
 

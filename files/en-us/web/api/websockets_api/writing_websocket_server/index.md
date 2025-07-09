@@ -324,74 +324,84 @@ class Server {
 ```html
 <!doctype html>
 <html lang="en">
-  <style>
-    textarea {
-      vertical-align: bottom;
-    }
-    #output {
-      overflow: auto;
-    }
-    #output > p {
-      overflow-wrap: break-word;
-    }
-    #output span {
-      color: blue;
-    }
-    #output span.error {
-      color: red;
-    }
-  </style>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="client.js" defer></script>
+  </head>
   <body>
     <h2>WebSocket Test</h2>
     <textarea cols="60" rows="6"></textarea>
     <button>send</button>
     <div id="output"></div>
   </body>
-  <script>
-    // http://www.websocket.org/echo.html
-    const button = document.querySelector("button");
-    const output = document.querySelector("#output");
-    const textarea = document.querySelector("textarea");
-    const wsUri = "ws://127.0.0.1/";
-    const websocket = new WebSocket(wsUri);
-
-    button.addEventListener("click", onClickButton);
-
-    websocket.onopen = (e) => {
-      writeToScreen("CONNECTED");
-      doSend("WebSocket rocks");
-    };
-
-    websocket.onclose = (e) => {
-      writeToScreen("DISCONNECTED");
-    };
-
-    websocket.onmessage = (e) => {
-      writeToScreen(`<span>RESPONSE: ${e.data}</span>`);
-    };
-
-    websocket.onerror = (e) => {
-      writeToScreen(`<span class="error">ERROR:</span> ${e.data}`);
-    };
-
-    function doSend(message) {
-      writeToScreen(`SENT: ${message}`);
-      websocket.send(message);
-    }
-
-    function writeToScreen(message) {
-      output.insertAdjacentHTML("afterbegin", `<p>${message}</p>`);
-    }
-
-    function onClickButton() {
-      const text = textarea.value;
-
-      text && doSend(text);
-      textarea.value = "";
-      textarea.focus();
-    }
-  </script>
 </html>
+```
+
+### styles.css
+
+```css
+textarea {
+  vertical-align: bottom;
+}
+#output {
+  overflow: auto;
+}
+#output > p {
+  overflow-wrap: break-word;
+}
+#output span {
+  color: blue;
+}
+#output span.error {
+  color: red;
+}
+```
+
+### client.js
+
+```js
+// http://www.websocket.org/echo.html
+const button = document.querySelector("button");
+const output = document.querySelector("#output");
+const textarea = document.querySelector("textarea");
+const wsUri = "ws://127.0.0.1/";
+const websocket = new WebSocket(wsUri);
+
+button.addEventListener("click", onClickButton);
+
+websocket.onopen = (e) => {
+  writeToScreen("CONNECTED");
+  doSend("WebSocket rocks");
+};
+
+websocket.onclose = (e) => {
+  writeToScreen("DISCONNECTED");
+};
+
+websocket.onmessage = (e) => {
+  writeToScreen(`<span>RESPONSE: ${e.data}</span>`);
+};
+
+websocket.onerror = (e) => {
+  writeToScreen(`<span class="error">ERROR:</span> ${e.data}`);
+};
+
+function doSend(message) {
+  writeToScreen(`SENT: ${message}`);
+  websocket.send(message);
+}
+
+function writeToScreen(message) {
+  output.insertAdjacentHTML("afterbegin", `<p>${message}</p>`);
+}
+
+function onClickButton() {
+  const text = textarea.value;
+
+  text && doSend(text);
+  textarea.value = "";
+  textarea.focus();
+}
 ```
 
 ## Related

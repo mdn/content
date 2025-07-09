@@ -1,5 +1,6 @@
 ---
 title: Boolean() constructor
+short-title: Boolean()
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/Boolean
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Boolean.Boolean
@@ -32,7 +33,8 @@ new Boolean(value)
 Boolean(value)
 ```
 
-> **Note:** `Boolean()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new), but with different effects. See [Return value](#return_value).
+> [!NOTE]
+> `Boolean()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new), but with different effects. See [Return value](#return_value).
 
 ### Parameters
 

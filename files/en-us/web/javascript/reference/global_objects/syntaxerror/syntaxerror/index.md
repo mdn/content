@@ -1,5 +1,6 @@
 ---
 title: SyntaxError() constructor
+short-title: SyntaxError()
 slug: Web/JavaScript/Reference/Global_Objects/SyntaxError/SyntaxError
 page-type: javascript-constructor
 browser-compat: javascript.builtins.SyntaxError.SyntaxError
@@ -25,7 +26,8 @@ SyntaxError(message, fileName)
 SyntaxError(message, fileName, lineNumber)
 ```
 
-> **Note:** `SyntaxError()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `SyntaxError` instance.
+> [!NOTE]
+> `SyntaxError()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `SyntaxError` instance.
 
 ### Parameters
 

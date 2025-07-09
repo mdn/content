@@ -24,14 +24,11 @@ let registering = browser.contentScripts.register(
 ### Parameters
 
 - `contentScriptOptions`
-
   - : `object`. A `RegisteredContentScriptOptions` object representing the content scripts to register. It has similar syntax to the objects in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) manifest key array. The differences are:
-
     - property names use {{Glossary("camel_case", "camel case")}}, rather than underscores ({{Glossary("snake_case", "snake case")}}) — for example, `excludeMatches`, not `exclude_matches`.
     - the `js` and `css` properties allow you to register strings as well as URLs, so their syntax has to distinguish these types.
 
     The `RegisteredContentScriptOptions` object has the following properties:
-
     - `allFrames` {{optional_inline}}
       - : Same as [`all_frames` in the `content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#all_frames) key.
     - `cookieStoreId` {{optional_inline}}

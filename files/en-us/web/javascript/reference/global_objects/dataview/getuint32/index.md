@@ -1,5 +1,6 @@
 ---
 title: DataView.prototype.getUint32()
+short-title: getUint32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getUint32
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.getUint32

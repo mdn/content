@@ -1,5 +1,6 @@
 ---
 title: Date.prototype.getUTCMilliseconds()
+short-title: getUTCMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMilliseconds
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getUTCMilliseconds

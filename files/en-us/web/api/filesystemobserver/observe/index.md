@@ -24,18 +24,13 @@ observe(handle, options)
 ### Parameters
 
 - `handle`
-
   - : The handle of the file system entry representing the file or directory to observe.
-
     - For the user-observable file system, this can be a {{domxref("FileSystemFileHandle")}} or a {{domxref("FileSystemDirectoryHandle")}}.
     - For the [Origin Private File System](/en-US/docs/Web/API/File_System_API/Origin_private_file_system) (OPFS), it can be a {{domxref("FileSystemFileHandle")}}, a {{domxref("FileSystemDirectoryHandle")}}, or a {{domxref("FileSystemSyncAccessHandle")}}.
 
 - `options` {{optional_inline}}
-
   - : An object specifying options for the `observe()` call. This can contain the following properties:
-
     - `recursive`
-
       - : A boolean specifying whether you want to observe changes to a directory recursively. If set to `true`, changes are observed in the directory itself and all contained subdirectories and files. If set to `false`, changes are only observed in the directory itself and directly contained files (that is, files in subdirectories are excluded). Defaults to `false`.
 
         This property has no effect if `handle` represents a file.

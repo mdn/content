@@ -110,7 +110,6 @@ As the slider's value changes from 0 up to 360, the value of the `--hue` [custom
 ## Guides
 
 - [Using CSS custom properties (variables)](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)
-
   - : Explains how to use custom properties in CSS and JavaScript, with hints on handling undefined and invalid values, fallbacks, and inheritance.
 
 - [Invalid custom properties](/en-US/docs/Web/CSS/CSS_syntax/Error_handling#invalid_custom_properties)

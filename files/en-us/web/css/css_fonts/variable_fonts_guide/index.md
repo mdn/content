@@ -1,5 +1,5 @@
 ---
-title: Variable fonts guide
+title: Variable fonts
 slug: Web/CSS/CSS_fonts/Variable_fonts_guide
 page-type: guide
 ---
@@ -408,7 +408,7 @@ In the following live example, you can adjust the slant.
 }
 
 p {
-  font-family: "SlantFont";
+  font-family: "SlantFont", sans-serif;
   display: inline-block;
   margin: 1rem;
   font-size: 4rem;

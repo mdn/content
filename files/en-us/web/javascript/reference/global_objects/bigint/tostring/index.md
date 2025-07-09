@@ -1,5 +1,6 @@
 ---
 title: BigInt.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/toString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.BigInt.toString

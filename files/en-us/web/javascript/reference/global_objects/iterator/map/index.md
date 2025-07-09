@@ -1,5 +1,6 @@
 ---
 title: Iterator.prototype.map()
+short-title: map()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/map
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Iterator.map

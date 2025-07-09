@@ -1,5 +1,6 @@
 ---
 title: Temporal.ZonedDateTime.prototype.monthsInYear
+short-title: monthsInYear
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/monthsInYear
 page-type: javascript-instance-accessor-property
 status:

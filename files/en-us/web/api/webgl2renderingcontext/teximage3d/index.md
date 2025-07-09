@@ -23,10 +23,8 @@ texImage3D(target, level, internalformat, width, height, depth, border, format, 
 ### Parameters
 
 - `target`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target) of the active texture.
     Possible values:
-
     - `gl.TEXTURE_3D`: A three-dimensional texture.
     - `gl.TEXTURE_2D_ARRAY`: A two-dimensional array texture.
 
@@ -34,10 +32,8 @@ texImage3D(target, level, internalformat, width, height, depth, border, format, 
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the level of detail. Level 0 is the base image
     level and level _n_ is the n-th mipmap reduction level.
 - `internalformat`
-
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the color components in the texture. Possible
     values:
-
     - `gl.ALPHA`: Discards the red, green and blue components and reads the
       alpha component.
     - `gl.RGB`: Discards the alpha components and reads the red, green and
@@ -83,9 +79,7 @@ texImage3D(target, level, internalformat, width, height, depth, border, format, 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the format of the texel data. The correct
     combinations with `internalformat` are listed in [this table](https://registry.khronos.org/webgl/specs/latest/2.0/#TEXTURE_TYPES_FORMATS_FROM_DOM_ELEMENTS_TABLE).
 - `type`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the data type of the texel data. Possible values:
-
     - `gl.UNSIGNED_BYTE`: 8 bits per channel for `gl.RGBA`
     - `gl.UNSIGNED_SHORT_5_6_5`: 5 red bits, 6 green bits, 5 blue bits.
     - `gl.UNSIGNED_SHORT_4_4_4_4`: 4 red bits, 4 green bits, 4 blue bits, 4
@@ -107,9 +101,7 @@ texImage3D(target, level, internalformat, width, height, depth, border, format, 
       [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null))
 
 - `source`
-
   - : One of the following objects can be used as a pixel source for the texture:
-
     - {{domxref("ImageBitmap")}},
     - {{domxref("ImageData")}},
     - {{domxref("HTMLImageElement")}},
@@ -117,7 +109,6 @@ texImage3D(target, level, internalformat, width, height, depth, border, format, 
     - {{domxref("HTMLVideoElement")}}.
 
 - `srcData`
-
   - : A {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object.
 
 - `offset`

@@ -22,9 +22,7 @@ let gettingIsShown = browser.pageAction.isShown(
 ### Parameters
 
 - `details`
-
   - : `object`. An object containing the `tabId` to check.
-
     - `tabId`
       - : `integer`. ID of the tab to check.
 

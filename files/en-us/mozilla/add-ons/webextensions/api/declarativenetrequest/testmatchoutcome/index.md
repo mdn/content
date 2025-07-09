@@ -21,7 +21,6 @@ let result = await browser.declarativeNetRequest.testMatchOutcome(
 ### Parameters
 
 - `request`
-
   - : The details of the request to test.
     - `initiator` {{optional_inline}}
       - : A `string`. The initiator URL (if any) for the hypothetical request.
@@ -35,7 +34,6 @@ let result = await browser.declarativeNetRequest.testMatchOutcome(
       - : A `string`. The URL of the hypothetical request.
 
 - `options` {{optional_inline}}
-
   - : Details of options for the request.
     - `includeOtherExtensions` {{optional_inline}}
       - : A `boolean`. Whether matching rules from other extensions are included in `matchedRules`. When rules from other extensions match, the resulting `matchedRule` has an `extensionId` property. Defaults to `false`.

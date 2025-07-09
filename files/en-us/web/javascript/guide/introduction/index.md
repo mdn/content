@@ -2,9 +2,10 @@
 title: Introduction
 slug: Web/JavaScript/Guide/Introduction
 page-type: guide
+sidebar: jssidebar
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
+{{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
 
 This chapter introduces JavaScript and discusses some of its fundamental concepts.
 
@@ -83,7 +84,7 @@ The exact instructions for opening the console vary from one browser to another:
 
 - [Opening the console in Firefox](https://firefox-source-docs.mozilla.org/devtools-user/web_console/#opening-the-web-console)
 - [Opening the console in Chrome](https://developer.chrome.com/docs/devtools/open)
-- [Opening the console in Microsoft Edge](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/)
+- [Opening the console in Microsoft Edge](https://learn.microsoft.com/en-us/microsoft-edge/devtools/console/)
 
 ### Entering and running JavaScript
 

@@ -3,9 +3,8 @@ title: "Quantifier: *, +, ?, {n}, {n,}, {n,m}"
 slug: Web/JavaScript/Reference/Regular_expressions/Quantifier
 page-type: javascript-language-feature
 browser-compat: javascript.regular_expressions.quantifier
+sidebar: jssidebar
 ---
-
-{{jsSidebar}}
 
 A **quantifier** repeats an [atom](/en-US/docs/Web/JavaScript/Reference/Regular_expressions#atoms) a certain number of times. The quantifier is placed after the atom it applies to.
 

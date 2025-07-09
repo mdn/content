@@ -1,5 +1,6 @@
 ---
 title: RegExp.prototype.dotAll
+short-title: dotAll
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/dotAll
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.RegExp.dotAll

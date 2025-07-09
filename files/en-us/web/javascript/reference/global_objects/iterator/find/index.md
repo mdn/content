@@ -1,5 +1,6 @@
 ---
 title: Iterator.prototype.find()
+short-title: find()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/find
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Iterator.find

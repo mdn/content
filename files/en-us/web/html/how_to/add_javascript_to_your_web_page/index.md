@@ -73,7 +73,6 @@ Accessibility is a major issue in any software development. JavaScript can make 
 
 - **Make all content available as (structured) text.** Rely on HTML for your content as much as possible. For example, if you've implemented a nice JavaScript progress bar, make sure to supplement it with matching text percentages inside the HTML. Likewise, your drop-down menus should be structured as [unordered lists](/en-US/docs/Learn_web_development/Core/Structuring_content/Lists#unordered_lists) of [links](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links).
 - **Make all functionality accessible from the keyboard.**
-
   - Let users Tab through all controls (e.g., links and form input) in a logical order.
   - If you use pointer events (like mouse events or touch events), duplicate the functionality with keyboard events.
   - Test your site using a keyboard only.
@@ -82,7 +81,6 @@ Accessibility is a major issue in any software development. JavaScript can make 
 - **Keep animations subtle and brief with no flashing.** Flashing is annoying and can [cause seizures](https://www.w3.org/TR/UNDERSTANDING-WCAG20/seizure-does-not-violate.html). Additionally, if an animation lasts more than a couple seconds, give the user a way to cancel it.
 - **Let users initiate interactions.** That means, don't update content, redirect, or refresh automatically. Don't use carousels or display popups without warning.
 - **Have a plan B for users without JavaScript.** People may have JavaScript turned off to improve speed and security, and users often face network issues that prevent loading scripts. Moreover, third-party scripts (ads, tracking scripts, browser extensions) might break your scripts.
-
   - At a minimum, leave a short message with {{HTMLElement("noscript")}} like this: `<noscript>To use this site, please enable JavaScript.</noscript>`
   - Ideally, replicate the JavaScript functionality with HTML and server-side scripting when possible.
   - If you're only looking for simple visual effects, CSS can often get the job done even more intuitively.

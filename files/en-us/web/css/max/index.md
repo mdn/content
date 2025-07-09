@@ -38,6 +38,13 @@ In the first example shown above, the width will be at least 400px, but will be 
 
 ## Syntax
 
+```css
+max(1, 2, 3)
+max(1px, 2px, 3px)
+```
+
+### Parameters
+
 The `max()` function takes one or more comma-separated expressions as its parameter, with the largest (most positive) expression value used as the value of the property to which it is assigned.
 
 The expressions can be math expressions (using arithmetic operators), literal values, or other expressions, such as {{CSSxRef("attr", "attr()")}}, that evaluate to a valid argument type (like {{CSSxRef("&lt;length&gt;")}}), or nested {{CSSxRef("min", "min()")}} and `max()` functions.

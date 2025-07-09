@@ -22,11 +22,9 @@ new TransformStream(transformer, writableStrategy, readableStrategy)
 ### Parameters
 
 - `transformer` {{optional_inline}}
-
   - : An object representing the `transformer`. If not supplied the resulting stream will be an **identity transform stream** which forwards all chunks written to its writable side to its readable side, without any changes.
 
     The transformer object can contain any of the following methods. In each method `controller` is an instance of {{domxref("TransformStreamDefaultController")}}.
-
     - `start(controller)`
       - : Called when the `TransformStream` is constructed. It is typically used to enqueue chunks using {{domxref("TransformStreamDefaultController.enqueue()")}}.
     - `transform(chunk, controller)`
@@ -35,10 +33,8 @@ new TransformStream(transformer, writableStrategy, readableStrategy)
       - : Called after all chunks written to the writable side have been successfully transformed, and the writable side is about to be closed.
 
 - `writableStrategy` {{optional_inline}}
-
   - : An object that optionally defines a queuing strategy for the stream. This takes two
     parameters:
-
     - `highWaterMark`
       - : A non-negative integer. This defines the total number of chunks that can be
         contained in the internal queue before backpressure is applied.
@@ -47,10 +43,8 @@ new TransformStream(transformer, writableStrategy, readableStrategy)
         use for each chunk, in bytes.
 
 - `readableStrategy` {{optional_inline}}
-
   - : An object that optionally defines a queuing strategy for the stream. This takes two
     parameters:
-
     - `highWaterMark`
       - : A non-negative integer. This defines the total number of chunks that can be
         contained in the internal queue before backpressure is applied.

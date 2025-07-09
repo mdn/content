@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainDate.prototype.monthsInYear
+short-title: monthsInYear
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/monthsInYear
 page-type: javascript-instance-accessor-property
 status:

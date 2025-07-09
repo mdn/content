@@ -11,7 +11,8 @@ The **`page-orientation`** [CSS](/en-US/docs/Web/CSS) descriptor for the {{cssxr
 
 This descriptor helps with the layout and orientation of printed documents, especially when documents are printed double-sided. A user can specify how the pages will be rotated when printed. This is particularly useful to lay out content such as tables, which may be wider than the rest of the content, in a different orientation.
 
-> **Note:** [Margin boxes](/en-US/docs/Web/CSS/@page#margin_at-rules) and other positional elements have no special interaction with this descriptor. Margins are laid out as normal in the unrotated page, then rotated along with everything else.
+> [!NOTE]
+> [Margin boxes](/en-US/docs/Web/CSS/@page#margin_at-rules) and other positional elements have no special interaction with this descriptor. Margins are laid out as normal in the unrotated page, then rotated along with everything else.
 
 ## Syntax
 

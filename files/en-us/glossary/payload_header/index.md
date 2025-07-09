@@ -15,7 +15,6 @@ The payload headers include: {{HTTPHeader("Content-Length")}}, {{HTTPHeader("Con
 ## See also
 
 - [List of all HTTP headers](/en-US/docs/Web/HTTP/Reference/Headers)
-
   - {{HTTPHeader("Content-Length")}}
   - {{HTTPHeader("Content-Range")}}
   - {{HTTPHeader("Trailer")}}

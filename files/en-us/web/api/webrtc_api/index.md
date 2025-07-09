@@ -173,6 +173,8 @@ These interfaces and events are used to process incoming and outgoing encoded vi
 
 ## Guides
 
+- [Introduction to the Real-time Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
+  - : The Real-time Transport Protocol (RTP), defined in {{RFC(3550)}}, is an IETF standard protocol to enable real-time connectivity for exchanging data that needs real-time priority. This article provides an overview of what RTP is and how it functions in the context of WebRTC.
 - [Introduction to WebRTC protocols](/en-US/docs/Web/API/WebRTC_API/Protocols)
   - : This article introduces the protocols on top of which the WebRTC API is built.
 - [WebRTC connectivity](/en-US/docs/Web/API/WebRTC_API/Connectivity)

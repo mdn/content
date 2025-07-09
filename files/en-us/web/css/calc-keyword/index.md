@@ -16,19 +16,15 @@ The `<calc-keyword>` type defines numeric constants that can be used in [CSS mat
 ### Values
 
 - `e`
-
   - : The base of the natural logarithm, approximately equal to `2.7182818284590452354`.
 
 - `pi`
-
   - : The ratio of a circle's circumference to its diameter, approximately equal to `3.1415926535897932`.
 
 - `infinity` & `-infinity`
-
   - : An infinite value, used to indicate the largest/smallest possible value.
 
 - `NaN`
-
   - : A value representing "Not a Number" canonical casing.
 
 ### Notes

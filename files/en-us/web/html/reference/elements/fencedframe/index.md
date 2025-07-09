@@ -23,11 +23,9 @@ The `<fencedframe>` element is a type of `<iframe>` with more native privacy fea
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `allow` {{experimental_inline}}
-
   - : Specifies a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) for the `<fencedframe>`, which defines what features are available to the `<fencedframe>` based on the origin of the request. See [Permissions policies available to fenced frames](#permissions_policies_available_to_fenced_frames) for more details of which features can be controlled via a policy set on a fenced frame.
 
 - `height` {{experimental_inline}}
-
   - : A unitless integer representing the height of the fenced frame in CSS pixels. The default is `150`.
 
 - `width` {{experimental_inline}}
@@ -100,7 +98,8 @@ const frame = document.querySelector("fencedframe");
 frame.config = frameConfig;
 ```
 
-> **Note:** `resolveToConfig: true` must be passed in to the `runAdAuction()` call to obtain a `FencedFrameConfig` object. If it is not set, the resulting {{jsxref("Promise")}} will resolve to a URN that can only be used in an {{htmlelement("iframe")}}.
+> [!NOTE]
+> `resolveToConfig: true` must be passed in to the `runAdAuction()` call to obtain a `FencedFrameConfig` object. If it is not set, the resulting {{jsxref("Promise")}} will resolve to a URN that can only be used in an {{htmlelement("iframe")}}.
 
 ## Technical summary
 

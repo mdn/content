@@ -1,5 +1,6 @@
 ---
 title: Int16Array() constructor
+short-title: Int16Array()
 slug: Web/JavaScript/Reference/Global_Objects/Int16Array/Int16Array
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Int16Array.Int16Array
@@ -22,7 +23,8 @@ new Int16Array(buffer, byteOffset)
 new Int16Array(buffer, byteOffset, length)
 ```
 
-> **Note:** `Int16Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Int16Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

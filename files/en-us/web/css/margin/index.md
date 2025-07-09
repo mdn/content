@@ -116,9 +116,7 @@ The `margin` property may be specified using one, two, three, or four values. Ea
 ### Values
 
 - {{cssxref("length")}}
-
   - : The size of the margin as a fixed value.
-
     - For _anchor-positioned elements_, the {{cssxref("anchor-size()")}} function resolves to a {{cssxref("&lt;length&gt;")}} value relative to the associated _anchor element_'s width or height (see [Setting element margin based on anchor size](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#setting_element_margin_based_on_anchor_size)).
 
 - {{cssxref("percentage")}}
@@ -220,5 +218,5 @@ margin: auto; /* top and bottom: 0 margin     */
 - {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, and {{cssxref("margin-inline-end")}}
 - {{cssxref("margin-block")}} and {{cssxref("margin-inline")}} shorthands
 - [Mastering margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-- [Introduction to the CSS basic box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [Introduction to the CSS box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) guide
 - [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module

@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainDate.prototype.inLeapYear
+short-title: inLeapYear
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/inLeapYear
 page-type: javascript-instance-accessor-property
 status:

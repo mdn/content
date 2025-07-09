@@ -1,5 +1,6 @@
 ---
 title: Promise() constructor
+short-title: Promise()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/Promise
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Promise.Promise
@@ -33,7 +34,8 @@ console.log(promise1);
 new Promise(executor)
 ```
 
-> **Note:** `Promise()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Promise()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

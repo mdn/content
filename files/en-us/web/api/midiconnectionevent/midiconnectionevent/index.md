@@ -22,9 +22,7 @@ new MIDIConnectionEvent(type, midiConnectionEventInit)
 - `type`
   - : A string with one of `"connect"` or `"disconnect"`.
 - `midiConnectionEventInit` {{optional_inline}}
-
   - : A dictionary including the following fields:
-
     - `port`
       - : The {{domxref("MIDIPort")}} instance representing the port that has connected or disconnected.
     - `bubbles` {{optional_inline}}

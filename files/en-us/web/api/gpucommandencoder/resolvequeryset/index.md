@@ -3,12 +3,10 @@ title: "GPUCommandEncoder: resolveQuerySet() method"
 short-title: resolveQuerySet()
 slug: Web/API/GPUCommandEncoder/resolveQuerySet
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUCommandEncoder.resolveQuerySet
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`resolveQuerySet()`** method of the
 {{domxref("GPUCommandEncoder")}} interface encodes a command that resolves a {{domxref("GPUQuerySet")}}, copying the results into a specified {{domxref("GPUBuffer")}}.

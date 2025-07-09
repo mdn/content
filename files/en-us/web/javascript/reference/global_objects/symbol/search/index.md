@@ -1,5 +1,6 @@
 ---
 title: Symbol.search
+short-title: search
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/search
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.search

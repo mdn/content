@@ -3,10 +3,12 @@ title: "Sanitizer: replaceElementWithChildren() method"
 short-title: replaceElementWithChildren()
 slug: Web/API/Sanitizer/replaceElementWithChildren
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.Sanitizer.replaceElementWithChildren
 ---
 
-{{APIRef("HTML Sanitizer API")}}
+{{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}
 
 The **`replaceElementWithChildren()`** method of the {{domxref("Sanitizer")}} interface sets an element to be replaced by its child HTML elements when the sanitizer is used.
 The is primarily used for stripping styles from text.
@@ -23,16 +25,14 @@ replaceElementWithChildren(element)
 ### Parameters
 
 - `element`
-
-  - : A string indicating the name of the element to be be replaced, or an object with the following properties:
-
+  - : A string indicating the name of the element to be replaced, or an object with the following properties:
     - `name`
       - : A string containing the name of the element.
     - `namespace` {{optional_inline}}
       - : A string containing the namespace of the element.
         The default namespace is `"http://www.w3.org/1999/xhtml"`.
 
-### Returns
+### Return value
 
 None (`undefined`).
 

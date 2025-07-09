@@ -143,7 +143,7 @@ In this example we build on the previous one, including a `media` attribute on t
         border: 1px solid black;
       }
     </style>
-    <style media="all and (max-width: 500px)">
+    <style media="(width < 500px)">
       p {
         color: blue;
         background-color: yellow;

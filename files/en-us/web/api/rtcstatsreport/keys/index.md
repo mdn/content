@@ -20,6 +20,10 @@ The method is otherwise the same as {{jsxref("Map.prototype.keys()")}}.
 keys()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator).

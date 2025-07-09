@@ -12,6 +12,8 @@ browser-compat: css.at-rules.document
 
 The **`@document`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) restricts the style rules contained within it based on the URL of the document. It is designed primarily for user-defined style sheets (see [userchrome.org](https://www.userchrome.org/) for more information), though it can be used on author-defined style sheets, too.
 
+## Syntax
+
 ```css
 @document url("https://www.example.com/")
 {
@@ -20,8 +22,6 @@ The **`@document`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS
   }
 }
 ```
-
-## Syntax
 
 An `@document` rule can specify one or more matching functions. If any of the functions apply to a given URL, the rule will take effect on that URL. The functions available are:
 

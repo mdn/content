@@ -6,9 +6,10 @@ page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Early-Data
+sidebar: http
 ---
 
-{{SeeCompatTable}}{{HTTPSidebar}}
+{{SeeCompatTable}}
 
 The HTTP **`Early-Data`** {{Glossary("request header")}} is set by an intermediary to indicate that the request has been conveyed in [TLS early data](/en-US/docs/Web/Security/Transport_Layer_Security#tls_1.3), and also indicates that the intermediary understands the {{HTTPStatus("425", "425 Too Early")}} status code.
 

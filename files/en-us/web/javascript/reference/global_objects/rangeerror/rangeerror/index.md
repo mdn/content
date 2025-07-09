@@ -1,5 +1,6 @@
 ---
 title: RangeError() constructor
+short-title: RangeError()
 slug: Web/JavaScript/Reference/Global_Objects/RangeError/RangeError
 page-type: javascript-constructor
 browser-compat: javascript.builtins.RangeError.RangeError
@@ -25,7 +26,8 @@ RangeError(message, fileName)
 RangeError(message, fileName, lineNumber)
 ```
 
-> **Note:** `RangeError()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `RangeError` instance.
+> [!NOTE]
+> `RangeError()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `RangeError` instance.
 
 ### Parameters
 

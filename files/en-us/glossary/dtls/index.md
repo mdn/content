@@ -14,12 +14,10 @@ These features are especially useful for one of the most common areas in which D
 
 - [Datagram Transport Layer Security](https://en.wikipedia.org/wiki/Datagram_Transport_Layer_Security) on Wikipedia
 - Specifications:
-
   - {{RFC(9147, "The Datagram Transport Layer Security (DTLS) Protocol Version 1.3")}}
   - {{RFC(6347, "Datagram Transport Layer Security Version 1.2")}}
 
 - Related specification
-
   - {{RFC(5763, "Framework for Establishing a Secure Real-time Transport Protocol (SRTP) Security Context Using DTLS")}}
   - {{RFC(5764, "DTLS Extension to Establish Keys for the Secure Real-time Transport Protocol (SRTP)")}}
   - {{RFC(6083, "DTLS for Stream Control Transmission Protocol (SCTP)")}}

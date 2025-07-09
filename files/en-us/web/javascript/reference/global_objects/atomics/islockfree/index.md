@@ -1,5 +1,6 @@
 ---
 title: Atomics.isLockFree()
+short-title: isLockFree()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/isLockFree
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.isLockFree

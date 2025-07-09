@@ -55,39 +55,30 @@ From the assistive technology user's perspective, the heading does not exist sin
 #### States and Properties
 
 - [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected)
-
   - : Used to describe the selection state of the option. Required.
 
 - [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked)
-
   - : Used to describe the checked state when options are used in a multiple selection fashion. Supports `true`, `false` and `mixed`. Optional.
 
 - [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-posinset)
-
   - : Used to describe the position in the set of options when it does not match the DOM, such as virtual scrolling where only some options are present at a time. Optional.
 
 - [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize)
-
   - : Used in conjunction with `aria-posinset` to declare the total number of options. Optional.
 
 - [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled)
-
   - : Used to indicate that the option is present but not editable. Optional.
 
 - [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden)
-
   - : Used to hide the option from accessibility tools. It should only be used to hide non-visible content or visible content if it improves the experience of assistive technology, such as redundant content. Optional.
 
 - [`aria-invalid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid)
-
   - : Used to indicate that the value of the option is considered invalid by the application. Optional.
 
 - [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy)
-
   - : Used to indicate that an element is being modified, such as while it is loading. Optional.
 
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
-
   - : Used to indicate which element labels the option. The content of the option should be used instead where appropriate. Optional.
 
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)

@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainYearMonth.prototype.with()
+short-title: with()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth/with
 page-type: javascript-instance-method
 status:

@@ -35,9 +35,7 @@ Any pair of hue angles correspond to two radii on the {{Glossary("color wheel")}
 For a pair of hue angles `θ1` and `θ2` normalized to the range `[0deg, 360deg)`, there are four algorithms to determine which arc is used when interpolating from `θ1` to `θ2`:
 
 - `shorter`
-
   - : Use the shorter arc. When the two radii coincide, the arc degenerates to a single point. When both arcs have the same lengths:
-
     - If `θ1 < θ2`, use the clockwise arc;
     - If `θ1 > θ2`, use the counterclockwise arc.
 
@@ -46,14 +44,11 @@ For a pair of hue angles `θ1` and `θ2` normalized to the range `[0deg, 360deg)
     | ![shorter with θ1 = 45deg and θ2 = 135deg](shorter_increasing.png) | ![shorter with θ1 = 135deg and θ2 = 45deg](shorter_decreasing.png) |
 
 - `longer`
-
   - : Use the longer arc. When the two radii coincide:
-
     - If `θ1 ≤ θ2`, the arc becomes the full circumference with a clockwise orientation.
     - If `θ1 > θ2`, the arc becomes the full circumference with a counterclockwise orientation.
 
     When both arcs have the same lengths:
-
     - If `θ1 < θ2`, use the clockwise arc;
     - If `θ1 > θ2`, use the counterclockwise arc.
 
@@ -62,7 +57,6 @@ For a pair of hue angles `θ1` and `θ2` normalized to the range `[0deg, 360deg)
     | ![longer with θ1 = 45deg and θ2 = 135deg](longer_decreasing.png) | ![longer with θ1 = 135deg and θ2 = 45deg](longer_increasing.png) |
 
 - `increasing`
-
   - : Use the clockwise arc. When the two radii coincide, the arc degenerates to a single point.
 
     | `θ1 = 45deg`, `θ2 = 135deg`                                           | `θ1 = 135deg`, `θ2 = 45deg`                                          |
@@ -70,7 +64,6 @@ For a pair of hue angles `θ1` and `θ2` normalized to the range `[0deg, 360deg)
     | ![increasing with θ1 = 45deg and θ2 = 135deg](shorter_increasing.png) | ![increasing with θ1 = 135deg and θ2 = 45deg](longer_increasing.png) |
 
 - `decreasing`
-
   - : Use the counterclockwise arc. When the two radii coincide, the arc degenerates to a single point.
 
     | `θ1 = 45deg`, `θ2 = 135deg`                                          | `θ1 = 135deg`, `θ2 = 45deg`                                           |

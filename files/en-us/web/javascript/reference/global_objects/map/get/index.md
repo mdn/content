@@ -1,5 +1,6 @@
 ---
 title: Map.prototype.get()
+short-title: get()
 slug: Web/JavaScript/Reference/Global_Objects/Map/get
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Map.get

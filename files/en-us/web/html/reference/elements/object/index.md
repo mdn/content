@@ -42,7 +42,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 - `height`
   - : The height of the displayed resource, as in {{cssxref("&lt;integer&gt;")}} in {{glossary("CSS pixel", "CSS pixels")}}.
 - `name`
-  - : The name of valid browsing context (HTML5), or the name of the control (HTML 4).
+  - : The name of valid browsing context (HTML5), or the name of the control (HTML 4). The name becomes a property of the {{domxref("Window")}} and {{domxref("Document")}} objects, containing a reference to the embedded window or the element itself.
 - `standby` {{deprecated_inline}}
   - : A message that the browser can show while loading the object's implementation and data.
 - `type`
@@ -64,7 +64,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
   data="/shared-assets/videos/flower.webm"
   width="600"
   height="140">
-  <img src="path/image.jpg" alt="useful image description" />
+  <img
+    src="/shared-assets/images/examples/flowers.jpg"
+    alt="Some beautiful flowers" />
 </object>
 ```
 

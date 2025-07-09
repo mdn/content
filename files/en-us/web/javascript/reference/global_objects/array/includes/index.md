@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.includes()
+short-title: includes()
 slug: Web/JavaScript/Reference/Global_Objects/Array/includes
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.includes

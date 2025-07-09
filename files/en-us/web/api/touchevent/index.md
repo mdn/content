@@ -49,7 +49,6 @@ There are several types of event that can be fired to indicate that touch-relate
   - : Sent when the user places a touch point on the touch surface.
     The event's target will be the {{domxref("element")}} in which the touch occurred.
 - {{domxref("Element/touchend_event", "touchend")}}
-
   - : Sent when the user removes a touch point from the surface;
     that is, when they lift a finger or stylus from the surface.
     This is also sent
@@ -67,7 +66,6 @@ There are several types of event that can be fired to indicate that touch-relate
     specified by the `changedTouches` attribute.
 
 - {{domxref("Element/touchmove_event", "touchmove")}}
-
   - : Sent when the user moves a touch point along the surface.
     The event's target is the same {{domxref("element")}}
     that received the `touchstart` event corresponding to the touch point,
@@ -80,11 +78,9 @@ There are several types of event that can be fired to indicate that touch-relate
     > The rate at which `touchmove` events is sent is browser-specific, and may also vary depending on the capability of the user's hardware. You must not rely on a specific granularity of these events.
 
 - {{domxref("Element/touchcancel_event", "touchcancel")}}
-
   - : Sent when a touch point has been disrupted in some way.
     There are several possible reasons why this might happen
     (and the exact reasons will vary from device to device, as well as browser to browser):
-
     - An event of some kind occurred that canceled the touch; this might happen if a modal alert pops up during the interaction.
     - The touch point has left the document window and moved into the browser's UI area, a plug-in, or other external content.
     - The user has placed more touch points on the screen than can be supported, in which case the earliest {{domxref("Touch")}} in the {{domxref("TouchList")}} gets canceled.

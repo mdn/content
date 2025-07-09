@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainTime.from()
+short-title: from()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime/from
 page-type: javascript-static-method
 status:
@@ -21,15 +22,12 @@ Temporal.PlainTime.from(info, options)
 ### Parameters
 
 - `info`
-
   - : One of the following:
-
     - A {{jsxref("Temporal.PlainTime")}} instance, which creates a copy of the instance.
     - A {{jsxref("Temporal.PlainDateTime")}} instance, which provides the time in the same fashion as {{jsxref("Temporal/PlainDateTime/toPlainDate", "Temporal.PlainDateTime.prototype.toPlainTime()")}}.
     - A {{jsxref("Temporal.ZonedDateTime")}} instance, which provides the time in the same fashion as {{jsxref("Temporal/ZonedDateTime/toPlainDate", "Temporal.ZonedDateTime.prototype.toPlainTime()")}}.
     - An [RFC 9557](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime#rfc_9557_format) string containing a time.
     - An object containing at least one of the following properties (in the order they are retrieved and validated):
-
       - {{jsxref("Temporal/PlainTime/hour", "hour")}}
       - {{jsxref("Temporal/PlainTime/microsecond", "microsecond")}}
       - {{jsxref("Temporal/PlainTime/millisecond", "millisecond")}}

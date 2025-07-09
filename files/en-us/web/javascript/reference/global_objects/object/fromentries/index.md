@@ -1,5 +1,6 @@
 ---
 title: Object.fromEntries()
+short-title: fromEntries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.fromEntries
@@ -32,9 +33,7 @@ Object.fromEntries(iterable)
 ### Parameters
 
 - `iterable`
-
   - : An [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol), such as an {{jsxref("Array")}} or {{jsxref("Map")}}, containing a list of objects. Each object should have two properties:
-
     - `0`
       - : A string or [symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) representing the property key.
     - `1`

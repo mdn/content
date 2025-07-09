@@ -125,7 +125,8 @@ if (done) {
 }
 ```
 
-> **Note:** `close()` is part of the new custom stream, not the original stream we are discussing here. We'll explain more about the custom stream in the next section.
+> [!NOTE]
+> `close()` is part of the new custom stream, not the original stream we are discussing here. We'll explain more about the custom stream in the next section.
 
 If `done` is not `true`, we process the new chunk we've read (contained in the `value` property of the results object) and then call the `pump()` function again to read the next chunk.
 

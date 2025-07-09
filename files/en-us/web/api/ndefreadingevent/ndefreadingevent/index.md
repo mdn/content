@@ -24,15 +24,11 @@ new NDEFReadingEvent(type, options)
   - : A string with the name of the event.
     It is case-sensitive and browsers always set it to `reading`.
 - `options`
-
   - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
-
     - `serialNumber` {{optional_inline}}
       - : The serial number of the device a message was read from. It default to `""`, and can be set to `null`.
     - `message`
-
       - : An object with the following members:
-
         - `data` {{optional_inline}}
           - : Contains the data to be transmitted. It can be a string, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, or an array of nested records.
         - `encoding` {{optional_inline}}

@@ -2,9 +2,8 @@
 title: Updating add-ons for Firefox 10
 slug: Mozilla/Firefox/Releases/10/Updating_add-ons
 page-type: guide
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Although a lot of things have changed in Firefox 10 that, in theory, can cause add-on compatibility breakage, most of them are relatively obscure, so they're not very likely to affect you. This article will help guide you as you update your add-on.
 
@@ -22,11 +21,9 @@ Some obsolete APIs have been removed from the DOM:
 - {{ domxref("Node.isSameNode()") }}
   - : This is the removal that has the most likelihood to affect add-on developers, as it was fairly commonly used. You can now use the JavaScript `===` operator to compare nodes instead of this obsolete method. This method was made obsolete by the DOM4 specification.
 - `text.isElementContentWhitespace`, `text.replaceWholeText()`
-
   - : These APIs were rendered obsolete by the DOM4 specification.
 
 - {{ domxref("Document.xmlEncoding") }}, {{ domxref("Document.xmlStandalone") }}, {{ domxref("Document.xmlVersion") }}
-
   - : All of these APIs were rendered obsolete by the DOM4 specification. They were most frequently being used to detect whether the document being displayed was HTML or XML. See the article for {{ domxref("Document.xmlVersion") }} for a recommended way to test for this going forward.
 
 ## XPCOM and interface changes

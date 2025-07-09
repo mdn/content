@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.splice()
+short-title: splice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/splice
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.splice
@@ -40,7 +41,6 @@ splice(start, deleteCount, item1, item2, /* …, */ itemN)
 ### Parameters
 
 - `start`
-
   - : Zero-based index at which to start changing the array, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion).
     - Negative index counts back from the end of the array — if `-array.length <= start < 0`, `start + array.length` is used.
     - If `start < -array.length`, `0` is used.
@@ -48,7 +48,6 @@ splice(start, deleteCount, item1, item2, /* …, */ itemN)
     - If `start` is omitted (and `splice()` is called with no arguments), nothing is deleted. This is different from passing `undefined`, which is converted to `0`.
 
 - `deleteCount` {{optional_inline}}
-
   - : An integer indicating the number of elements in the array to remove from `start`.
 
     If `deleteCount` is omitted, or if its value is greater than or equal to the number of elements after the position specified by `start`, then all the elements from `start` to the end of the array will be deleted. However, if you wish to pass any `itemN` parameter, you should pass `Infinity` as `deleteCount` to delete all elements after `start`, because an explicit `undefined` gets [converted](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion) to `0`.
@@ -57,7 +56,6 @@ splice(start, deleteCount, item1, item2, /* …, */ itemN)
     In this case, you should specify at least one new element (see below).
 
 - `item1`, …, `itemN` {{optional_inline}}
-
   - : The elements to add to the array, beginning from `start`.
 
     If you do not specify any elements, `splice()` will only remove elements from the array.

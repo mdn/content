@@ -45,7 +45,7 @@ order: 2;
 }
 
 .default-example > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   margin: 0.5rem;
   padding: 0.5rem;
@@ -53,7 +53,7 @@ order: 2;
 }
 
 #example-element {
-  background-color: rgba(255, 0, 200, 0.2);
+  background-color: rgb(255 0 200 / 0.2);
   border: 3px solid rebeccapurple;
 }
 
@@ -83,7 +83,7 @@ order: revert-layer;
 order: unset;
 ```
 
-Since `order` is only meant to affect the _visual order_ of elements and not their logical or tab order, it must not be used on non-visual media such as [speech](https://www.w3.org/TR/css-speech-1/).
+Since `order` is only meant to affect the _visual order_ of elements and not their logical or tab order, it must not be used on non-visual media such as [speech](https://drafts.csswg.org/css-speech/).
 
 Defined in the [CSS display](/en-US/docs/Web/CSS/CSS_display) module, this property impacts only grid and flex items. When `order` is set on an element whose parent's {{cssxref("display")}} property is not creating a flex or grid container, it has no effect.
 

@@ -33,9 +33,7 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed these arguments:
-
     - `info`
       - : {{WebExtAPIRef('menus.OnClickData')}}. Information about the item clicked and the context where the click happened.
     - `tab`

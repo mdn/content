@@ -1,5 +1,6 @@
 ---
 title: RegExp.prototype[Symbol.search]()
+short-title: "[Symbol.search]()"
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.@@search

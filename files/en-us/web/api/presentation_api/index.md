@@ -48,60 +48,69 @@ Example codes below highlight the usage of main features of the Presentation API
 In `controller.html`:
 
 ```html
-<button id="presentBtn" style="display: none;">Present</button>
-<script>
-  // The Present button is visible if at least one presentation display is available
-  const presentBtn = document.getElementById("presentBtn");
+<button id="presentBtn" class="hidden">Present</button>
+```
 
-  // It is also possible to use relative presentation URL e.g. "presentation.html"
-  const presUrls = [
-    "https://example.com/presentation.html",
-    "https://example.net/alternate.html",
-  ];
+```css
+.hidden {
+  display: none;
+}
+```
 
-  // Show or hide present button depending on display availability
-  const handleAvailabilityChange = (available) => {
-    presentBtn.style.display = available ? "inline" : "none";
-  };
+```js
+// The Present button is visible if at least one presentation display is available
+const presentBtn = document.getElementById("presentBtn");
 
-  // Promise is resolved as soon as the presentation display availability is known.
-  const request = new PresentationRequest(presUrls);
-  request
-    .getAvailability()
-    .then((availability) => {
-      // availability.value may be kept up-to-date by the controlling UA as long
-      // as the availability object is alive. It is advised for the web developers
-      // to discard the object as soon as it's not needed.
+// It is also possible to use relative presentation URL e.g. "presentation.html"
+const presUrls = [
+  "https://example.com/presentation.html",
+  "https://example.net/alternate.html",
+];
+
+// Show or hide present button depending on display availability
+const handleAvailabilityChange = (available) => {
+  if (available) {
+    presentBtn.classList.remove("hidden");
+  } else {
+    presentBtn.classList.add("hidden");
+  }
+};
+
+// Promise is resolved as soon as the presentation display availability is known.
+const request = new PresentationRequest(presUrls);
+request
+  .getAvailability()
+  .then((availability) => {
+    // availability.value may be kept up-to-date by the controlling UA as long
+    // as the availability object is alive. It is advised for the web developers
+    // to discard the object as soon as it's not needed.
+    handleAvailabilityChange(availability.value);
+    availability.onchange = () => {
       handleAvailabilityChange(availability.value);
-      availability.onchange = () => {
-        handleAvailabilityChange(availability.value);
-      };
-    })
-    .catch(() => {
-      // Availability monitoring is not supported by the platform, so discovery of
-      // presentation displays will happen only after request.start() is called.
-      // Pretend the devices are available for simplicity; or, one could implement
-      // a third state for the button.
-      handleAvailabilityChange(true);
-    });
-</script>
+    };
+  })
+  .catch(() => {
+    // Availability monitoring is not supported by the platform, so discovery of
+    // presentation displays will happen only after request.start() is called.
+    // Pretend the devices are available for simplicity; or, one could implement
+    // a third state for the button.
+    handleAvailabilityChange(true);
+  });
 ```
 
 ### Starting a new presentation
 
 In `controller.html`:
 
-```html
-<script>
-  presentBtn.onclick = () => {
-    // Start new presentation.
-    request
-      .start()
-      // The connection to the presentation will be passed to setConnection on success.
-      .then(setConnection);
-    // Otherwise, the user canceled the selection dialog or no screens were found.
-  };
-</script>
+```js
+presentBtn.onclick = () => {
+  // Start new presentation.
+  request
+    .start()
+    // The connection to the presentation will be passed to setConnection on success.
+    .then(setConnection);
+  // Otherwise, the user canceled the selection dialog or no screens were found.
+};
 ```
 
 ### Reconnect to a presentation
@@ -109,39 +118,37 @@ In `controller.html`:
 In the `controller.html` file:
 
 ```html
-<button id="reconnectBtn" style="display: none;">Reconnect</button>
-<script>
-  const reconnect = () => {
-    // read presId from localStorage if exists
-    const presId = localStorage["presId"];
-    // presId is mandatory when reconnecting to a presentation.
-    if (presId) {
-      request
-        .reconnect(presId)
-        // The new connection to the presentation will be passed to
-        // setConnection on success.
-        .then(setConnection);
-      // No connection found for presUrl and presId, or an error occurred.
-    }
-  };
-  // On navigation of the controller, reconnect automatically.
-  document.addEventListener("DOMContentLoaded", reconnect);
-  // Or allow manual reconnection.
-  reconnectBtn.onclick = reconnect;
-</script>
+<button id="reconnectBtn" class="hidden">Reconnect</button>
+```
+
+```js
+const reconnect = () => {
+  const presId = localStorage.getItem("presId");
+  // presId is mandatory when reconnecting to a presentation.
+  if (presId) {
+    request
+      .reconnect(presId)
+      // The new connection to the presentation will be passed to
+      // setConnection on success.
+      .then(setConnection);
+    // No connection found for presUrl and presId, or an error occurred.
+  }
+};
+// On navigation of the controller, reconnect automatically.
+document.addEventListener("DOMContentLoaded", reconnect);
+// Or allow manual reconnection.
+reconnectBtn.onclick = reconnect;
 ```
 
 ### Presentation initiation by the controlling UA
 
 In the `controller.html` file:
 
-```html
-<script>
-  navigator.presentation.defaultRequest = new PresentationRequest(presUrls);
-  navigator.presentation.defaultRequest.onconnectionavailable = (evt) => {
-    setConnection(evt.connection);
-  };
-</script>
+```js
+navigator.presentation.defaultRequest = new PresentationRequest(presUrls);
+navigator.presentation.defaultRequest.onconnectionavailable = (evt) => {
+  setConnection(evt.connection);
+};
 ```
 
 Setting `presentation.defaultRequest` allows the page to specify the `PresentationRequest` to use when the controlling UA initiates a presentation.
@@ -151,79 +158,84 @@ Setting `presentation.defaultRequest` allows the page to specify the `Presentati
 In `controller.html`:
 
 ```html
-<button id="disconnectBtn" style="display: none;">Disconnect</button>
-<button id="stopBtn" style="display: none;">Stop</button>
-<button id="reconnectBtn" style="display: none;">Reconnect</button>
-<script>
-  let connection;
+<button id="disconnectBtn" class="hidden">Disconnect</button>
+<button id="stopBtn" class="hidden">Stop</button>
+<button id="reconnectBtn" class="hidden">Reconnect</button>
+```
 
-  // The Disconnect and Stop buttons are visible if there is a connected presentation
-  const stopBtn = document.querySelector("#stopBtn");
-  const reconnectBtn = document.querySelector("#reconnectBtn");
-  const disconnectBtn = document.querySelector("#disconnectBtn");
+```js
+let connection;
 
-  stopBtn.onclick = () => {
-    connection?.terminate();
-  };
+// The Disconnect and Stop buttons are visible if there is a connected presentation
+const stopBtn = document.querySelector("#stopBtn");
+const reconnectBtn = document.querySelector("#reconnectBtn");
+const disconnectBtn = document.querySelector("#disconnectBtn");
 
-  disconnectBtn.onclick = () => {
-    connection?.close();
-  };
+stopBtn.onclick = () => {
+  connection?.terminate();
+};
 
-  function setConnection(newConnection) {
-    // Disconnect from existing presentation, if not attempting to reconnect
-    if (
-      connection &&
-      connection !== newConnection &&
-      connection.state !== "closed"
-    ) {
-      connection.onclose = undefined;
-      connection.close();
-    }
+disconnectBtn.onclick = () => {
+  connection?.close();
+};
 
-    // Set the new connection and save the presentation ID
-    connection = newConnection;
-    localStorage["presId"] = connection.id;
-
-    function showConnectedUI() {
-      // Allow the user to disconnect from or terminate the presentation
-      stopBtn.style.display = "inline";
-      disconnectBtn.style.display = "inline";
-      reconnectBtn.style.display = "none";
-    }
-
-    function showDisconnectedUI() {
-      disconnectBtn.style.display = "none";
-      stopBtn.style.display = "none";
-      reconnectBtn.style.display = localStorage["presId"] ? "inline" : "none";
-    }
-
-    // Monitor the connection state
-    connection.onconnect = () => {
-      showConnectedUI();
-
-      // Register message handler
-      connection.onmessage = (message) => {
-        console.log(`Received message: ${message.data}`);
-      };
-
-      // Send initial message to presentation page
-      connection.send("Say hello");
-    };
-
-    connection.onclose = () => {
-      connection = null;
-      showDisconnectedUI();
-    };
-
-    connection.onterminate = () => {
-      // Remove presId from localStorage if exists
-      delete localStorage["presId"];
-      connection = null;
-      showDisconnectedUI();
-    };
+function setConnection(newConnection) {
+  // Disconnect from existing presentation, if not attempting to reconnect
+  if (
+    connection &&
+    connection !== newConnection &&
+    connection.state !== "closed"
+  ) {
+    connection.onclose = undefined;
+    connection.close();
   }
-</script>
+
+  // Set the new connection and save the presentation ID
+  connection = newConnection;
+  localStorage.setItem("presId", connection.id);
+
+  function showConnectedUI() {
+    // Allow the user to disconnect from or terminate the presentation
+    stopBtn.classList.remove("hidden");
+    disconnectBtn.classList.remove("hidden");
+    reconnectBtn.classList.add("hidden");
+  }
+
+  function showDisconnectedUI() {
+    disconnectBtn.classList.add("hidden");
+    stopBtn.classList.add("hidden");
+    if (localStorage.getItem("presId")) {
+      // If there is a presId in localStorage, allow the user to reconnect
+      reconnectBtn.classList.remove("hidden");
+    } else {
+      reconnectBtn.classList.add("hidden");
+    }
+  }
+
+  // Monitor the connection state
+  connection.onconnect = () => {
+    showConnectedUI();
+
+    // Register message handler
+    connection.onmessage = (message) => {
+      console.log(`Received message: ${message.data}`);
+    };
+
+    // Send initial message to presentation page
+    connection.send("Say hello");
+  };
+
+  connection.onclose = () => {
+    connection = null;
+    showDisconnectedUI();
+  };
+
+  connection.onterminate = () => {
+    localStorage.removeItem("presId");
+    connection = null;
+    showDisconnectedUI();
+  };
+}
 ```
 
 ### Monitor available connection(s) and say hello
@@ -252,26 +264,22 @@ navigator.presentation.receiver.connectionList.then((list) => {
 In the `controller.html` file:
 
 ```html
-<script>
-  connection.send('{"string": "你好，世界!", "lang": "zh-CN"}');
-  connection.send('{"string": "こんにちは、世界!", "lang": "ja"}');
-  connection.send('{"string": "안녕하세요, 세계!", "lang": "ko"}');
-  connection.send('{"string": "Hello, world!", "lang": "en-US"}');
-</script>
+connection.send('{"string": "你好，世界!", "lang": "zh-CN"}');
+connection.send('{"string": "こんにちは、世界!", "lang": "ja"}');
+connection.send('{"string": "안녕하세요, 세계!", "lang": "ko"}');
+connection.send('{"string": "Hello, world!", "lang": "en-US"}');
 ```
 
 In the `presentation.html` file:
 
-```html
-<script>
-  connection.onmessage = (message) => {
-    const messageObj = JSON.parse(message.data);
-    const spanElt = document.createElement("SPAN");
-    spanElt.lang = messageObj.lang;
-    spanElt.textContent = messageObj.string;
-    document.body.appendChild(spanElt);
-  };
-</script>
+```js
+connection.onmessage = (message) => {
+  const messageObj = JSON.parse(message.data);
+  const spanElt = document.createElement("SPAN");
+  spanElt.lang = messageObj.lang;
+  spanElt.textContent = messageObj.string;
+  document.body.appendChild(spanElt);
+};
 ```
 
 ## Specifications

@@ -35,7 +35,6 @@ This sequence needs to fit into a single frame, since the screen isn't updated u
 In the context of the rendering waterfall, some properties are more expensive than others:
 
 - Properties that affect an element's **geometry** or **position** trigger a:
-
   - style recalculation
   - layout
   - repaint
@@ -43,14 +42,12 @@ In the context of the rendering waterfall, some properties are more expensive th
   For example: {{cssxref("left")}}, {{cssxref("max-width")}}, {{cssxref("border-width")}}, {{cssxref("margin-left")}}, {{cssxref("font-size")}}
 
 - Properties that do _not_ affect geometry or position and are _not rendered_ in their own layer, do _not_ trigger a layout. They do trigger a:
-
   - style recalculation
   - repaint
 
   For example: {{cssxref("color")}}
 
 - Properties that _are rendered_ in their **own layer** don't even trigger a repaint, because the update is handled in **composition**. These do trigger:
-
   - style recalculation
 
   For example: {{cssxref("transform")}}, {{cssxref("opacity")}}

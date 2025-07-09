@@ -69,7 +69,6 @@ repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%)
 - `<shape>`
   - : The gradient's shape. The value can be `circle` (meaning that the gradient's shape is a circle with constant radius) or `ellipse` (meaning that the shape is an axis-aligned ellipse). If unspecified, it defaults to `ellipse`.
 - `<extent-keyword>`
-
   - : A keyword describing how big the ending shape must be. The possible values are:
 
     | Keyword           | Description                                                                                                                                                                     |

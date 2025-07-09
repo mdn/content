@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainTime.prototype.millisecond
+short-title: millisecond
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime/millisecond
 page-type: javascript-instance-accessor-property
 status:

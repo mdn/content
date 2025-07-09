@@ -485,7 +485,8 @@ console.log(removedItem);
 // Orange
 ```
 
-> **Note:** `pop()` can only be used to remove the last item from an array. To remove multiple items from the end of an array, see the next example.
+> [!NOTE]
+> `pop()` can only be used to remove the last item from an array. To remove multiple items from the end of an array, see the next example.
 
 ### Remove multiple items from the end of an array
 
@@ -528,7 +529,8 @@ console.log(removedItem);
 // Apple
 ```
 
-> **Note:** `shift()` can only be used to remove the first item from an array. To remove multiple items from the beginning of an array, see the next example.
+> [!NOTE]
+> `shift()` can only be used to remove the first item from an array. To remove multiple items from the beginning of an array, see the next example.
 
 ### Remove multiple items from the beginning of an array
 

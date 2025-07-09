@@ -168,7 +168,7 @@ thing.showPrivate();
 // 1
 ```
 
-This is roughly equivalent to the following, using [private fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties):
+This is roughly equivalent to the following, using [private fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements):
 
 ```js
 class Thing {

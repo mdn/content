@@ -1,5 +1,6 @@
 ---
 title: handler.get()
+short-title: get()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.get

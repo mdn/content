@@ -1,5 +1,6 @@
 ---
 title: String.prototype.fontsize()
+short-title: fontsize()
 slug: Web/JavaScript/Reference/Global_Objects/String/fontsize
 page-type: javascript-instance-method
 status:

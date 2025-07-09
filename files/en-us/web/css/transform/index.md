@@ -177,8 +177,8 @@ div {
 .original {
   border: 1px dashed;
 }
-.original:before,
-.original:after {
+.original::before,
+.original::after {
   content: "";
   position: absolute;
   top: 100px;
@@ -187,7 +187,7 @@ div {
   height: 1px;
   border-top: 2px dotted;
 }
-.original:after {
+.original::after {
   transform: rotate(135deg);
 }
 .one {

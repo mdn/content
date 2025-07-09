@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-A hash function is a function that takes a variable-length input and produces a fixed-length output, also called a _digest_ (or just a "hash"). Hash functions should be quick to compute, and different inputs should as far as possible produce different outputs (this is called _collision-resistance_).
+A **hash function** is a function that takes a variable-length input and produces a fixed-length output, also called a _digest_ (or just a "hash"). Hash functions should be quick to compute, and different inputs should as far as possible produce different outputs (this is called _collision-resistance_).
 
 Hash functions have both {{glossary("cryptography", "cryptographic")}} and non-cryptographic uses. Outside cryptography, for example, hash functions can be used to generate the keys for an associative array such as a map or a dictionary.
 

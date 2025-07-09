@@ -31,9 +31,7 @@ let results = await browser.scripting.executeScript(
 ### Parameters
 
 - `details`
-
   - : An object describing the script to inject. It contains these properties:
-
     - `args` {{optional_inline}}
       - : An array of arguments to carry into the function. This is only valid if the `func` parameter is specified. The arguments must be JSON-serializable.
     - `files` {{optional_inline}}
@@ -60,7 +58,6 @@ Each `InjectionResult` object has these properties:
 - `result` {{optional_inline}}
   - : `any`. The result of the script execution.
 - `error` {{optional_inline}}
-
   - : `any`. If an error occurs, contains the value the script threw or rejected with. Typically this is an error object with a message property but it could be any value (including primitives and undefined).
 
     Chrome does not support the `error` property yet (see [Issue 1271527: Propagate errors from scripting.executeScript to InjectionResult](https://crbug.com/1271527)). As an alternative, runtime errors can be caught by wrapping the code to execute in a try-catch statement. Uncaught errors are also reported to the console of the target tab.

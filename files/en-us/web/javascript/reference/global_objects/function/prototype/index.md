@@ -1,5 +1,6 @@
 ---
 title: "Function: prototype"
+short-title: prototype
 slug: Web/JavaScript/Reference/Global_Objects/Function/prototype
 page-type: javascript-instance-data-property
 spec-urls: https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-function-instances-prototype
@@ -18,7 +19,8 @@ An object.
 
 {{js_property_attributes(1, 0, 0)}}
 
-> **Note:** [Classes](/en-US/docs/Web/JavaScript/Reference/Classes) are a type of function, so most of the description here applies to the `prototype` property of classes too. The only salient difference is that the `prototype` property of a class is not writable.
+> [!NOTE]
+> [Classes](/en-US/docs/Web/JavaScript/Reference/Classes) are a type of function, so most of the description here applies to the `prototype` property of classes too. The only salient difference is that the `prototype` property of a class is not writable.
 
 ## Description
 

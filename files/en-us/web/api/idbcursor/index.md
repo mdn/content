@@ -18,7 +18,8 @@ You can have an unlimited number of cursors at the same time. You always get the
 
 ## Instance properties
 
-> **Note:** {{domxref("IDBCursorWithValue")}} is an **`IDBCursor`** interface with an additional **`value`** property.
+> [!NOTE]
+> {{domxref("IDBCursorWithValue")}} is an **`IDBCursor`** interface with an additional **`value`** property.
 
 - {{domxref("IDBCursor.source")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("IDBObjectStore")}} or {{domxref("IDBIndex")}} that the cursor is iterating. This function never returns null or throws an exception, even if the cursor is currently being iterated, has iterated past its end, or its transaction is not active.

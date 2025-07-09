@@ -1,5 +1,6 @@
 ---
 title: Function.prototype.bind()
+short-title: bind()
 slug: Web/JavaScript/Reference/Global_Objects/Function/bind
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Function.bind

@@ -1,5 +1,6 @@
 ---
 title: TypedArray.prototype.some()
+short-title: some()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/some
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.some

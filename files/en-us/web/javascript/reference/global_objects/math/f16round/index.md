@@ -1,5 +1,6 @@
 ---
 title: Math.f16round()
+short-title: f16round()
 slug: Web/JavaScript/Reference/Global_Objects/Math/f16round
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.f16round

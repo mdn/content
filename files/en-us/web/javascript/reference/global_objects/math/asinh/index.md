@@ -1,5 +1,6 @@
 ---
 title: Math.asinh()
+short-title: asinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/asinh
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.asinh

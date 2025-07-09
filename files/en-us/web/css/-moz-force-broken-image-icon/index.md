@@ -14,6 +14,18 @@ The **`-moz-force-broken-image-icon`** extended CSS property can be used to forc
 
 ## Syntax
 
+```css
+-moz-force-broken-image-icon: 1;
+-moz-force-broken-image-icon: 0;
+
+/* Global values */
+-moz-force-broken-image-icon: inherit;
+-moz-force-broken-image-icon: initial;
+-moz-force-broken-image-icon: revert;
+-moz-force-broken-image-icon: revert-layer;
+-moz-force-broken-image-icon: unset;
+```
+
 ### Values
 
 - {{cssxref("&lt;integer&gt;")}}

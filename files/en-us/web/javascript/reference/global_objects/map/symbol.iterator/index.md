@@ -1,5 +1,6 @@
 ---
 title: Map.prototype[Symbol.iterator]()
+short-title: "[Symbol.iterator]()"
 slug: Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Map.@@iterator

@@ -1,5 +1,6 @@
 ---
 title: EvalError() constructor
+short-title: EvalError()
 slug: Web/JavaScript/Reference/Global_Objects/EvalError/EvalError
 page-type: javascript-constructor
 browser-compat: javascript.builtins.EvalError.EvalError
@@ -25,7 +26,8 @@ EvalError(message, fileName)
 EvalError(message, fileName, lineNumber)
 ```
 
-> **Note:** `EvalError()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `EvalError` instance.
+> [!NOTE]
+> `EvalError()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `EvalError` instance.
 
 ### Parameters
 

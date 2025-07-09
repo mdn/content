@@ -30,7 +30,6 @@ The below sections detail the available builtins. Other builtins are likely to b
 The available {{jsxref("String")}} builtins are:
 
 - [`"wasm:js-string" "cast"`](https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md#wasmjs-string-cast)
-
   - : Throws an error if the provided value is not a string. Roughly equivalent to:
 
     ```js
@@ -62,7 +61,6 @@ The available {{jsxref("String")}} builtins are:
 - [`"wasm:js-string" "substring"`](https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md#wasmjs-string-substring)
   - : Equivalent to {{jsxref("String.prototype.substring()")}}.
 - [`"wasm:js-string" "test"`](https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md#wasmjs-string-test)
-
   - : Returns `0` if the provided value is not a string, or `1` if it is a string. Roughly equivalent to:
 
     ```js

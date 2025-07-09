@@ -2,9 +2,8 @@
 title: Firefox 134 for developers
 slug: Mozilla/Firefox/Releases/134
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 134 that affect developers. Firefox 134 was released on [January 7, 2025](https://whattrainisitnow.com/release/?version=134).
 

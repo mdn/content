@@ -2,9 +2,8 @@
 title: Firefox 1.5 for developers
 slug: Mozilla/Firefox/Releases/1.5
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Based on the [Gecko](/en-US/docs/Glossary/Gecko) 1.8 engine, Firefox 1.5 improved its already best in class standards support, and provided new capabilities to enable the next generation of web applications. Firefox 1.5 features improved support for CSS2 and CSS3, APIs for scriptable and programmable 2D graphics through [SVG](/en-US/docs/Web/SVG) 1.1 and [`<canvas>`](/en-US/docs/Web/API/Canvas_API), [XForms](/en-US/docs/Glossary/XForms) and XML events, as well as many DHTML, JavaScript, and DOM enhancements.
 
@@ -83,8 +82,8 @@ Firefox support for Web standards continues to lead the industry with consistent
 - Document Object Model ([DOM](/en-US/docs/Web/API/Document_Object_Model)): [DOM Level 1](https://www.w3.org/TR/DOM-Level-1/), [DOM Level 2](https://www.w3.org/DOM/DOMTR#dom2) and parts of [DOM Level 3](https://www.w3.org/DOM/DOMTR#dom3)
 - Mathematical Markup Language: [MathML Version 2.0](https://www.w3.org/Math/)
 - Extensible Markup Language ([XML](/en-US/docs/Web/XML)): [XML 1.0](https://www.w3.org/TR/xml/), [Namespaces in XML](https://www.w3.org/TR/xml-names/), [Associating Style Sheets with XML Documents 1.0](https://www.w3.org/TR/xml-stylesheet/), [Fragment Identifier for XML](https://lists.w3.org/Archives/Public/www-xml-linking-comments/2001AprJun/att-0074/NOTE-FIXptr-20010425.htm)
-- XSL Transformations ([XSLT](/en-US/docs/Web/XML/XSLT)): [XSLT 1.0](https://www.w3.org/TR/xslt/)
-- XML Path Language ([XPath](/en-US/docs/Web/XML/XPath)): [XPath 1.0](https://www.w3.org/TR/xpath/)
+- XSL Transformations ([XSLT](/en-US/docs/Web/XML/XSLT)): [XSLT 1.0](https://www.w3.org/TR/xslt-10/)
+- XML Path Language ([XPath](/en-US/docs/Web/XML/XPath)): [XPath 1.0](https://www.w3.org/TR/xpath-10/)
 - Resource Description Framework ([RDF](/en-US/docs/Glossary/RDF)): [RDF](https://www.w3.org/RDF/)
 - Simple Object Access Protocol (SOAP): [SOAP 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)
 - [JavaScript](/en-US/docs/Web/JavaScript) 1.6, based on [ECMA-262, revision 3](https://ecma-international.org/publications-and-standards/standards/ecma-262/)

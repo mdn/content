@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainYearMonth.prototype.subtract()
+short-title: subtract()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth/subtract
 page-type: javascript-instance-method
 status:

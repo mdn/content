@@ -1,5 +1,6 @@
 ---
 title: Intl.Locale.prototype.numeric
+short-title: numeric
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/numeric
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.Intl.Locale.numeric

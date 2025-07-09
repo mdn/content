@@ -3,12 +3,10 @@ title: "GPUError: message property"
 short-title: message
 slug: Web/API/GPUError/message
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.GPUError.message
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`message`** read-only property of the
 {{domxref("GPUError")}} interface provides a human-readable message that explains why the error occurred.

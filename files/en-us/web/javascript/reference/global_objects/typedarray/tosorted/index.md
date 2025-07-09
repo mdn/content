@@ -1,5 +1,6 @@
 ---
 title: TypedArray.prototype.toSorted()
+short-title: toSorted()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/toSorted
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.toSorted
@@ -19,7 +20,6 @@ toSorted(compareFn)
 ### Parameters
 
 - `compareFn` {{optional_inline}}
-
   - : A function that determines the order of the elements. If omitted, the typed array elements are sorted according to numeric value. See {{jsxref("TypedArray/sort", "sort()")}} for more information.
 
 ### Return value

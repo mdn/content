@@ -124,5 +124,5 @@ The `padding-top` property is specified as a single value chosen from the list b
 - {{cssxref("padding")}} shorthand
 - {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, and {{cssxref("padding-inline-end")}}
 - {{cssxref("padding-block")}} and {{cssxref("padding-inline")}} shorthands
-- [Introduction to the CSS basic box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [Introduction to the CSS box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) guide
 - [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module

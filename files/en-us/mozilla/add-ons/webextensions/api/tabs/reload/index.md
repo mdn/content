@@ -25,9 +25,7 @@ let reloading = browser.tabs.reload(
 - `tabId` {{optional_inline}}
   - : `integer`. The ID of the tab to reload. Defaults to the selected tab of the current window.
 - `reloadProperties` {{optional_inline}}
-
   - : An object with the following properties:
-
     - `bypassCache` {{optional_inline}}
       - : `boolean`. Bypass the local web cache. Default is `false`.
 

@@ -1,5 +1,6 @@
 ---
 title: Promise.prototype.catch()
+short-title: catch()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/catch
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Promise.catch

@@ -28,9 +28,7 @@ let removing = browser.tabs.removeCSS(
 - `tabId` {{optional_inline}}
   - : `integer`. The ID of the tab from which to remove the CSS. Defaults to the active tab of the current window.
 - `details`
-
   - : An object describing the CSS to remove from the page. It contains the following properties:
-
     - `allFrames` {{optional_inline}}
       - : `boolean`. If `true`, the code will be removed from all frames of the current page. If it is `false`, code is only removed from the top frame. Defaults to `false`.
     - `code` {{optional_inline}}

@@ -46,7 +46,7 @@ We will start by describing various web-related concepts: web pages, websites, w
 - **Web server**
   - : A computer that hosts a website on the Internet.
 - **Web service**
-  - : A software that responds to requests over the Internet to perform a function or provide data. A web service is typically backed by a web server, and may provide web pages for users to interact with. Many websites are also web services, though some websites (such as MDN) comprise of static content only. Examples of web services would be something that resizes images, provides a weather report, or handles user login.
+  - : A software that responds to requests over the Internet to perform a function or provide data. A web service is typically backed by a web server, and may provide web pages for users to interact with. Many websites are also web services, though some websites (such as MDN) consist of static content only. Examples of web services would be something that resizes images, provides a weather report, or handles user login.
 - **Search engine**
   - : A web service that helps you find other web pages, such as Google, Bing, Yahoo, or DuckDuckGo. Search engines are normally accessed through a web browser (for example, you can perform search engine searches directly in the address bar of Firefox, Chrome, etc.) or through a web page (for example, [bing.com](https://www.bing.com/) or [duckduckgo.com](https://duckduckgo.com/)).
 
@@ -60,7 +60,7 @@ Let's compare a public library with the web:
 
 - The library is like a web server. It has several sections, which is similar to a web server hosting multiple websites.
 - The different sections (science, math, history, etc.) in the library are like websites. Each section is like a unique website (two sections do not contain the same books).
-- The books in each section are like web pages. One website may have several web pages, for example, the Science section (the website) will have books on heat, sound, thermodynamics, statics, etc.
+- The books in each section are like web pages. One website may have several web pages, for example, the Science section (the website) will have books on heat, sound, thermodynamics, human biology, etc.
 - The search index is like the search engine. Each book has its own unique location in the library (two books cannot be kept at the same place) which is specified by the catalog number.
 
 Let's now take the time to look at each term in a little bit more detail.
@@ -80,11 +80,7 @@ All web pages can each be found at a unique location (web address, also called a
 
 ![Example of a web page address in the browser address bar](web-page.jpg)
 
-> [!CALLOUT]
->
-> **Try it out**
->
-> Try loading one of your favorite websites in a browser now.
+Try loading one of your favorite websites in a browser now, bearing in mind what we've said above. Did you type in the web address yourself, or did you find it using a search engine?
 
 ### Website
 
@@ -94,28 +90,31 @@ When you load your favorite website in a browser, it tends to first display the 
 
 ![Example of a website domain name in the browser address bar](web-site.jpg)
 
-> [!CALLOUT]
->
-> **Try it out**
->
-> Try clicking some menu items or links to look at some different pages on your favorite website.
+Try clicking some menu items or links to look at some different pages on your favorite website. Note how the displayed web address changes as you move between pages.
 
 > [!NOTE]
-> It is also possible to have a [_single-page app_](/en-US/docs/Glossary/SPA): a website that consists of a single web page that is dynamically updated with new content when needed.
+> It is also possible to have a [_single-page app_](/en-US/docs/Glossary/SPA): a website that consists of a single web page that is dynamically updated with new content when needed. If this is the case, the web address might not change as different pages are viewed.
 
 ### Web server
 
 A _web server_ is a computer hosting one or more _websites_. "Hosting" means that all the _web pages_ and their associated files are available on that computer. The _web server_ will send web page files it is hosting to a user's browser when they attempt to load it.
 
-Don't confuse _websites_ and _web servers_. For example, if you hear someone say, "My website is not responding", it actually means that the _web server_ is not responding and therefore the _website_ is not available. More importantly, since a web server can host multiple websites, the term _web server_ is never used to designate a website, as it could cause great confusion. In our previous example, if we said, "My web server is not responding", it means that multiple websites on that web server are not available.
+Don't confuse _websites_ and _web servers_. For example, if you hear someone say, "My website is not responding", it probably means that the _web server_ is not responding and therefore the _website_ is not available.
+
+More importantly, since a web server can host multiple websites, the term _web server_ is no longer used to designate a website, as it could cause confusion. If someone says "My web server is not responding", it may be that multiple websites or applications hosted on the web server are not available.
 
 ### Search engine
 
-Search engines are a common source of confusion on the web. A search engine is a special kind of website that helps users find web pages from _other_ websites.
+It's common for people to mix up search engines with websites. A search engine is a special kind of web service that helps users find web pages they are interested in, as well as specific types of content such as images, videos, or news articles.
 
-There are plenty out there: [Google](https://www.google.com/), [Bing](https://www.bing.com/), [Yandex](https://yandex.com/), [DuckDuckGo](https://duckduckgo.com/), and many more. Some are generic, some are specialized around certain topics.
+Search engines all tend to have their own websites that can be used to access the underlying web service. There are plenty out there: [Google](https://www.google.com/), [Bing](https://www.bing.com/), [Yandex](https://yandex.com/), [DuckDuckGo](https://duckduckgo.com/), and many more. Some are generic, some are specialized around certain topics.
 
-Many beginners on the web confuse search engines and browsers. Let's make it clear: A _browser_ is a piece of software that retrieves and displays web pages; a _search engine_ is a website that helps people find web pages from other websites. The confusion arises because, the first time someone launches a browser, the browser often displays a search engine's homepage or a search box allowing them to search for a term using that search engine. Most browsers also allow their users to use a search engine by typing search terms directly into the browser address bar.
+Many beginners on the web confuse search engines and browsers. Let's make it clear:
+
+- A _browser_ is a piece of software that retrieves and displays web pages.
+- A _search engine_ is a web service (and, usually, a website) that helps people find web pages contained on other websites.
+
+The confusion arises because, the first time someone launches a browser, the browser often displays a search engine's website homepage or a search box allowing them to search for a term using that search engine. Most browsers also allow their users to use a search engine by typing search terms directly into the browser address bar.
 
 This all makes sense because the first thing people tend to want to do with a browser is find a web page to display. Don't confuse the software (the browser) with the service (the search engine).
 
@@ -123,14 +122,10 @@ Here is an instance of Firefox showing a Google search box as its default startu
 
 ![Example of Firefox nightly displaying a custom Google page as default](search-engine.jpg)
 
-> [!CALLOUT]
->
-> **Try it out**
->
-> Do a search in a search engine by:
->
-> - Going to a search engine homepage and entering a search term.
-> - Entering a search term into the browser address bar.
+Try using a search engine to find information on a subject you are interested in by:
+
+1. Going to a search engine homepage and entering a search term.
+2. Entering a search term into the browser address bar.
 
 ## How the web works: the basics
 
@@ -147,25 +142,17 @@ When you access the web, quite a lot happens between your first interaction (for
 
 This description of how the web works is heavily simplified, but it is all you really need to know at this point. You will find a more detailed account of how web pages are requested and rendered by a web browser in our [Web standards](/en-US/docs/Learn_web_development/Getting_started/Web_standards) module, slightly later on.
 
-For now, try opening a web browser and loading up a couple of your favorite sites, thinking about the above steps as you do so.
-
 ## Searching for information
 
 As a web developer, you will spend a lot of time searching for information, from syntax you can't remember to solutions to specific problems. It is therefore a good idea to learn how to effectively search the web.
 
-If you are looking for general information about a specific web technology feature, you should type the name of the feature into the MDN search box. For example, try typing `box model`, `fetch()` or `video element` into the search box and see what comes up. If you don't find the information you need, try expanding your search — try your search term in a search engine.
+If you know a website that specializes in the subject you are learning about, it is often a good idea to start there.
+
+For example, if you are looking for general information about a specific web technology feature, you should type the name of the feature into the MDN search box. For example, try typing `box model`, `fetch()`, or `video element` into the search box and see what comes up. If you don't find the information you need, expand your search — try your search term in a search engine.
 
 If you are looking for a solution to a specific problem, such as `how to print out the fibonacci sequence with JavaScript` or `how to calculate whether a number is a prime number with JavaScript`, it is a good idea to search on a website such as [StackOverflow](https://stackoverflow.com/), which is a community dedicated to answering programming problems. Again, try using a general search engine if a specific site doesn't give you a helpful answer.
 
-> [!CALLOUT]
->
-> **Try it out**
->
-> Try some searches, as indicated above:
->
-> - Begin by searching for the exact terms we've included above.
-> - Next, move on to searching for some topics of your own that you'd like to learn about. Try using more and less specific searches and different related terms to see what works best.
-> - See our [Search tips](#search_tips) for more things to try.
+Before you move on, try searching for some topics of your own that you'd like to learn about. Try using more and less specific searches and different related terms to see what works best. See our [Search tips](#search_tips) for more things to try.
 
 ### Using AI
 
@@ -178,21 +165,17 @@ When learning to code, AI chat prompts can be useful in a variety of ways:
 - Generating an optimized version of a specific block of code. This can be useful when you've written a block of code that works, but you want to find out how it could be done more efficiently, or in a more robust way that solves more use cases.
 - Providing advice on how to do something. For example, if you don't just want to know where the bug is in a block of code, but instead you want advice on what strategy to use to debug it.
 
-> [!CALLOUT]
->
-> **Try it out**
->
-> Try using a couple of AI tools to do some searches.
+Try using a couple of AI tools to do some searches.
 
 ### A cautionary tale
 
-In truth, AI can do so much that you may start to wonder why you need to learn to code.
+AI can do so much that you may start to wonder why you need to learn to code.
 
 But wait! The following is important: **You still need to understand what you are trying to do at a high level, what the code is doing, and where each piece of code needs to be used**. If you don't, you won't be very useful when trying to solve real-world problems. This means that you still need to learn to code. AI can be a really useful tool to help you find answers more quickly, but if you just type every question you are asked into an AI prompt, you won't understand how anything works.
 
 In addition:
 
-- AI tools present their answers in a confident, authoritative voice, but they can often be misleading or just plain wrong. Some of the errors they make can be very subtle. They don't have any innate intelligence of their own — they are basically advanced pattern matching tools. AI tools compile their answers from other sources out there, so will hoover up wrong information as well as correct information. Even two correct sources can be combined to create an answer that is incorrect.
+- AI tools present their answers in a confident, authoritative voice, but they can often be misleading or just plain wrong. Some of the mistakes they make can be very subtle. They don't have any innate intelligence of their own — they are basically advanced pattern matching tools. AI tools compile their answers from other sources out there, so will hoover up wrong information as well as correct information. Even two correct sources can be combined to create an answer that is incorrect.
 - Newer information may not be available, or answers may be skewed to older and more prevalent documentation, so "how to do X in JS" might give you outdated guidance.
 
 As a result, you need to be careful to check the answers they give you, and not just trust everything without question.
@@ -201,14 +184,13 @@ As a result, you need to be careful to check the answers they give you, and not 
 
 ### Search tips
 
-- You should include the language you are using in the search term, as shown in the examples above. If you just typed in `how to print out the fibonacci sequence`, you would likely end up with several solutions in Python, C++, Java, Ruby, or other languages — not quite as helpful when you are trying to learn JavaScript!
+- You should include the language you are using in the search term, as shown in the examples above. If you just typed in `how to print out the fibonacci sequence`, you would likely end up with several solutions in Python, C++, Java, Ruby, or other languages — not very helpful when you are trying to learn JavaScript!
 - When you find a useful answer, bookmark or make a copy of it somewhere so you can find it again later. You'll be amazed how many times you run into the same problem.
 - If your code is returning a specific error message, try entering the error into a search engine or AI prompt. Other people will probably have already tackled the same error in the past and recorded solutions publicly somewhere.
 - If possible, stick with recommended sites like MDN and [StackOverflow](https://stackoverflow.com/).
-- There are many advanced search techniques you can use in search engines that will give you better results than just typing a plain search term. Typing in a plain search term such as `ant fish cheese` will return results that contain any combination of those words. However, most search engines support variations of the following formats:
-
+- There are many advanced search techniques you can use in search engines that will give you better results than just typing a plain search term. Typing in a plain search term such as `ant fish cheese` will return results that contain any combination of those words. However, most search engines support variations of the following syntax patterns:
   - Typing in `"ant fish cheese"` (with the quotes) will only return results that contain that exact phrase.
-  - `"ant cheese" -fish` will return results that contain `ant` and/or `cheese` but not `fish`.
+  - `ant cheese -fish` will return results that contain `ant` and/or `cheese` but not `fish`.
   - `ant OR cheese` will only return results with one term or the other, not both. From our testing, this one only seemed to work effectively in Google.
   - `intitle:cheese` will only return results that have "cheese" in the main title of the page.
 

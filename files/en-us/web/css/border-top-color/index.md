@@ -20,11 +20,11 @@ border-top-color: #32a1ce;
 ```
 
 ```css interactive-example-choice
-border-top-color: rgb(170, 50, 220, 0.6);
+border-top-color: rgb(170 50 220 / 0.6);
 ```
 
 ```css interactive-example-choice
-border-top-color: hsl(60, 90%, 50%, 0.8);
+border-top-color: hsl(60 90% 50% / 0.8);
 ```
 
 ```css interactive-example-choice

@@ -27,7 +27,6 @@ A language tag is made of hyphen-separated _subtags_, where each subtag indicate
 - Language subtag
   - : A 2-or-3-character code that defines the basic language, typically written in all lowercase. For example, the language code for English is `en`, and the code for Badeshi is `bdz`.
 - Script subtag {{optional_inline}}
-
   - : This subtag defines the writing system used for the language, and is always 4 characters long, with the first letter capitalized. For example, French-in-Braille is `fr-Brai` and Japanese written with the Katakana alphabet is `ja-Kana`.
 
     > [!NOTE]

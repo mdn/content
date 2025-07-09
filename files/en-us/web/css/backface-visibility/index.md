@@ -51,7 +51,7 @@ backface-visibility: hidden;
   height: 100%;
   position: absolute;
   backface-visibility: inherit;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgb(0 0 0 / 0.4);
   font-size: 60px;
   color: white;
 }
@@ -61,18 +61,18 @@ backface-visibility: hidden;
 }
 
 .back {
-  background: rgb(230, 0, 0);
+  background: rgb(230 0 0);
   color: white;
   transform: rotateY(180deg) translateZ(50px);
 }
 
 .right {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgb(0 0 0 / 0.6);
   transform: rotateY(90deg) translateZ(50px);
 }
 
 .bottom {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgb(0 0 0 / 0.6);
   transform: rotateX(-90deg) translateZ(50px);
 }
 ```

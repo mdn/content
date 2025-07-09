@@ -55,7 +55,7 @@ target.addEventListener(
 
 ```css
 body {
-  font-family: arial;
+  font-family: Arial;
 }
 div {
   display: inline-block;

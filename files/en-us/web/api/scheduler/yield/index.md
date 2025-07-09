@@ -26,7 +26,7 @@ yield()
 
 None.
 
-### Return Value
+### Return value
 
 Returns a {{jsxref('Promise')}} that is fulfilled with {{jsxref('undefined')}}, or rejected with an {{domxref('AbortSignal.reason')}}.
 

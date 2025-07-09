@@ -34,17 +34,13 @@ const mediaList = firstStyleSheet.media; // the mediaList of the stylesheet
 mediaList.mediaText = "SCREEN AND (140PX <= WIDTH <= 380PX)";
 
 // add a second media value
-mediaList.appendMedium(
-  "SCREEN AND (MAX-HEIGHT: 400PX) AND (ORIENTATION: LANDSCAPE))",
-);
+mediaList.appendMedium("SCREEN AND (ORIENTATION: LANDSCAPE))");
 
 // erroneously, add the same media query again
-mediaList.appendMedium(
-  "SCREEN AND (MAX-HEIGHT: 400PX) AND (ORIENTATION: LANDSCAPE))",
-);
+mediaList.appendMedium("SCREEN AND (ORIENTATION: LANDSCAPE))");
 
 console.log(mediaList.toString());
-// "screen and (140px <= width <= 380px), screen and (max-height: 400px) and (orientation: landscape)"
+// "screen and (140px <= width <= 380px), screen and (orientation: landscape)"
 ```
 
 ## Specifications

@@ -1,5 +1,6 @@
 ---
 title: String.prototype.blink()
+short-title: blink()
 slug: Web/JavaScript/Reference/Global_Objects/String/blink
 page-type: javascript-instance-method
 status:

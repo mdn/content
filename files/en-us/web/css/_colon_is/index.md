@@ -58,13 +58,15 @@ ol {
 
 ## Syntax
 
-The `:is()` pseudo-class requires a [selector list](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#selector_list), a comma-separated list of one or more selectors as its argument. The list must not contain a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), but any other simple, compound, and complex selectors are allowed.
-
 ```css-nolint
 :is(<forgiving-selector-list>) {
   /* ... */
 }
 ```
+
+### Parameters
+
+The `:is()` pseudo-class requires a [selector list](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#selector_list), a comma-separated list of one or more selectors as its argument. The list must not contain a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), but any other simple, compound, and complex selectors are allowed.
 
 ### Difference between :is() and :where()
 

@@ -28,10 +28,8 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
 ### Parameters
 
 - `target`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target) of the active texture.
     Possible values:
-
     - `gl.TEXTURE_2D`: A two-dimensional texture.
     - `gl.TEXTURE_CUBE_MAP_POSITIVE_X`: Positive X face for a cube-mapped
       texture.
@@ -50,7 +48,6 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the level of detail. Level 0 is the base image
     level and level _n_ is the n-th mipmap reduction level.
 - `internalformat`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the color components in the texture.
 
     Possible values in both WebGL1 and WebGL2
@@ -697,7 +694,6 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
     Possible values in WebGL2 for the versions of `texImage2D` that take a
     texture an `HTMLImageElement`, `HTMLCanvasElement`,
     `HTMLVideoElement`, `ImageBitmap`, or `ImageData`
-
     - `gl.ALPHA`: Discards the red, green and blue components and reads the
       alpha component.
     - `gl.RGB`: Discards the alpha components and reads the red, green and blue
@@ -709,18 +705,15 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
     - `gl.LUMINANCE_ALPHA`: Each component is a luminance/alpha component.
 
     When using the {{domxref("WEBGL_depth_texture")}} extension:
-
     - `gl.DEPTH_COMPONENT`
     - `gl.DEPTH_STENCIL`
 
     When using the {{domxref("EXT_sRGB")}} extension:
-
     - `ext.SRGB_EXT`
     - `ext.SRGB_ALPHA_EXT`
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the
     following values are available additionally:
-
     - `gl.R8`
     - `gl.R16F`
     - `gl.R32F`
@@ -759,9 +752,7 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
     must be the same as `internalformat` (see above). In WebGL 2, the
     combinations are listed in [this table](https://registry.khronos.org/webgl/specs/latest/2.0/#TEXTURE_TYPES_FORMATS_FROM_DOM_ELEMENTS_TABLE).
 - `type`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the data type of the texel data. Possible values:
-
     - `gl.UNSIGNED_BYTE`: 8 bits per channel for `gl.RGBA`
     - `gl.UNSIGNED_SHORT_5_6_5`: 5 red bits, 6 green bits, 5 blue bits.
     - `gl.UNSIGNED_SHORT_4_4_4_4`: 4 red bits, 4 green bits, 4 blue bits, 4
@@ -770,22 +761,18 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
       alpha bit.
 
     When using the {{domxref("WEBGL_depth_texture")}} extension:
-
     - `gl.UNSIGNED_SHORT`
     - `gl.UNSIGNED_INT`
     - `ext.UNSIGNED_INT_24_8_WEBGL` (constant provided by the extension)
 
     - When using the {{domxref("OES_texture_float")}} extension:
-
       - `gl.FLOAT`
 
     When using the {{domxref("OES_texture_half_float")}} extension:
-
     - `ext.HALF_FLOAT_OES` (constant provided by the extension)
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
     the following values are available additionally:
-
     - `gl.BYTE`
     - `gl.UNSIGNED_SHORT`
     - `gl.SHORT`
@@ -801,9 +788,7 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
       [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null))
 
 - `pixels`
-
   - : The following types can always be used as a pixel source for the texture:
-
     - {{domxref("ImageData")}},
     - {{domxref("HTMLImageElement")}},
     - {{domxref("HTMLCanvasElement")}},
@@ -811,7 +796,6 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
     - {{domxref("ImageBitmap")}}.
 
     The following types can only be used as a pixel source when `width`, `height`, and `border` are specified:
-
     - {{jsxref("Uint8Array")}} (must be used if `type` is `gl.UNSIGNED_BYTE`)
     - {{jsxref("Uint16Array")}} (must be used if `type` is either
       `gl.UNSIGNED_SHORT_5_6_5`, `gl.UNSIGNED_SHORT_4_4_4_4`,

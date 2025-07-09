@@ -34,10 +34,8 @@ The **`:lang()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/
 
 ## Syntax
 
-### Formal syntax
-
 ```plain
-:lang(<language-code> [,<language-code> ]*)
+:lang(<language-code> [,<language-code> ]*) {
   /* ... */
 }
 ```

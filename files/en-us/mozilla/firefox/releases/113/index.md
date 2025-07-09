@@ -2,9 +2,8 @@
 title: Firefox 113 for developers
 slug: Mozilla/Firefox/Releases/113
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 113 that affect developers. Firefox 113 was released on May 09, 2023.
 

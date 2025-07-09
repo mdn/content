@@ -21,7 +21,8 @@ The `browsingTopics()` method of the {{domxref("Document")}} interface returns a
 
 See [Using the Topics API](/en-US/docs/Web/API/Topics_API/Using) for more details.
 
-> **Note:** `browsingTopics()` does not rely on HTTP headers to send topics and mark topics as observed like the other [Topics API enabling features](/en-US/docs/Web/API/Topics_API/Using#what_api_features_enable_the_topics_api), but it is somewhat less performant. You are advised to use one of the HTTP header-using features, falling back to `browsingTopics()` only in situations where the headers cannot be modified.
+> [!NOTE]
+> `browsingTopics()` does not rely on HTTP headers to send topics and mark topics as observed like the other [Topics API enabling features](/en-US/docs/Web/API/Topics_API/Using#what_api_features_enable_the_topics_api), but it is somewhat less performant. You are advised to use one of the HTTP header-using features, falling back to `browsingTopics()` only in situations where the headers cannot be modified.
 
 ## Syntax
 

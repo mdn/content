@@ -31,9 +31,7 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `window`
       - : A {{WebExtAPIRef('windows.Window')}} object containing details of the window that was resized or moved.
 

@@ -1,5 +1,6 @@
 ---
 title: Temporal.Duration.prototype.sign
+short-title: sign
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/sign
 page-type: javascript-instance-accessor-property
 status:

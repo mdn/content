@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainYearMonth.prototype.since()
+short-title: since()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth/since
 page-type: javascript-instance-method
 status:

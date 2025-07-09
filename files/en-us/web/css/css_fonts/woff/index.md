@@ -1,6 +1,6 @@
 ---
-title: The Web Open Font Format (WOFF)
-short-title: Web Open Font Format (WOFF)
+title: Web Open Font Format (WOFF)
+short-title: WOFF
 slug: Web/CSS/CSS_fonts/WOFF
 page-type: guide
 browser-compat:

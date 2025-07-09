@@ -18,11 +18,9 @@ events.Event.removeRules(ruleIdentifiers, callback)
 ### Parameters
 
 - `ruleIdentifiers` {{optional_inline}}
-
   - : `array` of `string`. Identifiers for the rules to remove. If no array is passed, all rules are removed.
 
 - `callback` {{optional_inline}}
-
   - : `function`. Called with no arguments when the rules are removed.
 
 ## Browser compatibility

@@ -35,9 +35,7 @@ range:
 The value is a comma-separated list of ranges each including a lower and upper limit or the keyword `auto`.
 
 - `auto`
-
   - : The entire set of numbers representable by the counter {{cssxref("@counter-style/system","system")}}. Those range values depends on the counter system:
-
     - For `cyclic`, `numeric`, and `fixed` systems, the range is negative `infinity` to positive `infinity`.
     - For `alphabetic` and `symbolic` systems, the range is `1` to positive `infinity`.
     - For `additive` systems, the range is `0` to `positive` infinity.

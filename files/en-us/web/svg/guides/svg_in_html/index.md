@@ -26,8 +26,8 @@ To include an inline SVG in an HTML file, paste the entire SVG file into the HTM
         <stop class="begin" offset="0%" stop-color="red" />
         <stop class="end" offset="100%" stop-color="black" />
       </linearGradient>
-      <rect x="0" y="0" width="100" height="100" style="fill:url(#gradient)" />
-      <circle cx="50" cy="50" r="30" style="fill:url(#gradient)" />
+      <rect x="0" y="0" width="100" height="100" fill="url(#gradient)" />
+      <circle cx="50" cy="50" r="30" fill="url(#gradient)" />
     </svg>
   </body>
 </html>
@@ -71,48 +71,12 @@ If the SVG can be labeled by visible text, reference that text with an [`aria-la
     </style>
   </defs>
 
-  <rect
-    width="36"
-    height="60"
-    x="13"
-    y="18"
-    ry="2"
-    style="transform: skewy(24deg)" />
-  <rect
-    width="39"
-    height="60"
-    x="11"
-    y="20"
-    ry="2"
-    style="transform: skewy(18deg)" />
-  <rect
-    width="42"
-    height="90"
-    x="8"
-    y="22"
-    ry="2"
-    style="transform: skewy(12deg)" />
-  <rect
-    width="36"
-    height="60"
-    x="50"
-    y="18"
-    ry="2"
-    style="transform: skewy(-24deg)" />
-  <rect
-    width="39"
-    height="60"
-    x="50"
-    y="20"
-    ry="2"
-    style="transform: skewy(-18deg)" />
-  <rect
-    width="42"
-    height="90"
-    x="50"
-    y="22"
-    ry="2"
-    style="transform: skewy(-12deg)" />
+  <rect width="36" height="60" x="13" y="18" ry="2" transform="skewy(24deg)" />
+  <rect width="39" height="60" x="11" y="20" ry="2" transform="skewY(18deg)" />
+  <rect width="42" height="90" x="8" y="22" ry="2" transform="skewY(12deg)" />
+  <rect width="36" height="60" x="50" y="18" ry="2" transform="skewY(-24deg)" />
+  <rect width="39" height="60" x="50" y="20" ry="2" transform="skewY(-18deg)" />
+  <rect width="42" height="90" x="50" y="22" ry="2" transform="skewY(-12deg)" />
 </svg>
 ```
 

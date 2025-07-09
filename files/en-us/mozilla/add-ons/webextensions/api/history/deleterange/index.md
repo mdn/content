@@ -22,9 +22,7 @@ let deletingRange = browser.history.deleteRange(
 ### Parameters
 
 - `range`
-
   - : `object`. Specification of the time range for which to delete visits.
-
     - `startTime`
       - : `number` or `string` or `object`. A value indicating a date and time. This can be represented as: a [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object, an [ISO 8601 date string](https://www.iso.org/iso-8601-date-and-time-format.html), or the number of [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time). Specifies the start time for the range.
     - `endTime`

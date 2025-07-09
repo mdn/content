@@ -31,9 +31,7 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `status`
       - : `string` The status of the service, being one of `captive` if there is an unlocked captive portal present or `clear` if no captive portal is detected.
 

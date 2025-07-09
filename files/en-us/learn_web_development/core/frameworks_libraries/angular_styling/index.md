@@ -120,7 +120,7 @@ In `app.component.css`, add the following styles:
     0 2.5rem 5rem 0 rgb(0 0 0 / 10%);
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (width >= 600px) {
   .main {
     width: 70%;
   }

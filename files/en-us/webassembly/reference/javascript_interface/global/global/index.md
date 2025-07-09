@@ -18,9 +18,7 @@ new WebAssembly.Global(descriptor, value)
 ### Parameters
 
 - `descriptor`
-
   - : An object, which contains two properties:
-
     - `value`: A string representing the
       data type of the global. This can be any one of:
       - `i32`: A 32-bit integer.

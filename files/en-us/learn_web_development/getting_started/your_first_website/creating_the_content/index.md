@@ -152,7 +152,7 @@ Heading elements allow you to specify that certain parts of your content are hea
 > [!NOTE]
 > Anything in HTML between `<!--` and `-->` is an **HTML comment**. The browser ignores comments as it renders the code. In other words, they are not visible on the page — just in the code. HTML comments are a way for you to add notes about your code or logic, which might be useful to others working on the same code, or you, if you came back to it after 6 months and can't remember what you did.
 
-Now try adding a suitable main title to your HTML page just above your {{htmlelement("img")}} element. Save the file and view it in a browser to see the effect.
+Add your page title to the HTML page just above your {{htmlelement("img")}} element, wrapped inside `<h1> ... </h1>` tags. Save the file and view it in a browser to see the effect.
 
 ### Paragraphs
 
@@ -225,7 +225,8 @@ Links are very important — they are what makes the web a web! To add a link, w
 
 You might get unexpected results if you omit the `https://` or `http://` part, called the _protocol_, at the beginning of the web address. After making a link, click it to make sure it is sending you where you wanted it to.
 
-> **Note:** `href` might appear like a rather obscure choice for an attribute name at first. It stands for _**h**ypertext **ref**erence_.
+> [!NOTE]
+> `href` might appear like a rather obscure choice for an attribute name at first. It stands for _**h**ypertext **ref**erence_.
 
 Add a link to your page now, if you haven't already done so.
 

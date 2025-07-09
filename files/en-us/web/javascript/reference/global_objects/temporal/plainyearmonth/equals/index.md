@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainYearMonth.prototype.equals()
+short-title: equals()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth/equals
 page-type: javascript-instance-method
 status:
@@ -11,7 +12,8 @@ browser-compat: javascript.builtins.Temporal.PlainYearMonth.equals
 
 The **`equals()`** method of {{jsxref("Temporal.PlainYearMonth")}} instances returns `true` if this year-month is equivalent in value to another year-month (in a form convertible by {{jsxref("Temporal/PlainYearMonth/from", "Temporal.PlainYearMonth.from()")}}), and `false` otherwise. They are compared both by their underlying ISO date values and their calendars, so two year-months from different calendars may be considered equal by {{jsxref("Temporal/PlainYearMonth/compare", "Temporal.PlainYearMonth.compare()")}} but not by `equals()`.
 
-> **Note:** `PlainYearMonth` objects keep track of a reference ISO day, which is also used in the comparison. This day is automatically set when using the {{jsxref("Temporal/PlainYearMonth/from", "Temporal.PlainYearMonth.from()")}} method, but can be set manually using the {{jsxref("Temporal/PlainYearMonth/PlainYearMonth", "Temporal.PlainYearMonth()")}} constructor, causing two equivalent year-months to be considered different if they have different reference days. For this reason, you should avoid using the constructor directly and prefer the `from()` method.
+> [!NOTE]
+> `PlainYearMonth` objects keep track of a reference ISO day, which is also used in the comparison. This day is automatically set when using the {{jsxref("Temporal/PlainYearMonth/from", "Temporal.PlainYearMonth.from()")}} method, but can be set manually using the {{jsxref("Temporal/PlainYearMonth/PlainYearMonth", "Temporal.PlainYearMonth()")}} constructor, causing two equivalent year-months to be considered different if they have different reference days. For this reason, you should avoid using the constructor directly and prefer the `from()` method.
 
 ## Syntax
 

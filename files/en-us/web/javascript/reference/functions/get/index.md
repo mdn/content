@@ -3,9 +3,8 @@ title: get
 slug: Web/JavaScript/Reference/Functions/get
 page-type: javascript-language-feature
 browser-compat: javascript.functions.get
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Functions")}}
 
 The **`get`** syntax binds an object property to a function that will be called when that property is looked up. It can also be used in [classes](/en-US/docs/Web/JavaScript/Reference/Classes).
 
@@ -101,7 +100,7 @@ console.log(instance.msg); // "hello cake"
 
 Getter properties are defined on the `prototype` property of the class and are thus shared by all instances of the class. Unlike getter properties in object literals, getter properties in classes are not enumerable.
 
-Static getters and private getters use similar syntaxes, which are described in the [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static) and [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) pages.
+Static getters and private getters use similar syntaxes, which are described in the [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static) and [private elements](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) pages.
 
 ### Deleting a getter using the `delete` operator
 

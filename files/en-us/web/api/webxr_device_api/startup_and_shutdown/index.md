@@ -51,7 +51,7 @@ The [source code for the extension](https://github.com/MozillaReality/WebXR-emul
 
 While this isn't the place for a full article about the extension, there are some specific things worth mentioning.
 
-Version 0.4.0 of the extension was announced on March 26, 2020. It introduced support for augmented reality (AR) through the [WebXR AR Module](https://www.w3.org/TR/webxr-ar-module-1/), which has is approaching a stable state. Documentation for AR is forthcoming shortly here on MDN.
+Version 0.4.0 of the extension was announced on March 26, 2020. It introduced support for augmented reality (AR) through the [WebXR AR Module](https://immersive-web.github.io/webxr-ar-module/), which has is approaching a stable state. Documentation for AR is forthcoming shortly here on MDN.
 
 Other improvements include updating the emulator to rename the `XR` interface to {{domxref("XRSystem")}}, introduce support for squeeze (grip) input sources, and add support for the {{domxref("XRInputSource")}} property {{domxref("XRInputSource.profiles", "profiles")}}.
 

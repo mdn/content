@@ -1,5 +1,6 @@
 ---
 title: CSS property value processing
+short-title: Property value processing
 slug: Web/CSS/CSS_cascade/Value_processing
 page-type: guide
 ---
@@ -29,7 +30,7 @@ All elements that are part of the document's flattened element tree have declare
 - [Initial value](#initial_value)
 - [Specified value](#specified_value)
 - [Computed value](#computed_value)
-- [Used Value](#used_value)
+- [Used value](#used_value)
 
 These values are used to determine the final [rendered value](#rendered_values).
 
@@ -37,8 +38,7 @@ These values are used to determine the final [rendered value](#rendered_values).
 
 A property's **initial value** is the default value as listed in its definition table in the specification. The usage of the initial value depends on whether a property is inherited or not:
 
-For [inherited properties](/en-US/docs/Web/CSS/CSS_cascade/Inheritance#inherited_properties), the initial value is used on the _root element only_, as long as no [specified value](#specified_value) is supplied.
-
+- For [inherited properties](/en-US/docs/Web/CSS/CSS_cascade/Inheritance#inherited_properties), the initial value is used on the _root element only_, as long as no [specified value](#specified_value) is supplied.
 - For [non-inherited properties](/en-US/docs/Web/CSS/CSS_cascade/Inheritance#non-inherited_properties), the initial value is used on _all elements_, as long as no specified value is supplied.
 
 You can explicitly set the initial value by using the {{cssxref("initial")}} keyword.

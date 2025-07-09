@@ -111,7 +111,8 @@ addEventListener("fetch", (event) => {
 });
 ```
 
-> **Note:** {{domxref("CacheStorage.match()", "caches.match()")}} is a
+> [!NOTE]
+> {{domxref("CacheStorage.match()", "caches.match()")}} is a
 > convenience method. Equivalent functionality is to call
 > {{domxref("cache.match()")}} on each cache (in the order returned by
 > {{domxref("CacheStorage.keys()", "caches.keys()")}}) until a

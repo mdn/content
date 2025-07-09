@@ -70,9 +70,7 @@ The parameters are:
 - `<attr-name>`
   - : The attribute name whose value should be retrieved from the selected HTML element(s).
 - `<attr-type>`
-
   - : Specifies how the attribute value is parsed into a CSS value. This can be the `raw-string` keyword, a `type()` function, or a CSS dimension unit (specified using an `<attr-unit>` identifier). When omitted, it defaults to `raw-string`.
-
     - The `raw-string` keyword causes the attribute's literal value to be treated as the value of a CSS string, with no CSS parsing performed (including CSS escapes, whitespace removal, comments, etc). The `<fallback-value>` is only used if the attribute is omitted; specifying an empty value doesn't trigger the fallback.
 
       ```css
@@ -440,7 +438,7 @@ The cards are laid out in a flex container:
   .warning {
     padding: 1em;
     border: 1px solid #ccc;
-    background: rgba(255 255 205 / 0.8);
+    background: rgb(255 255 205 / 0.8);
     text-align: center;
     order: -1;
     margin: 1em;

@@ -1,5 +1,6 @@
 ---
 title: Temporal.ZonedDateTime.prototype.nanosecond
+short-title: nanosecond
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/nanosecond
 page-type: javascript-instance-accessor-property
 status:

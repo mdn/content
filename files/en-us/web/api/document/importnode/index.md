@@ -33,11 +33,9 @@ importNode(externalNode, deep)
   - : The external {{domxref("Node")}} or {{domxref("DocumentFragment")}} to import into
     the current document.
 - `deep` {{optional_inline}}
-
   - : A boolean flag, whose default value is `false`,
     which controls whether to include the entire DOM subtree
     of the `externalNode` in the import.
-
     - If `deep` is set to `true`, then
       `externalNode` and all of its descendants are copied.
     - If `deep` is set to `false`, then only
@@ -47,7 +45,8 @@ importNode(externalNode, deep)
 
 The copied `importedNode` in the scope of the importing document.
 
-> **Note:** `importedNode`'s {{domxref("Node.parentNode")}} is `null`, since it has not yet been inserted into the document tree!
+> [!NOTE]
+> `importedNode`'s {{domxref("Node.parentNode")}} is `null`, since it has not yet been inserted into the document tree!
 
 ## Examples
 

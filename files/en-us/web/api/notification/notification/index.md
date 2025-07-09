@@ -26,9 +26,7 @@ new Notification(title, options)
 - `title`
   - : Defines a title for the notification, which is shown at the top of the notification window.
 - `options` {{optional_inline}}
-
   - : An options object containing any custom settings that you want to apply to the notification. The possible options are:
-
     - `actions` {{optional_inline}}
       - : Must be unspecified or an empty array. `actions` is only supported for persistent notifications fired from a service worker using {{domxref("ServiceWorkerRegistration.showNotification()")}}.
     - `badge` {{optional_inline}}

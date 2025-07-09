@@ -2,9 +2,8 @@
 title: Firefox 66 for developers
 slug: Mozilla/Firefox/Releases/66
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 66 that will affect developers. Firefox 66 was released on March 19, 2019.
 
@@ -29,7 +28,6 @@ This article provides information about the changes in Firefox 66 that will affe
 - [Scroll anchoring](https://drafts.csswg.org/css-scroll-anchoring/) has been implemented in Firefox Desktop (but not mobile yet), which includes the {{cssxref("overflow-anchor")}} property ([Firefox bug 1305957](https://bugzil.la/1305957)).
 - We've implemented the case-sensitive [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors) modifier, `s` ([Firefox bug 1512386](https://bugzil.la/1512386)).
 - Several [logical property](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) shorthands have landed, along with the flow-relative border radius properties:
-
   - {{cssxref("padding-block")}} and {{cssxref("padding-inline")}} ([Firefox bug 1519847](https://bugzil.la/1519847)).
   - {{cssxref("margin-block")}} and {{cssxref("margin-inline")}} ([Firefox bug 1519944](https://bugzil.la/1519944)).
   - {{cssxref("inset")}}, {{cssxref("inset-block")}}, and {{cssxref("inset-inline")}} ([Firefox bug 1520229](https://bugzil.la/1520229)).
@@ -41,7 +39,6 @@ This article provides information about the changes in Firefox 66 that will affe
 - {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} are now animatable, as per the rules set out in their specs ([Firefox bug 1348519](https://bugzil.la/1348519)).
 - We now support {{cssxref("calc", "calc()")}} with percentages for table cells and column widths ([Firefox bug 957915](https://bugzil.la/957915)).
 - The `min-content` and `max-content` keywords are now available unprefixed ([Firefox bug 1322780](https://bugzil.la/1322780)). These can be set on:
-
   - {{cssxref("width")}}
   - {{cssxref("height")}}
   - {{cssxref("flex-basis")}}
@@ -116,7 +113,6 @@ _No changes._
 - `WebDriver:NewWindow` has been added to support opening of a new browsing context, which can be one of either window or tab ([Firefox bug 1504756](https://bugzil.la/1504756)).
 - `WebDriver:SwitchToFrame` now raises a `no such element` error if the specified element isn't part of the current browsing context ([Firefox bug 1517196](https://bugzil.la/1517196)).
 - `WebDriver:ExecuteScript` and `WebDriver:ExecuteAsyncScript` no longer support the non-spec compliant `scriptTimeout` parameter. Instead, use `WebDriver:SetTimeout` or the `timeouts` capability to define this value ([Firefox bug 1510929](https://bugzil.la/1510929)).
-
   - In addition, indefinite script timeouts are now supported ([Firefox bug 1128997](https://bugzil.la/1128997)).
 
 - `WebDriver:SetWindowRect` no longer returns the window state in its response ([Firefox bug 1517587](https://bugzil.la/1517587)).

@@ -1,5 +1,6 @@
 ---
 title: Intl.Locale.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.Locale.toString

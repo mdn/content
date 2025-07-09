@@ -15,6 +15,7 @@ The **`<feImage>`** [SVG](/en-US/docs/Web/SVG) filter primitive fetches image da
 ## Attributes
 
 - {{SVGAttr("crossorigin")}}
+- {{SVGAttr("fetchpriority")}} {{experimental_inline}}
 - {{SVGAttr("preserveAspectRatio")}}
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}
 
@@ -39,7 +40,7 @@ This element implements the {{domxref("SVGFEImageElement")}} interface.
     </filter>
   </defs>
 
-  <rect x="10%" y="10%" width="80%" height="80%" style="filter:url(#image);" />
+  <rect x="10%" y="10%" width="80%" height="80%" filter="url(#image)" />
 </svg>
 ```
 
@@ -79,4 +80,5 @@ This element implements the {{domxref("SVGFEImageElement")}} interface.
 - {{SVGElement("feSpecularLighting")}}
 - {{SVGElement("feTile")}}
 - {{SVGElement("feTurbulence")}}
+- {{SVGAttr("fetchpriority")}} attribute
 - [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)

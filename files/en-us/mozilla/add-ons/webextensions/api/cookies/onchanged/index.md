@@ -41,13 +41,9 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed these arguments:
-
     - `changeInfo`
-
       - : An `object` containing details of the change that occurred. Its properties are:
-
         - `removed`
           - : A `boolean` set to `true` if a cookie was removed and `false` if not.
         - `cookie`

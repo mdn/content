@@ -57,9 +57,7 @@ mask: unset;
 ### Values
 
 - `<mask-layer>`
-
   - : One or more comma-separated mask layers, consisting of the following components:
-
     - `<mask-reference>`
       - : Sets the mask image source. See {{cssxref("mask-image")}}.
     - `<masking-mode>`
@@ -193,6 +191,9 @@ div {
 
 - {{CSSxRef("clip-path")}}
 - {{CSSxRef("filter")}}
+- [Introduction to CSS masking](/en-US/docs/Web/CSS/CSS_masking/Masking)
+- [CSS `mask` properties](/en-US/docs/Web/CSS/CSS_masking/Mask_properties)
+- [Declaring multiple masks](/en-US/docs/Web/CSS/CSS_masking/Multiple_masks)
 - [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
 - SVG {{SVGAttr("mask")}} attribute
 - [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)

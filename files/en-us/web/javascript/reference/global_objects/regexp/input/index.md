@@ -1,5 +1,6 @@
 ---
 title: RegExp.input ($_)
+short-title: input ($_)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/input
 page-type: javascript-static-accessor-property
 status:

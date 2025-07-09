@@ -1,5 +1,6 @@
 ---
 title: "Function: displayName"
+short-title: displayName
 slug: Web/JavaScript/Reference/Global_Objects/Function/displayName
 page-type: javascript-instance-data-property
 status:

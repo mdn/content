@@ -9,7 +9,7 @@ sidebar: learnsidebar
 The aim of this skill test is to assess whether you've understood our [How to structure a web form](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form) article.
 
 > [!NOTE]
-> You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+> You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 >
 > If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 

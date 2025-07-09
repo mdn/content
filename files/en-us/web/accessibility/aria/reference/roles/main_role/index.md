@@ -33,11 +33,9 @@ The {{HTMLElement('main')}} element has a role of `main`. Developers should use 
 ### Associated ARIA roles, states, and properties
 
 - [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns)
-
   - : The `aria-owns` attribute establishes relationships in the accessibility layer that aren't present in the DOM. Documents and applications can be nested in the DOM, which may lead to having more than one main element as DOM descendants. If this is the case, include `aria-owns` to identify the relationship of the main to its document or application ancestor.
 
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) or `aria-labelledby`
-
   - : Identify the accessible name with [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) if a visible header is present. Otherwise, including an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) can be helpful for orienting assistive technology users, especially in single-page applications where main content changes happen without generating a page load event.
 
 ## Example

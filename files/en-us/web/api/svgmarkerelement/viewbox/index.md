@@ -26,7 +26,7 @@ This example demonstrates how to return the value of the `width` set for the {{S
       viewBox="0 0 10 10"
       refX="5"
       refY="5"
-      viewBox="xMidYMid meet"
+      preserveAspectRatio="xMidYMid meet"
       markerWidth="6"
       markerHeight="6"
       orient="auto-start-reverse">

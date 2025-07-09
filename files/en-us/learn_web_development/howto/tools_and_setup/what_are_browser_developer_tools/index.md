@@ -19,12 +19,10 @@ The devtools live inside your browser in a subwindow that looks roughly like thi
 How do you pull it up? Three ways:
 
 - **_Keyboard:_**
-
   - **Windows:** <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd> or <kbd>F12</kbd>
   - **macOS:** <kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>I</kbd>
 
 - **_Menu bar:_**
-
   - **Firefox:** _Menu (☰) ➤ More tools ➤ Web Developer Tools_
   - **Chrome:** _More tools ➤ Developer tools_
   - **Opera**: _Developer ➤ Developer tools_

@@ -20,16 +20,13 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 > [!WARNING]
 > The `tabindex` attribute must not be used on the `<dialog>` element. See [usage notes](#usage_notes).
 
-- `closedby` {{experimental_inline}}
-
+- `closedby`
   - : Specifies the types of user actions that can be used to close the `<dialog>` element. This attribute distinguishes three methods by which a dialog might be closed:
-
     - A _light dismiss user action_, in which the `<dialog>` is closed when the user clicks or taps outside it. This is equivalent to the ["light dismiss" behavior of "auto" state popovers](/en-US/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss).
     - A _platform-specific user action_, such as pressing the <kbd>Esc</kbd> key on desktop platforms, or a "back" or "dismiss" gesture on mobile platforms.
     - A developer-specified mechanism such as a {{htmlelement("button")}} with a [`click`](/en-US/docs/Web/API/Element/click_event) handler that invokes {{domxref("HTMLDialogElement.close()")}} or a {{htmlelement("form")}} submission.
 
     Possible values are:
-
     - `any`
       - : The dialog can be dismissed using any of the three methods.
     - `closerequest`
@@ -38,12 +35,10 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
       - : The dialog can only be dismissed with a developer-specified mechanism.
 
     If the `<dialog>` element does not have a valid `closedby` value specified, then
-
     - if it was opened using {{domxref("HTMLDialogElement.showModal()", "showModal()")}}, it behaves as if the value was `"closerequest"`
     - otherwise, it behaves as if the value was `"none"`.
 
 - `open`
-
   - : Indicates that the dialog box is active and is available for interaction. If the `open` attribute is not set, the dialog box will not be visible to the user.
     It is recommended to use the `.show()` or `.showModal()` method to render dialogs, rather than the `open` attribute. If a `<dialog>` is opened using the `open` attribute, it is non-modal.
 

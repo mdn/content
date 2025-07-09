@@ -171,7 +171,6 @@ This article should have given you a useful high-level overview of accessibility
 ## See also
 
 - [WCAG](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG)
-
   - [Perceivable](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable)
   - [Operable](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable)
   - [Understandable](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable)

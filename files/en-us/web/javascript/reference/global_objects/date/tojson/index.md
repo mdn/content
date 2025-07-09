@@ -1,5 +1,6 @@
 ---
 title: Date.prototype.toJSON()
+short-title: toJSON()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toJSON
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.toJSON

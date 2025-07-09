@@ -4,9 +4,8 @@ short-title: sandbox
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/sandbox
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.sandbox
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`sandbox`** directive enables a sandbox for the requested resource similar to the {{HTMLElement("iframe")}} [`sandbox`](/en-US/docs/Web/HTML/Reference/Elements/iframe#sandbox) attribute.
 It applies restrictions to a page's actions including preventing popups, preventing the execution of plugins and scripts, and enforcing a same-origin policy.

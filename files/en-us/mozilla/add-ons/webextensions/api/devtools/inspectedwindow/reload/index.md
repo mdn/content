@@ -20,9 +20,7 @@ browser.devtools.inspectedWindow.reload(
 ### Parameters
 
 - `reloadOptions` {{optional_inline}}
-
   - : `object`. Options for the function, as follows:
-
     - `ignoreCache` {{optional_inline}}
       - : `boolean`. If true, this makes the reload ignore the browser cache (as if the user had pressed Shift+Ctrl+R).
     - `userAgent` {{optional_inline}}

@@ -2,9 +2,8 @@
 title: Firefox 137 for developers
 slug: Mozilla/Firefox/Releases/137
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 137 that affect developers.
 Firefox 137 was released on [April 1, 2025](https://whattrainisitnow.com/release/?version=137).

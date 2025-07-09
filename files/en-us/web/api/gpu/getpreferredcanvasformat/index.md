@@ -3,12 +3,10 @@ title: "GPU: getPreferredCanvasFormat() method"
 short-title: getPreferredCanvasFormat()
 slug: Web/API/GPU/getPreferredCanvasFormat
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPU.getPreferredCanvasFormat
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`getPreferredCanvasFormat()`** method of the
 {{domxref("GPU")}} interface returns the optimal canvas texture format for displaying 8-bit depth, standard dynamic range content on the current system.

@@ -1,5 +1,6 @@
 ---
 title: Uint8Array.prototype.setFromBase64()
+short-title: setFromBase64()
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array/setFromBase64
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Uint8Array.setFromBase64

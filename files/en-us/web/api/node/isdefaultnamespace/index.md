@@ -24,7 +24,8 @@ isDefaultNamespace(namespaceURI)
 
 - `namespaceURI`
   - : A string representing the namespace against which the element will be checked.
-    > **Note:** `namespaceURI` is not an optional parameter, but can be `null`.
+    > [!NOTE]
+    > `namespaceURI` is not an optional parameter, but can be `null`.
 
 ### Return value
 

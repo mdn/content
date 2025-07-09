@@ -6,9 +6,10 @@ page-type: http-header
 status:
   - non-standard
 browser-compat: http.headers.X-DNS-Prefetch-Control
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 The HTTP **`X-DNS-Prefetch-Control`** {{Glossary("response header")}} controls DNS prefetching, a feature by which browsers proactively perform domain name resolution on links that the user may choose to follow as well as URLs for items referenced by the document, including images, CSS, JavaScript, and so forth.
 
@@ -74,7 +75,7 @@ loaded over {{glossary("HTTPS")}}. On Firefox, this can be changed by setting th
 ### Turning on and off prefetching
 
 You can either send the `X-DNS-Prefetch-Control` header server-side, or from
-individual documents, using the [`http-equiv`](/en-US/docs/Web/HTML/Reference/Elements/meta#http-equiv) attribute on
+individual documents, using the [`http-equiv`](/en-US/docs/Web/HTML/Reference/Elements/meta/http-equiv) attribute on
 the {{HTMLElement("meta")}} element, like this:
 
 ```html

@@ -38,7 +38,7 @@ A string containing the namespace URI corresponding to the prefix.
 ## Example
 
 ```html
-<div style="display: none">
+<div class="hidden">
   <div>Test HTML element</div>
   <svg>
     <text>Test SVG element</text>
@@ -57,6 +57,12 @@ A string containing the namespace URI corresponding to the prefix.
   </thead>
   <tbody></tbody>
 </table>
+```
+
+```css hidden
+.hidden {
+  display: none;
+}
 ```
 
 ```js

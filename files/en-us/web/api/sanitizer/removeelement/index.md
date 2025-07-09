@@ -3,10 +3,12 @@ title: "Sanitizer: removeElement() method"
 short-title: removeElement()
 slug: Web/API/Sanitizer/removeElement
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.Sanitizer.removeElement
 ---
 
-{{APIRef("HTML Sanitizer API")}}
+{{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}
 
 The **`removeElement()`** method of the {{domxref("Sanitizer")}} interface sets an element to be disallowed — removed from input when the sanitizer is used.
 
@@ -22,16 +24,14 @@ removeElement(element)
 ### Parameters
 
 - `element`
-
   - : A string indicating the name of the element to be disallowed, or an object with the following properties:
-
     - `name`
       - : A string containing the name of the element.
     - `namespace` {{optional_inline}}
       - : A string containing the namespace of the element.
         The default namespace is `"http://www.w3.org/1999/xhtml"`.
 
-### Returns
+### Return value
 
 None (`undefined`).
 

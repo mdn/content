@@ -32,10 +32,8 @@ compressedTexImage2D(target, level, internalformat, width, height, border, srcDa
 ### Parameters
 
 - `target`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target) of the active texture.
     Possible values for `compressedTexImage2D`:
-
     - `gl.TEXTURE_2D`: A two-dimensional texture.
     - `gl.TEXTURE_CUBE_MAP_POSITIVE_X`: Positive X face for a cube-mapped
       texture.
@@ -54,28 +52,23 @@ compressedTexImage2D(target, level, internalformat, width, height, border, srcDa
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the level of detail. Level 0 is the base image
     level and level _n_ is the n-th mipmap reduction level.
 - `internalformat`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the compressed image format. Compressed image
     formats must be enabled by [WebGL extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) before
     using this method. All values are possible for `compressedTexImage2D`. Possible
     values:
-
     - When using the {{domxref("WEBGL_compressed_texture_s3tc")}} extension:
-
       - `ext.COMPRESSED_RGB_S3TC_DXT1_EXT`
       - `ext.COMPRESSED_RGBA_S3TC_DXT1_EXT`
       - `ext.COMPRESSED_RGBA_S3TC_DXT3_EXT`
       - `ext.COMPRESSED_RGBA_S3TC_DXT5_EXT`
 
     - When using the {{domxref("WEBGL_compressed_texture_s3tc_srgb")}} extension:
-
       - `ext.COMPRESSED_SRGB_S3TC_DXT1_EXT`
       - `ext.COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT`
       - `ext.COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT`
       - `ext.COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT`
 
     - When using the {{domxref("WEBGL_compressed_texture_etc")}} extension:
-
       - `ext.COMPRESSED_R11_EAC`
       - `ext.COMPRESSED_SIGNED_R11_EAC`
       - `ext.COMPRESSED_RG11_EAC`
@@ -88,18 +81,15 @@ compressedTexImage2D(target, level, internalformat, width, height, border, srcDa
       - `ext.COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2`
 
     - When using the {{domxref("WEBGL_compressed_texture_pvrtc")}} extension:
-
       - `ext.COMPRESSED_RGB_PVRTC_4BPPV1_IMG`
       - `ext.COMPRESSED_RGBA_PVRTC_4BPPV1_IMG`
       - `ext.COMPRESSED_RGB_PVRTC_2BPPV1_IMG`
       - `ext.COMPRESSED_RGBA_PVRTC_2BPPV1_IMG`
 
     - When using the {{domxref("WEBGL_compressed_texture_etc1")}} extension:
-
       - `ext.COMPRESSED_RGB_ETC1_WEBGL`
 
     - When using the {{domxref("WEBGL_compressed_texture_astc")}} extension:
-
       - `ext.COMPRESSED_RGBA_ASTC_4x4_KHR ext.COMPRESSED_SRGB8_ALPHA8_ASTC_4x4_KHR`
       - `ext.COMPRESSED_RGBA_ASTC_5x4_KHR ext.COMPRESSED_SRGB8_ALPHA8_ASTC_5x4_KHR`
       - `ext.COMPRESSED_RGBA_ASTC_5x5_KHR ext.COMPRESSED_SRGB8_ALPHA8_ASTC_5x5_KHR`
@@ -115,14 +105,12 @@ compressedTexImage2D(target, level, internalformat, width, height, border, srcDa
       - `ext.COMPRESSED_RGBA_ASTC_12x12_KHR ext.COMPRESSED_SRGB8_ALPHA8_ASTC_12x12_KHR`
 
     - When using the {{domxref("EXT_texture_compression_bptc")}} extension:
-
       - `ext.COMPRESSED_RGBA_BPTC_UNORM_EXT`
       - `ext.COMPRESSED_SRGB_ALPHA_BPTC_UNORM_EXT`
       - `ext.COMPRESSED_RGB_BPTC_SIGNED_FLOAT_EXT`
       - `ext.COMPRESSED_RGB_BPTC_UNSIGNED_FLOAT_EXT`
 
     - When using the {{domxref("EXT_texture_compression_rgtc")}} extension:
-
       - `ext.COMPRESSED_RED_RGTC1_EXT`
       - `ext.COMPRESSED_SIGNED_RED_RGTC1_EXT`
       - `ext.COMPRESSED_RED_GREEN_RGTC2_EXT`

@@ -1,5 +1,6 @@
 ---
 title: String.prototype.bold()
+short-title: bold()
 slug: Web/JavaScript/Reference/Global_Objects/String/bold
 page-type: javascript-instance-method
 status:

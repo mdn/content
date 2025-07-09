@@ -45,24 +45,20 @@ In JavaScript, `@supports` can be accessed via the CSS object model interface {{
 
 ## Syntax
 
-The `@supports` at-rule consists of a block of statements with a _supports condition._
-The supports condition is a set of one or more name-value pairs (e.g., `<property>: <value>`).
-
 ```css
 @supports (<supports-condition>) {
   /* If the condition is true, use the CSS in this block. */
 }
-```
 
-The conditions can be combined by conjunctions (`and`), disjunctions (`or`), and/or negations (`not`).
-
-```css
 @supports (<supports-condition>) and (<supports-condition>) {
   /* If both conditions are true, use the CSS in this block. */
 }
 ```
 
+The `@supports` at-rule consists of a block of statements with a _supports condition._
+The conditions can be combined by conjunctions (`and`), disjunctions (`or`), and/or negations (`not`).
 The precedence of operators can be defined with parentheses.
+
 Supports conditions can use either a `<property>: <value>` declaration syntax or a `<function()>` syntax.
 The following sections describe the use of each type of supports condition.
 
@@ -286,7 +282,9 @@ The following example applies the CSS style if the browser supports the `COLRv1`
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Spice");
 
 @supports font-tech(color-COLRv1) {
-  font-family: "Bungee Spice";
+  p {
+    font-family: "Bungee Spice", fantasy;
+  }
 }
 ```
 
@@ -309,8 +307,10 @@ The following example applies the CSS style if the browser supports the `woff2` 
 
 ```css
 @supports font-format(woff2) {
-  font-family: "Open Sans";
-  src: url("open-sans.woff2") format("woff2");
+  p {
+    font-family: "Open Sans", sans-serif;
+    src: url("open-sans.woff2") format("woff2");
+  }
 }
 ```
 

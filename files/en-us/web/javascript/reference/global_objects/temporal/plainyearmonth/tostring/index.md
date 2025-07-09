@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainYearMonth.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth/toString
 page-type: javascript-instance-method
 status:

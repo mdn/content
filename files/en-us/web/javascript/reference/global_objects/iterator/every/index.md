@@ -1,5 +1,6 @@
 ---
 title: Iterator.prototype.every()
+short-title: every()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/every
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Iterator.every

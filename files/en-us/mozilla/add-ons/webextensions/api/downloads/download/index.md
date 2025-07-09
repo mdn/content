@@ -29,13 +29,9 @@ let downloading = browser.downloads.download(
 ### Parameters
 
 - `options`
-
   - : An `object` specifying what file you wish to download, and any other preferences you wish to set concerning the download. It can contain the following properties:
-
     - `allowHttpErrors` {{optional_inline}}
-
       - : A `boolean` flag that enables downloads to continue even if they encounter HTTP errors. Using this flag, for example, enables the download of server error pages. Default value `false`. When set to:
-
         - `false`, the download is canceled when it encounters an HTTP error.
         - `true`, the download continues when an HTTP error is encountered and the HTTP server error is not reported. However, if the download fails due to file-related, network-related, user-related, or other error, that error is reported.
 
@@ -54,7 +50,6 @@ let downloading = browser.downloads.download(
     - `method` {{optional_inline}}
       - : A `string` representing the HTTP method to use if the `url` uses the HTTP\[S] protocol. This may be either "GET" or "POST".
     - `saveAs` {{optional_inline}}
-
       - : A `boolean` that specifies whether to provide a file chooser dialog to allow the user to select a filename (`true`), or not (`false`).
 
         If this option is omitted, the browser will show the file chooser or not based on the general user preference for this behavior (in Firefox this preference is labeled "Always ask you where to save files" in about:preferences, or `browser.download.useDownloadDir` in about:config).

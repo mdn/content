@@ -113,7 +113,7 @@ You will often be required to work on a team with other developers, with differe
 - Showing empathy for other team members at all times, but especially when things don't go to plan and adjustments are needed.
 - Helping each other to succeed.
 
-Even if you are not doing a real work project — you might be doing a college mock project, or working on your own hobby project — you should practice running it like a real software project, with a timeline, plan, and responsibilities. Learn about typical [software development lifecycles](https://www.geeksforgeeks.org/software-development-life-cycle-sdlc/). Pick up some basic [project planning](https://en.wikipedia.org/wiki/Project_planning) skills and tools to be able to estimate and plan your work.
+Even if you are not doing a real work project — you might be doing a college mock project, or working on your own hobby project — you should practice running it like a real software project, with a timeline, plan, and responsibilities. Learn about typical [software development lifecycles](https://www.geeksforgeeks.org/software-engineering/software-development-life-cycle-sdlc/). Pick up some basic [project planning](https://en.wikipedia.org/wiki/Project_planning) skills and tools to be able to estimate and plan your work.
 
 It is also a good idea to start doing peer reviews — colleagues will review each other's work and provide feedback on how it could be improved. Areas looked at might include general code quality and adherence to code style guides, performance, sticking to best practices, usability, and quality of documentation. You can benefit greatly, whether you are the reviewer, or the person being reviewed:
 

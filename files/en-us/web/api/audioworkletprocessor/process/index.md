@@ -45,7 +45,6 @@ process(inputs, outputs, parameters)
 ### Parameters
 
 - `inputs`
-
   - : An array of _inputs_ connected to the node, each item of which is, in turn,
     an array of _channels_. Each _channel_ is a {{jsxref("Float32Array")}}
     containing 128 samples. For example, `inputs[n][m][i]` will access
@@ -69,7 +68,6 @@ process(inputs, outputs, parameters)
     `process()` method. Each of the output channels is filled with zeros by
     default — the processor will output silence unless the output arrays are modified.
 - `parameters`
-
   - : An object containing string keys and {{jsxref("Float32Array")}} values. For each
     custom {{domxref("AudioParam")}} defined using the
     {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}}

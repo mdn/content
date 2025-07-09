@@ -2,9 +2,8 @@
 title: Firefox 112 for developers
 slug: Mozilla/Firefox/Releases/112
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 112 that affect developers. Firefox 112 was released on April 11, 2023.
 

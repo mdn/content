@@ -1,5 +1,6 @@
 ---
 title: Object.prototype.hasOwnProperty()
+short-title: hasOwnProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Object.hasOwnProperty
@@ -11,7 +12,8 @@ The **`hasOwnProperty()`** method of {{jsxref("Object")}} instances returns a bo
 object has the specified property as its own property (as opposed to inheriting
 it).
 
-> **Note:** {{jsxref("Object.hasOwn()")}} is recommended over
+> [!NOTE]
+> {{jsxref("Object.hasOwn()")}} is recommended over
 > `hasOwnProperty()`, in browsers where it is supported.
 
 {{InteractiveExample("JavaScript Demo: Object.prototype.hasOwnProperty()")}}

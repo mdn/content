@@ -16,7 +16,6 @@ This is passed into {{WebExtAPIRef("notifications.create()")}} and {{WebExtAPIRe
 Values of this type are strings. Possible values are:
 
 - `"basic"`: the notification includes:
-
   - a title (`NotificationOptions.title`)
   - a message (`NotificationOptions.message`)
   - an icon (`NotificationOptions.iconUrl`) {{optional_inline}}
@@ -24,15 +23,12 @@ Values of this type are strings. Possible values are:
   - up to two buttons (`NotificationOptions.buttons`) {{optional_inline}}
 
 - `"image"`: everything in `"basic"` and also:
-
   - an image (`NotificationOptions.imageUrl`)
 
 - `"list"`: everything in `"basic"` and also:
-
   - a list of items (`NotificationOptions.items`)
 
 - `"progress"`: everything in `"basic"` and also:
-
   - a progress indicator (`NotificationOptions.progress`)
 
 Currently Firefox only supports "basic" here.

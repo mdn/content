@@ -20,7 +20,8 @@ new Temporal.ZonedDateTime(epochNanoseconds, timeZone)
 new Temporal.ZonedDateTime(epochNanoseconds, timeZone, calendar)
 ```
 
-> **Note:** `Temporal.ZonedDateTime()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Temporal.ZonedDateTime()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

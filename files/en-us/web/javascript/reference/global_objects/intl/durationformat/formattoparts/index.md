@@ -1,5 +1,6 @@
 ---
 title: Intl.DurationFormat.prototype.formatToParts()
+short-title: formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/formatToParts
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.DurationFormat.formatToParts

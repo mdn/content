@@ -1,5 +1,6 @@
 ---
 title: RegExp.prototype.multiline
+short-title: multiline
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/multiline
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.RegExp.multiline

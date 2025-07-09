@@ -1,5 +1,6 @@
 ---
 title: RegExp.lastMatch ($&)
+short-title: lastMatch ($&)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch
 page-type: javascript-static-accessor-property
 status:

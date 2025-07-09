@@ -1,5 +1,6 @@
 ---
 title: Promise.all()
+short-title: all()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/all
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Promise.all

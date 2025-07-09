@@ -18,11 +18,9 @@ events.Event.getRules(ruleIdentifiers, callback)
 ### Parameters
 
 - `ruleIdentifiers` {{optional_inline}}
-
   - : `array` of `string`. Identifiers for the rules to return. If no array is passed, all rules are returned.
 
 - `callback`
-
   - : `function`. The parameter of the callback function is an array of {{WebExtAPIRef("events.Rule")}} objects.
 
 ## Browser compatibility

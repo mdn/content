@@ -48,7 +48,7 @@ backdrop-filter: sepia(90%);
   flex: 1;
   text-align: center;
   padding: 20px 10px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgb(255 255 255 / 0.2);
 }
 ```
 

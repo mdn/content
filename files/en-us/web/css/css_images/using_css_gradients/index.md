@@ -1,5 +1,6 @@
 ---
 title: Using CSS gradients
+short-title: Using gradients
 slug: Web/CSS/CSS_images/Using_CSS_gradients
 page-type: guide
 ---

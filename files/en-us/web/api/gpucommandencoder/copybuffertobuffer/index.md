@@ -3,12 +3,10 @@ title: "GPUCommandEncoder: copyBufferToBuffer() method"
 short-title: copyBufferToBuffer()
 slug: Web/API/GPUCommandEncoder/copyBufferToBuffer
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUCommandEncoder.copyBufferToBuffer
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}
 
 The **`copyBufferToBuffer()`** method of the
 {{domxref("GPUCommandEncoder")}} interface encodes a command that copies data from one {{domxref("GPUBuffer")}} to another.

@@ -55,7 +55,7 @@ This HTML will apply a special stylesheet for devices that have at least 256 col
 <link rel="stylesheet" href="http://foo.bar.com/base.css" />
 <link
   rel="stylesheet"
-  media="all and (min-color-index: 256)"
+  media="(color-index >= 256)"
   href="http://foo.bar.com/color-stylesheet.css" />
 ```
 

@@ -1,5 +1,6 @@
 ---
 title: Temporal.Instant.prototype.since()
+short-title: since()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Instant/since
 page-type: javascript-instance-method
 status:

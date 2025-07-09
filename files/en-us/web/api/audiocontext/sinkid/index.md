@@ -26,7 +26,7 @@ This property returns one of the following values, depending on how the sink ID 
 
 ## Examples
 
-In our [SetSinkId test example](https://set-sink-id.glitch.me/), we create an audio graph that generates a three-second burst of white noise via an {{domxref("AudioBufferSourceNode")}}, which we also run through a {{domxref("GainNode")}} to quiet things down a bit. We also provide the user with a dropdown menu to allow them to change the audio output device.
+In our [SetSinkId test example](https://mdn.github.io/dom-examples/audiocontext-setsinkid/) (check out the [source code](https://github.com/mdn/dom-examples/tree/main/audiocontext-setsinkid)), we create an audio graph that generates a three-second burst of white noise via an {{domxref("AudioBufferSourceNode")}}, which we also run through a {{domxref("GainNode")}} to quiet things down a bit. We also provide the user with a dropdown menu to allow them to change the audio output device.
 
 When the Play button is clicked, we assemble the audio graph and start it playing, and we also log information about the current device to the console based on the value of `sinkId`:
 
@@ -65,7 +65,6 @@ playBtn.addEventListener("click", () => {
 
 ## See also
 
-- [SetSinkId test example](https://set-sink-id.glitch.me/)
 - [Change the destination output device in Web Audio](https://developer.chrome.com/blog/audiocontext-setsinkid/)
 - {{domxref("AudioContext.setSinkId()")}}
 - {{domxref("AudioContext/sinkchange_event", "sinkchange")}}

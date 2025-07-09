@@ -13,7 +13,8 @@ The **`innerText`** property of the {{domxref("HTMLElement")}} interface represe
 As a getter, it approximates the text the user would get if they highlighted the contents of the element with the cursor and then copied it to the clipboard.
 As a setter this will replace the element's children with the given value, converting any line breaks into {{HTMLElement("br")}} elements.
 
-> **Note:** `innerText` is easily confused with {{domxref("Node.textContent")}}, but there are important differences between the two.
+> [!NOTE]
+> `innerText` is easily confused with {{domxref("Node.textContent")}}, but there are important differences between the two.
 > Basically, `innerText` is aware of the rendered appearance of text, while `textContent` is not.
 
 ## Value

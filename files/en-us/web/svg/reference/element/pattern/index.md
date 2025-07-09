@@ -23,7 +23,6 @@ The `<pattern>` is referenced by the {{SVGAttr("fill")}} and/or {{SVGAttr("strok
   - : This attribute reference a template pattern that provides default values for the `<pattern>` attributes.
     _Value type_: [**\<URL>**](/en-US/docs/Web/SVG/Guides/Content_type#url); _Default value_: _none_; _Animatable_: **yes**
 - {{SVGAttr("patternContentUnits")}}
-
   - : This attribute defines the coordinate system for the contents of the `<pattern>`.
     _Value type_: `userSpaceOnUse` | `objectBoundingBox`; _Default value_: `userSpaceOnUse`; _Animatable_: **yes**
 
@@ -49,7 +48,6 @@ The `<pattern>` is referenced by the {{SVGAttr("fill")}} and/or {{SVGAttr("strok
   - : This attribute determines the x coordinate shift of the pattern tile.
     _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length); _Default value_: `0`; _Animatable_: **yes**
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}
-
   - : This attribute references a template pattern that provides default values for the `<pattern>` attributes.
     _Value type_: [**\<URL>**](/en-US/docs/Web/SVG/Guides/Content_type#url); _Default value_: _none_; _Animatable_: **yes**
 
