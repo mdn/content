@@ -26,7 +26,7 @@ These are the same site because the registrable domain of `mozilla.org` is the s
 - `https://developer.mozilla.org/en-US/docs/`
 - `https://support.mozilla.org/en-US/`
 
-These are the same site because the port is not relevant:
+These are the same site despite using different ports:
 
 - `https://example.com:8080`
 - `https://example.com`
