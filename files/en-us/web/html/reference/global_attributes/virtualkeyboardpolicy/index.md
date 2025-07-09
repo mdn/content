@@ -6,9 +6,10 @@ page-type: html-attribute
 status:
   - experimental
 browser-compat: html.global_attributes.virtualkeyboardpolicy
+sidebar: htmlsidebar
 ---
 
-{{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`virtualkeyboardpolicy`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) is an enumerated attribute. When specified on an element that the element's content is editable (for example, it is an {{htmlelement("input")}} or {{htmlelement("textarea")}} element, or an element with the [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) attribute set), it controls the on-screen virtual keyboard behavior on devices such as tablets, mobile phones, or other devices where a hardware keyboard may not be available.
 
