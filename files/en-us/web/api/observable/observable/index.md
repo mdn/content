@@ -21,7 +21,6 @@ new Observable(callback)
 ### Parameters
 
 - `callback`
-
   - : A callback function that defines the [lifecycle of the observable stream](/en-US/docs/Web/API/Observable_API/Using#the_observable_lifecycle), including what values are passed through it and when, when the stream is completed, etc. The callback function has a {{domxref("Subscriber")}} object as an argument on which the lifecycle functionality is defined.
 
     For developer-created custom observables created using the `Observable()` constructor, you pass this callback in manually, whereas for platform-returned ones (created using {{domxref("EventTarget.when()")}}), the platform constructs the observable with an internal callback that runs when you subscribe the observable to the event stream using {{domxref("Observable.subscribe()")}}.
