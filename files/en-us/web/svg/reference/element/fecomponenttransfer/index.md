@@ -103,7 +103,7 @@ This element implements the {{domxref("SVGFEComponentTransferElement")}} interfa
 
 ```css
 rect {
-  fill: url(#rainbow);
+  fill: url("#rainbow");
 }
 ```
 

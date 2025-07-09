@@ -77,7 +77,7 @@ The HTML contains three paragraphs to apply our font information to:
 In the CSS, we import a color font from Google Fonts, and define two custom `font-palette` values using the {{cssxref("@font-palette-values")}} at-rule. We then apply three different `font-palette` values to the paragraphs — `--yellow`, `--blue`, and a new green palette, created using `palette-mix()` to blend the blue and yellow palettes together.
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Nabla&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Nabla&display=swap";
 
 @font-palette-values --blueNabla {
   font-family: Nabla;

@@ -17,7 +17,7 @@ The {{cssxref("mask-border-slice")}} property is used to divide the source image
 mask-border-source: none;
 
 /* <image> values */
-mask-border-source: url(image.jpg);
+mask-border-source: url("image.jpg");
 mask-border-source: linear-gradient(to top, red, yellow);
 
 /* Global values */
@@ -50,13 +50,13 @@ mask-border-source: unset;
 This property doesn't appear to be supported anywhere yet. When it eventually starts to be supported, it will serve to define the source of the border mask.
 
 ```css
-mask-border-source: url(image.jpg);
+mask-border-source: url("image.jpg");
 ```
 
 Chromium-based browsers support an outdated version of this property — `mask-box-image-source` — with a prefix:
 
 ```css
--webkit-mask-box-image-source: url(image.jpg);
+-webkit-mask-box-image-source: url("image.jpg");
 ```
 
 > [!NOTE]

@@ -96,7 +96,7 @@ Each `<div>` is provided with the same background and masking image. The only di
 ```css
 div {
   background: blue linear-gradient(red, blue);
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mdn.svg);
+  mask-image: url("https://mdn.github.io/shared-assets/images/examples/mdn.svg");
 }
 
 .alpha {

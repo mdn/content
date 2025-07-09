@@ -301,24 +301,24 @@ When importing stylesheets, the `@import` statement must be defined before any C
 You can import a stylesheet into a named layer, a nested named layer, or an anonymous layer. The following layer imports the style sheets into a `components` layer, a nested `dialog` layer within the `components` layer, and an un-named layer, respectively:
 
 ```css
-@import url("components-lib.css") layer(components);
-@import url("dialog.css") layer(components.dialog);
-@import url("marketing.css") layer();
+@import "components-lib.css" layer(components);
+@import "dialog.css" layer(components.dialog);
+@import "marketing.css" layer();
 ```
 
 You can import more than one CSS file into a single layer. The following declaration imports two separate files into a single `social` layer:
 
 ```css
-@import url(comments.css) layer(social);
-@import url(sm-icons.css) layer(social);
+@import "comments.css" layer(social);
+@import "sm-icons.css" layer(social);
 ```
 
 You can import styles and create layers based on specific conditions using [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) and [feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries). The following imports a style sheet into an `international` layer only if the browser supports `display: ruby`, and the file being imported is dependent on the width of the screen.
 
 ```css
-@import url("ruby-narrow.css") layer(international) supports(display: ruby)
+@import "ruby-narrow.css" layer(international) supports(display: ruby)
   (width < 32rem);
-@import url("ruby-wide.css") layer(international) supports(display: ruby)
+@import "ruby-wide.css" layer(international) supports(display: ruby)
   (width >= 32rem);
 ```
 
@@ -342,8 +342,8 @@ If you nest a block `@layer` at-rule inside another block `@layer` at-rule, with
 Let's look at the following example:
 
 ```css
-@import url("components-lib.css") layer(components);
-@import url("narrow-theme.css") layer(components.narrow);
+@import "components-lib.css" layer(components);
+@import "narrow-theme.css" layer(components.narrow);
 ```
 
 In the first line, we import `components-lib.css` into the `components` layer. If that file contains any layers, named or not, those layers become nested layers within the `components` layer.
@@ -353,7 +353,7 @@ The second line imports `narrow-theme.css` into the `narrow` layer, which is a s
 Let's look at another example, where we [import `layers1.css` into a named layer](#the_layer_block_at-rule_for_named_and_anonymous_layers) using the following statement:
 
 ```css
-@import url(layers1.css) layer(example);
+@import "layers1.css" layer(example);
 ```
 
 This will create a single layer named `example` containing some declarations and five nested layers - `example.layout`, `example.<anonymous(01)>`, `example.theme`, `example.utilities`, and `example.<anonymous(02)>`.
@@ -375,9 +375,9 @@ The order of layers determines their order of precedence. Therefore, the order o
 ### Precedence order of regular cascade layers
 
 ```css
-@import url(A.css) layer(firstLayer);
-@import url(B.css) layer(secondLayer);
-@import url(C.css);
+@import "A.css" layer(firstLayer);
+@import "B.css" layer(secondLayer);
+@import "C.css";
 ```
 
 The above code creates two named layers (C.css styles get appended to the implicit layer of unlayered styles). Let us assume that the three files (`A.css`, `B.css`, and `C.css`) do not contain any additional layers within them. The following list shows where styles declared inside and outside of these files will be sorted from least (1) precedence to highest (10).

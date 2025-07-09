@@ -76,7 +76,7 @@ The asterisk is optional with simple selectors. For instance, `*.warning` and `.
 In this example the selector will only match elements in the example namespace.
 
 ```css
-@namespace example url(http://www.example.com/);
+@namespace example url("http://www.example.com/");
 example|* {
   color: blue;
 }

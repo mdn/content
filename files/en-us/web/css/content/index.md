@@ -72,7 +72,7 @@ content: no-close-quote;
 
 /* <content-list>: a list of content values. 
 Several values can be used simultaneously */
-content: "prefix" url(http://www.example.com/test.png);
+content: "prefix" url("http://www.example.com/test.png");
 content: "prefix" url("/img/test.png") "suffix" / "Alt text";
 content: open-quote counter(chapter_counter);
 

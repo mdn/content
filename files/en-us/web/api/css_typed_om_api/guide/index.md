@@ -264,7 +264,7 @@ button {
   display: inline-block;
   padding: var(--unit) calc(var(--unit) * 2);
   width: calc(30% + 20px);
-  background: no-repeat 5% center url(magic-wand.png) var(--mainColor);
+  background: no-repeat 5% center url("magic-wand.png") var(--mainColor);
   border: 4px solid var(--mainColor);
   border-radius: 2px;
   font-size: calc(var(--unit) * 2);
