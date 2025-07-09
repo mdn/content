@@ -3,9 +3,8 @@ title: Iteration protocols
 slug: Web/JavaScript/Reference/Iteration_protocols
 page-type: guide
 spec-urls: https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-iteration
+sidebar: jssidebar
 ---
-
-{{jsSidebar("More")}}
 
 **Iteration protocols** aren't new built-ins or syntax, but _protocols_. These protocols can be implemented by any object by following some conventions.
 

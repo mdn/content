@@ -2,9 +2,8 @@
 title: Regular expression syntax cheat sheet
 slug: Web/JavaScript/Guide/Regular_expressions/Cheatsheet
 page-type: guide
+sidebar: jssidebar
 ---
-
-{{jsSidebar("JavaScript Guide")}}
 
 This page provides an overall cheat sheet of all the capabilities of `RegExp` syntax by aggregating the content of the articles in the `RegExp` guide. If you need more information on a specific topic, please follow the link on the corresponding heading to access the full article or head to [the guide](/en-US/docs/Web/JavaScript/Guide/Regular_expressions).
 

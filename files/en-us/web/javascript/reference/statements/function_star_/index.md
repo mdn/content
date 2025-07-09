@@ -3,9 +3,8 @@ title: function*
 slug: Web/JavaScript/Reference/Statements/function*
 page-type: javascript-statement
 browser-compat: javascript.statements.generator_function
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 The **`function*`** declaration creates a {{Glossary("binding")}} of a new generator function to a given name. A generator function can be exited and later re-entered, with its context (variable {{Glossary("binding", "bindings")}}) saved across re-entrances.
 

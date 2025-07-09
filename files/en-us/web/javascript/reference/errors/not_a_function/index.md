@@ -2,9 +2,8 @@
 title: 'TypeError: "x" is not a function'
 slug: Web/JavaScript/Reference/Errors/Not_a_function
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "is not a function" occurs when there was an attempt to call a
 value from a function, but the value is not actually a function.

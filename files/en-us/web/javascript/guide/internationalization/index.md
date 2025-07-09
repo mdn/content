@@ -2,9 +2,10 @@
 title: Internationalization
 slug: Web/JavaScript/Guide/Internationalization
 page-type: guide
+sidebar: jssidebar
 ---
 
-{{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Iterators_and_generators", "Web/JavaScript/Guide/Modules")}}
+{{PreviousNext("Web/JavaScript/Guide/Iterators_and_generators", "Web/JavaScript/Guide/Modules")}}
 
 The {{jsxref("Intl")}} object is the namespace for the ECMAScript Internationalization API, which provides a wide range of locale- and culture-sensitive data and operations.
 
