@@ -2,9 +2,8 @@
 title: Closures
 slug: Web/JavaScript/Guide/Closures
 page-type: guide
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Intermediate")}}
 
 A **closure** is the combination of a function bundled together (enclosed) with references to its surrounding state (the **lexical environment**). In other words, a closure gives a function access to its outer scope. In JavaScript, closures are created every time a function is created, at function creation time.
 
@@ -163,7 +162,7 @@ document.getElementById("size-16").onclick = size16;
 
 Languages such as Java allow you to declare methods as private, meaning that they can be called only by other methods in the same class.
 
-JavaScript, prior to [classes](/en-US/docs/Web/JavaScript/Reference/Classes), didn't have a native way of declaring [private methods](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties#private_methods), but it was possible to emulate private methods using closures. Private methods aren't just useful for restricting access to code. They also provide a powerful way of managing your global namespace.
+JavaScript, prior to [classes](/en-US/docs/Web/JavaScript/Reference/Classes), didn't have a native way of declaring [private methods](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements#private_methods), but it was possible to emulate private methods using closures. Private methods aren't just useful for restricting access to code. They also provide a powerful way of managing your global namespace.
 
 The following code illustrates how to use closures to define public functions that can access private functions and variables. Note that these closures follow the [Module Design Pattern](https://www.google.com/search?q=javascript+module+pattern).
 

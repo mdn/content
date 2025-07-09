@@ -27,9 +27,7 @@ new PasswordCredential(form)
 Either of the following:
 
 - `data`
-
   - : An object with the following properties:
-
     - `iconURL` {{optional_inline}}
       - : A string representing the URL of an icon or avatar to be associated with the credential.
     - `id`

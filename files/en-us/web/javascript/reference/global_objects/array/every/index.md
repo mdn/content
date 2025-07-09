@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.every()
+short-title: every()
 slug: Web/JavaScript/Reference/Global_Objects/Array/every
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.every

@@ -1,5 +1,6 @@
 ---
 title: Temporal.ZonedDateTime.prototype.getTimeZoneTransition()
+short-title: getTimeZoneTransition()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/getTimeZoneTransition
 page-type: javascript-instance-method
 status:

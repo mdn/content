@@ -250,7 +250,8 @@ Inside `App.vue`, update your `<h2>` as follows:
 <h2 id="list-summary" ref="listSummary" tabindex="-1">\{{listSummary}}</h2>
 ```
 
-> **Note:** [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) is a really powerful tool for handling certain accessibility problems. However, it should be used with caution. Over-using `tabindex="-1"` can cause problems for all sorts of users, so only use it exactly where you need to. You should also almost never use `tabindex` > = `0`, as it can cause problems for users since it can make the DOM flow and the tab-order mismatch, and/or add non-interactive elements to the tab order. This can be confusing to users, especially those using screen readers and other assistive technology.
+> [!NOTE]
+> [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) is a really powerful tool for handling certain accessibility problems. However, it should be used with caution. Over-using `tabindex="-1"` can cause problems for all sorts of users, so only use it exactly where you need to. You should also almost never use `tabindex` > = `0`, as it can cause problems for users since it can make the DOM flow and the tab-order mismatch, and/or add non-interactive elements to the tab order. This can be confusing to users, especially those using screen readers and other assistive technology.
 
 Now that we have a `ref` and have let browsers know that we can programmatically focus the `<h2>`, we need to set focus on it. At the end of `deleteToDo()`, use the `listSummary` ref to set focus on the `<h2>`. Since the `<h2>` is always rendered in the app, you do not need to worry about using `$nextTick()` or lifecycle methods to handle focusing it.
 

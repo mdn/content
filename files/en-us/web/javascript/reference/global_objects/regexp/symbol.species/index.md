@@ -1,5 +1,6 @@
 ---
 title: RegExp[Symbol.species]
+short-title: "[Symbol.species]"
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.species
 page-type: javascript-static-accessor-property
 browser-compat: javascript.builtins.RegExp.@@species

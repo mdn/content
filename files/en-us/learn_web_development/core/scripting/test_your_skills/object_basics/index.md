@@ -9,7 +9,7 @@ sidebar: learnsidebar
 The aim of this skill test is to assess whether you've understood our [JavaScript object basics](/en-US/docs/Learn_web_development/Core/Scripting/Object_basics) article.
 
 > [!NOTE]
-> You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+> You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 > If there is an error in your code, it will be logged into the results panel on this page or in the JavaScript console.
 >
 > If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
@@ -41,7 +41,6 @@ In our next task, we want you to have a go at creating your own object literal t
 - `formed`: A number representing the year the band formed.
 - `split`: A number representing the year the band split up, or `false` if they are still together.
 - `albums`: An array representing the albums released by the band. Each array item should be an object containing the following members:
-
   - `name`: A string representing the name of the album.
   - `released`: A number representing the year the album was released.
 

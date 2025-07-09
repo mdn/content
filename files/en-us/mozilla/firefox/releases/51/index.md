@@ -2,9 +2,8 @@
 title: Firefox 51 for developers
 slug: Mozilla/Firefox/Releases/51
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 [To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/).
 Firefox 51 was released on January 24, 2017. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -47,10 +46,8 @@ Firefox 51 was released on January 24, 2017. This article lists key changes that
 ### WebGL
 
 - [WebGL 2](/en-US/docs/Web/API/WebGL_API) is now enabled by default. See [webglsamples.org/WebGL2Samples](https://webglsamples.org/WebGL2Samples/) for a few demos.
-
   - WebGL 2 provides the {{domxref("WebGL2RenderingContext")}} interface that brings OpenGL ES 3.0 to the {{HTMLElement("canvas")}} element.
   - New features include:
-
     - [3D textures](/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D),
     - [Sampler objects](/en-US/docs/Web/API/WebGLSampler),
     - [Uniform Buffer objects](/en-US/docs/Web/API/WebGL2RenderingContext#uniform_buffer_objects),
@@ -67,7 +64,6 @@ Firefox 51 was released on January 24, 2017. This article lists key changes that
 ### IndexedDB v2
 
 - [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) version 2 implementation is now complete:
-
   - Supports for the new {{domxref("IDBObjectStore.getKey()")}} method has been added ([Firefox bug 1271506](https://bugzil.la/1271506)).
   - Supports for {{domxref("IDBCursor.continuePrimaryKey()")}} method has been added ([Firefox bug 1271505](https://bugzil.la/1271505)).
   - Binary keys are now supported ([Firefox bug 1271500](https://bugzil.la/1271500)).
@@ -144,7 +140,6 @@ Firefox 51 was released on January 24, 2017. This article lists key changes that
 ### WebExtensions
 
 - New APIs:
-
   - {{WebExtAPIRef("idle.queryState()")}} ([Firefox bug 1299846](https://bugzil.la/1299846))
   - {{WebExtAPIRef("idle.onStateChanged")}} ([Firefox bug 1299775](https://bugzil.la/1299775))
   - {{WebExtAPIRef("management.getSelf()")}} ([Firefox bug 1283116](https://bugzil.la/1283116))
@@ -162,7 +157,6 @@ Firefox 51 was released on January 24, 2017. This article lists key changes that
 
 - The [`multiprocessCompatible` property of `install.rdf`](/en-US/docs/Mozilla/Add-ons/Install_Manifests#multiprocesscompatible) must now be explicitly set to `false` to prevent multiprocess from being enabled in Firefox when the add-on is installed.
 - The Mozilla-specific Social API has been substantially changed (largely to remove APIs no longer used), as follows:
-
   - The `MozSocial` interface and the `Navigator.mozSocial` property which supports it have been removed.
   - The Social Bookmarks API has been removed.
   - The Social chat functionality has been removed.

@@ -9,7 +9,7 @@ sidebar: learnsidebar
 The aim of this skill test is to assess whether you've understood our [Handling text — strings in JavaScript](/en-US/docs/Learn_web_development/Core/Scripting/Strings) and [Useful string methods](/en-US/docs/Learn_web_development/Core/Scripting/Useful_string_methods) articles.
 
 > [!NOTE]
-> You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+> You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 >
 > If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
@@ -71,7 +71,6 @@ In the final string task, we have given you the name of a theorem, two numeric v
 
 1. Change it from a regular string literal into a template literal.
 2. Replace the four asterisks with four template literal placeholders. These should be:
-
    1. The name of the theorem.
    2. The two number values we have.
    3. The length of the hypotenuse of a right-angled triangle, given that the two other side lengths are the same as the two values we have. You'll need to look up how to calculate this from what you have. Do the calculation inside the placeholder.

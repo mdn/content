@@ -1,5 +1,6 @@
 ---
 title: String.prototype.substring()
+short-title: substring()
 slug: Web/JavaScript/Reference/Global_Objects/String/substring
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.substring

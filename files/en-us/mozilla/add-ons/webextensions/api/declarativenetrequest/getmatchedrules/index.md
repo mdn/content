@@ -20,7 +20,6 @@ let gettingMatchedRules = browser.declarativeNetRequest.getMatchedRules(
 ### Parameters
 
 - `filter` {{optional_inline}}
-
   - : An object to filter the list of matched rules.
     - `minTimeStamp` {{optional_inline}}
       - : A `number`. If specified, only matches rules after the specified timestamp.

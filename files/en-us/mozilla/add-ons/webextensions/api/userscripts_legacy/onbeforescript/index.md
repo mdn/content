@@ -34,13 +34,9 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed these arguments:
-
     - `script`
-
       - : An `object` that represents the user script that matched a web page. Its properties and methods are as follows:
-
         - `defineGlobals`
           - : A method that exports an object containing properties and methods available globally to the user script sandbox. This method must be called synchronously to guarantee that the user script has not executed.
         - `export`

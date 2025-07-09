@@ -20,7 +20,7 @@ Don't confuse the `wheel` event with the {{domxref("Element/scroll_event", "scro
 
 Therefore, do not rely on the `wheel` event's `delta*` properties to get the scrolling direction. Instead, detect value changes of {{domxref("Element.scrollLeft", "scrollLeft")}} and {{domxref("Element.scrollTop", "scrollTop")}} of the target in the `scroll` event.
 
-The `wheel` event is cancelable. If the event is canceled, no scrolling or zooming is performed. This may cause performance issues as the browser has to wait for every wheel event to be processed before actually scrolling the content. You can avoid this by setting `passive: true` when calling {{domxref("EventTarget.addEventListener", "addEventListener()")}}, which may cause the browser to generate non-cancelable `wheel` events.
+The `wheel` event is cancelable. In some browsers, only the first `wheel` event in a sequence is cancelable, and later events are non-cancelable. If the event is canceled, no scrolling or zooming is performed. This may cause performance issues as the browser has to wait for every wheel event to be processed before actually scrolling the content. You can avoid this by setting `passive: true` when calling {{domxref("EventTarget.addEventListener", "addEventListener()")}}, which may cause the browser to generate non-cancelable `wheel` events.
 
 ## Syntax
 
@@ -49,7 +49,6 @@ _This interface inherits properties from its ancestors, {{DOMxRef("MouseEvent")}
 - {{DOMxRef("WheelEvent.deltaZ")}} {{ReadOnlyInline}}
   - : Returns a `double` representing the scroll amount for the z-axis.
 - {{DOMxRef("WheelEvent.deltaMode")}} {{ReadOnlyInline}}
-
   - : Returns an `unsigned long` representing the unit of the `delta*` values' scroll amount. Permitted values are:
 
     | Constant                     | Value  | Description                                                                                                                                                  |

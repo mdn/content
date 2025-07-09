@@ -77,14 +77,18 @@ tr:nth-child(odd) td {
 }
 
 .heman {
-  font: 1.4rem molot;
+  font:
+    1.4rem molot,
+    sans-serif;
   text-shadow:
     1px 1px 1px #fff,
     2px 2px 1px #000;
 }
 
 .skeletor {
-  font: 1.7rem rapscallion;
+  font:
+    1.7rem rapscallion,
+    fantasy;
   letter-spacing: 3px;
   text-shadow:
     1px 1px 0 #fff,
@@ -101,7 +105,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 The following attributes are deprecated and should not be used. They are documented below for reference when updating existing code and for historical interest only.
 
 - `align` {{deprecated_inline}}
-
   - : Specifies on which side of the table the caption should be displayed. The possible {{Glossary("enumerated", "enumerated")}} values are `left`, `top`, `right`, or `bottom`. Use the {{cssxref("caption-side")}} and {{cssxref("text-align")}} CSS properties instead, as this attribute is deprecated.
 
 ## Usage notes

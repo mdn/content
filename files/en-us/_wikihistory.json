@@ -6168,15 +6168,6 @@
       "rachelandrew"
     ]
   },
-  "Learn_web_development/Core/CSS_layout/Test_your_skills/Multicolumn": {
-    "modified": "2020-07-16T22:27:35.746Z",
-    "contributors": [
-      "jpfkd",
-      "MelchiorIm3Tal",
-      "chrisdavidmills",
-      "rachelandrew"
-    ]
-  },
   "Learn_web_development/Core/CSS_layout/Test_your_skills/Position": {
     "modified": "2020-07-16T22:27:34.985Z",
     "contributors": [
@@ -7878,17 +7869,9 @@
     "modified": "2020-07-16T22:29:34.677Z",
     "contributors": ["jpfkd", "sakthivelsekar33", "blueblots", "rachelandrew"]
   },
-  "Learn_web_development/Core/Styling_basics/Test_your_skills/Tables": {
-    "modified": "2020-10-03T15:51:56.524Z",
-    "contributors": ["JennyDC", "blueblots", "rachelandrew"]
-  },
   "Learn_web_development/Core/Styling_basics/Test_your_skills/Values": {
     "modified": "2020-10-03T15:56:43.195Z",
     "contributors": ["JennyDC", "blueblots", "rachelandrew"]
-  },
-  "Learn_web_development/Core/Styling_basics/Test_your_skills/Writing_modes": {
-    "modified": "2020-07-16T22:29:33.477Z",
-    "contributors": ["blueblots", "rachelandrew"]
   },
   "Learn_web_development/Core/Styling_basics/Values_and_units": {
     "modified": "2020-09-27T15:04:48.072Z",
@@ -63963,10 +63946,6 @@
     "modified": "2020-12-10T13:41:35.085Z",
     "contributors": ["lolaodelola"]
   },
-  "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Deployment_and_further_reading": {
-    "modified": "2020-12-10T14:00:21.246Z",
-    "contributors": ["lolaodelola"]
-  },
   "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Setup": {
     "modified": "2020-12-10T13:03:12.960Z",
     "contributors": ["lolaodelola"]
@@ -102190,7 +102169,7 @@
       "kscarfone"
     ]
   },
-  "Web/JavaScript/Reference/Classes/Private_properties": {
+  "Web/JavaScript/Reference/Classes/Private_elements": {
     "modified": "2020-12-03T08:29:17.673Z",
     "contributors": [
       "chrisdavidmills",
@@ -122006,11 +121985,11 @@
       "sebmozilla"
     ]
   },
-  "Web/SVG/Reference/Attribute/From": {
+  "Web/SVG/Reference/Attribute/from": {
     "modified": "2020-10-15T21:13:01.508Z",
     "contributors": ["Sebastianz", "SueSmith", "Jeremie", "sebmozilla"]
   },
-  "Web/SVG/Reference/Attribute/To": {
+  "Web/SVG/Reference/Attribute/to": {
     "modified": "2019-07-04T18:01:27.376Z",
     "contributors": [
       "Sebastianz",

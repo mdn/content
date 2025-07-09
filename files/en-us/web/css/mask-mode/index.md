@@ -33,11 +33,9 @@ mask-mode: unset;
 The `mask-mode` property can take multiple comma-separated `<masking-mode>` keyword values, including:
 
 - `alpha`
-
   - : Indicates that the alpha (transparency) values of the mask image should be used.
 
 - `luminance`
-
   - : Indicates that the [luminance (brightness)](#understanding_luminance) values of the mask image should be used.
 
 - `match-source`
@@ -148,4 +146,6 @@ Because the mask source is an `<image>` and not an SVG `<mask>`, the `match-sour
 - {{cssxref("mask-image")}}
 - {{cssxref("mask")}} shorthand
 - [Introduction to CSS masking](/en-US/docs/Web/CSS/CSS_masking/Masking)
+- [CSS `mask` properties](/en-US/docs/Web/CSS/CSS_masking/Mask_properties)
+- [Declaring multiple masks](/en-US/docs/Web/CSS/CSS_masking/Multiple_masks)
 - [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module

@@ -2,9 +2,8 @@
 title: Firefox 49 for developers
 slug: Mozilla/Firefox/Releases/49
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 [To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) Firefox 49 was released on September 20, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
@@ -19,7 +18,6 @@ page-type: firefox-release-notes
 - The Inspector now supports `#RRGGBBAA` and `#RGBA` syntax for color values ([Firefox bug 1271191](https://bugzil.la/1271191)).
 - The developer tools no longer display self-closing tags (such as {{HTMLElement("br")}} and {{HTMLElement("img")}} as if they have a closing tag on HTML pages; the behavior is unchanged for XHTML pages ([Firefox bug 820926](https://bugzil.la/820926)).
 - Accessibility improvements!
-
   - The toolbox does a better job of ensuring that keyboard focus is more visible ([Firefox bug 1242851](https://bugzil.la/1242851)).
   - Accessibility labels have been added to unlabeled controls ([Firefox bug 1242715](https://bugzil.la/1242715)).
   - Added proper tree view semantics and keyboard navigation to the Inspector's markup view ([Firefox bug 1242694](https://bugzil.la/1242694)).
@@ -39,7 +37,7 @@ page-type: firefox-release-notes
 - The {{HTMLElement("iframe")}} element's [`sandbox`](/en-US/docs/Web/HTML/Reference/Elements/iframe#sandbox) attribute now supports the `'allow-popups-to-escape-sandbox'` and `'allow-modals'` values ([Firefox bug 1190641](https://bugzil.la/1190641)).
 - Support for microdata attributes and the Microdata API have been removed ([Firefox bug 909633](https://bugzil.la/909633)).
 - The [`referrerpolicy`](/en-US/docs/Web/HTML/Reference/Elements/a#referrerpolicy) attribute on the {{HTMLElement("a")}} element now supports the `'no-referrer-when-downgrade'` and `'origin-when-cross-origin'` ([Firefox bug 1178337](https://bugzil.la/1178337)).
-- The [`form`](/en-US/docs/Web/HTML/Reference/Elements/label#form) content attribute of the {{HTMLElement("label")}} element has been removed. The {{domxref("HTMLLabelElement.form")}} property still exists, but now returns the form with which the label's control is associated, if there is a control (and if that control is associated with a form) ([Firefox bug 1268852](https://bugzil.la/1268852)).
+- The `form` content attribute of the {{HTMLElement("label")}} element has been removed. The {{domxref("HTMLLabelElement.form")}} property still exists, but now returns the form with which the label's control is associated, if there is a control (and if that control is associated with a form) ([Firefox bug 1268852](https://bugzil.la/1268852)).
 
 ### CSS
 
@@ -53,13 +51,11 @@ page-type: firefox-release-notes
 - The property {{cssxref("text-align-last")}} has been unprefixed ([Firefox bug 1039541](https://bugzil.la/1039541)).
 - Added support for {{cssxref("overflow-wrap")}}, replacing `word-wrap` that is still supported as an alternative name ([Firefox bug 955857](https://bugzil.la/955857)).
 - Our experimental [CSS Grids](/en-US/docs/Web/CSS/CSS_grid_layout) implementation has been improved:
-
   - Implemented {{cssxref("&lt;percentage&gt;")}} for the `grid-gap`, `grid-row-gap`, and `grid-column-gap` properties ([Firefox bug 1266268](https://bugzil.la/1266268)).
   - Implemented grid layout support for {{cssxref("align-self")}}, {{cssxref("justify-self")}} values `baseline` and `last-baseline` (aka "baseline self-alignment") ([Firefox bug 1221525](https://bugzil.la/1221525)).
   - Implemented grid item baseline content alignment ([Firefox bug 1256429](https://bugzil.la/1256429)).
 
 - Our experimental [CSS Masks](/en-US/docs/Web/CSS/CSS_masking) implementation has been improved:
-
   - The {{cssxref("mask-origin")}} property now uses `border-box` instead of `padding-box` as initial value, to match the spec ([Firefox bug 1258286](https://bugzil.la/1258286)).
   - The {{cssxref("mask-repeat")}} property now supports the `space` and `round` values ([Firefox bug 1258626](https://bugzil.la/1258626)).
   - Fixed an issue preventing the {{cssxref("mask-position")}} attribute from being animated ([Firefox bug 1273804](https://bugzil.la/1273804)).
@@ -191,7 +187,6 @@ This marks the next step in the journey toward a plugin-free future. HTML is ver
 In order to improve compatibility with existing content, Firefox now accepts some WebKit prefixed properties and attributes.
 
 - The following properties now also work prefixed with `-webkit`:
-
   - `-webkit-align-items`
   - `-webkit-align-content`
   - `-webkit-align-self`
@@ -239,7 +234,6 @@ In order to improve compatibility with existing content, Firefox now accepts som
   - `-webkit-user-select`
 
 - The following properties map to the equivalent prefixed property:
-
   - `-webkit-box-flex`
   - `-webkit-box-ordinal-group`
   - `-webkit-box-orient`
@@ -247,19 +241,16 @@ In order to improve compatibility with existing content, Firefox now accepts som
   - `-webkit-box-pack`
 
 - For {{cssxref("&lt;image&gt;")}} values:
-
   - The following functions map to their unprefixed equivalents: `-webkit-linear-gradient()`, `-webkit-radial-gradient()`, `-webkit-repeating-linear-gradient()`, and `-webkit-repeating-radial-gradient()`.
   - The outdated `-webkit-gradient` is supported (and translated to a regular gradient)
 
 - The following {{cssxref("display")}} values are translated:
-
   - `-webkit-box` to `-moz-box`
   - `-webkit-flex` to `flex`
   - `-webkit-inline-box` to `inline-flex`
   - `-webkit-inline-flex` to `-moz-inline-flex`
 
 - The following properties are supported (and don't map to any unprefixed equivalent):
-
   - {{cssxref("-webkit-text-fill-color")}}
   - {{cssxref("-webkit-text-stroke-color")}}
   - {{cssxref("-webkit-text-stroke-width")}}
@@ -267,10 +258,9 @@ In order to improve compatibility with existing content, Firefox now accepts som
 
 - The `WebKitCSSMatrix` interface is an alias of {{domxref("DOMMatrix")}}
 - The following media query features have been implemented:
-
-  - `-webkit-min-device-pixel-ratio` as an alias of [`min-resolution`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#resolution) with the same value (in `dppx)`, though this feature is [disabled by default](https://bugzil.la/1237720) (behind about:config pref `layout.css.prefixes.device-pixel-ratio-webkit`)
-  - `-webkit-max-device-pixel-ratio` as an alias of [`max-resolution`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#resolution) of the same value (in `dppx`); this feature is also disabled by default, behind the same about:config pref.
-  - [`-webkit-transform-3d`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#-webkit-transform-3d) always matching, indicating 3d transform support.
+  - `-webkit-min-device-pixel-ratio` as an alias of [`min-resolution`](/en-US/docs/Web/CSS/@media/resolution) with the same value (in `dppx)`, though this feature is [disabled by default](https://bugzil.la/1237720) (behind about:config pref `layout.css.prefixes.device-pixel-ratio-webkit`)
+  - `-webkit-max-device-pixel-ratio` as an alias of [`max-resolution`](/en-US/docs/Web/CSS/@media/resolution) of the same value (in `dppx`); this feature is also disabled by default, behind the same about:config pref.
+  - [`-webkit-transform-3d`](/en-US/docs/Web/CSS/@media/-webkit-transform-3d) always matching, indicating 3d transform support.
 
 ## Changes for add-on and Mozilla developers
 

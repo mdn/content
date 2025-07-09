@@ -72,10 +72,7 @@ This gives us the following result:
 
 I'm creating a link to [the Mozilla homepage](https://www.mozilla.org/en-US/).
 
-> [!CALLOUT]
->
-> **Try it out**
->
+> [!NOTE]
 > Scrimba's [Anchor tags](https://scrimba.com/learn-html-and-css-c0p/~0a?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> scrim provides an interactive demonstration of how to create links using HTML, plus a challenge to get you creating your own links.
 
 ### Block level links
@@ -159,7 +156,7 @@ If you make a mistake, you can clear your work using the _Reset_ button in the M
 <p>
   Squirrels are commonly thought of as tree-dwelling mammals, but the squirrel
   family extends far beyond that to include ground-dwelling rodents such as
-  chipmunks and prarie dogs, and flying squrrels.
+  chipmunks and prairie dogs, and flying squirrels.
 </p>
 
 <p>Two of the most common and best-known squirrel species are the:</p>
@@ -180,38 +177,41 @@ If you make a mistake, you can clear your work using the _Reset_ button in the M
 <details>
 <summary>Click here to show the solution</summary>
 
-<!-- cSpell:disable -->
-
 Your finished HTML should look like this:
 
-```html-nolint
+```html
 <h1>Squirrels</h1>
 
 <p>
   Squirrels are commonly thought of as tree-dwelling mammals, but the squirrel
   family extends far beyond that to include ground-dwelling rodents such as
-  chipmunks and prarie dogs, and flying squrrels.
+  chipmunks and prairie dogs, and flying squirrels.
 </p>
 
 <p>Two of the most common and best-known squirrel species are the:</p>
 
 <ul>
-  <li><a href="https://en.wikipedia.org/wiki/Red_squirrel"
-         title="Sciurus vulgaris">
-    Red squirrel
-  </a></li>
-  <li><a href="https://en.wikipedia.org/wiki/Eastern_gray_squirrel"
-         title="Sciurus carolinensis">
-    Eastern gray squirrel
-  </a></li>
+  <li>
+    <a
+      href="https://en.wikipedia.org/wiki/Red_squirrel"
+      title="Sciurus vulgaris">
+      Red squirrel
+    </a>
+  </li>
+  <li>
+    <a
+      href="https://en.wikipedia.org/wiki/Eastern_gray_squirrel"
+      title="Sciurus carolinensis">
+      Eastern gray squirrel
+    </a>
+  </li>
 </ul>
 
-<p>For a good starting point on squirrel information, see the
-  <a href="https://en.wikipedia.org/wiki/Squirrel">Wikipedia Squirrel
-  page</a>.</p>
+<p>
+  For a good starting point on squirrel information, see the
+  <a href="https://en.wikipedia.org/wiki/Squirrel">Wikipedia Squirrel page</a>.
+</p>
 ```
-
-<!-- cSpell:enable -->
 
 </details>
 

@@ -1,5 +1,6 @@
 ---
 title: TypedArray.prototype.length
+short-title: length
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/length
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.TypedArray.length

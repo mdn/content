@@ -1,5 +1,6 @@
 ---
 title: WeakMap.prototype.set()
+short-title: set()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/set
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.WeakMap.set

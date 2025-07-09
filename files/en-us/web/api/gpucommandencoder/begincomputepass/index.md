@@ -3,12 +3,10 @@ title: "GPUCommandEncoder: beginComputePass() method"
 short-title: beginComputePass()
 slug: Web/API/GPUCommandEncoder/beginComputePass
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUCommandEncoder.beginComputePass
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`beginComputePass()`** method of the
 {{domxref("GPUCommandEncoder")}} interface starts encoding a compute pass, returning a {{domxref("GPUComputePassEncoder")}} that can be used to control computation.
@@ -23,15 +21,11 @@ beginComputePass(descriptor)
 ### Parameters
 
 - `descriptor` {{optional_inline}}
-
   - : An object containing the following properties:
-
     - `label` {{optional_inline}}
       - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
     - `timestampWrites` {{optional_inline}}
-
       - : An array of objects defining where and when timestamp query values will be written for this pass. These objects have the following properties:
-
         - `querySet`
           - : A {{domxref("GPUQuerySet")}} of type `"timestamp"` that the timestamp query results will be written to.
         - `beginningOfPassWriteIndex`

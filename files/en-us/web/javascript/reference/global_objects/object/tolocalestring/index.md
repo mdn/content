@@ -1,5 +1,6 @@
 ---
 title: Object.prototype.toLocaleString()
+short-title: toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Object.toLocaleString

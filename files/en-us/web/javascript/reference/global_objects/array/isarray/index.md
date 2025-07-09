@@ -1,5 +1,6 @@
 ---
 title: Array.isArray()
+short-title: isArray()
 slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Array.isArray
@@ -42,7 +43,7 @@ Array.isArray(value)
 
 ## Description
 
-`Array.isArray()` checks if the passed value is an {{jsxref("Array")}}. It performs a _branded check_, similar to the [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) operator, for a private property initialized by the {{jsxref("Array/Array", "Array()")}} constructor.
+`Array.isArray()` checks if the passed value is an {{jsxref("Array")}}. It performs a _branded check_, similar to the [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) operator, for a private field initialized by the {{jsxref("Array/Array", "Array()")}} constructor.
 
 It is a more robust alternative to [`instanceof Array`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) because it avoids false positives and false negatives:
 

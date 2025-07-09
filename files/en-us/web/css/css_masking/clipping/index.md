@@ -36,7 +36,7 @@ With the `clip-path` property, you can make complex shapes by clipping an elemen
 
 ### Values of the `clip-path` property
 
-To visually clip an element, the `clip-path` property is set to either a {{cssxref("geometry-box")}}, a {{cssxref("url_value", "url")}} to a {{svgElement("clipPath")}} clip source, or a {{cssxref("basic-shape")}} created with [shape function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#shape_functions).
+To visually clip an element, the `clip-path` property is set to either a [`<geometry-box>`](/en-US/docs/Web/CSS/clip-path#geometry-box), a {{cssxref("url_value", "url")}} to a {{svgElement("clipPath")}} clip source, or a {{cssxref("basic-shape")}} created with [shape function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#shape_functions).
 
 ### Geometry boxes
 
@@ -546,5 +546,7 @@ In addition to applying the same shape for both the `clip-shape` and `shape-outs
 - {{cssxref("shape-margin")}}
 - [Overview of shapes](/en-US/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
 - [Introduction to CSS masking](/en-US/docs/Web/CSS/CSS_masking/Masking)
+- [CSS `mask` properties](/en-US/docs/Web/CSS/CSS_masking/Mask_properties)
+- [Declaring multiple masks](/en-US/docs/Web/CSS/CSS_masking/Multiple_masks)
 - [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
 - [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) module

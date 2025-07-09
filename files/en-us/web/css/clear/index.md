@@ -52,14 +52,14 @@ clear: both;
 
 .floated-left {
   border: solid 10px #ffc129;
-  background-color: rgba(81, 81, 81, 0.6);
+  background-color: rgb(81 81 81 / 0.6);
   padding: 1em;
   float: left;
 }
 
 .floated-right {
   border: solid 10px #ffc129;
-  background-color: rgba(81, 81, 81, 0.6);
+  background-color: rgb(81 81 81 / 0.6);
   padding: 1em;
   float: right;
   height: 150px;

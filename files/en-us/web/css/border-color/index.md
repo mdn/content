@@ -20,11 +20,11 @@ border-color: red #32a1ce;
 ```
 
 ```css interactive-example-choice
-border-color: red rgba(170, 50, 220, 0.6) green;
+border-color: red rgb(170 50 220 / 0.6) green;
 ```
 
 ```css interactive-example-choice
-border-color: red yellow green hsla(60, 90%, 50%, 0.8);
+border-color: red yellow green hsl(60 90% 50% / 0.8);
 ```
 
 ```css interactive-example-choice

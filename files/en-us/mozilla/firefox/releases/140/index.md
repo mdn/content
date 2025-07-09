@@ -1,20 +1,18 @@
 ---
 title: Firefox 140 for developers
-short-title: Firefox 140 (Beta)
+short-title: Firefox 140 (Stable)
 slug: Mozilla/Firefox/Releases/140
 page-type: firefox-release-notes-active
-sidebar: firefoxsidebar
+sidebar: firefox
 ---
 
-This article provides information about the changes in Firefox 140 that affect developers. Firefox 140 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [June 24, 2025](https://whattrainisitnow.com/release/?version=140).
+This article provides information about the changes in Firefox 140 that affect developers. Firefox 140 was released on [June 24, 2025](https://whattrainisitnow.com/release/?version=140).
 
 ## Changes for web developers
 
-### Developer Tools
-
 ### HTML
 
-#### Removals
+No notable changes.
 
 ### CSS
 
@@ -24,21 +22,15 @@ This article provides information about the changes in Firefox 140 that affect d
 
 #### Removals
 
+- The UA styles for `<h1>` elements nested within [sectioning elements](/en-US/docs/Web/HTML/Guides/Content_categories#sectioning_content) have been removed, following the [removal of the outline algorithm](https://github.com/whatwg/html/pull/7829) from the HTML specification. Previously, the `<h1>` headings nested within `<article>`, `<aside>`, `<nav>`, and `<section>` would appear smaller. Now, `<h1>` elements have a consistent font size, regardless of the nesting. ([Firefox bug 1964922](https://bugzil.la/1964922)).
+
 ### JavaScript
 
-#### Removals
+No notable changes.
 
 ### SVG
 
-#### Removals
-
-### HTTP
-
-#### Removals
-
-### Security
-
-#### Removals
+- The SVG {{SVGAttr("fetchpriority")}} attribute is now supported for the SVG {{SVGElement("feimage")}}, {{SVGElement("image")}}, and {{SVGElement("script")}} elements. It allows you to hint to the browser about the relative priority of an external resource. This works the same way as the `fetchpriority` attribute for the HTML {{HTMLElement("img", "", "#fetchpriority")}} and {{HTMLElement("script", "", "#fetchpriority")}} elements. ([Firefox bug 1847712](https://bugzil.la/1847712)).
 
 ### APIs
 
@@ -60,35 +52,32 @@ This article provides information about the changes in Firefox 140 that affect d
   Because listening to this event may impact performance, you should avoid using it for other use cases.
   ([Firefox bug 1550462](https://bugzil.la/1550462)).
 
-#### Media, WebRTC, and Web Audio
-
 #### Removals
 
 - The {{domxref("MutationEvent")}} interface and its associated events (`DOMSubtreeModified`, `DOMNodeInserted`, `DOMNodeRemoved`, `DOMCharacterDataModified`, `DOMAttrModified`) have been removed. ([Firefox bug 1963043](https://bugzil.la/1963043)).
-
-### WebAssembly
-
-#### Removals
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
 #### General
 
+- Improved the Actions implementation in both Marionette and WebDriver BiDi to prevent microtasks from being blocked while individual events are dispatched. ([Firefox bug 1965183](https://bugzil.la/1965183))
+- Fixed a bug where WebDriver Classic and BiDi commands - particularly Action commands - could time out while waiting for a RequestAnimationFrame. ([Firefox bug 1947402](https://bugzil.la/1947402))
+
 #### WebDriver BiDi
 
-#### Marionette
+- Added support for `acceptInsecureCerts` argument to `browser.createUserContext` command. This argument allows clients to disable or enable certificate related security settings for a specific user context (aka Firefox container) and override the settings specified for a session. ([Firefox bug 1959372](https://bugzil.la/1959372))
+- Implemented a new `browsingContext` event, `browsingContext.navigationCommitted`, which should be emitted as soon as a new document has been created for a navigation. ([Firefox bug 1945184](https://bugzil.la/1945184))
+- Fixed a bug for various `browsingContext` events which were unexpectedly emitted for webextension Browsing Contexts. ([Firefox bug 1903272](https://bugzil.la/1903272))
+- Updated the `webExtension.uninstall` command to throw a `NoSuchWebExtensionError` when an empty string is provided as the extension ID. ([Firefox bug 1956945](https://bugzil.la/1956945))
+- Updated `browsingContext.contextCreated` and `browsingContext.contextDestroyed` events to return the `clientWindow` property in all the remaining cases (including Firefox for Android). This property corresponds to the ID of the window owning the Browsing Context. ([Firefox bug 1953743](https://bugzil.la/1953743))
 
 ## Changes for add-on developers
 
 - Support added for `unspecified` in {{WebExtAPIRef("cookies.SameSiteStatus")}}. In addition, `unspecified` is now the default value for `sameSite` in {{WebExtAPIRef("cookies.set()")}}. ([Firefox bug 1550032](https://bugzil.la/1550032))
 
-### Removals
-
-### Other
-
 ## Experimental web features
 
-These features are shipping in Firefox 140 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+These features shipped in Firefox 140 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 
 - **`Notification.maxActions`** (Nightly): `dom.webnotifications.actions.enabled`
 

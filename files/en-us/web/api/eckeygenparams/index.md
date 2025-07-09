@@ -14,9 +14,7 @@ The **`EcKeyGenParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/API/
 - `name`
   - : A string. This should be set to `ECDSA` or `ECDH`, depending on the algorithm you want to use.
 - `namedCurve`
-
   - : A string representing the name of the elliptic curve to use. This may be any of the following names for [NIST](https://www.nist.gov/)-approved curves:
-
     - `P-256`
     - `P-384`
     - `P-521`

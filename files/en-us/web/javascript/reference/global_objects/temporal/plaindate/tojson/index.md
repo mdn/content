@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainDate.prototype.toJSON()
+short-title: toJSON()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/toJSON
 page-type: javascript-instance-method
 status:

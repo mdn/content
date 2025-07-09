@@ -19,7 +19,6 @@ After registering a web app as a protocol handler, when a user clicks on a hyper
 Protocol handlers objects may contain the following values:
 
 - `protocol` {{experimental_inline}}
-
   - : A required string containing the protocol to be handled; e.g.: `mailto`, `ms-word`, `web+jngl`.
 
 - `url` {{experimental_inline}}

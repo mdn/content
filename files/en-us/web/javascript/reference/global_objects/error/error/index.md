@@ -1,5 +1,6 @@
 ---
 title: Error() constructor
+short-title: Error()
 slug: Web/JavaScript/Reference/Global_Objects/Error/Error
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Error.Error
@@ -25,7 +26,8 @@ Error(message, fileName)
 Error(message, fileName, lineNumber)
 ```
 
-> **Note:** `Error()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `Error` instance.
+> [!NOTE]
+> `Error()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `Error` instance.
 
 ### Parameters
 

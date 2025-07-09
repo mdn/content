@@ -1,5 +1,6 @@
 ---
 title: Temporal.PlainMonthDay.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainMonthDay/toString
 page-type: javascript-instance-method
 status:

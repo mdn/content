@@ -4,9 +4,8 @@ short-title: Access-Control-Request-Method
 slug: Web/HTTP/Reference/Headers/Access-Control-Request-Method
 page-type: http-header
 browser-compat: http.headers.Access-Control-Request-Method
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Access-Control-Request-Method`** {{Glossary("request header")}} is used by browsers when issuing a {{glossary("preflight request")}} to let the server know which [HTTP method](/en-US/docs/Web/HTTP/Reference/Methods) will be used when the actual request is made.
 This header is necessary because the preflight request is always an {{HTTPMethod("OPTIONS")}} and doesn't use the same method as the actual request.

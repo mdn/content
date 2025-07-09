@@ -50,7 +50,6 @@ The returned object is the same {{DOMxRef("CSSStyleDeclaration")}} type as the o
 ### Exceptions
 
 - {{JSxRef("TypeError")}}
-
   - : If the passed object is not an {{DOMxRef("Element")}} or the
     `pseudoElt` is not a valid pseudo-element selector or is
     {{CSSxRef("::part", "::part()")}} or {{CSSxRef("::slotted", "::slotted()")}}.
@@ -109,20 +108,20 @@ para.textContent =
 `getComputedStyle` can pull style info from [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), such as `::after`, `::before`, `::marker`, or `::line-marker`.
 
 ```html
-<style>
-  h3::after {
-    content: " rocks!";
-  }
-</style>
-
 <h3>Generated content</h3>
+```
 
-<script>
-  const h3 = document.querySelector("h3");
-  const result = getComputedStyle(h3, ":after").content;
+```css
+h3::after {
+  content: " rocks!";
+}
+```
 
-  console.log("the generated content is: ", result); // returns ' rocks!'
-</script>
+```js
+const h3 = document.querySelector("h3");
+const result = getComputedStyle(h3, "::after").content;
+
+console.log("the generated content is: ", result); // returns ' rocks!'
 ```
 
 ## Specifications

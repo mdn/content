@@ -1,5 +1,6 @@
 ---
 title: Temporal.ZonedDateTime.prototype.toJSON()
+short-title: toJSON()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/toJSON
 page-type: javascript-instance-method
 status:

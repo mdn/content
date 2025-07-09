@@ -278,7 +278,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/meta#content">content</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/content">content</a></code>
       </td>
       <td>{{ HTMLElement("meta") }}</td>
       <td>
@@ -670,7 +670,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/meta#http-equiv">http-equiv</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/meta/http-equiv">http-equiv</a></code>
       </td>
       <td>{{ HTMLElement("meta") }}</td>
       <td>Defines a pragma directive.</td>

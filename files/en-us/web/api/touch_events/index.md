@@ -43,19 +43,24 @@ This example tracks multiple touchpoints at a time, allowing the user to draw in
 ### Create a canvas
 
 ```html
-<canvas id="canvas" width="600" height="600" style="border:solid black 1px;">
+<canvas id="canvas" width="600" height="600">
   Your browser does not support canvas element.
 </canvas>
 <br />
 Log:
-<pre id="log" style="border: 1px solid #ccc;"></pre>
+<pre id="log"></pre>
 ```
 
 ```css
+#canvas {
+  border: 1px solid black;
+}
+
 #log {
   height: 200px;
   width: 600px;
   overflow: scroll;
+  border: 1px solid #ccc;
 }
 ```
 

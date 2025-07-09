@@ -1,5 +1,6 @@
 ---
 title: String.prototype.sup()
+short-title: sup()
 slug: Web/JavaScript/Reference/Global_Objects/String/sup
 page-type: javascript-instance-method
 status:

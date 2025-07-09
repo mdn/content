@@ -1,5 +1,6 @@
 ---
 title: RegExp.escape()
+short-title: escape()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/escape
 page-type: javascript-static-method
 browser-compat: javascript.builtins.RegExp.escape

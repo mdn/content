@@ -7,7 +7,7 @@ sidebar: learnsidebar
 
 {{NextMenu("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics")}}
 
-**{{Glossary("CSS")}}** (Cascading Style Sheets) allows you to create great-looking web pages, but how does it work under the hood? This article explains what CSS, what the basic syntax looks like, and how your browser applies CSS to HTML to style it.
+**{{Glossary("CSS")}}** (Cascading Style Sheets) allows you to create great-looking web pages, but how does it work under the hood? This article explains what CSS is, what the basic syntax looks like, and how your browser applies CSS to HTML to style it.
 
 <table>
   <tbody>
@@ -150,17 +150,18 @@ When the CSS is applied to the HTML, the rendered output is as follows:
 
 {{EmbedLiveSample('How is CSS applied to HTML?', '100%', 200)}}
 
-> [!CALLOUT]
->
-> **Try it out**
->
-> Try playing with the above example. To do so, press the "Play" button in the top-right corner to load it in our MDN Playground editor. Try the following:
->
-> 1. Add another paragraph of text below the two existing ones, and note how the second CSS rule is automatically applied to the new paragraph.
-> 2. Add an `<h2>` subheading somewhere below the `<h1>`, maybe after one of the paragraphs. Try giving it a different color by adding a new rule to the CSS. Make a copy of the `h1` rule, change the selector to `h2`, and change the `color` value from `red` to `purple`, for example.
-> 3. If you are feeling adventurous, try looking up some new CSS properties and values in the MDN [CSS reference](/en-US/docs/Web/CSS/Reference) to add to your rules!
->
-> For some additional practice with CSS basics, see [Write your first lines of CSS!](https://scrimba.com/learn-html-and-css-c0p/~0j?via=mdn) from Scrimba <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>. This scrim gives a useful rundown of basic CSS syntax, and provides an interactive challenge where you can get some more practice with writing CSS declarations.
+## Play with some CSS
+
+Try playing with the above example. To do so, press the "Play" button in the top-right corner to load it in our MDN Playground editor.
+
+Do the following:
+
+1. Add another paragraph of text below the two existing ones, and note how the second CSS rule is automatically applied to the new paragraph.
+2. Add an `<h2>` subheading somewhere below the `<h1>`, maybe after one of the paragraphs.
+3. Try giving the `<h2>` elements a different color by adding a new rule to the CSS. Make a copy of the `h1` rule, change the selector to `h2`, and change the `color` value from `red` to `purple`, for example.
+4. If you are feeling adventurous, try looking up some new CSS properties and values in the MDN [CSS reference](/en-US/docs/Web/CSS/Reference) to add to your rules!
+
+For some additional practice with CSS basics, see [Write your first lines of CSS!](https://scrimba.com/learn-html-and-css-c0p/~0j?via=mdn) from Scrimba <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>. This scrim gives a useful rundown of basic CSS syntax, and provides an interactive challenge where you can get some more practice with writing CSS declarations.
 
 ## Summary
 

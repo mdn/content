@@ -116,9 +116,7 @@ The `margin` property may be specified using one, two, three, or four values. Ea
 ### Values
 
 - {{cssxref("length")}}
-
   - : The size of the margin as a fixed value.
-
     - For _anchor-positioned elements_, the {{cssxref("anchor-size()")}} function resolves to a {{cssxref("&lt;length&gt;")}} value relative to the associated _anchor element_'s width or height (see [Setting element margin based on anchor size](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#setting_element_margin_based_on_anchor_size)).
 
 - {{cssxref("percentage")}}
