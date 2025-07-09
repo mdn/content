@@ -159,7 +159,7 @@ In this demo, we'll get the message box to appear when the user clicks the butto
    const btn = document.querySelector("button");
    ```
 
-3. Add the following line below the previous one:
+3. Create an event listener for button clicks that calls our function. Add the following line after the `const btn =` one:
 
    ```js
    btn.addEventListener("click", displayMessage);
