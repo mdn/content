@@ -6,13 +6,13 @@ page-type: mdn-writing-guide
 sidebar: mdnsidebar
 ---
 
-The following guidelines cover writing JavaScript example code for MDN Web Docs. This article is a list of rules for writing concise examples that will be understandable by as many people as possible.
+The following guidelines cover how to write JavaScript code examples on MDN. This article is a list of rules for writing concise examples that will be understandable by as many people as possible.
 
 ## General guidelines for JavaScript code examples
 
 This section explains the general guidelines to keep in mind while writing JavaScript code examples. The later sections will cover more specific details.
 
-### Choosing a format
+### Choose a consistent code format
 
 Opinions on correct indentation, whitespace, and line lengths have always been controversial. Discussions on these topics are a distraction from creating and maintaining content.
 
@@ -20,13 +20,13 @@ On MDN Web Docs, we use [Prettier](https://prettier.io/) as a code formatter to 
 
 Prettier formats all the code and keeps the style consistent. Nevertheless, there are a few additional rules that you need to follow.
 
-### Using modern JavaScript features
+### Use modern JavaScript features when supported
 
 You can use new features once every major browser — Chrome, Edge, Firefox, and Safari — supports them.
 
 ## Arrays
 
-### Array creation
+### Create arrays using literals
 
 For creating arrays, use literals and not constructors.
 
@@ -42,7 +42,7 @@ Don't do this while creating arrays:
 const visitedCities = new Array(length);
 ```
 
-### Item addition
+### Add items to arrays using `push()`
 
 When adding items to an array, use [`push()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) and not direct assignment. Consider the following array:
 
@@ -71,7 +71,7 @@ Writing asynchronous code improves performance and should be used when possible.
 
 When both techniques are possible, we prefer using the simpler `async`/`await` syntax. Unfortunately, you can't use `await` at the top level unless you are in an ECMAScript module. CommonJS modules used by Node.js are not ES modules. If your example is intended to be used everywhere, avoid top-level `await`.
 
-## Comments
+## Inlcude comments when appropriate
 
 Comments are critical to writing good code examples. They clarify the intent of the code and help developers understand it. Pay special attention to them.
 
@@ -136,7 +136,7 @@ In general, use single-line comments to comment code. Writers must mark each lin
   }
   ```
 
-### Output of logs
+### Log output effectively
 
 - In code intended to run in a production environment, you rarely need to comment when you log some data. In code examples, we often use `console.log()`, `console.error()`, or similar functions to output important values. To help the reader understand what will happen without running the code, you can put a comment _after_ the function with the log that will be produced. Write:
 
@@ -164,7 +164,7 @@ In general, use single-line comments to comment code. Writers must mark each lin
   }
   ```
 
-### Multi-line comments
+### Use multi-line comments sparingly
 
 Short comments are usually better, so try to keep them in one line of 60–80 characters. If this is not possible, use `//` at the beginning of each line:
 
@@ -223,7 +223,7 @@ array.forEach((value /* , index, array */) => {
 
 ## Functions
 
-### Function names
+### Use descriptive function names
 
 For function names, use {{Glossary("camel_case", "camel case")}}, starting with a lowercase character. Use concise, human-readable, and semantic names where appropriate.
 
@@ -247,7 +247,7 @@ function doIt() {
 }
 ```
 
-### Function declarations
+### Use function declarations to define functions
 
 - Where possible, use the function declaration over function expressions to define functions.
 
@@ -317,7 +317,7 @@ function doIt() {
 
 ## Loops and conditional statements
 
-### Loop initialization
+### Initialize loops properly
 
 When [loops](/en-US/docs/Learn_web_development/Core/Scripting/Loops) are required, choose the appropriate one from [`for(;;)`](/en-US/docs/Web/JavaScript/Reference/Statements/for), [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of), [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while), etc.
 
@@ -396,7 +396,7 @@ When [loops](/en-US/docs/Learn_web_development/Core/Scripting/Loops) are require
 > [!NOTE]
 > Consider not using a `for` loop at all. If you are using an [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) (or a [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) for some operations), consider using more semantic iteration methods instead, like [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [`every()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every), [`findIndex()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex), [`find()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find), [`includes()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes), and many more.
 
-### Control statements
+### Avoid using `else` when `if` ends with `return`
 
 There is one notable case to keep in mind for the `if...else` control statements. If the `if` statement ends with a `return`, do not add an `else` statement.
 
@@ -444,7 +444,7 @@ for (const car of storedCars) car.paint("red");
 
 This prevent forgetting to add the braces when adding more statements.
 
-### Switch statements
+### Use `switch` statements appropriately
 
 Switch statements can be a little tricky.
 
@@ -495,7 +495,7 @@ Switch statements can be a little tricky.
   }
   ```
 
-### Error handling
+### Handle errors effectively
 
 - If certain states of your program throw uncaught errors, they will halt execution and potentially reduce the usefulness of the example. You should, therefore, catch errors using a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block, as shown below:
 
@@ -522,7 +522,7 @@ Switch statements can be a little tricky.
 
 ## Objects
 
-### Object names
+### Use descriptive object names
 
 - When defining a class, use _PascalCase_ (starting with a capital letter) for the class name and _camelCase_ (starting with a lowercase letter) for the object property and method names.
 
@@ -538,7 +538,7 @@ Switch statements can be a little tricky.
   };
   ```
 
-### Object creation
+### Create objects using literals
 
 For creating general objects (i.e., when classes are not involved), use literals and not constructors.
 
@@ -554,7 +554,7 @@ Don't create a general object like this:
 const object = new Object();
 ```
 
-### Object classes
+### Use ES class syntax to define object classes
 
 - Use ES class syntax for objects, not old-style constructors.
 
@@ -582,7 +582,7 @@ const object = new Object();
   }
   ```
 
-### Methods
+### Use method definition syntax to define methods
 
 To define methods, use the method definition syntax:
 
@@ -610,7 +610,7 @@ const obj = {
 };
 ```
 
-### Object properties
+### Avoid repeating property identifier
 
 - The [`Object.prototype.hasOwnProperty()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) method has been deprecated in favor of [`Object.hasOwn()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn).
 - When possible, use the shorthand avoiding the duplication of the property identifier. Write:
@@ -633,7 +633,7 @@ const obj = {
 
 This section lists our recommendations of which operators to use and when.
 
-### Conditional operators
+### Use conditional operators appropriately
 
 When you want to store to a variable a literal value depending on a condition, use a [conditional (ternary) operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator) instead of an `if...else` statement. This rule also applies when returning a value. Write:
 
@@ -654,7 +654,7 @@ if (condition) {
 
 The conditional operator is helpful when creating strings to log information. In such cases, using a regular `if...else` statement leads to long blocks of code for a side operation like logging, obfuscating the central point of the example.
 
-### Strict equality operator
+### Use strict equality
 
 Prefer the [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) (triple equals) and inequality operators over the loose equality (double equals) and inequality operators.
 
@@ -682,7 +682,7 @@ Prefer shortcuts for boolean tests. For example, use `if (x)` and `if (!x)`, not
 
 String literals can be enclosed within single quotes, as in `'A string'`, or within double quotes, as in `"A string"`. Don't worry about which one to use; Prettier keeps it consistent.
 
-### Template literals
+### Use template literals for string manipulation
 
 For inserting values into strings, use [template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals).
 
@@ -704,7 +704,7 @@ For inserting values into strings, use [template literals](/en-US/docs/Web/JavaS
 
 ## Variables
 
-### Variable names
+### Use descriptive variable names
 
 Good variable names are essential to understanding code.
 
@@ -733,7 +733,7 @@ Good variable names are essential to understanding code.
 > [!NOTE]
 > The only place where it's allowed not to use human-readable, semantic names is where a very commonly recognized convention exists, such as using `i` and `j` for loop iterators.
 
-### Variable declarations
+### Declare variables with `let` or `const`
 
 When declaring variables and constants, use the [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) and [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) keywords, not [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var). The following examples show what's recommended and what's not on MDN Web Docs:
 
@@ -790,7 +790,7 @@ When declaring variables and constants, use the [`let`](/en-US/docs/Web/JavaScri
   let var3 = var4 = "Apapou"; // var4 is implicitly created as a global variable; fails in strict mode
   ```
 
-### Type coercion
+### Avoid type coercion
 
 Avoid implicit type coercions. In particular, avoid `+val` to force a value to a number and `"" + val` to force it to a string. Use `Number()` and `String()`, without `new`, instead. Write:
 
