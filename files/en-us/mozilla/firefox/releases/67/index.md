@@ -2,9 +2,8 @@
 title: Firefox 67 for developers
 slug: Mozilla/Firefox/Releases/67
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 67 that will affect developers. Firefox 67 was released on May 21, 2019.
 
@@ -66,7 +65,7 @@ _No changes._
 ### JavaScript
 
 - {{jsxref("String.prototype.matchAll")}} has been implemented and enabled by default ([Firefox bug 1435829](https://bugzil.la/1435829), [Firefox bug 1531830](https://bugzil.la/1531830)).
-- Support for the dynamic module {{jsxref("Statements/import", "import()", "#Dynamic_Imports")}} proposal is now available by default ([Firefox bug 1517546](https://bugzil.la/1517546)).
+- Support for the dynamic [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import) proposal is now available by default ([Firefox bug 1517546](https://bugzil.la/1517546)).
 - The [hashbang grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#hashbang_comments) proposal is now implemented ([Firefox bug 1519097](https://bugzil.la/1519097)).
 
 ### APIs

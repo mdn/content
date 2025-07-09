@@ -37,17 +37,9 @@ svg {
     <feGaussianBlur stdDeviation="10" />
   </filter>
 
-  <circle cx="100" cy="100" r="50" style="filter: url(#gaussianBlur1);" />
-  <circle
-    cx="100"
-    cy="100"
-    r="50"
-    style="filter: url(#gaussianBlur2); transform: translateX(140px);" />
-  <circle
-    cx="100"
-    cy="100"
-    r="50"
-    style="filter: url(#gaussianBlur3); transform: translateX(280px);" />
+  <circle cx="100" cy="100" r="50" filter="url(#gaussianBlur1)" />
+  <circle cx="240" cy="100" r="50" filter="url(#gaussianBlur2)" />
+  <circle cx="380" cy="100" r="50" filter="url(#gaussianBlur3)" />
 </svg>
 ```
 

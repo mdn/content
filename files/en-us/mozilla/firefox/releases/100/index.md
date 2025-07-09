@@ -2,9 +2,8 @@
 title: Firefox 100 for developers
 slug: Mozilla/Firefox/Releases/100
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 100 that will affect developers. Firefox 100 was released on May 3, 2022.
 

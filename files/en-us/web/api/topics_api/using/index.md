@@ -146,11 +146,6 @@ const creative = await response.json();
 <iframe browsingtopics src="ad-tech1.example"> ... </iframe>
 ```
 
-### Complete examples
-
-- [Topics API demo](https://topics-demo.glitch.me/): Demonstrates how `document.browsingTopics()` calls can be used to observe and then access topics ([see source code](https://glitch.com/edit/#!/topics-demo)).
-- [Topics API header demo](https://topics-fetch-demo.glitch.me/): Demonstrates a `fetch()` request with a {{httpheader("Sec-Browsing-Topics")}} header can be used to observe and then access topics ([see source code](https://glitch.com/edit/#!/topics-fetch-demo)).
-
 ## Testing hints
 
 ### Chrome

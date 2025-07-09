@@ -817,7 +817,7 @@ You can use most standard JavaScript features inside a web worker, including:
 The main thing you _can't_ do in a Worker is directly affect the parent page. This includes manipulating the DOM and using that page's objects. You have to do it indirectly, by sending a message back to the main script via {{domxref("DedicatedWorkerGlobalScope.postMessage()")}}, then doing the changes in event handler.
 
 > [!NOTE]
-> You can test whether a method is available to workers using the site: <https://worker-playground.glitch.me/>. For example, if you enter {{domxref("EventSource")}} into the site on Firefox 84 you'll see that this is not supported in service workers, but is in dedicated and shared workers.
+> You can test whether a method or interface is available to workers using the [Worker Playground](https://mdn.github.io/dom-examples/web-workers/worker-playground/).
 
 > [!NOTE]
 > For a complete list of functions available to workers, see [Functions and interfaces available to workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).

@@ -3,9 +3,8 @@ title: Iteration protocols
 slug: Web/JavaScript/Reference/Iteration_protocols
 page-type: guide
 spec-urls: https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-iteration
+sidebar: jssidebar
 ---
-
-{{jsSidebar("More")}}
 
 **Iteration protocols** aren't new built-ins or syntax, but _protocols_. These protocols can be implemented by any object by following some conventions.
 
@@ -411,7 +410,7 @@ console.log(it.next().value); // 2
 
 ### Defining an iterable with a class
 
-State encapsulation can be done with [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) as well.
+State encapsulation can be done with [private fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) as well.
 
 ```js
 class SimpleClass {

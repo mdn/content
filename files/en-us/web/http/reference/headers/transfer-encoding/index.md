@@ -4,9 +4,8 @@ short-title: Transfer-Encoding
 slug: Web/HTTP/Reference/Headers/Transfer-Encoding
 page-type: http-header
 browser-compat: http.headers.Transfer-Encoding
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Transfer-Encoding`** {{glossary("request header", "request")}} and {{glossary("response header")}} specifies the form of encoding used to transfer messages between nodes on the network.
 

@@ -2,9 +2,8 @@
 title: Firefox 3.6 for developers
 slug: Mozilla/Firefox/Releases/3.6
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 [Firefox 3.6](https://www.mozilla.org/en-US/firefox/new/) offers support for new and developing web standards, increased performance, and an overall better experience for web users and developers. This page provides links to articles covering the new capabilities of Firefox 3.6.
 
@@ -16,7 +15,7 @@ page-type: firefox-release-notes
   - : Firefox 3.6 adds support for the proposed `-moz-linear-gradient` and `-moz-radial-gradient` properties for {{Cssxref("background")}}.
 - [Multiple backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
   - : The {{cssxref("background")}} property (as well as {{Cssxref("background-color")}}, {{Cssxref("background-image")}}, {{Cssxref("background-position")}}, {{Cssxref("background-repeat")}}, and {{Cssxref("background-attachment")}}) now supports multiple backgrounds. This lets you specify multiple backgrounds that are rendered atop one another in layers.
-- [Mozilla-specific media features](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#mozilla-specific_media_features)
+- [Mozilla-specific media features](/en-US/docs/Web/CSS/Mozilla_Extensions#media_features)
   - : Media features have been added for Mozilla-specific system metrics, so that [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) can be used to more safely check on the availability of features such as touch support.
 - [Scaling background images](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
   - : The `background-size` property from the [CSS 3 Backgrounds and Borders draft](https://drafts.csswg.org/css-backgrounds-3/) is now supported under the name `-moz-background-size`.

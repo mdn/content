@@ -359,4 +359,9 @@ Each image is matched with a corresponding repeat style. As there are more `mask
 
 ## See also
 
-- [Clipping and Masking in CSS](https://css-tricks.com/clipping-masking-css/)
+- {{cssxref("background-repeat")}}
+- {{cssxref("mask-border-repeat")}}
+- [Introduction to CSS masking](/en-US/docs/Web/CSS/CSS_masking/Masking)
+- [CSS `mask` properties](/en-US/docs/Web/CSS/CSS_masking/Mask_properties)
+- [Declaring multiple masks](/en-US/docs/Web/CSS/CSS_masking/Multiple_masks)
+- [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module

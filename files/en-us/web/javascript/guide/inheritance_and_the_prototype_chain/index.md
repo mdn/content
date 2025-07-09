@@ -2,9 +2,8 @@
 title: Inheritance and the prototype chain
 slug: Web/JavaScript/Guide/Inheritance_and_the_prototype_chain
 page-type: guide
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Advanced")}}
 
 In programming, _inheritance_ refers to passing down characteristics from a parent to a child so that a new piece of code can reuse and build upon the features of an existing one. JavaScript implements inheritance by using [objects](/en-US/docs/Web/JavaScript/Guide/Data_structures#objects). Each object has an internal link to another object called its _prototype_. That prototype object has a prototype of its own, and so on until an object is reached with `null` as its prototype. By definition, `null` has no prototype and acts as the final link in this **prototype chain**. It is possible to mutate any member of the prototype chain or even swap out the prototype at runtime, so concepts like [static dispatching](https://en.wikipedia.org/wiki/Static_dispatch) do not exist in JavaScript.
 
@@ -554,7 +553,7 @@ const filledRectangle = new FilledRectangle(5, 10, "blue");
 // filledRectangle ---> FilledRectangle.prototype ---> Rectangle.prototype ---> Object.prototype ---> null
 ```
 
-Classes offer the highest readability and maintainability when defining complex inheritance structures. [Private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) are a feature with no trivial replacement in prototypal inheritance. However, classes are less optimized than traditional constructor functions and are not supported in older environments.
+Classes offer the highest readability and maintainability when defining complex inheritance structures. [Private elements](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) are a feature with no trivial replacement in prototypal inheritance. However, classes are less optimized than traditional constructor functions and are not supported in older environments.
 
 ### With Object.setPrototypeOf()
 

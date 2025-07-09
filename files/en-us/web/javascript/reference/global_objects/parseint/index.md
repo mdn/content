@@ -3,9 +3,8 @@ title: parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/parseInt
 page-type: javascript-function
 browser-compat: javascript.builtins.parseInt
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Objects")}}
 
 The **`parseInt()`** function parses a string argument and returns an integer of the specified [radix](https://en.wikipedia.org/wiki/Radix) (the base in mathematical numeral systems).
 

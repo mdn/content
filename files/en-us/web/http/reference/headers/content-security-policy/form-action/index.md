@@ -4,9 +4,8 @@ short-title: form-action
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/form-action
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.form-action
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`form-action`** directive restricts the URLs which can be used as the target of form submissions from a given context.
 

@@ -96,11 +96,11 @@ After you add names to your `@container` at rules, you can use the {{cssxref("co
 In the above example, the styles within the container query block will apply to the descendants of all {{htmlelement("li")}} elements with a width that is greater than their height. Note that other elements with `container-name: card` applied to them that match the size query will also have these styles applied to their elements' descendants.
 
 ```css
-@container wide (min-width: 20em) {
+@container wide (width >= 20em) {
   /* styles applied to descendants of wide .sizeContainer */
 }
 
-@container narrow (max-width: 20em) {
+@container narrow (width < 20em) {
   /* styles applied to descendants of narrow .sizeContainer */
 }
 
@@ -110,7 +110,7 @@ In the above example, the styles within the container query block will apply to 
 }
 ```
 
-In the above example, the element has two container names, `wide` and `narrow`. The descendants of any elements with `class="sizeContainer"` will get the styles from the `wide` or `narrow` query applied (or both if an element is precisely 20em wide).
+In the above example, the element has two container names, `wide` and `narrow`. The descendants of any elements with `class="sizeContainer"` will get the styles from the `wide` or `narrow` query applied.
 
 The default value `container-type: normal` prevents the container from being a size container, but it can still be a [style container](#container_style_queries). The default value `container-name: none` states the container has no name, but it does not prevent the element from matching unnamed queries.
 
@@ -141,12 +141,12 @@ In the future, we'll be able to write style queries like so:
     not style(background-color: red),
     style(--themeBackground),
     style(--themeColor: blue) or style(--themeColor: purple),
-    (max-width: 100vw) and style(max-width: 600px) {
+    (width <= 100vw) and style(max-width: 600px) {
   /* <stylesheet> */
 }
 ```
 
-The `style()` functional notation is used to differentiate style queries from size queries. While not yet supported, we will eventually be able to query regular CSS declarations such as `max-width: 100vw`. Querying `@container (max-width: 100vw)` is a size query; containment with {{cssxref("container-type")}}, or the {{cssxref("container")}} shorthand, is needed. That query will return true if the container is 100vw or less. That is different from querying `@container style(max-width: 100vw)`, which is a style query; when supported, this query will return true if the container has a {{cssxref("max-width")}} value of `100vw`.
+The `style()` functional notation is used to differentiate style queries from size queries. While not yet supported, we will eventually be able to query regular CSS declarations such as `max-width: 600px`. Querying `@container (max-width: 600px)` is a size query; containment with {{cssxref("container-type")}}, or the {{cssxref("container")}} shorthand, is needed. That query will return true if the container is 600px or less. That is different from querying `@container style(max-width: 600px)`, which is a style query; when supported, this query will return true if the container has a {{cssxref("max-width")}} value of `600px`.
 
 Until style queries for regular CSS declarations and properties are supported, we are limited to including only custom properties as the `style()` parameter, with or without a value:
 

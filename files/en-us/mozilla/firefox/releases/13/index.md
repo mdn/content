@@ -2,9 +2,8 @@
 title: Firefox 13 for developers
 slug: Mozilla/Firefox/Releases/13
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 13 was shipped on June 5, 2012. This page summarizes the changes in Firefox 13 that affect developers.
 
@@ -55,7 +54,7 @@ Firefox 13 was shipped on June 5, 2012. This page summarizes the changes in Fire
 
 ### WebGL
 
-- Support has been added for the [`EXT_texture_filter_anisotropic`](/en-US/docs/Web/API/WebGL_API/Using_Extensions#ext_texture_filter_anisotropic) extension. Anisotropic texture filtering improves the quality of mipmapped texture access when viewing a textured primitive at an oblique angle.
+- Support has been added for the [`EXT_texture_filter_anisotropic`](/en-US/docs/Web/API/EXT_texture_filter_anisotropic) extension. Anisotropic texture filtering improves the quality of mipmapped texture access when viewing a textured primitive at an oblique angle.
 
 ### MathML
 

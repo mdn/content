@@ -2,9 +2,8 @@
 title: Updating extensions for Firefox 7
 slug: Mozilla/Firefox/Releases/7/Updating_extensions
 page-type: guide
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article offers advice for add-on developers that want to update their extensions to work in Firefox 7. Fortunately, most of the changes are relatively minor in this release, and few add-ons should need significant changes to work in Firefox 7.
 

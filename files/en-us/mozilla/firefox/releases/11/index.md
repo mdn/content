@@ -2,9 +2,8 @@
 title: Firefox 11 for developers
 slug: Mozilla/Firefox/Releases/11
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 11 shipped on March 13, 2012. This article provides information about the new features and key bugs fixed in this release, as well as links to more detailed documentation for both web developers and add-on developers.
 
@@ -28,7 +27,7 @@ Firefox 11 shipped on March 13, 2012. This article provides information about th
 - Support for the [`defaultMuted`](/en-US/docs/Web/API/HTMLMediaElement), [`loop`](/en-US/docs/Web/API/HTMLMediaElement) and [`muted`](/en-US/docs/Web/API/HTMLMediaElement) properties on [`HTMLMediaElement`](/en-US/docs/Web/API/HTMLMediaElement) has been added.
 - Calling {{domxref("Document/exitFullscreen")}} now restores the previously fullscreen element if some other element was in fullscreen mode when the current element's {{domxref("Element/requestFullScreen")}} method was called.
 - The {{domxref("window.requestAnimationFrame", "window.mozRequestAnimationFrame()")}} method no longer supports a no-argument form. This form was not used much and is unlikely to become part of the standard.
-- SVG-as-an-image can now be drawn into a canvas without [tainting the canvas](/en-US/docs/Web/HTML/How_to/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f).
+- SVG-as-an-image can now be drawn into a canvas without [tainting the canvas](/en-US/docs/Web/HTML/How_to/CORS_enabled_image#security_and_tainted_canvases).
 - The non-standard `countryCode` property of the `GeoPositionAddress` interface has been removed; see `nsIDOMGeoPositionAddress`.
 - [Server-sent events](/en-US/docs/Web/API/Server-sent_events) now support [CORS](/en-US/docs/Web/HTTP/Guides/CORS).
 - In the past, when the user followed a link, the values set on the {{domxref("window.navigator")}} object were retained by the new page. Now a new `navigator` object is created for the new page. This makes Firefox behave like all other browsers.
@@ -54,7 +53,7 @@ _No change._
 
 ### IndexedDB
 
-- The support for [IDBFactory.cmp()](/en-US/docs/Web/API/IDBFactory#cmp%28%29) has been added.
+- The support for [IDBFactory.cmp()](/en-US/docs/Web/API/IDBFactory/cmp) has been added.
 - An [IndexedDB key](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key) can also be of one of the following types: Date, Arrays and Float (and not only String and Integer).
 - From now on, transactions are started when the transaction is created, not when the first request is placed; for example consider this:
 

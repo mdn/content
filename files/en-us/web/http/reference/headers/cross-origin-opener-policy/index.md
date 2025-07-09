@@ -4,9 +4,8 @@ short-title: Cross-Origin-Opener-Policy
 slug: Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy
 page-type: http-header
 browser-compat: http.headers.Cross-Origin-Opener-Policy
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Cross-Origin-Opener-Policy`** (COOP) {{glossary("response header")}} allows a website to control whether a new top-level document, opened using {{domxref("Window.open()")}} or by navigating to a new page, is opened in the same {{glossary("Browsing context","browsing context group")}} (BCG) or in a new browsing context group.
 

@@ -2,9 +2,8 @@
 title: Firefox 44 for developers
 slug: Mozilla/Firefox/Releases/44
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 [To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/).
 Firefox 44 was released on January 26, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -97,7 +96,7 @@ Highlights:
 #### DOM & HTML DOM
 
 - For compatibility with specific existing sites, the property `Document.charset` has been implemented as an alias of {{domxref("Document.characterSet")}} ([Firefox bug 647621](https://bugzil.la/647621)).
-- Support for the [`window.sidebar.addSearchEngine()`](/en-US/docs/Web/XML/Guides/OpenSearch#installing_sherlock_plugins) method, which allowed Web pages to invoke an installation of a Sherlock plugin, has been dropped and now it just logs a warning in the Web Console ([Firefox bug 862148](https://bugzil.la/862148)).
+- Support for the `window.sidebar.addSearchEngine()` method, which allowed Web pages to invoke an installation of a Sherlock plugin, has been dropped and now it just logs a warning in the Web Console ([Firefox bug 862148](https://bugzil.la/862148)).
 - To fight unwanted pop-ups, prompts requested in {{domxref("Window/beforeunload_event", "beforeunload")}} events of pages that have not been interacted with are no more displayed ([Firefox bug 636905](https://bugzil.la/636905)).
 - The deprecated method {{domxref("MessageEvent.initMessageEvent()")}} has been reimplemented for backward compatibility ([Firefox bug 949376](https://bugzil.la/949376)).
 - The obsolete property `DocumentType.internalSubset` has been removed ([Firefox bug 801545](https://bugzil.la/801545)).

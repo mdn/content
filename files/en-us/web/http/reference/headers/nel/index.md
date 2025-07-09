@@ -6,9 +6,10 @@ page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.NEL
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP **`NEL`** {{Glossary("response header")}} is used to configure network request logging.
 

@@ -113,9 +113,6 @@ To opt-in to the app's scope, `https://example.co.uk` and `https://help.example.
 }
 ```
 
-> [!NOTE]
-> See [Scope Extensions API Demo](https://main-pwa-origin-2.glitch.me/) for a working example.
-
 ## Specifications
 
 {{Specifications}}

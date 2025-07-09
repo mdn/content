@@ -135,7 +135,7 @@ p {
   margin: 0 0 1em 0;
 }
 
-@media (min-width: 500px) {
+@media (width >= 500px) {
   .media {
     display: grid;
     grid-template-columns: fit-content(200px) 1fr;
@@ -176,7 +176,7 @@ I have chosen to use [grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) for the 
 
 Another reason to use grid layout is in order that I can use {{cssxref("fit-content")}} for the track sizing of the image. By using `fit-content` with a maximum size of 200 pixels, when we have a small image such as the icon, the track only gets as large as the size of that image — the `max-content` size. If the image is larger, the track stops growing at 200 pixels and as the image has a {{cssxref("max-width")}} of 100% applied, it scales down so that it continues to fit inside the column.
 
-By using {{cssxref("grid-template-areas")}} to achieve the layout, I can see the pattern in the CSS. I define my grid once we have a max-width of 500 pixels, so on smaller devices the media object stacks.
+By using {{cssxref("grid-template-areas")}} to achieve the layout, I can see the pattern in the CSS. I define my grid once the viewport is 500 pixels wide, so on smaller devices the media object stacks.
 
 An option for the pattern is to flip it to switch the image to the other side — this is done by adding the `media-flip` class, which defines a flipped grid template causing the layout to be mirrored.
 

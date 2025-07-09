@@ -45,7 +45,7 @@ flex-grow: 3;
 }
 
 .default-example > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   margin: 10px;
   flex-grow: 1;

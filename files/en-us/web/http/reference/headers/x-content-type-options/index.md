@@ -4,9 +4,8 @@ short-title: X-Content-Type-Options
 slug: Web/HTTP/Reference/Headers/X-Content-Type-Options
 page-type: http-header
 browser-compat: http.headers.X-Content-Type-Options
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`X-Content-Type-Options`** {{Glossary("response header")}} indicates that the [MIME types](/en-US/docs/Web/HTTP/Guides/MIME_types) advertised in the {{HTTPHeader("Content-Type")}} headers should be respected and not changed.
 The header allows you to avoid [MIME type sniffing](/en-US/docs/Web/HTTP/Guides/MIME_types#mime_sniffing) by specifying that the MIME types are deliberately configured.
