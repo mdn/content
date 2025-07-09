@@ -69,13 +69,13 @@ export function myFunction() {
 
 After the `export` keyword, you can use `let`, `const`, and `var` declarations, as well as function or class declarations. You can also use the `export { name1, name2 }` syntax to export a list of names declared elsewhere. Note that `export {}` does not export an empty object — it's a no-op declaration that exports nothing (an empty name list).
 
-You cannot use `export` on a {{jsxref("Statements/using", "using")}} or {{jsxref("Statements/await_using", "await using")}} declaration. You can, however, export a variable that was declared elsewhere using `using` or `await using`. Doing so is still strongly discouraged, because the variable is already disposed when the module finishes executing, causing all importers to receive a value that's already disposed.
+You cannot use `export` on a {{jsxref("Statements/using", "using")}} or {{jsxref("Statements/await_using", "await using")}} declaration. You can, however, export a variable that was declared elsewhere using `using` or `await using`. Doing so is still strongly discouraged, because the variable is disposed as soon as the module finishes executing, causing all importers to receive a value that's already disposed.
 
 ```js-nolint example-bad
-export using resource1; // SyntaxError
+export using resource1 = getResource(); // SyntaxError
 
 // Allowed by syntax but discouraged
-using resource2;
+using resource2 = getResource();
 export { resource2 };
 ```
 

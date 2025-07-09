@@ -33,11 +33,12 @@ This declaration can be used:
 Most notably, it cannot be used:
 
 - At the top level of a script, because script scopes are persistent.
+- At the top level of a [`switch`](/en-US/docs/Web/JavaScript/Reference/Statements/switch) statement.
 - In the initializer of a [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loop. Because the loop variable can only be a string or symbol, this doesn't make sense.
 
 A `using` declares a disposable resource that's tied to the lifetime of the variable's scope (block, function, module, etc.). When the scope exits, the resource is disposed of synchronously. The variable is allowed to have value `null` or `undefined`, so the resource can be optionally present.
 
-When the variable is first declared, a _disposer_ is retrieved from the object. If the `[Symbol.dispose]` property doesn't contain a function, a `TypeError` is thrown. This disposer is saved to the scope.
+When the variable is first declared and its value is non-nullish, a _disposer_ is retrieved from the object. If the `[Symbol.dispose]` property doesn't contain a function, a `TypeError` is thrown. This disposer is saved to the scope.
 
 When the variable goes out of scope, the disposer is called. If the scope contains multiple `using` or {{jsxref("Statements/await_using", "await using")}} declarations, all disposers are run in the reverse order of declaration, regardless of the type of declaration. All disposers are guaranteed to run (much like the `finally` block in {{jsxref("Statements/try...catch", "try...catch...finally")}}). All errors thrown during disposal, including the initial error that caused the scope exit (if applicable), are all aggregated inside one {{jsxref("SuppressedError")}}, with each earlier exception as the `suppressed` property and the later exception as the `error` property. This `SuppressedError` is thrown after disposal is complete.
 
@@ -78,22 +79,6 @@ The resource declared with `using` is disposed when exiting the block.
 }
 ```
 
-You can use `using` at the top level of a [`switch`](/en-US/docs/Web/JavaScript/Reference/Statements/switch) statement:
-
-```js
-switch (Math.random() > 0.5) {
-  case true:
-    using resource = new Resource();
-    console.log(resource.getValue());
-    // resource disposed here because of break
-    break;
-  case false:
-    console.log("No resource");
-    // no resource to dispose because the using declaration was not executed
-    break;
-}
-```
-
 ### `using` in a function
 
 You can use `using` in a function body. In this case, the resource is disposed when the function finishes executing, immediately before the function returns.
@@ -128,18 +113,7 @@ function example() {
 }
 ```
 
-Here, we _alias_ a `const`-declared resource to a `using`-declared resource, so that the resource is only disposed after the callback is called; note that if it is never called then the resource will never be cleaned up. You can also do the following, but it may be more error-prone in a more complex situation, combined with error handling:
-
-```js
-function example() {
-  const resource = new Resource();
-  return () => {
-    const value = resource.getValue();
-    resource[Symbol.dispose]();
-    return value;
-  };
-}
-```
+Here, we _alias_ a `const`-declared resource to a `using`-declared resource, so that the resource is only disposed after the callback is called; note that if it is never called then the resource will never be cleaned up.
 
 ### `using` in a module
 
@@ -231,7 +205,7 @@ You can achieve automatic resource disposing using `using`, without even using t
 }
 ```
 
-Note that `_` is a normal identifier, but it's a convention to use it as a "throwaway" variable. To create multiple unused variables, you need to use distinct names like `__` , `___`, etc., or prefix the variable name with `_`, depending on your code base's conventions.
+Note that `_` is a normal identifier, but it's a convention to use it as a "throwaway" variable. To create multiple unused variables, you need to use distinct names, for example by using a variable name prefixed with `_`.
 
 ### Initialization and temporal dead zones
 

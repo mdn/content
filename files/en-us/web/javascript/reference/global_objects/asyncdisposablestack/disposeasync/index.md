@@ -9,6 +9,8 @@ browser-compat: javascript.builtins.AsyncDisposableStack.disposeAsync
 
 The **`disposeAsync()`** method of {{jsxref("AsyncDisposableStack")}} instances disposes this stack by calling all disposers registered to it in reverse order of registration, awaiting for each one's completion before calling the next one. If the stack is already disposed, this method does nothing.
 
+It performs the same action as `await using disposer = new AsyncDisposableStack()` at scope exit. It can be used if you need to clean up at a point other than scope exit.
+
 ## Syntax
 
 ```js-nolint

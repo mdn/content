@@ -20,7 +20,7 @@ use(value)
 ### Parameters
 
 - `value`
-  - : The value to register to the stack. Must contain a `[Symbol.asyncDispose]()` or `[Symbol.dispose]()` method.
+  - : The value to register to the stack. Must either contain a `[Symbol.asyncDispose]()` or `[Symbol.dispose]()` method, or be `null` or `undefined`.
 
 ### Return value
 
@@ -29,7 +29,7 @@ The same `value` that was passed in.
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if `value` does not contain a `[Symbol.asyncDispose]()` or `[Symbol.dispose]()` method.
+  - : Thrown if `value` is not `null` or `undefined`, and does not contain a `[Symbol.asyncDispose]()` or `[Symbol.dispose]()` method.
 - {{jsxref("ReferenceError")}}
   - : Thrown if the stack is already disposed.
 

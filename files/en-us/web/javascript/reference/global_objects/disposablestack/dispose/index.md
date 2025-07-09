@@ -9,6 +9,8 @@ browser-compat: javascript.builtins.DisposableStack.dispose
 
 The **`dispose()`** method of {{jsxref("DisposableStack")}} instances disposes this stack by calling all disposers registered to it in reverse order of registration. If the stack is already disposed, this method does nothing.
 
+It performs the same action as `using disposer = new isposableStack()` at scope exit. It can be used if you need to clean up at a point other than scope exit.
+
 ## Syntax
 
 ```js-nolint

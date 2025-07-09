@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.DisposableStack.move
 
 {{JSRef}}
 
-The **`move()`** method of {{jsxref("DisposableStack")}} instances creates a new `DisposableStack` instance that contains the same disposers as this stack, and then marks this stack as disposed (without calling any disposers).
+The **`move()`** method of {{jsxref("DisposableStack")}} instances creates a new `DisposableStack` instance that contains the same disposers as this stack, and then marks this stack as disposed, without calling any disposers.
 
 ## Syntax
 
@@ -48,7 +48,7 @@ console.log(stack.disposed); // true
 
 ### Allowing resources to be disposed within two code paths
 
-The major use case of `move()` is when you have a list of resources in a `DisposableStack`, and it could either be disposed right here, or it could be persisted for later use. In this case, you can call `move()` when you need to persist the resources for later usage.
+The major use case of `move()` is when you have one or more resources which could either be disposed right here or could be persisted for later use. In this case, you can put the resources in a `DisposableStack` and then call `move()` when you need to persist the resources for later usage.
 
 ```js
 // sync
@@ -92,7 +92,7 @@ class PluginHost {
 
     // NOTE: we can free `#socket` and `#channel` here since they will be
     // disposed by the call to `disposables[Symbol.dispose]()`, below.
-    // This isn't strictly a requirement for every Disposable, but is
+    // This isn't strictly a requirement for every disposable, but is
     // good housekeeping since these objects will no longer be useable.
     this.#socket = undefined;
     this.#channel = undefined;

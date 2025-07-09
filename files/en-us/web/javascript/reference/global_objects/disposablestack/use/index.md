@@ -18,7 +18,7 @@ use(value)
 ### Parameters
 
 - `value`
-  - : The value to register to the stack. Must contain a `[Symbol.dispose]()` method.
+  - : The value to register to the stack. Must either contain a `[Symbol.dispose]()` method, or be `null` or `undefined`.
 
 ### Return value
 
@@ -27,7 +27,7 @@ The same `value` that was passed in.
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if `value` does not contain a `[Symbol.dispose]()` method.
+  - : Thrown if `value` is not `null` or `undefined`, and does not contain a `[Symbol.dispose]()` method.
 - {{jsxref("ReferenceError")}}
   - : Thrown if the stack is already disposed.
 
@@ -47,7 +47,7 @@ disposer.use(reader);
 
 ### Using use()
 
-This code consumes a {{domxref("ReadableStream")}} via a {{domxref("ReadableStreamDefaultReader")}}. The reader automatically closed when the function completes, assuming it implements an `[Symbol.dispose]()` method that synchronously releases the lock on the stream.
+This code consumes a {{domxref("ReadableStream")}} via a {{domxref("ReadableStreamDefaultReader")}}. The reader is automatically closed when the function completes, assuming it implements an `[Symbol.dispose]()` method that synchronously releases the lock on the stream.
 
 ```js
 {

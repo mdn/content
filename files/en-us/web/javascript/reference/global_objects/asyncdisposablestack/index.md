@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.AsyncDisposableStack
 
 {{JSRef}}
 
-The **`AsyncDisposableStack`** object represents a stack of [async disposable](/en-US/docs/Web/JavaScript/Reference/Statements/await_using) objects. You can register objects to this stack and dispose of them in reverse order of registration, with strong error handling guarantees.
+The **`AsyncDisposableStack`** object represents a stack of [async disposers](/en-US/docs/Web/JavaScript/Reference/Statements/await_using) to run when the stack itself is disposed. Disposer functions are executed in reverse order of registration, with strong error handling guarantees. Calling its `move()` method will transfer responsibility for calling the current registered disposers to a new `AsyncDisposableStack` and prevent registering any additional disposers.
 
 See {{jsxref("DisposableStack")}} for general information about using disposable stacks.
 
@@ -36,7 +36,7 @@ These properties are defined on `AsyncDisposableStack.prototype` and shared by a
 - {{jsxref("AsyncDisposableStack.prototype.defer()")}}
   - : Takes a callback function to be called when the stack is disposed.
 - {{jsxref("AsyncDisposableStack.prototype.move()")}}
-  - : Creates a new `AsyncDisposableStack` instance that contains the same disposers as this stack, and then marks this stack as disposed (without calling any disposers).
+  - : Creates a new `AsyncDisposableStack` instance that contains the same disposers as this stack, and then marks this stack as disposed, without calling any disposers.
 - {{jsxref("AsyncDisposableStack.prototype.use()")}}
   - : Registers a value that implements the async disposable protocol to the stack.
 - [`AsyncDisposableStack.prototype[Symbol.asyncDispose]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncDisposableStack/Symbol.AsyncDispose)
