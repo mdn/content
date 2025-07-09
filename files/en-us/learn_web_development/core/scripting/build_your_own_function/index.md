@@ -151,6 +151,7 @@ You've now got your function definition written into your `<script>` element jus
 However, we probably want the message box to appear in response to user and system actions. In a real application, such a message box would probably be called in response to new data being available, or an error having occurred, or the user trying to delete their profile ("are you sure about this?"), or the user adding a new contact and the operation completing successfully, etc.
 
 In this demo, we'll get the message box to appear when the user clicks the button.
+Here's the steps you should follow to get this working:
 
 1. Delete the previous line you added.
 2. Select the `<button>` element and store a reference to it in a constant. Add the following line to your code, above the function definition:
