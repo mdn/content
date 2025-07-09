@@ -4,9 +4,8 @@ short-title: tabindex
 slug: Web/HTML/Reference/Global_attributes/tabindex
 page-type: html-attribute
 browser-compat: html.global_attributes.tabindex
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 The **`tabindex`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) allows developers to make HTML elements focusable, allow or prevent them from being sequentially focusable (usually with the <kbd>Tab</kbd> key, hence the name) and determine their relative ordering for sequential focus navigation.
 

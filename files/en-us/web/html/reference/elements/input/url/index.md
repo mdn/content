@@ -3,9 +3,8 @@ title: <input type="url">
 slug: Web/HTML/Reference/Elements/input/url
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_url
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`url`** are used to let the user enter and edit a URL.
 
