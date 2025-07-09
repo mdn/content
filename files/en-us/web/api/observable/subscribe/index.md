@@ -27,7 +27,6 @@ subscribe(observer, options)
 - `observer` {{optional_inline}}
 
   - : An object or a callback function. If the provided `observer` is an object, it can contain the following properties:
-
     - `next` {{optional_inline}}
       - : A callback function that is called whenever a value is sent through the stream. In the case of a `when()` observable, this is the callback function that is run whenever an event is fired — the observable equivalent of a traditional event handler function. This can be called any number of times.
     - `error` {{optional_inline}}
