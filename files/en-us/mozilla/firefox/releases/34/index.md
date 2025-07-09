@@ -1,5 +1,6 @@
 ---
 title: Firefox 34 for developers
+short-title: Firefox 34
 slug: Mozilla/Firefox/Releases/34
 page-type: firefox-release-notes
 sidebar: firefox
@@ -115,7 +116,3 @@ _No change._
 [GitHub commits made between Firefox 33 and Firefox 34](https://github.com/mozilla/addon-sdk/compare/firefox33...firefox34). This will not include any uplifts made after this release entered Aurora.
 
 [Bugs fixed between Firefox 33 and Firefox 34](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-09-02&chfield=resolution&query_format=advanced&chfieldfrom=2014-07-21&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&product=Add-on%20SDK&list_id=11562840). This will not include any uplifts made after this release entered Aurora.
-
-## Older versions
-
-{{Firefox_for_developers}}

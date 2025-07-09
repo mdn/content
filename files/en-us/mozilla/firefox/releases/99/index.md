@@ -43,6 +43,4 @@ No notable changes.
 
 ## Changes for add-on developers
 
-## Older versions
-
-{{Firefox_for_developers}}
+No notable changes.

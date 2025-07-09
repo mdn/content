@@ -1,5 +1,6 @@
 ---
 title: Firefox 4 for developers
+short-title: Firefox 4
 slug: Mozilla/Firefox/Releases/4
 page-type: firefox-release-notes
 sidebar: firefox
@@ -493,7 +494,3 @@ In addition to the specific changes referenced below, it's important to note tha
   - : Firefox no longer creates child HWNDs for its internal use on Windows. If you've written an extension that uses native code to manipulate these HWNDs, your extension will not work on Firefox 4. You'll need to either stop using HWNDs or wrap your code that relies on HWNDs in an [NPAPI](/en-US/docs/NPAPI) plugin. That's a lot of work, so if you can avoid using HWNDs directly, you should.
 - Gesture changes
   - : The three finger up and down swipe gestures on trackpads have been changed to, by default, open and close Firefox Panorama view (neé TabCandy). To change these back to the previous scroll-to-top and scroll-to-bottom commands, open about:config and set `browser.gesture.swipe.down` to `cmd_scrollBottom` and `browser.gesture.swipe.up` to `cmd_scrollTop`.
-
-## See also
-
-{{Firefox_for_developers}}

@@ -1,5 +1,6 @@
 ---
 title: Firefox 49 for developers
+short-title: Firefox 49
 slug: Mozilla/Firefox/Releases/49
 page-type: firefox-release-notes
 sidebar: firefox
@@ -276,7 +277,3 @@ In order to improve compatibility with existing content, Firefox now accepts som
 ### Other
 
 _No change._
-
-## Older versions
-
-{{Firefox_for_developers}}

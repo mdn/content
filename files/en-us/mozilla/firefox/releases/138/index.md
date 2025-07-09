@@ -1,5 +1,6 @@
 ---
 title: Firefox 138 for developers
+short-title: Firefox 138
 slug: Mozilla/Firefox/Releases/138
 page-type: firefox-release-notes
 sidebar: firefox
@@ -127,7 +128,3 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **HTML Sanitizer API**: `dom.security.sanitizer.enabled`
 
   The [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document's DOM. ([Firefox bug 1950605](https://bugzil.la/1950605)), ([Firefox bug 1952250](https://bugzil.la/1952250)).
-
-## Older versions
-
-{{Firefox_for_developers}}

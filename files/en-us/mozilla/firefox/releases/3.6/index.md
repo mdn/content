@@ -1,5 +1,6 @@
 ---
 title: Firefox 3.6 for developers
+short-title: Firefox 3.6
 slug: Mozilla/Firefox/Releases/3.6
 page-type: firefox-release-notes
 sidebar: firefox
@@ -199,7 +200,3 @@ The following assorted changes have been made:
 
 - The `EVENT_REORDER` [accessibility event](/en-US/docs/XPCOM_Interface_Reference/nsIAccessibleEvent) is now sent when the children of frames and iframes change, as well as when the main document's children change. See [Firefox bug 420845](https://bugzil.la/420845).
 - The `nsIAccessibleTable.selectRow()` now correctly removes any current selection before selecting the specified row.
-
-## See also
-
-{{Firefox_for_developers}}

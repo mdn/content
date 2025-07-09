@@ -1,5 +1,6 @@
 ---
 title: Firefox 91 for developers
+short-title: Firefox 91
 slug: Mozilla/Firefox/Releases/91
 page-type: firefox-release-notes
 sidebar: firefox
@@ -54,7 +55,3 @@ No changes
 
 - Fixed a bug, which caused the commands `WebDriver:AcceptAlert` and `WebDriver:DismissAlert` to hang for user prompts as opened in a popup window ([Firefox bug 1721982](https://bugzil.la/1721982)).
 - Fixed an inappropriate handling of the `webSocketUrl` capability, which would return `true` if `webSocketUrl` was not supported ([Firefox bug 1713775](https://bugzil.la/1713775)).
-
-## Older versions
-
-{{Firefox_for_developers}}

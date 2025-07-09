@@ -1,5 +1,6 @@
 ---
 title: Firefox 69 for developers
+short-title: Firefox 69
 slug: Mozilla/Firefox/Releases/69
 page-type: firefox-release-notes
 sidebar: firefox
@@ -130,7 +131,3 @@ This article provides information about the changes in Firefox 69 that will affe
 ## See also
 
 - Hacks release post: [Firefox 69 — a tale of Resize Observer, microtasks, CSS, and DevTools](https://hacks.mozilla.org/2019/09/firefox-69-a-tale-of-resize-observer-microtasks-css-and-devtools/)
-
-## Older versions
-
-{{Firefox_for_developers}}

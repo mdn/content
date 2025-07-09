@@ -1,5 +1,6 @@
 ---
 title: Firefox 11 for developers
+short-title: Firefox 11
 slug: Mozilla/Firefox/Releases/11
 page-type: firefox-release-notes
 sidebar: firefox
@@ -129,7 +130,3 @@ The following interfaces were implementation details that are no longer needed:
 ### Other changes
 
 - Add-ons that have not been updated in a long time are no longer assumed to be compatible by default; this is currently add-ons that indicate a `maxVersion` of 4.0.
-
-## See also
-
-{{Firefox_for_developers}}

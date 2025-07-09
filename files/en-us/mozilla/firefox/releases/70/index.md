@@ -1,5 +1,6 @@
 ---
 title: Firefox 70 for developers
+short-title: Firefox 70
 slug: Mozilla/Firefox/Releases/70
 page-type: firefox-release-notes
 sidebar: firefox
@@ -137,7 +138,3 @@ The following [theme](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/th
 ## See also
 
 - Hacks release post: [Firefox 70 — a bountiful release for all](https://hacks.mozilla.org/2019/10/firefox-70-a-bountiful-release-for-all/)
-
-## Older versions
-
-{{Firefox_for_developers}}

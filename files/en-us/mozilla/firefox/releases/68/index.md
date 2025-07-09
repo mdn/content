@@ -1,5 +1,6 @@
 ---
 title: Firefox 68 for developers
+short-title: Firefox 68
 slug: Mozilla/Firefox/Releases/68
 page-type: firefox-release-notes
 sidebar: firefox
@@ -178,7 +179,3 @@ _No changes._
 ## See also
 
 - Hacks release post: [Firefox 68: BigInts, Contrast Checks, and the QuantumBar](https://hacks.mozilla.org/2019/07/firefox-68-bigints-contrast-checks-and-the-quantumbar/)
-
-## Older versions
-
-{{Firefox_for_developers}}

@@ -1,5 +1,6 @@
 ---
 title: Firefox 32 for developers
+short-title: Firefox 32
 slug: Mozilla/Firefox/Releases/32
 page-type: firefox-release-notes
 sidebar: firefox
@@ -121,7 +122,3 @@ A `getDataDirectory()` method has been added to [`Addon`](/en-US/docs/Mozilla/Ad
 ### XPCOM
 
 - The `nsIUDPSocket` interface now provides multicast support through the addition of the new `nsIUDPSocket.multicastLoopback`, `nsIUDPSocket.multicastInterface`, and `nsIUDPSocket.multicastInterfaceAddr` attributes, as well as the `nsIUDPSocket.joinMulticast()` and `nsIUDPSocket.leaveMulticast()` methods.
-
-### Older versions
-
-{{Firefox_for_developers}}
