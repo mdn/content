@@ -153,7 +153,7 @@ However, we probably want the message box to appear in response to user and syst
 In this demo, we'll get the message box to appear when the user clicks the button.
 Here's the steps you should follow to get this working:
 
-1. Delete the previous line you added.
+1. Delete the previous line you added (`displayMessage();`).
 2. Select the `<button>` element and store a reference to it in a constant. Add the following line to your code, above the function definition:
 
    ```js
