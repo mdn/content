@@ -54,7 +54,7 @@ header > time {
 
 ## Usage notes
 
-The `<header>` element serves as a [`banner` landmark](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) **only when** it is a direct child of `<body>` and contains site-wide content such as a logo or navigation.
+The `<header>` element has an identical meaning to the site-wide [`banner`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) landmark role, unless nested within sectioning content. Then, the `<header>` element is not a landmark.
 
 When nested inside sectioning content (such as `<article>`, `<section>`, or `<main>`), it loses its landmark status and behaves like a non-semantic container. See [Accessibility](#accessibility) for details.
 
