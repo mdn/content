@@ -427,9 +427,9 @@ Finally, we've also got an [onchange](/en-US/docs/Web/API/HTMLElement/change_eve
 > [!NOTE]
 > You can also [find this example on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/simple-ternary.html) (see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html) on there also.)
 
-## Implementing a simple calendar
+## Implementing a basic calendar
 
-In this example, you are going to help us finish a simple calendar application. In the code you've got:
+In this example, you are going to help us finish a basic calendar application. In the code you've got:
 
 - A {{htmlelement("select")}} element to allow the user to choose between different months.
 - A `change` event handler to detect when the value selected in the `<select>` menu is changed.
@@ -439,7 +439,7 @@ To complete the example:
 
 1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
 2. Write a conditional statement inside the `createCalendar()` function, just below the `// ADD CONDITIONAL HERE` comment. It should:
-   1. Look at the selected month (stored in the `choice` variable. This will be the `<select>` element value after the value changes, so "January" for example.)
+   1. Look at the selected month (stored in the `choice` variable. This will be the `<select>` element value after the value changes, so "January" for example).
    2. Assign the `days` variable to be equal to the number of days in the selected month. To do this you'll have to look up the number of days in each month of the year. You can ignore leap years for the purposes of this example.
 
 Hints:
@@ -588,7 +588,7 @@ createCalendar("January");
 
 ## Adding more color choices
 
-In this example, you are going to take the ternary operator example we saw earlier and convert the ternary operator into a switch statement to allow us to apply more choices to the simple website. Look at the {{htmlelement("select")}} — this time you'll see that it has not two theme options, but five.
+In this example, you are going to take the ternary operator example we saw earlier and convert the ternary operator into a switch statement to allow us to apply more choices to the website. Look at the {{htmlelement("select")}} — this time you'll see that it has not two theme options, but five.
 
 To complete the example:
 
