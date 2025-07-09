@@ -309,6 +309,7 @@ jsapi.h
 jscript
 jsdouble
 jspubtd.h
+jssidebar
 jsval
 kaios
 kawi

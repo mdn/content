@@ -3,9 +3,8 @@ title: let
 slug: Web/JavaScript/Reference/Statements/let
 page-type: javascript-statement
 browser-compat: javascript.statements.let
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 The **`let`** declaration declares re-assignable, block-scoped local variables, optionally initializing each to a value.
 

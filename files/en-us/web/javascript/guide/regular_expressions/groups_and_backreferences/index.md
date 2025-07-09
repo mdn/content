@@ -2,9 +2,8 @@
 title: Groups and backreferences
 slug: Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences
 page-type: guide
+sidebar: jssidebar
 ---
-
-{{jsSidebar("JavaScript Guide")}}
 
 Groups group multiple patterns as a whole, and capturing groups provide extra submatch information when using a regular expression pattern to match against a string. Backreferences refer to a previously captured group in the same regular expression.
 

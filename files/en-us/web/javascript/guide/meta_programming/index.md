@@ -2,9 +2,8 @@
 title: Meta programming
 slug: Web/JavaScript/Guide/Meta_programming
 page-type: guide
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Advanced")}}
 
 The {{jsxref("Proxy")}} and {{jsxref("Reflect")}} objects allow you to intercept and define custom behavior for fundamental language operations (e.g., property lookup, assignment, enumeration, function invocation, etc.). With the help of these two objects you are able to program at the meta level of JavaScript.
 
