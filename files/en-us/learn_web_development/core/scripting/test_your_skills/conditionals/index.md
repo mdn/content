@@ -111,7 +111,7 @@ To complete the task:
 3. Inside the first `if...else`, nest another `if...else` that puts appropriate messages into the `response` variable depending on what the value of `score` is — if the machine is turned on. The different conditional tests (and resulting responses) are as follows:
    - Score of less than 0 or more than 100 — "This is not possible, an error has occurred."
    - Score of 0 to 19 — "That was a terrible score — total fail!"
-   - Score of 20 to 39 — "You know some things, but it\\'s a pretty bad score. Needs improvement."
+   - Score of 20 to 39 — "You know some things, but it's a pretty bad score. Needs improvement."
    - Score of 40 to 69 — "You did a passable job, not bad!"
    - Score of 70 to 89 — "That\\'s a great score, you really know your stuff."
    - Score of 90 to 100 — "What an amazing score! Did you cheat? Are you for real?"
