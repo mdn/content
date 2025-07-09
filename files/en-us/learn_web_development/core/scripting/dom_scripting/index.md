@@ -267,15 +267,65 @@ In the next section we will look at a more practical use of DOM APIs.
 
 ## Creating a dynamic shopping list
 
-In this exercise we want to make a dynamic shopping list example that allows you to add items using a form input and button. When you add an item to the input and press the button:
+In this exercise we want you to build a dynamic shopping list that allows you to add items using a form input and button. When you add enter an item and press the button:
 
 - The item should appear in the list.
 - Each item should be given a button that can be pressed to delete that item off the list.
-- The input should be emptied and focused ready for you to enter another item.
+- The input should be emptied and focused, ready for you to enter another item.
 
-The finished demo will look something like this:
+The finished demo will look something like the following — try it out before you build it!
 
-![Demo layout of a shopping list. A 'my shopping list' header followed by 'Enter a new item' with an input field and 'add item' button. The list of already added items is below, each with a corresponding delete button. ](shopping-list.png)
+```html hidden live-sample___dynamic-shopping-list
+<h1>My shopping list</h1>
+
+<div>
+  <label for="item">Enter a new item:</label>
+  <input type="text" name="item" id="item" />
+  <button>Add item</button>
+</div>
+
+<ul></ul>
+```
+
+```css hidden live-sample___dynamic-shopping-list
+li {
+  margin-bottom: 10px;
+}
+
+li button {
+  font-size: 12px;
+  margin-left: 20px;
+}
+```
+
+```js hidden live-sample___dynamic-shopping-list
+const list = document.querySelector("ul");
+const input = document.querySelector("input");
+const button = document.querySelector("button");
+
+button.addEventListener("click", () => {
+  const myItem = input.value;
+  input.value = "";
+
+  const listItem = document.createElement("li");
+  const listText = document.createElement("span");
+  const listBtn = document.createElement("button");
+
+  listItem.appendChild(listText);
+  listText.textContent = myItem;
+  listItem.appendChild(listBtn);
+  listBtn.textContent = "Delete";
+  list.appendChild(listItem);
+
+  listBtn.addEventListener("click", () => {
+    list.removeChild(listItem);
+  });
+
+  input.focus();
+});
+```
+
+{{EmbedLiveSample("dynamic-shopping-list", "100%", 300)}}
 
 To complete the exercise, follow the steps below, and make sure that the list behaves as described above.
 
@@ -290,9 +340,6 @@ To complete the exercise, follow the steps below, and make sure that the list be
 9. Append the list item as a child of the list.
 10. Attach an event handler to the delete button so that, when clicked, it will delete the entire list item (`<li>...</li>`).
 11. Finally, use the [`focus()`](/en-US/docs/Web/API/HTMLElement/focus) method to focus the input element ready for entering the next shopping list item.
-
-> [!NOTE]
-> If you get really stuck, have a look at our [finished shopping list](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list-finished.html) ([see it running live also](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html)).
 
 ## Summary
 
