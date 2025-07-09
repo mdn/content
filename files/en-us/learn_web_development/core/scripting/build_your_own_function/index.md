@@ -153,7 +153,7 @@ However, we probably want the message box to appear in response to user and syst
 In this demo, we'll get the message box to appear when the user clicks the button.
 
 1. Delete the previous line you added.
-2. Next, we'll select the button and store a reference to it in a constant. Add the following line to your code, above the function definition:
+2. Select the `<button>` element and store a reference to it in a constant. Add the following line to your code, above the function definition:
 
    ```js
    const btn = document.querySelector("button");
