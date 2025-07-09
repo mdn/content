@@ -4,9 +4,8 @@ short-title: add()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/add
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.add
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Atomics.add()`** static
 method adds a given value at a given position in the array and returns the old value at

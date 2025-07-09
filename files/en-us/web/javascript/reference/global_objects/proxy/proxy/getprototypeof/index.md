@@ -4,9 +4,8 @@ short-title: getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getPrototypeOf
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.getPrototypeOf
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`handler.getPrototypeOf()`** method is a trap for the `[[GetPrototypeOf]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as {{jsxref("Object.getPrototypeOf()")}}.
 

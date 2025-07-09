@@ -4,9 +4,8 @@ short-title: set()
 slug: Web/JavaScript/Reference/Global_Objects/Map/set
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Map.set
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`set()`** method of {{jsxref("Map")}} instances adds or updates an entry in this map with a specified key and a value.
 

@@ -4,9 +4,8 @@ short-title: formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/formatToParts
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.RelativeTimeFormat.formatToParts
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`formatToParts()`** method of {{jsxref("Intl.RelativeTimeFormat")}} instances returns an array of objects representing each part of the formatted string that would be returned by {{jsxref("Intl/RelativeTimeFormat/format", "format()")}}. It is useful for building custom strings from the locale-specific tokens.
 

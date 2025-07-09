@@ -4,9 +4,8 @@ short-title: log()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.log
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.log()`** static method returns the natural logarithm (base [e](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/E)) of a number. That is
 
