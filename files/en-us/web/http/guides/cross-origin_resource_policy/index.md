@@ -45,11 +45,11 @@ The {{HTTPHeader("Cross-Origin-Embedder-Policy")}} HTTP response header, when us
 
 ## History
 
-The concept was originally proposed in 2012 (as `From-Origin`), but [resurrected](https://github.com/whatwg/fetch/issues/687) in Q2 of 2018 and implemented in Safari and Chromium.
+The concept was originally proposed in 2012 (as a `From-Origin` header), but [resurrected](https://github.com/whatwg/fetch/issues/687) in Q2 of 2018 and implemented in Safari and Chromium.
 
 In early 2018, two side-channel hardware vulnerabilities known as _Meltdown_ and _Spectre_ were disclosed. These vulnerabilities allowed sensitive data disclosure due to a race condition which arose as part of speculative execution functionality, designed to improve performance.
 
-`Cross-Origin-Resource-Policy` is an opt-in response header which can protect _any_ resource; there is no need for browsers to sniff MIME types.
+Cross-Origin Resource Policy was developed as a direct way for sites to block unwanted `no-cors` cross-origin requests. This is an effective defense against Spectre-like attacks, as the browser strips the body from given responses before an attacker can access them.
 
 ## Specifications
 
