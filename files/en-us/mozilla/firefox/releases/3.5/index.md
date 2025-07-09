@@ -2,9 +2,8 @@
 title: Firefox 3.5 for developers
 slug: Mozilla/Firefox/Releases/3.5
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 [Firefox 3.5](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-us/firefox/3.5/releasenotes/) (_released June 30, 2009)_ introduces a number of new features, as well as additional and improved support for a wide variety of web standards. This article offers an extensive list, with links to articles covering the major improvements.
 
@@ -30,7 +29,7 @@ page-type: firefox-release-notes
 - {{ cssxref("::before") }} and {{ cssxref("::after") }} updated to CSS 2.1
   - : The `::before` and `::after` pseudo-elements have been updated to full CSS 2.1 support, adding support for the `position`, `float`, `list-style-*`, and some `display` properties.
 - `ch` units for length
-  - : The `ch` unit can now be used anywhere that accepts a [unit of length](/en-US/docs/Web/CSS/length#units). `1ch` is the width of the "0" (zero) character.
+  - : The `ch` unit can now be used anywhere that accepts a [length](/en-US/docs/Web/CSS/length). `1ch` is the width of the "0" (zero) character.
 - {{ cssxref("opacity") }}
   - : The `-moz-opacity` Mozilla extension to CSS has been removed in favor of the standard `opacity` property.
 - {{ cssxref("text-shadow") }}
@@ -54,7 +53,7 @@ page-type: firefox-release-notes
 
 #### New DOM features
 
-- [localStorage](/en-US/docs/Web/API/Web_Storage_API#localstorage)
+- [localStorage](/en-US/docs/Web/API/Window/localStorage)
   - : Firefox 3.5 adds support for the Web Storage `localStorage` property, which provides a way for web applications to store data locally on the client's computer.
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
   - : Firefox 3.5 supports web workers to allow easy multi-threading support in web applications.

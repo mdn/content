@@ -5,9 +5,10 @@ page-type: javascript-function
 status:
   - deprecated
 browser-compat: javascript.builtins.escape
+sidebar: jssidebar
 ---
 
-{{jsSidebar("Objects")}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 > [!NOTE]
 > `escape()` is a non-standard function implemented by browsers and was only standardized for cross-engine compatibility. It is not required to be implemented by all JavaScript engines and may not work everywhere. Use {{jsxref("encodeURIComponent()")}} or {{jsxref("encodeURI()")}} if possible.

@@ -3,9 +3,8 @@ title: Nullish coalescing operator (??)
 slug: Web/JavaScript/Reference/Operators/Nullish_coalescing
 page-type: javascript-operator
 browser-compat: javascript.operators.nullish_coalescing
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **nullish coalescing (`??`)** operator is a logical
 operator that returns its right-hand side operand when its left-hand side operand is

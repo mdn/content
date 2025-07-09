@@ -34,7 +34,9 @@ Since most of these characters are not part of Basic Latin Unicode block, it is 
 
 ```css
 p {
-  font-family: Latin Modern Math;
+  font-family:
+    Latin Modern Math,
+    math;
 }
 ```
 
@@ -281,7 +283,9 @@ div {
 }
 
 .text {
-  font-family: Latin Modern Math;
+  font-family:
+    Latin Modern Math,
+    math;
 }
 ```
 

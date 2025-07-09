@@ -64,7 +64,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
   data="/shared-assets/videos/flower.webm"
   width="600"
   height="140">
-  <img src="path/image.jpg" alt="useful image description" />
+  <img
+    src="/shared-assets/images/examples/flowers.jpg"
+    alt="Some beautiful flowers" />
 </object>
 ```
 

@@ -6,9 +6,10 @@ page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Sec-Speculation-Tags
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP **`Sec-Speculation-Tags`** {{Glossary("request header")}} contains one or more `tag` values from the [speculation rules](/en-US/docs/Web/API/Speculation_Rules_API) that resulted in the speculation. This allows a server to identify which rule(s) caused a speculation and potentially block them.
 

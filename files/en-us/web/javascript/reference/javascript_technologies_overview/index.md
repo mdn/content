@@ -2,9 +2,8 @@
 title: JavaScript technologies overview
 slug: Web/JavaScript/Reference/JavaScript_technologies_overview
 page-type: guide
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Introductory")}}
 
 Whereas [HTML](/en-US/docs/Web/HTML) defines a webpage's structure and content and [CSS](/en-US/docs/Web/CSS) sets the formatting and appearance, [JavaScript](/en-US/docs/Web/JavaScript) adds interactivity to a webpage and creates rich web applications.
 

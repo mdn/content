@@ -2,12 +2,17 @@
 title: fetchpriority
 slug: Web/SVG/Reference/Attribute/fetchpriority
 page-type: svg-attribute
+status:
+  - experimental
+  - non-standard
 browser-compat:
-  - svg.elements.feimage.fetchpriority
+  - svg.elements.feImage.fetchpriority
   - svg.elements.image.fetchpriority
   - svg.elements.script.fetchpriority
 sidebar: svgref
 ---
+
+{{SeeCompatTable}}{{non-standard_header}}
 
 The `fetchpriority` attribute provides a hint to the browser about the relative priority to use when fetching an external resource. This works the same way as the `fetchpriority` attribute for the HTML {{HTMLElement("img", "", "#fetchpriority")}} and {{HTMLElement("script", "", "#fetchpriority")}} elements.
 

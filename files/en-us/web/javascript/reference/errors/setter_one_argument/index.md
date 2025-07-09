@@ -2,9 +2,8 @@
 title: "SyntaxError: setter functions must have one argument"
 slug: Web/JavaScript/Reference/Errors/Setter_one_argument
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "setter functions must have one argument" occurs when a [setter](/en-US/docs/Web/JavaScript/Reference/Functions/get) is declared and the parameter list is not consisted of exactly one formal parameter.
 

@@ -2,9 +2,8 @@
 title: Firefox 132 for developers
 slug: Mozilla/Firefox/Releases/132
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 132 that affect developers. Firefox 132 was released on [October 29, 2024](https://whattrainisitnow.com/release/?version=132).
 
@@ -17,7 +16,7 @@ No notable changes
 ### CSS
 
 - The {{CSSXRef("text-emphasis-position")}} property now supports the `auto` value to bring it inline with {{CSSXRef("text-underline-position")}} ([Firefox bug 1919658](https://bugzil.la/1919658)).
-- CSS now supports the [Nested declaration rule](/en-US/docs/Web/API/CSSNestedDeclarations#nested_declarations_rule), which means that nested CSS is now parsed in the correct order ([Firefox bug 1918408](https://bugzil.la/1918408)).
+- CSS now supports the [Nested declaration rule](/en-US/docs/Web/API/CSSNestedDeclarations), which means that nested CSS is now parsed in the correct order ([Firefox bug 1918408](https://bugzil.la/1918408)).
 
 #### Removals
 

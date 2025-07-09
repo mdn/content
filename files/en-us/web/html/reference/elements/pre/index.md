@@ -28,8 +28,8 @@ By default, `<pre>` is a [block-level](/en-US/docs/Glossary/Block-level_content)
             O N
             D  E
             DONT
-           E SUIS
-           LA LAN
+          JE SUIS
+          LA  LAN
           G U E  É
          L O Q U E N
         TE      QUESA

@@ -2,9 +2,8 @@
 title: Firefox 82 for developers
 slug: Mozilla/Firefox/Releases/82
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 82 that will affect developers. Firefox 82 was released on October 20, 2020.
 

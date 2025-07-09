@@ -2,9 +2,8 @@
 title: Firefox 18 for developers
 slug: Mozilla/Firefox/Releases/18
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 18 was released on January 8, 2013. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
@@ -14,7 +13,7 @@ Firefox 18 was released on January 8, 2013. This article lists key changes that 
 
 - The [`reversed`](/en-US/docs/Web/HTML/Reference/Elements/ol#reversed) attribute of the {{HTMLElement("ol")}} element is now supported ([Firefox bug 601912](https://bugzil.la/601912)).
 - The [`crossorigin`](/en-US/docs/Web/HTML/Reference/Elements/link#crossorigin) attribute of the {{HTMLElement("link")}} element is now supported ([Firefox bug 786564](https://bugzil.la/786564)).
-- The [`allowfullscreen`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen) attribute of the {{HTMLElement("iframe")}} has been implemented and it's prefixed predecessor [`mozallowfullscreen`](/en-US/docs/Web/HTML/Reference/Elements/iframe#mozallowfullscreen) is now deprecated.
+- The [`allowfullscreen`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen) attribute of the {{HTMLElement("iframe")}} has been implemented and its prefixed predecessor `mozallowfullscreen` is now deprecated.
 
 ### CSS
 
@@ -32,7 +31,7 @@ Firefox 18 was released on January 8, 2013. This article lists key changes that 
 - The {{domxref("document.visibilitychange_event", "visibilitychange")}} event and the [Page Visibility API](/en-US/docs/Web/API/Page_Visibility_API) has been unprefixed ([Firefox bug 812086](https://bugzil.la/812086)).
 - {{domxref("TextDecoder")}} and {{domxref("TextEncoder")}} have been added. Note that the implementation and spec of these evolved and have been changed in Firefox 19 ([Firefox bug 764234](https://bugzil.la/764234)).
 - `HTMLMediaElement.src` has been separate in two properties: the standard `src` property, dealing with strings, and the prefixed `mozSrcObject` property, dealing with [media streams](/en-US/docs/Web/API/Media_Capture_and_Streams_API) ([Firefox bug 792665](https://bugzil.la/792665)).
-- Support for [transferable objects.](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers#passing_data_by_transferring_.c2.a0ownership_%28transferable_objects%29)
+- Support for [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) has been added.
 - The {{domxref("Screen.lockOrientation()")}} method now supports an `Array` of strings as argument ([Firefox bug 784549](https://bugzil.la/784549).
 
 ### JavaScript

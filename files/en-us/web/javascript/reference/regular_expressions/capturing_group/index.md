@@ -3,9 +3,8 @@ title: "Capturing group: (...)"
 slug: Web/JavaScript/Reference/Regular_expressions/Capturing_group
 page-type: javascript-language-feature
 browser-compat: javascript.regular_expressions.capturing_group
+sidebar: jssidebar
 ---
-
-{{jsSidebar}}
 
 A **capturing group** groups a subpattern, allowing you to apply a [quantifier](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier) to the entire group or use [disjunctions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction) within it. It memorizes information about the subpattern match, so that you can refer back to it later with a [backreference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Backreference), or access the information through the [match results](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec#return_value).
 

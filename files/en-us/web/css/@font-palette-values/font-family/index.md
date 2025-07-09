@@ -58,7 +58,7 @@ In this example, when the `font-family` descriptor is used in the [@font-palette
 }
 
 h2 {
-  font-family: "Bungee Spice";
+  font-family: "Bungee Spice", fantasy;
 }
 
 h2.extra-spicy {
@@ -91,11 +91,11 @@ h2 {
 }
 
 h1 {
-  font-family: "Bungee Spice";
+  font-family: "Bungee Spice", fantasy;
 }
 
 h2 {
-  font-family: Bixa;
+  font-family: Bixa, fantasy;
 }
 ```
 

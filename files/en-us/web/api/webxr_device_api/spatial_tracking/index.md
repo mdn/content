@@ -171,8 +171,6 @@ You can do this by creating a new reference space that incorporates into its eff
 
 ### The reset event
 
-**_<<<--- this section probably has problems still; corrections are appreciated --->>>_**
-
 When a discontinuity or break in the native or effective origin of a reference space occurs, the {{Glossary("user agent")}} will send the {{domxref("XRReferenceSpace")}} a {{domxref("XRReferenceSpace.reset_event", "reset")}} event. This event indicates that a significant change to the origin's position has taken place relative to the user's environment.
 
 A `reset` may occur because the XR hardware lost connectivity for a time, resulting in the user's movements not being properly tracked for a while. Upon recovery of tracking, a `reset` means tracking has been restored and the new position information represents the actual position information provided by the XR hardware, rather than cached or "best-guess" data.

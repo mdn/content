@@ -2,9 +2,8 @@
 title: Firefox 14 for developers
 slug: Mozilla/Firefox/Releases/14
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 14 shipped on July 17, 2012. This article lists key changes that are useful for not only Web developers to know about, but also Firefox and Gecko developers as well as add-on developers.
 
@@ -47,7 +46,7 @@ _No change._
 
 ### HTTP
 
-- Gecko now supports the new [HTTP](/en-US/docs/Web/HTTP) [`308 Permanent Redirect`](/en-US/docs/Web/HTTP/Reference/Status#308) status code. As Gecko doesn't make a distinction between permanent and temporary redirects, it behaves like the [`307 Temporary Redirect`](/en-US/docs/Web/HTTP/Reference/Status#307) status code, as it forbids the user agent from changing the HTTP method used between the two requests (`POST` will stay `POST`, `GET` will stay `GET`).
+- Gecko now supports the new [HTTP](/en-US/docs/Web/HTTP) [`308 Permanent Redirect`](/en-US/docs/Web/HTTP/Reference/Status/308) status code. As Gecko doesn't make a distinction between permanent and temporary redirects, it behaves like the [`307 Temporary Redirect`](/en-US/docs/Web/HTTP/Reference/Status/307) status code, as it forbids the user agent from changing the HTTP method used between the two requests (`POST` will stay `POST`, `GET` will stay `GET`).
 
 ## Changes for Mozilla and add-on developers
 

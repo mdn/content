@@ -2,9 +2,8 @@
 title: Firefox 128 for developers
 slug: Mozilla/Firefox/Releases/128
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 128 that affect developers. Firefox 128 was released on [July 9, 2024](https://whattrainisitnow.com/release/?version=128).
 
@@ -17,7 +16,7 @@ This article provides information about the changes in Firefox 128 that affect d
 ### CSS
 
 - [Relative color syntax](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) is now enabled by default. Relative color syntax allows you to create a color value relative to an origin color, and can allow you to change a color in a different [color space](/en-US/docs/Glossary/Color_space) using [color functions](/en-US/docs/Web/CSS/CSS_colors#functions) ([Firefox bug 1900251](https://bugzil.la/1900251)).
-- The [`content`](/en-US/docs/Web/CSS/content) property now supports [alternative text](/en-US/docs/Web/CSS/content#alternative_text) for content that includes an image. The alternative text is then exposed to the browsers accessibility tree. (See [Firefox bug 1281158](https://bugzil.la/1281158) and [Firefox bug 1896047](https://bugzil.la/1896047)).
+- The [`content`](/en-US/docs/Web/CSS/content) property now supports [alternative text](/en-US/docs/Web/CSS/content#alternative_text_string_counter) for content that includes an image. The alternative text is then exposed to the browsers accessibility tree. (See [Firefox bug 1281158](https://bugzil.la/1281158) and [Firefox bug 1896047](https://bugzil.la/1896047)).
 - The [`syntax`](/en-US/docs/Web/CSS/@property/syntax) descriptor of the {{cssxref("@property")}} at-rule now supports the `<string>` syntax component name. (See [Firefox bug 1846635](https://bugzil.la/1846635)).
 
 #### Removals
