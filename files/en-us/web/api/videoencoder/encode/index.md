@@ -52,7 +52,7 @@ None ({{jsxref("undefined")}}).
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("VideoEncoder.state","state")}} is not `"configured"`.
 - `DataError` {{domxref("DOMException")}}
-  - : Thrown if the `chunk` cannot be decoded due to relying on other frames for decoding.
+  - : Thrown if the given `frame` object's rotation and flip do not match the {{domxref("VideoFrame","first VideoFrame")}}'s rotation and flip passed to the {{domxref("VideoEncoder")}} object (the "active orientation").
 
 ## Examples
 
