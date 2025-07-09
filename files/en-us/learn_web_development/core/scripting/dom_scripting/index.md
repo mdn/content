@@ -267,7 +267,7 @@ In the next section we will look at a more practical use of DOM APIs.
 
 ## Creating a dynamic shopping list
 
-In this exercise we want to make a simple shopping list example that allows you to dynamically add items to the list using a form input and button. When you add an item to the input and press the button:
+In this exercise we want to make a dynamic shopping list example that allows you to add items using a form input and button. When you add an item to the input and press the button:
 
 - The item should appear in the list.
 - Each item should be given a button that can be pressed to delete that item off the list.
