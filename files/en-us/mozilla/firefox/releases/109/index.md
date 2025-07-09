@@ -2,9 +2,8 @@
 title: Firefox 109 for developers
 slug: Mozilla/Firefox/Releases/109
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 109 that will affect developers. Firefox 109 was released on January 17, 2023.
 
@@ -16,7 +15,7 @@ This article provides information about the changes in Firefox 109 that will aff
 
 ### CSS
 
-- The [`<system-color>`](/en-US/docs/Web/CSS/system-color) CSS data type now supports the values [`Mark`](/en-US/docs/Web/CSS/system-color#mark), [`MarkText`](/en-US/docs/Web/CSS/system-color#marktext), and [`ButtonBorder`](/en-US/docs/Web/CSS/system-color#buttonborder) ([Firefox bug 1638052](https://bugzil.la/1638052)).
+- The [`<system-color>`](/en-US/docs/Web/CSS/system-color) CSS data type now supports the values `Mark`, `MarkText`, and `ButtonBorder` ([Firefox bug 1638052](https://bugzil.la/1638052)).
 
 ### JavaScript
 

@@ -9,13 +9,23 @@ sidebar: learnsidebar
 The aim of this skill test is to assess whether you've understood our [Arrays](/en-US/docs/Learn_web_development/Core/Scripting/Arrays) article.
 
 > [!NOTE]
-> You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
->
+> For Tasks 1–4, you can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 > If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
-## Arrays 1
+## Interactive challenge
 
-Let's start off with some basic array practice. In this task we'd like you to create an array of three items, stored inside a variable called `myArray`. The items can be anything you want — how about your favorite foods or bands?
+First of all, we are giving you a fun, interactive arrays challenge created by our [learning partner](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds), [Scrimba](https://scrimba.com/home).
+
+Watch the embedded scrim, and complete the task on the timeline (the little ghost icon) by following the instructions and editing the code. When you are done, you can resume watching the scrim to check how the teacher's solution matches up with yours.
+
+<scrim-inline url="https://scrimba.com/learn-javascript-c0v/~05e" scrimtitle="Render images from an array" survey="true"></scrim-inline>
+
+> [!NOTE]
+> This task is somewhat of a stretch goal, given that it relies on JavaScript features you've not yet explicitly covered during the course. Give it your best shot, and search online for information on anything you are not sure about.
+
+## Task 1
+
+This task gives you some basic array practice. Create an array of three items, and store it in a variable called `myArray`. The items can be anything you want — how about your favorite foods or bands?
 
 Next, modify the first two items in the array using simple bracket notation and assignment. Then add a new item to the beginning of the array.
 
@@ -27,7 +37,7 @@ Try updating the live code below to recreate the finished example:
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/arrays/arrays1-download.html) to work in your own editor or in an online editor.
 
-## Arrays 2
+## Task 2
 
 Now let's move on to another task. Here you are provided with a string to work with. We'd like you to:
 
@@ -43,7 +53,7 @@ Try updating the live code below to recreate the finished example:
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/arrays/arrays2-download.html) to work in your own editor or in an online editor.
 
-## Arrays 3
+## Task 3
 
 For this array task, we provide you with a starting array, and you will work in somewhat the opposite direction. You need to:
 
@@ -60,7 +70,7 @@ Try updating the live code below to recreate the finished example:
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/arrays/arrays3-download.html) to work in your own editor or in an online editor.
 
-## Arrays 4
+## Task 4
 
 For this array task, we provide you with a starting array listing the names of some birds.
 

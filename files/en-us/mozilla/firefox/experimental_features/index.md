@@ -3,9 +3,8 @@ title: Experimental features in Firefox
 short-title: Experimental features
 slug: Mozilla/Firefox/Experimental_features
 page-type: guide
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This page lists Firefox's experimental and partially-implemented features, including evolving or proposed web platform standards.
 Each entry below includes information about the builds in which a feature is included (Nightly, Beta, Developer Edition, or Release), whether it is activated by default or not, and the name of the **preference** you can use to activate or configure the feature.
@@ -405,22 +404,6 @@ The [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) allow developer
 | Release           | 138           | No                  |
 
 - `dom.security.sanitizer.enabled`
-  - : Set to `true` to enable.
-
-### `closedBy` attribute for `<dialog>`
-
-The {{domxref("HTMLDialogElement/closedBy", "closedBy")}} attribute of the {{domxref("HTMLDialogElement")}} interface, and corresponding [`closedby`](/en-US/docs/Web/HTML/Reference/Elements/dialog#closedby) attribute of the {{htmlelement("dialog")}} element, are supported.
-These can be used by developers to specify whether users can close a dialog by clicking outside of the dialog area, or the dialog must be closed programmatically, and so on.
-([Firefox bug 1964077](https://bugzil.la/1964077)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 140           | Yes                 |
-| Developer Edition | 140           | No                  |
-| Beta              | 140           | No                  |
-| Release           | 140           | No                  |
-
-- `dom.dialog.light-dismiss.enabled`
   - : Set to `true` to enable.
 
 ### Removal of `beforescriptexecute` and `afterscriptexecute` events

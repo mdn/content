@@ -2,9 +2,8 @@
 title: Firefox 25 for developers
 slug: Mozilla/Firefox/Releases/25
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 ## Changes for Web developers
 
@@ -19,7 +18,7 @@ page-type: firefox-release-notes
 ### CSS
 
 - The support for the keyword `local` as a value of the {{cssxref("background-attachment")}} CSS property has been added ([Firefox bug 483446](https://bugzil.la/483446)).
-- Support of a non-standard Mozilla-only media query to determine the operating system version has been added: [`-moz-os-version`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#-moz-os-version) ([Firefox bug 810399](https://bugzil.la/810399)). The property is currently only implemented on Windows.
+- Support of a non-standard Mozilla-only media query to determine the operating system version has been added: `-moz-os-version` ([Firefox bug 810399](https://bugzil.la/810399)). The property is currently only implemented on Windows.
 - The `-moz-osx-font-smoothing` CSS property has been added ([Firefox bug 857142](https://bugzil.la/857142)).
 - Our experimental support for {{cssxref("filter")}} now supports the `hue-rotate()` functional notation ([Firefox bug 897392](https://bugzil.la/897392)). It is still preffed off by default.
 - `page-break-inside`: `avoid` is now working with the height of a block ([Firefox bug 883676](https://bugzil.la/883676)).
@@ -45,9 +44,9 @@ ECMAScript 2015 implementation continues!
 ### Interfaces/APIs/DOM
 
 - The [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) is now supported. An incomplete implementation was previously available behind a preference ([Firefox bug 779297](https://bugzil.la/779297)).
-- Some IME related keys on Windows are supported by `KeyboardEvent.key` ([Firefox bug 865565](https://bugzil.la/865565)), see [the key name table](/en-US/docs/Web/API/KeyboardEvent#keyname_table_win) for the detail.
+- Some IME related keys on Windows are supported by `KeyboardEvent.key` ([Firefox bug 865565](https://bugzil.la/865565)), see [the key name table](/en-US/docs/Web/API/UI_Events/Keyboard_event_key_values) for the detail.
 - Firefox for Metro now dispatches key events in the same way as the desktop version ([Firefox bug 843236](https://bugzil.la/843236)).
-- `keypress` event is no longer dispatched if `preventDefault()` of preceding `keydown` event is called ([Firefox bug 501496](https://bugzil.la/501496)), see [the document of `keydown` event](</en-US/docs/Web/API/Element/keydown_event#preventdefault()_of_keydown_event>) for the detail.
+- `keypress` event is no longer dispatched if `preventDefault()` of preceding `keydown` event is called ([Firefox bug 501496](https://bugzil.la/501496)).
 - Renamed the `Future` interface to `Promise` ([Firefox bug 884279](https://bugzil.la/884279)).
 - The `srcDoc` property on the {{domxref("HTMLIFrameElement")}} interface, allowing the inline specification of the content of an {{HTMLElement("iframe")}}, is now supported ([Firefox bug 802895](https://bugzil.la/802895)).
 - The `createTBody()` method on the {{domxref("HTMLTableElement")}} interface, allowing to get its {{HTMLElement("tbody")}}, is now supported ([Firefox bug 813034](https://bugzil.la/813034)).

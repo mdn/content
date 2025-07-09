@@ -2,9 +2,8 @@
 title: Firefox 58 for developers
 slug: Mozilla/Firefox/Releases/58
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 58 that will affect developers. Firefox 58 was released on January 23, 2018.
 
@@ -142,7 +141,7 @@ _No changes._
 ### APIs
 
 - The proprietary `moz-blob` and `moz-chunked-text` values of the {{domxref("XMLHttpRequest.responseType")}} property were removed completely in Firefox 58 ([Firefox bug 1397145](https://bugzil.la/1397145), [Firefox bug 1397151](https://bugzil.la/1397151), [Firefox bug 1120171](https://bugzil.la/1120171)).
-- The `dom.abortController.enabled` and `dom.abortController.fetch.enabled` prefs that controlled exposure of the [Abort API functionality](/en-US/docs/Web/API/Fetch_API#aborting_a_fetch) have now been removed, since those features are now enabled by default ([Firefox bug 1402317](https://bugzil.la/1402317)).
+- The `dom.abortController.enabled` and `dom.abortController.fetch.enabled` prefs that controlled exposure of the [Abort API functionality](/en-US/docs/Web/API/Fetch_API/Using_Fetch#canceling_a_request) have now been removed, since those features are now enabled by default ([Firefox bug 1402317](https://bugzil.la/1402317)).
 - The proprietary `mozSrcObject` property was removed in Firefox 58 ([Firefox bug 1183495](https://bugzil.la/1183495)). Use the standard {{domxref("HTMLMediaElement.srcObject")}} property instead.
 
 ### SVG

@@ -73,7 +73,7 @@ The `mask-border-width` property may be specified using one, two, three, or four
 
 ```css
 /* Final mask scaled down to 20px wide */
-mask-border-slice: 30px;
+mask-border-slice: 30 fill;
 mask-border-width: 20px;
 ```
 

@@ -3,9 +3,8 @@ title: 502 Bad Gateway
 slug: Web/HTTP/Reference/Status/502
 page-type: http-status-code
 spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.502
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`502 Bad Gateway`** [server error response](/en-US/docs/Web/HTTP/Reference/Status#server_error_responses) status code indicates that a server was acting as a gateway or {{Glossary("Proxy_server", "proxy")}} and that it received an invalid response from the upstream server.
 

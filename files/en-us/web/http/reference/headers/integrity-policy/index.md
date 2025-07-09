@@ -4,9 +4,8 @@ short-title: Integrity-Policy
 slug: Web/HTTP/Reference/Headers/Integrity-Policy
 page-type: http-header
 browser-compat: http.headers.Integrity-Policy
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Integrity-Policy`** response header allows website administrators to ensure that all resources the user agent loads (of a certain type) have [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity) guarantees.
 

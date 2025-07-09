@@ -4,9 +4,8 @@ short-title: Proxy-Authenticate
 slug: Web/HTTP/Reference/Headers/Proxy-Authenticate
 page-type: http-header
 browser-compat: http.headers.Proxy-Authenticate
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Proxy-Authenticate`** {{Glossary("response header")}} defines the [authentication](/en-US/docs/Web/HTTP/Guides/Authentication) method (or {{Glossary("Challenge", "challenge")}}) that should be used to gain access to a resource behind a {{Glossary("proxy server")}}.
 It is sent in a {{HTTPStatus("407", "407 Proxy Authentication Required")}} response so a client can identify itself to a proxy that requires authentication.

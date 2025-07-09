@@ -3,9 +3,8 @@ title: 506 Variant Also Negotiates
 slug: Web/HTTP/Reference/Status/506
 page-type: http-status-code
 spec-urls: https://www.rfc-editor.org/rfc/rfc2295#section-8.1
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`506 Variant Also Negotiates`** [server error response](/en-US/docs/Web/HTTP/Reference/Status#server_error_responses) status code is returned during content negotiation when there is recursive loop in the process of selecting a resource.
 

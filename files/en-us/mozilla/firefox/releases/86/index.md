@@ -2,9 +2,8 @@
 title: Firefox 86 for developers
 slug: Mozilla/Firefox/Releases/86
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 86 that will affect developers. Firefox 86 was released on February 23, 2021.
 

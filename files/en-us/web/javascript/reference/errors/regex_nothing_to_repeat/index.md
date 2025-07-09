@@ -2,9 +2,8 @@
 title: "SyntaxError: nothing to repeat"
 slug: Web/JavaScript/Reference/Errors/Regex_nothing_to_repeat
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "nothing to repeat" or "invalid quantifier in regular expression" occurs when a [quantifier](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier) in a regular expression is applied to nothing or applied to an [assertion](/en-US/docs/Web/JavaScript/Reference/Regular_expressions#assertions).
 

@@ -142,7 +142,7 @@ perhaps for adding to a WebRTC call using {{domxref("RTCPeerConnection.addTrack(
 add the video track from the stream.
 
 > [!NOTE]
-> The [Screen sharing controls](https://screen-sharing-controls.glitch.me/) demo provides a complete implementation that allows you to create a screen capture with your choice of `getDisplayMedia()` constraints and options.
+> The [Screen sharing controls](https://chrome.dev/screen-sharing-controls/) demo provides a complete implementation that allows you to create a screen capture with your choice of `getDisplayMedia()` constraints and options.
 
 ## Specifications
 

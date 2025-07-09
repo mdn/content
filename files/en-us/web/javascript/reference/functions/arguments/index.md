@@ -3,9 +3,8 @@ title: The arguments object
 slug: Web/JavaScript/Reference/Functions/arguments
 page-type: javascript-language-feature
 browser-compat: javascript.functions.arguments
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Functions")}}
 
 **`arguments`** is an array-like object accessible inside [functions](/en-US/docs/Web/JavaScript/Guide/Functions) that contains the values of the arguments passed to that function.
 

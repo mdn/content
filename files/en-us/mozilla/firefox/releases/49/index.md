@@ -2,9 +2,8 @@
 title: Firefox 49 for developers
 slug: Mozilla/Firefox/Releases/49
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 [To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) Firefox 49 was released on September 20, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
@@ -38,7 +37,7 @@ page-type: firefox-release-notes
 - The {{HTMLElement("iframe")}} element's [`sandbox`](/en-US/docs/Web/HTML/Reference/Elements/iframe#sandbox) attribute now supports the `'allow-popups-to-escape-sandbox'` and `'allow-modals'` values ([Firefox bug 1190641](https://bugzil.la/1190641)).
 - Support for microdata attributes and the Microdata API have been removed ([Firefox bug 909633](https://bugzil.la/909633)).
 - The [`referrerpolicy`](/en-US/docs/Web/HTML/Reference/Elements/a#referrerpolicy) attribute on the {{HTMLElement("a")}} element now supports the `'no-referrer-when-downgrade'` and `'origin-when-cross-origin'` ([Firefox bug 1178337](https://bugzil.la/1178337)).
-- The [`form`](/en-US/docs/Web/HTML/Reference/Elements/label#form) content attribute of the {{HTMLElement("label")}} element has been removed. The {{domxref("HTMLLabelElement.form")}} property still exists, but now returns the form with which the label's control is associated, if there is a control (and if that control is associated with a form) ([Firefox bug 1268852](https://bugzil.la/1268852)).
+- The `form` content attribute of the {{HTMLElement("label")}} element has been removed. The {{domxref("HTMLLabelElement.form")}} property still exists, but now returns the form with which the label's control is associated, if there is a control (and if that control is associated with a form) ([Firefox bug 1268852](https://bugzil.la/1268852)).
 
 ### CSS
 
@@ -259,9 +258,9 @@ In order to improve compatibility with existing content, Firefox now accepts som
 
 - The `WebKitCSSMatrix` interface is an alias of {{domxref("DOMMatrix")}}
 - The following media query features have been implemented:
-  - `-webkit-min-device-pixel-ratio` as an alias of [`min-resolution`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#resolution) with the same value (in `dppx)`, though this feature is [disabled by default](https://bugzil.la/1237720) (behind about:config pref `layout.css.prefixes.device-pixel-ratio-webkit`)
-  - `-webkit-max-device-pixel-ratio` as an alias of [`max-resolution`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#resolution) of the same value (in `dppx`); this feature is also disabled by default, behind the same about:config pref.
-  - [`-webkit-transform-3d`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#-webkit-transform-3d) always matching, indicating 3d transform support.
+  - `-webkit-min-device-pixel-ratio` as an alias of [`min-resolution`](/en-US/docs/Web/CSS/@media/resolution) with the same value (in `dppx)`, though this feature is [disabled by default](https://bugzil.la/1237720) (behind about:config pref `layout.css.prefixes.device-pixel-ratio-webkit`)
+  - `-webkit-max-device-pixel-ratio` as an alias of [`max-resolution`](/en-US/docs/Web/CSS/@media/resolution) of the same value (in `dppx`); this feature is also disabled by default, behind the same about:config pref.
+  - [`-webkit-transform-3d`](/en-US/docs/Web/CSS/@media/-webkit-transform-3d) always matching, indicating 3d transform support.
 
 ## Changes for add-on and Mozilla developers
 

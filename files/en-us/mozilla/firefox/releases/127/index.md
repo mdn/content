@@ -2,9 +2,8 @@
 title: Firefox 127 for developers
 slug: Mozilla/Firefox/Releases/127
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 127 that affect developers. Firefox 127 was released on [June 11, 2024](https://whattrainisitnow.com/release/?version=127).
 

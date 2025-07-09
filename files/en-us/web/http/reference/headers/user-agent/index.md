@@ -4,9 +4,8 @@ short-title: User-Agent
 slug: Web/HTTP/Reference/Headers/User-Agent
 page-type: http-header
 browser-compat: http.headers.User-Agent
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **User-Agent** {{Glossary("request header")}} is a characteristic string that lets servers and network peers identify the application, operating system, vendor, and/or version of the requesting {{Glossary("user agent")}}.
 

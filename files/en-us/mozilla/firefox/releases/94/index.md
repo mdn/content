@@ -2,9 +2,8 @@
 title: Firefox 94 for developers
 slug: Mozilla/Firefox/Releases/94
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 94 that will affect developers. Firefox 94 was released on November 2nd, 2021
 
