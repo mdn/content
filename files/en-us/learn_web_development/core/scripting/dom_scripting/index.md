@@ -39,9 +39,9 @@ Despite the limitations, Web APIs still give us access to a lot of functionality
 
 ![Important parts of web browser; the document is the web page. The window includes the entire document and also the tab. The navigator is the browser, which includes the window (which includes the document) and all other windows.](document-window-navigator.png)
 
-- The window is the browser tab that a web page is loaded into; this is represented in JavaScript by the {{domxref("Window")}} object. Using methods available on this object you can do things like return the window's size (see {{domxref("Window.innerWidth")}} and {{domxref("Window.innerHeight")}}), manipulate the document loaded into that window, store data specific to that document on the client-side (for example using a local database or other storage mechanism), attach an [event handler](/en-US/docs/Learn_web_development/Core/Scripting/Events) to the current window, and more.
-- The navigator represents the state and identity of the browser (i.e., the user-agent) as it exists on the web. In JavaScript, this is represented by the {{domxref("Navigator")}} object. You can use this object to retrieve things like the user's preferred language, a media stream from the user's webcam, etc.
-- The document (represented by the DOM in browsers) is the actual page loaded into the window, and is represented in JavaScript by the {{domxref("Document")}} object. You can use this object to return and manipulate information on the HTML and CSS that comprises the document, for example get a reference to an element in the DOM, change its text content, apply new styles to it, create new elements and add them to the current element as children, or even delete it altogether.
+- The **window** represents the browser tab that a web page is loaded into; this is represented in JavaScript by the {{domxref("Window")}} object. Using methods available on this object you can do things like return the window's size (see {{domxref("Window.innerWidth")}} and {{domxref("Window.innerHeight")}}), manipulate the document loaded into that window, store data specific to that document on the client-side (for example using a local database or other storage mechanism), attach an [event handler](/en-US/docs/Learn_web_development/Core/Scripting/Events) to the current window, and more.
+- The **navigator** represents the state and identity of the browser as it exists on the web. In JavaScript, this is represented by the {{domxref("Navigator")}} object. You can use this object to retrieve things like the user's preferred language, a media stream from the user's webcam, etc.
+- The **document** (represented by the DOM in browsers) is the actual page loaded into the window, and is represented in JavaScript by the {{domxref("Document")}} object. You can use this object to return and manipulate information on the HTML and CSS that comprises the document, for example get a reference to an element in the DOM, change its text content, apply new styles to it, create new elements and add them to the current element as children, or even delete it altogether.
 
 In this article we'll focus mostly on manipulating the document, but we'll show a few other useful bits besides.
 
@@ -65,7 +65,9 @@ We have created an example page at [dom-example.html](https://github.com/mdn/lea
     <section>
       <img
         src="dinosaur.png"
-        alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth." />
+        alt="A red Tyrannosaurus Rex: A two legged dinosaur
+        standing upright like a human, with small arms, and a
+        large head with lots of sharp teeth." />
       <p>
         Here we will add a link to the
         <a href="https://www.mozilla.org/">Mozilla homepage</a>
@@ -92,9 +94,9 @@ Nodes are also referred to by their position in the tree relative to other nodes
 - **Parent node**: A node which has another node inside it. For example, `BODY` is the parent node of `SECTION` in the above example.
 - **Sibling nodes**: Nodes that sit on the same level under the same parent node in the DOM tree. For example, `IMG` and `P` are siblings in the above example.
 
-It is useful to familiarize yourself with this terminology before working with the DOM, as a number of the code terms you'll come across make use of them. You'll also come across them in CSS (e.g., descendant selector, child selector).
+It is useful to familiarize yourself with this terminology before working with the DOM, as a number of the code terms you'll come across make use of them. You'll also come across them in CSS (for example, descendant selector, child selector).
 
-## Active learning: Basic DOM manipulation
+## Doing some basic DOM manipulation
 
 To start learning about DOM manipulation, let's begin with a practical example.
 
@@ -263,9 +265,9 @@ In the next section we will look at a more practical use of DOM APIs.
 > [!NOTE]
 > You can find our [finished version of the dom-example.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/dom-example-manipulated.html) demo on GitHub ([see it live also](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example-manipulated.html)).
 
-## Active learning: A dynamic shopping list
+## Creating a dynamic shopping list
 
-In this challenge we want to make a simple shopping list example that allows you to dynamically add items to the list using a form input and button. When you add an item to the input and press the button:
+In this exercise we want to make a simple shopping list example that allows you to dynamically add items to the list using a form input and button. When you add an item to the input and press the button:
 
 - The item should appear in the list.
 - Each item should be given a button that can be pressed to delete that item off the list.
@@ -281,7 +283,7 @@ To complete the exercise, follow the steps below, and make sure that the list be
 2. Create three variables that hold references to the list ({{htmlelement("ul")}}), {{htmlelement("input")}}, and {{htmlelement("button")}} elements.
 3. Create a [function](/en-US/docs/Learn_web_development/Core/Scripting/Functions) that will run in response to the button being clicked.
 4. Inside the function body, start off by storing the current [value](/en-US/docs/Web/API/HTMLInputElement/value) of the input element in a variable.
-5. Next, empty the input element by setting its value to an empty string — `''`.
+5. Next, empty the input element by setting its value to an empty string — `""`.
 6. Create three new elements — a list item ({{htmlelement('li')}}), {{htmlelement('span')}}, and {{htmlelement('button')}}, and store them in variables.
 7. Append the span and the button as children of the list item.
 8. Set the text content of the span to the input element value you saved earlier, and the text content of the button to 'Delete'.
