@@ -26,7 +26,6 @@ when(type, options)
 ### Parameters
 
 - `when`
-
   - : A string representing the type of event to include in the stream.
 
 - `options` {{optional_inline}}
